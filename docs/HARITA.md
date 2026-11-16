@@ -26,7 +26,7 @@
 | `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2367 | 2026-11-16 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2518 | 2026-11-16 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 5986 | 2026-11-16 | AGENTS/CLAUDE, 10 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6005 | 2026-11-16 | AGENTS/CLAUDE, 10 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |
@@ -52,7 +52,7 @@
 | Belge | Konu | Kelime | Son değişim |
 |---|---|---:|---|
 | `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1023 | 2026-11-16 |
-| `GELISTIRME_YOL_HARITASI.md` | Geliştirme Yol Haritası — veri, site sağlığı, içerik hattı, ses (2026-11-16) | 1066 | izlenmiyor |
+| `GELISTIRME_YOL_HARITASI.md` | Geliştirme Yol Haritası — veri, site sağlığı, içerik hattı, ses (2026-11-16) | 1066 | 2026-11-16 |
 | `HANTALLIK_KOK_NEDENLERI.md` | Hantallık, yavaşlık ve yanlış üretim — kök neden defteri | 4361 | 2026-11-16 |
 | `ORACLE_REALTIME_DATABASE_REHBERI.md` | Oracle VM Üzerinde Realtime Veritabanı Mimarisi ve Çözüm Rehberi | 640 | 2026-10-12 |
 | `REALTIME_QUIZ_MIMARISI.md` | Düşük Gecikmeli (Low-Latency) Realtime Quiz ve Rekabet Mimarisi | 647 | 2026-10-26 |

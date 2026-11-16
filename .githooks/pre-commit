@@ -1,4 +1,15 @@
 #!/bin/sh
 # Yapı koruma kapısı (2026-11-16). Etkinleştirme: git config core.hooksPath .githooks
+# Commit'e GİRECEK içerik denetlenir: kapının sahnelenen (index) hâli çalıştırılır ve --sahne ile sahnelenmemiş
+# değişiklikler (başka oturumların yarım işleri) yok sayılır. Kapı yeni dosyaysa çalışma ağacındaki hâli kullanılır.
 cd "$(git rev-parse --show-toplevel)" || exit 1
-exec python3 scripts/kapilar/yapi_koruma.py --hizli
+exec python3 - <<'PY'
+import os, subprocess, sys
+yol = "scripts/kapilar/yapi_koruma.py"
+r = subprocess.run(["git", "show", ":" + yol], capture_output=True)
+kaynak = r.stdout.decode("utf-8") if r.returncode == 0 else open(yol, encoding="utf-8").read()
+tam = os.path.abspath(yol)
+sys.argv = [tam, "--hizli", "--sahne"]
+sys.path.insert(0, os.path.dirname(tam))
+exec(compile(kaynak, tam, "exec"), {"__name__": "__main__", "__file__": tam})
+PY

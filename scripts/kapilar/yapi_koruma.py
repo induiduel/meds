@@ -20,7 +20,8 @@ Denetimler (her bulgu dosya:satır ile):
 ihlal etmeyen kalem UYARI verir). Yeni ihlali izin listesine eklemek yerine kodu düzelt.
 
   python3 scripts/kapilar/yapi_koruma.py            # tam
-  python3 scripts/kapilar/yapi_koruma.py --hizli    # pre-commit: D6 (yalnız uyarı) atlanır, temizse sessiz
+  python3 scripts/kapilar/yapi_koruma.py --hizli --sahne  # pre-commit: commit'e girecek (index) içerik denetlenir
+  python3 scripts/kapilar/yapi_koruma.py --hizli    # pre-commit (eski): D6 (yalnız uyarı) atlanır, temizse sessiz
   python3 scripts/kapilar/yapi_koruma.py --json
 Çıkış: HATA varsa 1, yoksa 0.
 """
@@ -166,6 +167,34 @@ def rel(p: Path) -> str:
     return p.relative_to(MEDS).as_posix()
 
 
+# --sahne (commit kancası): commit'e girecek içeriği denetle. Sahnelenmemiş değişikliği olan izlenen dosyalar index'ten
+# okunur, izlenmeyen dosyalar taranmaz — başka oturumun yarım değişikliği temiz bir commit'i durdurmasın (2026-11-16).
+SAHNE_ATLA: set = set()
+
+
+def sahne_kipi() -> None:
+    def git_z(*a: str) -> set:
+        r = subprocess.run(["git", *a, "-z"], cwd=MEDS, capture_output=True, text=True, timeout=20)
+        return {x for x in r.stdout.split("\0") if x}
+    degisen = git_z("diff", "--name-only")
+    SAHNE_ATLA.update(git_z("ls-files", "--others", "--exclude-standard"))
+    if not degisen:
+        return
+    asil = Path.read_text
+
+    def oku(self: Path, *a, **k):  # type: ignore[no-untyped-def]
+        try:
+            rel = self.resolve().relative_to(MEDS).as_posix()
+        except ValueError:
+            return asil(self, *a, **k)
+        if rel in degisen:
+            r = subprocess.run(["git", "show", f":{rel}"], cwd=MEDS, capture_output=True, timeout=20)
+            if r.returncode == 0:
+                return r.stdout.decode("utf-8", errors="replace")
+        return asil(self, *a, **k)
+    Path.read_text = oku  # type: ignore[method-assign]
+
+
 def kod_dosyalari() -> list[Path]:
     out: list[Path] = []
     for kok in (SCRIPTS, MEDS / "src"):
@@ -176,6 +205,8 @@ def kod_dosyalari() -> list[Path]:
             if any(x in ATLA_DIZIN for x in parts):
                 continue
             if parts[:2] == ("scripts", "arsiv") or parts[:2] == ("src", "data"):
+                continue
+            if SAHNE_ATLA and "/".join(parts) in SAHNE_ATLA:
                 continue
             out.append(p)
     st = MEDS / "server.ts"
@@ -473,6 +504,8 @@ def d11() -> None:
 def main() -> int:
     argv = sys.argv[1:]
     hizli, js = "--hizli" in argv, "--json" in argv
+    if "--sahne" in argv:
+        sahne_kipi()
     sayilar = d1_d2_d5(kod_dosyalari())
     d3()
     d4()

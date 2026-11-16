@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 44 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 45 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -192,4 +192,8 @@
 
 ### H585 — "Otomatik onarım / özel redaksiyon / soru yükseltme çıkmış soru dosyasını sunucu önbelleğini atlayarak yazıyordu" (2026-11-16)
 - **Önleme kuralı:** `data/pastQuestions.json`'a sunucu kodunda `savePastQuestionsDb` dışında yazılmaz; yeni servis dosyayı açmaz, `cikmisErisim` kullanır. Tek seferde >%10 kayıt düşüren yazım reddedilir (`MEDS_PAST_TOPLU_SIL=1` kaçışı, yalnız kullanıcı komutu). Model: `docs/VERI_MODELI.md` §4.
+
+
+### H585 — "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor" (2026-11-16)
+- **Önleme kuralı:** Paylaşılan ağaçta çalışan kapılar commit'in içeriğini (index) denetler; `--no-verify` yalnız kapının kendisi bozuksa ve gerekçe kayda yazılarak kullanılır.
 

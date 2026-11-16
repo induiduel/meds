@@ -421,3 +421,4 @@
 - **H585** · "Onarım/redaksiyon servisleri çıkmış soru dosyasını önbelleği atlayarak yazıyordu (yazma yarışı)": doğrudan dosya yazımı → tek erişim `cikmisErisim` → hatalar/dagitim_icerik_katmani.md
 - **H586** · "Çözücü/asistan/Öğren seslerinde terim ve kısaltma okunuşu uygulanmıyor; 'engel' → 'Engıl'": okunuş 9 yerde + elle anahtar listesi → `ses_ortak/ses_metin` → hatalar/ses.md
 - **H587** · "16 Öğren klibi 14–22 dk sürüyor; bozuk ses yayına çıkabiliyor": ses kalite kapısı yoktu → `ses_ortak/ses_kapisi.py` → hatalar/ses.md
+- **H585** · "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor": kanca çalışma ağacını denetliyordu → hatalar/dagitim_icerik_katmani.md

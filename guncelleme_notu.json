@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 764,
-  "baslik": "Hız, kararlılık ve veri güvenliği",
+  "onem": 765,
+  "baslik": "Commit kapısı iyileştirmesi",
   "maddeler": [
-    "Kararlılık: soru düzeltme işlemleri tek güvenli yoldan kaydediliyor, sunucu daha az bellek kullanıyor",
-    "Ders özetleri: güncel ve daha ayrıntılı özet sürümleri sunucudan geliyor",
-    "Altyapı: sayfa hızı ve sunucu yanıt süreleri ölçülüyor; ses dosyaları için kalite denetimi eklendi"
+    "Geliştirme altyapısı iyileştirildi; site davranışı değişmedi."
   ],
   "eklenen": [],
   "degisen": [],
