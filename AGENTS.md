@@ -18,7 +18,7 @@ Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
 - **İçerik üretimi (tek hat):** `python3 scripts/hat/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf>` sırayı tek
   kaynaktan (`scripts/hat/tam_hat/mod.py`) verir; aşamalar bir kez üretilen **read-once `baglam/`** (`scripts/hat/tam_hat/baglam.py`)
   okur, ham slaytı/şablonu tekrar tekrar değil. Ders kilidi `scripts/hat/tam_hat/ders_kilit.py` (oturum çakışması). Akış: `docs/TAM_HAT_HIZLI_AKIS.md` §0.0.
-- **Betik haritası:** `scripts/HARITA.md` (gruplar `hat/ uretim/ altyapi/ moduller/ kapilar/ arsiv/`; yeni betik `scripts/kok.py`
+- **Belge haritası:** `docs/HARITA.md` · **Betik haritası:** `scripts/HARITA.md` (gruplar `hat/ uretim/ altyapi/ moduller/ kapilar/ arsiv/`; yeni betik `scripts/kok.py`
   ile kök bulur, `parents[N]` yok; eski→yeni yol `deploy/oracle/tasinan_yollar.txt`).
 - **GPU istisnaları + ısı/saat protokolleri:** `docs/GPU_KULLANIM.md` (ana AGENTS kural 10'un ayrıntısı).
 - **`deploy/oracle/SISTEM_MIMARISI.md`** + **`YENI_YAPI_YOL_HARITASI.md`** — Oracle canlı mimarisi ve toparlama planı.

@@ -1,0 +1,63 @@
+# `meds/docs/` Haritası — hangi belge ne için (otomatik üretilir)
+
+> Belgeleri gezmeden önce buraya bak; yalnız işinin belgesini aç (AGENTS 'Yönlendirme').
+> Yeniden üret: `python3 scripts/altyapi/belge_haritasi.py`. "Anıldığı yer" = AGENTS.md/CLAUDE.md ya da betiklerin belgeyi adıyla anması.
+
+## Bağlayıcı / kullanılan belgeler (36)
+
+| Belge | Konu (ilk başlık) | Kelime | Son değişim | Anıldığı yer |
+|---|---|---:|---|---|
+| `ANLATIM_KURGU_STANDARDI.md` | Sesli ders anlatım kurgusu — hikâye gibi, neden-sonuçlu (kullanıcı kararı 2026-10-28) | 724 | 2026-11-16 | 2 betik |
+| `API_KATALOG.md` | MedSoru Açık Veri API Kataloğu | 1120 | 2026-11-13 | 1 betik |
+| `ARA_RESIM_KURALLARI.md` | Sesli ders ara resimleri (mekanizma resimleri) | 701 | 2026-11-16 | 3 betik |
+| `CIZIM_KURALLARI.md` | Canlı çizim ve işaretleme kuralları (bütün kurullar, bütün dersler, bütün PDF'ler) | 1937 | 2026-11-16 | AGENTS/CLAUDE, 9 betik |
+| `DERS_ICERIK_BICIMI.md` | Ders içerik paketi biçimi (Terimler · Hastalıklar · Bilgiler · Tablolar · Sorular · Kartla | 591 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
+| `DIS_AJAN_YOL_HARITASI.md` | Dış yapay zekâ ajanları için tam içerik işçisi yol haritası (kullanıcı kararı 2026-10-29) | 2329 | 2026-11-16 | AGENTS/CLAUDE |
+| `FAZ8_DUZELTME_TALIMATLARI.md` | Faz 8 — Düzeltme ve Geliştirme Talimatları | 845 | 2026-11-16 | 1 betik |
+| `GELECEK_PLANLAMASI.md` | GELECEK PLANLAMASI — MeDSor tam otomatik içerik ve tahmin sistemi | 3895 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
+| `GPU_KULLANIM.md` | Yerel GPU kullanımı — tam istisna listesi ve ısı/saat protokolleri | 555 | 2026-11-16 | AGENTS/CLAUDE |
+| `HASTALIK_MODELI.md` | Hastalıklar bilgi tabanı — veri modeli (şema 2) | 398 | 2026-11-16 | 1 betik |
+| `HOCA_TAHMIN_REHBERI.md` | Hocanın soracağı yerleri tahmin rehberi (sürüm v6; her test turunda genel kurallarla iyile | 941 | 2026-11-16 | AGENTS/CLAUDE, 5 betik |
+| `HOCA_USLUBU_YONTEMI.md` | Hoca üslubu, kazanım haritası ve soru-yazım profili (2026-10-29) | 1458 | 2026-11-16 | AGENTS/CLAUDE, 4 betik |
+| `ICERIK_MOTORU_V3.md` | İçerik Motoru v3 — Kroki (L0/L1/L2), maliyet katmanlı model yönlendirme, canlı çizim ve te | 9303 | 2026-11-16 | AGENTS/CLAUDE, 3 betik |
+| `KMB_2B_STIL.md` | KMB 2B Düz Çizgi Film Stili (sahne kitaplığı sözleşmesi) | 919 | 2026-11-16 | 18 betik |
+| `KMB_GORSEL_ASISTAN.md` | KMB Görsel Sesli Asistan — Yol Haritası ve İşletim | 1045 | 2026-11-16 | 5 betik |
+| `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | izlenmiyor | AGENTS/CLAUDE |
+| `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2518 | 2026-11-16 | AGENTS/CLAUDE, 3 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 50435 | 2026-11-16 | AGENTS/CLAUDE, 4 betik |
+| `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
+| `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 9 betik |
+| `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 8 betik |
+| `PATOLOJI_HOCA_SORU_MANTIGI.md` | Patoloji hocasının soru mantığı — Kurul 1 2026-27 derin analiz (v2, 2026-10-29) | 1178 | 2026-11-16 | AGENTS/CLAUDE, 11 betik |
+| `PATOLOJI_SORU_ESLEME_TABLOSU.md` | Patoloji 2026-27 Kurul 1: soru ↔ slayt eşleme tablosu (30 soru) | 2179 | 2026-10-29 | AGENTS/CLAUDE, 2 betik |
+| `SAGLIK_BAKANLIGI_PLANI.md` | Sağlık Bakanlığı sekmesi — plan (2026-10-14) | 1318 | 2026-11-16 | 3 betik |
+| `SIK_ACIKLAMA_STANDARDI.md` | Şık Açıklama Standardı — "Yardım al", yanlış şık ve çözüm açıklamaları (ZORUNLU) | 643 | 2026-11-16 | AGENTS/CLAUDE, 28 betik |
+| `SITE_HARITASI_KURALLARI.md` | Site haritası ve adres kuralları (2026-10-21, kullanıcı kararı) | 970 | 2026-11-10 | AGENTS/CLAUDE, 3 betik |
+| `SORU_EKLEME_AJAN_PROMPTU.md` | Soru Ekleme: Serbest Metin → Ayrıştırıcı Ajan → Küme → Yeniden İnşa | 2936 | 2026-11-16 | 1 betik |
+| `SORU_HAVUZU_MOTORU.md` | Soru havuzu motoru (`src/services/recall/`, hatirlama-v1 · 2026-10-13) | 940 | 2026-11-16 | 1 betik |
+| `SORU_USLUBU.md` | Örnek soru üslubu (kullanıcı kararı 2026-10-28; H119) | 344 | 2026-11-16 | 4 betik |
+| `TAHTA_OYUNLARI.md` | Tahta Oyunları — Go, Çizgi Yarışı, XOX (altyapı + kural + arayüz planı) | 1052 | 2026-11-10 | 6 betik |
+| `TAM_HAT_HIZLI_AKIS.md` | Tam içerik hattı — hızlı ve hatasız akış (kullanıcı kararı 2026-10-28) | 1433 | 2026-11-16 | AGENTS/CLAUDE |
+| `TURKCE_USLUP_STANDARDI.md` | Türkçe Üslup Standardı — öğrenciye okunan ve gösterilen tüm metinler (ZORUNLU) | 477 | 2026-10-18 | AGENTS/CLAUDE, 36 betik |
+| `V13_ADA_PLAN.md` | v13 "Ada" — tam yeniden tasarım planı | 875 | 2026-11-16 | 1 betik |
+| `V15_PLAN.md` | v15 "Yalın" — koda geçiş planı | 2159 | 2026-11-16 | 4 betik |
+| `YONETIM_V16_KIT.md` | Yönetim v16 — kabuk, kit ve sunucu yardımcıları | 2505 | 2026-10-28 | 7 betik |
+| `YONETIM_V16_PLAN.md` | Yönetim v16 Planı: baştan kurulum | 3997 | 2026-11-16 | 1 betik |
+
+## Hiçbir yerden anılmayan belgeler (13) — eski olabilir; bağlayıcı sayma, gerekirse doğrula
+
+| Belge | Konu | Kelime | Son değişim |
+|---|---|---:|---|
+| `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1023 | 2026-11-16 |
+| `ENVANTER.md` | ENVANTER — T0 Tam Envanter (salt-okunur) | 5798 | 2026-11-16 |
+| `FAZ_ZINCIRI.md` | Faz zinciri (meds-phases) — 2026-10-06 | 417 | 2026-11-16 |
+| `HANTALLIK_KOK_NEDENLERI.md` | Hantallık, yavaşlık ve yanlış üretim — kök neden defteri | 4310 | 2026-11-16 |
+| `MEDSOR_SISTEM_DOKUMANI.md` | MeDSor — Sistem Dokümanı | 7442 | 2026-11-16 |
+| `ORACLE_REALTIME_DATABASE_REHBERI.md` | Oracle VM Üzerinde Realtime Veritabanı Mimarisi ve Çözüm Rehberi | 640 | 2026-10-12 |
+| `REALTIME_QUIZ_MIMARISI.md` | Düşük Gecikmeli (Low-Latency) Realtime Quiz ve Rekabet Mimarisi | 647 | 2026-10-26 |
+| `TASIMA_YOL_HARITASI.md` | Proje Taşıma ve Yeniden Düzenleme Yol Haritası | 1567 | 2026-11-16 |
+| `TIP_ASISTANI_YOL_HARITASI.md` | MeDSor Tıp Asistanı — Yol Haritası ve Özellik Kataloğu | 3007 | izlenmiyor |
+| `V15_EKRAN_DENETIMI.md` | v15 ekran denetimi | 6432 | 2026-10-28 |
+| `V15_TEMA_DENETIMI.md` | V15 Tema / Renk Denetimi (2026-10-27) | 881 | 2026-10-27 |
+| `YENILIKLER_2026-10-06.md` | Yenilikler — 2026-10-06 | 471 | 2026-10-06 |
+| `YENILIKLER_2026-10-09.md` | Yenilikler — 2026-10-09 | 1725 | 2026-11-16 |

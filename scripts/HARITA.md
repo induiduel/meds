@@ -41,6 +41,7 @@ scripts/
 - Veri/arama: `pipeline/` (Drive → downloads → temp → database) · `advanced_ai/` (rag_vektor_hatti.py …) · `search/` · `db/` · `db_analiz/`
 - Derleme/sınama: `vite/` (splitLearningDecks, surumDosyasi — vite.config.ts buradan import eder) · `design/` (kontrast kapısı) ·
   `perf/` · `cevrimdisi_sinama/` · `v15/` · `fixtures/` · `artifact_studio/` · `claude_eklenti/`
+- Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır)
 
 ## moduller/ — site özellik araçları
 `recall/` (soru havuzu motoru) · `composer/` · `sozluk_v2/` · `diseases/` · `saglik/` · `eval/` (`npm run eval:*`)

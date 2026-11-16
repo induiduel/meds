@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 750,
-  "baslik": "Altyapı: kullanılmayan kök betikler arşive alındı",
+  "onem": 751,
+  "baslik": "Altyapı: ajan talimatları inceltildi, belge haritası eklendi",
   "maddeler": [
-    "scripts/ kökünde hiçbir kod, birim ya da talimatın çağırmadığı 14 dosya scripts/arsiv/olu_kok_2026-11'e taşındı (silinmedi)."
+    "AGENTS.md: askıdaki Öğren (5–9b) ve kapalı Quiz (19) kuralları kelimesi kelimesine docs/KURALLAR_OGREN_QUIZ.md'ye taşındı; her oturum %14 daha az okuma.",
+    "docs/HARITA.md: 49 belgenin konusu, boyutu ve nereden anıldığı (scripts/altyapi/belge_haritasi.py üretir)."
   ],
   "eklenen": [],
   "degisen": [],
