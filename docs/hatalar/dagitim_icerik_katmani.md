@@ -31,3 +31,9 @@ Sunucunun src/data'ya katmansız yazımı ve git/depo güvenliği maddeleri.
 - **Kök neden:** Kanca kapının ÇALIŞMA AĞACI hâlini çalıştırıyor ve dosyaları çalışma ağacından okuyordu; commit'e girecek içerik index'tedir.
 - **Kalıcı çözüm:** `.githooks/pre-commit` kapının sahnelenen (index) hâlini `--hizli --sahne` ile çalıştırır; `--sahne` sahnelenmemiş değişikliği olan izlenen dosyaları index'ten okur, izlenmeyen dosyaları taramaz. Sınandı: sahnelenmemiş ihlal → geçer, aynı ihlal sahnelenince → rc=1.
 - **Önleme kuralı:** Paylaşılan ağaçta çalışan kapılar commit'in içeriğini (index) denetler; `--no-verify` yalnız kapının kendisi bozuksa ve gerekçe kayda yazılarak kullanılır.
+
+## H592 — `.gitignore`'daki ses dizinlerinde 2.809 MP3 hâlâ izleniyordu (2026-11-17)
+- **Belirti:** depo 1,7 GB; `.gitignore`'a alınmış `data/k2*_cozucu/ses/` dizinlerinde ~200 MB MP3 her klonda/dağıtım worktree'sinde taşınıyor.
+- **Kök neden:** `.gitignore` yalnız izlenmeyen dosyayı durdurur; kural eklenmeden önce işlenmiş dosyalar dizinde kalır. Kural eklenirken `git rm --cached` yapılmamıştı.
+- **Çözüm:** `git ls-files -ci --exclude-standard | grep '\.mp3$'` → `git rm --cached` (dosyalar diskte duruyor). Önce doğrulandı: kod rsync'i `/data`'yı zaten dışlar, Oracle'da her kökte en az izlenen kadar MP3 var. `kayit.json` kayıtları izlenmeye devam ediyor.
+- **Kural:** `.gitignore`'a dizin ekleyen aynı commit'te `git ls-files -ci --exclude-standard` boş mu diye bakar. Geçmişteki nesneler `.git`'te kalır; küçültmek geçmiş yeniden yazımı ister (kullanıcı kararı).

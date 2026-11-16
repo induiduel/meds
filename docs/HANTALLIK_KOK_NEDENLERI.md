@@ -63,7 +63,7 @@ okuma yükü **her oturumda baştan** ödeniyor.
 
 **Kalıcı çözüm.**
 
-1. **Tek "işletim kuralı" belgesi** (ör. `docs/KURALLAR.md`, ≤1.200 kelime): yalnız işi durduran kurallar, numaralı,
+1. **Tek "işletim kuralı" belgesi** (ör. `docs/KURALLAR.md` *(önerildi, yazılmadı — bugünkü yakın karşılığı `docs/KURALLAR_OGREN_QUIZ.md` + `docs/KURALLAR_ICERIK_HATTI.md`)*, ≤1.200 kelime): yalnız işi durduran kurallar, numaralı,
    her biri tek cümle + tek örnek. Diğer belgeler buna **referans** verir, kopyalamaz.
 2. `DEGISIKLIK_KAYDI.md` arşive ayrılır: son 3 oturum kalır, gerisi `docs/arsiv/DEGISIKLIK_KAYDI_<yıl>.md`. Günlük
    tutarı **≤150 kelime/oturum** olur (şablon: istek / yapılan / kapı sonucu / açık).
@@ -98,7 +98,7 @@ yeniden yazılıyor.
 `--denetle`) **bloklayıcı değil** (uyarı gibi geçiliyor).
 
 **Kalıcı çözüm.**
-1. Her ölçüt/sürüm **tek dosyada** (ör. `docs/standartlar.json`: sürüm, eşik, oran). Belgeler bu dosyayı **okur**;
+1. Her ölçüt/sürüm **tek dosyada** (ör. `docs/standartlar.json` *(önerildi, yazılmadı)*: sürüm, eşik, oran). Belgeler bu dosyayı **okur**;
    metne sayı yazmak yasak.
 2. `--denetle` hat başında **zorunlu adım** olur (0 değilse hat başlamaz).
 3. Katman listesi tek kaynak: `mod.py`. `AGENTS.md` ve el kitabı yalnız "katmanlar `mod.py`'de" der, liste tekrarlamaz.
@@ -241,7 +241,7 @@ başına, çoğu zaman **dosya zamanına bakarak** cevaplıyor; bu yüzden üst 
 yenileniyor.
 
 **Kalıcı çözüm.**
-1. **Bağımlılık grafiği + karmalar**: manifestte her katman `girdi_karmasi` taşır. `hat.py --etkilenen <değişen dosya>` *(önerildi, yazılmadı — 2026-11-16)*
+1. **Bağımlılık grafiği + karmalar**: manifestte her katman `girdi_karmasi` taşır. `hat.py --etkilenen <değişen dosya>` *(önerildi, yazılmadı — 2026-11-16; bugün dosya bağımlılığı için `scripts/altyapi/bag.py etki <yol>`)*
    yalnız gerçekten etkilenen katmanları listeler. Kural: "yalnız etkilenen katman yeniden üretilir".
 2. **Parça kimliği**: anlatım cümlesi `c<N>`, soru `q<N>`, önem maddesi `m<N>` kimliğiyle sabitlenir; kapı kimlik
    verir, düzeltme yalnız o kimliğe uygulanır (bu kural `TAM_HAT_HIZLI_AKIS.md` §3'te var — **uygulanmıyor**, koşucu yok).
@@ -398,8 +398,8 @@ iyileştirme yapıldığında kazanç görülemiyor.
 sorusu hiçbir yerde toplanmadı.
 
 **Kalıcı çözüm.**
-1. `hat.py` *(önerildi, yazılmadı — 2026-11-16)* her aşama için `sure_sn`, `llm_cagri`, `kapı_hatasi`, `yeniden_yazim` alanlarını `manifest.json`'a yazar.
-2. `python3 scripts/hat/tam_hat/rapor.py --son 10` *(önerildi, yazılmadı — 2026-11-16)* → ders başına toplam süre, en pahalı aşama, en çok HATA veren kapı.
+1. `hat.py` *(önerildi, yazılmadı — 2026-11-16; bugünkü koşucu `scripts/hat/tam_hat/kosucu.py`)* her aşama için `sure_sn`, `llm_cagri`, `kapı_hatasi`, `yeniden_yazim` alanlarını `manifest.json`'a yazar.
+2. `python3 scripts/hat/tam_hat/rapor.py --son 10` *(önerildi, yazılmadı — 2026-11-16; bugünkü yakın karşılık `python3 scripts/altyapi/saglik_raporu.py` + `python3 scripts/gunluk.py son`)* → ders başına toplam süre, en pahalı aşama, en çok HATA veren kapı.
 3. Haftalık tek sayfa "hattın sağlığı" raporu (ders sayısı, ortalama süre, tekrar oranı, açık iş sayısı).
 4. Kapıların sınaması CI'ya benzer tek komutla (`python3 scripts/kapilar/kos.py --sinama`) koşar.
 

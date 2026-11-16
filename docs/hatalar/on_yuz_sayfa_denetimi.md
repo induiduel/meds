@@ -243,3 +243,15 @@
 - **Kök neden:** `index.html` ve `main.tsx`'teki `vite:preloadError` dinleyicisi kendi yenileme kurtarması için `event.preventDefault()` çağırıyor (H572). Vite'ın `__vitePreload` sarıcısı bu durumda başarısız `import()`'u reddetmek yerine `undefined` ile ÇÖZER; `React.lazy` boş modülü geçerli sayıp `default`'a erişirken çöker. Yenileme 8 sn kısıtlı olduğundan ikinci denemede kullanıcı çökmüş ekranda kalır. `wrapLazy` yalnız REDDEDİLEN içe aktarmayı ele alıyordu; ~60 tembel bileşen sarıcısızdı.
 - **Kalıcı çözüm:** `src/utils/guvenliLazy.tsx` — modül yoksa ya da `default` yoksa bunu yükleme hatası sayar (çevrimiçi + sunucuya ulaşılıyorsa tek yenileme, çevrimdışıysa bilgi ekranı, aksi hâlde "Yeniden Dene" kartı); tüm `React.lazy` kullanımları buna geçirildi.
 - **Önleme kuralı:** `src` altında `guvenliLazy` dışında `React.lazy(` kullanılmaz (kapı `scripts/kapilar/lazy_denetim.py`). Canlı istemci hataları `python3 scripts/altyapi/saglik_raporu.py --canli` ile her dağıtımdan sonra okunur.
+
+## H590 — Sesli ders: bağlantı gelince "Ağ bağlantısı yok" kartında kalıyor (2026-11-17)
+- **Belirti:** çevrimdışıyken indirilmemiş sesli ders açılır, hata kartı çıkar; bağlantı geri gelince kart kalır, ders yüklenmez.
+- **Kök neden:** `src/components/canliDers/CanliDersDers.tsx` yükleme etkisi yalnız ders anahtarı değişince çalışıyordu; istek bir kez hata verince aynı ders için yeniden deneme yolu yoktu (ne `online` dinleyicisi ne düğme).
+- **Çözüm:** deneme sayacı etki bağımlılığında; kart görünürken `online` olayı + 6 sn'de bir `sunucuyaUlasilir()` yoklaması (sekme gizliyken durur), yanıt gelince kendiliğinden yeniden yükler; "Yeniden dene" düğmesi. Kalıcı hatalarda (404/400, sesi yok) yoklama yok.
+- **Kural:** ağ isteğine bağlı her "yüklenemedi" kartı yeniden deneme yolu (düğme + bağlantı dönüşü) taşır; yükleme etkisi yalnız kimliğe bağlanıp hata durumunda kilitlenmez.
+
+## H591 — Yönetim girişinde `au-*` stilleri yok ("Şifremi unuttum" stilsiz) (2026-11-17)
+- **Belirti:** `/manage` giriş ekranında düğmeler, ileti kutusu ve yükleniyor simgesi stilsiz.
+- **Kök neden:** `au-*` kuralları yalnız `src/styles/rebuild.css` §44'teydi; o dosyayı yalnız `src/main.tsx` içe aktarır. `src/manage-main.tsx` aynı giriş bileşenini (`EpostaBaglantiGiris`) çizer ama yalnız `yonetim-temel.css` alır; `ui-spin` animasyonu da `appearance.css`'te kalıyordu.
+- **Çözüm:** §44 değişmeden `src/styles/giris-au.css`'e taşındı (+ `@keyframes ui-spin`); iki giriş dosyası da içe aktarır. Ana sitede kural sırası aynı.
+- **Kural:** iki girişin (index/manage) ortak kullandığı bileşenin stili ortak, kendi başına bir CSS dosyasında durur ve iki girişten de içe aktarılır; yalnız ana sitenin toplu CSS'ine gömülmez.

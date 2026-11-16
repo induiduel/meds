@@ -198,7 +198,42 @@ def kokler(kok: Path) -> list[str]:
     return list(dict.fromkeys(ad))
 
 
+def yol_kok_adi(hedef: str, kok: Path) -> str | None:
+    """Kök adı yerine dizin YOLU verilmişse (ör. data/k2psikiyatri_cozucu/ses) onu içeren bilinen kök adı."""
+    p = Path(hedef)
+    try:
+        rel = (p if p.is_absolute() else Path.cwd() / p).resolve().relative_to(kok.resolve()).as_posix()
+    except ValueError:
+        rel = hedef.strip("/")
+        for on in ("meds/data/", "data/"):
+            if rel.startswith(on):
+                rel = rel[len(on):]
+                break
+    eslesme = []
+    for ad in kokler(kok):
+        dz = f"ek_moduller/ses/{ad.split('/', 1)[1]}" if ad.startswith("ek_moduller/") else ad
+        if rel == dz or rel.startswith(dz + "/"):
+            eslesme.append((len(dz), ad))
+    return max(eslesme)[1] if eslesme and max(eslesme)[1] != hedef else None
+
+
+def hedef_yok_mesaji(hedef: str, kok: Path) -> str:
+    oneri = yol_kok_adi(hedef, kok)
+    m = f"HATA  hedef bulunamadı: {hedef} (kök: {kok}). <hedef> dizin yolu değil, kök ADIdır."
+    if oneri:
+        m += f"\n      Bunu mu demek istediniz: {oneri}"
+    return m + "\n      Geçerli kök adları: " + ", ".join(kokler(kok))
+
+
 def coz(hedef: str, kok: Path) -> Birim | None:
+    b = _coz(hedef, kok)
+    if b is None and (ad := yol_kok_adi(hedef, kok)):
+        print(f"UYARI hedef yol olarak verildi: {hedef} → kök adı '{ad}' ile devam ediliyor", file=sys.stderr)
+        b = _coz(ad, kok)
+    return b
+
+
+def _coz(hedef: str, kok: Path) -> Birim | None:
     hedef = hedef.strip("/")
     if hedef == "sesli_anlatim":
         return _sesli(kok, None)
@@ -491,7 +526,7 @@ def k_oracle(a) -> int:
             continue
         b = coz(h, kok)
         if b is None:
-            print(f"HATA  hedef bulunamadı: {h}")
+            print(hedef_yok_mesaji(h, kok))
             return 2
         gk = h.split("/")[0] if not h.startswith("ek_moduller/") else f"ek_moduller/ses/{h.split('/', 1)[1]}"
         s = oracle_karsilastir([o.yol for o in b.ogeler], gk, kok)
@@ -573,7 +608,7 @@ def main() -> int:
         return k_artik(a)
     s = denetle(a.hedef, Path(a.kok), None if a.tumu else a.ornek)
     if s is None:
-        print(f"HATA  hedef bulunamadı: {a.hedef} (kök: {a.kok})")
+        print(hedef_yok_mesaji(a.hedef, Path(a.kok)))
         return 2
     if a.json:
         print(json.dumps(s, ensure_ascii=False, indent=1))

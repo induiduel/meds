@@ -46,7 +46,7 @@
 | Atomik yazım (tmp + rename) | havuz, çıkmış, içerik katmanı, deste deposu, RAG parça dosyası |
 | Boşla/küçülterek ezme freni | çıkmış kaydı, RAG budaması (tür %50'den fazla küçülürse silmez), içerik katmanı toplu silme freni (H559) |
 | Kaçış kapıları (bilerek toplu silme) | `MEDS_RAG_BUDAMA_ZORLA=1` ve ilgili ortam değişkenleri — yalnız kullanıcı komutuyla |
-| Yedek tavanı | `data/backups/catalog`: ad başına en yeni 3; fazlası arşive |
+| Yedek tavanı | `data/backups/catalog`: ad başına en yeni 1 kalır; diğerleri 30 günden eskiyse ya da en yeniyle sha256 aynıysa arşive |
 | Arşiv = sıkıştır + sha256 doğrula + sonra sil | `scripts/altyapi/veri_bakim.py arsivle` (varsayılan kuru çalışma) |
 | Günlük | sunucu `data/gunluk/veri-YYYY-MM.jsonl`, betikler `data/gunluk/betik-YYYY-MM.jsonl`; `python3 scripts/gunluk.py son|ozet` |
 | Kapı | `python3 scripts/kapilar/yapi_koruma.py` (D1–D10), `python3 scripts/altyapi/veri_bakim.py denetle` |

@@ -11,7 +11,8 @@ Yalnız stdlib (+ varsa `zstd`; yoksa Python lzma/xz). LLM/ağ/GPU yok. Varsayı
 Arşiv: <PROJE>/_arsiv_veri/<YYYYMMDD>/<özgün göreli yol>.zst (+ MANIFEST.jsonl). Aynı adın çok sürümlü .bak'ları
 tek tar + zstd --long ile sıkıştırılır. Her arşiv açılıp sha256 doğrulanmadan özgün silinmez.
 Dokunulmaz: data/_yedek/site_ayar (canlı geri alma), kodda adı geçen dosyalar, son 48 saatte değişenler,
-data/backups/catalog'da her ad için en yeni 2 .bak.
+data/backups/catalog'da her ad için en yeni 1 .bak; diğerleri 30 günden eskiyse ya da içeriği (sha256)
+en yeni yedekle aynıysa (yaşa bakılmaksızın) arşiv adayıdır.
 """
 from __future__ import annotations
 
@@ -53,7 +54,8 @@ YEDEK_DIZIN = ("data/backups/", "data/_yedek/")
 YEDEK_ISTISNA = ("data/_yedek/site_ayar/", "data/_yedek/site_ayar")
 DESENLER = ("*.bak", "*.yedek*", "*legacy_backup*", "*_supabase.json", "*.yedek.mp3", "*.kapanis-oncesi.mp3")
 KATALOG = "data/backups/catalog/"
-KATALOG_SAKLA = 2
+KATALOG_SAKLA = 1
+KATALOG_MIN_GUN = 30
 TAZE_SN = 48 * 3600
 
 # Ses artıkları (2026-11-16, H587 güncellemesi; kaynak: ses_ortak/ses_kapisi.py artik): yaşı > SES_ARTIK_GUN olanlar aday.
@@ -189,15 +191,22 @@ def adaylar() -> list[dict]:
     ref = referanslar({a["anahtar"] for a in liste})
     for a in liste:
         a["ref"] = a["anahtar"] in ref
-    # katalog: her ad için en yeni 2 .bak yerinde kalır
+    # katalog: her ad için en yeni KATALOG_SAKLA .bak kalır; diğerleri <30 gün ise kalır, ancak
+    # içeriği en yeni yedekle bayt bayt aynıysa yaşa bakılmaksızın adaydır (aynı kopya iki kez saklanmaz).
     gruplar = defaultdict(list)
     for a in liste:
         if a["yol"].startswith(KATALOG) and a["yol"].endswith(".bak"):
             gruplar[katalog_adi(a["yol"])].append(a)
     for ad, g in gruplar.items():
-        for i, a in enumerate(sorted(g, key=lambda x: x["mtime"], reverse=True)):
-            a["sakla"] = i < KATALOG_SAKLA
+        sirali = sorted(g, key=lambda x: x["mtime"], reverse=True)
+        en_yeni_sha = {sha(MEDS / x["yol"]) for x in sirali[:KATALOG_SAKLA]}
+        for i, a in enumerate(sirali):
             a["grup"] = ad
+            if i < KATALOG_SAKLA:
+                a["sakla"] = "katalog en yeni 1"
+            elif simdi - a["mtime"] < KATALOG_MIN_GUN * 86400:
+                a["sakla"] = "" if (a["boyut"] == sirali[0]["boyut"] and sha(MEDS / a["yol"]) in en_yeni_sha) \
+                    else "katalog <30 gün"
     return sorted(liste, key=lambda a: -a["boyut"])
 
 
@@ -213,7 +222,7 @@ def neden_dokunma(a: dict) -> str:
     if a["taze"]:
         return "<48 saat"
     if a.get("sakla"):
-        return "katalog en yeni 2"
+        return a["sakla"]
     return ""
 
 

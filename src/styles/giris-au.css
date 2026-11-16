@@ -1,0 +1,64 @@
+/* Giriş / kayıt (au-*) stilleri — rebuild.css §44'ten taşındı (2026-11-17). Hem ana site (main.tsx, rebuild.css'in hemen ardından:
+ *  eski kademe sırası korunur) hem yönetim girişi (manage-main.tsx) içe aktarır. Renk tokenları palettes.ts → applyAppearance. */
+/* 44 · Giriş / kayıt (UserAuthModal) — yeniden tasarım. Marka başlığı, kayan segment, öne çıkan Google,
+ *  ikonlu yüzen etiketli alanlar, animasyonlu ileti. Yalnız tokenlar (açık/koyu tema). */
+.au { display: flex; flex-direction: column; gap: 14px; padding: 20px 20px 14px; }
+.au.is-embedded { max-width: 400px; margin: 0 auto; padding: 18px; border: 1px solid var(--color-line); border-radius: 18px; background: var(--color-white); }
+.au-head { position: relative; display: flex; align-items: flex-start; gap: 12px; }
+.au-mark { flex: none; width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--color-brand, #E0245E); color: #fff;
+  box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--color-brand, #E0245E) 70%, transparent); animation: au-pop 560ms cubic-bezier(.34, 1.5, .64, 1) both; }
+.au-mark svg { width: 24px; height: 24px; }
+.au-mark svg path, .au-mark svg polyline { stroke-dasharray: 60; stroke-dashoffset: 60; animation: au-draw 800ms 200ms cubic-bezier(.65, 0, .35, 1) forwards; }
+.au-titles { flex: 1; min-width: 0; padding-top: 1px; }
+.au-titles h2 { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 700; letter-spacing: -.02em; color: var(--color-ink); }
+.au-titles p { margin: 2px 0 0; font-size: 13px; line-height: 1.45; color: var(--color-ink-3); }
+.au-close { position: absolute; top: -6px; right: -8px; width: 34px; height: 34px; border: 0; border-radius: 99px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); cursor: pointer; }
+.au-close svg { width: 16px; height: 16px; }
+.au-titles { padding-right: 28px; }
+.au-seg { height: 40px; }
+.au-seg > button { height: 36px; font-size: 13.5px; }
+.au-google { height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer;
+  transition: border-color 150ms, box-shadow 150ms, transform 120ms; }
+.au-google:hover:not(:disabled) { border-color: var(--color-line-2); box-shadow: 0 4px 14px -6px rgb(0 0 0 / .18); }
+.au-google:active:not(:disabled) { transform: scale(.985); }
+.au-google:disabled, .au-submit:disabled { opacity: .55; cursor: default; }
+.au-or { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--color-ink-3); }
+.au-or::before, .au-or::after { content: ""; flex: 1; height: 1px; background: var(--color-line); }
+.au-form { display: flex; flex-direction: column; gap: 10px; animation: au-in 280ms cubic-bezier(.22, 1, .36, 1) both; }
+.au-row { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.au-field { position: relative; display: block; }
+.au-field input { width: 100%; height: 52px; padding: 18px 12px 4px 40px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 15px; outline: none;
+  transition: border-color 150ms, box-shadow 150ms; }
+.au-field:has(.au-eye) input { padding-right: 44px; }
+.au-field input:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+.au-ic { position: absolute; left: 13px; top: 17px; width: 17px; height: 17px; color: var(--color-ink-3); transition: color 150ms; pointer-events: none; }
+.au-field:focus-within .au-ic { color: var(--color-accent); }
+.au-lbl { position: absolute; left: 40px; top: 16px; font-size: 15px; color: var(--color-ink-3); pointer-events: none; transform-origin: 0 0;
+  transition: transform 200ms cubic-bezier(.22, 1, .36, 1), color 150ms; }
+.au-field input:focus ~ .au-lbl, .au-field input:not(:placeholder-shown) ~ .au-lbl { transform: translateY(-9px) scale(.76); color: var(--color-ink-2); font-weight: 600; }
+.au-field input:focus ~ .au-lbl { color: var(--color-accent); }
+.au-eye { position: absolute; right: 6px; top: 8px; width: 36px; height: 36px; border: 0; border-radius: 9px; display: grid; place-items: center; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.au-eye:hover { background: var(--color-field); color: var(--color-ink); }
+.au-eye svg { width: 17px; height: 17px; }
+.au-hint { display: block; margin: 4px 0 0 4px; font-size: 11.5px; color: var(--color-ink-3); }
+.au-submit { height: 48px; margin-top: 2px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; background: var(--color-accent); color: var(--color-on-accent, #fff); font: inherit; font-size: 15px; font-weight: 650; cursor: pointer;
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--color-accent) 80%, transparent); transition: background 150ms, transform 120ms; }
+.au-submit:hover:not(:disabled) { background: var(--color-accent-hover, var(--color-accent)); }
+.au-submit:active:not(:disabled) { transform: scale(.985); }
+.au-spin { width: 18px; height: 18px; animation: ui-spin .8s linear infinite; }
+.au-msg { margin: 0; display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; border-radius: 12px; font-size: 13px; line-height: 1.45; animation: au-in 260ms cubic-bezier(.22, 1, .36, 1) both; }
+.au-msg svg { width: 16px; height: 16px; flex: none; margin-top: 1px; }
+.au-msg.is-bad { background: var(--color-bad-soft); color: var(--color-bad-text); animation: au-in 260ms both, au-shake 360ms 80ms both; }
+.au-msg.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }
+.au-foot { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; padding-top: 10px; border-top: 1px solid var(--color-line-soft); font-size: 12px; color: var(--color-ink-3); }
+.au-foot a, .au-foot button { display: inline-flex; align-items: center; gap: 4px; border: 0; background: transparent; padding: 2px 0; color: var(--color-ink-3); font: inherit; text-decoration: none; cursor: pointer; }
+.au-foot a:hover, .au-foot button:hover { color: var(--color-accent); }
+.au-foot svg { width: 13px; height: 13px; }
+.au-foot i { font-style: normal; }
+@keyframes au-pop { from { opacity: 0; transform: scale(.5) rotate(-10deg); } to { opacity: 1; transform: none; } }
+@keyframes au-draw { to { stroke-dashoffset: 0; } }
+@keyframes au-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes au-shake { 20%, 60% { transform: translateX(-4px); } 40%, 80% { transform: translateX(4px); } }
+@media (prefers-reduced-motion: reduce) { .au-mark, .au-mark svg *, .au-form, .au-msg { animation: none !important; } .au-mark svg * { stroke-dashoffset: 0; } }
+/* ui-spin appearance.css'te; yönetim paketinde yok → aynı tanım burada da (özdeş, zararsız). */
+@keyframes ui-spin { to { transform: rotate(360deg); } }

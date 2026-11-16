@@ -14,6 +14,7 @@ import { setStoredPanelSecret } from './config/deployment';
 import { realtimeEventService } from './services/realtimeEvents';
 import { ManageV16 } from './components/manage16/ManageV16';
 import './styles/yonetim-temel.css';
+import './styles/giris-au.css';
 
 installAdminFetchAuth();
 applyTheme(readTheme());

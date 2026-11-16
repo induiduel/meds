@@ -424,3 +424,7 @@
 - **H585** · "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor": kanca çalışma ağacını denetliyordu → hatalar/dagitim_icerik_katmani.md
 - **H588** · "Dağıtımdan sonra tembel ekran 'e._result.default' / React #306 ile çöküyor": preloadError preventDefault → import boş çözülüyor → `guvenliLazy` → hatalar/on_yuz_sayfa_denetimi.md
 - **H589** · "Arama ölçümü %95'ten %75'e düştü sanıldı": değerlendirme örneklemi dizinde olmayan gizli kopyaları içeriyordu → hatalar/veri_cikmis.md
+- **H590** · "İndirilmemiş sesli ders bağlantı gelince 'Ağ bağlantısı yok' kartında kalıyor": yükleme etkisi yalnız ders kimliğine bağlı, yeniden deneme yok → yoklama + düğme → hatalar/on_yuz_sayfa_denetimi.md
+- **H591** · "Yönetim girişinde 'Şifremi unuttum' stilsiz": `au-*` yalnız ana sitenin `rebuild.css`'inde → `giris-au.css` iki girişten → hatalar/on_yuz_sayfa_denetimi.md
+- **H592** · "`.gitignore`'daki ses dizinlerinde 2.809 MP3 hâlâ izleniyor": kural sonradan eklendi, `git rm --cached` yapılmadı → hatalar/dagitim_icerik_katmani.md
+- **H593** · "Yedek arşivi hep 0 iş; ses kapısı yol verilince yön göstermiyor; nereye var olmayan yolu önerebilir": saklama kuralı 2 sabit, ad-yalnız eşleme, süzgeçsiz öneri → hatalar/betik_altyapi.md

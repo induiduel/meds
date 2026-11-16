@@ -22,6 +22,7 @@ import {
 import { useDersEkranTercih, useYatayDokunmatik } from '../../services/dersEkranTercih';
 import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useMasaUygun } from './CdSesliEk';
 import { toggleFavoriteCard } from '../../services/studyStore';
+import { sunucuyaUlasilir } from '../../services/cevrimdisi/baglanti';
 import { CdTasmaMenu, CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15'; // H332: CdTasmaMenu
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
@@ -307,6 +308,8 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
     return () => window.removeEventListener('popstate', onPop);
   }, [kaydirParagrafa]);
 
+  // Yükleme hatası (çoğunlukla ağ yokken indirilmemiş ders): deneme sayacı artınca detay yeniden istenir
+  const [deneme, setDeneme] = useState(0);
   useEffect(() => {
     let canli = true;
     setHata(null);
@@ -324,7 +327,32 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       (e) => canli && setHata(e?.message || 'Ders açılamadı.'),
     );
     return () => { canli = false; };
-  }, [dersKey]);
+  }, [dersKey, deneme]);
+  // Hata kartı görünürken (kalıcı 404/geçersiz değilse) sunucu yoklanır; bağlantı gelince ders kendiliğinden yeniden yüklenir
+  const kaliciHata = !!hata && /geçersiz ders|bulunamadı|sesi henüz yok|404|400/i.test(hata);
+  useEffect(() => {
+    if (!hata || kaliciHata) return;
+    let bitti = false;
+    let t: number | undefined;
+    const dene = () => {
+      if (bitti || document.visibilityState === 'hidden') return;
+      void sunucuyaUlasilir().then((ok) => { if (ok && !bitti) { bitti = true; setDeneme((n) => n + 1); } });
+    };
+    const kur = () => {
+      window.clearInterval(t);
+      t = document.visibilityState === 'hidden' ? undefined : window.setInterval(dene, 6000);
+      if (document.visibilityState !== 'hidden') dene();
+    };
+    window.addEventListener('online', dene);
+    document.addEventListener('visibilitychange', kur);
+    kur();
+    return () => {
+      bitti = true;
+      window.clearInterval(t);
+      window.removeEventListener('online', dene);
+      document.removeEventListener('visibilitychange', kur);
+    };
+  }, [hata, kaliciHata]);
   // Başka ders bitip kapanınca bu ders bağlanabilir
   useEffect(() => {
     if (detay && caliyorKey !== detay.key && !cdDurum().playing && baglanti === 'baska') setBaglanti(cdDetayBagla(detay));
@@ -527,6 +555,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
             ? 'Sesli ders hazırlanıyor; birazdan burada olacak. Bu sırada diğer bölümleri kullanabilirsin.'
             // sunucunun iç hata kodu ("geçersiz ders", "bulunamadı") öğrenciye ham gösterilmez (H111p)
             : /geçersiz ders|bulunamadı|404|400/i.test(hata) ? 'Bu adreste bir sesli ders yok. Bağlantı eski ya da hatalı olabilir; listeden dersi seçebilirsin.' : hata}</p>
+          {!kaliciHata && <button type="button" className="cd-btn" onClick={() => setDeneme((n) => n + 1)}>Yeniden dene</button>}
           {!kamp && <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm sesli derslere dön</button>}
         </div>
       </div>

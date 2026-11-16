@@ -194,3 +194,9 @@
 - **Kök neden:** Betikler eskiden `meds_temp/patoloji_onem/araclar/` kopyasından çalışıyordu (`dirname(dirname(__file__))` = veri klasörü); kod git'e alınınca aynı ifade `scripts/`'i gösterdi (çift kopya kalıntısı, H578 sınıfı). `lib` yolu başka modülün yan etkisine bağlıydı. JS kodu düz Python dizesinde tutuluyordu.
 - **Kalıcı çözüm:** Veri klasörü `PATOLOJI_ONEM_KOK` ya da `meds_temp/patoloji_onem`; `arsiv_yayinla` `scripts/altyapi/agents`'ı kendisi ekler; kaçışlar `\\s`. `patoloji_cozucu/girdi3_hazirla.py` da aynı kalıntıydı (kendi klasöründe `girdi2/` arıyordu; veri `meds_temp/patoloji_ornek26/cozucu/`, kardeşleri oraya bakıyor) → `PATOLOJI_COZUCU_KOK` ya da o klasör.
 - **Önleme kuralı:** Taşıma/temizlikten sonra tüm betikler gerçek yerel içe aktarmayla taranır (`_temizlik/araclar/kum2.py`: depo modüllerini gerçekten yükler, yalnız dış paketleri sahteler); `python3 -W error -m py_compile` uyarıları da hata sayar.
+
+## H593 — Araç tuzakları: yedek arşivi "0 iş", ses kapısı yol kabul etmiyor, nereye var olmayan yolu önerebilir (2026-11-17)
+- **Belirti:** `veri_bakim.py arsivle` hep "0 iş"; `ses_kapisi.py` kök adı yerine dizin yolu verilince yalnız "hedef bulunamadı"; `nereye.py` katalogdaki yolu diskte var mı bakmadan basıyor.
+- **Kök neden:** `KATALOG_SAKLA = 2` yaş/içerik bakmadan en yeni 2 yedeği koruyordu (belge "3" diyordu); `coz()` yalnız kök adı eşliyor, hata iletisi yön göstermiyordu; `nereye.bas` yolları süzmüyordu.
+- **Çözüm:** en yeni 1 her zaman kalır, gerisi 30 günden eskiyse ya da en yeniyle sha256'sı aynıysa arşiv adayı; `yol_kok_adi()` yolu köke çevirip uyarıyla sürer, çözemezse öneri + geçerli kök listesi; `nereye.py` diskte olmayan somut yolu eler. `HANTALLIK_KOK_NEDENLERI.md`'de yazılmamış betik atıfları bugünkü karşılıklarıyla düzeltildi.
+- **Kural:** saklama kuralı kodda ve belgede tek sayı; araç "bulunamadı" derken geçerli seçenekleri listeler; öneri üreten araç önerdiği yolun varlığını denetler.

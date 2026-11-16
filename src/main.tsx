@@ -13,6 +13,7 @@ import './styles/shell.css';
 import './styles/motifler.css';
 import './styles/screens.css';
 import './styles/rebuild.css';
+import './styles/giris-au.css';
 import './styles/toolbar.css';
 // summary.css (özet/not okuyucu) ve spots.css (sınav spotları) kendi tembel ekranlarıyla yüklenir (başarım turu 2026-10-20).
 import './styles/layout-modes.css';

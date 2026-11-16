@@ -122,6 +122,22 @@ def bas_hatalar(bulgu: list[tuple[float, dict]]) -> str:
     return "\n".join(s)
 
 
+_YOL = re.compile(r"(?:scripts|docs|otomasyon)/[\w./-]+\.(?:py|sh|mjs|mts|md|json)")
+
+
+def var_mi(metin: str) -> bool:
+    """Metindeki somut yolların hepsi diskte var mı (yer tutucu <...> ve * içerenler sayılmaz)."""
+    return all((MEDS / y).exists() for y in _YOL.findall(metin) if "<" not in y and "*" not in y)
+
+
+def suz(g: dict) -> dict:
+    """Diskte olmayan yolu öneren oku/kapı satırlarını eler (önerilmiş ama yazılmamış betikler)."""
+    g = dict(g)
+    g["oku"] = [o for o in g["oku"] if var_mi(o["yol"])]
+    g["kapilar"] = [k for k in g["kapilar"] if var_mi(k)]
+    return g
+
+
 def bas(g: dict) -> str:
     s = [f"## {g['ad']}  [{g['id']}]", "Oku:"]
     s += [f"  {i}. {o['yol']} — {o['neden']}" for i, o in enumerate(g["oku"], 1)]
@@ -184,7 +200,7 @@ def main(argv: list[str]) -> int:
         return 2
     sirali = sorted(((puanla(metin, g), g) for g in gorevler), key=lambda x: -x[0])
     en = sirali[0][0]
-    secilen = [g for p, g in sirali[:2] if p > 0 and p >= en * 0.6]
+    secilen = [suz(g) for p, g in sirali[:2] if p > 0 and p >= en * 0.6]
     hsorgu = metin + " " + " ".join(a for g in secilen for a in g["anahtarlar"][:6])
     bulgu = hata_ara(hsorgu, [h for g in secilen for h in g["hatalar"]]) if secilen else hata_ara(metin)
     if js:
