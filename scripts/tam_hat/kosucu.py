@@ -43,7 +43,9 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "terim_kisaltma": ("E3", "betik", "kisaltma_sozlugu.py otomatik {d} --yaz · terim_sozlugu.py otomatik {d} --yaz (MEDS_API=Oracle; yayın SONRASI canli-ders tazeyse)"),
     "onem_listesi": ("E2", "llm", "Önem listesi: OKU baglam/kaynak.md + baglam/sema.md (§önem). spot_cozucu çalışma dosyası onem/<kod>.json. Kapı: onem_dogrula.py → 0 HATA."),
     "ornek_soru":  ("E2", "llm", "Örnek sorular + çözücü: OKU baglam/kaynak.md + baglam/sema.md (§örnek, §çözücü) + docs/asama_kurallari/ornek_soru.md. "
-                                 "ÜRET src/data/ornek_sorular/k2/{d}.json + cozucu/<kod>.json. Kapı: soru_uslup/sik_aciklama/profil_kapisi/kaynak_kapisi + cozucu_dogrula → 0 HATA."),
+                                 "ÜRET src/data/ornek_sorular/k2/{d}.json + cozucu/<kod>.json. "
+                                 "TEK KAPI örnek soru (4 kapı tek çağrıda): python3 scripts/tam_hat/ornek_soru_kapi.py src/data/ornek_sorular/k2/{d}.json "
+                                 "--uslup {k}/soru_uslubu.json --ders \"<ders>\" --sayfalar {k}/sayfalar.json → 0 HATA. Çözücü ayrı: cozucu_dogrula."),
     "hoca_sorulari": ("E2", "llm", "(Yalnız patoloji) Hoca soruları kartı + sesli hoca çözücü — patoloji_soru_isci akışı."),
     "ders_icerik": ("E3", "betik", "ders_icerik_uret.py {d} + ders_icerik_dogrula.py {d}  (terim/kısaltma+önem SONRASI)"),
     "capa_cizim":  ("E4", "llm", "Çapa + canlı çizim (capa_dok→çapa→cizim partileri→cizim_kapisi 0 HATA)."),
