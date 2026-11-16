@@ -132,7 +132,7 @@ def run(log=print) -> dict:
     yeni = [d for d in yeni if d.get("id") not in isci]
     korunan = [d for d in mevcut if not str(d.get("id", "")).startswith(PREFIX) or d.get("id") in isci]
     with dd.kilit():
-        dd.yaz_hepsi(korunan + yeni, girinti=1)
+        dd.yaz_hepsi(korunan + yeni)
     rapor = {"deste": len(yeni), "korunan": len(korunan), "slayt": sum(d["totalSlides"] for d in yeni),
              "soru": sum(d["matchedPastQuestionsCount"] for d in yeni), "yedek": str(dst)}
     log(json.dumps(rapor, ensure_ascii=False))

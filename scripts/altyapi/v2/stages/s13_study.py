@@ -548,7 +548,7 @@ def build(export: bool = False, log=print) -> dict:
                 glossary[k] = v
         store.atomic_write_json(GLOSSARY_JSON, glossary, indent=2)
         with dd.kilit():
-            dd.yaz_hepsi(decks, girinti=2)
+            dd.yaz_hepsi(decks)
         if encyclopedia:
             store.atomic_write_json(ENCYCLOPEDIA_JSON, encyclopedia, indent=2)
         store.atomic_write_json(QUESTION_CARDS_JSON, qcards, indent=1)

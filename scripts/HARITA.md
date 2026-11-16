@@ -9,6 +9,7 @@ scripts/
 ├── kok.py          konum-bağımsız kök: SCRIPTS / MEDS / PROJE (yeni betikler parents[N] KULLANMAZ — aşağıya bak)
 ├── HARITA.md       bu dosya
 ├── kapilar/        tek kapı girişi: kos.py + matris.json (aşama → kapı komutu)
+│                   yapi_koruma.py = yeniden yapılanma koruması (deste deposu, parents[N], taşınan yollar, hata dizini, src/data yazımı, yeni kök dizin; pre-commit `.githooks/pre-commit`)
 ├── hat/            içerik hattının orkestrasyonu
 ├── uretim/         içerik üretimi (ders, soru, ses, çizim, önem, çözücü ...)
 ├── altyapi/        servis, dağıtım, derleme, veri hattı, arama
@@ -36,6 +37,8 @@ scripts/
 - Çıkmış: `cikmis_dizin/` · `cikmis_2627/` · Arşiv dersleri: `arsiv_25_26/` (adı arşiv ama CANLI üretim)
 - Hastalık: `akbc_disease_pipeline.py` (AKBC hastalık profili hattı)
 - Konu özel: `ileri_tumor_genetigi/` · `tumor_immuno_builder/` · `arzu/` (özel katman; sürüm notunda anılmaz)
+
+- `asistan/` (kök altında) — sınav asistanı kaynak toplayıcı (`kaynaklar.py`); desteleri `deste_deposu` ile okur.
 
 ## altyapi/ — servis, dağıtım, veri
 - Servisler (systemd): `agents/` (embed_server, gpu_guard, watchdog, pipeline_runner) · `v2/` + `semantic/` (**paket**:

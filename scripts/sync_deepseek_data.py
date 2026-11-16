@@ -32,9 +32,9 @@ CANDIDATE_DIRS = [
     os.path.join(os.getcwd(), "deepseek_data"),
 ]
 
-PAST_QUESTIONS_PATH = os.path.join("src", "data", "pastQuestions.json")
+PAST_QUESTIONS_PATH = str(dd.YOL.parent / "pastQuestions.json")  # cwd bağımsız (eskiden meds/ dışından çalışınca bozuluyordu)
 DECKS_PATH = str(dd.YOL)
-GLOSSARY_PATH = os.path.join("src", "data", "medical_glossary.json")
+GLOSSARY_PATH = str(dd.YOL.parent / "medical_glossary.json")
 
 # Quality thresholds
 MAX_STEM_LENGTH = 1000
@@ -226,7 +226,7 @@ def sync_markdown_spot_notes(data_dirs):
         print(f"Warning: {DECKS_PATH} not found.")
         return 0
 
-    with dd.duzenle(girinti=2) as decks:
+    with dd.duzenle() as decks:
 
         enriched_slides = 0
 

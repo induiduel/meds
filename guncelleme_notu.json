@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 754,
-  "baslik": "Öğren desteleri tek depodan okunup yazılıyor",
+  "onem": 755,
+  "baslik": "Yapı koruma kapısı ve hata defteri sadeleştirmesi",
   "maddeler": [
-    "Deste okuma/yazma tek modülde toplandı (atomik yazım + kilit); eşzamanlı yazımlarda deste kaybı riski kalktı.",
-    "Panelde düzeltilen desteler ders revize, NotebookLM ve arama motorunda da görünüyor."
+    "Proje düzenini koruyan otomatik kapı eklendi (her commit öncesi çalışır).",
+    "Hata defterinin büyük bölümleri daha küçük konu dosyalarına ayrıldı.",
+    "Deste üretim betikleri tek biçimde yazıyor; çalışma dizinine bağlı yol hataları giderildi."
   ],
   "eklenen": [],
   "degisen": [],

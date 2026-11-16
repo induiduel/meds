@@ -1,0 +1,4 @@
+#!/bin/sh
+# Yapı koruma kapısı (2026-11-16). Etkinleştirme: git config core.hooksPath .githooks
+cd "$(git rev-parse --show-toplevel)" || exit 1
+exec python3 scripts/kapilar/yapi_koruma.py --hizli

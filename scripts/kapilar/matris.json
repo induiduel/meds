@@ -9,6 +9,7 @@
     "cikmis_analiz":  {"kapi": "scripts/uretim/ders_analizi/uret.py", "arg": ["--dogrula", "{key}"], "gerekli": ["key"]},
     "ders_icerik":    {"kapi": "scripts/ders_icerik_dogrula.py", "arg": ["{key}"], "gerekli": ["key"]},
     "cizim":          {"kapi": "scripts/uretim/cizim/cizim_kapisi.py", "arg": ["{key}", "--kok", "{kok}"], "gerekli": ["key", "kok"]},
-    "ara_soru":       {"kapi": "scripts/uretim/hoca_ara_soru/kur.py", "arg": ["dogrula", "{key}", "--ses"], "gerekli": ["key"]}
+    "ara_soru":       {"kapi": "scripts/uretim/hoca_ara_soru/kur.py", "arg": ["dogrula", "{key}", "--ses"], "gerekli": ["key"]},
+    "yapi":           {"kapi": "scripts/kapilar/yapi_koruma.py", "arg": [], "gerekli": []}
   }
 }

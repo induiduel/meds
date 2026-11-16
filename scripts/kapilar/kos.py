@@ -19,7 +19,15 @@ import subprocess
 import sys
 from pathlib import Path
 
-KOK = Path(__file__).resolve().parents[2]
+import sys as _sys
+from pathlib import Path as _Path
+_d = _Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in _sys.path:
+    _sys.path.append(str(_d))
+import kok as _kok  # noqa: E402
+KOK = _kok.MEDS
 MATRIS = Path(__file__).resolve().parent / "matris.json"
 
 

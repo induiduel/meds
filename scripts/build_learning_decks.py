@@ -1207,7 +1207,7 @@ def build_all_decks():
 
     print(f"\nToplam {len(decks)} interaktif öğrenim destesi üretildi.")
     with dd.kilit():
-        dd.yaz_hepsi(decks, girinti=2)
+        dd.yaz_hepsi(decks)
     print(f"[Başarılı] Desteler kaydedildi: {OUTPUT_FILE}")
 
     meta_list = []

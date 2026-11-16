@@ -14,7 +14,6 @@ Kullanım:
 import json, re, os, re, sys, collections
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
-DEFAULT = os.path.join(ROOT, 'src', 'data', 'interactive_learning_decks.json')
 TRUNC = re.compile(r'(\.\.\.|…)\s*$')
 OPT_KEY = re.compile(r'^[A-E]$')
 TYPES = {
