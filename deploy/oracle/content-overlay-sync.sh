@@ -44,7 +44,7 @@ for rel in "${FILES[@]}"; do
     [[ "$MAIN_DIR" == "$MEDS_DIR" ]] && break
   done
   if [[ "${guncel:-0}" == 1 ]]; then
-    $SSH "rm -f '$ORACLE_DIR/data/content/$rel.fark.json'; rm -f '$ORACLE_DIR/data/content/_birlesik/$rel'"
+    $SSH "sudo -n rm -f '$ORACLE_DIR/data/content/$rel.fark.json' '$ORACLE_DIR/data/content/_birlesik/$rel'"
     echo "  güncel: $rel (fark kaldırıldı)"
   else
     pulled+=("src/data/$rel")
