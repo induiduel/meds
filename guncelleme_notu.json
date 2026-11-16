@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 755,
-  "baslik": "Yapı koruma kapısı ve hata defteri sadeleştirmesi",
+  "onem": 756,
+  "baslik": "Panel düzeltmeleri artık dağıtımda kaybolmuyor",
   "maddeler": [
-    "Proje düzenini koruyan otomatik kapı eklendi (her commit öncesi çalışır).",
-    "Hata defterinin büyük bölümleri daha küçük konu dosyalarına ayrıldı.",
-    "Deste üretim betikleri tek biçimde yazıyor; çalışma dizinine bağlı yol hataları giderildi."
+    "NotebookLM aktarımı ve katkı geri alma ile yapılan sözlük, kart, özet ve örnek soru düzeltmeleri kalıcı katmana yazılıyor.",
+    "Yapı koruma kapısı yazım hedefini izleyerek daha isabetli çalışıyor."
   ],
   "eklenen": [],
   "degisen": [],

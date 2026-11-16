@@ -8,7 +8,7 @@ Denetimler (her bulgu dosya:satır ile):
   D2 HATA   .py'de Path(__file__)…parents[N≥2] ya da .parent.parent.parent ile kök hesabı (kok.py kullan)
   D3 HATA   deploy/oracle/tasinan_yollar.txt: yeni yol var olmalı, eski yol yeniden oluşmamalı
   D4 HATA   KURUL2_YAPILMAYACAK_HATALAR.md dizini ↔ docs/hatalar/*.md (kural_secici.py --denetle)
-  D5 HATA   src/services/** + server.ts: src/data'ya writeFileSync/renameSync, writableContent kullanmadan (H580)
+  D5 HATA   src/services/** + server.ts: yazma çağrısının hedefi (değişken zinciriyle) src/data ve writableContent yok (H580)
   D6 UYARI  token bütçesi: AGENTS.md / hata defteri / docs/hatalar/*.md / MEMORY.md kelime tavanları
   D7 HATA   scripts/ kökünde HARITA.md'de anılmayan yeni alt dizin
 
@@ -82,21 +82,62 @@ D2_IZINLI_ESKI = {  # dosya → gerekçe; yalnız azalabilir
 }
 
 # ---------------------------------------------------------------- D5
+
+D5_TANIM = re.compile(r"^\s*(?:export\s+)?(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*(?::[^=]+)?=\s*(.+)$")
+D5_CAGRI = re.compile(r"\b([A-Za-z_$][\w$.]*)\s*\(\s*([^,)]+)")
+D5_YAZAN_AD = re.compile(r"(writeFileSync|renameSync|writeFile|appendFileSync|[wW]rite|[yY]az)")
+D5_KIMLIK = re.compile(r"[A-Za-z_$][\w$]*")
+
+
+def d5_srcdata_yazimlari(satirlar: list, yorum: set) -> list:
+    """src/data'ya bağlanan yazma çağrıları: [(satır, hedef ifadesi)]. Değişken zinciri tek dosya içinde izlenir."""
+    tanim: dict = {}
+    for i, l in enumerate(satirlar, 1):
+        if i in yorum:
+            continue
+        m = D5_TANIM.match(l)
+        if m:
+            tanim.setdefault(m.group(1), m.group(2))
+    kirli = {k for k, v in tanim.items() if D5_SRCDATA.search(v) and "writableContent" not in v}
+    degisti = True
+    while degisti:
+        degisti = False
+        for k, v in tanim.items():
+            veri = re.search(r"[rR]ead|JSON\.parse|\.\.\.", v)  # okunan VERİ yol değildir
+            if k not in kirli and not veri and "writableContent" not in v and kirli & set(D5_KIMLIK.findall(v)):
+                kirli.add(k)
+                degisti = True
+    # Gövdesinde writableContent geçen yerel sarmalayıcılar (ör. dataCatalogService.writeJsonAtomic) güvenlidir
+    guvenli = set()
+    for i, l in enumerate(satirlar):
+        fm = re.search(r"\bfunction\s+([A-Za-z_$][\w$]*)", l)
+        if fm and any("writableContent" in x for x in satirlar[i:i + 15]):
+            guvenli.add(fm.group(1))
+    sonuc = []
+    for i, l in enumerate(satirlar, 1):
+        if i in yorum:
+            continue
+        for m in D5_CAGRI.finditer(l):
+            if m.group(1).split(".")[-1] in guvenli:
+                continue
+            ad, arg = m.group(1), m.group(2)
+            if re.search(r"\bfunction\s*$|\bfunction\s+$", l[:m.start()]) or re.match(r"\s*(?:export\s+)?(?:async\s+)?function\b", l):
+                continue  # işlev TANIMI, çağrı değil
+            if not D5_YAZAN_AD.search(ad.split(".")[-1]) or "writableContent" in arg:
+                continue
+            if D5_SRCDATA.search(arg) or kirli & set(D5_KIMLIK.findall(arg)):
+                sonuc.append((i, arg.strip()[:60]))
+    return sonuc
+
 D5_YAZ = re.compile(r"\b(writeFileSync|renameSync)\s*\(")
 D5_SRCDATA = re.compile(r"""src[/\\]data|['"]src['"]\s*,\s*['"]data['"]""")
 # Sezgi dosya düzeyindedir: yorum DIŞI bir satırda src/data yolu kuran + writeFileSync/renameSync çağıran +
 # writableContent anmayan dosya. 2026-11-16 taramasında böyle olan mevcut dosyalar (yalnız azalabilir):
-D5_IZINLI_ESKI_DOSYA = {
-    "src/services/autoErrorRepairEngine.ts",
-    "src/services/musicStore.ts",          # src/data/musicTracks.json yalnız tohum (okuma); yazım data/
-    "src/services/notebooklmBridgeService.ts",
-    "src/services/notebooklmManageService.ts",
-    "src/services/questionCrossAuditService.ts",
-    "src/services/hatActionsRoutes.ts",
-    "src/services/knowledge/diseaseGraphBuild.ts",  # derleme betiği (çalışma zamanı yazıcısı değil)
-    "src/services/localRagEngine.ts",
-    "src/services/queryIntel/build.ts",             # derleme betiği
-    "src/services/questionIntake.ts",
+# Hedef izlemeli denetimin 2026-11-16 taramasında kalan tek gerçek eski yazım (dosya, satır parçası); yalnız azalabilir.
+D5_IZINLI_ESKI = {
+    # Yönetici çıkmış soru düzenlemesi: asıl kayıt data/pastQuestions.json + DB'ye gider; bu satır git'teki src kopyasını
+    # yerelde günceller (Oracle'da geçici). Kaldırılması yerel davranışı değiştirir — ayrı karar.
+    ("server.ts", "fs.writeFileSync(srcPast,"),
 }
 
 # ---------------------------------------------------------------- D6
@@ -228,25 +269,23 @@ def d1_d2_d5(dosyalar: list[Path]) -> dict:
                         d2_eski_gorulen.add(r)
                         continue
                     bul("D2", "HATA", r, i, f"sabit kademeli kök hesabı ({m.group(0)}) — scripts/kok.py kullan (HARITA.md §Yeni betik)")
-        # D5
-        srcdata_kod = has_d5 and any(D5_SRCDATA.search(l) for i, l in enumerate(satirlar, 1) if i not in yorum)
-        if srcdata_kod and "writableContent" not in metin:
-            for i, l in enumerate(satirlar, 1):
-                if i in yorum or not D5_YAZ.search(l):
+        # D5 — hedef izleme: yazma çağrısının İLK argümanı src/data'ya bağlanıyorsa (doğrudan ya da değişken zinciriyle)
+        if has_d5 or (r.startswith("src/services/") or r == "server.ts"):
+            for i, hedef in d5_srcdata_yazimlari(satirlar, yorum):
+                eski = next(((f, pr) for (f, pr) in D5_IZINLI_ESKI if f == r and pr in satirlar[i - 1]), None)
+                if eski:
+                    d5_eski_gorulen.add(eski)
                     continue
-                if r in D5_IZINLI_ESKI_DOSYA:
-                    d5_eski_gorulen.add(r)
-                    continue
-                bul("D5", "HATA", r, i, "src/data'ya writableContent olmadan yazım (H580) — contentOverlay.writableContent kullan")
+                bul("D5", "HATA", r, i, f"src/data'ya katmansız yazım ({hedef}) (H580) — writableContent()/desteDeposu kullan")
     for k in D1_IZINLI_ESKI - d1_eski_gorulen:
         bul("D1", "UYARI", k[0], None, "IZINLI_ESKI kalemi artık ihlal etmiyor — listeden sil")
     for k in set(D2_IZINLI_ESKI) - d2_eski_gorulen:
         bul("D2", "UYARI", k, None, "IZINLI_ESKI kalemi artık ihlal etmiyor — listeden sil")
-    for k in set(D5_IZINLI_ESKI_DOSYA) - d5_eski_gorulen:
-        bul("D5", "UYARI", k, None, "IZINLI_ESKI kalemi artık ihlal etmiyor — listeden sil")
+    for k in D5_IZINLI_ESKI - d5_eski_gorulen:
+        bul("D5", "UYARI", k[0], None, "IZINLI_ESKI kalemi artık ihlal etmiyor — listeden sil")
     return {"D1_izinli_dosya": len(D1_IZINLI_DOSYA), "D1_izinli_satir": len(D1_IZINLI_SATIR),
             "D1_izinli_eski": len(D1_IZINLI_ESKI), "D2_izinli_eski": len(D2_IZINLI_ESKI),
-            "D5_izinli_eski": len(D5_IZINLI_ESKI_DOSYA), "D7_izinli_eski": len(D7_IZINLI_ESKI)}
+            "D5_izinli_eski": len(D5_IZINLI_ESKI), "D7_izinli_eski": len(D7_IZINLI_ESKI)}
 
 
 def d3() -> None:

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { desteleriOku } from './desteDeposu.ts';
+import { resolveContent, writableContent, markContentChanged } from './contentOverlay.ts';
 import { ingestNotebookLMData, parseNotebookLMPayload } from './notebooklmBridgeService.ts';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -12,10 +13,8 @@ const DATA_DIR = path.resolve(ROOT_DIR, 'data');
 const SRC_DATA_DIR = path.resolve(ROOT_DIR, 'src', 'data');
 
 const CONTRIBUTIONS_FILE = path.resolve(DATA_DIR, 'notebooklm_contributions.json');
-const SRC_CONTRIBUTIONS_FILE = path.resolve(SRC_DATA_DIR, 'notebooklm_contributions.json');
 
 const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
-const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json');
 const SUMMARIES_CATALOG_FILE = path.resolve(SRC_DATA_DIR, 'lectureSummariesCatalog.json');
 const DATA_SUMMARIES_CATALOG_FILE = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
 const LOCAL_CHUNKS_FILE = path.resolve(DATA_DIR, 'local_rag_chunks.json');
@@ -44,7 +43,9 @@ export interface NotebookLMContribution {
   updatedAt: string;
 }
 
-function readJsonSafe<T>(filePath: string, fallback: T): T {
+// src/data altındaki yollar canlı içerik katmanından okunur/katmana yazılır (H580); data/ yolları olduğu gibi kalır
+function readJsonSafe<T>(srcPath: string, fallback: T): T {
+  const filePath = resolveContent(srcPath);
   try {
     if (fs.existsSync(filePath)) {
       return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
@@ -55,7 +56,8 @@ function readJsonSafe<T>(filePath: string, fallback: T): T {
   return fallback;
 }
 
-function writeJsonAtomic(filePath: string, data: any) {
+function writeJsonAtomic(targetPath: string, data: any) {
+  const filePath = writableContent(targetPath);
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -125,11 +127,10 @@ export function getAllNotebookLMContributions(): NotebookLMContribution[] {
 }
 
 /**
- * Save all contributions with sync to both data/ and src/data/
+ * Katkıları kalıcı data/ altına yazar (src/data imaj içidir ve okuyanı yoktur — H580)
  */
 function saveAllContributions(list: NotebookLMContribution[]) {
   writeJsonAtomic(CONTRIBUTIONS_FILE, list);
-  writeJsonAtomic(SRC_CONTRIBUTIONS_FILE, list);
 }
 
 /**
@@ -340,7 +341,6 @@ export async function deactivateNotebookLMContribution(id: string): Promise<{ su
         if (idx >= 0) {
           questions[idx] = item.originalSnapshot;
           writeJsonAtomic(PAST_QUESTIONS_FILE, questions);
-          writeJsonAtomic(SRC_PAST_QUESTIONS_FILE, questions);
         }
       } else if (item.type === 'spot_pearls') {
         const summaries: any[] = readJsonSafe(SUMMARIES_CATALOG_FILE, []);
@@ -349,6 +349,7 @@ export async function deactivateNotebookLMContribution(id: string): Promise<{ su
           summaries[idx] = item.originalSnapshot;
           writeJsonAtomic(SUMMARIES_CATALOG_FILE, summaries);
           writeJsonAtomic(DATA_SUMMARIES_CATALOG_FILE, summaries);
+          markContentChanged('summaries', [String(item.targetId)]);
         }
       }
     }

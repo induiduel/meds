@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { desteleriOku, desteleriYaz } from './desteDeposu.ts';
+import { resolveContent, writableContent, markContentChanged } from './contentOverlay.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,7 +14,6 @@ const REPO_ROOT = path.resolve(ROOT_DIR, '..'); // /home/indu/medsor
 
 // Primary File Paths
 const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
-const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json');
 
 
 const SUMMARIES_CATALOG_FILE = path.resolve(SRC_DATA_DIR, 'lectureSummariesCatalog.json');
@@ -26,7 +26,9 @@ const FLASHCARDS_FILE = path.resolve(SRC_DATA_DIR, 'question_cards.json');
 const PRACTICE_QUESTIONS_DIR = path.resolve(SRC_DATA_DIR, 'ornek_sorular');
 
 // Helper to safely read JSON
-function readJsonSafe<T>(filePath: string, fallback: T): T {
+// src/data altındaki yollar canlı içerik katmanından okunur/katmana yazılır (H580); data/ yolları olduğu gibi kalır
+function readJsonSafe<T>(srcPath: string, fallback: T): T {
+  const filePath = resolveContent(srcPath);
   try {
     if (fs.existsSync(filePath)) {
       return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
@@ -37,8 +39,9 @@ function readJsonSafe<T>(filePath: string, fallback: T): T {
   return fallback;
 }
 
-// Helper to write JSON with backup
-function writeJsonAtomic(filePath: string, data: any) {
+// Helper to write JSON with backup (src/data hedefi → writableContent katman kopyası)
+function writeJsonAtomic(targetPath: string, data: any) {
+  const filePath = writableContent(targetPath);
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -659,9 +662,8 @@ export function ingestPastQuestionCorrections(payload: any): IngestionResult {
     }
   });
 
-  // Save to both data/pastQuestions.json and src/data/pastQuestions.json
+  // Kalıcı kayıt yalnız data/pastQuestions.json (H580); src kopyası tohumdur, sunucu kendi kaydında yerelde aynalar
   writeJsonAtomic(PAST_QUESTIONS_FILE, existingQuestions);
-  writeJsonAtomic(SRC_PAST_QUESTIONS_FILE, existingQuestions);
 
   return {
     success: true,
@@ -747,6 +749,7 @@ export function ingestSpotPearls(payload: any): IngestionResult {
 
   writeJsonAtomic(SUMMARIES_CATALOG_FILE, summaries);
   writeJsonAtomic(DATA_SUMMARIES_CATALOG_FILE, summaries);
+  markContentChanged('summaries', updatedIds);
 
   return {
     success: true,
@@ -769,6 +772,7 @@ export function ingestPracticeQuestions(payload: any): IngestionResult {
   const merged = [...existing, ...questions];
 
   writeJsonAtomic(filePath, merged);
+  markContentChanged('ornek', [String(lectureId)]);
 
   return {
     success: true,
@@ -830,6 +834,7 @@ export function ingestGlossaryTerms(payload: any): IngestionResult {
 
   writeJsonAtomic(GLOSSARY_FILE, glossary);
   writeJsonAtomic(ENCYCLOPEDIA_FILE, encyclopedia);
+  markContentChanged('glossary', updatedIds);
 
   return {
     success: true,
@@ -870,6 +875,7 @@ export function ingestFlashcards(payload: any): IngestionResult {
   });
 
   writeJsonAtomic(FLASHCARDS_FILE, existingCards);
+  markContentChanged('cards', updatedIds);
 
   return {
     success: true,

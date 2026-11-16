@@ -13,6 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { desteleriOku, desteleriYaz } from './desteDeposu.ts';
+import { resolveContent } from './contentOverlay.ts';
 import {
   detectQuestionCrossData,
   buildCrossDataPromptSection,
@@ -153,9 +154,6 @@ function dismissQuestionReportsInDb(targetId: string, _itemId?: string) {
         q.updatedAt = new Date().toISOString();
         list[idx] = q;
         writeJsonAtomic(PAST_QUESTIONS_FILE, list);
-        if (fs.existsSync(SRC_PAST_QUESTIONS_FILE)) {
-          writeJsonAtomic(SRC_PAST_QUESTIONS_FILE, list);
-        }
       }
     }
   } catch (err) {
@@ -661,7 +659,7 @@ export function enrichAndFetchContext(source: ErrorSource, targetId: string, sub
 
   if (source === 'term') {
     const GLOSSARY_FILE = path.resolve(SRC_DATA_DIR, 'medical_glossary.json');
-    const terms = readJsonSafe<any[]>(GLOSSARY_FILE, []);
+    const terms = readJsonSafe<any[]>(resolveContent(GLOSSARY_FILE), []);
     const term = terms.find((t: any) => String(t.id) === String(targetId));
     return term || { id: targetId };
   }
@@ -908,9 +906,6 @@ function syncSisterQuestions(
 
     if (modified) {
       writeJsonAtomic(PAST_QUESTIONS_FILE, list);
-      if (fs.existsSync(SRC_PAST_QUESTIONS_FILE)) {
-        writeJsonAtomic(SRC_PAST_QUESTIONS_FILE, list);
-      }
       // Dosya yazıldıktan sonra: sunucu belleği dosyayı yeniden okur, hedef sorunun onarımı ezilmez
       for (const rec of syncedSisters) {
         try {
@@ -1136,15 +1131,8 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
         list[idx] = syncQuestionRevisionsAndReports(list[idx], item, correctedData);
         writeJsonAtomic(PAST_QUESTIONS_FILE, list);
       }
-      // 2. src/data/pastQuestions.json güncelle
-      if (fs.existsSync(SRC_PAST_QUESTIONS_FILE)) {
-        const srcList = readJsonSafe<any[]>(SRC_PAST_QUESTIONS_FILE, []);
-        const sIdx = srcList.findIndex((q) => String(q.id) === String(item.targetId));
-        if (sIdx !== -1) {
-          srcList[sIdx] = syncQuestionRevisionsAndReports(srcList[sIdx], item, correctedData);
-          writeJsonAtomic(SRC_PAST_QUESTIONS_FILE, srcList);
-        }
-      }
+      // 2. src/data/pastQuestions.json'a YAZILMAZ (H580): kalıcı kayıt data/'dadır; src kopyası yalnız tohumdur
+      //    ve sunucu kendi kaydında (server.ts PAST_SRC_COPY) onu yerelde yeniden aynalar.
 
       // 3. Karantina dosyasından tahliye et (derived/quarantine/karantina.json)
       if (shouldReleaseQuarantine) {
