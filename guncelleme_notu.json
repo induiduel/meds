@@ -1,9 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 744,
- "baslik": "Deploy-kırıcı: scripts/hoca_profili/ paketi git izlemesine alındı",
+ "onem": 745,
+ "baslik": "Deploy-kirici: hoca profili verisi + dokumanlari git izlemesine alindi",
  "maddeler": [
-  "Tüm hoca_profili paketi (12 .py) izlenmiyordu ama örnek-soru kapısı (profil_kapisi) ona bağımlıydı; izlemeye alındı."
+  "Hoca profili verisi (src/data/hoca_profilleri) ve HOCA_USLUBU dokumanlari izlenmiyordu; ornek-soru kapisi genel profile sert bagimli oldugundan temiz checkoutta gate cokerdi. Izlemeye alindi."
  ],
  "eklenen": [],
  "degisen": [
