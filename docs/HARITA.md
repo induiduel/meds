@@ -43,7 +43,7 @@
 | `TURKCE_USLUP_STANDARDI.md` | Türkçe Üslup Standardı — öğrenciye okunan ve gösterilen tüm metinler (ZORUNLU) | 477 | 2026-10-18 | 38 betik |
 | `V13_ADA_PLAN.md` | v13 "Ada" — tam yeniden tasarım planı | 875 | 2026-11-16 | 1 betik |
 | `V15_PLAN.md` | v15 "Yalın" — koda geçiş planı | 2159 | 2026-11-16 | 4 betik |
-| `VERI_MODELI.md` | Veri Modeli ve Yol Haritası (2026-11-16) | 742 | izlenmiyor | AGENTS/CLAUDE, 1 betik |
+| `VERI_MODELI.md` | Veri Modeli ve Yol Haritası (2026-11-16) | 742 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `YONETIM_V16_KIT.md` | Yönetim v16 — kabuk, kit ve sunucu yardımcıları | 2505 | 2026-10-28 | 7 betik |
 | `YONETIM_V16_PLAN.md` | Yönetim v16 Planı: baştan kurulum | 3997 | 2026-11-16 | 1 betik |
 

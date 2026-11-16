@@ -3,6 +3,7 @@
 
   python3 scripts/altyapi/nereye.py "k2-30 pdf geldi tam hat"
   python3 scripts/altyapi/nereye.py --liste | --json "<metin>" | --denetle
+  python3 scripts/altyapi/nereye.py hata "<sorgu>"   # yalnız ilgili hata maddeleri (docs/hatalar/_dizin.json)
 Katalog: docs/yonlendirme.json (yollar meds/ köküne göre).
 """
 from __future__ import annotations
@@ -51,6 +52,76 @@ def puanla(metin: str, g: dict) -> float:
     return p
 
 
+HATA_DIZIN = MEDS / "docs" / "hatalar" / "_dizin.json"
+
+
+# Belirti dili → maddelerde geçen teknik kelimeler (kullanıcı "kayıyor" der, madde "zamanlama/senkron" yazar)
+ES_ANLAM = {
+    "kayiyor": "zamanlama senkron erken gec cumle aktif", "kayma": "zamanlama senkron erken gec cumle aktif",
+    "erken": "zamanlama senkron", "gec": "zamanlama senkron", "donuyor": "donma performans takilma",
+    "takiliyor": "takilma performans donma", "yavas": "performans hantal", "bos": "eksik bulunamadi",
+    "cokuyor": "coker hata cikis", "kayboluyor": "katman kaybolur dagitim", "gorunmuyor": "gorunmez katman eksik",
+    "cizim": "cizim capa kontur lazer", "ses": "ses ema klip", "dagit": "dagitim oracle dagit",
+}
+
+
+def hata_ara(sorgu: str, dosyalar: list[str] | None = None, n: int = 8) -> list[tuple[float, dict]]:
+    """Sorgu kelimelerini madde anahtarlarıyla puanlar (IDF ağırlıklı: tam kelime, başlıkta ×1.5, 5 harf kök ×0.6)."""
+    if not HATA_DIZIN.exists():
+        return []
+    maddeler = json.loads(HATA_DIZIN.read_text(encoding="utf-8"))["maddeler"]
+    kel = [k for k in katla(sorgu).split() if len(k) >= 2]
+    kel += [w for k in list(kel) for w in ES_ANLAM.get(k, "").split() if w not in kel]
+    idler = {k.upper() for k in kel if re.fullmatch(r"h\d+", k)}
+    import math
+    hazir = []
+    df: dict[str, int] = {}
+    for m in maddeler:
+        anah = {katla(a) for a in m["anahtarlar"]}
+        tek = {w for a in anah for w in a.split()}
+        kok = {w[:5] for w in tek if len(w) >= 5}
+        for w in tek | {"~" + k for k in kok}:
+            df[w] = df.get(w, 0) + 1
+        hazir.append((m, anah, tek, kok, set(katla(m["baslik"]).split())))
+    N = len(maddeler)
+
+    def idf(w: str) -> float:
+        return math.log(1 + N / (1 + df.get(w, 0)))
+
+    sonuc = []
+    for m, anah, tek, kok, bas in hazir:
+        p = 0.0
+        esles = 0
+        for k in kel:
+            if len(k) < 3:
+                continue
+            if k in tek:
+                p += idf(k) * (1.5 if k in bas else 1.0)
+                esles += 1
+            elif len(k) >= 5 and k[:5] in kok:
+                p += idf("~" + k[:5]) * (0.9 if any(w[:5] == k[:5] for w in bas) else 0.6)
+                esles += 1
+        p *= (esles / max(1, sum(len(k) >= 3 for k in kel))) ** 0.5  # çok terim kapsayan öne
+        konu = set(katla(Path(m["dosya"]).stem).split())
+        if konu & set(kel):
+            p *= 1.6  # sorgu konu dosyasını adlandırıyor (cizim, ses, ...)
+        if m["id"] in idler:
+            p += 10
+        if p and dosyalar and m["dosya"] in dosyalar:
+            p *= 1.15
+        if p >= 4:
+            sonuc.append((p, m))
+    sonuc.sort(key=lambda x: (-x[0], x[1]["kelime"]))
+    return sonuc[:n]
+
+
+def bas_hatalar(bulgu: list[tuple[float, dict]]) -> str:
+    s = ["İlgili hatalar (yalnız bu aralıkları oku: Read offset=satır_baş limit=satır_son-satır_baş+1):"]
+    s += [f"  {m['baslik'][:110]} — {m['dosya']}:{m['satir_bas']}-{m['satir_son']} ({m['kelime']} kelime)"
+          for _, m in bulgu]
+    return "\n".join(s)
+
+
 def bas(g: dict) -> str:
     s = [f"## {g['ad']}  [{g['id']}]", "Oku:"]
     s += [f"  {i}. {o['yol']} — {o['neden']}" for i, o in enumerate(g["oku"], 1)]
@@ -94,6 +165,11 @@ def denetle(gorevler: list[dict]) -> int:
 
 
 def main(argv: list[str]) -> int:
+    if argv[:1] == ["hata"]:
+        sorgu = " ".join(argv[1:])
+        bulgu = hata_ara(sorgu)
+        print(bas_hatalar(bulgu) if bulgu else "Eşleşen hata maddesi yok.")
+        return 0
     gorevler = yukle()
     if "--denetle" in argv:
         return denetle(gorevler)
@@ -109,8 +185,11 @@ def main(argv: list[str]) -> int:
     sirali = sorted(((puanla(metin, g), g) for g in gorevler), key=lambda x: -x[0])
     en = sirali[0][0]
     secilen = [g for p, g in sirali[:2] if p > 0 and p >= en * 0.6]
+    hsorgu = metin + " " + " ".join(a for g in secilen for a in g["anahtarlar"][:6])
+    bulgu = hata_ara(hsorgu, [h for g in secilen for h in g["hatalar"]]) if secilen else hata_ara(metin)
     if js:
-        print(json.dumps({"sorgu": metin, "gorevler": secilen,
+        print(json.dumps({"sorgu": metin, "gorevler": secilen, "hatalar": [
+                              {k: m[k] for k in ("id", "baslik", "dosya", "satir_bas", "satir_son", "kelime")} for _, m in bulgu],
                           "oneri": [g["id"] for _, g in sirali[:3]] if not secilen else []},
                          ensure_ascii=False, indent=1))
         return 0
@@ -118,8 +197,12 @@ def main(argv: list[str]) -> int:
         print("Eşleşme yok. En yakın görevler: " + ", ".join(g["id"] for _, g in sirali[:3]))
         print("Haritalar: scripts/HARITA.md (betikler), docs/HARITA.md (belgeler), "
               "docs/KURUL2_YAPILMAYACAK_HATALAR.md (hatalar); tüm liste: --liste")
+        if bulgu:
+            print(bas_hatalar(bulgu))
         return 0
     print("\n\n".join(bas(g) for g in secilen))
+    if bulgu:
+        print("\n" + bas_hatalar(bulgu))
     return 0
 
 

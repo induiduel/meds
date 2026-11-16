@@ -13,6 +13,7 @@ Denetimler (her bulgu dosya:satır ile):
   D7 HATA   scripts/ kökünde HARITA.md'de anılmayan yeni alt dizin
   D9 HATA   sahnelenen yeni dosya gizli adlı (.env, *anahtar*, *secret*, *.pem…) ya da ≥5 MB (H583)
   D10 UYARI veri_bakim denetle: data/backups+_yedek > 300 MB ya da src/data↔data aynı >5 MB kopya (izin listesi dışı)
+  D11 UYARI sahnelenen dosyaya göre restart/vite build/onem+1/kapı hatırlatması (bag.py önbelleği; --hizli'de de)
   D8 HATA   scripts/HARITA.md kök dosyalar bölümü ya da docs/HARITA.md bayat (üreticilerin --denetle'si; --hizli'de de)
 
 İzin listeleri bu dosyadadır; IZINLI_ESKI listeleri yalnız AZALABİLİR (düzeltilen kalem listeden silinir; artık
@@ -356,10 +357,10 @@ def d7() -> None:
 
 
 def d8() -> None:
-    """İki harita üreticisinin --denetle'si (paralel; ölçüm 2026-11-16 ≈0,7 sn)."""
+    """Harita/dizin üreticilerinin --denetle'si (paralel; ölçüm 2026-11-16 ≈0,7 sn)."""
     import subprocess
     ureticiler = [SCRIPTS / "altyapi" / "betik_haritasi.py", SCRIPTS / "altyapi" / "belge_haritasi.py",
-                  SCRIPTS / "altyapi" / "nereye.py"]
+                  SCRIPTS / "altyapi" / "nereye.py", SCRIPTS / "altyapi" / "hata_dizini.py"]
     isler = [(u, subprocess.Popen([sys.executable, str(u), "--denetle"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True))
              for u in ureticiler]
     for u, pr in isler:
@@ -367,6 +368,9 @@ def d8() -> None:
         if pr.returncode:
             if u.name == "nereye.py":
                 bul("D8", "HATA", "docs/yonlendirme.json", None, "görev kataloğunda kırık yol/kural — python3 scripts/altyapi/nereye.py --denetle")
+                continue
+            if u.name == "hata_dizini.py":
+                bul("D8", "HATA", "docs/hatalar/_dizin.json", None, "hata dizini bayat — yeniden üret: python3 scripts/altyapi/hata_dizini.py")
                 continue
             hedef = "scripts/HARITA.md" if u.name == "betik_haritasi.py" else "docs/HARITA.md"
             bul("D8", "HATA", hedef, None, f"harita bayat — yeniden üret: python3 scripts/altyapi/{u.name}")
@@ -407,6 +411,68 @@ def d10() -> None:
         bul("D10", "UYARI", "scripts/altyapi/veri_bakim.py", None, f"denetim çalışmadı: {e}")
 
 
+# ---------------------------------------------------------------- D11
+# Sahnelenen dosya → hatırlatma (yalnız UYARI). Veri yolu → matris.json aşaması (matriste yol kapsamı yok, küçük sabit tablo).
+D11_VERI_KAPI = [
+    (re.compile(r"(^|/)data/sesli_anlatim/|(^|/)sesli_anlatim"), "cizim"),
+    (re.compile(r"^src/data/k\d+hocaara_cozucu/"), "ara_soru"),
+    (re.compile(r"^src/data/[\w-]*_cozucu/"), "cozucu"),
+    (re.compile(r"/degerlendirme/cikmis_analiz\.json$"), "cikmis_analiz"),
+]
+D11_ON_YUZ = re.compile(r"^src/.*\.(tsx|css)$|^src/(components|styles)/|^src/(main|App)\.tsx$")
+
+
+def d11() -> None:
+    """Sahnelenen dosyalar için restart / vite build / onem / kapı hatırlatması. Temizse sessiz; hata olursa sessizce atlar."""
+    try:
+        r = subprocess.run(["git", "diff", "--cached", "--name-only"], cwd=MEDS, capture_output=True, text=True, timeout=5)
+        sahne = [s for s in r.stdout.splitlines() if s]
+    except Exception:
+        return
+    if not sahne:
+        return
+    msj: list[str] = []
+    sunucu = "server.ts" in sahne
+    vite = any(D11_ON_YUZ.search(s) for s in sahne)
+    try:  # bag.py modül olarak; önbellek yoksa atla
+        sys.path.insert(0, str(SCRIPTS / "altyapi"))
+        import bag  # noqa: E402
+        if bag.CACHE.exists():
+            d = json.loads(bag.CACHE.read_text())
+            if d.get("surum") == bag.SURUM:
+                git = subprocess.run(["git", "ls-files"], cwd=MEDS, capture_output=True, text=True, timeout=5).stdout.split()
+                _, geri, _ = bag.kenarlar({"dosyalar": git, "tarama": d.get("dosyalar", {})})
+                for s in sahne:
+                    if sunucu and vite:
+                        break
+                    if s.endswith(bag.JS_EXT):
+                        su, vi = bag.sunucu_ulasir(geri, s)
+                        sunucu, vite = sunucu or su, vite or vi
+    except Exception:
+        pass
+    if sunucu:
+        msj.append("sunucu kodu (server.ts'e ulaşıyor) → dağıtımdan önce yerelde `systemctl --user restart meds-web` + `curl localhost:3000/api/health` (kural 12)")
+    if vite:
+        msj.append("ön yüz dosyası → `npx vite build` (kural 12)")
+    if (sunucu or any(s.startswith("src/") or s == "server.ts" for s in sahne)) and "guncelleme_notu.json" not in sahne:
+        msj.append("src/ ya da server.ts değişti, guncelleme_notu.json sahnelenmedi → dağıtımdan önce onem +1 (kural 13)")
+    try:
+        asamalar = json.loads((SCRIPTS / "kapilar" / "matris.json").read_text())["asamalar"]
+    except Exception:
+        asamalar = {}
+    oneri: dict[str, None] = {}
+    for s in sahne:
+        for desen, asama in D11_VERI_KAPI:
+            if desen.search(s) and asama in asamalar:
+                gerek = " ".join(f"{g}=<…>" for g in asamalar[asama].get("gerekli", []))
+                oneri[f"`python3 scripts/kapilar/kos.py {asama} {gerek}`".replace(" `", "`") + f" ({asamalar[asama]['kapi']})"] = None
+                break
+    for o in oneri:
+        msj.append(f"kapsanan alan değişti → {o}")
+    if msj:
+        bul("D11", "UYARI", "(sahne)", None, "\n  - " + "\n  - ".join(msj))
+
+
 def main() -> int:
     argv = sys.argv[1:]
     hizli, js = "--hizli" in argv, "--json" in argv
@@ -419,6 +485,7 @@ def main() -> int:
         d10()
     d7()
     d8()
+    d11()
     hata = sum(1 for b in bulgular if b["duzey"] == "HATA")
     uyari = len(bulgular) - hata
     if js:
