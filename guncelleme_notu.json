@@ -1,9 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 741,
- "baslik": "Örnek soru tek kapı: 4 kapı tek çağrıda (iterasyon azaltma)",
+ "onem": 742,
+ "baslik": "Deploy-kırıcı düzeltme: mod.py + ornek_soru_kaynak.py git izlemesine alındı",
  "maddeler": [
-  "Örnek soru doğrulaması tek komutta (ornek_soru_kapi.py): soru_uslup+sik_aciklama+profil+kaynak birlikte; şık açıklamaları toplu denetlenir."
+  "mod.py izlenmiyordu ama hazirlik/kosucu ona bağımlıydı → temiz checkout/deploy ağacında hat çöküyordu; git izlemesine alındı."
  ],
  "eklenen": [],
  "degisen": [
