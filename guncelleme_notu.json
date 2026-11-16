@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 772,
-  "baslik": "Bakım: daha hafif proje yönergeleri",
+  "onem": 773,
+  "baslik": "Bakım: yayın kuralları inceltildi",
   "maddeler": [
-    "Ajan kuralları kısaltıldı; ayrıntılar kural belgesine taşındı",
-    "Commit denetimi başka çalışmaların yarım değişikliklerine takılmıyor"
+    "Yayın aşamasının okuduğu kural özeti kısaldı; araç kuralları kendi bölümüne taşındı"
   ],
   "eklenen": [],
   "degisen": [],

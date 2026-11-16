@@ -208,3 +208,14 @@
 - **Kural:** Alt ajan istemine aşama başına TEK dosya (`is_`/`kural_`) konur; standart belge bütün okutulmaz, yeni standart belge `ASAMALAR`'a eklenirken `BOLUM`'a bölüm önekleri de yazılır. Yeni LLM aşaması eklenirken şema bölümü (`baglam.py SEMA`) ve `IS`/`KURAL_KATMAN` girdisi birlikte eklenir.
 - **Kapı:** `kural_secici.py --denetle` bölüm öneki hiçbir başlığa uymuyorsa HATA verir (sessiz kural kaybı olmaz); etki `kosucu.py <klasör> --ders <key> --mod <kip> --olc` ile ölçülür.
 
+## H585 — "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor" (2026-11-16)
+- **Belirti:** Paralel çalışan bir oturum `yapi_koruma.py`'deki bir istisnayı, karşılık gelen `server.ts` satırını silmeden kaldırmıştı; kapı HATA verdi ve bu oturumun yalnız ilgisiz dosyaları sahneleyen commit'i de durdu (`--no-verify` gerekti).
+- **Kök neden:** Kanca kapının ÇALIŞMA AĞACI hâlini çalıştırıyor ve dosyaları çalışma ağacından okuyordu; commit'e girecek içerik index'tedir.
+- **Kalıcı çözüm:** `.githooks/pre-commit` kapının sahnelenen (index) hâlini `--hizli --sahne` ile çalıştırır; `--sahne` sahnelenmemiş değişikliği olan izlenen dosyaları index'ten okur, izlenmeyen dosyaları taramaz. Sınandı: sahnelenmemiş ihlal → geçer, aynı ihlal sahnelenince → rc=1.
+- **Önleme kuralı:** Paylaşılan ağaçta çalışan kapılar commit'in içeriğini (index) denetler; `--no-verify` yalnız kapının kendisi bozuksa ve gerekçe kayda yazılarak kullanılır.
+
+## H598 — Commit kancası D8: başka oturumun belgeleri haritayı "bayat" gösterip temiz commit'i durduruyordu (2026-11-17)
+- **Belirti:** yalnız `docs/KURALLAR_ICERIK_HATTI.md` sahnelenmişken kanca `docs/hatalar/_dizin.json` bayat dedi.
+- **Kök neden:** H585'teki sahne kipi dosya okumalarını index'e çevirdi ama D8 üreticileri alt süreçte çalışma ağacını okur; başka oturumun sahnelenmemiş `docs/hatalar/*.md` düzenlemesi dizini bayatlatıyordu.
+- **Çözüm:** `--sahne` kipinde üreticinin girdi alanında (`scripts/`, `docs/`, `docs/hatalar/`) sahnelenmemiş değişiklik varsa D8 UYARI'ya iner; tam kipte HATA aynen.
+- **Kural:** commit kancası yalnız commit'e girecek içerikten HATA üretir; çalışma ağacından türeyen sonuç en çok UYARI'dır.

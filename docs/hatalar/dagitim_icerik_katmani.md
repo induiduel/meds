@@ -26,20 +26,8 @@ Sunucunun src/data'ya katmansız yazımı ve git/depo güvenliği maddeleri.
 - **Kalıcı çözüm:** `src/services/cikmisErisim.ts` — sunucu açılışta kendi okuma/kaydetme işlevlerini enjekte eder (`registerCikmisErisimi`); servisler yalnız `cikmisOku()` / `cikmisKaydet()` kullanır. Enjeksiyon yoksa (betik) okuma salt okunur, yazma reddedilir ve günlüğe yazılır. `src/data` aynası kaldırıldı (`MEDS_PAST_SRC_AYNA=1` değilse), okuyucu betikler `scripts/kok.py::CIKMIS`.
 - **Önleme kuralı:** `data/pastQuestions.json`'a sunucu kodunda `savePastQuestionsDb` dışında yazılmaz; yeni servis dosyayı açmaz, `cikmisErisim` kullanır. Tek seferde >%10 kayıt düşüren yazım reddedilir (`MEDS_PAST_TOPLU_SIL=1` kaçışı, yalnız kullanıcı komutu). Model: `docs/VERI_MODELI.md` §4.
 
-## H585 — "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor" (2026-11-16)
-- **Belirti:** Paralel çalışan bir oturum `yapi_koruma.py`'deki bir istisnayı, karşılık gelen `server.ts` satırını silmeden kaldırmıştı; kapı HATA verdi ve bu oturumun yalnız ilgisiz dosyaları sahneleyen commit'i de durdu (`--no-verify` gerekti).
-- **Kök neden:** Kanca kapının ÇALIŞMA AĞACI hâlini çalıştırıyor ve dosyaları çalışma ağacından okuyordu; commit'e girecek içerik index'tedir.
-- **Kalıcı çözüm:** `.githooks/pre-commit` kapının sahnelenen (index) hâlini `--hizli --sahne` ile çalıştırır; `--sahne` sahnelenmemiş değişikliği olan izlenen dosyaları index'ten okur, izlenmeyen dosyaları taramaz. Sınandı: sahnelenmemiş ihlal → geçer, aynı ihlal sahnelenince → rc=1.
-- **Önleme kuralı:** Paylaşılan ağaçta çalışan kapılar commit'in içeriğini (index) denetler; `--no-verify` yalnız kapının kendisi bozuksa ve gerekçe kayda yazılarak kullanılır.
-
 ## H592 — `.gitignore`'daki ses dizinlerinde 2.809 MP3 hâlâ izleniyordu (2026-11-17)
 - **Belirti:** depo 1,7 GB; `.gitignore`'a alınmış `data/k2*_cozucu/ses/` dizinlerinde ~200 MB MP3 her klonda/dağıtım worktree'sinde taşınıyor.
 - **Kök neden:** `.gitignore` yalnız izlenmeyen dosyayı durdurur; kural eklenmeden önce işlenmiş dosyalar dizinde kalır. Kural eklenirken `git rm --cached` yapılmamıştı.
 - **Çözüm:** `git ls-files -ci --exclude-standard | grep '\.mp3$'` → `git rm --cached` (dosyalar diskte duruyor). Önce doğrulandı: kod rsync'i `/data`'yı zaten dışlar, Oracle'da her kökte en az izlenen kadar MP3 var. `kayit.json` kayıtları izlenmeye devam ediyor.
 - **Kural:** `.gitignore`'a dizin ekleyen aynı commit'te `git ls-files -ci --exclude-standard` boş mu diye bakar. Geçmişteki nesneler `.git`'te kalır; küçültmek geçmiş yeniden yazımı ister (kullanıcı kararı).
-
-## H598 — Commit kancası D8: başka oturumun belgeleri haritayı "bayat" gösterip temiz commit'i durduruyordu (2026-11-17)
-- **Belirti:** yalnız `docs/KURALLAR_ICERIK_HATTI.md` sahnelenmişken kanca `docs/hatalar/_dizin.json` bayat dedi.
-- **Kök neden:** H585'teki sahne kipi dosya okumalarını index'e çevirdi ama D8 üreticileri alt süreçte çalışma ağacını okur; başka oturumun sahnelenmemiş `docs/hatalar/*.md` düzenlemesi dizini bayatlatıyordu.
-- **Çözüm:** `--sahne` kipinde üreticinin girdi alanında (`scripts/`, `docs/`, `docs/hatalar/`) sahnelenmemiş değişiklik varsa D8 UYARI'ya iner; tam kipte HATA aynen.
-- **Kural:** commit kancası yalnız commit'e girecek içerikten HATA üretir; çalışma ağacından türeyen sonuç en çok UYARI'dır.
