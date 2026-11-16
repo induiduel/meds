@@ -1,9 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 739,
- "baslik": "İçerik hattı: anlatım baglam yerine tam slayt okur (kapı bütünlüğü)",
+ "onem": 740,
+ "baslik": "Anlatım tek kapı: 4 kapı birleşti + satır bütünlüğü (gizli 46 hata yakalanır)",
  "maddeler": [
-  "Ölçüm: baglam anlatım kapısını zayıflatıyordu (satır-birebir denetimi atlanıyor); anlatım artık tam slaytı okur, baglam örnek-soru/önemde kalır."
+  "Anlatım doğrulaması tek komutta (anlatim_kapi.py): iterasyon azalır + kaynak.md garantili → satır-birebir denetimi atlanmaz."
  ],
  "eklenen": [],
  "degisen": [

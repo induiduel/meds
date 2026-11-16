@@ -29,6 +29,11 @@ python3 scripts/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasö
 (ölçüm: aynı ders 12 çağrıda 132k, 36 çağrıda 181k). Asıl tasarruf kapı-fail yeniden-yazımını azaltmaktır (ilk-geçiş doğruluğu,
 net şema). baglam + sıkıştırılmış özet girdiyi küçültür ama dibi iterasyon belirler. Ders kilidi + hat-başı özet kapısı E0'da otomatiktir.
 
+**Anlatım TEK KAPI (iterasyon + bütünlük, ZORUNLU):** 4 ayrı kapı yerine tek komut —
+`python3 scripts/tam_hat/anlatim_kapi.py <v2 dizin> --sayfalar <sayfalar.json> --key <key>` (turet+dogrula+metin_denetle+
+turkce_uslup birlikte, TÜM sorunlar bir seferde). Kapı `kaynak.md` yoksa `sayfalar.json`'dan üretir → `slayt.satir` birebir
+denetimi ASLA atlanmaz. (Ölçüm: baglam-yalnız anlatım, `kaynak.md` yokken 46 hatalı satırı sessizce geçiriyordu — bu kapı yakalar.)
+
 ## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
 
 Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` ile yürür: `python3 scripts/tam_hat/hazirlik.py <klasör> --ders <key> --mod tasarruf`
