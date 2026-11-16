@@ -530,5 +530,6 @@ def run_akbc_pipeline(limit: Optional[int] = None):
     print("=" * 65)
 
 if __name__ == "__main__":
+    import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit; _llm_kilit("akbc_disease_pipeline")  # noqa: E402,E702  LLM kilidi (kural 20, H601)
     limit_arg = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else None
     run_akbc_pipeline(limit=limit_arg)

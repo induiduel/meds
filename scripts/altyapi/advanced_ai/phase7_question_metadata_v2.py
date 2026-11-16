@@ -306,4 +306,5 @@ def main():
 
 
 if __name__ == "__main__":
+    import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit; _llm_kilit("phase7_question_metadata_v2")  # noqa: E402,E702  LLM kilidi (kural 20, H601)
     sys.exit(main())

@@ -163,6 +163,33 @@ def _count(model: str):
     _save_state(s)
 
 
+# ---- LLM kilidi (kural 20, H601): bu modül ücretsiz bulut LLM'in ortak çağrı noktasıdır; kilit yoktu, onu kullanan
+# betikler MEDS_LLM_ELLE=1 olmadan da sağlayıcıya gidebiliyordu. Kilitliyken ağ çağrısı YAPILMAZ ve None döner
+# ("yanıt yok" ile aynı sözleşme: OCR çağıranı Tesseract'a düşer, görev katmanı sonraki aileye geçer). Bağımsız LLM
+# betikleri ayrıca girişte `llm_kilit.kilit()` ile çıkış 75 verir.
+_kilit_uyarildi = False
+
+
+def _kilitli(ad: str, log=None) -> bool:
+    global _kilit_uyarildi
+    if str(ROOT / "otomasyon") not in _sys.path:
+        _sys.path.insert(0, str(ROOT / "otomasyon"))
+    from llm_kilit import serbest
+    if serbest():
+        return False
+    last_model["ad"] = "kilit"
+    if not _kilit_uyarildi:
+        _kilit_uyarildi = True
+        m = f"[llm_kilit] cloud_llm.{ad}: LLM çağrısı yapılmadı (MEDS_LLM_ELLE=1 gerekir; systemd altında ayrıca MEDS_LLM_PANEL=1)."
+        _sys.stderr.write(m + "\n")
+        if log:
+            try:
+                log(m)
+            except Exception:
+                pass
+    return True
+
+
 # ---- sağlayıcı çağrıları
 def _post(url: str, body: dict, headers: dict, timeout: int) -> dict:
     req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={"Content-Type": "application/json", "User-Agent": UA, **headers})
@@ -249,6 +276,8 @@ def chat(prompt: str, system: str | None = None, as_json: bool = False, max_toke
     dusunme: Gemini düşünme payı (belirteç; None = model varsayılanı, 0 = kapalı); çıktı sınırına eklenir.
     json_ham: as_json iken ayrıştırılamayan dolu yanıtı atma, ham metin döndür (çağıranın daha hoşgörülü ayrıştırıcısı ve
     düzeltme turu için; görev katmanı kullanır — 2026-10-23 Nemotron 10 bin karakterlik yanıtı böyle kayboluyordu)."""
+    if _kilitli("chat", log):
+        return None
     exhausted = set(_load_state()["kota_dolu"])
     for spec in models or chain():
         if spec in exhausted or spec in _skip_session:
@@ -363,6 +392,8 @@ VISION_PROMPT = ("Bu görüntü bir tıp fakültesi ders slaytı, ders notu ya d
 
 def vision_ocr(png_bytes: bytes, prompt: str = VISION_PROMPT, timeout: int = 120, log=None, mime: str = "image/png") -> str | None:
     """Görüntüdeki metni Gemini ile çıkarır. Yanıt yoksa None (çağıran Tesseract'a düşer)."""
+    if _kilitli("vision_ocr", log):
+        return None
     import base64
     exhausted = set(_load_state()["kota_dolu"])
     data = base64.b64encode(png_bytes).decode()

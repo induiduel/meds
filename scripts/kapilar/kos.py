@@ -10,7 +10,8 @@ doğrulayıcılar silinmez; bu matrisin yapı taşlarıdır — tek fark, artık
   python3 scripts/kapilar/kos.py ornek_soru dosya=<...> uslup=<...> ders="<ders>" sayfalar=<...>
 
 Aşamanın `gerekli` yer tutucuları ad=değer çiftleriyle verilir; eksikse çalıştırmadan listeyle durur. Kapının çıkış
-kodu aynen döndürülür (0 = 0 HATA).
+kodu aynen döndürülür (0 = 0 HATA). Ayrık kodlar: 2 = çağrı/girdi yolu hatası (kapı çalışmadı), 70 = kapı çöktü
+(Traceback; içerik hatası değil).
 """
 from __future__ import annotations
 
@@ -65,9 +66,33 @@ def main() -> int:
     except KeyError as e:
         print(f"HATA: matriste tanımsız yer tutucu {e}", file=sys.stderr)
         return 2
+    # Girdi yolu yoksa kapıyı hiç çalıştırma (H597): kapı Traceback basıp düşüyor, ajan bunu içerik hatası sanıyordu.
+    yok = []
+    for ad in m.get("yol", []):
+        y = Path(deg[ad])
+        if not (y if y.is_absolute() else KOK / y).exists() and not y.exists():
+            yok.append(f"{ad}={deg[ad]}")
+    if yok:
+        print(f"GİRDİ YOK: {', '.join(yok)} bulunamadı — kapı çalıştırılmadı (içerik hatası DEĞİL; yolu düzelt). "
+              f"Yollar {KOK} köküne ya da çalışma dizinine göre çözülür.", file=sys.stderr)
+        return 2
     cmd = [sys.executable, m["kapi"], *arg]
-    print(f"== kapı: {asama} → {' '.join(cmd[1:])}")
-    return subprocess.run(cmd, cwd=KOK).returncode
+    print(f"== kapı: {asama} → {' '.join(cmd[1:])}", flush=True)
+    # stderr canlı aktarılır + izlenir: kapı kendi çökmesiyle (Traceback) bitmişse bu "N HATA" değil araç arızasıdır.
+    p = subprocess.Popen(cmd, cwd=KOK, stderr=subprocess.PIPE, text=True, errors="replace")
+    son: list[str] = []
+    assert p.stderr is not None
+    for satir in p.stderr:
+        sys.stderr.write(satir)
+        son.append(satir)
+        del son[:-60]
+    kod = p.wait()
+    if kod != 0 and any(s.startswith("Traceback (most recent call last)") for s in son):
+        neden = next((s.strip() for s in reversed(son) if s.strip()), "")
+        print(f"KAPI ÇÖKTÜ (çıkış 70): '{asama}' kapısı doğrulama yapamadan düştü → {neden}\n"
+              f"  Bu bir içerik hatası DEĞİL: girdiyi/yolu denetle; girdi doğruysa kapı betiğinde hata var.", file=sys.stderr)
+        return 70
+    return kod
 
 
 if __name__ == "__main__":

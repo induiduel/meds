@@ -431,3 +431,6 @@
 - **H585** · "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor": kanca çalışma ağacını denetliyordu → hatalar/betik_altyapi.md
 - **H598** · "Commit kancası D8, başka oturumun sahnelenmemiş belgeleri yüzünden haritayı bayat sayıyor": üreticiler çalışma ağacını okur → sahne kipinde UYARI → hatalar/betik_altyapi.md
 - **H595** · "Öğren sesinde 32/35 adım reddedildi (süre oranı 0.48: 2.)": cumlelere_ayir sıra imini ("2.") tek cümle yapıyordu → hatalar/ses.md
+- **H596** · "Kimliksiz istek 100 MB gövde gönderebiliyor; aynı uç iki kez tanımlı, ikincisi yetkisiz": gövde ayrıştırıcı kimlikten önce + mükerrer uç kapısı yok → kademeli tavan, `kos.py uc` → hatalar/dagitim_sunucu.md
+- **H597** · "Kapı girdisi yoksa Traceback, ajan içerik hatası sanıyor": çıkış kodu ayrımı yok → `kos.py` girdi denetimi (2) + çökme ayrımı (70) → hatalar/betik_altyapi.md
+- **H601** · "Ücretsiz bulut LLM çağrı noktası ve 11 betik kilitsiz (kural 20)": kilit yalnız Claude/ajan CLI yoluna eklenmişti → `cloud_llm` kilitliyken None, betikler çıkış 75, sunucu yönetici yolunda `LLM_PANEL_ENV` → hatalar/betik_altyapi.md

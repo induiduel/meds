@@ -417,7 +417,7 @@ app.use((req, res, next) => {
 // Telemetri (2026-11-16): /api/* süre kovaları + yavaş istek kaydı (istek başına O(1); SSE hariç). Ayrıntı: src/services/telemetri.ts
 app.use(telemetriAraKatmani());
 // web-vitals ucu: kimlik gerekmez, gövde ≤ 2 KB, IP başına dakikada 10. sendBeacon text/plain da kabul edilir.
-// Gövde ayrıştırıcılardan (100 MB json) ÖNCE kayıtlı: kendi 2 KB'lık ayrıştırıcısını kullanır. IP/kullanıcı yazılmaz.
+// Gövde ayrıştırıcılardan ÖNCE kayıtlı: kendi 2 KB'lık ayrıştırıcısını kullanır. IP/kullanıcı yazılmaz.
 app.post('/api/olcum/vitals', express.text({ type: () => true, limit: '2kb' }), (req, res) => {
   const ip = String(req.headers['cf-connecting-ip'] || String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.ip || '');
   if (!vitalsHizSiniri(ip)) return res.status(429).end();
@@ -428,10 +428,31 @@ app.post('/api/olcum/vitals', express.text({ type: () => true, limit: '2kb' }), 
 });
 app.use(compression({ threshold: 1024 }));
 
-app.use(express.json({ limit: '100mb' }));
-// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin erişim jetonu → req.adminAuth
+// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin erişim jetonu → req.adminAuth.
+// Gövde ayrıştırıcıdan ÖNCE (H596): yalnız başlık/sorgu okur; gövde tavanı kimliğe göre seçilir.
 configureAdminAuthLog(path.resolve(__dirname, 'data'));
 app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
+// Gövde tavanı kademeli (H596): eskiden herkese 100 MB'tı — kimliksiz tek istek 100 MB'ı belleğe aldırabiliyordu.
+// Yönetici (gizli anahtar/loopback/yönetici jetonu) 100 MB, doğrulanmış üye 30 MB, kimliksiz 2 MB. Daha büyük ham
+// yükleme gereken uç kendi express.raw ayrıştırıcısını kullanır (ör. sesliAnlatim.ts). Tavanlar .env ile değişir.
+const govdeKademesi = (req: express.Request): 'yonetici' | 'uye' | 'anonim' =>
+  req.adminAuth?.ok ? 'yonetici' : req.verifiedUser ? 'uye' : 'anonim';
+const GOVDE_TAVANI = {
+  yonetici: process.env.MEDS_GOVDE_YONETICI || '100mb',
+  uye: process.env.MEDS_GOVDE_UYE || '30mb',
+  anonim: process.env.MEDS_GOVDE_ANONIM || '2mb',
+};
+const jsonAyristirici = {
+  yonetici: express.json({ limit: GOVDE_TAVANI.yonetici }),
+  uye: express.json({ limit: GOVDE_TAVANI.uye }),
+  anonim: express.json({ limit: GOVDE_TAVANI.anonim }),
+};
+const formAyristirici = {
+  yonetici: express.urlencoded({ extended: true, limit: GOVDE_TAVANI.yonetici }),
+  uye: express.urlencoded({ extended: true, limit: GOVDE_TAVANI.uye }),
+  anonim: express.urlencoded({ extended: true, limit: GOVDE_TAVANI.anonim }),
+};
+app.use((req, res, next) => jsonAyristirici[govdeKademesi(req)](req, res, next));
 // MeDSor kendi kimlik sistemi (2026-11-02, Firebase Auth kaldırıldı): hesaplar/oturumlar meds-pg'de, /api/kimlik/*
 registerYerelKimlik(app, {
   rootDir: __dirname,
@@ -460,7 +481,7 @@ registerYerelKimlik(app, {
 });
 // Yönetim v16 denetim kaydı: tüm /api/admin/* yazmaları + kişisel veri okumaları → meds-pg yonetici_denetim
 app.use(denetimAraKatmani());
-app.use(express.urlencoded({ extended: true, limit: '100mb' }));
+app.use((req, res, next) => formAyristirici[govdeKademesi(req)](req, res, next));
 // Yönetim v16 · özellik bayrakları sunucu kapısı (yonetim16/siteAyar.ts BAYRAK_UC; bayrak yoksa açık)
 app.use(bayrakKapisi({
   isAdmin: (req) => isRequestAdmin(req),
@@ -4412,6 +4433,11 @@ function phase14UserWorkerRunning(): boolean {
 }
 
 /** Bekleyen istek varsa ve işleyici çalışmıyorsa başlatır. force=false iken 10 dk'da bir denenir (kota bitince boşa dönmesin). */
+// LLM kilidi bayrakları (kural 20, H601): Python tarafında `cloud_llm` ve Faz 14 betikleri `llm_kilit` arkasında. Sunucu yalnız
+// yönetim panelinden gelen komutla (ya da yöneticinin açtığı kalıcı anahtarla) başlattığı sürece bu iki bayrağı verir;
+// başka hiçbir başlatma yolu bayrak koymaz → betik çıkış 75 verir. Yeni LLM süreci başlatan kod bunu yalnız yönetici yolunda kullanır.
+const LLM_PANEL_ENV = { MEDS_LLM_ELLE: '1', MEDS_LLM_PANEL: '1' } as const;
+const LLM_PANEL_SETENV = Object.entries(LLM_PANEL_ENV).map(([k, v]) => `--setenv=${k}=${v}`);
 /** LLM kilidi (kullanıcı kararı 2026-10-27): kuyruk yalnız yönetici komutuyla işlenir (`yonetici=true`);
  *  bildirim/zamanlayıcı çağrıları isteği kuyrukta bırakır. Eski davranış yalnız MEDS_LLM_OTOMATIK=1 ile. */
 function kickPhase14UserQueue(force = false, yonetici = false) {
@@ -4427,12 +4453,13 @@ function kickPhase14UserQueue(force = false, yonetici = false) {
     const r = spawnSync('systemd-run', [
       '--user', `--unit=${PHASE14_USER_UNIT}`, '--collect', `--working-directory=${__dirname}`,
       `--property=StandardOutput=append:${logPath}`, `--property=StandardError=append:${logPath}`,
+      ...LLM_PANEL_SETENV,
       'python3', script, '--kullanici-kuyrugu',
     ], { encoding: 'utf-8' });
     if (r.status !== 0) {
       // systemd yoksa doğrudan başlat
       const out = fs.openSync(logPath, 'a');
-      spawn('python3', [script, '--kullanici-kuyrugu'], { cwd: __dirname, detached: true, stdio: ['ignore', out, out] }).unref();
+      spawn('python3', [script, '--kullanici-kuyrugu'], { cwd: __dirname, detached: true, stdio: ['ignore', out, out], env: { ...process.env, ...LLM_PANEL_ENV } }).unref();
     }
     console.log('[Faz14 kullanıcı] kuyruk işleyicisi başlatıldı');
     return true;
@@ -5102,6 +5129,7 @@ function startPhase14AutoFree(limit: number): boolean {
   const r = spawnSync('systemd-run', [
     '--user', `--unit=${PHASE14_AUTO_UNIT}`, '--collect', `--working-directory=${__dirname}`,
     `--property=StandardOutput=append:${logPath}`, `--property=StandardError=append:${logPath}`,
+    ...LLM_PANEL_SETENV,
     'python3', script, '--limit', String(limit), '--ucretsiz-paralel',
   ], { encoding: 'utf-8' });
   if (r.status !== 0) console.error('[Faz14 otomatik] başlatılamadı:', r.stderr);
@@ -5178,7 +5206,8 @@ app.post('/api/past-question-reviews/trigger', requireAdmin, (req, res) => {
     const child = spawn('python3', [scriptPath, '--limit', String(limit), ...modeArgs], {
       cwd: __dirname,
       detached: true,
-      stdio: ['ignore', outLog, outLog]
+      stdio: ['ignore', outLog, outLog],
+      env: { ...process.env, ...LLM_PANEL_ENV },
     });
     child.unref();
 
@@ -10262,32 +10291,8 @@ app.post('/api/automation/drive-sync-status', (req, res) => {
   });
 });
 
-// Automation: Trigger Full Local Sync (Drive + PDF Parser + Database)
-app.post('/api/automation/run-full-local-sync', (req, res) => {
-  try {
-    const { spawn } = require('child_process');
-    const scriptPath = path.join(__dirname, 'scripts', 'meds-local-sync.mjs');
-    
-    lastLocalSyncStatus.status = 'running';
-    lastLocalSyncStatus.message = 'Yerel Google Drive indirme ve PDF çıkarma süreci başlatıldı...';
-
-    const child = spawn('node', [scriptPath], {
-      detached: true,
-      stdio: 'ignore',
-      cwd: __dirname
-    });
-    child.unref();
-
-    res.json({
-      success: true,
-      message: 'Tam yerel eşitleme başarıyla başlatıldı (PID: ' + child.pid + ')',
-      pid: child.pid,
-      startedAt: new Date().toISOString()
-    });
-  } catch (err: any) {
-    res.status(500).json({ error: 'Yerel eşitleme başlatılamadı: ' + err.message });
-  }
-});
+// (H596) Burada aynı yolun yetkisiz, betik çalıştıran ikinci tanımı vardı: ilk tanım (requireAdmin) eşleştiği için ölüydü,
+// ama ilki kaldırılsa kimliksiz süreç başlatma açığına dönüşürdü → silindi. Mükerrer uç kapısı: scripts/kapilar/uc_denetim.py
 
 app.get('/api/automation/local-sync-status', (req, res) => {
   res.json(lastLocalSyncStatus);

@@ -201,6 +201,7 @@ def process_all_current_lessons(limit: int = 0):
 
 
 if __name__ == "__main__":
+    import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit; _llm_kilit("generate_cloud_study_notes")  # noqa: E402,E702  LLM kilidi (kural 20, H601)
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", action="store_true", help="Tüm dersler için üretimi başlat")

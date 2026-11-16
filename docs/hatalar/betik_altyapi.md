@@ -208,6 +208,19 @@
 - **Kural:** Alt ajan istemine aşama başına TEK dosya (`is_`/`kural_`) konur; standart belge bütün okutulmaz, yeni standart belge `ASAMALAR`'a eklenirken `BOLUM`'a bölüm önekleri de yazılır. Yeni LLM aşaması eklenirken şema bölümü (`baglam.py SEMA`) ve `IS`/`KURAL_KATMAN` girdisi birlikte eklenir.
 - **Kapı:** `kural_secici.py --denetle` bölüm öneki hiçbir başlığa uymuyorsa HATA verir (sessiz kural kaybı olmaz); etki `kosucu.py <klasör> --ders <key> --mod <kip> --olc` ile ölçülür.
 
+
+## H597 — Kapı girdisi yoksa Traceback basıp düşüyordu; ajan bunu içerik hatası sanabiliyordu (2026-11-17)
+- **Belirti:** `kos.py anlatim dizin=/tmp/yok …` → `FileNotFoundError` Traceback'i, çıkış 1 ("N HATA" ile aynı kod). `ornek_soru`, `kaynak` kapılarında da aynı.
+- **Kök neden:** Kapılar girdinin varlığını denetlemeden açıyor; dağıtıcı `kos.py` kapının çıkış kodunu aynen döndürdüğü için "kapı çöktü" ile "içerik hatalı" ayırt edilemiyordu.
+- **Kalıcı çözüm:** `matris.json` aşamalarına `"yol"` (var olması gereken dosya/dizin yer tutucuları) eklendi; `kos.py` kapıyı çalıştırmadan önce denetler → `GİRDİ YOK …` çıkış 2. Kapı yine de Traceback ile düşerse stderr izlenir → `KAPI ÇÖKTÜ` çıkış 70 (içerik hatası değil).
+- **Önleme kuralı:** Çıkış kodları ayrıktır: 0 = 0 HATA, 1 = içerik hatası, 2 = çağrı/girdi yolu, 70 = kapı arızası, 75 = LLM kilidi. Matrise yeni aşama eklerken dosya/dizin yer tutucuları `"yol"`'a yazılır. Kapılar `kos.py` üzerinden çağrılır.
+
+## H601 — Ücretsiz bulut LLM'in ortak çağrı noktası (`cloud_llm.py`) ve 11 bağımsız LLM betiği kilitsizdi (2026-11-17)
+- **Belirti:** Denetimde `scripts/altyapi/agents/cloud_llm.py` (Faz 5/6/7/14/15, `lib.chat`, görev katmanının ücretsiz ailesi, görsel OCR) ve doğrudan sağlayıcıya giden betikler (`referee_queue`, `akbc_disease_pipeline`, `yonerge_kes`…) `llm_kilit` içermiyordu; `MEDS_LLM_ELLE=1` olmadan da Gemini/Groq/OpenRouter'a gidebiliyorlardı.
+- **Kök neden:** Kilit 2026-10-27'de yalnız Claude/ajan CLI çağıran betiklere eklendi; kural 20 ücretsiz sağlayıcıları da kapsadığı hâlde ortak HTTP istemcisi kapsam dışı kaldı. Sunucu da başlattığı Faz 14 süreçlerine bayrak koymadığı için kilit eklense panel akışı kırılırdı — iki uç birlikte değişmeliydi.
+- **Kalıcı çözüm:** `cloud_llm.chat/vision_ocr` kilitliyken ağ çağrısı yapmaz, `None` döner (`last_model = "kilit"`; OCR çağıranı Tesseract'a düşer, görev katmanı sonraki aileye geçer). 11 bağımsız betik girişte `llm_kilit.kilit()` → çıkış 75. `server.ts` `LLM_PANEL_ENV`/`LLM_PANEL_SETENV`: yalnız yönetici uçlarının (`/api/admin/faz14-kuyruk/baslat`, `/api/past-question-reviews/trigger`, yöneticinin açtığı otomatik ücretsiz anahtarı) başlattığı sürece `MEDS_LLM_ELLE=1` + `MEDS_LLM_PANEL=1` verilir.
+- **Önleme kuralı:** Sağlayıcıya HTTP ile giden her Python yolu ya `cloud_llm`/`yonlendir`/`opendesign` üzerinden geçer ya da girişte `kilit()` çağırır. Sunucuda LLM süreci başlatan yeni kod bayrağı yalnız `requireAdmin` yolunda `LLM_PANEL_ENV` ile verir; `process.env`'e genel olarak yazılmaz. Sınanmayan: panelden gerçek bir Faz 14 koşusu (LLM çağrısı gerektirir, kullanıcı komutu).
+
 ## H585 — "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor" (2026-11-16)
 - **Belirti:** Paralel çalışan bir oturum `yapi_koruma.py`'deki bir istisnayı, karşılık gelen `server.ts` satırını silmeden kaldırmıştı; kapı HATA verdi ve bu oturumun yalnız ilgisiz dosyaları sahneleyen commit'i de durdu (`--no-verify` gerekti).
 - **Kök neden:** Kanca kapının ÇALIŞMA AĞACI hâlini çalıştırıyor ve dosyaları çalışma ağacından okuyordu; commit'e girecek içerik index'tedir.

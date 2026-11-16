@@ -1,9 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 773,
-  "baslik": "Bakım: yayın kuralları inceltildi",
+  "onem": 774,
+  "baslik": "Güvenlik ve bakım: istek boyutu sınırı, yapay zekâ kilidi",
   "maddeler": [
-    "Yayın aşamasının okuduğu kural özeti kısaldı; araç kuralları kendi bölümüne taşındı"
+    "Sunucu güvenliği: giriş yapmamış isteklerin gönderebileceği veri boyutu sınırlandı",
+    "Yönetim: aynı adresin iki kez tanımlandığı yetkisiz bir sunucu ucu kaldırıldı",
+    "Yapay zekâ işleri: ücretsiz bulut modelleri de artık yalnız yönetici komutuyla çalışır",
+    "İçerik hattı: kapı aracı eksik girdiyi ve araç arızasını içerik hatasından ayırır"
   ],
   "eklenen": [],
   "degisen": [],
