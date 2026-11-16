@@ -24,7 +24,8 @@ hareketli imleç). Kelime eşlemesi tahmin yürütür ve yanlış satıra sıçr
 - `kutu`: madde/resim kutusu yeri karşılamıyorsa (ör. resmin bir parçası, tablonun bir sütunu) sayfa oranı 0–1 elle kutu.
 - `yol` (isteğe bağlı, resim anlatımında): cümlede adı geçen yapıların resim üzerindeki yerleri, cümledeki sırayla — imleç o
   kelime okunurken oraya gider. `k` cümlede birebir geçmeli.
-- En az **%70** cümle `madde`, `resim` ya da `kutu` taşımalı (yalnız sayfa vurgusu az kalsın). Slaytta karşılığı olmayan cümle
+- En az **%70** cümle `madde`, `resim` ya da `kutu` taşımalı (yalnız sayfa vurgusu az kalsın). Bağlayıcı son ölçü yayın kapısıdır:
+  `takip_kapisi.py` T5 — betik geri düşüşlerinden sonra yalnız-sayfa işaret **≤%5**; kalan cümleler `artik_capa.py` ile kapatılır (H605). Slaytta karşılığı olmayan cümle
   (geçiş, toparlama) yalnız `sayfa` ile kalabilir.
 
 ## Kurallar

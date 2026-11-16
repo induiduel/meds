@@ -68,6 +68,7 @@ KATMAN_KALIPLARI: list[tuple[str, list[str]]] = [
     ("ornek_soru", ["src/data/ornek_sorular/*", "../meds_database_v2/ornek_sorular_k*/*", "src/data/*_cozucu/*", "data/*_cozucu/*"]),
     ("ders_icerik", ["src/data/ders_icerik/*"]),
     ("capa_cizim", ["data/sesli_anlatim/capa/*", "data/sesli_anlatim/cizim/*"]),
+    ("artik_capa", ["data/sesli_anlatim/capa/*"]),
     ("ara_resim", ["src/data/ara_resim/*", "public/ara_resim/*"]),
     ("ogren_deste", ["src/data/decks/*"]),
 ]

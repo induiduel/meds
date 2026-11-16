@@ -200,3 +200,23 @@
 - **Kök neden:** `scripts/uretim/ogren_ses/ogren_ses_uret.py:95` `cumlelere_ayir` (eski hâli satır 92–93) `(?<=[.!?])\s+` ile böldüğü için numaralı listedeki "1." / "2." TEK BAŞINA cümle oluyordu; `ses_klip.seslendir` bu ~0,5 sn'lik parçada süre/karakter oranını eşik dışı görüp `BozukKlip` fırlatıyor, adım bütünüyle yazılmıyordu (H587 koruması doğru çalıştı; girdi bölmesi yanlıştı).
 - **Kalıcı çözüm:** `_SIRA_IMI` (sayı/harf/Roma + `.`/`)`, ya da `- – — • * · ▪ ►`) ile tam eşleşen parça sonraki cümleye yapıştırılır; okunuş (`ses_metin`) ve denetim eşiği değişmedi. Önce/sonra: 12.232 Öğren slayt metninde 2.186 fark, farkların tamamı tek başına sıra imi içeren metinlerde (iki yönlü assert); geri kalan metinlerde cümle listesi (dolayısıyla klip karması) birebir aynı. Yeniden üretim: 32/35 adım üretildi; kalan 3 (adım 18, 24: kutu çizimi tablo; adım 32: "<%0.1") ayrı kök, kapıda 3 HATA.
 - **Önleme kuralı:** ses için cümle bölen her işlev sıra imini/madde imini ayrı cümle bırakmaz; bölme değişikliği önce tüm gerçek metinler üzerinde eski/yeni karşılaştırmasıyla (fark yalnız hedeflenen biçimde) kanıtlanır. Süre eşiği gevşetilmez.
+
+### H605 — Son derslerde PDF ↔ metin takibi zayıftı: cümlelerin %19–24'ü yalnız sayfa vurgusu alıyordu (2026-11-17, kullanıcı bildirdi)
+- **Belirti:** k2-49, k2-50, k2-62 gibi son derslerde okunan cümle slaytta işaretlenmiyor, yalnız sayfa yanıyordu; k2-49/50'de kelime takibi de yoktu.
+- **Kök neden (üç katman):**
+  1. **Hat kapıyı çağırmıyordu:** `kosucu.py` `zaman_isaret` adımı yalnız `cumle_zaman`/`kelime_zaman`'ı anıyordu; `pdf_isaret.py` ve
+     `takip_kapisi.py` adımda yoktu → k2-49/50 kelime zamanı olmadan, k2-26/27/29/62/65 cümle zamanı olmadan yayına girdi; kimse fark etmedi.
+  2. **OCR'lı/şemalı sayfada yanlış geri düşüş:** çapa satırı görselin içindeki etiketse ("Oculomotor nerve (III)") metin eşleşmez;
+     geri düşüş `not sy.ocr` koşulu yüzünden görsele gidemiyor, "sayfa"ya düşüyordu (k2-62: 166 cümlenin 40'ı).
+  3. **Tasarruf kipi çapasız:** E4 (çapa+çizim) tümüyle atlanınca genişletilmiş anlatım slayttaki maddeye yalnız sözcük eşlemesiyle
+     bağlanır; LCS ≥2 ortak kök ister, "en az beş" ↔ "en az 5" gibi sayılar bile tutmuyordu.
+- **Çözüm:** `pdf_isaret.py` SURUM 8 — yazıyla sayı = rakam (`SAYI_SOZ`); çapalı/çapasız cümlede eşleşme yoksa görselli sayfada
+  (OCR, satır çapası ya da <15 kelime) lazer görsele; çapasız cümlede `zayif_esle` (atanan sayfada yalnız TEK maddede geçen ≥2 kök
+  ya da bir sayı; eşitlikte işaret yok). Tüm dersler yeniden üretildi: 40.170 cümlede yalnız-sayfa 2.780 → 1.775, kötüleşen ders 0.
+  `kosucu.py` adımına `pdf_isaret.py` + `takip_kapisi.py` 0 HATA kapısı yazıldı.
+- **Denenip bırakılan:** bge-m3 vektör eşlemesi (CPU) çapasız cümlede 1. ve 2. aday farkı 0,01–0,1 → tahmin; kullanılmadı.
+- **Önleme kuralı:** (a) Takip kapısı yayından önce atlanamaz; kelime/cümle zamanı eksik ders yayına girmez. (b) Çapasız ders T5 ≤%5'i
+  sözcük eşlemesiyle TUTTURAMAZ (k2-49/50 ≈%18: giriş/özet/açıklama cümleleri) — eşiği gevşetmek ya da tek genel kelimeyle işaret
+  uydurmak YASAK; çözüm çapadır. Tasarruf kipinde çizim atlanır ama çapa için yalnız eşleşmeyen cümleler (metin-only M# listesi,
+  görüntüsüz) yazılır: `artik_capa` katmanı (her kipte; `scripts/uretim/sesli_anlatim/artik_capa.py hazirla|birlestir`). k2-50 denemesi:
+  13 artık cümle, iş dosyası ~1.000 kelime (≈1,6k token) → yalnız-sayfa 13/66 → 3/66 (%4,5), T5 geçti.

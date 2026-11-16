@@ -51,7 +51,7 @@ EYLEM: dict[str, tuple[str, str, str]] = {
                                  "--sayfalar {k}/sayfalar.json --key {d} → 0 HATA. Sonra bağımsız denetçi GEÇER."),
     "ders_ekle":   ("E2", "şablon", "python3 scripts/uretim/ogrenci_drive/sesli_yayinla.py --key {d} --no <N> --baslik \"<konu>\" --v2 {k}/anlatim/v2 --deck k2p-{d} --pdf-yol \"Kurul N/<branş>/<dosya>.pdf\" --pdf-ad \"<dosya>.pdf\" --sayfa <N> --file-id <drive-id>  (ders-özel değerler elle doldurulur; Oracle tüneli 3310 açık olmalı)"),
     "ema_ses":     ("E3", "ses", "EMA ses: ders-ekle kuyruğa koydu → meds-ema (CPU) üretir. Çözücü: ses.py --brans <brans> <kod> (CPU: CUDA_VISIBLE_DEVICES=)."),
-    "zaman_isaret": ("E3", "betik", "cumle_zaman.py / kelime_zaman.py (ses sonrası, yalnız yeni klipler)"),
+    "zaman_isaret": ("E3", "betik", "cumle_zaman.py + kelime_zaman.py (ses sonrası, yalnız yeni klipler) + .venv-ocr/bin/python scripts/uretim/sesli_anlatim/pdf_isaret.py --key {d}. KAPI (H605, atlanamaz): .venv-ocr/bin/python scripts/uretim/sesli_anlatim/takip_kapisi.py {d} → 0 HATA; kelime_zaman/cumle_zaman dosyası yoksa ders yayına girmez."),
     "cikmis_chip": ("E3", "betik", "cikmis_konum.py --ders {d}  (yayınlı paragraflardan p/c)"),
     "cikmis_analiz": ("E3", "llm", "Ayrıntılı çıkmış analizi: OKU baglam/kaynak_cikmis.md (+ gerekirse kaynak_atom.md). ÜRET ders_bilgi/{d}/degerlendirme/cikmis_analiz.json (baglam/iskelet_cikmis_analiz.json'u doldur; soru kimlikleri hazır; iskelet.py denetle). ders_analizi/uret.py önem listesi SONRASI. Kapı: ders_analizi/uret.py --dogrula {d}."),
     "terim_kisaltma": ("E3", "betik", "kisaltma_sozlugu.py otomatik {d} --yaz · terim_sozlugu.py otomatik {d} --yaz (MEDS_API=Oracle; yayın SONRASI canli-ders tazeyse)"),
@@ -63,6 +63,10 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "hoca_sorulari": ("E2", "llm", "(Yalnız patoloji) Hoca soruları kartı + sesli hoca çözücü — patoloji_soru_isci akışı."),
     "ders_icerik": ("E3", "betik", "ders_icerik_uret.py {d} + ders_icerik_dogrula.py {d}  (terim/kısaltma+önem SONRASI)"),
     "capa_cizim":  ("E4", "llm", "Çapa + canlı çizim (capa_dok→çapa→cizim partileri→cizim_kapisi 0 HATA)."),
+    "artik_capa":  ("E4", "llm", "Artık çapa (H605, her kipte; çapa+çizim SONRASI): .venv-ocr/bin/python scripts/uretim/sesli_anlatim/artik_capa.py hazirla {d} → "
+                                 "OKU yalnız meds_temp/artik_capa/{d}/is.md (TEK dosya, görüntü AÇMA); YAZ meds_temp/artik_capa/{d}/cevap.json "
+                                 "(cümle başına madde/resim ya da null; tahmin YASAK). Sonra artik_capa.py birlestir {d} → pdf_isaret + takip_kapisi 0 HATA. "
+                                 "Artık cümle yoksa (hazirla 0 der) adım biter."),
     "ara_resim":   ("E4", "llm", "Ara resim katmanı (src/data/ara_resim)."),
     "ara_soru":    ("E4", "llm", "Hocanın sorabileceği ara soru sayfası + k<N>hocaara sesi (kur.py dogrula --ses 0 HATA)."),
     "atomik_envanter": ("E3", "betik", "atomik_bilgi_envanteri (paket içinde; quiz KAPALI)."),

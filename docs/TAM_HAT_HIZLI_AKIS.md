@@ -78,7 +78,7 @@ Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` i
 (`<klasör>/mod.json` yazılır; katman tablosu `python3 scripts/hat/tam_hat/mod.py --rapor <klasör>`, tek kaynak `scripts/hat/tam_hat/mod.py`).
 - **Yapılır:** sesli ders (anlatım, EMA, cümle/kelime zamanı + PDF metin vurgusu/takip), çıkmış chip + ayrıntılı çıkmış analizi + ders analizi,
   terim/kısaltma, önem listesi, örnek sorular + sesli çözücü + EMA sesi, patoloji hoca soruları kartı + sesli hoca çözücü, ders içerik paketi (betik), kapılar + tek denetçi, yayın.
-- **Yapılmaz (atlandı — tasarruf kipi):** çapa + canlı çizim (E4 tümüyle), ara resim katmanı (`src/data/ara_resim`), ara soru sayfası,
+- **Yapılmaz (atlandı — tasarruf kipi):** tam çapa + canlı çizim (E4; AMA `artik_capa` — yalnız eşleşmeyen cümleler, metin-only — tasarrufta da YAPILIR, H605), ara resim katmanı (`src/data/ara_resim`), ara soru sayfası,
   atomik envanter, ders PDF tasarım taraması, Öğren destesi, quiz. Eksiklikleri dersi tamamlanmamış saymaz.
 - Kalite düşürülmez: kapılar 0 HATA, tek denetçi, kural 7/14/26/28/29 aynen. Alt ajan en çok 2 aynı anda; yeniden yazım yalnız hatalı parça.
 

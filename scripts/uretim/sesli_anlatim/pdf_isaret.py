@@ -70,7 +70,7 @@ def api_iste(url: str, timeout: int = 30) -> "urllib.request.Request":
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
 GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
-SURUM = 7  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+SURUM = 8  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
 MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
 BULLET_PREFIX = re.compile(r"^[^\wçğıöşüâîû]+", re.I)
@@ -95,6 +95,10 @@ def cumle_sonlari(m: str) -> list[int]:
     return out
 
 
+SAYI_SOZ = {katla(w): str(n) for n, w in ((2, "iki"), (3, "üç"), (4, "dört"), (5, "beş"), (7, "yedi"),
+                                        (8, "sekiz"), (9, "dokuz"), (20, "yirmi"), (30, "otuz"), (40, "kırk"), (50, "elli"))}
+
+
 def kok(w: str) -> str | None:
     w = BULLET_PREFIX.sub("", w)
     k = katla(w)
@@ -102,6 +106,9 @@ def kok(w: str) -> str | None:
         return None
     if k.isdigit():
         return "#" + k
+    # H605: anlatım sayıyı yazıyla okur ("en az beş"), slayt rakamla yazar ("en az 5"): eşlemede aynı kök
+    if k in SAYI_SOZ:
+        return "#" + SAYI_SOZ[k]
     if len(k) <= 2 or k in STOP:
         return None
     return k[:5]
@@ -357,6 +364,45 @@ def eslestir_capa(cumle: str, sy: Sayfa, ms: set[int]):
     return {"t": "tablo" if tablo * 2 >= len(l) else "metin", "l": l, "w": w}
 
 
+def zayif_esle(cumle: str, sy: "Sayfa | None"):
+    """H605 — çapasız (tasarruf kipi) genişletilmiş anlatım slaytı başka sözcüklerle anlatır; LCS eşiği (≥2 ortak kök)
+    tutmaz ve cümle "sayfa"ya düşerdi. Atanan sayfada, cümledeki köklerden YALNIZ TEK maddede geçen (ayırt edici) en az
+    en az ikisi (ya da bir sayı) o maddeyi gösterir; birden çok madde aday olursa en çok ortak kökü olan, eşitlikte
+    işaret verilmez (tahmin yok). Tür "kelime": yalnız ortak kelimeler vurgulanır, madde zemini çizilmez."""
+    if not sy or not sy.maddeler:
+        return None
+    tk = tokenler(cumle)
+    S = {k for k, _, _ in tk}
+    sayac: dict[str, set[int]] = {}
+    for k, mi, _ in sy.kelimeler:
+        sayac.setdefault(k, set()).add(mi)
+    puan: dict[int, int] = {}
+    for k in S:
+        ms = sayac.get(k) or set()
+        if len(ms) == 1 and (k.startswith("#") or len(k) >= 5):
+            m = next(iter(ms))
+            puan[m] = puan.get(m, 0) + 1
+    if not puan:
+        return None
+    sira = sorted(puan.items(), key=lambda x: -x[1])
+    if len(sira) > 1 and sira[0][1] == sira[1][1]:
+        return None
+    m = sira[0][0]
+    # tek genel kelime ("mutlaka", "belirleyen") yanlış yeri gösterir: ≥2 ayırt edici kök ya da bir sayı şart
+    if sira[0][1] < 2 and not any(k.startswith("#") and sayac.get(k) == {m} for k in S):
+        return None
+    ks = sy.maddeler[m]["koks"]
+    w, kul = [], set()
+    for k, b, e in tk:
+        if k not in ks:
+            continue
+        j = next((j for j, (kk, mi, _) in enumerate(sy.kelimeler) if kk == k and mi == m and j not in kul), None)
+        if j is not None:
+            kul.add(j)
+            w.append([b, e, *sy.n(sy.kelimeler[j][2])])
+    return {"t": "kelime", "l": [], "w": w} if w else None
+
+
 def kesisim_orani(a, b) -> float:
     """İki kutunun kesişim / birleşim oranı (IoU)."""
     ix = max(0, min(a[2], b[2]) - max(a[0], b[0]))
@@ -563,7 +609,9 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
     if r and n >= 1:
         return {"s": int(sayfa), **r}
     # şekil çapası yazılmamış ama cümle görseli anlatıyor ya da slayt resimden ibaret: resme git
-    if sy.tekil_resim and (GORSEL.search(cumle) or (len(sy.kelimeler) < 15 and not sy.ocr)):
+    # H605: çapa satırı görselin İÇİNDEKİ etiketse (OCR'lı şema: "Oculomotor nerve (III)") metin eşleşmez; yazarın
+    # bu sayfaya bağladığı cümle görseli anlatıyordur → lazer görsele (eskiden OCR sayfasında "sayfa"ya düşüyordu).
+    if sy.tekil_resim and (GORSEL.search(cumle) or sy.ocr or satirlar or len(sy.kelimeler) < 15):
         isr = sekil_isareti(sy, int(sayfa), [{"sekil": cumle}] if TABLO_SOZ.search(cumle) else [{}])
         if isr:
             return isr
@@ -651,13 +699,16 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
                 if r and n >= max(1, esik) and (en[1] is None or n > en[0]):
                     en = (n, r, s)
             n, r, s = en
+            if not r:
+                r = zayif_esle(cumle, pdf.sayfa(s0))
+                s = s0
             if r:
                 isr = {"d": d0, "s": s, **r}
             else:
                 sy = pdf.sayfa(s0)
                 # Lazer yalnız görsel anlatılırken: cümle görselden söz ediyor ya da slayt neredeyse yalnız resim.
                 # Bağlam/geçiş cümlesinde resme lazer yanıltır → yalnız sayfa vurgusu.
-                if sy and sy.resimler and (GORSEL.search(cumle) or (len(sy.kelimeler) < 15 and not sy.ocr)):
+                if sy and sy.resimler and (GORSEL.search(cumle) or sy.ocr or len(sy.kelimeler) < 15):
                     rb = max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
                     isr = {"d": d0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []}
                 else:
@@ -675,7 +726,7 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
         tmp = out.with_suffix(".tmp")
         tmp.write_text(json.dumps(sonuc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         os.replace(tmp, out)
-    return {"say": say, "kapsama": kapsama}
+    return {"say": say, "kapsama": kapsama, "c": c_out}
 
 
 def main() -> int:

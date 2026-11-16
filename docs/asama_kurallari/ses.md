@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 25 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 26 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -96,3 +96,5 @@
 ### H595 — Öğren sesinde tek başına sıra imi ("2.") ayrı cümle → bütün adım reddedildi (2026-11-17)
 - **Önleme kuralı:** ses için cümle bölen her işlev sıra imini/madde imini ayrı cümle bırakmaz; bölme değişikliği önce tüm gerçek metinler üzerinde eski/yeni karşılaştırmasıyla (fark yalnız hedeflenen biçimde) kanıtlanır. Süre eşiği gevşetilmez.
 
+
+- H605 — Son derslerde PDF ↔ metin takibi zayıftı: cümlelerin %19–24'ü yalnız sayfa vurgusu alıyordu (2026-11-17, kullanıcı bildirdi) — betik denetler: `scripts/uretim/sesli_anlatim/artik_capa.py`
