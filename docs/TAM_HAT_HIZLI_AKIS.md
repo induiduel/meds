@@ -17,10 +17,17 @@ python3 scripts/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasö
 - `baglam/kaynak.md` = tek-kaynak: slayt dizini + bilgi paketleri + **atomlar** (damıtılmış gerçekler) + doğrulanmış çıkmış + üslub.
 - `baglam/sema.md` = aşama çıktı şemaları + kapı komutları (33k şablon dosyası + kapı-kaynağı okumak YERİNE ~2k).
 
-Her LLM aşaması (anlatım, örnek, önem/çözücü) **yalnız `baglam/kaynak.md` + `baglam/sema.md` + ilgili `docs/asama_kurallari/<aşama>.md`**
-okur; ham `sayfalar.json`'ı baştan sona, örnek şablon dosyasını, kapı betiğinin kaynağını ve standart belgelerin tamamını OKUMAZ.
-Kesin kanıt sözcüğü (atom/çıkmış `kanit`) gerekince YALNIZ ilgili TEK slayt `sayfalar.json`/`op/`'tan açılır. Ölçüm (k2-50): aşama
-başına ~36,7k → ~3,9k token (−%89). Ders kilidi + hat-başı aşama-özeti kapısı E0'da (`hazirlik.py`) otomatiktir.
+**Nereye baglam, nereye ham slayt (ölçümle, 2026-11-16):**
+- **Örnek soru / önem / çözücü:** `baglam/kaynak.md` + `baglam/sema.md` + `docs/asama_kurallari/<aşama>.md` okur; 33k'lık örnek
+  şablon dosyasını, kapı kaynağını, standart belgelerin tamamını OKUMAZ (birebir slayt zorunluluğu yok; şablon elenir). Girdi
+  ~36,7k → ~3,9k (−%89).
+- **Anlatım:** `sayfalar.json`'ı (TAM slayt) + `baglam/sema.md` + `anlatim.md` okur. `slayt.satir` çapası ve `--dogrula`
+  satır-birebir kapısı tam slayt metnini GEREKTİRİR — `baglam/kaynak` yetmez ve kapıyı zayıflatır (`kaynak.md` yoksa satır
+  denetimi atlanıyordu). Anlatımda kazanç şablon değil, **kural özeti sıkıştırmasıdır**.
+
+**Önemli — token'ın asıl belirleyeni:** Alt-ajan tokeni girdi boyutundan çok **araç-çağrısı/iterasyon sayısına** bağlıdır
+(ölçüm: aynı ders 12 çağrıda 132k, 36 çağrıda 181k). Asıl tasarruf kapı-fail yeniden-yazımını azaltmaktır (ilk-geçiş doğruluğu,
+net şema). baglam + sıkıştırılmış özet girdiyi küçültür ama dibi iterasyon belirler. Ders kilidi + hat-başı özet kapısı E0'da otomatiktir.
 
 ## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
 

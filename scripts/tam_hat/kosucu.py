@@ -30,8 +30,10 @@ EYLEM: dict[str, tuple[str, str, str]] = {
                                    "docs/asama_kurallari/kaynak.md. Üret: meds_database_v2/ders_bilgi/{d}/degerlendirme/paket.json + cikmis_konum. "
                                    "Kapı: degerlendirme_dogrula.py {d} --pdf {k}/orijinal.pdf → 0 HATA. SONRA: baglam üret."),
     "_baglam":     ("E1", "betik", "python3 scripts/tam_hat/baglam.py {k} --ders {d} --mod {m}   (read-once: paket→baglam/kaynak.md+sema.md)"),
-    "anlatim":     ("E2", "llm", "Anlatım konusma_v2: OKU baglam/kaynak.md + baglam/sema.md (§anlatım) + docs/asama_kurallari/anlatim.md. "
-                                 "ÜRET {k}/anlatim/v2/konusma_v2.json. Kapı: konusma_v2 --turet/--dogrula + metin_denetle + turkce_uslup → 0 HATA. Sonra bağımsız denetçi GEÇER."),
+    "anlatim":     ("E2", "llm", "Anlatım konusma_v2: OKU {k}/sayfalar.json (TAM slayt — `satir` çapası ve --dogrula satır-birebir kapısı "
+                                 "bunu gerektirir; baglam/kaynak YETMEZ, kapıyı zayıflatır — ölçüm 2026-11-16) + baglam/sema.md (§anlatım) + "
+                                 "docs/asama_kurallari/anlatim.md. ÜRET {k}/anlatim/v2/konusma_v2.json + kaynak.md (SAYFA damgalı). "
+                                 "Kapı: konusma_v2 --turet/--dogrula + metin_denetle + turkce_uslup → 0 HATA. Sonra bağımsız denetçi GEÇER."),
     "ders_ekle":   ("E2", "şablon", "python3 scripts/ogrenci_drive/sesli_yayinla.py --key {d} --no <N> --baslik \"<konu>\" --v2 {k}/anlatim/v2 --deck k2p-{d} --pdf-yol \"Kurul N/<branş>/<dosya>.pdf\" --pdf-ad \"<dosya>.pdf\" --sayfa <N> --file-id <drive-id>  (ders-özel değerler elle doldurulur; Oracle tüneli 3310 açık olmalı)"),
     "ema_ses":     ("E3", "ses", "EMA ses: ders-ekle kuyruğa koydu → meds-ema (CPU) üretir. Çözücü: ses.py --brans <brans> <kod> (CPU: CUDA_VISIBLE_DEVICES=)."),
     "zaman_isaret": ("E3", "betik", "cumle_zaman.py / kelime_zaman.py (ses sonrası, yalnız yeni klipler)"),
