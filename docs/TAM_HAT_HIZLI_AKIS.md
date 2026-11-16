@@ -3,13 +3,42 @@
 > Kural 21/22 katmanları ve kapıları DEĞİŞMEZ; bu belge onların **sırasını, paralelliğini, okumasını ve düzeltme biçimini**
 > belirler. Ölçüt: kalite ve hız birlikte; kaliteden ödün verilmez. Kök neden kaydı: `KURUL2_YAPILMAYACAK_HATALAR.md` H123.
 
+## 0.0 Tek hat + read-once bağlam (kullanıcı kararı 2026-11-16, ZORUNLU)
+
+Sıra artık kafada/4 ayrı dosyada değil, **tek kaynakta**: `scripts/tam_hat/mod.py` (katmanlar + kip). Koşucu runbook basar ve
+hazırlık adımlarını çalıştırır:
+```
+python3 scripts/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf> [--calistir]
+```
+**Aynı kaynağı defalarca okuma YASAK (token israfı).** E1 paketi üretildikten sonra bir kez bağlam üretilir:
+```
+python3 scripts/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasör>/baglam/kaynak.md + sema.md
+```
+- `baglam/kaynak.md` = tek-kaynak: slayt dizini + bilgi paketleri + **atomlar** (damıtılmış gerçekler) + doğrulanmış çıkmış + üslub.
+- `baglam/sema.md` = aşama çıktı şemaları + kapı komutları (33k şablon dosyası + kapı-kaynağı okumak YERİNE ~2k).
+
+Her LLM aşaması (anlatım, örnek, önem/çözücü) **yalnız `baglam/kaynak.md` + `baglam/sema.md` + ilgili `docs/asama_kurallari/<aşama>.md`**
+okur; ham `sayfalar.json`'ı baştan sona, örnek şablon dosyasını, kapı betiğinin kaynağını ve standart belgelerin tamamını OKUMAZ.
+Kesin kanıt sözcüğü (atom/çıkmış `kanit`) gerekince YALNIZ ilgili TEK slayt `sayfalar.json`/`op/`'tan açılır. Ölçüm (k2-50): aşama
+başına ~36,7k → ~3,9k token (−%89). Ders kilidi + hat-başı aşama-özeti kapısı E0'da (`hazirlik.py`) otomatiktir.
+
+## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
+
+Kullanıcı "tasarruf modunda" / "tasarruf kipiyle" derse hat `--mod tasarruf` ile yürür: `python3 scripts/tam_hat/hazirlik.py <klasör> --ders <key> --mod tasarruf`
+(`<klasör>/mod.json` yazılır; katman tablosu `python3 scripts/tam_hat/mod.py --rapor <klasör>`, tek kaynak `scripts/tam_hat/mod.py`).
+- **Yapılır:** sesli ders (anlatım, EMA, cümle/kelime zamanı + PDF metin vurgusu/takip), çıkmış chip + ayrıntılı çıkmış analizi + ders analizi,
+  terim/kısaltma, önem listesi, örnek sorular + sesli çözücü + EMA sesi, patoloji hoca soruları kartı + sesli hoca çözücü, ders içerik paketi (betik), kapılar + tek denetçi, yayın.
+- **Yapılmaz (atlandı — tasarruf kipi):** çapa + canlı çizim (E4 tümüyle), ara resim katmanı (`src/data/ara_resim`), ara soru sayfası,
+  atomik envanter, ders PDF tasarım taraması, Öğren destesi, quiz. Eksiklikleri dersi tamamlanmamış saymaz.
+- Kalite düşürülmez: kapılar 0 HATA, tek denetçi, kural 7/14/26/28/29 aynen. Alt ajan en çok 2 aynı anda; yeniden yazım yalnız hatalı parça.
+
 ## 1. Evreler ve paralellik
 
 | Evre | İşler (aynı anda) | Kaynak payı |
 |---|---|---|
 | **E0 Hazırlık** (LLM yok) | `python3 scripts/tam_hat/hazirlik.py <klasör> --ders <key>`: hoca dökümü (GPU) ∥ sayfa metni ∥ sayfa görüntüleri ∥ öğrenci notu ∥ çıkmış aday | GPU tek iş; CPU en çok 2 iş, her biri `CPUQuota=200%` `MemoryMax=2G` |
 | **E1 Kaynak** | değerlendirme paketi ∥ `soru_uslup_ornek.py` | — |
-| **E2 Yazım** (alt ajanlar) | anlatım metni ∥ Öğren destesi ∥ örnek sorular + çözücü ∥ atomik envanter | En çok **3 alt ajan** aynı anda (RAM 15 GB, Claude oturumları korunur) |
+| **E2 Yazım** (alt ajanlar) | anlatım metni ∥ ~~Öğren destesi~~ (ASKIDA 2026-11-02, kullanıcı aksi demedikçe üretilmez) ∥ örnek sorular + çözücü ∥ atomik envanter | En çok **3 alt ajan** aynı anda (RAM 15 GB, Claude oturumları korunur) |
 | **E3 Ses + yerleşim** | EMA sesi (GPU) → cümle/kelime zamanı ∥ çıkmış chip ∥ terim/kısaltma ∥ ders içerik paketi | GPU işleri sırayla (tek kart) |
 | **E4 Çapa + çizim** | çapa → çizim partileri (bölüm başına alt ajan, en çok 3) | — |
 | **E5 Kapılar + tek denetçi** | bütün betik kapıları ∥ `pdf_tarama.py` → **tek denetçi** | — |
@@ -82,6 +111,16 @@ birleşimi. Bakacakları, bu sırayla:
 
 Çıktı: `denetim.json` → `{"karar": "GEÇER|KALIR", "bulgular": [{"katman", "kimlik", "sorun", "oneri"}]}`. KALIR ise yalnız
 bulgulardaki kimlikler §3'e göre düzeltilir, denetçi yalnız o kimlikleri yeniden denetler (bütün ders değil).
+
+## 6. Hoca profili adımı (2026-10-29)
+E1'e `profil_oku.py --ders <ders> --konu <konu>` eklenir (LLM yok, <1 sn); çıktı yalnız yazım ve önem alt ajanlarının istemine konur (≤30 satır).
+E2 örnek soru çıkışı `soru_uslup.py` + **`profil_kapisi.py`** kapılarından geçer; kısmi düzeltme kuralı aynen (kapı "N soru şu türe çevrilmeli" der).
+Önem listesinde profilden önerilen madde `kanit: profil` etiketi taşır. Ayrıntı: `HOCA_USLUBU_YONTEMI.md` §4.1.
+
+
+## Hoca tahmin adımı (2026-10-29)
+E2 önem listesi öncesi: `scripts/hoca_profili/tahmin_girdisi.py` (profil + aday satırlar + K) → yazar `docs/HOCA_TAHMIN_REHBERI.md` v6 ile K tahmin; kör sınama %75–80 (docs/HOCA_USLUBU/TEST_TURLARI.md). Tahmin satırları önem listesine `kanit: profil` ve gerekçeyle girer.
+E2 ara sorular (kural 27): tahmin satırlarından seçilen slaytlar için `scripts/hoca_ara_soru/TALIMAT.md` (iskele → yazım → `kur.py dogrula` → denetçi); E3'te EMA GPU + `dogrula --ses`.
 
 ## Öğrenci önem notu adımı (2026-10-30, AGENTS 28)
 E0 `hazirlik.py` → `ogrenci_onem.json` (geçmiş yıl öğrenci derlemesinin A/B birimleri bu yılın sayfalarına eşlenmiş). E2 yazarlarının
