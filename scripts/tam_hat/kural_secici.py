@@ -48,6 +48,23 @@ ASAMALAR: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
               ("docs/KURUL_OTOMASYON_EL_KITABI.md",)),
 }
 KURAL_ETIKET = re.compile(r"^- \*\*(Kural|Kurul 2'de doğrusu|Önleme|Çözüm|Kalıcı çözüm|Kapı|Doğrusu)[^*]*\*\*", re.I)
+# İleriye-dönük (bir ürün yazan ajana GEREKEN) etiketler. "Çözüm/Kalıcı çözüm" geçmiş kod-hatası düzeltme anlatısıdır;
+# özete girmez (token israfı) — yalnız maddede başka ileri-kural yoksa korunur (madde kaybolmasın). (kullanıcı kararı 2026-11-16)
+ILERI_ETIKET = ("kural", "kurul 2'de doğrusu", "doğrusu", "önleme", "kapı")
+
+
+def _ileri_filtre(kural: list[str]) -> list[str]:
+    """Kural satır bloklarını ileri-kural (Kural/Doğrusu/Önleme/Kapı) ile sınırla; hiç yoksa ilk bloğu bırak."""
+    bloklar: list[dict] = []
+    for s in kural:
+        if s.startswith("- **"):
+            m = re.match(r"- \*\*([^:*]+)", s)
+            bloklar.append({"tag": (m.group(1).strip().lower() if m else ""), "satir": [s]})
+        elif bloklar:
+            bloklar[-1]["satir"].append(s)
+    ileri = [b for b in bloklar if any(b["tag"].startswith(t) for t in ILERI_ETIKET)]
+    secili = ileri if ileri else bloklar[:1]
+    return [l for b in secili for l in b["satir"]]
 
 
 def maddeler() -> list[tuple[str, str, list[str]]]:
@@ -75,9 +92,9 @@ def uret() -> dict[str, int]:
     for bas, metin, kural in maddeler():
         if not kural:  # etiketsiz (düz anlatımlı) madde: belirti/kök neden dışındaki satırlar aynen
             kural = [g for g in metin.splitlines() if g.strip() and not re.match(r"- \*\*(Belirti|Görülen|Kök)", g)][:14]
-        kucuk = (bas + "\n" + "\n".join(kural)).lower()  # belirti anlatısı eşlemeye girmez (aşırı dağılım)
+        kucuk = (bas + "\n" + "\n".join(kural)).lower()  # eşleme TAM metinle (doğru aşamaya düşsün); çıktı sıkıştırılır
         hedef = [a for a, (soz, _) in ASAMALAR.items() if any(s in kucuk for s in soz)] or ["genel"]
-        govde = "\n".join(kural) if kural else "- (kural satırı yok; ayrıntı defterde)"
+        govde = "\n".join(_ileri_filtre(kural)) if kural else "- (kural satırı yok; ayrıntı defterde)"
         for a in hedef:
             kova[a].append(f"### {bas}\n{govde}\n")
     for a, liste in kova.items():

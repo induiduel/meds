@@ -3,22 +3,13 @@
 > ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 29 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### H39 — Sesli metin kısaydı: sayfa atlanıyor, şekiller anlatılmıyordu (2026-10-24, kullanıcı "ders süresi az")
-- k2-02'de 56 içerik sayfasının 12'si anlatılmamış, 19 sayfa tek cümleyle geçilmişti; "kısa ve öz" + paralel üretimde kapı yoktu.
-  Kapı `isle.sesli_kapsam` (sayfa + derinlik). Kelime/dakika hedefi YOK; derinlik bilgi maddesi sayısından.
+
 
 ### H45 — Dar bölmede panel slayta göre büyüyor, yazının üstüne biniyor, kelimeler harf harf kırılıyordu (2026-10-24)
-- Gerçek görüntüleyicide (Metin + Slayt, ~570 px sayfa) panel yazısı sabit px idi: panel slayta göre iki kat büyüyor,
-  ayrılan boşluktan taşıp yazının üstüne biniyor, dar düğümde kelime harf harf kırılıyordu; panel yüksekliği tahmini de
-  gerçeğin ~1,5 katı kısaydı. Düzeltme: panel/etiket boyu `cqw` (sayfa genişliğine oranlı), etiketler SVG'den HTML'e alındı
-  (oransız ölçekte bozuluyordu), betikte `panel_boyu` (istemci diziliminin em kopyası). Sınama: 35 panelin hepsi 567 px ve
-  1100 px sayfada ayrılan alana ve sayfa/ek alan sınırına sığıyor (sınama sayfası tarayıcı ölçümü).
+
 
 ### H47 — Kelime takipçisi küçük yazıyı okunmaz yapıyordu; ek alan gereğinden sık ve uzundu (2026-10-24)
-- Telefon görüntüsü (s.54): konuşulan kelimenin iç gölgesi (3 px) ve koyu zemini "serebral" kelimesinin harflerini kapattı.
-  Düzeltme: zemin .13, çizgi harflerin altında (2 px, dışarıda).
-- Ek alan her sığmayan panelde baştan açılıyor ve panelin tamamı kadar oluyordu. Düzeltme: panel slaytın alt boşluğundan
-  başlar, sayfa yalnız taşan kısım kadar uzar (en büyük ek 0,58 → 0,39 sayfa boyu; s.11'de ek alan hiç gerekmedi).
-  Zincirde okun etiketi yanındaki düğümün altına girip kesiliyordu → etiket okun üstünde akış içinde, ok büzülmez.
+
 
 ### H68 — H66 tekrarı + süs bölüm sayfaları `sekil` türünde (2026-10-26, k2-27 periyodik muayeneler)
 - **Çözüm / kural:** Çıkmışlar `kanit.sayfa` cümlelerine bağlandı (c0003, c0037, c0047, c0101, c0112, c0204, c0213, c0218, c0222) ve sesli uyarı eklendi; süs bölüm sayfaları `tur: kapak` yapıldı. Haritacı, bilgi taşımayan bölüm başlık/kapanış sayfalarını `kapak` yazar; sesli yazar H66 adımını atlamaz. Kapı gevşetilmedi.
@@ -29,12 +20,10 @@
 
 
 ### H106 · `baglam.kazanimlar` kapak metninden türetilmiş çöp şablon cümleler içeriyor (2026-10-27, k2-08)
-- **Çözüm:** k2-08 kazanımları dersten elle yazıldı (8 ölçülebilir kazanım).
 - **Kural:** Genel şablon ("temel kavramlarını … analiz eder") ya da kapak metni içeren kazanım kullanılmaz. Açık iş: `isle.kazanimlar` kayıt yoksa boş dönmeli (kod düzeltmesi bu turda yapılmadı).
 
 
 ### H109 · v2 cümlesinin `ses` alanında iç cümle sonu: sunucu cümle sayısı v2 ile tutmuyor (2026-10-27, k2-05 Nörolojik Muayene)
-- **Çözüm:** `konusma_v2.dogrula` her `ses`'in tek cümle olmasını HATA sayar (`_cumle_sayisi`, sunucu kuralıyla aynı); yazar iki cümleyi iki v2 cümlesine böler. k2-01…k2-05 veride ihlal yok.
 - **Kural:** her v2 `ses` tam bir cümledir; yazım betiğinde ayrıca kendi sınır kontrolü (cümle sayısı = 1, ≤25 kelime) çalıştırılır.
 
 
@@ -51,22 +40,18 @@
 
 
 ### H106 · Çalışma takvimi (ısı haritası) hücreleri dev görünüyordu (2026-10-27)
-- **Çözüm:** Sütun `minmax(0, 16px)` + `justify-content: start`; hücre en çok 16 px.
 - **Kural:** Kare hücreli ızgaralarda (ısı haritası, takvim) sütun genişliğine üst sınır koy; `1fr` + `aspect-ratio` birlikte kullanılmaz.
 
 
 ### H111e · Profil verisi dinleyicileri render sırasında setState yapıyordu (2026-10-28, Bugün/Arka plan)
-- **Çözüm:** `userKvSync.ts` `bildir()` dinleyicileri `queueMicrotask` ile çağırır (tüm dinleyiciler zaten zamanlayıcı/setState yapıyor; eşzamanlılık gerekmiyordu). Sınama: sayfa_tarama /bugun, /arka-plan konsol hatası 1 → 0.
 - **Kural:** localStorage/depo yazımına bağlı olay yayıcıları dinleyicileri eşzamanlı çağırmaz (mikro görev); render içinde (useState başlatıcısı, useMemo) yan etkili yazım yapılmaz.
 
 
 ### H129 — "Salt okunur" SQL konsolu süper kullanıcıyla çalışıyordu (2026-10-28, Yönetim v16)
-- **Kalıcı çözüm:** `pgAdminRoutes.ts` `/api/admin/pg/sql`: ilk sözcük izin listesi (SELECT/WITH/EXPLAIN/VALUES/TABLE/SHOW), tehlikeli işlev/katalog yasak listesi, işlem içinde `set local role meds_salt_okur` (NOLOGIN, yalnız `pg_read_all_data`). Rol kurulamazsa konsol kapalı (503). `DELETE /api/admin/pg/row` ve `POST /api/admin/db/import` sunucuda onay sözcüğü ister.
 - **Önleme:** "salt okunur" iddia eden her uç bağlantı rolünün yetkisiyle sınanır (COPY TO PROGRAM, pg_read_file, pg_authid, CTE içinde DELETE); tehlikeli uçlar istemci onayına ek olarak sunucuda onay sözcüğü ister.
 
 
 ### H130 — Canlı içerik katmanı tam kopyaydı, kaynaktaki yeni kayıtları gölgeliyordu (2026-10-28)
-- **Kalıcı çözüm:** Katman kayıt düzeyinde farktır: `data/content/<rel>.fark.json` (`kayitlar`, `silinen`, kaynaktaki kaydın sha'sı `taban`). Okuma = kaynak + fark (`_birlesik/<rel>` önbelleği). Yazıcılar tam dosyayı yine `writableContent` yoluna yazar; kilit bırakılınca birleşik tabana göre farka çevrilir. Eski kopyalar `scripts/icerik_katman.py goc` ile `_ids.json` izine göre farka çevrildi (yedek `data/_yedek/content_goc_*`). `content-overlay-sync.sh` farkı kayıt kayıt uygular, `taban` tutmazsa durur, tam kopya görürse durur.
 - **Önleme:** `python3 scripts/icerik_katman.py denetle` 0 HATA (tam kopya = HATA, birleşimde kaynak kaydı eksik = HATA). Katmana bütün dosya kopyalayan yeni yazıcı yazılmaz; başlangıç kopyası gerekiyorsa `resolveContent(file)` (birleşik) kopyalanır, ham kaynak değil.
 
 
@@ -103,44 +88,32 @@
 
 
 ### H440 — Arka plan işleri boşta da bellek, CPU, internet ve LLM kotası harcıyordu (sistem başarım turu, 2026-10-29)
-- **Çözüm:** LLM kilidi `v2/core/llm.py` (`chat`, `vision_ocr`) ve `processQueueItemOtomatik` + zamanlayıcılı `questionIntake`/`poolClusterService` yolları (`MEDS_LLM_OTOMATIK=1` yoksa çalışmaz); `cycle.py` dosya özeti önbelleği (ad+boyut+mtime) + her tur ayrı alt süreç; panel istatistiği yalnız son 60 sn'de istenmişse, Ollama yoklaması kaldırıldı; bekçi 60 sn + yalnız başlık; arama servisleri sorgu vektörünü `meds-embed`'den (:8091, `MEDS_E5_EMBED_URL`) alır, boyut 384 değilse yerel modele düşer; `embed_server.py` model bırakınca `malloc_trim`; birimlere `HF_HUB_OFFLINE=1` (`*.service.d/20-cevrimdisi.conf`); query-intel ucuz ön imza (`data/search/query-intel.onimza`); RAG değişen parça yoksa dizin/dosya yeniden kurulmaz, bekleme 2 dk; Firestore yedek yoklaması canlı dinleyici varken 10 dk; istemci saat yalnız çalarken, bakım yoklaması yalnız görünür sekmede, SW mühürleme günde bir, başarım yoklaması 10 dk, müzik listesi ilk bağlanmada tekrar çekilmez. `meds-web` doğrudan `node --import tsx server.ts` (`30-dogrudan-node.conf`).
 - **Önleme:** (a) Sürekli çalışan servis tur başına değişmeyen girdiyi baştan okumaz/özetlemez: önce ad+boyut+mtime ön imzası. (b) Ağır son işlemi olan uzun ömürlü Python döngüsü işi alt süreçte yapar (bellek tur sonunda iade). (c) Yalnız ekran açıkken anlamlı olan hesap (panel istatistiği, saat, yoklama) "son istek/görünürlük" koşuluna bağlanır. (d) LLM çağıran HER yol — en alt katmandaki ortak `chat` işlevi dahil — kilidi denetler; yalnız zamanlayıcıyı duraklatmak yetmez. (e) Aynı modeli taşıyan ikinci servis yazılmaz; ortak vektörleme servisine istek atılır. (f) Kaldırılan servisin (Ollama vb.) yoklaması panel/bekçi kodundan da silinir.
 
 
 ### H457 — Sesli ders "İndir" düğmesi indirmeyi hiç başlatmıyordu (çevrimdışı, 2026-10-31)
-- **Çözüm:** Background Fetch kapatıldı (`BF_ETKIN = false`, `canliDersCevrimdisi.ts`); ses, metin ve PDF yalnız sayfa içi
-  `fetch` ile uygulamanın önbelleğine (Cache Storage, `CD_OFFLINE_CACHE`) yazılır; indirilenler klasörüne dosya düşmez.
-  `cdTakiliArkaPlanIptal()` eski takılı `cd|…` kayıtlarını açılışta ve her indirmede iptal eder.
 - **Önleme:** tarayıcıya devredilen bir indirme/iş, ilerleme gelmezse zaman aşımıyla sayfa içi yola düşmeden kullanılmaz;
   çevrimdışı içerik kullanıcının dosya sistemine değil uygulama önbelleğine yazılır.
 
 
 ### H478 — LLM kilidi masaüstü Claude oturumunu zamanlayıcı sandı (2026-11-03)
-- **Çözüm (bu sefer):** kullanıcının açık onayıyla (2026-11-03) yalnız k2-12/k2-64 yerleştirmesi `env -u INVOCATION_ID MEDS_LLM_ELLE=1` + her
-  çağrıyı reddeden sahte `claude` ile koşturuldu; anlam denetimi ayrı ajanla yapıldı. k2-13/k2-14'te ajanlar bunu onaysız yapmıştı (kayıt).
 - **Önleme:** ajan kilidi kendi başına aşmaz; takılırsa ana oturum kullanıcıya sorar. Kalıcı çözüm kullanıcı kararı bekler: kilidin yalnız
   `claude()`/`anlam_denetimi()` çağrısına taşınması ya da masaüstü oturumunu tanıyan ayrı bayrak (kilit gevşetme sayılır → kullanıcı onayı şart).
 
 
 ### H481
-- **Çözüm:** SW bu iki önbellekteki lecture-pdf adreslerini kümede tutar (`cihazPdfYukle`, PAKET_CHANGED ile tazelenir; sesli ders ve
-  `savePdfOffline` kayıttan sonra bildirir). Kümede olan istek cihazdan (`aralikYaniti`, Range → 206) verilir; olmayan yine ağa bırakılır.
-  Sınama: headless Chrome, internetsiz → tam yanıt + 206.
 - **Önleme:** bir isteği SW'den "ağa bırakan" her kısa devre, o adresi yazan TÜM önbellekleri (paket, sesli ders, eski PDF) önce denetlemelidir;
   çevrimdışı düzeltmesi internetsiz gerçek sınamayla doğrulanmadan bitmiş sayılmaz.
 
 
 ### H484
-- **Çözüm:** birim adına süreç numarası eklendi (`meds-hazirlik-<iş>-<pid>-<sn>`).
 - **Önleme:** systemd-run ile geçici birim açan her betik adı süreçten tekil kurar (pid ya da uuid); zaman damgası tek başına kimlik sayılmaz.
 
 
 ### H493
-- **Çözüm:** bu aralıkta süs ikonu gizlenir, açıklama iki satıra sarar (`line-clamp:2`).
 - **Önleme:** tek bilgi taşıyan satır asla tek satır üç noktaya düşürülmez; en dar kapsayıcı genişliğinde ekran görüntüsüyle denetlenir.
 
 
 ### H494
-- **Çözüm:** hepsi `lockScroll()/unlockScroll()`'a geçirildi (LessonPlayer'daki `documentElement` yazımı dahil).
 - **Önleme:** `body/documentElement.style.overflow`'a doğrudan yazmak yasak; yalnız `utils/scrollLock`. Denetim: `grep -rn "body.style.overflow\s*=" src` boş dönmeli.
 
