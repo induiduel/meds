@@ -1,9 +1,10 @@
 /** Canlı ders tanıtım turu kancası: ilk ziyarette bir kez kendiliğinden açılır; "Tanıtım" düğmesiyle yeniden başlar. */
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { CircleHelp } from 'lucide-react';
 import { cdTurGoruldu, type CdTurTuru } from './canliDersTurDurum';
 
-const CanliDersTur = lazy(() => import('./CanliDersTur'));
+const CanliDersTur = guvenliLazy(() => import('./CanliDersTur'));
 
 /** Tanıtım turu: ilk ziyarette bir kez kendiliğinden (hazır=true olunca), sonra "?" düğmesiyle. */
 export function useCdTur(tur: CdTurTuru, hazir: boolean, bekle?: () => boolean) {

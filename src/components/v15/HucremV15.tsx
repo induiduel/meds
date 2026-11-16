@@ -1,4 +1,5 @@
-import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { ArrowLeftRight, Check, ChevronLeft, ChevronRight, Droplet, Lock, Share2, Trophy, X, Zap } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { linkClick, navigateTo, pathFor } from '../../router';
@@ -15,7 +16,7 @@ import { useTamKatman } from '../../utils/tamKatman';
  * mevcut başarım motorundan (POST /api/basarim/satin-al; sunucu "önceki basamak" şartını denetler). Her basamak bir
  * tıbbi bilgi açar. 3B sahne (Hucre3D, three.js) açılan basamağa göre katman katman büyür; glukoz bakiyesi akan parçacık sayısını, canlılık solgunluğu belirler. WebGL yoksa SVG çizim.
  */
-const Hucre3D = lazy(() => import('./Hucre3D'));
+const Hucre3D = guvenliLazy(() => import('./Hucre3D'));
 
 /** 3B sahne (WebGL); yüklenene ya da WebGL yoksa düz SVG çizim */
 function Sahne({ n, glukoz, canlilik }: { n: number; glukoz: number; canlilik: number }) {

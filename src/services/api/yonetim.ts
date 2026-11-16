@@ -15,7 +15,9 @@ import { SupabaseDbService, getSupabaseClient } from '../supabaseDb';
 import { pastQuestionsCache } from '../pastQuestionsCache';
 import { ADMIN_EMAIL } from '../auth';
 import { isModeratorMode } from '../moderatorSession';
-import { clusterDraftsForCommittee, unmergeQuestion, ClusterAnalysisSummary, ClusterTuning } from '../draftClusteringService';
+// Kümeleme motoru (~50 KB) yalnız yönetim işlemlerinde gerekir: açılış paketine girmesin diye dinamik içe aktarılır.
+import type { ClusterAnalysisSummary, ClusterTuning } from '../draftClusteringService';
+const kumeleme = () => import('../draftClusteringService');
 export const YonetimApi = {
 
   /**
@@ -311,6 +313,7 @@ export const YonetimApi = {
   // Akıllı Taslak Kümeleme ve Birleştirme Metotları
   async getCommitteeDraftClusters(committeeId: string, tuning?: ClusterTuning): Promise<ClusterAnalysisSummary> {
     const db = getLocalDb();
+    const { clusterDraftsForCommittee } = await kumeleme();
     return clusterDraftsForCommittee(db.questions, committeeId, tuning);
   },
 
@@ -327,6 +330,7 @@ export const YonetimApi = {
     const consolidated = db.questions.find((q) => q.id === consolidatedId);
     if (!consolidated) throw new Error('Birleştirilmiş taslak bulunamadı.');
 
+    const { unmergeQuestion } = await kumeleme();
     const { anchor, restoredSatellites } = unmergeQuestion(consolidated);
     anchor.examYear = '2026-2027';
     anchor.updatedAt = new Date().toISOString();
@@ -371,6 +375,7 @@ export const YonetimApi = {
       throw new Error('Yetkisiz işlem: Toplu taslak birleştirme yetkisi yalnızca sistem yöneticisine aittir.');
     }
     const db = getLocalDb();
+    const { clusterDraftsForCommittee } = await kumeleme();
     const summary = clusterDraftsForCommittee(db.questions, committeeId);
     const readyClusters = summary.clusters.filter((c) => c.status === 'ready_to_merge');
 

@@ -155,7 +155,12 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
             continue
 
         t_adim = time.time()
-        mp3, zamanlar, sure, notlar = seslendir(tts, cumleler, okunus)
+        try:
+            mp3, zamanlar, sure, notlar = seslendir(tts, cumleler, okunus)
+        except SK.BozukKlip as e:  # H587: üç tohumda da eşik dışı → yazılmaz, süreç sonunda çıkış 3
+            SK.bozuk_kaydet(klasor=str(cikis_dizin), klip=str(adim_no), hata=str(e), karakter=sum(map(len, cumleler)))
+            print(f"  [Adım {adim_no:2d}] HATA {e} — klip yazılmadı")
+            continue
         SK.atomik_yaz(mp3_yolu, mp3)
 
         kayit[str(adim_no)] = {

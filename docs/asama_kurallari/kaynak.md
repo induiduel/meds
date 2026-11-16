@@ -1,6 +1,6 @@
 # Aşama kuralları — kaynak
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 52 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 53 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
@@ -219,4 +219,8 @@
 
 ### H582 — "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez" (2026-11-16)
 - **Önleme kuralı:** Kimlik üreten her slug çakışmayı sonekle çözer ve kimlik tekilliği doğrulanır. Panelden/hattan yazılan her src/data dosyası CONTENT_FILES'ta tür olarak kayıtlıdır ve ekran onu ortak yükleyiciden okur.
+
+
+### H589 — Arama kalite ölçümü belgelenenin çok altında çıktı (hit@5 %95 → %75): ölçüm bozuktu (2026-11-16)
+- **Önleme kuralı:** dizin süzgeci değişince değerlendirme örneklemi de aynı süzgeçle güncellenir; ölçüm tabanı tarih + havuz tanımıyla birlikte yazılır, eski tabanla kıyaslanmaz.
 

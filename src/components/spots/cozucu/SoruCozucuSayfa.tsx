@@ -1,4 +1,5 @@
 import { icKonum, icUrl } from '../../../siteHaritasi';
+import { guvenliLazy } from '../../../utils/guvenliLazy';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Check, Clock, Headphones, History, Play, RotateCcw } from 'lucide-react';
 import { cozucuDizinYukle, ilerlemeYaz, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
@@ -18,7 +19,7 @@ import CihazdaIsaret from '../../cevrimdisi/CihazdaIsaret';
  * Soru çözücü (/soru-cozucu?brans=…, başlangıç ekranında branş seçildikten sonra): ders/set listesi + ilerleme. Ders
  * seçilince tam ekran çözücü açılır (&ders=<kod>&coz=1; yanlışların tekrarı &coz=yanlis, çıkmışlar &coz=cikmis).
  */
-const SoruCozucu = React.lazy(() => import('./SoruCozucu'));
+const SoruCozucu = guvenliLazy(() => import('./SoruCozucu'));
 
 const urlOku = (k: string) => { try { return new URLSearchParams(icKonum().search).get(k); } catch { return null; } };
 const urlYaz = (p: Record<string, string | null>) => {

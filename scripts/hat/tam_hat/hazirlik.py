@@ -151,6 +151,11 @@ def _govde(a, k: Path, pdf: Path) -> int:
                                         [PY, str(KOK / "scripts/uretim/ogrenci_onem/oku.py"), "--ders", ders_id.group(0), "--sayfalar",
                                          str(k / "sayfalar.json"), "--yaz", str(k / "ogrenci_onem.json")], L("ogrenci_onem")))
         sonuc += [f.result() for f in isler]
+    # C6/C7 (2026-11-16, LLM yok): döküm varsa slayt başına kırp (değerlendirme HAM dökümü okumaz) + atom adayı iskeleti.
+    sonuc.append(calistir("hoca_kirp", [PY, str(KOK / "scripts/hat/tam_hat/hoca_kirp.py"), str(k)], L("hoca_kirp")))
+    if (k / "sayfalar.json").exists():
+        sonuc.append(calistir("iskelet", [PY, str(KOK / "scripts/hat/tam_hat/iskelet.py"), "uret", str(k), "--ders", a.ders],
+                              L("iskelet")))
     durum = {"ders": a.ders, "mod": a.mod, "toplam_sn": round(time.time() - t0), "isler": sonuc}
     (k / "hazirlik_durum.json").write_text(json.dumps(durum, ensure_ascii=False, indent=1))
     for s in sonuc:

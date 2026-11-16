@@ -6,6 +6,7 @@
  * - v14 kabuğu geçiş süresince ?kabuk=v14 ile açılır (App.tsx; oturum boyunca hatırlanır, ?kabuk=v16 döndürür).
  */
 import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { ArrowLeft, ChevronDown, ChevronRight, Menu, Moon, Search, Sun, Construction, ExternalLink, Pin, PinOff, X } from 'lucide-react';
 import { MENU, TUM_SAYFALAR, adresCoz, manageAdres, yolGuncelle, type SayfaProps, type SayfaTanim } from './menu';
 import { BildirimHost, BosDurum, Hata, OnayHost, SayfaBasligi, Yukleniyor } from './kit';
@@ -30,7 +31,7 @@ function yolListesiOku(anahtar: string): string[] {
 function lazySayfa(s: SayfaTanim) {
   if (!s.yukle) return null;
   let c = lazyOnbellek.get(s.yol);
-  if (!c) { c = React.lazy(s.yukle); lazyOnbellek.set(s.yol, c); }
+  if (!c) { c = guvenliLazy(s.yukle); lazyOnbellek.set(s.yol, c); }
   return c;
 }
 

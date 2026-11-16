@@ -67,6 +67,26 @@ içerik katmanı `relOf/farkYol` (dosya başına tek fark varsayımı), `icerik_
 `content-overlay-sync.sh` yolu, `splitLearningDecks` mtime denetimi, depo önbelleği/ETag, kapı D1 izin listeleri.
 Sıra: çift yazım (monolit + parça) → karşılaştırma kapısı 0 fark → okuma parçaya → monolit arşive.
 
+**Yapıldı — iskele (2026-11-16, varsayılan davranış DEĞİŞMEDİ):**
+- Biçim (tek tanım `scripts/deste_deposu.py`): `<dizin>/_sira.json` = `{"bicim":1,"desteler":[{id,dosya,sha1[,deckId]}]}`
+  (monolit sırası) + `<dosya>.json` = tek deste, monolitteki bayt biçimiyle (`json.dumps(ensure_ascii=False)`, girintisiz,
+  varsayılan ayraçlar, sonda satır sonu yok — mevcut monolit `json.dumps(json.load(...))` ile bayt bayt aynı, kanıtlandı).
+  Birleşim `"[" + ", ".join(parçalar) + "]"`. Dosya adı: kimlik `[A-Za-z0-9][A-Za-z0-9._-]*` ise kendisi, değilse `~<utf8 hex>`.
+- `scripts/deste_bol.py bol|birlestir|dogrula|fark` (varsayılan hedef `../meds_temp/deste_parcali/desteler/`; `src/data`'ya yazmaz).
+- `deste_deposu.py` parçalı arka uç: `MEDS_DESTE_PARCALI=1` + `MEDS_DESTE_PARCA_DIZIN` (yalnız `yol` verilmeyen çağrılar);
+  `guncelle/sil` tek dosya + `_sira.json` (sıra en son / silmede önce), kilit aynı. Sınama `scripts/sinama_deste_parcali.py`.
+- `desteDeposu.ts` parçalı OKUMA (aynı bayrak; katmanda deste farkı varsa KAPALI); yazım monolitte/katmanda.
+- Kapı D1: parça dizini işaretlerini (`MEDS_DESTE_PARCA_DIZIN`, `deste_parcali`, `desteler/_sira.json`) yalnız depo modülleri anar.
+
+**Kalan adımlar (sıralı; her birinin geçiş kapısı `python3 scripts/deste_bol.py dogrula --hedef <dizin>` 0 fark):**
+1. Çift yazım: depo yazımları monolite + parçalara birlikte (Python ve TS `desteleriYaz`); kapı her yazımdan sonra 0 fark.
+2. İçerik katmanı çok-dosya farkı: `contentOverlay.ts` `relOf/farkYol/farkUygula` + `icerik_katman.py` `VARLIK` deste başına
+   fark; Oracle'daki mevcut monolit farkı parçalara taşınır. Kapı: Oracle'da birleşim = katman-çözülmüş monolit.
+3. `splitLearningDecks` (`decks/items/`) parçadan okur (mtime yerine `_sira.json` sha1'leri); `items` çıktısı öncekiyle aynı.
+4. `content-overlay-sync.sh` + `dagit.sh` parça dizinini eşitler; Oracle'da `dogrula` 0 fark.
+5. Varsayılanı çevir (bayrak kalkar, parçalı okuma/yazma tek yol); bir dağıtım süresince monolit türetilmiş yazılır.
+6. Monolit `veri_bakim.py arsivle` ile arşive; D1 monolit adını anan her kodu HATA sayar.
+
 **Faz 4 — RAG parça dosyası JSONL** (4 okuyucu: `localRagEngine` oku/yaz, `rag_vektor_hatti.py`, `queryIntel/build.ts`,
 `queryIntel/server.ts`); kararsız parça kimlikleri (`chunk-sum` sıra, `chunk-gloss` içerik özeti) kaynak kimliğine bağlanır.
 

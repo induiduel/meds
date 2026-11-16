@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../../utils/guvenliLazy';
 import {
   BookMarked, Check, Columns2, Download, Eye, FileText, Layers, List, ListChecks, Loader2, PenLine, Printer,
   RefreshCw, Scissors, Share2, SlidersHorizontal, Sparkles, X, Zap,
@@ -13,7 +14,7 @@ import {
 } from './onemVeri';
 import '../../../styles/spots.css';
 
-const OnemPdfOnizleme = React.lazy(() => import('./OnemPdfOnizleme'));
+const OnemPdfOnizleme = guvenliLazy(() => import('./OnemPdfOnizleme'));
 
 /**
  * Önem listesi PDF penceresi. Soldaki ayarlar (şablon · kapsam · düzen modu · süzgeç · içerik · sayfa · görünüm · dosya),

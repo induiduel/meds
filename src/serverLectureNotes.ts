@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { bellekKaydet } from './services/telemetri.ts';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
@@ -268,6 +269,8 @@ export function findBestMatchingLectureSlides(
 }
 
 let cachedLectureNotes: { mtime: number; data: LectureNoteRecord[] } | null = null;
+let notlarBayt = 0;
+bellekKaydet('ders.notlari', () => cachedLectureNotes ? { kayit: cachedLectureNotes.data.length, bayt: notlarBayt } : null);
 
 /**
  * Load all lecture notes from data/lecture_notes.json (with mtime in-memory caching)
@@ -285,7 +288,7 @@ export function getAllLectureNotes(): LectureNoteRecord[] {
       const raw = fs.readFileSync(LECTURE_NOTES_FILE, 'utf-8');
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed)) {
-        cachedLectureNotes = { mtime, data: parsed };
+        cachedLectureNotes = { mtime, data: parsed }; notlarBayt = raw.length * 2;
         return parsed;
       }
     }
@@ -298,7 +301,7 @@ export function getAllLectureNotes(): LectureNoteRecord[] {
       const raw = fs.readFileSync(srcPath, 'utf-8');
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed)) {
-        cachedLectureNotes = { mtime, data: parsed };
+        cachedLectureNotes = { mtime, data: parsed }; notlarBayt = raw.length * 2;
         return parsed;
       }
     }

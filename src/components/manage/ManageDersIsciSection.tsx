@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Play, ArrowUp, ArrowDown, Trash2, ListPlus, ShieldOff } from 'lucide-react';
 import { CalendarClock, Cpu, FileSearch, RefreshCcw, ShieldCheck, Hourglass, AlertTriangle, Ban, Wrench, Inbox, Layers } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
@@ -11,7 +12,7 @@ import { IsciKontrol, type IsciDurum } from './ManageDersIsciKontrol';
 import { AsamaSeridi, type SesDurumu, type TaslakAsama } from './ManageDersIsciAsama';
 import { OnayKapisi } from './ManageDersIsciOnay';
 
-const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
+const LessonPlayer = guvenliLazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
 
 /**
  * "Yeni dersler": Oracle'daki ders işçisinin (scripts/uretim/ders_isci) Drive'dan yakalayıp Claude ile ürettiği ders paketleri.
@@ -240,7 +241,7 @@ const DURUM: Record<string, { label: string; cls: string }> = {
   reddedildi: { label: 'Reddedildi', cls: 'is-bad' },
 };
 
-const ManageDersRevizeSection = React.lazy(() => import('./ManageDersRevizeSection').then((m) => ({ default: m.ManageDersRevizeSection })));
+const ManageDersRevizeSection = guvenliLazy(() => import('./ManageDersRevizeSection').then((m) => ({ default: m.ManageDersRevizeSection })));
 
 type Kategori = 'otomatik' | 'revize';
 

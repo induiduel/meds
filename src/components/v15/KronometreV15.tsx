@@ -4,6 +4,7 @@ import { BarChart3, Flag, Pause, Play, RotateCcw, Settings, Square, Timer, X } f
 import KronometreEkranV15, { ayarOku, KR_AYAR_KEY, type KrAyar } from './KronometreEkranV15';
 import KapsulV15, { kapsulOku, KAPSUL_KEY } from './KapsulV15';
 import '../../styles/v15/kronometre.css';
+import { sureYaz } from './kronometreOlay';
 
 /**
  * v15 · Yüzen kronometre (tasarım sistemi v15 › T "Yüzen kronometre" + U "Çalışma kapsülü").
@@ -24,13 +25,7 @@ const oku = (): Durum => { try { return { ...BOS, ...JSON.parse(localStorage.get
 const yaz = (d: Durum) => { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch { /* özel pencere */ } };
 const konumOku = (): Konum => { try { return { sag: true, y: 0.72, gizli: false, ...JSON.parse(localStorage.getItem(KONUM_KEY) || '{}') }; } catch { return { sag: true, y: 0.72, gizli: false }; } };
 const gecen = (d: Durum, simdi = Date.now()) => d.birikmis + (d.calisiyor ? simdi - d.bas : 0);
-export const sureYaz = (ms: number) => {
-  const s = Math.floor(ms / 1000), sa = Math.floor(s / 3600), dk = Math.floor((s % 3600) / 60), sn = s % 60;
-  const p = (n: number) => String(n).padStart(2, '0');
-  return sa ? `${sa}:${p(dk)}:${p(sn)}` : `${p(dk)}:${p(sn)}`;
-};
-/** Menü ve kenar menüsünden açmak için */
-export const kronometreAc = () => window.dispatchEvent(new CustomEvent('medsoru:kronometre', { detail: 'kronometre' }));
+export { sureYaz, kronometreAc } from './kronometreOlay';
 
 const BOY_ORTA = 48, BOY_KUCUK = 38;
 /** Oturuma ad: o an açık sayfanın başlığı ("Patoloji 3 · … · MeDSor" → ilk parça) */

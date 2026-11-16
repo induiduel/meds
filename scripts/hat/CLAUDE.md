@@ -12,5 +12,6 @@
 - `baglam/` dilimli: aşama yalnız kendi `kaynak_<atom|hoca|cikmis|uslup>.md` dilimini okur (`baglam.py` DILIM_ASAMA).
 - LLM çağıran her betik `otomasyon/llm_kilit.py` arkasında (`MEDS_LLM_ELLE=1` yoksa çıkış 75); zamanlayıcı kurma yok (AGENTS kural 20).
 - Katman manifesti: `tam_hat/manifest.py uret|goster|denetle|fark <key>` → `meds_database_v2/ders_bilgi/<key>/katman_manifest.json` (`manifest.json` bilgi deposunundur, ezilmez); kapıyı çalıştırmaz, `--kapi-sonucu katman=gecti|kaldi` işler.
+- `hoca_kirp.py` (C6: döküm → slayt başına kırpık, LLM yok) · `iskelet.py` (C7: `baglam/iskelet_<aşama>.json`, `numarala`, `denetle`) · `kosucu.py --olc` (girdi ölçümü) · bağımlılık/paralel grup `mod.py BAGIMLILIK`.
 - Kök `scripts/kok.py` ile; `parents[N]` yasak (D2).
 - Ayrıntı: `docs/KURUL_OTOMASYON_EL_KITABI.md`, `docs/KURUL2_DERS_STANDARDI.md`, `scripts/HARITA.md`.

@@ -1,4 +1,5 @@
 import { icKonum, icUrl } from '../../siteHaritasi';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useStorageRefresh } from '../../hooks/useStorageRefresh';
@@ -77,9 +78,9 @@ const IskeletKart: React.FC<{ i: number }> = ({ i }) => (
 );
 
 /** v12 "Net" ayrı bileşendir (canvas Cards.dc.html › Spotlar); tasarım değişince kancalar karışmasın diye ayrı tür. */
-const SpotsV15 = React.lazy(() => import('../v15/SpotsV15'));
-const OnemListesi = React.lazy(() => import('./OnemListesi'));
-const SoruCozucuSayfa = React.lazy(() => import('./cozucu/SoruCozucuSayfa'));
+const SpotsV15 = guvenliLazy(() => import('../v15/SpotsV15'));
+const OnemListesi = guvenliLazy(() => import('./OnemListesi'));
+const SoruCozucuSayfa = guvenliLazy(() => import('./cozucu/SoruCozucuSayfa'));
 type Gorunum = 'spot' | 'onem' | 'cozucu';
 const okuGorunum = (): Gorunum => {
   try { const g = new URLSearchParams(icKonum().search).get('gorunum'); return g === 'onem' || g === 'cozucu' ? g : 'spot'; } catch { return 'spot'; }

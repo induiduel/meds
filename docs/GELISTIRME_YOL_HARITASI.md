@@ -46,8 +46,8 @@ dosyayı baştan yazdırıyor; denetçi her şeyi okuyor ve yazarla aynı model 
 | C3 | Önbellek dostu paket sırası (sabit önek → değişken girdi) + girdi karmalı önbellek anahtarı | tekrar turunda girdi maliyeti ↓ | ✅ |
 | C4 | Denetçi gerçekten ayrı model ailesinde; kısa işler hızlı modelde | kalite ↑ (kural 31) | ✅ |
 | C5 | Kimlik bazlı yama (`MEDS_HAT_YAMA=1`) ve dar denetim (`MEDS_HAT_DAR_DENETIM=1`) | düzeltme turu tüm dosya → %5–15 | ✅ kod; ilk gerçek derste doğrulanınca varsayılan olur |
-| C6 | Hoca dökümünü (360 KB) slayt hizasıyla kırpma | değerlendirmede −50–70 bin token | ⏳ |
-| C7 | Atom envanteri, kimlik/numara, şema iskeleti betikle; model yalnız alan doldurur | çıktı −%20 | ⏳ |
+| C6 | Hoca dökümünü (360 KB) slayt hizasıyla kırpma | değerlendirmede −50–70 bin token | ✅ `tam_hat/hoca_kirp.py` (k2-28: JSON 35,8k → 3,3k kelime; metin 4,5k → 3,3k, %26; vurgu kalıplı cümle atılmaz) |
+| C7 | Atom envanteri, kimlik/numara, şema iskeleti betikle; model yalnız alan doldurur | çıktı −%20 | ✅ kod `tam_hat/iskelet.py` (anlatım, örnek soru, çıkmış analizi; `numarala`, `denetle` kapılara bağlı); önem/çözücü uygulanmadı |
 | C8 | Otomatik yol (`otomasyon/llm/gorevler`) da `baglam/` dilimlerini okur (iki yol teke) | çift bakım biter | ⏳ |
 | C9 | Aşama başına bir altın örnek (elle seçilir) | yeniden yazım −1 tur | 🙋 örnek seçimi |
 | C10 | Tek "ders anlama" çağrısından önem/çözücü/terim türetme | kaynak okuma −%70 | ⏳ tasarım |
@@ -76,3 +76,37 @@ uygulanmıyor; ses kalite kapısı yok (sesli dersler arası 9 dB fark); aktarı
 1. Her dalga: ajanlar ayrık dosya kümelerinde → `npm run lint` 0 → `yapi_koruma.py` 0 HATA → `npx vite build` → `meds-web` yeniden başlatma + sağlık.
 2. Dağıtım yalnız `dagit.sh`, onem +1; kod ve veri biçimi değişiklikleri aynı turda gider (RAG JSONL).
 3. Bayrak arkasındaki davranışlar (C5) ve GPU isteyen işler (D3, D8) kullanıcı komutu olmadan açılmaz/başlamaz.
+
+## Ölçülen etki (2026-11-16 sonu; Ö = ölçüldü, T = tahmin)
+
+| Alan | Önce | Sonra | Kanıt |
+|---|---|---|---|
+| Model sorgu maliyeti (çıkmışta terim arama) | `jq` 32.033 / `rg` 77.331 karakter | `veri.py bul` 1.383 karakter (23–56×) | Ö |
+| Ders başına içerik hattı girdisi (k2-28) | ≈175 bin kelime (≈280 bin token) | 80 bin kelime (≈128 bin token), −%54 | Ö (`kosucu.py --olc`); gerçek koşuda doğrulanmadı |
+| Oturum başı zorunlu okuma | 12.619 kelime | 8.023 kelime (−%36) | Ö (`butce.py`) |
+| Sunucu yığını (kararlı, deste önbelleği yüklü) | 1.130 MB | 862 MB (−%24); deste önbelleği boşalınca ≈710 MB | Ö / T |
+| RAG parça okuma belleği | 872 MB tepe | 384 MB | Ö |
+| İlk yük JS gzip | 527 KB | 460 KB (−%13) | Ö (`butce.py`) |
+| İlk yük CSS gzip | 152 KB | 130 KB (−%14) | Ö |
+| İlk yük dosya sayısı | 119 | 100 | Ö |
+| En büyük tembel parça | 31,2 MB | 4,6 MB; kazanım satırı açınca 31 MB → ≈0,5 MB | Ö |
+| Tek deste okuma / düzenleme (parçalı arka uç, bayrak kapalı) | 594 ms / 1.748 ms | 2,6 ms / 3,8 ms | Ö; varsayılan değil |
+| Her çıkmış kaydında disk yazımı | 97 MB + 97 MB ayna | 97 MB | Ö |
+| `src/data` boyutu | 588 MB | 434 MB | Ö |
+| Yedek/kalıntı (data) | ≈1,05 GB | 169 MB + 220 MB doğrulanmış arşiv | Ö |
+| Ses: bozuk klip tespiti | yok | 91.399 seste 16 bozuk, yanlış alarm 0 | Ö |
+| Arama hit@5 (doğru örneklemle taban) | ölçüm bozuktu (%75/%56/%28) | %87 / %60 / %34 | Ö (H589) |
+
+Etkisi henüz ölçülemeyenler: istem önbelleği isabeti ve denetçinin ayrı model ailesi (ilk gerçek ders koşusu), yeni okunuş yolu (GPU'da dinleme),
+web-vitals (canlıda örnek birikmesi gerekir), canlı konteyner belleği (dağıtımdan sonra `saglik_raporu.py --canli`).
+
+## Sıradaki kritik işler (öncelik sırasıyla)
+
+1. **İlk gerçek ders koşusunda ölçüm:** `kosucu.py --olc` öncesi/sonrası gerçek token, denetçi günlüğü, `MEDS_HAT_YAMA` / `MEDS_HAT_DAR_DENETIM` bayraklarının açılması.
+2. **Deste parçalı arka ucu varsayılan yapma** (`VERI_MODELI.md` Faz 3, 6 adım) — deste düzenleme 1,7 sn → 4 ms; 85 MB monolit + 85 MB türev teke iner.
+3. **Sunucu RAG metnini UTF-8 tampon olarak tutma** (≈77 MB) ve çıkmışta sunulmayan alanları tembel yükleme (≈25 MB).
+4. **`kazanimlar-lite` (3,4 MB, 6 kurul tek parça) kurul başına** ve ana CSS (675 KB ham) için kabuk bileşenlerinin tembelleştirilmesi (`App.tsx` yapısal bölme).
+5. **Sıkıştırmasız `/api/past-exams` (46 MB, canlıda 12–16 sn):** sunucu her zaman sıkıştırılmış gövde göndersin ya da betik istemcileri `Accept-Encoding` göndersin.
+6. **Ses:** 10 cümlelik dinleme sınaması → 16 bozuk klip + okunuşu değişen 16.969 klibin GPU'da yeniden üretimi (kullanıcı komutu); ASR ile geri-döküm denetimi.
+7. **V8 tavanı (kullanıcı kararı):** yerelde `--max-old-space-size=1536`, Oracle'da 2560 → 2048.
+

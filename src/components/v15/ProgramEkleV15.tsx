@@ -6,6 +6,8 @@ import { programYukle } from '../../services/programVeri';
 import { kisiselEkle, kisiselSil, useKisiselProgram } from '../../services/kisiselProgram';
 import { saatYaz, tarihYaz, useBolge } from '../../services/bolgeTercih';
 import { useV15Baslik } from './baslik';
+// kp15-/te15- sınıfları kronometre.css'te; kronometre artık tembel yüklendiği için stil burada da içe aktarılır.
+import '../../styles/v15/kronometre.css';
 import '../../styles/v15/kisisel.css';
 
 /**

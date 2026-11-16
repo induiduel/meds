@@ -35,6 +35,8 @@ import { loadDeepSeekContributions } from './deepseekDataService.ts';
 import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
 import { KIND_LABEL, factPlain, normalizeDisease, sectionTexts, sectionTitle } from './diseaseModel.ts';
 import { desteleriOku } from './desteDeposu.ts';
+import { bellekKaydet } from './telemetri.ts';
+import { dizgiHavuzu } from './dizgiIcle.ts';
 import type { DiseaseSectionId } from '../types/disease';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -188,21 +190,29 @@ let memoryChunks: Map<string, RagChunk> = new Map();
 // Sıkıştırılmış ters dizin: terim -> (belge no, terim sıklığı) tipli dizileri. Eski iç içe
 // Map<terim, Map<parçaId, tf>> 73k parçada ~1 GB tutuyor, yeniden kurulumda iki kopya bir arada
 // 2 GB yığın tavanını aşıp sunucuyu çökertiyordu (2026-10-13). Belge no -> parça kimliği docIds'te.
-type Postings = { docs: Int32Array; tfs: Uint16Array };
-let invertedIndex: Map<string, Postings> = new Map();
+// Bellek (2026-11-16): terim başına iki ayrı tipli dizi (~240k terim × 2 ArrayBuffer nesnesi) yığında ~150 MB
+// nesne başlığı tutuyordu. Artık tüm postingler tek Int32Array/Uint16Array içinde ardışık; terim → sıra no,
+// sıra no → [termStart[i], termStart[i+1]) aralığı. İçerik ve sıra aynı, BM25 puanı değişmez.
+let termIndex: Map<string, number> = new Map();
+let termStart: Uint32Array = new Uint32Array(1);
+let postDocs: Int32Array = new Int32Array(0);
+let postTfs: Uint16Array = new Uint16Array(0);
 let docIds: string[] = [];
 let docLens: Uint32Array = new Uint32Array(0);
 // Dizin kurulduktan sonra tek tek eklenen parçalar (AI etkileşimleri); bir sonraki kurulumda ana dizine geçer
 let pendingIndex: Map<string, Map<string, number>> = new Map();
 let pendingLengths: Map<string, number> = new Map();
 let fuzzyVocab = new FastFuzzyVocab();
+// Telemetri: yükleme anında hesaplanan kaba bayt tahmini (içerik UTF-16 ×2 + kayıt başı ~400 B)
+let parcaBaytTahmini = 0;
 let avgDocLength = 110;
 
 function termDf(t: string): number {
-  return (invertedIndex.get(t)?.docs.length || 0) + (pendingIndex.get(t)?.size || 0);
+  const i = termIndex.get(t);
+  return (i === undefined ? 0 : termStart[i + 1] - termStart[i]) + (pendingIndex.get(t)?.size || 0);
 }
 function hasTerm(t: string): boolean {
-  return invertedIndex.has(t) || pendingIndex.has(t);
+  return termIndex.has(t) || pendingIndex.has(t);
 }
 let isInitialized = false;
 let isIndexingInProgress = false;
@@ -243,9 +253,18 @@ async function loadLocalChunksFromFile(): Promise<void> {
     if (bicim === 'json') console.log('[LocalRagEngine] Eski local_rag_chunks.json okundu (geçiş); ilk kayıtta .jsonl yazılacak.');
     if (bozukSatir) console.warn(`[LocalRagEngine] ${bozukSatir} bozuk parça satırı atlandı.`);
     memoryChunks.clear();
+    // Bellek (2026-11-16): tekrarlı kısa dizgiler (tür, kurul, branş, tarih, metadata değerleri) tek kopyaya
+    // indirilir (ölçüm: ~30 MB). Değerler aynı dizgi olduğundan kayıt/yanıt baytları değişmez; havuz sonra bırakılır.
+    const { icle: ic, birak } = dizgiHavuzu();
+    const IC_ALANLAR = ['documentType', 'committeeId', 'discipline', 'createdAt', 'updatedAt', 'documentId', 'title'] as const;
     for (const chunk of list) {
+      for (const k of IC_ALANLAR) if (typeof chunk[k] === 'string') chunk[k] = ic(chunk[k]);
+      if (chunk.metadata) ic(chunk.metadata);
       memoryChunks.set(chunk.id, chunk);
     }
+    birak();
+    parcaBaytTahmini = 0;
+    for (const chunk of memoryChunks.values()) parcaBaytTahmini += (chunk.content?.length || 0) * 2 + 400;
 
     // Also merge real-time AI interactions from ai_interactions.json
     try {
@@ -357,15 +376,21 @@ async function rebuildInvertedIndex(): Promise<void> {
     if (!seen.has(chunk.id)) { seen.add(chunk.id); addDoc(chunk); }
   }
 
-  // Tipli dizilere dönüştür; dönüştürülen düz dizi hemen bırakılır (tepe bellek düşük kalır)
-  const nextIndex: Map<string, Postings> = new Map();
+  // Paketli tipli dizilere dönüştür; dönüştürülen düz dizi hemen bırakılır (tepe bellek düşük kalır)
+  let toplam = 0;
+  for (const arr of build.values()) toplam += arr.length >> 1;
+  const nextIndex: Map<string, number> = new Map();
+  const nextStart = new Uint32Array(build.size + 1);
+  const nextDocs = new Int32Array(toplam);
+  const nextTfs = new Uint16Array(toplam);
   const nextVocab = new FastFuzzyVocab();
+  let ti = 0; let pos = 0;
   for (const [t, arr] of build) {
     const n = arr.length >> 1;
-    const docs = new Int32Array(n);
-    const tfs = new Uint16Array(n);
-    for (let k = 0, m = 0; k < n; k++, m += 2) { docs[k] = arr[m]; tfs[k] = Math.min(arr[m + 1], 65535); }
-    nextIndex.set(t, { docs, tfs });
+    nextStart[ti] = pos;
+    for (let k = 0, m = 0; k < n; k++, m += 2) { nextDocs[pos + k] = arr[m]; nextTfs[pos + k] = Math.min(arr[m + 1], 65535); }
+    pos += n;
+    nextIndex.set(t, ti++);
     build.delete(t);
     if (!t.endsWith('*') && t.length >= 4) nextVocab.add(t);
     await slice();
@@ -374,7 +399,11 @@ async function rebuildInvertedIndex(): Promise<void> {
   let totalDocLen = 0;
   for (const l of lens) totalDocLen += l;
 
-  invertedIndex = nextIndex;
+  nextStart[ti] = pos;
+  termIndex = nextIndex;
+  termStart = nextStart;
+  postDocs = nextDocs;
+  postTfs = nextTfs;
   docIds = ids;
   docLens = Uint32Array.from(lens);
   // Kurulumdan sonra eklenenler bekleyen dizinde kalır; kurulumda olanlar oradan çıkar
@@ -418,7 +447,7 @@ function indexChunkTokens(chunk: RagChunk): void {
     let posting = pendingIndex.get(t);
     if (!posting) { posting = new Map(); pendingIndex.set(t, posting); }
     posting.set(chunk.id, f);
-    if (!t.endsWith('*') && t.length >= 4 && !invertedIndex.has(t)) fuzzyVocab.add(t);
+    if (!t.endsWith('*') && t.length >= 4 && !termIndex.has(t)) fuzzyVocab.add(t);
   }
   pendingLengths.set(chunk.id, len);
 }
@@ -1630,6 +1659,15 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
   }
 }
 
+// Bellek dökümü kayıtları (telemetri.ts): tahminler tutulan sayaçlardan, her çağrıda tarama yok
+bellekKaydet('rag.parcalar', () => ({ kayit: memoryChunks.size, bayt: parcaBaytTahmini || memoryChunks.size * 2400 }));
+bellekKaydet('rag.bm25', () => ({
+  kayit: termIndex.size,
+  // tipli diziler + terim anahtarları (~ortalama 10 karakter + Map girdisi ~60 B) + belge kimlikleri
+  bayt: postDocs.byteLength + postTfs.byteLength + termStart.byteLength + docLens.byteLength + termIndex.size * 90 + docIds.length * 60
+    + pendingLengths.size * 200,
+}));
+
 export function getChunkCountsByType(): Record<string, number> {
   const counts: Record<string, number> = {};
   for (const chunk of memoryChunks.values()) {
@@ -1797,10 +1835,10 @@ export async function searchLocalRag(
       }
       set.add(base);
     };
-    const postings = invertedIndex.get(token);
-    if (postings) {
-      const { docs, tfs } = postings;
-      for (let k = 0; k < docs.length; k++) add(ids[docs[k]], tfs[k], lens[docs[k]] || avgdl);
+    const ti = termIndex.get(token);
+    if (ti !== undefined) {
+      const docs = postDocs; const tfs = postTfs;
+      for (let k = termStart[ti], son = termStart[ti + 1]; k < son; k++) add(ids[docs[k]], tfs[k], lens[docs[k]] || avgdl);
     }
     const pending = pendingIndex.get(token);
     if (pending) for (const [chunkId, tf] of pending) add(chunkId, tf, pendingLengths.get(chunkId) || avgdl);

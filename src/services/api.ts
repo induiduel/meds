@@ -11,14 +11,9 @@ import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
 import { attachModeratorToken, isModeratorMode } from './moderatorSession';
 import { defaultApiBaseForThisHost, panelApiBase, PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';
 import { clientCache } from './clientCache';
-import {
-  clusterDraftsForCommittee,
-  mergeDrafts,
-  unmergeQuestion,
-  findRealtimeMatchingDraft,
-  ClusterAnalysisSummary,
-  ClusterTuning
-} from './draftClusteringService';
+// Taslak kümeleme motoru (~22 KB gzip öncesi) yalnız katkı/birleştirme anında gerekir: açılış paketine girmesin
+// diye dinamik içe aktarılır (2026-11-16).
+const kumeleme = () => import('./draftClusteringService');
 
 export const STORAGE_KEY = 'medsoru_db_data_v1';
 const API_BASE_URL_KEY = 'medsoru_custom_api_url';
@@ -760,6 +755,7 @@ export const ApiService = {
 
     if (isUnassigned) {
       // Akıllı Taslak Eşleme: Var olan sorular arasında yüksek uyum (%82+) var mı kontrol et
+      const { findRealtimeMatchingDraft } = await kumeleme();
       const realtimeMatch = findRealtimeMatchingDraft(
         {
           committeeId: data.committeeId,
@@ -1688,6 +1684,7 @@ export const ApiService = {
     const satellites = db.questions.filter((q) => satelliteIds.includes(q.id));
     if (satellites.length === 0) throw new Error('Birleştirilecek uydu taslak bulunamadı.');
 
+    const { mergeDrafts } = await kumeleme();
     const { consolidated, mergedIds } = mergeDrafts(anchor, satellites, {
       name: adminName,
       email: adminEmail,

@@ -2,6 +2,8 @@ import { Globe } from 'lucide-react';
 import { bolgeYaz, saatDilimi, saatYaz, tarihYaz, useBolge, type BolgeTercih } from '../../services/bolgeTercih';
 import { bugun } from '../../services/kurulTakvimi';
 import { useV15Baslik } from './baslik';
+// kp15-/te15- sınıfları kronometre.css'te; kronometre artık tembel yüklendiği için stil burada da içe aktarılır.
+import '../../styles/v15/kronometre.css';
 import '../../styles/v15/kisisel.css';
 
 /**

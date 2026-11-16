@@ -67,6 +67,11 @@ def main() -> int:
                 sik_n += 1
                 for issue in (sik_denetle(t or "", f"{qid}.{h}") or []):
                     hata.append(f"[sik_aciklama] {issue}")
+    # Boş/yarım iskelet (C7, iskelet.py) geçmesin: alt kapılar 0 soruda sessiz geçiyordu (ölçüm 2026-11-16, k2-28 iskeleti 0 HATA).
+    import iskelet as ISK
+    if not any(kz.get("sorular") for kz in d.get("kazanimlar", [])):
+        hata.append("[iskelet] hiç soru yok (boş iskelet)")
+    hata += [f"[iskelet] {x}" for x in ISK.denetle(d)]
 
     for x in hata[:120]:
         print(x)

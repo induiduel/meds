@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { ArrowLeftRight, ClipboardList, Copy, Eye, FilePlus2, FileWarning, Library, RefreshCw, RotateCcw, Trash2, Wrench } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
@@ -6,7 +7,7 @@ import { NoteMarkdown } from '../ui/NoteMarkdown';
 import { ChipBar, EmptyState, Panel } from './consoleUi';
 import { Cikmis, Hastaliklar, Havuz, Sorular, Sozluk } from './ManageDersIsciSection';
 
-const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
+const LessonPlayer = guvenliLazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
 
 /**
  * Revize Ders İşçisi: yayındaki derslerin 2026-27 PDF'inden yeniden üretilmiş taslakları (cihazda, Claude Code oturumu).

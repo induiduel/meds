@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Coffee, Pause, Play, Square, Target, X } from 'lucide-react';
-import { sureYaz } from './KronometreV15';
+import { sureYaz } from './kronometreOlay';
 import '../../styles/v15/kronometre.css';
 
 /**
@@ -22,7 +22,7 @@ const SURELER = [25, 50, 90];
 const molaDk = (dk: number) => (dk >= 90 ? 15 : dk >= 50 ? 10 : 5);
 
 /** Odak artık kronometre panelinin sekmesi: tek yüzen sayaç (tasarım T/U, çift sayaç yok) */
-export const kapsulAc = () => window.dispatchEvent(new CustomEvent('medsoru:kronometre', { detail: 'odak' }));
+export { kapsulAc } from './kronometreOlay';
 /** Kronometre baloncuğunun okuduğu odak durumu */
 export const kapsulOku = () => { const d = oku(); const o = d.oturum; return o ? { kalan: Math.max(0, o.hedefDk * 60000 - gecen(o)), oran: Math.min(1, gecen(o) / (o.hedefDk * 60000)), calisiyor: o.calisiyor } : null; };
 export const KAPSUL_KEY = KEY;

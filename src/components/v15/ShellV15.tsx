@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { useSiteAyar } from '../../services/siteAyar';
 import { createPortal } from 'react-dom';
-import { CdYanKapsul } from '../canliDers/CdSesliEk';
+import { CdYanKapsul } from '../canliDers/CdYanKapsul';
 import {
   Bell,
   House,
@@ -38,7 +39,6 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import ArkaPlanGosterge from './ArkaPlanGosterge';
-import AsistanPanel from '../asistan/AsistanPanel';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { SearchPalette } from '../search/SearchPalette';
 import { Sheet } from '../ui/Sheet';
@@ -52,13 +52,21 @@ import { TOP_SLOT_ID } from '../v12/ShellV12';
 import { V15_SECTIONS, menuGrubuOf, menuGruplari, sectionOf, type V15Section } from './navV15';
 import { TumSayfalarV15, type Arac } from './TumSayfalarV15';
 import { useV15BaslikOku } from './baslik';
-import { kronometreAc } from './KronometreV15';
-import { kapsulAc } from './KapsulV15';
+import { kapsulAc, kronometreAc } from './kronometreOlay';
 import { Target } from 'lucide-react';
 import { IpadGeriHap, useIpadPencere } from '../shell/ipadPencere';
 import { MENU_SAYFALARI, geriGit, geriHedefe, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
 import '../../styles/v15/shell.css';
+
+// Tıp Asistanı gizli (yalnız medsor_asistan_goster=1): kapalıyken paneli ve stilini hiç indirme. Panel sabit konumlu
+// bir düğme (as15-fab) çizdiği için tembel yükleme düzen kayması yapmaz; fallback boş.
+const AsistanPanelTembel = guvenliLazy(() => import('../asistan/AsistanPanel'));
+const asistanGorunur = () => { try { return localStorage.getItem('medsor_asistan_goster') === '1'; } catch { return false; } };
+function AsistanPanel() {
+  if (!asistanGorunur()) return null;
+  return <React.Suspense fallback={null}><AsistanPanelTembel /></React.Suspense>;
+}
 
 /**
  * v15 kabuğu (tasarım sistemi v15 › Kabuk). Kesme noktaları: <600 alt sekme çubuğu, 600–1023 76 px ikonlu ray,

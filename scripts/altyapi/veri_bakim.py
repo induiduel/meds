@@ -56,11 +56,16 @@ KATALOG = "data/backups/catalog/"
 KATALOG_SAKLA = 2
 TAZE_SN = 48 * 3600
 
+# Ses artıkları (2026-11-16, H587 güncellemesi; kaynak: ses_ortak/ses_kapisi.py artik): yaşı > SES_ARTIK_GUN olanlar aday.
+#   - data/sesli_anlatim/**/.parca/** : ses birleştirme parçaları (birleşik MP3 yazıldıktan sonra artık)
+#   - kayıtsız sesli ders MP3'ü: data/sesli_anlatim/ses/<anahtar>/<id>.mp3, kayit.json[<anahtar>] içinde id yok
+SES_ARTIK_GUN = 14
+SES_PARCA_DESEN = "data/sesli_anlatim/**/.parca/**"
+SESLI_KAYIT = "data/sesli_anlatim/kayit.json"
 DENETLE_YEDEK_TAVAN = 300 * MB
 DENETLE_CIFT_ESIK = 5 * MB
 # src/data ↔ data aynı adlı, bayt bayt aynı >5 MB çiftler (2026-11-16). YALNIZ AZALIR: çift giderilince sil.
-CIFT_IZINLI = {"pastQuestions.json", "lectureSummariesCatalog.json",
-               "notebooklm_contributions.json"}  # 3. kalem ilk taramada bulundu (5,2 MB)
+CIFT_IZINLI = {"notebooklm_contributions.json"}  # yalnız azalır; pastQuestions + lectureSummariesCatalog kopyaları 2026-11-16 arşivlendi
 
 ZSTD = shutil.which("zstd")
 UZANTI = ".zst" if ZSTD else ".xz"
@@ -150,13 +155,34 @@ def referanslar(anahtarlar: set[str]) -> set[str]:
         os.unlink(t.name)
 
 
+@__import__("functools").lru_cache(maxsize=1)
+def _sesli_kayitli() -> dict[str, set[str]]:
+    try:
+        k = json.loads((MEDS / SESLI_KAYIT).read_text(encoding="utf-8"))
+        return {a: {str(v.get("id")) for v in vs} for a, vs in k.items()}
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return {}  # kayıt okunamazsa kayıtsız tespiti YAPILMAZ (hepsi kayıtsız sanılmasın)
+
+
+def ses_artik_mi(g: str, mtime: float, simdi: float) -> bool:
+    """.parca/ artığı ya da kayıtsız sesli ders MP3'ü ve SES_ARTIK_GUN'den eski."""
+    if simdi - mtime < SES_ARTIK_GUN * 86400:
+        return False
+    if fnmatch.fnmatch(g, SES_PARCA_DESEN) and "/.parca/" in g:
+        return True
+    m = re.match(r"data/sesli_anlatim/ses/([^/]+)/([^/]+)\.mp3$", g)
+    kayit = _sesli_kayitli()
+    # anahtar kayıtta hiç yoksa klasördeki MP3'lerin hepsi kayıtsızdır (ses_kapisi.py _sesli ile aynı ölçüt)
+    return bool(m and kayit and m.group(2) not in kayit.get(m.group(1), set()))
+
+
 def adaylar() -> list[dict]:
     simdi = time.time()
     liste = []
     for k in KOKLER:
         for p in gezin(k):
             g = goreli(p)
-            if yedek_aday_mi(g):
+            if yedek_aday_mi(g) or ses_artik_mi(g, p.stat().st_mtime, simdi):
                 st = p.stat()
                 liste.append({"yol": g, "boyut": st.st_size, "taze": simdi - st.st_mtime < TAZE_SN,
                               "anahtar": arama_anahtari(g), "mtime": st.st_mtime})

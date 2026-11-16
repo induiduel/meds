@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { Check, ChevronLeft, History, Play, RotateCcw, WandSparkles } from 'lucide-react';
 import { icKonum, icUrl } from '../../siteHaritasi';
 import { navigateTo } from '../../router';
@@ -15,7 +16,7 @@ import '../../styles/soru-cozucu.css';
  * çözülür (&ders=<paket kodu>&coz=1; yanlışlar &coz=yanlis; &coz=oto: asistan beklemeden çözer — soruyu ve şıkları okur,
  * doğru şıkkı seçer, nedenini ve kısa notu anlatır, sonraki soruya geçer). Veri: ccVeri.ts.
  */
-const SoruCozucu = React.lazy(() => import('../spots/cozucu/SoruCozucu'));
+const SoruCozucu = guvenliLazy(() => import('../spots/cozucu/SoruCozucu'));
 
 const oku = () => {
   const sp = new URLSearchParams(icKonum().search);

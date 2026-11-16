@@ -88,6 +88,10 @@ feature. Run `npx tsx scripts/moduller/eval/retrieval-eval.mts` (and again with 
 It samples 300 past questions (fixed seed) and checks whether a simulated student query finds the
 same question in the top 5.
 
+**Baseline 2026-11-16 (hit@5, pool = questions the site actually shows; merged copies and quarantined records are excluded
+like in the index, H589): partial stem words 87%, suffix-changed words 60%, topic only 34% (100% same-topic).** Compare against
+these, not the 2026-10-03 figures below (measured before question merging and before the pool grew to 6.6k near-duplicates).
+
 Current tokenizer: Turkish case/character folding + full word + 5-char stem. Last results (hit@5):
 partial stem words 95%, suffix-changed words 91%, topic only 58% (98% same-topic; topics are shared
 by many questions, so exact match is not expected). Stem-only and word-only were both worse.

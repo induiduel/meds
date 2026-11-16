@@ -1,0 +1,8 @@
+/* Kabuk yan kapsülü (CdYanKapsul.tsx) */
+.cdy { position: relative; overflow: hidden; display: flex; align-items: center; gap: 8px; margin: 0 0 8px; padding: 8px; border-radius: 12px; background: var(--color-accent-soft); }
+.cdy-oyn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--color-accent); color: var(--color-on-accent); display: grid; place-items: center; cursor: pointer; }
+.cdy-oyn svg { width: 15px; height: 15px; }
+.cdy-t { flex: 1; min-width: 0; text-decoration: none; color: var(--color-ink); }
+.cdy-t small { display: block; font-size: 11px; color: var(--color-accent); }
+.cdy-t b { display: block; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cdy-bar { position: absolute; left: 0; bottom: 0; height: 2px; background: var(--color-accent); }

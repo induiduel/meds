@@ -4,6 +4,7 @@
  * bölüm seçimi, PDF görünümü ve dersin kendi metniyle canlı önizleme. Belge üretimi: canliDersDisaAktar + metinDisaAktar.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { createPortal } from 'react-dom';
 import { Check, Copy, Download, FileDown, Loader2, X } from 'lucide-react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
@@ -17,7 +18,7 @@ import type { SlaytBasliklari } from './cdSlaytBasliklari';
 import '../../styles/toplu-pdf.css';
 import '../../styles/cd-aktar-pencere.css';
 
-const PdfOnizleme = React.lazy(() => import('../ui/PdfOnizleme'));
+const PdfOnizleme = guvenliLazy(() => import('../ui/PdfOnizleme'));
 
 export const CD_BICIMLER: { id: AktarBicim; ad: string; alt: string }[] = [
   { id: 'pdf', ad: 'PDF', alt: 'Yazdırmaya hazır' },

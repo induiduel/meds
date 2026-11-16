@@ -9,7 +9,8 @@
  * Kurul seçimi ?kurul=N (yoksa içeriği olan en yeni kurul). İçerik: spVeri.ts.
  */
 import { icKonum, icUrl } from '../../siteHaritasi';
-import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
+import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft, BookOpenCheck, CheckCircle2, ChevronRight, CloudDownload, FileDown, Flag, Headphones, ListChecks, Loader2,
   PlayCircle, RotateCcw, Target, WifiOff,
@@ -33,7 +34,7 @@ import '../../styles/son-prova.css';
 import V15BaslikYaz from '../v15/V15BaslikYaz';
 import '../../styles/v15/kamp.css';
 
-const CanliDersDers = lazy(() => import('../canliDers/CanliDersDers'));
+const CanliDersDers = guvenliLazy(() => import('../canliDers/CanliDersDers'));
 
 type Yol =
   | { t: 'merkez' }

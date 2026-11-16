@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { BookmarkCheck, Check, ChevronRight, Clock3, Flag, Headphones, MessageSquare, NotebookPen, PenLine, Plus, RotateCcw, Star, Trophy, X } from 'lucide-react';
 import type { QuestionItem } from '../../types';
 import type { AppUser } from '../../services/auth';
@@ -12,8 +13,8 @@ import { computeContributorStats } from '../../utils/contributionScore';
 import { useSpotCozucuStats, fmtSureDk } from '../../services/spotCozucuIstatistik';
 import './stats.css';
 import { useAppearance } from '../../utils/appearance';
-const CalismaGrafikleriV15 = React.lazy(() => import('../v15/CalismaGrafikleriV15'));
-const IstatistikV15 = React.lazy(() => import('../v15/IstatistikV15'));
+const CalismaGrafikleriV15 = guvenliLazy(() => import('../v15/CalismaGrafikleriV15'));
+const IstatistikV15 = guvenliLazy(() => import('../v15/IstatistikV15'));
 import '../../styles/v12/secondary.css';
 
 /**

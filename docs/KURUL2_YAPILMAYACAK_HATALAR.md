@@ -422,3 +422,5 @@
 - **H586** · "Çözücü/asistan/Öğren seslerinde terim ve kısaltma okunuşu uygulanmıyor; 'engel' → 'Engıl'": okunuş 9 yerde + elle anahtar listesi → `ses_ortak/ses_metin` → hatalar/ses.md
 - **H587** · "16 Öğren klibi 14–22 dk sürüyor; bozuk ses yayına çıkabiliyor": ses kalite kapısı yoktu → `ses_ortak/ses_kapisi.py` → hatalar/ses.md
 - **H585** · "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor": kanca çalışma ağacını denetliyordu → hatalar/dagitim_icerik_katmani.md
+- **H588** · "Dağıtımdan sonra tembel ekran 'e._result.default' / React #306 ile çöküyor": preloadError preventDefault → import boş çözülüyor → `guvenliLazy` → hatalar/on_yuz_sayfa_denetimi.md
+- **H589** · "Arama ölçümü %95'ten %75'e düştü sanıldı": değerlendirme örneklemi dizinde olmayan gizli kopyaları içeriyordu → hatalar/veri_cikmis.md

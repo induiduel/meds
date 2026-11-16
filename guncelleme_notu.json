@@ -1,9 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 765,
-  "baslik": "Commit kapısı iyileştirmesi",
+  "onem": 766,
+  "baslik": "Daha hızlı açılış ve daha kararlı ekranlar",
   "maddeler": [
-    "Geliştirme altyapısı iyileştirildi; site davranışı değişmedi."
+    "Kararlılık: güncelleme sonrası bazı ekranların açılmaması sorunu giderildi",
+    "Hız: site ilk açılışta daha az veri indiriyor; Kazanımlar ekranında sorular yalnız açtığınız konu için iniyor",
+    "Altyapı: sunucu daha az bellek kullanıyor"
   ],
   "eklenen": [],
   "degisen": [],

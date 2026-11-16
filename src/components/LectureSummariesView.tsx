@@ -1,4 +1,5 @@
 import { icKonum, icUrl } from '../siteHaritasi';
+import { guvenliLazy } from '../utils/guvenliLazy';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { pathFor } from '../router';
 import { Check, ChevronRight, Download, Search } from 'lucide-react';
@@ -162,7 +163,7 @@ const Row: React.FC<{ s: SummaryMeta; no: number; mark?: ReadingMark; showKurul:
   </li>
 );
 
-const OzetlerV15 = React.lazy(() => import('./v15/OzetlerV15'));
+const OzetlerV15 = guvenliLazy(() => import('./v15/OzetlerV15'));
 
 export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
   const [kurul, setKurul] = useState<number | 'all'>('all');

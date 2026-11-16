@@ -8,6 +8,7 @@
  * arka plan işleri: services/arkaPlanIsleri.ts (/arka-plan). Stil: styles/v15/cevrimdisi15.css (.cv15-*).
  */
 import React, { useEffect, useMemo, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import {
   AlertTriangle, CloudOff, Loader2, RefreshCw, Signal, Sparkles, VolumeX, Wifi, CloudDownload, Download,
 } from 'lucide-react';
@@ -27,7 +28,7 @@ import { OnayliSil } from './cvOrtak';
 import '../../styles/cevrimdisi.css';
 import '../../styles/v15/cevrimdisi15.css';
 
-const MedspakOkuyucu = React.lazy(() => import('./MedspakOkuyucu'));
+const MedspakOkuyucu = guvenliLazy(() => import('./MedspakOkuyucu'));
 
 /** Eski içe aktarımlar için (boyut biçimi tek kaynak: dersBirimleri) */
 export { boyutYaz };

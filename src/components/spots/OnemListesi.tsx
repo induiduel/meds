@@ -1,4 +1,5 @@
 import { icKonum, icUrl } from '../../siteHaritasi';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Check, ChevronDown, ChevronLeft, ChevronRight, ChevronsDownUp, ChevronsUpDown, Clock, Download, Eye, EyeOff, HelpCircle,
@@ -27,8 +28,8 @@ import { useV15Baslik } from '../v15/baslik';
 import { useAppearance } from '../../utils/appearance';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
-const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
-const PatolojiAsistan = React.lazy(() => import('./asistan/PatolojiAsistan'));
+const OnemPdfPenceresi = guvenliLazy(() => import('./onem/OnemPdfPenceresi'));
+const PatolojiAsistan = guvenliLazy(() => import('./asistan/PatolojiAsistan'));
 
 /**
  * Sınav için en önemliler (100 puan, 10'ar puanlık partlar) — branş geneli (patoloji, enfeksiyon, üroloji). Kaynak: branşın Kurul 1

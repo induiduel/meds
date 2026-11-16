@@ -1,4 +1,5 @@
-import React, { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import {
   ShieldCheck,
   Inbox,
@@ -73,7 +74,7 @@ import { ManageStudyProgress } from './ManageStudyProgress';
 import { ManageGorevTakip } from './ManageGorevTakip';
 import { ManageDatabaseV14 } from '../v14/sections/ManageDatabaseV14';
 import { ManageShortcuts } from './ManageShortcuts';
-const ManageSesliAnlatimSection = lazy(() => import('./ManageSesliAnlatimSection'));
+const ManageSesliAnlatimSection = guvenliLazy(() => import('./ManageSesliAnlatimSection'));
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
 import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../../utils/appearance';

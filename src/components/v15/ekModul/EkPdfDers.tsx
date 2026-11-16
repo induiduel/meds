@@ -1,11 +1,12 @@
-import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../../utils/guvenliLazy';
 import { ExternalLink, Maximize2, Minus, Plus, Scan, Volume2 } from 'lucide-react';
 import type { PdfMarks } from '../../learn/pdf/PdfDocView';
 import { gorselUrl, pdfKlip, type EkKonu, type EkModul } from './ekVeri';
 import { EkMd, type Sira } from './ekOrtak';
 
-const PdfDocView = lazy(() => import('../../learn/pdf/PdfDocView'));
-const EkPdfBolum = lazy(() => import('./EkPdfBolum').then((x) => ({ default: x.EkPdfBolum })));
+const PdfDocView = guvenliLazy(() => import('../../learn/pdf/PdfDocView'));
+const EkPdfBolum = guvenliLazy(() => import('./EkPdfBolum').then((x) => ({ default: x.EkPdfBolum })));
 const GORUNUM_KEY = 'medsoru_ek_modul_pdf_gorunum';
 
 /**

@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { ArrowUpRight, ChevronDown, LayoutGrid, List as ListIcon, Loader2, Search, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import type { LectureNote } from '../../types';
@@ -13,7 +14,7 @@ import { HitDetail, HitPreview } from './HitView';
 
 const PAGE = 20;
 
-const SlideReaderModal = React.lazy(() => import('../SlideReaderModal').then((m) => ({ default: m.SlideReaderModal || (m as any).default })));
+const SlideReaderModal = guvenliLazy(() => import('../SlideReaderModal').then((m) => ({ default: m.SlideReaderModal || (m as any).default })));
 
 /** Sonucun açılacağı yer; null ise yalnızca sayfa içinde okunur */
 export const SOURCE_ACTION: Partial<Record<SearchDocType, string>> = {

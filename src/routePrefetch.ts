@@ -7,6 +7,7 @@ import type { AppRoute } from './router';
 import { getNetState } from './services/net';
 
 const LOADERS: Partial<Record<AppRoute, () => Promise<unknown>>> = {
+  questions: () => import('./components/pool/PoolView'),
   learn: () => import('./components/learn/InteractiveDeckView'),
   flashcards: () => import('./components/flashcards/FlashcardsView'),
   past_exams: () => import('./components/PastExamsView'),
@@ -57,9 +58,10 @@ export function prefetchIdle() {
   // orada yalnız en sık iki sayfa önden yüklenir.
   const lowEnd = window.matchMedia?.('(pointer: coarse)').matches || ((navigator as any).deviceMemory ?? 8) <= 4;
   const order: AppRoute[] = lowEnd
-    ? ['past_exams', 'learn']
+    ? ['past_exams', 'learn', 'questions']
     : [
         'past_exams',
+        'questions',
         'learn',
         'diseases',
         'glossary',

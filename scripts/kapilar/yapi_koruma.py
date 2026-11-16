@@ -63,6 +63,16 @@ D1_IZINLI_DOSYA = {  # destenin tek okuma/yazma noktaları ve katman altyapısı
     "scripts/altyapi/vite/splitLearningDecks.ts",
     "scripts/kapilar/yapi_koruma.py",  # bu kapı (dizeyi desen olarak taşır)
 }
+# Parçalı deste dizini (VERI_MODELI Faz 3): `desteler/_sira.json` + deste başına dosya. Ona da YALNIZ depo
+# modülleri ve dönüştürücü/sınama erişir; bu işaretleri anan başka kod D1 HATA'sıdır.
+D1_PARCA_DESEN = re.compile(r"MEDS_DESTE_PARCA_DIZIN|deste_parcali|desteler/_sira\.json")
+D1_PARCA_IZINLI = {
+    "scripts/deste_deposu.py",
+    "src/services/desteDeposu.ts",
+    "scripts/deste_bol.py",
+    "scripts/sinama_deste_parcali.py",
+    "scripts/kapilar/yapi_koruma.py",
+}
 # (dosya, satırda geçen parça) → gerekçe. Satır numarası kaymasına dayanıklı.
 D1_IZINLI_SATIR = {
     ("scripts/uretim/ders_isci/yayinla.py", '"src/data/interactive_learning_decks.json", "src/data/summaries/kurul1.json"'):
@@ -271,6 +281,10 @@ def d1_d2_d5(dosyalar: list[Path]) -> dict:
         except OSError:
             continue
         has_deste = DESTE in metin
+        if r not in D1_PARCA_IZINLI and D1_PARCA_DESEN.search(metin):
+            for i, l in enumerate(metin.splitlines(), 1):
+                if D1_PARCA_DESEN.search(l):
+                    bul("D1", "HATA", r, i, "parçalı deste dizini doğrudan anılıyor — scripts/deste_deposu.py / src/services/desteDeposu.ts kullan")
         has_d2 = p.suffix == ".py" and D2_DESEN.search(metin)
         has_d5 = (r.startswith("src/services/") or r == "server.ts") and D5_YAZ.search(metin)
         if not (has_deste or has_d2 or has_d5):

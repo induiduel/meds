@@ -11,6 +11,7 @@
  */
 import type express from 'express';
 import { monitorEventLoopDelay } from 'perf_hooks';
+import v8 from 'v8';
 import { veriOlayi, gunlugeEkle } from './veriGunlugu.ts';
 
 export const KOVALAR = [10, 25, 50, 100, 250, 500, 1000, 2500] as const; // son kova: > 2500
@@ -101,6 +102,51 @@ export function telemetriAraKatmani(): express.RequestHandler {
   };
 }
 
+/* ---------------- bellek dökümü ---------------- */
+
+/**
+ * Büyük önbellek sahipleri kendini kaydeder: `bellekKaydet('ad', () => ({ kayit, bayt }))`.
+ * Tahmin işlevi UCUZ olmalı: yükleme/yazma anında hesaplanmış sayaçları döndürür; her çağrıda dev
+ * `JSON.stringify` ya da tam tarama YOK. Bayt = kaba tahmin (dizgi uzunluğu ×2 ya da son serileştirme boyutu).
+ */
+export type BellekTahmini = { kayit: number; bayt: number; not?: string };
+const bellekKalemleri = new Map<string, () => BellekTahmini | null>();
+export function bellekKaydet(ad: string, tahmin: () => BellekTahmini | null): void {
+  bellekKalemleri.set(ad, tahmin);
+}
+
+/** Kayıtlı kalemler, bayta göre büyükten küçüğe (MB, 1 ondalık). */
+export function bellekKalemleriListesi(): Array<{ ad: string; kayit: number; mb: number; not?: string }> {
+  const out: Array<{ ad: string; kayit: number; mb: number; not?: string }> = [];
+  for (const [ad, fn] of bellekKalemleri) {
+    try {
+      const t = fn();
+      if (!t) continue;
+      out.push({ ad, kayit: t.kayit, mb: Math.round((t.bayt / 1048576) * 10) / 10, ...(t.not ? { not: t.not } : {}) });
+    } catch { /* tahmin hatası dökümü bozmasın */ }
+  }
+  out.sort((a, b) => b.mb - a.mb);
+  return out;
+}
+
+/** GET /api/admin/telemetri?bellek=1: V8 yığın + alanlar + süreç belleği + kayıtlı yapılar. */
+export function bellekDokumu(): any {
+  const mb = (n: number) => Math.round((n / 1048576) * 10) / 10;
+  const h = v8.getHeapStatistics();
+  const m = process.memoryUsage();
+  return {
+    zaman: new Date().toISOString(),
+    surec: { rss: mb(m.rss), heapTotal: mb(m.heapTotal), heapUsed: mb(m.heapUsed), external: mb(m.external), arrayBuffers: mb(m.arrayBuffers) },
+    yigin: {
+      toplam: mb(h.total_heap_size), kullanilan: mb(h.used_heap_size), tavan: mb(h.heap_size_limit),
+      fizikselToplam: mb(h.total_physical_size), malloc: mb(h.malloced_memory), dahiliBaglam: h.number_of_native_contexts,
+      ayrikBaglam: h.number_of_detached_contexts,
+    },
+    alanlar: v8.getHeapSpaceStatistics().map((s) => ({ ad: s.space_name, boyut: mb(s.space_size), kullanilan: mb(s.space_used_size) })),
+    kalemler: bellekKalemleriListesi(),
+  };
+}
+
 let dongu: ReturnType<typeof monitorEventLoopDelay> | null = null;
 let ornekZamanlayici: ReturnType<typeof setInterval> | null = null;
 
@@ -116,6 +162,7 @@ export function bellekOrnegiAl(sseIstemci: () => number): any {
     sseIstemci: (() => { try { return sseIstemci(); } catch { return -1; } })(),
     olayDongusuGecikmeMs: dongu ? Math.round((dongu.percentile(99) / 1e6) * 10) / 10 : null,
     olayDongusuOrtMs: dongu ? Math.round((dongu.mean / 1e6) * 10) / 10 : null,
+    enBuyuk5: bellekKalemleriListesi().slice(0, 5).map((k) => `${k.ad} ${k.mb} MB`),
   };
   if (dongu) dongu.reset();
   bellekOrnekleri.push(ornek);

@@ -4,11 +4,19 @@ import 'dotenv/config';
 import fs from 'fs';
 import { searchLocalRag } from '../../../src/services/localRagEngine.ts';
 import { semanticSearch, fuseRRF } from '../../../src/services/vectorSearch.ts';
+import { mergedInto } from '../../../src/services/questionMerge.ts';
 // HYBRID=1: BM25 + e5 vektör (yerel Supabase) RRF birleşimi ölçülür
 let seed = 42; const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
 const strip = (s: string) => s.replace(/[ıİ]/g, 'i').replace(/[çÇ]/g, 'c').replace(/[ğĞ]/g, 'g').replace(/[öÖ]/g, 'o').replace(/[şŞ]/g, 's').replace(/[üÜ]/g, 'u');
 const all = JSON.parse(fs.readFileSync('data/pastQuestions.json', 'utf-8'));
-const pool = all.filter((q: any) => (q.stem || q.reconstruction?.stem || '').length > 60);
+// H589: örneklem dizinle aynı süzgeçten geçer (localRagEngine: birleştirmede gizlenen kopya ve karantina DİZİNLENMEZ);
+// eskiden gizli kopyalar da örnekleniyor, dizinde olmadıkları için hit@5 yapay olarak düşük çıkıyordu.
+const sitede = (q: any) => {
+  const cs = q.checkSolve?.status;
+  if (cs === 'karantina' || cs === 'kaldirildi' || (!cs && (q.status === 'quarantined' || q.isQuarantined))) return false;
+  return !(q.id && mergedInto(String(q.id)));
+};
+const pool = all.filter((q: any) => sitede(q) && (q.stem || q.reconstruction?.stem || '').length > 60);
 const picks: any[] = []; while (picks.length < 300) { const q = pool[Math.floor(rnd() * pool.length)]; if (!picks.includes(q)) picks.push(q); }
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, ' ').slice(0, 80);
 const variants: Record<string, (q: any) => string> = {

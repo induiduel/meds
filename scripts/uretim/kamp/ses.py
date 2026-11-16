@@ -17,14 +17,17 @@ import hashlib, json, sys
 from pathlib import Path
 
 MEDS = _kok.MEDS
-sys.path.insert(0, str(MEDS / "scripts/uretim/sesli_anlatim")); sys.path.insert(0, str(MEDS / "scripts/uretim/ogren_ses"))
+sys.path.insert(0, str(MEDS / "scripts/uretim/sesli_anlatim")); sys.path.insert(0, str(MEDS / "scripts/uretim/ses_ortak"))
 import ema_isci as E  # noqa: E402
-import ogren_ses_uret as O  # noqa: E402
+import ses_klip as SK  # noqa: E402  (2026-11-16: E.uzun_kisaltma_ayarla genel durumu yerine ortak klip + okunuş)
+import ses_metin  # noqa: E402
+
+KBPS = 48  # eski ogren_ses_uret.KBPS (dosya biçimi aynı kalır)
 
 
 def main():
     yol = Path(sys.argv[1]); k = json.loads(yol.read_text())
-    E.uzun_kisaltma_ayarla(f"k{k['kurul']}-kamp")
+    okunus = ses_metin.okuyucu(ders=f"k{k['kurul']}-kamp")  # yol veriden: k<N>-kamp → kurul N
     kok = Path(sys.argv[sys.argv.index("--ses-kok") + 1]) if "--ses-kok" in sys.argv else MEDS / "data/kamp/ses"
     hedef = kok / f"k{k['kurul']}" / k["brans"]; hedef.mkdir(parents=True, exist_ok=True)
     isler = [(a["id"], [a["baslik"] + ".", a["metin"]]) for a in k["anlatim"]]
@@ -38,8 +41,12 @@ def main():
         if ses.get(anahtar, "").endswith(h) and dosya.exists():
             continue
         tts = tts or E.model_yukle()
-        mp3, _, _, _ = O.seslendir(tts, cumleler)
-        dosya.write_bytes(mp3); ses[anahtar] = f"{anahtar}.mp3?v={h}"; n += 1
+        try:
+            mp3, _, _, _ = SK.seslendir(tts, cumleler, okunus=okunus, kbps=KBPS, E=E)
+        except SK.BozukKlip as e:
+            SK.bozuk_kaydet(klasor=str(hedef), klip=anahtar, hata=str(e), karakter=sum(map(len, cumleler)))
+            print(f"HATA {anahtar}: {e} — klip yazılmadı"); continue
+        SK.atomik_yaz(dosya, mp3); ses[anahtar] = f"{anahtar}.mp3?v={h}"; n += 1
     k["ses"] = ses
     yol.write_text(json.dumps(k, ensure_ascii=False, indent=1))
     print(f"kamp sesi: {n} yeni klip · toplam {len(ses)}")

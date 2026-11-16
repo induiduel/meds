@@ -19,9 +19,12 @@ MEDS = _kok.MEDS
 if subprocess.run([sys.executable, str(MEDS / 'scripts/uretim/kmb/dogrula.py'), *sys.argv[1:]]).returncode:
     sys.exit('dogrula.py HATA verdi — ses üretilmedi')
 sys.path.insert(0, str(MEDS / 'scripts/uretim/patoloji_cozucu'))
-import cozucu_ses as C  # noqa: E402  (EMA modeli, seslendir, klasör önbelleği)
+import cozucu_ses as C  # noqa: E402  (EMA modeli, SURUM/KBPS, cumlele/nokta)
+sys.path.insert(0, str(MEDS / 'scripts/uretim/ses_ortak'))
+import ses_klip as SK  # noqa: E402  (2026-11-16: C.CIKTI genel durumunu ezmek yerine ortak klasör üretimi)
+import ses_metin  # noqa: E402
 
-C.CIKTI = MEDS / 'data/kmb_cozucu/ses'
+CIKTI = MEDS / 'data/kmb_cozucu/ses'
 VERI = MEDS / 'src/data/kmb'
 OKUNUS = [(r'(\d+)\s*[–-]\s*(\d+)\s*mL', r'\1 ile \2 mililitre'), (r'\bmL\b', 'mililitre'), (r'(\d+)\s*cm\b', r'\1 santimetre'),
           (r'(\d+)\s*[–-]\s*(\d+)\s*dakika', r'\1 ile \2 dakika'), (r'\bFr\b', 'French'), (r'→', ', '), (r'≠', ' değildir, '),
@@ -65,8 +68,10 @@ def main(kodlar):
     m = C.Model()
     for kod in kodlar:
         d = json.loads((VERI / f'{kod}.json').read_text(encoding='utf-8'))
-        C.klasor(m, kod, klipler(d))
-        kayit = json.loads((C.CIKTI / kod / 'kayit.json').read_text(encoding='utf-8'))
+        ok = ses_metin.okuyucu(yol='uzun', modul='kmb_cozucu')  # çözücü klipleri tasarım gereği uzun yol (eski C.klasor ile aynı)
+        SK.klasor(CIKTI / kod, klipler(d), surum=f'{C.SURUM}|{C.E.HIZ}',
+                  uret=lambda c: SK.seslendir(m(), c, okunus=ok, kbps=C.KBPS, E=C.E), log=C.E.log)
+        kayit = json.loads((CIKTI / kod / 'kayit.json').read_text(encoding='utf-8'))
         (VERI / f'ses_{kod}.json').write_text(json.dumps({k: {'h': v['h'], 'sure': v['sure'], 'zaman': v['zaman']}
                                                           for k, v in kayit.items()}, ensure_ascii=False) + '\n', encoding='utf-8')
 

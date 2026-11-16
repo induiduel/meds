@@ -3,7 +3,8 @@
  * sunucu yoksa Drive önizlemesi, o da yoksa kullanıcının kendi seçtiği dosya. Adımın kaynak sayfaları vurgulanır
  * ve adım değişince oraya kaydırılır. Deste → PDF eşlemesi: services/deckPdfService.ts.
  */
-import React, { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import {
   ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Columns2, Download, ExternalLink, FileText, FileX, MapPin, Maximize, Maximize2, Minimize, Moon, MoreHorizontal,
   CloudDownload, CloudOff, MoveHorizontal, MoveVertical, PanelLeft, RotateCw, Search, Upload, ZoomIn, ZoomOut, X,
@@ -20,7 +21,7 @@ import { pdfAdresOku, pdfAdresYaz } from '../../utils/pdfAdres';
 import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
 
-const PdfDocView = lazy(() => import('./pdf/PdfDocView'));
+const PdfDocView = guvenliLazy(() => import('./pdf/PdfDocView'));
 type SearchState = { hits: import('./pdf/PdfDocView').PdfSearchHit[]; done: boolean } | null;
 
 /** Görüntüleme tercihleri cihazda saklanır */

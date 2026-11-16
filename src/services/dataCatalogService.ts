@@ -12,6 +12,7 @@
  * server.ts yalnız registerDataCatalogRoutes(app, requireAdmin, deps) çağırır.
  */
 import fs from 'fs';
+import { bellekKaydet } from './telemetri.ts';
 import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
@@ -82,7 +83,8 @@ const clip = (s: unknown, n = 140) => {
 
 /* ---------- dosya yardımcıları (mtime önbellekli okuma, girintiyi koruyan atomik yazma + yedek) ---------- */
 // src/data altındaki dosyalar canlı içerik katmanından okunur / oraya yazılır (bkz. contentOverlay.ts)
-const fileCache = new Map<string, { mtime: number; data: any }>();
+const fileCache = new Map<string, { mtime: number; data: any; bayt?: number }>();
+bellekKaydet('dataCatalog.fileCache', () => { let b = 0; for (const c of fileCache.values()) b += c.bayt || 0; return { kayit: fileCache.size, bayt: b }; });
 const FILE_CACHE_MAX = 48;
 function readJson(file: string, fallback: any) {
   file = resolveContent(file);
@@ -94,7 +96,7 @@ function readJson(file: string, fallback: any) {
     // Tavan (2026-11-16): en çok FILE_CACHE_MAX dosya; dolunca en eski eklenen atılır (Map sırası), mtime değişen dosya sona taşınır
     fileCache.delete(file);
     if (fileCache.size >= FILE_CACHE_MAX) fileCache.delete(fileCache.keys().next().value as string);
-    fileCache.set(file, { mtime: st.mtimeMs, data });
+    fileCache.set(file, { mtime: st.mtimeMs, data, bayt: st.size * 2 });
     return data;
   } catch {
     return fallback;

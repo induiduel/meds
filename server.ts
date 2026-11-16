@@ -50,7 +50,7 @@ import { registerArkadaslik } from './src/services/arkadaslik';
 import { registerNotPaylas } from './src/services/notPaylas';
 import { registerDersVideoOynat } from './src/services/dersVideoOynat';
 import crypto from 'crypto';
-import { INTERACTIVE_DECKS_FILE, desteleriOku, desteOku, desteOnbellegi } from './src/services/desteDeposu.ts';
+import { INTERACTIVE_DECKS_FILE, desteleriOku, desteOku, desteOnbellegi, desteTamJson, desteTamEtag } from './src/services/desteDeposu.ts';
 
 const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
@@ -188,7 +188,8 @@ import { registerYonetimSistem } from './src/services/yonetim16/sistem.ts';
 import { registerIcerik16Routes } from './src/services/yonetim16/icerik.ts';
 import { registerSorularRoutes } from './src/services/yonetim16/sorular.ts';
 import { registerCikmisErisimi } from './src/services/cikmisErisim.ts';
-import { telemetriAraKatmani, bellekOrnekleyiciBaslat, telemetriOzeti, vitalsDogrula, vitalsHizSiniri, vitalsKaydet } from './src/services/telemetri.ts';
+import { listeyiIcle } from './src/services/dizgiIcle.ts';
+import { telemetriAraKatmani, bellekOrnekleyiciBaslat, telemetriOzeti, bellekDokumu, bellekKaydet, vitalsDogrula, vitalsHizSiniri, vitalsKaydet } from './src/services/telemetri.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { havuzDondurDosyasi, havuzDonduruldu } from './src/services/havuzDondur.ts';
@@ -2625,6 +2626,9 @@ function toClientPastQuestion(raw: any): any {
 // için gerekli) + gzip gövdeleri kalır. JSON metni yalnız gzip önbelleği ıskaladığında geçici üretilir; baytlar aynıdır.
 type PastListCache = { key: string; at: number; list: any[]; bodies: Map<string, Promise<Buffer>> };
 let pastListCache: PastListCache | null = null;
+// Telemetri: gzip gövde boyutları (yalnız sayı; gövdeler cache.bodies'te)
+const pastGzBoyut = new Map<string, number>();
+let pastGzSahibi: PastListCache | null = null;
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
   const key = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
@@ -2640,8 +2644,10 @@ function pastListGzip(cache: PastListCache, name: string, build: () => string): 
     const raw = build();
     p = new Promise((resolve, reject) => zlib.gzip(raw, { level: 6 }, (err, gz) => (err ? reject(err) : resolve(gz))));
     cache.bodies.set(name, p);
+    if (pastGzSahibi !== cache) { pastGzSahibi = cache; pastGzBoyut.clear(); }
+    p.then((gz) => { if (pastGzSahibi === cache && cache.bodies.get(name) === p) pastGzBoyut.set(name, gz.length); }).catch(() => {});
     // Eşitleme gövdesi anahtarı her değişiklikte farklıdır; eskiler birikmesin
-    if (cache.bodies.size > 4) cache.bodies.delete(cache.bodies.keys().next().value as string);
+    if (cache.bodies.size > 4) { const eski = cache.bodies.keys().next().value as string; cache.bodies.delete(eski); pastGzBoyut.delete(eski); }
   }
   return p;
 }
@@ -2678,6 +2684,17 @@ function syncPastMergeSiblings(list: any[], sourceId: string, editor: string, bo
 }
 
 let pastFilteredFor: Set<string> | null = null;
+let pastDiskBayt = 0;
+// Bellek dökümü (telemetri.ts): ölçülen oran — 97 MB girintili JSON → ~181 MB yığın (×1,87)
+bellekKaydet('cikmis.ham', () => cachedPastQuestionsDb ? { kayit: cachedPastQuestionsDb.length, bayt: pastDiskBayt * 1.87 * 0.82, not: 'disk×1,87 ölçüm, içe alma −%18' } : null);
+bellekKaydet('cikmis.sunulan', () => {
+  if (!pastListCache) return null;
+  let gz = 0;
+  // gzip gövdeleri tamamlanmış Promise'lerdir; boyut son çözülen değerden okunur (bkz. pastListGzip)
+  for (const n of pastGzBoyut.values()) gz += n;
+  // sunulan liste: sığ kopya kabukları (dizgiler ham listeyle paylaşılır) ~1,2 KB/kayıt tahmini
+  return { kayit: pastListCache.list.length, bayt: pastListCache.list.length * 1200 + gz, not: `gzip ${Math.round(gz / 1048576)} MB` };
+});
 function getPastQuestionsDb(): any[] {
   const deletedSet = getDeletedPastQuestions();
   if (fs.existsSync(PAST_QUESTIONS_FILE)) {
@@ -2689,6 +2706,9 @@ function getPastQuestionsDb(): any[] {
         const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
         const list = Array.isArray(data) ? data : [];
         list.forEach((q: any) => normalizeQuestionVotes(q));
+        // Bellek (2026-11-16): tekrarlı kısa dizgiler tek kopya (ölçüm ~33 MB, ~170 ms; çıktı baytları aynı)
+        listeyiIcle(list);
+        pastDiskBayt = stat.size;
         cachedPastQuestionsDb = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
         lastPastQuestionsMtime = stat.mtimeMs;
         pastFilteredFor = deletedSet;
@@ -7365,15 +7385,21 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
       return sendConditionalJson(req, res, { total: compactList.length, decks: compactList });
     }
 
-    if (isUnfiltered && desteOnbellegi()?.fullJsonStr) {
-      res.setHeader('ETag', desteOnbellegi()!.fullEtag);
-      res.setHeader('Cache-Control', 'no-cache');
+    if (isUnfiltered && desteOnbellegi()) {
+      // Tam dizge tutulmaz (bellek); ETag biliniyorsa 304 dizge üretmeden döner, yoksa istek başına üretilir.
       const ifNoneMatch = req.headers['if-none-match'];
-      if (ifNoneMatch && (ifNoneMatch === desteOnbellegi()!.fullEtag || ifNoneMatch === `W/${desteOnbellegi()!.fullEtag}`)) {
+      const bilinen = desteTamEtag();
+      if (bilinen && ifNoneMatch && (ifNoneMatch === bilinen || ifNoneMatch === `W/${bilinen}`)) {
+        res.setHeader('ETag', bilinen);
+        res.setHeader('Cache-Control', 'no-cache');
         return res.status(304).end();
       }
+      const tam = desteTamJson();
+      res.setHeader('ETag', tam.etag);
+      res.setHeader('Cache-Control', 'no-cache');
+      if (ifNoneMatch && (ifNoneMatch === tam.etag || ifNoneMatch === `W/${tam.etag}`)) return res.status(304).end();
       res.setHeader('Content-Type', 'application/json; charset=utf-8');
-      return res.send(desteOnbellegi()!.fullJsonStr);
+      return res.send(tam.json);
     }
 
     let filtered = list;
@@ -11670,8 +11696,20 @@ function hydrateExistingReportsToAutoRepair() {
 // Servisler (autoErrorRepairEngine, questionCrossAuditService, questionUpgradeService) çıkmışları dosyadan değil
 // sunucu önbelleğinden okur ve yalnız savePastQuestionsDb ile yazar (yarış + ~100 MB geçici kopya önlemi).
 // Yönetici telemetri özeti + bellek örnekleyici (5 dk, unref)
-app.get('/api/admin/telemetri', requireAdmin, (_req, res) => { res.json({ success: true, ...telemetriOzeti() }); });
+app.get('/api/admin/telemetri', requireAdmin, (req, res) => {
+  if (req.query.bellek === '1') { res.json({ success: true, bellek: bellekDokumu() }); return; }
+  res.json({ success: true, ...telemetriOzeti() });
+});
 bellekOrnekleyiciBaslat(() => realtimeClients.size);
+// Bellek dökümü kalemleri (tahminler ucuz: dizgi uzunluğu ×2; deste verisi ≈ tam JSON dizgisi kadar — ölçüm 157 MB / 81 M karakter)
+bellekKaydet('deste.onbellek', () => {
+  const c = desteOnbellegi();
+  if (!c) return null;
+  // Ayrıştırılmış veri ölçümle ~157 MB (88 MB dosya); tam dizge artık tutulmuyor.
+  return { kayit: c.data.length, bayt: 157_000_000 + (c.compactJsonStr?.length || 0) * 2, not: 'veri (tahmin) + compact dizge' };
+});
+bellekKaydet('sse.istemci', () => ({ kayit: realtimeClients.size, bayt: realtimeClients.size * 20_000 }));
+bellekKaydet('ozet.katalog', () => cachedSummariesMap ? { kayit: cachedSummariesMap.size, bayt: cachedSummariesMap.size * 58_000, not: 'ölçüm 21 MB / 373' } : null);
 
 registerCikmisErisimi({ cikmisOku: () => getPastQuestionsDb(), cikmisKaydet: (l) => { savePastQuestionsDb(l); pastListCache = null; } });
 

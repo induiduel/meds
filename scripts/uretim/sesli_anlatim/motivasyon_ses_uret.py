@@ -21,6 +21,8 @@ os.environ.setdefault("EMA_IS_PARCACIGI", "2")
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ema_isci as E  # noqa: E402
+sys.path.insert(0, str(_kok.SCRIPTS / "uretim/ses_ortak"))
+import ses_metin  # noqa: E402  (2026-11-16: okunuş ortak girişten; eskiden anahtarsız E.tts_metni → okunus.duzelt)
 
 KOK = _kok.MEDS
 HAVUZ = KOK / "src/data/sesli_motivasyon/havuz.json"
@@ -38,8 +40,10 @@ def main() -> None:
     sureler = {}
     if is_:
         tts = E.model_yukle()
+        # kurulsuz genel klip: eski davranış Kurul 1 bitişik yoluydu (anahtarsız tts_metni); aynı yol + terim okunuşu
+        okunus = ses_metin.okuyucu(yol="bitisik")
         for s in is_:
-            mp3, _z, sure, notlar = E.parca_uret(tts, {"paragraflar": [s["metin"]], "bolumBasi": False}, True)
+            mp3, _z, sure, notlar = E.parca_uret(tts, {"paragraflar": [s["metin"]], "bolumBasi": False}, True, okunus=okunus)
             (CIKTI / f"{s['id']}.mp3").write_bytes(mp3)
             karma[s["id"]] = hashlib.sha1(s["metin"].encode()).hexdigest()[:12]
             sureler[s["id"]] = round(sure, 2)

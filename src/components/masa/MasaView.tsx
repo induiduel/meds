@@ -3,6 +3,7 @@
  * Oyun sırasında gövdeye taşınan tam ekran `.mk-kabuk` çizilir; masa içini okey/ ve uno/ bileşenleri çizer.
  */
 import React, { Suspense, useEffect, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Pause, Play, RefreshCw } from 'lucide-react';
@@ -22,14 +23,14 @@ import type { KuralSekme } from './MasaKurallar';
 import '../../styles/masa/kabuk.css';
 import '../../styles/masa/kabuk-oyun.css';
 
-const OkeyMasa = React.lazy(() => import('./okey/OkeyMasa'));
-const UnoMasa = React.lazy(() => import('./uno/UnoMasa'));
-const PistiMasa = React.lazy(() => import('./pisti/PistiMasa'));
-const DominoMasa = React.lazy(() => import('./domino/DominoMasa'));
-const GoMasa = React.lazy(() => import('./go/GoMasa'));
-const CizgiMasa = React.lazy(() => import('./cizgi/CizgiMasa'));
-const XoxMasa = React.lazy(() => import('./xox/XoxMasa'));
-const MasaKurallar = React.lazy(() => import('./MasaKurallar'));
+const OkeyMasa = guvenliLazy(() => import('./okey/OkeyMasa'));
+const UnoMasa = guvenliLazy(() => import('./uno/UnoMasa'));
+const PistiMasa = guvenliLazy(() => import('./pisti/PistiMasa'));
+const DominoMasa = guvenliLazy(() => import('./domino/DominoMasa'));
+const GoMasa = guvenliLazy(() => import('./go/GoMasa'));
+const CizgiMasa = guvenliLazy(() => import('./cizgi/CizgiMasa'));
+const XoxMasa = guvenliLazy(() => import('./xox/XoxMasa'));
+const MasaKurallar = guvenliLazy(() => import('./MasaKurallar'));
 
 const SON_KEY = 'medsoru_masa_son';
 /** Bağlantıyla gelen (henüz giriş yapmamış olabilir) kişinin masa kodu: girişten sonra masaya döner */

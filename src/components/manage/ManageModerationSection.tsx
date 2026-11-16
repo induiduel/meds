@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { Flag, Save, Wand2, FilePlus2, Eye, EyeOff, Check, Trash2, Inbox, UserPlus, Tag, Ban, Reply, Clock } from 'lucide-react';
 import type { QuestionItem, QuestionOption } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
@@ -9,7 +10,7 @@ import { StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, Deta
 import { BulkBar, useSelection } from '../v14/manageKit';
 import { useModerationMeta, ModerationActionDrawer, MetaPills, metaFacts, ReplyHistory, isSnoozed, isRejected, isMine, type ActionMode } from './moderationActions';
 
-const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal || (m as any).default })));
+const AiQuestionOptimizerModal = guvenliLazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal || (m as any).default })));
 
 /**
  * Moderasyon: solda şikâyet kuyruğu, sağda şikâyet edilen sorunun tamamı. Kararlar yöneticinin:

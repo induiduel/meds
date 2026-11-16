@@ -1,0 +1,31 @@
+{
+ "_aciklama": "Bütçe kapısı tavanları (scripts/kapilar/butce.py). İlk tavanlar = 2026-11-16 ölçümü x 1,05. Tavanlar YALNIZ AZALIR: butce.py --guncelle tavanı ancak ölçüm düşmüşse aşağı çeker; yukarı çekmek için bu dosyayı ELLE düzenle ve _gerekce alanına neden yaz.",
+ "_gerekce": {},
+ "tavan": {
+  "ilk_yuk_js_gzip_kb": 483.32,
+  "ilk_yuk_css_gzip_kb": 136.4,
+  "ilk_yuk_dosya": 105,
+  "tembel_parca_en_buyuk_mb": 4.82,
+  "src_data_en_buyuk_mb": 88.3,
+  "zorunlu_okuma_kelime": 8425,
+  "asama_kelime:anlatim": 1416,
+  "oku_kelime:anlatim": 7316,
+  "asama_kelime:capa_cizim": 1314,
+  "oku_kelime:capa_cizim": 5842,
+  "asama_kelime:ders_icerik": 1075,
+  "oku_kelime:ders_icerik": 2042,
+  "asama_kelime:genel": 347,
+  "asama_kelime:kaynak": 2448,
+  "oku_kelime:kaynak": 8075,
+  "asama_kelime:ogren_deste": 2013,
+  "oku_kelime:ogren_deste": 7681,
+  "asama_kelime:ornek_soru": 760,
+  "oku_kelime:ornek_soru": 6106,
+  "asama_kelime:pdf_tasarim": 1459,
+  "oku_kelime:pdf_tasarim": 2426,
+  "asama_kelime:ses": 1127,
+  "oku_kelime:ses": 1474,
+  "asama_kelime:yayin": 2319,
+  "oku_kelime:yayin": 9305
+ }
+}

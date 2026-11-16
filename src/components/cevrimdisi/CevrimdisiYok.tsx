@@ -1,5 +1,5 @@
 /**
- * İnternet yokken açılamayan bölüm için sade bilgi ekranı (App.wrapLazy ve kök hata sınırı kullanır). Bağlantı gelince sayfa
+ * İnternet yokken açılamayan bölüm için sade bilgi ekranı (utils/guvenliLazy ve kök hata sınırı kullanır). Bağlantı gelince sayfa
  * kendiliğinden yenilenir; kullanıcı Çevrimdışı merkezine geçip bölümü cihaza alabilir. Stil: index.css (.cv-yok).
  */
 import React, { useEffect } from 'react';

@@ -1,4 +1,5 @@
 import { FastTextarea } from './ui/FastTextarea';
+import { guvenliLazy } from '../utils/guvenliLazy';
 import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
@@ -48,7 +49,7 @@ import { getScoreTier, HIGHLIGHT_MIN_SCORE, currentAcademicYear, academicYears, 
 import '../styles/ayrik-qa.css';
 export { getScoreTier, HIGHLIGHT_MIN_SCORE, currentAcademicYear, academicYears, committeeShortLabel, questionStemText, StatusPill, COMMITTEE_EXAM_DATES, isCommitteeLocked } from './quickAddOrtak';
 
-const AiQuestionOptimizerModal = React.lazy(() =>
+const AiQuestionOptimizerModal = guvenliLazy(() =>
   import('./AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal }))
 );
 

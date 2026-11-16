@@ -5,8 +5,9 @@
  * kaydırınca/PDF'i gezince takip dokunma sonrası 5 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
-import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { Suspense, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { AlertTriangle, ArrowLeftRight, GraduationCap, Megaphone, ArrowUpDown, BookOpen, Captions, MapPin, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText, SkipBack, SkipForward } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
@@ -78,7 +79,7 @@ function elementZoom(el: Element | null | undefined): number {
   return 1;
 }
 
-const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
+const PdfDocView = guvenliLazy(() => import('../learn/pdf/PdfDocView'));
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
 import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, cdTerimKatmani, usePdfGorunum } from './CdTerimKatman';
 

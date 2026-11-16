@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
+import { guvenliLazy } from '../utils/guvenliLazy';
 import { KurulHapi, kurulParam, kurulSuzgeciniKaldir, useKurulParam } from './kurul/KurulSuzgec';
 import { useAnswerDoubtfulQuery, useAiReviewQueueQuery } from '../hooks/useMedicalQueries';
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
@@ -68,7 +69,7 @@ import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { learnMatcher, QuestionLearnMatch, isReliableLearnMatch } from '../services/learnMatcher';
-const LazyFlashcardComponent = React.lazy(() =>
+const LazyFlashcardComponent = guvenliLazy(() =>
   import('./learn/InteractiveDeckView').then((m) => ({ default: m.FlashcardComponent })),
 );
 import { pathFor, parseLocation, writeLocation } from '../router';

@@ -3,14 +3,15 @@
  * tembel yüklenir. Yalnız "yüklü ders var mı" değişince çizilir (çalarken App yeniden çizilmez).
  * Çevrimdışı indirilen derslerin kurulu bitip 3 gün geçtiyse silme sorusu da buradan (tembel) açılır.
  */
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { useCd } from './canliDersStore';
 import { cdCevrimdisiKayitlari, cdSilinebilirKurullar } from './canliDersCevrimdisiKayit';
 
-const CanliDersDock = lazy(() => import('./CanliDersDock'));
-const CevrimdisiSoru = lazy(() => import('./CanliDersCevrimdisi'));
-const CozucuSoru = lazy(() => import('./CanliDersCozucuSoru'));
-const Mola = lazy(() => import('./CanliDersMola'));
+const CanliDersDock = guvenliLazy(() => import('./CanliDersDock'));
+const CevrimdisiSoru = guvenliLazy(() => import('./CanliDersCevrimdisi'));
+const CozucuSoru = guvenliLazy(() => import('./CanliDersCozucuSoru'));
+const Mola = guvenliLazy(() => import('./CanliDersMola'));
 
 export function CanliDersDockGate({ activeTab, dersKey }: { activeTab: string; dersKey?: string }) {
   const var_ = useCd((s) => !!s.key);

@@ -19,7 +19,6 @@ if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
 
-import hashlib
 import json
 import sys
 import time
@@ -31,6 +30,10 @@ sys.path.insert(0, str(MEDS / "scripts/uretim/sesli_anlatim"))
 
 import cozucu_ses as C  # noqa: E402  (EMA, mp3 kodlama, cümle bölme)
 import ema_isci as E  # noqa: E402
+
+sys.path.insert(0, str(MEDS / "scripts/uretim/ses_ortak"))
+import ses_klip as SK  # noqa: E402  (2026-11-16: karma/seslendir/atomik yazım ortak; okunuş ses_metin uzun yolu)
+import ses_metin  # noqa: E402
 
 GIRDI = MEDS / "data/patoloji_cozucu_alt/metin"
 CIKTI = MEDS / "data/patoloji_cozucu_alt/ses"
@@ -52,22 +55,29 @@ def ders(tts, kod: str) -> None:
     kayit = json.loads(kp.read_text(encoding="utf-8")) if kp.exists() else {}
     sorular = json.loads((GIRDI / f"{kod}.json").read_text(encoding="utf-8"))["sorular"]
     yeni = toplam = 0
+    okunus = ses_metin.okuyucu(yol="uzun", modul="patoloji_cozucu_alt")  # eski C.seslendir ile aynı yol
     t0 = time.time()
     for q in sorular:
         ad = str(q["no"])
         cumleler = cumlelere(q["ses"])
-        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
+        h = SK.klip_karmasi(f"{SURUM}|{E.HIZ}", cumleler)  # eski formülle birebir (sahte motor sınaması 2026-11-16)
         if kayit.get(ad, {}).get("h") == h and (d / f"{ad}.mp3").exists():
             continue
-        mp3, zaman, sure, notlar = C.seslendir(tts, cumleler)
-        (d / f"{ad}.mp3").write_bytes(mp3)
-        kayit[ad] = {"h": h, "sure": sure, "cumle": len(cumleler), **({"not": notlar} if notlar else {})}
+        try:
+            mp3, zaman, sure, notlar = SK.seslendir(tts, cumleler, okunus=okunus, kbps=C.KBPS, E=E)
+        except SK.BozukKlip as e:
+            SK.bozuk_kaydet(klasor=str(d), klip=ad, hata=str(e), karakter=sum(map(len, cumleler)))
+            E.log(f"  HATA {kod}/{ad}: {e} — klip yazılmadı")
+            continue
+        SK.atomik_yaz(d / f"{ad}.mp3", mp3)
+        kayit[ad] = {"h": h, "sure": sure, "cumle": len(cumleler), **({"not": notlar} if notlar else {}),
+                     "okunus_surum": ses_metin.SOZLUK_SURUM}
         yeni += 1
         toplam += sure
         if yeni % 5 == 0:
-            kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
+            SK.atomik_yaz(kp, json.dumps(kayit, ensure_ascii=False))
             E.log(f"{kod}: {yeni} klip ({toplam:.0f} sn ses)")
-    kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
+    SK.atomik_yaz(kp, json.dumps(kayit, ensure_ascii=False))
     E.log(f"{kod}: {len(sorular)} soru, {yeni} yeni ({toplam:.0f} sn ses, {time.time() - t0:.0f} sn'de)")
 
 

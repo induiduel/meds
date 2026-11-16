@@ -72,6 +72,8 @@ def main() -> int:
     # 2) doğrula (kaynak.md GARANTİLİ → satır-birebir denetimi çalışır)
     h = KV.dogrula(d, KV.kaynak_sayfa(dizin), KV.kaynak_metin(dizin))
     hata += [f"[dogrula] {x}" for x in h]
+    import iskelet as ISK  # C7: doldurulmamış iskelet yeri (<DOLDUR>, _iskelet) kalmasın
+    hata += [f"[iskelet] {x}" for x in ISK.denetle(d)]
 
     # 3) metin_denetle (kendi ayrıntısını basar; sayısını toplar)
     buf = io.StringIO()

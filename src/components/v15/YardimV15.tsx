@@ -4,6 +4,8 @@ import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { katla } from '../../services/cevrimdisi/dersBirimleri';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
+// kp15-/te15- sınıfları kronometre.css'te; kronometre artık tembel yüklendiği için stil burada da içe aktarılır.
+import '../../styles/v15/kronometre.css';
 import '../../styles/v15/kisisel.css';
 
 /**

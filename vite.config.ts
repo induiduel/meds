@@ -80,6 +80,10 @@ export default defineConfig(({ mode }) => {
               return 'local-data-kazanimlar-lite';
             }
             if (normalized.includes('/src/data/kazanimlar/questions/')) {
+              // Konu başına parça (questions/k<N>/d<i>-k<j>.json, _dizin.json): her dosya kendi parçası kalır;
+              // kurulu tek parçada toplamak K1'de ≈31 MB tek indirme demekti.
+              const parca = normalized.match(/\/questions\/(k\d+)\/([\w-]+)\.json/);
+              if (parca) return `local-data-kazanimlar-q-${parca[1]}-${parca[2].replace(/^_/, '')}`;
               const match = normalized.match(/k\d+/);
               if (match) {
                 return `local-data-kazanimlar-q-${match[0]}`;

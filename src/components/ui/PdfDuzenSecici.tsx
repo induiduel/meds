@@ -3,6 +3,7 @@
  * sağda sade sorular (hazır görünüm, yazı büyüklüğü, renk, kâğıda kaç sayfa, ekler) ve katlanır "Daha fazla ayar".
  */
 import React, { useEffect, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { createPortal } from 'react-dom';
 import { Bookmark, Maximize2, Minimize2, Plus, RotateCcw, Settings2, X, ZoomIn } from 'lucide-react';
 import { VARSAYILAN_DUZEN, type PdfDuzen, type PdfStil, type SayfaSayisi } from '../../services/pdfDuzen';
@@ -32,7 +33,7 @@ const SABLON: { ad: string; alt: string; p: Partial<PdfDuzen> }[] = [
   { ad: 'Rahat okuma', alt: 'Büyük yazı, geniş satır', p: { yaziBoyutu: 'buyuk', satirAraligi: 'ferah', kenar: 'genis' } },
   { ad: 'Sınav dosyası', alt: 'Kapaklı, her konu ayrı sayfada', p: { kapak: true, bolumYeniSayfa: true, baslikBoyutu: 'buyuk' } },
 ];
-const PdfOnizleme = React.lazy(() => import('./PdfOnizleme'));
+const PdfOnizleme = guvenliLazy(() => import('./PdfOnizleme'));
 
 function Simge({ n }: { n: SayfaSayisi }) {
   const [kol, sat, yatay] = n === 2 ? [2, 1, true] : n === 4 ? [2, 2, false] : n === 8 ? [4, 2, true] : [1, 1, false];

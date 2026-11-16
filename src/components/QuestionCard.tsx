@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { guvenliLazy } from '../utils/guvenliLazy';
 import { CopyQuestionButton } from './ui/CopyQuestionButton';
 import { getVoterId } from '../utils/voterId';
 import { SourceText } from './ui/SourceText';
@@ -31,7 +32,7 @@ import {
 import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
-const ErrorReportHistoryModal = React.lazy(() =>
+const ErrorReportHistoryModal = guvenliLazy(() =>
   import('./ErrorReportHistoryModal').then((m) => ({ default: m.ErrorReportHistoryModal }))
 );
 import { shareDeepLink } from '../services/universalRedirectService';

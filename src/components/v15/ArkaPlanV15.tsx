@@ -4,6 +4,8 @@ import { ayarYaz, duraklat, kuyrugaEkle, kuyruktanCikar, type Paket } from '../.
 import { boyutYaz } from '../../services/cevrimdisi/dersBirimleri';
 import { cdVideoIptal } from '../canliDers/cdVideoIs';
 import '../../styles/cevrimdisi.css';
+// kp15-/te15- sınıfları kronometre.css'te; kronometre artık tembel yüklendiği için stil burada da içe aktarılır.
+import '../../styles/v15/kronometre.css';
 import '../../styles/v15/kisisel.css';
 
 /**

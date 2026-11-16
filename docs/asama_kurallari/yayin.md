@@ -186,6 +186,7 @@
 ### H582 — "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez" (2026-11-16)
 - **Önleme kuralı:** Kimlik üreten her slug çakışmayı sonekle çözer ve kimlik tekilliği doğrulanır. Panelden/hattan yazılan her src/data dosyası CONTENT_FILES'ta tür olarak kayıtlıdır ve ekran onu ortak yükleyiciden okur.
 
+
 ### H583 — "`git add -A` gizli anahtarı ve 600 MB çalışma verisini herkese açık depoya gönderdi" (2026-11-16)
 - **Önleme kuralı:** Toplu commit'te `git add -A` yerine yol listesi; "her şeyi commitle" = izlenen + bilinçli yeni kod/belge, çalışma verisi değil. Sahnelenen yeni dosyalarda ≥5 MB ya da gizli adlı (`anahtar`, `.env`, `key`, `token`, `secret`) dosya kapı tarafından durdurulur.
 

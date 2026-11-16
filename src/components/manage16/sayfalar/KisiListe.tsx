@@ -1,9 +1,10 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
+import { guvenliLazy } from '../../../utils/guvenliLazy';
 import { VeriTablosu, SayfaBasligi, Rozet, Durum, zamanMetni, adminIstek, bildir, onayIste, gerekceIste, yazimHedefi, Yukleniyor, useAdminSorgu, IstatistikIzgara, IstatistikKart } from '../kit';
 import type { SayfaProps } from '../menu';
 import { RolRozeti, sureMetni, kisiYolu, ETKINLIK_ETIKET } from './kisiOrtak';
 
-const Kisi360 = lazy(() => import('./Kisi360'));
+const Kisi360 = guvenliLazy(() => import('./Kisi360'));
 
 type KisiSatiri = {
   key: string; kind: 'account' | 'guest'; agent: string; uid: string | null; email: string | null; name: string; studentNumber: string | null;

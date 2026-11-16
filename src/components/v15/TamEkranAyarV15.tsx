@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import { ekranUyanikAcik, ekranUyanikYaz } from '../../services/ekranUyanik';
 import { useDersEkranTercih } from '../../services/dersEkranTercih';
+// kp15-/te15- sınıfları kronometre.css'te; kronometre artık tembel yüklendiği için stil burada da içe aktarılır.
+import '../../styles/v15/kronometre.css';
 import '../../styles/v15/ek15.css';
 
 /**

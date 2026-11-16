@@ -74,7 +74,9 @@ interface KurulData { kurul: number; name: string; totalCount: number; dersler: 
 interface SpotOzet { n: number; ilk: string }
 
 const liteLoaders = import.meta.glob('../data/kazanimlar/lite/k*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
-const questionLoaders = import.meta.glob('../data/kazanimlar/questions/k*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
+// Soru havuzu konu başına parçalı (questions/k<N>/d<i>-k<j>.json + _dizin.json; splitLearningDecks.ts):
+// eskiden kurulun tamamı tek dosyaydı (K1 ≈31 MB tek parça). Yalnız açılan kazanımın konusu iner.
+const questionLoaders = import.meta.glob('../data/kazanimlar/questions/k*/*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
 
 /** Kurul adları (index.json ile aynı; hap ipucunda gösterilir) */
 const KURUL_AD: Record<number, string> = {
@@ -197,14 +199,20 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
     return () => { alive = false; };
   }, [selectedKurul, reloadTick]);
 
-  // Bir kazanım satırı açılınca o kurulun soru havuzunu (questions/k*.json) isteğe bağlı yükle
+  // Bir kazanım satırı açılınca yalnız o kazanımın konusuna ait soru parçasını isteğe bağlı yükle (dizin → parça)
   useEffect(() => {
-    if (!openKz || questionMap) return;
-    const qFn = questionLoaders[`../data/kazanimlar/questions/k${selectedKurul}.json`];
-    if (!qFn) return;
+    if (!openKz || (questionMap && openKz in questionMap)) return;
+    const kok = `../data/kazanimlar/questions/k${selectedKurul}/`;
+    const dizinFn = questionLoaders[`${kok}_dizin.json`];
+    if (!dizinFn) return;
     let alive = true;
-    qFn()
-      .then((m) => { if (alive && m) setQuestionMap(m.default || m); })
+    dizinFn()
+      .then((dz) => {
+        const dosya = (dz?.default || dz)?.[openKz] as string | undefined;
+        const parcaFn = dosya ? questionLoaders[`${kok}${dosya}.json`] : undefined;
+        return parcaFn ? parcaFn() : null;
+      })
+      .then((m) => { if (alive && m) setQuestionMap((cur) => ({ ...(cur || {}), ...(m.default || m) })); })
       .catch(() => {});
     return () => { alive = false; };
   }, [openKz, selectedKurul, questionMap]);

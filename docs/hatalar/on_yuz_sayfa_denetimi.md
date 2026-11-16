@@ -238,3 +238,8 @@
 - **Çözüm:** izin listesine `kisi/` ve `arkadas` eklendi; jeton gerektiren öğrenci isteği de `auth.authStateReady()`'yi (≤4 sn) bekler.
 - **Önleme:** `verifiedUid` okuyan yeni bir GET ucu eklenince `ogrenciJetonu` listesine de eklenir; uç yazıldığında girişli kullanıcıyla tarayıcıdan GET sınanır (curl'deki jetonsuz yanıt "çalışıyor" sayılmaz).
 
+## H588 — Dağıtımdan hemen sonra tembel ekran "e._result.default" / React #306 ile çöküyor (2026-11-16)
+- **Belirti:** canlı istemci hata kaydı: dağıtımdan ~90 sn sonra iPhone Safari'de `/dersler/canliders` → `undefined is not an object (evaluating 'e._result.default')` (6 kez); 15 Kasım'da `/dersler/interaktif/...` → `Minified React error #306`. Öğrenci boş/çökmüş ekran görüyor.
+- **Kök neden:** `index.html` ve `main.tsx`'teki `vite:preloadError` dinleyicisi kendi yenileme kurtarması için `event.preventDefault()` çağırıyor (H572). Vite'ın `__vitePreload` sarıcısı bu durumda başarısız `import()`'u reddetmek yerine `undefined` ile ÇÖZER; `React.lazy` boş modülü geçerli sayıp `default`'a erişirken çöker. Yenileme 8 sn kısıtlı olduğundan ikinci denemede kullanıcı çökmüş ekranda kalır. `wrapLazy` yalnız REDDEDİLEN içe aktarmayı ele alıyordu; ~60 tembel bileşen sarıcısızdı.
+- **Kalıcı çözüm:** `src/utils/guvenliLazy.tsx` — modül yoksa ya da `default` yoksa bunu yükleme hatası sayar (çevrimiçi + sunucuya ulaşılıyorsa tek yenileme, çevrimdışıysa bilgi ekranı, aksi hâlde "Yeniden Dene" kartı); tüm `React.lazy` kullanımları buna geçirildi.
+- **Önleme kuralı:** `src` altında `guvenliLazy` dışında `React.lazy(` kullanılmaz (kapı `scripts/kapilar/lazy_denetim.py`). Canlı istemci hataları `python3 scripts/altyapi/saglik_raporu.py --canli` ile her dağıtımdan sonra okunur.

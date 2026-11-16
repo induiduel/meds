@@ -1,6 +1,8 @@
 {
   "_aciklama": "Hat aşaması → kanonik kapı komutu (tek giriş: kos.py). {ad} yer tutucuları kos.py'ye verilen ad=değer çiftlerinden doldurulur. Kullanıcı kararı 2026-11-16: dağınık kapı çağrıları yerine tek dispatcher; alttaki doğrulayıcılar bu matrisin yapı taşlarıdır (silinmez, buradan çağrılır).",
   "asamalar": {
+    "butce":          {"kapi": "scripts/kapilar/butce.py", "arg": [], "gerekli": []},
+    "lazy":           {"kapi": "scripts/kapilar/lazy_denetim.py", "arg": [], "gerekli": []},
     "degerlendirme":  {"kapi": "scripts/uretim/ogrenci_drive/degerlendirme_dogrula.py", "arg": ["{key}", "--pdf", "{pdf}"], "gerekli": ["key", "pdf"]},
     "anlatim":        {"kapi": "scripts/hat/tam_hat/anlatim_kapi.py", "arg": ["{dizin}", "--sayfalar", "{sayfalar}", "--key", "{key}"], "gerekli": ["dizin", "sayfalar", "key"]},
     "ornek_soru":     {"kapi": "scripts/hat/tam_hat/ornek_soru_kapi.py", "arg": ["{dosya}", "--uslup", "{uslup}", "--ders", "{ders}", "--sayfalar", "{sayfalar}"], "gerekli": ["dosya", "uslup", "ders", "sayfalar"]},

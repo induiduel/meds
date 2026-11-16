@@ -31,7 +31,11 @@ export function splitLearningDecks(root: string): Plugin {
       const kFile = path.join(kzDir, `k${k}.json`);
       if (!fs.existsSync(kFile)) continue;
       const liteFile = path.join(kzLiteDir, `k${k}.json`);
-      const qFile = path.join(kzQuestionsDir, `k${k}.json`);
+      // Soru havuzu konu (ders/lesson) başına bölünür: questions/k<N>/d<i>-k<j>.json + questions/k<N>/_dizin.json
+      // (kazanım kimliği → dosya). Eski tek dosya questions/k<N>.json (K1'de ≈31 MB tek parça) artık üretilmez;
+      // tek tüketicisi KazanimlarView'dı. Eski dosya silinmez, yalnız güncellenmez (glob onu artık kapsamaz).
+      const qDir = path.join(kzQuestionsDir, `k${k}`);
+      const qFile = path.join(qDir, '_dizin.json');
       const srcMtime = fs.statSync(kFile).mtimeMs;
       if (fs.existsSync(liteFile) && fs.existsSync(qFile)) {
         try {
@@ -40,18 +44,21 @@ export function splitLearningDecks(root: string): Plugin {
       }
       try {
         const raw = JSON.parse(fs.readFileSync(kFile, 'utf8'));
-        const qMap: Record<string, { cikmisSorular?: any[]; ornekSorular?: any[] }> = {};
+        const parcalar: Record<string, Record<string, { cikmisSorular?: any[]; ornekSorular?: any[] }>> = {};
+        const dizin: Record<string, string> = {};
         const lite = {
           ...raw,
-          dersler: (raw.dersler || []).map((d: any) => ({
+          dersler: (raw.dersler || []).map((d: any, di: number) => ({
             ...d,
-            konular: (d.konular || []).map((konu: any) => ({
+            konular: (d.konular || []).map((konu: any, ki: number) => ({
               ...konu,
               kazanimlar: (konu.kazanimlar || []).map((kz: any) => {
                 const cList = Array.isArray(kz.cikmisSorular) ? kz.cikmisSorular : [];
                 const oList = Array.isArray(kz.ornekSorular) ? kz.ornekSorular : [];
                 if (kz.id && (cList.length > 0 || oList.length > 0)) {
-                  qMap[kz.id] = {
+                  const dosya = `d${di}-k${ki}`;
+                  dizin[kz.id] = dosya;
+                  (parcalar[dosya] ||= {})[kz.id] = {
                     ...(cList.length > 0 ? { cikmisSorular: cList } : {}),
                     ...(oList.length > 0 ? { ornekSorular: oList } : {}),
                   };
@@ -69,7 +76,10 @@ export function splitLearningDecks(root: string): Plugin {
           })),
         };
         fs.writeFileSync(liteFile, JSON.stringify(lite));
-        fs.writeFileSync(qFile, JSON.stringify(qMap));
+        fs.rmSync(qDir, { recursive: true, force: true }); // yalnız türetilen klasör: bayat parça kalmasın
+        fs.mkdirSync(qDir, { recursive: true });
+        for (const [dosya, harita] of Object.entries(parcalar)) fs.writeFileSync(path.join(qDir, `${dosya}.json`), JSON.stringify(harita));
+        fs.writeFileSync(qFile, JSON.stringify(dizin)); // en son: varlığı bölmenin tamamlandığını gösterir
       } catch (e) {
         console.warn(`[kazanimlar] k${k}.json bölünemedi:`, e);
       }

@@ -1,6 +1,7 @@
 import { useBasarim } from '../../services/basarimIstemci';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { menudeGorunur } from '../../services/siteAyar';
-import { kronometreAc } from '../v15/KronometreV15';
+import { kronometreAc } from '../v15/kronometreOlay';
 import ProgramSimdiKarti from '../v15/ProgramSimdiKarti';
 import { IlkAdimlarKarti } from '../v15/IlkAdimlarV15';
 import { profilOku } from '../../services/profilKurulum';
@@ -32,7 +33,7 @@ import { TodayViewV10 } from './TodayViewV10';
  * Yerleşim: kap genişliği ≥ 880 px iken ana + 320 px yan sütun; daha darda (telefon, tablet, Akış) tek sütun.
  */
 
-const MasaGun = React.lazy(() => import('../v15/MasaGunV15'));
+const MasaGun = guvenliLazy(() => import('../v15/MasaGunV15'));
 
 export interface TodayViewProps {
   /** Seçili kurulun kısa adı (ör. "Kurul 1"); tarih satırında görünür */

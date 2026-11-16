@@ -3,6 +3,7 @@
 - `pipeline/` Drive → meds_downloads → meds_temp → meds_database · `advanced_ai/` RAG vektör hattı · `vite/` derleme eklentileri
 - `v2/`, `semantic/` paketleri: `cd scripts/altyapi && python -m v2` · `opendesign/` model geçidi · `perf/` ölçüm · `db/`, `yedek/`
 - `veri.py` içerik verisi sorgusu (FTS5, `~/.cache/meds/veri.sqlite`): `ders k2-07` manifest · `bul "<sorgu>" --tur cikmis` · `al <tur> <id> --kisa` · `liste` · `say` · `--denetle`. Dev JSON'u açmadan önce bunu kullan.
+- `saglik_raporu.py [--canli] [--json]` tek sağlık raporu (sunucu/istemci/veri/içerik/ses/paket/günlük); `egilim` son kayıtları yan yana.
 - `belge_haritasi.py` (`docs/HARITA.md` üretir), `betik_haritasi.py` (scripts/HARITA.md denetimi).
 
 ## Kurallar

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { useStorageRefresh } from '../../hooks/useStorageRefresh';
 import {
   Search,
@@ -24,7 +25,7 @@ import { DECK_CATALOG, deckName, loadDeck, loadDeckCatalog } from '../../data/de
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 import IcerikKapaliV15 from '../v15/IcerikKapaliV15';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
-const LearnReview = React.lazy(() => import('./LearnReview').then((m) => ({ default: m.LearnReview })));
+const LearnReview = guvenliLazy(() => import('./LearnReview').then((m) => ({ default: m.LearnReview })));
 import {
   RenderWithGlossaryTerms,
 } from './MedicalGlossaryPopover';
@@ -47,7 +48,7 @@ import { tourSeen } from '../onboarding/tourState';
 import { learnTourSeen, type LearnTourKind } from '../onboarding/learnTourState';
 // Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
 await loadDeckCatalog().catch(() => undefined);
-const LearnTour = React.lazy(() => import('../onboarding/LearnTour'));
+const LearnTour = guvenliLazy(() => import('../onboarding/LearnTour'));
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)

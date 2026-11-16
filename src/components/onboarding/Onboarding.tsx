@@ -1,10 +1,11 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { AppUser } from '../../services/auth';
 import { useAppearance } from '../../utils/appearance';
 import { OnboardingV12 } from '../v12/OnboardingV12';
 
-const UserAuthModal = React.lazy(() => import('../UserAuthModal').then(m => ({ default: m.UserAuthModal || (m as any).default })));
+const UserAuthModal = guvenliLazy(() => import('../UserAuthModal').then(m => ({ default: m.UserAuthModal || (m as any).default })));
 
 /* ------------------------------------------------------------------
  * Tanıtım: 4 animasyonlu sahne + 5. adımda kayıt / giriş.

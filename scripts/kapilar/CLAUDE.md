@@ -5,6 +5,7 @@
   D7 HARITA'sız alt dizin, D8 haritalar bayat, D9 gizli/≥5 MB sahneleme, D10 (UYARI) veri bakımı: `data/backups`+`_yedek` >300 MB ya da src/data↔data aynı >5 MB kopya
   (`scripts/altyapi/veri_bakim.py denetle`; izin listesi yalnız azalır). Pre-commit `.githooks/pre-commit` (`--hizli`).
 - `ders_pdf_kapisi.py`, `pdf_basim_kapisi.py`.
+- `butce.py` + `butce.json` (`kos.py butce`): ilk yük JS/CSS gzip, dosya sayısı, en büyük tembel parça, src/data en büyük, zorunlu okuma + aşama kelime; tavan yalnız azalır (`--guncelle` aşağı çeker, yükseltme elle + `_gerekce`).
 - Ses aşaması: `kos.py ses hedef=<kök|ders anahtarı>` → `scripts/uretim/ses_ortak/ses_kapisi.py` (bozuk/yarım/sessiz/biçim/düzey;
   2026-11-16 ölçümü 11.000 örnekte yanlış alarm %0; sesli ders düzey farkı yalnız UYARI). Oracle boyut: `ses_kapisi.py oracle --hepsi`.
 

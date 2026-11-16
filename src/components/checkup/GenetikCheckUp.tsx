@@ -5,8 +5,9 @@
  * ve data/genetik_kamp/kalip.json (hızlı tekrar tabloları). Hızlı mod = puan ≥ 97 adımlar + adım başına 1 soru; Tam mod = hepsi.
  */
 import { icKonum, icUrl, TBG_YOL } from '../../siteHaritasi';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { navigateTo } from '../../router';
-import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Headphones,
   Check, ChevronLeft, ChevronRight, Dna, Eye, EyeOff, LifeBuoy, ListChecks, Pause, Play,
@@ -20,7 +21,7 @@ import dersRaw from '../../data/genetik_asistan/g07.json';
 import kalipRaw from '../../data/genetik_kamp/kalip.json';
 import '../../styles/genetik-kamp.css';
 
-const CanliDersDers = lazy(() => import('../canliDers/CanliDersDers'));
+const CanliDersDers = guvenliLazy(() => import('../canliDers/CanliDersDers'));
 /** Kampın sesli dersi: altı genetik dersinin slaytlarıyla tek ders (data/sesli_anlatim, sanal deste k1p-k1-70-…) */
 export const TBG_DERS_KEY = 'k1-70-tbg-sinav-kampi';
 

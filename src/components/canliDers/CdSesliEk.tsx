@@ -280,27 +280,6 @@ export function CdBolumSonu({ detay }: { detay: CdDetay }) {
 }
 
 /* ---------------- U12 yan menü kapsülü ---------------- */
-export function CdYanKapsul() {
-  const key = useCd((s) => s.key);
-  const baslik = useCd((s) => s.baslik);
-  const calar = useCd((s) => s.playing);
-  const oran = useCd((s) => (s.dur > 0 ? Math.min(1, s.t / s.dur) : 0));
-  if (!key) return null;
-  const href = pathFor('canli_ders', key);
-  return (
-    <div className={`cdy${calar ? ' is-calar' : ''}`}>
-      <button type="button" className="cdy-oyn" onClick={() => cdToggle()} aria-label={calar ? 'Duraklat' : 'Oynat'}>
-        {calar ? <Pause aria-hidden /> : <Play aria-hidden />}
-      </button>
-      <a className="cdy-t" href={href} onClick={linkClick(() => navigateTo(href))} title={baslik}>
-        <small>{calar ? 'Şimdi çalınıyor' : 'Duraklatıldı'}</small>
-        <b>{baslik}</b>
-      </a>
-      <i className="cdy-bar" style={{ width: `${Math.round(oran * 100)}%` }} aria-hidden />
-    </div>
-  );
-}
-
 /* ---------------- S10 Açıkla / Soru üret (yalnız tıklamayla) ---------------- */
 type AiDurum = { tur: 'acikla' | 'soru'; metin: string; yanit: string | null; hata: string | null } | null;
 let ai: AiDurum = null;

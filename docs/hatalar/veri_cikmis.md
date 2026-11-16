@@ -229,3 +229,9 @@
 - **Kök neden:** (1) `s13_study._slug` Yunan harflerini sildiği için TGF-α/TGF-β ve Aδ/Aβ lifleri aynı kimliği aldı; katman kayıtları kimliğe göre eşler, tekil kimlik yoksa fark kurulamaz. (2) Ansiklopedi `CONTENT_FILES`'ta değildi: sunucu ucu, manifest bildirimi ve istemci yükleyicisi yoktu; ekran paketteki kopyayı doğrudan import ediyordu.
 - **Kalıcı çözüm:** Slug Yunan harflerini okunuşuyla yazar, `_tekil_id` çakışmada sonek ekler; veri düzeltildi (4 kimlik), türetilmiş dizinler yeniden üretildi. `encyclopedia` türü katmana, `icerik_katman.py`'ye, `/api/content/encyclopedia`'ya eklendi; tek yükleyici `src/data/ansiklopediYukle.ts` (değişmişse sunucudan çeker).
 - **Önleme kuralı:** Kimlik üreten her slug çakışmayı sonekle çözer ve kimlik tekilliği doğrulanır. Panelden/hattan yazılan her src/data dosyası CONTENT_FILES'ta tür olarak kayıtlıdır ve ekran onu ortak yükleyiciden okur.
+
+### H589 — Arama kalite ölçümü belgelenenin çok altında çıktı (hit@5 %95 → %75): ölçüm bozuktu (2026-11-16)
+- **Belirti:** `retrieval-eval.mts` %75 / %56 / %28 verdi; `CLAUDE.md` %95 / %91 / %58 diyordu. Kalite kaybı sanıldı.
+- **Kök neden:** 2026-10-12'den beri dizinleyici birleştirmede gizlenen kopyaları ve karantinadaki kayıtları bilerek DİZİNLEMİYOR (`localRagEngine.ts`, `mergedInto`); değerlendirme betiği ise örneklemi tüm 6.662 kayıttan çekiyordu (1.567'si gizli kopya). Dizinde olmayan soru "bulunamadı" sayılıyordu (74 kaçağın 36'sı). Belgedeki değer birleştirme öncesine (2026-10-03) aitti.
+- **Kalıcı çözüm:** örneklem dizinle aynı süzgeçten geçiyor (`sitede()`); yeni taban %87 / %60 / %34, `CLAUDE.md` Retrieval bölümüne tarihle yazıldı.
+- **Önleme kuralı:** dizin süzgeci değişince değerlendirme örneklemi de aynı süzgeçle güncellenir; ölçüm tabanı tarih + havuz tanımıyla birlikte yazılır, eski tabanla kıyaslanmaz.

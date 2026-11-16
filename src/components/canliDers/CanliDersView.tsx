@@ -5,6 +5,7 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import IcerikKapaliV15 from '../v15/IcerikKapaliV15';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -37,8 +38,8 @@ import { KurulSecici } from '../kurul/KurulSecici';
 import KMB_INDEX from '../../data/kmb/index.json';
 import { useAppearance } from '../../utils/appearance';
 
-const BransV15 = React.lazy(() => import('../v15/BransV15'));
-const SesliListeV15 = React.lazy(() => import('../v15/SesliListeV15'));
+const BransV15 = guvenliLazy(() => import('../v15/BransV15'));
+const SesliListeV15 = guvenliLazy(() => import('../v15/SesliListeV15'));
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();

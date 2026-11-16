@@ -22,7 +22,7 @@ scripts/
 ```
 
 ## hat/ — orkestrasyon (tam hat tek giriş: `hat/tam_hat/kosucu.py`)
-- `tam_hat/` — **içerik üretiminin tek hattı** (`mod.py` katmanlar, `baglam.py` read-once, `hazirlik.py`, `ders_kilit.py`, `manifest.py` ders başına katman manifesti → `ders_bilgi/<key>/katman_manifest.json`). Önce burası.
+- `tam_hat/` — **içerik üretiminin tek hattı** (`mod.py` katmanlar, `baglam.py` read-once, `hazirlik.py`, `ders_kilit.py`, `manifest.py` ders başına katman manifesti → `ders_bilgi/<key>/katman_manifest.json`, `hoca_kirp.py` döküm kırpma, `iskelet.py` çıktı iskeleti). Önce burası.
 - `takvim/` (aktif kurul) · `dersler/` (ders kayıt defteri) · `onem/` · `oncelikli_dersler/` · `olasi_soru/` (gece.sh) ·
   `paket/` (.medspak) · `quiz_motoru/` (quiz KAPALI, kural 19)
 
@@ -32,7 +32,7 @@ scripts/
 - Ses ortak: `ses_ortak/` (`ses_kapisi.py`: ses kalite kapısı + kayıt↔disk↔Oracle boyut denetimi + artık raporu; CPU, salt okunur)
 - Görsel: `cizim/` (cizim_kapisi, TALIMAT_CIZIM) · `kroki/` · `ara_resim/` · `lottie/` · `kmb/`
 - Soru/çözücü: `spot_cozucu/` (ses.py, onem_dogrula, cozucu_dogrula) · `patoloji_cozucu/` (cozucu_ses_gpu.sh) ·
-  `ses_ortak/` (EMA okunuş tek girişi `ses_metin.hazirla` + klip çekirdeği `ses_klip` + `okunus_farki.py` raporu) ·
+  `ses_ortak/` (EMA okunuş tek girişi `ses_metin.hazirla` + klip çekirdeği `ses_klip` + `okunus_farki.py` raporu + `sinama_okunus.py` okunuş sınaması, 0 HATA) ·
   `patoloji_cozucu_alt/` · `patoloji_soru_isci/` · `patoloji_onem/` · `patoloji_checkup/` · `sinav_spotlari/` · `cikmis_paket/`
 - Hoca/öğrenci: `hoca_profili/` · `hoca_ara_soru/` · `hoca_vurgu/` · `ogrenci_onem/` · `ogrenci_drive/`
 - Kamp/tekrar: `son_prova/` · `blok_ozet/` · `kamp/` · `tekrar_analizi/`
@@ -49,6 +49,7 @@ scripts/
 - Veri/arama: `pipeline/` (Drive → downloads → temp → database) · `advanced_ai/` (rag_vektor_hatti.py …) · `search/` · `db/` · `db_analiz/`
 - Derleme/sınama: `vite/` (splitLearningDecks, surumDosyasi — vite.config.ts buradan import eder) · `design/` (kontrast kapısı) ·
   `perf/` · `cevrimdisi_sinama/` · `v15/` · `fixtures/` · `artifact_studio/` · `claude_eklenti/`
+- Sağlık/bütçe: `saglik_raporu.py [--canli] [--json] | egilim` tek sağlık raporu · bütçe kapısı `kapilar/butce.py` (+ `butce.json`, tavan yalnız azalır)
 - Tek dosyalık: `gpu_recovery.sh` (GPU kurtarma) · `rag-yeniden-parcala.mts` (RAG yeniden parçalama)
 - Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır) · `betik_haritasi.py` → bu dosyanın kök bölümü
 - **Yönlendirme:** `nereye.py "<görev>"` (katalog `docs/yonlendirme.json`, `--denetle` D8'de) · `bag.py kim|ne|etki|yetim <yol>`
@@ -60,7 +61,7 @@ scripts/
 `recall/` (soru havuzu motoru) · `composer/` · `sozluk_v2/` · `diseases/` · `saglik/` · `eval/` (`npm run eval:*`)
 
 <!-- kok-dosyalar:bas -->
-## Kök dosyalar (79) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
+## Kök dosyalar (81) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
 
 **Kapılar / doğrulayıcılar** (10)
 - `audit-and-disconnect-faulty-slides.mjs` — MeDSor Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1)
@@ -74,7 +75,7 @@ scripts/
 - `validate_learning_decks.py` — Öğren destelerini docs/OGREN_ETKILESIM_REHBERI.md kurallarına göre denetler.
 - `verify-question-answers.mjs` — MeDSor Çıkmış Soru ve Cevap Doğrulama Motoru (scripts/verify-question-answers.mjs)
 
-**Deste / ders içeriği** (15)
+**Deste / ders içeriği** (16)
 - `build_deck_packages.py` — Öğren destelerinin dışa aktarım paketlerini TEK kaynaktan üretir.
 - `build_deck_pdf_sources.py` — Öğren desteleri → Drive'daki ders PDF'leri ve slayt → (PDF, sayfa) eşlemesi; İÇERİKLE D…
 - `build_deck_schedule.py` — Ders programı sırası → src/data/deckSchedule.json (Öğren kitaplığı "Ders programı" sıra…
@@ -84,6 +85,7 @@ scripts/
 - `ders_icerik_kaynak.py` — Ders içerik paketinde PDF sayfası (`s`) olmayan terim/kısaltma/bilgi kayıtlarına kaynak…
 - `ders_icerik_uret.py` — Ders içerik paketi üretici: yayındaki kaynaklardan (deste, bilgi havuzu, terim/kısaltma…
 - `ders_pdf.mts` — Ders PDF'i (yapay zekasız, limitsiz): python scripts/ders_icerik_adim.py ile `adim` yaz…
+- `deste_bol.py` — Öğren deste monoliti ↔ deste-başına-dosya dönüştürücü (VERI_MODELI Faz 3 iskelesi).
 - `deste_deposu.py` — Öğren desteleri için TEK okuma/yazma noktası (Python tarafı).
 - `extract_curriculum.py` — müfredat PDF'inden Dönem 3 müfredat listesini çıkarır (eski, Windows yolu)
 - `generate_medical_glossary.py` — *- coding: utf-8 -*
@@ -137,7 +139,7 @@ scripts/
 - `rebuild-all-past-questions.mjs` — meds_sorular_txt'ten tüm çıkmış soru verisini yeniden kurar
 - `slide-matching-utils.mjs` — MeDSor Slayt Eşleştirme ve Denetim Yardımcı Modülü
 
-**Diğer** (14)
+**Diğer** (15)
 - `automation-runner.mjs` — MeDSor Central Script & Automation Runner Engine
 - `deck_pdf_slide_duzeltme.json` — deste ↔ PDF slayt eşleme düzeltmeleri (build_deck_pdf_sources girdisi)
 - `fast_hybrid_server.py` — MeDSor Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request).
@@ -150,6 +152,7 @@ scripts/
 - `rag_parca_deposu.py` — RAG parça deposu okuyucusu (Python eşi: src/services/ragParcaDeposu.ts).
 - `scripts-meta.json` — betik üstverisi (eski otomasyon panelinin listesi)
 - `show-notification.ps1` — Windows: masaüstü bildirimi gösterir (eski)
+- `sinama_deste_parcali.py` — Deste deposu parçalı arka uç sınaması (VERI_MODELI Faz 3). Monolite DOKUNMAZ: geçici ko…
 - `test-filter-donem3.mjs` — Dönem 3 müfredat süzgecini çıkmış sorularda sınar
 - `test-sample-pdfs.mjs` — örnek Drive PDF'lerini indirip okumayı sınar
 

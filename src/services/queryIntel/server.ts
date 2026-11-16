@@ -9,6 +9,7 @@
  *  - Öneri/anlamlandırma sonuçları küçük LRU önbellekte tutulur.
  */
 import fs from 'fs';
+import { bellekKaydet } from '../telemetri.ts';
 import path from 'path';
 import { spawn } from 'child_process';
 import { QueryIntelEngine, decodeBins, type QueryUnderstanding, type Suggestion, type SpellResult } from './engine';
@@ -31,6 +32,8 @@ function preSignature(): string {
 }
 
 let engine: QueryIntelEngine | null = null;
+let qiBayt = 0;
+bellekKaydet('queryIntel', () => engine ? { kayit: engine.words.length, bayt: qiBayt } : null);
 let loadedMtime = 0;
 let loading: Promise<void> | null = null;
 let lastStat = 0;
@@ -64,6 +67,7 @@ async function load(): Promise<void> {
     const pack = JSON.parse(jsonText);
     const next = new QueryIntelEngine(pack, decodeBins(new Uint8Array(bin.buffer, bin.byteOffset, bin.byteLength)));
     engine = next;
+    qiBayt = jsonText.length * 2 + bin.byteLength;
     loadedMtime = st.mtimeMs;
     lastError = '';
     suggestCache.clear();

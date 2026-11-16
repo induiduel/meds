@@ -7,6 +7,7 @@
  * Model: merkezModel.ts · adresler: siteHaritasi.ts · stil: styles/merkez.css (.mz-*)
  */
 import React, { useEffect, useState } from 'react';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { ArrowRight, ChevronLeft, BookOpenText, ClipboardCheck, Download, FileText, Flag, GraduationCap, MessageCircleQuestion } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { KATEGORILER, icKonum, type KategoriId } from '../../siteHaritasi';
@@ -17,10 +18,10 @@ import { CHECKUPLAR, MERKEZ_ARACLARI, MERKEZ_ROUTE, PDF_NOTLAR, kategoriOf } fro
 import '../../styles/merkez.css';
 import { useAppearance } from '../../utils/appearance';
 
-const DerslerMerkezV15 = React.lazy(() => import('../v15/DerslerMerkezV15'));
-const SorularMerkezV15 = React.lazy(() => import('../v15/SorularMerkezV15'));
-const KamplarMerkezV15 = React.lazy(() => import('../v15/KamplarMerkezV15'));
-const KaynaklarMerkezV15 = React.lazy(() => import('../v15/KaynaklarMerkezV15'));
+const DerslerMerkezV15 = guvenliLazy(() => import('../v15/DerslerMerkezV15'));
+const SorularMerkezV15 = guvenliLazy(() => import('../v15/SorularMerkezV15'));
+const KamplarMerkezV15 = guvenliLazy(() => import('../v15/KamplarMerkezV15'));
+const KaynaklarMerkezV15 = guvenliLazy(() => import('../v15/KaynaklarMerkezV15'));
 
 export const KATEGORI_IKON: Record<KategoriId, React.ElementType> = {
   dersler: GraduationCap, sorular: MessageCircleQuestion, kamplar: Flag, kaynaklar: BookOpenText,

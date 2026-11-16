@@ -10,6 +10,9 @@
   - yeni üretilen klibin kayıt satırına `okunus_surum` (ses_metin.SOZLUK_SURUM) yazılır (karmaya katılmaz).
   - kayit.json ve mp3 atomik yazılır (yarım dosya kalmaz).
 Duraklar: cümle sonu 0,45 sn; " | " 0,3 sn, " || " 0,7 sn; baş 0,12 sn.
+Bozuk klip (H587 güncellemesi): motorun süre/karakter oranı ÜÇ tohumda da eşik dışıysa `seslendir` BozukKlip fırlatır;
+`klasor` o klibi YAZMAZ (eski klip/kayıt korunur), `BOZUK` listesine ve meds_temp/ses_ortak/uretim_bozuk.jsonl'e yazar,
+süreç sonunda çıkış kodu 3 olur. >400 karakterlik parça motora ses_metin.parcala ile bölünerek gider (karma değişmez).
 """
 from __future__ import annotations
 
@@ -28,6 +31,7 @@ import json  # noqa: E402
 import os  # noqa: E402
 import re  # noqa: E402
 import sys  # noqa: E402
+import atexit  # noqa: E402
 import time  # noqa: E402
 from pathlib import Path  # noqa: E402
 from typing import Callable  # noqa: E402
@@ -37,6 +41,40 @@ for _y in (_kok.SCRIPTS / "uretim" / "sesli_anlatim", Path(__file__).resolve().p
         sys.path.append(str(_y))
 import okunus as _okunus  # noqa: E402  (yalnız sayi_imi: karma formülünün parçası)
 import ses_metin  # noqa: E402
+
+class BozukKlip(Exception):
+    """Üç tohumda da süre/karakter oranı tutmadı: klip yazılmaz."""
+
+
+BOZUK: list[dict] = []
+BOZUK_DOSYA = _kok.MEDS.parent / "meds_temp/ses_ortak/uretim_bozuk.jsonl"
+
+
+def bozuk_mu(not_) -> bool:
+    """ema_isci.paragraf_seslendir notu: 'süre oranı X (3 denemede düzelmedi)'."""
+    return bool(not_) and "denemede düzelmedi" in str(not_)
+
+
+def bozuk_kaydet(**kw) -> None:
+    kw["zaman"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    BOZUK.append(kw)
+    try:
+        BOZUK_DOSYA.parent.mkdir(parents=True, exist_ok=True)
+        with BOZUK_DOSYA.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(kw, ensure_ascii=False) + "\n")
+    except OSError:
+        pass
+
+
+@atexit.register
+def _cikis() -> None:
+    """Bozuk klip olduysa iş başarılı sayılmaz: çıkış kodu 3 (diğer atexit işleri bundan önce çalışır — ilk kaydedilen)."""
+    if BOZUK:
+        print(f"HATA  {len(BOZUK)} klip üç tohumda da süre/karakter eşiği dışında — YAZILMADI ({BOZUK_DOSYA})",
+              file=sys.stderr, flush=True)
+        sys.stdout.flush()
+        os._exit(3)
+
 
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
 HARF_AD = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E"}
@@ -85,11 +123,14 @@ def seslendir(tts, cumleler: list[str], *, okunus: Callable[[str], str], kbps: i
             if not par:
                 continue
             okunan = okunus(par)
-            wav, n = paragraf(okunan) if paragraf else E.paragraf_seslendir(tts, okunan, hazir=True)
-            if n:
-                notlar.append(f"{n}: {par[:50]}")
-            parca.append(wav)
-            t += len(wav) / sr
+            for oku in ses_metin.parcala(okunan):
+                wav, n = paragraf(oku) if paragraf else E.paragraf_seslendir(tts, oku, hazir=True)
+                if bozuk_mu(n):
+                    raise BozukKlip(f"{n}: {par[:80]}")
+                if n:
+                    notlar.append(f"{n}: {par[:50]}")
+                parca.append(wav)
+                t += len(wav) / sr
             if ayrac:
                 d = UZUN_SN if ayrac == "||" else KISA_SN
                 parca.append(sessiz(d))
@@ -126,7 +167,12 @@ def klasor(d: Path, K: dict[str, list[str]], *, surum: str, uret: Callable[[list
         h = klip_karmasi(surum, cumleler)
         if kayit.get(klip, {}).get("h") == h and (d / f"{klip}.mp3").exists():
             continue
-        mp3, zaman, sure, notlar = uret(cumleler)
+        try:
+            mp3, zaman, sure, notlar = uret(cumleler)
+        except BozukKlip as e:
+            bozuk_kaydet(klasor=str(d), klip=klip, hata=str(e), karakter=sum(map(len, cumleler)))
+            (log or print)(f"  HATA {d.name}/{klip}: {e} — klip yazılmadı")
+            continue
         atomik_yaz(d / f"{klip}.mp3", mp3)
         kayit[klip] = {"h": h, "sure": sure, "zaman": zaman, **({"not": notlar} if notlar else {}),
                        "okunus_surum": ses_metin.SOZLUK_SURUM}

@@ -43,6 +43,51 @@ KATMANLAR = [
 ]
 KIPLER = ("tam", "tasarruf")
 
+# Katman → doğrudan girdi bağımlılığı (2026-11-16; koşucunun "birlikte başlatılabilir" gruplarının TEK kaynağı). Girdiler
+# kodla doğrulandı: anlatım/önem/örnek soru/çıkmış analizi yalnız paket + baglam okur (baglam.py DILIM_ASAMA, kosucu EYLEM);
+# çıkmış analizi JSON'u cikmis_konum `q` listesinden kurulur (anlatıma bağlı değil), AMA aynı katmandaki ders analizi/özeti
+# (ders_analizi/uret.py ozet_kur) önem listesini okur → uret.py önem SONRASI. ders_icerik terim+önem sonrası (EYLEM notu).
+BAGIMLILIK: dict[str, tuple[str, ...]] = {
+    "hazirlik": (),
+    "degerlendirme": ("hazirlik",),
+    "anlatim": ("degerlendirme",),
+    "onem_listesi": ("degerlendirme",),
+    "ornek_soru": ("degerlendirme",),
+    "cikmis_analiz": ("degerlendirme",),
+    "hoca_sorulari": ("degerlendirme",),
+    "atomik_envanter": ("degerlendirme",),
+    "ders_ekle": ("anlatim",),
+    "ema_ses": ("ders_ekle",),
+    "zaman_isaret": ("ema_ses",),
+    "cikmis_chip": ("ders_ekle",),
+    "terim_kisaltma": ("ders_ekle",),
+    "ders_icerik": ("terim_kisaltma", "onem_listesi"),
+    "capa_cizim": ("zaman_isaret",),
+    "ara_resim": ("anlatim",),
+    "ara_soru": ("anlatim",),
+    "pdf_tasarim": ("anlatim",),
+    "ogren_deste": ("degerlendirme",),
+    "quiz": ("degerlendirme",),
+    "denetci": ("anlatim", "onem_listesi", "ornek_soru", "cikmis_analiz", "ders_icerik"),
+    "yayin": ("denetci",),
+}
+
+
+def paralel_gruplar(mod: str) -> list[list[str]]:
+    """Kipte yapılacak katmanları bağımlılık katmanlarına (topolojik düzey) böler: aynı gruptakiler birlikte başlatılabilir."""
+    yap = yapilacak(mod)
+    duzey: dict[str, int] = {}
+
+    def d(k: str) -> int:
+        if k not in duzey:
+            duzey[k] = 1 + max((d(b) for b in BAGIMLILIK.get(k, ()) if yap.get(b, True)), default=-1)
+        return duzey[k]
+    gr: dict[int, list[str]] = {}
+    for k, *_ in KATMANLAR:
+        if yap[k]:
+            gr.setdefault(d(k), []).append(k)
+    return [gr[i] for i in sorted(gr)]
+
 
 def yapilacak(mod: str) -> dict[str, bool]:
     i = 2 if mod == "tam" else 3

@@ -6,7 +6,8 @@ Bu koşucu tek doğruluk kaynağı `mod.py` KATMANLAR'dan sırayı okur; kipe (t
 katman için YA betiği çalıştırır YA da LLM aşamasının kompakt brifini (read-once `baglam/`'ı okur, ham slayt/şablon değil) basar.
 
   kosucu.py <klasör> --ders <key> --mod tasarruf              → sıralı runbook (ne yapılacak, hangi komut/brif, hangi kapı)
-  kosucu.py <klasör> --ders <key> --mod tasarruf --calistir   → betikle yapılabilen hazırlık adımlarını da çalıştırır (E0 + baglam)
+  kosucu.py <klasör> --ders <key> --mod tasarruf --calistir   → betikle yapılabilen hazırlık adımlarını da çalıştırır (E0 + baglam + iskelet)
+  kosucu.py <klasör> --ders <key> --mod tam --olc             → üretmeden aşama girdi kelime/token tablosu (meds_temp/hat_olcum/<key>.json)
 
 LLM aşamaları (anlatım, örnek, önem/çözücü) yine ajan/model yazar; koşucu yalnız HANGİ sırayla + NE okuyarak (baglam) +
 HANGİ kapıdan geçerek yapılacağını söyler. Böylece aynı kaynak defalarca okunmaz, sıra tek yerden gelir.
@@ -23,7 +24,9 @@ if str(_d) not in _sys.path:
 import kok as _kok  # noqa: E402
 
 import argparse
+import json
 import subprocess
+import time
 import sys
 from pathlib import Path
 
@@ -34,25 +37,27 @@ import mod as MOD  # noqa: E402
 # Katman → (evre, tür, açıklama). tür: "betik" (koşucu çalıştırabilir) / "llm" (ajan yazar, brif basılır) / "ses" (GPU/CPU).
 # Komut/brif şablonlarında {k}=klasör, {d}=ders key, {m}=mod. Sıra mod.py KATMANLAR sırasıdır (tek kaynak).
 EYLEM: dict[str, tuple[str, str, str]] = {
-    "hazirlik":    ("E0", "betik", "python3 scripts/hat/tam_hat/hazirlik.py {k} --ders {d} --mod {m}  (kilit+denetle dahil)"),
+    "hazirlik":    ("E0", "betik", "python3 scripts/hat/tam_hat/hazirlik.py {k} --ders {d} --mod {m}  (kilit+denetle dahil; sonunda hoca_kirp.py + iskelet.py uret)"),
     "degerlendirme": ("E1", "llm", "Değerlendirme paketi: baglam yoktur (paketi BU üretir). Oku: sayfalar.json + op/ + cikmis_aday.json + "
+                                   "{k}/hoca_dokum_kirpik.md (HAM hoca_dokum.json DEĞİL; tek slaytın hamı gerekirse: hoca_kirp.py {k} --ham <slayt>) + "
                                    "docs/asama_kurallari/kaynak.md. Üret: meds_database_v2/ders_bilgi/{d}/degerlendirme/paket.json + cikmis_konum. "
                                    "Kapı: degerlendirme_dogrula.py {d} --pdf {k}/orijinal.pdf → 0 HATA. SONRA: baglam üret."),
-    "_baglam":     ("E1", "betik", "python3 scripts/hat/tam_hat/baglam.py {k} --ders {d} --mod {m}   (read-once: paket→baglam/kaynak_<atom|hoca|cikmis|uslup>.md + kaynak.md birleşimi + sema.md)"),
+    "_baglam":     ("E1", "betik", "python3 scripts/hat/tam_hat/baglam.py {k} --ders {d} --mod {m} && python3 scripts/hat/tam_hat/iskelet.py uret {k} --ders {d}   (read-once: paket→baglam/kaynak_<atom|hoca|cikmis|uslup>.md + sema.md + iskelet_<aşama>.json)"),
     "anlatim":     ("E2", "llm", "Anlatım konusma_v2: OKU {k}/sayfalar.json (TAM slayt — `satir` çapası ve --dogrula satır-birebir kapısı "
                                  "bunu gerektirir; baglam/kaynak YETMEZ, kapıyı zayıflatır — ölçüm 2026-11-16) + baglam/sema.md (§anlatım) + "
-                                 "docs/asama_kurallari/anlatim.md. ÜRET {k}/anlatim/v2/konusma_v2.json. "
+                                 "docs/asama_kurallari/anlatim.md. ÜRET {k}/anlatim/v2/konusma_v2.json "
+                                 "(baglam/iskelet_anlatim.json'u doldur: b/p kimliği + sayfa hazır, cümle id'si boş → iskelet.py numarala {k}/anlatim/v2/konusma_v2.json --tur anlatim). "
                                  "TEK KAPI (4 kapı + satır bütünlüğü, tek çağrı): python3 scripts/hat/tam_hat/anlatim_kapi.py {k}/anlatim/v2 "
                                  "--sayfalar {k}/sayfalar.json --key {d} → 0 HATA. Sonra bağımsız denetçi GEÇER."),
     "ders_ekle":   ("E2", "şablon", "python3 scripts/uretim/ogrenci_drive/sesli_yayinla.py --key {d} --no <N> --baslik \"<konu>\" --v2 {k}/anlatim/v2 --deck k2p-{d} --pdf-yol \"Kurul N/<branş>/<dosya>.pdf\" --pdf-ad \"<dosya>.pdf\" --sayfa <N> --file-id <drive-id>  (ders-özel değerler elle doldurulur; Oracle tüneli 3310 açık olmalı)"),
     "ema_ses":     ("E3", "ses", "EMA ses: ders-ekle kuyruğa koydu → meds-ema (CPU) üretir. Çözücü: ses.py --brans <brans> <kod> (CPU: CUDA_VISIBLE_DEVICES=)."),
     "zaman_isaret": ("E3", "betik", "cumle_zaman.py / kelime_zaman.py (ses sonrası, yalnız yeni klipler)"),
     "cikmis_chip": ("E3", "betik", "cikmis_konum.py --ders {d}  (yayınlı paragraflardan p/c)"),
-    "cikmis_analiz": ("E3", "llm", "Ayrıntılı çıkmış analizi: OKU baglam/kaynak_cikmis.md (+ gerekirse kaynak_atom.md). ÜRET ders_bilgi/{d}/degerlendirme/cikmis_analiz.json. Kapı: ders_analizi/uret.py --dogrula {d}."),
+    "cikmis_analiz": ("E3", "llm", "Ayrıntılı çıkmış analizi: OKU baglam/kaynak_cikmis.md (+ gerekirse kaynak_atom.md). ÜRET ders_bilgi/{d}/degerlendirme/cikmis_analiz.json (baglam/iskelet_cikmis_analiz.json'u doldur; soru kimlikleri hazır; iskelet.py denetle). ders_analizi/uret.py önem listesi SONRASI. Kapı: ders_analizi/uret.py --dogrula {d}."),
     "terim_kisaltma": ("E3", "betik", "kisaltma_sozlugu.py otomatik {d} --yaz · terim_sozlugu.py otomatik {d} --yaz (MEDS_API=Oracle; yayın SONRASI canli-ders tazeyse)"),
     "onem_listesi": ("E2", "llm", "Önem listesi: OKU baglam/kaynak_atom.md + kaynak_hoca.md + kaynak_cikmis.md + baglam/sema.md (§önem) + `kural_secici.py --ozet ornek_soru`. spot_cozucu çalışma dosyası onem/<kod>.json. Kapı: onem_dogrula.py → 0 HATA."),
     "ornek_soru":  ("E2", "llm", "Örnek sorular + çözücü: OKU baglam/kaynak_atom.md + kaynak_cikmis.md + kaynak_uslup.md + baglam/sema.md (§örnek, §çözücü) + docs/asama_kurallari/ornek_soru.md (önce `kural_secici.py --ozet ornek_soru`). "
-                                 "ÜRET src/data/ornek_sorular/k2/{d}.json + cozucu/<kod>.json. "
+                                 "ÜRET src/data/ornek_sorular/k2/{d}.json (baglam/iskelet_ornek_soru.json'u doldur; soru id → iskelet.py numarala <dosya> --tur ornek_soru) + cozucu/<kod>.json. "
                                  "TEK KAPI örnek soru (4 kapı tek çağrıda): python3 scripts/hat/tam_hat/ornek_soru_kapi.py src/data/ornek_sorular/k2/{d}.json "
                                  "--uslup {k}/soru_uslubu.json --ders \"<ders>\" --sayfalar {k}/sayfalar.json → 0 HATA. Çözücü ayrı: cozucu_dogrula."),
     "hoca_sorulari": ("E2", "llm", "(Yalnız patoloji) Hoca soruları kartı + sesli hoca çözücü — patoloji_soru_isci akışı."),
@@ -69,13 +74,96 @@ EYLEM: dict[str, tuple[str, str, str]] = {
 }
 
 
+# Katman → kural_secici aşaması + baglam dilimleri + ek okunan dosyalar (ölçüm `--olc` için; brif metinleriyle aynı).
+OKUMA: dict[str, tuple[str | None, tuple[str, ...], tuple[str, ...]]] = {
+    "degerlendirme": ("kaynak", (), ("sayfalar.json", "cikmis_aday.json", "hoca_dokum_kirpik.md")),
+    "anlatim": ("anlatim", (), ("sayfalar.json", "baglam/sema.md", "baglam/iskelet_anlatim.json")),
+    "onem_listesi": ("ornek_soru", ("atom", "hoca", "cikmis"), ("baglam/sema.md",)),
+    "ornek_soru": ("ornek_soru", ("atom", "cikmis", "uslup"), ("baglam/sema.md", "baglam/iskelet_ornek_soru.json")),
+    "cikmis_analiz": (None, ("cikmis", "atom"), ("baglam/iskelet_cikmis_analiz.json",)),
+    "ders_icerik": ("ders_icerik", (), ()),
+    "capa_cizim": ("capa_cizim", (), ()),
+    "pdf_tasarim": ("pdf_tasarim", (), ()),
+    "denetci": ("yayin", (), ()),
+}
+TOKEN_KELIME = 1.6  # Türkçe metin: ≈1,6 token/kelime (önceki ölçümde 175k kelime ≈ 280k token)
+
+
+def _kelime(p: Path) -> int:
+    try:
+        return len(p.read_text(encoding="utf-8", errors="replace").split())
+    except OSError:
+        return 0
+
+
+def olc(klasor: Path, ders: str, mod: str) -> dict:
+    """Hiçbir şey üretmeden aşama girdilerinin kelime/tahmini token toplamı. Eksik dosya 0 sayılır ve `eksik`te listelenir."""
+    import kural_secici as KS
+    yap = MOD.yapilacak(mod)
+    satir, eksik = [], []
+    for kat, (ks, dilim, ek) in OKUMA.items():
+        if not yap.get(kat, False):
+            continue
+        kural = sum(_kelime(KOK / f) for f in (KS.oku(ks, mod) if ks else []))
+        ozet = len(KS.ozet(ks).split()) if ks else 0
+        dl = 0
+        for x in dilim:
+            f = klasor / "baglam" / f"kaynak_{x}.md"
+            dl += _kelime(f)
+            if not f.exists():
+                eksik.append(str(f.relative_to(klasor)))
+        ekk = {}
+        for x in ek:
+            ekk[x] = _kelime(klasor / x)
+            if not (klasor / x).exists():
+                eksik.append(x)
+        top = kural + ozet + dl + sum(ekk.values())
+        satir.append({"katman": kat, "kural": kural, "ozet": ozet, "dilim": dl, "ek": ekk, "toplam": top,
+                      "token": round(top * TOKEN_KELIME)})
+    ham = _kelime(klasor / "hoca_dokum.json")
+    return {"ders": ders, "mod": mod, "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "satirlar": satir,
+            "toplam_kelime": sum(x["toplam"] for x in satir), "toplam_token": sum(x["token"] for x in satir),
+            "hoca_dokum_ham_kelime": ham, "eksik": sorted(set(eksik))}
+
+
+def olc_bas(o: dict) -> None:
+    print(f"# Girdi ölçümü — {o['ders']} · kip {o['mod']} (üretim yok; token ≈ kelime × {TOKEN_KELIME})")
+    print(f"{'katman':<15}{'kural':>8}{'özet':>6}{'dilim':>7}{'ek':>8}{'toplam':>8}{'token':>8}  ek dosyalar")
+    for x in o["satirlar"]:
+        print(f"{x['katman']:<15}{x['kural']:>8}{x['ozet']:>6}{x['dilim']:>7}{sum(x['ek'].values()):>8}{x['toplam']:>8}{x['token']:>8}  "
+              + ", ".join(f"{k}={v}" for k, v in x["ek"].items()))
+    print(f"{'TOPLAM':<44}{o['toplam_kelime']:>8}{o['toplam_token']:>8}")
+    if o["hoca_dokum_ham_kelime"]:
+        print(f"(değerlendirme HAM hoca_dokum.json okusaydı: +{o['hoca_dokum_ham_kelime']} kelime)")
+    if o["eksik"]:
+        print("eksik (0 sayıldı): " + ", ".join(o["eksik"]))
+
+
+def manifest_komutu(d: str, katman: str) -> str:
+    return f"python3 scripts/hat/tam_hat/manifest.py uret {d} --kapi-sonucu {katman}=<gecti|kaldi>"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("klasor", type=Path)
     ap.add_argument("--ders", required=True)
     ap.add_argument("--mod", choices=MOD.KIPLER, default="tam")
     ap.add_argument("--calistir", action="store_true", help="betikle yapılabilen hazırlık adımlarını çalıştır (E0 + baglam)")
+    ap.add_argument("--olc", action="store_true", help="üretmeden aşama girdi kelime/token tablosu → meds_temp/hat_olcum/<key>.json")
     a = ap.parse_args()
+    if a.olc:
+        o = olc(a.klasor, a.ders, a.mod)
+        olc_bas(o)
+        hedef = KOK.parent / "meds_temp" / "hat_olcum" / f"{a.ders}.json"
+        hedef.parent.mkdir(parents=True, exist_ok=True)
+        gecmis = json.loads(hedef.read_text(encoding="utf-8")) if hedef.exists() else {"olcumler": []}
+        gecmis["olcumler"].append(o)
+        hedef.write_text(json.dumps(gecmis, ensure_ascii=False, indent=1), encoding="utf-8")
+        if len(gecmis["olcumler"]) > 1:
+            p = gecmis["olcumler"][-2]
+            print(f"önceki ölçüm ({p['zaman']}): {p['toplam_kelime']} kelime → fark {o['toplam_kelime'] - p['toplam_kelime']:+d}")
+        print(f"yazıldı: {hedef}")
+        return 0
     yap = MOD.yapilacak(a.mod)
     # mod.py sırası + araya _baglam (E1 paketten sonra). Atlananları (kipte False) eler.
     sira: list[str] = []
@@ -102,8 +190,24 @@ def main() -> int:
                 basildi = True
             durum = "ATLA" if atla else ("BETİK" if e[1] == "betik" else e[1].upper())
             print(f"  [{durum:<5}] {k:<15} {doldur(e[2])}")
+            if not atla and k != "_baglam":  # her aşama/kapı sonunda katman manifestine sonuç işlenir (manifest.py, kapıyı çalıştırmaz)
+                print(f"  {'':<7} {'':<15} ↳ kapı sonrası: {manifest_komutu(a.ders, k)}")
+            if k == "yayin" and not atla:
+                r = subprocess.run([sys.executable, "scripts/hat/tam_hat/manifest.py", "goster", a.ders, "--eksik"],
+                                   cwd=KOK, capture_output=True, text=True)
+                print("  ── yayın öncesi manifest (eksikler; ENGELLEMEZ, yalnız bilgi) ──")
+                for ln in (r.stdout or r.stderr).strip().splitlines():
+                    print("     " + ln)
         if basildi:
             print()
+    # Paralel brif: bağımlılık düzeyine göre (mod.py BAGIMLILIK). Koşucu LLM başlatmaz; yalnız hangi aşamaların AYNI ANDA
+    # alt ajana verilebileceğini söyler. Ders kilidi ders düzeyindedir (aşama düzeyinde çakışma koruması YOK): aynı
+    # MEDS_OTURUM altındaki paralel alt ajanlar farklı çıktı dosyalarına yazdığı için güvenlidir; aynı dosyaya iki ajan yazmasın.
+    print("## Birlikte başlatılabilir gruplar (bağımlılık: mod.py BAGIMLILIK; alt ajan en çok 3)")
+    for i, g in enumerate(MOD.paralel_gruplar(a.mod)):
+        llm = [k for k in g if EYLEM.get(k, ("", "", ""))[1] == "llm"]
+        print(f"  G{i}: {' ∥ '.join(g)}" + (f"   (LLM: {', '.join(llm)})" if llm and len(g) > 1 else ""))
+    print()
     if a.calistir:
         # Oturum sahibi koşucudur: kararlı MEDS_OTURUM üret + alt adımlara geçir → kilit tek kimlikle tutulur,
         # yayın adımında `ders_kilit.py birak {d}` ile bırakılır (runbook E6'da yazılı). Varsa dışarıdan geleni koru.
@@ -112,11 +216,16 @@ def main() -> int:
         env.setdefault("MEDS_OTURUM", f"kosucu-{a.ders}-{os.getpid()}")
         print(f"## Çalıştırılıyor (E0 + baglam) · oturum {env['MEDS_OTURUM']}…")
         # Argümanlar liste olarak (shell yok): enjeksiyon riski yok, ders/klasör metakarakterleri yorumlanmaz.
-        adimlar = [["python3", "scripts/hat/tam_hat/hazirlik.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod],
-                   ["python3", "scripts/hat/tam_hat/baglam.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod]]
-        for cmd in adimlar:
+        adimlar = [("hazirlik", ["python3", "scripts/hat/tam_hat/hazirlik.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod])]
+        if (KOK.parent / "meds_database_v2" / "ders_bilgi" / a.ders / "degerlendirme" / "paket.json").exists():
+            adimlar += [(None, ["python3", "scripts/hat/tam_hat/baglam.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod]),
+                        (None, ["python3", "scripts/hat/tam_hat/iskelet.py", "uret", str(a.klasor), "--ders", a.ders])]
+        for katman, cmd in adimlar:
             print("$ " + " ".join(cmd))
             r = subprocess.run(cmd, cwd=KOK, env=env)
+            if katman:
+                subprocess.run(["python3", "scripts/hat/tam_hat/manifest.py", "uret", a.ders, "--kapi-sonucu",
+                                f"{katman}={'gecti' if r.returncode == 0 else 'kaldi'}"], cwd=KOK)
             if r.returncode != 0:
                 print(f"DURDU: {cmd[1]} çıkış {r.returncode}", file=sys.stderr)
                 return r.returncode

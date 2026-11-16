@@ -812,7 +812,7 @@
    ],
    "oku": [
     {
-     "yol": "src/data/pastQuestions.json",
+     "yol": "data/pastQuestions.json",
      "neden": "çıkmış soru verisi"
     },
     {
@@ -1081,9 +1081,19 @@
     "slow",
     "jank",
     "acilis",
-    "yukleme"
+    "yukleme",
+    "saglik",
+    "saglik raporu",
+    "butce",
+    "telemetri",
+    "vitals",
+    "paket boyutu"
    ],
    "oku": [
+    {
+     "yol": "scripts/altyapi/saglik_raporu.py",
+     "neden": "tek sağlık raporu (sunucu/istemci/veri/içerik/ses/paket)"
+    },
     {
      "yol": "docs/HANTALLIK_KOK_NEDENLERI.md",
      "neden": "bilinen hantallık kökleri"
@@ -1102,7 +1112,8 @@
    ],
    "kapilar": [
     "npx vite build",
-    "node scripts/altyapi/perf/yazma_olcum.mjs"
+    "node scripts/altyapi/perf/yazma_olcum.mjs",
+    "python3 scripts/kapilar/butce.py"
    ],
    "hatalar": [
     "docs/hatalar/yonetim_basarim.md",

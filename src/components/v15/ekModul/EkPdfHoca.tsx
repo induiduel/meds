@@ -1,9 +1,10 @@
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { guvenliLazy } from '../../../utils/guvenliLazy';
 import { ExternalLink } from 'lucide-react';
 import { gorselUrl, hocaPdfKlip, type EkModul } from './ekVeri';
 import type { Sira } from './ekOrtak';
 
-const EkPdfBolum = lazy(() => import('./EkPdfBolum').then((x) => ({ default: x.EkPdfBolum })));
+const EkPdfBolum = guvenliLazy(() => import('./EkPdfBolum').then((x) => ({ default: x.EkPdfBolum })));
 
 /**
  * Hoca soruları · "PDF ile" sesli çözüm: çözümlü soru kitapçığında çalan sorunun bloğu ekrana sığar, o an okunan cümlenin

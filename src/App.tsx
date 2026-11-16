@@ -1,4 +1,5 @@
 import { fetchMyAccess, setModeratorMode } from './services/moderatorSession';
+import { guvenliLazy } from './utils/guvenliLazy';
 import KampYonlendir from './components/v15/ekModul/KampYonlendir';
 import { getAppearance } from './utils/appearance';
 import React, { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect, Suspense } from 'react';
@@ -22,19 +23,22 @@ import {
 } from 'lucide-react';
 import { Committee, QuestionItem, QuestionLectureMatch } from './types';
 import { MetricsBar } from './components/MetricsBar';
-import { PoolView } from './components/pool/PoolView';
+// Soru havuzu yalnız /sorular'da görünür: açılış paketine (QuestionCard + havuz stilleri) girmesin diye tembel yüklenir.
+const PoolView = guvenliLazy(() => import('./components/pool/PoolView').then((m) => ({ default: m.PoolView })));
 import { committeeShortLabel, questionStemText } from './components/quickAddOrtak';
 // Soru ekle (ana sayfa) tembel yüklenir (başarım turu 2026-10-20); ana sayfada açılışta hemen istenir.
 const quickAddYukle = () => import('./components/QuickAddHero').then((m) => ({ default: m.QuickAddHero }));
 if (typeof window !== 'undefined' && /^\/(meds\/?)?$/.test(window.location.pathname)) void quickAddYukle();
-const QuickAddHero = React.lazy(quickAddYukle);
+const QuickAddHero = guvenliLazy(quickAddYukle);
 /** QuickAddHero ile aynı dış kap ve ölçülen yükseklik (1440: 262, 375: 252 px): yüklenirken düzen kaymaz. */
 const QuickAddYerTutucu = () => (
   <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8 min-h-[252px] sm:min-h-[262px]" aria-busy="true" />
 );
 import KurulSeridi from './components/olasi/KurulSeridi';
 import { V15Disinda, V15Icinde } from './components/v15/V15Disinda';
-import KronometreV15 from './components/v15/KronometreV15';
+// Kronometre/kapsül yüzen penceresi kapalıyken hiçbir şey çizmez: kodu ve stili açılıştan sonra gelsin.
+const KronometreTembel = guvenliLazy(() => import('./components/v15/KronometreV15'));
+const KronometreV15 = () => <Suspense fallback={null}><KronometreTembel /></Suspense>;
 import { ProfilKurulumKapisi } from './components/v15/ProfilKurulumV15';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
@@ -48,12 +52,11 @@ import { CdVideoRozet } from './components/canliDers/CdVideoRozet';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
-import { Onboarding } from './components/onboarding/Onboarding';
 import { tourSeen } from './components/onboarding/tourState';
-const WelcomeTour = React.lazy(() => import('./components/onboarding/WelcomeTour'));
-const TanitimVideo = React.lazy(() => import('./components/onboarding/TanitimVideo'));
+const WelcomeTour = guvenliLazy(() => import('./components/onboarding/WelcomeTour'));
+const TanitimVideo = guvenliLazy(() => import('./components/onboarding/TanitimVideo'));
 import { girisUyarisiKabulEdildi } from './components/onboarding/girisUyarisiDurum';
-const GirisUyarisi = React.lazy(() => import('./components/onboarding/GirisUyarisi'));
+const GirisUyarisi = guvenliLazy(() => import('./components/onboarding/GirisUyarisi'));
 import { PageLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
@@ -65,146 +68,102 @@ import { syncNotes } from './services/notesSync';
 import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll, openDeepLink } from './services/universalRedirectService';
 
 import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
-import { sunucuyaUlasilir } from './services/cevrimdisi/baglanti';
-
-function wrapLazy<T extends { default: React.ComponentType<any> }>(
-  promise: Promise<T>
-): Promise<T> {
-  return promise.catch(async (err) => {
-    console.warn('[SafeLazy] Failed to load component:', err?.message || err);
-    // navigator.onLine Wi-Fi'ye bağlı ama internetsiz cihazda da true: yenileme kararı yalnız sunucu gerçekten yanıt verirse
-    const isOnline = typeof window !== 'undefined' && navigator.onLine && (await sunucuyaUlasilir());
-    if (isOnline) {
-      const msg = String(err?.message || err || '');
-      if (
-        msg.includes('dynamically imported module') ||
-        msg.includes('Failed to fetch') ||
-        msg.includes('default')
-      ) {
-        const lastReload = sessionStorage.getItem('medsoru_chunk_reload');
-        if (!lastReload || Date.now() - Number(lastReload) > 8000) {
-          sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
-          window.location.reload();
-        }
-      }
-    }
-    if (!isOnline) {
-      // İnternetsiz ve parça cihazda yok: bilgi ekranı (bağlantı gelince kendiliğinden yenilenir)
-      return { default: (() => <CevrimdisiYok />) as unknown as T['default'] } as T;
-    }
-    return {
-      default: (() => (
-        <div className="p-8 text-center text-ink-3 max-w-md mx-auto my-12 bg-white rounded-2xl border border-line shadow-sm">
-          <div className="text-3xl mb-3">📶</div>
-          <p className="font-semibold text-ink text-base">Bileşen yüklenirken bir sorun oluştu.</p>
-          <p className="text-sm mt-1.5 text-ink-2">Lütfen sayfayı yenileyiniz veya bağlantınızı kontrol ediniz.</p>
-          <div className="mt-5 flex items-center justify-center gap-2.5">
-            <button type="button" onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-accent text-white rounded-xl text-sm font-semibold hover:bg-accent-hover cursor-pointer transition-colors">
-              Yeniden Dene
-            </button>
-          </div>
-        </div>
-      )) as unknown as T['default']
-    } as T;
-  });
-}
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
 // Test çöz: kurulum (kaynak/kurul/ders/zorluk/sayı ya da rastgele) + çözücü; havuz soruları girmez
-const TestHub = React.lazy(() => wrapLazy(import('./components/practice/TestHub').then(m => ({ default: m.TestHub }))));
-const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub').then(m => ({ default: m.StudyHub }))));
-const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
-const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
-const StatsView = React.lazy(() => wrapLazy(import('./components/stats/StatsView').then(m => ({ default: m.StatsView }))));
-const FavorilerBugun = React.lazy(() => wrapLazy(import('./components/v15/FavorilerBugun')));
-const TodayView = React.lazy(() => wrapLazy(import('./components/today/TodayView').then(m => ({ default: m.TodayView }))));
-const MusicView = React.lazy(() => wrapLazy(import('./components/MusicView').then(m => ({ default: m.MusicView }))));
-const LectureNotesView = React.lazy(() => wrapLazy(import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView }))));
-const PastExamsView = React.lazy(() => wrapLazy(import('./components/PastExamsView').then(m => ({ default: m.PastExamsView }))));
-const QuestionMatrix = React.lazy(() => wrapLazy(import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix }))));
-const LocalAiChatView = React.lazy(() => wrapLazy(import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView }))));
-const DataCoreView = React.lazy(() => wrapLazy(import('./components/core/DataCoreView')));
-const TestCikmisView = React.lazy(() => wrapLazy(import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView }))));
-const TesterOzetView = React.lazy(() => wrapLazy(import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView }))));
-const PracticeQuestionsView = React.lazy(() => wrapLazy(import('./components/PracticeQuestionsView')));
-const OncelikliDerslerView = React.lazy(() => wrapLazy(import('./components/oncelikli/OncelikliDerslerView')));
-const KazanimlarView = React.lazy(() => wrapLazy(import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView }))));
-const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
-const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
-const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
-const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
-const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
-const KmbAsistan = React.lazy(() => wrapLazy(import('./components/kmb/KmbAsistan')));
-const SonProvaView = React.lazy(() => wrapLazy(import('./components/sonProva/SonProvaView')));
-const CikmisCozucuView = React.lazy(() => wrapLazy(import('./components/cikmisCozucu/CikmisCozucuView')));
-const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
-const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
+const TestHub = guvenliLazy(() => import('./components/practice/TestHub').then(m => ({ default: m.TestHub })));
+const StudyHub = guvenliLazy(() => import('./components/study/StudyHub').then(m => ({ default: m.StudyHub })));
+const BookletView = guvenliLazy(() => import('./components/BookletView').then(m => ({ default: m.BookletView })));
+const LeaderboardView = guvenliLazy(() => import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView })));
+const StatsView = guvenliLazy(() => import('./components/stats/StatsView').then(m => ({ default: m.StatsView })));
+const FavorilerBugun = guvenliLazy(() => import('./components/v15/FavorilerBugun'));
+const TodayView = guvenliLazy(() => import('./components/today/TodayView').then(m => ({ default: m.TodayView })));
+const MusicView = guvenliLazy(() => import('./components/MusicView').then(m => ({ default: m.MusicView })));
+const LectureNotesView = guvenliLazy(() => import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView })));
+const PastExamsView = guvenliLazy(() => import('./components/PastExamsView').then(m => ({ default: m.PastExamsView })));
+const QuestionMatrix = guvenliLazy(() => import('./components/QuestionMatrix').then(m => ({ default: m.QuestionMatrix })));
+const LocalAiChatView = guvenliLazy(() => import('./components/LocalAiChatView').then(m => ({ default: m.LocalAiChatView })));
+const DataCoreView = guvenliLazy(() => import('./components/core/DataCoreView'));
+const TestCikmisView = guvenliLazy(() => import('./components/TestCikmisView').then(m => ({ default: m.TestCikmisView })));
+const TesterOzetView = guvenliLazy(() => import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView })));
+const PracticeQuestionsView = guvenliLazy(() => import('./components/PracticeQuestionsView'));
+const OncelikliDerslerView = guvenliLazy(() => import('./components/oncelikli/OncelikliDerslerView'));
+const KazanimlarView = guvenliLazy(() => import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView })));
+const DiseasesView = guvenliLazy(() => import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView })));
+const SaglikView = guvenliLazy(() => import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView })));
+const CanliDersView = guvenliLazy(() => import('./components/canliDers/CanliDersView'));
+const PatolojiCheckUp = guvenliLazy(() => import('./components/checkup/PatolojiCheckUp'));
+const GenetikCheckUp = guvenliLazy(() => import('./components/checkup/GenetikCheckUp'));
+const KmbAsistan = guvenliLazy(() => import('./components/kmb/KmbAsistan'));
+const SonProvaView = guvenliLazy(() => import('./components/sonProva/SonProvaView'));
+const CikmisCozucuView = guvenliLazy(() => import('./components/cikmisCozucu/CikmisCozucuView'));
+const BasarimView = guvenliLazy(() => import('./components/basarim/BasarimView'));
+const BasarimKatmani = guvenliLazy(() => import('./components/basarim/BasarimKatmani'));
 // Arzu'ya özel katman: yalnız arzuKimlik.ts'teki hesaplarda yüklenir (karşılama, gezinen tilki, kalpler)
 import { arzuHesabiMi, useArzuAcik } from './components/arzu/arzuKimlik';
-const ArzuKatmani = React.lazy(() => wrapLazy(import('./components/arzu/ArzuKatmani')));
-const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
-const SinavPlaniView = React.lazy(() => wrapLazy(import('./components/takip/SinavPlaniView')));
-const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
-const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
-const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
-const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
-const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
-const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
-const YanlislarimV15 = React.lazy(() => wrapLazy(import('./components/v15/YanlislarimV15')));
-const BildirimlerV15 = React.lazy(() => wrapLazy(import('./components/v15/BildirimlerV15')));
-const MuzikV15 = React.lazy(() => wrapLazy(import('./components/v15/MuzikV15')));
-const ZihinHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/ZihinHaritasiV15')));
-const HucremV15 = React.lazy(() => wrapLazy(import('./components/v15/HucremV15')));
-const ToplulukV15 = React.lazy(() => wrapLazy(import('./components/v15/ToplulukV15')));
-const KisiProfilV15 = React.lazy(() => wrapLazy(import('./components/v15/KisiProfilV15')));
-const ArkadaslarV15 = React.lazy(() => wrapLazy(import('./components/v15/ArkadaslarV15')));
-const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSihirbaziV15')));
-const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
-const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDersV15')));
-const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
-const MasaView = React.lazy(() => wrapLazy(import('./components/masa/MasaView')));
-const EkModullerV15 = React.lazy(() => wrapLazy(import('./components/v15/ekModul/EkModullerV15')));
-const SoruAktarV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruAktarV15')));
-const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
-const ProgramEkleV15 = React.lazy(() => wrapLazy(import('./components/v15/ProgramEkleV15')));
-const DilBolgeV15 = React.lazy(() => wrapLazy(import('./components/v15/DilBolgeV15')));
-const IlkAdimlarV15 = React.lazy(() => wrapLazy(import('./components/v15/IlkAdimlarV15')));
-const YardimV15 = React.lazy(() => wrapLazy(import('./components/v15/YardimV15')));
-const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
-const SiralamaV15 = React.lazy(() => wrapLazy(import('./components/v15/SiralamaV15')));
-const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
-const DuyuruBandi = React.lazy(() => wrapLazy(import('./components/system/DuyuruBandi')));
-const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
-const BulunamadiV15 = React.lazy(() => wrapLazy(import('./components/v15/BulunamadiV15')));
-const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
-const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
+const ArzuKatmani = guvenliLazy(() => import('./components/arzu/ArzuKatmani'));
+const BitirdiklerimView = guvenliLazy(() => import('./components/takip/BitirdiklerimView'));
+const SinavPlaniView = guvenliLazy(() => import('./components/takip/SinavPlaniView'));
+const CevrimdisiView = guvenliLazy(() => import('./components/cevrimdisi/CevrimdisiView'));
+const OlasiSorularView = guvenliLazy(() => import('./components/olasi/OlasiSorularView'));
+const GecmisKurullarView = guvenliLazy(() => import('./components/olasi/GecmisKurullarView'));
+const KampView = guvenliLazy(() => import('./components/kamp/KampView'));
+const MerkezView = guvenliLazy(() => import('./components/merkez/MerkezView'));
+const SoruHaritasiV15 = guvenliLazy(() => import('./components/v15/SoruHaritasiV15'));
+const YanlislarimV15 = guvenliLazy(() => import('./components/v15/YanlislarimV15'));
+const BildirimlerV15 = guvenliLazy(() => import('./components/v15/BildirimlerV15'));
+const MuzikV15 = guvenliLazy(() => import('./components/v15/MuzikV15'));
+const ZihinHaritasiV15 = guvenliLazy(() => import('./components/v15/ZihinHaritasiV15'));
+const HucremV15 = guvenliLazy(() => import('./components/v15/HucremV15'));
+const ToplulukV15 = guvenliLazy(() => import('./components/v15/ToplulukV15'));
+const KisiProfilV15 = guvenliLazy(() => import('./components/v15/KisiProfilV15'));
+const ArkadaslarV15 = guvenliLazy(() => import('./components/v15/ArkadaslarV15'));
+const PdfSihirbaziV15 = guvenliLazy(() => import('./components/v15/PdfSihirbaziV15'));
+const NotlarimV15 = guvenliLazy(() => import('./components/v15/NotlarimV15'));
+const VideoDersV15 = guvenliLazy(() => import('./components/v15/VideoDersV15'));
+const OyunlarV15 = guvenliLazy(() => import('./components/v15/OyunlarV15'));
+const MasaView = guvenliLazy(() => import('./components/masa/MasaView'));
+const EkModullerV15 = guvenliLazy(() => import('./components/v15/ekModul/EkModullerV15'));
+const SoruAktarV15 = guvenliLazy(() => import('./components/v15/SoruAktarV15'));
+const DersProgramiV15 = guvenliLazy(() => import('./components/v15/DersProgramiV15'));
+const ProgramEkleV15 = guvenliLazy(() => import('./components/v15/ProgramEkleV15'));
+const DilBolgeV15 = guvenliLazy(() => import('./components/v15/DilBolgeV15'));
+const IlkAdimlarV15 = guvenliLazy(() => import('./components/v15/IlkAdimlarV15'));
+const YardimV15 = guvenliLazy(() => import('./components/v15/YardimV15'));
+const SinavTakvimiV15 = guvenliLazy(() => import('./components/v15/SinavTakvimiV15'));
+const SiralamaV15 = guvenliLazy(() => import('./components/v15/SiralamaV15'));
+const DersDetayV15 = guvenliLazy(() => import('./components/v15/DersDetayV15'));
+const DuyuruBandi = guvenliLazy(() => import('./components/system/DuyuruBandi'));
+const NeYapmak = guvenliLazy(() => import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak })));
+const BulunamadiV15 = guvenliLazy(() => import('./components/v15/BulunamadiV15'));
+const GuncellemeGunluguView = guvenliLazy(() => import('./components/guncellemeler/GuncellemeGunluguView'));
+const SinavCalismaView = guvenliLazy(() => import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView })));
 
 // Lazy-loaded Modals (Only downloaded when opened)
-const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal }))));
-const ExamPdfModal = React.lazy(() => wrapLazy(import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal }))));
-const ContributeModal = React.lazy(() => wrapLazy(import('./components/ContributeModal').then(m => ({ default: m.ContributeModal }))));
-const AddCommitteeModal = React.lazy(() => wrapLazy(import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal }))));
-const DriveSaveModal = React.lazy(() => wrapLazy(import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal }))));
-const UserAuthModal = React.lazy(() => wrapLazy(import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal }))));
-const ProfileSettingsView = React.lazy(() => wrapLazy(import('./components/settings/ProfileSettingsView').then(m => ({ default: m.ProfileSettingsView }))));
-const EditMyQuestionModal = React.lazy(() => wrapLazy(import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal }))));
-const RevisionHistoryModal = React.lazy(() => wrapLazy(import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal }))));
-const AdminPastExamImporterModal = React.lazy(() => wrapLazy(import('./components/AdminPastExamImporterModal').then(m => ({ default: m.AdminPastExamImporterModal }))));
-const AiQuestionOptimizerModal = React.lazy(() => wrapLazy(import('./components/AiQuestionOptimizerModal').then(m => ({ default: m.AiQuestionOptimizerModal }))));
-const NotebookLMSyncModal = React.lazy(() => wrapLazy(import('./components/NotebookLMSyncModal').then(m => ({ default: m.NotebookLMSyncModal }))));
-const SubagentMonitorModal = React.lazy(() => wrapLazy(import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal }))));
-const SystemDiagnosticsModal = React.lazy(() => wrapLazy(import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal }))));
-const LectureSummariesView = React.lazy(() => wrapLazy(import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView }))));
-const TranscriptionsView = React.lazy(() => wrapLazy(import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView }))));
-const FlashcardsView = React.lazy(() => wrapLazy(import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView }))));
-const SearchView = React.lazy(() => wrapLazy(import('./components/search/SearchView').then(m => ({ default: m.SearchView }))));
-const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView }))));
-const ExamSpotsView = React.lazy(() => wrapLazy(import('./components/spots/ExamSpotsView').then(m => ({ default: m.ExamSpotsView }))));
-const AlternatifCozucuView = React.lazy(() => wrapLazy(import('./components/altCozucu/AlternatifCozucuView').then(m => ({ default: m.default }))));
-const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
+const AdminPanelModal = guvenliLazy(() => import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal })));
+const ExamPdfModal = guvenliLazy(() => import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal })));
+const ContributeModal = guvenliLazy(() => import('./components/ContributeModal').then(m => ({ default: m.ContributeModal })));
+const AddCommitteeModal = guvenliLazy(() => import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal })));
+const DriveSaveModal = guvenliLazy(() => import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal })));
+const UserAuthModal = guvenliLazy(() => import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal })));
+const ProfileSettingsView = guvenliLazy(() => import('./components/settings/ProfileSettingsView').then(m => ({ default: m.ProfileSettingsView })));
+const EditMyQuestionModal = guvenliLazy(() => import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal })));
+const RevisionHistoryModal = guvenliLazy(() => import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal })));
+const AdminPastExamImporterModal = guvenliLazy(() => import('./components/AdminPastExamImporterModal').then(m => ({ default: m.AdminPastExamImporterModal })));
+const AiQuestionOptimizerModal = guvenliLazy(() => import('./components/AiQuestionOptimizerModal').then(m => ({ default: m.AiQuestionOptimizerModal })));
+const NotebookLMSyncModal = guvenliLazy(() => import('./components/NotebookLMSyncModal').then(m => ({ default: m.NotebookLMSyncModal })));
+const SubagentMonitorModal = guvenliLazy(() => import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal })));
+const SystemDiagnosticsModal = guvenliLazy(() => import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal })));
+const LectureSummariesView = guvenliLazy(() => import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView })));
+const TranscriptionsView = guvenliLazy(() => import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView })));
+const FlashcardsView = guvenliLazy(() => import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView })));
+const SearchView = guvenliLazy(() => import('./components/search/SearchView').then(m => ({ default: m.SearchView })));
+const InteractiveDeckView = guvenliLazy(() => import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView })));
+const ExamSpotsView = guvenliLazy(() => import('./components/spots/ExamSpotsView').then(m => ({ default: m.ExamSpotsView })));
+const AlternatifCozucuView = guvenliLazy(() => import('./components/altCozucu/AlternatifCozucuView').then(m => ({ default: m.default })));
+const MedicalEncyclopediaView = guvenliLazy(() => import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView })));
 // Yönetim v16 kabuğu (varsayılan); eski v14 konsolu ?kabuk=v14 ile (oturum boyunca hatırlanır, ?kabuk=v16 döndürür) ve moderatörde
-const ManageV16 = React.lazy(() => wrapLazy(import('./components/manage16/ManageV16')));
+const ManageV16 = guvenliLazy(() => import('./components/manage16/ManageV16'));
 const manageKabugu = (): 'v16' | 'v14' => {
   try {
     const k = new URLSearchParams(window.location.search).get('kabuk');
@@ -227,11 +186,13 @@ const yonetimGirisineGec = (): boolean => {
     return true;
   } catch { return false; }
 };
-const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
-const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
-const PwaInstallWelcomeModal = React.lazy(() => wrapLazy(import('./components/pwa/PwaInstallWelcomeModal').then(m => ({ default: m.PwaInstallWelcomeModal }))));
-import { PwaInstallGuideModal } from './components/pwa/PwaInstallGuideModal';
-const QuestionClusterAutomationModal = React.lazy(() => wrapLazy(import('./components/admin/QuestionClusterAutomationModal').then(m => ({ default: m.QuestionClusterAutomationModal }))));
+const ManageConsole = guvenliLazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
+const OfflineDatabaseModal = guvenliLazy(() => import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal })));
+const PwaInstallWelcomeModal = guvenliLazy(() => import('./components/pwa/PwaInstallWelcomeModal').then(m => ({ default: m.PwaInstallWelcomeModal })));
+// Giriş kapısı (yalnız oturumsuz) ve kurulum rehberi (olayla açılır) açılış paketine girmez; ikisi OnboardingV12'yi de çeker.
+const Onboarding = guvenliLazy(() => import('./components/onboarding/Onboarding').then(m => ({ default: m.Onboarding })));
+const PwaInstallGuideModal = guvenliLazy(() => import('./components/pwa/PwaInstallGuideModal').then(m => ({ default: m.PwaInstallGuideModal })));
+const QuestionClusterAutomationModal = guvenliLazy(() => import('./components/admin/QuestionClusterAutomationModal').then(m => ({ default: m.QuestionClusterAutomationModal })));
 
 const ViewFallback = () => <PageLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
@@ -1585,7 +1546,7 @@ export default function App() {
           <GirisUyarisi onKabul={() => setGirisUyarisi(false)} />
         </Suspense>
       )}
-      {girisKapisi && <Onboarding onAuthSuccess={handleAuthSuccess} />}
+      {girisKapisi && <Suspense fallback={<ViewFallback />}><Onboarding onAuthSuccess={handleAuthSuccess} /></Suspense>}
       {/* Başarım: dönem/kurul seçimi (girişte zorunlu) + ödül kutlamaları */}
       {(currentUser?.uid || aiTest) && !girisKapisi && !isManageRoute && (
         <Suspense fallback={null}>
@@ -1977,6 +1938,7 @@ export default function App() {
 
         {/* TAB 1: Soru havuzu (v11: components/pool/PoolView) */}
         {gorunenTab === 'questions' && (
+          <Suspense fallback={<ViewFallback />}>
           <PoolView
             loading={loading}
             allQuestions={standaloneQuestions}
@@ -2034,6 +1996,7 @@ export default function App() {
               onSetClaimedAnswer: handleSetClaimedAnswer,
             }}
           />
+          </Suspense>
         )}
 
         {/* Study workspace: solve, self-test, notes */}
@@ -2628,7 +2591,7 @@ export default function App() {
           />
         </Suspense>
       )}
-      <PwaInstallGuideModal />
+      <Suspense fallback={null}><PwaInstallGuideModal /></Suspense>
 
       {/* User Login/Register Modal */}
       {isAuthModalOpen && !showOnboarding && (

@@ -26,6 +26,13 @@ python3 scripts/hat/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <kl
   PDF 8.588→2.310 · yayın 15.464→8.777. Aşama özetleri toplamı 67,3k→13,4k; kalan ağırlık standart belgelerdir
   (EL_KITABI 6,3k, OGREN_ETKILESIM 5,1k, DERS_STANDARDI 2,5k). İstem başına `kural_secici.py --ozet <aşama>` (≤300 kelime).
 
+- **C6/C7 + ölçüm (2026-11-16):** E0 sonunda `hoca_kirp.py` → `hoca_dokum_kirpik.md` (değerlendirme HAM `hoca_dokum.json` okumaz;
+  tek slaytın hamı `hoca_kirp.py <klasör> --ham <s>`) ve `iskelet.py uret` → `baglam/iskelet_<anlatim|ornek_soru|cikmis_analiz>.json`
+  (kimlik/sayfa dolu; cümle/soru kimliği `iskelet.py numarala`; `<DOLDUR>` kalırsa anlatım/örnek soru kapısı HATA). Koşucu her
+  aşamaya `manifest.py uret --kapi-sonucu` satırı, yayından önce `manifest.py goster --eksik` ve bağımlılık gruplarını
+  (`mod.py BAGIMLILIK`) basar. `kosucu.py … --olc`: aşama girdisi tablosu → `meds_temp/hat_olcum/<key>.json`;
+  k2-28 toplam ≈80,2k kelime (≈128k token; önceki 175k kelime ölçümü ham döküm + bütün kaynak.md + eski kural setini sayıyordu).
+
 **Nereye baglam, nereye ham slayt (ölçümle, 2026-11-16):**
 - **Örnek soru / önem / çözücü:** `baglam/kaynak.md` + `baglam/sema.md` + `docs/asama_kurallari/<aşama>.md` okur; 33k'lık örnek
   şablon dosyasını, kapı kaynağını, standart belgelerin tamamını OKUMAZ (birebir slayt zorunluluğu yok; şablon elenir). Gerçek
