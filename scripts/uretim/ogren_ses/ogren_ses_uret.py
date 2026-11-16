@@ -89,9 +89,25 @@ def slide_metni(slide: dict, index: int) -> str:
     return temizle_markdown(metin)
 
 
+_SIRA_IMI = re.compile(r"(?:\d{1,3}|[a-zA-ZçğıöşüÇĞİÖŞÜ]|[ivxIVX]{1,4})[.)]|[-–—•*·▪►]")
+
+
 def cumlelere_ayir(metin: str) -> list[str]:
     # Cümle sonlarına göre böl (. ! ?)
     raw = [c.strip() for c in re.split(r"(?<=[.!?])\s+", metin.strip()) if c.strip()]
+    # H594: "1." / "2)" / "a." / "-" gibi tek başına sıra imi ayrı cümle olmaz, sonraki cümleye yapışır
+    # (yoksa ~0,5 sn'lik parça süre denetiminde bozuk sayılıp bütün adım reddediliyordu). Okunuş değişmez.
+    birlesik: list[str] = []
+    bekleyen = ""
+    for c in raw:
+        if _SIRA_IMI.fullmatch(c):
+            bekleyen = f"{bekleyen} {c}" if bekleyen else c
+            continue
+        birlesik.append(f"{bekleyen} {c}" if bekleyen else c)
+        bekleyen = ""
+    if bekleyen:
+        birlesik.append(bekleyen)
+    raw = birlesik
     out: list[str] = []
     for c in raw:
         # Sonunda noktalama yoksa nokta ekle

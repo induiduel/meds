@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 24 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 25 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -93,3 +93,6 @@
 
 
 - H587 — Öğren destesinde 16 klip 14–22 dakika sürüyordu; ses için kalite kapısı yoktu (2026-11-16) — betik denetler: `ses_kapisi.py`
+### H595 — Öğren sesinde tek başına sıra imi ("2.") ayrı cümle → bütün adım reddedildi (2026-11-17)
+- **Önleme kuralı:** ses için cümle bölen her işlev sıra imini/madde imini ayrı cümle bırakmaz; bölme değişikliği önce tüm gerçek metinler üzerinde eski/yeni karşılaştırmasıyla (fark yalnız hedeflenen biçimde) kanıtlanır. Süre eşiği gevşetilmez.
+

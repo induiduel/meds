@@ -23,10 +23,10 @@
 | `ICERIK_MOTORU_V3.md` | İçerik Motoru v3 — Kroki (L0/L1/L2), maliyet katmanlı model yönlendirme, canlı çizim ve te | 9303 | 2026-11-16 | AGENTS/CLAUDE, 30 betik |
 | `KMB_2B_STIL.md` | KMB 2B Düz Çizgi Film Stili (sahne kitaplığı sözleşmesi) | 919 | 2026-11-16 | 18 betik |
 | `KMB_GORSEL_ASISTAN.md` | KMB Görsel Sesli Asistan — Yol Haritası ve İşletim | 1045 | 2026-11-16 | 5 betik |
-| `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2367 | 2026-11-16 | AGENTS/CLAUDE |
+| `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2816 | 2026-11-16 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2518 | 2026-11-16 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6141 | 2026-11-17 | AGENTS/CLAUDE, 10 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6180 | 2026-11-17 | AGENTS/CLAUDE, 10 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |
@@ -39,7 +39,7 @@
 | `SORU_HAVUZU_MOTORU.md` | Soru havuzu motoru (`src/services/recall/`, hatirlama-v1 · 2026-10-13) | 940 | 2026-11-16 | 1 betik |
 | `SORU_USLUBU.md` | Örnek soru üslubu (kullanıcı kararı 2026-10-28; H119) | 344 | 2026-11-16 | 4 betik |
 | `TAHTA_OYUNLARI.md` | Tahta Oyunları — Go, Çizgi Yarışı, XOX (altyapı + kural + arayüz planı) | 1052 | 2026-11-10 | 6 betik |
-| `TAM_HAT_HIZLI_AKIS.md` | Tam içerik hattı — hızlı ve hatasız akış (kullanıcı kararı 2026-10-28) | 1668 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
+| `TAM_HAT_HIZLI_AKIS.md` | Tam içerik hattı — hızlı ve hatasız akış (kullanıcı kararı 2026-10-28) | 1987 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `TURKCE_USLUP_STANDARDI.md` | Türkçe Üslup Standardı — öğrenciye okunan ve gösterilen tüm metinler (ZORUNLU) | 477 | 2026-10-18 | 38 betik |
 | `V13_ADA_PLAN.md` | v13 "Ada" — tam yeniden tasarım planı | 875 | 2026-11-16 | 1 betik |
 | `V15_PLAN.md` | v15 "Yalın" — koda geçiş planı | 2159 | 2026-11-16 | 4 betik |
@@ -51,7 +51,7 @@
 
 | Belge | Konu | Kelime | Son değişim |
 |---|---|---:|---|
-| `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1023 | 2026-11-16 |
+| `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1209 | 2026-11-16 |
 | `GELISTIRME_YOL_HARITASI.md` | Geliştirme Yol Haritası — veri, site sağlığı, içerik hattı, ses (2026-11-16) | 1584 | 2026-11-16 |
 | `HANTALLIK_KOK_NEDENLERI.md` | Hantallık, yavaşlık ve yanlış üretim — kök neden defteri | 4391 | 2026-11-17 |
 | `ORACLE_REALTIME_DATABASE_REHBERI.md` | Oracle VM Üzerinde Realtime Veritabanı Mimarisi ve Çözüm Rehberi | 640 | 2026-10-12 |
