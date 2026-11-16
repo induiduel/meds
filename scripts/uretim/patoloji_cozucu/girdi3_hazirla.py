@@ -1,6 +1,6 @@
 """3. tur girdisi: canlı ders metninden yeni sorular. girdi3/<kod>.json"""
 import json, os
-A = os.path.dirname(os.path.abspath(__file__))
+A = os.environ.get('PATOLOJI_COZUCU_KOK') or '/home/indu/medsor/meds_temp/patoloji_ornek26/cozucu'  # kardeşleriyle aynı veri klasörü (H584)
 M = '/home/indu/medsor/meds/data/sesli_anlatim/metin'
 CANLI = {'01':'k1-02-patolojiye-giris','02':'k1-04-hucre-hasari-ve-nekroz-i','03':'k1-05-hucre-hasari-ve-nekroz-ii','04':'k1-03-hucresel-adaptasyonlar',
 '05':'k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar','06':'k1-08-hucresel-yaslanma','07':'k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese',
