@@ -255,3 +255,9 @@
 - **Kök neden:** `au-*` kuralları yalnız `src/styles/rebuild.css` §44'teydi; o dosyayı yalnız `src/main.tsx` içe aktarır. `src/manage-main.tsx` aynı giriş bileşenini (`EpostaBaglantiGiris`) çizer ama yalnız `yonetim-temel.css` alır; `ui-spin` animasyonu da `appearance.css`'te kalıyordu.
 - **Çözüm:** §44 değişmeden `src/styles/giris-au.css`'e taşındı (+ `@keyframes ui-spin`); iki giriş dosyası da içe aktarır. Ana sitede kural sırası aynı.
 - **Kural:** iki girişin (index/manage) ortak kullandığı bileşenin stili ortak, kendi başına bir CSS dosyasında durur ve iki girişten de içe aktarılır; yalnız ana sitenin toplu CSS'ine gömülmez.
+
+## H603 — Bilinmeyen adres 200 dönüyordu; ekranda "Sayfa bulunamadı" çıksa da sunucu sayfayı var sayıyordu (2026-11-17)
+- **Belirti:** `curl /yokboylesayfa` → 200 + boş SPA kabuğu. Ön yüz `BulunamadiV15` ekranını gösteriyordu, ama arama motoru, bağlantı denetleyicisi ve izleme bozuk adresi gerçek sayfa sayıyordu.
+- **Kök neden:** `server.ts` SPA geri dönüşü (`app.get('*')`) her yola koşulsuz `index.html` + 200 gönderiyordu. "Bu adres var mı" kararı yalnız istemcideki `src/router.ts::parseLocation` içindeydi; sunucunun bu bilgiye erişimi yoktu.
+- **Kalıcı çözüm:** Sunucu aynı çözücüyü tembel `import('./src/router')` ile yükler (`spaDurumKodu`); `route === 'bulunamadi'` ise durum 404, gövde yine `index.html` (ekran aynı). Çözücü yüklenemezse 200 (site kırılmaz, günlüğe uyarı). Yerel sınama: kaynak koddaki 107 iç bağlantının hiçbiri 404'e düşmedi; `/yokboylesayfa`, `/x/y/z`, `/meds/yokboyle` → 404; `/manage*` ve varlık 404'ü değişmedi.
+- **Önleme kuralı:** Sunucuda ikinci bir rota listesi YAZILMAZ; yeni sayfa `router.ts`'e (BY_SEGMENT/ALIASES) ya da `siteHaritasi.ts` çevirisine eklenince sunucu da kendiliğinden 200 verir. `router.ts`/`siteHaritasi.ts` modül yüklenirken `window`/`import.meta.glob` çağırmamalı (sunucu tsx ile içe aktarıyor; bu çağrılar yalnız fonksiyon içinde, try ile).

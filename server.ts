@@ -12155,6 +12155,18 @@ async function archiveDistAssets(srcDir: string, archiveDir: string, live: Set<s
   }
 }
 
+// SPA geri dönüşünün durum kodu (H603): ön yüz rota çözücüsü tek kaynak — ikinci bir rota listesi YAZILMAZ.
+let rotaCozucu: Promise<((l: { pathname: string; search: string; hash: string }) => { route: string }) | null> | null = null;
+async function spaDurumKodu(yol: string): Promise<number> {
+  rotaCozucu ??= import('./src/router').then((m: any) => m.parseLocation).catch((e) => {
+    console.warn('[404] rota çözücü yüklenemedi, bilinmeyen adresler 200 döner:', e?.message || e);
+    return null;
+  });
+  const coz = await rotaCozucu;
+  if (!coz) return 200;
+  try { return coz({ pathname: yol, search: '', hash: '' }).route === 'bulunamadi' ? 404 : 200; } catch { return 200; }
+}
+
 async function startServer() {
   const hasDist = fs.existsSync(path.resolve(__dirname, 'dist', 'index.html'));
   const isProd = process.env.NODE_ENV === 'production' || (hasDist && process.env.VITE_DEV !== '1');
@@ -12281,7 +12293,10 @@ async function startServer() {
       // ?kabuk=v14 (eski konsol) manage-main içinde tam uygulamaya düşer. manage.html yoksa (eski dist) index.html.
       const yonetimHtml = path.resolve(__dirname, 'dist', 'manage.html');
       if (/^\/(meds\/)?manage(\/|$)/.test(req.path) && fs.existsSync(yonetimHtml)) return res.sendFile(yonetimHtml);
-      res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+      // Bilinmeyen adres (H603): ön yüzle AYNI çözücü (src/router.ts parseLocation) 'bulunamadi' diyorsa durum kodu 404.
+      // Gövde yine index.html: ekranda BulunamadiV15 açılır (Ara / Bugün'e dön). Eskiden her yol 200 dönüyordu; arama motoru
+      // ve bağlantı denetleyicileri bozuk adresi gerçek sayfa sanıyordu. Çözücü yüklenemezse 200 (site kırılmaz).
+      void spaDurumKodu(req.path).then((kod) => res.status(kod).sendFile(path.resolve(__dirname, 'dist', 'index.html')));
     });
   }
 
