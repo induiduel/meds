@@ -124,3 +124,39 @@
      ve hoca vurgu katmanına eksiksiz girer. Bir derse ait birden çok ses kaydı varsa (ör. TSSB 1 + 2) hepsi dökülür, sırayla birleştirilir.
    - Örnek sorular ve hocanın sorabileceği sorular hoca üslubunda (kural 25/26), çıkmışlara kalıp/kök düzeyinde benzer, önem listesinden ve
      yalnız o slayta kadar işlenmiş bilgiden (kural 7) kurulur.
+
+30. **Ek Modüller: Seçmeli / Geçici Ders İçeriği (kullanıcı kararı 2026-11-10, H544):**
+   - Kurul müfredatı dışındaki dersler (ör. seçmeli "Yürüyüş ve Kampçılık") `Ders çalış › Ek modüller` sayfasında yaşar (`/dersler/ek-moduller/kurul<N>/<modül>`);
+     kurul hattına, ders kayıt defterine ve Öğren destelerine karışmaz. Veri `meds/src/data/ek_moduller/` (`index.json` + `<modül>/b<N>.json`, `sinav_oncesi.json`,
+     `genel_sorular.json`, `hoca_sorulari.json`, `klip.json`), görseller ve PDF'ler `meds/public/ek_moduller/<modül>/`, ekran `src/components/v15/ekModul/`.
+   - **Önce hocanın materyali istenir** (not, sunum, çalışma sorusu). Varsa esas kaynak odur: her hoca sorusunun bilgisi anlatımda geçer, hocayla çelişen bilgi yazılmaz,
+     sorular hoca üslubunda dönüştürülerek kurulur; hocanın kendi içinde çeliştiği yerde en çok yinelenen değer + ekranda not. Yazım kuralları `meds/scripts/uretim/ek_modul/TALIMAT.md`.
+   - Her modülde: sesli ders + spot anlatıcı + sınav öncesi anlatıcı (EMA, DAİMA GPU: `cozucu_ses_gpu.sh meds/scripts/uretim/ek_modul/ses.py --modul <modül>`), konu soruları (yalnız o konuya
+     kadar öğretilen bilgi) + genel tekrar soruları + sınav denemesi (sesli çözümlü), küçük etkinlikler, PDF kitapçıkları (`scripts/uretim/ek_modul/pdf.py`). **Ekran metni ile okuma
+     metni ayrıdır**: ekranda not (`ekran`), seste konuşma metni (`ses`); okuma metni ekranda gösterilmez.
+   - **Sesli ders PDF ile birlikte ilerler (2026-11-10, H546):** ses ve ders kitapçığı üretildikten sonra `meds/.venv-ocr/bin/python meds/scripts/uretim/ek_modul/pdf_esle.py --modul <modül>`
+     (`pdf_esle.json`: sayfa, bölüm kutusu, cümle zamanı, cümle → not maddesi; CPU, LLM yok). Ekranda "PDF ile" kipi (`EkPdfDers.tsx`). Ses ya da kitapçık değişince yeniden çalıştırılır; eşleşmeyen cümleye madde uydurulmaz.
+   - Kapı: `python3 meds/scripts/uretim/ek_modul/dogrula.py --modul <modül>` 0 HATA + bağımsız denetçi GEÇER olmadan ses ve yayın yok. Klipler `meds/data/ek_moduller/ses/<modül>/`
+     (git dışı, Oracle'a rsync); sunucu ucu `/api/ek-modul/ses/:modul/:klip.mp3` (`src/services/ekModulSes.ts`).
+
+31. **Model Sağlayıcısı: OpenDesign Geçidi (ZORUNLU, kullanıcı kararı 2026-11-13):**
+   - Claude aboneliği yok; masaüstü uygulaması, terminal `claude` ve ajan hattı **OpenDesign geçidi** üzerinden
+     DeepSeek/GLM/GPT/Kimi/MiniMax/MiMo/HY4 modelleriyle çalışır. Yerel köprü `opendesign-kopru.service`
+     (127.0.0.1:8787, stdlib python) Anthropic rota adlarını geçit kimliklerine çevirir; tek kaynak
+     `meds/scripts/altyapi/opendesign/rotalar.json`, kurulum/denetim `bash meds/scripts/altyapi/opendesign/kur.sh` / `--kontrol`
+     (`kopru.py --doctor` eşleme tablosunu `otomasyon/llm/opendesign.py::ESLEME` ile karşılaştırır, 0 HATA şart).
+   - Model kimliği koda yazılmaz: `otomasyon/llm/model_sec.py::ajan_model(rol)` (yazar/denetci/hizli) kullanılır;
+     yeni betikte `--model <sabit ad>` YASAK. Yazar ≠ denetçi kuralı için denetçi ayrı aileye bakar (glm/gpt).
+   - CLI'sız ortamda (Oracle) `otomasyon/llm/opendesign.py` doğrudan `POST /v1/messages` gönderir; anahtar yalnız
+     sunucu `.env`'inde (`MEDS_OPENDESIGN_KEY`, `MEDS_OPENDESIGN_URL`) durur, istemciye/repoya yazılmaz. Site AI'sı
+     (`src/services/aiProvider.ts`) sırayla Yerel GPU → OpenDesign → Groq → Muse Spark → Gemini dener.
+   - **Kural 20 aynen geçerli:** taşıma hiçbir işi kendiliğinden başlatmaz; bütün LLM çağrıları `llm_kilit.py`
+     arkasında ve `MEDS_LLM_ELLE=1` (ya da panel bayrağı) ister. Köprü yalnız gelen isteği iletir.
+   - Kodlama/tasarım kalitesi için resmî eklentiler `bash meds/scripts/altyapi/claude_eklenti/kur.sh` ile kurulur/denetlenir
+     (typescript-lsp, pyright-lsp, frontend-design, code-review, code-simplifier, feature-dev, claude-security,
+     security-guidance, pr-review-toolkit, plugin-dev + global LSP paketleri); kapılar `npm run lint` 0 hata ve
+     `npx vite build`.
+   - **Artifact tasarımı:** claude.ai Artifact 3P geçit kipinde çalışmadığı için eşdeğeri yereldir —
+     `meds/scripts/altyapi/artifact_studio/studyo.py <reçete.json>` tek dosyalık çevrimdışı HTML üretir, `kur.sh` skill'i
+     (`.claude/skills/artifact-studyo`) ve önizleme sunucusunu **oturum kökünün** `.claude/launch.json`'una yazar.
+     Veri uydurulmaz; kaynak alanı yazılır; büyüklükleri ~10× farklı seriler çift eksende (`"eksen": "sag"`) çizilir.

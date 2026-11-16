@@ -183,6 +183,7 @@ def rel(p: Path) -> str:
 # --sahne (commit kancası): commit'e girecek içeriği denetle. Sahnelenmemiş değişikliği olan izlenen dosyalar index'ten
 # okunur, izlenmeyen dosyalar taranmaz — başka oturumun yarım değişikliği temiz bir commit'i durdurmasın (2026-11-16).
 SAHNE_ATLA: set = set()
+SAHNE_DEGISEN: set = set()  # sahnelenmemiş değişikliği olan izlenen dosyalar (D8 için)
 
 
 def sahne_kipi() -> None:
@@ -190,6 +191,7 @@ def sahne_kipi() -> None:
         r = subprocess.run(["git", *a, "-z"], cwd=MEDS, capture_output=True, text=True, timeout=20)
         return {x for x in r.stdout.split("\0") if x}
     degisen = git_z("diff", "--name-only")
+    SAHNE_DEGISEN.update(degisen)
     SAHNE_ATLA.update(git_z("ls-files", "--others", "--exclude-standard"))
     if not degisen:
         return
@@ -408,8 +410,15 @@ def d8() -> None:
                   SCRIPTS / "altyapi" / "nereye.py", SCRIPTS / "altyapi" / "hata_dizini.py"]
     isler = [(u, subprocess.Popen([sys.executable, str(u), "--denetle"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True))
              for u in ureticiler]
+    # --sahne: üreticiler çalışma ağacını okur. Girdisinde başka oturumun sahnelenmemiş değişikliği varsa bayatlık o
+    # değişikliktendir → HATA değil UYARI (H596; commit'e girmeyen iş temiz commit'i durdurmasın).
+    girdi = {"betik_haritasi.py": ("scripts/",), "belge_haritasi.py": ("docs/",), "nereye.py": ("docs/", "scripts/"),
+             "hata_dizini.py": ("docs/hatalar/", "docs/KURUL2_YAPILMAYACAK_HATALAR.md")}
     for u, pr in isler:
         cikti = pr.communicate()[0].strip()
+        if pr.returncode and any(d.startswith(girdi[u.name]) for d in SAHNE_DEGISEN):
+            bul("D8", "UYARI", u.name, None, "bayat görünüyor ama girdisinde sahnelenmemiş değişiklik var (başka oturum?) — o iş commit'lenirken yenilenir")
+            continue
         if pr.returncode:
             if u.name == "nereye.py":
                 bul("D8", "HATA", "docs/yonlendirme.json", None, "görev kataloğunda kırık yol/kural — python3 scripts/altyapi/nereye.py --denetle")

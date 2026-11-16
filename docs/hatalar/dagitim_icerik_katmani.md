@@ -37,3 +37,9 @@ Sunucunun src/data'ya katmansız yazımı ve git/depo güvenliği maddeleri.
 - **Kök neden:** `.gitignore` yalnız izlenmeyen dosyayı durdurur; kural eklenmeden önce işlenmiş dosyalar dizinde kalır. Kural eklenirken `git rm --cached` yapılmamıştı.
 - **Çözüm:** `git ls-files -ci --exclude-standard | grep '\.mp3$'` → `git rm --cached` (dosyalar diskte duruyor). Önce doğrulandı: kod rsync'i `/data`'yı zaten dışlar, Oracle'da her kökte en az izlenen kadar MP3 var. `kayit.json` kayıtları izlenmeye devam ediyor.
 - **Kural:** `.gitignore`'a dizin ekleyen aynı commit'te `git ls-files -ci --exclude-standard` boş mu diye bakar. Geçmişteki nesneler `.git`'te kalır; küçültmek geçmiş yeniden yazımı ister (kullanıcı kararı).
+
+## H596 — Commit kancası D8: başka oturumun belgeleri haritayı "bayat" gösterip temiz commit'i durduruyordu (2026-11-17)
+- **Belirti:** yalnız `docs/KURALLAR_ICERIK_HATTI.md` sahnelenmişken kanca `docs/hatalar/_dizin.json` bayat dedi.
+- **Kök neden:** H585'teki sahne kipi dosya okumalarını index'e çevirdi ama D8 üreticileri alt süreçte çalışma ağacını okur; başka oturumun sahnelenmemiş `docs/hatalar/*.md` düzenlemesi dizini bayatlatıyordu.
+- **Çözüm:** `--sahne` kipinde üreticinin girdi alanında (`scripts/`, `docs/`, `docs/hatalar/`) sahnelenmemiş değişiklik varsa D8 UYARI'ya iner; tam kipte HATA aynen.
+- **Kural:** commit kancası yalnız commit'e girecek içerikten HATA üretir; çalışma ağacından türeyen sonuç en çok UYARI'dır.
