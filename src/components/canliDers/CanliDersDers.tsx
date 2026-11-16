@@ -81,6 +81,8 @@ function elementZoom(el: Element | null | undefined): number {
 }
 
 const PdfDocView = guvenliLazy(() => import('../learn/pdf/PdfDocView'));
+// PDF parçası (pdfjs ~400 KB) ders verisi beklenirken koşut insin; eskiden ders JSON'u gelip bölme çizilene dek istenmiyordu.
+if (typeof window !== 'undefined') void import('../learn/pdf/PdfDocView').catch(() => {});
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
 import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, cdTerimKatmani, usePdfGorunum } from './CdTerimKatman';
 

@@ -435,3 +435,4 @@
 - **H597** · "Kapı girdisi yoksa Traceback, ajan içerik hatası sanıyor": çıkış kodu ayrımı yok → `kos.py` girdi denetimi (2) + çökme ayrımı (70) → hatalar/betik_altyapi.md
 - **H601** · "Ücretsiz bulut LLM çağrı noktası ve 11 betik kilitsiz (kural 20)": kilit yalnız Claude/ajan CLI yoluna eklenmişti → `cloud_llm` kilitliyken None, betikler çıkış 75, sunucu yönetici yolunda `LLM_PANEL_ENV` → hatalar/betik_altyapi.md
 - **H603** · "Olmayan adres 200 dönüyor": SPA geri dönüşü koşulsuz 200 → sunucu ön yüz çözücüsüyle (`parseLocation`) 404 → hatalar/on_yuz_sayfa_denetimi.md
+- **H602** · "Sesli ders telefon/tablet: oynatıcı düğmeleri 30–34 px, tablette başlık kesik, PDF parçası geç": minimal çubuk ölçüleri medya sorgusuz dokunmatiğe gidiyordu, PdfDocView veri gelince isteniyordu → hatalar/on_yuz_oynatici_ders.md

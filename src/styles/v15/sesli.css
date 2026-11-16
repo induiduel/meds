@@ -402,3 +402,36 @@
   :root[data-v15='on'] :is(.cd15-pb, .cd-ders .cd-pdf-bar .cd-cik-btn) { position: relative; }
   :root[data-v15='on'] :is(.cd15-pb, .cd-ders .cd-pdf-bar .cd-cik-btn)::after { content: ''; position: absolute; inset: -6px 0; }
 }
+
+/* Telefon/tablet oynatıcı (2026-11-17): "minimal alt çubuk" masaüstü ölçüsüyle (sar 34/30 px, hız 31×28, konum çubuğu 16–18 px)
+   dokunmatik ekrana da gidiyordu; en çok dokunulan düğmeler 44 px altındaydı. Dokunmatikte ve ≤1024 px'te taşıma düğmeleri 44,
+   oynat 48, hız görünür hap, konum çubuğunun dokunma yüksekliği 28 px (iz aynı incelikte kalır, .cd-cubuk dikey ortalar). */
+@media (pointer: coarse), (max-width: 1024px) {
+  :root[data-v15='on'] .cd15-oyn { gap: 2px; padding: 8px 12px; }
+  :root[data-v15='on'] .cd15-zaman .cd-cubuk { height: 28px; }
+  :root[data-v15='on'] .cd15-zaman .cd-cubuk .cd-ipucu { bottom: 30px; }
+  :root[data-v15='on'] .cd15-zaman .cd-sure { font-size: .78rem; }
+  :root[data-v15='on'] .cd15-oyn .cd-bparca, :root[data-v15='on'] .cd15-oyn .cd-bparca.is-etkin { height: 5px; }
+  :root[data-v15='on'] .cd15-oyn .cd-tutamac { width: 14px; height: 14px; }
+  :root[data-v15='on'] .cd15-den-orta { gap: 2px; }
+  :root[data-v15='on'] .cd15-den-orta .cd-ib { width: 44px; height: 44px; color: var(--color-ink); }
+  :root[data-v15='on'] .cd15-den-orta .cd-ib svg { width: 22px; height: 22px; }
+  :root[data-v15='on'] .cd15-oyn .cd-oynat.is-buyuk { width: 48px; height: 48px; }
+  :root[data-v15='on'] .cd15-oyn .cd-oynat.is-buyuk svg { width: 22px; height: 22px; }
+  :root[data-v15='on'] .cd15-hiz { min-width: 48px; height: 36px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 999px;
+    background: var(--color-white); color: var(--color-ink); font-size: .84rem; position: relative; }
+  :root[data-v15='on'] .cd15-hiz::after { content: ''; position: absolute; inset: -4px 0; }
+  :root[data-v15='on'] .cd15-daha-b { width: 44px; height: 44px; }
+  :root[data-v15='on'] .cd15-daha-b svg { width: 22px; height: 22px; }
+  /* Paragraf yıldız/kopya (30 px) ve "örnek sorular" çipi (26 px): görünüm aynı, dokunma alanı ::after ile büyür */
+  :root[data-v15='on'] .cd-ders .cd-p-araclar :is(.cd-p-yildiz, .cd-p-kopya) { position: relative; }
+  :root[data-v15='on'] .cd-ders .cd-p-araclar :is(.cd-p-yildiz, .cd-p-kopya)::after { content: ''; position: absolute; inset: -7px -1px; }
+  :root[data-v15='on'] .cd-ders .cd-cikc::after { content: ''; position: absolute; inset: -9px -4px; }
+}
+/* Dar telefonlarda taşıma satırı tek satıra sığsın (4 düğme + oynat + hız + ⋯) */
+@media (max-width: 380px) { :root[data-v15='on'] .cd15-den-orta .cd-ib { width: 40px; height: 44px; } :root[data-v15='on'] .cd15-den { gap: 4px; } }
+@media (max-width: 340px) { :root[data-v15='on'] .cd15-den-orta .cd-ib { width: 34px; } :root[data-v15='on'] .cd15-hiz { min-width: 42px; padding: 0 6px; } :root[data-v15='on'] .cd15-daha-b { width: 40px; } }
+/* Tablet (768–1099 px): görünüm seçici başlığa ~210 px bırakıyor, tek satır "Tümör Biyolojisi ve…" diye kesiliyordu; iki satıra sarılır */
+@media (min-width: 768px) and (max-width: 1099px) {
+  :root[data-v15='on'] .cd15-bas .cd15-ad { font-size: 17px; line-height: 1.2; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow-wrap: break-word; }
+}
