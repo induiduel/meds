@@ -1,0 +1,4687 @@
+{
+ "ders": "Tıbbi Farmakoloji",
+ "konular": [
+  {
+   "konu": "Pankreatik Hormonlar ve Antidiyabetik İlaçlar",
+   "n_soru": 36,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.36,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.28,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.22,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.611,
+     "olumsuz": 0.111,
+     "en_tipik": 0.083,
+     "onculu": 0.083,
+     "sayi": 0.056,
+     "yanlis_bul": 0.028,
+     "vaka": 0.028
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.583,
+     "L2_anlama_iliski": 0.389,
+     "L3_uygulama": 0.028
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.806,
+     "bilesik_yer_degistirmeli": 0.139,
+     "ayni_ailede_komsu_kavram": 0.056,
+     "mutlak_ifade_tuzagi": 0.028,
+     "sayisal_yakin_deger": 0.028
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.47,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Gliburid",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi tip 2 diyabet tedavisinde pankreasın beta hücrelerinden insülin sekresyonunu artırarak etki yapmaktadır?",
+     "kez": 4,
+     "farkli_kok": 4,
+     "yillar": [
+      2022,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Glukagon",
+     "ornek_kok": "Bilinç kaybı meydana gelmiş ağır hipoglisemide eğer intravenöz tedavi uygulanamıyorsa, aşağıdaki hormonlardan hangisi kullanılır?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Repaglinid",
+     "ornek_kok": "Hızlı etki başlangıcı nedeniyle postprandiyal glukoz dalgalanmalarının kontrolünde endike olan insülin sekretagogu meglitinid grubu ilaç aşağıdakilerden hangisidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Diyet ve egzersizle kan glukoz kontrolü sağlanamayan Tip 2 Diyabetes Mellitus hastaları",
+     "ornek_kok": "Diyabetes mellitus tanılı hastalarda oral antidiyabetik (OAD) ilaç tedavisi verilmesi uygun olan hasta grubu aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Tolbutamid",
+     "ornek_kok": "Kısa yarı ömrü nedeniyle yaşlı tip 2 diyabetikler için en güvenilir sülfonilüre türevi ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "İnsülin aspart",
+     "ornek_kok": "Aşağıdaki insülinlerden hangisi hızlı etkili insülin olarak kullanılmaktadır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "İnsülin glarjin",
+     "ornek_kok": "Aşağıdakilerden hangisi hızlı/kısa etkili insülinlerden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Hızlı etki başlangıcı nedeniyle postprandiyal glukoz dalgalanmalarının kontrolünde endike olan insülin sekretagogu meglitinid grubu ilaç aşağıdakilerden hangisidir?",
+    "Diyabetes mellitus tanılı hastalarda oral antidiyabetik (OAD) ilaç tedavisi verilmesi uygun olan hasta grubu aşağıdakilerden hangisidir?",
+    "Kısa yarı ömrü nedeniyle yaşlı tip 2 diyabetikler için en güvenilir sülfonilüre türevi ilaç aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Diüretikler",
+   "n_soru": 33,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.48,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.24,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.15,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.515,
+     "onculu": 0.242,
+     "en_tipik": 0.121,
+     "olumsuz": 0.061,
+     "yanlis_bul": 0.03,
+     "vaka": 0.03
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.545,
+     "L1_hatirlama": 0.424,
+     "L3_uygulama": 0.03
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.758,
+     "bilesik_yer_degistirmeli": 0.242,
+     "ayni_ailede_komsu_kavram": 0.212
+    },
+    "sik_kelime_ort": 2.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.18,
+    "ort_benzerlik": 0.77
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Metabolik asidoz",
+     "ornek_kok": "Karbonik anhidraz inhibitörleri aşağıdakilerin hangisinde kullanılmaz?",
+     "kez": 6,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Eplerenon",
+     "ornek_kok": "Aldosteron kompetitif antagonisti olarak çalışan ve diürez yapan ajan aşağıdakilerden hangisidir?",
+     "kez": 6,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "I. İdrarda bikarbonat atılımının artması\nII. İdrarda klor atılımının artması\nIII. İdrarda potasyum atılımının artması\nIV. İdrarda fosfat atılımının artması\nYukarıdakilerden hangisi veya hangileri tiaz",
+     "kez": 6,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Mannitol",
+     "ornek_kok": "Aşağıdakilerden hangisi ozmotik diürez yapar?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Torsemid",
+     "ornek_kok": "En hızlı emilimi olan diüretik hangisidir?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Karbonik anhidraz inhibitörleri",
+     "ornek_kok": "'Yeşil adımlar' etkinliği kapsamında ders hocası, sizin de dahil olduğu tıp fakültesi 3. sınıf öğrencilerinden toplam 10 kişiyi Ağrı Dağı'nın zirvesine tırmandıracaktır. Dağ hastalığını (akut dağ hast",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Spironolakton",
+     "ornek_kok": "Aşağıdakilerden hangisi tiazid grubu (tiazid ve tiazid benzeri) bir diüretik değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Furosemid",
+     "ornek_kok": "Aşağıdakilerden hangisi ADH'nin renal antidiüretik etkisini potansiyalize etmez?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 8,
+   "tipik_kok_ornekleri": [
+    "Karbonik anhidraz inhibitörleri aşağıdakilerin hangisinde kullanılmaz?",
+    "En hızlı emilimi olan diüretik hangisidir?",
+    "Aldosteron kompetitif antagonisti olarak çalışan ve diürez yapan ajan aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Tiroit ve Antitiroid İlaçlar",
+   "n_soru": 24,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.46,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.21,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.5,
+     "dogru_ifade": 0.25,
+     "dogrudan": 0.25
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.708,
+     "L1_hatirlama": 0.292
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.542,
+     "ayni_turden_ayri_kavram": 0.375,
+     "ayni_ailede_komsu_kavram": 0.375,
+     "sayisal_yakin_deger": 0.042,
+     "mutlak_ifade_tuzagi": 0.042
+    },
+    "sik_kelime_ort": 5.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.12,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İlaçlara direnç çapraz olduğundan biri bırakıldığında diğerine başlanmaz",
+     "ornek_kok": "Tiyoamid grubu antitiroid ilaçlar için aşağıdakilerden hangisi doğrudur?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "I. Amiodaron\nII. Propiltiyourasil\nIII. Metimazol\nIV. Tiyosiyanat\nAntitiroid etkisini tiroid bezine iyodür girişini inhibe ederek gösteren ilaç hangisinde/hangilerinde doğru verilmiştir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Metimazol",
+     "ornek_kok": "Aşağıdakilerden hangisi hipertiroidizm tedavisinde kullanılır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Tiyoamid grubu antitiroid ilaçlar için aşağıdakilerden hangisi doğrudur?",
+    "Aşağıdakilerden hangisi hipertiroidizm tedavisinde kullanılır?",
+    "I. Amiodaron\nII. Propiltiyourasil\nIII. Metimazol\nIV. Tiyosiyanat\nAntitiroid etkisini tiroid bezine iyodür girişini inhibe ederek gösteren ilaç hangisinde/hangilerinde doğru verilmi"
+   ]
+  },
+  {
+   "konu": "İmmünofarmakoloji",
+   "n_soru": 23,
+   "yillar": [
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.3,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.26,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.22,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.739,
+     "en_tipik": 0.13,
+     "olumsuz": 0.043,
+     "tanim": 0.043,
+     "sayi": 0.043
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.652,
+     "L2_anlama_iliski": 0.348
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.957,
+     "bilesik_yer_degistirmeli": 0.043
+    },
+    "sik_kelime_ort": 1.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.48,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hidroksiklorokin",
+     "ornek_kok": "İmmünosüpresif özellikler gösteren antimalaryal bir ajan olan ilaç aşağıdakilerden hangisidir?",
+     "kez": 8,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Sirolimus",
+     "ornek_kok": "Kalsinörin inhibitörlerinin uygulanması durumunda majör endişenin nefrotoksisite olması nedeniyle sıklıkla solid organ ve kök hücre transplantasyonunda ilk tercih edilen immünosüpresif ajan aşağıdakil",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "IgE",
+     "ornek_kok": "Penisilin gibi ilaçlara karşı tip I (ani) aşırı duyarlılık alerjisi geliştiğinde, ilaç-hapten birleşiğine karşı spesifik olarak aşağıdaki antikorlardan hangisi oluşmaktadır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Kapromab pendetid",
+     "ornek_kok": "Aşağıdaki monoklonal antikorlardan hangisi prostat kanseri hastalarında ve prostatektomi sonrası yükselen prostat spesifik antijen düzeylerine sahip olgularda hastalığın belirlenmesinde uygulanan immü",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "İnfliksimab",
+     "ornek_kok": "Aşağıdakilerden hangisi biyolojik ajan olarak sınıflandırılmış bir ilaçtır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "İmmünosüpresif özellikler gösteren antimalaryal bir ajan olan ilaç aşağıdakilerden hangisidir?",
+    "Kalsinörin inhibitörlerinin uygulanması durumunda majör endişenin nefrotoksisite olması nedeniyle sıklıkla solid organ ve kök hücre transplantasyonunda ilk tercih edilen immünosüpr",
+    "Aşağıdaki monoklonal antikorlardan hangisi prostat kanseri hastalarında ve prostatektomi sonrası yükselen prostat spesifik antijen (PSA) düzeylerine sahip olgularda hastalığın beli"
+   ]
+  },
+  {
+   "konu": "Gonadal Hormonlar, inhibitör ve replasman ilaçları",
+   "n_soru": 20,
+   "yillar": [
+    2018,
+    2019,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.15,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.15,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.45,
+     "olumsuz": 0.3,
+     "yanlis_bul": 0.1,
+     "onculu": 0.1,
+     "sayi": 0.05
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.65,
+     "L2_anlama_iliski": 0.35
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.85,
+     "bilesik_yer_degistirmeli": 0.15,
+     "mutlak_ifade_tuzagi": 0.05,
+     "ayni_ailede_komsu_kavram": 0.05
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.65
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Levonorgestrel",
+     "ornek_kok": "Subdermal uygulanan kontraseptif yöntemlerden Norplant'ın etken maddesi hangisidir?",
+     "kez": 6,
+     "farkli_kok": 3,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Etonogestrel",
+     "ornek_kok": "Vajinal halkanın (NuvaRing) içindeki progestin türü aşağıdakilerden hangisidir?",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Uterus içinde inflamasyon yapmaları",
+     "ornek_kok": "Aşağıdakilerden hangisi kombine oral kontraseptiflerin etkilerinden değildir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Siproteron",
+     "ornek_kok": "Aşağıdaki gonadal hormon ilaçlarından hangisi anabolik steroid değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Subdermal uygulanan kontraseptif yöntemlerden Norplant'ın etken maddesi hangisidir?",
+    "Aşağıdakilerden hangisi kombine oral kontraseptiflerin etkilerinden değildir?",
+    "Vajinal halkanın (NuvaRing) içerdiği progestin aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Antikoagülanlar ve antitrombotikler",
+   "n_soru": 20,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.5,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.2,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.15,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.35,
+     "olumsuz": 0.2,
+     "onculu": 0.2,
+     "sayi": 0.1,
+     "yanlis_bul": 0.1,
+     "en_tipik": 0.05
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.65,
+     "bilesik_yer_degistirmeli": 0.35,
+     "ayni_ailede_komsu_kavram": 0.2
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Enoksaparin",
+     "ornek_kok": "Hangisi akut koroner sendromların tedavisinde kullanılan bir antiplatelet ilaç değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Aspirin",
+     "ornek_kok": "NSAİİ Normal dozunda, 500mg Tb formunda reçete endikasyonu ‘16 yaş ve üstü adolesanlar ve yetişkinlerde; hafif ve orta dereceli akut ağrılarda ve ateşli durumlarda endikedir. İltihaplı romatizmal hast",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Antitrombin III",
+     "ornek_kok": "Aşağıdakilerden hangisinin temel etkisi fibrinoliz değildir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisinin temel etkisi fibrinoliz değildir?",
+    "Normal dozunda 500 mg tablet formunda reçete edilen, endikasyonu \"16 yaş ve üstü adolesanlar ve yetişkinlerde; hafif ve orta dereceli akut ağrılarda ve ateşli durumlarda endikedir.",
+    "Bir hastada fraksiyonlanmamış heparin tedavisine yanıt olarak şiddetli trombositopeni gelişmiş ve hastanın parenteral antikoagülasyon ihtiyacı devam etmektedir. Hastanın hangi ilaç"
+   ]
+  },
+  {
+   "konu": "Sülfonamidler, Trimetoprim ve Kinolonlar",
+   "n_soru": 19,
+   "yillar": [
+    2020,
+    2021,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.26,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.26,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.16,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.421,
+     "dogru_ifade": 0.158,
+     "yanlis_bul": 0.158,
+     "onculu": 0.105,
+     "olumsuz": 0.053,
+     "sayi": 0.053,
+     "en_tipik": 0.053
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.579,
+     "L2_anlama_iliski": 0.421
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.737,
+     "bilesik_yer_degistirmeli": 0.211,
+     "sayisal_yakin_deger": 0.053,
+     "ayni_ailede_komsu_kavram": 0.053
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sülfonamidler gebeliğin geç döneminde uygulandığında bazal ganglionlarda işlev bozukluğu o",
+     "ornek_kok": "Sülfonamidlerle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Kinolonlar",
+     "ornek_kok": "Kondrotoksik etkilerinden dolayı büyüme çağındaki çocuklarda ve gebelerde kontrendike olan antibiyotik grubu aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "Toplum kökenli pnömoni tedavisi için uygundur.",
+     "ornek_kok": "Trimetoprim-sülfametoksazol (TMP-SMX) kombinasyonuna ilişkin hangi ifade **yanlıştır**?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "II ve IV",
+     "ornek_kok": "Aşağıda sülfametoksazol ve trimetoprimin etki mekanizmasını açıklayan ifadeler yer almaktadır.\nI. Trimetoprim, endojen bir substrat olan para-aminobenzoik asit (PABA) ile yapısal benzerliği nedeniyle ",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Sülfonamidlerle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Aşağıda sülfametoksazol ve trimetoprimin etki mekanizmasını açıklayan ifadeler yer almaktadır.\nI. Trimetoprim, endojen bir substrat olan para-aminobenzoik asit (PABA) ile yapısal b",
+    "Aşağıdakilerden hangisi kinolon grubu antibakteriyel ilaçlardan **değildir**?"
+   ]
+  },
+  {
+   "konu": "Hipotalamohipofizer Sistem İlaçları",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.37,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.32,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.26,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.579,
+     "onculu": 0.211,
+     "dogru_ifade": 0.105,
+     "yanlis_bul": 0.053,
+     "vaka": 0.053
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.526,
+     "L2_anlama_iliski": 0.421,
+     "L3_uygulama": 0.053
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.579,
+     "bilesik_yer_degistirmeli": 0.421,
+     "ayni_ailede_komsu_kavram": 0.158
+    },
+    "sik_kelime_ort": 3.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.37,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Furosemid",
+     "ornek_kok": "Aşağıdakilerden hangisi ADH'nin renal antidiüretik etkisini potansiyalize **etmez**?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Uterus ve memede oksitosin için reseptör bulunmaktadır.",
+     "ornek_kok": "Oksitosin için aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "1-desamino-8-D-arginin vazopressin (DDAVP)",
+     "ornek_kok": "Santral diabetes insipidus tedavisinde hangi ilaç kullanılır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Oksitosin için aşağıdakilerden hangisi doğrudur?",
+    "Santral diabetes insipidus tedavisinde hangi ilaç kullanılır?",
+    "Aşağıdakilerden hangisi ADH'nin renal antidiüretik etkisini potansiyalize **etmez**?"
+   ]
+  },
+  {
+   "konu": "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.47,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.21,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.368,
+     "onculu": 0.211,
+     "yanlis_bul": 0.158,
+     "vaka": 0.105,
+     "olumsuz": 0.105,
+     "dogru_ifade": 0.053
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.579,
+     "L1_hatirlama": 0.316,
+     "L3_uygulama": 0.105
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.579,
+     "ayni_turden_ayri_kavram": 0.421,
+     "ayni_ailede_komsu_kavram": 0.158
+    },
+    "sik_kelime_ort": 5.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.88
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Pantoprazol",
+     "ornek_kok": "I. İlaç, mide paryetal hücresinin salgı yüzeyinde (H+, K+)-ATP-az enzimi üzerinde bulunan sisteinlerin sülfhidril gruplarına kovalent olarak bağlanarak mide asidi üretiminin son basamağını önler ve mi",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Prodrug'dur ve enterik kapsülleri aside dayanıklıdır",
+     "ornek_kok": "Proton pompası inhibitörleri (PPİ) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Proton pompasını reverzibl olarak inhibe ederler",
+     "ornek_kok": "Proton pompası inhibitörleri (PPİ) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Klaritromisin + Tinidazol + PPİ + akşam yatarken",
+     "ornek_kok": "Aşağıdakilerden hangisi Helicobacter pylori eradikasyonunda kullanılan standart üçlü tedavi rejimini doğru olarak ifade eder?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Klaritromisin + Tinidazol + PPİ + akşam yatarken",
+     "ornek_kok": "Gastrit şüphesiyle kliniğinize başvuran bir hastada Helicobacter pylori enfeksiyonu tespit ediyorsunuz. Bu hastanın eradikasyon tedavisinde aşağıdaki seçeneklerden hangisini tercih edersiniz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Klotrimazol",
+     "ornek_kok": "Aşağıdakilerden hangisi bir proton pompa inhibitörü (PPİ) değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Barsak lümeninde net su artışı",
+     "ornek_kok": "Aşağıdakilerden hangisi purgatiflerin (laksatiflerin) ortak etkisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Proton pompası inhibitörleri (PPİ) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Proton pompası inhibitörleri (PPİ) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "I. İlaç, mide paryetal hücresinin salgı yüzeyinde (H+, K+)-ATP-az enzimi üzerinde bulunan sisteinlerin sülfhidril gruplarına kovalent olarak bağlanarak mide asidi üretiminin son ba"
+   ]
+  },
+  {
+   "konu": "Dermatolojik Farmakoloji",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.32,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.21,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.684,
+     "olumsuz": 0.158,
+     "vaka": 0.053,
+     "sayi": 0.053,
+     "yanlis_bul": 0.053
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.684,
+     "L2_anlama_iliski": 0.263,
+     "L3_uygulama": 0.053
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.947,
+     "mutlak_ifade_tuzagi": 0.053
+    },
+    "sik_kelime_ort": 2.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.37,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ketokonazol",
+     "ornek_kok": "Aşağıdakilerden hangisi akne vulgaris tedavisinde topikal olarak kullanılan ilaçlardan biri **değildir**?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Pitiriyazis versikolor",
+     "ornek_kok": "Aşağıdakilerden hangisi derinin yüzeysel mantar hastalıklarından biridir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Tinea versicolor",
+     "ornek_kok": "Talaş belirtisi (yonga arazı) aşağıdaki hastalıklardan hangisinde görülür?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Leishmaniasis",
+     "ornek_kok": "Tatarcıkların (Phlebotomus) kan emme sırasında bulaştırdıkları bir protozoonun meydana getirdiği deri hastalığı aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Minoksidil",
+     "ornek_kok": "Androjenik alopesiye bağlı terminal kafa derisi saçlarının progresif azalmasını geri çevirmede aşağıdaki topikal ajanlardan hangisi etkilidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi derinin yüzeysel mantar hastalıklarından biridir?",
+    "Aşağıdakilerden hangisi akne vulgaris tedavisinde topikal olarak kullanılan ilaçlardan biri **değildir**?",
+    "Aşağıdakilerden hangisi akne vulgaris ve rozasea tedavisinde kullanılan topikal antibakteriyel ilaçlardan biri değildir?"
+   ]
+  },
+  {
+   "konu": "Kanser kemoterapisi",
+   "n_soru": 18,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.28,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.22,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.889,
+     "yanlis_bul": 0.056,
+     "en_tipik": 0.056
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.944,
+     "bilesik_yer_degistirmeli": 0.056
+    },
+    "sik_kelime_ort": 1.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.28,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Streptozosin",
+     "ornek_kok": "Aşağıdaki antineoplastik ilaçlardan hangisi insülin salgılayan pankreas adacık hücre kanserinde etkilidir?",
+     "kez": 6,
+     "farkli_kok": 3,
+     "yillar": [
+      2018,
+      2020,
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Metotreksat",
+     "ornek_kok": "Dihidrofolat redüktaz enziminin aktif bölgesine yüksek afinitesi ile bağlanan bir folik asit analoğu olarak kanser tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki antineoplastik ilaçlardan hangisi insülin salgılayan pankreas adacık hücre kanserinde etkilidir?",
+    "Dihidrofolat redüktaz enziminin aktif bölgesine yüksek afinitesi ile bağlanan bir folik asit analoğu olarak kanser tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+    "Aşağıdaki ilaçlardan hangisi kanser tedavisinde kullanılan sitotoksik alkilleyici ajanlardan biridir?"
+   ]
+  },
+  {
+   "konu": "Antihipertansif İlaçlar",
+   "n_soru": 18,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.33,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.22,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.22,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.444,
+     "onculu": 0.278,
+     "dogru_ifade": 0.111,
+     "en_tipik": 0.056,
+     "vaka": 0.056,
+     "yanlis_bul": 0.056
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.444,
+     "L3_uygulama": 0.056
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.556,
+     "bilesik_yer_degistirmeli": 0.389,
+     "ayni_ailede_komsu_kavram": 0.278,
+     "sayisal_yakin_deger": 0.056
+    },
+    "sik_kelime_ort": 3.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.66
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kaptopril",
+     "ornek_kok": "Aşağıdaki antihipertansif ilaçlardan hangisi gebelikte kullanıldığında fetusta renal hasara neden olabilir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Kaptopril",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisinin tipik yan etkisi, hastaların çoğunlukla yakındığı kuru öksürüktür?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_yan_etki"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki antihipertansif ilaçlardan hangisi gebelikte kullanıldığında fetusta renal hasara neden olabilir?",
+    "Aşağıdaki ilaçlardan hangisinin tipik yan etkisi, hastaların çoğunlukla yakındığı kuru öksürüktür?",
+    "Aşağıdaki antihipertansif ilaçlardan hangisi hem potasyum kanallarını açarak etkili olan hem de ön ilaç (prodrug) olmayan bir ajandır?"
+   ]
+  },
+  {
+   "konu": "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
+   "n_soru": 17,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.53,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.18,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.18,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.353,
+     "dogrudan": 0.294,
+     "vaka": 0.118,
+     "en_tipik": 0.059,
+     "sayi": 0.059,
+     "olumsuz": 0.059,
+     "yanlis_bul": 0.059
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.647,
+     "L1_hatirlama": 0.235,
+     "L3_uygulama": 0.118
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.588,
+     "bilesik_yer_degistirmeli": 0.353,
+     "ayni_ailede_komsu_kavram": 0.118,
+     "mutlak_ifade_tuzagi": 0.059
+    },
+    "sik_kelime_ort": 3.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.18,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kromolin",
+     "ornek_kok": "Mast hücre stabilizasyonu sağladığı bilinen ve astımda profilaktik olarak kullanılabilen ajan hangisidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "II ve IV",
+     "ornek_kok": "I. Bronşiyal astım, kronik bronşit ve bronkospazmın bir faktör olduğu diğer kronik bronkopulmoner bozukluklara bağlı bronkospazmın semptomatik rahatlatılması ve önlenmesi ile bronkospazmın akut profil",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "α-agonistler adenilat siklaz ve IP3 üzerinden etkilidirler; tanımlanmış ve kanıtlanmış etk",
+     "ornek_kok": "I. Epinefrin\nII. Efedrin\nIII. İzoproterenol\nIV. Albuterol ve diğer β2 selektif ajanlar\nVerilen ilaçların astımdaki etkinlikleri için aşağıdaki ifadelerden hangisi doğru olamaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz",
+      "onculu"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Mast hücre stabilizasyonu sağladığı bilinen ve astımda profilaktik olarak kullanılabilen ajan hangisidir?",
+    "I. Bronşiyal astım, kronik bronşit ve bronkospazmın bir faktör olduğu diğer kronik bronkopulmoner bozukluklara bağlı bronkospazmın semptomatik rahatlatılması ve önlenmesi ile bronk",
+    "Aşağıdakilerden hangisi oral yoldan aktif olmayan, nonselektif ve potent etkili bir bronkodilatördür?"
+   ]
+  },
+  {
+   "konu": "Genel Anestezik İlaçlar",
+   "n_soru": 17,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.53,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.24,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.294,
+     "sayi": 0.176,
+     "dogrudan": 0.176,
+     "yanlis_bul": 0.118,
+     "dogru_ifade": 0.118,
+     "tanim": 0.059,
+     "vaka": 0.059
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.529,
+     "L1_hatirlama": 0.412,
+     "L3_uygulama": 0.059
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.647,
+     "bilesik_yer_degistirmeli": 0.353,
+     "ayni_ailede_komsu_kavram": 0.176
+    },
+    "sik_kelime_ort": 3.4
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.06,
+    "ort_benzerlik": 0.67
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sevofluran",
+     "ornek_kok": "Karabük Eğitim Araştırma Hastanesi'nde yatmakta olan 46 yaşında bir kadın hasta için inhaler genel anestezi düşünülmektedir. Kan/gaz partisyon katsayısı düşük, anesteziye giriş ve çıkışı hızlı olan, b",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "II ve IV",
+     "ornek_kok": "I. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedir; böbrek kan akımında da artış yaparlar.\nII. Halotan dışındaki ajanların karaciğer üzerine ciddi bir etkisi yok",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Karabük Eğitim Araştırma Hastanesi'nde yatmakta olan 46 yaşında bir kadın hasta için inhaler genel anestezi düşünülmektedir. Kan/gaz partisyon katsayısı düşük, anesteziye giriş ve ",
+    "İnspiratuar anestezik konsantrasyonun (FI) alveolar anestezik konsantrasyona (FA) oranı olan FA/FI değerinin zamana karşı grafiğinde en hızlı artan ve en yüksek orana ulaşan inhala",
+    "İnhalasyon anestezisinde anestezik maddenin alveolar konsantrasyonu FA, solunan havadaki konsantrasyonu Fi olarak alınırsa; FA/Fi oranı zamana karşı en hızlı yükselen (en yüksek eğ"
+   ]
+  },
+  {
+   "konu": "Aminoglikozidler",
+   "n_soru": 16,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_yan_etki",
+     "pay": 0.44,
+     "gerekce": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.31,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.438,
+     "onculu": 0.312,
+     "yanlis_bul": 0.125,
+     "dogru_ifade": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "İlaçtan yan etkiye ve yan etkiden ilaca; çeldirici aynı sınıfın başka üyesidir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.688,
+     "bilesik_yer_degistirmeli": 0.312
+    },
+    "sik_kelime_ort": 3.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.12,
+    "ort_benzerlik": 0.88
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Amikasin",
+     "ornek_kok": "Aşağıdaki antibiyotiklerden hangisi bakterilerde protein sentezini dönüşümsüz inhibe ederek etki göstermektedir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "45 yaşında bir hasta aminoglikozid antibiyotik tedavisi görmektedir. Aminoglikozidler ototoksik ve nefrotoksik, polar, suda çözünür maddelerdir.\nI. Eritromisin\nII. Askorbik asit\nIII. Hiyalüronik asit\n",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "I. Polimiksin B\nII. Vankomisin\nIII. Amfoterisin B\nIV. Penisilin\n\nYukarıdakilerden hangisinin/hangilerinin aminoglikozidlerin nefrotoksik etkisini artırma özelliği en azdır?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "onculu"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "Amikasin",
+     "ornek_kok": "Kanamisinin yarı sentetik bir türevi olan ve gentamisini inaktive eden birçok enzime dirençli bulunan antibiyotik aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Protein sentez inhibitörü olmalarına rağmen hızlı ve güçlü bakterisidal etkilidirler",
+     "ornek_kok": "Aminoglikozidlere ilişkin aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Kanamisinin yarı sentetik bir türevi olan ve gentamisini inaktive eden birçok enzime dirençli bulunan antibiyotik aşağıdakilerden hangisidir?",
+    "Aminoglikozid grubu antibiyotikler için aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Aşağıdaki antibiyotiklerden hangisi bakterilerde protein sentezini dönüşümsüz inhibe ederek etki göstermektedir?"
+   ]
+  },
+  {
+   "konu": "Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler",
+   "n_soru": 16,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.5,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.19,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.625,
+     "onculu": 0.312,
+     "yanlis_bul": 0.062
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.688,
+     "L1_hatirlama": 0.312
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.688,
+     "bilesik_yer_degistirmeli": 0.312,
+     "ayni_ailede_komsu_kavram": 0.312
+    },
+    "sik_kelime_ort": 2.4
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.31,
+    "ort_benzerlik": 0.85
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kloramfenikol",
+     "ornek_kok": "Bebeklerde birikebilen ve kusma, hipotoni, hipotermi, gri renk, şok ve vasküler çöküşü izleyen gri bebek sendromuna yol açan antibiyotik aşağıdakilerden hangisidir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Tetrasiklinlerin etkileşimleri ve advers etkileri ile ilgili olarak aşağıdaki ifadeler veriliyor:\nI. Penisilinlerin etkilerini azaltırlar.\nII. Güçlü diüretiklerin nefrotoksisitesini artırırlar.\nIII. D",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Oksitetrasiklin",
+     "ornek_kok": "Özellikle duodenumda emilen, besinlerle ve iki değerlikli katyonlar (Ca2+, Mg2+, Fe2+) veya Al3+ gibi çok değerlikli katyonlar içeren süt ürünleri ve antasitlerle alındığında emilimi değişen antibiyot",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "I. Eritromisin estolatın en önemli yan etkisi kolestatik hepatittir.\nII. Eritromisin diyaliz ile çok kolay uzaklaştırılabilir.\nIII. Gastrointestinal sistemde motilin reseptörlerini aktive ederek mide ",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Serum düzeyleri yüksek, doku düzeyleri çok düşüktür.",
+     "ornek_kok": "Makrolid antibakteriyeller için aşağıdakilerden hangisi **yanlıştır**?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Bebeklerde birikebilen ve kusma, hipotoni, hipotermi, gri renk, şok ve vasküler çöküşü izleyen gri bebek sendromuna yol açan antibiyotik aşağıdakilerden hangisidir?",
+    "Özellikle duodenumda emilen, besinlerle ve iki değerlikli katyonlar (Ca2+, Mg2+, Fe2+) veya Al3+ gibi çok değerlikli katyonlar içeren süt ürünleri ve antasitlerle alındığında emili",
+    "Aşağıdaki antibiyotiklerden hangisi muhtemelen bir aşırı duyarlılık reaksiyonu sonucu akut kolestatik hepatit oluşturabilir?"
+   ]
+  },
+  {
+   "konu": "Histamin, serotonin, melatonin ve Ergot Alkaloidleri",
+   "n_soru": 16,
+   "yillar": [
+    2018,
+    2020,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.56,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.38,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.562,
+     "onculu": 0.375,
+     "dogru_ifade": 0.062
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "ayni_ailede_komsu_kavram": 0.375,
+     "bilesik_yer_degistirmeli": 0.375,
+     "sayisal_yakin_deger": 0.188
+    },
+    "sik_kelime_ort": 2.4
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.31,
+    "ort_benzerlik": 0.86
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Taşikardi",
+     "ornek_kok": "Tıbbi Farmakoloji Astım vd. akciğer Hastalıkları Kullan İlaçlar Teoślin, nitrogliserin, izoproterenol, ve histaminin paylaştıkları ortak etki hangisidir?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Serotonin",
+     "ornek_kok": "Pineal bezde melatoninin öncülü (prekürsörü) aşağıdaki maddelerden hangisidir?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "H1 reseptörü",
+     "ornek_kok": "Histamin, insanda ve kobayda hangi reseptör aracılığıyla bronkokonstriksiyona neden olur?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Bir antihistaminik olan difenhidramin ile intihara teşebbüs eden bir hasta acile getiriliyor.\nI. Halüsinasyon\nII. Midriyazis\nIII. Kardiyak aritmi\nIV. Kuru, sıcak ve kırmızı deri\nHastada yukarıdakilerd",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Tıbbi Farmakoloji Astım vd. akciğer Hastalıkları Kullan İlaçlar Teoślin, nitrogliserin, izoproterenol, ve histaminin paylaştıkları ortak etki hangisidir?",
+    "Histamin, insanda ve kobayda hangi reseptör aracılığıyla bronkokonstriksiyona neden olur?",
+    "Pineal bezdeki melatonin prekürsörü aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Antifungal İlaçlar",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.4,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.33,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "ilac_yan_etki",
+     "pay": 0.2,
+     "gerekce": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.6,
+     "onculu": 0.133,
+     "en_tipik": 0.133,
+     "vaka": 0.067,
+     "sayi": 0.067
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.467,
+     "L2_anlama_iliski": 0.467,
+     "L3_uygulama": 0.067
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.867,
+     "bilesik_yer_degistirmeli": 0.133,
+     "ayni_ailede_komsu_kavram": 0.133
+    },
+    "sik_kelime_ort": 1.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.47,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Dapson",
+     "ornek_kok": "Dermatofitik mantarların yol açtığı yüzeysel mantar enfeksiyonlarının tedavisinde aşağıdakilerden hangisi kullanılmaz?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Nistatin",
+     "ornek_kok": "Parenteral uygulama için çok toksik olan ve sadece topikal olarak kullanılan antifungal ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "I, II ve III",
+     "ornek_kok": "I. Amfoterisin B: Ergosterole bağlanarak membran geçirgenliğinin artırılması\nII. Flukonazol: Ergosterol sentezinin inhibe edilmesi\nIII. Flusitozin: DNA ve RNA sentezinin inhibe edilmesi\nIV. Nistatin: ",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Griseofulvin",
+     "ornek_kok": "Bu ilaç mantar hücrelerinde mikrotübüllere bağlanarak mitoz bölünmeyi inhibe eder. Keratinden zengin dokularda biriktiği için saçlı deri, kıl, tırnak, el ve ayaklarda yerleşen dermatofit mantar enfeks",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Dermatofitik mantarların yol açtığı yüzeysel mantar enfeksiyonlarının tedavisinde aşağıdakilerden hangisi kullanılmaz?",
+    "Parenteral uygulama için çok toksik olan ve sadece topikal olarak kullanılan antifungal ilaç aşağıdakilerden hangisidir?",
+    "Bu ilaç mantar hücrelerinde mikrotübüllere bağlanarak mitoz bölünmeyi inhibe eder. Keratinden zengin dokularda biriktiği için saçlı deri, kıl, tırnak, el ve ayaklarda yerleşen derm"
+   ]
+  },
+  {
+   "konu": "Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.27,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_yan_etki",
+     "pay": 0.2,
+     "gerekce": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.533,
+     "onculu": 0.267,
+     "sayi": 0.133,
+     "olumsuz": 0.067
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.867,
+     "bilesik_yer_degistirmeli": 0.133,
+     "ayni_ailede_komsu_kavram": 0.133
+    },
+    "sik_kelime_ort": 1.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.6,
+    "ort_benzerlik": 0.85
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İmipenem",
+     "ornek_kok": "Böbrek tübüllerinde dehidropeptidazlar tarafından inaktive edildiğinden idrar konsantrasyonları düşük olan ve bu yüzden klinik kullanım için bir renal dehidropeptidaz inhibitörü olan silastatin ile bi",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "sayi"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Seftazidim",
+     "ornek_kok": "Aşağıdaki sefalosporinlerden hangisinin Pseudomonas aeruginosa'ya karşı etkinliği en fazladır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Glikopeptid",
+     "ornek_kok": "Basitrasin dermal enfeksiyonlarda ve impetigoda kullanıldığı hâlde toksisitesinden dolayı sistemik olarak kullanılmaz. Yukarıda bazı özellikleri belirtilen basitrasin aşağıdaki antibakteriyel gruplard",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "I. Ertapenem\nII. Lorakarbef\nIII. İmipenem\nIV. Moksalaktam\n\nYukarıdaki antibakteriyellerden hangisi/hangileri karbapenem grubu üyesidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Seftriakson",
+     "ornek_kok": "Merkezi sinir sistemi (MSS) penetrasyonu çok iyi olan III. kuşak sefalosporin aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Böbrek tübüllerinde dehidropeptidazlar tarafından inaktive edildiğinden idrar konsantrasyonları düşük olan ve bu yüzden klinik kullanım için bir renal dehidropeptidaz inhibitörü ol",
+    "Aşağıdaki sefalosporinlerden hangisinin Pseudomonas aeruginosa'ya karşı etkinliği en fazladır?",
+    "Aşağıdakilerden hangisi bakteri hücre duvarı sentezini inhibe eden bir antibiyotik değildir?"
+   ]
+  },
+  {
+   "konu": "Antimikobakteriyel İlaçlar",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.27,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.27,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.4,
+     "dogrudan": 0.333,
+     "olumsuz": 0.133,
+     "dogru_ifade": 0.067,
+     "en_tipik": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.4
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.467,
+     "bilesik_yer_degistirmeli": 0.467,
+     "ayni_ailede_komsu_kavram": 0.133,
+     "mutlak_ifade_tuzagi": 0.067
+    },
+    "sik_kelime_ort": 3.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.07,
+    "ort_benzerlik": 0.9
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "Rifampinin yan etkileriyle ilgili aşağıdakiler veriliyor:\nI. Hafif zincir proteinürisi\nII. Kolestatik sarılık\nIII. Hepatotoksisite\nIV. Periferik nöropati\nBunlardan hangisi rifampinin yan etkilerinden ",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "İzoniazid",
+     "ornek_kok": "Sekonder direncin en az geliştiği antitüberküloz ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "I. Rifampin - DNA bağımlı RNA polimeraz enziminin inhibe edilmesi\nII. Streptomisin - Ribozomlarda protein sentezinin inhibe edilmesi\nIII. İzoniazid - Mikolik asit sentezinin inhibe edilmesi\nIV. Siklos",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Misoprostol",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi tüberküloz tedavisinde kullanılan bir ilaç **değildir**?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Sekonder direncin en az geliştiği antitüberküloz ilaç aşağıdakilerden hangisidir?",
+    "Aşağıdaki ilaçlardan hangisi tüberküloz tedavisinde kullanılan bir ilaç **değildir**?",
+    "Aşağıdaki antibiyotiklerden hangisinin haftada bir kez uygulanması, AIDS hastalarında Mycobacterium avium kompleksi (MAC) bakteriyemisinden korunmada etkilidir?"
+   ]
+  },
+  {
+   "konu": "Antihelmintik İlaçlar",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.33,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.27,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.4,
+     "onculu": 0.267,
+     "tanim": 0.133,
+     "yanlis_bul": 0.133,
+     "olumsuz": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.533,
+     "L1_hatirlama": 0.467
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.6,
+     "ayni_turden_ayri_kavram": 0.4,
+     "ayni_ailede_komsu_kavram": 0.267
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.27,
+    "ort_benzerlik": 0.69
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Emilimi çok iyidir (>%90). Besinlerden etkilenmez",
+     "ornek_kok": "Antelmintik ilaçlar Albendazol için hangisini söylemek imkansızdır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "İvermektin",
+     "ornek_kok": "Bu antiparaziter ilaç yarı sentetik, antelmintik bir ajandır. Toprak bakterisi olan bir Streptomyces türünün fermantasyon ürünlerinden izole edilen, yüksek derecede aktif, geniş spektrumlu bir antipar",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "tanim"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "I. Klotrimazol\nII. Niklozamid\nIII. Metamizol\nIV. Prazikuantel\n\nAşağıdakilerden hangisi/hangileri antihelmintik bir ilaç değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "İntravenöz ardışık üç doz ile kitlesel tedavi programları mümkündür.",
+     "ornek_kok": "Antiparaziter ilaç olan prazikuantel için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "İvermektin için aşağıdakilerden hangisinin söylenmesi mümkün değildir?",
+    "Antelmintik ilaçlar Albendazol için hangisini söylemek imkansızdır?",
+    "Bu antiparaziter ilaç yarı sentetik, antelmintik bir ajandır. Toprak bakterisi olan bir Streptomyces türünün fermantasyon ürünlerinden izole edilen, yüksek derecede aktif, geniş sp"
+   ]
+  },
+  {
+   "konu": "Antiviral İlaçlar",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.47,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.2,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.533,
+     "dogrudan": 0.267,
+     "yanlis_bul": 0.133,
+     "en_tipik": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.8,
+     "L1_hatirlama": 0.2
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.733,
+     "ayni_turden_ayri_kavram": 0.267,
+     "ayni_ailede_komsu_kavram": 0.267
+    },
+    "sik_kelime_ort": 4.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.13,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "HSV ve VZV tedavisiyle ilgili aşağıdaki ifadeler veriliyor:\nI. Asiklovir, valasiklovir ve famsiklovir oral kullanılabilen 3 nükleozid analoğudur.\nII. Yalnızca asiklovir intravenöz kullanılabilir.\nIII.",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "II ve IV",
+     "ornek_kok": "Valasiklovir ile ilgili aşağıdaki ifadeler veriliyor:\nI. HBV ve HCV enfeksiyonlarına endike iki ilaçtan biridir.\nII. Valasiklovir bir ön ilaçtır (prodrug).\nIII. HIV için kullanılan peptid yapılı bir f",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "I. Entekavir\nII. Rimantadin\nIII. Maravirok\nIV. Gansiklovir\n\nYukarıdakilerden hangisi/hangileri sitomegalovirüs (CMV) tedavisinde kullanılan antiviral ilaçtır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "HSV ve VZV tedavisi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Asiklovir, valasiklovir ve famsiklovir oral kullanılabilen üç nükleozid analoğudur.\nII. Yalnızca asiklovir İV kullan",
+    "Aşağıdakilerden hangisi herpes virüslerine karşı antiviral etkilidir?",
+    "Ribavirin ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Kemik mineralizasyonu ve homeostaza etki eden ilaçlar",
+   "n_soru": 15,
+   "yillar": [
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.2,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.467,
+     "yanlis_bul": 0.133,
+     "olumsuz": 0.133,
+     "onculu": 0.133,
+     "dogru_ifade": 0.067,
+     "sayi": 0.067
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.533,
+     "L2_anlama_iliski": 0.467
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.533,
+     "ayni_turden_ayri_kavram": 0.467,
+     "ayni_ailede_komsu_kavram": 0.267,
+     "mutlak_ifade_tuzagi": 0.2
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.8
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Denosumab",
+     "ornek_kok": "Yüksek kırık riski taşıyan ve osteoporozu olan postmenopozal kadınların tedavisinde kullanılan insan IgG2 monoklonal antikoru olan madde aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2022,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Kalsiyum ve fosfat üzerine net etkileri: Serum kalsiyumu azalırken hiperfosfatemi şekillen",
+     "ornek_kok": "Tıbbi Farmakoloji\nParatiroid hormonu için hangisi söylenemez?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Serum Ca++ ve fosfat seviyeleri artar",
+     "ornek_kok": "D vitamininin (kalsitriol) kalsiyum ve fosfat üzerine net etkisi aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade",
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Kemik mineral dansitesini dramatik düzeyde azalttıklarından gebelik sonu hipokalsemilerin ",
+     "ornek_kok": "Östrojenler ve androjenlerin osteoporoz profilaksisinde kullanımı için hangisi söylenemez?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Tıbbi Farmakoloji\nParatiroid hormonu için hangisi söylenemez?",
+    "Östrojenler ve androjenlerin osteoporoz profilaksisinde kullanımı için hangisi söylenemez?",
+    "Yüksek kırık riski taşıyan ve osteoporozu olan postmenopozal kadınların tedavisinde kullanılan insan IgG2 monoklonal antikoru olan madde aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Sedatif ve Hipnotik İlaçlar",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.27,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.533,
+     "dogrudan": 0.267,
+     "sayi": 0.067,
+     "yanlis_bul": 0.067,
+     "olumsuz": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.533,
+     "ayni_ailede_komsu_kavram": 0.4,
+     "ayni_turden_ayri_kavram": 0.333,
+     "sayisal_yakin_deger": 0.067
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.13,
+    "ort_benzerlik": 0.92
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Flumazenil",
+     "ornek_kok": "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmek ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için onaylanan ilaç ",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmek ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak ",
+    "Toplam uyku süresi düşünüldüğünde, sırasıyla REM ve NREM uykusu toplam uykunun yaklaşık ne kadarlık bir kısmını oluşturur?",
+    "Aşağıdaki maddelerden hangisi uykuya yardımcı, sedatif etkili antihistaminik bir ilaçtır?"
+   ]
+  },
+  {
+   "konu": "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
+   "n_soru": 14,
+   "yillar": [
+    2018,
+    2019,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.21,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.21,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.429,
+     "onculu": 0.429,
+     "sayi": 0.071,
+     "vaka": 0.071
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.643,
+     "L1_hatirlama": 0.286,
+     "L3_uygulama": 0.071
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_ailede_komsu_kavram": 0.286
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.07,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I, II ve III",
+     "ornek_kok": "Aşağıdaki ilaçlar verilmiştir:\nI. Telitromisin\nII. Metronidazol\nIII. Ketokonazol\nIV. Seftriakson\nKaraciğer hasarı olan bireylerde bunlardan hangisine/hangilerine dikkat etmek gerekir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "Otuz beş yaşındaki erkek hasta baş ağrısı, bulantı ve kusma şikâyetleriyle başvuruyor. Lomber ponksiyon sonucunda akut pürülan menenjit tanısı alan hastanın BOS kültüründe Streptococcus pneumoniae üre",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu",
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Trimetoprim-sülfametoksazol",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisinin alüminyum içeren antasitlerle birlikte alındığında etkisinde azalma **gözlenmez**?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Sefoksitin tek başına",
+     "ornek_kok": "Aşağıdakilerden hangisi apendektomi öncesi profilaktik olarak kullanılır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "I. Amoksisilin + klavulanat\nII. Rifampisin\nIII. Asetaminofen (parasetamol)\nIV. İzoniazid\n\nYukarıdaki ilaçlardan hangisi/hangileri hepatotoksiktir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_yan_etki"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ilaçlar verilmiştir:\nI. Telitromisin\nII. Metronidazol\nIII. Ketokonazol\nIV. Seftriakson\nKaraciğer hasarı olan bireylerde bunlardan hangisine/hangilerine dikkat etmek gerek",
+    "Otuz beş yaşındaki erkek hasta baş ağrısı, bulantı ve kusma şikâyetleriyle başvuruyor. Lomber ponksiyon sonucunda akut pürülan menenjit tanısı alan hastanın BOS kültüründe Streptoc",
+    "Antimikrobik tedavide aşağıdaki durumlardan hangisinde ven içi (intravenöz) yol tercih edilmez?"
+   ]
+  },
+  {
+   "konu": "NSAİİ, Antiromatikler, Nonopioid Analjezikler ve Gut Tedavi İlaçları",
+   "n_soru": 14,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.71,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.357,
+     "onculu": 0.214,
+     "olumsuz": 0.143,
+     "sayi": 0.143,
+     "yanlis_bul": 0.071,
+     "en_tipik": 0.071
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.786,
+     "L1_hatirlama": 0.214
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "ayni_ailede_komsu_kavram": 0.286,
+     "bilesik_yer_degistirmeli": 0.286,
+     "mutlak_ifade_tuzagi": 0.071,
+     "sayisal_yakin_deger": 0.071
+    },
+    "sik_kelime_ort": 4.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.14,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "Gut, ürik asit metabolizmasının bozukluğu sonucu oluşan hiperürisemi hâli ve akut artrit nöbetleri ile kendini gösteren kronik bir hastalıktır. Zamanla eklemlerde ve böbreklerde sodyum ürat birikintil",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Gut, ürik asit metabolizmasının bozukluğu sonucu oluşan hiperürisemi hâli ve akut artrit nöbetleri ile kendini gösteren kronik bir hastalıktır. Zamanla eklemlerde ve böbreklerde so",
+    "Aspirinin plazma proteinlerine bağlanması hususunda aşağıdakilerden hangisi söylenemez?",
+    "Kaynama gecikmesine sebep olan etken ortadan kaldırıldığında kaynama gerçekleşebilir. Kaynama gecikmesi olan bir kırık olgusunda, kırık iyileşmesini olumsuz etkilemediği için ağrı "
+   ]
+  },
+  {
+   "konu": "Antiepileptik İlaçlar",
+   "n_soru": 14,
+   "yillar": [
+    2020,
+    2021,
+    2023,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.36,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.29,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.786,
+     "onculu": 0.143,
+     "en_tipik": 0.071
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "bilesik_yer_degistirmeli": 0.143,
+     "ayni_ailede_komsu_kavram": 0.143
+    },
+    "sik_kelime_ort": 1.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.5,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Karbamazepin",
+     "ornek_kok": "Trigeminal nevralji ve bipolar bozukluk tedavisinde kullanılan antiepileptik ilaç aşağıdakilerden hangisidir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Topiramat",
+     "ornek_kok": "Hayvan modellerinde teratojenik kabul edilen ve gebelikte maruz kalan erkek bebeklerde hipospadias bildirilen antiepileptik ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_yan_etki"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Trigeminal nevralji ve bipolar bozukluk tedavisinde kullanılan antiepileptik ilaç aşağıdakilerden hangisidir?",
+    "Hayvan modellerinde teratojenik kabul edilen ve gebelikte maruz kalan erkek bebeklerde hipospadias bildirilen antiepileptik ilaç aşağıdakilerden hangisidir?",
+    "Aşağıdaki antiepileptik ilaçlardan hangisi terapötik dozlarda uygulandığında diş eti hiperplazisi ve hirsutizme neden olur?"
+   ]
+  },
+  {
+   "konu": "Adrenokortikosteroidler ve Agonistler",
+   "n_soru": 13,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.54,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.15,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.15,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.769,
+     "onculu": 0.077,
+     "sayi": 0.077,
+     "vaka": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.538,
+     "L1_hatirlama": 0.385,
+     "L3_uygulama": 0.077
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.769,
+     "bilesik_yer_degistirmeli": 0.154,
+     "ayni_ailede_komsu_kavram": 0.154
+    },
+    "sik_kelime_ort": 2.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.46,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Aminoglutetimid",
+     "ornek_kok": "Aşağıdaki glukokortikoid antagonistlerinden hangisi kolesterolün pregnenolona dönüşümünü bloke ederek hormonal olarak aktif olan tüm steroidlerin sentezinde azalmaya yol açar?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki glukokortikoid antagonistlerinden hangisi kolesterolün pregnenolona dönüşümünü bloke ederek hormonal olarak aktif olan tüm steroidlerin sentezinde azalmaya yol açar?",
+    "Adrenokortikal steroidlerin salgılanması hipofizden salıverilen aşağıdaki hormonlardan hangisi tarafından kontrol edilir?",
+    "Altmış beş yaşında kadın hasta romatoid artrit nedeniyle 5 yıldır yüksek doz sistemik prednizolon tedavisi almaktadır. Bu hastada eksojen glukokortikoid kullanımına sekonder olarak"
+   ]
+  },
+  {
+   "konu": "SSS İlaçları",
+   "n_soru": 13,
+   "yillar": [
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.62,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.15,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.15,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.308,
+     "dogru_ifade": 0.231,
+     "sayi": 0.231,
+     "dogrudan": 0.154,
+     "en_tipik": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.769,
+     "L1_hatirlama": 0.231
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.538,
+     "bilesik_yer_degistirmeli": 0.385,
+     "ayni_ailede_komsu_kavram": 0.231,
+     "mutlak_ifade_tuzagi": 0.077
+    },
+    "sik_kelime_ort": 4.3
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.15,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Dopamin agonistlerinin kontrendikasyonları ve kullanım kısıtlamaları ile ilgili aşağıdaki ifadeler veriliyor:\nI. Psikotik hastalığı olanlarda kontrendikedir.\nII. Yakın zamanda geçi",
+    "Bir ilaç İV verildiğinde aşağıdakilerden hangisi doğrudur?",
+    "İlaç biyotransformasyonu ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Kalp yetersizliğinde kullanılan ilaçlar",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.92,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "onculu": 0.167,
+     "olumsuz": 0.083,
+     "dogru_ifade": 0.083
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "bilesik_yer_degistirmeli": 0.25,
+     "ayni_ailede_komsu_kavram": 0.167,
+     "mutlak_ifade_tuzagi": 0.083
+    },
+    "sik_kelime_ort": 2.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İndapamid",
+     "ornek_kok": "Aşağıdakilerden hangisi azalmış ejeksiyon fraksiyonlu kalp yetersizliğinde mortaliteyi azaltan ilaçlardan **değildir**?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi azalmış ejeksiyon fraksiyonlu kalp yetersizliğinde mortaliteyi azaltan ilaçlardan **değildir**?",
+    "Hafif ya da orta derecede dijital kaynaklı aritmileri azaltabilecek veya geriye döndürebilecek monovalan katyon aşağıdakilerden hangisidir?",
+    "Aşağıdaki ilaçlardan hangisi kronik konjestif kalp yetersizliğinde mortaliteyi azaltmaz?"
+   ]
+  },
+  {
+   "konu": "Opoid Analjezikler ve Antagonistleri",
+   "n_soru": 12,
+   "yillar": [
+    2020,
+    2021,
+    2023,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.42,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.25,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "olumsuz": 0.25,
+     "onculu": 0.167,
+     "dogru_ifade": 0.167,
+     "yanlis_bul": 0.083
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.583,
+     "bilesik_yer_degistirmeli": 0.333,
+     "ayni_ailede_komsu_kavram": 0.083,
+     "mutlak_ifade_tuzagi": 0.083
+    },
+    "sik_kelime_ort": 3.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Doğum eylemini geciktirme",
+     "ornek_kok": "Aşağıdakilerden hangisi opioid analjeziklerin endikasyonlarından biri değildir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Narkotik analjeziklerin endikasyonlarından biri aşağıdakilerden hangisi değildir?",
+    "Aşağıdakilerden hangisi opioid analjeziklerin endikasyonlarından biri değildir?",
+    "Aşağıdaki belirtilerden hangisi morfinin yan etkilerinden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Miyorelaksan İlaçlar",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.17,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.833,
+     "onculu": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "ayni_ailede_komsu_kavram": 0.167,
+     "bilesik_yer_degistirmeli": 0.083
+    },
+    "sik_kelime_ort": 1.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.58,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Dantrolen",
+     "ornek_kok": "Malign hipertermi tedavisinde kullanılan, etki yeri iskelet kası olan miyorelaksan ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Kompetitif (nondepolarizan) nöromüsküler blokör bir ilacın oluşturduğu nöromüsküler blok ortadan kaldırılmak (geri çevrilmek) istenirse aşağıdaki ilaçlardan hangisi kullanılabilir?",
+    "Malign hipertermi tedavisinde kullanılan, etki yeri iskelet kası olan miyorelaksan ilaç aşağıdakilerden hangisidir?",
+    "Primer etki yeri santral sinir sistemi olan çizgili kas gevşetici (miyorelaksan) ilaç aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim",
+   "n_soru": 11,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.36,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.27,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.18,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.364,
+     "dogrudan": 0.273,
+     "vaka": 0.182,
+     "yanlis_bul": 0.091,
+     "dogru_ifade": 0.091
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.455,
+     "L1_hatirlama": 0.364,
+     "L3_uygulama": 0.182
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.545,
+     "ayni_turden_ayri_kavram": 0.455,
+     "mutlak_ifade_tuzagi": 0.182,
+     "ayni_ailede_komsu_kavram": 0.091
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Esmolol",
+     "ornek_kok": "Acil nöbetinizde ambulansla getirilen 25 yaşında bir hastanın, 2 saat önce dozunu bilmediğiniz ama yüksek olduğu kesin olan uzun süreli salınımlı teofilin aldığını anlıyorsunuz. Hastada taşikardi mevc",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Acil nöbetinizde ambulansla getirilen 25 yaşında bir hastanın, 2 saat önce dozunu bilmediğiniz ama yüksek olduğu kesin olan uzun süreli salınımlı teofilin aldığını anlıyorsunuz. Ha",
+    "Daha çok bayat konservelerden bulaşan ve ekzotoksini kraniyal sinir felçleri ile ileri aşamalarda diyafragma felci yapabilen besin zehirlenmesi etkeni hangisidir?",
+    "Aşağıdaki toksik maddeler veriliyor:\nI. Metanol\nII. Benzodiazepinler\nIII. Teofilin\nIV. Digoksin\nBu maddelerin neden olduğu ağır zehirlenmelerin hangilerinde, molekülün aşırı yüksek"
+   ]
+  },
+  {
+   "konu": "Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar",
+   "n_soru": 11,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.45,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.18,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.727,
+     "dogrudan": 0.273
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.727,
+     "L1_hatirlama": 0.273
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.727,
+     "ayni_ailede_komsu_kavram": 0.364,
+     "ayni_turden_ayri_kavram": 0.182
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.09,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "Sıtma tedavisine ilişkin aşağıdaki ilaçlar ve kombinasyonlar veriliyor:\nI. Pirimetamin + Sülfadoksin\nII. Pirimetamin + Dapson\nIII. Meflokin + Pirimetamin + Sülfadoksin\nIV. Ketamin\nVerilen ilaçlardan h",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "Aşağıdaki antimalaryal ilaçlar veriliyor:\nI. Tetrasiklin\nII. Kinin\nIII. Klorokin\nIV. Artemisinin\nBu ilaçlardan hangisine/hangilerine karşı direnç gelişimi henüz **yoktur**?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Amebiyazis tedavisinde kullanılan ilaçlar ile ilgili olarak;\nI. Diloksanid furoat\nII. İyodokinol\nIII. Paromomisin\nIV. Metronidazol\nyukarıdakilerden hangisi veya hangileri kullanılır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Sıtma tedavisine ilişkin aşağıdaki ilaç/ilaç kombinasyonları veriliyor:\nI. Pirimetamin + sülfadoksin\nII. Pirimetamin + dapson\nIII. Meflokin + pirimetamin + sülfadoksin\nIV. Ketamin\n",
+    "Enjektör ucu, Spaulding sınıflandırmasına göre sterilizasyon ve dezenfeksiyon açısından hangi grup malzeme içerisinde yer alır?",
+    "Cerrahi aletler, endoskoplar ve plastik tıbbi cihazların soğuk sterilizasyonunda kullanılan; bakteri sporları, mikobakteriler ve lipid zarfsız virüsler dahil tüm mikroorganizmaları"
+   ]
+  },
+  {
+   "konu": "Kolinoseptör Bloke Edici İlaçlar",
+   "n_soru": 10,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.7,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.2,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.6,
+     "en_tipik": 0.1,
+     "vaka": 0.1,
+     "sayi": 0.1,
+     "onculu": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.7,
+     "L2_anlama_iliski": 0.2,
+     "L3_uygulama": 0.1
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.9,
+     "bilesik_yer_degistirmeli": 0.1,
+     "ayni_ailede_komsu_kavram": 0.1
+    },
+    "sik_kelime_ort": 1.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.7,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Skopolamin",
+     "ornek_kok": "Yolculuğa çıkmayı düşünen birisi için deniz tutmasına (kinetoz) karşı en etkili ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Atropin",
+     "ornek_kok": "Pilokarpin ve kolin esterleri gibi ilaçlar yüksek dozlarda aşırı muskarinik bulgulara neden olurlar. Bu bulgular bulantı, kusma, diyare, salivasyon, acil idrar yapma gereksinimi, terleme, ciddi vazodi",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Tropikamid",
+     "ornek_kok": "Göz damlası olarak kullanılan, etki süresi en kısa sikloplejik/midriyatik antimuskarinik ilaç aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "sayi",
+      "vaka"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Betanekol",
+     "ornek_kok": "Aşağıdakilerden hangisi antimuskarinik olarak kullanılmayan bir ilaçtır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Yolculuğa çıkmayı düşünen birisi için deniz tutmasına (kinetoz) karşı en etkili ilaç aşağıdakilerden hangisidir?",
+    "Pilokarpin ve kolin esterleri gibi ilaçlar yüksek dozlarda aşırı muskarinik bulgulara neden olurlar. Bu bulgular bulantı, kusma, diyare, salivasyon, acil idrar yapma gereksinimi, t",
+    "Organofosfatlı kolinesteraz inhibitörü ile zehirlenmede antidot olarak aşağıdaki ilaçlardan hangisi kullanılır?"
+   ]
+  },
+  {
+   "konu": "Antidepresan İlaçlar",
+   "n_soru": 9,
+   "yillar": [
+    2018,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.44,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.22,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.22,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.444,
+     "onculu": 0.222,
+     "olumsuz": 0.111,
+     "yanlis_bul": 0.111,
+     "sayi": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.556,
+     "L2_anlama_iliski": 0.444
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.444,
+     "bilesik_yer_degistirmeli": 0.444,
+     "ayni_ailede_komsu_kavram": 0.222,
+     "sayisal_yakin_deger": 0.111
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ilaçlardan hangisi trisiklik antidepresandır?",
+    "Depresif bozukluk, majör depresif bozukluk (MDB), travma sonrası stres bozukluğu (TSSB), obsesif-kompulsif bozukluk (OKB), panik bozukluğu, adet öncesi disforik bozukluk ve sosyal ",
+    "Aşağıdakilerden hangisi sitokrom P450 (CYP) enzimlerinin özelliklerinden değildir?"
+   ]
+  },
+  {
+   "konu": "Vazodilatörler ve Anjina Pektoris ilaçları",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.5,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.25,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "olumsuz": 0.125,
+     "onculu": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.875,
+     "bilesik_yer_degistirmeli": 0.125,
+     "ayni_ailede_komsu_kavram": 0.125
+    },
+    "sik_kelime_ort": 2.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.12,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İzosorbid dinitrat",
+     "ornek_kok": "Oral biyoyararlanımı düşük olduğundan ve ilk geçiş etkisinden korunmak amacıyla angina tedavisinde dilaltı yolu ile kullanılan ilaç aşağıdakilerden hangisidir?",
+     "kez": 7,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Hücre içi sodyumu azaltarak",
+     "ornek_kok": "Angina tedavisinde kullanılan ilaçlar vasküler düz kası aşağıda verilen etki şekillerinden hangisiyle gevşetemez?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Oral biyoyararlanımı düşük olduğundan ve ilk geçiş etkisinden korunmak amacıyla angina tedavisinde dilaltı yolu ile kullanılan ilaç aşağıdakilerden hangisidir?",
+    "Angina tedavisinde kullanılan ilaçlar vasküler düz kası aşağıda verilen etki şekillerinden hangisiyle gevşetemez?",
+    "Oral biyoyararlanımı düşük olduğundan ve ilk geçiş etkisinden korunmak amacıyla anjina tedavisinde dil altı yolla kullanılan ilaç aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Sempatomimetikler",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.62,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "dogru_ifade": 0.125,
+     "olumsuz": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "sayisal_yakin_deger": 0.25,
+     "ayni_ailede_komsu_kavram": 0.25,
+     "bilesik_yer_degistirmeli": 0.125
+    },
+    "sik_kelime_ort": 3.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.89
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Fenilefrin",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi siklopleji yapmaksızın midriyazis oluşturur?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Alfa-1 reseptörlerin uyarılması kan basıncını artırır",
+     "ornek_kok": "Adrenerjik reseptörlerin uyarılmasına bağlı yanıtlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ilaçlardan hangisi siklopleji yapmaksızın midriyazis oluşturur?",
+    "Adrenerjik reseptörlerin uyarılmasına bağlı yanıtlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Nazal mukoza damarlarında seçici alfa-1 agonist etkiyle vazokonstriksiyon oluşturarak burun tıkanıklığını (konjesyonu) azaltan ve topikal dekonjestan olarak kullanılan ilaç aşağıda"
+   ]
+  },
+  {
+   "konu": "Kardiyak aritmilerde kullanılan ilaçlar",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_yan_etki",
+     "pay": 0.38,
+     "gerekce": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.875,
+     "sayi": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 1.0
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.875,
+     "bilesik_yer_degistirmeli": 0.125
+    },
+    "sik_kelime_ort": 1.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.75,
+    "ort_benzerlik": 0.92
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Esmolol",
+     "ornek_kok": "Ameliyat sırasında ve diğer akut aritmilerde kullanılan kısa etkili beta bloker hangisidir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Lidokain",
+     "ornek_kok": "Çok düşük toksisite insidansına ve akut miyokard enfarktüsü ile ilişkili aritmilerde yüksek etkinliğe sahip olan ve yalnızca intravenöz yolla kullanılan antiaritmik ilaç hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "Prokainamid",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi sodyum kanallarını bloke ederek aksiyon potansiyelinin iletimini yavaşlatır ve EKG'de QRS süresini uzatır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Adenozin",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi atriyoventriküler nodal reentran taşikardi (AVNRT) akut atak tedavisinde ilk sırada tercih edilen ilaçtır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Çok düşük toksisite insidansına ve akut miyokard enfarktüsü ile ilişkili aritmilerde yüksek etkinliğe sahip olan ve yalnızca intravenöz yolla kullanılan antiaritmik ilaç hangisidir",
+    "Ameliyat sırasında ve diğer akut aritmilerde kullanılan kısa etkili beta bloker hangisidir?",
+    "Aşağıdaki ilaçlardan hangisi sodyum kanallarını bloke ederek aksiyon potansiyelinin iletimini yavaşlatır ve EKG'de QRS süresini uzatır?"
+   ]
+  },
+  {
+   "konu": "Otonom Sinir Sistemi Farmakolojisi",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.75,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "olumsuz": 0.125,
+     "yanlis_bul": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "bilesik_yer_degistirmeli": 0.125,
+     "sayisal_yakin_deger": 0.125,
+     "ayni_ailede_komsu_kavram": 0.125
+    },
+    "sik_kelime_ort": 2.9
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.38,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Tirozinden noradrenaline kadar olan sentez aşamalarında hangi basamak hız sınırlayıcıdır?",
+    "Agonist ortamda varken cevabın azalmasının (desensitizasyon) nedenlerinden biri hangisi değildir?",
+    "Asetilkolin sitoplazmada aşağıdaki hangi enzimin katalitik etkisiyle kolin ve asetil-KoA'dan sentez edilir?"
+   ]
+  },
+  {
+   "konu": "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2021,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.29,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.29,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.571,
+     "en_tipik": 0.143,
+     "tanim": 0.143,
+     "onculu": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.571,
+     "L2_anlama_iliski": 0.429
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.571,
+     "bilesik_yer_degistirmeli": 0.286,
+     "ayni_ailede_komsu_kavram": 0.286
+    },
+    "sik_kelime_ort": 2.5
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.57,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Parathion ile oluşan toksisite hangi ilaçlarla/ajanlarla/uygulamalarla tedavi edilebilir?",
+    "İnsektisit (organofosfat ve karbamat) zehirlenmesinde aşırı kolinerjik bulguları (miyozis, bronkospazm, bradikardi, aşırı sekresyon) kontrol altına almak için ilk basamakta uygulan",
+    "Organofosfatlı veya karbamatlı tarım ilacı zehirlenmelerinde asetilkolinesteraz inhibisyonu sonucu gelişen kolinerjik krizde, nöromüsküler kavşak ve sempatik gangliyonlardaki nikot"
+   ]
+  },
+  {
+   "konu": "Alkoller",
+   "n_soru": 7,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.57,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.29,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 1.0
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.714,
+     "L2_anlama_iliski": 0.286
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 1.7
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.86,
+    "ort_benzerlik": 0.77
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi alkolizm tedavisinde kullanılan disülfiramın etki mekanizmasını açıklar?",
+    "Alkolden oluşan asetaldehitin çoğu karaciğerde, mitokondriyal NAD-bağımlı ………… tarafından katalize edilen bir reaksiyon ile okside edilir. Cümledeki boşluk aşağıdaki terimlerden ha",
+    "Metanol ve etilen glikol zehirlenmesinde toksik metabolitlerin (formik asit ve oksalik asit) oluşumunu engellemek amacıyla alkol dehidrogenaz enzimini kompetitif olarak inhibe eden"
+   ]
+  },
+  {
+   "konu": "Antiemetik ilaçlar",
+   "n_soru": 6,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.67,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.33,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "onculu": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.333
+    },
+    "sik_kelime_ort": 1.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.67,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ondansetron",
+     "ornek_kok": "Metastatik karsinom nedeniyle yoğun kemoterapi gören bir hastanın bulantısını aşağıdaki ilaçlardan hangisi ile önleyebilirsiniz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "I. Deoksikortikosteron\nII. Ondansetron\nIII. Metamfetamin\nIV. Dronabinol\n\nHIV enfeksiyonlu hastalarda ciddi kilo kaybı ile ilişkili anoreksi tedavisinde ve kanser hastalarında kemoterapiye bağlı bulant",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Ondansetron",
+     "ornek_kok": "Aşağıdaki antiemetik ilaçlardan hangisi 5-HT3 reseptör antagonistidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki antiemetik ilaçlardan hangisi 5-HT3 reseptör antagonistidir?",
+    "Metastatik karsinom nedeniyle yoğun kemoterapi gören bir hastanın bulantısını aşağıdaki ilaçlardan hangisi ile önleyebilirsiniz?",
+    "Metastatik karsinom nedeniyle kemoterapi gören bir hastanın bulantı ve kusmasını önlemek amacıyla aşağıdaki ilaçlardan hangisi kullanılabilir?"
+   ]
+  },
+  {
+   "konu": "Dislipidemide Kullanılan İlaçlar",
+   "n_soru": 6,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.5,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "onculu": 0.333,
+     "en_tipik": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.333,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 1.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.5,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Niasin",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi yüksek dansiteli lipoprotein (YDL veya HDL) düzeyini artırmada en etkili ilaçtır?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "Hiperlipidemi tedavisi ile ilgili ifadeler:\nI. Statinler HMG-CoA redüktaz enzimini yarışmalı olarak inhibe eder. Ayrıca karaciğer hücrelerinde LDL reseptör sentezinin artmasına neden olurlar, bu da ka",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018,
+      2022
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Kolestiramin",
+     "ornek_kok": "Aşağıdaki ilaçlardan hangisi bağırsakta safra asitlerini bağlayarak hipolipidemik etki oluşturan ilaçtır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ilaçlardan hangisi yüksek dansiteli lipoprotein (YDL veya HDL) düzeyini artırmada en etkili ilaçtır?",
+    "Aşağıdaki ilaçlardan hangisi bağırsakta safra asitlerini bağlayarak hipolipidemik etki oluşturan ilaçtır?",
+    "Hiperlipidemi tedavisi ile ilgili ifadeler:\nI. Statinler HMG-CoA redüktaz enzimini yarışmalı olarak inhibe eder. Ayrıca karaciğer hücrelerinde LDL reseptör sentezinin artmasına ned"
+   ]
+  },
+  {
+   "konu": "Lokal Anestezik İlaçlar",
+   "n_soru": 6,
+   "yillar": [
+    2018,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "onculu": 0.5
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_ailede_komsu_kavram": 0.333
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Pantokain",
+     "ornek_kok": "\"Öyle bir lokal anestezik madde biliyorum ki topikal anestezinin her tipinde kullanılabilir. Dolayısıyla yapacağım her türlü topikal anestezide bu lokal anesteziği kullanabilme imkânına sahibim.\" diye",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "\"Öyle bir lokal anestezik madde biliyorum ki topikal anestezinin her tipinde kullanılabilir. Dolayısıyla yapacağım her türlü topikal anestezide bu lokal anesteziği kullanabilme imk",
+    "Aşağıdakilerden hangisi en kısa etkili lokal anestezik ajandır?",
+    "Lokal anesteziklere ilişkin aşağıdaki ifadeler verilmiştir:\nI. Lokal anestezikler genellikle zayıf asitlerdir, lipofiliteleri düşüktür.\nII. Sodyum kanallarının iç yüzeyindeki resep"
+   ]
+  },
+  {
+   "konu": "Adrenoseptör Antagonist İlaçlar",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.75,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "onculu": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "bilesik_yer_degistirmeli": 0.25,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 1.6
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.97
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Hastada taşikardi mevcuttur. Bu taşikardiyi kısa etkili bir beta bloker ile tedavi etmek istediğinizde aşağıdaki ilaçlardan hangisini tercih edersiniz?",
+    "İntraoperatif dönemde ve diğer akut aritmilerde kullanılan kısa etkili beta bloker ilaç hangisidir?",
+    "Anjina pektoris, hipertansiyon ve aritmi tedavisinde aşağıdakilerden hangisi kullanılamaz?"
+   ]
+  },
+  {
+   "konu": "OTC İlaçların Terapötik ve Toksik Etkileri",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "onculu": 0.5
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_ailede_komsu_kavram": 0.5
+    },
+    "sik_kelime_ort": 2.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Bir antihistaminik olan difenhidramin ile intihara teşebbüs eden bir hasta size acile getiriliyor.\nI. Halüsinasyon\nII. Midriyazis\nIII. Kardiyak aritmi\nIV. Kuru, sıcak ve kırmızı deri\nHastada hangisini",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Bir antihistaminik olan difenhidramin ile intihara teşebbüs eden bir hasta size acile getiriliyor.\nI. Halüsinasyon\nII. Midriyazis\nIII. Kardiyak aritmi\nIV. Kuru, sıcak ve kırmızı de",
+    "Aşağıdaki ilaçlardan hangisi reçetesiz satılan ilaç (OTC, over-the-counter) olarak verilemez?",
+    "Reçetesiz (over-the-counter, OTC) satılabilen ilaçların etken maddeleri yanlış veya kötüye kullanım potansiyelleri açısından değerlendirildiğinde;\nI. Fenilpropanolamin/efedrin (san"
+   ]
+  },
+  {
+   "konu": "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2",
+   "n_soru": 4,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.25,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "olumsuz": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 1.5
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Gastrointestinal nöroendokrin karsinoid tümörlerde ve VİPoma vakalarında aşırı vazoaktif amin ve peptid salınımına bağlı flushing, sulu ishal ve kramp nöbetlerini kontrol altına al",
+    "Aşağıdakilerden hangisi bir laksatif olarak kullanılamaz?",
+    "Bağırsak düz kaslarının kontraksiyonuna neden olarak sindirim arası (interdigestif) bağırsak hareketliliğini düzenleyen, bağırsağı bir sonraki yemeğe hazırlayan ve mideden HCl ve p"
+   ]
+  },
+  {
+   "konu": "Vazoaktif Peptidler, Eikozanoidler",
+   "n_soru": 3,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 1.0,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 1.0
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.333
+    },
+    "sik_kelime_ort": 1.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.67,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "PGI2",
+     "ornek_kok": "Mide mukus sekresyonunu artıran, mide asit ve pepsin salgısını azaltan sitoprotektif ajan aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Mide mukus sekresyonunu artıran, mide asit ve pepsin salgısını azaltan sitoprotektif ajan aşağıdakilerden hangisidir?",
+    "Aşağıdakilerden hangisi endotelin sentez inhibitörü olarak değerlendirilebilir?",
+    "C1 esteraz inhibitörü eksikliği zemininde gelişen herediter anjiyoödemin (HAE) akut laringeal ve fasiyal ataklarının acil tedavisinde kullanılan, bradikinin B2 reseptörüne kompetit"
+   ]
+  }
+ ]
+}

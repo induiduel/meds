@@ -1,0 +1,173 @@
+{
+ "ders": "Tıbbi Biyokimya",
+ "konular": [
+  {
+   "konu": "K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.8,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.8,
+     "eslestirme": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.8,
+     "L2_anlama_iliski": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 2.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.4,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hepatitler",
+     "ornek_kok": "Çay renginde idrar aşağıdaki durumlardan hangisinde görülür?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisinin idrarda bulunması patolojiktir?",
+    "Yirmi dört saatlik idrarda hormon, metabolit veya elektrolit analizi yapılacağı zaman idrarın saklanması ve bakteriyel üremenin önlenmesi için kullanılan koruyucular arasında aşağı",
+    "Çinko fabrikasında çalışan ve ağır metal veya eser element toksisitesi/eksikliği (çinko, kurşun, bakır, arsenik) şüphesiyle kan örneği alınacak bir işçide tüpün kendi camından veya"
+   ]
+  },
+  {
+   "konu": "Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler",
+   "n_soru": 9,
+   "yillar": [
+    2018,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.22,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "vaka": 0.111,
+     "en_tipik": 0.111,
+     "onculu": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.444,
+     "L2_anlama_iliski": 0.444,
+     "L3_uygulama": 0.111
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.556,
+     "bilesik_yer_degistirmeli": 0.222,
+     "sayisal_yakin_deger": 0.222,
+     "ayni_ailede_komsu_kavram": 0.111
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.11,
+    "ort_benzerlik": 0.77
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Klinik biyokimya laboratuvarında karaciğer parankim hasarını (hepatosit nekrozu ve membran geçirgenlik bozukluğunu) yansıtmada karaciğer dokusuna en spesifik olan ve sitozolik loka",
+    "Tam kan sayımında (hemogram) hemoglobin düşüklüğü ile birlikte eritrosit ortalama hacmi MCV <80 fL (mikrositoz) saptanan bir hastada etiyolojik ayırıcı tanı için biyokimya laboratu",
+    "Böbreklerde glomerüllerden serbestçe filtre olan glukozun proksimal tübüllerdeki SGLT-2 taşıyıcılarının maksimum geri emilim kapasitesini (TmG) aştığı ve idrarda glukozun (glukozür"
+   ]
+  },
+  {
+   "konu": "Biyokimyasal Analizlerde Hata Kaynakları",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.43,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.29,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.571,
+     "olumsuz": 0.286,
+     "sayi": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.571,
+     "L2_anlama_iliski": 0.429
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.714,
+     "bilesik_yer_degistirmeli": 0.286
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.43,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Klinik laboratuvar süreçlerinde (preanalitik, analitik ve postanalitik fazlar) ortaya çıkan hatalar incelendiğinde toplam laboratuvar hatalarının yaklaşık %60-70'inden sorumlu olan",
+    "İki basamaklı veya tek basamaklı sandviç immunoassay yöntemlerinde (örneğin beta-hCG, prolaktin, kalsitonin, tiroglobulin testlerinde) serumdaki antijen konsantrasyonu aşırı derece",
+    "Kan alma sırasında ince iğne kullanımı veya tüpün aşırı çalkalanması sonucu oluşan in vitro hemolizde eritrosit içi içerik plazmaya karıştığı için laboratuvar analizinde yalancı yü"
+   ]
+  }
+ ]
+}

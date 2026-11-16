@@ -1,0 +1,672 @@
+{
+ "ders": "Ortopedi ve Travmatoloji",
+ "konular": [
+  {
+   "konu": "Kemik, eklem ve implant enfeksiyonları",
+   "n_soru": 16,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.25,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.19,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.5,
+     "yanlis_bul": 0.25,
+     "dogrudan": 0.125,
+     "vaka": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.375,
+     "L3_uygulama": 0.125
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "bilesik_yer_degistirmeli": 0.25,
+     "mutlak_ifade_tuzagi": 0.062,
+     "ayni_ailede_komsu_kavram": 0.062
+    },
+    "sik_kelime_ort": 5.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.06,
+    "ort_benzerlik": 0.64
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Çoğu zaman tek başına intravenöz antibiyotik yeterlidir, debridmana gerek yoktur.",
+     "ornek_kok": "Gazlı gangren ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Diş ve çevresinin enfeksiyonları",
+     "ornek_kok": "Enfeksiyonlarında indirekt bulaş yollarından değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Parçalı osteomiyelit",
+     "ornek_kok": "Cierny-Mader sınıflamasına göre, aşağıdakilerden hangisi osteomiyelitin kemikteki anatomik yerleşimini gösteren alt gruplardan biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Gazlı gangren ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cierny-Mader sınıflamasına göre, aşağıdakilerden hangisi osteomiyelitin kemikteki anatomik yerleşimini gösteren alt gruplardan biri değildir?",
+    "Akut hematojen osteomiyelit ile ilgili aşağıdaki tespitlerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Yetişkin ve çocuk kırıklarına yaklaşım",
+   "n_soru": 11,
+   "yillar": [
+    2020,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.36,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.27,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.18,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.273,
+     "yanlis_bul": 0.273,
+     "dogru_ifade": 0.182,
+     "olumsuz": 0.091,
+     "en_tipik": 0.091,
+     "eslestirme": 0.091
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.545,
+     "L1_hatirlama": 0.455
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.636,
+     "mutlak_ifade_tuzagi": 0.273,
+     "bilesik_yer_degistirmeli": 0.182
+    },
+    "sik_kelime_ort": 6.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Pubis kolu kırığı",
+     "ornek_kok": "Aşağıdakilerden hangisi ortopedik cerrahi müdahale gerektirmez?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Cerrahi sonrası atel, alçı veya eksternal fiksatör gibi ek stabilizasyona gerek kalmaz.",
+     "ornek_kok": "Kırık tedavisinde Kirschner teli (K-teli) ile fiksasyon yöntemiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi ortopedik cerrahi müdahale gerektirmez?",
+    "Aşağıdakilerden hangisi ortopedik cerrahi girişim gerektirmez?",
+    "Kırık cerrahi tedavisinde kullanılan kapalı redüksiyon ve perkütan çivileme ile ilgili hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Spondilodiskitler ve pot hastalığı",
+   "n_soru": 11,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.36,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.27,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.18,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.364,
+     "yanlis_bul": 0.364,
+     "olumsuz": 0.182,
+     "dogru_ifade": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.636,
+     "L2_anlama_iliski": 0.364
+    },
+    "kurulus": "Tek sayı ya da oran sorulur; çeldirici yakın değerlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.545,
+     "bilesik_yer_degistirmeli": 0.364,
+     "sayisal_yakin_deger": 0.091
+    },
+    "sik_kelime_ort": 7.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.27,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Çocukluk yaş grubunda daha agresif seyreder.",
+     "ornek_kok": "Aşağıdakilerden hangisi diskitis için doğru bir tespit değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Enfekte lenf nodundan direkt yayılım yolu ile vertebra korpusuna bulaşır.",
+     "ornek_kok": "Mal de Pott hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Mycobacterium tuberculosis",
+     "ornek_kok": "Aşağıdaki ajanlardan hangisi piyojenik omurga enfeksiyonu etkenleri arasında sayılamaz?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ajanlardan hangisi piyojenik omurga enfeksiyonu etkenleri arasında sayılamaz?",
+    "Aşağıdakilerden hangisi diskitis için doğru bir tespit değildir?",
+    "İntervertebral disk enfeksiyonu (Diskitis) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Kemik ve kıkırdağın konjenital hastalıkları",
+   "n_soru": 9,
+   "yillar": [
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.44,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.22,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "en_tipik": 0.333,
+     "yanlis_bul": 0.222,
+     "olumsuz": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.556,
+     "L2_anlama_iliski": 0.444
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "ayni_ailede_komsu_kavram": 0.222,
+     "bilesik_yer_degistirmeli": 0.111
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.44,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Fibular hemimeli (deficiency)",
+     "ornek_kok": "Aşağıdakilerden hangisi en sık görülen uzun kemik konjenital eksikliğidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Osteoklast fonksiyon bozukluğu nedeniyle kemik rezorpsiyonunun durması ve medüller boşluğun silinmesi ile seyreden hastalık hangisidir?",
+    "Aşağıdakilerden hangisi en sık görülen uzun kemik konjenital eksikliğidir?",
+    "Talipes ekinovarus ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Eklem hastalıkları patolojisi ve artritler",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 1.0,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.375,
+     "yanlis_bul": 0.25,
+     "dogru_ifade": 0.25,
+     "en_tipik": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 4.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.12,
+    "ort_benzerlik": 0.89
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Dirsek",
+     "ornek_kok": "Osteoartritten en sık etkilenen bölgeler arasında hangisi bulunmaz?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "en_tipik",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "20-50 yaş aralığında sık görülür.",
+     "ornek_kok": "Aşağıdaki osteoartritle ilgili bilgilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Osteoartritten en sık etkilenen bölgeler arasında hangisi bulunmaz?",
+    "Aşağıdaki osteoartritle ilgili bilgilerden hangisi yanlıştır?",
+    "Osteoartrit ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Kemiklerin tümörlerine genel yaklaşım",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.86,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.571,
+     "yanlis_bul": 0.429
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.571,
+     "L2_anlama_iliski": 0.429
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "bilesik_yer_degistirmeli": 0.143,
+     "mutlak_ifade_tuzagi": 0.143
+    },
+    "sik_kelime_ort": 4.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Aspirinle geçen ağrı",
+     "ornek_kok": "Aşağıdaki ağrı tariflerinden hangisi, kemik tümörü bulunan bir hastada, ilk planda maligniteyi düşündürmez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Ewing sarkomu",
+     "ornek_kok": "Kemikte görülen neoplazilerden hangisi maligndir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Kemikte görülen neoplazilerden hangisi maligndir?",
+    "Basit kemik kisti ile ilgili verilen bilgilerden hangisi yanlıştır?",
+    "Malign kemik tümörleriyle ilgili verilen bilgilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Kemiğin edinsel hastalıkları",
+   "n_soru": 7,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.57,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.29,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogru_ifade": 0.429,
+     "yanlis_bul": 0.286,
+     "en_tipik": 0.143,
+     "dogrudan": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.571,
+     "L2_anlama_iliski": 0.429
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "bilesik_yer_degistirmeli": 0.143
+    },
+    "sik_kelime_ort": 6.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hastalığın proliferatif döneminde kafatası tutulumunda görsel ve işitsel bozukluklar gibi ",
+     "ornek_kok": "Kemiklerin edinsel hastalıklarından biri olan Paget hastalığı (osteitis deformans) için aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Kemiklerin edinsel hastalıklarından biri olan Paget hastalığı (osteitis deformans) için aşağıdakilerden hangisi doğrudur?",
+    "Kemiğin Paget hastalığı için hangisi doğrudur?",
+    "Pott hastalığı için hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Kırık komplikasyonlarına yaklaşım",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.5,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "prognoz_komplikasyon",
+     "pay": 0.25,
+     "gerekce": "Seyir ve komplikasyon izlem ve tedavi kararını belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.5,
+     "olumsuz": 0.5
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 5.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kaynama gecikmesi tanısı konduğunda, kırığın üzerinden geçen süreye bakılmaksızın cerrahi ",
+     "ornek_kok": "Kaynama gecikmesi ile ilgili verilen bilgilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Olguların yarısı mortal seyreder",
+     "ornek_kok": "Yağ embolisi sendromu için verilen bilgilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Yağ embolisi",
+     "ornek_kok": "Aşağıdakilerden hangisi kırığın geç dönem komplikasyonlarından değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Kaynama gecikmesi ile ilgili verilen bilgilerden hangisi yanlıştır?",
+    "Yağ embolisi sendromu için verilen bilgilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi kırığın geç dönem komplikasyonlarından değildir?"
+   ]
+  }
+ ]
+}

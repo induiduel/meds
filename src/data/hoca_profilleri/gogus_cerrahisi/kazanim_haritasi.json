@@ -1,0 +1,75 @@
+{
+ "ders": "Göğüs Cerrahisi",
+ "konular": [
+  {
+   "konu": "Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar",
+   "n_soru": 9,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.444,
+     "olumsuz": 0.333,
+     "vaka": 0.111,
+     "en_tipik": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.222,
+     "L3_uygulama": 0.111
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.778,
+     "mutlak_ifade_tuzagi": 0.111,
+     "bilesik_yer_degistirmeli": 0.111
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yelken göğüs",
+     "ornek_kok": "Aşağıdakilerden hangisi toraks travmalarında görülebilen intratorasik yaralanmalardan biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi toraks travmalarında görülebilen intratorasik yaralanmalardan biri değildir?",
+    "Kırk iki yaşında erkek hasta, araç içi trafik kazası nedeniyle ambulansla acil servise getiriliyor. Fizik muayenesinde palpasyonda boyundan 5. kostaya kadar cilt altı amfizem, oskü",
+    "Aşağıdakilerden hangisi kosta fraktürlerinin tedavisinde yapılabilecek uygulamalardan biri değildir?"
+   ]
+  }
+ ]
+}

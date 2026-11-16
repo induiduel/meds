@@ -1,0 +1,71 @@
+{
+ "ders": "Beyin ve Sinir Cerrahisi",
+ "n_soru": 37,
+ "guven": "dusuk",
+ "yillar": {
+  "2020": 16,
+  "2022": 1,
+  "2023": 2,
+  "2024": 2
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.459,
+  "dogru_ifade": 0.189,
+  "onculu": 0.081,
+  "en_tipik": 0.081,
+  "vaka": 0.081,
+  "olumsuz": 0.054,
+  "yanlis_bul": 0.027,
+  "sayi": 0.027
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.378,
+  "mekanizma": 0.216,
+  "tani_ayirici": 0.162,
+  "siniflama_ad": 0.108,
+  "onleme_halk_sagligi": 0.054,
+  "ilac_endikasyon": 0.027,
+  "etiyoloji_risk": 0.027,
+  "ilac_yan_etki": 0.027
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.541,
+  "L2_anlama_iliski": 0.378,
+  "L3_uygulama": 0.081
+ },
+ "kok_kelime": {
+  "ort": 23.5,
+  "p25": 9,
+  "medyan": 18,
+  "p75": 30
+ },
+ "sik": {
+  "kelime_ort": 5.2,
+  "kelime_cv": 0.21,
+  "dogru_en_uzun_orani": 0.216,
+  "bilesik_sik_orani": 0.276,
+  "sayisal_sik_orani": 0.081,
+  "hepsi_hicbiri_orani": 0.027,
+  "mutlak_ifade_celdirici_orani": 0.081,
+  "dogru_sik_konumu": {
+   "B": 0.27,
+   "A": 0.27,
+   "C": 0.189,
+   "D": 0.135,
+   "E": 0.135
+  },
+  "celdirici_ortusme": 0.129
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.514,
+  "bilesik_yer_degistirmeli": 0.243,
+  "ayni_ailede_komsu_kavram": 0.162,
+  "mutlak_ifade_tuzagi": 0.081,
+  "sayisal_yakin_deger": 0.081
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.054,
+  "ort_farkli_yil": 1
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

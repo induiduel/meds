@@ -1,0 +1,55 @@
+{
+ "ders": {
+  "Enfeksiyon Hastalıkları": {
+   "n_yeni": 19,
+   "n_eski": 362,
+   "jsd_ders_profili": 0.0713,
+   "jsd_genel_profil": 0.101,
+   "ders_profili_daha_iyi": true,
+   "eski_cikmisla_ayni_kavram": 0.263,
+   "tabanda_ayni_kavram": 0.0
+  },
+  "Halk Sağlığı": {
+   "n_yeni": 6,
+   "n_eski": 313,
+   "jsd_ders_profili": 0.2105,
+   "jsd_genel_profil": 0.2624,
+   "ders_profili_daha_iyi": true,
+   "eski_cikmisla_ayni_kavram": 0.167,
+   "tabanda_ayni_kavram": 0.0
+  },
+  "Tıbbi Genetik": {
+   "n_yeni": 12,
+   "n_eski": 100,
+   "jsd_ders_profili": 0.1286,
+   "jsd_genel_profil": 0.2021,
+   "ders_profili_daha_iyi": true,
+   "eski_cikmisla_ayni_kavram": 0.333,
+   "tabanda_ayni_kavram": 0.0
+  },
+  "Tıbbi Patoloji": {
+   "n_yeni": 21,
+   "n_eski": 1236,
+   "jsd_ders_profili": 0.134,
+   "jsd_genel_profil": 0.1801,
+   "ders_profili_daha_iyi": true,
+   "eski_cikmisla_ayni_kavram": 0.0,
+   "tabanda_ayni_kavram": 0.0
+  },
+  "Üroloji": {
+   "n_yeni": 11,
+   "n_eski": 161,
+   "jsd_ders_profili": 0.0668,
+   "jsd_genel_profil": 0.1146,
+   "ders_profili_daha_iyi": true,
+   "eski_cikmisla_ayni_kavram": 0.091,
+   "tabanda_ayni_kavram": 0.0
+  }
+ },
+ "ozet": {
+  "ders_sayisi": 5,
+  "ders_profili_daha_iyi": 5,
+  "ort_ayni_kavram": 0.171,
+  "ort_taban": 0.0
+ }
+}

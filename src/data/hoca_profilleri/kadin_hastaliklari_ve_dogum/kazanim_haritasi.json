@@ -1,0 +1,321 @@
+{
+ "ders": "Kadın Hastalıkları ve Doğum",
+ "konular": [
+  {
+   "konu": "Gebelik Terminolojisi/Kavramları",
+   "n_soru": 30,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.77,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.4,
+     "yanlis_bul": 0.2,
+     "olumsuz": 0.133,
+     "vaka": 0.133,
+     "onculu": 0.067,
+     "sayi": 0.033,
+     "dogru_ifade": 0.033
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.567,
+     "L2_anlama_iliski": 0.3,
+     "L3_uygulama": 0.133
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.467,
+     "sayisal_yakin_deger": 0.367,
+     "ayni_turden_ayri_kavram": 0.333,
+     "bilesik_yer_degistirmeli": 0.133
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Chadwick belirtisi",
+     "ornek_kok": "Gebelikte artan konjesyona bağlı olarak vajen mukozası ve serviks koyu mavi renk alır. Bu bulguya ne isim verilir?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "10.02.2021",
+     "ornek_kok": "Son adet tarihi (SAT) 03.05.2020 olan bir gebenin Naegele kuralına göre tahmini doğum tarihi (40. hafta) ne zamandır?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Goodell",
+     "ornek_kok": "Gebelikte servikal dokuda vaskülaritenin artması dolayısıyla serviksin yumuşaması bulgusuna ne ad verilir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Anti-streptolizin O",
+     "ornek_kok": "Gebelik planı olan kişinin değerlendirilmesinde veya gebenin ilk değerlendirmesinde istenmesi gereken rutin tetkiklerden hangisi değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Parite, 500 gramdan daha büyük canlı doğum sayısıdır.",
+     "ornek_kok": "Obstetrik terminoloji ve jinekolojik değerlendirme ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "26.02.2022",
+     "ornek_kok": "Son adet tarihi 19 Mayıs 2021 olan bir gebenin Naegele formülüne göre tahmini doğum tarihi hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yaşayan sayısı 6'dır.",
+     "ornek_kok": "Şu anda gebe olan ve öyküsünde 1 ektopik gebelik, 22. gebelik haftasında ölümle sonuçlanan 1 gebelik, 8. gebelik haftasında ölümle sonuçlanan 1 gebelik, 2 sezaryen ve 3 normal doğum bulunan bir kadınl",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "vaka",
+      "yanlis_bul"
+     ],
+     "tur": "prognoz_komplikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Gebelikte artan konjesyona bağlı olarak vajen mukozası ve serviks koyu mavi renk alır. Bu bulguya ne isim verilir?",
+    "Gebelikte servikal dokuda vaskülaritenin artması dolayısıyla serviksin yumuşaması bulgusuna ne ad verilir?",
+    "Gebelikte artan konjesyona bağlı olarak vajen mukozası ve serviks koyu mavi renk alır; bu bulguya ne isim verilir?"
+   ]
+  },
+  {
+   "konu": "Abortus",
+   "n_soru": 13,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.31,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.23,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.15,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.231,
+     "vaka": 0.231,
+     "dogrudan": 0.231,
+     "onculu": 0.077,
+     "dogru_ifade": 0.077,
+     "sayi": 0.077,
+     "yanlis_bul": 0.077
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.462,
+     "L2_anlama_iliski": 0.308,
+     "L3_uygulama": 0.231
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.615,
+     "ayni_ailede_komsu_kavram": 0.231,
+     "sayisal_yakin_deger": 0.231,
+     "bilesik_yer_degistirmeli": 0.077
+    },
+    "sik_kelime_ort": 3.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.31,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Otozomal trizomi",
+     "ornek_kok": "Fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomali grubu aşağıdakilerden hangisidir?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Düşük tehdidi",
+     "ornek_kok": "Son adet tarihine göre 8 haftalık gebeliği olan kadın hastanın acil servise vajinal kanama ile başvurusunda, yapılan genital muayene ve ultrasonografisine göre servikal os’un kapalı olduğu ve uterin k",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Abortus imminens",
+     "ornek_kok": "Aşağıdaki abortuslardan hangisinin seyri diğerlerinden farklı olabilir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Son adet tarihine göre 8 haftalık gebeliği olan kadın hastanın acil servise vajinal kanama ile başvurusunda, yapılan genital muayene ve ultrasonografisine göre servikal os’un kapal",
+    "Fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomaliler hangisidir?",
+    "Fetal faktörlere bağlı ilk trimester abortuslarında en sık karşılaşılan kromozomal anomali grubu aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Gebelik Terminolojisi ve Kavramları",
+   "n_soru": 3,
+   "yillar": [
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.67,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "tanim": 0.333,
+     "olumsuz": 0.333,
+     "dogrudan": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.333
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Toplam 4 kez gebe kalmış, 36. ve 38. haftalarda 2 canlı çocuk doğurmuş (biri vajinal, biri sezaryen), 16. ve 25. haftalarda 2 kez düşük yapmış kadının G P Y A değeri nedir?",
+    "Perinatolojide fetal iyilik halinin değerlendirilmesinde kullanılan aşağıdaki testlerden hangisi bir fetal iyilik hali değerlendirme testi değildir?",
+    "Aşağıdakilerden hangisi gebelikte fetal kromozom anomalilerinin kesin tanısı amacıyla uygulanan invaziv (girişimsel) testlerden biridir?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,364 @@
+{
+ "ders": "Beyin ve Sinir Cerrahisi",
+ "konular": [
+  {
+   "konu": "Kafa ve Omurilik Yaralanmaları",
+   "n_soru": 15,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.27,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "vaka": 0.133,
+     "en_tipik": 0.067,
+     "sayi": 0.067,
+     "olumsuz": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.467,
+     "L1_hatirlama": 0.4,
+     "L3_uygulama": 0.133
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.4,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "sayisal_yakin_deger": 0.2,
+     "bilesik_yer_degistirmeli": 0.133,
+     "mutlak_ifade_tuzagi": 0.067
+    },
+    "sik_kelime_ort": 3.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.4,
+    "ort_benzerlik": 0.77
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Transkraniyal ultrasonografi",
+     "ornek_kok": "Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Travmatik subdural kanama tanisında ilk yapılacak gõrüntüleme, perfüzyon MR görüntulemesid",
+     "ornek_kok": "Așağıdakilerden hangisi kafa travması sonucu oluşan patolojler ile ilgiliyanliş bir ifadedir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "7",
+     "ornek_kok": "18 yaşında erkek hasta motosiklet kazası ile getiriliyor. Kafa travması mevcut. Glasgow Koma Skoru (GKS) değerlendirmesinde ağrılı uyaran verildiğinde gözlerini açtığı, anlamsız sesler çıkardığı ve üs",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Prematüre yenidoğanlarda intrakraniyal kanamayı göstermek için öncelikle hangi görüntüleme yöntemi kullanılır?",
+    "Kafatası kırıklarında (özellikle temporal kemik) arteria meningea media'nın hasar görmesi sonucu aşağıdaki kanama veya hematom tiplerinden hangisi gelişir?",
+    "Lucid interval (geçici iyilik hâli) ile karakterize klinik tabloya aşağıdaki kanamalardan hangisi yol açmaktadır?"
+   ]
+  },
+  {
+   "konu": "Kafatasını oluşturan kemiklerin travmaları",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.38,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogru_ifade": 0.375,
+     "yanlis_bul": 0.125,
+     "onculu": 0.125,
+     "en_tipik": 0.125,
+     "dogrudan": 0.125,
+     "olumsuz": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "mutlak_ifade_tuzagi": 0.25,
+     "bilesik_yer_degistirmeli": 0.125,
+     "ayni_ailede_komsu_kavram": 0.125
+    },
+    "sik_kelime_ort": 8.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kafa tabanı kırıklarında doğrudan travma olmadan, saatler sonra gelişen periorbital ekimoz",
+     "ornek_kok": "Kafatası kemik kırıkları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Kafa travmaları ve kafa tabanı kırıkları için aşağıdakilerden hangisi yanlıştır?",
+    "Kafatası kemik kırıkları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Kafatası kemik kırıkları ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Medulla Spinalis lezyonları",
+   "n_soru": 6,
+   "yillar": [
+    2020,
+    2023,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.5,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.17,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "dogru_ifade": 0.5
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 1.0
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "bilesik_yer_degistirmeli": 0.167
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.67
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Büyük lezyonlarda dorsal kolonlar, tractus corticospinalis ve tractus spinothalamicus etki",
+     "ornek_kok": "Santral kord sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Santral kord sendromu ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Sağlıklı bir omurgada omurilik (spinal kord) ile anatomik olarak doğrudan komşuluk yapan veya onu çevreleyen temel bağ dokusu yapısı aşağıdakilerden hangisidir?",
+    "Lomber disk hernileri için aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "İntrakraniyal Kitlelerde Belirti ve Bulgular",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "onculu": 0.25,
+     "en_tipik": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.75,
+     "ayni_ailede_komsu_kavram": 0.25,
+     "ayni_turden_ayri_kavram": 0.25
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Kafa içi basınç artışı sendromu (KİBAS) ile ilgili aşağıdaki ifadeler verilmiştir:\nI. Kafa içi basıncı yapısal ve metabolik değişikliklere neden olan patolojik durumlarda artabilir",
+    "Vestibüler nörilemmomalarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?",
+    "Vestibüler schwannomlarda (akustik nörinom) aşağıdaki klinik bulgulardan hangisi beklenir?"
+   ]
+  },
+  {
+   "konu": "Kafa travmasına eşlik eden erken dönem klinik sorunlar",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.5,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogru_ifade": 0.25,
+     "dogrudan": 0.25,
+     "onculu": 0.25,
+     "vaka": 0.25
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.25,
+     "L3_uygulama": 0.25
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 6.5
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Kafa travmalı bir olguda acil serviste dikkat edilmesi gereken durumlar ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Kafa tabanı travması sonrası gelişen poliüri ve hipernatremi tablosunda aşağıdakilerden hangisi santral diabetes insipidus (Dİ) tanısı ile uyuşmayan bir bulgudur?",
+    "Kafa travmasına eşlik eden erken dönem klinik sorunlara yönelik yaklaşımlar ile ilgili aşağıdaki ifadeler veriliyor:\nI. Kan basıncının korunması (sistolik kan basıncı >110 mm Hg) ö"
+   ]
+  }
+ ]
+}

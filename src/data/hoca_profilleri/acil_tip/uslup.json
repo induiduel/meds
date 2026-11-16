@@ -1,0 +1,73 @@
+{
+ "ders": "Acil Tıp",
+ "n_soru": 113,
+ "guven": "orta",
+ "yillar": {
+  "2018": 5,
+  "2020": 71,
+  "2022": 13,
+  "2023": 1,
+  "2025": 1
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.407,
+  "vaka": 0.248,
+  "olumsuz": 0.177,
+  "yanlis_bul": 0.062,
+  "en_tipik": 0.035,
+  "onculu": 0.035,
+  "sayi": 0.027,
+  "dogru_ifade": 0.009
+ },
+ "bilgi_turu": {
+  "tani_ayirici": 0.195,
+  "tanim_kavram": 0.186,
+  "siniflama_ad": 0.142,
+  "ilac_endikasyon": 0.142,
+  "onleme_halk_sagligi": 0.124,
+  "mekanizma": 0.097,
+  "etiyoloji_risk": 0.071,
+  "ilac_yan_etki": 0.035,
+  "prognoz_komplikasyon": 0.009
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.478,
+  "L2_anlama_iliski": 0.274,
+  "L3_uygulama": 0.248
+ },
+ "kok_kelime": {
+  "ort": 25.0,
+  "p25": 12,
+  "medyan": 22,
+  "p75": 34
+ },
+ "sik": {
+  "kelime_ort": 4.8,
+  "kelime_cv": 0.25,
+  "dogru_en_uzun_orani": 0.124,
+  "bilesik_sik_orani": 0.175,
+  "sayisal_sik_orani": 0.15,
+  "hepsi_hicbiri_orani": 0.0,
+  "mutlak_ifade_celdirici_orani": 0.035,
+  "dogru_sik_konumu": {
+   "C": 0.257,
+   "A": 0.239,
+   "D": 0.212,
+   "B": 0.177,
+   "E": 0.115
+  },
+  "celdirici_ortusme": 0.108
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.664,
+  "bilesik_yer_degistirmeli": 0.159,
+  "sayisal_yakin_deger": 0.15,
+  "ayni_ailede_komsu_kavram": 0.133,
+  "mutlak_ifade_tuzagi": 0.035
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.115,
+  "ort_farkli_yil": 1
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

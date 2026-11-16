@@ -1,0 +1,71 @@
+{
+ "ders": "Nöroloji",
+ "n_soru": 94,
+ "guven": "orta",
+ "yillar": {
+  "2020": 52,
+  "2021": 7,
+  "2022": 7,
+  "2023": 1
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.681,
+  "vaka": 0.096,
+  "olumsuz": 0.074,
+  "sayi": 0.053,
+  "onculu": 0.043,
+  "yanlis_bul": 0.032,
+  "en_tipik": 0.011,
+  "dogru_ifade": 0.011
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.468,
+  "tani_ayirici": 0.16,
+  "siniflama_ad": 0.149,
+  "mekanizma": 0.128,
+  "onleme_halk_sagligi": 0.032,
+  "ilac_endikasyon": 0.032,
+  "epidemiyoloji_sayi": 0.021,
+  "etiyoloji_risk": 0.011
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.606,
+  "L2_anlama_iliski": 0.298,
+  "L3_uygulama": 0.096
+ },
+ "kok_kelime": {
+  "ort": 17.8,
+  "p25": 9,
+  "medyan": 15,
+  "p75": 21
+ },
+ "sik": {
+  "kelime_ort": 2.9,
+  "kelime_cv": 0.22,
+  "dogru_en_uzun_orani": 0.149,
+  "bilesik_sik_orani": 0.089,
+  "sayisal_sik_orani": 0.085,
+  "hepsi_hicbiri_orani": 0.053,
+  "mutlak_ifade_celdirici_orani": 0.021,
+  "dogru_sik_konumu": {
+   "B": 0.234,
+   "D": 0.223,
+   "A": 0.213,
+   "C": 0.213,
+   "E": 0.117
+  },
+  "celdirici_ortusme": 0.123
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.681,
+  "ayni_ailede_komsu_kavram": 0.202,
+  "sayisal_yakin_deger": 0.085,
+  "bilesik_yer_degistirmeli": 0.064,
+  "mutlak_ifade_tuzagi": 0.021
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.085,
+  "ort_farkli_yil": 1
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

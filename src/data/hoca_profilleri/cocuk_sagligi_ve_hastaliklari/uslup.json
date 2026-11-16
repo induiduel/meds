@@ -1,0 +1,78 @@
+{
+ "ders": "Çocuk Sağlığı ve Hastalıkları",
+ "n_soru": 143,
+ "guven": "yuksek",
+ "yillar": {
+  "2018": 15,
+  "2020": 57,
+  "2021": 11,
+  "2022": 17,
+  "2023": 2,
+  "2024": 2,
+  "2025": 1
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.343,
+  "yanlis_bul": 0.217,
+  "olumsuz": 0.182,
+  "en_tipik": 0.112,
+  "vaka": 0.077,
+  "dogru_ifade": 0.021,
+  "onculu": 0.021,
+  "tanim": 0.014,
+  "sayi": 0.014
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.287,
+  "tani_ayirici": 0.231,
+  "etiyoloji_risk": 0.133,
+  "mekanizma": 0.112,
+  "siniflama_ad": 0.098,
+  "ilac_endikasyon": 0.056,
+  "onleme_halk_sagligi": 0.049,
+  "tanimlayici_bulgu": 0.014,
+  "epidemiyoloji_sayi": 0.007,
+  "prognoz_komplikasyon": 0.007,
+  "ilac_yan_etki": 0.007
+ },
+ "bilissel_duzey": {
+  "L2_anlama_iliski": 0.497,
+  "L1_hatirlama": 0.427,
+  "L3_uygulama": 0.077
+ },
+ "kok_kelime": {
+  "ort": 15.5,
+  "p25": 8,
+  "medyan": 10,
+  "p75": 17
+ },
+ "sik": {
+  "kelime_ort": 5.4,
+  "kelime_cv": 0.28,
+  "dogru_en_uzun_orani": 0.196,
+  "bilesik_sik_orani": 0.22,
+  "sayisal_sik_orani": 0.063,
+  "hepsi_hicbiri_orani": 0.021,
+  "mutlak_ifade_celdirici_orani": 0.014,
+  "dogru_sik_konumu": {
+   "A": 0.273,
+   "D": 0.217,
+   "E": 0.196,
+   "C": 0.196,
+   "B": 0.119
+  },
+  "celdirici_ortusme": 0.124
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.671,
+  "bilesik_yer_degistirmeli": 0.21,
+  "ayni_ailede_komsu_kavram": 0.154,
+  "sayisal_yakin_deger": 0.063,
+  "mutlak_ifade_tuzagi": 0.014
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.105,
+  "ort_farkli_yil": 1
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

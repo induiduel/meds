@@ -1,0 +1,847 @@
+{
+ "ders": "FTR",
+ "konular": [
+  {
+   "konu": "Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz",
+   "n_soru": 25,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.28,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.28,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.16,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.68,
+     "dogru_ifade": 0.16,
+     "yanlis_bul": 0.08,
+     "olumsuz": 0.04,
+     "onculu": 0.04
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.72,
+     "L2_anlama_iliski": 0.28
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.68,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "bilesik_yer_degistirmeli": 0.16
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.24,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ani ve sistemik hastalıklar nedeniyle ölüm riskinin azalması",
+     "ornek_kok": "Aşağıdakilerden hangisi fiziksel aktivitenin gelecekteki yaşantı üzerine etkilerindendir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Eklem hareket açıklığına engel olan kemik yapısı",
+     "ornek_kok": "Aşağıdakilerden hangisi germe (stretching) egzersizlerinin kontrendikasyonlarından biridir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Proprio...egzersizi",
+     "ornek_kok": "Eklem ve ekstremitenin pozisyon duyusunu geliştirmeye yardımcı olan egzersiz tipi hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi fiziksel aktivitenin gelecekteki yaşantı üzerine etkilerindendir?",
+    "FTR'de nonfarmakolojik tedaviler kapsamında uygulanan eklem hareket açıklığı (EHA) egzersizleri ile ilgili doğru ifade hangisidir?",
+    "Aşağıdakilerden hangisi germe (stretching) egzersizlerinin kontrendikasyonlarından biridir?"
+   ]
+  },
+  {
+   "konu": "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu",
+   "n_soru": 19,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.32,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.16,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.211,
+     "onculu": 0.211,
+     "dogrudan": 0.211,
+     "vaka": 0.105,
+     "dogru_ifade": 0.105,
+     "yanlis_bul": 0.105,
+     "sayi": 0.053
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.474,
+     "L1_hatirlama": 0.421,
+     "L3_uygulama": 0.105
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.579,
+     "ayni_ailede_komsu_kavram": 0.368,
+     "bilesik_yer_degistirmeli": 0.263
+    },
+    "sik_kelime_ort": 4.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.11,
+    "ort_benzerlik": 0.9
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir:\nI. Nöral tüpte kapanma defektidir.\nII. En sık görülen pediatrik nörolojik hastalıktır.\nIII. İlk çocukta spina bifida varsa risk diğer çocuklar i",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Spastik",
+     "ornek_kok": "Pediatrik rehabilitasyon kapsamında, çocuklarda en sık görülen serebral palsi tipi hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Omurilik yaralanmasında motor ve duyu kayıpları gözlenirken otonom sistem tutulumu gözlenm",
+     "ornek_kok": "Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Omurilik yaralanmaları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+    "Çocukluk çağında görülen; progresif kas güçsüzlüğü, Gowers belirtisi (yerden kalkarken ellerinden destek alma) ve psödohipertrofi ile karakterize, en sık görülen X'e bağlı resesif ",
+    "Pediatrik rehabilitasyon kapsamında, çocuklarda en sık görülen serebral palsi tipi hangisidir?"
+   ]
+  },
+  {
+   "konu": "Bel ağrılarına yaklaşım",
+   "n_soru": 18,
+   "yillar": [
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.61,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.22,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.17,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.444,
+     "vaka": 0.222,
+     "dogru_ifade": 0.222,
+     "en_tipik": 0.056,
+     "onculu": 0.056
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.556,
+     "L3_uygulama": 0.222,
+     "L2_anlama_iliski": 0.222
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.611,
+     "ayni_ailede_komsu_kavram": 0.167,
+     "bilesik_yer_degistirmeli": 0.167,
+     "sayisal_yakin_deger": 0.111
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.28,
+    "ort_benzerlik": 0.81
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Spinal stenoz",
+     "ornek_kok": "70 yaşında erkek hasta, 1 yıldır yol yürümekle her iki baldırda ve daha az belde ağrı tarif ediyor. Baldır ağrısı öne eğilmekle ve oturmakla geçiyor. Yatarken ve otururken bacak ağrısı olmuyor. En muh",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Sabahları daha belirgin olup gün içinde hareketle rahatlayan bel ağrısı",
+     "ornek_kok": "Aşağıdakilerden hangisi inflamatuar bel ağrısı ile uyumludur?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Spondilolistezis",
+     "ornek_kok": "Bir vertebranın, bir altındaki vertebra üzerinde öne veya arkaya doğru kayması aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Ağrı arttığında kısa süreli istirahat iyi gelir",
+     "ornek_kok": "İniamatur bel ağrısı için hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Faset eklem hipertrofisi",
+     "ornek_kok": "Aşağıdakilerden hangisi lomber spinal stenoza neden olur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Spondilolistezis",
+     "ornek_kok": "Bir vertebranın komşu alt vertebra gövdesi üzerinde öne veya arkaya doğru patolojik olarak kayması durumu aşağıdakilerden hangisi ile adlandırılır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 6,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi inflamatuar bel ağrısı ile uyumludur?",
+    "70 yaşında erkek hasta, 1 yıldır yol yürümekle her iki baldırda ve daha az belde ağrı tarif ediyor. Baldır ağrısı öne eğilmekle ve oturmakla geçiyor. Yatarken ve otururken bacak ağ",
+    "Bir vertebranın, bir altındaki vertebra üzerinde öne veya arkaya doğru kayması aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Yaşlılığa Özgü Hareket Sistemi Bozuklukları",
+   "n_soru": 16,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.19,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.312,
+     "dogrudan": 0.25,
+     "olumsuz": 0.188,
+     "dogru_ifade": 0.125,
+     "onculu": 0.062,
+     "en_tipik": 0.062
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.625,
+     "L1_hatirlama": 0.375
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "bilesik_yer_degistirmeli": 0.375,
+     "ayni_ailede_komsu_kavram": 0.062
+    },
+    "sik_kelime_ort": 6.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.12,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Senil osteoporozda kırık riski yoktur",
+     "ornek_kok": "Yaşlılıkta görülen değişiklikler ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Antiinflamatuar sitokinler sarkopeni gelişiminde etkilidir",
+     "ornek_kok": "Sarkopeni ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I, II ve III",
+     "ornek_kok": "Osteoporoz ile ilgili aşağıdaki ifadeler veriliyor:\nI. Tip 1 osteoporozda kemik kaybı trabeküler kemikte kortikal kemiğe göre daha belirgindir.\nII. Tip 2 osteoporozun patogenezinde azalmış osteoblasti",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Sarkopeni ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Yaşlılıkta görülen değişiklikler ile ilgili aşağıdakilerden hangisi doğru değildir?",
+    "Osteoporoz ile ilgili aşağıdaki ifadeler veriliyor:\nI. Tip 1 osteoporozda kemik kaybı trabeküler kemikte kortikal kemiğe göre daha belirgindir.\nII. Tip 2 osteoporozun patogenezinde"
+   ]
+  },
+  {
+   "konu": "Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri",
+   "n_soru": 15,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.47,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.47,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.4,
+     "onculu": 0.267,
+     "vaka": 0.267,
+     "eslestirme": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.533,
+     "L3_uygulama": 0.267,
+     "L1_hatirlama": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.6,
+     "bilesik_yer_degistirmeli": 0.4,
+     "ayni_turden_ayri_kavram": 0.333
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.47,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Karpal tünel sendromu",
+     "ornek_kok": "40 yaşında kadın hasta ellerinde uyuşma tarifliyor. Ellerinin daha çok geceleri uyuştuğunu, sallamakla rahatladığını ifade ediyor. Özellikle 1, 2 ve 3. parmaklarda uyuşmanın belirgin olduğu saptanıyor",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Yergason testi",
+     "ornek_kok": "Biseps tendonunun oluk içerisindeki stabilitesini değerlendirmek için aşağıdaki özel testlerden hangisi kullanılır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Omuz ekleminde aşağıdaki kaslar verilmiştir.\nI. Musculus supraspinatus\nII. Musculus infraspinatus\nIII. Musculus subscapularis\nIV. Musculus teres minor\nYukarıdakilerden hangileri rotator manşet (rotato",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "De Quervain tendiniti",
+     "ornek_kok": "Ekstansör pollicis brevis ve abduktor pollicis longus tendonlarının (başparmağa ait tendonların) radius stiloid çıkıntısı yanından geçerken zorlanması ve inflamasyonu ile karakterize durum aşağıdakile",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "C7 sinir kökü ile ilgili aşağıdaki ifadeler veriliyor:\nI. Triceps refleksi C7'nin nörolojik bütünlüğünü gösterir.\nII. C7 innervasyonlu kaslar etkilendiğinde parmak abdüksiyonu yapılamaz.\nIII. Dermatom",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "C7 sinir kökü ile ilgili aşağıdaki ifadeler veriliyor:\nI. Triceps refleksi C7'nin nörolojik bütünlüğünü gösterir.\nII. C7 innervasyonlu kaslar etkilendiğinde parmak abdüksiyonu yapı",
+    "40 yaşında kadın hasta ellerinde uyuşma tarifliyor. Ellerinin daha çok geceleri uyuştuğunu, sallamakla rahatladığını ifade ediyor. Özellikle 1, 2 ve 3. parmaklarda uyuşmanın belirg",
+    "40 yaşında kadın hasta ellerinde uyuşma tarifliyor. Ellerinin daha çok geceleri uyuştuğunu, sallamakla rahatladığını ifade ediyor. Özellikle 1., 2. ve 3. parmaklarda uyuşmanın beli"
+   ]
+  },
+  {
+   "konu": "Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri",
+   "n_soru": 14,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.21,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.357,
+     "dogru_ifade": 0.214,
+     "olumsuz": 0.143,
+     "onculu": 0.143,
+     "yanlis_bul": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.643,
+     "bilesik_yer_degistirmeli": 0.286,
+     "ayni_ailede_komsu_kavram": 0.143
+    },
+    "sik_kelime_ort": 5.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.21,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tibialis anterior",
+     "ornek_kok": "Bel ağrılarına yaklaşım. Sağda topuk yürüyüşü veya topukta duruş yapamayan hastada hangi kasta motor güçsüzlük beklenir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Trendelenburg yürüyüşü",
+     "ornek_kok": "Kalça abduktörlerinin zayıflığı nedeniyle basma fazında gövdenin basılan tarafa doğru eğilmesi ile karakterize yürüyüş tipi aşağıdakilerden hangisidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "II ve IV",
+     "ornek_kok": "I. Kalça ekleminin fleksiyon, ekstansiyon, supinasyon, pronasyon, iç ve dış rotasyon olarak 6 hareketi mevcuttur.\nII. Bacak uzunluğu, spina iliaka anterior süperiordan medial malleole kadar olan mesaf",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Bel ağrılarına yaklaşım. Sağda topuk yürüyüşü veya topukta duruş yapamayan hastada hangi kasta motor güçsüzlük beklenir?",
+    "Kalça abduktörlerinin zayıflığı nedeniyle basma fazında gövdenin basılan tarafa doğru eğilmesi ile karakterize yürüyüş tipi aşağıdakilerden hangisidir?",
+    "I. Kalça ekleminin fleksiyon, ekstansiyon, supinasyon, pronasyon, iç ve dış rotasyon olarak 6 hareketi mevcuttur.\nII. Bacak uzunluğu, spina iliaka anterior süperiordan medial malle"
+   ]
+  },
+  {
+   "konu": "Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme",
+   "n_soru": 13,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.77,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.23,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.385,
+     "dogru_ifade": 0.231,
+     "onculu": 0.231,
+     "yanlis_bul": 0.077,
+     "en_tipik": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.538,
+     "L1_hatirlama": 0.462
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.462,
+     "bilesik_yer_degistirmeli": 0.385,
+     "ayni_ailede_komsu_kavram": 0.308,
+     "sayisal_yakin_deger": 0.154
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "L5-S1 intervertebral aralıktan hangi sinir kökü çıkar?",
+    "Hangi test L3 kök lezyonu varlığında pozitif sonuç verir?",
+    "Servikal vertebralar ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Boyun ağrılarına yaklaşım",
+   "n_soru": 9,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.22,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.778,
+     "vaka": 0.111,
+     "dogru_ifade": 0.111
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.556,
+     "L1_hatirlama": 0.333,
+     "L3_uygulama": 0.111
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.889,
+     "ayni_ailede_komsu_kavram": 0.111
+    },
+    "sik_kelime_ort": 2.9
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.67,
+    "ort_benzerlik": 0.81
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Whiplash Sendromu",
+     "ornek_kok": "Genellikle traÕk kazalarında görülen başa direkt bir travma olmadan kamçı darbesi şeklinde boynun öne ve arkaya gitmesi sonucu meydana gelen incinme hangisidir?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Genellikle trafik kazalarında görülen, başa direkt bir travma olmadan kamçı darbesi şeklinde boynun öne ve arkaya gitmesi sonucu meydana gelen incinme hangisidir?",
+    "Aşağıdakilerden hangisi servikal radikülopati tanısında kullanılan muayene testlerinden biridir?",
+    "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitudinal ligament yırtılmış ise tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+   "n_soru": 3,
+   "yillar": [
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 1.0,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "en_tipik": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "mutlak_ifade_tuzagi": 0.333
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Dünya Sağlık Örgütü sınıflamasına göre; bir organdaki yapı ya da fonksiyon kaybı 'bozukluk (impairment)', bireysel eylemleri yapamama 'özürlülük/aktivite kısıtlılığı (disability)',",
+    "Uzamış yatak istirahatinin kardiyovasküler sistem üzerindeki en erken fizyolojik etkisi aşağıdakilerden hangisidir?",
+    "İşaret parmağının distal falanksını kaza sonucu kaybeden bir piyanistin düğmesini ilikleyememesi, Dünya Sağlık Örgütü'nün bozukluk-özürlülük-engellilik sınıflamasına göre hangisine"
+   ]
+  }
+ ]
+}

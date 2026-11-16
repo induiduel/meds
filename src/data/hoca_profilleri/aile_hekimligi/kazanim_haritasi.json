@@ -1,0 +1,406 @@
+{
+ "ders": "Aile Hekimliği",
+ "konular": [
+  {
+   "konu": "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2020,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.33,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.2,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.267,
+     "onculu": 0.2,
+     "yanlis_bul": 0.133,
+     "olumsuz": 0.133,
+     "tanim": 0.067,
+     "dogru_ifade": 0.067,
+     "en_tipik": 0.067,
+     "sayi": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.467,
+     "ayni_turden_ayri_kavram": 0.267,
+     "ayni_ailede_komsu_kavram": 0.267,
+     "sayisal_yakin_deger": 0.133,
+     "mutlak_ifade_tuzagi": 0.133
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.13,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yalnız II",
+     "ornek_kok": "Yaşlılıkta güvenli yaşamın ilkeleri ile ilgili olarak:\nI. 40-69 yaş arası kadınlara 5 yılda bir mamografi yapılması önerilir.\nII. İnfluenza aşısı 65 yaş üzerinde yapılmalıdır.\nIII. Kolorektal kanser t",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Tuvaletlerin alçaltılması",
+     "ornek_kok": "Hangisi yaşlılarda düşme ve kırık riskini azaltmaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Elli yaşın üzerindeki kişilerde günlük yeterli kalsiyum alımı için gerekli miktar en az ne kadardır?",
+    "Yaşlılarda pnömokok aşısı uygulamaları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Yaşlı bireylerin genel sağlık ve iyilik durumu aşağıdakilerden hangisine bağlı değildir?"
+   ]
+  },
+  {
+   "konu": "Aile Hekimliğinde Periyodik Muayeneler 1",
+   "n_soru": 14,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.64,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.21,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.571,
+     "olumsuz": 0.143,
+     "yanlis_bul": 0.143,
+     "onculu": 0.071,
+     "sayi": 0.071
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.643,
+     "L2_anlama_iliski": 0.357
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.643,
+     "bilesik_yer_degistirmeli": 0.214,
+     "ayni_ailede_komsu_kavram": 0.214,
+     "sayisal_yakin_deger": 0.071
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.5,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Eklem bozuklukları",
+     "ornek_kok": "Aşağıdakilerden hangisi adölesan dönemde sık karşılaşılan sağlık problemlerinden değildir?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Anti-HAV testi",
+     "ornek_kok": "Aşağıdakilerden hangisi evlilik öncesi tarama testleri arasında yer almaz?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2022,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "4-12 ay arası",
+     "ornek_kok": "Bebeklik döneminde demir profilaksisine hangi aylarda başlanır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [],
+     "kaliplar": [
+      "dogrudan",
+      "sayi"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi adölesan dönemde sık karşılaşılan sağlık problemlerinden değildir?",
+    "Aşağıdakilerden hangisi evlilik öncesi tarama testleri arasında yer almaz?",
+    "Aşağıdakilerden hangisi yeni doğanda topuk kanı taraması ile tespit edilen ve tarama programında yer alan hastalıklardandır?"
+   ]
+  },
+  {
+   "konu": "Aile Hekimliğine Yaklaşım",
+   "n_soru": 11,
+   "yillar": [
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.27,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "prognoz_komplikasyon",
+     "pay": 0.27,
+     "gerekce": "Seyir ve komplikasyon izlem ve tedavi kararını belirler."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.27,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.273,
+     "dogrudan": 0.273,
+     "olumsuz": 0.182,
+     "yanlis_bul": 0.182,
+     "tanim": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.545,
+     "L2_anlama_iliski": 0.455
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.636,
+     "ayni_turden_ayri_kavram": 0.273,
+     "ayni_ailede_komsu_kavram": 0.273,
+     "mutlak_ifade_tuzagi": 0.091
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.18,
+    "ort_benzerlik": 0.82
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "Palyatif bakım ile ilgili olarak aşağıdaki ifadeler verilmiştir:\nI. Ölüm sürecini değerli bir yaşantı olarak görür.\nII. Ölümü geciktirir.\nIII. Psikolojik ve manevi bakımı birleştirir.\nIV. Sadece ölüm ",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "Homoseksüalite tedavisi",
+     "ornek_kok": "Aşağıdakilerden hangisi üreme sağlığı hizmetlerinden değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi üreme sağlığı hizmetlerinden değildir?",
+    "Aşağıdakilerden hangisi palyatif bakım ve evde sağlık hizmetlerinin hedef hasta gruplarından biri değildir?",
+    "Palyatif bakım ile ilgili olarak aşağıdaki ifadeler verilmiştir:\nI. Ölüm sürecini değerli bir yaşantı olarak görür.\nII. Ölümü geciktirir.\nIII. Psikolojik ve manevi bakımı birleştir"
+   ]
+  },
+  {
+   "konu": "Nikotin Bağımlılığı ve Tedavisi",
+   "n_soru": 9,
+   "yillar": [
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.33,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.33,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.22,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.889,
+     "olumsuz": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 1.0
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.556,
+     "ayni_turden_ayri_kavram": 0.444
+    },
+    "sik_kelime_ort": 6.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.11,
+    "ort_benzerlik": 0.81
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Öğren - Öner - Ölç - Önderlik et - Örgütle",
+     "ornek_kok": "Nikotin bağımlılığı müdahalesinde kullanılan 5Ö yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+     "kez": 4,
+     "farkli_kok": 4,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi Değişim Evreleri (Prochaska ve DiClemente) basamaklarını doğru sırayla vermektedir?",
+    "Nikotin bağımlılığı müdahalesinde kullanılan 5Ö yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+    "Sigara bırakma müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamaklarının doğru sıralaması aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Aile Hekimliğinde Periyodik Muayeneler 2",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.75,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "olumsuz": 0.25,
+     "onculu": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_turden_ayri_kavram": 0.5,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 2.6
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.5,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi adölesanlarda (ergenlerde) sık karşılaşılan sağlık problemlerinden biri değildir?",
+    "Erişkinlik dönemi taramaları ile ilgili;\nI. 35 yaşın üzerindeki tüm erişkinlere beş yılda bir TSH bakılması önerilir.\nII. 40–69 yaş arası bütün kadınlarda yılda bir mamografi yapıl",
+    "Aşağıdakilerden hangisi erişkin dönemde yapılan toplum tabanlı tarama standartları arasında yer alır?"
+   ]
+  }
+ ]
+}

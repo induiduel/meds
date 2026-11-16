@@ -1,0 +1,1438 @@
+{
+ "ders": "Tıbbi Genetik",
+ "konular": [
+  {
+   "konu": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+   "n_soru": 22,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.27,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.23,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.818,
+     "en_tipik": 0.091,
+     "yanlis_bul": 0.045,
+     "tanim": 0.045
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.591,
+     "L2_anlama_iliski": 0.409
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.682,
+     "sayisal_yakin_deger": 0.318,
+     "bilesik_yer_degistirmeli": 0.227,
+     "ayni_ailede_komsu_kavram": 0.091
+    },
+    "sik_kelime_ort": 2.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.23,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İnterseksüel",
+     "ornek_kok": "Doğumsal olarak cinsel anatomisi tipik kadın veya erkek cinsiyet özellikleri göstermeyen kişilere ne ad verilir?",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "tanim"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Konjenital adrenal hiperplazi (21-hidroksilaz eksikliği)",
+     "ornek_kok": "17-hidroksiprogesteron düzeyinde belirgin yükseklik saptanan bir yenidoğanda en olası tanı hangisidir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2023,
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "en_tipik"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Swyer sendromu",
+     "ornek_kok": "Yenidoğan döneminde aşağıdaki hastalıklardan hangisi ambigus genitalya ayırıcı tanısında **yer almaz**?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Deksametazon",
+     "ornek_kok": "Konjenital adrenal hiperplazi açısından yüksek riskli gebelerde, anneye aşağıdaki maddelerden hangisinin uygulanması sonucu fetüste oluşabilecek genital anomaliler engellenebilir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "SRY, SOX9, SF1",
+     "ornek_kok": "Gonadal farklılaşmada erkek (testis) yönünde gelişimi başlatan temel genler aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "11β-hidroksilaz enzim eksikliği",
+     "ornek_kok": "Aşağıdaki enzim defektlerinden hangisi 46,XY cinsiyet farklılaşma bozukluğu (DSD) etiyolojisinde yer almaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 6,
+   "tipik_kok_ornekleri": [
+    "Yenidoğan döneminde aşağıdaki hastalıklardan hangisi ambigus genitalya ayırıcı tanısında **yer almaz**?",
+    "Doğumsal olarak cinsel anatomisi tipik kadın veya erkek cinsiyet özellikleri göstermeyen kişilere ne ad verilir?",
+    "Doğumsal olarak cinsel anatomisi tipik kadın veya erkek cinsiyet özellikleri göstermeyen kişilere ne ad verilir?"
+   ]
+  },
+  {
+   "konu": "Prenatal Tanı Yöntemleri",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.47,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.26,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.16,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.579,
+     "onculu": 0.158,
+     "yanlis_bul": 0.105,
+     "en_tipik": 0.053,
+     "sayi": 0.053,
+     "olumsuz": 0.053
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.789,
+     "L1_hatirlama": 0.211
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.474,
+     "sayisal_yakin_deger": 0.316,
+     "bilesik_yer_degistirmeli": 0.263,
+     "ayni_turden_ayri_kavram": 0.263
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.66
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "On bir ile on dördüncü haftalar arası",
+     "ornek_kok": "Erken prenatal tarama testi (ikili test) hangi haftalar arasında yapılır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Yalnız II",
+     "ornek_kok": "Prenatal tanı yöntemleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. Amniyosentez, gebeliğin 15-18. haftalarında uygulanabilir.\nII. Kordosentez, gebeliğin 12. haftasından doğuma kadar uygulanabilir.\nI",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2024,
+      2025
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "11-14. hafta",
+     "ornek_kok": "Gebelikte ultrasonografi ile ense kalınlığı ve anne kanında PAPP-A (gebeliğe bağlı plazma protein A) ve beta-hCG düzeylerine bakılarak yapılan kromozomal anomali taraması kaçıncı haftalar arasında yap",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Gebelikte ultrasonografi ile ense kalınlığı ve anne kanında PAPP-A (gebeliğe bağlı plazma protein A) ve beta-hCG düzeylerine bakılarak yapılan kromozomal anomali taraması kaçıncı h",
+    "Erken prenatal test (ikili test) hangi haftalar arasında yapılır?",
+    "Prenatal tanı yöntemleri ile ilgili aşağıdaki ifadeler veriliyor:\nI. Amniyosentez, gebeliğin 15-18. haftalarında uygulanabilir.\nII. Kordosentez, gebeliğin 12. haftasından doğuma ka"
+   ]
+  },
+  {
+   "konu": "Nörolojik Hastalıklar",
+   "n_soru": 15,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.2,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.8,
+     "dogru_ifade": 0.133,
+     "en_tipik": 0.067
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.2,
+     "ayni_ailede_komsu_kavram": 0.133,
+     "bilesik_yer_degistirmeli": 0.133
+    },
+    "sik_kelime_ort": 4.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Duchenne ve Becker musküler distro-",
+     "ornek_kok": "Distro-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyo-bril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+     "kez": 5,
+     "farkli_kok": 5,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi trinükleotid tekrar artışının yol açtığı bir iskelet kası hastalığıdır?",
+    "Distro-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyo-bril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı ",
+    "Distrofin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyojenik dejenerasyonları ile ortaya çıkan iskelet kası hastalı"
+   ]
+  },
+  {
+   "konu": "Kalıtsal Metabolik Hastalıklar Genetiği",
+   "n_soru": 11,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.64,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.18,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.18,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.364,
+     "dogrudan": 0.364,
+     "en_tipik": 0.091,
+     "dogru_ifade": 0.091,
+     "tanim": 0.091
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.545,
+     "L1_hatirlama": 0.455
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.545,
+     "ayni_turden_ayri_kavram": 0.455,
+     "mutlak_ifade_tuzagi": 0.182
+    },
+    "sik_kelime_ort": 8.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.09,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Etkilenen bebekler doğumdan itibaren anormaldir.",
+     "ornek_kok": "Fenilketonüri hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Otozomal resesif (OR) geçişli olan bu hastalığın tanısını hayatın ilk 6 ayından önce koyma",
+     "ornek_kok": "Fenilketonüri hastalığı ile ilgili aşağıdakilerden hangisi **yanlıştır**?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Fenilketonüri hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Fenilketonüri hastalığı ile ilgili aşağıdakilerden hangisi **yanlıştır**?",
+    "Kalıtsal metabolik karaciğer hastalıkları ile ilgili olarak aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Yaşlanma Genetiği",
+   "n_soru": 9,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.89,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.333,
+     "onculu": 0.222,
+     "dogrudan": 0.222,
+     "yanlis_bul": 0.111,
+     "sayi": 0.111
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.556,
+     "bilesik_yer_degistirmeli": 0.444,
+     "ayni_ailede_komsu_kavram": 0.222
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.11,
+    "ort_benzerlik": 0.62
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Beta-galaktozidaz enzim aktivitesinde azalma",
+     "ornek_kok": "Aşağıdakilerden hangisi yaşlanma ile ilişkili değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2018,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Yaşlanmanın genetik ve hücresel temelleri göz önüne alındığında;\nI. Telomer kısalması\nII. DNA hasarı birikimi\nIII. Mitokondriyal disfonksiyon\nIV. Kalori kısıtlaması (sirtuin aktiva",
+    "I. Telomer yıpranması\nII. DNA hasar birikimi\nIII. Onkogenlerin uygun olmayan biçimde ifade edilmesi\nIV. ROS oluşumu\nYukarıdakilerden hangisi/hangileri hücresel yaşlanmayı indükler?",
+    "DNA ve yaşlanma ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Kromozomal Hastalıklar ve Genetik Danışma",
+   "n_soru": 8,
+   "yillar": [
+    2018,
+    2023,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "olumsuz": 0.125,
+     "yanlis_bul": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "sayisal_yakin_deger": 0.375,
+     "ayni_ailede_komsu_kavram": 0.25,
+     "bilesik_yer_degistirmeli": 0.125
+    },
+    "sik_kelime_ort": 4.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Cri du chat sendromu (kedi miyavlaması sendromu)",
+     "ornek_kok": "Beşinci kromozomun kısa kolunda delesyon (5p delesyonu) sonucu ortaya çıkan sendrom aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025,
+      2026
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "5p kromozomunun kısa kolundaki delesyon (5p−) hangi genetik sendroma neden olur?",
+    "Aşağıdaki genetik sendromlardan hangisinde zekâ düzeyi tipik olarak normaldir ve belirgin zihinsel yetersizlik (mental retardasyon) birincil klinik tabloyu oluşturmaz?",
+    "Bir soy ağacında sağlıklı anne ve babanın (I-1, I-2) sağlıklı erkek çocuğu olan proband (II-2), birbirinden farklı ve sağlıklı iki eşle (II-1 ve II-3) çocuk sahibi olmuştur. Proban"
+   ]
+  },
+  {
+   "konu": "Nörodejeneratif Hastalıklar Genetiği",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.5,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.38,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.625,
+     "yanlis_bul": 0.25,
+     "dogru_ifade": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.875,
+     "L1_hatirlama": 0.125
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "bilesik_yer_degistirmeli": 0.25,
+     "sayisal_yakin_deger": 0.125
+    },
+    "sik_kelime_ort": 6.9
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Parkinson hastalığının hareket ile ilişkili semptomları L-dihidroksifenilalanin (L-DOPA) t",
+     "ornek_kok": "Parkinson hastalığı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki hastalıklardan hangisinin oluşum mekanizmasında \"proteinlerin yanlış katlanması\" rol almaz?",
+    "Aşağıdakilerden hangisi geç başlangıçlı Alzheimer hastalığı ile ilişkili genetik risk belirteçlerinden biri DEĞİLDİR?",
+    "Huntington hastalığının moleküler genetiği ve klinik özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Tümör Mikro Çevresi, İnvazyon ve Metastaz",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.38,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.38,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.625,
+     "sayi": 0.125,
+     "olumsuz": 0.125,
+     "dogru_ifade": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.875,
+     "bilesik_yer_degistirmeli": 0.125
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Tümör mikroçevresi elemanları değerlendirildiğinde, aşağıdakilerden hangisi mikroçevrenin hücresel olmayan bir elemanıdır?",
+    "Aşağıdaki ifadelerden hangisi doğru DEĞİLDİR?",
+    "Katı tümörlerin büyümesini, anjiyogenezini, immün kaçışını ve invazyonunu yöneten tümör mikroçevresi bileşenleri değerlendirildiğinde, aşağıdakilerden hangisi mikroçevrenin hücrese"
+   ]
+  },
+  {
+   "konu": "Preimplantasyon Genetik Tanı (PGD)",
+   "n_soru": 7,
+   "yillar": [
+    2022,
+    2024,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.57,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.29,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.571,
+     "olumsuz": 0.429
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.571,
+     "L1_hatirlama": 0.429
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 5.1
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki laboratuvar yöntemlerinden hangisi güncel preimplantasyon genetik tanıda (PGD/PGT) rutin olarak KULLANILMAZ?",
+    "Yalnızca maternal (mayoz kaynaklı) kromozom anomalilerinin saptanmasına imkân tanıyan ve X'e bağlı hastalıklarda da kullanılabilen preimplantasyon biyopsi yöntemi hangisidir?",
+    "Aşağıdaki çiftlerden hangisinde preimplantasyon genetik tanı (PGD) endikasyonu YOKTUR?"
+   ]
+  },
+  {
+   "konu": "Dismorfolojide Genetik Terminoloji",
+   "n_soru": 7,
+   "yillar": [
+    2022,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.86,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.571,
+     "olumsuz": 0.429
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 1.0
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 4.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yarık damak/dudak",
+     "ornek_kok": "Aşağıdakilerden hangisi minör anomaliler arasında yer almaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022,
+      2026
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Rahim içi basıya bağlı kraniyofasiyal şekil bozukluğu (kafatası ve yüzün şeklinin değişmes",
+     "ornek_kok": "Başlangıçta normal gelişen bir yapının mekanik kuvvetlerin etkisiyle şeklinin veya konumunun değişmesine deformasyon denir. Aşağıdakilerden hangisi deformasyona örnektir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025,
+      2026
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki konjenital anomali örneklerinden hangisi bir deformasyon örneğidir?",
+    "Aşağıdaki bulgulardan hangisi minör anomali değil, majör anomali olarak kabul edilir?",
+    "Aşağıdakilerden hangisi minör anomaliler arasında yer almaz?"
+   ]
+  },
+  {
+   "konu": "Ateroskleroz Genetiği",
+   "n_soru": 7,
+   "yillar": [
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.57,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.29,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.286,
+     "dogrudan": 0.143,
+     "sayi": 0.143,
+     "en_tipik": 0.143,
+     "vaka": 0.143,
+     "yanlis_bul": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.714,
+     "L3_uygulama": 0.143,
+     "L1_hatirlama": 0.143
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "bilesik_yer_degistirmeli": 0.143
+    },
+    "sik_kelime_ort": 5.7
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.14,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aterosklerotik kardiyovasküler hastalıkların ve endotel disfonksiyonunun moleküler genetik zemininde doğrudan rol oynamayan mutasyonel mekanizma hangisidir?",
+    "Kromozom 19'da kodlanan apolipoprotein E (ApoE) geninde meydana gelen mutasyonlar veya ApoE2 homozigotluğu (ApoE2/E2) aterosklerotik süreci ve dislipidemi tablosunu temel olarak ha",
+    "Erken yaşta koroner arter hastalığı, tendon ksantomları ve yüksek plazma LDL-kolesterol düzeyleri ile karakterize, otozomal dominant kalıtılan ailesel hiperkolesterolemi tablosunda"
+   ]
+  },
+  {
+   "konu": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+   "n_soru": 6,
+   "yillar": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.67,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.17,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.17,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 1.0
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.833,
+     "L1_hatirlama": 0.167
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 2.4
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Testis tümörü (germ hücreli tümör)",
+     "ornek_kok": "Serum alfa fetoprotein (AFP), beta-insan koryonik gonadotropin (β-hCG) ve laktat dehidrojenaz (LDH) düzeylerinin birlikte tümör belirteci olarak kullanıldığı ürogenital sistem kanseri hangisidir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2025,
+      2026
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Serum alfa fetoprotein (AFP), beta-insan koryonik gonadotropin (β-hCG) ve laktat dehidrojenaz (LDH) düzeylerinin birlikte tümör belirteci olarak kullanıldığı ürogenital sistem kans",
+    "Meme-over kanseri olgularında özellikle BRCA mutasyonu bulunan hastalarda sıklıkla kullanılan hedefe yönelik (akıllı) ilaç grubu aşağıdakilerden hangisidir?",
+    "Böbrek tümörlerinde prognostik belirteç olmayan aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Kardiyovasküler Hastalıkların Genetiği",
+   "n_soru": 6,
+   "yillar": [
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.5,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.17,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.17,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "en_tipik": 0.167,
+     "yanlis_bul": 0.167,
+     "vaka": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.333,
+     "L3_uygulama": 0.167
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.333,
+     "sayisal_yakin_deger": 0.167
+    },
+    "sik_kelime_ort": 5.8
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Genç atletlerde yarışma ve antrenman sırasında ani kardiyak ölümün en sık nedeni olan; sarkomerik proteinleri kodlayan genlerdeki (özellikle MYH7 ve MYBPC3) otozomal dominant varya",
+    "İlaç metabolizması ve genetik polimorfizmler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "On beş yaşında, 192 cm boyunda, parmakları aşırı uzun (araknodaktili), göz muayenesinde yukarı-dışa lens lüksasyonu (ektopia lentis) saptanan genç hastada FBN1 geninde mutasyon bul"
+   ]
+  },
+  {
+   "konu": "Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar",
+   "n_soru": 6,
+   "yillar": [],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.67,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.17,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanimlayici_bulgu",
+     "pay": 0.17,
+     "gerekce": "Patolojik/klinik imza bulgusu tanıyı koydurur; hastalığa özgü tek bulgu ödüllendirilir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.5,
+     "vaka": 0.167,
+     "dogrudan": 0.167,
+     "onculu": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.333,
+     "L3_uygulama": 0.167
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "ayni_ailede_komsu_kavram": 0.333,
+     "bilesik_yer_degistirmeli": 0.333
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Çocuklarda konjenital kalp hastalıkları içinde en sık görülen ve interventriküler septumun fibröz (membranöz) kısmında yerleşen perimembranöz VSD'nin en sık eşlik ettiği genetik se",
+    "Trizomi 21 (Down sendromu) tanılı bebeklerde en sık görülen ve endokardiyal yastık defekti olarak da adlandırılan konjenital kardiyak anomali aşağıdakilerden hangisidir?",
+    "Karyotip analizi 45,X olarak raporlanan 16 yaşındaki kız hastada boy kısalığı, yele (perdeli) boyun ve primer amenore saptanmıştır. Bu hastada görülme sıklığı en yüksek olan konjen"
+   ]
+  },
+  {
+   "konu": "Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik Bozuklukları",
+   "n_soru": 6,
+   "yillar": [
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.67,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.17,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.17,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 1.0
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.833,
+     "L2_anlama_iliski": 0.167
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 3.0
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Glikozaminoglikanların (dermatan sülfat, heparan sülfat) lizozomlarda yıkılamaması sonucu kaba yüz görünümü (gargoilizm), eklem kontraktürleri, hepatosplenomegali, kornea bulanıklı",
+    "Golgi aygıtında lizozomal enzimlerin mannoz-6-fosfat ile işaretlenmesini sağlayan N-asetilglukozaminil-1-fosfotransferaz eksikliği sonucu enzimlerin lizozoma gidemeyip hücre dışına",
+    "Melanozomların keratinositlere transferini bozan RAB27A gen mutasyonuna bağlı parsiyel albinizm ve hemofagositik sendromla seyreden veziküler trafik hastalığı aşağıdakilerden hangi"
+   ]
+  },
+  {
+   "konu": "Gastrointestinal Tümörlerin Genetiği",
+   "n_soru": 5,
+   "yillar": [
+    2020,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.2,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.6,
+     "dogrudan": 0.2,
+     "sayi": 0.2
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.8,
+     "L1_hatirlama": 0.2
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.6,
+     "bilesik_yer_degistirmeli": 0.4,
+     "sayisal_yakin_deger": 0.2
+    },
+    "sik_kelime_ort": 10.3
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Lynch sendromu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Kolon kanserinin çok basamaklı gelişimine ilişkin aşağıdaki ifadelerden hangisi doğru DEĞİLDİR?",
+    "Faz I ilaç metabolizmasından sorumlu hepatik sitokrom P450 (CYP) gen ailesi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+   "n_soru": 5,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.6,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.4,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 1.0
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 1.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.4,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Arnold-Chiari malformasyonu",
+     "ornek_kok": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber miyelomeningoselin eşlik ettiği anomali hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber miyelomeningoselin eşlik ettiği anomali hangisidir?",
+    "Embriyolojik dönemde nöral tüpün arka nöroporunun kapanamaması sonucu spinal kanal arkus defektinden meninkslerin ve medulla spinalis ile sinir köklerinin birlikte kese şeklinde dı",
+    "Ön beyin vezikülünün (prozensefalon) orta hatta iki ayrı hemisfere bölünememesi sonucu tek bir telensefalik ventrikül ve orta hat yüz anomalileri (siklopi, hipotelorizm, yarık dama"
+   ]
+  },
+  {
+   "konu": "Lösemi genetik özellikler ve prognostik belirteçler",
+   "n_soru": 5,
+   "yillar": [
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.4,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanimlayici_bulgu",
+     "pay": 0.2,
+     "gerekce": "Patolojik/klinik imza bulgusu tanıyı koydurur; hastalığa özgü tek bulgu ödüllendirilir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.2,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.8,
+     "onculu": 0.2
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.4
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.4,
+     "sayisal_yakin_deger": 0.4,
+     "bilesik_yer_degistirmeli": 0.4,
+     "ayni_ailede_komsu_kavram": 0.2
+    },
+    "sik_kelime_ort": 3.8
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "BCR-ABL negatif klasik miyeloproliferatif neoplazilerin (polisitemia vera, esansiyel trombositemi, primer miyelofibrozis) tanısal değerlendirmesinde kullanılan sürücü (driver) gen ",
+    "Kronik miyeloid löseminin (KML) patognomonik sitogenetik anomalisi olan t(9;22)(q34;q11.2) resiprokal translokasyonu sonucunda 22. kromozom üzerinde oluşan onkogenik füzyon geni aş",
+    "Pediatrik akut miyeloid lösemi (AML) olgularında Dünya Sağlık Örgütü (DSÖ) tanı ve risk sınıflamasında yer alan, tedavi stratejisini doğrudan belirleyen tekrarlayıcı sitogenetik an"
+   ]
+  },
+  {
+   "konu": "Kan Hastalıklarının Genetiği",
+   "n_soru": 5,
+   "yillar": [],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.2,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.6,
+     "en_tipik": 0.4
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 3.0
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Kanda Faktör IX (Christmas faktörü) eksikliği ile karakterize olan ve X kromozomuna bağlı resesif kalıtılan kalıtsal kanama hastalığı aşağıdakilerden hangisidir?",
+    "Vücutta aşırı demir birikimi, karaciğer sirozu, bronz diyabet ve kardiyomiyopati ile seyreden herediter hemokromatozis hastalığında en sık saptanan HFE gen mutasyonu aşağıdakilerde",
+    "Beta globin lokusundaki mutasyonlar sonucu hiç beta zinciri üretilemeyen (β⁰/β⁰) ve eritrositler içinde serbest alfa zincirlerinin aşırı çökelmesiyle ağır inefektif eritropoez geli"
+   ]
+  },
+  {
+   "konu": "Gastrointestinal Hastalıkların Genetiği",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "onculu": 0.25,
+     "en_tipik": 0.25
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "sayisal_yakin_deger": 0.5,
+     "bilesik_yer_degistirmeli": 0.25
+    },
+    "sik_kelime_ort": 2.5
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Bakırın aposeruloplazmine bağlanması hangi gen aktivitesi ile ilişkilidir?",
+    "I. HFE geni\nII. ATP7B geni\nIII. C282Y mutasyonu\n\nYukarıdakilerden hangisi ya da hangileri herediter hemokromatozis ile ilişkili gen/mutasyonlardır?",
+    "Gluten enteropatisinde (çölyak hastalığı) deamidasyonla oluşan gliadin peptitlerinin antijen sunan hücrelerdeki MHC sınıf II moleküllerine bağlanarak CD4+ T lenfositlerini aktive e"
+   ]
+  },
+  {
+   "konu": "Endokrin Hastalıklar ve Genetik",
+   "n_soru": 4,
+   "yillar": [
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.5,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanimlayici_bulgu",
+     "pay": 0.25,
+     "gerekce": "Patolojik/klinik imza bulgusu tanıyı koydurur; hastalığa özgü tek bulgu ödüllendirilir."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "en_tipik": 0.25,
+     "olumsuz": 0.25
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "mutlak_ifade_tuzagi": 0.25
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Yenidoğanlarda zekâ geriliğinin en sık önlenebilir nedeni olan kalıcı konjenital hipotiroidi olgularının yaklaşık %80-85'inden sorumlu olan primer embriyolojik gelişimsel mekanizma",
+    "Kemiklerde poliostotik fibröz displazi, deride geniş kenarları düzensiz café-au-lait lekeleri (Maine sahil şeridi görünümü) ve gonadotropinlerden bağımsız periferik puberte prekoks",
+    "Kromozom 10q11'deki RET reseptör tirozin kinaz protoonkogeninde aktive edici mutasyonlar sonucu gelişen Multipl Endokrin Neoplazi Tip 2 (MEN 2) alt tipleri karşılaştırıldığında MEN"
+   ]
+  }
+ ]
+}

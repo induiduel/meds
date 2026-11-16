@@ -1,0 +1,72 @@
+{
+ "ders": "Ortopedi ve Travmatoloji",
+ "n_soru": 73,
+ "guven": "orta",
+ "yillar": {
+  "2020": 44,
+  "2021": 4,
+  "2022": 3,
+  "2023": 2,
+  "2025": 3
+ },
+ "kok_kalibi": {
+  "yanlis_bul": 0.301,
+  "dogrudan": 0.233,
+  "olumsuz": 0.233,
+  "dogru_ifade": 0.11,
+  "en_tipik": 0.082,
+  "vaka": 0.027,
+  "eslestirme": 0.014
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.37,
+  "siniflama_ad": 0.178,
+  "mekanizma": 0.11,
+  "etiyoloji_risk": 0.082,
+  "epidemiyoloji_sayi": 0.068,
+  "ilac_endikasyon": 0.068,
+  "tani_ayirici": 0.068,
+  "onleme_halk_sagligi": 0.041,
+  "prognoz_komplikasyon": 0.014
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.548,
+  "L2_anlama_iliski": 0.425,
+  "L3_uygulama": 0.027
+ },
+ "kok_kelime": {
+  "ort": 11.5,
+  "p25": 7,
+  "medyan": 9,
+  "p75": 13
+ },
+ "sik": {
+  "kelime_ort": 5.7,
+  "kelime_cv": 0.29,
+  "dogru_en_uzun_orani": 0.205,
+  "bilesik_sik_orani": 0.277,
+  "sayisal_sik_orani": 0.014,
+  "hepsi_hicbiri_orani": 0.0,
+  "mutlak_ifade_celdirici_orani": 0.068,
+  "dogru_sik_konumu": {
+   "A": 0.288,
+   "C": 0.233,
+   "E": 0.178,
+   "D": 0.151,
+   "B": 0.151
+  },
+  "celdirici_ortusme": 0.069
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.726,
+  "bilesik_yer_degistirmeli": 0.178,
+  "mutlak_ifade_tuzagi": 0.068,
+  "ayni_ailede_komsu_kavram": 0.041,
+  "sayisal_yakin_deger": 0.014
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.11,
+  "ort_farkli_yil": 1
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

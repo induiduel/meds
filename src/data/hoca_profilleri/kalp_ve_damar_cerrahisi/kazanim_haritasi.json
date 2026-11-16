@@ -1,0 +1,139 @@
+{
+ "ders": "Kalp ve Damar Cerrahisi",
+ "konular": [
+  {
+   "konu": "Göğüs duvarı anomalileri",
+   "n_soru": 16,
+   "yillar": [
+    2020,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.62,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.375,
+     "olumsuz": 0.312,
+     "en_tipik": 0.25,
+     "yanlis_bul": 0.062
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.812,
+     "L2_anlama_iliski": 0.188
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.938,
+     "bilesik_yer_degistirmeli": 0.062
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.12,
+    "ort_benzerlik": 0.8
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Pektus ekskavatum",
+     "ornek_kok": "En sık gözlenen göğüs duvarı deformitesi hangisidir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Kızlarda daha sık görülür",
+     "ornek_kok": "Pektus karinatum ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "olumsuz",
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "En sık gözlenen göğüs duvarı deformitesi hangisidir?",
+    "Mitral kapak prolapsusunun sık eşlik ettiği göğüs duvarı deformitesi hangisidir?",
+    "Göğüs ön duvarının öne doğru çıkıntı yaptığı deformite şekli hangisidir?"
+   ]
+  },
+  {
+   "konu": "Enfektif endokardit ve damar içi katater enfeksiyonları",
+   "n_soru": 3,
+   "yillar": [
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.67,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.33,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.333,
+     "dogrudan": 0.333,
+     "vaka": 0.333
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L3_uygulama": 0.333
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 2.6
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.63
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki klinik tablolardan hangisi enfektif endokardit gelişimi için predispozan bir faktör değildir?",
+    "İnfektif endokardit tedavisinde birinci basamak antibiyotik tedavisine rağmen enfeksiyonun kontrol altına alınamaması durumunda hangi tedavi seçeneği düşünülmelidir?",
+    "Araç dışı trafik kazası sonucu çoklu travma nedeniyle cerrahi yoğun bakımda yatmakta olan 24 yaşındaki erkek hastanın yatışının 7. gününde santral venöz kateterle ilişkili kan dola"
+   ]
+  }
+ ]
+}

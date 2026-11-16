@@ -1,0 +1,1183 @@
+{
+ "ders": "Psikiyatri",
+ "konular": [
+  {
+   "konu": "Yaşlılığa Özgü Ruhsal Sorunlar",
+   "n_soru": 32,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.38,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.406,
+     "olumsuz": 0.219,
+     "vaka": 0.156,
+     "en_tipik": 0.094,
+     "dogrudan": 0.031,
+     "tanim": 0.031,
+     "dogru_ifade": 0.031,
+     "sayi": 0.031
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.344,
+     "L3_uygulama": 0.156
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.562,
+     "bilesik_yer_degistirmeli": 0.312,
+     "mutlak_ifade_tuzagi": 0.125,
+     "ayni_ailede_komsu_kavram": 0.062
+    },
+    "sik_kelime_ort": 6.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.03,
+    "ort_benzerlik": 0.6
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yaşlılarda bilişsel beceriler gerilerken, davranış becerileri tecrübelerle gelişir.",
+     "ornek_kok": "Ruhsal açıdan yaşlılık ele alındığında aşağıdakilerden hangisi söylenemez?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Vasküler depresyon, tedaviye daha kolay yanıt verir.",
+     "ornek_kok": "Yaşlılık dönemi depresyonu hakkında aşağıdaki ifadelerden hangisi söylenemez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Depresyonlu yaşlı popülasyonda bilişsel alanda gelişen belirtileri nedeniyle demansla karı",
+     "ornek_kok": "Psödemans deyimi için aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Psödemans deyimi için aşağıdakilerden hangisi doğrudur?",
+    "Aşağıdakilerden hangisi erken evre Alzheimer hastalığında sık görülen belirtilerden biri değildir?",
+    "Ruhsal açıdan yaşlılık ele alındığında aşağıdakilerden hangisi söylenemez?"
+   ]
+  },
+  {
+   "konu": "Şizofrenik Bozukluklar",
+   "n_soru": 13,
+   "yillar": [
+    2020,
+    2021,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.46,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.38,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.231,
+     "yanlis_bul": 0.231,
+     "dogrudan": 0.231,
+     "vaka": 0.154,
+     "dogru_ifade": 0.077,
+     "onculu": 0.077
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.462,
+     "L2_anlama_iliski": 0.385,
+     "L3_uygulama": 0.154
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.692,
+     "ayni_ailede_komsu_kavram": 0.154,
+     "mutlak_ifade_tuzagi": 0.154,
+     "bilesik_yer_degistirmeli": 0.077
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.08,
+    "ort_benzerlik": 0.65
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Apati",
+     "ornek_kok": "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Enkoherans (söz salatası biçiminde dezorganize konuşma)",
+     "ornek_kok": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Tanı konulabilmesi için negatif belirtilerden en az bir tane olması gerekir",
+     "ornek_kok": "Şizofreni hastalığı hakkında verilen bilgilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+    "Şizofreni hastalığı hakkında verilen bilgilerden hangisi yanlıştır?",
+    "Daha önce psikiyatrik tanı ve tedavi öyküsü olmayan 25 yaşında erkek hasta, yaklaşık 2 aydır var olan içe çekilme, kendi kendine konuşma, işitsel varsanı, öldürüleceği konusunda ko"
+   ]
+  },
+  {
+   "konu": "Nörogelişimsel Bozukluklar",
+   "n_soru": 13,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.46,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.15,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.15,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.308,
+     "dogrudan": 0.308,
+     "vaka": 0.154,
+     "yanlis_bul": 0.077,
+     "en_tipik": 0.077,
+     "sayi": 0.077
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.538,
+     "L2_anlama_iliski": 0.308,
+     "L3_uygulama": 0.154
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.769,
+     "bilesik_yer_degistirmeli": 0.231
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.15,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Oyuncakları dizme, çevirme hareketleri",
+     "ornek_kok": "Otizm spektrum bozukluğunda, aşağıdakilerden hangisi 'toplumsal-duygusal karşılık vermede yetersizlik' ölçütüne örnek değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Otizm spektrum bozukluğunda, aşağıdakilerden hangisi 'toplumsal-duygusal karşılık vermede yetersizlik' ölçütüne örnek değildir?",
+    "Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+    "Otizm spektrum bozukluğunda aşağıdakilerden hangisi “toplumsal-duygusal karşılıkta yetersizlik” bulgusuna örnek değildir?"
+   ]
+  },
+  {
+   "konu": "Bipolar Bozukluk",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.42,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.17,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.417,
+     "olumsuz": 0.25,
+     "dogrudan": 0.167,
+     "onculu": 0.167
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.25,
+     "ayni_ailede_komsu_kavram": 0.083,
+     "mutlak_ifade_tuzagi": 0.083
+    },
+    "sik_kelime_ort": 4.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Psikomotor yavaşlama",
+     "ornek_kok": "Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Manik atakta en az 2 hafta süren duygudurum değişikliği şartı mevcuttur.",
+     "ornek_kok": "Bipolar bozukluklar ile ilgili aşağıda verilen bilgilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Bipolar bozukluklar ile ilgili aşağıda verilen bilgilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+    "Aşağıdakilerden hangisi mani tablosu için söylenemez?"
+   ]
+  },
+  {
+   "konu": "Psikiyatrik Semiyoloji",
+   "n_soru": 9,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.56,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.556,
+     "sayi": 0.333,
+     "dogru_ifade": 0.111
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.778,
+     "L1_hatirlama": 0.222
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.333
+    },
+    "sik_kelime_ort": 6.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.",
+     "ornek_kok": "Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?",
+    "Psikiyatrik semiyoloji ve kavramlar göz önüne alındığında, aşağıdakilerden hangisi yanlıştır?",
+    "Psikiyatrik görüşme ile ilgili aşağıda verilenlerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Psikosomatik Bozukluklar",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.5,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "vaka": 0.125,
+     "yanlis_bul": 0.125,
+     "eslestirme": 0.125,
+     "olumsuz": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.625,
+     "L1_hatirlama": 0.25,
+     "L3_uygulama": 0.125
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "ayni_ailede_komsu_kavram": 0.25,
+     "bilesik_yer_degistirmeli": 0.125
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.38,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hastalık Kaygısı Bozukluğu",
+     "ornek_kok": "Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yap",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Beden algısı bozukluğu",
+     "ornek_kok": "Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili in",
+    "Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+    "Aşağıdaki bozuklukların hangisinde hasta belirtilerine karşı aldırmazlık (la belle indifférence) tutumu sergiler?"
+   ]
+  },
+  {
+   "konu": "Dışa Atım Bozuklukları",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2021,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.57,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.286,
+     "yanlis_bul": 0.286,
+     "dogru_ifade": 0.286,
+     "sayi": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.571,
+     "L2_anlama_iliski": 0.429
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.714,
+     "ayni_ailede_komsu_kavram": 0.143,
+     "mutlak_ifade_tuzagi": 0.143
+    },
+    "sik_kelime_ort": 5.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Erken yaşta tuvalet eğitimi",
+     "ornek_kok": "Çocuklarda aşağıdakilerden hangisi kabızlığa neden olmaz?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar",
+     "ornek_kok": "Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Çocuklarda aşağıdakilerden hangisi kabızlığa neden olmaz?",
+    "Enürezis (idrar kaçırma) hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+    "Sekonder enürezis nokturnada altına idrar kaçırma uykunun hangi döneminde görülür?"
+   ]
+  },
+  {
+   "konu": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+   "n_soru": 7,
+   "yillar": [
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_yan_etki",
+     "pay": 0.43,
+     "gerekce": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.29,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.429,
+     "onculu": 0.429,
+     "dogrudan": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.857,
+     "L1_hatirlama": 0.143
+    },
+    "kurulus": "İlaçtan yan etkiye ve yan etkiden ilaca; çeldirici aynı sınıfın başka üyesidir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.571,
+     "ayni_turden_ayri_kavram": 0.429,
+     "ayni_ailede_komsu_kavram": 0.429
+    },
+    "sik_kelime_ort": 5.1
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Tedaviye dirençli majör depresif bozuklukta kafa derisi üzerine yerleştirilen manyetik bobin ile fokal manyetik alan oluşturarak sol dorsolateral prefrontal kortekste depolarizasyo",
+    "Bipolar bozuklukta duygu durum dengeleyici olarak kullanılan lityum ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "I. Akut distonik reaksiyon\nII. Akatizi ve parkinsonizm\nIII. Perioral tremor ve tardif diskinezi\nIV. Miyelosupresyon ve retinopati\nAşağıdaki yan etkilerden hangisi ya da hangileri a"
+   ]
+  },
+  {
+   "konu": "Cinsel Kimlik Bozuklukları",
+   "n_soru": 6,
+   "yillar": [
+    2020,
+    2021,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.17,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.17,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "yanlis_bul": 0.333,
+     "olumsuz": 0.167,
+     "dogru_ifade": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.333,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 7.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Alkol-madde kötüye kullanımı",
+     "ornek_kok": "Aşağıdakilerden hangisi LGBT (lezbiyen, gey, biseksüel, transseksüel) bireylerde sağlıkla ilgili risk faktörlerindendir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi LGBT (lezbiyen, gey, biseksüel, transseksüel) bireylerde sağlıkla ilgili risk faktörlerindendir?",
+    "Cinsellikte temel kavramlarla ilgili verilen aşağıdaki bilgilerden hangisi yanlıştır?",
+    "Aşağıda cinsellikle ilgili verilen bilgilerden hangisi doğru değildir?"
+   ]
+  },
+  {
+   "konu": "Yaygın Anksiyete Bozukluğu",
+   "n_soru": 6,
+   "yillar": [
+    2018,
+    2020,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.5,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.17,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.5,
+     "sayi": 0.167,
+     "yanlis_bul": 0.167,
+     "dogrudan": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.333,
+     "sayisal_yakin_deger": 0.167
+    },
+    "sik_kelime_ort": 5.0
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi, anksiyete bozukluklarının tedavisinde sık kullanılan ilaçlardan biri değildir?",
+    "Aşağıdakilerden hangisi Yaygın Anksiyete Bozukluğu'nun (YAB) DSM-5 tanı kriterlerinden biri değildir?",
+    "Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Kişilik Bozuklukları",
+   "n_soru": 5,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.6,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.4,
+     "sayi": 0.2,
+     "en_tipik": 0.2,
+     "yanlis_bul": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.8,
+     "bilesik_yer_degistirmeli": 0.2
+    },
+    "sik_kelime_ort": 3.5
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.4,
+    "ort_benzerlik": 0.69
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Karmaşık ilişkiler, yineleyen özkıyımla ilgili davranışlar ve girişimler olan, duygudurumda belirgin tepkiselliğe bağlı instabilite gözlenen kişilik bozukluğu hangisidir?",
+    "Sürekli ilgi odağı olma arzusu taşıyan, giyiminde dikkat çekici ve baştan çıkarıcı tarzı benimseyen, duygularını teatral ve abartılı yaşayan, ancak duygusal derinliği sığ ve çabuk ",
+    "\"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz.\" Yukarıda tanımlanan hasta için aşağıdakilerden hangisi en olası tanıdır?"
+   ]
+  },
+  {
+   "konu": "Unipolar Depresyon",
+   "n_soru": 5,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.4,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.2,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.4,
+     "dogrudan": 0.4,
+     "olumsuz": 0.2
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.8,
+     "L1_hatirlama": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.8,
+     "mutlak_ifade_tuzagi": 0.2
+    },
+    "sik_kelime_ort": 4.4
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kas gerginliği",
+     "ornek_kok": "Aşağıdakilerden hangisi DSM-5 kriterlerine göre majör depresif bozukluk tanı kriterleri içerisinde yer almaz?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi DSM-5 kriterlerine göre majör depresif bozukluk tanı kriterleri içerisinde yer almaz?",
+    "Major depresyonda aşağıdaki bulgulardan hangisinin görülmesi beklenmez?",
+    "Aşağıdakilerden hangisi depresyon nöbeti için yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Travma ve Stres Bağlantılı Bozukluklar",
+   "n_soru": 5,
+   "yillar": [
+    2020,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.2,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.4,
+     "dogrudan": 0.4,
+     "vaka": 0.2
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.4,
+     "L1_hatirlama": 0.4,
+     "L3_uygulama": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 6.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.6,
+    "ort_benzerlik": 0.67
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Anksiyete belirtilerinin olduğu alt tipte saldırganlık, topluma aykırı davranışlar, kavga ",
+     "ornek_kok": "Aşağıdakilerden hangisi uyum bozukluğu ile ilgili yanlış bir bilgidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Uyum bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi uyum bozukluğu ile ilgili yanlış bir bilgidir?",
+    "Uyum bozukluğu konusunda aşağıda verilen bilgilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Panik Bozukluk",
+   "n_soru": 4,
+   "yillar": [
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 1.0,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "sayi": 0.25,
+     "yanlis_bul": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_turden_ayri_kavram": 0.5
+    },
+    "sik_kelime_ort": 6.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Çarpıntıdan sonra en sık görülen bedensel belirtiler sırasıyla baş dönmesi ve kulak çınlam",
+     "ornek_kok": "Aşağıdakilerden hangisi panik bozukluk ile ilgili yanlış bir bilgidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi panik bozukluk ile ilgili yanlış bir bilgidir?",
+    "Beklenmedik panik atakları, bu atakların tekrarlayacağına dair sürekli bir endişe (beklenti anksiyetesi) ve panik anında kaçmanın zor olabileceği yerlerden kaçınma davranışı hangi ",
+    "Aşağıdakilerden hangisi panik bozukluğun bilişsel (kognitif) belirtileri arasında yer almaz?"
+   ]
+  },
+  {
+   "konu": "Dikkat Eksikliği Hiperaktivite Bozukluğu",
+   "n_soru": 4,
+   "yillar": [
+    2018,
+    2021,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.5,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.25,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.5,
+     "dogrudan": 0.25,
+     "olumsuz": 0.25
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "mutlak_ifade_tuzagi": 0.25,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 4.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Naltrekson",
+     "ornek_kok": "Aşağıdakilerden hangisi dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) tedavisinde kullanılan ilaçlardan biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) tedavisinde kullanılan ilaçlardan biri değildir?",
+    "Dikkat Eksikliği Hiperaktivite Bozukluğu (DEHB) tanısı için DSM-5 ölçütlerine göre dikkatsizlik veya hiperaktivite/dürtüsellik belirtileri hangi ortam koşulunu karşılamalıdır?",
+    "Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) için aşağıdakilerden hangisi söylenemez?"
+   ]
+  },
+  {
+   "konu": "Konsültasyon Liyezon Psikiyatrisi",
+   "n_soru": 3,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 1.0,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.667,
+     "dogrudan": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır.",
+     "ornek_kok": "Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+    "Konsültasyon liyezon psikiyatrisi ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+    "Yaşlı bir hastada akut başlangıçlı, gün içinde dalgalı seyreden, dikkat ve bilinç düzeyinde bozulma ile karakterize organik mental sendrom aşağıdakilerden hangisidir?"
+   ]
+  }
+ ]
+}

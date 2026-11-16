@@ -1,0 +1,62 @@
+{
+ "ders": "Anestezi ve Reanimasyon",
+ "n_soru": 18,
+ "guven": "dusuk",
+ "yillar": {
+  "2020": 5,
+  "2022": 4,
+  "2023": 2,
+  "2025": 1
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.5,
+  "olumsuz": 0.333,
+  "yanlis_bul": 0.167
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.722,
+  "mekanizma": 0.056,
+  "etiyoloji_risk": 0.056,
+  "siniflama_ad": 0.056,
+  "ilac_endikasyon": 0.056,
+  "tani_ayirici": 0.056
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.722,
+  "L2_anlama_iliski": 0.278
+ },
+ "kok_kelime": {
+  "ort": 11.6,
+  "p25": 7,
+  "medyan": 9,
+  "p75": 19
+ },
+ "sik": {
+  "kelime_ort": 3.8,
+  "kelime_cv": 0.21,
+  "dogru_en_uzun_orani": 0.056,
+  "bilesik_sik_orani": 0.189,
+  "sayisal_sik_orani": 0.0,
+  "hepsi_hicbiri_orani": 0.0,
+  "mutlak_ifade_celdirici_orani": 0.056,
+  "dogru_sik_konumu": {
+   "E": 0.333,
+   "B": 0.222,
+   "A": 0.167,
+   "D": 0.167,
+   "C": 0.111
+  },
+  "celdirici_ortusme": 0.114
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.444,
+  "ayni_ailede_komsu_kavram": 0.333,
+  "bilesik_yer_degistirmeli": 0.167,
+  "mutlak_ifade_tuzagi": 0.056
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.056,
+  "ort_farkli_yil": 1
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

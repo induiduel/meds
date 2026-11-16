@@ -1,0 +1,890 @@
+{
+ "ders": "Kardiyoloji",
+ "konular": [
+  {
+   "konu": "Enfektif Endokardit",
+   "n_soru": 32,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.31,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.31,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.28,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.531,
+     "olumsuz": 0.156,
+     "vaka": 0.094,
+     "dogru_ifade": 0.062,
+     "en_tipik": 0.062,
+     "yanlis_bul": 0.062,
+     "onculu": 0.031
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.531,
+     "L2_anlama_iliski": 0.375,
+     "L3_uygulama": 0.094
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.875,
+     "bilesik_yer_degistirmeli": 0.125,
+     "ayni_ailede_komsu_kavram": 0.031
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.34,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İki ayrı kan kültüründe infektif endokardit ile uyumlu tipik mikroorganizmanın üremesi",
+     "ornek_kok": "Aşağıdakilerden hangisi infektif endokardit tanısında kullanılan modifiye Duke kriterlerinden majör olanlardan biridir?",
+     "kez": 4,
+     "farkli_kok": 4,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "İlk basamak non-bakteriyel trombotik endokardit oluşmasıdır.",
+     "ornek_kok": "İnfektif endokardit için aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Gelişmiş ülkelerde en sık enfektif endokardit etkeni streptokoklardır.",
+     "ornek_kok": "Enfektif endokardit ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Kadın cinsiyet",
+     "ornek_kok": "Aşağıdakilerden hangisi infektif endokardit için risk faktörü değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hepatomegali",
+     "ornek_kok": "Aşağıdakilerden hangisi infektif endokarditin sık klinik bulgularından değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Mekanik mitral kapak protezi varlığı",
+     "ornek_kok": "Aşağıdaki hangi hastalıkta infektif endokardit proksisi yapılması gerekir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Endoskopik işlem sırasında",
+     "ornek_kok": "Antibiyotik profilaksisi, aşağıdaki durumlardan hangisinde enfektif endokardit önlenmesinde önerilmez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "İnfektif endokardit için aşağıdaki ifadelerden hangisi doğrudur?",
+    "Aşağıdakilerden hangisi infektif endokarditin sık klinik bulgularından değildir?",
+    "Aşağıdakilerden hangisi infektif endokardit için risk faktörü değildir?"
+   ]
+  },
+  {
+   "konu": "Koroner Kalp Hastalıkları",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.32,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.16,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.16,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.368,
+     "olumsuz": 0.158,
+     "onculu": 0.105,
+     "yanlis_bul": 0.105,
+     "tanim": 0.053,
+     "dogru_ifade": 0.053,
+     "en_tipik": 0.053,
+     "sayi": 0.053,
+     "vaka": 0.053
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.526,
+     "L2_anlama_iliski": 0.421,
+     "L3_uygulama": 0.053
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.579,
+     "ayni_ailede_komsu_kavram": 0.158,
+     "bilesik_yer_degistirmeli": 0.158,
+     "sayisal_yakin_deger": 0.105,
+     "mutlak_ifade_tuzagi": 0.105
+    },
+    "sik_kelime_ort": 5.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.16,
+    "ort_benzerlik": 0.67
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Dil altı nitratlarla genellikle ağrının şiddeti azalmaz",
+     "ornek_kok": "Kardiyoloji. Koroner Kalp Hastalıkları. Aşağıdakilerden hangisi tipik anjinanın özelliklerinden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Kardiyoloji. Koroner Kalp Hastalıkları. Aşağıdakilerden hangisi tipik anjinanın özelliklerinden biri değildir?",
+    "Aşağıdakilerden hangisi akut miyokart enfarktüsü tanısında kullanılmaz?",
+    "Aşağıdakilerden hangisi koroner arter hastalığı için risk faktörü olarak kabul edilmez?"
+   ]
+  },
+  {
+   "konu": "Ritim Bozukluklarına Giriş",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.32,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.21,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.16,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.263,
+     "olumsuz": 0.211,
+     "vaka": 0.158,
+     "yanlis_bul": 0.158,
+     "dogru_ifade": 0.105,
+     "en_tipik": 0.053,
+     "sayi": 0.053
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.526,
+     "L2_anlama_iliski": 0.316,
+     "L3_uygulama": 0.158
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.632,
+     "sayisal_yakin_deger": 0.158,
+     "ayni_ailede_komsu_kavram": 0.158,
+     "bilesik_yer_degistirmeli": 0.105,
+     "mutlak_ifade_tuzagi": 0.053
+    },
+    "sik_kelime_ort": 5.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.11,
+    "ort_benzerlik": 0.81
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ek hastalığı olmayan 40 yaşında erkek hasta",
+     "ornek_kok": "Atriyal fibrilasyonu olan aşağıdaki hastalardan hangisinde uzun dönem oral antikoagülasyon endikasyonu yoktur?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Atriyal fibrilasyonu olan aşağıdaki hastalardan hangisinde uzun dönem oral antikoagülasyon endikasyonu yoktur?",
+    "Acil servise aniden başlayan çarpıntı şikâyeti ile başvuran 35 yaşındaki kadın hastanın çekilen EKG'sinde hızı 190 atım/dk olan düzenli, dar QRS'li bir taşikardi saptanıyor. Çarpın",
+    "Aşağıdakilerden hangisi preeksitasyon EKG'sinin tipik bir özelliği değildir?"
+   ]
+  },
+  {
+   "konu": "Kalp Yetersizliği",
+   "n_soru": 18,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.61,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.17,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogru_ifade": 0.389,
+     "olumsuz": 0.278,
+     "dogrudan": 0.167,
+     "vaka": 0.111,
+     "sayi": 0.056
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.222,
+     "L3_uygulama": 0.111
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.278,
+     "mutlak_ifade_tuzagi": 0.056,
+     "ayni_ailede_komsu_kavram": 0.056
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.11,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Renin-anjiyotensin-aldosteron sisteminin aktivasyonu, sol ventrikülün progresif yeniden şe",
+     "ornek_kok": "Kalp yetersizliği ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Venöz dönüş arttığında kalp debisinde görülen artışı açıklar",
+     "ornek_kok": "Aşağıdakilerden hangisi kalbin Frank-Starling yasası için doğrudur?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Aortik kompliansta artışı",
+     "ornek_kok": "Kardiyoloji Kalp Yetersizliği aşağıdakilerden hangisi kalp yetersizliğinde izlenen hemodinamik değişikliklerden değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Kalp yetersizliği ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Aşağıdakilerden hangisi kalbin Frank-Starling yasası için doğrudur?",
+    "Kardiyoloji Kalp Yetersizliği aşağıdakilerden hangisi kalp yetersizliğinde izlenen hemodinamik değişikliklerden değildir?"
+   ]
+  },
+  {
+   "konu": "Kalp Kapak Hastalıkları",
+   "n_soru": 15,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.4,
+     "dogrudan": 0.333,
+     "dogru_ifade": 0.067,
+     "en_tipik": 0.067,
+     "eslestirme": 0.067,
+     "onculu": 0.067
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.4,
+     "L3_uygulama": 0.4,
+     "L2_anlama_iliski": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.733,
+     "bilesik_yer_degistirmeli": 0.2,
+     "ayni_ailede_komsu_kavram": 0.133
+    },
+    "sik_kelime_ort": 5.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.27,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Nabız pulsus parvus et tardus olarak palpe edilir",
+     "ornek_kok": "88 yaşında erkek hasta polikliniğe senkop şikayeti ile başvuruyor. Hastanın fizik muayenesinde aortik odakta kreşendo-dekreşendo vasfında, boyuna yayılan üfürüm duyulmakta. Üfürümün süresi uzun, geç p",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Atriyal fibrilasyon",
+     "ornek_kok": "Yirmi üç yaşında kadın hasta nefes darlığı şikâyeti ile başvuruyor. Fizik muayenede kan basıncı 110/80 mmHg, nabız 105/dk ve düzensiz. Oskültasyonda S1 ve P2 sert, kalp bazalinde diyastolik üfürüm duy",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Yirmi üç yaşında kadın hasta nefes darlığı şikâyeti ile başvuruyor. Fizik muayenede kan basıncı 110/80 mmHg, nabız 105/dk ve düzensiz. Oskültasyonda S1 ve P2 sert, kalp bazalinde d",
+    "Aşağıdakilerden hangisi diyastolik bir üfürümdür?",
+    "Mitral darlığı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Elektrokardiyografiye Giriş",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.83,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.417,
+     "yanlis_bul": 0.167,
+     "sayi": 0.167,
+     "olumsuz": 0.167,
+     "dogru_ifade": 0.083
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.583,
+     "ayni_turden_ayri_kavram": 0.333,
+     "sayisal_yakin_deger": 0.25,
+     "bilesik_yer_degistirmeli": 0.167,
+     "mutlak_ifade_tuzagi": 0.083
+    },
+    "sik_kelime_ort": 4.5
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.85
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Normal sinüs ritmi ile ilgili hangi ifade doğrudur?",
+    "Standart 12 derivasyonlu elektrokardiyografi çekimi ile ilgili hangi seçenek yanlıştır?",
+    "Elektrokardiyogramda iki QRS kompleksi arasında 3 büyük kare varsa kalp hızı dakikada kaçtır?"
+   ]
+  },
+  {
+   "konu": "Kalp Sesleri",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.75,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.25,
+     "yanlis_bul": 0.25,
+     "dogru_ifade": 0.25,
+     "sayi": 0.083,
+     "olumsuz": 0.083,
+     "onculu": 0.083
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.583,
+     "L2_anlama_iliski": 0.417
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.417,
+     "bilesik_yer_degistirmeli": 0.333,
+     "sayisal_yakin_deger": 0.167,
+     "ayni_ailede_komsu_kavram": 0.167,
+     "mutlak_ifade_tuzagi": 0.083
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.08,
+    "ort_benzerlik": 0.87
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Mitral darlığında apikal odakta pansistolik üfürüm duyulur.",
+     "ornek_kok": "Kalp sesleri ve üfürümlerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Kalp sesleri ve üfürümlerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Mitral kapak prolapsusunda ayağa kalkmakla midsistolik klik ve üfürümün yeri ve süresi nasıl değişiklik gösterir?",
+    "Midsistolik klik sesi aşağıdaki patolojilerin hangisinde duyulur?"
+   ]
+  },
+  {
+   "konu": "Konjenital Kalp Hastalıkları",
+   "n_soru": 10,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.2,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "en_tipik": 0.3,
+     "yanlis_bul": 0.1,
+     "onculu": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.7,
+     "L2_anlama_iliski": 0.3
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.7,
+     "bilesik_yer_degistirmeli": 0.2,
+     "ayni_ailede_komsu_kavram": 0.1
+    },
+    "sik_kelime_ort": 4.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.9
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hepatit B enfeksiyonu",
+     "ornek_kok": "Konjenital kalp hastalıkları etyolojisinde rolü olmayan anneye ait hastalık veya durum hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Patent duktus arteriozus",
+     "ornek_kok": "Devamlı üfürüm aşağıdakilerden hangisinde duyulur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Devamlı üfürüm aşağıdakilerden hangisinde duyulur?",
+    "Konjenital kalp hastalıkları etyolojisinde rolü olmayan anneye ait hastalık veya durum hangisidir?",
+    "Konjenital kalp hastalıklarının etiyolojisinde teratojenik rolü olmayan ilaç/ajan aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Perikarditler",
+   "n_soru": 9,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.56,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.444,
+     "yanlis_bul": 0.333,
+     "vaka": 0.111,
+     "dogrudan": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.444,
+     "L2_anlama_iliski": 0.444,
+     "L3_uygulama": 0.111
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 6.0
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.22,
+    "ort_benzerlik": 0.61
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Hangisi akut perikarditteki göğüs ağrısının özelliklerinden biri değildir?",
+    "Akut perikardit tedavisi ile ilgili olarak aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi kardiyak tamponad bulgularından biri değildir?"
+   ]
+  },
+  {
+   "konu": "Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri",
+   "n_soru": 8,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.62,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tanimlayici_bulgu",
+     "pay": 0.25,
+     "gerekce": "Patolojik/klinik imza bulgusu tanıyı koydurur; hastalığa özgü tek bulgu ödüllendirilir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.5,
+     "yanlis_bul": 0.25,
+     "dogrudan": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "ayni_ailede_komsu_kavram": 0.375
+    },
+    "sik_kelime_ort": 2.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Papiller fibroelastom",
+     "ornek_kok": "Kapak yüzeyinde saç benzeri ince uzantılar oluşturan ve deniz anemonuna (deniz şakayığı) benzer görünümüyle tanınan kalp tümörü aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanimlayici_bulgu"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "En sık görülen kardiyomiyopati hangisidir?",
+    "Miyokarditle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Yenidoğan ve süt çocukluğu döneminde kalbin en sık primer intramural tümörü olan; histolojisinde glikojen dolu vakuoller nedeniyle örümcek hücreler (spider cells) içeren ve sıklıkl"
+   ]
+  },
+  {
+   "konu": "Hipertansiyon",
+   "n_soru": 6,
+   "yillar": [
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "olumsuz": 0.333,
+     "vaka": 0.167,
+     "yanlis_bul": 0.167
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.333,
+     "L3_uygulama": 0.167
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 3.4
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.66
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Klinik kan basıncı değerleri hipertansiyon ile uyumlu ancak evde ölçülen kan basıncı değerleri normal sınırlarda seyreden bir hastada aşağıdakilerden hangisi vardır?",
+    "Aşağıdakilerden hangisi hipertansif hastaların risk değerlendirmesinde göz önünde bulundurulan bir parametre değildir?",
+    "Aşağıdakilerden hangisi esansiyel hipertansiyon patofizyolojisinde rol alan potansiyel mekanizmalardan biri değildir?"
+   ]
+  }
+ ]
+}

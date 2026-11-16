@@ -1,0 +1,761 @@
+{
+ "ders": "Nöroloji",
+ "konular": [
+  {
+   "konu": "Periferik Nöropati",
+   "n_soru": 16,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.44,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.812,
+     "yanlis_bul": 0.125,
+     "olumsuz": 0.062
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.812,
+     "L2_anlama_iliski": 0.188
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.875,
+     "mutlak_ifade_tuzagi": 0.062,
+     "ayni_ailede_komsu_kavram": 0.062
+    },
+    "sik_kelime_ort": 2.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.19,
+    "ort_benzerlik": 0.87
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Nöronopati",
+     "ornek_kok": "Sinir hücre gövdesinde (soma) olan hasar hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Guillain-Barre sendromu",
+     "ornek_kok": "Nöromusküler kavşak hastalıkları Aşağıdakilerden hangisi nöromusküler kavşak hastalıklarından değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Basit mononöropati",
+     "ornek_kok": "Karpal tünel sendromu hangi periferik sinir hasarına örnektir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "En sık hedef antijeni presinaptik kalsiyum kanallarıdır.",
+     "ornek_kok": "Miyastenia gravis için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Guillain-Barré sendromu",
+     "ornek_kok": "Aşağıdakilerden hangisi motor aksonları etkileyen, hızla ilerleyen akut demiyelinizan bir hastalık olan, semptomların başlamasından sonraki günlerde solunum kası yetmezliğiyle ölüme yol açabilen, aşağ",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Nöromusküler kavşak hastalıkları Aşağıdakilerden hangisi nöromusküler kavşak hastalıklarından değildir?",
+    "Karpal tünel sendromu hangi periferik sinir hasarına örnektir?",
+    "Miyastenia gravis için aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Nörolojik Muayene",
+   "n_soru": 16,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.62,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.938,
+     "olumsuz": 0.062
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.812,
+     "L2_anlama_iliski": 0.188
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.625,
+     "ayni_ailede_komsu_kavram": 0.312,
+     "sayisal_yakin_deger": 0.125
+    },
+    "sik_kelime_ort": 2.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Fasikülasyon",
+     "ornek_kok": "Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+    "FTR\nFTR\nALT MOTOR NORON\nHASTALIKLARI VE\nEGZERSİZ\nSol hemisfer 44.\nalan lezyonunda\nşağıdakilerden\nhangisi görülür?",
+    "Sol hemisferde Brodmann 44. alan lezyonunda aşağıdakilerden hangisi görülür?"
+   ]
+  },
+  {
+   "konu": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+   "n_soru": 12,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.42,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.42,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "sayi": 0.25,
+     "olumsuz": 0.167,
+     "vaka": 0.083
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.583,
+     "L2_anlama_iliski": 0.333,
+     "L3_uygulama": 0.083
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "sayisal_yakin_deger": 0.417,
+     "ayni_ailede_komsu_kavram": 0.417,
+     "bilesik_yer_degistirmeli": 0.167,
+     "ayni_turden_ayri_kavram": 0.167
+    },
+    "sik_kelime_ort": 2.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Letarji",
+     "ornek_kok": "Aşağıdakilerden hangisi, hastanın sözel uyaranla uyandırılabilip uyaran kesildiğinde tekrar uyku hâline geçtiği tabloyu tanımlar?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Kremaster refleksi",
+     "ornek_kok": "Aşağıdakilerden hangisi komadaki bir hastada nörolojik muayenede kullanılan beyin sapı reflekslerinden biri değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi, hastanın sözel uyaranla uyandırılabilip uyaran kesildiğinde tekrar uyku hâline geçtiği tabloyu tanımlar?",
+    "Sağ hemiplejili bir hastada gözlerin ağrılı uyaranla açıldığı, sözel yanıtta oryantasyonun bozuk olduğu ancak konfüze konuştuğu, motor muayenede sağ tarafta yanıt alınamazken sol ü",
+    "Sağlıklı bir erişkinde toplam uyku süresi göz önüne alındığında, sırasıyla REM ve non-REM uykuları toplam uykunun yaklaşık ne kadarlık bir kısmını oluşturmaktadır?"
+   ]
+  },
+  {
+   "konu": "Baş ağrısına Yaklaşım",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.5,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.3,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.7,
+     "en_tipik": 0.1,
+     "onculu": 0.1,
+     "vaka": 0.1
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.3,
+     "L3_uygulama": 0.1
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.8,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "bilesik_yer_degistirmeli": 0.1
+    },
+    "sik_kelime_ort": 3.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.7,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Erkek cinsiyet",
+     "ornek_kok": "Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Subaraknoid kanama (SAK)",
+     "ornek_kok": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+    "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+    "Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanm"
+   ]
+  },
+  {
+   "konu": "Kraniyal Sinir Muayenesi",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.7,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.2,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.7,
+     "vaka": 0.2,
+     "onculu": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L3_uygulama": 0.2,
+     "L2_anlama_iliski": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.8,
+     "ayni_ailede_komsu_kavram": 0.1,
+     "bilesik_yer_degistirmeli": 0.1
+    },
+    "sik_kelime_ort": 3.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.1,
+    "ort_benzerlik": 0.62
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sağ nervus hypoglossus",
+     "ornek_kok": "Evet\nNöroloji\nNöroloji\nKranyal Sinir\nMuayenesi\nKranial sinir\nmuayenesi\nesnasında hasta,\ndilini dışarı\nçıkarıldığında sağ\ntarafa sapma olduğu\ngörülmektedir. Dil\natrofisi olmayan bu\nhastada lezyon\nnered",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Sol medial longitudinal fasikulus",
+     "ornek_kok": "28 yaşında kadın hasta çift görme yakınmasıyla başvurdu. Kranyal sinir muayenesinde sol gözde içe bakış kısıtlılığı ile birlikte sağ gözde dışa bakışta, bakış yönüne vuran horizontal nistagmus saptadı",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Evet\nNöroloji\nNöroloji\nKranyal Sinir\nMuayenesi\nKranial sinir\nmuayenesi\nesnasında hasta,\ndilini dışarı\nçıkarıldığında sağ\ntarafa sapma olduğu\ngörülmektedir. Dil\natrofisi olmayan bu\n",
+    "28 yaşında kadın hasta çift görme yakınmasıyla başvurdu. Kranyal sinir muayenesinde sol gözde içe bakış kısıtlılığı ile birlikte sağ gözde dışa bakışta, bakış yönüne vuran horizont",
+    "Kraniyal sinir muayenesi esnasında, hasta dilini dışarı çıkardığında sağ tarafa sapma olduğu görülmektedir. Dil atrofisi olmayan bu hastada lezyon nerede olabilir?"
+   ]
+  },
+  {
+   "konu": "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.71,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.29,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.857,
+     "dogru_ifade": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.714,
+     "L1_hatirlama": 0.286
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.571,
+     "ayni_ailede_komsu_kavram": 0.286,
+     "mutlak_ifade_tuzagi": 0.143
+    },
+    "sik_kelime_ort": 2.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.71,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Asetilkolin",
+     "ornek_kok": "Bazal gangliyonlardaki nörotransmiterlerden hangisi modülatör olarak görev yapar?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Bazal ganglionların eferentlerini (çıkış çekirdeklerini) oluşturan yapı aşağıdakilerden hangisidir?",
+    "Bazal ganglion motor döngüsünde striatumdan gelen bilgileri işleyerek talamusa (ventral anterior/ventral lateral çekirdeklere) projekte eden temel inhibitör efferent merkez aşağıda",
+    "Parkinson hastalığında görülen istirahat (statik) tremoru ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Nörolojik Hastaya Yaklaşım",
+   "n_soru": 7,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.29,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.29,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.714,
+     "vaka": 0.286
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.714,
+     "L3_uygulama": 0.286
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 2.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.29,
+    "ort_benzerlik": 0.66
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Parkinson hastalığı",
+     "ornek_kok": "Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Multipl skleroz (MS)",
+     "ornek_kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+    "Yürüyüşünün yavaş olması, yürürken kolları sallamaması, maske yüz olması, monoton konuşması hangi nörolojik hastalığı düşündürür?",
+    "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisi"
+   ]
+  },
+  {
+   "konu": "Medulla Spinalis Hastalıkları",
+   "n_soru": 6,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.83,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.17,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "olumsuz": 0.333,
+     "vaka": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.167,
+     "L3_uygulama": 0.167
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.167,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 4.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.8
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Spinal şok döneminde refleksler artmıştır",
+     "ornek_kok": "Medulla spinalisin tam ya da tama yakın hasarında aşağıdakilerden hangisi görülmez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "C8 sinir kökü hangi iki vertebra arasından çıkar?",
+    "Medulla spinalisin tam ya da tama yakın hasarında aşağıdakilerden hangisi görülmez?",
+    "Evet\nNöroloji\nNöroloji\nMedulla spinalis\nHastalıkları\nMedulla spinalisin\ntam yada tama\nyakın hasarında\nşağıdakilerden\nhangi görülmez?"
+   ]
+  },
+  {
+   "konu": "Felçler",
+   "n_soru": 6,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.33,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.17,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.333,
+     "sayi": 0.167,
+     "yanlis_bul": 0.167,
+     "dogrudan": 0.167,
+     "onculu": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.333,
+     "L3_uygulama": 0.333,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "ayni_ailede_komsu_kavram": 0.333,
+     "bilesik_yer_degistirmeli": 0.167
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Zaman profili dikkate alındığında, birden başlayan, genellikle 5-15 dakika süren ve 24 saat içinde tamamen düzelen geçici fokal nörolojik defisit aşağıdakilerden hangisidir?",
+    "Serebrovasküler hastalık ve hipertansiyon öyküsü olan, sol tarafta ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik istenir?",
+    "Kas güçsüzlüğü (felç) nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Epilepsi",
+   "n_soru": 4,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.25,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.25,
+     "sayi": 0.25,
+     "dogrudan": 0.25,
+     "olumsuz": 0.25
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "bilesik_yer_degistirmeli": 0.25
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Epilepsi nöbet tetikleyicileri için aşağıdakilerden hangisi ya da hangileri doğrudur?",
+    "Fokal başlangıçlı motor bir epileptik nöbetin hemen sonrasında, nöbetin gerçekleştiği ekstremitelerde geçici süreyle ortaya çıkan parezi veya pleji tablosuna ne ad verilir?",
+    "Epileptik nöbet ile psikojenik nonepileptik nöbet (psödonöbet / konversiyon) ayırıcı tanısında aşağıdakilerden hangisi psödonöbet lehine bir bulgudur?"
+   ]
+  }
+ ]
+}

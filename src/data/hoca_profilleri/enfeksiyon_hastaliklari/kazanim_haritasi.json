@@ -1,0 +1,2376 @@
+{
+ "ders": "Enfeksiyon Hastalıkları",
+ "konular": [
+  {
+   "konu": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+   "n_soru": 53,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "orta",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.45,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.15,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.34,
+     "olumsuz": 0.302,
+     "yanlis_bul": 0.113,
+     "dogru_ifade": 0.075,
+     "onculu": 0.057,
+     "vaka": 0.038,
+     "sayi": 0.038,
+     "en_tipik": 0.019,
+     "tanim": 0.019
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.604,
+     "L2_anlama_iliski": 0.358,
+     "L3_uygulama": 0.038
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.774,
+     "bilesik_yer_degistirmeli": 0.094,
+     "ayni_ailede_komsu_kavram": 0.094,
+     "sayisal_yakin_deger": 0.057,
+     "mutlak_ifade_tuzagi": 0.019
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.13,
+    "ort_benzerlik": 0.69
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Üreter",
+     "ornek_kok": "Aşağıdaki vücut bölgelerinden hangisinde normalde mikrobiyal flora bulunmaz?",
+     "kez": 8,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Neisseria gonorrhoeae",
+     "ornek_kok": "Aşağıdakilerden hangisi prokaryottur?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "İnsandan insana bulaşırlar",
+     "ornek_kok": "Sistemik mikoz etkeni dimorfik mantarlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Kan dolaşımı",
+     "ornek_kok": "İnsanda normal vücut florası üyelerinin bulunmadığı bölge aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Hipertansiyon",
+     "ornek_kok": "Aşağıdakilerden hangisi spontan (travmatik olmayan) gazlı gangren için risk faktörlerinden değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Dezenfeksiyon: Cansız ortamların sporlar dahil bütün patojen mikroorganizmalardan temizlen",
+     "ornek_kok": "Bulaşıcı hastalık epidemiyolojisine ait aşağıdaki terim tanımlarından hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Virülans",
+     "ornek_kok": "Enfeksiyon etkeninin duyarlı bir konakta hastalık oluşturma yeteneğinin derecesine ne ad verilir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Taşikardi nedeniyle koroner yetersizlik gelişmesi",
+     "ornek_kok": "Aşağıdakilerden hangisi ateşin yararlarından değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 8,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi prokaryottur?",
+    "Aşağıdakilerden hangisinde mikrobiyal flora bulunmaz?",
+    "Aşağıdaki vücut bölgelerinden hangisinde normalde mikrobiyal flora bulunmaz?"
+   ]
+  },
+  {
+   "konu": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+   "n_soru": 48,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "orta",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.25,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.19,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.312,
+     "dogrudan": 0.229,
+     "yanlis_bul": 0.188,
+     "en_tipik": 0.167,
+     "dogru_ifade": 0.083,
+     "onculu": 0.021
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.521,
+     "L1_hatirlama": 0.479
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.854,
+     "bilesik_yer_degistirmeli": 0.104,
+     "ayni_ailede_komsu_kavram": 0.021,
+     "mutlak_ifade_tuzagi": 0.021
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.15,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Febril nötropenide izole hümoral immün yetmezlik vardır.",
+     "ornek_kok": "Febril nötropeni ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 8,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Kadın cinsiyet",
+     "ornek_kok": "Aşağıdakilerden hangisi sekonder immün yetmezlik nedenlerinden değildir?",
+     "kez": 8,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Persistan jeneralize lenfadenopati",
+     "ornek_kok": "Aşağıdakilerden hangisi AIDS ile ilişkili (Kategori C) durumlardan **değildir**?",
+     "kez": 7,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Kaposi sarkomu",
+     "ornek_kok": "Aşağıdakilerden hangisi kandida enfeksiyonu sonucu meydana gelmez?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Hücresel immün bozukluk",
+     "ornek_kok": "HIV enfeksiyonunda oluşan en önemli immün bozukluk hangisidir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Aile bireylerine bilgi verilerek izolasyon önerilir",
+     "ornek_kok": "HIV enfeksiyonu saptanmış bir kişide yapılması gerekenler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "İnvaziv serviks kanseri (çevre dokuya ilerlemiş rahim ağzı kanseri)",
+     "ornek_kok": "Aşağıdakilerden hangisi AIDS tanımlayıcı kanserler arasında yer alır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2024,
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Servikal kanser",
+     "ornek_kok": "Aşağıdakilerden hangisi AIDS'i tanımlayan kanserler arasındadır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 10,
+   "tipik_kok_ornekleri": [
+    "Febril nötropeni için hangisi yanlıştır?",
+    "Hangisi sekonder immün yetmezlik nedenlerinden değildir?",
+    "Aşağıdakilerden hangisi sekonder immün yetmezlik nedenlerinden değildir?"
+   ]
+  },
+  {
+   "konu": "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma",
+   "n_soru": 36,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.47,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.19,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.17,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.306,
+     "yanlis_bul": 0.194,
+     "dogru_ifade": 0.167,
+     "olumsuz": 0.139,
+     "en_tipik": 0.111,
+     "vaka": 0.056,
+     "onculu": 0.028
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.528,
+     "L2_anlama_iliski": 0.417,
+     "L3_uygulama": 0.056
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.778,
+     "bilesik_yer_degistirmeli": 0.167,
+     "ayni_ailede_komsu_kavram": 0.056,
+     "mutlak_ifade_tuzagi": 0.056,
+     "sayisal_yakin_deger": 0.028
+    },
+    "sik_kelime_ort": 5.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.03,
+    "ort_benzerlik": 0.65
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "CYBE saptanan bireye izolasyon uygulanması",
+     "ornek_kok": "Aşağıdakilerden hangisi cinsel yolla bulaşan enfeksiyonlardan (CYBE) korunmak için yapılması gerekenlerden değildir?",
+     "kez": 8,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Doğrulama testi istenir",
+     "ornek_kok": "Kan bağışı öncesi yapılan tetkiklerde anti-HIV sonucu pozitif saptanan hastada yapılması gerekenlerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "kez": 7,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Bivalan aşının en önemli etkisi genital siğillerin önlenmesidir",
+     "ornek_kok": "HPV aşıları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 6,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Enjektör paylaşımı",
+     "ornek_kok": "Aşağıdakilerden hangisi HIV enfeksiyonu bulaşı için yüksek risk oluşturmaktadır?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Kondom",
+     "ornek_kok": "Bariyer kontraseptif yöntemler arasında HIV enfeksiyonuna karşı koruyucu olduğu kanıtlanmış olan yöntem aşağıdakilerden hangisidir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Aile bireylerine bilgi verilerek izolasyon önerilir",
+     "ornek_kok": "HIV enfeksiyonu saptanmış bir kişide yapılması gerekenlerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Genital herpes enfeksiyonları",
+     "ornek_kok": "Kadınlarda servikal kansere yol açabilen cinsel yolla bulaşan hastalık aşağıdakilerden hangisidir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "2 hafta sonra seroloji tekrarı istenir",
+     "ornek_kok": "Kan bağışı öncesi yapılan tetkiklerinde anti-HIV sonucu pozitif saptanan hastada yapılması gerekenle ilgili hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade",
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 11,
+   "tipik_kok_ornekleri": [
+    "Bivalan (iki valanlı) ve kuadrivalan (dört valanlı) HPV aşıları için aşağıdakilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi CYBE'lerden korunma için yapılması gerekenlerden değildir?",
+    "Aşağıdakilerden hangisi HIV enfeksiyonu bulaşı için yüksek risk oluşturmaktadır?"
+   ]
+  },
+  {
+   "konu": "İntrauterin Enfeksiyonlar",
+   "n_soru": 32,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.38,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.22,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.312,
+     "olumsuz": 0.281,
+     "onculu": 0.125,
+     "dogru_ifade": 0.125,
+     "en_tipik": 0.094,
+     "yanlis_bul": 0.062
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.594,
+     "L2_anlama_iliski": 0.406
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.594,
+     "bilesik_yer_degistirmeli": 0.219,
+     "mutlak_ifade_tuzagi": 0.188,
+     "ayni_ailede_komsu_kavram": 0.125
+    },
+    "sik_kelime_ort": 4.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.19,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "IgG avidite testi",
+     "ornek_kok": "Toksoplazma IgM ve IgG pozitif saptanan bir gebede ilk aşamada ne yapılmalıdır?",
+     "kez": 11,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021,
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "I, II ve III",
+     "ornek_kok": "I. Grup B streptokoklar için gebeliğin 35–37. haftasında tarama yapılmalıdır.\nII. HIV pozitif annede yüksek viral yük bebeğe bulaş riskini artırmaktadır.\nIII. HBsAg pozitif anneden doğan bebeğe aktif ",
+     "kez": 7,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Anti-streptolizin O",
+     "ornek_kok": "Gebelik planı olan kişinin değerlendirilmesinde veya gebenin ilk değerlendirmesinde istenmesi gereken tetkiklerden hangisi değildir?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Veziküler döküntü",
+     "ornek_kok": "Hangisi kızamık hastalığında görülen semptom ve bulgulardan değildir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Hepatit B aşısı ve immünglobulin doğumdan hemen sonra birlikte uygulanır",
+     "ornek_kok": "Hepatit B taşıyıcısı (HBsAg pozitif) bir gebenin bebeğine doğum sonrasında ilk olarak ne yapılmalıdır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024,
+      2026
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "en_tipik"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Tüm döküntü çeşitleri bir arada görülemez",
+     "ornek_kok": "Aşağıdakilerden hangisi suçiçeği (varisella) hastalığında görülmez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Maternal CD4 sayısının yüksek olması",
+     "ornek_kok": "Aşağıdakilerden hangisi HIV pozitif anneden bebeğe vertikal bulaş riskini artıran faktörlerden DEĞİLDİR?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Rotavirüs",
+     "ornek_kok": "Aşağıdaki mikroorganizmalardan hangisinin intrauterin (konjenital) enfeksiyon riski yoktur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 8,
+   "tipik_kok_ornekleri": [
+    "Toksoplazma IgM ve IgG pozitif saptanan bir gebede ilk aşamada ne yapılmalıdır?",
+    "I. Grup B streptokoklar için gebeliğin 35–37. haftasında tarama yapılmalıdır.\nII. HIV pozitif annede yüksek viral yük bebeğe bulaş riskini artırmaktadır.\nIII. HBsAg pozitif anneden",
+    "Gebelik planı olan kişinin değerlendirilmesinde veya gebenin ilk değerlendirmesinde istenmesi gereken tetkiklerden hangisi değildir?"
+   ]
+  },
+  {
+   "konu": "Genital Enfeksiyonlar",
+   "n_soru": 28,
+   "yillar": [
+    2016,
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.39,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.21,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.393,
+     "dogrudan": 0.143,
+     "en_tipik": 0.107,
+     "vaka": 0.107,
+     "dogru_ifade": 0.107,
+     "yanlis_bul": 0.107,
+     "onculu": 0.036
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.393,
+     "L3_uygulama": 0.107
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.821,
+     "bilesik_yer_degistirmeli": 0.143,
+     "ayni_ailede_komsu_kavram": 0.036,
+     "mutlak_ifade_tuzagi": 0.036
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.07,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Karın muayenesinde defans-rebound",
+     "ornek_kok": "Aşağıdakilerden hangisi servisitte beklenen klinik özelliklerden biri değildir?",
+     "kez": 7,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Molluscum contagiosum",
+     "ornek_kok": "Aşağıdakilerden hangisi genital ülsere neden olan mikroorganizmalardan biri değildir?",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2024
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Sifiliz",
+     "ornek_kok": "Peniste ağrısız yara ile başvuran ve fizik muayenede 1-2 cm, tabanı sert ülser saptanan, LAP saptanmayan hastada öncelikle düşünülmesi gereken enfeksiyon hastalığı hangisidir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Direkt mikroskopide 10 lökosit görülmesi",
+     "ornek_kok": "Bakteriyel vajinozis tanısında kullanılan Amsel kriterlerinden hangisi değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2023,
+      2024,
+      2026
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Klebsiella granulomatis",
+     "ornek_kok": "Aşağıdakilerden hangisi dünyada cinsel yolla bulaşan hastalıklara (CYBH) en sık sebep olan mikroorganizmalardan biri değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Testis torsiyonu",
+     "ornek_kok": "Akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte yapılması gereken en önemli ayırıcı tanı hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Erkek eşin tek eşli olması",
+     "ornek_kok": "Aşağıdakilerden hangisi pelvik inflamatuvar hastalık için risk faktörü değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Olguların büyük çoğunluğunda (yaklaşık %90) etken bakteri saptanır.",
+     "ornek_kok": "Prostatit ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 8,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi servisitte beklenen klinik özelliklerden değildir?",
+    "Peniste ağrısız yara ile başvuran ve fizik muayenede 1-2 cm, tabanı sert ülser saptanan, LAP saptanmayan hastada öncelikle düşünülmesi gereken enfeksiyon hastalığı hangisidir?",
+    "Akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte yapılması gereken en önemli ayırıcı tanı hangisidir?"
+   ]
+  },
+  {
+   "konu": "Sifilis",
+   "n_soru": 27,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.3,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.26,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.22,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.333,
+     "vaka": 0.259,
+     "dogrudan": 0.222,
+     "dogru_ifade": 0.074,
+     "olumsuz": 0.074,
+     "onculu": 0.037
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.444,
+     "L1_hatirlama": 0.296,
+     "L3_uygulama": 0.259
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.889,
+     "ayni_ailede_komsu_kavram": 0.111,
+     "mutlak_ifade_tuzagi": 0.037,
+     "bilesik_yer_degistirmeli": 0.037
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.22,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Şankr bulaştırıcı değildir",
+     "ornek_kok": "Primer sifiliz için hangisi yanlıştır?",
+     "kez": 7,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Sekonder sifiliz ön tanısıyla kardiyovasküler komplikasyonlar açısından araştırılması",
+     "ornek_kok": "Döküntü şikayetiyle başvuran 37 yaşında erkek hastada öncelikle yapılması gerekenler arasında hangisi yer almaz?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Tabes dorsalis",
+     "ornek_kok": "Aşağıdakilerden hangisi sekonder sifiliz bulgularından biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024,
+      2026
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Primer sifiliz",
+     "ornek_kok": "Peniste bir adet ağrısız ülseri olan 24 yaşında erkek hastada yapılan VDRL testi pozitif saptanmıştır. Tanı aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Geç latent ve tersiyer sifilis evrelerinde bulaşıcıdır",
+     "ornek_kok": "Sifilis infeksiyonunun bulaş yolları hakkında aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2019
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Sekonder sifiliz asemptomatiktir",
+     "ornek_kok": "Sifiliz kliniği için hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Primer, sekonder ve erken latent dönem",
+     "ornek_kok": "Sifilizin cinsel yolla bulaştırıcı olduğu dönemler aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Primer sifiliz için aşağıdakilerden hangisi yanlıştır?",
+    "Primer sifiliz için hangisi yanlıştır?",
+    "Gövde, bacaklar, el ve ayak tabanlarında döküntü şikayetiyle başvuran 37 yaşında erkek hastanın öyküsünden döküntü dışında şikayetinin olmadığı ve 1 yıl önce ağrısız penil ülserini"
+   ]
+  },
+  {
+   "konu": "İzolasyon Yöntemleri",
+   "n_soru": 27,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.48,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.41,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.37,
+     "olumsuz": 0.333,
+     "yanlis_bul": 0.185,
+     "sayi": 0.037,
+     "dogru_ifade": 0.037,
+     "onculu": 0.037
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.741,
+     "L2_anlama_iliski": 0.259
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.815,
+     "bilesik_yer_degistirmeli": 0.185,
+     "ayni_ailede_komsu_kavram": 0.074,
+     "mutlak_ifade_tuzagi": 0.037
+    },
+    "sik_kelime_ort": 5.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kan transfüzyonu",
+     "ornek_kok": "Aşağıdakilerden hangisi mikroorganizma bulaşı için indirek (dolaylı) temas yollarından değildir?",
+     "kez": 6,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Standart izolasyon sadece HIV pozitif hastalara uygulanır",
+     "ornek_kok": "İzolasyon önlemleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 6,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Neisseria meningitidis",
+     "ornek_kok": "Aşağıdakilerden hangisi aerosol ile bulaşabilen enfeksiyonlardan **değildir**?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Odaya girmeden önce N95 maske takılması",
+     "ornek_kok": "Aşağıdakilerden hangisi temas izolasyonu için yapılması gerekenlerden **değildir**?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Neisseria meningitidis",
+     "ornek_kok": "Aşağıdakilerden hangisi aerosol (hava yolu) ile bulaşabilen enfeksiyonlardan değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hapşırma",
+     "ornek_kok": "Aşağıdaki eylemlerden hangisinde en çok sayıda solunum yolu partikülü (damlacık/aerosol) saçılımı olur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Parvovirüs B19 enfeksiyonu",
+     "ornek_kok": "Aşağıdakilerden hangisinde rutin olarak solunum (hava yolu) izolasyonuna gerek yoktur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi aerosol ile bulaşabilen enfeksiyonlardan **değildir**?",
+    "Aşağıdakilerden hangisi mikroorganizma bulaşı için indirekt temas yollarından **değildir**?",
+    "İzolasyon önlemleriyle ilgili aşağıdakilerden hangisi **yanlıştır**?"
+   ]
+  },
+  {
+   "konu": "Üriner Sistem Enfeksiyonları",
+   "n_soru": 25,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.56,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.16,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.16,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.24,
+     "vaka": 0.2,
+     "en_tipik": 0.16,
+     "olumsuz": 0.12,
+     "tanim": 0.12,
+     "yanlis_bul": 0.12,
+     "dogru_ifade": 0.04
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.44,
+     "L2_anlama_iliski": 0.36,
+     "L3_uygulama": 0.2
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.92,
+     "bilesik_yer_degistirmeli": 0.04,
+     "mutlak_ifade_tuzagi": 0.04
+    },
+    "sik_kelime_ort": 3.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.28,
+    "ort_benzerlik": 0.88
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Escherichia coli",
+     "ornek_kok": "Üriner sistem enfeksiyonlarına en sık neden olan mikroorganizma aşağıdakilerden hangisidir?",
+     "kez": 8,
+     "farkli_kok": 4,
+     "yillar": [
+      2019,
+      2020,
+      2021,
+      2025
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Kontrolsüz diyabet",
+     "ornek_kok": "Hangisi ÜSE'de dirençli mikroorganizma için risk faktörlerinden değildir?",
+     "kez": 6,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Gebelik",
+     "ornek_kok": "Aşağıdakilerden hangisinde asemptomatik bakteriüri için tedavi endikasyonu vardır?",
+     "kez": 6,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Staphylococcus aureus",
+     "ornek_kok": "Aşağıdaki etkenlerden hangisi üriner sistem enfeksiyonu yapmadan perirenal veya intrarenal apseye neden olur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Ertapenem",
+     "ornek_kok": "Ürosepsis nedeniyle ampirik antibiyotik başlanacak olan hastada son 1 ay içinde cerrahi girişim ve antibiyotik kullanımı öyküsü olması durumunda ilk tercih antibiyotik aşağıdakilerden hangisi olmalıdı",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Asemptomatik bakteriüri",
+     "ornek_kok": "Üriner enfeksiyon semptomları olmayan bir kişide birer gün arayla alınan iki farklı idrar kültüründe de 10⁵ KOB/mL sayıda aynı üropatojenin saptanmasına ne denir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "tanim"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Relaps",
+     "ornek_kok": "İYE tedavisi sonrası 2 hafta içerisinde aynı bakterinin aynı suşu ile enfeksiyon gelişmesine ne denir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "tanim"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisinde asemptomatik bakteriüri için tedavi endikasyonu vardır?",
+    "Aşağıdakilerden hangisi ÜSE'de dirençli mikroorganizma için risk faktörlerinden değildir?",
+    "Üriner sistem enfeksiyonlarına en sık sebep olan mikroorganizma hangisidir?"
+   ]
+  },
+  {
+   "konu": "Zoonotik Enfeksiyonlar",
+   "n_soru": 25,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.2,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.32,
+     "dogrudan": 0.24,
+     "en_tipik": 0.16,
+     "onculu": 0.08,
+     "sayi": 0.08,
+     "dogru_ifade": 0.08,
+     "vaka": 0.04
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.72,
+     "L1_hatirlama": 0.24,
+     "L3_uygulama": 0.04
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.64,
+     "bilesik_yer_degistirmeli": 0.32,
+     "ayni_ailede_komsu_kavram": 0.12,
+     "mutlak_ifade_tuzagi": 0.08,
+     "sayisal_yakin_deger": 0.04
+    },
+    "sik_kelime_ort": 5.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.24,
+    "ort_benzerlik": 0.77
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hayvanın 10 gün takibi yapılır; izlem sürecinde hastalık belirtisi göstermesi, kaçması vey",
+     "ornek_kok": "Yabani tilki tarafından ısırılmış bir kişide aşağıdakilerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "En sık komplikasyonu %20-60 oranıyla kardiyak tutulumdur.",
+     "ornek_kok": "Bruselloz ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Standart tüp aglütinasyon testi tedavinin takibinde kullanılmaz",
+     "ornek_kok": "Bruselloz tanı testleri için aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Yabani tilki tarafından ısırılmış bir kişide aşağıdakilerden hangisi yanlıştır?",
+    "Bruselloz ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Bruselloz tanı testleri için aşağıdaki ifadelerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Akut romatizmal ateş",
+   "n_soru": 23,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.43,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.3,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.22,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.304,
+     "yanlis_bul": 0.261,
+     "dogrudan": 0.217,
+     "dogru_ifade": 0.174,
+     "en_tipik": 0.043
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.522,
+     "L1_hatirlama": 0.478
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.87,
+     "mutlak_ifade_tuzagi": 0.043,
+     "bilesik_yer_degistirmeli": 0.043,
+     "ayni_ailede_komsu_kavram": 0.043
+    },
+    "sik_kelime_ort": 5.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.09,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kalpteki lezyonlarda streptokoklar mevcuttur.",
+     "ornek_kok": "Akut romatizmal ateş (ARA) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 4,
+     "farkli_kok": 4,
+     "yillar": [
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Ateş (≥38,5 °C)",
+     "ornek_kok": "Akut romatizmal ateş Jones tanı kriterlerine göre aşağıdakilerden hangisi majör kriter değildir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Gansiklovir",
+     "ornek_kok": "Aşağıdakilerden hangisi akut romatizmal ateş (ARA) tedavisinde yer almaz?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Hepsi",
+     "ornek_kok": "Akut romatizmal ateşte görülen artritin özelliği aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "monoartralji",
+     "ornek_kok": "ESH >60 mm/h veya CRP yüksekliği, akut romatizmal ateş Jones tanı kriterlerinden düşük riskli toplumlarda hangisi minör kriter değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Erișkinlerde tedavi karanı vermek için klinik, fizik muayene bulgulan ile birlikte hızlı a",
+     "ornek_kok": "Grup A beta hemolitik streptokok tonsillofarenjiti ile ilgli hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "50 yaş üstünde daha sık görülür.",
+     "ornek_kok": "Aşağıdakilerden hangisi akut romatizmal ateş ile ilgili doğru değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi akut romatizmal ateş (ARA) tedavisinde yer almaz?",
+    "ESH >60 mm/h veya CRP yüksekliği, akut romatizmal ateş Jones tanı kriterlerinden düşük riskli toplumlarda hangisi minör kriter değildir?",
+    "Akut romatizmal ateş Jones tanı kriterlerine göre aşağıdakilerden hangisi majör kriter değildir?"
+   ]
+  },
+  {
+   "konu": "İnfluenza",
+   "n_soru": 21,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.52,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.19,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "yanlis_bul": 0.333,
+     "dogru_ifade": 0.19,
+     "olumsuz": 0.095,
+     "onculu": 0.048
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.571,
+     "L1_hatirlama": 0.429
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.714,
+     "bilesik_yer_degistirmeli": 0.143,
+     "ayni_ailede_komsu_kavram": 0.143,
+     "mutlak_ifade_tuzagi": 0.048
+    },
+    "sik_kelime_ort": 5.9
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "hepsi doğru",
+     "ornek_kok": "İnfluenza bulaşı nasıl olur ?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Majör değişiklikler yapar",
+     "ornek_kok": "Aşağıdakilerden hangisi influenza virüsünde görülen antijenik drift (kayma) ile ilgili olarak yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hastaneye yatarsa hava yolu izolasyonu gerekir",
+     "ornek_kok": "Aşağıdaki ifadelerden hangisi influenza virüsünün bulaşıyla ilgili yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2019
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hepsi doğrudur",
+     "ornek_kok": "Aşağıdakilerden hangisi antijenik driftin özelliklerinden biridir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Mevsimsel epidemiler yapar",
+     "ornek_kok": "Aşağıdakilerden hangisi influenza virüsünde görülen antijenik shift (antijenik sapma) için yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "İnfluenza bulaşı nasıl olur ?",
+    "Aşağıdakilerden hangisi antijenik driftin özelliklerinden biridir?",
+    "Aşağıdakilerden hangisi influenza virüsünde görülen antijenik shift (antijenik sapma) için yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Üretral Akıntı",
+   "n_soru": 18,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.39,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.22,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.17,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.333,
+     "dogrudan": 0.222,
+     "dogru_ifade": 0.167,
+     "en_tipik": 0.111,
+     "eslestirme": 0.056,
+     "onculu": 0.056,
+     "yanlis_bul": 0.056
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.389,
+     "L3_uygulama": 0.333,
+     "L1_hatirlama": 0.278
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "ayni_ailede_komsu_kavram": 0.111,
+     "mutlak_ifade_tuzagi": 0.056,
+     "bilesik_yer_degistirmeli": 0.056
+    },
+    "sik_kelime_ort": 4.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.69
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hepsi",
+     "ornek_kok": "Üretrit nedeniyle izlenen bir hastada ateş yüksekliği gelişmesi hâlinde ayırıcı tanıda yer alması gerekenler için hangisi doğrudur?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Sağlıklı bireylerin genital florasında da bulunabildiğinden, kültürde üremesi tek başına a",
+     "ornek_kok": "Üretrit etkenleri araştırılırken Ureaplasma urealyticum ile ilgili olarak aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2019,
+      2021
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Doksisiklin",
+     "ornek_kok": "Nongonokoksik üretrit ön tanısıyla izlenen (Gram boyamada Gram-negatif diplokok görülmeyen, ancak lökosit infiltrasyonu saptanan) bir hastada ilk tedavi seçeneği aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "vaka"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Genital (üretral/vajinal) akıntı",
+     "ornek_kok": "Cinsel yolla bulaşan enfeksiyonlarda (CYBE) en sık görülen semptom aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Lökosit silendirleri",
+     "ornek_kok": "Ağrılı idrar yapma (dizüri) ve üretral akıntısı olan bir hastada aşağıdakilerden hangisini görmek anlamsızdır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Üretrit nedeniyle izlenen bir hastada ateş yüksekliği gelişmesi hâlinde ayırıcı tanıda yer alması gerekenler için hangisi doğrudur?",
+    "Aşağıdakilerden hangisi erkeklerde gonokok enfeksiyonunun (gonore) komplikasyonları arasında yer alır?",
+    "Üretral/servikal akıntısı olan bir hastanın Gram boyamasında mikroskop alanında artmış sayıda polimorfonükleer lökosit (>2) görülmesine rağmen herhangi bir mikroorganizma saptanama"
+   ]
+  },
+  {
+   "konu": "Kırım-Kongo kanamalı ateşi",
+   "n_soru": 16,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.38,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.31,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.31,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogru_ifade": 0.25,
+     "dogrudan": 0.25,
+     "olumsuz": 0.25,
+     "onculu": 0.125,
+     "yanlis_bul": 0.125
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.5,
+     "L1_hatirlama": 0.5
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.375,
+     "ayni_turden_ayri_kavram": 0.375,
+     "ayni_ailede_komsu_kavram": 0.25,
+     "sayisal_yakin_deger": 0.062,
+     "mutlak_ifade_tuzagi": 0.062
+    },
+    "sik_kelime_ort": 4.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.06,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Trombosit sayısının normal olması",
+     "ornek_kok": "Aşağıdakilerden hangisi Kırım-Kongo kanamalı ateşi (KKKA) hastalığının ağırlık kriterlerinden değildir?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Bilinç bulanıklığı",
+     "ornek_kok": "Enfeksiyon hastalıkları ve klin mikr. Enfeksiyon hastalıkları ve klin mikr. Kırım kongo kanamalı ateşi Hangisi Kırım-Kongo kanamalı ateşi hastalığında kötü prognostik faktördendir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "I, II ve III",
+     "ornek_kok": "Kırım-Kongo kanamalı ateşi hastalığı ile ilgili aşağıdaki bulgular verilmiştir:\nI. Lökopeni\nII. Trombositopeni\nIII. INR uzaması\nIV. CRP yüksekliği\nBunlardan hangisi ya da hangileri hastalığın laboratu",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2023
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Fibrinojen yüksekliği hastalığın ciddiyet kriterlerinden biridir.",
+     "ornek_kok": "Kırım-Kongo kanamalı ateşinin laboratuvar bulgularıyla ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Yukarıdakilerin hepsi",
+     "ornek_kok": "Kırım-Kongo kanamalı ateşi (KKKA) hastalığı için laboratuvar bulgularından hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi Kırım-Kongo kanamalı ateşi (KKKA) hastalığının ağırlık kriterlerinden değildir?",
+    "Enfeksiyon hastalıkları ve klin mikr. Enfeksiyon hastalıkları ve klin mikr. Kırım kongo kanamalı ateşi Hangisi Kırım-Kongo kanamalı ateşi hastalığında kötü prognostik faktördendir?",
+    "Kırım-Kongo kanamalı ateşi (KKKA) hastalığı için laboratuvar bulgularından hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi",
+   "n_soru": 13,
+   "yillar": [
+    2016,
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.46,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.23,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.15,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.308,
+     "yanlis_bul": 0.308,
+     "dogru_ifade": 0.154,
+     "dogrudan": 0.154,
+     "vaka": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.538,
+     "L1_hatirlama": 0.385,
+     "L3_uygulama": 0.077
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.846,
+     "bilesik_yer_degistirmeli": 0.154
+    },
+    "sik_kelime_ort": 4.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.15,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hepsi",
+     "ornek_kok": "Üretrit nedeniyle izlenen bir hastada ateş yüksekliği gelişmesi hâlinde ayırıcı tanıda yer alması gerekenler için aşağıdakilerden hangisi doğrudur?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Oral herpes enfeksiyonları",
+     "ornek_kok": "Aşağıdakilerden hangisi cinsel yolla bulaşan bir hastalık değildir?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hastanın cinsel partnerinin tedavi edilmesine gerek yoktur.",
+     "ornek_kok": "Neisseria gonorrhoeae enfeksiyonunun tedavisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024,
+      2025
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Kandida vajiniti",
+     "ornek_kok": "Aşağıdakilerden hangisi cinsel yolla bulaşan infeksiyon etkeni değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2016,
+      2019
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Tek ve ağrısız ülser görülür",
+     "ornek_kok": "Şankroid (yumuşak şankr) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi cinsel yolla bulaşan bir hastalık değildir?",
+    "Üretrit nedeniyle izlenen bir hastada ateş yüksekliği gelişmesi hâlinde ayırıcı tanıda yer alması gerekenler için aşağıdakilerden hangisi doğrudur?",
+    "Üretrit nedeniyle izlenen hastada ateş yüksekliği gelişmesi hâlinde ayırıcı tanıda yer alması gerekenler için aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+   "n_soru": 13,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2024,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.46,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.31,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.15,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.308,
+     "eslestirme": 0.231,
+     "olumsuz": 0.154,
+     "dogrudan": 0.154,
+     "dogru_ifade": 0.077,
+     "onculu": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.692,
+     "L1_hatirlama": 0.308
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.846,
+     "bilesik_yer_degistirmeli": 0.154,
+     "ayni_ailede_komsu_kavram": 0.077
+    },
+    "sik_kelime_ort": 6.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ateşi olan her hastaya antibiyotik başlanmalı.",
+     "ornek_kok": "Aşağıdakilerden hangisi antibiyotik kullanımı ile ilgili doğru değildir?",
+     "kez": 6,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021,
+      2024
+     ],
+     "kaliplar": [
+      "olumsuz",
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Escherichia coli - Vankomisin",
+     "ornek_kok": "Mikroorganizma ve doğal dirençli olduğu antibiyotik eşleştirmelerinden hangisi doğrudur?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "eslestirme"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Genişlemiş spektrumlu beta-laktamaz (GSBL) üreten bakteriler 3. kuşak sefalosporinlerle te",
+     "ornek_kok": "Antibiyotiklere karşı gelişen beta-laktamaz direnci ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi antibiyotik kullanımı ile ilgili doğru değildir?",
+    "Mikroorganizma ve doğal dirençli olduğu antibiyotik eşleştirmelerinden hangisi doğrudur?",
+    "Aşağıdakilerden hangisi antibiyotik kullanımı ile ilgili doğru değildir?"
+   ]
+  },
+  {
+   "konu": "Kolera",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.5,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.5,
+     "yanlis_bul": 0.5
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 1.0,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 7.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Birkaç dışkılamadan sonra tipik ağrılı, kokulu, yeşil ishal başlar.",
+     "ornek_kok": "Kolera ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Kolera ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Kolera toksininin etki mekanizmasıyla ilgili;\nI. Adenilat siklaz aktivitesini artırarak hücre içi cAMP artışına neden olur.\nII. ATP bağımlı klor kanallarının (CFTR) aktivitesi arta",
+    "Vibrio cholerae O1 ve O139 serogruplarının neden olduğu kolera hastalığının klinik tablosu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?"
+   ]
+  }
+ ]
+}

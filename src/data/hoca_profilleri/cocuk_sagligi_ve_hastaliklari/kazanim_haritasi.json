@@ -1,0 +1,1109 @@
+{
+ "ders": "Çocuk Sağlığı ve Hastalıkları",
+ "konular": [
+  {
+   "konu": "Çocukluk Dönemi Su Metabolizması Bozuklukları",
+   "n_soru": 23,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.3,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.22,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.478,
+     "vaka": 0.174,
+     "dogru_ifade": 0.087,
+     "olumsuz": 0.087,
+     "tanim": 0.043,
+     "en_tipik": 0.043,
+     "yanlis_bul": 0.043,
+     "sayi": 0.043
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.522,
+     "L2_anlama_iliski": 0.304,
+     "L3_uygulama": 0.174
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.391,
+     "ayni_ailede_komsu_kavram": 0.348,
+     "bilesik_yer_degistirmeli": 0.261,
+     "sayisal_yakin_deger": 0.217
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.13,
+    "ort_benzerlik": 0.82
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Plazma sodyumunun 135 mEq/L'yi geçmesi",
+     "ornek_kok": "Aşağıdakilerden hangisi çocuklarda su kısıtlama testinin sonlandırılmasına gerek olmayan bir durumdur?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Sodyum",
+     "ornek_kok": "Hücre dışı sıvıda hâkim olan katyon hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Üst solunum yolu enfeksiyonları",
+     "ornek_kok": "Aşağıdakilerden hangisi uygunsuz ADH sendromu nedenleri arasında yer almaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hipermagnezemi",
+     "ornek_kok": "Diabetes insipidus ayırıcı tanısında yer almayan patoloji aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Hücre dışı sıvıda hâkim olan katyon hangisidir?",
+    "Aşağıdakilerden hangisi çocuklarda su kısıtlama testinin sonlandırılmasına gerek olmayan bir durumdur?",
+    "Çocuklarda poliüri nasıl tanımlanır?"
+   ]
+  },
+  {
+   "konu": "Hemoglobinopatiler",
+   "n_soru": 22,
+   "yillar": [
+    2020,
+    2021,
+    2024,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.32,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.27,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.409,
+     "olumsuz": 0.318,
+     "yanlis_bul": 0.182,
+     "dogru_ifade": 0.045,
+     "vaka": 0.045
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.545,
+     "L1_hatirlama": 0.409,
+     "L3_uygulama": 0.045
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.636,
+     "bilesik_yer_degistirmeli": 0.318,
+     "ayni_ailede_komsu_kavram": 0.227,
+     "sayisal_yakin_deger": 0.136
+    },
+    "sik_kelime_ort": 6.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hidrops fetalis",
+     "ornek_kok": "Aşağıdakilerden hangisi beta talasemi majör tanılı pediatrik hastalarda ölüm nedenleri arasında yer almaz?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Enfeksiyonlara artmış eğilim göstermeleri",
+     "ornek_kok": "Aşağıdakilerden hangisi, orak hücreli anemi hastalarında gözlenen vazooklüzif krizlerden biri değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Gastrointestinal sistemden demir atılımını engellemek",
+     "ornek_kok": "Hemoglobinopatiler Talasemi major tanılı hastalarda hangisi düzenli transfüzyonun amaçlarından değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Demir desteği",
+     "ornek_kok": "Talasemi major tanısı ile takipli hastalarda hangisi alınması gereken destek tedavisinden değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi beta talasemi majör tanılı pediatrik hastalarda ölüm nedenleri arasında yer almaz?",
+    "Hemoglobinopatiler Talasemi major tanılı hastalarda hangisi düzenli transfüzyonun amaçlarından değildir?",
+    "Talasemi major tanısı ile takipli hastalarda hangisi alınması gereken destek tedavisinden değildir?"
+   ]
+  },
+  {
+   "konu": "Konjenital GİS Malformasyonları",
+   "n_soru": 21,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.43,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.29,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.24,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.381,
+     "dogrudan": 0.286,
+     "en_tipik": 0.238,
+     "olumsuz": 0.095
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.81,
+     "L1_hatirlama": 0.19
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.238,
+     "mutlak_ifade_tuzagi": 0.095
+    },
+    "sik_kelime_ort": 5.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.24,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İleum",
+     "ornek_kok": "Gastrointestinal sistem (GİS) duplikasyon anomalileri en sık hangi lokalizasyonda görülür?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "İnfantil hipertrofik pilor stenozu, yenidoğan döneminde longitudinal kasların hipertrofisi",
+     "ornek_kok": "Gastrointestinal sistemin konjenital anomalileri ile ilgili olarak aşağıdakilerden hangisi doğru değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Normal sinir uyarılarını alan proksimal kolon kontraktedir",
+     "ornek_kok": "Hirschsprung hastalığı için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Mezenteroaksiyel volvulus çocuklarda nadir görülür",
+     "ornek_kok": "Gastrointestinal sistemin konjenital hastalıklarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Ultrasonda pilor kasının incelmiş olarak görülmesi ile tanı konulur",
+     "ornek_kok": "Hipertrofik pilor stenozu için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Gastrointestinal sistemin konjenital hastalıklarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Gastrointestinal sistem (GİS) duplikasyon anomalileri en sık hangi lokalizasyonda görülür?",
+    "Hirschsprung hastalığı ile ilgili hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Çocukluk çağı anemilerine yaklaşım",
+   "n_soru": 15,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.27,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.27,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.333,
+     "dogrudan": 0.2,
+     "olumsuz": 0.133,
+     "vaka": 0.133,
+     "onculu": 0.133,
+     "en_tipik": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.533,
+     "L1_hatirlama": 0.333,
+     "L3_uygulama": 0.133
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.733,
+     "bilesik_yer_degistirmeli": 0.267
+    },
+    "sik_kelime_ort": 6.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.81
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Fizyolojik anemi term bebeklerde 6-8. haftada, preterm bebeklerde 8-12. haftada gelişir",
+     "ornek_kok": "Süt çocukluğu özyolojik anemisi ile ilgili hangisi yanlıştır?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Azalmış total demir bağlama kapasitesi",
+     "ornek_kok": "Aşağıdakilerden hangisi demir eksikliği anemisinin tanı kriterlerinden biri değildir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "B12 ve folik asit eksikliği, kemik iliği hipoplazisi yapıp eritroid seri baskısı ile anemi",
+     "ornek_kok": "Anemi etiyolojisi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "6 yaşın altındaki hafif trombositoz vakaları riskli olabileceği için ileri tetkik ve araşt",
+     "ornek_kok": "Kanın şekilli elemanlarından biri olan trombositlerin pediatrik yaş gruplarındaki özelliklerinden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Süt çocukluğu özyolojik anemisi ile ilgili hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi demir eksikliği anemisinin tanı kriterlerinden biri değildir?",
+    "Kanın şekilli elemanlarından biri olan trombositlerin pediatrik yaş gruplarındaki özelliklerinden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Biliyer Atrezi ve Diğer Safra Yolu Anomalileri",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.33,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.17,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.583,
+     "en_tipik": 0.333,
+     "dogrudan": 0.083
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.417,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 7.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Polispleni ve situs inversus perinatal/akkiz tipte sıkça rastlanır.",
+     "ornek_kok": "Biliyer atrezi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Çocuklarda karaciğer nakillerinin en sık nedenidir.",
+     "ornek_kok": "Alagille sendromu ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Caroli sendromunu oluşturan komponentler aşağıdakilerden hangisidir?",
+    "Çocukluk çağında karaciğer naklinin en sık nedeni aşağıdakilerden hangisidir?",
+    "Kasai ameliyatının (hepatoportoenterostomi) en sık uygulandığı hastalık hangisidir?"
+   ]
+  },
+  {
+   "konu": "Siyanotik doğumsal kalp hastalıkları",
+   "n_soru": 12,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.42,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.17,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.417,
+     "olumsuz": 0.333,
+     "vaka": 0.083,
+     "en_tipik": 0.083,
+     "onculu": 0.083
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.25,
+     "L3_uygulama": 0.083
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "bilesik_yer_degistirmeli": 0.167,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Mitral yetmezlik",
+     "ornek_kok": "Aşağıdakilerden hangisi Fallot tetralojisinin komponenti değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Ebstein anomalisinde ana patoloji nerededir?",
+    "Aşağıdakilerden hangisi Fallot tetralojisinin komponenti değildir?",
+    "Aşağıdakilerden hangisi Fallot tetralojisinin dört temel komponentinden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Asiyanotik doğumsal kalp hastalıkları",
+   "n_soru": 7,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.57,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.429,
+     "dogrudan": 0.429,
+     "en_tipik": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.714,
+     "L2_anlama_iliski": 0.286
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "ayni_ailede_komsu_kavram": 0.143
+    },
+    "sik_kelime_ort": 3.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.43,
+    "ort_benzerlik": 0.67
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Bradikardi",
+     "ornek_kok": "Patent duktus arteriyozusun klinik bulguları içinde hangisi yoktur?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Aort koarktasyonu",
+     "ornek_kok": "Kardiyoloji Kardiyoloji Konjenital kalp hastalıkları, Çocukta femoral nabızlar alınamıyorsa ne düşünürsünüz? Aort yetersizliği",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Kardiyoloji Kardiyoloji Konjenital kalp hastalıkları, Çocukta femoral nabızlar alınamıyorsa ne düşünürsünüz? Aort yetersizliği",
+    "Patent duktus arteriyozusun klinik bulguları içinde hangisi yoktur?",
+    "Aşağıdakilerden hangisi asiyanotik konjenital kalp hastalıklarından biri değildir?"
+   ]
+  },
+  {
+   "konu": "Neonatal Kolestaz",
+   "n_soru": 7,
+   "yillar": [
+    2018,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.29,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.29,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.429,
+     "en_tipik": 0.286,
+     "vaka": 0.143,
+     "yanlis_bul": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.714,
+     "L3_uygulama": 0.143,
+     "L1_hatirlama": 0.143
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "ayni_ailede_komsu_kavram": 0.143
+    },
+    "sik_kelime_ort": 4.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Down sendromu",
+     "ornek_kok": "Aşağıdakilerden hangisi acil tanı gerektiren neonatal kolestaz nedenlerinden biri değildir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "İdiyopatik neonatal hepatit",
+     "ornek_kok": "Neonatal kolestazın en sık nedeni hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Neonatal kolestazın en sık nedeni hangisidir?",
+    "Aşağıdakilerden hangisi acil tanı gerektiren neonatal kolestaz nedenlerinden biri değildir?",
+    "Neonatal kolestazda safra tuzlarının bağırsak lümenine akamamasına bağlı olarak yağda eriyen vitaminlerin emilimi bozulur. Vücut deposunun sınırlı olması nedeniyle en erken ve en h"
+   ]
+  },
+  {
+   "konu": "Solunum Sist. Hastalık. Fizik Muayene",
+   "n_soru": 6,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.17,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.17,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "vaka": 0.333
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.333,
+     "L2_anlama_iliski": 0.333,
+     "L3_uygulama": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Auditory fremitus (işitsel fremitus)",
+     "ornek_kok": "Çocuklarda toraks muayenesinde, palpasyon aşamasında hangisine bakılmaz?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "vaka"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Çocuklarda toraks muayenesinde, palpasyon aşamasında hangisine bakılmaz?",
+    "Alerjik rinit hastalarında alt göz kapağı cildinde koyu daireler şeklinde başlayıp zamanla kalıcı pigmentasyona dönüşen fizik muayene bulgusu aşağıdakilerden hangisidir?",
+    "Alerjik rinit hastalarında burun kaşıntısını gidermek ve burun solunumunu rahatlatabilmek amacıyla istem dışı olarak avuç içi ile burun ucunun yukarıya doğru bastırılması sonucu ol"
+   ]
+  },
+  {
+   "konu": "Fetal Dolaşım ve Neonatal adaptasyon",
+   "n_soru": 5,
+   "yillar": [
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.6,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.2,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.4,
+     "yanlis_bul": 0.4,
+     "olumsuz": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.6,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "bilesik_yer_degistirmeli": 0.2
+    },
+    "sik_kelime_ort": 5.1
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Duktus arteriozus hangi iki yapıyı birbirine bağlar?",
+    "Fetal dolaşımdan neonatal dolaşıma geçişte pulmoner damar direncini artırarak pulmoner vasküler basıncın yüksek kalmasına neden olan durum aşağıdakilerden hangisidir?",
+    "Fetal dolaşım için hangisi söylenemez?"
+   ]
+  },
+  {
+   "konu": "Solunum sistemi Semptomatolojisi",
+   "n_soru": 5,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.4,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "tanim": 0.2,
+     "sayi": 0.2,
+     "en_tipik": 0.2,
+     "yanlis_bul": 0.2,
+     "olumsuz": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 6.4
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "20 saniyeden uzun süren, bradikardi ile siyanozun eşlik ettiği solunum durması durumuna ne denir?",
+    "1-3 yaş arası çocuklarda aniden morarma ve boğulma krizi sonrası gelişen yabancı cisim aspirasyonlarında yabancı cismin sağ ana bronşa kaçmasının en temel anatomik nedeni hangisidi",
+    "Solunum yollarından öksürükle kan gelmesi olarak tanımlanan hemoptizinin en sık rastlanan etiyolojik nedenleri arasında aşağıdakilerden hangisi yer almaz?"
+   ]
+  },
+  {
+   "konu": "Solunum sıkıntısı olan yeni doğana yaklaşım",
+   "n_soru": 5,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.2,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.8,
+     "yanlis_bul": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.8,
+     "L2_anlama_iliski": 0.2
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 4.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Oksijen vermek",
+     "ornek_kok": "Hasta yan pozisyonda gözlem sedyesine alındı. Hastaya mevcut bulgularla ilk ne yapmalıyız?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Yenidoğanda solunum sıkıntısına neden olan mekonyum aspirasyon sendromunun komplikasyonları arasında yer almayan durumu işaretleyiniz?",
+    "Hasta yan pozisyonda gözlem sedyesine alındı. Hastaya mevcut bulgularla ilk ne yapmalıyız?",
+    "Ağlayınca rengi düzeliyor ama susunca morarıyor. Hasta yan pozisyonda gözlem sedyesine alındı. Hastaya mevcut bulgularla ilk ne yapmalıyız?"
+   ]
+  },
+  {
+   "konu": "Siyanoz",
+   "n_soru": 3,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.67,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.33,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.333,
+     "dogrudan": 0.333,
+     "yanlis_bul": 0.333
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.333,
+     "ayni_ailede_komsu_kavram": 0.333
+    },
+    "sik_kelime_ort": 5.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.6
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hipotermi",
+     "ornek_kok": "Çocuk sağ ve hast, siyanoz aşağıdakilerden hangisi oksihemoglobin dissosiasyon eğrisini sağa kaydıran nedenlerden değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Çocuk sağ ve hast, siyanoz aşağıdakilerden hangisi oksihemoglobin dissosiasyon eğrisini sağa kaydıran nedenlerden değildir?",
+    "Siyanoz hangi durumda gerçekleşir?",
+    "Siyanoz ile ilgili verilen ifadelerden hangisi yanlıştır?"
+   ]
+  }
+ ]
+}

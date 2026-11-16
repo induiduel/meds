@@ -1,0 +1,73 @@
+{
+ "ders": "Aile Hekimliği",
+ "n_soru": 53,
+ "guven": "orta",
+ "yillar": {
+  "2018": 2,
+  "2020": 24,
+  "2021": 4,
+  "2022": 2,
+  "2023": 6,
+  "2025": 1
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.472,
+  "olumsuz": 0.151,
+  "onculu": 0.151,
+  "yanlis_bul": 0.113,
+  "tanim": 0.038,
+  "sayi": 0.038,
+  "dogru_ifade": 0.019,
+  "en_tipik": 0.019
+ },
+ "bilgi_turu": {
+  "onleme_halk_sagligi": 0.434,
+  "tanim_kavram": 0.151,
+  "tani_ayirici": 0.132,
+  "ilac_endikasyon": 0.075,
+  "prognoz_komplikasyon": 0.057,
+  "mekanizma": 0.057,
+  "siniflama_ad": 0.038,
+  "epidemiyoloji_sayi": 0.038,
+  "etiyoloji_risk": 0.019
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.585,
+  "L2_anlama_iliski": 0.415
+ },
+ "kok_kelime": {
+  "ort": 18.3,
+  "p25": 10,
+  "medyan": 13,
+  "p75": 21
+ },
+ "sik": {
+  "kelime_ort": 5.2,
+  "kelime_cv": 0.25,
+  "dogru_en_uzun_orani": 0.151,
+  "bilesik_sik_orani": 0.328,
+  "sayisal_sik_orani": 0.057,
+  "hepsi_hicbiri_orani": 0.019,
+  "mutlak_ifade_celdirici_orani": 0.057,
+  "dogru_sik_konumu": {
+   "A": 0.283,
+   "E": 0.245,
+   "C": 0.226,
+   "D": 0.132,
+   "B": 0.113
+  },
+  "celdirici_ortusme": 0.25
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.415,
+  "bilesik_yer_degistirmeli": 0.358,
+  "ayni_ailede_komsu_kavram": 0.302,
+  "sayisal_yakin_deger": 0.057,
+  "mutlak_ifade_tuzagi": 0.057
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.057,
+  "ort_farkli_yil": 1.05
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}

@@ -1,0 +1,2520 @@
+{
+ "ders": "Halk Sağlığı",
+ "konular": [
+  {
+   "konu": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "n_soru": 44,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "orta",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.32,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.568,
+     "sayi": 0.159,
+     "olumsuz": 0.091,
+     "dogru_ifade": 0.068,
+     "vaka": 0.068,
+     "en_tipik": 0.045
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.636,
+     "L2_anlama_iliski": 0.295,
+     "L3_uygulama": 0.068
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.455,
+     "sayisal_yakin_deger": 0.295,
+     "ayni_ailede_komsu_kavram": 0.273,
+     "bilesik_yer_degistirmeli": 0.114,
+     "mutlak_ifade_tuzagi": 0.023
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tetanoz",
+     "ornek_kok": "Aşağıdaki aşılardan hangisi gebelik döneminde uygulanabilir?",
+     "kez": 13,
+     "farkli_kok": 7,
+     "yillar": [
+      2019,
+      2020,
+      2021,
+      2024
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "İzlemin gebeliğin 5. ayında başlamış olması",
+     "ornek_kok": "Doğum öncesi yeterli bakım alma kriterlerinden olmayan hangisidir?",
+     "kez": 8,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Doğurganlığı özendirmek, doğal nüfus artış hızına katkıda bulunmak",
+     "ornek_kok": "Aşağıdakilerden hangisi aile planlamasının amaçlarından değildir?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "İnfertilite tedavisi",
+     "ornek_kok": "Aşağıdakilerden hangisi 'Güvenli Annelik' programı kapsamında anne ve bebek paketinde yer almaz?",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Pomeroy",
+     "ornek_kok": "Laparotomi ile yapılan sterilizasyonlarda (tubal ligasyon) en sık kullanılan yöntem hangisidir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Perinatal ölüm hızı",
+     "ornek_kok": "Aşağıdakilerden hangisinin hesaplanmasında ölü doğumlar da hesaplamaya dahil edilir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "Kronik hastalıklar",
+     "ornek_kok": "Aşağıdakilerden hangisi gebelik döneminde verilen danışmanlık konularından değildir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Türkiye 2,26 toplam doğurganlık hızı ile doğurgan bir ülkedir",
+     "ornek_kok": "Ülkemizde aile planlamasının durumu ile ilgili olarak aşağıdakilerden hangisi doğrudur?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 11,
+   "tipik_kok_ornekleri": [
+    "Doğum öncesi yeterli bakım alma kriterlerinden olmayan hangisidir?",
+    "Aşağıdakilerden hangisi aile planlamasının amaçlarından değildir?",
+    "Hangi aşı gebelik döneminde uygulanabilir?"
+   ]
+  },
+  {
+   "konu": "Bağışıklama ve önemi",
+   "n_soru": 30,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.77,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "olumsuz": 0.233,
+     "vaka": 0.067,
+     "eslestirme": 0.033
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.9,
+     "L3_uygulama": 0.067,
+     "L2_anlama_iliski": 0.033
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.733,
+     "ayni_ailede_komsu_kavram": 0.233,
+     "mutlak_ifade_tuzagi": 0.1,
+     "sayisal_yakin_deger": 0.067,
+     "bilesik_yer_degistirmeli": 0.067
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Rotavirüs",
+     "ornek_kok": "Aşağıdakilerden hangisi Türkiye'de rutin aşılama takviminde yer almaz?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Meningokok aşısı",
+     "ornek_kok": "Aşağıdakilerden hangisi Ulusal Aşı Takvimi'nde olmayan ancak adölesan dönemde önerilen aşılardandır?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "BCG",
+     "ornek_kok": "Aşağıdaki aşılardan hangisi canlı (attenüe) aşıdır?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "BCG",
+     "ornek_kok": "Aşağıdaki aşılardan hangisi intradermal (deri içi) yolla uygulanır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Rotavirüs",
+     "ornek_kok": "Hangisi rutin aşılama programında yoktur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi Ulusal Aşı Takvimi'nde olmayan ancak adölesan dönemde önerilen aşılardandır?",
+    "Aşağıdakilerden hangisi Türkiye'de rutin aşılama takvimi içerisinde yer almaz?",
+    "Aşağıdaki aşılardan hangisi canlı (attenüe) aşıdır?"
+   ]
+  },
+  {
+   "konu": "Bebek Beslenmesi",
+   "n_soru": 22,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.45,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.23,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.23,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "sayi": 0.455,
+     "dogrudan": 0.227,
+     "yanlis_bul": 0.136,
+     "onculu": 0.091,
+     "dogru_ifade": 0.045,
+     "olumsuz": 0.045
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.727,
+     "L2_anlama_iliski": 0.273
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "sayisal_yakin_deger": 0.545,
+     "ayni_ailede_komsu_kavram": 0.409,
+     "ayni_turden_ayri_kavram": 0.273,
+     "bilesik_yer_degistirmeli": 0.227
+    },
+    "sik_kelime_ort": 3.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.41,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "3 saat",
+     "ornek_kok": "Sağılmış anne sütü oda ısısında en fazla kaç saat saklanabilir?",
+     "kez": 7,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021,
+      2024
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "3 saat",
+     "ornek_kok": "Sağılmış anne sütü oda ısısında kaç saat saklanabilir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "%60",
+     "ornek_kok": "Anne sütündeki demirin yaklaşık yüzde kaçı emilir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Bebekler 1 yaşında doğum ağırlıklarının 4 katına ulaşırlar",
+     "ornek_kok": "Bebeklik dönemi ve beslenmesiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "10",
+     "ornek_kok": "TÜİK verilerine göre Türkiye'de 2023 yılında bebek ölüm hızı binde kaçtır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "prognoz_komplikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Sağılmış anne sütü oda ısısında en fazla kaç saat saklanabilir?",
+    "Sağılmış anne sütü oda ısısında kaç saat saklanabilir?",
+    "Anne sütündeki demirin yaklaşık yüzde kaçı emilir?"
+   ]
+  },
+  {
+   "konu": "Epidemiyolojiye Giriş",
+   "n_soru": 20,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.4,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.15,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.15,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.45,
+     "tanim": 0.15,
+     "sayi": 0.15,
+     "yanlis_bul": 0.1,
+     "olumsuz": 0.05,
+     "en_tipik": 0.05,
+     "onculu": 0.05
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.65,
+     "L1_hatirlama": 0.35
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.7,
+     "sayisal_yakin_deger": 0.15,
+     "bilesik_yer_degistirmeli": 0.1,
+     "ayni_ailede_komsu_kavram": 0.1,
+     "mutlak_ifade_tuzagi": 0.05
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.4,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sporadi",
+     "ornek_kok": "Bir hastalık veya sağlık olayının belli bir yerde ara sıra ve tek tük olgular şeklinde gözlenmesi aşağıdakilerden hangisinin tanımıdır?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "tanim"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "İnsidans",
+     "ornek_kok": "“Bir yılda Türkiye’de yaşayan her 100.000 kişiden 45’i Kırım Kongo Kanamalı Ateşi hastalığına yakalanmaktadır” ifadesi hangi kavramı karşılamaktadır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "%22",
+     "ornek_kok": "250.000 nüfuslu bir yerleşim yerinde ortaya çıkan bir bulaşıcı hastalık salgınında, ilk kuluçka dönemi içinde 25.000 kişi, izleyen ikinci kuluçka döneminde ise 50.000 kişi hastalanmıştır. Bu salgında ",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Bir hastalık veya sağlık olayının belli bir yerde ara sıra ve tek tük olgular şeklinde gözlenmesi aşağıdakilerden hangisinin tanımıdır?",
+    "Bir hastalık veya sağlık olayının belli bir yerde sıra sıra ve tek tük olgular şeklinde gözlenmesidir' hangisinin tanımıdır?",
+    "Aşağıdakilerden hangisi epidemiyolojik yöntemlerin kullanım alanlarından değildir?"
+   ]
+  },
+  {
+   "konu": "Yeterli ve Dengeli Beslenme",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.32,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.32,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.21,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.316,
+     "dogru_ifade": 0.211,
+     "yanlis_bul": 0.158,
+     "olumsuz": 0.105,
+     "sayi": 0.105,
+     "onculu": 0.105
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.632,
+     "L1_hatirlama": 0.368
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.421,
+     "bilesik_yer_degistirmeli": 0.263,
+     "sayisal_yakin_deger": 0.158,
+     "mutlak_ifade_tuzagi": 0.105,
+     "ayni_ailede_komsu_kavram": 0.053
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.53,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Ağır şişman (morbid obez)",
+     "ornek_kok": "Boy ve kiloya göre hesaplanan beden kütle indeksi (BKİ) 40 ve üzeri olan kişi nasıl değerlendirilir?",
+     "kez": 5,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "% 60-70",
+     "ornek_kok": "Günlük alınan enerjinin yaklaşık olarak yüzde kaçı bazal metabolizma için harcanır?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Yaş ile azalır",
+     "ornek_kok": "Hangisi bazal metabolizma hızı ile ilgili doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Bağırsak kanseri riskinde artışa neden olma",
+     "ornek_kok": "Posalı diyetin etkileri ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Kızartılmış besinler sık tercih edilmelidir",
+     "ornek_kok": "Yeterli ve dengeli beslenme hakkında aşağıda verilen sağlıklı beslenme önerileri için verilenlerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Tam dinlenme durumundayken",
+     "ornek_kok": "Bazal metabolizma hangi durumda harcanan enerjidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Bol miktarda yağ içerir",
+     "ornek_kok": "Yeterli ve dengeli beslenme sebze ve meyve grubu besinler ile ilgili hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yalnız IV",
+     "ornek_kok": "I. Yumurta, et, süt vb. hayvansal kaynaklı besinlerden sağlanan proteinlerin sindirilebilirlikleri %91-100 iken kurubaklagillerin %50 civarındadır.\nII. Bazal metabolizma hızı ölçümü için en az 8 saatl",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 8,
+   "tipik_kok_ornekleri": [
+    "Boy ve kiloya göre hesaplanan beden kütle indeksi (BKİ) 40 ve üzeri olan kişi nasıl değerlendirilir?",
+    "Günlük alınan enerjinin yaklaşık olarak yüzde kaçı bazal metabolizma için harcanır?",
+    "Posalı diyetin etkileri ile ilgili aşağıdakilerden hangisi doğru değildir?"
+   ]
+  },
+  {
+   "konu": "Sağlık Yönetimi",
+   "n_soru": 18,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.83,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "olumsuz": 0.222,
+     "dogru_ifade": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.944,
+     "L2_anlama_iliski": 0.056
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "bilesik_yer_degistirmeli": 0.111,
+     "ayni_ailede_komsu_kavram": 0.056,
+     "mutlak_ifade_tuzagi": 0.056
+    },
+    "sik_kelime_ort": 2.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.56,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Vizyon",
+     "ornek_kok": "Bir kurumun gelecekte ulaşılmak istenen konumu hangi kavramla ifade edilir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Kararlar; birimler, kurullar ve komisyonlar kanalı ile alınır",
+     "ornek_kok": "Aşağıdakilerden hangisi yatay örgütlenmenin dezavantajlarından birisidir?\n Yatay örgütlenmenin dezavantajlarından birisi aşağıdakilerden hangisidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Hastalar",
+     "ornek_kok": "Aşağıdakilerden hangisi sağlık hizmetleri yönetiminde ‘’KAYNAK’’ olarak belirtilen unsurlardan birisi değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Yönlendirme",
+     "ornek_kok": "'Personelin gücünü ve yeteneğini, yapılan işin amacına uygun olarak, en etkin biçimde kullanmasını sağlama çabalarıdır' ifadesi yönetimi oluşturan öğelerden hangisidir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Koordinasyon",
+     "ornek_kok": "“Bir işin değişik aşamalarında yapılacak işlerin görevli personeller tarafından zamanında, uygun ve uyumlu bir şekilde gerçekleştirilmesine yönelik çabalardır.” ifadesi yönetimi oluşturan öğelerden ha",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi yatay örgütlenmenin dezavantajlarından birisidir?\n Yatay örgütlenmenin dezavantajlarından birisi aşağıdakilerden hangisidir?",
+    "“Bir işin değişik aşamalarında yapılacak işlerin görevli personeller tarafından zamanında, uygun ve uyumlu bir şekilde gerçekleştirilmesine yönelik çabalardır.” ifadesi yönetimi ol",
+    "Aşağıdakilerden hangisi dikey örgütlenmenin özellikleri için doğrudur?"
+   ]
+  },
+  {
+   "konu": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+   "n_soru": 15,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.47,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.33,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.533,
+     "sayi": 0.267,
+     "yanlis_bul": 0.133,
+     "onculu": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.867,
+     "bilesik_yer_degistirmeli": 0.133,
+     "ayni_ailede_komsu_kavram": 0.067
+    },
+    "sik_kelime_ort": 2.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tecrit",
+     "ornek_kok": "Bir bulaşıcı hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresince sağlam bireylerden ayrılması hangi tanım ile ifade edilir?",
+     "kez": 8,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Eradikasyon",
+     "ornek_kok": "Bir enfeksiyon hastalığının etkeniyle birlikte yeryüzünden tamamen yok edilmesi hangi tanım ile ifade edilir?",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Filyasyon",
+     "ornek_kok": "Bulaşıcı hastalık vakalarının daha önceki kaynaklarını araştırmak için yapılan çalışmalar aşağıdakilerden hangisidir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2019,
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Eliminasyon",
+     "ornek_kok": "Bir hastalığın etkeni tam anlamıyla yok edilmemekle birlikte, belirli bir bölgede hiç vaka görülmemesi hangi tanım ile ifade edilir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Kontrol",
+     "ornek_kok": "Bir toplumda endemik olarak görülen bir bulaşıcı hastalığın insidans, prevalans, morbidite ve mortalitesinin bilinçli müdahalelerle yerel olarak kabul edilebilir bir düzeye indirilmesi ve bu düzeyin k",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Bir bulaşıcı hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresince sağlam bireylerden ayrılması hangi tanım ile ifade edilir?",
+    "Bir toplumda endemik olarak görülen bir bulaşıcı hastalığın insidans, prevalans, morbidite ve mortalitesinin bilinçli müdahalelerle yerel olarak kabul edilebilir bir düzeye indiril",
+    "Bulaşıcı hastalık vakalarının daha önceki kaynaklarını araştırmak için yapılan çalışmalar aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Kanser Hastalıkları Epidemiyolojisi",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.47,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.2,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.4,
+     "onculu": 0.267,
+     "sayi": 0.133,
+     "yanlis_bul": 0.133,
+     "eslestirme": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.4
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.467,
+     "bilesik_yer_degistirmeli": 0.333,
+     "ayni_ailede_komsu_kavram": 0.333,
+     "sayisal_yakin_deger": 0.133
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tiroid",
+     "ornek_kok": "Türkiye'de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser hangisidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021,
+      2024
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Lösemi",
+     "ornek_kok": "Türkiye'de 0-14 yaş arası kız ve erkek çocuklarda en sık görülen malignite hangisidir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Akciğer",
+     "ornek_kok": "Dünya Sağlık Örgütü 2020 verilerine göre tüm yaşlarda erkeklerde en sık görülen kanser hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "0.4",
+     "ornek_kok": "100.000 nüfuslu bir şehirde son 3 yılda 200 kişi akciğer kanseri tanısı almış olup, bu süreçte 40 kişi akciğer kanserinden ölmüştür. Buna göre akciğer kanseri mortalite hızı binde kaçtır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Türkiye'de 2014 verilerine göre 15-24 yaş arası kadınlarda en sık görülen kanser hangisidir?",
+    "Türkiye'de 0-14 yaş arası kız ve erkek çocuklarda en sık görülen malignite hangisidir?",
+    "Türkiye’de 15-24 yaş arası kadınlarda en sık görülen malignite hangisidir?"
+   ]
+  },
+  {
+   "konu": "Çevre Sağlığına Giriş ve Genel Bilgiler",
+   "n_soru": 14,
+   "yillar": [
+    2018,
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.57,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.357,
+     "yanlis_bul": 0.286,
+     "olumsuz": 0.071,
+     "sayi": 0.071,
+     "eslestirme": 0.071,
+     "en_tipik": 0.071,
+     "onculu": 0.071
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.429,
+     "bilesik_yer_degistirmeli": 0.286,
+     "ayni_ailede_komsu_kavram": 0.214,
+     "sayisal_yakin_deger": 0.143,
+     "mutlak_ifade_tuzagi": 0.071
+    },
+    "sik_kelime_ort": 6.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.21,
+    "ort_benzerlik": 0.93
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tavsiye edilen atık depolama metodlarından biridir",
+     "ornek_kok": "Çöplerin vahşi depolanması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "500 mikrogram/m3/10 dakika",
+     "ornek_kok": "Dünya Sağlık Örgütü (WHO) tarafından halk sağlığının korunabilmesi amacıyla hangi miktarda kükürt dioksit sınır değerinin aşılmaması tavsiye edilmektedir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "sayi"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Biyolojik savaşta temel hedef, sivillerde panik ve kargaşa yaratmaktır.",
+     "ornek_kok": "Afetler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Afetler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Aşağıdaki kirleticilerden hangisinin insan sağlığı üzerindeki olumsuz etkisi yanlış belirtilmiştir?",
+    "Çöplerin vahşi depolanması ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Akılcı İlaç Kullanımı",
+   "n_soru": 13,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.69,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.23,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.308,
+     "olumsuz": 0.308,
+     "dogrudan": 0.231,
+     "tanim": 0.077,
+     "onculu": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.538,
+     "L1_hatirlama": 0.462
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.769,
+     "bilesik_yer_degistirmeli": 0.154,
+     "ayni_ailede_komsu_kavram": 0.154
+    },
+    "sik_kelime_ort": 4.1
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İlaç-ilaç etkileşimleri ve besin-ilaç etkileşimlerinin dikkate alınması",
+     "ornek_kok": "İlaç akılcı olmayan kullanımı örneklerinden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Hastalık ve ölümlerde artış olabilmesi",
+     "ornek_kok": "Akılcı olmayan ilaç kullanımı nedeniyle ilgili nedir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "tanim"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "İlaç akılcı olmayan kullanımı örneklerinden hangisi yanlıştır?",
+    "Akılcı olmayan ilaç kullanımı nedeniyle ilgili nedir?",
+    "Akılcı ilaç kullanımı ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "İş kazaları",
+   "n_soru": 12,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.75,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.17,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.583,
+     "dogru_ifade": 0.167,
+     "sayi": 0.083,
+     "onculu": 0.083,
+     "yanlis_bul": 0.083
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.5,
+     "sayisal_yakin_deger": 0.333,
+     "ayni_turden_ayri_kavram": 0.167,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.67,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İş kazalarının %2'si kaçınılmazdır.",
+     "ornek_kok": "İş kazaları ile ilgili verilen bilgilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Koruyucusuz ekipmanlar, uygun olmayan koruyucular",
+     "ornek_kok": "Aşağıdakilerden hangisi iş kazalarına neden olabilecek tehlikeli durumlardan birisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "İş kazaları ile ilgili verilen bilgilerden hangisi doğrudur?",
+    "İş kazaları kim tarafından Sosyal Güvenlik Kurumuna bildirilir?",
+    "Hangisi iş kazalarına sebep olan tehlikeli durumlardan birisidir?\nSıra No\nİşyeri ve iş disiplinine uymamak\nİkaz ve uyarılara uymamak\nKişisel koruyucu donanımları (KKD) kullanmamak\n"
+   ]
+  },
+  {
+   "konu": "Sağlığın geliştirilmesi",
+   "n_soru": 11,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.55,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.36,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.727,
+     "onculu": 0.182,
+     "dogru_ifade": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.545,
+     "L2_anlama_iliski": 0.455
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.727,
+     "bilesik_yer_degistirmeli": 0.182,
+     "ayni_ailede_komsu_kavram": 0.182,
+     "sayisal_yakin_deger": 0.091
+    },
+    "sik_kelime_ort": 2.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.55,
+    "ort_benzerlik": 0.82
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sağlıkla ilgili risk faktörlerinin azalması",
+     "ornek_kok": "Sağlığı geliştirme stratejilerinin sonucunda hangisinin kısa dönemde olması beklenir?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "1986",
+     "ornek_kok": "Sağlığın geliştirilmesi konusunda ilk uluslararası konferans hangi yılda yapılmıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Milano Bildirgesi",
+     "ornek_kok": "Aşağıdakilerden hangisi Birinci Sağlığı Geliştirme Konferansı ile ilgilidir?\nSıra No\nBangkok Şartı\nOttowa Sözleşmesi\nNairobi Bildirgesi\nJakarta Bildirgesi\nMilano Bildirgesi",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Sağlığın geliştirilmesi konusunda ilk uluslararası konferans hangi yılda yapılmıştır?",
+    "Sağlığı geliştirme stratejilerinin sonucunda hangisinin kısa dönemde olması beklenir?",
+    "Aşağıdakilerden hangisi Ottawa Bildirgesinde sağlığı geliştirmede öncelikli beş eylem planı içerisinde yer almaz?"
+   ]
+  },
+  {
+   "konu": "Meslek hastalıkları",
+   "n_soru": 11,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.45,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.27,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.636,
+     "sayi": 0.182,
+     "dogru_ifade": 0.091,
+     "olumsuz": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.909,
+     "L2_anlama_iliski": 0.091
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.545,
+     "bilesik_yer_degistirmeli": 0.182,
+     "ayni_ailede_komsu_kavram": 0.091,
+     "mutlak_ifade_tuzagi": 0.091,
+     "sayisal_yakin_deger": 0.091
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.45,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi meslek hastalıklarında “zararlı etkinin başlamasıyla hastalık belirtilerinin ortaya çıkması için gereken en az süre” olarak tanımlanır?",
+    "Meslek hastalığından şüphelenildiğinde ilk yapılması gereken aşağıdakilerden hangisidir?",
+    "Meslek hastalıklarında “yükümlülük süresi” ile ilgili aşağıdakilerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Vaka-Kontrol çalışmaları",
+   "n_soru": 11,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.36,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.18,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.18,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.273,
+     "dogru_ifade": 0.273,
+     "dogrudan": 0.182,
+     "sayi": 0.182,
+     "onculu": 0.091
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.545,
+     "L1_hatirlama": 0.455
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.818,
+     "sayisal_yakin_deger": 0.091,
+     "bilesik_yer_degistirmeli": 0.091,
+     "ayni_ailede_komsu_kavram": 0.091
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Etken sonuç ilişkisini çok iyi gösterir",
+     "ornek_kok": "Vaka kontrol çalışmaları için hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Vaka-kontrol tipi araştırmalarda tespit edilir.",
+     "ornek_kok": "Tahmini rölatif risk (odds ratio) ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Tahmini rölatif risk (odds ratio) ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Vaka kontrol çalışmaları için hangisi yanlıştır?",
+    "Kohort araştırması, müdahale araştırması, tanımlayıcı araştırma veya vaka-kontrol araştırması hangisine uymaktadır?"
+   ]
+  },
+  {
+   "konu": "Halk Sağlığı Tarihçesi",
+   "n_soru": 11,
+   "yillar": [
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.55,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.18,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.364,
+     "olumsuz": 0.273,
+     "onculu": 0.182,
+     "yanlis_bul": 0.091,
+     "eslestirme": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.545,
+     "L2_anlama_iliski": 0.455
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.727,
+     "bilesik_yer_degistirmeli": 0.273
+    },
+    "sik_kelime_ort": 4.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kan basıncı (tansiyon) ölçümü",
+     "ornek_kok": "Aşağıdakilerden hangisi birincil koruma önlemlerinden değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi birincil koruma önlemlerinden değildir?",
+    "Halk Sağlığı tarihçesi: Hangisi birincil koruma değildir?",
+    "Halk sağlığı kavramının başlıca ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Önemli Beslenme Sorunları",
+   "n_soru": 11,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.45,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.27,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.636,
+     "onculu": 0.182,
+     "dogru_ifade": 0.091,
+     "yanlis_bul": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.545,
+     "L2_anlama_iliski": 0.455
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.455,
+     "ayni_ailede_komsu_kavram": 0.364,
+     "bilesik_yer_degistirmeli": 0.273,
+     "sayisal_yakin_deger": 0.091
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.27,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi beslenmeyle ilişkili hastalıklardandır?",
+    "Ağırlığı 80 kg, boyu 1,60 m olan bir bireyin beden kitle indeksine (BKİ) göre değerlendirilmesi aşağıdakilerden hangisine uyar?",
+    "Aşağıdakilerden hangisi beslenme durumunun saptanmasında kullanılan dolaysız (direkt) yöntemlerden birisidir?"
+   ]
+  },
+  {
+   "konu": "Sağlık Göstergeleri",
+   "n_soru": 10,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "prognoz_komplikasyon",
+     "pay": 0.4,
+     "gerekce": "Seyir ve komplikasyon izlem ve tedavi kararını belirler."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.4,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "sayi": 0.7,
+     "dogru_ifade": 0.1,
+     "tanim": 0.1,
+     "dogrudan": 0.1
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.8,
+     "L1_hatirlama": 0.2
+    },
+    "kurulus": "Komplikasyon ya da prognoz belirleyicisi sorulur; çeldirici başka hastalığın komplikasyonudur."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "sayisal_yakin_deger": 0.8,
+     "bilesik_yer_degistirmeli": 0.7,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "mutlak_ifade_tuzagi": 0.1
+    },
+    "sik_kelime_ort": 2.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.1,
+    "ort_benzerlik": 0.67
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "0,4",
+     "ornek_kok": "100.000 nüfuslu bir şehirde son 3 yılda 200 kişi akciğer kanseri tanısı almış, aynı dönemde 40 kişi akciğer kanserinden ölmüştür. Bu dönem için akciğer kanserine özel ölüm (mortalite) hızı binde kaçtı",
+     "kez": 8,
+     "farkli_kok": 5,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "150.000 nüfuslu bir şehirde son 5 yılda 250 kişi meme kanseri tanısı almış olup bunlardan 20 kişi ölmüştür. Mortalite hızı binde kaçtır?",
+    "150.000 nüfuslu bir şehirde son 5 yılda 250 kişi meme kanseri tanısı almış, bunlardan 20 kişi ölmüştür. Buna göre meme kanserine bağlı mortalite hızı binde kaçtır?",
+    "100.000 nüfuslu bir şehirde son 3 yılda 200 kişi akciğer kanseri tanısı almış, aynı dönemde 40 kişi akciğer kanserinden ölmüştür. Bu dönem için akciğer kanserine özel ölüm (mortali"
+   ]
+  },
+  {
+   "konu": "Sağlık Eğitimi",
+   "n_soru": 10,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.8,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.3,
+     "onculu": 0.2,
+     "dogru_ifade": 0.2,
+     "dogrudan": 0.2,
+     "eslestirme": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.7,
+     "L2_anlama_iliski": 0.3
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.7,
+     "bilesik_yer_degistirmeli": 0.3,
+     "sayisal_yakin_deger": 0.1,
+     "mutlak_ifade_tuzagi": 0.1
+    },
+    "sik_kelime_ort": 4.0
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.6
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sadece hekim olmalı",
+     "ornek_kok": "Hangisi/hangileri sağlık eğitimi yapan kişide bulunması gereken özelliklerden birisi değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Sağlık eğitiminde sadece doktorlar görev almalıdır.",
+     "ornek_kok": "Halkın sağlıkla ilgili herhangi bir konuda eğitiminin daha etkin olması için gerekenlerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "eslestirme"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Halkın sağlıkla ilgili herhangi bir konuda eğitiminin daha etkin olması için gerekenlerden hangisi yanlıştır?",
+    "Hangisi/hangileri sağlık eğitimi yapan kişide bulunması gereken özelliklerden birisi değildir?",
+    "Aşağıdakilerden hangisi sağlık eğitimi yapan kişide bulunması gereken özelliklerden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
+   "n_soru": 10,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.2,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.4,
+     "olumsuz": 0.2,
+     "yanlis_bul": 0.1,
+     "onculu": 0.1,
+     "dogru_ifade": 0.1,
+     "sayi": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.7,
+     "L2_anlama_iliski": 0.3
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.4,
+     "bilesik_yer_degistirmeli": 0.4,
+     "ayni_ailede_komsu_kavram": 0.3,
+     "mutlak_ifade_tuzagi": 0.1,
+     "sayisal_yakin_deger": 0.1
+    },
+    "sik_kelime_ort": 6.0
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Yaşlılığa bağlı senil purpura",
+     "ornek_kok": "Yaşlılarda düşmeye neden olacak sebeplerden hangisi değildir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Aşağıdaki durumlar verilmiştir:\nI. Polifarmasi\nII. Komorbidite\nIII. Uyum sorunu (non-kompliyans)\nIV. İlaç farmakokinetiğinin değişmesi\nBunlardan hangisi/hangileri geriatrik hastalarda advers etki ve c",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "ilac_yan_etki"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Yaşlılarda düşmeye neden olacak sebeplerden hangisi değildir?",
+    "Aşağıdaki durumlar verilmiştir:\nI. Polifarmasi\nII. Komorbidite\nIII. Uyum sorunu (non-kompliyans)\nIV. İlaç farmakokinetiğinin değişmesi\nBunlardan hangisi/hangileri geriatrik hastala",
+    "Yaşlılıkta kanser taramalarıyla ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Gebelik ve Emzirme Döneminde Beslenme",
+   "n_soru": 9,
+   "yillar": [
+    2021,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.44,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.22,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.22,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.556,
+     "sayi": 0.222,
+     "olumsuz": 0.111,
+     "onculu": 0.111
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.778,
+     "L2_anlama_iliski": 0.222
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.556,
+     "sayisal_yakin_deger": 0.222,
+     "ayni_ailede_komsu_kavram": 0.111,
+     "bilesik_yer_degistirmeli": 0.111
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.44,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sağlık eğitimi",
+     "ornek_kok": "Aşağıdakilerden hangisi kadınların gebelik ve doğum sırasında bakım almasını engelleyen faktörler arasında yer almaz?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi kadınların gebelik ve doğum sırasında bakım almasını engelleyen faktörler arasında yer almaz?",
+    "Gebelikte anensefali ve spina bifida riskini artıran spesifik vitamin eksikliği aşağıdakilerden hangisidir?",
+    "Aşağıdakilerden hangisi annenin (gebe/emziren kadının) beslenmesini olumsuz etkileyen faktörlerden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Kohort Çalışmaları",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.38,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.25,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "yanlis_bul": 0.25,
+     "dogru_ifade": 0.125,
+     "sayi": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.625,
+     "L2_anlama_iliski": 0.375
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.875,
+     "ayni_ailede_komsu_kavram": 0.125
+    },
+    "sik_kelime_ort": 3.8
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kohort çalışmalarının sonuçları evrene genellenebilir.",
+     "ornek_kok": "Epidemiyolojik araştırmalarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Toplumda az görülen hastalıklar için uygun olan yöntemdir",
+     "ornek_kok": "Prospektif kohort çalışmaları için hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Epidemiyolojik araştırmalarla ilgili aşağıdakilerden hangisi doğrudur?",
+    "Prospektif kohort çalışmaları için hangisi yanlıştır?",
+    "Geçmişte maruziyeti olanlar ile olmayanların hastalanma durumlarının izlendiği ve karşılaştırıldığı epidemiyolojik çalışma türü aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Türkiye’de Sağlık Hizmetleri",
+   "n_soru": 8,
+   "yillar": [
+    2018,
+    2020,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.88,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "onculu": 0.125,
+     "olumsuz": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.875,
+     "L2_anlama_iliski": 0.125
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "bilesik_yer_degistirmeli": 0.25,
+     "ayni_ailede_komsu_kavram": 0.125,
+     "sayisal_yakin_deger": 0.125
+    },
+    "sik_kelime_ort": 5.2
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Ülkemizde şu anda uygulanmakta olan sağlık sistemine göre kişiye yönelik birinci basamak sağlık hizmetleri aşağıdaki birimlerden hangisi tarafından verilmektedir?",
+    "Aşağıdakilerden hangisi aile sağlığı elemanı olarak çalışamaz?",
+    "Birinci basamakta görev yapan hekimin görevleri arasında olmayan aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Enfeksiyon Hastalıklarının Epidemiyolojisi",
+   "n_soru": 6,
+   "yillar": [
+    2020,
+    2021,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 1.0,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "tanim": 0.333,
+     "eslestirme": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.5,
+     "ayni_turden_ayri_kavram": 0.333,
+     "bilesik_yer_degistirmeli": 0.167
+    },
+    "sik_kelime_ort": 7.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.67,
+    "ort_benzerlik": 0.65
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesi",
+     "ornek_kok": "Epidemi (salgın) kavramının doğru tanımı aşağıdakilerden hangisidir?",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "tanim"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Epidemi",
+     "ornek_kok": "Bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesini ifade eden tanım hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Epidemi kavramı aşağıdakilerden hangisi ile tanımlanır?",
+    "Bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesini ifade eden tanım hangisidir?",
+    "Epidemi (salgın) kavramının doğru tanımı aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Koruyucu Sağlık Hizmetleri",
+   "n_soru": 5,
+   "yillar": [
+    2018,
+    2019,
+    2022,
+    2024
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.4,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.2,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.6,
+     "yanlis_bul": 0.2,
+     "onculu": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Senaryoda uygun önleme düzeyi/yöntem seçilir; çeldirici bir üst/alt düzeydir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.8,
+     "bilesik_yer_degistirmeli": 0.2,
+     "ayni_ailede_komsu_kavram": 0.2
+    },
+    "sik_kelime_ort": 5.6
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi birincil koruma uygulamalarından biridir?",
+    "Hangisi sekonder koruma yöntemidir?",
+    "Adölesan sağlığı ile ilgili olarak aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Mobbing",
+   "n_soru": 4,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 1.0,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.25,
+     "dogrudan": 0.25,
+     "olumsuz": 0.25,
+     "sayi": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.75,
+     "L3_uygulama": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "bilesik_yer_degistirmeli": 0.25
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.5,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi en az görülen mobbing (psikolojik taciz) şikâyet konusudur?",
+    "Aşağıdaki mobbing davranışlarından hangisi kişinin kendini ifade etme olanağına saldırı şeklinde yorumlanır?",
+    "Hangisi iş yerlerinde yapılan psikolojik mobbing unsurlarından birisi değildir?"
+   ]
+  },
+  {
+   "konu": "Halk sağlığını etkileyen faktörler",
+   "n_soru": 4,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.25,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "onculu": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.5
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.5,
+     "ayni_ailede_komsu_kavram": 0.5,
+     "sayisal_yakin_deger": 0.25,
+     "ayni_turden_ayri_kavram": 0.25
+    },
+    "sik_kelime_ort": 6.2
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Türkiye İstatistik Kurumu (TÜİK) güncel verilerine göre nüfusun kendini yenileme eşiği olan 2,10 düzeyinin altına gerileyen Türkiye geneli toplam doğurganlık hızı ile Karabük ili t",
+    "Aşağıdakilerden hangisi sağlığı etkileyen faktörler için yanlış bilgidir?",
+    "Aşağıdakilerden hangisi sosyoekonomik durumun sağlığa etkileri açısından doğru bir ifadedir?"
+   ]
+  },
+  {
+   "konu": "Deneysel ve Kesitsel Çalışmalar",
+   "n_soru": 3,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.67,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.33,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "yanlis_bul": 0.333
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "mutlak_ifade_tuzagi": 0.333,
+     "ayni_ailede_komsu_kavram": 0.333
+    },
+    "sik_kelime_ort": 7.3
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi çift kör (double-blind) çalışmaya örnektir?",
+    "Kesitsel araştırmalarla ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Kesitsel araştırmalarla\nilgili hangisi yanlıştır?\nPrevalans hızı\nbelirlenir\nAynı anda çok amaçlı\ntaramalar yapılabilir.\nVeri kaynağı olarak;\nkayıtlar, anket, Fizik\nmuayene bulgular"
+   ]
+  },
+  {
+   "konu": "Çocuk Sağlığı",
+   "n_soru": 3,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "prognoz_komplikasyon",
+     "pay": 0.33,
+     "gerekce": "Seyir ve komplikasyon izlem ve tedavi kararını belirler."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.33,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.667,
+     "onculu": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 1.0
+    },
+    "kurulus": "Komplikasyon ya da prognoz belirleyicisi sorulur; çeldirici başka hastalığın komplikasyonudur."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "bilesik_yer_degistirmeli": 0.333,
+     "ayni_ailede_komsu_kavram": 0.333
+    },
+    "sik_kelime_ort": 2.9
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.74
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Bir toplumun genel gelişmişlik düzeyini, anne ve çocuk sağlığı hizmetlerinin niteliğini ve prenatal/intrapartum bakım kalitesini yansıtan en duyarlı mortalite göstergesi aşağıdakil",
+    "Türkiye'de Sağlık Bakanlığı koordinasyonunda yenidoğan bebeklerden taburcu olmadan önce topuk kanı (Guthrie kartı) alınarak metabolik ve genetik hastalık taraması yapılır.\nI. Konje",
+    "Yenidoğanlarda topuk kanı alınarak yapılan tarama testi programında bulunmayan hastalık hangisidir?"
+   ]
+  }
+ ]
+}

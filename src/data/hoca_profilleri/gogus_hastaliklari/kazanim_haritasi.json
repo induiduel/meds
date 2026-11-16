@@ -1,0 +1,298 @@
+{
+ "ders": "Göğüs Hastalıkları",
+ "konular": [
+  {
+   "konu": "Pnömoniler",
+   "n_soru": 25,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.24,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.24,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.28,
+     "en_tipik": 0.2,
+     "yanlis_bul": 0.16,
+     "vaka": 0.12,
+     "onculu": 0.08,
+     "sayi": 0.08,
+     "olumsuz": 0.08
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.44,
+     "L2_anlama_iliski": 0.44,
+     "L3_uygulama": 0.12
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.4,
+     "ayni_ailede_komsu_kavram": 0.28,
+     "bilesik_yer_degistirmeli": 0.24,
+     "sayisal_yakin_deger": 0.24
+    },
+    "sik_kelime_ort": 4.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.08,
+    "ort_benzerlik": 0.69
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Pnömoni için CURB-65 hesaplanırken nabız sayısı kullanılır.",
+     "ornek_kok": "Aşağıdaki ifadelerden hangisi akciğer hastalıkları için yanlıştır?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Ampirik tedavi yaklaşımına göre sınıflandırma",
+     "ornek_kok": "Aşağıdaki pnömoni sınıflandırmalarından hangisi en yaygın bir şekilde kullanılmaktadır?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "en_tipik"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Sağ orta lob",
+     "ornek_kok": "PA akciğer grafisinde kalbin sağ kenarını silen bir konsolidasyon görülüyorsa lezyonun akciğerin hangi bölümünde olduğu söylenebilir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "48 saat",
+     "ornek_kok": "Hastaneye yatışta pnömonisi ya da inkübasyon döneminde enfeksiyonu bulunmayan bir hastada, yatıştan en erken kaç saat sonra gelişen pnömoni hastanede gelişen (nozokomiyal) pnömoni olarak kabul edilir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ifadelerden hangisi akciğer hastalıkları için yanlıştır?",
+    "Aşağıdaki pnömoni sınıflandırmalarından hangisi en yaygın bir şekilde kullanılmaktadır?",
+    "I. Mycoplasma pneumoniae\nII. Chlamydia pneumoniae\nIII. Virüsler\nIV. Legionella pneumophila\n\nYukarıdakilerden hangisi veya hangileri atipik pnömoni etkenidir?"
+   ]
+  },
+  {
+   "konu": "Plevral efüzyon ve ampiyem",
+   "n_soru": 13,
+   "yillar": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.38,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.23,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.23,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.462,
+     "onculu": 0.077,
+     "dogru_ifade": 0.077,
+     "dogrudan": 0.077,
+     "sayi": 0.077,
+     "en_tipik": 0.077,
+     "olumsuz": 0.077,
+     "tanim": 0.077
+    },
+    "bilissel_duzey": {
+     "L3_uygulama": 0.462,
+     "L1_hatirlama": 0.308,
+     "L2_anlama_iliski": 0.231
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.538,
+     "ayni_turden_ayri_kavram": 0.462,
+     "bilesik_yer_degistirmeli": 0.231,
+     "sayisal_yakin_deger": 0.231
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.15,
+    "ort_benzerlik": 0.82
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Eksüda plevral efüzyon",
+     "ornek_kok": "Plevral efüzyon ile başvuran hastaya fizik muayeneden sonra torasentez yapılıyor. Plevra sıvısı LDH: 321 IU/L, plevra sıvısı total protein: 3,2 g/dL, serum LDH: 160 IU/L ve serum total protein: 7,1 g/",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "I. Parapnömonik efüzyon\nII. Malign plevral efüzyon\nIII. Romatoid artrit\nIV. Tüberküloz\n\nPlevral sıvıdaki glukoz miktarı çok düşük ise yukarıdakilerden hangisi/hangileri akla gelmelidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Kardiyotorasik oranın normalden yüksek ölçülmesi",
+     "ornek_kok": "Konjestif kalp yetmezliği olan bir hasta dispne şikâyeti ile acil serviste değerlendiriliyor. Hangi durumda tanısal torasentez yapılması gerekmez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "I. Parapnömonik efüzyon\nII. Malign plevral efüzyon\nIII. Romatoid artrit\nIV. Tüberküloz\n\nPlevral sıvıdaki glukoz miktarı çok düşük ise yukarıdakilerden hangisi/hangileri akla gelmel",
+    "Plevral efüzyon ile müracaat eden hastanın muayenesinden sonra plevra sıvı LDH:321, plevra sıvı T.Protein 3.2, Kan LDH 160, kan T.Protein 7.1 olarak geliyor. Bu plevral sıvı için h",
+    "Plevral efüzyon ile başvuran hastaya fizik muayeneden sonra torasentez yapılıyor. Plevra sıvısı LDH: 321 IU/L, plevra sıvısı total protein: 3,2 g/dL, serum LDH: 160 IU/L ve serum t"
+   ]
+  },
+  {
+   "konu": "Obstrüktif ve restriktif akciğer hastalıkları",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.4,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.2,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.3,
+     "dogrudan": 0.3,
+     "olumsuz": 0.3,
+     "onculu": 0.1
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.8,
+     "L1_hatirlama": 0.2
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.4,
+     "bilesik_yer_degistirmeli": 0.3,
+     "sayisal_yakin_deger": 0.2,
+     "ayni_ailede_komsu_kavram": 0.1,
+     "mutlak_ifade_tuzagi": 0.1
+    },
+    "sik_kelime_ort": 5.7
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.1,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Akciğer grafisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "I. FEV1/FVC: %95\nII. FEV1/FVC: %85\nIII. FEV1/FVC: %75\nIV. FEV1/FVC: %65\n\nYukarıdakilerden hangisi/hangileri obstrüktif akciğer hastalığının solunum fonksiyon testi (SFT) bulgusudur",
+    "Aşağıdakilerden hangisi yanlıştır?"
+   ]
+  }
+ ]
+}

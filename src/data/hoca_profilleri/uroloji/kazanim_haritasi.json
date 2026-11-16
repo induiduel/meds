@@ -1,0 +1,832 @@
+{
+ "ders": "Üroloji",
+ "konular": [
+  {
+   "konu": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+   "n_soru": 73,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "orta",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.38,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.23,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.438,
+     "olumsuz": 0.274,
+     "yanlis_bul": 0.11,
+     "dogru_ifade": 0.041,
+     "vaka": 0.041,
+     "tanim": 0.027,
+     "sayi": 0.027,
+     "onculu": 0.027,
+     "en_tipik": 0.014
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.726,
+     "L2_anlama_iliski": 0.233,
+     "L3_uygulama": 0.041
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.767,
+     "ayni_ailede_komsu_kavram": 0.151,
+     "bilesik_yer_degistirmeli": 0.11,
+     "sayisal_yakin_deger": 0.041
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.32,
+    "ort_benzerlik": 0.88
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Sıklık (frequency)",
+     "ornek_kok": "Aşağıdaki alt üriner sistem semptomlarından hangisi depolama semptomudur?",
+     "kez": 9,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Soğuk iklim",
+     "ornek_kok": "Aşağıdakilerden hangisi asemptomatik bakteriüri için risk faktörü değildir?",
+     "kez": 7,
+     "farkli_kok": 4,
+     "yillar": [
+      2019,
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Stres üriner inkontinans",
+     "ornek_kok": "Aşağıdakilerden hangisinde dizüri (ağrılı idrar) görülmesi beklenmez?",
+     "kez": 7,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Pelvik organ prolapsusu",
+     "ornek_kok": "Aşağıdakilerden hangisi genç erişkin kadınlarda üriner sistem enfeksiyonu gelişiminde risk faktörleri arasında yer almaz?",
+     "kez": 7,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Akşam saatlerinde alınan alkol ve kafein gibi diüretik etkili içecekler noktüri için risk ",
+     "ornek_kok": "Noktüri için aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 6,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Diabetes insipidus",
+     "ornek_kok": "Aşağıdakilerden hangisi çocuklarda üriner sistem enfeksiyonu gelişim riskini artırmaz?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Erkeklerde ÜSE kadınlardan daha sık görülür",
+     "ornek_kok": "Aşağıdakilerden hangisi üriner sistem enfeksiyonu (ÜSE) patogenezi ile ilgili yanlış bir tanımlamadır?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Daha çok erkeklerde gözlenir.",
+     "ornek_kok": "Tekrarlayan üriner sistem enfeksiyonları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 5,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 27,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki alt üriner sistem semptomlarından hangisi depolama semptomudur?",
+    "Noktüri için aşağıdaki ifadelerden hangisi doğrudur?",
+    "Tekrarlayan üriner sistem enfeksiyonları ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi",
+   "n_soru": 42,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "guven": "orta",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.31,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.21,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.429,
+     "olumsuz": 0.405,
+     "tanim": 0.071,
+     "dogru_ifade": 0.048,
+     "onculu": 0.024,
+     "sayi": 0.024
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.786,
+     "L2_anlama_iliski": 0.214
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.786,
+     "ayni_ailede_komsu_kavram": 0.214,
+     "bilesik_yer_degistirmeli": 0.143,
+     "sayisal_yakin_deger": 0.048
+    },
+    "sik_kelime_ort": 4.0
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.48,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Bakteriüri",
+     "ornek_kok": "İdrar analizinde nitrit pozitifliği aşağıdakilerden hangisinin göstergesidir?",
+     "kez": 11,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Non-komplike alt üriner sistem enfeksiyonu",
+     "ornek_kok": "İdrar kültürü yapılması hangi durumda mutlak gerekli değildir?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Akut bakteriyel prostatit",
+     "ornek_kok": "Aşağıdakilerden hangisinde steril piyüri görülmez?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Akut sistit",
+     "ornek_kok": "Aşağıdaki patolojilerin hangisinde üst üriner sistem görüntüleme yöntemlerine gerek yoktur?",
+     "kez": 4,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Lökosit silendirleri",
+     "ornek_kok": "Alt üriner sistem enfeksiyonlarında idrar analizinde aşağıdakilerden hangisinin görülmesi beklenmez?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Vajinal florada laktobasillerin artması",
+     "ornek_kok": "Aşağıdakilerden hangisi tekrarlayan üriner sistem enfeksiyonlarında bir risk faktörü değildir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Suprapubik aspirasyon → üretral kateterizasyon → işeme ile orta akım idrarı alınması",
+     "ornek_kok": "İdrar yolu enfeksiyonu tanısında idrar kültürü için örnek alma yöntemleri, kontaminasyon riski açısından sırasıyla en güvenli, orta derecede güvenli ve en az güvenli olarak sıralandığında aşağıdakiler",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade",
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Reenfeksiyon",
+     "ornek_kok": "Üriner sistem enfeksiyonu tedavisi sonrası 6 ay içerisinde farklı bir bakteri ile tekrar üriner enfeksiyon gelişimine ne isim verilir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021,
+      2023
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 11,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisinde steril piyüri görülmez?",
+    "İdrar analizinde nitrit pozitifliği aşağıdakilerden hangisinin göstergesidir?",
+    "Aşağıdakilerden hangisi tekrarlayan üriner sistem enfeksiyonlarında bir risk faktörü değildir?"
+   ]
+  },
+  {
+   "konu": "Enürezis Nokturna",
+   "n_soru": 31,
+   "yillar": [
+    2019,
+    2020,
+    2021,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.39,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.19,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.323,
+     "dogrudan": 0.258,
+     "vaka": 0.226,
+     "sayi": 0.097,
+     "olumsuz": 0.065,
+     "en_tipik": 0.032
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.516,
+     "L1_hatirlama": 0.258,
+     "L3_uygulama": 0.226
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.645,
+     "bilesik_yer_degistirmeli": 0.258,
+     "ayni_ailede_komsu_kavram": 0.097,
+     "sayisal_yakin_deger": 0.065
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.26,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tedavinin başarılı olması için 4 yaşından önce tedaviye başlanması gerekir.",
+     "ornek_kok": "Enürezis nokturna ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 5,
+     "farkli_kok": 4,
+     "yillar": [
+      2021,
+      2026
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Tam idrar tetkiki",
+     "ornek_kok": "Üroloji\nÜroloji\nDış atım bozuklukları\n(Enürezis ve\nEnkoprezis)\nMonosemptomatik\nNoktürnal Enürezis\ntanısında önerilen\nTetkik hangisidir?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Desmopressin ile tedaviye başlarım",
+     "ornek_kok": "Sadece gece yatağı ıslatma yakınması ile ilk defa başvuran 6 yaşındaki bir erkek çocuğun işeme çizelgesi ile noktürnal poliüri ve gündüz işeme hacimlerinin normal olduğu saptanmıştır. Tedavi başlangıc",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Büyük çocuklarda tedavi vermeden enürezisin spontan rezolüsyonu beklenir",
+     "ornek_kok": "Monosemptomatik enürezis nokturna tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Obstrüktif uyku apnesi",
+     "ornek_kok": "Aşağıdakilerden hangisi kabızlığın risk faktörlerinden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Monosemptomatik noktürnal enürezis tanısında önerilen tetkik hangisidir?",
+    "Enürezis nokturna ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi kabızlığın risk faktörlerinden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Üriner Sistemin Spesifik Enfeksiyonları",
+   "n_soru": 15,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.27,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.2,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "epidemiyoloji_sayi",
+     "pay": 0.2,
+     "gerekce": "Pre-test olasılık: sıklık ve yaş/cinsiyet dağılımı klinik şüpheyi belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.4,
+     "dogru_ifade": 0.2,
+     "yanlis_bul": 0.2,
+     "dogrudan": 0.133,
+     "en_tipik": 0.067
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.733,
+     "sayisal_yakin_deger": 0.2,
+     "bilesik_yer_degistirmeli": 0.133
+    },
+    "sik_kelime_ort": 5.6
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Antiviral tedavi",
+     "ornek_kok": "Kabakulak orşitinin tedavi ve yönetiminde aşağıdakilerden hangisinin yeri yoktur?",
+     "kez": 7,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Yaklaşık %70 oranında bilateral (iki taraflı) tutulum gösterir",
+     "ornek_kok": "Üriner tüberküloz ile ilgili olarak aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024,
+      2025
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "epidemiyoloji_sayi"
+    },
+    {
+     "kavram": "Etkeni E. coli ve diğer üropatojen bakterilerdir",
+     "ornek_kok": "Aşağıdakilerden hangisi bakteriyel orşitin özelliklerinden biridir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2019,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Echinococcus granulosus etrafı düzgün, yuvarlak, tek bir kist oluşturur.",
+     "ornek_kok": "Kist hidatik hastalığı için aşağıdaki ifadelerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Kabakulak orşitinin tedavi ve yönetiminde aşağıdakilerden hangisinin yeri yoktur?",
+    "Kabakulak orşitinde hangisinin yeri yoktur?",
+    "Aşağıdakilerden hangisi bakteriyel orşitin özelliklerinden biridir?"
+   ]
+  },
+  {
+   "konu": "Üriner Sistem Taş Hastalıkları Fizyopatolojisi",
+   "n_soru": 12,
+   "yillar": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.33,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.33,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.75,
+     "olumsuz": 0.25
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 1.0
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 2.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.76
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Kalsiyum oksalat monohidrat",
+     "ornek_kok": "Aşağıdakilerden hangisi radyoopak bir üriner sistem taşıdır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022,
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "onleme_halk_sagligi"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Alkali idrar pH'sında (pH > 7,0-7,5) çökme eğilimi artan ve üreaz pozitif bakterilerin (Proteus mirabilis gibi) enfeksiyonuyla oluşan enfeksiyon (strüvit) taşlarının temel bileşeni",
+    "Aşağıdakilerden hangisi, böbrek tübülünde dibazik amino asitlerin taşınım kusuruna yol açan otozomal resesif genetik bir hastalık sonucu oluşan taştır?",
+    "Direkt üriner sistem grafisinde (DÜSG) radyoopak olarak izlenen üriner sistem taş türü aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Üriner Obstrüksiyonun Fizyopatolojisi",
+   "n_soru": 11,
+   "yillar": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.27,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.27,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.18,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.636,
+     "olumsuz": 0.182,
+     "en_tipik": 0.091,
+     "dogru_ifade": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.636,
+     "L2_anlama_iliski": 0.364
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.909,
+     "mutlak_ifade_tuzagi": 0.091
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.18,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hidrojen-fosfat (HPO₄²⁻) ekskresyonunda (idrarla atılımında) artış",
+     "ornek_kok": "Uzun süreli üriner sistem obstrüksiyonu (tıkanıklığı) giderildikten sonra, böbrek fonksiyonlarının henüz tamamen düzelmediği erken dönemde aşağıdakilerden hangisinin gözlenmesi beklenmez?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2024,
+      2025
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Hidrojen ve fosfat ekskresyonu artar",
+     "ornek_kok": "Üriner sistem obstrüksiyonu ortadan kaldırılan bir böbrekte aşağıdakilerden hangisi gözlenmez?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2025
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Üriner sistem obstrüksiyonu ortadan kaldırılan bir böbrekte aşağıdakilerden hangisi gözlenmez?",
+    "Aşağıdakilerden hangisi üst üriner sistem görüntüleme yöntemlerindendir?",
+    "Aşağıdakilerden hangisi alt üriner sistem obstrüksiyonu (infravezikal obstrüksiyon) sebepleri arasında yer almaz?"
+   ]
+  },
+  {
+   "konu": "Üriner Sistem Enfeksiyonları: Laboratuvar Bulguları ve Tedavi",
+   "n_soru": 3,
+   "yillar": [
+    2026
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.33,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "sayi": 0.333,
+     "yanlis_bul": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.333
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki patolojik durumlardan hangisi prerenal proteinüri (overflow/taşma proteinürisi) nedenleri arasında yer alır?",
+    "Suprapubik aspirasyon ile elde edilen idrar kültüründe anlamlı enfeksiyon tanısı için en az kaç CFU/mL bakteri yeterlidir?",
+    "İdrar örneği alma yöntemleri değerlendirildiğinde aşağıdakilerden hangisi yanlıştır?"
+   ]
+  }
+ ]
+}

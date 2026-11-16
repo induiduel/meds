@@ -1,0 +1,668 @@
+{
+ "ders": "Acil Tıp",
+ "konular": [
+  {
+   "konu": "Multitravmaya Yaklaşım",
+   "n_soru": 39,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.26,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.23,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.18,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.333,
+     "dogrudan": 0.282,
+     "vaka": 0.256,
+     "yanlis_bul": 0.051,
+     "dogru_ifade": 0.026,
+     "onculu": 0.026,
+     "en_tipik": 0.026
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.436,
+     "L2_anlama_iliski": 0.308,
+     "L3_uygulama": 0.256
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.615,
+     "bilesik_yer_degistirmeli": 0.179,
+     "ayni_ailede_komsu_kavram": 0.154,
+     "sayisal_yakin_deger": 0.154,
+     "mutlak_ifade_tuzagi": 0.051
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.03,
+    "ort_benzerlik": 0.66
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "1000 mL kristaloid yeterlidir.",
+     "ornek_kok": "34 yaşında, 80 kg erkek hasta multitravma nedeniyle değerlendiriliyor. Hemoroid nedeniyle son 3 aydır dışkılamada kanaması olduğu öğreniliyor. Hasta kaygılı; solunum sayısı 28/dk, SaO2 %94, nabız 110/",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Pulmoner tromboemboli",
+     "ornek_kok": "Travma hastasında temel yaşam desteği basamaklarından sonra ATLS 10'a göre primer bakıda tespit edilecek hayatı tehdit eden 7 yaralanma, erken tanı ve tedaviyle hastanın yaşam şansını artırır. Aşağıda",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Ultrasonografi",
+     "ornek_kok": "Künt batın travması nedeniyle acil cerrahiye getirilen bir hastaya ilk düşünülmesi gereken tanısal yaklaşım aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Hastaya sistolik kan basıncı normal olsa da kan transfüzyonu planlanmalıdır.",
+     "ornek_kok": "54 yaşında, 80 kg erkek hasta multitravma nedeniyle değerlendiriliyor. Hasta soluk; solunum sayısı 28/dk, SaO2 %94, nabız 160/dk, TA 138/70 mmHg, GKS 14. Hb: 14 g/dL (referans: 12–16 g/dL), baz açığı:",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Hemodinamik stabilitenin sağlanamaması",
+     "ornek_kok": "Aşağıdakilerden hangisi, izole künt batın travmalı bir hasta için kesin laparotomi endikasyonudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Kırmızı alan",
+     "ornek_kok": "Bir otobüs kazasında 112 triaj hekimi olarak olay yerindesiniz. Kafa travması ve burun kanaması olan 42 yaşındaki yaralı, seslendiğinizde size doğru yürümüyor ancak bulunduğu yerde oturabiliyor. Gözle",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "KOAH tanısı ile takipli, nefes darlığı ile başvuran, oda havasında SaO2: %93, solunum sayı",
+     "ornek_kok": "Aşağıdaki veriler dışında başka patolojik bulgusu olmayan olgulardan hangisinde kalıcı (entübasyon) havayolu uygulanmasına gerek yoktur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "34 yaşında, 80 kg erkek hasta multitravma nedeniyle değerlendiriliyor. Hemoroid nedeniyle son 3 aydır dışkılamada kanaması olduğu öğreniliyor. Hasta kaygılı; solunum sayısı 28/dk, ",
+    "Künt batın travması nedeniyle acil cerrahiye getirilen bir hastaya ilk düşünülmesi gereken tanısal yaklaşım aşağıdakilerden hangisidir?",
+    "54 yaşında, 80 kg erkek hasta multitravma nedeniyle değerlendiriliyor. Hasta soluk; solunum sayısı 28/dk, SaO2 %94, nabız 160/dk, TA 138/70 mmHg, GKS 14. Hb: 14 g/dL (referans: 12–"
+   ]
+  },
+  {
+   "konu": "İleri Kardiyak Yaşam Desteği ve Özel Durumlar",
+   "n_soru": 20,
+   "yillar": [
+    2020,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.35,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.25,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.55,
+     "vaka": 0.25,
+     "en_tipik": 0.05,
+     "onculu": 0.05,
+     "yanlis_bul": 0.05,
+     "olumsuz": 0.05
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L3_uygulama": 0.25,
+     "L2_anlama_iliski": 0.25
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.7,
+     "sayisal_yakin_deger": 0.15,
+     "bilesik_yer_degistirmeli": 0.15,
+     "ayni_ailede_komsu_kavram": 0.15
+    },
+    "sik_kelime_ort": 4.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hipokalsemi",
+     "ornek_kok": "Aşağıdakilerden hangisi kardiyopulmoner arrestin geri döndürülebilir nedenleri arasında yer almaz?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Çocuğun 5. parmak çapı",
+     "ornek_kok": "Çocuk hastalarda uygun endotrakeal tüp iç çapının belirlenmesinde aşağıdakilerden hangisi kullanılır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Penset ya da cımbız ile boncuğu tutup çekmek",
+     "ornek_kok": "Burnuna boncuk soktuğu iddia edilen çocuğun muayenesinde burun girişinde sarı renkli, yuvarlak bir boncuk görülüyor. Boncuğun çıkarılmasında aşağıdaki yaklaşımlardan hangisi yapılmamalıdır (kontrendik",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "vaka"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "Burun içi aspirasyonu sonrası nazal airway kullanmak",
+     "ornek_kok": "Solunum güçlüğü, burun akıntısı, hırıltılı solunum nedeniyle acile getirilen 4 aylık erkek hastanın takipnesi, siyanozu ve taşikardisi mevcut. Ağlayınca rengi düzeliyor ama susunca morarıyor. Hasta ya",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Solunum güçlüğü, burun akıntısı, hırıltılı solunum nedeniyle acile getirilen 4 aylık erkek hastanın takipnesi, siyanozu ve taşikardisi mevcut. Ağlayınca rengi düzeliyor ama susunca",
+    "Aşağıdakilerden hangisi kardiyopulmoner arreste neden olan geri döndürülebilir nedenlerden değildir?",
+    "Solunum sıkıntısı nedeniyle tedavi başlanan hastanın şikâyetleri geçmemiş, balon-maske ventilasyonuna rağmen solunumu düzelmemiştir. Bu aşamada hava yolu yönetimi sırasında aşağıda"
+   ]
+  },
+  {
+   "konu": "Bilinç Bozukluğuna (Koma) Yaklaşım",
+   "n_soru": 17,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.47,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.24,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "onleme_halk_sagligi",
+     "pay": 0.18,
+     "gerekce": "Korunma düzeyi ve tarama ilkeleri halk sağlığı mantığının çekirdeğidir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.529,
+     "vaka": 0.353,
+     "sayi": 0.118
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.412,
+     "L3_uygulama": 0.353,
+     "L2_anlama_iliski": 0.235
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.765,
+     "sayisal_yakin_deger": 0.235
+    },
+    "sik_kelime_ort": 2.0
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.29,
+    "ort_benzerlik": 0.68
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Nalokson",
+     "ornek_kok": "Koma kokteylinde aşağıdakilerden hangisi yer alır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Stupor",
+     "ornek_kok": "62 yaşında erkek hasta sağ kolunu ve sol bacağını hareket ettiremediği için acil servise getiriliyor. Seslenildiğinde yanıt vermiyor, gözleri kapalı; tekrarlayan ağrılı uyaranla inliyor ve amaçsız har",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Koma kokteylinde aşağıdakilerden hangisi yer alır?",
+    "Acil serviste etiyolojisi bilinmeyen akut bilinç kaybı ve koma tablosu ile getirilen bir hastada ampirik olarak uygulanan klasik 'Koma Kokteyli' protokolünün temel bileşenleri aras",
+    "Hasta emirlere uymuyor, gözleri kapalı ve seslenildiğinde cevap vermiyor. Ağrılı uyaran verildiğinde kıpırdıyor ancak ağrıyı lokalize edemiyor, gözlerini açmıyor ve inliyor. Hastan"
+   ]
+  },
+  {
+   "konu": "Crush ve Kompartman Sendromu",
+   "n_soru": 16,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.56,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.19,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.562,
+     "yanlis_bul": 0.188,
+     "vaka": 0.125,
+     "olumsuz": 0.062,
+     "onculu": 0.062
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.625,
+     "L2_anlama_iliski": 0.25,
+     "L3_uygulama": 0.125
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.812,
+     "bilesik_yer_degistirmeli": 0.125,
+     "mutlak_ifade_tuzagi": 0.062,
+     "ayni_ailede_komsu_kavram": 0.062
+    },
+    "sik_kelime_ort": 4.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hiperpotasemi",
+     "ornek_kok": "Crush (ezilme) sendromunda akut böbrek yetmezliği tablosunun gelişmesinde aşağıdakilerden hangisi doğrudan rol oynamaz?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Uyuşuklukla birlikte miyoglobinüri başlar.",
+     "ornek_kok": "Kompartman sendromu için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Hastanın travma sebebiyle ikincil bakısı bile yapılmadan hızlı izotonik sıvı replasmanı ya",
+     "ornek_kok": "48 yaşında kadın hasta 112 tarafından göçük altından çıkarılarak acil servise getirildi. Göçük altında 24 saattir kaldığı bildirildi. Hastanın arteriyel kan basıncı 80/60 mmHg, nabzı 56/dk, solunum sa",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Tanı konulduğunda ilk yapılacak tedavi fasyotomidir.",
+     "ornek_kok": "Kompartman sendromunun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Kompartman sendromu için aşağıdakilerden hangisi yanlıştır?",
+    "Crush (ezilme) sendromunda akut böbrek yetmezliği tablosunun gelişmesinde aşağıdakilerden hangisi doğrudan rol oynamaz?",
+    "Kompartman sendromunun tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Ekstremite Travmaları",
+   "n_soru": 7,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.43,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.43,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.429,
+     "dogrudan": 0.286,
+     "sayi": 0.143,
+     "onculu": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.429,
+     "L3_uygulama": 0.429,
+     "L2_anlama_iliski": 0.143
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.571,
+     "ayni_turden_ayri_kavram": 0.429,
+     "sayisal_yakin_deger": 0.429,
+     "bilesik_yer_degistirmeli": 0.143
+    },
+    "sik_kelime_ort": 3.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.29,
+    "ort_benzerlik": 0.66
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tip 2",
+     "ornek_kok": "32 yaşında erkek hasta 1,5 metreden düşme nedeniyle bacakta ağrı ve açık yara ile getiriliyor. Muayenede tibia orta hat ön yüzde 4 cm uzunluğunda, cilt bütünlüğü bozulmuş ve kontamine bir kesi ile yar",
+     "kez": 5,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "sayi",
+      "vaka"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "32 yaşında erkek hasta 1,5 metreden düşme nedeniyle bacakta ağrı ve açık yara ile getiriliyor. Muayenede tibia orta hat ön yüzde 4 cm uzunluğunda, cilt bütünlüğü bozulmuş ve kontam",
+    "Bacakta ağrı ve açık yara ile getirilen bir hastanın muayenesinde tibia orta hat ön yüzde 2 cm uzunluğunda cilt bütünlüğü bozulmuş kesi ve yaranın altında tibia kemiğinde periostal",
+    "Aşağıdaki el yaralanmalarından hangisi acil el cerrahisi müdahalesi gerektirmez?"
+   ]
+  },
+  {
+   "konu": "Senkop, Ani Kardiyak Ölüm (AKÖ)",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.57,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.29,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.286,
+     "en_tipik": 0.286,
+     "vaka": 0.286,
+     "dogrudan": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.429,
+     "L1_hatirlama": 0.286,
+     "L3_uygulama": 0.286
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.571,
+     "ayni_turden_ayri_kavram": 0.286,
+     "mutlak_ifade_tuzagi": 0.143,
+     "ayni_ailede_komsu_kavram": 0.143,
+     "sayisal_yakin_deger": 0.143
+    },
+    "sik_kelime_ort": 8.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Futbol oynadığı sırada aniden yere yığılan ve sonrasında uyanan genç erkek hasta",
+     "ornek_kok": "Senkop ile başvuran aşağıdaki hastalardan hangisinde senkop nedeninin daha ciddi (hayatı tehdit edici) olduğu düşünülür?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Nedeni bilinmeyen bir senkop (bayılma) hastasında, aşağıdakilerden hangisinin olması hastanın taburculuğu üzerinde bir etkisi yoktur?",
+    "Uzun süre ayakta durma, kan görme, aşırı sıcak ortam veya duygusal stres ile tetiklenen; öncesinde bulantı, terleme, solukluk ve görmede kararma gibi prodromal semptomların eşlik e",
+    "Geçici bilinç kaybı nedenlerinden biri olan senkop ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?"
+   ]
+  },
+  {
+   "konu": "Çevresel Acillere Yaklaşım",
+   "n_soru": 5,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.6,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.4,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.6,
+     "dogrudan": 0.2,
+     "yanlis_bul": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.8,
+     "L2_anlama_iliski": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 7.0
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Sıcak çarpması için aşağıdaki bilgilerden hangisi doğru değildir?",
+    "Yüksek veya alçak gerilim elektrik çarpmasına maruz kalmış ve olay yerinde hareketsiz yatan bir kazazedeye müdahale ederken kurtarıcı hekimin atması gereken ilk ve en öncelikli adı",
+    "Vücut çekirdek sıcaklığının 40 °C'nin üzerine çıktığı ve santral sinir sistemi disfonksiyonu (konfüzyon, deliryum, koma) ile seyreden sıcak çarpmasında (heat stroke) acil tedavi ya"
+   ]
+  }
+ ]
+}

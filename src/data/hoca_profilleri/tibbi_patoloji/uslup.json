@@ -1,0 +1,86 @@
+{
+ "ders": "Tıbbi Patoloji",
+ "n_soru": 1526,
+ "guven": "yuksek",
+ "yillar": {
+  "2018": 126,
+  "2019": 27,
+  "2020": 693,
+  "2021": 192,
+  "2022": 70,
+  "2023": 87,
+  "2024": 40,
+  "2025": 24,
+  "2026": 21
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.423,
+  "olumsuz": 0.148,
+  "yanlis_bul": 0.138,
+  "en_tipik": 0.13,
+  "dogru_ifade": 0.048,
+  "onculu": 0.044,
+  "vaka": 0.028,
+  "sayi": 0.018,
+  "tanim": 0.012,
+  "eslestirme": 0.01
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.37,
+  "siniflama_ad": 0.126,
+  "mekanizma": 0.117,
+  "etiyoloji_risk": 0.102,
+  "tani_ayirici": 0.097,
+  "tanimlayici_bulgu": 0.094,
+  "prognoz_komplikasyon": 0.032,
+  "epidemiyoloji_sayi": 0.023,
+  "ilac_endikasyon": 0.016,
+  "onleme_halk_sagligi": 0.015,
+  "ilac_yan_etki": 0.007
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.567,
+  "L2_anlama_iliski": 0.404,
+  "L3_uygulama": 0.028
+ },
+ "kok_kelime": {
+  "ort": 13.9,
+  "p25": 7,
+  "medyan": 10,
+  "p75": 16
+ },
+ "sik": {
+  "kelime_ort": 4.2,
+  "kelime_cv": 0.29,
+  "dogru_en_uzun_orani": 0.178,
+  "bilesik_sik_orani": 0.17,
+  "sayisal_sik_orani": 0.035,
+  "hepsi_hicbiri_orani": 0.012,
+  "mutlak_ifade_celdirici_orani": 0.031,
+  "dogru_sik_konumu": {
+   "A": 0.225,
+   "D": 0.21,
+   "C": 0.201,
+   "B": 0.183,
+   "E": 0.181
+  },
+  "celdirici_ortusme": 0.102
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.709,
+  "bilesik_yer_degistirmeli": 0.159,
+  "ayni_ailede_komsu_kavram": 0.132,
+  "sayisal_yakin_deger": 0.035,
+  "mutlak_ifade_tuzagi": 0.031
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.132,
+  "ort_farkli_yil": 1.02
+ },
+ "donem_kaymasi_2023_sonrasi": {
+  "tur": {
+   "etiyoloji_risk": -0.087,
+   "mekanizma": 0.089
+  }
+ }
+}

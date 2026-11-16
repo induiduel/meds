@@ -1,0 +1,2941 @@
+{
+ "ders": "İç Hastalıkları",
+ "konular": [
+  {
+   "konu": "Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları",
+   "n_soru": 58,
+   "yillar": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "orta",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.26,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.276,
+     "yanlis_bul": 0.224,
+     "olumsuz": 0.207,
+     "dogru_ifade": 0.121,
+     "vaka": 0.121,
+     "en_tipik": 0.017,
+     "sayi": 0.017,
+     "onculu": 0.017
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.586,
+     "L1_hatirlama": 0.293,
+     "L3_uygulama": 0.121
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.569,
+     "sayisal_yakin_deger": 0.276,
+     "ayni_ailede_komsu_kavram": 0.155,
+     "bilesik_yer_degistirmeli": 0.086
+    },
+    "sik_kelime_ort": 5.5
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.07,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Tokluk kan şekerinin ≥150 mg/dl olması",
+     "ornek_kok": "Diyabetes mellitus tanı kriterleri ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "kez": 4,
+     "farkli_kok": 4,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz",
+      "yanlis_bul"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Semptom olmasa dahi, 5. dekattan itibaren üç yılda bir açlık-tokluk kan şekeri ölçerek.",
+     "ornek_kok": "Yaşlılarda diyabetes mellitus tarama yöntemi aşağıdakilerden hangisinde en doğrudur?",
+     "kez": 4,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "onleme_halk_sagligi"
+    },
+    {
+     "kavram": "Hücresel glukoz uptake artışı",
+     "ornek_kok": "Tip 2 DM patogenezi ile ilgili doğru olmayan hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Bikarbonat replasmanı",
+     "ornek_kok": "21 yaşında kadın hasta acil polikliniğine halsizlik, bulantı, kusma, karın ağrısı ve idrar yaparken yanma şikâyeti ile başvuruyor. Hastanın anamnezinde son 2 ayda 8 kg kilo kaybettiği, günde 5 litreye",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2022
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Serebrovasküler atak",
+     "ornek_kok": "Aşağıdakilerden hangisi diyabetes mellitusun mikrovasküler komplikasyonlarından biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "Birden fazla durumda açlık plazma glukozu 126 mg/dl üzerinde olması",
+     "ornek_kok": "Çocukluk Çağı Diyabeti tanı kriterleri ile ilgili hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade",
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Tip 1 diyabet tedavisinde oral antidiyabetik ilaçlar verilir.",
+     "ornek_kok": "Tip 1 ve Tip 2 diabetes mellitus arasındaki farklar düşünüldüğünde aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Diyabetik nefropati",
+     "ornek_kok": "Diyabetin akut komplikasyonlarından olmayan hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "prognoz_komplikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 8,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi diyabetes mellitusun mikrovasküler komplikasyonlarından biri değildir?",
+    "Yaşlılarda diyabetes mellitus tarama yöntemi aşağıdakilerden hangisinde en doğrudur?",
+    "Diyabetin akut komplikasyonlarından olmayan hangisidir?"
+   ]
+  },
+  {
+   "konu": "Paratiroid bezi hastalıkları",
+   "n_soru": 28,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.25,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.21,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.18,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.321,
+     "vaka": 0.25,
+     "dogru_ifade": 0.179,
+     "dogrudan": 0.107,
+     "sayi": 0.036,
+     "en_tipik": 0.036,
+     "olumsuz": 0.036,
+     "onculu": 0.036
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.536,
+     "L3_uygulama": 0.25,
+     "L1_hatirlama": 0.214
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.536,
+     "bilesik_yer_degistirmeli": 0.286,
+     "sayisal_yakin_deger": 0.107,
+     "ayni_ailede_komsu_kavram": 0.107
+    },
+    "sik_kelime_ort": 6.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.21,
+    "ort_benzerlik": 0.83
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Erişkinde kalsiyum alımının alt sınırı 200-300 mg/gündür",
+     "ornek_kok": "İç Hastalıkları Kalsiyum metabolizması ile ilgili hangisi yanlıştır?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Hiperkalsemide QT mesafesi kısalır",
+     "ornek_kok": "Kalsiyum için aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Tiazid diüretikleri tedavide kullanılabilir",
+     "ornek_kok": "Hiperkalsemi tedavisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Primer hiperparatiroidi",
+     "ornek_kok": "53 yaşında kadın hastanın son zamanlarda başlayan yorgunluk, kas güçsüzlüğü, sık idrara çıkma ve kabızlık şikâyetleri var. Fizik muayenede ek bulgu yok. Laboratuvar değerleri: serum Ca: 11,5 mg/dL, fo",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Kalsiyum için aşağıdakilerden hangisi doğrudur?",
+    "Hipokalsemi tedavisi ve klinik yönetimi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "İç Hastalıkları Kalsiyum metabolizması ile ilgili hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Yaşlanmada Metabolik Sorunlar",
+   "n_soru": 23,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.48,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.35,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.652,
+     "yanlis_bul": 0.13,
+     "onculu": 0.087,
+     "dogru_ifade": 0.043,
+     "vaka": 0.043,
+     "dogrudan": 0.043
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.522,
+     "L1_hatirlama": 0.435,
+     "L3_uygulama": 0.043
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.739,
+     "bilesik_yer_degistirmeli": 0.217,
+     "ayni_ailede_komsu_kavram": 0.087
+    },
+    "sik_kelime_ort": 4.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.04,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Serum kreatinin düzeyi artar",
+     "ornek_kok": "Hangisi yaşlanma ile olan doğal bir süreç değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Kas kitlesi yaşla azaldığından dolayı serum kreatinin düzeyi azalır",
+     "ornek_kok": "Aşağıdakilerden hangisi yaşlanma ile görülen doğal bir fizyolojik süreç değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Hangisi yaşlanma ile olan doğal bir süreç değildir?",
+    "Aşağıdakilerden hangisi yaşlılıkta görülen metabolik ve fizyolojik değişikliklerden biri değildir?",
+    "Aşağıdakilerden hangisi yaşlanma ile görülen doğal bir fizyolojik süreç değildir?"
+   ]
+  },
+  {
+   "konu": "Hipotalamus-Hipofiz hastalıklarına giriş",
+   "n_soru": 23,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.39,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.26,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.22,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.391,
+     "yanlis_bul": 0.217,
+     "vaka": 0.13,
+     "en_tipik": 0.087,
+     "olumsuz": 0.087,
+     "sayi": 0.043,
+     "onculu": 0.043
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.565,
+     "L1_hatirlama": 0.304,
+     "L3_uygulama": 0.13
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.565,
+     "bilesik_yer_degistirmeli": 0.348,
+     "ayni_ailede_komsu_kavram": 0.13
+    },
+    "sik_kelime_ort": 4.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.17,
+    "ort_benzerlik": 0.8
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hipermagnezemi",
+     "ornek_kok": "Aşağıdaki patolojilerden hangisi diabetes insipidus ayırıcı tanısında yer almaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020,
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "ADH",
+     "ornek_kok": "Diabetes insipidus hangi hormonun eksikliğinde oluşur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Diabetes insipidus hangi hormonun eksikliğinde oluşur?",
+    "Diabetes insipidus (Dİ) için hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi inhibisyon etkili hipotalamus hormonlarından biridir?"
+   ]
+  },
+  {
+   "konu": "Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi",
+   "n_soru": 21,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.19,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "olumsuz": 0.286,
+     "yanlis_bul": 0.19,
+     "onculu": 0.19
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.524,
+     "L2_anlama_iliski": 0.476
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.524,
+     "bilesik_yer_degistirmeli": 0.476,
+     "ayni_ailede_komsu_kavram": 0.19,
+     "sayisal_yakin_deger": 0.095
+    },
+    "sik_kelime_ort": 5.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.1,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Demir, ihtiyacı olan hücrelerin yüzeyinde bulunan divalent metal transporter 1 (DMT1) arac",
+     "ornek_kok": "Aşağıdakilerden hangisi demir emilimi ve metabolizması ile ilgili yanlış bir bilgidir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Herediter hiperferritinemi-katarakt sendromu",
+     "ornek_kok": "Aşağıdakilerden hangisi demir birikimi ile ilişkili sendrom veya durumlardan biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Laboratuvarda total demir bağlama kapasitesi düşük ve transferrin satürasyonu yüksek olara",
+     "ornek_kok": "İÇ HASTALIKLARI\nİÇ HASTALIKLARI\nDEMİR EKSİKLİĞİ\nANEMİSİ ve DEMİR\nMETABOLİZMASI\nDemir eksikliği anemisi\nile ilgili doğru olmayan\nifade aşağıdakilerden\nhangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "C vitamini intoksikasyonu",
+     "ornek_kok": "Aşağıdakilerden hangisi demir eksikliği anemisi nedenlerinden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_yan_etki"
+    },
+    {
+     "kavram": "Hemokromatozis",
+     "ornek_kok": "Aşağıdakilerden hangisi, demirin fazla miktarda emiliminden kaynaklanan; karaciğer, pankreas, kalp, eklemler ve endokrin organlarda demir depolanması ile ilişkili; mikronodüler siroz, diabetes mellitu",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Demir metabolizması ve demir eksikliği anemisi ile ilgili aşağıdaki ifadeler veriliyor:\nI. Demir, duodenumdaki enterositlerce emilir ve transferrine bağlı hâlde taşınır.\nII. Demir eksikliği anemisi la",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "mekanizma"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 6,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi demir emilimi ve metabolizması ile ilgili yanlış bir bilgidir?",
+    "İÇ HASTALIKLARI\nİÇ HASTALIKLARI\nDEMİR EKSİKLİĞİ\nANEMİSİ ve DEMİR\nMETABOLİZMASI\nDemir eksikliği anemisi\nile ilgili doğru olmayan\nifade aşağıdakilerden\nhangisidir?",
+    "Aşağıdakilerden hangisi demir eksikliği anemisi nedenlerinden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Obezite-Metabolizma-Endokrin İlişkisi",
+   "n_soru": 21,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.38,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.24,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.19,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.333,
+     "yanlis_bul": 0.238,
+     "olumsuz": 0.19,
+     "onculu": 0.19,
+     "dogru_ifade": 0.048
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.619,
+     "L1_hatirlama": 0.381
+    },
+    "kurulus": "Durumdan ilaca; çeldirici aynı endikasyonda ikinci sıradaki ya da başka sınıf ilaçtır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.762,
+     "bilesik_yer_degistirmeli": 0.19,
+     "ayni_ailede_komsu_kavram": 0.143
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.1,
+    "ort_benzerlik": 0.75
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hipertiroidi",
+     "ornek_kok": "Agagidakilerden hangisi sekonder obezite nedenlerinden biri değildir",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Hastada suçluluk hissi uyandırmak",
+     "ornek_kok": "Obezite'de tedavi basamakları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Leptin",
+     "ornek_kok": "Aşağıdakilerden hangisi tokluk merkezini kontrol ederek iştahı baskılayan hormondur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Çok su içmek hatalı beslenme davranışlarından biridir.",
+     "ornek_kok": "İç Hastalıkları, Obzitede tıbbi beslenme tedavisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi tokluk merkezini kontrol ederek iştahı baskılayan hormondur?",
+    "İç Hastalıkları, Obzitede tıbbi beslenme tedavisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi sekonder obezite nedenlerinden biri değildir?"
+   ]
+  },
+  {
+   "konu": "Gastroenteritler",
+   "n_soru": 20,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.7,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.4,
+     "olumsuz": 0.2,
+     "yanlis_bul": 0.15,
+     "tanim": 0.05,
+     "vaka": 0.05,
+     "dogru_ifade": 0.05,
+     "en_tipik": 0.05,
+     "dogrudan": 0.05
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.65,
+     "L1_hatirlama": 0.3,
+     "L3_uygulama": 0.05
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.65,
+     "ayni_ailede_komsu_kavram": 0.4,
+     "ayni_turden_ayri_kavram": 0.3,
+     "mutlak_ifade_tuzagi": 0.1,
+     "sayisal_yakin_deger": 0.05
+    },
+    "sik_kelime_ort": 4.4
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.05,
+    "ort_benzerlik": 0.7
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "I. Akut ishal 10-14 güne kadar (2 hafta) olan ishaldir, kronik ishal 1 aydan (4 hafta) fazla süren ishaldir.\nII. Salmonella, Shigella, Campylobacter türleri ve enterohemorajik E. coli bağırsak duvarın",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2021,
+      2022
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Vibrio cholerae kalın bağırsak tipi ishale neden olur.",
+     "ornek_kok": "İshal tipleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Vibrio cholerae",
+     "ornek_kok": "Akut gastroenterit etkenleri ile ilgili olarak aşağıdakilerden hangisi bağırsaklarda inflamasyon yapmaz?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "İshal tipleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Aşağıdakilerden hangisi dizanteri (kanlı mukuslu dışkılama) yapan etkenlerden değildir?",
+    "İshal sınıflandırması ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Elektrolitler ve Endokrin Sistem Arasındaki ilişki",
+   "n_soru": 20,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.55,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.15,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "dogru_ifade": 0.1,
+     "yanlis_bul": 0.1,
+     "olumsuz": 0.1,
+     "en_tipik": 0.05,
+     "eslestirme": 0.05,
+     "vaka": 0.05,
+     "sayi": 0.05
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.7,
+     "L2_anlama_iliski": 0.25,
+     "L3_uygulama": 0.05
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.65,
+     "bilesik_yer_degistirmeli": 0.25,
+     "ayni_ailede_komsu_kavram": 0.1,
+     "sayisal_yakin_deger": 0.05
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.25,
+    "ort_benzerlik": 0.73
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hiponatremi",
+     "ornek_kok": "Antidiüretik hormonun (ADH) fazla salınımında aşağıdakilerden hangisi görülür?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Antidiüretik hormonun (ADH) fazla salınımında aşağıdakilerden hangisi görülür?",
+    "Kalsiyum metabolizması ve ilişkili patolojiler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Hücre dışı sıvıda hâkim olan katyon aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "GİS Motilite Bozuklukları",
+   "n_soru": 19,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.37,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.21,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.16,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.211,
+     "vaka": 0.158,
+     "onculu": 0.158,
+     "en_tipik": 0.105,
+     "sayi": 0.105,
+     "olumsuz": 0.105,
+     "dogru_ifade": 0.105,
+     "yanlis_bul": 0.053
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.474,
+     "L2_anlama_iliski": 0.368,
+     "L3_uygulama": 0.158
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.684,
+     "bilesik_yer_degistirmeli": 0.211,
+     "ayni_ailede_komsu_kavram": 0.158,
+     "sayisal_yakin_deger": 0.105,
+     "mutlak_ifade_tuzagi": 0.053
+    },
+    "sik_kelime_ort": 4.2
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "I. Diffüz özofageal spazmlı hastanın baryumlu özofagus grafisinde diyafragmatik hiatusta düzgün ince daralma (kalem ucu şeklinde, kuş gagası) tipiktir.\nII. Hirschsprung hastalığı, bağırsak duvarındaki",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tanimlayici_bulgu"
+    },
+    {
+     "kavram": "Diabetes mellitus",
+     "ornek_kok": "Aşağıdakilerden hangisi fonksiyonel kabızlığa neden olmaz?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "Amiyotrofik lateral skleroz",
+     "ornek_kok": "Aşağıdakilerden hangisi diffüz özofageal spazmın (DÖS) en sık birlikte görüldüğü sistemik hastalıktır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Rektal fissür varlığı",
+     "ornek_kok": "Kabızlık nedeniyle başvuran bir hastada aşağıdakilerden hangisi meydana geldiğinde ileri tetkik gerekli değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "3 ay",
+     "ornek_kok": "Bir hastaya kronik kabızlık (konstipasyon) tanısı konabilmesi için semptomların en az ne kadar süre devam etmesi gerekir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "sayi"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Ses kısıklığı",
+     "ornek_kok": "Aşağıdakilerden hangisi akalazya hastasındaki tipik semptomlardan biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Hepsi",
+     "ornek_kok": "Akalazya için aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 7,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi fonksiyonel kabızlığa neden olmaz?",
+    "I. Akalazya, alt özofagus sfinkterinin gevşeyememesinden dolayı oluşan bir hastalıktır; baryumlu özofagus grafisinde diyafragmatik hiatusta düzgün ince daralma görülür (kalem ucu, ",
+    "Aşağıdakilerden hangisi kabızlık nedenleri arasında sayılmaz?"
+   ]
+  },
+  {
+   "konu": "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+   "n_soru": 15,
+   "yillar": [
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.2,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.333,
+     "onculu": 0.267,
+     "dogrudan": 0.2,
+     "yanlis_bul": 0.133,
+     "dogru_ifade": 0.067
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.4
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.667,
+     "ayni_ailede_komsu_kavram": 0.333,
+     "ayni_turden_ayri_kavram": 0.267
+    },
+    "sik_kelime_ort": 6.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.13,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Eritropoietin; primer olarak karaciğer tarafından üretilen ve kemik iliğinde eritropoezi u",
+     "ornek_kok": "Anemiler ile ilgili aşağıdaki ifadelerden hangisi doğru değildir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Vücuttaki bir kanama veya artmış eritrosit yıkımı neticesinde retikülositopeni meydana gel",
+     "ornek_kok": "Anemiler ile ilgili aşağıdaki ifadelerden hangisi doğru değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz",
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Anemiler ile ilgili aşağıdaki ifadelerden hangisi doğru değildir?",
+    "Aşağıdakilerden hangisi mikrositer anemilere örnektir?",
+    "Anemiler ile ilgili aşağıdaki ifadelerden hangisi doğru değildir?"
+   ]
+  },
+  {
+   "konu": "Hipoglisemiler",
+   "n_soru": 14,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.5,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.21,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.429,
+     "olumsuz": 0.214,
+     "dogrudan": 0.214,
+     "yanlis_bul": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.786,
+     "L1_hatirlama": 0.214
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.5,
+     "ayni_turden_ayri_kavram": 0.429,
+     "bilesik_yer_degistirmeli": 0.429
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.07,
+    "ort_benzerlik": 0.64
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "İnsülin sekresyonu artar",
+     "ornek_kok": "Hipoglisemide meydana gelen fizyolojik yanıtlar ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2018,
+      2023
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "Karaciğerde glikojenoliz azalır",
+     "ornek_kok": "Hipoglisemideki fizyolojik yanıtlar ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "mekanizma"
+    },
+    {
+     "kavram": "I ve IV",
+     "ornek_kok": "Hipoglisemide görülen Whipple triadı ile ilgili:\nI. Terleme, çarpıntı, anksiyete, bilinç bulanıklığı gibi hipoglisemi semptomlarının varlığı\nII. Parmak ucundan glukometre ile ölçülen düşük plazma gluk",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Hipoglisemideki fizyolojik yanıtlar ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
+    "Hipoglisemide meydana gelen fizyolojik yanıtlar ile ilgili aşağıdakilerden hangisi doğru değildir?",
+    "Hangisi hipoglisemide meydana gelen fizyolojik yanıtlardan değildir?"
+   ]
+  },
+  {
+   "konu": "Ailesel Akdeniz Ateşi",
+   "n_soru": 14,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.5,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.21,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "prognoz_komplikasyon",
+     "pay": 0.21,
+     "gerekce": "Seyir ve komplikasyon izlem ve tedavi kararını belirler."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.5,
+     "onculu": 0.286,
+     "yanlis_bul": 0.214
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.929,
+     "L1_hatirlama": 0.071
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.571,
+     "bilesik_yer_degistirmeli": 0.429,
+     "ayni_ailede_komsu_kavram": 0.214
+    },
+    "sik_kelime_ort": 4.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.21,
+    "ort_benzerlik": 0.64
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "FMF'te genellikle poliartrit şeklinde eklem tutulumu olur",
+     "ornek_kok": "Ailevi Akdeniz Ateşi (FMF) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2018,
+      2020,
+      2023
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "I, II ve III",
+     "ornek_kok": "Ailevi Akdeniz Ateşi (FMF) ile ilgili aşağıdaki ifadeler veriliyor:\nI. Ateş yüksekliği, ataklar hâlinde olan karın ağrısı ve eklem bulguları sık görülen klinik semptomlardır.\nII. Otozomal resesif geçi",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2021
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "Tutulan eklem sıvısı incelemesinde eozinofil baskınlığı ve yoğun karbonhidrat konsantrasyo",
+     "ornek_kok": "Ailesel Akdeniz Ateşi (FMF) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Albümin",
+     "ornek_kok": "Aşağıdakilerden hangisi Ailesel Akdeniz Ateşi (FMF) hastalığında akut ataklar sırasında yükselen inflamasyon belirteçlerinden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Göğüs ağrısı",
+     "ornek_kok": "Ailevi Akdeniz Ateşi (FMF)'nde Livneh tanı kriterlerine göre aşağıdakilerden hangisi majör bulgu değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 5,
+   "tipik_kok_ornekleri": [
+    "Ailevi Akdeniz Ateşi (FMF) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Ailevi Akdeniz Ateşi (FMF) ile ilgili aşağıdaki ifadeler veriliyor:\nI. Ateş yüksekliği, ataklar hâlinde olan karın ağrısı ve eklem bulguları sık görülen klinik semptomlardır.\nII. O",
+    "Ailesel Akdeniz Ateşi (FMF) ile ilgili aşağıdakilerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Sarılıklar",
+   "n_soru": 14,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.29,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.29,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.21,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.357,
+     "olumsuz": 0.286,
+     "vaka": 0.214,
+     "onculu": 0.071,
+     "yanlis_bul": 0.071
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.643,
+     "L3_uygulama": 0.214,
+     "L2_anlama_iliski": 0.143
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.786,
+     "ayni_ailede_komsu_kavram": 0.214
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.07,
+    "ort_benzerlik": 0.79
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Dubin-Johnson sendromu",
+     "ornek_kok": "Aşağıdakilerden hangisi unkonjuge (indirekt) hiperbilirubinemi nedenlerinden biri değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan",
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "I ve III",
+     "ornek_kok": "I. Fizyolojik sarılık\nII. Dubin-Johnson sendromu\nIII. Gilbert sendromu\nIV. Kolelitiyazis\nHangi durum/durumlarda öncelikle konjuge olmamış (indirekt) hiperbilirubinemi oluşur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "Bilirubin oluşumu başta dalak ve tiroid olmak üzere RES (retikuloendotelyal sistem) hücrel",
+     "ornek_kok": "Bilirubin için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Dubin-Johnson sendromu",
+     "ornek_kok": "25 yaşında erkek hasta halsizlik, yorgunluk ve gözlerde sararma nedeniyle klinik takibe alındı. Sorgulamada başka şikâyeti olmayan hastanın muayenesinde ikter dışında özellik saptanmadı. Laboratuvar i",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Suda çözünmez",
+     "ornek_kok": "Aşağıdakilerden hangisi konjuge bilirubinin özelliklerinden değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Gilbert sendromu",
+     "ornek_kok": "Aşağıdaki hastalıklardan hangisi konjuge hiperbilirubinemiye neden olmaz?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 6,
+   "tipik_kok_ornekleri": [
+    "I. Fizyolojik sarılık\nII. Dubin-Johnson sendromu\nIII. Gilbert sendromu\nIV. Kolelitiyazis\nHangi durum/durumlarda öncelikle konjuge olmamış (indirekt) hiperbilirubinemi oluşur?",
+    "Bilirubin için aşağıdakilerden hangisi yanlıştır?",
+    "Aşağıdaki hastalıklardan hangisi konjuge hiperbilirubinemiye neden olmaz?"
+   ]
+  },
+  {
+   "konu": "Megaloblastik anemiler",
+   "n_soru": 14,
+   "yillar": [
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.57,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "vaka": 0.357,
+     "yanlis_bul": 0.214,
+     "dogrudan": 0.214,
+     "en_tipik": 0.071,
+     "eslestirme": 0.071,
+     "olumsuz": 0.071
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.357,
+     "L3_uygulama": 0.357,
+     "L2_anlama_iliski": 0.286
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.643,
+     "bilesik_yer_degistirmeli": 0.357,
+     "mutlak_ifade_tuzagi": 0.214,
+     "sayisal_yakin_deger": 0.143
+    },
+    "sik_kelime_ort": 7.0
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.21,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "B12 vitamini eksikliğinde makrositer ve nonmegaloblastik anemi meydana gelir.",
+     "ornek_kok": "B12 vitamini eksikliği anemisi ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Nörolojik şikâyetlerin olması",
+     "ornek_kok": "Hastalıkları\nMegaloblastik ve\nHemolitik anemiler\nB12 eksikliği anemisini\nFolat eksikliği\nanemisinden ayıracak\nolsaydınız, hangisi B12\nekşiği için tipik bir bulgu\nolurdu",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Önce B12 tedavisi başlanmalı; folat verilirse anemi düzelir fakat geri dönüşümsüz nöroloji",
+     "ornek_kok": "42 yaşında vejetaryen erkek hasta, 3 yıldır et ve hayvansal ürünler tüketmiyor. Son 2 aydır yürürken bacaklarında uyuşma, dengesizlik ve unutkanlık şikâyeti var. Tam kan sayımında Hb: 9,1 g/dL, MCV: 1",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2023
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Oral B12 vitamini vermesi",
+     "ornek_kok": "Şiddetli megaloblastik anemi ile başvuran, MCV değeri 122 fL ve Hb değeri 9 g/dL saptanan, öyküsünden gastrektomi geçirdiği öğrenilen hastaya sağlık ocağındaki hekim tarafından oral folik asit ve B12 ",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Hastalıkları\nMegaloblastik ve\nHemolitik anemiler\nB12 eksikliği anemisini\nFolat eksikliği\nanemisinden ayıracak\nolsaydınız, hangisi B12\nekşiği için tipik bir bulgu\nolurdu",
+    "B12 vitamini eksikliği anemisi ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
+    "Vitamin B12 eksikliği ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Cushing Sendromu",
+   "n_soru": 13,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.54,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.38,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.462,
+     "en_tipik": 0.231,
+     "onculu": 0.231,
+     "dogrudan": 0.077
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.538,
+     "L1_hatirlama": 0.462
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.769,
+     "bilesik_yer_degistirmeli": 0.231,
+     "ayni_ailede_komsu_kavram": 0.077
+    },
+    "sik_kelime_ort": 3.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.23,
+    "ort_benzerlik": 0.84
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Cushing hastalığı",
+     "ornek_kok": "Cushing sendromunun en sık sebebi aşağıdakilerden hangisidir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "siniflama_ad"
+    },
+    {
+     "kavram": "II ve IV",
+     "ornek_kok": "Cushing sendromu ile ilgili aşağıdaki ifadeler değerlendiriliyor:\nI. Cushing'li hastaların fizik muayenesinde aydede yüzü ve ensede buffalo hörgücü görünümü tipiktir; abdomen, göğüsler, kalça, omuz ve",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Cushing sendromunun en sık sebebi aşağıdakilerden hangisidir?",
+    "Aşağıdakilerden hangisi Cushing sendromu tanısında ilk basamakta kullanılan testlerden biri değildir?",
+    "Cushing sendromunda aşağıdaki belirtilerden hangisi görülmez?"
+   ]
+  },
+  {
+   "konu": "Akut Pankreatitler",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.33,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.17,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.5,
+     "en_tipik": 0.167,
+     "vaka": 0.167,
+     "yanlis_bul": 0.083,
+     "dogrudan": 0.083
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.417,
+     "L1_hatirlama": 0.417,
+     "L3_uygulama": 0.167
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.667,
+     "sayisal_yakin_deger": 0.25,
+     "ayni_ailede_komsu_kavram": 0.167
+    },
+    "sik_kelime_ort": 3.7
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Safra taşları",
+     "ornek_kok": "Aşağıdakilerden hangisi akut pankreatitin en sık sebebidir?",
+     "kez": 3,
+     "farkli_kok": 2,
+     "yillar": [
+      2018,
+      2020
+     ],
+     "kaliplar": [
+      "en_tipik"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Hiperkalsemi",
+     "ornek_kok": "Aşağıdakilerden hangisi akut pankreatitin sistemik komplikasyonlarından biri değildir?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "Oral gıda alımına devam edilir",
+     "ornek_kok": "Aşağıdakilerden hangisinin akut pankreatit tedavisinde yeri yoktur?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Hipokalsemi",
+     "ornek_kok": "Aşağıdakilerden hangisi akut pankreatitin etiyolojisinde yer almaz?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 4,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi akut pankreatitin sistemik komplikasyonlarından biri değildir?",
+    "Aşağıdakilerden hangisi akut pankreatitin etiyolojisinde yer almaz?",
+    "Aşağıdakilerden hangisi akut pankreatitin en sık nedenidir?"
+   ]
+  },
+  {
+   "konu": "Akut Hepatitler",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.5,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "ilac_endikasyon",
+     "pay": 0.17,
+     "gerekce": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.17,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.417,
+     "dogrudan": 0.167,
+     "onculu": 0.167,
+     "olumsuz": 0.083,
+     "sayi": 0.083,
+     "dogru_ifade": 0.083
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.583,
+     "L1_hatirlama": 0.417
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.583,
+     "ayni_turden_ayri_kavram": 0.417,
+     "bilesik_yer_degistirmeli": 0.167
+    },
+    "sik_kelime_ort": 5.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.08,
+    "ort_benzerlik": 0.81
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Akut enfeksiyonda ilk yükselen antikor anti-HAV IgG'dir.",
+     "ornek_kok": "Hepatit A ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi tek başına hepatit hastalığı etkeni değildir?",
+    "Aşağıdaki hepatit virüslerinden hangisi kronik karaciğer hastalığına neden olmaz?",
+    "Viral hepatitler içinde epidemilere yol açma olasılığı en yüksek olan hepatit virüsü aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Cinsel Farklılaşma Bozuklukları",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2021,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.58,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.333,
+     "dogrudan": 0.333,
+     "olumsuz": 0.167,
+     "vaka": 0.167
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.417,
+     "L1_hatirlama": 0.417,
+     "L3_uygulama": 0.167
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.583,
+     "sayisal_yakin_deger": 0.333,
+     "ayni_ailede_komsu_kavram": 0.25,
+     "bilesik_yer_degistirmeli": 0.083
+    },
+    "sik_kelime_ort": 3.6
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "17-alfa-hidroksilaz enzim eksikliği",
+     "ornek_kok": "24 yaşında kadın hasta; lisinopril + hidroklorotiyazid + amlodipin kombinasyon tedavisine rağmen kontrol altına alınamayan dirençli hipertansiyon nedeniyle genel dahiliye tarafından endokrinoloji poli",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "vaka"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Cinsel farklılaşma bozukluğundan şüphelenilen bir durumda aşağıdaki test yaklaşımlarından hangisi yeterli değildir?",
+    "Yenidoğan bir bebekte ambigus genitalyanın en sık sebebi aşağıdakilerden hangisidir?",
+    "Konjenital adrenal hiperplazinin en sık sebebi aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Gastrointestinal Sistem Parazitozları",
+   "n_soru": 12,
+   "yillar": [
+    2018,
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.5,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.25,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.17,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.583,
+     "sayi": 0.167,
+     "vaka": 0.083,
+     "eslestirme": 0.083,
+     "onculu": 0.083
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.583,
+     "L2_anlama_iliski": 0.333,
+     "L3_uygulama": 0.083
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.833,
+     "bilesik_yer_degistirmeli": 0.167,
+     "ayni_ailede_komsu_kavram": 0.083
+    },
+    "sik_kelime_ort": 3.1
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.78
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Taenia saginata",
+     "ornek_kok": "Aşağıdakilerden hangisi insan için patojen olan sestod grubu helminttir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi insan için patojen olan sestod grubu helminttir?",
+    "Hangi nematod enfeksiyonu, larva içeren domuz etinin çiğ veya az pişmiş olarak yenmesi ile insanlara bulaşır?",
+    "Limon şeklinde, iki ucunda tıkaç bulunan kahverengi yumurtaların gaitada görülmesi hangi parazitin oluşturduğu enfeksiyonun tanısında yardımcı olur?"
+   ]
+  },
+  {
+   "konu": "Bakteriyel İshaller",
+   "n_soru": 11,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.64,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.18,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.636,
+     "dogrudan": 0.182,
+     "onculu": 0.182
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.818,
+     "L1_hatirlama": 0.182
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.545,
+     "ayni_turden_ayri_kavram": 0.455,
+     "ayni_ailede_komsu_kavram": 0.091
+    },
+    "sik_kelime_ort": 7.0
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hafif bir klinik tablodur, antibiyotik tedavisine gerek yoktur",
+     "ornek_kok": "Salmonella'ya bağlı enterik ateş ile ilgili aşağıdaki seçeneklerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "ilac_endikasyon"
+    },
+    {
+     "kavram": "Sadece bağırsak ile sınırlı enfeksiyonlara neden olur, sistemik enfeksiyona neden olmaz",
+     "ornek_kok": "Salmonella enfeksiyonları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Salmonella'ya bağlı enterik ateş ile ilgili aşağıdaki seçeneklerden hangisi yanlıştır?",
+    "Tifo ile ilgili aşağıdaki seçeneklerden hangisi yanlıştır?",
+    "Dışkıda bol eritrosit görülen, bağırsak mukozasına invazyon yaparak etki gösteren ve hemorajik (dizanteri tipi) ishal tablosuna neden olan etken aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Yaşlılıkta Beslenme",
+   "n_soru": 11,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.45,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.27,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.18,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.455,
+     "yanlis_bul": 0.182,
+     "onculu": 0.182,
+     "dogrudan": 0.091,
+     "dogru_ifade": 0.091
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.545,
+     "L2_anlama_iliski": 0.455
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.636,
+     "bilesik_yer_degistirmeli": 0.273,
+     "mutlak_ifade_tuzagi": 0.091,
+     "ayni_ailede_komsu_kavram": 0.091
+    },
+    "sik_kelime_ort": 5.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Obezite",
+     "ornek_kok": "Aşağıdakilerden hangisi geriatrik malnütrisyon nedenlerinden biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "etiyoloji_risk"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi yaşlılarda konstipasyon (kabızlık) sonucu oluşabilecek komplikasyonlardan değildir?",
+    "Aşağıdakilerden hangisi geriatrik malnütrisyon nedenlerinden biri değildir?",
+    "Yaşlılarda malnütrisyon nedenlerinden hangisi değildir?"
+   ]
+  },
+  {
+   "konu": "Siroz ve Komplikasyonları",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.3,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.3,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.6,
+     "olumsuz": 0.3,
+     "en_tipik": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.8,
+     "L2_anlama_iliski": 0.2
+    },
+    "kurulus": "En sık neden/en önemli risk kökü; çeldirici daha seyrek nedenlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.8,
+     "sayisal_yakin_deger": 0.2,
+     "bilesik_yer_degistirmeli": 0.2,
+     "ayni_ailede_komsu_kavram": 0.2
+    },
+    "sik_kelime_ort": 3.3
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Parasentez",
+     "ornek_kok": "Asit tanısında aşağıdaki tanı yöntemlerinden hangisi etiyopatogenez yönünden sonuca en çok yaklaştırır?",
+     "kez": 3,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tani_ayirici"
+    },
+    {
+     "kavram": "Asit",
+     "ornek_kok": "Aşağıdakilerden hangisi sirozun sık komplikasyonlarından biridir?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "prognoz_komplikasyon"
+    },
+    {
+     "kavram": "Hepsi",
+     "ornek_kok": "Aşağıdakilerden hangisi sekonder peritoniti düşündürür?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 3,
+   "tipik_kok_ornekleri": [
+    "Asit tanısında aşağıdaki tanı yöntemlerinden hangisi etiyopatogenez yönünden sonuca en çok yaklaştırır?",
+    "Aşağıdakilerden hangisi sirozun sık komplikasyonlarından biridir?",
+    "Aşağıdakilerden hangisi sekonder peritoniti düşündürür?"
+   ]
+  },
+  {
+   "konu": "Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2021,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.3,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.2,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.3,
+     "dogrudan": 0.2,
+     "dogru_ifade": 0.1,
+     "onculu": 0.1,
+     "olumsuz": 0.1,
+     "vaka": 0.1,
+     "en_tipik": 0.1
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.5,
+     "L2_anlama_iliski": 0.4,
+     "L3_uygulama": 0.1
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.5,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "bilesik_yer_degistirmeli": 0.2,
+     "mutlak_ifade_tuzagi": 0.1
+    },
+    "sik_kelime_ort": 6.4
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "En sık görülen tip, Tip 1'dir.",
+     "ornek_kok": "Von Willebrand hastalığı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogru_ifade"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Von Willebrand hastalığı ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "I. aPTT uzaması\nII. Epistaksis\nIII. Hemartroz\nIV. Kanama zamanında kısalma\nV. Kas içine kanama\n\nTrombosit sayısında azalma veya fonksiyon bozukluğu yukarıdaki bulgulardan hangisine",
+    "Aşağıdakilerden hangisi K vitaminine bağımlı pıhtılaşma faktörlerinden değildir?"
+   ]
+  },
+  {
+   "konu": "D Vitamini Metabolizması",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2021
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.4,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.2,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "yanlis_bul": 0.2,
+     "vaka": 0.2,
+     "dogru_ifade": 0.1
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.7,
+     "L3_uygulama": 0.2,
+     "L1_hatirlama": 0.1
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.7,
+     "bilesik_yer_degistirmeli": 0.2,
+     "mutlak_ifade_tuzagi": 0.1
+    },
+    "sik_kelime_ort": 6.4
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.71
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "İç Hastalıkları Hiperkalsemi Kalsiyum metabolizması ile ilgili hangisi yanlıştır??",
+    "Kalsiyum metabolizması ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Kalsitriol sentezi, kalsiyum metabolizması ve paratiroid hormonu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?"
+   ]
+  },
+  {
+   "konu": "Endokrin Sistem Hastalıklarına Genel Yaklaşım",
+   "n_soru": 7,
+   "yillar": [
+    2018,
+    2020,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.43,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.29,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.429,
+     "vaka": 0.286,
+     "yanlis_bul": 0.143,
+     "onculu": 0.143
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.571,
+     "L3_uygulama": 0.286,
+     "L1_hatirlama": 0.143
+    },
+    "kurulus": "Sonuçtan kök nedene ya da nedenden sonuca; çeldirici zincirin komşu halkasıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.857,
+     "bilesik_yer_degistirmeli": 0.143,
+     "ayni_ailede_komsu_kavram": 0.143
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.29,
+    "ort_benzerlik": 0.93
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "I, III, IV ve V",
+     "ornek_kok": "Hormonlarla ilgili aşağıdaki ifadeler veriliyor:\nI. Hormonlar büyüme ve gelişme üzerine etkilidir.\nII. Testosteron dişilerde ovulasyonu, erkeklerde spermatogenezi kontrol eder.\nIII. Elektrolit ve asit",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "tani_ayirici"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Hormonlarla ilgili aşağıdaki ifadeler veriliyor:\nI. Hormonlar büyüme ve gelişme üzerine etkilidir.\nII. Testosteron dişilerde ovulasyonu, erkeklerde spermatogenezi kontrol eder.\nIII",
+    "Akut adrenal yetmezlik (adrenal kriz) tablosuyla başvuran bir hastada yapılacak tedavilerden hangisi öncelikli olarak yapılmamalıdır?",
+    "Aşağıdaki ifadelerden hangisi hormonların sentezi, depolanması ve etki mekanizmaları ile ilgili olarak yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Malabsorpsiyon Sendromları",
+   "n_soru": 7,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.29,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "mekanizma",
+     "pay": 0.29,
+     "gerekce": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.286,
+     "dogrudan": 0.286,
+     "en_tipik": 0.143,
+     "vaka": 0.143,
+     "yanlis_bul": 0.143
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.429,
+     "L2_anlama_iliski": 0.429,
+     "L3_uygulama": 0.143
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.714,
+     "bilesik_yer_degistirmeli": 0.286
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Malabsorpsiyonu olan bir olguda gece körlüğü gelişiminin en önemli etiyopatogenezi nedir?",
+    "Kronik ishal, demir eksikliği anemisi ve kilo kaybı ile başvuran bir erişkinde çölyak hastalığı ön tanısıyla taranması gereken, en yüksek duyarlılık ve özgüllüğe sahip ilk basamak ",
+    "İnce bağırsak mukozal hasarı veya ekzokrin pankreas yetmezliği sonucu yaygın malabsorbsiyon sendromu gelişen bir hastada aşağıdakilerden hangisinin görülmesi beklenmez?"
+   ]
+  },
+  {
+   "konu": "Ülser Gastrit",
+   "n_soru": 6,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.33,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.33,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.17,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "en_tipik": 0.167,
+     "dogru_ifade": 0.167,
+     "onculu": 0.167
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.667,
+     "L2_anlama_iliski": 0.333
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 3.2
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.33,
+    "ort_benzerlik": 0.82
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Ağır yanıklar sonrası oluşan gastrik ve duodenal ülseroeroziv lezyonlara ne ad verilir?",
+    "Peptik ülser hastalığının en sık komplikasyonu aşağıdakilerden hangisidir?",
+    "Aşağıdakilerden hangisi AMAG (otoimmün metaplastik atrofik gastrit) için doğrudur?"
+   ]
+  },
+  {
+   "konu": "Hiperlipidemiler",
+   "n_soru": 5,
+   "yillar": [
+    2018,
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.4,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "etiyoloji_risk",
+     "pay": 0.2,
+     "gerekce": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "onculu": 0.4,
+     "olumsuz": 0.2,
+     "dogrudan": 0.2,
+     "yanlis_bul": 0.2
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.4
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "bilesik_yer_degistirmeli": 0.8,
+     "ayni_ailede_komsu_kavram": 0.4,
+     "ayni_turden_ayri_kavram": 0.2
+    },
+    "sik_kelime_ort": 6.3
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Obezite ve sigara HDL'yi yükseltir",
+     "ornek_kok": "Aşağıdaki ifadelerden hangisi lipit metabolizması, kardiyovasküler risk faktörleri ve yaşam tarzı ilişkisi açısından YANLIŞTIR?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "dogrudan"
+     ],
+     "tur": "etiyoloji_risk"
+    },
+    {
+     "kavram": "I, II, III ve IV",
+     "ornek_kok": "Ailesel hiperlipidemilerde Fredrickson sınıflandırması ile ilgili aşağıdaki ifadeler veriliyor:\nI. Tip 1'de lipoprotein lipaz ya da Apo C-II eksik olduğundan şilomikronlar uzaklaştırılamaz; serum trig",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2022
+     ],
+     "kaliplar": [
+      "onculu"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki ifadelerden hangisi lipit metabolizması, kardiyovasküler risk faktörleri ve yaşam tarzı ilişkisi açısından YANLIŞTIR?",
+    "Lipid metabolizması ile ilgili aşağıdakilerden hangisi doğru değildir?",
+    "Lipit metabolizması ve lipoproteinlerle ilgili aşağıdaki ifadelerden hangisi yanlıştır?"
+   ]
+  },
+  {
+   "konu": "Alt GİS Kanamaları",
+   "n_soru": 5,
+   "yillar": [
+    2018,
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.4,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.4,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.2,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.4,
+     "tanim": 0.2,
+     "vaka": 0.2,
+     "en_tipik": 0.2
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.6,
+     "L1_hatirlama": 0.2,
+     "L3_uygulama": 0.2
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 5.8
+   },
+   "zorluk": "orta-zor, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.2,
+    "ort_benzerlik": 0.64
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Hematokezya saptanması",
+     "ornek_kok": "Duru İç Hastalıkları Alt gis kanamalar Aşağıdakilerden hangisi alt gis kanama lehinedir?",
+     "kez": 4,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "tanim"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Hepatik fleksura 'watershed' bölgesi olup iskemiye daha duyarlıdır.",
+     "ornek_kok": "İskemik bağırsak hastalığı için aşağıdakilerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2018
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "siniflama_ad"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Duru İç Hastalıkları Alt gis kanamalar Aşağıdakilerden hangisi alt gis kanama lehinedir?",
+    "75 yaşında kronik böbrek yetmezliği olan hastada tekrarlayan ağrısız hematokezya atakları görülüyor. Kolonoskopide çekum çevresinde yassı, sızıntı tarzında kanayan kırmızı ektatik ",
+    "Treitz ligamanının distalinden kaynaklanan akut masif alt gastrointestinal sistem kanamalarının 60 yaş üstü erişkin popülasyonda en sık görülen nedeni aşağıdakilerden hangisidir?"
+   ]
+  },
+  {
+   "konu": "Tiroid Bezi Hastalıkları",
+   "n_soru": 5,
+   "yillar": [
+    2018,
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.8,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "bilgi_turu": "ilac_yan_etki",
+     "pay": 0.2,
+     "gerekce": "Hasta güvenliği: yan etki/kontrendikasyon bilmemek zarar demektir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "olumsuz": 0.4,
+     "yanlis_bul": 0.2,
+     "vaka": 0.2,
+     "dogrudan": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.2,
+     "L3_uygulama": 0.2
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.8,
+     "bilesik_yer_degistirmeli": 0.2
+    },
+    "sik_kelime_ort": 5.4
+   },
+   "zorluk": "kolay-orta",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdaki klinik bulgulardan hangisi hipotiroidi bulgusu değildir?",
+    "Neonatal tiroid yetmezliği (konjenital hipotiroidi) ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "35 yaşında kadın hasta polikliniğe şiddetli boyun ağrısı ile başvuruyor. Yapılan fizik muayenesinde palpasyonla tiroid loju oldukça ağrılıdır. Laboratuvar bulgularında hafif düzeyd"
+   ]
+  },
+  {
+   "konu": "Üst GİS Kanamaları",
+   "n_soru": 4,
+   "yillar": [
+    2020,
+    2022
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tani_ayirici",
+     "pay": 0.75,
+     "gerekce": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 0.25,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "en_tipik": 0.5,
+     "dogrudan": 0.5
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.75,
+     "L1_hatirlama": 0.25
+    },
+    "kurulus": "Kısa vaka ya da 'en tipik/ayırt edici' kökü; çeldirici benzer tablonun öteki hastalığıdır."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.75,
+     "ayni_ailede_komsu_kavram": 0.25
+    },
+    "sik_kelime_ort": 3.9
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi ciddi üst gastrointestinal sistem (GİS) kanamasının en sık saptanan sebebidir?",
+    "Üst gastrointestinal sistem kanaması nedeniyle acil endoskopiye alınan bir hastada mide korpusunda saptanan peptik ülser lezyonunun tabanında aktif kanama izlenmemekle birlikte lez",
+    "Hematemez veya melena tablosu ile acil servise getirilen, taşikardik ve hipotansif gastrointestinal sistem kanamalı bir hastada yapılması gereken ilk ve en öncelikli tıbbi yaklaşım"
+   ]
+  },
+  {
+   "konu": "Kolonun Prekanseröz Lezyonları",
+   "n_soru": 3,
+   "yillar": [
+    2020
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "siniflama_ad",
+     "pay": 1.0,
+     "gerekce": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "yanlis_bul": 0.667,
+     "dogrudan": 0.333
+    },
+    "bilissel_duzey": {
+     "L2_anlama_iliski": 0.667,
+     "L1_hatirlama": 0.333
+    },
+    "kurulus": "Tanım ya da ölçütten ada, adtan özelliğe; çeldirici komşu tip/evredir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 1.0
+    },
+    "sik_kelime_ort": 5.3
+   },
+   "zorluk": "orta-zor",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [],
+   "tekrar_eden_kavram_sayisi": 0,
+   "tipik_kok_ornekleri": [
+    "Familyal adenomatöz polipozis (FAP) sendromu için aşağıdakilerden hangisi yanlıştır?",
+    "Hangisi Familial adenomatöz poliposis sendromu için yanlıştır?",
+    "Rektosigmoid bölgede yerleşen, geniş tabanlı ve ileri derecede villöz komponent içeren adenomlarda (>4 cm) lümene aşırı miktarda mukus, su ve potasyum salgılanması sonucu kabızlık "
+   ]
+  }
+ ]
+}

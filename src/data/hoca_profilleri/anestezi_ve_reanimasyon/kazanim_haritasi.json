@@ -1,0 +1,145 @@
+{
+ "ders": "Anestezi ve Reanimasyon",
+ "konular": [
+  {
+   "konu": "CPR",
+   "n_soru": 10,
+   "yillar": [
+    2020,
+    2022,
+    2025
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.6,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "olumsuz": 0.3,
+     "yanlis_bul": 0.2
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.6,
+     "L2_anlama_iliski": 0.4
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_turden_ayri_kavram": 0.4,
+     "bilesik_yer_degistirmeli": 0.3,
+     "ayni_ailede_komsu_kavram": 0.2,
+     "mutlak_ifade_tuzagi": 0.1
+    },
+    "sik_kelime_ort": 4.9
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.0,
+    "ort_benzerlik": null
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Atriyal fibrilasyon (AF)",
+     "ornek_kok": "Aşağıdakilerden hangisi kardiyak arrest ritmi değildir?",
+     "kez": 3,
+     "farkli_kok": 3,
+     "yillar": [
+      2020,
+      2022
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 1,
+   "tipik_kok_ornekleri": [
+    "Aşağıdakilerden hangisi kardiyopulmoner arrest ritmi değildir?",
+    "Kardiyak arrest gelişen ve kardiyopulmoner resüsitasyon uygulanan bir hastada defibrilatör bağlandığında acil elektriksel defibrilasyon uygulanması gereken şoklanabilir kardiyak ri",
+    "Aşağıdakilerden hangisi kardiyopulmoner arrestin geri döndürülebilir nedenleri arasında sıralanmaz?"
+   ]
+  },
+  {
+   "konu": "Ağrı Yolları ve Mekanizmaları",
+   "n_soru": 8,
+   "yillar": [
+    2020,
+    2022,
+    2023
+   ],
+   "guven": "dusuk",
+   "neden_sorulur": [
+    {
+     "bilgi_turu": "tanim_kavram",
+     "pay": 0.88,
+     "gerekce": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    }
+   ],
+   "nasil_sorulur": {
+    "kok_kalibi": {
+     "dogrudan": 0.5,
+     "olumsuz": 0.375,
+     "yanlis_bul": 0.125
+    },
+    "bilissel_duzey": {
+     "L1_hatirlama": 0.875,
+     "L2_anlama_iliski": 0.125
+    },
+    "kurulus": "Tanım → terim ya da terim → özellik; çeldirici komşu terimlerdir."
+   },
+   "hangi_bilgilerle": {
+    "celdirici": {
+     "ayni_ailede_komsu_kavram": 0.5,
+     "ayni_turden_ayri_kavram": 0.5
+    },
+    "sik_kelime_ort": 2.5
+   },
+   "zorluk": "kolay-orta, tekrar eden",
+   "kaynaga_bagimlilik": {
+    "ozet_kanitli_oran": 0.38,
+    "ort_benzerlik": 0.72
+   },
+   "cekirdek_kavramlar": [
+    {
+     "kavram": "Remisyon",
+     "ornek_kok": "Aşağıdakilerden hangisi ağrı algılanması (nosisepsiyon) aşamalarından biri değildir?",
+     "kez": 2,
+     "farkli_kok": 2,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "olumsuz"
+     ],
+     "tur": "tanim_kavram"
+    },
+    {
+     "kavram": "Batma, sızlama, zonklama tarzındadır.",
+     "ornek_kok": "Visseral ağrı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "kez": 2,
+     "farkli_kok": 1,
+     "yillar": [
+      2020
+     ],
+     "kaliplar": [
+      "yanlis_bul"
+     ],
+     "tur": "tanim_kavram"
+    }
+   ],
+   "tekrar_eden_kavram_sayisi": 2,
+   "tipik_kok_ornekleri": [
+    "Visseral ağrı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "Ağrı fizyolojisinde periferik nosiseptörlerde zararlı termal, mekanik veya kimyasal bir enerjinin elektriksel potansiyele (aksiyon potansiyeli) dönüştürülmesi aşaması aşağıdakilerd",
+    "Aşağıdakilerden hangisi somatik ağrının özelliklerinden biri değildir?"
+   ]
+  }
+ ]
+}

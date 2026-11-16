@@ -1,0 +1,75 @@
+{
+ "ders": "FTR",
+ "n_soru": 132,
+ "guven": "yuksek",
+ "yillar": {
+  "2018": 2,
+  "2020": 69,
+  "2021": 11,
+  "2022": 8,
+  "2023": 5,
+  "2024": 1
+ },
+ "kok_kalibi": {
+  "dogrudan": 0.439,
+  "dogru_ifade": 0.144,
+  "onculu": 0.121,
+  "yanlis_bul": 0.091,
+  "vaka": 0.083,
+  "en_tipik": 0.061,
+  "olumsuz": 0.045,
+  "sayi": 0.008,
+  "eslestirme": 0.008
+ },
+ "bilgi_turu": {
+  "tanim_kavram": 0.417,
+  "tani_ayirici": 0.174,
+  "mekanizma": 0.152,
+  "siniflama_ad": 0.091,
+  "ilac_endikasyon": 0.076,
+  "onleme_halk_sagligi": 0.061,
+  "prognoz_komplikasyon": 0.015,
+  "ilac_yan_etki": 0.008,
+  "etiyoloji_risk": 0.008
+ },
+ "bilissel_duzey": {
+  "L1_hatirlama": 0.462,
+  "L2_anlama_iliski": 0.455,
+  "L3_uygulama": 0.083
+ },
+ "kok_kelime": {
+  "ort": 18.8,
+  "p25": 8,
+  "medyan": 12,
+  "p75": 26
+ },
+ "sik": {
+  "kelime_ort": 4.6,
+  "kelime_cv": 0.27,
+  "dogru_en_uzun_orani": 0.212,
+  "bilesik_sik_orani": 0.247,
+  "sayisal_sik_orani": 0.03,
+  "hepsi_hicbiri_orani": 0.045,
+  "mutlak_ifade_celdirici_orani": 0.008,
+  "dogru_sik_konumu": {
+   "A": 0.386,
+   "B": 0.174,
+   "C": 0.152,
+   "E": 0.144,
+   "D": 0.144
+  },
+  "celdirici_ortusme": 0.172
+ },
+ "celdirici_stratejisi": {
+  "ayni_turden_ayri_kavram": 0.598,
+  "bilesik_yer_degistirmeli": 0.25,
+  "ayni_ailede_komsu_kavram": 0.242,
+  "sayisal_yakin_deger": 0.03,
+  "mutlak_ifade_tuzagi": 0.008
+ },
+ "tekrar": {
+  "birden_cok_kez_cikan_soru_orani": 0.121,
+  "ort_farkli_yil": 1.01
+ },
+ "donem_kaymasi_2023_sonrasi": {}
+}
