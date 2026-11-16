@@ -4,8 +4,7 @@ import { WifiOff, Wifi, CloudUpload, RefreshCw, AlertTriangle } from 'lucide-rea
 import { useNetState, type NetState } from '../../services/net';
 import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import './system.css';
-import { PendingOpsSheet } from './PendingOpsSheet';
-import { HataDenetciSheet } from './HataDenetciSheet';
+import { guvenliLazy } from '../../utils/guvenliLazy';
 import { acikSorunlar, denetciDinle, installHataDenetci } from '../../services/hataDenetci';
 
 /** Şeritte gösterilecek denetçi sorunları: ağ durumu şeridin kendisi gösterir, bilgi düzeyi şeridi açmaz */
@@ -96,6 +95,21 @@ const NetworkBanner: React.FC = () => {
   );
 };
 
+// Gönderim kuyruğu ve sorun denetçisi sayfaları yalnız olayla açılır (medsoru:pending / medsoru:denetci): açılış
+// zincirine girmesinler (2026-11-17). İlk olayda parça iner ve açık başlar; sonraki olayları kendi dinleyicisi alır.
+const PendingOpsTembel = guvenliLazy(() => import('./PendingOpsSheet').then((m) => ({ default: m.PendingOpsSheet })));
+const HataDenetciTembel = guvenliLazy(() => import('./HataDenetciSheet').then((m) => ({ default: m.HataDenetciSheet })));
+function OlaydaYukle({ olay, children }: { olay: string; children: React.ReactNode }) {
+  const [yuklendi, setYuklendi] = useState(false);
+  useEffect(() => {
+    if (yuklendi) return;
+    const on = () => setYuklendi(true);
+    window.addEventListener(olay, on);
+    return () => window.removeEventListener(olay, on);
+  }, [olay, yuklendi]);
+  return yuklendi ? <React.Suspense fallback={null}>{children}</React.Suspense> : null;
+}
+
 let mounted = false;
 export function installNetworkBanner() {
   if (mounted || typeof document === 'undefined') return;
@@ -107,8 +121,8 @@ export function installNetworkBanner() {
   createRoot(host).render(
     <>
       <NetworkBanner />
-      <PendingOpsSheet />
-      <HataDenetciSheet />
+      <OlaydaYukle olay="medsoru:pending"><PendingOpsTembel acikBasla /></OlaydaYukle>
+      <OlaydaYukle olay="medsoru:denetci"><HataDenetciTembel acikBasla /></OlaydaYukle>
     </>
   );
 }

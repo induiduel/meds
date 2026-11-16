@@ -60,8 +60,8 @@ const Satir: React.FC<{ s: Sorun; busy: boolean; onOnar: () => void }> = ({ s, b
   );
 };
 
-export const HataDenetciSheet: React.FC = () => {
-  const [open, setOpen] = useState(false);
+export const HataDenetciSheet: React.FC<{ acikBasla?: boolean }> = ({ acikBasla = false }) => {
+  const [open, setOpen] = useState(acikBasla);
   const [, tick] = useState(0);
   const [busy, setBusy] = useState<string>('');
 
@@ -69,8 +69,10 @@ export const HataDenetciSheet: React.FC = () => {
   useEffect(() => {
     const on = () => { setOpen(true); void denetle(false); };
     window.addEventListener('medsoru:denetci', on);
+    // Tembel yüklendiyse ilk olay bu dinleyiciden önce geldi: denetimi hemen başlat
+    if (acikBasla) void denetle(false);
     return () => window.removeEventListener('medsoru:denetci', on);
-  }, []);
+  }, [acikBasla]);
 
   const calistir = async (id: string, fn: () => Promise<void>) => {
     setBusy(id);

@@ -11,6 +11,25 @@ import type { Plugin } from 'vite';
 
 export const safeDeckFile = (id: string) => id.replace(/[^a-zA-Z0-9_-]+/g, '_');
 
+/*
+ * Parçalı deste kaynağı (VERI_MODELI Faz 3 adım 3; biçim `scripts/deste_deposu.py`). Yalnız MEDS_DESTE_PARCALI=1 +
+ * MEDS_DESTE_PARCA_DIZIN verilmiş ve `_sira.json` varsa: desteler parçalardan (sıra dosyasındaki sırayla) okunur,
+ * tazelik damgası `_sira.json`'dur (her parça yazımında en son yeniden yazılır). Aksi hâlde monolit — eski yol birebir.
+ */
+function parcaliKaynak(): { damga: string; oku: () => any[] } | null {
+  const dz = process.env.MEDS_DESTE_PARCALI === '1' && process.env.MEDS_DESTE_PARCA_DIZIN ? path.resolve(process.env.MEDS_DESTE_PARCA_DIZIN) : null;
+  const sira = dz ? path.join(dz, '_sira.json') : '';
+  if (!dz || !fs.existsSync(sira)) return null;
+  return {
+    damga: sira,
+    oku: () => {
+      const s = JSON.parse(fs.readFileSync(sira, 'utf8'));
+      if (s?.bicim !== 1) throw new Error(`desteler/_sira.json biçimi ${s?.bicim} desteklenmiyor`);
+      return (s.desteler || []).map((g: any) => JSON.parse(fs.readFileSync(path.join(dz, g.dosya), 'utf8')));
+    },
+  };
+}
+
 const deckGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
 
 export function splitLearningDecks(root: string): Plugin {
@@ -23,6 +42,8 @@ export function splitLearningDecks(root: string): Plugin {
   const kzLiteDir = path.join(kzDir, 'lite');
   const kzQuestionsDir = path.join(kzDir, 'questions');
 
+  /** Kazanım lite biçim sürümü: 2 = ekranın kullanmadığı anlatım alanları budandı (kurul başına parça ≤ ~0,4 MB). */
+  const LITE_SURUM = 2;
   const splitKazanimlar = () => {
     if (!fs.existsSync(kzDir)) return;
     fs.mkdirSync(kzLiteDir, { recursive: true });
@@ -39,7 +60,9 @@ export function splitLearningDecks(root: string): Plugin {
       const srcMtime = fs.statSync(kFile).mtimeMs;
       if (fs.existsSync(liteFile) && fs.existsSync(qFile)) {
         try {
-          if (fs.statSync(liteFile).mtimeMs >= srcMtime && fs.statSync(qFile).mtimeMs >= srcMtime) continue;
+          // LITE_SURUM: lite biçimi değişince (alan budaması) eski dosya mtime'a bakılmadan yeniden üretilir
+          const guncel = fs.readFileSync(liteFile, 'utf8').includes(`"liteSurum":${LITE_SURUM}`);
+          if (guncel && fs.statSync(liteFile).mtimeMs >= srcMtime && fs.statSync(qFile).mtimeMs >= srcMtime) continue;
         } catch {}
       }
       try {
@@ -48,6 +71,7 @@ export function splitLearningDecks(root: string): Plugin {
         const dizin: Record<string, string> = {};
         const lite = {
           ...raw,
+          liteSurum: LITE_SURUM,
           dersler: (raw.dersler || []).map((d: any, di: number) => ({
             ...d,
             konular: (d.konular || []).map((konu: any, ki: number) => ({
@@ -63,8 +87,15 @@ export function splitLearningDecks(root: string): Plugin {
                     ...(oList.length > 0 ? { ornekSorular: oList } : {}),
                   };
                 }
+                // Ekran (KazanimlarView) ve saglik/baglantilari_kur.py yalnız aşağıdaki alanları okur. Anlatım alanları
+                // (anlatim_ses, ozet_konu_anlatimi, bilinmesi_gerekenler, kisa_anlatim[_ses]) K1 lite'ın ≈%80'iydi
+                // (3,1 MB); ekranda gösterilmediği için lite'a taşınmaz → kurul parçası ≤ ~0,4 MB.
                 return {
-                  ...kz,
+                  id: kz.id,
+                  metin: kz.metin,
+                  slaytlar: Array.isArray(kz.slaytlar) ? kz.slaytlar : [],
+                  sozlukTerimleri: Array.isArray(kz.sozlukTerimleri) ? kz.sozlukTerimleri : [],
+                  ozetler: Array.isArray(kz.ozetler) ? kz.ozetler : [],
                   totalCikmisCount: cList.length,
                   totalOrnekCount: kz.totalOrnekCount ?? oList.length,
                   firstOrnekKazanimNo: oList[0]?.kazanimNo,
@@ -88,9 +119,11 @@ export function splitLearningDecks(root: string): Plugin {
 
   const run = () => {
     splitKazanimlar();
-    if (!fs.existsSync(src)) return;
-    const srcTime = fs.statSync(src).mtimeMs;
-    const decks: any[] = JSON.parse(fs.readFileSync(src, 'utf8'));
+    const parcali = parcaliKaynak();
+    const damga = parcali ? parcali.damga : src;
+    if (!fs.existsSync(damga)) return;
+    const srcTime = fs.statSync(damga).mtimeMs;
+    const decks: any[] = parcali ? parcali.oku() : JSON.parse(fs.readFileSync(src, 'utf8'));
     const valid = decks.filter((d) => d && d.id && Array.isArray(d.slides) && d.slides.length > 0);
     // Katalog kaynaktan yeniyse VE parça sayısı tutuyorsa bölmeyi atla; aksi halde yeniden üret
     // (yalnız mtime'a bakmak, parçalar silinmiş/eksikken tüm destelerin açılmamasına yol açıyordu).
@@ -188,8 +221,9 @@ export function splitLearningDecks(root: string): Plugin {
     name: 'medsor-split-learning-decks',
     config() { run(); },
     configureServer(server) {
-      server.watcher.add(src);
-      server.watcher.on('change', (file) => { if (path.resolve(file) === src) run(); });
+      const izle = parcaliKaynak()?.damga || src;
+      server.watcher.add(izle);
+      server.watcher.on('change', (file) => { if (path.resolve(file) === izle) run(); });
     },
   };
 }

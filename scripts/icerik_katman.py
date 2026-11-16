@@ -86,6 +86,47 @@ def oku(p):
     with open(p, encoding="utf-8") as fh: return json.load(fh)
 
 
+# ---- Öğren desteleri parçalı arka uç (VERI_MODELI Faz 3 adım 2; contentOverlay.ts `kaynakSaglayiciKaydet` eşi) ----
+# Fark biçimi DEĞİŞMEZ (deste farkı kayıt düzeyli, anahtar = deste kimliği). Bayrak açıkken yalnız taban/hedef parçalardır:
+#   parçalı kip      → taban parçalar (monolit yoksa da çalışır); uygula parçalara yazar (+ çift yazımda monolit türetilir)
+#   yalnız çift yazım → taban monolit; uygula monolite yazar, ardından parçalara aynalanır
+# Bayrak kapalıyken bu yardımcılar hiçbir şey değiştirmez.
+DESTE = "interactive_learning_decks.json"
+
+
+def _dd():
+    sys.path.insert(0, str(KOK / "scripts"))
+    import deste_deposu
+    return deste_deposu
+
+
+def parcali_deste(p) -> bool:
+    if Path(p).name != DESTE: return False
+    dd = _dd()
+    return dd._parcali() and (dd.parca_dizini() / dd.SIRA).exists()
+
+
+def kaynak_var(p) -> bool:
+    return parcali_deste(p) or Path(p).exists()
+
+
+def kaynak_oku(p):
+    if parcali_deste(p): return _dd().hepsi()  # parça birleşimi
+    return oku(p)
+
+
+def kaynak_yaz(p, veri, girinti):
+    """uygula hedefi: parçalı kipte parçalar (deste_deposu kuralıyla), değilse dosya; çift yazımda öteki taraf aynalanır."""
+    dd = _dd() if Path(p).name == DESTE else None
+    if dd and parcali_deste(p):
+        dd.yaz_hepsi(veri)  # parçalı kipte parçalara + (çift yazımda) türetilmiş monolit
+        return
+    yaz(p, veri, girinti)
+    if dd and dd._cift() and Path(p).resolve() == dd.YOL.resolve():
+        try: dd.parcali_yaz(veri, dd.parca_dizini())
+        except Exception as e: dd._aynalama_hatasi("katman farkı → parçalar", e)
+
+
 def yaz(p, veri, girinti=1):
     p = Path(p); p.parent.mkdir(parents=True, exist_ok=True)
     tmp = p.with_name(p.name + f".{os.getpid()}.tmp")
@@ -118,7 +159,7 @@ def cmd_goc(a):
     shutil.copytree(icerik, yedek, ignore=shutil.ignore_patterns("_birlesik"))
     print(f"yedek: {yedek}")
     for rel in liste:
-        tam, src = oku(icerik / rel), (oku(kaynak / rel) if (kaynak / rel).exists() else None)
+        tam, src = oku(icerik / rel), (kaynak_oku(kaynak / rel) if kaynak_var(kaynak / rel) else None)
         izli = list((ids.get(VARLIK.get(rel, ""), {}) or {}).keys()) or None
         if src is None:
             f = {"surum": 1, "bicim": "tam", "kayitlar": {}, "silinen": [], "taban": {}, "tam": tam}
@@ -158,7 +199,7 @@ def cmd_denetle(a):
             print(f"HATA: {rel}.fark.json okunamadı: {e}"); hata += 1; continue
         if f.get("bicim") == "tam":
             print(f"UYARI: {rel} bütün dosya olarak tutuluyor (kayıt kimliği yok)"); uyari += 1; continue
-        src = oku(kaynak / rel) if (kaynak / rel).exists() else None
+        src = kaynak_oku(kaynak / rel) if kaynak_var(kaynak / rel) else None
         if src is None:
             print(f"HATA: {rel} kaynakta yok"); hata += 1; continue
         kM = harita(src, f)
@@ -179,12 +220,14 @@ def cmd_denetle(a):
 def cmd_uygula(a):
     """Dağıtım geri çekme: farkı yerel src/data dosyasına uygular. Çıkış 0 uygulandı/zaten güncel, 3 çakışma."""
     f, hedef = oku(a.fark), Path(a.hedef)
+    if f["bicim"] == "tam" and parcali_deste(hedef):
+        print("HATA: deste farkı 'tam' biçiminde; parçalı hedefe kayıt düzeyinde uygulanamaz"); return 3
     if f["bicim"] == "tam":
         yeni = f["tam"]
         mevcut = oku(hedef) if hedef.exists() else None
         if js(mevcut) == js(yeni): print("  zaten güncel"); return 0
         yaz(hedef, yeni, girinti_bul(hedef) if hedef.exists() else 2); print("  bütün dosya yazıldı"); return 0
-    src = oku(hedef)
+    src = kaynak_oku(hedef)
     kM = harita(src, f)
     cakisma = []
     for i, x in (f.get("kayitlar") or {}).items():
@@ -197,7 +240,7 @@ def cmd_uygula(a):
         print(f"ÇAKIŞMA: hem panelde hem yerelde değişmiş kayıtlar: {cakisma[:10]}"); return 3
     yeni = uygula_fark(src, f)
     if js(yeni) == js(src): print("  zaten güncel"); return 0
-    yaz(hedef, yeni, girinti_bul(hedef))
+    kaynak_yaz(hedef, yeni, girinti_bul(hedef) if hedef.exists() else None)
     print(f"  uygulandı: {len(f.get('kayitlar') or {})} kayıt, {len(f.get('silinen') or [])} silme")
     return 0
 

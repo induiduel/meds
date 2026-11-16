@@ -78,14 +78,45 @@ Sıra: çift yazım (monolit + parça) → karşılaştırma kapısı 0 fark →
 - `desteDeposu.ts` parçalı OKUMA (aynı bayrak; katmanda deste farkı varsa KAPALI); yazım monolitte/katmanda.
 - Kapı D1: parça dizini işaretlerini (`MEDS_DESTE_PARCA_DIZIN`, `deste_parcali`, `desteler/_sira.json`) yalnız depo modülleri anar.
 
-**Kalan adımlar (sıralı; her birinin geçiş kapısı `python3 scripts/deste_bol.py dogrula --hedef <dizin>` 0 fark):**
-1. Çift yazım: depo yazımları monolite + parçalara birlikte (Python ve TS `desteleriYaz`); kapı her yazımdan sonra 0 fark.
-2. İçerik katmanı çok-dosya farkı: `contentOverlay.ts` `relOf/farkYol/farkUygula` + `icerik_katman.py` `VARLIK` deste başına
-   fark; Oracle'daki mevcut monolit farkı parçalara taşınır. Kapı: Oracle'da birleşim = katman-çözülmüş monolit.
-3. `splitLearningDecks` (`decks/items/`) parçadan okur (mtime yerine `_sira.json` sha1'leri); `items` çıktısı öncekiyle aynı.
-4. `content-overlay-sync.sh` + `dagit.sh` parça dizinini eşitler; Oracle'da `dogrula` 0 fark.
-5. Varsayılanı çevir (bayrak kalkar, parçalı okuma/yazma tek yol); bir dağıtım süresince monolit türetilmiş yazılır.
-6. Monolit `veri_bakim.py arsivle` ile arşive; D1 monolit adını anan her kodu HATA sayar.
+**Yapıldı — geçiş zinciri (2026-11-17, varsayılan YİNE DEĞİŞMEDİ; hepsi bayrakla açılır):**
+1. ✅ Çift yazım `MEDS_DESTE_CIFT_YAZ=1` (+ `MEDS_DESTE_PARCA_DIZIN`). Python: monolit asılken her `yaz_hepsi/duzenle/guncelle/sil`
+   (doğrudan `yaz_hepsi` çağıran üretim betikleri dahil) monolitten SONRA `parcali_yaz` ile aynalanır; `PARCALI=1` + çift
+   yazımda parçalar asıl, monolit birleşimden türetilir. Aynalama hatası asıl yazımı geri almaz → `gunluk.py` HATA
+   (`deste_bol dogrula` uyarısı). Sunucu src/data'ya yazmaz (H580): `desteleriYaz` katmana yazar, ~3 sn sonra öteki taban +
+   fark = yazılan liste denetlenir, ayrışma `veriOlayi('hata','deste-cift-yaz')`. Kanıt `scripts/sinama_deste_parcali.py`.
+2. ✅ Katman farkı: **yeni biçim YOK.** Deste farkı zaten kayıt düzeyli (`bicim:'dizi'`, `anahtar:'id'`) → arka uçtan
+   bağımsız. `contentOverlay.ts` `kaynakSaglayiciKaydet` ile yalnız TABAN değişir (parçalı kipte parça birleşimi;
+   `donustur` + `resolveContent`); `desteDeposu.ts` parçalı kipte sağlayıcıyı kurar, katman farkı varken birleşik dosya
+   parçalar + farktan üretilir. Oracle'daki mevcut `interactive_learning_decks.json.fark.json` olduğu gibi okunur; H559 freni
+   aynen (prova: 30 eksik deste → karantina, silme sayılmadı). `icerik_katman.py` `uygula/denetle/goc` aynı kural
+   (parçalı kipte taban/hedef parçalar, çift yazımda öteki taraf aynalanır).
+3. ✅ `splitLearningDecks` `PARCALI=1` iken parçalardan okur, tazelik `_sira.json` mtime'ı. Kanıt: eski (HEAD) eklenti, yeni
+   eklenti bayraksız ve bayraklı (parçadan) çıktı → `decks/` 188 dosya karması üçünde ve gerçek `src/data/decks` ile aynı.
+4. ✅ `content-overlay-sync.sh` + `dagit.sh`: yalnız `MEDS_DESTE_PARCALI/CIFT_YAZ=1` iken (kapalıyken hiçbir süreç
+   çalışmaz) `deste_bol.py durum` → dağıtım öncesi/sonrası (Oracle) `dogrula`; parça dizini `src/data/` altında olmalı
+   (rsync zaten taşır). `bash -n` geçti; çalıştırılmadı.
+5. ✅ Uçtan uca kuru prova (sunucu başlatılmadan, `meds_temp/deste_parcali/e2e/e2e.mts`): parçalı `desteleriOku` = monolit,
+   `desteOku` tek dosya (≈10–40 ms), `desteleriYaz` (1 değişen + 1 yeni + 1 silinen) → fark anahtar=id; parçalar + fark =
+   monolit + fark = yazılan liste; `icerik_katman.py uygula` farkı parçalara + türetilmiş monolite uygular, `_sira.json`
+   doğru, `deste_bol dogrula` 0 fark.
+
+**Varsayılanı çevirmek için kalan komutlar (KULLANICI ONAYIYLA, sırayla; her adımın kapısı `dogrula` 0 fark):**
+```bash
+python3 scripts/deste_bol.py bol --kalici --hedef src/data/desteler        # ilk bölme (git'e eklenir, yol listesiyle)
+python3 scripts/deste_bol.py dogrula --hedef src/data/desteler              # 0 fark
+# yerel .env + Oracle .env (konteyner):  MEDS_DESTE_CIFT_YAZ=1  MEDS_DESTE_PARCA_DIZIN=src/data/desteler
+systemctl --user restart meds-web                                            # yerel; sonra bir süre çift yazımla çalış
+# commit + push (onem+1) → MEDS_DESTE_CIFT_YAZ=1 MEDS_DESTE_PARCA_DIZIN=src/data/desteler bash deploy/oracle/dagit.sh
+ssh medsor-oracle 'cd medsor/meds && python3 scripts/icerik_katman.py denetle'   # 0 HATA
+# geçiş: iki .env'e MEDS_DESTE_PARCALI=1 ekle (parçalar asıl, monolit türetilir) → yeniden başlat + dağıt + dogrula
+# bir dağıtım süresince sorunsuzsa: MEDS_DESTE_CIFT_YAZ kalkar, monolit `veri_bakim.py arsivle` ile arşive,
+# D1 monolit adını anan kodu HATA sayar (adım 6 eski plan); bayrak kodu tek yola indirgenir.
+```
+**Riskler:** (a) `src/data/desteler/` hiçbir ön yüz `import.meta.glob` kapsamında değil (2026-11-17 denetlendi; yeni glob eklenirse
+yeniden bak). Bayraktaki göreli yol sürecin çalışma dizinine göre çözülür (meds-web/konteyner `meds/` kökünde çalışmalı). (b) Çift yazımda girintili `yaz_hepsi(girinti=…)` monolitle bayt eşitliğini
+bozar (günlüğe UYARI). (c) Parçalı kipte Oracle'da `_birlesik` her `_sira.json` değişiminde yeniden üretilir (85 MB yazım).
+(d) Python ve sunucu aynı parça dizinine aynı anda yazmaz (sunucu yalnız katmana yazar), ama iki Python yazıcısı kilit paylaşır
+(`<monolit>.lock`); `DESTE_DOSYASI` farklıysa kilit ayrışır.
 
 **Faz 4 — RAG parça dosyası JSONL** (4 okuyucu: `localRagEngine` oku/yaz, `rag_vektor_hatti.py`, `queryIntel/build.ts`,
 `queryIntel/server.ts`); kararsız parça kimlikleri (`chunk-sum` sıra, `chunk-gloss` içerik özeti) kaynak kimliğine bağlanır.

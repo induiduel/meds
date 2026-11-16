@@ -56,8 +56,8 @@ function status(a: Row, now: number, net: string): { label: string; tone: string
   return wait > 0 ? { label: `${a.attempts}. deneme olmadı · ${wait} sn`, tone: 'is-bad' } : { label: `${a.attempts}. deneme olmadı · sırada`, tone: 'is-bad' };
 }
 
-export const PendingOpsSheet: React.FC = () => {
-  const [open, setOpen] = useState(false);
+export const PendingOpsSheet: React.FC<{ acikBasla?: boolean }> = ({ acikBasla = false }) => {
+  const [open, setOpen] = useState(acikBasla);
   const [rows, setRows] = useState<Row[]>([]);
   const [leaving, setLeaving] = useState<Set<number>>(new Set());
   const [undo, setUndo] = useState<{ items: Row[]; at: number } | null>(null);
@@ -77,8 +77,10 @@ export const PendingOpsSheet: React.FC = () => {
       refresh();
     };
     window.addEventListener('medsoru:pending', on);
+    // Tembel yüklendiyse ilk olay bu dinleyiciden önce geldi: kuyruğu hemen oku
+    if (acikBasla) refresh();
     return () => window.removeEventListener('medsoru:pending', on);
-  }, [refresh]);
+  }, [refresh, acikBasla]);
 
   // Açıkken kuyruk değişince (gönderildi / yeni eklendi) ve saniyede bir (geri sayım) tazele
   useEffect(() => {

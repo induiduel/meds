@@ -1487,9 +1487,14 @@ def main() -> int:
 
     if not questions:
         try:
-            req = urllib.request.Request(f"{V1_CATALOG_URL}/past-exams", headers=HEADERS_READ)
-            with urllib.request.urlopen(req, timeout=15) as r:
-                data = json.loads(r.read().decode("utf-8"))
+            # gzip iste (ham ~46 MB yerine ~8 MB); sunucu desteklemezse ham gelir
+            req = urllib.request.Request(f"{V1_CATALOG_URL}/past-exams", headers={**HEADERS_READ, "Accept-Encoding": "gzip"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                govde = r.read()
+                if r.headers.get("Content-Encoding", "").lower() == "gzip":
+                    import gzip as _gzip
+                    govde = _gzip.decompress(govde)
+                data = json.loads(govde.decode("utf-8"))
                 questions = data.get("questions", [])
                 logging.info(f"/v1/past-exams üzerinden {len(questions)} soru çekildi.")
         except Exception as e:

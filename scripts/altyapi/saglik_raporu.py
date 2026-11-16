@@ -384,7 +384,29 @@ def b_gunluk(a) -> None:
     k, o = kos([sys.executable, "scripts/gunluk.py", "ozet", "--gun", str(a.gun)])
     for s in o.strip().splitlines()[:9]:
         yaz("  " + s)
-    hata = sum(int(s.split()[-1]) for s in o.splitlines()[1:] if s.split() and s.split()[-1].isdigit())
+    # Sınama kayıtları (geçici dizine yazan denemeler, kaynak=deneme/sinama) gerçek hata sayılmaz
+    import datetime as _dt
+    sinir = (_dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(days=a.gun)).isoformat()
+    hata = 0
+    for f in sorted((MEDS / "data" / "gunluk").glob("*-*.jsonl")):
+        if f.name.startswith("vitals-"):
+            continue
+        try:
+            satirlar = f.read_text(encoding="utf-8").splitlines()[-5000:]
+        except OSError:
+            continue
+        for sat in satirlar:
+            try:
+                r = json.loads(sat)
+            except ValueError:
+                continue
+            if r.get("seviye") != "hata" or str(r.get("zaman", "")) < sinir:
+                continue
+            ek = r.get("ek") or {}
+            if r.get("kaynak") in ("deneme", "sinama") or ek.get("kaynak") == "sinama" \
+                    or str(ek.get("dosya", "")).startswith("/tmp/"):
+                continue
+            hata += 1
     J["gunluk_hata"] = hata
     if hata:
         dikkat.append(f"yerel günlükte {hata} hata ({a.gun} gün)")

@@ -1,4 +1,5 @@
 import { FastTextarea } from './ui/FastTextarea';
+import '../styles/sayfa/soru-ekle-sihirbaz.css';
 import { guvenliLazy } from '../utils/guvenliLazy';
 import { lockScroll, unlockScroll } from '../utils/scrollLock';
 import React, { useEffect, useMemo, useState } from 'react';

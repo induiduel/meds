@@ -25,6 +25,14 @@ Parçalı arka uç (VERI_MODELI Faz 3, iskele — varsayılan KAPALI):
     Kimlik → dosya adı: kimlik `[A-Za-z0-9][A-Za-z0-9._-]*` ise kendisi, değilse "~" + UTF-8 onaltılık; "~" ve "_"
     güvenli kümede baş harf olamadığından çakışmaz ve geri çevrilir (`dosya_adi` / `kimlik_of`).
     Bayrak yokken kod yolu öncekiyle birebir aynıdır (`_parcali()` False → eski dallar).
+
+Çift yazım (Faz 3 adım 1, varsayılan KAPALI): MEDS_DESTE_CIFT_YAZ=1 + MEDS_DESTE_PARCA_DIZIN.
+    · Yalnız çift yazım: okuma monolitten; her monolit yazımından SONRA aynı liste parçalara aynalanır
+      (`parcali_yaz`: yalnız baytı değişen dosyalar + `_sira.json`). Doğrudan `yaz_hepsi` çağıran betikler de kapsanır.
+    · Parçalı + çift yazım (geçiş dağıtımı): parçalar asıl; her parça yazımından sonra monolit parçaların birleşiminden
+      türetilir (bayt bayt aynı).
+    Aynalama başarısızsa asıl yazım GERİ ALINMAZ; günlüğe (`scripts/gunluk.py`, kaynak `deste_deposu`) HATA düşer ve
+    `deste_bol.py dogrula` uyarısı basılır — iki taraf ayrışmışsa geçiş kapısı onu yakalar.
 """
 from __future__ import annotations
 
@@ -73,6 +81,48 @@ def birlestir_bayt(parcalar: list) -> bytes:
 
 def _parcali() -> bool:
     return os.environ.get("MEDS_DESTE_PARCALI") == "1" and bool(os.environ.get("MEDS_DESTE_PARCA_DIZIN"))
+
+
+def _cift() -> bool:
+    return os.environ.get("MEDS_DESTE_CIFT_YAZ") == "1" and bool(os.environ.get("MEDS_DESTE_PARCA_DIZIN"))
+
+
+def _gunluk(seviye: str, mesaj: str, **ek) -> None:
+    try:
+        import gunluk  # scripts/ sys.path'te (bu modül oradan yüklenir)
+        gunluk.olay("deste_deposu", seviye, mesaj, **ek)
+    except Exception:  # günlük yoksa bile yazımı çökertme
+        pass
+
+
+def _aynalama_hatasi(yon: str, e: BaseException) -> None:
+    import sys
+    msg = f"çift yazım: {yon} aynalanamadı ({type(e).__name__}: {e})"
+    _gunluk("hata", msg, dizin=os.environ.get("MEDS_DESTE_PARCA_DIZIN"), monolit=str(YOL))
+    print(f"UYARI: {msg} — taraflar ayrışmış olabilir: python3 scripts/deste_bol.py dogrula --hedef <parça dizini>",
+          file=sys.stderr)
+
+
+def _parcaya_aynala(desteler: list, p: Path, girinti: int | None) -> None:
+    """Monolit asılken (yalnız çift yazım) yazılan listeyi parçalara yansıtır."""
+    if not _cift() or _parcali() or Path(p).resolve() != YOL.resolve():
+        return
+    try:
+        parcali_yaz(desteler, parca_dizini())
+        if girinti is not None:  # parçalar kanonik; girintili monolitle bayt eşitliği bozulur
+            _gunluk("uyari", "çift yazım: monolit girintili yazıldı, deste_bol dogrula bayt farkı gösterecek", girinti=girinti)
+    except Exception as e:
+        _aynalama_hatasi("monolit → parçalar", e)
+
+
+def _monolite_aynala() -> None:
+    """Parçalar asılken (parçalı + çift yazım) monoliti parçaların birleşiminden türetir."""
+    if not (_cift() and _parcali()):
+        return
+    try:
+        _atomik_bayt(YOL, birlestir_bayt(parca_baytlari(parca_dizini())))
+    except Exception as e:
+        _aynalama_hatasi("parçalar → monolit", e)
 
 
 def parca_dizini() -> Path:
@@ -179,6 +229,10 @@ def oku(kimlik: str, yol: Path | None = None) -> dict | None:
 # Varsayılan biçim mevcut dosyayla birebir: tek satır, json varsayılan ayraçları, sonda satır sonu yok.
 def yaz_hepsi(desteler: list, yol: Path | None = None, girinti: int | None = None) -> None:
     """Atomik yazım (aynı dizinde geçici dosya + os.replace). Kilit ÇAĞIRANIN sorumluluğunda değil: duzenle() kullan."""
+    if yol is None and _parcali():  # parçalı kipte doğrudan çağıran betikler de parçalara yazar
+        parcali_yaz(desteler, parca_dizini())
+        _monolite_aynala()
+        return
     p = Path(yol) if yol else YOL
     fd, gecici = tempfile.mkstemp(prefix=p.name + ".", suffix=".tmp", dir=p.parent)
     try:
@@ -191,6 +245,7 @@ def yaz_hepsi(desteler: list, yol: Path | None = None, girinti: int | None = Non
         with contextlib.suppress(FileNotFoundError):
             os.unlink(gecici)
         raise
+    _parcaya_aynala(desteler, p, girinti)  # monolitten SONRA (çift yazım kapalıysa hiçbir şey yapmaz)
 
 
 @contextlib.contextmanager
@@ -211,6 +266,7 @@ def duzenle(yol: Path | None = None, girinti: int | None = None):
         yield desteler
         if yol is None and _parcali():
             parcali_yaz(desteler, parca_dizini())  # parça biçimi sabit; girinti uygulanmaz
+            _monolite_aynala()
         else:
             yaz_hepsi(desteler, yol, girinti)
 
@@ -231,6 +287,7 @@ def guncelle(deste: dict, yol: Path | None = None) -> bool:
             else:
                 s[i] = g
             sira_yaz(dizin, s)
+            _monolite_aynala()
             return i is not None
     with duzenle(yol) as desteler:
         for i, d in enumerate(desteler):
@@ -254,6 +311,7 @@ def sil(kimlik: str, yol: Path | None = None) -> bool:
                 if g["id"] == kimlik:
                     with contextlib.suppress(FileNotFoundError):
                         (dizin / g["dosya"]).unlink()
+            _monolite_aynala()
             return True
     with duzenle(yol) as desteler:
         n = len(desteler)

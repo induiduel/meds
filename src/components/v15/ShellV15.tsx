@@ -40,7 +40,6 @@ import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import ArkaPlanGosterge from './ArkaPlanGosterge';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
-import { SearchPalette } from '../search/SearchPalette';
 import { Sheet } from '../ui/Sheet';
 import { AccountMenu } from '../shell/AccountMenu';
 import type { SideNavProps } from '../shell/SideNav';
@@ -62,6 +61,11 @@ import '../../styles/v15/shell.css';
 // Tıp Asistanı gizli (yalnız medsor_asistan_goster=1): kapalıyken paneli ve stilini hiç indirme. Panel sabit konumlu
 // bir düğme (as15-fab) çizdiği için tembel yükleme düzen kayması yapmaz; fallback boş.
 const AsistanPanelTembel = guvenliLazy(() => import('../asistan/AsistanPanel'));
+// Arama paleti yalnız ⌘K / arama düğmesiyle açılır: açılış zincirine girmesin (2026-11-17, ~25 ikon + arama zekâsı).
+const SearchPaletteTembel = guvenliLazy(() => import('../search/SearchPalette').then((m) => ({ default: m.SearchPalette })));
+const SearchPalette: React.FC<React.ComponentProps<typeof SearchPaletteTembel>> = (p) => (
+  <React.Suspense fallback={null}><SearchPaletteTembel {...p} /></React.Suspense>
+);
 const asistanGorunur = () => { try { return localStorage.getItem('medsor_asistan_goster') === '1'; } catch { return false; } };
 function AsistanPanel() {
   if (!asistanGorunur()) return null;

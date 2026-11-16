@@ -50,13 +50,32 @@ export function initContentOverlay(rootDir: string, dataDir: string) {
   try { for (const rel of tamKopyalar()) donustur(rel); } catch (e: any) { console.warn('[katman] açılış dönüşümü:', e?.message); }
 }
 
+/*
+ * Kaynak sağlayıcı (VERI_MODELI Faz 3 adım 2, 2026-11-17): bir türün "kaynağı" tek dosya yerine başka bir arka uçtan
+ * (Öğren desteleri: deste başına parça dizini) gelebilir. Karar: fark BİÇİMİ DEĞİŞMEZ — deste farkı zaten kayıt
+ * düzeyinde ve deste kimliği anahtarlı (`bicim:'dizi', anahtar:'id'`), yani hangi arka uçtan okunursa okunsun aynı
+ * listeye uygulanır. Yalnız farkın uygulandığı/çıkarıldığı TABAN sağlayıcıdan okunur (donustur + resolveContent).
+ * Sağlayıcı yoksa (varsayılan) davranış birebir eskisidir; Oracle'daki mevcut tek fark dosyası olduğu gibi okunur.
+ */
+export type KaynakSaglayici = { var: () => boolean; oku: () => any; mtime: () => number };
+const SAGLAYICI = new Map<string, KaynakSaglayici>();
+/** `file` (src/data altındaki mantıksal yol) için taban sağlayıcısı kaydeder; null kaldırır. */
+export function kaynakSaglayiciKaydet(file: string, s: KaynakSaglayici | null): void {
+  const rel = relOf(file);
+  if (!rel) return;
+  if (s) SAGLAYICI.set(rel, s); else SAGLAYICI.delete(rel);
+}
+const kaynakVar = (rel: string, file: string) => SAGLAYICI.get(rel)?.var() ?? fs.existsSync(file);
+const kaynakMtime = (rel: string, file: string) => SAGLAYICI.get(rel)?.mtime() ?? mtimeOf(file);
+const kaynakOku = (rel: string, file: string) => { const s = SAGLAYICI.get(rel); return s ? s.oku() : okuJson(file); };
+
 function relOf(file: string): string | null {
   if (!SRC) return null;
   const rel = path.relative(SRC, path.resolve(file));
   return rel && !rel.startsWith('..') && !path.isAbsolute(rel) ? rel : null;
 }
 
-type Fark = {
+export type Fark = {
   surum: 1;
   bicim: 'dizi' | 'nesne' | 'tam';
   anahtar?: string;
@@ -146,6 +165,12 @@ export function farkUygula(kaynak: any, f: Fark | null): any {
   return kaynak; // biçim uyuşmuyor: kaynak kazanır (fark denetimde uyarı verir)
 }
 
+/** Tür dosyasının (src/data mantıksal yolu) güncel katman farkı; yoksa null. Çift yazım tutarlılık denetimi için. */
+export function katmanFarki(file: string): Fark | null {
+  const rel = relOf(file);
+  return rel ? farkOku(rel) : null;
+}
+
 function farkOku(rel: string): Fark | null {
   try { return okuJson(farkYol(rel)); } catch { return null; }
 }
@@ -183,9 +208,9 @@ export function donustur(rel: string): boolean {
   const src = path.join(SRC, rel);
   let yeni: any;
   try { yeni = okuJson(tam); } catch { return false; } // yazım sürüyor ya da bozuk: dokunma
-  const kaynak = fs.existsSync(src) ? okuJson(src) : undefined;
+  const kaynak = kaynakVar(rel, src) ? kaynakOku(rel, src) : undefined;
   const eski = farkOku(rel);
-  const bayat = !!kaynak && mtimeOf(src) > mtimeOf(tam) + 1000;
+  const bayat = !!kaynak && kaynakMtime(rel, src) > mtimeOf(tam) + 1000;
 
   let f: Fark;
   const diziMi = Array.isArray(yeni) && (kaynak === undefined || Array.isArray(kaynak));
@@ -290,9 +315,9 @@ export function resolveContent(file: string): string {
   if (!fm) return file;
   const by = birlesikYol(rel);
   const bm = mtimeOf(by);
-  if (bm && bm >= fm && bm >= mtimeOf(file)) return by;
+  if (bm && bm >= fm && bm >= kaynakMtime(rel, file)) return by;
   try {
-    const kaynak = fs.existsSync(file) ? okuJson(file) : undefined;
+    const kaynak = kaynakVar(rel, file) ? kaynakOku(rel, file) : undefined;
     const veri = farkUygula(kaynak, farkOku(rel));
     if (veri === undefined) return file;
     const g = girinti(file);

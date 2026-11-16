@@ -4,6 +4,7 @@
  * son açılma zamanı burada `medsoru_learn_recent_v1` içinde tutulur.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import '../../styles/sayfa/ogren-merkez.css';
 import { ArrowRight, Check, FileQuestionMark, FileText, Lock, Play, Search, X } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { useDeckPdfIds, useDeckPdfMissing } from '../../services/deckPdfService';

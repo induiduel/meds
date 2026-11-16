@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, startTransition } from 'react';
+import '../../styles/sayfa/yazim-yardimci.css';
 import { CornerDownLeft, Sparkles, Wand2, ArrowRight, HelpCircle, Type } from 'lucide-react';
 import { ApiService } from '../../services/api';
 import { smartComposerService, AssistOption, AssistResult } from '../../services/smartComposerService';

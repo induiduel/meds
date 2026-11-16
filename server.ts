@@ -254,6 +254,8 @@ function cleanForPostgres<T>(data: T): T {
   if (Array.isArray(data)) {
     return data.map((item) => cleanForPostgres(item)) as unknown as T;
   }
+  // Sıkıştırılmış çıkmış geçmiş alanı (SikiJson): gerçek değeri temizlenir
+  if (data instanceof SikiJson) return cleanForPostgres(data.toJSON()) as unknown as T;
   if (typeof data === 'object') {
     const cleaned: Record<string, any> = {};
     for (const [k, v] of Object.entries(data as Record<string, any>)) {
@@ -2629,6 +2631,8 @@ let pastListCache: PastListCache | null = null;
 // Telemetri: gzip gövde boyutları (yalnız sayı; gövdeler cache.bodies'te)
 const pastGzBoyut = new Map<string, number>();
 let pastGzSahibi: PastListCache | null = null;
+// Ham (açılmış) gövde boyutu: gzip'siz istemciye Content-Length vermek için (gövde tutulmaz)
+const pastHamBoyut = new WeakMap<Buffer, number>();
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
   const key = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
@@ -2642,7 +2646,8 @@ function pastListGzip(cache: PastListCache, name: string, build: () => string): 
   let p = cache.bodies.get(name);
   if (!p) {
     const raw = build();
-    p = new Promise((resolve, reject) => zlib.gzip(raw, { level: 6 }, (err, gz) => (err ? reject(err) : resolve(gz))));
+    const hamBayt = Buffer.byteLength(raw);
+    p = new Promise((resolve, reject) => zlib.gzip(raw, { level: 6 }, (err, gz) => { if (err) return reject(err); pastHamBoyut.set(gz, hamBayt); resolve(gz); }));
     cache.bodies.set(name, p);
     if (pastGzSahibi !== cache) { pastGzSahibi = cache; pastGzBoyut.clear(); }
     p.then((gz) => { if (pastGzSahibi === cache && cache.bodies.get(name) === p) pastGzBoyut.set(name, gz.length); }).catch(() => {});
@@ -2669,7 +2674,15 @@ function sendPastListBody(req: express.Request, res: express.Response, cache: Pa
     if (/\bgzip\b/.test(String(req.headers['accept-encoding'] || ''))) {
       res.setHeader('Content-Encoding', 'gzip');
       res.end(gz);
-    } else zlib.gunzip(gz, (err, raw) => (err ? res.status(500).end() : res.end(raw)));
+    } else {
+      // Bellek (2026-11-17): ham gövde tek parça açılmaz (46 MB geçici Buffer); akış hâlinde açılıp yazılır, baytlar aynı
+      const hamBayt = pastHamBoyut.get(gz);
+      if (hamBayt != null) res.setHeader('Content-Length', String(hamBayt));
+      const ac = zlib.createGunzip();
+      ac.on('error', () => res.destroy());
+      ac.pipe(res);
+      ac.end(gz);
+    }
   }).catch((err) => res.status(500).json({ error: 'Çıkmış listesi hazırlanamadı: ' + err.message }));
 }
 
@@ -2683,10 +2696,41 @@ function syncPastMergeSiblings(list: any[], sourceId: string, editor: string, bo
   return changed;
 }
 
+// Bellek (2026-11-17): yalnız geçmiş/arşiv için tutulan büyük alanlar (denetim öncesi asıl, eski sürüm, Faz 14 öncesi;
+// ~16 MB JSON) yüklemede sıkıştırılmış ham JSON'a (deflateRaw) çevrilir. Anahtar yerinde kalır (sıra bozulmaz);
+// JSON.stringify/res.json toJSON() ile aynı değeri üretir → diske yazılan dosya bayt bayt aynı (ölçüm: yük→kayıt sha256 eşit).
+// Ölçüm (--expose-gc, 2026-11-17): 10.115 alan, yığın −24 MB, yığın dışı +7,7 MB → net −16 MB; bedel yüklemede +480 ms,
+// her kayıtta +170 ms (açma). Alanın İÇİNE bakan kod `instanceof SikiJson` ise `.toJSON()` ile okur (bkz. cleanForPostgres).
+const GECMIS_ALANLAR = ['checkSolveOriginal', 'eskiSurum', 'phase14Original'] as const;
+class SikiJson {
+  private readonly z: Buffer;
+  readonly hamBayt: number;
+  constructor(deger: unknown) {
+    const ham = JSON.stringify(deger);
+    this.hamBayt = ham.length;
+    // deflateRawSync çıktısı 16-64 KB'lık arka tamponu paylaşır; tam boyda kopyalanmazsa bellek artar
+    this.z = Buffer.from(Uint8Array.prototype.slice.call(zlib.deflateRawSync(ham)).buffer);
+  }
+  toJSON(): unknown { return JSON.parse(zlib.inflateRawSync(this.z).toString('utf8')); }
+  get bayt(): number { return this.z.length; }
+}
+let pastSikiBayt = 0, pastSikiAdet = 0, pastSikiHam = 0;
+function gecmisAlanlariSikistir(list: any[]) {
+  pastSikiBayt = 0; pastSikiAdet = 0; pastSikiHam = 0;
+  for (const q of list) {
+    if (!q || typeof q !== 'object') continue;
+    for (const k of GECMIS_ALANLAR) {
+      const v = q[k];
+      if (v && typeof v === 'object' && !(v instanceof SikiJson)) { const s = new SikiJson(v); q[k] = s; pastSikiBayt += s.bayt; pastSikiHam += s.hamBayt; pastSikiAdet++; }
+    }
+  }
+}
+bellekKaydet('cikmis.gecmisAlanlar', () => pastSikiAdet ? { kayit: pastSikiAdet, bayt: pastSikiBayt + pastSikiAdet * 120, not: 'deflateRaw ham JSON (yığın dışı)' } : null);
+
 let pastFilteredFor: Set<string> | null = null;
 let pastDiskBayt = 0;
 // Bellek dökümü (telemetri.ts): ölçülen oran — 97 MB girintili JSON → ~181 MB yığın (×1,87)
-bellekKaydet('cikmis.ham', () => cachedPastQuestionsDb ? { kayit: cachedPastQuestionsDb.length, bayt: pastDiskBayt * 1.87 * 0.82, not: 'disk×1,87 ölçüm, içe alma −%18' } : null);
+bellekKaydet('cikmis.ham', () => cachedPastQuestionsDb ? { kayit: cachedPastQuestionsDb.length, bayt: (pastDiskBayt - pastSikiHam) * 1.87 * 0.82, not: 'disk×1,87 ölçüm, içe alma −%18, sıkıştırılan geçmiş alanlar hariç' } : null);
 bellekKaydet('cikmis.sunulan', () => {
   if (!pastListCache) return null;
   let gz = 0;
@@ -2708,6 +2752,7 @@ function getPastQuestionsDb(): any[] {
         list.forEach((q: any) => normalizeQuestionVotes(q));
         // Bellek (2026-11-16): tekrarlı kısa dizgiler tek kopya (ölçüm ~33 MB, ~170 ms; çıktı baytları aynı)
         listeyiIcle(list);
+        gecmisAlanlariSikistir(list);
         pastDiskBayt = stat.size;
         cachedPastQuestionsDb = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
         lastPastQuestionsMtime = stat.mtimeMs;

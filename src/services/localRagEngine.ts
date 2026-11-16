@@ -203,7 +203,7 @@ let docLens: Uint32Array = new Uint32Array(0);
 let pendingIndex: Map<string, Map<string, number>> = new Map();
 let pendingLengths: Map<string, number> = new Map();
 let fuzzyVocab = new FastFuzzyVocab();
-// Telemetri: yükleme anında hesaplanan kaba bayt tahmini (içerik UTF-16 ×2 + kayıt başı ~400 B)
+// Telemetri: yükleme anında hesaplanan kaba bayt tahmini (içerik ölçülmüş ~1,25 B/karakter + kayıt başı ~400 B)
 let parcaBaytTahmini = 0;
 let avgDocLength = 110;
 
@@ -264,7 +264,10 @@ async function loadLocalChunksFromFile(): Promise<void> {
     }
     birak();
     parcaBaytTahmini = 0;
-    for (const chunk of memoryChunks.values()) parcaBaytTahmini += (chunk.content?.length || 0) * 2 + 400;
+    // Ölçüm (2026-11-17, --expose-gc): 72k parçanın içeriği (76,5 M karakter) yığında ~95 MB → ~1,25 B/karakter
+    // (eski ×2 tahmini 154 MB gösteriyordu). İçeriği UTF-8 Buffer'a taşımak yığından 95 MB düşüp yığın dışına 92 MB
+    // ekledi (net ~0) — bu yüzden yapılmadı.
+    for (const chunk of memoryChunks.values()) parcaBaytTahmini += (chunk.content?.length || 0) * 1.25 + 400;
 
     // Also merge real-time AI interactions from ai_interactions.json
     try {

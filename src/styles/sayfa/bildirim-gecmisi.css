@@ -1,0 +1,55 @@
+/* rebuild.css'ten taşındı (2026-11-17, ilk yük CSS'i hafifletme): yalnız NotificationHistoryModal kullanır; tembel parçasıyla yüklenir. */
+.nf { display: flex; flex-direction: column; gap: 12px; padding-bottom: 12px; }
+.nf-bar { position: sticky; top: 0; z-index: 2; padding: 2px 0 6px; background: var(--color-white); }
+.nf-seg button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.nf-n { font-family: var(--font-mono, ui-monospace, monospace); font-size: 11.5px; color: var(--color-ink-3); }
+@media (max-width: 479px) { .nf-hide-sm { display: none; } }
+.nf-group { display: flex; flex-direction: column; gap: 4px; }
+.nf-day { margin: 0; padding: 0 4px; font-size: 11.5px; font-weight: 700; letter-spacing: .03em; color: var(--color-ink-3); }
+.nf-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border: 1px solid var(--color-line); border-radius: 12px; overflow: visible; background: var(--color-white); }
+.nf-row { position: relative; display: flex; align-items: flex-start; }
+.nf-row + .nf-row { border-top: 1px solid var(--color-line-soft); }
+.nf-row:first-child .nf-main { border-top-left-radius: 11px; border-top-right-radius: 11px; }
+.nf-row:last-child .nf-main { border-bottom-left-radius: 11px; border-bottom-right-radius: 11px; }
+.nf-main { flex: 1; min-width: 0; display: flex; align-items: flex-start; gap: 10px; padding: 10px 4px 10px 12px; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.nf-main:hover { background: var(--color-field); }
+.nf-row.is-unread .nf-main { background: color-mix(in srgb, var(--color-accent-soft) 55%, transparent); }
+.nf-row.is-unread .nf-main:hover { background: var(--color-accent-soft); }
+.nf-ic { flex: none; width: 32px; height: 32px; border-radius: 9px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-field); color: var(--color-ink-2); }
+.nf-ic svg { width: 16px; height: 16px; }
+.nf-ic.is-accent { background: var(--color-accent-soft); color: var(--color-accent); }
+.nf-ic.is-ai { background: var(--color-ai-soft); color: var(--color-ai); }
+.nf-ic.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }
+.nf-ic.is-warn { background: var(--color-warn-soft); color: var(--color-warn); }
+.nf-ic.is-clinic { background: var(--color-clinic-soft); color: var(--color-clinic); }
+.nf-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.nf-top { display: flex; align-items: baseline; gap: 8px; }
+.nf-top b { flex: 1; min-width: 0; font-size: 14px; font-weight: 600; line-height: 1.35; color: var(--color-ink); }
+.nf-row:not(.is-unread) .nf-top b { font-weight: 500; color: var(--color-ink-2); }
+.nf-top time { flex: none; font-size: 11.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.nf-msg { font-size: 13px; line-height: 1.45; color: var(--color-ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.nf-kind { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
+.nf-kind i { font-style: normal; }
+.nf-kind svg { width: 12px; height: 12px; }
+.nf-main:hover .nf-kind { color: var(--color-accent); }
+.nf-dot { flex: none; width: 8px; height: 8px; margin-top: 6px; border-radius: 99px; background: var(--color-accent); }
+.nf-more { margin: 8px 6px 0 0; }
+.nf-menu { position: absolute; z-index: 5; top: 40px; right: 6px; min-width: 170px; display: flex; flex-direction: column; padding: 4px; border-radius: 10px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: 0 8px 24px rgb(0 0 0 / .14); animation: sh-pq-in 160ms cubic-bezier(.22,1,.36,1) both; }
+.nf-menu button { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border: 0; border-radius: 7px; background: transparent; color: var(--color-ink); font: inherit; font-size: 13.5px; text-align: left; cursor: pointer; }
+.nf-menu button:hover { background: var(--color-field); }
+.nf-menu button.is-bad { color: var(--color-bad-text); }
+.nf-menu svg { width: 15px; height: 15px; }
+.nf-empty { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 40px 16px; text-align: center; }
+.nf-empty-ic { width: 48px; height: 48px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-field); color: var(--color-ink-3); }
+.nf-empty-ic svg { width: 22px; height: 22px; }
+.nf-empty b { font-size: 15px; color: var(--color-ink); }
+.nf-empty p { margin: 0; max-width: 34ch; font-size: 13px; line-height: 1.5; color: var(--color-ink-3); }
+.nf-settings { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }
+.nf-set-row { display: flex; align-items: center; gap: 10px; }
+.nf-note { margin: 0; font-size: 12px; color: var(--color-ink-3); }
+.nf-clear { align-self: flex-start; }
+.nf-row.is-unread { background: color-mix(in srgb, var(--color-accent-soft) 55%, transparent); }
+.nf-row.is-unread .nf-main { background: transparent; }
+.nf-row.is-unread .nf-main:hover { background: var(--color-accent-soft); }
+.nf-row:first-child { border-top-left-radius: 11px; border-top-right-radius: 11px; }
+.nf-row:last-child { border-bottom-left-radius: 11px; border-bottom-right-radius: 11px; }

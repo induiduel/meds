@@ -2,8 +2,8 @@
  "_aciklama": "Bütçe kapısı tavanları (scripts/kapilar/butce.py). İlk tavanlar = 2026-11-16 ölçümü x 1,05. Tavanlar YALNIZ AZALIR: butce.py --guncelle tavanı ancak ölçüm düşmüşse aşağı çeker; yukarı çekmek için bu dosyayı ELLE düzenle ve _gerekce alanına neden yaz.",
  "_gerekce": {},
  "tavan": {
-  "ilk_yuk_js_gzip_kb": 483.32,
-  "ilk_yuk_css_gzip_kb": 136.4,
+  "ilk_yuk_js_gzip_kb": 424.94,
+  "ilk_yuk_css_gzip_kb": 133.56,
   "ilk_yuk_dosya": 105,
   "tembel_parca_en_buyuk_mb": 4.82,
   "src_data_en_buyuk_mb": 88.3,

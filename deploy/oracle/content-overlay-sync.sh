@@ -50,6 +50,22 @@ for rel in "${FILES[@]}"; do
     pulled+=("src/data/$rel")
   fi
 done
+# Öğren desteleri parçalı/çift yazım kipi (VERI_MODELI Faz 3 adım 4). Bayrak KAPALIYKEN bu blok hiçbir şey
+# çalıştırmaz. Açıkken `icerik_katman.py uygula` deste farkını parça dizinine de uygulamıştır (fark biçimi aynı,
+# deste kimliği anahtarlı); burada monolit ↔ parça birleşimi bayt eşitliği doğrulanır ve parça dizini commit listesine girer.
+PARCA_DIZIN=""
+if [[ "${MEDS_DESTE_PARCALI:-}" == 1 || "${MEDS_DESTE_CIFT_YAZ:-}" == 1 ]]; then  # kapalıyken hiçbir süreç çalışmaz
+  PARCA_DIZIN="$(cd "$MEDS_DIR" && python3 scripts/deste_bol.py durum)"
+fi
+if [[ -n "$PARCA_DIZIN" ]]; then
+  if [[ -f "$MEDS_DIR/src/data/interactive_learning_decks.json" ]]; then
+    (cd "$MEDS_DIR" && python3 scripts/deste_bol.py dogrula --hedef "$PARCA_DIZIN") || {
+      echo "DURDU: deste monoliti ile parça dizini ($PARCA_DIZIN) ayrışmış — rsync bozuk deste taşır."; exit 1; }
+  fi
+  for p in "${pulled[@]}"; do
+    if [[ "$p" == "src/data/interactive_learning_decks.json" ]]; then pulled+=("$(realpath --relative-to="$MEDS_DIR" "$PARCA_DIZIN")/"); fi
+  done
+fi
 if [[ ${#pulled[@]} -gt 0 ]]; then
   echo "  NOT: çekilen dosyaları commit'leyin ($MAIN_DIR): ${pulled[*]}"
 fi

@@ -9,7 +9,8 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
-import { resolveContent, writableContent, markContentChanged } from './contentOverlay.ts';
+import { resolveContent, writableContent, markContentChanged, kaynakSaglayiciKaydet, katmanFarki, farkUygula } from './contentOverlay.ts';
+import { veriOlayi } from './veriGunlugu.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const ROOT_DIR = path.resolve(path.dirname(__filename), '..', '..'); // meds/
@@ -17,16 +18,30 @@ const ROOT_DIR = path.resolve(path.dirname(__filename), '..', '..'); // meds/
 export const INTERACTIVE_DECKS_FILE = path.resolve(ROOT_DIR, 'src', 'data', 'interactive_learning_decks.json');
 
 /*
- * Parçalı OKUMA arka ucu (VERI_MODELI Faz 3 iskelesi; biçim tanımı `scripts/deste_deposu.py`).
- * Yalnız MEDS_DESTE_PARCALI=1 + MEDS_DESTE_PARCA_DIZIN verilmişse ve içerik katmanında deste farkı YOKSA etkin:
- * katman (Oracle canlı farkları) her zaman önceliklidir. Yazım bu aşamada monolitte (katmanda) kalır.
+ * Parçalı OKUMA arka ucu (VERI_MODELI Faz 3; biçim tanımı `scripts/deste_deposu.py`). MEDS_DESTE_PARCALI=1 +
+ * MEDS_DESTE_PARCA_DIZIN (+ `_sira.json` var) iken:
+ *   · katmanda deste farkı YOKSA parçalar doğrudan okunur (tek deste = tek dosya);
+ *   · katmanda fark VARSA içerik katmanının TABANI parçalardır (`kaynakSaglayiciKaydet`): birleşik dosya
+ *     parçalar + fark'tan üretilir, fark aynı biçimde (deste kimliği anahtarlı) parçalara göre çıkarılır.
+ * Yazım her kipte katmana (`writableContent`) gider: sunucu src/data'ya (dolayısıyla parça dizinine) yazmaz (H580).
+ * Çift yazım (MEDS_DESTE_CIFT_YAZ=1, adım 1): yazımdan sonra öteki arka uç + aynı fark yazılan listeyle
+ * karşılaştırılır; ayrışma `veriOlayi('hata', 'deste-cift-yaz')` ile günlüğe düşer.
  */
 const PARCA_SIRA = '_sira.json';
 function parcaDizini(): string | null {
   const dz = process.env.MEDS_DESTE_PARCA_DIZIN;
   return process.env.MEDS_DESTE_PARCALI === '1' && dz ? path.resolve(dz) : null;
 }
+/** Parçalı kipte içerik katmanının tabanını parça dizinine bağlar (katman kurulduktan sonra etkili; idempotent). */
+function saglayiciKur(): void {
+  const dz = parcaDizini();
+  const sira = dz ? path.join(dz, PARCA_SIRA) : '';
+  kaynakSaglayiciKaydet(INTERACTIVE_DECKS_FILE, dz && fs.existsSync(sira)
+    ? { var: () => fs.existsSync(sira), oku: () => parcalariBirlestir(dz), mtime: () => { try { return fs.statSync(sira).mtimeMs; } catch { return 0; } } }
+    : null);
+}
 function parcaliOkumaDizini(): string | null {
+  saglayiciKur();
   const dz = parcaDizini();
   if (!dz || desteKatmandaMi()) return null; // katman farkı varken parçalı okuma KAPALI
   return fs.existsSync(path.join(dz, PARCA_SIRA)) ? dz : null;
@@ -163,11 +178,56 @@ export function desteOku(id: string, list?: any[]): any | null {
 
 /** Katman etkin mi (deste dosyası katmandan mı geliyor)? */
 export function desteKatmandaMi(): boolean {
+  saglayiciKur();
   return resolveContent(INTERACTIVE_DECKS_FILE) !== INTERACTIVE_DECKS_FILE;
+}
+
+/** Çift yazım denetimi için öteki arka ucun dizini (yalnız MEDS_DESTE_CIFT_YAZ=1 + parça dizini). */
+function ciftYazDizini(): string | null {
+  const dz = process.env.MEDS_DESTE_CIFT_YAZ === '1' && process.env.MEDS_DESTE_PARCA_DIZIN ? path.resolve(process.env.MEDS_DESTE_PARCA_DIZIN) : null;
+  return dz && fs.existsSync(path.join(dz, PARCA_SIRA)) ? dz : null;
+}
+const parmak = (d: any) => crypto.createHash('sha1').update(JSON.stringify(d)).digest('hex');
+
+/**
+ * Çift yazım tutarlılığı: katman dönüşümü (≈1,5 sn gecikmeli) bitince ÖTEKİ taban (parçalı kipte monolit, değilse
+ * parçalar) + güncel fark = yazılan liste olmalı. Değilse iki arka uç ayrışmıştır → günlüğe HATA.
+ */
+export function ciftYazDenetle(beklenen: { id: string; h: string }[], dz: string): { tamam: boolean; ayrinti?: any } {
+  const parcaliTaban = !!parcaDizini();
+  if (parcaliTaban && !fs.existsSync(INTERACTIVE_DECKS_FILE)) return { tamam: true }; // monolit arşivde: karşılaştırılacak yok
+  const taban = parcaliTaban ? JSON.parse(fs.readFileSync(INTERACTIVE_DECKS_FILE, 'utf-8')) : parcalariBirlestir(dz);
+  const sonuc: any[] = farkUygula(taban, katmanFarki(INTERACTIVE_DECKS_FILE) as any);
+  const farkli = beklenen.length !== sonuc.length
+    ? ['<adet>']
+    : beklenen.filter((b, i) => sonuc[i]?.id !== b.id || parmak(sonuc[i]) !== b.h).map((b) => b.id);
+  return farkli.length
+    ? { tamam: false, ayrinti: { taban: parcaliTaban ? 'monolit' : 'parçalar', beklenen: beklenen.length, bulunan: sonuc.length, farkli: farkli.slice(0, 20) } }
+    : { tamam: true };
+}
+function ciftYazZamanla(list: any[]): void {
+  const dz = ciftYazDizini();
+  if (!dz) return;
+  const beklenen = list.map((d) => ({ id: String(d?.id), h: parmak(d) }));
+  const tam = writableContent(INTERACTIVE_DECKS_FILE);
+  const dene = (n: number) => {
+    const t = setTimeout(() => {
+      if (fs.existsSync(tam) && n < 20) return dene(n + 1); // tam kopya henüz farka çevrilmedi
+      try {
+        const r = ciftYazDenetle(beklenen, dz);
+        if (!r.tamam) veriOlayi('hata', 'deste-cift-yaz', 'çift yazım ayrıştı: öteki arka uç + katman farkı ≠ yazılan liste — python3 scripts/deste_bol.py dogrula', r.ayrinti);
+      } catch (e: any) {
+        veriOlayi('hata', 'deste-cift-yaz', 'çift yazım denetlenemedi', { hata: String(e?.message || e) });
+      }
+    }, 3000);
+    t.unref?.();
+  };
+  dene(0);
 }
 
 /** Listeyi katmana atomik yazar (JSON.stringify girinti 2), değişimi yayınlar, önbelleği geçersiz kılar. */
 export function desteleriYaz(list: any[], degisenIdler: string[]): void {
+  saglayiciKur();
   const filePath = writableContent(INTERACTIVE_DECKS_FILE);
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -176,4 +236,5 @@ export function desteleriYaz(list: any[], degisenIdler: string[]): void {
   fs.renameSync(tempPath, filePath);
   decksCache = null;
   markContentChanged('decks', degisenIdler.map(String));
+  ciftYazZamanla(list);
 }

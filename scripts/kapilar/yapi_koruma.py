@@ -72,6 +72,9 @@ D1_PARCA_IZINLI = {
     "scripts/deste_bol.py",
     "scripts/sinama_deste_parcali.py",
     "scripts/kapilar/yapi_koruma.py",
+    # Faz 3 adım 3 (2026-11-17): derleme eklentisi deste.items çıktısını parçalardan üretir; Vite yapılandırması
+    # sunucu modülünü (desteDeposu.ts → contentOverlay) içe aktaramaz, okuyucu bu yüzden burada (yalnız okuma).
+    "scripts/altyapi/vite/splitLearningDecks.ts",
 }
 # (dosya, satırda geçen parça) → gerekçe. Satır numarası kaymasına dayanıklı.
 D1_IZINLI_SATIR = {

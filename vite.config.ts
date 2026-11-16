@@ -13,6 +13,67 @@ dotenv.config();
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
+function parcaAdi(id: string): string | null {
+  const normalized = id.replace(/\\/g, '/');
+
+  // 1. External Vendor Code Splitting
+  if (normalized.includes('node_modules')) {
+    // Yalnız paket kökleri: '/react-dom/' eşleşmesi @floating-ui/react-dom'u ve react-dom/server'ı (yalnız PDF
+    // dışa aktarımında gereken ~75 KB gzip) her sayfanın açılış parçasına sokuyordu (H131a).
+    if (
+      (/\/node_modules\/(react|react-dom|scheduler)\//.test(normalized)) &&
+      !/\/react-dom\/(server|cjs\/react-dom-server|static)/.test(normalized)
+    ) {
+      return 'vendor-react';
+    }
+    if (normalized.includes('/@google/genai/')) {
+      return 'vendor-genai';
+    }
+    if (normalized.includes('/@tanstack/')) {
+      return 'vendor-tanstack';
+    }
+    // jspdf/html2canvas yalnızca PDF dışa aktarırken dinamik yüklenir; elle gruplanınca
+    // ortak yardımcılar bu parçaya düşüp her sayfada 600 KB yükleniyordu.
+    if (normalized.includes('/motion/') || /\/node_modules\/(motion-dom|motion-utils)\//.test(normalized)) {
+      return 'vendor-motion';
+    }
+    if (normalized.includes('/lucide-react/')) {
+      return 'vendor-lucide';
+    }
+  }
+
+  // 2. Local Application Code Splitting (Local Chunklama)
+  if (normalized.endsWith('/src/data/bundledScripts.ts')) return 'admin-bundled-scripts';
+  if (normalized.includes('/src/data/summaries/')) {
+    const match = normalized.match(/kurul\d+/);
+    if (match) {
+      return `local-data-summaries-${match[0]}`;
+    }
+  }
+  if (normalized.includes('/src/data/kazanimlar/lite/')) {
+    // Kurul başına parça: ekran yalnız seçili kurulun lite/k<N>.json'unu ister; eskiden 6 kurul tek parçaydı (3,4 MB).
+    const match = normalized.match(/\/lite\/(k\d+)\.json/);
+    return match ? `local-data-kazanimlar-lite-${match[1]}` : 'local-data-kazanimlar-lite';
+  }
+  if (normalized.includes('/src/data/kazanimlar/questions/')) {
+    // Konu başına parça (questions/k<N>/d<i>-k<j>.json, _dizin.json): her dosya kendi parçası kalır;
+    // kurulu tek parçada toplamak K1'de ≈31 MB tek indirme demekti.
+    const parca = normalized.match(/\/questions\/(k\d+)\/([\w-]+)\.json/);
+    if (parca) return `local-data-kazanimlar-q-${parca[1]}-${parca[2].replace(/^_/, '')}`;
+    const match = normalized.match(/k\d+/);
+    if (match) {
+      return `local-data-kazanimlar-q-${match[0]}`;
+    }
+  }
+  if (normalized.includes('/src/data/kazanimlar/')) {
+    const match = normalized.match(/k\d+/);
+    if (match) {
+      return `local-data-kazanimlar-${match[0]}`;
+    }
+  }
+  return null;
+}
+
 export default defineConfig(({ mode }) => {
   return {
     base: process.env.VITE_BASE || '/',
@@ -39,63 +100,20 @@ export default defineConfig(({ mode }) => {
           chunkFileNames: 'assets/chunk-[name]-[hash].js',
           entryFileNames: 'assets/entry-[name]-[hash].js',
           assetFileNames: 'assets/asset-[name]-[hash].[ext]',
-          manualChunks(id) {
-            const normalized = id.replace(/\\/g, '/');
-
-            // 1. External Vendor Code Splitting
-            if (normalized.includes('node_modules')) {
-              // Yalnız paket kökleri: '/react-dom/' eşleşmesi @floating-ui/react-dom'u ve react-dom/server'ı (yalnız PDF
-              // dışa aktarımında gereken ~75 KB gzip) her sayfanın açılış parçasına sokuyordu (H131a).
-              if (
-                (/\/node_modules\/(react|react-dom|scheduler)\//.test(normalized)) &&
-                !/\/react-dom\/(server|cjs\/react-dom-server|static)/.test(normalized)
-              ) {
-                return 'vendor-react';
-              }
-              if (normalized.includes('/@google/genai/')) {
-                return 'vendor-genai';
-              }
-              if (normalized.includes('/@tanstack/')) {
-                return 'vendor-tanstack';
-              }
-              // jspdf/html2canvas yalnızca PDF dışa aktarırken dinamik yüklenir; elle gruplanınca
-              // ortak yardımcılar bu parçaya düşüp her sayfada 600 KB yükleniyordu.
-              if (normalized.includes('/motion/')) {
-                return 'vendor-motion';
-              }
-              if (normalized.includes('/lucide-react/')) {
-                return 'vendor-lucide';
-              }
-            }
-
-            // 2. Local Application Code Splitting (Local Chunklama)
-            if (normalized.endsWith('/src/data/bundledScripts.ts')) return 'admin-bundled-scripts';
-            if (normalized.includes('/src/data/summaries/')) {
-              const match = normalized.match(/kurul\d+/);
-              if (match) {
-                return `local-data-summaries-${match[0]}`;
-              }
-            }
-            if (normalized.includes('/src/data/kazanimlar/lite/')) {
-              return 'local-data-kazanimlar-lite';
-            }
-            if (normalized.includes('/src/data/kazanimlar/questions/')) {
-              // Konu başına parça (questions/k<N>/d<i>-k<j>.json, _dizin.json): her dosya kendi parçası kalır;
-              // kurulu tek parçada toplamak K1'de ≈31 MB tek indirme demekti.
-              const parca = normalized.match(/\/questions\/(k\d+)\/([\w-]+)\.json/);
-              if (parca) return `local-data-kazanimlar-q-${parca[1]}-${parca[2].replace(/^_/, '')}`;
-              const match = normalized.match(/k\d+/);
-              if (match) {
-                return `local-data-kazanimlar-q-${match[0]}`;
-              }
-            }
-            if (normalized.includes('/src/data/kazanimlar/')) {
-              const match = normalized.match(/k\d+/);
-              if (match) {
-                return `local-data-kazanimlar-${match[0]}`;
-              }
-            }
-          },
+          // manualChunks yerine codeSplitting (2026-11-17): tek ad işlevli grupta rolldown yakalanan modülün bağımlılıklarını
+          // da aynı gruba çeker; react çekirdeği vendor-lucide'a, jsx-runtime vendor-motion'a düşüyor ve iki paket her
+          // sayfanın açılış zincirine giriyordu. React grubu daha yüksek öncelikle önce yakalar.
+          codeSplitting: { groups: [
+            {
+              name: 'vendor-react',
+              priority: 30,
+              test: (id: string) => /\/node_modules\/(react|react-dom|scheduler)\//.test(id.replace(/\\/g, '/')) &&
+                !/\/react-dom\/(server|cjs\/react-dom-server|static)/.test(id.replace(/\\/g, '/')),
+            },
+            // Açılış zincirindeki ikonlar ayrı küçük parçada; kalan ~ikonlar yalnız tembel ekran açılınca iner.
+            { name: 'vendor-lucide-ilk', priority: 20, tags: ['$initial'], test: /[\\/]node_modules[\\/]lucide-react[\\/]/ },
+            { name: (id: string) => parcaAdi(id) },
+          ] },
         },
       },
     },

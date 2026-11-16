@@ -52,7 +52,26 @@ if [[ "$SESSIZ" == "0" && "$YENI_ONEM" -le "$CANLI_ONEM" ]]; then
   echo "  onem+1, baslik, maddeler → commit+push → yeniden çalıştır. Yalnız küçük düzeltme ise: --sessiz"; exit 79
 fi
 
+# Öğren desteleri parça dizini (VERI_MODELI Faz 3 adım 4). Bayrak KAPALIYKEN blok hiçbir şey çalıştırmaz.
+# Açıkken parça dizini src/data altında (`deste_bol.py bol --kalici`, git'te) olmalı: rsync src/data'yı zaten taşır;
+# burada dağıtım öncesi (worktree) ve sonrası (Oracle) monolit ↔ parça birleşimi bayt eşitliği şarttır.
+PARCA_REL=""
+PARCA_DIZIN=""
+if [[ "${MEDS_DESTE_PARCALI:-}" == 1 || "${MEDS_DESTE_CIFT_YAZ:-}" == 1 ]]; then  # kapalıyken hiçbir süreç çalışmaz
+  PARCA_DIZIN="$(cd "$WT" && python3 scripts/deste_bol.py durum)"
+fi
+if [[ -n "$PARCA_DIZIN" ]]; then
+  PARCA_REL="$(realpath -m --relative-to="$WT" "$PARCA_DIZIN")"
+  [[ "$PARCA_REL" == src/data/* ]] || { echo "DURDU: parça dizini ($PARCA_DIZIN) worktree src/data altında değil — rsync taşımaz"; exit 80; }
+  (cd "$WT" && python3 scripts/deste_bol.py dogrula --hedef "$PARCA_REL") || { echo "DURDU: commit'teki deste monoliti ile parçalar ayrışmış"; exit 80; }
+fi
+
 (cd "$WT" && MEDS_DAGIT_ONAYLI=1 bash deploy/oracle/deploy-code.sh "${ARG[@]}")
+
+if [[ -n "$PARCA_REL" ]]; then
+  $SSH "cd /home/ubuntu/medsor/meds && python3 scripts/deste_bol.py dogrula --hedef '$PARCA_REL'" \
+    || echo "UYARI: Oracle'da deste monoliti ↔ parçalar ayrışık (rsync eksik ya da katman farkı) — elle denetleyin"
+fi
 
 # [0] eşitleme Oracle yayınlarını bu worktree'de commit'lemiş olabilir: main'e gönder (kaybolmasın)
 SON="$(git -C "$WT" rev-parse HEAD)"

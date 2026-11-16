@@ -8,6 +8,9 @@ Bu betik monoliti DEĞİŞTİRMEZ; varsayılan hedef `../meds_temp/deste_parcali
     python3 scripts/deste_bol.py birlestir --cikti DOSYA [--hedef DIZIN]
     python3 scripts/deste_bol.py dogrula [--hedef DIZIN] [--kaynak MONOLIT]   # 0 fark → çıkış 0
     python3 scripts/deste_bol.py fark <kimlik> [--hedef DIZIN] [--kaynak MONOLIT]
+    python3 scripts/deste_bol.py durum        # bayrak açıksa parça dizinini basar, kapalıysa HİÇBİR ŞEY (kabuk betikleri için)
+
+`bol --kalici`: hedef yalnız `src/data/desteler/` olabilir (varsayılanı çevirme adımı; Oracle'a rsync ile taşınır).
 """
 from __future__ import annotations
 
@@ -28,10 +31,16 @@ import deste_deposu as dd  # noqa: E402
 VARSAYILAN_HEDEF = PROJE / "meds_temp" / "deste_parcali" / "desteler"
 
 
-def bol(kaynak: _P, hedef: _P) -> None:
+KALICI_HEDEF = dd.YOL.parent / "desteler"
+
+
+def bol(kaynak: _P, hedef: _P, kalici: bool = False) -> None:
     hedef = hedef.resolve()
-    if dd.YOL.parent.resolve() in (hedef, *hedef.parents):
-        sys.exit("HATA: hedef src/data altında olamaz (Faz 3 iskelesi; çalışma verisi meds_temp'e)")
+    if kalici:
+        if hedef != KALICI_HEDEF.resolve():
+            sys.exit(f"HATA: --kalici yalnız {KALICI_HEDEF} hedefiyle")
+    elif dd.YOL.parent.resolve() in (hedef, *hedef.parents):
+        sys.exit("HATA: hedef src/data altında olamaz (--kalici olmadan; çalışma verisi meds_temp'e)")
     desteler = dd.hepsi(kaynak)
     n = dd.parcali_yaz(desteler, hedef)
     print(f"bol: {len(desteler)} deste → {hedef} ({n} dosya yazıldı)")
@@ -100,14 +109,20 @@ def fark(kimlik: str, kaynak: _P, hedef: _P) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("komut", choices=["bol", "birlestir", "dogrula", "fark"])
+    ap.add_argument("komut", choices=["bol", "birlestir", "dogrula", "fark", "durum"])
     ap.add_argument("kimlik", nargs="?")
     ap.add_argument("--hedef", type=_P, default=VARSAYILAN_HEDEF, help="parça dizini")
     ap.add_argument("--kaynak", type=_P, default=dd.YOL, help="monolit (varsayılan deste deposunun yolu)")
     ap.add_argument("--cikti", type=_P, help="birlestir çıktısı")
+    ap.add_argument("--kalici", action="store_true", help="bol: src/data/desteler/ hedefine izin ver")
     a = ap.parse_args()
+    if a.komut == "durum":
+        # Parçalı ya da çift yazım bayrağı açıksa dizin; kapalıysa boş çıktı (davranış değişmez)
+        if dd._parcali() or dd._cift():
+            print(dd.parca_dizini().resolve())
+        return 0
     if a.komut == "bol":
-        bol(a.kaynak, a.hedef)
+        bol(a.kaynak, a.hedef, a.kalici)
     elif a.komut == "birlestir":
         if not a.cikti:
             ap.error("--cikti gerekli")
