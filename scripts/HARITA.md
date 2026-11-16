@@ -32,6 +32,7 @@ scripts/
 - Hoca/öğrenci: `hoca_profili/` · `hoca_ara_soru/` · `hoca_vurgu/` · `ogrenci_onem/` · `ogrenci_drive/`
 - Kamp/tekrar: `son_prova/` · `blok_ozet/` · `kamp/` · `tekrar_analizi/`
 - Çıkmış: `cikmis_dizin/` · `cikmis_2627/` · Arşiv dersleri: `arsiv_25_26/` (adı arşiv ama CANLI üretim)
+- Hastalık: `akbc_disease_pipeline.py` (AKBC hastalık profili hattı)
 - Konu özel: `ileri_tumor_genetigi/` · `tumor_immuno_builder/` · `arzu/` (özel katman; sürüm notunda anılmaz)
 
 ## altyapi/ — servis, dağıtım, veri
@@ -41,6 +42,7 @@ scripts/
 - Veri/arama: `pipeline/` (Drive → downloads → temp → database) · `advanced_ai/` (rag_vektor_hatti.py …) · `search/` · `db/` · `db_analiz/`
 - Derleme/sınama: `vite/` (splitLearningDecks, surumDosyasi — vite.config.ts buradan import eder) · `design/` (kontrast kapısı) ·
   `perf/` · `cevrimdisi_sinama/` · `v15/` · `fixtures/` · `artifact_studio/` · `claude_eklenti/`
+- Tek dosyalık: `gpu_recovery.sh` (GPU kurtarma) · `rag-yeniden-parcala.mts` (RAG yeniden parçalama)
 - Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır)
 
 ## moduller/ — site özellik araçları

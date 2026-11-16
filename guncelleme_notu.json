@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 752,
-  "baslik": "Altyapı: arama kalkanı (dev veri dosyaları aramadan gizlendi)",
+  "onem": 753,
+  "baslik": "Proje sadeleştirme: kural belgeleri ve hata defteri inceltildi",
   "maddeler": [
-    "Dev tek-satır JSON'lar ve üretilen türevler ripgrep aramasından gizlendi (.ignore); src/data'da bir terim araması 146 MB → 11 MB. Çalışma zamanına etkisi yok.",
-    "CLAUDE.md: büyük veri dosyalarının jq ile sorgulanması ve neden fiziksel olarak bölünmediği."
+    "Deste düzeltmeleri (otomatik onarım, NotebookLM) artık dağıtımda kaybolmuyor; slayt ucu da güncel desteyi gösteriyor.",
+    "Yapay zekâ ajanlarının okuduğu kural belgeleri ve hata defteri konu dosyalarına bölünerek kısaltıldı.",
+    "Kullanılmayan eski betikler ve belgeler arşive alındı."
   ],
   "eklenen": [],
   "degisen": [],

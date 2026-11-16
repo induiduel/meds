@@ -7441,7 +7441,8 @@ app.get(['/api/decks/:id/slides/:slideNum', '/api/ogren/:id/slides/:slideNum'], 
   try {
     const { id, slideNum } = req.params;
     const num = Number(slideNum);
-    let deck = loadDeckFromItemFiles(id);
+    // Katman varsa parça dosyaları eski kalır (ayrıntı uçtaki /api/decks/:id ile aynı)
+    let deck = (resolveContent(INTERACTIVE_DECKS_FILE) === INTERACTIVE_DECKS_FILE || id.includes('y25-')) ? loadDeckFromItemFiles(id) : null;
     if (!deck) {
       const list = getDecksDb();
       deck = list.find((d) => d.id === id);

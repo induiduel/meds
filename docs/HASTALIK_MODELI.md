@@ -46,5 +46,5 @@ anatomi, risk_faktoru, hucre, mekanizma`. Ad normalizasyonu: Türkçe, küçük 
 4. Arama dizini (`localRagEngine.chunkDiseases`: profil başına 3 parça) ve bilgi grafiği (`diseaseGraphBuild`, `toFlatView` ile)
    sunucu açılışında / sorgu zekâsı derlemesinde yeniden kurulur.
 
-`scripts/akbc_disease_pipeline.py` şema 2 profilleri ezmez ve şablon (deterministik yedek) profil yazmaz.
+`scripts/uretim/akbc_disease_pipeline.py` şema 2 profilleri ezmez ve şablon (deterministik yedek) profil yazmaz.
 Eski (şema 1) yerel katkılar `normalizeDisease` ile okunur; şema 1 düzenlemesi yeniden yazılmış kanonik kaydı ezmez.

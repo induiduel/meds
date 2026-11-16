@@ -220,7 +220,7 @@ Başlama koşulu (hepsi): paralel oturum boşta · `meds/` git ağacı temiz/com
 Kalıcı silme her zaman **önce `/home/indu/medsor-yedek/<tarih>/`e taşı → 7 gün gözlem → onayla sil**.
 
 - **T0 — Tam envanter (salt-okunur, her an):** her dosya/klasör için "canlı mı" tespiti: kod referansı (grep `server.ts`,
-  `src/`, `scripts/`, systemd `ExecStart`, compose), son değişim tarihi, boyut. Çıktı: `meds/docs/ENVANTER.md` tablosu
+  `src/`, `scripts/`, systemd `ExecStart`, compose), son değişim tarihi, boyut. Çıktı: `meds/docs/arsiv/2026-11/ENVANTER.md` tablosu
   (KALIR / TAŞI / ARŞİVLE / SİL-ADAYI). Kullanıcı onayı bu tablo üzerinden alınır.
 - **T1 (= F0) — Yedek:** F0'a ek olarak `yedek/` klasörü repo dışına (`/home/indu/medsor-yedek/`) taşınır; `ssh-key1.key` → `~/.ssh/`
   (`deploy-code.sh`/`sync-*.sh` yol güncellemesiyle aynı adımda).
@@ -253,7 +253,7 @@ Her faz sonunda `DEGISIKLIK_KAYDI.md`'ye kayıt; sayaç tutmazsa durulur.
 
 ### 12.3 İlerleme (2026-10-11 gece)
 
-- **T0 ✓** `meds/docs/ENVANTER.md` (öneri tabloları + §9'da 14 karar kalemi).
+- **T0 ✓** `meds/docs/arsiv/2026-11/ENVANTER.md` (öneri tabloları + §9'da 14 karar kalemi).
 - **T1/F0 ✓** `deploy/backup.sh` → `/home/indu/medsor-yedek/20261011_2008/` (db.dump 345MB + data + src_data, SHA256 ✓, pg_restore listesi 63 tablo, geri açma provası pq=5713). Secret'lar K4 kararına kadar yedeğe girmez.
   Proje dışına taşınan 1.8GB (`yedek/`, `supabase_local.dump`, `ozet_satir_yedek`, `meds_database/backups`, iki `.bak_manual_import`) — liste: `medsor-yedek/proje_disina_tasinan_20261011/TASINANLAR.tsv`. SSH anahtarı `~/.ssh/medsor-oracle.key` (deploy-code/sync-vectors/SISTEM_MIMARISI güncel, SSH doğrulandı).
 - **T2 (kısmi) ✓** kök `patch_*/fix_*/apply_fixed/update_builder.py` + başıboş `src/` → `medsor-yedek/arsiv_kok_20261011/`. Kök `scripts/` ve `packages/` BEKLİYOR (k1-30…42 paketleri yanlış cwd yüzünden köke yazılmış; önce paket yeniden üretim kararı).

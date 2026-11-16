@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Aşama başına kural özeti + okuma haritası (tam içerik hattı; kullanıcı kararı 2026-10-28).
 
-Hata defteri (docs/KURUL2_YAPILMAYACAK_HATALAR.md, 1.100+ satır) her alt ajana bütünüyle okutulmaz. Bu betik defteri
-madde madde ayrıştırır, her maddenin YALNIZ başlığını ve kural/önleme satırlarını ilgili aşamalara dağıtır:
+Hata defteri (docs/KURUL2_YAPILMAYACAK_HATALAR.md = DİZİN, tam metin docs/hatalar/<konu>.md; 2026-11-16) her alt ajana
+bütünüyle okutulmaz. Bu betik dizin sırasıyla konu dosyalarındaki maddeleri birleştirip madde madde ayrıştırır, her maddenin YALNIZ başlığını ve kural/önleme satırlarını ilgili aşamalara dağıtır:
 
   python3 scripts/hat/tam_hat/kural_secici.py            → docs/asama_kurallari/<aşama>.md yeniden üretilir
   python3 scripts/hat/tam_hat/kural_secici.py --denetle  → özet defterden eskiyse çıkış 1 (hat başında çalışır)
@@ -29,7 +29,9 @@ import sys
 from pathlib import Path
 
 KOK = _kok.MEDS
-DEFTER = KOK / "docs/KURUL2_YAPILMAYACAK_HATALAR.md"
+DEFTER = KOK / "docs/KURUL2_YAPILMAYACAK_HATALAR.md"  # dizin: "- **H<n>** · özet → hatalar/<konu>.md" (sıra = madde sırası)
+HATALAR = KOK / "docs/hatalar"                           # konu dosyaları: "## "/"### " başlığı = madde sınırı (tam metin)
+DIZIN_SATIR = re.compile(r"^- \*\*(.+?)\*\* · .* → hatalar/([\w]+)\.md$")
 CIKIS = KOK / "docs/asama_kurallari"
 
 # Aşama → (anahtar sözcükler, defter dışında okunacak dosyalar). Sözcükler küçük harfle, madde metninin tamamında aranır.
@@ -76,10 +78,48 @@ def _ileri_filtre(kural: list[str]) -> list[str]:
     return [l for b in secili for l in b["satir"]]
 
 
+def _kimlik(baslik: str) -> str:
+    t = re.sub(r"^#+ ", "", baslik)
+    m = re.match(r"(H\d+[a-z]?(?:\s*[–/-]\s*H?\d+[a-z]?)*(?:,\s*H\d+[a-z]?(?:\s*[–-]\s*H\d+)?)*)(?:\s*\([^)]*\))?", t)
+    return m.group(1) if m else ("H" if re.match(r"H\s", t) else "—")
+
+
+def defter_satirlari() -> list[str]:
+    """Dizin sırasıyla konu dosyalarındaki maddeleri birleştirir (eski tek dosyalı defterin madde satırları).
+
+    Dizindeki k'ıncı `→ hatalar/X.md` satırı X.md'nin k'ıncı maddesidir; sayı/kimlik uyuşmazlığı HATA (madde kaybolmasın)."""
+    birim: dict[str, list[list[str]]] = {}
+    for p in sorted(HATALAR.glob("*.md")):
+        ls: list[list[str]] = []
+        for satir in p.read_text().splitlines():
+            if satir.startswith("## ") or satir.startswith("### "):
+                ls.append([satir])
+            elif ls:
+                ls[-1].append(satir)
+        birim[p.stem] = ls
+    sira = [(m.group(1), m.group(2)) for s in DEFTER.read_text().splitlines() if (m := DIZIN_SATIR.match(s))]
+    imlec = {k: 0 for k in birim}
+    out: list[str] = []
+    hata: list[str] = []
+    for kim, konu in sira:
+        if konu not in birim or imlec[konu] >= len(birim[konu]):
+            hata.append(f"dizinde {kim} → hatalar/{konu}.md ama dosyada karşılık madde yok")
+            continue
+        b = birim[konu][imlec[konu]]
+        imlec[konu] += 1
+        if _kimlik(b[0]) != kim:
+            hata.append(f"hatalar/{konu}.md sıra uyuşmazlığı: dizin {kim}, dosya {b[0][:60]}")
+        out.extend(b)
+    hata += [f"hatalar/{k}.md: {len(v) - imlec[k]} madde dizinde yok" for k, v in birim.items() if imlec[k] < len(v)]
+    if hata:
+        raise SystemExit("HATA: hata defteri dizini ↔ konu dosyaları tutarsız:\n  " + "\n  ".join(hata))
+    return out
+
+
 def maddeler() -> list[tuple[str, str, list[str]]]:
     """(başlık, tam metin, kural satırları) listesi."""
     out, bas, govde = [], None, []
-    for satir in DEFTER.read_text().splitlines() + ["## SON"]:
+    for satir in defter_satirlari() + ["## SON"]:
         if satir.startswith("## "):
             if bas:
                 kural, ici = [], False
@@ -140,7 +180,9 @@ def main() -> int:
         print("\n".join(oku(a.oku, a.mod)))
         return 0
     if a.denetle:
-        eski = [p.name for p in CIKIS.glob("*.md") if p.stat().st_mtime < DEFTER.stat().st_mtime] or \
+        defter_satirlari()  # dizin ↔ konu dosyası tutarlılığı (uyuşmazlıkta HATA ile çıkar)
+        son = max([DEFTER.stat().st_mtime, *(p.stat().st_mtime for p in HATALAR.glob("*.md"))])
+        eski = [p.name for p in CIKIS.glob("*.md") if p.stat().st_mtime < son] or \
                ([] if CIKIS.exists() else ["(yok)"])
         if eski:
             print(f"HATA: aşama özetleri defterden eski ({', '.join(eski)}); kural_secici.py çalıştır", file=sys.stderr)

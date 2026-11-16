@@ -21,7 +21,13 @@ import urllib.parse
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+_d = Path(__file__).resolve().parent
+while not (_d / "kok.py").exists() and _d != _d.parent:
+    _d = _d.parent
+if str(_d) not in sys.path:
+    sys.path.append(str(_d))
+import kok as _kok
+BASE_DIR = _kok.MEDS
 SRC_DIR = BASE_DIR / "src"
 DATA_DIR = SRC_DIR / "data"
 DATABASE_DIR = BASE_DIR.parent / "meds_database_v2"

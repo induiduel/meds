@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { resolveContent, writableContent, markContentChanged } from './contentOverlay.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,7 +16,6 @@ const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
 const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json');
 
 const DECKS_FILE = path.resolve(SRC_DATA_DIR, 'interactive_learning_decks.json');
-const DECK_ITEMS_DIR = path.resolve(SRC_DATA_DIR, 'decks', 'items');
 
 const SUMMARIES_CATALOG_FILE = path.resolve(SRC_DATA_DIR, 'lectureSummariesCatalog.json');
 const DATA_SUMMARIES_CATALOG_FILE = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
@@ -304,7 +304,7 @@ export function exportFlashcardsToMarkdown(options: { group?: string; limit?: nu
 }
 
 export function exportDecksToMarkdown(options: { deckId?: string } = {}): string {
-  const decks: any[] = readJsonSafe(DECKS_FILE, []);
+  const decks: any[] = readJsonSafe(resolveContent(DECKS_FILE), []);
   let filtered = decks;
   if (options.deckId) {
     filtered = filtered.filter((d) => d.id === options.deckId);
@@ -685,7 +685,7 @@ export function ingestInteractiveDeck(payload: any): IngestionResult {
     return { success: false, type: 'interactive_deck', count: 0, updatedIds: [], message: 'Deste ID (id veya deckId) eksik.' };
   }
 
-  const existingDecks: any[] = readJsonSafe(DECKS_FILE, []);
+  const existingDecks: any[] = readJsonSafe(resolveContent(DECKS_FILE), []);
   const targetIdx = existingDecks.findIndex((d) => d.id === deckId);
 
   const formattedDeck = {
@@ -703,12 +703,9 @@ export function ingestInteractiveDeck(payload: any): IngestionResult {
     existingDecks.push(formattedDeck);
   }
 
-  // Save to interactive_learning_decks.json
-  writeJsonAtomic(DECKS_FILE, existingDecks);
-
-  // Also save item file to decks/items/<id>.json
-  const itemPath = path.resolve(DECK_ITEMS_DIR, `${deckId}.json`);
-  writeJsonAtomic(itemPath, formattedDeck);
+  // Canlı içerik katmanına yaz (data/content → fark); src/data imaj içidir, items/ derlemede kaynaktan türetilir
+  writeJsonAtomic(writableContent(DECKS_FILE), existingDecks);
+  markContentChanged('decks', [String(deckId)]);
 
   // Dışa aktarım paketleri `npm run decks:packages` ile kaynaktan üretilir.
 
