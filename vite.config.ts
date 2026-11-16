@@ -4,10 +4,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import dotenv from 'dotenv';
-import { splitLearningDecks } from './scripts/altyapi/vite/splitLearningDecks';
-import { surumDosyasi } from './scripts/altyapi/vite/surumDosyasi';
-import { cevrimdisiManifest } from './scripts/altyapi/vite/cevrimdisiManifest';
-import { yonetimGirisi } from './scripts/altyapi/vite/yonetimGirisi';
+import { splitLearningDecks } from './scripts/altyapi/vite/splitLearningDecks.ts';
+import { surumDosyasi } from './scripts/altyapi/vite/surumDosyasi.ts';
+import { cevrimdisiManifest } from './scripts/altyapi/vite/cevrimdisiManifest.ts';
+import { yonetimGirisi } from './scripts/altyapi/vite/yonetimGirisi.ts';
 
 dotenv.config();
 
@@ -88,12 +88,22 @@ export default defineConfig(({ mode }) => {
     build: {
       target: 'es2022',
       cssCodeSplit: true,
-      minify: 'esbuild',
+      // Hız (2026-11-17): esbuild küçültücü Vite 8/rolldown'da yerel oxc'den ~2× yavaş ve daha büyük çıktı veriyordu
+      // (vendor-react gzip 68,6 → 67,5 KB). 2600+ parçanın gzip boyutunu tek tek hesaplamak da ~15 sn sürüyordu.
+      minify: 'oxc',
+      reportCompressedSize: false,
       emptyOutDir: false,
       // dist/.vite/manifest.json: sunucu eski hash'li parçaları budarken güncel kümeyi buradan okur (server.ts pruneDistAssets)
       manifest: true,
-      chunkSizeWarningLimit: 2500,
-      rollupOptions: {
+      // Büyük parçalar tembel veri (diseases/glossary/ansiklopedi JSON'u); kod parçası bu sınıra yaklaşmaz.
+      chunkSizeWarningLimit: 5000,
+      rolldownOptions: {
+        // lottie-web kendi içinde doğrudan eval kullanır (değiştiremeyiz); sql.js'in node modülleri tarayıcıda zaten kullanılmaz.
+        checks: { eval: false },
+        onLog(level, log, handler) {
+          if (/has been externalized for browser compatibility/.test(log.message || '') && /sql\.js/.test(log.message || '')) return;
+          handler(level, log);
+        },
         // Yönetim ayrı girişi (2026-10-28): /manage öğrenci uygulamasının ortak girişini yüklemez (src/manage-main.tsx)
         input: { index: path.resolve(__dirname, 'index.html'), manage: path.resolve(__dirname, 'manage.html') },
         output: {
@@ -112,7 +122,7 @@ export default defineConfig(({ mode }) => {
             },
             // Açılış zincirindeki ikonlar ayrı küçük parçada; kalan ~ikonlar yalnız tembel ekran açılınca iner.
             { name: 'vendor-lucide-ilk', priority: 20, tags: ['$initial'], test: /[\\/]node_modules[\\/]lucide-react[\\/]/ },
-            { name: (id: string) => parcaAdi(id) },
+            { name: (id: string) => parcaAdi(id), debugName: 'parcaAdi' },
           ] },
         },
       },

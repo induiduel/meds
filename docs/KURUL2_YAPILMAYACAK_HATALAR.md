@@ -36,7 +36,7 @@
 | `hatalar/on_yuz_tasarim_tema.md` | tasarım, tema, kabuk, düzen, cihaz güvenli alanı | 21 |
 | `hatalar/on_yuz_sayfa_denetimi.md` | sayfa denetimi bulguları, öğrenci sayfaları, veri/eşitleme ekranları | 39 |
 | `hatalar/yonetim_basarim.md` | yönetim paneli ve ön yüz başarımı | 21 |
-| `hatalar/betik_altyapi.md` | betik, LLM zinciri/kilidi, GPU/CPU, kapı altyapısı | 19 |
+| `hatalar/betik_altyapi.md` | betik, LLM zinciri/kilidi, GPU/CPU, kapı altyapısı | 20 |
 | `hatalar/ogren_modul_oyun.md` | Öğren destesi, ek modüller, KMB filmleri, oyunlar | 28 |
 | `hatalar/diger.md` | genel kurallar ve kayıt maddeleri | 5 |
 
@@ -436,3 +436,4 @@
 - **H601** · "Ücretsiz bulut LLM çağrı noktası ve 11 betik kilitsiz (kural 20)": kilit yalnız Claude/ajan CLI yoluna eklenmişti → `cloud_llm` kilitliyken None, betikler çıkış 75, sunucu yönetici yolunda `LLM_PANEL_ENV` → hatalar/betik_altyapi.md
 - **H603** · "Olmayan adres 200 dönüyor": SPA geri dönüşü koşulsuz 200 → sunucu ön yüz çözücüsüyle (`parseLocation`) 404 → hatalar/on_yuz_sayfa_denetimi.md
 - **H602** · "Sesli ders telefon/tablet: oynatıcı düğmeleri 30–34 px, tablette başlık kesik, PDF parçası geç": minimal çubuk ölçüleri medya sorgusuz dokunmatiğe gidiyordu, PdfDocView veri gelince isteniyordu → hatalar/on_yuz_oynatici_ders.md
+- **H604** · "Optimize ettik, build uzadı (77 sn, 30+ uyarı)": esbuild küçültücü + gzip raporu + karesel budama regex'i + önbelleksiz sürüm günlüğü → oxc, rapor kapalı, çapalı regex, HEAD önbelleği (≈38 sn, 0 uyarı) → hatalar/betik_altyapi.md

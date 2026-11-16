@@ -74,8 +74,25 @@ def notlar(commitler: list[tuple[str, str, str]]) -> list[dict]:
     return [{'tur': ELLE_COMMIT.get(h) or commit_turu(k), 'metin': temiz_konu(k), 'commit': h, 'tarih': t} for h, t, k in commitler]
 
 
+ONBELLEK = KOK / 'node_modules/.cache/surum_gunlugu.anahtar'
+
+
+def onbellek_anahtari() -> str:
+    """Çıktı yalnız git geçmişine, elle tür dosyasına ve bu betiğe bağlıdır: üçü aynıysa yeniden üretmek ~775 git
+    çağrısı (≈5 sn) israftır (derleme hızı, 2026-11-17)."""
+    import hashlib
+    h = hashlib.sha1(git('rev-parse', 'HEAD').encode())
+    for f in (ELLE, Path(__file__)):
+        try: h.update(f.read_bytes())
+        except OSError: pass
+    return h.hexdigest()
+
+
 def main() -> int:
     try:
+        anahtar = onbellek_anahtari()
+        if '--zorla' not in sys.argv and CIKTI.exists() and ONBELLEK.exists() and ONBELLEK.read_text().strip() == anahtar:
+            print('surum_gunlugu: değişiklik yok (önbellek)'); return 0
         sat = git('log', '--reverse', '--format=%h\x1f%cI\x1f%s').splitlines()
     except Exception as e:
         print(f'surum_gunlugu: git yok, dosya korunuyor ({e.__class__.__name__})'); return 0
@@ -111,6 +128,9 @@ def main() -> int:
     veri = {'uretildi': commitler[-1][1] if commitler else None, 'surumler': surumler,
             'yayinlanmamis': list(reversed(yayinlanmamis)), 'oncesi': ara_surumler}
     CIKTI.write_text(json.dumps(veri, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
+    try:
+        ONBELLEK.parent.mkdir(parents=True, exist_ok=True); ONBELLEK.write_text(anahtar)
+    except OSError: pass
     print(f'surum_gunlugu: {len(surumler)} sürüm, {len(yayinlanmamis)} yayınlanmamış, {len(ara_surumler)} ara gün → {CIKTI.relative_to(KOK)}')
     return 0
 

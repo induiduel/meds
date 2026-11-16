@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 45 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 47 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -175,6 +175,7 @@
   noktası ve birim "success" durumu yeterli kanıt değildir (boru hattı çıkış kodunu yutabilir).
 
 
+
 ### H580 — "Otomatik onarım / NotebookLM ile düzelen deste dağıtımda geri dönüyor" (2026-11-16)
 - **Önleme kuralı:** Sunucu tarafında `src/data` altına yazan her kod `writableContent()` ile yazar, `resolveContent()` ile okur; türetilmiş dosyalara (`decks/items`, paketler) elle yazılmaz.
 
@@ -197,4 +198,9 @@
 
 ### H592 — `.gitignore`'daki ses dizinlerinde 2.809 MP3 hâlâ izleniyordu (2026-11-17)
 - **Kural:** `.gitignore`'a dizin ekleyen aynı commit'te `git ls-files -ci --exclude-standard` boş mu diye bakar. Geçmişteki nesneler `.git`'te kalır; küçültmek geçmiş yeniden yazımı ister (kullanıcı kararı).
+
+- H596 — Kimliksiz her istek 100 MB gövde gönderebiliyordu; aynı uç iki kez tanımlıydı, ikincisi yetkisiz süreç başlatıyordu (2026-11-17) — betik denetler: `uc_denetim.py`
+### H599 — Kurul 2 soru çözücü / en önemliler, ek modüller, KMB ve PDF notlar çevrimdışına indirilemiyordu (2026-11-17)
+- **Önleme kuralı:** Katalog, ön yüzün içerik keşfettiği kuralla AYNI kaynaktan keşfeder; koda yazılı branş/kurul listesi YASAK. Yeni sayfa türü ya da ses ucu eklenince dört yer birlikte: katalog paketi, `sayfaPaketleri.ts`, ses kalıbı üçlüsü + `sw.js` dalı, sınama rota listesi (`docs/CEVRIMDISI_YOL_HARITASI.md` §6). "Ekran açılıyor" çevrimdışı kanıtı değildir; ses/PDF/görsel `sinama.mjs` ile ağ kesilerek doğrulanır.
+
 

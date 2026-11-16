@@ -7,6 +7,7 @@ import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import './styles/vurgu-kalemi.css';
 import './styles/health.css';
 import './styles/appearance.css';
 import './styles/shell.css';

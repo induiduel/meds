@@ -26,7 +26,8 @@ if (!fs.existsSync(ASSETS)) {
 }
 
 const all = new Set(fs.readdirSync(ASSETS));
-const NAME_RE = /[\w.-]+\.(?:js|css|json|woff2?|ttf|png|jpe?g|svg|webp|gif|ico|wasm|mjs|map)/g;
+// (?<!…): eşleşme yalnız ad başında başlar; yoksa uzun tanımlayıcı dizilerinde her konumdan yeniden denenip karesel yavaşlıyordu (5 sn).
+const NAME_RE = /(?<![\w.-])[\w.-]+\.(?:js|css|json|woff2?|ttf|png|jpe?g|svg|webp|gif|ico|wasm|mjs|map)/g;
 
 // Kök dosyalardan (html, sw.js, manifest) başlayıp assets içindeki referansları izle.
 const roots = fs.readdirSync(DIST)
@@ -34,10 +35,29 @@ const roots = fs.readdirSync(DIST)
   .map((f) => path.join(DIST, f));
 const reachable = new Set();
 const queue = [...roots];
+// Hız (2026-11-17): vite manifesti güncel kümenin tamamını zaten listeler; manifestteki büyük veri parçaları
+// (diseases/glossary… 2–5 MB JSON-JS) taranmadan erişilebilir sayılır. Tarama yalnız küçük kod parçalarında
+// manifest dışı başvuruları (işçi, sw/çevrimdışı listesi) yakalamak için sürer. 9 sn → ~1 sn.
+const BUYUK = 1_000_000;
+const manifestli = new Set();
+try {
+  const man = JSON.parse(fs.readFileSync(path.join(DIST, '.vite', 'manifest.json'), 'utf8'));
+  for (const v of Object.values(man)) {
+    for (const f of [v.file, ...(v.css || []), ...(v.assets || [])]) {
+      const n = f && path.basename(f);
+      if (n && all.has(n)) manifestli.add(n);
+    }
+  }
+} catch {}
+for (const n of manifestli) {
+  reachable.add(n);
+  if (/\.(js|mjs|css|json)$/.test(n)) queue.push(path.join(ASSETS, n));
+}
 while (queue.length) {
   const file = queue.pop();
   let text;
   try {
+    if (manifestli.has(path.basename(file)) && fs.statSync(file).size > BUYUK) continue;
     text = fs.readFileSync(file, 'utf8');
   } catch {
     continue;

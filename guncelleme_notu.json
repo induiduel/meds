@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 776,
-  "baslik": "Sesli ders: telefonda ve tablette daha rahat oynatıcı",
+  "onem": 777,
+  "baslik": "Daha hızlı güncellemeler",
   "maddeler": [
-    "Oynatıcı: telefonda ve tablette ileri/geri, bölüm, oynat ve hız düğmeleri büyüdü; hız artık belirgin bir düğme",
-    "Konum çubuğu: parmakla tutması ve sürüklemesi kolaylaştı",
-    "Tablet: uzun ders başlıkları kesilmeden iki satırda görünüyor",
-    "Açılış: slaytlar sesli derste daha erken geliyor"
+    "Site güncellemeleri artık iki kat hızlı hazırlanıyor",
+    "Uygulama dosyaları biraz küçüldü, açılış bir parça hızlandı"
   ],
   "eklenen": [],
-  "degisen": [],
+  "degisen": [
+    "Uygulama dosyaları daha küçük paketleniyor"
+  ],
   "duzeltilen": [],
   "silinen": []
 }
