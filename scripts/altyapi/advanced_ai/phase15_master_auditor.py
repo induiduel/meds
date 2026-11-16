@@ -9,7 +9,7 @@ Faz 15: Tıbbi Soru Başdenetim, Kalite Güvencesi ve Veri Modelleme Motoru (Mas
   ile her soruyu Faz 15 Başdenetim standartlarına göre denetler.
 - Triyaj, OCR temizliği, 5 şık garantisi, şık analizleri (A, B, C, D, E), tıbbi literatür doğrulaması yapar.
 - Markdown RAG chunking çıktılarını meds_database_v2/phase15_quality_audit/ klasörüne yazar.
-- Kalıcı sistem veri tabanını (meds/src/data/pastQuestions.json) 'faz15_onaylandi' etiketiyle günceller.
+- Kalıcı sistem veri tabanını (meds/data/pastQuestions.json) 'faz15_onaylandi' etiketiyle günceller.
 - reviews.jsonl içindeki durumu 'approved' ve 'faz15_audited' olarak tesciller.
 """
 # Konum-bağımsız kök (2026-11-16): sabit parents[N] yerine scripts/kok.py (dosya taşınsa da doğru).
@@ -47,7 +47,7 @@ REVIEWS_FILE = PHASE14_DIR / "reviews.jsonl"
 PHASE15_DIR = ROOT.parent / "meds_database_v2" / "phase15_quality_audit"
 PHASE15_DIR.mkdir(parents=True, exist_ok=True)
 CHECKPOINT_FILE = PHASE15_DIR / "checkpoint_phase15.json"
-PAST_QUESTIONS_FILE = ROOT / "src" / "data" / "pastQuestions.json"
+PAST_QUESTIONS_FILE = _kok.CIKMIS
 
 SYSTEM_PROMPT = """Sen uzman bir "Tıbbi Soru Denetim, Veri Modelleme ve Kalite Kontrol Yapay Zekasısın" (Faz 15 Başdenetçisi).
 Görevin, Faz 14 aşamasından gelen hatalı veya eksik düzeltilmiş tıp sınav sorularını incelemek, tıbbi literatüre (Robbins, Guyton, Katzung, Harrison) göre onarmak ve vektör veri tabanına (RAG Chunking) %100 uyumlu hale getirmektir.

@@ -27,7 +27,7 @@ SITE = config.MEDS_DIR / "src" / "data"
 SUMMARY_JSON = SITE / "summaries" / f"kurul{KURUL}.json"
 META_JSON = SITE / "summaries_meta.json"
 ENRICH_JSON = SITE / "summaries_enrichment.json"
-CATALOG_JSONS = [config.MEDS_DIR / "data" / "lectureSummariesCatalog.json", SITE / "lectureSummariesCatalog.json"]
+CATALOG_JSONS = [SITE / "lectureSummariesCatalog.json"]  # tek asıl kaynak (2026-11-16); data/ kopyası yazılmaz
 QUESTION_CARDS = SITE / "question_cards.json"
 SADAKAT_ESIK = 0.80
 

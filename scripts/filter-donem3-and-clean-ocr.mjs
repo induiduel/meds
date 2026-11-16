@@ -9,7 +9,7 @@
  *    ve klinik sorularını korur.
  * 3. Hatalı OCR okumalarını (anlaşılmayan bozuk karakterler, portal url/tablo çöpleri,
  *    birbirine girmiş şıklar, cevap anahtarı dump'ları) kesin olarak eler.
- * 4. Yerel veritabanlarını (data/pastQuestions.json ve src/data/pastQuestions.json) günceller.
+ * 4. Yerel veritabanlarını (data/pastQuestions.json; tek kaynak) günceller.
  * 5. Supabase 'past_questions' tablosunu temizleyip arındırılmış sorularla eşitler.
  */
 
@@ -26,7 +26,6 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const BACKUP_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.backup.json');
 const REPORT_PATH = path.join(ROOT_DIR, 'data', 'eliminated_questions_report.json');
 
@@ -281,10 +280,9 @@ async function main() {
 
   // 3. Yerel JSON Dosyalarını Güncelle
   fs.writeFileSync(DATA_PAST_PATH, JSON.stringify(kept, null, 2), 'utf8');
-  fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(kept, null, 2), 'utf8');
+  // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
   console.log(`\n3. Yerel Dosyalar Güncellendi:`);
   console.log(`   ✓ ${DATA_PAST_PATH} (${kept.length} soru)`);
-  console.log(`   ✓ ${SRC_PAST_PATH} (${kept.length} soru)`);
 
   // 4. Supabase 'past_questions' Eşitlemesi
   const supabaseUrl = process.env.SUPABASE_URL;

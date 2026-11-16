@@ -83,6 +83,7 @@ const clip = (s: unknown, n = 140) => {
 /* ---------- dosya yardımcıları (mtime önbellekli okuma, girintiyi koruyan atomik yazma + yedek) ---------- */
 // src/data altındaki dosyalar canlı içerik katmanından okunur / oraya yazılır (bkz. contentOverlay.ts)
 const fileCache = new Map<string, { mtime: number; data: any }>();
+const FILE_CACHE_MAX = 48;
 function readJson(file: string, fallback: any) {
   file = resolveContent(file);
   try {
@@ -90,6 +91,9 @@ function readJson(file: string, fallback: any) {
     const c = fileCache.get(file);
     if (c && c.mtime === st.mtimeMs) return c.data;
     const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+    // Tavan (2026-11-16): en çok FILE_CACHE_MAX dosya; dolunca en eski eklenen atılır (Map sırası), mtime değişen dosya sona taşınır
+    fileCache.delete(file);
+    if (fileCache.size >= FILE_CACHE_MAX) fileCache.delete(fileCache.keys().next().value as string);
     fileCache.set(file, { mtime: st.mtimeMs, data });
     return data;
   } catch {

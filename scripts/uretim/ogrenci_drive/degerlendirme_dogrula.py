@@ -69,7 +69,7 @@ def main() -> int:
         if not slaytta(at["s"], at["kanit"]):
             hata.append(f"atom {at['id']}: kanıt s{at['s']}'de yok → {at['kanit'][:60]}")
 
-    banka = json.loads((MEDS / "src/data/pastQuestions.json").read_text(encoding="utf-8"))
+    banka = json.loads(_kok.CIKMIS.read_text(encoding="utf-8"))
     banka = {q["id"] for q in (banka if isinstance(banka, list) else banka["questions"])}
     ck = json.loads((MEDS / paket["cikmis"]["kaynak"]).read_text(encoding="utf-8"))
     for q in ck["q"]:

@@ -9,6 +9,7 @@
  * tek tıkla değişikliği geri alabilir (Rollback).
  */
 
+import { cikmisOku, cikmisKaydet } from './cikmisErisim.ts';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -36,8 +37,7 @@ const QUEUE_FILE = path.resolve(REPAIR_DIR, 'queue.json');
 const HISTORY_FILE = path.resolve(REPAIR_DIR, 'history.jsonl');
 const BANNED_IDS_FILE = path.resolve(REPAIR_DIR, 'banned_report_ids.json');
 
-const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
-const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json');
+// pastQuestions.json yalnız cikmisErisim üzerinden (sunucu önbelleği + savePastQuestionsDb)
 const PRACTICE_QUESTIONS_FILE = path.resolve(DATA_DIR, 'questions.json');
 
 const DECK_ITEMS_DIR = path.resolve(SRC_DATA_DIR, 'decks', 'items');
@@ -126,7 +126,7 @@ function appendHistory(item: AutoRepairItem) {
 
 function dismissQuestionReportsInDb(targetId: string, _itemId?: string) {
   try {
-    const list = readJsonSafe<any[]>(PAST_QUESTIONS_FILE, []);
+    const list = cikmisOku();
     const idx = list.findIndex((q) => String(q.id) === String(targetId));
     if (idx !== -1) {
       const q = list[idx];
@@ -153,7 +153,7 @@ function dismissQuestionReportsInDb(targetId: string, _itemId?: string) {
         q.qualityScore = Math.max(Number(q.qualityScore || 0), 92);
         q.updatedAt = new Date().toISOString();
         list[idx] = q;
-        writeJsonAtomic(PAST_QUESTIONS_FILE, list);
+        cikmisKaydet(list, 'autoErrorRepairEngine'); // sunucu yolu (önbellek + fren + atomik)
       }
     }
   } catch (err) {
@@ -606,13 +606,9 @@ const callFreeGeminiJson = callFreeAiWithFallback;
 // --- Hedef Veri Okuma ve Zenginleştirme ---
 export function enrichAndFetchContext(source: ErrorSource, targetId: string, subTarget?: any): any {
   if (source === 'past_question') {
-    const list = readJsonSafe<any[]>(PAST_QUESTIONS_FILE, []);
+    const list = cikmisOku();
     let q = list.find((item) => String(item.id) === String(targetId));
-    if (!q) {
-      // Yedek kaynak olarak src'ye bak
-      const srcList = readJsonSafe<any[]>(SRC_PAST_QUESTIONS_FILE, []);
-      q = srcList.find((item) => String(item.id) === String(targetId)) || null;
-    }
+    // src/data kopyasına yedek bakılmaz (2026-11-16): tek kaynak data/pastQuestions.json.
     if (q) {
       const crossData = detectQuestionCrossData(targetId, 'past_question');
       return {
@@ -872,7 +868,7 @@ function syncSisterQuestions(
   correctedData: any
 ) {
   try {
-    const list = readJsonSafe<any[]>(PAST_QUESTIONS_FILE, []);
+    const list = cikmisOku();
     let modified = false;
     const contentChanged = item.aiAnalysis?.actionTaken === 'corrected';
     const syncedSisters: any[] = [];
@@ -905,7 +901,7 @@ function syncSisterQuestions(
     }
 
     if (modified) {
-      writeJsonAtomic(PAST_QUESTIONS_FILE, list);
+      cikmisKaydet(list, 'autoErrorRepairEngine'); // sunucu yolu (önbellek + fren + atomik)
       // Dosya yazıldıktan sonra: sunucu belleği dosyayı yeniden okur, hedef sorunun onarımı ezilmez
       for (const rec of syncedSisters) {
         try {
@@ -1125,14 +1121,14 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
       );
 
       // 1. pastQuestions.json güncelle
-      const list = readJsonSafe<any[]>(PAST_QUESTIONS_FILE, []);
+      const list = cikmisOku();
       const idx = list.findIndex((q) => String(q.id) === String(item.targetId));
       if (idx !== -1) {
         list[idx] = syncQuestionRevisionsAndReports(list[idx], item, correctedData);
-        writeJsonAtomic(PAST_QUESTIONS_FILE, list);
+        cikmisKaydet(list, 'autoErrorRepairEngine'); // sunucu yolu (önbellek + fren + atomik)
       }
       // 2. src/data/pastQuestions.json'a YAZILMAZ (H580): kalıcı kayıt data/'dadır; src kopyası yalnız tohumdur
-      //    ve sunucu kendi kaydında (server.ts PAST_SRC_COPY) onu yerelde yeniden aynalar.
+      //    (2026-11-16) src kopyasına aynalama da kapandı (MEDS_PAST_SRC_AYNA=1 değilse); tek kaynak data/.
 
       // 3. Karantina dosyasından tahliye et (derived/quarantine/karantina.json)
       if (shouldReleaseQuarantine) {

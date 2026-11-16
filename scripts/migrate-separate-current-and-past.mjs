@@ -30,7 +30,6 @@ const QUESTIONS_JSON_PATH = path.join(ROOT_DIR, 'data', 'questions.json');
 const QUESTIONS_BACKUP_PATH = path.join(ROOT_DIR, 'data', 'questions.backup.json');
 const PAST_JSON_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
 const PAST_BACKUP_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.backup.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 
 // Helper to normalize strings for deduplication
 function normalizeText(text) {
@@ -284,11 +283,7 @@ async function run() {
   // pastQuestions.json
   fs.writeFileSync(PAST_JSON_PATH, JSON.stringify(pastQuestions, null, 2), 'utf8');
   console.log(`   ✓ ${PAST_JSON_PATH} güncellendi (${pastQuestions.length} soru).`);
-
-  if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-    fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(pastQuestions, null, 2), 'utf8');
-    console.log(`   ✓ ${SRC_PAST_PATH} güncellendi.`);
-  }
+  // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
 
   // questions.json -> SIFIRLANIR (2026-2027 döneminde henüz sınava girilmediği için boş olmalıdır!)
   const cleanedQuestionsDb = {

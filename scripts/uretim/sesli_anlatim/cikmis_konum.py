@@ -69,7 +69,7 @@ def main():
     ap.add_argument("--ders"); ap.add_argument("--esik", type=float, default=0.65)
     ap.add_argument("--eksik", action="store_true", help="çıktısı olanları atla")
     a = ap.parse_args()
-    cikmislar = [q for q in json.load(open(KOK / "src/data/pastQuestions.json"))
+    cikmislar = [q for q in json.load(open(_kok.CIKMIS))
                  if q.get("committeeId") == "donem3-kurul1" and not q.get("hidden") and not q.get("iptal")]
     dersler = json.load(open(KOK / "data/sesli_anlatim/dersler.json"))
     CIKTI.mkdir(parents=True, exist_ok=True)

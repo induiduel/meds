@@ -1,0 +1,48 @@
+/* rebuild.css'ten taşındı (2026-11-16, ilk yük CSS'i hafifletme): yalnız LeaderboardView kullanır; tembel parçasıyla yüklenir. */
+/* 23 · Sıralama (canvas "Leaderboard"): basamaklı podyum, renkler DS tokenlarından (1 accent, 2 clinic, 3 warn). */
+.lbx-podium { --t1: var(--color-accent); --t1s: var(--color-accent-soft); --t2: var(--color-clinic, var(--color-ok)); --t2s: var(--color-clinic-soft, var(--color-ok-soft)); --t3: var(--color-warn); --t3s: var(--color-warn-soft);
+  list-style: none; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: end; gap: 8px; padding: 14px 10px 0; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 16px; }
+.lbx-col { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+.lbx-col.t1 { --c: var(--t1); --s: var(--t1s); }
+.lbx-col.t2 { --c: var(--t2); --s: var(--t2s); }
+.lbx-col.t3 { --c: var(--t3); --s: var(--t3s); }
+.lbx-who { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; max-width: 100%; text-align: center; }
+.lbx-who b { font-size: 14px; font-weight: 650; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.lbx-crown { width: 22px; height: 22px; color: var(--t1); }
+.lbx-av { width: 48px; height: 48px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;
+  background: linear-gradient(160deg, var(--s, var(--color-field)), color-mix(in srgb, var(--c, var(--color-ink-3)) 18%, var(--s, var(--color-field)))); color: var(--c, var(--color-ink-2)); font-weight: 750; font-size: 15px;
+  box-shadow: 0 0 0 2px var(--c, var(--color-line-2)), 0 4px 12px rgb(14 23 38 / .1); }
+.lbx-col.t1 .lbx-av { width: 58px; height: 58px; font-size: 17px; }
+.lbx-av img { width: 100%; height: 100%; object-fit: cover; }
+.lbx-step { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 12px; border-radius: 12px 12px 4px 4px; border: 1px solid color-mix(in srgb, var(--c) 28%, var(--color-line)); border-bottom: 0;
+  background: linear-gradient(180deg, var(--s) 0%, color-mix(in srgb, var(--c) 22%, var(--s)) 100%); box-shadow: inset 0 3px 0 var(--c); }
+.lbx-col.t1 .lbx-step { height: 150px; }
+.lbx-col.t2 .lbx-step { height: 116px; }
+.lbx-col.t3 .lbx-step { height: 92px; }
+.lbx-rk { font-size: 38px; line-height: 40px; font-weight: 800; color: var(--c); font-variant-numeric: tabular-nums; }
+.lbx-pt { font-size: 12.5px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.lbx-list { background: var(--color-white); border: 1px solid var(--color-line); border-radius: 12px; overflow: hidden; }
+.lbx-search { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border-bottom: 1px solid var(--color-line); color: var(--color-ink-3); }
+.lbx-search:focus-within { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.lbx-search svg { width: 16px; height: 16px; }
+.lbx-search input { flex: 1; min-width: 0; border: 0; background: transparent; outline: none; color: var(--color-ink); font: inherit; font-size: 14px; }
+.lbx-count { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.lbx-rows { list-style: none; margin: 0; padding: 0; }
+.lbx-row { display: grid; grid-template-columns: 30px 32px minmax(0, 1fr) 120px 56px; align-items: center; gap: 10px; min-height: 50px; padding: 4px 12px; border-top: 1px solid var(--color-line-soft); }
+.lbx-row.is-head { min-height: 30px; font-size: 11px; font-weight: 650; letter-spacing: .06em; color: var(--color-ink-3); border-top: 0; }
+.lbx-row.is-head span:last-child, .lbx-pts { text-align: right; }
+.lbx-row.is-me { background: var(--color-accent-soft); }
+.lbx-rank { width: 26px; height: 26px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-field); color: var(--color-ink-2); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.lbx-rank.t1 { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.lbx-rank.t2 { background: var(--color-clinic, var(--color-ok)); color: var(--color-white); }
+.lbx-rank.t3 { background: var(--color-warn); color: var(--color-white); }
+.lbx-row.is-me .lbx-rank:not(.t1):not(.t2):not(.t3) { background: linear-gradient(160deg, var(--color-accent-hover, var(--color-accent)), var(--color-accent)); color: var(--color-on-accent, #fff); }
+.lbx-av.is-sm { width: 30px; height: 30px; font-size: 11px; box-shadow: none; background: var(--color-field); color: var(--color-ink-2); }
+.lbx-name { min-width: 0; display: flex; flex-direction: column; }
+.lbx-name b { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--color-ink); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.lbx-name > span { font-size: 12px; color: var(--color-ink-3); }
+.lbx-me { height: 18px; padding: 0 6px; border-radius: 999px; background: var(--color-accent); color: var(--color-on-accent, #fff); font-size: 10.5px; font-weight: 700; display: inline-flex; align-items: center; }
+.lbx-bar { height: 8px; border-radius: 999px; background: var(--color-field); overflow: hidden; }
+.lbx-bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 45%, var(--color-accent-soft)), var(--color-accent)); }
+.lbx-pts { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-ink); }
+@media (max-width: 559px) { .lbx-row { grid-template-columns: 28px 30px minmax(0, 1fr) 48px; } .lbx-bar, .lbx-row.is-head span:nth-child(4) { display: none; } .lbx-col.t1 .lbx-step { height: 128px; } }

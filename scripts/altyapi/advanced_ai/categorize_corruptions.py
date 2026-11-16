@@ -1,7 +1,7 @@
 import json
 import re
 
-with open("meds/src/data/pastQuestions.json", "r", encoding="utf-8") as f:
+with open("meds/data/pastQuestions.json", "r", encoding="utf-8") as f:
     questions = json.load(f)
 
 severe_issues = []

@@ -98,18 +98,22 @@ def _buyuk(orj: str, yeni: str) -> str:
     return yeni[:1].upper() + yeni[1:] if orj[:1].isupper() else yeni
 
 
-def _cevir(w: str, cumle_basi: bool) -> tuple[str, str] | None:
-    """(yeni, kaynak) — kaynak: sozluk | kural."""
+def _cevir(w: str, cumle_basi: bool, kucuk_ozel_ad: bool = True) -> tuple[str, str] | None:
+    """(yeni, kaynak) — kaynak: sozluk | kural.
+    kucuk_ozel_ad=False (ses_ortak/ses_metin, 2026-11-16): sözlükte büyük harfli (özel ad/eponim) okunuş küçük harfli
+    sözcüğe uygulanmaz — "engel" (Türkçe) → "Engıl" (Engel eponimi) hatası. Varsayılan eski davranış (sesli ders klip özeti)."""
     gov, ek = re.match(r"(.+?)((?:['’][a-zçğıöşü]+)?)$", w).groups()
     ek = ek.lstrip("'’")
     D = sozluk()
     parca = gov.split("-")
     if gov.lower() in D:
+        if not kucuk_ozel_ad and D[gov.lower()][:1].isupper() and gov[:1].islower():
+            return None
         return _buyuk(gov, D[gov.lower()]) + ek, "sozluk"
     if len(parca) > 1:
         out = []
         for p in parca:
-            r = _cevir(p, False)
+            r = _cevir(p, False, kucuk_ozel_ad)
             out.append(r[0] if r else p)
         return " ".join(out) + ek, "sozluk"
     if yabanci_mi(gov, cumle_basi):
@@ -117,7 +121,7 @@ def _cevir(w: str, cumle_basi: bool) -> tuple[str, str] | None:
     return None
 
 
-def donustur(metin: str, kayit: list | None = None) -> str:
+def donustur(metin: str, kayit: list | None = None, kucuk_ozel_ad: bool = True) -> str:
     rx = _cok_sozcuklu()
     if rx:
         def cok(m):
@@ -130,7 +134,7 @@ def donustur(metin: str, kayit: list | None = None) -> str:
     for m in SOZ.finditer(metin):
         w = m.group(0)
         bas = m.start() == 0 or metin[:m.start()].rstrip()[-1:] in ".!?:\n"
-        r = _cevir(w, bas)
+        r = _cevir(w, bas, kucuk_ozel_ad)
         if r and r[0] != w:
             out.append(metin[son:m.start()] + r[0])
             son = m.end()

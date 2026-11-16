@@ -11,7 +11,7 @@
 | Sunucu kayıtları (havuz, çıkmış, kullanıcı, yönetim) | `data/*.json` | Evet | Yalnız sunucu yazar (atomik); meds-pg sorgulanabilir kopya |
 | Siteye giden içerik | `src/data/` | Evet | Sunucu yalnız içerik katmanıyla yazar (`data/content/` farkları) |
 | İkili/ses | `data/*/ses/`, `data/sesli_anlatim/` | Evet | Git dışı, Oracle'a rsync |
-| Türetilmiş (yeniden üretilir) | `src/data/decks/`, `data/local_rag_chunks.json`, `data/search/`, `~/.cache/meds/` | Hayır | Elle düzenlenmez, yedeklenmez |
+| Türetilmiş (yeniden üretilir) | `src/data/decks/`, `data/local_rag_chunks.jsonl`, `data/search/`, `~/.cache/meds/` | Hayır | Elle düzenlenmez, yedeklenmez |
 | Çalışma/ara veri | `../meds_temp/<modül>/` | Hayır | `src/data` ve `data/` içine ara dosya yazılmaz |
 | Arşiv (sıkıştırılmış, doğrulanmış) | `../_arsiv_veri/<tarih>/` + `MANIFEST.jsonl` | Yedek | `veri_bakim.py geri <yol>` ile geri alınır |
 | Kullanıcı/kimlik/topluluk | meds-pg | Evet | `deploy/pg/sql`, göç `scripts/altyapi/db/goc.py` |
@@ -34,7 +34,7 @@
 - RAG parça kimliği `chunk-<tür>-<kaynak id>…`; vektör önbelleği parça `hash`'ine (içerik md5) bağlı. Kaynak kayıt `id`'si
   değişmedikçe taşıma/bölme vektörleri bozmaz. Yola bağlı tek tür: `chunk-tr-<dosya adı>`.
 - Sabit okunan yollar: `data/pastQuestions.json`, `data/lecture_notes.json`, `data/lectureSummariesCatalog.json`,
-  `data/local_rag_chunks.json`, `src/data/ornek_sorular/k<N>/*.json` (düz), `src/data/medical_glossary.json`, `data/search/`.
+  `data/local_rag_chunks.jsonl`, `src/data/ornek_sorular/k<N>/*.json` (düz), `src/data/medical_glossary.json`, `data/search/`.
 - Çevrimdışı gruplar yol desenine bağlı (`cevrimdisiKatalog.ts`): `summaries/`, `kazanimlar/(questions|lite)/`,
   `sinav_calisma/`, `ornek_sorular/`, `decks/items/<id>.json`.
 - Bir kaynak yolu değişecekse önce `python3 scripts/altyapi/bag.py etki <yol>`; dinamik yollar (`k${k}`) bag'de görünmez, elle aranır.
@@ -72,6 +72,7 @@ Sıra: çift yazım (monolit + parça) → karşılaştırma kapısı 0 fark →
 
 **Faz 5 — ders manifesti kalıcılaşır:** `veri.py ders` çıktısı hat koşucusunun ve dağıtımın okuduğu
 `ders_bilgi/<key>/manifest.json`'a dönüşür (HANTALLIK §4); manifestte olmayan katman "üretildi" sayılmaz.
+**Yapıldı (2026-11-16):** `scripts/hat/tam_hat/manifest.py` (uret/goster/denetle/fark) → `ders_bilgi/<key>/katman_manifest.json` (65 K2 dersi üretildi; `veri.py ders` güncel manifesti okur). **Kalan:** koşucu/dağıtım entegrasyonu (`kosucu.py` sonu `uret`, `dagit.sh` öncesi `denetle`), Kurul 1 uyarlaması.
 
 **Faz 6 — kullanıcı kararı isteyen alan kazanımları:** `meds_temp` içindeki referanssız iş artıkları (~3,5 GB),
 Supabase öncesi yedek (2,2 GB), varsayılan olmayan ses varyantları (1,9 GB), `dist-android`, üç kopya skill klasörü.

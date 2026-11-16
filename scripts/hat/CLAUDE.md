@@ -7,7 +7,10 @@
 ## Kurallar
 - Giriş: `python3 scripts/hat/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf>`; sırayı yalnız `mod.py` verir.
 - Aşamalar `baglam/`'ı okur; ham slaytı/şablonu tekrar tarama (`docs/TAM_HAT_HIZLI_AKIS.md` §0.0).
-- Alt ajana yalnız `python3 scripts/hat/tam_hat/kural_secici.py --oku <aşama>` listesi verilir.
+- Alt ajana yalnız `python3 scripts/hat/tam_hat/kural_secici.py --oku <aşama>` listesi + `--ozet <aşama>` (≤300 kelime) verilir;
+  kapılı maddeler tek satırdır, tam metin `--tam <H no|aşama>`. `--denetle` madde kaybını da HATA sayar.
+- `baglam/` dilimli: aşama yalnız kendi `kaynak_<atom|hoca|cikmis|uslup>.md` dilimini okur (`baglam.py` DILIM_ASAMA).
 - LLM çağıran her betik `otomasyon/llm_kilit.py` arkasında (`MEDS_LLM_ELLE=1` yoksa çıkış 75); zamanlayıcı kurma yok (AGENTS kural 20).
+- Katman manifesti: `tam_hat/manifest.py uret|goster|denetle|fark <key>` → `meds_database_v2/ders_bilgi/<key>/katman_manifest.json` (`manifest.json` bilgi deposunundur, ezilmez); kapıyı çalıştırmaz, `--kapi-sonucu katman=gecti|kaldi` işler.
 - Kök `scripts/kok.py` ile; `parents[N]` yasak (D2).
 - Ayrıntı: `docs/KURUL_OTOMASYON_EL_KITABI.md`, `docs/KURUL2_DERS_STANDARDI.md`, `scripts/HARITA.md`.

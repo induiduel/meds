@@ -401,7 +401,6 @@ export function deduplicateQuestions(questions, similarityThreshold = 0.82) {
 async function main() {
   const args = process.argv.slice(2);
   const isApply = args.includes('--apply') || args.includes('-a');
-  const targetPath = path.resolve(__dirname, '..', 'src', 'data', 'pastQuestions.json');
   const dataPath = path.resolve(__dirname, '..', 'data', 'pastQuestions.json');
 
   console.log('='.repeat(70));
@@ -409,7 +408,8 @@ async function main() {
   console.log('='.repeat(70));
   console.log(`Mod: ${isApply ? 'DEĞİŞİKLİKLERİ UYGULA (--apply)' : 'DRY-RUN (Simülasyon)'}`);
 
-  const targets = [targetPath, dataPath].filter(p => fs.existsSync(p));
+  // Tek kaynak data/pastQuestions.json (2026-11-16); src/data kopyası artık işlenmez.
+  const targets = [dataPath].filter(p => fs.existsSync(p));
   for (const t of targets) {
     console.log(`\n📂 Dosya inceleniyor: ${t}`);
     const questions = JSON.parse(fs.readFileSync(t, 'utf8'));

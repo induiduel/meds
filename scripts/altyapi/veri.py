@@ -540,6 +540,19 @@ def k_ders(a):
     if not key:
         print("ders anahtarı biçimi k<N>-<NN>"); return 2
     kurul = int(key[1])
+    # Faz 5: güncel katman manifesti varsa tek kaynak odur (scripts/hat/tam_hat/manifest.py); yoksa/bayatsa canlı tarama
+    try:
+        sys.path.insert(0, str(SCRIPTS / "hat" / "tam_hat"))
+        import manifest as _man  # noqa: PLC0415
+        m, guncel = _man.guncel_mi(key)
+    except Exception as e:  # noqa: BLE001
+        m, guncel = None, False
+        uyari(f"katman manifesti okunamadı ({e}) — taramaya düşülüyor")
+    if m and guncel:
+        print(json.dumps(m, ensure_ascii=False, indent=1) if a.json else _man.goster_metin(m))
+        return 0
+    if m:
+        uyari(f"{key}: katman manifesti bayat → `python3 scripts/hat/tam_hat/manifest.py uret {key}`; canlı tarama gösteriliyor")
     kayit = None
     for y in _ders_dosyalar():
         try:

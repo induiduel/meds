@@ -238,9 +238,9 @@ def main() -> int:
         t_restart = time.time()
         subprocess.run(SITE_REFRESH, capture_output=True)
         log(f"site arama dizini yenilendi · çalışan adımlar: {', '.join(ran)}")
-        # Site açılışta data/local_rag_chunks.json'u yeniden üretir; üretilince yalnız yeni/değişen parçalar vektörlenip
+        # Site açılışta data/local_rag_chunks.jsonl'u yeniden üretir; üretilince yalnız yeni/değişen parçalar vektörlenip
         # yerel Supabase'e yazılır (bulut yalnız MEDS_RAG_TARGETS ile) (rag_vector_build artımlıdır)
-        chunk_file = ROOT / "data" / "local_rag_chunks.json"
+        chunk_file = ROOT / "data" / "local_rag_chunks.jsonl"  # kayıt artık yalnız .jsonl'e yazılır
         for _ in range(90):
             if chunk_file.exists() and chunk_file.stat().st_mtime > t_restart:
                 break

@@ -9,7 +9,7 @@ import json, collections, os, re, sys, shutil, datetime
 ROOT = '/home/indu/medsor'
 D = f'{ROOT}/meds/src/data'
 OUT = f'{ROOT}/meds_database_v2/iliski'
-PQ = f'{D}/pastQuestions.json'
+PQ = f'{ROOT}/meds/data/pastQuestions.json'  # tek kaynak (2026-11-16)
 YAZ = '--yaz' in sys.argv
 Q = json.load(open(PQ))
 H = json.load(open('ozet_cevap/konu_ozet_haritasi.json'))          # "kurul|ders|konu" -> [{id, kapsam}]
@@ -87,5 +87,5 @@ if YAZ:
         r = S[q['id']]
         q['iliski'] = {'ozet': [o['id'] for o in r['ozetler']], 'deste': [d['id'] for d in r['desteler']][:3],
                        'dersNotu': [d['id'] for d in r['dersNotlari']], 'pdf': [p['ad'] for p in r['pdf']], 'surum': 'iliski-v1'}
-    json.dump(Q, open(PQ + '.tmp', 'w'), ensure_ascii=False); os.replace(PQ + '.tmp', PQ); shutil.copy(PQ, f'{ROOT}/meds/data/pastQuestions.json')
+    json.dump(Q, open(PQ + '.tmp', 'w'), ensure_ascii=False); os.replace(PQ + '.tmp', PQ)
     print('YAZILDI')

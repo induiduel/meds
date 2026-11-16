@@ -22,7 +22,7 @@ from collections import Counter
 from pathlib import Path
 
 KOK = _kok.MEDS
-PAST = KOK / "src/data/pastQuestions.json"
+PAST = _kok.CIKMIS
 CIKTI = KOK / "src/data/hoca_profilleri"
 DOC = KOK / "docs/HOCA_USLUBU"
 

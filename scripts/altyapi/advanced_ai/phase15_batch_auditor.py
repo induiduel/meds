@@ -55,7 +55,7 @@ PHASE15_JSON_DIR.mkdir(parents=True, exist_ok=True)
 BACKUP_DIR.mkdir(parents=True, exist_ok=True)
 
 CHECKPOINT_FILE = PHASE15_DIR / "checkpoint_phase15.json"
-PAST_QUESTIONS_FILE = ROOT / "src" / "data" / "pastQuestions.json"
+PAST_QUESTIONS_FILE = _kok.CIKMIS
 
 def load_checkpoint():
     if CHECKPOINT_FILE.exists():
@@ -330,8 +330,6 @@ def main():
                     # Her 10 soruluk partide veri tabanını kaydet ve server'a dokun
                     with open(PAST_QUESTIONS_FILE, "w", encoding="utf-8") as f:
                         json.dump(past_questions, f, ensure_ascii=False, indent=2)
-                    with open(ROOT / "data" / "pastQuestions.json", "w", encoding="utf-8") as f_data:
-                        json.dump(past_questions, f_data, ensure_ascii=False, indent=2)
             
                     # Server dosya izleyicisi için mtime güncelle
                     os.utime(PAST_QUESTIONS_FILE, None)

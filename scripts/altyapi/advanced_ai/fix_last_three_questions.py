@@ -2,7 +2,6 @@ import json
 from datetime import datetime
 
 DATABASE_PATHS = [
-    "meds/src/data/pastQuestions.json",
     "meds/data/pastQuestions.json"
 ]
 

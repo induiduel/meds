@@ -1,3 +1,5 @@
+// Sayfa stili tembel parçayla gelir (rebuild.css'ten taşındı); diğer içe aktarmalardan önce: eski kademe sırası korunur
+import '../styles/sayfa/ders-notlari.css';
 import React, { useState, useEffect, useMemo } from 'react';
 import { okunurBaslik } from '../utils/okunurBaslik';
 import { confirmDialog } from './ui/ConfirmDialog';

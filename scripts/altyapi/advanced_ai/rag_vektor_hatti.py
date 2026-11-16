@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-RAG vektör hattı (tek, artımlı) — data/local_rag_chunks.json → e5 + bge-m3 vektörleri → meds-pg → (isteğe bağlı) Oracle.
+RAG vektör hattı (tek, artımlı) — data/local_rag_chunks.jsonl (yoksa eski .json) → e5 + bge-m3 vektörleri → meds-pg → (isteğe bağlı) Oracle.
 
 Eski iki hattın (rag_vector_build.py: e5, rag_vector_build_bge_m3_test.py + rag_bge_m3_test_backfill.py: bge-m3) yerini alır:
 * Donanım dostu: model süreç içine yüklenmez; zaten açık olan CPU servisleri kullanılır (meds-embed :8091 e5,
@@ -33,6 +33,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import rag_parca_deposu as _rpd  # noqa: E402  (.jsonl esas, yoksa eski .json)
 
 import argparse
 import fcntl
@@ -50,7 +51,7 @@ os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")  # yerel GPU yasak (AGENTS.md 
 ROOT = _kok.MEDS
 sys.path.insert(0, str(ROOT / "scripts" / "altyapi" / "agents"))
 DB = Path(os.environ.get("MEDS_DATABASE_DIR") or ROOT.parent / "meds_database")
-SRC = ROOT / "data" / "local_rag_chunks.json"
+SRC = _rpd.okunacak_dosya(ROOT / "data") or (ROOT / "data" / _rpd.JSONL_ADI)
 OUT = DB / "derived" / "rag_vektor"
 REPORT = OUT / "hat_rapor.json"
 LOCK = OUT / ".hat.lock"
@@ -98,8 +99,7 @@ def env() -> dict:
 
 def load_chunks() -> list[dict]:
     # Postgres text/jsonb NUL (\u0000) kabul etmez → OCR artığı NUL'lar atılır
-    d = json.loads(SRC.read_text(encoding="utf-8").replace("\\u0000", ""))
-    rows = d if isinstance(d, list) else d.get("chunks", [])
+    rows = _rpd.parcalari_oku(ROOT / "data", nul_temizle=True)
     out = []
     for c in rows:
         txt = SURR_RE.sub("", CTRL_RE.sub("", (c.get("content") or ""))).strip()

@@ -1,3 +1,5 @@
+// Sayfa stili tembel parçayla gelir (rebuild.css'ten taşındı); diğer içe aktarmalardan önce: eski kademe sırası korunur
+import '../styles/sayfa/muzik.css';
 import React, { useState } from 'react';
 import {
   Play,

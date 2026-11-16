@@ -22,9 +22,9 @@ else
   echo "[yedek] UYARI: $DB konteyneri yok, DB atlandı"
 fi
 
-# 2) JSON çalışma verisi (local_rag_chunks.json yeniden üretilir → hariç)
+# 2) JSON çalışma verisi (local_rag_chunks.json[l] yeniden üretilir → hariç)
 echo "[yedek] data + src/data…"
-tar -C "$APP" -czf "$DEST/data.tar.gz" --exclude='data/local_rag_chunks.json' data
+tar -C "$APP" -czf "$DEST/data.tar.gz" --exclude='data/local_rag_chunks.json' --exclude='data/local_rag_chunks.jsonl*' data
 tar -C "$APP" -czf "$DEST/src_data.tar.gz" --exclude='src/data/decks/items' src/data
 
 # 3) Secret'lar yalnız şifreli
@@ -54,7 +54,6 @@ def q(sql):
         return f"HATA: {e}"
 out = {
     "pastQuestions_data": n("data/pastQuestions.json"),
-    "pastQuestions_src": n("src/data/pastQuestions.json"),
     "questions_pool": n("data/questions.json"),
     "decks": n("src/data/interactive_learning_decks.json"),
     "db_rag_chunks": q("select count(*) from rag_chunks"),

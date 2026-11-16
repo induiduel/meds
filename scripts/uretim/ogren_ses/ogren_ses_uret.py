@@ -36,8 +36,11 @@ if os.environ.get("EMA_CIHAZ") != "cuda":
 MEDS = _kok.MEDS
 sys.path.insert(0, str(MEDS / "scripts/uretim/sesli_anlatim"))
 import ema_isci as E  # noqa: E402
+sys.path.insert(0, str(_kok.SCRIPTS / "uretim/ses_ortak"))
+import ses_klip as SK  # noqa: E402  (seslendir tek kaynak, 2026-11-16; E.KBPS ezmesi kalktı)
+import ses_metin  # noqa: E402
 
-E.KBPS = 48
+KBPS = 48
 SURUM = "ema-1"
 SURUM_K2 = "ema-2"  # Kurul 2+: kisaltma_ses.uzat okunuşu (H3)
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
@@ -98,42 +101,15 @@ def cumlelere_ayir(metin: str) -> list[str]:
     return out
 
 
-def seslendir(tts, cumleler: list[str]):
-    import numpy as np
-
-    sessiz = lambda sn: np.zeros(int(round(sn * E.SR)), dtype=np.float32)  # noqa: E731
-    parca, zaman, t, notlar = [sessiz(ON_SN)], [], ON_SN, []
-
-    for c in cumleler:
-        bas = t
-        for par, ayrac in re.findall(r"(.+?)(\|\||\||$)", c.strip()):
-            par = par.strip()
-            if not par:
-                continue
-            wav, n = E.paragraf_seslendir(tts, par)
-            if n:
-                notlar.append(f"{n}: {par[:50]}")
-            parca.append(wav)
-            t += len(wav) / E.SR
-            if ayrac:
-                d = UZUN_SN if ayrac == "||" else KISA_SN
-                parca.append(sessiz(d))
-                t += d
-        zaman.append([bas, t])
-        parca.append(sessiz(CUMLE_SN))
-        t += CUMLE_SN
-
-    x = np.concatenate(parca)
-    pcm = (np.clip(x, -1, 1) * 32767).astype("<i2").tobytes()
-    mp3 = E.mp3_kodla(pcm)
-    gercek = len(mp3) * 8 / (E.KBPS * 1000)
-    k = gercek / (len(x) / E.SR)
-    return mp3, [[round(a * k, 3), round(b * k, 3)] for a, b in zaman], round(gercek, 3), notlar
+def seslendir(tts, cumleler: list[str], okunus=None):
+    """okunus verilmezse ema_isci genel durumu (E.uzun_kisaltma_ayarla) — kamp/ses.py geriye uyumu."""
+    return SK.seslendir(tts, cumleler, okunus=okunus or E.tts_metni, kbps=KBPS, E=E)
 
 
 def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = None) -> dict:
     deck_id = deck["id"]
-    E.uzun_kisaltma_ayarla(deck_id)
+    uzun = E.uzun_kisaltma_mi(deck_id)  # yalnız karma öneki (ema-1/ema-2) — DEĞİŞTİRME
+    okunus = ses_metin.okuyucu(ders=deck_id)  # motor metni: yol ders defterinden
     deck_title = deck.get("title", deck_id)
     slides = deck.get("slides") or []
     cikis_dizin = CIKTI_KOK / deck_id
@@ -169,7 +145,7 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
             continue
 
         # Kurul 2+ desteleri uzun harf okunuşuyla (ema-2); Kurul 1 ema-1'de kalır (toplu yeniden üretim yok)
-        h = hashlib.sha1(((SURUM_K2 if E.UZUN_KISALTMA else SURUM) + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
+        h = hashlib.sha1(((SURUM_K2 if uzun else SURUM) + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
         mp3_yolu = cikis_dizin / f"{adim_no}.mp3"
 
         mevcut = kayit.get(str(adim_no))
@@ -179,8 +155,8 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
             continue
 
         t_adim = time.time()
-        mp3, zamanlar, sure, notlar = seslendir(tts, cumleler)
-        mp3_yolu.write_bytes(mp3)
+        mp3, zamanlar, sure, notlar = seslendir(tts, cumleler, okunus)
+        SK.atomik_yaz(mp3_yolu, mp3)
 
         kayit[str(adim_no)] = {
             "h": h,
@@ -188,6 +164,7 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
             "zaman": zamanlar,
             "cumleler": cumleler,
             "guncellendi": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "okunus_surum": ses_metin.SOZLUK_SURUM,
         }
         uretilen += 1
         toplam_sure += sure
@@ -202,10 +179,10 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
 
         # Her 5 adımda bir kayit.json'u diske yaz
         if uretilen % 5 == 0:
-            kayit_yolu.write_text(json.dumps(kayit, ensure_ascii=False, indent=2), encoding="utf-8")
+            SK.atomik_yaz(kayit_yolu, json.dumps(kayit, ensure_ascii=False, indent=2))
 
     # Son kayıt
-    kayit_yolu.write_text(json.dumps(kayit, ensure_ascii=False, indent=2), encoding="utf-8")
+    SK.atomik_yaz(kayit_yolu, json.dumps(kayit, ensure_ascii=False, indent=2))
     toplam_gecen = time.time() - t0
     print(f"\n--- Sonuç: {deck_id} ---")
     print(f"Üretilen: {uretilen}, Atlanılan (Değişmeyen): {atlanilan}")

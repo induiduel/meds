@@ -12,7 +12,7 @@
  *    - Kullanıcı Katkı & Yorumları (user_contribution)
  *    - Yapay Zeka Düzeltmeleri & Revizyonları (ai_refinement)
  *    - Yapay Zeka Soru Sohbetleri & Tartışmaları (ai_qa)
- * 2. Yerel dosya sistemi (data/local_rag_chunks.json) ve bellek içi (in-memory)
+ * 2. Yerel dosya sistemi (data/local_rag_chunks.jsonl) ve bellek içi (in-memory)
  *    ters indeks ile 5 ms altında ultra hızlı arama sağlar.
  * 3. Gemini embedding modeli ile vektörleri yerel önbelleğe alır ve Supabase
  *    'rag_chunks' & 'ai_question_interactions' tablolarına çift yönlü eşitler.
@@ -28,7 +28,9 @@ import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { pgDb } from './pgDb';
+import { ozetKataloguYolu } from './contentOverlay.ts';
 import { veriOlayi } from './veriGunlugu';
+import { ragOkunacakDosya, ragParcalariOku, ragParcalariYaz } from './ragParcaDeposu.ts';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
 import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
 import { KIND_LABEL, factPlain, normalizeDisease, sectionTexts, sectionTitle } from './diseaseModel.ts';
@@ -39,7 +41,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DATA_DIR = path.resolve(PROJECT_ROOT, 'data');
-const LOCAL_CHUNKS_FILE = path.resolve(DATA_DIR, 'local_rag_chunks.json');
+// Kalıcılık: data/local_rag_chunks.jsonl (satır başına parça); yoksa eski .json okunur (ragParcaDeposu.ts)
 const AI_INTERACTIONS_FILE = path.resolve(DATA_DIR, 'ai_interactions.json');
 const MANIFEST_FILE = path.resolve(DATA_DIR, 'rag_indexing_manifest.json');
 const DESKTOP_DATABASE_DIR = process.env.MEDS_DATABASE_DIR || 'C:\\Users\\indui\\Desktop\\meds_database';
@@ -230,14 +232,16 @@ function makeSlicer() {
 
 // Load stored chunks from local file into memory
 async function loadLocalChunksFromFile(): Promise<void> {
-  if (!fs.existsSync(LOCAL_CHUNKS_FILE)) {
+  if (!ragOkunacakDosya(DATA_DIR)) {
     memoryChunks = new Map();
     indexReady = true;
     return;
   }
   try {
-    const raw = await fs.promises.readFile(LOCAL_CHUNKS_FILE, 'utf-8');
-    const list: RagChunk[] = JSON.parse(raw);
+    // Akışla satır satır okuma; 20 ms dilimlerle olay döngüsüne nefes aldırılır, bozuk satır atlanıp günlüğe yazılır
+    const { parcalar: list, bozukSatir, bicim } = await ragParcalariOku(DATA_DIR, makeSlicer());
+    if (bicim === 'json') console.log('[LocalRagEngine] Eski local_rag_chunks.json okundu (geçiş); ilk kayıtta .jsonl yazılacak.');
+    if (bozukSatir) console.warn(`[LocalRagEngine] ${bozukSatir} bozuk parça satırı atlandı.`);
     memoryChunks.clear();
     for (const chunk of list) {
       memoryChunks.set(chunk.id, chunk);
@@ -299,19 +303,11 @@ export async function saveLocalChunksToFile(forceImmediate: boolean = false): Pr
     if (isSavingToFile) return;
     isSavingToFile = true;
     try {
-      const list = Array.from(memoryChunks.values());
-      // Compact JSON without 2-space indentation saves ~35MB disk space and reduces I/O by 80%
-      const jsonStr = JSON.stringify(list);
-      // Atomik yazım: aynı dizinde geçici dosya + rename; hata olursa eski dosya yerinde kalır (bayt biçimi aynı: kompakt JSON)
-      const tmp = `${LOCAL_CHUNKS_FILE}.${process.pid}.tmp`;
-      try {
-        await fs.promises.writeFile(tmp, jsonStr, 'utf-8');
-        await fs.promises.rename(tmp, LOCAL_CHUNKS_FILE);
-      } catch (e) {
-        try { await fs.promises.unlink(tmp); } catch { /* yok */ }
-        throw e;
-      }
-      console.log(`[LocalRagEngine] 💾 ${list.length} parça diskte güncellendi (${Math.round(jsonStr.length / 1024 / 1024)} MB).`);
+      // Akışla atomik JSONL yazımı (tmp → fsync → rename), satır sayısı doğrulaması + güvenlik freni ragParcaDeposu.ts'de
+      const adet = memoryChunks.size;
+      const r = await ragParcalariYaz(DATA_DIR, Array.from(memoryChunks.values()), adet);
+      if (r.yazildi) console.log(`[LocalRagEngine] 💾 ${r.satir} parça diskte güncellendi (${Math.round(r.bayt / 1024 / 1024)} MB, jsonl).`);
+      else console.error(`[LocalRagEngine] Parça kaydı yapılmadı: ${r.gerekce}`);
     } catch (err: any) {
       console.error('[LocalRagEngine] Yerel parçalar kaydedilemedi:', err.message);
     } finally {
@@ -763,7 +759,8 @@ ${text}`;
 
 // 4. Ders Özetleri & Spot Notlar (summary)
 export function chunkLectureSummaries(): RagChunk[] {
-  const sumPath = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
+  // Tek asıl kaynak (src/data + katman); bölüm sırası → chunk-sum-<id>-<sıra> kimliği değişmez
+  const sumPath = ozetKataloguYolu(PROJECT_ROOT);
   if (!fs.existsSync(sumPath)) return [];
   const list = JSON.parse(fs.readFileSync(sumPath, 'utf-8'));
   const chunks: RagChunk[] = [];
@@ -1957,6 +1954,17 @@ export function initLocalRagEngine(): void {
         changeDebounce.unref();
       });
       watcher.unref(); // Allows node process to exit naturally when tasks complete
+  }
+  // Özet kataloğu artık data/ altında değil: panel yazımları data/content katmanına düşer (fark dosyası)
+  const katmanDir = path.join(DATA_DIR, 'content');
+  if (fs.existsSync(katmanDir)) {
+    const kw = fs.watch(katmanDir, (_e, filename) => {
+      if (!filename || !String(filename).startsWith('lectureSummariesCatalog.json')) return;
+      if (changeDebounce) clearTimeout(changeDebounce);
+      changeDebounce = setTimeout(() => { runAutoChunking({ syncToCloud: false }).catch(() => {}); }, 120000);
+      changeDebounce.unref();
+    });
+    kw.unref();
   }
 }
 

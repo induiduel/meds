@@ -14,13 +14,23 @@ python3 scripts/hat/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf
 ```
 python3 scripts/hat/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <klasör>/baglam/kaynak.md + sema.md
 ```
-- `baglam/kaynak.md` = tek-kaynak: slayt dizini + bilgi paketleri + **atomlar** (damıtılmış gerçekler) + doğrulanmış çıkmış + üslub.
-- `baglam/sema.md` = aşama çıktı şemaları + kapı komutları (33k şablon dosyası + kapı-kaynağı okumak YERİNE ~2k).
+- `baglam/kaynak_atom.md` (slayt dizini + bilgi paketleri + **atomlar**), `kaynak_hoca.md` (hoca vurguları + öğrenci önem notları),
+  `kaynak_cikmis.md` (doğrulanmış çıkmış), `kaynak_uslup.md` (soru üslubu). Her aşama YALNIZ kendi dilimini okur (`baglam.py`
+  `DILIM_ASAMA`): önem = atom+hoca+çıkmış, çıkmış analizi = çıkmış (+atom), örnek soru = atom+çıkmış+üslup. `kaynak.md` geriye
+  uyum için dilimlerin birleşimidir; bütün okunmaz.
+- `baglam/sema.md` = aşama çıktı şemaları + kapı komutları (33k şablon dosyası + kapı-kaynağı yerine ~0,2k kelime).
+- **Gerçek ölçüm (k2-28, kelime, 2026-11-16):** kaynak.md 8.529 (hedeflenen ~2k DEĞİL) = atom 5.908 + hoca 2.148 + çıkmış 521 +
+  üslup 63 (her dilimde ~45 kelime ortak başlık). Üç aşamada bütün okuma 25,6k → dilimle ~15,6k.
+- **Kural girdisi (`kural_secici.py --oku`, dosyaların toplamı, kelime):** kaynak 12.575→7.690 · anlatım 14.598→6.967 ·
+  ses 7.502→1.303 · çapa/çizim 11.625→5.563 · ders içerik 8.966→1.944 · Öğren 13.621→7.295 · örnek soru 15.217→5.815 ·
+  PDF 8.588→2.310 · yayın 15.464→8.777. Aşama özetleri toplamı 67,3k→13,4k; kalan ağırlık standart belgelerdir
+  (EL_KITABI 6,3k, OGREN_ETKILESIM 5,1k, DERS_STANDARDI 2,5k). İstem başına `kural_secici.py --ozet <aşama>` (≤300 kelime).
 
 **Nereye baglam, nereye ham slayt (ölçümle, 2026-11-16):**
 - **Örnek soru / önem / çözücü:** `baglam/kaynak.md` + `baglam/sema.md` + `docs/asama_kurallari/<aşama>.md` okur; 33k'lık örnek
-  şablon dosyasını, kapı kaynağını, standart belgelerin tamamını OKUMAZ (birebir slayt zorunluluğu yok; şablon elenir). Girdi
-  ~36,7k → ~3,9k (−%89).
+  şablon dosyasını, kapı kaynağını, standart belgelerin tamamını OKUMAZ (birebir slayt zorunluluğu yok; şablon elenir). Gerçek
+  girdi (k2-28 ölçümü): örnek soru ~23,9k kelime (kaynak.md 8,5k + şema 0,2k + kural 15,2k) → ~12,5k (dilim 6,5k + şema + kural 5,8k).
+  Eski "~3,9k" rakamı gerçeği yansıtmıyordu.
 - **Anlatım:** `sayfalar.json`'ı (TAM slayt) + `baglam/sema.md` + `anlatim.md` okur. `slayt.satir` çapası ve `--dogrula`
   satır-birebir kapısı tam slayt metnini GEREKTİRİR — `baglam/kaynak` yetmez ve kapıyı zayıflatır (`kaynak.md` yoksa satır
   denetimi atlanıyordu). Anlatımda kazanç şablon değil, **kural özeti sıkıştırmasıdır**.

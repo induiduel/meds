@@ -25,20 +25,21 @@ if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
 
-import hashlib
 import json
 import os
 import re
 import sys
-import time
 from pathlib import Path
 
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 MEDS = _kok.MEDS
 sys.path.insert(0, str(MEDS / "scripts/uretim/sesli_anlatim"))
 import ema_isci as E  # noqa: E402
+sys.path.insert(0, str(_kok.SCRIPTS / "uretim/ses_ortak"))
+import ses_klip as SK  # noqa: E402  (seslendir/klasor tek kaynak, 2026-11-16; E.KBPS ezmesi kalktı)
+import ses_metin  # noqa: E402
 
-E.KBPS = 48
+KBPS = 48
 GIRDI = MEDS.parent / "meds_temp/patoloji_onem/asistan2/cikti"
 CIKTI = MEDS / "data/patoloji_asistan/ses"
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
@@ -66,70 +67,30 @@ def klipler(o: dict) -> dict[str, list[str]]:
 
 
 def seslendir(tts, cumleler: list[str]):
-    import numpy as np
+    # Motor metni: ses_metin, yol veriden (patoloji_asistan → Kurul 1 → bitişik; eskiden okunus.duzelt doğrudan)
+    return SK.seslendir(tts, cumleler, okunus=ses_metin.okuyucu(modul=CIKTI.parent.name), kbps=KBPS, E=E)
 
-    sessiz = lambda sn: np.zeros(int(round(sn * E.SR)), dtype=np.float32)  # noqa: E731
-    parca, zaman, t, notlar = [sessiz(ON_SN)], [], ON_SN, []
-    for c in cumleler:
-        bas = t
-        # " || " uzun, " | " kısa durak; parçalar ayrı sentezlenir
-        for i, (par, ayrac) in enumerate(re.findall(r"(.+?)(\|\||\||$)", c.strip())):
-            par = par.strip()
-            if not par:
-                continue
-            wav, n = E.paragraf_seslendir(tts, par)
-            if n:
-                notlar.append(n)
-            parca.append(wav)
-            t += len(wav) / E.SR
-            if ayrac:
-                d = UZUN_SN if ayrac == "||" else KISA_SN
-                parca.append(sessiz(d))
-                t += d
-        zaman.append([bas, t])
-        parca.append(sessiz(CUMLE_SN))
-        t += CUMLE_SN
-    x = np.concatenate(parca)
-    pcm = (np.clip(x, -1, 1) * 32767).astype("<i2").tobytes()
-    mp3 = E.mp3_kodla(pcm)
-    gercek = len(mp3) * 8 / (E.KBPS * 1000)
-    k = gercek / (len(x) / E.SR)
-    return mp3, [[round(a * k, 3), round(b * k, 3)] for a, b in zaman], round(gercek, 3), notlar
+
+class _Model:
+    tts = None
+
+    def __call__(self):
+        if self.tts is None:
+            self.tts = E.model_yukle()
+        return self.tts
 
 
 def main(kodlar: list[str]) -> None:
-    tts = None
+    m = _Model()
+    ok = ses_metin.okuyucu(modul=CIKTI.parent.name)
     for kod in kodlar:
         p = GIRDI / f"{kod}.json"
         if not p.exists():
             E.log(f"{kod}: çıktı yok, atlandı")
             continue
-        o = json.loads(p.read_text(encoding="utf-8"))
-        d = CIKTI / kod
-        d.mkdir(parents=True, exist_ok=True)
-        kp = d / "kayit.json"
-        kayit = json.loads(kp.read_text(encoding="utf-8")) if kp.exists() else {}
-        K = klipler(o)
-        yeni = toplam_sn = 0
-        t0 = time.time()
-        for ad, cumleler in K.items():
-            h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
-            if kayit.get(ad, {}).get("h") == h and (d / f"{ad}.mp3").exists():
-                continue
-            if tts is None:
-                tts = E.model_yukle()
-            mp3, zaman, sure, notlar = seslendir(tts, cumleler)
-            (d / f"{ad}.mp3").write_bytes(mp3)
-            kayit[ad] = {"h": h, "sure": sure, "zaman": zaman, **({"not": notlar} if notlar else {})}
-            yeni += 1
-            toplam_sn += sure
-            kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
-        for ad in [a for a in kayit if a not in K]:  # artık olmayan klipler
-            kayit.pop(ad)
-            (d / f"{ad}.mp3").unlink(missing_ok=True)
-        kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
-        gecen = time.time() - t0
-        E.log(f"{kod}: {len(K)} klip, {yeni} yeni ({toplam_sn:.0f} sn ses, {gecen:.0f} sn'de)")
+        K = klipler(json.loads(p.read_text(encoding="utf-8")))
+        SK.klasor(CIKTI / kod, K, surum=f"{SURUM}|{E.HIZ}", uret=lambda c: SK.seslendir(m(), c, okunus=ok, kbps=KBPS, E=E),
+                  ara_yaz=1, log=E.log)
 
 
 if __name__ == "__main__":

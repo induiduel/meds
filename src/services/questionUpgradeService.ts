@@ -18,12 +18,13 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { cikmisOku, cikmisKaydet } from './cikmisErisim.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DATA_DIR = path.resolve(PROJECT_ROOT, 'data');
-const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
+// pastQuestions.json: cikmisErisim üzerinden (sunucu önbelleği)
 
 export interface AdvancedQuestionData {
   stem: string;
@@ -121,18 +122,15 @@ Lütfen yanıtını KESİNLİKLE aşağıdaki geçerli JSON formatında döndür
  * Save an upgraded question to data/pastQuestions.json
  */
 export function saveUpgradedQuestion(questionId: string, advancedData: AdvancedQuestionData): boolean {
-  if (!fs.existsSync(PAST_QUESTIONS_FILE)) return false;
-
+  // Dosya doğrudan açılmaz/yazılmaz: sunucu önbelleği + savePastQuestionsDb (cikmisErisim) kullanılır.
   try {
-    const list: any[] = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
+    const list: any[] = cikmisOku();
     const idx = list.findIndex(q => q.id === questionId);
     if (idx === -1) return false;
 
-    list[idx].advancedQuestion = advancedData;
-    list[idx].hasAdvancedVersion = true;
-    list[idx].updatedAt = new Date().toISOString();
+    list[idx] = { ...list[idx], advancedQuestion: advancedData, hasAdvancedVersion: true, updatedAt: new Date().toISOString() };
 
-    fs.writeFileSync(PAST_QUESTIONS_FILE, JSON.stringify(list, null, 2), 'utf-8');
+    cikmisKaydet(list, 'questionUpgradeService');
     return true;
   } catch (err: any) {
     console.error('[QuestionUpgradeService] Soru kaydedilemedi:', err.message);

@@ -139,9 +139,11 @@ def main() -> None:
         return
     import numpy as np
     import ema_isci as E
-
-    E.KBPS = 48
-    E.UZUN_KISALTMA = True  # Kurul 2+ okunuşu
+    sys.path.insert(0, str(_kok.SCRIPTS / "uretim/ses_ortak"))
+    import ses_klip as SK
+    import ses_metin
+    # Kurul 2+ okunuşu (uzun kısaltma); eskiden E.UZUN_KISALTMA/E.KBPS genel olarak eziliyordu (2026-11-16 kalktı)
+    okunus = ses_metin.okuyucu(yol="uzun", modul="terim_ses")
     CIKTI.mkdir(parents=True, exist_ok=True)
     kp = CIKTI / "kayit.json"
     kayit = json.loads(kp.read_text(encoding="utf-8")) if kp.exists() else {}
@@ -166,14 +168,14 @@ def main() -> None:
     for i, h in enumerate(bekleyen, 1):
         o = liste[h]
         try:
-            x, n1 = E.paragraf_seslendir(tts, konus(o["b"] + " " + o["g"]))  # tek paragraf: kısa başlık tek başına süre denetimini bozuyordu
+            x, n1 = E.paragraf_seslendir(tts, okunus(konus(o["b"] + " " + o["g"])), hazir=True)  # tek paragraf: kısa başlık tek başına süre denetimini bozuyordu
             n2 = None
-            mp3 = E.mp3_kodla((np.clip(x, -1, 1) * 32767).astype("<i2").tobytes())
+            mp3 = E.mp3_kodla((np.clip(x, -1, 1) * 32767).astype("<i2").tobytes(), kbps=48)
             d = CIKTI / h[:2]
             d.mkdir(exist_ok=True)
-            (d / f"{h}.mp3").write_bytes(mp3)
+            SK.atomik_yaz(d / f"{h}.mp3", mp3)
             kayit[h] = {"t": o["t"], "m": o["b"] + " " + o["g"], "sure": round(len(mp3) * 8 / 48000, 2), "v": vh(o),
-                        "kaynak": sorted(o["kaynak"])[:6], **({"not": [n for n in (n1, n2) if n]} if (n1 or n2) else {})}
+                        "kaynak": sorted(o["kaynak"])[:6], "okunus_surum": ses_metin.SOZLUK_SURUM, **({"not": [n for n in (n1, n2) if n]} if (n1 or n2) else {})}
             yeni += 1
         except Exception as ex:  # tek klip hatası işi durdurmaz; sonda raporlanır
             hata += 1

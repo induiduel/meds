@@ -13,7 +13,7 @@
 Tek-satır dev JSON'lar ripgrep aramasından gizlidir (`.ignore`, `src/data/.ignore`, `data/.ignore`; runtime'a etkisi yok) —
 eskiden tek terim araması 146 MB döndürüyordu. Bunları **asla bütün okuma**; yolu açıkça verip `jq` ile dilimle:
 `src/data/pastQuestions.json` (97 MB), `interactive_learning_decks.json` (85 MB; deste başı okunur kopya derlemede
-`src/data/decks/items/<id>.json`), `sinav_calisma_k1.json`, `lecture_notes.json`, `kazanimlar/k1.json`, `data/local_rag_chunks.json`.
+`src/data/decks/items/<id>.json`), `sinav_calisma_k1.json`, `lecture_notes.json`, `kazanimlar/k1.json`, `data/local_rag_chunks.jsonl`.
 Örnek: `jq '.[] | select(.id=="X")' src/data/pastQuestions.json`, `jq 'keys' src/data/lecture_notes.json | head`.
 **Desteler tek depodan:** Python `scripts/deste_deposu.py` (`hepsi/oku/duzenle/guncelle/sil`, atomik + kilit), sunucu
 `src/services/desteDeposu.ts` (`desteleriOku/desteOku/desteleriYaz`, içerik katmanı üzerinden). Deste dosyasını doğrudan açan

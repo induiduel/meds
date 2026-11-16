@@ -59,6 +59,7 @@ ESLEME = {
     "claude-opus-4-8": "deepseek-v4-pro",
     "claude-opus-4-7": "glm-5.3-flashx",
     "claude-opus-5": "kimi-k2.7-code",
+    "claude-fable-6": "gpt-6-luna",          # model_sec.DENETCI_YEDEK (gpt ailesi)
     "claude-sonnet-5-5": "deepseek-v4.1-flash",
     "claude-sonnet-5": "deepseek-v4.1-flash",
     "claude-haiku-5-5": "claude-haiku-5.5",

@@ -2,7 +2,7 @@
 
 - Asıl kayıtlar `*.json` (havuz, kullanıcı, yönetim); `content/` içerik katmanı farkları (Oracle'da kalıcı katman).
 - Çözücü/asistan sesleri `*_cozucu/ses/`, `*_asistan/ses/`, `sesli_anlatim/ses/` — git dışı, Oracle'a rsync.
-- `local_rag_chunks.json` (~100 MB, git dışı) sunucu açılışında yeniden üretilir.
+- `local_rag_chunks.jsonl` (~130 MB, satır başına parça, git dışı; `.jsonl` yoksa eski `.json` okunur) sunucu açılışında yeniden üretilir.
 
 ## Kurallar
 - `git add -A` YASAK (H583): gizli anahtar (`.kimlik_anahtari`), kayıtlar ve sesler depoya gider; yol listesiyle sahnele. Kapı D9.

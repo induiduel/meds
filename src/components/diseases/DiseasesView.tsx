@@ -1,3 +1,5 @@
+// Sayfa stili tembel parçayla gelir (rebuild.css'ten taşındı); diğer içe aktarmalardan önce: eski kademe sırası korunur
+import '../../styles/sayfa/hastaliklar.css';
 import React, { useState, useMemo, useEffect, useRef, useCallback, memo, useDeferredValue } from 'react';
 import {
   BookOpenText,

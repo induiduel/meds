@@ -1,7 +1,7 @@
 /**
  * Sorgu zekâsı paketi derleyicisi (yalnız Node, ayrı süreçte çalışır — sunucu belleğine girmez).
  *
- * Girdi: data/local_rag_chunks.json (tüm arama derlemi) + sözlük kaynakları (hastalıklar, ansiklopedi,
+ * Girdi: data/local_rag_chunks.jsonl (yoksa eski .json) (tüm arama derlemi) + sözlük kaynakları (hastalıklar, ansiklopedi,
  * tıbbi terimler sözlüğü, küratörlü halk dili eşanlamlıları, ders başlıkları).
  * Çıktı: data/search/query-intel.json (sözcükler, sıklıklar, kavramlar) + query-intel.bin (SymSpell + n-gram).
  * İmza aynıysa yeniden yazmaz (her açılışta çağrılabilir).
@@ -9,6 +9,7 @@
 import fs from 'fs';
 import path from 'path';
 import { type ConceptType, type PackedConcept, SYM_PREFIX, deleteKeys, fnv1a, fold, lemma, splitWords, PhraseMatcher } from './core';
+import { ragParcalariOkuSync } from '../ragParcaDeposu.ts';
 import { PACK_VERSION, type QueryIntelPackJson, encodeBins } from './engine';
 
 const BUILDER_REV = 10;
@@ -250,14 +251,15 @@ export function abbreviationLongForm(longRaw: string, acr: string): string | nul
 export function buildQueryIntelPack(opts: BuildOptions): BuildResult {
   const log = opts.log || (() => {});
   const root = opts.projectRoot;
-  const chunksPath = opts.chunksPath || path.join(root, 'data', 'local_rag_chunks.json');
+  // chunksPath verilirse o dizindeki jsonl/json kuralı uygulanır (ragParcaDeposu: .jsonl esas, yoksa eski .json)
+  const chunksDir = opts.chunksPath ? path.dirname(opts.chunksPath) : path.join(root, 'data');
   const outDir = opts.outDir || path.join(root, 'data', 'search');
   const jsonPath = path.join(outDir, 'query-intel.json');
   const binPath = path.join(outDir, 'query-intel.bin');
   const t0 = Date.now();
 
-  const chunks = readJson<any[]>(chunksPath) || [];
-  if (chunks.length < 100) throw new Error(`derlem boş ya da okunamadı: ${chunksPath}`);
+  const chunks = ragParcalariOkuSync(chunksDir).parcalar;
+  if (chunks.length < 100) throw new Error(`derlem boş ya da okunamadı: ${chunksDir}`);
   let totalLen = 0;
   for (const c of chunks) totalLen += (c.content || '').length;
   const src = lexiconSources(root);

@@ -23,7 +23,6 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const DATA_JSON_PATH = path.resolve(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_JSON_PATH = path.resolve(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 
 const SUPABASE_URL = process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
 const SUPABASE_KEY = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
@@ -49,7 +48,7 @@ function cleanForPostgres(data) {
 }
 
 function loadLocalQuestions() {
-  const targetPath = fs.existsSync(DATA_JSON_PATH) ? DATA_JSON_PATH : SRC_JSON_PATH;
+  const targetPath = DATA_JSON_PATH; // tek kaynak (2026-11-16)
   if (!fs.existsSync(targetPath)) return [];
   try {
     const raw = fs.readFileSync(targetPath, 'utf-8');
@@ -67,9 +66,7 @@ function saveLocalQuestions(questions) {
     if (fs.existsSync(path.dirname(DATA_JSON_PATH))) {
       fs.writeFileSync(DATA_JSON_PATH, content, 'utf-8');
     }
-    if (fs.existsSync(path.dirname(SRC_JSON_PATH))) {
-      fs.writeFileSync(SRC_JSON_PATH, content, 'utf-8');
-    }
+    // src/data aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
     return true;
   } catch (err) {
     console.error('❌ Yerel dosya kaydedilemedi:', err.message);

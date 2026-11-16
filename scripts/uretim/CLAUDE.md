@@ -9,4 +9,5 @@
 - Kapılar 0 HATA: `sik_aciklama.py`, `turkce_uslup.py` (scripts kökü), `uretim/cizim/cizim_kapisi.py`, ilgili `dogrula.py`.
 - LLM adımı `otomasyon/llm_kilit.py` arkasında (`MEDS_LLM_ELLE=1`); EMA sesi GPU istisnası `docs/GPU_KULLANIM.md`.
 - Kök `scripts/kok.py` ile (`parents[N]` yasak); çalışma verisi `meds_temp/<modül>/`, git'e yalnız kod.
+- **Ses (2026-11-16):** EMA'ya giden okunuş YALNIZ `ses_ortak/ses_metin.hazirla` (yol veriden: ders defteri/klasör adı → kurul); klip üretimi `ses_ortak/ses_klip` (`kbps`/`okunus` parametre; `E.KBPS`/`E.okunus.duzelt` ezmek YASAK). Klip karması formülüne dokunma.
 - Ayrıntı: her klasörün `TALIMAT*.md`'si, `scripts/HARITA.md`, `docs/KURUL2_YAPILMAYACAK_HATALAR.md`.

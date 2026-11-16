@@ -22,7 +22,7 @@ const MIRROR: Record<string, string> = {
   practice_questions: 'örnek soru dosyaları',
   lecture_notes: 'ders notu dosyaları',
   committees: 'data/db.json (kurullar)',
-  rag_chunks: 'data/local_rag_chunks.json (vektör hattı)',
+  rag_chunks: 'data/local_rag_chunks.jsonl (vektör hattı)',
 };
 
 const qi = (s: string) => `"${s.replace(/"/g, '""')}"`;

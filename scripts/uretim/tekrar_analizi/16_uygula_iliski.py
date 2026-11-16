@@ -8,7 +8,7 @@
 import json, glob, os, sys, shutil, datetime, collections, re
 RX = re.compile(r'(?m)(^|\s)[A-E]\s*[\)\.]\s+\S.*\n?.*(^|\s)[B-E]\s*[\)\.]\s|çıkmış|ÇIKMIŞ|Doğru Cevap|Doğru cevap|Çözüm|Sınav sorusu|Soru \d', re.S)
 ROOT = '/home/indu/medsor'
-PQ = f'{ROOT}/meds/src/data/pastQuestions.json'
+PQ = f'{ROOT}/meds/data/pastQuestions.json'  # tek kaynak (2026-11-16)
 YAZ = '--yaz' in sys.argv
 NOW = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
 SURUM = 'ozet-kanit-v1'
@@ -61,5 +61,4 @@ assert os.path.getmtime(PQ) == mt0, 'pastQuestions.json değişti — yeniden ç
 Y = f'{ROOT}/yedek/ozet_kanit_{datetime.datetime.now().strftime("%Y%m%d%H%M")}'; os.makedirs(Y, exist_ok=True)
 shutil.copy(PQ, f'{Y}/pastQuestions.json')
 json.dump(Q, open(PQ + '.tmp', 'w'), ensure_ascii=False); os.replace(PQ + '.tmp', PQ)
-shutil.copy(PQ, f'{ROOT}/meds/data/pastQuestions.json')
 print('YAZILDI; yedek:', Y)

@@ -28,7 +28,6 @@ if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
 
-import hashlib
 import json
 import os
 import re
@@ -44,10 +43,13 @@ import ema_isci as E  # noqa: E402
 sys.path.insert(0, str(MEDS / "scripts/uretim/patoloji_cozucu"))
 import kisaltma_ses as KS  # noqa: E402
 
-# Kısaltma okunuşu burada (KS.uzat: "dee nee aa"); okunus.py'nin bitişik yazımı ("denea") kelime gibi okunduğu için kapatılır
-E.okunus.duzelt = lambda metin, kayit=None: metin
+sys.path.insert(0, str(_kok.SCRIPTS / "uretim/ses_ortak"))
+import ses_klip as SK  # noqa: E402  (seslendir/klasor/cumlele/nokta tek kaynak, 2026-11-16)
+import ses_metin  # noqa: E402
 
-E.KBPS = 48
+# Kısaltma okunuşu klip metninde (KS.uzat: "dee nee aa", karmaya dahil); motora giden metin ses_metin uzun yolu.
+# Eskiden E.okunus.duzelt genel olarak kapatılıyor, E.KBPS=48 eziliyordu (aynı süreçteki başka yolu da etkiliyordu) — kalktı.
+KBPS = 48
 GIRDI = MEDS.parent / "meds_temp/patoloji_ornek26/cozucu/cikti_tam"  # cozucu_birlestir.py üretir
 CIKTI = MEDS / "data/patoloji_cozucu/ses"
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
@@ -63,14 +65,7 @@ ORTAK = {"yanlis": ["Yanlış."], "dene": ["Bir daha dene."],
          "oc-son": ["Benzer bir soruyla karşılaşınca da aynı yolu izleyebilirsin."]}
 
 
-def cumlele(s: str) -> list[str]:
-    """Ses metnini cümlelere böl (ekranda cümle vurgusu + doğal durak)."""
-    return [c.strip() for c in re.split(r"(?<=[.!?])\s+", s.strip()) if c.strip()]
-
-
-def nokta(s: str) -> str:
-    s = s.strip()
-    return s if s[-1:] in ".!?" else s + "."
+cumlele, nokta = SK.cumlele, SK.nokta
 
 
 def klipler(o: dict) -> dict[str, list[str]]:
@@ -93,35 +88,14 @@ def klipler(o: dict) -> dict[str, list[str]]:
     return k
 
 
-def seslendir(tts, cumleler: list[str]):
-    import numpy as np
+def okuyucu():
+    """Çözücü klipleri tasarım gereği uzun kısaltma yolunda (SURUM ema-2); CIKTI çağrı anında okunur (kmb/ses.py değiştirir)."""
+    return ses_metin.okuyucu(yol="uzun", modul=CIKTI.parent.name)
 
-    sessiz = lambda sn: np.zeros(int(round(sn * E.SR)), dtype=np.float32)  # noqa: E731
-    parca, zaman, t, notlar = [sessiz(ON_SN)], [], ON_SN, []
-    for c in cumleler:
-        bas = t
-        for par, ayrac in re.findall(r"(.+?)(\|\||\||$)", c.strip()):
-            par = par.strip()
-            if not par:
-                continue
-            wav, n = E.paragraf_seslendir(tts, par)
-            if n:
-                notlar.append(f"{n}: {par[:50]}")
-            parca.append(wav)
-            t += len(wav) / E.SR
-            if ayrac:
-                d = UZUN_SN if ayrac == "||" else KISA_SN
-                parca.append(sessiz(d))
-                t += d
-        zaman.append([bas, t])
-        parca.append(sessiz(CUMLE_SN))
-        t += CUMLE_SN
-    x = np.concatenate(parca)
-    pcm = (np.clip(x, -1, 1) * 32767).astype("<i2").tobytes()
-    mp3 = E.mp3_kodla(pcm)
-    gercek = len(mp3) * 8 / (E.KBPS * 1000)
-    k = gercek / (len(x) / E.SR)
-    return mp3, [[round(a * k, 3), round(b * k, 3)] for a, b in zaman], round(gercek, 3), notlar
+
+def seslendir(tts, cumleler: list[str], okunus=None):
+    """Geriye uyum imzası (patoloji_cozucu_alt, kmb): ortak ses_klip.seslendir'e bağlanır."""
+    return SK.seslendir(tts, cumleler, okunus=okunus or okuyucu(), kbps=KBPS, E=E)
 
 
 class Model:
@@ -134,29 +108,9 @@ class Model:
 
 
 def klasor(m: Model, ad: str, K: dict[str, list[str]], silinsin: bool = True) -> None:
-    d = CIKTI / ad
-    d.mkdir(parents=True, exist_ok=True)
-    kp = d / "kayit.json"
-    kayit = json.loads(kp.read_text(encoding="utf-8")) if kp.exists() else {}
-    yeni = toplam_sn = 0
-    t0 = time.time()
-    for klip, cumleler in K.items():
-        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler) + E.okunus.sayi_imi(cumleler)).encode()).hexdigest()[:12]
-        if kayit.get(klip, {}).get("h") == h and (d / f"{klip}.mp3").exists():
-            continue
-        mp3, zaman, sure, notlar = seslendir(m(), cumleler)
-        (d / f"{klip}.mp3").write_bytes(mp3)
-        kayit[klip] = {"h": h, "sure": sure, "zaman": zaman, **({"not": notlar} if notlar else {})}
-        yeni += 1
-        toplam_sn += sure
-        if yeni % 10 == 0:
-            kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
-    if silinsin:
-        for klip in [a for a in kayit if a not in K]:
-            kayit.pop(klip)
-            (d / f"{klip}.mp3").unlink(missing_ok=True)
-    kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
-    E.log(f"{ad}: {len(K)} klip, {yeni} yeni ({toplam_sn:.0f} sn ses, {time.time() - t0:.0f} sn'de)")
+    ok = okuyucu()
+    SK.klasor(CIKTI / ad, K, surum=f"{SURUM}|{E.HIZ}", uret=lambda c: SK.seslendir(m(), c, okunus=ok, kbps=KBPS, E=E),
+              silinsin=silinsin, log=E.log)
 
 
 def main(kodlar: list[str]) -> None:

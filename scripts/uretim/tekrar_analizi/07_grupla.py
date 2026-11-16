@@ -7,12 +7,12 @@ Kural (kullanıcı, 2026-10-14):
   - Emin olunamayanlar (yıl/sınav belirsiz) → birleştirilmez, raporlanır.
 
 Çıktılar (kuru çalıştırmada yalnız rapor): gruplar_yeni.json, aileler.json, rapor.json
-`--yaz`: birlestirmeler.json + pastQuestions.json (src/data + data) güncellenir (önce yedek). Önce `systemctl --user stop meds-web`.
+`--yaz`: birlestirmeler.json + pastQuestions.json (data; tek kaynak) güncellenir (önce yedek). Önce `systemctl --user stop meds-web`.
 """
 import json, glob, collections, datetime, re, shutil, sys, unicodedata
 
 ROOT = '/home/indu/medsor'
-PQ = f'{ROOT}/meds/src/data/pastQuestions.json'
+PQ = f'{ROOT}/meds/data/pastQuestions.json'  # tek kaynak (2026-11-16)
 MF = f'{ROOT}/meds_database_v2/soru_birlestirme/birlestirmeler.json'
 YAZ = '--yaz' in sys.argv
 NOW = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')

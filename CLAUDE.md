@@ -29,7 +29,7 @@ UI text, prompts and most comments are Turkish. Keep new user-facing strings Tur
 - No test suite. Verify retrieval changes with a small `tsx` script against `searchRagChunks`
   (see "Retrieval" below) and AI routes by starting the server and curling the endpoint.
 
-Starting the server has side effects: it rebuilds `data/local_rag_chunks.json` (gitignored, ~100MB)
+Starting the server has side effects: it rebuilds `data/local_rag_chunks.jsonl` (JSONL, one chunk per line; old `.json` read only if `.jsonl` is missing — `src/services/ragParcaDeposu.ts`; gitignored, ~130MB)
 and may write to `data/*.json`. Check `git status` afterwards and revert unintended data changes.
 
 ## Layout

@@ -21,7 +21,9 @@ from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[2]                     # meds/
 VARSAYILAN = "claude-opus-5-5"                                 # köprüde deepseek-v4-pro
-DENETCI = "claude-sonnet-5-5"                                  # köprüde deepseek-v4.1-flash
+DENETCI = "claude-opus-4-7"                                    # köprüde glm-5.3-flashx (yazardan AYRI aile, kural 31)
+# denetçi yazarla aynı aileye çözülürse sırayla denenen takma adlar (rotalar.json'da tanımlı; glm → gpt → kimi)
+DENETCI_YEDEK = ("claude-opus-4-7", "claude-fable-6", "claude-opus-5")
 HIZLI = "claude-haiku-4-5-20251001"                            # köprüde claude-haiku-5.5
 
 
@@ -46,8 +48,18 @@ def _claude_env() -> dict:
         return {}
 
 
-def ajan_model(rol: str = "yazar") -> str:
-    """Agentik `claude -p --model` kimliği. `rol`: yazar | denetci | hizli."""
+def aile(ad: str) -> str:
+    """Model adının (Anthropic takma adı ya da geçit kimliği) geçitteki ailesi: deepseek, glm, gpt, kimi …"""
+    try:
+        import sys
+        sys.path.insert(0, str(MEDS / "otomasyon"))
+        from llm.opendesign import aile as _aile  # noqa: PLC0415
+        return _aile(ad)
+    except Exception:  # noqa: BLE001
+        return (ad or "").split("-")[0]
+
+
+def _ham(rol: str) -> str:
     if rol == "denetci":
         ozel = os.environ.get("MEDS_AJAN_MODEL_DENETCI")
         if ozel:
@@ -62,11 +74,22 @@ def ajan_model(rol: str = "yazar") -> str:
     b = _butce()
     env = _claude_env()
     if rol == "denetci":
-        # yazar ≠ denetçi (AGENTS kural 14/26): ayrı aile istenmedikçe glm'e düşülür
         return b.get("model_denetci") or env.get("ANTHROPIC_DEFAULT_SONNET_MODEL") or DENETCI
     if rol == "hizli":
         return b.get("model_hizli") or env.get("ANTHROPIC_DEFAULT_HAIKU_MODEL") or HIZLI
     return b.get("model") or env.get("ANTHROPIC_DEFAULT_OPUS_MODEL") or VARSAYILAN
+
+
+def ajan_model(rol: str = "yazar") -> str:
+    """Agentik `claude -p --model` kimliği. `rol`: yazar | denetci | hizli.
+    Denetçi yazarla AYNI aileye çözülürse (ör. MEDS_AJAN_MODEL hepsini deepseek'e çekti) DENETCI_YEDEK'ten ilk farklı aile
+    seçilir (yazar ≠ denetçi, AGENTS kural 14/26/31). Yalnız açık `MEDS_AJAN_MODEL_DENETCI` olduğu gibi kalır."""
+    ad = _ham(rol)
+    if rol == "denetci" and not os.environ.get("MEDS_AJAN_MODEL_DENETCI"):
+        yazar_aile = aile(_ham("yazar"))
+        if aile(ad) == yazar_aile:
+            ad = next((x for x in DENETCI_YEDEK if aile(x) != yazar_aile), ad)
+    return ad
 
 
 def gecit_model(rol: str = "yazar") -> str:

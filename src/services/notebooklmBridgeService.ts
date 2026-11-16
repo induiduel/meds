@@ -17,7 +17,6 @@ const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
 
 
 const SUMMARIES_CATALOG_FILE = path.resolve(SRC_DATA_DIR, 'lectureSummariesCatalog.json');
-const DATA_SUMMARIES_CATALOG_FILE = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
 
 const GLOSSARY_FILE = path.resolve(SRC_DATA_DIR, 'medical_glossary.json');
 const ENCYCLOPEDIA_FILE = path.resolve(SRC_DATA_DIR, 'medical_encyclopedia.json');
@@ -230,7 +229,7 @@ export function exportPastExamsToMarkdown(options: {
 }
 
 export function exportSummariesToMarkdown(options: { kurul?: string; limit?: number } = {}): string {
-  const summaries: any[] = readJsonSafe(SUMMARIES_CATALOG_FILE, []);
+  const summaries: any[] = readJsonSafe(resolveContent(SUMMARIES_CATALOG_FILE), []);
   let filtered = summaries;
   if (options.kurul) {
     const kStr = String(options.kurul).toLowerCase();
@@ -723,7 +722,7 @@ export function ingestInteractiveDeck(payload: any): IngestionResult {
  */
 export function ingestSpotPearls(payload: any): IngestionResult {
   const items: any[] = Array.isArray(payload) ? payload : [payload];
-  const summaries: any[] = readJsonSafe(SUMMARIES_CATALOG_FILE, []);
+  const summaries: any[] = readJsonSafe(resolveContent(SUMMARIES_CATALOG_FILE), []);
   const updatedIds: string[] = [];
 
   items.forEach((item) => {
@@ -747,8 +746,7 @@ export function ingestSpotPearls(payload: any): IngestionResult {
     }
   });
 
-  writeJsonAtomic(SUMMARIES_CATALOG_FILE, summaries);
-  writeJsonAtomic(DATA_SUMMARIES_CATALOG_FILE, summaries);
+  writeJsonAtomic(writableContent(SUMMARIES_CATALOG_FILE), summaries); // tek asıl kaynak (katman); data/ kopyası yok
   markContentChanged('summaries', updatedIds);
 
   return {

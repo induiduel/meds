@@ -418,3 +418,6 @@
 - **H582** · "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez": slug çakışması + katman kaydı yok → hatalar/veri_cikmis.md
 - **H583** · "`git add -A` gizli anahtarı ve 600 MB çalışma verisini herkese açık depoya gönderdi": eksik .gitignore + kör toplu ekleme → hatalar/dagitim_icerik_katmani.md
 - **H584** · "patoloji_onem betikleri veriyi bulamıyor; arsiv_yayinla çıkmış konumunda `lib` bulunamayabilir": çift kopya kalıntısı yol + yan etkiye bağlı sys.path → hatalar/betik_altyapi.md
+- **H585** · "Onarım/redaksiyon servisleri çıkmış soru dosyasını önbelleği atlayarak yazıyordu (yazma yarışı)": doğrudan dosya yazımı → tek erişim `cikmisErisim` → hatalar/dagitim_icerik_katmani.md
+- **H586** · "Çözücü/asistan/Öğren seslerinde terim ve kısaltma okunuşu uygulanmıyor; 'engel' → 'Engıl'": okunuş 9 yerde + elle anahtar listesi → `ses_ortak/ses_metin` → hatalar/ses.md
+- **H587** · "16 Öğren klibi 14–22 dk sürüyor; bozuk ses yayına çıkabiliyor": ses kalite kapısı yoktu → `ses_ortak/ses_kapisi.py` → hatalar/ses.md

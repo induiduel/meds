@@ -15,7 +15,7 @@ import { smartComposerService } from '../../../src/services/smartComposerService
 
 const arg = (k: string) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : undefined; };
 const verbose = process.argv.includes('--verbose');
-const all: any[] = JSON.parse(fs.readFileSync('src/data/pastQuestions.json', 'utf8'));
+const all: any[] = JSON.parse(fs.readFileSync('data/pastQuestions.json', 'utf8'));
 let testPath = arg('--test'), modelPath = arg('--model');
 if (!testPath) {
   // sabit tohumla %10 test kümesi; model yalnız kalan %90'dan derlenir (sızıntı yok)

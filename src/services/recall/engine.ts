@@ -11,6 +11,7 @@
  */
 import fs from 'fs';
 import path from 'path';
+import { ozetKataloguYolu } from '../contentOverlay.ts';
 import {
   fold, words, isStop, ABBREV, VALID_SHORT_MED, DERS_HINT, claimedLetter, claimedText, questionNumber, letteredOptions, unletteredOptions,
   negativeLikelihood, cleanSentence, classifyRecallRole, extractStemClause, type Letter, type RecallRole,
@@ -197,7 +198,7 @@ function loadSources(rootDir: string, opts: LoadOptions) {
       conceptPairs.push({ head: `${d.name} ${d.latinName || ''}`, body: `${d.definition || ''} ${d.morphologyOrMechanism || ''} ${d.examSpotPearls || ''}` });
     }
   }
-  const summaries: SummaryRow[] = (opts.lectureSummaries || readJson<any[]>(path.join(rootDir, 'data/lectureSummariesCatalog.json'), []))
+  const summaries: SummaryRow[] = (opts.lectureSummaries || readJson<any[]>(ozetKataloguYolu(rootDir), []) /* tek asıl kaynak */)
     .filter((sm: any) => sm?.committeeId && sm.discipline && typeof sm.content === 'string')
     .map((sm: any) => ({ committeeId: String(sm.committeeId), discipline: String(sm.discipline), title: String(sm.title || ''), content: String(sm.content) }));
   const curriculum = readJson<Record<string, string[]>>(path.join(rootDir, 'src/data/curriculum_disciplines.json'), {});

@@ -15,6 +15,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import deste_deposu as dd  # noqa: E402
+import rag_parca_deposu as rpd  # noqa: E402
 KOK = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SD = os.path.join(KOK, 'src', 'data')
 DD = os.path.join(KOK, 'data')
@@ -137,12 +138,12 @@ def cozucu():
                             f"{url}&coz={q.get('no')}", f'src/data/{dizin}/{fn}', n.get('baslik', ''), kurul, slug, zorluk=q.get('zorluk'), sayfa=q.get('sayfa'), ses=f"q-{q.get('no')}" in (n.get('klip') or {}))
 
 def cikmis():
-    for q in yukle(os.path.join(SD, 'pastQuestions.json')):
+    for q in yukle(os.path.join(DD, 'pastQuestions.json')):
         r = q.get('reconstruction') or {}
         sk = q.get('options') or r.get('options') or []
         sk = '; '.join(f"{o.get('label', chr(65+i))}) {o.get('text', o)}" if isinstance(o, dict) else f'{chr(65+i)}) {o}' for i, o in enumerate(sk))
         yield belge('cikmis_soru', q['id'], q.get('topic'), birles(q.get('stem') or r.get('stem'), sk, 'Doğru: ' + s(q.get('correctAnswer')), q.get('explanation') or r.get('explanation')),
-                    f"/sorular/cikmis/{q['id']}", 'src/data/pastQuestions.json', q.get('discipline', ''), q.get('kurul'), '', yil=q.get('examYear'), committee=q.get('committeeId'))
+                    f"/sorular/cikmis/{q['id']}", 'data/pastQuestions.json', q.get('discipline', ''), q.get('kurul'), '', yil=q.get('examYear'), committee=q.get('committeeId'))
 
 def ornek_sorular():
     for k in ('k1', 'k2'):
@@ -237,7 +238,7 @@ def main():
                     out.write(json.dumps(b, ensure_ascii=False) + '\n')
             except Exception as e:
                 hata[fn.__name__] = repr(e)
-    rag = collections.Counter(c.get('documentType') for c in yukle(os.path.join(DD, 'local_rag_chunks.json')))
+    rag = collections.Counter(c.get('documentType') for c in rpd.parcalari_oku(_Path(DD)))
     rapor = {'belge_sayisi': dict(sayac), 'toplam': sum(sayac.values()), 'bos_metin_atlandi': dict(bos), 'cok_kisa_metin': dict(kisa),
              'tekrar_kimlik': len(tekrar), 'tekrar_ornek': tekrar[:10], 'rag_chunk_turleri': dict(rag), 'hatalar': hata}
     json.dump(rapor, open(os.path.join(CIKTI, 'envanter_rapor.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

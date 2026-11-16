@@ -516,7 +516,6 @@ export async function runFullSync() {
   // 4. ADIM: Soruları Yerel data/pastQuestions.json ile Birleştir (Çıkmış Sorular Arşivi)
   console.log('\n💾 4. ADIM: Sorular Çıkmış Soru Arşivine (pastQuestions.json) Aktarılıyor...');
   const pastJsonPath = path.join(process.cwd(), 'data', 'pastQuestions.json');
-  const srcPastJsonPath = path.join(process.cwd(), 'src', 'data', 'pastQuestions.json');
   let existingPastQuestions = [];
   if (fs.existsSync(pastJsonPath)) {
     try {
@@ -551,9 +550,7 @@ export async function runFullSync() {
   }
 
   fs.writeFileSync(pastJsonPath, JSON.stringify(existingPastQuestions, null, 2), 'utf8');
-  if (fs.existsSync(path.dirname(srcPastJsonPath))) {
-    fs.writeFileSync(srcPastJsonPath, JSON.stringify(existingPastQuestions, null, 2), 'utf8');
-  }
+  // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
   console.log(`   ✓ data/pastQuestions.json güncellendi! (Yeni eklenen: ${newAddedCount}, Toplam Çıkmış Soru: ${existingPastQuestions.length})`);
 
   if (newAddedCount > 0) {

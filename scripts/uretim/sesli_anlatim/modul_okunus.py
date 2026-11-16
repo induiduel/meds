@@ -76,6 +76,9 @@ ON = ["", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen
 def sayi_oku(n: int) -> str:
     if n == 0:
         return "sıfır"
+    if n >= 1000:  # 2026-11-16: binler BIR[n // 100] ile IndexError veriyordu (ör. HbA1c dışı yıl/sayı içeren kısaltma)
+        import okunus
+        return okunus.sayi_oku(n)
     if n >= 100:
         return " ".join(x for x in [("" if n // 100 == 1 else BIR[n // 100]) + " yüz", sayi_oku(n % 100) if n % 100 else ""] if x).strip()
     return " ".join(x for x in (ON[n // 10], BIR[n % 10]) if x)

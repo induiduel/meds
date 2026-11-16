@@ -233,7 +233,7 @@ def title_sim(a: list[str], b: list[str]) -> float:
 def main() -> None:
     rapor = '--rapor' in sys.argv
     muf = json.loads((DATA / 'mufredat_paketi.json').read_text('utf-8'))
-    summaries = json.loads((DATA / 'lectureSummariesCatalog.json').read_text('utf-8'))
+    summaries = json.loads(_kok.OZET_KATALOG.read_text('utf-8'))
     diseases = json.loads((DATA / 'diseases.json').read_text('utf-8'))
     sum_by_id = {s['id']: s for s in summaries}
 

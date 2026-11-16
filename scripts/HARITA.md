@@ -22,15 +22,17 @@ scripts/
 ```
 
 ## hat/ — orkestrasyon (tam hat tek giriş: `hat/tam_hat/kosucu.py`)
-- `tam_hat/` — **içerik üretiminin tek hattı** (`mod.py` katmanlar, `baglam.py` read-once, `hazirlik.py`, `ders_kilit.py`). Önce burası.
+- `tam_hat/` — **içerik üretiminin tek hattı** (`mod.py` katmanlar, `baglam.py` read-once, `hazirlik.py`, `ders_kilit.py`, `manifest.py` ders başına katman manifesti → `ders_bilgi/<key>/katman_manifest.json`). Önce burası.
 - `takvim/` (aktif kurul) · `dersler/` (ders kayıt defteri) · `onem/` · `oncelikli_dersler/` · `olasi_soru/` (gece.sh) ·
   `paket/` (.medspak) · `quiz_motoru/` (quiz KAPALI, kural 19)
 
 ## uretim/ — içerik üretimi
 - Ders: `ders_isci/` (yayinla.py, denetle.py) · `sesli_anlatim/` (EMA/XTTS işçisi, cümle/kelime zamanı, pdf_isaret, terim) ·
   `ders_analizi/` · `ders_icerik/` · `ders_video/` · `ogren_ses/` · `ek_modul/`
+- Ses ortak: `ses_ortak/` (`ses_kapisi.py`: ses kalite kapısı + kayıt↔disk↔Oracle boyut denetimi + artık raporu; CPU, salt okunur)
 - Görsel: `cizim/` (cizim_kapisi, TALIMAT_CIZIM) · `kroki/` · `ara_resim/` · `lottie/` · `kmb/`
 - Soru/çözücü: `spot_cozucu/` (ses.py, onem_dogrula, cozucu_dogrula) · `patoloji_cozucu/` (cozucu_ses_gpu.sh) ·
+  `ses_ortak/` (EMA okunuş tek girişi `ses_metin.hazirla` + klip çekirdeği `ses_klip` + `okunus_farki.py` raporu) ·
   `patoloji_cozucu_alt/` · `patoloji_soru_isci/` · `patoloji_onem/` · `patoloji_checkup/` · `sinav_spotlari/` · `cikmis_paket/`
 - Hoca/öğrenci: `hoca_profili/` · `hoca_ara_soru/` · `hoca_vurgu/` · `ogrenci_onem/` · `ogrenci_drive/`
 - Kamp/tekrar: `son_prova/` · `blok_ozet/` · `kamp/` · `tekrar_analizi/`
@@ -58,7 +60,7 @@ scripts/
 `recall/` (soru havuzu motoru) · `composer/` · `sozluk_v2/` · `diseases/` · `saglik/` · `eval/` (`npm run eval:*`)
 
 <!-- kok-dosyalar:bas -->
-## Kök dosyalar (78) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
+## Kök dosyalar (79) — otomatik: `python3 scripts/altyapi/betik_haritasi.py`
 
 **Kapılar / doğrulayıcılar** (10)
 - `audit-and-disconnect-faulty-slides.mjs` — MeDSor Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1)
@@ -135,7 +137,7 @@ scripts/
 - `rebuild-all-past-questions.mjs` — meds_sorular_txt'ten tüm çıkmış soru verisini yeniden kurar
 - `slide-matching-utils.mjs` — MeDSor Slayt Eşleştirme ve Denetim Yardımcı Modülü
 
-**Diğer** (13)
+**Diğer** (14)
 - `automation-runner.mjs` — MeDSor Central Script & Automation Runner Engine
 - `deck_pdf_slide_duzeltme.json` — deste ↔ PDF slayt eşleme düzeltmeleri (build_deck_pdf_sources girdisi)
 - `fast_hybrid_server.py` — MeDSor Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request).
@@ -145,6 +147,7 @@ scripts/
 - `manage-service.sh` — manage-service.ps1'in Linux karşılığı.
 - `master_controller.py` — MeDSor Master Orchestrator & Supervisor (scripts/master_controller.py)
 - `monitor.py` — MeDSor Canlı Terminal Kokpiti ve Boru Hattı İzleyici (Terminal Dashboard v2)
+- `rag_parca_deposu.py` — RAG parça deposu okuyucusu (Python eşi: src/services/ragParcaDeposu.ts).
 - `scripts-meta.json` — betik üstverisi (eski otomasyon panelinin listesi)
 - `show-notification.ps1` — Windows: masaüstü bildirimi gösterir (eski)
 - `test-filter-donem3.mjs` — Dönem 3 müfredat süzgecini çıkmış sorularda sınar

@@ -25,7 +25,6 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const LECTURE_NOTES_PATH = path.join(ROOT_DIR, 'data', 'lecture_notes.json');
 const STATUS_PATH = path.join(ROOT_DIR, 'data', 'ai-redactor-status.json');
 
@@ -76,9 +75,7 @@ function loadPastQuestions() {
 function savePastQuestions(questions) {
   try {
     fs.writeFileSync(DATA_PAST_PATH, JSON.stringify(questions, null, 2), 'utf8');
-    if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-      fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(questions, null, 2), 'utf8');
-    }
+    // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
   } catch (e) {
     console.error('Hata: pastQuestions.json kaydedilemedi:', e.message);
   }

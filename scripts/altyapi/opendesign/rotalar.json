@@ -5,7 +5,7 @@
   "routes": [
     {"advertised": "claude-sonnet-5", "upstream": "deepseek-v4.1-flash", "label": "DeepSeek V4.1 Flash (varsayılan)"},
     {"advertised": "claude-opus-4-8", "upstream": "deepseek-v4-pro", "label": "DeepSeek V4 Pro"},
-    {"advertised": "claude-opus-4-7", "upstream": "glm-5.3-flashx", "label": "GLM 5.3 FlashX"},
+    {"advertised": "claude-opus-4-7", "upstream": "glm-5.3-flashx", "label": "GLM 5.3 FlashX (denetçi: model_sec.DENETCI)"},
     {"advertised": "claude-opus-5", "upstream": "kimi-k2.7-code", "label": "Kimi K2.7 Code"},
     {"advertised": "claude-haiku-5-5", "upstream": "claude-haiku-5.5", "label": "Claude Haiku 5.5"},
     {"advertised": "claude-fable-5", "upstream": "hy4-preview", "label": "HY4 (önizleme)"},
@@ -20,7 +20,7 @@
 
     {"advertised": "claude-opus-5-5", "upstream": "deepseek-v4-pro", "label": "depo adı: DeepSeek V4 Pro (yazar)", "alias": true},
     {"advertised": "claude-opus-5-1", "upstream": "deepseek-v4-pro", "label": "depo adı: DeepSeek V4 Pro", "alias": true},
-    {"advertised": "claude-sonnet-5-5", "upstream": "deepseek-v4.1-flash", "label": "depo adı: DeepSeek V4.1 Flash (denetçi)", "alias": true},
+    {"advertised": "claude-sonnet-5-5", "upstream": "deepseek-v4.1-flash", "label": "depo adı: DeepSeek V4.1 Flash (eski denetçi adı; yazarla aynı aile — denetçi artık claude-opus-4-7)", "alias": true},
     {"advertised": "claude-haiku-4-5-20251001", "upstream": "claude-haiku-5.5", "label": "depo adı: Claude Haiku 5.5", "alias": true},
 
     {"advertised": "claude-od-01", "upstream": "deepseek-v4.1-flash", "label": "eski ad: DeepSeek V4.1 Flash (varsayılan)", "alias": true},

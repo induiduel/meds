@@ -10,7 +10,7 @@ PDF satır sarmalamaları (cümle ortasında alt satıra geçme) kesilmez: yeni 
 önceki satırda kapanmamış parantez varsa sarmalama sayılır.
 
 Girdi : $MEDS_TEMP_DIR/temp2/**/*.md   (varsayılan: ../meds_temp)
-Çıktı : data/lectureSummariesCatalog.json, src/data/lectureSummariesCatalog.json, src/data/summaries/kurul*.json
+Çıktı : src/data/lectureSummariesCatalog.json (tek asıl kaynak), src/data/summaries/kurul*.json
         (yalnızca `content` alanı). Yazmadan önce özgün dosyalar $MEDS_TEMP_DIR/ozet_satir_yedek/<zaman>/ altına kopyalanır.
 Çalıştır: python3 scripts/altyapi/pipeline/11-restore-summary-lines.py          # deneme: istatistik + örnek
           python3 scripts/altyapi/pipeline/11-restore-summary-lines.py --yaz    # dosyalara yaz
@@ -29,8 +29,7 @@ from collections import Counter
 
 ROOT = os.path.abspath(str(_kok.MEDS))
 TEMP_DIR = os.environ.get('MEDS_TEMP_DIR') or os.path.abspath(os.path.join(ROOT, '..', 'meds_temp'))
-TARGETS = [os.path.join(ROOT, 'data', 'lectureSummariesCatalog.json'),
-           os.path.join(ROOT, 'src', 'data', 'lectureSummariesCatalog.json')] + \
+TARGETS = [str(_kok.OZET_KATALOG)] + \
           sorted(glob.glob(os.path.join(ROOT, 'src', 'data', 'summaries', 'kurul*.json')))
 
 TR = str.maketrans({'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u', 'â': 'a', 'î': 'i', 'û': 'u'})

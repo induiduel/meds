@@ -3,7 +3,7 @@
 Sağlık Bakanlığı sekmesi (/saglik) — ders bağlarını üretir (yerel, modelsiz).
 
 Her bölüm için müfredattaki karşılıkları bulur:
-  - çıkmış sorular  (src/data/pastQuestions.json: disiplin+konu eşleşmesi ya da kökte anahtar kelime)
+  - çıkmış sorular  (data/pastQuestions.json: disiplin+konu eşleşmesi ya da kökte anahtar kelime)
   - kazanımlar      (src/data/kazanimlar/lite/k*.json)
   - Öğren desteleri (src/data/interactive_learning_decks.json; aynı sürüm grubundan en yenisi)
   - sınav spotları  (src/data/exam_spots_k1.json)
@@ -196,7 +196,7 @@ def kurul_no(q: dict):
 def main() -> None:
     global HAVUZ
     HAVUZ = yukle(OUT / "havuz.json") if (OUT / "havuz.json").exists() else None
-    sorular = yukle(DATA / "pastQuestions.json")
+    sorular = yukle(_kok.CIKMIS)
     desteler = dd.hepsi()
     spot_veri = yukle(DATA / "exam_spots_k1.json")
     pdf_kaynak = yukle(DATA / "deckPdfSources.json").get("decks", {})

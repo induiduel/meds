@@ -38,7 +38,7 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "degerlendirme": ("E1", "llm", "Değerlendirme paketi: baglam yoktur (paketi BU üretir). Oku: sayfalar.json + op/ + cikmis_aday.json + "
                                    "docs/asama_kurallari/kaynak.md. Üret: meds_database_v2/ders_bilgi/{d}/degerlendirme/paket.json + cikmis_konum. "
                                    "Kapı: degerlendirme_dogrula.py {d} --pdf {k}/orijinal.pdf → 0 HATA. SONRA: baglam üret."),
-    "_baglam":     ("E1", "betik", "python3 scripts/hat/tam_hat/baglam.py {k} --ders {d} --mod {m}   (read-once: paket→baglam/kaynak.md+sema.md)"),
+    "_baglam":     ("E1", "betik", "python3 scripts/hat/tam_hat/baglam.py {k} --ders {d} --mod {m}   (read-once: paket→baglam/kaynak_<atom|hoca|cikmis|uslup>.md + kaynak.md birleşimi + sema.md)"),
     "anlatim":     ("E2", "llm", "Anlatım konusma_v2: OKU {k}/sayfalar.json (TAM slayt — `satir` çapası ve --dogrula satır-birebir kapısı "
                                  "bunu gerektirir; baglam/kaynak YETMEZ, kapıyı zayıflatır — ölçüm 2026-11-16) + baglam/sema.md (§anlatım) + "
                                  "docs/asama_kurallari/anlatim.md. ÜRET {k}/anlatim/v2/konusma_v2.json. "
@@ -48,10 +48,10 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "ema_ses":     ("E3", "ses", "EMA ses: ders-ekle kuyruğa koydu → meds-ema (CPU) üretir. Çözücü: ses.py --brans <brans> <kod> (CPU: CUDA_VISIBLE_DEVICES=)."),
     "zaman_isaret": ("E3", "betik", "cumle_zaman.py / kelime_zaman.py (ses sonrası, yalnız yeni klipler)"),
     "cikmis_chip": ("E3", "betik", "cikmis_konum.py --ders {d}  (yayınlı paragraflardan p/c)"),
-    "cikmis_analiz": ("E3", "llm", "Ayrıntılı çıkmış analizi: OKU baglam/kaynak.md (§çıkmış). ÜRET ders_bilgi/{d}/degerlendirme/cikmis_analiz.json. Kapı: ders_analizi/uret.py --dogrula {d}."),
+    "cikmis_analiz": ("E3", "llm", "Ayrıntılı çıkmış analizi: OKU baglam/kaynak_cikmis.md (+ gerekirse kaynak_atom.md). ÜRET ders_bilgi/{d}/degerlendirme/cikmis_analiz.json. Kapı: ders_analizi/uret.py --dogrula {d}."),
     "terim_kisaltma": ("E3", "betik", "kisaltma_sozlugu.py otomatik {d} --yaz · terim_sozlugu.py otomatik {d} --yaz (MEDS_API=Oracle; yayın SONRASI canli-ders tazeyse)"),
-    "onem_listesi": ("E2", "llm", "Önem listesi: OKU baglam/kaynak.md + baglam/sema.md (§önem). spot_cozucu çalışma dosyası onem/<kod>.json. Kapı: onem_dogrula.py → 0 HATA."),
-    "ornek_soru":  ("E2", "llm", "Örnek sorular + çözücü: OKU baglam/kaynak.md + baglam/sema.md (§örnek, §çözücü) + docs/asama_kurallari/ornek_soru.md. "
+    "onem_listesi": ("E2", "llm", "Önem listesi: OKU baglam/kaynak_atom.md + kaynak_hoca.md + kaynak_cikmis.md + baglam/sema.md (§önem) + `kural_secici.py --ozet ornek_soru`. spot_cozucu çalışma dosyası onem/<kod>.json. Kapı: onem_dogrula.py → 0 HATA."),
+    "ornek_soru":  ("E2", "llm", "Örnek sorular + çözücü: OKU baglam/kaynak_atom.md + kaynak_cikmis.md + kaynak_uslup.md + baglam/sema.md (§örnek, §çözücü) + docs/asama_kurallari/ornek_soru.md (önce `kural_secici.py --ozet ornek_soru`). "
                                  "ÜRET src/data/ornek_sorular/k2/{d}.json + cozucu/<kod>.json. "
                                  "TEK KAPI örnek soru (4 kapı tek çağrıda): python3 scripts/hat/tam_hat/ornek_soru_kapi.py src/data/ornek_sorular/k2/{d}.json "
                                  "--uslup {k}/soru_uslubu.json --ders \"<ders>\" --sayfalar {k}/sayfalar.json → 0 HATA. Çözücü ayrı: cozucu_dogrula."),

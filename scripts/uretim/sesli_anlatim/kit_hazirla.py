@@ -28,7 +28,7 @@ EMEL_SIRA = [28, 29, 30, 32, 33, 37, 38, 41, 42, 44, 45, 46, 48, 49, 53, 55, 67,
 decks = dd.hepsi()
 byid = {d['id']: d for d in decks}
 pdfsrc = json.load(open(MEDS / 'src/data/deckPdfSources.json'))['decks']
-past = json.load(open(MEDS / 'src/data/pastQuestions.json'))
+past = json.load(open(_kok.CIKMIS))
 
 dersler = {}
 for d in decks:

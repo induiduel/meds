@@ -9,6 +9,8 @@ durumuna `denetim` alanını ekler; `duzelt` kararlı iş yayına (uygula) geçe
 from __future__ import annotations
 
 import json
+import os
+import random
 from pathlib import Path
 
 from .. import cekirdek as c
@@ -49,7 +51,58 @@ def is_goster(hedef: str) -> tuple[str, str, dict, dict]:
     if oge and isinstance(cikti.get(oge[0]), list) and cikti[oge[0]] and "_etiket" in cikti[oge[0]][0]:
         from .. import yonlendir
         girdi = yonlendir._girdi_suz(girdi, {x["_etiket"] for x in cikti[oge[0]]})
+    if dar_acik():
+        dar = dar_sec_is(hedef, m, pj, cikti, goster)
+        if dar:
+            from .. import yonlendir
+            secili, goster = dar
+            girdi = yonlendir._girdi_suz(girdi, secili)
     return girdi, goster, pj, d
+
+
+# ── daraltılmış denetim (2026-11-16, `MEDS_HAT_DAR_DENETIM=1`; varsayılan KAPALI) ─────────────────────────────────────
+# İLK denetim her zaman tam. Aynı işin ikinci ve sonraki denetiminde (önceki denetim.json + o anda denetlenen çıktının
+# kopyası `denetlenen_cikti.json` varsa) denetçiye yalnız DEĞİŞEN kimlikler + DEĞİŞMEYENLERDEN belirlenimci %10 örneklem
+# (en az 1) ve onların GİRDİ dilimi gider. Kimlikli (OGE dict) olmayan görevde tam denetim sürer.
+ORNEKLEM_ORANI = 0.10
+
+
+def dar_acik() -> bool:
+    return os.environ.get("MEDS_HAT_DAR_DENETIM") == "1"
+
+
+def dar_sec(onceki: dict, simdiki: dict, tohum: str, oran: float = ORNEKLEM_ORANI) -> tuple[set, set]:
+    """onceki/simdiki: {kimlik: kayıt}. → (değişen, örneklem). Yeni ya da içeriği farklı kimlik 'değişen'; örneklem
+    değişmeyenlerden tohumla (iş + içerik izi) seçilir → aynı içerik aynı seçimi verir (önbellek dostu)."""
+    degisen = {k for k, v in simdiki.items() if onceki.get(k) != v}
+    sabit = sorted(set(simdiki) - degisen, key=lambda x: (len(x), x))
+    n = max(1, round(len(sabit) * oran)) if sabit else 0
+    orneklem = set(random.Random(tohum).sample(sabit, n)) if n else set()
+    return degisen, orneklem
+
+
+def dar_sec_is(hedef: str, m, pj: dict, cikti: dict, goster: str):
+    """→ (seçili kimlikler, daraltılmış gösterim) ya da None (tam denetim)."""
+    dk = c.is_klasoru(hedef)
+    oge = getattr(m, "OGE", None)
+    eski = c.oku(dk / "denetlenen_cikti.json")
+    if not oge or oge[1] != "dict" or not (dk / "denetim.json").exists() or not eski:
+        return None
+    try:
+        once = (c.json_cikar(m.ozet(eski, pj["esleme"], pj["meta"])) or {}).get(oge[0])
+    except Exception:  # noqa: BLE001 — eski çıktı şimdiki şemaya uymuyorsa tam denetim
+        return None
+    simdi = (c.json_cikar(goster) or {}).get(oge[0])
+    if not isinstance(once, dict) or not isinstance(simdi, dict) or not simdi:
+        return None
+    degisen, orneklem = dar_sec(once, simdi, f"{hedef}|{icerik_izi(hedef)}")
+    secili = degisen | orneklem
+    if not secili or len(secili) >= len(simdi):
+        return None
+    sira = sorted(secili, key=lambda x: (len(x), x))
+    return set(sira), json.dumps({oge[0]: {k: simdi[k] for k in sira}}, ensure_ascii=False, indent=1) + (
+        f"\n\n(Daraltılmış yeniden denetim: değişen {', '.join(sorted(degisen)) or '—'}; örneklem "
+        f"{', '.join(sorted(orneklem)) or '—'}. Öteki kayıtlar önceki denetimden geçti.)")
 
 
 def hazirla(hedef: str, ayar: dict | None = None) -> dict:
@@ -173,6 +226,8 @@ def uygula(cikti: dict, meta: dict, cikis: Path | None = None, k1_izin: bool = F
     her hedef işe kendi kaydı yazılır."""
     for x in (cikti["isler"] if cikti.get("toplu") else [cikti]):
         hedef = c.is_klasoru(x["hedef_is"])
+        if dar_acik():   # sonraki daraltılmış denetimin karşılaştırma tabanı (bayrak kapalıyken yazılmaz)
+            c.yaz(hedef / "denetlenen_cikti.json", c.oku(hedef / "cikti.json"))
         c.yaz(hedef / "denetim.json", {"surum": 1, "hedef_is": x["hedef_is"], "karar": x["karar"], "bulgular": x["bulgular"],
                                        **({"toplu_is": meta.get("hedef_is")} if cikti.get("toplu") else {})})
         c.durum_yaz(x["hedef_is"], denetim={"karar": x["karar"], "bulgu": len(x["bulgular"]),

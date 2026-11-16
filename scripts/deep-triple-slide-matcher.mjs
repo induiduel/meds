@@ -21,7 +21,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const LECTURE_NOTES_PATH = path.join(ROOT_DIR, 'data', 'lecture_notes.json');
 const REPORT_PATH = path.join(ROOT_DIR, 'data', 'deep_slide_matching_report.json');
 
@@ -593,9 +592,7 @@ export async function runDeepTripleCheckMatching() {
   console.log('💾 Veriler kaydediliyor...');
   const jsonStr = JSON.stringify(questions, null, 2);
   fs.writeFileSync(DATA_PAST_PATH, jsonStr, 'utf8');
-  if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-    fs.writeFileSync(SRC_PAST_PATH, jsonStr, 'utf8');
-  }
+  // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
 
   // Temiz ders notlarını da lecture_notes.json içine güvenle kaydet
   fs.writeFileSync(LECTURE_NOTES_PATH, JSON.stringify(cleanNotes, null, 2), 'utf8');

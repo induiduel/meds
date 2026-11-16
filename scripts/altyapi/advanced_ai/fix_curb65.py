@@ -185,7 +185,7 @@ with open(f"meds_database_v2/faz14_kurtarilan_sorular/md/{qid}.md", "w", encodin
 print("Updated 039bf4cb1cf9.md")
 
 # 4. Insert or update in pastQuestions.json
-for p in ["meds/src/data/pastQuestions.json", "meds/data/pastQuestions.json"]:
+for p in ["meds/data/pastQuestions.json"]:
     with open(p, "r", encoding="utf-8") as f:
         data = json.load(f)
     found = False

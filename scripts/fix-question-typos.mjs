@@ -39,7 +39,6 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const BACKUP_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.backup_before_typo_fix.json');
 const REPORT_PATH = path.join(ROOT_DIR, 'data', 'spelling_errors_report.json');
 
@@ -511,11 +510,7 @@ async function main() {
     fs.writeFileSync(DATA_PAST_PATH, JSON.stringify(rawList, null, 2), 'utf8');
     console.log(`   ✓ Güncellendi: ${DATA_PAST_PATH}`);
 
-    // src/data/pastQuestions.json güncelle
-    if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-      fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(rawList, null, 2), 'utf8');
-      console.log(`   ✓ Güncellendi: ${SRC_PAST_PATH}`);
-    }
+    // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
 
     // Supabase eşitlemesi istenmişse
     if (isSyncSupabase) {

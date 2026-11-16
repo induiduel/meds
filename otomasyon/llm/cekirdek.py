@@ -2,7 +2,9 @@
 
 Bir LLM işi = görev (gorevler.json kaydı + gorevler/<id>.py modülü) × hedef (kimlik). Çekirdek şunları sağlar:
   - iş klasörü `meds_temp/gorev/<is_id>/` (paket.md, paket.json, durum.json, cevap_N.txt, cikti.json, rapor.json),
-  - modelden bağımsız paket biçimi (GÖREV · KURALLAR · GİRDİ · BAĞLAM · ÇIKTI BİÇİMİ · DENETİM LİSTESİ),
+  - modelden bağımsız paket biçimi; 2026-11-16'dan beri önbellek dostu sıra: sabit önek (GÖREV · KURALLAR · ÇIKTI BİÇİMİ ·
+    DENETİM LİSTESİ) önce, değişken kısım (GİRDİ · BAĞLAM) sonra — istem önbelleği (prompt cache) öneki görevler arasında
+    korunur. Eski sıra `MEDS_HAT_ONBELLEK_SIRA=0` ile. Paketi okuyan her yer bölümleri BAŞLIK ADIYLA bulur, sıraya bakmaz,
   - kısa etiket eşlemesi (S1 ↔ k2-07-c0142), JSON ayıklama, günlük.
 Aynı görev + aynı girdi → bayt bayt aynı paket → aynı is_id (yeniden çalıştırma idempotent, önbellek anahtarı).
 """
@@ -112,21 +114,67 @@ class Etiketler:
 
 
 # ── paket ─────────────────────────────────────────────────────────────────────────────────────────────────────────
-def paket_md(p: dict) -> str:
-    """p: amac, kurallar (ad listesi), ek_kurallar, girdi, baglam, cikti_bicimi, denetim_listesi."""
+PAKET_SURUM = "2"            # şablon sürümü (önbellek/iş anahtarına girer); paket biçimi değişince artır
+HIZLI_GOREVLER = {"kanit_bagla", "som_sec"}   # kısa/biçimsel işler (defterde "rol" alanı bunu ezer)
+
+
+def onbellek_sirasi() -> bool:
+    """Önbellek dostu paket sırası açık mı (varsayılan AÇIK; `MEDS_HAT_ONBELLEK_SIRA=0` eski sıra)."""
+    return os.environ.get("MEDS_HAT_ONBELLEK_SIRA", "1") != "0"
+
+
+def rol_sec(gorev: str, kayit_: dict | None = None) -> str:
+    """Görevin model rolü (model_sec.ajan_model): denetim → 'denetci', kısa/biçimsel işler → 'hizli', öteki → 'yazar'.
+    Varsayılan AÇIK; `MEDS_HAT_ROL=0` ile hepsi 'yazar' (eski davranış)."""
+    if os.environ.get("MEDS_HAT_ROL", "1") == "0":
+        return "yazar"
+    if (kayit_ or {}).get("rol") in ("yazar", "denetci", "hizli"):
+        return kayit_["rol"]
+    if gorev == "denetim":
+        return "denetci"
+    return "hizli" if gorev in HIZLI_GOREVLER else "yazar"
+
+
+def _paket_parcalari(p: dict) -> dict[str, list[str]]:
     kur = kurallar(p.get("kurallar", [])) + list(p.get("ek_kurallar", []))
-    parca = [
-        "# GÖREV", p["amac"].strip(), "",
-        "# KURALLAR", *[f"{i}. {k}" for i, k in enumerate(kur, 1)], "",
-        "# GİRDİ", p["girdi"].strip(), "",
-    ]
-    if p.get("baglam"):
-        parca += ["# BAĞLAM (yalnız okumak için; buradan soru/bilgi üretme)", p["baglam"].strip(), ""]
-    parca += ["# ÇIKTI BİÇİMİ", p["cikti_bicimi"].strip(), "",
-              "# DENETİM LİSTESİ (cevabın betikle bunlara göre denetlenir; göndermeden önce kendin sına)",
-              *[f"- {m}" for m in p.get("denetim_listesi", [])], "",
-              "Yalnız istenen çıktıyı yaz; açıklama, selamlama ya da kod bloğu dışında metin ekleme."]
-    return "\n".join(parca).rstrip() + "\n"
+    return {
+        "gorev": ["# GÖREV", p["amac"].strip(), ""],
+        "kurallar": ["# KURALLAR", *[f"{i}. {k}" for i, k in enumerate(kur, 1)], ""],
+        "girdi": ["# GİRDİ", p["girdi"].strip(), ""],
+        "baglam": (["# BAĞLAM (yalnız okumak için; buradan soru/bilgi üretme)", p["baglam"].strip(), ""]
+                   if p.get("baglam") else []),
+        "cikti": ["# ÇIKTI BİÇİMİ", p["cikti_bicimi"].strip(), ""],
+        "denetim": ["# DENETİM LİSTESİ (cevabın betikle bunlara göre denetlenir; göndermeden önce kendin sına)",
+                    *[f"- {m}" for m in p.get("denetim_listesi", [])], ""],
+        "son": ["Yalnız istenen çıktıyı yaz; açıklama, selamlama ya da kod bloğu dışında metin ekleme."],
+    }
+
+
+def paket_md(p: dict, sira: bool | None = None) -> str:
+    """p: amac, kurallar (ad listesi), ek_kurallar, girdi, baglam, cikti_bicimi, denetim_listesi.
+    sira=True (varsayılan, `onbellek_sirasi()`): GÖREV · KURALLAR · ÇIKTI BİÇİMİ · DENETİM LİSTESİ · GİRDİ · BAĞLAM — sabit
+    önek değişken girdinin önünde (istem önbelleği). sira=False: eski sıra (GİRDİ · BAĞLAM ortada)."""
+    P = _paket_parcalari(p)
+    if sira is None:
+        sira = onbellek_sirasi()
+    adlar = (("gorev", "kurallar", "cikti", "denetim", "girdi", "baglam", "son") if sira
+             else ("gorev", "kurallar", "girdi", "baglam", "cikti", "denetim", "son"))
+    return "\n".join(x for a in adlar for x in P[a]).rstrip() + "\n"
+
+
+def girdi_karmasi(p: dict) -> str:
+    """Paketi oluşturan alanların sıradan bağımsız karması (kurallar çözülmüş metniyle; kural parçası değişince değişir)."""
+    alan = {"amac": p.get("amac", "").strip(), "kurallar": kurallar(p.get("kurallar", [])) + list(p.get("ek_kurallar", [])),
+            "girdi": p.get("girdi", "").strip(), "baglam": (p.get("baglam") or "").strip(),
+            "cikti_bicimi": p.get("cikti_bicimi", "").strip(), "denetim_listesi": list(p.get("denetim_listesi", []))}
+    return sha(json.dumps(alan, ensure_ascii=False, sort_keys=True), 32)
+
+
+def is_anahtari(gorev: str, p: dict, sira: bool | None = None) -> str:
+    """İş/önbellek anahtarı = girdi karması + şablon sürümü (+ sıra kipi) + rol. Aynı girdi → aynı anahtar."""
+    sira = onbellek_sirasi() if sira is None else sira
+    rol = rol_sec(gorev, defter().get(gorev))
+    return sha(f"{PAKET_SURUM}{'' if sira else 'e'}|{rol}|{girdi_karmasi(p)}", 8)
 
 
 def kelime_say(s: str) -> int:
@@ -149,14 +197,19 @@ def is_ac(gorev: str, hedef: str, hazir: dict) -> str:
     if kelime_say(md) > sinir:
         raise SystemExit(f"paket {kelime_say(md)} kelime > sınır {sinir} — hedefi böl ({gorev} {hedef})")
     guvenli = re.sub(r"[^0-9a-z-]+", "-", hedef.lower()).strip("-")[:60]
-    is_id = f"{gorev}--{guvenli}--{sha(md, 8)}"
+    is_id = f"{gorev}--{guvenli}--{is_anahtari(gorev, hazir)}"
     d = IS_DIZIN / is_id
     if (d / "durum.json").exists():
         return is_id
+    # geriye dönük: 2026-11-16 öncesi iş anahtarı = eski sıralı paket.md'nin karması; o iş varsa aynen sürer (yeniden çağrı yok)
+    eski = f"{gorev}--{guvenli}--{sha(paket_md(hazir, sira=False), 8)}"
+    if (IS_DIZIN / eski / "durum.json").exists():
+        return eski
     d.mkdir(parents=True, exist_ok=True)
     (d / "paket.md").write_text(md, encoding="utf-8")
     yaz(d / "paket.json", {"gorev": gorev, "hedef": hedef, "esleme": hazir.get("esleme", {}),
-                           "meta": hazir.get("meta", {}), "girdi_metni": hazir["girdi"], "paket_sha": sha(md, 16)})
+                           "meta": hazir.get("meta", {}), "girdi_metni": hazir["girdi"], "paket_sha": sha(md, 16),
+                           "paket_surum": PAKET_SURUM, "rol": rol_sec(gorev, k)})
     durum_yaz(is_id, durum="hazir", gorev=gorev, hedef=hedef, olusturuldu=simdi())
     return is_id
 

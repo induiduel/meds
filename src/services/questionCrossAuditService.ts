@@ -11,6 +11,7 @@
  * 4. Hata çözüldüğünde karantinadan çıkarma (release) ve kardeş sorularla çift taraflı senkronizasyon sağlar.
  */
 
+import { cikmisOku } from './cikmisErisim.ts';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -23,8 +24,7 @@ const DATA_DIR = path.resolve(ROOT_DIR, 'data');
 const SRC_DATA_DIR = path.resolve(ROOT_DIR, 'src', 'data');
 const REPO_ROOT = path.resolve(ROOT_DIR, '..');
 
-const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
-const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json');
+// pastQuestions.json yalnız cikmisErisim üzerinden okunur (sunucu önbelleği; ~100 MB yeniden ayrıştırma yok)
 const PRACTICE_QUESTIONS_FILE = path.resolve(DATA_DIR, 'questions.json');
 
 const QUARANTINE_FILE = path.join(
@@ -153,13 +153,10 @@ export function detectQuestionCrossData(targetId: string, source: 'past_question
 
   // 1. Soruyu Yükle
   let q: any = null;
-  const pastList = readJsonSafe<any[]>(PAST_QUESTIONS_FILE, []);
+  const pastList = cikmisOku();
   if (source === 'past_question') {
     q = pastList.find((x) => String(x.id).trim() === targetIdStr);
-    if (!q) {
-      const srcList = readJsonSafe<any[]>(SRC_PAST_QUESTIONS_FILE, []);
-      q = srcList.find((x) => String(x.id).trim() === targetIdStr);
-    }
+    // src/data kopyasına yedek bakılmaz (2026-11-16): tek kaynak data/pastQuestions.json.
   } else {
     const practiceList = readJsonSafe<any[]>(PRACTICE_QUESTIONS_FILE, []);
     q = practiceList.find((x) => String(x.id).trim() === targetIdStr);

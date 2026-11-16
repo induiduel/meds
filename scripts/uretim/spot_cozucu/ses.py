@@ -27,7 +27,6 @@ if str(_d) not in _sys.path:
 import kok as _kok  # noqa: E402
 
 import argparse
-import hashlib
 import json
 import os
 import re
@@ -41,6 +40,9 @@ MEDS = _kok.MEDS
 W = MEDS.parent / "meds_temp/spot_cozucu"
 sys.path.insert(0, str(MEDS / "scripts/uretim/sesli_anlatim"))
 sys.path.insert(0, str(MEDS / "scripts/uretim/patoloji_cozucu"))
+sys.path.insert(0, str(MEDS / "scripts/uretim/ses_ortak"))
+import ses_klip as SK  # noqa: E402  (seslendir/klasor/cumlele/nokta tek kaynak, 2026-11-16)
+import ses_metin  # noqa: E402
 
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
 HARF_AD = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E"}
@@ -74,28 +76,29 @@ class Saglayici:
 class Ema(Saglayici):
     id, ad, surum = "ema", "EMA", "ema-2"  # ema-2: kısaltmalar uzun ünlülü harf adlarıyla (kisaltma_ses.py)
 
-    def __init__(self):
+    def __init__(self, kbps: int = 48):
         import ema_isci as E
         import kisaltma_ses as KS
-        # kısaltma okunuşu burada (KS.uzat: "dee nee aa"); okunus.py'nin bitişik yazımı ("denea") kelime gibi okunduğu için kapatılır
-        E.okunus.duzelt = lambda metin, kayit=None: metin
-        E.KBPS = 48
-        self.E, self.KS, self.SR, self.tts = E, KS, E.SR, None
+        # Klip metni: KS.uzat ("dee nee aa", karmaya dahil). Motor metni: ses_metin uzun yolu (terim + yazım kısaltması +
+        # fonetik/sayı). Eskiden E.okunus.duzelt / E.KBPS genel olarak eziliyordu (2026-11-16 kalktı).
+        self.E, self.KS, self.SR, self.tts, self.kbps = E, KS, E.SR, None, kbps
         self.surum = f"{self.surum}|{E.HIZ}"
+        self.okunus = ses_metin.okuyucu(yol="uzun")
 
     def hazirla(self):
         if self.tts is None:
             self.tts = self.E.model_yukle()
 
     def paragraf(self, metin):
+        """metin: zaten okunuş metni (ses_klip.seslendir okunus() uygular)."""
         self.hazirla()
-        return self.E.paragraf_seslendir(self.tts, metin)
+        return self.E.paragraf_seslendir(self.tts, metin, hazir=True)
 
     def ses_metni(self, cumle, ek_kisaltma):
         return self.KS.uzat(cumle, ek_kisaltma)
 
     def mp3(self, pcm16):
-        return self.E.mp3_kodla(pcm16)
+        return self.E.mp3_kodla(pcm16, kbps=self.kbps)
 
     def log(self, s):
         self.E.log(s)
@@ -110,13 +113,7 @@ def ses_klasoru(brans: str, ses: str) -> Path:
     return MEDS / "data" / f"{brans}_cozucu" / ("ses" if SESLER[ses].get("varsayilan") else f"ses_{ses}")
 
 
-def cumlele(s: str) -> list[str]:
-    return [c.strip() for c in re.split(r"(?<=[.!?])\s+", s.strip()) if c.strip()]
-
-
-def nokta(s: str) -> str:
-    s = s.strip()
-    return s if s[-1:] in ".!?" else s + "."
+cumlele, nokta = SK.cumlele, SK.nokta
 
 
 def kisaltmalar(*metinler: str) -> set[str]:
@@ -151,60 +148,17 @@ def klipler(o: dict, S: Saglayici) -> dict[str, list[str]]:
 
 
 def seslendir(S: Saglayici, cumleler: list[str], kbps: int):
-    import numpy as np
+    return SK.seslendir(None, cumleler, okunus=S.okunus, kbps=kbps, E=S.E, paragraf=S.paragraf)
 
-    sessiz = lambda sn: np.zeros(int(round(sn * S.SR)), dtype=np.float32)  # noqa: E731
-    parca, zaman, t, notlar = [sessiz(ON_SN)], [], ON_SN, []
-    for c in cumleler:
-        bas = t
-        for par, ayrac in re.findall(r"(.+?)(\|\||\||$)", c.strip()):
-            par = par.strip()
-            if not par:
-                continue
-            wav, n = S.paragraf(par)
-            if n:
-                notlar.append(f"{n}: {par[:50]}")
-            parca.append(wav)
-            t += len(wav) / S.SR
-            if ayrac:
-                d = UZUN_SN if ayrac == "||" else KISA_SN
-                parca.append(sessiz(d))
-                t += d
-        zaman.append([bas, t])
-        parca.append(sessiz(CUMLE_SN))
-        t += CUMLE_SN
-    x = np.concatenate(parca)
-    mp3 = S.mp3((np.clip(x, -1, 1) * 32767).astype("<i2").tobytes())
-    gercek = len(mp3) * 8 / (kbps * 1000)
-    k = gercek / (len(x) / S.SR)
-    return mp3, [[round(a * k, 3), round(b * k, 3)] for a, b in zaman], round(gercek, 3), notlar
+
+def _koru(klip: str) -> bool:
+    # n-<no> kısa not ve no ≥ 1001 ek modül klipleri: Çıkmış çözücü (scripts/uretim/cikmis_paket/not_ses.py) bu klasörde yaşar, silinmez
+    return klip.startswith("n-") or bool(re.match(r"[a-z]-\d{4}", klip))
 
 
 def klasor(S: Saglayici, kok: Path, ad: str, K: dict[str, list[str]], kbps: int, silinsin: bool = True) -> None:
-    d = kok / ad
-    d.mkdir(parents=True, exist_ok=True)
-    kp = d / "kayit.json"
-    kayit = json.loads(kp.read_text(encoding="utf-8")) if kp.exists() else {}
-    yeni = toplam_sn = 0
-    t0 = time.time()
-    for klip, cumleler in K.items():
-        h = hashlib.sha1((S.surum + "|" + "\n".join(cumleler) + __import__("okunus").sayi_imi(cumleler)).encode()).hexdigest()[:12]
-        if kayit.get(klip, {}).get("h") == h and (d / f"{klip}.mp3").exists():
-            continue
-        mp3, zaman, sure, notlar = seslendir(S, cumleler, kbps)
-        (d / f"{klip}.mp3").write_bytes(mp3)
-        kayit[klip] = {"h": h, "sure": sure, "zaman": zaman, **({"not": notlar} if notlar else {})}
-        yeni += 1
-        toplam_sn += sure
-        if yeni % 10 == 0:
-            kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
-    if silinsin:
-        # n-<no> kısa not ve no ≥ 1001 ek modül klipleri: Çıkmış çözücü (scripts/uretim/cikmis_paket/not_ses.py) bu klasörde yaşar, silinmez
-        for klip in [a for a in kayit if a not in K and not a.startswith("n-") and not re.match(r"[a-z]-\d{4}", a)]:
-            kayit.pop(klip)
-            (d / f"{klip}.mp3").unlink(missing_ok=True)
-    kp.write_text(json.dumps(kayit, ensure_ascii=False), encoding="utf-8")
-    print(f"{time.strftime('%H:%M:%S')} {ad}: {len(K)} klip, {yeni} yeni ({toplam_sn:.0f} sn ses, {time.time() - t0:.0f} sn'de)", flush=True)
+    S.okunus = ses_metin.okuyucu(yol="uzun", modul=kok.parent.name)
+    SK.klasor(kok / ad, K, surum=S.surum, uret=lambda c: seslendir(S, c, kbps), silinsin=silinsin, koru=_koru)
 
 
 def main() -> None:

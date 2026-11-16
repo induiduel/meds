@@ -372,7 +372,7 @@ ${currentChunkText.trim()}`.trim();
 
   // --- D. Amfi Ders Özetlerini Hazırla (347 Kırmızı/Redakte Özet) ---
   if (!onlyType || onlyType === 'summaries') {
-    const sumPath = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
+    const sumPath = path.resolve(PROJECT_ROOT, 'src', 'data', 'lectureSummariesCatalog.json'); // tek asıl kaynak (2026-11-16)
     if (fs.existsSync(sumPath)) {
       console.log('📂 Amfi ders özetleri okunuyor...');
       const summaries = JSON.parse(fs.readFileSync(sumPath, 'utf-8'));

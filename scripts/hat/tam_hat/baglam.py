@@ -41,13 +41,34 @@ def _ilk_satir(metin: str, n: int = 110) -> str:
     return "(boş)"
 
 
+# Dilimler (2026-11-16, ölçüm k2-28: kaynak.md 8,5k kelime ve önem + çıkmış analizi + örnek soru aşamalarında üç kez BÜTÜN
+# okunuyordu). Her aşama yalnız kendi dilimini okur (DILIM_ASAMA); kaynak.md geriye uyum için dilimlerin birleşimidir.
+#   atom   = slayt dizini + bilgi paketleri + atomlar (temel gerçekler)
+#   hoca   = hoca vurguları + öğrenci önem notları (önem/rozet dayanağı)
+#   cikmis = doğrulanmış çıkmışlar
+#   uslup  = soru üslubu kalıp payları
+DILIMLER = ("atom", "hoca", "cikmis", "uslup")
+DILIM_ASAMA = {
+    "onem_listesi": ("atom", "hoca", "cikmis"),
+    "cikmis_analiz": ("cikmis", "atom"),
+    "ornek_soru": ("atom", "cikmis", "uslup"),
+}
+
+
 def kaynak_md(ders: str, klasor: Path) -> str:
+    d = kaynak_dilimleri(ders, klasor)
+    return d["_bas"] + "".join(d[k] for k in DILIMLER)
+
+
+def kaynak_dilimleri(ders: str, klasor: Path) -> dict[str, str]:
     sayf = json.loads((klasor / "sayfalar.json").read_text(encoding="utf-8"))
     pk = json.loads((DEPO / ders / "degerlendirme" / "paket.json").read_text(encoding="utf-8"))
     L = [f"# {pk.get('konu', ders)} — read-once ders bağlamı",
          f"> Branş {pk.get('brans','')} · Hoca {pk.get('ogretim_uyesi','')} · {pk.get('kaynaklar',{}).get('sayfa','?')} slayt. "
          f"Aşamalar BUNU okur; ham slayt/şablon/standart belgeyi değil. Kesin sözcük gerekince ilgili TEK slaytı "
          f"`sayfalar.json`/`op/`'tan aç.", ""]
+    out: dict[str, str] = {"_bas": "\n".join(L) + "\n"}
+    L = []
     L.append("## Slayt dizini (her slaytın özü)")
     for k in sorted(sayf, key=lambda x: int(x)):
         L.append(f"s{k}: {_ilk_satir(sayf[k])}")
@@ -59,6 +80,8 @@ def kaynak_md(ders: str, klasor: Path) -> str:
     for a in pk.get("atomik_bilgi_envanteri", {}).get("atomlar", []):
         ck = f" [çıkmış {','.join(a['cikmis'])}]" if a.get("cikmis") else ""
         L.append(f"{a.get('id')} [{a.get('kategori')}] s{a.get('s')}{ck}: {a.get('ifade','').strip()[:200]}")
+    out["atom"] = "\n".join(L) + "\n"
+    L = []
     # Hoca vurguları (kural 21 katmanı — baglam'ın ÖNCEDEN düşürdüğü, 2026-11-16 düzeltmesi). Anlatıma girer; çıkmış damgası DEĞİL.
     hv = pk.get("hoca_vurgulari") or []
     if hv:
@@ -74,6 +97,8 @@ def kaynak_md(ders: str, klasor: Path) -> str:
             oc = n.get("oncelik") or n.get("birim") or ""
             metin = str(n.get("hedef") or n.get("not") or n.get("ifade") or "").strip().replace("\n", " ")
             L.append(f"s{n.get('s')} [{oc}]: {metin[:180]}")
+    out["hoca"] = "\n".join(L) + ("\n" if L else "")
+    L = []
     # Doğrulanmış çıkmışlar
     ckp = pk.get("cikmis", {}).get("kaynak")
     if ckp and (KOK / ckp).exists():
@@ -81,6 +106,8 @@ def kaynak_md(ders: str, klasor: Path) -> str:
         L.append("\n## Doğrulanmış çıkmışlar (vurgu YALNIZ seviye=dogrudan)")
         for x in q:
             L.append(f"{x.get('id')} s{x.get('s')} [{x.get('seviye')}]: {str(x.get('kok','')).strip()[:150]} → {x.get('cevap','')}")
+    out["cikmis"] = "\n".join(L) + ("\n" if L else "")
+    L = []
     # Soru üslubu
     su = klasor / "soru_uslubu.json"
     if su.exists():
@@ -88,7 +115,8 @@ def kaynak_md(ders: str, klasor: Path) -> str:
         kp = u.get("kalip_payi") or {}
         L.append("\n## Soru üslubu (örnek soru kalıp payları — hedef ±%20)")
         L.append(" · ".join(f"{k} %{round(v*100)}" for k, v in kp.items()) + f" · kök ort. {u.get('kok_kelime_ort','?')} kelime")
-    return "\n".join(L) + "\n"
+    out["uslup"] = "\n".join(L) + ("\n" if L else "")
+    return out
 
 
 SEMA = """# Aşama çıktı şemaları (read-once; 33k şablon + kapı-kaynağı yerine bu)
@@ -134,11 +162,16 @@ def main() -> int:
     if not (DEPO / a.ders / "degerlendirme" / "paket.json").exists():
         print(f"HATA: {a.ders} değerlendirme paketi yok — önce E1 (paket) üretilmeli", file=sys.stderr)
         return 2
-    (bg / "kaynak.md").write_text(kaynak_md(a.ders, a.klasor), encoding="utf-8")
+    dl = kaynak_dilimleri(a.ders, a.klasor)
+    for k in DILIMLER:  # dilim başı: ortak üst bilgi (konu/branş/hoca) her dilimde kısa tutulur
+        (bg / f"kaynak_{k}.md").write_text(dl["_bas"] + dl[k], encoding="utf-8")
+    (bg / "kaynak.md").write_text(dl["_bas"] + "".join(dl[k] for k in DILIMLER), encoding="utf-8")
     (bg / "sema.md").write_text(SEMA, encoding="utf-8")
     import os
     k = os.path.getsize(bg / "kaynak.md") // 4 + os.path.getsize(bg / "sema.md") // 4
     print(f"baglam yazıldı: {bg} (~{k} token; aşamalar ham slayt/şablon yerine bunu okur)")
+    for k2 in DILIMLER:
+        print(f"  kaynak_{k2}.md {len((bg / f'kaynak_{k2}.md').read_text(encoding='utf-8').split())} kelime")
     return 0
 
 

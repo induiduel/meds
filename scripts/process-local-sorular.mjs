@@ -22,7 +22,6 @@ const LOCAL_SORULAR_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor
 const LOCAL_TXT_DIR = `${process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database'}/local_sorular_txt`;
 const ROOT_DIR = path.resolve(__dirname, '..');
 const PAST_DB_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_DB_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 
 if (!fs.existsSync(LOCAL_TXT_DIR)) {
   fs.mkdirSync(LOCAL_TXT_DIR, { recursive: true });
@@ -340,7 +339,7 @@ async function main() {
 
     const merged = Array.from(map.values());
     fs.writeFileSync(PAST_DB_PATH, JSON.stringify(merged, null, 2), 'utf8');
-    fs.writeFileSync(SRC_PAST_DB_PATH, JSON.stringify(merged, null, 2), 'utf8');
+    // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
     console.log(`💾 Toplam havuz güncellendi: ${merged.length} soru (${newQuestions.length} yeni Yapay Zeka sorusu eklendi).`);
 
     if (newQuestions.length > 0) {

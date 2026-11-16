@@ -1,7 +1,7 @@
 """Tekrar analizi sonuçlarını uygular (kuru çalıştırma varsayılan; yazmak için --yaz).
 
 1) birlestirmeler.json: yeni/güncellenen gruplar + kurala aykırı eski otomatik gruplar "ayrildi" (silinmez).
-2) pastQuestions.json (src/data + data):
+2) pastQuestions.json (data; tek kaynak):
    - sinavKimligi {yil, sinav, etiket, kesinlik, belge, gerekce} her soruya
    - examYear yalnız KESİN sınav kimliğiyle çelişiyorsa düzeltilir (eski değer examYearOnceki)
    - sourceNote kesin kimlikle çelişiyorsa standart nota çekilir (eski değer sourceNoteOnceki)
@@ -14,7 +14,7 @@
 import json, collections, datetime, re, shutil, sys, os
 
 ROOT = '/home/indu/medsor'
-PQ = f'{ROOT}/meds/src/data/pastQuestions.json'
+PQ = f'{ROOT}/meds/data/pastQuestions.json'  # tek kaynak (2026-11-16)
 MF = f'{ROOT}/meds_database_v2/soru_birlestirme/birlestirmeler.json'
 YAZ = '--yaz' in sys.argv
 NOW = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
@@ -157,6 +157,5 @@ shutil.copy(PQ, f'{Y}/pastQuestions.json'); shutil.copy(MF, f'{Y}/birlestirmeler
 for fp in kat: shutil.copy(fp, f'{Y}/' + os.path.basename(fp))
 json.dump({'guncelleme': NOW, 'gruplar': cikis}, open(MF + '.tmp', 'w'), ensure_ascii=False, indent=1); os.replace(MF + '.tmp', MF)
 json.dump(D, open(PQ + '.tmp', 'w'), ensure_ascii=False); os.replace(PQ + '.tmp', PQ)
-shutil.copy(PQ, f'{ROOT}/meds/data/pastQuestions.json')
 for fp, c in kat.items(): json.dump(c, open(fp, 'w'), ensure_ascii=False, indent=1)
 print('YAZILDI; yedek:', Y)

@@ -30,6 +30,8 @@ __pycache__/
 .tmp*
 data/nested_fix_report.json
 data/local_rag_chunks.json
+data/local_rag_chunks.jsonl
+data/local_rag_chunks.jsonl.*.tmp
 # Sorgu zekâsı + hastalık grafiği: derlemden üretilir (scripts/altyapi/search/build-query-intel.mts; sunucu açılışta kendisi derler)
 data/search/
 data/asset-archive/

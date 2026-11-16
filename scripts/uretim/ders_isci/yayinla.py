@@ -103,7 +103,7 @@ LINKS_ISCI = ROOT / "meds_database" / "derived" / "learn_links_ders_isci.json"
 ORACLE = "medsor-oracle"
 GIT_HEDEF = [  # yazılan ve commit'lenecek repo yolları; başka oturumun yarım işi varsa yayın durur
     "src/data/interactive_learning_decks.json", "src/data/summaries/kurul1.json", "src/data/summaries_meta.json",
-    "src/data/summaries_enrichment.json", "src/data/lectureSummariesCatalog.json", "data/lectureSummariesCatalog.json",
+    "src/data/summaries_enrichment.json", "src/data/lectureSummariesCatalog.json",  # tek asıl kaynak; data/ kopyası yok (2026-11-16)
     "src/data/medical_glossary.json", "src/data/medical_encyclopedia.json", "src/data/ornek_sorular/k1",
     "scripts/uretim/ders_isci/yayin_kaydi.json",
 ]

@@ -24,7 +24,7 @@ KOK = _kok.MEDS  # meds/
 HAM = KOK / "data/ogrenci_onem/ham"
 CIKTI = KOK / "src/data/ogrenci_onem"
 DOC = KOK / "docs/OGRENCI_ONEM"
-PAST = KOK / "src/data/pastQuestions.json"
+PAST = _kok.CIKMIS
 DERSLER = KOK / "src/data/dersler/k2.json"
 Y25_PDF = KOK.parent / "meds_database_25_26/pdf/kurul2"
 

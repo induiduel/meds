@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { ozetKataloguYolu } from './contentOverlay.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.resolve(__dirname, '..', '..');
-const SUMMARIES_CATALOG_FILE = path.resolve(ROOT_DIR, 'src', 'data', 'lectureSummariesCatalog.json');
 
 interface LectureSummary {
   id: string;
@@ -33,8 +33,9 @@ const KURUL_NAMES: Record<string, string> = {
 
 function readSummaries(): LectureSummary[] {
   try {
-    if (fs.existsSync(SUMMARIES_CATALOG_FILE)) {
-      return JSON.parse(fs.readFileSync(SUMMARIES_CATALOG_FILE, 'utf-8'));
+    const yol = ozetKataloguYolu(ROOT_DIR); // tek asıl kaynak + canlı katman (panel düzenlemeleri görünsün)
+    if (fs.existsSync(yol)) {
+      return JSON.parse(fs.readFileSync(yol, 'utf-8'));
     }
   } catch (e) {
     console.error('[Portal] Özetler okunamadı:', e);

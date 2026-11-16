@@ -502,10 +502,7 @@ const targetFile = path.resolve(__dirname, '..', 'data', 'pastQuestions.json');
 fs.writeFileSync(targetFile, JSON.stringify(finalPastQuestions, null, 2), 'utf8');
 console.log(`💾 Kaydedildi: ${targetFile}`);
 
-// Write to src/data/pastQuestions.json
-const srcTargetFile = path.resolve(__dirname, '..', 'src', 'data', 'pastQuestions.json');
-fs.writeFileSync(srcTargetFile, JSON.stringify(finalPastQuestions, null, 2), 'utf8');
-console.log(`💾 Kaydedildi: ${srcTargetFile}`);
+// src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
 
 // Clean up data/questions.json: Remove all past questions from the active pool!
 const questionsJsonFile = path.resolve(__dirname, '..', 'data', 'questions.json');

@@ -8,7 +8,13 @@
 - `--degistir`: Oracle'da aynı derste AYNI sağlayıcı + konuşmacıyla eski bir yerel ses varsa (ör. okunuş düzeltmesinden
   önceki EMA sesi) yenisi onun YERİNE geçer (aynı sırada); eski MP3 silinir. Yalnız yerel sağlayıcılar etkilenir.
 
-Kullanım: yerel_sesleri_tasi.py [--ornek] [--degistir] [--kuru]
+- `--dogrula` (2026-11-16): yalnız doğrulama — yerel kayıttaki yerel sağlayıcı seslerinin (MP3'ü yerelde olan) Oracle'da
+  var olup BOYUTUNUN aynı olduğunu `ssh medsor-oracle find -printf` ile karşılaştırır; hiçbir şey göndermez/silmez.
+  Eksik/boyutu farklı varsa çıkış 1. Normal aktarım sonunda da aynı doğrulama çalışır ve sonuç `scripts/gunluk.py`
+  (kaynak `ses_aktar`) ile kaydedilir (rsync karşı tarafta boyut/karma doğrulamıyordu; H11/H539 sınıfı sessiz eksik).
+  Çözücü/asistan kökleri için eşdeğer: `scripts/uretim/ses_ortak/ses_kapisi.py oracle <kök|--hepsi>`.
+
+Kullanım: yerel_sesleri_tasi.py [--ornek] [--degistir] [--kuru] [--dogrula]
 """
 # Konum-bağımsız kök (2026-11-16): sabit parents[N] yerine scripts/kok.py (dosya taşınsa da doğru).
 import sys as _sys
@@ -29,6 +35,7 @@ KOK = MEDS / "data/sesli_anlatim"
 UZAK = "/home/ubuntu/medsor/meds/data/sesli_anlatim"
 YEREL = {"xtts-yerel", "ema-yerel"}
 KURU = "--kuru" in sys.argv
+DOGRULA = "--dogrula" in sys.argv
 
 
 def ssh(komut: str, girdi: str | None = None) -> str:
@@ -37,6 +44,36 @@ def ssh(komut: str, girdi: str | None = None) -> str:
         raise SystemExit(f"ssh hatası: {r.stderr.strip()[:400]}")
     return r.stdout
 
+
+def dogrula() -> int:
+    """Yerel ↔ Oracle: yerel kayıttaki yerel sağlayıcı MP3'leri karşıda var mı, boyut aynı mı (salt okunur)."""
+    kayit_ = json.loads((KOK / "kayit.json").read_text(encoding="utf-8"))
+    yerel = {f"{k}/{v['id']}.mp3": (KOK / "ses" / k / f"{v['id']}.mp3") for k, vs in kayit_.items() for v in vs
+             if v.get("saglayici") in YEREL and (KOK / "ses" / k / f"{v['id']}.mp3").exists()}
+    uz = {}
+    for satir in ssh(f"sudo find {UZAK}/ses -type f -name '*.mp3' -not -path '*/.parca/*' -printf '%P\\t%s\\n'").splitlines():
+        if "\t" in satir:
+            yol, n = satir.rsplit("\t", 1)
+            uz[yol] = int(n)
+    eksik = sorted(g for g in yerel if g not in uz)
+    fark = sorted(f"{g} yerel {p.stat().st_size} ≠ Oracle {uz[g]}" for g, p in yerel.items() if g in uz and uz[g] != p.stat().st_size)
+    for g in eksik[:40]:
+        print(f"HATA  Oracle'da yok: ses/{g}")
+    for g in fark[:40]:
+        print(f"HATA  boyut farklı: ses/{g}")
+    print(f"== doğrulama: yerel {len(yerel)} yerel-sağlayıcı ses · Oracle {len(uz)} ses dosyası · eksik {len(eksik)} · boyut farkı {len(fark)}")
+    try:
+        sys.path.append(str(_kok.SCRIPTS))
+        import gunluk  # noqa: E402
+        gunluk.olay("ses_aktar", "hata" if eksik or fark else "bilgi", "sesli ders Oracle doğrulaması",
+                    yerel=len(yerel), oracle=len(uz), eksik=len(eksik), boyut_farki=len(fark), ornek=(eksik + fark)[:5])
+    except Exception:  # noqa: BLE001 — günlük asla aktarımı düşürmez
+        pass
+    return 1 if eksik or fark else 0
+
+
+if DOGRULA:
+    sys.exit(dogrula())
 
 kayit = json.loads((KOK / "kayit.json").read_text(encoding="utf-8"))
 uzak = json.loads(ssh(f"sudo cat {UZAK}/kayit.json"))
@@ -90,3 +127,5 @@ os.replace(tmp, p)
 print("aktarıldı", n, "· eskisinin yerine geçen", d)
 '''
 print(ssh(f"sudo python3 -c '{birlestir}' {UZAK} {1 if '--degistir' in sys.argv else 0} && sudo chown -R root:root {UZAK}", json.dumps(aday, ensure_ascii=False)).strip())
+# Aktarım sonrası doğrulama (2026-11-16): rsync'in karşıya ulaştırdığını boyutla teyit et, sonucu günlüğe yaz.
+sys.exit(dogrula())

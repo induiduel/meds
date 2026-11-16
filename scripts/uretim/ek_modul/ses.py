@@ -188,11 +188,16 @@ def main() -> int:
         return 0
     cikti.mkdir(parents=True, exist_ok=True)
     import ema_isci as E
+    sys.path.insert(0, str(_kok.SCRIPTS / "uretim/ses_ortak"))
+    import ses_klip as SK
+    import ses_metin
+    # motor metni: yol ek_moduller/index.json kurulundan (eskiden E genel durumu → Kurul 1 bitişik okunus.duzelt)
+    okunus = ses_metin.okuyucu(modul=modul)
     tts = E.model_yukle()
     for n, k in enumerate(is_, 1):
-        mp3, _z, sure, notlar = E.parca_uret(tts, {"paragraflar": K[k], "bolumBasi": False}, True)
-        (cikti / f"{k}.mp3").write_bytes(mp3)
-        dizin[k] = {"v": ozet[k], "sure": round(sure, 2)}
+        mp3, _z, sure, notlar = E.parca_uret(tts, {"paragraflar": K[k], "bolumBasi": False}, True, okunus=okunus)
+        SK.atomik_yaz(cikti / f"{k}.mp3", mp3)
+        dizin[k] = {"v": ozet[k], "sure": round(sure, 2), "okunus_surum": ses_metin.SOZLUK_SURUM}
         if n % 10 == 0 or n == len(is_):
             dizin_yol.write_text(json.dumps(dizin, ensure_ascii=False, indent=0))
         E.log(f"[{n}/{len(is_)}] {k}: {sure:.1f} sn {notlar or ''}")

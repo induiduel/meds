@@ -11,7 +11,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 export const ROOT_DIR = path.resolve(__dirname, '..');
 export const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-export const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 export const LECTURE_NOTES_PATH = path.join(ROOT_DIR, 'data', 'lecture_notes.json');
 
 // Türkçe karakter duyarlı küçük harfe dönüştürme ve sadeleştirme
@@ -256,7 +255,5 @@ export function buildHighlightedSnippet(pageContent, matchingTerms) {
 export function savePastQuestions(questions) {
   const jsonStr = JSON.stringify(questions, null, 2);
   fs.writeFileSync(DATA_PAST_PATH, jsonStr, 'utf8');
-  if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-    fs.writeFileSync(SRC_PAST_PATH, jsonStr, 'utf8');
-  }
+  // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
 }

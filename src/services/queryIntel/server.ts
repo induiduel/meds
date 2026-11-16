@@ -27,7 +27,7 @@ const PRE_SIG_PATH = path.join(OUT_DIR, 'query-intel.onimza');
  */
 function preSignature(): string {
   const st = (p: string) => { try { const s = fs.statSync(p); return `${s.size}:${Math.round(s.mtimeMs)}`; } catch { return '0'; } };
-  return [st(path.join(ROOT, 'data', 'local_rag_chunks.json')), ...Object.values(lexiconSources(ROOT)).map(st)].join('|');
+  return [st(path.join(ROOT, 'data', 'local_rag_chunks.jsonl')), st(path.join(ROOT, 'data', 'local_rag_chunks.json')), ...Object.values(lexiconSources(ROOT)).map(st)].join('|');
 }
 
 let engine: QueryIntelEngine | null = null;

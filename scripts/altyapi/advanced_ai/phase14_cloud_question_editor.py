@@ -21,6 +21,7 @@ while not (_d / "kok.py").exists() and _d != _d.parent:
 if str(_d) not in _sys.path:
     _sys.path.append(str(_d))
 import kok as _kok  # noqa: E402
+import rag_parca_deposu as _rpd  # noqa: E402
 
 import argparse
 import hashlib
@@ -582,11 +583,11 @@ _DOKUM: set | None = None
 
 def sinav_dokumu_belgeleri() -> set:
     """Sayfalarının yarısından fazlası soru olan 'ders notları' (çıkmış soru PDF'leri, combinepdf vb.) — ders materyali
-    sayılmaz (ragService.getExamDumpNoteIds ile aynı ölçüt). data/local_rag_chunks.json'dan bir kez hesaplanır, önbelleklenir."""
+    sayılmaz (ragService.getExamDumpNoteIds ile aynı ölçüt). data/local_rag_chunks.jsonl'den bir kez hesaplanır, önbelleklenir."""
     global _DOKUM
     if _DOKUM is not None:
         return _DOKUM
-    src = ROOT / "data" / "local_rag_chunks.json"
+    src = _rpd.okunacak_dosya(ROOT / "data") or (ROOT / "data" / _rpd.JSONL_ADI)
     cache = ROOT.parent / "meds_temp" / "state" / "sinav_dokumu_belgeleri.json"
     try:
         mt = src.stat().st_mtime
@@ -595,8 +596,7 @@ def sinav_dokumu_belgeleri() -> set:
             if c.get("mtime") == mt:
                 _DOKUM = set(c["ids"])
                 return _DOKUM
-        d = json.loads(src.read_text(encoding="utf-8"))
-        rows = d if isinstance(d, list) else d.get("chunks", [])
+        rows = _rpd.parcalari_oku(ROOT / "data")
         say: dict[str, list[int]] = {}
         for r in rows:
             if r.get("documentType") != "lecture_slide":

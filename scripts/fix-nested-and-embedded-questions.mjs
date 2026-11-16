@@ -35,7 +35,6 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const BACKUP_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.backup_before_nested_fix.json');
 const REPORT_PATH = path.join(ROOT_DIR, 'data', 'nested_fix_report.json');
 
@@ -469,14 +468,9 @@ export async function runNestedAndEmbeddedFixer(options = {}) {
       console.log(`➕ ${newQuestionsToAdd.length} yeni soru arşive eklendi (Yeni toplam: ${questions.length}).`);
     }
 
-    // 1. meds/data/pastQuestions.json ve meds/src/data/pastQuestions.json güncelle
+    // 1. meds/data/pastQuestions.json güncelle (tek kaynak)
     fs.writeFileSync(DATA_PAST_PATH, JSON.stringify(questions, null, 2), 'utf8');
     console.log(`💾 Güncellendi: ${DATA_PAST_PATH}`);
-
-    if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-      fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(questions, null, 2), 'utf8');
-      console.log(`💾 Güncellendi: ${SRC_PAST_PATH}`);
-    }
 
     // 2. Raporu kaydet
     fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2), 'utf8');

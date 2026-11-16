@@ -19,7 +19,7 @@ args=sys.argv[1:]; kip=args[0]; q=args[1]
 n=int(args[args.index("-n")+1]) if "-n" in args else 5
 ders=args[args.index("--ders")+1] if "--ders" in args else None
 if kip=="banka":
-    d=json.load(open("/home/indu/medsor/meds/src/data/pastQuestions.json"))
+    d=json.load(open("/home/indu/medsor/meds/data/pastQuestions.json"))
     r=[]
     for x in d:
         if not x.get("isPastExam"): continue

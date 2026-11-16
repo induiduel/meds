@@ -10,6 +10,7 @@
     "ders_icerik":    {"kapi": "scripts/ders_icerik_dogrula.py", "arg": ["{key}"], "gerekli": ["key"]},
     "cizim":          {"kapi": "scripts/uretim/cizim/cizim_kapisi.py", "arg": ["{key}", "--kok", "{kok}"], "gerekli": ["key", "kok"]},
     "ara_soru":       {"kapi": "scripts/uretim/hoca_ara_soru/kur.py", "arg": ["dogrula", "{key}", "--ses"], "gerekli": ["key"]},
+    "ses":            {"kapi": "scripts/uretim/ses_ortak/ses_kapisi.py", "arg": ["{hedef}"], "gerekli": ["hedef"]},
     "yapi":           {"kapi": "scripts/kapilar/yapi_koruma.py", "arg": [], "gerekli": []}
   }
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Soru ekle yazım yardımcısı için yerel dil modeli üretir → src/data/composer_model.json
 
-Kaynak: src/data/pastQuestions.json (soru kökleri + şıklar; sözlük için açıklamalar).
+Kaynak: data/pastQuestions.json (soru kökleri + şıklar; sözlük için açıklamalar).
   --exclude-ids <dosya>  : simülasyon için test kümesindeki soruları dışarıda bırakır
   --out <yol>            : çıktı yolu
 Model:
@@ -31,7 +31,7 @@ ap.add_argument('--ng-extra', type=int, default=int(__import__('os').environ.get
 a = ap.parse_args()
 
 excl = set(json.load(open(a.exclude_ids))) if a.exclude_ids else set()
-qs = [q for q in json.load(open(ROOT / 'src/data/pastQuestions.json')) if q.get('id') not in excl]
+qs = [q for q in json.load(open(_kok.CIKMIS)) if q.get('id') not in excl]
 
 LOW = str.maketrans({'I': 'ı', 'İ': 'i'})
 ASC = str.maketrans('çğıöşüâîû', 'cgiosuaiu')

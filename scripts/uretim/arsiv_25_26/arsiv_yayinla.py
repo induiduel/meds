@@ -325,7 +325,7 @@ def cikmis_konum_yerel(key: str, pars: list[dict], v2: dict, baglam: dict, metin
     from lib import embed, fold
     from pdf_hizala import cumle_sinirlari
 
-    pq_file = MEDS / "src" / "data" / "pastQuestions.json"
+    pq_file = _kok.CIKMIS
     tum_pq = {q["id"]: q for q in json.loads(pq_file.read_text(encoding="utf-8"))} if pq_file.exists() else {}
     adaylar = {q["id"]: q for q in (baglam.get("aday_cikmislar") or [])}
 

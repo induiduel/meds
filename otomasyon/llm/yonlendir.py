@@ -12,7 +12,11 @@ Sıra: görevin `katmanlar` listesi (2026-10-24'ten beri ["A"]). B (betik) katma
   C — Claude (`claude -p`, araçsız, stdin): günlük bütçe (butce.json, sayaç meds_temp/state/claude_butce.json);
       bütçe yoksa iş `bekliyor_butce` olur, sessizce düşmez.
   elle — paket.md insan eliyle herhangi bir LLM'e verilir; cevap `cevap.txt`'ye konur, `gorev.py derle` ile sürer.
-Önbellek: aynı paket + aynı aile + aynı tur istemi ikinci kez modele gitmez (meds_temp/llm_onbellek/<gorev>/).
+Önbellek: aynı paket + aynı aile + aynı tur istemi ikinci kez modele gitmez (meds_temp/llm_onbellek/<gorev>/); anahtar
+  2026-11-16'dan beri şablon sürümü + rol + istem karması ("v2-…"); eski anahtarlı dosyalar geriye dönük okunur.
+Rol (2026-11-16, varsayılan AÇIK, `MEDS_HAT_ROL=0` kapatır): denetim → model_sec.ajan_model("denetci") (yazardan ayrı aile),
+  kısa/biçimsel işler → "hizli" (cekirdek.rol_sec).
+Kimlik bazlı yama (`MEDS_HAT_YAMA=1`, varsayılan KAPALI): denetçi bulgusu düzeltmesinde yalnız bulgudaki kimlikler gider.
 Çıkış kodları: 0 doğrulandı · 1 reddedildi (tüm katmanlar denendi) · 3 elle bekliyor · 4 bütçe bekliyor · 5 hiçbir model yanıt vermedi.
 """
 from __future__ import annotations
@@ -97,7 +101,22 @@ def _ajan_sayac_artir(ad: str, sure_sn: float):
 _ANSI = re.compile(r"\x1b\[[0-9;?]*[A-Za-z]")
 
 
-def _opendesign(istem: str, ad: str) -> tuple[str | None, str | None]:
+def _rol_modelleri(modeller: list, rol: str) -> list:
+    """Rol bağlama (2026-11-16): denetçide yazarın ailesindeki modeller atılır (boş kalırsa ajan_model('denetci')),
+    hızlıda ajan_model('hizli') başa alınır. Rol 'yazar' ise liste aynen döner (eski davranış)."""
+    from . import opendesign as od
+    from .model_sec import ajan_model, aile
+    if rol == "denetci":
+        yazar_aile = aile(ajan_model("yazar"))
+        kalan = [m for m in modeller if od.aile(m) != yazar_aile]
+        return kalan or [od.model_id(ajan_model("denetci"))]
+    if rol == "hizli":
+        h = od.model_id(ajan_model("hizli"))
+        return [h] + [m for m in modeller if m != h]
+    return list(modeller)
+
+
+def _opendesign(istem: str, ad: str, rol: str = "yazar") -> tuple[str | None, str | None]:
     """A katmanı — OpenDesign geçidi (2026-11-13): CLI yok, `otomasyon/llm/opendesign.py` doğrudan `/v1/messages`
     gönderir. Yerel köprü ayaktaysa oraya, değilse genel geçide. Modeller `butce.json` › `ajanlar.<ad>.modeller`
     sırasıyla denenir (yazar deepseek, denetçi glm/gpt ailesi). Günlük tavan `gunluk_cagri`."""
@@ -107,7 +126,7 @@ def _opendesign(istem: str, ad: str) -> tuple[str | None, str | None]:
         return None, None
     if ajan_kalan(ad) <= 0:
         return None, "butce"
-    modeller = a.get("modeller") or [od.VARSAYILAN_MODEL]
+    modeller = _rol_modelleri(a.get("modeller") or [od.VARSAYILAN_MODEL], rol)
     for model in modeller:
         t0 = time.time()
         try:
@@ -126,7 +145,7 @@ def _opendesign(istem: str, ad: str) -> tuple[str | None, str | None]:
     return None, None
 
 
-def _ajan(ad: str, istem: str) -> tuple[str | None, str | None]:
+def _ajan(ad: str, istem: str, rol: str = "yazar") -> tuple[str | None, str | None]:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1])); from llm_kilit import serbest  # LLM kilidi 2026-10-27
     if not serbest():
         return None, "kilit"
@@ -134,9 +153,13 @@ def _ajan(ad: str, istem: str) -> tuple[str | None, str | None]:
     boş bir çalışma klasöründe, salt okunur kipte; cevap metni döner (derleyicinin json_cikar'ı önsöz/ANSI'ye hoşgörülü).
     Ajanın `modeller` listesi sırayla denenir (ilk dolu cevap). Günlük tavan butce.json'dan; dolunca (None, "butce")."""
     if ad.startswith("opendesign"):
-        return _opendesign(istem, ad)
+        return _opendesign(istem, ad, rol)
     if ad.startswith("claude"):
-        return _claude(istem, (_ajan_ayar().get(ad) or {}).get("claude_model"))
+        model = (_ajan_ayar().get(ad) or {}).get("claude_model")
+        if rol in ("denetci", "hizli"):          # rol bağlama: claude_alt (sonnet → deepseek) denetçide yazarla aynı aileydi
+            from .model_sec import ajan_model
+            model = ajan_model(rol)
+        return _claude(istem, model, rol)
     a = _ajan_ayar().get(ad)
     if not a or not a.get("komut") or a.get("kapali"):
         return None, None
@@ -201,7 +224,7 @@ def _ucretsiz(istem: str, aile: str, k: dict) -> tuple[str | None, str | None]:
     return (json.dumps(r, ensure_ascii=False) if not isinstance(r, str) else r), cloud_llm.last_model["ad"]
 
 
-def _claude(istem: str, model: str | None = None) -> tuple[str | None, str | None]:
+def _claude(istem: str, model: str | None = None, rol: str = "yazar") -> tuple[str | None, str | None]:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1])); from llm_kilit import serbest  # LLM kilidi 2026-10-27
     if not serbest():
         return None, "kilit"
@@ -217,26 +240,44 @@ def _claude(istem: str, model: str | None = None) -> tuple[str | None, str | Non
                            cwd=str(c.TEMP), env={**os.environ, "CUDA_VISIBLE_DEVICES": ""})
     except (subprocess.TimeoutExpired, FileNotFoundError) as e:
         c.gunluk(olay="claude_hata", hata=repr(e))
-        return _opendesign(istem, "opendesign")      # 2026-11-13: CLI yoksa doğrudan geçit
+        return _opendesign(istem, "opendesign", rol)      # 2026-11-13: CLI yoksa doğrudan geçit
     _sayac_artir(time.time() - t0)
     if r.returncode != 0 or not r.stdout.strip():
         c.gunluk(olay="claude_hata", kod=r.returncode, hata=r.stderr[-400:])
-        return _opendesign(istem, "opendesign")      # 2026-11-13: köprü/CLI düştüyse doğrudan geçit
+        return _opendesign(istem, "opendesign", rol)      # 2026-11-13: köprü/CLI düştüyse doğrudan geçit
     return r.stdout.strip(), f"claude:{model}"
 
 
-def _cagir(katman: str, aile: str, istem: str, gorev: str, k: dict, gorsel: str | None = None) -> tuple[str | None, str | None]:
-    anahtar = c.sha(f"{katman}|{aile}|{istem}|{c.sha(c.Path(gorsel).read_bytes().hex(), 12) if gorsel else ''}", 20)
-    p = c.ONBELLEK / gorev / f"{anahtar}.txt"
-    if p.exists():
-        satirlar = p.read_text(encoding="utf-8").split("\n", 1)
-        return (satirlar[1] if len(satirlar) > 1 else ""), satirlar[0] + " (önbellek)"
+def onbellek_anahtari(katman: str, aile: str, istem: str, rol: str = "yazar", gorsel_iz: str = "") -> str:
+    """Yeni önbellek anahtarı: şablon sürümü + rol + katman/aile + istem karması (rol değişince başka model → başka kayıt)."""
+    return "v2-" + c.sha(f"{c.PAKET_SURUM}|{rol}|{katman}|{aile}|{c.sha(istem, 40)}|{gorsel_iz}", 20)
+
+
+def _onbellek_oku(gorev: str, anahtarlar: list[str]):
+    for a in anahtarlar:
+        p = c.ONBELLEK / gorev / f"{a}.txt"
+        if p.exists():
+            satirlar = p.read_text(encoding="utf-8").split("\n", 1)
+            return (satirlar[1] if len(satirlar) > 1 else ""), satirlar[0] + " (önbellek)"
+    return None
+
+
+def _cagir(katman: str, aile: str, istem: str, gorev: str, k: dict, gorsel: str | None = None,
+           rol: str = "yazar") -> tuple[str | None, str | None]:
+    gorsel_iz = c.sha(c.Path(gorsel).read_bytes().hex(), 12) if gorsel else ""
+    yeni = onbellek_anahtari(katman, aile, istem, rol, gorsel_iz)
+    eski = c.sha(f"{katman}|{aile}|{istem}|{gorsel_iz}", 20)          # 2026-11-16 öncesi anahtar (geriye dönük okunur)
+    # eski anahtar rolsüzdü: yalnız rol 'yazar' iken (o zamanki tek davranış) okunur, denetçi başka modelle çağrılmalı
+    bulunan = _onbellek_oku(gorev, [yeni] + ([eski] if rol == "yazar" else []))
+    if bulunan:
+        return bulunan
+    p = c.ONBELLEK / gorev / f"{yeni}.txt"
     if gorsel:
         cevap, model = _gorsel(istem, aile, k, gorsel) if katman == "Ü" else (None, None)
     elif katman == "A":
-        cevap, model = _ajan(aile, istem)
+        cevap, model = _ajan(aile, istem, rol)
     else:
-        cevap, model = _ucretsiz(istem, aile, k) if katman == "Ü" else _claude(istem)
+        cevap, model = _ucretsiz(istem, aile, k) if katman == "Ü" else _claude(istem, None, rol)
     if cevap is not None:
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(f"{model}\n{cevap}", encoding="utf-8")
@@ -380,6 +421,7 @@ def calistir(is_id: str, katman: str | None = None, aile: str | None = None, log
     k = c.kayit(gorev)
     m = c.modul(gorev)
     d = c.is_klasoru(is_id)
+    rol = c.rol_sec(gorev, k)
 
     if katman == "elle":
         c.durum_yaz(is_id, durum="elle_bekliyor")
@@ -426,7 +468,7 @@ def calistir(is_id: str, katman: str | None = None, aile: str | None = None, log
             birlesim = None
             for tur in range(1 + int(deneme.get(kat, 1))):
                 t0 = time.time()
-                cevap, model = _cagir(kat, a, istem, gorev, k, meta.get("gorsel"))
+                cevap, model = _cagir(kat, a, istem, gorev, k, meta.get("gorsel"), rol=rol)
                 if cevap is not None and birlesim is not None:
                     (d / f"cevap_{n + 1}_kismi.txt").write_text(cevap, encoding="utf-8")
                     cevap = birlestir_kismi(en_iyi[1], cevap, birlesim)
@@ -491,6 +533,103 @@ def _bulgu_hazirla(is_id: str, bulgular: list[dict]) -> tuple[str, set | None]:
             "GİRDİ'yi esas al.\n"), kabul
 
 
+# ── kimlik bazlı yama (2026-11-16, `MEDS_HAT_YAMA=1`; varsayılan KAPALI) ─────────────────────────────────────────────
+# Denetçi bulgusu düzeltmesinde "cevabı baştan eksiksiz yaz" yerine yalnız bulgunun işaret ettiği kayıtlar (görevin
+# OGE_ETIKET şeması: Q<N>, N<N> … — kısa etiket) ve onların GİRDİ dilimi gider; model yalnız o kayıtları döndürür, betik
+# önceki çıktıya JSON birleştirmeyle uygular. Birleştirme sonrası kimlik kümesi ve kayıt şeması (alan adları) denetlenir;
+# tutmazsa ya da bir bulgu kimliğe işaret etmiyorsa eski tam-yazım yoluna düşülür.
+def yama_acik() -> bool:
+    return os.environ.get("MEDS_HAT_YAMA") == "1"
+
+
+def yama_kimlikleri(bulgular: list[dict], gecerli: set[str], desen: str = r"[A-Z]\d+") -> set[str] | None:
+    """Her bulgunun `yer`inden (yoksa açıklamasından) önceki çıktıda var olan kimlikler. Kimliksiz bulgu → None (tam yol)."""
+    out: set[str] = set()
+    for b in bulgular:
+        bul = {x for x in re.findall(rf"(?<![\w-])({desen})(?![\w-])", f"{b.get('yer') or ''}") if x in gecerli}
+        if not bul:
+            bul = {x for x in re.findall(rf"(?<![\w-])({desen})(?![\w-])", f"{b.get('aciklama') or ''}") if x in gecerli}
+        if not bul:
+            return None
+        out |= bul
+    return out
+
+
+def yama_istemi(md: str, onceki: str, bulgular: list[dict], anahtar: str, desen: str = r"[A-Z]\d+"):
+    """→ (istem, kimlikler) ya da None. onceki: görevin `tersine` JSON'u ({anahtar: {kimlik: kayıt}})."""
+    j = c.json_cikar(onceki)
+    if not isinstance(j, dict) or not isinstance(j.get(anahtar), dict) or not j[anahtar]:
+        return None
+    kim = yama_kimlikleri(bulgular, set(j[anahtar]), desen)
+    if not kim or len(kim) >= len(j[anahtar]):
+        return None
+    sira = sorted(kim, key=lambda x: (len(x), x))
+    secili = {k: j[anahtar][k] for k in sira}
+    bl = "\n".join(f"- [{b.get('tur')}] {b.get('yer')}: {b.get('aciklama')} → Öneri: {b.get('oneri')}" for b in bulgular)
+    istem = (f"{_girdi_suz(md, kim)}\n# ÖNCEKİ CEVABINDAN BULGULU KAYITLAR (betik kapılarından geçti; bağımsız denetçi "
+             f"düzeltme istedi)\n{json.dumps({anahtar: secili}, ensure_ascii=False, indent=1)}\n\n# BAĞIMSIZ DENETÇİ "
+             f"BULGULARI\n{bl}\n\nYalnız bu kayıtları ({', '.join(sira)}) GİRDİ'deki ders metnine göre düzelt ve şu biçimde "
+             f"yaz: {{\"{anahtar}\": {{\"{sira[0]}\": {{…}}, …}}}} — her kayıt aynı alanlarla ve eksiksiz. Öteki kayıtlar "
+             "kabul edildi; onları YAZMA. Bulguyla ilgisiz alanları AYNEN koru. Bir bulgu GİRDİ'ye aykırıysa GİRDİ'yi esas al.\n")
+    return istem, set(sira)
+
+
+def yama_birlestir(onceki: str, yeni: str, anahtar: str, kimlikler: set[str]) -> str | None:
+    """Yama cevabını önceki çıktıya uygular. Bütünlük: cevap TAM OLARAK istenen kimlikleri içermeli, her kayıt eski kaydın
+    alan adlarını korumalı, birleşik çıktının kimlik kümesi değişmemeli. Tutmazsa None (çağıran tam yola düşer)."""
+    j, y = c.json_cikar(onceki), c.json_cikar(yeni)
+    if not isinstance(j, dict) or not isinstance(j.get(anahtar), dict) or not isinstance(y, dict):
+        return None
+    parca = y.get(anahtar)
+    if not isinstance(parca, dict) or set(parca) != set(kimlikler):
+        return None
+    once_kim = set(j[anahtar])
+    for k, v in parca.items():
+        eski = j[anahtar].get(k)
+        if not isinstance(v, dict) or not isinstance(eski, dict) or set(v) != set(eski):
+            return None
+        j[anahtar][k] = v
+    if set(j[anahtar]) != once_kim:
+        return None
+    return json.dumps(j, ensure_ascii=False)
+
+
+def _yama_dene(is_id: str, bulgular: list[dict], kabul, sira: list[str], katman, gorev: str, k: dict, rol: str, log):
+    """Bayrak açıkken tek yama denemesi: kabul → 0, uygulanamaz/geçmez → None (tam yol sürer)."""
+    md, pj = c.paket(is_id)
+    m = c.modul(gorev)
+    oge = getattr(m, "OGE", None)
+    if not oge or oge[1] != "dict":
+        return None
+    cikti = c.oku(c.is_klasoru(is_id) / "cikti.json")
+    onceki = m.tersine(cikti, pj["esleme"], pj["meta"])
+    if kabul:
+        md = _girdi_suz(md, kabul)
+    yi = yama_istemi(md, onceki, bulgular, oge[0], getattr(m, "OGE_ETIKET", r"[A-Z]\d+"))
+    if not yi:
+        log("  yama: bulgular kimliğe bağlanamadı — tam yazım")
+        return None
+    istem, kim = yi
+    d = c.is_klasoru(is_id)
+    for a in sira:
+        cevap, model = _cagir(katman or "A", a, istem, gorev, k, rol=rol)
+        if cevap is None:
+            continue
+        n = len(list(d.glob("cevap_*.txt"))) + 1
+        (d / f"cevap_{n}_yama.txt").write_text(cevap, encoding="utf-8")
+        birlesik = yama_birlestir(onceki, cevap, oge[0], kim)
+        if birlesik is None:
+            log(f"  yama {model}: kimlik/şema bütünlüğü tutmadı — tam yazım"); return None
+        yeni, h = bulgu_degerlendir(is_id, birlesik, kabul)
+        c.gunluk(olay="bulgu_yama", is_id=is_id, aile=a, model=model, kimlik=sorted(kim), hata_sayisi=len(h))
+        log(f"  yama {model} ({', '.join(sorted(kim))}): {len(h)} HATA")
+        if not h and yeni is not None:
+            bulgu_kabul(is_id, yeni, a, model, 0)
+            return 0
+        return None
+    return None
+
+
 def bulgu_degerlendir(is_id: str, cevap: str, kabul: set | None) -> tuple[dict | None, list[str]]:
     """Düzeltme cevabı → bütün kapılar (+ kısmi kabulde yalnız kabul edilen ögeler, + görevin `duzeltme_kisiti`)."""
     _, pj = c.paket(is_id)
@@ -534,11 +673,14 @@ def bulgu_duzelt(is_id: str, bulgular: list[dict], katman: str | None = None, lo
         c.durum_yaz(is_id, oturum_duzeltme="bekliyor")
         return oturuma_birak(is_id, "duzeltme", log)
     taban, kabul = _bulgu_hazirla(is_id, bulgular)
+    rol = c.rol_sec(gorev, k)
+    if yama_acik() and _yama_dene(is_id, bulgular, kabul, sira, katman, gorev, k, rol, log) == 0:
+        return 0
     deneme = int(k.get("deneme", {}).get("A", 2))
     for a in sira:
         istem = taban
         for tur in range(1 + deneme):
-            cevap, model = _cagir(katman or "A", a, istem, gorev, k)
+            cevap, model = _cagir(katman or "A", a, istem, gorev, k, rol=rol)
             if cevap is None:
                 log(f"  bulgu düzeltme {a}: yanıt yok"); break
             n = len(list(d.glob("cevap_*.txt"))) + 1

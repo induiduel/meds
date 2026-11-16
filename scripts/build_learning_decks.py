@@ -35,7 +35,7 @@ OUTPUT_FILE = str(dd.YOL)
 OUTPUT_META_FILE = os.path.join(PROJECT_ROOT, 'src', 'data', 'learning_decks_meta.json')
 
 LECTURE_NOTES_PATH = os.path.join(PROJECT_ROOT, 'src', 'data', 'lecture_notes.json')
-PAST_QUESTIONS_PATH = os.path.join(PROJECT_ROOT, 'src', 'data', 'pastQuestions.json')
+PAST_QUESTIONS_PATH = os.path.join(PROJECT_ROOT, 'data', 'pastQuestions.json')  # tek kaynak (2026-11-16)
 
 HIGHLIGHT_KEYWORDS = [
     'soru', 'sorarız', 'sorarım', 'sınav', 'dikkat', 'slayt', 'slaytta yok', 'beni dinleyin',

@@ -187,6 +187,8 @@ import { registerYonetimTopluluk } from './src/services/yonetim16/topluluk.ts';
 import { registerYonetimSistem } from './src/services/yonetim16/sistem.ts';
 import { registerIcerik16Routes } from './src/services/yonetim16/icerik.ts';
 import { registerSorularRoutes } from './src/services/yonetim16/sorular.ts';
+import { registerCikmisErisimi } from './src/services/cikmisErisim.ts';
+import { telemetriAraKatmani, bellekOrnekleyiciBaslat, telemetriOzeti, vitalsDogrula, vitalsHizSiniri, vitalsKaydet } from './src/services/telemetri.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { havuzDondurDosyasi, havuzDonduruldu } from './src/services/havuzDondur.ts';
@@ -204,7 +206,7 @@ import { createBasarimMotor } from './src/services/basarim/basarimMotor.ts';
 import { registerBasarimRoutes } from './src/services/basarim/basarimRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
-import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
+import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest, ozetKataloguYolu, ozetKataloguKaynak } from './src/services/contentOverlay.ts';
 import { adminAuthMiddleware, configureAdminAuthLog, isRequestAdminVerified, panelOracleProxyMiddleware, verifiedUid, verifiedEmail } from './src/services/adminAuth.ts';
 
 // @ts-ignore - dynamic ES module runner
@@ -409,6 +411,18 @@ app.use((req, res, next) => {
   next();
 });
 
+// Telemetri (2026-11-16): /api/* süre kovaları + yavaş istek kaydı (istek başına O(1); SSE hariç). Ayrıntı: src/services/telemetri.ts
+app.use(telemetriAraKatmani());
+// web-vitals ucu: kimlik gerekmez, gövde ≤ 2 KB, IP başına dakikada 10. sendBeacon text/plain da kabul edilir.
+// Gövde ayrıştırıcılardan (100 MB json) ÖNCE kayıtlı: kendi 2 KB'lık ayrıştırıcısını kullanır. IP/kullanıcı yazılmaz.
+app.post('/api/olcum/vitals', express.text({ type: () => true, limit: '2kb' }), (req, res) => {
+  const ip = String(req.headers['cf-connecting-ip'] || String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.ip || '');
+  if (!vitalsHizSiniri(ip)) return res.status(429).end();
+  const kayit = vitalsDogrula(typeof req.body === 'string' ? req.body : '');
+  if (!kayit) return res.status(400).json({ success: false });
+  vitalsKaydet(kayit);
+  res.status(204).end();
+});
 app.use(compression({ threshold: 1024 }));
 
 app.use(express.json({ limit: '100mb' }));
@@ -854,6 +868,8 @@ interface RealtimeClient {
   res: express.Response;
   isAdmin: boolean;
   connectedAt: number;
+  /** Tavan sayımı için istemci IP'si (yalnız bellekte; günlüğe yazılmaz). */
+  ip?: string;
 }
 
 const realtimeClients = new Map<string, RealtimeClient>();
@@ -885,6 +901,35 @@ function writeSse(client: RealtimeClient, payload: string): boolean {
     realtimeClients.delete(client.id);
     return false;
   }
+}
+
+// SSE tavanları (2026-11-16): bfcache/sekme birikimiyle açık kalan akışlar belleği ve soket sayısını şişirmesin.
+// Yeni bağlantı tavanı aşacaksa en eski bağlantı kapatılır (Map ekleme sırası = en eski önce); kapanan istemci
+// EventSource ile yeniden bağlanır ve lastEventId telafisi aynen çalışır.
+const SSE_TOPLAM_TAVAN = 2000;
+const SSE_IP_TAVAN = 200; // okul ağı (NAT) tek IP arkasında çok öğrenci taşır; düşük tavan onları keser
+function sseKapat(c: RealtimeClient) {
+  realtimeClients.delete(c.id);
+  try { c.res.end(); } catch { /* kapalı */ }
+}
+function sseTavaniUygula(ip: string) {
+  try {
+    if (ip) {
+      const ayniIp: RealtimeClient[] = [];
+      for (const c of realtimeClients.values()) if (c.ip === ip) ayniIp.push(c);
+      if (ayniIp.length >= SSE_IP_TAVAN) {
+        const fazla = ayniIp.slice(0, ayniIp.length - SSE_IP_TAVAN + 1);
+        fazla.forEach(sseKapat);
+        veriOlayi('uyari', 'sse-tavan', 'IP başına SSE tavanı aşıldı, en eski bağlantılar kapatıldı', { kapatilan: fazla.length, tavan: SSE_IP_TAVAN });
+      }
+    }
+    if (realtimeClients.size >= SSE_TOPLAM_TAVAN) {
+      const kapat = realtimeClients.size - SSE_TOPLAM_TAVAN + 1;
+      const eskiler = Array.from(realtimeClients.values()).slice(0, kapat);
+      eskiler.forEach(sseKapat);
+      veriOlayi('uyari', 'sse-tavan', 'Toplam SSE tavanı aşıldı, en eski bağlantılar kapatıldı', { kapatilan: eskiler.length, tavan: SSE_TOPLAM_TAVAN });
+    }
+  } catch { /* tavan uygulanamazsa bağlantı yine kabul edilir */ }
 }
 
 export function broadcastRealtimeEvent(event: string, data: any, adminOnly = false, excludeClient?: string, onlyClient?: string) {
@@ -1431,6 +1476,8 @@ app.get(['/api/realtime/events', '/api/admin/events/stream'], (req, res) => {
     connectedAt: Date.now(),
   };
 
+  client.ip = String(req.headers['cf-connecting-ip'] || String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.ip || '');
+  sseTavaniUygula(client.ip);
   realtimeClients.set(clientId, client);
 
   // İlk bağlantı teyidi (handshake); retry: tarayıcının yeniden bağlanma bekleme süresi.
@@ -2574,14 +2621,16 @@ function toClientPastQuestion(raw: any): any {
   return q;
 }
 
-type PastListCache = { key: string; at: number; list: any[]; listJson: string; bodies: Map<string, Promise<Buffer>> };
+// Bellek (2026-11-16): tüm listenin JSON metni (~60 MB dize) artık kalıcı tutulmaz; nesne listesi (find/tarama tüketicileri
+// için gerekli) + gzip gövdeleri kalır. JSON metni yalnız gzip önbelleği ıskaladığında geçici üretilir; baytlar aynıdır.
+type PastListCache = { key: string; at: number; list: any[]; bodies: Map<string, Promise<Buffer>> };
 let pastListCache: PastListCache | null = null;
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
   const key = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
   if (!pastListCache || pastListCache.key !== key || Date.now() - pastListCache.at > 10 * 60_000) {
     const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(base))).map(toClientPastQuestion);
-    pastListCache = { key, at: Date.now(), list, listJson: JSON.stringify(list), bodies: new Map() };
+    pastListCache = { key, at: Date.now(), list, bodies: new Map() };
   }
   return pastListCache;
 }
@@ -2596,7 +2645,8 @@ function pastListGzip(cache: PastListCache, name: string, build: () => string): 
   }
   return p;
 }
-const pastListBodyJson = (served: PastListCache) => `{"success":true,"totalCount":${served.list.length},"questions":${served.listJson}}`;
+const pastListJson = (served: PastListCache) => JSON.stringify(served.list);
+const pastListBodyJson = (served: PastListCache) => `{"success":true,"totalCount":${served.list.length},"questions":${pastListJson(served)}}`;
 // Yeniden başlatmadan sonra ilk /cikmis ziyaretçisi listeyi kurmak için ~20 sn beklemesin: açılış
 // yükü (RAG, eşitleme) bittikten sonra liste ve gzip gövdesi arka planda hazırlanır.
 setTimeout(() => {
@@ -3123,7 +3173,7 @@ app.get('/api/past-exams/sync', (req, res) => {
     // Hazır gövde (önbellekli JSON + gzip)
     // allIds: istemci bu listede olmayan yerel kopyaları siler (sayı bir sonraki eşitlemede tutar)
     sendPastListBody(req, res, served, `sync:${maxUpdatedAt}:${deletedIds.length}`, () =>
-      `{"success":true,"upToDate":false,"count":${list.length},"lastModified":${JSON.stringify(maxUpdatedAt)},"questions":${served.listJson},"allIds":${JSON.stringify(list.map((q: any) => q.id))}${deletedIds.length > 0 ? `,"deletedIds":${JSON.stringify(deletedIds)}` : ''}}`);
+      `{"success":true,"upToDate":false,"count":${list.length},"lastModified":${JSON.stringify(maxUpdatedAt)},"questions":${pastListJson(served)},"allIds":${JSON.stringify(list.map((q: any) => q.id))}${deletedIds.length > 0 ? `,"deletedIds":${JSON.stringify(deletedIds)}` : ''}}`);
   } catch (err: any) {
     res.status(500).json({ error: 'Delta senkronizasyonu başarısız: ' + err.message });
   }
@@ -4429,7 +4479,7 @@ setInterval(() => {
   } catch (err: any) {
     console.warn('[Faz14 kullanıcı] döngü hatası:', err?.message || err);
   }
-}, 60 * 1000);
+}, 60 * 1000).unref(); // kapanışı engellemesin
 
 const isAdminEmail = (e: unknown) => String(e || '').trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
 
@@ -5012,7 +5062,7 @@ setInterval(() => {
     return;
   }
   if (startPhase14AutoFree(st.otomatik_limit)) console.log('[Faz14 otomatik] iş durmuştu, yeniden başlatıldı');
-}, 5 * 60 * 1000);
+}, 5 * 60 * 1000).unref(); // kapanışı engellemesin
 app.get('/api/past-question-reviews/settings', requireAdmin, (_req, res) => {
   res.json(readPhase14Settings());
 });
@@ -8839,7 +8889,7 @@ app.get('/api/summaries', (req, res) => {
       if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
       return res.json(payload);
     }
-    const fullPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
+    const fullPath = ozetKataloguYolu(__dirname); // tek asıl kaynak (src/data + katman)
     if (fs.existsSync(fullPath)) {
       const mtime = fs.statSync(fullPath).mtimeMs;
       if (!summariesMetaCache || summariesMetaCache.mtime !== mtime) {
@@ -8869,11 +8919,9 @@ app.get('/api/summaries', (req, res) => {
 let cachedSummariesMap: Map<string, any> | null = null;
 function getCachedSummaryById(id: string) {
   if (!cachedSummariesMap) {
-    const catalogPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
-    const srcPath = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
-    const overlayPath = resolveContent(srcPath);
-    // Panel düzenlemesi (canlı katman) her zaman önce; sonra data/, en son paketteki kopya
-    const targetPath = overlayPath !== srcPath ? overlayPath : fs.existsSync(catalogPath) ? catalogPath : (fs.existsSync(srcPath) ? srcPath : null);
+    // Tek asıl kaynak: src/data/lectureSummariesCatalog.json + canlı katman farkı (data/ kopyası kaldırıldı)
+    const yol = ozetKataloguYolu(__dirname);
+    const targetPath = fs.existsSync(yol) ? yol : null;
     if (targetPath) {
       try {
         const data = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
@@ -9163,13 +9211,12 @@ app.put('/api/admin/users/:uid', requireAdmin, async (req, res) => {
 
 // Admin: Update lecture summary
 // Oracle'da src/data imajla gelir (geçici): panel yazımı canlı katmana (data/content) gider, dağıtımın [0b]
-// adımı (content-overlay-sync.sh) onu yerele geri çeker. data/ kopyası da (okuyucular önce ona bakıyor) güncellenir.
+// adımı (content-overlay-sync.sh) onu yerele geri çeker. Eski data/ kopyası artık yok (tek kaynak, 2026-11-16).
 const META_SUMMARY_FIELDS = ['kurul', 'committeeId', 'discipline', 'title', 'instructor', 'fileName', 'keyPoints', 'charCount', 'readingTimeMinutes'];
 app.put('/api/admin/summaries/:id', requireAdmin, (req, res) => {
   try {
-    const srcCat = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
-    const dataCatPath = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
-    const readFrom = fs.existsSync(resolveContent(srcCat)) ? resolveContent(srcCat) : dataCatPath;
+    const srcCat = ozetKataloguKaynak(__dirname);
+    const readFrom = ozetKataloguYolu(__dirname);
     if (!fs.existsSync(readFrom)) return res.status(404).json({ error: 'Özet kataloğu bulunamadı.' });
     const content = JSON.parse(fs.readFileSync(readFrom, 'utf-8'));
     const targetId = String(req.params.id);
@@ -9188,7 +9235,6 @@ app.put('/api/admin/summaries/:id', requireAdmin, (req, res) => {
     const json = JSON.stringify(content, null, 2);
     const atomic = (file: string, data: string) => { const tmp = `${file}.${process.pid}.tmp`; fs.writeFileSync(tmp, data, 'utf-8'); fs.renameSync(tmp, file); };
     atomic(writableContent(srcCat), json);
-    if (fs.existsSync(dataCatPath)) atomic(dataCatPath, json);
 
     // Liste (summaries_meta.json) da katmana: başlık/kurul vb. değişince liste ekranı da güncel kalsın
     const srcMeta = path.resolve(__dirname, 'src', 'data', 'summaries_meta.json');
@@ -9574,24 +9620,23 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
 
     // Update local files if question id matches
     const qId = question.id;
-    const pastPath = path.join(__dirname, 'data', 'pastQuestions.json');
-    if (fs.existsSync(pastPath)) {
+    // Önbellek + savePastQuestionsDb üzerinden (eskiden dosyayı baştan ayrıştırıp src kopyasıyla birlikte doğrudan yazıyordu: yarış + ~100 MB kopya)
+    {
       try {
-        const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
+        const list = getPastQuestionsDb();
         const idx = list.findIndex((x: any) => x.id === qId);
         if (idx !== -1) {
-          list[idx].reconstruction = reconstruction;
-          list[idx].claimedAnswer = reconstruction.correctAnswer;
-          list[idx].status = 'completed';
-          list[idx].customRedactedBy = adminEmail || 'Admin';
-          list[idx].customRedactedAt = new Date().toISOString();
-          list[idx].customRedactionPrompt = customPrompt;
-          fs.writeFileSync(pastPath, JSON.stringify(list, null, 2), 'utf8');
-
-          const srcPast = path.join(__dirname, 'src', 'data', 'pastQuestions.json');
-          if (fs.existsSync(srcPast)) {
-            fs.writeFileSync(srcPast, JSON.stringify(list, null, 2), 'utf8');
-          }
+          list[idx] = {
+            ...list[idx],
+            reconstruction,
+            claimedAnswer: reconstruction.correctAnswer,
+            status: 'completed',
+            customRedactedBy: adminEmail || 'Admin',
+            customRedactedAt: new Date().toISOString(),
+            customRedactionPrompt: customPrompt,
+          };
+          savePastQuestionsDb(list);
+          pastListCache = null;
 
           // Mirror update to Supabase
           mirrorPastQuestionToDb(list[idx]);
@@ -11622,6 +11667,14 @@ function hydrateExistingReportsToAutoRepair() {
   }
 }
 
+// Servisler (autoErrorRepairEngine, questionCrossAuditService, questionUpgradeService) çıkmışları dosyadan değil
+// sunucu önbelleğinden okur ve yalnız savePastQuestionsDb ile yazar (yarış + ~100 MB geçici kopya önlemi).
+// Yönetici telemetri özeti + bellek örnekleyici (5 dk, unref)
+app.get('/api/admin/telemetri', requireAdmin, (_req, res) => { res.json({ success: true, ...telemetriOzeti() }); });
+bellekOrnekleyiciBaslat(() => realtimeClients.size);
+
+registerCikmisErisimi({ cikmisOku: () => getPastQuestionsDb(), cikmisKaydet: (l) => { savePastQuestionsDb(l); pastListCache = null; } });
+
 // AutoRepair ile sunucu belleği ve Supabase aynasını anında senkronize eden kanca
 registerDatabaseSyncHook(async ({ source, targetId, updatedData }) => {
   try {
@@ -12191,7 +12244,7 @@ async function startServer() {
     // Yerel JSON → meds-pg eşitleme: açılıştan 20 sn sonra ve 6 saatte bir (yalnız değişen satırlar yazılır)
     setInterval(() => {
       resyncLocalToDb().catch(() => {});
-    }, 6 * 3600000);
+    }, 6 * 3600000).unref(); // kapanışı engellemesin
     setTimeout(() => {
       resyncLocalToDb().catch(() => {});
     }, 20000);

@@ -10,6 +10,7 @@
  * Çıktı: data/knowledge/disease_graph.json. diseases.json'a YAZMAZ (doğrulanmamış veri veritabanına girmez);
  * öneriler yönetici/öğrenci incelemesine sunulur.
  */
+import { ragParcalariOkuSync } from '../ragParcaDeposu.ts';
 import fs from 'fs';
 import path from 'path';
 import { PhraseMatcher, fold, splitWords, type IntentKey } from '../queryIntel/core';
@@ -118,7 +119,6 @@ export function buildDiseaseGraph(opts: GraphBuildOptions): { skipped: boolean; 
   const log = opts.log || (() => {});
   const root = opts.projectRoot;
   const t0 = Date.now();
-  const chunksPath = path.join(root, 'data', 'local_rag_chunks.json');
   const diseasesPath = path.join(root, 'src', 'data', 'diseases.json');
   const encPath = path.join(root, 'src', 'data', 'medical_encyclopedia.json');
   const packPath = path.join(root, 'data', 'search', 'query-intel.json');
@@ -135,7 +135,7 @@ export function buildDiseaseGraph(opts: GraphBuildOptions): { skipped: boolean; 
   // Şema 2 (yapılandırılmış maddeler) → denetim/eşleyicinin kullandığı düz alan görünümü
   const diseases = (readJson<any[]>(diseasesPath) || []).map(toFlatView);
   const enc = new Map<string, any>((readJson<any[]>(encPath) || []).map((e) => [e.id, e]));
-  const chunks = readJson<any[]>(chunksPath) || [];
+  const chunks = ragParcalariOkuSync(path.join(root, 'data')).parcalar; // .jsonl esas, yoksa eski .json
   if (!diseases.length || chunks.length < 100) throw new Error('hastalık ya da derlem verisi yok');
 
   // ---- eşleyiciler: hastalıklar (0..D-1) + kavramlar (D..)

@@ -2,8 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { desteleriOku } from './desteDeposu.ts';
+import { ragParcalariOkuSync, ragParcalariYazSync } from './ragParcaDeposu.ts';
 import { resolveContent, writableContent, markContentChanged } from './contentOverlay.ts';
 import { ingestNotebookLMData, parseNotebookLMPayload } from './notebooklmBridgeService.ts';
+import { cikmisOku, cikmisKaydet } from './cikmisErisim.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,8 +18,6 @@ const CONTRIBUTIONS_FILE = path.resolve(DATA_DIR, 'notebooklm_contributions.json
 
 const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
 const SUMMARIES_CATALOG_FILE = path.resolve(SRC_DATA_DIR, 'lectureSummariesCatalog.json');
-const DATA_SUMMARIES_CATALOG_FILE = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
-const LOCAL_CHUNKS_FILE = path.resolve(DATA_DIR, 'local_rag_chunks.json');
 
 export type NotebookLMType =
   | 'past_question_correction'
@@ -146,7 +146,7 @@ function captureOriginalSnapshot(rawType: any, proposedData: any): { targetId?: 
           ? proposedData.questions
           : [proposedData];
 
-      const questions: any[] = readJsonSafe(PAST_QUESTIONS_FILE, []);
+      const questions: any[] = cikmisOku();
       const questionMap = new Map<string, any>();
       questions.forEach((q) => {
         if (q.id) {
@@ -187,7 +187,7 @@ function captureOriginalSnapshot(rawType: any, proposedData: any): { targetId?: 
     } else if (type === 'spot_pearls') {
       const sItem = Array.isArray(proposedData) ? proposedData[0] : proposedData;
       const lectureId = sItem?.lectureId || sItem?.id;
-      const summaries: any[] = readJsonSafe(SUMMARIES_CATALOG_FILE, []);
+      const summaries: any[] = readJsonSafe(resolveContent(SUMMARIES_CATALOG_FILE), []);
       const found = summaries.find((s) => String(s.id) === String(lectureId));
       if (found) return { targetId: String(found.id), snapshot: found };
     } else if (type === 'interactive_deck') {
@@ -336,19 +336,19 @@ export async function deactivateNotebookLMContribution(id: string): Promise<{ su
     if (item.originalSnapshot) {
       // Revert canonical DB to original snapshot
       if (item.type === 'past_question_correction') {
-        const questions: any[] = readJsonSafe(PAST_QUESTIONS_FILE, []);
+        const questions: any[] = cikmisOku();
         const idx = questions.findIndex((q) => String(q.id) === String(item.targetId));
         if (idx >= 0) {
           questions[idx] = item.originalSnapshot;
-          writeJsonAtomic(PAST_QUESTIONS_FILE, questions);
+          // Sunucunun tek yazım yolu (önbellek + fren + atomik); dosyaya doğrudan yazılmaz
+          cikmisKaydet(questions, 'notebooklm-geri-al');
         }
       } else if (item.type === 'spot_pearls') {
-        const summaries: any[] = readJsonSafe(SUMMARIES_CATALOG_FILE, []);
+        const summaries: any[] = readJsonSafe(resolveContent(SUMMARIES_CATALOG_FILE), []);
         const idx = summaries.findIndex((s) => String(s.id) === String(item.targetId));
         if (idx >= 0) {
           summaries[idx] = item.originalSnapshot;
-          writeJsonAtomic(SUMMARIES_CATALOG_FILE, summaries);
-          writeJsonAtomic(DATA_SUMMARIES_CATALOG_FILE, summaries);
+          writeJsonAtomic(writableContent(SUMMARIES_CATALOG_FILE), summaries); // tek asıl kaynak (katman); data/ kopyası yok
           markContentChanged('summaries', [String(item.targetId)]);
         }
       }
@@ -425,7 +425,7 @@ export function deleteNotebookLMContribution(id: string): { success: boolean; me
  */
 export function syncContributionToRag(item: NotebookLMContribution) {
   try {
-    const chunks: any[] = readJsonSafe(LOCAL_CHUNKS_FILE, []);
+    const chunks: any[] = ragParcalariOkuSync(DATA_DIR).parcalar; // .jsonl esas, yoksa eski .json
     const chunkId = `rag-nlm-${item.id}`;
 
     // Extract rich searchable medical content
@@ -465,7 +465,7 @@ export function syncContributionToRag(item: NotebookLMContribution) {
       chunks.push(newChunk);
     }
 
-    writeJsonAtomic(LOCAL_CHUNKS_FILE, chunks);
+    ragParcalariYazSync(DATA_DIR, chunks); // atomik jsonl + güvenlik freni
   } catch (err) {
     console.error('[NotebookLMManage] RAG eşitleme hatası:', err);
   }

@@ -9,7 +9,7 @@ Robust DeepSeek Data Synchronizer and Sanitizer for MeDSor:
     * Rejects questions with >3 question marks (OCR booklet dumps)
     * Requires valid options (>= 2 choices)
     * Strips OCR artifacts (e.g. SAYFA NO, repetitive exam headers)
-- Syncs clean questions to `src/data/pastQuestions.json` and `src/data/interactive_learning_decks.json`.
+- Syncs clean questions to `data/pastQuestions.json` and `src/data/interactive_learning_decks.json`.
 - Merges medical glossary additions to `src/data/medical_glossary.json`.
 - Merges markdown spot pearls to relevant slide decks.
 """
@@ -32,7 +32,7 @@ CANDIDATE_DIRS = [
     os.path.join(os.getcwd(), "deepseek_data"),
 ]
 
-PAST_QUESTIONS_PATH = str(dd.YOL.parent / "pastQuestions.json")  # cwd bağımsız (eskiden meds/ dışından çalışınca bozuluyordu)
+PAST_QUESTIONS_PATH = str(dd._MEDS / "data" / "pastQuestions.json")  # tek kaynak (2026-11-16)  # cwd bağımsız (eskiden meds/ dışından çalışınca bozuluyordu)
 DECKS_PATH = str(dd.YOL)
 GLOSSARY_PATH = str(dd.YOL.parent / "medical_glossary.json")
 

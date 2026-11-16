@@ -76,7 +76,7 @@ def sure(kaynak: str, ad: str, **ek):
 def _kayitlar():
     if not KLASOR.is_dir():
         return
-    for p in sorted(list(KLASOR.glob("betik-*.jsonl")) + list(KLASOR.glob("veri-*.jsonl"))):
+    for p in sorted(list(KLASOR.glob("betik-*.jsonl")) + list(KLASOR.glob("veri-*.jsonl")) + list(KLASOR.glob("vitals-*.jsonl"))):
         try:
             with open(p, encoding="utf-8", errors="replace") as f:
                 for satir in f:
@@ -84,6 +84,7 @@ def _kayitlar():
                         k = json.loads(satir)
                         if isinstance(k, dict):
                             k["_dosya"] = p.name.split("-")[0]
+                            k.setdefault("seviye", "bilgi"); k.setdefault("kaynak", "vitals"); k.setdefault("mesaj", f"{k.get('rota', '')} lcp={k.get('lcp')} inp={k.get('inp')} cls={k.get('cls')}")  # vitals satırı (sunucu /api/olcum/vitals)
                             yield k
                     except Exception:
                         continue

@@ -139,11 +139,8 @@ D5_SRCDATA = re.compile(r"""src[/\\]data|['"]src['"]\s*,\s*['"]data['"]""")
 # Sezgi dosya düzeyindedir: yorum DIŞI bir satırda src/data yolu kuran + writeFileSync/renameSync çağıran +
 # writableContent anmayan dosya. 2026-11-16 taramasında böyle olan mevcut dosyalar (yalnız azalabilir):
 # Hedef izlemeli denetimin 2026-11-16 taramasında kalan tek gerçek eski yazım (dosya, satır parçası); yalnız azalabilir.
-D5_IZINLI_ESKI = {
-    # Yönetici çıkmış soru düzenlemesi: asıl kayıt data/pastQuestions.json + DB'ye gider; bu satır git'teki src kopyasını
-    # yerelde günceller (Oracle'da geçici). Kaldırılması yerel davranışı değiştirir — ayrı karar.
-    ("server.ts", "fs.writeFileSync(srcPast,"),
-}
+# (2026-11-16) server.ts srcPast yazımı kaldırıldı — çıkmış arşivi tek kopya data/pastQuestions.json; liste boş.
+D5_IZINLI_ESKI: set[tuple[str, str]] = set()
 
 # ---------------------------------------------------------------- D6
 D6_TAVAN = [

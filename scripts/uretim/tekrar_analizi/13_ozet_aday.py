@@ -7,7 +7,7 @@ Yalnız görünen sorular (gizli kopyalar asıldan devralır). Çıktı: ozet_ce
 """
 import json, re, math, unicodedata, collections
 ROOT = '/home/indu/medsor'; D = f'{ROOT}/meds/src/data'
-Q = json.load(open(f'{D}/pastQuestions.json'))
+Q = json.load(open(f'{ROOT}/meds/data/pastQuestions.json'))
 OZ = json.load(open(f'{D}/lectureSummariesCatalog.json'))
 H = json.load(open('ozet_cevap/konu_ozet_haritasi.json'))
 MG = json.load(open(f'{ROOT}/meds_database_v2/soru_birlestirme/birlestirmeler.json'))['gruplar']

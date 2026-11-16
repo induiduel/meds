@@ -35,6 +35,7 @@ import { installNotesSync } from './services/notesSync';
 import { installUserDataAutoBackup } from './services/userDataSyncService';
 import { installPresence } from './services/presence';
 import { installEtkinlikGunlugu } from './services/etkinlikGunlugu';
+import { installWebVitals } from './services/webVitals';
 import { prefetchIdle } from './routePrefetch';
 import { installAutoReveal } from './utils/autoReveal';
 import { installSelectionShare } from './utils/selectionShare';
@@ -124,6 +125,7 @@ installBakimEkrani();
 installNotesSync();
 // Günlük önce kurulur: sekme gizlenince önce son ziyaret yazılır, sonra eşitleme gönderir
 installEtkinlikGunlugu();
+installWebVitals(); // gerçek kullanıcı başarım ölçümü (%25 örnek, boşta kurulur)
 installUserDataAutoBackup();
 installStudyTimer();
 if (hizliMod()) {

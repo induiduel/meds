@@ -81,7 +81,7 @@ def pptx_to_pdf(pptx: Path, pdf_hedef: Path) -> Path:
 
 
 def cikmis_esle(kurul: int, baslik: str, kaynak_md: str, limit: int = 35) -> list[dict]:
-    pq_file = MEDS / "src" / "data" / "pastQuestions.json"
+    pq_file = _kok.CIKMIS
     if not pq_file.exists():
         return []
     tum = json.loads(pq_file.read_text(encoding="utf-8"))

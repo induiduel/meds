@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v15 Soru haritası dizini: src/data/pastQuestions.json (96 MB) → src/data/soru_haritasi.json (küçük).
+"""v15 Soru haritası dizini: data/pastQuestions.json (96 MB) → src/data/soru_haritasi.json (küçük).
 Kurul × ders × sınav yılı soru sayıları. Yalnız sayım; LLM yok. Çıkmış verisi değişince yeniden çalıştırılır:
     python3 scripts/altyapi/v15/soru_haritasi.py
 """
@@ -14,7 +14,7 @@ if str(_d) not in _sys.path:
 import kok as _kok  # noqa: E402
 import json, collections, pathlib, datetime, re
 kok = _kok.MEDS
-qs = json.load(open(kok / 'src/data/pastQuestions.json'))
+qs = json.load(open(_kok.CIKMIS))
 say = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
 yillar = set()
 for q in qs:

@@ -158,9 +158,10 @@ MODUL_OKUNUS = False  # modül dersleri (TBG Sınav Kampı): ekrandaki standart 
 
 
 def uzun_kisaltma_ayarla(anahtar: str) -> None:
-    global UZUN_KISALTMA, MODUL_OKUNUS
+    global UZUN_KISALTMA, MODUL_OKUNUS, _ANAHTAR
     import modul_okunus
-    UZUN_KISALTMA = bool(re.match(r"k[2-6](p-k[2-6])?-", str(anahtar or "")))
+    _ANAHTAR = str(anahtar or "")
+    UZUN_KISALTMA = uzun_kisaltma_mi(anahtar)
     MODUL_OKUNUS = modul_okunus.modul_mu(str(anahtar or ""))
 
 
@@ -170,26 +171,37 @@ def _ks():
     return kisaltma_ses
 
 
+_ANAHTAR = ""  # uzun_kisaltma_ayarla ile kurulan iş anahtarı (okunuş yolu ses_metin'de)
+
+
+def uzun_kisaltma_mi(anahtar: str) -> bool:
+    """Eski Kurul 2+ ölçütü (k2-…, k2p-…): Öğren klip karması (ema-1/ema-2) buna bağlı — DEĞİŞTİRME."""
+    return bool(re.match(r"k[2-6](p-k[2-6])?-", str(anahtar or "")))
+
+
 def tts_metni(metin: str) -> str:
-    """Modele giden okunuş metni (paragraf/zamanlama metni değişmez)."""
-    # Kısaltma okunuşu — yalnız modele giden metin; paragraf/zamanlama değişmez.
-    # Kurul 2+ (UZUN_KISALTMA): fonetik terimler + ünlüsü uzatılmış harf adları ("dee nee aa"); birleşik "denea" EMA'da
-    # kelime gibi okunuyordu ("deneye", 2026-10-17 ölçümü, KURUL2_YAPILMAYACAK_HATALAR H3). Kurul 1 eski yolda.
-    # Yabancı tıbbi terim okunuşu (Wernicke → Vernike, Staphylococcus → stafilokokus; terim_okunus.py, 2026-10-28):
-    # Kurul 2+ ve modül yollarında, kısaltma katmanından ÖNCE (kısaltmalara dokunmaz).
-    if MODUL_OKUNUS or UZUN_KISALTMA:
-        import terim_okunus
-        metin = terim_okunus.donustur(metin)
-    if MODUL_OKUNUS:
-        import modul_okunus
-        metin = modul_okunus.donustur(metin)
-    elif UZUN_KISALTMA:
-        for pat, fon in okunus.FONETIK_TTS:
-            metin = pat.sub(fon, metin)
-        metin = _ks().uzat(metin)
-    else:
-        metin = okunus.duzelt(metin)
-    return metin
+    """Modele giden okunuş metni (paragraf/zamanlama metni değişmez). Tek kaynak: scripts/uretim/ses_ortak/ses_metin.py.
+    Sesli ders klip özeti (klip_ozeti) okunan metni içerir: okunuş değişirse o paragraf yeniden üretilir. Bu yüzden
+    varsayılan, 2026-11-16 öncesi yolun BİREBİR karşılığıdır (ses_metin.eski_ders_okunus); veriden seçilen ortak yol
+    (H538: anahtar listesi gerekmez) MEDS_OKUNUS_ORTAK=1 ile açılır — kullanıcı kararı (değişecek paragraf sayısı:
+    ses_ortak/okunus_farki.py raporu)."""
+    sm = _ses_metin()
+    if os.environ.get("MEDS_OKUNUS_ORTAK") == "1":
+        return sm.hazirla(metin, ders=_ANAHTAR or None)
+    if not (UZUN_KISALTMA or MODUL_OKUNUS) and not _ANAHTAR:
+        return sm.okunus.duzelt(metin)  # anahtarsız çağrı (dene, motivasyon): eski Kurul 1 yolu
+    if _ANAHTAR:
+        return sm.eski_ders_okunus(metin, _ANAHTAR)
+    # anahtarsız ama bayrak elle kurulmuş (eski çağıranlar: E.UZUN_KISALTMA = True)
+    return sm.eski_ders_okunus(metin, "k2-00-" if UZUN_KISALTMA and not MODUL_OKUNUS else "k1-70-tbg-sinav-kampi")
+
+
+def _ses_metin():
+    p = str(_kok.SCRIPTS / "uretim" / "ses_ortak")
+    if p not in sys.path:
+        sys.path.append(p)
+    import ses_metin
+    return ses_metin
 
 
 def paragraf_seslendir(tts, metin: str, hazir: bool = False):
@@ -243,11 +255,12 @@ def ses_temizle(x):
     return x.astype(np.float32)
 
 
-def mp3_kodla(pcm16: bytes) -> bytes:
+def mp3_kodla(pcm16: bytes, kbps: int | None = None) -> bytes:
+    """kbps parametresi (2026-11-16): çağıran betikler genel KBPS'i ezmez (ses_ortak/ses_klip)."""
     import lameenc
 
     enc = lameenc.Encoder()
-    enc.set_bit_rate(KBPS)
+    enc.set_bit_rate(kbps or KBPS)
     enc.set_in_sample_rate(SR)
     enc.set_channels(1)
     enc.set_quality(2)
@@ -275,7 +288,8 @@ def xing_at(mp3: bytes) -> bytes:
     return mp3
 
 
-def parca_uret(tts, parca: dict, ilk: bool):
+def parca_uret(tts, parca: dict, ilk: bool, okunus=None):
+    """okunus: motor metni işlevi (ses_metin.okuyucu); verilmezse tts_metni (iş anahtarına bağlı genel durum)."""
     import numpy as np
 
     sessiz = lambda sn: np.zeros(int(round(sn * SR)), dtype=np.float32)  # noqa: E731
@@ -285,7 +299,7 @@ def parca_uret(tts, parca: dict, ilk: bool):
         parcalar.append(sessiz(BOLUM_ONCE_SN))
         t += BOLUM_ONCE_SN
     for j, par in enumerate(parca["paragraflar"]):
-        wav, not_ = paragraf_seslendir(tts, par)
+        wav, not_ = paragraf_seslendir(tts, okunus(par), hazir=True) if okunus else paragraf_seslendir(tts, par)
         if not_:
             notlar.append(f"paragraf {j + 1}: {not_}")
         bas = t
@@ -434,11 +448,24 @@ def sentezle_klip(j: dict) -> int:
     bas_sn = [b / SR * k for b in baslar]
     zamanlama = [[round(b, 3), round(bas_sn[i + 1] if i + 1 < len(bas_sn) else gercek, 3)] for i, b in enumerate(bas_sn)]
     meta = {"metinHash": j["metinHash"], "zamanlama": zamanlama, "klipler": ozetler}
-    kod, cevap = istek(f"/api/sesli-anlatim/yerel/is/{is_['id']}/tam", mp3, "PUT",
-                       {"x-tam-meta": base64.b64encode(json.dumps(meta).encode()).decode(), "Content-Type": "audio/mpeg"}, 600)
-    if kod != 200:
-        log(f"tam ses reddedildi ({kod}): {cevap}")
-        return 2
+    # H539: tam MP3 yüklemesi tek denemeydi; Oracle'da eşzamanlı dağıtım (konteyner yeniden başlatma) işi "hata"ya düşürüyordu.
+    # 3 deneme, artan bekleme (20/60 sn); kalıcı ret (4xx) beklenmez; her başarısızlık günlüğe.
+    import gunluk
+    for deneme in range(1, 4):
+        try:
+            kod, cevap = istek(f"/api/sesli-anlatim/yerel/is/{is_['id']}/tam", mp3, "PUT",
+                               {"x-tam-meta": base64.b64encode(json.dumps(meta).encode()).decode(), "Content-Type": "audio/mpeg"}, 600)
+        except Exception as e:  # bağlantı kopması / zaman aşımı
+            kod, cevap = 0, {"error": str(e)}
+        if kod == 200:
+            break
+        log(f"tam ses yüklenemedi ({kod}): {cevap}; {deneme}/3. deneme")
+        gunluk.olay("ema_isci", "hata" if deneme == 3 else "uyari", "tam ses yüklenemedi",
+                    key=key, kod=kod, deneme=deneme, cevap=str(cevap)[:300])
+        if kod in (400, 404, 409, 422) or deneme == 3:
+            log(f"tam ses reddedildi ({kod}): {cevap}")
+            return 3 if kod == 409 else 2
+        time.sleep((20, 60)[deneme - 1])  # artan bekleme
     log(f"{key} bitti ✔ ({gercek / 60:.1f} dk, tek kodlama)")
     return 0
 

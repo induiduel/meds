@@ -34,7 +34,6 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const DATA_PAST_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.json');
-const SRC_PAST_PATH = path.join(ROOT_DIR, 'src', 'data', 'pastQuestions.json');
 const BACKUP_PATH = path.join(ROOT_DIR, 'data', 'pastQuestions.backup_before_verify.json');
 const REPORT_PATH = path.join(ROOT_DIR, 'data', 'verification_report.json');
 
@@ -470,9 +469,7 @@ export function saveQuestions(questions) {
       fs.copyFileSync(DATA_PAST_PATH, BACKUP_PATH);
     }
     fs.writeFileSync(DATA_PAST_PATH, JSON.stringify(questions, null, 2), 'utf8');
-    if (fs.existsSync(path.dirname(SRC_PAST_PATH))) {
-      fs.writeFileSync(SRC_PAST_PATH, JSON.stringify(questions, null, 2), 'utf8');
-    }
+    // src/data/pastQuestions.json aynası kaldırıldı (2026-11-16): tek kaynak data/pastQuestions.json.
   } catch (e) {
     console.error('Hata: pastQuestions.json kaydedilemedi:', e.message);
   }

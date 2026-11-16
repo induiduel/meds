@@ -90,9 +90,9 @@ def _cikmislar() -> list[dict]:
 
 
 def _site_cikmislar() -> list[dict]:
-    """Sitenin çıkmış soru bankası (src/data/pastQuestions.json) — v2 deposunda olmayan kimlikler için yedek
+    """Sitenin çıkmış soru bankası (data/pastQuestions.json) — v2 deposunda olmayan kimlikler için yedek
     (ders işçisi bağları site kimliklerini kullanır). v2 kayıt biçimine çevrilir."""
-    f = config.MEDS_DIR / "src" / "data" / "pastQuestions.json"
+    f = config.MEDS_DIR / "data" / "pastQuestions.json"
     if not f.exists():
         return []
     out = []

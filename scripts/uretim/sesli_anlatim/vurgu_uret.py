@@ -152,7 +152,7 @@ def main():
     ap.add_argument("--tavan", type=float, default=0.22, help="önemli cümle oranı üst sınırı")
     a = ap.parse_args()
     spotlar = json.load(open(KOK / "src/data/exam_spots_k1.json"))["spotlar"]
-    cikmislar = [q for q in json.load(open(KOK / "src/data/pastQuestions.json"))
+    cikmislar = [q for q in json.load(open(_kok.CIKMIS))
                  if q.get("committeeId") == "donem3-kurul1" and not q.get("hidden") and not q.get("iptal")]
     dersler = json.load(open(KOK / "data/sesli_anlatim/dersler.json"))
     CIKTI.mkdir(parents=True, exist_ok=True)

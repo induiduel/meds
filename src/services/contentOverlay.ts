@@ -304,6 +304,14 @@ export function resolveContent(file: string): string {
   }
 }
 
+/**
+ * Ders özeti kataloğunun TEK asıl kaynağı (VERI_MODELI Faz 2/2, 2026-11-16): src/data/lectureSummariesCatalog.json
+ * + canlı katman farkı. Eski data/lectureSummariesCatalog.json kopyası okunmaz/yazılmaz. Katman kurulmamışsa
+ * (bağımsız betik) resolveContent paketteki dosyayı döner. Yazıcılar writableContent(ozetKataloguKaynak(kök)) kullanır.
+ */
+export const ozetKataloguKaynak = (rootDir: string) => path.join(rootDir, 'src', 'data', CONTENT_FILES.summaries);
+export const ozetKataloguYolu = (rootDir: string) => resolveContent(ozetKataloguKaynak(rootDir));
+
 /** Yazma yolu: src/data altındaki her dosya katmana TAM yazılır; ardından farka çevrilir */
 export function writableContent(file: string): string {
   const rel = relOf(file);

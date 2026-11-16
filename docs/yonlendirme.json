@@ -59,7 +59,8 @@
    ],
    "kapilar": [
     "python3 scripts/hat/tam_hat/kosucu.py <klasor> --ders <key> --mod tam",
-    "python3 scripts/kapilar/kos.py <asama> key=<key> ..."
+    "python3 scripts/kapilar/kos.py <asama> key=<key> ...",
+    "python3 scripts/hat/tam_hat/manifest.py uret <key> && python3 scripts/hat/tam_hat/manifest.py goster <key> --eksik"
    ],
    "hatalar": [
     "docs/hatalar/ders_metni_anlatim.md",
@@ -614,6 +615,8 @@
     "15"
    ],
    "kapilar": [
+    "python3 scripts/hat/tam_hat/manifest.py fark <key>",
+    "python3 scripts/hat/tam_hat/manifest.py denetle --kurul <N>",
     "git push origin main && bash deploy/oracle/dagit.sh"
    ],
    "hatalar": [

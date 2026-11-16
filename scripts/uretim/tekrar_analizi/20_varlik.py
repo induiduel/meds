@@ -126,7 +126,7 @@ def bul(metin):
     return out
 
 # ---------------------------------------------------------------- sorular
-PQ = json.load(open(f'{D}/pastQuestions.json'))
+PQ = json.load(open(f'{ROOT}/meds/data/pastQuestions.json'))
 MG = json.load(open(f'{ROOT}/meds_database_v2/soru_birlestirme/birlestirmeler.json'))['gruplar']
 gizli = {u for g in MG if g.get('durum') != 'ayrildi' for u in g['uyeler'] if u != g['asil']}
 OLUMSUZ = re.compile(r'\b(degildir|degil|yer almaz|almaz|beklenmez|gorulmez|olmaz|yanlistir|bulunmaz|kullanilmaz|icermez|yoktur|gozlenmez)\b')

@@ -36,6 +36,19 @@ except RuntimeError:  # server.ts olmayan dağıtım/kopya: scripts/ her zaman m
 # (/home/ubuntu/medsor) ve Docker (/app) onu taşımaz → import anında çöküyordu. Eski kodun parents[3]'ü ile birebir aynı anlam.
 PROJE = MEDS.parent
 
+# Çıkmış soru arşivinin TEK fiziksel kopyası (2026-11-16). Eskiden server.ts her kayıtta src/data/pastQuestions.json'a
+# aynalıyordu; okuyucular buna bağlanır, src/data kopyası okunmaz/yazılmaz.
+CIKMIS = MEDS / "data" / "pastQuestions.json"
+
+
+def cikmis_yolu() -> Path:
+    return CIKMIS
+
+
+# Ders özeti kataloğunun TEK asıl kaynağı (2026-11-16). data/lectureSummariesCatalog.json eski kopyadır, okunmaz/yazılmaz.
+# Canlı katman farkı (data/content/lectureSummariesCatalog.json.fark.json) Oracle'dan dağıtım [0b] ile buraya geri çekilir.
+OZET_KATALOG = MEDS / "src" / "data" / "lectureSummariesCatalog.json"
+
 
 def scripts_koku(start: str = __file__) -> Path:
     return _up("kok.py", start)
@@ -53,3 +66,5 @@ if __name__ == "__main__":
     print(f"SCRIPTS = {SCRIPTS}")
     print(f"MEDS    = {MEDS}")
     print(f"PROJE   = {PROJE}")
+    print(f"CIKMIS  = {CIKMIS}")
+    print(f"OZET_KATALOG = {OZET_KATALOG}")

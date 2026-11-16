@@ -1,0 +1,140 @@
+/* rebuild.css'ten taşındı (2026-11-16, ilk yük CSS'i hafifletme): yalnız DiseasesView kullanır; tembel parçasıyla yüklenir. */
+/* 35 · Hastalıklar (DiseasesView) — yeniden kurulum. Sabit slate/teal/amber renkleri kaldırıldı; yalnız DS tokenları,
+ *  her temada ve palette uyumlu. Kart: uzmanlık çipi (uzmanlığa sabit ton) · ICD · ad · Latince · ayırıcı ipucu · klinik · araçlar. */
+.dz-page { display: flex; flex-direction: column; gap: 12px; padding-bottom: 24px; }
+.dz-dock .cx-search { padding-right: 4px; }
+.dz-dock .cx-search input { flex: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; color: var(--color-ink); font: inherit; font-size: 15px; }
+.dz-dock .cx-search input::-webkit-search-cancel-button { display: none; }
+.dz-x { width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.dz-x svg { width: 15px; height: 15px; }
+.dz-fav-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border: 0; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.dz-fav-btn svg { width: 15px; height: 15px; }
+.dz-fav-btn b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--color-white); font-size: 11px; display: inline-flex; align-items: center; justify-content: center; }
+.dz-fav-btn.is-on { background: var(--color-warn-soft); color: var(--color-warn); }
+@media (max-width: 479px) { .dz-fav-btn span { display: none; } }
+.dz-result { margin: 0; font-size: 12.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+
+.dz-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.dz-card { --t: var(--color-accent); --t-soft: var(--color-accent-soft); display: flex; flex-direction: column; min-width: 0; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 12px; overflow: clip; transition: border-color 150ms, box-shadow 150ms; }
+.dz-card[data-tone="clinic"] { --t: var(--color-clinic); --t-soft: var(--color-clinic-soft); }
+.dz-card[data-tone="ai"] { --t: var(--color-ai); --t-soft: var(--color-ai-soft); }
+.dz-card[data-tone="warn"] { --t: var(--color-warn); --t-soft: var(--color-warn-soft); }
+.dz-card[data-tone="ok"] { --t: var(--color-ok); --t-soft: var(--color-ok-soft); }
+.dz-card[data-tone="bad"] { --t: var(--color-bad-text); --t-soft: var(--color-bad-soft); }
+.dz-card:hover { border-color: var(--color-line-2); box-shadow: var(--shadow-xs, 0 1px 2px rgb(0 0 0 / .05)); }
+.dz-card-main { flex: 1; display: flex; flex-direction: column; align-items: stretch; gap: 6px; padding: 12px 14px 10px; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.dz-card-main:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; border-radius: 12px; }
+.dz-card-top { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.dz-cat { display: inline-flex; align-items: center; gap: 6px; min-width: 0; height: 22px; padding: 0 8px; border-radius: 99px; background: var(--t-soft); color: var(--t); font-size: 11.5px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dz-cat i { width: 6px; height: 6px; border-radius: 99px; background: currentColor; flex-shrink: 0; }
+.dz-icd { margin-left: auto; flex-shrink: 0; font-family: var(--font-mono, ui-monospace, monospace); font-size: 11.5px; font-weight: 650; color: var(--color-ink-3); }
+.dz-name { font-size: 15.5px; font-weight: 650; line-height: 1.35; color: var(--color-ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dz-latin { margin: 0; font-size: 12.5px; font-style: italic; color: var(--color-ink-3); }
+.dz-latin span { font-style: normal; font-weight: 600; margin-right: 6px; }
+.dz-tip { display: flex; gap: 8px; margin-top: 4px; padding: 8px 10px; border-radius: 8px; background: var(--color-warn-soft); color: var(--color-ink); font-size: 13px; line-height: 1.5; }
+.dz-tip > svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 3px; color: var(--color-warn); }
+.dz-tip > span { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.dz-tip b, .dz-clin b { display: block; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: var(--color-warn); }
+.dz-clin { font-size: 13px; line-height: 1.5; color: var(--color-ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dz-clin b { display: inline; margin-right: 6px; color: var(--color-ink-3); }
+.dz-card-f { display: flex; align-items: center; gap: 2px; padding: 4px 6px; border-top: 1px solid var(--color-line-soft); }
+.dz-card-f .qk-ib.is-fav { color: var(--color-warn); }
+.dz-card-f .qk-ib.is-danger:hover { color: var(--color-bad-text); background: var(--color-bad-soft) !important; }
+.dz-more { display: inline-flex; align-items: center; gap: 2px; height: 32px; padding: 0 6px 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-accent); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.dz-more:hover { background: var(--color-accent-soft); }
+.dz-more svg { width: 15px; height: 15px; }
+
+.dz-empty { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 48px 16px; text-align: center; background: var(--color-white); border: 1px dashed var(--color-line-2); border-radius: 12px; }
+.dz-empty-ic { width: 44px; height: 44px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-field); color: var(--color-ink-3); }
+.dz-empty b { font-size: 15px; color: var(--color-ink); }
+.dz-empty p { margin: 0 0 6px; font-size: 13px; color: var(--color-ink-3); }
+
+.dz-sheet-tools { display: inline-flex; gap: 2px; }
+.dz-sheet-tools .qk-ib.is-fav { color: var(--color-warn); }
+.dz-detail { display: flex; flex-direction: column; gap: 12px; padding-bottom: 16px; }
+.dz-meta { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; border-radius: 10px; background: var(--color-field); }
+.dz-srcs { display: flex; flex-wrap: wrap; gap: 6px; }
+.dz-src { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 99px; background: var(--color-ok-soft); color: var(--color-ok); font-size: 11.5px; font-weight: 600; }
+.dz-src svg { width: 12px; height: 12px; }
+.dz-src a { display: inline-flex; color: inherit; }
+.dz-sec { --t: var(--color-accent); --t-soft: var(--color-accent-soft); border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); overflow: clip; }
+.dz-sec.is-warn { --t: var(--color-warn); --t-soft: var(--color-warn-soft); }
+.dz-sec.is-ai { --t: var(--color-ai); --t-soft: var(--color-ai-soft); }
+.dz-sec.is-clinic { --t: var(--color-clinic); --t-soft: var(--color-clinic-soft); }
+.dz-sec.is-bad { --t: var(--color-bad-text); --t-soft: var(--color-bad-soft); }
+.dz-sec.is-ok { --t: var(--color-ok); --t-soft: var(--color-ok-soft); }
+.dz-sec-h { display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 10px; border-bottom: 1px solid var(--color-line-soft); }
+.dz-sec-ic { width: 26px; height: 26px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; background: var(--t-soft); color: var(--t); flex-shrink: 0; }
+.dz-sec-ic svg { width: 14px; height: 14px; }
+.dz-sec-h h4 { flex: 1; margin: 0; font-size: 14px; font-weight: 650; color: var(--color-ink); }
+.dz-sec-link { display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 8px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 12px; cursor: pointer; }
+.dz-sec-link:hover { background: var(--color-field); color: var(--color-ink); }
+.dz-sec-link svg { width: 13px; height: 13px; }
+.dz-list { list-style: disc; margin: 0; padding: 10px 14px 12px 30px; display: flex; flex-direction: column; gap: 5px; font-size: 14px; line-height: 1.55; color: var(--color-ink); }
+.dz-list li::marker { color: var(--t); }
+.dz-sub { margin: 10px 14px 0; font-size: 11.5px; font-weight: 700; letter-spacing: .02em; color: var(--color-ink-3); }
+.dz-sub + .dz-list { padding-top: 4px; }
+.dz-note { margin: 0; padding: 10px 14px 12px; font-size: 14px; line-height: 1.6; color: var(--color-ink); white-space: pre-wrap; }
+.dz-report { align-self: flex-start; color: var(--color-ink-3); }
+
+.dz-form { display: flex; flex-direction: column; gap: 12px; padding-bottom: 8px; }
+.dz-form-2 { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.dz-field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.dz-field > span { font-size: 12.5px; font-weight: 600; color: var(--color-ink-2); }
+.dz-field > span b { color: var(--color-bad-text); }
+.dz-field > span small { margin-left: 6px; font-weight: 500; color: var(--color-ink-3); }
+.dz-field input, .dz-field textarea { width: 100%; min-width: 0; padding: 9px 11px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14px; line-height: 1.5; resize: vertical; }
+.dz-field input:focus, .dz-field textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+.dz-field select { width: 100%; min-width: 0; height: 40px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14px; }
+.dz-field select:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+
+/* Hastalıklar · şema 2: karakteristik özellik (fosforlu kalem), madde içi vurgu, sınav etiketi, sınıflandırma */
+.dz-hl { padding: 0 2px; border-radius: 3px; color: inherit; font-weight: 600; background: linear-gradient(transparent 38%, color-mix(in srgb, var(--color-warn) 34%, transparent) 38%, color-mix(in srgb, var(--color-warn) 34%, transparent) 92%, transparent 92%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.dz-hallbox { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px 12px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--color-warn) 40%, var(--color-line)); border-left: 4px solid var(--color-warn); background: var(--color-warn-soft); }
+.dz-hallbox-h { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 11.5px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; color: var(--color-warn); }
+.dz-hallbox-h svg { width: 14px; height: 14px; }
+.dz-hallrow { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.dz-hall { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; padding: 5px 10px; border-radius: 6px; color: var(--color-ink); font-size: 14px; font-weight: 600; line-height: 1.4; background: color-mix(in srgb, var(--color-warn) 24%, var(--color-white)); box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--color-warn) 45%, transparent); }
+.dz-hall svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--color-warn); }
+.dz-hall.is-sm { display: flex; padding: 2px 8px; font-size: 12.5px; font-weight: 550; border-radius: 5px; box-shadow: none; background: color-mix(in srgb, var(--color-warn) 16%, var(--color-white)); }
+.dz-hall.is-sm > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dz-card .dz-hallrow { flex-direction: column; gap: 4px; }
+.dz-card .dz-hallrow { margin-top: 2px; }
+.dz-kind { flex-shrink: 0; height: 20px; padding: 0 7px; border-radius: 99px; border: 1px solid var(--color-line-2); color: var(--color-ink-3); font-size: 11px; font-weight: 650; display: inline-flex; align-items: center; }
+.dz-kind + .dz-icd, .dz-cat + .dz-kind { margin-left: 0; }
+.dz-latin-d { padding: 0 2px; }
+.dz-list li.is-key { list-style-type: '★  '; }
+.dz-list li.is-key::marker { color: var(--color-warn); }
+.dz-lab { font-weight: 700; color: var(--color-ink); margin-right: 6px; }
+.dz-lab::after { content: ':'; }
+.dz-keytag { display: inline-flex; align-items: center; height: 18px; margin-left: 6px; padding: 0 6px; border-radius: 99px; background: var(--color-warn-soft); color: var(--color-warn); font-size: 10.5px; font-weight: 750; letter-spacing: .03em; vertical-align: 1px; }
+.dz-sublist { list-style: '– '; margin: 4px 0 2px; padding-left: 16px; display: flex; flex-direction: column; gap: 2px; }
+.dz-sublist li::marker { color: var(--color-ink-3); }
+.dz-ref { margin-left: 3px; font-size: 11px; font-weight: 650; color: var(--color-accent); text-decoration: none; vertical-align: 1px; }
+.dz-ref:hover { text-decoration: underline; }
+/* H208: kaynak dipnotları 20x14 px dokunma hedefiydi; görünüm aynı kalır, ::after ile alan genişler */
+.dz-ref { position: relative; display: inline-block; padding: 2px 3px; }
+.dz-ref::after { content: ""; position: absolute; inset: -8px -6px; }
+.dz-verif { display: flex; align-items: flex-start; gap: 8px; margin: 0; padding: 8px 12px; border-radius: 10px; background: var(--color-ok-soft); color: var(--color-ink-2); font-size: 12.5px; line-height: 1.5; }
+.dz-verif svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; color: var(--color-ok); }
+.dz-verif b { color: var(--color-ok); font-weight: 650; }
+.dz-fsrc { display: block; margin-top: 2px; font-size: 11.5px; color: var(--color-ink-3); }
+.dz-refs { list-style: decimal; font-size: 13px; }
+.dz-refs a { color: var(--color-accent); text-decoration: none; overflow-wrap: anywhere; }
+.dz-refs a:hover { text-decoration: underline; }
+.dz-refs a svg { width: 12px; height: 12px; display: inline; vertical-align: -1px; }
+.dz-ent-intro { margin: 8px 14px 0; font-size: 12.5px; color: var(--color-ink-3); }
+.dz-entgroup { padding-bottom: 4px; }
+.dz-entgroup .dz-chips { padding: 6px 14px 4px; }
+.dz-chip:disabled { opacity: .55; cursor: default; }
+.dz-entbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.dz-entbar-h { font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); }
+.dz-entchip { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px 10px; border: 1px solid var(--color-line); border-radius: 99px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13px; cursor: pointer; }
+.dz-entchip > svg { width: 14px; height: 14px; color: var(--color-ai); flex-shrink: 0; }
+.dz-entchip small { color: var(--color-ink-3); margin-left: 4px; }
+.dz-entchip.is-on { cursor: default; border-color: color-mix(in srgb, var(--color-ai) 45%, var(--color-line)); background: var(--color-ai-soft); }
+.dz-entchip.is-on button { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 99px; background: transparent; color: var(--color-ink-2); cursor: pointer; }
+.dz-entchip.is-on button:hover { background: var(--color-white); }
+.dz-entchip.is-on button svg { width: 14px; height: 14px; }
+.dz-field ::placeholder { color: var(--color-ink-3); }
+.dz-form-f { position: sticky; bottom: 0; display: flex; justify-content: flex-end; gap: 8px; padding: 10px 0 2px; background: linear-gradient(transparent, var(--color-white) 30%); }

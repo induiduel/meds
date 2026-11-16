@@ -1,3 +1,5 @@
+// Sayfa stili tembel parçayla gelir (rebuild.css'ten taşındı); diğer içe aktarmalardan önce: eski kademe sırası korunur
+import '../styles/sayfa/siralama.css';
 import React, { useEffect, useState, useMemo, useLayoutEffect, useRef } from 'react';
 import { Segmented } from './ui/kit';
 import { PageHeader } from './ui/PageHeader';

@@ -18,13 +18,14 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { ozetKataloguYolu } from './contentOverlay.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DATA_DIR = path.resolve(PROJECT_ROOT, 'data');
 const LECTURE_NOTES_FILE = path.resolve(DATA_DIR, 'lecture_notes.json');
-const SUMMARIES_CATALOG_FILE = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
+const ozetYolu = () => ozetKataloguYolu(PROJECT_ROOT); // tek asıl kaynak (src/data + katman); çağrı anında çözülür
 
 export interface RepairStats {
   totalNotes: number;
@@ -46,7 +47,7 @@ function cleanTokens(str: string): Set<string> {
  * Execute automated cross-enrichment & slide repair
  */
 export function repairAndEnrichLectureNotes(): RepairStats {
-  if (!fs.existsSync(LECTURE_NOTES_FILE) || !fs.existsSync(SUMMARIES_CATALOG_FILE)) {
+  if (!fs.existsSync(LECTURE_NOTES_FILE) || !fs.existsSync(ozetYolu())) {
     console.warn('[LectureRepairEngine] Dosyalar eksik, onarım atlandı.');
     return {
       totalNotes: 0,
@@ -60,7 +61,7 @@ export function repairAndEnrichLectureNotes(): RepairStats {
   }
 
   const notes = JSON.parse(fs.readFileSync(LECTURE_NOTES_FILE, 'utf-8'));
-  const summaries = JSON.parse(fs.readFileSync(SUMMARIES_CATALOG_FILE, 'utf-8'));
+  const summaries = JSON.parse(fs.readFileSync(ozetYolu(), 'utf-8'));
 
   // Pre-tokenize summaries
   const tokenizedSummaries = summaries.map((s: any) => ({
