@@ -9,7 +9,7 @@
 |---|---|---:|---|---|
 | `ANLATIM_KURGU_STANDARDI.md` | Sesli ders anlatım kurgusu — hikâye gibi, neden-sonuçlu (kullanıcı kararı 2026-10-28) | 724 | 2026-11-16 | 2 betik |
 | `API_KATALOG.md` | MedSoru Açık Veri API Kataloğu | 1120 | 2026-11-13 | 1 betik |
-| `ARA_RESIM_KURALLARI.md` | Sesli ders ara resimleri (mekanizma resimleri) | 701 | 2026-11-16 | 4 betik |
+| `ARA_RESIM_KURALLARI.md` | Sesli ders ara resimleri (mekanizma resimleri) | 701 | 2026-11-16 | 3 betik |
 | `ARSIV_25_26_KURUL3.md` | 2025-2026 Kurul 3 arşivi — işletim kılavuzu (GİS) | 503 | 2026-11-17 | 1 betik |
 | `CIZIM_KURALLARI.md` | Canlı çizim ve işaretleme kuralları (bütün kurullar, bütün dersler, bütün PDF'ler) | 1937 | 2026-11-16 | AGENTS/CLAUDE, 10 betik |
 | `CLAUDE.md` | docs/ — proje belgeleri | 94 | 2026-11-16 | AGENTS/CLAUDE, 16 betik |
@@ -27,7 +27,7 @@
 | `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2894 | 2026-11-17 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2518 | 2026-11-16 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6790 | 2026-11-17 | AGENTS/CLAUDE, 12 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6877 | 2026-11-17 | AGENTS/CLAUDE, 12 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |

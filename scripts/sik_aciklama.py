@@ -17,8 +17,15 @@ BOS_KALIP = re.compile(
 OLUMSUZ = re.compile(r"\b(değil\w*|yapmaz|geçmez|almaz|yoktur|olmaz|etmez|sağlamaz|toplamaz|görülmez|bulunmaz|sayılmaz)\b", re.I)
 
 
+# Kısaltma noktası cümle sonu değildir: kaynak etiketi "(s. 9 ve 12)" her açıklamada fazladan cümle sayılıyordu
+# (2026-11-17 ölçümü: 11.465 şıkın 6.901'inde fazla sayım, 48'i yalnız bu yüzden "2–3 cümle" kuralından kalıyordu — H618).
+# Eşik değişmedi (2–3 cümle); yalnız sayım düzeltildi.
+_KISALTMA = re.compile(r'\b(s|sf|bkz|vb|vs|Dr|Prof|örn|yak|Tab|Şek)\.(?=\s)')
+
+
 def cumleler(m):
-    return [c for c in re.split(r'(?<=[.!?])\s+', m.replace('**', '').strip()) if c.strip()]
+    m = _KISALTMA.sub(lambda x: x.group(1) + '\u2024', m.replace('**', '').strip())
+    return [c.replace('\u2024', '.') for c in re.split(r'(?<=[.!?])\s+', m) if c.strip()]
 
 
 def denetle(metin, yer, enaz=20, encok=55, cumle=(2, 3)):

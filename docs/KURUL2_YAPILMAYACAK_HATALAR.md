@@ -450,3 +450,5 @@
 - **H612** · "k2-33/34/35 kelime kelime takip yok; izleyici 12 derste cümle zamanı yok dedi": yerel kelime zamanı zamanlayıcısı kapalı + Oracle'da üretilen katman yerelde aranıyordu → elle GPU çözümü, izleyici canlıyı denetler → hatalar/ses.md
 - **H613** · "5 Kurul 2 dersinde içerik paketi yok": ek dosyasını yazan betik yoktu, kapı kapatılan quiz'i istiyordu → `paketten_ek.py` (LLM yok), gerekçeli tablo muafiyeti → hatalar/ders_metni_terim_kisaltma.md
 - **H615** · "Commit başka oturumun sahnelediği silmeyi içerdi": düz `git commit` bütün index'i işler → `git commit --only -- <yollar>`, push öncesi `show --stat` → hatalar/dagitim_sunucu.md
+- **H617** · "Örnek sorular kapısız yayına girdi (k2-16: 120 geçiştirme şıkkı); eksik katmanlar ayrı ayrı bulundu": yayından önce tek denetim yoktu → `betik_tamamla.py --denetle` yayın kapısı + `onarim_paketi.py` (yalnız hatalı parça) → hatalar/soru_cozucu.md
+- **H618** · "Şık açıklaması cümle sayacı '(s. 9)'u cümle sayıyordu": 48 haksız kalan, 95 haksız geçen → kısaltma noktası cümle sonu değil, eşik aynı → hatalar/soru_cozucu.md

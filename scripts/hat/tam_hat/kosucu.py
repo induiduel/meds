@@ -81,7 +81,9 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "quiz":        ("E2", "betik", "quiz havuzu (KAPALI)."),
     "denetci":     ("E5", "llm", "Bütün betik kapıları + TEK bağımsız tıbbi denetçi (GEÇER). Denetçi kural için YALNIZ {k}/baglam/kural_denetci.md okur "
                                  "(yayın/dağıtım kurallarını DEĞİL) + katman dosyaları + sayfalar.json; çıktı denetim.json (kimlik bazlı bulgu). KALIR ise yalnız bulgu kimlikleri düzeltilir ve yalnız onlar yeniden denetlenir."),
-    "yayin":       ("E6", "betik", "python3 scripts/kapilar/kos.py kayit (0 HATA, H610) → commit + bash deploy/oracle/dagit.sh + canlı doğrulama (kural: {k}/baglam/kural_yayin.md). SONRA: ders_kilit.py birak {d}."),
+    "betik_tamamla": ("E5", "betik", "python3 scripts/hat/tam_hat/betik_tamamla.py {d} [--gpu]  → LLM'siz katmanları (ders analizi, içerik paketi, zengin transkript, "
+                                     "kelime zamanı) üretir ve 7 katman kapısını koşar; ✗ satırı düzeltme komutunu verir. Denetçiden ÖNCE; denetçiye eksik katmanla gidilmez."),
+    "yayin":       ("E6", "betik", "python3 scripts/hat/tam_hat/betik_tamamla.py {d} --denetle (çıkış 0; eksik katmanla yayın YOK) → python3 scripts/kapilar/kos.py kayit (0 HATA, H610) → commit + bash deploy/oracle/dagit.sh + canlı doğrulama (kural: {k}/baglam/kural_yayin.md). SONRA: ders_kilit.py birak {d}."),
 }
 
 

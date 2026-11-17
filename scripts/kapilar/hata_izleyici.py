@@ -107,6 +107,8 @@ def _canli_takip(key: str) -> tuple[int, list[str]]:
     np_ = sum(len([p for p in b["paragraflar"] if p["metin"].strip()]) for b in d["bolumler"])
     hata = []
     for v in d.get("varyantlar", []):
+        if not v.get("zamanlama"):  # paragraf zamanlaması olmayan eski varyant: kelime zamanı çözülemez, oynatıcı kullanmaz
+            continue
         kz = len(v.get("kelimeZaman") or {})
         if kz < np_:
             hata.append(f"HATA canlı {v['id']}: kelime zamanı {kz}/{np_} paragraf")

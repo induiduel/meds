@@ -30,6 +30,7 @@ KATMANLAR = [
     ("onem_listesi", "En önemlileri: önem listesi (spot_onem, sinav_asistani)", True, True),
     ("ornek_soru", "örnek sorular TEK kategori (genel + hoca üslubu soruları aynı dosyada, ornek_soru_kapi.py tek kapı) + sesli çözücü (hepsi) + EMA sesi", True, True),
     ("ders_icerik", "ders içerik paketi (ders_icerik_uret.py, betik)", True, True),
+    ("betik_tamamla", "LLM'siz katmanları tek komutta tamamla + eksik katman kapısı (betik_tamamla.py; yayın öncesi --denetle 0)", True, True),
     ("denetci", "betik kapıları + tek bağımsız denetçi", True, True),
     ("yayin", "commit + dagit.sh + canlı doğrulama", True, True),
     ("capa_cizim", "anlamsal çapa + canlı çizim (çizim partileri, cizim_kapisi)", True, False),
@@ -70,9 +71,10 @@ BAGIMLILIK: dict[str, tuple[str, ...]] = {
     "ara_soru": ("anlatim",),
     "pdf_tasarim": ("anlatim",),
     "zengin_transkript": ("terim_kisaltma",),
+    "betik_tamamla": ("ders_ekle", "terim_kisaltma", "onem_listesi", "ornek_soru", "ema_ses"),
     "ogren_deste": ("degerlendirme",),
     "quiz": ("degerlendirme",),
-    "denetci": ("anlatim", "onem_listesi", "ornek_soru", "cikmis_analiz", "ders_icerik"),
+    "denetci": ("anlatim", "onem_listesi", "ornek_soru", "cikmis_analiz", "ders_icerik", "betik_tamamla"),
     "yayin": ("denetci",),
 }
 
