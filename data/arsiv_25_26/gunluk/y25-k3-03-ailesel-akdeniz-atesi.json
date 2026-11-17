@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-03-ailesel-akdeniz-atesi",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Ailesel Akdeniz Ateşi (FMF)",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 06:37",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "AILESEL AKDENIZ ATESI.pdf (27 sayfa) kaynağından 54 paragraf / 206 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 19.1,
+        "sayfaSayisi": 27,
+        "bolumSayisi": 7,
+        "paragrafSayisi": 54,
+        "cumleSayisi": 206,
+        "cikmisEslesme": 19
+      }
+    }
+  ]
+}

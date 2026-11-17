@@ -179,6 +179,57 @@ SH_CIKTI = """ÇIKTI BİÇİMİ (yalnız JSON)
   "cumleler":["cümle"],"ekran":"**kavram** kısa madde"}],"cikmis":[]}]}"""
 
 
+GORSEL_SISTEM = ("Sen tıp fakültesi Dönem 3 öğrencisine sesli ders anlatan klinik hocasısın. Yalnız verilen bölüm "
+                 "bağlamındaki bilgiyi kullanırsın; yeni tanı, ilaç, sayı eklemezsin. Yanıt SADECE JSON.")
+
+GORSEL_KURALLAR = """KURALLAR
+1. Bu slaytta YAZI YOK; yalnız bir görsel (klinik fotoğraf, çizim ya da şema) var. Metin katmanı ve OCR boş.
+2. Görseli, bölümün başlığı ve komşu sayfalarda anlatılan kavramla İLİŞKİLENDİREREK anlat:
+   görselin neyi gösterdiğini (anatomi, lezyon, akış, tablo) söyle, yeni tıbbi bilgi EKLEME.
+3. 2–4 madde yaz. "satir" boş ("") kalsın; "sekil" o görselin kısa tarifi (4–8 kelime).
+4. "cumleler": her madde 1 cümle, 8–26 kelime, maddenin kavramını ADIYLA söyle.
+   RAKAM ve BÜYÜK HARFLİ KISALTMA YASAK (yazıyla). Markdown/parantez YASAK.
+5. "ekran": en çok 10 kelime, kilit kavram **kalın**.
+"""
+
+
+def gorsel_yedek(baglam: dict, smetin: dict[int, str], secili: list[int]) -> dict | None:
+    """Yazısız görsel sayfası: bölüm başlığı + komşu sayfa metniyle ilişkilendirerek anlatım üretir.
+
+    Neden: klinik fotoğraf slaytlarında metin katmanı da OCR de çıkmıyor; model sayfayı boş görünce anlatım
+    üretmiyordu ve kapsam kapısı sayfayı 'anlatılmamış' sayıyordu (H612). Bu yol, görseli zaten anlatılan
+    kavramın içine yerleştirir (kaynak dışı bilgi eklemez).
+    """
+    import cloud_llm as C
+    parcalar = []
+    for n in secili:
+        onceki = next((t for t in (smetin.get(n - 1) or "").splitlines() if t.strip()), "")
+        sonraki = next((t for t in (smetin.get(n + 1) or "").splitlines() if t.strip()), "")
+        parcalar.append(f"--- SAYFA {n} (YAZI YOK · YALNIZ GÖRSEL) ---\n"
+                        f"Önceki sayfanın başlığı: {onceki[:120]}\nSonraki sayfanın başlığı: {sonraki[:120]}\n"
+                        f"Bölüm: {baglam['konu']}")
+    istem = (f"Ders: {baglam['konu']} ({baglam['brans']})\n\n{GORSEL_KURALLAR}\n{SH_CIKTI}\n"
+             f"GİRDİ\n" + "\n\n".join(parcalar) + "\n")
+    modeller = [m.strip() for m in (os.environ.get("MEDS_K3_MODELS") or "opendesign:deepseek-v4.1-flash").split(",") if m.strip()]
+    for deneme in range(2):
+        r = C.chat(istem, system=GORSEL_SISTEM, as_json=True, max_tokens=2200, temperature=0.25, timeout=180,
+                   json_ham=True, models=modeller)
+        if r:
+            break
+        print(f"  [görsel-yedek] boş yanıt ({deneme + 1}/2)", flush=True)
+        time.sleep(2)
+    if not isinstance(r, dict) or not isinstance(r.get("sayfalar"), list):
+        return None
+    out = {}
+    for x in r["sayfalar"]:
+        if isinstance(x, dict):
+            try:
+                out[int(x.get("sayfa"))] = x
+            except (TypeError, ValueError):
+                continue
+    return out or None
+
+
 def istek_kisa(baglam: dict, smetin: dict[int, str], secili: list[int]) -> dict | None:
     """Görsel/şema sayfası yedeği: kısa istem, küçük çıktı sınırı (uzun istemde model boş dönüyordu, H612)."""
     import cloud_llm as C
@@ -351,8 +402,12 @@ def denetle_sayfa(x: dict, n: int, metin: str, varl: dict | None = None) -> list
 
 def capa_bul(st: str, metin: str) -> str:
     """Çapa KAPISI birebir arar (konusma_v2.dogrula): dönen satır MUTLAKA sayfa metninde harfi harfine geçer.
-    Model satırı birleştirmiş/bozmuşsa, sayfanın kendi satırlarından en çok örtüşeni çapa yapılır; o da yoksa çapa atılır."""
-    st = (st or "").strip()
+    Model satırı birleştirmiş/bozmuşsa, sayfanın kendi satırlarından en çok örtüşeni çapa yapılır; o da yoksa çapa atılır.
+
+    NOT (H613, 2026-11-17): çapa metni TSV satırına girer; içinde satır sonu olursa metin.tsv bozulur ve kapı
+    'en az 4 alan gerekli' hatası verir. Bu yüzden çapa baştan tek satıra indirilir (katla zaten boşluk katlıyor).
+    """
+    st = " ".join((st or "").split())
     if not st or not metin:
         return ""
     kat_sayfa = katla(metin)
@@ -399,7 +454,7 @@ def tsv_yaz(taslak: Path, uretilen: dict[int, dict], smetin: dict[int, str], var
         for m in maddeler:
             st = capa_bul(m.get("satir") or "", smetin.get(n) or "")
             ekran = re.sub(r"\s+", " ", (m.get("ekran") or "")).strip() or "..."
-            sekil = str(m.get("sekil") or "").replace("|", " ").strip()
+            sekil = " ".join(str(m.get("sekil") or "").replace("|", " ").split())
             for i, c in enumerate([c for c in (m.get("cumleler") or []) if isinstance(c, str) and c.strip()]):
                 ses = re.sub(r"\s+", " ", c).strip().replace("|", " ")
                 # H109 kapısı (her v2 cümlesi TEK cümle) — model iki cümleyi birleştirdiyse KOD böler,
@@ -475,9 +530,16 @@ def main() -> int:
                 ((varl.get(n) or {}).get("gorsel_orani") or 0) >= 0.18
                 and len((smetin.get(n) or "").split()) < 45 for n in grup)
             if gorsel_agirlikli:
-                sonuc = istek_kisa(baglam, {n: sayfa_metni(taslak, n, smetin, varl) for n in grup}, grup)
-                if sonuc:
-                    print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: görsel sayfa, kısa istemle alındı", flush=True)
+                metin_g = {n: sayfa_metni(taslak, n, smetin, varl) for n in grup}
+                if any(not (metin_g[n] or "").strip() for n in grup):
+                    # yazısız görsel (klinik fotoğraf): bağlama yerleştirerek anlat
+                    sonuc = gorsel_yedek(baglam, smetin, grup)
+                    if sonuc:
+                        print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: yazısız görsel, bağlamla üretildi", flush=True)
+                if not sonuc and any((metin_g[n] or "").strip() for n in grup):
+                    sonuc = istek_kisa(baglam, metin_g, grup)
+                    if sonuc:
+                        print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: görsel sayfa, kısa istemle alındı", flush=True)
             if not sonuc:
                 sonuc = istek(baglam, smetin, varl, yerel, grup, {n: kusur[n] for n in grup if kusur.get(n)})
             if not sonuc and not gorsel_agirlikli:
