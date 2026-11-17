@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-06-gis-kanamalari",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Gastrointestinal Sistem Kanamaları",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 08:39",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "4. GISK.pdf (48 sayfa) kaynağından 104 paragraf / 425 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 40.0,
+        "sayfaSayisi": 48,
+        "bolumSayisi": 11,
+        "paragrafSayisi": 104,
+        "cumleSayisi": 425,
+        "cikmisEslesme": 21
+      }
+    }
+  ]
+}

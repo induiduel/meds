@@ -66,6 +66,12 @@ def kapsam(taslak: Path, v2: dict) -> list[str]:
             continue
         if s == 1:
             continue          # kapak (başlık/hoca slaytı): anlatılmaz
+        # Kapanış slaytı ("Teşekkürler", "Thank you", "Sorular?") içerik taşımaz; kapak gibi anlatılmaz (H616).
+        kapanis = {"tesekkurler", "tesekkur", "teşekkürler", "teşekkür", "thank you", "thanks",
+                   "sorular", "questions", "soru ve cevap"}
+        sayfa_metni = " ".join(" ".join(m.get("metin") or []) for m in (sy.maddeler or [])).lower()
+        if " ".join(sayfa_metni.split()).strip(" .,:;!?-•") in kapanis:
+            continue
         yazi = len(sy.kelimeler)
         v = varl.get(s) or {}
         gorsel = (v.get("gorsel_orani") or 0) >= 0.18 or (v.get("cizim") or 0) >= 25 or bool(v.get("tablolar"))

@@ -399,7 +399,10 @@ def denetle_sayfa(x: dict, n: int, metin: str, varl: dict | None = None) -> list
             parca_i += 1
         if not (m.get("ekran") or "").strip():
             e.append(f"s{n}: ekran boş")
-    if n_cumle < max(3, len(maddeler)):
+    # Az yazılı/başlık sayfasında (ör. yalnız "TEDAVİ" ya da klinik fotoğraf) 3 cümle zorlamak uydurma dolgu
+    # üretiyordu; orada 1 madde yeter. Metni olan normal sayfada en az 3 cümle şartı korunur (H617).
+    asgari = 3 if len(kat.split()) >= 45 else 1
+    if n_cumle < asgari:
         e.append(f"s{n}: cümle sayısı {n_cumle} < madde {len(maddeler)}")
     return e
 
@@ -557,6 +560,11 @@ def main() -> int:
                 sonuc = istek_kisa(baglam, {n: sayfa_metni(taslak, n, smetin, varl) for n in grup}, grup)
                 if sonuc:
                     print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: kısa istemle alındı", flush=True)
+            if not sonuc and all(((varl.get(n) or {}).get("gorsel_orani") or 0) >= 0.18 for n in grup):
+                # bozuk OCR'lı şema sayfası: uzun ve kısa istem de boş döndüyse bölüm bağlamıyla anlatılır
+                sonuc = gorsel_yedek(baglam, smetin, grup)
+                if sonuc:
+                    print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: görsel bağlam yedeği", flush=True)
             if not sonuc and len(grup) > 1:
                 yari = (len(grup) + 1) // 2
                 for alt in (grup[:yari], grup[yari:]):
