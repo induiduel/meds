@@ -453,3 +453,4 @@
 - **H617** · "Örnek sorular kapısız yayına girdi (k2-16: 120 geçiştirme şıkkı); eksik katmanlar ayrı ayrı bulundu": yayından önce tek denetim yoktu → `betik_tamamla.py --denetle` yayın kapısı + `onarim_paketi.py` (yalnız hatalı parça) → hatalar/soru_cozucu.md
 - **H618** · "Şık açıklaması cümle sayacı '(s. 9)'u cümle sayıyordu": 48 haksız kalan, 95 haksız geçen → kısaltma noktası cümle sonu değil, eşik aynı → hatalar/soru_cozucu.md
 - **H619** · "Onarım ajanı geçiştirme kalıbını başka sözcükle değiştirip kapıyı geçirdi (k2-16)": toplu regex + kalıp listesi → iki kalıp kapıda, onarımda toplu değiştirme yasak, uygulayıcı konum tabanlı → hatalar/soru_cozucu.md
+- **H621** · "Kapı kalıbı eklenince yalnız tetikleyen kaynak tarandı; ara soru çözücüsünde kaldı": bütün `sik_aciklama` kullanıcıları taranır, tek klip onarımında birlestir koşulmaz → hatalar/soru_cozucu.md

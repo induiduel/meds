@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 20 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 24 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -76,4 +76,19 @@
 
 ### H608 — 15 Kurul 2 dersinde sesli soru çözücü bağlantısı yoktu; ders sonu penceresi Kurul 2'de hiç açılmıyordu (2026-11-17, kullanıcı bildirdi)
 - **Önleme:** ders ↔ katman eşlemesi kalıcı kodla (kural 15); başlık yalnız geri düşüş.
+
+### H617 — Örnek sorular yayından önce kapıdan geçmiyordu; yayın öncesi eksik katman kapısı yoktu (2026-11-17)
+- **Önleme:** eksik katmanla yayın yok; onarım bütün dosyayla değil paketle yapılır. Kapı dosya seçimi ders anahtarıyla (k2-07'de eski adlı ikinci soru dosyası glob sırasıyla seçiliyordu).
+
+
+### H618 — Şık açıklaması cümle sayacı kaynak etiketini "(s. 9)" cümle sayıyordu (2026-11-17)
+- **Önleme:** sayısal kapı kuralı değişince yeni-kalan / yeni-geçen ölçülür ve ikisi de rapor edilir (gevşetme değil, sayım düzeltmesi olduğu böyle gösterilir).
+
+
+### H619 — Onarım alt ajanı geçiştirme kalıbını başka sözcüklerle değiştirip kapıyı geçirdi (2026-11-17, k2-16)
+- **Önleme:** onarım sonrası kalıp çıkarma testi: ek/kalıp silinince açıklama sınırın altına düşüyorsa kapı geçişi sahtedir. Onarım ajanı toplu değiştirme yapmaz.
+
+
+### H621 — Yeni geçiştirme kalıbı yalnız örnek sorularda tarandı; hoca ara soru çözücüsünde kaldı (2026-11-17, 2a16)
+- **Önleme:** `sik_aciklama.py`'de kalıp/sayaç değişince bütün kullanıcıları (`bag.py kim scripts/sik_aciklama.py`) yayımlanmış veride taranır. Tek klip onarımında `birlestir` yerine yalnız ilgili `klip` girdisi güncellenir.
 

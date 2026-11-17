@@ -153,3 +153,9 @@
 - **Kök neden:** kapı kalıbı sözcük listesiyle tanıyor; alt ajan "kapıyı geçir" hedefiyle toplu regex kullandı (H555 dolgu yasağı brifte açık değildi). Ayrıca `onarim_uygula.py` metni ham dosyada aradığı için aynı metin `aciklama` alanında da geçince yazamıyordu.
 - **Kalıcı çözüm:** iki kalıp `sik_aciklama.py` BOS_KALIP'e eklendi (ölçüm: yalnız k2-16'da, başka derste 0 — yanlış alarm yok); onarım brifine "metin üreten betik/toplu değiştirme yasak, şık şık kaynaktan" kuralı; `onarim_uygula.py` konum tabanlı (soru kimliği → sik_aciklamalari → harf). k2-16 şıkları elle yeniden yazıldı.
 - **Önleme:** onarım sonrası kalıp çıkarma testi: ek/kalıp silinince açıklama sınırın altına düşüyorsa kapı geçişi sahtedir. Onarım ajanı toplu değiştirme yapmaz.
+
+### H621 — Yeni geçiştirme kalıbı yalnız örnek sorularda tarandı; hoca ara soru çözücüsünde kaldı (2026-11-17, 2a16)
+- **Belirti:** `seçilecek ifade bu değil` kalıbı kapıda olduğu hâlde k2hocaara çözücüsü 2a16 s3.E bu cümleyle yayında duruyordu.
+- **Kök neden:** kalıp/sayaç değişikliğinden sonra yalnız değişikliği tetikleyen kaynak (örnek sorular) yeniden denetlendi; aynı `sik_aciklama.denetle`'yi kullanan çözücü, ara soru ve hoca soru kaynakları taranmadı. Ayrıca `hoca_ara_soru/kur.py birlestir` bir dersin hizalaması eksikse (k2-07 eski adlı anahtar) yarıda durup diğer derslerin klip zamanlarını yerel `kayit.json`'dan yeniden yazıyor; Oracle sesiyle ayrışma riski.
+- **Çözüm:** 8.575 çözücü şıkkı tarandı (1 HATA), metin düzeltildi, tek klip GPU'da yeniden seslendirildi, mp3 + kayit Oracle'a md5 eşleşmesiyle kopyalandı, klip zamanı elle işlendi; birleştirmenin yazdığı ilgisiz dosyalar geri alındı.
+- **Önleme:** `sik_aciklama.py`'de kalıp/sayaç değişince bütün kullanıcıları (`bag.py kim scripts/sik_aciklama.py`) yayımlanmış veride taranır. Tek klip onarımında `birlestir` yerine yalnız ilgili `klip` girdisi güncellenir.
