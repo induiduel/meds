@@ -106,8 +106,7 @@
 - **Çözüm:** `klip_tasi` cümle seslerinin birleşimi yeni paragraf metniyle aynıysa v2'ye dokunmaz. Çapa: yereldeki taşınmış çapa esas alındı,
   değişen paragraflarda değişmeyen cümleler eski çapayı (git HEAD) geri aldı, yeni cümleler satırdan `pdf_isaret.capa_maddeleri` ile madde
   dizinine çevrildi; `capa_dogrula` %98, 0 HATA; çapa Oracle'a yeniden yazıldı.
-- **Önleme:** yayımlanmış dersin metni düzeltildiğinde `sesli_yayinla.py`'den SONRA yerel çapa (klip_tasi ile taşınmış + değişen paragraflar
-  yazılmış) Oracle'a geri kopyalanır ve `pdf_isaret.py --key <key> --zorla` çalıştırılır (H93); `ders-ekle`'nin yazdığı kaba çapaya güvenilmez.
+- **Önleme:** yayımlanmış ders metni düzeltilince `sesli_yayinla.py`'den SONRA yerel çapa Oracle'a kopyalanır, `pdf_isaret.py --key <key> --zorla` (H93); `ders-ekle` çapasına güvenilmez.
 
 ## H468 — Hoca dökümü sessizce CPU'ya düştü; turbo dökümü konuşmanın üçte birini kaçırdı (2026-11-02, Kurul 2 2. parti)
 
@@ -121,8 +120,7 @@
   `hoca_dokum_medium.json`, `meds_temp/ogrenci_ders/dokum_medium.sh`) alındı ve vurgu/anlatım kayıtları iki dökümle çapraz okundu
   (k2-10'da 23 yeni kayıt, 2 yeni sınav vurgusu; anlaşılmayan "her hafta olan ağrı daha önemli" kaydı düşük güvene alındı,
   ona dayanan anlatım cümlesi silindi).
-- **Önleme:** E0'dan önce `nvidia-smi --query-gpu=clocks.max.sm` ≤2500 denetlenir; döküm günlüğünde "bu oturum CPU" görülürse
-  durdurulur. Hoca vurgusu en az iki dökümle çapraz okunur; yalnız bir dökümde geçen ve slayta bağlanamayan söz vurgu dayanağı olmaz.
+- **Önleme:** E0 öncesi `nvidia-smi --query-gpu=clocks.max.sm` ≤2500; günlükte "bu oturum CPU" görülürse durdurulur. Vurgu iki dökümle çapraz okunur; tek dökümde kalan, slayta bağlanmayan söz dayanak olmaz.
 
 ## H469 — Kurul 2 EMA yolu büyük harfli kısaltmayı okumuyordu (NMDA, GABA, IP3) (2026-11-02)
 
@@ -196,7 +194,7 @@
 - **Belirti:** `ogren_ses_uret.py learn-tumor-biyolojisi-terminolojisi --force` 35 adımdan 3'ünü üretti, 32'si "süre oranı 0.48 (3 denemede düzelmedi): 2." ile reddedildi; H587'deki 16 bozuk klibin 14'ü kapıda HATA kaldı.
 - **Kök neden:** `scripts/uretim/ogren_ses/ogren_ses_uret.py:95` `cumlelere_ayir` (eski hâli satır 92–93) `(?<=[.!?])\s+` ile böldüğü için numaralı listedeki "1." / "2." TEK BAŞINA cümle oluyordu; `ses_klip.seslendir` bu ~0,5 sn'lik parçada süre/karakter oranını eşik dışı görüp `BozukKlip` fırlatıyor, adım bütünüyle yazılmıyordu (H587 koruması doğru çalıştı; girdi bölmesi yanlıştı).
 - **Kalıcı çözüm:** `_SIRA_IMI` (sayı/harf/Roma + `.`/`)`, ya da `- – — • * · ▪ ►`) ile tam eşleşen parça sonraki cümleye yapıştırılır; okunuş (`ses_metin`) ve denetim eşiği değişmedi. Önce/sonra: 12.232 Öğren slayt metninde 2.186 fark, farkların tamamı tek başına sıra imi içeren metinlerde (iki yönlü assert); geri kalan metinlerde cümle listesi (dolayısıyla klip karması) birebir aynı. Yeniden üretim: 32/35 adım üretildi; kalan 3 (adım 18, 24: kutu çizimi tablo; adım 32: "<%0.1") ayrı kök, kapıda 3 HATA.
-- **Önleme kuralı:** ses için cümle bölen her işlev sıra imini/madde imini ayrı cümle bırakmaz; bölme değişikliği önce tüm gerçek metinler üzerinde eski/yeni karşılaştırmasıyla (fark yalnız hedeflenen biçimde) kanıtlanır. Süre eşiği gevşetilmez.
+- **Önleme kuralı:** ses cümle bölücüsü sıra/madde imini ayrı cümle bırakmaz; bölme değişikliği tüm gerçek metinlerde eski/yeni karşılaştırmasıyla kanıtlanır. Süre eşiği gevşetilmez.
 
 ### H605 — Son derslerde PDF ↔ metin takibi zayıftı: cümlelerin %19–24'ü yalnız sayfa vurgusu alıyordu (2026-11-17, kullanıcı bildirdi)
 - **Belirti:** k2-49, k2-50, k2-62 gibi son derslerde okunan cümle slaytta işaretlenmiyor, yalnız sayfa yanıyordu; k2-49/50'de kelime takibi de yoktu.
@@ -254,14 +252,9 @@
 - **Kök neden:** oran, gevşek ek kalıbıyla (`ikisi|ine|e|…`) yakalanıyordu; Türkçe çok sözcüklü sayı ilk sözcükte kesildi, koşul sütunu yaş ifadesi yerine rastgele ilk sözcükten alındı.
 - **Kalıcı çözüm:** `zengin_transkript.py` oranı sayı sözcüğü listesiyle tam yakalar, koşul sütunu yaş ifadesi ister; herhangi bir satır eksikse tablo hiç kurulmaz, cümle madde olarak kalır.
 - **Önleme:** yapı (tablo/sıra) çıkaran betik emin değilse yapı kurmaz, cümleyi korur; tıbbi sayı kesilmez.
-### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici 12 derste "cümle zamanı yok" yanlış alarmı verdi (2026-11-17)
+### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici yanlış alarm verdi (2026-11-17)
 - **Belirti:** sesli derste kelime kelime takip k2-33, k2-34, k2-35'te çalışmıyordu; hata izleyicisi 12 derste "cumle_zaman dosyası yok" dedi.
 - **Kök neden:** kelime zamanını üreten yerel `meds-kelime-zaman-hat.timer` devre dışıydı (Kurul 2 sesleri yalnız Oracle'da; kelime zamanı yerel GPU ile çözülüp gönderiliyor). Cümle zamanı ve işaret ise Oracle'da `meds-cumle-zaman.timer` ile üretiliyor, yerelde kopyası yok; takip kapısı yerel dosyaya bakınca 12 sağlam dersi "yok" saydı.
 - **Kalıcı çözüm:** üç ders `kelime_zaman.py --key <ders> --oracle --gpu` ile (gpuguard açık) çözüldü, canlıda 64/64, 39/39, 39/39 paragraf. `hata_izleyici.py` takipte yerel dosya yoksa canlı API'de paragraf başına kelime zamanını denetler.
-- **Önleme:** zamanlayıcı kural 20 gereği kapalı kalır; yeni ders yayınından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle çalıştırılır (tam hat `zaman_isaret` adımı). Oracle'da üretilen katman yerel kapıyla "yok" sayılmaz.
+- **Önleme:** yayından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle (`zaman_isaret`; zamanlayıcı kapalı, kural 20); Oracle katmanı yerelde "yok" sayılmaz.
 
-### H613 — 5 Kurul 2 dersinde ders içerik paketi yoktu; kapı kaldırılmış quiz'i istiyor, çözücüyü başlıkla arıyordu (2026-11-17)
-- **Belirti:** k2-33/34/35/49/50'de "Bu dersin içerikleri" kartları (spot, tablo, liste, kart, kavram) yoktu; kapı 9 HATA veriyordu.
-- **Kök neden:** destesiz derste paket `taslak/ders_icerik_ek.json` + `bilgi_havuzu.jsonl` ister, bunları yazan betik yoktu (önceki derslerde elle yazıldı); tasarruf koşularında atlanmıştı. Kapı, 2026-11-17'de kapatılan quiz'i zorunlu sayıyor; çözücü ve önem listesi başlıkla eşleniyordu (H608).
-- **Kalıcı çözüm:** `scripts/uretim/ders_icerik/paketten_ek.py` (LLM yok): kapıdan geçmiş değerlendirme paketinden spot/liste/kart/kavram, PDF metin tablolarından tablo; görüntü tablo `taslak/tablolar_gorsel.json`'a slayttan birebir (k2-33 s.5). Kaynakta tablo yoksa gerekçe (≥12 kelime) → kapı UYARI (k2-49, k2-50: sayfalar tek tek incelendi). Kapıdan quiz çıkarıldı, eşleme defter koduyla.
-- **Önleme:** paketin girdisi elle yazılmaz, önce `paketten_ek.py`; tablo muafiyeti yalnız yazılı, denetlenebilir gerekçeyle.

@@ -157,8 +157,7 @@
 
 
 ### H468 — Hoca dökümü sessizce CPU'ya düştü; turbo dökümü konuşmanın üçte birini kaçırdı (2026-11-02, Kurul 2 2. parti)
-- **Önleme:** E0'dan önce `nvidia-smi --query-gpu=clocks.max.sm` ≤2500 denetlenir; döküm günlüğünde "bu oturum CPU" görülürse
-  durdurulur. Hoca vurgusu en az iki dökümle çapraz okunur; yalnız bir dökümde geçen ve slayta bağlanamayan söz vurgu dayanağı olmaz.
+- **Önleme:** E0 öncesi `nvidia-smi --query-gpu=clocks.max.sm` ≤2500; günlükte "bu oturum CPU" görülürse durdurulur. Vurgu iki dökümle çapraz okunur; tek dökümde kalan, slayta bağlanmayan söz dayanak olmaz.
 
 
 ### H472 — Hoca vurgusu `konu` alanı özetti, değerlendirme kapısı slayttan birebir istiyor (2026-11-02)

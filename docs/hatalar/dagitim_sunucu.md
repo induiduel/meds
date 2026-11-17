@@ -318,3 +318,9 @@
 - **Kalıcı çözüm:** `tumBranslar()` veri klasörlerinden keşfeder; yeni paketler `ekmodul:<id>`, `sayfa:kmb`, `veri:pdfnot`; ses kalıbı üç yerde eşitlendi; `sw.js` `/ek_moduller/` + `/pdf/` (Range/206); oyunlar çevrimdışı `services/oyunYerel.ts`; `envanter.mjs`/`sinama.mjs` güncellendi.
 - **Önleme kuralı:** Katalog, ön yüzle AYNI kaynaktan keşfeder; koda yazılı branş/kurul listesi YASAK. Yeni sayfa türü/ses ucu dört yere birlikte eklenir: katalog paketi, `sayfaPaketleri.ts`, ses kalıbı + `sw.js` dalı, sınama rotası (`docs/CEVRIMDISI_YOL_HARITASI.md` §6). Çevrimdışı kanıtı ağ kesilerek `sinama.mjs` ile alınır.
 
+
+## H615 — Commit başka oturumun sahnelediği silmeyi içerdi, canlı derleme kırıldı (2026-11-17)
+- **Belirti:** `581dbc5b` (kayıt kapısı) `CdZenginMetin.tsx` + `cd-zengin.css` silmesini de taşıdı; `dagit.sh` "Could not resolve './CdZenginMetin'" ile durdu.
+- **Kök neden:** `git add -- <yollar>` ardından düz `git commit` bütün index'i işler; sahne denetimi ile commit arasında başka oturum `git rm` yapmıştı.
+- **Kalıcı çözüm:** iki dosya çalışma ağacına dokunmadan geçici index ile geri getirildi (`ee721f54`), dağıtım 0 hatayla bitti.
+- **Kural:** Paylaşılan ağaçta commit YALNIZ `git commit --only -- <yollar>` (ya da geçici `GIT_INDEX_FILE`) ile; commit sonrası `git show --stat HEAD` beklenmeyen yol içeriyorsa push edilmez.

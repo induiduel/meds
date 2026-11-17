@@ -164,4 +164,5 @@
 32. **Kayıt hijyeni — token kabartması yok (ZORUNLU, kullanıcı kararı 2026-11-17, H610):**
    - Tam içerik işçisi her kipte (tam/tasarruf) ve her ajan; ders verisi yazarken, talimat güncellerken, hata bildirirken
      mevcut optimizasyonu (read-once `baglam/`, aşama başına tek dosya, bütçe tavanları) bozamaz.
+   - Kural tek yerde, öbür yerde işaret; H maddesinin kural satırı tek fikir (sınır hedef değil, bilgi atılmaz); yedek/kopya veri yok.
    - Yayından/commit'ten önce `python3 scripts/kapilar/kos.py kayit` 0 HATA (pre-commit de çalıştırır). Sınırlar ve denetimler: kapının baş yorumu.

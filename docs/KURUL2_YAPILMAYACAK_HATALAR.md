@@ -447,5 +447,5 @@
 - **H611** · "Bitirdiklerim'de üç farklı kalan süre, hesap dışı ders Tamamlandı, 199/200=%100": aynı adla üç formül → `hizKatsayisi` tek hız formülü, dört adlı kutu, aşağı yuvarlama → hatalar/on_yuz_sayfa_denetimi.md
 - **H614** · "Sınav planında gün kapasitesi aşılıyor, 60 hedefine baraj deniyor": yarısı sığan adım güne konuyordu, hedef/baraj tek sözcük → tam sığma kuralı, "Hedefin altında" → hatalar/on_yuz_sayfa_denetimi.md
 - **H612** · "k2-33/34/35 kelime kelime takip yok; izleyici 12 derste cümle zamanı yok dedi": yerel kelime zamanı zamanlayıcısı kapalı + Oracle'da üretilen katman yerelde aranıyordu → elle GPU çözümü, izleyici canlıyı denetler → hatalar/ses.md
-- **H613** · "5 Kurul 2 dersinde içerik paketi yok": ek dosyasını yazan betik yoktu, kapı kapatılan quiz'i istiyordu → `paketten_ek.py` (LLM yok), gerekçeli tablo muafiyeti → hatalar/ses.md
+- **H613** · "5 Kurul 2 dersinde içerik paketi yok": ek dosyasını yazan betik yoktu, kapı kapatılan quiz'i istiyordu → `paketten_ek.py` (LLM yok), gerekçeli tablo muafiyeti → hatalar/ders_metni_terim_kisaltma.md
 - **H615** · "Commit başka oturumun sahnelediği silmeyi içerdi": düz `git commit` bütün index'i işler → `git commit --only -- <yollar>`, push öncesi `show --stat` → hatalar/dagitim_sunucu.md

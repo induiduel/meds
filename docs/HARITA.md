@@ -12,7 +12,7 @@
 | `ARA_RESIM_KURALLARI.md` | Sesli ders ara resimleri (mekanizma resimleri) | 701 | 2026-11-16 | 4 betik |
 | `ARSIV_25_26_KURUL3.md` | 2025-2026 Kurul 3 arşivi — işletim kılavuzu (GİS) | 503 | 2026-11-17 | 1 betik |
 | `CIZIM_KURALLARI.md` | Canlı çizim ve işaretleme kuralları (bütün kurullar, bütün dersler, bütün PDF'ler) | 1937 | 2026-11-16 | AGENTS/CLAUDE, 10 betik |
-| `CLAUDE.md` | docs/ — proje belgeleri | 94 | 2026-11-16 | AGENTS/CLAUDE, 15 betik |
+| `CLAUDE.md` | docs/ — proje belgeleri | 94 | 2026-11-16 | AGENTS/CLAUDE, 16 betik |
 | `DERS_ICERIK_BICIMI.md` | Ders içerik paketi biçimi (Terimler · Hastalıklar · Bilgiler · Tablolar · Sorular · Kartla | 591 | 2026-11-16 | 2 betik |
 | `DIS_AJAN_YOL_HARITASI.md` | Dış yapay zekâ ajanları için tam içerik işçisi yol haritası (kullanıcı kararı 2026-10-29) | 2329 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `FAZ8_DUZELTME_TALIMATLARI.md` | Faz 8 — Düzeltme ve Geliştirme Talimatları | 845 | 2026-11-16 | 1 betik |
@@ -24,10 +24,10 @@
 | `ICERIK_MOTORU_V3.md` | İçerik Motoru v3 — Kroki (L0/L1/L2), maliyet katmanlı model yönlendirme, canlı çizim ve te | 9303 | 2026-11-16 | AGENTS/CLAUDE, 30 betik |
 | `KMB_2B_STIL.md` | KMB 2B Düz Çizgi Film Stili (sahne kitaplığı sözleşmesi) | 919 | 2026-11-16 | 18 betik |
 | `KMB_GORSEL_ASISTAN.md` | KMB Görsel Sesli Asistan — Yol Haritası ve İşletim | 1045 | 2026-11-16 | 5 betik |
-| `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2873 | 2026-11-17 | AGENTS/CLAUDE |
+| `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2894 | 2026-11-17 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2518 | 2026-11-16 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6672 | 2026-11-17 | AGENTS/CLAUDE, 11 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 6790 | 2026-11-17 | AGENTS/CLAUDE, 12 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |

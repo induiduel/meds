@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 47 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 48 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -203,4 +203,8 @@
 ### H599 — Kurul 2 soru çözücü / en önemliler, ek modüller, KMB ve PDF notlar çevrimdışına indirilemiyordu (2026-11-17)
 - **Önleme kuralı:** Katalog, ön yüzle AYNI kaynaktan keşfeder; koda yazılı branş/kurul listesi YASAK. Yeni sayfa türü/ses ucu dört yere birlikte eklenir: katalog paketi, `sayfaPaketleri.ts`, ses kalıbı + `sw.js` dalı, sınama rotası (`docs/CEVRIMDISI_YOL_HARITASI.md` §6). Çevrimdışı kanıtı ağ kesilerek `sinama.mjs` ile alınır.
 
+
+
+### H615 — Commit başka oturumun sahnelediği silmeyi içerdi, canlı derleme kırıldı (2026-11-17)
+- **Kural:** Paylaşılan ağaçta commit YALNIZ `git commit --only -- <yollar>` (ya da geçici `GIT_INDEX_FILE`) ile; commit sonrası `git show --stat HEAD` beklenmeyen yol içeriyorsa push edilmez.
 

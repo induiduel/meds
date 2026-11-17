@@ -43,13 +43,11 @@
 
 
 ### H448 — `klip_tasi.py` metinle birlikte düzenlenmiş v2'yi eski metne göre yeniden kurup değişen paragrafları boşaltıyordu; `ders-ekle` elle iyileştirilmiş çapayı ezdi (2026-10-30)
-- **Önleme:** yayımlanmış dersin metni düzeltildiğinde `sesli_yayinla.py`'den SONRA yerel çapa (klip_tasi ile taşınmış + değişen paragraflar
-  yazılmış) Oracle'a geri kopyalanır ve `pdf_isaret.py --key <key> --zorla` çalıştırılır (H93); `ders-ekle`'nin yazdığı kaba çapaya güvenilmez.
+- **Önleme:** yayımlanmış ders metni düzeltilince `sesli_yayinla.py`'den SONRA yerel çapa Oracle'a kopyalanır, `pdf_isaret.py --key <key> --zorla` (H93); `ders-ekle` çapasına güvenilmez.
 
 
 ### H468 — Hoca dökümü sessizce CPU'ya düştü; turbo dökümü konuşmanın üçte birini kaçırdı (2026-11-02, Kurul 2 2. parti)
-- **Önleme:** E0'dan önce `nvidia-smi --query-gpu=clocks.max.sm` ≤2500 denetlenir; döküm günlüğünde "bu oturum CPU" görülürse
-  durdurulur. Hoca vurgusu en az iki dökümle çapraz okunur; yalnız bir dökümde geçen ve slayta bağlanamayan söz vurgu dayanağı olmaz.
+- **Önleme:** E0 öncesi `nvidia-smi --query-gpu=clocks.max.sm` ≤2500; günlükte "bu oturum CPU" görülürse durdurulur. Vurgu iki dökümle çapraz okunur; tek dökümde kalan, slayta bağlanmayan söz dayanak olmaz.
 
 
 ### H469 — Kurul 2 EMA yolu büyük harfli kısaltmayı okumuyordu (NMDA, GABA, IP3) (2026-11-02)
@@ -91,7 +89,7 @@
 
 - H587 — Öğren destesinde 16 klip 14–22 dakika sürüyordu; ses için kalite kapısı yoktu (2026-11-16) — betik denetler: `ses_kapisi.py`
 ### H595 — Öğren sesinde tek başına sıra imi ("2.") ayrı cümle → bütün adım reddedildi (2026-11-17)
-- **Önleme kuralı:** ses için cümle bölen her işlev sıra imini/madde imini ayrı cümle bırakmaz; bölme değişikliği önce tüm gerçek metinler üzerinde eski/yeni karşılaştırmasıyla (fark yalnız hedeflenen biçimde) kanıtlanır. Süre eşiği gevşetilmez.
+- **Önleme kuralı:** ses cümle bölücüsü sıra/madde imini ayrı cümle bırakmaz; bölme değişikliği tüm gerçek metinlerde eski/yeni karşılaştırmasıyla kanıtlanır. Süre eşiği gevşetilmez.
 
 
 - H605 — Son derslerde PDF ↔ metin takibi zayıftı: cümlelerin %19–24'ü yalnız sayfa vurgusu alıyordu (2026-11-17, kullanıcı bildirdi) — betik denetler: `scripts/uretim/sesli_anlatim/artik_capa.py`
@@ -106,7 +104,7 @@
 ### H609 — Zengin transkript tablo ayrıştırıcısı sayı sözcüğünü kesiyordu (2026-11-17, geliştirme sırasında)
 - **Önleme:** yapı (tablo/sıra) çıkaran betik emin değilse yapı kurmaz, cümleyi korur; tıbbi sayı kesilmez.
 
-### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici 12 derste "cümle zamanı yok" yanlış alarmı verdi (2026-11-17)
-- **Önleme:** zamanlayıcı kural 20 gereği kapalı kalır; yeni ders yayınından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle çalıştırılır (tam hat `zaman_isaret` adımı). Oracle'da üretilen katman yerel kapıyla "yok" sayılmaz.
+### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici yanlış alarm verdi (2026-11-17)
+- **Önleme:** yayından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle (`zaman_isaret`; zamanlayıcı kapalı, kural 20); Oracle katmanı yerelde "yok" sayılmaz.
 
 

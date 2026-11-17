@@ -1,6 +1,6 @@
 # Aşama kuralları — genel
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 13 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 12 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### Kurul 2 hattı için genel kural
 
@@ -26,12 +26,9 @@
   `konusma_v2.py --dogrula <dizin>` (kaynak.md ile) 0 HATA verene dek dağıtılmaz; açık iş olarak not düşmek yerine aynı oturumda kapatılır.
 
 
-### H613 — 5 Kurul 2 dersinde ders içerik paketi yoktu; kapı kaldırılmış quiz'i istiyor, çözücüyü başlıkla arıyordu (2026-11-17)
-- **Önleme:** paketin girdisi elle yazılmaz, önce `paketten_ek.py`; tablo muafiyeti yalnız yazılı, denetlenebilir gerekçeyle.
-
 ### Hat dışı maddeler (ön yüz/yönetim/altyapı — içerik aşamasını ilgilendirmez; tam metin konu dosyasında)
 - hatalar/betik_altyapi.md: H5, H25, H26, H27, H34, H35, H78, H90, H440, H478, H484, H489, H557, H558, H560, H561, H577, H578, H584, H593, H594, H597, H601, H585, H598, H604, H610
 - hatalar/on_yuz_oynatici_ders.md: H82, —, —, H117, H111g, H111p, H111q, H330, H335, H449, H491, H492, H493, H494, H495, H496, H491, H494, H495, H496, H507, H519, H520, H602
-- hatalar/on_yuz_sayfa_denetimi.md: H86, H101, H102, H102, H104, H106, H107, H122, H109, H124, H110, H127, H111r, H111t, H131d, H139, H140, H144, H145, H147, H148, H149, H150, H151, H154, H200, H220, H239, H242, H300, H340, H380, H400, H435, H436, H458, H551, H588, H590, H591, H603, H611
+- hatalar/on_yuz_sayfa_denetimi.md: H86, H101, H102, H102, H104, H106, H107, H122, H109, H124, H110, H127, H111r, H111t, H131d, H139, H140, H144, H145, H147, H148, H149, H150, H151, H154, H200, H220, H239, H242, H300, H340, H380, H400, H435, H436, H458, H551, H588, H590, H591, H603, H611, H614
 - hatalar/on_yuz_tasarim_tema.md: H48, H87, H90, H99, H100, —, —, H100, H111c, H111h, H111s, H131c, H388, H431, H433, H439, H475, H502, H504, H517, H518
 - hatalar/yonetim_basarim.md: H111d, H111e, H111f, H111u, H131, H131a, H131b, H141, H142, H143, H146, H152, H153, H170, H250, H290, H296, H310, H320, H431
