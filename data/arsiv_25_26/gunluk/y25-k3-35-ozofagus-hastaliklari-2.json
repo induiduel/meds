@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-35-ozofagus-hastaliklari-2",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "Tıbbi Patoloji",
+  "baslik": "Özofagus Hastalıkları 2: Tümörler ve Variköz Venler",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 07:23",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "6     özofagus2.pdf (21 sayfa) kaynağından 31 paragraf / 111 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 10.6,
+        "sayfaSayisi": 21,
+        "bolumSayisi": 6,
+        "paragrafSayisi": 31,
+        "cumleSayisi": 111,
+        "cikmisEslesme": 19
+      }
+    }
+  ]
+}
