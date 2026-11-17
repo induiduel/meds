@@ -3,7 +3,6 @@
  * bu bileşen App'in verdiği bağlamla (GorunumBaglami) gorunenTab'a göre tembel sayfayı çizer. <main> içinde tek çocuk.
  */
 import { guvenliLazy } from '../utils/guvenliLazy';
-import KampYonlendir from '../components/v15/ekModul/KampYonlendir';
 import React, { Suspense } from 'react';
 import type { SearchHit } from '../components/search/searchShared';
 import { AppRoute, writeLocation, pathFor, navigateTo } from '../router';
@@ -704,7 +703,6 @@ export function Gorunumler(p: GorunumBaglami) {
           </Suspense>
         )}
 
-        <KampYonlendir />
 
         {/* TAB: /ek-moduller (görünen /dersler/ek-moduller/kurul<N>/<modül>/…) — seçmeli/geçici ders modülleri */}
         {gorunenTab === 'ek_moduller' && (

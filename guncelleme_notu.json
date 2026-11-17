@@ -1,12 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 802,
-  "baslik": "Sesli ders sonu penceresi ve zengin PDF",
+  "onem": 803,
+  "baslik": "Açılış yönlendirmesi kaldırıldı",
   "maddeler": [
-    "Ders bitti penceresi: Sesli ders bitince her derste kutlama animasyonuyla birlikte soru çözücü, örnek sorular, çıkmış sorular ve sonraki ders seçenekleri çıkar.",
-    "Sesli soru çözücü bağlantısı: Kurul 2'de 15 dersin ders sayfasında görünmeyen sesli soru çözücüsü artık görünür.",
-    "Ders içi sorular: Derste kendiliğinden açılan \"hocanın sorabileceği soru\" sayfası artık varsayılan olarak kapalı; ünlem düğmesinden ve ayardan açılabilir, çıkmış çipi yerinde.",
-    "Zengin görünüm: Kurul 2 sesli ders metnini dışa aktarırken tablolar, sıralamalar, sınav notları ve terim satırlarıyla daha düzenli bir PDF/Word seçilebilir; eski görünüm aynen duruyor."
+    "Açılış: Siteye girişte çıkan Yürüyüş ve Kampçılık dersine yönlendirme penceresi kaldırıldı; derse Ek modüller sayfasından ulaşılabilir."
   ],
   "eklenen": [],
   "degisen": [],
