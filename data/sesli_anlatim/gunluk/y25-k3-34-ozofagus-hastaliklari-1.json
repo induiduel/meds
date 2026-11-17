@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-34-ozofagus-hastaliklari-1",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "Tıbbi Patoloji",
+  "baslik": "Özofagus Hastalıkları 1: Özofajitler ve Motilite",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 09:35",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "5    ozofagus1.pdf (33 sayfa) kaynağından 44 paragraf / 154 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 15.5,
+        "sayfaSayisi": 33,
+        "bolumSayisi": 8,
+        "paragrafSayisi": 44,
+        "cumleSayisi": 154,
+        "cikmisEslesme": 17
+      }
+    }
+  ]
+}
