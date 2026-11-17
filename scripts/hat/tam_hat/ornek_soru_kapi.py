@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Örnek soru tek kapısı — 4 kapıyı (soru_uslup + sik_aciklama + profil_kapisi + kaynak_kapisi) TEK çağrıda toplar.
+"""Örnek soru tek kapısı (genel + hoca üslubu soruları TEK kategori, 2026-11-17) — 4 kapıyı (soru_uslup + sik_aciklama + profil_kapisi + kaynak_kapisi) TEK çağrıda toplar.
 
 Neden (kullanıcı kararı 2026-11-16, iterasyon azaltma): ajan bu 4 kapıyı ayrı Bash turlarında koşup her turda büyüyen
 bağlamı yeniden işliyor; biri geçince öteki patlıyor → çok tur. Bu kapı hepsini bir kez koşup TÜM sorunları birlikte basar.
@@ -44,7 +44,7 @@ def _gate(ad: str, cmd: list[str]) -> list[str]:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("dosya", type=Path)
-    ap.add_argument("--uslup", type=Path, required=True)
+    ap.add_argument("--uslup", type=Path, default=None, help="isteğe bağlı: soru_uslubu.json (yoksa yalnız soru düzeyi + hazır hoca profili)")
     ap.add_argument("--ders", required=True)
     ap.add_argument("--sayfalar", type=Path, required=True)
     a = ap.parse_args()
@@ -53,7 +53,7 @@ def main() -> int:
 
     print(f"== Örnek soru kapısı · {a.dosya.name} ==")
     hata: list[str] = []
-    hata += _gate("soru_uslup", [PY, "scripts/hat/tam_hat/soru_uslup.py", str(a.dosya), "--uslup", str(a.uslup)])
+    hata += _gate("soru_uslup", [PY, "scripts/hat/tam_hat/soru_uslup.py", str(a.dosya)] + (["--uslup", str(a.uslup)] if a.uslup and a.uslup.exists() else []))
     hata += _gate("profil", [PY, "scripts/uretim/hoca_profili/profil_kapisi.py", str(a.dosya), "--ders", a.ders])
     hata += _gate("kaynak", [PY, "scripts/hat/tam_hat/kaynak_kapisi.py", str(a.dosya), str(a.sayfalar)])
 

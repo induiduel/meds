@@ -59,18 +59,20 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "cikmis_analiz": ("E3", "llm", "Ayrıntılı çıkmış analizi: OKU yalnız {k}/baglam/is_cikmis_analiz.md (şema + çıkmış + çıkmış slaytlarının atomları; TEK okuma). ÜRET ders_bilgi/{d}/degerlendirme/cikmis_analiz.json (baglam/iskelet_cikmis_analiz.json'u doldur; soru kimlikleri hazır; iskelet.py denetle). ders_analizi/uret.py önem listesi SONRASI. Kapı: ders_analizi/uret.py --dogrula {d}."),
     "terim_kisaltma": ("E3", "betik", "kisaltma_sozlugu.py otomatik {d} --yaz · terim_sozlugu.py otomatik {d} --yaz (MEDS_API=Oracle; yayın SONRASI canli-ders tazeyse)"),
     "onem_listesi": ("E2", "llm", "Önem listesi: OKU yalnız {k}/baglam/is_onem_listesi.md (kural paketi + §önem şeması + atom/hoca/çıkmış; TEK okuma). spot_cozucu çalışma dosyası onem/<kod>.json. Kapı: onem_dogrula.py → 0 HATA."),
-    "ornek_soru":  ("E2", "llm", "Örnek sorular + çözücü: OKU yalnız {k}/baglam/is_ornek_soru.md (kural paketi + §örnek/§çözücü şeması + atom/çıkmış/üslup; TEK okuma). "
-                                 "ÜRET src/data/ornek_sorular/k2/{d}.json (baglam/iskelet_ornek_soru.json'u doldur; soru id → iskelet.py numarala <dosya> --tur ornek_soru) + cozucu/<kod>.json (çözücü AYRI alt ajan, önem listesi SONRASI: OKU yalnız {k}/baglam/is_cozucu.md + onem/<kod>.json). "
-                                 "TEK KAPI örnek soru (4 kapı tek çağrıda; teslimden ÖNCE kendin çalıştır): python3 scripts/hat/tam_hat/ornek_soru_kapi.py src/data/ornek_sorular/k2/{d}.json "
-                                 "--uslup {k}/soru_uslubu.json --ders \"<ders>\" --sayfalar {k}/sayfalar.json → 0 HATA. Çözücü ayrı: cozucu_dogrula."),
-    "hoca_sorulari": ("E2", "llm", "(Yalnız patoloji) Hoca soruları kartı + sesli hoca çözücü — patoloji_soru_isci akışı."),
+    "ornek_soru":  ("E2", "llm", "Örnek sorular TEK kategori (kullanıcı kararı 2026-11-17): genel + hoca üslubu soruları AYNI dosyada (hoca üslubunda yazılan soruya `uslup: \"hoca\"`). "
+                                 "Hoca üslubu YENİDEN BELİRLENMEZ/YAZILMAZ — baglam'daki hazır profil (profil_oku) ve varsa soru_uslubu.json kullanılır. Token en azda: kapsam kadar soru, uzun gerekçe yok. "
+                                 "OKU yalnız {k}/baglam/is_ornek_soru.md (TEK okuma). ÜRET src/data/ornek_sorular/k2/{d}.json (baglam/iskelet_ornek_soru.json'u doldur; soru id → iskelet.py numarala <dosya> --tur ornek_soru) "
+                                 "+ cozucu/<kod>.json — sesli çözücü dosyadaki TÜM soruları (hoca üslubu dahil) kapsar (AYRI alt ajan, önem listesi SONRASI: OKU yalnız {k}/baglam/is_cozucu.md + onem/<kod>.json). "
+                                 "TEK KAPI (teslimden ÖNCE kendin çalıştır): python3 scripts/hat/tam_hat/ornek_soru_kapi.py src/data/ornek_sorular/k2/{d}.json "
+                                 "--ders \"<ders>\" --sayfalar {k}/sayfalar.json [--uslup {k}/soru_uslubu.json] → 0 HATA. Çözücü ayrı: cozucu_dogrula. Ayrı hoca_uslubu_sorular / k2patolojihoca kartı ÜRETİLMEZ."),
+    "hoca_sorulari": ("E2", "llm", "KAPALI (2026-11-17): hoca üslubu soruları ornek_soru katmanında tek kategoride. Eski hoca_uslubu_sorular/k2patolojihoca kayıtlarına dokunulmaz."),
     "ders_icerik": ("E3", "betik", "ders_icerik_uret.py {d} + ders_icerik_dogrula.py {d}  (terim/kısaltma+önem SONRASI)"),
     "capa_cizim":  ("E4", "llm", "Çapa + canlı çizim (capa_dok→çapa→cizim partileri→cizim_kapisi 0 HATA)."),
     "artik_capa":  ("E4", "llm", "Artık çapa (H605, her kipte; çapa+çizim SONRASI): .venv-ocr/bin/python scripts/uretim/sesli_anlatim/artik_capa.py hazirla {d} → "
                                  "OKU yalnız meds_temp/artik_capa/{d}/is.md (TEK dosya, görüntü AÇMA); YAZ meds_temp/artik_capa/{d}/cevap.json "
                                  "(cümle başına madde/resim ya da null; tahmin YASAK). Sonra artik_capa.py birlestir {d} → pdf_isaret + takip_kapisi 0 HATA. "
                                  "Artık cümle yoksa (hazirla 0 der) adım biter."),
-    "ara_resim":   ("E4", "llm", "Ara resim katmanı (src/data/ara_resim)."),
+    "ara_resim":   ("E4", "llm", "Ara resim katmanı (src/data/ara_resim) — YALNIZ kullanıcı isterse (MEDS_HAT_EKLE=ara_resim)."),
     "ara_soru":    ("E4", "llm", "Hocanın sorabileceği ara soru sayfası + k<N>hocaara sesi (kur.py dogrula --ses 0 HATA)."),
     "atomik_envanter": ("E3", "betik", "atomik_bilgi_envanteri (paket içinde; quiz KAPALI)."),
     "pdf_tasarim": ("E5", "betik", "ders_pdf.mts + pdf_tarama.py → 0 HATA"),

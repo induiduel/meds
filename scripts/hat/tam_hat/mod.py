@@ -28,15 +28,15 @@ KATMANLAR = [
     ("cikmis_analiz", "ayrıntılı çıkmış analizi + ders analizi/özeti + sesi (AGENTS 29)", True, True),
     ("terim_kisaltma", "terim + kısaltma katmanı (betik)", True, True),
     ("onem_listesi", "En önemlileri: önem listesi (spot_onem, sinav_asistani)", True, True),
-    ("ornek_soru", "örnek sorular + sesli çözücü + EMA sesi", True, True),
+    ("ornek_soru", "örnek sorular TEK kategori (genel + hoca üslubu soruları aynı dosyada, ornek_soru_kapi.py tek kapı) + sesli çözücü (hepsi) + EMA sesi", True, True),
     ("ders_icerik", "ders içerik paketi (ders_icerik_uret.py, betik)", True, True),
     ("denetci", "betik kapıları + tek bağımsız denetçi", True, True),
     ("yayin", "commit + dagit.sh + canlı doğrulama", True, True),
     ("capa_cizim", "anlamsal çapa + canlı çizim (çizim partileri, cizim_kapisi)", True, False),
     ("artik_capa", "artık çapa: yalnız 'sayfa'ya düşen cümleler, metin-only (H605; ~1–2k token) + takip_kapisi 0 HATA", True, True),
-    ("ara_resim", "ara resim katmanı (src/data/ara_resim, ARA_RESIM_KURALLARI.md)", True, False),
+    ("ara_resim", "ara resim katmanı — YALNIZ kullanıcı isterse (MEDS_HAT_EKLE=ara_resim; kullanıcı kararı 2026-11-17)", False, False),
     ("ara_soru", "hocanın sorabileceği ara soru sayfası + k<N>hocaara sesi (kural 27)", True, False),
-    ("hoca_sorulari", "patoloji 'Hoca soruları' + sesli hoca çözücü ayrı kartı (kural 26)", True, True),
+    ("hoca_sorulari", "ESKİ ayrı hoca soruları kartı — 2026-11-17'den beri ornek_soru içinde tek kategori; mevcutlara dokunulmaz", False, False),
     ("atomik_envanter", "atomik bilgi envanteri", True, False),
     ("pdf_tasarim", "ders PDF'i dışa aktarım + pdf_tarama", True, False),
     ("zengin_transkript", "zengin transkript modeli (betik, LLM yok; src/data/zengin_transkript) + yapı kapısı", True, True),
@@ -93,9 +93,18 @@ def paralel_gruplar(mod: str) -> list[list[str]]:
     return [gr[i] for i in sorted(gr)]
 
 
+# Varsayılan kapalı, yalnız kullanıcı açıkça isterse açılan katmanlar (MEDS_HAT_EKLE="ara_resim,..."; kullanıcı kararı 2026-11-17).
+ISTEGE_BAGLI = ("ara_resim",)
+
+
 def yapilacak(mod: str) -> dict[str, bool]:
+    import os
     i = 2 if mod == "tam" else 3
-    return {k[0]: k[i] for k in KATMANLAR}
+    y = {k[0]: k[i] for k in KATMANLAR}
+    for e in (x.strip() for x in os.environ.get("MEDS_HAT_EKLE", "").split(",")):
+        if e in ISTEGE_BAGLI:
+            y[e] = True
+    return y
 
 
 def oku(klasor: Path) -> str:

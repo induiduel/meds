@@ -36,7 +36,12 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("klasor", type=Path)
     ap.add_argument("--n", type=int, default=8)
+    ap.add_argument("--yenile", action="store_true", help="var olan soru_uslubu.json'u yeniden üret (varsayılan: varsa dokunma)")
     a = ap.parse_args()
+    # Üslup bir kez belirlenir; her turda yeniden belirlenmez (kullanıcı kararı 2026-11-17).
+    if (a.klasor / "soru_uslubu.json").exists() and not a.yenile:
+        print(f"{a.klasor / 'soru_uslubu.json'} zaten var — yeniden belirlenmedi (--yenile ile zorla)")
+        return 0
     aday = json.loads((a.klasor / "cikmis_aday.json").read_text())
     aday = [x for x in aday if len(x.get("secenekler") or []) >= 4 and len((x.get("kok") or "").split()) >= 5]
     if not aday:

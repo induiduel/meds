@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 813,
-  "baslik": "İçerik hattı: çıkmış anahtar kuralı sadeleşti",
+  "onem": 814,
+  "baslik": "İçerik hattı: örnek sorular tek kategoride",
   "maddeler": [
-    "Arka plan: Çıkmış cevap anahtarı denetim kuralı kısaltıldı; ayrıntılar ayrı alanlarda korunuyor.",
-    "Site kullanımında görünür bir değişiklik yok."
+    "Arka plan: Yeni derslerde örnek sorular ve hoca üslubu soruları tek kategoride toplanıp hepsi sesli soru çözücüye girecek.",
+    "Ara resim yalnız istenince üretilecek; site kullanımında görünür bir değişiklik yok."
   ],
   "eklenen": [],
   "degisen": [
-    "İçerik hattı kural özetleri"
+    "İçerik hattı örnek soru akışı"
   ],
   "duzeltilen": [],
   "silinen": []
