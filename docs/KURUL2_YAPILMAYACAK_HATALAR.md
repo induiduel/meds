@@ -445,3 +445,5 @@
 - **H609** · "Zengin transkript tablosunda kesik sayı": gevşek ek kalıbı çok sözcüklü sayıyı kesiyordu → sayı sözcüğü listesi, eksik satırda tablo kurulmaz → hatalar/ses.md
 - **H610** · "Ders/talimat/hata kaydı yazımı optimizasyonu geri kabartıyor": yazım anında boy/tekrar/kopya denetimi yok → `kayit_kapisi.py` (`kos.py kayit`, pre-commit) → hatalar/betik_altyapi.md
 - **H611** · "Bitirdiklerim'de üç farklı kalan süre, hesap dışı ders Tamamlandı, 199/200=%100": aynı adla üç formül → `hizKatsayisi` tek hız formülü, dört adlı kutu, aşağı yuvarlama → hatalar/on_yuz_sayfa_denetimi.md
+- **H612** · "k2-33/34/35 kelime kelime takip yok; izleyici 12 derste cümle zamanı yok dedi": yerel kelime zamanı zamanlayıcısı kapalı + Oracle'da üretilen katman yerelde aranıyordu → elle GPU çözümü, izleyici canlıyı denetler → hatalar/ses.md
+- **H613** · "5 Kurul 2 dersinde içerik paketi yok": ek dosyasını yazan betik yoktu, kapı kapatılan quiz'i istiyordu → `paketten_ek.py` (LLM yok), gerekçeli tablo muafiyeti → hatalar/ses.md

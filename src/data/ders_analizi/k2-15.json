@@ -1,0 +1,928 @@
+{
+ "surum": 1,
+ "key": "k2-15",
+ "kod": "2s02",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Şizofrenik Bozukluklar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Nefise Demir",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders şizofreniyi epidemiyoloji, etyoloji, tanı ölçütleri, pozitif ve negatif belirtiler, ayırıcı tanı, prognoz, katatoni ve ele alma başlıklarıyla anlatır. Ardından sanrılı bozukluk, şizoaffektif bozukluk, kısa psikotik bozukluk, şizofreniform bozukluk ve paylaşılmış psikotik bozukluğu süre, belirti ve tedavi yönünden karşılaştırır.",
+   "maddeler": [
+    {
+     "metin": "Şizofreniye giriş: tanım ve tarihçe"
+    },
+    {
+     "metin": "Epidemiyoloji"
+    },
+    {
+     "metin": "Etiyoloji: stres-diyatez modeli ve psikososyal etkenler"
+    },
+    {
+     "metin": "Etiyoloji: biyolojik etkenler"
+    },
+    {
+     "metin": "Tanı ölçütleri ve süreye göre ayrım"
+    },
+    {
+     "metin": "Ayırıcı tanı"
+    },
+    {
+     "metin": "Klinik bulgular: pozitif ve negatif belirtiler"
+    },
+    {
+     "metin": "Bilişsel kayıplar ve diğer klinik bulgular"
+    },
+    {
+     "metin": "Gidiş, prognoz ve ele alma"
+    },
+    {
+     "metin": "Katatoni"
+    },
+    {
+     "metin": "Diğer psikotik bozukluklar: sanrılı bozukluk ve paylaşılmış psikoz"
+    },
+    {
+     "metin": "Şizoaffektif, kısa psikotik ve şizofreniform bozukluk"
+    },
+    {
+     "metin": "Dersin toparlanması"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders şizofreniyi epidemiyoloji, etyoloji, tanı ölçütleri, pozitif ve negatif belirtiler, ayırıcı tanı, prognoz, katatoni ve ele alma başlıklarıyla anlatır. Ardından sanrılı bozukluk, şizoaffektif bozukluk, kısa psikotik bozukluk, şizofreniform bozukluk ve paylaşılmış psikotik bozukluğu süre, belirti ve tedavi yönünden karşılaştırır.",
+    "Şizofreniye giriş: tanım ve tarihçe.",
+    "Epidemiyoloji.",
+    "Etiyoloji: stres-diyatez modeli ve psikososyal etkenler.",
+    "Etiyoloji: biyolojik etkenler.",
+    "Tanı ölçütleri ve süreye göre ayrım.",
+    "Ayırıcı tanı.",
+    "Klinik bulgular: pozitif ve negatif belirtiler.",
+    "Bilişsel kayıplar ve diğer klinik bulgular.",
+    "Gidiş, prognoz ve ele alma.",
+    "Katatoni.",
+    "Diğer psikotik bozukluklar: sanrılı bozukluk ve paylaşılmış psikoz.",
+    "Şizoaffektif, kısa psikotik ve şizofreniform bozukluk.",
+    "Dersin toparlanması."
+   ],
+   "v": "5a0d5bffd4"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Şizofreni- Tarihçe",
+     "metin": "Şizofreni- Tarihçe",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Etyoloji",
+     "metin": "Etyoloji",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Etyoloji",
+     "metin": "Etyoloji",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Etyoloji",
+     "metin": "Çıkmış (ilgili): Aile çalışmaları: Şizofreni hastalarının",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Tanı Kriterleri",
+     "metin": "Çıkmış (dogrudan): C. Bu bozukluğun süregiden bulguları en az altı ay sürer.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Ayırıcı Tanı",
+     "metin": "Çıkmış (ilgili): Stimulanlar (amfetamin, kokain)",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Pozitif Belirtiler",
+     "metin": "Çıkmış (dogrudan): Pozitif Formel Düşünce Bozukluğu (enkoherans, raydan çıkma, çevresellik, teğetsellik…)",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Negatif Belirtiler",
+     "metin": "Çıkmış (dogrudan): Apati",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "KISA PSİKOTİK BOZUKLUK",
+     "metin": "Çıkmış (dogrudan): 1 gün-1 ay süren psikotik belirtiler",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Aşağıdaki belirtilerden birinin (ya da daha çoğunun)",
+     "metin": "Çıkmış (dogrudan): B. Bu bozukluğun bir dönemi, en az bir gün, ancak bir aydan daha kısa sürer ve en sonunda hastalık öncesi işlevsellik düzeyine tam geri dönülür.",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "ŞİZOFRENİFORM BOZUKLUK",
+     "metin": "Çıkmış (dogrudan): 1-6 ay süren psikotik belirtiler mevcuttur.",
+     "s": [
+      47
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Şizofreni- Tarihçe: Şizofreni- Tarihçe.",
+    "Etyoloji: Etyoloji.",
+    "Etyoloji: Etyoloji.",
+    "Etyoloji: Çıkmış (ilgili): Aile çalışmaları: Şizofreni hastalarının.",
+    "Tanı Kriterleri: Çıkmış (dogrudan): C. Bu bozukluğun süregiden bulguları en az altı ay sürer.",
+    "Ayırıcı Tanı: Çıkmış (ilgili): Stimulanlar (amfetamin, kokain).",
+    "Pozitif Belirtiler: Çıkmış (dogrudan): Pozitif Formel Düşünce Bozukluğu (enkoherans, raydan çıkma, çevresellik, teğetsellik…).",
+    "Negatif Belirtiler: Çıkmış (dogrudan): Apati.",
+    "KISA PSİKOTİK BOZUKLUK: Çıkmış (dogrudan): 1 gün-1 ay süren psikotik belirtiler.",
+    "Aşağıdaki belirtilerden birinin (ya da daha çoğunun): Çıkmış (dogrudan): B. Bu bozukluğun bir dönemi, en az bir gün, ancak bir aydan daha kısa sürer ve en sonunda hastalık öncesi işlevsellik düzeyine tam geri dönülür.",
+    "ŞİZOFRENİFORM BOZUKLUK: Çıkmış (dogrudan): 1-6 ay süren psikotik belirtiler mevcuttur."
+   ],
+   "v": "f579894afc"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ilişkin sorular iki ana başlıkta toplanır: pozitif ve negatif belirti listelerinin ayrımı ile psikotik bozuklukların süreye göre ayrımı (2 hafta, 5 hafta, 2 ay vakaları). Tanı ölçütleri, kısa psikotik bozukluğun özellikleri, kalıtım ve sanrılı bozukluk karşılaştırması diğer sık sorulan konulardır.",
+   "maddeler": [
+    {
+     "baslik": "Süreye göre tanı: şizofreni, şizofreniform, kısa psikotik",
+     "metin": "Belirtiler 6 ay ve daha uzun ise şizofreni, 6 aydan kısa ise şizofreniform bozukluk, 1 günden fazla 4 haftadan kısa ise kısa psikotik bozukluk denir.",
+     "neden": "2019-2020 ve 2020-2021 sınavlarında süreyi veren vakalar soruldu; 2018-2019'da aynı süre ayrımı bir kez daha sorulmuştur.",
+     "s": [
+      18
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Şizofreni tanı ölçütleri (A, B, C)",
+     "metin": "Tanıda iki ya da daha çok belirti bir ay boyunca bulunur, en az biri sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve bulgular en az altı ay sürer.",
+     "neden": "2022-2023 sınavında tanı için gereken süre sorulmuştur; ölçütler dersin en temel tanı bilgisidir.",
+     "s": [
+      17
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Negatif belirtiler listesi",
+     "metin": "Negatif belirtiler aloji, duygusal küntleşme, anhedoni, toplumsal içe çekilme, avolusyon, apati ve dikkat bozukluğudur.",
+     "neden": "\"Negatif belirti olmayan\" kökü 2018-2019, 2019-2020 ve 2025-2026'da üç yıl sorulmuştur; en sık tekrarlanan sorulardan biridir.",
+     "s": [
+      24
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Pozitif belirtiler listesi",
+     "metin": "Pozitif belirtiler sanrılar, varsanılar, pozitif formel düşünce bozukluğu ve acayip ya da dezorganize davranışlardır.",
+     "neden": "2020-2021 sınavında \"pozitif belirti değildir\" kökü soruldu; pozitif ve negatif listelerin ayrımı bu dersin ana tuzağıdır.",
+     "s": [
+      23
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kısa psikotik bozukluk tanı ölçütleri",
+     "metin": "En az bir gün, ancak bir aydan kısa süren dönem; sonunda hastalık öncesi işlevselliğe tam geri dönülür ve belirtiler arasında negatif belirti yoktur.",
+     "neden": "2025-2026 sınavında kısa psikotik bozukluğun özellikleri sorulmuştur; öğrenci notlarında \"tam geri dönülür\" ifadesi kırmızı çizgilidir.",
+     "s": [
+      46
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Şizofreniform bozukluk",
+     "metin": "1-6 ay süren psikotik belirtilerle seyreder, belirtiler şizofreniden daha hafiftir ve çoğu olgu takipte şizofreniye dönüşür.",
+     "neden": "2018-2019 ve 2020-2021 sınavlarında süre veren vaka olarak soruldu; takipte şizofreniye dönüşme öğrenci notlarında işaretlidir.",
+     "s": [
+      47
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Şizofreniform bozukluk: tedavi ve tanıyı sorgulama",
+     "metin": "Akut dönemde antipsikotik başlanır ve 3-6 ay sürdürülür; yineleyen ve rezidüel belirtili olgularda tedavi daha uzun sürer.",
+     "neden": "Şizofreniform bozuklukta tedavi süresi bu sayfadadır; uzun süre tam iyilik hâlinin tanıyı sorgulattığı ayırıcı tanı maddesinde ele alınır.",
+     "s": [
+      47
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Kalıtım: aile, ikiz ve evlat edinme çalışmaları",
+     "metin": "Şizofrenide çocuklarda yaşam boyu risk ortalama %10, iki ebeveyn hastaysa %47; ikiz uyumu monozigotlarda %46, dizigotlarda %14tür.",
+     "neden": "2022-2023 sınavında genetik ve epigenetik etkenler sorulmuştur; kalıtım yüzdeleri öğrenci notlarında yıldızlı ve sarı işaretlidir.",
+     "s": [
+      12
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ilişkin sorular iki ana başlıkta toplanır: pozitif ve negatif belirti listelerinin ayrımı ile psikotik bozuklukların süreye göre ayrımı (2 hafta, 5 hafta, 2 ay vakaları). Tanı ölçütleri, kısa psikotik bozukluğun özellikleri, kalıtım ve sanrılı bozukluk karşılaştırması diğer sık sorulan konulardır.",
+    "Süreye göre tanı: şizofreni, şizofreniform, kısa psikotik: Belirtiler 6 ay ve daha uzun ise şizofreni, 6 aydan kısa ise şizofreniform bozukluk, 1 günden fazla 4 haftadan kısa ise kısa psikotik bozukluk denir.",
+    "Şizofreni tanı ölçütleri (A, B, C): Tanıda iki ya da daha çok belirti bir ay boyunca bulunur, en az biri sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve bulgular en az altı ay sürer.",
+    "Negatif belirtiler listesi: Negatif belirtiler aloji, duygusal küntleşme, anhedoni, toplumsal içe çekilme, avolusyon, apati ve dikkat bozukluğudur.",
+    "Pozitif belirtiler listesi: Pozitif belirtiler sanrılar, varsanılar, pozitif formel düşünce bozukluğu ve acayip ya da dezorganize davranışlardır.",
+    "Kısa psikotik bozukluk tanı ölçütleri: En az bir gün, ancak bir aydan kısa süren dönem; sonunda hastalık öncesi işlevselliğe tam geri dönülür ve belirtiler arasında negatif belirti yoktur.",
+    "Şizofreniform bozukluk: 1-6 ay süren psikotik belirtilerle seyreder, belirtiler şizofreniden daha hafiftir ve çoğu olgu takipte şizofreniye dönüşür.",
+    "Şizofreniform bozukluk: tedavi ve tanıyı sorgulama: Akut dönemde antipsikotik başlanır ve 3-6 ay sürdürülür; yineleyen ve rezidüel belirtili olgularda tedavi daha uzun sürer.",
+    "Kalıtım: aile, ikiz ve evlat edinme çalışmaları: Şizofrenide çocuklarda yaşam boyu risk ortalama %10, iki ebeveyn hastaysa %47; ikiz uyumu monozigotlarda %46, dizigotlarda %14tür."
+   ],
+   "v": "3e9f3af16b"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 13 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+     "cevap": "Apati",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+     "cevap": "Algı bozukluğu",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Şizofreni; sanrılar, varsanılar, ilgi ve haz azalması ile karakterize bir bozukluktur. Kişi kendi içine kapalı özgün bir dünyada yaşar. Genç yaşlarda kişileri etkilemekte olup, normal başlangıç yaşı 18-25 yaşları arasıdır. Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden birisi değildir?",
+     "cevap": "Algı bozuklukları",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+     "cevap": "Enkoherans (söz salatası biçiminde dezorganize konuşma)",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta, 2 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+     "cevap": "Kısa psikotik bozukluk",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Daha önce psikiyatrik tanı ve tedavi öyküsü olmayan 25 yaşında erkek hasta, yaklaşık 2 aydır var olan içe çekilme, kendi kendine konuşma, işitsel varsanı, öldürüleceği konusunda korku ve bu nedenle uyuyamama şikâyeti ile getirilmiş olup duygudurumu hafif anksiyöz olarak değerlendirilmiştir. Ön tanı için aşağıdakilerden hangisi uygundur?",
+     "cevap": "Şizofreniform bozukluk",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta 5 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+     "cevap": "Şizofreniform bozukluk",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi kısa psikotik bozukluğun özelliklerinden değildir?",
+     "cevap": "İleri derecede dağınık davranış ve silik (negatif) belirtiler görülür",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Şizofreni hastalığı hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+     "cevap": "Şizofreni tanısında süregiden bulgular en az üç ay sürer.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Şizofrenide kalıtımın rolü için ne söylenebilir?",
+     "cevap": "Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Psikiyatrik hastalıkların moleküler temeli için aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Epigenetik ve genetik faktörler etkilidir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Bleuler'in şizofreni belirtilerinden hangisi ikinci sıra (aksesuar) belirtisidir?",
+     "cevap": "Sanrılar ve varsanılar",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdaki ilaçlar verilmiştir: I. Amfetaminler II. LSD III. İzoniazid IV. MAO inhibitörleri Bunlardan hangisi/hangileri şizofreni benzeri paranoid reaksiyonlar ile deliryum ve konfüzyona neden olabilir?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      20
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 13 çıkmış soru var.",
+    "2020-2021: Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+    "Cevap: Apati.",
+    "2019-2020: Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+    "Cevap: Algı bozukluğu.",
+    "2018-2019: Şizofreni; sanrılar, varsanılar, ilgi ve haz azalması ile karakterize bir bozukluktur. Kişi kendi içine kapalı özgün bir dünyada yaşar. Genç yaşlarda kişileri etkilemekte olup, normal başlangıç yaşı 18-25 yaşları arasıdır. Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden birisi değildir?",
+    "Cevap: Algı bozuklukları.",
+    "2025-2026: Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+    "Cevap: Enkoherans (söz salatası biçiminde dezorganize konuşma).",
+    "2019-2020: Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta, 2 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+    "Cevap: Kısa psikotik bozukluk.",
+    "2020-2021: Daha önce psikiyatrik tanı ve tedavi öyküsü olmayan 25 yaşında erkek hasta, yaklaşık 2 aydır var olan içe çekilme, kendi kendine konuşma, işitsel varsanı, öldürüleceği konusunda korku ve bu nedenle uyuyamama şikâyeti ile getirilmiş olup duygudurumu hafif anksiyöz olarak değerlendirilmiştir. Ön tanı için aşağıdakilerden hangisi uygundur?",
+    "Cevap: Şizofreniform bozukluk.",
+    "2018-2019: Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta 5 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+    "Cevap: Şizofreniform bozukluk.",
+    "2025-2026: Aşağıdakilerden hangisi kısa psikotik bozukluğun özelliklerinden değildir?",
+    "Cevap: İleri derecede dağınık davranış ve silik (negatif) belirtiler görülür.",
+    "2022-2023: Şizofreni hastalığı hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+    "Cevap: Şizofreni tanısında süregiden bulgular en az üç ay sürer.",
+    "2020-2021: Şizofrenide kalıtımın rolü için ne söylenebilir?",
+    "Cevap: Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir.",
+    "2020-2021: Psikiyatrik hastalıkların moleküler temeli için aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Epigenetik ve genetik faktörler etkilidir.",
+    "2019-2020: Bleuler'in şizofreni belirtilerinden hangisi ikinci sıra (aksesuar) belirtisidir?",
+    "Cevap: Sanrılar ve varsanılar.",
+    "2019-2020: Aşağıdaki ilaçlar verilmiştir: I. Amfetaminler II. LSD III. İzoniazid IV. MAO inhibitörleri Bunlardan hangisi/hangileri şizofreni benzeri paranoid reaksiyonlar ile deliryum ve konfüzyona neden olabilir?",
+    "Cevap: I, II, III ve IV."
+   ],
+   "v": "2e9ef78116"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%46) ve tanı ve ayırıcı tanı (%38) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%46) ve anlama ve ilişki kurma (%38) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%46) ve tanı ve ayırıcı tanı (%38) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%46) ve anlama ve ilişki kurma (%38) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "cb1e642ce4"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Apati",
+     "metin": "Çıkmışlarda 4 kez soruldu. Örnek kök: Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?"
+    },
+    {
+     "baslik": "Enkoherans (söz salatası biçiminde dezorganize konuşma)",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?"
+    },
+    {
+     "baslik": "Tanı konulabilmesi için negatif belirtilerden en az bir tane olması gerekir",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Şizofreni hastalığı hakkında verilen bilgilerden hangisi yanlıştır?"
+    },
+    {
+     "baslik": "Süreye göre tanı: şizofreni, şizofreniform, kısa psikotik",
+     "metin": "2019-2020 ve 2020-2021 sınavlarında süreyi veren vakalar soruldu; 2018-2019'da aynı süre ayrımı bir kez daha sorulmuştur."
+    },
+    {
+     "baslik": "Şizofreni tanı ölçütleri (A, B, C)",
+     "metin": "2022-2023 sınavında tanı için gereken süre sorulmuştur; ölçütler dersin en temel tanı bilgisidir."
+    },
+    {
+     "baslik": "Negatif belirtiler listesi",
+     "metin": "\"Negatif belirti olmayan\" kökü 2018-2019, 2019-2020 ve 2025-2026'da üç yıl sorulmuştur; en sık tekrarlanan sorulardan biridir."
+    },
+    {
+     "baslik": "Pozitif belirtiler listesi",
+     "metin": "2020-2021 sınavında \"pozitif belirti değildir\" kökü soruldu; pozitif ve negatif listelerin ayrımı bu dersin ana tuzağıdır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Apati: Çıkmışlarda 4 kez soruldu. Örnek kök: Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+    "Enkoherans (söz salatası biçiminde dezorganize konuşma): Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+    "Tanı konulabilmesi için negatif belirtilerden en az bir tane olması gerekir: Çıkmışlarda 2 kez soruldu. Örnek kök: Şizofreni hastalığı hakkında verilen bilgilerden hangisi yanlıştır?",
+    "Süreye göre tanı: şizofreni, şizofreniform, kısa psikotik: 2019-2020 ve 2020-2021 sınavlarında süreyi veren vakalar soruldu; 2018-2019'da aynı süre ayrımı bir kez daha sorulmuştur.",
+    "Şizofreni tanı ölçütleri (A, B, C): 2022-2023 sınavında tanı için gereken süre sorulmuştur; ölçütler dersin en temel tanı bilgisidir.",
+    "Negatif belirtiler listesi: \"Negatif belirti olmayan\" kökü 2018-2019, 2019-2020 ve 2025-2026'da üç yıl sorulmuştur; en sık tekrarlanan sorulardan biridir.",
+    "Pozitif belirtiler listesi: 2020-2021 sınavında \"pozitif belirti değildir\" kökü soruldu; pozitif ve negatif listelerin ayrımı bu dersin ana tuzağıdır.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "72460c3dad"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders şizofreniyi epidemiyoloji, etyoloji, tanı ölçütleri, pozitif ve negatif belirtiler, ayırıcı tanı, prognoz, katatoni ve ele alma başlıklarıyla anlatır. Ardından sanrılı bozukluk, şizoaffektif bozukluk, kısa psikotik bozukluk, şizofreniform bozukluk ve paylaşılmış psikotik bozukluğu süre, belirti ve tedavi yönünden karşılaştırır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders şizofreniyi epidemiyoloji, etyoloji, tanı ölçütleri, pozitif ve negatif belirtiler, ayırıcı tanı, prognoz, katatoni ve ele alma başlıklarıyla anlatır. Ardından sanrılı bozukluk, şizoaffektif bozukluk, kısa psikotik bozukluk, şizofreniform bozukluk ve paylaşılmış psikotik bozukluğu süre, belirti ve tedavi yönünden karşılaştırır."
+   ],
+   "v": "305289e8cd"
+  },
+  {
+   "id": "2s02-08",
+   "baslik": "Kalıtım: aile, ikiz ve evlat edinme çalışmaları",
+   "giris": "Şizofrenide çocuklarda yaşam boyu risk ortalama %10, iki ebeveyn hastaysa %47; ikiz uyumu monozigotlarda %46, dizigotlarda %14tür.",
+   "s": [
+    12
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "hastaların çocuklarında yaşam boyu risk ortalama %10; tek ebeveyn hastaysa %5-6, iki ebeveyn hastaysa %47'ye kadar yükselir. Ailede hasta sayısı arttıkça risk artar."
+    },
+    {
+     "metin": "monozigot ikizlerde uyum %46, dizigot ikizlerde %14'tür; yani genetik benzerlik arttıkça risk artar, ama uyum tam olmadığı için çevresel etkenler de rol oynar."
+    },
+    {
+     "metin": "%17."
+    },
+    {
+     "metin": "hastalık kuşaklar boyunca daha erken ve daha şiddetli başlar."
+    },
+    {
+     "metin": "stres-diyatez modelinde genetik yatkınlık tek başına yetmez, diğer etmenler devreye girince hastalık ortaya çıkar. Epigenetik mekanizmalar da etkenler arasında sayılır (sayfa 11); yani hastalığı tek bir gen ya da yalnız nörotransmitter açıklamaz."
+    },
+    {
+     "metin": "ailede hastalık öyküsü varsa ve genç yaşta davranış değişikliği başlamışsa şizofreniden daha kolay şüphelenilir."
+    }
+   ],
+   "klip": "o-2s02-08",
+   "ses": [
+    "Kalıtım: aile, ikiz ve evlat edinme çalışmaları.",
+    "Şizofrenide çocuklarda yaşam boyu risk ortalama %10, iki ebeveyn hastaysa %47; ikiz uyumu monozigotlarda %46, dizigotlarda %14tür.",
+    "hastaların çocuklarında yaşam boyu risk ortalama %10; tek ebeveyn hastaysa %5-6, iki ebeveyn hastaysa %47'ye kadar yükselir. Ailede hasta sayısı arttıkça risk artar.",
+    "monozigot ikizlerde uyum %46, dizigot ikizlerde %14'tür; yani genetik benzerlik arttıkça risk artar, ama uyum tam olmadığı için çevresel etkenler de rol oynar.",
+    "%17.",
+    "hastalık kuşaklar boyunca daha erken ve daha şiddetli başlar.",
+    "stres-diyatez modelinde genetik yatkınlık tek başına yetmez, diğer etmenler devreye girince hastalık ortaya çıkar. Epigenetik mekanizmalar da etkenler arasında sayılır (sayfa 11); yani hastalığı tek bir gen ya da yalnız nörotransmitter açıklamaz.",
+    "ailede hastalık öyküsü varsa ve genç yaşta davranış değişikliği başlamışsa şizofreniden daha kolay şüphelenilir."
+   ],
+   "v": "f5313cea78"
+  },
+  {
+   "id": "2s02-10",
+   "baslik": "Beyinde yapısal ve işlevsel bulgular",
+   "giris": "Şizofrenide ventriküler genişleme, sulkus genişlemesi, frontal kortekste incelme ve talamus, amigdala, hipokampus, temporal lob, bazal ganglion değişiklikleri görülür.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt ve bilişsel kayıplarla birliktedir."
+    },
+    {
+     "metin": "genişlemiştir."
+    },
+    {
+     "metin": "incelme ve beyin ile kafa içi hacminin küçüklüğü saptanır."
+    },
+    {
+     "metin": "talamus, amigdala/hipokampus, temporal loblar ve bazal ganglionlar etkilenir."
+    },
+    {
+     "metin": "hipofrontalite negatif belirtilerle ilişkilidir; dorsolateral prefrontal korteks öne çıkar; \"şizofreni devresi\" frontal korteks, anterior singulat, talamus, temporal lob alt bölgeleri ve serebellumu kapsar."
+    },
+    {
+     "metin": "frontal kortekste kalınlaşma ya da belirgin gliozis beklenen bulgu değildir."
+    }
+   ],
+   "klip": "o-2s02-10",
+   "ses": [
+    "Beyinde yapısal ve işlevsel bulgular.",
+    "Şizofrenide ventriküler genişleme, sulkus genişlemesi, frontal kortekste incelme ve talamus, amigdala, hipokampus, temporal lob, bazal ganglion değişiklikleri görülür.",
+    "kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt ve bilişsel kayıplarla birliktedir.",
+    "genişlemiştir.",
+    "incelme ve beyin ile kafa içi hacminin küçüklüğü saptanır.",
+    "talamus, amigdala/hipokampus, temporal loblar ve bazal ganglionlar etkilenir.",
+    "hipofrontalite negatif belirtilerle ilişkilidir; dorsolateral prefrontal korteks öne çıkar; \"şizofreni devresi\" frontal korteks, anterior singulat, talamus, temporal lob alt bölgeleri ve serebellumu kapsar.",
+    "frontal kortekste kalınlaşma ya da belirgin gliozis beklenen bulgu değildir."
+   ],
+   "v": "71ededc26f"
+  },
+  {
+   "id": "2s02-02",
+   "baslik": "Şizofreni tanı ölçütleri (A, B, C)",
+   "giris": "Tanıda iki ya da daha çok belirti bir ay boyunca bulunur, en az biri sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve bulgular en az altı ay sürer.",
+   "s": [
+    17
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "beş belirtiden en az ikisi, bir aylık (başarıyla tedavi edildiyse daha kısa) sürenin önemli bir kesiminde bulunur."
+    },
+    {
+     "metin": "bu ikisinden en az biri sanrı, varsanı ya da darmadağın konuşma olmalıdır; yani tek başına negatif belirti ya da ileri derecede dağınık davranış bu zorunluluğu karşılamaz."
+    },
+    {
+     "metin": "sanrılar, varsanılar, darmadağın konuşma, ileri derecede dağınık davranış ya da katatoni davranışı, silik (negatif) belirtiler."
+    },
+    {
+     "metin": "çalışma, kişilerarası ilişki gibi alanlarda işlevsellik bozukluğun başlangıcından önceki düzeyin belirgin altındadır."
+    },
+    {
+     "metin": "süregiden bulgular en az altı ay sürer; üç ay gibi daha kısa bir süre tanı için yeterli değildir."
+    },
+    {
+     "metin": "süre, belirti sayısı ya da zorunlu belirti grubunu değiştiren ifadeler yanlıştır."
+    }
+   ],
+   "klip": "o-2s02-02",
+   "ses": [
+    "Şizofreni tanı ölçütleri (A, B, C).",
+    "Tanıda iki ya da daha çok belirti bir ay boyunca bulunur, en az biri sanrı, varsanı ya da darmadağın konuşmadır; işlevsellik düşer ve bulgular en az altı ay sürer.",
+    "beş belirtiden en az ikisi, bir aylık (başarıyla tedavi edildiyse daha kısa) sürenin önemli bir kesiminde bulunur.",
+    "bu ikisinden en az biri sanrı, varsanı ya da darmadağın konuşma olmalıdır; yani tek başına negatif belirti ya da ileri derecede dağınık davranış bu zorunluluğu karşılamaz.",
+    "sanrılar, varsanılar, darmadağın konuşma, ileri derecede dağınık davranış ya da katatoni davranışı, silik (negatif) belirtiler.",
+    "çalışma, kişilerarası ilişki gibi alanlarda işlevsellik bozukluğun başlangıcından önceki düzeyin belirgin altındadır.",
+    "süregiden bulgular en az altı ay sürer; üç ay gibi daha kısa bir süre tanı için yeterli değildir.",
+    "süre, belirti sayısı ya da zorunlu belirti grubunu değiştiren ifadeler yanlıştır."
+   ],
+   "v": "e688a7f968"
+  },
+  {
+   "id": "2s02-01",
+   "baslik": "Süreye göre tanı: şizofreni, şizofreniform, kısa psikotik",
+   "giris": "Belirtiler 6 ay ve daha uzun ise şizofreni, 6 aydan kısa ise şizofreniform bozukluk, 1 günden fazla 4 haftadan kısa ise kısa psikotik bozukluk denir.",
+   "s": [
+    18
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "belirtiler 6 ay ve daha uzun sürer; tanı ölçütlerinin C maddesi de süregiden bulguların en az altı ay sürmesini ister."
+    },
+    {
+     "metin": "belirtilerin süresi 6 aydan kısadır; sayfa 47'de aralık 1-6 ay olarak verilir."
+    },
+    {
+     "metin": "süre 1 günden fazla, 4 haftadan kısadır (sayfa 45 ve 46'da 1 gün-1 ay)."
+    },
+    {
+     "metin": "soruda belirtinin kaç gündür, kaç haftadır ya da kaç aydır sürdüğü verilir; önce süreyi ayır, sonra tanıyı seç."
+    },
+    {
+     "metin": "2 hafta kısa psikotik, 5 hafta ya da 2 ay şizofreniform, 6 aydan uzun süre şizofreni demektir."
+    },
+    {
+     "metin": "üç tanıda da psikotik belirtiler benzerdir; ayıran temel ölçüt süredir."
+    }
+   ],
+   "klip": "o-2s02-01",
+   "ses": [
+    "Süreye göre tanı: şizofreni, şizofreniform, kısa psikotik.",
+    "Belirtiler 6 ay ve daha uzun ise şizofreni, 6 aydan kısa ise şizofreniform bozukluk, 1 günden fazla 4 haftadan kısa ise kısa psikotik bozukluk denir.",
+    "belirtiler 6 ay ve daha uzun sürer; tanı ölçütlerinin C maddesi de süregiden bulguların en az altı ay sürmesini ister.",
+    "belirtilerin süresi 6 aydan kısadır; sayfa 47'de aralık 1-6 ay olarak verilir.",
+    "süre 1 günden fazla, 4 haftadan kısadır (sayfa 45 ve 46'da 1 gün-1 ay).",
+    "soruda belirtinin kaç gündür, kaç haftadır ya da kaç aydır sürdüğü verilir; önce süreyi ayır, sonra tanıyı seç.",
+    "2 hafta kısa psikotik, 5 hafta ya da 2 ay şizofreniform, 6 aydan uzun süre şizofreni demektir.",
+    "üç tanıda da psikotik belirtiler benzerdir; ayıran temel ölçüt süredir."
+   ],
+   "v": "c8eececc2b"
+  },
+  {
+   "id": "2s02-04",
+   "baslik": "Pozitif belirtiler listesi",
+   "giris": "Pozitif belirtiler sanrılar, varsanılar, pozitif formel düşünce bozukluğu ve acayip ya da dezorganize davranışlardır.",
+   "s": [
+    23
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "sanrılar, varsanılar, pozitif formel düşünce bozukluğu, acayip ya da dezorganize davranışlar."
+    },
+    {
+     "metin": "enkoherans, raydan çıkma, çevresellik ve teğetselliği kapsar."
+    },
+    {
+     "metin": "hiperdopaminerjik durum pozitif belirtilerle ilişkilendirilir (sayfa 16)."
+    },
+    {
+     "metin": "apati, aloji, anhedoni, duygusal küntleşme ve toplumsal içe çekilme sayfa 24'teki negatif listededir."
+    },
+    {
+     "metin": "\"pozitif belirtilerden biri değildir\" kökünde negatif listeden bir belirti doğru cevaptır; dağınık davranış, enkohere konuşma, sanrı ve varsanı ise pozitif listededir."
+    }
+   ],
+   "klip": "o-2s02-04",
+   "ses": [
+    "Pozitif belirtiler listesi.",
+    "Pozitif belirtiler sanrılar, varsanılar, pozitif formel düşünce bozukluğu ve acayip ya da dezorganize davranışlardır.",
+    "sanrılar, varsanılar, pozitif formel düşünce bozukluğu, acayip ya da dezorganize davranışlar.",
+    "enkoherans, raydan çıkma, çevresellik ve teğetselliği kapsar.",
+    "hiperdopaminerjik durum pozitif belirtilerle ilişkilendirilir (sayfa 16).",
+    "apati, aloji, anhedoni, duygusal küntleşme ve toplumsal içe çekilme sayfa 24'teki negatif listededir.",
+    "\"pozitif belirtilerden biri değildir\" kökünde negatif listeden bir belirti doğru cevaptır; dağınık davranış, enkohere konuşma, sanrı ve varsanı ise pozitif listededir."
+   ],
+   "v": "e9378fe779"
+  },
+  {
+   "id": "2s02-03",
+   "baslik": "Negatif belirtiler listesi",
+   "giris": "Negatif belirtiler aloji, duygusal küntleşme, anhedoni, toplumsal içe çekilme, avolusyon, apati ve dikkat bozukluğudur.",
+   "s": [
+    24
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "aloji, duygusal küntleşme, anhedoni, toplumsal içe çekilme, avolusyon, apati ve dikkat bozukluğu."
+    },
+    {
+     "metin": "konuşma miktarının ya da içeriğinin fakirleşmesidir."
+    },
+    {
+     "metin": "istenç ve iradenin zayıflamasıdır; apati ile birlikte listede ayrı yer alır."
+    },
+    {
+     "metin": "varsanı ve sanrı pozitif belirtidir. Enkoherans, raydan çıkma, çevresellik ve teğetsellik pozitif formel düşünce bozukluğuna girer. Algı bozukluğu da negatif belirti listesinde yoktur."
+    },
+    {
+     "metin": "\"negatif belirtilerden biri değildir\" kökünde pozitif belirtilerden biri doğru cevaptır."
+    },
+    {
+     "metin": "negatif belirtiler normalde var olan işlevin eksilmesi ya da kaybıdır."
+    }
+   ],
+   "klip": "o-2s02-03",
+   "ses": [
+    "Negatif belirtiler listesi.",
+    "Negatif belirtiler aloji, duygusal küntleşme, anhedoni, toplumsal içe çekilme, avolusyon, apati ve dikkat bozukluğudur.",
+    "aloji, duygusal küntleşme, anhedoni, toplumsal içe çekilme, avolusyon, apati ve dikkat bozukluğu.",
+    "konuşma miktarının ya da içeriğinin fakirleşmesidir.",
+    "istenç ve iradenin zayıflamasıdır; apati ile birlikte listede ayrı yer alır.",
+    "varsanı ve sanrı pozitif belirtidir. Enkoherans, raydan çıkma, çevresellik ve teğetsellik pozitif formel düşünce bozukluğuna girer. Algı bozukluğu da negatif belirti listesinde yoktur.",
+    "\"negatif belirtilerden biri değildir\" kökünde pozitif belirtilerden biri doğru cevaptır.",
+    "negatif belirtiler normalde var olan işlevin eksilmesi ya da kaybıdır."
+   ],
+   "v": "c5bd28e1bb"
+  },
+  {
+   "id": "2s02-09",
+   "baslik": "Sanrılı bozukluk: özellikler ve tanı",
+   "giris": "Bir ay ya da daha uzun süren bir veya daha çok sanrı vardır; şizofreninin A ölçütü hiç karşılanmamıştır ve işlevsellik korunur.",
+   "s": [
+    36,
+    37
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "bir ay ya da daha uzun süren, bir ya da daha çok sanrının varlığıdır."
+    },
+    {
+     "metin": "şizofreninin A tanı ölçütü hiçbir zaman karşılanmamıştır."
+    },
+    {
+     "metin": "varsa bile belirgin değildir ve sanrısal konuyla ilişkilidir; örneğin böceklerce sarıldığı sanrısına böceklerin sardığı duyumu eşlik edebilir."
+    },
+    {
+     "metin": "tek alana odaklı, sistematize ve çoğunlukla bizar olmayan sanrılardır."
+    },
+    {
+     "metin": "sanrılar ön plandadır, şizofrenideki gibi ağır yeti kaybı yoktur, hastalık iç görüsü yoktur; bu yüzden hekime başvuru nadirdir."
+    },
+    {
+     "metin": "toplumda görülme sıklığı %0,02-0,03 (muhtemelen daha sık), ortalama başlangıç yaşı 40, kadınlarda daha sık."
+    }
+   ],
+   "klip": "o-2s02-09",
+   "ses": [
+    "Sanrılı bozukluk: özellikler ve tanı.",
+    "Bir ay ya da daha uzun süren bir veya daha çok sanrı vardır; şizofreninin A ölçütü hiç karşılanmamıştır ve işlevsellik korunur.",
+    "bir ay ya da daha uzun süren, bir ya da daha çok sanrının varlığıdır.",
+    "şizofreninin A tanı ölçütü hiçbir zaman karşılanmamıştır.",
+    "varsa bile belirgin değildir ve sanrısal konuyla ilişkilidir; örneğin böceklerce sarıldığı sanrısına böceklerin sardığı duyumu eşlik edebilir.",
+    "tek alana odaklı, sistematize ve çoğunlukla bizar olmayan sanrılardır.",
+    "sanrılar ön plandadır, şizofrenideki gibi ağır yeti kaybı yoktur, hastalık iç görüsü yoktur; bu yüzden hekime başvuru nadirdir.",
+    "toplumda görülme sıklığı %0,02-0,03 (muhtemelen daha sık), ortalama başlangıç yaşı 40, kadınlarda daha sık."
+   ],
+   "v": "f4b2cab423"
+  },
+  {
+   "id": "2s02-05",
+   "baslik": "Kısa psikotik bozukluk tanı ölçütleri",
+   "giris": "En az bir gün, ancak bir aydan kısa süren dönem; sonunda hastalık öncesi işlevselliğe tam geri dönülür ve belirtiler arasında negatif belirti yoktur.",
+   "s": [
+    46
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "sanrılar, varsanılar, darmadağın konuşma, ileri derecede dağınık davranış ya da katatoni davranışından biri ya da daha çoğu bulunur."
+    },
+    {
+     "metin": "en az biri sanrı, varsanı ya da darmadağın konuşma olmalıdır."
+    },
+    {
+     "metin": "bir dönem en az bir gün sürer ama bir aydan kısadır."
+    },
+    {
+     "metin": "sonunda hastalık öncesi işlevsellik düzeyine tam geri dönülür; şizofrenide tam geri dönüş beklenmez."
+    },
+    {
+     "metin": "negatif (silik) belirtiler ölçüt listesinde yer almaz; bu yüzden \"ileri derecede dağınık davranış ve negatif belirtiler görülür\" gibi bir önerme yanlış özellik olarak sorulabilir."
+    }
+   ],
+   "klip": "o-2s02-05",
+   "ses": [
+    "Kısa psikotik bozukluk tanı ölçütleri.",
+    "En az bir gün, ancak bir aydan kısa süren dönem; sonunda hastalık öncesi işlevselliğe tam geri dönülür ve belirtiler arasında negatif belirti yoktur.",
+    "sanrılar, varsanılar, darmadağın konuşma, ileri derecede dağınık davranış ya da katatoni davranışından biri ya da daha çoğu bulunur.",
+    "en az biri sanrı, varsanı ya da darmadağın konuşma olmalıdır.",
+    "bir dönem en az bir gün sürer ama bir aydan kısadır.",
+    "sonunda hastalık öncesi işlevsellik düzeyine tam geri dönülür; şizofrenide tam geri dönüş beklenmez.",
+    "negatif (silik) belirtiler ölçüt listesinde yer almaz; bu yüzden \"ileri derecede dağınık davranış ve negatif belirtiler görülür\" gibi bir önerme yanlış özellik olarak sorulabilir."
+   ],
+   "v": "4825cdab50"
+  },
+  {
+   "id": "2s02-06",
+   "baslik": "Şizofreniform bozukluk",
+   "giris": "1-6 ay süren psikotik belirtilerle seyreder, belirtiler şizofreniden daha hafiftir ve çoğu olgu takipte şizofreniye dönüşür.",
+   "s": [
+    47
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "psikotik belirtiler 1-6 ay sürer; belirtiler 6 ay ve üzerine uzarsa tanı şizofreniye döner."
+    },
+    {
+     "metin": "belirtiler şizofreniden daha hafiftir, işlevsellikte bozulma azdır."
+    },
+    {
+     "metin": "olguların çoğu takipte şizofreniye dönüşür."
+    },
+    {
+     "metin": "sayfa 48'de A ölçütü şizofreninkiyle aynıdır: beş belirtiden en az ikisi bir aylık sürenin önemli bir kesiminde bulunur ve en az biri sanrı, varsanı ya da darmadağın konuşmadır."
+    },
+    {
+     "metin": "\"5 hafta\" ya da \"2 ay\" gibi süreler şizofreniform bozukluğu, \"2 hafta\" kısa psikotik bozukluğu, \"8 ay\" şizofreniyi gösterir."
+    }
+   ],
+   "klip": "o-2s02-06",
+   "ses": [
+    "Şizofreniform bozukluk.",
+    "1-6 ay süren psikotik belirtilerle seyreder, belirtiler şizofreniden daha hafiftir ve çoğu olgu takipte şizofreniye dönüşür.",
+    "psikotik belirtiler 1-6 ay sürer; belirtiler 6 ay ve üzerine uzarsa tanı şizofreniye döner.",
+    "belirtiler şizofreniden daha hafiftir, işlevsellikte bozulma azdır.",
+    "olguların çoğu takipte şizofreniye dönüşür.",
+    "sayfa 48'de A ölçütü şizofreninkiyle aynıdır: beş belirtiden en az ikisi bir aylık sürenin önemli bir kesiminde bulunur ve en az biri sanrı, varsanı ya da darmadağın konuşmadır.",
+    "\"5 hafta\" ya da \"2 ay\" gibi süreler şizofreniform bozukluğu, \"2 hafta\" kısa psikotik bozukluğu, \"8 ay\" şizofreniyi gösterir."
+   ],
+   "v": "6d24a00138"
+  },
+  {
+   "id": "2s02-07",
+   "baslik": "Şizofreniform bozukluk: tedavi ve tanıyı sorgulama",
+   "giris": "Akut dönemde antipsikotik başlanır ve 3-6 ay sürdürülür; yineleyen ve rezidüel belirtili olgularda tedavi daha uzun sürer.",
+   "s": [
+    47
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "antipsikotik başlanır ve tedavi 3-6 ay sürdürülür."
+    },
+    {
+     "metin": "sosyal desteği iyi ve belirtileri az olan hastada ilaç başlamadan izlem yapılabilir."
+    },
+    {
+     "metin": "yineleyen ve rezidüel belirtileri olan olgularda tedavi daha uzun sürdürülür."
+    },
+    {
+     "metin": "çoğu olgu şizofreniye döndüğü için hasta uzun süre izlenir."
+    },
+    {
+     "metin": "uzun süre tam iyilik hâli olan kişide tanı şizofreni olmayabilir; psikoz ayırıcı tanıda mani gibi başka bir tabloyla da karışabilir."
+    }
+   ],
+   "klip": "o-2s02-07",
+   "ses": [
+    "Şizofreniform bozukluk: tedavi ve tanıyı sorgulama.",
+    "Akut dönemde antipsikotik başlanır ve 3-6 ay sürdürülür; yineleyen ve rezidüel belirtili olgularda tedavi daha uzun sürer.",
+    "antipsikotik başlanır ve tedavi 3-6 ay sürdürülür.",
+    "sosyal desteği iyi ve belirtileri az olan hastada ilaç başlamadan izlem yapılabilir.",
+    "yineleyen ve rezidüel belirtileri olan olgularda tedavi daha uzun sürdürülür.",
+    "çoğu olgu şizofreniye döndüğü için hasta uzun süre izlenir.",
+    "uzun süre tam iyilik hâli olan kişide tanı şizofreni olmayabilir; psikoz ayırıcı tanıda mani gibi başka bir tabloyla da karışabilir."
+   ],
+   "v": "9e8c9ec1ce"
+  }
+ ]
+}

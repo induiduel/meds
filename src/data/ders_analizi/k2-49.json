@@ -1,0 +1,829 @@
+{
+ "surum": 1,
+ "key": "k2-49",
+ "kod": "2s15",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Dikkat Eksikliği Hiperaktivite Bozukluğu",
+ "ogretim_uyesi": "Dr. Pınar Durmaz",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s15"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle giden, erken çocuklukta başlayıp yaşam boyu sürebilen bir bozukluktur. Ders tanı ölçütlerini, seyri, erişkin belirtilerini ve tedavi yöntemlerini kapsar.",
+   "maddeler": [
+    {
+     "metin": "Giriş ve tanım"
+    },
+    {
+     "metin": "Temel belirtiler ve tanı ölçütleri"
+    },
+    {
+     "metin": "Yaşam boyu seyir"
+    },
+    {
+     "metin": "Büyüdükçe üç farklı gelişim"
+    },
+    {
+     "metin": "Ergen ve erişkinde belirtiler"
+    },
+    {
+     "metin": "Birden fazla işle uğraşma"
+    },
+    {
+     "metin": "Risk alma"
+    },
+    {
+     "metin": "Dağınıklık"
+    },
+    {
+     "metin": "Gündelik unutkanlık"
+    },
+    {
+     "metin": "Düşük benlik algısı"
+    },
+    {
+     "metin": "Kapasite altı işlev"
+    },
+    {
+     "metin": "Madde kullanımı ve bağımlılık"
+    },
+    {
+     "metin": "Trafik ve araç kullanımı"
+    },
+    {
+     "metin": "Dört alanda etkilenim"
+    },
+    {
+     "metin": "Erişkinde tanınmama"
+    },
+    {
+     "metin": "Tedavi yöntemleri"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle giden, erken çocuklukta başlayıp yaşam boyu sürebilen bir bozukluktur. Ders tanı ölçütlerini, seyri, erişkin belirtilerini ve tedavi yöntemlerini kapsar.",
+    "Giriş ve tanım.",
+    "Temel belirtiler ve tanı ölçütleri.",
+    "Yaşam boyu seyir.",
+    "Büyüdükçe üç farklı gelişim.",
+    "Ergen ve erişkinde belirtiler.",
+    "Birden fazla işle uğraşma.",
+    "Risk alma.",
+    "Dağınıklık.",
+    "Gündelik unutkanlık.",
+    "Düşük benlik algısı.",
+    "Kapasite altı işlev.",
+    "Madde kullanımı ve bağımlılık.",
+    "Trafik ve araç kullanımı.",
+    "Dört alanda etkilenim.",
+    "Erişkinde tanınmama.",
+    "Tedavi yöntemleri."
+   ],
+   "v": "57997c87ce"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "DEHB tanımı ve çekirdek belirtiler",
+     "metin": "DEHB; aşırı hareketlilik, dikkat sorunları ve düşündüğünü hemen yapma (dürtüsellik) belirtileriyle kendini gösteren psikiyatrik bir bozukluktur.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Temel belirtiler ve DSM IV tanı ölçütleri",
+     "metin": "DSM IV'e göre temel belirtiler dikkat sorunları, aşırı hareketlilik ve istek ile dürtüleri engelleyememedir.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Yaşam boyu seyir",
+     "metin": "DEHB erken çocukluk dönemlerinde başlar, en sık ilkokul döneminde tanı konulur.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Büyüdükçe üç farklı gelişim",
+     "metin": "Büyüdükçe üç farklı seyir görülür: %10-15 ergenlikte önemli düzelme, %60-70 belirtiler devam, %5-10 daha ciddi problemler.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Ergen/erişkin belirtileri",
+     "metin": "Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır olma, gerginlik ve huzursuzluk biçiminde görülür.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Birden fazla işle uğraşma",
+     "metin": "İş rutine bindiğinde sıkılıp başka projeye başlama görülür; sonuçta başlanmış ama yarım bırakılmış çok sayıda iş kalır.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Risk alma",
+     "metin": "Yüksek uyarılma ihtiyacı ve büyük heyecanlar peşinde koşma nedeniyle risk alma davranışı görülür.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Dağınıklık",
+     "metin": "Eşya kaybetme, planlara uyamama ve organize olamama tipiktir; bazen aşırı düzen takıntısı da görülebilir.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Gündelik unutkanlık",
+     "metin": "Eşyalarını nereye koyduğunu, yapılacak işleri ve arabasını nereye park ettiğini unutma gibi gündelik unutkanlıklar görülür.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Düşük benlik algısı",
+     "metin": "Gerçek başarısından bağımsız yeterince başarılı olmadığını düşünme ve olumlu özelliklerini görememe görülür.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Kapasite altı işlev",
+     "metin": "Çocukluktan beri var olan sorunlar nedeniyle gerçek kapasitelerinin altında bir düzeyde kalırlar; doyumsuzluk ve mutsuzluk hissi eşlik eder.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Madde kullanımı ve bağımlılık",
+     "metin": "DEHB'ye davranım bozukluğu eşlik edenlerde madde kullanımı daha sıktır; kolay risk aldıklarından bağımlılık daha hızlı gelişir.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Trafik ve araç kullanımı",
+     "metin": "Ehliyetsiz, hızlı ve tehlikeli araç kullanma; daha sık kaza ve daha fazla trafik cezası görülür.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Sürüş performansı",
+     "metin": "Teorik bilgi açısından fark yokken PC simülasyonunda düşük performans (çevre kontrolünde zayıflık) saptanır.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Dört alanda etkilenim",
+     "metin": "DEHB basit bir sorun değildir; davranışsal, bilişsel, sosyal ve duygusal alanları etkiler.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Erişkinde tanınmama",
+     "metin": "Erişkinlerde DEHB büyük oranda tanınmaz; %85'i tanı almamış, yalnızca %15'i tanı konulmuş erişkin DEHB'dir.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Tedavi yöntemleri",
+     "metin": "DEHB tedavisi ilaç tedavisi, aileyle çalışma, eğitim sürecine ait uygulamalar ve bireysel terapiden oluşur.",
+     "s": [
+      18
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "DEHB tanımı ve çekirdek belirtiler: DEHB; aşırı hareketlilik, dikkat sorunları ve düşündüğünü hemen yapma (dürtüsellik) belirtileriyle kendini gösteren psikiyatrik bir bozukluktur.",
+    "Temel belirtiler ve DSM IV tanı ölçütleri: DSM IV'e göre temel belirtiler dikkat sorunları, aşırı hareketlilik ve istek ile dürtüleri engelleyememedir.",
+    "Yaşam boyu seyir: DEHB erken çocukluk dönemlerinde başlar, en sık ilkokul döneminde tanı konulur.",
+    "Büyüdükçe üç farklı gelişim: Büyüdükçe üç farklı seyir görülür: %10-15 ergenlikte önemli düzelme, %60-70 belirtiler devam, %5-10 daha ciddi problemler.",
+    "Ergen/erişkin belirtileri: Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır olma, gerginlik ve huzursuzluk biçiminde görülür.",
+    "Birden fazla işle uğraşma: İş rutine bindiğinde sıkılıp başka projeye başlama görülür; sonuçta başlanmış ama yarım bırakılmış çok sayıda iş kalır.",
+    "Risk alma: Yüksek uyarılma ihtiyacı ve büyük heyecanlar peşinde koşma nedeniyle risk alma davranışı görülür.",
+    "Dağınıklık: Eşya kaybetme, planlara uyamama ve organize olamama tipiktir; bazen aşırı düzen takıntısı da görülebilir.",
+    "Gündelik unutkanlık: Eşyalarını nereye koyduğunu, yapılacak işleri ve arabasını nereye park ettiğini unutma gibi gündelik unutkanlıklar görülür.",
+    "Düşük benlik algısı: Gerçek başarısından bağımsız yeterince başarılı olmadığını düşünme ve olumlu özelliklerini görememe görülür.",
+    "Kapasite altı işlev: Çocukluktan beri var olan sorunlar nedeniyle gerçek kapasitelerinin altında bir düzeyde kalırlar; doyumsuzluk ve mutsuzluk hissi eşlik eder.",
+    "Madde kullanımı ve bağımlılık: DEHB'ye davranım bozukluğu eşlik edenlerde madde kullanımı daha sıktır; kolay risk aldıklarından bağımlılık daha hızlı gelişir.",
+    "Trafik ve araç kullanımı: Ehliyetsiz, hızlı ve tehlikeli araç kullanma; daha sık kaza ve daha fazla trafik cezası görülür.",
+    "Sürüş performansı: Teorik bilgi açısından fark yokken PC simülasyonunda düşük performans (çevre kontrolünde zayıflık) saptanır.",
+    "Dört alanda etkilenim: DEHB basit bir sorun değildir; davranışsal, bilişsel, sosyal ve duygusal alanları etkiler.",
+    "Erişkinde tanınmama: Erişkinlerde DEHB büyük oranda tanınmaz; %85'i tanı almamış, yalnızca %15'i tanı konulmuş erişkin DEHB'dir.",
+    "Tedavi yöntemleri: DEHB tedavisi ilaç tedavisi, aileyle çalışma, eğitim sürecine ait uygulamalar ve bireysel terapiden oluşur."
+   ],
+   "v": "c85e3dc1c4"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmış sorularda DSM tanı ölçütleri ve yaşam boyu seyir doğrudan soruldu; tanı koşulları, seyir oranları ve tedavi yöntemleri sınav açısından en kritik başlıklardır.",
+   "maddeler": [
+    {
+     "baslik": "Yaşam boyu seyir",
+     "metin": "Çocuklukta tanı alanların yüzde yetmiş ile sekseni ergenlikte de aynı belirtileri gösterir.",
+     "neden": "2018-2019 Kurul 4'te erişkinde düzelme yanlış şıkkı soruldu; bozukluğun sürdüğü atlanır.",
+     "s": [
+      4
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "DEHB tanımı ve çekirdek belirtiler",
+     "metin": "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle kendini gösteren psikiyatrik bir bozukluktur.",
+     "neden": "Tanımı ve üç çekirdek belirti her yıl farklı biçimde sorulabilen temel bilgidir.",
+     "s": [
+      2
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Başlangıç yaşı ve süre ölçütü",
+     "metin": "DEHB belirtileri yedi yaştan önce başlamalı ve en az altı aydır sürmelidir.",
+     "neden": "Başlangıç yaşı ve süre ölçütü sık karıştırılan sayısal ayrıntılardır.",
+     "s": [
+      3
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "DSM IV tanı ölçütleri",
+     "metin": "DEHB tanısı için belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir.",
+     "neden": "2025-2026 Kurul 2'de ortam koşulu doğrudan soruldu; tek ortamın yeterli sanılması klasik tuzaktır.",
+     "s": [
+      3
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Ortam ve düzey ölçütü",
+     "metin": "Belirtiler birden fazla ortamda ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır.",
+     "neden": "Tek ortam yeterli sanılır; oysa belirtiler hem ev hem okulda olmalıdır.",
+     "s": [
+      3
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Tedavi yöntemleri",
+     "metin": "DEHB tedavisi ilaç tedavisi, aileyle çalışma, eğitim uygulamaları ve bireysel terapiden oluşur.",
+     "neden": "Tedavi yöntemleri sık sorulan, sayısı ve sırası karıştırılan bilgidir.",
+     "s": [
+      18
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Erişkinde hiperaktivite",
+     "metin": "Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır ve huzursuz olma biçiminde görülür.",
+     "neden": "Erişkin hiperaktivitesinin klinik görünümü çocuktan farklı olduğu için sorulur.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Erişkinde tanınmama",
+     "metin": "Erişkinlerde DEHB büyük oranda tanınmaz; yalnızca küçük bir bölümü tanı alır.",
+     "neden": "Erişkinde tanınmama oranı sınavda şaşırtıcı bilgi olarak sorulabilir.",
+     "s": [
+      17
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmış sorularda DSM tanı ölçütleri ve yaşam boyu seyir doğrudan soruldu; tanı koşulları, seyir oranları ve tedavi yöntemleri sınav açısından en kritik başlıklardır.",
+    "Yaşam boyu seyir: Çocuklukta tanı alanların yüzde yetmiş ile sekseni ergenlikte de aynı belirtileri gösterir.",
+    "DEHB tanımı ve çekirdek belirtiler: DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle kendini gösteren psikiyatrik bir bozukluktur.",
+    "Başlangıç yaşı ve süre ölçütü: DEHB belirtileri yedi yaştan önce başlamalı ve en az altı aydır sürmelidir.",
+    "DSM IV tanı ölçütleri: DEHB tanısı için belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir.",
+    "Ortam ve düzey ölçütü: Belirtiler birden fazla ortamda ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır.",
+    "Tedavi yöntemleri: DEHB tedavisi ilaç tedavisi, aileyle çalışma, eğitim uygulamaları ve bireysel terapiden oluşur.",
+    "Erişkinde hiperaktivite: Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır ve huzursuz olma biçiminde görülür.",
+    "Erişkinde tanınmama: Erişkinlerde DEHB büyük oranda tanınmaz; yalnızca küçük bir bölümü tanı alır."
+   ],
+   "v": "bbf25d9111"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 2 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi dikkat eksikliği hiperaktivite bozukluğu (DEHB) için söylenemez?",
+     "cevap": "Çocukken tanı alan kişilerde büyük olasılıkla erişkin döneminde düzelir",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Dikkat Eksikliği Hiperaktivite Bozukluğu (DEHB) tanısı için DSM-5 ölçütlerine göre dikkatsizlik veya hiperaktivite/dürtüsellik belirtileri hangi ortam koşulunu karşılamalıdır?",
+     "cevap": "En az 2 ortamda",
+     "s": [
+      3
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 2 çıkmış soru var.",
+    "2018-2019: Aşağıdakilerden hangisi dikkat eksikliği hiperaktivite bozukluğu (DEHB) için söylenemez?",
+    "Cevap: Çocukken tanı alan kişilerde büyük olasılıkla erişkin döneminde düzelir.",
+    "2025-2026: Dikkat Eksikliği Hiperaktivite Bozukluğu (DEHB) tanısı için DSM-5 ölçütlerine göre dikkatsizlik veya hiperaktivite/dürtüsellik belirtileri hangi ortam koşulunu karşılamalıdır?",
+    "Cevap: En az 2 ortamda."
+   ],
+   "v": "15b127a639"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanı ve ayırıcı tanı (%50) ve ilaç ve endikasyon (%25) sorulur."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Ilaç ve endikasyon",
+     "metin": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%75) ve hatırlama (%25) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da her zaman, asla gibi mutlak ifade olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanı ve ayırıcı tanı (%50) ve ilaç ve endikasyon (%25) sorulur.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Ilaç ve endikasyon: Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%75) ve hatırlama (%25) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da her zaman, asla gibi mutlak ifade olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "dac9107311"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Naltrekson",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) tedavisinde kullanılan ilaçlardan biri değildir?"
+    },
+    {
+     "baslik": "Yaşam boyu seyir",
+     "metin": "2018-2019 Kurul 4'te erişkinde düzelme yanlış şıkkı soruldu; bozukluğun sürdüğü atlanır."
+    },
+    {
+     "baslik": "DSM IV tanı ölçütleri",
+     "metin": "2025-2026 Kurul 2'de ortam koşulu doğrudan soruldu; tek ortamın yeterli sanılması klasik tuzaktır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Naltrekson: Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisi dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) tedavisinde kullanılan ilaçlardan biri değildir?",
+    "Yaşam boyu seyir: 2018-2019 Kurul 4'te erişkinde düzelme yanlış şıkkı soruldu; bozukluğun sürdüğü atlanır.",
+    "DSM IV tanı ölçütleri: 2025-2026 Kurul 2'de ortam koşulu doğrudan soruldu; tek ortamın yeterli sanılması klasik tuzaktır.",
+    "Çalışma yolu: Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "e91b83909d"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle giden, erken çocuklukta başlayıp yaşam boyu sürebilen bir bozukluktur. Ders tanı ölçütlerini, seyri, erişkin belirtilerini ve tedavi yöntemlerini kapsar.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle giden, erken çocuklukta başlayıp yaşam boyu sürebilen bir bozukluktur. Ders tanı ölçütlerini, seyri, erişkin belirtilerini ve tedavi yöntemlerini kapsar."
+   ],
+   "v": "53efd581a3"
+  },
+  {
+   "id": "2s15-03",
+   "baslik": "DEHB tanımı ve çekirdek belirtiler",
+   "giris": "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle kendini gösteren psikiyatrik bir bozukluktur.",
+   "s": [
+    2
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "DEHB; aşırı hareketlilik, dikkat sorunları ve düşündüğünü hemen yapma biçiminde görülen dürtüsellikle kendini gösteren psikiyatrik bir bozukluktur."
+    },
+    {
+     "metin": "Durduğu yerde duramama ve aşırı hareketlilik davranışsal çekirdek belirtidir."
+    },
+    {
+     "metin": "Bilişsel çekirdek belirtiyi oluşturur."
+    },
+    {
+     "metin": "Düşündüğünü hemen yapma ve sonucunu düşünmeden davranma olarak tanımlanır."
+    },
+    {
+     "metin": "Tanımı ve üç çekirdek belirti her yıl farklı biçimde sorulabilen temel bilgidir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-03",
+   "ses": [
+    "DEHB tanımı ve çekirdek belirtiler.",
+    "DEHB; aşırı hareketlilik, dikkat sorunları ve dürtüsellikle kendini gösteren psikiyatrik bir bozukluktur.",
+    "DEHB; aşırı hareketlilik, dikkat sorunları ve düşündüğünü hemen yapma biçiminde görülen dürtüsellikle kendini gösteren psikiyatrik bir bozukluktur.",
+    "Durduğu yerde duramama ve aşırı hareketlilik davranışsal çekirdek belirtidir.",
+    "Bilişsel çekirdek belirtiyi oluşturur.",
+    "Düşündüğünü hemen yapma ve sonucunu düşünmeden davranma olarak tanımlanır.",
+    "Tanımı ve üç çekirdek belirti her yıl farklı biçimde sorulabilen temel bilgidir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "53dcee23a4"
+  },
+  {
+   "id": "2s15-01",
+   "baslik": "DSM IV tanı ölçütleri",
+   "giris": "DEHB tanısı için belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir.",
+   "s": [
+    3
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "DSM IV ölçütüne göre belirtiler yedi yaştan önce başlamış olmalıdır."
+    },
+    {
+     "metin": "Belirtiler kalıcı ve sürekli olmalı, en az altı aydır bulunmalıdır."
+    },
+    {
+     "metin": "Belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir; tek ortam tanı için yeterli değildir."
+    },
+    {
+     "metin": "Belirtiler yaş ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır."
+    },
+    {
+     "metin": "Dikkat sorunları, aşırı hareketlilik ve istek ile dürtüleri engelleyememe tanının çekirdeğini oluşturur."
+    }
+   ],
+   "klip": "o-2s15-01",
+   "ses": [
+    "DSM IV tanı ölçütleri.",
+    "DEHB tanısı için belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir.",
+    "DSM IV ölçütüne göre belirtiler yedi yaştan önce başlamış olmalıdır.",
+    "Belirtiler kalıcı ve sürekli olmalı, en az altı aydır bulunmalıdır.",
+    "Belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir; tek ortam tanı için yeterli değildir.",
+    "Belirtiler yaş ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır.",
+    "Dikkat sorunları, aşırı hareketlilik ve istek ile dürtüleri engelleyememe tanının çekirdeğini oluşturur."
+   ],
+   "v": "f6c864cd21"
+  },
+  {
+   "id": "2s15-04",
+   "baslik": "Başlangıç yaşı ve süre ölçütü",
+   "giris": "DEHB belirtileri yedi yaştan önce başlamalı ve en az altı aydır sürmelidir.",
+   "s": [
+    3
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "DSM IV ölçütüne göre belirtiler yedi yaştan önce başlamış olmalıdır."
+    },
+    {
+     "metin": "Belirtiler kalıcı ve sürekli olmalı, en az altı aydır bulunmalıdır."
+    },
+    {
+     "metin": "Kısa süreli veya geçici belirtiler tanı için yeterli sayılmaz."
+    },
+    {
+     "metin": "Bu iki sayısal ölçüt tanının temel koşullarındandır ve sık sorulur."
+    },
+    {
+     "metin": "Başlangıç yaşı ve süre ölçütü sık karıştırılan sayısal ayrıntılardır. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-04",
+   "ses": [
+    "Başlangıç yaşı ve süre ölçütü.",
+    "DEHB belirtileri yedi yaştan önce başlamalı ve en az altı aydır sürmelidir.",
+    "DSM IV ölçütüne göre belirtiler yedi yaştan önce başlamış olmalıdır.",
+    "Belirtiler kalıcı ve sürekli olmalı, en az altı aydır bulunmalıdır.",
+    "Kısa süreli veya geçici belirtiler tanı için yeterli sayılmaz.",
+    "Bu iki sayısal ölçüt tanının temel koşullarındandır ve sık sorulur.",
+    "Başlangıç yaşı ve süre ölçütü sık karıştırılan sayısal ayrıntılardır. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "bf179e21ad"
+  },
+  {
+   "id": "2s15-05",
+   "baslik": "Ortam ve düzey ölçütü",
+   "giris": "Belirtiler birden fazla ortamda ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır.",
+   "s": [
+    3
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir."
+    },
+    {
+     "metin": "Yalnız okulda ya da yalnız evde görülen belirti tanı için yeterli değildir."
+    },
+    {
+     "metin": "Belirtiler kişinin yaş ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır."
+    },
+    {
+     "metin": "Bu iki ölçüt belirtilerin gerçekten bozukluk düzeyinde olup olmadığını ayırt eder."
+    }
+   ],
+   "klip": "o-2s15-05",
+   "ses": [
+    "Ortam ve düzey ölçütü.",
+    "Belirtiler birden fazla ortamda ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır.",
+    "Belirtiler birden fazla ortamda, hem ev hem okulda görülmelidir.",
+    "Yalnız okulda ya da yalnız evde görülen belirti tanı için yeterli değildir.",
+    "Belirtiler kişinin yaş ve gelişim düzeyine uygun olmayacak düzeyde olmalıdır.",
+    "Bu iki ölçüt belirtilerin gerçekten bozukluk düzeyinde olup olmadığını ayırt eder."
+   ],
+   "v": "9096eebe3b"
+  },
+  {
+   "id": "2s15-02",
+   "baslik": "Yaşam boyu seyir",
+   "giris": "Çocuklukta tanı alanların yüzde yetmiş ile sekseni ergenlikte de aynı belirtileri gösterir.",
+   "s": [
+    4
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "DEHB erken çocukluk dönemlerinde başlar."
+    },
+    {
+     "metin": "En sık ilkokul döneminde tanı konur."
+    },
+    {
+     "metin": "Çocuklukta tanı alanların yüzde yetmiş ile sekseni ergenlikte de aynı belirtileri gösterir."
+    },
+    {
+     "metin": "Ergenlikte belirti gösterenlerin yüzde elli ile altmış beşi erişkinlikte de aynı tanıyı alır."
+    },
+    {
+     "metin": "Bu nedenle bozukluk çoğu kişide erişkinlikte kendiliğinden düzelmez, yaşam boyu devam edebilir."
+    }
+   ],
+   "klip": "o-2s15-02",
+   "ses": [
+    "Yaşam boyu seyir.",
+    "Çocuklukta tanı alanların yüzde yetmiş ile sekseni ergenlikte de aynı belirtileri gösterir.",
+    "DEHB erken çocukluk dönemlerinde başlar.",
+    "En sık ilkokul döneminde tanı konur.",
+    "Çocuklukta tanı alanların yüzde yetmiş ile sekseni ergenlikte de aynı belirtileri gösterir.",
+    "Ergenlikte belirti gösterenlerin yüzde elli ile altmış beşi erişkinlikte de aynı tanıyı alır.",
+    "Bu nedenle bozukluk çoğu kişide erişkinlikte kendiliğinden düzelmez, yaşam boyu devam edebilir."
+   ],
+   "v": "34cc251390"
+  },
+  {
+   "id": "2s15-07",
+   "baslik": "Erişkinde hiperaktivite",
+   "giris": "Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır ve huzursuz olma biçiminde görülür.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır ve huzursuz olma biçiminde ortaya çıkar."
+    },
+    {
+     "metin": "Gergin ve huzursuz bir davranış eşlik eder."
+    },
+    {
+     "metin": "Çocuktaki belirgin koşup zıplama yerine erişkinde içsel huzursuzluk öne çıkar."
+    },
+    {
+     "metin": "Hiperaktivite bozukluğun davranışsal alanına ait çekirdek belirtidir."
+    },
+    {
+     "metin": "Erişkin hiperaktivitesinin klinik görünümü çocuktan farklı olduğu için sorulur. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-07",
+   "ses": [
+    "Erişkinde hiperaktivite.",
+    "Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır ve huzursuz olma biçiminde görülür.",
+    "Erişkinde hiperaktivite durduğu yerde duramama, kıpır kıpır ve huzursuz olma biçiminde ortaya çıkar.",
+    "Gergin ve huzursuz bir davranış eşlik eder.",
+    "Çocuktaki belirgin koşup zıplama yerine erişkinde içsel huzursuzluk öne çıkar.",
+    "Hiperaktivite bozukluğun davranışsal alanına ait çekirdek belirtidir.",
+    "Erişkin hiperaktivitesinin klinik görünümü çocuktan farklı olduğu için sorulur. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "f94ae54d3e"
+  },
+  {
+   "id": "2s15-08",
+   "baslik": "Erişkinde dikkat dağınıklığı",
+   "giris": "Erişkinde dikkat dağınıklığı kitabı bitirememe ve toplantıda kopma biçiminde görülür.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Erişkinde dikkat dağınıklığı kitabı bitirememe biçiminde görülür."
+    },
+    {
+     "metin": "Toplantılarda on ile on beş dakika sonra dikkatin kopması tipiktir."
+    },
+    {
+     "metin": "Dikkat sorunları bozukluğun bilişsel alanına ait çekirdek belirtidir."
+    },
+    {
+     "metin": "İşleri sürdürmede ve tamamlamada güçlük yaratır."
+    },
+    {
+     "metin": "Dikkat dağınıklığının erişkindeki yansımaları klinik olarak sorulabilir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-08",
+   "ses": [
+    "Erişkinde dikkat dağınıklığı.",
+    "Erişkinde dikkat dağınıklığı kitabı bitirememe ve toplantıda kopma biçiminde görülür.",
+    "Erişkinde dikkat dağınıklığı kitabı bitirememe biçiminde görülür.",
+    "Toplantılarda on ile on beş dakika sonra dikkatin kopması tipiktir.",
+    "Dikkat sorunları bozukluğun bilişsel alanına ait çekirdek belirtidir.",
+    "İşleri sürdürmede ve tamamlamada güçlük yaratır.",
+    "Dikkat dağınıklığının erişkindeki yansımaları klinik olarak sorulabilir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "a89fbeb53c"
+  },
+  {
+   "id": "2s15-13",
+   "baslik": "Madde kullanımı ve bağımlılık",
+   "giris": "DEHB'ye davranım bozukluğu eşlik edenlerde madde kullanımı daha sık görülür.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "DEHB'ye davranım bozukluğu eşlik edenlerde madde kullanımı daha sıktır."
+    },
+    {
+     "metin": "Kolay risk aldıklarından uygun ortam bulduklarında maddeyi deneyebilirler."
+    },
+    {
+     "metin": "Bağımlılık normal kişilere göre daha hızlı gelişir."
+    },
+    {
+     "metin": "Bu nedenle DEHB'li kişilerde madde kullanımı açısından dikkatli olunmalıdır."
+    },
+    {
+     "metin": "Madde kullanımı riski ve bağımlılık hızı sınavda sorulabilir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-13",
+   "ses": [
+    "Madde kullanımı ve bağımlılık.",
+    "DEHB'ye davranım bozukluğu eşlik edenlerde madde kullanımı daha sık görülür.",
+    "DEHB'ye davranım bozukluğu eşlik edenlerde madde kullanımı daha sıktır.",
+    "Kolay risk aldıklarından uygun ortam bulduklarında maddeyi deneyebilirler.",
+    "Bağımlılık normal kişilere göre daha hızlı gelişir.",
+    "Bu nedenle DEHB'li kişilerde madde kullanımı açısından dikkatli olunmalıdır.",
+    "Madde kullanımı riski ve bağımlılık hızı sınavda sorulabilir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "c728a1a1db"
+  },
+  {
+   "id": "2s15-06",
+   "baslik": "Erişkinde tanınmama",
+   "giris": "Erişkinlerde DEHB büyük oranda tanınmaz; yalnızca küçük bir bölümü tanı alır.",
+   "s": [
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Erişkinlerde DEHB büyük oranda tanınmaz."
+    },
+    {
+     "metin": "Erişkin DEHB'lilerin büyük bölümü tanı almamıştır, yalnızca küçük bir kısmı tanı konmuş durumdadır."
+    },
+    {
+     "metin": "Belirtiler erişkinlikte sürmesine karşın tanı çoğu kez gecikir ya da hiç konmaz."
+    },
+    {
+     "metin": "Bu durum erişkin DEHB'nin gözden kaçtığını ve tanının güçlüğünü gösterir."
+    },
+    {
+     "metin": "Erişkinde tanınmama oranı sınavda şaşırtıcı bilgi olarak sorulabilir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-06",
+   "ses": [
+    "Erişkinde tanınmama.",
+    "Erişkinlerde DEHB büyük oranda tanınmaz; yalnızca küçük bir bölümü tanı alır.",
+    "Erişkinlerde DEHB büyük oranda tanınmaz.",
+    "Erişkin DEHB'lilerin büyük bölümü tanı almamıştır, yalnızca küçük bir kısmı tanı konmuş durumdadır.",
+    "Belirtiler erişkinlikte sürmesine karşın tanı çoğu kez gecikir ya da hiç konmaz.",
+    "Bu durum erişkin DEHB'nin gözden kaçtığını ve tanının güçlüğünü gösterir.",
+    "Erişkinde tanınmama oranı sınavda şaşırtıcı bilgi olarak sorulabilir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "bac47d05d7"
+  },
+  {
+   "id": "2s15-19",
+   "baslik": "Tedavi yöntemleri",
+   "giris": "DEHB tedavisi ilaç tedavisi, aileyle çalışma, eğitim uygulamaları ve bireysel terapiden oluşur.",
+   "s": [
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "DEHB tedavisi dört yöntemden oluşur."
+    },
+    {
+     "metin": "İlaç tedavisi yöntemlerin ilki olarak sayılır."
+    },
+    {
+     "metin": "Aileyle çalışma ve eğitim sürecine ait uygulamalar tedavinin parçasıdır."
+    },
+    {
+     "metin": "Bireysel terapi de tedavi yöntemleri arasında yer alır."
+    },
+    {
+     "metin": "Tedavi yöntemleri sık sorulan, sayısı ve sırası karıştırılan bilgidir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+    }
+   ],
+   "klip": "o-2s15-19",
+   "ses": [
+    "Tedavi yöntemleri.",
+    "DEHB tedavisi ilaç tedavisi, aileyle çalışma, eğitim uygulamaları ve bireysel terapiden oluşur.",
+    "DEHB tedavisi dört yöntemden oluşur.",
+    "İlaç tedavisi yöntemlerin ilki olarak sayılır.",
+    "Aileyle çalışma ve eğitim sürecine ait uygulamalar tedavinin parçasıdır.",
+    "Bireysel terapi de tedavi yöntemleri arasında yer alır.",
+    "Tedavi yöntemleri sık sorulan, sayısı ve sırası karıştırılan bilgidir. Bu başlık ders değerlendirmesinde öne çıkan noktalardandır."
+   ],
+   "v": "6fbb8d5837"
+  }
+ ]
+}

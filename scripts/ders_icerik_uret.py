@@ -74,9 +74,11 @@ def uret(key):
     out['hastaliklar'] = hast
     # --- önem listesi (başlık eşleşmesiyle)
     out['onemli'] = []
+    # önce ders defteri koduyla (H608: program başlığı ≠ önem listesi başlığı), sonra başlıkla
+    dkod = next((x.get('kod') for f in glob.glob(os.path.join(R, 'src/data/dersler/k*.json')) for x in J(f).get('dersler', []) if x.get('id') == kod), None)
     for ix in glob.glob(os.path.join(R, 'src/data/k2*_onem/index.json')):
         for d in J(ix)['dersler']:
-            if nz(d['baslik']) == nz(deck.get('title') or out['baslik']):
+            if (dkod and (d['kod'] == dkod or d['kod'].startswith(dkod + '-'))) or nz(d['baslik']) == nz(deck.get('title') or out['baslik']):
                 m = J(os.path.join(os.path.dirname(ix), d['kod'] + '.json'))['maddeler']
                 out['onemli'] = [{'p': x['puan'], 'b': x['baslik'], 'm': x['bilgi'], 'alt': x.get('alt', []), 'n': x.get('neden', ''), 's': [a['sayfa'] for a in x.get('alinti', [])], 'tur': x.get('tur', '')} for x in m]
     # --- deste: spot, tablo, karşılaştırma, sıralı liste, kart, mini quiz
@@ -112,8 +114,10 @@ def uret(key):
                 lis.append({'t': it['prompt'], 'sira': 'numara', 'm': [{'m': x} for x in it['steps']], 'n': n, 'a': it.get('explanation', '')})
             elif ty == 'micro_quiz':
                 quiz.append({'q': it['question'], 'o': [{'k': o['key'], 't': o['text'], 'd': bool(o.get('isCorrect')), 'a': o.get('explanation', '')} for o in it['microQuizOptions']], 'n': n})
-    for k, L in (('spotlar', spot), ('tablolar', tab), ('listeler', lis), ('kartlar', kart), ('quiz', quiz)): L.extend(ek.get(k, []))
-    out['spotlar'] = spot; out['tablolar'] = tab; out['listeler'] = lis; out['kartlar'] = kart; out['quiz'] = quiz
+    for k, L in (('spotlar', spot), ('tablolar', tab), ('listeler', lis), ('kartlar', kart)): L.extend(ek.get(k, []))
+    # Quiz/mini soru ÜRETİLMEZ (kullanıcı kararı 2026-11-17): paket yalnız hazır bilgiyi toplar, oyun/quiz yok.
+    if not tab and ek.get('tablolarYok'): out['tablolarYok'] = ek['tablolarYok']  # kaynakta tablo yok: yazılı gerekçe (paketten_ek.py)
+    out['spotlar'] = spot; out['tablolar'] = tab; out['listeler'] = lis; out['kartlar'] = kart; out['quiz'] = []
     # --- çıkmış soru konumları
     cj = os.path.join(R, 'data/sesli_anlatim/cikmis_konum', key + '.json')
     out['cikmis'] = len(J(cj)) if os.path.exists(cj) else 0

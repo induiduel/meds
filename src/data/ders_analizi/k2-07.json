@@ -1,0 +1,1338 @@
+{
+ "surum": 1,
+ "key": "k2-07",
+ "kod": "2f01",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Genel Anestezik İlaçlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders genel anestezinin hedeflerini (analjezi, bilinç kaybı, kas gevşemesi), anestezi evrelerini ve dengeli anestezi yaklaşımını anlatır. Ardından intravenöz anestezikleri (barbitüratlar, propofol, etomidat, ketamin, benzodiazepinler, opioidler), inhaler ajanları, nöromüsküler blokörleri ve uyanmayı hızlandıran reversal ilaçlarını (neostigmin, sugammadex, nalokson, flumazenil) işler.",
+   "maddeler": [
+    {
+     "metin": "Genel anestezinin üç hedefi"
+    },
+    {
+     "metin": "Anestezinin zaman çizgisi ve evreleri"
+    },
+    {
+     "metin": "Dengeli anestezi ve ilaç etkileşimi"
+    },
+    {
+     "metin": "Reseptör haritası: anesteziklerin ortak dili"
+    },
+    {
+     "metin": "Bölüm 1: İntravenöz anesteziklerin ortak etkisi"
+    },
+    {
+     "metin": "Hızlı başlangıç ve redistribüsyon"
+    },
+    {
+     "metin": "İntravenöz anestezi: tek başına mı, kombinasyonla mı"
+    },
+    {
+     "metin": "Barbitüratlar ve tiyopental"
+    },
+    {
+     "metin": "Etomidat ve ketamin"
+    },
+    {
+     "metin": "Opioidler: analjezinin temeli"
+    },
+    {
+     "metin": "Etkileşim ve yan etki çerçevesi"
+    },
+    {
+     "metin": "Bölüm 2: İnhaler anesteziklerin iki ölçüsü"
+    },
+    {
+     "metin": "Halotan ve izofluran"
+    },
+    {
+     "metin": "Sevofluran ve desfluran"
+    },
+    {
+     "metin": "Azot protoksit"
+    },
+    {
+     "metin": "İnhaler anesteziklerde etkileşimler"
+    },
+    {
+     "metin": "Bölüm 3: Total intravenöz anestezi ve propofol"
+    },
+    {
+     "metin": "Benzodiazepinler ve flumazenil"
+    },
+    {
+     "metin": "Fentanil grubu ve ketaminin ayrıntıları"
+    },
+    {
+     "metin": "Bölüm 4: Nöromüsküler iletim"
+    },
+    {
+     "metin": "Süksinilkolin ve non-depolarizan blokörler"
+    },
+    {
+     "metin": "Kas gevşetici etkileşimleri"
+    },
+    {
+     "metin": "Opioidler ve non-opioid analjezikler"
+    },
+    {
+     "metin": "Bölüm 5: Uyanma ve ekstübasyon"
+    },
+    {
+     "metin": "Neostigmin ve sugammadex"
+    },
+    {
+     "metin": "Nalokson ve opioid terslemesi"
+    },
+    {
+     "metin": "Bireyselleştirme ve hasta özellikleri"
+    },
+    {
+     "metin": "Premedikasyon ve uyanma kalitesi"
+    },
+    {
+     "metin": "Çıkışta katmanlı baskılanma ve dersin bütünü"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders genel anestezinin hedeflerini (analjezi, bilinç kaybı, kas gevşemesi), anestezi evrelerini ve dengeli anestezi yaklaşımını anlatır. Ardından intravenöz anestezikleri (barbitüratlar, propofol, etomidat, ketamin, benzodiazepinler, opioidler), inhaler ajanları, nöromüsküler blokörleri ve uyanmayı hızlandıran reversal ilaçlarını (neostigmin, sugammadex, nalokson, flumazenil) işler.",
+    "Genel anestezinin üç hedefi.",
+    "Anestezinin zaman çizgisi ve evreleri.",
+    "Dengeli anestezi ve ilaç etkileşimi.",
+    "Reseptör haritası: anesteziklerin ortak dili.",
+    "Bölüm 1: İntravenöz anesteziklerin ortak etkisi.",
+    "Hızlı başlangıç ve redistribüsyon.",
+    "İntravenöz anestezi: tek başına mı, kombinasyonla mı.",
+    "Barbitüratlar ve tiyopental.",
+    "Etomidat ve ketamin.",
+    "Opioidler: analjezinin temeli.",
+    "Etkileşim ve yan etki çerçevesi.",
+    "Bölüm 2: İnhaler anesteziklerin iki ölçüsü.",
+    "Halotan ve izofluran.",
+    "Sevofluran ve desfluran.",
+    "Azot protoksit.",
+    "İnhaler anesteziklerde etkileşimler.",
+    "Bölüm 3: Total intravenöz anestezi ve propofol.",
+    "Benzodiazepinler ve flumazenil.",
+    "Fentanil grubu ve ketaminin ayrıntıları.",
+    "Bölüm 4: Nöromüsküler iletim.",
+    "Süksinilkolin ve non-depolarizan blokörler.",
+    "Kas gevşetici etkileşimleri.",
+    "Opioidler ve non-opioid analjezikler.",
+    "Bölüm 5: Uyanma ve ekstübasyon.",
+    "Neostigmin ve sugammadex.",
+    "Nalokson ve opioid terslemesi.",
+    "Bireyselleştirme ve hasta özellikleri.",
+    "Premedikasyon ve uyanma kalitesi.",
+    "Çıkışta katmanlı baskılanma ve dersin bütünü."
+   ],
+   "v": "53ea03eba3"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Genel Anestezik İlaçların",
+     "metin": "Genel Anestezik İlaçların",
+     "s": [
+      1
+     ]
+    },
+    {
+     "baslik": "Anestezi: 3 Aşamalı Klinik Zaman Çizgisi",
+     "metin": "Anestezi: 3 Aşamalı Klinik Zaman Çizgisi",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Analjezi Dönemi: İlk Perde",
+     "metin": "Analjezi Dönemi: İlk Perde",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Eksitasyon Dönemi: \"Ritim Bozulur\"",
+     "metin": "Eksitasyon Dönemi: \"Ritim Bozulur\"",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Cerrahi Anestezi Dönemi: Çizgiyi Aşma Korkusu",
+     "metin": "Cerrahi Anestezi Dönemi: Çizgiyi Aşma Korkusu",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Bulbar Paralyze",
+     "metin": "Bulbar Paralyze",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "İdeal Kombinasyon: Tek İlaç Yetmez",
+     "metin": "İdeal Kombinasyon: Tek İlaç Yetmez",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "İlaç Etkileşimi Neden \"Kaçınılmaz\"?",
+     "metin": "İlaç Etkileşimi Neden \"Kaçınılmaz\"?",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Etkileşim Mantığı: Hasta İlaç Geçmişi Şart",
+     "metin": "Etkileşim Mantığı: Hasta İlaç Geçmişi Şart",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "CNS Depresyonu: İntravenöz Hipnozun Temel Sesi",
+     "metin": "CNS Depresyonu: İntravenöz Hipnozun Temel Sesi",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "IV Anesteziklerde \"Başlama\": Hızlı Başlangıç Neden?",
+     "metin": "IV Anesteziklerde \"Başlama\": Hızlı Başlangıç Neden?",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "IV Anesteziklerde \"Bitirme\": Redistribüsyon",
+     "metin": "IV Anesteziklerde \"Bitirme\": Redistribüsyon",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "IV Anestezikler: Tek Başına mı, Kombinasyonla mı?",
+     "metin": "IV Anestezikler: Tek Başına mı, Kombinasyonla mı?",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Barbitüratlar: Retiküler Aktivasyon Frenlenir",
+     "metin": "Barbitüratlar: Retiküler Aktivasyon Frenlenir",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Thiopental: Klinik Tartışma Alanı",
+     "metin": "Thiopental: Klinik Tartışma Alanı",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Etomidat: GABA-A Taklidi",
+     "metin": "Etomidat: GABA-A Taklidi",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Ketamin: Disosiyatif Anestezinin",
+     "metin": "Ketamin: Disosiyatif Anestezinin",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Opioid Hattı: Analjezinin \"Omurgası\"",
+     "metin": "Opioid Hattı: Analjezinin \"Omurgası\"",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Yan Etki Çerçevesi: Solunum-Dolaşım Tehlikesi",
+     "metin": "Yan Etki Çerçevesi: Solunum-Dolaşım Tehlikesi",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "BÖLÜM 2 / 5",
+     "metin": "BÖLÜM 2 / 5",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Halotan: Klasik Bir Dönem",
+     "metin": "Çıkmış (ilgili): Halotan Hepatiti: Tekrarlanan maruziyette reaktif trifloroasetil halojen ürünleri karaciğer hasarı yaratır.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "İzofluran: Modern Standart",
+     "metin": "İzofluran: Modern Standart",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Sevofluran: Hızlı İndüksiyonun Yüzü",
+     "metin": "Sevofluran: Hızlı İndüksiyonun Yüzü",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Desfluran: \"Pırpırlı\" Hız",
+     "metin": "Desfluran: \"Pırpırlı\" Hız",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Azot Protoksit: Yardımcı Oyuncu",
+     "metin": "Azot Protoksit: Yardımcı Oyuncu",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "İnhaler Anesteziklerde Etkileşimler",
+     "metin": "İnhaler Anesteziklerde Etkileşimler",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "BÖLÜM 3 / 5",
+     "metin": "BÖLÜM 3 / 5",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Propofol: Anestezinin \"Sütlü\" Yıldızı",
+     "metin": "Propofol: Anestezinin \"Sütlü\" Yıldızı",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Benzodiazepinler: Midazolam ve Diazepam",
+     "metin": "Benzodiazepinler: Midazolam ve Diazepam",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Fentanil Grubu: Opioid Omurgası",
+     "metin": "Fentanil Grubu: Opioid Omurgası",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Ketamin: Disosiyatif Anestezi Paradoksu",
+     "metin": "Ketamin: Disosiyatif Anestezi Paradoksu",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Nöromüsküler İletişim Temelleri",
+     "metin": "Nöromüsküler İletişim Temelleri",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Depolarizan Blokörler: Süksinilkolin",
+     "metin": "Depolarizan Blokörler: Süksinilkolin",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Non-Depolarizan Blokörler: Yarışmalı İnhibisyon",
+     "metin": "Non-Depolarizan Blokörler: Yarışmalı İnhibisyon",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Kas Gevşetici Etkileşimleri",
+     "metin": "Kas Gevşetici Etkileşimleri",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Kas Gevşetici Etkileşimleri: Klinik Özet",
+     "metin": "Kas Gevşetici Etkileşimleri: Klinik Özet",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Opioidler: Analjezinin Omurgası",
+     "metin": "Opioidler: Analjezinin Omurgası",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "BÖLÜM 5 / 5",
+     "metin": "BÖLÜM 5 / 5",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Uyanma: Hassas Bir Dengenin Sonu",
+     "metin": "Uyanma: Hassas Bir Dengenin Sonu",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Antikolinesterazlar: Neostigmin",
+     "metin": "Antikolinesterazlar: Neostigmin",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Sugammadex: Modern Bir Devrim",
+     "metin": "Sugammadex: Modern Bir Devrim",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Analjezik Reversal: Nalokson",
+     "metin": "Analjezik Reversal: Nalokson",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Premedikasyon: Uyanma Sürecini Kolaylaştırma",
+     "metin": "Premedikasyon: Uyanma Sürecini Kolaylaştırma",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Anesteziden Çıkışın Prensibi",
+     "metin": "Anesteziden Çıkışın Prensibi",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Uyanmayı Gölgeleyen 3 Düşman",
+     "metin": "Uyanmayı Gölgeleyen 3 Düşman",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Opioid Reversal: Nalokson Ne Zaman İşe Yarar?",
+     "metin": "Opioid Reversal: Nalokson Ne Zaman İşe Yarar?",
+     "s": [
+      57
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Genel Anestezik İlaçların: Genel Anestezik İlaçların.",
+    "Anestezi: 3 Aşamalı Klinik Zaman Çizgisi: Anestezi: 3 Aşamalı Klinik Zaman Çizgisi.",
+    "Analjezi Dönemi: İlk Perde: Analjezi Dönemi: İlk Perde.",
+    "Eksitasyon Dönemi: \"Ritim Bozulur\": Eksitasyon Dönemi: \"Ritim Bozulur\".",
+    "Cerrahi Anestezi Dönemi: Çizgiyi Aşma Korkusu: Cerrahi Anestezi Dönemi: Çizgiyi Aşma Korkusu.",
+    "Bulbar Paralyze: Bulbar Paralyze.",
+    "İdeal Kombinasyon: Tek İlaç Yetmez: İdeal Kombinasyon: Tek İlaç Yetmez.",
+    "İlaç Etkileşimi Neden \"Kaçınılmaz\"?: İlaç Etkileşimi Neden \"Kaçınılmaz\"?",
+    "Etkileşim Mantığı: Hasta İlaç Geçmişi Şart: Etkileşim Mantığı: Hasta İlaç Geçmişi Şart.",
+    "CNS Depresyonu: İntravenöz Hipnozun Temel Sesi: CNS Depresyonu: İntravenöz Hipnozun Temel Sesi.",
+    "IV Anesteziklerde \"Başlama\": Hızlı Başlangıç Neden?: IV Anesteziklerde \"Başlama\": Hızlı Başlangıç Neden?",
+    "IV Anesteziklerde \"Bitirme\": Redistribüsyon: IV Anesteziklerde \"Bitirme\": Redistribüsyon.",
+    "IV Anestezikler: Tek Başına mı, Kombinasyonla mı?: IV Anestezikler: Tek Başına mı, Kombinasyonla mı?",
+    "Barbitüratlar: Retiküler Aktivasyon Frenlenir: Barbitüratlar: Retiküler Aktivasyon Frenlenir.",
+    "Thiopental: Klinik Tartışma Alanı: Thiopental: Klinik Tartışma Alanı.",
+    "Etomidat: GABA-A Taklidi: Etomidat: GABA-A Taklidi.",
+    "Ketamin: Disosiyatif Anestezinin: Ketamin: Disosiyatif Anestezinin.",
+    "Opioid Hattı: Analjezinin \"Omurgası\": Opioid Hattı: Analjezinin \"Omurgası\".",
+    "Yan Etki Çerçevesi: Solunum-Dolaşım Tehlikesi: Yan Etki Çerçevesi: Solunum-Dolaşım Tehlikesi.",
+    "BÖLÜM 2 / 5: BÖLÜM 2 / 5.",
+    "Halotan: Klasik Bir Dönem: Çıkmış (ilgili): Halotan Hepatiti: Tekrarlanan maruziyette reaktif trifloroasetil halojen ürünleri karaciğer hasarı yaratır.",
+    "İzofluran: Modern Standart: İzofluran: Modern Standart.",
+    "Sevofluran: Hızlı İndüksiyonun Yüzü: Sevofluran: Hızlı İndüksiyonun Yüzü.",
+    "Desfluran: \"Pırpırlı\" Hız: Desfluran: \"Pırpırlı\" Hız.",
+    "Azot Protoksit: Yardımcı Oyuncu: Azot Protoksit: Yardımcı Oyuncu.",
+    "İnhaler Anesteziklerde Etkileşimler: İnhaler Anesteziklerde Etkileşimler.",
+    "BÖLÜM 3 / 5: BÖLÜM 3 / 5.",
+    "Propofol: Anestezinin \"Sütlü\" Yıldızı: Propofol: Anestezinin \"Sütlü\" Yıldızı.",
+    "Benzodiazepinler: Midazolam ve Diazepam: Benzodiazepinler: Midazolam ve Diazepam.",
+    "Fentanil Grubu: Opioid Omurgası: Fentanil Grubu: Opioid Omurgası.",
+    "Ketamin: Disosiyatif Anestezi Paradoksu: Ketamin: Disosiyatif Anestezi Paradoksu.",
+    "Nöromüsküler İletişim Temelleri: Nöromüsküler İletişim Temelleri.",
+    "Depolarizan Blokörler: Süksinilkolin: Depolarizan Blokörler: Süksinilkolin.",
+    "Non-Depolarizan Blokörler: Yarışmalı İnhibisyon: Non-Depolarizan Blokörler: Yarışmalı İnhibisyon.",
+    "Kas Gevşetici Etkileşimleri: Kas Gevşetici Etkileşimleri.",
+    "Kas Gevşetici Etkileşimleri: Klinik Özet: Kas Gevşetici Etkileşimleri: Klinik Özet.",
+    "Opioidler: Analjezinin Omurgası: Opioidler: Analjezinin Omurgası.",
+    "BÖLÜM 5 / 5: BÖLÜM 5 / 5.",
+    "Uyanma: Hassas Bir Dengenin Sonu: Uyanma: Hassas Bir Dengenin Sonu.",
+    "Antikolinesterazlar: Neostigmin: Antikolinesterazlar: Neostigmin.",
+    "Sugammadex: Modern Bir Devrim: Sugammadex: Modern Bir Devrim.",
+    "Analjezik Reversal: Nalokson: Analjezik Reversal: Nalokson.",
+    "Premedikasyon: Uyanma Sürecini Kolaylaştırma: Premedikasyon: Uyanma Sürecini Kolaylaştırma.",
+    "Anesteziden Çıkışın Prensibi: Anesteziden Çıkışın Prensibi.",
+    "Uyanmayı Gölgeleyen 3 Düşman: Uyanmayı Gölgeleyen 3 Düşman.",
+    "Opioid Reversal: Nalokson Ne Zaman İşe Yarar?: Opioid Reversal: Nalokson Ne Zaman İşe Yarar?"
+   ],
+   "v": "66adbec07e"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmışlarda midazolam, ketamin, süksinilkolin, flumazenil, nalokson, fentanil, azot protoksit, MAK ve dengeli anestezi sorulmuş. Hoca barbitüratların klorür kanalı etkisini, ketaminin basınç artışını, asetilkolin artışının iki blok tipine etkisini ve neostigmini sınavda soracağını açıkça belirtmiştir.",
+   "maddeler": [
+    {
+     "baslik": "Süksinilkolin: tek depolarizan blokör",
+     "metin": "Süksinilkolin tek depolarizan blokördür; asetilkolini taklit ederek nikotinik reseptörü uyarır ve kalıcı depolarizasyonla faz I bloğu yapar.",
+     "neden": "Depolarizan tek ajanın süksinilkolin olduğu 2025-26 çıkmışında (ve 2018-19'da) sorulmuş; hoca iki blok tipini slayttaki haliyle öğrenmenizi istedi.",
+     "s": [
+      39
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Asetilkolin artışı iki blok tipini farklı etkiler",
+     "metin": "Sinaptik aralıkta asetilkolin artırılınca non-depolarizan blok geri döner, depolarizan blok ise düzelmez.",
+     "neden": "Hoca bu noktanın üç dört kez sorulduğunu söyledi ve yine soracağını belirtti; öğrenci notunda sayfada soru işareti konmuş.",
+     "s": [
+      37,
+      40
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Neostigmin: antikolinesteraz ile tersleme",
+     "metin": "Neostigmin asetilkolinesterazı geri dönüşlü inhibe eder; biriken asetilkolin non-depolarizan bloğu yarışmayı kazanarak çözer.",
+     "neden": "Hoca antikolinesteraz ile blok ilişkisini elli kere soracağını söyledi; kas gevşeticinin geri çevrilmesinin klasik yoludur.",
+     "s": [
+      47
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Barbitüratlar: klorür kanalının açık kalma süresi",
+     "metin": "Barbitüratlar GABA-A reseptöründe klorür kanalının açık kalma süresini uzatır, açılma sıklığını artırmaz.",
+     "neden": "Hoca bu ayrımı sınavda sorduğunu açıkça söyledi; benzodiazepinle (açılma sıklığı) karşılaştırma klasik çeldiricidir.",
+     "s": [
+      17
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Benzodiazepinler: midazolam, amnezi ve flumazenil",
+     "metin": "Midazolam GABA-A benzodiazepin bölgesine bağlanıp kanalın açılma sıklığını artırır, güçlü anterograd amnezi yapar; antagonisti flumazenildir.",
+     "neden": "Anterograd amnezi (2018-19) ve flumazenilin benzodiazepini geri çevirmesi (2024-25, ayrıca 2018-19 ve 2020-21) çıkmışlarda tekrarlanmış.",
+     "s": [
+      33
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Ketamin: disosiyatif anestezi ve hemodinami",
+     "metin": "Ketamin NMDA reseptörünü bloke ederek disosiyatif anestezi yapar; güçlü analjezi verir, bronkodilatasyon yapar ve kan basıncını korur.",
+     "neden": "Disosiyasyon yapan anestezik 2018-19 çıkmışında sorulmuş; hoca ketaminin kan basıncı ve kalp hızı etkisini önemli saydı.",
+     "s": [
+      20,
+      35
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Ketamin kafa içi basıncını artırır",
+     "metin": "Ketamin kafa içi basıncını artırır; bu yüzden kafa travmasında ve benzeri durumlarda kontrendikedir.",
+     "neden": "Hoca ketaminin basıncı artırdığını ve travmada kullanılmayacağını \"bilginiz olsun\" diyerek belirtti; öğrenci notunda bu satır çizilmiş.",
+     "s": [
+      35
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Malign hipertermi ve dantrolen",
+     "metin": "Malign hipertermi halojenli volatil ajanlarla ve süksinilkolinle tetiklenir; ryanodin reseptör mutasyonu zemindir, tedavisi dantrolendir.",
+     "neden": "Süksinilkolin ve uçucu ajan birlikteliğinde malign hipertermi ilacı 2018-19 çıkmışında sorulmuş; öğrenci notunda süksinilkolin yanında \"en fazla\" yazıyor.",
+     "s": [
+      30,
+      39
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmışlarda midazolam, ketamin, süksinilkolin, flumazenil, nalokson, fentanil, azot protoksit, MAK ve dengeli anestezi sorulmuş. Hoca barbitüratların klorür kanalı etkisini, ketaminin basınç artışını, asetilkolin artışının iki blok tipine etkisini ve neostigmini sınavda soracağını açıkça belirtmiştir.",
+    "Süksinilkolin: tek depolarizan blokör: Süksinilkolin tek depolarizan blokördür; asetilkolini taklit ederek nikotinik reseptörü uyarır ve kalıcı depolarizasyonla faz I bloğu yapar.",
+    "Asetilkolin artışı iki blok tipini farklı etkiler: Sinaptik aralıkta asetilkolin artırılınca non-depolarizan blok geri döner, depolarizan blok ise düzelmez.",
+    "Neostigmin: antikolinesteraz ile tersleme: Neostigmin asetilkolinesterazı geri dönüşlü inhibe eder; biriken asetilkolin non-depolarizan bloğu yarışmayı kazanarak çözer.",
+    "Barbitüratlar: klorür kanalının açık kalma süresi: Barbitüratlar GABA-A reseptöründe klorür kanalının açık kalma süresini uzatır, açılma sıklığını artırmaz.",
+    "Benzodiazepinler: midazolam, amnezi ve flumazenil: Midazolam GABA-A benzodiazepin bölgesine bağlanıp kanalın açılma sıklığını artırır, güçlü anterograd amnezi yapar; antagonisti flumazenildir.",
+    "Ketamin: disosiyatif anestezi ve hemodinami: Ketamin NMDA reseptörünü bloke ederek disosiyatif anestezi yapar; güçlü analjezi verir, bronkodilatasyon yapar ve kan basıncını korur.",
+    "Ketamin kafa içi basıncını artırır: Ketamin kafa içi basıncını artırır; bu yüzden kafa travmasında ve benzeri durumlarda kontrendikedir.",
+    "Malign hipertermi ve dantrolen: Malign hipertermi halojenli volatil ajanlarla ve süksinilkolinle tetiklenir; ryanodin reseptör mutasyonu zemindir, tedavisi dantrolendir."
+   ],
+   "v": "8435c8cccc"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 26 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi dengeli anestezidir?",
+     "cevap": "İV + inhaler",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Genel anestezide intravenöz indüksiyon veya analjezi amacıyla kullanılan, yüksek lipofilitesi sayesinde kan-beyin bariyerini hızla geçen ve en hızlı etki başlangıcına sahip sentetik opioid hangisidir?",
+     "cevap": "Fentanil",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdaki nöromüsküler blokör kas gevşeticilerden hangisi nondepolarizan değildir?",
+     "cevap": "Süksinilkolin",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Atrakuryum II. Pankuronyum III. Mivakuryum IV. Süksametonyum Yukarıdaki ajanlardan hangisi/hangileri depolarizan kas gevşeticidir?",
+     "cevap": "Yalnız IV",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdaki ilaç gruplarından hangisi anterograd amnezi yapar?",
+     "cevap": "Midazolam",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdaki anesteziklerden hangisi dissosiyasyon oluşturur?",
+     "cevap": "Ketamin",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Kurgu Soru: Süksinilkolin ile uçucu anesteziklerin birlikte kullanımında gelişebilen malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Dantrolen",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Bazal gangliyonlarda modülatör nörotransmitter olarak tanımlanan hangisidir?",
+     "cevap": "Asetilkolin",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Santral etkili kas gevşetici ilaçların aksine, aşağıdaki ilaçlardan hangisi kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyerek kas gücünde azalma meydana getirir?",
+     "cevap": "Dantrolen",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Minimum alveolar konsantrasyon (MAK) için hangisi doğrudur?",
+     "cevap": "İnsizyona karşı yanıtı ortadan kaldıran en düşük alveolar konsantrasyon",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdaki inhaler anesteziklerden hangisi anestezi vermeden analjezi verir?",
+     "cevap": "Azot protoksit",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "İnhaler anesteziklerden nitröz oksit (N2O) için aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Yan etkisi difüzyon hipoksisidir, B12 metabolizmasını bozar.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "İnhalasyon anestezisinde anestezik maddenin alveolar konsantrasyonu FA, solunan havadaki konsantrasyonu FI olarak alınırsa FA/FI oranı (Y ekseni) zamana (X ekseni) karşı en yüksek olan hangisidir?",
+     "cevap": "Nitröz oksit",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Genel anestezik ajanlar için aşağıdaki ifadeler veriliyor: I. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedirler; böbrek kan akımında da artış yaparlar. II. Halotan dışında karaciğer üzerine ciddi bir etkileri yoktur; halotan 12 yaşından küçüklerde hepatotoksik değildir ve nedeni bilinmemektedir. III. Halojenli anesteziklerden propofol-ketamin ikilisi uterus kaslarını güçlü bir şekilde kasar. IV. Halojenli anestezikler doğum esnasında veya plasenta retansiyonunda manuel müdahale için gerekli gevşemeyi sağlarlar; ancak bu gevşemenin uterusta kanamayı da beraberinde getireceği unutulmamalıdır. Bu ifadelerden hangisi ya da hangileri doğrudur?",
+     "cevap": "II ve IV",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "I. Tiyopental II. Midazolam III. Fentanil IV. Propofol Yukarıda verilen intravenöz (İV) uygulanabilen ilaçlardan hangisi/hangileri genel anestezide kullanılabilir?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Genel anestezide kullanılan aşağıdaki ilaçlar veriliyor: I. İzofluran II. Alfentanil III. Sevofluran IV. Propofol Bunlardan hangisi/hangileri intravenöz olarak verilebilir?",
+     "cevap": "II ve IV",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Desfluran II. Enfluran III. Metoksifluran IV. Nitröz oksit (azot protoksit) Genel anestezide kullanılan yukarıdaki gazlardan hangisi/hangileri anestezi vermez?",
+     "cevap": "Yalnız IV",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Propofol II. Tiyopental III. Ketamin IV. Fluoksetin Yukarıdakilerden hangisi/hangileri sıvı genel anesteziktir?",
+     "cevap": "I, II ve III",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Barbitüratlarla ilgili aşağıdaki ifadeler veriliyor: I. Beyin oksijen tüketimini, beyin kan akımını ve kafa içi basıncını azaltırlar. II. Büyük ölçüde karaciğerde metabolize edilirler; ağır karaciğer hastalığında etkileri uzar. III. Fenobarbital zehirlenmesinde idrarın alkalileştirilmesi ilacın atılımını artırır. IV. Porfiri öyküsü olan hastalarda güvenle kullanılabilirler. Bunlardan hangileri doğrudur?",
+     "cevap": "I, II ve III",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdaki genel anestezikler verilmiştir: I. İzofluran II. Sevofluran III. Desfluran IV. Siklopropan Bunlardan hangisi/hangileri kalp debisini etkilemeden vazodilatasyon yaparak miyokard fonksiyonu bozulmuş hastaların anestezisinde bugün için iyi bir seçenek olabilir?",
+     "cevap": "I, II ve III",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Akut opiyat intoksikasyonunda aşağıdaki ajanlardan hangisi kullanılır?",
+     "cevap": "Nalokson",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Tiyopental sodyumdan vazgeçilmemesinin nedeni nedir?",
+     "cevap": "SSS oksijen gereksinimini azaltır",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Sedatif-hipnotik ilaç seçiminde benzodiazepinlerin barbitüratlara tercih edilmesinde aşağıdakilerden hangisi bir faktör değildir?",
+     "cevap": "Benzodiazepinlerin belirgin analjezik özelliklerinin bulunması",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Flumazenilin etkisini antagonize ettiği ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Diazepam",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmede ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Flumazenil",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Kurgu Soru: Flumazenil aşağıdaki ilaçlardan hangisinin etkisini ortadan kaldırmak için kullanılır?",
+     "cevap": "Diazepam",
+     "s": [
+      33
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 26 çıkmış soru var.",
+    "2020-2021: Aşağıdakilerden hangisi dengeli anestezidir?",
+    "Cevap: İV + inhaler.",
+    "2025-2026: Genel anestezide intravenöz indüksiyon veya analjezi amacıyla kullanılan, yüksek lipofilitesi sayesinde kan-beyin bariyerini hızla geçen ve en hızlı etki başlangıcına sahip sentetik opioid hangisidir?",
+    "Cevap: Fentanil.",
+    "2025-2026: Aşağıdaki nöromüsküler blokör kas gevşeticilerden hangisi nondepolarizan değildir?",
+    "Cevap: Süksinilkolin.",
+    "2018-2019: I. Atrakuryum II. Pankuronyum III. Mivakuryum IV. Süksametonyum Yukarıdaki ajanlardan hangisi/hangileri depolarizan kas gevşeticidir?",
+    "Cevap: Yalnız IV.",
+    "2018-2019: Aşağıdaki ilaç gruplarından hangisi anterograd amnezi yapar?",
+    "Cevap: Midazolam.",
+    "2018-2019: Aşağıdaki anesteziklerden hangisi dissosiyasyon oluşturur?",
+    "Cevap: Ketamin.",
+    "2018-2019: Kurgu Soru: Süksinilkolin ile uçucu anesteziklerin birlikte kullanımında gelişebilen malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Dantrolen.",
+    "2023-2024: Bazal gangliyonlarda modülatör nörotransmitter olarak tanımlanan hangisidir?",
+    "Cevap: Asetilkolin.",
+    "2019-2020: Santral etkili kas gevşetici ilaçların aksine, aşağıdaki ilaçlardan hangisi kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyerek kas gücünde azalma meydana getirir?",
+    "Cevap: Dantrolen.",
+    "2020-2021: Minimum alveolar konsantrasyon (MAK) için hangisi doğrudur?",
+    "Cevap: İnsizyona karşı yanıtı ortadan kaldıran en düşük alveolar konsantrasyon.",
+    "2019-2020: Aşağıdaki inhaler anesteziklerden hangisi anestezi vermeden analjezi verir?",
+    "Cevap: Azot protoksit.",
+    "2025-2026: İnhaler anesteziklerden nitröz oksit (N2O) için aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Yan etkisi difüzyon hipoksisidir, B12 metabolizmasını bozar.",
+    "2020-2021: İnhalasyon anestezisinde anestezik maddenin alveolar konsantrasyonu FA, solunan havadaki konsantrasyonu FI olarak alınırsa FA/FI oranı (Y ekseni) zamana (X ekseni) karşı en yüksek olan hangisidir?",
+    "Cevap: Nitröz oksit.",
+    "2019-2020: Genel anestezik ajanlar için aşağıdaki ifadeler veriliyor: I. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedirler; böbrek kan akımında da artış yaparlar. II. Halotan dışında karaciğer üzerine ciddi bir etkileri yoktur; halotan 12 yaşından küçüklerde hepatotoksik değildir ve nedeni bilinmemektedir. III. Halojenli anesteziklerden propofol-ketamin ikilisi uterus kaslarını güçlü bir şekilde kasar. IV. Halojenli anestezikler doğum esnasında veya plasenta retansiyonunda manuel müdahale için gerekli gevşemeyi sağlarlar; ancak bu gevşemenin uterusta kanamayı da beraberinde getireceği unutulmamalıdır. Bu ifadelerden hangisi ya da hangileri doğrudur?",
+    "Cevap: II ve IV.",
+    "2019-2020: I. Tiyopental II. Midazolam III. Fentanil IV. Propofol Yukarıda verilen intravenöz (İV) uygulanabilen ilaçlardan hangisi/hangileri genel anestezide kullanılabilir?",
+    "Cevap: I, II, III ve IV.",
+    "2018-2019: Genel anestezide kullanılan aşağıdaki ilaçlar veriliyor: I. İzofluran II. Alfentanil III. Sevofluran IV. Propofol Bunlardan hangisi/hangileri intravenöz olarak verilebilir?",
+    "Cevap: II ve IV.",
+    "2018-2019: I. Desfluran II. Enfluran III. Metoksifluran IV. Nitröz oksit (azot protoksit) Genel anestezide kullanılan yukarıdaki gazlardan hangisi/hangileri anestezi vermez?",
+    "Cevap: Yalnız IV.",
+    "2018-2019: I. Propofol II. Tiyopental III. Ketamin IV. Fluoksetin Yukarıdakilerden hangisi/hangileri sıvı genel anesteziktir?",
+    "Cevap: I, II ve III.",
+    "2023-2024: Barbitüratlarla ilgili aşağıdaki ifadeler veriliyor: I. Beyin oksijen tüketimini, beyin kan akımını ve kafa içi basıncını azaltırlar. II. Büyük ölçüde karaciğerde metabolize edilirler; ağır karaciğer hastalığında etkileri uzar. III. Fenobarbital zehirlenmesinde idrarın alkalileştirilmesi ilacın atılımını artırır. IV. Porfiri öyküsü olan hastalarda güvenle kullanılabilirler. Bunlardan hangileri doğrudur?",
+    "Cevap: I, II ve III.",
+    "2019-2020: Aşağıdaki genel anestezikler verilmiştir: I. İzofluran II. Sevofluran III. Desfluran IV. Siklopropan Bunlardan hangisi/hangileri kalp debisini etkilemeden vazodilatasyon yaparak miyokard fonksiyonu bozulmuş hastaların anestezisinde bugün için iyi bir seçenek olabilir?",
+    "Cevap: I, II ve III.",
+    "2018-2019: Akut opiyat intoksikasyonunda aşağıdaki ajanlardan hangisi kullanılır?",
+    "Cevap: Nalokson.",
+    "2025-2026: Tiyopental sodyumdan vazgeçilmemesinin nedeni nedir?",
+    "Cevap: SSS oksijen gereksinimini azaltır.",
+    "2025-2026: Sedatif-hipnotik ilaç seçiminde benzodiazepinlerin barbitüratlara tercih edilmesinde aşağıdakilerden hangisi bir faktör değildir?",
+    "Cevap: Benzodiazepinlerin belirgin analjezik özelliklerinin bulunması.",
+    "2024-2025: Flumazenilin etkisini antagonize ettiği ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Diazepam.",
+    "2020-2021: Benzodiazepin aşırı dozajının santral sinir sistemi depresan etkilerini geri döndürmede ve bu ilaçların anestezik ve tanısal işlemlerde kullanımını takiben geri dönüşü hızlandırmak için kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Flumazenil.",
+    "2018-2019: Kurgu Soru: Flumazenil aşağıdaki ilaçlardan hangisinin etkisini ortadan kaldırmak için kullanılır?",
+    "Cevap: Diazepam."
+   ],
+   "v": "8934cce2c6"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%53) ve mekanizma (%24) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%53) ve hatırlama (%41) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%53) ve mekanizma (%24) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%53) ve hatırlama (%41) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu orta-zor, tekrar eden."
+   ],
+   "v": "63d10c52cc"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Sevofluran",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Karabük Eğitim Araştırma Hastanesi'nde yatmakta olan 46 yaşında bir kadın hasta için inhaler genel anestezi düşünülmektedir. Kan/gaz partisyon katsayısı düşük, anesteziye giriş ve çıkışı hızlı olan, b."
+    },
+    {
+     "baslik": "II ve IV",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: I. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedir; böbrek kan akımında da artış yaparlar. II. Halotan dışındaki ajanların karaciğer üzerine ciddi bir etkisi yok."
+    },
+    {
+     "baslik": "Süksinilkolin: tek depolarizan blokör",
+     "metin": "Depolarizan tek ajanın süksinilkolin olduğu 2025-26 çıkmışında (ve 2018-19'da) sorulmuş; hoca iki blok tipini slayttaki haliyle öğrenmenizi istedi."
+    },
+    {
+     "baslik": "Benzodiazepinler: midazolam, amnezi ve flumazenil",
+     "metin": "Anterograd amnezi (2018-19) ve flumazenilin benzodiazepini geri çevirmesi (2024-25, ayrıca 2018-19 ve 2020-21) çıkmışlarda tekrarlanmış."
+    },
+    {
+     "baslik": "Ketamin: disosiyatif anestezi ve hemodinami",
+     "metin": "Disosiyasyon yapan anestezik 2018-19 çıkmışında sorulmuş; hoca ketaminin kan basıncı ve kalp hızı etkisini önemli saydı."
+    },
+    {
+     "baslik": "Malign hipertermi ve dantrolen",
+     "metin": "Süksinilkolin ve uçucu ajan birlikteliğinde malign hipertermi ilacı 2018-19 çıkmışında sorulmuş; öğrenci notunda süksinilkolin yanında \"en fazla\" yazıyor."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Sevofluran: Çıkmışlarda 3 kez soruldu. Örnek kök: Karabük Eğitim Araştırma Hastanesi'nde yatmakta olan 46 yaşında bir kadın hasta için inhaler genel anestezi düşünülmektedir. Kan/gaz partisyon katsayısı düşük, anesteziye giriş ve çıkışı hızlı olan, b.",
+    "II ve IV: Çıkmışlarda 2 kez soruldu. Örnek kök: I. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedir; böbrek kan akımında da artış yaparlar. II. Halotan dışındaki ajanların karaciğer üzerine ciddi bir etkisi yok.",
+    "Süksinilkolin: tek depolarizan blokör: Depolarizan tek ajanın süksinilkolin olduğu 2025-26 çıkmışında (ve 2018-19'da) sorulmuş; hoca iki blok tipini slayttaki haliyle öğrenmenizi istedi.",
+    "Benzodiazepinler: midazolam, amnezi ve flumazenil: Anterograd amnezi (2018-19) ve flumazenilin benzodiazepini geri çevirmesi (2024-25, ayrıca 2018-19 ve 2020-21) çıkmışlarda tekrarlanmış.",
+    "Ketamin: disosiyatif anestezi ve hemodinami: Disosiyasyon yapan anestezik 2018-19 çıkmışında sorulmuş; hoca ketaminin kan basıncı ve kalp hızı etkisini önemli saydı.",
+    "Malign hipertermi ve dantrolen: Süksinilkolin ve uçucu ajan birlikteliğinde malign hipertermi ilacı 2018-19 çıkmışında sorulmuş; öğrenci notunda süksinilkolin yanında \"en fazla\" yazıyor.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "a90f246b6c"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders genel anestezinin hedeflerini (analjezi, bilinç kaybı, kas gevşemesi), anestezi evrelerini ve dengeli anestezi yaklaşımını anlatır. Ardından intravenöz anestezikleri (barbitüratlar, propofol, etomidat, ketamin, benzodiazepinler, opioidler), inhaler ajanları, nöromüsküler blokörleri ve uyanmayı hızlandıran reversal ilaçlarını (neostigmin, sugammadex, nalokson, flumazenil) işler.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders genel anestezinin hedeflerini (analjezi, bilinç kaybı, kas gevşemesi), anestezi evrelerini ve dengeli anestezi yaklaşımını anlatır. Ardından intravenöz anestezikleri (barbitüratlar, propofol, etomidat, ketamin, benzodiazepinler, opioidler), inhaler ajanları, nöromüsküler blokörleri ve uyanmayı hızlandıran reversal ilaçlarını (neostigmin, sugammadex, nalokson, flumazenil) işler."
+   ],
+   "v": "5edc050688"
+  },
+  {
+   "id": "2f01-04",
+   "baslik": "Barbitüratlar: klorür kanalının açık kalma süresi",
+   "giris": "Barbitüratlar GABA-A reseptöründe klorür kanalının açık kalma süresini uzatır, açılma sıklığını artırmaz.",
+   "s": [
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Klorür kanalı bir kapıdır; kapı açıldığında hücreye klorür girer ve nöron susar (hiperpolarizasyon)."
+    },
+    {
+     "metin": "Kapıyı daha sık açmaz, açıldığında daha uzun açık tutar. Bu yüzden etkisi \"açık kalma süresi\" ile anılır."
+    },
+    {
+     "metin": "Kapının açılma sıklığını artırır. İki ilaç aynı reseptörde ama farklı özellikte etki eder."
+    },
+    {
+     "metin": "Retiküler aktive edici sistem baskılanır ve bilinç kapanır; status epileptikusta kullanılır. Dar terapötik aralık ve solunum depresyonu riski nedeniyle dikkat edilir."
+    }
+   ],
+   "klip": "o-2f01-04",
+   "ses": [
+    "Barbitüratlar: klorür kanalının açık kalma süresi.",
+    "Barbitüratlar GABA-A reseptöründe klorür kanalının açık kalma süresini uzatır, açılma sıklığını artırmaz.",
+    "Klorür kanalı bir kapıdır; kapı açıldığında hücreye klorür girer ve nöron susar (hiperpolarizasyon).",
+    "Kapıyı daha sık açmaz, açıldığında daha uzun açık tutar. Bu yüzden etkisi \"açık kalma süresi\" ile anılır.",
+    "Kapının açılma sıklığını artırır. İki ilaç aynı reseptörde ama farklı özellikte etki eder.",
+    "Retiküler aktive edici sistem baskılanır ve bilinç kapanır; status epileptikusta kullanılır. Dar terapötik aralık ve solunum depresyonu riski nedeniyle dikkat edilir."
+   ],
+   "v": "4ab6cbdde3"
+  },
+  {
+   "id": "2f01-06",
+   "baslik": "Ketamin: disosiyatif anestezi ve hemodinami",
+   "giris": "Ketamin NMDA reseptörünü bloke ederek disosiyatif anestezi yapar; güçlü analjezi verir, bronkodilatasyon yapar ve kan basıncını korur.",
+   "s": [
+    20,
+    35
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "NMDA reseptörünün bloke edilmesiyle hasta çevreden kopar; analjezi, amnezi ve bilinç değişimi birlikte gelişir."
+    },
+    {
+     "metin": "Diğer anesteziklerin çoğu tansiyonu düşürür; ketamin noradrenalin geri alımını inhibe ederek kalp hızını ve kan basıncını artırır. Bu yüzden septik şok, travma ve hemodinamik instabilitede tercih edilir."
+    },
+    {
+     "metin": "Bronkodilatasyon yapar (astımda avantaj), laringeal refleksler büyük ölçüde korunur."
+    },
+    {
+     "metin": "Halüsinasyon ve emergence delirium, hipersekresyon (atropin ya da glikopirolat), laringospazm riski."
+    }
+   ],
+   "klip": "o-2f01-06",
+   "ses": [
+    "Ketamin: disosiyatif anestezi ve hemodinami.",
+    "Ketamin NMDA reseptörünü bloke ederek disosiyatif anestezi yapar; güçlü analjezi verir, bronkodilatasyon yapar ve kan basıncını korur.",
+    "NMDA reseptörünün bloke edilmesiyle hasta çevreden kopar; analjezi, amnezi ve bilinç değişimi birlikte gelişir.",
+    "Diğer anesteziklerin çoğu tansiyonu düşürür; ketamin noradrenalin geri alımını inhibe ederek kalp hızını ve kan basıncını artırır. Bu yüzden septik şok, travma ve hemodinamik instabilitede tercih edilir.",
+    "Bronkodilatasyon yapar (astımda avantaj), laringeal refleksler büyük ölçüde korunur.",
+    "Halüsinasyon ve emergence delirium, hipersekresyon (atropin ya da glikopirolat), laringospazm riski."
+   ],
+   "v": "0e5efa1913"
+  },
+  {
+   "id": "2f01-08",
+   "baslik": "Malign hipertermi ve dantrolen",
+   "giris": "Malign hipertermi halojenli volatil ajanlarla ve süksinilkolinle tetiklenir; ryanodin reseptör mutasyonu zemindir, tedavisi dantrolendir.",
+   "s": [
+    30,
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Genetik yatkınlığı olan (ryanodin reseptör mutasyonu) hastada halojenli volatil ajanlar ya da süksinilkolin ani ve tehlikeli ısı artışını başlatır."
+    },
+    {
+     "metin": "Tüm halojenli volatil ajanlar ve süksinilkolin."
+    },
+    {
+     "metin": "Dantrolen, 2.5 mg/kg IV yükleme dozuyla verilir."
+    },
+    {
+     "metin": "Neostigmin, sugammadex, nalokson ve flumazenil reversal ilaçlarıdır; malign hipertermi ilacı değildir."
+    }
+   ],
+   "klip": "o-2f01-08",
+   "ses": [
+    "Malign hipertermi ve dantrolen.",
+    "Malign hipertermi halojenli volatil ajanlarla ve süksinilkolinle tetiklenir; ryanodin reseptör mutasyonu zemindir, tedavisi dantrolendir.",
+    "Genetik yatkınlığı olan (ryanodin reseptör mutasyonu) hastada halojenli volatil ajanlar ya da süksinilkolin ani ve tehlikeli ısı artışını başlatır.",
+    "Tüm halojenli volatil ajanlar ve süksinilkolin.",
+    "Dantrolen, 2.5 mg/kg IV yükleme dozuyla verilir.",
+    "Neostigmin, sugammadex, nalokson ve flumazenil reversal ilaçlarıdır; malign hipertermi ilacı değildir."
+   ],
+   "v": "a61662b9eb"
+  },
+  {
+   "id": "2f01-05",
+   "baslik": "Benzodiazepinler: midazolam, amnezi ve flumazenil",
+   "giris": "Midazolam GABA-A benzodiazepin bölgesine bağlanıp kanalın açılma sıklığını artırır, güçlü anterograd amnezi yapar; antagonisti flumazenildir.",
+   "s": [
+    33
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Suda çözünen, kısa etkili bir benzodiazepindir. Doz arttıkça önce anksiyoliz, sonra sedasyon, sonra amnezi gelişir; anterograd amnezi güçlüdür, bu yüzden premedikasyonda idealdir."
+    },
+    {
+     "metin": "Benzodiazepin klorür kanalının açılma sıklığını, barbitürat açık kalma süresini artırır."
+    },
+    {
+     "metin": "Benzodiazepinin spesifik antagonistidir (diazepam gibi benzodiazepinlerin etkisini ortadan kaldırır). Etkisi benzodiazepinden kısa olduğundan hasta yeniden sedatize olabilir."
+    },
+    {
+     "metin": "Bağımlı hastada yoksunluk krizi tetikleyebilir. Opioidle birlikte solunum depresyonu orantısız artar."
+    }
+   ],
+   "klip": "o-2f01-05",
+   "ses": [
+    "Benzodiazepinler: midazolam, amnezi ve flumazenil.",
+    "Midazolam GABA-A benzodiazepin bölgesine bağlanıp kanalın açılma sıklığını artırır, güçlü anterograd amnezi yapar; antagonisti flumazenildir.",
+    "Suda çözünen, kısa etkili bir benzodiazepindir. Doz arttıkça önce anksiyoliz, sonra sedasyon, sonra amnezi gelişir; anterograd amnezi güçlüdür, bu yüzden premedikasyonda idealdir.",
+    "Benzodiazepin klorür kanalının açılma sıklığını, barbitürat açık kalma süresini artırır.",
+    "Benzodiazepinin spesifik antagonistidir (diazepam gibi benzodiazepinlerin etkisini ortadan kaldırır). Etkisi benzodiazepinden kısa olduğundan hasta yeniden sedatize olabilir.",
+    "Bağımlı hastada yoksunluk krizi tetikleyebilir. Opioidle birlikte solunum depresyonu orantısız artar."
+   ],
+   "v": "e30514835a"
+  },
+  {
+   "id": "2f01-10",
+   "baslik": "Fentanil ve opioid hattı",
+   "giris": "Fentanil morfinden 100 kat güçlüdür; yüksek lipofilitesi nedeniyle etkisi 1–2 dk içinde başlar ve 30–60 dk sürer.",
+   "s": [
+    34
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Yağda çok çözünen ilaç kan-beyin bariyerini hızla geçer; fentanilde başlangıç 1–2 dk'dır."
+    },
+    {
+     "metin": "Etki 30–60 dk sürer; tekrarlanan dozlarda dokularda birikerek etkisi uzar (kümülasyon)."
+    },
+    {
+     "metin": "Fentanil morfinden 100 kat, sufentanil fentanilden 5–10 kat güçlüdür. Morfin yavaş başlar, histamin salar ve böbrek yetmezliğinde aktif metabolit biriktirir."
+    },
+    {
+     "metin": "Yüksek dozda göğüs duvarı rijiditesi; yavaş infüzyon ya da nöromüsküler blokörle önlenir."
+    }
+   ],
+   "klip": "o-2f01-10",
+   "ses": [
+    "Fentanil ve opioid hattı.",
+    "Fentanil morfinden 100 kat güçlüdür; yüksek lipofilitesi nedeniyle etkisi 1–2 dk içinde başlar ve 30–60 dk sürer.",
+    "Yağda çok çözünen ilaç kan-beyin bariyerini hızla geçer; fentanilde başlangıç 1–2 dk'dır.",
+    "Etki 30–60 dk sürer; tekrarlanan dozlarda dokularda birikerek etkisi uzar (kümülasyon).",
+    "Fentanil morfinden 100 kat, sufentanil fentanilden 5–10 kat güçlüdür. Morfin yavaş başlar, histamin salar ve böbrek yetmezliğinde aktif metabolit biriktirir.",
+    "Yüksek dozda göğüs duvarı rijiditesi; yavaş infüzyon ya da nöromüsküler blokörle önlenir."
+   ],
+   "v": "0a71e9e472"
+  },
+  {
+   "id": "2f01-07",
+   "baslik": "Ketamin kafa içi basıncını artırır",
+   "giris": "Ketamin kafa içi basıncını artırır; bu yüzden kafa travmasında ve benzeri durumlarda kontrendikedir.",
+   "s": [
+    35
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Ketamin kafa içi basıncını (ICP) yükseltir, bu nedenle kafa travmasında kontrendikedir."
+    },
+    {
+     "metin": "Etomidat ICP ve göz içi basıncını düşürür; tiyopental da ICP'yi ve serebral O₂ tüketimini azaltır. Ketamin bu ajanların tersine basıncı artırır."
+    },
+    {
+     "metin": "\"Ketamin ICP düşürdüğü için kafa travmasında tercih edilir\" ifadesi yanlıştır."
+    },
+    {
+     "metin": "Halüsinasyon, emergence delirium, hipersekresyon ve laringospazm riski."
+    }
+   ],
+   "klip": "o-2f01-07",
+   "ses": [
+    "Ketamin kafa içi basıncını artırır.",
+    "Ketamin kafa içi basıncını artırır; bu yüzden kafa travmasında ve benzeri durumlarda kontrendikedir.",
+    "Ketamin kafa içi basıncını (ICP) yükseltir, bu nedenle kafa travmasında kontrendikedir.",
+    "Etomidat ICP ve göz içi basıncını düşürür; tiyopental da ICP'yi ve serebral O₂ tüketimini azaltır. Ketamin bu ajanların tersine basıncı artırır.",
+    "\"Ketamin ICP düşürdüğü için kafa travmasında tercih edilir\" ifadesi yanlıştır.",
+    "Halüsinasyon, emergence delirium, hipersekresyon ve laringospazm riski."
+   ],
+   "v": "2eeb6063c0"
+  },
+  {
+   "id": "2f01-02",
+   "baslik": "Asetilkolin artışı iki blok tipini farklı etkiler",
+   "giris": "Sinaptik aralıkta asetilkolin artırılınca non-depolarizan blok geri döner, depolarizan blok ise düzelmez.",
+   "s": [
+    37,
+    40
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İlaç reseptörü açmadan kilide oturur ve asetilkolinle yarışır. Asetilkolin çoğalırsa yarışı kazanır, blok çözülür."
+    },
+    {
+     "metin": "Süksinilkolin reseptörü zaten açık tutar. Asetilkolin eklemek açık kalmış reseptörü kapatmaz; blok düzelmez."
+    },
+    {
+     "metin": "Neostigmin gibi antikolinesterazlar asetilkolini biriktirir; bu yalnız non-depolarizan bloğu tersler."
+    },
+    {
+     "metin": "\"Antikolinesteraz her bloğu çözer\" ifadesi yanlıştır; süksinilkolin bloğu bu yolla geri dönmez."
+    }
+   ],
+   "klip": "o-2f01-02",
+   "ses": [
+    "Asetilkolin artışı iki blok tipini farklı etkiler.",
+    "Sinaptik aralıkta asetilkolin artırılınca non-depolarizan blok geri döner, depolarizan blok ise düzelmez.",
+    "İlaç reseptörü açmadan kilide oturur ve asetilkolinle yarışır. Asetilkolin çoğalırsa yarışı kazanır, blok çözülür.",
+    "Süksinilkolin reseptörü zaten açık tutar. Asetilkolin eklemek açık kalmış reseptörü kapatmaz; blok düzelmez.",
+    "Neostigmin gibi antikolinesterazlar asetilkolini biriktirir; bu yalnız non-depolarizan bloğu tersler.",
+    "\"Antikolinesteraz her bloğu çözer\" ifadesi yanlıştır; süksinilkolin bloğu bu yolla geri dönmez."
+   ],
+   "v": "14a2660f6e"
+  },
+  {
+   "id": "2f01-01",
+   "baslik": "Süksinilkolin: tek depolarizan blokör",
+   "giris": "Süksinilkolin tek depolarizan blokördür; asetilkolini taklit ederek nikotinik reseptörü uyarır ve kalıcı depolarizasyonla faz I bloğu yapar.",
+   "s": [
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Sinirden kasa giden \"kasıl\" komutunu taşıyan madde asetilkolindir. Kas gevşeticiler bu zinciri bozar; süksinilkolin bunu asetilkolinin yerine geçerek yapar."
+    },
+    {
+     "metin": "Süksinilkolin nikotinik reseptörü asetilkolin gibi uyarır ama asetilkolinesteraz onu yıkamaz. Reseptör uzun süre açık kalır (kalıcı depolarizasyon, faz I blok) ve kas gevşer."
+    },
+    {
+     "metin": "Etkisi 60 sn içinde başlar, 10–15 dk sürer; bu yüzden hızlı dizi entübasyonunun altın standardıdır."
+    },
+    {
+     "metin": "Depolarizan olan tek ilaç süksinilkolindir. Rokuronyum, vekuronyum, pankuronyum, mivakuryum ve atrakuryum non-depolarizandır."
+    }
+   ],
+   "klip": "o-2f01-01",
+   "ses": [
+    "Süksinilkolin: tek depolarizan blokör.",
+    "Süksinilkolin tek depolarizan blokördür; asetilkolini taklit ederek nikotinik reseptörü uyarır ve kalıcı depolarizasyonla faz I bloğu yapar.",
+    "Sinirden kasa giden \"kasıl\" komutunu taşıyan madde asetilkolindir. Kas gevşeticiler bu zinciri bozar; süksinilkolin bunu asetilkolinin yerine geçerek yapar.",
+    "Süksinilkolin nikotinik reseptörü asetilkolin gibi uyarır ama asetilkolinesteraz onu yıkamaz. Reseptör uzun süre açık kalır (kalıcı depolarizasyon, faz I blok) ve kas gevşer.",
+    "Etkisi 60 sn içinde başlar, 10–15 dk sürer; bu yüzden hızlı dizi entübasyonunun altın standardıdır.",
+    "Depolarizan olan tek ilaç süksinilkolindir. Rokuronyum, vekuronyum, pankuronyum, mivakuryum ve atrakuryum non-depolarizandır."
+   ],
+   "v": "f5a7a64ce4"
+  },
+  {
+   "id": "2f01-03",
+   "baslik": "Neostigmin: antikolinesteraz ile tersleme",
+   "giris": "Neostigmin asetilkolinesterazı geri dönüşlü inhibe eder; biriken asetilkolin non-depolarizan bloğu yarışmayı kazanarak çözer.",
+   "s": [
+    47
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Neostigmin asetilkolini yıkan enzimi (asetilkolinesteraz) geçici olarak durdurur. Asetilkolin birikir ve non-depolarizan blokörle reseptör için yarışta öne geçer."
+    },
+    {
+     "metin": "Biriken asetilkolin yalnız kas reseptörlerini (nikotinik, istenen etki) değil, otonom muskarinik reseptörleri de uyarır: bradikardi, bronkospazm, tükürük ve bronş sekresyonu, bağırsak hareketi artar."
+    },
+    {
+     "metin": "Atropin (0.02 mg/kg) ya da kalp hızına daha az etkili glikopirolat birlikte verilir."
+    },
+    {
+     "metin": "TOF 0.2 üzerindeyken önerilir; süksinilkolin dışındaki blokörler için uygulanabilir ve sugammadexe göre ucuzdur."
+    }
+   ],
+   "klip": "o-2f01-03",
+   "ses": [
+    "Neostigmin: antikolinesteraz ile tersleme.",
+    "Neostigmin asetilkolinesterazı geri dönüşlü inhibe eder; biriken asetilkolin non-depolarizan bloğu yarışmayı kazanarak çözer.",
+    "Neostigmin asetilkolini yıkan enzimi (asetilkolinesteraz) geçici olarak durdurur. Asetilkolin birikir ve non-depolarizan blokörle reseptör için yarışta öne geçer.",
+    "Biriken asetilkolin yalnız kas reseptörlerini (nikotinik, istenen etki) değil, otonom muskarinik reseptörleri de uyarır: bradikardi, bronkospazm, tükürük ve bronş sekresyonu, bağırsak hareketi artar.",
+    "Atropin (0.02 mg/kg) ya da kalp hızına daha az etkili glikopirolat birlikte verilir.",
+    "TOF 0.2 üzerindeyken önerilir; süksinilkolin dışındaki blokörler için uygulanabilir ve sugammadexe göre ucuzdur."
+   ],
+   "v": "3fe121f501"
+  },
+  {
+   "id": "2f01-09",
+   "baslik": "Nalokson ve renarkotizasyon",
+   "giris": "Nalokson tüm opioid reseptörlerinde (μ, κ, δ) kompetitif antagonizma yapar; yarı ömrü opioidden kısadır, bu yüzden renarkotizasyon riski vardır.",
+   "s": [
+    49
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Nalokson opioidlerle aynı reseptörlere bağlanır ve onları yerinden eder (kompetitif antagonizma). Postoperatif opioid kaynaklı solunum depresyonunun ilacıdır."
+    },
+    {
+     "metin": "Nalokson (30–80 dk) opioidlerden daha kısa etkilidir. Nalokson etkisi çekilince opioid hâlâ vücuttaysa solunum yeniden baskılanır; bu yüzden PACU'da en az 2 sa izlenir."
+    },
+    {
+     "metin": "Küçük dozlarla titre edilir (0.04–0.4 mg); acil apnede 0.4–2 mg IV."
+    },
+    {
+     "metin": "Tam reversal tüm analjeziyi de kaldırır; şiddetli ağrı ve sempatik fırtına gelişir."
+    }
+   ],
+   "klip": "o-2f01-09",
+   "ses": [
+    "Nalokson ve renarkotizasyon.",
+    "Nalokson tüm opioid reseptörlerinde (μ, κ, δ) kompetitif antagonizma yapar; yarı ömrü opioidden kısadır, bu yüzden renarkotizasyon riski vardır.",
+    "Nalokson opioidlerle aynı reseptörlere bağlanır ve onları yerinden eder (kompetitif antagonizma). Postoperatif opioid kaynaklı solunum depresyonunun ilacıdır.",
+    "Nalokson (30–80 dk) opioidlerden daha kısa etkilidir. Nalokson etkisi çekilince opioid hâlâ vücuttaysa solunum yeniden baskılanır; bu yüzden PACU'da en az 2 sa izlenir.",
+    "Küçük dozlarla titre edilir (0.04–0.4 mg); acil apnede 0.4–2 mg IV.",
+    "Tam reversal tüm analjeziyi de kaldırır; şiddetli ağrı ve sempatik fırtına gelişir."
+   ],
+   "v": "b7e08f50b4"
+  }
+ ]
+}

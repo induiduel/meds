@@ -18,6 +18,7 @@ import argparse
 import collections
 import datetime as dt
 import json
+import os
 import re
 import subprocess
 import sys
@@ -83,12 +84,33 @@ def tara(a: argparse.Namespace) -> int:
                 kod, cikti = p.returncode, (p.stdout + p.stderr).splitlines()
             except subprocess.TimeoutExpired:
                 kod, cikti = 124, ["HATA: zaman aşımı (izleyici)"]
+            if asm == "takip" and any(re.search(r"(cumle_zaman|isaret) dosyası yok", x) for x in cikti):
+                # cumle_zaman/isaret Oracle'da meds-cumle-zaman.timer ile üretilir, yerelde kopyası olmayabilir:
+                # yerine canlı API'de paragraf başına kelime zamanı denetlenir (yanlış alarm önlemi, 2026-11-17)
+                kod, cikti = _canli_takip(k)
             if asm == "takip":  # kos.py dışından koşar: kaydı kendimiz yazarız
                 _yaz({"asama": "takip", "ders": k, "kod": kod, "satirlar": [x.strip() for x in cikti if "HATA" in x or "UYARI" in x][:300]})
             ozet[(asm, "geçti" if kod == 0 else f"çıkış {kod}")] += 1
             print(f"{k:<6} {asm:<14} {'0 HATA' if kod == 0 else f'çıkış {kod}'}", flush=True)
     print("\nÖzet:", ", ".join(f"{x[0]} {x[1]}: {n}" for x, n in sorted(ozet.items())))
     return 0
+
+
+def _canli_takip(key: str) -> tuple[int, list[str]]:
+    import urllib.request
+    api = os.environ.get("MEDS_ORACLE_API_URL", "https://nofrostlife.com.tr")
+    try:
+        with urllib.request.urlopen(urllib.request.Request(f"{api}/api/canli-ders/{key}", headers={"User-Agent": "medsor-sesli-anlatim/1"}), timeout=30) as r:
+            d = json.load(r)
+    except Exception as e:  # noqa: BLE001
+        return 2, [f"HATA canlı API okunamadı: {e}"]
+    np_ = sum(len([p for p in b["paragraflar"] if p["metin"].strip()]) for b in d["bolumler"])
+    hata = []
+    for v in d.get("varyantlar", []):
+        kz = len(v.get("kelimeZaman") or {})
+        if kz < np_:
+            hata.append(f"HATA canlı {v['id']}: kelime zamanı {kz}/{np_} paragraf")
+    return (1 if hata else 0), hata or [f"{key}: canlı kelime zamanı tam · 0 HATA"]
 
 
 def _yaz(k: dict) -> None:

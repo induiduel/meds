@@ -3,13 +3,17 @@
 Kaynak dışı veri yazılmaz: her kayıt slayt/sayfa kaynağı taşır, boş/yarım kayıt yok, tablo/sıra biçimi tutarlı."""
 import json, os, sys, glob, re
 R = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
-ZORUNLU = ['terimler', 'hastaliklar', 'bilgiler', 'spotlar', 'tablolar', 'listeler', 'kartlar', 'quiz']
+# quiz (mini soru) ZORUNLU değil: kullanıcı kararı 2026-11-17 mini soru/quiz varsayılan kapalı, ders_icerik_uret.py quiz=[] yazar.
+ZORUNLU = ['terimler', 'hastaliklar', 'bilgiler', 'spotlar', 'tablolar', 'listeler', 'kartlar']
 h = 0
 for key in sys.argv[1:]:
     p = os.path.join(R, 'src/data/ders_icerik', key + '.json')
     if not os.path.exists(p): print(f'HATA {key}: paket yok'); h += 1; continue
     d = json.load(open(p, encoding='utf-8')); e = []
     for k in ZORUNLU:
+        # Gerekçeli muafiyet (H581 ilkesi, 2026-11-17): yalnız tablolar, yalnız kaynakta tablo yoksa ve gerekçe ≥ 12 kelimeyse
+        if k == 'tablolar' and not d.get(k) and len((d.get('tablolarYok') or '').split()) >= 12:
+            print(f"UYARI {key}: tablolar boş — gerekçe: {d['tablolarYok']}"); continue
         if not d.get(k): e.append(f'{k} boş (kaynakta yoksa gerekçeyle rapora yaz)')
     for t in d.get('terimler', []):
         if not t['a'].strip(): e.append(f"terim tanımsız: {t['t']}")
@@ -38,12 +42,19 @@ for key in sys.argv[1:]:
     s0 = sum(1 for x in kay if x.get('adim') == 0)
     if kay and s0 / len(kay) > 0.05: e.append(f'adim eşlenemeyen kayıt %{100 * s0 // len(kay)} (>%5): slayt/sayfa kaynağı eksik')
     # sesli örnek soru çözücü (kaynak gösteren, şık şık açıklamalı) zorunlu
+    # eşleme önce ders defteri koduyla (H608: program başlığı ≠ çözücü başlığı), sonra başlıkla
     nz = lambda t: re.sub(r'\W+', ' ', (t or '').lower()).strip()
     bas = nz(d.get('baslik'))
+    kod = None
+    for df in glob.glob(os.path.join(R, 'src/data/dersler/k*.json')):
+        for x in json.load(open(df, encoding='utf-8')).get('dersler', []):
+            if x.get('id') == key[:5]: kod = x.get('kod')
     var = False
-    for ix in glob.glob(os.path.join(R, 'src/data/k2*_cozucu/index.json')):
+    for ix in glob.glob(os.path.join(R, 'src/data/k[0-9]*_cozucu/index.json')):
+        if 'hoca' in os.path.basename(os.path.dirname(ix)): continue
         for x in json.load(open(ix, encoding='utf-8')).get('dersler', []):
-            if nz(x['baslik']) == bas and (x.get('soru') or x.get('madde')): var = True
+            esit = (kod and (x['kod'] == kod or x['kod'].startswith(kod + '-'))) or nz(x['baslik']) == bas
+            if esit and (x.get('soru') or x.get('madde')): var = True
     if not var: e.append('sesli örnek soru çözücü yok (src/data/k2*_cozucu): üretilmeden ders tamamlanmaz')
     for e1 in e: print(f'HATA {key}: {e1}')
     h += len(e)

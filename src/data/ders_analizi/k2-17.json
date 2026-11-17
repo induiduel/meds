@@ -1,0 +1,930 @@
+{
+ "surum": 1,
+ "key": "k2-17",
+ "kod": "2n05",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Periferik Nöropati",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n05"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders periferik sinirin motor, duysal ve otonom liflerini, sinir lifi tiplerini ve iletimi anlatır. Hasarın yerine göre nöronopati, aksonopati, miyelinopati ve mononöropati multipleksi, yaralanma paternlerini ve Seddon sınıflamasını ayırır; ardından polinöropatinin duysal, motor ve otonom belirtilerini, muayene bulgularını ve eşlik eden kraniyal sinir ya da piramidal bulguya göre hastalıkları sayar.",
+   "maddeler": [
+    {
+     "metin": "Periferik sinirin yapısı"
+    },
+    {
+     "metin": "Hasarın yeri: nöronopati, aksonopati, miyelinopati"
+    },
+    {
+     "metin": "Sinirde elektrik: dinlenim ve aksiyon potansiyeli"
+    },
+    {
+     "metin": "Miyelinsiz ve miyelinli iletim"
+    },
+    {
+     "metin": "Sinir lifi tipleri"
+    },
+    {
+     "metin": "Periferik sinir yaralanma paternleri"
+    },
+    {
+     "metin": "Travmatik sinir yaralanması: Seddon ve Sunderland sınıflaması"
+    },
+    {
+     "metin": "Polinöropatilerin sınıflaması"
+    },
+    {
+     "metin": "Duysal belirtiler: negatif ve pozitif fenomen"
+    },
+    {
+     "metin": "Motor ve otonom belirtiler"
+    },
+    {
+     "metin": "Duyu muayenesi, yürüyüş ve Romberg testi"
+    },
+    {
+     "metin": "Motor muayene ve tendon refleksleri"
+    },
+    {
+     "metin": "Polinöropatiye eşlik eden kraniyal sinir ve piramidal bulgular"
+    },
+    {
+     "metin": "Ders sonu"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders periferik sinirin motor, duysal ve otonom liflerini, sinir lifi tiplerini ve iletimi anlatır. Hasarın yerine göre nöronopati, aksonopati, miyelinopati ve mononöropati multipleksi, yaralanma paternlerini ve Seddon sınıflamasını ayırır; ardından polinöropatinin duysal, motor ve otonom belirtilerini, muayene bulgularını ve eşlik eden kraniyal sinir ya da piramidal bulguya göre hastalıkları sayar.",
+    "Periferik sinirin yapısı.",
+    "Hasarın yeri: nöronopati, aksonopati, miyelinopati.",
+    "Sinirde elektrik: dinlenim ve aksiyon potansiyeli.",
+    "Miyelinsiz ve miyelinli iletim.",
+    "Sinir lifi tipleri.",
+    "Periferik sinir yaralanma paternleri.",
+    "Travmatik sinir yaralanması: Seddon ve Sunderland sınıflaması.",
+    "Polinöropatilerin sınıflaması.",
+    "Duysal belirtiler: negatif ve pozitif fenomen.",
+    "Motor ve otonom belirtiler.",
+    "Duyu muayenesi, yürüyüş ve Romberg testi.",
+    "Motor muayene ve tendon refleksleri.",
+    "Polinöropatiye eşlik eden kraniyal sinir ve piramidal bulgular.",
+    "Ders sonu."
+   ],
+   "v": "a8a791ac62"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Sayfa 3",
+     "metin": "",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Sinir lifi tipi",
+     "metin": "Sinir lifi tipi",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Periferik sinir yaralanma paternleri",
+     "metin": "Çıkmış (dogrudan): Wallerian Dejenerasyon: Yaralanma distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır, makrofajlar fagositozla ortadan kaldırır.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Travmatik sinir yaralanması",
+     "metin": "Travmatik sinir yaralanması",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "POLİNÖROPATİLER",
+     "metin": "POLİNÖROPATİLER",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Polinöropatilerin Klinik Belirtileri",
+     "metin": "Çıkmış (dogrudan): ince miyelinsiz lifler → ağrı ve ısı değerlendirme kaybı, ağrısız yanma/ travma",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "• Pozitif fenomen",
+     "metin": "Çıkmış (ilgili): kozalji; travma sonrası o bölgede spontan yanma, ağrılı uyarana aşırı duyarlılık",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Motor belirtiler",
+     "metin": "Motor belirtiler",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Polinöropati+ kranial sinir (vıı)",
+     "metin": "Polinöropati+ kranial sinir (vıı)",
+     "s": [
+      22
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Sayfa 3:.",
+    "Sinir lifi tipi: Sinir lifi tipi.",
+    "Periferik sinir yaralanma paternleri: Çıkmış (dogrudan): Wallerian Dejenerasyon: Yaralanma distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır, makrofajlar fagositozla ortadan kaldırır.",
+    "Travmatik sinir yaralanması: Travmatik sinir yaralanması.",
+    "POLİNÖROPATİLER: POLİNÖROPATİLER.",
+    "Polinöropatilerin Klinik Belirtileri: Çıkmış (dogrudan): ince miyelinsiz lifler → ağrı ve ısı değerlendirme kaybı, ağrısız yanma/ travma.",
+    "• Pozitif fenomen: Çıkmış (ilgili): kozalji; travma sonrası o bölgede spontan yanma, ağrılı uyarana aşırı duyarlılık.",
+    "Motor belirtiler: Motor belirtiler.",
+    "Polinöropati+ kranial sinir (vıı): Polinöropati+ kranial sinir (vıı)."
+   ],
+   "v": "e0681fc283"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersten sorulan çıkmışların büyük kısmı üç sayfadan gelir: sinir hücre gövdesi hasarının nöronopati olduğu dört ayrı yılda soruldu, Waller ve aksonal dejenerasyon ile nöropraksi tanımları da tekrar edildi. Lif tipleri, negatif ve pozitif fenomenler ile kozalji tanımı ikinci öncelikli bilgilerdir.",
+   "maddeler": [
+    {
+     "baslik": "Hasar yerine göre polinöropati tipleri",
+     "metin": "Sinir hücre gövdesinin hasarı nöronopatidir; motor nöron hastalığı, poliomiyelit ve varisella zoster örnektir.",
+     "neden": "2020-21, 2022-23, 2023-24 ve 2025-26 sınavlarında sinir hücre gövdesi hasarının adı soruldu; dersin en çok tekrar eden sorusudur.",
+     "s": [
+      13
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Seddon ve Sunderland: nöropraksi",
+     "metin": "Nöropraksi yalnız miyelin zararının olduğu, aksonun korunduğu travmatik sinir yaralanmasıdır.",
+     "neden": "2020-21 ve 2024-25 sınavlarında miyelin hasarlı, akson sağlam yaralanmanın adı soruldu.",
+     "s": [
+      12
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Wallerian dejenerasyon",
+     "metin": "Wallerian dejenerasyonda yaralanma distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır, makrofajlar fagositozla temizler.",
+     "neden": "2020-21 sınavında bu tanım verilip hasarın adı soruldu; çeldiriciler öbür yaralanma paternleridir.",
+     "s": [
+      10
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Negatif fenomenler",
+     "metin": "Negatif fenomen duyu kaybıdır; ince miyelinsiz lif kaybında ağrısız yanma ve travma görülür.",
+     "neden": "2020-21 sınavında negatif fenomen soruldu; doğru yanıt ağrısız yanık ve travma, çeldiriciler pozitif fenomenlerdi.",
+     "s": [
+      14
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Sinir lifi tipleri A, B, C",
+     "metin": "Tip C lifleri 1 µm altında, miyelinsizdir, ağrı-ısı taşır; ileti hızı 2 m/sn altındadır.",
+     "neden": "2020-21 sınavında miyelinsiz lif tipi soruldu; çeldiriciler Tip A, Tip B ve kalın liflerdi.",
+     "s": [
+      9
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Distal aksonal dejenerasyon",
+     "metin": "Distal aksonal dejenerasyonda akson periferden geriye doğru canlılığını kaybeder, miyelin kaybı sekonderdir; prognozu en kötü hasardır.",
+     "neden": "2025-26 sınavında aksonal nöropatide akson için tipik olan soruldu: distalde Waller dejenerasyonu ve sekonder miyelin kaybı.",
+     "s": [
+      10
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Pozitif fenomenler ve kozalji",
+     "metin": "Kozalji, travma sonrası o bölgede spontan yanma ve ağrılı uyarana aşırı duyarlılıktır.",
+     "neden": "2024-25 sınavında kozaljinin tanımı soruldu; öğrenci notunda pozitif fenomenler daire ve sarıyla işaretli.",
+     "s": [
+      15
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Guillain-Barré sendromu bir miyelinopatidir",
+     "metin": "Guillain-Barré sendromu (AIDP) ve KIDP, miyelin kılıfın hasar gördüğü miyelinopati grubundadır.",
+     "neden": "2020-21 ve 2022-23 sınavlarında akut demiyelinizan, aşağıdan yukarı ilerleyen periferik sinir hastalığı olarak Guillain-Barré soruldu.",
+     "s": [
+      10,
+      13
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersten sorulan çıkmışların büyük kısmı üç sayfadan gelir: sinir hücre gövdesi hasarının nöronopati olduğu dört ayrı yılda soruldu, Waller ve aksonal dejenerasyon ile nöropraksi tanımları da tekrar edildi. Lif tipleri, negatif ve pozitif fenomenler ile kozalji tanımı ikinci öncelikli bilgilerdir.",
+    "Hasar yerine göre polinöropati tipleri: Sinir hücre gövdesinin hasarı nöronopatidir; motor nöron hastalığı, poliomiyelit ve varisella zoster örnektir.",
+    "Seddon ve Sunderland: nöropraksi: Nöropraksi yalnız miyelin zararının olduğu, aksonun korunduğu travmatik sinir yaralanmasıdır.",
+    "Wallerian dejenerasyon: Wallerian dejenerasyonda yaralanma distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır, makrofajlar fagositozla temizler.",
+    "Negatif fenomenler: Negatif fenomen duyu kaybıdır; ince miyelinsiz lif kaybında ağrısız yanma ve travma görülür.",
+    "Sinir lifi tipleri A, B, C: Tip C lifleri 1 µm altında, miyelinsizdir, ağrı-ısı taşır; ileti hızı 2 m/sn altındadır.",
+    "Distal aksonal dejenerasyon: Distal aksonal dejenerasyonda akson periferden geriye doğru canlılığını kaybeder, miyelin kaybı sekonderdir; prognozu en kötü hasardır.",
+    "Pozitif fenomenler ve kozalji: Kozalji, travma sonrası o bölgede spontan yanma ve ağrılı uyarana aşırı duyarlılıktır.",
+    "Guillain-Barré sendromu bir miyelinopatidir: Guillain-Barré sendromu (AIDP) ve KIDP, miyelin kılıfın hasar gördüğü miyelinopati grubundadır."
+   ],
+   "v": "84c5f8b39a"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 17 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerin hangisinde sinir hücre gövdesinde hasar vardır?",
+     "cevap": "Nöronopati",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Sinir hücre gövdesinde (soma) olan hasar hangisidir?",
+     "cevap": "Nöronopati",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerin hangisinde sinir hücre gövdesinde hasar vardır?",
+     "cevap": "Nöronopati",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Sinir hücresi gövdesinde olan hasar hangisidir?",
+     "cevap": "Nöronopati",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Sinir hücre gövdesinde (soma) hasar varsa bu durum aşağıdakilerden hangisi olarak adlandırılır?",
+     "cevap": "Nöronopati",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Miyelinsiz sinir lifi tipi hangisidir?",
+     "cevap": "Tip C",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Miyelinsiz sinir lifi tipi hangisidir?",
+     "cevap": "Tip C",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Polinöropatilerde yaralanma distalinde akson bütünlüğü bozulmuş, miyelin parçalanmış ve makrofajlarla fagosite edilmişse oluşan hasar aşağıdakilerden hangisidir?",
+     "cevap": "Wallerian dejenerasyon",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "2025-2026 final (bankada yıl 2022-2023 yazılı; ham belge 2025-26 final)",
+     "metin": "Aksonal nöropatide bir akson hasar gördüğünde aşağıdakilerden hangisi o akson için tipiktir?",
+     "cevap": "Aksonun tüm distal kısmında Waller dejenerasyonu ve sekonder miyelin kaybı",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Polinöropatilerde klinikte rastlanan negatif fenomen aşağıdakilerden hangisi olabilir?",
+     "cevap": "Ağrısız yanık/travma",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Seddon ve Sunderland sınıflamasına göre miyelinin zarar gördüğü, aksonun ise sağlam kaldığı sinir yaralanması hangisidir?",
+     "cevap": "Nöropraksi",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Seddon ve Sunderland sınıflamasına göre miyelin hasarı var, akson korunmuşsa oluşan sinir yaralanması aşağıdakilerden hangisidir?",
+     "cevap": "Nöropraksi",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Kas güçsüzlüğü (felç) nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Motor nöron hastalığında derin tendon refleksleri azalır.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2020-2021 (bankada; ham belge '22 23')",
+     "metin": "Aşağıdakilerden hangisi motor aksonları etkileyen, hızla ilerleyen akut demiyelinizan bir hastalık olan, semptomların başlamasından sonraki günlerde solunum kası yetmezliğiyle ölüme yol açabilen, aşağıdan yukarıya doğru gelişen güçsüzlüğe neden olan ve bir enfeksiyon veya aşı ile tetikleniyor gibi görünen periferik sinir hastalığıdır?",
+     "cevap": "Guillain-Barré sendromu",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2020-2021 (bankada)",
+     "metin": "Motor aksonları etkileyen, hızla ilerleyen akut demiyelinizan bir hastalık olan, semptomların başlamasından sonraki günlerde solunum kası yetmezliğiyle ölüme yol açabilen, aşağıdan yukarıya doğru gelişen güçsüzlüğe neden olan, self-toleransın bozulmasıyla otoimmün yanıta yol açan ve bir enfeksiyon veya aşı ile tetikleniyor gibi görünen periferik sinir hastalığı aşağıdakilerden hangisidir?",
+     "cevap": "Guillain-Barré sendromu",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nöromusküler kavşak hastalıkları Aşağıdakilerden hangisi nöromusküler kavşak hastalıklarından değildir?",
+     "cevap": "Guillain-Barre sendromu",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kozalji teriminin tanımı aşağıdakilerden hangisidir?",
+     "cevap": "Travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrı",
+     "s": [
+      15
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 17 çıkmış soru var.",
+    "2020-2021: Aşağıdakilerin hangisinde sinir hücre gövdesinde hasar vardır?",
+    "Cevap: Nöronopati.",
+    "2020-2021: Sinir hücre gövdesinde (soma) olan hasar hangisidir?",
+    "Cevap: Nöronopati.",
+    "2022-2023: Aşağıdakilerin hangisinde sinir hücre gövdesinde hasar vardır?",
+    "Cevap: Nöronopati.",
+    "2023-2024: Sinir hücresi gövdesinde olan hasar hangisidir?",
+    "Cevap: Nöronopati.",
+    "2025-2026: Sinir hücre gövdesinde (soma) hasar varsa bu durum aşağıdakilerden hangisi olarak adlandırılır?",
+    "Cevap: Nöronopati.",
+    "2020-2021: Miyelinsiz sinir lifi tipi hangisidir?",
+    "Cevap: Tip C.",
+    "2020-2021: Miyelinsiz sinir lifi tipi hangisidir?",
+    "Cevap: Tip C.",
+    "2020-2021: Polinöropatilerde yaralanma distalinde akson bütünlüğü bozulmuş, miyelin parçalanmış ve makrofajlarla fagosite edilmişse oluşan hasar aşağıdakilerden hangisidir?",
+    "Cevap: Wallerian dejenerasyon.",
+    "2025-2026 final (bankada yıl 2022-2023 yazılı; ham belge 2025-26 final): Aksonal nöropatide bir akson hasar gördüğünde aşağıdakilerden hangisi o akson için tipiktir?",
+    "Cevap: Aksonun tüm distal kısmında Waller dejenerasyonu ve sekonder miyelin kaybı.",
+    "2020-2021: Polinöropatilerde klinikte rastlanan negatif fenomen aşağıdakilerden hangisi olabilir?",
+    "Cevap: Ağrısız yanık/travma.",
+    "2024-2025: Seddon ve Sunderland sınıflamasına göre miyelinin zarar gördüğü, aksonun ise sağlam kaldığı sinir yaralanması hangisidir?",
+    "Cevap: Nöropraksi.",
+    "2020-2021: Seddon ve Sunderland sınıflamasına göre miyelin hasarı var, akson korunmuşsa oluşan sinir yaralanması aşağıdakilerden hangisidir?",
+    "Cevap: Nöropraksi.",
+    "2020-2021: Kas güçsüzlüğü (felç) nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Motor nöron hastalığında derin tendon refleksleri azalır.",
+    "2020-2021 (bankada; ham belge '22 23'): Aşağıdakilerden hangisi motor aksonları etkileyen, hızla ilerleyen akut demiyelinizan bir hastalık olan, semptomların başlamasından sonraki günlerde solunum kası yetmezliğiyle ölüme yol açabilen, aşağıdan yukarıya doğru gelişen güçsüzlüğe neden olan ve bir enfeksiyon veya aşı ile tetikleniyor gibi görünen periferik sinir hastalığıdır?",
+    "Cevap: Guillain-Barré sendromu.",
+    "2020-2021 (bankada): Motor aksonları etkileyen, hızla ilerleyen akut demiyelinizan bir hastalık olan, semptomların başlamasından sonraki günlerde solunum kası yetmezliğiyle ölüme yol açabilen, aşağıdan yukarıya doğru gelişen güçsüzlüğe neden olan, self-toleransın bozulmasıyla otoimmün yanıta yol açan ve bir enfeksiyon veya aşı ile tetikleniyor gibi görünen periferik sinir hastalığı aşağıdakilerden hangisidir?",
+    "Cevap: Guillain-Barré sendromu.",
+    "2020-2021: Nöromusküler kavşak hastalıkları Aşağıdakilerden hangisi nöromusküler kavşak hastalıklarından değildir?",
+    "Cevap: Guillain-Barre sendromu.",
+    "2024-2025: Kozalji teriminin tanımı aşağıdakilerden hangisidir?",
+    "Cevap: Travmatik bir sinir lezyonundan sonra devam eden yanıcı ağrı."
+   ],
+   "v": "66b6ddfbcd"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%50) ve sınıflama ve adlandırma (%44) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%81) ve anlama ve ilişki kurma (%19) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da her zaman, asla gibi mutlak ifade olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%50) ve sınıflama ve adlandırma (%44) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Düzey: Soruların düzeyi hatırlama (%81) ve anlama ve ilişki kurma (%19) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da her zaman, asla gibi mutlak ifade olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "174ae229c9"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Nöronopati",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Sinir hücre gövdesinde (soma) olan hasar hangisidir?"
+    },
+    {
+     "baslik": "Guillain-Barre sendromu",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Nöromusküler kavşak hastalıkları Aşağıdakilerden hangisi nöromusküler kavşak hastalıklarından değildir?"
+    },
+    {
+     "baslik": "Basit mononöropati",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Karpal tünel sendromu hangi periferik sinir hasarına örnektir?"
+    },
+    {
+     "baslik": "En sık hedef antijeni presinaptik kalsiyum kanallarıdır.",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Miyastenia gravis için aşağıdakilerden hangisi yanlıştır?"
+    },
+    {
+     "baslik": "Hasar yerine göre polinöropati tipleri",
+     "metin": "2020-21, 2022-23, 2023-24 ve 2025-26 sınavlarında sinir hücre gövdesi hasarının adı soruldu; dersin en çok tekrar eden sorusudur."
+    },
+    {
+     "baslik": "Seddon ve Sunderland: nöropraksi",
+     "metin": "2020-21 ve 2024-25 sınavlarında miyelin hasarlı, akson sağlam yaralanmanın adı soruldu."
+    },
+    {
+     "baslik": "Wallerian dejenerasyon",
+     "metin": "2020-21 sınavında bu tanım verilip hasarın adı soruldu; çeldiriciler öbür yaralanma paternleridir."
+    },
+    {
+     "baslik": "Negatif fenomenler",
+     "metin": "2020-21 sınavında negatif fenomen soruldu; doğru yanıt ağrısız yanık ve travma, çeldiriciler pozitif fenomenlerdi."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Nöronopati: Çıkmışlarda 2 kez soruldu. Örnek kök: Sinir hücre gövdesinde (soma) olan hasar hangisidir?",
+    "Guillain-Barre sendromu: Çıkmışlarda 2 kez soruldu. Örnek kök: Nöromusküler kavşak hastalıkları Aşağıdakilerden hangisi nöromusküler kavşak hastalıklarından değildir?",
+    "Basit mononöropati: Çıkmışlarda 2 kez soruldu. Örnek kök: Karpal tünel sendromu hangi periferik sinir hasarına örnektir?",
+    "En sık hedef antijeni presinaptik kalsiyum kanallarıdır.: Çıkmışlarda 2 kez soruldu. Örnek kök: Miyastenia gravis için aşağıdakilerden hangisi yanlıştır?",
+    "Hasar yerine göre polinöropati tipleri: 2020-21, 2022-23, 2023-24 ve 2025-26 sınavlarında sinir hücre gövdesi hasarının adı soruldu; dersin en çok tekrar eden sorusudur.",
+    "Seddon ve Sunderland: nöropraksi: 2020-21 ve 2024-25 sınavlarında miyelin hasarlı, akson sağlam yaralanmanın adı soruldu.",
+    "Wallerian dejenerasyon: 2020-21 sınavında bu tanım verilip hasarın adı soruldu; çeldiriciler öbür yaralanma paternleridir.",
+    "Negatif fenomenler: 2020-21 sınavında negatif fenomen soruldu; doğru yanıt ağrısız yanık ve travma, çeldiriciler pozitif fenomenlerdi.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "25f55d9ab3"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders periferik sinirin motor, duysal ve otonom liflerini, sinir lifi tiplerini ve iletimi anlatır. Hasarın yerine göre nöronopati, aksonopati, miyelinopati ve mononöropati multipleksi, yaralanma paternlerini ve Seddon sınıflamasını ayırır; ardından polinöropatinin duysal, motor ve otonom belirtilerini, muayene bulgularını ve eşlik eden kraniyal sinir ya da piramidal bulguya göre hastalıkları sayar.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders periferik sinirin motor, duysal ve otonom liflerini, sinir lifi tiplerini ve iletimi anlatır. Hasarın yerine göre nöronopati, aksonopati, miyelinopati ve mononöropati multipleksi, yaralanma paternlerini ve Seddon sınıflamasını ayırır; ardından polinöropatinin duysal, motor ve otonom belirtilerini, muayene bulgularını ve eşlik eden kraniyal sinir ya da piramidal bulguya göre hastalıkları sayar."
+   ],
+   "v": "7fd865d319"
+  },
+  {
+   "id": "2n05-04",
+   "baslik": "Sinir lifi tipleri A, B, C",
+   "giris": "Tip C lifleri 1 µm altında, miyelinsizdir, ağrı-ısı taşır; ileti hızı 2 m/sn altındadır.",
+   "s": [
+    9
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "2-20 µm çapında, miyelinli, en kalın liflerdir; vibrasyon ve propriosepsiyonu taşır. İleti hızı 10-70 m/sn."
+    },
+    {
+     "metin": "Yaklaşık 3 µm, ince bir şekilde miyelinlidir; preganglionik otonom liflerdir ve bir ölçüde ağrı ile ısı taşır."
+    },
+    {
+     "metin": "1 µm altında çapta, miyelinsizdir; ağrı ve ısı duyusunu taşır, ileti hızı 2 m/sn altındadır."
+    },
+    {
+     "metin": "Miyelin ve çap arttıkça ileti hızlanır; en hızlı Tip A, en yavaş Tip C."
+    },
+    {
+     "metin": "Miyelinsiz lifte ileti zar boyunca sürekli yayılır; miyelinli lifte miyelinli bölümler atlanarak nodlarda oluşur."
+    }
+   ],
+   "klip": "o-2n05-04",
+   "ses": [
+    "Sinir lifi tipleri A, B, C.",
+    "Tip C lifleri 1 µm altında, miyelinsizdir, ağrı-ısı taşır; ileti hızı 2 m/sn altındadır.",
+    "2-20 µm çapında, miyelinli, en kalın liflerdir; vibrasyon ve propriosepsiyonu taşır. İleti hızı 10-70 m/sn.",
+    "Yaklaşık 3 µm, ince bir şekilde miyelinlidir; preganglionik otonom liflerdir ve bir ölçüde ağrı ile ısı taşır.",
+    "1 µm altında çapta, miyelinsizdir; ağrı ve ısı duyusunu taşır, ileti hızı 2 m/sn altındadır.",
+    "Miyelin ve çap arttıkça ileti hızlanır; en hızlı Tip A, en yavaş Tip C.",
+    "Miyelinsiz lifte ileti zar boyunca sürekli yayılır; miyelinli lifte miyelinli bölümler atlanarak nodlarda oluşur."
+   ],
+   "v": "32352e027c"
+  },
+  {
+   "id": "2n05-02",
+   "baslik": "Wallerian dejenerasyon",
+   "giris": "Wallerian dejenerasyonda yaralanma distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır, makrofajlar fagositozla temizler.",
+   "s": [
+    10
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Yaralanmanın distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır ve makrofajlar bunları fagositozla ortadan kaldırır."
+    },
+    {
+     "metin": "Orada akson sağlamdır, yalnız bölgesel miyelin kaybı vardır ve hasar Schwann hücresini etkiler."
+    },
+    {
+     "metin": "Orada akson periferden geriye doğru canlılığını kaybeder (dying back) ve miyelin kaybı sekonderdir."
+    },
+    {
+     "metin": "Normal, Waller dejenerasyonu, segmental demiyelinizasyon ve aksonal dejenerasyon panelleri yan yana gösterilir; Waller panelinde kesi çizgisinin altında akson ve miyelin parçalanmıştır."
+    },
+    {
+     "metin": "Nöronopatide hasar sinir hücre gövdesindedir."
+    }
+   ],
+   "klip": "o-2n05-02",
+   "ses": [
+    "Wallerian dejenerasyon.",
+    "Wallerian dejenerasyonda yaralanma distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır, makrofajlar fagositozla temizler.",
+    "Yaralanmanın distalinde akson bütünlüğü bozulur, miyelin globüllere parçalanır ve makrofajlar bunları fagositozla ortadan kaldırır.",
+    "Orada akson sağlamdır, yalnız bölgesel miyelin kaybı vardır ve hasar Schwann hücresini etkiler.",
+    "Orada akson periferden geriye doğru canlılığını kaybeder (dying back) ve miyelin kaybı sekonderdir.",
+    "Normal, Waller dejenerasyonu, segmental demiyelinizasyon ve aksonal dejenerasyon panelleri yan yana gösterilir; Waller panelinde kesi çizgisinin altında akson ve miyelin parçalanmıştır.",
+    "Nöronopatide hasar sinir hücre gövdesindedir."
+   ],
+   "v": "329b23bddd"
+  },
+  {
+   "id": "2n05-07",
+   "baslik": "Distal aksonal dejenerasyon",
+   "giris": "Distal aksonal dejenerasyonda akson periferden geriye doğru canlılığını kaybeder, miyelin kaybı sekonderdir; prognozu en kötü hasardır.",
+   "s": [
+    10
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Akson periferden geriye doğru canlılığını kaybeder (\"dying back\" fenomeni); aksonun distal kısmı dejenere olur."
+    },
+    {
+     "metin": "Miyelin kaybı sekonderdir, yani akson kaybını izler."
+    },
+    {
+     "metin": "İyileşme yavaştır; prognozu en kötü olan hasardır."
+    },
+    {
+     "metin": "Kasın inervasyonu çevre sinirlerden olur."
+    },
+    {
+     "metin": "Poliomiyelit, vinkristin."
+    },
+    {
+     "metin": "Segmental demiyelinizasyonda akson sağlam, kas denerve değildir ve prognoz iyidir."
+    }
+   ],
+   "klip": "o-2n05-07",
+   "ses": [
+    "Distal aksonal dejenerasyon.",
+    "Distal aksonal dejenerasyonda akson periferden geriye doğru canlılığını kaybeder, miyelin kaybı sekonderdir; prognozu en kötü hasardır.",
+    "Akson periferden geriye doğru canlılığını kaybeder (\"dying back\" fenomeni); aksonun distal kısmı dejenere olur.",
+    "Miyelin kaybı sekonderdir, yani akson kaybını izler.",
+    "İyileşme yavaştır; prognozu en kötü olan hasardır.",
+    "Kasın inervasyonu çevre sinirlerden olur.",
+    "Poliomiyelit, vinkristin.",
+    "Segmental demiyelinizasyonda akson sağlam, kas denerve değildir ve prognoz iyidir."
+   ],
+   "v": "000b3b2ff6"
+  },
+  {
+   "id": "2n05-08",
+   "baslik": "Guillain-Barré sendromu bir miyelinopatidir",
+   "giris": "Guillain-Barré sendromu (AIDP) ve KIDP, miyelin kılıfın hasar gördüğü miyelinopati grubundadır.",
+   "s": [
+    10,
+    13
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Miyelin kılıf hasarlıdır; örnekleri AIDP (Guillain-Barré sendromu) ve KIDP."
+    },
+    {
+     "metin": "AIDP ve KIDP segmental demiyelinizasyon örnekleridir; akson sağlamken segmental miyelin kaybı olur, hasar Schwann hücresini etkiler."
+    },
+    {
+     "metin": "AIDP akut, KIDP kronik inflamatuar demiyelinizan polinöropatidir; proksimal tutulum varsa inflamatuar polinöropati (akut-kronik) düşünülür."
+    },
+    {
+     "metin": "Guillain-Barré, polinöropatiye yedinci kraniyal sinir tutulumunun eşlik ettiği hastalıklar listesinin başındadır."
+    },
+    {
+     "metin": "Guillain-Barré akut ve demiyelinizandır; KIDP kronik seyirlidir."
+    }
+   ],
+   "klip": "o-2n05-08",
+   "ses": [
+    "Guillain-Barré sendromu bir miyelinopatidir.",
+    "Guillain-Barré sendromu (AIDP) ve KIDP, miyelin kılıfın hasar gördüğü miyelinopati grubundadır.",
+    "Miyelin kılıf hasarlıdır; örnekleri AIDP (Guillain-Barré sendromu) ve KIDP.",
+    "AIDP ve KIDP segmental demiyelinizasyon örnekleridir; akson sağlamken segmental miyelin kaybı olur, hasar Schwann hücresini etkiler.",
+    "AIDP akut, KIDP kronik inflamatuar demiyelinizan polinöropatidir; proksimal tutulum varsa inflamatuar polinöropati (akut-kronik) düşünülür.",
+    "Guillain-Barré, polinöropatiye yedinci kraniyal sinir tutulumunun eşlik ettiği hastalıklar listesinin başındadır.",
+    "Guillain-Barré akut ve demiyelinizandır; KIDP kronik seyirlidir."
+   ],
+   "v": "c4a15234b6"
+  },
+  {
+   "id": "2n05-09",
+   "baslik": "Segmental demiyelinizasyon",
+   "giris": "Segmental demiyelinizasyonda akson sağlamken segmental miyelin kaybı vardır; kas denerve olmadığı için prognoz iyidir.",
+   "s": [
+    10
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Akson sağlamken segmental miyelin kaybı vardır; hasar Schwann hücresini etkiler."
+    },
+    {
+     "metin": "Kas denerve olmadığı için prognoz iyidir."
+    },
+    {
+     "metin": "Remiyelinizasyon 15 gün-6 ay içinde olur."
+    },
+    {
+     "metin": "AIDP ve KIDP."
+    },
+    {
+     "metin": "Demiyelinizan nöropatide kas erimesi görülmez, aksonal nöropatide görülür."
+    }
+   ],
+   "klip": "o-2n05-09",
+   "ses": [
+    "Segmental demiyelinizasyon.",
+    "Segmental demiyelinizasyonda akson sağlamken segmental miyelin kaybı vardır; kas denerve olmadığı için prognoz iyidir.",
+    "Akson sağlamken segmental miyelin kaybı vardır; hasar Schwann hücresini etkiler.",
+    "Kas denerve olmadığı için prognoz iyidir.",
+    "Remiyelinizasyon 15 gün-6 ay içinde olur.",
+    "AIDP ve KIDP.",
+    "Demiyelinizan nöropatide kas erimesi görülmez, aksonal nöropatide görülür."
+   ],
+   "v": "c4b55c05d7"
+  },
+  {
+   "id": "2n05-03",
+   "baslik": "Seddon ve Sunderland: nöropraksi",
+   "giris": "Nöropraksi yalnız miyelin zararının olduğu, aksonun korunduğu travmatik sinir yaralanmasıdır.",
+   "s": [
+    12
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Yalnız miyelin zararı vardır, akson sağlamdır. Sinirin tek bir yerinde hasar olduğundan tedaviye en iyi yanıt veren derecedir."
+    },
+    {
+     "metin": "Akson kaybı ve değişik derecelerde bağ dokusu hasarı vardır; tedaviye yanıt olasılığı azalır."
+    },
+    {
+     "metin": "Akson kaybıyla birlikte endonöral tüp hasarlı, perinöryum ve epinöryum ağır hasarlıdır; en ağır derecedir."
+    },
+    {
+     "metin": "Hafiften ağıra nöropraksi → aksonotmezis → nörotmezis."
+    },
+    {
+     "metin": "Wallerian dejenerasyon ve nöronopati bu sınıflamanın derece adları değildir."
+    }
+   ],
+   "klip": "o-2n05-03",
+   "ses": [
+    "Seddon ve Sunderland: nöropraksi.",
+    "Nöropraksi yalnız miyelin zararının olduğu, aksonun korunduğu travmatik sinir yaralanmasıdır.",
+    "Yalnız miyelin zararı vardır, akson sağlamdır. Sinirin tek bir yerinde hasar olduğundan tedaviye en iyi yanıt veren derecedir.",
+    "Akson kaybı ve değişik derecelerde bağ dokusu hasarı vardır; tedaviye yanıt olasılığı azalır.",
+    "Akson kaybıyla birlikte endonöral tüp hasarlı, perinöryum ve epinöryum ağır hasarlıdır; en ağır derecedir.",
+    "Hafiften ağıra nöropraksi → aksonotmezis → nörotmezis.",
+    "Wallerian dejenerasyon ve nöronopati bu sınıflamanın derece adları değildir."
+   ],
+   "v": "44623406c6"
+  },
+  {
+   "id": "2n05-01",
+   "baslik": "Hasar yerine göre polinöropati tipleri",
+   "giris": "Sinir hücre gövdesinin hasarı nöronopatidir; motor nöron hastalığı, poliomiyelit ve varisella zoster örnektir.",
+   "s": [
+    13
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Hasar sinir hücre gövdesindedir (soma). Örnekleri motor nöron hastalığı, poliomiyelit ve varisella zosterdir."
+    },
+    {
+     "metin": "Hasar aksondadır. Toksik, metabolik ve nutrisyonel polinöropatiler bu gruptadır."
+    },
+    {
+     "metin": "Hasar miyelin kılıftadır. AIDP (Guillain-Barré sendromu) ve KIDP örnektir."
+    },
+    {
+     "metin": "Ayrı zamanlarda, asimetrik olarak farklı sinirlerin çok odaklı tutulduğu periferik nöropatidir; nekrotizan vaskülitlere (PAN, Churg-Strauss alerjik granülomatozis) bağlıdır."
+    },
+    {
+     "metin": "Soruda hasarın yeri verilir; gövde → nöronopati, akson → aksonopati, miyelin → miyelinopati."
+    }
+   ],
+   "klip": "o-2n05-01",
+   "ses": [
+    "Hasar yerine göre polinöropati tipleri.",
+    "Sinir hücre gövdesinin hasarı nöronopatidir; motor nöron hastalığı, poliomiyelit ve varisella zoster örnektir.",
+    "Hasar sinir hücre gövdesindedir (soma). Örnekleri motor nöron hastalığı, poliomiyelit ve varisella zosterdir.",
+    "Hasar aksondadır. Toksik, metabolik ve nutrisyonel polinöropatiler bu gruptadır.",
+    "Hasar miyelin kılıftadır. AIDP (Guillain-Barré sendromu) ve KIDP örnektir.",
+    "Ayrı zamanlarda, asimetrik olarak farklı sinirlerin çok odaklı tutulduğu periferik nöropatidir; nekrotizan vaskülitlere (PAN, Churg-Strauss alerjik granülomatozis) bağlıdır.",
+    "Soruda hasarın yeri verilir; gövde → nöronopati, akson → aksonopati, miyelin → miyelinopati."
+   ],
+   "v": "18b20e1b70"
+  },
+  {
+   "id": "2n05-10",
+   "baslik": "Mononöropati multipleks",
+   "giris": "Mononöropati multipleks ayrı zamanlarda asimetrik farklı sinirlerin çok odaklı tutulmasıdır; nekrotizan vaskülitlere bağlıdır.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Ayrı zamanlarda, asimetrik olarak farklı sinirlerin çok sayıda odak şeklinde etkilendiği periferik nöropatidir."
+    },
+    {
+     "metin": "Nekrotizan vaskülitlere bağlıdır; PAN ve Churg-Strauss alerjik granülomatozis örnek verilir. Siniri besleyen damarın tutulması siniri etkiler."
+    },
+    {
+     "metin": "Polinöropatide duyu kaybı simetrik ve eldiven-çorap tarzındadır; mononöropati multipleks asimetriktir."
+    }
+   ],
+   "klip": "o-2n05-10",
+   "ses": [
+    "Mononöropati multipleks.",
+    "Mononöropati multipleks ayrı zamanlarda asimetrik farklı sinirlerin çok odaklı tutulmasıdır; nekrotizan vaskülitlere bağlıdır.",
+    "Ayrı zamanlarda, asimetrik olarak farklı sinirlerin çok sayıda odak şeklinde etkilendiği periferik nöropatidir.",
+    "Nekrotizan vaskülitlere bağlıdır; PAN ve Churg-Strauss alerjik granülomatozis örnek verilir. Siniri besleyen damarın tutulması siniri etkiler.",
+    "Polinöropatide duyu kaybı simetrik ve eldiven-çorap tarzındadır; mononöropati multipleks asimetriktir."
+   ],
+   "v": "b4c8cb752c"
+  },
+  {
+   "id": "2n05-05",
+   "baslik": "Negatif fenomenler",
+   "giris": "Negatif fenomen duyu kaybıdır; ince miyelinsiz lif kaybında ağrısız yanma ve travma görülür.",
+   "s": [
+    14
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Var olan bir duyunun kaybıdır."
+    },
+    {
+     "metin": "Dokunma ve eklem pozisyon algısı kaybolur; hasta el ve ayakta keçelenmeden yakınır, yürüyüşü özellikle gece dengesizdir."
+    },
+    {
+     "metin": "Ağrı ve ısı değerlendirmesi kaybolur; ağrısız yanık ve travma görülür."
+    },
+    {
+     "metin": "Distal parestezi, karıncalanma, dizestezi, hiperaljezi ve kozalji olmayan bir duyunun ortaya çıkmasıdır, yani pozitif fenomendir."
+    }
+   ],
+   "klip": "o-2n05-05",
+   "ses": [
+    "Negatif fenomenler.",
+    "Negatif fenomen duyu kaybıdır; ince miyelinsiz lif kaybında ağrısız yanma ve travma görülür.",
+    "Var olan bir duyunun kaybıdır.",
+    "Dokunma ve eklem pozisyon algısı kaybolur; hasta el ve ayakta keçelenmeden yakınır, yürüyüşü özellikle gece dengesizdir.",
+    "Ağrı ve ısı değerlendirmesi kaybolur; ağrısız yanık ve travma görülür.",
+    "Distal parestezi, karıncalanma, dizestezi, hiperaljezi ve kozalji olmayan bir duyunun ortaya çıkmasıdır, yani pozitif fenomendir."
+   ],
+   "v": "0f04ebb0b2"
+  },
+  {
+   "id": "2n05-06",
+   "baslik": "Pozitif fenomenler ve kozalji",
+   "giris": "Kozalji, travma sonrası o bölgede spontan yanma ve ağrılı uyarana aşırı duyarlılıktır.",
+   "s": [
+    15
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Olmayan bir duyunun kendiliğinden ortaya çıkmasıdır."
+    },
+    {
+     "metin": "Distal parestezi ve karıncalanma yapar."
+    },
+    {
+     "metin": "Ağrılı pozitif fenomen yapar: dizestezi (dokunmanın ağrılı hissedilmesi), hiperaljezi ve kozalji."
+    },
+    {
+     "metin": "Travma sonrası o bölgede spontan yanma ve ağrılı uyarana aşırı duyarlılıktır; yani travmatik sinir lezyonundan sonra süren yanıcı ağrıdır."
+    },
+    {
+     "metin": "En sık nedenleri diyabetik polinöropati ve kriptojenik duysal polinöropatidir."
+    }
+   ],
+   "klip": "o-2n05-06",
+   "ses": [
+    "Pozitif fenomenler ve kozalji.",
+    "Kozalji, travma sonrası o bölgede spontan yanma ve ağrılı uyarana aşırı duyarlılıktır.",
+    "Olmayan bir duyunun kendiliğinden ortaya çıkmasıdır.",
+    "Distal parestezi ve karıncalanma yapar.",
+    "Ağrılı pozitif fenomen yapar: dizestezi (dokunmanın ağrılı hissedilmesi), hiperaljezi ve kozalji.",
+    "Travma sonrası o bölgede spontan yanma ve ağrılı uyarana aşırı duyarlılıktır; yani travmatik sinir lezyonundan sonra süren yanıcı ağrıdır.",
+    "En sık nedenleri diyabetik polinöropati ve kriptojenik duysal polinöropatidir."
+   ],
+   "v": "4a84e5c879"
+  }
+ ]
+}

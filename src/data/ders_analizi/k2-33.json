@@ -1,0 +1,1445 @@
+{
+ "surum": 1,
+ "key": "k2-33",
+ "kod": "2f05",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Opoid Analjezikler ve Antagonistleri",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f05"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders opioid analjeziklerin kaynağını, reseptör tiplerini, farmakokinetik ve farmakodinamik özelliklerini, organ sistemi etkilerini, tolerans ve bağımlılığı, klinik kullanımları ile spesifik ilaçları ve opioid antagonistlerini kapsar.",
+   "maddeler": [
+    {
+     "metin": "Giriş: opioidler ve morfinin kaynağı"
+    },
+    {
+     "metin": "Opioid reseptörleri ve agonist tipleri"
+    },
+    {
+     "metin": "Endojen opioid peptidler"
+    },
+    {
+     "metin": "Farmakokinetik: emilim ve dağılım"
+    },
+    {
+     "metin": "Etki mekanizması ve hücresel etkiler"
+    },
+    {
+     "metin": "Reseptör-etki ilişkisi ve spinal analjezi"
+    },
+    {
+     "metin": "Santral sinir sistemi etkileri"
+    },
+    {
+     "metin": "Göz, öksürük, rijidite, bulantı ve ısı etkileri"
+    },
+    {
+     "metin": "Periferik organ etkileri"
+    },
+    {
+     "metin": "Karma agonist-antagonist opioidler"
+    },
+    {
+     "metin": "Klinik kullanım: analjezi ve diğer endikasyonlar"
+    },
+    {
+     "metin": "Anestezi ve alternatif uygulama yolları"
+    },
+    {
+     "metin": "Toksisite, tolerans ve çapraz tolerans"
+    },
+    {
+     "metin": "Bağımlılık, yoksunluk ve doz aşımı"
+    },
+    {
+     "metin": "Kontrendikasyonlar ve dikkat edilecek durumlar"
+    },
+    {
+     "metin": "Spesifik ilaçlar: güçlü agonistler"
+    },
+    {
+     "metin": "Zayıf-orta agonistler, karma ilaçlar ve antitüsifler"
+    },
+    {
+     "metin": "Opioid antagonistleri ve dersin toparlanması"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders opioid analjeziklerin kaynağını, reseptör tiplerini, farmakokinetik ve farmakodinamik özelliklerini, organ sistemi etkilerini, tolerans ve bağımlılığı, klinik kullanımları ile spesifik ilaçları ve opioid antagonistlerini kapsar.",
+    "Giriş: opioidler ve morfinin kaynağı.",
+    "Opioid reseptörleri ve agonist tipleri.",
+    "Endojen opioid peptidler.",
+    "Farmakokinetik: emilim ve dağılım.",
+    "Etki mekanizması ve hücresel etkiler.",
+    "Reseptör-etki ilişkisi ve spinal analjezi.",
+    "Santral sinir sistemi etkileri.",
+    "Göz, öksürük, rijidite, bulantı ve ısı etkileri.",
+    "Periferik organ etkileri.",
+    "Karma agonist-antagonist opioidler.",
+    "Klinik kullanım: analjezi ve diğer endikasyonlar.",
+    "Anestezi ve alternatif uygulama yolları.",
+    "Toksisite, tolerans ve çapraz tolerans.",
+    "Bağımlılık, yoksunluk ve doz aşımı.",
+    "Kontrendikasyonlar ve dikkat edilecek durumlar.",
+    "Spesifik ilaçlar: güçlü agonistler.",
+    "Zayıf-orta agonistler, karma ilaçlar ve antitüsifler.",
+    "Opioid antagonistleri ve dersin toparlanması."
+   ],
+   "v": "9bc40f7b17"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Opioid agonistlerinin prototipi olan morfin şiddetli ağrıya karşı uzun",
+     "metin": "Opioid agonistlerinin prototipi olan morfin şiddetli ağrıya karşı uzun yıllardır kullanılmaktadır.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Haşhaş kapsüllerinin çizilmesiyle sızan beyaz madde, daha sonra",
+     "metin": "Haşhaş kapsüllerinin çizilmesiyle sızan beyaz madde, daha sonra kahverengi katı bir kıvam alır; bu ham opium'dur.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Diğer reseptör alt-tipleri arasında δ (delta) ve ĸ (kappa) opioid",
+     "metin": "Diğer reseptör alt-tipleri arasında δ (delta) ve ĸ (kappa) opioid reseptörü benzeri alt tip 1 (ORL-1) reseptörleri bulunur.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Endojen Opioid Peptidler",
+     "metin": "Endojen Opioid Peptidler",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Üç endojen opioid peptid ailesi belirlenmiştir: endorfinler,",
+     "metin": "Üç endojen opioid peptid ailesi belirlenmiştir: endorfinler, pentapeptid enkefalinler olan metionin enkefalin (met-enkefalin) ve lösin-enkefalin (lö-enkefalin) ile dinorfinler.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Diğer endojen peptidler olan endomorfin-1 ve endomorfin-2,",
+     "metin": "Diğer endojen peptidler olan endomorfin-1 ve endomorfin-2, analjezi ve µ reseptörlerine yüksek afiniteyle bağlanma gibi birçok opioid peptid özelliğine sahiptirler.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Yakın zamanda, opioid peptidlere çok benzer yeni bir reseptör-ligand",
+     "metin": "Yakın zamanda, opioid peptidlere çok benzer yeni bir reseptör-ligand sistemi bulunmuştur. Bu sistemin ana reseptörü, G-protein kenetli orfanin opioid-reseptör-benzeri tip 1 (ORL-1)'dir.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Ekzojen Opioidlerin Farmakokinetiği",
+     "metin": "Ekzojen Opioidlerin Farmakokinetiği",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "A. Absorbsiyon",
+     "metin": "Opioid analjeziklerin çoğu subkutan, intramusküler ve oral yollardan uygulandıklarında iyi absorbe edilirler.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "B. Dağılım",
+     "metin": "Plazma proteinlerine farklı oranlarda bağlanmalarına karşın, opioidler hızla kan kompartımanından uzaklaşır ve beyin, akciğerler, karaciğer, böbrekler ve dalak gibi fazla kanlanan organlarda yüksek konsantrasyonlara ulaşırlar.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Morfinin yaklaşık %10'u ise ana bileşikten 4-6 kez daha güçlü",
+     "metin": "Morfinin yaklaşık %10'u ise ana bileşikten 4-6 kez daha güçlü analjezik etkinliğe sahip bir metabolit olan morfin-6-glukuronide (M6G) dönüşür.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Morfine benzer şekilde, hidromorfon da konjugasyon ile metabolize",
+     "metin": "Morfine benzer şekilde, hidromorfon da konjugasyon ile metabolize edilir ve MSS'yi eksite etme özelliği olan hidromorfon-3-glukuronid (H3G) adlı metaboliti oluşur.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Fentanil, karaciğerde P450 CYP3A4 tarafından N-dealkilasyon ile",
+     "metin": "Fentanil, karaciğerde P450 CYP3A4 tarafından N-dealkilasyon ile metabolize edilir. CYP3A4 ince barsak mukozasında da bulunur ve oral alındığında fentanilin ilk-geçiş metabolizmasına katkı sağlar.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Farmakodinami",
+     "metin": "A. Etki Mekanizması",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "2. Hücresel etkiler - Moleküler düzeyde, opioid reseptörleri G",
+     "metin": "2. Hücresel etkiler - Moleküler düzeyde, opioid reseptörleri G proteinleriyle kenetli bir protein ailesi oluştururlar ve bu etkileşme sonucunda iyon kanallarını etkiler, hücre-içi Ca2+ dağılımını modüle eder ve protein fosforilasyonunu değiştirirler.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Opioidlerin analjezik etkileri oldukça karmaşıktır ve aynı zamanda δ",
+     "metin": "Opioidlerin analjezik etkileri oldukça karmaşıktır ve aynı zamanda δ ve ĸ reseptörleri ile etkileşimin de analjezide katkısı bulunur.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "4. Reseptör dağılımı ve analjezinin nöronal mekanizmaları - Her üç ana",
+     "metin": "4. Reseptör dağılımı ve analjezinin nöronal mekanizmaları - Her üç ana reseptör tipi de omurilik arka boynuzda yüksek konsantrasyonlarda bulunur. Reseptörlerin varlığı, hem omurilik ağrı ileti nöronlarında hem de ağrı mesajını onlara ileten primer aferentlerde gösterilmiştir (Şekil 31-2, A ve B bölgeleri).",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Opioid ilaçlar omuriliği direkt olarak etkileyerek çok güçlü bir",
+     "metin": "Opioid ilaçlar omuriliği direkt olarak etkileyerek çok güçlü bir analjezik etki ortaya çıkartırlar.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Ekzojen opioidlerin ağrıyı hafifletici etkileri kısmen endojen opioid",
+     "metin": "Ekzojen opioidlerin ağrıyı hafifletici etkileri kısmen endojen opioid peptidlerin salıverilmesine bağlıdır.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Opioidlerin periferik olarak verilmesi, örneğin artroskopik diz",
+     "metin": "Opioidlerin periferik olarak verilmesi, örneğin artroskopik diz cerrahisi sonrası hastaların dizine enjekte edilmesi, uygulama sonrası 24 saate kadar sürebilen klinik etkinlik sağlayabilmektedir.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Günümüzdeki anlayışa göre, tolerans gelişmesi sadece siklik adenozin",
+     "metin": "Günümüzdeki anlayışa göre, tolerans gelişmesi sadece siklik adenozin monofosfat (cAMP) sisteminin basit bir up-regülasyonuna bağlı olarak ortaya çıkmaz.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "B. Morfin ve Benzerlerinin Organ Sistemlerine Etkileri",
+     "metin": "B. Morfin ve Benzerlerinin Organ Sistemlerine Etkileri",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "b. Öfori - İntravenöz morfin alan hastalar veya ilaç bağımlıları, tipik",
+     "metin": "b. Öfori - İntravenöz morfin alan hastalar veya ilaç bağımlıları, tipik olarak, anksiyete ve sıkıntı duygularının azalmasının yanı sıra hoş bir duygu hissederler.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "d. Solunum depresyonu - Opioid analjeziklerin hepsi beyin sapındaki",
+     "metin": "d. Solunum depresyonu - Opioid analjeziklerin hepsi beyin sapındaki solunum mekanizmalarını inhibe ederek belirgin solunum depresyonu oluştururlar.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "e. Öksürük kesici etki - Öksürük refleksinin baskılanması opioidlerin",
+     "metin": "e. Öksürük kesici etki - Öksürük refleksinin baskılanması opioidlerin iyi bilinen etkilerindendir. Kodein özellikle patolojik öksürüğü olan kimselerde ve endotrakeal tüp ile ventilasyonu sürdürmesi gerekli hastalarda kullanılır.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "g. Trunkal rijidite (Gövde sertliği) - Birçok opioid ilacın gövdenin",
+     "metin": "g. Trunkal rijidite (Gövde sertliği) - Birçok opioid ilacın gövdenin büyük kaslarının tonusunu artırdığı gösterilmiştir.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "i. Vücut sıcaklığı - Morfin gibi µ-opioid reseptör agonistlerinin",
+     "metin": "i. Vücut sıcaklığı - Morfin gibi µ-opioid reseptör agonistlerinin anterior hipotalamusa uygulanmasının hipertermi oluşturduğunu, buna karşılık ĸ agonistlerinin verilmesinin hipotermiye neden olduğunu gösterilmiştir.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Antimuskarinik etkisine bağlı olarak taşikardi gelişebilmesi",
+     "metin": "Antimuskarinik etkisine bağlı olarak taşikardi gelişebilmesi nedeniyle, meperidin bu genellemenin dışında kalır.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Opioid reseptörleri gastrointestinal kanalda yüksek yoğunlukta",
+     "metin": "Opioid reseptörleri gastrointestinal kanalda yüksek yoğunlukta bulunurlar, böylelikle opioidlerin konstipasyon yapıcı etkilerine MSS kadar enterik sinir sistemi de katkıda bulunur.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "c. Safra yolları - Opioidler safra yollarının düz kaslarında spazm",
+     "metin": "c. Safra yolları - Opioidler safra yollarının düz kaslarında spazm yaparak safra koliğine neden olabilirler.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "e. Uterus - Opioid analjezikler doğum eylemini uzatırlar.",
+     "metin": "e. Uterus - Opioid analjezikler doğum eylemini uzatırlar.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "g. Pruritus - Morfin ve kodein gibi opiatlar, bazen terleme, ürtiker",
+     "metin": "g. Pruritus - Morfin ve kodein gibi opiatlar, bazen terleme, ürtiker ve kaşıntıyla birlikte ciltte kızarma ve ısı artışına neden olur.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "C. Karma Agonist-Antagonist Opioidlerin Etkileri",
+     "metin": "C. Karma Agonist-Antagonist Opioidlerin Etkileri",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Opioid Analjeziklerin Klinik Farmakolojisi",
+     "metin": "Opioid Analjeziklerin Klinik Farmakolojisi Opioid Analjeziklerin Klinikte Kullanılışı",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Günümüzde opioid ilacın daha yavaş salıverilmesine olanak veren yeni",
+     "metin": "Günümüzde opioid ilacın daha yavaş salıverilmesine olanak veren yeni farmasötik şekiller kullanılmaya başlanmıştır.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Opioid analjezikler obstetrikte sıklıkla kullanılırlar. Plasenta",
+     "metin": "Opioid analjezikler obstetrikte sıklıkla kullanılırlar. Plasenta bariyerini aşıp fetusa erişebildiklerinden, neonatal depresyonu en aza indirmek için dikkatli davranılmalıdır.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "C. Öksürük",
+     "metin": "Öksürüğün kesilmesi analjezi için gerekli olandan daha düşük dozlarla sağlanabilir.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "F. Anestezide Kullanımları",
+     "metin": "F. Anestezide Kullanımları",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "G. Alternatif Uygulama Yolları",
+     "metin": "G. Alternatif Uygulama Yolları",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "İntranazal yol, tekrarlanan parenteral ilaç enjeksiyonlarından ve oral",
+     "metin": "İntranazal yol, tekrarlanan parenteral ilaç enjeksiyonlarından ve oral uygulanan ilaçların ilk-geçiş etkisinden kaçınılmasını sağlar.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "1. Opioid tolerans - Toleransın gelişmesi opioid ilacın ilk dozuyla",
+     "metin": "1. Opioid tolerans - Toleransın gelişmesi opioid ilacın ilk dozuyla birlikte başlamasına karşın, klinik belirtiler olağan terapötik dozda en az 2-3 hafta ilaç uygulanmasından sonra ortaya çıkar.",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Tolerans gelişmemiş bir kimsede 60 mg dozunda morfin solunumun",
+     "metin": "Tolerans gelişmemiş bir kimsede 60 mg dozunda morfin solunumun durmasına yol açabilir,",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Karma agonist-antagonist ilaçların tekrarlanan uygulamalarından",
+     "metin": "Karma agonist-antagonist ilaçların tekrarlanan uygulamalarından sonra azalan etkileri arasında halüsinasyonlar, sedasyon, hipotermi ve solunum depresyonunu sayabiliriz.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "µ-reseptör agonistleri arasında gelişen çapraz-tolerans parsiyel veya",
+     "metin": "µ-reseptör agonistleri arasında gelişen çapraz-tolerans parsiyel veya yetersiz olabilir.",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "2. Bağımlılık - Mü tipi opioid ilaçların tekrarlanan uygulanışları ile",
+     "metin": "2. Bağımlılık - Mü tipi opioid ilaçların tekrarlanan uygulanışları ile gelişen toleransa hemen her zaman fiziksel bağımlılık eşlik eder.",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Meperidine bağlı yoksunluk sendromunda belirtiler büyük oranda 24",
+     "metin": "Meperidine bağlı yoksunluk sendromunda belirtiler büyük oranda 24 saat içinde azalır, buna karşılık metadon bağımlılığında yoksunluk sendromunun doruk noktaya erişmesi günler alabilir ve yaklaşık 2 hafta kadar devam edebilir.",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Antagonistin enjeksiyonundan sonraki 3 dakika içinde ani",
+     "metin": "Antagonistin enjeksiyonundan sonraki 3 dakika içinde ani kesilmedekine benzer belirti ve semptomlar görülmeye başlar,",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Bu faktörler opioidlerin kötüye kullanımına yol açan başlıca nedenleri",
+     "metin": "Bu faktörler opioidlerin kötüye kullanımına yol açan başlıca nedenleri oluştururlar ve fiziksel bağımlılığın gelişmesi ile bu durum daha da şiddetlenir.",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "C. Kontrendikasyonlar ve Tedavideki Önlemler",
+     "metin": "C. Kontrendikasyonlar ve Tedavideki Önlemler",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "Annenin günlük düşük dozda heroin kullanımı yenidoğanda hafif",
+     "metin": "Annenin günlük düşük dozda heroin kullanımı yenidoğanda hafif yoksunluk belirtilerine, dozun artması ise irritabilite, şiddetli ağlama, diyare ve nöbet gibi ciddi belirtilere yol açabilir.",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "5. Karaciğer veya böbrek bozukluğu olan hastalarda kullanım -",
+     "metin": "5. Karaciğer veya böbrek bozukluğu olan hastalarda kullanım - Morfin ve benzerleri başlıca karaciğerde metabolize edildikleri için prehepatik koma dönemindeki hastalarda kullanılmaları tartışılabilir.",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Spesifik İlaçlar",
+     "metin": "Spesifik İlaçlar Güçlü Agonistler Fenantrenler",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Metadon sadece güçlü bir µ-reseptör agonisti değildir, aynı",
+     "metin": "Metadon sadece güçlü bir µ-reseptör agonisti değildir, aynı zamanda NMDA reseptörlerini ve monoaminerjik geri-alım taşıyıcılarını da bloke eder.",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Metadonun ani kesilmesinden sonra ortaya çıkan yoksunluk belirti ve",
+     "metin": "Metadonun ani kesilmesinden sonra ortaya çıkan yoksunluk belirti ve semptomları morfine göre daha hafif şiddette olur, fakat daha uzun sürer.",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Sufentanil fentanilden 5-7 kez daha güçlüdür.",
+     "metin": "Sufentanil fentanilden 5-7 kez daha güçlüdür.",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Zayıf-Orta Derecede Etkili Agonistler",
+     "metin": "Zayıf-Orta Derecede Etkili Agonistler Fenantrenler",
+     "s": [
+      57
+     ]
+    },
+    {
+     "baslik": "Fenilheptilaminler",
+     "metin": "Fenilheptilaminler",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "Diyare tedavisinde kullanılan bir diğer fenilpiperidin türevi",
+     "metin": "Diyare tedavisinde kullanılan bir diğer fenilpiperidin türevi loperamid'dir.",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "Fenantrenler",
+     "metin": "Pentazosin ve nalbufin, karma agonist-antagonist özelliklere sahip opioid analjeziklerin örnekleridir.",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "Buprenorfin, parsiyel bir μ reseptör agonisti, δ ve κ",
+     "metin": "Buprenorfin, parsiyel bir μ reseptör agonisti, δ ve κ reseptörlerinde antagonist olan güçlü ve uzun etkilidir.",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Morfinanlar",
+     "metin": "Butorfanol, nalbufine eşdeğer analjezi üretir ancak eşdeğer analjezik dozlarda daha fazla sedasyon üretir.",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Diğerleri",
+     "metin": "Tramadol, etki mekanizması ağırlıklı olarak serotonin geri alımını bloke etmeye dayanan, santral etkili bir analjeziktir.",
+     "s": [
+      63
+     ]
+    },
+    {
+     "baslik": "Antitusifler",
+     "metin": "Opioid analjezikler öksürük kesici ilaçlar arasında en etkili olanlardır.",
+     "s": [
+      64
+     ]
+    },
+    {
+     "baslik": "Reçetesiz satılan \"soğuk algınlığı/öksürük\" tedavilerinde kullanılan",
+     "metin": "Reçetesiz satılan \"soğuk algınlığı/öksürük\" tedavilerinde kullanılan formülasyonların içinde bulunan dekstrometorfana bağlı olarak çocuk ölümlerinde artış olduğunun bildirilmesi nedeniyle, 6 yaşından daha küçük çocuklarda dekstrometorfan kullanılması FDA tarafından yasaklanmıştır.",
+     "s": [
+      65
+     ]
+    },
+    {
+     "baslik": "Opioid Antagonistleri",
+     "metin": "Opioid Antagonistleri",
+     "s": [
+      66
+     ]
+    },
+    {
+     "baslik": "Bu grup ilaçların en yenisi olan nalmefen ise bir naltrekson türevidir,",
+     "metin": "Bu grup ilaçların en yenisi olan nalmefen ise bir naltrekson türevidir, fakat sadece intravenöz yolla uygulanır.",
+     "s": [
+      67
+     ]
+    },
+    {
+     "baslik": "Nalokson tam antagonist etkili bir ilaçtır; daha önceleri antagonist",
+     "metin": "Nalokson tam antagonist etkili bir ilaçtır; daha önceleri antagonist olarak kullanılmış olan nalorfin ve levallorfan gibi eski zayıf agonist- antagonistlere tercih edilir.",
+     "s": [
+      68
+     ]
+    },
+    {
+     "baslik": "İntravenöz ve epidural opioid kullanımına eşlik eden advers etkilerin",
+     "metin": "İntravenöz ve epidural opioid kullanımına eşlik eden advers etkilerin tedavisinde, düşük-doz nalokson (0,04 mg) uygulaması gittikçe önem kazanmaktadır.",
+     "s": [
+      69
+     ]
+    },
+    {
+     "baslik": "Naltrekson, etki süresinin uzun olması nedeniyle bağımlıların tedavi",
+     "metin": "Naltrekson, etki süresinin uzun olması nedeniyle bağımlıların tedavi programları için idame ilacı olarak önerilmiştir.",
+     "s": [
+      70
+     ]
+    },
+    {
+     "baslik": "Katzung’s Basic & Clinical Pharmacology",
+     "metin": "Katzung’s Basic & Clinical Pharmacology Edited by Todd W. Vanderah, PhD Sixteenth Edition Lange Medical Publications Copyright © 2024",
+     "s": [
+      71
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Opioid agonistlerinin prototipi olan morfin şiddetli ağrıya karşı uzun: Opioid agonistlerinin prototipi olan morfin şiddetli ağrıya karşı uzun yıllardır kullanılmaktadır.",
+    "Haşhaş kapsüllerinin çizilmesiyle sızan beyaz madde, daha sonra: Haşhaş kapsüllerinin çizilmesiyle sızan beyaz madde, daha sonra kahverengi katı bir kıvam alır; bu ham opium'dur.",
+    "Diğer reseptör alt-tipleri arasında δ (delta) ve ĸ (kappa) opioid: Diğer reseptör alt-tipleri arasında δ (delta) ve ĸ (kappa) opioid reseptörü benzeri alt tip 1 (ORL-1) reseptörleri bulunur.",
+    "Endojen Opioid Peptidler: Endojen Opioid Peptidler.",
+    "Üç endojen opioid peptid ailesi belirlenmiştir: endorfinler,: Üç endojen opioid peptid ailesi belirlenmiştir: endorfinler, pentapeptid enkefalinler olan metionin enkefalin (met-enkefalin) ve lösin-enkefalin (lö-enkefalin) ile dinorfinler.",
+    "Diğer endojen peptidler olan endomorfin-1 ve endomorfin-2,: Diğer endojen peptidler olan endomorfin-1 ve endomorfin-2, analjezi ve µ reseptörlerine yüksek afiniteyle bağlanma gibi birçok opioid peptid özelliğine sahiptirler.",
+    "Yakın zamanda, opioid peptidlere çok benzer yeni bir reseptör-ligand: Yakın zamanda, opioid peptidlere çok benzer yeni bir reseptör-ligand sistemi bulunmuştur. Bu sistemin ana reseptörü, G-protein kenetli orfanin opioid-reseptör-benzeri tip 1 (ORL-1)'dir.",
+    "Ekzojen Opioidlerin Farmakokinetiği: Ekzojen Opioidlerin Farmakokinetiği.",
+    "A. Absorbsiyon: Opioid analjeziklerin çoğu subkutan, intramusküler ve oral yollardan uygulandıklarında iyi absorbe edilirler.",
+    "B. Dağılım: Plazma proteinlerine farklı oranlarda bağlanmalarına karşın, opioidler hızla kan kompartımanından uzaklaşır ve beyin, akciğerler, karaciğer, böbrekler ve dalak gibi fazla kanlanan organlarda yüksek konsantrasyonlara ulaşırlar.",
+    "Morfinin yaklaşık %10'u ise ana bileşikten 4-6 kez daha güçlü: Morfinin yaklaşık %10'u ise ana bileşikten 4-6 kez daha güçlü analjezik etkinliğe sahip bir metabolit olan morfin-6-glukuronide (M6G) dönüşür.",
+    "Morfine benzer şekilde, hidromorfon da konjugasyon ile metabolize: Morfine benzer şekilde, hidromorfon da konjugasyon ile metabolize edilir ve MSS'yi eksite etme özelliği olan hidromorfon-3-glukuronid (H3G) adlı metaboliti oluşur.",
+    "Fentanil, karaciğerde P450 CYP3A4 tarafından N-dealkilasyon ile: Fentanil, karaciğerde P450 CYP3A4 tarafından N-dealkilasyon ile metabolize edilir. CYP3A4 ince barsak mukozasında da bulunur ve oral alındığında fentanilin ilk-geçiş metabolizmasına katkı sağlar.",
+    "Farmakodinami: A. Etki Mekanizması.",
+    "2. Hücresel etkiler - Moleküler düzeyde, opioid reseptörleri G: 2. Hücresel etkiler - Moleküler düzeyde, opioid reseptörleri G proteinleriyle kenetli bir protein ailesi oluştururlar ve bu etkileşme sonucunda iyon kanallarını etkiler, hücre-içi Ca2+ dağılımını modüle eder ve protein fosforilasyonunu değiştirirler.",
+    "Opioidlerin analjezik etkileri oldukça karmaşıktır ve aynı zamanda δ: Opioidlerin analjezik etkileri oldukça karmaşıktır ve aynı zamanda δ ve ĸ reseptörleri ile etkileşimin de analjezide katkısı bulunur.",
+    "4. Reseptör dağılımı ve analjezinin nöronal mekanizmaları - Her üç ana: 4. Reseptör dağılımı ve analjezinin nöronal mekanizmaları - Her üç ana reseptör tipi de omurilik arka boynuzda yüksek konsantrasyonlarda bulunur. Reseptörlerin varlığı, hem omurilik ağrı ileti nöronlarında hem de ağrı mesajını onlara ileten primer aferentlerde gösterilmiştir (Şekil 31-2, A ve B bölgeleri).",
+    "Opioid ilaçlar omuriliği direkt olarak etkileyerek çok güçlü bir: Opioid ilaçlar omuriliği direkt olarak etkileyerek çok güçlü bir analjezik etki ortaya çıkartırlar.",
+    "Ekzojen opioidlerin ağrıyı hafifletici etkileri kısmen endojen opioid: Ekzojen opioidlerin ağrıyı hafifletici etkileri kısmen endojen opioid peptidlerin salıverilmesine bağlıdır.",
+    "Opioidlerin periferik olarak verilmesi, örneğin artroskopik diz: Opioidlerin periferik olarak verilmesi, örneğin artroskopik diz cerrahisi sonrası hastaların dizine enjekte edilmesi, uygulama sonrası 24 saate kadar sürebilen klinik etkinlik sağlayabilmektedir.",
+    "Günümüzdeki anlayışa göre, tolerans gelişmesi sadece siklik adenozin: Günümüzdeki anlayışa göre, tolerans gelişmesi sadece siklik adenozin monofosfat (cAMP) sisteminin basit bir up-regülasyonuna bağlı olarak ortaya çıkmaz.",
+    "B. Morfin ve Benzerlerinin Organ Sistemlerine Etkileri: B. Morfin ve Benzerlerinin Organ Sistemlerine Etkileri.",
+    "b. Öfori - İntravenöz morfin alan hastalar veya ilaç bağımlıları, tipik: b. Öfori - İntravenöz morfin alan hastalar veya ilaç bağımlıları, tipik olarak, anksiyete ve sıkıntı duygularının azalmasının yanı sıra hoş bir duygu hissederler.",
+    "d. Solunum depresyonu - Opioid analjeziklerin hepsi beyin sapındaki: d. Solunum depresyonu - Opioid analjeziklerin hepsi beyin sapındaki solunum mekanizmalarını inhibe ederek belirgin solunum depresyonu oluştururlar.",
+    "e. Öksürük kesici etki - Öksürük refleksinin baskılanması opioidlerin: e. Öksürük kesici etki - Öksürük refleksinin baskılanması opioidlerin iyi bilinen etkilerindendir. Kodein özellikle patolojik öksürüğü olan kimselerde ve endotrakeal tüp ile ventilasyonu sürdürmesi gerekli hastalarda kullanılır.",
+    "g. Trunkal rijidite (Gövde sertliği) - Birçok opioid ilacın gövdenin: g. Trunkal rijidite (Gövde sertliği) - Birçok opioid ilacın gövdenin büyük kaslarının tonusunu artırdığı gösterilmiştir.",
+    "i. Vücut sıcaklığı - Morfin gibi µ-opioid reseptör agonistlerinin: i. Vücut sıcaklığı - Morfin gibi µ-opioid reseptör agonistlerinin anterior hipotalamusa uygulanmasının hipertermi oluşturduğunu, buna karşılık ĸ agonistlerinin verilmesinin hipotermiye neden olduğunu gösterilmiştir.",
+    "Antimuskarinik etkisine bağlı olarak taşikardi gelişebilmesi: Antimuskarinik etkisine bağlı olarak taşikardi gelişebilmesi nedeniyle, meperidin bu genellemenin dışında kalır.",
+    "Opioid reseptörleri gastrointestinal kanalda yüksek yoğunlukta: Opioid reseptörleri gastrointestinal kanalda yüksek yoğunlukta bulunurlar, böylelikle opioidlerin konstipasyon yapıcı etkilerine MSS kadar enterik sinir sistemi de katkıda bulunur.",
+    "c. Safra yolları - Opioidler safra yollarının düz kaslarında spazm: c. Safra yolları - Opioidler safra yollarının düz kaslarında spazm yaparak safra koliğine neden olabilirler.",
+    "e. Uterus - Opioid analjezikler doğum eylemini uzatırlar.: e. Uterus - Opioid analjezikler doğum eylemini uzatırlar.",
+    "g. Pruritus - Morfin ve kodein gibi opiatlar, bazen terleme, ürtiker: g. Pruritus - Morfin ve kodein gibi opiatlar, bazen terleme, ürtiker ve kaşıntıyla birlikte ciltte kızarma ve ısı artışına neden olur.",
+    "C. Karma Agonist-Antagonist Opioidlerin Etkileri: C. Karma Agonist-Antagonist Opioidlerin Etkileri.",
+    "Opioid Analjeziklerin Klinik Farmakolojisi: Opioid Analjeziklerin Klinik Farmakolojisi Opioid Analjeziklerin Klinikte Kullanılışı.",
+    "Günümüzde opioid ilacın daha yavaş salıverilmesine olanak veren yeni: Günümüzde opioid ilacın daha yavaş salıverilmesine olanak veren yeni farmasötik şekiller kullanılmaya başlanmıştır.",
+    "Opioid analjezikler obstetrikte sıklıkla kullanılırlar. Plasenta: Opioid analjezikler obstetrikte sıklıkla kullanılırlar. Plasenta bariyerini aşıp fetusa erişebildiklerinden, neonatal depresyonu en aza indirmek için dikkatli davranılmalıdır.",
+    "C. Öksürük: Öksürüğün kesilmesi analjezi için gerekli olandan daha düşük dozlarla sağlanabilir.",
+    "F. Anestezide Kullanımları: F. Anestezide Kullanımları.",
+    "G. Alternatif Uygulama Yolları: G. Alternatif Uygulama Yolları.",
+    "İntranazal yol, tekrarlanan parenteral ilaç enjeksiyonlarından ve oral: İntranazal yol, tekrarlanan parenteral ilaç enjeksiyonlarından ve oral uygulanan ilaçların ilk-geçiş etkisinden kaçınılmasını sağlar.",
+    "1. Opioid tolerans - Toleransın gelişmesi opioid ilacın ilk dozuyla: 1. Opioid tolerans - Toleransın gelişmesi opioid ilacın ilk dozuyla birlikte başlamasına karşın, klinik belirtiler olağan terapötik dozda en az 2-3 hafta ilaç uygulanmasından sonra ortaya çıkar.",
+    "Tolerans gelişmemiş bir kimsede 60 mg dozunda morfin solunumun: Tolerans gelişmemiş bir kimsede 60 mg dozunda morfin solunumun durmasına yol açabilir,.",
+    "Karma agonist-antagonist ilaçların tekrarlanan uygulamalarından: Karma agonist-antagonist ilaçların tekrarlanan uygulamalarından sonra azalan etkileri arasında halüsinasyonlar, sedasyon, hipotermi ve solunum depresyonunu sayabiliriz.",
+    "µ-reseptör agonistleri arasında gelişen çapraz-tolerans parsiyel veya: µ-reseptör agonistleri arasında gelişen çapraz-tolerans parsiyel veya yetersiz olabilir.",
+    "2. Bağımlılık - Mü tipi opioid ilaçların tekrarlanan uygulanışları ile: 2. Bağımlılık - Mü tipi opioid ilaçların tekrarlanan uygulanışları ile gelişen toleransa hemen her zaman fiziksel bağımlılık eşlik eder.",
+    "Meperidine bağlı yoksunluk sendromunda belirtiler büyük oranda 24: Meperidine bağlı yoksunluk sendromunda belirtiler büyük oranda 24 saat içinde azalır, buna karşılık metadon bağımlılığında yoksunluk sendromunun doruk noktaya erişmesi günler alabilir ve yaklaşık 2 hafta kadar devam edebilir.",
+    "Antagonistin enjeksiyonundan sonraki 3 dakika içinde ani: Antagonistin enjeksiyonundan sonraki 3 dakika içinde ani kesilmedekine benzer belirti ve semptomlar görülmeye başlar,.",
+    "Bu faktörler opioidlerin kötüye kullanımına yol açan başlıca nedenleri: Bu faktörler opioidlerin kötüye kullanımına yol açan başlıca nedenleri oluştururlar ve fiziksel bağımlılığın gelişmesi ile bu durum daha da şiddetlenir.",
+    "C. Kontrendikasyonlar ve Tedavideki Önlemler: C. Kontrendikasyonlar ve Tedavideki Önlemler.",
+    "Annenin günlük düşük dozda heroin kullanımı yenidoğanda hafif: Annenin günlük düşük dozda heroin kullanımı yenidoğanda hafif yoksunluk belirtilerine, dozun artması ise irritabilite, şiddetli ağlama, diyare ve nöbet gibi ciddi belirtilere yol açabilir.",
+    "5. Karaciğer veya böbrek bozukluğu olan hastalarda kullanım -: 5. Karaciğer veya böbrek bozukluğu olan hastalarda kullanım - Morfin ve benzerleri başlıca karaciğerde metabolize edildikleri için prehepatik koma dönemindeki hastalarda kullanılmaları tartışılabilir.",
+    "Spesifik İlaçlar: Spesifik İlaçlar Güçlü Agonistler Fenantrenler.",
+    "Metadon sadece güçlü bir µ-reseptör agonisti değildir, aynı: Metadon sadece güçlü bir µ-reseptör agonisti değildir, aynı zamanda NMDA reseptörlerini ve monoaminerjik geri-alım taşıyıcılarını da bloke eder.",
+    "Metadonun ani kesilmesinden sonra ortaya çıkan yoksunluk belirti ve: Metadonun ani kesilmesinden sonra ortaya çıkan yoksunluk belirti ve semptomları morfine göre daha hafif şiddette olur, fakat daha uzun sürer.",
+    "Sufentanil fentanilden 5-7 kez daha güçlüdür.: Sufentanil fentanilden 5-7 kez daha güçlüdür.",
+    "Zayıf-Orta Derecede Etkili Agonistler: Zayıf-Orta Derecede Etkili Agonistler Fenantrenler.",
+    "Fenilheptilaminler: Fenilheptilaminler.",
+    "Diyare tedavisinde kullanılan bir diğer fenilpiperidin türevi: Diyare tedavisinde kullanılan bir diğer fenilpiperidin türevi loperamid'dir.",
+    "Fenantrenler: Pentazosin ve nalbufin, karma agonist-antagonist özelliklere sahip opioid analjeziklerin örnekleridir.",
+    "Buprenorfin, parsiyel bir μ reseptör agonisti, δ ve κ: Buprenorfin, parsiyel bir μ reseptör agonisti, δ ve κ reseptörlerinde antagonist olan güçlü ve uzun etkilidir.",
+    "Morfinanlar: Butorfanol, nalbufine eşdeğer analjezi üretir ancak eşdeğer analjezik dozlarda daha fazla sedasyon üretir.",
+    "Diğerleri: Tramadol, etki mekanizması ağırlıklı olarak serotonin geri alımını bloke etmeye dayanan, santral etkili bir analjeziktir.",
+    "Antitusifler: Opioid analjezikler öksürük kesici ilaçlar arasında en etkili olanlardır.",
+    "Reçetesiz satılan \"soğuk algınlığı/öksürük\" tedavilerinde kullanılan: Reçetesiz satılan \"soğuk algınlığı/öksürük\" tedavilerinde kullanılan formülasyonların içinde bulunan dekstrometorfana bağlı olarak çocuk ölümlerinde artış olduğunun bildirilmesi nedeniyle, 6 yaşından daha küçük çocuklarda dekstrometorfan kullanılması FDA tarafından yasaklanmıştır.",
+    "Opioid Antagonistleri: Opioid Antagonistleri.",
+    "Bu grup ilaçların en yenisi olan nalmefen ise bir naltrekson türevidir,: Bu grup ilaçların en yenisi olan nalmefen ise bir naltrekson türevidir, fakat sadece intravenöz yolla uygulanır.",
+    "Nalokson tam antagonist etkili bir ilaçtır; daha önceleri antagonist: Nalokson tam antagonist etkili bir ilaçtır; daha önceleri antagonist olarak kullanılmış olan nalorfin ve levallorfan gibi eski zayıf agonist- antagonistlere tercih edilir.",
+    "İntravenöz ve epidural opioid kullanımına eşlik eden advers etkilerin: İntravenöz ve epidural opioid kullanımına eşlik eden advers etkilerin tedavisinde, düşük-doz nalokson (0,04 mg) uygulaması gittikçe önem kazanmaktadır.",
+    "Naltrekson, etki süresinin uzun olması nedeniyle bağımlıların tedavi: Naltrekson, etki süresinin uzun olması nedeniyle bağımlıların tedavi programları için idame ilacı olarak önerilmiştir.",
+    "Katzung’s Basic & Clinical Pharmacology: Katzung’s Basic & Clinical Pharmacology Edited by Todd W. Vanderah, PhD Sixteenth Edition Lange Medical Publications Copyright © 2024."
+   ],
+   "v": "0c9d090ab1"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Çıkmış sorular en çok morfinin µ reseptör etkilerine, solunum depresyonuna, tolerans gelişmeyen etkilere, nalokson ile antidiyareik ve antitüsif opioidlere odaklanır. Bu konular her yıl tekrarlanmaktadır.",
+   "maddeler": [
+    {
+     "baslik": "Opioidlerin solunum depresyonu",
+     "metin": "Opioidler beyin sapı solunum merkezini inhibe ederek doz-bağımlı solunum depresyonu yapar; etki CO2 duyarlılığını azaltır.",
+     "neden": "2018-2019 ve 2022-2023 çıkmışlarında solunum depresyonu ve CO2 duyarlılığı doğrudan soruldu; en kritik yan etkidir.",
+     "s": [
+      25
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Morfinin µ reseptörü üzerinden etkileri",
+     "metin": "Morfinin analjezik, öforizan, solunum depresan ve fiziksel bağımlılık yapıcı etkileri µ reseptörü üzerinden ortaya çıkar.",
+     "neden": "2018-2019 çıkmışında morfinin µ etkileri ve butorfanol-nalbufin öncülleriyle soruldu; alfa reseptörü klasik çeldiricidir.",
+     "s": [
+      16
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Morfinin santral etkileri",
+     "metin": "Morfinin başlıca santral etkileri analjezi, öfori, sedasyon ve solunum depresyonudur; bulantı ve kusma kemoreseptör bölgesinden doğar.",
+     "neden": "2020-2021 çıkmışında morfinin yan etkisi olmayan seçenek olarak antipiretik etki soruldu.",
+     "s": [
+      27
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nalokson ve opioid antagonistleri",
+     "metin": "Akut opioid zehirlenmesinde ve doz aşımında nalokson kullanılır; naltrekson ve nalmefen diğer tam antagonistlerdir.",
+     "neden": "2018-2019 çıkmışında akut opiyat intoksikasyonunda kullanılan ajan olarak nalokson doğrudan soruldu.",
+     "s": [
+      68
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Tolerans gelişmeyen etkiler",
+     "metin": "Opioidlerin miyotik (miyozis), konvülsan ve konstipasyon yapıcı etkilerine tolerans gelişmez.",
+     "neden": "2023-2024 ve 2024-2025 çıkmışlarında tolerans gelişmeyen etki olarak miyozis ve konstipasyon soruldu; klasik tuzaktır.",
+     "s": [
+      43
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Morfin metabolizması: M3G ve M6G",
+     "metin": "Morfin polar glukuronidlere dönüşür; M3G nöroeksitatör, M6G ise morfinden güçlü analjeziktir.",
+     "neden": "2019-2020 çıkmışında opioidlerin polar metabolitlere dönüşüp böbrekten atılması doğrudan soruldu.",
+     "s": [
+      11
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Opioid reseptör tipleri ve nalokson",
+     "metin": "Üç ana opioid reseptör tipi µ, δ ve ĸ'dır; morfinin yapısal değişikliğiyle güçlü µ antagonisti nalokson elde edilir.",
+     "neden": "Reseptör tipleri ve nalokson üretimi sınavda doğrudan sorulabilir temel bilgidir.",
+     "s": [
+      4
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Tolerans ve fiziksel bağımlılık",
+     "metin": "Terapötik dozların sık tekrarıyla etkinlikte kademeli azalma olan tolerans gelişir; buna fiziksel bağımlılık eşlik eder.",
+     "neden": "2019-2020 çıkmışında tolerans ifadeleri (analjezi, sedasyon, solunum depresyonuna tolerans) öncüllü soruldu.",
+     "s": [
+      21
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Çıkmış sorular en çok morfinin µ reseptör etkilerine, solunum depresyonuna, tolerans gelişmeyen etkilere, nalokson ile antidiyareik ve antitüsif opioidlere odaklanır. Bu konular her yıl tekrarlanmaktadır.",
+    "Opioidlerin solunum depresyonu: Opioidler beyin sapı solunum merkezini inhibe ederek doz-bağımlı solunum depresyonu yapar; etki CO2 duyarlılığını azaltır.",
+    "Morfinin µ reseptörü üzerinden etkileri: Morfinin analjezik, öforizan, solunum depresan ve fiziksel bağımlılık yapıcı etkileri µ reseptörü üzerinden ortaya çıkar.",
+    "Morfinin santral etkileri: Morfinin başlıca santral etkileri analjezi, öfori, sedasyon ve solunum depresyonudur; bulantı ve kusma kemoreseptör bölgesinden doğar.",
+    "Nalokson ve opioid antagonistleri: Akut opioid zehirlenmesinde ve doz aşımında nalokson kullanılır; naltrekson ve nalmefen diğer tam antagonistlerdir.",
+    "Tolerans gelişmeyen etkiler: Opioidlerin miyotik (miyozis), konvülsan ve konstipasyon yapıcı etkilerine tolerans gelişmez.",
+    "Morfin metabolizması: M3G ve M6G: Morfin polar glukuronidlere dönüşür; M3G nöroeksitatör, M6G ise morfinden güçlü analjeziktir.",
+    "Opioid reseptör tipleri ve nalokson: Üç ana opioid reseptör tipi µ, δ ve ĸ'dır; morfinin yapısal değişikliğiyle güçlü µ antagonisti nalokson elde edilir.",
+    "Tolerans ve fiziksel bağımlılık: Terapötik dozların sık tekrarıyla etkinlikte kademeli azalma olan tolerans gelişir; buna fiziksel bağımlılık eşlik eder."
+   ],
+   "v": "7e1a5aaf06"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 19 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2018-2019",
+     "metin": "Opioid ajanlara ilişkin ifadeler (morfinin etkileri ve reseptör tipi, butorfanol-nalbufin) değerlendiriliyor; hangileri doğrudur?",
+     "cevap": "II ve IV",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Nalokson II. Metadon III. Naltrekson IV. Vareniklin ilaçlarından hangisi/hangileri opiyat bağımlılığının tedavi protokolünde yer alır?",
+     "cevap": "I, II ve III",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Genel anestezide IV indüksiyon/analjezi amacıyla kullanılan, yüksek lipofilitesiyle kan-beyin bariyerini hızla geçen sentetik opioid hangisidir?",
+     "cevap": "Fentanil",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Opioid farmakodinamisiyle ilgili ifadeler (presinaptik Ca++ kanalı kapanması, µ reseptör etkileri) doğrudur; hangileri doğrudur?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Akut opiyat intoksikasyonunda aşağıdaki ajanlardan hangisi kullanılır?",
+     "cevap": "Nalokson",
+     "s": [
+      68
+     ]
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Opioid tedavisinin yan etkileriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Solunum depresyonu riski en fazla opioid tedavisine başlandığında veya doz artışını takiben olur.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi morfinin yan etkilerinden biri değildir?",
+     "cevap": "Antipiretik etki",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki belirtilerden hangisi morfinin yan etkilerinden biri değildir?",
+     "cevap": "Diyare",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Opioid analjeziklerin solunum depresyonu ve CO2 duyarlılığına ilişkin ifadeler değerlendiriliyor; hangileri doğrudur?",
+     "cevap": "I, II ve III",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Antitüsif etkisi olmayan, diyare tedavisinde kullanılan opioid hangisidir?",
+     "cevap": "Difenoksilat",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Opioid analjezikler için aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Polar metabolitlere dönüşür (glukuronidasyon) ve böbrek yoluyla atılırlar",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Opioidlerin aşağıdaki etkilerinden hangisine karşı tolerans gelişmez?",
+     "cevap": "Miyozis",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi opioid analjeziklerin endikasyonlarından biri değildir?",
+     "cevap": "Doğum eylemini geciktirme",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Diyare tedavisinde kullanılan, beyine geçişi sınırlı olduğundan SSS etkisi çok az olan opioid hangisidir?",
+     "cevap": "Loperamid",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Antitüsif etkisi olmayan ve diyare tedavisinde kullanılan opioid ilaç hangisidir?",
+     "cevap": "Loperamid",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Etki mekanizması ağırlıklı serotonin geri alımını bloke etmeye ve noradrenalin taşıyıcısının inhibisyonuna dayanan santral analjezik hangisidir?",
+     "cevap": "Tramadol",
+     "s": [
+      63
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Opioid toksisitesi ve toleransla ilgili ifadeler değerlendiriliyor; hangileri doğrudur?",
+     "cevap": "II ve IV",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Aşağıdakilerden hangisine opioidlerin kronik kullanımında tolerans gelişmez?",
+     "cevap": "Konstipasyon",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki ilaçlardan hangisi antitüsif olarak kullanılmayan opioid türevidir?",
+     "cevap": "Fentanil",
+     "s": [
+      64
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 19 çıkmış soru var.",
+    "2018-2019: Opioid ajanlara ilişkin ifadeler (morfinin etkileri ve reseptör tipi, butorfanol-nalbufin) değerlendiriliyor; hangileri doğrudur?",
+    "Cevap: II ve IV.",
+    "2018-2019: I. Nalokson II. Metadon III. Naltrekson IV. Vareniklin ilaçlarından hangisi/hangileri opiyat bağımlılığının tedavi protokolünde yer alır?",
+    "Cevap: I, II ve III.",
+    "2025-2026: Genel anestezide IV indüksiyon/analjezi amacıyla kullanılan, yüksek lipofilitesiyle kan-beyin bariyerini hızla geçen sentetik opioid hangisidir?",
+    "Cevap: Fentanil.",
+    "2019-2020: Opioid farmakodinamisiyle ilgili ifadeler (presinaptik Ca++ kanalı kapanması, µ reseptör etkileri) doğrudur; hangileri doğrudur?",
+    "Cevap: I, II, III ve IV.",
+    "2018-2019: Akut opiyat intoksikasyonunda aşağıdaki ajanlardan hangisi kullanılır?",
+    "Cevap: Nalokson.",
+    "2022-2023: Opioid tedavisinin yan etkileriyle ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Solunum depresyonu riski en fazla opioid tedavisine başlandığında veya doz artışını takiben olur.",
+    "2020-2021: Aşağıdakilerden hangisi morfinin yan etkilerinden biri değildir?",
+    "Cevap: Antipiretik etki.",
+    "2020-2021: Aşağıdaki belirtilerden hangisi morfinin yan etkilerinden biri değildir?",
+    "Cevap: Diyare.",
+    "2018-2019: Opioid analjeziklerin solunum depresyonu ve CO2 duyarlılığına ilişkin ifadeler değerlendiriliyor; hangileri doğrudur?",
+    "Cevap: I, II ve III.",
+    "2024-2025: Antitüsif etkisi olmayan, diyare tedavisinde kullanılan opioid hangisidir?",
+    "Cevap: Difenoksilat.",
+    "2019-2020: Opioid analjezikler için aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Polar metabolitlere dönüşür (glukuronidasyon) ve böbrek yoluyla atılırlar.",
+    "2023-2024: Opioidlerin aşağıdaki etkilerinden hangisine karşı tolerans gelişmez?",
+    "Cevap: Miyozis.",
+    "2020-2021: Aşağıdakilerden hangisi opioid analjeziklerin endikasyonlarından biri değildir?",
+    "Cevap: Doğum eylemini geciktirme.",
+    "2025-2026: Diyare tedavisinde kullanılan, beyine geçişi sınırlı olduğundan SSS etkisi çok az olan opioid hangisidir?",
+    "Cevap: Loperamid.",
+    "2023-2024: Antitüsif etkisi olmayan ve diyare tedavisinde kullanılan opioid ilaç hangisidir?",
+    "Cevap: Loperamid.",
+    "2020-2021: Etki mekanizması ağırlıklı serotonin geri alımını bloke etmeye ve noradrenalin taşıyıcısının inhibisyonuna dayanan santral analjezik hangisidir?",
+    "Cevap: Tramadol.",
+    "2019-2020: Opioid toksisitesi ve toleransla ilgili ifadeler değerlendiriliyor; hangileri doğrudur?",
+    "Cevap: II ve IV.",
+    "2024-2025: Aşağıdakilerden hangisine opioidlerin kronik kullanımında tolerans gelişmez?",
+    "Cevap: Konstipasyon.",
+    "2020-2021: Aşağıdaki ilaçlardan hangisi antitüsif olarak kullanılmayan opioid türevidir?",
+    "Cevap: Fentanil."
+   ],
+   "v": "3a4acbb277"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%42) ve ilaç ve endikasyon (%25) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Ilaç ve endikasyon",
+     "metin": "Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%67) ve anlama ve ilişki kurma (%33) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%51) ve öncüllü soru (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%42) ve ilaç ve endikasyon (%25) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Ilaç ve endikasyon: Doğru ilacı doğru hastaya vermek: endikasyon/ilk seçenek.",
+    "Düzey: Soruların düzeyi hatırlama (%67) ve anlama ve ilişki kurma (%33) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "6ca35179e6"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Doğum eylemini geciktirme",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi opioid analjeziklerin endikasyonlarından biri değildir?"
+    },
+    {
+     "baslik": "Opioidlerin solunum depresyonu",
+     "metin": "2018-2019 ve 2022-2023 çıkmışlarında solunum depresyonu ve CO2 duyarlılığı doğrudan soruldu; en kritik yan etkidir."
+    },
+    {
+     "baslik": "Morfinin µ reseptörü üzerinden etkileri",
+     "metin": "2018-2019 çıkmışında morfinin µ etkileri ve butorfanol-nalbufin öncülleriyle soruldu; alfa reseptörü klasik çeldiricidir."
+    },
+    {
+     "baslik": "Morfinin santral etkileri",
+     "metin": "2020-2021 çıkmışında morfinin yan etkisi olmayan seçenek olarak antipiretik etki soruldu."
+    },
+    {
+     "baslik": "Nalokson ve opioid antagonistleri",
+     "metin": "2018-2019 çıkmışında akut opiyat intoksikasyonunda kullanılan ajan olarak nalokson doğrudan soruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Doğum eylemini geciktirme: Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi opioid analjeziklerin endikasyonlarından biri değildir?",
+    "Opioidlerin solunum depresyonu: 2018-2019 ve 2022-2023 çıkmışlarında solunum depresyonu ve CO2 duyarlılığı doğrudan soruldu; en kritik yan etkidir.",
+    "Morfinin µ reseptörü üzerinden etkileri: 2018-2019 çıkmışında morfinin µ etkileri ve butorfanol-nalbufin öncülleriyle soruldu; alfa reseptörü klasik çeldiricidir.",
+    "Morfinin santral etkileri: 2020-2021 çıkmışında morfinin yan etkisi olmayan seçenek olarak antipiretik etki soruldu.",
+    "Nalokson ve opioid antagonistleri: 2018-2019 çıkmışında akut opiyat intoksikasyonunda kullanılan ajan olarak nalokson doğrudan soruldu.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "82402608c2"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders opioid analjeziklerin kaynağını, reseptör tiplerini, farmakokinetik ve farmakodinamik özelliklerini, organ sistemi etkilerini, tolerans ve bağımlılığı, klinik kullanımları ile spesifik ilaçları ve opioid antagonistlerini kapsar.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders opioid analjeziklerin kaynağını, reseptör tiplerini, farmakokinetik ve farmakodinamik özelliklerini, organ sistemi etkilerini, tolerans ve bağımlılığı, klinik kullanımları ile spesifik ilaçları ve opioid antagonistlerini kapsar."
+   ],
+   "v": "004de65709"
+  },
+  {
+   "id": "2f05-03",
+   "baslik": "Opioid reseptör tipleri ve nalokson",
+   "giris": "Üç ana opioid reseptör tipi µ, δ ve ĸ'dır; morfinin yapısal değişikliğiyle güçlü µ antagonisti nalokson elde edilir.",
+   "s": [
+    4
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Üç ana opioid reseptör tipi µ, δ ve ĸ olarak belirlenmiştir; hepsi G protein-kenetli reseptör ailesinin üyesidir."
+    },
+    {
+     "metin": "δ ve ĸ yanında ORL-1 benzeri alt tip 1 reseptörü bulunur."
+    },
+    {
+     "metin": "Morfin major analjezik reseptör olan µ reseptörünün tam agonistidir."
+    },
+    {
+     "metin": "Tam agonist morfinin yapısal değişikliği ile güçlü µ reseptör antagonisti nalokson elde edilir."
+    },
+    {
+     "metin": "Nalbufin bir reseptör alt tipinde agonist, diğerinde antagonist etki üretir; kodein zayıf µ agonistidir."
+    }
+   ],
+   "klip": "o-2f05-03",
+   "ses": [
+    "Opioid reseptör tipleri ve nalokson.",
+    "Üç ana opioid reseptör tipi µ, δ ve ĸ'dır; morfinin yapısal değişikliğiyle güçlü µ antagonisti nalokson elde edilir.",
+    "Üç ana opioid reseptör tipi µ, δ ve ĸ olarak belirlenmiştir; hepsi G protein-kenetli reseptör ailesinin üyesidir.",
+    "δ ve ĸ yanında ORL-1 benzeri alt tip 1 reseptörü bulunur.",
+    "Morfin major analjezik reseptör olan µ reseptörünün tam agonistidir.",
+    "Tam agonist morfinin yapısal değişikliği ile güçlü µ reseptör antagonisti nalokson elde edilir.",
+    "Nalbufin bir reseptör alt tipinde agonist, diğerinde antagonist etki üretir; kodein zayıf µ agonistidir."
+   ],
+   "v": "70ba4525fe"
+  },
+  {
+   "id": "2f05-10",
+   "baslik": "Morfin metabolizması: M3G ve M6G",
+   "giris": "Morfin polar glukuronidlere dönüşür; M3G nöroeksitatör, M6G ise morfinden güçlü analjeziktir.",
+   "s": [
+    11
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Opioidler büyük ölçüde polar metabolitlere, genellikle glukuronidlere dönüşür ve hızlıca böbreklerden atılır."
+    },
+    {
+     "metin": "Serbest hidroksil grubu içeren morfin primer olarak nöroeksitatör özellikli morfin-3-glukuronide dönüşür; etkisine GABA/glisinerjik sistem aracılık eder."
+    },
+    {
+     "metin": "Morfinin yaklaşık %10'u, ana bileşikten 4-6 kez daha güçlü analjezik etkinliğe sahip morfin-6-glukuronide dönüşür."
+    },
+    {
+     "metin": "Böbrek yetmezliğinde bu metabolitler birikerek beklenmeyen advers etkilere yol açabilir."
+    },
+    {
+     "metin": "Polar metabolitler ve glukuronid konjugatları başlıca idrarla atılır."
+    }
+   ],
+   "klip": "o-2f05-10",
+   "ses": [
+    "Morfin metabolizması: M3G ve M6G.",
+    "Morfin polar glukuronidlere dönüşür; M3G nöroeksitatör, M6G ise morfinden güçlü analjeziktir.",
+    "Opioidler büyük ölçüde polar metabolitlere, genellikle glukuronidlere dönüşür ve hızlıca böbreklerden atılır.",
+    "Serbest hidroksil grubu içeren morfin primer olarak nöroeksitatör özellikli morfin-3-glukuronide dönüşür; etkisine GABA/glisinerjik sistem aracılık eder.",
+    "Morfinin yaklaşık %10'u, ana bileşikten 4-6 kez daha güçlü analjezik etkinliğe sahip morfin-6-glukuronide dönüşür.",
+    "Böbrek yetmezliğinde bu metabolitler birikerek beklenmeyen advers etkilere yol açabilir.",
+    "Polar metabolitler ve glukuronid konjugatları başlıca idrarla atılır."
+   ],
+   "v": "836f5252af"
+  },
+  {
+   "id": "2f05-04",
+   "baslik": "Morfinin µ reseptörü üzerinden etkileri",
+   "giris": "Morfinin analjezik, öforizan, solunum depresan ve fiziksel bağımlılık yapıcı etkileri µ reseptörü üzerinden ortaya çıkar.",
+   "s": [
+    16
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Morfinin analjezik, öforizan, solunum depresan ve fiziksel bağımlılık yapıcı etkileri µ reseptörü üzerine etkisinin sonuçlarıdır."
+    },
+    {
+     "metin": "Opioidler fizyolojik olarak µ, δ ve ĸ reseptörleri üzerinden etkilidir; alfa reseptörü üzerinden etkili olduklarını söylemek yanlıştır."
+    },
+    {
+     "metin": "Solunum depresyonu ve bağımlılık eğilimi düşük bileşik arayışında butorfanol ve nalbufin gibi ĸ afiniteli ilaçlar geliştirilmiştir."
+    },
+    {
+     "metin": "Butorfanolün kadınlarda erkeklere oranla daha güçlü analjezik etki gösterdiği bildirilmiştir."
+    },
+    {
+     "metin": "Analjeziye δ ve ĸ reseptörleriyle etkileşim de katkıda bulunur."
+    }
+   ],
+   "klip": "o-2f05-04",
+   "ses": [
+    "Morfinin µ reseptörü üzerinden etkileri.",
+    "Morfinin analjezik, öforizan, solunum depresan ve fiziksel bağımlılık yapıcı etkileri µ reseptörü üzerinden ortaya çıkar.",
+    "Morfinin analjezik, öforizan, solunum depresan ve fiziksel bağımlılık yapıcı etkileri µ reseptörü üzerine etkisinin sonuçlarıdır.",
+    "Opioidler fizyolojik olarak µ, δ ve ĸ reseptörleri üzerinden etkilidir; alfa reseptörü üzerinden etkili olduklarını söylemek yanlıştır.",
+    "Solunum depresyonu ve bağımlılık eğilimi düşük bileşik arayışında butorfanol ve nalbufin gibi ĸ afiniteli ilaçlar geliştirilmiştir.",
+    "Butorfanolün kadınlarda erkeklere oranla daha güçlü analjezik etki gösterdiği bildirilmiştir.",
+    "Analjeziye δ ve ĸ reseptörleriyle etkileşim de katkıda bulunur."
+   ],
+   "v": "504079f50a"
+  },
+  {
+   "id": "2f05-05",
+   "baslik": "Opioidlerin hücresel etki mekanizması",
+   "giris": "Opioidler presinaptik voltaj-bağımlı Ca2+ kanallarını kapatır ve postsinaptik K+ kanallarını açar.",
+   "s": [
+    16
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Opioid reseptörleri G proteinleriyle kenetli bir ailedir; iyon kanallarını etkiler ve hücre içi kalsiyum dağılımını değiştirir."
+    },
+    {
+     "metin": "Presinaptik sinir uçlarında voltaj-bağımlı Ca2+ kanallarını kapatır ve böylece transmiter salıverilmesini azaltır."
+    },
+    {
+     "metin": "K+ kanallarını açarak postsinaptik nöronları hiperpolarize eder."
+    },
+    {
+     "metin": "Morfin başlıca µ reseptörleri üzerine etki eder; analjezik, öforizan ve solunum depresan etkiler bundan doğar."
+    },
+    {
+     "metin": "Her iki etki de ağrı iletiminin ve nöronal uyarılmanın baskılanmasıyla sonuçlanır."
+    }
+   ],
+   "klip": "o-2f05-05",
+   "ses": [
+    "Opioidlerin hücresel etki mekanizması.",
+    "Opioidler presinaptik voltaj-bağımlı Ca2+ kanallarını kapatır ve postsinaptik K+ kanallarını açar.",
+    "Opioid reseptörleri G proteinleriyle kenetli bir ailedir; iyon kanallarını etkiler ve hücre içi kalsiyum dağılımını değiştirir.",
+    "Presinaptik sinir uçlarında voltaj-bağımlı Ca2+ kanallarını kapatır ve böylece transmiter salıverilmesini azaltır.",
+    "K+ kanallarını açarak postsinaptik nöronları hiperpolarize eder.",
+    "Morfin başlıca µ reseptörleri üzerine etki eder; analjezik, öforizan ve solunum depresan etkiler bundan doğar.",
+    "Her iki etki de ağrı iletiminin ve nöronal uyarılmanın baskılanmasıyla sonuçlanır."
+   ],
+   "v": "069fa7cb55"
+  },
+  {
+   "id": "2f05-17",
+   "baslik": "Tolerans ve fiziksel bağımlılık",
+   "giris": "Terapötik dozların sık tekrarıyla etkinlikte kademeli azalma olan tolerans gelişir; buna fiziksel bağımlılık eşlik eder.",
+   "s": [
+    21
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Morfin ve benzerlerinin terapötik dozlarının sık tekrarlanmasıyla etkinlikte kademeli azalma olur; bu kayba tolerans denir."
+    },
+    {
+     "metin": "Opioid agonistlerinin analjezik, sedatif ve solunumu baskılayıcı etkilerine karşı yüksek derecede tolerans gelişebilir."
+    },
+    {
+     "metin": "Toleransla birlikte fiziksel bağımlılık gelişir; ilaç kesildiğinde veya antagonist verildiğinde yoksunluk sendromu ortaya çıkar."
+    },
+    {
+     "metin": "Klinik tolerans belirtileri olağan dozlarda en az 2-3 hafta sonra belirir; remifentanilde saatler içinde görülebilir."
+    },
+    {
+     "metin": "µ agonistleri arasında çapraz tolerans gelişir."
+    }
+   ],
+   "klip": "o-2f05-17",
+   "ses": [
+    "Tolerans ve fiziksel bağımlılık.",
+    "Terapötik dozların sık tekrarıyla etkinlikte kademeli azalma olan tolerans gelişir; buna fiziksel bağımlılık eşlik eder.",
+    "Morfin ve benzerlerinin terapötik dozlarının sık tekrarlanmasıyla etkinlikte kademeli azalma olur; bu kayba tolerans denir.",
+    "Opioid agonistlerinin analjezik, sedatif ve solunumu baskılayıcı etkilerine karşı yüksek derecede tolerans gelişebilir.",
+    "Toleransla birlikte fiziksel bağımlılık gelişir; ilaç kesildiğinde veya antagonist verildiğinde yoksunluk sendromu ortaya çıkar.",
+    "Klinik tolerans belirtileri olağan dozlarda en az 2-3 hafta sonra belirir; remifentanilde saatler içinde görülebilir.",
+    "µ agonistleri arasında çapraz tolerans gelişir."
+   ],
+   "v": "b3064e24bc"
+  },
+  {
+   "id": "2f05-12",
+   "baslik": "Opioidlerin solunum depresyonu",
+   "giris": "Opioidler beyin sapı solunum merkezini inhibe ederek doz-bağımlı solunum depresyonu yapar; etki CO2 duyarlılığını azaltır.",
+   "s": [
+    25
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Opioid analjeziklerin hepsi beyin sapındaki solunum mekanizmalarını inhibe ederek belirgin solunum depresyonu oluşturur."
+    },
+    {
+     "metin": "Solunum depresyonu doz-bağımlıdır ve CO2'ye karşı duyarlılığın azalmasıyla ölçülür."
+    },
+    {
+     "metin": "Kafa içi basıncı artmış, astım, KOAH veya kor pulmonalesi olan hastalar bu azalmayı tolere edemeyebilir."
+    },
+    {
+     "metin": "Solunum depresyonu riski en fazla tedaviye başlandığında veya doz artışını takiben görülür."
+    },
+    {
+     "metin": "Opioidlere bağlı solunum depresyonu, şiddetli ağrı tedavisinin en önemli sorunlarından biridir."
+    }
+   ],
+   "klip": "o-2f05-12",
+   "ses": [
+    "Opioidlerin solunum depresyonu.",
+    "Opioidler beyin sapı solunum merkezini inhibe ederek doz-bağımlı solunum depresyonu yapar; etki CO2 duyarlılığını azaltır.",
+    "Opioid analjeziklerin hepsi beyin sapındaki solunum mekanizmalarını inhibe ederek belirgin solunum depresyonu oluşturur.",
+    "Solunum depresyonu doz-bağımlıdır ve CO2'ye karşı duyarlılığın azalmasıyla ölçülür.",
+    "Kafa içi basıncı artmış, astım, KOAH veya kor pulmonalesi olan hastalar bu azalmayı tolere edemeyebilir.",
+    "Solunum depresyonu riski en fazla tedaviye başlandığında veya doz artışını takiben görülür.",
+    "Opioidlere bağlı solunum depresyonu, şiddetli ağrı tedavisinin en önemli sorunlarından biridir."
+   ],
+   "v": "756d135d3d"
+  },
+  {
+   "id": "2f05-13",
+   "baslik": "Morfinin santral etkileri",
+   "giris": "Morfinin başlıca santral etkileri analjezi, öfori, sedasyon ve solunum depresyonudur; bulantı ve kusma kemoreseptör bölgesinden doğar.",
+   "s": [
+    27
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "µ reseptörüne afiniteli opioidlerin başlıca etkileri analjezi, öfori, sedasyon ve solunum depresyonudur."
+    },
+    {
+     "metin": "Ağrının hem duyusal hem emosyonel bileşenini, özellikle emosyonel olanı inhibe ederler."
+    },
+    {
+     "metin": "Morfinin ateş düşürücü, yani antipiretik bir etkisi yoktur; bu etki steroid olmayan antiinflamatuvarlara özgüdür."
+    },
+    {
+     "metin": "Opioidler beyin sapındaki kemoreseptör tetikleyici bölgeyi aktive ederek bulantı ve kusma yapar."
+    },
+    {
+     "metin": "Sedasyon ve mental bulanıklık en sık etkiler arasındadır; miyozis tüm agonistlerde görülür."
+    }
+   ],
+   "klip": "o-2f05-13",
+   "ses": [
+    "Morfinin santral etkileri.",
+    "Morfinin başlıca santral etkileri analjezi, öfori, sedasyon ve solunum depresyonudur; bulantı ve kusma kemoreseptör bölgesinden doğar.",
+    "µ reseptörüne afiniteli opioidlerin başlıca etkileri analjezi, öfori, sedasyon ve solunum depresyonudur.",
+    "Ağrının hem duyusal hem emosyonel bileşenini, özellikle emosyonel olanı inhibe ederler.",
+    "Morfinin ateş düşürücü, yani antipiretik bir etkisi yoktur; bu etki steroid olmayan antiinflamatuvarlara özgüdür.",
+    "Opioidler beyin sapındaki kemoreseptör tetikleyici bölgeyi aktive ederek bulantı ve kusma yapar.",
+    "Sedasyon ve mental bulanıklık en sık etkiler arasındadır; miyozis tüm agonistlerde görülür."
+   ],
+   "v": "0701f65204"
+  },
+  {
+   "id": "2f05-16",
+   "baslik": "Tolerans gelişmeyen etkiler",
+   "giris": "Opioidlerin miyotik (miyozis), konvülsan ve konstipasyon yapıcı etkilerine tolerans gelişmez.",
+   "s": [
+    43
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Opioidlerin miyotik, konvülsan ve konstipasyon yapıcı etkilerine karşı tolerans gelişmez."
+    },
+    {
+     "metin": "Bütün opioid agonistleri pupillaları daraltır; miyozis toleransın gelişmediği bir etki olduğu için yüksek doz opioid tanısında önemlidir ve ileri bağımlılarda bile görülür."
+    },
+    {
+     "metin": "Analjezik, sedatif ve solunum baskılayıcı etkilere yüksek derecede tolerans gelişir."
+    },
+    {
+     "metin": "Antidiüretik, emetik ve hipotansif etkilere karşı da tolerans gelişir."
+    },
+    {
+     "metin": "Tolerans gelişmeyen etki sorulduğunda yanıt miyozis veya konstipasyon olur."
+    }
+   ],
+   "klip": "o-2f05-16",
+   "ses": [
+    "Tolerans gelişmeyen etkiler.",
+    "Opioidlerin miyotik (miyozis), konvülsan ve konstipasyon yapıcı etkilerine tolerans gelişmez.",
+    "Opioidlerin miyotik, konvülsan ve konstipasyon yapıcı etkilerine karşı tolerans gelişmez.",
+    "Bütün opioid agonistleri pupillaları daraltır; miyozis toleransın gelişmediği bir etki olduğu için yüksek doz opioid tanısında önemlidir ve ileri bağımlılarda bile görülür.",
+    "Analjezik, sedatif ve solunum baskılayıcı etkilere yüksek derecede tolerans gelişir.",
+    "Antidiüretik, emetik ve hipotansif etkilere karşı da tolerans gelişir.",
+    "Tolerans gelişmeyen etki sorulduğunda yanıt miyozis veya konstipasyon olur."
+   ],
+   "v": "f772e6e25b"
+  },
+  {
+   "id": "2f05-19",
+   "baslik": "Opioid bağımlılığının tedavisi",
+   "giris": "Opioid bağımlılığı tedavisinde metadon, buprenorfin ve klonidin kullanılır; naltrekson idamede yer alır.",
+   "s": [
+    54
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Metadon opioid bağımlılığının tedavisinde sıklıkla kullanılır; yoksunluğu daha hafif ve uzun olduğundan detoksifikasyon ve idamede faydalıdır."
+    },
+    {
+     "metin": "Buprenorfin heroin bağımlılarının detoksifikasyonu ve idamesinde metadon kadar etkilidir ve FDA onayı almıştır."
+    },
+    {
+     "metin": "Klonidin, bir alfa-2 noradrenerjik agonist olarak detoksifikasyonda onaylanmıştır."
+    },
+    {
+     "metin": "Uzun etkili naltrekson bağımlıların idame programlarında kullanılır."
+    },
+    {
+     "metin": "Vareniklin opioid değildir; nikotin bağımlılığı tedavisinde kullanılır."
+    }
+   ],
+   "klip": "o-2f05-19",
+   "ses": [
+    "Opioid bağımlılığının tedavisi.",
+    "Opioid bağımlılığı tedavisinde metadon, buprenorfin ve klonidin kullanılır; naltrekson idamede yer alır.",
+    "Metadon opioid bağımlılığının tedavisinde sıklıkla kullanılır; yoksunluğu daha hafif ve uzun olduğundan detoksifikasyon ve idamede faydalıdır.",
+    "Buprenorfin heroin bağımlılarının detoksifikasyonu ve idamesinde metadon kadar etkilidir ve FDA onayı almıştır.",
+    "Klonidin, bir alfa-2 noradrenerjik agonist olarak detoksifikasyonda onaylanmıştır.",
+    "Uzun etkili naltrekson bağımlıların idame programlarında kullanılır.",
+    "Vareniklin opioid değildir; nikotin bağımlılığı tedavisinde kullanılır."
+   ],
+   "v": "0cb4720780"
+  },
+  {
+   "id": "2f05-20",
+   "baslik": "Nalokson ve opioid antagonistleri",
+   "giris": "Akut opioid zehirlenmesinde ve doz aşımında nalokson kullanılır; naltrekson ve nalmefen diğer tam antagonistlerdir.",
+   "s": [
+    68
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Tam opioid antagonistleri nalokson, naltrekson ve nalmefen morfin türevleridir ve µ reseptörlerine yüksek afinitelidir."
+    },
+    {
+     "metin": "Naloksonun en önemli kullanım yeri akut opioid zehirlenmesidir; intravenöz verildiğinde opioid aşırı dozuna bağlı komayı geri çevirir."
+    },
+    {
+     "metin": "Nalokson diğer MSS depresanlarından kaynaklanan komayı geri çevirmez."
+    },
+    {
+     "metin": "Antagonistler morfinli hastada 1-3 dakika içinde opioid etkilerini tersine çevirir; solunumu ve bilinci normale getirir."
+    },
+    {
+     "metin": "Naloksonun yarı ömrü 1-2 saat ile kısadır."
+    }
+   ],
+   "klip": "o-2f05-20",
+   "ses": [
+    "Nalokson ve opioid antagonistleri.",
+    "Akut opioid zehirlenmesinde ve doz aşımında nalokson kullanılır; naltrekson ve nalmefen diğer tam antagonistlerdir.",
+    "Tam opioid antagonistleri nalokson, naltrekson ve nalmefen morfin türevleridir ve µ reseptörlerine yüksek afinitelidir.",
+    "Naloksonun en önemli kullanım yeri akut opioid zehirlenmesidir; intravenöz verildiğinde opioid aşırı dozuna bağlı komayı geri çevirir.",
+    "Nalokson diğer MSS depresanlarından kaynaklanan komayı geri çevirmez.",
+    "Antagonistler morfinli hastada 1-3 dakika içinde opioid etkilerini tersine çevirir; solunumu ve bilinci normale getirir.",
+    "Naloksonun yarı ömrü 1-2 saat ile kısadır."
+   ],
+   "v": "e42d8c47e2"
+  }
+ ]
+}

@@ -84,6 +84,7 @@ const PdfDocView = guvenliLazy(() => import('../learn/pdf/PdfDocView'));
 // PDF parçası (pdfjs ~400 KB) ders verisi beklenirken koşut insin; eskiden ders JSON'u gelip bölme çizilene dek istenmiyordu.
 if (typeof window !== 'undefined') void import('../learn/pdf/PdfDocView').catch(() => {});
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
+import { ZenginListe, useZenginModel } from './CdZenginMetin';
 import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, cdTerimKatmani, usePdfGorunum } from './CdTerimKatman';
 
 const TAKIP_ARA = 5000;
@@ -1619,6 +1620,13 @@ function useCdSecimCubugu(paneRef: React.RefObject<HTMLDivElement | null>, detay
   }), [paneRef, detay]);
 }
 
+/* Zengin görünüm tercihi (varsayılan kapalı; cihazda saklanır) */
+const ZENGIN_ANAHTAR = 'medsoru_cd_zengin_metin_v1';
+const zDinleyen = new Set<() => void>();
+const zOku = () => { try { return localStorage.getItem(ZENGIN_ANAHTAR) === '1'; } catch { return false; } };
+function zenginAyarla(v: boolean) { try { localStorage.setItem(ZENGIN_ANAHTAR, v ? '1' : '0'); } catch { /* özel kip */ } zDinleyen.forEach((f) => f()); }
+const useZenginTercih = () => React.useSyncExternalStore((f: () => void) => { zDinleyen.add(f); return () => { zDinleyen.delete(f); }; }, zOku, () => false);
+
 function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: boolean; kamp?: boolean }) {
   const paneRef = useRef<HTMLDivElement>(null);
   useCdSecimCubugu(paneRef, detay);
@@ -1626,6 +1634,10 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
   const aktif = useCd((s) => (canli ? s.aktif : -1));
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
+  // Zengin görünüm okuma kipi (kamp dışı; model yoksa düğme yok). Tercih cihazda kalır.
+  const zModel = useZenginModel(kamp ? undefined : detay.key);
+  const zTercih = useZenginTercih();
+  const zengin = !!zModel && zTercih;
   // Kamp: metin aşama aşama gösterilir; görünen aşama sesi izler, elle seçilince oraya geçer
   const asamalar = useMemo(() => (kamp ? kampAsamalari(detay) : []), [kamp, detay]);
   const asamaOf = useCallback((i: number) => asamalar.find((a) => i >= a.ilkP && i <= a.sonP)?.no ?? -1, [asamalar]);
@@ -1666,15 +1678,17 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
     surdur();
   }, [detay, surdur]);
 
-  const pEl = (i: number) => paneRef.current?.querySelector<HTMLElement>(`p[data-i="${i}"]`) || null;
+  // genis: zengin kipte paragraf grubu da (.cd-z-p) — yalnız etkin sınıf ve kaydırma için; cümle vurgusu yalnız <p> (metin birebir)
+  const pEl = (i: number, genis = false) => paneRef.current?.querySelector<HTMLElement>(genis ? `p[data-i="${i}"], .cd-z-p[data-i="${i}"]` : `p[data-i="${i}"]`) || null;
 
   // Etkin paragraf sınıfı
   useEffect(() => {
-    const el = aktif >= 0 ? pEl(aktif) : null;
+    const el = aktif >= 0 ? pEl(aktif, true) : null;
     if (onceki.current && onceki.current !== el) onceki.current.classList.remove('is-on');
     if (el) el.classList.add('is-on');
     onceki.current = el;
-  }, [aktif]);
+    // zengin ↔ konuşma kipi değişince yeni çizilen paragraf da etkin sınıfı alır, kaydırma yeni yere oturur
+  }, [aktif, zengin]);
 
   // Cümle vurgusu: CSS Highlight API (kapsamlı ::highlight), yoksa <mark> ile
   useEffect(() => {
@@ -1722,7 +1736,7 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
   const kaydir = useCallback((ani = false) => {
     const pane = paneRef.current;
     const st = cdDurum();
-    const el = st.aktif >= 0 ? pEl(st.aktif) : null;
+    const el = st.aktif >= 0 ? pEl(st.aktif, true) : null;
     if (!pane || st.aktif < 0) return;
     // Paragraf henüz çizilmemiş (ders yeni açıldı/aşama değişti): kısa aralıkla birkaç kez yeniden dene
     if (!el) {
@@ -1809,7 +1823,15 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
       {kamp && asamalar.length > 1 && <KampAsamaCubugu asamalar={asamalar} gor={gorAsama} sesAsama={sesAsama} onSec={asamaSec} />}
       <div className="cd-metin" ref={paneRef} tabIndex={0} aria-label="Konuşma metni">
         {kamp && <style>{`.cd-metin-bolme[data-gor-asama="${gorAsama}"] .cd-bolum[data-asama]:not([data-asama="${gorAsama}"]){display:none}`}</style>}
-        <MetinListe detay={detay} onTik={onTik} kamp={kamp} />
+        {zModel && (
+          <div className="cd-z-anahtar">
+            <button type="button" className={`cd-btn${zengin ? ' is-on' : ''}`} aria-pressed={zengin} onClick={() => zenginAyarla(!zengin)}
+              title={zengin ? 'Konuşma metnine dön (kelime kelime takip)' : 'Tablo, sıralama, sınav notu ve terimlerle okunaklı görünüm'}>
+              {zengin ? 'Konuşma metni' : 'Zengin görünüm'}
+            </button>
+          </div>
+        )}
+        {zengin && zModel ? <ZenginListe detay={detay} model={zModel} onTik={onTik} /> : <MetinListe detay={detay} onTik={onTik} kamp={kamp} />}
         {kamp && gorIdx >= 0 && (
           <div className="cd-k-son">
             {gorIdx > 0 && (
@@ -1825,8 +1847,8 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
           </div>
         )}
       </div>
-      <CdKelimeIsaret pane={paneRef} aktif={aktif} acik={canli && !durdu} />
-      {detay.v2 && <CdV2Su pane={paneRef} aktif={aktif} cumle={cumle} />}
+      <CdKelimeIsaret pane={paneRef} aktif={aktif} acik={canli && !durdu && !zengin} />
+      {detay.v2 && !zengin && <CdV2Su pane={paneRef} aktif={aktif} cumle={cumle} />}
       {durdu && canli ? (
         <button type="button" className="cd-donus" onClick={() => { surdur(); requestAnimationFrame(() => kaydir()); }}>
           <Crosshair aria-hidden /> Canlı konuma dön

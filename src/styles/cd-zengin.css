@@ -1,0 +1,32 @@
+/* Sesli ders · Zengin görünüm okuma kipi (CdZenginMetin.tsx). Renkler yalnız palet tokenlarından. */
+.cd-z-anahtar { display: flex; justify-content: flex-end; margin: 0 0 8px; }
+.cd-z-anahtar .cd-btn { font-size: 13px; }
+.cd-z-p { padding: 6px 10px; margin: 0 -10px 4px; border-radius: 8px; cursor: pointer; }
+.cd-z-p.is-on { box-shadow: inset 3px 0 0 var(--color-accent); background: var(--color-accent-soft); }
+.cd-z-p p, .cd-z-p li { line-height: 1.6; color: var(--color-ink); }
+.cd-z-giris { font-weight: 600; color: var(--color-ink); margin: 4px 0 6px; }
+.cd-z-ul { margin: 2px 0; padding-left: 20px; list-style: disc; }
+.cd-z-ul.sv2 { padding-left: 40px; list-style: circle; }
+.cd-z-ul.sv3 { padding-left: 60px; list-style: square; }
+.cd-z-acik { margin: 2px 0 4px 40px; color: var(--color-ink-2); font-size: 0.95em; }
+.cd-z-liste, .cd-z-sira { margin: 6px 0; }
+.cd-z-liste b, .cd-z-sira b { display: block; color: var(--color-ink); }
+.cd-z-liste ul { padding-left: 40px; list-style: circle; }
+.cd-z-sira ol { padding-left: 28px; list-style: decimal; }
+.cd-z-tablo-sar { overflow-x: auto; margin: 8px 0; }
+.cd-z-tablo { border-collapse: collapse; min-width: 60%; font-size: 0.95em; }
+.cd-z-tablo th, .cd-z-tablo td { border: 1px solid var(--color-line); padding: 6px 10px; text-align: left; }
+.cd-z-tablo th { background: var(--color-field); color: var(--color-ink); font-weight: 600; }
+.cd-z-kutu { display: flex; gap: 10px; align-items: flex-start; margin: 8px 0; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--color-line); background: var(--color-field); }
+.cd-z-kutu svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
+.cd-z-kutu b { display: block; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.03em; }
+.cd-z-kutu p { margin: 2px 0 0; }
+.cd-z-kutu.is-sinav { background: var(--color-warn-soft); border-color: var(--color-warn); }
+.cd-z-kutu.is-sinav svg, .cd-z-kutu.is-sinav b { color: var(--color-warn); }
+.cd-z-kutu.is-ornek svg, .cd-z-kutu.is-ornek b { color: var(--color-accent); }
+.cd-z-alinti { display: flex; gap: 8px; margin: 8px 0; padding: 4px 12px; border-left: 3px solid var(--color-line); color: var(--color-ink-2); font-style: italic; }
+.cd-z-alinti svg { width: 16px; height: 16px; flex: none; }
+.cd-z-terim { display: flex; gap: 8px; margin: 4px 0 6px 40px; color: var(--color-ink-2); font-size: 0.93em; }
+.cd-z-terim svg { width: 15px; height: 15px; flex: none; margin-top: 3px; color: var(--color-accent); }
+.cd-z-terim b { color: var(--color-ink); }
+.cd-z-terim b::after { content: ':'; }

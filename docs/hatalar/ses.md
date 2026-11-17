@@ -254,3 +254,14 @@
 - **Kök neden:** oran, gevşek ek kalıbıyla (`ikisi|ine|e|…`) yakalanıyordu; Türkçe çok sözcüklü sayı ilk sözcükte kesildi, koşul sütunu yaş ifadesi yerine rastgele ilk sözcükten alındı.
 - **Kalıcı çözüm:** `zengin_transkript.py` oranı sayı sözcüğü listesiyle tam yakalar, koşul sütunu yaş ifadesi ister; herhangi bir satır eksikse tablo hiç kurulmaz, cümle madde olarak kalır.
 - **Önleme:** yapı (tablo/sıra) çıkaran betik emin değilse yapı kurmaz, cümleyi korur; tıbbi sayı kesilmez.
+### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici 12 derste "cümle zamanı yok" yanlış alarmı verdi (2026-11-17)
+- **Belirti:** sesli derste kelime kelime takip k2-33, k2-34, k2-35'te çalışmıyordu; hata izleyicisi 12 derste "cumle_zaman dosyası yok" dedi.
+- **Kök neden:** kelime zamanını üreten yerel `meds-kelime-zaman-hat.timer` devre dışıydı (Kurul 2 sesleri yalnız Oracle'da; kelime zamanı yerel GPU ile çözülüp gönderiliyor). Cümle zamanı ve işaret ise Oracle'da `meds-cumle-zaman.timer` ile üretiliyor, yerelde kopyası yok; takip kapısı yerel dosyaya bakınca 12 sağlam dersi "yok" saydı.
+- **Kalıcı çözüm:** üç ders `kelime_zaman.py --key <ders> --oracle --gpu` ile (gpuguard açık) çözüldü, canlıda 64/64, 39/39, 39/39 paragraf. `hata_izleyici.py` takipte yerel dosya yoksa canlı API'de paragraf başına kelime zamanını denetler.
+- **Önleme:** zamanlayıcı kural 20 gereği kapalı kalır; yeni ders yayınından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle çalıştırılır (tam hat `zaman_isaret` adımı). Oracle'da üretilen katman yerel kapıyla "yok" sayılmaz.
+
+### H613 — 5 Kurul 2 dersinde ders içerik paketi yoktu; kapı kaldırılmış quiz'i istiyor, çözücüyü başlıkla arıyordu (2026-11-17)
+- **Belirti:** k2-33/34/35/49/50'de "Bu dersin içerikleri" kartları (spot, tablo, liste, kart, kavram) yoktu; kapı 9 HATA veriyordu.
+- **Kök neden:** destesiz derste paket `taslak/ders_icerik_ek.json` + `bilgi_havuzu.jsonl` ister, bunları yazan betik yoktu (önceki derslerde elle yazıldı); tasarruf koşularında atlanmıştı. Kapı, 2026-11-17'de kapatılan quiz'i zorunlu sayıyor; çözücü ve önem listesi başlıkla eşleniyordu (H608).
+- **Kalıcı çözüm:** `scripts/uretim/ders_icerik/paketten_ek.py` (LLM yok): kapıdan geçmiş değerlendirme paketinden spot/liste/kart/kavram, PDF metin tablolarından tablo; görüntü tablo `taslak/tablolar_gorsel.json`'a slayttan birebir (k2-33 s.5). Kaynakta tablo yoksa gerekçe (≥12 kelime) → kapı UYARI (k2-49, k2-50: sayfalar tek tek incelendi). Kapıdan quiz çıkarıldı, eşleme defter koduyla.
+- **Önleme:** paketin girdisi elle yazılmaz, önce `paketten_ek.py`; tablo muafiyeti yalnız yazılı, denetlenebilir gerekçeyle.

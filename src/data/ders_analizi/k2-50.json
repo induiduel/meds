@@ -1,0 +1,805 @@
+{
+ "surum": 1,
+ "key": "k2-50",
+ "kod": "2s16",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Dışa Atım Bozuklukları",
+ "ogretim_uyesi": "Dr. Pınar Durmaz",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s16"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders enürezis ve enkoprezisi sırayla işler: enürezisin tanımı, epidemiyolojisi, primer, sekonder, diürnal, nokturnal ve mikst tipleri, tanı ölçütleri, etyolojisi, tetkikleri ve farmakolojik ile farmakolojik olmayan tedavisi; ardından enkoprezisin tanımı, tanı ölçütleri, kontinans gelişim sırası, epidemiyolojisi, etyolojisi, klinik tipleri, ayırıcı tanısı, prognozu ve tedavisi anlatılır.",
+   "maddeler": [
+    {
+     "metin": "Dersin çerçevesi ve enürezis epidemiyolojisi"
+    },
+    {
+     "metin": "Enürezis tanı ölçütleri"
+    },
+    {
+     "metin": "Enürezis tipleri: primer, sekonder, diürnal ve mikst"
+    },
+    {
+     "metin": "Enürezis etyolojisi"
+    },
+    {
+     "metin": "Enürezis nokturnada tetkik ve organik nedenlerin dışlanması"
+    },
+    {
+     "metin": "Enürezis tedavisi: farmakolojik olmayan yaklaşımlar"
+    },
+    {
+     "metin": "Enürezis tedavisi: farmakolojik yaklaşımlar"
+    },
+    {
+     "metin": "Enkoprezis: tanım, ölçütler ve kontrol gelişimi"
+    },
+    {
+     "metin": "Enkoprezis: yaygınlık ve etyoloji"
+    },
+    {
+     "metin": "Enkoprezis: klinik tipler, seyir ve tedavi"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders enürezis ve enkoprezisi sırayla işler: enürezisin tanımı, epidemiyolojisi, primer, sekonder, diürnal, nokturnal ve mikst tipleri, tanı ölçütleri, etyolojisi, tetkikleri ve farmakolojik ile farmakolojik olmayan tedavisi; ardından enkoprezisin tanımı, tanı ölçütleri, kontinans gelişim sırası, epidemiyolojisi, etyolojisi, klinik tipleri, ayırıcı tanısı, prognozu ve tedavisi anlatılır.",
+    "Dersin çerçevesi ve enürezis epidemiyolojisi.",
+    "Enürezis tanı ölçütleri.",
+    "Enürezis tipleri: primer, sekonder, diürnal ve mikst.",
+    "Enürezis etyolojisi.",
+    "Enürezis nokturnada tetkik ve organik nedenlerin dışlanması.",
+    "Enürezis tedavisi: farmakolojik olmayan yaklaşımlar.",
+    "Enürezis tedavisi: farmakolojik yaklaşımlar.",
+    "Enkoprezis: tanım, ölçütler ve kontrol gelişimi.",
+    "Enkoprezis: yaygınlık ve etyoloji.",
+    "Enkoprezis: klinik tipler, seyir ve tedavi."
+   ],
+   "v": "ca3655c034"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Enürezis — epidemiyoloji",
+     "metin": "Enürezisin görülme sıklığı yaşla birlikte azalır; 2 yaşındaki çocukların %82'si enüretikken bu oran yaşla düşer.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Enürezis — tanı ölçütleri",
+     "metin": "Enürezis erkeklerde kızlara göre yaklaşık 2 kat daha sıktır (erkek/kız oranı 2/1).",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Enürezis — tipler",
+     "metin": "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Enürezis — etyoloji",
+     "metin": "Vakaların %75'inde birinci derece yakınlarında enürezis öyküsü vardır; pozitif aile öyküsü tedavi için olumlu bir prognostik faktördür.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Enürezis nokturna — tetkik ve ekartasyon",
+     "metin": "Enürezis nokturnada organik nedenler, özellikle böbrek ve toplayıcı sistem patolojileri, mutlaka ekarte edilmelidir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Enürezis — farmakolojik olmayan tedavi",
+     "metin": "Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Enürezis — farmakolojik tedavi (imipramin, desmopressin)",
+     "metin": "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Enürezis — farmakolojik tedavi ilkeleri",
+     "metin": "Farmakolojik tedavi ortalama 6 ay sürmeli ve mümkün olan en düşük dozla başlanmalıdır.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — tanım ve ölçütler",
+     "metin": "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — kontinans gelişim sırası",
+     "metin": "Barsak ve mesane kontrolü normalde sırasıyla gece fekal, gündüz fekal, gündüz mesane ve gece mesane kontrolü şeklinde gelişir.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — yaygınlık",
+     "metin": "Enkoprezis erkeklerde daha fazladır (erkek/kız oranı 3-4/1).",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — etyoloji (sfinkter, psikojenik megakolon)",
+     "metin": "Psikojenik megakolonda çocuk dışkıyı tutar ve istemli ya da ikincil olarak kabız olur.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — etyoloji (regresyon)",
+     "metin": "Enkoprezis yaşam olaylarının tetiklemesiyle, özellikle regresyona bağlı (kardeş doğumu, hastaneye yatma) ortaya çıkabilir.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — nonretentif tip ve ruhsal sorun",
+     "metin": "Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — klinik tipler ve ayırıcı tanı",
+     "metin": "Enkoprezisin konstipasyonla giden ve konstipasyon olmayan olmak üzere 2 tipi vardır.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — seyir ve prognoz",
+     "metin": "Enkoprezis sıklıkla kendini sınırlayan bir sorundur; nadiren orta ergenliğe (13-16 yaş) dek sürer.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — tedavi (aile ortamı)",
+     "metin": "Enkoprezis tedavisinde evde cezalandırıcı bir ortam olmamalı, aile gerilimi azaltılmalı ve çocuğun sorumluluk alması sağlanmalıdır.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Enkoprezis — tedavi (davranışçı)",
+     "metin": "Enkoprezis tedavisinde her öğünden sonra tuvalete oturma, artmış lifli diyet ve davranışçı öneriler (tablo, ödüllendirme) kullanılır; ilaç tedavisinin yeri tartışmalıdır.",
+     "s": [
+      21
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Enürezis — epidemiyoloji: Enürezisin görülme sıklığı yaşla birlikte azalır; 2 yaşındaki çocukların %82'si enüretikken bu oran yaşla düşer.",
+    "Enürezis — tanı ölçütleri: Enürezis erkeklerde kızlara göre yaklaşık 2 kat daha sıktır (erkek/kız oranı 2/1).",
+    "Enürezis — tipler: Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+    "Enürezis — etyoloji: Vakaların %75'inde birinci derece yakınlarında enürezis öyküsü vardır; pozitif aile öyküsü tedavi için olumlu bir prognostik faktördür.",
+    "Enürezis nokturna — tetkik ve ekartasyon: Enürezis nokturnada organik nedenler, özellikle böbrek ve toplayıcı sistem patolojileri, mutlaka ekarte edilmelidir.",
+    "Enürezis — farmakolojik olmayan tedavi: Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+    "Enürezis — farmakolojik tedavi (imipramin, desmopressin): İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+    "Enürezis — farmakolojik tedavi ilkeleri: Farmakolojik tedavi ortalama 6 ay sürmeli ve mümkün olan en düşük dozla başlanmalıdır.",
+    "Enkoprezis — tanım ve ölçütler: Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır.",
+    "Enkoprezis — kontinans gelişim sırası: Barsak ve mesane kontrolü normalde sırasıyla gece fekal, gündüz fekal, gündüz mesane ve gece mesane kontrolü şeklinde gelişir.",
+    "Enkoprezis — yaygınlık: Enkoprezis erkeklerde daha fazladır (erkek/kız oranı 3-4/1).",
+    "Enkoprezis — etyoloji (sfinkter, psikojenik megakolon): Psikojenik megakolonda çocuk dışkıyı tutar ve istemli ya da ikincil olarak kabız olur.",
+    "Enkoprezis — etyoloji (regresyon): Enkoprezis yaşam olaylarının tetiklemesiyle, özellikle regresyona bağlı (kardeş doğumu, hastaneye yatma) ortaya çıkabilir.",
+    "Enkoprezis — nonretentif tip ve ruhsal sorun: Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+    "Enkoprezis — klinik tipler ve ayırıcı tanı: Enkoprezisin konstipasyonla giden ve konstipasyon olmayan olmak üzere 2 tipi vardır.",
+    "Enkoprezis — seyir ve prognoz: Enkoprezis sıklıkla kendini sınırlayan bir sorundur; nadiren orta ergenliğe (13-16 yaş) dek sürer.",
+    "Enkoprezis — tedavi (aile ortamı): Enkoprezis tedavisinde evde cezalandırıcı bir ortam olmamalı, aile gerilimi azaltılmalı ve çocuğun sorumluluk alması sağlanmalıdır.",
+    "Enkoprezis — tedavi (davranışçı): Enkoprezis tedavisinde her öğünden sonra tuvalete oturma, artmış lifli diyet ve davranışçı öneriler (tablo, ödüllendirme) kullanılır; ilaç tedavisinin yeri tartışmalıdır."
+   ],
+   "v": "b76f207203"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ilişkin doğrulanmış beş çıkmış sorunun tamamı slayt metniyle çözülebilir; primer ve sekonder enürezis ayrımı, enürezis etyolojisi (ADH, mesane, uyku), ilk sıra tedavi (imipramin ve EKG takibi, nöbet bozukluğunda desmopressin), farmakolojik olmayan tedavi ve nonretentif enkoprezis en sık sorulan başlıklardır. Sorular çoğunlukla bir tanımı ya da ölçütü komşu kavramla değiştirerek yanlış ya da söylenemez biçiminde gelir.",
+   "maddeler": [
+    {
+     "baslik": "Sekonder enürezis ve psikiyatri",
+     "metin": "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+     "neden": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+     "s": [
+      4
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "İmipramin",
+     "metin": "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+     "neden": "Bu nokta dersin temel bilgilerindendir ve sınavda tanım ya da ayırt etme düzeyinde sorulabilir.",
+     "s": [
+      10
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Sekonder enürezis tanımı",
+     "metin": "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+     "neden": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+     "s": [
+      4
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Enürezis etyolojisi",
+     "metin": "Gece yeterli ADH üretilememesi, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğu enürezis etyolojisinde yer alır.",
+     "neden": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+     "s": [
+      5
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nonretentif enkoprezis",
+     "metin": "Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+     "neden": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+     "s": [
+      17
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Primer enürezis tipi",
+     "metin": "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+     "neden": "Bu nokta dersin temel bilgilerindendir ve sınavda tanım ya da ayırt etme düzeyinde sorulabilir.",
+     "s": [
+      4
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Farmakolojik olmayan tedavi",
+     "metin": "Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+     "neden": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+     "s": [
+      9
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Desmopressin",
+     "metin": "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir.",
+     "neden": "Bu nokta dersin temel bilgilerindendir ve sınavda tanım ya da ayırt etme düzeyinde sorulabilir.",
+     "s": [
+      10
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ilişkin doğrulanmış beş çıkmış sorunun tamamı slayt metniyle çözülebilir; primer ve sekonder enürezis ayrımı, enürezis etyolojisi (ADH, mesane, uyku), ilk sıra tedavi (imipramin ve EKG takibi, nöbet bozukluğunda desmopressin), farmakolojik olmayan tedavi ve nonretentif enkoprezis en sık sorulan başlıklardır. Sorular çoğunlukla bir tanımı ya da ölçütü komşu kavramla değiştirerek yanlış ya da söylenemez biçiminde gelir.",
+    "Sekonder enürezis ve psikiyatri: Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+    "İmipramin: İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+    "Sekonder enürezis tanımı: Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+    "Enürezis etyolojisi: Gece yeterli ADH üretilememesi, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğu enürezis etyolojisinde yer alır.",
+    "Nonretentif enkoprezis: Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+    "Primer enürezis tipi: Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+    "Farmakolojik olmayan tedavi: Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+    "Desmopressin: Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir."
+   ],
+   "v": "d170bd091e"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 5 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Enürezis hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+     "cevap": "Psikiyatrik vakalar genelde sekonder enürezis şeklinde başvururlar.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Primer enürezis için en doğru tanım aşağıdakilerden hangisidir?",
+     "cevap": "Çocuğun bugüne kadar en az 6 ay süren kesintisiz bir kuru dönem geçirmemiş olmasıdır",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Aşağıdakilerden hangisi enürezis ile ilgili yanlış bir bilgidir?",
+     "cevap": "Prolaktin hormonu düzeyleri enürezis gelişiminde temel rol oynar",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Enürezis nokturna yakınmasıyla polikliniğe getirilen 7 yaşındaki çocuğun hiç kuru dönemi olmadığı ifade edilmektedir. Bu durumla ilgili olarak aşağıdaki yorumlardan hangisi yapılamaz?",
+     "cevap": "Uykudayken uyandırılmadan tuvalete götürülmeli ve çiş yaptırılmalıdır",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar",
+     "s": [
+      17
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 5 çıkmış soru var.",
+    "2020-2021: Enürezis hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+    "Cevap: Psikiyatrik vakalar genelde sekonder enürezis şeklinde başvururlar.",
+    "2025-2026: Primer enürezis için en doğru tanım aşağıdakilerden hangisidir?",
+    "Cevap: Çocuğun bugüne kadar en az 6 ay süren kesintisiz bir kuru dönem geçirmemiş olmasıdır.",
+    "2024-2025: Aşağıdakilerden hangisi enürezis ile ilgili yanlış bir bilgidir?",
+    "Cevap: Prolaktin hormonu düzeyleri enürezis gelişiminde temel rol oynar.",
+    "2018-2019: Enürezis nokturna yakınmasıyla polikliniğe getirilen 7 yaşındaki çocuğun hiç kuru dönemi olmadığı ifade edilmektedir. Bu durumla ilgili olarak aşağıdaki yorumlardan hangisi yapılamaz?",
+    "Cevap: Uykudayken uyandırılmadan tuvalete götürülmeli ve çiş yaptırılmalıdır.",
+    "2020-2021: Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar."
+   ],
+   "v": "0b64d2d16a"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%57) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%57) ve anlama ve ilişki kurma (%43) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%57) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%57) ve anlama ve ilişki kurma (%43) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "3f8d51588a"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Erken yaşta tuvalet eğitimi",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Çocuklarda aşağıdakilerden hangisi kabızlığa neden olmaz?"
+    },
+    {
+     "baslik": "Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?"
+    },
+    {
+     "baslik": "Sekonder enürezis ve psikiyatri",
+     "metin": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir."
+    },
+    {
+     "baslik": "Sekonder enürezis tanımı",
+     "metin": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir."
+    },
+    {
+     "baslik": "Enürezis etyolojisi",
+     "metin": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir."
+    },
+    {
+     "baslik": "Nonretentif enkoprezis",
+     "metin": "Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Erken yaşta tuvalet eğitimi: Çıkmışlarda 2 kez soruldu. Örnek kök: Çocuklarda aşağıdakilerden hangisi kabızlığa neden olmaz?",
+    "Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar: Çıkmışlarda 2 kez soruldu. Örnek kök: Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?",
+    "Sekonder enürezis ve psikiyatri: Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+    "Sekonder enürezis tanımı: Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+    "Enürezis etyolojisi: Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+    "Nonretentif enkoprezis: Bu bilgi çıkmış sorularda doğrudan soruldu ve sınavda yüksek önceliklidir.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "fefd9a8eae"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders enürezis ve enkoprezisi sırayla işler: enürezisin tanımı, epidemiyolojisi, primer, sekonder, diürnal, nokturnal ve mikst tipleri, tanı ölçütleri, etyolojisi, tetkikleri ve farmakolojik ile farmakolojik olmayan tedavisi; ardından enkoprezisin tanımı, tanı ölçütleri, kontinans gelişim sırası, epidemiyolojisi, etyolojisi, klinik tipleri, ayırıcı tanısı, prognozu ve tedavisi anlatılır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders enürezis ve enkoprezisi sırayla işler: enürezisin tanımı, epidemiyolojisi, primer, sekonder, diürnal, nokturnal ve mikst tipleri, tanı ölçütleri, etyolojisi, tetkikleri ve farmakolojik ile farmakolojik olmayan tedavisi; ardından enkoprezisin tanımı, tanı ölçütleri, kontinans gelişim sırası, epidemiyolojisi, etyolojisi, klinik tipleri, ayırıcı tanısı, prognozu ve tedavisi anlatılır."
+   ],
+   "v": "d6bff4ebaf"
+  },
+  {
+   "id": "2s16-02",
+   "baslik": "Primer enürezis tipi",
+   "giris": "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+   "s": [
+    4
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir."
+    },
+    {
+     "metin": "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır."
+    },
+    {
+     "metin": "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar."
+    },
+    {
+     "metin": "Diürnal ve mikst tip enürezis'te organik patoloji görülme riski daha fazladır."
+    }
+   ],
+   "klip": "o-2s16-02",
+   "ses": [
+    "Primer enürezis tipi.",
+    "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+    "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+    "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+    "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+    "Diürnal ve mikst tip enürezis'te organik patoloji görülme riski daha fazladır."
+   ],
+   "v": "8b2dd7533a"
+  },
+  {
+   "id": "2s16-03",
+   "baslik": "Sekonder enürezis ve psikiyatri",
+   "giris": "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+   "s": [
+    4
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir."
+    },
+    {
+     "metin": "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır."
+    },
+    {
+     "metin": "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar."
+    },
+    {
+     "metin": "Diürnal ve mikst tip enürezis'te organik patoloji görülme riski daha fazladır."
+    }
+   ],
+   "klip": "o-2s16-03",
+   "ses": [
+    "Sekonder enürezis ve psikiyatri.",
+    "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+    "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+    "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+    "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+    "Diürnal ve mikst tip enürezis'te organik patoloji görülme riski daha fazladır."
+   ],
+   "v": "380be220a5"
+  },
+  {
+   "id": "2s16-04",
+   "baslik": "Sekonder enürezis tanımı",
+   "giris": "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+   "s": [
+    4
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir."
+    },
+    {
+     "metin": "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır."
+    },
+    {
+     "metin": "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar."
+    },
+    {
+     "metin": "Diürnal ve mikst tip enürezis'te organik patoloji görülme riski daha fazladır."
+    }
+   ],
+   "klip": "o-2s16-04",
+   "ses": [
+    "Sekonder enürezis tanımı.",
+    "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+    "Vakaların %80'i primer tiptedir; primer enürezis çocuğun hiç kesintisiz kuru dönemi olmadan süregelen tiptir.",
+    "Sekonder enürezis en az 6 aylık kontinans sonrası ortaya çıkar ve ek psikiyatrik sorun görülme olasılığı daha fazladır.",
+    "Sekonder enürezis, en az 6 aylık idrar tutabilme döneminin ardından yeniden altını ıslatmayla ortaya çıkar.",
+    "Diürnal ve mikst tip enürezis'te organik patoloji görülme riski daha fazladır."
+   ],
+   "v": "a4c5ac28be"
+  },
+  {
+   "id": "2s16-10",
+   "baslik": "Enürezis etyolojisi",
+   "giris": "Gece yeterli ADH üretilememesi, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğu enürezis etyolojisinde yer alır.",
+   "s": [
+    5
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Vakaların %75'inde birinci derece yakınlarında enürezis öyküsü vardır; pozitif aile öyküsü tedavi için olumlu bir prognostik faktördür."
+    },
+    {
+     "metin": "Gece yeterli ADH üretilememesi, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğu enürezis etyolojisinde yer alır."
+    },
+    {
+     "metin": "Enürezis uykunun her döneminde ortaya çıkabilir."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    }
+   ],
+   "klip": "o-2s16-10",
+   "ses": [
+    "Enürezis etyolojisi.",
+    "Gece yeterli ADH üretilememesi, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğu enürezis etyolojisinde yer alır.",
+    "Vakaların %75'inde birinci derece yakınlarında enürezis öyküsü vardır; pozitif aile öyküsü tedavi için olumlu bir prognostik faktördür.",
+    "Gece yeterli ADH üretilememesi, mesane işlev bozukluğu ve uyku-uyanıklık bozukluğu enürezis etyolojisinde yer alır.",
+    "Enürezis uykunun her döneminde ortaya çıkabilir.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+   ],
+   "v": "49894920b3"
+  },
+  {
+   "id": "2s16-12",
+   "baslik": "Farmakolojik olmayan tedavi",
+   "giris": "Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+   "s": [
+    9
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır."
+    },
+    {
+     "metin": "Mesane egzersizleri, geceleri sıvı kısıtlaması ve alarm cihazı enürezisin farmakolojik olmayan tedavisinde kullanılır."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    },
+    {
+     "metin": "Konunun sınav açısından değeri, tanımların ve ölçütlerin komşu kavramlarla karıştırılmadan bilinmesinde yatar."
+    }
+   ],
+   "klip": "o-2s16-12",
+   "ses": [
+    "Farmakolojik olmayan tedavi.",
+    "Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+    "Gece belli saatte tuvalete kaldırma (en fazla 2 kez), mesane egzersizleri ve sıvı kısıtlaması farmakolojik olmayan yaklaşımlardır.",
+    "Mesane egzersizleri, geceleri sıvı kısıtlaması ve alarm cihazı enürezisin farmakolojik olmayan tedavisinde kullanılır.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır.",
+    "Konunun sınav açısından değeri, tanımların ve ölçütlerin komşu kavramlarla karıştırılmadan bilinmesinde yatar."
+   ],
+   "v": "53112782f1"
+  },
+  {
+   "id": "2s16-13",
+   "baslik": "İmipramin",
+   "giris": "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+   "s": [
+    10
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir."
+    },
+    {
+     "metin": "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir."
+    },
+    {
+     "metin": "İmipramin kullanımında mutlaka EKG takibi yapılmalıdır."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    }
+   ],
+   "klip": "o-2s16-13",
+   "ses": [
+    "İmipramin.",
+    "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+    "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+    "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir.",
+    "İmipramin kullanımında mutlaka EKG takibi yapılmalıdır.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+   ],
+   "v": "f50d4850ae"
+  },
+  {
+   "id": "2s16-14",
+   "baslik": "Desmopressin",
+   "giris": "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir.",
+   "s": [
+    10
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir."
+    },
+    {
+     "metin": "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir."
+    },
+    {
+     "metin": "İmipramin kullanımında mutlaka EKG takibi yapılmalıdır."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    }
+   ],
+   "klip": "o-2s16-14",
+   "ses": [
+    "Desmopressin.",
+    "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir.",
+    "İmipramin (Tofranil) enürezis tedavisinde ilk sırada tercih edilir, 6 yaştan itibaren endikedir ve kullanımında mutlaka EKG takibi gerekir.",
+    "Desmopressin enürezis tedavisinde imipraminden sonra 2. sırada tercih edilir; nöbet bozukluğu varsa ilk sırada desmopressin tercih edilir.",
+    "İmipramin kullanımında mutlaka EKG takibi yapılmalıdır.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+   ],
+   "v": "8bd85abb8e"
+  },
+  {
+   "id": "2s16-16",
+   "baslik": "Enkoprezis tanımı",
+   "giris": "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır.",
+   "s": [
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır."
+    },
+    {
+     "metin": "Enkoprezis en az ayda 1 kez, 3 ay boyunca görülmeli; çocuğun kronolojik veya mental yaşı en az 4 olmalı ve doğrudan tıbbi bir nedene bağlı olmamalıdır."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    }
+   ],
+   "klip": "o-2s16-16",
+   "ses": [
+    "Enkoprezis tanımı.",
+    "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır.",
+    "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır.",
+    "Enkoprezis en az ayda 1 kez, 3 ay boyunca görülmeli; çocuğun kronolojik veya mental yaşı en az 4 olmalı ve doğrudan tıbbi bir nedene bağlı olmamalıdır.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+   ],
+   "v": "92440a66b5"
+  },
+  {
+   "id": "2s16-17",
+   "baslik": "Enkoprezis tanı ölçütleri",
+   "giris": "Enkoprezis en az ayda 1 kez, 3 ay boyunca görülmeli; çocuğun kronolojik veya mental yaşı en az 4 olmalı ve doğrudan tıbbi bir nedene bağlı olmamalıdır.",
+   "s": [
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır."
+    },
+    {
+     "metin": "Enkoprezis en az ayda 1 kez, 3 ay boyunca görülmeli; çocuğun kronolojik veya mental yaşı en az 4 olmalı ve doğrudan tıbbi bir nedene bağlı olmamalıdır."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    }
+   ],
+   "klip": "o-2s16-17",
+   "ses": [
+    "Enkoprezis tanı ölçütleri.",
+    "Enkoprezis en az ayda 1 kez, 3 ay boyunca görülmeli; çocuğun kronolojik veya mental yaşı en az 4 olmalı ve doğrudan tıbbi bir nedene bağlı olmamalıdır.",
+    "Enkoprezis, feçesin uygun olmayan yere istemli veya istemsiz bırakılmasıdır.",
+    "Enkoprezis en az ayda 1 kez, 3 ay boyunca görülmeli; çocuğun kronolojik veya mental yaşı en az 4 olmalı ve doğrudan tıbbi bir nedene bağlı olmamalıdır.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+   ],
+   "v": "794b002e76"
+  },
+  {
+   "id": "2s16-20",
+   "baslik": "Nonretentif enkoprezis",
+   "giris": "Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+   "s": [
+    17
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır."
+    },
+    {
+     "metin": "Enkoprezise davranım bozukluğu, karşıt olma karşıt gelme bozukluğu ve anne-çocuk çatışmaları eşlik edebilir."
+    },
+    {
+     "metin": "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+    }
+   ],
+   "klip": "o-2s16-20",
+   "ses": [
+    "Nonretentif enkoprezis.",
+    "Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+    "Barsak işlevini kontrol edebilen ve normal miktar ve kıvamdaki dışkıyı uygunsuz yerlere bırakan çocuklarda büyük olasılıkla daha ciddi bir ruhsal sorun vardır.",
+    "Enkoprezise davranım bozukluğu, karşıt olma karşıt gelme bozukluğu ve anne-çocuk çatışmaları eşlik edebilir.",
+    "Bu bilgi dersin dışa atım bozuklukları başlığı altında tanı ve tedavi kararını doğrudan etkileyen temel noktalardandır."
+   ],
+   "v": "1c7843e114"
+  }
+ ]
+}

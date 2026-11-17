@@ -177,12 +177,19 @@ export function cdAktarBelgesi(detay: CdDetay, etiket: string, secenek: boolean 
 
 
 /* ---------------- zengin transkript (v1) ---------------- */
-type ZBlok = { t: string; p: number; x?: string; sv?: number; bas?: string; ogeler?: string[]; basliklar?: string[]; satirlar?: string[][]; ad?: string; tanim?: string };
-interface ZModel { surum: number; key: string; bolumler: { baslik: string; bloklar: ZBlok[] }[] }
+export type ZBlok = { t: string; p: number; x?: string; sv?: number; bas?: string; ogeler?: string[]; basliklar?: string[]; satirlar?: string[][]; ad?: string; tanim?: string };
+export interface ZModel { surum: number; key: string; bolumler: { baslik: string; bloklar: ZBlok[] }[] }
 const ZENGIN = import.meta.glob('../../data/zengin_transkript/*.json', { import: 'default' }) as Record<string, () => Promise<ZModel>>;
 const zYol = (key: string) => `../../data/zengin_transkript/${key}.json`;
 /** Derste zengin transkript modeli var mı (eşzamanlı; seçenek penceresi için) */
 export const cdZenginVar = (key: string) => zYol(key) in ZENGIN;
+/** Modeli yükler (yoksa ya da sürüm uyumsuzsa null) */
+export async function cdZenginYukle(key: string): Promise<ZModel | null> {
+  const f = ZENGIN[zYol(key)];
+  if (!f) return null;
+  const m = await f();
+  return m?.surum === 1 && m.bolumler?.length ? m : null;
+}
 
 /** Zengin üslup belgesi. Model yoksa ya da kapsam "önemli yerler" ise eski yol (cdAktarBelgesi, ders notu) — iki yol karışmaz. */
 export async function cdZenginBelge(detay: CdDetay, etiket: string, secenek: CdAktarSecenek, basliklar?: SlaytBasliklari, bolumSecim?: ReadonlySet<number>): Promise<AktarBelge> {
