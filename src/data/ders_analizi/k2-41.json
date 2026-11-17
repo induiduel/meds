@@ -1,0 +1,541 @@
+{
+ "surum": 1,
+ "key": "k2-41",
+ "kod": "2f07",
+ "kurul": 2,
+ "brans": "Tıbbi Farmakoloji",
+ "konu": "Otonom Sinir Sistemi Farmakolojisi",
+ "ogretim_uyesi": "DR. ÖĞR. ÜYESİ NAMIK BİLİCİ",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f07"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Otonom sinir sistemi farmakolojisi, ilaçları organ ya da endikasyon adıyla değil sinapsın hangi basamağına dokunduklarına göre öğreten bir mekanizma dersidir. Hoca dersin başında bu çerçeveyi kuruyor ve bütün ilaçları sentez, depolama, salıverilme, reseptör, geri alım ve yıkım basamaklarına yerleştiriyor.",
+   "maddeler": [
+    {
+     "metin": "Dersin çerçevesi: ilaç endikasyonla değil mekanizmayla öğrenilir"
+    },
+    {
+     "metin": "Sinapsa müdahale noktalarının sayımı"
+    },
+    {
+     "metin": "Anatomik iskelet: sempatik, parasempatik ve enterik bölüm"
+    },
+    {
+     "metin": "Kolinerjik aşırım: sentez, depolama, salıverilme, yıkım"
+    },
+    {
+     "metin": "Adrenerjik aşırım: sentez, depolama, salıverilme, geri alım"
+    },
+    {
+     "metin": "Ko-transmitterler ve non adrenerjik non kolinerjik lifler"
+    },
+    {
+     "metin": "Presinaptik ve postsinaptik düzenlenme"
+    },
+    {
+     "metin": "Reseptör alt tipleri ve ikinci ulaklar"
+    },
+    {
+     "metin": "Otonom işlevin farmakolojik olarak değiştirilmesi"
+    }
+   ],
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Otonom sinir sistemi farmakolojisi bir mekanizma dersidir.",
+    "İlaçlar organ adıyla değil, sinapsın hangi basamağına dokunduklarına göre öğrenilir.",
+    "Hoca dersin başında altı müdahale noktası sayıyor: sentez, depolama, salıverilme, reseptör, geri alım ve yıkım.",
+    "Ders bu altı noktayı önce kolinerjik, sonra adrenerjik sinapsta tek tek geziyor."
+   ],
+   "klip": "a-anlatim",
+   "v": "2867672cb5"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Sempatik ve parasempatik ayrımının anatomik olması",
+     "metin": "Sempatik ve parasempatik kavramları anatomik tanımlamalardır; sinir ucunda salınan aracı maddenin tipine ya da uyarı ile baskılama yönüne bağlı değildir.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Parasempatik ve sempatik çıkış yerleri",
+     "metin": "Parasempatik lifler üçüncü, yedinci, dokuzuncu ve onuncu kafa çiftleri ile üçüncü ve dördüncü sakral köklerden çıkar; sempatik lifler torasik ve lomber köklerden çıkar.",
+     "s": [
+      35,
+      36
+     ]
+    },
+    {
+     "baslik": "Kolinerjik aşırımda hız sınırlayıcı basamak",
+     "metin": "Asetilkolin sentezinde darboğaz, kolinin sinir ucuna taşınmasıdır ve bu taşınma hemikolinyum ile durdurulabilir.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Asetilkolini sentezleyen ve yıkan enzimler",
+     "metin": "Sentez kolin asetiltransferaz ile kolin ve asetil koenzim A üzerinden olur; yıkım kavşakta asetilkolinesteraz ile saniyeler içinde gerçekleşir.",
+     "s": [
+      41,
+      47
+     ]
+    },
+    {
+     "baslik": "Salıverilmenin kalsiyuma ve füzyon proteinlerine bağlı olması",
+     "metin": "Kalsiyum ve sinaptotagmin etkileşince kesecik zarı erir ve asetilkolin dışarı boşalır; bu basamak botulinum toksini ile durdurulur.",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Adrenerjik sentezde hız sınırlayıcı basamak",
+     "metin": "Tirozinin dopaya dönüşmesi hız sınırlayıcı basamaktır ve tirozin hidroksilaz alfa metil tirozin ile durdurulabilir.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Noradrenalin etkisinin nasıl sonlandığı",
+     "metin": "Etkiyi sonlandıran temel yol yıkım değildir; aracı madde önce yayılarak uzaklaşır, sonra taşıyıcı ile sinir ucuna geri alınır.",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Geri alım taşıyıcısını durduran ilaçlar",
+     "metin": "Noradrenalin taşıyıcısı kokain ve üç halkalı ruh durumu düzenleyicileri ile durdurulur; bu durumda kavşakta aşırı etkinlik oluşur.",
+     "s": [
+      48,
+      49
+     ]
+    },
+    {
+     "baslik": "Ko-transmitter eşleşmeleri",
+     "metin": "Asetilkolinin yanındaki ko-transmitter damar etkili bağırsak peptidi, noradrenalinin yanındaki ise nöropeptit Y dir.",
+     "s": [
+      4,
+      29
+     ]
+    },
+    {
+     "baslik": "Reseptör alt tipleri ve ikinci ulaklar",
+     "metin": "Nikotinik reseptörler iyon kanalı yapısındadır; diğer bütün otonom reseptörler G proteinine kenetlidir.",
+     "s": [
+      3,
+      55,
+      56
+     ]
+    },
+    {
+     "baslik": "Nikotinik reseptörün bulunduğu yerler",
+     "metin": "Nikotinik iletim otonom düğümlerde, adrenal medullada ve kas sinir kavşağında olur; hedef organdaki kolinerjik iletim muskariniktir.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Otonom işlevin ilaçla değiştirilme yolları",
+     "metin": "Sentez, depolama, salıverilme, reseptör, geri alım ve yıkım basamaklarının her biri ayrı bir ilaç grubunun hedefidir.",
+     "s": [
+      61,
+      62,
+      63,
+      64
+     ]
+    }
+   ],
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin."
+   ],
+   "klip": "a-kazanim",
+   "v": "02965b78fa"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersin doğrulanmış çıkmışlarında iki hız sınırlayıcı basamak, enzim adları, reseptör alt tipleri ve geri alım taşıyıcısı doğrudan soruldu. Aşağıdaki yerler bu sorulara dayanıyor.",
+   "maddeler": [
+    {
+     "baslik": "Tirozinin dopaya dönüşmesi",
+     "metin": "Katekolamin sentezinde hız sınırlayıcı basamak tirozinin dopaya dönüşmesidir.",
+     "neden": "2020-2021 yılında doğrudan soruldu; fenilalaninin tirozine dönüşmesi şıkkı çeldirici olarak kondu.",
+     "s": [
+      48
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kolin asetiltransferaz",
+     "metin": "Asetilkolin, sitoplazmada kolin asetiltransferaz ile kolin ve asetil koenzim A dan sentezlenir.",
+     "neden": "2019-2020 yılında enzim adı soruldu; monoamin oksidaz ve katekol O metiltransferaz çeldirici oldu.",
+     "s": [
+      41
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nikotinik iletimin olmadığı yer",
+     "metin": "Hedef organdaki kolinerjik iletim muskariniktir; nikotinik iletim düğüm, adrenal medulla ve kas sinir kavşağındadır.",
+     "neden": "2019-2020 yılında nikotinik iletimin bulunmadığı yer soruldu.",
+     "s": [
+      3
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Beta bir reseptörü",
+     "metin": "Kalpte kasılma gücünü artıran reseptör beta birdir; aynı reseptör böbrekte renin salınımını artırır.",
+     "neden": "2020-2021 ve 2023-2024 yıllarında iki kez, ikinci kez ters yönden soruldu.",
+     "s": [
+      5,
+      56
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Asetilkolinin esterazla yıkılması",
+     "metin": "Kavşakta esteraz enzimi ile yıkılan aracı madde asetilkolindir.",
+     "neden": "2019-2020 yılında soruldu; monoaminler kavşakta enzimle sonlanmadığı için çeldirici oldular.",
+     "s": [
+      47
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kokainin geri alım taşıyıcısını kapatması",
+     "metin": "Kokain, zar amin pompasını bütün monoaminler için kapatır; seçici ilaçlar yalnız bir aracı maddeyi tutar.",
+     "neden": "2025-2026 yılında soruldu; sorunun kilidi bütün monoaminler ifadesidir.",
+     "s": [
+      48,
+      49
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Duyarsızlaşmanın nedenleri",
+     "metin": "Duyarsızlaşma reseptör düzeyinde olur; ilacın veriliş yolu duyarsızlaşma nedeni değildir.",
+     "neden": "2021-2022 yılında, nedeni olmayanı bulma biçiminde soruldu.",
+     "s": [
+      60
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "P maddesinin imzası",
+     "metin": "P maddesi atardamarcıkta genişleme, toplardamar ve hava yolu düz kasında kasılma yapar ve ağrı iletiminde görev alır.",
+     "neden": "Yılı belirsiz bir çıkmışta soruldu; damar etkili bağırsak peptidi ve kalsitonin geni ile ilişkili peptit çeldirici oldu.",
+     "s": [
+      50
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Botulinum toksininin basamağı",
+     "metin": "Botulinum toksini aksiyon potansiyelini değil keseciğin boşalmasını durdurur; sinir uyarılsa bile kavşağa aracı madde dökülmez.",
+     "neden": "Hocanın derste en uzun anlattığı örnek; etkinin aylarca sürmesi protein yeniden yapımına bağlı.",
+     "s": [
+      46
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Kesecik içine taşınmanın durması",
+     "metin": "Kesecik içine monoamin girmezse depo dolmaz ve boşalma sürdükçe yanıt azalır.",
+     "neden": "Hoca bu basamağı derste soru olarak bıraktı; rezerpinin etkisinin gecikerek büyümesinin nedeni.",
+     "s": [
+      42,
+      48
+     ],
+     "cikmis": false
+    }
+   ],
+   "ses": [
+    "En önemli yerler.",
+    "Doğrulanmış çıkmışlarda iki hız sınırlayıcı basamak doğrudan soruldu.",
+    "Enzim adları, reseptör alt tipleri ve geri alım taşıyıcısı da soru olmuş.",
+    "Bu yerler çıkmış kanıtına dayanıyor, tahmine değil."
+   ],
+   "klip": "a-onemli",
+   "v": "70b775a97d"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 10 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Tirozinden noradrenaline kadar olan sentez aşamalarında hangi basamak hız sınırlayıcıdır?",
+     "cevap": "Tirozinin dopaya dönüşmesi",
+     "aciklama": [
+      "Katekolamin yolunda darboğaz, tirozin hidroksilaz ile tirozinin dopaya dönüşmesidir.",
+      "Bu basamak yolun ilk kendine özgü adımı olduğu için bütün zinciri belirler ve alfa metil tirozin ile durdurulabilir.",
+      "Dopadan dopamine geçiş ve dopaminden noradrenaline geçiş hızlı basamaklardır, zinciri sınırlamazlar.",
+      "Fenilalaninin tirozine dönüşmesi şıkkı bu yolun parçası değildir; o adım karaciğerde olur ve eksikliği fenilketonüriye yol açar."
+     ],
+     "ornek": "Feokromositoma ameliyatı öncesinde katekolamin yapımını kısmak için alfa metil tirozin verilmesi, tam bu basamağın durdurulmasıdır.",
+     "tuzak": "Zincirdeki son adım olan noradrenalinden adrenaline geçiş yalnız adrenal medullada olur ve hız sınırlayıcı değildir.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Asetilkolin sitoplazmada hangi enzimin katalitik etkisiyle kolin ve asetil koenzim A dan sentez edilir?",
+     "cevap": "Kolin asetiltransferaz",
+     "aciklama": [
+      "Asetilkolin sinir ucunun sitoplazmasında kolin asetiltransferaz ile kurulur.",
+      "Kolin hücre dışı sıvıdan pompalanır, asetil koenzim A ise sinir ucundaki mitokondriden gelir.",
+      "Asetilkolinesteraz bu tepkimenin tersini yapar, yani sentez değil yıkım enzimidir.",
+      "Monoamin oksidaz, katekol O metiltransferaz ve tirozin hidroksilaz adrenerjik yolun enzimleridir."
+     ],
+     "ornek": "Sentez hızlı olduğu için darboğaz enzim değil kolinin taşınmasıdır; bu nedenle hemikolinyum sentezi durdurur.",
+     "tuzak": "Enzimin bol ve hızlı olması, hız sınırlayıcı basamağın kolin taşınması olduğunu gizler.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisinde nikotinik tipte kolinerjik reseptörler iletimde görev almaz?",
+     "cevap": "Hedef organdaki kolinerjik nöroefektör kavşakta",
+     "aciklama": [
+      "Nikotinik iletim sempatik ve parasempatik düğümlerde, adrenal medullada ve kas sinir kavşağında olur.",
+      "Hedef organdaki kolinerjik iletim ise muskarinik reseptörler üzerindendir.",
+      "Nikotinik reseptör iyon kanalı yapısında olduğu için yanıtı milisaniyeler içinde çıkar.",
+      "Muskarinik ve adrenerjik reseptörler G proteinine kenetli olduğundan yanıt daha yavaş gelişir."
+     ],
+     "ornek": "Düğüm engelleyici ilacın bütün sistemi kesmesi, düğümün her iki kolun ortak ara istasyonu olmasındandır.",
+     "tuzak": "Asetilkolin nikotinik reseptöre bağlanır diye hedef organdaki iletimi de nikotinik sanmak.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Otonom sinir sistemi kalp üzerindeki olumlu kasılma etkisini hangi reseptör aracılığıyla gösterir?",
+     "cevap": "Beta bir",
+     "aciklama": [
+      "Kalpte hızı ve kasılma gücünü artıran reseptör beta birdir ve ikinci ulağı siklik adenozin monofosfattır.",
+      "Alfa bir damar ve sfinkter kaslarında kasılma yapar, kalpte kasılma gücünün birincil düzenleyicisi değildir.",
+      "Alfa iki sinir ucunda frene basar, yani noradrenalin salınımını azaltır.",
+      "Muskarinik iki reseptörü ise sinoatriyal düğümde hızı yavaşlatır, yani ters yönde çalışır."
+     ],
+     "ornek": "Kalp yetmezliğinde kasılmayı artırmak için beta bir etkili ilaç kullanılması bu reseptöre dayanır.",
+     "tuzak": "Beta iki şıkkı; o reseptör bronş ve iskelet kası damarında gevşeme yapar.",
+     "s": [
+      5,
+      56
+     ]
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi santral ve periferik sinir sisteminde sinaptik aralıkta esteraz enzimi tarafından yıkımlanır?",
+     "cevap": "Asetilkolin",
+     "aciklama": [
+      "Asetilkolin kavşakta asetilkolinesteraz ile saniyeler içinde yıkılır ve açığa çıkan kolin geri alınır.",
+      "Enzim miktarı çok yüksek olduğu için salınan molekülün büyük bölümü reseptöre varmadan yıkılır.",
+      "Serotonin, dopamin ve adrenalin kavşakta enzimle sonlanmaz; etkileri geri alım ile biter.",
+      "Histamin de esteraz ile değil, başka yollarla yıkılır."
+     ],
+     "ornek": "Kolinesteraz engelleyici ilaçların kas gücünü artırması, bu yıkımın yavaşlatılmasıyla olur.",
+     "tuzak": "Monoaminlerin yıkım enzimleri bulunduğu için onların da kavşakta enzimle sonlandığını sanmak.",
+     "s": [
+      47,
+      49
+     ]
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi adrenerjik iletimde zar amin pompasını bütün monoaminler için bloke eder?",
+     "cevap": "Kokain",
+     "aciklama": [
+      "Kokain geri alım taşıyıcısını ayrım gözetmeden kapatır; noradrenalin, dopamin ve serotonin kavşakta kalır.",
+      "Sorunun kilidi bütün monoaminler ifadesidir, çünkü seçici ilaçlar yalnız bir aracı maddeyi tutar.",
+      "Üç halkalı ruh durumu düzenleyicileri ağırlıkla noradrenalin ve serotonin taşıyıcısına etki eder.",
+      "Seçici serotonin geri alım engelleyicileri yalnız serotonin taşıyıcısını kapatır; serotonin ve histamin ise ilaç değil aracı maddedir."
+     ],
+     "ornek": "Kokain alan hastada kalp hızının artması, kan basıncının yükselmesi ve göz bebeğinin büyümesi bu kapanmanın sonucudur.",
+     "tuzak": "Seçiciliği atlayıp üç halkalı ilaçları işaretlemek.",
+     "s": [
+      48,
+      49
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Agonist ortamda varken cevabın azalmasının, yani duyarsızlaşmanın nedenlerinden biri hangisi değildir?",
+     "cevap": "İlacın veriliş yolunun uygunsuzluğu",
+     "aciklama": [
+      "Duyarsızlaşma hücre ve reseptör düzeyinde bir olaydır; ilacın veriliş yolu ise emilimle ilgilidir.",
+      "Reseptör yapısının bozulması, reseptör ile G proteini kenetlenmesinin bozulması ve ikinci ulakta uyum değişiklikleri gerçek nedenlerdir.",
+      "Reseptörün hücre içine çekilmesi, yani ayrılması da yanıtın azalmasına yol açar.",
+      "Bu soru ilaç etkisinin düzeyi ile ilacın vücutta dağılımını birbirine karıştırmayı sınıyor."
+     ],
+     "ornek": "Soluma yoluyla alınan beta iki uyarıcısının sık kullanımda etkisinin azalması bu düzeneğin klinik karşılığıdır.",
+     "tuzak": "Farmakodinamik listeye konan farmakokinetik şıkkı doğru sanmak.",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Beta bir adrenerjik reseptörü ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Böbrekte jukstaglomerüler hücrelerden renin salınımını artırır",
+     "aciklama": [
+      "Beta bir reseptörü kalpte, yağ hücrelerinde ve böbrekteki jukstaglomerüler aygıtta bulunur.",
+      "Bronş düz kasında gevşeme beta iki, göz bebeğinin büyümesi alfa bir reseptörünün işidir.",
+      "Sinir ucundan salınımı azaltan reseptör alfa iki, sinoatriyal düğümde hızı yavaşlatan ise muskarinik ikidir.",
+      "Soru bir önceki yılın beta bir sorusunun ters yönden sorulmuş biçimidir."
+     ],
+     "ornek": "Beta engelleyici ilaçların kan basıncını düşürmesinde renin salınımının azalması da payı olur.",
+     "tuzak": "Reseptör satırını tek başına öğrenip komşu satırları çeldirici olarak tanımamak.",
+     "s": [
+      5,
+      56
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Tanımlardan hangisi yanlıştır?",
+     "cevap": "Bütün reseptör rezervlerini bağlayan ilaç parsiyel agonisttir",
+     "aciklama": [
+      "Bütün reseptörleri bağlayıp en yüksek yanıtı veren ilaç tam agonisttir.",
+      "Parsiyel agonist bütün reseptörleri doldursa bile en yüksek yanıtın altında kalır, çünkü etkinliği düşüktür.",
+      "Reseptöre bağlanıp etki oluşturmayan ve başka bağlanmayı önleyen ilaç antagonisttir.",
+      "Bu soru temel farmakoloji tanımlarını sınar ve aynı kurulda aynı hocadan çıkmıştır."
+     ],
+     "ornek": "Parsiyel agonist, tam agonist varlığında yanıtı düşürerek engelleyici gibi davranabilir.",
+     "tuzak": "Tanımın tek kelimesi değiştirilerek doğru gibi gösterilmesi.",
+     "s": []
+    },
+    {
+     "baslik": "Yılı belirsiz",
+     "metin": "Hangisi periferik ve santral sinirlerde bulunan, toplardamar ve hava yolu düz kasının kasılmasına neden olan, ağrı liflerinde bulunan bir atardamarcık genişleticisidir?",
+     "cevap": "P maddesi",
+     "aciklama": [
+      "P maddesi atardamarcıkta genişleme, toplardamar ve hava yolunda kasılma yapar ve ağrı iletiminde görev alır.",
+      "Damar etkili bağırsak peptidi hem damarı hem hava yolunu gevşetir, bu yüzden soru kökündeki kasılma onu eler.",
+      "Kalsitonin geni ile ilişkili peptit güçlü bir damar genişleticidir ama hava yolu kasılması imzası yoktur.",
+      "Renin ve anjiyotensin iki ise sinir ucu aracıları değildir."
+     ],
+     "ornek": "Acı biberden gelen kapsaisin bu liflerden P maddesi salıverir; tekrarlanan kullanımda depo tükenir ve ağrı azalır.",
+     "tuzak": "Bütün peptitleri damar genişletici sanıp imzalarını ayırmamak.",
+     "s": [
+      50
+     ]
+    }
+   ],
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış on çıkmış soru var.",
+    "Soruların dokuzu basamak, enzim, taşıyıcı ya da reseptör adı istiyor.",
+    "Üçü, nedeni olmayanı ya da yanlış olanı bulma biçiminde."
+   ],
+   "klip": "a-cikmis",
+   "cikmis": true,
+   "v": "3208adacef"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Aşağıdaki eğilim, bu derse bağlı 10 doğrulanmış çıkmıştan sayılarak çıkarıldı; ölçülmüş bir hoca profili değildir.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "On sorunun üçü, nedeni olmayanı ya da yanlış olanı bulma biçiminde; kalanı doğrudan bilgi sorusu."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "Sorular mekanizma basamağının adını istiyor; ilacın ticari adı ya da dozu sorulmamış."
+    },
+    {
+     "baslik": "Çeldirici kurma biçimi",
+     "metin": "Tablodan bir satır alınıp komşu satırlar çeldirici yapılıyor; reseptör soruları bu biçimde kurulmuş."
+    },
+    {
+     "baslik": "Tekrarlanan konu",
+     "metin": "İki hız sınırlayıcı basamak ayrı yıllarda soruldu; beta bir reseptörü iki yıl üst üste geldi."
+    },
+    {
+     "baslik": "Düzey karıştırma tuzağı",
+     "metin": "Nedeni olmayanı bulma sorularında ilaç etkisi listesine dağılım ve veriliş yolu şıkkı konuyor."
+    }
+   ],
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu eğilim, derse bağlı on doğrulanmış çıkmıştan sayılarak çıkarıldı.",
+    "On sorunun dokuzu basamak, enzim, taşıyıcı ya da reseptör adı istiyor.",
+    "Üç soru, nedeni olmayanı ya da yanlış olanı bulma biçimindedir.",
+    "Reseptör tablosu iki yıl üst üste, ikincisinde ters yönden sorulmuş."
+   ],
+   "klip": "a-uslup",
+   "guven": "dusuk",
+   "v": "0517034cba"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "Aşağıdaki yerler çıkmış kanıtı ya da hocanın derste ayrıntılı anlattığı mekanizmalara dayanıyor.",
+   "maddeler": [
+    {
+     "baslik": "İki hız sınırlayıcı basamak",
+     "metin": "Kolinerjik tarafta kolinin sinir ucuna taşınması, adrenerjik tarafta tirozinin dopaya dönüşmesi; ikisi de ayrı yıllarda soruldu."
+    },
+    {
+     "baslik": "Enzim adları",
+     "metin": "Kolin asetiltransferaz sentez, asetilkolinesteraz yıkım enzimidir; monoamin oksidaz ise depoyu ilgilendirir."
+    },
+    {
+     "baslik": "Reseptör tablosu",
+     "metin": "Beta bir kalp ve renin, beta iki bronş ve damar gevşemesi, alfa bir kasılma, alfa iki sinir ucunda fren, muskarinik iki kalpte yavaşlama."
+    },
+    {
+     "baslik": "Geri alım taşıyıcısı",
+     "metin": "Kokain bütün monoaminleri, seçici ilaçlar yalnız birini tutar; etkiyi sonlandıran yol yıkım değildir."
+    },
+    {
+     "baslik": "Toksin ve basamak eşleşmesi",
+     "metin": "Botulinum keseciğin boşalmasını, karadul örümceği toksini aşırı boşalmayı, deniz salyangozu toksini kalsiyum kanalını etkiler."
+    },
+    {
+     "baslik": "Zehirlenme yönetimi",
+     "metin": "Organofosfat zehirlenmesinde atropin ve pralidoksim verilir; enzimin yaşlanması nedeniyle tedavi erken başlamalıdır."
+    },
+    {
+     "baslik": "Kas gevşeticilerin ayrımı",
+     "metin": "Kürar türü ilaçların etkisi kolinesteraz engelleyici ile geri çevrilir; süksinilkolinin etkisi çevrilmez."
+    },
+    {
+     "baslik": "Ko-transmitter eşleşmesi",
+     "metin": "Asetilkolin yanında damar etkili bağırsak peptidi, noradrenalin yanında nöropeptit Y bulunur."
+    }
+   ],
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "İki hız sınırlayıcı basamağı yan yana öğren: kolinerjik tarafta kolinin taşınması, adrenerjik tarafta tirozinin dopaya dönüşmesi.",
+    "Her ilacı altı basamaktan birine yerleştir: sentez, depolama, salıverilme, reseptör, geri alım, yıkım.",
+    "Reseptör tablosunu komşu satırlarıyla birlikte öğren, çünkü çeldiriciler komşu satırlardan kuruluyor.",
+    "Zehir ve toksinleri basamaklarıyla eşleştir: botulinum keseciğin boşalmasını, lokal anestezikler sodyum kanalını, organofosfatlar yıkım enzimini durdurur.",
+    "Kokain ve seçici geri alım engelleyicilerini seçicilik sırasına koy."
+   ],
+   "klip": "a-odak",
+   "v": "b3256f4b9b"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": "Slayt bazlı ders özeti bu katmanda üretilmedi; dersin tam metni ders özetleri bölümündeki Otonom Sinir Sistemi Farmakolojisi mekanizmalar metnindedir.",
+ "_cikmisAnalizZorunlu": true,
+ "_kaynak": "Ders PDF'i (65 slayt), hoca ses kaydı (Farma OSS Part1/Part2, üç geçişli döküm: ham ve süzgeçli ses, large-v3 ve medium), bu derse bağlı 10 doğrulanmış çıkmış soru."
+}
