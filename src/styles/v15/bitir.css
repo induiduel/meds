@@ -25,4 +25,6 @@
 /* Özet dört kutu (İlerleme · Kalan ders süresi · Senin hızınla · Şimdiye kadar); dar ekranda takip.css tek sütuna indirir */
 .bd-ozet2 .sp-iki.bd-dort { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 900px) { .bd-ozet2 .sp-iki.bd-dort { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .bd-ozet2 .sp-iki.bd-dort { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .bd-ozet2 .sp-iki.bd-dort { grid-template-columns: minmax(0, 1fr); }
+  /* dar ekranda kutu yatay satıra döner (takip.css); çubuğun eni yoksa 0'a iner — kendi satırını kaplasın */
+  .bd-ozet2 .bd-dort .bd-cubuk { flex: 1 0 100%; } }
