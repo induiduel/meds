@@ -269,6 +269,33 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
     import pdf_isaret as PI
     pdf = PI.Pdf(pdf_yol)
     c_out: dict[str, list] = {}
+
+    def _capa_sayfasi(capalar: list[dict]) -> int | None:
+        return next((int(c["sayfa"]) for c in capalar if c.get("sayfa")), None)
+
+    def _ayni_sayfa(cumle: str, capalar: list[dict], sayfa: int) -> dict:
+        """İşaret ÇAPA SAYFASINDA kalmalı (H614): çapa s.12 iken işaret s.13 ise oynatıcı yanlış slaytı gösterir
+        ve takip kapısı T5 haklı olarak HATA verir. Komşu sayfadaki görseli ödünç almak yerine çapa sayfasında
+        satır/madde eşlemesi, sonra metin/kelime, en son resim kutusu denenir; hiçbiri yoksa sayfa işareti."""
+        sy = pdf.sayfa(sayfa)
+        if not sy:
+            return {"d": 0, "s": sayfa, "t": "sayfa", "l": [], "w": []}
+        satirlar = [x for c in capalar
+                    for x in ([c["satir"]] if isinstance(c.get("satir"), str) else (c.get("satir") or [])) if x]
+        ms = PI.capa_maddeleri(sy, satirlar) if satirlar else set()
+        if ms:
+            return {"d": 0, "s": sayfa, **PI.eslestir_capa(cumle, sy, ms)}
+        n, r = PI.eslestir(cumle, sy)
+        if r and n >= 1:
+            return {"d": 0, "s": sayfa, **r}
+        if sy.resimler:
+            rb = PI.resim_kutusu(sy)
+            if rb:
+                return {"d": 0, "s": sayfa, "t": "resim", "l": [sy.n(rb)], "w": []}
+        if sy.tablolar:
+            return {"d": 0, "s": sayfa, **PI.eslestir_capa(cumle, sy, {0})}
+        return {"d": 0, "s": sayfa, "t": "sayfa", "l": [], "w": []}
+
     for pn, (p, es) in enumerate(zip(pars, hz["paragraflar"])):
         m = p["t"]
         sinir = PI.cumle_sonlari(m)
@@ -277,10 +304,15 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
         for ci, e in enumerate(sinir):
             cumle = m[(sinir[ci - 1] if ci else 0):e]
             if cc and ci < len(cc) and cc[ci] and es:
+                cs = _capa_sayfasi(cc[ci])
                 isr = PI.capali(cumle, cc[ci], pdf)
-                if isr:
+                if isr and (not cs or int(isr.get("s") or cs) == cs):
                     isr["d"] = 0
                     liste.append(isr)
+                    continue
+                if isr and cs:
+                    # görsel komşu sayfada bulundu → çapa sayfasında kal
+                    liste.append(_ayni_sayfa(cumle, cc[ci], cs))
                     continue
             s0 = (es.get("sayfalar") or [])[ci] if ci < len(es.get("sayfalar") or []) else es["sayfa"]
             # Eğer v2 içindeki cümlede özel slayt.sayfa tanımlıysa öncelik ver
