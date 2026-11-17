@@ -1,0 +1,6796 @@
+{
+ "surum": 2,
+ "ders_id": "k3-55",
+ "anahtar": "y25-k3-55-kolera",
+ "baslik": "Kolera",
+ "donem": "2025-2026",
+ "bolumler": [
+  {
+   "id": "k3-55-b01",
+   "baslik": "Kolera",
+   "paragraflar": [
+    {
+     "id": "k3-55-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-55-c0001",
+       "ses": "Kolera kontamine su ve gıdaların tüketilmesiyle bulaşan bir enfeksiyon hastalığıdır; bu yüzden temiz su ve gıda hijyeni korunmada belirleyicidir.",
+       "ekran": "**Kolera** kontamine su ve gıdayla bulaşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kontamine su ve gıdalarla bulaşan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0002",
+       "ses": "Hastalık tablosu kolera vibriyolarının enterotoksininin etkisiyle oluşur ve bu toksin tablonun asıl sürükleyici unsurudur.",
+       "ekran": "Etken **kolera vibriyosu enterotoksini**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kolera vibriyolarının enterotoksiniyle oluşan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "kolera vibriyosu enterotoksini",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0003",
+       "ses": "Kusma ve ishal kolera tablosunun karakteristik belirtileridir; bu nedenle hastanın değerlendirilmesinde kaybedilen sıvı ön planda tutulur.",
+       "ekran": "**Kusma ve ishal** ile karakterize",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kusma ve ishal ile karakterize"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kusma ve ishal",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kusma ve ishal",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "10f8299ee800"
+       ]
+      },
+      {
+       "id": "k3-55-c0004",
+       "ses": "Ağır kolera şekillerinde sıvı ve elektrolit kaybı hemokonsantrasyon, hipovolemik şok ve metabolik asidoza neden olur; bu üç sonuç kaybın doğrudan yansımasıdır.",
+       "ekran": "**Sıvı kaybı** hemokonsantrasyon, şok, asidoz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ağır şekillerinde sıvı ve elektrolit kaybı hemokonsantrasyon, hipovolemik şok, metabolik asidoza neden olan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı kaybı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0005",
+       "ses": "Tedavi edilmezse kolera ölümle sonuçlanan akut bir enfeksiyon hastalığıdır; bu yüzden tanıda gecikme doğrudan hayatı tehdit eder.",
+       "ekran": "**Tedavisiz ölümcül** akut enfeksiyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Tedavi edilmezse ölümle sonuçlanan akut bir enfeksiyon hastalığıdır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tedavisiz ölümcül",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-55-c0006",
+       "ses": "Kolera epidemi ve pandemilere neden olur; yani kısa sürede geniş toplulukları etkileyerek salgın boyutuna ulaşabilir.",
+       "ekran": "**Epidemi ve pandemi** yapabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Epidemi ve pandemilere neden olur"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Epidemi ve pandemi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-55-c0007",
+       "ses": "Kolera bir insan enfeksiyonudur ve ara konakçısı yoktur; etkenin döngüsü doğrudan insan üzerinden yürür.",
+       "ekran": "**Ara konakçı yok**, insan enfeksiyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bir insan infeksiyonudur, ara konakçı yoktur"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ara konakçı yok",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0008",
+       "ses": "Bulaş fekal-oral yolla, kontamine su ve gıdalar aracılığıyla gerçekleşir; dışkıyla kirlenmiş suyun içilmesi tipik bulaş yoludur.",
+       "ekran": "**Fekal-oral** bulaş",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kontamine su ve gıdalarla fekal-oral bulaşır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fekal-oral",
+         "tur": "terim"
+        },
+        {
+         "metin": "Fekal-oral",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877464652-141753"
+       ]
+      },
+      {
+       "id": "k3-55-c0009",
+       "ses": "Kolera vibriyosu ekolojik ortamda, hem tatlı hem tuzlu suda yaşayabilme özelliğine sahiptir; bu özellik su kaynaklı salgınları kolaylaştırır.",
+       "ekran": "**Tatlı ve tuzlu suda** yaşayabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Ekolojik ortamda yaşayabilme özelliği var (tatlı ve tuzlu suda)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tatlı ve tuzlu suda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0010",
+       "ses": "Etken kabuklu deniz canlılarının kabuklarına tutunabilir; bu nedenle kabuklu deniz ürünleri bulaş açısından dikkate alınır.",
+       "ekran": "**Kabuklu deniz canlılarına** tutunur",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kabuklu deniz canlılarının kabuklarına tutunabilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kabuklu deniz canlılarına",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0011",
+       "ses": "Hastalığı geçirenlerin yüzde üçünde safra kesesinde taşıyıcılık gelişir ve bu kişiler bulaşmada rol oynar; taşıyıcılık bu yüzden epidemiyolojik olarak önemlidir.",
+       "ekran": "**Safra kesesi taşıyıcılığı** yüzde üç",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalığı geçirenlerin %3’ünde safra kesesinde taşıyıcılık olup bulaşmada rol oynar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Safra kesesi taşıyıcılığı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b02",
+   "baslik": "Kolera-Bulaşma Yolu",
+   "paragraflar": [
+    {
+     "id": "k3-55-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k3-55-c0012",
+       "ses": "Kolera bulaşması temiz su ve sanitasyon uygulamalarının yetersizliğiyle yakından bağlantılıdır; hastalık bu yönüyle altyapı sorununun göstergesidir.",
+       "ekran": "**Temiz su ve sanitasyon** yetersizliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Kolera bulaşması temiz su ve sanitasyon uygulamalarının yetersizliğiyle yakından bağlantılıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Temiz su ve sanitasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0013",
+       "ses": "Tipik risk altındaki alanlar asgari temiz su ve sanitasyon gereksinimlerinin karşılanmadığı, kişisel hijyenin yetersiz olduğu bölge ve durumlardır; bu koşullar bulaşı sürdürür.",
+       "ekran": "**Risk alanı** yetersiz hijyen ve sanitasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Tipik risk altındaki alanlar; asgari temiz su ve sanitasyon gereksinimlerinin karşılanmadığı, kişisel hijyenin yetersiz olduğu bölge ve durumlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Risk alanı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0014",
+       "ses": "Kanalizasyonun içme ve kullanma sularına karıştığı deprem, sel ve aşırı yağmur gibi doğal afetlerden sonra kolera görülme riski yüksektir; şebekenin zarar görmesi bu riski büyütür.",
+       "ekran": "**Doğal afet sonrası** risk artar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Kanalizasyon sisteminin içme ve kullanma sularına karıştığı, şebeke sisteminin zarar gördüğü deprem, sel, aşırı yağmur gibi doğal afetlerden sonra görülme riski yüksektir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Doğal afet sonrası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0015",
+       "ses": "Bulaş fekal-oral yolla gerçekleşir; dışkıyla kirlenmiş suyun doğrudan içilmesi, gıdaların bu suyla yıkanması ya da bulaşmış yiyeceklerin yenmesi bulaşı sağlar.",
+       "ekran": "**Kirlenmiş su ve gıda** ile bulaş",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Bulaş yolu fekal-oral olup dışkıyla kontamine olmuş suyun doğrudan içilmesiyle, gıdaların yıkanmasında kullanılması ya da bulaştığı yiyeceklerin yenmesi ile gerçekleşir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kirlenmiş su ve gıda",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kirlenmiş su ve gıda",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "4c84b13f2fa9"
+       ]
+      },
+      {
+       "id": "k3-55-c0016",
+       "ses": "Vakalar ishal boyunca ve ishalden yedi gün sonrasına kadar bulaştırıcıdır; bu süre temaslıların izlenmesinde dikkate alınır.",
+       "ekran": "**Bulaştırıcılık** ishal ve yedi gün sonrası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Vakalar ishal boyunca ve ishalden 7 gün sonrasına kadar bulaştırıcıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaştırıcılık",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bulaştırıcılık",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-017",
+        "past-1790877035878-771026"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-55-c0017",
+       "ses": "Bulaş açısından riskli durumlar, kolera vibriyonunun ağız yoluyla alınmasını kolaylaştıran su ve besin kaynaklı koşullardır.",
+       "ekran": "**Bulaş** riskli durumlar su ve besin kaynaklıdır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bulaş açısından riskli durumlar:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0018",
+       "ses": "Bu koşulların ortak noktası, insan dışkısıyla kirlenmiş su veya besinin sindirim sistemine ulaşmasıdır.",
+       "ekran": "**Bulaş** riskli durumlar su ve besin kaynaklıdır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bulaş açısından riskli durumlar:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0019",
+       "ses": "Kolera vibriyolarının kontamine ettiği suların içilmesi ve kullanılması bulaşta en önde gelen yoldur.",
+       "ekran": "**Kontamine su** içilmesi ve kullanılması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kolera vibriyoların kontamine ettiği suların içilmesi ve kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kontamine su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0020",
+       "ses": "Ortak su kaynağı kirlendiğinde tek bir kaynakla geniş topluluklar aynı anda etkilenir.",
+       "ekran": "**Kontamine su** içilmesi ve kullanılması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kolera vibriyoların kontamine ettiği suların içilmesi ve kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kontamine su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0021",
+       "ses": "Besinlerin iyi pişirilmeden yenmesi vibriyonun canlı kalmasına ve ağızdan alınmasına yol açar.",
+       "ekran": "**Az pişmiş besin** vibriyonu canlı taşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Besinlerin iyi pişirilmeden yenmesi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Az pişmiş besin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-55-c0022",
+       "ses": "Yeterli ısı görmeyen gıda, bulaşı sindirim sistemine taşıyan bir aracı olur.",
+       "ekran": "**Az pişmiş besin** vibriyonu canlı taşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Besinlerin iyi pişirilmeden yenmesi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Az pişmiş besin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0023",
+       "ses": "Kontamine şehir suları, kanalizasyonla kirlenen ortak şebekenin kolerayı mahalle mahalle yaymasına neden olur.",
+       "ekran": "**Şehir suyu** salgını hızla yayar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kontamine şehir suları"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Şehir suyu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0024",
+       "ses": "Bu nedenle şehir salgınlarında ilk incelenen nokta içme suyu kaynağıdır.",
+       "ekran": "**Şehir suyu** salgını hızla yayar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kontamine şehir suları"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Şehir suyu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0025",
+       "ses": "Evlerde depolanan sular, kaynağında temiz olsa bile kapla ve elle temas sonrası kolera vibriyonuyla kirlenebilir.",
+       "ekran": "**Depolanan su** ev içinde bulaş kaynağı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Evlerde depolanan sular"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Depolanan su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0026",
+       "ses": "Uzun süre bekleyen su, ev içinde sürekli bir bulaş kaynağı hâline gelir.",
+       "ekran": "**Depolanan su** ev içinde bulaş kaynağı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Evlerde depolanan sular"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Depolanan su",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p007",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-55-c0027",
+       "ses": "Sokakta satılan yiyecekler, hijyen denetimi olmadığı için kolera bulaşında sık sorumlu tutulur.",
+       "ekran": "**Sokak yemeği** denetimsiz ve riskli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Sokakta satılan yiyecekler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sokak yemeği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0028",
+       "ses": "Açıkta satılan gıda hem kirlenmiş suyla hem kirli elle temas eder.",
+       "ekran": "**Sokak yemeği** denetimsiz ve riskli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Sokakta satılan yiyecekler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sokak yemeği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0029",
+       "ses": "Çiğ tüketilen deniz ürünleri, vibriyonun canlılığını koruması nedeniyle bulaş kaynağı olabilir.",
+       "ekran": "**Çiğ deniz ürünü** canlı vibriyo taşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Çiğ tüketilen deniz ürünleri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çiğ deniz ürünü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0030",
+       "ses": "Pişirme vibriyonu öldürdüğü için çiğ tüketim riski belirgin biçimde artırır.",
+       "ekran": "**Çiğ deniz ürünü** canlı vibriyo taşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Çiğ tüketilen deniz ürünleri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çiğ deniz ürünü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0031",
+       "ses": "Hasta kişinin dışkı ve kusmuğuyla bulaşık eşyaların kullanılması, hasta bakımı sırasında bulaşı sürdürür.",
+       "ekran": "**Bulaşık eşya** hasta çevresinde bulaştırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hasta kişinin dışkı ve kusmuğuyla bulaşık eşyaların kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaşık eşya",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p008",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-55-c0032",
+       "ses": "Bu yüzden eşya temizliği ve el hijyeni salgın kontrolünde temel önlem olarak öne çıkar.",
+       "ekran": "**Bulaşık eşya** hasta çevresinde bulaştırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hasta kişinin dışkı ve kusmuğuyla bulaşık eşyaların kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaşık eşya",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0033",
+       "ses": "Alt yapı tesislerinin kötü olması, kanalizasyon ile içme suyunu birbirine karıştırarak kolera salgınlarının zeminini hazırlar.",
+       "ekran": "**Kötü altyapı** kanalizasyonu suya karıştırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Alt yapı tesislerin kötü olması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kötü altyapı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0034",
+       "ses": "Bu nedenle altyapı yatırımı korunmada bulaş zincirini kesen asıl adımdır.",
+       "ekran": "**Kötü altyapı** kanalizasyonu suya karıştırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Alt yapı tesislerin kötü olması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kötü altyapı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0035",
+       "ses": "İnsan dışkısının gübre olarak kullanılması, vibriyonun toprak ve sebze üzerinden yeniden dolaşıma girmesine yol açar.",
+       "ekran": "**Dışkı gübresi** sebzeye vibriyo taşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "İnsan dışkısının gübre olarak kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dışkı gübresi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0036",
+       "ses": "Böylece tarım ürünleri beklenmeyen bir bulaş aracı hâline gelir.",
+       "ekran": "**Dışkı gübresi** sebzeye vibriyo taşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "İnsan dışkısının gübre olarak kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dışkı gübresi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p009",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-55-c0037",
+       "ses": "Kişisel hijyen kurallarının yerleşmediği toplumlarda el yıkama alışkanlığı zayıf kaldığı için kolera kolay yayılır.",
+       "ekran": "**Zayıf hijyen** bulaşı kolaylaştırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kişisel hijyen kurallarının yerleşmediği toplumlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Zayıf hijyen",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0038",
+       "ses": "El hijyeninin yerleşmemesi, ağız yoluyla alınan vibriyo sayısını artırır.",
+       "ekran": "**Zayıf hijyen** bulaşı kolaylaştırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Kişisel hijyen kurallarının yerleşmediği toplumlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Zayıf hijyen",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0039",
+       "ses": "Sosyoekonomik yönünden gelişmemiş ülkeler, temiz su ve kanalizasyon olanakları sınırlı olduğu için kolera açısından sürekli risk taşır.",
+       "ekran": "**Gelişmemiş ülke** temiz su sınırlı, risk sürekli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Sosyoekonomik yönünden gelişmemiş ülkeler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gelişmemiş ülke",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0040",
+       "ses": "Bu tablo, hastalığın yoksullukla doğrudan ilişkili olduğunu gösterir.",
+       "ekran": "**Gelişmemiş ülke** temiz su sınırlı, risk sürekli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Sosyoekonomik yönünden gelişmemiş ülkeler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gelişmemiş ülke",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p010",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-55-c0041",
+       "ses": "Endemik koleranın vatanı Hindistan ve Güney Asya ülkeleridir.",
+       "ekran": "**Endemik vatan** Hindistan ve Güney Asya",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Endemik koleranın vatanı Hindistan ve Güney Asya ülkeleridir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Endemik vatan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0042",
+       "ses": "Hastalığın sürekli görüldüğü bu coğrafya, salgınların çıkış noktası olarak değerlendirilir.",
+       "ekran": "**Endemik vatan** Hindistan ve Güney Asya",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Endemik koleranın vatanı Hindistan ve Güney Asya ülkeleridir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Endemik vatan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0043",
+       "ses": "Nepal, endemik kolera odakları arasında sayılan Güney Asya ülkesidir.",
+       "ekran": "**Nepal** endemik ülkeler arasında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Nepal"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nepal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0044",
+       "ses": "Bu ülkelerde hastalık dışarıdan gelmeden, yerel kaynaklardan sürekli beslenir.",
+       "ekran": "**Nepal** endemik ülkeler arasında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Nepal"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nepal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0045",
+       "ses": "Burma da endemik koleranın görüldüğü Güney Asya ülkeleri listesinde yer alır.",
+       "ekran": "**Burma** endemik kuşakta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Burma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Burma",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p011",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-55-c0046",
+       "ses": "Listedeki ülkelerin ortak yönü, hastalığın yıl boyunca dolaşımda kalmasıdır.",
+       "ekran": "**Burma** endemik kuşakta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Burma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Burma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0047",
+       "ses": "Pakistan, aynı listede yer alan ve kolera açısından endemik kabul edilen ülkelerdendir.",
+       "ekran": "**Pakistan** endemik kabul edilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Pakistan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pakistan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0048",
+       "ses": "Endemik olması, salgın çıkmadan da olgu görülebileceği anlamına gelir.",
+       "ekran": "**Pakistan** endemik kabul edilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Pakistan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pakistan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0049",
+       "ses": "Tayland'ın da aralarında bulunduğu bu ülkeler, hastalığın sürekli dolaştığı bölgeyi oluşturur.",
+       "ekran": "**Tayland** sürekli dolaşım bölgesinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Tayland"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tayland",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0050",
+       "ses": "Bölgesel dolaşım, seyahat ve ticaret yoluyla hastalığın dışarı taşınmasını kolaylaştırır.",
+       "ekran": "**Tayland** sürekli dolaşım bölgesinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Tayland"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tayland",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p012",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-55-c0051",
+       "ses": "Malezya, endemik kolera bölgesi içinde değerlendirilen ülkelerden biridir.",
+       "ekran": "**Malezya** endemik bölge içinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Malezya"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Malezya",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0052",
+       "ses": "Bu ülkelerden gelen olgularda bulaş kaynağı olarak yerel su ve gıda akla gelmelidir.",
+       "ekran": "**Malezya** endemik bölge içinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Malezya"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Malezya",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0053",
+       "ses": "Suudi Arabistan da slaytta endemik kolera ülkeleri arasında gösterilmiştir.",
+       "ekran": "**Suudi Arabistan** listede yer alır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Suudi Arabistan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Suudi Arabistan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0054",
+       "ses": "Kalabalık toplulukların bir araya geldiği dönemler bu ülkelerde yayılımı ayrıca artırır.",
+       "ekran": "**Suudi Arabistan** listede yer alır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Suudi Arabistan"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Suudi Arabistan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0055",
+       "ses": "Çin, bu endemik ülke listesinin sonunda yer alır ve bölgesel risk açısından anılır.",
+       "ekran": "**Çin** endemik ülkeler listesinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Çin"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p013",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-55-c0056",
+       "ses": "Listeye bakıldığında riskin tek bir ülkeyle sınırlı olmadığı, geniş bir coğrafyaya yayıldığı görülür.",
+       "ekran": "**Çin** endemik ülkeler listesinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Çin"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0057",
+       "ses": "Kolera, kalabalık ortamlarda yaşayan, savaş, yoksulluk ve doğal afetlerden etkilenen topluluklarda kolayca yayılıp ölümlere yol açabilmektedir.",
+       "ekran": "**Kalabalık ve afet** kolera ölüme yol açar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kolera, kalabalık ortamlarda yaşayan, savaş, yoksulluk ve doğal afetlerden etkilenen topluluklarda kolayca yayılıp ölümlere yol açabilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kalabalık ve afet",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0058",
+       "ses": "Bu nedenle kamp, göç ve afet sonrası dönemler salgın açısından en kırılgan zamanlardır.",
+       "ekran": "**Kalabalık ve afet** kolera ölüme yol açar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kolera, kalabalık ortamlarda yaşayan, savaş, yoksulluk ve doğal afetlerden etkilenen topluluklarda kolayca yayılıp ölümlere yol açabilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kalabalık ve afet",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p014",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-55-c0059",
+       "ses": "Kolera salgınlarının Ganj nehri deltasında bulunan endemik odaklardan kaynaklandığı bilinmektedir.",
+       "ekran": "**Ganj deltası** endemik kaynak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Ganj nehri deltasında bulunan endemik odaklardan kaynaklandığı biliniyor"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ganj deltası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0060",
+       "ses": "Bu delta, hastalığın tarih boyunca dışarıya yayıldığı başlangıç noktası olarak kabul edilir.",
+       "ekran": "**Ganj deltası** endemik kaynak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Ganj nehri deltasında bulunan endemik odaklardan kaynaklandığı biliniyor"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ganj deltası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0061",
+       "ses": "Hindistan'da kolera sık sık epidemiler yapar.",
+       "ekran": "**Hindistan** sık epidemi yapar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Hindistan’da sık sık epidemiler yapar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hindistan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0062",
+       "ses": "Endemik odağın bu ülkede bulunması, tekrarlayan salgınları açıklar.",
+       "ekran": "**Hindistan** sık epidemi yapar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Hindistan’da sık sık epidemiler yapar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hindistan",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0063",
+       "ses": "Kolera on beşinci yüzyıldan on yedinci yüzyıla kadar Hindistan ile sınırlı kalmıştır.",
+       "ekran": "**Sınırlı yayılım** on yedinci yüzyıla kadar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "15-17. yüzyıla kadar Hindistan’la sınırlı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sınırlı yayılım",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p015",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-55-c0064",
+       "ses": "Ulaşımın kısıtlı olması hastalığın bu coğrafyadan çıkışını geciktirmiştir.",
+       "ekran": "**Sınırlı yayılım** on yedinci yüzyıla kadar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "15-17. yüzyıla kadar Hindistan’la sınırlı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sınırlı yayılım",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0065",
+       "ses": "Bin sekiz yüz on yediden bin dokuz yüz altmış bire kadar kolera pandemileri yaşanmıştır.",
+       "ekran": "**Pandemiler** kayıtlı yedi kolera pandemisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "1817’den 1961’e kadar pandemiler (Sadece geçen iki yüzyılda dünyada kayıtlı 7 kolera pandemisi görüldü)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pandemiler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0066",
+       "ses": "Sadece geçen iki yüzyılda dünyada kayıtlı yedi kolera pandemisi görüldüğü belirtilmektedir.",
+       "ekran": "**Pandemiler** kayıtlı yedi kolera pandemisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "1817’den 1961’e kadar pandemiler (Sadece geçen iki yüzyılda dünyada kayıtlı 7 kolera pandemisi görüldü)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pandemiler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0067",
+       "ses": "Günümüzde her yıl bir virgül üç ile dört milyon arasında insanın koleraya yakalandığı tahmin edilmektedir.",
+       "ekran": "**Güncel yük** milyonlarca olgu, binlerce ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Günümüzde her yıl 1,3 – 4 milyon insan koleraya yakalandığı, 21.000 – 143.000 insanın öldüğü tahmin edilmekte"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Güncel yük",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0068",
+       "ses": "Yine yılda yirmi bir bin ile yüz kırk üç bin arasında insanın bu hastalık nedeniyle öldüğü düşünülmektedir.",
+       "ekran": "**Güncel yük** milyonlarca olgu, binlerce ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Günümüzde her yıl 1,3 – 4 milyon insan koleraya yakalandığı, 21.000 – 143.000 insanın öldüğü tahmin edilmekte"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Güncel yük",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b03",
+   "baslik": "Etyoloji",
+   "paragraflar": [
+    {
+     "id": "k3-55-p016",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-55-c0069",
+       "ses": "Vibrio kolera gram negatif, flajellası sayesinde aşırı hareketli ve aerop bir basildir.",
+       "ekran": "**V. cholerae** gram negatif, virgül şekilli, kapsülsüz basil",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "V. cholerae gram negatif, flajellası ile aşırı hareketli, aerop bir basildir. Virgül şekilli, kapsülsüz bir bakteri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "V. cholerae",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0070",
+       "ses": "Virgül şekilli ve kapsülsüz yapısı, bakterinin mikroskopik tanınmasında yol gösterir.",
+       "ekran": "**V. cholerae** gram negatif, virgül şekilli, kapsülsüz basil",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "V. cholerae gram negatif, flajellası ile aşırı hareketli, aerop bir basildir. Virgül şekilli, kapsülsüz bir bakteri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "V. cholerae",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0071",
+       "ses": "Bağırsak enfeksiyonu olan gastroenterit akut ve şiddetli bol sulu ishal ile seyreder.",
+       "ekran": "**Gastroenterit** akut, şiddetli, bol sulu ishal",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Bağırsak enfeksiyonu (gastroenterit) yapar, akut ve şiddetli, bol sulu ishal ile seyreden bir hastalıktır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gastroenterit",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gastroenterit",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-Kurul_I_S_nav_-28"
+       ]
+      },
+      {
+       "id": "k3-55-c0072",
+       "ses": "İnsan kaynaklı etkenin kuluçka süresi altı ila kırk sekiz saat arasındadır.",
+       "ekran": "**Kuluçka** altı ila kırk sekiz saat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Kaynağı insan olan etkenin kuluçka süresi 6-48 saattir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kuluçka",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0073",
+       "ses": "Kolera etkeninin alkali besiyerinde üremesi, bu ortamın tanı amacıyla kullanılmasını açıklar.",
+       "ekran": "**Alkali besiyeri** üreme özelliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Alkali besiyerinde ürer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkali besiyeri",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p017",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-55-c0074",
+       "ses": "Tiyosülfat sitrat bile salt sukroz agar, kolera etkeni için kullanılan bir besiyeridir.",
+       "ekran": "**TCBS agar** kolera besiyeri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "TCBS (tiyosülfat-sitrat, bile salt-sukroz) agar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "TCBS agar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p018",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-55-c0075",
+       "ses": "Kolera etkeni lipopolisakarit yapısındaki o antijenine göre iki yüzden fazla serogruba ayrılır.",
+       "ekran": "**Lipopolisakarit O antijeni** ile serogruplar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Lipopolisakarit yapısındaki O antijenine göre 200’den fazla serogruba ayrılır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lipopolisakarit O antijeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0076",
+       "ses": "Salgınlardan sorumlu olan serogruplar o bir ve o yüz otuz dokuzdur.",
+       "ekran": "**O1 ve O139** salgınlardan sorumlu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "O1 ve O139 serogrupları dünyadaki salgınlardan sorumlu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "O1 ve O139",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0077",
+       "ses": "O bir serogrubu içinde iki ayrı biyotip bulunur.",
+       "ekran": "**O1 serogrubu** iki biyotip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "O1 serogrup içinde iki biyotip var"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "O1 serogrubu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0078",
+       "ses": "Klasik o bir biyotipi, o bir serogrubu içinde yer alan biyotiplerden biridir.",
+       "ekran": "**Klasik O1** biyotipi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "klasik O1"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klasik O1",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0079",
+       "ses": "El tor biyotipi, o bir serogrubu içinde yer alan diğer biyotiptir.",
+       "ekran": "**El-Tor** biyotipi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "El-Tor"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "El-Tor",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p019",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-55-c0080",
+       "ses": "Slayttaki şema kolera etkeninin serogruplara ve biyotiplere ayrımını görsel olarak özetler.",
+       "ekran": "**Serogrup** şeması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "kolera serogrup ve biyotip şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Serogrup",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p020",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-55-c0081",
+       "ses": "Etyoloji başlığı kolera etkenlerinin özelliklerini ve çevresel dayanıklılıklarını sınıflandırarak anlatır.",
+       "ekran": "**Etyoloji** etken ve dayanıklılık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Etyoloji"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etyoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0082",
+       "ses": "Klasik Vibrio cholerae kolera hastalığının etkenlerinden biri olarak ayrı bir başlıkta ele alınır.",
+       "ekran": "**Klasik Vibrio cholerae** ayrı etken",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Klasik Vibrio cholerae"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klasik Vibrio cholerae",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0083",
+       "ses": "Klasik Vibrio cholerae dış ortama duyarlıdır, bu nedenle çevresel koşullarda daha kolay etkilenir.",
+       "ekran": "**Dış ortama duyarlı** klasik tip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Dış ortama duyarlıdır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dış ortama duyarlı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0084",
+       "ses": "Klasik Vibrio cholerae suda canlı kalma süresi kısadır, bu da bulaş için uygun ortamda kalma şansını azaltır.",
+       "ekran": "**Suda kalma süresi** kısa",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Suda canlı kalma süresi kısadır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Suda kalma süresi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0085",
+       "ses": "Klasik Vibrio cholerae ile enfeksiyonda semptomatik hastalık oranı üçte birdir.",
+       "ekran": "**Semptomatik oran** üçte bir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Semptomatik 1/3"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Semptomatik oran",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p021",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-55-c0086",
+       "ses": "El Tor kolera etkeninin dış ortama daha dayanıklı olan biyotipidir.",
+       "ekran": "**El-Tor** dayanıklı biyotip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "El-Tor"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "El-Tor",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0087",
+       "ses": "El Tor biyotipi dış ortama dayanıklıdır, bu özellik onun çevrede kalma ve yayılma becerisini artırır.",
+       "ekran": "**Dış ortama dayanıklı** El-Tor",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Dış ortama dayanıklıdır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dış ortama dayanıklı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0088",
+       "ses": "El Tor biyotipi suda uzun süre yaşayabilir, bu yüzden su kaynaklı bulaş açısından önem taşır.",
+       "ekran": "**Suda uzun yaşam** El-Tor",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Suda uzun süre yaşayabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Suda uzun yaşam",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0089",
+       "ses": "El Tor biyotipinde semptomatik hastalık oranı kırkta birdir.",
+       "ekran": "**Semptomatik oran** kırkta bir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Semptomatik 1/40"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Semptomatik oran",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0090",
+       "ses": "El Tor biyotipinin belirtisiz yani asemptomatik geçme olasılığı daha yüksektir.",
+       "ekran": "**Belirtisiz geçiş** El Tor daha yüksek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "El-Tor biyotipinin belirtisiz (asemptomatik) geçme olasılığı daha yüksektir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Belirtisiz geçiş",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p022",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-55-c0091",
+       "ses": "Kolera patogenezi barsağın lokal hastalığı olarak başlar, yani tablo sistemik bir yayılımdan çok barsak yüzeyindeki bakteri ile konak ilişkisiyle açıklanır.",
+       "ekran": "**Lokal** barsak hastalığı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Barsağın lokal hastalığıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lokal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0092",
+       "ses": "Etkenin barsak duvarında kalması, hastalığın ana belirtisinin de sindirim kanalından sıvı kaybı olmasını açıklar.",
+       "ekran": "**Lokal** barsak hastalığı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Barsağın lokal hastalığıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lokal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0093",
+       "ses": "Bulaşmayı barsakta kolonizasyon izler, ardından virülans faktörlerin üretimi ve çevresel ortamda hayatta kalma gelir.",
+       "ekran": "**Kolonizasyon** ve virülans faktörleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Bulaşma  barsakta kolonizasyon  virülans faktörlerin üretimi  çevresel ortamda hayatta kalma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolonizasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0094",
+       "ses": "Bu basamaklar sırayla tamamlandığında bakteri barsakta tutunup toksin üretecek düzeye ulaşır.",
+       "ekran": "**Kolonizasyon** ve virülans faktörleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Bulaşma  barsakta kolonizasyon  virülans faktörlerin üretimi  çevresel ortamda hayatta kalma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolonizasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0095",
+       "ses": "Çevresel ortamda hayatta kalabilme özelliği, salgınların sürmesini kolaylaştıran taraftır.",
+       "ekran": "**Kolonizasyon** ve virülans faktörleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Bulaşma  barsakta kolonizasyon  virülans faktörlerin üretimi  çevresel ortamda hayatta kalma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolonizasyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p023",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-55-c0096",
+       "ses": "Etken mide engelini aşarak ince barsağa ulaşır ve hastalığın asıl etkisini burada gösterir.",
+       "ekran": "**Mide engeli** aşılıp ince barsağa ulaşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Mide engelini aşarak ince barsağa ulaşır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Mide engeli",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0097",
+       "ses": "Mide asidinin baskılanmış olduğu kişilerde bu engelin aşılması kolaylaştığı için alınan bakteri miktarı daha az olsa bile hastalık gelişebilir.",
+       "ekran": "**Mide engeli** aşılıp ince barsağa ulaşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Mide engelini aşarak ince barsağa ulaşır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Mide engeli",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0098",
+       "ses": "Müsinaz enzimi sayesinde mukoza bariyeri aşılır ve bakteri epitelyuma ulaşır, sonra toksin ko-regüle pilus ile yüzeye yapışır.",
+       "ekran": "**Müsinaz** ve pilus ile yapışma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Müsinaz enzimiyle mukoza bariyerini aşar ve epitelyuma ulaşır  TCP (toksin co-regulated pilus) ile yapışır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Müsinaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0099",
+       "ses": "Müsinaz mukusu parçaladığı için bariyer incelir ve epitelyuma ulaşan bakteri tutunma yapısıyla yerleşir.",
+       "ekran": "**Müsinaz** ve pilus ile yapışma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Müsinaz enzimiyle mukoza bariyerini aşar ve epitelyuma ulaşır  TCP (toksin co-regulated pilus) ile yapışır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Müsinaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0100",
+       "ses": "Yapışma gerçekleşmeden toksin etkisi kalıcı olamaz, bu yüzden pilus kolonizasyonun kilit adımıdır.",
+       "ekran": "**Müsinaz** ve pilus ile yapışma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Müsinaz enzimiyle mukoza bariyerini aşar ve epitelyuma ulaşır  TCP (toksin co-regulated pilus) ile yapışır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Müsinaz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p024",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-55-c0101",
+       "ses": "Bakteri enterotoksin A ve B üretir ve bu iki toksin sıvı kaybına giden süreci başlatır.",
+       "ekran": "**Enterotoksin A ve B** üretimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Enterotoksin A ve B üretir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enterotoksin A ve B",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0102",
+       "ses": "Toksik etkinin ortaya çıkması için toksinin barsak hücresine ulaşması gerekir.",
+       "ekran": "**Enterotoksin A ve B** üretimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Enterotoksin A ve B üretir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enterotoksin A ve B",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0103",
+       "ses": "A alt birimi toksijenik etkiden sorumludur, B alt birimi ise antijenik özellik taşır ve bağlanma işini üstlenir.",
+       "ekran": "**A toksijenik**, B bağlanmadan sorumlu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "A toksijenik, B antijenik (bağlanmadan sorumlu)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "A toksijenik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0104",
+       "ses": "Bağlanmayı B alt birimi sağladığı için toksin önce hücreye tutunur, ardından A alt birimi içeri girerek etkisini gösterir.",
+       "ekran": "**A toksijenik**, B bağlanmadan sorumlu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "A toksijenik, B antijenik (bağlanmadan sorumlu)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "A toksijenik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b04",
+   "baslik": "Patogenez",
+   "paragraflar": [
+    {
+     "id": "k3-55-p025",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-55-c0105",
+       "ses": "Kolera toksininin etki mekanizması çıkmış sınavda sorulmuştur; toksin A bağırsak hücrelerine penetre olup adenilat siklaz enzimini aktive eder.",
+       "ekran": "**Adenilat siklaz** artışı, klor ve su sekresyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Toksin A bağırsaktaki hücrelere penetre olur ve adenilat siklaz enzimini aktive eder  hücre içi cAMP artışı olur  kript hücrelerinden lümen içine klor salgılanmasına neden olur  su ve elektrolitlerin lümene geçişine neden olur"
+        ]
+       },
+       "cikmis": [
+        "23cadfb8146d",
+        "d3-k3-enf-005"
+       ],
+       "vurgu": [
+        {
+         "metin": "Adenilat siklaz",
+         "tur": "terim"
+        },
+        {
+         "metin": "Adenilat siklaz",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0106",
+       "ses": "Enzimin aktive olması hücre içi siklik adenozin monofosfat düzeyini artırır, kript hücrelerinden lümene klor salgılanır ve su ile elektrolitler lümen içine geçer.",
+       "ekran": "**Adenilat siklaz** artışı, klor ve su sekresyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Toksin A bağırsaktaki hücrelere penetre olur ve adenilat siklaz enzimini aktive eder  hücre içi cAMP artışı olur  kript hücrelerinden lümen içine klor salgılanmasına neden olur  su ve elektrolitlerin lümene geçişine neden olur"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenilat siklaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0107",
+       "ses": "Yani ortaya çıkan ishal, emilim kusurundan çok sekresyon artışıyla gelişen bir sıvı kaybıdır.",
+       "ekran": "**Adenilat siklaz** artışı, klor ve su sekresyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Toksin A bağırsaktaki hücrelere penetre olur ve adenilat siklaz enzimini aktive eder  hücre içi cAMP artışı olur  kript hücrelerinden lümen içine klor salgılanmasına neden olur  su ve elektrolitlerin lümene geçişine neden olur"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenilat siklaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0108",
+       "ses": "Villüslerden emilim azalır ve böylece artan sekresyonun yanına bir de emilim kaybı eklenir.",
+       "ekran": "**Villüs emilimi** azalır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Diğer yandan villüslerden emilim azalır"
+        ]
+       },
+       "cikmis": [
+        "23cadfb8146d",
+        "d3-k3-enf-005"
+       ],
+       "vurgu": [
+        {
+         "metin": "Villüs emilimi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Villüs emilimi",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0109",
+       "ses": "İki mekanizmanın aynı anda işlemesi, kaybedilen sıvı miktarını tek başına sekresyon artışına göre çok daha yükseğe çıkarır.",
+       "ekran": "**Villüs emilimi** azalır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Diğer yandan villüslerden emilim azalır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Villüs emilimi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p026",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-55-c0110",
+       "ses": "Toksin tüm sindirim kanalını etkiler, bu nedenle sıvı kaybı tek bir barsak bölümüyle sınırlı kalmaz.",
+       "ekran": "**Tüm sindirim kanalı** etkilenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Toksin tüm sindirim kanalını etkiler"
+        ]
+       },
+       "cikmis": [
+        "23cadfb8146d",
+        "d3-k3-enf-005"
+       ],
+       "vurgu": [
+        {
+         "metin": "Tüm sindirim kanalı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tüm sindirim kanalı",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0111",
+       "ses": "Kanalın bütününde sekresyon uyarıldığı için klinik tablo hızla ağırlaşabilir.",
+       "ekran": "**Tüm sindirim kanalı** etkilenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Toksin tüm sindirim kanalını etkiler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tüm sindirim kanalı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0112",
+       "ses": "Sekresyon en çok onikiparmak bağırsağından, en az kalın bağırsaktan olur.",
+       "ekran": "Sekresyon en çok **onikiparmak** bağırsağından",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "En çok sekresyon deodoneumdan, en az kolondan olur"
+        ]
+       },
+       "cikmis": [
+        "23cadfb8146d",
+        "d3-k3-enf-005"
+       ],
+       "vurgu": [
+        {
+         "metin": "onikiparmak",
+         "tur": "terim"
+        },
+        {
+         "metin": "onikiparmak",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0113",
+       "ses": "Sekresyonun ince barsak düzeyinde yoğunlaşması, kaybın kısa sürede büyük hacimlere ulaşmasını ve hastanın hızla susuz kalmasını açıklar.",
+       "ekran": "Sekresyon en çok **onikiparmak** bağırsağından",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "En çok sekresyon deodoneumdan, en az kolondan olur"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "onikiparmak",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0114",
+       "ses": "Lümene gelen sıvı kusma ve pirinç suyu görünümündeki ishal ile dışarı atılır.",
+       "ekran": "**Pirinç suyu** gibi ishal ve kusma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Lümene gelen sıvı kusma ve ishal (pirinç suyu gibi) ile atılır"
+        ]
+       },
+       "cikmis": [
+        "23cadfb8146d",
+        "d3-k3-enf-005"
+       ],
+       "vurgu": [
+        {
+         "metin": "Pirinç suyu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Pirinç suyu",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p027",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-55-c0115",
+       "ses": "Bu görünüm koleranın klasik dışkı tarifidir ve kaybedilen sıvının büyüklüğü dehidratasyonun ağırlığını belirler.",
+       "ekran": "**Pirinç suyu** gibi ishal ve kusma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Lümene gelen sıvı kusma ve ishal (pirinç suyu gibi) ile atılır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pirinç suyu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p028",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-55-c0116",
+       "ses": "İnkübasyon süresi birkaç saat ile beş gün arasında değişir ve ortalama iki üç gündür.",
+       "ekran": "İnkübasyon **birkaç saat ile beş gün**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "İnkübasyon süresi birkaç saat - 5 gün, ortalama 2-3 gün"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "birkaç saat ile beş gün",
+         "tur": "terim"
+        },
+        {
+         "metin": "birkaç saat ile beş gün",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0117",
+       "ses": "Kısa inkübasyon, bulaş sonrası tablonun hızla ortaya çıkması ve vakaların kısa sürede sağlık kuruluşuna başvurması anlamına gelir.",
+       "ekran": "İnkübasyon **birkaç saat ile beş gün**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "İnkübasyon süresi birkaç saat - 5 gün, ortalama 2-3 gün"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "birkaç saat ile beş gün",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0118",
+       "ses": "Asemptomatik kişiler bile bir ile on gün boyunca bakteriyel saçılım yapabilir.",
+       "ekran": "**Asemptomatik saçılım** bir ile on gün",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Asemptomatik olan kişiler bile 1-10 gün boyunca bakteriyel saçılıma neden olabilmekte"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Asemptomatik saçılım",
+         "tur": "terim"
+        },
+        {
+         "metin": "Asemptomatik saçılım",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0119",
+       "ses": "Yani hasta görünmeyen kişiler dışkılarıyla etkeni yayarak bulaş zincirini sürdürür ve salgının denetimini zorlaştırır.",
+       "ekran": "**Asemptomatik saçılım** bir ile on gün",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Asemptomatik olan kişiler bile 1-10 gün boyunca bakteriyel saçılıma neden olabilmekte"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Asemptomatik saçılım",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0120",
+       "ses": "Asemptomatik kolonizasyon, etkenin kişide yerleşmesine karşın hastalık belirtisi vermemesi durumudur.",
+       "ekran": "**Asemptomatik kolonizasyon** bulaştırıcılığı sürdürür",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Asemptomatik kolonizasyon"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Asemptomatik kolonizasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Asemptomatik kolonizasyon",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p029",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-55-c0121",
+       "ses": "Bu kişiler ishal geçirmedikleri için taranmadıkça fark edilmez, buna karşın bulaştırıcılık sürmeye devam eder.",
+       "ekran": "**Asemptomatik kolonizasyon** bulaştırıcılığı sürdürür",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Asemptomatik kolonizasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Asemptomatik kolonizasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0122",
+       "ses": "Kolera ishali hafif, orta veya ağır olabilir ve tablodan esas sorumlu olan kolera toksinidir; bu klinik özellik çıkmış sınavda sorulmuştur.",
+       "ekran": "**Hafif, orta, ağır** ishal, sorumlu kolera toksini",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hafif, orta veya ağır ishal (ishal tablosundan esas sorumlu olan kolera toksini)"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001",
+        "d3-k3-gas-024"
+       ],
+       "vurgu": [
+        {
+         "metin": "Hafif, orta, ağır",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hafif, orta, ağır",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0123",
+       "ses": "Toksine bağlı sıvı kaybı arttıkça ishalin ağırlığı da artar, bu nedenle klinik seyir kişiden kişiye geniş bir aralıkta görülür.",
+       "ekran": "**Hafif, orta, ağır** ishal, sorumlu kolera toksini",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hafif, orta veya ağır ishal (ishal tablosundan esas sorumlu olan kolera toksini)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hafif, orta, ağır",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p030",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-55-c0124",
+       "ses": "Kolera enfeksiyonu çoğu kişide hafif geçer ya da hiç belirti vermez, bu yüzden taşıyıcılar fark edilmeden mikrop yayabilir.",
+       "ekran": "**Hafif ya da semptomsuz** seyir, ağır vakada hızlı ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Enfeksiyon genellikle hafif veya semptomsuzdur, ancak şiddetli vakalar tedavi edilmezse saatler içinde ölümle sonuçlanabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hafif ya da semptomsuz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0125",
+       "ses": "Şiddetli vakalarda ise sıvı kaybı hızla derinleşir ve tedavi edilmezse saatler içinde ölümle sonuçlanabilir.",
+       "ekran": "**Hafif ya da semptomsuz** seyir, ağır vakada hızlı ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Enfeksiyon genellikle hafif veya semptomsuzdur, ancak şiddetli vakalar tedavi edilmezse saatler içinde ölümle sonuçlanabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hafif ya da semptomsuz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0126",
+       "ses": "Koleranın ağır formu, insanı en hızlı öldüren hastalıklar arasında yer alır.",
+       "ekran": "**Ağır form** en hızlı öldüren hastalıklardan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ağır formu insanı en hızlı öldüren hastalıklardandır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağır form",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0127",
+       "ses": "Bunun nedeni ishalin saatler içinde masif sıvı ve elektrolit kaybına yol açmasıdır.",
+       "ekran": "**Ağır form** en hızlı öldüren hastalıklardan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ağır formu insanı en hızlı öldüren hastalıklardandır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağır form",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0128",
+       "ses": "Saatte bir litre dışkı kaybı, bir saat içinde hipotansiyona ve iki üç saat içinde ölüme götürebilir.",
+       "ekran": "**Saatte bir litre dışkı** hipotansiyon ve hızlı ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Saatte bir litre dışkı  bir saatte hipotansiyon  2-3 saatte ölüm"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Saatte bir litre dışkı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p031",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-55-c0129",
+       "ses": "Bu yüzden kaybedilen sıvının yerine konması gecikmeden, en kısa sürede yapılmalıdır.",
+       "ekran": "**Saatte bir litre dışkı** hipotansiyon ve hızlı ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Saatte bir litre dışkı  bir saatte hipotansiyon  2-3 saatte ölüm"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Saatte bir litre dışkı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0130",
+       "ses": "Kolera tüm yaş gruplarını etkileyebilir, yani çocuk ile erişkin arasında ayrım yapmaz.",
+       "ekran": "**Tüm yaş grupları** etkilenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kolera tüm yaş gruplarını etkileyebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tüm yaş grupları",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0131",
+       "ses": "Bu nedenle salgınlarda her yaştan hastada öncelik sıvı ve elektrolit kaybının yerine konmasıdır.",
+       "ekran": "**Tüm yaş grupları** etkilenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kolera tüm yaş gruplarını etkileyebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tüm yaş grupları",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p032",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-55-c0132",
+       "ses": "Kolera ishalinin başlangıcında karında dolgunluk ve gurultu hissedilir, çünkü barsak hareketleri artmıştır.",
+       "ekran": "**Karında dolgunluk ve gurultu**, artmış barsak hareketi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Karında dolgunluk ve gurultu (barsak hareketlerin artışı)"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Karında dolgunluk ve gurultu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Karında dolgunluk ve gurultu",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0133",
+       "ses": "Bu erken bulgu, henüz sıvı kaybı belirginleşmeden barsağın uyarıldığını gösterir.",
+       "ekran": "**Karında dolgunluk ve gurultu**, artmış barsak hareketi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Karında dolgunluk ve gurultu (barsak hareketlerin artışı)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Karında dolgunluk ve gurultu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0134",
+       "ses": "İlk dışkılamalar yumuşak kıvamdadır ve henüz tipik kolera görünümünü kazanmamıştır.",
+       "ekran": "**Yumuşak dışkılama** ile başlangıç",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yumuşak dışkılama"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Yumuşak dışkılama",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yumuşak dışkılama",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0135",
+       "ses": "Bu aşama, hastalığın sıvı kaybının öne çıkmadığı erken dönemidir.",
+       "ekran": "**Yumuşak dışkılama** ile başlangıç",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yumuşak dışkılama"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yumuşak dışkılama",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0136",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur, birkaç dışkılamadan sonra tipik olarak ağrısız, kokusuz ve pirinç suyu görünümünde ishal ortaya çıkar.",
+       "ekran": "**Ağrısız kokusuz pirinç suyu** ishal",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Birkaç dışkılamadan sonra tipik ağrısız, kokusuz pirinç suyu görünümünde ishal"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Ağrısız kokusuz pirinç suyu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ağrısız kokusuz pirinç suyu",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p033",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-55-c0137",
+       "ses": "Kolerada karın ağrısı ve pis kokulu yeşil pürülan dışkı beklenmez, çünkü tipik tablo ağrısız ve kokusuzdur.",
+       "ekran": "**Ağrısız kokusuz pirinç suyu** ishal",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Birkaç dışkılamadan sonra tipik ağrısız, kokusuz pirinç suyu görünümünde ishal"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrısız kokusuz pirinç suyu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0138",
+       "ses": "İshal günde on ile on beş, bazen yirmi otuz kez gibi çok yüksek sayılara ulaşır.",
+       "ekran": "**Günde onlarca dışkılama**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "İshal günde 10-15 ile 20-30 kez"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Günde onlarca dışkılama",
+         "tur": "terim"
+        },
+        {
+         "metin": "Günde onlarca dışkılama",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0139",
+       "ses": "Bu sıklık, ağızdan alınanın çok üzerinde sıvı kaybı demek olduğu için hastayı hızla dehidrate eder.",
+       "ekran": "**Günde onlarca dışkılama**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "İshal günde 10-15 ile 20-30 kez"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Günde onlarca dışkılama",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0140",
+       "ses": "Kusma su gibi berraktır ve bulantı ile öğürtü eşlik etmez.",
+       "ekran": "**Bulantısız berrak kusma**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bulantısız ve öğürtüsüz su gibi berrak kusma"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Bulantısız berrak kusma",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bulantısız berrak kusma",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0141",
+       "ses": "Bulantının olmaması kaybın hem barsaktan hem mideden sessizce sürmesine ve dehidratasyonun hızlanmasına yol açar.",
+       "ekran": "**Bulantısız berrak kusma**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bulantısız ve öğürtüsüz su gibi berrak kusma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulantısız berrak kusma",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p034",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-55-c0142",
+       "ses": "Hastada derin bir halsizlik ve iştahsızlık görülür.",
+       "ekran": "**Derin halsizlik ve iştahsızlık**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Derin bir halsizlik ve iştahsızlık"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-enf-001"
+       ],
+       "vurgu": [
+        {
+         "metin": "Derin halsizlik ve iştahsızlık",
+         "tur": "terim"
+        },
+        {
+         "metin": "Derin halsizlik ve iştahsızlık",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0143",
+       "ses": "Bu belirtiler, kaybedilen sıvı ve elektrolitlerin hastayı güçten düşürmesinin klinik yansımasıdır.",
+       "ekran": "**Derin halsizlik ve iştahsızlık**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Derin bir halsizlik ve iştahsızlık"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Derin halsizlik ve iştahsızlık",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b05",
+   "baslik": "Klinik Formlar",
+   "paragraflar": [
+    {
+     "id": "k3-55-p035",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-55-c0144",
+       "ses": "Klinik formlar başlığı kolera hastalığının ağır dehidratasyonla seyreden Kolera gravis tablosunu tanımlar.",
+       "ekran": "**Klinik formlar** kolera gravis tablosu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Klinik Formlar"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Klinik formlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Klinik formlar",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0145",
+       "ses": "Ağır sıvı kaybı bulguları bu formda belirginleşir ve hastanın genel görünümünü belirler.",
+       "ekran": "**Klinik formlar** kolera gravis tablosu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Klinik Formlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik formlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0146",
+       "ses": "Kolera gravis ağır dehidratasyon bulgularıyla seyreden kolera formudur ve klinik değerlendirmede tanınması gerekir.",
+       "ekran": "**Kolera gravis** ağır dehidratasyon formu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kolera gravis (ağır dehidratasyon bulguları olan formu)"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Kolera gravis",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kolera gravis",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0147",
+       "ses": "Dehidratasyonun derecesi tedavi yaklaşımını belirlediği için bu formun bulguları hızla aranır.",
+       "ekran": "**Kolera gravis** ağır dehidratasyon formu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kolera gravis (ağır dehidratasyon bulguları olan formu)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera gravis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0148",
+       "ses": "Gözler ve yanakların içe çökmesi kolera gravis tablosunda ağır sıvı kaybının belirgin bulgusudur.",
+       "ekran": "**Gözler ve yanaklar** içe çökük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Gözler ve yanaklar içe çökük"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Gözler ve yanaklar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gözler ve yanaklar",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p036",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-55-c0149",
+       "ses": "Göz çevresindeki doku kaybı yüz görünümünü belirgin biçimde değiştirir.",
+       "ekran": "**Gözler ve yanaklar** içe çökük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Gözler ve yanaklar içe çökük"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gözler ve yanaklar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0150",
+       "ses": "Dil ve dudakların kuru ve siyanotik olması kolera gravis tablosunda dolaşım bozukluğunu ve sıvı kaybını yansıtır.",
+       "ekran": "**Dil ve dudaklar** kuru siyanotik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dil ve dudaklar kuru ve siyanotik"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Dil ve dudaklar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Dil ve dudaklar",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0151",
+       "ses": "Mukozanın kuruması ağız içinde nem kaybını, siyanoz ise periferik dolaşımın bozulduğunu gösterir.",
+       "ekran": "**Dil ve dudaklar** kuru siyanotik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Dil ve dudaklar kuru ve siyanotik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dil ve dudaklar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0152",
+       "ses": "Deri turgorunun azalması kolera gravis tablosunda hücre dışı sıvı kaybının ciltte ortaya çıkan göstergesidir.",
+       "ekran": "**Deri turgoru** azalmış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Deri turgoru azalmış"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Deri turgoru",
+         "tur": "terim"
+        },
+        {
+         "metin": "Deri turgoru",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0153",
+       "ses": "Cilt tutulduğunda eski hâline yavaş dönmesi dehidratasyonun ağırlaştığını düşündürür.",
+       "ekran": "**Deri turgoru** azalmış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Deri turgoru azalmış"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Deri turgoru",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p037",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-55-c0154",
+       "ses": "Karın kayık görünümünde içe çökük olması kolera gravis tablosunda karın duvarının zayıfladığını ve sıvı kaybının belirginleştiğini gösterir.",
+       "ekran": "**Karın** kayık görünümde içe çökük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Karın kayık görünümünde içe çökük"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Karın",
+         "tur": "terim"
+        },
+        {
+         "metin": "Karın",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0155",
+       "ses": "Karın çevresindeki çöküklük hastanın genel görünümünde ağır dehidratasyonu düşündürür.",
+       "ekran": "**Karın** kayık görünümde içe çökük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Karın kayık görünümünde içe çökük"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Karın",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0156",
+       "ses": "Ellerin çamaşırcı eli görünümünde buruşuk olması kolera gravis tablosunda deri elastikiyetinin kaybolduğunu anlatır.",
+       "ekran": "**Çamaşırcı eli** buruşuk eller",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Eller çamaşırcı eli görünümünde buruşuk"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Çamaşırcı eli",
+         "tur": "terim"
+        },
+        {
+         "metin": "Çamaşırcı eli",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0157",
+       "ses": "El derisindeki buruşukluk uzun süren sıvı kaybının cilt üzerindeki etkisini gösterir.",
+       "ekran": "**Çamaşırcı eli** buruşuk eller",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Eller çamaşırcı eli görünümünde buruşuk"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çamaşırcı eli",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0158",
+       "ses": "Ses kısıklığı kolera gravis tablosunda sıvı kaybına bağlı genel güçsüzlüğün ve mukozal kuruluğun işareti olabilir.",
+       "ekran": "**Ses kısıklığı** eşlik eder",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Ses kısık"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Ses kısıklığı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ses kısıklığı",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p038",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-55-c0159",
+       "ses": "Hastanın konuşması zor duyulacak kadar zayıflayabilir ve klinik değerlendirmede dikkat çeker.",
+       "ekran": "**Ses kısıklığı** eşlik eder",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Ses kısık"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ses kısıklığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0160",
+       "ses": "Nabzın zayıf ve taşikardik olması kolera gravis tablosunda dolaşım hacminin azaldığını gösteren önemli bir bulgudur.",
+       "ekran": "**Nabız** zayıf ve taşikardik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Nabız zayıf ve taşikardik"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Nabız",
+         "tur": "terim"
+        },
+        {
+         "metin": "Nabız",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0161",
+       "ses": "Kalp hızı artarken nabzın zayıf alınması periferik dolaşımın yetersiz kaldığını düşündürür.",
+       "ekran": "**Nabız** zayıf ve taşikardik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Nabız zayıf ve taşikardik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nabız",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0162",
+       "ses": "Solunumun yüzeyel ve takipneik olması kolera gravis tablosunda metabolik dengenin bozulduğunu ve solunumun hızlandığını gösterir.",
+       "ekran": "**Solunum** yüzeyel ve takipneik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Solunum yüzeyel ve takipneik"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Solunum",
+         "tur": "terim"
+        },
+        {
+         "metin": "Solunum",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0163",
+       "ses": "Hızlı ama yüzeysel solunum hastanın oksijen alışverişinde zorlandığını düşündürür.",
+       "ekran": "**Solunum** yüzeyel ve takipneik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Solunum yüzeyel ve takipneik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Solunum",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p039",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-55-c0164",
+       "ses": "Hipotansiyon kolera gravis tablosunda dolaşım hacminin belirgin biçimde azaldığını gösteren kritik bir bulgudur.",
+       "ekran": "**Hipotansiyon** dolaşım yetmezliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Hipotansiyon"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Hipotansiyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hipotansiyon",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0165",
+       "ses": "Kan basıncının düşmesi dokulara yeterli kan gitmediğini ve acil sıvı tedavisi gerektiğini düşündürür.",
+       "ekran": "**Hipotansiyon** dolaşım yetmezliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Hipotansiyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hipotansiyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0166",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur, kolera gravis tablosunda ateş normaldir ve yüksek ateş beklenmez.",
+       "ekran": "**Ateş normal** yüksek ateş beklenmez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Ateş normaldir"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Ateş normal",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ateş normal",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0167",
+       "ses": "Ateşin yükselmemesi kolera gravisi ateşle seyreden enfeksiyonlardan ayırmada yardımcı olur.",
+       "ekran": "**Ateş normal** yüksek ateş beklenmez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Ateş normaldir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ateş normal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0168",
+       "ses": "Barsak seslerinin hipoaktif olması kolera gravis tablosunda barsak hareketlerinin yavaşladığını gösteren bir bulgudur.",
+       "ekran": "**Barsak sesleri** hipoaktif",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Barsak sesleri hipoaktif"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Barsak sesleri",
+         "tur": "terim"
+        },
+        {
+         "metin": "Barsak sesleri",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p040",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-55-c0169",
+       "ses": "Karın muayenesinde seslerin azalması klinik tablonun ağırlığını değerlendirmede dikkate alınır.",
+       "ekran": "**Barsak sesleri** hipoaktif",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Barsak sesleri hipoaktif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Barsak sesleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0170",
+       "ses": "Kaslarda kramplar kolera gravis tablosunda sıvı ve elektrolit kaybının kas işlevini bozmasıyla ortaya çıkar.",
+       "ekran": "**Kas krampları** elektrolit kaybı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kaslarda kramplar"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Kas krampları",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kas krampları",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0171",
+       "ses": "Ağrılı kas kasılmaları hastanın hareketini kısıtlayarak genel durumu daha da kötüleştirebilir.",
+       "ekran": "**Kas krampları** elektrolit kaybı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kaslarda kramplar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kas krampları",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p041",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-55-c0172",
+       "ses": "Kolera gravis, kolera hastalığının klinik formları içinde en ağır seyreden tablodur ve hızla derinleşen sıvı kaybıyla tanınır.",
+       "ekran": "**Kolera gravis** en ağır klinik form",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Klinik Formlar Kolera gravis"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35",
+        "k1-2018-2019-q021"
+       ],
+       "vurgu": [
+        {
+         "metin": "Kolera gravis",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kolera gravis",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0173",
+       "ses": "Bu formda kaybedilen sıvı miktarı çok yüksek olduğu için hasta dakikalar içinde şoka girebilir.",
+       "ekran": "**Kolera gravis** en ağır klinik form",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Klinik Formlar Kolera gravis"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera gravis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0174",
+       "ses": "Kolera graviste bilinç açıktır, hasta oryanter ve kooperedir; bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Bilinç açık**, oryante, koopere",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Bilinç açıktır, oryante, kooperedir"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Bilinç açık",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bilinç açık",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0175",
+       "ses": "Ağır sıvı kaybına rağmen bilinç korunduğu için tabloda yüksek ateş ve bilinç bulanıklığı beklenmez.",
+       "ekran": "**Bilinç açık**, oryante, koopere",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Bilinç açıktır, oryante, kooperedir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bilinç açık",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0176",
+       "ses": "Çocuklarda kolera graviste kan şekeri düşüklüğüne bağlı olarak bilinç kapanabilir.",
+       "ekran": "**Çocukta hipoglisemi** bilinci kapatır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Çocuklarda hipoglisemiye bağlı bilinç kapanabilir"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Çocukta hipoglisemi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Çocukta hipoglisemi",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p042",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-55-c0177",
+       "ses": "Bu nedenle çocuk hastada bilinç durumu ve kan şekeri yakından izlenmelidir.",
+       "ekran": "**Çocukta hipoglisemi** bilinci kapatır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Çocuklarda hipoglisemiye bağlı bilinç kapanabilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çocukta hipoglisemi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0178",
+       "ses": "Dehidratasyonun artmasıyla dışkı miktarının azalması iyileşme belirtisi değildir, tam tersine dolaşımın bozulduğunu gösterir.",
+       "ekran": "**Dışkı azalması** iyileşme değil, şok zinciri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Dehidratasyon artışı  dışkı miktarı azalır (iyileşme belirtisi değil)  anüri  böbrek yetmezliği  metabolik asidoz  hipovolemik şok  ölüm"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Dışkı azalması",
+         "tur": "terim"
+        },
+        {
+         "metin": "Dışkı azalması",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0179",
+       "ses": "İdrar çıkarımının durması böbrek yetmezliğine, biriken asitler metabolik asidoza ve sonunda hipovolemik şoka yol açar.",
+       "ekran": "**Dışkı azalması** iyileşme değil, şok zinciri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Dehidratasyon artışı  dışkı miktarı azalır (iyileşme belirtisi değil)  anüri  böbrek yetmezliği  metabolik asidoz  hipovolemik şok  ölüm"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dışkı azalması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0180",
+       "ses": "Zincirin son halkası ölümdür, bu yüzden sıvı açığı vakit kaybetmeden kapatılmalıdır.",
+       "ekran": "**Dışkı azalması** iyileşme değil, şok zinciri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Dehidratasyon artışı  dışkı miktarı azalır (iyileşme belirtisi değil)  anüri  böbrek yetmezliği  metabolik asidoz  hipovolemik şok  ölüm"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dışkı azalması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0181",
+       "ses": "Gebe kadınlarda kolera daha ağır seyreder ve fetüs ölümü yüzde elliye ulaşır.",
+       "ekran": "**Gebede ağır seyir**, fetüs ölümü yüzde elli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Gebelerde daha ağır seyreder. Fetüs ölümü %50"
+        ]
+       },
+       "cikmis": [
+        "d3k2-2023-2024-k3-h35"
+       ],
+       "vurgu": [
+        {
+         "metin": "Gebede ağır seyir",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gebede ağır seyir",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p043",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-55-c0182",
+       "ses": "Anne adayındaki ağır sıvı ve elektrolit kaybı plasenta kan akımını bozarak bebek kaybına yol açar.",
+       "ekran": "**Gebede ağır seyir**, fetüs ölümü yüzde elli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Gebelerde daha ağır seyreder. Fetüs ölümü %50"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebede ağır seyir",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p044",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-55-c0183",
+       "ses": "Kolera yatağı, ishalle kaybedilen sıvının yatak üzerinden doğrudan izlenebildiği özel bir hasta yatağıdır.",
+       "ekran": "**kolera yatağı** özel tasarım yatak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "ortası açık özel hasta yatağı"
+       },
+       "vurgu": [
+        {
+         "metin": "kolera yatağı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0184",
+       "ses": "Yatağın ortasındaki açıklık, hastadan gelen dışkının yatakta birikmeden aşağı geçmesini sağlar.",
+       "ekran": "**orta açıklık** dışkıyı aşağı geçirir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "gövde altında yer alan açıklık"
+       },
+       "vurgu": [
+        {
+         "metin": "orta açıklık",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0185",
+       "ses": "Toplama kabı yatağın altına yerleştirilir ve hastadan çıkan sıvı burada biriktirilir.",
+       "ekran": "**toplama kabı** sıvıyı biriktirir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "yatak altına konan toplama kabı"
+       },
+       "vurgu": [
+        {
+         "metin": "toplama kabı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0186",
+       "ses": "Toplanan sıvının miktarı izlenerek hastanın ne kadar sıvı kaybettiği değerlendirilir.",
+       "ekran": "**sıvı kaybı** miktarı izlenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "kaybedilen sıvının ölçülmesi"
+       },
+       "vurgu": [
+        {
+         "metin": "sıvı kaybı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0187",
+       "ses": "Yatağın tasarımı hastanın dışkıyla temasını azaltarak hijyenin korunmasına yardımcı olur.",
+       "ekran": "**hijyen** temas azaltılır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "dışkı temasını azaltan düzenek"
+       },
+       "vurgu": [
+        {
+         "metin": "hijyen",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p045",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-55-c0188",
+       "ses": "Ölçülen kayıp, yerine konacak sıvının planlanmasında hekime yol gösteren temel bilgiyi verir.",
+       "ekran": "**planlama** kayıp tedaviye yön verir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "kaybın tedaviye yön vermesi"
+       },
+       "vurgu": [
+        {
+         "metin": "planlama",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p046",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-55-c0189",
+       "ses": "Kolera klinik formları hastalığın seyri ve ağırlığına göre ayrılan tabloları anlatır.",
+       "ekran": "**Klinik formlar** kolera seyir tipleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Klinik Formlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik formlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0190",
+       "ses": "Kolera diyaresi genel durumu iyi olan hastada görülen hafif sulu dışkılama formudur.",
+       "ekran": "**Kolera diyaresi** hafif sulu dışkılama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Kolera diyaresi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera diyaresi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0191",
+       "ses": "Kolera diyaresinde genel durum iyi olup günde iki üç kez sulu dışkılama görülür.",
+       "ekran": "**Genel durum iyi** günde iki üç sulu dışkılama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Genel durumu iyi, günde 2-3 kez sulu dışkılama"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Genel durum iyi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0192",
+       "ses": "Hafif seyirli olduğu için klinik tablo genellikle yönetilebilir kalır.",
+       "ekran": "**Genel durum iyi** günde iki üç sulu dışkılama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Genel durumu iyi, günde 2-3 kez sulu dışkılama"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Genel durum iyi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0193",
+       "ses": "Kolerin klasik kolera şeklinde seyreden ve iki üç günde iyileşen formdur.",
+       "ekran": "**Kolerin** klasik kolera, hızlı iyileşme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Kolerin"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolerin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p047",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-55-c0194",
+       "ses": "Kolerinde klasik kolera şekli görülür ve hastalık iki üç günde iyileşir.",
+       "ekran": "**Klasik kolera** iki üç günde iyileşir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Klasik kolera şeklinde 2-3 günde iyileşir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klasik kolera",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0195",
+       "ses": "Kısa sürede düzelmesi nedeniyle seyir daha hafif kabul edilir.",
+       "ekran": "**Klasik kolera** iki üç günde iyileşir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Klasik kolera şeklinde 2-3 günde iyileşir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klasik kolera",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0196",
+       "ses": "Kolera sikka nadir görülen ama ağır seyreden bir kolera formudur.",
+       "ekran": "**Kolera sikka** nadir ve ağır form",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Kolera sikka"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera sikka",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0197",
+       "ses": "Kolera sikka nadir ama ağır bir formdur ve klinikte ciddi tabloya yol açar.",
+       "ekran": "**Nadir ama ağır** kolera sikka formu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Nadir ama ağır bir form"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nadir ama ağır",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0198",
+       "ses": "Kolera sikkada henüz ishal olmadan ileus gelişir ve barsak geçişi erken dönemde durur.",
+       "ekran": "**İshal öncesi ileus** gelişebilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Henüz ishal olmadan ileus gelişir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İshal öncesi ileus",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p048",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-55-c0199",
+       "ses": "Kolera sikkada ishal olmadan dehidrasyon ve şok vardır ve bu nedenle hastalık çok ağır seyreder.",
+       "ekran": "**İshalsiz dehidrasyon ve şok**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "İshal olmadan dehidrasyon ve şok vardır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İshalsiz dehidrasyon ve şok",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0200",
+       "ses": "Kolera sikka akut intestinal obstrüksiyonla karışır ve ayırıcı tanıda dikkatli olmayı gerektirir.",
+       "ekran": "**Obstrüksiyonla karışır** ayırıcı tanı önemli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Akut intestinal obstrüksiyonla karışır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Obstrüksiyonla karışır",
+         "tur": "terim"
+        },
+        {
+         "metin": "Obstrüksiyonla karışır",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877035903-219321"
+       ]
+      },
+      {
+       "id": "k3-55-c0201",
+       "ses": "Kolera tifoid ateşle seyreden ayrı bir kolera şekli olarak tanımlanır.",
+       "ekran": "**Kolera tifoid** ateşli kolera şekli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Kolera tifoid"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera tifoid",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0202",
+       "ses": "Kolera tifoid ateşle seyreden kolera şeklidir ve klinik ayrımda ateş öne çıkar.",
+       "ekran": "**Ateş** kolera tifoidde öne çıkar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Ateşle seyreden kolera şeklidir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ateş",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b06",
+   "baslik": "Tanı",
+   "paragraflar": [
+    {
+     "id": "k3-55-p049",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-55-c0203",
+       "ses": "Kolera tanısı, şiddetli akut sulu ishalle başvuran hastada klinik şüpheyle konulan ön tanıdan sonra dışkı örneğinde vibrio cholerae'nin mikroskopide gösterilmesiyle doğrulanır.",
+       "ekran": "**Kolera tanısı** dışkıda vibrio cholerae gösterilmesiyle doğrulanır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Şiddetli akut sulu ishal ile başvuran hastalarda klinik şüpheye dayalı olarak kolera ön tanısı sonrası, hastalardan alınan dışkı örneklerinde V. cholerae'nin mikroskopide tanımlanmasıyla tanı doğrulanır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera tanısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kolera tanısı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "c741d4ee42a8",
+        "92c9fe85ecc7"
+       ]
+      },
+      {
+       "id": "k3-55-c0204",
+       "ses": "Bu doğrulama, ön tanının laboratuvar kanıtıyla desteklenmesini sağlar.",
+       "ekran": "**Kolera tanısı** dışkıda vibrio cholerae gösterilmesiyle doğrulanır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Şiddetli akut sulu ishal ile başvuran hastalarda klinik şüpheye dayalı olarak kolera ön tanısı sonrası, hastalardan alınan dışkı örneklerinde V. cholerae'nin mikroskopide tanımlanmasıyla tanı doğrulanır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera tanısı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0205",
+       "ses": "Taze dışkıdan hazırlanan yaş preparat, dört yüz büyütmede basilin hareketinin görülmesini sağlar.",
+       "ekran": "**Yaş preparat** taze dışkıda basil hareketi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Taze dışkıdan yapılan yaş preparatta (400 büyütmede) basilin hareketi görülebilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yaş preparat",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0206",
+       "ses": "Basilin hareketi, kolera tanısında yardımcı bir ipucu olarak değerlendirilir.",
+       "ekran": "**Yaş preparat** taze dışkıda basil hareketi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Taze dışkıdan yapılan yaş preparatta (400 büyütmede) basilin hareketi görülebilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yaş preparat",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0207",
+       "ses": "Seçici olmayan besiyerinde üreyen kolonilerde polivalan o bir antiserumla presipitasyon bakılması, kolera tanısında kullanılır.",
+       "ekran": "**Polivalan o bir antiserum** presipitasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Seçici olmayan bir besiyerinde üreyen kolonilerden polivalan O1 antiserumla presipitasyon bakılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Polivalan o bir antiserum",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p050",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-55-c0208",
+       "ses": "Presipitasyon, üreyen kolonilerin kolera etkeniyle ilişkisini göstermeye yardımcı olur.",
+       "ekran": "**Polivalan o bir antiserum** presipitasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Seçici olmayan bir besiyerinde üreyen kolonilerden polivalan O1 antiserumla presipitasyon bakılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Polivalan o bir antiserum",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0209",
+       "ses": "Karanlık alan ya da faz kontrast mikroskopisinde hızlı hareket eden bakterilerin antiserum damlatıldığında hareketlerinin durması tipik bir tanı bulgusudur.",
+       "ekran": "**Hareketin durması** karanlık alan ve faz kontrastta tipik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Karanlık alan ya da faz kontrast mikroskoplarında hızlı hareket eden bakterilerin antiserum damlatıldığında hareketlerinin durması tipik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hareketin durması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0210",
+       "ses": "Hareketin durması, antiserumun bakteriye özgül etkisini düşündürür.",
+       "ekran": "**Hareketin durması** karanlık alan ve faz kontrastta tipik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Karanlık alan ya da faz kontrast mikroskoplarında hızlı hareket eden bakterilerin antiserum damlatıldığında hareketlerinin durması tipik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hareketin durması",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p051",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-55-c0211",
+       "ses": "Kolera hastalığında ortaya çıkan aşırı sıvı kaybını ve buna bağlı dehidratasyonu gösteren görsel, hastalığın klinik ağırlığını tek bakışta özetler.",
+       "ekran": "**dehidratasyon** sıvı kaybı ve klinik ağırlık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [],
+        "sekil": "kolera hastasında sıvı kaybı ve dehidratasyonu gösteren görsel"
+       },
+       "vurgu": [
+        {
+         "metin": "dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0212",
+       "ses": "İnce bağırsakta salgılanan sıvının geri emilememesi, pirinç suyu görünümünde ishal ve belirgin hacim kaybı ile sonuçlanır.",
+       "ekran": "**dehidratasyon** sıvı kaybı ve klinik ağırlık",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0213",
+       "ses": "Görsel, sıvı açığının dolaşım ve böbrek işlevleri üzerindeki etkisini erken tanımanın önemini vurgular.",
+       "ekran": "**dehidratasyon** sıvı kaybı ve klinik ağırlık",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p052",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-55-c0214",
+       "ses": "Dışkıda kolera toksinini ya da o bir ve o yüz otuz dokuz serogruplarına özgü polisakkaritleri saptayan immünolojik testler geliştirilmiştir.",
+       "ekran": "**İmmünolojik testler** dışkıda toksin ve polisakkarit arar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Dışkıda kolera toksini veya O1 ve O139’e özgü polisakkaritleri saptamak için geliştirilmiş immunolojik testler var"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İmmünolojik testler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0215",
+       "ses": "Bu testler, etkenin veya toksinin dışkıda gösterilmesine dayanır.",
+       "ekran": "**İmmünolojik testler** dışkıda toksin ve polisakkarit arar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Dışkıda kolera toksini veya O1 ve O139’e özgü polisakkaritleri saptamak için geliştirilmiş immunolojik testler var"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İmmünolojik testler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0216",
+       "ses": "Salgın esnasında immünolojik testler kullanılır ve bu testlerin duyarlılığı ile özgüllüğü yüzde altmış ile yüz arasında değişir.",
+       "ekran": "**Salgında test** duyarlılık ve özgüllük yüzde altmış yüz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Bu testler salgın esnasında kullanılır. Duyarlılık ve özgüllük %60-100 arasındadır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Salgında test",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0217",
+       "ses": "Bu nedenle test sonuçları salgın koşullarında dikkatle yorumlanmalıdır.",
+       "ekran": "**Salgında test** duyarlılık ve özgüllük yüzde altmış yüz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Bu testler salgın esnasında kullanılır. Duyarlılık ve özgüllük %60-100 arasındadır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Salgında test",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0218",
+       "ses": "Laboratuvar bulgusu olarak dehidratasyona bağlı hemokonsantrasyon görülür.",
+       "ekran": "**Hemokonsantrasyon** dehidratasyonun laboratuvar bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Laboratuvar:  Dehidratasyona bağlı hemokonsantrasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokonsantrasyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p053",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-55-c0219",
+       "ses": "Hemokonsantrasyon, sıvı kaybının kanı yoğunlaştırmasının sonucudur.",
+       "ekran": "**Hemokonsantrasyon** dehidratasyonun laboratuvar bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Laboratuvar:  Dehidratasyona bağlı hemokonsantrasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokonsantrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0220",
+       "ses": "Lökositoz, kolera laboratuvarında görülebilen bir bulgudur.",
+       "ekran": "**Lökositoz** kolera laboratuvarında görülebilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Lökositoz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lökositoz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0221",
+       "ses": "Bu bulgu, kolera hastasının laboratuvar değerlendirmesinde dikkate alınır.",
+       "ekran": "**Lökositoz** kolera laboratuvarında görülebilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Lökositoz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lökositoz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0222",
+       "ses": "Hematokritte artış, dehidratasyonun laboratuvar göstergesi olarak karşımıza çıkar.",
+       "ekran": "**Hematokrit artışı** dehidratasyon göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Hematokritte artış"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hematokrit artışı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0223",
+       "ses": "Kanın sıvı kısmı azaldığı için hematokrit değeri yükselir.",
+       "ekran": "**Hematokrit artışı** dehidratasyon göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Hematokritte artış"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hematokrit artışı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p054",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-55-c0224",
+       "ses": "İleri vakalarda kan üre azotu ve kreatinin artışı görülür.",
+       "ekran": "**Kan üre azotu ve kreatinin** ileri vakalarda artar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "İleri vakalarda BUN, kreatinin artışı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kan üre azotu ve kreatinin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0225",
+       "ses": "Bu artış, ağır sıvı kaybının böbrek işlevlerini etkilediğini gösterir.",
+       "ekran": "**Kan üre azotu ve kreatinin** ileri vakalarda artar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "İleri vakalarda BUN, kreatinin artışı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kan üre azotu ve kreatinin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p055",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-55-c0226",
+       "ses": "Tanıda index vakada bakteriyi üretmek gerekir ve bunun için şüpheli hastanın örneğinden etkenin kültürde gösterilmesi hedeflenir.",
+       "ekran": "**Index vakada** bakteriyi üretmek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "İndex vakada bakteriyi üretmek gerek"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Index vakada",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0227",
+       "ses": "Te ce be es besiyeri en sık kullanılan besiyeridir, bu nedenle index vakada bakteri aranırken ilk akla gelen besiyeri odur.",
+       "ekran": "**Te ce be es** besiyeri en sık kullanılan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "TCBS besiyeri en sık kullanılandır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Te ce be es",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0228",
+       "ses": "Etken kanlı besiyerinde ve mak konki besiyerinde de üreyebilir, bu da bu besiyerlerinin tanıda yol gösterebildiğini anlatır.",
+       "ekran": "**Kanlı ve mak konki** besiyerinde de ürer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Kanlı ve Mc Conkey besiyerinde de ürer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kanlı ve mak konki",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0229",
+       "ses": "E me be ve es es besiyerleri kolera etkenini üretmek amacıyla kullanılmaz, bu yüzden tanı için doğru besiyeri seçilmelidir.",
+       "ekran": "**E me be ve es es** bu amaçla kullanılmaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "EMB ve SS besiyeri bu amaçla kullanılmaz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "E me be ve es es",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0230",
+       "ses": "Kolera, bildirimi esas bulaşıcı hastalıklar içinde grup a da yer alır ve en kısa sürede bildirimi yapılmalıdır.",
+       "ekran": "**Grup A** bildirim, en kısa sürede",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Kolera “Bildirimi esas bulaşıcı hastalıklar”dan (Grup A) birisidir. En kısa sürede bildirim yapılmalı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Grup A",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b07",
+   "baslik": "Tedavi",
+   "paragraflar": [
+    {
+     "id": "k3-55-p056",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k3-55-c0231",
+       "ses": "Kolera tedavisinde birincil yaklaşım oral veya damar içi hidrasyondur, çünkü ölümü belirleyen temel sorun sıvı kaybıdır.",
+       "ekran": "**Hidrasyon** birincil tedavi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Kolera için birincil tedavi oral veya intravenöz hidrasyondur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hidrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0232",
+       "ses": "Hidrasyon tedavisi tanıdan önce gelir, yani hasta dehidrate görünüyorsa kültür sonucu beklenmeden sıvı verilir.",
+       "ekran": "**Tanıdan önce** hidrasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Tanıdan önce gelir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tanıdan önce",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0233",
+       "ses": "İlk adım dehidratasyon derecesinin hızlıca değerlendirilmesidir, çünkü verilecek sıvının yolu ve miktarı bu dereceye göre seçilir.",
+       "ekran": "**Dehidratasyon derecesi** hızlı değerlendir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Hızlıca dehidratasyon derecesi değerlendir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dehidratasyon derecesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0234",
+       "ses": "Ardından rehidratasyona başlanır ve hasta yakından izlenir, çünkü düzeltme sırasında klinik bulgular hızla değişebilir.",
+       "ekran": "**Rehidratasyon** başla ve yakından izle",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Rehidratasyona başla ve yakından izle"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Rehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0235",
+       "ses": "Rehidratasyon ishal durana kadar sürdürülür, çünkü erken kesilmesi sıvı kaybının yeniden artmasına yol açar.",
+       "ekran": "**İshal durana kadar** devam",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "İshal durana kadar rehidratasyona devam"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İshal durana kadar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p057",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k3-55-c0236",
+       "ses": "Antibiyotik tedavisi dördüncü sırada yer alır, yani sıvı tedavisinin yerini almaz, onu tamamlar.",
+       "ekran": "**Antibiyotik** sıvı tedavisini tamamlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Antibiyotik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Antibiyotik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0237",
+       "ses": "Oral beslenme tedavinin bir basamağıdır ve sıvı tedavisi sürerken beslenme kesilmez.",
+       "ekran": "**Oral beslenme** tedavinin parçası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Oral beslenme"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Oral beslenme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0238",
+       "ses": "Oral rehidratasyon solüsyonu, kısaca o er es, sıvı açığının ağız yolundan yerine konmasında kullanılan temel çözeltidir.",
+       "ekran": "**ORS** oral replasman çözeltisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Oral rehidratasyon solüsyonu(ORS)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ORS",
+         "tur": "terim"
+        },
+        {
+         "metin": "ORS",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-034"
+       ]
+      },
+      {
+       "id": "k3-55-c0239",
+       "ses": "Glikozlu solüsyonlar kullanılırken kan şekeri takibi yapılır ve bu takip özellikle çocuklarda önem taşır.",
+       "ekran": "**Kan şekeri** takibi, çocuklarda glikozlu solüsyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Kan şekeri takibi, özellikle çocuklarda glikozlu solüsyonlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kan şekeri",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p058",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k3-55-c0240",
+       "ses": "Tabloda kolera şüphesi olan hastaya yaklaşım, dehidratasyonun derecesine göre değerlendirme ve rehidratasyon basamaklarıyla gösterilmiştir.",
+       "ekran": "Kolera şüphesinde **yaklaşım tablosu**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Tablo 75.6.4. Kolera şüphesi olan hastaya yaklaşım"
+        ],
+        "sekil": "kolera şüphesi olan hastaya yaklaşım tablosu"
+       },
+       "cikmis": [
+        "cl-p10-sinif3-p231-0"
+       ],
+       "vurgu": [
+        {
+         "metin": "yaklaşım tablosu",
+         "tur": "terim"
+        },
+        {
+         "metin": "yaklaşım tablosu",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0241",
+       "ses": "Dehidratasyon değerlendirmesinde şuur durumu, gözler, göz yaşı, ağız ve dil, susuzluk hissi ve deri turgoru ayrı ayrı bakılır ve karar bu bulgulara göre verilir.",
+       "ekran": "**Değerlendirme** bulguları ve karar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Degerlendir"
+        ],
+        "sekil": "dehidratasyon değerlendirme kolonları"
+       },
+       "cikmis": [
+        "cl-p10-sinif3-p231-0"
+       ],
+       "vurgu": [
+        {
+         "metin": "Değerlendirme",
+         "tur": "terim"
+        },
+        {
+         "metin": "Değerlendirme",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0242",
+       "ses": "Dehidratasyon yok olan hastada şuur iyi ve uyanık, gözler normal, göz yaşı var, ağız ve dil nemli, susuzluk hissi yok ve deri turgoru normaldir.",
+       "ekran": "**Dehidratasyon yok**, oral kayıp replasmanı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Dehidratasyon yok"
+        ]
+       },
+       "cikmis": [
+        "cl-p10-sinif3-p231-0"
+       ],
+       "vurgu": [
+        {
+         "metin": "Dehidratasyon yok",
+         "tur": "terim"
+        },
+        {
+         "metin": "Dehidratasyon yok",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0243",
+       "ses": "Bu grupta tahmini sıvı eksiği kilo başına elli mililitreden azdır, kaybettiği miktar oral yolla yerine konur ve hasta gözle izlenir.",
+       "ekran": "**Dehidratasyon yok**, oral kayıp replasmanı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Dehidratasyon yok"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dehidratasyon yok",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0244",
+       "ses": "Orta dehidratasyonda huzursuzluk, içe çökük gözler, göz yaşı yokluğu, kuru ağız ve dil, susuzluk hissi ve hafif azalmış deri turgoru bulunur.",
+       "ekran": "**Orta dehidratasyon**, oral veya damar içi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Orta dehidratasyon"
+        ]
+       },
+       "cikmis": [
+        "cl-p10-sinif3-p231-0"
+       ],
+       "vurgu": [
+        {
+         "metin": "Orta dehidratasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Orta dehidratasyon",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p059",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k3-55-c0245",
+       "ses": "Tahmini sıvı eksiği kilo başına elli ile yüz mililitre arasındadır ve kaybettiği miktara ek olarak yetmiş beş mililitre verilir.",
+       "ekran": "**Orta dehidratasyon**, oral veya damar içi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Orta dehidratasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Orta dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0246",
+       "ses": "Replasman oral veya damar içi yolla yapılır ve hasta dehidratasyon bulguları düzelip idrar çıkarana kadar her bir iki saatte gözlenir.",
+       "ekran": "**Orta dehidratasyon**, oral veya damar içi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Orta dehidratasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Orta dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0247",
+       "ses": "Ağır dehidratasyon çıkmış sınavda sorulmuştur, bu derecede hasta letarjik ya da bilinçsizdir, gözler ileri derecede içe çökük ve kuru, göz yaşı yoktur.",
+       "ekran": "**Ağır dehidratasyon**, sadece damar içi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Ağır dehidratasyon"
+        ]
+       },
+       "cikmis": [
+        "cl-p10-sinif3-p231-0"
+       ],
+       "vurgu": [
+        {
+         "metin": "Ağır dehidratasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ağır dehidratasyon",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0248",
+       "ses": "Ağız ve dil çok kurudur, hasta suyu zorla içiyor ya da hiç içemiyor ve deri turgoru ileri derecede azalmıştır.",
+       "ekran": "**Ağır dehidratasyon**, sadece damar içi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Ağır dehidratasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağır dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0249",
+       "ses": "Tahmini sıvı eksiği kilo başına yüz mililitreden fazladır, kaybettiği miktara ek olarak yüz mililitre damar içi yolla verilir ve dolaşım düzeltildikten sonra her bir iki saatte gözlenir.",
+       "ekran": "**Ağır dehidratasyon**, sadece damar içi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Ağır dehidratasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağır dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p060",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k3-55-c0250",
+       "ses": "Şiddetli dehidrate hastalar şok riski altında olduğu için intravenöz sıvıların hızlı uygulanması gerekir.",
+       "ekran": "**Şiddetli dehidratasyon** şok riski, hızlı intravenöz sıvı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Şiddetli dehidrate hastalar şok riski altında olduğundan, intravenöz sıvıların hızlı bir şekilde uygulanması gerekir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Şiddetli dehidratasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0251",
+       "ses": "Ciddi dehidratasyonu olan veya hidrasyona rağmen net sıvı kaybı süren hastalarda antibiyotik tedavisi önerilir.",
+       "ekran": "**Süregelen sıvı kaybı** antibiyotik endikasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Ciddi şekilde dehidrate olan veya hidrasyona rağmen devam eden net sıvı kaybı olan hastalar için antibiyotik tedavisi önerilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Süregelen sıvı kaybı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0252",
+       "ses": "Antibiyotik tedavisi ayrıca tüm gebelere, bağışıklığı baskılanmış bireylere ve komorbiditesi olanlara önerilir.",
+       "ekran": "**Gebelik, immünsüpresyon, komorbidite** antibiyotik endikasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Antibiyotik tedavisi ayrıca tüm gebelere, immünsüpresif bireylere (örn:HIV enfeksiyonu) ve komorbidite varlığında da önerilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelik, immünsüpresyon, komorbidite",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0253",
+       "ses": "İnsan immün yetmezlik virüsü enfeksiyonu bağışıklığı baskılanmış bireylere örnektir.",
+       "ekran": "**Gebelik, immünsüpresyon, komorbidite** antibiyotik endikasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Antibiyotik tedavisi ayrıca tüm gebelere, immünsüpresif bireylere (örn:HIV enfeksiyonu) ve komorbidite varlığında da önerilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelik, immünsüpresyon, komorbidite",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0254",
+       "ses": "Antibiyotik tedavisi mümkün olduğunca oral verilmeli ve hasta oral ilaçları tolere edebildiği anda başlanmalıdır.",
+       "ekran": "**Oral antibiyotik** tolere edilince başlanır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Antibiyotik tedavisi mümkün olabildiğince oral verilmeli. Antibiyotikler, hasta oral ilaçları tolere edebildiği anda başlanmalıdır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Oral antibiyotik",
+         "tur": "terim"
+        },
+        {
+         "metin": "Oral antibiyotik",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3k2-2023-2024-k3-h27"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p061",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k3-55-c0255",
+       "ses": "Dolaşan yaygın suşun duyarlılığına uygun tedavi mutlaka seçilmelidir.",
+       "ekran": "**Dolaşan suş duyarlılığı** tedaviyi belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Dolaşan yaygın suşun duyarlılığına uygun tedavi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dolaşan suş duyarlılığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0256",
+       "ses": "Tedavi seçiminde o suşun duyarlılığı her zaman esas alınır.",
+       "ekran": "**Dolaşan suş duyarlılığı** tedaviyi belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Dolaşan yaygın suşun duyarlılığına uygun tedavi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dolaşan suş duyarlılığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0257",
+       "ses": "On iki yaş üzeri hastalar ve erişkinler için ayrı tedavi düzeni belirtilmiştir.",
+       "ekran": "**Erişkin ve on iki yaş üzeri** tedavi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         ">12 yaş, erişkinler:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Erişkin ve on iki yaş üzeri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0258",
+       "ses": "İlk seçenek olarak doksisiklin üç yüz miligram oral yolla tek doz verilir.",
+       "ekran": "**İlk seçenek** doksisiklin üç yüz miligram tek doz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "İlk seçenek: Doksisiklin 300 mg (po), tek doz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlk seçenek",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0259",
+       "ses": "Alternatif tedavide azitromisin bir gram oral yolla tek doz veya siprofloksasin bir gram oral yolla tek doz kullanılır.",
+       "ekran": "**Alternatif** azitromisin veya siprofloksasin bir gram tek doz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Alternatif tedavi: Azitromisin 1 g (po) tek doz, Siprofloksasin 1 g (po) tek doz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alternatif",
+         "tur": "terim"
+        },
+        {
+         "metin": "Alternatif",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877035757-387307",
+        "k1-2018-2019-q060",
+        "k1-2018-2019-q048"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p062",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-55-c0260",
+       "ses": "Kolera hastalarının dışkısı yüksek miktarda bulaştırıcıdır ve bakterilerin yayılmasını önlemek için hasta kişilerden gelen tüm dışkılar herhangi bir şeye temas etmeden bertaraf edilmelidir.",
+       "ekran": "**Dışkı bulaştırıcıdır** temas etmeden bertaraf edilmeli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kolera hastalarının dışkısı yüksek miktarda bulaştırıcıdır. Bakterilerin yayılmasını önlemek için, hasta kişilerden gelen tüm dışkılar herhangi bir şeye temas etmeden bertaraf edilmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dışkı bulaştırıcıdır",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0261",
+       "ses": "Dışkının temas etmeden bertaraf edilmesi çevresel kontaminasyonu azaltarak salgın yayılımını sınırlar.",
+       "ekran": "**Dışkı bulaştırıcıdır** temas etmeden bertaraf edilmeli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kolera hastalarının dışkısı yüksek miktarda bulaştırıcıdır. Bakterilerin yayılmasını önlemek için, hasta kişilerden gelen tüm dışkılar herhangi bir şeye temas etmeden bertaraf edilmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dışkı bulaştırıcıdır",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0262",
+       "ses": "Kolera hastasının dışkısı veya kusmuğu ile kirlenen yüzeyler ve hastaların kullandığı eşyalar onda bir oranında çamaşır suyu içeren suyla dezenfekte edilmelidir.",
+       "ekran": "**Yüzey ve eşya dezenfeksiyonu** onda bir çamaşır suyu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kolera hastasının dışkısı veya kusmuğu ile kirlenen yüzeyler ve hastaların kullandığı eşyalar dezenfekte edilmelidir (1/10 çamaşır suyu içeren suyla)."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yüzey ve eşya dezenfeksiyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0263",
+       "ses": "Kirlenen yüzeylerin dezenfeksiyonu çevrede kalan bakterilerin başkalarına geçişini önler.",
+       "ekran": "**Yüzey ve eşya dezenfeksiyonu** onda bir çamaşır suyu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kolera hastasının dışkısı veya kusmuğu ile kirlenen yüzeyler ve hastaların kullandığı eşyalar dezenfekte edilmelidir (1/10 çamaşır suyu içeren suyla)."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yüzey ve eşya dezenfeksiyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0264",
+       "ses": "Kaynağı bilinmeyen sular kullanılmamalı ve içme suyu, diş fırçalama, yıkanma ile yiyecek hazırlama için dezenfeksiyon işlemine tabi tutulmuş güvenli sular tercih edilmelidir.",
+       "ekran": "**Güvenli su** dezenfeksiyon uygulanmış olmalı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kaynağı bilinmeyen sular kullanılmamalı; içme suyu olarak, dişleri fırçalamak, yıkanmak, yiyecek hazırlamak için dezenfeksiyon işlemine tabi tutulmuş güvenli sular kullanılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Güvenli su",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p063",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-55-c0265",
+       "ses": "Dezenfeksiyon uygulanmış su, su kaynaklı bulaş riskini azaltır.",
+       "ekran": "**Güvenli su** dezenfeksiyon uygulanmış olmalı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kaynağı bilinmeyen sular kullanılmamalı; içme suyu olarak, dişleri fırçalamak, yıkanmak, yiyecek hazırlamak için dezenfeksiyon işlemine tabi tutulmuş güvenli sular kullanılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Güvenli su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0266",
+       "ses": "Yiyecekler taze pişirilmiş ya da kapalı olmalı ve gıdaların hazırlanmasında, yıkanmasında dezenfeksiyon işlemi uygulanmış sular kullanılmalıdır.",
+       "ekran": "**Gıda hijyeni** taze pişmiş veya kapalı gıda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Yiyecekler taze pişirilmiş ya da kapalı olmalı, gıdaların hazırlanmasında, yıkanmasında dezenfeksiyon işlemi uygulanmış sular kullanılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gıda hijyeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0267",
+       "ses": "Taze pişirilmiş veya kapalı gıda ve güvenli su, gıda kaynaklı bulaşı engeller.",
+       "ekran": "**Gıda hijyeni** taze pişmiş veya kapalı gıda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Yiyecekler taze pişirilmiş ya da kapalı olmalı, gıdaların hazırlanmasında, yıkanmasında dezenfeksiyon işlemi uygulanmış sular kullanılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gıda hijyeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0268",
+       "ses": "Dezenfeksiyon işlemi uygulanmamış su ya da klor gibi dezenfektanlara ulaşımınız yoksa su üç dakika boyunca kaynatılmalıdır.",
+       "ekran": "**Su kaynatma** üç dakika, güvenli saklama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Dezenfeksiyon işlemi uygulanmamış su ya da klor gibi dezenfektanlara ulaşımınız yoksa su üç dakika boyunca kaynatılmalıdır. Kaynatılmış su, güvenli bir şekilde saklanmaz ve kullanılmaz ise yeniden kontaminasyon riski altındadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Su kaynatma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0269",
+       "ses": "Kaynatılmış su güvenli bir şekilde saklanmaz ve kullanılmazsa yeniden kontaminasyon riski altındadır.",
+       "ekran": "**Su kaynatma** üç dakika, güvenli saklama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Dezenfeksiyon işlemi uygulanmamış su ya da klor gibi dezenfektanlara ulaşımınız yoksa su üç dakika boyunca kaynatılmalıdır. Kaynatılmış su, güvenli bir şekilde saklanmaz ve kullanılmaz ise yeniden kontaminasyon riski altındadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Su kaynatma",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p064",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-55-c0270",
+       "ses": "Kapalı suların ambalajlarının açılmış olup olmadığı kontrol edilmeli ve onaylı ambalajlı sular kullanılmalıdır.",
+       "ekran": "**Ambalaj kontrolü** onaylı kapalı sular",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kapalı suların ambalajlarının açılmış olup olmadığı kontrol edilmeli, onaylı ambalajlı sular kullanılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ambalaj kontrolü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0271",
+       "ses": "Ambalaj bütünlüğü bozulmuş su güvenilir su olarak kabul edilmemelidir.",
+       "ekran": "**Ambalaj kontrolü** onaylı kapalı sular",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kapalı suların ambalajlarının açılmış olup olmadığı kontrol edilmeli, onaylı ambalajlı sular kullanılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ambalaj kontrolü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0272",
+       "ses": "Eller sık sık sabun ve temiz su ile yıkanmalı ve su ve sabun bulunamıyorsa en az yüzde altmış alkol içeren el temizleyicileri ile silinmelidir.",
+       "ekran": "**El hijyeni** sabun ve temiz su, alkol",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Eller sık sık sabun ve temiz su ile yıkanmalıdır. Su ve sabun bulunamıyorsa en az %60 alkol içeren el temizleyicileri ile silinmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "El hijyeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0273",
+       "ses": "El hijyeni dışkı ve kusmukla bulaşan bakterilerin ağız yoluyla alınmasını azaltır.",
+       "ekran": "**El hijyeni** sabun ve temiz su, alkol",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Eller sık sık sabun ve temiz su ile yıkanmalıdır. Su ve sabun bulunamıyorsa en az %60 alkol içeren el temizleyicileri ile silinmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "El hijyeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0274",
+       "ses": "Çiğ veya az pişmiş etler, kabuklu deniz hayvanları ve deniz ürünleri yenmemelidir.",
+       "ekran": "**Riskli gıdalar** çiğ et ve deniz ürünleri yasak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Çiğ veya az pişmiş etler, kabuklu deniz hayvanları ve deniz ürünleri yenmemelidir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Riskli gıdalar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p065",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-55-c0275",
+       "ses": "Bu gıdaların çiğ veya az pişmiş tüketilmesi bulaş riskini artırır.",
+       "ekran": "**Riskli gıdalar** çiğ et ve deniz ürünleri yasak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Çiğ veya az pişmiş etler, kabuklu deniz hayvanları ve deniz ürünleri yenmemelidir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Riskli gıdalar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0276",
+       "ses": "Kolera salgınında etkin sürveyans, diğer salgınlarda olduğu gibi en önemli adımlardan biridir.",
+       "ekran": "**Etkin sürveyans** vaka takibi ve kaynak tespiti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Ayrıca kolera salgını durumunda yapılacak en önemli adımlardan biri de diğer salgınlarda da olduğu gibi etkin bir sürveyanstır. Vakaların takibi, salgının olası kaynak/kaynaklarının tespiti ve alınacak koruyucu önlemler açısından oldukça önemlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etkin sürveyans",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0277",
+       "ses": "Vakaların takibi, olası kaynak veya kaynakların tespiti ve koruyucu önlemler için sürveyans belirleyicidir.",
+       "ekran": "**Etkin sürveyans** vaka takibi ve kaynak tespiti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Ayrıca kolera salgını durumunda yapılacak en önemli adımlardan biri de diğer salgınlarda da olduğu gibi etkin bir sürveyanstır. Vakaların takibi, salgının olası kaynak/kaynaklarının tespiti ve alınacak koruyucu önlemler açısından oldukça önemlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etkin sürveyans",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-55-b08",
+   "baslik": "Korunma",
+   "paragraflar": [
+    {
+     "id": "k3-55-p066",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-55-c0278",
+       "ses": "İçme suyu, diş fırçalama, gıdayı yıkama ve yemek hazırlama sularının güvenli olması, kolera korunmasında temel önlemdir.",
+       "ekran": "**Güvenli su** içme ve kullanım",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "İçme suyu, diş fırçalama, gıdayı yıkama ve yemek hazırlama sularının güvenli olması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Güvenli su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0279",
+       "ses": "Hazır paketli suların kullanılması, güvenli içme ve kullanım suyu sağlamak için önerilen bir yöntemdir.",
+       "ekran": "**Paketli su** güvenli seçenek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Hazır paketli suların kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Paketli su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0280",
+       "ses": "En az bir dakika tamamen kaynatılan suların kullanılması, suyu güvenli hale getiren bir korunma yöntemidir.",
+       "ekran": "**Kaynatma** en az bir dakika",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "En az bir dakika tamamen kaynatılan suların kullanılması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kaynatma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0281",
+       "ses": "Klor tablet ya da granüllerinin kullanılması, suyun güvenli hale getirilmesi için talimatlara göre uygulanmalıdır.",
+       "ekran": "**Klor tablet** talimatlara göre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Klor tablet ya da granüllerinin kullanılması (talimatlara göre)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klor tablet",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0282",
+       "ses": "Çamaşır suyu yüzde beş ile dokuz arası sodyum hipoklorid konsantrasyonunda bir litre suya iki damla damlatılıp karıştırılmalı ve otuz dakika beklenmelidir.",
+       "ekran": "**Çamaşır suyu** bir litre suya iki damla",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Çamaşır suyu (%5-9 sodyum hipoklorid konsantrasyonunda) 1 litre suya 2 damla damlatılıp karıştırılması ve 30 dakika beklenmesi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çamaşır suyu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p067",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-55-c0283",
+       "ses": "Yemek hazırlanan alanların sabun ve güvenli su ile temizlenip tamamen kurutulması, gıda bulaşını azaltan korunma önlemidir.",
+       "ekran": "**Yemek alanı** sabun ve güvenli su",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Yemek hazırlanan alanların sabun ve güvenli su ile temizlenip tamamen kurutulması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yemek alanı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0284",
+       "ses": "Ellerin sabun ve temiz su ile yıkanması, kolera etkeninin bulaşmasını önleyen temel el hijyeni uygulamasıdır.",
+       "ekran": "**El hijyeni** sabun ve temiz su",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Ellerin sabun ve temiz su ile yıkanması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "El hijyeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0285",
+       "ses": "Eller yemek hazırlamadan önce, sırasında ve sonrasında sabun ve temiz su ile yıkanmalıdır.",
+       "ekran": "**Yemek öncesi** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Yemek hazırlamadan önce, sırasında ve sonrasında"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yemek öncesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0286",
+       "ses": "Eller tuvalet kullanıldıktan sonra sabun ve temiz su ile yıkanmalıdır.",
+       "ekran": "**Tuvalet sonrası** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Tuvalet kullanıldıktan sonra"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tuvalet sonrası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0287",
+       "ses": "Eller çocukları beslemeden önce ve sonra sabun ve temiz su ile yıkanmalıdır.",
+       "ekran": "**Çocuk besleme** öncesi ve sonrası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Çocukları beslemeden önce ve sonra"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çocuk besleme",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p068",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-55-c0288",
+       "ses": "Eller çocuk ya da bakıma muhtaç kişilerin alt bakımından sonra sabun ve temiz su ile yıkanmalıdır.",
+       "ekran": "**Alt bakım sonrası** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Çocuk ya da bakıma muhtaç kişilerin alt bakımından sonra"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alt bakım sonrası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0289",
+       "ses": "Eller kolerası olan kişilerin bakımı öncesi ve sonrası sabun ve temiz su ile yıkanmalıdır.",
+       "ekran": "**Kolera bakımı** öncesi ve sonrası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Kolerası olan kişilerin bakımı öncesi ve sonrası"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera bakımı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0290",
+       "ses": "Tuvaletler ve kontamine yüzeyler onda bir sulandırılmış çamaşır suyuyla temizlenmelidir.",
+       "ekran": "**Kontamine yüzey** onda bir sulandırma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Tuvaletler ve kontamine yüzeyler 1/10 sulandırılmış çamaşır suyuyla temizlenmeli"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kontamine yüzey",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0291",
+       "ses": "Gıdalar iyi pişirilmeli, meyve ve sebzeler ise soyulmalıdır.",
+       "ekran": "**Gıda güvenliği** iyi pişirme ve soyma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Gıdalar iyi pişirilmeli, meyve ve sebzeler soyulmalı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gıda güvenliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0292",
+       "ses": "Hastanelerde el hijyeni, kolera bulaşının önlenmesinde sağlık ortamında uygulanması gereken temel korunma önlemidir.",
+       "ekran": "**Hastane el hijyeni** temel önlem",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Hastanelerde el hijyeni"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hastane el hijyeni",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p069",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-55-c0293",
+       "ses": "Hastanelerde çevre temizliği, kolera bulaş riskini azaltmak için yüzeylerin düzenli temizlenmesini içerir.",
+       "ekran": "**Hastane çevre temizliği** düzenli yüzey bakımı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Hastanelerde çevre temizliği"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hastane çevre temizliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0294",
+       "ses": "Kemoprofilaksi yani antibiyotikle korunma kolera için önerilmemektedir ve korunma amacıyla kullanılmaz.",
+       "ekran": "**Kemoprofilaksi** antibiyotikle önerilmez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Kemoprofilaksi (antibiyotikle) önerilmemekte"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kemoprofilaksi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p070",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-55-c0295",
+       "ses": "Sayfadaki görsel, el yıkama, su güvenliği ve gıda güvenliği önlemlerini birlikte gösterir.",
+       "ekran": "**El yıkama ve gıda güvenliği** görseli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "el yıkama, su ve gıda güvenliği görseli"
+       },
+       "vurgu": [
+        {
+         "metin": "El yıkama ve gıda güvenliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0296",
+       "ses": "Kişisel korunma önlemi olarak el yıkamak, bulaşıcı hastalıklardan korunmada temel uygulamadır.",
+       "ekran": "**Kişisel korunma** önlemi olarak el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Kisisel Korunma Onlemi Olarak;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kişisel korunma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0297",
+       "ses": "Ellerinizi yıkamak, kişisel korunma önlemlerinin ilk adımıdır ve el hijyenini sağlar.",
+       "ekran": "**Ellerinizi yıkayınız**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Ellerinizi;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ellerinizi yıkayınız",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0298",
+       "ses": "Yemeklerden önce ve sonra el yıkamak, ağız yoluyla alınan mikropların bulaşmasını azaltır.",
+       "ekran": "**Yemeklerden önce ve sonra** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Yemeklerden önce ve sonra,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yemeklerden önce ve sonra",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0299",
+       "ses": "Yemek hazırlamadan önce ve sonra el yıkamak, gıdaya mikrop bulaşmasını önler.",
+       "ekran": "**Yemek hazırlamadan önce ve sonra** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Yemeklerinizi hazırlamadan önce ve sonra,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yemek hazırlamadan önce ve sonra",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p071",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-55-c0300",
+       "ses": "Tuvaletten önce ve sonra el yıkamak, dışkı kaynaklı mikropların ellere ve ağza taşınmasını engeller.",
+       "ekran": "**Tuvaletten önce ve sonra** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Tuvaletten önce ve sonra ,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tuvaletten önce ve sonra",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0301",
+       "ses": "Bebeğin altını temizlemeden önce ve sonra el yıkamak, bebek ve bakım veren için bulaş riskini düşürür.",
+       "ekran": "**Bebek bakımında** el yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Bebeğinizin altını temizledikten önce ve sonra,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bebek bakımında",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0302",
+       "ses": "Elleri daima sabunla ve bol temiz suyla yıkamak, kir ve mikropların uzaklaştırılmasını sağlar.",
+       "ekran": "**Sabun ve bol temiz su** ile yıkama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "daima sabunla, bol ve temiz su kullanarak yıkayınız."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sabun ve bol temiz su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0303",
+       "ses": "Ellerin ön ve arka yüzü, parmak araları ve tırnak içleri iyice temizlenene kadar yıkanmalıdır.",
+       "ekran": "**Parmak araları ve tırnak içleri** temizlenmeli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Ellerinizin her tarafını (ön ve arka parmak aralarını, tırnak içlerini ) iyice temizlediğinize emin olana kadar yıkamaya özen gösteriniz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Parmak araları ve tırnak içleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0304",
+       "ses": "Su güvenliği için temiz ve güvenilir su kullanmak, su kaynaklı bulaşmayı önlemenin temel yoludur.",
+       "ekran": "**Su güvenliği** önlemleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Su Güvenliğiniz İçin;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Su güvenliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p072",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-55-c0305",
+       "ses": "Temiz su tüketmek, suyla bulaşan mikroplardan korunmak için ilk kuraldır.",
+       "ekran": "**Temiz su** tüketiniz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Temiz su tüketiniz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Temiz su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0306",
+       "ses": "Mümkünse Sağlık Bakanlığından izinli ambalajlı su kullanmak, güvenli suya erişimi kolaylaştırır.",
+       "ekran": "**İzinli ambalajlı su** kullanınız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Mümkünse Sağlık Bakanlığından izinli ambalajlı su kullanınız."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İzinli ambalajlı su",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0307",
+       "ses": "Kuyu veya depo suyu kullanılıyorsa klor tabletiyle suyu dezenfekte etmek, mikrop yükünü azaltır.",
+       "ekran": "**Klor tabletiyle** su dezenfeksiyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Bulunduğunuz bölgede kuyu veya depo suyu kullanılıyorsa klor tableti kullanarak mutlaka suyunuzu dezenfekte ediniz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klor tabletiyle",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0308",
+       "ses": "Temizliğinden emin olunmayan suları kullanmamak, bilinmeyen su kaynaklı bulaşı engeller.",
+       "ekran": "**Emin olunmayan suyu** kullanmayınız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Temizliğinden emin olmadığınız suları kullanmayınız."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Emin olunmayan suyu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0309",
+       "ses": "Zorunlu hallerde suyu en az on dakika kaynatmak, hastalık yapıcı mikropları öldürür.",
+       "ekran": "**En az on dakika** kaynatma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Zorunlu hallerde suyunuzu en az 10 dakika kaynatarak kullanınız."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "En az on dakika",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p073",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-55-c0310",
+       "ses": "Gıda güvenliği için yiyeceklerin temiz hazırlanması ve uygun saklanması, mikrop bulaşmasını azaltır.",
+       "ekran": "**Gıda güvenliği** önlemleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Gıda Güvenliğiniz İçin;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gıda güvenliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0311",
+       "ses": "Kabuğu soyularak yenen gıdalar dışında sebzeleri çiğ tüketmemek, gıda kaynaklı bulaş riskini düşürür.",
+       "ekran": "**Çiğ sebze tüketiminden** kaçınınız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Kabuğu soyularak yenilen gıdalar haricinde, sebzelerinizi çiğ olarak tüketmemeye özen gösteriniz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çiğ sebze tüketiminden",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0312",
+       "ses": "İyice piştiğinden emin olunmayan veya az pişmiş gıdaları tüketmemek, mikrop alımını azaltır.",
+       "ekran": "**Az pişmiş gıda** tüketmeyiniz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "İyice piştiğinden emin olmadığınız veya az pişmiş gıdaları tüketmekten kaçınınız."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Az pişmiş gıda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0313",
+       "ses": "Pişmiş olsa bile uygun saklanmayan gıdalarda mikrop üreyebileceği için gıdalar buzdolabında saklanmalıdır.",
+       "ekran": "**Gıdaları buzdolabında** saklayınız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Pişirilmiş dahi olsa uygun şekilde saklanmayan gıdalarda mikrop üreyebileceğini unutmayınız, bu nedenle gıdalarınızı buzdolabında saklayınız."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gıdaları buzdolabında",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0314",
+       "ses": "Açıkta satılan gıda maddelerini tüketmemek, gıda güvenliği açısından kesin bir korunma kuralıdır.",
+       "ekran": "**Açıkta satılan gıdayı** tüketmeyiniz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Açıkta satılan gıda maddelerini kesinlikle tüketmeyiniz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Açıkta satılan gıdayı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p074",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-55-c0315",
+       "ses": "Dünya Sağlık Örgütü tarafından onaylanmış üç aşı bulunmakta ve tam koruma için iki doz gerekmektedir.",
+       "ekran": "**Dünya Sağlık Örgütü** onaylı üç aşı, tam koruma için iki doz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Dünya Sağlık Örgütü tarafından onaylanmış 3 aşı bulunmakta, tam koruma için iki doz gerekmekte"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dünya Sağlık Örgütü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0316",
+       "ses": "Tam koruma hedefi iki doz uygulama ile ilişkilendirilir.",
+       "ekran": "**Dünya Sağlık Örgütü** onaylı üç aşı, tam koruma için iki doz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Dünya Sağlık Örgütü tarafından onaylanmış 3 aşı bulunmakta, tam koruma için iki doz gerekmekte"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dünya Sağlık Örgütü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0317",
+       "ses": "Kolera aşısı, koleranın sık görüldüğü Asya, Afrika ve Uzak Doğuda kullanılmaktadır.",
+       "ekran": "**Kolera aşısı** sık görülen Asya, Afrika ve Uzak Doğuda kullanılır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Kolera aşısı koleranın sık görüldüğü Asya, Afrika ve Uzak Doğu’da kullanılmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera aşısı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0318",
+       "ses": "Aşının bu bölgelerde kullanılması, hastalığın görülme sıklığına göre korunma stratejisi belirlendiğini gösterir.",
+       "ekran": "**Kolera aşısı** sık görülen Asya, Afrika ve Uzak Doğuda kullanılır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Kolera aşısı koleranın sık görüldüğü Asya, Afrika ve Uzak Doğu’da kullanılmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolera aşısı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0319",
+       "ses": "Riskli bölgelere seyahat edecek kişilere Hudutlar Sahil Güvenlik Müdürlüğü tarafından kolera aşısı yapılmaktadır.",
+       "ekran": "**Hudutlar Sahil Güvenlik Müdürlüğü** seyahat edeceklere kolera aşısı yapar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Bu bölgelere seyahat edecek kişilere Hudutlar Sahil Güvenlik Müdürlüğü’nce kolera aşısı yapılmaktadır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hudutlar Sahil Güvenlik Müdürlüğü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p075",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-55-c0320",
+       "ses": "Seyahat öncesi aşılama, riskli bölgeye gidişte korunma amacı taşır.",
+       "ekran": "**Hudutlar Sahil Güvenlik Müdürlüğü** seyahat edeceklere kolera aşısı yapar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Bu bölgelere seyahat edecek kişilere Hudutlar Sahil Güvenlik Müdürlüğü’nce kolera aşısı yapılmaktadır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hudutlar Sahil Güvenlik Müdürlüğü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0321",
+       "ses": "Dukoral kolera aşılarından birinin adıdır ve özellikleri alt maddelerde sıralanmaktadır.",
+       "ekran": "**Dukoral** kolera aşısı seçeneklerinden biri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Dukoral ®"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dukoral",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0322",
+       "ses": "Dukoral aşısının iki yaşından büyük kişilerde kullanımı onaylıdır.",
+       "ekran": "**Dukoral** iki yaşından büyüklerde onaylı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         ">2 yaş için kullanımı onaylı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dukoral",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0323",
+       "ses": "Yaş sınırı, aşının hangi grup için onaylandığını gösterir.",
+       "ekran": "**Dukoral** iki yaşından büyüklerde onaylı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         ">2 yaş için kullanımı onaylı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dukoral",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0324",
+       "ses": "Dukoral aşısı iki yıl koruyuculuk sağlar ve koruma süresi iki yıl olarak belirtilir.",
+       "ekran": "**Dukoral** iki yıl koruyucu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "İki yıl koruyucu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dukoral",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p076",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-55-c0325",
+       "ses": "Dukoral rekombinan bir aşı olarak tanımlanmıştır ve aşının içerik sınıfını gösterir.",
+       "ekran": "**Dukoral** rekombinan aşı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Rekombinan aşı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dukoral",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0326",
+       "ses": "Shanchol ve Euvichol Plus slaytta birlikte anılan diğer kolera aşılarıdır.",
+       "ekran": "**Shanchol ve Euvichol Plus** diğer kolera aşıları",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Shanchol ® ve Euvichol-Plus ®"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Shanchol ve Euvichol Plus",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0327",
+       "ses": "Shanchol ve Euvichol Plus benzer içerikte ölü bakteri aşılarıdır ve aynı grupta değerlendirilir.",
+       "ekran": "**Ölü bakteri aşısı** benzer içerikte Shanchol ve Euvichol Plus",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Benzer içerikte ölü bakteri aşısı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ölü bakteri aşısı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0328",
+       "ses": "Shanchol ve Euvichol Plus aşılarının bir yaşından büyük kişilerde kullanımı onaylıdır.",
+       "ekran": "**Bir yaşından büyükler** Shanchol ve Euvichol Plus için onaylı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         ">1 yaş için onaylı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bir yaşından büyükler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-55-c0329",
+       "ses": "Shanchol ve Euvichol Plus aşılarında iki doz uygulama en az üç yıl koruyuculuk sağlar.",
+       "ekran": "**İki doz** en az üç yıl koruyucu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "İki doz aşı en az 3 yıl koruyucu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İki doz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-55-p077",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-55-c0330",
+       "ses": "İki dozun tamamlanması koruma süresini belirleyen temel unsurdur.",
+       "ekran": "**İki doz** en az üç yıl koruyucu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "İki doz aşı en az 3 yıl koruyucu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İki doz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

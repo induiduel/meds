@@ -296,6 +296,27 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
             return {"d": 0, "s": sayfa, **PI.eslestir_capa(cumle, sy, {0})}
         return {"d": 0, "s": sayfa, "t": "sayfa", "l": [], "w": []}
 
+    def _doldur(cumle: str, isr: dict, sayfa: int) -> dict:
+        """'sayfa' işareti kaldıysa sayfadaki tablo/resim bölgesine bağla (H614b).
+
+        Neden: tablo sayfalarında slayt metni İngilizce, anlatım Türkçe olduğu için kelime eşleşmesi tutmuyor ve
+        cümle 'yalnız sayfa' işaretine düşüyordu (T5 oranı %5'i aşıyordu). Cümle o sayfanın tablosunu/resmini
+        anlattığına göre işaret o bölgeye gitmeli; uydurma değil, slaytın kendi ögesi."""
+        if isr.get("t") != "sayfa":
+            return isr
+        sy = pdf.sayfa(sayfa)
+        if not sy:
+            return isr
+        if sy.tablolar:
+            t = PI.eslestir_capa(cumle, sy, {0})
+            if t and t.get("t") in ("tablo", "metin", "kelime"):
+                return {"d": 0, "s": sayfa, **t}
+        if sy.resimler:
+            rb = PI.resim_kutusu(sy)
+            if rb:
+                return {"d": 0, "s": sayfa, "t": "resim", "l": [sy.n(rb)], "w": []}
+        return isr
+
     for pn, (p, es) in enumerate(zip(pars, hz["paragraflar"])):
         m = p["t"]
         sinir = PI.cumle_sonlari(m)
@@ -308,11 +329,12 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                 isr = PI.capali(cumle, cc[ci], pdf)
                 if isr and (not cs or int(isr.get("s") or cs) == cs):
                     isr["d"] = 0
+                    isr = _doldur(cumle, isr, int(isr.get("s") or cs or 0))
                     liste.append(isr)
                     continue
                 if isr and cs:
                     # görsel komşu sayfada bulundu → çapa sayfasında kal
-                    liste.append(_ayni_sayfa(cumle, cc[ci], cs))
+                    liste.append(_doldur(cumle, _ayni_sayfa(cumle, cc[ci], cs), cs))
                     continue
             s0 = (es.get("sayfalar") or [])[ci] if ci < len(es.get("sayfalar") or []) else es["sayfa"]
             # Eğer v2 içindeki cümlede özel slayt.sayfa tanımlıysa öncelik ver
@@ -344,6 +366,7 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                     isr = {"d": 0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []} if rb else {"d": 0, "s": s0, "t": "sayfa", "l": [], "w": []}
                 else:
                     isr = {"d": 0, "s": s0, "t": "sayfa", "l": [], "w": []}
+            isr = _doldur(cumle, isr, int(isr.get("s") or s0))
             liste.append(isr)
         c_out[str(pn)] = liste
     out = {"surum": PI.SURUM, "metinHash": metin_hash, "c": c_out}
