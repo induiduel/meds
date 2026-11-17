@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 811,
-  "baslik": "İçerik hattı kuralları sadeleştirildi",
+  "onem": 812,
+  "baslik": "Zengin PDF: sıralamalar adım adım",
   "maddeler": [
-    "Arka plan: Ders üretiminde her aşamada okunan kurallar kısaltıldı ve doğru aşamaya taşındı; hat daha az gereksiz okumayla çalışır.",
-    "Site kullanımında görünür bir değişiklik yok."
+    "Zengin PDF/Word: \"birinci, ikinci, üçüncü…\" ya da \"önce, sonra, en son\" diye anlatılan basamaklar artık numaralı adım akışı olarak görünür."
   ],
   "eklenen": [],
   "degisen": [

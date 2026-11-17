@@ -63,7 +63,7 @@ function zDuzSatirlar(d: ZenginBlok, mdKip: boolean): string[] {
     }
     case 'sinav': return [mdKip ? `> **Sınavda soruldu:** ${x}` : `[Sınavda soruldu] ${x}`];
     case 'ornek': return [mdKip ? `> **Örnek:** ${x}` : `[Örnek] ${x}`];
-    case 'alinti': return [mdKip ? `> “${x}”` : `“${x}”`];
+    case 'alinti': return [mdKip ? `> _${x}_` : x];  // x tam cümle (tırnak cümlenin kendi içinde)
     case 'terim': return [`    ${k(d.ad)}: ${d.tanim || ''}`];
     default: return x ? [x] : [];
   }
@@ -349,7 +349,7 @@ function zDocx(d: ZenginBlok): string[] {
     }
     case 'sinav': return [par('ZSinav', r('★ SINAVDA SORULDU', { b: true }), tut), par('ZSinavM', r(d.x || ''))];
     case 'ornek': return [par('ZOrnek', r('ÖRNEK', { b: true }), tut), par('ZOrnekM', r(d.x || ''))];
-    case 'alinti': return [par('ZAlinti', r(`“${d.x || ''}”`, { i: true }))];
+    case 'alinti': return [par('ZAlinti', r(d.x || '', { i: true }))];
     case 'terim': return [par('ZTerim', r(`${d.ad || ''}: `, { b: true }) + r(d.tanim || ''))];
     default: return d.x ? [par('Normal', r(d.x))] : [];
   }

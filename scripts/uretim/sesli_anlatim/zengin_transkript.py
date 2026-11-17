@@ -82,7 +82,8 @@ def _ayir_oge(govde: str) -> list[str]:
     return [x.strip(" .;:") for x in parca if 2 <= len(x.strip()) <= 140]
 
 
-BAG_SOZ = {"ve", "ile", "ya", "da", "de", "önce", "ardından", "sonra", "sonrasında", "en", "sonunda", "son", "olarak",
+BAG_SOZ = {"ve", "ile", "ya", "da", "de", "önce", "öncelikle", "ardından", "sonra", "sonrasında", "daha", "en", "sonunda", "sonda",
+           "son", "olarak", "ilk", "birincisi", "ilki", "ise", "gelir", "gelişir", "görülür", "izlenir", "ikincisi", "üçüncüsü", "dördüncüsü", "beşincisi", "altıncısı", "sonuncusu",
            "sayılır", "şunlardır", "yer", "alır", "gelir", "eklenir", "istenir", "bulunur", "içerir", "gelişir", "başlar"}
 
 
@@ -102,20 +103,102 @@ def kapsar(c: str, parcalar: list[str]) -> bool:
     return not asil or sum(w in yeni for w in asil) / len(asil) >= 0.95
 
 
-def sirali_mi(c: str) -> list[str] | None:
-    """'Önce A, ardından B, sonra C ve en sonunda D gelişir.' → [A, B, C, D]. Açık başlangıç (önce/ilk) ve bitiş
-    (en son/son olarak) ister; her adım ≥ 2 sözcük; cümle sözcükleri korunmalı (kapsar)."""
-    if not (re.search(r"\b(önce|ilk olarak|ilk sırada)\b", c, re.I) and re.search(r"\b(en sonunda|en son|son olarak|en sonda)\b", c, re.I)):
-        return None
-    bas = re.match(r"^(.{0,120}?:)\s*", c)  # "Sıra şöyledir:" gibi giriş
-    govde = c[bas.end():] if bas else c
-    parca = re.split(r",?\s*(?:\b[Öö]nce\b|\bilk olarak\b|\bardından\b|\bsonra(?:sında)?\b|\ben sonunda\b|\ben sonda\b|\ben son\b|\bson olarak\b)\s*,?\s*", govde)
-    og = [re.sub(r"\s+(ve|ile)$", "", x.strip(" ,.;")) for x in parca if x.strip(" ,.;")]
-    if og:  # son öğedeki yüklem (gelişir, gelir…) madde metnine girmez
-        og[-1] = re.sub(r"\s+(gelişir|gelir|yapılır|uygulanır|başlar|izlenir|kazanılır)$", "", og[-1])
-    if len(og) < 3 or any(len(x.split()) < 2 for x in og) or any(";" in x for x in og):
-        return None
-    return og if kapsar(c, og) else None
+ZAMAN_IS = r"(?:\b[Öö]nce(?:likle)?\b|\bilk olarak\b|\bardından\b|\bdaha sonra\b|\bsonra(?:sında)?\b|\ben sonunda\b|\ben sonda\b|\ben son\b|\bson olarak\b|\bsonunda\b)"
+SIRA_SOZ = re.compile(r"\b(basamak|aşama|evre|adım|sıra|sırasıyla|sırayla|kademe)", re.I)
+
+
+def sirali_mi(c: str) -> tuple[str, list[str], str] | None:
+    """Tek cümlede sıralama → (başlık, adımlar, kalan). Kalan (';' sonrası) metin kaybolmasın diye açıklama olarak eklenir.
+      · zaman işaretli: 'Sıra şöyle: önce A, sonra B, sonra C, en sonda D.' (başlangıç işareti + ≥ 2 sonraki işaret)
+      · sıra sayılı: 'Birincisi A, ikincisi B, üçüncüsü C.' / 'İlki A, ikincisi B'
+      · basamak sayımı: 'Üç aşamada ilerler: A, B ve C.' / 'Basamaklar sırasıyla A, B ve C'dir.'
+    Her yapıda cümle sözcüklerinin ≥ %95'i korunur (kapsar), yoksa None."""
+    ana, _, kalan = c.partition(";")
+    kalan = kalan.strip()
+    # 1) sıra sayılı tek cümle
+    if re.search(r"\b(birincisi|ilki)\b", ana, re.I) and re.search(r"\bikincisi\b", ana, re.I):
+        bol = re.split(r",?\s*\b(?:[Bb]irincisi|[İi]lki|ikincisi|üçüncüsü|dördüncüsü|beşincisi|altıncısı|sonuncusu)\b\s*,?\s*", ana)
+        bas, og = bol[0].strip(" ,:"), [x.strip(" ,.;") for x in bol[1:] if x.strip(" ,.;")]
+        if len(og) >= 2 and kapsar(ana, [bas, *og]):
+            return bas, _sira_temiz(og), kalan
+    # 1b) tek cümlede "Birinci aşama A, ikinci aşama B …" — sıra sözcüğü adımın içinde kalır (metin kaybı yok)
+    tam = c.replace("İ", "i").replace("I", "ı")
+    if re.match(r"^(birinci|ilk)\s+\w+", tam, re.I) and re.search(r"[,;]\s*ikinci\s+\w+", tam, re.I):
+        bol = re.split(r"[,;]\s*(?=(?:ikinci|üçüncü|dördüncü|beşinci|altıncı)\s)", c.replace("İkinci", "ikinci"))
+        og = [x.strip(" .") for x in bol if x.strip(" .")]
+        if len(og) >= 2 and all(len(x.split()) <= 25 for x in og):
+            return "", og, ""
+    # 2) zaman işaretli
+    isaret = re.findall(ZAMAN_IS, ana, re.I)
+    if len(isaret) >= 3 and re.search(r"\b(önce|öncelikle|ilk olarak)\b", ana, re.I):
+        gb = re.match(r"^(.{0,120}?:)\s*", ana)
+        govde = ana[gb.end():] if gb else ana
+        bol = re.split(r",?\s*" + ZAMAN_IS + r"\s*,?\s*", govde)
+        bas = ((gb.group(1) if gb else "") + " " + bol[0]).strip(" ,") if bol[0].strip() and len(bol[0].split()) <= 8 else (gb.group(1) if gb else "")
+        govde_og = bol[1:] if bol[0].strip() and len(bol[0].split()) <= 8 else bol
+        og = [re.sub(r"\s+(ve|ile)$", "", x.strip(" ,.;")) for x in govde_og if x.strip(" ,.;")]
+        if len(og) >= 3 and kapsar(ana, [bas, *og]):
+            return bas, _sira_temiz(og), kalan
+    # 3) basamak sayımı (iki nokta ya da 'sırasıyla')
+    m = re.match(r"^([^:]{6,140}?)(?::\s+|\s+sırasıyla\s+)(.+?)[.!]?$", ana)
+    # başlık sıra bildirmeli: sayılı basamak ("üç basamakta", "dört evre") ya da sıra/sırasıyla/sırayla;
+    # "İkinci basamak fizik muayenedir: …" bir basamağın İÇERİĞİDİR, sıralama değildir
+    sayili = re.search(r"\b(iki|üç|dört|beş|altı|yedi|sekiz)\s+(basamak|aşama|evre|adım|kademe)", m.group(1), re.I) if m else None
+    sira = re.search(r"\b(sıra|sırasıyla|sırayla)\b", m.group(1) + (" sırasıyla" if m and "sırasıyla" in ana else ""), re.I) if m else None
+    if m and (sayili or sira) and not re.match(r"^(İkinci|Üçüncü|Dördüncü|Beşinci|Birinci|İlk)\b", m.group(1)):
+        og = sayiyla_ayir(m.group(1), re.sub(r"(?:'?[dt][ıiuü]r)$", "", m.group(2))) or []
+        if len(og) >= 3 and all(len(x.split()) <= 12 for x in og) and ogeler_ad_mi(og[:-1]) and kapsar(ana, [m.group(1), *og]):
+            return m.group(1).strip() + ("" if ":" in ana else " (sırasıyla)"), _sira_temiz(og), kalan
+    return None
+
+
+def _sira_temiz(og: list[str]) -> list[str]:
+    """Adımın başındaki bağlaç (da/de/ise/ve) ve son adımın sonundaki genel yüklem (gelir, gelişir, görülür…) atılır."""
+    og = [re.sub(r"^(?:da|de|ise|ve|ve de)\s+", "", x).strip() for x in og]
+    if og:
+        og[-1] = re.sub(r"\s+(gelir|gelişir|görülür|izlenir|başlar|kazanılır|yapılır|uygulanır)$", "", og[-1])
+    return [x for x in og if x]
+
+
+def sira_dizileri(B: list[dict]) -> list[dict]:
+    """Art arda 'Birinci… / İkinci… / Üçüncü…' ile başlayan madde cümlelerini (aynı bölüm, ≥ 2, birinciden başlayan)
+    tek sıralama bloğuna toplar; adımlar cümlenin tamamıdır (metin kaybı yok)."""
+    SIRA = ["birinci", "ilk", "ikinci", "üçüncü", "dördüncü", "beşinci", "altıncı", "yedinci", "sekizinci", "dokuzuncu", "onuncu"]
+    def no(b: dict) -> int:
+        if b.get("t") != "madde":
+            return -1
+        # Türkçe büyük İ: str.lower() "i̇" (birleşik nokta) üretir, "ikinci" ile eşleşmez → önce İ→i, I→ı
+        w = re.match(r"^(\w+)", (b.get("x") or "").replace("İ", "i").replace("I", "ı").lower())
+        w = w.group(1) if w else ""
+        for i, k in enumerate(SIRA):
+            if w.startswith(k):
+                return 1 if i <= 1 else i
+        return -1
+    out, i = [], 0
+    while i < len(B):
+        if no(B[i]) == 1:
+            j, beklenen = i + 1, 2
+            while j < len(B) and (no(B[j]) == beklenen or B[j]["t"] in ("terim", "aciklama")):
+                if no(B[j]) == beklenen:
+                    beklenen += 1
+                j += 1
+            adim = [b for b in B[i:j] if b["t"] == "madde"]
+            if len(adim) >= 2:
+                out.append({"t": "sirali", "bas": "", "ogeler": [b["x"] for b in adim], "p": B[i]["p"]})
+                out += [b for b in B[i:j] if b["t"] != "madde"]  # terim/açıklama kaybolmaz, dizinin ardına
+                i = j
+                continue
+        # önceki sıralamanın devamı: n. sıra sözcüğüyle başlayan cümle, n−1 adımlı sıralamanın ardından gelir
+        n = no(B[i])
+        onceki = next((b for b in reversed(out) if b["t"] not in ("terim", "aciklama")), None)
+        if n > 1 and onceki is not None and onceki["t"] == "sirali" and len(onceki["ogeler"]) == n - 1:
+            # devam cümlesi kendi içinde sonraki sırayı da taşıyabilir ("Üçüncü aşama …; dördüncü aşama …")
+            onceki["ogeler"] += [x.strip(" .") for x in re.split(r"[,;]\s*(?=(?:dördüncü|beşinci|altıncı|yedinci)\s)", B[i]["x"]) if x.strip(" .")]
+            i += 1
+            continue
+        out.append(B[i])
+        i += 1
+    return out
 
 
 def liste_mi(c: str) -> tuple[str, list[str]] | None:
@@ -234,15 +317,16 @@ def modelle(key: str) -> dict:
                 B.append({"t": "sinav", "x": c, "p": p})
             elif re.match(r"^(Örneğin|Mesela|Sözgelimi)\b", c):
                 B.append({"t": "ornek", "x": c, "p": p})
-            elif (s := sirali_mi(c)):
-                gb = re.match(r"^(.{0,120}?:)\s*", c)
-                B.append({"t": "sirali", "bas": gb.group(1) if gb else "", "ogeler": s, "p": p})
+            elif (sr := sirali_mi(c)):
+                B.append({"t": "sirali", "bas": sr[0], "ogeler": sr[1], "p": p})
+                if sr[2]:  # ';' sonrası kalan cümle parçası açıklama olarak korunur
+                    B.append({"t": "aciklama", "x": sr[2][:1].upper() + sr[2][1:], "p": p})
             elif (tb := tablo_mi(c)):
                 B.append({"t": "tablo", **tb, "x": c, "p": p})
             elif (ls := liste_mi(c)):
                 B.append({"t": "liste", "bas": ls[0], "ogeler": ls[1], "p": p})
             elif (q := re.search(r"[“\"]([^”\"]{8,200})[”\"]", c)):
-                B.append({"t": "alinti", "x": q.group(1), "kaynak": c, "p": p})
+                B.append({"t": "alinti", "x": c, "alinti": q.group(1), "p": p})  # x = cümlenin tamamı (metin kaybı yok)
             elif BAGLAC.match(c) and B and B[-1]["t"] in ("madde", "liste", "sirali", "giris"):
                 B.append({"t": "aciklama", "x": c, "p": p})
             else:
@@ -261,6 +345,12 @@ def modelle(key: str) -> dict:
                         kullanildi.add(ad)
                         B.append({"t": "terim", "ad": ad, "tanim": tanim, "p": p})
                         break
+    buyuk = lambda t: ({"i": "İ", "ı": "I"}.get(t[:1], t[:1].upper()) + t[1:]) if t else t
+    for bl in bolumler:
+        bl["bloklar"] = sira_dizileri(bl["bloklar"])
+        for b in bl["bloklar"]:
+            if b["t"] == "sirali":  # adım başı büyük harf (Türkçe i/İ)
+                b["ogeler"] = [buyuk(x) for x in b["ogeler"]]
     return {"surum": SURUM, "key": key, "baslik": baslik, "uretildi": dt.date.today().isoformat(),
             "kaynak_mtime": int((METIN / f"{key}.md").stat().st_mtime), "bolumler": bolumler}
 
@@ -277,7 +367,7 @@ def dogrula(d: dict) -> list[str]:
         if b["p"] < son:
             h.append(f"p geriye gidiyor ({b['p']} < {son})")
         son = b["p"]
-        if b["t"] in ("liste", "sirali") and len(b.get("ogeler", [])) < 3:
+        if len(b.get("ogeler", [])) < (3 if b["t"] == "liste" else 2) and b["t"] in ("liste", "sirali"):
             h.append(f"{b['t']} < 3 öğe")
         if b["t"] not in ("liste", "sirali", "tablo", "terim") and not (b.get("x") or "").strip():
             h.append(f"boş {b['t']}")
