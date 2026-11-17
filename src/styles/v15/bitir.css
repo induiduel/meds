@@ -21,3 +21,8 @@
 .btr15-stat b { font-size: 22px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .btr15-stat small { font-size: 12.5px; color: var(--color-ink-3); }
 @media (max-width: 560px) { .btr15-stat { grid-template-columns: repeat(2, minmax(0, 1fr)); } .btr15-stat b { font-size: 19px; } }
+
+/* Özet dört kutu (İlerleme · Kalan ders süresi · Senin hızınla · Şimdiye kadar); dar ekranda takip.css tek sütuna indirir */
+.bd-ozet2 .sp-iki.bd-dort { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .bd-ozet2 .sp-iki.bd-dort { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .bd-ozet2 .sp-iki.bd-dort { grid-template-columns: minmax(0, 1fr); } }

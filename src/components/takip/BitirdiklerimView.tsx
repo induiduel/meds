@@ -7,7 +7,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, Target, ChevronRight, X, MoreHorizontal, Undo2 } from 'lucide-react';
 import {
-  MODUL_AD, bittiMi, sesHizi, grupOzeti, hizHesapla, sureYaz, tekrarBasla, useIzlemeHizi, useTakip, type Hiz, type TakipModul,
+  MODUL_AD, bittiMi, gunYaz, hizKatsayisi, sesHizi, grupOzeti, hizHesapla, sureYaz, tekrarBasla, useIzlemeHizi, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
 import IzlemeHizi from './IzlemeHizi';
 import { KurulSecici, useSeciliKurul } from '../kurul/KurulSecici';
@@ -34,6 +34,10 @@ type Suzgec = 'tum' | 'kalan' | 'biten' | 'tekrar' | 'elenen';
 const SUZGEC_AD: Record<Suzgec, string> = { tum: 'Tümü', kalan: 'Kalanlar', biten: 'Bitenler', tekrar: 'Tekrarda', elenen: 'Hesap dışı' };
 
 const sayi = (n: number) => n.toLocaleString('tr-TR');
+/** Yüzde aşağı yuvarlanır: 199/200 "%100" görünmesin; %100 yalnız gerçekten hepsi bittiğinde. */
+const yuzdeOf = (biten: number, toplam: number) => (toplam ? Math.floor((biten * 100) / toplam) : 0);
+/** Seçilen izleme hızında kalan ders süresi (modüle göre hız etkisi: calismaTakip.hizKatsayisi) */
+const hizliSure = (sn: number, m: TakipModul, x: number) => sn / hizKatsayisi(m, x);
 const katla = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 const urlModul = (): TakipModul => {
   try {
@@ -81,7 +85,7 @@ export default function BitirdiklerimView() {
 
   // Her modülün hızı ve özeti (sekme sayıları dahil)
   const ozetler = useMemo(() => {
-    const r: Partial<Record<TakipModul, { hiz: Hiz; dersler: { d: BdDers; o: ReturnType<typeof grupOzeti> }[]; genel: ReturnType<typeof grupOzeti> }>> = {};
+    const r: Partial<Record<TakipModul, { hiz: Hiz; disari: number; elenen: number; dersler: { d: BdDers; o: ReturnType<typeof grupOzeti> }[]; genel: ReturnType<typeof grupOzeti> }>> = {};
     for (const { id } of MODULLER) {
       const dz0 = durumlar[id];
       if (!dz0 || !('veri' in dz0)) continue;
@@ -93,7 +97,10 @@ export default function BitirdiklerimView() {
       });
       const tum = hesap(dz.veri.flatMap((d) => d.konular));
       const hiz = hizHesapla(id, tum, takip);
-      r[id] = { hiz, dersler: dz.veri.map((d) => ({ d, o: grupOzeti(id, hesap(d.konular), hiz, takip) })), genel: grupOzeti(id, tum, hiz, takip) };
+      const hamTum = dz.veri.flatMap((d) => d.konular);
+      const disari = hamTum.length - tum.length;
+      const elenen = hamTum.filter((k) => konuElemesi(eleme, id, k)).length;
+      r[id] = { hiz, disari, elenen, dersler: dz.veri.map((d) => ({ d, o: grupOzeti(id, hesap(d.konular), hiz, takip) })), genel: grupOzeti(id, tum, hiz, takip) };
     }
     return r;
   }, [durumlar, takip, izHiz, eleme, kurul]);
@@ -166,7 +173,7 @@ export default function BitirdiklerimView() {
               <span className="bd-modul-kisa" aria-hidden>{MODUL_KISA[id]}</span>
               <span className="bd-modul-n">
                 {g ? `${g.biten}/${g.toplam} bitti` : "…"}
-                {g && kalanSayi > 0 && <em className="bd-modul-s"> · {sureYaz(g.kalanIcerikSn)}</em>}
+                {g && kalanSayi > 0 && <em className="bd-modul-s"> · {sureYaz(hizliSure(g.kalanIcerikSn, id, sesHizi(id)))}</em>}
               </span>
             </button>
           );
@@ -183,7 +190,7 @@ export default function BitirdiklerimView() {
         <>
           {!v15 && <h3 className="sp-h"><span className="sp-h-no">2</span> Durumun</h3>}
           {(modul === 'sesli' || modul === 'onem' || modul === 'cozucu') && <IzlemeHizi />}
-          <OzetKartlari genel={oz.genel} hiz={oz.hiz} modul={modul} sirada={siradaki} izHiz={izHiz} />
+          <OzetKartlari genel={oz.genel} hiz={oz.hiz} disari={oz.disari} modul={modul} sirada={siradaki} izHiz={izHiz} />
 
           {!v15 && <h3 className="sp-h"><span className="sp-h-no">3</span> Konu konu liste</h3>}
 
@@ -195,8 +202,9 @@ export default function BitirdiklerimView() {
             </label>
             <div className="bd-suz" role="group" aria-label="Duruma göre süz">
               {(Object.keys(SUZGEC_AD) as Suzgec[]).map((s) => {
-                const n = s === 'tum' ? oz.genel.toplam : s === 'biten' ? oz.genel.biten : s === 'kalan' ? oz.genel.toplam - oz.genel.biten
-                  : s === 'elenen' ? (oz.dersler.flatMap(({ d }) => d.konular).filter((k) => konuElemesi(eleme, modul, k)).length) : oz.genel.tekrarda;
+                // Tümü = hesaba girenler + hesap dışı olanlar (liste de ikisini gösterir); sayılar süzgeçteki satırlarla birebir
+                const n = s === 'tum' ? oz.genel.toplam + oz.disari : s === 'biten' ? oz.genel.biten : s === 'kalan' ? oz.genel.toplam - oz.genel.biten
+                  : s === 'elenen' ? oz.elenen : oz.genel.tekrarda;
                 if ((s === 'tekrar' || s === 'elenen') && !n) return null;
                 return (
                   <button key={s} type="button" aria-pressed={suzgec === s} className={suzgec === s ? 'is-on' : ''} onClick={() => setSuzgec(s)}>
@@ -212,20 +220,23 @@ export default function BitirdiklerimView() {
               const konular = d.konular.filter(gorunur);
               if (!konular.length) return null;
               const ac = q || suzgec !== 'tum' ? true : acik[d.id] ?? varsayilanAcik(d, o, i);
-              const yuzde = o.toplam ? Math.round((o.biten / o.toplam) * 100) : 0;
+              const yuzde = yuzdeOf(o.biten, o.toplam);
+              const tamam = o.toplam > 0 && o.biten === o.toplam;
               return (
-                <section key={d.id} className={`bd-ders${ac ? ' is-acik' : ''}${o.biten === o.toplam ? ' is-tamam' : ''}`} aria-label={d.ad}>
+                <section key={d.id} className={`bd-ders${ac ? ' is-acik' : ''}${tamam ? ' is-tamam' : ''}`} aria-label={d.ad}>
                   <button type="button" className="bd-ders-bas" aria-expanded={ac} onClick={() => setAcik((a) => ({ ...a, [d.id]: !ac }))}>
                     <span className="bd-ders-ust">
                       <b>{d.ad}</b>
-                      <span className="bd-ders-n"><b>{o.biten}</b>/{o.toplam} bitti · %{yuzde}</span>
+                      <span className="bd-ders-n">{o.toplam ? <><b>{o.biten}</b>/{o.toplam} bitti · %{yuzde}</> : 'Hesap dışı'}</span>
                       <ChevronDown aria-hidden className="bd-ok" />
                     </span>
                     <span className="bd-cubuk" aria-hidden><i style={{ width: `${yuzde}%` }} /></span>
                     <span className="bd-ders-meta">
-                      {o.biten < o.toplam
-                        ? <span className="is-kalan">{o.toplam - o.biten} konu kaldı · bitirmesi ~{sureYaz(o.kalanSn)}</span>
-                        : <span className="is-tamam">Tamamlandı</span>}
+                      {!o.toplam
+                        ? <span>Tüm konuları hesap dışı</span>
+                        : o.biten < o.toplam
+                          ? <span className="is-kalan">{o.toplam - o.biten} konu kaldı · ders süresi {sureYaz(hizliSure(o.kalanIcerikSn, modul, sesHizi(modul)))}</span>
+                          : <span className="is-tamam">Tamamlandı</span>}
                       {o.sn > 0 && <span>{sureYaz(o.sn)} çalıştın</span>}
                       {o.soru > 0 && <span>{sayi(o.soru)} soru çözdün</span>}
                     </span>
@@ -252,20 +263,23 @@ export default function BitirdiklerimView() {
 function V15Bas({ modul, kurul, oz }: { modul: TakipModul; kurul: number; oz?: { dersler: { o: ReturnType<typeof grupOzeti> }[]; genel: ReturnType<typeof grupOzeti> } }) {
   useV15Baslik({ baslik: 'Bitirdiklerim', alt: `${MODUL_AD[modul]} · baraj %60` });
   // doğru oranı: cihazdaki etkinlik günlüğünden (çözülen doğru ÷ tüm cevaplar)
-  const oran = useMemo(() => {
+  // yalnız bu cihazın son 600 olayı ve tüm site (modül/kurula göre ayrılamaz); 10 cevaptan azsa oran gösterilmez
+  const dogru = useMemo(() => {
     const L = getActivity(); const d = L.filter((e) => e.kind === 'coz').length; const y = L.filter((e) => e.kind === 'yanlis').length;
-    return d + y ? Math.round((d / (d + y)) * 100) : null;
+    return { n: d + y, oran: d + y >= 10 ? Math.round((d / (d + y)) * 100) : null };
   }, []);
-  const biten = oz ? oz.dersler.filter(({ o }) => o.toplam && o.biten === o.toplam).length : 0;
+  // hesaba konusu kalmamış ders (hepsi hesap dışı) ne paya ne paydaya girer
+  const sayilan = oz ? oz.dersler.filter(({ o }) => o.toplam > 0) : [];
+  const biten = sayilan.filter(({ o }) => o.biten === o.toplam).length;
   return (
     <>
       <h1 className="sr-only">Bitirdiklerim</h1>
       {oz && (
         <div className="btr15-stat" aria-label="Genel durum">
-          <div className="v15-card"><b>{biten}/{oz.dersler.length}</b><small>Ders</small></div>
-          <div className="v15-card"><b>{sayi(oz.genel.soru)}</b><small>Soru</small></div>
-          <div className="v15-card"><b>{oran == null ? '—' : `%${oran}`}</b><small>Doğru oranı</small></div>
-          <div className="v15-card"><b>{oz.genel.sn ? sureYaz(oz.genel.sn) : '0 dk'}</b><small>Süre</small></div>
+          <div className="v15-card"><b>{biten}/{sayilan.length}</b><small>Biten ders</small></div>
+          <div className="v15-card"><b>%{yuzdeOf(oz.genel.biten, oz.genel.toplam)}</b><small>{sayi(oz.genel.biten)}/{sayi(oz.genel.toplam)} konu</small></div>
+          <div className="v15-card"><b>{dogru.oran == null ? '—' : `%${dogru.oran}`}</b><small>{dogru.oran == null ? 'Doğru oranı (≥10 cevap)' : `Doğru · son ${sayi(dogru.n)} cevap`}</small></div>
+          <div className="v15-card"><b>{sureYaz(oz.genel.sn)}</b><small>Çalıştığın süre</small></div>
         </div>
       )}
       <a className="btr15-plan v15-card" href={`${pathFor('sinav_plani')}?kurul=${kurul}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(`${pathFor('sinav_plani')}?kurul=${kurul}`); }}>
@@ -277,40 +291,64 @@ function V15Bas({ modul, kurul, oz }: { modul: TakipModul; kurul: number; oz?: {
   );
 }
 
-function OzetKartlari({ genel, hiz, modul, sirada, izHiz }: { genel: ReturnType<typeof grupOzeti>; hiz: Hiz; modul: TakipModul; sirada: { d: BdDers; k: BdKonu } | null; izHiz: number | null }) {
-  const yuzde = genel.toplam ? Math.round((genel.biten / genel.toplam) * 100) : 0;
+function OzetKartlari({ genel, hiz, disari, modul, sirada, izHiz }: { genel: ReturnType<typeof grupOzeti>; hiz: Hiz; disari: number; modul: TakipModul; sirada: { d: BdDers; k: BdKonu } | null; izHiz: number | null }) {
+  const yuzde = yuzdeOf(genel.biten, genel.toplam);
   const kalan = genel.toplam - genel.biten;
-  // "Kalan" kutusu ölçülen hızdan bağımsız: kalan ders süresi ÷ seçilen izleme hızı (sesli modüller)
-  const x = modul === 'sesli' || modul === 'onem' || modul === 'cozucu' ? (izHiz ?? 1) : 1;
+  // İki ayrı ve adı konmuş kalan süre (eskiden cümle biri, kutu öteki sayıyı "kalan" diye gösteriyordu):
+  //  1) Ders süresi  = kalan konuların içerik süresi ÷ hız katsayısı (seçilen izleme hızı; ses yoksa 1)
+  //  2) Senin hızınla = Σ max(%15·hedef, hedef − bu konuda harcanan), hedef = içerik × ölçülen oran
+  const sesli = hizKatsayisi(modul, 2) !== 1;
+  // tahminle aynı hız: seçilen izleme hızı, yoksa oynatıcıda son kullanılan hız (yoksa 1,4×)
+  const x = sesli ? sesHizi(modul) : 1; void izHiz;
   const xYaz = `${x.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}×`;
-  const kalanDers = genel.kalanIcerikSn / x;
-  const cumle = !kalan
-    ? `${MODUL_AD[modul]} bölümündeki konuların hepsini bitirdin. İstersen tekrar turuna başlayabilirsin.`
-    : genel.biten === 0
-      ? `${MODUL_AD[modul]} bölümünde henüz bitirdiğin konu yok. Aşağıdaki "Devam et" ile ilk konudan başla.`
-      : `${sayi(genel.toplam)} konunun ${sayi(genel.biten)} tanesini bitirdin. Kalan ${sayi(kalan)} konu senin hızınla yaklaşık ${sureYaz(genel.kalanSn)} sürer.`;
+  const kalanDers = hizliSure(genel.kalanIcerikSn, modul, x);
+  const gun = gunYaz(genel.kalanSn, hiz.gunluk);
+  const cumle = !genel.toplam
+    ? `${MODUL_AD[modul]} bölümünde hesaba giren konu yok.`
+    : !kalan
+      ? `${MODUL_AD[modul]} bölümündeki ${sayi(genel.toplam)} konunun hepsini bitirdin. İstersen tekrar turuna başlayabilirsin.`
+      : genel.biten === 0
+        ? `${MODUL_AD[modul]} bölümünde ${sayi(genel.toplam)} konu var, henüz bitirdiğin yok. "Devam et" ile ilk konudan başla.`
+        : `${sayi(genel.toplam)} konunun ${sayi(genel.biten)} tanesini bitirdin (%${yuzde}). ${sayi(kalan)} konu kaldı.`;
   return (
     <section className="bd-ozet2" aria-label="Özet">
-      <p className={`sp-hukum ${!kalan ? 'is-iyi' : 'is-orta'}`}>{cumle}</p>
-      <div className="sp-iki">
-        <div><small>Bitirdiğin</small><b>{sayi(genel.biten)}<span className="bd-ozet-b"> / {sayi(genel.toplam)}</span></b><span className="bd-cubuk" aria-hidden><i style={{ width: `${yuzde}%` }} /></span></div>
-        <div className="is-plan"><small>Kalan ders süresi</small><b>{kalan ? sureYaz(kalanDers) : '—'}</b><span>{kalan ? `${sayi(kalan)} konu · ${xYaz} izlersen` : 'Hepsi bitti'}</span></div>
-        <div><small>Şimdiye kadar</small><b>{sureYaz(genel.sn)}</b><span>{genel.soru ? `${sayi(genel.soru)} soru çözdün` : 'çalıştın'}</span></div>
+      <p className={`sp-hukum ${genel.toplam && !kalan ? 'is-iyi' : 'is-orta'}`}>{cumle}</p>
+      <div className="sp-iki bd-dort">
+        <div>
+          <small>İlerleme</small>
+          <b>%{yuzde}<span className="bd-ozet-b"> · {sayi(genel.biten)}/{sayi(genel.toplam)}</span></b>
+          <span className="bd-cubuk" aria-hidden><i style={{ width: `${yuzde}%` }} /></span>
+          {disari > 0 && <span>{sayi(disari)} konu hesap dışı</span>}
+        </div>
+        <div className="is-plan">
+          <small>Kalan ders süresi</small>
+          <b>{kalan ? sureYaz(kalanDers) : '—'}</b>
+          <span>{kalan ? (sesli ? `${sayi(kalan)} konu · ${xYaz} izlersen` : `${sayi(kalan)} konu`) : 'Hepsi bitti'}</span>
+        </div>
+        <div>
+          <small>Senin hızınla</small>
+          <b>{kalan ? sureYaz(genel.kalanSn) : '—'}</b>
+          <span>{!kalan ? 'Hepsi bitti' : gun ? `günlük ortalamanla ${gun}` : hiz.kaynak === 'senin' ? `${hiz.ornek} konudan ölçüldü` : 'henüz ölçüm yok, tahmini'}</span>
+        </div>
+        <div>
+          <small>Şimdiye kadar</small>
+          <b>{sureYaz(genel.sn)}</b>
+          <span>{genel.soru ? `${sayi(genel.soru)} soru çözdün` : 'çalıştın'}</span>
+        </div>
       </div>
       {sirada && (
         <div className="bd-sirada">
-          <div><small>Sıradaki konu</small><b>{sirada.k.ad}</b><span>{sirada.d.ad}{sirada.k.beklenen > 0 ? ` · ~${sureYaz(sirada.k.beklenen)}` : ''}</span></div>
+          <div><small>Sıradaki konu</small><b>{sirada.k.ad}</b><span>{sirada.d.ad}{sirada.k.beklenen > 0 ? ` · ders süresi ${sureYaz(hizliSure(sirada.k.beklenen, modul, x))}` : ''}</span></div>
           <button type="button" className="kt-btn" onClick={sirada.k.ac}><Play aria-hidden /><span>Devam et</span></button>
         </div>
       )}
       <details className="bd-nasil">
-        <summary>Bu süreler nasıl hesaplanıyor?</summary>
+        <summary>Bu sayılar nasıl hesaplanıyor?</summary>
         <ul>
-          <li><b>Çalıştığın süre:</b> yalnız sekme açık ve sen etkileşimdeyken sayılır.{hiz.gunluk ? ` Son 14 günde günde ortalama ${sureYaz(hiz.gunluk)} çalışmışsın (çalıştığın ${hiz.aktifGun} günde ${sureYaz(hiz.aktifGunluk)}).` : ''}</li>
-          <li><b>Kalan süre:</b> {hiz.kaynak === 'senin'
-            ? `bitirdiğin ${hiz.ornek} konudaki gerçek hızına göre (içerik süresinin %${Math.round(hiz.oran * 100)} kadarı).`
-            : `${modul === 'sesli' || modul === 'onem' || modul === 'cozucu' ? `${sesHizi(modul).toLocaleString('tr-TR')}× ses hızına göre; ` : ''}konu bitirdikçe senin hızına uyar.`}
-            {kalan ? ` Kalan içeriğin 1× süresi ${sureYaz(genel.kalanIcerikSn)} (tamamı ${sureYaz(genel.toplamIcerikSn)}).` : ''}</li>
+          <li><b>İlerleme:</b> biten konu ÷ hesaba giren konu, aşağı yuvarlanır (%100 yalnız hepsi bitince). "Çalışmayacağım" ve "Sınavda sorusu yok" dediğin konular hesaba girmez; "Başka yerden çalıştım" bitti sayılır.</li>
+          <li><b>Kalan ders süresi:</b> kalan konuların 1× içerik süresi ({sureYaz(genel.kalanIcerikSn)}){sesli ? ` ÷ ${modul === 'cozucu' ? `${hizKatsayisi(modul, x).toLocaleString('tr-TR', { maximumFractionDigits: 2 })} (soru çözücüde düşünme süresi hızlanmadığı için ${xYaz} hızın yarı etkisi)` : xYaz}` : ''}. Durmadan izlersen geçecek saf süredir.</li>
+          <li><b>Senin hızınla:</b> her kalan konu için içerik süresi × hız oranın (şu an {hiz.oran.toLocaleString('tr-TR', { maximumFractionDigits: 2 })}; {hiz.kaynak === 'senin' ? `bitirdiğin ${hiz.ornek} konuda harcadığın süreden, yeni konular ağır basar` : 'henüz bitirip ölçtüğün konu yok, modülün ön değeri'}), yarım konularda harcadığın süre düşülür.{gun ? ` Gün sayısı bu süre ÷ son 14 günün günlük ortalaması (${sureYaz(hiz.gunluk)}).` : ''}</li>
+          <li><b>Çalıştığın süre:</b> yalnız sekme açık ve sen etkileşimdeyken (ya da ses çalarken) sayılır.{hiz.aktifGun ? ` Son 14 günde ${hiz.aktifGun} gün çalıştın, çalıştığın günlerde ortalama ${sureYaz(hiz.aktifGunluk)}.` : ''}</li>
           <li><b>Bitti işareti:</b> bazı konular içerik bitince kendiliğinden işaretlenir; sen de dairesine dokunarak işaretleyip kaldırabilirsin.</li>
         </ul>
       </details>

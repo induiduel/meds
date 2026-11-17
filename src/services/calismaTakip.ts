@@ -324,11 +324,11 @@ export function sesHizi(m: TakipModul): number {
     return v >= 0.75 && v <= 2.5 ? v : VARSAYILAN_SES_HIZI;
   } catch { return VARSAYILAN_SES_HIZI; }
 }
-// soru çözücüde süre yalnız kısmen sestir (düşünme süresi hızlanmaz): hızın yarısı kadar etki
-export const onOran = (m: TakipModul) => {
-  const h = sesHizi(m);
-  return ON_ORAN_1X[m] / (m === 'cozucu' ? 1 + (h - 1) / 2 : h);
-};
+/** x× izlemenin süreyi kaç kat kısalttığı. Soru çözücüde süre yalnız kısmen sestir (düşünme süresi hızlanmaz): hızın yarısı
+ *  kadar etki; ses içermeyen modüllerde (Etkileşimli, Kamp) hız etkisizdir. Bitirdiklerim ve ön değer aynı formülü kullanır. */
+export const hizKatsayisi = (m: TakipModul, x: number) =>
+  m === 'cozucu' ? 1 + (x - 1) / 2 : HIZ_ANAHTAR[m] ? x : 1;
+export const onOran = (m: TakipModul) => ON_ORAN_1X[m] / hizKatsayisi(m, sesHizi(m));
 /** Ön değerin ağırlığı (sanal konu sayısı): az konuda tek bir uç değer tahmini savurmasın. */
 const ON_AGIRLIK = 2;
 /** Eski konuların hız ölçüsündeki ağırlığı her 10 günde yarıya iner (çalışma hızın değişir). */
@@ -368,8 +368,9 @@ export function hizHesapla(m: TakipModul, konular: KonuGirdi[], v: TakipVeri = o
     if (!k || !g.beklenen || !olculebilir(k.sn, g.beklenen) || !bittiMi(k, g.turetilen)) continue;
     // tek konudaki aşırı oran (ör. sekme açık unutuldu) ortalamayı bozmasın: konu başına 0,4–3 arası
     const sn = Math.max(g.beklenen * 0.4, Math.min(g.beklenen * 3, k.sn));
-    const yas = Math.max(0, (simdi - Date.parse(k.bittiAt || k.sonAt || '') || 0) / 86400_000);
-    const w = Number.isFinite(yas) ? Math.pow(0.5, yas / YARI_OMUR_GUN) : 0.5;
+    // tarihi okunamayan kayıt yarım ağırlık alır (eskiden NaN → 0 gün sayılıp tam ağırlık alıyordu)
+    const t = Date.parse(k.bittiAt || k.sonAt || '');
+    const w = Number.isFinite(t) ? Math.pow(0.5, Math.max(0, (simdi - t) / 86400_000) / YARI_OMUR_GUN) : 0.5;
     gercek += w * sn; beklenen += w * g.beklenen; bTop += g.beklenen; ornek++;
   }
   const ort = ornek ? bTop / ornek : 0;
