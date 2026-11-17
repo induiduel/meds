@@ -34,7 +34,7 @@
 | `hatalar/on_yuz_disa_aktarim.md` | soru dışa aktarıcı, PDF/DOCX dışa aktarım, baskı geometrisi | 11 |
 | `hatalar/on_yuz_oynatici_ders.md` | sesli ders oynatıcısı, ders ekranı, ders hattı ön yüz kayıtları | 26 |
 | `hatalar/on_yuz_tasarim_tema.md` | tasarım, tema, kabuk, düzen, cihaz güvenli alanı | 21 |
-| `hatalar/on_yuz_sayfa_denetimi.md` | sayfa denetimi bulguları, öğrenci sayfaları, veri/eşitleme ekranları | 41 |
+| `hatalar/on_yuz_sayfa_denetimi.md` | sayfa denetimi bulguları, öğrenci sayfaları, veri/eşitleme ekranları | 42 |
 | `hatalar/yonetim_basarim.md` | yönetim paneli ve ön yüz başarımı | 21 |
 | `hatalar/betik_altyapi.md` | betik, LLM zinciri/kilidi, GPU/CPU, kapı altyapısı | 21 |
 | `hatalar/ogren_modul_oyun.md` | Öğren destesi, ek modüller, KMB filmleri, oyunlar | 28 |
@@ -446,6 +446,7 @@
 - **H610** · "Ders/talimat/hata kaydı yazımı optimizasyonu geri kabartıyor": yazım anında boy/tekrar/kopya denetimi yok → `kayit_kapisi.py` (`kos.py kayit`, pre-commit) → hatalar/betik_altyapi.md
 - **H611** · "Bitirdiklerim'de üç farklı kalan süre, hesap dışı ders Tamamlandı, 199/200=%100": aynı adla üç formül → `hizKatsayisi` tek hız formülü, dört adlı kutu, aşağı yuvarlama → hatalar/on_yuz_sayfa_denetimi.md
 - **H614** · "Sınav planında gün kapasitesi aşılıyor, 60 hedefine baraj deniyor": yarısı sığan adım güne konuyordu, hedef/baraj tek sözcük → tam sığma kuralı, "Hedefin altında" → hatalar/on_yuz_sayfa_denetimi.md
+- **H616** · "İstatistiklerim'de %33 ve %63 iki doğru oranı": iki kaynak tek ad, dönemle kesilen unutma eğrisi → adlı oranlar, tüm geçmişten S → hatalar/on_yuz_sayfa_denetimi.md
 - **H612** · "k2-33/34/35 kelime kelime takip yok; izleyici 12 derste cümle zamanı yok dedi": yerel kelime zamanı zamanlayıcısı kapalı + Oracle'da üretilen katman yerelde aranıyordu → elle GPU çözümü, izleyici canlıyı denetler → hatalar/ses.md
 - **H613** · "5 Kurul 2 dersinde içerik paketi yok": ek dosyasını yazan betik yoktu, kapı kapatılan quiz'i istiyordu → `paketten_ek.py` (LLM yok), gerekçeli tablo muafiyeti → hatalar/ders_metni_terim_kisaltma.md
 - **H615** · "Commit başka oturumun sahnelediği silmeyi içerdi": düz `git commit` bütün index'i işler → `git commit --only -- <yollar>`, push öncesi `show --stat` → hatalar/dagitim_sunucu.md

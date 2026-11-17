@@ -120,11 +120,23 @@ export default function IstatistikV15() {
       r.n++; if (a.correct) r.d++; r.gun.add(gk(new Date(a.at))); r.son = Math.max(r.son, Date.parse(a.at));
       m.set(k, r);
     }
+    // Unutma eğrisi tüm geçmişten: dönem süzgeci (ör. 7 gün) tekrar gününü ve doğru oranını kesip hatırlamayı düşük gösteriyordu.
+    // Tablodaki % ve soru sayısı seçili dönemden kalır.
+    const tumKonu = new Map<string, { n: number; d: number; gun: Set<string>; son: number }>();
+    for (const [id, a] of tum) {
+      const q = byId.get(id); if (!q) continue;
+      const k = `${ders(q.discipline)}|${(q.topic || '').trim() || ders(q.discipline)}`;
+      if (!m.has(k)) continue;
+      const r = tumKonu.get(k) || { n: 0, d: 0, gun: new Set<string>(), son: 0 };
+      r.n++; if (a.correct) r.d++; r.gun.add(gk(new Date(a.at))); r.son = Math.max(r.son, Date.parse(a.at));
+      tumKonu.set(k, r);
+    }
     return [...m.entries()].map(([k, r]) => {
-      const dp = r.d / r.n; const S = kararlilik(r.gun.size, dp); const t = (Date.now() - r.son) / GUN;
-      return { k, ...r, p: Math.round(dp * 100), S, t, R: hatirlama(t, S) };
+      const T = tumKonu.get(k) || r;
+      const S = kararlilik(T.gun.size, T.d / T.n); const t = (Date.now() - T.son) / GUN;
+      return { k, ...r, gun: T.gun, p: Math.round((r.d / r.n) * 100), S, t, R: hatirlama(t, S) };
     }).sort((a, b) => b.n - a.n);
-  }, [donem, byId]);
+  }, [donem, tum, byId]);
 
   const sureKonu = useMemo(() => Object.entries(takip.k).filter(([, r]) => (r.sn || 0) >= 60 && (!bas || (r.sonAt && Date.parse(r.sonAt) >= bas)))
     .sort((a, b) => b[1].sn - a[1].sn).slice(0, 10), [takip, bas]);
@@ -170,11 +182,11 @@ export default function IstatistikV15() {
           <div className="is15-uc">
             <div><span className="is15-nokta is-ok" /><small>Doğru</small><b>{genel.d}</b></div>
             <div><span className="is15-nokta is-b" /><small>Yanlış</small><b>{genel.y}</b></div>
-            <div><span className="is15-nokta" /><small>Toplam</small><b>{genel.n}</b></div>
+            <div><span className="is15-nokta" /><small>Soru · son cevabı</small><b>{genel.n}</b></div>
           </div>
         </div>
         <div className="v15-card gf15-kart">
-          <div className="gf15-kb"><b>Günlük çözülen soru</b><span className="v15-cap">{aralikAd}</span></div>
+          <div className="gf15-kb"><b>Günlük çözülen soru</b><span className="v15-cap">{ayar.aralik ? aralikAd : `Son ${genel.gunler.length} gün`}</span></div>
           <Seri v={genel.gunler} tur={ayar.tur} birim="soru" />
         </div>
         <div className="v15-card gf15-kart">
@@ -228,7 +240,7 @@ export default function IstatistikV15() {
         </div>}
         {ayar.egri && konular.length > 0 && <UnutmaEgrisi konular={konular} />}
         <div className="v15-card gf15-kart">
-          <div className="gf15-kb"><b>Konu başına süre</b><span className="v15-cap">Çalışma takibi · {aralikAd}</span></div>
+          <div className="gf15-kb"><b>Konu başına süre</b><span className="v15-cap">Toplam süre · {aralikAd} içinde çalışılan konular</span></div>
           {sureKonu.length ? (
             <ul className="gf15-mod">
               {sureKonu.map(([id, r]) => (

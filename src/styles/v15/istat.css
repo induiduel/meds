@@ -14,7 +14,8 @@
 .is15-nokta.is-b { background: var(--color-bad); }
 .v15-bar.is-ok > span { background: var(--color-ok); }
 .v15-bar.is-w > span { background: var(--color-warn); }
-.is15-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(18px, 1fr)); gap: 4px; }
+/* dokunma hedefi ≥24 px (telefonda 18 px'lik kareler 19 px kalıyordu) */
+.is15-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(24px, 1fr)); gap: 4px; }
 .is15-q { aspect-ratio: 1; border: 0; border-radius: 4px; cursor: pointer; padding: 0; background: var(--color-line); }
 .is15-q.is-ok { background: var(--color-ok); }
 .is15-q.is-b { background: var(--color-bad); }

@@ -1,15 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 814,
-  "baslik": "İçerik hattı: örnek sorular tek kategoride",
+  "onem": 815,
+  "baslik": "İstatistiklerim: daha net ve doğru",
   "maddeler": [
-    "Arka plan: Yeni derslerde örnek sorular ve hoca üslubu soruları tek kategoride toplanıp hepsi sesli soru çözücüye girecek.",
-    "Ara resim yalnız istenince üretilecek; site kullanımında görünür bir değişiklik yok."
+    "Doğru oranları ayrıldı: \"Her cevap\" grafiği verdiğin tüm cevapları, halka ise her sorunun son cevabını sayıyor; başlıklar bunu söylüyor.",
+    "Aktif gün ortalaması: Artık yalnız çalıştığın günlerin süresinden hesaplanıyor.",
+    "Unutma eğrisi: Seçtiğin zaman aralığından bağımsız olarak tüm geçmişinden hesaplanıyor.",
+    "Telefonda: Soru kareleri parmakla dokunmaya uygun büyüklükte."
   ],
   "eklenen": [],
   "degisen": [
-    "İçerik hattı örnek soru akışı"
+    "İstatistiklerim başlık ve açıklamaları"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Aktif gün ortalaması, unutma eğrisi, soru karesi boyutu"
+  ],
   "silinen": []
 }

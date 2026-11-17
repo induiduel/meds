@@ -41,7 +41,9 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
       else if (i > 0) break;
     }
     const toplam = gunler.reduce((a, g) => a + g.sn, 0);
-    const aktif = gunler.filter((g) => g.sn >= 120).length;
+    // "Aktif gün ort." payı da yalnız aktif günler (eskiden pay tüm süreydi, payda aktif gün: 2 dk altı günler ortalamayı şişiriyordu)
+    const aktifL = gunler.filter((g) => g.sn >= 120);
+    const aktif = aktifL.length, aktifSn = aktifL.reduce((a, g) => a + g.sn, 0);
     const konular = Object.values(takip.k);
     const biten = konular.filter((k) => k.durum === 'bitti' && k.bittiAt && k.bittiAt.slice(0, 10) >= ilk).length;
     const soru = konular.reduce((a, k) => a + (k.sonAt && k.sonAt.slice(0, 10) >= ilk ? k.soru || 0 : 0), 0);
@@ -57,7 +59,7 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
     // Çalışma takvimi (son 15 hafta, Pazartesi başlı sütunlar)
     const pzt = new Date(simdi); pzt.setHours(12, 0, 0, 0); pzt.setDate(pzt.getDate() - ((pzt.getDay() + 6) % 7) - 14 * 7);
     const isi = Array.from({ length: 15 * 7 }, (_, i) => { const t = new Date(pzt.getTime() + i * GUN); return { d: anahtar(t), t, sn: t > simdi ? -1 : gunluk[anahtar(t)] || 0 }; });
-    return { gunler, modul, seri, toplam, aktif, biten, soru, enCok: Math.max(1, ...gunler.map((g) => g.sn)), oran, isi };
+    return { gunler, modul, seri, toplam, aktif, aktifSn, biten, soru, enCok: Math.max(1, ...gunler.map((g) => g.sn)), oran, isi };
   }, [takip, aralik]);
 
   const modSira = (Object.entries(v.modul) as [TakipModul, number][]).filter(([, s]) => s >= 60).sort((a, b) => b[1] - a[1]);
@@ -75,7 +77,7 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
 
       <div className="gf15-kpi">
         <div className="v15-card"><small>Toplam</small><b>{sureYaz(v.toplam) || '0 dk'}</b></div>
-        <div className="v15-card"><small>Aktif gün ort.</small><b>{v.aktif ? sureYaz(v.toplam / v.aktif) : '—'}</b></div>
+        <div className="v15-card"><small>Aktif gün ort.</small><b>{v.aktif ? sureYaz(v.aktifSn / v.aktif) : '—'}</b></div>
         <div className="v15-card"><small>Seri</small><b>{v.seri} gün</b></div>
         <div className="v15-card"><small>Biten konu</small><b>{v.biten}</b></div>
       </div>
@@ -123,14 +125,14 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
         const ort = Math.round(nk.reduce((a, k) => a + k.o.p * k.o.n, 0) / Math.max(1, nk.reduce((a, k) => a + k.o.n, 0)));
         return (
           <div className="v15-card gf15-kart">
-            <div className="gf15-kb"><b>Doğru oranı</b><span className="v15-cap">Son {aralik} gün · ort. %{ort}</span></div>
+            <div className="gf15-kb"><b>Doğru oranı · her cevap</b><span className="v15-cap">Son {aralik} gün · ort. %{ort}</span></div>
             <svg className="gf15-cizgi-g" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Doğru oranı ortalama yüzde ${ort}`} preserveAspectRatio="none">
               {[25, 50, 75].map((y) => <line key={y} x1={P} x2={W - P} y1={P + ((100 - y) / 100) * (H - 2 * P)} y2={P + ((100 - y) / 100) * (H - 2 * P)} className="gf15-izgara" />)}
               <line x1={P} x2={W - P} y1={P + ((100 - 60) / 100) * (H - 2 * P)} y2={P + ((100 - 60) / 100) * (H - 2 * P)} className="gf15-baraj" />
               {nk.length > 1 && <polyline points={nk.map((k) => `${k.x},${k.y}`).join(' ')} className="gf15-cizgi-l" />}
               {nk.map((k) => <circle key={k.o.d} cx={k.x} cy={k.y} r="3.5" className="gf15-nokta"><title>{`${k.o.t.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}: %${k.o.p} (${k.o.n} soru)`}</title></circle>)}
             </svg>
-            <p className="v15-cap gf15-not">Kesik çizgi baraj (%60). Yalnız soru çözdüğün günler noktalı.</p>
+            <p className="v15-cap gf15-not">Her verdiğin cevap sayılır (aynı soruyu iki kez çözersen iki kez). Kesik çizgi hedef (%60); ders başına baraj ise sorularının yarısı. Yalnız soru çözdüğün günler noktalı.</p>
           </div>
         );
       })()}
@@ -155,7 +157,7 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
               </li>
             ))}
           </ul>
-          {v.soru > 0 && <p className="v15-cap gf15-not">Bu aralıkta çalıştığın konularda {v.soru} soru çözdün.</p>}
+          {v.soru > 0 && <p className="v15-cap gf15-not">Bu aralıkta çalıştığın konularda bugüne kadar toplam {v.soru} soru çözdün (yalnız bu aralıktakiler değil).</p>}
         </div>
       )}
     </section>
