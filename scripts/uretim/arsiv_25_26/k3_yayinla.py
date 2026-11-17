@@ -82,7 +82,7 @@ def kapsam(taslak: Path, v2: dict) -> list[str]:
     return h
 
 
-def kapilar(taslak: Path, key: str) -> list[str]:
+def kapilar(taslak: Path, key: str, _ortam: dict | None = None) -> list[str]:
     h: list[str] = []
     import konusma_v2 as KV
     v2_yol = taslak / "konusma_v2.json"
@@ -96,8 +96,19 @@ def kapilar(taslak: Path, key: str) -> list[str]:
     (taslak / "konusma_metni.md").write_text(md, encoding="utf-8")
     (taslak / "konusma_sayfalari.json").write_text(json.dumps(sayfalar_l), encoding="utf-8")
     (taslak / "konusma_capalari.json").write_text(json.dumps(KV.capalar(v2), ensure_ascii=False), encoding="utf-8")
-    r = subprocess.run([sys.executable, str(MEDS / "scripts" / "uretim" / "sesli_anlatim" / "metin_denetle.py"), str(taslak / "konusma_metni.md")],
-                       capture_output=True, text=True)
+    # H618: kelime tavanı sayfa sayısına göre ölçeklenir (60+ sayfalık arşiv derslerinde 6000 taban kırpıyordu)
+    if _ortam is None:
+        import os as _os
+        _ortam = dict(_os.environ)
+        try:
+            _n = int(json.loads((taslak / "baglam.json").read_text(encoding="utf-8")).get("sayfa") or 0)
+        except Exception:  # noqa: BLE001
+            _n = 0
+        if _n:
+            _ortam.setdefault("MEDS_METIN_MAX_W", str(max(6000, _n * 140)))
+    r = subprocess.run([sys.executable, str(MEDS / "scripts" / "uretim" / "sesli_anlatim" / "metin_denetle.py"),
+                        str(taslak / "konusma_metni.md")],
+                       capture_output=True, text=True, env=_ortam)
     if r.returncode != 0:
         h += [f"metin_denetle: {x}" for x in (r.stdout or r.stderr).strip().splitlines()[:20]]
     h += [f"kapsam: {x}" for x in kapsam(taslak, v2)]

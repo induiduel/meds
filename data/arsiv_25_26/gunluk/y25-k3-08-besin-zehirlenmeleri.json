@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-08-besin-zehirlenmeleri",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Besin Zehirlenmeleri",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 09:04",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "8 Besin Zehirlenmeleri_251212_101511.pdf (53 sayfa) kaynağından 113 paragraf / 464 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 43.6,
+        "sayfaSayisi": 53,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 113,
+        "cumleSayisi": 464,
+        "cikmisEslesme": 28
+      }
+    }
+  ]
+}
