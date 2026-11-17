@@ -261,7 +261,7 @@ export default function BitirdiklerimView() {
 
 /** v15: başlık üst barda; Sınav planı bağlantısı ve kısa kullanım ipucu tek satırda */
 function V15Bas({ modul, kurul, oz }: { modul: TakipModul; kurul: number; oz?: { dersler: { o: ReturnType<typeof grupOzeti> }[]; genel: ReturnType<typeof grupOzeti> } }) {
-  useV15Baslik({ baslik: 'Bitirdiklerim', alt: `${MODUL_AD[modul]} · baraj %60` });
+  useV15Baslik({ baslik: 'Bitirdiklerim', alt: `${MODUL_AD[modul]} · hedef 60` });
   // doğru oranı: cihazdaki etkinlik günlüğünden (çözülen doğru ÷ tüm cevaplar)
   // yalnız bu cihazın son 600 olayı ve tüm site (modül/kurula göre ayrılamaz); 10 cevaptan azsa oran gösterilmez
   const dogru = useMemo(() => {

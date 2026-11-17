@@ -1,15 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 809,
-  "baslik": "Zengin PDF yeniden tasarlandı",
+  "onem": 810,
+  "baslik": "Sınav planı: daha net ve doğru",
   "maddeler": [
-    "Zengin görünüm artık yalnız metni dışa aktarırken: Sesli ders ekranı eski, sade haline döndü.",
-    "Yeni zengin PDF/Word: iç içe maddeler, kavram adları kalın, numaralı adımlar, başlıklı liste kutuları, renkli başlıklı tablolar, \"Sınavda soruldu\", \"Örnek\" ve terim kutuları ayrı tasarımla."
+    "Sınav planı: Bir güne konan işler artık seçtiğin günlük süreyi aşmıyor.",
+    "Hedef ve baraj: 60 puan hedefi artık \"Hedefin altında / üstünde\" diye gösteriliyor; \"baraj\" yalnız her dersin yarısı kuralı için kullanılıyor.",
+    "Daha sade: Ders adlarındaki gereksiz \"· K2\" eki kaldırıldı.",
+    "Açıklama: \"Bu sayılar nasıl hesaplanıyor?\" bölümü ders puanının neden beklenen değer olduğunu anlatıyor."
   ],
   "eklenen": [],
   "degisen": [
-    "İçerik hattı kayıt kuralları"
+    "Sınav planı hedef rozeti ve açıklamaları"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sınav planı gün kapasitesi"
+  ],
   "silinen": []
 }

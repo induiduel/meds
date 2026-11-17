@@ -108,7 +108,7 @@ export default function SinavPlani({ hiz, kurul }: { hiz: Partial<Record<TakipMo
         <div className="v15-card sp15-puan">
           <div className="sp15-puan-bas">
             <div><span className="v15-label">Tahmini puan</span><b>{tamYaz(simdi.beklenen)}</b></div>
-            <div className="sp15-rozet"><span className={`v15-tag ${simdi.beklenen >= plan.hedef ? 'is-ok' : 'is-w'}`}>{simdi.beklenen >= plan.hedef ? 'Baraj üstü' : 'Baraj altı'}</span><small>hedef {plan.hedef}</small></div>
+            <div className="sp15-rozet"><span className={`v15-tag ${simdi.beklenen >= plan.hedef ? 'is-ok' : 'is-w'}`}>{simdi.beklenen >= plan.hedef ? 'Hedefin üstünde' : 'Hedefin altında'}</span><small>hedef {plan.hedef}</small></div>
           </div>
           <span className={`v15-bar${simdi.beklenen >= plan.hedef ? ' is-ok' : ' is-w'}`}><span style={{ width: `${Math.max(0, Math.min(100, simdi.beklenen))}%` }} /></span>
           <small className="sp15-sonra">Bu planı bitirirsen ~{tamYaz(sonra.beklenen)} puan</small>
@@ -139,7 +139,7 @@ export default function SinavPlani({ hiz, kurul }: { hiz: Partial<Record<TakipMo
             ))}
           </div>
           <small>
-            Sınava {kalanYaz(plan.sinav).replace(' kaldı', '')} var. Bu sürede çalışabileceğin toplam vakit {sureYaz(plan.butceSn)} (her saatte 10 dk mola, gece 23.30 sonrası sayılmaz).
+            Sınava {kalanYaz(plan.sinav).replace(' kaldı', '')} var. Bu sürede çalışabileceğin toplam vakit {sureYaz(plan.butceSn)} (her saatte 10 dk mola, gece 23.30 sonrası sayılmaz; bugün için 23.30'a kalan vaktin en çok dörtte üçü).
             {plan.hepsiSn > plan.butceSn ? ` Her şeyi bitirmek ${sureYaz(plan.hepsiSn)} sürerdi; bu yüzden en çok puan getirenler öne alındı.` : ''}
           </small>
         </div>
@@ -230,6 +230,7 @@ export default function SinavPlani({ hiz, kurul }: { hiz: Partial<Record<TakipMo
         <summary>Bu sayılar nasıl hesaplanıyor?</summary>
         <ul>
           <li><b>Baraj:</b> bir dersin sorularının yarısından az doğru yaparsan eksik kalan her doğru kadar puan düşülür. 20 soruda 8 doğru 6 puan, 5 doğru 0 puan. Bu yüzden baraj altındaki derste her yeni doğru 2 puan değerindedir.</li>
+          <li><b>Ders puanı beklenen değerdir:</b> doğru sayın kesin değil, olasılıklı bir tahmindir. Puan her olası doğru sayısının puanının ortalamasıdır; bu yüzden "~6,6 doğru" yanındaki puan, 6,6'yı baraj formülüne koyunca çıkandan biraz farklı olabilir. Toplam puan ders puanlarının toplamıdır.</li>
           <li><b>Ders payı:</b> sınavdaki soru sayısı dersin konularına kazanım (en önemli madde) sayısı, soru bankası büyüklüğü ve ders süresine göre dağıtılır.</li>
           <li><b>Bilgi düzeyi:</b> en çok soru çözücü işe yarar (çıkmış ve çıkmış üslubunda sorular), ardından sesli ders, sonra en önemliler. Hiç çalışılmamış konuda bile şık eleme payı (~%30) vardır; 12 günden eski çalışmada biraz unutma hesaba katılır.</li>
           <li><b>Hata payı:</b> çalıştığın konudan gelen soruyu da yanlış yapabilirsin; tek kaynakla ~%61–65, üçüyle ~%78 doğru sayılır, soru çözücüdeki ilk deneme sonuçların bunu sana göre düzeltir.</li>

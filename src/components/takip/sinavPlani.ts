@@ -34,8 +34,9 @@ import { cozucuyaGit, onemeGit } from '../spots/spotsYol';
 
 // İçeriği henüz yüklenmemiş Kurul 2+ branşı BRANSLAR'da yok; bransTanim patolojiye düşmesin, adı kayıt defterinden gelsin
 const bransAdi = (b: Brans): string => {
+  // H345/H614: plan tek kurula ait; BRANSLAR adındaki "· K2" eki de her satırda tekrar eden gürültü
   const t = BRANSLAR.find((x) => x.id === b);
-  if (t) return t.ad;
+  if (t) return t.ad.replace(/\s*·\s*K\d+$/, '');
   const m = /^k(\d+)(.+)$/.exec(b);
   const k = m && (bransKaydi as { branslar: { slug: string; kisa?: string; ad: string }[] }).branslar.find((x) => x.slug === m[2]);
   // H345: plan zaten tek kurula ait; her çubukta tekrar eden "· K2" eki gürültüydü
@@ -413,11 +414,12 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
   const sonTop = toplamDag(dag);
   const sonraOz = { beklenen: beklenen(sonTop), olasilik: enAz(sonTop, hedef), kotu: yuzdelik(sonTop, 0.2) };
 
-  // Günlere yerleştir (sıra korunur; adım günün yarısından fazlası sığmıyorsa ertesi güne)
+  // Günlere yerleştir (sıra korunur). Adım güne tamamen sığmalı; günün kapasitesinden uzun tek adım ancak boş güne konur.
+  // H614: eski kural (yarısı sığıyorsa koy) günün toplamını kapasitenin üstüne çıkarıyordu (3 saatlik günde 2 sa 33 dk > 2 sa 30 dk).
   const pg: PlanGun[] = gunler.map((g, i) => ({ gun: i, tarih: g.ad, kapasiteSn: g.sn, adimlar: [], sn: 0 }));
   let gi = 0;
   for (const a of adimlar) {
-    while (gi < pg.length - 1 && pg[gi].kapasiteSn - pg[gi].sn < a.sn * 0.5) gi++;
+    while (gi < pg.length - 1 && pg[gi].adimlar.length && pg[gi].kapasiteSn - pg[gi].sn < a.sn) gi++;
     if (!pg.length) break;
     a.gun = gi; pg[gi].adimlar.push(a); pg[gi].sn += a.sn;
   }
