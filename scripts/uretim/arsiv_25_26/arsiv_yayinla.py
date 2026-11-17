@@ -273,6 +273,35 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
     def _capa_sayfasi(capalar: list[dict]) -> int | None:
         return next((int(c["sayfa"]) for c in capalar if c.get("sayfa")), None)
 
+    def _yakin_madde(cumle: str, capalar: list[dict], sayfa: int) -> dict | None:
+        """capa_maddeleri eşiği (≥%80 kök) tutmadığında en yakın maddeyi seçer (H614c).
+
+        Neden: "AMA pozitifliği ( ≥1:40 )" gibi satırlarda PDF'teki "≥1:40" tek simge kökü olurken çapadaki
+        hâli "#1"/"#40" diye ayrışıyor; eşik altında kalıp cümle 'yalnız sayfa' işaretine düşüyordu. Burada en az
+        yarısı örtüşen madde kullanılır — uydurma kutu değil, çapanın kendi satırının bulunduğu madde."""
+        sy = pdf.sayfa(sayfa)
+        if not sy or not sy.maddeler:
+            return None
+        satirlar = [x for c in capalar
+                    for x in ([c["satir"]] if isinstance(c.get("satir"), str) else (c.get("satir") or [])) if x]
+        if not satirlar:
+            return None
+        en, en_p = None, 0.0
+        for st in satirlar:
+            hedef = [k for k, _, _ in PI.tokenler(st)]
+            if not hedef:
+                continue
+            for a in range(len(sy.maddeler)):
+                kok = PI.madde_kokleri(sy, a)
+                if not kok:
+                    continue
+                p = len(PI.lcs(hedef, kok)) / len(hedef)
+                if p > en_p:
+                    en, en_p = a, p
+        if en is None or en_p < 0.4:
+            return None
+        return {"d": 0, "s": sayfa, **PI.eslestir_capa(cumle, sy, {en})}
+
     def _ayni_sayfa(cumle: str, capalar: list[dict], sayfa: int) -> dict:
         """İşaret ÇAPA SAYFASINDA kalmalı (H614): çapa s.12 iken işaret s.13 ise oynatıcı yanlış slaytı gösterir
         ve takip kapısı T5 haklı olarak HATA verir. Komşu sayfadaki görseli ödünç almak yerine çapa sayfasında
@@ -285,6 +314,9 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
         ms = PI.capa_maddeleri(sy, satirlar) if satirlar else set()
         if ms:
             return {"d": 0, "s": sayfa, **PI.eslestir_capa(cumle, sy, ms)}
+        y = _yakin_madde(cumle, capalar, sayfa)
+        if y:
+            return y
         n, r = PI.eslestir(cumle, sy)
         if r and n >= 1:
             return {"d": 0, "s": sayfa, **r}
@@ -296,7 +328,7 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
             return {"d": 0, "s": sayfa, **PI.eslestir_capa(cumle, sy, {0})}
         return {"d": 0, "s": sayfa, "t": "sayfa", "l": [], "w": []}
 
-    def _doldur(cumle: str, isr: dict, sayfa: int) -> dict:
+    def _doldur(cumle: str, isr: dict, sayfa: int, capalar: list[dict] | None = None) -> dict:
         """'sayfa' işareti kaldıysa sayfadaki tablo/resim bölgesine bağla (H614b).
 
         Neden: tablo sayfalarında slayt metni İngilizce, anlatım Türkçe olduğu için kelime eşleşmesi tutmuyor ve
@@ -307,6 +339,14 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
         sy = pdf.sayfa(sayfa)
         if not sy:
             return isr
+        if capalar:
+            # çapanın satırı eşiği geçemediyse en yakın madde (H614c), sonra cümlenin kendi kelimeleri
+            y = _yakin_madde(cumle, capalar, sayfa)
+            if y and (y.get("l") or y.get("w")):
+                return y
+            y = _yakin_madde(cumle, [{"satir": [cumle]}], sayfa)
+            if y and (y.get("l") or y.get("w")):
+                return y
         if sy.tablolar:
             t = PI.eslestir_capa(cumle, sy, {0})
             if t and t.get("t") in ("tablo", "metin", "kelime"):
@@ -329,12 +369,12 @@ def pdf_isaret_yerel(key: str, pars: list[dict], pdf_yol: Path, hz: dict, capa_p
                 isr = PI.capali(cumle, cc[ci], pdf)
                 if isr and (not cs or int(isr.get("s") or cs) == cs):
                     isr["d"] = 0
-                    isr = _doldur(cumle, isr, int(isr.get("s") or cs or 0))
+                    isr = _doldur(cumle, isr, int(isr.get("s") or cs or 0), cc[ci])
                     liste.append(isr)
                     continue
                 if isr and cs:
                     # görsel komşu sayfada bulundu → çapa sayfasında kal
-                    liste.append(_doldur(cumle, _ayni_sayfa(cumle, cc[ci], cs), cs))
+                    liste.append(_doldur(cumle, _ayni_sayfa(cumle, cc[ci], cs), cs, cc[ci]))
                     continue
             s0 = (es.get("sayfalar") or [])[ci] if ci < len(es.get("sayfalar") or []) else es["sayfa"]
             # Eğer v2 içindeki cümlede özel slayt.sayfa tanımlıysa öncelik ver

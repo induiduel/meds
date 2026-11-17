@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-16-primer-biliyer-kolanjit",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Primer Biliyer Kolanjit",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 07:01",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "Primer biliyer kolanjit betül.pdf (21 sayfa) kaynağından 61 paragraf / 265 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 26.1,
+        "sayfaSayisi": 21,
+        "bolumSayisi": 6,
+        "paragrafSayisi": 61,
+        "cumleSayisi": 265,
+        "cikmisEslesme": 28
+      }
+    }
+  ]
+}
