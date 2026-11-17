@@ -13,7 +13,7 @@ import { duzenOku, duzenYaz, type PdfDuzen } from '../../services/pdfDuzen';
 import { PdfAyarDugme } from '../ui/PdfDuzenSecici';
 import { cdDetayGetir, type CdDetay } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
-import { cdAktarBelgesi, cdAktarSecenekOku, cdAktarSecenekYaz, cdAktarVar, type CdAktarSecenek } from './canliDersDisaAktar';
+import { cdAktarBelgesi, cdZenginBelge, cdZenginVar, cdAktarSecenekOku, cdAktarSecenekYaz, cdAktarVar, type CdAktarSecenek } from './canliDersDisaAktar';
 import type { SlaytBasliklari } from './cdSlaytBasliklari';
 import '../../styles/toplu-pdf.css';
 import '../../styles/cd-aktar-pencere.css';
@@ -49,7 +49,7 @@ export function BicimSecici({ deger, onDegis, ad }: { deger: AktarBicim; onDegis
 type Var = ReturnType<typeof cdAktarVar>;
 
 /** İçerik seçenekleri (tek ders penceresi ve toplu indirme ortak). `varlik` verilirse derste karşılığı olmayan seçenek kapanır. */
-export function CdSecenekAlani({ deger, onDegis, ad, varlik, bicim }: { deger: CdAktarSecenek; onDegis: (s: CdAktarSecenek) => void; ad: string; varlik?: Var; bicim?: AktarBicim }) {
+export function CdSecenekAlani({ deger, onDegis, ad, varlik, bicim, zengin }: { deger: CdAktarSecenek; onDegis: (s: CdAktarSecenek) => void; ad: string; varlik?: Var; bicim?: AktarBicim; zengin?: boolean }) {
   const yaz = (p: Partial<CdAktarSecenek>) => onDegis({ ...deger, ...p });
   const ozet = deger.kapsam === 'onemli';
   const duz = bicim === 'txt';
@@ -74,6 +74,12 @@ export function CdSecenekAlani({ deger, onDegis, ad, varlik, bicim }: { deger: C
       <div className="cap-ikili" role="radiogroup" aria-label="Üslup">
         <label className={deger.uslup === 'not' ? 'is-on' : ''}><input type="radio" name={`${ad}-uslup`} checked={deger.uslup === 'not'} onChange={() => yaz({ uslup: 'not' })} /><b>Ders notu</b><small>Madde madde, sade</small></label>
         <label className={deger.uslup === 'konusma' ? 'is-on' : ''}><input type="radio" name={`${ad}-uslup`} checked={deger.uslup === 'konusma'} onChange={() => yaz({ uslup: 'konusma' })} /><b>Konuşma metni</b><small>Seslendirildiği gibi</small></label>
+        {zengin && (
+          <label className={`${deger.uslup === 'zengin' ? 'is-on' : ''}${ozet ? ' is-kapali' : ''}`}>
+            <input type="radio" name={`${ad}-uslup`} disabled={ozet} checked={deger.uslup === 'zengin' && !ozet} onChange={() => yaz({ uslup: 'zengin' })} />
+            <b>Zengin görünüm</b><small>{ozet ? 'Tüm metinde kullanılır' : 'Tablo, sıralama, sınav notu, terim kutuları'}</small>
+          </label>
+        )}
       </div>
       <div className="cap-kutular">
         <Kutu k="vurgu" ad="Önemli yer işaretleri" kapali={duz} neden="(düz metinde gösterilemez)" />
@@ -127,9 +133,10 @@ export function CdAktarPencere({ dersKey, detay: hazir, vurguAcik, onKapat }: { 
   const etkin = useMemo<CdAktarSecenek>(() => {
     if (!varlik) return secenek;
     const kapsam = secenek.kapsam === 'onemli' && !varlik.vurgu ? 'tam' : secenek.kapsam;
-    return { ...secenek, kapsam, vurgu: secenek.vurgu && varlik.vurgu, terim: secenek.terim && varlik.terim, basliklar: secenek.basliklar && varlik.basliklar,
+    const uslup = secenek.uslup === 'zengin' && !(detay && cdZenginVar(detay.key)) ? 'not' : secenek.uslup;
+    return { ...secenek, kapsam, uslup, vurgu: secenek.vurgu && varlik.vurgu, terim: secenek.terim && varlik.terim, basliklar: secenek.basliklar && varlik.basliklar,
       resimler: secenek.resimler && varlik.resimler, sozluk: secenek.sozluk && varlik.sozluk, cikmis: secenek.cikmis && varlik.cikmis };
-  }, [secenek, varlik]);
+  }, [secenek, varlik, detay]);
 
   const kur = async (b: AktarBicim): Promise<AktarBelge> => {
     if (!detay) throw new Error('ders yok');
@@ -139,6 +146,7 @@ export function CdAktarPencere({ dersKey, detay: hazir, vurguAcik, onKapat }: { 
       basliklarRef.current ||= import('./cdSlaytBasliklari').then((m) => m.cdSlaytBasliklari(detay)).catch(() => undefined);
       bas = await basliklarRef.current;
     }
+    if (etkin.uslup === 'zengin') return cdZenginBelge(detay, etiket, etkin, bas, bolum || undefined);
     return cdAktarBelgesi(detay, etiket, etkin, bas, bolum || undefined);
   };
 
@@ -213,7 +221,7 @@ export function CdAktarPencere({ dersKey, detay: hazir, vurguAcik, onKapat }: { 
 
               <fieldset className="tp-ayar" disabled={!!is}>
                 <legend className="cap-leg">İçerik</legend>
-                <CdSecenekAlani deger={secenek} onDegis={setSecenek} ad="cap" varlik={varlik} bicim={bicim} />
+                <CdSecenekAlani deger={secenek} onDegis={setSecenek} ad="cap" varlik={varlik} bicim={bicim} zengin={!!detay && cdZenginVar(detay.key)} />
               </fieldset>
 
               {bolumler.length > 1 && (

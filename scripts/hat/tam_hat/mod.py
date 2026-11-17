@@ -39,6 +39,7 @@ KATMANLAR = [
     ("hoca_sorulari", "patoloji 'Hoca soruları' + sesli hoca çözücü ayrı kartı (kural 26)", True, True),
     ("atomik_envanter", "atomik bilgi envanteri", True, False),
     ("pdf_tasarim", "ders PDF'i dışa aktarım + pdf_tarama", True, False),
+    ("zengin_transkript", "zengin transkript modeli (betik, LLM yok; src/data/zengin_transkript) + yapı kapısı", True, True),
     ("ogren_deste", "Öğren destesi + ders sonu oyunları (zaten askıda)", False, False),
     ("quiz", "quiz havuzu (zaten kapalı)", False, False),
 ]
@@ -68,6 +69,7 @@ BAGIMLILIK: dict[str, tuple[str, ...]] = {
     "ara_resim": ("anlatim",),
     "ara_soru": ("anlatim",),
     "pdf_tasarim": ("anlatim",),
+    "zengin_transkript": ("terim_kisaltma",),
     "ogren_deste": ("degerlendirme",),
     "quiz": ("degerlendirme",),
     "denetci": ("anlatim", "onem_listesi", "ornek_soru", "cikmis_analiz", "ders_icerik"),

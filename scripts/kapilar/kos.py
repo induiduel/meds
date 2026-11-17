@@ -36,6 +36,26 @@ def _yukle() -> dict:
     return json.loads(MATRIS.read_text(encoding="utf-8"))["asamalar"]
 
 
+def _izle(asama: str, deg: dict[str, str], kod: int, ciktilar: list[str]) -> None:
+    """Hata izleyicisi (scripts/kapilar/hata_izleyici.py) için kalıcı kayıt: her kapı koşusu bir JSONL satırı.
+    Yazılamazsa sessizce geçer (kapı sonucu asla değişmez)."""
+    try:
+        import datetime
+        import os
+        sat = [x.strip() for x in ciktilar if "HATA" in x or "UYARI" in x]
+        kayit = {
+            "zaman": datetime.datetime.now().isoformat(timespec="seconds"), "asama": asama, "kod": kod,
+            "ders": deg.get("key") or deg.get("ders") or deg.get("hedef") or "",
+            "oturum": os.environ.get("CLAUDE_SESSION_ID", ""), "satirlar": sat[:300],
+        }
+        yol = KOK.parent / "meds_temp" / "hata_izleyici" / "kapi_kosulari.jsonl"
+        yol.parent.mkdir(parents=True, exist_ok=True)
+        with yol.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(kayit, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001
+        pass
+
+
 def main() -> int:
     asamalar = _yukle()
     argv = sys.argv[1:]
@@ -79,14 +99,28 @@ def main() -> int:
     cmd = [sys.executable, m["kapi"], *arg]
     print(f"== kapı: {asama} → {' '.join(cmd[1:])}", flush=True)
     # stderr canlı aktarılır + izlenir: kapı kendi çökmesiyle (Traceback) bitmişse bu "N HATA" değil araç arızasıdır.
-    p = subprocess.Popen(cmd, cwd=KOK, stderr=subprocess.PIPE, text=True, errors="replace")
+    # stdout da izlenir (hata izleyicisi kaydı için HATA/UYARI satırları), canlı aktarım bozulmaz.
+    p = subprocess.Popen(cmd, cwd=KOK, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, errors="replace")
     son: list[str] = []
-    assert p.stderr is not None
+    ciktilar: list[str] = []
+    assert p.stderr is not None and p.stdout is not None
+    import threading
+
+    def _oku_stdout() -> None:
+        for satir in p.stdout:  # type: ignore[union-attr]
+            sys.stdout.write(satir)
+            sys.stdout.flush()
+            ciktilar.append(satir)
+    t = threading.Thread(target=_oku_stdout, daemon=True)
+    t.start()
     for satir in p.stderr:
         sys.stderr.write(satir)
         son.append(satir)
+        ciktilar.append(satir)
         del son[:-60]
     kod = p.wait()
+    t.join(5)
+    _izle(asama, deg, kod, ciktilar)
     if kod != 0 and any(s.startswith("Traceback (most recent call last)") for s in son):
         neden = next((s.strip() for s in reversed(son) if s.strip()), "")
         print(f"KAPI ÇÖKTÜ (çıkış 70): '{asama}' kapısı doğrulama yapamadan düştü → {neden}\n"

@@ -255,3 +255,9 @@
 - **Önleme kuralı:** Bir üretim adımı, yayın kapısının denetimlerini **kendi içinde** çalıştırmadan "0 HATA" diyemez; boş yanıt
   "sayfa yok" değil "yeniden dene + yedek yol"dur. Görsel sayfada modelin eline metin verilemiyorsa bağlam (bölüm + komşu başlık)
   verilir; kaynak dışı bilgi eklenmez.
+
+### H609 — Zengin transkript tablo ayrıştırıcısı sayı sözcüğünü kesiyordu (2026-11-17, geliştirme sırasında)
+- **Belirti:** ilk sürümde "yüzde kırk dokuz" tabloda "yüzde kırk", "beş yaşında" satırı "yalnızca" olarak çıktı.
+- **Kök neden:** oran, gevşek ek kalıbıyla (`ikisi|ine|e|…`) yakalanıyordu; Türkçe çok sözcüklü sayı ilk sözcükte kesildi, koşul sütunu yaş ifadesi yerine rastgele ilk sözcükten alındı.
+- **Kalıcı çözüm:** `zengin_transkript.py` oranı sayı sözcüğü listesiyle tam yakalar, koşul sütunu yaş ifadesi ister; herhangi bir satır eksikse tablo hiç kurulmaz, cümle madde olarak kalır.
+- **Önleme:** metinden yapılandırılmış veri (tablo, sıralama) çıkaran betik emin olmadığında yapı kurmaz, özgün cümleyi korur; tıbbi sayı kesik basılmaz.

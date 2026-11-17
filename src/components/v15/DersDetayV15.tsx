@@ -182,13 +182,13 @@ export default function DersDetayV15() {
       url: `${dinle}?p=${cikmis[0].p}`, k: `${cikmis.length} soru`,
     });
 
-  const coz = dersCozucu(paket?.baslik) || dersCozucu(baslik);
+  const coz = dersCozucu(paket?.baslik, key) || dersCozucu(baslik, key);
   if (coz)
     icerik.push({ id: 'cozucu', tone: 'is-ok', icon: HelpCircle, t: 'Sesli soru çözücü', s: `${coz.soru ? coz.soru + ' soru · ' : ''}kaynak gösteren sesli çözüm · derse girmeden önce de, sonra da`, url: coz.url, k: coz.soru ? `${coz.soru} soru` : 'sesli çözüm' });
-  const hocaCoz = dersHocaCozucu(paket?.baslik) || dersHocaCozucu(baslik);
+  const hocaCoz = dersHocaCozucu(paket?.baslik, key) || dersHocaCozucu(baslik, key);
   if (hocaCoz)
     icerik.push({ id: 'hocacozucu', tone: 'is-c', icon: Award, t: 'Sesli hoca çözücü', s: `${hocaCoz.soru} soru · hocanın üslubunda, sesli çözüm`, url: hocaCoz.url, k: `${hocaCoz.soru} soru` });
-  const araCoz = dersAraCozucu(paket?.baslik) || dersAraCozucu(baslik);
+  const araCoz = dersAraCozucu(paket?.baslik, key) || dersAraCozucu(baslik, key);
   if (araCoz)
     icerik.push({ id: 'hocaara', tone: 'is-c', icon: Award, t: 'Hocanın sorabileceği sorular', s: `${araCoz.soru} soru · sesli derste slayt aralarında çözülenler, ders dışında da`, url: araCoz.url, k: `${araCoz.soru} soru` });
   if (paket) {

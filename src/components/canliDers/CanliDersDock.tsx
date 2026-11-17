@@ -458,7 +458,8 @@ function BaslaIpucu() {
   const [basladi, setBasladi] = useState(false);
   useEffect(() => { if (playing) setBasladi(true); }, [playing]);
   const baslik = useCd((s) => s.detay?.baslik);
-  const coz = dersCozucu(baslik);
+  const dkey = useCd((s) => s.key);
+  const coz = dersCozucu(baslik, dkey || undefined);
   if (basladi || playing) return null;
   return (
     <>

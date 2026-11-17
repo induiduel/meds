@@ -71,6 +71,7 @@ EYLEM: dict[str, tuple[str, str, str]] = {
     "ara_soru":    ("E4", "llm", "Hocanın sorabileceği ara soru sayfası + k<N>hocaara sesi (kur.py dogrula --ses 0 HATA)."),
     "atomik_envanter": ("E3", "betik", "atomik_bilgi_envanteri (paket içinde; quiz KAPALI)."),
     "pdf_tasarim": ("E5", "betik", "ders_pdf.mts + pdf_tarama.py → 0 HATA"),
+    "zengin_transkript": ("E3", "betik", "python3 scripts/uretim/sesli_anlatim/zengin_transkript.py {d} → 0 HATA (yapı kapısı aynı betikte; LLM yok, metin değişince yeniden koş)."),
     "ogren_deste": ("E2", "llm", "Öğren destesi (ASKIDA — üretilmez)."),
     "quiz":        ("E2", "betik", "quiz havuzu (KAPALI)."),
     "denetci":     ("E5", "llm", "Bütün betik kapıları + TEK bağımsız tıbbi denetçi (GEÇER)."),

@@ -39,8 +39,10 @@ const katla = (t: string) => t.toLocaleLowerCase('tr').replace(/^\s*\d+[.)-]?\s*
 export interface CdAktarSecenek {
   /** tam: bütün anlatım · onemli: yalnız önemli diye işaretlenmiş cümleler (kısa tekrar notu) */
   kapsam: 'tam' | 'onemli';
-  /** not: ders notu üslubu, iç içe maddeler · konusma: seslendirilen metin olduğu gibi, paragraf paragraf */
-  uslup: 'not' | 'konusma';
+  /** not: ders notu üslubu, iç içe maddeler · konusma: seslendirilen metin olduğu gibi, paragraf paragraf ·
+   *  zengin: betikle modellenmiş transkript (giriş/madde/açıklama/liste/sıralama/tablo/sınav notu/örnek/terim; scripts/uretim/sesli_anlatim/zengin_transkript.py).
+   *  Zengin modeli olmayan derste ya da "yalnız önemli yerler" kapsamında "not" gibi davranır. */
+  uslup: 'not' | 'konusma' | 'zengin';
   /** önemli cümleler işaretli (==…==) */
   vurgu: boolean;
   /** anahtar terimler kalın */
@@ -116,7 +118,9 @@ function cikmisMd(detay: CdDetay): string {
  *  bitis paragrafı boşsa ya da yoksa aralıktan sonraki ilk paragraftan önce, en geç belge sonunda.
  *  secenek: eski çağrılar için boolean (önemli yer işaretleri açık/kapalı) da kabul edilir. bolumSecim: yalnız bu bölüm dizinleri. */
 export function cdAktarBelgesi(detay: CdDetay, etiket: string, secenek: boolean | Partial<CdAktarSecenek> = true, basliklar?: SlaytBasliklari, bolumSecim?: ReadonlySet<number>): AktarBelge {
-  const S: CdAktarSecenek = { ...CD_AKTAR_VARSAYILAN, ...(typeof secenek === 'boolean' ? { vurgu: secenek } : secenek) };
+  const S0: CdAktarSecenek = { ...CD_AKTAR_VARSAYILAN, ...(typeof secenek === 'boolean' ? { vurgu: secenek } : secenek) };
+  // Zengin üslup ayrı yoldan kurulur (cdZenginBelge); buraya düştüyse (model yok / eşzamanlı çağıran) ders notu üslubu
+  const S: CdAktarSecenek = S0.uslup === 'zengin' ? { ...S0, uslup: 'not' } : S0;
   const ozet = S.kapsam === 'onemli';
   const kalan: AraResim[] = S.resimler && !ozet ? [...araResimleri(detay.key)].sort((a, b) => araResimBitis(a) - araResimBitis(b)) : [];
   const resimMd = (r: AraResim) => resimSatiri(r.baslik, araResimYolu(r), r.aciklama || '');
@@ -169,4 +173,57 @@ export function cdAktarBelgesi(detay: CdDetay, etiket: string, secenek: boolean 
     alt: `${etiket} · ${ozet ? 'Sesli ders · önemli yerler özeti' : S.uslup === 'konusma' ? 'Sesli ders konuşma metni' : 'Sesli ders metni'}${isaretNotu}`,
     bolumler,
   };
+}
+
+
+/* ---------------- zengin transkript (v1) ---------------- */
+type ZBlok = { t: string; p: number; x?: string; sv?: number; bas?: string; ogeler?: string[]; basliklar?: string[]; satirlar?: string[][]; ad?: string; tanim?: string };
+interface ZModel { surum: number; key: string; bolumler: { baslik: string; bloklar: ZBlok[] }[] }
+const ZENGIN = import.meta.glob('../../data/zengin_transkript/*.json', { import: 'default' }) as Record<string, () => Promise<ZModel>>;
+const zYol = (key: string) => `../../data/zengin_transkript/${key}.json`;
+/** Derste zengin transkript modeli var mı (eşzamanlı; seçenek penceresi için) */
+export const cdZenginVar = (key: string) => zYol(key) in ZENGIN;
+
+/** Zengin üslup belgesi. Model yoksa ya da kapsam "önemli yerler" ise eski yol (cdAktarBelgesi, ders notu) — iki yol karışmaz. */
+export async function cdZenginBelge(detay: CdDetay, etiket: string, secenek: CdAktarSecenek, basliklar?: SlaytBasliklari, bolumSecim?: ReadonlySet<number>): Promise<AktarBelge> {
+  const yukle = ZENGIN[zYol(detay.key)];
+  const eski = () => cdAktarBelgesi(detay, etiket, { ...secenek, uslup: 'not' }, basliklar, bolumSecim);
+  if (!yukle || secenek.kapsam === 'onemli') return eski();
+  let m: ZModel;
+  try { m = await yukle(); } catch { return eski(); }
+  if (m?.surum !== 1 || !m.bolumler?.length) return eski();
+  const yaz = (t?: string) => ekranYazimi(tekSatir(t || '')).replace(/\|/g, '/');
+  // p (metindeki boş olmayan paragraf sırası) → derste paragraf kimliği: ara resimleri doğru yere koymak için
+  const pi = detay.bolumler.flatMap((b) => b.paragraflar.filter((p) => p.metin.trim()).map((p) => p.i));
+  const kalan: AraResim[] = secenek.resimler ? [...araResimleri(detay.key)].sort((a, b) => araResimBitis(a) - araResimBitis(b)) : [];
+  const al = (i: number) => { const o: string[] = []; while (kalan.length && araResimBitis(kalan[0]) <= i) { const r = kalan.shift()!; o.push(resimSatiri(r.baslik, araResimYolu(r), r.aciklama || '')); } return o; };
+  // Bölüm seçimi yalnız bölüm sayıları tutuyorsa uygulanır (model ile ders aynı metinden; tutmuyorsa hepsi)
+  const secimGecerli = bolumSecim && m.bolumler.length === detay.bolumler.length;
+  const secili = m.bolumler.map((b, bi) => ({ b, bi })).filter(({ bi }) => !secimGecerli || bolumSecim!.has(bi));
+  const bolumler = secili.map(({ b }, sira) => {
+    const L: string[] = [];
+    let sonP = -1;
+    for (const k of b.bloklar) {
+      if (k.p !== sonP) { if (sonP >= 0 && pi[sonP] != null) L.push(...al(pi[sonP])); sonP = k.p; }
+      switch (k.t) {
+        case 'giris': L.push(yaz(k.x)); break;
+        case 'madde': L.push(`${'  '.repeat(Math.max(0, (k.sv || 1) - 1))}- ${yaz(k.x)}`); break;
+        case 'aciklama': L.push(`  - ${yaz(k.x)}`); break;
+        case 'liste': L.push(`- **${yaz(k.bas)}**`, ...(k.ogeler || []).map((o) => `  - ${yaz(o)}`)); break;
+        case 'sirali': if (k.bas) L.push(yaz(k.bas)); L.push(...(k.ogeler || []).map((o, j) => `${j + 1}. ${yaz(o)}`)); break;
+        case 'tablo': L.push(`| ${(k.basliklar || []).map(yaz).join(' | ')} |`, `|${(k.basliklar || []).map(() => '---').join('|')}|`, ...(k.satirlar || []).map((r) => `| ${r.map(yaz).join(' | ')} |`)); break;
+        case 'sinav': L.push(`> [!IMPORTANT] ${yaz(k.x)}`); break;
+        case 'ornek': L.push(`> [!TIP] ${yaz(k.x)}`); break;
+        case 'alinti': L.push(`> “${yaz(k.x)}”`); break;
+        case 'terim': L.push(`  - **${yaz(k.ad)}:** ${yaz(k.tanim)}`); break;
+        default: if (k.x) L.push(yaz(k.x));
+      }
+    }
+    if (sonP >= 0 && pi[sonP] != null) L.push(...al(pi[sonP]));
+    if (!secimGecerli && sira === secili.length - 1) L.push(...al(Infinity));
+    return { baslik: yaz(b.baslik), md: L.join('\n') };
+  }).filter((b) => b.md.trim());
+  if (secenek.sozluk) { const x = sozlukMd(detay); if (x) bolumler.push({ baslik: 'Terimler ve kısaltmalar', md: x }); }
+  if (secenek.cikmis) { const x = cikmisMd(detay); if (x) bolumler.push({ baslik: 'Bu dersten çıkmış sorular', md: x }); }
+  return { baslik: detay.baslik, dersDuzeni: true, alt: `${etiket} · Sesli ders metni · zengin görünüm`, bolumler };
 }

@@ -130,3 +130,9 @@
 - **Çözüm:** denetçiler yinelenen cümleleri şıkka özgü (kavram ne, ne işe yarar, bu soruda neden yanlış) slayta dayalı cümlelerle değiştirdi (k2-30: 122 şık metni; k2-29 denetçide); şık ses metinleri yeniden üretilip EMA klipleri yenilenir.
 - **Önleme:** şık açıklaması kapıyı geçmek için betikle uzatılmaz (AGENTS 14 dolgu yasağı); kısa kalan açıklama elle, o şıkkın kavramıyla yazılır. Önerilen kapı eki: aynı sorunun iki şıkkında birebir aynı ≥6 kelimelik cümle HATA (`sik_aciklama.py`).
 
+
+### H608 — 15 Kurul 2 dersinde sesli soru çözücü bağlantısı yoktu; ders sonu penceresi Kurul 2'de hiç açılmıyordu (2026-11-17, kullanıcı bildirdi)
+- **Belirti:** k2-06, 07, 09, 12, 13, 15, 17, 19, 22, 23, 26, 27, 28, 33, 37 ders sayfasında "Sesli soru çözücü" kutusu yoktu; sesli ders bitince yönlendirme penceresi (çözücü/örnek soru/sonraki ders + Lottie) Kurul 2 derslerinde çıkmıyordu, animasyon yalnız motivasyon ayarı açıkken oynuyordu.
+- **Kök neden:** `dersCozucu.ts` dersi çözücüyle yalnız **başlığın birebir eşitliğiyle** eşliyordu; çözücü dizinindeki başlık hoca PDF'inden ("Opioid…", "Genel Anestezik İlaçların Farmakolojisi"), ders defterindeki başlık programdan ("Opoid…", "Genel Anestezik İlaçlar") geliyor. 15 dersin çözücüsü (sesiyle) vardı ama bağlantı düşüyordu. Ders sonu penceresi (`CanliDersCozucuSoru`) yalnız Kurul 1 spot branşlarını (`CD_SPOT_BRANS`) tanıyor, eşleşme yoksa `null` dönüyordu.
+- **Kalıcı çözüm:** eşleme önce ders defteri kodu (`src/data/dersler/k*.json` `id → kod`; çözücü kodu = defter kodu, bölünmüşte `kod-1`), sonra başlık. Ders sonu penceresi her derste açılır: sesli çözücü, hoca çözücü, örnek sorular, çıkmış/ders içerikleri, aynı branşta sonraki ders; Lottie `kutlama` her zaman (hareketi azalt → son kare).
+- **Önleme:** ders ↔ katman eşlemesi başlıkla YAPILMAZ, kalıcı kimlik/kodla yapılır (kural 15: kimlik yalnız ders defterinden). Yeni eşleme yazan kod başlığı yalnız geri düşüş olarak kullanır.

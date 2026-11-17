@@ -54,7 +54,8 @@ export function useHocaAra(key: string | null | undefined): AraDers | null {
 
 /* ── tercih: ders içinde kendiliğinden açılsın mı (öğrenci kapatabilir) ── */
 const TERCIH = 'medsoru_hoca_ara_oto_v1';
-const otoAcik = () => { try { return localStorage.getItem(TERCIH) !== '0'; } catch { return true; } };
+// Varsayılan KAPALI (kullanıcı kararı 2026-11-17): ara soru kendiliğinden açılmaz; ünlem düğmesi/çip ile erişilir, ayardan açılır
+const otoAcik = () => { try { return localStorage.getItem(TERCIH) === '1'; } catch { return false; } };
 const otoYaz = (v: boolean) => { try { localStorage.setItem(TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } };
 /* ── tercih: soru okununca kendiliğinden çözülsün mü (2026-11-06; kapalıysa öğrenci şık seçer ya da Çöz'e basar) ── */
 const COZ_TERCIH = 'medsoru_hoca_ara_coz_v1';
