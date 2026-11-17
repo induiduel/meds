@@ -258,19 +258,20 @@ def main() -> int:
     if r.returncode != 0:
         print(f"HATA: takip kapısı (T1–T5) — {r.stdout.strip()[-400:]}", file=sys.stderr)
         return 1
-    for betik, args in (("terim_sozlugu.py", ["otomatik", key, "--yaz"]),
-                        ("kisaltma_sozlugu.py", ["otomatik", key, "--yaz"])):
-        rr = subprocess.run([sys.executable, str(MEDS / "scripts" / "uretim" / "sesli_anlatim" / betik)] + args,
-                            capture_output=True, text=True, cwd=MEDS)
-        print(f"  {betik}: {(rr.stdout or rr.stderr).strip().splitlines()[-1][:160] if (rr.stdout or rr.stderr).strip() else rr.returncode}")
-
-    # ders kaydı (dersler.json) — fcntl kilitli
+    # ders kaydı (dersler.json) — fcntl kilitli. Terim/kısaltma adımları dersin API'de görünmesini gerektirir
+    # (/api/canli-ders/<key> 404 dönüyordu, 2026-11-17), bu yüzden kayıt terimden ÖNCE yazılır.
     ders_kaydi = {"key": key, "donem": "2025-2026", "kurul": 3, "brans": baglam["brans"], "no": int(baglam["brans_no"]),
                   "kurulNo": int(baglam["numara"]), "baslik": baglam["konu"], "hoca": baglam.get("ogretim_uyesi") or "",
                   "sira": int(baglam["numara"]), "desteId": e["deste_id"], "sayfaSayisi": int(baglam["sayfa"])}
     A.json_kilitli_guncelle(SA_KOK / "dersler.json", [], lambda l: sorted(
         [d for d in (l or []) if d.get("key") != key] + [ders_kaydi],
         key=lambda x: (int(x.get("kurul") or 2), int(x.get("sira") or 0))))
+    for betik, args in (("terim_sozlugu.py", ["otomatik", key, "--yaz"]),
+                        ("kisaltma_sozlugu.py", ["otomatik", key, "--yaz"])):
+        rr = subprocess.run([sys.executable, str(MEDS / "scripts" / "uretim" / "sesli_anlatim" / betik)] + args,
+                            capture_output=True, text=True, cwd=MEDS)
+        print(f"  {betik}: {(rr.stdout or rr.stderr).strip().splitlines()[-1][:160] if (rr.stdout or rr.stderr).strip() else rr.returncode}")
+
     sayfa_haritasi = {"durum": "arsiv", "toplam_sayfa": int(baglam["sayfa"]), "sayfalar": []}
     (taslak / "sayfa_haritasi.json").write_text(json.dumps(sayfa_haritasi, ensure_ascii=False), encoding="utf-8")
     paket_dir = DB / "paketler" / "kurul3"

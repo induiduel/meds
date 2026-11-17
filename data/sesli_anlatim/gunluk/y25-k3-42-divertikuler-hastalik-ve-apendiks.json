@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-42-divertikuler-hastalik-ve-apendiks",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "Tıbbi Patoloji",
+  "baslik": "Divertiküler Hastalık ve Apendiks",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 06:12",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "Divertiküler Hastalık ve Apendiks.pdf (19 sayfa) kaynağından 35 paragraf / 141 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 13.7,
+        "sayfaSayisi": 19,
+        "bolumSayisi": 5,
+        "paragrafSayisi": 35,
+        "cumleSayisi": 141,
+        "cikmisEslesme": 16
+      }
+    }
+  ]
+}

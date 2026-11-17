@@ -63,6 +63,9 @@ def main() -> int:
         g = MEDS / "data" / "arsiv_25_26" / "gunluk" / f"{k}.json"
         if g.exists():
             yollar.append(str(g.relative_to(MEDS)))
+        g2 = MEDS / "data" / "sesli_anlatim" / "gunluk" / f"{k}.json"
+        if g2.exists():
+            yollar.append(str(g2.relative_to(MEDS)))
     yollar.append("data/arsiv_25_26/sesli_anlatim/dersler.json")
     yollar += ["scripts/uretim/arsiv_25_26", "docs/ARSIV_25_26_KURUL3.md"]
 
