@@ -67,7 +67,10 @@ def main() -> int:
         if g2.exists():
             yollar.append(str(g2.relative_to(MEDS)))
     yollar.append("data/arsiv_25_26/sesli_anlatim/dersler.json")
-    yollar += ["scripts/uretim/arsiv_25_26", "docs/ARSIV_25_26_KURUL3.md"]
+    yollar += ["scripts/uretim/arsiv_25_26", "docs/ARSIV_25_26_KURUL3.md",
+               # hata defteri bu hattın çözdüğü kök nedenlerle güncellenir; kural kapısı (D4) bunları ister
+               "docs/hatalar/ses.md", "docs/hatalar/_dizin.json",
+               "docs/KURUL2_YAPILMAYACAK_HATALAR.md", "docs/asama_kurallari"]
 
     rc, _ = calistir(["git", "add", "--"] + yollar, "git add")
     if rc != 0:

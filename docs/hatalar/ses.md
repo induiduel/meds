@@ -220,3 +220,38 @@
   uydurmak YASAK; çözüm çapadır. Tasarruf kipinde çizim atlanır ama çapa için yalnız eşleşmeyen cümleler (metin-only M# listesi,
   görüntüsüz) yazılır: `artik_capa` katmanı (her kipte; `scripts/uretim/sesli_anlatim/artik_capa.py hazirla|birlestir`). k2-50 denemesi:
   13 artık cümle, iş dosyası ~1.000 kelime (≈1,6k token) → yalnız-sayfa 13/66 → 3/66 (%4,5), T5 geçti.
+
+### H606 — Kurul 3 arşivinde işaret "çapa sayfasından kayıyor", tablo/şema cümleleri yalnız sayfaya düşüyordu (2026-11-17)
+- **Belirti:** `y25-k3-11-sindirim-sistemi-kanserleri` takip kapısı T5'te 12 HATA ("işaret s.13 ≠ çapa s.12", "işaretlerin %9'u yalnız
+  sayfa"), `y25-k3-16-primer-biliyer-kolanjit` %5 sınırında HATA; bu dersler yayına giremiyordu.
+- **Kök neden (iki katman):**
+  1. **Komşu sayfadan görsel ödünç alma:** `pdf_isaret.capali` şekil çapasında çapanın sayfasında görsel bulamazsa ±1 komşu sayfaya
+     bakıp oradaki resmi işaretliyordu. Çapa s.12, görsel s.13 → oynatıcı yanlış slaytı gösterir, T5 haklı olarak HATA verir.
+  2. **Türkçe anlatım / İngilizce slayt:** tablo sayfalarında slayt metni İngilizce ("Combination"), anlatım Türkçe olduğu için kelime
+     eşleşmesi tutmuyor; çapa satırı PDF'te tek simgeye ("≥1:40" → `#1`/`#40`) ayrışınca `capa_maddeleri` %80 eşiğini geçemiyor ve
+     cümle "yalnız sayfa" işaretine düşüyordu.
+- **Çözüm:** `arsiv_yayinla.pdf_isaret_yerel` — işaret her zaman ÇAPA sayfasında üretilir (`_ayni_sayfa`: satır→madde→kelime→resim
+  sırası), çapa eşiği tutmazsa en yakın madde (`_yakin_madde`, ≥%40 kök) kullanılır, kalan `sayfa` işaretleri `_doldur` ile o
+  sayfanın tablo/resim bölgesine bağlanır. Sonuç: iki ders T1–T5 **0 HATA** ile yayına girdi.
+- **Önleme kuralı:** İşaretin sayfası çapanın sayfasından farklı olamaz; komşu sayfa yalnız çapa hiç sayfa vermiyorsa (hizalama
+  boşluğu) ve yalnız `capali` içinde değerlendirilir. Eşik gevşetilmez; eşleşmeyen cümlede doğru yol madde/kutu eşlemesidir, "sayfa"
+  işareti değil.
+
+### H607 — Arşiv metin üretimi görsel/şema sayfalarında "yanıt yok" verip sayfayı anlatımsız bırakıyordu; ders yayına giremiyordu (2026-11-17)
+- **Belirti:** k3 parti işlerinde derslerin çoğu `hata:metin` ile duruyordu; kapsam kapısı "s.9: anlatılmamış (görsel var)" diyordu.
+  Aynı sayfa tek başına sorulduğunda model doğru JSON üretiyordu.
+- **Kök neden (üç katman):**
+  1. **Uzun istem + büyük çıktı sınırı:** 9 bin tokenlık kural bloğu + `max_tokens=9000` ile geçit modeli (`deepseek-v4.1-flash`)
+     görsel/şema sayfasında **boş yanıt** dönüyordu; kod bunu "sayfa üretilemedi" sayıp geçiyordu. Tek başına kısa istemde aynı sayfa
+     sorunsuz üretiliyordu (ölçüldü: 3151 karakter istem → boş, 2092 karakter → dolu).
+  2. **Yazısız klinik fotoğraf:** metin katmanı ve OCR boş olduğu için modelin elinde hiç bilgi yoktu (k3-36 s.6/13/14/20/21).
+  3. **Gate kendi kendini doğrulamıyordu:** tek-cümle (H109), Türkçe üslup ve bağlamsız açılış (H434) denetimleri yalnız **yayın**
+     kapısında vardı; tur içinde yakalanmadığı için üretim "0 HATA" sanılıp yayında patlıyordu.
+- **Çözüm:** `k3_uret.py` — (a) boş yanıtta 3 kez yineleme, (b) görsel/az-yazılı sayfada **önce kısa istem** (`istek_kisa`),
+  (c) yazısız görselde bölüm başlığı ve komşu sayfalarla ilişkilendiren `gorsel_yedek`, (d) görsel sayfada OCR katmanı (`ocr_metni`,
+  Tesseract tur+eng, önbellekli), (e) `denetle_sayfa`'ya H109/üslup/H434 denetimi, (f) H109'u kodla garanti eden `cumlelere_bol`,
+  (g) H494 kısa çapa filtresi (`capa_bul`), (h) `--tsv-yenile` (LLM'siz biçim onarımı). Ayrıca `k3_onar.py`: kapının bildirdiği
+  eksik sayfaları tek tek üretir.
+- **Önleme kuralı:** Bir üretim adımı, yayın kapısının denetimlerini **kendi içinde** çalıştırmadan "0 HATA" diyemez; boş yanıt
+  "sayfa yok" değil "yeniden dene + yedek yol"dur. Görsel sayfada modelin eline metin verilemiyorsa bağlam (bölüm + komşu başlık)
+  verilir; kaynak dışı bilgi eklenmez.

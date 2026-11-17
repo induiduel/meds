@@ -428,13 +428,17 @@
 - **H592** · "`.gitignore`'daki ses dizinlerinde 2.809 MP3 hâlâ izleniyor": kural sonradan eklendi, `git rm --cached` yapılmadı → hatalar/dagitim_icerik_katmani.md
 - **H593** · "Yedek arşivi hep 0 iş; ses kapısı yol verilince yön göstermiyor; nereye var olmayan yolu önerebilir": saklama kuralı 2 sabit, ad-yalnız eşleme, süzgeçsiz öneri → hatalar/betik_altyapi.md
 - **H594** · Aşama girdisi ders verisinden çok bütün okutulan standart belgeydi; denetçi yayın kurallarını okuyordu → hatalar/betik_altyapi.md
-- **H585** · "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor": kanca çalışma ağacını denetliyordu → hatalar/betik_altyapi.md
-- **H598** · "Commit kancası D8, başka oturumun sahnelenmemiş belgeleri yüzünden haritayı bayat sayıyor": üreticiler çalışma ağacını okur → sahne kipinde UYARI → hatalar/betik_altyapi.md
 - **H595** · "Öğren sesinde 32/35 adım reddedildi (süre oranı 0.48: 2.)": cumlelere_ayir sıra imini ("2.") tek cümle yapıyordu → hatalar/ses.md
 - **H596** · "Kimliksiz istek 100 MB gövde gönderebiliyor; aynı uç iki kez tanımlı, ikincisi yetkisiz": gövde ayrıştırıcı kimlikten önce + mükerrer uç kapısı yok → kademeli tavan, `kos.py uc` → hatalar/dagitim_sunucu.md
 - **H597** · "Kapı girdisi yoksa Traceback, ajan içerik hatası sanıyor": çıkış kodu ayrımı yok → `kos.py` girdi denetimi (2) + çökme ayrımı (70) → hatalar/betik_altyapi.md
+- **H599** · "Kurul 2 soru çözücü/en önemliler, ek modül, KMB, PDF notlar çevrimdışına inmiyor": katalog branşları koda yazılı 7 Kurul 1 branşıydı, yeni sayfa türlerinin paketi/SW dalı yoktu → hatalar/dagitim_sunucu.md
 - **H601** · "Ücretsiz bulut LLM çağrı noktası ve 11 betik kilitsiz (kural 20)": kilit yalnız Claude/ajan CLI yoluna eklenmişti → `cloud_llm` kilitliyken None, betikler çıkış 75, sunucu yönetici yolunda `LLM_PANEL_ENV` → hatalar/betik_altyapi.md
-- **H603** · "Olmayan adres 200 dönüyor": SPA geri dönüşü koşulsuz 200 → sunucu ön yüz çözücüsüyle (`parseLocation`) 404 → hatalar/on_yuz_sayfa_denetimi.md
+- **H585** · "Commit kancası başka oturumun yarım değişikliği yüzünden temiz commit'i durduruyor": kanca çalışma ağacını denetliyordu → hatalar/betik_altyapi.md
+- **H598** · "Commit kancası D8, başka oturumun sahnelenmemiş belgeleri yüzünden haritayı bayat sayıyor": üreticiler çalışma ağacını okur → sahne kipinde UYARI → hatalar/betik_altyapi.md
 - **H602** · "Sesli ders telefon/tablet: oynatıcı düğmeleri 30–34 px, tablette başlık kesik, PDF parçası geç": minimal çubuk ölçüleri medya sorgusuz dokunmatiğe gidiyordu, PdfDocView veri gelince isteniyordu → hatalar/on_yuz_oynatici_ders.md
+- **H603** · "Olmayan adres 200 dönüyor": SPA geri dönüşü koşulsuz 200 → sunucu ön yüz çözücüsüyle (`parseLocation`) 404 → hatalar/on_yuz_sayfa_denetimi.md
 - **H604** · "Optimize ettik, build uzadı (77 sn, 30+ uyarı)": esbuild küçültücü + gzip raporu + karesel budama regex'i + önbelleksiz sürüm günlüğü → oxc, rapor kapalı, çapalı regex, HEAD önbelleği (≈38 sn, 0 uyarı) → hatalar/betik_altyapi.md
 - **H605** · "PDF ↔ metin takibi zayıf (son derslerde %19–24 yalnız sayfa)": hat takip kapısını çağırmıyordu + OCR/şema sayfasında görsel geri düşüşü kapalı + tasarruf kipi çapasız → pdf_isaret SURUM 8 (sayı sözcüğü, görsel geri düşüş, ayırt edici zayıf eşleme), kosucu zaman_isaret adımına takip_kapisi 0 HATA, her kipte `artik_capa` katmanı (yalnız eşleşmeyen cümle, metin-only) → hatalar/ses.md
+- **H606** · "Kurul 3 arşivinde işaret çapa sayfasından kayıyor, tablo/şema cümleleri yalnız sayfaya düşüyordu": komşu sayfadan görsel ödünç alma + Türkçe anlatım/İngilizce slayt kelime eşleşmesi → işaret daima çapa sayfasında, en yakın madde, sayfa işareti tablo/resme bağlanır → hatalar/ses.md
+- **H607** · "Arşiv metin üretimi görsel/şema sayfalarında yanıt yok verip sayfayı anlatımsız bırakıyordu": uzun istem + 9000 token çıktı boş dönüyordu, yazısız fotoğrafta bilgi yok, H109/üslup/H434 yalnız yayın kapısında → kısa istem, bağlamlı görsel yedeği, OCR katmanı, denetim turun içinde, `k3_onar.py` → hatalar/ses.md
+
