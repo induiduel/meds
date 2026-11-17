@@ -1,17 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 807,
-  "baslik": "Sesli derste zengin görünüm ve tamamlanan Kurul 2 içerikleri",
+  "onem": 808,
+  "baslik": "İçerik hattı kayıt kuralları inceltildi",
   "maddeler": [
-    "Zengin görünüm: Sesli dersin metin bölmesinde \"Zengin görünüm\" düğmesiyle metin tablolar, sıralamalar, sınav notları ve terim satırlarıyla okunur; dokunduğun yerden ders sürer.",
-    "Kelime kelime takip: Opioid Analjezikler, Unipolar Depresyon ve Kişilik Bozuklukları derslerinde de çalışıyor.",
-    "Ders içerikleri: Opioid Analjezikler, Unipolar Depresyon, Kişilik Bozuklukları, DEHB ve Dışa Atım Bozuklukları derslerine spot, tablo, liste, kavram ve hatırlatma kartları eklendi.",
-    "Ders analizi: 10 Kurul 2 dersinde ders öncesi analiz ve ders özeti hazır."
+    "Arka plan: İçerik hattının hata kaydı denetimi, her derste okunan kural cümlesine odaklandı; kayıtlar bilgi kaybetmeden kısa kalır.",
+    "Site kullanımında görünür bir değişiklik yok."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Bitirdiklerim telefon görünümünde ilerleme çubuğu"
+  "degisen": [
+    "İçerik hattı kayıt kuralları"
   ],
+  "duzeltilen": [],
   "silinen": []
 }

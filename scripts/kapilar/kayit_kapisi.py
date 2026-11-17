@@ -7,8 +7,9 @@ eski içerik geriye dönük bozuk sayılmaz. LLM/ağ yok, stdlib.
   python3 scripts/kapilar/kayit_kapisi.py --sahne    # yalnız sahnelenen (pre-commit)
   python3 scripts/kapilar/kayit_kapisi.py --json
 
-K1 HATA  yeni hata maddesi (docs/hatalar/*.md): Belirti + Kök neden + Çözüm + Kural alanları zorunlu; >400 kelime HATA
-         (>250 UYARI); H numarası başka maddede varsa HATA; hata metni dizine (KURUL2_YAPILMAYACAK_HATALAR.md) yazılmaz.
+K1 HATA  yeni hata maddesi (docs/hatalar/*.md): Belirti + Kök neden + Çözüm + Kural alanları zorunlu. Sınır HER DERSTE
+         okunan KURAL SATIRINDA: >120 kelime HATA, >60 UYARI (hedef değil, üst sınır). Gövde aşama özetine girmez → >400 yalnız
+         UYARI (bilgi kırpmaya zorlanmaz); H numarası başka maddede varsa HATA; hata metni dizine (KURUL2_YAPILMAYACAK_HATALAR.md) yazılmaz.
 K2 HATA  DEGISIKLIK_KAYDI.md: yeni bölüm >400 kelime HATA (>250 UYARI); bölüm sayısı >25 → eskiyi kayitlar/'a taşı.
 K3 HATA  talimat belgesine (AGENTS/CLAUDE.md, KURALLAR_*, standart/akış belgeleri, TALIMAT*.md) eklenen
          (üretilmiş docs/asama_kurallari/ hariç: aşamalar arası tekrar tasarımdır) ≥10 kelimelik satır başka talimat belgesinde ya da aynı belgede zaten varsa (tekrar = her aşamada iki kez okunur);
@@ -47,7 +48,7 @@ TALIMAT = re.compile(r"(^|/)(AGENTS\.md|CLAUDE\.md|TALIMAT[^/]*\.md)$|^docs/(KUR
 YEDEK_AD = re.compile(r"(yedek|backup|\.bak$|_eski\b|_kopya|\bcopy\b|\.orig$|~$)", re.I)
 VERI = re.compile(r"^(src/data|data)/")
 CALISMA = re.compile(r"(^|/)baglam/|^meds_temp/")
-SINIR = {"hata": (250, 400), "kayit": (250, 400), "kayit_bolum": 25, "claude_md": 400, "tekrar_kelime": 10}
+SINIR = {"hata": (250, 400), "kural": (60, 120), "kayit": (250, 400), "kayit_bolum": 25, "claude_md": 400, "tekrar_kelime": 10}
 
 
 def git(*a: str) -> str:
@@ -88,6 +89,18 @@ def maddeler(metin: str) -> dict[str, str]:
             for i, m in enumerate(ms)}
 
 
+KURAL_ALAN = re.compile(r"^\s*-\s*\*\*(?:[ÖO]nleme|Kural|Çözüm ?/ ?önleme|Çözüm ?/ ?kural|Kal[ıi]c[ıi] [çc][öo]z[üu]m ve kural)[^*]*\*\*", re.I | re.M)
+
+
+def kural_satiri(govde: str) -> str:
+    """Aşama özetine giren alan (kural_secici ile aynı): Önleme/Kural alanının metni, sonraki alana ya da boş satıra dek."""
+    m = KURAL_ALAN.search(govde)
+    if not m:
+        return ""
+    son = re.search(r"\n\s*-\s*\*\*|\n\s*\n", govde[m.end():])
+    return govde[m.end(): m.end() + son.start()] if son else govde[m.end():]
+
+
 def denetle(sahne: bool) -> list[dict]:
     bul: list[dict] = []
     ekle = lambda k, d, y, m: bul.append({"kod": k, "duzey": d, "yol": y, "mesaj": m})  # noqa: E731
@@ -104,11 +117,15 @@ def denetle(sahne: bool) -> list[dict]:
             for h, govde in maddeler(yeni(p, sahne)).items():
                 if h in onceki:
                     continue
+                # Gövde her derste okunmaz (aşama özetine yalnız kural satırı girer) → yalnız UYARI; bilgi kırpmaya zorlanmaz.
                 w = kelime(govde)
                 if w > SINIR["hata"][1]:
-                    ekle("K1", "HATA", p, f"{h} {w} kelime > {SINIR['hata'][1]} — belirti/kök/çözüm/kural öz yaz, ayrıntı koda/belgeye işaret")
-                elif w > SINIR["hata"][0]:
-                    ekle("K1", "UYARI", p, f"{h} {w} kelime > {SINIR['hata'][0]}")
+                    ekle("K1", "UYARI", p, f"{h} gövde {w} kelime > {SINIR['hata'][1]} — tekrar varsa ayıkla, bilgi atma")
+                kw = kelime(kural_satiri(govde))
+                if kw > SINIR["kural"][1]:
+                    ekle("K1", "HATA", p, f"{h} kural satırı {kw} kelime > {SINIR['kural'][1]} — her derste okunur: tek fikir yaz, ayrıntı Çözüm alanına")
+                elif kw > SINIR["kural"][0]:
+                    ekle("K1", "UYARI", p, f"{h} kural satırı {kw} kelime > {SINIR['kural'][0]} (hedef değil, üst sınır)")
                 eksik = [a for a, r in ALANLAR.items() if not r.search(govde)]
                 if eksik:
                     ekle("K1", "HATA", p, f"{h} eksik alan: {', '.join(eksik)} (AGENTS: belirti + kök neden + kalıcı çözüm + kural)")

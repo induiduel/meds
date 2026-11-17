@@ -201,6 +201,6 @@
 
 - H596 — Kimliksiz her istek 100 MB gövde gönderebiliyordu; aynı uç iki kez tanımlıydı, ikincisi yetkisiz süreç başlatıyordu (2026-11-17) — betik denetler: `uc_denetim.py`
 ### H599 — Kurul 2 soru çözücü / en önemliler, ek modüller, KMB ve PDF notlar çevrimdışına indirilemiyordu (2026-11-17)
-- **Önleme kuralı:** Katalog, ön yüzün içerik keşfettiği kuralla AYNI kaynaktan keşfeder; koda yazılı branş/kurul listesi YASAK. Yeni sayfa türü ya da ses ucu eklenince dört yer birlikte: katalog paketi, `sayfaPaketleri.ts`, ses kalıbı üçlüsü + `sw.js` dalı, sınama rota listesi (`docs/CEVRIMDISI_YOL_HARITASI.md` §6). "Ekran açılıyor" çevrimdışı kanıtı değildir; ses/PDF/görsel `sinama.mjs` ile ağ kesilerek doğrulanır.
+- **Önleme kuralı:** Katalog, ön yüzle AYNI kaynaktan keşfeder; koda yazılı branş/kurul listesi YASAK. Yeni sayfa türü/ses ucu dört yere birlikte eklenir: katalog paketi, `sayfaPaketleri.ts`, ses kalıbı + `sw.js` dalı, sınama rotası (`docs/CEVRIMDISI_YOL_HARITASI.md` §6). Çevrimdışı kanıtı ağ kesilerek `sinama.mjs` ile alınır.
 
 

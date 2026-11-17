@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 29 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 30 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -105,4 +105,8 @@
 
 ### H609 — Zengin transkript tablo ayrıştırıcısı sayı sözcüğünü kesiyordu (2026-11-17, geliştirme sırasında)
 - **Önleme:** yapı (tablo/sıra) çıkaran betik emin değilse yapı kurmaz, cümleyi korur; tıbbi sayı kesilmez.
+
+### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici 12 derste "cümle zamanı yok" yanlış alarmı verdi (2026-11-17)
+- **Önleme:** zamanlayıcı kural 20 gereği kapalı kalır; yeni ders yayınından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle çalıştırılır (tam hat `zaman_isaret` adımı). Oracle'da üretilen katman yerel kapıyla "yok" sayılmaz.
+
 
