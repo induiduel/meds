@@ -98,6 +98,50 @@ def varlik(taslak: Path) -> dict[int, dict]:
     return {int(x["sayfa"]): x for x in json.loads(p.read_text(encoding="utf-8"))} if p.exists() else {}
 
 
+def ocr_metni(taslak: Path, n: int) -> str:
+    """Görsel/şema sayfasında PDF metin katmanı yetersizse sayfa görüntüsünü Tesseract ile oku (önbellekli).
+
+    Neden: şema/taranmış slaytlarda gömülü metin ya yok ya bozuk; model görsel anlatacak bilgi bulamayınca o sayfa
+    'anlatılmamış' kalıyordu (kapsam kapısı). OCR yerel ve ücretsizdir; bulut görsel modeli bakiyesi yok (H612).
+    """
+    onbellek = taslak / "ocr" / f"{n}.txt"
+    if onbellek.exists():
+        return onbellek.read_text(encoding="utf-8")
+    png = taslak / "sayfa_goruntu" / f"{n}.png"
+    if not png.exists():
+        return ""
+    r = subprocess.run(["tesseract", str(png), "stdout", "-l", "tur+eng", "--psm", "3"],
+                       capture_output=True, text=True)
+    t = (r.stdout or "").strip()
+    # OCR gürültüsü: tek karakterli satırlar, aşırı noktalama ve uzun rakam dizileri atılır
+    satir = []
+    for s in t.splitlines():
+        s = re.sub(r"\s+", " ", s).strip()
+        if len(s) < 3 or not re.search(r"[A-Za-zÇĞİÖŞÜçğıöşü]{3,}", s):
+            continue
+        satir.append(s)
+    t = "\n".join(satir[:60])
+    onbellek.parent.mkdir(parents=True, exist_ok=True)
+    onbellek.write_text(t, encoding="utf-8")
+    return t
+
+
+def sayfa_metni(taslak: Path, n: int, smetin: dict[int, str], varl: dict[int, dict]) -> str:
+    """Modelin göreceği sayfa metni: gömülü metin + (görsel sayfada) OCR katmanı."""
+    t = smetin.get(n) or ""
+    v = varl.get(n) or {}
+    gorsel = (v.get("gorsel_orani") or 0) >= 0.18 or (v.get("cizim") or 0) >= 25 or bool(v.get("tablolar"))
+    if not gorsel:
+        return t
+    if len(t.split()) >= 45:
+        return t
+    o = ocr_metni(taslak, n)
+    if not o:
+        return t
+    ek = [s for s in o.splitlines() if s and s.lower() not in t.lower()]
+    return (t + "\n" + "\n".join(ek)).strip() if ek else t
+
+
 def katla(s: str) -> str:
     s = (s or "").replace("İ", "i").replace("I", "ı").lower()
     return " ".join(re.sub(r"[^0-9a-zçğıöşü ]+", " ", s).split())
@@ -425,10 +469,19 @@ def main() -> int:
             kokler = set(re.findall(r"[a-zçğıöşü]{5,}", metin_grup))
             yerel = [q for q in adaylar
                      if len(set(re.findall(r"[a-zçğıöşü]{5,}", (q.get("soru") or "").lower())) & kokler) >= 2][:6]
-            sonuc = istek(baglam, smetin, varl, yerel, grup, {n: kusur[n] for n in grup if kusur.get(n)})
+            sonuc = None
+            # Görsel/şema sayfası + az yazı: uzun istem modelde boş dönüyor → kısa istem ÖNCE denenir (H612)
+            gorsel_agirlikli = all(
+                ((varl.get(n) or {}).get("gorsel_orani") or 0) >= 0.18
+                and len((smetin.get(n) or "").split()) < 45 for n in grup)
+            if gorsel_agirlikli:
+                sonuc = istek_kisa(baglam, {n: sayfa_metni(taslak, n, smetin, varl) for n in grup}, grup)
+                if sonuc:
+                    print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: görsel sayfa, kısa istemle alındı", flush=True)
             if not sonuc:
-                # yedek yol: görsel/şema sayfalarında uzun istem boş dönüyor → kısa istem, küçük çıktı (H612)
-                sonuc = istek_kisa(baglam, smetin, grup)
+                sonuc = istek(baglam, smetin, varl, yerel, grup, {n: kusur[n] for n in grup if kusur.get(n)})
+            if not sonuc and not gorsel_agirlikli:
+                sonuc = istek_kisa(baglam, {n: sayfa_metni(taslak, n, smetin, varl) for n in grup}, grup)
                 if sonuc:
                     print(f"  [tur {tur}] s{grup[0]}–{grup[-1]}: kısa istemle alındı", flush=True)
             if not sonuc and len(grup) > 1:
