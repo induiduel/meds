@@ -1,0 +1,5651 @@
+{
+ "surum": 2,
+ "ders_id": "k3-10",
+ "anahtar": "y25-k3-10-akut-pankreatit",
+ "baslik": "Akut Pankreatit",
+ "donem": "2025-2026",
+ "bolumler": [
+  {
+   "id": "k3-10-b01",
+   "baslik": "Akut Pankreatit",
+   "paragraflar": [
+    {
+     "id": "k3-10-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-10-c0001",
+       "ses": "Pankreas bezi, karın içinde yer alan ve salgı işlevi bulunan önemli bir organdır.",
+       "ekran": "**Pankreas bezi** salgı yapan organ",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Pankreas bezi;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas bezi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0002",
+       "ses": "Retroperitoneal yerleşim, pankreasın karın zarının arkasında bulunduğunu anlatır.",
+       "ekran": "**Retroperitoneal** karın zarı arkası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Retroperitoneal,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Retroperitoneal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0003",
+       "ses": "Ekzokrin ve endokrin fonksiyon, pankreasın hem dışa hem içe salgı yapabilen bir bez olduğunu gösterir.",
+       "ekran": "**Ekzokrin ve endokrin** dış ve iç salgı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Ekzokrin ve endokrin fonksiyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ekzokrin ve endokrin",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ekzokrin ve endokrin",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-pat-001"
+       ]
+      },
+      {
+       "id": "k3-10-c0004",
+       "ses": "Yüz gram ağırlık, pankreas bezi için slaytta verilen ortalama ağırlık bilgisidir.",
+       "ekran": "**Yüz gram** ortalama ağırlık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "100 gr ağırlığında"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yüz gram",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0005",
+       "ses": "On iki ila on beş santimetre uzunluk, pankreasın karın içindeki anatomik yayılımını gösterir.",
+       "ekran": "**On iki ila on beş santimetre** uzunluk",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "12-15 cm uzunluğunda"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "On iki ila on beş santimetre",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-10-c0006",
+       "ses": "Bölümleri ifadesi, pankreasın baş, korpus, kuyruk ve uncinat prosess olarak ayrıldığını anlatır.",
+       "ekran": "**Bölümleri** baş korpus kuyruk uncinat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Bölümleri;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bölümleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0007",
+       "ses": "Baş, pankreasın bölümleri arasında sayılan ve anatomik tanımlamada yer alan kısımdır.",
+       "ekran": "**Baş** pankreas bölümü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Baş"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Baş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0008",
+       "ses": "Korpus, pankreasın bölümleri arasında yer alan ve gövde kısmını ifade eden anatomik bölümdür.",
+       "ekran": "**Korpus** gövde bölümü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Korpus"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Korpus",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0009",
+       "ses": "Kuyruk, pankreasın bölümleri arasında yer alan ve uç kısmı ifade eden anatomik bölümdür.",
+       "ekran": "**Kuyruk** uç bölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kuyruk"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kuyruk",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0010",
+       "ses": "Uncinat prosess, pankreasın bölümleri arasında sayılan özel anatomik oluşumdur.",
+       "ekran": "**Uncinat prosess** özel anatomik oluşum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Uncinat prosess"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Uncinat prosess",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p003",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-10-c0011",
+       "ses": "Pankreas anatomisi şeması, bezin retroperitoneal yerleşimini ve baş, korpus, kuyruk ile uncinat prosess bölümlerini gösterir.",
+       "ekran": "**Pankreas anatomisi** yerleşim ve bölümler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [],
+        "sekil": "pankreas anatomisi şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas anatomisi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p004",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-10-c0012",
+       "ses": "Safra kesesi ve kistik arter, safra yolları şemasında safra kesesine eşlik eden damarı gösterir.",
+       "ekran": "**Kistik arter** safra kesesi komşuluğunda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "üst karın damar ve safra yolu anatomisi şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Kistik arter",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0013",
+       "ses": "Kistik arterin safra kesesi çevresinde seyretmesi cerrahi sırasında yaralanma ve kanama açısından dikkat gerektirir.",
+       "ekran": "**Kistik arter** safra kesesi komşuluğunda",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Kistik arter",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0014",
+       "ses": "Sağ ve sol hepatik arterler ile orak bağ, karaciğer çevresindeki damar ve bağ yapılarını gösterir.",
+       "ekran": "**Hepatik arterler** ve orak bağ",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "karaciğer çevresi damar ve bağ yapıları şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatik arterler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0015",
+       "ses": "Alt ana toplardamar ise karaciğerin arkasındaki büyük toplardamar komşuluğunu açıklar.",
+       "ekran": "**Hepatik arterler** ve orak bağ",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Hepatik arterler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0016",
+       "ses": "Portal toplardamar, ortak hepatik arter ve gastroduodenal arter, safra yollarına komşu majör damarları gösterir.",
+       "ekran": "**Portal ve mezenterik** damar komşuluğu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "portal ve mezenterik damar komşuluğu şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Portal ve mezenterik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p005",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-10-c0017",
+       "ses": "Üst mezenterik arter ve üst mezenterik toplardamar, duodenum ile pankreas başı arasındaki damar komşuluğunu tamamlar.",
+       "ekran": "**Portal ve mezenterik** damar komşuluğu",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Portal ve mezenterik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0018",
+       "ses": "Duodenum, pankreas başı ve Vater ampullası, safra ve pankreas kanallarının bağırsağa açıldığı bölgeyi gösterir.",
+       "ekran": "**Vater ampullası** ortak açılım bölgesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "duodenum pankreas başı ve Vater ampullası şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Vater ampullası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0019",
+       "ses": "Ampulla düzeyindeki tıkanıklık hem safra hem pankreas akımını etkileyerek pankreatit ve sarılık oluşturabilir.",
+       "ekran": "**Vater ampullası** ortak açılım bölgesi",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Vater ampullası",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0020",
+       "ses": "Çölyak gövdesi, sol gastrik arter, dalak arteri, mide ve dalak, üst karın arteriyel dallanmasını gösterir.",
+       "ekran": "**Çölyak dalları** mide dalak pankreas",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "çölyak gövdesi ve dalak çevresi arter şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Çölyak dalları",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0021",
+       "ses": "Dalak arterinin pankreas üst kenarı boyunca seyretmesi pankreas cerrahisinde komşuluk olarak önemlidir.",
+       "ekran": "**Çölyak dalları** mide dalak pankreas",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Çölyak dalları",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p006",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-10-c0022",
+       "ses": "Safra kanalı bölümleri, sağ ve sol hepatik kanalların ortak hepatik kanalı oluşturmasını ve kistik kanalla birleşerek ortak safra kanalına geçişi gösterir.",
+       "ekran": "**Ortak safra kanalı** bölümleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "safra kanalı bölümleri şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Ortak safra kanalı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0023",
+       "ses": "Ortak safra kanalının supraduodenal, retroduodenal, retropankreatik ve duvar içi bölümleri vardır.",
+       "ekran": "**Ortak safra kanalı** bölümleri",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Ortak safra kanalı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0024",
+       "ses": "Retropankreatik bölüm pankreas başı içinden geçtiği için buradaki tıkanıklık pankreatit ve sarılıkla ilişkilidir.",
+       "ekran": "**Ortak safra kanalı** bölümleri",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Ortak safra kanalı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0025",
+       "ses": "Ana pankreas kanalı Wirsung ve aksesuar pankreas kanalı Santorini, pankreas salgısının duodenuma drenaj yolunu gösterir.",
+       "ekran": "**Wirsung ve Santorini** drenaj yolları",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "pankreas kanalları şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Wirsung ve Santorini",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0026",
+       "ses": "Ana kanal Vater ampullasına açılırken aksesuar kanal ayrı bir açılım gösterebilir.",
+       "ekran": "**Wirsung ve Santorini** drenaj yolları",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Wirsung ve Santorini",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p007",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k3-10-c0027",
+       "ses": "Görsel, kistik arter ile sağ hepatik arterin anatomik seyrini ve birbirine göre konumunu gösteren bir çizim olarak okunmalıdır.",
+       "ekran": "**kistik arter** ve sağ hepatik arter",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "kistik arter ve sağ hepatik arter seyri"
+       },
+       "vurgu": [
+        {
+         "metin": "kistik arter",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0028",
+       "ses": "Bu çizimde kistik arterin sağ hepatik arterle komşuluğu, bölüm başlığındaki damar yapılarını ilişkilendirmek için öne çıkar.",
+       "ekran": "**kistik arter** ve sağ hepatik arter",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "kistik arter",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0029",
+       "ses": "Görseldeki damar seyri, sağ hepatik arterin dallanma düzenini ve kistik arterin bu düzendeki yerini anlamaya yardımcı olur.",
+       "ekran": "**kistik arter** ve sağ hepatik arter",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "kistik arter",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p008",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-10-c0030",
+       "ses": "Akut pankreatit karın ağrısıyla başlayan ve pankreas inflamasyonu ile pankreas enzimlerinin yüksekliğinin eşlik ettiği akut klinik tablodur.",
+       "ekran": "**Akut pankreatit** pankreas inflamasyonu ve enzim yüksekliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Akut pankreatit(AP), karın ağrısı ile başlayan ve pankreasın inflamasyonu sonucu pankreas enzimlerinin yüksekliği ile birlikte seyreden akut bir klinik tablodur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut pankreatit",
+         "tur": "terim"
+        },
+        {
+         "metin": "Akut pankreatit",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877036934-836859"
+       ]
+      },
+      {
+       "id": "k3-10-c0031",
+       "ses": "Akut pankreatit tanısı için üç temel ölçüt tanımlanır.",
+       "ekran": "**Tanı için** üç ölçüt",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Tanı için:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tanı için",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tanı için",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-001"
+       ]
+      },
+      {
+       "id": "k3-10-c0032",
+       "ses": "Klinik bulgu akut pankreatit tanısında kullanılan ilk ölçüttür.",
+       "ekran": "**Klinik bulgu** tanı ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "1)KLİNİK BULGU"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik bulgu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0033",
+       "ses": "Amilaz veya lipazın normalin üç katından yüksek olması tanı ölçütlerinden biridir.",
+       "ekran": "**Amilaz veya lipaz** normalin üç katı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "2)AMİLAZ ve/veya LİPAZ > NORMALİN 3 KATI"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Amilaz veya lipaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0034",
+       "ses": "Radyolojik bulgu akut pankreatit tanısında üçüncü ölçüt olarak yer alır.",
+       "ekran": "**Radyolojik bulgu** tanı ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "3)RADYOLOJİK BULGU"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Radyolojik bulgu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p009",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-10-c0035",
+       "ses": "Üç tanı ölçütünden ikisinin bulunması akut pankreatit tanısı için yeterlidir.",
+       "ekran": "**Üç ölçütten ikisi** tanı için yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "3 TANESİNDEN 2 Sİ OLMASI YETERLİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üç ölçütten ikisi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Üç ölçütten ikisi",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3k2-2023-2024-k3-h41",
+        "ffacb5ff6b02",
+        "a6edd7dbb8e3"
+       ]
+      },
+      {
+       "id": "k3-10-c0036",
+       "ses": "Akut pankreatit tanı ölçütleri şeması klinik bulgu, enzim yüksekliği ve radyolojik bulgudan ikisinin yeterli olduğunu gösterir.",
+       "ekran": "**Tanı şeması** iki ölçüt yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [],
+        "sekil": "akut pankreatit tanı ölçütleri şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Tanı şeması",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b02",
+   "baslik": "EPİDEMİYOLOJİ",
+   "paragraflar": [
+    {
+     "id": "k3-10-p010",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-10-c0037",
+       "ses": "Epidemiyoloji başlığı akut pankreatitin sıklığını ve ölüm nedenlerinin zamanlamasını birlikte ele alır.",
+       "ekran": "**Epidemiyoloji** sıklık ve mortalite",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "EPİDEMİYOLOJİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Epidemiyoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0038",
+       "ses": "Akut pankreatit insidansı yüz binde beş ile otuz beş arasında değişir.",
+       "ekran": "**İnsidans** yüz binde beş ile otuz beş",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "İnsidans: 5–35/100.000"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnsidans",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0039",
+       "ses": "Mortalitenin en büyük sebebi akut pankreatitin erken ve geç dönemine göre farklılaşır.",
+       "ekran": "**Mortalite** döneme göre değişir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Mortalitenin en büyük sebebi:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Mortalite",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0040",
+       "ses": "İlk iki haftada ölümlerin ana nedeni sistemik inflamatuvar yanıt sendromu ve organ yetersizliğidir.",
+       "ekran": "**İlk iki hafta** sistemik inflamatuvar yanıt ve organ yetersizliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "İlk 2 haftada SIRS ve organ yetersizliği,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlk iki hafta",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0041",
+       "ses": "İki haftadan sonra ise sepsis ve diğer komplikasyonlar mortaliteden sorumlu olur.",
+       "ekran": "**İki haftadan sonra** sepsis ve komplikasyonlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2 haftadan sonra ise sepsis ve diğer komplikasyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İki haftadan sonra",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p011",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-10-c0042",
+       "ses": "Pankreatit başlatan mekanizmalar, pankreatitte başlangıç sürecini açıklayan başlıktır.",
+       "ekran": "**Pankreatit başlatan mekanizmalar**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "PANKREATİT BAŞLATAN MEKANİZMALAR"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatit başlatan mekanizmalar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0043",
+       "ses": "Başlık altında kanal tıkanması, iskemi ve zimojen granül aktivasyonu gibi teoriler sıralanır.",
+       "ekran": "**Pankreatit başlatan mekanizmalar**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "PANKREATİT BAŞLATAN MEKANİZMALAR"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatit başlatan mekanizmalar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0044",
+       "ses": "Teoriler, pankreatit başlatan mekanizmaları açıklamak için sıralanan başlıklardır.",
+       "ekran": "**Teoriler** başlığı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "TEORİLER"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Teoriler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0045",
+       "ses": "Bu başlık altında pankreas kanalı tıkanma teorisi, pankreatik iskemi ve zimojen granüllerin asini içerisinde aktivasyonu yer alır.",
+       "ekran": "**Teoriler** başlığı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "TEORİLER"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Teoriler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0046",
+       "ses": "Pankreas kanalı tıkanma teorisi, pankreatit başlatan mekanizmalardan biridir.",
+       "ekran": "**Pankreas kanalı tıkanma teorisi**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "1)PANKREAS KANALI TIKANMA TEORİSİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas kanalı tıkanma teorisi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p012",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-10-c0047",
+       "ses": "Teori, kanalın tıkanmasını başlatıcı bir yol olarak ele alır.",
+       "ekran": "**Pankreas kanalı tıkanma teorisi**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "1)PANKREAS KANALI TIKANMA TEORİSİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas kanalı tıkanma teorisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0048",
+       "ses": "Pankreatik iskemi, pankreatit başlatan mekanizmalar arasında sayılan bir teoridir.",
+       "ekran": "**Pankreatik iskemi**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "2)PANREATİK İSKEMİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik iskemi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0049",
+       "ses": "Bu teori pankreatik iskemi başlığıyla ayrı bir başlatıcı mekanizma olarak listelenir.",
+       "ekran": "**Pankreatik iskemi**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "2)PANREATİK İSKEMİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik iskemi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0050",
+       "ses": "Zimojen granüllerin asini içerisinde aktivasyonu, pankreatit başlatan üçüncü teori olarak verilir.",
+       "ekran": "**Zimojen granüllerin asini içinde aktivasyonu**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "3)ZİMOJEN GRANÜLLERİN ASİNİ İÇERİSİNDE AKTİVASYONU"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Zimojen granüllerin asini içinde aktivasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0051",
+       "ses": "Bu mekanizmada zimojen granüllerin asini içinde aktive olması başlatıcı süreç olarak tanımlanır.",
+       "ekran": "**Zimojen granüllerin asini içinde aktivasyonu**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "3)ZİMOJEN GRANÜLLERİN ASİNİ İÇERİSİNDE AKTİVASYONU"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Zimojen granüllerin asini içinde aktivasyonu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p013",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-10-c0052",
+       "ses": "Pankreatit başlatan mekanizmalar şeması, teorilerin görsel düzenini gösterir.",
+       "ekran": "**Pankreatit başlatan mekanizmalar** şeması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "pankreatit başlatan mekanizmalar şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatit başlatan mekanizmalar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0053",
+       "ses": "Görselde kanal tıkanması, pankreatik iskemi ve zimojen granül aktivasyonu başlıkları yer alır.",
+       "ekran": "**Pankreatit başlatan mekanizmalar** şeması",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Pankreatit başlatan mekanizmalar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p014",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-10-c0054",
+       "ses": "Tripsinin aktivasyonu aktive lökositler üzerinden sitokin salınımını başlatır.",
+       "ekran": "**Tripsin** aktive lökosit ve sitokin",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Tripsinin lökositleri uyararak sitokin salgılatması"
+       },
+       "vurgu": [
+        {
+         "metin": "Tripsin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0055",
+       "ses": "Sitokinler arasında interlökinler ve tümör nekroz faktörü alfa bulunur.",
+       "ekran": "**Sitokinler** interlökin ve tümör nekroz faktörü alfa",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Sitokinlerde interlökin ve tümör nekroz faktörü alfa"
+       },
+       "vurgu": [
+        {
+         "metin": "Sitokinler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0056",
+       "ses": "Nitrik oksit ve serbest oksijen radikalleri inflamatuvar yanıtta açığa çıkar.",
+       "ekran": "**Nitrik oksit** ve serbest oksijen radikalleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Nitrik oksit ve serbest oksijen radikalleri"
+       },
+       "vurgu": [
+        {
+         "metin": "Nitrik oksit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0057",
+       "ses": "Bu mediyatörler endotel hücrelerini etkileyerek damar duvarında işlev değişikliği yapar.",
+       "ekran": "**Endotel hücreleri** mediyatör hedefi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Endotel hücrelerinin mediyatörlerden etkilenmesi"
+       },
+       "vurgu": [
+        {
+         "metin": "Endotel hücreleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0058",
+       "ses": "Endotel etkilenmesi damar geçirgenliğini artırır ve dolaşım bozukluğu şoka zemin hazırlar.",
+       "ekran": "**Damar geçirgenliği** artışı ve şok",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Damar geçirgenliği artışı ve şok"
+       },
+       "vurgu": [
+        {
+         "metin": "Damar geçirgenliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p015",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-10-c0059",
+       "ses": "Tromboz ve yaygın damar içi pıhtılaşma tabloya eklenebilir.",
+       "ekran": "**Tromboz** ve yaygın damar içi pıhtılaşma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Tromboz ve yaygın damar içi pıhtılaşma"
+       },
+       "vurgu": [
+        {
+         "metin": "Tromboz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p016",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-10-c0060",
+       "ses": "Safra taşları ve safra çamuru akut pankreatit etyolojisinde yer alan nedenlerdir.",
+       "ekran": "**Safra taşı** ve çamur sık neden",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Safra taşı ve çamur nedeni"
+       },
+       "vurgu": [
+        {
+         "metin": "Safra taşı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Safra taşı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-020",
+        "889770b35fca",
+        "k1-2018-2019-q015",
+        "past-1790877035870-504742"
+       ]
+      },
+      {
+       "id": "k3-10-c0061",
+       "ses": "Alkol kullanımı akut pankreatit etyolojisinde önemli bir neden olarak belirtilir.",
+       "ekran": "**Alkol** önemli etyolojik etken",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Alkol kullanımıyla ilişkili etyolojik etken"
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0062",
+       "ses": "Hipertrigliseridemi ve hiperkalsemi metabolik nedenler olarak akut pankreatit etyolojisinde sayılır.",
+       "ekran": "**Hipertrigliseridemi** ve hiperkalsemi metabolik neden",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Metabolik bozukluk olarak trigliserid ve kalsiyum"
+       },
+       "vurgu": [
+        {
+         "metin": "Hipertrigliseridemi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hipertrigliseridemi",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "a947d4f854d1",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-126",
+        "21bc5cd835cd",
+        "ae02daae482a",
+        "90451648404a"
+       ]
+      },
+      {
+       "id": "k3-10-c0063",
+       "ses": "Genetik risk ve ilaç kullanımı akut pankreatit etyolojisinde rol oynayan faktörlerdendir.",
+       "ekran": "**Genetik risk** ve ilaçlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Genetik yatkınlık ve ilaç etkisi"
+       },
+       "vurgu": [
+        {
+         "metin": "Genetik risk",
+         "tur": "terim"
+        },
+        {
+         "metin": "Genetik risk",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877035555-226035"
+       ]
+      },
+      {
+       "id": "k3-10-c0064",
+       "ses": "Anatomik veya fizyolojik pankreas anomalileri, vasküler hastalık ve endoskopik retrograd kolanjiyopankreatografi akut pankreatit nedenleri arasında yer alır.",
+       "ekran": "**Anomaliler** damarsal hastalık ve girişim",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Yapısal damarsal ve girişimsel nedenler"
+       },
+       "vurgu": [
+        {
+         "metin": "Anomaliler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p017",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-10-c0065",
+       "ses": "İdiopatik olgular, enfeksiyonlar, toksinler ve travma da etyolojide değerlendirilir.",
+       "ekran": "**İdiopatik** enfeksiyon toksin travma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Bilinmeyen enfeksiyon toksin ve travma"
+       },
+       "vurgu": [
+        {
+         "metin": "İdiopatik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b03",
+   "baslik": "İLAÇLAR",
+   "paragraflar": [
+    {
+     "id": "k3-10-p018",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-10-c0066",
+       "ses": "İlaçlar başlığı akut pankreatitte ilaçla indüklenen tabloyu ele alır ve bazı ilaçların pankreatit nedeni olabileceğini düşündürür.",
+       "ekran": "**İlaçlar** akut pankreatit başlığı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İLAÇLAR"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlaçlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0067",
+       "ses": "Mark Jones tarafından hazırlanan ilaçla indüklenen akut pankreatit derlemesi Ochsner Journal dergisinde yayımlanmıştır.",
+       "ekran": "**Kaynak** ilaç ilişkili pankreatit derlemesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Mark R. Jones, Drug-Induced Acute Pancreatitis: A Review, The Ochsner Journal 15:45–51, 2015"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kaynak",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0068",
+       "ses": "Görsel şema ilaçla indüklenen akut pankreatit başlığını destekler ve ilaçların pankreatit ile ilişkisini öne çıkarır.",
+       "ekran": "**Şema** ilaç ilişkili pankreatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "ilaç ilişkili akut pankreatit şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Şema",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p019",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-10-c0069",
+       "ses": "Hafif akut pankreatitte organ yetmezliği bulunmaz, lokal veya sistemik komplikasyon ve peri pankreatik nekroz da izlenmez.",
+       "ekran": "**Hafif** akut pankreatit komplikasyonsuz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [],
+        "sekil": "organ yetmezliği ve komplikasyon yok"
+       },
+       "vurgu": [
+        {
+         "metin": "Hafif",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hafif",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "6d6412718bb5",
+        "d3k2-2023-2024-k3-h7"
+       ]
+      },
+      {
+       "id": "k3-10-c0070",
+       "ses": "Orta ciddiyette akut pankreatit geçici organ yetmezliği ile ya da steril peri pankreatik nekroz varlığıyla tanımlanır.",
+       "ekran": "**Orta ciddiyet** geçici yetmezlik steril nekroz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [],
+        "sekil": "geçici yetmezlik ve steril nekroz"
+       },
+       "vurgu": [
+        {
+         "metin": "Orta ciddiyet",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0071",
+       "ses": "Ciddi akut pankreatit kırk sekiz saatten uzun süren kalıcı organ yetmezliği tablosuyla karakterizedir.",
+       "ekran": "**Ciddi** kalıcı organ yetmezliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [],
+        "sekil": "kırk sekiz saatten uzun yetmezlik"
+       },
+       "vurgu": [
+        {
+         "metin": "Ciddi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0072",
+       "ses": "Kritik akut pankreatit tablosunda kalıcı organ yetmezliğine enfekte peri pankreatik nekroz eşlik eder.",
+       "ekran": "**Kritik** enfekte nekroz eklendi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [],
+        "sekil": "kalıcı yetmezlik ve enfekte nekroz"
+       },
+       "vurgu": [
+        {
+         "metin": "Kritik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0073",
+       "ses": "Revize Atlanta sınıflaması ciddiyeti organ yetmezliğinin süresine ve nekrozun steril ya da enfekte olmasına göre ayırır.",
+       "ekran": "**Revize Atlanta** ciddiyet sınıflaması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [],
+        "sekil": "ciddiyeti belirleyen revize sınıflama"
+       },
+       "vurgu": [
+        {
+         "metin": "Revize Atlanta",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p020",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-10-c0074",
+       "ses": "Modified Marshall skoru solunum sistemi için oksijen parsiyel basıncının inspiratuar oksijen fraksiyonuna oranını kullanır.",
+       "ekran": "**Solunum** oksijen oranı skoru",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [],
+        "sekil": "oksijen oranı ile solunum skoru"
+       },
+       "vurgu": [
+        {
+         "metin": "Solunum",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0075",
+       "ses": "Böbrek fonksiyonu bu skorlamada serum kreatinin düzeyi üzerinden değerlendirilir.",
+       "ekran": "**Renal** serum kreatinini",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [],
+        "sekil": "serum kreatinin ile böbrek skoru"
+       },
+       "vurgu": [
+        {
+         "metin": "Renal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0076",
+       "ses": "Kardiyovasküler sistemde sıvı tedavisine yanıtsız hipotansiyon ve asidoz varlığı skorlanır.",
+       "ekran": "**Kardiyovasküler** yanıtsız hipotansiyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [],
+        "sekil": "sıvıya yanıtsız hipotansiyon"
+       },
+       "vurgu": [
+        {
+         "metin": "Kardiyovasküler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0077",
+       "ses": "Herhangi bir sistemde iki ve üzeri skor alınması organ yetmezliği varlığını tanımlar.",
+       "ekran": "**İki ve üzeri** organ yetmezliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [],
+        "sekil": "iki ve üzeri skor yetmezlik"
+       },
+       "vurgu": [
+        {
+         "metin": "İki ve üzeri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0078",
+       "ses": "Nonventile hastalarda inspiratuar oksijen fraksiyonu verilen destek oksijen akımından tahmin edilebilir.",
+       "ekran": "**Nonventile** fraksiyon tahmini",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [],
+        "sekil": "nonventile hastada oksijen tahmini"
+       },
+       "vurgu": [
+        {
+         "metin": "Nonventile",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p021",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-10-c0079",
+       "ses": "Kronik böbrek yetmezliği olan hastalarda skor bazal böbrek fonksiyonundaki bozulmanın derecesine göre yorumlanır.",
+       "ekran": "**Kronik** bazal fonksiyona göre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [],
+        "sekil": "kronik böbrek yetmezliğinde yorum"
+       },
+       "vurgu": [
+        {
+         "metin": "Kronik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p022",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-10-c0080",
+       "ses": "Ranson kriterleri başvuru sırasında elli beş yaş üzerini ve hematokritte yüzde ondan fazla azalmayı değerlendirir.",
+       "ekran": "**Yaş** hematokrit düşüşü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "yaş ve hematokrit düşüşü"
+       },
+       "vurgu": [
+        {
+         "metin": "Yaş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0081",
+       "ses": "Başvuruda lökosit yüksekliği, glukoz yüksekliği ve laktat dehidrogenaz yüksekliği kötü prognostik göstergeler arasında sayılır.",
+       "ekran": "**Lökosit** glukoz laktat dehidrogenaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "lökosit glukoz laktat dehidrogenaz"
+       },
+       "vurgu": [
+        {
+         "metin": "Lökosit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0082",
+       "ses": "Kalsiyum düşüklüğü ve baz defisiti artışı başvuruda bakılan diğer metabolik parametrelerdir.",
+       "ekran": "**Kalsiyum** baz defisiti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "kalsiyum ve baz defisiti"
+       },
+       "vurgu": [
+        {
+         "metin": "Kalsiyum",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0083",
+       "ses": "Oksijen parsiyel basıncının düşük saptanması akciğer etkilenmesini ve solunumsal bozulmayı gösterir.",
+       "ekran": "**Oksijen** parsiyel basıncı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "oksijen basıncı düşüklüğü"
+       },
+       "vurgu": [
+        {
+         "metin": "Oksijen",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0084",
+       "ses": "Kırk sekizinci saatte üre azotu artışı ve sıvı defisiti yeniden değerlendirilerek skor tamamlanır.",
+       "ekran": "**Kırk sekizinci saat** üre azotu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "kırk sekizinci saatte yeniden bakı"
+       },
+       "vurgu": [
+        {
+         "metin": "Kırk sekizinci saat",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p023",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-10-c0085",
+       "ses": "Ranson skoru yükseldikçe hastanede ölüm oranı belirgin biçimde artar.",
+       "ekran": "**Skor** mortalite ilişkisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [],
+        "sekil": "skor arttıkça mortalite yükselir"
+       },
+       "vurgu": [
+        {
+         "metin": "Skor",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p024",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-10-c0086",
+       "ses": "Be i es a pe skoru akut pankreatitin ciddiyetini gösterir ve bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Be i es a pe** her kriter bir puan, ikiden büyük skor ciddi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "BISAP; her kriter 1 puan olup skorun >2 olması ciddi akut pankreatit demektir."
+        ],
+        "sekil": "BISAP; her kriter 1 puan olup skorun >2 olması ciddi akut pankreatit demektir."
+       },
+       "cikmis": [
+        "f8f87f4f2960"
+       ],
+       "vurgu": [
+        {
+         "metin": "Be i es a pe",
+         "tur": "terim"
+        },
+        {
+         "metin": "Be i es a pe",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0087",
+       "ses": "Skorda her kriter bir puan olarak sayılır ve toplam skorun ikiden büyük olması ciddi akut pankreatit anlamına gelir.",
+       "ekran": "**Be i es a pe** her kriter bir puan, ikiden büyük skor ciddi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "BISAP; her kriter 1 puan olup skorun >2 olması ciddi akut pankreatit demektir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Be i es a pe",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0088",
+       "ses": "Kriterler biriktikçe hastanın yoğun bakım gereksinimi ve ölüm riski belirgin biçimde artar.",
+       "ekran": "**Be i es a pe** her kriter bir puan, ikiden büyük skor ciddi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "BISAP; her kriter 1 puan olup skorun >2 olması ciddi akut pankreatit demektir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Be i es a pe",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0089",
+       "ses": "Kan üre azot seviyesinin yüksekliği be i es a pe skorunun kriterlerinden biridir.",
+       "ekran": "**Üre azotu** sekiz virgül dokuz ve yirmi beş üstü bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kan üre azot seviyesi >8.9 mmol/l />25 mg/dl"
+        ]
+       },
+       "cikmis": [
+        "f8f87f4f2960"
+       ],
+       "vurgu": [
+        {
+         "metin": "Üre azotu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Üre azotu",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0090",
+       "ses": "Değer sekiz virgül dokuz milimol bölü litreden ya da yirmi beş miligram bölü desilitreden yüksekse bu kriter bir puan sayılır.",
+       "ekran": "**Üre azotu** sekiz virgül dokuz ve yirmi beş üstü bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kan üre azot seviyesi >8.9 mmol/l />25 mg/dl"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üre azotu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p025",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-10-c0091",
+       "ses": "Yüksek üre azotu böbrek perfüzyonunun azaldığını, yani dolaşımın bozulduğunu gösterir.",
+       "ekran": "**Üre azotu** sekiz virgül dokuz ve yirmi beş üstü bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kan üre azot seviyesi >8.9 mmol/l />25 mg/dl"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üre azotu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0092",
+       "ses": "Bilinç durumunda bozulma da be i es a pe skorunda bir puanlık kriterdir.",
+       "ekran": "**Bilinç bozukluğu** bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Bilinç durumunda bozulma"
+        ]
+       },
+       "cikmis": [
+        "f8f87f4f2960"
+       ],
+       "vurgu": [
+        {
+         "metin": "Bilinç bozukluğu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bilinç bozukluğu",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0093",
+       "ses": "Bilinç değişikliği hipoperfüzyon, hipoksemi ya da sepsis gibi sistemik bir bozukluğun işaretidir.",
+       "ekran": "**Bilinç bozukluğu** bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Bilinç durumunda bozulma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bilinç bozukluğu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0094",
+       "ses": "Bu nedenle bilinci bozulan pankreatit hastası ciddi hastalık grubunda değerlendirilir.",
+       "ekran": "**Bilinç bozukluğu** bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Bilinç durumunda bozulma"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bilinç bozukluğu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0095",
+       "ses": "Sistemik inflamatuvar yanıt sendromunun varlığı skorun bir diğer kriteridir.",
+       "ekran": "**Sistemik inflamatuvar yanıt** varlığı bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "SIRS (sistemik inflmatuar yanıt sendromu) varlığı"
+        ]
+       },
+       "cikmis": [
+        "f8f87f4f2960"
+       ],
+       "vurgu": [
+        {
+         "metin": "Sistemik inflamatuvar yanıt",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sistemik inflamatuvar yanıt",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p026",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-10-c0096",
+       "ses": "Pankreastaki iltihap kana yayıldığında ateş, nabız artışı ve lökosit değişikliğiyle bu yanıt ortaya çıkar.",
+       "ekran": "**Sistemik inflamatuvar yanıt** varlığı bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "SIRS (sistemik inflmatuar yanıt sendromu) varlığı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sistemik inflamatuvar yanıt",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0097",
+       "ses": "Yanıtın varlığı hastalığın artık tüm vücudu etkilediğini gösterir.",
+       "ekran": "**Sistemik inflamatuvar yanıt** varlığı bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "SIRS (sistemik inflmatuar yanıt sendromu) varlığı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sistemik inflamatuvar yanıt",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0098",
+       "ses": "Altmış yaşın üstünde olmak be i es a pe skoruna bir puan ekler.",
+       "ekran": "**Altmış yaş üstü** bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         ">60 yaş"
+        ]
+       },
+       "cikmis": [
+        "f8f87f4f2960"
+       ],
+       "vurgu": [
+        {
+         "metin": "Altmış yaş üstü",
+         "tur": "terim"
+        },
+        {
+         "metin": "Altmış yaş üstü",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0099",
+       "ses": "İleri yaşta fizyolojik rezerv azaldığı için aynı şiddetteki pankreatit daha ağır seyreder.",
+       "ekran": "**Altmış yaş üstü** bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         ">60 yaş"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Altmış yaş üstü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0100",
+       "ses": "Bu yüzden yaş tek başına ciddiyet değerlendirmesine giren bir ölçüttür.",
+       "ekran": "**Altmış yaş üstü** bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         ">60 yaş"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Altmış yaş üstü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p027",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-10-c0101",
+       "ses": "Radyografide plevral efüzyon görülmesi skorun son kriteridir.",
+       "ekran": "**Plevral efüzyon** radyografide bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Radyografide plevral efüzyon"
+        ]
+       },
+       "cikmis": [
+        "f8f87f4f2960"
+       ],
+       "vurgu": [
+        {
+         "metin": "Plevral efüzyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Plevral efüzyon",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0102",
+       "ses": "Pankreas enzimleri ve iltihaplı sıvı diyafragmaya ulaştığında akciğer zarı altında sıvı toplanır.",
+       "ekran": "**Plevral efüzyon** radyografide bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Radyografide plevral efüzyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Plevral efüzyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0103",
+       "ses": "Bu bulgu iltihabın karın dışına taştığını ve solunumu etkilediğini anlatır.",
+       "ekran": "**Plevral efüzyon** radyografide bir puan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Radyografide plevral efüzyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Plevral efüzyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b04",
+   "baslik": "Epigastrik karın ağrısı",
+   "paragraflar": [
+    {
+     "id": "k3-10-p028",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-10-c0104",
+       "ses": "Epigastrik karın ağrısı akut pankreatitin en tipik yakınmasıdır.",
+       "ekran": "**Epigastrik ağrı** en tipik yakınma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Epigastrik karın ağrısı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Epigastrik ağrı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0105",
+       "ses": "Ağrı mide bölgesinde başlar ve hastanın başvurusunu belirleyen ana bulgudur.",
+       "ekran": "**Epigastrik ağrı** en tipik yakınma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Epigastrik karın ağrısı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Epigastrik ağrı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0106",
+       "ses": "Pankreas kapsülünün gerilmesi ve çevre dokunun iltihabı bu ağrıyı doğurur.",
+       "ekran": "**Epigastrik ağrı** en tipik yakınma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Epigastrik karın ağrısı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Epigastrik ağrı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0107",
+       "ses": "Alkole bağlı pankreatitte ağrı yavaş başlar ve hasta yerini iyi gösteremez.",
+       "ekran": "**Alkol pankreatiti** yavaş başlangıç, kötü lokalizasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Alkole bağlı pankreatit>>ağrı;yavaş başlangıç kötü lokalizasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol pankreatiti",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0108",
+       "ses": "Lokalizasyonun kötü olması hekimi yanıltarak tanıyı geciktirebilir.",
+       "ekran": "**Alkol pankreatiti** yavaş başlangıç, kötü lokalizasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Alkole bağlı pankreatit>>ağrı;yavaş başlangıç kötü lokalizasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol pankreatiti",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p029",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-10-c0109",
+       "ses": "Ağrının yavaş ve künt başlaması alkol nedenli tabloya özgü bir ipucudur.",
+       "ekran": "**Alkol pankreatiti** yavaş başlangıç, kötü lokalizasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Alkole bağlı pankreatit>>ağrı;yavaş başlangıç kötü lokalizasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol pankreatiti",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0110",
+       "ses": "Hastaların yaklaşık yüzde ellisinde ağrı sırta doğru yayılır.",
+       "ekran": "**Sırta yayılım** hastaların yüzde ellisinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yüzde 50'sinde ağrı sırtta yayılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sırta yayılım",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0111",
+       "ses": "Pankreasın karın zarının arkasında yerleşmesi ağrının sırt yayılımını açıklar.",
+       "ekran": "**Sırta yayılım** hastaların yüzde ellisinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yüzde 50'sinde ağrı sırtta yayılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sırta yayılım",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0112",
+       "ses": "Sırta vuran üst karın ağrısı bu hastalığın klasik anlatımıdır.",
+       "ekran": "**Sırta yayılım** hastaların yüzde ellisinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yüzde 50'sinde ağrı sırtta yayılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sırta yayılım",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0113",
+       "ses": "Bulantı ve kusma hastaların yüzde doksanında görülür.",
+       "ekran": "**Bulantı kusma** yüzde doksan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bulantı ve kusma (%90)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulantı kusma",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p030",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-10-c0114",
+       "ses": "Pankreas iltihabı bağırsak hareketlerini yavaşlatır ve refleks uyarıyla kusma ortaya çıkar.",
+       "ekran": "**Bulantı kusma** yüzde doksan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bulantı ve kusma (%90)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulantı kusma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0115",
+       "ses": "Kusmanın sürmesi sıvı kaybını ve elektrolit bozukluğunu derinleştirir.",
+       "ekran": "**Bulantı kusma** yüzde doksan",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bulantı ve kusma (%90)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulantı kusma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0116",
+       "ses": "Dispne diyafragma iltihabı, plevral efüzyon ya da akut respiratuvar distres sendromu nedeniyle gelişir.",
+       "ekran": "**Dispne** diyafragma, efüzyon, akut respiratuvar distres",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dispne (diyafragma inflamasyonu,plevral efüzyon ve ya ARDS)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dispne",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0117",
+       "ses": "Diyafragmanın irritasyonu akciğer hacmini kısıtlayarak solunumu zorlaştırır.",
+       "ekran": "**Dispne** diyafragma, efüzyon, akut respiratuvar distres",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dispne (diyafragma inflamasyonu,plevral efüzyon ve ya ARDS)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dispne",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0118",
+       "ses": "Solunum sıkıntısı beliren hastada akciğer komplikasyonları araştırılmalıdır.",
+       "ekran": "**Dispne** diyafragma, efüzyon, akut respiratuvar distres",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dispne (diyafragma inflamasyonu,plevral efüzyon ve ya ARDS)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Dispne",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p031",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-10-c0119",
+       "ses": "Hastaların yüzde beş ile onu arasındaki bölümünde hiç ağrı olmayabilir.",
+       "ekran": "**Ağrısız seyir** yüzde beş ile on arasında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "%5-10'unda ağrısız olabilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrısız seyir",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0120",
+       "ses": "Ağrısız seyir tanıyı geciktirdiği için bu grupta klinik şüphe çok önemlidir.",
+       "ekran": "**Ağrısız seyir** yüzde beş ile on arasında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "%5-10'unda ağrısız olabilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrısız seyir",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0121",
+       "ses": "Bu nedenle ağrının yokluğu pankreatit tanısını dışlamaz.",
+       "ekran": "**Ağrısız seyir** yüzde beş ile on arasında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "%5-10'unda ağrısız olabilir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrısız seyir",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0122",
+       "ses": "Klinik başlığı bu sayfada akut pankreatitin belirti ve bulgularının toplandığını gösterir.",
+       "ekran": "**Klinik** belirti ve bulgular",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "KLİNİK"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0123",
+       "ses": "Tanı çoğu zaman ağrı, bulantı ve solunum bulgularının birlikte değerlendirilmesiyle konur.",
+       "ekran": "**Klinik** belirti ve bulgular",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "KLİNİK"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p032",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-10-c0124",
+       "ses": "Eruptif ksantomlar şiddetli hipertrigliseridemisi olan hastalarda görülen deri lezyonlarıdır.",
+       "ekran": "**Eruptif ksantom** ön kol ekstansör yüzü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Eruptive xanthomata"
+        ],
+        "sekil": "eruptif ksantom görseli, ön kol dış yüzünde sarımsı nodüller"
+       },
+       "vurgu": [
+        {
+         "metin": "Eruptif ksantom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0125",
+       "ses": "Lezyonlar ön kolun ekstansör yüzünde yerleşir.",
+       "ekran": "**Eruptif ksantom** ön kol ekstansör yüzü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Eruptive xanthomata"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Eruptif ksantom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0126",
+       "ses": "Ksantom saptanan hastada trigliserid düzeyi mutlaka araştırılmalıdır.",
+       "ekran": "**Eruptif ksantom** ön kol ekstansör yüzü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Eruptive xanthomata"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Eruptif ksantom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0127",
+       "ses": "Pankreatik pannikülit pankreas hastalığına eşlik eden deri altı yağ dokusu iltihabıdır.",
+       "ekran": "**Pankreatik pannikülit** distal bacakta nodüller",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Pancreatic panniculitis"
+        ],
+        "sekil": "pankreatik pannikülit görseli, bacakta kızarık nodüller"
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik pannikülit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0128",
+       "ses": "Bacağın distalinde ağrılı ve iltihaplı nodüller biçiminde kendini gösterir.",
+       "ekran": "**Pankreatik pannikülit** distal bacakta nodüller",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Pancreatic panniculitis"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik pannikülit",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p033",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-10-c0129",
+       "ses": "Deri lezyonu ile karın ağrısı bir arada görüldüğünde pankreas akla gelmelidir.",
+       "ekran": "**Pankreatik pannikülit** distal bacakta nodüller",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Pancreatic panniculitis"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik pannikülit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0130",
+       "ses": "Bu açıklama iki lezyonun yerleşimini birlikte verir, ksantom ön kolun dış yüzünde, iltihaplı nodüller bacağın distalinde bulunur.",
+       "ekran": "**Yerleşim** ön kol dış yüz ve distal bacak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Xanthomata are seen on the extensor surface of the forearm in a patient with severe hypertrigiyceridemia. Inflammatory nodules on the distal leg."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yerleşim",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0131",
+       "ses": "Her iki deri bulgusu da şiddetli hipertrigliseridemiye eşlik eder.",
+       "ekran": "**Yerleşim** ön kol dış yüz ve distal bacak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Xanthomata are seen on the extensor surface of the forearm in a patient with severe hypertrigiyceridemia. Inflammatory nodules on the distal leg."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yerleşim",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0132",
+       "ses": "Hekim bu işaretleri gördüğünde lipid düzeyini ve pankreası birlikte değerlendirir.",
+       "ekran": "**Yerleşim** ön kol dış yüz ve distal bacak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Xanthomata are seen on the extensor surface of the forearm in a patient with severe hypertrigiyceridemia. Inflammatory nodules on the distal leg."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yerleşim",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0133",
+       "ses": "Grey Turner belirtisi böğür bölgesinde ortaya çıkan ekimozdur.",
+       "ekran": "**Grey Turner** böğür ekimozu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Grey Turner sign"
+        ],
+        "sekil": "Grey Turner belirtisi görseli, böğürde morarma"
+       },
+       "vurgu": [
+        {
+         "metin": "Grey Turner",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p034",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-10-c0134",
+       "ses": "Kanın karın zarının arkasından ya da karın boşluğundan cilt altına sızması bu morluğu oluşturur.",
+       "ekran": "**Grey Turner** böğür ekimozu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Grey Turner sign"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Grey Turner",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0135",
+       "ses": "Böğürde morarma görmek kanamalı ve ağır seyirli pankreatiti düşündürür.",
+       "ekran": "**Grey Turner** böğür ekimozu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Grey Turner sign"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Grey Turner",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0136",
+       "ses": "Grey Turner belirtisinin tanımı, cilt altına kan sızmasıyla oluşan böğür ekimozudur.",
+       "ekran": "**Böğür ekimozu** retroperitoneal kan sızması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Grey Turner sign refers to flank ecchymoses that result from blood tracking subcutaneously from a retroperitoneal or intraperitoneal source."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Böğür ekimozu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0137",
+       "ses": "Sızma retroperitoneal ya da intraperitoneal kaynaklı olabilir ve kan doku aralarında ilerleyerek cilde ulaşır.",
+       "ekran": "**Böğür ekimozu** retroperitoneal kan sızması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Grey Turner sign refers to flank ecchymoses that result from blood tracking subcutaneously from a retroperitoneal or intraperitoneal source."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Böğür ekimozu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0138",
+       "ses": "Klinikte bu bulgu iç kanamanın ve ağır pankreatitin uyarıcısıdır.",
+       "ekran": "**Böğür ekimozu** retroperitoneal kan sızması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Grey Turner sign refers to flank ecchymoses that result from blood tracking subcutaneously from a retroperitoneal or intraperitoneal source."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Böğür ekimozu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p035",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-10-c0139",
+       "ses": "Akut pankreatitte erken dönemde pankreas sindirim enzimlerinin sentez salgılanmasında bozulma görülür.",
+       "ekran": "**Enzim sızması** asiner hücreden interstisyuma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut pankreatit sırasında erken dönemde pankreas sindirim enzimlerinin sentez salgılanmasında bir bozulma vardır; sekresyon blokajı varken sentez devam eder. Sonuç olarak, sindirim enzimleri asiner hücrelerinden bazolateral membrandan interstisyel boşluğa sızar ve daha sonra sistemik dolaşıma girer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enzim sızması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0140",
+       "ses": "Sekresyon blokajı varken sentez devam ettiği için enzimler asiner hücrelerinden bazolateral membrandan interstisyel boşluğa sızar.",
+       "ekran": "**Enzim sızması** asiner hücreden interstisyuma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut pankreatit sırasında erken dönemde pankreas sindirim enzimlerinin sentez salgılanmasında bir bozulma vardır; sekresyon blokajı varken sentez devam eder. Sonuç olarak, sindirim enzimleri asiner hücrelerinden bazolateral membrandan interstisyel boşluğa sızar ve daha sonra sistemik dolaşıma girer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enzim sızması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0141",
+       "ses": "Sızan enzimler daha sonra sistemik dolaşıma girer ve laboratuvar bulgularını oluşturur.",
+       "ekran": "**Enzim sızması** asiner hücreden interstisyuma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut pankreatit sırasında erken dönemde pankreas sindirim enzimlerinin sentez salgılanmasında bir bozulma vardır; sekresyon blokajı varken sentez devam eder. Sonuç olarak, sindirim enzimleri asiner hücrelerinden bazolateral membrandan interstisyel boşluğa sızar ve daha sonra sistemik dolaşıma girer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enzim sızması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0142",
+       "ses": "Şema akut pankreatitte sindirim enzimlerinin asiner hücrelerinden interstisyel boşluğa sızmasını gösterir.",
+       "ekran": "**Enzim sızması** şeması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [],
+        "sekil": "akut pankreatitte enzim sızmasını gösteren şema"
+       },
+       "vurgu": [
+        {
+         "metin": "Enzim sızması",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0143",
+       "ses": "Aynı şema enzimlerin sistemik dolaşıma geçişini de özetler.",
+       "ekran": "**Enzim sızması** şeması",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Enzim sızması",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p036",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-10-c0144",
+       "ses": "Serum amilaz akut pankreatit tanısında kullanılan bir laboratuvar bulgusudur.",
+       "ekran": "**Serum amilaz** tanıda laboratuvar bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Serum amilaz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Serum amilaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0145",
+       "ses": "Amilaz düzeyi hastalığın erken döneminde yükselmeye başlar ve klinik izlemde yol gösterir.",
+       "ekran": "**Serum amilaz** tanıda laboratuvar bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Serum amilaz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Serum amilaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0146",
+       "ses": "Serum amilaz akut pankreatit atağında altı ila on iki saat içinde yükselir.",
+       "ekran": "**Amilaz** altı ila on iki saatte yükselir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "6 ila 12 saat içinde yükselir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Amilaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0147",
+       "ses": "Bu erken yükselme enzimin pankreastan dolaşıma geçmesini yansıtır.",
+       "ekran": "**Amilaz** altı ila on iki saatte yükselir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "6 ila 12 saat içinde yükselir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Amilaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0148",
+       "ses": "Serum amilazın yarılanma ömrü yaklaşık on saat olduğu için düzeyi hızla gerileyebilir.",
+       "ekran": "**Yarılanma ömrü** yaklaşık on saat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Yarılanma ömrü yaklaşık 10 saattir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yarılanma ömrü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p037",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-10-c0149",
+       "ses": "Kısa yarılanma ömrü tekrarlanan ölçümlerde amilazın düşüşünü açıklar.",
+       "ekran": "**Yarılanma ömrü** yaklaşık on saat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Yarılanma ömrü yaklaşık 10 saattir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yarılanma ömrü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0150",
+       "ses": "Komplike olmayan akut pankreatit ataklarında serum amilaz üç ila beş gün içinde normale döner.",
+       "ekran": "**Üç ila beş günde** normalleşir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Komplike olmayan ataklarda üç ila beş gün içinde normale döner."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üç ila beş günde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0151",
+       "ses": "Bu nedenle inatçı yükseklik komplike seyir açısından dikkat gerektirir.",
+       "ekran": "**Üç ila beş günde** normalleşir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Komplike olmayan ataklarda üç ila beş gün içinde normale döner."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üç ila beş günde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0152",
+       "ses": "Serum amilazın üst sınırın üç katından fazla yükselmesi akut pankreatit tanısında kullanılır.",
+       "ekran": "**Üç kat üstü** tanı eşiği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Serum amilaz yükselmesi (üst sınırının üç katından fazla) akut pankreatit tanısı için yüzde 67-83 özgüllüğe ve yüzde 85-98 arasında bir duyarlılığa sahiptir*"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üç kat üstü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0153",
+       "ses": "Bu eşik yüzde altmış yedi ile seksen üç arasında özgüllük ve yüzde seksen beş ile doksan sekiz arasında duyarlılık sağlar.",
+       "ekran": "**Üç kat üstü** tanı eşiği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Serum amilaz yükselmesi (üst sınırının üç katından fazla) akut pankreatit tanısı için yüzde 67-83 özgüllüğe ve yüzde 85-98 arasında bir duyarlılığa sahiptir*"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üç kat üstü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p038",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-10-c0154",
+       "ses": "Kaynak akut pankreatitte laboratuvar testlerinin eleştirel değerlendirmesini sunan bir yayındır.",
+       "ekran": "**Kaynak** test değerlendirmesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "s. Am J Gastroenterol 2002; 97:1309."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kaynak",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0155",
+       "ses": "Yazarlar Yadav, Agarwal ve Pitchumoni bu değerlendirmeyi paylaşır.",
+       "ekran": "**Kaynak** test değerlendirmesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "s. Am J Gastroenterol 2002; 97:1309."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kaynak",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b05",
+   "baslik": "Serum lipaz",
+   "paragraflar": [
+    {
+     "id": "k3-10-p039",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-10-c0156",
+       "ses": "Serum lipaz duyarlılığı yüzde seksen iki ila yüz arasında bildirilir.",
+       "ekran": "**Serum lipaz** duyarlılığı yüzde seksen iki ila yüz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "%82 ila 100 arasında bir duyarlılığa sahiptir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Serum lipaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0157",
+       "ses": "Bu geniş aralık lipazın akut pankreatit tanısında güçlü bir belirteç olduğunu destekler.",
+       "ekran": "**Serum lipaz** duyarlılığı yüzde seksen iki ila yüz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "%82 ila 100 arasında bir duyarlılığa sahiptir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Serum lipaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0158",
+       "ses": "Serum lipaz, semptomların başlamasından dört ila sekiz saat içinde yükselmeye başlar.",
+       "ekran": "**Erken yükselme** dört ila sekiz saatte",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Semptomların başlamasından dört ila sekiz saat içinde yükselir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Erken yükselme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0159",
+       "ses": "Bu erken yükselme acil başvuruda tanısal değerlendirmeye katkı sağlar.",
+       "ekran": "**Erken yükselme** dört ila sekiz saatte",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Semptomların başlamasından dört ila sekiz saat içinde yükselir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Erken yükselme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0160",
+       "ses": "Serum lipaz düzeyi yirmi dört saatte zirve yapar.",
+       "ekran": "**Zirve** yirmi dört saatte",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "24 saatte zirve yapar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Zirve",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p040",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-10-c0161",
+       "ses": "Bu nedenle başvuru zamanı lipaz ölçümünün yorumunu doğrudan etkiler.",
+       "ekran": "**Zirve** yirmi dört saatte",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "24 saatte zirve yapar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Zirve",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0162",
+       "ses": "Serum lipaz sekiz ila on dört gün içinde normale döner.",
+       "ekran": "**Normale dönüş** sekiz ila on dört gün",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "8 ila 14 gün içinde normale döner."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Normale dönüş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0163",
+       "ses": "Uzun süren bu yükseklik geç başvuran hastada bile geçmişe dönük tanıya yardım eder.",
+       "ekran": "**Normale dönüş** sekiz ila on dört gün",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "8 ila 14 gün içinde normale döner."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Normale dönüş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0164",
+       "ses": "Alkole sekonder pankreatitli hastalarda serum lipaz, amilaza kıyasla daha duyarlıdır.",
+       "ekran": "**Alkol ilişkili** pankreatitte lipaz daha duyarlı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Alkole sekonder pankreatitli hastalarda amilaza kıyasla daha duyarlıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol ilişkili",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0165",
+       "ses": "Bu nedenle alkol ilişkili tabloda lipaz ölçümü tanıyı daha iyi yakalayabilir.",
+       "ekran": "**Alkol ilişkili** pankreatitte lipaz daha duyarlı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Alkole sekonder pankreatitli hastalarda amilaza kıyasla daha duyarlıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol ilişkili",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p041",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-10-c0166",
+       "ses": "Lipaz yükselmeleri amilazdaki yükselmelerle karşılaştırıldığında daha erken görülür ve daha uzun sürer.",
+       "ekran": "**Geç başvuruda** lipaz daha yararlı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Lipaz yükselmeleri, amilazdaki yükselmelerle karşılaştırıldığında daha erken görülür ve daha uzun sürer ve bu nedenle özellikle ağrının başlamasından 24 saat sonra başvuran hastalarda yararlıdır*"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Geç başvuruda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0167",
+       "ses": "Bu nedenle özellikle ağrının başlamasından yirmi dört saat sonra başvuran hastalarda lipaz ölçümü yararlıdır.",
+       "ekran": "**Geç başvuruda** lipaz daha yararlı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Lipaz yükselmeleri, amilazdaki yükselmelerle karşılaştırıldığında daha erken görülür ve daha uzun sürer ve bu nedenle özellikle ağrının başlamasından 24 saat sonra başvuran hastalarda yararlıdır*"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Geç başvuruda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0168",
+       "ses": "Serum lipaz zaman eğrisi, lipazın semptomlardan sonra erken yükseldiğini, yirmi dört saatte zirve yaptığını ve sekiz ila on dört günde normale döndüğünü özetler.",
+       "ekran": "**Lipaz zaman eğrisi** erken yükselir uzun sürer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [],
+        "sekil": "Serum lipaz zaman eğrisi"
+       },
+       "vurgu": [
+        {
+         "metin": "Lipaz zaman eğrisi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p042",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-10-c0169",
+       "ses": "Alkol kullanımı, amilaz ve lipaz yükselmeden akut pankreatit gelişebilen bir durum olarak akılda tutulmalıdır.",
+       "ekran": "**Alkol** enzim yükselmeden pankreatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "alkol ilişkili enzim yükselmeden pankreatit"
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol",
+         "tur": "terim"
+        },
+        {
+         "metin": "Alkol",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "695b6838137c"
+       ]
+      },
+      {
+       "id": "k3-10-c0170",
+       "ses": "Hipertrigliseridemi de amilaz ve lipaz yükselmeden akut pankreatite yol açabilen bir nedendir.",
+       "ekran": "**Hipertrigliseridemi** enzim yükselmeden pankreatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "hipertrigliseridemi ilişkili enzim yükselmeden pankreatit"
+       },
+       "vurgu": [
+        {
+         "metin": "Hipertrigliseridemi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0171",
+       "ses": "Böbrek yetmezliğinde akut pankreatit olmadan amilaz ve lipaz yüksekliği görülebilir.",
+       "ekran": "**Böbrek yetmezliği** enzim yüksekliği yapar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "böbrek yetmezliğinde pankreatitsiz amilaz lipaz yüksekliği"
+       },
+       "vurgu": [
+        {
+         "metin": "Böbrek yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0172",
+       "ses": "Kolesistit, akut pankreatit olmaksızın amilaz ve lipaz düzeylerinde yükseklik oluşturabilen bir durumdur.",
+       "ekran": "**Kolesistit** pankreatitsiz enzim yüksekliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "kolesistitte pankreatit olmadan enzim yüksekliği"
+       },
+       "vurgu": [
+        {
+         "metin": "Kolesistit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0173",
+       "ses": "Peptik ülser perforasyonu da akut pankreatit olmadan amilaz ve lipaz yüksekliğine neden olabilir.",
+       "ekran": "**Peptik ülser perforasyonu** enzim yüksekliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "peptik ülser perforasyonunda pankreatitsiz enzim yüksekliği"
+       },
+       "vurgu": [
+        {
+         "metin": "Peptik ülser perforasyonu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p043",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-10-c0174",
+       "ses": "Makroamilazemi, akut pankreatit bulunmadan amilaz yüksekliği saptanmasına yol açan bir durumdur.",
+       "ekran": "**Makroamilazemi** pankreatitsiz amilaz yüksekliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [],
+        "sekil": "makroamilazemide akut pankreatitsiz amilaz yüksekliği"
+       },
+       "vurgu": [
+        {
+         "metin": "Makroamilazemi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p044",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-10-c0175",
+       "ses": "Trigliserit seviyeleri akut pankreatitte nedeni aydınlatmak için bakılan bir laboratuvar değeridir ve bin miligram bölü desilitrenin üzerindeki yükseklik hipertrigliseridemiye bağlı pankreatiti düşündürür.",
+       "ekran": "**Trigliserit** yüksekliği pankreatit nedeni olabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Trigliserit seviyeleri (>1000 mg/dl)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Trigliserit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0176",
+       "ses": "Eşik aşıldığında tedavi doğrudan trigliserit yüksekliğini düşürmeye yönelir.",
+       "ekran": "**Trigliserit** yüksekliği pankreatit nedeni olabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Trigliserit seviyeleri (>1000 mg/dl)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Trigliserit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0177",
+       "ses": "Karaciğer fonksiyon testleri pankreatit tablosunda safra yollarının da etkilenip etkilenmediğini gösterir ve yüksek değerler safra kaynaklı pankreatiti akla getirir.",
+       "ekran": "**Karaciğer fonksiyon testleri** safra yolu etkilenmesini gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Karaciğer fonksiyon testleri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Karaciğer fonksiyon testleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0178",
+       "ses": "C reaktif protein akut pankreatitte inflamasyonun şiddetini yansıtan bir belirteçtir ve yüksek değerler doku hasarının arttığını gösterir.",
+       "ekran": "**C reaktif protein** inflamasyon şiddetini gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "C-reaktif protein (CRP)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "C reaktif protein",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0179",
+       "ses": "C reaktif protein hastalığın seyri boyunca yükselir, bu nedenle takipte kullanılır.",
+       "ekran": "**C reaktif protein** inflamasyon şiddetini gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "C-reaktif protein (CRP)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "C reaktif protein",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p045",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-10-c0180",
+       "ses": "Hemokonsantrasyon pankreatitte sıvı kaybına bağlı olarak kanın yoğunlaşmasını anlatır ve hematokrit yüksekliği ağır seyir lehine yorumlanır.",
+       "ekran": "**Hemokonsantrasyon** sıvı kaybı ve ağır seyir göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Hemokonsantrasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokonsantrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0181",
+       "ses": "Kan üre azotu değeri sıvı açığını ve böbrek işlevlerindeki bozulmayı yansıtır ve yüksek seyri akut pankreatitin ağır geçtiğini düşündürür.",
+       "ekran": "**Kan üre azotu** sıvı açığını gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "BUN"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kan üre azotu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0182",
+       "ses": "Serum kreatinin böbrek işlevlerinin göstergesidir ve akut pankreatitte gelişebilecek böbrek hasarını yakalamak için izlenir.",
+       "ekran": "**Kreatinin** böbrek hasarını izler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Serum kreatinin"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kreatinin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0183",
+       "ses": "Serum kalsiyum düzeylerinin düşmesi yağ nekrozunda kalsiyumun tüketilmesine bağlanır ve ağır pankreatitin göstergesi sayılır.",
+       "ekran": "**Kalsiyum düşüklüğü** ağır seyir göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Serum kalsiyum düzeyleri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kalsiyum düşüklüğü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0184",
+       "ses": "Genetik inceleme özellikle genç hastalarda ve tekrarlayan pankreatit ataklarında nedeni bulmak için istenir.",
+       "ekran": "**Genetik** tekrarlayan pankreatitte araştırılır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "GENETİK:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Genetik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p046",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-10-c0185",
+       "ses": "Kalıtsal yatkınlık araştırılırken prss bir, spink bir, cftr, ctrc, casr ve klodin iki genleri değerlendirilir.",
+       "ekran": "**Gen paneli** prss bir spink bir cftr ctrc casr klodin iki",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "PRSS1, SPINK1, CFTR, CTRC ve CASR ve Claudin-2"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gen paneli",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0186",
+       "ses": "Bu genlerdeki değişiklikler pankreatite zemin hazırlar ve ailevi tekrarlayan hastalığı açıklar.",
+       "ekran": "**Gen paneli** prss bir spink bir cftr ctrc casr klodin iki",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "PRSS1, SPINK1, CFTR, CTRC ve CASR ve Claudin-2"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gen paneli",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p047",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-10-c0187",
+       "ses": "Görüntüleme başlığı akut pankreatitte hangi görüntüleme yöntemlerinin kullanıldığını anlatmak üzere açılmıştır.",
+       "ekran": "**Görüntüleme** yöntemlerine giriş",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "GÖRÜNTÜLEME"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Görüntüleme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0188",
+       "ses": "Bu başlık, tanı ve komplikasyon değerlendirmesinde görüntülemenin yerini düşünmemiz gerektiğini hatırlatır.",
+       "ekran": "**Görüntüleme** yöntemlerine giriş",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "GÖRÜNTÜLEME"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Görüntüleme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0189",
+       "ses": "Slaytta yer alan görsel, akut pankreatitte kullanılan görüntüleme yöntemlerine ait görüntüyü sunar.",
+       "ekran": "**Görsel** görüntüleme örneği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [],
+        "sekil": "akut pankreatitte görüntüleme yöntemlerini gösteren görsel"
+       },
+       "vurgu": [
+        {
+         "metin": "Görsel",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0190",
+       "ses": "Görselin ayrıntısı slayt metninde yazılı olarak verilmediği için yalnızca görüntüleme başlığı altında ele alınması gerektiğini söyleyebiliriz.",
+       "ekran": "**Görsel** görüntüleme örneği",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Görsel",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b06",
+   "baslik": "Direkt grafi",
+   "paragraflar": [
+    {
+     "id": "k3-10-p048",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-10-c0191",
+       "ses": "Direkt grafide öncelikle ayırıcı tanı açısından değerlendirme yapılır, çünkü bu görüntüleme pankreatit tanısını doğrudan koymaz.",
+       "ekran": "**Direkt grafi** ayırıcı tanı için",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [],
+        "sekil": "Direkt grafide ayırıcı tanı"
+       },
+       "vurgu": [
+        {
+         "metin": "Direkt grafi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0192",
+       "ses": "Direkt grafide kolon kesme işareti ve duodenumdaki c loop görünümü, çevre organların irritasyonuna bağlı gelişen dolaylı bulgular olarak yorumlanır.",
+       "ekran": "**Kolon kesme işareti** ve c loop",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [],
+        "sekil": "Duodenumda kolon kesme işareti"
+       },
+       "vurgu": [
+        {
+         "metin": "Kolon kesme işareti",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0193",
+       "ses": "Diyafragma elevasyonu, karın içi basınç artışı ve refleks kasılma nedeniyle direkt grafide izlenebilen destekleyici bir bulgudur.",
+       "ekran": "**Diyafragma elevasyonu**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [],
+        "sekil": "Diyafragmada yükselme bulgusu"
+       },
+       "vurgu": [
+        {
+         "metin": "Diyafragma elevasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0194",
+       "ses": "Plevral efüzyon ve sol akciğer bazalinde atelektazi, akciğer grafisinde pankreatite eşlik edebilen solunum sistemi bulguları olarak dikkat çeker.",
+       "ekran": "**Plevral efüzyon** ve bazal atelektazi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [],
+        "sekil": "Plevral efüzyon ve atelektazi"
+       },
+       "vurgu": [
+        {
+         "metin": "Plevral efüzyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p049",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k3-10-c0195",
+       "ses": "Ultrasonografi, biliyer pankreatitte safra taşının gösterilmesinde ilk tercih edilen görüntüleme yöntemi olarak öne çıkar.",
+       "ekran": "**Safra taşı** ultrasonografi ile",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [],
+        "sekil": "Biliyer pankreatitte taş gösterir"
+       },
+       "vurgu": [
+        {
+         "metin": "Safra taşı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0196",
+       "ses": "Ultrasonografide ödem nedeniyle oluşan hipoekoik yapı ve bez büyümesi, akut pankreatitin erken dönemdeki dolaylı göstergeleri arasında sayılır.",
+       "ekran": "**Hipoekoik yapı** ve bez büyümesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [],
+        "sekil": "Ödem ve bez büyümesi"
+       },
+       "vurgu": [
+        {
+         "metin": "Hipoekoik yapı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0197",
+       "ses": "Ultrasonografik incelemede safra kesesi de ayrıca değerlendirilir, çünkü taş varlığı pankreatitin biliyer nedenli olduğunu destekleyebilir.",
+       "ekran": "**Safra kesesi** de değerlendirilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [],
+        "sekil": "Safra kesesi değerlendirmesi"
+       },
+       "vurgu": [
+        {
+         "metin": "Safra kesesi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p050",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k3-10-c0198",
+       "ses": "Bilgisayarlı tomografi, pankreatitin şiddetinin ve komplikasyonlarının tanımlanmasında klinisyene yol gösteren temel görüntüleme yöntemidir.",
+       "ekran": "**Bilgisayarlı tomografi** şiddet tanımı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [],
+        "sekil": "Şiddet ve komplikasyon tanımı"
+       },
+       "vurgu": [
+        {
+         "metin": "Bilgisayarlı tomografi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0199",
+       "ses": "Bilgisayarlı tomografi ilk kırk sekiz saat içinde anlamsız kabul edilir, çünkü nekroz ve komplikasyonlar bu dönemde henüz görüntülemede belirginleşmez.",
+       "ekran": "**İlk kırk sekiz saat** anlamsız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [],
+        "sekil": "İlk iki günde anlamsız"
+       },
+       "vurgu": [
+        {
+         "metin": "İlk kırk sekiz saat",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0200",
+       "ses": "Akut interstisyel ödemli pankreatitte bilgisayarlı tomografi, bezde heterojen görünüm ve çevresinde ödem ile seyreden tutulumu ortaya koyar.",
+       "ekran": "**İnterstisyel ödemli** pankreatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [],
+        "sekil": "İnterstisyel ödemli pankreatit"
+       },
+       "vurgu": [
+        {
+         "metin": "İnterstisyel ödemli",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0201",
+       "ses": "Nekrotizan pankreatitte ise bilgisayarlı tomografi, pankreas çevresindeki nekrozu ve peripankreatik yayılımı göstererek komplikasyonların tanımlanmasını sağlar.",
+       "ekran": "**Nekrotizan pankreatit** ve peripankreatik nekroz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [],
+        "sekil": "Nekrotizan pankreatit görüntüsü"
+       },
+       "vurgu": [
+        {
+         "metin": "Nekrotizan pankreatit",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p051",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k3-10-c0202",
+       "ses": "Manyetik rezonans akut pankreatitin erken tanınmasında bilgisayarlı tomografiden daha sensitiftir, bu yüzden erken dönemde gözden kaçan olgularda tanıyı kolaylaştırır.",
+       "ekran": "**Erken tanıda** manyetik rezonans bilgisayarlı tomografiden daha sensitif",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Akut pankreatitin erken tanınmasında BT’den daha sensitif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Erken tanıda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0203",
+       "ses": "Erken tanı, tedaviye zamanında başlanması ve komplikasyonların önlenmesi açısından belirleyicidir.",
+       "ekran": "**Erken tanıda** manyetik rezonans bilgisayarlı tomografiden daha sensitif",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Akut pankreatitin erken tanınmasında BT’den daha sensitif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Erken tanıda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0204",
+       "ses": "Manyetik rezonans pankreas ve safra kanallarını ve akut pankreatit komplikasyonlarını daha iyi karakterize eder.",
+       "ekran": "**Pankreas ve safra kanalları** ile komplikasyonlar daha iyi karakterize edilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Pankreas ve safra kanallarını ve akut pankreatit komplikasyonlarını daha iyi karakterize eder."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas ve safra kanalları",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0205",
+       "ses": "Dokuların ve koleksiyonların ayrımı netleştiği için hastalığın yaygınlığı daha doğru değerlendirilir.",
+       "ekran": "**Pankreas ve safra kanalları** ile komplikasyonlar daha iyi karakterize edilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Pankreas ve safra kanallarını ve akut pankreatit komplikasyonlarını daha iyi karakterize eder."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas ve safra kanalları",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0206",
+       "ses": "Manyetik rezonans iyonizan radyasyon içermez, bu nedenle radyasyon maruziyeti olmadan tekrarlayan incelemelere olanak tanır.",
+       "ekran": "**Radyasyon yok**, tekrarlayan görüntüleme güvenli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Radyasyon içermez."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Radyasyon yok",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p052",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k3-10-c0207",
+       "ses": "Bu özellik, görüntülemenin güvenli biçimde yinelenebilmesini sağlar.",
+       "ekran": "**Radyasyon yok**, tekrarlayan görüntüleme güvenli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Radyasyon içermez."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Radyasyon yok",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0208",
+       "ses": "Böbrek yetmezlikli hastalarda pankreatik nekroz manyetik rezonans ile saptanabilir.",
+       "ekran": "**Böbrek yetmezliğinde** pankreatik nekroz saptanabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Böbrek yetmezlikli hastalarda pankreatik nekrozu saptayabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Böbrek yetmezliğinde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0209",
+       "ses": "Böbrek fonksiyonu kısıtlı olan hastada alternatif görüntüleme seçeneği sunması klinik yönetimi kolaylaştırır.",
+       "ekran": "**Böbrek yetmezliğinde** pankreatik nekroz saptanabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Böbrek yetmezlikli hastalarda pankreatik nekrozu saptayabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Böbrek yetmezliğinde",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p053",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-10-c0210",
+       "ses": "Endoskopik retrograd kolanjiyopankreatografi tanıda ilk aşamada kullanılmaz.",
+       "ekran": "**İlk aşamada tanıda** kullanılmaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Tanıda ilk aşamada kullanılmaz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlk aşamada tanıda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0211",
+       "ses": "İşlem invaziv olduğu için tanı önce invaziv olmayan yöntemlerle konur, bu yaklaşım hastayı gereksiz girişim riskinden korur.",
+       "ekran": "**İlk aşamada tanıda** kullanılmaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Tanıda ilk aşamada kullanılmaz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlk aşamada tanıda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0212",
+       "ses": "Kolanjit ve biliyer obstrüksiyonun eşlik ettiği akut pankreatitte endoskopik retrograd kolanjiyopankreatografi kullanılır.",
+       "ekran": "**Kolanjit ve biliyer obstrüksiyonda** kullanılır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kolanjit ve biliyer obstruksiyonun eşlik ettiği akut pankreatitte kullanılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolanjit ve biliyer obstrüksiyonda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0213",
+       "ses": "Bu durumda işlemin amacı tıkanıklığın giderilmesidir, tanısal amaç ikinci planda kalır.",
+       "ekran": "**Kolanjit ve biliyer obstrüksiyonda** kullanılır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kolanjit ve biliyer obstruksiyonun eşlik ettiği akut pankreatitte kullanılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolanjit ve biliyer obstrüksiyonda",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0214",
+       "ses": "Ciddi biliyer pankreatitte erken endoskopik retrograd kolanjiyopankreatografi morbidite ve mortaliteyi azaltır.",
+       "ekran": "**Ciddi biliyer pankreatitte erken işlem** morbidite ve mortaliteyi azaltır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Ciddi biliyer pankreatitte erken ERCP morbidite ve mortaliteyi azaltır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ciddi biliyer pankreatitte erken işlem",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p054",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-10-c0215",
+       "ses": "Bu nedenle işlemin zamanlaması klinik gidişatı doğrudan etkileyen bir karar olarak görülür.",
+       "ekran": "**Ciddi biliyer pankreatitte erken işlem** morbidite ve mortaliteyi azaltır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Ciddi biliyer pankreatitte erken ERCP morbidite ve mortaliteyi azaltır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ciddi biliyer pankreatitte erken işlem",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b07",
+   "baslik": "• Safra kanalları, taş, pankreatik kanallar ve",
+   "paragraflar": [
+    {
+     "id": "k3-10-p055",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-10-c0216",
+       "ses": "Manyetik rezonans kolanjiyopankreatografi safra kanallarını, taşı, pankreatik kanalları ve kistleri değerlendirmek için faydalıdır.",
+       "ekran": "**Safra ve pankreatik kanallar**, taş ve kistler için faydalı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Safra kanalları, taş, pankreatik kanallar ve kistleri değerlendirmek için faydalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Safra ve pankreatik kanallar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0217",
+       "ses": "Kanal anatomisi ve taş varlığı invaziv işlem yapılmadan görülebildiği için hasta gereksiz girişimden korunur.",
+       "ekran": "**Safra ve pankreatik kanallar**, taş ve kistler için faydalı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Safra kanalları, taş, pankreatik kanallar ve kistleri değerlendirmek için faydalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Safra ve pankreatik kanallar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0218",
+       "ses": "Endoskopik retrograd kolanjiyopankreatografinin başarısız olduğu veya bilier enterik anostomoz gibi kontrendike olduğu durumlarda manyetik rezonans kolanjiyopankreatografi kullanılabilir.",
+       "ekran": "**Başarısız veya kontrendike işlemde** alternatif görüntüleme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "ERCP’nin başarısız olduğu veya bilier-enterik anostomoz durumlarındaki gibi kontrendike olduğu durumlarda kullanılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Başarısız veya kontrendike işlemde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0219",
+       "ses": "Böylece invaziv işlemin yapılamadığı hastada kanal bilgisi yine de elde edilir.",
+       "ekran": "**Başarısız veya kontrendike işlemde** alternatif görüntüleme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "ERCP’nin başarısız olduğu veya bilier-enterik anostomoz durumlarındaki gibi kontrendike olduğu durumlarda kullanılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Başarısız veya kontrendike işlemde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0220",
+       "ses": "Manyetik rezonans kolanjiyopankreatografi pankreas divisumunu saptayabilir.",
+       "ekran": "**Pankreas divisumu** saptanabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "MRCP pankreas divisumu saptayabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas divisumu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p056",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-10-c0221",
+       "ses": "Kanal anatomisini göstermesi nedeniyle pankreasın doğuştan gelen yapı farklılıkları değerlendirmede yardımcı olur.",
+       "ekran": "**Pankreas divisumu** saptanabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "MRCP pankreas divisumu saptayabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas divisumu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0222",
+       "ses": "Alanin aminotransferaz düzeyi yüz ellinin ve bilirubin düzeyi bir nokta sekiz değerinin üzerinde olduğunda manyetik rezonans kolanjiyopankreatografi elektif olarak yapılabilir.",
+       "ekran": "**Yüksek alanin aminotransferaz ve bilirubin** ile elektif yapılabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "ALT>150 VE BİLİRUBİN>1.8 ELEKTİF OLARAK YAPILABİLİR"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yüksek alanin aminotransferaz ve bilirubin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0223",
+       "ses": "Bu eşikler, acil girişim yerine planlı değerlendirmenin yeterli olduğu hastayı seçmeye yardım eder.",
+       "ekran": "**Yüksek alanin aminotransferaz ve bilirubin** ile elektif yapılabilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "ALT>150 VE BİLİRUBİN>1.8 ELEKTİF OLARAK YAPILABİLİR"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yüksek alanin aminotransferaz ve bilirubin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p057",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-10-c0224",
+       "ses": "Akut pankreatit komplikasyonları lokal ve sistemik olmak üzere iki ana başlıkta değerlendirilir.",
+       "ekran": "**Komplikasyonlar** lokal ve sistemik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "KOMPLİKASYONLAR"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Komplikasyonlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0225",
+       "ses": "Lokal komplikasyonlar pankreas ve çevresindeki anatomik yapılarla sınırlı etkileri anlatır.",
+       "ekran": "**Lokal** pankreas çevresi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "LOKAL"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lokal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0226",
+       "ses": "Pankreatik komplikasyonlar doğrudan pankreas ve peripankreatik alanı tutan lezyonları içerir.",
+       "ekran": "**Pankreatik** pankreas kaynaklı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Pankreatik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0227",
+       "ses": "İnflamatuar kitle yani flegmon pankreas çevresinde iltihabi bir kitle oluşumudur ve yerel bası bulgularıyla seyredebilir.",
+       "ekran": "**Flegmon** inflamatuar kitle",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "İnflamatuar kitle (flegmon)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Flegmon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0228",
+       "ses": "Peripankreatik efüzyon pankreas çevresinde sıvı birikmesidir ve lokal inflamasyonun yayıldığını gösterir.",
+       "ekran": "**Peripankreatik efüzyon** sıvı birikimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Peripankreatik efüzyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Peripankreatik efüzyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p058",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-10-c0229",
+       "ses": "Enfekte nekroz veya apse nekrotik pankreas dokusunun enfekte olmasıyla gelişir ve ateş ile sepsis bulgularına yol açabilir.",
+       "ekran": "**Enfekte nekroz** apse ve sepsis",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Enfekte nekroz veya apse"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfekte nekroz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0230",
+       "ses": "Psödokist pankreas çevresinde pankreatik enzimden zengin sıvının kapsülle çevrelenmesiyle oluşan koleksiyondur.",
+       "ekran": "**Psödokist** kapsüllü sıvı koleksiyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Pseudokist"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Psödokist",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0231",
+       "ses": "Pankreatik olmayan komplikasyonlar komşu barsak safra yolu böbrek ve dalak gibi yapıların tutulumunu anlatır.",
+       "ekran": "**Non-Pankreatik** komşu organ tutulumu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Non-Pankreatik"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Non-Pankreatik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0232",
+       "ses": "İleus ve gastrik çıkış obstrüksiyonu pankreatit çevresindeki inflamasyonun barsak hareketlerini ve mide boşalmasını bozmasıyla gelişir.",
+       "ekran": "**İleus** gastrik çıkış obstrüksiyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "İleus , gastrik çıkış obst."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İleus",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0233",
+       "ses": "Asit veya plevral efüzyon inflamatuar sıvının karın ya da plevral boşlukta birikmesiyle ortaya çıkar.",
+       "ekran": "**Asit** plevral efüzyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Asit veya plevral efüzyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Asit",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p059",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-10-c0234",
+       "ses": "Gastrointestinal sistem kanaması komşu damar ve barsak tutulumu sonucu gelişen önemli bir lokal komplikasyondur.",
+       "ekran": "**Gastrointestinal kanama** lokal komplikasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "GİS kanama"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gastrointestinal kanama",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0235",
+       "ses": "Safra kanal obstrüksiyonu pankreas başı çevresindeki inflamasyonun safra akımını engellemesiyle sarılığa yol açabilir.",
+       "ekran": "**Safra kanal obstrüksiyonu** sarılık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Safra kanal obstruksiyonu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Safra kanal obstrüksiyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0236",
+       "ses": "Barsak nekrozu ve fistül inflamasyonun barsak duvarını tutup doku bütünlüğünü bozmasıyla gelişir.",
+       "ekran": "**Barsak nekrozu** fistül",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Barsak nekrozu-fistül"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Barsak nekrozu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0237",
+       "ses": "Hidronefroz üreter çevresindeki inflamasyon veya bası nedeniyle böbrek havuzunun genişlemesidir.",
+       "ekran": "**Hidronefroz** böbrek havuzu genişlemesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Hidronefroz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hidronefroz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0238",
+       "ses": "Splenik rüptür veya hematom dalak tutulumuyla gelişen kanama ve yaralanma tablosudur.",
+       "ekran": "**Splenik rüptür** dalak hematomu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Splenik rüptür veya hematom"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Splenik rüptür",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p060",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-10-c0239",
+       "ses": "Splenik ven trombozu dalak veninde pıhtı oluşması ve portal basıncın artmasıyla seyredebilir.",
+       "ekran": "**Splenik ven trombozu** portal basınç",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Splenik ven trombozu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Splenik ven trombozu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0240",
+       "ses": "Sistemik komplikasyonlar pankreatit inflamasyonunun tüm vücutta yarattığı uzak organ etkilerini kapsar.",
+       "ekran": "**Sistemik** uzak organ etkileri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "SİSTEMİK"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sistemik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0241",
+       "ses": "Sistemik komplikasyonlar arasında hipovolemi şok akut solunum sıkıntısı sendromu plevral efüzyon atelektazi ve hipoksemi yer alır.",
+       "ekran": "**Sistemik tablo** hipovolemi şok hipoksemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Hipovolemi, Şok ,ARDS, plevral efüzyon, atelektazi, hipoksemi, Akut böbrek yetmezliği,azotemi, DIK, vasküler tromboz, Hipoalbuminemi, hipokalsemi, hiperglisemi, metabolik asidoz, Stres ülseri, gastrik varis, psödoanevrizma, Periferik yağ nekrozu,ensefalopati"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sistemik tablo",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0242",
+       "ses": "Akut böbrek yetmezliği azotemi dissemine intravasküler koagülasyon vasküler tromboz hipoalbuminemi hipokalsemi hiperglisemi ve metabolik asidoz da sistemik tabloya eşlik eder.",
+       "ekran": "**Sistemik tablo** hipovolemi şok hipoksemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Hipovolemi, Şok ,ARDS, plevral efüzyon, atelektazi, hipoksemi, Akut böbrek yetmezliği,azotemi, DIK, vasküler tromboz, Hipoalbuminemi, hipokalsemi, hiperglisemi, metabolik asidoz, Stres ülseri, gastrik varis, psödoanevrizma, Periferik yağ nekrozu,ensefalopati"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sistemik tablo",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sistemik tablo",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "q-18-37"
+       ]
+      },
+      {
+       "id": "k3-10-c0243",
+       "ses": "Stres ülseri gastrik varis psödoanevrizma periferik yağ nekrozu ve ensefalopati ise sistemik komplikasyonların diğer klinik yüzleridir.",
+       "ekran": "**Sistemik tablo** hipovolemi şok hipoksemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Hipovolemi, Şok ,ARDS, plevral efüzyon, atelektazi, hipoksemi, Akut böbrek yetmezliği,azotemi, DIK, vasküler tromboz, Hipoalbuminemi, hipokalsemi, hiperglisemi, metabolik asidoz, Stres ülseri, gastrik varis, psödoanevrizma, Periferik yağ nekrozu,ensefalopati"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sistemik tablo",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sistemik tablo",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "da8da28d6e6e"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p061",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-10-c0244",
+       "ses": "Akut pankreatit tedavisi üç temel basamak üzerine kurulur ve bunlar sıvı resusitasyonu, ağrı kontrolü ve beslenmedir.",
+       "ekran": "**Tedavi** üç temel basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "TEDAVİ"
+        ],
+        "sekil": "• 1)SIVI RESUSİTASYONU"
+       },
+       "vurgu": [
+        {
+         "metin": "Tedavi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tedavi",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877035873-972086",
+        "k1-2018-2019-q016"
+       ]
+      },
+      {
+       "id": "k3-10-c0245",
+       "ses": "Bu sıralama destek tedavisinin önce dolaşımı düzeltmeyi hedeflediğini gösterir.",
+       "ekran": "**Tedavi** üç temel basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "TEDAVİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tedavi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0246",
+       "ses": "Sıvı resusitasyonu tedavinin ilk basamağıdır çünkü hastalarda belirgin hacim kaybı ve üçüncü boşluğa sıvı kaçağı vardır.",
+       "ekran": "**Sıvı resusitasyonu** ilk basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "1)SIVI RESUSİTASYONU"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı resusitasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0247",
+       "ses": "Dolaşım düzeltilmediği sürece doku perfüzyonu bozulur ve organ yetmezliği riski artar.",
+       "ekran": "**Sıvı resusitasyonu** ilk basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "1)SIVI RESUSİTASYONU"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı resusitasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0248",
+       "ses": "Ağrı kontrolü ikinci basamak olarak ele alınır çünkü şiddetli karın ağrısı hastanın solunumunu ve hareketini kısıtlar.",
+       "ekran": "**Ağrı kontrolü** ikinci basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "2)AĞRI KONTROLÜ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrı kontrolü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p062",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-10-c0249",
+       "ses": "Etkin analjezi hastanın rahatlamasını sağlayarak iyileşme sürecine katkı verir.",
+       "ekran": "**Ağrı kontrolü** ikinci basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "2)AĞRI KONTROLÜ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrı kontrolü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0250",
+       "ses": "Beslenme üçüncü basamaktır ve uzun süre aç bırakma yerine beslenmenin düzenlenmesi esas alınır.",
+       "ekran": "**Beslenme** üçüncü basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "3)BESLENME"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Beslenme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0251",
+       "ses": "Yeterli beslenme desteği inflamatuar yanıtın ve iyileşmenin yönetiminde belirleyici rol oynar.",
+       "ekran": "**Beslenme** üçüncü basamak",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "3)BESLENME"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Beslenme",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p063",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k3-10-c0252",
+       "ses": "Agresif hidrasyon, kalp ve böbrek gibi komorbid faktörler engellemediği sürece akut pankreatitli her hastaya saatte beş ila on mililitre bölü kilogram izotonik kristalloid çözelti verilerek uygulanır.",
+       "ekran": "Saatte **beş ila on mililitre bölü kilogram** izotonik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Kardiyovasküler, renal veya diğer ilgili komorbid faktörler agresif sıvıyı engellemediği sürece akut pankreatitli tüm hastalara Saatte 5 ila 10 mL / kg izotonik kristalloid çözeltisi (örn., Normal salin veya laktatlı Ringer çözeltisi) oranında agresif hidrasyon sağlıyoruz."
+        ],
+        "sekil": "Kardiyovasküler, renal veya diğer ilgili komorbid faktörler agresif"
+       },
+       "vurgu": [
+        {
+         "metin": "beş ila on mililitre bölü kilogram",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0253",
+       "ses": "Normal salin veya laktatlı ringer çözeltisi bu amaçla kullanılır ve amaç kaybedilen hacmin hızla yerine konmasıdır.",
+       "ekran": "Saatte **beş ila on mililitre bölü kilogram** izotonik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Kardiyovasküler, renal veya diğer ilgili komorbid faktörler agresif sıvıyı engellemediği sürece akut pankreatitli tüm hastalara Saatte 5 ila 10 mL / kg izotonik kristalloid çözeltisi (örn., Normal salin veya laktatlı Ringer çözeltisi) oranında agresif hidrasyon sağlıyoruz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "beş ila on mililitre bölü kilogram",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0254",
+       "ses": "Hipotansiyon ve taşikardi ile kendini gösteren şiddetli hacim tükenmesi olan hastalarda daha hızlı bir sıvı şeması devreye girer.",
+       "ekran": "**Hipotansiyon ve taşikardi** varsa hızlı şema",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Hipotansiyon ve taşikardi olarak ortaya çıkan şiddetli hacim tükenmesi olan hastalarda;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hipotansiyon ve taşikardi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0255",
+       "ses": "Bu bulgular dolaşımın kompanze edemediğini gösterdiği için standart hızın üzerine çıkılması gerekir.",
+       "ekran": "**Hipotansiyon ve taşikardi** varsa hızlı şema",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Hipotansiyon ve taşikardi olarak ortaya çıkan şiddetli hacim tükenmesi olan hastalarda;"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hipotansiyon ve taşikardi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0256",
+       "ses": "Şiddetli hacim tükenmesinde otuz dakika boyunca yirmi mililitre bölü kilogram intravenöz sıvı verilir, ardından sekiz ila on iki saat boyunca üç mililitre bölü kilogram bölü saat hızında tekrarlanır.",
+       "ekran": "**Yirmi mililitre bölü kilogram** yükleme, sonra idame",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "30 dakika boyunca verilen 20 mL / kg intravenöz sıvı ve ardından 8 ila 12 saat boyunca 3 mL / kg / saat ile daha hızlı bir tekrarlama sağlıyoruz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yirmi mililitre bölü kilogram",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p064",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k3-10-c0257",
+       "ses": "Hızlı yükleme dolaşımı çözerken ardından gelen idame hızı aşırı yüklenmeyi önlemeyi amaçlar.",
+       "ekran": "**Yirmi mililitre bölü kilogram** yükleme, sonra idame",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "30 dakika boyunca verilen 20 mL / kg intravenöz sıvı ve ardından 8 ila 12 saat boyunca 3 mL / kg / saat ile daha hızlı bir tekrarlama sağlıyoruz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yirmi mililitre bölü kilogram",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0258",
+       "ses": "Sıvı resusitasyonu, akut pankreatit tedavisinin dolaşımı hedefleyen ilk ve en kritik adımıdır.",
+       "ekran": "**Sıvı resusitasyonu** kritik ilk adım",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Sıvı resusitasyonu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı resusitasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0259",
+       "ses": "Hedeflenen hız hastanın komorbid durumuna göre seçildiği için uygulama her hastada kişiselleştirilir.",
+       "ekran": "**Sıvı resusitasyonu** kritik ilk adım",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Sıvı resusitasyonu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı resusitasyonu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b08",
+   "baslik": "YETERSİZ HİDRASYON",
+   "paragraflar": [
+    {
+     "id": "k3-10-p065",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-10-c0260",
+       "ses": "Yetersiz hidrasyon, akut pankreatitte sıvı açığının yerine konamadığı olumsuz tabloyu anlatır.",
+       "ekran": "**Yetersiz hidrasyon** ve aşırı hidrasyon şeması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "YETERSİZ HİDRASYON"
+        ],
+        "sekil": "yetersiz ve aşırı hidrasyonu karşılaştıran şema"
+       },
+       "vurgu": [
+        {
+         "metin": "Yetersiz hidrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0261",
+       "ses": "Şemada bir yanda yetersiz hidrasyonun dolaşımı bozan sonuçları, diğer yanda aşırı hidrasyonun yol açtığı sorunlar karşı karşıya gösterilir.",
+       "ekran": "**Yetersiz hidrasyon** ve aşırı hidrasyon şeması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "YETERSİZ HİDRASYON"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yetersiz hidrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0262",
+       "ses": "Yetersiz hidrasyon hipotansiyona ve akut tübüler nekroza yol açabilir, çünkü dolaşan hacim azalınca böbrek perfüzyonu düşer ve tübül hücreleri iskemiden zarar görür.",
+       "ekran": "**Hipotansiyon** ve akut tübüler nekroz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Hipotansiyona ve akut tübüler nekroza yol açabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hipotansiyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0263",
+       "ses": "Yirmi dört saat devam eden hemokonsantrasyon, nekrotizan pankreatit gelişimi ile ilişkilendirilmiştir.",
+       "ekran": "**Hemokonsantrasyon** nekrotizan pankreatit ile ilişkili",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "24 saat devam eden hemokonsantrasyon, nekrotizan pankreatit gelişimi ile ilişkilendirilmiştir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokonsantrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0264",
+       "ses": "Hemokonsantrasyon plazma kaybının göstergesi olduğu için dirençli sıvı açığının ve kötü seyrin erken işareti sayılır.",
+       "ekran": "**Hemokonsantrasyon** nekrotizan pankreatit ile ilişkili",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "24 saat devam eden hemokonsantrasyon, nekrotizan pankreatit gelişimi ile ilişkilendirilmiştir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokonsantrasyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p066",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-10-c0265",
+       "ses": "Sıvı resüsitasyonunu esas olarak hastalığın başlamasından sonraki ilk yirmi dört ila kırk sekiz saatle sınırlamak önemlidir.",
+       "ekran": "**Sıvı resüsitasyonu** ilk yirmi dört kırk sekiz saat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bununla birlikte, sıvı resüsitasyonunu esas olarak hastalığın başlamasından sonraki ilk 24 ila 48 saatle sınırlamak önemlidir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı resüsitasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0266",
+       "ses": "Erken dönemde verilen sıvı dolaşımı düzeltir, ancak bu pencere geçtikten sonra aynı agresif yükleme akciğer ve karın basıncını yükseltir.",
+       "ekran": "**Sıvı resüsitasyonu** ilk yirmi dört kırk sekiz saat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Bununla birlikte, sıvı resüsitasyonunu esas olarak hastalığın başlamasından sonraki ilk 24 ila 48 saatle sınırlamak önemlidir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sıvı resüsitasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0267",
+       "ses": "Aşırı hidrasyon artan entübasyon ihtiyacı ve abdominal kompartman sendromu demektir.",
+       "ekran": "**Aşırı hidrasyon** entübasyon ve kompartman sendromu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Artan entübasyon ihtiyacı ve abdominal kompartman sendromu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Aşırı hidrasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0268",
+       "ses": "Fazla sıvı dokular arasında birikince karın içi basınç yükselir ve solunum yetmezliği nedeniyle entübasyon gerekebilir.",
+       "ekran": "**Aşırı hidrasyon** entübasyon ve kompartman sendromu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Artan entübasyon ihtiyacı ve abdominal kompartman sendromu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Aşırı hidrasyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p067",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k3-10-c0269",
+       "ses": "Ağrı kontrolü, akut pankreatit yönetiminde dolaşımı koruyan temel adımlardan biridir.",
+       "ekran": "**Ağrı kontrolü** temel yönetim adımı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "AĞRI KONTROLÜ"
+        ],
+        "sekil": "ağrı kontrolü ve analjezik seçimini gösteren şema"
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrı kontrolü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0270",
+       "ses": "Şema ağrının hemodinami üzerindeki etkisini ve kullanılabilecek analjezikleri bir arada gösterir.",
+       "ekran": "**Ağrı kontrolü** temel yönetim adımı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "AĞRI KONTROLÜ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ağrı kontrolü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0271",
+       "ses": "Kontrolsüz ağrı hemodinamik instabiliteye neden olabilir.",
+       "ekran": "**Kontrolsüz ağrı** hemodinamik instabilite",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Kontrolsüz ağrı hemodinamik instabiliteye neden olabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kontrolsüz ağrı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0272",
+       "ses": "Şiddetli ağrı sempatik yanıtı tetikleyip nabız ve kan basıncında oynamalar yaratarak dolaşımı bozar.",
+       "ekran": "**Kontrolsüz ağrı** hemodinamik instabilite",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Kontrolsüz ağrı hemodinamik instabiliteye neden olabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kontrolsüz ağrı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0273",
+       "ses": "Opioidler akut pankreatitli hastalarda ağrı kontrolü sağlamada güvenli ve etkilidir.",
+       "ekran": "**Opioidler** güvenli, hidromorfon veya fentanil",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Opioidler akut pankreatitli hastalarda ağrı kontrolü sağlamada güvenli ve etkilidir. hidromorfon veya fentanil akut pankreatitte ağrıyı azaltmak için kullanılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Opioidler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p068",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k3-10-c0274",
+       "ses": "Bu nedenle hidromorfon veya fentanil akut pankreatitte ağrıyı azaltmak için kullanılabilir.",
+       "ekran": "**Opioidler** güvenli, hidromorfon veya fentanil",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Opioidler akut pankreatitli hastalarda ağrı kontrolü sağlamada güvenli ve etkilidir. hidromorfon veya fentanil akut pankreatitte ağrıyı azaltmak için kullanılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Opioidler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0275",
+       "ses": "Meperidin, pankreatitte analjezi için morfine tercih edilmeye başlandı.",
+       "ekran": "**Meperidin** morfine tercih, oddi basıncı artışı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Meperidin , pankreatitte analjezi için morfine tercih edilmeye başlandı (çalışmalar morfinin oddi basıncı sfinkterinde bir artışa neden olduğunu gösterdi)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Meperidin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0276",
+       "ses": "Bunun gerekçesi, çalışmaların morfinin oddi basıncı sfinkterinde bir artışa neden olduğunu göstermesidir.",
+       "ekran": "**Meperidin** morfine tercih, oddi basıncı artışı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Meperidin , pankreatitte analjezi için morfine tercih edilmeye başlandı (çalışmalar morfinin oddi basıncı sfinkterinde bir artışa neden olduğunu gösterdi)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Meperidin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p069",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k3-10-c0277",
+       "ses": "Profilaktik antibiyotikler akut pankreatitte rutin olarak önerilmemektedir, yani enfeksiyon kanıtı yokken koruyucu amaçla başlanmaz.",
+       "ekran": "**Profilaktik antibiyotik** önerilmez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Profilaktik antibiyotikler önerilmemektedir."
+        ],
+        "sekil": "antibiyotik kullanımını özetleyen şema"
+       },
+       "vurgu": [
+        {
+         "metin": "Profilaktik antibiyotik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0278",
+       "ses": "Şema antibiyotiğin yalnız enfeksiyon şüphesinde devreye girdiğini vurgular.",
+       "ekran": "**Profilaktik antibiyotik** önerilmez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Profilaktik antibiyotikler önerilmemektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Profilaktik antibiyotik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0279",
+       "ses": "Bir enfeksiyondan şüphelenildiğinde, enfeksiyonun kaynağı belirlenirken antibiyotiklere başlanmalıdır.",
+       "ekran": "**Enfeksiyon şüphesi** başla, kaynak yoksa kes",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Bir enfeksiyondan şüphelenildiğinde, enfeksiyonun kaynağı belirlenirken antibiyotiklere başlanmalıdır.(?) Bununla birlikte, kültürler negatifse ve herhangi bir enfeksiyon kaynağı tanımlanmamışsa, antibiyotikler kesilmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfeksiyon şüphesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0280",
+       "ses": "Bununla birlikte, kültürler negatifse ve herhangi bir enfeksiyon kaynağı tanımlanmamışsa, antibiyotikler kesilmelidir.",
+       "ekran": "**Enfeksiyon şüphesi** başla, kaynak yoksa kes",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Bir enfeksiyondan şüphelenildiğinde, enfeksiyonun kaynağı belirlenirken antibiyotiklere başlanmalıdır.(?) Bununla birlikte, kültürler negatifse ve herhangi bir enfeksiyon kaynağı tanımlanmamışsa, antibiyotikler kesilmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfeksiyon şüphesi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-10-p070",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k3-10-c0281",
+       "ses": "Hafif şiddetli akut pankreatitte damar içi hidrasyon yeterli olarak anlatılır.",
+       "ekran": "**Hafif** damar içi hidrasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [],
+        "sekil": "Hafif şiddette damar içi sıvı yeterli"
+       },
+       "vurgu": [
+        {
+         "metin": "Hafif",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0282",
+       "ses": "Orta derecede şiddetli pankreatitte beslenme desteği sıklıkla gerekli görülür.",
+       "ekran": "**Orta** beslenme desteği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [],
+        "sekil": "Orta şiddette beslenme desteği gerekli"
+       },
+       "vurgu": [
+        {
+         "metin": "Orta",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0283",
+       "ses": "Ciddi pankreatitte total parenteral beslenme seçeneği düşünülmelidir.",
+       "ekran": "**Ciddi** parenteral beslenme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [],
+        "sekil": "Ciddi pankreatitte total parenteral beslenme"
+       },
+       "vurgu": [
+        {
+         "metin": "Ciddi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-10-b09",
+   "baslik": "Beslenmeye ne zaman başlayalım?",
+   "paragraflar": [
+    {
+     "id": "k3-10-p071",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k3-10-c0284",
+       "ses": "İleus bulantı veya kusma yoksa ağrı azalıyor ve inflamatuar belirteçler düzeliyorsa oral beslenme ilk gün içinde başlatılabilir.",
+       "ekran": "**Erken** oral beslenme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [],
+        "sekil": "Erken oral beslenme koşulları"
+       },
+       "vurgu": [
+        {
+         "metin": "Erken",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0285",
+       "ses": "İleus veya belirgin bulantı ve kusma yoksa genellikle az yağlı yumuşak diyetle başlanır.",
+       "ekran": "**Az yağlı** yumuşak diyet",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [],
+        "sekil": "Az yağlı yumuşak diyet başlangıcı"
+       },
+       "vurgu": [
+        {
+         "metin": "Az yağlı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-10-c0286",
+       "ses": "Hastalar tolere ettikçe berrak sıvı diyetten katı gıdaya ilerletilir.",
+       "ekran": "**Berrak sıvıdan** katıya geçiş",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [],
+        "sekil": "Sıvıdan katı gıdaya geçiş"
+       },
+       "vurgu": [
+        {
+         "metin": "Berrak sıvıdan",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
