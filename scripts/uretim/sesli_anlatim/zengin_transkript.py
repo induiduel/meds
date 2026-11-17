@@ -7,8 +7,9 @@ LLM/ağ/GPU yok; yalnız kural tabanlı betik (token harcamaz). Girdi: data/sesl
 
 Blok türleri (alan t):
   giris      bölümün açılış cümlesi (kavram/çerçeve)
-  madde      ana bilgi maddesi (sv: 1–3 düzey)
-  aciklama   önceki maddeyi açan/bağlayan cümle (madde altına, sv 2)
+  madde      bilgi maddesi; sv 1 = paragrafın ilk bilgi cümlesi (ana madde), sv 2 = aynı paragrafın sonraki cümleleri;
+             anahtar = cümlenin tanımladığı kavram ("Enürezis, …" → Enürezis), varsa
+  aciklama   önceki maddeyi açan/bağlayan cümle (Bu/Böylece/Çünkü…; 3. düzey)
   liste      sayım cümlesi: {bas, ogeler[]} → ana madde + alt maddeler
   sirali     sıra/basamak cümlesi: {bas, ogeler[]} → numaralı liste
   tablo      ≥3 "yüzde/oran" karşılaştırması: {basliklar, satirlar}
@@ -40,7 +41,7 @@ KOK = _kok.MEDS
 METIN = KOK / "data" / "sesli_anlatim" / "metin"
 TERIM = KOK / "data" / "sesli_anlatim" / "terim"
 CIKTI = KOK / "src" / "data" / "zengin_transkript"
-SURUM = 1
+SURUM = 2  # v2: iç içe madde (sv 1–3: paragrafın ilk cümlesi ana madde, sonrakiler alt madde, açıklama 3. düzey) + anahtar
 TURLER = {"giris", "madde", "aciklama", "liste", "sirali", "tablo", "sinav", "ornek", "alinti", "terim"}
 
 CUMLE = re.compile(r"(?<=[.!?…])\s+(?=[A-ZÇĞİÖŞÜ0-9“\"(])")
@@ -54,32 +55,86 @@ def cumleler(p: str) -> list[str]:
     return [c.strip() for c in CUMLE.split(p.strip()) if c.strip()]
 
 
+SAYI_AD = {"iki": 2, "üç": 3, "dört": 4, "beş": 5, "altı": 6, "yedi": 7, "sekiz": 8, "dokuz": 9, "on": 10}
+
+
+def sayiyla_ayir(bas: str, govde: str) -> list[str] | None:
+    """Başlık sayı söylüyorsa ("üç bulgu", "dördü") öğe sayısı tutmalı: önce son 've' bölünerek, tutmazsa bölünmeden denenir;
+    ikisi de tutmazsa None (liste kurulmaz). Sayı yoksa normal bölme."""
+    m = re.search(r"\b(iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on)(?:\s|[ıiuü]|ü|sü|si|ü\b|$)", bas.lower())
+    og = _ayir_oge(govde)
+    if not m:
+        return og
+    n = SAYI_AD[m.group(1)]
+    if len(og) == n:
+        return og
+    duz = [x.strip(" .;:") for x in re.split(r",\s*", govde) if 2 <= len(x.strip()) <= 140]
+    return duz if len(duz) == n else None
+
+
 def _ayir_oge(govde: str) -> list[str]:
-    """'a, b, c ve d' → [a, b, c, d]"""
-    parca = re.split(r",\s*|\s+ve\s+|\s+ile\s+|\s+ya da\s+", govde)
+    """'a, b, c ve d' → [a, b, c, d]: yalnız virgüller ve SON 've/ya da' bölünür ("uyku ile uyanıklık düzeni" bütün kalır)."""
+    parca = [x.strip() for x in re.split(r",\s*", govde) if x.strip()]
+    # öğeler zaten "X ve Y" çiftiyse son 've' de çiftin parçasıdır, bölünmez
+    if parca and not any(re.search(r"\s(?:ve|ya da|veya)\s", x) for x in parca[:-1]):
+        son = re.split(r"\s+(?:ve|ya da|veya)\s+(?!.*\s(?:ve|ya da|veya)\s)", parca[-1], maxsplit=1)
+        parca = parca[:-1] + [x for x in son if x.strip()]
     return [x.strip(" .;:") for x in parca if 2 <= len(x.strip()) <= 140]
 
 
+BAG_SOZ = {"ve", "ile", "ya", "da", "de", "önce", "ardından", "sonra", "sonrasında", "en", "sonunda", "son", "olarak",
+           "sayılır", "şunlardır", "yer", "alır", "gelir", "eklenir", "istenir", "bulunur", "içerir", "gelişir", "başlar"}
+
+
+YUKLEM = re.compile(r"(?:[dt][ıiuü]r|[ıiuü]yor|m[ae]z|[^l\s][ae]r|[ıiuü]r|abilir|ebilir|m[ıiuü]ş)$")
+
+
+def ogeler_ad_mi(og: list[str]) -> bool:
+    """Liste öğeleri ad öbeği mi? Yüklemle biten öğe ("kişiye konur", "öndedir") cümle parçasıdır, liste kurulmaz."""
+    return all((not YUKLEM.search(x.split()[-1].lower()) or len(x.split()[-1]) <= 3) and not re.match(r"^(ve|ya da|veya|yani|ise)\b", x)
+               for x in og if x.split())
+
+
+def kapsar(c: str, parcalar: list[str]) -> bool:
+    """Yapı cümlenin bilgi sözcüklerini kaybetmiyor mu (≥ %95)? Kaybediyorsa yapı kurulmaz, cümle madde kalır."""
+    sz = lambda t: [w for w in re.findall(r"[\wçğıöşüÇĞİÖŞÜ]+", t.lower()) if len(w) > 2 and w not in BAG_SOZ]
+    asil, yeni = sz(c), set(sz(" ".join(parcalar)))
+    return not asil or sum(w in yeni for w in asil) / len(asil) >= 0.95
+
+
 def sirali_mi(c: str) -> list[str] | None:
-    """'Önce A, ardından B, sonra C ve en sonunda D gelişir.' → [A, B, C, D]"""
-    if sum(bool(re.search(s, c, re.I)) for s in SIRA) < 3:
+    """'Önce A, ardından B, sonra C ve en sonunda D gelişir.' → [A, B, C, D]. Açık başlangıç (önce/ilk) ve bitiş
+    (en son/son olarak) ister; her adım ≥ 2 sözcük; cümle sözcükleri korunmalı (kapsar)."""
+    if not (re.search(r"\b(önce|ilk olarak|ilk sırada)\b", c, re.I) and re.search(r"\b(en sonunda|en son|son olarak|en sonda)\b", c, re.I)):
         return None
-    parca = re.split(r",?\s*(?:\b[Öö]nce\b|\bardından\b|\bsonra(?:sında)?\b|\ben sonunda\b|\bson olarak\b)\s*", c)
-    og = [re.sub(r"\s+(ve|ile)$", "", x.strip(" ,.;")) for x in parca if len(x.strip(" ,.;")) > 3]
-    if og:  # son öğedeki yüklem (gelişir, gelir, yapılır…) madde metnine girmez
+    bas = re.match(r"^(.{0,120}?:)\s*", c)  # "Sıra şöyledir:" gibi giriş
+    govde = c[bas.end():] if bas else c
+    parca = re.split(r",?\s*(?:\b[Öö]nce\b|\bilk olarak\b|\bardından\b|\bsonra(?:sında)?\b|\ben sonunda\b|\ben sonda\b|\ben son\b|\bson olarak\b)\s*,?\s*", govde)
+    og = [re.sub(r"\s+(ve|ile)$", "", x.strip(" ,.;")) for x in parca if x.strip(" ,.;")]
+    if og:  # son öğedeki yüklem (gelişir, gelir…) madde metnine girmez
         og[-1] = re.sub(r"\s+(gelişir|gelir|yapılır|uygulanır|başlar|izlenir|kazanılır)$", "", og[-1])
-    return og if len(og) >= 3 else None
+    if len(og) < 3 or any(len(x.split()) < 2 for x in og) or any(";" in x for x in og):
+        return None
+    return og if kapsar(c, og) else None
 
 
 def liste_mi(c: str) -> tuple[str, list[str]] | None:
-    """Sayım cümlesi: 'X'in başında A, B ve C gelir.' / 'Nedenler arasında A, B ve C sayılır.'"""
-    if c.count(",") < 2 or not SAYIM.search(c):
+    """Sayım cümlesi: 'X'in başında A, B ve C gelir.' / 'Nedenler arasında A, B ve C sayılır.' /
+    'Üç aile tanımlanmıştır: A, B ve C.' (iki noktadan sonra yalnız kısa öğeler, her biri ≤ 6 sözcük)"""
+    ik = re.match(r"^([^:;]{8,160}):\s+([^:;]+?)[.!]?$", c)
+    if ik:
+        og = sayiyla_ayir(ik.group(1), ik.group(2)) or []
+        if len(og) >= 3 and all(len(x.split()) <= 6 for x in og) and ogeler_ad_mi(og) and kapsar(c, [ik.group(1), *og]):
+            return ik.group(1).strip(), og
+    if c.count(",") + len(re.findall(r"\s(?:ve|ile|ya da)\s", c)) < 2 or not SAYIM.search(c):
         return None
     m = re.match(r"^(.{8,90}?(?:başında|arasında|amacıyla|için|olarak|Bunlara|Bu amaçla))\s+(.*)$", c)
     if not m:
         return None
-    og = _ayir_oge(SAYIM.split(m.group(2))[0])
-    return (m.group(1).strip(), og) if len(og) >= 3 else None
+    if re.search(r"[;:]", m.group(2)) or re.search(r"\b(yüz|bin|on|yirmi|otuz|kırk|elli)\s+ile\b", m.group(1)):
+        return None  # ikinci cümle parçası ya da sayı aralığı ("üç yüz ile dört yüz arasında") liste değildir
+    og = sayiyla_ayir(m.group(1), SAYIM.split(m.group(2))[0]) or []
+    return (m.group(1).strip(), og) if len(og) >= 3 and ogeler_ad_mi(og) and kapsar(c, [m.group(1), *og]) else None
 
 
 SAYI = r"(?:sıfır|bir|iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on|yirmi|otuz|kırk|elli|altmış|yetmiş|seksen|doksan|yüz)"
@@ -100,6 +155,35 @@ def tablo_mi(c: str) -> dict | None:
             return None
         satir.append([re.sub(r"^(?:bu\s+)?oran\s+", "", k.group(1).strip(), flags=re.I), "yüzde " + y.group(1).strip()])
     return {"basliklar": ["Durum", "Oran"], "satirlar": satir}
+
+
+ANAHTAR = re.compile(r"^([A-ZÇĞİÖŞÜ][\wçğıöşüÇĞİÖŞÜ\-]*(?:\s+[\wçğıöşüÇĞİÖŞÜ\-]+){0,3}?)(?:,\s|\s+ise\s|;\s|:\s)")
+
+
+TANIM = re.compile(r"(demektir|denir|tanımlanır|anlamına gelir|adı verilir|terimdir|olarak bilinir|olarak adlandırılır)[.!]?$")
+
+
+def anahtar_bul(c: str, terim_adlari: set[str] | None = None) -> str:
+    """Cümlenin başında tanımlanan kavram: en çok 4 sözcük, ardından virgül/ise/;/: ("Primer enürezis, …")."""
+    m = ANAHTAR.match(c)
+    if not m:
+        return ""
+    a = m.group(1).strip()
+    # bağlaç/zamirle başlayan ya da tek harfli başlangıç kavram değildir
+    if re.match(r"^(Bu|Şu|O|Bunlar|Ancak|Ayrıca|Örneğin|Yani|Böylece|Dahası|Son olarak|Ardından|Önce|Sonra|Tanı|Tedavi|İlk)\b", a):
+        return ""
+    # yüklem içeren başlangıç ("Yaş ölçütü önemlidir") kavram adı değildir
+    if re.search(r"(?:[dt][ıiuü]r|m[ae]z|[ıiuü]yor|abilir|ebilir|[ıiuü]r|[ae]r)$", a.split()[-1]) and len(a.split()) > 1:
+        return ""
+    # çekimli ad (bulunma/ilgi eki: "Sekonder enüreziste", "Hastanın") kavram adı değildir
+    if re.search(r"(?:[dt][ae]|n[dt][ae]|[ıiuü]n|n[ıiuü]n)$", a.split()[-1]) and len(a.split()[-1]) > 4:
+        return ""
+    if not 2 < len(a) <= 40:
+        return ""
+    # yalnız güvenilir durumlar: dersin terim katmanındaki bir terim ya da açık tanım cümlesi ("X ise …", "… demektir")
+    terim = bool(terim_adlari) and a.lower() in terim_adlari
+    tanim = bool(TANIM.search(c)) or bool(re.match(rf"^{re.escape(a)}\s+ise\s", c))
+    return a if terim or tanim else ""
 
 
 def terimler(key: str) -> dict[str, str]:
@@ -151,7 +235,8 @@ def modelle(key: str) -> dict:
             elif re.match(r"^(Örneğin|Mesela|Sözgelimi)\b", c):
                 B.append({"t": "ornek", "x": c, "p": p})
             elif (s := sirali_mi(c)):
-                B.append({"t": "sirali", "bas": "", "ogeler": s, "p": p})
+                gb = re.match(r"^(.{0,120}?:)\s*", c)
+                B.append({"t": "sirali", "bas": gb.group(1) if gb else "", "ogeler": s, "p": p})
             elif (tb := tablo_mi(c)):
                 B.append({"t": "tablo", **tb, "x": c, "p": p})
             elif (ls := liste_mi(c)):
@@ -161,9 +246,14 @@ def modelle(key: str) -> dict:
             elif BAGLAC.match(c) and B and B[-1]["t"] in ("madde", "liste", "sirali", "giris"):
                 B.append({"t": "aciklama", "x": c, "p": p})
             else:
-                B.append({"t": "madde", "sv": 1, "x": c, "p": p})
+                # paragrafın ilk bilgi maddesi ana madde (sv 1), sonrakiler onun altında (sv 2)
+                ana_var = any(b["t"] == "madde" and b["p"] == p and b["sv"] == 1 for b in B)
+                m = {"t": "madde", "sv": 2 if ana_var else 1, "x": c, "p": p}
+                if (a := anahtar_bul(c, {t.lower() for t in trm})):  # yeni kavram tanımı kendi ana maddesini açar (Primer / Sekonder kardeştir)
+                    m["anahtar"], m["sv"] = a, 1
+                B.append(m)
             # bölümde ilk geçen terim (en çok 3/bölüm), cümlenin hemen ardından
-            if sum(1 for b in B if b["t"] == "terim") < 3:
+            if B[-1]["t"] != "giris" and sum(1 for b in B if b["t"] == "terim") < 3:  # giriş cümlesine terim kartı eklenmez
                 for ad, tanim in trm.items():
                     # tek sözcüklü terim yalnız ekiyle değil tam sözcük olarak eşleşir ("Gelişim" ≠ "gelişiminde")
                     bitis = r"(?!\w)" if " " not in ad else ""

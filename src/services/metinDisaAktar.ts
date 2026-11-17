@@ -33,7 +33,41 @@ type Blok =
   | { tur: 'tablo'; satirlar: Run[][][] }
   | { tur: 'resim'; baslik: string; yol: string; alt: string }
   /** Çıkmış/örnek soru kartı: "?# no | yıl | etiket" satırıyla başlar; sonraki satırlar kök, "?- önerme", "?+ soru cümlesi", "?= cevap"; boş satırda biter */
-  | { tur: 'soru'; no: string; yil: string; etiket: string; kok: Run[]; onerme: Run[][]; ek: Run[]; cevap: Run[] };
+  | { tur: 'soru'; no: string; yil: string; etiket: string; kok: Run[]; onerme: Run[][]; ek: Run[]; cevap: Run[] }
+  /** Zengin transkript bloğu: yalnız "Zengin görünüm" üslubu `::z {json}` satırıyla üretir (canliDersDisaAktar.cdZenginBelge);
+   *  eski üsluplar bu satırı hiç yazmaz, iki yol çakışmaz. */
+  | { tur: 'z'; d: ZenginBlok };
+
+/** Zengin blok verisi (scripts/uretim/sesli_anlatim/zengin_transkript.py şeması) */
+export interface ZenginBlok {
+  t: 'giris' | 'madde' | 'aciklama' | 'liste' | 'sirali' | 'tablo' | 'sinav' | 'ornek' | 'alinti' | 'terim' | string;
+  x?: string; sv?: number; anahtar?: string; bas?: string; ogeler?: string[]; basliklar?: string[]; satirlar?: string[][]; ad?: string; tanim?: string;
+}
+/** Zengin blok satırı (üretici tarafı) */
+export const zenginSatiri = (d: ZenginBlok) => `::z ${JSON.stringify(d)}`;
+const Z_RE = /^::z (\{.*\})\s*$/;
+/** Zengin bloğun düz/Markdown karşılığı (txt, md ve ölçülemeyen durumlar için) */
+function zDuzSatirlar(d: ZenginBlok, mdKip: boolean): string[] {
+  const k = (t?: string) => (mdKip ? `**${t}**` : t || '');
+  const x = d.x || '';
+  switch (d.t) {
+    case 'giris': return [mdKip ? `> ${x}` : x, ''];
+    case 'madde': return [`${'  '.repeat(Math.max(0, (d.sv || 1) - 1))}- ${d.anahtar && x.startsWith(d.anahtar) ? k(d.anahtar) + x.slice(d.anahtar.length) : x}`];
+    case 'aciklama': return [`    - ${mdKip ? `_${x}_` : x}`];
+    case 'liste': return [`- ${k(d.bas)}`, ...(d.ogeler || []).map((o) => `  - ${o}`)];
+    case 'sirali': return [...(d.bas ? [k(d.bas)] : []), ...(d.ogeler || []).map((o, i) => `${i + 1}. ${o}`), ''];
+    case 'tablo': {
+      const h = d.basliklar || [], r = d.satirlar || [];
+      return mdKip ? ['', `| ${h.join(' | ')} |`, `|${h.map(() => '---').join('|')}|`, ...r.map((z) => `| ${z.join(' | ')} |`), '']
+        : [h.join(' | '), ...r.map((z) => z.join(' | '))];
+    }
+    case 'sinav': return [mdKip ? `> **Sınavda soruldu:** ${x}` : `[Sınavda soruldu] ${x}`];
+    case 'ornek': return [mdKip ? `> **Örnek:** ${x}` : `[Örnek] ${x}`];
+    case 'alinti': return [mdKip ? `> “${x}”` : `“${x}”`];
+    case 'terim': return [`    ${k(d.ad)}: ${d.tanim || ''}`];
+    default: return x ? [x] : [];
+  }
+}
 
 /** Resim satırı: ![başlık](yol "alt yazı") — başlıkta ] ve alt yazıda " bulunmaz (resimSatiri temizler) */
 const RESIM_RE = /^\s*!\[([^\]]*)\]\((\S+?)(?:\s+"([^"]*)")?\)\s*$/;
@@ -120,6 +154,8 @@ function bloklar(md: string): Blok[] {
   for (let k = 0; k < sat.length; k++) {
     const l = sat[k];
     if (!l.trim()) continue;
+    const zs = l.match(Z_RE);
+    if (zs) { girinti.length = 0; try { out.push({ tur: 'z', d: JSON.parse(zs[1]) as ZenginBlok }); } catch { /* bozuk satır atlanır */ } continue; }
     const rs = l.match(RESIM_RE);
     if (rs) { girinti.length = 0; out.push({ tur: 'resim', baslik: rs[1].trim(), yol: rs[2], alt: (rs[3] || '').trim() }); continue; }
     const sb = l.match(SORU_RE);
@@ -193,6 +229,7 @@ function txt(b: AktarBelge): string {
       else if (x.tur === 'not') s.push(...x.satirlar.map((r, i) => `${i === 0 && x.etiket ? `[${x.etiket}] ` : '    '}${duz(r)}`));
       else if (x.tur === 'tablo') s.push(...x.satirlar.map((r) => r.map(duz).join(' | ')));
       else if (x.tur === 'resim') s.push('', `[Resim: ${x.baslik}${x.alt ? ` — ${x.alt}` : ''}]`, '');
+      else if (x.tur === 'z') s.push(...zDuzSatirlar(x.d, false));
       else if (x.tur === 'soru') {
         s.push('', `${x.no}. ${x.etiket ? `[${x.etiket}] ` : ''}${duz(x.kok)}${x.yil ? ` (${x.yil})` : ''}`, ...x.onerme.map((r) => `    ${duz(r)}`));
         if (x.ek.length) s.push(`    ${duz(x.ek)}`);
@@ -212,6 +249,8 @@ function md(b: AktarBelge): string {
     // resim satırı: mutlak bağlantı (dosya site dışında açılır) + alt yazı; soru kartı düz maddeye (sıra korunur)
     const govde = soruMdDonustur(bo.md);
     s.push(govde.trim().split('\n').map((l) => {
+      const zs = l.match(Z_RE);
+      if (zs) { try { return zDuzSatirlar(JSON.parse(zs[1]), true).join('\n'); } catch { return ''; } }
       const rs = l.match(RESIM_RE);
       if (!rs) return l;
       return `\n![${rs[1].trim()}](${mutlak(rs[2])})${rs[3] ? `\n\n_${rs[3].trim()}_` : ''}\n`;
@@ -289,6 +328,33 @@ const runX = (r: Run) => `<w:r>${r.b || r.m || r.i ? `<w:rPr>${r.b || r.m ? '<w:
 const runsX = (r: Run[]) => r.map(runX).join('');
 const par = (stil: string, ic: string, ek = '') => `<w:p><w:pPr><w:pStyle w:val="${stil}"/>${ek}</w:pPr>${ic}</w:p>`;
 
+/** Zengin blok → Word paragrafları (stiller docxXml'de Z* ile başlar) */
+function zDocx(d: ZenginBlok): string[] {
+  const r = (t: string, o: Partial<Run> = {}) => runX({ t, ...o });
+  const tut = '<w:keepNext/><w:keepLines/>';
+  switch (d.t) {
+    case 'giris': return [par('ZGiris', r(d.x || ''))];
+    case 'madde': {
+      const x = d.x || '', a = d.anahtar && x.startsWith(d.anahtar) ? d.anahtar : '';
+      return [par((d.sv || 1) > 1 ? 'ZMadde2' : 'ZMadde1', (a ? r(a, { b: true }) : '') + r(x.slice(a.length)))];
+    }
+    case 'aciklama': return [par('ZAcik', r('↳ ') + r(d.x || '', { i: true }))];
+    case 'liste': return [par('ZListeBas', r(d.bas || '', { b: true }), tut), ...(d.ogeler || []).map((o, i, a) => par('ZListe', r('✓  ') + r(o), i < a.length - 1 ? tut : ''))];
+    case 'sirali': return [...(d.bas ? [par('ZListeBas', r(d.bas, { b: true }), tut)] : []), ...(d.ogeler || []).map((o, i, a) => par('ZSira', r(`${i + 1}\t`, { b: true }) + r(o), i < a.length - 1 ? tut : ''))];
+    case 'tablo': {
+      const h = d.basliklar || [], rows = d.satirlar || [], sut = Math.max(h.length, ...rows.map((z) => z.length), 1), gen = Math.floor(9638 / sut);
+      const hucre = (t: string, ri: number) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${ri === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="0D6E96"/>' : ri % 2 === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="F2F6F9"/>' : ''}</w:tcPr>${par('Tablo', ri === 0 ? `<w:r><w:rPr><w:b/><w:color w:val="FFFFFF"/></w:rPr><w:t xml:space="preserve">${xe(t)}</w:t></w:r>` : r(t))}</w:tc>`;
+      return [`<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblBorders>${['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map((k) => `<w:${k} w:val="single" w:sz="4" w:color="D6DCE3"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="100" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol w:w="' + gen + '"/>'.repeat(sut)}</w:tblGrid>`
+        + [h, ...rows].map((z, ri) => `<w:tr>${Array.from({ length: sut }, (_, ci) => hucre(z[ci] || '', ri)).join('')}</w:tr>`).join('') + '</w:tbl>', par('Normal', '')];
+    }
+    case 'sinav': return [par('ZSinav', r('★ SINAVDA SORULDU', { b: true }), tut), par('ZSinavM', r(d.x || ''))];
+    case 'ornek': return [par('ZOrnek', r('ÖRNEK', { b: true }), tut), par('ZOrnekM', r(d.x || ''))];
+    case 'alinti': return [par('ZAlinti', r(`“${d.x || ''}”`, { i: true }))];
+    case 'terim': return [par('ZTerim', r(`${d.ad || ''}: `, { b: true }) + r(d.tanim || ''))];
+    default: return d.x ? [par('Normal', r(d.x))] : [];
+  }
+}
+
 function docxXml(b: AktarBelge, resimler: Resimler = new Map()): Record<string, string | Uint8Array> {
   const medya: Record<string, Uint8Array> = {};
   const rels: string[] = [];
@@ -312,6 +378,8 @@ function docxXml(b: AktarBelge, resimler: Resimler = new Map()): Record<string, 
         g.push(`<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblBorders>${['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map((k) => `<w:${k} w:val="single" w:sz="4" w:color="D6DCE3"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol w:w="' + gen + '"/>'.repeat(sut)}</w:tblGrid>`
           + x.satirlar.map((r, ri) => `<w:tr>${Array.from({ length: sut }, (_, ci) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${ri === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="EEF3F7"/>' : ''}</w:tcPr>${par('Tablo', (r[ci] || []).map((x2) => runX(ri === 0 ? { ...x2, b: true } : x2)).join(''))}</w:tc>`).join('')}</w:tr>`).join('')
           + '</w:tbl>' + par('Normal', ''));
+      } else if (x.tur === 'z') {
+        g.push(...zDocx(x.d));
       } else if (x.tur === 'soru') {
         g.push(par('SoruKok', runX({ t: `${x.no}.\t`, b: true }) + (x.etiket ? runX({ t: `${x.etiket}: `, i: true }) : '') + runsX(x.kok) + (x.yil ? runX({ t: `  (${x.yil})`, i: true }) : ''), '<w:keepNext/><w:keepLines/>'));
         for (const r of x.onerme) g.push(par('SoruOnerme', runsX(r), '<w:keepNext/>'));
@@ -355,6 +423,20 @@ function docxXml(b: AktarBelge, resimler: Resimler = new Map()): Record<string, 
       + stil('SoruKok', 'Soru kökü', '<w:ind w:left="454" w:hanging="454"/><w:spacing w:before="160" w:after="40"/>', '')
       + stil('SoruOnerme', 'Soru önermesi', '<w:ind w:left="794"/><w:spacing w:after="0"/>', '')
       + stil('SoruCevap', 'Soru cevabı', '<w:pBdr><w:left w:val="single" w:sz="18" w:space="8" w:color="0D6E96"/></w:pBdr><w:shd w:val="clear" w:color="auto" w:fill="EEF5F9"/><w:ind w:left="454"/><w:spacing w:before="60" w:after="160"/>', '')
+      // Zengin görünüm stilleri (yalnız ::z bloklarında kullanılır)
+      + stil('ZGiris', 'Zengin giriş', '<w:pBdr><w:left w:val="single" w:sz="24" w:space="8" w:color="0D6E96"/></w:pBdr><w:shd w:val="clear" w:color="auto" w:fill="EEF5F9"/><w:ind w:left="200"/><w:spacing w:before="80" w:after="160"/>', '<w:b/><w:color w:val="0E1A26"/><w:sz w:val="23"/>')
+      + stil('ZMadde1', 'Zengin ana madde', '<w:ind w:left="360" w:hanging="360"/><w:spacing w:before="100" w:after="40"/>', '', '<w:next w:val="ZMadde2"/>').replace('<w:pPr>', '<w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr>')
+      + stil('ZMadde2', 'Zengin alt madde', '<w:ind w:left="900" w:hanging="300"/><w:spacing w:after="30"/>', '<w:color w:val="3A4856"/>').replace('<w:pPr>', '<w:pPr><w:numPr><w:ilvl w:val="1"/><w:numId w:val="1"/></w:numPr>')
+      + stil('ZAcik', 'Zengin açıklama', '<w:ind w:left="1260"/><w:spacing w:after="40"/>', '<w:color w:val="566472"/><w:sz w:val="20"/>')
+      + stil('ZListeBas', 'Zengin liste başlığı', '<w:keepNext/><w:pBdr><w:top w:val="single" w:sz="6" w:space="2" w:color="0D6E96"/></w:pBdr><w:shd w:val="clear" w:color="auto" w:fill="E3EEF5"/><w:spacing w:before="160" w:after="0"/><w:ind w:left="120" w:right="120"/>', '<w:color w:val="0D6E96"/>')
+      + stil('ZListe', 'Zengin liste ögesi', '<w:shd w:val="clear" w:color="auto" w:fill="F6F9FB"/><w:ind w:left="360" w:right="120"/><w:spacing w:after="0"/>', '')
+      + stil('ZSira', 'Zengin sıra adımı', '<w:tabs><w:tab w:val="left" w:pos="480"/></w:tabs><w:pBdr><w:left w:val="single" w:sz="12" w:space="8" w:color="0D6E96"/></w:pBdr><w:ind w:left="600" w:hanging="480"/><w:spacing w:after="60"/>', '')
+      + stil('ZSinav', 'Zengin sınav başlığı', '<w:keepNext/><w:shd w:val="clear" w:color="auto" w:fill="FFF1D6"/><w:pBdr><w:left w:val="single" w:sz="24" w:space="8" w:color="B4690A"/></w:pBdr><w:ind w:left="200"/><w:spacing w:before="120" w:after="0"/>', '<w:color w:val="9A5A08"/><w:sz w:val="18"/>')
+      + stil('ZSinavM', 'Zengin sınav metni', '<w:shd w:val="clear" w:color="auto" w:fill="FFF1D6"/><w:pBdr><w:left w:val="single" w:sz="24" w:space="8" w:color="B4690A"/></w:pBdr><w:ind w:left="200"/><w:spacing w:after="140"/>', '')
+      + stil('ZOrnek', 'Zengin örnek başlığı', '<w:keepNext/><w:shd w:val="clear" w:color="auto" w:fill="E4F4EA"/><w:pBdr><w:left w:val="single" w:sz="24" w:space="8" w:color="1E8250"/></w:pBdr><w:ind w:left="200"/><w:spacing w:before="120" w:after="0"/>', '<w:color w:val="1E8250"/><w:sz w:val="18"/>')
+      + stil('ZOrnekM', 'Zengin örnek metni', '<w:shd w:val="clear" w:color="auto" w:fill="E4F4EA"/><w:pBdr><w:left w:val="single" w:sz="24" w:space="8" w:color="1E8250"/></w:pBdr><w:ind w:left="200"/><w:spacing w:after="140"/>', '')
+      + stil('ZAlinti', 'Zengin alıntı', '<w:ind w:left="720" w:right="720"/><w:spacing w:before="80" w:after="120"/>', '<w:color w:val="566472"/>')
+      + stil('ZTerim', 'Zengin terim', '<w:pBdr><w:left w:val="dotted" w:sz="12" w:space="6" w:color="0D6E96"/></w:pBdr><w:ind w:left="900"/><w:spacing w:after="60"/>', '<w:sz w:val="19"/><w:color w:val="3A4856"/>')
       + `</w:styles>`,
     'word/numbering.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:numbering ${W}><w:abstractNum w:abstractNumId="0"><w:multiLevelType w:val="hybridMultilevel"/>`
       + [0, 1, 2].map((l) => `<w:lvl w:ilvl="${l}"><w:start w:val="1"/><w:numFmt w:val="bullet"/><w:lvlText w:val="${['•', '◦', '▪'][l]}"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="${360 * (l + 1)}" w:hanging="360"/></w:pPr><w:rPr><w:color w:val="0D6E96"/></w:rPr></w:lvl>`).join('')
@@ -557,7 +639,163 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Ma
     if (y > ust) { doc.setDrawColor(...CIZGI); doc.setLineWidth(0.2); doc.line(M + o.IC, y, W - M, y); }
     y += 1.6;
   };
+  /* ---------- Zengin görünüm blokları (yalnız ::z satırları; eski üsluplar buraya hiç girmez) ---------- */
+  const MONO = S.renk === 'murekkep';
+  const Z_AMBER: RGB = MONO ? INK : [168, 98, 8], Z_AMBER_BG: RGB = MONO ? [242, 242, 242] : [255, 242, 216];
+  const Z_YESIL: RGB = MONO ? INK : [26, 120, 74], Z_YESIL_BG: RGB = MONO ? [244, 244, 244] : [229, 245, 236];
+  const Z_ALT: RGB = [58, 72, 86], Z_ACIK: RGB = [86, 100, 114], BEYAZ: RGB = [255, 255, 255], ZEBRA: RGB = [246, 249, 251];
+  const anahtarli = (d: ZenginBlok): Run[] => {
+    const x = d.x || '';
+    return d.anahtar && x.startsWith(d.anahtar) ? [{ t: d.anahtar, b: true }, { t: x.slice(d.anahtar.length) }] : [{ t: x }];
+  };
+  /** Satırları y'den başlayarak çizer; y'yi ilerletmez */
+  const satirlariCiz = (sat: Kelime[][], x: number, y0: number, pt: number, renk: RGB) =>
+    sat.forEach((s2, j) => satirCiz(s2, x, y0 + j * lh(pt) + pt * 0.3528, pt, renk));
+  /** Kutu: renkli sol şerit + zemin + küçük büyük-harf etiket + metin */
+  const kutu = (etiket: string, renk: RGB, zemin: RGB, runs: Run[], pt: number) => {
+    const etSat = satirla([{ t: etiket, b: true }], CW - 9, PT.kucuk * 0.92), sat = satirla(runs, CW - 9, pt);
+    const h = etSat.length * lh(PT.kucuk * 0.92) + sat.length * lh(pt) + 5.2;
+    return { h: h + 2.5, ciz: () => {
+      y += 1;
+      doc.setFillColor(...zemin); doc.roundedRect(M, y, CW, h, 1.2, 1.2, 'F');
+      doc.setFillColor(...renk); doc.rect(M, y, 1.6, h, 'F');
+      doc.circle(M + 5.3, y + 3.1, 0.9, 'F');
+      satirlariCiz(etSat, M + 7.3, y + 1.7, PT.kucuk * 0.92, renk);
+      satirlariCiz(sat, M + 5, y + 2.4 + etSat.length * lh(PT.kucuk * 0.92), pt, INK);
+      y += h + 1.5;
+    } };
+  };
+  const zYerles = (d: ZenginBlok): { h: number; ciz: () => void } => {
+    const pt = PT.govde;
+    switch (d.t) {
+      case 'giris': {
+        const p2 = pt * 1.05, sat = satirla([{ t: d.x || '', b: true }], CW - 9, p2), h = sat.length * lh(p2) + 4;
+        return { h: h + 3.5, ciz: () => {
+          y += 1;
+          doc.setFillColor(...NOT_ZEMIN); doc.rect(M, y, CW, h, 'F');
+          doc.setFillColor(...VURGU); doc.rect(M, y, 1.8, h, 'F');
+          satirlariCiz(sat, M + 5.5, y + 2, p2, INK); y += h + 2.5;
+        } };
+      }
+      case 'madde': {
+        const alt = (d.sv || 1) > 1, gx = alt ? M + 8 : M, ic = alt ? 4.5 : 6;
+        const sat = satirla(anahtarli(d), CW - (gx - M) - ic, pt), h = sat.length * lh(pt) + (alt ? 0.7 : 1.6);
+        return { h: h + (alt ? 0 : 1.2), ciz: () => {
+          if (!alt) y += 1.2;
+          doc.setFillColor(...VURGU); doc.setDrawColor(...VURGU); doc.setLineWidth(0.3);
+          if (alt) doc.circle(gx + 1.3, y + 2.5, 0.65, 'S'); else doc.rect(gx + 0.6, y + 1.7, 1.7, 1.7, 'F');
+          satirlariCiz(sat, gx + ic, y, pt, alt ? Z_ALT : INK); y += h;
+        } };
+      }
+      case 'aciklama': {
+        const p2 = PT.kucuk, gx = M + 14, sat = satirla([{ t: d.x || '', i: true }], CW - 18, p2), h = sat.length * lh(p2) + 0.9;
+        return { h, ciz: () => {
+          doc.setDrawColor(...CIZGI); doc.setLineWidth(0.35);
+          doc.line(gx - 3.2, y + 0.4, gx - 3.2, y + 2.2); doc.line(gx - 3.2, y + 2.2, gx - 1.2, y + 2.2);
+          satirlariCiz(sat, gx, y, p2, Z_ACIK); y += h;
+        } };
+      }
+      case 'liste': {
+        const og = d.ogeler || [], iki = og.length >= 4 && og.every((o) => o.length <= 42);
+        const bas = satirla([{ t: d.bas || '', b: true }], CW - 8, pt), basH = bas.length * lh(pt) + 3.2;
+        const kw = iki ? (CW - 10) / 2 : CW - 10;
+        const ogS = og.map((o) => satirla([{ t: o }], kw - 5, pt));
+        const satirH = (i: number) => ogS[i].length * lh(pt) + 1.1;
+        const govdeH = iki ? Array.from({ length: Math.ceil(og.length / 2) }, (_, r) => Math.max(satirH(2 * r), 2 * r + 1 < og.length ? satirH(2 * r + 1) : 0)).reduce((a, c) => a + c, 0)
+          : og.reduce((a, _, i) => a + satirH(i), 0);
+        const h = basH + govdeH + 3;
+        return { h: h + 3, ciz: () => {
+          y += 1.5;
+          doc.setFillColor(...ZEBRA); doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.roundedRect(M, y, CW, h, 1.5, 1.5, 'FD');
+          doc.setFillColor(...NOT_ZEMIN); doc.roundedRect(M, y, CW, basH, 1.5, 1.5, 'F'); doc.rect(M, y + basH - 1.5, CW, 1.5, 'F');
+          doc.setFillColor(...VURGU); doc.rect(M, y, CW, 0.7, 'F');
+          satirlariCiz(bas, M + 4, y + 1.6, pt, VURGU);
+          let yy = y + basH + 1.5;
+          const isaret = (x0: number, y0: number) => { doc.setDrawColor(...VURGU); doc.setLineWidth(0.45); doc.line(x0, y0 + 2.4, x0 + 0.9, y0 + 3.3); doc.line(x0 + 0.9, y0 + 3.3, x0 + 2.5, y0 + 1.5); };
+          if (iki) for (let r = 0; r < Math.ceil(og.length / 2); r++) {
+            [2 * r, 2 * r + 1].filter((i) => i < og.length).forEach((i, c) => { const x0 = M + 4 + c * (kw + 2); isaret(x0, yy); satirlariCiz(ogS[i], x0 + 4.5, yy, pt, INK); });
+            yy += Math.max(satirH(2 * r), 2 * r + 1 < og.length ? satirH(2 * r + 1) : 0);
+          } else og.forEach((_, i) => { isaret(M + 4, yy); satirlariCiz(ogS[i], M + 8.5, yy, pt, INK); yy += satirH(i); });
+          y += h + 1.5;
+        } };
+      }
+      case 'sirali': {
+        const og = d.ogeler || [], bas = d.bas ? satirla([{ t: d.bas, b: true }], CW, pt) : [];
+        const ogS = og.map((o) => satirla([{ t: o }], CW - 12, pt)), adH = ogS.map((x) => Math.max(x.length * lh(pt), 5.4) + 2);
+        const basH = bas.length ? bas.length * lh(pt) + 1.5 : 0, etH = lh(PT.kucuk) + 0.8;
+        const h = etH + basH + adH.reduce((a, c) => a + c, 0);
+        return { h: h + 3, ciz: () => {
+          y += 1.5;
+          satirlariCiz(satirla([{ t: 'SIRALAMA · ADIM ADIM', b: true }], CW, PT.kucuk * 0.9), M, y, PT.kucuk * 0.9, VURGU); y += etH;
+          if (bas.length) { satirlariCiz(bas, M, y, pt, INK); y += basH; }
+          const merkez = M + 3.4;
+          og.forEach((_, i) => {
+            if (i < og.length - 1) { doc.setDrawColor(...VURGU); doc.setLineWidth(0.5); doc.line(merkez, y + 5, merkez, y + adH[i] + 0.4); }
+            doc.setFillColor(...VURGU); doc.circle(merkez, y + 2.7, 2.7, 'F');
+            doc.setFont(F, 'bold'); doc.setFontSize(PT.kucuk); doc.setTextColor(...BEYAZ);
+            doc.text(String(i + 1), merkez, y + 2.7 + PT.kucuk * 0.3528 * 0.36, { align: 'center' });
+            satirlariCiz(ogS[i], M + 9, y + Math.max(0, (5.4 - ogS[i].length * lh(pt)) / 2), pt, INK);
+            y += adH[i];
+          });
+          y += 1.5;
+        } };
+      }
+      case 'tablo': {
+        const rows = [d.basliklar || [], ...(d.satirlar || [])], sut = Math.max(...rows.map((r) => r.length), 1), p2 = PT.tablo, pad = 1.8;
+        // sütun genişliği içerik uzunluğuyla orantılı (en az %14)
+        const uz = Array.from({ length: sut }, (_, c) => Math.max(...rows.map((r) => (r[c] || '').length), 4));
+        const top = uz.reduce((a, c) => a + c, 0), oran = uz.map((u) => Math.max(0.14, u / top)), os = oran.reduce((a, c) => a + c, 0);
+        const cw = oran.map((o) => (CW * o) / os), cx = cw.map((_, c) => M + cw.slice(0, c).reduce((a, v) => a + v, 0));
+        const hucre = rows.map((r, ri) => Array.from({ length: sut }, (_, c) => satirla([{ t: r[c] || '', b: ri === 0 || c === 0 }], cw[c] - 2 * pad, p2)));
+        const rh = hucre.map((r) => Math.max(...r.map((c) => c.length), 1) * lh(p2) + 2 * pad), h = rh.reduce((a, c) => a + c, 0);
+        return { h: h + 4, ciz: () => {
+          y += 1.5;
+          hucre.forEach((r, ri) => {
+            if (ri === 0) { doc.setFillColor(...VURGU); doc.rect(M, y, CW, rh[0], 'F'); }
+            else if (ri % 2 === 0) { doc.setFillColor(...ZEBRA); doc.rect(M, y, CW, rh[ri], 'F'); }
+            doc.setDrawColor(...CIZGI); doc.setLineWidth(0.2);
+            r.forEach((c, ci) => { if (ri) doc.rect(cx[ci], y, cw[ci], rh[ri], 'S'); satirlariCiz(c, cx[ci] + pad, y + pad, p2, ri === 0 ? BEYAZ : INK); });
+            y += rh[ri];
+          });
+          y += 2.5;
+        } };
+      }
+      case 'sinav': return kutu('SINAVDA SORULDU', Z_AMBER, Z_AMBER_BG, [{ t: d.x || '' }], PT.not);
+      case 'ornek': return kutu('ÖRNEK', Z_YESIL, Z_YESIL_BG, [{ t: d.x || '' }], PT.not);
+      case 'alinti': {
+        const sat = satirla([{ t: d.x || '', i: true }], CW - 16, pt), h = sat.length * lh(pt) + 2;
+        return { h: h + 2, ciz: () => {
+          doc.setFont(F, 'bold'); doc.setFontSize(pt * 2.2); doc.setTextColor(...VURGU); doc.text('“', M + 3, y + pt * 0.3528 * 1.6);
+          satirlariCiz(sat, M + 10, y + 1, pt, Z_ACIK); y += h + 2;
+        } };
+      }
+      case 'terim': {
+        const p2 = PT.kucuk, gx = M + 8, sat = satirla([{ t: `${d.ad || ''}: `, b: true }, { t: d.tanim || '' }], CW - 14, p2), h = sat.length * lh(p2) + 2.4;
+        return { h: h + 1, ciz: () => {
+          doc.setDrawColor(...VURGU); doc.setLineWidth(0.25); doc.setLineDashPattern([0.6, 0.6], 0);
+          doc.roundedRect(gx, y, CW - 8, h, 1, 1, 'S'); doc.setLineDashPattern([], 0);
+          satirlariCiz(sat, gx + 3, y + 1.2, p2, Z_ALT); y += h + 1;
+        } };
+      }
+      default: {
+        const sat = satirla([{ t: d.x || '' }], CW, pt), h = sat.length * lh(pt) + 1.5;
+        return { h, ciz: () => { satirlariCiz(sat, M, y, pt, INK); y += h; } };
+      }
+    }
+  };
+  const zCiz = (d: ZenginBlok) => {
+    const z = zYerles(d);
+    if (z.h > ALT - UST) {
+      // tek sayfadan uzun blok (çok nadir): bölünebilir düz akışa düşer
+      for (const l of zDuzSatirlar(d, false)) if (l.trim()) akit([{ t: l.trim() }], M, CW, PT.govde, INK, undefined, 1);
+      return;
+    }
+    if (y + z.h > ALT) { doc.addPage(); y = UST; }
+    z.ciz();
+  };
+
   const hesaplaBlokH = (x: Blok): number => {
+    if (x.tur === 'z') return zYerles(x.d).h;
     if (x.tur === 'soru') return soruOlc(x).h;
     if (x.tur === 'resim') return resimOlc(x).top;
     if (x.tur === 'h') {
@@ -837,6 +1075,8 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Ma
           y += h;
         });
         y += 3;
+      } else if (x.tur === 'z') {
+        zCiz(x.d);
       } else if (x.tur === 'soru') {
         soruCiz(x);
       } else if (x.tur === 'resim') {

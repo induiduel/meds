@@ -7,7 +7,7 @@
  * İçerik seçenekleri (CdAktarSecenek): kapsam (tüm metin / yalnız önemli yerler), üslup (ders notu / konuşma metni), işaretler,
  * slayt başlıkları, resimler, bölüm seçimi ve ekler (terimler ve kısaltmalar, doğrulanmış çıkmış sorular). Seçimler cihazda hatırlanır.
  */
-import { resimSatiri, soruKokParcala, soruSatirlari, type AktarBelge } from '../../services/metinDisaAktar';
+import { resimSatiri, soruKokParcala, soruSatirlari, zenginSatiri, type AktarBelge, type ZenginBlok } from '../../services/metinDisaAktar';
 import { araResimBitis, araResimleri, araResimYolu, type AraResim } from './araResimVeri';
 import { ekranYazimi } from '../../services/ekranYazim';
 import { cumleler, paragrafMd } from '../../services/maddeDuzen';
@@ -177,7 +177,7 @@ export function cdAktarBelgesi(detay: CdDetay, etiket: string, secenek: boolean 
 
 
 /* ---------------- zengin transkript (v1) ---------------- */
-export type ZBlok = { t: string; p: number; x?: string; sv?: number; bas?: string; ogeler?: string[]; basliklar?: string[]; satirlar?: string[][]; ad?: string; tanim?: string };
+export type ZBlok = { t: string; p: number; x?: string; sv?: number; anahtar?: string; bas?: string; ogeler?: string[]; basliklar?: string[]; satirlar?: string[][]; ad?: string; tanim?: string };
 export interface ZModel { surum: number; key: string; bolumler: { baslik: string; bloklar: ZBlok[] }[] }
 const ZENGIN = import.meta.glob('../../data/zengin_transkript/*.json', { import: 'default' }) as Record<string, () => Promise<ZModel>>;
 const zYol = (key: string) => `../../data/zengin_transkript/${key}.json`;
@@ -188,7 +188,7 @@ export async function cdZenginYukle(key: string): Promise<ZModel | null> {
   const f = ZENGIN[zYol(key)];
   if (!f) return null;
   const m = await f();
-  return m?.surum === 1 && m.bolumler?.length ? m : null;
+  return (m?.surum === 1 || m?.surum === 2) && m.bolumler?.length ? m : null;
 }
 
 /** Zengin üslup belgesi. Model yoksa ya da kapsam "önemli yerler" ise eski yol (cdAktarBelgesi, ders notu) — iki yol karışmaz. */
@@ -198,7 +198,7 @@ export async function cdZenginBelge(detay: CdDetay, etiket: string, secenek: CdA
   if (!yukle || secenek.kapsam === 'onemli') return eski();
   let m: ZModel;
   try { m = await yukle(); } catch { return eski(); }
-  if (m?.surum !== 1 || !m.bolumler?.length) return eski();
+  if ((m?.surum !== 1 && m?.surum !== 2) || !m.bolumler?.length) return eski();
   const yaz = (t?: string) => ekranYazimi(tekSatir(t || '')).replace(/\|/g, '/');
   // p (metindeki boş olmayan paragraf sırası) → derste paragraf kimliği: ara resimleri doğru yere koymak için
   const pi = detay.bolumler.flatMap((b) => b.paragraflar.filter((p) => p.metin.trim()).map((p) => p.i));
@@ -212,23 +212,24 @@ export async function cdZenginBelge(detay: CdDetay, etiket: string, secenek: CdA
     let sonP = -1;
     for (const k of b.bloklar) {
       if (k.p !== sonP) { if (sonP >= 0 && pi[sonP] != null) L.push(...al(pi[sonP])); sonP = k.p; }
-      switch (k.t) {
-        case 'giris': L.push(yaz(k.x)); break;
-        case 'madde': L.push(`${'  '.repeat(Math.max(0, (k.sv || 1) - 1))}- ${yaz(k.x)}`); break;
-        case 'aciklama': L.push(`  - ${yaz(k.x)}`); break;
-        case 'liste': L.push(`- **${yaz(k.bas)}**`, ...(k.ogeler || []).map((o) => `  - ${yaz(o)}`)); break;
-        case 'sirali': if (k.bas) L.push(yaz(k.bas)); L.push(...(k.ogeler || []).map((o, j) => `${j + 1}. ${yaz(o)}`)); break;
-        case 'tablo': L.push(`| ${(k.basliklar || []).map(yaz).join(' | ')} |`, `|${(k.basliklar || []).map(() => '---').join('|')}|`, ...(k.satirlar || []).map((r) => `| ${r.map(yaz).join(' | ')} |`)); break;
-        case 'sinav': L.push(`> [!IMPORTANT] ${yaz(k.x)}`); break;
-        case 'ornek': L.push(`> [!TIP] ${yaz(k.x)}`); break;
-        case 'alinti': L.push(`> “${yaz(k.x)}”`); break;
-        case 'terim': L.push(`  - **${yaz(k.ad)}:** ${yaz(k.tanim)}`); break;
-        default: if (k.x) L.push(yaz(k.x));
-      }
+      // Her blok motorun zengin türüyle (::z) yazılır: PDF/Word'de türüne özgü tasarım (metinDisaAktar.zYerles / zDocx)
+      const d: ZenginBlok = { t: k.t };
+      if (k.x) d.x = yaz(k.x);
+      if (k.sv) d.sv = k.sv;
+      if (k.anahtar) d.anahtar = yaz(k.anahtar);
+      if (k.bas) d.bas = yaz(k.bas);
+      if (k.ogeler) d.ogeler = k.ogeler.map(yaz);
+      if (k.basliklar) d.basliklar = k.basliklar.map(yaz);
+      if (k.satirlar) d.satirlar = k.satirlar.map((r) => r.map(yaz));
+      if (k.ad) d.ad = yaz(k.ad);
+      if (k.tanim) d.tanim = yaz(k.tanim);
+      // ekran yazımı anahtarı değiştirmiş olabilir: madde metni anahtarla başlamıyorsa anahtar düşer
+      if (d.anahtar && !(d.x || '').startsWith(d.anahtar)) delete d.anahtar;
+      L.push(zenginSatiri(d));
     }
     if (sonP >= 0 && pi[sonP] != null) L.push(...al(pi[sonP]));
     if (!secimGecerli && sira === secili.length - 1) L.push(...al(Infinity));
-    return { baslik: yaz(b.baslik), md: L.join('\n') };
+    return { baslik: `${sira + 1}. ${yaz(b.baslik)}`, md: L.join('\n') };
   }).filter((b) => b.md.trim());
   if (secenek.sozluk) { const x = sozlukMd(detay); if (x) bolumler.push({ baslik: 'Terimler ve kısaltmalar', md: x }); }
   if (secenek.cikmis) { const x = cikmisMd(detay); if (x) bolumler.push({ baslik: 'Bu dersten çıkmış sorular', md: x }); }

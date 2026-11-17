@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 808,
-  "baslik": "İçerik hattı kayıt kuralları inceltildi",
+  "onem": 809,
+  "baslik": "Zengin PDF yeniden tasarlandı",
   "maddeler": [
-    "Arka plan: İçerik hattının hata kaydı denetimi, her derste okunan kural cümlesine odaklandı; kayıtlar bilgi kaybetmeden kısa kalır.",
-    "Site kullanımında görünür bir değişiklik yok."
+    "Zengin görünüm artık yalnız metni dışa aktarırken: Sesli ders ekranı eski, sade haline döndü.",
+    "Yeni zengin PDF/Word: iç içe maddeler, kavram adları kalın, numaralı adımlar, başlıklı liste kutuları, renkli başlıklı tablolar, \"Sınavda soruldu\", \"Örnek\" ve terim kutuları ayrı tasarımla."
   ],
   "eklenen": [],
   "degisen": [
