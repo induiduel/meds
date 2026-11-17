@@ -1,0 +1,4828 @@
+{
+ "surum": 2,
+ "ders_id": "k3-09",
+ "anahtar": "y25-k3-09-akut-hepatitler",
+ "baslik": "Akut Hepatitler",
+ "donem": "2025-2026",
+ "bolumler": [
+  {
+   "id": "k3-09-b01",
+   "baslik": "Akut Hepatitler",
+   "paragraflar": [
+    {
+     "id": "k3-09-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-09-c0001",
+       "ses": "Akut hepatit, karaciğer parankiminin akut enflamasyonu ya da karaciğer fonksiyon testlerinde yükselme ile sonuçlanan hepatosit hasarı tablosudur.",
+       "ekran": "**Akut hepatit** parankim enflamasyonu veya hepatosit hasarı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Akut hepatit, karaciğer parankiminin akut enflamasyonu veya karaciğer fonksiyon testlerinde yükselme ile sonuçlanan hepatosit hasarı ile karakterize durumları tanımlamak için kullanılan bir terimdir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0002",
+       "ses": "Hepatosit hasarı karaciğer hücresinin zedelenmesi anlamına geldiği için hücre içi enzimler kana sızar ve testlerde yükselme görülür.",
+       "ekran": "**Akut hepatit** parankim enflamasyonu veya hepatosit hasarı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Akut hepatit, karaciğer parankiminin akut enflamasyonu veya karaciğer fonksiyon testlerinde yükselme ile sonuçlanan hepatosit hasarı ile karakterize durumları tanımlamak için kullanılan bir terimdir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0003",
+       "ses": "Karaciğer fonksiyon testlerinin normalleşmesi altı aydan kısa sürerse akut hepatit, altı aydan uzun sürerse kronik hepatit adını alır.",
+       "ekran": "**Altı ay** sınırı akut ile kroniki ayırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Karaciğer fonksiyon testlerinin normalleşmesi altı aydan az sürerse buna akut hepatit, altı aydan fazla devam ederse kronik hepatit denir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Altı ay",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0004",
+       "ses": "Altı ay sınırı iyileşme ile kronikleşme arasındaki klinik ayrımı belirlediği için tedavi ve izlem planı bu süreye göre yapılır.",
+       "ekran": "**Altı ay** sınırı akut ile kroniki ayırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Karaciğer fonksiyon testlerinin normalleşmesi altı aydan az sürerse buna akut hepatit, altı aydan fazla devam ederse kronik hepatit denir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Altı ay",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0005",
+       "ses": "Akut hepatitin en yaygın nedeni viral enfeksiyonlardır ve bu tabloda öncelikle hepatotropik virüsler akla gelir.",
+       "ekran": "**En sık neden** viral enfeksiyonlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Akut hepatitin en yaygın nedeni viral enfeksiyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "En sık neden",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-09-c0006",
+       "ses": "Virüsler karaciğer hücresini doğrudan tuttuğu için olguların çoğunda enzim yüksekliği tabloya eşlik eder.",
+       "ekran": "**En sık neden** viral enfeksiyonlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Akut hepatitin en yaygın nedeni viral enfeksiyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "En sık neden",
+         "tur": "terim"
+        },
+        {
+         "metin": "En sık neden",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-pat-026"
+       ]
+      },
+      {
+       "id": "k3-09-c0007",
+       "ses": "Akut hepatit ilaçlar, alkol, otoimmün hepatit ve primer bilier kolanjit gibi immünolojik hadiselerle de ortaya çıkabilir.",
+       "ekran": "**Enfeksiyon dışı** nedenler de var",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Bununla birlikte ilaçlar, alkol, otoimmün hepatit, primer bilier kolanjit gibi immünolojik hadiseler ve çeşitli enfeksiyöz olmayan nedenlerden kaynaklanabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfeksiyon dışı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0008",
+       "ses": "Yani tablo her zaman enfeksiyon kaynaklı değildir; bu nedenlerin bilinmesi gereksiz antibiyotik yerine doğru nedene yönelmeyi sağlar.",
+       "ekran": "**Enfeksiyon dışı** nedenler de var",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Bununla birlikte ilaçlar, alkol, otoimmün hepatit, primer bilier kolanjit gibi immünolojik hadiseler ve çeşitli enfeksiyöz olmayan nedenlerden kaynaklanabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfeksiyon dışı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-09-c0009",
+       "ses": "Etiyoloji başlığı akut hepatitin nedenlerini enfeksiyöz ve toksik olmak üzere iki ana grupta toplar.",
+       "ekran": "**Etiyoloji** iki ana grup",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Etiyoloji"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0010",
+       "ses": "Nedenin doğru saptanması tedavi yaklaşımını belirlediği için bu sınıflama klinikte yol gösterici olur.",
+       "ekran": "**Etiyoloji** iki ana grup",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Etiyoloji"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0011",
+       "ses": "Enfeksiyöz nedenler akut hepatitin ilk ana başlığını oluşturur ve virüsleri, bakterileri, mantarları ve parazitleri kapsar.",
+       "ekran": "**Enfeksiyöz nedenler** ilk ana başlık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "1-Enfeksiyoz nedenler:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfeksiyöz nedenler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0012",
+       "ses": "Enfeksiyon kaynaklı tablo çoğu zaman ateş ve sistemik belirtilerle birlikte seyreder.",
+       "ekran": "**Enfeksiyöz nedenler** ilk ana başlık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "1-Enfeksiyoz nedenler:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Enfeksiyöz nedenler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0013",
+       "ses": "Hepatotropik virüsler karaciğeri asıl hedef olarak tutan hepatit a, hepatit b, hepatit c, hepatit d, hepatit e ve hepatit g virüsleridir.",
+       "ekran": "**Hepatotropik virüsler** hepatit a dan g ye kadar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hepatotropik Viruslar: Hepatit A,B,C,D,E,G"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatotropik virüsler",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hepatotropik virüsler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "3590cc3f8eca",
+        "past-q-1__Kurul_Sorular-22",
+        "3c7be86dc75d",
+        "c611eb40b59d"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p004",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-09-c0014",
+       "ses": "Karaciğer hücresini doğrudan hedefledikleri için hepatosit hasarı ve enzim yüksekliği tablonun ön yüzünde yer alır.",
+       "ekran": "**Hepatotropik virüsler** hepatit a dan g ye kadar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hepatotropik Viruslar: Hepatit A,B,C,D,E,G"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatotropik virüsler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0015",
+       "ses": "Non hepatotropik virüsler karaciğeri asıl hedefi olarak almayan, ancak enfeksiyon sırasında karaciğeri de tutabilen etkenlerdir.",
+       "ekran": "**Non hepatotropik** virüsler karaciğeri ikincil tutar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Non-Hepatotropik Viruslar: Epstein-Barr Virüsü (EBV), Sitomegalovirüs (CMV), Herpes Simpleks Virüsü (HSV), Coxsackie virüsü, Adenovirüs, Dang virüsü, Coronavirüs-19"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Non hepatotropik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0016",
+       "ses": "Epstein barr virüsü, sitomegalovirüs, herpes simpleks virüsü, coxsackie virüsü, adenovirüs, dang virüsü ve koronavirüs on dokuz bu grubun örnekleridir.",
+       "ekran": "**Non hepatotropik** virüsler karaciğeri ikincil tutar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Non-Hepatotropik Viruslar: Epstein-Barr Virüsü (EBV), Sitomegalovirüs (CMV), Herpes Simpleks Virüsü (HSV), Coxsackie virüsü, Adenovirüs, Dang virüsü, Coronavirüs-19"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Non hepatotropik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0017",
+       "ses": "Bakteriler, mantarlar ve parazitler de enfeksiyöz nedenler arasında sayılır.",
+       "ekran": "**Bakteri, mantar, parazit** enfeksiyöz grupta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bakteriler, mantarlar ve parazitler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bakteri, mantar, parazit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0018",
+       "ses": "Bu etkenlerde karaciğer tutulumu çoğunlukla sistemik enfeksiyonun bir parçası olarak ortaya çıkar.",
+       "ekran": "**Bakteri, mantar, parazit** enfeksiyöz grupta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bakteriler, mantarlar ve parazitler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bakteri, mantar, parazit",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p005",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-09-c0019",
+       "ses": "Toksinler etiyolojinin ikinci ana başlığını oluşturur ve alkol, ilaç ile diğer kimyasal maddeleri kapsar.",
+       "ekran": "**Toksinler** ikinci ana başlık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "2- Toksinler:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Toksinler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0020",
+       "ses": "Zararlı maddeye maruziyet öyküsü alınmadığında bu nedenler kolayca atlandığı için ilaç ve alkol sorgusu özenle yapılır.",
+       "ekran": "**Toksinler** ikinci ana başlık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "2- Toksinler:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Toksinler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0021",
+       "ses": "Alkolle ilişkili toksik tablolar yağlı karaciğer hastalığı ve akut alkolik hepatit olarak karşımıza çıkar.",
+       "ekran": "**Alkol** yağlı karaciğer ve akut alkolik hepatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Alkolle ilişkili: Yağlı karaciğer hastalığı, Akut alkolik hepatit"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol",
+         "tur": "terim"
+        },
+        {
+         "metin": "Alkol",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "0256c02d5f60"
+       ]
+      },
+      {
+       "id": "k3-09-c0022",
+       "ses": "Alkol karaciğerde yağ birikimine ve doğrudan hepatosit zedelenmesine yol açtığı için tablo enzim yüksekliğiyle gelir.",
+       "ekran": "**Alkol** yağlı karaciğer ve akut alkolik hepatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Alkolle ilişkili: Yağlı karaciğer hastalığı, Akut alkolik hepatit"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Alkol",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0023",
+       "ses": "İlaçlar ve toksinler karaciğer hasarının önemli bir nedeni olup karaciğeri iki farklı mekanizmayla zedeleyebilir.",
+       "ekran": "**İlaç ve toksinler** iki mekanizma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "İlaçlar ve toksinler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlaç ve toksinler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p006",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-09-c0024",
+       "ses": "Bir kısmı doza bağlı seyrederken bir kısmı dozdan bağımsız idiyosinkratik reaksiyon biçiminde ortaya çıkar.",
+       "ekran": "**İlaç ve toksinler** iki mekanizma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "İlaçlar ve toksinler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlaç ve toksinler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0025",
+       "ses": "Doza bağlı ilaç hasarı alınan miktar arttıkça belirginleşir ve parasetamol bunun klasik örneğidir.",
+       "ekran": "**Doza bağlı** hasar parasetamol örneği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Doza bağlı; örn. parasetamol"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Doza bağlı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Doza bağlı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "f9a86f09f985"
+       ]
+      },
+      {
+       "id": "k3-09-c0026",
+       "ses": "Yüksek dozda toksik metabolit biriktiği için karaciğer hücresi doğrudan zedelenir ve tablo ağırlaşabilir.",
+       "ekran": "**Doza bağlı** hasar parasetamol örneği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Doza bağlı; örn. parasetamol"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Doza bağlı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0027",
+       "ses": "Doza bağlı olmayan reaksiyonlar antibiyotikler, antikonvülzanlar, statinler, nonsteroid antiinflamatuar ilaçlar ve bitkisel takviyelerle görülen idiyosinkratik yanıtlardır.",
+       "ekran": "**İdiyosinkratik** reaksiyonlar dozdan bağımsız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Doza bağlı olmayan; örn. antibiyotikler, antikonvülzanlar, statinler, NSAID'ler, bitkisel/besin takviyeleri ile ilgili idiyosinkratik ilaç reaksiyonları"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İdiyosinkratik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0028",
+       "ses": "İdiyosinkratik tepki kişiye özgüdür, bu yüzden küçük dozda bile ağır hepatit gelişebilir.",
+       "ekran": "**İdiyosinkratik** reaksiyonlar dozdan bağımsız",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Doza bağlı olmayan; örn. antibiyotikler, antikonvülzanlar, statinler, NSAID'ler, bitkisel/besin takviyeleri ile ilgili idiyosinkratik ilaç reaksiyonları"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İdiyosinkratik",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p007",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-09-c0029",
+       "ses": "Diğer toksinler arasında amanita phalloides mantarı, karbon tetraklorür ve deniz anemonu sokması yer alır.",
+       "ekran": "**Diğer toksinler** mantar, karbon tetraklorür, anemon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Diğer toksinler; örn. mantar (Amanita phalloides), karbon tetraklorür, deniz anemonu sokması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Diğer toksinler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0030",
+       "ses": "Mantar zehirlenmesi gibi durumlar hızlı ve ağır karaciğer hasarı yapabildiği için acil klinik önem taşır.",
+       "ekran": "**Diğer toksinler** mantar, karbon tetraklorür, anemon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Diğer toksinler; örn. mantar (Amanita phalloides), karbon tetraklorür, deniz anemonu sokması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Diğer toksinler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p008",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k3-09-c0031",
+       "ses": "Akut hepatit tablosunda karaciğerdeki iltihabi süreç şemanın merkezinde yer alır.",
+       "ekran": "**Akut hepatit** iltihabi süreç",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "karaciğer iltihabını gösteren şema"
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0032",
+       "ses": "Hastalığın klinik yüzü sarılık gibi belirtilerle şemada ayrı bir dal olarak gösterilir.",
+       "ekran": "**Sarılık** klinik bulgu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "sarılık ile gelen klinik görünüm"
+       },
+       "vurgu": [
+        {
+         "metin": "Sarılık",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0033",
+       "ses": "Karaciğer enzimlerindeki değişim akut dönemde izlenen laboratuvar bulgusu olarak vurgulanır.",
+       "ekran": "**Enzim** değişimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "enzim değişimini izleyen ok"
+       },
+       "vurgu": [
+        {
+         "metin": "Enzim",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0034",
+       "ses": "Şema akut hepatitin viral ve diğer etkenlerini birbirinden ayırmaya yönelik bir akış sunar.",
+       "ekran": "**Etken** ayrımı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "etkenleri ayıran çatallanma"
+       },
+       "vurgu": [
+        {
+         "metin": "Etken",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0035",
+       "ses": "Klinik bulgular ile laboratuvarın birlikte değerlendirilmesi tanıya giden yolu oluşturur.",
+       "ekran": "**Tanıya** giden yol",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [],
+        "sekil": "tanıya varan akış oku"
+       },
+       "vurgu": [
+        {
+         "metin": "Tanıya",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-09-b02",
+   "baslik": "3- İmmünolojik veya inflamatuar durumlar",
+   "paragraflar": [
+    {
+     "id": "k3-09-p009",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-09-c0036",
+       "ses": "İmmünolojik veya inflamatuar durumlar başlığı, bağışıklık sisteminin kendi karaciğer dokusuna yöneldiği akut hepatit nedenlerini bir araya getirir.",
+       "ekran": "**İmmünolojik** ve inflamatuar nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "3- İmmünolojik veya inflamatuar durumlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İmmünolojik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0037",
+       "ses": "Bu grupta karaciğer hasarı mikrop kaynaklı değil, inflamasyon kaynaklıdır.",
+       "ekran": "**İmmünolojik** ve inflamatuar nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "3- İmmünolojik veya inflamatuar durumlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İmmünolojik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0038",
+       "ses": "Otoimmün hepatit, bağışıklık sisteminin kendi karaciğer hücrelerine saldırmasıyla gelişen inflamatuar bir karaciğer hastalığıdır.",
+       "ekran": "**Otoimmün hepatit** immün saldırı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Otoimmün hepatit"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Otoimmün hepatit",
+         "tur": "terim"
+        },
+        {
+         "metin": "Otoimmün hepatit",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-1_Kurul-2022-26"
+       ]
+      },
+      {
+       "id": "k3-09-c0039",
+       "ses": "Akut hepatit tablosunun immünolojik nedenleri arasındaki yerini bu saldırı mekanizması belirler.",
+       "ekran": "**Otoimmün hepatit** immün saldırı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Otoimmün hepatit"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Otoimmün hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0040",
+       "ses": "Primer biliyer veya primer sklerozan kolanjit gibi safra yolları hastalıkları, akım yollarını tutan immün aracılı inflamasyonla karaciğer hasarı yapar.",
+       "ekran": "**Safra yolu** hastalıkları primer biliyer sklerozan kolanjit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Primer biliyer veya primer sklerozan kolanjit gibi safra yolları hastalıkları"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Safra yolu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p010",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-09-c0041",
+       "ses": "Safra akımı bozulduğunda ortaya çıkan tablo akut hepatitin immünolojik nedenleri arasında sayılır.",
+       "ekran": "**Safra yolu** hastalıkları primer biliyer sklerozan kolanjit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Primer biliyer veya primer sklerozan kolanjit gibi safra yolları hastalıkları"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Safra yolu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0042",
+       "ses": "Metabolik veya kalıtsal başlığı, doğuştan gelen birikim bozukluklarının karaciğeri tuttuğu nedenleri kapsar.",
+       "ekran": "**Metabolik** kalıtsal nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "4- Metabolik veya kalıtsal"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Metabolik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0043",
+       "ses": "Kalıtsal maddelerin karaciğerde birikmesi hücre hasarı ve inflamasyon doğurur.",
+       "ekran": "**Metabolik** kalıtsal nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "4- Metabolik veya kalıtsal"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Metabolik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0044",
+       "ses": "Hemokromatoz, demirin karaciğer başta olmak üzere dokularda aşırı birikmesiyle hasar yapan kalıtsal metabolik hastalıktır.",
+       "ekran": "**Hemokromatoz** demir birikimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hemokromatoz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokromatoz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0045",
+       "ses": "Biriken demir yaptığı hasarla akut hepatit ayırıcı tanısında metabolik nedenler arasında anılır.",
+       "ekran": "**Hemokromatoz** demir birikimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hemokromatoz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hemokromatoz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p011",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-09-c0046",
+       "ses": "Wilson hastalığı, bakırın atılamayıp karaciğerde ve sinir sisteminde biriktiği kalıtsal bir hastalıktır.",
+       "ekran": "**Wilson hastalığı** bakır birikimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Wilson hastalığı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Wilson hastalığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0047",
+       "ses": "Bakır birikiminin karaciğer tutulumu hepatit tablosuyla ortaya çıkabilir.",
+       "ekran": "**Wilson hastalığı** bakır birikimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Wilson hastalığı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Wilson hastalığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0048",
+       "ses": "Gebelikle ilgili başlığı, gebelik sırasında ortaya çıkan ve karaciğeri tutan klinik tabloları toplar.",
+       "ekran": "**Gebelikle** ilgili nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "5- Gebelikle ilgili"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelikle",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0049",
+       "ses": "Gebelikte karaciğer hasarı hem anne hem bebek için yakın izlem gerektirir.",
+       "ekran": "**Gebelikle** ilgili nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "5- Gebelikle ilgili"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelikle",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0050",
+       "ses": "Preeklampsi, gebelikte ortaya çıkan ve organ tutulumuyla seyreden bir klinik tablodur.",
+       "ekran": "**Preeklampsi** organ tutulumu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Preeklampsi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Preeklampsi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p012",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-09-c0051",
+       "ses": "Karaciğer tutulumu yaptığında akut hepatit nedeni olarak değerlendirilir.",
+       "ekran": "**Preeklampsi** organ tutulumu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Preeklampsi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Preeklampsi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0052",
+       "ses": "Gebeliğin akut yağlı karaciğeri, gebelik döneminde karaciğerde yağ birikimiyle seyreden bir tablodur.",
+       "ekran": "**Gebelikte akut yağlı** karaciğer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gebeliğin akut yağlı karaciğeri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelikte akut yağlı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0053",
+       "ses": "Gebelikle ilgili akut hepatit nedenleri arasında yer alması, karaciğer yetmezliğine dek gidebilen ağır seyrinden dolayıdır.",
+       "ekran": "**Gebelikte akut yağlı** karaciğer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gebeliğin akut yağlı karaciğeri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelikte akut yağlı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0054",
+       "ses": "he e el el pe sendromu, hemoliz, yükselmiş karaciğer enzimleri ve düşük trombosit sayısıyla tanımlanan gebelik komplikasyonudur.",
+       "ekran": "**he e el el pe** sendromu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "HELLP sendromu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "he e el el pe",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0055",
+       "ses": "Gebelikte karaciğer tutulumu yapan bu tablo akut hepatit nedenleri arasında sayılır.",
+       "ekran": "**he e el el pe** sendromu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "HELLP sendromu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "he e el el pe",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p013",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-09-c0056",
+       "ses": "İskemik ve vasküler olaylar başlığı, karaciğere giden kan akımının bozulduğu nedenleri toplar.",
+       "ekran": "**İskemik ve vasküler** olaylar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "6- İskemik ve Vasküler Olaylar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İskemik ve vasküler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0057",
+       "ses": "Kan akımı azaldığında karaciğer hücreleri oksijensiz kalır ve hasar gelişir.",
+       "ekran": "**İskemik ve vasküler** olaylar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "6- İskemik ve Vasküler Olaylar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İskemik ve vasküler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0058",
+       "ses": "Kardiyojenik şok, kalbin pompa işlevinin yetmediği ağır dolaşım yetersizliğidir.",
+       "ekran": "**Kardiyojenik şok** iskemik hepatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kardiyojenik şok"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kardiyojenik şok",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0059",
+       "ses": "Karaciğere gelen kan akımı düşünce iskemik hepatit tablosu ortaya çıkar.",
+       "ekran": "**Kardiyojenik şok** iskemik hepatit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kardiyojenik şok"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kardiyojenik şok",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0060",
+       "ses": "Kokain ve efedrin, damarları büzen etkileriyle karaciğer kan akımını bozarak iskemik hasar yaratır.",
+       "ekran": "**Kokain ve efedrin** damar büzücü hasar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kokain, efedrin"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kokain ve efedrin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p014",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-09-c0061",
+       "ses": "Toksik ve vasküler mekanizmalarla akut hepatit nedeni olabilirler.",
+       "ekran": "**Kokain ve efedrin** damar büzücü hasar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Kokain, efedrin"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kokain ve efedrin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0062",
+       "ses": "Budd Chiari sendromu, hepatik ven trombozu sonucu karaciğerden kan çıkışının tıkandığı tablodur.",
+       "ekran": "**Budd Chiari** hepatik ven trombozu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Budd-Chiari sendromu(hepatik ven trombozu)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Budd Chiari",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0063",
+       "ses": "Tıkanıklık karaciğerde konjesyon ve hasar yaparak akut hepatit bulguları doğurur.",
+       "ekran": "**Budd Chiari** hepatik ven trombozu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Budd-Chiari sendromu(hepatik ven trombozu)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Budd Chiari",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0064",
+       "ses": "Diğer başlığı, önceki gruplara girmeyen malignite, toksik ve nakil sonrası nedenleri bir araya getirir.",
+       "ekran": "**Diğer** akut hepatit nedenleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "7- Diğer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Diğer",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0065",
+       "ses": "Ayırıcı tanıda bu nedenlerin akılda tutulması gözden kaçmalarını önler.",
+       "ekran": "**Diğer** akut hepatit nedenleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "7- Diğer"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Diğer",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p015",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-09-c0066",
+       "ses": "Malign hastalıklar, karaciğeri tutarak akut hepatit tablosuna yol açabilen nedenler arasındadır.",
+       "ekran": "**Malign hastalıklar** karaciğer tutulumu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Malign hastalıklar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Malign hastalıklar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0067",
+       "ses": "Tümör yükünün karaciğere etkisi bu grupta değerlendirilmesini gerektirir.",
+       "ekran": "**Malign hastalıklar** karaciğer tutulumu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Malign hastalıklar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Malign hastalıklar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0068",
+       "ses": "Reye sendromu, akut karaciğer hasarı yapan klinik tablolar arasında ayrı bir yere sahiptir.",
+       "ekran": "**Reye sendromu** diğer nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Reye sendromu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Reye sendromu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0069",
+       "ses": "Akut hepatit ayırıcı tanısında diğer nedenler grubunda anılır.",
+       "ekran": "**Reye sendromu** diğer nedenler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Reye sendromu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Reye sendromu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0070",
+       "ses": "Karaciğer nakli sonrası primer greft işlevsizliği, yeni karaciğerin nakilden sonra işlev gösterememesi durumudur.",
+       "ekran": "**Primer greft işlevsizliği** nakil sonrası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Karaciğer nakli sonrası primer greft işlevsizliği"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Primer greft işlevsizliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p016",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-09-c0071",
+       "ses": "Karaciğer yetmezliği bulgularıyla diğer nedenler grubunda yer alır.",
+       "ekran": "**Primer greft işlevsizliği** nakil sonrası",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Karaciğer nakli sonrası primer greft işlevsizliği"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Primer greft işlevsizliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p017",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-09-c0072",
+       "ses": "Akut hepatit ayırıcı tanısında viral etkenler arasında herpes grubu, adenovirüs, rubella, enterovirüs ve sarı humma yer alır.",
+       "ekran": "**Viral etkenler** ayırıcı tanıda yer alır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "Viral etkenler başlığı altında toplanır"
+       },
+       "vurgu": [
+        {
+         "metin": "Viral etkenler",
+         "tur": "terim"
+        },
+        {
+         "metin": "Viral etkenler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877500577-947322"
+       ]
+      },
+      {
+       "id": "k3-09-c0073",
+       "ses": "Bakteriyel ve paraziter başlıkta leptospiroz, sifilis, tüberküloz, bruselloz, toksoplasmoz ve amebiyaz akut hepatit ayırıcı tanısında düşünülür.",
+       "ekran": "**Bakteriyel etkenler** ayırıcı tanıda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "Bakteriyel ve paraziter etkenler"
+       },
+       "vurgu": [
+        {
+         "metin": "Bakteriyel etkenler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0074",
+       "ses": "Biliyer obstruksiyon ve primer biliyer siroz karaciğer dışı kolestaz nedenleri olarak akut hepatit ayırıcı tanısına girer.",
+       "ekran": "**Biliyer obstruksiyon** kolestazla seyreder",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "Kolestatik tablolar ayırıcı tanıda"
+       },
+       "vurgu": [
+        {
+         "metin": "Biliyer obstruksiyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0075",
+       "ses": "Wilson hastalığı ve otoimmun nedenler hepatitin infeksiyon dışı ayırıcı tanısında yer alan klinik durumlardır.",
+       "ekran": "**Wilson hastalığı** infeksiyon dışı nedendir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "Metabolik ve otoimmun durumlar"
+       },
+       "vurgu": [
+        {
+         "metin": "Wilson hastalığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0076",
+       "ses": "İlaç toksisitesinde asetaminofen, izoniazid ve halotan gibi etkenler ile alkol akut hepatit ayırıcı tanısında akla gelmelidir.",
+       "ekran": "**İlaç toksisitesi** ve alkol düşünülür",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "İlaç ve alkol ilişkili hasar"
+       },
+       "vurgu": [
+        {
+         "metin": "İlaç toksisitesi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p018",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-09-c0077",
+       "ses": "Mantar ve fosfor gibi toksik etkenler ile yağlı karaciğer de akut hepatit ayırıcı tanısında infeksiyon dışı nedenler arasındadır.",
+       "ekran": "**Toksik nedenler** ve yağlı karaciğer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "Toksik ve yağlı karaciğer"
+       },
+       "vurgu": [
+        {
+         "metin": "Toksik nedenler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p019",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-09-c0078",
+       "ses": "Akut hepatitlerin klinik görünümü asemptomatik karaciğer test yüksekliğinden nakil gerektiren akut karaciğer yetmezliğine kadar geniş bir yelpaze oluşturur.",
+       "ekran": "**Klinik spektrum** asemptomatik test yüksekliğinden akut karaciğer yetmezliğine",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Asemptomatik artmış karaciğer fonksiyon testlerinden karaciğer nakli gerektiren akut karaciğer yetmezliğine kadar değişen çeşitli klinik belirti ve semptomlarla kendini gösterebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik spektrum",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0079",
+       "ses": "Hastalık ağırlığı arttıkça karaciğer işlevi bozulur ve nakil ihtiyacı doğabilir.",
+       "ekran": "**Klinik spektrum** asemptomatik test yüksekliğinden akut karaciğer yetmezliğine",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Asemptomatik artmış karaciğer fonksiyon testlerinden karaciğer nakli gerektiren akut karaciğer yetmezliğine kadar değişen çeşitli klinik belirti ve semptomlarla kendini gösterebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klinik spektrum",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0080",
+       "ses": "Fizik muayene bulguları altta yatan etiyolojiye göre sarılıktan akut ensefalopatiye kadar değişir.",
+       "ekran": "**Fizik muayene** sarılık, ensefalopati, nöbet, kanama, hipotansiyon, çoklu organ yetmezliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Altta yatan etiyolojiye bağlı olarak fizik muayene bulguları; sarılık, akut ensefalopati belirtileri, epileptik nöbetler, kanama diyatezi, hipotansiyon ve çoklu organ yetmezliği ile ilgili belirtilere kadar değişebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fizik muayene",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0081",
+       "ses": "Sarılık, epileptik nöbetler, kanama diyatezi, hipotansiyon ve çoklu organ yetmezliği karaciğer hasarının ağırlaştığını gösteren klinik işaretlerdir.",
+       "ekran": "**Fizik muayene** sarılık, ensefalopati, nöbet, kanama, hipotansiyon, çoklu organ yetmezliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Altta yatan etiyolojiye bağlı olarak fizik muayene bulguları; sarılık, akut ensefalopati belirtileri, epileptik nöbetler, kanama diyatezi, hipotansiyon ve çoklu organ yetmezliği ile ilgili belirtilere kadar değişebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fizik muayene",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p020",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-09-c0082",
+       "ses": "Görsel, akut hepatitler bölümünün klinik sayfasında ele alınan sarılık bulgusunu hastanın cildinde ve gözlerinde gösteriyor.",
+       "ekran": "**Sarılık** klinik bulgu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Klinik muayenede sarılık gösteren hasta görseli"
+       },
+       "vurgu": [
+        {
+         "metin": "Sarılık",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0083",
+       "ses": "Sarılık kavramı, hepatit kliniğinin ilk bakışta fark edilen ve değerlendirmeyi yönlendiren temel bulgusu olarak bu görselde yer alıyor.",
+       "ekran": "**Sarılık** klinik bulgu",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Sarılık",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0084",
+       "ses": "Görselin ilişkilendirildiği ikinci nokta, karaciğer bölgesinin elle muayenesi ve bu bölgede saptanan hassasiyet ile büyümedir.",
+       "ekran": "**Karaciğer muayenesi** fizik bakı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Karaciğer bölgesinin elle muayenesi çizimi"
+       },
+       "vurgu": [
+        {
+         "metin": "Karaciğer muayenesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0085",
+       "ses": "Karaciğer büyüklüğü ve hassasiyet kavramları, klinik değerlendirmenin fizik muayene basamağını görsel üzerinden hatırlatıyor.",
+       "ekran": "**Karaciğer muayenesi** fizik bakı",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Karaciğer muayenesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0086",
+       "ses": "Şema, sarılık ile karaciğer bölgesi bulgularının klinik değerlendirmede nasıl bir araya geldiğini akış biçiminde gösteriyor.",
+       "ekran": "**Değerlendirme** öncesi klinik özet",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Klinik bulguları özetleyen akış şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Değerlendirme",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p021",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-09-c0087",
+       "ses": "Bu akış, bir sonraki sayfada yer alan değerlendirme başlığına geçişi hazırlayan klinik tabloyu özetliyor.",
+       "ekran": "**Değerlendirme** öncesi klinik özet",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Değerlendirme",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-09-b03",
+   "baslik": "Değerlendirme",
+   "paragraflar": [
+    {
+     "id": "k3-09-p022",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-09-c0088",
+       "ses": "Ayrıntılı öykü yüksek riskli etkinlikleri, hastalık süresini, alkol tüketimini, cinsel öyküyü ve kan ürünü transfüzyonunu kapsamalıdır.",
+       "ekran": "**Ayrıntılı öykü** riskli etkinlikler, alkol, cinsel öykü, transfüzyon, seyahat, takviyeler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yüksek riskli etkinlikleri içeren ayrıntılı bir öykü almak gerekir. Mevcut hastalığın süresi, alkol tüketimi, cinsel öykü, önceki kan ürünü transfüzyon öyküsü veya yakın zamanda gıda alımı, seyahat öyküsünü ve IV ilaç kullanımı, multivitaminleri ve bitkisel/besin takviyeleri gibi…."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ayrıntılı öykü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0089",
+       "ses": "Yakın zamanda gıda alımı, seyahat, intravenöz ilaç kullanımı, multivitaminler ve bitkisel ya da besin takviyeleri de sorgulanmalıdır.",
+       "ekran": "**Ayrıntılı öykü** riskli etkinlikler, alkol, cinsel öykü, transfüzyon, seyahat, takviyeler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Yüksek riskli etkinlikleri içeren ayrıntılı bir öykü almak gerekir. Mevcut hastalığın süresi, alkol tüketimi, cinsel öykü, önceki kan ürünü transfüzyon öyküsü veya yakın zamanda gıda alımı, seyahat öyküsünü ve IV ilaç kullanımı, multivitaminleri ve bitkisel/besin takviyeleri gibi…."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ayrıntılı öykü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0090",
+       "ses": "Karaciğerin normal işleyişini belirleyen biyokimyasal testler aspartat aminotransferaz, alanin aminotransferaz, alkalen fosfataz, gama glutamil transferaz, laktat dehidrogenaz, bilirubin, protrombin zamanı ve uluslararası normalizasyon oranı ile albümindir.",
+       "ekran": "**Biyokimyasal testler** karaciğer işleyişi ve hepatosit hasarı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "AST (Aspartat aminotransferaz), ALT (Alanin aminotransferaz), ALP (Alkalen Fosfataz), GGT (Gama Glutamil Transferaz), Laktat dehidrogenaz, biluribin, PT/INR ve albümin gibi biyokimyasal testler karaciğerin normal işleyişini belirler ve bu testlerdeki herhangi bir anormallik, hepatositlerin hasarının göstergesidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Biyokimyasal testler",
+         "tur": "terim"
+        },
+        {
+         "metin": "Biyokimyasal testler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877041899-698389"
+       ]
+      },
+      {
+       "id": "k3-09-c0091",
+       "ses": "Herhangi bir anormallik hepatosit hasarının göstergesidir ve karaciğer işlev bozukluğunu erken yakalamaya yardım eder.",
+       "ekran": "**Biyokimyasal testler** karaciğer işleyişi ve hepatosit hasarı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "AST (Aspartat aminotransferaz), ALT (Alanin aminotransferaz), ALP (Alkalen Fosfataz), GGT (Gama Glutamil Transferaz), Laktat dehidrogenaz, biluribin, PT/INR ve albümin gibi biyokimyasal testler karaciğerin normal işleyişini belirler ve bu testlerdeki herhangi bir anormallik, hepatositlerin hasarının göstergesidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Biyokimyasal testler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p023",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-09-c0092",
+       "ses": "Karaciğer fonksiyon testleri içinde hepatit için en özgül test a el te olup akut viral hepatitin en iyi göstergesidir.",
+       "ekran": "**ALT** hepatit için en özgül test",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Karaciğer fonksiyon testleri içinde hepatit için en özgül test ALT’ dir. ALT akut viral hepatitin en iyi göstergesidir. ALT, kolestaz ve obstrüksiyonlarda genellikle normal düzeydedir. Hepatite bağlı kolestazda birlikte biliyer tıkanma varsa yüksek olabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ALT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0093",
+       "ses": "Kolestaz ve obstrüksiyonlarda a el te genellikle normal düzeyde kalır, çünkü bu tablolarda sorun esas olarak safra akımındadır.",
+       "ekran": "**ALT** hepatit için en özgül test",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Karaciğer fonksiyon testleri içinde hepatit için en özgül test ALT’ dir. ALT akut viral hepatitin en iyi göstergesidir. ALT, kolestaz ve obstrüksiyonlarda genellikle normal düzeydedir. Hepatite bağlı kolestazda birlikte biliyer tıkanma varsa yüksek olabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ALT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0094",
+       "ses": "Hepatite bağlı kolestazda birlikte biliyer tıkanma varsa a el te yüksek olabilir.",
+       "ekran": "**ALT** hepatit için en özgül test",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Karaciğer fonksiyon testleri içinde hepatit için en özgül test ALT’ dir. ALT akut viral hepatitin en iyi göstergesidir. ALT, kolestaz ve obstrüksiyonlarda genellikle normal düzeydedir. Hepatite bağlı kolestazda birlikte biliyer tıkanma varsa yüksek olabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ALT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0095",
+       "ses": "Karaciğer dışında kalp kası, iskelet kası, böbrek ve beyinde de bulunan a es te bu nedenle karaciğere özgü değildir.",
+       "ekran": "**AST** karaciğer dışında da var, belirgin yükselme eşiği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "AST karaciğer dışında kalp kası, iskelet kası, böbrek ve beyinde de bulunur. AST ve ALT’nin normalin üst sınırının beş katından fazla veya 500 IU/L'den daha fazla belirgin yükselmeler, yaygın hepatoselüler hasarı düşündürür. İlaca bağlı akut hepatittede AST artışına sık rastlanır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "AST",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0096",
+       "ses": "a es te ve a el te değerlerinin normalin üst sınırının beş katından fazla ya da beş yüz ünite bölü litre üzerinde yükselmesi yaygın hepatoselüler hasarı düşündürür.",
+       "ekran": "**AST** karaciğer dışında da var, belirgin yükselme eşiği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "AST karaciğer dışında kalp kası, iskelet kası, böbrek ve beyinde de bulunur. AST ve ALT’nin normalin üst sınırının beş katından fazla veya 500 IU/L'den daha fazla belirgin yükselmeler, yaygın hepatoselüler hasarı düşündürür. İlaca bağlı akut hepatittede AST artışına sık rastlanır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "AST",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p024",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-09-c0097",
+       "ses": "İlaca bağlı akut hepatitte a es te artışına sık rastlanır.",
+       "ekran": "**AST** karaciğer dışında da var, belirgin yükselme eşiği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "AST karaciğer dışında kalp kası, iskelet kası, böbrek ve beyinde de bulunur. AST ve ALT’nin normalin üst sınırının beş katından fazla veya 500 IU/L'den daha fazla belirgin yükselmeler, yaygın hepatoselüler hasarı düşündürür. İlaca bağlı akut hepatittede AST artışına sık rastlanır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "AST",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0098",
+       "ses": "ge ge te hepatosit ve biliyer epitel hücrelerinde, ayrıca böbrek, seminal veziküller, pankreas, dalak, kalp ve beyinde bulunur.",
+       "ekran": "**GGT** yaygın doku dağılımı gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "GGT hepatosit ve biliyer epitel hücreleri, böbrek, seminal veziküller, pankreas, dalak, kalp ve beyinde bulunur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "GGT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0099",
+       "ses": "Bu yaygın doku dağılımı ge ge te yorumlanırken karaciğer dışı kaynakların da akılda tutulmasını gerektirir.",
+       "ekran": "**GGT** yaygın doku dağılımı gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "GGT hepatosit ve biliyer epitel hücreleri, böbrek, seminal veziküller, pankreas, dalak, kalp ve beyinde bulunur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "GGT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0100",
+       "ses": "Alkalen fosfataz yani a pe karaciğer ve kemiklerde bulunan bir enzimdir.",
+       "ekran": "**ALP ve GGT** yükselmesi kolestazı gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "ALP karaciğer ve kemiklerde bulunan bir enzimdir. Alkalen fosfataz (AP) ve gama-glutamil transferazdaki (GGT) yükselme, çeşitli intrahepatik veya ekstrahepatik nedenlere sekonder gelişebilen, karaciğerin safra salgılama yeteneğinin bozulmasına sekonder altta yatan kolestazı yansıtır. Yaygın nedenler arasında koledokolitiazis, malignite, primer biliyer siroz veya primer sklerozan kolanjit yer alır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ALP ve GGT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0101",
+       "ses": "a pe ve ge ge te yükselmesi, karaciğerin safra salgılama yeteneğinin bozulmasına sekonder gelişen ve intrahepatik veya ekstrahepatik nedenlere bağlı olabilen kolestazı yansıtır.",
+       "ekran": "**ALP ve GGT** yükselmesi kolestazı gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "ALP karaciğer ve kemiklerde bulunan bir enzimdir. Alkalen fosfataz (AP) ve gama-glutamil transferazdaki (GGT) yükselme, çeşitli intrahepatik veya ekstrahepatik nedenlere sekonder gelişebilen, karaciğerin safra salgılama yeteneğinin bozulmasına sekonder altta yatan kolestazı yansıtır. Yaygın nedenler arasında koledokolitiazis, malignite, primer biliyer siroz veya primer sklerozan kolanjit yer alır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ALP ve GGT",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p025",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-09-c0102",
+       "ses": "Yaygın nedenler arasında koledokolitiazis, malignite, primer biliyer siroz ve primer sklerozan kolanjit yer alır.",
+       "ekran": "**ALP ve GGT** yükselmesi kolestazı gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "ALP karaciğer ve kemiklerde bulunan bir enzimdir. Alkalen fosfataz (AP) ve gama-glutamil transferazdaki (GGT) yükselme, çeşitli intrahepatik veya ekstrahepatik nedenlere sekonder gelişebilen, karaciğerin safra salgılama yeteneğinin bozulmasına sekonder altta yatan kolestazı yansıtır. Yaygın nedenler arasında koledokolitiazis, malignite, primer biliyer siroz veya primer sklerozan kolanjit yer alır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "ALP ve GGT",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p026",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-09-c0103",
+       "ses": "Yükselmiş protrombin zamanı, karaciğer hasarının k vitamine bağlı pıhtılaşma faktörleri yani iki, yedi, dokuz ve onuncu faktörlerin işlevini azaltmasıyla ortaya çıkar.",
+       "ekran": "**PT ve INR** uzaması kötü prognoz göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Yükselmiş Protrombin zamanı (PT): Karaciğer hasarının K vitaminine bağlı pıhtılaşma faktörlerinin (II, VII, IX, X) işlevinin azalmasına neden olması durumunda ortaya çıkar. Uluslararası normalleştirilmiş oranın (INR) 1,5'ten fazla uzaması, kötü bir prognostik işaret olarak kabul edilir ve akut karaciğer yetmezliği tanısında kilit bir bileşen olarak kabul edilir. PT/INR'nin uzaması, karaciğer hasarından saatler ila günler sonra ortaya çıkar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "PT ve INR",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0104",
+       "ses": "Uluslararası normalleştirilmiş oranın bir buçuğun üzerinde uzaması kötü prognostik işaret sayılır ve akut karaciğer yetmezliği tanısında kilit bileşendir.",
+       "ekran": "**PT ve INR** uzaması kötü prognoz göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Yükselmiş Protrombin zamanı (PT): Karaciğer hasarının K vitaminine bağlı pıhtılaşma faktörlerinin (II, VII, IX, X) işlevinin azalmasına neden olması durumunda ortaya çıkar. Uluslararası normalleştirilmiş oranın (INR) 1,5'ten fazla uzaması, kötü bir prognostik işaret olarak kabul edilir ve akut karaciğer yetmezliği tanısında kilit bir bileşen olarak kabul edilir. PT/INR'nin uzaması, karaciğer hasarından saatler ila günler sonra ortaya çıkar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "PT ve INR",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0105",
+       "ses": "Protrombin zamanı ve uluslararası normalleştirilmiş oran uzaması karaciğer hasarından saatler ile günler sonra ortaya çıkar.",
+       "ekran": "**PT ve INR** uzaması kötü prognoz göstergesi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Yükselmiş Protrombin zamanı (PT): Karaciğer hasarının K vitaminine bağlı pıhtılaşma faktörlerinin (II, VII, IX, X) işlevinin azalmasına neden olması durumunda ortaya çıkar. Uluslararası normalleştirilmiş oranın (INR) 1,5'ten fazla uzaması, kötü bir prognostik işaret olarak kabul edilir ve akut karaciğer yetmezliği tanısında kilit bir bileşen olarak kabul edilir. PT/INR'nin uzaması, karaciğer hasarından saatler ila günler sonra ortaya çıkar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "PT ve INR",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0106",
+       "ses": "Serum albümin düzeyi ve protrombin zamanı karaciğerin sentez fonksiyonları hakkında bilgi veren testlerdir.",
+       "ekran": "**Albümin ve PT** sentez fonksiyonunu gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Serum albumin düzeyi ve protrombin zamanı karaciğer sentez fonksiyonları hakkında bilgi veren testlerdir. Azalmış albümin karaciğer hasarına özgü değildir ve akut hepatit tanısındaki faydası sınırlıdır. Bu testler birkaç gün içinde anormal hale gelebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Albümin ve PT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0107",
+       "ses": "Azalmış albümin karaciğer hasarına özgü değildir ve akut hepatit tanısındaki faydası sınırlıdır.",
+       "ekran": "**Albümin ve PT** sentez fonksiyonunu gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Serum albumin düzeyi ve protrombin zamanı karaciğer sentez fonksiyonları hakkında bilgi veren testlerdir. Azalmış albümin karaciğer hasarına özgü değildir ve akut hepatit tanısındaki faydası sınırlıdır. Bu testler birkaç gün içinde anormal hale gelebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Albümin ve PT",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p027",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-09-c0108",
+       "ses": "Albümin ve protrombin zamanı birkaç gün içinde anormal hale gelebilir.",
+       "ekran": "**Albümin ve PT** sentez fonksiyonunu gösterir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Serum albumin düzeyi ve protrombin zamanı karaciğer sentez fonksiyonları hakkında bilgi veren testlerdir. Azalmış albümin karaciğer hasarına özgü değildir ve akut hepatit tanısındaki faydası sınırlıdır. Bu testler birkaç gün içinde anormal hale gelebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Albümin ve PT",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0109",
+       "ses": "Bilirubin birincil olarak retiküloendotelyal hücrelerde hem içeren proteinlerin parçalanmasından kaynaklanır.",
+       "ekran": "**Bilirubin** alım ve konjugasyon bozukluğunda artar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Bilirubin: Birincil olarak retiküloendotelyal hücrelerde Hem içeren proteinlerin parçalanmasından kaynaklanır. Bozulmuş alıma, bozulmuş konjugasyona ikincil olarak karaciğer hastalıklarında anormal şekilde artabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bilirubin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0110",
+       "ses": "Karaciğer hastalıklarında bozulmuş alıma ya da bozulmuş konjugasyona ikincil olarak bilirubin anormal biçimde artabilir.",
+       "ekran": "**Bilirubin** alım ve konjugasyon bozukluğunda artar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Bilirubin: Birincil olarak retiküloendotelyal hücrelerde Hem içeren proteinlerin parçalanmasından kaynaklanır. Bozulmuş alıma, bozulmuş konjugasyona ikincil olarak karaciğer hastalıklarında anormal şekilde artabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bilirubin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0111",
+       "ses": "Kolestaz düşündüren laboratuvar anormallikleriyle başvuran hastada abdominal ultrasonografi ilk görüntüleme çalışması olmalıdır.",
+       "ekran": "**Ultrasonografi** kolestazda ilk görüntüleme, dilatasyon yön verir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Abdominal USG, kolestaz düşündüren laboratuvar anormallikleri ile başvuran hastada ilk görüntüleme çalışması olmalıdır. Biliyer dilatasyon bulguları kolestazın ekstrahepatik nedenlerini (safra taşları veya kitleler) düşündürürken, biliyer duktal dilatasyonun olmaması ilaca bağlı karaciğer hasarı, Primer bilier siroz ve Primer sklerozan koloanjit gibi intrahepatik kolestaz nedenlerini düşündürür."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ultrasonografi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0112",
+       "ses": "Biliyer dilatasyon bulguları kolestazın ekstrahepatik nedenlerini, yani safra taşları veya kitleleri düşündürür.",
+       "ekran": "**Ultrasonografi** kolestazda ilk görüntüleme, dilatasyon yön verir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Abdominal USG, kolestaz düşündüren laboratuvar anormallikleri ile başvuran hastada ilk görüntüleme çalışması olmalıdır. Biliyer dilatasyon bulguları kolestazın ekstrahepatik nedenlerini (safra taşları veya kitleler) düşündürürken, biliyer duktal dilatasyonun olmaması ilaca bağlı karaciğer hasarı, Primer bilier siroz ve Primer sklerozan koloanjit gibi intrahepatik kolestaz nedenlerini düşündürür."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ultrasonografi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p028",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-09-c0113",
+       "ses": "Biliyer duktal dilatasyonun olmaması ise ilaca bağlı karaciğer hasarı, primer biliyer siroz ve primer sklerozan kolanjit gibi intrahepatik kolestaz nedenlerini düşündürür.",
+       "ekran": "**Ultrasonografi** kolestazda ilk görüntüleme, dilatasyon yön verir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Abdominal USG, kolestaz düşündüren laboratuvar anormallikleri ile başvuran hastada ilk görüntüleme çalışması olmalıdır. Biliyer dilatasyon bulguları kolestazın ekstrahepatik nedenlerini (safra taşları veya kitleler) düşündürürken, biliyer duktal dilatasyonun olmaması ilaca bağlı karaciğer hasarı, Primer bilier siroz ve Primer sklerozan koloanjit gibi intrahepatik kolestaz nedenlerini düşündürür."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ultrasonografi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0114",
+       "ses": "Karaciğer biyopsisi rutin olarak yapılmaz, tanının net olmadığı seçilmiş durumlarda endikedir.",
+       "ekran": "**Biyopsi** tanı netleşmediğinde endike",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Karaciğer biyopsisi: Rutin olarak yapılmamakla birlikte, atipik klinik özellikler, eşlik eden kronik karaciğer hastalığı, sonuçsuz biyokimyasal inceleme, etiyolojisi belirsiz görüntüleme çalışmalarında anormallikler gibi tanının net olmadığı durumlarda karaciğer biyopsisi endikedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Biyopsi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0115",
+       "ses": "Atipik klinik özellikler, eşlik eden kronik karaciğer hastalığı, sonuçsuz biyokimyasal inceleme ve etiyolojisi belirsiz görüntüleme anormallikleri biyopsi endikasyonları arasındadır.",
+       "ekran": "**Biyopsi** tanı netleşmediğinde endike",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Karaciğer biyopsisi: Rutin olarak yapılmamakla birlikte, atipik klinik özellikler, eşlik eden kronik karaciğer hastalığı, sonuçsuz biyokimyasal inceleme, etiyolojisi belirsiz görüntüleme çalışmalarında anormallikler gibi tanının net olmadığı durumlarda karaciğer biyopsisi endikedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Biyopsi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p029",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-09-c0116",
+       "ses": "Akut hepatitin yönetimi etiyolojik faktöre bağlıdır.",
+       "ekran": "**Etiyoloji** tedaviyi belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Akut hepatitin yönetimi, etiyolojik faktöre bağlıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0117",
+       "ses": "Etkeni belirlemek tedavi seçimini değiştirdiği için ayırıcı tanı tedavinin ilk adımıdır.",
+       "ekran": "**Etiyoloji** tedaviyi belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Akut hepatitin yönetimi, etiyolojik faktöre bağlıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0118",
+       "ses": "Hepatit a ve hepatit e akut hepatitin en yaygın enfeksiyöz nedenleridir ve genellikle kendi kendini sınırlayan bir klinik seyir gösterir.",
+       "ekran": "**Hepatit A ve E** kendini sınırlar, destek tedavisi yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hepatit A ve E, akut hepatitin en yaygın enfeksiyöz nedenleridir ve genellikle kendi kendini sınırlayan bir klinik seyir gösterir. İntravenöz sıvılar, antiemetikler ve semptomatik tedaviyi içeren destekleyici tedavi ile 2 ila 4 hafta içinde düzelir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A ve E",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hepatit A ve E",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "f40668e9e583"
+       ]
+      },
+      {
+       "id": "k3-09-c0119",
+       "ses": "İntravenöz sıvılar, antiemetikler ve semptomatik tedaviyi içeren destekleyici tedavi ile hastalar iki ila dört hafta içinde düzelir.",
+       "ekran": "**Hepatit A ve E** kendini sınırlar, destek tedavisi yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hepatit A ve E, akut hepatitin en yaygın enfeksiyöz nedenleridir ve genellikle kendi kendini sınırlayan bir klinik seyir gösterir. İntravenöz sıvılar, antiemetikler ve semptomatik tedaviyi içeren destekleyici tedavi ile 2 ila 4 hafta içinde düzelir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A ve E",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0120",
+       "ses": "Akut asetaminofen alımı, akut karaciğer yetmezliğine yol açan akut hepatitin enfeksiyöz olmayan yaygın nedenidir.",
+       "ekran": "**Asetaminofen** alımında erken N-asetilsistein",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Akut asetaminofen alımı, akut karaciğer yetmezliğine yol açan akut hepatitin enfeksiyöz olmayan yaygın nedenidir. N-asetilsistein ile acil tedavi mümkün olduğu kadar erken başlatılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Asetaminofen",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p030",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-09-c0121",
+       "ses": "en asetilsistein ile acil tedavi mümkün olduğu kadar erken başlatılmalıdır, çünkü gecikme yetmezliğe gidişi artırır.",
+       "ekran": "**Asetaminofen** alımında erken N-asetilsistein",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Akut asetaminofen alımı, akut karaciğer yetmezliğine yol açan akut hepatitin enfeksiyöz olmayan yaygın nedenidir. N-asetilsistein ile acil tedavi mümkün olduğu kadar erken başlatılmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Asetaminofen",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0122",
+       "ses": "en asetilsistein ağızdan ya da damar içi yoldan uygulanabilir, bu da acil durumda uygulama esnekliği sağlar.",
+       "ekran": "**N-asetilsistein** oral veya intravenöz verilebilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "N-asetilsistein, oral veya IV olarak uygulanabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "N-asetilsistein",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0123",
+       "ses": "Ağızdan en asetilsistein uygulamasında yükleme dozu kilogram başına yüz kırk miligramdır.",
+       "ekran": "**Oral doz** yükleme yüz kırk, idame yetmiş, on yedi doz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Oral N-asetilsistein: yükleme dozu olarak oral olarak 140 mg/kg, ardından 70 mg/kg idame toplam 4 saatte bir 17 doz uygulanmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Oral doz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0124",
+       "ses": "Ardından kilogram başına yetmiş miligram idame dozu dört saatte bir toplam on yedi doz olarak verilir.",
+       "ekran": "**Oral doz** yükleme yüz kırk, idame yetmiş, on yedi doz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Oral N-asetilsistein: yükleme dozu olarak oral olarak 140 mg/kg, ardından 70 mg/kg idame toplam 4 saatte bir 17 doz uygulanmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Oral doz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0125",
+       "ses": "en asetilsistein, asetaminofen doz aşımı bulgusu olsun ya da olmasın, iskemik hepatit dışında akut karaciğer yetmezliği olan tüm hastalara önerilir.",
+       "ekran": "**N-asetilsistein** iskemik hepatit dışında tüm akut yetmezlikte",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "N-asetilsistein ile tedavi, asetaminofen doz aşımı bulgusu olan veya olmayan iskemik hepatit dışında akut karaciğer yetmezliği olan tüm hastalar için de önerilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "N-asetilsistein",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p031",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-09-c0126",
+       "ses": "İskemik hepatit dışarıda bırakılır, çünkü burada sorun toksik metabolitten çok kan akımı yetersizliğidir.",
+       "ekran": "**N-asetilsistein** iskemik hepatit dışında tüm akut yetmezlikte",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "N-asetilsistein ile tedavi, asetaminofen doz aşımı bulgusu olan veya olmayan iskemik hepatit dışında akut karaciğer yetmezliği olan tüm hastalar için de önerilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "N-asetilsistein",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-09-b04",
+   "baslik": "KOMPLİKASYONLAR",
+   "paragraflar": [
+    {
+     "id": "k3-09-p032",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-09-c0127",
+       "ses": "Akut hepatitin en ciddi komplikasyonu akut karaciğer yetmezliğidir.",
+       "ekran": "**Akut karaciğer yetmezliği** en ciddi komplikasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Nadir olmasına rağmen, akut hepatitin en ciddi komplikasyonu, daha önce herhangi bir karaciğer hastalığı olmayan hastalarda serum transaminazlarında 2-3 kat artış, hiperbilirubinemi, koagülopati ve ensefalopati başlangıcı ile karakterize akut karaciğer yetmezliği (ALF) gelişmesidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut karaciğer yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0128",
+       "ses": "Daha önce karaciğer hastalığı olmayan kişide transaminazlarda iki üç kat artış, hiperbilirubinemi, koagülopati ve ensefalopati başlangıcı bu yetmezliği düşündürür.",
+       "ekran": "**Akut karaciğer yetmezliği** en ciddi komplikasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Nadir olmasına rağmen, akut hepatitin en ciddi komplikasyonu, daha önce herhangi bir karaciğer hastalığı olmayan hastalarda serum transaminazlarında 2-3 kat artış, hiperbilirubinemi, koagülopati ve ensefalopati başlangıcı ile karakterize akut karaciğer yetmezliği (ALF) gelişmesidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut karaciğer yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0129",
+       "ses": "Akut hepatitten akut karaciğer yetmezliğine ilerleme hızı alttaki nedene göre değişir.",
+       "ekran": "**İlerleme** altta yatan etiyolojiye bağlı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Akut hepatitten akut karaciğer yetmezliğine ilerleme, altta yatan etiyolojiye bağlıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlerleme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0130",
+       "ses": "Aynı klinik tablo farklı etiyolojilerde farklı seyir gösterdiği için etiyoloji belirleyicidir.",
+       "ekran": "**İlerleme** altta yatan etiyolojiye bağlı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Akut hepatitten akut karaciğer yetmezliğine ilerleme, altta yatan etiyolojiye bağlıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İlerleme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0131",
+       "ses": "Akut hepatit a ve akut hepatit b hastalarında akut karaciğer yetmezliğine ilerleme oranı yüzde birden azdır.",
+       "ekran": "**Etiyolojiye göre** akut karaciğer yetmezliği ilerleme oranları",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Akut hepatit A hastalarının %1'inden azının ve akut hepatit B hastalarının yaklaşık %1'inin ALF'ye ilerleyeceği tahmin edilmektedir. Buna karşılık, gelişmekte olan ülkelerde akut hepatit E hastalarının %20 ila 40'ı ALF'ye ilerlemektedir. Akut, şiddetli otoimmün hepatiti olan hastaların yaklaşık %69'u ALF'ye ilerler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyolojiye göre",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p033",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-09-c0132",
+       "ses": "Gelişmekte olan ülkelerde hepatit e hastalarında bu oran yüzde yirmi ila kırk arasındadır.",
+       "ekran": "**Etiyolojiye göre** akut karaciğer yetmezliği ilerleme oranları",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Akut hepatit A hastalarının %1'inden azının ve akut hepatit B hastalarının yaklaşık %1'inin ALF'ye ilerleyeceği tahmin edilmektedir. Buna karşılık, gelişmekte olan ülkelerde akut hepatit E hastalarının %20 ila 40'ı ALF'ye ilerlemektedir. Akut, şiddetli otoimmün hepatiti olan hastaların yaklaşık %69'u ALF'ye ilerler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyolojiye göre",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0133",
+       "ses": "Şiddetli otoimmün hepatitte ise yaklaşık yüzde altmış dokuz hastada akut karaciğer yetmezliği gelişir.",
+       "ekran": "**Etiyolojiye göre** akut karaciğer yetmezliği ilerleme oranları",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Akut hepatit A hastalarının %1'inden azının ve akut hepatit B hastalarının yaklaşık %1'inin ALF'ye ilerleyeceği tahmin edilmektedir. Buna karşılık, gelişmekte olan ülkelerde akut hepatit E hastalarının %20 ila 40'ı ALF'ye ilerlemektedir. Akut, şiddetli otoimmün hepatiti olan hastaların yaklaşık %69'u ALF'ye ilerler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Etiyolojiye göre",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0134",
+       "ses": "Sosyoekonomik seviyesi düşük ülkelerde akut karaciğer yetmezliğinin en yaygın nedeni viral enfeksiyonlardır.",
+       "ekran": "**Düşük sosyoekonomi** viral enfeksiyonlar önde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Sosyoekonomik seviyesi düşük ülkelerde ALF'nin en yaygın nedeni viral enfeksiyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Düşük sosyoekonomi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0135",
+       "ses": "Bu nedenle bu bölgelerde viral hepatitlerin önlenmesi yetmezliği azaltmada öne çıkar.",
+       "ekran": "**Düşük sosyoekonomi** viral enfeksiyonlar önde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Sosyoekonomik seviyesi düşük ülkelerde ALF'nin en yaygın nedeni viral enfeksiyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Düşük sosyoekonomi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0136",
+       "ses": "Akut karaciğer yetmezliği olan hastaların yaklaşık yüzde kırk beş ile elli beşi kendiliğinden iyileşir.",
+       "ekran": "**Akut karaciğer yetmezliği** seyri iyileşme nakil ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "ALF'li hastaların yaklaşık %45 ile %55'i kendiliğinden iyileşir ve yaklaşık %25’inde karaciğer nakli gerekir. %25’i hastalığa yenik düşer."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut karaciğer yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p034",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-09-c0137",
+       "ses": "Yaklaşık yüzde yirmi beşinde karaciğer nakli gerekir ve yine yaklaşık yüzde yirmi beşi hastalığa yenik düşer.",
+       "ekran": "**Akut karaciğer yetmezliği** seyri iyileşme nakil ölüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "ALF'li hastaların yaklaşık %45 ile %55'i kendiliğinden iyileşir ve yaklaşık %25’inde karaciğer nakli gerekir. %25’i hastalığa yenik düşer."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut karaciğer yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p035",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-09-c0138",
+       "ses": "Viral hepatit oranları sosyoekonomik seviyesi yüksek bölgelerde düşük, düşük bölgelerde yüksektir.",
+       "ekran": "**Viral hepatit sıklığı** sosyoekonomiye göre değişir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Viral hepatit oranları sosyoekonomik seviyesi yüksek bölgelerde düşük, düşük bölgelerde yüksektir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Viral hepatit sıklığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0139",
+       "ses": "Bu nedenle aynı hastalık farklı ülkelerde farklı sıklıkta karşımıza çıkar.",
+       "ekran": "**Viral hepatit sıklığı** sosyoekonomiye göre değişir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Viral hepatit oranları sosyoekonomik seviyesi yüksek bölgelerde düşük, düşük bölgelerde yüksektir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Viral hepatit sıklığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0140",
+       "ses": "Akut viral hepatitli hastalar genellikle ateş, halsizlik, yorgunluk, iştahsızlık, kusma, ishal ve karın ağrısı ile başvurur.",
+       "ekran": "**Akut viral hepatit** ateş sarılık koyu idrar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Akut viral hepatitli hastalar genellikle ateş, halsizlik, yorgunluk, iştahsızlık, kusma, ishal ve karın ağrısı gibi semptomlarla başvururlar. Hastalar ayrıca sklera ve/veya ciltte sararma, koyu renkli idrar ve açık renkli dışkı bildirebilirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut viral hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0141",
+       "ses": "Sklera veya ciltte sararma, koyu renkli idrar ve açık renkli dışkı da bildirilebilir.",
+       "ekran": "**Akut viral hepatit** ateş sarılık koyu idrar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Akut viral hepatitli hastalar genellikle ateş, halsizlik, yorgunluk, iştahsızlık, kusma, ishal ve karın ağrısı gibi semptomlarla başvururlar. Hastalar ayrıca sklera ve/veya ciltte sararma, koyu renkli idrar ve açık renkli dışkı bildirebilirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut viral hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0142",
+       "ses": "Hepatit a aşısının piyasaya sürüldüğü yıldan bu yana hepatit a virüsü insidansı yaklaşık yüzde doksan beş azalmıştır.",
+       "ekran": "**Hepatit A** aşı sonrası büyük azalma gıda salgını artışı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hepatit A virüsünün (HAV) insidansı 1995 yılında hepatit A aşısının piyasaya sürülmesinden bu yana yaklaşık %95 oranında azalmıştır. Son beş yılda, çoğunlukla izole gıda kaynaklı salgınlardan kaynaklanan vakalarda küçük bir artış görülmüştür."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p036",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-09-c0143",
+       "ses": "Son beş yılda çoğunlukla izole gıda kaynaklı salgınlara bağlı küçük bir vaka artışı görülmüştür.",
+       "ekran": "**Hepatit A** aşı sonrası büyük azalma gıda salgını artışı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hepatit A virüsünün (HAV) insidansı 1995 yılında hepatit A aşısının piyasaya sürülmesinden bu yana yaklaşık %95 oranında azalmıştır. Son beş yılda, çoğunlukla izole gıda kaynaklı salgınlardan kaynaklanan vakalarda küçük bir artış görülmüştür."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0144",
+       "ses": "Hepatit b vakaları aşının kullanılmaya başlanmasından bu yana önemli ölçüde azalmıştır.",
+       "ekran": "**Hepatit B** aşı ile azaldı kırk yaş üstü risk",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "HBV vakaları da aşının 1990'da kullanılmaya başlanmasından bu yana önemli ölçüde azalmıştır. Şu anda, 40 yaş ve üstü en yüksek akut hepatit B oranına sahiptir, intravenöz uyuşturucu kullanımı, çoklu seks partnerleri ve önceden aşılama eksikliği riski arttırır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit B",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0145",
+       "ses": "Şu anda en yüksek akut hepatit b oranı kırk yaş ve üstünde görülür.",
+       "ekran": "**Hepatit B** aşı ile azaldı kırk yaş üstü risk",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "HBV vakaları da aşının 1990'da kullanılmaya başlanmasından bu yana önemli ölçüde azalmıştır. Şu anda, 40 yaş ve üstü en yüksek akut hepatit B oranına sahiptir, intravenöz uyuşturucu kullanımı, çoklu seks partnerleri ve önceden aşılama eksikliği riski arttırır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit B",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hepatit B",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-pat-002"
+       ]
+      },
+      {
+       "id": "k3-09-c0146",
+       "ses": "Damar içi uyuşturucu kullanımı, çoklu seks partnerleri ve önceden aşılama eksikliği riski artırır.",
+       "ekran": "**Hepatit B** aşı ile azaldı kırk yaş üstü risk",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "HBV vakaları da aşının 1990'da kullanılmaya başlanmasından bu yana önemli ölçüde azalmıştır. Şu anda, 40 yaş ve üstü en yüksek akut hepatit B oranına sahiptir, intravenöz uyuşturucu kullanımı, çoklu seks partnerleri ve önceden aşılama eksikliği riski arttırır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit B",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0147",
+       "ses": "Hepatit c, iki bin ondan bu yana özellikle yirmi ila kırk yaş grubunda damar içi uyuşturucu kullanımına bağlı olarak istikrarlı biçimde artmaktadır.",
+       "ekran": "**Hepatit C** genç erişkinde damar içi kullanımla artıyor",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hepatit C, 2010'dan bu yana, özellikle 20 ila 40 yaş grubunda damar içi uyuşturucu kullanımına bağlı olarak istikrarlı bir şekilde artmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit C",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p037",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-09-c0148",
+       "ses": "Hepatit g virüsü daha çok lenfositleri enfekte eden bir virüstür.",
+       "ekran": "**Hepatit G virüsü** lenfositleri enfekte eder",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "HGV daha çok lenfositleri enfekte eden bir virüstur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit G virüsü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0149",
+       "ses": "Bu nedenle lenfositleri hedef alan bir viral etken olarak öne çıkar.",
+       "ekran": "**Hepatit G virüsü** lenfositleri enfekte eder",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "HGV daha çok lenfositleri enfekte eden bir virüstur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit G virüsü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p038",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-09-c0150",
+       "ses": "Slaytta hepatit B virüsünün kalıtım maddesi ayrı bir dal olarak gösterilmiş ve virüsün çoğalması için gerekli genetik yükü simgeler.",
+       "ekran": "**Kalıtım maddesi** ayrı dal olarak gösterilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [],
+        "sekil": "kalıtım maddesini gösteren ayrı dal"
+       },
+       "vurgu": [
+        {
+         "metin": "Kalıtım maddesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0151",
+       "ses": "Kapsid, viral kalıtım maddesini çevreleyen protein kılıftır ve şekilde ayrı bir kutu olarak karşımıza çıkar.",
+       "ekran": "**Kapsid** genetik yükü sarar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [],
+        "sekil": "kalıtım maddesini saran protein kılıf"
+       },
+       "vurgu": [
+        {
+         "metin": "Kapsid",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0152",
+       "ses": "Çekirdek proteini kapsidin iç bölümünde yer alan ve virüsün temel yapısını oluşturan proteindir.",
+       "ekran": "**Çekirdek proteini** iç yapıyı tamamlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [],
+        "sekil": "kapsid içindeki temel protein"
+       },
+       "vurgu": [
+        {
+         "metin": "Çekirdek proteini",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0153",
+       "ses": "Küçük yüzey antijeni virüsün dış zarında bulunan ve yapının en sade parçasını oluşturan antijendir.",
+       "ekran": "**Küçük yüzey antijeni** sade yapı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [],
+        "sekil": "en sade yüzey zar proteini"
+       },
+       "vurgu": [
+        {
+         "metin": "Küçük yüzey antijeni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0154",
+       "ses": "Orta yüzey antijeni şekilde küçük ile büyük yüzey antijeni arasında konumlanan ara büyüklükteki zar proteinidir.",
+       "ekran": "**Orta yüzey antijeni** ara büyüklük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [],
+        "sekil": "ara büyüklükteki yüzey proteini"
+       },
+       "vurgu": [
+        {
+         "metin": "Orta yüzey antijeni",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p039",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-09-c0155",
+       "ses": "Büyük yüzey antijeni dış zar üzerinde bulunan ve şekilde ayrı bir kutu ile gösterilen yüzey proteinidir.",
+       "ekran": "**Büyük yüzey antijeni** dış zarda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [],
+        "sekil": "dış zardaki büyük protein"
+       },
+       "vurgu": [
+        {
+         "metin": "Büyük yüzey antijeni",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p040",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-09-c0156",
+       "ses": "Hepatit A enfeksiyonunda uzun süren ve yalnızca yüksek bilirubin düzeyiyle seyreden kolestaz görülebilir.",
+       "ekran": "**Hepatit A kolestazı** uzun süren bilirubin yüksekliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "HEPATİT A: Uzun süren sadece yüksek bilirubin düzeyi ile seyreden kolestaz görülebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A kolestazı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0157",
+       "ses": "Kolestaz tablosunda bilirubin yüksekliği ön planda kalır ve hastalık seyri uzayabilir.",
+       "ekran": "**Hepatit A kolestazı** uzun süren bilirubin yüksekliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "HEPATİT A: Uzun süren sadece yüksek bilirubin düzeyi ile seyreden kolestaz görülebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A kolestazı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0158",
+       "ses": "Hepatit A enfeksiyonunda relapslar görülebilir.",
+       "ekran": "**Hepatit A relapsı** klinik izlemde yeniden alevlenme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Relapslar görülebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A relapsı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0159",
+       "ses": "Relapslar klinik izlemde yeniden alevlenen belirtilerle fark edilir.",
+       "ekran": "**Hepatit A relapsı** klinik izlemde yeniden alevlenme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Relapslar görülebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A relapsı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0160",
+       "ses": "Hepatit A tanısında immünoglobulin em anti hepatit A virüs pozitifliği yeterlidir.",
+       "ekran": "**Hepatit A tanısı** immünoglobulin em pozitifliği yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "IgM anti- HAV pozitifliği tanıda yeterlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A tanısı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p041",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-09-c0161",
+       "ses": "Bu nedenle akut enfeksiyonun gösterilmesinde ek doğrulama testi beklenmez.",
+       "ekran": "**Hepatit A tanısı** immünoglobulin em pozitifliği yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "IgM anti- HAV pozitifliği tanıda yeterlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A tanısı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0162",
+       "ses": "Hepatit A hastaları inkübasyon periyodu boyunca ve sarılıktan bir hafta sonra bulaştırıcıdır.",
+       "ekran": "**Hepatit A bulaştırıcılığı** inkübasyon ve sarılıktan bir hafta sonra",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Hastalar inkübasyon periyodu boyunca ve sarılıktan bir hafta sonra bulaştırıcıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A bulaştırıcılığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0163",
+       "ses": "Bulaştırıcılık sarılık öncesi dönemi de kapsadığı için temas izlemi geniş tutulur.",
+       "ekran": "**Hepatit A bulaştırıcılığı** inkübasyon ve sarılıktan bir hafta sonra",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Hastalar inkübasyon periyodu boyunca ve sarılıktan bir hafta sonra bulaştırıcıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit A bulaştırıcılığı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0164",
+       "ses": "Akut hepatit B tanısında immünoglobulin em anti hepatit B kor antijeni pozitifliği yeterlidir.",
+       "ekran": "**Akut hepatit B tanısı** immünoglobulin em kor antijeni yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "HEPATİT B: IgM anti- HBc pozitifliği yeterlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit B tanısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "Akut hepatit B tanısı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877502862-655318-cs7",
+        "past-1790877035848-575760",
+        "k1-2018-2019-q011"
+       ]
+      },
+      {
+       "id": "k3-09-c0165",
+       "ses": "Bu belirteç akut enfeksiyonun gösterilmesinde yol gösterir.",
+       "ekran": "**Akut hepatit B tanısı** immünoglobulin em kor antijeni yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "HEPATİT B: IgM anti- HBc pozitifliği yeterlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit B tanısı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p042",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-09-c0166",
+       "ses": "Akut hepatit B tedavi endikasyonları arasında uluslararası normalizasyon oranının bir buçuk saniyeden büyük olması ve semptomların dört haftada düzelmemesi yer alır.",
+       "ekran": "**Akut hepatit B tedavisi** endikasyonlar sıralandı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut hepatit B tedavi endikasyonları: INR >1.5 saniye, Semptomların 4 haftada düzelmemesi, bilirubin ≥10 mg/dL, Fulminan hepatit, Hepatit C ve D koinfeksiyonu, daha önce karaciğer hastalığı olması."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit B tedavisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0167",
+       "ses": "Bilirubin düzeyinin on miligram bölü desilitreye eşit ya da büyük olması, fulminan hepatit, hepatit C ve D koinfeksiyonu ve daha önce karaciğer hastalığı olması da tedavi endikasyonlarıdır.",
+       "ekran": "**Akut hepatit B tedavisi** endikasyonlar sıralandı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut hepatit B tedavi endikasyonları: INR >1.5 saniye, Semptomların 4 haftada düzelmemesi, bilirubin ≥10 mg/dL, Fulminan hepatit, Hepatit C ve D koinfeksiyonu, daha önce karaciğer hastalığı olması."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit B tedavisi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Akut hepatit B tedavisi",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "2eb138cbc917",
+        "96b5ddf46c1c"
+       ]
+      },
+      {
+       "id": "k3-09-c0168",
+       "ses": "Akut hepatit B tedavisinde entekavir veya tenofovir, dört hafta ara ile iki kez hepatit B yüzey antijeni test negatifliği görülene kadar sürdürülür.",
+       "ekran": "**Entekavir veya tenofovir** iki negatif yüzey antijeni olana dek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut hepatit B tedavisinde Entekavir veya Tenofovir 4 hafta ara ile iki HbsAg test negatifliği görülene kadar tedavi devam edilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Entekavir veya tenofovir",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0169",
+       "ses": "Tedavinin kesilmesi için iki ayrı negatif hepatit B yüzey antijeni sonucu beklenir.",
+       "ekran": "**Entekavir veya tenofovir** iki negatif yüzey antijeni olana dek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Akut hepatit B tedavisinde Entekavir veya Tenofovir 4 hafta ara ile iki HbsAg test negatifliği görülene kadar tedavi devam edilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Entekavir veya tenofovir",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-09-b05",
+   "baslik": "• HEPATİT C: Yüksek transaminaz düzeyleri akut hepatit C’yi",
+   "paragraflar": [
+    {
+     "id": "k3-09-p043",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-09-c0170",
+       "ses": "Hepatit C hastalığında yüksek transaminaz düzeyleri akut hepatit C hastalığını düşündürür.",
+       "ekran": "**Hepatit C** transaminaz yüksekliği, anti HCV penceresi, HCV RNA izlemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "HEPATİT C: Yüksek transaminaz düzeyleri akut hepatit C’yi düşündürür. Anti-HCV akut infeksiyonda geç pozitifleşebilir (pencere dönemi). Hastalar 6 ay pozitifleşme yönünden izlenmelidir. HCV RNA temastan bir hafta sonra pozitifleşebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit C",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0171",
+       "ses": "Anti ha ce ve akut infeksiyonda geç pozitifleşebilir ve bu pencere dönemi nedeniyle hastalar altı ay boyunca pozitifleşme yönünden izlenmelidir.",
+       "ekran": "**Hepatit C** transaminaz yüksekliği, anti HCV penceresi, HCV RNA izlemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "HEPATİT C: Yüksek transaminaz düzeyleri akut hepatit C’yi düşündürür. Anti-HCV akut infeksiyonda geç pozitifleşebilir (pencere dönemi). Hastalar 6 ay pozitifleşme yönünden izlenmelidir. HCV RNA temastan bir hafta sonra pozitifleşebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit C",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0172",
+       "ses": "Ha ce ve er en a ise temastan bir hafta sonra pozitifleşebilir.",
+       "ekran": "**Hepatit C** transaminaz yüksekliği, anti HCV penceresi, HCV RNA izlemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "HEPATİT C: Yüksek transaminaz düzeyleri akut hepatit C’yi düşündürür. Anti-HCV akut infeksiyonda geç pozitifleşebilir (pencere dönemi). Hastalar 6 ay pozitifleşme yönünden izlenmelidir. HCV RNA temastan bir hafta sonra pozitifleşebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit C",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0173",
+       "ses": "Akut hepatit C yüzde on ile on beş arasında iyileşme ile sonuçlanır.",
+       "ekran": "**Akut hepatit C** yüzde on ile on beş iyileşme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Akut hepatit C % 10- 15 iyileşme ile sonuçlanır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit C",
+         "tur": "terim"
+        },
+        {
+         "metin": "Akut hepatit C",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "fc31586762e7"
+       ]
+      },
+      {
+       "id": "k3-09-c0174",
+       "ses": "Akut ha ce ve enfeksiyonunun on iki hafta içinde negatifleşmesi öngörülür.",
+       "ekran": "**Akut hepatit C** on iki haftada negatifleşme, sofosbuvir sekiz hafta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Akut HCV’nin 12 hafta içinde negatifleşmesi öngörülür. Pozitiflik devam ediyorsa altıncı ayda kontrol edilmelidir. Akut HCV için sofosbuvir 8 hafta kullanılabilir. Bazı rehberler spontan virus kaybolması için altı ay beklenmesini viremi devam ediyorsa tedavi başlanmasını önermektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit C",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p044",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-09-c0175",
+       "ses": "Pozitiflik devam ederse altıncı ayda kontrol edilmelidir ve akut ha ce ve için sofosbuvir sekiz hafta kullanılabilir.",
+       "ekran": "**Akut hepatit C** on iki haftada negatifleşme, sofosbuvir sekiz hafta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Akut HCV’nin 12 hafta içinde negatifleşmesi öngörülür. Pozitiflik devam ediyorsa altıncı ayda kontrol edilmelidir. Akut HCV için sofosbuvir 8 hafta kullanılabilir. Bazı rehberler spontan virus kaybolması için altı ay beklenmesini viremi devam ediyorsa tedavi başlanmasını önermektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit C",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0176",
+       "ses": "Bazı rehberler spontan virüs kaybolması için altı ay beklenmesini, viremi devam ediyorsa tedavi başlanmasını önermektedir.",
+       "ekran": "**Akut hepatit C** on iki haftada negatifleşme, sofosbuvir sekiz hafta",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Akut HCV’nin 12 hafta içinde negatifleşmesi öngörülür. Pozitiflik devam ediyorsa altıncı ayda kontrol edilmelidir. Akut HCV için sofosbuvir 8 hafta kullanılabilir. Bazı rehberler spontan virus kaybolması için altı ay beklenmesini viremi devam ediyorsa tedavi başlanmasını önermektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut hepatit C",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p045",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-09-c0177",
+       "ses": "Akut hepatit delta koinfeksiyonu, hepatit B ile aynı anda bulaş olduğunda ortaya çıkar ve hepatit B yüzey antijeni ile immünoglobulin M hepatit B çekirdek antikoru pozitif bulunur.",
+       "ekran": "**Koinfeksiyon** hepatit B ile aynı anda; anti-HDV düşük titre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Akut HDV Koinfeksiyonu: HBs Ag Pozitif ,, Ig M Anti- HBc pozitif,, Anti- HDV Kısa Süreli, Düşük Titrede pozitif,, IgM anti HDV Düşük Titrede pozitif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Koinfeksiyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0178",
+       "ses": "Hepatit delta virüsüne karşı antikor kısa süreli ve düşük titrede pozitif olur; immünoglobulin M hepatit delta antikoru da düşük titrede saptanır.",
+       "ekran": "**Koinfeksiyon** hepatit B ile aynı anda; anti-HDV düşük titre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Akut HDV Koinfeksiyonu: HBs Ag Pozitif ,, Ig M Anti- HBc pozitif,, Anti- HDV Kısa Süreli, Düşük Titrede pozitif,, IgM anti HDV Düşük Titrede pozitif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Koinfeksiyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0179",
+       "ses": "Akut hepatit delta süperenfeksiyonu, hepatit B taşıyıcısında hepatit delta virüsünün eklenmesiyle gelişir ve hepatit B yüzey antijeni pozitifken immünoglobulin M hepatit B çekirdek antikoru negatif kalır.",
+       "ekran": "**Süperenfeksiyon** hepatit B taşıyıcısında; anti-HDV yükselen titre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Akut HDV Süperenfeksiyonu: HBs Ag Pozitif,, Ig M Anti- HBc negatif,, Anti- HDV yükselen titrelerde pozitif,, Ig M anti HDV Yükselen titreler pozitif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Süperenfeksiyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0180",
+       "ses": "Hepatit delta virüsüne karşı antikor yükselen titrelerde pozitifleşir ve immünoglobulin M hepatit delta antikoru da yükselen titrelerde pozitif olur.",
+       "ekran": "**Süperenfeksiyon** hepatit B taşıyıcısında; anti-HDV yükselen titre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Akut HDV Süperenfeksiyonu: HBs Ag Pozitif,, Ig M Anti- HBc negatif,, Anti- HDV yükselen titrelerde pozitif,, Ig M anti HDV Yükselen titreler pozitif"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Süperenfeksiyon",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p046",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-09-c0181",
+       "ses": "Hepatit E virüsü en sık kontamine su ve yiyecekler, kan transfüzyonu veya anneden bebeğe geçiş yollarıyla bulaşır ve bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**HEV** su, yiyecek, kan ve anneden bulaşır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "HEV en sık kontamine su ve yiyecekler, kan transfüzyonu veya anneden bebeğe geçiş en sık bulaşma yollarıdır."
+        ]
+       },
+       "cikmis": [
+        "1a992a229375"
+       ],
+       "vurgu": [
+        {
+         "metin": "HEV",
+         "tur": "terim"
+        },
+        {
+         "metin": "HEV",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0182",
+       "ses": "Hepatit E akut hepatiti klinik olarak diğer hepatit virüslerinden farklı değildir ve uzun süren kolestaz en belirgin özelliğidir.",
+       "ekran": "**HEV tanısı** IgM yalancı olabilir, RNA ile doğrula",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "HEV akut hepatiti klinik olarak diğer hepatit virüslarından farklı değildir. Uzun süren kolestaz en belirgin özelliğidir. Anti HEV IgM pozitifliği, bu testin negatif veya yalancı pozitif olma olasılığı nedeniyle HEV RNA pozitifliğinin saptanması ile akut hepatit E tanısı konulabilir."
+        ]
+       },
+       "cikmis": [
+        "1a992a229375"
+       ],
+       "vurgu": [
+        {
+         "metin": "HEV tanısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "HEV tanısı",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0183",
+       "ses": "Tanıda anti he e ve immünoglobulin em testi negatif ya da yalancı pozitif olabildiği için he e ve ar en a pozitifliği ile akut hepatit E tanısı konur.",
+       "ekran": "**HEV tanısı** IgM yalancı olabilir, RNA ile doğrula",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "HEV akut hepatiti klinik olarak diğer hepatit virüslarından farklı değildir. Uzun süren kolestaz en belirgin özelliğidir. Anti HEV IgM pozitifliği, bu testin negatif veya yalancı pozitif olma olasılığı nedeniyle HEV RNA pozitifliğinin saptanması ile akut hepatit E tanısı konulabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "HEV tanısı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0184",
+       "ses": "Gebelerde hepatit E akut karaciğer yetmezliği daha sık görülür.",
+       "ekran": "**Gebelerde** fulminan hepatit riski hepatit E için tanımlayıcıdır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Gebelerde akut karaciğer yetmezliği daha sık görülür. Karaciğer hastalığı ve beslenme bozukluğu olan hasta grubunda fulminan hepatit gelişme olasılığı yüksektir. 2.,3. trimester gebelerde fulminan hepatit gelişmesi hepatit E için tanımlayıcı bir özelliktir."
+        ]
+       },
+       "cikmis": [
+        "1a992a229375"
+       ],
+       "vurgu": [
+        {
+         "metin": "Gebelerde",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gebelerde",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0185",
+       "ses": "Karaciğer hastalığı ve beslenme bozukluğu olan hasta grubunda fulminan hepatit gelişme olasılığı yüksektir.",
+       "ekran": "**Gebelerde** fulminan hepatit riski hepatit E için tanımlayıcıdır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Gebelerde akut karaciğer yetmezliği daha sık görülür. Karaciğer hastalığı ve beslenme bozukluğu olan hasta grubunda fulminan hepatit gelişme olasılığı yüksektir. 2.,3. trimester gebelerde fulminan hepatit gelişmesi hepatit E için tanımlayıcı bir özelliktir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelerde",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gebelerde",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "cl-p11-dahiliye-p009-74",
+        "cl-p11-dahiliye-p009-74-2"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p047",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-09-c0186",
+       "ses": "İkinci ve üçüncü trimester gebelerde fulminan hepatit gelişmesi hepatit E için tanımlayıcı bir özelliktir.",
+       "ekran": "**Gebelerde** fulminan hepatit riski hepatit E için tanımlayıcıdır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Gebelerde akut karaciğer yetmezliği daha sık görülür. Karaciğer hastalığı ve beslenme bozukluğu olan hasta grubunda fulminan hepatit gelişme olasılığı yüksektir. 2.,3. trimester gebelerde fulminan hepatit gelişmesi hepatit E için tanımlayıcı bir özelliktir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gebelerde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0187",
+       "ses": "Organ nakli yapılan hastalar başta olmak üzere immün yetmezliği olan hastalarda hepatit E kronikleşebilir.",
+       "ekran": "**İmmün yetmezlikte** hepatit E kronikleşir, ribavirin önerilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Organ nakli yapılan hastalar başta olmak üzere immün yetmezliği olan hastalarda hepatit E kronikleşebilir. Öncelikle immünsüpresif tedavinin azaltılması düşünülmelidir, birlikte antiviral tedavi de başlanabilir. Ribavirin 600-1000 mg günlük dozda 12 hafta süre ile kullanılması önerilmektedir."
+        ]
+       },
+       "cikmis": [
+        "1a992a229375"
+       ],
+       "vurgu": [
+        {
+         "metin": "İmmün yetmezlikte",
+         "tur": "terim"
+        },
+        {
+         "metin": "İmmün yetmezlikte",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0188",
+       "ses": "Öncelikle immünsüpresif tedavinin azaltılması düşünülmeli, birlikte antiviral tedavi de başlanabilir.",
+       "ekran": "**İmmün yetmezlikte** hepatit E kronikleşir, ribavirin önerilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Organ nakli yapılan hastalar başta olmak üzere immün yetmezliği olan hastalarda hepatit E kronikleşebilir. Öncelikle immünsüpresif tedavinin azaltılması düşünülmelidir, birlikte antiviral tedavi de başlanabilir. Ribavirin 600-1000 mg günlük dozda 12 hafta süre ile kullanılması önerilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İmmün yetmezlikte",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0189",
+       "ses": "Ribavirin günde altı yüz ile bin miligram arasında, on iki hafta süreyle kullanılması önerilmektedir.",
+       "ekran": "**İmmün yetmezlikte** hepatit E kronikleşir, ribavirin önerilir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Organ nakli yapılan hastalar başta olmak üzere immün yetmezliği olan hastalarda hepatit E kronikleşebilir. Öncelikle immünsüpresif tedavinin azaltılması düşünülmelidir, birlikte antiviral tedavi de başlanabilir. Ribavirin 600-1000 mg günlük dozda 12 hafta süre ile kullanılması önerilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İmmün yetmezlikte",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p048",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-09-c0190",
+       "ses": "Hepatotropik virusların aileleri hepatit A için pikornaviridae, hepatit B için hepadnaviridae, hepatit C için flaviviridae, hepatit D için deltavirus ve hepatit E için hepeviridae olarak sıralanır.",
+       "ekran": "**Aile ve genom**: A, C, D, E RNA; B DNA",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Aile"
+        ],
+        "sekil": "hepatotropik virus özellikleri tablosu"
+       },
+       "cikmis": [
+        "d3-k3-gas-016"
+       ],
+       "vurgu": [
+        {
+         "metin": "Aile ve genom",
+         "tur": "terim"
+        },
+        {
+         "metin": "Aile ve genom",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0191",
+       "ses": "Genom yapısı hepatit B virüsünde deoksiribonükleik asit, diğer hepatotropik viruslarda ribonükleik asittir.",
+       "ekran": "**Aile ve genom**: A, C, D, E RNA; B DNA",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Aile"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Aile ve genom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0192",
+       "ses": "Aile ve genom bilgisi bulaş ve kronikleşme yorumunu birlikte düşünmeyi kolaylaştırır.",
+       "ekran": "**Aile ve genom**: A, C, D, E RNA; B DNA",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Aile"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Aile ve genom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0193",
+       "ses": "Hepatotropik viruslarda bulaş yolları çıkmış sınavda sorulmuştur.",
+       "ekran": "**Bulaş**: A/E dışkı-ağız; B/C/D parenteral",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Bulaş"
+        ],
+        "sekil": "hepatotropik virus özellikleri tablosu"
+       },
+       "cikmis": [
+        "d3-k3-gas-016"
+       ],
+       "vurgu": [
+        {
+         "metin": "Bulaş",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bulaş",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0194",
+       "ses": "Hepatit A ve hepatit E dışkı ağız yoluyla, hepatit B, hepatit C ve hepatit D parenteral yolla bulaşır.",
+       "ekran": "**Bulaş**: A/E dışkı-ağız; B/C/D parenteral",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Bulaş"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaş",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p049",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-09-c0195",
+       "ses": "Hepatit E için parenteral yolun söylenmesi yanlıştır çünkü tabloda hepatit E dışkı ağız kolonundadır.",
+       "ekran": "**Bulaş**: A/E dışkı-ağız; B/C/D parenteral",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Bulaş"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bulaş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0196",
+       "ses": "İnkubasyon süresi hepatit A için on dört ile kırk beş gün, hepatit E için iki hafta ile iki ay arasındadır.",
+       "ekran": "**İnkubasyon**: A kısa, B uzun, C değişken, D ve E kısa",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İnkubasyon"
+        ],
+        "sekil": "hepatotropik virus özellikleri tablosu"
+       },
+       "cikmis": [
+        "d3-k3-gas-016"
+       ],
+       "vurgu": [
+        {
+         "metin": "İnkubasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "İnkubasyon",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0197",
+       "ses": "Hepatit B inkubasyonu yirmi sekiz ile yüz seksen gün arasında değişir, hepatit C inkubasyonu genellikle üç aydır ve altı aydan uzun olabilir.",
+       "ekran": "**İnkubasyon**: A kısa, B uzun, C değişken, D ve E kısa",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İnkubasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnkubasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0198",
+       "ses": "Hepatit D inkubasyonu üç ile yedi hafta arasında kabul edilir.",
+       "ekran": "**İnkubasyon**: A kısa, B uzun, C değişken, D ve E kısa",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İnkubasyon"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnkubasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0199",
+       "ses": "Fulminan hepatit riski hepatit A, hepatit B ve hepatit C için nadir, hepatit D için sık, hepatit E için ise gebelerde öne çıkar.",
+       "ekran": "**Fulminan hepatit**: A/B/C nadir, D sık, E gebelerde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Fulminan hepatit"
+        ],
+        "sekil": "hepatotropik virus özellikleri tablosu"
+       },
+       "cikmis": [
+        "d3-k3-gas-016",
+        "f3071c718a07"
+       ],
+       "vurgu": [
+        {
+         "metin": "Fulminan hepatit",
+         "tur": "terim"
+        },
+        {
+         "metin": "Fulminan hepatit",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p050",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-09-c0200",
+       "ses": "Hepatit D enfeksiyonunda fulminan seyir sık olduğu için ağır karaciğer yetmezliği açısından daha dikkatli olunur.",
+       "ekran": "**Fulminan hepatit**: A/B/C nadir, D sık, E gebelerde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Fulminan hepatit"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fulminan hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0201",
+       "ses": "Hepatit E enfeksiyonunda gebelik fulminan hepatit için ayrı bir risk bağlamı oluşturur.",
+       "ekran": "**Fulminan hepatit**: A/B/C nadir, D sık, E gebelerde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Fulminan hepatit"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fulminan hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0202",
+       "ses": "Kronikleşme hepatit A enfeksiyonunda görülmez, hepatit B, hepatit C ve hepatit D enfeksiyonlarında sıktır, hepatit E için veri net değildir.",
+       "ekran": "**Kronikleşme**: A yok; B/C/D sık; E belirsiz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Kronikleşme"
+        ],
+        "sekil": "hepatotropik virus özellikleri tablosu"
+       },
+       "cikmis": [
+        "d3-k3-gas-016",
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-111",
+        "d3k2-2023-2024-k3-h43"
+       ],
+       "vurgu": [
+        {
+         "metin": "Kronikleşme",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kronikleşme",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0203",
+       "ses": "Kronikleşmenin sık olduğu viruslarda uzun izlem ve karaciğer hasarı takibi gerekir.",
+       "ekran": "**Kronikleşme**: A yok; B/C/D sık; E belirsiz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Kronikleşme"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kronikleşme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0204",
+       "ses": "Hepatit A ve hepatit E dışkı ağız yoluyla bulaştığı için kronikleşme beklentisi farklı değerlendirilir.",
+       "ekran": "**Kronikleşme**: A yok; B/C/D sık; E belirsiz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Kronikleşme"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kronikleşme",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p051",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-09-c0205",
+       "ses": "Onkojenite hepatit B ve hepatit C için pozitif, hepatit A için yok, hepatit D ve hepatit E için belirsiz olarak yer alır.",
+       "ekran": "**Onkojenite**: B ve C pozitif; A yok; D/E belirsiz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Onkojenite"
+        ],
+        "sekil": "hepatotropik virus özellikleri tablosu"
+       },
+       "cikmis": [
+        "d3-k3-gas-016",
+        "past-1790877036096-347763"
+       ],
+       "vurgu": [
+        {
+         "metin": "Onkojenite",
+         "tur": "terim"
+        },
+        {
+         "metin": "Onkojenite",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0206",
+       "ses": "Hepatit B ve hepatit C onkojen olduğu için kronik enfeksiyon zemininde karaciğer kanseri riski akla gelir.",
+       "ekran": "**Onkojenite**: B ve C pozitif; A yok; D/E belirsiz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Onkojenite"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Onkojenite",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0207",
+       "ses": "Hepatit D ve hepatit E için onkojenite sorusu belirsiz bırakılmıştır.",
+       "ekran": "**Onkojenite**: B ve C pozitif; A yok; D/E belirsiz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Onkojenite"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Onkojenite",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-09-b06",
+   "baslik": "FULMİNAN HEPATİT",
+   "paragraflar": [
+    {
+     "id": "k3-09-p052",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-09-c0208",
+       "ses": "Fulminant hepatit ağır karaciğer hasarı sonucu gelişen, karaciğer fonksiyon bozukluğu, koagülopati ve ensefalopatiyle kendini gösteren mortalitesi yüksek bir sendromdur.",
+       "ekran": "**Fulminant hepatit** ağır hasar, koagülopati ve ensefalopati sendromu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Ağır karaciğer hasarı sonucu gelişen; karaciğer fonksiyon bozukluğu, koagülopati ve ensefalopatiyle kendini gösteren mortalitesi yüksek bir sendromdur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fulminant hepatit",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0209",
+       "ses": "Fulminant hepatitin en önemli bulgusu hepatik ensefalopatidir.",
+       "ekran": "**Hepatik ensefalopati** fulminant hepatitin en önemli bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Fulminant hepatitin en önemli bulgusu hepatik ensefalopatidir. Konfüzyon, koma, şiddetli sarılık, kusma, fetor hepatikus, flapping tremor izlenebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatik ensefalopati",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0210",
+       "ses": "Hepatik ensefalopati konfüzyon, koma, şiddetli sarılık, kusma, fetor hepatikus ve flapping tremor ile kendini gösterebilir.",
+       "ekran": "**Hepatik ensefalopati** fulminant hepatitin en önemli bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Fulminant hepatitin en önemli bulgusu hepatik ensefalopatidir. Konfüzyon, koma, şiddetli sarılık, kusma, fetor hepatikus, flapping tremor izlenebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatik ensefalopati",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0211",
+       "ses": "Akut karaciğer yetmezliğinde karaciğer hastalığı semptomlarının başlamasıyla hepatik ensefalopati gelişmesi arasındaki süre akut formda sekiz ile yirmi sekiz gün arasındadır.",
+       "ekran": "**Akut karaciğer yetmezliği** süreye göre akut, subakut, hiperakut",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Akut karaciğer yetmezliğinde karaciğer hastalığı semptomlarının başlamasıyla hepatik ensefalopati gelişmesi arasındaki süre 8-28 (akut) gün arasındadır. Bu süre 29-72 gün arasındaysa subakut karaciğer yetmezliği; 7 gün ve daha kısaysa hiperakut karaciğer yetmezliği söz konusudur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut karaciğer yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0212",
+       "ses": "Bu süre yirmi dokuz ile yetmiş iki gün arasındaysa subakut karaciğer yetmezliği, yedi gün ve daha kısaysa hiperakut karaciğer yetmezliği söz konusudur.",
+       "ekran": "**Akut karaciğer yetmezliği** süreye göre akut, subakut, hiperakut",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Akut karaciğer yetmezliğinde karaciğer hastalığı semptomlarının başlamasıyla hepatik ensefalopati gelişmesi arasındaki süre 8-28 (akut) gün arasındadır. Bu süre 29-72 gün arasındaysa subakut karaciğer yetmezliği; 7 gün ve daha kısaysa hiperakut karaciğer yetmezliği söz konusudur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Akut karaciğer yetmezliği",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p053",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-09-c0213",
+       "ses": "Transaminaz düzeyleri hızla düşerken protrombin zamanı uzar, bu da karaciğer sentez işlevinin bozulduğunu gösterir.",
+       "ekran": "**Transaminaz düşerken protrombin zamanı uzar**, hasta nakil adayı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Transaminaz düzeyleri hızla düşerken protrombin zamanı uzar. Akut karaciğer yetmezliği tablosu gelişen her hasta karaciğer nakline adaydır ve bu açıdan değerlendirilmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Transaminaz düşerken protrombin zamanı uzar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0214",
+       "ses": "Akut karaciğer yetmezliği tablosu gelişen her hasta karaciğer nakline adaydır ve bu açıdan değerlendirilmelidir.",
+       "ekran": "**Transaminaz düşerken protrombin zamanı uzar**, hasta nakil adayı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Transaminaz düzeyleri hızla düşerken protrombin zamanı uzar. Akut karaciğer yetmezliği tablosu gelişen her hasta karaciğer nakline adaydır ve bu açıdan değerlendirilmelidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Transaminaz düşerken protrombin zamanı uzar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0215",
+       "ses": "Fulminant hepatiti tetikleyen faktörler arasında konstipasyon, gastrointestinal sistem kanaması, kusma, ishal ve opiyat türü analjezik kullanımı yer alır.",
+       "ekran": "**Tetikleyiciler** konstipasyon, kanama, kusma, ishal, opiyat, hipokalemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tetikleyen faktörler: Konstipasyon, Gastrointestinal sistem kanaması, Kusma, İshal, Opiyat türü analjezik kullanımı, Aşırı diürez, Hipokalemi, Azotemi, Diyetle aşırı protein alımı, Büyük volümlü parasentez, Cerrahi girişim, Hipoksi, Hipoglisemi, Hipotansiyon.."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tetikleyiciler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0216",
+       "ses": "Aşırı diürez, hipokalemi, azotemi, diyetle aşırı protein alımı, büyük volümlü parasentez, cerrahi girişim, hipoksi, hipoglisemi ve hipotansiyon da tetikleyici faktörlerdendir.",
+       "ekran": "**Tetikleyiciler** konstipasyon, kanama, kusma, ishal, opiyat, hipokalemi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tetikleyen faktörler: Konstipasyon, Gastrointestinal sistem kanaması, Kusma, İshal, Opiyat türü analjezik kullanımı, Aşırı diürez, Hipokalemi, Azotemi, Diyetle aşırı protein alımı, Büyük volümlü parasentez, Cerrahi girişim, Hipoksi, Hipoglisemi, Hipotansiyon.."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tetikleyiciler",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tetikleyiciler",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "k1-2018-2019-q098"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p054",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-09-c0217",
+       "ses": "Karaciğer transplantasyonunda King Collage kriterleri, fulminan karaciğer yetmezliğinde nakil kararını destekleyen ölçütlerdir.",
+       "ekran": "**King’s Collage** karaciğer transplantasyon ölçütleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "KARACİĞER TRANSPLANTASYONU KİNG’S COLLAGE KRİTERLERİ"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "King’s Collage",
+         "tur": "terim"
+        },
+        {
+         "metin": "King’s Collage",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0218",
+       "ses": "Bu ölçütler hastanın ne kadar acil nakil gerektirdiğini göstermek için kullanılır.",
+       "ekran": "**King’s Collage** karaciğer transplantasyon ölçütleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "KARACİĞER TRANSPLANTASYONU KİNG’S COLLAGE KRİTERLERİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "King’s Collage",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0219",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur, King Collage kriterinde ensefalopatinin derecesine bakılmaksızın i n r değerinin altı buçuktan büyük olması veya pe te değerinin yüz saniyeden uzun olması nakil ölçütüdür.",
+       "ekran": "**INR altı buçuk** veya **PT yüz saniye** tek başına yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Ensefalopatinin derecesine bakılmaksızın INR >6.5 veya PT >100 sn olması veya"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "INR altı buçuk",
+         "tur": "terim"
+        },
+        {
+         "metin": "PT yüz saniye",
+         "tur": "terim"
+        },
+        {
+         "metin": "INR altı buçuk",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0220",
+       "ses": "Bu değerler tek başına karaciğer transplantasyonu için yeterlidir ve ensefalopati derecesi kararı değiştirmez.",
+       "ekran": "**INR altı buçuk** veya **PT yüz saniye** tek başına yeterli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Ensefalopatinin derecesine bakılmaksızın INR >6.5 veya PT >100 sn olması veya"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "INR altı buçuk",
+         "tur": "terim"
+        },
+        {
+         "metin": "PT yüz saniye",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0221",
+       "ses": "Aşağıdaki ölçütlerden üç tanesinin birlikte bulunması da King Collage kriterlerini karşılar.",
+       "ekran": "**Üç ölçüt** birlikte nakil kriteri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "aşağıdakilerden 3 tanesi"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "Üç ölçüt",
+         "tur": "terim"
+        },
+        {
+         "metin": "Üç ölçüt",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p055",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-09-c0222",
+       "ses": "Tek tek değil, üç ölçütün bir arada olması nakil gereksinimini gösterir.",
+       "ekran": "**Üç ölçüt** birlikte nakil kriteri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "aşağıdakilerden 3 tanesi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Üç ölçüt",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0223",
+       "ses": "Yaşın kırkın üzerinde olması King Collage kriterlerinde kötü prognoz lehine sayılan bir ölçüttür.",
+       "ekran": "**Yaş kırk üstü** kötü prognoz ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Yaş >40"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "Yaş kırk üstü",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yaş kırk üstü",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0224",
+       "ses": "İleri yaş karaciğer rejenerasyonunu ve toparlanma kapasitesini sınırlayarak nakil gereksinimini artırır.",
+       "ekran": "**Yaş kırk üstü** kötü prognoz ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Yaş >40"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yaş kırk üstü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0225",
+       "ses": "Etiyolojide non A non B hepatit veya idiosenkrazik ilaç reaksiyonu bulunması King Collage kriteridir.",
+       "ekran": "**Non A non B** veya **idiosenkrazik ilaç** ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Etiyoloji: non-A, non-B hepatit, idiosenkrazik ilaç reaksiyonu"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "Non A non B",
+         "tur": "terim"
+        },
+        {
+         "metin": "idiosenkrazik ilaç",
+         "tur": "terim"
+        },
+        {
+         "metin": "Non A non B",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0226",
+       "ses": "Bu nedenler karaciğer hasarının öngörülemez ve ağır seyretmesiyle transplantasyon kararını destekler.",
+       "ekran": "**Non A non B** veya **idiosenkrazik ilaç** ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Etiyoloji: non-A, non-B hepatit, idiosenkrazik ilaç reaksiyonu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Non A non B",
+         "tur": "terim"
+        },
+        {
+         "metin": "idiosenkrazik ilaç",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p056",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-09-c0227",
+       "ses": "Ensefalopati gelişmeden önceki sarılık süresinin yedi günden uzun olması King Collage kriteridir.",
+       "ekran": "**Sarılık yedi günden uzun** ensefalopatiden önce",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Ensefalopati gelişmeden önceki sarılık süresinin 7 günden uzun olması"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "Sarılık yedi günden uzun",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sarılık yedi günden uzun",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0228",
+       "ses": "Uzamış sarılık, hepatosellüler hasarın ilerlediğini ve karaciğer yetmezliği riskinin arttığını gösterir.",
+       "ekran": "**Sarılık yedi günden uzun** ensefalopatiden önce",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Ensefalopati gelişmeden önceki sarılık süresinin 7 günden uzun olması"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sarılık yedi günden uzun",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0229",
+       "ses": "Pe te değerinin elli saniyeden uzun olması King Collage kriterlerinden biridir.",
+       "ekran": "**PT elli saniye üstü** koagülasyon ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "PT >50 sn"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "PT elli saniye üstü",
+         "tur": "terim"
+        },
+        {
+         "metin": "PT elli saniye üstü",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0230",
+       "ses": "Koagülasyon bozukluğu karaciğerin sentez işlevinin bozulduğunu gösterir ve nakil gereksinimini destekler.",
+       "ekran": "**PT elli saniye üstü** koagülasyon ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "PT >50 sn"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "PT elli saniye üstü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0231",
+       "ses": "Serum bilirubin düzeyinin on sekiz miligram bölü desilitreden yüksek olması King Collage kriteridir.",
+       "ekran": "**Bilirubin on sekiz üstü** ağır işlev bozukluğu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Serum bilirubin düzeyinin >18 mg/dl"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "Bilirubin on sekiz üstü",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bilirubin on sekiz üstü",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-09-p057",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-09-c0232",
+       "ses": "Belirgin hiperbilirubinemi karaciğer işlev bozukluğunun ağırlığını gösterir.",
+       "ekran": "**Bilirubin on sekiz üstü** ağır işlev bozukluğu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Serum bilirubin düzeyinin >18 mg/dl"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Bilirubin on sekiz üstü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0233",
+       "ses": "Fulminan karaciğer yetmezliğinde etken hepatit be ise entekavir veya tenofovir gibi antiviral tedavi başlanmalıdır.",
+       "ekran": "**Hepatit B fulminan** yetmezlikte antiviral",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "ANTİVİRAL TEDAVİ: Fulminan yetmezlikte etken Hepatit B ise antiviral tedavi başlanmalıdır. Örn..Entekavir Tenofovir"
+        ]
+       },
+       "cikmis": [
+        "d3-k3-gas-014"
+       ],
+       "vurgu": [
+        {
+         "metin": "Hepatit B fulminan",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hepatit B fulminan",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-09-c0234",
+       "ses": "Viral replikasyonu baskılamak karaciğer hasarının ilerlemesini azaltmayı amaçlar.",
+       "ekran": "**Hepatit B fulminan** yetmezlikte antiviral",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "ANTİVİRAL TEDAVİ: Fulminan yetmezlikte etken Hepatit B ise antiviral tedavi başlanmalıdır. Örn..Entekavir Tenofovir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hepatit B fulminan",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

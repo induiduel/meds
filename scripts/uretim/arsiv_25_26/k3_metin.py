@@ -82,6 +82,7 @@ def yaz(key: str) -> int:
             return 2
         sayfa = int(m.group(1))
         ses, ekran, satirlar = alan[1].strip(), alan[2].strip(), alan[3].strip()
+        ses = baglamsiz_acilis_temizle(ses)
         cikmis = [x.strip() for x in (alan[4].strip() if len(alan) > 4 else "").split(",") if x.strip()]
         sekil = (alan[5].strip() if len(alan) > 5 else "") or None
         duzey = int(alan[6]) if len(alan) > 6 and alan[6].strip().isdigit() else 0
@@ -128,6 +129,19 @@ def yaz(key: str) -> int:
     (taslak / "konusma_capalari.json").write_text(json.dumps(KV.capalar(v2), ensure_ascii=False), encoding="utf-8")
     print(f"[{key}] {len(bolumler)} bölüm · {c_n} cümle · {len(md.split())} kelime")
     return 0
+
+
+def baglamsiz_acilis_temizle(ses: str) -> str:
+    """Paragraf açılışındaki adsız göndermeyi kaldırır (H434). Yalnız zarf niteliğindeki açılışlar silinir
+    ("Burada a pe ce…" → "A pe ce…"); "Bu hastalıkta…" gibi gerçek göndermeler DEĞİŞTİRİLMEZ (konu adı gerekir,
+    onu model yazmalıdır). Cümleye yeni bilgi eklenmez, yalnız boş gönderim atılır."""
+    m = re.match(r"^(?:burada|bunda|bunlarda|bu\s+durumda|bu\s+tabloda)\s+", ses or "", re.I)
+    if not m:
+        return ses
+    kalan = ses[m.end():]
+    if not kalan or kalan[0].islower():
+        return ses            # küçük harfle başlıyorsa cümle bozulur, dokunma
+    return kalan[0].upper() + kalan[1:]
 
 
 def kapilar(key: str) -> int:

@@ -309,10 +309,12 @@ def istek(baglam: dict, smetin: dict[int, str], varl: dict, adaylar: list[dict],
 
 
 SES_YASAK = re.compile(r"[*#|>\[\]{}_`~]|\d|\s-\s")
+H494_RE = re.compile(r'^[">|=\\\'!{}.\[\]()\s]+$')     # yalnız simge/boş satır (H494): başlık ya da çapa olmaz
 KISALTMA = re.compile(r"\b[A-ZÇĞİÖŞÜ]{2,}\b")
 BAGLAMSIZ = re.compile(r"^(?:bu|şu|söz\s+konusu|ilgili|yukarıdaki|aynı)\s+(?:\w+\s+)?"
                        r"(?:hastalık|hasta|olgu|tümör|sendrom|tablo|durum|bozukluk|enfeksiyon|lezyon|ilaç|grup|tip|"
-                       r"form|mekanizma|süreç|bulgu|kavram|durumlar|hastalıklar|hastalarda|bunlarda)", re.I)
+                       r"form|mekanizma|süreç|bulgu|kavram|durumlar|hastalıklar|hastalarda|bunlarda)"
+                       r"|^(?:burada|bunda|bunlarda|bu\s+durumda|bu\s+tabloda|bu\s+hastalarda)\b", re.I)
 
 
 def cumle_sayisi(metin: str) -> int:
@@ -374,7 +376,9 @@ def denetle_sayfa(x: dict, n: int, metin: str, varl: dict | None = None) -> list
         cumleler = [c for c in (m.get("cumleler") or []) if isinstance(c, str) and c.strip()]
         if not cumleler:
             e.append(f"s{n}: madde cümlesiz ({str(m.get('satir'))[:40]})")
-        st = (m.get("satir") or "").strip()
+        st = " ".join((m.get("satir") or "").split())
+        if st and len(katla(st).strip()) < 3:
+            st = ""          # H494: kısa/anlamsız satır çapa sayılmaz → aşağıdaki satır-veya-şekil kuralı uygulanır
         if st and not satir_gecer(st, kat) and not (varl_tablo or varl_gorsel):
             e.append(f"s{n}: satır slaytta yok: {st[:50]}")
         if not st and not m.get("sekil") and not (varl_tablo or varl_gorsel):
@@ -410,6 +414,10 @@ def capa_bul(st: str, metin: str) -> str:
     st = " ".join((st or "").split())
     if not st or not metin:
         return ""
+    # H494: 3 karakterden kısa çapa ("B", "|", "> 6") kapıda "anlamsız" sayılır ve cümleyi çapasız bırakır;
+    # böyle satırlar çapa olarak HİÇ kullanılmaz (çapa yok → cümle sayfaya düşer, kapsam/sekil yolu devreye girer).
+    if len(katla(st).strip()) < 3:
+        return ""
     kat_sayfa = katla(metin)
     k = katla(st)
     if k and k in kat_sayfa:
@@ -421,8 +429,10 @@ def capa_bul(st: str, metin: str) -> str:
         kl = katla(ln)
         if not kl or kl not in kat_sayfa:
             continue
+        # H615: tek kelimelik/kısa satırlar ("B", "|", '"> 6') her cümleyle %100 örtüşür ve çapa olarak seçilirdi;
+        # kapı bunları "anlamsız" sayıp cümleyi çapasız bırakıyordu. Aday satır en az 2 anlamlı kelime içermeli.
         kel = {w for w in kl.split() if len(w) > 2 or w.isdigit()}
-        if not kel:
+        if len(kel) < 2 or len(kl.strip()) < 3:
             continue
         puan = len(k_kel & kel) / len(kel)
         if puan > en_p:
@@ -440,8 +450,9 @@ def tsv_yaz(taslak: Path, uretilen: dict[int, dict], smetin: dict[int, str], var
         # bölüm başlığı: sayfanın ilk satırı kısa bir başlıksa ve son bölümden ≥4 sayfa geçtiyse yeni bölüm
         ilk = next((s.strip() for s in (smetin.get(n) or "").splitlines() if s.strip()), "")
         if ilk and len(ilk) <= 70 and not ilk.endswith((".", ":", ";", ",")) and (n - son_bolum >= 4):
-            satirlar.append("@@ " + re.sub(r"\s+", " ", ilk))
-            son_bolum = n
+            if len(katla(ilk).strip()) >= 3 and not H494_RE.search(ilk):
+                satirlar.append("@@ " + re.sub(r"\s+", " ", ilk))
+                son_bolum = n
         kat = katla(smetin.get(n) or "")
         ck = [c for c in (x.get("cikmis") or []) if isinstance(c, str)]
         maddeler = [m for m in (x.get("maddeler") or []) if isinstance(m, dict)]
