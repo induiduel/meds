@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 815,
-  "baslik": "İstatistiklerim: daha net ve doğru",
+  "onem": 816,
+  "baslik": "İçerik hattı: kural özetleri yenilendi",
   "maddeler": [
-    "Doğru oranları ayrıldı: \"Her cevap\" grafiği verdiğin tüm cevapları, halka ise her sorunun son cevabını sayıyor; başlıklar bunu söylüyor.",
-    "Aktif gün ortalaması: Artık yalnız çalıştığın günlerin süresinden hesaplanıyor.",
-    "Unutma eğrisi: Seçtiğin zaman aralığından bağımsız olarak tüm geçmişinden hesaplanıyor.",
-    "Telefonda: Soru kareleri parmakla dokunmaya uygun büyüklükte."
+    "Arka plan: İçerik hattının genel kural özeti güncellendi.",
+    "Site kullanımında görünür bir değişiklik yok."
   ],
   "eklenen": [],
   "degisen": [
-    "İstatistiklerim başlık ve açıklamaları"
+    "İçerik hattı kural özetleri"
   ],
   "duzeltilen": [
     "Aktif gün ortalaması, unutma eğrisi, soru karesi boyutu"
