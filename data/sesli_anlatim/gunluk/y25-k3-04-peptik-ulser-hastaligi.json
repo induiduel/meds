@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-04-peptik-ulser-hastaligi",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Peptik Ülser Hastalığı",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 08:48",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "5. Peptik Ülser.pdf (51 sayfa) kaynağından 97 paragraf / 391 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 36.1,
+        "sayfaSayisi": 51,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 97,
+        "cumleSayisi": 391,
+        "cikmisEslesme": 23
+      }
+    }
+  ]
+}

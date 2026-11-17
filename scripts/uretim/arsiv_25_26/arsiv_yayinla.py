@@ -152,9 +152,19 @@ def denetle_taslak(taslak: Path, baglam: dict) -> list[str]:
     # 4. metin_denetle.py ve sesli_kapsam (0 atlanan sayfa, görsel/tablo kapsamı)
     md_yol = taslak / "konusma_metni.md"
     if md_yol.exists():
+        # H618: arşiv dersleri 60+ sayfa olabiliyor; kelime tavanı sayfa başına ~140 kelime olacak şekilde ölçeklenir
+        # (6000 taban, kırpma yok). Varsayılan 2026-27 hattı değişmez.
+        import os as _os
+        ortam = dict(_os.environ)
+        try:
+            _n = int(json.loads((taslak / "baglam.json").read_text(encoding="utf-8")).get("sayfa") or 0)
+        except Exception:  # noqa: BLE001
+            _n = 0
+        if _n:
+            ortam.setdefault("MEDS_METIN_MAX_W", str(max(6000, _n * 140)))
         r = subprocess.run(
             [sys.executable, str(MEDS / "scripts" / "uretim" / "sesli_anlatim" / "metin_denetle.py"), str(md_yol)],
-            capture_output=True, text=True
+            capture_output=True, text=True, env=ortam
         )
         if r.returncode != 0:
             hatalar.append(f"metin_denetle: {(r.stdout + r.stderr).strip()[-400:]}")
