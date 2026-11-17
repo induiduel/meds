@@ -58,8 +58,8 @@ function zDuzSatirlar(d: ZenginBlok, mdKip: boolean): string[] {
     case 'sirali': return [...(d.bas ? [k(d.bas)] : []), ...(d.ogeler || []).map((o, i) => `${i + 1}. ${o}`), ''];
     case 'tablo': {
       const h = d.basliklar || [], r = d.satirlar || [];
-      return mdKip ? ['', `| ${h.join(' | ')} |`, `|${h.map(() => '---').join('|')}|`, ...r.map((z) => `| ${z.join(' | ')} |`), '']
-        : [h.join(' | '), ...r.map((z) => z.join(' | '))];
+      return mdKip ? ['', ...(d.bas ? [`**${d.bas}**`, ''] : []), `| ${h.join(' | ')} |`, `|${h.map(() => '---').join('|')}|`, ...r.map((z) => `| ${z.join(' | ')} |`), '']
+        : [...(d.bas ? [d.bas] : []), h.join(' | '), ...r.map((z) => z.join(' | '))];
     }
     case 'sinav': return [mdKip ? `> **Sınavda soruldu:** ${x}` : `[Sınavda soruldu] ${x}`];
     case 'ornek': return [mdKip ? `> **Örnek:** ${x}` : `[Örnek] ${x}`];
@@ -344,7 +344,7 @@ function zDocx(d: ZenginBlok): string[] {
     case 'tablo': {
       const h = d.basliklar || [], rows = d.satirlar || [], sut = Math.max(h.length, ...rows.map((z) => z.length), 1), gen = Math.floor(9638 / sut);
       const hucre = (t: string, ri: number) => `<w:tc><w:tcPr><w:tcW w:w="${gen}" w:type="dxa"/>${ri === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="0D6E96"/>' : ri % 2 === 0 ? '<w:shd w:val="clear" w:color="auto" w:fill="F2F6F9"/>' : ''}</w:tcPr>${par('Tablo', ri === 0 ? `<w:r><w:rPr><w:b/><w:color w:val="FFFFFF"/></w:rPr><w:t xml:space="preserve">${xe(t)}</w:t></w:r>` : r(t))}</w:tc>`;
-      return [`<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblBorders>${['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map((k) => `<w:${k} w:val="single" w:sz="4" w:color="D6DCE3"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="100" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol w:w="' + gen + '"/>'.repeat(sut)}</w:tblGrid>`
+      return [...(d.bas ? [par('ZListeBas', r(d.bas, { b: true }), tut)] : []), `<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblBorders>${['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map((k) => `<w:${k} w:val="single" w:sz="4" w:color="D6DCE3"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="100" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol w:w="' + gen + '"/>'.repeat(sut)}</w:tblGrid>`
         + [h, ...rows].map((z, ri) => `<w:tr>${Array.from({ length: sut }, (_, ci) => hucre(z[ci] || '', ri)).join('')}</w:tr>`).join('') + '</w:tbl>', par('Normal', '')];
     }
     case 'sinav': return [par('ZSinav', r('★ SINAVDA SORULDU', { b: true }), tut), par('ZSinavM', r(d.x || ''))];
@@ -747,9 +747,12 @@ async function pdf(b: AktarBelge, gorunum?: PdfStil, resimler: Resimler = new Ma
         const top = uz.reduce((a, c) => a + c, 0), oran = uz.map((u) => Math.max(0.14, u / top)), os = oran.reduce((a, c) => a + c, 0);
         const cw = oran.map((o) => (CW * o) / os), cx = cw.map((_, c) => M + cw.slice(0, c).reduce((a, v) => a + v, 0));
         const hucre = rows.map((r, ri) => Array.from({ length: sut }, (_, c) => satirla([{ t: r[c] || '', b: ri === 0 || c === 0 }], cw[c] - 2 * pad, p2)));
-        const rh = hucre.map((r) => Math.max(...r.map((c) => c.length), 1) * lh(p2) + 2 * pad), h = rh.reduce((a, c) => a + c, 0);
+        const rh = hucre.map((r) => Math.max(...r.map((c) => c.length), 1) * lh(p2) + 2 * pad);
+        const basS = d.bas ? satirla([{ t: d.bas, b: true }], CW, PT.not) : [], basH = basS.length ? basS.length * lh(PT.not) + 1.2 : 0;
+        const h = rh.reduce((a, c) => a + c, 0) + basH;
         return { h: h + 4, ciz: () => {
           y += 1.5;
+          if (basS.length) { satirlariCiz(basS, M, y, PT.not, VURGU); y += basH; }
           hucre.forEach((r, ri) => {
             if (ri === 0) { doc.setFillColor(...VURGU); doc.rect(M, y, CW, rh[0], 'F'); }
             else if (ri % 2 === 0) { doc.setFillColor(...ZEBRA); doc.rect(M, y, CW, rh[ri], 'F'); }

@@ -240,6 +240,114 @@ def tablo_mi(c: str) -> dict | None:
     return {"basliklar": ["Durum", "Oran"], "satirlar": satir}
 
 
+SAYI_KOS = re.compile(rf"(?:\byüzde\s+)?(?:\b(?:{SAYI}|\d+(?:[.,]\d+)?)\b\s*)+(?:[\wçğıöşü']*)", re.I)
+
+
+def _deger_ayir(seg: str, deger_once: bool) -> tuple[str, str] | None:
+    """Parçayı (koşul, değer) ikilisine ayırır. deger_once: "yüzde altmışı serebral tromboza" → (serebral tromboza, yüzde altmışı)."""
+    seg = seg.strip(" .")
+    if deger_once:
+        m = re.match(rf"^(yüzde\s+(?:{SAYI}\s+)*{SAYI}[\wçğıöşü']*)\s+(.+)$", seg, re.I)
+        return (m.group(2), m.group(1)) if m else None
+    m = re.search(r"\byüzde\s", seg, re.I) or SAYI_KOS.search(seg)
+    if not m or m.start() == 0:
+        return None
+    # sözcük silinmez (kapsar): koşul sonundaki "ise/yalnızca/ancak" değerin önüne geçer, "ise" bağlaç olarak düşer
+    kosul, deger = seg[:m.start()].strip(), seg[m.start():].strip()
+    ek = re.search(r"(?:\s+(?:ise|yalnızca|ancak|sadece))+$", kosul)
+    if ek:
+        kosul, deger = kosul[:ek.start()].strip(" ,"), (" ".join(w for w in ek.group(0).split() if w != "ise") + " " + deger).strip()
+    return (kosul, deger) if kosul and len(kosul.split()) <= 8 else None
+
+
+def deger_tablosu(c: str) -> dict | None:
+    """Sayısal değer serisi (≥ 3 satır): 'üç yaş altında yüzde altmış altı, bir ila yirmi yaşta yüzde kırk, …' →
+    Durum | Değer. Her satırda sayı olmalı; cümle sözcükleri korunmalı (kapsar)."""
+    bas, _, govde = c.rpartition(": ") if re.search(r":\s", c) else ("", "", c)
+    seg = [x for x in re.split(r",\s*|;\s*", govde.rstrip(" .")) if x.strip()]
+    if len(seg) < 3:
+        return None
+    deger_once = sum(1 for x in seg[1:] if re.match(r"^yüzde\s", x.strip(), re.I)) >= 2
+    if deger_once:  # ilk parçanın öznesi başlığa: "İnmelerin yüzde altmışı …" → başlık "İnmelerin"
+        m = re.match(r"^(.*?)\s+(yüzde\s.+)$", seg[0], re.I)
+        if not m:
+            return None
+        bas, seg[0] = (bas + " " + m.group(1)).strip(), m.group(2)
+    ham = [_deger_ayir(x, deger_once) for x in seg]
+    satir: list[tuple[str, str]] = [r for r in ham if r is not None]
+    if len(satir) != len(ham) or len(satir) < 3:
+        return None
+    # değer gerçek nicelik olmalı: yüzde, birimli sayı ya da yalnız sayı sözcükleri ("bir şekilde", "üç yönelimin" değildir)
+    BIRIM = r"(miligram|mikrogram|gram|mg|kilogram|mikrometre|milimetre|santimetre|metre|mmhg|ünite|saniye|dakika|saat|gün|hafta|ay|aylarda|ayda|yıl|yaş|kat|doz|derece)"
+    def nicel(v: str) -> bool:
+        v = v.lower()
+        return "yüzde" in v or bool(re.search(r"\d", v)) or bool(re.search(BIRIM, v)) or \
+            bool(re.fullmatch(rf"(?:(?:{SAYI}|virgül)[\wçğıöşü']*\s*)+", v.strip()))
+    if not all(nicel(r[1]) for r in satir) or any(re.match(r"^(ile|ila|ve|ya)\b", r[0], re.I) for r in satir):
+        return None
+    if not kapsar(c, [bas, *[h for r in satir for h in r]]):
+        return None
+    oran = any("yüzde" in r[1].lower() for r in satir)
+    return {"bas": bas.strip(), "basliklar": ["Durum", "Oran" if oran else "Değer"], "satirlar": [list(r) for r in satir]}
+
+
+# Koşul cümle başında (ya da iki noktadan hemen sonra) olmalı: "A'da P, B'de ise Q". Ortadaki ilk -de/-da'yı koşul saymak
+# yanlış eşleme üretiyordu ("Örnekte | … difüzyon görüntüde …").
+KARSIT = re.compile(r"^(?P<on>)(?P<k1>(?:\S+\s+){0,3}?\S+(?:[dt][ae]|n[dt][ae]))\s+(?P<v1>[^;]+?),\s+"
+                    r"(?P<k2>(?:\S+\s+){0,3}?\S+(?:[dt][ae]|n[dt][ae]))\s+ise\s+(?P<v2>[^;]+?)[.!]?$")
+
+
+def karsitlik_tablosu(c: str) -> dict | None:
+    """'X'te P, Y'de ise Q' → iki satırlı karşılaştırma tablosu (Durum | Bulgu). Ön ek ≤ 8 sözcük başlık olur."""
+    ana, _, kalan = c.partition("; ")
+    on_ek = ""
+    if ": " in ana:  # "Ayrımı şöyle yapabilirsiniz: A'da P, B'de ise Q" → başlık iki noktadan önce
+        on_ek, _, ana = ana.rpartition(": ")
+    m = KARSIT.match(ana.strip())
+    # "yüzde", "önce" gibi -de/-te ile biten bulunma eki olmayan sözcükler koşul değildir
+    YANLIS = r"(?:yüzde|önce|sonra|halde|ayrıca|zaten|bile|hatta|şimdi|ilkönce|kadar|beri|neden|orta|örnekte|tanıda|pratikte|klinikte|genelde|aslında|sonuçta|özünde|burada|şurada|olarak\s+\S+)$"
+    if not m or re.search(YANLIS, m.group("k1").lower()) or re.search(YANLIS, m.group("k2").lower()) \
+            or len(m.group("v1").split()) > 20 or len(m.group("v2").split()) > 20 \
+            or any(YUKLEM.search(w) for w in m.group("k2").lower().split()[:-1]) or "," in m.group("k1") + m.group("k2") \
+            or re.search(r"\S+(?:[dt][ae]|n[dt][ae])\b", " ".join(m.group("v1").split()[:3])):  # çerçeve koşulu: v1 başında yeni koşul var
+        return None
+    satir = [[m.group("k1").strip(), m.group("v1").strip()], [m.group("k2").strip(), m.group("v2").strip()]]
+    if satir[0][0].lower() == satir[1][0].lower() or ":" in satir[0][0] or not kapsar(ana, [m.group("on"), *satir[0], *satir[1]]):
+        return None
+    return {"bas": (on_ek + " " + m.group("on")).strip(" ,:"), "basliklar": ["Durum", "Bulgu"], "satirlar": satir, "kalan": kalan.strip()}
+
+
+def kavram_tablolari(B: list[dict]) -> list[dict]:
+    """Bölümde art arda tanımlanan ≥ 3 kavram (anahtarlı ana madde; arada yalnız alt madde/açıklama/terim) → Kavram | Açıklama
+    tablosu. Alt madde ve açıklama cümleleri ilgili satırın hücresine eklenir; terim kartları tablonun ardına taşınır."""
+    out, i = [], 0
+    while i < len(B):
+        if B[i]["t"] == "madde" and B[i].get("anahtar") and B[i].get("sv") == 1:
+            j, satirlar, ek = i, [], []
+            while j < len(B):
+                b = B[j]
+                if b["t"] == "madde" and b.get("anahtar") and b.get("sv") == 1:
+                    a = b["anahtar"]
+                    ac = b["x"][len(a):].lstrip(" ,;:").strip() if b["x"].startswith(a) else b["x"]
+                    ac = re.sub(r"^ise\s+", "", ac)
+                    satirlar.append([a, ac[:1].upper() + ac[1:]])
+                elif b["t"] in ("aciklama",) or (b["t"] == "madde" and b.get("sv") == 2):
+                    satirlar[-1][1] += " " + b["x"]
+                elif b["t"] == "terim":
+                    ek.append(b)
+                else:
+                    break
+                j += 1
+            if len(satirlar) >= 3 and len({r[0].lower() for r in satirlar}) == len(satirlar):
+                out.append({"t": "tablo", "bas": "", "basliklar": ["Kavram", "Açıklama"], "satirlar": satirlar, "p": B[i]["p"], "x": ""})
+                out += ek
+                i = j
+                continue
+        out.append(B[i])
+        i += 1
+    return out
+
+
 ANAHTAR = re.compile(r"^([A-ZÇĞİÖŞÜ][\wçğıöşüÇĞİÖŞÜ\-]*(?:\s+[\wçğıöşüÇĞİÖŞÜ\-]+){0,3}?)(?:,\s|\s+ise\s|;\s|:\s)")
 
 
@@ -321,8 +429,13 @@ def modelle(key: str) -> dict:
                 B.append({"t": "sirali", "bas": sr[0], "ogeler": sr[1], "p": p})
                 if sr[2]:  # ';' sonrası kalan cümle parçası açıklama olarak korunur
                     B.append({"t": "aciklama", "x": sr[2][:1].upper() + sr[2][1:], "p": p})
-            elif (tb := tablo_mi(c)):
+            elif (tb := deger_tablosu(c)):  # eski tablo_mi koşul/sayı kesiyordu (kapsamsız), kullanılmıyor
                 B.append({"t": "tablo", **tb, "x": c, "p": p})
+            elif (kt := karsitlik_tablosu(c)):
+                kalan = kt.pop("kalan")
+                B.append({"t": "tablo", **kt, "x": c, "p": p})
+                if kalan:
+                    B.append({"t": "aciklama", "x": kalan[:1].upper() + kalan[1:], "p": p})
             elif (ls := liste_mi(c)):
                 B.append({"t": "liste", "bas": ls[0], "ogeler": ls[1], "p": p})
             elif (q := re.search(r"[“\"]([^”\"]{8,200})[”\"]", c)):
@@ -347,7 +460,7 @@ def modelle(key: str) -> dict:
                         break
     buyuk = lambda t: ({"i": "İ", "ı": "I"}.get(t[:1], t[:1].upper()) + t[1:]) if t else t
     for bl in bolumler:
-        bl["bloklar"] = sira_dizileri(bl["bloklar"])
+        bl["bloklar"] = kavram_tablolari(sira_dizileri(bl["bloklar"]))
         for b in bl["bloklar"]:
             if b["t"] == "sirali":  # adım başı büyük harf (Türkçe i/İ)
                 b["ogeler"] = [buyuk(x) for x in b["ogeler"]]

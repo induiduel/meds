@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 816,
-  "baslik": "İçerik hattı: kural özetleri yenilendi",
+  "onem": 817,
+  "baslik": "Zengin PDF: daha çok tablo",
   "maddeler": [
-    "Arka plan: İçerik hattının genel kural özeti güncellendi.",
-    "Site kullanımında görünür bir değişiklik yok."
+    "Zengin PDF/Word: oranlar, dozlar, \"A'da şu, B'de ise bu\" karşılaştırmaları ve art arda tanımlanan kavramlar artık başlıklı tablolar olarak görünür."
   ],
   "eklenen": [],
   "degisen": [
