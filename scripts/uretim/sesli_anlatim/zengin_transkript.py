@@ -207,8 +207,21 @@ def liste_mi(c: str) -> tuple[str, list[str]] | None:
     ik = re.match(r"^([^:;]{8,160}):\s+([^:;]+?)[.!]?$", c)
     if ik:
         og = sayiyla_ayir(ik.group(1), ik.group(2)) or []
-        if len(og) >= 3 and all(len(x.split()) <= 6 for x in og) and ogeler_ad_mi(og) and kapsar(c, [ik.group(1), *og]):
+        if len(og) >= 3 and all(len(x.split()) <= 14 for x in og) and ogeler_ad_mi(og) and kapsar(c, [ik.group(1), *og]):
             return ik.group(1).strip(), og
+    # Özne + sayım + koşaç: "Nontravmatik nedenler enfeksiyon, transvers miyelit, tümör ve nörodejeneratif hastalıklardır."
+    # Özne bir grup adı (çoğul: nedenler, bulgular, etmenler…) ya da "X açısından/için/arasında" çerçevesi olmalı.
+    GRUP = (r"(?:neden|bulgu|belirti|etmen|faktör|örnek|tip|grup|endikasyon|komplikasyon|özellik|bileşen|etki|kontrendikasyon|"
+            r"seçenek|yöntem|ölçüt|kriter|evre|sınıf|tür|çeşit|kaynak|amaç|hedef|ilke|basamak|risk|sonuç|türev|üye)")
+    oz = re.match(rf"^(?P<bas>(?:[^\s,]+\s+){{0,3}}?[^\s,]*{GRUP}(?:ler|lar)?(?:i|ı|si|sı|leri|ları)?)\s+(?P<govde>[^:;]+?)[.!]?$", c, re.I)
+    if oz and (re.search(r"(?:lerin|ların|nin|nın)$", oz.group("bas")) or re.search(r"\bise\b", oz.group("bas"))
+               or not re.search(r"(?:ler|lar|leri|ları|i|ı|si|sı)$", oz.group("bas"))):
+        oz = None  # ilgi eki (tamlayan), "ise" ya da yalın tekil özne grup adı değildir
+    if oz and oz.group("govde").count(",") >= 1 and re.search(r"\s(?:ve|ya da|veya)\s", oz.group("govde")):
+        og = sayiyla_ayir(oz.group("bas"), oz.group("govde")) or []
+        son = re.sub(r"(?:'?[dt][ıiuü]r)$", "", og[-1]) if og else ""  # koşaç ("hastalıklardır") ad öbeğini bozmaz
+        if len(og) >= 3 and all(len(x.split()) <= 8 for x in og) and ogeler_ad_mi([*og[:-1], son]) and kapsar(c, [oz.group("bas"), *og]):
+            return oz.group("bas").strip(), og
     if c.count(",") + len(re.findall(r"\s(?:ve|ile|ya da)\s", c)) < 2 or not SAYIM.search(c):
         return None
     m = re.match(r"^(.{8,90}?(?:başında|arasında|amacıyla|için|olarak|Bunlara|Bu amaçla))\s+(.*)$", c)
