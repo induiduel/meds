@@ -1,0 +1,1928 @@
+{
+ "surum": 2,
+ "ders_id": "k3-15",
+ "anahtar": "y25-k3-15-noroendokrin-tumorler",
+ "baslik": "Nöroendokrin Tümörler",
+ "donem": "2025-2026",
+ "bolumler": [
+  {
+   "id": "k3-15-b01",
+   "baslik": "Nöroendokrin Tümörler",
+   "paragraflar": [
+    {
+     "id": "k3-15-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-15-c0001",
+       "ses": "Nöroendokrin tümörler nadir görülen, vücudun herhangi bir yerindeki nöroendokrin sistemden köken alan ve salgıladıkları hormonlar nedeniyle farklı klinik durumlar ortaya çıkaran tümörlerdir.",
+       "ekran": "**Nadir** farklı klinik seyirli tümörler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "NET’ ler nadir görülen, vücudun herhangi bir yerindeki nöroendokrin sistemden köken alan lokasyonları ve salgıladıkları hormonlar nedeniyle farklı klinik durumlar ortaya çıkaran, çoğunlukla benign seyirli olmakla birlikte agresif seyirli de olabilecek tümörlerdir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nadir",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0002",
+       "ses": "Çoğunlukla benign seyirli olmakla birlikte agresif seyirli de olabilecekleri için klinik seyir değişkendir.",
+       "ekran": "**Nadir** farklı klinik seyirli tümörler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "NET’ ler nadir görülen, vücudun herhangi bir yerindeki nöroendokrin sistemden köken alan lokasyonları ve salgıladıkları hormonlar nedeniyle farklı klinik durumlar ortaya çıkaran, çoğunlukla benign seyirli olmakla birlikte agresif seyirli de olabilecek tümörlerdir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nadir",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0003",
+       "ses": "Nöroendokrin tümör yerleşim şeması, tümörlerin vücudun farklı bölgelerinde ortaya çıkabildiğini ve hormon salgılarına göre değişik klinik tablolar oluşturabildiğini gösterir.",
+       "ekran": "**Yerleşim şeması** farklı bölgeler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [],
+        "sekil": "nöroendokrin tümör yerleşim şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Yerleşim şeması",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-15-c0004",
+       "ses": "Nöroendokrin tümörlerin insidansı yüz binde sıfır virgül iki kişi olup tüm kanserlerin yüzde sıfır virgül beşini oluşturur.",
+       "ekran": "**İnsidans** yüz binde sıfır virgül iki",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "İnsidansı 0.2/100.000 kişi olup, tüm kanserlerin %0.5’ ini oluşturur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnsidans",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0005",
+       "ses": "Nöroendokrin tümör farkındalığının artmasıyla insidans son yıllarda beş kat artmıştır ve daha da artacağı tahmin edilmektedir.",
+       "ekran": "**Farkındalık** artışıyla insidans beş kat",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "NET farkındalığının artması ile insidansı son yıllarda 5 kat artmıştır ve daha da artacağı tahmin edilmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Farkındalık",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0006",
+       "ses": "Nöroendokrin tümörler over, meme, özofagus ve endometrium gibi diğer kanserlerle birlikte bulunabilir.",
+       "ekran": "**Birliktelik** over meme özofagus endometrium",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "NET’ ler diğer kanserler (over, meme, özofagus, endometrium gibi) ile birlikte bulunabilirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Birliktelik",
+         "tur": "terim"
+        },
+        {
+         "metin": "Birliktelik",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-pat-044"
+       ]
+      },
+      {
+       "id": "k3-15-c0007",
+       "ses": "Nöroendokrin tümörlerin üçte ikisi gastrointestinal sistemde, dörtte biri akciğerde, kalanı ise diğer endokrin dokularda görülür.",
+       "ekran": "**Yerleşim** üçte iki sindirim dörtte bir akciğer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "NET’ lerin üçte ikisi GİS’ te, dörtte biri akciğerde, diğerleri ise diğer endokrin dokularda görülür."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Yerleşim",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-15-b02",
+   "baslik": "Etiyoloji",
+   "paragraflar": [
+    {
+     "id": "k3-15-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k3-15-c0008",
+       "ses": "Çalışmalar sigara, alkol ve hipergastrinemik sendromların nöroendokrin tümör gelişiminde risk olduğunu desteklemektedir.",
+       "ekran": "**Sigara, alkol, hipergastrinemik sendrom** nöroendokrin tümör riskini artırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Çalışmalar, sigara, alkol, hipergastrinemik sendromların NET gelişimi için birer risk olduğunu desteklemektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sigara, alkol, hipergastrinemik sendrom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0009",
+       "ses": "Bu risk etkenlerinin bilinmesi, nöroendokrin tümör açısından yüksek riskli hastaların fark edilmesini sağlar.",
+       "ekran": "**Sigara, alkol, hipergastrinemik sendrom** nöroendokrin tümör riskini artırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Çalışmalar, sigara, alkol, hipergastrinemik sendromların NET gelişimi için birer risk olduğunu desteklemektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sigara, alkol, hipergastrinemik sendrom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0010",
+       "ses": "Herediter sendromlar nöroendokrin tümör gelişimi için risk oluşturur ve tümörler sporadik de görülebilir.",
+       "ekran": "**Herediter sendromlar** risk oluşturur, sporadik form da vardır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Sporadik görülebildikleri gibi, herediter sendromlar NET için risk oluşturmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Herediter sendromlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0011",
+       "ses": "Aile öyküsü olan hastada herediter sendrom araştırılması, nöroendokrin tümör riskinin tanınmasını sağlar.",
+       "ekran": "**Herediter sendromlar** risk oluşturur, sporadik form da vardır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Sporadik görülebildikleri gibi, herediter sendromlar NET için risk oluşturmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Herediter sendromlar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-15-c0012",
+       "ses": "Nöroendokrin tümörlerde klinik bulgular lokalizasyona ve salgılanan hormona göre değişir, bu nedenle aynı hastalık farklı yakınmalarla karşımıza çıkar.",
+       "ekran": "**Lokalizasyon ve hormon** kliniği belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Klinik bulgular lokalizasyona ve salgılanan hormona göre değişir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Lokalizasyon ve hormon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0013",
+       "ses": "Tanı yaşı sıklıkla elli yaş üzeridir, yani hastalık daha çok orta ve ileri yaş grubunda görülür.",
+       "ekran": "Tanı yaşı sıklıkla **elli yaş üzeri**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Tanı yaşı sıklıkla 50 yaş üzeridir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "elli yaş üzeri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0014",
+       "ses": "Non-fonksiyonel tümörler hormon salgılamadığı için bulgu vermez, semptomlar tümörün büyümesi ve kitle etkisiyle ortaya çıkar; karın ağrısı, sarılık, bulantı ve kusma bunlara örnektir.",
+       "ekran": "**Non-fonksiyonel** tümörler kitle etkisiyle bulgu verir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Non-fonksiyonel tümörler, tümörün büyümesi ve kitle etkisi ile semptom verirler; karın ağrısı, sarılık, bulantı ve kusma gibi…"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Non-fonksiyonel",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0015",
+       "ses": "Metastazlar genellikle karaciğere olur ve karaciğer tutulumu hastalığın klinik gidişinde önemli yer tutar.",
+       "ekran": "Metastaz genellikle **karaciğere**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Metastazlar genellikle karaciğere olur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "karaciğere",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0016",
+       "ses": "Nöroendokrin tümörler için kabul edilen evrensel bir tarama kılavuzu yoktur, yani her hastada rutin tarama önerilmez.",
+       "ekran": "Evrensel **tarama kılavuzu** yok",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "NET için kabul edilen evrensel  bir tarama kılavuzları yoktur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "tarama kılavuzu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-15-c0017",
+       "ses": "Çoklu endokrin neoplazi sendromları söz konusu olduğunda tiroid fonksiyonları gibi ilişkili durumlar taranmalıdır.",
+       "ekran": "**Çoklu endokrin neoplazi** varsa tiroid taranır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Ancak, MEN sendromları söz konusu olduğunda tiroid fonksiyonları gibi ilişkili durumlar taranmalıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çoklu endokrin neoplazi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-15-c0018",
+       "ses": "Tablo sendrom, gen ürünü ve nöroendokrin tümör tipi başlıklarıyla üç sütundan oluşur ve kalıtsal sendromlarla tümör ilişkisini gösterir.",
+       "ekran": "**Sendrom, gen ürünü, tümör tipi** tablosu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Sendrom Gen Ürünü NET Tipi"
+        ],
+        "sekil": "sendrom, gen ürünü ve tümör tipini eşleştiren tablo"
+       },
+       "vurgu": [
+        {
+         "metin": "Sendrom, gen ürünü, tümör tipi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0019",
+       "ses": "Çoklu endokrin neoplazi tip bir menin gen ürünüyle ilişkilidir ve gastrinoma, insülinoma ile nonfonksiyonel nöroendokrin tümörlere yol açar.",
+       "ekran": "**Menin** geni, gastrinoma ve insülinoma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "MEN tip] Menin Gastrinoma, insulinoma, nonfonksiyonel NET"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Menin",
+         "tur": "terim"
+        },
+        {
+         "metin": "Menin",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877035548-550554",
+        "d3-k3-pat-023",
+        "q-18-35",
+        "k1-2018-2019-q096"
+       ]
+      },
+      {
+       "id": "k3-15-c0020",
+       "ses": "Çoklu endokrin neoplazi tip ikide ret reseptör tirozin kinaz sorumludur; medüller tiroid kanseri ve feokromasitoma bu sendromda birlikte görülür.",
+       "ekran": "**Ret reseptör tirozin kinaz**, medüller tiroid kanseri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "MEN tip2 RET reseptör tirozin kinaz Medüller tiroid Ca, feokromasitoma"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Ret reseptör tirozin kinaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0021",
+       "ses": "Nörofibromatozis tip birde hamartin gen ürünü rol oynar ve bu sendromda somatostatinoma birlikteliği görülür.",
+       "ekran": "**Hamartin**, somatostatinoma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Nörofibromatozis tip"
+        ]
+       },
+       "cikmis": [
+        "Hamartin Somatostatinoma"
+       ],
+       "vurgu": [
+        {
+         "metin": "Hamartin",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hamartin",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0022",
+       "ses": "Von Hippel Lindau sendromunda von Hippel Lindau supresör proteini devre dışıdır ve nonfonksiyonel nöroendokrin tümörler ortaya çıkar.",
+       "ekran": "**Von Hippel Lindau** proteini, nonfonksiyonel tümör",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Von Hippel Lindau pVHL supresor protein Nonfonksiyonel NET"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Von Hippel Lindau",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p007",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-15-c0023",
+       "ses": "Tüberoz sklerozda tüberin gen ürünü sorumludur; nadir nonfonksiyonel nöroendokrin tümörler ve insülinoma görülebilir.",
+       "ekran": "**Tüberin**, nadir nonfonksiyonel tümör ve insülinoma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Tüberoz skleroz Tüberin Nadir nonfonksiyonel NETler, insulinoma"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Tüberin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-15-c0024",
+       "ses": "Tablo, her nöroendokrin tümör için klinik bulguları, malignite riskini, insidansı ve spesifik tedaviyi sütunlar halinde karşılaştırır.",
+       "ekran": "**Klinik bulgular, malignite riski, insidans, tedavi**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Kinik Malignite ("
+        ]
+       },
+       "cikmis": [
+        "İnsidans © Spesifik"
+       ],
+       "vurgu": [
+        {
+         "metin": "Klinik bulgular, malignite riski, insidans, tedavi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Klinik bulgular, malignite riski, insidans, tedavi",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0025",
+       "ses": "İnsülinoma hipoglisemiye bağlı adrenerjik ve nöroglikopenik bulgularla kendini gösterir; tedavide dekstroz, diazoksit ve diyet yer alır.",
+       "ekran": "**İnsülinoma**: hipoglisemi, dekstroz ve diazoksit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "bağlı adrenerjik ve"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "İnsülinoma",
+         "tur": "terim"
+        },
+        {
+         "metin": "İnsülinoma",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-035"
+       ]
+      },
+      {
+       "id": "k3-15-c0026",
+       "ses": "Gastrinoma ülser, reflü, karın ağrısı ve ishal ile Zolinger Ellison sendromuna yol açar ve proton pompası inhibitörleriyle tedavi edilir.",
+       "ekran": "**Gastrinoma**: ülser, ishal, proton pompası inhibitörü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "(ZolingerEllison Sendromu)"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Gastrinoma",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gastrinoma",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-Kurul_I_S_nav_-28",
+        "0256c02d5f60"
+       ]
+      },
+      {
+       "id": "k3-15-c0027",
+       "ses": "Glukagonoma hiperglisemi, nekrolitik migratuvar eritem, diyare ve tromboemboli ile seyreder; tedavide insülin, antikoagülasyon ve diyet uygulanır.",
+       "ekran": "**Glukagonoma**: eritem, diyare, tromboemboli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "migratuvar eritem, diyare, dyet"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Glukagonoma",
+         "tur": "terim"
+        },
+        {
+         "metin": "Glukagonoma",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "cl-p11-dahiliye-p032-0"
+       ]
+      },
+      {
+       "id": "k3-15-c0028",
+       "ses": "ViPoma sulu diyare ve hipokalemi ile giden ve de ha a sendromuna neden olur, tedavide uygun elektrolit tedavisi ön plandadır.",
+       "ekran": "**ViPoma**: sulu diyare, hipokalemi, elektrolit",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "WDHA sendromu)"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "ViPoma",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p009",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-15-c0029",
+       "ses": "Somatostatinoma diyabet, safra taşı, ishal ve kilo kaybıyla bulgu verir; tedavide pankreas enzimleri, diyet ve insülin kullanılır.",
+       "ekran": "**Somatostatinoma**: diyabet, safra taşı, kilo kaybı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "diyet, insülin"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Somatostatinoma",
+         "tur": "terim"
+        },
+        {
+         "metin": "Somatostatinoma",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877041123-740663"
+       ]
+      },
+      {
+       "id": "k3-15-c0030",
+       "ses": "Karsinoid tümör serotonin salgısıyla flushing, kalp hastalığı, astma ve diyare yapar; serotonin reseptör antagonistleri, antihistaminikler ve antidiyareik ilaçlar kullanılır.",
+       "ekran": "**Karsinoid tümör**: flushing, diyare, serotonin antagonisti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "(Serotonin) diyare antagonistleri, antıhistaminikler,"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Karsinoid tümör",
+         "tur": "terim"
+        },
+        {
+         "metin": "Karsinoid tümör",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "k1-2018-2019-q048",
+        "past-1790877035757-387307",
+        "ace9478f10bb"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-15-b03",
+   "baslik": "Tanı",
+   "paragraflar": [
+    {
+     "id": "k3-15-p010",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-15-c0031",
+       "ses": "Nöroendokrin tümör tanısı genellikle tümörün veya metastazının görüntüleme yöntemleri ile tespit edilmesi ile başlar.",
+       "ekran": "**Görüntüleme** tanıyı başlatır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Genellikle tümörün veya metastazının görüntüleme yöntemleri ile tespit edilmesi ile başlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Görüntüleme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0032",
+       "ses": "Nöroendokrin tümörü olan hastaların uzun bir süre spastik kolon veya dispepsi tanıları ile izlenmesi nöroendokrin tümör tanısının gecikmesine neden olur.",
+       "ekran": "**Spastik kolon** tanısı gecikmeye yol açar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "NET’i olan hastaların uzun bir süre spastik kolon veya dispepsi tanıları ile izlenmesi NET tanısının gecikmesine neden olur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Spastik kolon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0033",
+       "ses": "Tanı süreci hormon fazlalığının gösterilmesi, kromogranin düzeyi, gastrin ve beş hidroksi indol asetik asit düzeylerinin incelenmesi ile devam eder.",
+       "ekran": "**Hormon fazlalığı** ve **kromogranin** incelenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Tanı süreci, hormon fazlalığının gösterilmesi, kromogranin düzeyi, gastrin,  5- HIAA, düzeylerinin incelenmesi ile devam eder."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hormon fazlalığı",
+         "tur": "terim"
+        },
+        {
+         "metin": "kromogranin",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p011",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-15-c0034",
+       "ses": "Kromogranin yüzde seksen duyarlılık ve yüzde doksan özgüllükle beş hidroksi indol asetik asit, nöron spesifik enolaz ve pankreatik polipeptitten daha iyi bir tanı göstergesidir.",
+       "ekran": "**Kromogranin** duyarlılık ve özgüllükte üstün",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Kromogranin %80 duyarlılık %90 özgüllük ile 5-HIAA, nöron spesifik enolaz (NSE) ve pankreatik polipeptitten daha iyi bir tanı göstergesidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kromogranin",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0035",
+       "ses": "Plazma nöron spesifik enolaz kötü diferansiye nöroendokrin tümörleri yüzde seksen beş özgüllük ve yüzde yetmiş duyarlılık ile gösterir.",
+       "ekran": "**Plazma nöron spesifik enolaz** kötü diferansiyede",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Plazma nöron spesifik enolaz kötü diferansiye NET’ leri %85 özgüllük ve %70 duyarlılık ile gösterir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Plazma nöron spesifik enolaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0036",
+       "ses": "Gastroskopi ve kolonoskopi nöroendokrin tümör tanısında önemli tanı yöntemleridir.",
+       "ekran": "**Gastroskopi ve kolonoskopi** önemli tanı yöntemleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gastroskopi, kolonoskopi önemli tanı yöntemleridir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gastroskopi ve kolonoskopi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0037",
+       "ses": "Somatostatin reseptör sintigrafisi ile insülinoma dışındaki nöroendokrin tümörler görülebilir.",
+       "ekran": "**Somatostatin reseptör sintigrafisi** insülinoma dışında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Somatostatin reseptör sintigrafisi ile insülinoma dışındaki NET’ ler görülebilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Somatostatin reseptör sintigrafisi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p012",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-15-c0038",
+       "ses": "İnsülinomada tümör ve metastazları göstermek için single photon emission computed tomography ve manyetik rezonans görüntüleme kullanılabilir.",
+       "ekran": "**İnsülinoma** için single photon emission computed tomography ve manyetik rezonans",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İnsülinoma sözkonusu olduğunda Single Photon Emission Computed Tomography (SPECT) ve manyetik rezonans görüntüleme, tümör ve metastazların gösterilmesinde kullanılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnsülinoma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0039",
+       "ses": "Bu görüntüleme yöntemleri tümörün ve metastazların yerini belirlemeye yardım eder.",
+       "ekran": "**İnsülinoma** için single photon emission computed tomography ve manyetik rezonans",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İnsülinoma sözkonusu olduğunda Single Photon Emission Computed Tomography (SPECT) ve manyetik rezonans görüntüleme, tümör ve metastazların gösterilmesinde kullanılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnsülinoma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0040",
+       "ses": "Metaiyodobenzilguanidin sintigrafisi insülinomada kullanılan bir diğer görüntüleme tekniğidir.",
+       "ekran": "**Metaiyodobenzilguanidin sintigrafisi** diğer görüntüleme tekniği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Metaiyodobenzilguanidin (MIBG) sintigrafisi bir diğer görüntüleme tekniğidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Metaiyodobenzilguanidin sintigrafisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0041",
+       "ses": "Bu sintigrafi tümör dokusunu göstermeye yönelik alternatif bir incelemedir.",
+       "ekran": "**Metaiyodobenzilguanidin sintigrafisi** diğer görüntüleme tekniği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Metaiyodobenzilguanidin (MIBG) sintigrafisi bir diğer görüntüleme tekniğidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Metaiyodobenzilguanidin sintigrafisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0042",
+       "ses": "Pankreasta kitle saptandığında endosonografik olarak doku biyopsisi alınması gerekebilir.",
+       "ekran": "**Pankreas kitlesinde** endosonografik doku biyopsisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Kitle tespit edilince eğer pankreasta ise endosonografik olarak doku biyopsisine ihtiyaç duyabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas kitlesinde",
+         "tur": "terim"
+        },
+        {
+         "metin": "Pankreas kitlesinde",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "5fe1608b55f1",
+        "1715ac1432fb"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p013",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-15-c0043",
+       "ses": "Bu yaklaşım kitlenin türünü netleştirmek için yapılır.",
+       "ekran": "**Pankreas kitlesinde** endosonografik doku biyopsisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Kitle tespit edilince eğer pankreasta ise endosonografik olarak doku biyopsisine ihtiyaç duyabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreas kitlesinde",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p014",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-15-c0044",
+       "ses": "Nöroendokrin tümörlerin sınıflaması pankreatik ve diğer nöroendokrin tümörler olarak iki gruba ayrılır.",
+       "ekran": "**Nöroendokrin tümörler** iki ana grup",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Nöroendokrin tümörler pankreatik NET’ ler ve diğer NET’ ler olarak iki gruba ayrılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nöroendokrin tümörler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0045",
+       "ses": "Sınıflamanın iki ana gruba ayrılması, sonraki alt tip incelemesinin temelini oluşturur.",
+       "ekran": "**Nöroendokrin tümörler** iki ana grup",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Nöroendokrin tümörler pankreatik NET’ ler ve diğer NET’ ler olarak iki gruba ayrılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nöroendokrin tümörler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0046",
+       "ses": "Pankreatik nöroendokrin tümörler salgıladıkları hormonlara göre insülinoma, gastrinoma, glukagonoma ve vipoma gibi alt tiplere ayrılır.",
+       "ekran": "**Pankreatik** hormon salgısı, diğerleri embriyolojik köken",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Pankreatik NET’ ler salgıladıkları hormonlara göre alt tiplere ayrılırken (insülinoma, gastrinoma, glukagonoma, VIPoma gibi) diğer NET’ ler ise embriyolojik kökenine göre incelenebilir:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0047",
+       "ses": "Diğer nöroendokrin tümörler ise embriyolojik kökenlerine göre incelenir.",
+       "ekran": "**Pankreatik** hormon salgısı, diğerleri embriyolojik köken",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Pankreatik NET’ ler salgıladıkları hormonlara göre alt tiplere ayrılırken (insülinoma, gastrinoma, glukagonoma, VIPoma gibi) diğer NET’ ler ise embriyolojik kökenine göre incelenebilir:"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pankreatik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0048",
+       "ses": "Foregut kaynaklı nöroendokrin tümörler solunum sistemi, mide ve duodenumda yerleşir.",
+       "ekran": "**Foregut** solunum sistemi, mide, duodenum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Foregut (solunum sistemi, mide, duodenum)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Foregut",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p015",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-15-c0049",
+       "ses": "Embriyolojik sınıflamada bu bölgeler foregut grubunu oluşturur.",
+       "ekran": "**Foregut** solunum sistemi, mide, duodenum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Foregut (solunum sistemi, mide, duodenum)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Foregut",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0050",
+       "ses": "Midgut kaynaklı nöroendokrin tümörler ince barsak, appendiks ve sağ kolonda görülür.",
+       "ekran": "**Midgut** ince barsak, appendiks, sağ kolon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Midgut (ince barsak, appendiks, sağ kolon)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Midgut",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0051",
+       "ses": "Embriyolojik köken sınıflamasında bu bölgeler midgut grubundadır.",
+       "ekran": "**Midgut** ince barsak, appendiks, sağ kolon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Midgut (ince barsak, appendiks, sağ kolon)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Midgut",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0052",
+       "ses": "Hindgut kaynaklı nöroendokrin tümörler distal kolon ve rektumda yerleşir.",
+       "ekran": "**Hindgut** distal kolon, rektum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hindgut (distal kolon, rektum)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hindgut",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0053",
+       "ses": "Embriyolojik köken sınıflamasında bu bölgeler hindgut grubunu oluşturur.",
+       "ekran": "**Hindgut** distal kolon, rektum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hindgut (distal kolon, rektum)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hindgut",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-15-b04",
+   "baslik": "Tablo 2. NET sınıflandırması (1,2)",
+   "paragraflar": [
+    {
+     "id": "k3-15-p016",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-15-c0054",
+       "ses": "Nöroendokrin tümör sınıflandırması tablosu, tümörlerin histolojik özelliklerine göre iki grubu karşılaştırır.",
+       "ekran": "**Nöroendokrin tümör** sınıflandırma tablosu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Tablo 2. NET sınıflandırması (1,2)"
+        ],
+        "sekil": "NET sınıflandırma tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Nöroendokrin tümör",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0055",
+       "ses": "Tabloda görünüm, prognoz, mitoz oranı, Ki altmış yedi indeksi ve nekroz birlikte değerlendirilir.",
+       "ekran": "**Nöroendokrin tümör** sınıflandırma tablosu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Tablo 2. NET sınıflandırması (1,2)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nöroendokrin tümör",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0056",
+       "ses": "Histoloji başlığı, tabloda tümörün hücresel yapısının sınıflandırmaya temel olduğunu gösterir.",
+       "ekran": "**Histoloji** sınıflandırmanın temeli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Histoloji"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Histoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0057",
+       "ses": "Bu nedenle görünüm ve hücre özellikleri ayrı satırda verilmiştir.",
+       "ekran": "**Histoloji** sınıflandırmanın temeli",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Histoloji"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Histoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0058",
+       "ses": "Görünüm satırında bir tarafta küçük yuvarlak hücrelerin monomorfik kümeleri, diğer tarafta hücresel pleomorfizm bulunur.",
+       "ekran": "**Monomorfik kümeler** karşısında hücresel pleomorfizm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Görünüm Küçük yuvarlak hücrelerin monomorfik kümeleri Hücresel pleomorfizm"
+        ],
+        "sekil": "NET sınıflandırma tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Monomorfik kümeler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p017",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-15-c0059",
+       "ses": "Monomorfik kümeler daha düzenli hücresel yapıyı, pleomorfizm ise hücreler arasında belirgin farklılaşmayı anlatır.",
+       "ekran": "**Monomorfik kümeler** karşısında hücresel pleomorfizm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Görünüm Küçük yuvarlak hücrelerin monomorfik kümeleri Hücresel pleomorfizm"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Monomorfik kümeler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0060",
+       "ses": "Prognoz satırı, iki histolojik görünümün orta ve kötü prognozla eşleştiğini gösterir.",
+       "ekran": "**Prognoz** orta ve kötü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Prognoz bi Orta Kötü"
+        ],
+        "sekil": "NET sınıflandırma tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Prognoz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0061",
+       "ses": "Tabloda monomorfik görünüm orta, pleomorfik görünüm kötü prognoz tarafında yer alır.",
+       "ekran": "**Prognoz** orta ve kötü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Prognoz bi Orta Kötü"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Prognoz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0062",
+       "ses": "Mitoz oranı satırı, sınıflandırmada hücre bölünme hızının ölçüt olarak kullanıldığını gösterir.",
+       "ekran": "**Mitoz oranı** sınıflama ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Mitoz Öranı < 210"
+        ],
+        "sekil": "NET sınıflandırma tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Mitoz oranı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0063",
+       "ses": "Tabloda mitoz oranı için sayısal bir sınır verilmiş, ancak burada değer okunaklı değildir.",
+       "ekran": "**Mitoz oranı** sınıflama ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Mitoz Öranı < 210"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Mitoz oranı",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p018",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-15-c0064",
+       "ses": "Ki altmış yedi indeksi, tümör hücrelerinin çoğalma etkinliğini gösteren bir ölçüttür.",
+       "ekran": "**Ki altmış yedi indeksi** çoğalma ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Ki 67 index eh) >h10"
+        ],
+        "sekil": "NET sınıflandırma tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Ki altmış yedi indeksi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0065",
+       "ses": "Tabloda bu indeks için de sınır değer verilmiş ve iki grup bu değerle ayrılmıştır.",
+       "ekran": "**Ki altmış yedi indeksi** çoğalma ölçütü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Ki 67 index eh) >h10"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ki altmış yedi indeksi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0066",
+       "ses": "Nekroz satırı, bir grupta nekroz yokken diğer grupta nekroz bulunduğunu belirtir.",
+       "ekran": "**Nekroz** yok ya da var",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Nekroz Yok Var"
+        ],
+        "sekil": "NET sınıflandırma tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Nekroz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0067",
+       "ses": "Nekrozun varlığı histolojik olarak daha kötü prognoz tarafını destekler.",
+       "ekran": "**Nekroz** yok ya da var",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Nekroz Yok Var"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nekroz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p019",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-15-c0068",
+       "ses": "Nöroendokrin tümörlerin tanı anında metastatik olma oranı yüzde ellidir ve metastazların yarısı uzak, kalanı bölgesel yayılım biçimindedir.",
+       "ekran": "**Tanıda metastaz** yüzde elli; yarısı uzak yarısı bölgesel",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "NET’ lerin %50’si tanı anında metastatiktir. Metastazların yarısı uzak metastaz olup diğerleri bölgesel yayılımdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tanıda metastaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0069",
+       "ses": "Metastazların yarısının uzak, diğer yarısının bölgesel olması, tanıda evrelemenin ayrıntılı yapılması gerektiğini gösterir.",
+       "ekran": "**Tanıda metastaz** yüzde elli; yarısı uzak yarısı bölgesel",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "NET’ lerin %50’si tanı anında metastatiktir. Metastazların yarısı uzak metastaz olup diğerleri bölgesel yayılımdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tanıda metastaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0070",
+       "ses": "Metastazların tanıdaki sıklığının yüksek olmasının temel nedeni, tanının hastalık başlangıcından beş ile yedi yıl gibi geç konulmasıdır.",
+       "ekran": "**Geç tanı** beş ile yedi yıl; metastaz sıklığını artırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Metastazların tanıdaki sıklığının yüksek olmasının nedeni  tanının hastalık başlangıcından 5-7 yıl gibi geç konulması ile açıklanmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Geç tanı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0071",
+       "ses": "Tanı geciktiği için tümör uzun süre fark edilmeden ilerler ve hastalar ilk başvuruda daha yaygın hastalıkla karşımıza çıkar.",
+       "ekran": "**Geç tanı** beş ile yedi yıl; metastaz sıklığını artırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Metastazların tanıdaki sıklığının yüksek olmasının nedeni  tanının hastalık başlangıcından 5-7 yıl gibi geç konulması ile açıklanmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Geç tanı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0072",
+       "ses": "Nöroendokrin tümörlerde köken alınan organ, metastaz geliştirme oranını belirleyen önemli bir etkendir.",
+       "ekran": "**Köken organ** metastaz oranını etkiler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "NET’ lerin köken aldığı organ metastaz geliştirme oranında etkili olur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Köken organ",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p020",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-15-c0073",
+       "ses": "Köken organın farklı olması, aynı tanı grubundaki hastalarda bile yayılım riskinin değişebileceğini gösterir.",
+       "ekran": "**Köken organ** metastaz oranını etkiler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "NET’ lerin köken aldığı organ metastaz geliştirme oranında etkili olur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Köken organ",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0074",
+       "ses": "Rektum kökenli nöroendokrin tümörlerde tanıda metastaz oranı yüzde on iken ince barsak kökenli tümörlerde oran yüzde yetmiş düzeyindedir.",
+       "ekran": "**Rektum yüzde on**, **ince barsak yüzde yetmiş**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Örneğin, rektum kökenli NET’ ler de metastaz oranı tanıda %10 iken bu oran İnce barsak kökenli NET’ ler de %70’dir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Rektum yüzde on",
+         "tur": "terim"
+        },
+        {
+         "metin": "ince barsak yüzde yetmiş",
+         "tur": "terim"
+        },
+        {
+         "metin": "Rektum yüzde on",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "1dfc44b2b319",
+        "cl-p10-sinif3-p563-19"
+       ]
+      },
+      {
+       "id": "k3-15-c0075",
+       "ses": "Aradaki belirgin fark, köken organın metastaz geliştirme üzerindeki etkisini somut biçimde gösterir ve evreleme yaklaşımını organa göre farklılaştırır.",
+       "ekran": "**Rektum yüzde on**, **ince barsak yüzde yetmiş**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Örneğin, rektum kökenli NET’ ler de metastaz oranı tanıda %10 iken bu oran İnce barsak kökenli NET’ ler de %70’dir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Rektum yüzde on",
+         "tur": "terim"
+        },
+        {
+         "metin": "ince barsak yüzde yetmiş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0076",
+       "ses": "Uzak metastaz saptanan nöroendokrin tümörlerde ortalama sağ kalım otuz üç aydır.",
+       "ekran": "**Uzak metastaz** ortalama sağ kalım otuz üç ay",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Uzak metastaz varlığında sağ kalım ortalama 33 aydır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Uzak metastaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0077",
+       "ses": "Uzak yayılımın varlığı, hastalığın yalnızca evresini değil izlem ve tedavi beklentisini de belirgin biçimde ağırlaştırır.",
+       "ekran": "**Uzak metastaz** ortalama sağ kalım otuz üç ay",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Uzak metastaz varlığında sağ kalım ortalama 33 aydır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Uzak metastaz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p021",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-15-c0078",
+       "ses": "Tedavi yaklaşımı tümörün özellikleri, evresi, sekretuvar etkisi, komorbiditeler ve hasta tercihleri gibi faktörlerle belirlenir.",
+       "ekran": "**Tedavi yaklaşımı** faktörlere göre belirlenir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Tedavi yaklaşımı aşağıdaki faktörlerle belirlenir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tedavi yaklaşımı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0079",
+       "ses": "Tümörün tipi ve lokasyonu tedavi yaklaşımının belirlenmesinde temel faktörlerdendir çünkü cerrahi veya diğer seçeneklerin uygunluğunu değiştirir.",
+       "ekran": "**Tümör tipi ve lokasyonu** tedaviyi etkiler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Tümörün tipi ve lokasyonu"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tümör tipi ve lokasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0080",
+       "ses": "Grade ve evresi tümörün davranışını ve yaygınlığını göstererek tedavi seçimini belirler.",
+       "ekran": "**Grade ve evre** tedavi seçimini belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Grade ve evresi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Grade ve evre",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0081",
+       "ses": "Sekretuvar etkinin varlığı tedavi yaklaşımını belirler çünkü hormon salgısı olan tümörlerde ek yönetim gerekir.",
+       "ekran": "**Sekretuvar etki** tedavide dikkate alınır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Sekretuvar etkinin varlığı"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sekretuvar etki",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0082",
+       "ses": "Komorbiditeler tedavi seçiminde dikkate alınır çünkü eşlik eden hastalıklar cerrahi veya ilaç tedavisinin uygulanabilirliğini etkiler.",
+       "ekran": "**Komorbiditeler** tedavi seçimini etkiler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Komorbiditeler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Komorbiditeler",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p022",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-15-c0083",
+       "ses": "Hasta tercihleri tedavi yaklaşımını belirleyen faktörler arasındadır ve hastanın kabul edebileceği seçeneğin seçilmesini sağlar.",
+       "ekran": "**Hasta tercihleri** tedavi yaklaşımına girer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hasta tercihleri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hasta tercihleri",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p023",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-15-c0084",
+       "ses": "Erken dönemde tespit edilen olgularda cerrahi yaklaşım en önemli tedavi yöntemidir.",
+       "ekran": "**Cerrahi** erken evrede temel, ileri evrede palyatif",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Erken dönemde tespit edilen olgularda cerrahi yaklaşım en önemli tedavi yöntemidir. Cerrahi ileri dönem hastalarda palyatif amaçlı da yapılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Cerrahi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0085",
+       "ses": "İleri dönem hastalarda cerrahi palyatif amaçlı da yapılabilir.",
+       "ekran": "**Cerrahi** erken evrede temel, ileri evrede palyatif",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Erken dönemde tespit edilen olgularda cerrahi yaklaşım en önemli tedavi yöntemidir. Cerrahi ileri dönem hastalarda palyatif amaçlı da yapılabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Cerrahi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0086",
+       "ses": "Fonksiyonel tümörlerde cerrahi öncesi hormonal stabilizasyonun sağlanması gerekir.",
+       "ekran": "**Fonksiyonel tümörde** cerrahi öncesi hormonal stabilizasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Fonksiyonel tümörlerde cerrahi öncesi hormonal stabilizasyonun sağlanması gerekir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fonksiyonel tümörde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0087",
+       "ses": "Kemoterapide kapesitabin ile temozolamid ve streptozocin ile beş florourasil rejimleri kullanılır.",
+       "ekran": "**Kemoterapi** kapesitabin temozolamid streptozocin florourasil adriamicin mitomisin",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Kemoterapi: kapesitabin+ temozolamid, streptozocin+ 5 Fluorourasil, adriamicin, mitomicin…."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kemoterapi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0088",
+       "ses": "Adriamicin ve mitomisin de kemoterapi seçenekleri arasında yer alır.",
+       "ekran": "**Kemoterapi** kapesitabin temozolamid streptozocin florourasil adriamicin mitomisin",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Kemoterapi: kapesitabin+ temozolamid, streptozocin+ 5 Fluorourasil, adriamicin, mitomicin…."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kemoterapi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-15-p024",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-15-c0089",
+       "ses": "Hedefe yönelik ilaçlar arasında sunitinib ve everolimus yer alır.",
+       "ekran": "**Hedefe yönelik ilaçlar** sunitinib everolimus",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Targeted druglar: sunitinib, everolimus…"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hedefe yönelik ilaçlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0090",
+       "ses": "İleri evre nöroendokrin tümörlerde iyot yüz otuz bir em ay be ge kullanılarak yapılan hedefe yönelik nükleotid tedavisi uygulanır.",
+       "ekran": "**İleri evre nöroendokrin tümörde** iyot yüz otuz bir em ay be ge",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Targeted Nucloetide Therapy: İleri evre NET’ lerde 131I-MIBG kullanılarak yapılan bir tedavidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İleri evre nöroendokrin tümörde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-15-c0091",
+       "ses": "Radyoterapi ağrı ve bası semptomları gibi durumlarda palyasyon amacıyla kullanılır.",
+       "ekran": "**Radyoterapi** ağrı ve basıda palyasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Radyoterapi: Palyasyon için (ağrı, bası semptomları…)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Radyoterapi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
