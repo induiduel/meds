@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 821,
-  "baslik": "Sesli çözücüde bir şık açıklaması düzeltildi",
+  "onem": 823,
+  "baslik": "Hocanın sorabileceği sorular güncellendi",
   "maddeler": [
-    "Hoca ara soru çözücüsünde (Rehabilitasyon) bir yanlış şık açıklaması öğretici biçimde yeniden yazıldı ve yeniden seslendirildi."
+    "Kraniyal sinir muayenesi ve serebrovasküler hastalıklar ara sorularının düzeltilmiş metinleri ve sesleri yayında.",
+    "Ara soru seslerinde altyazı zamanlaması güncel seslerle eşitlendi."
   ],
-  "eklenen": [],
-  "degisen": [
-    "İçerik hattı kural özetleri"
+  "eklenen": [
+    "Otonom Sinir Sistemi Farmakolojisi mekanizma metni",
+    "Otonom Sinir Sistemi Farmakolojisi ders analizi ve sesi"
   ],
-  "duzeltilen": [
-    "Aktif gün ortalaması, unutma eğrisi, soru karesi boyutu"
-  ],
+  "degisen": [],
+  "duzeltilen": [],
   "silinen": []
 }

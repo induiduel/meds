@@ -42,6 +42,9 @@ def kimlik(key: str):
     brans = f'k{m[1]}hocaara'
     dizin = MEDS / 'src/data' / f'{brans}_cozucu' / 'index.json'
     dolu = {d['kod']: d.get('key') for d in (json.load(open(dizin, encoding='utf-8')).get('dersler', []) if dizin.exists() else [])}
+    # Dizinden düşen (sesli dersi olmayan, ör. SINAMA k2-07 → 2a07) setin kodu da dolu sayılır: kod kalıcıdır, başka derse verilmez (H622)
+    for fo in (MEDS.parent / 'meds_temp/spot_cozucu' / brans / 'onem').glob('*.json'):
+        o = json.load(open(fo, encoding='utf-8')); dolu.setdefault(o['kod'], o.get('key'))
     for kod, k in dolu.items():
         if k == key:
             return brans, kod, MEDS.parent / 'meds_temp/spot_cozucu' / brans
@@ -160,6 +163,11 @@ def birlestir(kurul='2'):
         o = json.load(open(fo, encoding='utf-8')); kod, key = o['kod'], o['key']
         fc = W / 'cozucu' / f'{kod}.json'
         if not fc.exists(): continue
+        if not (HIZ / f'{key}.json').exists():
+            # Sesli dersi olmayan anahtar (SINAMA ya da arşive alınmış eski ders): ara soru duracak paragraf yok → set yayından
+            # çıkar. Önce bütün birleştirme burada sys.exit ile yarıda kalıyor, önceki dersleri yazıp dizini yazmıyordu (H622).
+            print(f'UYARI {kod} ({key}): sesli ders hizalaması yok — atlandı, dizinden çıkarıldı')
+            continue
         hz = hizalama(key)
         # numara: ara slaytı sırasına göre (ders akışıyla aynı); klip adları no'ya bağlı
         S = sorted(json.load(open(fc, encoding='utf-8'))['sorular'], key=lambda q: (q['ara'].get('dosya', 0), q['ara']['sayfa'], q['ref']))

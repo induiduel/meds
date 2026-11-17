@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 24 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 25 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -91,4 +91,8 @@
 
 ### H621 — Yeni geçiştirme kalıbı yalnız örnek sorularda tarandı; hoca ara soru çözücüsünde kaldı (2026-11-17, 2a16)
 - **Önleme:** `sik_aciklama.py`'de kalıp/sayaç değişince bütün kullanıcıları (`bag.py kim scripts/sik_aciklama.py`) yayımlanmış veride taranır. Tek klip onarımında `birlestir` yerine yalnız ilgili `klip` girdisi güncellenir.
+
+
+### H622 — Ara soru birleştirmesi sesli dersi olmayan SINAMA anahtarında yarıda kalıyordu; yayın bayat kalmıştı (2026-11-17)
+- **Önleme:** birleştirme tek dersin eksiği için bütün kurulu durdurmaz; kaynak (meds_temp) düzeltilince birlestir + ses aynı turda koşulur, `klip v` ↔ `kayit h` uyumu denetlenir.
 
