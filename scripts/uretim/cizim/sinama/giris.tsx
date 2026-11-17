@@ -1,7 +1,7 @@
 // Çizim sınama sayfası (panel_sinama.mjs): her şema/etiket kendi sayfa görüntüsü üstünde, gerçek CizimLayer + pdfDoc.css ile
 import { createRoot } from 'react-dom/client';
 import { CizimLayer } from '../../../../src/components/learn/pdf/CizimLayer';
-import '../../../src/components/learn/pdf/pdfDoc.css';
+import '../../../../src/components/learn/pdf/pdfDoc.css';
 
 const q = new URLSearchParams(location.search);
 const W = Number(q.get('w') ?? 567);

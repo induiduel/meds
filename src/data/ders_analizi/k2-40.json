@@ -1,0 +1,689 @@
+{
+ "surum": 1,
+ "key": "k2-40",
+ "kod": "2p05",
+ "kurul": 2,
+ "brans": "Patoloji",
+ "konu": "Santral Sinir Sistemi Tümörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "profil": "Tıbbi Patoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2p05"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Kaynak ve kullanım notu"
+    },
+    {
+     "metin": "Dersin kapsamı ve MSS tümörü epidemiyolojisi"
+    },
+    {
+     "metin": "Pediatrik MSS tümörleri ve yerleşim farkları"
+    },
+    {
+     "metin": "MSS tümörlerinin özgün özellikleri"
+    },
+    {
+     "metin": "Gliomlar: 2021 WHO sınıflaması, yetişkin ve pediatrik diffüz gliomlar"
+    },
+    {
+     "metin": "IDH-mutant astrositom: genel, WHO derece, patogenez"
+    },
+    {
+     "metin": "IDH-mutant astrositom: morfoloji, derece 4 ve klinik gidiş"
+    },
+    {
+     "metin": "Glioblastom IDH-wild type: genel, patogenez, moleküler tanı"
+    },
+    {
+     "metin": "Glioblastom: morfoloji, görüntüleme ve klinik gidiş"
+    },
+    {
+     "metin": "Oligodendrogliom: genel, moleküler özellik, morfoloji ve prognoz"
+    },
+    {
+     "metin": "Pilositik astrositom: genel, moleküler ve morfoloji"
+    },
+    {
+     "metin": "Ependimom: genel, sınıflama ve morfoloji"
+    },
+    {
+     "metin": "Nöronal tümörler: gangliogliom ve DNET"
+    },
+    {
+     "metin": "Medulloblastom: genel, klinik, moleküler alt tip ve morfoloji"
+    },
+    {
+     "metin": "Primer MSS lenfoması"
+    },
+    {
+     "metin": "Meningiom: genel, patogenez, morfoloji ve dereceler"
+    },
+    {
+     "metin": "Metastatik beyin tümörleri ve paraneoplastik sendromlar"
+    },
+    {
+     "metin": "Ailesel tümör sendromları: tüberöz skleroz"
+    },
+    {
+     "metin": "von Hippel–Lindau hastalığı"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Kaynak ve kullanım notu.",
+    "Dersin kapsamı ve MSS tümörü epidemiyolojisi.",
+    "Pediatrik MSS tümörleri ve yerleşim farkları.",
+    "MSS tümörlerinin özgün özellikleri.",
+    "Gliomlar: 2021 WHO sınıflaması, yetişkin ve pediatrik diffüz gliomlar.",
+    "IDH-mutant astrositom: genel, WHO derece, patogenez.",
+    "IDH-mutant astrositom: morfoloji, derece 4 ve klinik gidiş.",
+    "Glioblastom IDH-wild type: genel, patogenez, moleküler tanı.",
+    "Glioblastom: morfoloji, görüntüleme ve klinik gidiş.",
+    "Oligodendrogliom: genel, moleküler özellik, morfoloji ve prognoz.",
+    "Pilositik astrositom: genel, moleküler ve morfoloji.",
+    "Ependimom: genel, sınıflama ve morfoloji.",
+    "Nöronal tümörler: gangliogliom ve DNET.",
+    "Medulloblastom: genel, klinik, moleküler alt tip ve morfoloji.",
+    "Primer MSS lenfoması.",
+    "Meningiom: genel, patogenez, morfoloji ve dereceler.",
+    "Metastatik beyin tümörleri ve paraneoplastik sendromlar.",
+    "Ailesel tümör sendromları: tüberöz skleroz.",
+    "von Hippel–Lindau hastalığı."
+   ],
+   "v": "30827fd863"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Kaynak ve kullanım notu",
+     "metin": "Sunu kaynağı: Robbins, Cotran & Kumar Pathologic Basis of Disease, 11. baskı",
+     "s": [
+      2,
+      58
+     ]
+    },
+    {
+     "baslik": "Dersin kapsamı ve MSS tümörü epidemiyolojisi",
+     "metin": "Odak: sınıflama, patogenez, morfoloji, klinik korelasyon",
+     "s": [
+      3,
+      4
+     ]
+    },
+    {
+     "baslik": "Pediatrik MSS tümörleri ve yerleşim farkları",
+     "metin": "Çocukluk çağı tümörlerinin ≈%20'si MSS tümörü; çocuklarda kanser ölümünde ilk sıra",
+     "s": [
+      5,
+      6
+     ]
+    },
+    {
+     "baslik": "MSS tümörlerinin özgün özellikleri",
+     "metin": "Belirgin prekanseröz/in situ lezyon genelde yok",
+     "s": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "baslik": "Gliomlar: 2021 WHO sınıflaması, yetişkin ve pediatrik diffüz gliomlar",
+     "metin": "Histoloji + moleküler özellik (IDH, 1p/19q); derece 1–4",
+     "s": [
+      10,
+      11,
+      12
+     ]
+    },
+    {
+     "baslik": "IDH-mutant astrositom: genel, WHO derece, patogenez",
+     "metin": "Serebral hemisfer, astrosit kökenli; 4.–6. dekat; nöbet, baş ağrısı, fokal defisit",
+     "s": [
+      13,
+      14,
+      15
+     ]
+    },
+    {
+     "baslik": "IDH-mutant astrositom: morfoloji, derece 4 ve klinik gidiş",
+     "metin": "Derece 2–3 belirsiz sınırlı gri infiltratif; derece 2'de GFAP pozitif fibriler arka plan",
+     "s": [
+      16,
+      19,
+      20,
+      21,
+      22,
+      23
+     ]
+    },
+    {
+     "baslik": "Glioblastom: morfoloji, görüntüleme ve klinik gidiş",
+     "metin": "Sert beyaz alan, sarı nekroz, kist, kanama; palisadlı serpantin nekroz, mikrovasküler proliferasyon",
+     "s": [
+      17,
+      26,
+      27,
+      29
+     ]
+    },
+    {
+     "baslik": "Meningiom: genel, patogenez, morfoloji ve dereceler",
+     "metin": "Araknoid meningoepitelyal kökenli, dura ilişkili, çoğunlukla iyi huylu; DSÖ derece 1–3",
+     "s": [
+      18,
+      48,
+      49,
+      50,
+      51
+     ]
+    },
+    {
+     "baslik": "Glioblastom IDH-wild type: genel, patogenez, moleküler tanı",
+     "metin": "Erişkin primer malign beyin tümörlerinin ≈%50'si; her zaman derece 4",
+     "s": [
+      24,
+      25,
+      28
+     ]
+    },
+    {
+     "baslik": "Oligodendrogliom: genel, moleküler özellik, morfoloji ve prognoz",
+     "metin": "DSÖ derece 2–3; IDH mutasyonu + her zaman 1p/19q kodelesyonu; en iyi prognoz",
+     "s": [
+      30,
+      31,
+      32,
+      33
+     ]
+    },
+    {
+     "baslik": "Pilositik astrositom: genel, moleküler ve morfoloji",
+     "metin": "DSÖ derece 1; serebellum; BRAF aktivasyonu, IDH yok",
+     "s": [
+      34,
+      35,
+      36
+     ]
+    },
+    {
+     "baslik": "Ependimom: genel, sınıflama ve morfoloji",
+     "metin": "DSÖ derece 2–3; çocuklarda 4. ventrikül, erişkinde omurilik (özellikle NF2)",
+     "s": [
+      37,
+      38,
+      39
+     ]
+    },
+    {
+     "baslik": "Nöronal tümörler: gangliogliom ve DNET",
+     "metin": "Nöronal belirteç pozitif; düşük dereceli; nöbetle başvurur",
+     "s": [
+      40,
+      41
+     ]
+    },
+    {
+     "baslik": "Medulloblastom: genel, klinik, moleküler alt tip ve morfoloji",
+     "metin": "Embriyonel nöroektodermal tümör; yalnızca serebellum; çocukta sık",
+     "s": [
+      42,
+      43,
+      44,
+      45
+     ]
+    },
+    {
+     "baslik": "Primer MSS lenfoması",
+     "metin": "Bağışıklık yetmezliğinde MSS'nin en sık tümörü; en sık tip diffüz büyük B hücreli lenfoma",
+     "s": [
+      46,
+      47
+     ]
+    },
+    {
+     "baslik": "Metastatik beyin tümörleri ve paraneoplastik sendromlar",
+     "metin": "Tüm intrakraniyal tümörlerin >%50'si; akciğer, meme, böbrek, kolon, melanom ≈%80",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Ailesel tümör sendromları: tüberöz skleroz",
+     "metin": "Otozomal dominant; kortikal tuberler, subependimal hamartom, SEGA",
+     "s": [
+      53,
+      54,
+      55
+     ]
+    },
+    {
+     "baslik": "von Hippel–Lindau hastalığı",
+     "metin": "Otozomal dominant; serebellum ve retinada hemanjioblastom; böbrek hücreli karsinom riski",
+     "s": [
+      56,
+      57
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Kaynak ve kullanım notu: Sunu kaynağı: Robbins, Cotran & Kumar Pathologic Basis of Disease, 11. baskı.",
+    "Dersin kapsamı ve MSS tümörü epidemiyolojisi: Odak: sınıflama, patogenez, morfoloji, klinik korelasyon.",
+    "Pediatrik MSS tümörleri ve yerleşim farkları: Çocukluk çağı tümörlerinin ≈%20'si MSS tümörü; çocuklarda kanser ölümünde ilk sıra.",
+    "MSS tümörlerinin özgün özellikleri: Belirgin prekanseröz/in situ lezyon genelde yok.",
+    "Gliomlar: 2021 WHO sınıflaması, yetişkin ve pediatrik diffüz gliomlar: Histoloji + moleküler özellik (IDH, 1p/19q); derece 1–4.",
+    "IDH-mutant astrositom: genel, WHO derece, patogenez: Serebral hemisfer, astrosit kökenli; 4.–6. dekat; nöbet, baş ağrısı, fokal defisit.",
+    "IDH-mutant astrositom: morfoloji, derece 4 ve klinik gidiş: Derece 2–3 belirsiz sınırlı gri infiltratif; derece 2'de GFAP pozitif fibriler arka plan.",
+    "Glioblastom: morfoloji, görüntüleme ve klinik gidiş: Sert beyaz alan, sarı nekroz, kist, kanama; palisadlı serpantin nekroz, mikrovasküler proliferasyon.",
+    "Meningiom: genel, patogenez, morfoloji ve dereceler: Araknoid meningoepitelyal kökenli, dura ilişkili, çoğunlukla iyi huylu; DSÖ derece 1–3.",
+    "Glioblastom IDH-wild type: genel, patogenez, moleküler tanı: Erişkin primer malign beyin tümörlerinin ≈%50'si; her zaman derece 4.",
+    "Oligodendrogliom: genel, moleküler özellik, morfoloji ve prognoz: DSÖ derece 2–3; IDH mutasyonu + her zaman 1p/19q kodelesyonu; en iyi prognoz.",
+    "Pilositik astrositom: genel, moleküler ve morfoloji: DSÖ derece 1; serebellum; BRAF aktivasyonu, IDH yok.",
+    "Ependimom: genel, sınıflama ve morfoloji: DSÖ derece 2–3; çocuklarda 4. ventrikül, erişkinde omurilik (özellikle NF2).",
+    "Nöronal tümörler: gangliogliom ve DNET: Nöronal belirteç pozitif; düşük dereceli; nöbetle başvurur.",
+    "Medulloblastom: genel, klinik, moleküler alt tip ve morfoloji: Embriyonel nöroektodermal tümör; yalnızca serebellum; çocukta sık.",
+    "Primer MSS lenfoması: Bağışıklık yetmezliğinde MSS'nin en sık tümörü; en sık tip diffüz büyük B hücreli lenfoma.",
+    "Metastatik beyin tümörleri ve paraneoplastik sendromlar: Tüm intrakraniyal tümörlerin >%50'si; akciğer, meme, böbrek, kolon, melanom ≈%80.",
+    "Ailesel tümör sendromları: tüberöz skleroz: Otozomal dominant; kortikal tuberler, subependimal hamartom, SEGA.",
+    "von Hippel–Lindau hastalığı: Otozomal dominant; serebellum ve retinada hemanjioblastom; böbrek hücreli karsinom riski."
+   ],
+   "v": "892f2f5866"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu ders merkezi sinir sistemi tümörlerini sınıflama, patogenez, morfoloji ve klinik korelasyon açısından işler; çıkmış sorular glioblastom, oligodendrogliom, medulloblastom, meningiom, pilositik astrositom ile nöronal ve lenfoid tümörler üzerinde yoğunlaşır.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi santral sinir sisteminin nöronal kökenli tümörlerinden biridir?",
+     "cevap": "Gangliogliom",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Bu soru, merkezi sinir sistemi tümörlerini glial, nöronal ve lenfoid köken açısından ayırabilmeyi ölçer.",
+      "Doğru cevap gangliogliomdur, çünkü bu tümör neoplastik ganglion hücreleri ile glial hücrelerden oluşur ve derece 1 olup çoğunlukla temporal lobda nöbetle ortaya çıkar.",
+      "Meningiom araknoid meningoepitelyal hücre kökenlidir, astrositom ve oligodendrogliom glial kökenlidir, primer beyin lenfoması ise lenfoid bir tümördür; bu yüzden hiçbiri nöronal kökenli sayılmaz.",
+      "Nöronal tümörlerde sinaptofizin, nörofilament ve NeuN gibi nöronal belirteçler pozitiftir."
+     ],
+     "ornek": "Çocuk ve genç erişkinde nöbetle gelen, temporal lobda yerleşen ve neoplastik ganglion hücreleri taşıyan derece 1 bir tümör hangisidir sorusu aynı bilgiyi vaka biçiminde sorar.",
+     "tuzak": "Nöbetle gelen temporal lob tümörü olduğu için astrositom ya da oligodendrogliom seçilir; oysa ganglion hücresi görülmesi tümörün nöronal bileşeni olduğunu gösterir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi DSÖ derecelendirmesine göre derece I bir tümördür?",
+     "cevap": "Pilositik astrositom",
+     "s": [
+      34
+     ],
+     "aciklama": [
+      "Bu soru, glial tümörlerin DSÖ derecelerini birbirinden ayırabilmeyi ölçer.",
+      "Doğru cevap pilositik astrositomdur, çünkü çocuk ve genç erişkinde görülen bu nispeten benign tümör DSÖ derece 1'dir, genellikle iyi sınırlıdır ve tam rezeksiyon çoğu kez mümkündür.",
+      "Diffüz astrositom IDH-mutant olarak derece 2–4 arasındadır; diffüz gliomlarda benign davranış olmadığı için derece 1 hiç kullanılmaz.",
+      "Oligodendrogliom ve ependimom derece 2–3 olarak derecelendirilir; bu nedenle şıklardaki diğer tümörler derece 1 değildir."
+     ],
+     "ornek": "Serebellumda kist duvarında mural nodül yapan, Rosenthal lifleri içeren ve BRAF değişikliği taşıyan tümörün DSÖ derecesi kaçtır sorusu aynı bilgiyi başka biçimde yoklar.",
+     "tuzak": "Diffüz astrositomun da astrositom adını taşıması nedeniyle derece 1 sanılması; oysa derece 1 yalnız pilositik astrositom, gangliogliom ve DNET gibi sınırlandırılmış tümörlere aittir."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "En kötü prognozlu glial tümör hangisidir?",
+     "cevap": "Glioblastom",
+     "s": [
+      29
+     ],
+     "aciklama": [
+      "Bu soru, glial tümörleri sağkalım ve derece açısından sıralayabilmeyi ölçer.",
+      "Doğru cevap glioblastomdur, çünkü IDH-wild type glioblastom her zaman derece 4'tür, daha düşük dereceli bir öncül formu yoktur ve tedaviye rağmen medyan sağkalım yaklaşık 15–18 aydır.",
+      "Pilositik astrositom derece 1'dir ve tam rezeksiyonla iyi seyreder, oligodendrogliom diffüz glial tümörler içinde en iyi prognozlu olandır, derece 2 astrositomda ortalama sağkalım 10 yıldan uzundur.",
+      "Derece 4 IDH-mutant astrositomda bile ortalama sağkalım yaklaşık 3 yıl olduğundan, şıklar arasında sağkalımı en kısa olan glioblastomdur."
+     ],
+     "ornek": "Tedaviye rağmen medyan sağkalımı yaklaşık 15–18 ay olan erişkin glial tümör hangisidir sorusu aynı bilgiyi sayıyla sorar.",
+     "tuzak": "Derece 4 yazan IDH-mutant astrositomun glioblastomla aynı sanılması; oysa IDH-mutant olmak daha iyi prognozla ilişkilidir ve sağkalım yaklaşık 3 yıldır."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "İnce, anastomozlaşan kapiller ağ ile ayrılan, berrak sitoplazmik halolu hücrelerin izlendiği tümör hangisidir?",
+     "cevap": "Oligodendrogliom",
+     "s": [
+      32
+     ],
+     "aciklama": [
+      "Bu soru, mikroskopik görünümden tümör tanısına gidebilmeyi ölçer.",
+      "Doğru cevap oligodendrogliomdur, çünkü bu tümörde küçük yuvarlak çekirdekli hücrelerin açık sitoplazması kızarmış yumurta görünümü verir ve ince anastomozlu kapiller ağ tavuk kümes teli görünümü oluşturur.",
+      "Astrositomda GFAP pozitif fibriler arka plan, medulloblastomda küçük mavi yuvarlak hücreler, meningiomda girdaplı büyüme ve psammoma cisimcikleri, ependimomda rozetler ve psödorozetler görülür; hiçbiri berrak halolu hücre ve kümes teli kapiller ağı vermez.",
+      "Oligodendrogliomda kalsifikasyon odakları da çok sık görülür."
+     ],
+     "ornek": "Frontal lobda uzun süredir nöbet öyküsü olan hastada kalsifikasyon, kızarmış yumurta görünümlü hücreler ve 1p/19q kodelesyonu saptanan tümör hangisidir sorusu aynı bilgiyi vaka olarak sorar.",
+     "tuzak": "Berrak sitoplazmik halo nedeniyle meningiomun sekretuar tipi ya da ependimom düşünülür; oysa kümes teli kapiller ağı oligodendrogliomun ayırt edici özelliğidir."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Çocukluk çağında en sık görülen malign beyin tümörü olan ve histolojik olarak Homer-Wright rozetleri içeren tümör aşağıdakilerden hangisidir?",
+     "cevap": "Medulloblastom",
+     "s": [
+      44
+     ],
+     "aciklama": [
+      "Bu soru, çocukluk çağı beyin tümörünü rozet tipi ve yerleşimiyle tanımayı ölçer.",
+      "Doğru cevap medulloblastomdur, çünkü bu embriyonel nöroektodermal tümör yalnızca serebellumda görülür, çocuklarda çok daha sık rastlanır ve mikroskopide merkezi nöropil çevresinde dizilen nöronal farklılaşmış rozetler taşır.",
+      "Pilositik astrositom kistik ve iyi sınırlı bir derece 1 tümördür, ependimomda lümenli ependimal rozetler ve psödorozetler bulunur, glioblastom erişkin tümörüdür; bu nedenle nöroblastik tipte rozet ve küçük mavi hücre görünümü medulloblastoma özgüdür.",
+      "Medulloblastom son derece malign olup BOS yoluyla damla metastazı yapar."
+     ],
+     "ornek": "Çocukta orta hat serebellar yerleşimli, küçük mavi yuvarlak hücreli, BOS'a damla metastazı yapan tümör hangisidir sorusu aynı bilgiyi vaka olarak sorar.",
+     "tuzak": "Rozet görülmesi nedeniyle ependimom seçilir; oysa ependimom rozetleri gerçek lümen taşır ve çocukta 4. ventrikül çevresinde bulunur, medulloblastom rozetleri ise nöropil çevresinde dizilir."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Beyin tümörü nedeniyle opere edilen bir hastanın histopatolojik incelemesinde psödopalizasyon gösteren nekroz alanları ve endotel hücrelerinin saç yumağı biçiminde kümelendiği glomerüloid cisimler izleniyor. Bu tümör hangisidir?",
+     "cevap": "Glioblastom",
+     "s": [
+      26
+     ],
+     "aciklama": [
+      "Bu soru, glioblastomun tanısal histolojik özelliklerini tanımayı ölçer.",
+      "Doğru cevap glioblastomdur, çünkü nekroz sıklıkla tümör hücre palisadlarıyla çevrili serpantin bantlar biçimindedir ve endotel hücrelerinin kümelendiği mikrovasküler proliferasyon bulunur.",
+      "Anaplastik astrositom (derece 3) mitoz ve pleomorfizm gösterir ancak mikrovasküler proliferasyon ve nekroz derece 4 özelliğidir; oligodendrogliom ve ependimomda palisadlı nekroz tanımlayıcı değildir, pilositik astrositomda nekroz ve mitoz nadirdir.",
+      "Glioblastom yüksek hücre yoğunluğu, pleomorfik anaplastik hücreler ve sık mitozla da birlikte görülür."
+     ],
+     "ornek": "Yılan gibi kıvrımlı nekroz bantlarının etrafında hücrelerin çit gibi dizildiği ve damar proliferasyonu bulunan tümör hangisidir sorusu aynı bilgiyi başka sözcüklerle sorar.",
+     "tuzak": "Derece 3 astrositomda da mitoz ve pleomorfizm olduğundan anaplastik astrositom seçilir; oysa nekroz ve mikrovasküler proliferasyon derece 4 ölçütüdür."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Santral sinir sistemindeki gliyal tümörlerin derecelendirmesinde aşağıdakilerden hangisi kullanılmaz?",
+     "cevap": "Nöron hücreleri proliferasyonu",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Bu soru, glial tümör derecelendirmesinde hangi histolojik ölçütlerin kullanıldığını bilmeyi ölçer.",
+      "Doğru cevap nöron hücreleri proliferasyonudur, çünkü derecelendirme hücre yoğunluğu, nükleer pleomorfizm ve atipi, mitoz, mikrovasküler proliferasyon ve nekroza dayanır; tümör glial olduğu için nöronların çoğalması bir ölçüt değildir.",
+      "Mitoz derece 3'te artar, mikrovasküler proliferasyon ve nekroz derece 4'ü belirler, sitolojik atipi ise derece 4'te belirgindir; bu nedenle bu şıklar kullanılan ölçütlerdir.",
+      "Moleküler kriterler de derecelendirmeye entegre edilmiştir."
+     ],
+     "ornek": "IDH-mutant astrositomu derece 3'ten derece 4'e taşıyan histolojik bulgu hangisidir sorusu aynı bilgiyi başka biçimde sorar.",
+     "tuzak": "Mitozu derece 4 ölçütü sanmak; oysa mitotik figürler derece 3'te eklenir, derece 4'ü mikrovasküler proliferasyon ve/veya nekroz belirler."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Medulloblastom ile ilgili yanlış ifade hangisidir?",
+     "cevap": "Çoğunlukla çocuklarda görülür ve 3. ventriküldedir",
+     "s": [
+      42
+     ],
+     "aciklama": [
+      "Bu soru, medulloblastomun yerleşim, yaş ve morfoloji özelliklerini bilmeyi ölçer ve yanlış ifadeyi bulmayı ister.",
+      "Doğru cevap yanlış ifade olan 'çocuklarda görülür ve 3. ventriküldedir'dir, çünkü medulloblastom yalnızca serebellumda görülür; çocukta orta hat serebellar tümörüdür, erişkinde ise lateral yerleşim daha sıktır.",
+      "Diğer şıklardaki bilgiler doğrudur: tümör son derece malign olup tedavisiz prognozu çok kötüdür, nöronal farklılaşma gösteren rozetler izlenir ve yoğun hücreli küçük mavi yuvarlak hücrelerden oluşur.",
+      "Çocuklarda çok daha sık, erişkinde nadirdir."
+     ],
+     "ornek": "Aşağıdakilerden hangisi medulloblastomun özelliği değildir sorusunda serebellum dışı yerleşim şıkkı aynı bilgiyi yoklar.",
+     "tuzak": "Çocuklarda görülmesi doğru olduğundan ifadenin ilk yarısına bakıp doğru sanmak; ancak 3. ventrikül yerleşimi yanlıştır, tümör yalnızca serebellumdadır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Menenjiom ile ilgili yanlış ifade hangisidir?",
+     "cevap": "Sinsityal, fibroblastik, psammomatöz ve papiller tipleri WHO grade 1 menenjiom olarak değerlendirilir",
+     "s": [
+      50
+     ],
+     "aciklama": [
+      "Bu soru, meningiomun histolojik alt tiplerini ve DSÖ derecelerini eşleştirebilmeyi ölçer ve yanlış ifadeyi bulmayı ister.",
+      "Doğru cevap yanlış ifade olan 'papiller tipi derece 1 sayılır'dır, çünkü derece 1 alt tipleri meningoepitelyal (sinsityal), fibroblastik, transizyonel, psammomatöz ve sekretuardır; papiller tip bu listede yoktur.",
+      "Meningiom araknoid meningoepitelyal hücre kökenli ve çoğunlukla iyi huyludur, psammoma cisimcikleri ve girdaplı büyüme görülür, derece 2 kordoid ya da berrak hücre alt tipleriyle ve beyin invazyonuyla belirlenir; bu şıkların bilgileri bu yüzden doğrudur.",
+      "Derece 3 meningiom yüksek mitozludur, sarkom, karsinom veya melanoma benzer ve çok agresiftir."
+     ],
+     "ornek": "Meningiomda kordoid ya da berrak hücre alt tipinin DSÖ derecesi kaçtır sorusu aynı bilgiyi derece açısından yoklar.",
+     "tuzak": "Listedeki alt tiplerden birinin eksik ya da fazla yazıldığını fark etmemek; papiller tip derece 1 listesinde olmadığı için ifade yanlış olur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Altmış yaşındaki erkek hasta, baş ağrısı ve bilinç bulanıklığı nedeniyle getiriliyor. Öyküsünden, 6 yıl önce böbrek nakli yapıldığı öğreniliyor. Kraniyal manyetik rezonans incelemesinde multipl lezyonlar saptanıyor. Biyopsisinde perivasküler yerleşimli, dar sitoplazmalı, yüksek mitotik aktivite gösteren neoplastik infiltrasyon görülüyor. Neoplastik hücrelerde CD20 pozitifliği tespit ediliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+     "cevap": "Lenfoma",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Bu soru, bağışıklığı baskılanmış hastada multipl beyin lezyonunu histolojik ve klinik bulgularla tanımayı ölçer.",
+      "Doğru cevap lenfomadır, çünkü böbrek nakli gibi bağışıklık yetmezliği olanlarda primer MSS lenfoması MSS'nin en sık tümörüdür; beyin parankiminde multifokal tutulum yapar ve malign lenfoid hücreler damar çevresinde yoğunlaşır.",
+      "Glioblastom ve astrositom glial tümörlerdir, glioblastomda palisadlı nekroz bulunur ve lenfoid hücre kümelenmesi yoktur; metastatik karsinom gri–beyaz madde bileşkesinde keskin sınırlı kitle yapar, meningiom ise dura tabanlı kitledir.",
+      "Tanıda CD20 pozitif B hücreleri bulunur ve en sık histolojik tip diffüz büyük B hücreli lenfomadır."
+     ],
+     "ornek": "Bağışıklık baskılayıcı ilaç kullanan hastada periventriküler multifokal kitle ve CD20 pozitif hücreler hangi tümörü düşündürür sorusu aynı bilgiyi başka biçimde sorar.",
+     "tuzak": "Multipl lezyonları metastaz sanmak; oysa damar çevresinde yoğunlaşan malign lenfoid hücreler ve bağışıklık yetmezliği öyküsü lenfomayı gösterir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki santral sinir sistemi tümörlerinden hangisi sıklıkla progesteron reseptörü bulunduran ve gebelik sırasında hızla büyüyebilme özelliğiyle bilinen tümördür?",
+     "cevap": "Meningiom",
+     "s": [
+      48
+     ],
+     "aciklama": [
+      "Bu soru, meningiomu klinik özellikleriyle tanımayı ölçer.",
+      "Doğru cevap meningiomdur; meningiom araknoid meningoepitelyal hücre kökenli, çoğunlukla dura ile ilişkili ve iyi huylu bir erişkin tümörüdür.",
+      "Progesteron reseptörü bulunması ve gebelikte hızlı büyüme bilgisi bu ders kapsamı dışındadır; bu yüzden sorunun yalnız meningiomun kökeni, yerleşimi ve iyi huylu doğası bu ders bilgisiyle doğrulanır.",
+      "Ependimom ventrikül sistemi ve santral kanal komşuluğunda, oligodendrogliom ve astrositom ise parankimde glial hücrelerden gelişir; bunların hiçbiri dura ile ilişkili değildir."
+     ],
+     "ornek": "Dura tabanlı, beyni komprese eden ama genelde invaze etmeyen ve psammoma cisimcikleri içeren tümör hangisidir sorusu ders içi bilgiyle aynı tümörü sorar.",
+     "tuzak": "Dura ile ilişkili olması nedeniyle iyi huylu tümörlerin her zaman zararsız sanılması; oysa benign bir meningiom medulla oblongatayı sıkıştırarak kardiyorespiratuvar arrest yapabilir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "İki taraflı vestibüler schwannom tanısı almış bir hastada hangi sendrom akla gelmelidir?",
+     "cevap": "Nörofibromatozis tip 2",
+     "s": [
+      49
+     ],
+     "aciklama": [
+      "Bu soru, iki taraflı vestibüler schwannomun sendromik anlamını bilmeyi ölçer.",
+      "Doğru cevap nörofibromatozis tip 2'dir, çünkü çoklu meningiom ile 8. sinir schwannomu ya da glial tümör birlikteliğinde NF2 düşünülmelidir; NF2 ilişkili olmayan sporadik meningiomların yaklaşık %50'sinde de NF2 geninde somatik fonksiyon kaybı mutasyonu vardır.",
+      "NF2 tümör baskılayıcı bir gendir ve erişkinde omurilik ependimomu da özellikle NF2'li hastalarda görülür.",
+      "Böylece tek bir sendrom meningiom, schwannom ve ependimom gibi birden çok MSS tümörünü açıklar."
+     ],
+     "ornek": "Çoklu meningiomu ve 8. sinir schwannomu olan genç hastada hangi tümör baskılayıcı gendeki kayıp düşünülmelidir sorusu aynı bilgiyi gen düzeyinde sorar.",
+     "tuzak": "Tümör baskılayıcı gen adını karıştırmak; NF2 sendromu meningiom ve vestibüler schwannomla ilişkilidir, tüberöz skleroz ve VHL ise başka tümörlerle ilişkili ayrı sendromlardır."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu ders merkezi sinir sistemi tümörlerini sınıflama, patogenez, morfoloji ve klinik korelasyon açısından işler; çıkmış sorular glioblastom, oligodendrogliom, medulloblastom, meningiom, pilositik astrositom ile nöronal ve lenfoid tümörler üzerinde yoğunlaşır.",
+    "2020-2021: Aşağıdakilerden hangisi santral sinir sisteminin nöronal kökenli tümörlerinden biridir?",
+    "Cevap: Gangliogliom.",
+    "Bu soru, merkezi sinir sistemi tümörlerini glial, nöronal ve lenfoid köken açısından ayırabilmeyi ölçer.",
+    "Doğru cevap gangliogliomdur, çünkü bu tümör neoplastik ganglion hücreleri ile glial hücrelerden oluşur ve derece 1 olup çoğunlukla temporal lobda nöbetle ortaya çıkar.",
+    "Meningiom araknoid meningoepitelyal hücre kökenlidir, astrositom ve oligodendrogliom glial kökenlidir, primer beyin lenfoması ise lenfoid bir tümördür; bu yüzden hiçbiri nöronal kökenli sayılmaz.",
+    "Nöronal tümörlerde sinaptofizin, nörofilament ve NeuN gibi nöronal belirteçler pozitiftir.",
+    "Örnek: Çocuk ve genç erişkinde nöbetle gelen, temporal lobda yerleşen ve neoplastik ganglion hücreleri taşıyan derece 1 bir tümör hangisidir sorusu aynı bilgiyi vaka biçiminde sorar.",
+    "Tuzak: Nöbetle gelen temporal lob tümörü olduğu için astrositom ya da oligodendrogliom seçilir; oysa ganglion hücresi görülmesi tümörün nöronal bileşeni olduğunu gösterir.",
+    "2020-2021: Aşağıdakilerden hangisi DSÖ derecelendirmesine göre derece I bir tümördür?",
+    "Cevap: Pilositik astrositom.",
+    "Bu soru, glial tümörlerin DSÖ derecelerini birbirinden ayırabilmeyi ölçer.",
+    "Doğru cevap pilositik astrositomdur, çünkü çocuk ve genç erişkinde görülen bu nispeten benign tümör DSÖ derece 1'dir, genellikle iyi sınırlıdır ve tam rezeksiyon çoğu kez mümkündür.",
+    "Diffüz astrositom IDH-mutant olarak derece 2–4 arasındadır; diffüz gliomlarda benign davranış olmadığı için derece 1 hiç kullanılmaz.",
+    "Oligodendrogliom ve ependimom derece 2–3 olarak derecelendirilir; bu nedenle şıklardaki diğer tümörler derece 1 değildir.",
+    "Örnek: Serebellumda kist duvarında mural nodül yapan, Rosenthal lifleri içeren ve BRAF değişikliği taşıyan tümörün DSÖ derecesi kaçtır sorusu aynı bilgiyi başka biçimde yoklar.",
+    "Tuzak: Diffüz astrositomun da astrositom adını taşıması nedeniyle derece 1 sanılması; oysa derece 1 yalnız pilositik astrositom, gangliogliom ve DNET gibi sınırlandırılmış tümörlere aittir.",
+    "2023-2024: En kötü prognozlu glial tümör hangisidir?",
+    "Cevap: Glioblastom.",
+    "Bu soru, glial tümörleri sağkalım ve derece açısından sıralayabilmeyi ölçer.",
+    "Doğru cevap glioblastomdur, çünkü IDH-wild type glioblastom her zaman derece 4'tür, daha düşük dereceli bir öncül formu yoktur ve tedaviye rağmen medyan sağkalım yaklaşık 15–18 aydır.",
+    "Pilositik astrositom derece 1'dir ve tam rezeksiyonla iyi seyreder, oligodendrogliom diffüz glial tümörler içinde en iyi prognozlu olandır, derece 2 astrositomda ortalama sağkalım 10 yıldan uzundur.",
+    "Derece 4 IDH-mutant astrositomda bile ortalama sağkalım yaklaşık 3 yıl olduğundan, şıklar arasında sağkalımı en kısa olan glioblastomdur.",
+    "Örnek: Tedaviye rağmen medyan sağkalımı yaklaşık 15–18 ay olan erişkin glial tümör hangisidir sorusu aynı bilgiyi sayıyla sorar.",
+    "Tuzak: Derece 4 yazan IDH-mutant astrositomun glioblastomla aynı sanılması; oysa IDH-mutant olmak daha iyi prognozla ilişkilidir ve sağkalım yaklaşık 3 yıldır.",
+    "2023-2024: İnce, anastomozlaşan kapiller ağ ile ayrılan, berrak sitoplazmik halolu hücrelerin izlendiği tümör hangisidir?",
+    "Cevap: Oligodendrogliom.",
+    "Bu soru, mikroskopik görünümden tümör tanısına gidebilmeyi ölçer.",
+    "Doğru cevap oligodendrogliomdur, çünkü bu tümörde küçük yuvarlak çekirdekli hücrelerin açık sitoplazması kızarmış yumurta görünümü verir ve ince anastomozlu kapiller ağ tavuk kümes teli görünümü oluşturur.",
+    "Astrositomda GFAP pozitif fibriler arka plan, medulloblastomda küçük mavi yuvarlak hücreler, meningiomda girdaplı büyüme ve psammoma cisimcikleri, ependimomda rozetler ve psödorozetler görülür; hiçbiri berrak halolu hücre ve kümes teli kapiller ağı vermez.",
+    "Oligodendrogliomda kalsifikasyon odakları da çok sık görülür.",
+    "Örnek: Frontal lobda uzun süredir nöbet öyküsü olan hastada kalsifikasyon, kızarmış yumurta görünümlü hücreler ve 1p/19q kodelesyonu saptanan tümör hangisidir sorusu aynı bilgiyi vaka olarak sorar.",
+    "Tuzak: Berrak sitoplazmik halo nedeniyle meningiomun sekretuar tipi ya da ependimom düşünülür; oysa kümes teli kapiller ağı oligodendrogliomun ayırt edici özelliğidir.",
+    "2024-2025: Çocukluk çağında en sık görülen malign beyin tümörü olan ve histolojik olarak Homer-Wright rozetleri içeren tümör aşağıdakilerden hangisidir?",
+    "Cevap: Medulloblastom.",
+    "Bu soru, çocukluk çağı beyin tümörünü rozet tipi ve yerleşimiyle tanımayı ölçer.",
+    "Doğru cevap medulloblastomdur, çünkü bu embriyonel nöroektodermal tümör yalnızca serebellumda görülür, çocuklarda çok daha sık rastlanır ve mikroskopide merkezi nöropil çevresinde dizilen nöronal farklılaşmış rozetler taşır.",
+    "Pilositik astrositom kistik ve iyi sınırlı bir derece 1 tümördür, ependimomda lümenli ependimal rozetler ve psödorozetler bulunur, glioblastom erişkin tümörüdür; bu nedenle nöroblastik tipte rozet ve küçük mavi hücre görünümü medulloblastoma özgüdür.",
+    "Medulloblastom son derece malign olup BOS yoluyla damla metastazı yapar.",
+    "Örnek: Çocukta orta hat serebellar yerleşimli, küçük mavi yuvarlak hücreli, BOS'a damla metastazı yapan tümör hangisidir sorusu aynı bilgiyi vaka olarak sorar.",
+    "Tuzak: Rozet görülmesi nedeniyle ependimom seçilir; oysa ependimom rozetleri gerçek lümen taşır ve çocukta 4. ventrikül çevresinde bulunur, medulloblastom rozetleri ise nöropil çevresinde dizilir.",
+    "2024-2025: Beyin tümörü nedeniyle opere edilen bir hastanın histopatolojik incelemesinde psödopalizasyon gösteren nekroz alanları ve endotel hücrelerinin saç yumağı biçiminde kümelendiği glomerüloid cisimler izleniyor. Bu tümör hangisidir?",
+    "Cevap: Glioblastom.",
+    "Bu soru, glioblastomun tanısal histolojik özelliklerini tanımayı ölçer.",
+    "Doğru cevap glioblastomdur, çünkü nekroz sıklıkla tümör hücre palisadlarıyla çevrili serpantin bantlar biçimindedir ve endotel hücrelerinin kümelendiği mikrovasküler proliferasyon bulunur.",
+    "Anaplastik astrositom (derece 3) mitoz ve pleomorfizm gösterir ancak mikrovasküler proliferasyon ve nekroz derece 4 özelliğidir; oligodendrogliom ve ependimomda palisadlı nekroz tanımlayıcı değildir, pilositik astrositomda nekroz ve mitoz nadirdir.",
+    "Glioblastom yüksek hücre yoğunluğu, pleomorfik anaplastik hücreler ve sık mitozla da birlikte görülür.",
+    "Örnek: Yılan gibi kıvrımlı nekroz bantlarının etrafında hücrelerin çit gibi dizildiği ve damar proliferasyonu bulunan tümör hangisidir sorusu aynı bilgiyi başka sözcüklerle sorar.",
+    "Tuzak: Derece 3 astrositomda da mitoz ve pleomorfizm olduğundan anaplastik astrositom seçilir; oysa nekroz ve mikrovasküler proliferasyon derece 4 ölçütüdür.",
+    "2025-2026: Santral sinir sistemindeki gliyal tümörlerin derecelendirmesinde aşağıdakilerden hangisi kullanılmaz?",
+    "Cevap: Nöron hücreleri proliferasyonu.",
+    "Bu soru, glial tümör derecelendirmesinde hangi histolojik ölçütlerin kullanıldığını bilmeyi ölçer.",
+    "Doğru cevap nöron hücreleri proliferasyonudur, çünkü derecelendirme hücre yoğunluğu, nükleer pleomorfizm ve atipi, mitoz, mikrovasküler proliferasyon ve nekroza dayanır; tümör glial olduğu için nöronların çoğalması bir ölçüt değildir.",
+    "Mitoz derece 3'te artar, mikrovasküler proliferasyon ve nekroz derece 4'ü belirler, sitolojik atipi ise derece 4'te belirgindir; bu nedenle bu şıklar kullanılan ölçütlerdir.",
+    "Moleküler kriterler de derecelendirmeye entegre edilmiştir.",
+    "Örnek: IDH-mutant astrositomu derece 3'ten derece 4'e taşıyan histolojik bulgu hangisidir sorusu aynı bilgiyi başka biçimde sorar.",
+    "Tuzak: Mitozu derece 4 ölçütü sanmak; oysa mitotik figürler derece 3'te eklenir, derece 4'ü mikrovasküler proliferasyon ve/veya nekroz belirler.",
+    "2019-2020: Medulloblastom ile ilgili yanlış ifade hangisidir?",
+    "Cevap: Çoğunlukla çocuklarda görülür ve 3. ventriküldedir.",
+    "Bu soru, medulloblastomun yerleşim, yaş ve morfoloji özelliklerini bilmeyi ölçer ve yanlış ifadeyi bulmayı ister.",
+    "Doğru cevap yanlış ifade olan 'çocuklarda görülür ve 3. ventriküldedir'dir, çünkü medulloblastom yalnızca serebellumda görülür; çocukta orta hat serebellar tümörüdür, erişkinde ise lateral yerleşim daha sıktır.",
+    "Diğer şıklardaki bilgiler doğrudur: tümör son derece malign olup tedavisiz prognozu çok kötüdür, nöronal farklılaşma gösteren rozetler izlenir ve yoğun hücreli küçük mavi yuvarlak hücrelerden oluşur.",
+    "Çocuklarda çok daha sık, erişkinde nadirdir.",
+    "Örnek: Aşağıdakilerden hangisi medulloblastomun özelliği değildir sorusunda serebellum dışı yerleşim şıkkı aynı bilgiyi yoklar.",
+    "Tuzak: Çocuklarda görülmesi doğru olduğundan ifadenin ilk yarısına bakıp doğru sanmak; ancak 3. ventrikül yerleşimi yanlıştır, tümör yalnızca serebellumdadır.",
+    "2019-2020: Menenjiom ile ilgili yanlış ifade hangisidir?",
+    "Cevap: Sinsityal, fibroblastik, psammomatöz ve papiller tipleri WHO grade 1 menenjiom olarak değerlendirilir.",
+    "Bu soru, meningiomun histolojik alt tiplerini ve DSÖ derecelerini eşleştirebilmeyi ölçer ve yanlış ifadeyi bulmayı ister.",
+    "Doğru cevap yanlış ifade olan 'papiller tipi derece 1 sayılır'dır, çünkü derece 1 alt tipleri meningoepitelyal (sinsityal), fibroblastik, transizyonel, psammomatöz ve sekretuardır; papiller tip bu listede yoktur.",
+    "Meningiom araknoid meningoepitelyal hücre kökenli ve çoğunlukla iyi huyludur, psammoma cisimcikleri ve girdaplı büyüme görülür, derece 2 kordoid ya da berrak hücre alt tipleriyle ve beyin invazyonuyla belirlenir; bu şıkların bilgileri bu yüzden doğrudur.",
+    "Derece 3 meningiom yüksek mitozludur, sarkom, karsinom veya melanoma benzer ve çok agresiftir.",
+    "Örnek: Meningiomda kordoid ya da berrak hücre alt tipinin DSÖ derecesi kaçtır sorusu aynı bilgiyi derece açısından yoklar.",
+    "Tuzak: Listedeki alt tiplerden birinin eksik ya da fazla yazıldığını fark etmemek; papiller tip derece 1 listesinde olmadığı için ifade yanlış olur.",
+    "2020-2021: Altmış yaşındaki erkek hasta, baş ağrısı ve bilinç bulanıklığı nedeniyle getiriliyor. Öyküsünden, 6 yıl önce böbrek nakli yapıldığı öğreniliyor. Kraniyal manyetik rezonans incelemesinde multipl lezyonlar saptanıyor. Biyopsisinde perivasküler yerleşimli, dar sitoplazmalı, yüksek mitotik aktivite gösteren neoplastik infiltrasyon görülüyor. Neoplastik hücrelerde CD20 pozitifliği tespit ediliyor. Bu hasta için en olası tanı aşağıdakilerden hangisidir?",
+    "Cevap: Lenfoma.",
+    "Bu soru, bağışıklığı baskılanmış hastada multipl beyin lezyonunu histolojik ve klinik bulgularla tanımayı ölçer.",
+    "Doğru cevap lenfomadır, çünkü böbrek nakli gibi bağışıklık yetmezliği olanlarda primer MSS lenfoması MSS'nin en sık tümörüdür; beyin parankiminde multifokal tutulum yapar ve malign lenfoid hücreler damar çevresinde yoğunlaşır.",
+    "Glioblastom ve astrositom glial tümörlerdir, glioblastomda palisadlı nekroz bulunur ve lenfoid hücre kümelenmesi yoktur; metastatik karsinom gri–beyaz madde bileşkesinde keskin sınırlı kitle yapar, meningiom ise dura tabanlı kitledir.",
+    "Tanıda CD20 pozitif B hücreleri bulunur ve en sık histolojik tip diffüz büyük B hücreli lenfomadır.",
+    "Örnek: Bağışıklık baskılayıcı ilaç kullanan hastada periventriküler multifokal kitle ve CD20 pozitif hücreler hangi tümörü düşündürür sorusu aynı bilgiyi başka biçimde sorar.",
+    "Tuzak: Multipl lezyonları metastaz sanmak; oysa damar çevresinde yoğunlaşan malign lenfoid hücreler ve bağışıklık yetmezliği öyküsü lenfomayı gösterir.",
+    "2020-2021: Aşağıdaki santral sinir sistemi tümörlerinden hangisi sıklıkla progesteron reseptörü bulunduran ve gebelik sırasında hızla büyüyebilme özelliğiyle bilinen tümördür?",
+    "Cevap: Meningiom.",
+    "Bu soru, meningiomu klinik özellikleriyle tanımayı ölçer.",
+    "Doğru cevap meningiomdur; meningiom araknoid meningoepitelyal hücre kökenli, çoğunlukla dura ile ilişkili ve iyi huylu bir erişkin tümörüdür.",
+    "Progesteron reseptörü bulunması ve gebelikte hızlı büyüme bilgisi bu ders kapsamı dışındadır; bu yüzden sorunun yalnız meningiomun kökeni, yerleşimi ve iyi huylu doğası bu ders bilgisiyle doğrulanır.",
+    "Ependimom ventrikül sistemi ve santral kanal komşuluğunda, oligodendrogliom ve astrositom ise parankimde glial hücrelerden gelişir; bunların hiçbiri dura ile ilişkili değildir.",
+    "Örnek: Dura tabanlı, beyni komprese eden ama genelde invaze etmeyen ve psammoma cisimcikleri içeren tümör hangisidir sorusu ders içi bilgiyle aynı tümörü sorar.",
+    "Tuzak: Dura ile ilişkili olması nedeniyle iyi huylu tümörlerin her zaman zararsız sanılması; oysa benign bir meningiom medulla oblongatayı sıkıştırarak kardiyorespiratuvar arrest yapabilir.",
+    "2020-2021: İki taraflı vestibüler schwannom tanısı almış bir hastada hangi sendrom akla gelmelidir?",
+    "Cevap: Nörofibromatozis tip 2.",
+    "Bu soru, iki taraflı vestibüler schwannomun sendromik anlamını bilmeyi ölçer.",
+    "Doğru cevap nörofibromatozis tip 2'dir, çünkü çoklu meningiom ile 8. sinir schwannomu ya da glial tümör birlikteliğinde NF2 düşünülmelidir; NF2 ilişkili olmayan sporadik meningiomların yaklaşık %50'sinde de NF2 geninde somatik fonksiyon kaybı mutasyonu vardır.",
+    "NF2 tümör baskılayıcı bir gendir ve erişkinde omurilik ependimomu da özellikle NF2'li hastalarda görülür.",
+    "Böylece tek bir sendrom meningiom, schwannom ve ependimom gibi birden çok MSS tümörünü açıklar.",
+    "Örnek: Çoklu meningiomu ve 8. sinir schwannomu olan genç hastada hangi tümör baskılayıcı gendeki kayıp düşünülmelidir sorusu aynı bilgiyi gen düzeyinde sorar.",
+    "Tuzak: Tümör baskılayıcı gen adını karıştırmak; NF2 sendromu meningiom ve vestibüler schwannomla ilişkilidir, tüberöz skleroz ve VHL ise başka tümörlerle ilişkili ayrı sendromlardır."
+   ],
+   "v": "9164ae81f1"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanimlayici_bulgu (%28) ve tanım ve kavram (%22) sorulur."
+    },
+    {
+     "baslik": "Tanimlayici_bulgu",
+     "metin": "Patolojik/klinik ayırt edici bulgu tanıyı koydurur; hastalığa özgü tek bulgu ödüllendirilir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%56) ve anlama ve ilişki kurma (%44) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok tanimlayici_bulgu (%28) ve tanım ve kavram (%22) sorulur.",
+    "Tanimlayici_bulgu: Patolojik/klinik ayırt edici bulgu tanıyı koydurur; hastalığa özgü tek bulgu ödüllendirilir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%56) ve anlama ve ilişki kurma (%44) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "1e247711c5"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Nörofibromatozis tip 2",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Bilateral vestibüler schwannom tanısı almış bir hastada aşağıdaki genetik sendromlardan hangisi akla gelmelidir?"
+    },
+    {
+     "baslik": "Gangliogliom",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Tıbbi Patoloji Santral sinir sistemi tümörleri hangisi santral sinir sisteminin nöronal orjinli tümörlerinden biridir?"
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanimlayici_bulgu bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Nörofibromatozis tip 2: Çıkmışlarda 3 kez soruldu. Örnek kök: Bilateral vestibüler schwannom tanısı almış bir hastada aşağıdaki genetik sendromlardan hangisi akla gelmelidir?",
+    "Gangliogliom: Çıkmışlarda 3 kez soruldu. Örnek kök: Tıbbi Patoloji Santral sinir sistemi tümörleri hangisi santral sinir sisteminin nöronal orjinli tümörlerinden biridir?",
+    "Çalışma yolu: Okurken her başlıkta tanimlayici_bulgu bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "66cad3dcfa"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

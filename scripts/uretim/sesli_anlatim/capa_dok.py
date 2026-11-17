@@ -9,7 +9,7 @@ resim (R#, kırmızı) ve tablo (T#, yeşil) kutuları numaralı çizilir + meti
    }...] (paragraf başına, cümle sırasıyla)]}
 Dosyalar: <çıktı>/d<dosya>_s<NN>.png/.txt (tek dosyalıda sNN.png/.txt), cumleler.md.
 Kullanım: .venv-ocr/bin/python scripts/uretim/sesli_anlatim/capa_dok.py <key> <çıktı dizini>  (3000 açık olmalı)"""
-import json, os, sys, urllib.request
+import hashlib, json, os, sys, urllib.request
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pymupdf
@@ -27,7 +27,7 @@ for fi, f in enumerate(hz["dosyalar"]):
         print("PDF YOK", fi, f["path"]); continue
     doc = pymupdf.open(yol)
     for i, pg in enumerate(doc, 1):
-        sy = Sayfa(pg)
+        sy = Sayfa(pg, f"{hashlib.sha1(f'{Path(yol).name}:{Path(yol).stat().st_size}'.encode()).hexdigest()[:16]}_{i}")  # çalışma anıyla aynı (OCR'lı sayfa) görünüm
         satir = []
         for mi, m in enumerate(sy.maddeler):
             r = pymupdf.Rect(min(x[0] for x in m["satirlar"]), min(x[1] for x in m["satirlar"]), max(x[2] for x in m["satirlar"]), max(x[3] for x in m["satirlar"]))

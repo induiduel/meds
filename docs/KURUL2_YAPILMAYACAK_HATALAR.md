@@ -455,3 +455,4 @@
 - **H619** · "Onarım ajanı geçiştirme kalıbını başka sözcükle değiştirip kapıyı geçirdi (k2-16)": toplu regex + kalıp listesi → iki kalıp kapıda, onarımda toplu değiştirme yasak, uygulayıcı konum tabanlı → hatalar/soru_cozucu.md
 - **H621** · "Kapı kalıbı eklenince yalnız tetikleyen kaynak tarandı; ara soru çözücüsünde kaldı": bütün `sik_aciklama` kullanıcıları taranır, tek klip onarımında birlestir koşulmaz → hatalar/soru_cozucu.md
 - **H622** · "Ara soru birleştirmesi SINAMA k2-07 hizalaması yok diye yarıda kalıp bayat yayın bıraktı": eksik ders atlanır, kod kalıcı, onarımdan sonra birlestir+ses aynı turda → hatalar/soru_cozucu.md
+- **H623** · "Gece tam hattı k2-40/41/42 betik açıkları": tek dosya varsayımları → dizin denetimi + açık işler → hatalar/betik_altyapi.md

@@ -1,0 +1,1836 @@
+{
+ "id": "k2-42-norogelisimsel-bozukluklar",
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "Nörogelişimsel Bozukluklar",
+ "ogretim_uyesi": "Uzm. Dr. Pınar Durmaz",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Nörogelişimsel bozukluğu tanımlar; tanının belirtilerin betimlenmesine dayandığını, erken başlangıcını ve yaşam evrelerindeki belirti değişimini açıklar (s. 2-4).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Nörogelişimsel bozuklukların tanısı aşağıdakilerden hangisine dayanır?",
+     "secenekler": {
+      "A": "Özgül bir klinik etiyolojiye",
+      "B": "Belirtilerin betimlenmesine",
+      "C": "Patognomonik bir klinik özelliğe",
+      "D": "Tanısal bir laboratuvar testine",
+      "E": "Tek bir görüntüleme bulgusuna"
+     },
+     "dogru": "B",
+     "aciklama": "Nörogelişimsel bozuklukların tanısı belirtilerin betimlenmesine dayanır; özgül etiyoloji ya da patognomonik özellik tanıyı belirlemez.",
+     "sik_aciklamalari": {
+      "A": "Etiyoloji, bozukluğun nedenini anlatır; genetik, gelişimsel ve edinsel nedenler tek başına ya da birlikte rol oynar. Nörogelişimsel bozukluklarda tanı özgül bir klinik etiyolojiye göre konulmadığı için bu şık tanı ölçütü olamaz.",
+      "B": "Klinik tablo birden çok belirtinin çeşitli kombinasyonlarından oluşur ve tanı bu belirtilerin betimlenmesiyle konulur. Soru tanının dayanağını sorduğu için doğru yanıt budur.",
+      "C": "Patognomonik özellik, bir hastalığı tek başına kanıtlayan ayırt edici bulgudur. Bu bozukluk grubunda tanı böyle tek bir klinik özelliğe göre konulmadığı için şık elenir.",
+      "D": "Laboratuvar testi, bir tanıyı biyolojik bir göstergeyle destekleyen araçtır. Nörogelişimsel bozukluklarda tanıyı koydurucu bir laboratuvar göstergesi tanımlanmamıştır, tanı klinik betimlemeye dayanır.",
+      "E": "Görüntüleme, beyindeki yapısal ya da işlevsel değişiklikleri göstermeye yarar. Nörogelişimsel bozukluk tanısı tek bir görüntüleme bulgusuna dayandırılmaz, tanı belirtilerin betimlenmesiyle konur."
+     },
+     "s": 2,
+     "id": "k2-42-norogelisimsel-bozukluklar-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Nörogelişimsel bozukluklarla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Belirtiler sıklıkla çocuk okula başlamadan önce ortaya çıkar",
+      "B": "Birden çok belirtinin çeşitli kombinasyonlarından oluşur",
+      "C": "Bu bozukluklar sıklıkla bir arada görülür",
+      "D": "Gelişimsel yetersizlik her zaman yalnızca öğrenme alanıyla sınırlı kalır",
+      "E": "Yaşam evrelerinde klinik tabloya belirti eklenir ya da eksilir"
+     },
+     "dogru": "D",
+     "aciklama": "Gelişimsel yetersizlik yalnızca öğrenme ya da yürütücü işlev alanıyla sınırlı kalabileceği gibi sosyal ve zihinsel alanda genel bir yetersizliğe kadar da uzanabilir.",
+     "sik_aciklamalari": {
+      "A": "Belirtiler bireyin gelişim sürecinin erken döneminde başlar ve çoğunlukla çocuk okula başlamadan önce ortaya çıkar. Bu nedenle ifade doğrudur ve sorunun aradığı yanlış ifade olamaz.",
+      "B": "Klinik tablo birden çok belirtinin çeşitli kombinasyonlarından oluşur ve tanı bu belirtilerin betimlenmesine dayanır. İfade doğrudur, aranan yanlış ifade değildir.",
+      "C": "Nörogelişimsel bozukluklar tek tek değil, çoğu kez birlikte görülür; bir çocukta birden çok tanı bir arada bulunabilir. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "D": "Gelişimsel yetersizlik yalnızca öğrenme ya da yürütücü işlev alanıyla sınırlı kalabileceği gibi sosyal ve zihinsel alanda genel bir yetersizliğe kadar da uzanabilir. Her zaman tek alanla sınırlı kaldığını söylemek yanlıştır, aranan ifade budur.",
+      "E": "Çocukluktan ergenlik ve erişkinliğe giden seyirde klinik tabloya belirti eklenir ya da eksilir. Bu değişimin fark edilmesi ek belirtilerin önlenmesine yardım eder, ifade doğrudur."
+     },
+     "s": 3,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Nörogelişimsel bozuklukların klinik seyrinde belirti profilinin yaşam evreleri içinde değiştiğinin klinisyence fark edilmesi aşağıdakilerden hangisini sağlar?",
+     "secenekler": {
+      "A": "Tanının yalnızca laboratuvar testiyle kesinleşmesini",
+      "B": "Belirtilerin tümünün kendiliğinden ortadan kalkmasını",
+      "C": "Ek belirtilerin önlenmesini ve ailenin koruyucu ruh sağlığı kapsamında ele alınmasını",
+      "D": "Tedavi gereksiniminin erişkinlikte sona ermesini",
+      "E": "Tanı ölçütlerinin her yaşta aynı kalmasını"
+     },
+     "dogru": "C",
+     "aciklama": "Belirti profilinin yaşam evrelerinde eklenip eksildiğinin fark edilmesi, ek belirtilerin önlenmesini ve hasta ile ailesinin koruyucu ruh sağlığı kapsamında ele alınmasını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Bu bozukluklarda tanı betimlemeye dayanır ve tanıyı koydurucu bir laboratuvar göstergesi bulunmaz. Klinik seyrin izlenmesinin kazancı tanının laboratuvarla kesinleşmesi olamaz.",
+      "B": "Bozukluklar erken dönemde başlar ve belirti profili yaşam evrelerinde eklenip eksilir. Belirtilerin kendiliğinden tümüyle ortadan kalkması klinik seyrin tanımlanan bir sonucu olmadığı için şık elenir.",
+      "C": "Klinisyen belirti profilindeki değişimi fark ettiğinde yaşam boyu ortaya çıkabilecek ek belirtileri önleyebilir. Hasta ve ailesi koruyucu ruh sağlığı kapsamında ele alınabildiği için doğru yanıt budur.",
+      "D": "Erken tanı ve tedavi bu grupta önemlidir, çünkü uygun tedavi edilmezse tipik gelişim sekteye uğrar. Gereksinimin erişkinlikte sona ereceği, seyrin fark edilmesinin sonucu olarak tanımlanmaz.",
+      "E": "Klinik seyirde yaşam evreleri içinde tabloya belirti eklenir ya da eksilir. Bu yüzden tanı ölçütlerinin ya da tablonun her yaşta aynı kaldığını söylemek seyrin tanımına ters düşer."
+     },
+     "s": 4,
+     "id": "k2-42-norogelisimsel-bozukluklar-q03"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Nörogelişimsel bozukluk altı grubunu sayar, DSM-5 ve ICD-11'deki yerini ve yaşamın her döneminde ayırıcı tanıya katılması gerektiğini açıklar (s. 5-7).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi güncel sınıflamada nörogelişimsel bozukluklar arasında yer alan gruplardan biri değildir?",
+     "secenekler": {
+      "A": "Zihinsel yetersizlikler",
+      "B": "Bipolar bozukluk",
+      "C": "İletişim bozuklukları",
+      "D": "Özgül öğrenme güçlüğü",
+      "E": "Otizm spektrum bozukluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Güncel sınıflamada altı grup vardır: zihinsel yetersizlikler, OSB, DEHB, özgül öğrenme güçlüğü, motor bozukluklar ve iletişim bozuklukları; bipolar bozukluk bu gruplara girmez.",
+     "sik_aciklamalari": {
+      "A": "Zihinsel yetersizlikler sınıflamanın ilk grubudur ve zihinsel kapasitenin yeterince gelişmediği durumları kapsar. Nörogelişimsel gruplardan biri olduğu için soruda aranan seçenek değildir.",
+      "B": "Bipolar bozukluk bir duygudurum bozukluğudur ve nörogelişimsel altı grubun içinde sayılmaz. Soruda gruplara girmeyen seçenek istendiği için doğru yanıt budur.",
+      "C": "İletişim bozuklukları, sınıflamadaki altı gruptan sonuncusudur ve dil ile iletişim alanındaki gelişimsel sorunları kapsar. Nörogelişimsel gruba girdiği için aranan seçenek olamaz.",
+      "D": "Özgül öğrenme güçlüğü, özgül bilişsel alanlardaki eksiklikle belirli bir tanıdır ve sınıflamanın dördüncü grubudur. Nörogelişimsel gruba girdiği için aranan seçenek olamaz.",
+      "E": "Otizm spektrum bozukluğu, sosyal iletişim eksikliği ve tekrarlayıcı davranışlarla tanımlanan ikinci gruptur. Nörogelişimsel altı grubun içinde yer aldığı için soruda aranan seçenek olamaz."
+     },
+     "s": 5,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q04"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "DSM-5 ve ICD-11 sınıflamalarında çocukluk başlangıçlı tanıların yeriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ayrı tutulmayıp diğer başlıklar arasında yer alırlar",
+      "B": "Yalnızca çocuk psikiyatrisi başlığı altında toplanırlar",
+      "C": "Yalnızca erişkin tanıları arasında sayılırlar",
+      "D": "Çocukluk bölümü olarak ayrıca korunmaktadırlar",
+      "E": "Yalnızca nörolojik hastalıklar arasında yer alırlar"
+     },
+     "dogru": "A",
+     "aciklama": "Son düzenlemede DSM-5 ve ICD-11 tanımlarında değişiklik yapılarak çocukluk başlangıçlı tanılar ayrı tutulmamış, sınıflamada diğer başlıklar arasında yer almıştır.",
+     "sik_aciklamalari": {
+      "A": "Son düzenlemede çocukluk başlangıçlı tanılar ayrı bir grup olarak tutulmamış, sınıflamada diğer başlıklar arasında yer almıştır. Bu yüzden doğru ifade budur.",
+      "B": "Çocukluk başlangıçlı tanılar tek bir çocuk başlığında toplanmaz; son düzenleme bu ayrımı kaldırmıştır. Bu nedenle ifade yanlıştır. Sınıflama yaklaşımında ayrı bir çocukluk bölümü kalmadığı için bu seçenek eski düzene aittir.",
+      "C": "Bu tanılar yalnızca erişkinlere özgü bir grup oluşturmaz; belirtilerin fark edilişi her yaşam evresini bulabilir. Sınıflamadaki yer değişikliği ayrı tutmamaktır, bu nedenle ifade yanlıştır.",
+      "D": "Önceki düzenlemelerde çocukluk başlangıçlı tanılar ayrı bir bölüm olarak tutuluyordu. En son düzenleme bu uygulamayı bırakmıştır, bu nedenle ifade yanlıştır.",
+      "E": "Nörolojik hastalıklar ayrı bir tanı alanıdır. Çocukluk başlangıçlı tanılar yalnızca bu başlık altına alınmamış, diğer başlıklar arasında dağıtılmıştır; ifade yanlıştır."
+     },
+     "s": 6,
+     "id": "k2-42-norogelisimsel-bozukluklar-q05"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Nörogelişimsel bozuklukların ayırıcı tanıya katılmasıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca okul öncesi dönemde ayırıcı tanıya katılmalıdır",
+      "B": "Yalnızca çocukluk çağında ayırıcı tanıya katılmalıdır",
+      "C": "Yalnızca ergenlik döneminde ayırıcı tanıya katılmalıdır",
+      "D": "Yalnızca erken erişkinlik döneminde ayırıcı tanıya katılmalıdır",
+      "E": "Orta ve ileri yaşlar dahil yaşamın her döneminde ayırıcı tanıya katılmalıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Bozukluklar doğuştan ya da yaşamın ilk evrelerinden itibaren vardır; fark edilişleri çocukluktan sonra herhangi bir evreyi bulabilir, bu nedenle orta ve ileri yaşlar dahil her dönemde ayırıcı tanıya katılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Okul öncesi dönem belirtilerin sıklıkla ortaya çıktığı evredir. Ancak ayırıcı tanıya katılma yalnızca bu dönemle sınırlı tutulmaz, bu yüzden ifade yanlıştır.",
+      "B": "Çocukluk çağı bozuklukların en sık fark edildiği dönemdir. Belirtilerin fark edilişi çocukluktan sonraki evreleri de bulabildiği için kapsam daha geniştir, ifade yanlıştır.",
+      "C": "Ergenlikte klinik tabloya belirti eklenebilir ya da eksilebilir. Bununla birlikte ayırıcı tanı yalnızca ergenlikle sınırlı kalmaz, bu nedenle ifade yanlıştır.",
+      "D": "Erken erişkinlik ayırıcı tanının gerektiği dönemlerden biridir. Ancak kural yalnızca bu dönemle sınırlı değil, yaşamın tüm evrelerini kapsar; ifade yanlıştır.",
+      "E": "Bozukluklar doğuştan ya da yaşamın ilk evrelerinden itibaren mevcuttur, fakat fark edilişleri çocukluktan sonra herhangi bir evrede olabilir. Bu yüzden orta ve ileri yaşlar dahil her dönemde ayırıcı tanıya katılırlar; doğru ifade budur."
+     },
+     "s": 7,
+     "id": "k2-42-norogelisimsel-bozukluklar-q06"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Nörogelişimsel bozuklukların belirtilerinin fark edilişiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca doğum sırasında ya da doğumdan hemen sonra fark edilir",
+      "B": "Yalnızca okul çağında, okula başlandıktan sonra fark edilir",
+      "C": "Erişkinlikte ve ileri yaşlarda hiçbir zaman fark edilmez",
+      "D": "Çocukluktan sonra herhangi bir yaşam evresinde fark edilir",
+      "E": "Yalnızca ergenlik döneminde ve ergenlik sonrasında fark edilir"
+     },
+     "dogru": "D",
+     "aciklama": "Belirtilerin ortaya çıkışı ya da fark edilişi çocukluktan sonra herhangi bir yaşam evresini bulabilir.",
+     "sik_aciklamalari": {
+      "A": "Bozukluklar doğuştan mevcut olabilir, fakat fark edilişleri doğumla sınırlı kalmaz. Belirtiler çoğu kez sonraki evrelerde anlaşıldığı için bu ifade yanlıştır.",
+      "B": "Okul çağı belirtilerin belirginleştiği bir dönemdir ve sık başvuru zamanıdır. Fark edilişin yalnızca bu dönemle sınırlı olduğunu söylemek yanlıştır. Oysa belirtilerin fark edilişi çocukluktan sonra herhangi bir yaşam evresini bulabilir; okul çağıyla sınırlı değildir.",
+      "C": "Orta ve ileri yaşlarda da bu bozukluklar ayırıcı tanıya girer. Erişkinlikte hiç fark edilemeyeceğini söylemek bu bilgiyle çelişir, ifade yanlıştır.",
+      "D": "Belirtilerin fark edilişi çocukluktan sonra herhangi bir yaşam evresini bulabilir. Bu özellik her yaşta bu bozuklukların ayırıcı tanıda akla gelmesini gerektirir; ifade doğrudur.",
+      "E": "Ergenlikte klinik tabloya belirti eklenip eksilebilir, fakat fark edilişin yalnızca bu dönemle sınırlı olduğu söylenemez. İfade yanlıştır. Fark edilişin zamanı tek bir dönemle sınırlandırılamadığı için ayırıcı tanı yaşamın her döneminde düşünülür."
+     },
+     "s": 7,
+     "id": "k2-42-norogelisimsel-bozukluklar-q07"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Zihinsel kapasite ile zihinsel yetersizliği ayırt eder, 3-6 yaşta kullanılan terimleri ve en sık başvuru nedenini söyler (s. 8-9).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Gelişim döneminde meydana gelen, uyuma yönelik davranışlardaki bozuklukların eşlik ettiği ve zihinsel kapasitenin yeterince gelişmediği durumları tanımlayan terim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Zihinsel kapasite",
+      "B": "Gelişimsel koordinasyon bozukluğu",
+      "C": "Bilişsel yetenek",
+      "D": "Özgül öğrenme güçlüğü",
+      "E": "Zihinsel yetersizlik"
+     },
+     "dogru": "E",
+     "aciklama": "Zihinsel yetersizlik, gelişim döneminde uyum davranışı bozukluğunun eşlik ettiği ve zihinsel kapasitenin yeterince gelişmediği durumları tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Zihinsel kapasite akıl yürütme, plan yapma, problem çözme ve deneyimle öğrenme gibi süreçleri içeren işlevin adıdır. Soru bu işlevin gelişmediği durumu tanımladığından şık elenir.",
+      "B": "Gelişimsel koordinasyon bozukluğu motor beceri alanındaki belirgin hantallığı anlatan ayrı bir tanıdır. Zihinsel kapasitenin gelişmemesini tanımlamadığı için şık elenir. Bu tanı zihinsel kapasiteyi değil, hareket koordinasyonunu ilgilendirir; sorudaki tanımla örtüşmez.",
+      "C": "Bilişsel yetenek, zihinsel kapasitenin diğer adıdır. Bir yetiyi adlandırır, gelişmemiş durumu tanımlamadığı için şık elenir. Bu terim zihinsel kapasitenin kendisini adlandırır, kapasitenin yeterince gelişmediği ve uyumun bozulduğu durumu değil.",
+      "D": "Özgül öğrenme güçlüğü, genel bilişsel işlevlerde sorun olmadığı halde özgül alanlarda akademik başarıyı düşüren ayrı bir tanıdır. Genel zihinsel kapasite yetersizliğini anlatmaz.",
+      "E": "Zihinsel yetersizlik, gelişim döneminde uyum davranışı bozukluğunun eşlik ettiği ve zihinsel kapasitenin yeterince gelişmediği durumdur. Soru bu tanımı verdiği için doğru yanıt budur."
+     },
+     "s": 8,
+     "id": "k2-42-norogelisimsel-bozukluklar-q08"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "3-6 yaş grubundaki çocuğun hekime getirilmesinin en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tuvalet kontrolünü sağlayamama",
+      "B": "Konuşmada gecikme",
+      "C": "Komutlara uymama",
+      "D": "Yaşıtlarla uyum sağlayamama",
+      "E": "Davranış sorunları"
+     },
+     "dogru": "B",
+     "aciklama": "Zihinsel yetersizlikte bu yaş grubunda en sık başvuru nedeni konuşmada gecikme yakınmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Tuvalet kontrolünü sağlayamama, gelişimsel gerilik gösteren ek bir belirtidir ve başvuru nedeni olabilir. En sık neden olarak konuşmadaki gecikmenin gerisinde kaldığı için şık elenir.",
+      "B": "Konuşmada gecikme, bu yaş grubunda ailelerin çocuğu hekime getirmesinin en sık nedenidir. Gelişimsel bir belirtiyi hekime ilk yansıtan yakınma olduğu için doğru yanıt budur.",
+      "C": "Komutlara uymama, başvuruya yol açabilen gelişimsel belirtilerden biridir. Sıklık bakımından konuşma gecikmesinin gerisinde kaldığı için şık elenir. Komutlara uyum sağlanamaması gelişimsel bir belirtidir ve hekime başvurunun ikincil nedenleri arasında yer alır.",
+      "D": "Yaşıtlarla uyum sağlayamama da başvuru nedenleri arasında sayılan gelişimsel bir belirtidir. En sık yakınma olmadığı için şık elenir. Yaşıtlarla uyum güçlüğü de ailelerin çocuğu hekime getirmesine yol açar ama konuşma gecikmesi kadar sık değildir.",
+      "E": "Davranış sorunları, başvuru yakınması olabilen ayrı bir nedendir. Bu yaş grubunda en sık yakınma olarak konuşma gecikmesi öne çıktığı için şık elenir."
+     },
+     "s": 9,
+     "id": "k2-42-norogelisimsel-bozukluklar-q09"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "3-6 yaş döneminde etiyolojinin bilinmediği durumlarda zihinsel yetersizlik yerine aşağıdakilerden hangisi kullanılabilir?",
+     "secenekler": {
+      "A": "Özgül öğrenme güçlüğü ya da otizm",
+      "B": "Otizm spektrum bozukluğu ya da DEHB",
+      "C": "Gelişimsel koordinasyon bozukluğu ya da tik",
+      "D": "Bilişsel gelişimde gecikme ya da genel gelişimde gecikme",
+      "E": "Dikkat eksikliği ya da iletişim bozukluğu"
+     },
+     "dogru": "D",
+     "aciklama": "3-6 yaşta etiyolojinin belli olduğu durumlarda zihinsel yetersizlik terimi, bilinmediği durumlarda bilişsel gelişimde gecikme ya da genel gelişimde gecikme terimi kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Özgül öğrenme güçlüğü, okula başlamayı gerektiren ve özgül akademik alanları etkileyen ayrı bir tanıdır. Bu yaşta etiyolojisi bilinmeyen genel gelişim sorununu adlandırmak için kullanılmadığından şık elenir.",
+      "B": "Otizm spektrum bozukluğu, sosyal iletişim eksikliği ve tekrarlayıcı davranışlarla tanımlanan ayrı bir tanıdır. Etiyolojisi bilinmeyen genel gelişim geriliği için geçici bir terim olmadığı için şık elenir.",
+      "C": "Gelişimsel koordinasyon bozukluğu, motor beceri alanındaki belirgin hantallıkla seyreden bir tanıdır. Genel gelişimdeki geriliği adlandırmadığı için şık elenir. Bu iki tanı motor beceri ve tik alanına aittir; genel gelişimi tanımlayan geçici bir ad olarak kullanılmaz.",
+      "D": "Etiyoloji bilinmiyorsa 3-6 yaşta bilişsel gelişimde gecikme ya da genel gelişimde gecikme terimi kullanılır. Zihinsel yetersizlik terimi ise etiyolojinin belli olduğu durumlarda daha sık kullanılır; doğru yanıt budur.",
+      "E": "DEHB, dikkatsizlik, aşırı hareketlilik ve dürtüsellikle tanımlanan ayrı bir tanıdır. Etiyolojisi bilinmeyen genel gelişim geriliğinin adı olarak kullanılmadığı için şık elenir."
+     },
+     "s": 8,
+     "id": "k2-42-norogelisimsel-bozukluklar-q10"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Zihinsel yetersizliğin oranını, etiyolojisini ve prenatal, maternal, gebelik, perinatal, neonatal ve postnatal risk etmenlerini sınıflar (s. 10-13).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Dünyada zihinsel yetersizlik oranı yüzde kaç arasında değişmektedir?",
+     "secenekler": {
+      "A": "%0,1-0,5",
+      "B": "%1-3",
+      "C": "%5-8",
+      "D": "%10-15",
+      "E": "%20-25"
+     },
+     "dogru": "B",
+     "aciklama": "Dünyada zihinsel yetersizlik oranlarının %1-3 arasında değiştiği bildirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Binde birler düzeyindeki bir oran, bozukluğun toplumdaki gerçek yaygınlığının çok altında kalır. Zihinsel yetersizlik yüzde birler düzeyinde görüldüğü için şık elenir.",
+      "B": "Zihinsel yetersizlik oranlarının dünyada %1-3 arasında değiştiği bildirilmiştir. Bu aralık bozukluğun toplumdaki yaygınlığını gösteren doğru değerdir. Bu değer, toplumda görülme sıklığının yüzde bir ile üç arasında seyrettiğini ve bozukluğun nadir olmadığını gösterir.",
+      "C": "%5-8 aralığı gerçek oranın üzerindedir. Bu düzeye yakın yaygınlık değerleri DEHB için bildirildiğinden zihinsel yetersizlikle karıştırılmamalıdır. Bu yüzden bu aralığı seçmek, zihinsel yetersizliğin yaygınlığını olduğundan fazla göstermek anlamına gelir.",
+      "D": "%10-15 oranı zihinsel yetersizlik yaygınlığını aşar. Bildirilen oranlar arasında böyle yüksek bir değer bulunmadığı için şık elenir. Bu kadar yüksek bir oran, ancak çok yaygın görülen durumlar için anılabilecek bir değerdir.",
+      "E": "%20-25 oranı gerçek yaygınlığın çok üzerindedir. Zihinsel yetersizliğin toplumdaki yaygınlığını yansıtmadığı için şık elenir. Böyle bir oran, her beş kişiden birini işaret eder ve zihinsel yetersizlik için hiç bildirilmemiştir."
+     },
+     "s": 10,
+     "id": "k2-42-norogelisimsel-bozukluklar-q11"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Zihinsel yetersizliğin etiyolojisiyle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Kız çocukları çevresel MSS hasarına erkeklerden daha duyarlıdır",
+      "B": "Genetik, gelişimsel ve edinsel nedenler birlikte olabilir",
+      "C": "Zihinsel yetersizlik ne kadar belirginse etiyoloji de o kadar belirgindir",
+      "D": "Etiyoloji heterojendir",
+      "E": "Genetik, gelişimsel ve edinsel nedenler tek başına etkili olabilir"
+     },
+     "dogru": "A",
+     "aciklama": "Erkek çocuklar merkezi sinir sisteminde hasara sebep olan çevresel etkenlere daha duyarlıdır; kızların daha duyarlı olduğu söylenemez.",
+     "sik_aciklamalari": {
+      "A": "Çocukluk döneminde kız/erkek oranı 0,4-1/1 arasında değişir ve erkek çocuklar çevresel etkenlere daha duyarlıdır. Kızların daha duyarlı olduğunu söylemek yanlıştır, aranan ifade budur.",
+      "B": "Genetik, gelişimsel ve edinsel nedenler bir arada rol oynayabilir. İfade doğrudur ve etiyolojinin çok yönlülüğünü gösterir, aranan yanlış ifade olamaz.",
+      "C": "Zihinsel yetersizlik şiddeti arttıkça bir nedenin saptanma olasılığı da artar. İfade doğrudur, bu yüzden aranan yanlış ifade değildir. Yani tablo ağırlaştıkça arkasındaki nedenin bulunması kolaylaşır; bu da etiyolojiyle şiddet arasındaki ilişkiyi gösterir.",
+      "D": "Zihinsel yetersizlikte etiyoloji heterojendir; birbirinden çok farklı nedenler aynı tabloya yol açabilir. İfade doğrudur, aranan yanlış ifade olamaz. Bu özellik, aynı klinik tabloya genetik, gelişimsel ya da edinsel birçok nedenin yol açabilmesini anlatır.",
+      "E": "Genetik, gelişimsel ya da edinsel nedenlerden her biri tek başına zihinsel yetersizliğe yol açabilir. İfade doğrudur, aranan yanlış ifade olamaz."
+     },
+     "s": 10,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q12"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi zihinsel yetersizliğin cinsiyet kromozom bozukluklarından biridir?",
+     "secenekler": {
+      "A": "Down sendromu",
+      "B": "Prader Willi sendromu",
+      "C": "Frajil X sendromu",
+      "D": "Angelman sendromu",
+      "E": "Fenilketonüri"
+     },
+     "dogru": "C",
+     "aciklama": "Cinsiyet kromozom bozuklukları arasında Frajil X, Turner ve Klinefelter sendromları sayılır.",
+     "sik_aciklamalari": {
+      "A": "Down sendromu otozomal kromozomal bozukluklar arasında sayılır. Cinsiyet kromozomlarıyla ilgili olmadığı için şık elenir. Bu bozukluk, otozomal grupta Prader Willi ve Angelman sendromlarıyla birlikte sayılır ve cinsiyet kromozomlarını ilgilendirmez.",
+      "B": "Prader Willi sendromu otozomal kromozomal bozukluk grubundadır. Cinsiyet kromozomu bozukluğu olarak sınıflanmadığı için şık elenir. Aynı grupta Down ve Angelman sendromları da bulunur; bu kümenin hiçbiri cinsiyet kromozomu bozukluğu sayılmaz.",
+      "C": "Frajil X sendromu, Turner ve Klinefelter sendromlarıyla birlikte cinsiyet kromozom bozukluklarındandır. Soru bu grubu sorduğu için doğru yanıt budur. Bu üç bozukluk, cinsiyet kromozomlarını etkileyen ve zihinsel yetersizliğe yol açan kromozom anormallikleridir.",
+      "D": "Angelman sendromu da otozomal kromozomal bozukluklar arasında yer alır. Cinsiyet kromozom grubunda sayılmadığı için şık elenir. Aynı grupta Down ve Prader Willi sendromları da yer alır, hepsi otozomal kromozom bozukluklarıdır.",
+      "E": "Fenilketonüri, tek gen düzeyinde bir anormalliktir ve gen anormallikleri grubunda sayılır. Kromozom bozukluğu olarak sınıflanmadığı, cinsiyet kromozomlarıyla ilgisi olmadığı için şık elenir."
+     },
+     "s": 11,
+     "id": "k2-42-norogelisimsel-bozukluklar-q13"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Fenilketonüri, galaktozemi, tuberoskleroz ve nörofibromatozis zihinsel yetersizliğin hangi grup nedenleri arasında sayılır?",
+     "secenekler": {
+      "A": "Otozomal kromozomal bozukluklar",
+      "B": "Cinsiyet kromozom bozuklukları",
+      "C": "Gen anormallikleri",
+      "D": "Perinatal komplikasyonlar",
+      "E": "Postnatal nedenler"
+     },
+     "dogru": "C",
+     "aciklama": "Fenilketonüri, galaktozemi, tuberoskleroz, nörofibromatozis ve Lesch Nyhan sendromu gen anormallikleri grubunda sayılır.",
+     "sik_aciklamalari": {
+      "A": "Otozomal kromozomal bozukluklar Down, Prader Willi ve Angelman sendromlarını kapsar. Sorudaki hastalıklar kromozom sayı ya da yapı bozukluğu olmadığı için şık elenir.",
+      "B": "Cinsiyet kromozom bozuklukları Frajil X, Turner ve Klinefelter sendromlarıdır. Sorudaki hastalıklar bu grupta sayılmadığı için şık elenir. Bu grup kromozom sayısı ya da yapısıyla ilgilidir; tek gen düzeyindeki metabolik hastalıkları kapsamaz.",
+      "C": "Bu hastalıklar tek gen düzeyindeki anormalliklerden kaynaklanır; fenilketonüri, galaktozemi, tuberoskleroz, nörofibromatozis ve Lesch Nyhan gen anormalliklerindendir. Doğru yanıt budur. Bu hastalıkların hepsinde sorun, tek bir genin işleyişindeki bozukluktur ve kalıtsaldır.",
+      "D": "Perinatal komplikasyonlar doğum denemesi sonrası sezaryen, düşük Apgar, hipoksi ve makat doğum gibi doğumla ilgili durumlardır. Sorudaki hastalıklar kalıtsal tek gen bozuklukları olduğu için şık elenir.",
+      "E": "Postnatal nedenler kızamık, kabakulak, menenjit ve ensefalit gibi doğum sonrası edinsel durumlardır. Sorudaki hastalıklar edinsel olmadığı için şık elenir. Bu başlık, kalıtsal hastalıkları değil, doğumdan sonra edinilen enfeksiyon ve eksiklikleri anlatır."
+     },
+     "s": 11,
+     "id": "k2-42-norogelisimsel-bozukluklar-q14"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi zihinsel yetersizliğin postnatal nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Kızamık",
+      "B": "Makat doğum",
+      "C": "Kabakulak",
+      "D": "Menenjit",
+      "E": "Konjenital hipotiroidi"
+     },
+     "dogru": "B",
+     "aciklama": "Makat doğum doğum sırasında gelişen bir durumdur ve perinatal komplikasyonlar arasında sayılır; postnatal nedenler kızamık, kabakulak, menenjit, ensefalit ve konjenital hipotiroidi gibi doğum sonrası durumlardır.",
+     "sik_aciklamalari": {
+      "A": "Kızamık, doğum sonrası dönemde geçirilen bir enfeksiyondur ve postnatal nedenler arasında sayılır. Bu yüzden aranan seçenek olamaz. Bu enfeksiyon sinir sistemini etkileyip zihinsel gelişimi bozabilir, bu yüzden listedeki bir postnatal nedendir.",
+      "B": "Makat doğum doğum sırasında gelişen bir durumdur ve perinatal komplikasyonlar arasında sayılır. Doğum sonrası neden olmadığı için soruda aranan seçenek budur.",
+      "C": "Kabakulak, doğum sonrası geçirilen bir enfeksiyondur ve postnatal nedenler arasında sayılır. Bu yüzden aranan seçenek olamaz. Bu enfeksiyon da doğum sonrası dönemde sinir sistemini etkileyebilen nedenler arasında sayılır.",
+      "D": "Menenjit, merkezi sinir sisteminin doğum sonrası geçirilen enfeksiyonudur ve postnatal nedenler arasında sayılır. Bu yüzden aranan seçenek olamaz. Beyin zarlarının bu enfeksiyonu doğum sonrası ortaya çıkan edinsel bir nedendir ve listede yer alır.",
+      "E": "Konjenital hipotiroidi, tanınıp tedavi edilmezse zihinsel yetersizliğe yol açan ve postnatal nedenler arasında sayılan bir durumdur. Bu yüzden aranan seçenek olamaz."
+     },
+     "s": 13,
+     "id": "k2-42-norogelisimsel-bozukluklar-q15"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Düşük Apgar skoru, hipoksi ve makat doğum zihinsel yetersizliğin hangi dönem risk etmenleri arasında sayılır?",
+     "secenekler": {
+      "A": "Maternal",
+      "B": "Perinatal",
+      "C": "Gebelik",
+      "D": "Neonatal",
+      "E": "Postnatal"
+     },
+     "dogru": "B",
+     "aciklama": "Doğum denemesi sonrası sezaryen, düşük doğum ağırlığı, IUGR, düşük Apgar, hipoksi ve makat doğum perinatal komplikasyonlar arasında sayılır.",
+     "sik_aciklamalari": {
+      "A": "Maternal faktörler annenin yaşı, hastalıkları, toksin maruziyeti ve gebelik öncesi durumuna ilişkindir. Doğum sırasındaki durumlar bu başlığa girmediği için şık elenir.",
+      "B": "Düşük Apgar, hipoksi ve makat doğum doğum sırasında ve çevresinde gelişen durumlardır; perinatal komplikasyonlar olarak sayılır. Doğru yanıt budur. Bu başlığın kapsamı doğum denemesi sonrası sezaryen, düşük doğum ağırlığı, IUGR, hipoksi ve düşük Apgar'ı da içerir.",
+      "C": "Gebelik komplikasyonları hemorajik şok ve polihidroamniyos gibi gebelik dönemindeki durumlardır. Doğum sırasındaki olaylar ayrı başlıkta toplandığı için şık elenir. Bu başlık gebelik süresince ortaya çıkan komplikasyonları kapsar; doğum eylemi sırasındaki olaylar ayrı başlıktadır.",
+      "D": "Neonatal faktörler anomali, hipotoni, travma, konvülsiyon, kusma, ateş, malnütrisyon ve hiperbilirubinemi gibi yenidoğan dönemi durumlarıdır. Sorudaki durumlar doğum sırasında olduğu için şık elenir.",
+      "E": "Postnatal nedenler kızamık, kabakulak, menenjit ve ensefalit gibi doğum sonrası edinsel durumlardır. Sorudaki durumlar doğum sırasında geliştiği için şık elenir."
+     },
+     "s": 13,
+     "id": "k2-42-norogelisimsel-bozukluklar-q16"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi zihinsel yetersizlik için maternal risk etmenlerinden biri değildir?",
+     "secenekler": {
+      "A": "40 yaşından büyük olmak",
+      "B": "Serviks anomalileri",
+      "C": "Alkol ve sigara gibi toksinler",
+      "D": "Düşük Apgar skoru",
+      "E": "Önceki gebelikte ölü doğum"
+     },
+     "dogru": "D",
+     "aciklama": "Düşük Apgar skoru doğum sırasındaki bir durumdur ve perinatal komplikasyonlar arasında sayılır; maternal risk etmenlerinden biri değildir.",
+     "sik_aciklamalari": {
+      "A": "16 yaşından küçük ya da 40 yaşından büyük olmak maternal risk etmenidir; ilk doğum için bu sınır 35 yaştır. Bu yüzden aranan seçenek olamaz.",
+      "B": "Serviks anomalileri, yani yetersizlik ve tümör, annenin yapısal bir sorunudur ve maternal risk etmenleri arasında sayılır. Bu yüzden aranan seçenek olamaz.",
+      "C": "İlaç, sigara ve alkol gibi endojen ve ekzojen toksinler anne aracılığıyla fetüse ulaşır ve maternal risk etmenleridir. Bu yüzden aranan seçenek olamaz.",
+      "D": "Düşük Apgar skoru, yenidoğanın doğum anındaki durumunu gösterir ve perinatal komplikasyonlar arasında sayılır. Maternal faktör olmadığı için aranan seçenek budur.",
+      "E": "Önceden düşük, ölü doğum, 1500 gramdan düşük ağırlıklı doğum ve ablasio plasenta maternal risk etmenleri arasında sayılır. Bu yüzden aranan seçenek olamaz."
+     },
+     "s": 12,
+     "id": "k2-42-norogelisimsel-bozukluklar-q17"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "İlk doğum için anne yaşının kaçtan büyük olması zihinsel yetersizlik açısından maternal risk etmeni sayılır?",
+     "secenekler": {
+      "A": "25 yaşından",
+      "B": "30 yaşından",
+      "C": "35 yaşından",
+      "D": "40 yaşından",
+      "E": "45 yaşından"
+     },
+     "dogru": "C",
+     "aciklama": "Maternal risk etmenleri arasında 16 yaşından küçük ya da 40 yaşından büyük olmak sayılır; ilk doğum için bu sınır 35 yaşıdır.",
+     "sik_aciklamalari": {
+      "A": "25 yaş, doğurganlık açısından uygun sayılan bir yaştır ve risk eşiği olarak tanımlanmaz. Maternal risk 16 yaşından küçük ve 35-40 yaşından büyük annelerde tanımlanır.",
+      "B": "30 yaş risk eşiği olarak kabul edilmez. İlk doğum için risk yaşı bunun üzerinde olduğu için şık elenir. Oysa risk, ilk doğumda 35 yaşından, genel olarak 40 yaşından büyük olmakla başlar; 30 bu eşiğin altındadır.",
+      "C": "İlk doğum için 35 yaşından büyük olmak maternal risk etmenidir. İlk doğumda risk tanımlanırken daha düşük bir yaş sınırı alındığı için doğru yanıt budur.",
+      "D": "40 yaş, ilk doğuma bakılmaksızın genel risk sınırıdır. İlk doğum için eşik 35 olduğundan bu şık ilk doğum sorusunun yanıtı olamaz.",
+      "E": "45 yaş risk sınırının çok üzerindedir. Risk eşiği ilk doğumda 35, genel olarak 40 yaşından büyük olmakla başladığı için şık elenir."
+     },
+     "s": 12,
+     "id": "k2-42-norogelisimsel-bozukluklar-q18"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Zihinsel yetersizliğin şiddet düzeylerini IQ aralıklarıyla ve özellikleriyle ayırt eder, sağaltım bileşenlerini sayar (s. 14-16).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Zihinsel yetersizliğin şiddet düzeyleri ve IQ aralıklarıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Hafif düzeyde IQ 50-69 arasındadır",
+      "B": "Hafif düzeyde IQ 35-49 arasındadır",
+      "C": "Orta düzeyde IQ 35-49 arasındadır",
+      "D": "Ağır düzeyde IQ 20-34 arasındadır",
+      "E": "Çok ağır düzeyde IQ 20'nin altındadır"
+     },
+     "dogru": "B",
+     "aciklama": "Hafif zihinsel yetersizlikte IQ 50-69 arasındadır; 35-49 aralığı orta düzeye aittir.",
+     "sik_aciklamalari": {
+      "A": "Hafif zihinsel yetersizlik IQ 50-69 aralığındadır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu aralık, günlük işlerin yardımsız yapılabildiği ve motor gelişmenin genellikle normal olduğu hafif düzeye aittir.",
+      "B": "35-49 aralığı orta düzeye karşılık gelir; hafif düzey IQ 50-69 arasındadır. Hafif düzeyi 35-49 olarak vermek yanlıştır, soruda aranan ifade budur.",
+      "C": "Orta düzey zihinsel yetersizlikte IQ 35-49 arasındadır ve özel eğitimle ikinci sınıf düzeyinde okuma yazma öğrenilebilir. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "D": "Ağır zihinsel yetersizlikte IQ 20-34 arasındadır ve belirgin motor gerilik görülür. İfade doğrudur, aranan yanlış ifade olamaz. Bu düzeyde dil yetileri geç ve çok az gelişir, kişi yaşam boyu başkalarının bakımına bağımlıdır.",
+      "E": "Çok ağır zihinsel yetersizlikte IQ 20'nin altındadır. İfade doğrudur, aranan yanlış ifade olamaz. Bu düzeyde kişi çok basit yönergeleri güçlükle anlar ve çoğu zaman hareketsiz kalır ya da yardımla hareket eder."
+     },
+     "s": 15,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q19"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hafif zihinsel yetersizlikle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "IQ 50-69 arasındadır",
+      "B": "Günlük konuşmaları yürütebilir",
+      "C": "Yeme, giyinme ve temizlik gibi işleri yardımsız görebilir",
+      "D": "Belirgin motor gerilik vardır",
+      "E": "Kendi günlük gereksinimlerini anlatabilir"
+     },
+     "dogru": "D",
+     "aciklama": "Hafif düzeyde motor gelişme genellikle normaldir; belirgin motor gerilik ağır ve çok ağır düzeylerin özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Hafif zihinsel yetersizlik IQ 50-69 aralığındadır. İfade doğrudur, aranan yanlış ifade olamaz. Bu aralık, günlük işlerini çoğunlukla yardımsız yapabilen kişilerin zihinsel yetersizlik düzeyini tanımlar.",
+      "B": "Hafif düzeyde konuşmada bir miktar gerilik olsa da günlük konuşmalar yürütülebilir. İfade doğrudur, aranan yanlış ifade olamaz. Bu beceri, hafif düzeydeki kişilerin gündelik yaşamını büyük ölçüde bağımsız sürdürebilmesinin bir göstergesidir.",
+      "C": "Yeme, temizlik, giyinme ve dışkı kontrolü gibi günlük işlerin çoğu hafif düzeyde yardımsız görülür. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "D": "Hafif düzeyde motor gelişme genellikle normaldir; belirgin motor gerilik ağır ve çok ağır düzeylerin özelliğidir. Hafif düzey için belirgin motor gerilik demek yanlıştır, aranan ifade budur.",
+      "E": "Hafif düzeydeki kişi kendi günlük gereksinimlerini anlatabilir ve çok karmaşık olmayan işleri yapabilir. İfade doğrudur, aranan yanlış ifade olamaz. Bu özellik hafif düzeyi, çok daha belirgin bakım gereksinimi olan ağır düzeylerden ayırır."
+     },
+     "s": 14,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q20"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Çok ağır zihinsel yetersizlikle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Çok basit yönergeleri güçlükle anlayabilirler",
+      "B": "Çoğu ağır motor gerilik nedeniyle hareketsiz kalır ya da yardımla hareket eder",
+      "C": "Yeme, içme ve temizlikleri başkalarınca yapılır",
+      "D": "Basit işleri denetim altında yürütebilirler",
+      "E": "Epilepsi, hareket, görme ve işitme bozuklukları bulunabilir"
+     },
+     "dogru": "D",
+     "aciklama": "Basit işleri denetim altında yürütme orta düzeyin özelliğidir; çok ağır düzeydeki kişiler kendilerine bakacak durumda değildir.",
+     "sik_aciklamalari": {
+      "A": "Çok ağır düzeyde kişiler çok basit yönergeleri ve açıklamaları ancak güçlükle anlayabilir. İfade doğrudur, aranan yanlış ifade olamaz. Bu özellik çok ağır düzeyin tipik tablosudur; kişi yönergeleri ancak güçlükle kavrayabilir.",
+      "B": "Çok ağır düzeyde çoğu ağır motor gerilik ve sakatlık nedeniyle hareketsiz kalır ya da ancak yardımla hareket eder. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "C": "Çok ağır düzeyde kişiler kendilerine bakacak durumda değildir; yemeleri, içmeleri ve temizlikleri başkaları tarafından yapılır. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "D": "Basit işleri denetim altında yürütebilme orta düzeyin özelliğidir. Çok ağır düzeydeki kişiler kendilerine bakacak durumda olmadığından bu ifade yanlıştır, aranan seçenek budur.",
+      "E": "Çok ağır düzeyde beyin hasarına bağlı olarak epilepsi ile hareket, görme ve işitme bozuklukları bulunabilir. İfade doğrudur, aranan yanlış ifade olamaz."
+     },
+     "s": 15,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q21"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "9 yaşındaki çocuk özel eğitimle ikinci sınıf düzeyinde okuma yazma ve saymayı öğrenebilmiş; basit işleri denetim altında yürütebiliyor. Bu çocukta zihinsel yetersizliğin şiddet düzeyi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hafif",
+      "B": "Orta",
+      "C": "Ağır",
+      "D": "Çok ağır",
+      "E": "Sınırda"
+     },
+     "dogru": "B",
+     "aciklama": "Özel eğitimle ikinci sınıf düzeyinde okuma yazma ve saymayı öğrenebilme, basit işleri denetim altında yürütme orta düzeyin (IQ 35-49) özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Hafif düzeyde günlük işlerin çoğu yardımsız görülür ve motor gelişme genellikle normaldir. Denetim gereksinimi hafif düzeyin tablosu olmadığı için şık elenir.",
+      "B": "Orta düzeyde IQ 35-49 arasındadır; anlama, dil, kendine bakma ve motor becerilerde gerilik vardır. Özel eğitimle ikinci sınıf düzeyinde okuma yazma ve sayma öğrenilebilir, basit işler denetim altında yürütülür; doğru yanıt budur.",
+      "C": "Ağır düzeyde dil yetileri çok az gelişir ve kişi yaşam boyu başkalarının bakımına bağımlı kalır. Okuma yazma öğrenimi bu düzeyin özelliği olmadığı için şık elenir.",
+      "D": "Çok ağır düzeyde yalnızca çok basit yönergeler güçlükle anlaşılır ve çoğu kişi hareketsizdir. Okuma yazma öğrenimi söz konusu olmadığı için şık elenir.",
+      "E": "Sınırda düzey, sınıflamada anlatılan şiddet düzeylerinden biri olarak verilmemiştir. Verilen tablo hafif ve ağır düzeyler arasında orta düzeye uyduğu için şık elenir."
+     },
+     "s": 14,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q22"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi zihinsel yetersizliğin sağaltım bileşenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Özel eğitim",
+      "B": "Koruyucu önlemler",
+      "C": "Aile ile iş birliği",
+      "D": "Davranış sağaltımı",
+      "E": "Botulinum toksini enjeksiyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Zihinsel yetersizliğin sağaltımı özel eğitim, koruyucu önlemler, aile ile iş birliği, davranış sağaltımı ve ilaçları kapsar; botulinum toksini enjeksiyonu bu bileşenler arasında sayılmaz.",
+     "sik_aciklamalari": {
+      "A": "Özel eğitim, zihinsel yetersizliğin sağaltım bileşenlerinden ilkidir ve çocuğun öğrenmesini ve uyum becerilerini desteklemeyi amaçlar. Sağaltım başlığında sayıldığı için aranan seçenek olamaz.",
+      "B": "Koruyucu önlemler, zihinsel yetersizliğin sağaltım başlıklarından biridir ve riskleri azaltmaya yönelik girişimleri anlatır. Sağaltım bileşenleri arasında sayıldığı için aranan seçenek olamaz.",
+      "C": "Aile ile iş birliği, zihinsel yetersizliğin sağaltım başlıklarından biridir ve ailenin sağaltım sürecine katılmasını anlatır. Sağaltım bileşenleri arasında sayıldığı için aranan seçenek olamaz.",
+      "D": "Davranış sağaltımı, zihinsel yetersizliğin sağaltım başlıklarından biridir ve davranış sorunlarını ele alan girişimleri anlatır. Sağaltım bileşenleri arasında sayıldığı için aranan seçenek olamaz.",
+      "E": "Botulinum toksininin yerel enjeksiyonu, tik bozukluklarının sağaltımında etkili olabileceği bildirilen bir yöntemdir. Zihinsel yetersizliğin sağaltım bileşenleri arasında sayılmadığı için aranan seçenek budur."
+     },
+     "s": 16,
+     "id": "k2-42-norogelisimsel-bozukluklar-q23"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Otizmi tanımlar; sıklık artışını ve nedenlerini, belirtilerin başlangıç yaşını, regresif otizmi ve başvuru nedenini açıklar (s. 17-18).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Otizm belirtileri genellikle hangi yaş aralığında başlar?",
+     "secenekler": {
+      "A": "3-6 ay",
+      "B": "6-9 ay",
+      "C": "12-24 ay",
+      "D": "3-4 yaş",
+      "E": "5-6 yaş"
+     },
+     "dogru": "C",
+     "aciklama": "Otizm belirtileri genellikle 12-24 aylar arasında başlar; kazanılmış becerilerin yitirilmesi de aynı aralıkta görülür.",
+     "sik_aciklamalari": {
+      "A": "3-6 ay çok erken bir dönemdir. Belirtilerin genel başlangıcı bu aralıkta değil, ikinci yaşa doğru tanımlandığı için şık elenir.",
+      "B": "6-9 ay, başlangıç aralığının öncesidir. Erken bebeklikten itibaren bazı bulgular görülse de belirtilerin genel başlangıç aralığı daha ilerde olduğu için şık elenir.",
+      "C": "Belirtiler genellikle 12-24 aylar arasında başlar; regresif otizmde becerilerin yitirilmesi de genellikle aynı aralıktadır. Doğru yanıt budur. Bu aralıkta bazı çocuklarda daha önce kazanılan becerilerin kaybı da görülür; buna regresif otizm denir.",
+      "D": "3-4 yaş, okul öncesi bir dönemdir ve belirtilerin başlangıç aralığından sonradır. Belirtiler bu yaşa gelmeden çoktan başladığı için bu aralık otizmin başlangıç yaşı olarak seçilemez.",
+      "E": "5-6 yaş belirtilerin başlangıç aralığının çok ilerisindedir. Bu yaşta yeni başlayan bir tablo otizmin tipik başlangıcına uymadığı için şık elenir."
+     },
+     "s": 18,
+     "id": "k2-42-norogelisimsel-bozukluklar-q24"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aileleri, 18 aylık çocuklarının daha önce söylediği sözcükleri ve el sallama becerisini yitirdiğini anlatıyor. Bu gidiş en çok hangi tanıyı düşündürür?",
+     "secenekler": {
+      "A": "Zihinsel yetersizlik",
+      "B": "Otizm spektrum bozukluğu",
+      "C": "Dikkat eksikliği hiperaktivite bozukluğu",
+      "D": "Tourette bozukluğu",
+      "E": "Özgül öğrenme güçlüğü"
+     },
+     "dogru": "B",
+     "aciklama": "Daha önce kazanılan becerilerin yitirilmesi (regresif otizm) genellikle 12-24 aylar arasında olur; bu tür gerilemeler diğer bozukluklarda çok nadirdir ve şiddetle otizmi düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Zihinsel yetersizlikte zihinsel kapasite yeterince gelişmez ve gelişim geri kalır. Önceden kazanılmış becerilerin yitirilmesi bu tanıyı öncelikle düşündüren bir gidiş olmadığı için şık elenir.",
+      "B": "Kazanılmış becerilerin 12-24 aylar arasında yitirilmesi regresif otizmin özelliğidir ve diğer bozukluklarda çok nadir olduğundan şiddetle otizmi düşündürür. Doğru yanıt budur.",
+      "C": "DEHB'de dikkatsizlik, aşırı hareketlilik ve dürtüsellik görülür. Beceri yitirme bu bozukluğun tablosunda yer almadığı için şık elenir. DEHB'nin belirtileri dikkat, hareketlilik ve dürtüsellik alanlarındadır; kazanılmış becerilerin kaybı bu tanıyı düşündürmez.",
+      "D": "Tourette bozukluğunda motor ve ses tikleri bir arada görülür. Dil ve el sallama becerilerinin kaybı bu tanıyı düşündürmediği için şık elenir.",
+      "E": "Özgül öğrenme güçlüğünde akademik sorunlar okul çağında belirginleşir. Bu yaşta beceri yitimiyle birlikte seyretmediği için şık elenir. Özgül öğrenme güçlüğünde sorun beceri kaybı değil, öğrenme sırasında akademik alanda belirginleşen ciddi bir düşüklüktür."
+     },
+     "s": 18,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q25"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Otizmi olan çocukların hekime getirilmesinin en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aşırı hareketlilik",
+      "B": "Konuşmama ya da konuşmada gerilik",
+      "C": "Ders başarısızlığı",
+      "D": "Tuvalet eğitimi sorunu",
+      "E": "Uyku sorunları"
+     },
+     "dogru": "B",
+     "aciklama": "Otizmi olan çocukların hekime getirilmeleri genellikle konuşmama ya da konuşmadaki gerilik nedeniyle olur.",
+     "sik_aciklamalari": {
+      "A": "Aşırı hareketlilik DEHB'nin temel belirtilerinden biridir ve otizm tablosuna ait değildir. Otizmde hekime getirmenin en sık nedeni olmadığı için şık elenir.",
+      "B": "Konuşmama ya da konuşmadaki gerilik, otizmde ailelerin çocuğu hekime getirmesinin en sık nedenidir. Çocuk ayrıca karşısındakini anlamaya ya da izlemeye yönelik davranış göstermez ve kendini ifade etmeye çalışmaz; doğru yanıt budur.",
+      "C": "Ders başarısızlığı, okul çağında öğrenme sorunlarının getirdiği bir yakınmadır. Otizmde belirtiler çok daha erken başladığı için hekime getirme nedeni olarak öne çıkmaz.",
+      "D": "Tuvalet kontrolünü sağlayamama, zihinsel yetersizlikte ek bir başvuru nedeni olarak anılan gelişimsel belirtidir. Otizmde hekime getirmenin en sık nedeni olmadığı için şık elenir.",
+      "E": "Uyku ve yeme sorunları, otizmde küçük yaşta görülebilen belirtiler arasındadır. En sık hekime getirme nedeni olarak konuşma gerilikleri öne çıktığı için şık elenir."
+     },
+     "s": 18,
+     "id": "k2-42-norogelisimsel-bozukluklar-q26"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Otizm sıklığı 1957 yılında 1/5000 iken 2009 yılı verilerinde kaça yükselmiştir?",
+     "secenekler": {
+      "A": "1/1000",
+      "B": "1/500",
+      "C": "1/110",
+      "D": "1/50",
+      "E": "1/10000"
+     },
+     "dogru": "C",
+     "aciklama": "Otizm sıklığı 1957 yılında 1/5000 iken 2009 yılına ait verilerde 1/110 olarak bildirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "1/1000 bildirilen değerin altında bir sıklığı gösterir. 2009 verilerindeki artış bundan daha büyük olduğu için şık elenir. Oysa sıklık çok daha yüksek değerlere ulaşmıştır; bu seçenek artışın büyüklüğünü olduğundan düşük gösterir.",
+      "B": "1/500 de 2009 yılında bildirilen değerin altındadır. Otizmde sıklık daha da yüksek bir değere ulaştığı için şık elenir. Yani bu değer de gerçek artış düzeyinin gerisinde kalır ve soruda bildirilen değerle örtüşmez.",
+      "C": "2009 yılına ait veriler otizm sıklığını 1/110 olarak göstermiştir. Bu değer 1957'deki 1/5000'e göre belirgin bir artışı yansıttığı için doğru yanıttır.",
+      "D": "1/50 bildirilen değerin üzerindedir. 2009 verilerinde böyle yüksek bir sıklık verilmediği için şık elenir. Bu değer bildirilen sıklığın çok üstündedir; otizm bu kadar sık görülen bir bozukluk olarak verilmemiştir.",
+      "E": "1/10000, 1957'deki değerden de düşük bir sıklıktır ve artışı değil azalmayı gösterir. Bildirilen belirgin artışla uyuşmadığı için şık elenir."
+     },
+     "s": 17,
+     "id": "k2-42-norogelisimsel-bozukluklar-q27"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Otizm yelpazesi bozukluğunda yaygınlıktaki artışın nedenleriyle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Sosyal etkilerin payı tanısal değişikliklerin payından fazladır",
+      "B": "Tanısal değişikliklerin payı %27'dir",
+      "C": "Ana baba yaşındaki artışın payı %11'dir",
+      "D": "Coğrafi etmenlerin payı %2'dir",
+      "E": "Artışın nedenleri büyük oranda açıklanamamıştır"
+     },
+     "dogru": "A",
+     "aciklama": "Sosyal etkilerin payı %16, tanısal değişikliklerin payı %27'dir; sosyal etkilerin payı tanısal değişikliklerden fazla değildir.",
+     "sik_aciklamalari": {
+      "A": "Sosyal etkilerin payı %16 iken tanısal değişikliklerin payı %27'dir; yani sosyal etkiler tanısal değişikliklerden daha az paya sahiptir. İfade yanlıştır ve soruda aranan budur.",
+      "B": "Artışta tanısal değişikliklerin payının %27 olduğu öne sürülmüştür. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu pay, artışı açıklayan etmenler arasında en büyük payın tanı ölçütlerindeki değişikliklerde olduğunu gösterir.",
+      "C": "Ana baba yaşındaki artışın payı %11 olarak öne sürülmüştür. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Ana baba yaşının ilerlemesi artışın nedenleri arasında üçüncü sırada yer alan bir etmen olarak öne sürülmüştür.",
+      "D": "Coğrafi etmenlerin payı %2 olarak öne sürülmüştür. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu pay, artışı açıklayan etmenler arasında en küçük olandır.",
+      "E": "Yaygınlıktaki artışın nedenleri büyük oranda açıklanamamaktadır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu yüzden artışın nedeni tek bir etmene bağlanamaz, birden çok etmenin küçük payları bildirilmektedir."
+     },
+     "s": 17,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q28"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Otizmin toplumsal etkileşim ve sınırlı tekrarlayıcı davranış belirtilerini ayırt eder, 36 ay öncesi erken belirtileri sayar (s. 19-20).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Otizm spektrum bozukluğunda erken bebeklik döneminden itibaren görülen bulgularla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Göz teması kurmaz",
+      "B": "Adına bakmaz",
+      "C": "Taklit yapmaz",
+      "D": "Kucağa alınmak ve rahatlatılmak ister",
+      "E": "Ortak dikkat bulunmaz"
+     },
+     "dogru": "D",
+     "aciklama": "Erken bebeklikten itibaren göz teması kurmama, kucağa alınma ve rahatlatılma isteğinin bulunmaması, taklit yapmama, adına bakmama ve ortak dikkatin olmaması görülür.",
+     "sik_aciklamalari": {
+      "A": "Göz teması kurmama, otizmin erken bebeklik döneminden itibaren görülen toplumsal bulgusudur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgu, bebeğin toplumsal ipuçlarına yönelmediğini gösterir ve otizmin en erken belirtilerindendir.",
+      "B": "Adı söylendiğinde bakmama, otizmde erken dönemden itibaren görülen bulgudur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgu bebeğin toplumsal çağrılara yanıt vermediğini gösterir ve ayırıcı tanıda erken uyarı işaretidir.",
+      "C": "Taklit yapmama, otizmde erken bebeklikten itibaren görülen bulgulardandır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgu karşılıklı etkileşim ve sosyal öğrenmenin eksikliğini yansıtır ve erken dönemde dikkat çeker.",
+      "D": "Otizmli bebeklerde kucağa alınmak, rahatlatılmak ve sakinleştirilmek gibi istekler bulunmaz. Bu isteğin varlığını söylemek yanlıştır, aranan ifade budur. Bebek bu istekleri göstermediği için yakınlık arayışının olmaması otizm tablosunun belirgin bir özelliğidir.",
+      "E": "Ortak dikkat, iki kişinin aynı nesneye birlikte yönelmesidir ve otizmde erken dönemde bulunmaz. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz."
+     },
+     "s": 19,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q29"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Konuşabilen otizmli çocuklarda konuşmanın özellikleriyle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Konuşma tekdüzedir",
+      "B": "Vurgulama bulunmaz",
+      "C": "Ses tonu çoğunlukla ayarlanamaz",
+      "D": "Çok yüksek sesle ya da fısıltıyla konuşabilirler",
+      "E": "Karşılıklı konuşma akıcı biçimde sürer"
+     },
+     "dogru": "E",
+     "aciklama": "Konuşan otizmli çocuklarda konuşma tekdüzedir, vurgulama yoktur, ses tonu ayarlanamaz; karşılıklı konuşmada yetersizlik vardır.",
+     "sik_aciklamalari": {
+      "A": "Konuşan otizmli çocuklarda konuşma tekdüzedir; kişinin vurgulama kullanmaması ve ses tonunu ayarlayamaması bu tekdüzeliğin parçasıdır. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "B": "Konuşan otizmli çocuklarda vurgulama yoktur; sözcükler melodik bir vurgudan yoksun söylenir. İfade doğrudur, aranan yanlış ifade olamaz. Bu özellik, konuşmanın duygusal ve anlamsal vurgulardan yoksun, düz bir biçimde sürdüğünü anlatır.",
+      "C": "Konuşan otizmli çocuklar ses tonlarını çoğunlukla ayarlayamaz. İfade doğrudur, aranan yanlış ifade olamaz. Bu yüzden çocuk ortama uygun ses düzeyini bulamaz ve konuşma kimi zaman çok yüksek kimi zaman çok kısık olur.",
+      "D": "Konuşan otizmli çocuklar çok yüksek sesle ya da fısıltıyla konuşabilir. İfade doğrudur, aranan yanlış ifade olamaz. Bu uçlardaki ses düzeyi, ses tonunu ayarlayamama özelliğinin doğrudan bir sonucudur.",
+      "E": "Otizmde karşılıklı konuşmada yetersizlik ve duyguları paylaşmada eksiklik vardır. Karşılıklı konuşmanın akıcı sürdüğünü söylemek yanlıştır, aranan ifade budur. Gerçekte karşılıklı konuşma bozuktur; bu yüzden akıcı bir karşılıklı konuşma otizmin özelliği olarak anlatılamaz."
+     },
+     "s": 19,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q30"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi otizmde sınırlı ve tekrarlayıcı davranış kümesine örnek olan bulgudur?",
+     "secenekler": {
+      "A": "Göz teması kurmama",
+      "B": "Adına bakmama",
+      "C": "Taklit yapmama",
+      "D": "Ortak dikkat yokluğu",
+      "E": "Araba tekerleği döndürme"
+     },
+     "dogru": "E",
+     "aciklama": "Tekdüze oyun, araba sıralama, araba tekerleği döndürme, sallanma, dönen cisimlere ilgi, değişiklikten hoşlanmama ve törensel davranışlar sınırlı ve tekrarlayıcı davranış kümesindedir.",
+     "sik_aciklamalari": {
+      "A": "Göz teması kurmama, toplumsal etkileşim eksikliğine örnektir. Tekrarlayıcı davranış kümesine girmediği için şık elenir. Bu bulgu, karşıdaki kişiyle iletişim kurmaya yönelik toplumsal kümeye aittir, nesnelerle yapılan tekrarlayıcı davranışlara değil.",
+      "B": "Adına bakmama, toplumsal etkileşim kümesinde yer alan bir bulgudur. Tekrarlayıcı davranış sayılmadığı için şık elenir. Çağrıya tepki vermemek karşılıklı toplumsal ilişkinin bozulmasını gösterir, tekrarlayıcı hareketlerle ilgisi yoktur.",
+      "C": "Taklit yapmama, toplumsal etkileşim ve iletişim eksikliğine örnektir. Tekrarlayıcı davranış olmadığı için şık elenir. Başkasını örnek alma becerisinin yokluğu toplumsal öğrenmeyle ilgilidir, tekdüze davranışlar kümesiyle ilgisi yoktur.",
+      "D": "Ortak dikkat yokluğu, toplumsal etkileşim eksikliğinin bir bulgusudur. Tekrarlayıcı davranış kümesine girmediği için şık elenir. İki kişinin aynı nesneye birlikte yönelmemesi toplumsal etkileşimin bozulduğunu gösterir, tekrarlayıcı davranış değildir.",
+      "E": "Araba tekerleği döndürme, aynı oyunu tekdüze biçimde oynama ve nesneyi sallama gibi davranışlar sınırlı ve tekrarlayıcı davranış kümesindedir. Doğru yanıt budur."
+     },
+     "s": 19,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q31"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi otizmde toplumsal etkileşim eksikliği bulgularından biri değildir?",
+     "secenekler": {
+      "A": "Diğer çocuklara ilgi göstermeme",
+      "B": "Ortak dikkatin olmaması",
+      "C": "Adına bakmama",
+      "D": "Taklit yapmama",
+      "E": "Dönen cisimlere özel ilgi"
+     },
+     "dogru": "E",
+     "aciklama": "Dönen cisimlere özel ilgi, çamaşır makinesini uzun uzun izlemek gibi, sınırlı ve tekrarlayıcı davranış kümesindedir; toplumsal etkileşim eksikliğine girmez.",
+     "sik_aciklamalari": {
+      "A": "Diğer çocuklara ilgi göstermeme ve kendi köşesinde yalnız oturmayı yeğleme, toplumsal etkileşim eksikliğinin bulgusudur. Bu yüzden aranan seçenek olamaz. Bu bulgu çocuğun yaşıtlarıyla etkileşim kurmaktan kaçındığını gösterir ve toplumsal kümenin tipik bir örneğidir.",
+      "B": "Ortak dikkat, bir nesneye birlikte yönelme becerisidir ve otizmde bulunmaz; toplumsal etkileşim eksikliğine örnektir. Bu yüzden aranan seçenek olamaz. Bu bulgu, toplumsal ilişkinin temel yapı taşının eksik olduğunu gösterir ve bu kümenin parçasıdır.",
+      "C": "Adına bakmama, bebeğin çağrıya tepki vermemesini gösteren ve toplumsal etkileşim eksikliğine giren bulgudur. Bu yüzden aranan seçenek olamaz. Bu bulgu karşıdakinin çağrısına karşılık vermemeyi gösterir ve toplumsal kümede ilk sayılan bulgulardandır.",
+      "D": "Taklit yapmama, toplumsal öğrenme ve karşılıklılık eksikliğini gösterir ve toplumsal kümede yer alır. Bu yüzden aranan seçenek olamaz. Bu bulgu karşılıklılık eksikliğini gösterir ve toplumsal etkileşim kümesinde yer alır.",
+      "E": "Dönen cisimlere özel ilgi, çamaşır makinesini uzun uzun izlemek gibi, sınırlı ve tekrarlayıcı ilgi ve davranışlar kümesindedir. Toplumsal etkileşim eksikliği sayılmadığı için aranan seçenek budur."
+     },
+     "s": 19,
+     "id": "k2-42-norogelisimsel-bozukluklar-q32"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "3 yaşındaki bir çocuk aynı oyuncak arabaları sıraya diziyor, tekerleklerini döndürüyor, yaşıtlarıyla oynamak yerine köşede yalnız oturuyor ve adı söylendiğinde bakmıyor. En olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dikkat eksikliği hiperaktivite bozukluğu",
+      "B": "Özgül öğrenme güçlüğü",
+      "C": "Tourette bozukluğu",
+      "D": "Otizm spektrum bozukluğu",
+      "E": "Zihinsel yetersizlik"
+     },
+     "dogru": "D",
+     "aciklama": "Tekdüze oyun, tekerlek döndürme, yaşıtlara ilgisizlik ve adına bakmama toplumsal etkileşim ve sınırlı tekrarlayıcı davranış kümelerinin birlikteliğini gösterir; tablo otizme uyar.",
+     "sik_aciklamalari": {
+      "A": "DEHB'de dikkatsizlik, aşırı hareketlilik ve dürtüsellik görülür. Tekdüze oyun ve adına bakmama bu tanının tablosu olmadığı için şık elenir.",
+      "B": "Özgül öğrenme güçlüğü okul çağında akademik sorunlarla ortaya çıkar. Bu yaşta tekdüze oyun ve toplumsal ilgisizlik bu tanıyı düşündürmediği için şık elenir.",
+      "C": "Tourette bozukluğunda motor ve ses tikleri bir arada bulunur. Tekdüze oyun ve toplumsal kopukluk tik tablosuna ait olmadığı için şık elenir.",
+      "D": "Tekerlek döndürme ve arabaları sıralama sınırlı tekrarlayıcı davranışları, adına bakmama ve yaşıtlara ilgisizlik toplumsal etkileşim eksikliğini gösterir. Bu bileşim otizm spektrum bozukluğunu düşündürdüğü için doğru yanıttır.",
+      "E": "Zihinsel yetersizlikte zihinsel kapasite gelişmez ve uyum davranışı bozulur. Verilen tablo toplumsal ve tekrarlayıcı davranış kümelerine dayandığı için şık elenir."
+     },
+     "s": 19,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q33"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "36 aydan önceki dönemde otizm tanısı için dikkat edilmesi gereken belirti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Selamlaşmak için el sallaması",
+      "B": "Karşılıklı gülümsemenin olmaması",
+      "C": "Tanımadığı kişileri yabancılaması",
+      "D": "İşaret edilen yere bakması",
+      "E": "Yumuşak nesneleri tercih etmesi"
+     },
+     "dogru": "B",
+     "aciklama": "36 aydan önce karşılıklı gülümsemenin olmaması, adına tutarlı bakmama, işaret etmeme ve hayali oyun yokluğu gibi belirtiler dikkat çeker.",
+     "sik_aciklamalari": {
+      "A": "Selamlaşmak için el sallama beklenen gelişimdir. Otizmde selamlaşma için el sallamanın gelişmemesi belirtidir, bu yüzden şık elenir. Bu davranış sağlıklı bebekte görülür; eksikliği otizm şüphesi doğurur, varlığı ise normal gelişim işaretidir.",
+      "B": "Sosyal ilişki için gerekli karşılıklı gülümsemenin olmaması, küçük yaşta otizm tanısı için dikkat edilmesi gereken belirtilerdendir. Doğru yanıt budur. Bu belirti karşılıklı toplumsal etkileşimin eksikliğini gösterir ve erken tanı için dikkate alınır.",
+      "C": "Tanımadığı kişileri yabancılama beklenen gelişimdir. Otizmde yabancılamama dikkat çeken belirti olduğu için şık elenir. Bu davranış sağlıklı çocukta görülür; eksikliği ise otizm için dikkat çeken bir belirtidir.",
+      "D": "İşaret edilen yere bakma beklenen gelişimdir. Otizmde işaret edilen yere bakmama belirti olduğu için şık elenir. Bu davranış sağlıklı çocukta görülür; bunun olmaması ortak dikkatin gelişmediğini düşündürür.",
+      "E": "Yumuşak nesneleri tercih etme beklenen gelişimdir. Otizmde sert nesnelerle oynama ve yumuşak nesneleri tercih etmeme belirti olduğu için şık elenir."
+     },
+     "s": 20,
+     "id": "k2-42-norogelisimsel-bozukluklar-q34"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "36 aydan küçük çocukta otizm açısından dikkat edilen belirtilerle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Hayali oyun yokluğu",
+      "B": "İsteklerini parmakla göstermeme",
+      "C": "Adına tutarlı bakmama",
+      "D": "Tanımadığı kişileri yabancılamama",
+      "E": "Anne ya da baba eve gelince sevinçle karşılama"
+     },
+     "dogru": "E",
+     "aciklama": "Anne ya da baba eve gelince sevinçle karşılamama belirtidir; sevinçle karşılama beklenen gelişimdir ve otizm belirtisi sayılmaz.",
+     "sik_aciklamalari": {
+      "A": "Hayali oyun yokluğu, 36 ay öncesi otizm açısından dikkat edilmesi gereken belirtilerdendir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz.",
+      "B": "İsteklerini parmaklarıyla göstermeme ve işaret etmeme belirtidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu belirti, çocuğun isteğini iletmek için işaret etme becerisinin gelişmediğini gösterir ve otizm açısından dikkat çeker.",
+      "C": "Seslere, özellikle adına tutarlı olarak bakmama belirtidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu belirti, çağrıya karşılık verme becerisinin eksikliğini gösterir ve otizm açısından dikkat çeken bir bulgudur.",
+      "D": "Tanımadığı kişileri yabancılamama dikkat edilmesi gereken belirtilerdendir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Tanımadığı kişiye karşı çekingenlik göstermemek, sosyal ayrım yapamamanın göstergesi olarak otizm açısından önemlidir.",
+      "E": "Anne ya da baba eve gelince sevinçle karşılamama belirtidir; sevinçle karşılama normal gelişimdir. Bunu belirti olarak sunmak yanlıştır, aranan ifade budur."
+     },
+     "s": 20,
+     "id": "k2-42-norogelisimsel-bozukluklar-q35"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Otizmin oluş nedenlerini ve çok boyutlu sağaltım ilkelerini açıklar; davranışsal girişimlerin ve ilacın yerini belirtir (s. 21-22).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otizm sağaltımıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "İlaç sağaltımı çekirdek belirtilerin birincil sağaltımıdır",
+      "B": "Bireye yönelik planlanır",
+      "C": "Çevresel bağlam da ele alınır",
+      "D": "Çok boyutlu olmak zorundadır",
+      "E": "Davranışsal yaklaşımlar en çok kullanılan yöntemlerdendir"
+     },
+     "dogru": "A",
+     "aciklama": "Otizmde en etkin yöntemler davranışsal girişimler ve eğitimdir; ilaç sağaltımı daha çok ek tanıları ve davranış sorunlarını hedef alır.",
+     "sik_aciklamalari": {
+      "A": "İlaç sağaltımı çekirdek belirtilerin birincil sağaltımı değildir; daha çok ek tanıları ve davranış sorunlarını hedef alır. Bu ifade yanlıştır ve aranan seçenek budur.",
+      "B": "Sağaltımın iki temel ilkesinden biri bireye yönelik planlanmasıdır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, her çocuğun güçlü ve zayıf yönlerine göre ayrı bir program kurulmasını gerektirir.",
+      "C": "Çevresel bağlamın ele alınması sağaltımın ikinci temel ilkesidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, ev ve okul gibi çocuğun yaşadığı ortamın da sağaltım planına katılmasını sağlar.",
+      "D": "Sağaltım çok boyutlu olmak zorundadır; tek bir yöntemle sınırlı kalmaz. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu özellik, otizm sağaltımının tek bir yöntemle yürütülemeyeceğini anlatır ve sağaltım ilkelerinden biridir.",
+      "E": "Günümüzde en çok kullanılan yöntemlerin başında davranışsal yaklaşımlar gelir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu yöntemler eğitimle birlikte uygulanır ve otizmde en çok başvurulan sağaltım yaklaşımını oluşturur."
+     },
+     "s": 22,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q36"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Otizm sağaltımında en etkili yöntemler aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Psikostimülanlar ve atomoksetin",
+      "B": "Nörocerrahi ve derin beyin uyarımı",
+      "C": "Davranışsal girişimler ve eğitim",
+      "D": "Trisiklik antidepresanlar ve venlafaksin",
+      "E": "Dopaminerjik antagonistler ve klonidin"
+     },
+     "dogru": "C",
+     "aciklama": "Otizm biyolojik temelli bir bozukluk olmakla birlikte en etkin sağaltım yöntemleri davranışsal girişimler ve eğitimdir.",
+     "sik_aciklamalari": {
+      "A": "Psikostimülanlar ve atomoksetin DEHB sağaltımında kullanılan ilaçlardır. Otizmde en etkili yöntem olarak sayılmadığı için şık elenir. Bu ilaçlar dikkat ve hareketliliği hedef alır; otizmin çekirdek sağaltımını oluşturmaz.",
+      "B": "Nörocerrahi ve derin beyin uyarımı, tik bozukluklarında etkili olabileceği bildirilen yöntemlerdir. Otizmin etkin sağaltımı olarak tanımlanmadığı için şık elenir. Bu yöntemler tik bozukluğunun ilaca yanıtsız ağır olgularında bildirilen seçeneklerdir, otizm için tanımlanmamıştır.",
+      "C": "Otizmde en etkili sağaltım yöntemleri davranışsal girişimler ve eğitimdir. Bağımsız yaşam becerilerini ve iletişimi geliştirmek amaçlandığı için doğru yanıt budur.",
+      "D": "Trisiklik antidepresanlar ve venlafaksin, DEHB sağaltımında diğer seçenekler arasında sayılan ilaçlardır. Otizmde ilaç daha çok ek tanılar ve davranış sorunları için kullanıldığından en etkili yöntem olmadığı için şık elenir.",
+      "E": "Dopaminerjik antagonistler ve klonidin, tik bozukluklarında kullanılan ilaç gruplarıdır. Otizmin temel sağaltımı olmadığı için şık elenir. Bu ilaç grubu tik bozukluğunda kullanılır; otizmin etkin sağaltımı için tanımlanmış bir yöntem değildir."
+     },
+     "s": 22,
+     "id": "k2-42-norogelisimsel-bozukluklar-q37"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otizmde ilaç sağaltımı aşağıdakilerden hangisini hedef alır?",
+     "secenekler": {
+      "A": "Kesin oluş nedenini ortadan kaldırmayı",
+      "B": "Ek tanıları ve davranış sorunlarını",
+      "C": "Yalnızca konuşma gecikmesini",
+      "D": "Kalıtsal etkenleri",
+      "E": "Tanısal laboratuvar göstergesini"
+     },
+     "dogru": "B",
+     "aciklama": "Otizmde ilaç sağaltımı daha çok ek tanıları ve davranış sorunlarını hedef alır.",
+     "sik_aciklamalari": {
+      "A": "Otizmin kesin oluş nedeni olarak sorumlu gösterilen bir düzenek yoktur. İlaç nedeni ortadan kaldırmayı hedeflemediği için şık elenir. Bu yüzden ilaçla kesin nedeni ortadan kaldırmak mümkün değildir; ilaç belirli sorunları hafifletmek için kullanılır.",
+      "B": "İlaç sağaltımı daha çok ek tanıları ve davranış sorunlarını hedef alır. Çekirdek sağaltım davranışsal girişimler ve eğitim olduğundan doğru yanıt budur.",
+      "C": "Konuşma gecikmesi otizmin bir belirtisidir. En etkin yöntemler davranışsal girişimler ve eğitim olduğundan, ilacın hedefi yalnızca bu belirti olmadığı için şık elenir.",
+      "D": "Kalıtım güçlü kanıtlarla bilinen bir etkendir. İlaç kalıtsal etkenleri değiştirmeye yönelik uygulanmadığı için şık elenir. İlaçlar genetik yapıyı değiştirmez; yalnızca eşlik eden sorunların belirtilerini hafifletir.",
+      "E": "Otizmde tanısal bir laboratuvar göstergesi henüz bulunamamıştır. İlaç böyle bir göstergeyi hedeflemediği için şık elenir. Böyle bir gösterge bulunmadığı için ilacın hedefi bir laboratuvar değeri değil, klinik sorunlardır."
+     },
+     "s": 22,
+     "id": "k2-42-norogelisimsel-bozukluklar-q38"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otizmin oluş nedenleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca ailesel etmenler etkilidir",
+      "B": "Tek bir düzenek kesin oluş nedeni olarak gösterilmiştir",
+      "C": "Nörobiyolojik bozukluk saptanmamıştır",
+      "D": "Çevresel etmenlerin rolü dışlanmıştır",
+      "E": "Kalıtımın rolüne ilişkin güçlü kanıtlar vardır"
+     },
+     "dogru": "E",
+     "aciklama": "Otizmin patogenezinde nörobiyolojik ve kalıtım etkenleri etkilidir; kalıtım için güçlü kanıtlar vardır, ailesel ve çevresel etmenler de bulunur.",
+     "sik_aciklamalari": {
+      "A": "Patogenezde nörobiyolojik ve kalıtım etkenleri etkilidir; ailesel ve çevresel etmenler de bulunur. Yalnızca ailesel etmenlerin etkili olduğunu söylemek yanlış olduğu için şık elenir.",
+      "B": "Otizmin kesin oluş nedeni olarak sorumlu gösterilen bir düzenek yoktur. Tek bir düzeneğin kanıtlandığını söylemek yanlış olduğu için şık elenir.",
+      "C": "Otizmde nöroanatomik, nörobiyolojik ve nörokimyasal bozukluklar görülmüştür. Nörobiyolojik bozukluk saptanmadığını söylemek yanlış olduğu için şık elenir. Yani otizmin biyolojik temeli gösterilmiştir ve bu bilgi bozukluğun sadece psikolojik bir tablo olmadığını anlatır.",
+      "D": "Ailesel ve çevresel etmenler de otizmin oluşunda yer alır. Çevresel etmenlerin rolünün dışlandığını söylemek yanlış olduğu için şık elenir. Otizmin oluşunda birden çok etmenin birlikte rol oynadığı bilindiği için bu iddia doğru değildir.",
+      "E": "Kalıtım, otizmin patogenezinde güçlü kanıtlarla desteklenen etkendir ve nörobiyolojik etkenlerle birlikte rol oynar. Bu nedenle kalıtımın rolüne ilişkin güçlü kanıt bulunduğunu söyleyen ifade doğrudur."
+     },
+     "s": 21,
+     "id": "k2-42-norogelisimsel-bozukluklar-q39"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otizmin patogenezi ve tanısıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Tanıyı kesinleştiren bir laboratuvar testi bulunmuştur",
+      "B": "Kalıtım için güçlü kanıtlar vardır",
+      "C": "Nörobiyolojik ve kalıtım etkenleri etkilidir",
+      "D": "Nöroanatomik ve nörokimyasal bozukluklar görülmüştür",
+      "E": "Ailesel ve çevresel etmenler de bulunur"
+     },
+     "dogru": "A",
+     "aciklama": "Herhangi bir laboratuvar testi ile ortaya konabilecek tanısal bir gösterge henüz bulunamamıştır.",
+     "sik_aciklamalari": {
+      "A": "Otizmde tanıyı ortaya koyan bir laboratuvar testi ve tanısal gösterge henüz bulunamamıştır. İfade yanlıştır ve aranan seçenek budur. Yani tanıda laboratuvar değil, belirtilerin klinik değerlendirmesi esas olduğu için bu ifade gerçeği yansıtmaz.",
+      "B": "Kalıtım otizmde güçlü kanıtlarla desteklenen etkendir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bilgi bozukluğun kalıtsal yönünü vurgular.",
+      "C": "Nörobiyolojik ve kalıtım etkenleri otizmin patogenezinde etkilidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bilgi, otizmin yalnızca psikolojik bir tablo olmadığını ve biyolojik temelinin bulunduğunu gösterir.",
+      "D": "Otizmde nöroanatomik, nörobiyolojik ve nörokimyasal bozukluklar görülmüştür. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgular, otizmin biyolojik temelli bir bozukluk olduğunu destekleyen araştırma sonuçlarıdır.",
+      "E": "Ailesel ve çevresel etmenler de otizmin oluşunda yer alır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu etmenler, kalıtımın yanında otizmin oluşunda birlikte değerlendirilen diğer bir grup etkendir."
+     },
+     "s": 21,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q40"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "DEHB'yi tanımlar; temel belirtileri, üç alt türü, tanı yöntemini ve yaygınlığını açıklar (s. 23-25).",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Dikkat eksikliği hiperaktivite bozukluğu için aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Belirtiler gelişimsel düzeyle uyumlu ağırlıktadır",
+      "B": "Akademik, sosyal ve mesleki alanları olumsuz etkiler",
+      "C": "Uyum becerilerini bozar",
+      "D": "Temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir",
+      "E": "Klinik ve oluş nedenleri yönünden heterojen bir sendromdur"
+     },
+     "dogru": "A",
+     "aciklama": "Belirtiler gelişimsel düzeyle uyuşmayacak ağırlıktadır; gelişimsel düzeyle uyumlu olduğunu söylemek yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Belirtiler gelişimsel düzeyle uyuşmayacak ağırlıktadır; yani yaşa ve gelişim düzeyine göre beklenenden fazladır. Uyumlu olduğunu söylemek yanlıştır, aranan ifade budur.",
+      "B": "DEHB kişinin yaşamını akademik, sosyal ve mesleki alanlarda olumsuz etkiler. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu etkilenme, DEHB'nin okul ve iş yaşamında önemli bir işlev kaybına yol açtığını gösterir.",
+      "C": "DEHB belirtileri kişinin uyum becerilerini bozar. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bozulma, belirtilerin yalnızca bir huy sorunu olmadığını, işlev kaybına yol açtığını gösterir.",
+      "D": "DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu üç belirti, tanının çekirdeğini oluşturur ve bozukluğun adını da verir.",
+      "E": "DEHB, klinik ve oluş nedenleri yönünden heterojen bir sendromdur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu özellik, DEHB'nin tek bir nedene bağlanamayacağını ve çok yönlü bir tablo olduğunu gösterir."
+     },
+     "s": 23,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q41"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Dikkat eksikliği hiperaktivite bozukluğunun en tipik üç temel belirtisi aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Dikkatsizlik, tekdüze oyun, törensel davranış",
+      "B": "Dikkatsizlik, aşırı hareketlilik, dürtüsellik",
+      "C": "Aşırı hareketlilik, motor tikler, ses tikleri",
+      "D": "Dürtüsellik, toplumsal etkileşim eksikliği, konuşma gecikmesi",
+      "E": "Dikkatsizlik, okuma güçlüğü, ters yazma"
+     },
+     "dogru": "B",
+     "aciklama": "DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir.",
+     "sik_aciklamalari": {
+      "A": "Tekdüze oyun ve törensel davranış, otizmin sınırlı tekrarlayıcı davranış kümesindedir. Dikkatsizlikle birlikte DEHB belirtileri olarak verilmediği için şık elenir. Bu belirtiler ayrı bir bozukluk grubunun özelliğidir ve DEHB tablosunu tanımlamak için kullanılamaz.",
+      "B": "DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir. Bu belirtiler gelişimsel düzeyle uyuşmayacak ağırlıktadır, bu yüzden doğru yanıt budur.",
+      "C": "Motor ve ses tikleri tik bozukluklarına aittir. Aşırı hareketlilikle birlikte DEHB'nin temel belirtisi olarak sayılmadığı için şık elenir. Tikler ayrı bir bozukluk grubunun belirtileridir; DEHB tablosunu belirlemek için kullanılmaz.",
+      "D": "Toplumsal etkileşim eksikliği ve konuşma gecikmesi otizmin belirtileridir. DEHB'nin temel belirtisi olmadığı için şık elenir. Bu belirtiler başka bir nörogelişimsel tanının tablosunu çizer ve DEHB'nin üç temel belirtisini karşılamaz.",
+      "E": "Okuma güçlüğü ve ters yazma, özgül öğrenme güçlüğünün belirtileridir. DEHB'nin temel belirtisi olmadığı için şık elenir. Bu belirtiler ayrı bir nörogelişimsel tanıya aittir ve DEHB'nin üç temel belirtisini karşılamaz."
+     },
+     "s": 23,
+     "id": "k2-42-norogelisimsel-bozukluklar-q42"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "DEHB'de iki boyut üzerinde tanımlanan üç alt tür aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Dikkat eksikliği ağırlıklı, duygudurum ağırlıklı, bileşik",
+      "B": "Hareketlilik ağırlıklı, öğrenme ağırlıklı, bileşik",
+      "C": "Dikkat eksikliği ağırlıklı, dürtüsellik ağırlıklı, iletişim",
+      "D": "Tik ağırlıklı, dikkat eksikliği ağırlıklı, bileşik",
+      "E": "Dikkat eksikliği ağırlıklı, hareketlilik ve dürtüsellik ağırlıklı, bileşik"
+     },
+     "dogru": "E",
+     "aciklama": "DEHB'de dikkat eksikliği ile dürtüsellik/aşırı hareketlilik boyutları üzerinde üç alt tür vardır: dikkat eksikliği ağırlıklı, hareketlilik/dürtüsellik ağırlıklı ve bileşik tür.",
+     "sik_aciklamalari": {
+      "A": "Duygudurum ağırlıklı tür, DEHB alt türü olarak tanımlanmaz. İki boyut dikkat eksikliği ve dürtüsellik/aşırı hareketliliktir, bu yüzden şık elenir.",
+      "B": "Öğrenme ağırlıklı tür DEHB alt türleri arasında tanımlanmamıştır. Alt türler iki boyuta göre ayrıldığı için şık elenir. Bu ifadede iki boyuta dayanmayan bir tür bulunduğu için DEHB'nin üç alt türünü doğru vermez.",
+      "C": "İletişim DEHB alt türü olarak tanımlanmaz. Alt türler yalnızca iki boyutun ağırlığına göre adlandırıldığı için şık elenir. DEHB'nin alt türleri iki boyutun ağırlığına göre adlandırılır, bu seçenekteki sonuncu tür bu ölçüte uymaz.",
+      "D": "Tik ağırlıklı tür DEHB alt türü olarak tanımlanmaz; tikler ayrı bir bozukluk grubudur. Bu yüzden şık elenir. Bu ifadede iki boyuta dayanmayan bir tür bulunduğu için DEHB'nin üç alt türünü doğru vermez.",
+      "E": "Alt türler dikkat eksikliğinin ön planda olduğu, aşırı hareketlilik ve dürtüselliğin ön planda olduğu ve bileşik türdür. Bu yüzden doğru yanıt budur."
+     },
+     "s": 24,
+     "id": "k2-42-norogelisimsel-bozukluklar-q43"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "DEHB tanısıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Klinik görünüm ve öykü temelinde konur",
+      "B": "Ana-baba derecelendirme ölçekleri kullanılır",
+      "C": "Tanı nesnel bir laboratuvar ölçümüne dayanır",
+      "D": "Öğretmen derecelendirme ölçekleri kullanılır",
+      "E": "Farklı ortamlardaki davranışlar değerlendirilir"
+     },
+     "dogru": "C",
+     "aciklama": "DEHB'de klinik görünüm ve öykü temelinde, öznel düşüncelere dayalı olarak tanı konur; nesnel bir laboratuvar ölçümüne dayandığı söylenemez.",
+     "sik_aciklamalari": {
+      "A": "DEHB'de klinik görünüm ve öykü temelinde tanı konur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, tanının öznel ve klinik bir değerlendirmeye dayandığını ve nesnel bir ölçümle konulmadığını anlatır.",
+      "B": "Ana-baba derecelendirme ölçekleri, davranışların farklı ortamlardaki görünümlerini belirlemek ve sağaltımın etkilerini değerlendirmek için kullanılır. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "C": "DEHB'de tanı klinik görünüm ve öykü temelinde öznel düşüncelere dayalı olarak konur. Nesnel bir laboratuvar ölçümüne dayandığını söylemek yanlıştır, aranan ifade budur.",
+      "D": "Öğretmen derecelendirme ölçekleri de ana-baba ölçekleriyle birlikte tanıda ve sağaltımın değerlendirilmesinde kullanılır. İfade doğrudur, aranan yanlış ifade olamaz. Bu ölçekler, davranışları farklı ortamlarda gözlemleyen öğretmenden bilgi toplamaya yarar.",
+      "E": "Kişinin davranışlarının farklı ortamlardaki görünümleri belirlenir; bu amaçla derecelendirme ölçekleri kullanılır. İfade doğrudur, aranan yanlış ifade olamaz. Bu yaklaşım, belirtilerin yalnızca muayenede değil, evde ve okulda da değerlendirilmesini sağlar."
+     },
+     "s": 24,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q44"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "DEHB yaygınlığı ülkemizde yüzde kaç olarak saptanmıştır?",
+     "secenekler": {
+      "A": "%1-3",
+      "B": "%6,48",
+      "C": "%8,1-8,4",
+      "D": "%11-12",
+      "E": "%0,5"
+     },
+     "dogru": "C",
+     "aciklama": "Dünya genelinde yaygınlık oranı yüzde 6,48 iken ülkemizde bu oran yüzde 8,1-8,4 olarak saptanmıştır.",
+     "sik_aciklamalari": {
+      "A": "%1-3 dünyada zihinsel yetersizlik oranını gösterir. DEHB yaygınlığı olmadığı için şık elenir. Bu oran dünyada zihinsel yetersizlik için bildirilir; DEHB yaygınlığını yansıtmaz, bu yüzden karıştırılmamalıdır.",
+      "B": "%6,48 dünya genelinde yapılan çalışmalarda bildirilen DEHB yaygınlığıdır. Ülkemize ait değer bundan yüksek olduğu için şık elenir. Bu oran dünya ortalamasıdır; ülkemizde saptanan oran bundan daha yüksek olduğu için bu şık eksik kalır.",
+      "C": "Ülkemizde DEHB yaygınlığı %8,1-8,4 olarak saptanmıştır. Bu değer dünya ortalamasının üzerinde olduğu için doğru yanıttır. Bu oran dünya genelindeki %6,48'in üzerindedir ve ülkemizde DEHB'nin sık görüldüğünü gösterir.",
+      "D": "%11-12 bildirilen değerlerin üzerindedir. Ülkemizde böyle bir yaygınlık saptanmadığı için şık elenir. Bu değer bildirilen oranların hepsinden yüksektir, ülkemiz için ise %8,1-8,4 saptanmıştır.",
+      "E": "%0,5 gerçek yaygınlığın çok altındadır. DEHB çocukluk çağında sık saptanan bir bozukluk olduğu için şık elenir. Bu değer yaygınlık verilerinin hiçbirinde yer almaz; çocukluk çağındaki sıklık bundan çok yüksektir."
+     },
+     "s": 25,
+     "id": "k2-42-norogelisimsel-bozukluklar-q45"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "DEHB'de dikkat eksikliği, aşırı hareketlilik ve dürtüsellik belirtilerini ve ilişkili sorunları ayırt eder (s. 26-27).",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "DEHB'de aşırı hareketlilik ya da dürtüselliğe bağlı olarak ortaya çıkan sorun aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Okuma yaparken satır atlama",
+      "B": "Eşyalarını sık sık kaybetme",
+      "C": "Verilen ödevlerden çabuk sıkılma",
+      "D": "Yaşıtlarca reddedilme ve kaza sonucu yaralanma",
+      "E": "Çevresel uyaranlarla dikkatin çelinmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Yaşıtlar tarafından reddedilme ve kaza sonucu yaralanma aşırı hareketlilik ya da dürtüselliğe bağlı olarak ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Okuma yaparken satır atlama, dikkat eksikliği belirtisidir. Aşırı hareketlilikle ilgili olmadığı için şık elenir. Bu davranış okuma sırasında dikkatin sürdürülememesini gösterir; hareketlilik ve dürtüsellikten kaynaklanan bir sorun değildir.",
+      "B": "Eşyalarını sık sık kaybetme, dikkat eksikliği belirtilerindendir. Dürtüsellik sonucu ortaya çıkan sorun olmadığı için şık elenir. Bu davranış dikkatin sürdürülememesinden ve organize olamamaktan kaynaklanır, aşırı hareketlilik ya da dürtüsellikten değil.",
+      "C": "Verilen ödevlerden çabuk sıkılma, dikkat eksikliği belirtisidir ve akademik eksikliklerle ilişkilidir. Hareketlilikle ilgisi olmadığı için şık elenir. Bu sıkılma, ödevi sürdürememe biçiminde ortaya çıkan dikkat eksikliğinin doğrudan bir sonucudur.",
+      "D": "Yaşıtlarca reddedilme ve kaza sonucu yaralanma, aşırı hareketlilik ya da dürtüselliğe bağlı olarak ortaya çıkar. Doğru yanıt budur. Bu sorunlar, çocuğun kuralları umursamaması ve düşünmeden hareket etmesinin toplumsal ve fiziksel sonuçlarıdır.",
+      "E": "Çevresel uyaranlarla dikkatin çelinmesi, dikkat eksikliği belirtilerindendir. Aşırı hareketlilik ya da dürtüsellik sonucu olmadığı için şık elenir. Bu belirti dikkat alanındadır ve hareketlilik ya da dürtüsellik sonucu ortaya çıkan sorunlardan farklıdır."
+     },
+     "s": 27,
+     "id": "k2-42-norogelisimsel-bozukluklar-q46"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "DEHB ile ilişkili özelliklerle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Engellenme eşiğinin düşük olması tanıyı destekler",
+      "B": "Hafif dil, motor ya da sosyal gelişim gecikmesi DEHB'ye özgül bir bulgudur",
+      "C": "Duygudurum dalgalanmaları tanıyı destekler",
+      "D": "Akademik eksiklikler dikkatsizlik belirtilerinin artmasıyla ilişkilidir",
+      "E": "Belirgin hantallıkta gelişimsel koordinasyon bozukluğu tanısı eklenir"
+     },
+     "dogru": "B",
+     "aciklama": "Birçok DEHB'li çocukta dil, motor ya da sosyal gelişimde hafif gecikme vardır ancak bu özgül bir bulgu değildir.",
+     "sik_aciklamalari": {
+      "A": "Engellenme eşiğinin düşük olması, DEHB tanısını destekleyen özelliklerdendir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu özellik, çocuğun istediği olmadığında hızla öfkelenmesine yol açar ve tanıyı destekler.",
+      "B": "Birçok DEHB'li çocukta dil, motor ya da sosyal gelişimde hafif gecikme vardır, fakat bu özgül bir bulgu değildir. Özgül olduğunu söylemek yanlıştır, aranan ifade budur.",
+      "C": "Sinirlilik ve duygudurum dalgalanmaları DEHB tanısını destekler. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu özellik de tanıyı destekleyen bir ek bulgudur, ancak tek başına tanı koydurmaz.",
+      "D": "Akademik eksiklikler ve okul sorunları dikkatsizlik belirtilerinin artmasıyla ilişkilidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilişki, okul başarısızlığının DEHB'de çoğu zaman dikkat belirtilerinin ağırlaşmasıyla birlikte arttığını gösterir.",
+      "E": "Belirgin hantalık ve motor gecikme varsa ek olarak gelişimsel koordinasyon bozukluğu tanısı konur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz."
+     },
+     "s": 27,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q47"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi DEHB'de dürtüsellik belirtisidir?",
+     "secenekler": {
+      "A": "Okuma yaparken satır atlama",
+      "B": "Dinlemiyormuş gibi görünme",
+      "C": "Eşyalarını sık sık kaybetme",
+      "D": "Verilen ödevlerden çabuk sıkılma",
+      "E": "Düşünmeden hareket etme ve sırasını bekleyememe"
+     },
+     "dogru": "E",
+     "aciklama": "Dürtüsellik; düşünmeden hareket etme, kuralları umursamama, başkalarının etkinliklerine müdahale etme ve sırasını bekleyememe biçiminde ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Okuma yaparken satır atlama, dikkat eksikliği belirtisidir. Dürtüsellikle ilgili olmadığı için şık elenir. Bu davranış dikkat alanındadır; bir görevi ya da satırı izlemeyi sürdürememeyi gösterir.",
+      "B": "Dinlemiyormuş gibi görünme, dikkat eksikliği belirtisidir. Dürtüsellik belirtisi olmadığı için şık elenir. Bu belirti, çevresindeki kişilere yönelik dikkatin sürdürülememesini gösterir ve dürtüsellik alanına girmez.",
+      "C": "Eşyalarını sık sık kaybetme, dikkat eksikliğinin bir belirtisidir. Dürtüsellik olmadığı için şık elenir. Eşya kaybetme organize olamama ve dikkat dağınıklığını gösterir, dürtüsellikten kaynaklanmaz.",
+      "D": "Verilen ödevlerden çabuk sıkılma, dikkat eksikliği belirtisidir. Dürtüselliği anlatmadığı için şık elenir. Bu belirti, görevi sürdürememenin sonucunda ortaya çıkar ve dikkat eksikliği alanındadır.",
+      "E": "Düşünmeden hareket etme, kuralları umursamama ve sırasını bekleyememe dürtüselliğin belirtileridir. Bu üç davranış, düşünmeden hareket etmenin ve başkalarına müdahalenin günlük yaşamdaki görünümleridir; doğru yanıt budur."
+     },
+     "s": 26,
+     "id": "k2-42-norogelisimsel-bozukluklar-q48"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "DEHB etiyolojisindeki çok genli modeli ve ilaç sağaltımında psikostimülanların ilk seçenek olduğunu söyler (s. 28-29).",
+   "sorular": [
+    {
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "DEHB sağaltımında ilaç tedavisinde ilk seçenek aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atomoksetin",
+      "B": "Guanfasin",
+      "C": "Bupropion",
+      "D": "Psikostimülanlar",
+      "E": "Modafinil"
+     },
+     "dogru": "D",
+     "aciklama": "DEHB'de ilaç sağaltımının ilk seçeneği psikostimülanlardır; atomoksetin, guanfasin, klonidin, TCA, venlafaksin, bupropion ve modafinil diğer seçeneklerdir.",
+     "sik_aciklamalari": {
+      "A": "Atomoksetin, DEHB'de kullanılan diğer seçeneklerden biridir. İlk seçenek olarak tanımlanmadığı için şık elenir. Bu ilaç psikostimülanlardan sonra denenen seçeneklerdendir, ilk sırada kullanılan ilaç grubu değildir.",
+      "B": "Guanfasin, klonidinle birlikte DEHB'de kullanılan diğer seçeneklerdendir. İlk basamak ilaç olmadığı için şık elenir. Bu ilaçlar psikostimülanlar yetersiz kaldığında akla gelen seçenekler arasında yer alır.",
+      "C": "Bupropion, diğer seçenekler arasında sayılan bir ilaçtır. İlk seçenek olmadığı için şık elenir. Bu ilaç ilk seçenek olan psikostimülanlardan sonra denenen seçeneklerden biridir.",
+      "D": "İlk seçenek psikostimülanlardır. İlaç sağaltımı psikososyal girişimler ve destekleyici tutumlarla birlikte yürütüldüğü için doğru yanıt budur. Bu ilaç grubu, sağaltımın temelini oluşturan ve ilk akla gelen seçenektir; diğer ilaçlar sonraki basamaklarda denenir.",
+      "E": "Modafinil, diğer seçenekler arasında yer alan bir ilaçtır. İlk seçenek olarak tanımlanmadığı için şık elenir. Bu ilaç da psikostimülanlardan sonra denenen seçenekler arasında yer alır, sağaltımın ilk adımı değildir."
+     },
+     "s": 29,
+     "id": "k2-42-norogelisimsel-bozukluklar-q49"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "DEHB sağaltımıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Yalnızca ilaç sağaltımı yeterlidir ve psikososyal girişim gerekmez",
+      "B": "Atomoksetin seçenekler arasındadır",
+      "C": "İlaç sağaltımı psikososyal girişimlerle birlikte yürür",
+      "D": "Venlafaksin seçenekler arasındadır",
+      "E": "Klonidin ve guanfasin seçenekler arasındadır"
+     },
+     "dogru": "A",
+     "aciklama": "İlaç sağaltımının yanı sıra psikososyal girişimler ve destekleyici tutumlar da sağaltıma dahildir; yalnızca ilaçla yetinmek söylenemez.",
+     "sik_aciklamalari": {
+      "A": "Sağaltım ilaçla sınırlı değildir; psikososyal girişimler ve destekleyici tutumları da içerir. Yalnızca ilacın yeterli olduğunu söylemek yanlıştır, aranan seçenek budur.",
+      "B": "Atomoksetin, DEHB'de kullanılan diğer seçeneklerden biridir ve psikostimülanların yanında anılır. İfade doğrudur, bu yüzden sorunun aradığı yanlış ifade olamaz.",
+      "C": "İlaç sağaltımı psikososyal girişimler ve destekleyici tutumlarla birlikte yürütülür. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, ilaç sağaltımını eğitim ve aile desteğiyle birlikte yürütmeyi gerektirir.",
+      "D": "Venlafaksin, DEHB'de kullanılabilen diğer ilaçlardandır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilaç psikostimülanlar dışındaki alternatifler arasında sayılır ve doğru ifadedir.",
+      "E": "Klonidin ve guanfasin DEHB'de kullanılabilen diğer seçeneklerdir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu iki ilaç psikostimülanlardan sonra düşünülen seçenekler arasındadır ve ifade doğrudur."
+     },
+     "s": 29,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q50"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "DEHB etiyolojisinde genetik katılım hangi modelle açıklanır?",
+     "secenekler": {
+      "A": "Tek genli model",
+      "B": "Yalnızca çevresel model",
+      "C": "X'e bağlı resesif model",
+      "D": "Mitokondriyal kalıtım",
+      "E": "Çok genli model"
+     },
+     "dogru": "E",
+     "aciklama": "DEHB etiyolojisinde genetik katılım çok genli modelle açıklanır; çevresel etmenler de rol oynar.",
+     "sik_aciklamalari": {
+      "A": "Tek genli model, tek bir genin belirleyici olduğu kalıtımı anlatır. DEHB'de genetik katılım birden çok genle açıklandığı için şık elenir.",
+      "B": "Çevresel etmenler DEHB etiyolojisinde yer alır, fakat genetik katılım da vardır. Yalnızca çevresel bir model genetik katkıyı yok saydığı için şık elenir.",
+      "C": "X'e bağlı resesif kalıtım, genin cinsiyet kromozomunda taşındığı bir kalıtım biçimidir. DEHB'nin genetik modeli olarak tanımlanmadığı için şık elenir.",
+      "D": "Mitokondriyal kalıtım anne yoluyla geçen mitokondri genlerini anlatır. DEHB'nin genetik modeli olarak tanımlanmadığı için şık elenir. Mitokondriyal kalıtımda hastalık yalnızca anneden çocuğa geçer; DEHB için böyle bir model tanımlanmamıştır.",
+      "E": "DEHB etiyolojisinde genetik katılım çok genli modelle açıklanır; birden çok gen birlikte yatkınlık oluşturur ve çevresel etmenler de rol oynar. Doğru yanıt budur."
+     },
+     "s": 28,
+     "id": "k2-42-norogelisimsel-bozukluklar-q51"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Özgül öğrenme güçlüğünü tanımlar, tanı koşulunu, DSM-5 alt tanımlayıcılarını ve okul öncesi belirtileri açıklar (s. 30-31).",
+   "sorular": [
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Akademik başarıda ciddi düşüklük vardır",
+      "B": "Tanı için çocuğun okula başlamış olması gerekir",
+      "C": "Okuma, yazılı anlatım ve matematik alt tanımlayıcı olarak kodlanır",
+      "D": "Genel bilişsel işlevlerde belirgin bozukluk bulunur",
+      "E": "DSM-5'te tek başlık altında birleştirilmiştir"
+     },
+     "dogru": "D",
+     "aciklama": "Özgül öğrenme güçlüğünde genel bilişsel işlevlerde bir sorun olmadığı halde akademik başarıda ciddi düşüklük vardır; genel bilişsel işlevlerin bozuk olduğu söylenemez.",
+     "sik_aciklamalari": {
+      "A": "Akademik başarıda ciddi düşüklük, özgül öğrenme güçlüğünün çekirdek özelliğidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgu, tanıyı koydurmak için gerekli olan ciddi akademik sorunu anlatır.",
+      "B": "Tanı konabilmesi için çocuğun okula başlaması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gerekir. İfade doğrudur, aranan yanlış ifade olamaz.",
+      "C": "Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları tanının alt tanımlayıcıları olarak kodlanır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz.",
+      "D": "Tanım, genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklük gösteren durumlar için kullanılır. Genel bilişsel işlevlerde belirgin bozukluk olduğunu söylemek yanlıştır, aranan seçenek budur.",
+      "E": "DSM-5'te özgül öğrenme bozukluğu tek başlık altında birleştirilmiştir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bilgi, özgül öğrenme güçlüğünün DSM-5'te ayrı tanılar yerine tek bir başlık altında ele alındığını gösterir."
+     },
+     "s": 30,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q52"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Özgül öğrenme güçlüğü tanısının konabilmesi için aşağıdakilerden hangisi gereklidir?",
+     "secenekler": {
+      "A": "Motor beceriksizlik bulunması",
+      "B": "Zihinsel yetersizliğin eşlik etmesi",
+      "C": "Okul öncesinde dil gecikmesi bulunması",
+      "D": "Çocuğun okula başlamış olması",
+      "E": "Sosyal ilişki sorunu bulunması"
+     },
+     "dogru": "D",
+     "aciklama": "Tanı konabilmesi için çocuğun okula başlaması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gerekir.",
+     "sik_aciklamalari": {
+      "A": "Motor beceriksizlik, okul öncesinde görülebilen eşlik edici bir belirtidir. Tanının koşulu olarak aranmadığı için şık elenir. Bu bulgu okul öncesinde görülebilir ama tanıyı koymak için gerekli değildir.",
+      "B": "Zihinsel yetersizlik tanımın parçası değildir; özgül öğrenme güçlüğünde genel bilişsel işlevlerde sorun yoktur. Bu şık tanı koşulu olamayacağı için elenir.",
+      "C": "Okul öncesinde dil gelişimi gecikmesi görülebilen bir belirtidir, ancak bu dönemde tanı koymak uygun olmaz. Tanı koşulu olmadığı için şık elenir.",
+      "D": "Tanı için çocuğun okula başlamış olması ve temel akademik yeterliliklerin denenebileceği ortamın oluşması gerekir. Doğru yanıt budur. Bu koşul, akademik yeterliliklerin ancak okul ortamında sınanabilmesinden kaynaklanır.",
+      "E": "Sosyal ilişki sorunları, duyguları ifade edememe ve yalnızlaşma gibi eşlik eden durumlardır. Tanının koşulu olmadığı için şık elenir. Bu durumlar eşlik edebilir ancak tanı için aranan bir koşul oluşturmaz."
+     },
+     "s": 30,
+     "id": "k2-42-norogelisimsel-bozukluklar-q53"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "DSM-5'te özgül öğrenme bozukluğunun alt tanımlayıcıları aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Okuma, konuşma, hareket",
+      "B": "Dinleme, konuşma, yazma",
+      "C": "Okuma, yazılı anlatım, matematik",
+      "D": "Yazma, hareket, dikkat",
+      "E": "Matematik, dikkat, bellek"
+     },
+     "dogru": "C",
+     "aciklama": "DSM-5'te özgül öğrenme bozukluğu tek başlık altında birleştirilmiş; okuma, yazılı anlatım ve matematik alanlarındaki sorunlar alt tanımlayıcı olarak kodlanır.",
+     "sik_aciklamalari": {
+      "A": "Konuşma ve hareket alt tanımlayıcı olarak kodlanmaz; tanımlayıcılar akademik alanlardır. Bu yüzden şık elenir. Bu şıkta yer alan hareket, akademik bir alan olmadığı için tanıdaki alt tanımlayıcılar arasına girmez.",
+      "B": "Dinleme ve konuşma alt tanımlayıcı olarak kodlanmaz; kodlama akademik alanlara göre yapılır. Bu yüzden şık elenir. Dinleme ve konuşma akademik beceri alanı sayılmaz, bu yüzden bu şıktaki ögeler alt tanımlayıcıdan farklıdır.",
+      "C": "Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları tanının alt tanımlayıcıları olarak kodlanır. Doğru yanıt budur. Bu üç alan, özgül öğrenme bozukluğunun DSM-5'te alt tanımlayıcı olarak kodlanan akademik alanlarıdır.",
+      "D": "Hareket ve dikkat akademik alanlar olmadığı için alt tanımlayıcı sayılmaz. Alt tanımlayıcılar okuma, yazılı anlatım ve matematiktir, bu yüzden şık elenir.",
+      "E": "Dikkat ve bellek eşlik eden sorunlardır, alt tanımlayıcı değildir. Alt tanımlayıcılar okuma, yazılı anlatım ve matematik olduğu için şık elenir."
+     },
+     "s": 30,
+     "id": "k2-42-norogelisimsel-bozukluklar-q54"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Özgül öğrenme güçlüğünün okul öncesi dönemdeki durumuyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tanı bu dönemde kesinleştirilir",
+      "B": "Belirtiler yalnızca ergenlikte ortaya çıkar",
+      "C": "Bu dönemde hiçbir belirti görülmez",
+      "D": "Yalnızca motor belirtiler görülür",
+      "E": "Tanı koymak uygun olmasa da bazı belirtiler görülür"
+     },
+     "dogru": "E",
+     "aciklama": "Okul öncesi dönemde tanı koymak uygun olmasa da çocuklar dil gecikmesi, kavram öğrenme güçlüğü ve motor beceriksizlik gibi belirtiler gösterir.",
+     "sik_aciklamalari": {
+      "A": "Tanı için çocuğun okula başlaması gerektiğinden tanı bu dönemde kesinleştirilmez. Okul öncesinde tanı koymak uygun olmadığı için tanının kesinleştiğini söyleyen ifade yanlıştır.",
+      "B": "Belirtiler okul öncesinden başlar; akademik sorunlar okul çağında belirginleşir ama ergenlikte yeni başlamaz. Bu nedenle ifade yanlıştır. Belirtiler daha erken başlar ve okul öncesinde de fark edilir; ergenliğe kadar beklenmez.",
+      "C": "Okul öncesi dönemde de belirtiler görülür; dil, kavram, dikkat, bellek ve sosyal alanlar etkilenebilir. Hiçbir belirti görülmediğini söylemek yanlıştır. Oysa çocuklar dil, kavram, dikkat ve bellek alanlarında belirtiler gösterir; bu yüzden belirtilerin hiç olmadığı söylenemez.",
+      "D": "Belirtiler yalnızca motor alanla sınırlı değildir; dil, kavram, dikkat, bellek ve sosyal alanlar da etkilenir. Bu nedenle ifade yanlıştır. Belirtiler dil ve kavram alanlarını da kapsar; bu yüzden yalnızca motor alanla sınırlı değildir.",
+      "E": "Tanı koymak uygun olmasa da çocuklar dil gelişiminde gecikme, kavramları öğrenmede güçlük ve motor beceriksizlik gibi belirtiler gösterir. Bu yüzden doğru ifade budur."
+     },
+     "s": 31,
+     "id": "k2-42-norogelisimsel-bozukluklar-q55"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Okul öncesi dönemde özgül öğrenme güçlüğü belirtisi olarak aşağıdakilerden hangisi görülmez?",
+     "secenekler": {
+      "A": "Sıralama ve eşleştirme becerilerinin güçlü olması",
+      "B": "Heceleri doğru sıralayamama",
+      "C": "Dil gelişiminde gecikme",
+      "D": "Zaman ve yön kavramlarını öğrenmede güçlük",
+      "E": "Renk, sayı ve geometrik şekilleri öğrenmede güçlük"
+     },
+     "dogru": "A",
+     "aciklama": "Okul öncesinde sıralama ve eşleştirme becerileri zayıftır; bu becerilerin güçlü olması özgül öğrenme güçlüğü belirtisi olarak görülmez.",
+     "sik_aciklamalari": {
+      "A": "Okul öncesinde sıralama ve eşleştirme becerileri zayıftır; güçlü olması bu bozukluğun belirtisi olarak görülmez. Aranan seçenek budur. Gerçekte bu beceriler zayıf olduğundan özgül öğrenme güçlüğünün bir belirtisi olarak sayılmaz.",
+      "B": "Sesleri ve heceleri doğru sıralayamama dil alanına ait okul öncesi belirtisidir. Bu nedenle aranan seçenek olamaz. Bu belirti, dil alanına ait okul öncesi belirtiler arasında sayılır ve sesleri değiştirmeyle birlikte görülür.",
+      "C": "Dil gelişiminde gecikme okul öncesinde görülen belirtidir; sesleri çıkarmada güçlük de ona eşlik eder. Bu nedenle aranan seçenek olamaz. Bu belirti, sesleri çıkarmada güçlük ve heceleri sıralayamama ile birlikte dil alanına ait okul öncesi belirtidir.",
+      "D": "Zaman ve yön kavramlarını öğrenmede zorluk okul öncesi belirtilerdendir. Bu nedenle aranan seçenek olamaz. Bu belirti kavram öğrenme alanındadır ve okul öncesi dönemde ayrıntılı biçimde gözlenebilir.",
+      "E": "Renk, sayı ve geometrik şekilleri öğrenmede zorluk okul öncesinde görülen belirtidir. Bu nedenle aranan seçenek olamaz. Bu belirti kavram öğrenme alanındadır ve okul öncesinde de ayrıntılı biçimde gözlenebilir."
+     },
+     "s": 31,
+     "id": "k2-42-norogelisimsel-bozukluklar-q56"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Özgül öğrenme güçlüğünün okul çağı belirtilerini, tanıya yardımcı testleri ve yaşam boyu seyrini açıklar (s. 32-34).",
+   "sorular": [
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Okul çağındaki özgül öğrenme güçlüğüyle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Okurken satır atlama sıktır",
+      "B": "Okuduğunu anlamakta zorlanma dikkat çeker",
+      "C": "Alfabe, günler, aylar ve çarpım tablosunu öğrenmede zorluk yaşarlar",
+      "D": "Yazarken ters yazma ve harf-hece atlama olur",
+      "E": "Okuma yazmayı yaşıtlarından erken öğrenirler"
+     },
+     "dogru": "E",
+     "aciklama": "Özgül öğrenme güçlüğünde okuma yazmayı öğrenmede yaşıtlardan göre gecikme görülür; yaşıtlardan erken öğrenmek söylenemez.",
+     "sik_aciklamalari": {
+      "A": "Okurken yanlış ve yavaş okuma, harf, hece ve satır atlama sıktır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu belirti, okuma yazma becerisindeki gecikmenin en görünür yüzüdür ve okul çağında başvuru nedeni olur.",
+      "B": "Okuduğunu anlamakta zorlanma, okul çağında dikkat çeken belirtidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgu, çocuğun okuma becerisinin yalnızca hızını değil, kavrayışını da etkileyen bir güçlük olduğunu gösterir.",
+      "C": "Alfabe, günler, aylar, sayılar, çarpım tablosu ve saati öğrenmede çok zorluk yaşanır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz.",
+      "D": "Yazarken ters yazma, eksik yazma, harf ve hece atlama olur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu bulgu yazma becerisindeki güçlüğün tipik görünümüdür ve doğru ifadedir.",
+      "E": "Özgül öğrenme güçlüğünde okuma yazmayı öğrenmede yaşıtlara göre gecikme vardır. Yaşıtlardan erken öğrendiklerini söylemek yanlıştır, aranan seçenek budur. Oysa bu çocuklar yaşıtlarının gerisinde kaldığı için bu ifade özgül öğrenme güçlüğünün seyriyle çelişir."
+     },
+     "s": 32,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q57"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi özgül öğrenme güçlüğünün tanısında yardımcı araçlardan biri değildir?",
+     "secenekler": {
+      "A": "Kromozom analizi",
+      "B": "Bender-Gestalt testi",
+      "C": "Benton testi",
+      "D": "Harris testi",
+      "E": "WISC-R zekâ testi"
+     },
+     "dogru": "A",
+     "aciklama": "WISC-R zekâ testi ile Bender-Gestalt, Benton ve Harris özel yetenek testleri tanıya yardımcıdır; kromozom analizi bu araçlar arasında sayılmaz.",
+     "sik_aciklamalari": {
+      "A": "Kromozom analizi zihinsel yetersizliğin nedenini araştırmada akla gelen bir incelemedir. Özgül öğrenme güçlüğünün tanısında yardımcı araç olarak sayılmadığı için aranan seçenek budur.",
+      "B": "Bender-Gestalt, özel yetenek testlerinden biridir ve tanıya yardımcı olur. Bu yüzden aranan seçenek olamaz. Bu test özgül öğrenme güçlüğünün tanısında yardımcı araç olarak kullanılır.",
+      "C": "Benton, özel yetenek testlerinden biridir ve tanıya yardımcı olur. Bu yüzden aranan seçenek olamaz. Bu test tanıya yardımcı araç olarak kullanılır.",
+      "D": "Harris, özel yetenek testlerinden biridir ve tanıya yardımcı olur. Bu yüzden aranan seçenek olamaz. Bu test de özgül öğrenme güçlüğünün tanısında yardımcı araçlar arasında sayılır.",
+      "E": "WISC-R bir zekâ testidir ve özgül öğrenme güçlüğünün tanısında yardımcı araçlardandır. Bu yüzden aranan seçenek olamaz. Bu test çocuğun zekâ düzeyini ölçerek tanıdaki ayırıcı değerlendirmeye yardımcı olur."
+     },
+     "s": 34,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q58"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Özgül öğrenme güçlüğünün seyriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yaşam boyu süren bir bozukluktur",
+      "B": "Okul bitince sona erer",
+      "C": "Ergenlikte kendiliğinden tamamen düzelir",
+      "D": "Yalnızca okul döneminde sorun yaratır",
+      "E": "Erken sağaltımla kesinlikle iyileşir"
+     },
+     "dogru": "A",
+     "aciklama": "Özgül öğrenme güçlüğünün yaşam boyu süren bir bozukluk olduğu konusunda fikir birliği vardır; akademik başarıyı ve ilerleyen yaşamda birçok işlev alanını etkiler.",
+     "sik_aciklamalari": {
+      "A": "Özgül öğrenme güçlüğünün yaşam boyu süren bir bozukluk olduğu konusunda fikir birliği vardır. Akademik başarıyı olduğu kadar ilerleyen yaşamda birçok işlev alanını da etkiler; doğru yanıt budur.",
+      "B": "Bozukluk okul bitince sona ermez, yaşam boyu sürer. Bu nedenle ifade yanlıştır. Gerçekte bozukluk okul sonrasında da sürer; bu yüzden ilerleyen yaşamda birçok işlev alanı etkilenir.",
+      "C": "Ergenlikte kendiliğinden düzelme beklenmez; sorunlar sürer ve sosyal kabul kaygıları belirginleşir. Bu nedenle ifade yanlıştır. Gerçekte sorunlar ergenlikte de sürer ve sosyal kabul kaygısı gibi yeni güçlükler eklenir.",
+      "D": "Bozukluk yalnızca okul dönemiyle sınırlı kalmaz, ilerleyen yaşamda da birçok işlev alanını etkiler. Bu nedenle ifade yanlıştır. Bozukluk yaşam boyu sürdüğü için yalnızca okul dönemiyle sınırlı bir sorun olarak sayılmaz.",
+      "E": "Sağaltımda etkililiği kanıtlanmış bir ilaç tedavisi yoktur ve bozukluk yaşam boyu sürer. Kesin iyileşme ifadesi bu nedenle yanlıştır. Sağaltım özel eğitime dayanır ve bozukluk kesin iyileşmez, bu yüzden bu ifade doğru değildir."
+     },
+     "s": 34,
+     "id": "k2-42-norogelisimsel-bozukluklar-q59"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Özgül öğrenme güçlüğünün sağaltımında bireysel özel eğitim programlarını ve ortak ilkelerini açıklar (s. 35).",
+   "sorular": [
+    {
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Özgül öğrenme güçlüğünün sağaltımında en önemli yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikostimülan ilaç tedavisi",
+      "B": "Bireysel özel eğitim programları",
+      "C": "Antipsikotik ilaç tedavisi",
+      "D": "Özel bir diyet uygulaması",
+      "E": "Derin beyin uyarımı"
+     },
+     "dogru": "B",
+     "aciklama": "Özgül öğrenme güçlüğünün sağaltımında temel yaklaşımı bireysel özel eğitim programları oluşturur.",
+     "sik_aciklamalari": {
+      "A": "Psikostimülanlar DEHB'de ilk seçenek olan ilaçlardır. Özgül öğrenme güçlüğünde etkililiği kanıtlanmış bir ilaç tedavisi olmadığı için şık elenir. Bu ilaç grubu başka bir bozukluğun ilk seçeneğidir; özgül öğrenme güçlüğünde ilaç tedavisinin etkililiği kanıtlanmamıştır.",
+      "B": "Temel yaklaşım bireysel özel eğitim programlarıdır. Bu programlar genellikle nöropsikolojik kuramlara dayanır, bu yüzden doğru yanıt budur. Bu programlar yapılandırılmıştır ve çocuğun bireysel güçlüklerine uygun biçimde, parçadan bütüne ilerleyerek kurulur.",
+      "C": "Antipsikotikler tik bozukluklarında kullanılan ilaçlardır. Özgül öğrenme güçlüğünün temel sağaltımı olmadığı için şık elenir. Bu ilaç grubu başka bir bozukluğun sağaltımında kullanılır; özgül öğrenme güçlüğünde yeri tanımlanmamıştır.",
+      "D": "Özel diyet özgül öğrenme güçlüğünü düzeltmez. Temel sağaltım eğitim programları olduğu için şık elenir. Bu uygulama bozukluğun nedenini ortadan kaldırmaz; bu yüzden sağaltımın temelini oluşturmaz.",
+      "E": "Derin beyin uyarımı, tik bozukluklarında etkili olabileceği bildirilen bir yöntemdir. Özgül öğrenme güçlüğünün temel sağaltımı olmadığı için şık elenir. Bu bozuklukta temel yaklaşım özel eğitimdir."
+     },
+     "s": 35,
+     "id": "k2-42-norogelisimsel-bozukluklar-q60"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Özgül öğrenme güçlüğünün sağaltımıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Bireysel özel eğitim programları temel yaklaşımdır",
+      "B": "Programlar yapılandırılmıştır",
+      "C": "Etkililiği kanıtlanmış bir ilaç tedavisi bulunur",
+      "D": "Parçadan bütüne giden tümevarımsal bir tarz izlenir",
+      "E": "Programlar çocuğun birden çok duyusuna yönelik bileşenler içerir"
+     },
+     "dogru": "C",
+     "aciklama": "Günümüzde özgül öğrenme güçlüğünün sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur.",
+     "sik_aciklamalari": {
+      "A": "Temel yaklaşımı bireysel özel eğitim programları oluşturur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu yaklaşım, bozukluğun tedavisinde ilaçtan çok eğitime dayandığını gösterir ve doğrudur.",
+      "B": "Tüm programların ortak ilkelerinden biri yapılandırılmış olmalarıdır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, programın çocuğa düzenli ve planlı bir yol izletmesini sağlar.",
+      "C": "Günümüzde etkililiği kanıtlanmış bir ilaç tedavisi bulunmaz. Bulunduğunu söylemek yanlıştır, aranan ifade budur. Bu bilgi sağaltımın temelinin ilaç değil, özel eğitim olduğunu gösterir.",
+      "D": "Programlar parçadan bütüne giden tümevarımsal bir tarzda kurulur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, çocuğun öğrenmeyi küçük adımlardan başlatarak bütüne ulaşmasına olanak tanır.",
+      "E": "Programlar çocuğun birden çok duyusuna yönelik bileşenler içerir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilke, çocuğun öğrenmeyi birden fazla duyu yoluyla pekiştirmesini sağlar."
+     },
+     "s": 35,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q61"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi özgül öğrenme güçlüğü için hazırlanan özel eğitim programlarının ortak ilkelerinden biri değildir?",
+     "secenekler": {
+      "A": "Bütünden parçaya giden bir tarzda olmak",
+      "B": "Çocuğun bireysel güçlüklerine uygun olmak",
+      "C": "Yapılandırılmış olmak",
+      "D": "Parçadan bütüne giden tümevarımsal tarzda olmak",
+      "E": "Çocuğun birden çok duyusuna yönelik bileşenler içermek"
+     },
+     "dogru": "A",
+     "aciklama": "Programlar parçadan bütüne giden tümevarımsal tarzdadır; bütünden parçaya giden bir tarz ortak ilke değildir.",
+     "sik_aciklamalari": {
+      "A": "Programlar parçadan bütüne gider; bütünden parçaya giden bir tarz ortak ilke olarak tanımlanmaz. Bu yüzden aranan seçenek budur. Doğrusu parçadan bütüne giden tümevarımsal tarzdır; bütünden parçaya gitmek ortak ilkelere ters düşer.",
+      "B": "Programlar çocuğun bireysel güçlüklerine uygun olarak kurulur ve bu ortak ilkelerden biridir. Bu yüzden aranan seçenek olamaz. Bu ilke programın her çocuğun kendi güçlüklerine göre uyarlanmasını sağlar.",
+      "C": "Programların ortak ilkelerinden biri yapılandırılmış olmalarıdır. Bu yüzden aranan seçenek olamaz. Bu ilke, programın düzenli ve planlı ilerlemesini sağlar ve ortak ilkelerdendir.",
+      "D": "Parçadan bütüne giden tümevarımsal tarz, programların ortak ilkelerindendir. Bu yüzden aranan seçenek olamaz. Bu ilke, öğrenmenin basit parçalardan karmaşık bütüne doğru kurulmasını anlatır.",
+      "E": "Programlar çocuğun birden çok duyusuna yönelik bileşenler içerir ve bu ortak ilkelerden biridir. Bu yüzden aranan seçenek olamaz. Bu ilke, öğrenmeyi görme, işitme ve dokunma gibi birden çok duyuyla desteklemeyi anlatır."
+     },
+     "s": 35,
+     "id": "k2-42-norogelisimsel-bozukluklar-q62"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Tiki tanımlar, ayırt edici özelliklerini ve DSM-5 sınıflamasını sayar; Tourette bozukluğunu tanır (s. 36-38).",
+   "sorular": [
+    {
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Kas kasılması sonucu oluşan ani, hızlı, yineleyici ve ritmik olmayan motor hareket ya da ünlem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Obsesyon",
+      "B": "Kompulsiyon",
+      "C": "Tik",
+      "D": "Stereotipi",
+      "E": "Ritüel"
+     },
+     "dogru": "C",
+     "aciklama": "Tikler kas kasılması sonucu oluşan ani, hızlı, yineleyici ve ritmik olmayan motor hareketler ya da ünlemlerdir.",
+     "sik_aciklamalari": {
+      "A": "Obsesyon, istenmeden zihne gelen düşüncedir ve motor hareket değildir. Kas kasılması sonucu oluşan bir hareketi tanımlamadığı için şık elenir. Obsesyon zihinsel bir olaydır; tikler ise kas kasılması sonucu oluşan hareket ya da ünlemdir.",
+      "B": "Kompulsiyon, obsesyona karşı yapılan davranıştır. Ani ve ritmik olmayan kas kasılması olmadığı için şık elenir. Kompulsiyon belirli bir amaçla yapılan davranıştır; tikler ise amaçsız ve ani kas hareketleridir.",
+      "C": "Tikler kas kasılması sonucu oluşan ani, hızlı, yineleyici ve ritmik olmayan motor hareketler ya da ünlemlerdir ve genellikle çok kısa sürer. Doğru yanıt budur.",
+      "D": "Stereotipik hareketler, otizmde kendi etrafında dönme ya da sallanma gibi tekrarlayıcı davranışlardır. Ani ve ritmik olmayan tik hareketini tanımlamadığı için şık elenir.",
+      "E": "Ritüel, belirli bir sırayla yapılan törensel davranıştır. Kas kasılması sonucu oluşan ani hareket olmadığı için şık elenir. Tikler ise ani, hızlı ve ritmik olmayan kas kasılmalarıdır."
+     },
+     "s": 36,
+     "id": "k2-42-norogelisimsel-bozukluklar-q63"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Tiklerle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Genellikle çok kısa sürer",
+      "B": "Nöbetler halinde gelir ve tiksiz ara dönemler olur",
+      "C": "Geçici olarak baskılanabilir",
+      "D": "Duyusal fenomenlerle ilişkilidir",
+      "E": "Hareketlerin özellikleri zamanla değişmez"
+     },
+     "dogru": "E",
+     "aciklama": "Tikleri ayırt eden özelliklerden biri hareketlerin özelliklerinin zamanla değişim göstermesidir; zamanla değişmediğini söylemek yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Tikler genellikle çok kısa sürer; bir saniyeden uzun sürmesi çok nadirdir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu özellik, tiklerin kısa süren ve gelip geçen hareketler olduğunu gösterir.",
+      "B": "Pek çok tik nöbetler halinde gelir ve tiklerin olmadığı ara dönemler bulunur. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz.",
+      "C": "Tikler geçici olarak baskılanabilir ve bu özellik onları diğer hareket bozukluklarından ayırır. İfade doğrudur, aranan yanlış ifade olamaz. Bu özellik, çocuğun tiki kısa süre için bastırabilmesini sağlar ve tikleri diğer hareket bozukluklarından ayırır.",
+      "D": "Tikler tipik olarak duyusal fenomenlerle ilişkilidir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilişki, çocuğun tikten önce içinde bir istek ya da huzursuzluk duyabileceğini gösterir.",
+      "E": "Tiklerde hareketlerin özellikleri zamanla değişim gösterir ve gidiş alevlenme ve sönmelerle seyreder. Değişmediğini söylemek yanlıştır, aranan seçenek budur. Yani tiklerin şekli ve şiddeti zamanla değişir; sabit kalmaz, ifade bu yüzden yanlıştır."
+     },
+     "s": 37,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q64"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Tikleri çocukluk çağındaki diğer hareket bozukluklarından ayıran özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiç baskılanamaması ve sürekli aynı biçimde sürmesi",
+      "B": "Ritmik olması ve değişim göstermemesi",
+      "C": "Yalnızca uykuda ortaya çıkması ve sönme göstermemesi",
+      "D": "Geçici olarak baskılanabilmesi ve duyusal fenomenlerle ilişkili olması",
+      "E": "Alevlenme ve sönme göstermeden düz seyretmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Alevlenme ve sönmelerle gidiş, hareket özelliklerinin zamanla değişmesi, geçici olarak baskılanabilme ve duyusal fenomenlerle ilişki tikleri ayırt eder.",
+     "sik_aciklamalari": {
+      "A": "Tikler geçici olarak baskılanabilir; hiç baskılanamayan ve hep aynı sürmeyen davranışlar tik özelliği olarak tanımlanmaz. Bu yüzden şık elenir. Gerçekte tikler kısa süre için baskılanabilir; bu özellik tiki diğer hareket bozukluklarından ayırır.",
+      "B": "Tikler ritmik olmayan hareketlerdir ve özellikleri zamanla değişir. Bu şıktaki iki özellik tikin ayırt edicisi olmadığı için şık elenir. Gerçekte tikler ritmik değildir ve değişim gösterir; bu iki özellik ayırt edici özellikle çelişir.",
+      "C": "Tikler yalnızca uykuda ortaya çıkmaz; gün içinde nöbetler halinde gelir. Sönme göstermeme özelliği de tiki tanımlamadığı için şık elenir. Gerçekte tikler gün içinde nöbetler halinde görülür ve uykuda azalma ayırıcı bir özellik olarak tanımlanmaz.",
+      "D": "Tikler geçici olarak baskılanabilir ve tipik olarak duyusal fenomenlerle ilişkilidir. Bu özellikler tikleri diğer hareket bozukluklarından ayırdığı için doğru yanıt budur.",
+      "E": "Tiklerin gidişi alevlenme ve sönmelerle seyreder. Düz seyir tik özelliği olmadığı için şık elenir. Oysa tiklerin gidişi alevlenme ve sönmelerle seyreder; ayırıcı özellik bu dalgalı seyirdir."
+     },
+     "s": 37,
+     "id": "k2-42-norogelisimsel-bozukluklar-q65"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Tourette bozukluğunu tanımlayan özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Motor ve ses tiklerinin bir arada bir yıldan uzun süre bulunması",
+      "B": "Belirtilerin 12 aydan kısa sürmesi",
+      "C": "Yalnızca motor tiklerin 12 aydan uzun sürmesi",
+      "D": "Yalnızca ses tiklerinin görülmesi",
+      "E": "Tiklerin 18 yaşından sonra başlaması"
+     },
+     "dogru": "A",
+     "aciklama": "Tourette bozukluğunda hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süren bir dönem boyunca gözlenir.",
+     "sik_aciklamalari": {
+      "A": "Tourette bozukluğunda hem motor hem ses tikleri bir arada bulunur ve bir yıldan uzun süre gözlenir. Doğru yanıt budur. Bu iki tik türünün birlikteliği ve süre koşulu, Tourette'i diğer tik bozukluklarından ayıran ölçüttür.",
+      "B": "Belirtilerin 12 aydan kısa sürmesi durumsal tik bozukluğunu tanımlar. Tourette bir yıldan uzun süren tablo olduğu için şık elenir. Bu tablo, belirtilerin kısa sürdüğü durumsal tik bozukluğuna aittir ve Tourette tanısını koydurmaz.",
+      "C": "Yalnızca motor ya da yalnızca ses tiklerinin 12 aydan uzun sürmesi, süreğen motor ya da ses tik bozukluğunu tanımlar. Tourette'te ikisi birlikte bulunduğu için şık elenir.",
+      "D": "Yalnızca ses tiklerinin görülmesi Tourette tablosunu tanımlamaz. Motor tikler de bulunduğu için şık elenir. Tourette'te ses tikleri tek başına değil, motor tiklerle birlikte bulunur; bu seçenek eksik kalır.",
+      "E": "Süreğen tik bozukluğunda 18 yaşından önce başlama ölçüt olarak aranır. Tiklerin ileri yaşta başlaması Tourette'i tanımlamadığı için şık elenir."
+     },
+     "s": 38,
+     "id": "k2-42-norogelisimsel-bozukluklar-q66"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "7 yaşındaki erkek çocukta 5 yaşından beri sık göz kırpma ve yüz buruşturma var. Son iki yıldır boğaz temizleme ve burun çekme sesleri de çıkarıyor; belirtiler gün içinde nöbetler halinde artıp azalıyor. En olası tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Durumsal tik bozukluğu",
+      "B": "Süreğen motor tik bozukluğu",
+      "C": "Dikkat eksikliği hiperaktivite bozukluğu",
+      "D": "Tourette bozukluğu",
+      "E": "Otizm spektrum bozukluğu"
+     },
+     "dogru": "D",
+     "aciklama": "Hem motor hem ses tiklerinin bir yıldan uzun süre bir arada bulunması ve nöbetler halinde artıp azalması Tourette bozukluğunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Durumsal tik bozukluğunda belirtiler 12 aydan kısa sürer. Burada belirtiler yıllardır sürdüğü için şık elenir. Bu tanıda belirtiler kısa sürer; çocukta belirtiler yıllardır sürdüğü için tanıyla örtüşmez.",
+      "B": "Süreğen motor tik bozukluğunda yalnızca motor ya da yalnızca ses tikleri bulunur. Çocukta ikisi de olduğu için şık elenir. Bu tanıda tek tür tik bulunur; çocukta hem motor hem ses tikleri olduğu için tanıyla örtüşmez.",
+      "C": "DEHB'de dikkatsizlik, aşırı hareketlilik ve dürtüsellik görülür. Verilen motor ve ses tikleri bu tanıyı belirlemediği için şık elenir. Bu tanıda ana sorun dikkat ve hareketliliktir; ses tikleri ve göz kırpma bu tabloyu açıklamaz.",
+      "D": "Göz kırpma ve yüz buruşturma motor, boğaz temizleme ve burun çekme ses tikleridir; ikisi bir yıldan uzun süredir bir arada ve nöbetler halindedir. Bu tablo Tourette bozukluğudur ve doğru yanıttır.",
+      "E": "Otizmde toplumsal etkileşim eksikliği ve tekrarlayıcı davranışlar bulunur. Motor ve ses tikleri tablonun belirleyicisi olmadığı için şık elenir. Bu tanıda ana sorun toplumsal iletişimdir; göz kırpma ve boğaz temizleme bu tabloyu açıklamaz."
+     },
+     "s": 38,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q67"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Tourette bozukluğunda motor tikler genellikle kaç yaşlar arasında göz kırpma ve yüz tikleri biçiminde başlar?",
+     "secenekler": {
+      "A": "0-1 yaş",
+      "B": "1-2 yaş",
+      "C": "3-8 yaş",
+      "D": "10-12 yaş",
+      "E": "15-18 yaş"
+     },
+     "dogru": "C",
+     "aciklama": "Tourette bozukluğunda motor tikler genellikle 3-8 yaşlar arasında göz kırpma ve diğer yüz tikleri şeklinde başlar.",
+     "sik_aciklamalari": {
+      "A": "0-1 yaş bebeklik dönemidir. Tourette'te motor tikler bu dönemde başlamadığı için şık elenir. Bu dönemde tik bozukluğu belirtileri tanımlanmadığı için tanı koydurucu değildir.",
+      "B": "1-2 yaş, motor tiklerin başlangıç aralığından erkendir. Tipik başlangıç daha sonra olduğu için şık elenir. Başlangıç, bu aralıktan sonra, çoğunlukla okul çağına yaklaşırken görülür.",
+      "C": "Motor tikler genellikle 3-8 yaşlar arasında göz kırpma ve diğer yüz tikleri biçiminde başlar. Ses tikleri çoğunlukla birkaç yıl sonra ortaya çıkar, doğru yanıt budur.",
+      "D": "10-12 yaş, tiklerin tipik başlangıç aralığının sonrasındadır. Başlangıç daha erken olduğu için şık elenir. Bu yaş aralığında belirtiler çoktan başlamış olur ve tanı için başlangıç aralığı olarak verilmez.",
+      "E": "15-18 yaş, tiklerin başlangıcı için çok geçtir. Bu dönemde tikler düzelme eğilimi gösterdiği için şık elenir. Bu yaşlarda tikler genellikle düzelme eğilimine girdiği için başlangıç aralığı olarak verilmez."
+     },
+     "s": 38,
+     "id": "k2-42-norogelisimsel-bozukluklar-q68"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "DSM-5'te durumsal tik bozukluğunu tanımlayan özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirtilerin 12 aydan kısa sürmesi",
+      "B": "Belirtilerin 12 aydan uzun sürmesi ve 18 yaşından önce başlaması",
+      "C": "Motor ve ses tiklerinin bir yıldan uzun birlikte bulunması",
+      "D": "Belirtilerin yalnızca 18 yaşından sonra başlaması",
+      "E": "Yalnızca ses tiklerinden oluşması"
+     },
+     "dogru": "A",
+     "aciklama": "DSM-5'te durumsal tik bozukluğunda belirtiler 12 aydan kısa sürer.",
+     "sik_aciklamalari": {
+      "A": "Durumsal tik bozukluğunda belirtilerin süresi 12 aydan kısadır. Soru bu ölçütü sorduğu için doğru yanıt budur. Bu süre ölçütü, durumsal tik bozukluğunu 12 aydan uzun süren süreğen tik bozukluğundan ayıran temel noktadır.",
+      "B": "12 aydan uzun sürme ve 18 yaşından önce başlama, süreğen motor ya da ses tik bozukluğunun DSM-5 tanı ölçütüdür. Durumsal tik bozukluğuna ait olmadığı için şık elenir.",
+      "C": "Motor ve ses tiklerinin bir yıldan uzun süre birlikte bulunması Tourette bozukluğunu tanımlar. Durumsal tik bozukluğundan ayrı bir tablo olduğu için şık elenir.",
+      "D": "18 yaşından sonra başlama ölçütü durumsal tikte tanımlanmamıştır. Süreğen tik için 18 yaşından önce başlama aranır, bu yüzden şık elenir.",
+      "E": "Yalnızca ses tiklerinden oluşma, süre ölçütünü anlatmaz. Durumsal tik bozukluğu süresi kısa olan tablo olduğu için şık elenir. Bu seçenek, tik türünü anlatıyor; oysa durumsal tikte ayırıcı olan, sürenin 12 aydan kısa olmasıdır."
+     },
+     "s": 37,
+     "id": "k2-42-norogelisimsel-bozukluklar-q69"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi DSM-5'teki tik bozukluğu sınıflamasında yer alan tanılardan biri değildir?",
+     "secenekler": {
+      "A": "Tourette bozukluğu",
+      "B": "Süreğen motor ya da ses tik bozukluğu",
+      "C": "Durumsal tik bozukluğu",
+      "D": "Tanımlanamayan tik bozukluğu",
+      "E": "Özgül öğrenme bozukluğu"
+     },
+     "dogru": "E",
+     "aciklama": "DSM-5'te tik bozuklukları Tourette, süreğen motor ya da ses tik, durumsal tik, tanımlanabilen diğer ve tanımlanamayan tik bozukluğudur; özgül öğrenme bozukluğu bu sınıflamada yer almaz.",
+     "sik_aciklamalari": {
+      "A": "Tourette bozukluğu DSM-5 tik bozuklukları sınıflamasının ilk tanısıdır ve motor ile ses tiklerinin bir arada bulunduğu tabloyu anlatır. Bu yüzden aranan seçenek olamaz.",
+      "B": "Süreğen motor ya da ses tik bozukluğu sınıflamada yer alan tanıdır ve belirtiler 12 aydan uzun sürer. Bu yüzden aranan seçenek olamaz.",
+      "C": "Durumsal tik bozukluğu sınıflamada yer alan tanıdır ve belirtiler 12 aydan kısa sürer. Bu yüzden aranan seçenek olamaz. Bu tanıda ayırıcı özellik süredir; belirtiler 12 aydan kısa sürdüğü için süreğen tablolardan ayrılır.",
+      "D": "Tanımlanamayan tik bozukluğu sınıflamanın son tanısıdır ve tik bozukluğu sınıflamasında yer alır. Bu yüzden aranan seçenek olamaz. Bu tanı, tiklerin türü ve süresi tam belirlenemediğinde konan son basamak tanıdır.",
+      "E": "Özgül öğrenme bozukluğu ayrı bir nörogelişimsel tanıdır ve tik bozukluğu sınıflamasında yer almaz. Soruda istenen seçenek budur. Bu tanı okul çağındaki akademik sorunları anlatır ve tik bozukluklarıyla ilişkili bir sınıf değildir."
+     },
+     "s": 36,
+     "id": "k2-42-norogelisimsel-bozukluklar-q70"
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Tik bozukluklarında sağaltım basamaklarını, ilaç ölçütünü ve ilaç gruplarını açıklar (s. 39).",
+   "sorular": [
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Tik bozukluklarında ilaç sağaltımı aşağıdaki durumların hangisinde tercih edilir?",
+     "secenekler": {
+      "A": "Tanı konur konmaz, eğitim ve destekleyici yaklaşımlardan önce ilk basamak olarak",
+      "B": "Yalnızca tikler ses tiki biçiminde ortaya çıktığında ve nöbetler halinde geldiğinde",
+      "C": "Eğitim ve destekleyici yaklaşımlar yetersiz kaldığında ya da tikler işlevselliği bozacak kadar şiddetliyse",
+      "D": "Yalnızca ergenlik sonrasında, tikler erişkinlikte de sürdüğü takdirde ve düzelme beklenmediğinde",
+      "E": "Hiçbir koşulda tercih edilmez, çünkü yalnızca eğitim ve destekleyici yaklaşımlar uygulanır"
+     },
+     "dogru": "C",
+     "aciklama": "Tik bozukluklarında önce eğitim ve destekleyici yaklaşımlar gelir; ilaç bunlar yetersiz kaldığında ya da tikler özgüven, yaşıt ve aile ilişkileri ve okul işlevselliğini bozacak kadar sürekli ve şiddetliyse tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Önce eğitim ve destekleyici yaklaşımlar önem taşır; ilaç sağaltımı ilk basamak değildir. Tanı konur konmaz ilaç başlanmadığı için şık elenir.",
+      "B": "İlaç kararı tikin yalnızca ses ya da motor biçiminde olmasına göre verilmez. Ölçüt işlevsellikteki bozulma ve yaklaşımların yetersiz kalması olduğu için şık elenir.",
+      "C": "İlaç sağaltımı destekleyici yaklaşımlar yetersiz kaldığında ya da tikler özgüven, yaşıt ve aile ilişkileri ve okul işlevselliği açısından olumsuz sonuçlara yol açacak kadar sürekli ve şiddetliyse tercih edilir. Doğru yanıt budur.",
+      "D": "İlaç kararı yaşa göre değil, işlevselliğe ve yaklaşımların yeterliliğine göre verilir. Yalnızca erişkinlikle sınırlı tutulmadığı için şık elenir. Oysa ilaç kararı çocuğun işlevselliğine ve diğer yaklaşımların yeterliliğine bakılarak verilir.",
+      "E": "İlaç sağaltımı gerektiğinde tercih edilir ve en sık dopaminerjik antagonistler kullanılır. Hiçbir koşulda kullanılmadığını söylemek doğru olmadığı için şık elenir."
+     },
+     "s": 39,
+     "id": "k2-42-norogelisimsel-bozukluklar-q71"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Tik bozukluklarının sağaltımında en sık kullanılan ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikostimülanlar",
+      "B": "Alfa-2 agonistleri",
+      "C": "Dopaminerjik antagonistler",
+      "D": "Trisiklik antidepresanlar",
+      "E": "Benzodiazepinler"
+     },
+     "dogru": "C",
+     "aciklama": "Tik bozukluklarında en sık kullanılan ilaçlar dopaminerjik antagonistlerdir; haloperidol, pimozid, flufenazin, olanzapin, risperidon ve sülpirid bu gruptadır.",
+     "sik_aciklamalari": {
+      "A": "Psikostimülanlar DEHB'de ilk seçenek olan ilaçlardır. Tik bozukluklarında en sık kullanılan grup olmadığı için şık elenir. Bu ilaçlar dikkat ve hareketlilik sorunlarında kullanılır, tikler için en sık kullanılan grup değildir.",
+      "B": "Klonidin ve guanfasin alfa-2 agonistleridir ve tikler üzerinde etkilidir. En sık kullanılan grup dopaminerjik antagonistler olduğu için şık elenir.",
+      "C": "Tik bozukluklarında en sık kullanılan ilaçlar dopaminerjik antagonistlerdir; haloperidol, pimozid, flufenazin, olanzapin, risperidon ve sülpirid bu gruptadır. Doğru yanıt budur.",
+      "D": "Trisiklik antidepresanlar DEHB'de diğer seçenekler arasında sayılan ilaçlardır. Tik bozukluklarında en sık kullanılan grup olmadığı için şık elenir. Bu ilaçlar dikkat ve hareketlilik sorunlarında alternatif olarak kullanılır, tik bozukluğunda ilk akla gelen grup değildir.",
+      "E": "Benzodiazepinler, kaygıyı ve uykusuzluğu hafifleten bir ilaç grubudur; tik bozukluğu sağaltımında önerilen ilaçlardan değildir. Bu yüzden şık elenir. Tik sağaltımında sık kullanılan gruplar dopaminerjik antagonistler ve alfa-2 agonistleridir."
+     },
+     "s": 39,
+     "id": "k2-42-norogelisimsel-bozukluklar-q72"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Tik bozukluklarının sağaltımıyla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "İlaç sağaltımı ilk basamaktır",
+      "B": "Pimozid etkili olduğu bildirilen ilaçlardandır",
+      "C": "Haloperidol etkili olduğu bildirilen antipsikotiklerdendir",
+      "D": "Klonidin ve guanfasin alfa-2 agonistidir",
+      "E": "Botulinum toksininin yerel enjeksiyonunun etkili olabileceği bildirilmiştir"
+     },
+     "dogru": "A",
+     "aciklama": "Önce eğitim ve destekleyici yaklaşımlar önem taşır; ilaç sağaltımı ilk basamak değildir.",
+     "sik_aciklamalari": {
+      "A": "İlaç sağaltımı ilk basamak değildir; önce eğitim ve destekleyici yaklaşımlar gelir. İlaç yaklaşımlar yetersizse tercih edildiği için bu ifade yanlıştır ve aranan seçenektir.",
+      "B": "Pimozid, tiklerde etkili olduğu bildirilen ilaçlardandır. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilaç da tik bozukluğunda kullanılan dopaminerjik antagonistler arasında sayılır.",
+      "C": "Haloperidol, tik bozukluklarında etkili olduğu bildirilen antipsikotiklerdendir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilaç, tik bozukluğunda kullanılan dopaminerjik antagonist grubundadır ve sağaltım listesinde yer alır.",
+      "D": "Klonidin ve guanfasin, tikler üzerine etkili olan alfa-2 agonistleridir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz. Bu ilaçlar dopaminerjik antagonistlerden ayrı bir grubu oluşturur ve tik bozukluğunda alternatif olarak kullanılır.",
+      "E": "Botulinum toksininin yerel enjeksiyonu, nörocerrahi ve derin beyin uyarımının etkili olabileceği bildirilmiştir. İfade doğrudur, bu yüzden aranan yanlış ifade olamaz."
+     },
+     "s": 39,
+     "uslup": "hoca",
+     "id": "k2-42-norogelisimsel-bozukluklar-q73"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Klonidin ve guanfasin tikler üzerinde etkili olan hangi ilaç grubundandır?",
+     "secenekler": {
+      "A": "Alfa-2 agonisti",
+      "B": "Dopaminerjik antagonist",
+      "C": "Psikostimülan",
+      "D": "Trisiklik antidepresan",
+      "E": "Antikolinerjik"
+     },
+     "dogru": "A",
+     "aciklama": "Klonidin ve guanfasin tikler üzerine etkili olan alfa-2 agonistleridir.",
+     "sik_aciklamalari": {
+      "A": "Klonidin ve guanfasin alfa-2 agonistleridir ve tikler üzerinde etkilidir. Soru bu ilaçların grubunu sorduğu için doğru yanıt budur. Bu sınıfa giren ilaçlar tiklerde, dopaminerjik antagonistlerden ayrı bir alternatif olarak kullanılır.",
+      "B": "Dopaminerjik antagonistler haloperidol, pimozid, flufenazin, olanzapin, risperidon ve sülpiridi kapsar. Klonidin ve guanfasin bu gruba girmediği için şık elenir. Bu grup tiklerde en sık kullanılan gruptur, ancak klonidin ve guanfasin ayrı bir ilaç sınıfındadır.",
+      "C": "Psikostimülanlar DEHB'de ilk seçenek olan ilaçlardır. Klonidin ve guanfasin bu gruptan olmadığı için şık elenir. Bu grup, dikkat eksikliği hiperaktivite bozukluğunda ilk seçenek olan ilaçları kapsar.",
+      "D": "Trisiklik antidepresanlar DEHB'de diğer seçenekler arasında sayılan ilaçlardır. Klonidin ve guanfasin bu gruba girmediği için şık elenir. Bu ilaçlar DEHB'de alternatif olarak kullanılır ve klonidin ile guanfasin bu sınıfta sayılmaz.",
+      "E": "Antikolinerjik ilaçlar, klonidin ve guanfasinin ilaç sınıfı değildir. Bu iki ilaç alfa-2 agonisti olduğu için şık elenir. Bu iki ilaç alfa-2 agonistidir; antikolinerjik grubunda yer almaz."
+     },
+     "s": 39,
+     "id": "k2-42-norogelisimsel-bozukluklar-q74"
+    }
+   ]
+  }
+ ],
+ "sira": 42,
+ "tarih": "2026-11-17",
+ "soru_sayisi": 74
+}

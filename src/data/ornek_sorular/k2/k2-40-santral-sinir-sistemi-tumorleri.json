@@ -1,0 +1,1731 @@
+{
+ "id": "k2-40-santral-sinir-sistemi-tumorleri",
+ "kurul": 2,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Santral Sinir Sistemi Tümörleri",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Dersin kaynağını ve kullanım çerçevesini bilir (s. 2, 58).",
+   "_s": [
+    2,
+    58
+   ],
+   "_bp": "bp1",
+   "_baslik": "Kaynak ve kullanım notu",
+   "sorular": []
+  },
+  {
+   "no": 2,
+   "metin": "MSS tümörlerinin dersteki kapsamını ve intrakraniyal ile intraspinal tümör sıklığını açıklar (s. 3–4).",
+   "_s": [
+    3,
+    4
+   ],
+   "_bp": "bp2",
+   "_baslik": "Dersin kapsamı ve MSS tümörü epidemiyolojisi",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "ABD'de erişkinlerde intrakraniyal tümör insidansı yılda yüz binde yaklaşık kaçtır?",
+     "secenekler": {
+      "A": "Yılda yüz binde yaklaşık 24",
+      "B": "Yılda yüz binde 1–2",
+      "C": "Yaklaşık yüzde 20",
+      "D": "Yaklaşık yüzde 50",
+      "E": "Yaklaşık yüzde 80"
+     },
+     "dogru": "A",
+     "aciklama": "İntrakraniyal tümörler yılda yüz binde yaklaşık 24 sıklıktadır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "ABD'de erişkinlerde intrakraniyal tümör insidansını gösterir ve bunların yaklaşık üçte biri malign özelliktedir. Bu insidans değeri intrakraniyal tümörlere aittir ve bunların yaklaşık üçte biri malign özelliktedir.",
+      "B": "İntraspinal tümörlerin yıllık görülme sıklığıdır ve intrakraniyal tümörlerden çok daha seyrektir. Bu sıklık intraspinal tümörlere aittir; intrakraniyal tümör insidansı bakımından aranan seçenek Yılda yüz binde yaklaşık 24 olduğu için bu şık yanlıştır.",
+      "C": "Çocukluk çağı tümörlerinde MSS tümörlerinin payıdır; medulloblastomun pediatrik beyin tümörleri içindeki payı da aynıdır. Bu oran çocukluk çağı tümörlerinde MSS tümörlerinin payını gösterir; intrakraniyal tümör insidansı konusunda yanıt Yılda yüz binde yaklaşık 24 olduğundan bu şık elenir.",
+      "D": "Erişkin primer malign beyin tümörlerinde glioblastomun payıdır; metastazların intrakraniyal tümörler içindeki payı da yarıyı aşar. Bu oran glioblastomun erişkin primer malign beyin tümörleri içindeki payına karşılık gelir; intrakraniyal tümör insidansı sorulduğunda ise doğru seçenek Yılda yüz binde yaklaşık 24 olur, bu şık olmaz.",
+      "E": "Akciğer, meme, böbrek, kolon karsinomu ve melanomun beyin metastazlarındaki toplam payıdır. Bu oran beyne en sık metastaz yapan beş primer tümörün birlikte payıdır; intrakraniyal tümör insidansı açısından doğru olan Yılda yüz binde yaklaşık 24 seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 4,
+     "uslup": "hoca",
+     "id": "k2-40-q01"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "İntraspinal tümörlerin yıllık görülme sıklığı yüz binde kaçtır?",
+     "secenekler": {
+      "A": "Yılda yüz binde yaklaşık 24",
+      "B": "Yaklaşık yüzde 20",
+      "C": "Yılda yüz binde 1–2",
+      "D": "Yaklaşık yüzde 50",
+      "E": "Yaklaşık yüzde 80"
+     },
+     "dogru": "C",
+     "aciklama": "İntraspinal tümörler yılda yüz binde 1–2 sıklıkta görülür (s. 4).",
+     "sik_aciklamalari": {
+      "A": "ABD'de erişkinlerde intrakraniyal tümör insidansını gösterir ve bunların yaklaşık üçte biri malign özelliktedir. Bu sıklık intrakraniyal tümörlere aittir; intraspinal tümör sıklığı sorulduğunda ise doğru seçenek Yılda yüz binde 1–2 olur, bu şık olmaz.",
+      "B": "Çocukluk çağı tümörlerinde MSS tümörlerinin payıdır; medulloblastomun pediatrik beyin tümörleri içindeki payı da aynıdır. Bu oran çocukluk çağı tümörlerinde MSS tümörlerinin payını gösterir; intraspinal tümör sıklığı açısından doğru olan Yılda yüz binde 1–2 seçeneğidir; bu şık yanıt değildir.",
+      "C": "İntraspinal tümörlerin yıllık görülme sıklığıdır ve intrakraniyal tümörlerden çok daha seyrektir. Bu sıklık intraspinal tümörlere aittir ve intrakraniyal tümörlerden çok daha düşüktür.",
+      "D": "Erişkin primer malign beyin tümörlerinde glioblastomun payıdır; metastazların intrakraniyal tümörler içindeki payı da yarıyı aşar. Bu oran glioblastomun erişkin primer malign beyin tümörleri içindeki payına karşılık gelir; intraspinal tümör sıklığı bakımından aranan seçenek Yılda yüz binde 1–2 olduğu için bu şık yanlıştır.",
+      "E": "Akciğer, meme, böbrek, kolon karsinomu ve melanomun beyin metastazlarındaki toplam payıdır. Bu oran beyne en sık metastaz yapan beş primer tümörün birlikte payıdır; intraspinal tümör sıklığı konusunda yanıt Yılda yüz binde 1–2 olduğundan bu şık elenir."
+     },
+     "s": 4,
+     "id": "k2-40-q02"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Çocukluk çağı MSS tümörlerinin payını, kanser ölümlerindeki yerini ve çocuk ile erişkin arasındaki yerleşim farkını söyler (s. 5–6).",
+   "_s": [
+    5,
+    6
+   ],
+   "_bp": "bp3",
+   "_baslik": "Pediatrik MSS tümörleri ve yerleşim farkları",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Çocukluk çağı tümörlerinin yaklaşık yüzde kaçı MSS tümörüdür?",
+     "secenekler": {
+      "A": "Yaklaşık yüzde 50",
+      "B": "Yaklaşık yüzde 75",
+      "C": "Yaklaşık yüzde 80",
+      "D": "Yaklaşık yüzde 33",
+      "E": "Yaklaşık yüzde 20"
+     },
+     "dogru": "E",
+     "aciklama": "Çocukluk çağı tümörlerinin yaklaşık yüzde 20'si MSS tümörüdür (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Erişkin primer malign beyin tümörlerinde glioblastomun payıdır; metastazların intrakraniyal tümörler içindeki payı da yarıyı aşar. Bu oran glioblastomun erişkin primer malign beyin tümörleri içindeki payına karşılık gelir; çocukluk çağı MSS payı bakımından aranan seçenek Yaklaşık yüzde 20 olduğu için bu şık yanlıştır.",
+      "B": "Medulloblastomda cerrahi, kemoterapi ve radyoterapi ile elde edilen beş yıllık sağkalım oranıdır. Bu oran medulloblastomda tedaviyle elde edilen beş yıllık sağkalımı gösterir; çocukluk çağı MSS payı konusunda yanıt Yaklaşık yüzde 20 olduğundan bu şık elenir.",
+      "C": "Akciğer, meme, böbrek, kolon karsinomu ve melanomun beyin metastazlarındaki toplam payıdır. Bu oran beyne en sık metastaz yapan beş primer tümörün birlikte payıdır; çocukluk çağı MSS payı sorulduğunda ise doğru seçenek Yaklaşık yüzde 20 olur, bu şık olmaz.",
+      "D": "İntrakraniyal tümörlerin malign olanlarının yaklaşık payıdır. Çocukluk çağı tümörlerinde MSS payı ise yaklaşık beşte biridir; üçte bir oranı malign intrakraniyal tümörlere ait olduğundan bu şık yanlıştır.",
+      "E": "Çocukluk çağı tümörlerinde MSS tümörlerinin payıdır; medulloblastomun pediatrik beyin tümörleri içindeki payı da aynıdır. Çocukluk çağı tümörlerinin yaklaşık beşte biri MSS'de gelişir ve bu tümörler çocuklarda kanser ölümlerinde ilk sıraya yükselmiştir."
+     },
+     "s": 5,
+     "uslup": "hoca",
+     "id": "k2-40-q03"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Çocuklarda MSS tümörleri en sık hangi bölgede yerleşir?",
+     "secenekler": {
+      "A": "Supratentorial bölge",
+      "B": "Posterior fossa",
+      "C": "Gri–beyaz madde bileşkesi",
+      "D": "Omurilik",
+      "E": "Temporal lob"
+     },
+     "dogru": "B",
+     "aciklama": "Çocuk MSS tümörleri daha çok posterior fossada yerleşir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Serebral hemisferleri içeren bölgedir ve erişkin MSS tümörlerinin çoğu burada yerleşir. Bu yerleşim erişkin tümörlerinin tipik yeridir, çocuklarda ağırlık posterior fossadadır; çocuklardaki yerleşim açısından doğru olan Posterior fossa seçeneğidir; bu şık yanıt değildir.",
+      "B": "Serebellum ve beyin sapını içeren bölgedir ve çocukluk çağı MSS tümörlerinin çoğu burada gelişir. Çocuklarda tümörlerin çoğu posterior fossada, yani serebellum ve beyin sapı bölgesinde gelişir.",
+      "C": "Beyin metastazlarının tipik olarak yerleştiği bölgedir. Bu bileşke beyin metastazlarının keskin sınırlı kitleler yaptığı tipik bölgedir; çocuklardaki yerleşim bakımından aranan seçenek Posterior fossa olduğu için bu şık yanlıştır.",
+      "D": "Erişkinde ependimomun, özellikle NF2'li hastalarda en sık görüldüğü yerdir. Omurilik erişkin ependimomunun tipik yerleşimidir; çocuklardaki yerleşim konusunda yanıt Posterior fossa olduğundan bu şık elenir.",
+      "E": "Gangliogliom ve DNET gibi nöbetle seyreden düşük dereceli nöronal tümörlerin tipik yerleşimidir. Temporal lob nöbetle başvuran nöronal tümörlerin yerleştiği bölgedir; çocuklardaki yerleşim sorulduğunda ise doğru seçenek Posterior fossa olur, bu şık olmaz."
+     },
+     "s": 6,
+     "id": "k2-40-q04"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Erişkinlerde MSS tümörlerinin çoğu aşağıdaki bölgelerden hangisinde yerleşir?",
+     "secenekler": {
+      "A": "Posterior fossa",
+      "B": "4. ventrikül çevresi",
+      "C": "Omurilik",
+      "D": "Supratentorial bölge",
+      "E": "Monro deliği çevresi"
+     },
+     "dogru": "D",
+     "aciklama": "Erişkinlerde MSS tümörlerinin çoğu supratentorial yerleşimlidir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Serebellum ve beyin sapını içeren bölgedir ve çocukluk çağı MSS tümörlerinin çoğu burada gelişir. Erişkinlerde dağılım bu bölgenin tersine serebral hemisferlerdeki supratentorial yöne kayar; erişkindeki yerleşim konusunda yanıt Supratentorial bölge olduğundan bu şık elenir.",
+      "B": "Çocuklarda ependimomun en sık yerleştiği ve ventrikül tabanından içeriye doğru kitle yaptığı bölgedir. Bu yerleşim çocukluk çağı ependimomuna aittir ve erişkin tümörlerinin dağılımını yansıtmaz; erişkindeki yerleşim sorulduğunda ise doğru seçenek Supratentorial bölge olur, bu şık olmaz.",
+      "C": "Erişkinde ependimomun, özellikle NF2'li hastalarda en sık görüldüğü yerdir. Omurilik erişkin ependimomunun tipik yerleşimidir; erişkindeki yerleşim açısından doğru olan Supratentorial bölge seçeneğidir; bu şık yanıt değildir.",
+      "D": "Serebral hemisferleri içeren bölgedir ve erişkin MSS tümörlerinin çoğu burada yerleşir. Erişkinlerde tümörlerin çoğu serebral hemisferleri içeren supratentorial bölgede bulunur; bu, çocuklardaki posterior fossa ağırlığından farklıdır.",
+      "E": "SEGA'nın kitle yaparak obstrüktif hidrosefaliye yol açtığı bölgedir. Bu bölge tüberöz sklerozdaki SEGA'nın yerleştiği yerdir; erişkindeki yerleşim bakımından aranan seçenek Supratentorial bölge olduğu için bu şık yanlıştır."
+     },
+     "s": 6,
+     "id": "k2-40-q05"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "MSS tümörlerinin özgün özelliklerini açıklar: prekanseröz lezyonun olmaması, infiltrasyon, tam rezeksiyon güçlüğü, anatomik yerin önemi ve MSS dışı metastazın nadirliği (s. 7–9).",
+   "_s": [
+    7,
+    8,
+    9
+   ],
+   "_bp": "bp4",
+   "_baslik": "MSS tümörlerinin özgün özellikleri",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "MSS tümörlerinin genel özellikleriyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belirgin bir prekanseröz ya da in situ lezyon genellikle saptanmaz",
+      "B": "Düşük dereceli tümörlerde bile tam cerrahi rezeksiyon genellikle mümkündür ve prognoz iyidir",
+      "C": "Anatomik yer, tümör tipinden ve derecesinden bağımsız olarak sonucu belirleyebilir",
+      "D": "MSS dışına metastaz, en malign gliomlarda bile çok nadirdir",
+      "E": "MSS içine yayılım ve lokal invazyon belirgindir"
+     },
+     "dogru": "B",
+     "aciklama": "Düşük dereceli MSS tümörlerinde tam rezeksiyon genellikle imkânsızdır (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Bu ifade doğrudur. MSS tümörlerinde diğer organlardaki gibi belirgin prekanseröz ya da in situ lezyon basamağı genellikle bulunmaz, bu nedenle yanlış ifade olamaz.",
+      "B": "Bu ifade yanlıştır. MSS tümörleri düşük dereceli olsa bile yaygın infiltrasyon yaptığından tam cerrahi rezeksiyon genellikle imkânsızdır ve prognoz kötüdür.",
+      "C": "Bu ifade doğrudur. Beyin sapı gibi kritik bölgedeki küçük bir kitle derecesi düşük olsa bile ağır sonuç doğurabildiği için yer, sonucu belirleyen bağımsız bir etkendir.",
+      "D": "Bu ifade doğrudur. MSS tümörleri en malign gliomlar dahil MSS dışına çok nadir metastaz yapar; yayılım daha çok MSS içinde ve lokal invazyonla olur.",
+      "E": "Bu ifade doğrudur. MSS tümörlerinin tipik davranışı uzak organa gitmek yerine beyin dokusu içinde yayılmak ve komşu dokuyu infiltre etmektir."
+     },
+     "s": 7,
+     "uslup": "hoca",
+     "id": "k2-40-q06"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Histolojik olarak benign olan bir meningiomun kardiyorespiratuvar arrestle sonuçlanabilmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karaciğere uzak metastaz yapması",
+      "B": "Klonal evrimle derece 4'e ilerlemesi",
+      "C": "BOS yoluyla damla metastaz yapması",
+      "D": "Medulla oblongata'yı sıkıştırması",
+      "E": "Korpus kallozumu infiltre ederek karşı hemisfere geçmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Benign meningiom medulla oblongata'yı sıkıştırarak ölüme yol açabilir (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Uzak organ metastazı MSS tümörlerinde çok nadirdir ve benign meningiom için tipik bir davranış değildir. Bu nedenle ölüm mekanizmasını açıklamaz.",
+      "B": "Klonal evrimle daha yüksek dereceye ilerleme diffüz astrositomların özelliğidir. Benign olarak tanımlanan bir meningiomun ani kardiyorespiratuvar arresti bu mekanizmayla açıklanmaz.",
+      "C": "BOS yoluyla damla metastazı, tümör hücrelerinin beyin omurilik sıvısıyla MSS içinde yayılmasıdır ve medulloblastomun yayılım biçimidir. Meningiom ise komşu beyni sıkıştıran dura ilişkili bir tümör olduğundan bu mekanizma ölümü açıklamaz.",
+      "D": "Medulla oblongata solunum ve dolaşım merkezlerini barındırır; benign bir meningiom bu bölgeyi sıkıştırırsa kardiyorespiratuvar arrest gelişebilir. Bu, anatomik yerin derece ve histolojiden bağımsız sonucu belirlediğini gösterir.",
+      "E": "Korpus kallozumu infiltre ederek karşı hemisfere geçmek ve kelebek gliom görünümü vermek glioblastomun yayılım biçimidir. Meningiom ise beyni genellikle invaze etmeden sıkıştırır; ölümü bu sıkıştırmayla medulla oblongatada yapar."
+     },
+     "s": 8,
+     "id": "k2-40-q07"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Düşük dereceli bir MSS tümörünün bile ciddi nörolojik defisit yapmasının temel nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yaygın infiltrasyon ve tam rezeksiyonun genellikle imkânsız olması",
+      "B": "Sık uzak organ metastazı yapması",
+      "C": "Belirgin bir prekanseröz lezyondan gelişmesi",
+      "D": "Her zaman yüksek mitotik aktivite göstermesi",
+      "E": "Yalnızca derece 4 tümörlerde nörolojik bulgu oluşması"
+     },
+     "dogru": "A",
+     "aciklama": "Düşük dereceli MSS tümörleri yaygın infiltrasyonla ciddi defisit yapar ve tam rezeksiyon genellikle imkânsızdır (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Tümör hücreleri normal beyin dokusuna yayılarak infiltre olduğundan sınır çizilemez. Bu yüzden tümör tamamen çıkarılamaz ve düşük derece bile kalıcı nörolojik defisit bırakır.",
+      "B": "Uzak organ metastazı, tümörün MSS dışına yayılmasıdır ve MSS tümörlerinde en malign gliomlarda bile çok nadirdir. Düşük dereceli tümördeki defisit bu yolla değil, beyin dokusu içindeki infiltrasyonla ortaya çıkar.",
+      "C": "MSS tümörlerinde belirgin prekanseröz ya da in situ lezyon genellikle yoktur. Bu nedenle defisitin gerekçesi böyle bir öncül lezyon olamaz.",
+      "D": "Yüksek mitotik aktivite hücrelerin hızla çoğaldığını gösterir ve yüksek dereceli tümörleri tanımlar. Düşük dereceli tümörde sorun çoğalma hızı değil, tam rezeksiyonu engelleyen yaygın infiltrasyondur.",
+      "E": "Derece 4 tümörler ağır nörolojik bulgu verir, ancak düşük dereceli tümörler de yaygın infiltrasyonla ciddi defisit yapar. Bu yüzden nörolojik bulgunun yalnızca derece 4'e özgü olduğunu söylemek doğru değildir."
+     },
+     "s": 7,
+     "id": "k2-40-q08"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "2021 DSÖ gliom sınıflamasını, yetişkin tipi üç diffüz gliom türünü ve pediatrik diffüz gliomların farklarını ayırt eder (s. 10–12).",
+   "_s": [
+    10,
+    11,
+    12
+   ],
+   "_bp": "bp5",
+   "_baslik": "Gliomlar: 2021 WHO sınıflaması, yetişkin ve pediatrik diffüz gliomlar",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "2021 DSÖ sınıflamasında gliomlar histolojiye ek olarak hangi moleküler özelliklerle birlikte değerlendirilir?",
+     "secenekler": {
+      "A": "BRAF aktivasyonu ve PTCH1 mutasyonu",
+      "B": "MGMT metilasyonu ve TERT mutasyonu",
+      "C": "IDH mutasyonu ve 1p/19q delesyonu",
+      "D": "EGFR amplifikasyonu ve PDGFR amplifikasyonu",
+      "E": "TSC1 ve VHL mutasyonları"
+     },
+     "dogru": "C",
+     "aciklama": "2021 DSÖ gliom sınıflaması histolojiyi IDH ve 1p/19q ile birleştirir (s. 10).",
+     "sik_aciklamalari": {
+      "A": "BRAF aktivasyonu pilositik astrositomda MAPK yolunu uyarır, PTCH1 mutasyonu ise medulloblastomda SHH yolunu bozar. Bu çift tümör türlerinin kendine özgü değişiklikleridir; gliomları sınıflayan temel moleküler ölçüt değildir.",
+      "B": "MGMT metilasyonu kemoterapi yanıtını, TERT mutasyonu telomeraz aktivasyonunu gösterir. İkisi de yararlı belirteçlerdir ancak gliomları türlere ayıran temel çift değildir.",
+      "C": "2021 DSÖ sınıflaması histolojiyi moleküler özellikle birleştirir ve özellikle IDH mutasyonu ile 1p/19q delesyonunu kullanır. Yetişkin diffüz gliomlar bu iki ölçütle üç ana türe ayrılır.",
+      "D": "EGFR ve PDGFR amplifikasyonları glioblastomda büyüme sinyalini sürekli aktive eder. Bu amplifikasyonlar tek bir tümörün biyolojisini anlatır; gliom sınıflamasında tür ayırımı için kullanılan ölçüt değildir.",
+      "E": "TSC1 tüberöz sklerozun, VHL ise von Hippel–Lindau hastalığının genidir; ikisi de kalıtsal tümör sendromlarını açıklar. Gliomların 2021 sınıflamasında kullanılan moleküler ölçüt ise IDH ve 1p/19q'dur."
+     },
+     "s": 10,
+     "uslup": "hoca",
+     "id": "k2-40-q09"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi yetişkin tipi diffüz gliom türlerinden biridir?",
+     "secenekler": {
+      "A": "Pilositik astrositom",
+      "B": "Ependimom",
+      "C": "Gangliogliom",
+      "D": "Medulloblastom",
+      "E": "Oligodendrogliom"
+     },
+     "dogru": "E",
+     "aciklama": "Yetişkin tipi diffüz gliomlar IDH-mutant astrositom, IDH-wild type glioblastom ve 1p/19q kodelesyonlu oligodendrogliomdur (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; yetişkin tipi diffüz gliom türü konusunda yanıt Oligodendrogliom olduğundan bu şık elenir.",
+      "B": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; yetişkin tipi diffüz gliom türü sorulduğunda ise doğru seçenek Oligodendrogliom olur, bu şık olmaz.",
+      "C": "Neoplastik ganglion hücreleri ile glial hücrelerden oluşan, temporal lobda yerleşen ve nöbetle başvuran DSÖ derece 1 nöronal tümördür. Gangliogliomda ganglion hücreleri glial hücrelerle birlikte bulunur ve %20–50 oranında BRAF mutasyonu görülür; yetişkin tipi diffüz gliom türü açısından doğru olan Oligodendrogliom seçeneğidir; bu şık yanıt değildir.",
+      "D": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; yetişkin tipi diffüz gliom türü sorusunun doğru yanıtı ise Oligodendrogliom seçeneğidir, bu şık değildir.",
+      "E": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom, IDH-mutant astrositom ve IDH-wild type glioblastomla birlikte yetişkin tipi diffüz gliomların üç ana türünden biridir."
+     },
+     "s": 11,
+     "id": "k2-40-q10"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Pediatrik diffüz gliomlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "IDH mutasyonu ve 1p/19q kodelesyonuyla tanımlanırlar",
+      "B": "Tamamı DSÖ derece 4 olarak sınıflanır",
+      "C": "IDH ve 1p/19q içermezler, çoğu daha yavaş seyreder",
+      "D": "Sınırlandırılmış alt tipleri genellikle daha kötü prognozludur",
+      "E": "Yalnızca serebral hemisferlerde gelişir"
+     },
+     "dogru": "C",
+     "aciklama": "Pediatrik diffüz gliomlar IDH ve 1p/19q içermez ve çoğunlukla daha yavaş seyreder (s. 12).",
+     "sik_aciklamalari": {
+      "A": "IDH mutasyonu ile 1p/19q delesyonu yetişkin tipi diffüz gliomları tanımlayan moleküler ölçütlerdir. Pediatrik diffüz gliomlar bu iki değişikliği içermez, bu yüzden bu ifade pediatrik grupta doğru değildir.",
+      "B": "Pediatrik gliomlar heterojendir ve çoğu erişkin tipinden daha yavaş seyreder. Hepsini derece 4 saymak bu heterojenliği ve yavaş seyri görmezden gelir.",
+      "C": "Pediatrik diffüz gliomlar erişkin tipini tanımlayan IDH ve 1p/19q değişikliklerini taşımaz. Çoğunun seyri erişkin tip diffüz gliomlardan daha yavaştır.",
+      "D": "Sınırlandırılmış pediatrik gliom alt tipleri iyi sınırlı yapıları nedeniyle genellikle daha iyi prognozludur. Kötü prognoz iddiası bu ilişkiyi tersine çevirdiği için ifade yanlıştır.",
+      "E": "Pediatrik MSS tümörleri daha çok posterior fossada yerleşir ve erişkinlerdeki supratentorial ağırlıktan farklıdır. Gelişimin yalnızca serebral hemisferlerle sınırlı olduğu iddiası bu yerleşim farkıyla çelişir."
+     },
+     "s": 12,
+     "id": "k2-40-q11"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "IDH-mutant astrositomun genel özelliklerini, DSÖ derecelerini, CDKN2A/B ve ATRX'in rolünü ve sürücü mutasyonlarını açıklar (s. 13–15).",
+   "_s": [
+    13,
+    14,
+    15
+   ],
+   "_bp": "bp6",
+   "_baslik": "IDH-mutant astrositom: genel, WHO derece, patogenez",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "IDH-mutant astrositomda histolojik olarak düşük dereceli görünse bile tümörü WHO derece 4 yapan moleküler değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IDH1/IDH2 mutasyonu",
+      "B": "TP53 inaktivasyonu",
+      "C": "ATRX mutasyonu ya da protein kaybı",
+      "D": "TERT promotör mutasyonu",
+      "E": "CDKN2A/B homozigot delesyonu"
+     },
+     "dogru": "E",
+     "aciklama": "CDKN2A/B homozigot delesyonu IDH-mutant astrositomu derece 4 yapar (s. 14).",
+     "sik_aciklamalari": {
+      "A": "İzositrat dehidrogenaz enzimlerinin genlerindeki değişikliktir ve onkometabolit üretimiyle epigenetik değişikliklere yol açar. IDH mutasyonu yetişkin diffüz gliomları IDH-mutant ve IDH-wild type diye ayıran moleküler özelliktir; derece 4'e yükselten değişiklik sorulduğunda ise doğru seçenek CDKN2A/B homozigot delesyonu olur, bu şık olmaz.",
+      "B": "Hücre döngüsü ve apoptozu denetleyen tümör baskılayıcı genin işlev kaybıdır. TP53 inaktivasyonu astrositomda sık görülen ek bir mutasyondur ve glioblastomda apoptoza direnç sağlar; derece 4'e yükselten değişiklik açısından doğru olan CDKN2A/B homozigot delesyonu seçeneğidir; bu şık yanıt değildir.",
+      "C": "IDH-mutant bir tümörde bulunduğunda tümörün astrositom olduğunu güçlü biçimde destekleyen bir değişikliktir. ATRX kaybı IDH-mutant astrositomu destekler, oligodendrogliomda ise ATRX genellikle korunmuştur; derece 4'e yükselten değişiklik sorusunun doğru yanıtı ise CDKN2A/B homozigot delesyonu seçeneğidir, bu şık değildir.",
+      "D": "Telomerleri yenileyen telomeraz geninin değişikliğidir ve tümör hücresini yaşlanmadan kaçırır. TERT mutasyonu oligodendrogliomda ek değişiklik olarak bulunur ve glioblastomda derece 4 tanımını destekler; derece 4'e yükselten değişiklik bakımından aranan seçenek CDKN2A/B homozigot delesyonu olduğu için bu şık yanlıştır.",
+      "E": "Dokuzuncu kromozomdaki tümör baskılayıcı genin kaybıdır ve hücre bölünmesini sınırlayan mekanizma işlevini yitirir. CDKN2A/B homozigot delesyonu varsa histoloji ne olursa olsun tümör WHO derece 4 sayılır; moleküler kriterler derecelendirmeye böyle entegre edilmiştir."
+     },
+     "s": 14,
+     "uslup": "hoca",
+     "id": "k2-40-q12"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "IDH-mutant bir beyin tümöründe aşağıdakilerden hangisi tümörün astrositom olduğunu güçlü biçimde destekler?",
+     "secenekler": {
+      "A": "1p/19q kodelesyonu",
+      "B": "ATRX mutasyonu ya da protein kaybı",
+      "C": "TERT promotör mutasyonu",
+      "D": "BRAF aktivasyonu",
+      "E": "MGMT promotör metilasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "ATRX mutasyonu ya da protein kaybı IDH-mutant tümörün astrositom olduğunu güçlü biçimde destekler (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Birinci kromozomun kısa kolu ile on dokuzuncu kromozomun uzun kolunun birlikte kaybıdır ve IDH mutasyonuyla birlikte oligodendrogliomu tanımlar. Bu değişiklik oligodendrogliomu IDH mutasyonuyla birlikte tanımlayan özelliktir ve astrositom, glioblastom ya da pilositik astrositom için ayırt edici değildir; astrositomu destekleyen moleküler özellik bakımından aranan seçenek ATRX mutasyonu ya da protein kaybı olduğu için bu şık yanlıştır.",
+      "B": "IDH-mutant bir tümörde bulunduğunda tümörün astrositom olduğunu güçlü biçimde destekleyen bir değişikliktir. IDH-mutant tümörde ATRX kaybı astrositomu destekler, oligodendrogliomda ise ATRX genellikle korunmuştur; bu fark iki tümörü ayırmada kullanılır.",
+      "C": "Telomerleri yenileyen telomeraz geninin değişikliğidir ve tümör hücresini yaşlanmadan kaçırır. TERT mutasyonu oligodendrogliomda ek değişiklik olarak bulunur ve glioblastomda derece 4 tanımını destekler; astrositomu destekleyen moleküler özellik sorulduğunda ise doğru seçenek ATRX mutasyonu ya da protein kaybı olur, bu şık olmaz.",
+      "D": "B-Raf kinaz geninin aktive edici mutasyonu ya da translokasyonudur ve MAPK/ERK yolağını uyarır. BRAF aktivasyonu pilositik astrositomda sık, gangliogliomda %20–50 oranında görülen bir değişikliktir; astrositomu destekleyen moleküler özellik açısından doğru olan ATRX mutasyonu ya da protein kaybı seçeneğidir; bu şık yanıt değildir.",
+      "E": "MGMT onarım genini susturur; tümör hücresi kemoterapinin DNA hasarını tamir edemez ve ilaca duyarlı olur. MGMT metilasyonu glioblastomda kemoterapiye duyarlılık ve daha olumlu seyir demektir; astrositomu destekleyen moleküler özellik sorusunun doğru yanıtı ise ATRX mutasyonu ya da protein kaybı seçeneğidir, bu şık değildir."
+     },
+     "s": 15,
+     "id": "k2-40-q13"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Diffüz gliomlarda derece 1 kullanılmamasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tüm diffüz gliomlar IDH-wild type olduğu için",
+      "B": "Moleküler kriterlerin derecelendirmeye katılmaması",
+      "C": "Sadece çocuklarda görülmeleri",
+      "D": "Diffüz gliomlar benign davranış göstermez",
+      "E": "Cerrahi rezeksiyonla her zaman tamamen çıkarılabilmeleri"
+     },
+     "dogru": "D",
+     "aciklama": "Diffüz gliomlar benign davranmadığı için derece 1 kullanılmaz (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Yetişkin diffüz gliomlar IDH-mutant astrositom, IDH-wild type glioblastom ve oligodendrogliom olarak üç türe ayrılır. Derece 1'in kullanılmamasının nedeni IDH durumu değil, bu tümörlerin biyolojik davranışıdır; diffüz gliomlar benign seyretmez.",
+      "B": "Moleküler kriterler, örneğin CDKN2A/B delesyonu, derecelendirmeye entegre edilmiştir ve dereceyi doğrudan belirler. Derece 1'in dışlanması bu entegrasyonla değil, diffüz gliomların benign davranmamasıyla açıklanır.",
+      "C": "Diffüz gliomların yetişkin tipi vardır ve IDH-mutant astrositom en sık 4.–6. dekatlarda görülür. Derece 1'in kullanılmaması yaş grubuyla değil, bu tümörlerin benign davranış göstermemesiyle ilgilidir.",
+      "D": "Diffüz gliomlar yaygın infiltrasyon yaptığından benign davranış sergilemez. IDH-mutant astrositom bu nedenle derece 2–4 aralığında sınıflanır ve tümü malign kabul edilir.",
+      "E": "Diffüz gliomlarda tam rezeksiyon genellikle mümkün değildir. Derece 1 sınıflaması ise iyi sınırlı ve cerrahiyle çoğu kez tam çıkarılan pilositik astrositom gibi tümörlerde kullanılır."
+     },
+     "s": 14,
+     "id": "k2-40-q14"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "IDH-mutant astrositomun sürücü mutasyonu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IDH1/IDH2 mutasyonu",
+      "B": "BRAF aktivasyonu",
+      "C": "EGFR amplifikasyonu",
+      "D": "NF2 gen kaybı",
+      "E": "PTCH1 germline mutasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "IDH-mutant astrositomun sürücü mutasyonları IDH1 (en sık) veya IDH2'dir (s. 15).",
+     "sik_aciklamalari": {
+      "A": "İzositrat dehidrogenaz enzimlerinin genlerindeki değişikliktir ve onkometabolit üretimiyle epigenetik değişikliklere yol açar. IDH1 (en sık) veya IDH2 mutasyonu astrositomun sürücü değişikliğidir ve onkometabolit üretimiyle epigenetik değişikliklere yol açar.",
+      "B": "B-Raf kinaz geninin aktive edici mutasyonu ya da translokasyonudur ve MAPK/ERK yolağını uyarır. BRAF aktivasyonu pilositik astrositomda sık, gangliogliomda %20–50 oranında görülen bir değişikliktir; sürücü mutasyon sorulduğunda ise doğru seçenek IDH1/IDH2 mutasyonu olur, bu şık olmaz.",
+      "C": "Büyüme faktörü reseptör geninin kopya sayısı artışıdır ve büyüme sinyalini sürekli açık tutar. EGFR amplifikasyonu glioblastomda büyüme sinyalinin sürekli aktif kalmasını sağlar; sürücü mutasyon açısından doğru olan IDH1/IDH2 mutasyonu seçeneğidir; bu şık yanıt değildir.",
+      "D": "Sporadik meningiomların yaklaşık yarısında bulunan tümör baskılayıcı gen kaybıdır; çoklu meningiom ve sekizinci sinir schwannomu ile ilişkilidir. NF2 kaybı meningiom ile schwannom birlikteliğinde düşünülen değişikliktir; sürücü mutasyon sorusunun doğru yanıtı ise IDH1/IDH2 mutasyonu seçeneğidir, bu şık değildir.",
+      "E": "SHH yolunun negatif düzenleyicisini bozar ve medulloblastom ile deri bazal hücreli karsinom riskini artırır. PTCH1 mutasyonu SHH yolunu bozarak medulloblastom riskini artırır; sürücü mutasyon bakımından aranan seçenek IDH1/IDH2 mutasyonu olduğu için bu şık yanlıştır."
+     },
+     "s": 15,
+     "id": "k2-40-q15"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "IDH-mutant astrositomun morfolojisini, derece 2–3–4 ayrımını ve dereceye göre sağkalımı bilir (s. 16, 19–23).",
+   "_s": [
+    16,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "_bp": "bp7",
+   "_baslik": "IDH-mutant astrositom: morfoloji, derece 4 ve klinik gidiş",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Derece 2 IDH-mutant astrositomda mikroskopide aşağıdaki bulgulardan hangisi görülür?",
+     "secenekler": {
+      "A": "Kızarmış yumurta görünümü",
+      "B": "Rosenthal lifleri",
+      "C": "Merkezi nöropil çevresinde rozetler",
+      "D": "GFAP pozitif fibriler arka plan",
+      "E": "Palisadlı serpantin nekroz"
+     },
+     "dogru": "D",
+     "aciklama": "Derece 2 astrositomda GFAP pozitif fibriler arka plan görülür (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Açık sitoplazmalı yuvarlak çekirdekli tümör hücrelerinin oluşturduğu mikroskopik görünümdür. Bu görünüm oligodendrogliomun mikroskopik bulgusudur; derece 2 astrositom bulgusu sorusunun doğru yanıtı ise GFAP pozitif fibriler arka plan seçeneğidir, bu şık değildir.",
+      "B": "Parlak eozinofilik burgu şeklindeki sitoplazmik inklüzyonlardır. Rosenthal lifleri pilositik astrositomda görülür; derece 2 astrositom bulgusu bakımından aranan seçenek GFAP pozitif fibriler arka plan olduğu için bu şık yanlıştır.",
+      "C": "Hücrelerin merkezi nöropil çevresinde dizildiği nöronal farklılaşma rozetleridir. Bu rozetler medulloblastomda görülür; derece 2 astrositom bulgusu konusunda yanıt GFAP pozitif fibriler arka plan olduğundan bu şık elenir.",
+      "D": "Astrositik hücre yapısını gösteren iplik benzeri zemindir. Derece 2 astrositomda glial çekirdek sayısı hafif–orta artmıştır ve GFAP pozitif fibriler bir arka plan izlenir.",
+      "E": "Tümör hücre palisadlarıyla çevrili, kıvrımlı nekroz bantlarıdır. Bu nekroz deseni glioblastomda görülür; derece 2 astrositom bulgusu açısından doğru olan GFAP pozitif fibriler arka plan seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 20,
+     "id": "k2-40-q16"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "IDH-mutant astrositomu derece 3'ten derece 4'e ayıran histolojik bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mikrovasküler proliferasyon",
+      "B": "Yalnızca mitotik figürlerde artış",
+      "C": "Kızarmış yumurta görünümü",
+      "D": "Rosenthal lifleri",
+      "E": "Psammoma cisimcikleri"
+     },
+     "dogru": "A",
+     "aciklama": "Derece 4 IDH-mutant astrositomda mikrovasküler proliferasyon ve/veya nekroz bulunur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Endotel hücrelerinin çoğalmasıyla oluşan yoğun damar yumaklarıdır ve derece 4 tanı ölçütüdür. Derece 4 IDH-mutant astrositomda mikrovasküler proliferasyon ve/veya nekroz bulunur; derece 3'te görülen artmış mitoz tek başına derece 4 ölçütü sayılmaz.",
+      "B": "Derece 3 astrositomda görülen artmış mitoz bulgusudur. Derece 4 için mitoz artışı tek başına yetmez, mikrovasküler proliferasyon ya da nekroz da aranır; derece 4 histolojik ölçütü açısından doğru olan Mikrovasküler proliferasyon seçeneğidir; bu şık yanıt değildir.",
+      "C": "Açık sitoplazmalı yuvarlak çekirdekli tümör hücrelerinin oluşturduğu mikroskopik görünümdür. Bu görünüm oligodendrogliomun mikroskopik bulgusudur; derece 4 histolojik ölçütü sorusunun doğru yanıtı ise Mikrovasküler proliferasyon seçeneğidir, bu şık değildir.",
+      "D": "Parlak eozinofilik burgu şeklindeki sitoplazmik inklüzyonlardır. Rosenthal lifleri pilositik astrositomda görülür; derece 4 histolojik ölçütü bakımından aranan seçenek Mikrovasküler proliferasyon olduğu için bu şık yanlıştır.",
+      "E": "Konsantrik halkalı kalsifikasyonlardır ve girdaplı hücre desenine eşlik eder. Psammoma cisimcikleri meningiomda görülür; derece 4 histolojik ölçütü konusunda yanıt Mikrovasküler proliferasyon olduğundan bu şık elenir."
+     },
+     "s": 22,
+     "uslup": "hoca",
+     "id": "k2-40-q17"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Santral sinir sistemindeki gliyal tümörlerin derecelendirilmesinde aşağıdakilerden hangisi kullanılmaz?",
+     "secenekler": {
+      "A": "Mitotik aktivite",
+      "B": "Mikrovasküler proliferasyon",
+      "C": "Nöron hücrelerinin proliferasyonu",
+      "D": "Nekroz",
+      "E": "Nükleer pleomorfizm"
+     },
+     "dogru": "C",
+     "aciklama": "Nöron hücrelerinin proliferasyonu gliyal tümör derecelendirmesinde kullanılmaz (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Mitotik aktivite tümör hücrelerinin bölünme hızını gösterir ve derece 3 astrositomda mitotik figürler bulunur. Derecelendirmede kullanılan bir ölçüt olduğu için kullanılmayanı soran bu soruda yanıt değildir.",
+      "B": "Mikrovasküler proliferasyon endotel hücrelerinin çoğalmasıyla oluşan damar yumaklarıdır ve derece 4'ü tanımlayan histolojik ölçüttür. Derecelendirmede kullanıldığı için kullanılmayanı soran soruda doğru cevap olamaz.",
+      "C": "Glial tümörlerin derecesi tümör hücrelerinin özelliklerine bakılarak belirlenir; nöron hücreleri tümörün parçası olmadığından derecelendirmede ölçüt değildir. Bu yüzden kullanılmayan ölçüt budur.",
+      "D": "Nekroz, tümör dokusunun ölü alanlarıdır ve derece 4 astrositom ile glioblastomun tanı ölçütlerinden biridir. Derecelendirmede kullanıldığı için kullanılmayan ölçütü soran soruda yanıt değildir.",
+      "E": "Nükleer pleomorfizm çekirdek şekil ve boyut farkını gösterir ve derece 3 astrositomda belirginleşerek dereceyi yükseltir. Derecelendirmede kullanıldığı için bu soruda doğru cevap olamaz."
+     },
+     "s": 22,
+     "uslup": "hoca",
+     "id": "k2-40-q18"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Derece 4 IDH-mutant astrositomda ortalama sağkalım süresi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "10 yıldan uzun",
+      "B": "5–10 yıl",
+      "C": "Yaklaşık 15–18 ay",
+      "D": "10–20 yıl",
+      "E": "Yaklaşık 3 yıl"
+     },
+     "dogru": "E",
+     "aciklama": "Derece 4 astrositomda ortalama sağkalım yaklaşık 3 yıldır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Derece 2 astrositomda ortalama sağkalım süresidir. Bu süre derece 2 astrositomun sağkalımına aittir ve derece 3–4 tümörler için geçerli değildir; derece 4 sağkalımı açısından doğru olan Yaklaşık 3 yıl seçeneğidir; bu şık yanıt değildir.",
+      "B": "Derece 3 astrositom ile derece 3 oligodendrogliomda ortalama sağkalım süresidir. Bu aralık derece 3 astrositom ile derece 3 oligodendrogliomun sağkalımını gösterir; derece 4 sağkalımı sorusunun doğru yanıtı ise Yaklaşık 3 yıl seçeneğidir, bu şık değildir.",
+      "C": "Glioblastomda tedaviye rağmen görülen medyan sağkalım süresidir. Bu süre glioblastomda tedaviye rağmen görülen medyan sağkalımdır; derece 4 sağkalımı bakımından aranan seçenek Yaklaşık 3 yıl olduğu için bu şık yanlıştır.",
+      "D": "Derece 2 oligodendrogliomda cerrahi, kemoterapi ve radyoterapi ile elde edilen ortalama sağkalım süresidir. Bu aralık yalnızca derece 2 oligodendrogliomun tedaviyle elde edilen sağkalımını gösterir; derece 4 sağkalımı konusunda yanıt Yaklaşık 3 yıl olduğundan bu şık elenir.",
+      "E": "Derece 4 IDH-mutant astrositomda ortalama sağkalım süresidir. Derece 4 astrositomda ortalama sağkalım yaklaşık 3 yıldır; derece 2'de 10 yıldan uzun, derece 3'te 5–10 yıl olması dereceyle birlikte sürenin kısaldığını gösterir."
+     },
+     "s": 23,
+     "id": "k2-40-q19"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Derece 3 astrositomda ortalama sağkalım süresi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yaklaşık 3 yıl",
+      "B": "5–10 yıl",
+      "C": "10 yıldan uzun",
+      "D": "Yaklaşık 15–18 ay",
+      "E": "10–20 yıl"
+     },
+     "dogru": "B",
+     "aciklama": "Derece 3 astrositomda ortalama sağkalım 5–10 yıldır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Derece 4 IDH-mutant astrositomda ortalama sağkalım süresidir. Bu süre derece 4 astrositomun ortalama sağkalımıdır; derece 3 sağkalımı konusunda yanıt 5–10 yıl olduğundan bu şık elenir.",
+      "B": "Derece 3 astrositom ile derece 3 oligodendrogliomda ortalama sağkalım süresidir. Derece 3 astrositomda ortalama sağkalım 5–10 yıldır; derece 2 ile derece 4 arasında bir ara basamak oluşturur.",
+      "C": "Derece 2 astrositomda ortalama sağkalım süresidir. Bu süre derece 2 astrositomun sağkalımına aittir ve derece 3–4 tümörler için geçerli değildir; derece 3 sağkalımı açısından doğru olan 5–10 yıl seçeneğidir; bu şık yanıt değildir.",
+      "D": "Glioblastomda tedaviye rağmen görülen medyan sağkalım süresidir. Bu süre glioblastomda tedaviye rağmen görülen medyan sağkalımdır; derece 3 sağkalımı sorusunun doğru yanıtı ise 5–10 yıl seçeneğidir, bu şık değildir.",
+      "E": "Derece 2 oligodendrogliomda cerrahi, kemoterapi ve radyoterapi ile elde edilen ortalama sağkalım süresidir. Bu aralık yalnızca derece 2 oligodendrogliomun tedaviyle elde edilen sağkalımını gösterir; derece 3 sağkalımı bakımından aranan seçenek 5–10 yıl olduğu için bu şık yanlıştır."
+     },
+     "s": 23,
+     "id": "k2-40-q20"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Glioblastomun makroskopi, mikroskopi, görüntüleme ve klinik özelliklerini ve kötü prognozunu bilir (s. 17, 26, 27, 29).",
+   "_s": [
+    17,
+    26,
+    27,
+    29
+   ],
+   "_bp": "bp9",
+   "_baslik": "Glioblastom: morfoloji, görüntüleme ve klinik gidiş",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Beyin tümörü nedeniyle opere edilen hastanın histopatolojik incelemesinde hücre palisadlarıyla çevrili nekroz alanları ve mikrovasküler proliferasyon saptanıyor. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "IDH-mutant astrositom",
+      "B": "Oligodendrogliom",
+      "C": "Pilositik astrositom",
+      "D": "Medulloblastom",
+      "E": "Glioblastom (IDH-wild type)"
+     },
+     "dogru": "E",
+     "aciklama": "Serpantin nekroz ile mikrovasküler proliferasyon glioblastoma işaret eder (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Serebral hemisferlerde astrosit kökenli diffüz bir gliomdur ve nöbet, baş ağrısı ile fokal defisit yapar. IDH-mutant astrositom DSÖ derece 2–4 aralığında seyreder ve IDH1 mutasyonu taşır, her zaman derece 4 olmaz; nekroz ve mikrovasküler proliferasyonla tanı sorusunun doğru yanıtı ise Glioblastom (IDH-wild type) seçeneğidir, bu şık değildir.",
+      "B": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; nekroz ve mikrovasküler proliferasyonla tanı bakımından aranan seçenek Glioblastom (IDH-wild type) olduğu için bu şık yanlıştır.",
+      "C": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; nekroz ve mikrovasküler proliferasyonla tanı konusunda yanıt Glioblastom (IDH-wild type) olduğundan bu şık elenir.",
+      "D": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; nekroz ve mikrovasküler proliferasyonla tanı sorulduğunda ise doğru seçenek Glioblastom (IDH-wild type) olur, bu şık olmaz.",
+      "E": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Palisadlı serpantin nekroz ve mikrovasküler proliferasyon bir arada glioblastomu tanımlayan histolojik bulgudur."
+     },
+     "s": 26,
+     "uslup": "hoca",
+     "id": "k2-40-q21"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hızlı gelişen nöbet ve kognitif bozuklukla başvuran 70 yaşındaki hastanın MR'ında korpus kallozumu geçip karşı hemisfere uzanan, halka tarzı kontrastlanan kelebek şekilli kitle saptanıyor. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Oligodendrogliom",
+      "B": "Glioblastom (IDH-wild type)",
+      "C": "Meningiom",
+      "D": "Beyin metastazı",
+      "E": "Primer MSS lenfoması"
+     },
+     "dogru": "B",
+     "aciklama": "Kelebek gliom ve halka tarzı kontrastlanma glioblastomun görüntüleme özelliğidir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; kelebek görünümlü halkasal kitle sorulduğunda ise doğru seçenek Glioblastom (IDH-wild type) olur, bu şık olmaz.",
+      "B": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Korpus kallozum üzerinden karşı hemisfere yayılıp kelebek gliom görünümü vermek ve halkasal kontrastlanmak glioblastomun tipik özelliğidir.",
+      "C": "Araknoid meningoepitelyal hücrelerden gelişen, dura ile ilişkili, çoğunlukla iyi huylu ve DSÖ derece 1–3 olan bir erişkin tümörüdür. Meningiom dura tabanlı iyi sınırlı kitle, girdaplı büyüme ve psammoma cisimcikleriyle tanınır; kelebek görünümlü halkasal kitle sorusunun doğru yanıtı ise Glioblastom (IDH-wild type) seçeneğidir, bu şık değildir.",
+      "D": "Tüm intrakraniyal tümörlerin yarısından fazlasını oluşturur ve en sık akciğer, meme, böbrek, kolon karsinomu ile melanomdan kaynaklanır. Metastazlar gri–beyaz madde bileşkesinde keskin sınırlı, çevresinde ödem ve gliyoz bulunan kitle olarak izlenir; kelebek görünümlü halkasal kitle bakımından aranan seçenek Glioblastom (IDH-wild type) olduğu için bu şık yanlıştır.",
+      "E": "Bağışıklık yetmezliğinde MSS'nin en sık tümörüdür ve çoğunlukla diffüz büyük B hücreli tiptedir. Lenfomada damar çevresinde yoğunlaşan CD20 pozitif B hücreleri görülür; kelebek görünümlü halkasal kitle konusunda yanıt Glioblastom (IDH-wild type) olduğundan bu şık elenir."
+     },
+     "s": 29,
+     "uslup": "hoca",
+     "id": "k2-40-q22"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki glial tümörlerden hangisinin prognozu en kötüdür?",
+     "secenekler": {
+      "A": "Oligodendrogliom",
+      "B": "Pilositik astrositom",
+      "C": "Ependimom",
+      "D": "Glioblastom (IDH-wild type)",
+      "E": "IDH-mutant astrositom"
+     },
+     "dogru": "D",
+     "aciklama": "Glioblastomda medyan sağkalım tedaviye rağmen yaklaşık 15–18 aydır (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; en kötü prognoz bakımından aranan seçenek Glioblastom (IDH-wild type) olduğu için bu şık yanlıştır.",
+      "B": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; en kötü prognoz konusunda yanıt Glioblastom (IDH-wild type) olduğundan bu şık elenir.",
+      "C": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; en kötü prognoz sorulduğunda ise doğru seçenek Glioblastom (IDH-wild type) olur, bu şık olmaz.",
+      "D": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom tedaviye rağmen yaklaşık 15–18 aylık medyan sağkalımla glial tümörler içinde en kötü seyirli olandır.",
+      "E": "Serebral hemisferlerde astrosit kökenli diffüz bir gliomdur ve nöbet, baş ağrısı ile fokal defisit yapar. IDH-mutant astrositom DSÖ derece 2–4 aralığında seyreder ve IDH1 mutasyonu taşır, her zaman derece 4 olmaz; en kötü prognoz sorusunun doğru yanıtı ise Glioblastom (IDH-wild type) seçeneğidir, bu şık değildir."
+     },
+     "s": 29,
+     "uslup": "hoca",
+     "id": "k2-40-q23"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Glioblastomun makroskopik görünümü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sert beyaz alan, sarı nekroz, kist ve kanama birlikteliği",
+      "B": "Kist duvarında mural nodül bulunan iyi sınırlı kitle",
+      "C": "Jelatinöz, gri ve sıklıkla kalsifiye infiltratif kitle",
+      "D": "Gri, kırılgan ve iyi sınırlı serebellar kitle",
+      "E": "Dura tabanlı, beyni komprese eden iyi tanımlı kitle"
+     },
+     "dogru": "A",
+     "aciklama": "Glioblastomda sert beyaz alanlar, sarı nekroz, kist ve kanama bir aradadır (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Glioblastomun kesit yüzeyinde sert beyaz tümör dokusu ile yumuşak sarı nekroz alanları, kist ve kanama bir arada bulunur. Bu karışık görünüm hızlı büyüyen tümörün tipik makroskopisidir.",
+      "B": "Kistik lezyon ve mural nodül birlikteliği pilositik astrositomun makroskopik özelliğidir. Glioblastom kistik değişiklik gösterse de iyi sınırlı bir mural nodül yapısında değildir.",
+      "C": "Jelatinöz, gri ve sıklıkla kalsifiye infiltratif kitle oligodendrogliomun makroskopik tarifidir. Glioblastomda ise sert beyaz alanlar yanında yumuşak sarı nekroz, kist ve kanama belirgindir.",
+      "D": "Gri, kırılgan ve iyi sınırlı serebellar kitle medulloblastomun makroskopik özelliğidir. Glioblastom ise serebral loblarda nekroz ve kanama içeren infiltratif bir kitle oluşturur.",
+      "E": "Dura tabanlı ve komşu beyni komprese eden iyi tanımlı kitle meningiomun özelliğidir. Glioblastom beyin dokusunu infiltre ederek yayılır ve dura tabanlı değildir."
+     },
+     "s": 26,
+     "id": "k2-40-q24"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Meningiomun kökenini, NF2 ilişkisini, morfolojisini ve derece 1–3 alt tiplerini açıklar (s. 18, 48–51).",
+   "_s": [
+    18,
+    48,
+    49,
+    50,
+    51
+   ],
+   "_bp": "bp16",
+   "_baslik": "Meningiom: genel, patogenez, morfoloji ve dereceler",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Meningiom ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Araknoid meningoepitelyal hücre kökenlidir",
+      "B": "NF2 geninde somatik fonksiyon kaybı, sporadik olguların yaklaşık yarısında görülür",
+      "C": "Derece 1 histolojik alt tipleri arasında kordoid ve berrak hücreli tipler yer alır",
+      "D": "Psammomatöz tipte çok sayıda psammoma cisimciği bulunur",
+      "E": "Derece 3 meningiom yüksek mitozludur ve sarkom, karsinom ya da melanoma benzeri görünebilir"
+     },
+     "dogru": "C",
+     "aciklama": "Kordoid ve berrak hücreli tipler derece 2 meningiom alt tipleridir (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Meningiom araknoid katmandaki meningoepitelyal hücrelerden gelişen, dura ile ilişkili bir tümördür. Bu ifade doğru olduğu için yanlış ifadeyi arayan soruda cevap olamaz.",
+      "B": "Sporadik meningiomların yaklaşık yarısında NF2 tümör baskılayıcı geninde somatik fonksiyon kaybı mutasyonları bulunur. Bu ifade doğrudur ve yanlış ifadeyi soran soruda yanıt değildir.",
+      "C": "Kordoid ve berrak hücreli tipler derece 2 meningiom alt tipleridir. Derece 1 grubunda meningoepitelyal, fibroblastik, transizyonel, psammomatöz ve sekretuar tipler bulunur; ifade bu yüzden yanlıştır.",
+      "D": "Psammomatöz meningiom, konsantrik halkalı kalsifikasyonlar olan çok sayıda psammoma cisimciği içerir ve derece 1 alt tipidir. Bu ifade doğrudur; yanlış ifade sorusunun yanıtı olamaz.",
+      "E": "Derece 3 meningiom yüksek mitozludur, sarkom, karsinom ya da melanoma benzeri görünür ve çok agresiftir. Bu ifade doğru olduğundan yanlış ifadeyi soran soruda yanıt değildir."
+     },
+     "s": 50,
+     "uslup": "hoca",
+     "id": "k2-40-q25"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Çoklu meningiom ile sekizinci sinir schwannomu birlikteliği olan hastada aşağıdaki genlerden hangisinin mutasyonu düşünülmelidir?",
+     "secenekler": {
+      "A": "NF2 gen kaybı",
+      "B": "TSC1/TSC2 mutasyonu",
+      "C": "VHL gen kaybı",
+      "D": "PTCH1 germline mutasyonu",
+      "E": "BRAF aktivasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Çoklu meningiom ile 8. sinir schwannomu birlikteliğinde NF2 düşünülmelidir (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Sporadik meningiomların yaklaşık yarısında bulunan tümör baskılayıcı gen kaybıdır; çoklu meningiom ve sekizinci sinir schwannomu ile ilişkilidir. Çoklu meningiom ve 8. sinir schwannomu birlikteliği NF2 geni ilişkili tablonun göstergesidir.",
+      "B": "Hamartin ve tuberin proteinlerini kodlayan genlerin değişikliğidir ve mTOR aktivitesini artırır. TSC1/TSC2 mutasyonu tüberöz sklerozda hamartom eğilimine yol açar; meningiom ve schwannom birlikteliği bakımından aranan seçenek NF2 gen kaybı olduğu için bu şık yanlıştır.",
+      "C": "HIF için ubikitin-ligaz kompleksinin parçası olan tümör baskılayıcı genin kaybıdır; HIF, VEGF ve eritropoietin artar. VHL kaybı hemanjioblastom ve böbrek hücreli karsinom yatkınlığı verir; meningiom ve schwannom birlikteliği konusunda yanıt NF2 gen kaybı olduğundan bu şık elenir.",
+      "D": "SHH yolunun negatif düzenleyicisini bozar ve medulloblastom ile deri bazal hücreli karsinom riskini artırır. PTCH1 mutasyonu SHH yolunu bozarak medulloblastom riskini artırır; meningiom ve schwannom birlikteliği sorulduğunda ise doğru seçenek NF2 gen kaybı olur, bu şık olmaz.",
+      "E": "B-Raf kinaz geninin aktive edici mutasyonu ya da translokasyonudur ve MAPK/ERK yolağını uyarır. BRAF aktivasyonu pilositik astrositomda sık, gangliogliomda %20–50 oranında görülen bir değişikliktir; meningiom ve schwannom birlikteliği açısından doğru olan NF2 gen kaybı seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 49,
+     "uslup": "hoca",
+     "id": "k2-40-q26"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Dura tabanlı, iyi tanımlı, komşu beyni komprese eden ancak genellikle invaze etmeyen ve kemiğe uzanabilen kitle aşağıdaki tümörlerden hangisi için tipiktir?",
+     "secenekler": {
+      "A": "Glioblastom (IDH-wild type)",
+      "B": "Beyin metastazı",
+      "C": "Meningiom",
+      "D": "Primer MSS lenfoması",
+      "E": "Pilositik astrositom"
+     },
+     "dogru": "C",
+     "aciklama": "Meningiom makroskopik olarak iyi tanımlı, dura tabanlı bir kitledir (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom palisadlı serpantin nekroz ile mikrovasküler proliferasyonla tanınır; dura tabanlı kitle sorulduğunda ise doğru seçenek Meningiom olur, bu şık olmaz.",
+      "B": "Tüm intrakraniyal tümörlerin yarısından fazlasını oluşturur ve en sık akciğer, meme, böbrek, kolon karsinomu ile melanomdan kaynaklanır. Metastazlar gri–beyaz madde bileşkesinde keskin sınırlı, çevresinde ödem ve gliyoz bulunan kitle olarak izlenir; dura tabanlı kitle açısından doğru olan Meningiom seçeneğidir; bu şık yanıt değildir.",
+      "C": "Araknoid meningoepitelyal hücrelerden gelişen, dura ile ilişkili, çoğunlukla iyi huylu ve DSÖ derece 1–3 olan bir erişkin tümörüdür. Meningiom dura tabanlı iyi tanımlı bir kitledir, beyni komprese eder ve kemiğe doğru uzanabilir.",
+      "D": "Bağışıklık yetmezliğinde MSS'nin en sık tümörüdür ve çoğunlukla diffüz büyük B hücreli tiptedir. Lenfomada damar çevresinde yoğunlaşan CD20 pozitif B hücreleri görülür; dura tabanlı kitle bakımından aranan seçenek Meningiom olduğu için bu şık yanlıştır.",
+      "E": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; dura tabanlı kitle konusunda yanıt Meningiom olduğundan bu şık elenir."
+     },
+     "s": 50,
+     "id": "k2-40-q27"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Derece 2 meningiomun alt tipleri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Meningoepitelyal ve fibroblastik tipler",
+      "B": "Transizyonel ve psammomatöz tipler",
+      "C": "Sekretuar ve psammomatöz tipler",
+      "D": "Sarkom ve karsinom benzeri tipler",
+      "E": "Kordoid ve berrak hücreli tipler"
+     },
+     "dogru": "E",
+     "aciklama": "Derece 2 meningiomun alt tipleri kordoid ve berrak hücreli tiplerdir (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Meningoepitelyal (sinsityal) ve fibroblastik tipler iyi huylu derece 1 meningiom alt tipleridir. Derece 2 grubu ise kordoid ve berrak hücreli tiplerdir, bu yüzden bu çift doğru yanıt değildir.",
+      "B": "Transizyonel ve psammomatöz tipler de derece 1 meningiom alt tipleridir ve psammomatöz tip çok sayıda psammoma cisimciği içerir. Bu iyi huylu çift derece 2 alt tipi sayılmaz.",
+      "C": "Sekretuar tip PAS pozitif eozinofilik materyal içeren gland benzeri boşluklarla, psammomatöz tip psammoma cisimcikleriyle tanınır. İkisi de derece 1 olduğundan derece 2 alt tipi sorusuna yanıt olamaz.",
+      "D": "Sarkom, karsinom ya da melanoma benzeri görünüm derece 3 meningiomun özelliğidir. Çok agresif olan bu grup derece 2 alt tipi değildir.",
+      "E": "Kordoid ve berrak hücreli meningiomlar derece 2 alt tipleridir ve bu grupta mitoz artmış, nükleol belirgindir. Nekroz ile beyin invazyonu da görülebildiğinden bu çift derece 2 grubunu tanımlar."
+     },
+     "s": 50,
+     "id": "k2-40-q28"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Dura mater'e yapışık parasagittal çok loblu kitlede mikroskopide girdaplı büyüme deseni ve konsantrik halkalı kalsifikasyonlar saptanıyor. Bu kalsifikasyonlar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kızarmış yumurta görünümü",
+      "B": "Psammoma cisimcikleri",
+      "C": "Rosenthal lifleri",
+      "D": "Merkezi nöropil çevresinde rozetler",
+      "E": "Palisadlı serpantin nekroz"
+     },
+     "dogru": "B",
+     "aciklama": "Meningiomda girdaplı hücre deseni ve psammoma cisimcikleri görülür (s. 51).",
+     "sik_aciklamalari": {
+      "A": "Açık sitoplazmalı yuvarlak çekirdekli tümör hücrelerinin oluşturduğu mikroskopik görünümdür. Bu görünüm oligodendrogliomun mikroskopik bulgusudur; konsantrik halkalı kalsifikasyon açısından doğru olan Psammoma cisimcikleri seçeneğidir; bu şık yanıt değildir.",
+      "B": "Konsantrik halkalı kalsifikasyonlardır ve girdaplı hücre desenine eşlik eder. Psammoma cisimcikleri konsantrik halkalı kalsifikasyonlardır ve girdaplı hücre deseniyle birlikte meningiomu gösterir.",
+      "C": "Parlak eozinofilik burgu şeklindeki sitoplazmik inklüzyonlardır. Rosenthal lifleri pilositik astrositomda görülür; konsantrik halkalı kalsifikasyon bakımından aranan seçenek Psammoma cisimcikleri olduğu için bu şık yanlıştır.",
+      "D": "Hücrelerin merkezi nöropil çevresinde dizildiği nöronal farklılaşma rozetleridir. Bu rozetler medulloblastomda görülür; konsantrik halkalı kalsifikasyon konusunda yanıt Psammoma cisimcikleri olduğundan bu şık elenir.",
+      "E": "Tümör hücre palisadlarıyla çevrili, kıvrımlı nekroz bantlarıdır. Bu nekroz deseni glioblastomda görülür; konsantrik halkalı kalsifikasyon sorulduğunda ise doğru seçenek Psammoma cisimcikleri olur, bu şık olmaz."
+     },
+     "s": 51,
+     "id": "k2-40-q29"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "IDH-wild type glioblastomun genel özelliklerini, patogenezini, MGMT metilasyonunu ve derece 4'ü destekleyen moleküler değişiklikleri açıklar (s. 24, 25, 28).",
+   "_s": [
+    24,
+    25,
+    28
+   ],
+   "_bp": "bp8",
+   "_baslik": "Glioblastom IDH-wild type: genel, patogenez, moleküler tanı",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Her zaman DSÖ derece 4 olan ve daha düşük dereceli bir öncül formu bulunmayan tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IDH-mutant astrositom",
+      "B": "Oligodendrogliom",
+      "C": "Pilositik astrositom",
+      "D": "Glioblastom (IDH-wild type)",
+      "E": "Ependimom"
+     },
+     "dogru": "D",
+     "aciklama": "IDH-wild type glioblastom her zaman DSÖ derece 4'tür (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Serebral hemisferlerde astrosit kökenli diffüz bir gliomdur ve nöbet, baş ağrısı ile fokal defisit yapar. IDH-mutant astrositom DSÖ derece 2–4 aralığında seyreder ve IDH1 mutasyonu taşır, her zaman derece 4 olmaz; her zaman derece 4 olması konusunda yanıt Glioblastom (IDH-wild type) olduğundan bu şık elenir.",
+      "B": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; her zaman derece 4 olması sorulduğunda ise doğru seçenek Glioblastom (IDH-wild type) olur, bu şık olmaz.",
+      "C": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; her zaman derece 4 olması açısından doğru olan Glioblastom (IDH-wild type) seçeneğidir; bu şık yanıt değildir.",
+      "D": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. IDH-wild type glioblastom her zaman derece 4'tür ve düşük dereceli bir öncülden gelişmez.",
+      "E": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; her zaman derece 4 olması bakımından aranan seçenek Glioblastom (IDH-wild type) olduğu için bu şık yanlıştır."
+     },
+     "s": 24,
+     "uslup": "hoca",
+     "id": "k2-40-q30"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Promotör metilasyonu varlığında tümör hücresi kemoterapinin verdiği DNA hasarını onaramaz ve seyir daha olumlu olur. Bu değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "EGFR amplifikasyonu",
+      "B": "MGMT promotör metilasyonu",
+      "C": "TERT promotör mutasyonu",
+      "D": "CDKN2A/B homozigot delesyonu",
+      "E": "TP53 inaktivasyonu"
+     },
+     "dogru": "B",
+     "aciklama": "MGMT promotör metilasyonu kemoterapiye duyarlılık ve olumlu seyirle ilişkilidir (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Büyüme faktörü reseptör geninin kopya sayısı artışıdır ve büyüme sinyalini sürekli açık tutar. EGFR amplifikasyonu glioblastomda büyüme sinyalinin sürekli aktif kalmasını sağlar; kemoterapiye duyarlılığı artıran değişiklik sorusunun doğru yanıtı ise MGMT promotör metilasyonu seçeneğidir, bu şık değildir.",
+      "B": "MGMT onarım genini susturur; tümör hücresi kemoterapinin DNA hasarını tamir edemez ve ilaca duyarlı olur. MGMT geni metilasyonla kapandığında onarım enzimi üretilemez ve glioblastom kemoterapiye daha duyarlı olur.",
+      "C": "Telomerleri yenileyen telomeraz geninin değişikliğidir ve tümör hücresini yaşlanmadan kaçırır. TERT mutasyonu oligodendrogliomda ek değişiklik olarak bulunur ve glioblastomda derece 4 tanımını destekler; kemoterapiye duyarlılığı artıran değişiklik konusunda yanıt MGMT promotör metilasyonu olduğundan bu şık elenir.",
+      "D": "Dokuzuncu kromozomdaki tümör baskılayıcı genin kaybıdır ve hücre bölünmesini sınırlayan mekanizma işlevini yitirir. Bu delesyon histoloji düşük dereceli görünse bile IDH-mutant astrositomu derece 4 yapan değişikliktir; kemoterapiye duyarlılığı artıran değişiklik sorulduğunda ise doğru seçenek MGMT promotör metilasyonu olur, bu şık olmaz.",
+      "E": "Hücre döngüsü ve apoptozu denetleyen tümör baskılayıcı genin işlev kaybıdır. TP53 inaktivasyonu astrositomda sık görülen ek bir mutasyondur ve glioblastomda apoptoza direnç sağlar; kemoterapiye duyarlılığı artıran değişiklik açısından doğru olan MGMT promotör metilasyonu seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 25,
+     "id": "k2-40-q31"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "IDH-wild type glioblastomda histolojik nekroz ya da anjiyogenez olmasa da derece 4 tanımını destekleyen moleküler değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ATRX mutasyonu ya da protein kaybı",
+      "B": "1p/19q kodelesyonu",
+      "C": "BRAF aktivasyonu",
+      "D": "TERT promotör mutasyonu",
+      "E": "PTCH1 germline mutasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "TERT promotör mutasyonu, EGFR amplifikasyonu ve +7/–10 derece 4 tanımını destekler (s. 28).",
+     "sik_aciklamalari": {
+      "A": "IDH-mutant bir tümörde bulunduğunda tümörün astrositom olduğunu güçlü biçimde destekleyen bir değişikliktir. ATRX kaybı IDH-mutant astrositomu destekler, oligodendrogliomda ise ATRX genellikle korunmuştur; derece 4 tanımını destekleyen değişiklik sorulduğunda ise doğru seçenek TERT promotör mutasyonu olur, bu şık olmaz.",
+      "B": "Birinci kromozomun kısa kolu ile on dokuzuncu kromozomun uzun kolunun birlikte kaybıdır ve IDH mutasyonuyla birlikte oligodendrogliomu tanımlar. Bu değişiklik oligodendrogliomu IDH mutasyonuyla birlikte tanımlayan özelliktir ve astrositom, glioblastom ya da pilositik astrositom için ayırt edici değildir; derece 4 tanımını destekleyen değişiklik açısından doğru olan TERT promotör mutasyonu seçeneğidir; bu şık yanıt değildir.",
+      "C": "B-Raf kinaz geninin aktive edici mutasyonu ya da translokasyonudur ve MAPK/ERK yolağını uyarır. BRAF aktivasyonu pilositik astrositomda sık, gangliogliomda %20–50 oranında görülen bir değişikliktir; derece 4 tanımını destekleyen değişiklik sorusunun doğru yanıtı ise TERT promotör mutasyonu seçeneğidir, bu şık değildir.",
+      "D": "Telomerleri yenileyen telomeraz geninin değişikliğidir ve tümör hücresini yaşlanmadan kaçırır. TERT promotör mutasyonu, EGFR amplifikasyonu ve +7/–10 kopya sayısı değişikliği nekroz olmasa da derece 4 tanımını destekler.",
+      "E": "SHH yolunun negatif düzenleyicisini bozar ve medulloblastom ile deri bazal hücreli karsinom riskini artırır. PTCH1 mutasyonu SHH yolunu bozarak medulloblastom riskini artırır; derece 4 tanımını destekleyen değişiklik konusunda yanıt TERT promotör mutasyonu olduğundan bu şık elenir."
+     },
+     "s": 28,
+     "id": "k2-40-q32"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Glioblastomda büyüme sinyalini sürekli aktive eden genetik sapma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "EGFR amplifikasyonu",
+      "B": "MGMT promotör metilasyonu",
+      "C": "TP53 inaktivasyonu",
+      "D": "CDKN2A/B homozigot delesyonu",
+      "E": "TERT promotör mutasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Glioblastomda büyüme sinyali EGFR ve PDGFR amplifikasyonlarıyla aktive olur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Büyüme faktörü reseptör geninin kopya sayısı artışıdır ve büyüme sinyalini sürekli açık tutar. EGFR ve PDGFR amplifikasyonları glioblastomda büyüme sinyalinin aktivasyonunu sağlar.",
+      "B": "MGMT onarım genini susturur; tümör hücresi kemoterapinin DNA hasarını tamir edemez ve ilaca duyarlı olur. MGMT metilasyonu glioblastomda kemoterapiye duyarlılık ve daha olumlu seyir demektir; büyüme sinyali aktivasyonu konusunda yanıt EGFR amplifikasyonu olduğundan bu şık elenir.",
+      "C": "Hücre döngüsü ve apoptozu denetleyen tümör baskılayıcı genin işlev kaybıdır. TP53 inaktivasyonu astrositomda sık görülen ek bir mutasyondur ve glioblastomda apoptoza direnç sağlar; büyüme sinyali aktivasyonu sorulduğunda ise doğru seçenek EGFR amplifikasyonu olur, bu şık olmaz.",
+      "D": "Dokuzuncu kromozomdaki tümör baskılayıcı genin kaybıdır ve hücre bölünmesini sınırlayan mekanizma işlevini yitirir. Bu delesyon histoloji düşük dereceli görünse bile IDH-mutant astrositomu derece 4 yapan değişikliktir; büyüme sinyali aktivasyonu açısından doğru olan EGFR amplifikasyonu seçeneğidir; bu şık yanıt değildir.",
+      "E": "Telomerleri yenileyen telomeraz geninin değişikliğidir ve tümör hücresini yaşlanmadan kaçırır. TERT mutasyonu oligodendrogliomda ek değişiklik olarak bulunur ve glioblastomda derece 4 tanımını destekler; büyüme sinyali aktivasyonu sorusunun doğru yanıtı ise EGFR amplifikasyonu seçeneğidir, bu şık değildir."
+     },
+     "s": 25,
+     "id": "k2-40-q33"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Oligodendrogliomun IDH ve 1p/19q tanımlayıcı moleküler özelliğini, morfolojisini ve derece bazlı sağkalımını açıklar (s. 30–33).",
+   "_s": [
+    30,
+    31,
+    32,
+    33
+   ],
+   "_bp": "bp10",
+   "_baslik": "Oligodendrogliom: genel, tanımlayıcı moleküler özellik, morfoloji ve prognoz",
+   "sorular": [
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Açık sitoplazmalı yuvarlak çekirdekli hücreler kızarmış yumurta görünümü verir ve ince, anastomozlu kapiller ağ izlenir. Bu bulgular aşağıdaki tümörlerden hangisine aittir?",
+     "secenekler": {
+      "A": "Ependimom",
+      "B": "Medulloblastom",
+      "C": "Oligodendrogliom",
+      "D": "Pilositik astrositom",
+      "E": "Meningiom"
+     },
+     "dogru": "C",
+     "aciklama": "Oligodendrogliomda kızarmış yumurta görünümü ve kümes teli kapiller ağı bulunur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; kızarmış yumurta ve kapiller ağ açısından doğru olan Oligodendrogliom seçeneğidir; bu şık yanıt değildir.",
+      "B": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; kızarmış yumurta ve kapiller ağ sorusunun doğru yanıtı ise Oligodendrogliom seçeneğidir, bu şık değildir.",
+      "C": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Kızarmış yumurta görünümü ve tavuk kümes teli kapiller ağı oligodendrogliomu tanımlayan mikroskopik bulgudur.",
+      "D": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; kızarmış yumurta ve kapiller ağ konusunda yanıt Oligodendrogliom olduğundan bu şık elenir.",
+      "E": "Araknoid meningoepitelyal hücrelerden gelişen, dura ile ilişkili, çoğunlukla iyi huylu ve DSÖ derece 1–3 olan bir erişkin tümörüdür. Meningiom dura tabanlı iyi sınırlı kitle, girdaplı büyüme ve psammoma cisimcikleriyle tanınır; kızarmış yumurta ve kapiller ağ sorulduğunda ise doğru seçenek Oligodendrogliom olur, bu şık olmaz."
+     },
+     "s": 32,
+     "uslup": "hoca",
+     "id": "k2-40-q34"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Oligodendrogliomu tanımlayan moleküler değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "ATRX mutasyonu ya da protein kaybı",
+      "B": "BRAF aktivasyonu",
+      "C": "EGFR amplifikasyonu",
+      "D": "PTCH1 germline mutasyonu",
+      "E": "1p/19q kodelesyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Oligodendrogliomda IDH mutasyonu ile birlikte 1p/19q kodelesyonu her zaman bulunur (s. 31).",
+     "sik_aciklamalari": {
+      "A": "IDH-mutant bir tümörde bulunduğunda tümörün astrositom olduğunu güçlü biçimde destekleyen bir değişikliktir. ATRX kaybı IDH-mutant astrositomu destekler, oligodendrogliomda ise ATRX genellikle korunmuştur; oligodendrogliomu tanımlayan moleküler özellik konusunda yanıt 1p/19q kodelesyonu olduğundan bu şık elenir.",
+      "B": "B-Raf kinaz geninin aktive edici mutasyonu ya da translokasyonudur ve MAPK/ERK yolağını uyarır. BRAF aktivasyonu pilositik astrositomda sık, gangliogliomda %20–50 oranında görülen bir değişikliktir; oligodendrogliomu tanımlayan moleküler özellik sorulduğunda ise doğru seçenek 1p/19q kodelesyonu olur, bu şık olmaz.",
+      "C": "Büyüme faktörü reseptör geninin kopya sayısı artışıdır ve büyüme sinyalini sürekli açık tutar. EGFR amplifikasyonu glioblastomda büyüme sinyalinin sürekli aktif kalmasını sağlar; oligodendrogliomu tanımlayan moleküler özellik açısından doğru olan 1p/19q kodelesyonu seçeneğidir; bu şık yanıt değildir.",
+      "D": "SHH yolunun negatif düzenleyicisini bozar ve medulloblastom ile deri bazal hücreli karsinom riskini artırır. PTCH1 mutasyonu SHH yolunu bozarak medulloblastom riskini artırır; oligodendrogliomu tanımlayan moleküler özellik sorusunun doğru yanıtı ise 1p/19q kodelesyonu seçeneğidir, bu şık değildir.",
+      "E": "Birinci kromozomun kısa kolu ile on dokuzuncu kromozomun uzun kolunun birlikte kaybıdır ve IDH mutasyonuyla birlikte oligodendrogliomu tanımlar. IDH mutasyonuyla birlikte her zaman bulunan 1p/19q kodelesyonu oligodendrogliomu tanımlar."
+     },
+     "s": 31,
+     "id": "k2-40-q35"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Derece 2 oligodendrogliomda cerrahi, kemoterapi ve radyoterapi ile ortalama sağkalım süresi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yaklaşık 3 yıl",
+      "B": "10 yıldan uzun",
+      "C": "10–20 yıl",
+      "D": "5–10 yıl",
+      "E": "Yaklaşık 15–18 ay"
+     },
+     "dogru": "C",
+     "aciklama": "Derece 2 oligodendrogliomda ortalama sağkalım 10–20 yıldır (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Derece 4 IDH-mutant astrositomda ortalama sağkalım süresidir. Bu süre derece 4 astrositomun ortalama sağkalımıdır; derece 2 oligodendrogliom sağkalımı sorusunun doğru yanıtı ise 10–20 yıl seçeneğidir, bu şık değildir.",
+      "B": "Derece 2 astrositomda ortalama sağkalım süresidir. Bu süre derece 2 astrositomun sağkalımına aittir ve derece 3–4 tümörler için geçerli değildir; derece 2 oligodendrogliom sağkalımı bakımından aranan seçenek 10–20 yıl olduğu için bu şık yanlıştır.",
+      "C": "Derece 2 oligodendrogliomda cerrahi, kemoterapi ve radyoterapi ile elde edilen ortalama sağkalım süresidir. Derece 2 oligodendrogliomda ortalama sağkalım 10–20 yıldır; derece 3'te bu süre 5–10 yıla düşer.",
+      "D": "Derece 3 astrositom ile derece 3 oligodendrogliomda ortalama sağkalım süresidir. Bu aralık derece 3 astrositom ile derece 3 oligodendrogliomun sağkalımını gösterir; derece 2 oligodendrogliom sağkalımı sorulduğunda ise doğru seçenek 10–20 yıl olur, bu şık olmaz.",
+      "E": "Glioblastomda tedaviye rağmen görülen medyan sağkalım süresidir. Bu süre glioblastomda tedaviye rağmen görülen medyan sağkalımdır; derece 2 oligodendrogliom sağkalımı açısından doğru olan 10–20 yıl seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 32,
+     "id": "k2-40-q36"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Oligodendrogliomda aşağıdaki mikroskopik bulgulardan hangisi görülür?",
+     "secenekler": {
+      "A": "Palisadlı serpantin nekroz",
+      "B": "Rosenthal lifleri",
+      "C": "Merkezi nöropil çevresinde rozetler",
+      "D": "Psammoma cisimcikleri",
+      "E": "Tavuk kümes teli kapiller ağı"
+     },
+     "dogru": "E",
+     "aciklama": "Oligodendrogliomda ince anastomozlu tavuk kümes teli kapiller ağı bulunur (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Tümör hücre palisadlarıyla çevrili, kıvrımlı nekroz bantlarıdır. Bu nekroz deseni glioblastomda görülür; oligodendrogliomun mikroskopik bulgusu sorulduğunda ise doğru seçenek Tavuk kümes teli kapiller ağı olur, bu şık olmaz.",
+      "B": "Parlak eozinofilik burgu şeklindeki sitoplazmik inklüzyonlardır. Rosenthal lifleri pilositik astrositomda görülür; oligodendrogliomun mikroskopik bulgusu açısından doğru olan Tavuk kümes teli kapiller ağı seçeneğidir; bu şık yanıt değildir.",
+      "C": "Hücrelerin merkezi nöropil çevresinde dizildiği nöronal farklılaşma rozetleridir. Bu rozetler medulloblastomda görülür; oligodendrogliomun mikroskopik bulgusu sorusunun doğru yanıtı ise Tavuk kümes teli kapiller ağı seçeneğidir, bu şık değildir.",
+      "D": "Konsantrik halkalı kalsifikasyonlardır ve girdaplı hücre desenine eşlik eder. Psammoma cisimcikleri meningiomda görülür; oligodendrogliomun mikroskopik bulgusu bakımından aranan seçenek Tavuk kümes teli kapiller ağı olduğu için bu şık yanlıştır.",
+      "E": "İnce ve anastomozlu kapillerlerin tümör hücrelerini ayırdığı damar desenidir. İnce, anastomozlu tavuk kümes teli kapiller ağı oligodendrogliomun ayırt edici bulgusudur."
+     },
+     "s": 32,
+     "id": "k2-40-q37"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Pilositik astrositomun derecesini, BRAF değişikliğini ve morfolojisini açıklar (s. 34–36).",
+   "_s": [
+    34,
+    35,
+    36
+   ],
+   "_bp": "bp11",
+   "_baslik": "Pilositik astrositom: genel, moleküler ve morfoloji",
+   "sorular": [
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "DSÖ derece 1 olan, serebellumda kist duvarında mural nodül oluşturan tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Oligodendrogliom",
+      "B": "Pilositik astrositom",
+      "C": "Ependimom",
+      "D": "Medulloblastom",
+      "E": "Glioblastom (IDH-wild type)"
+     },
+     "dogru": "B",
+     "aciklama": "Pilositik astrositom DSÖ derece 1'dir ve kist duvarında mural nodül oluşturur (s. 34, 35).",
+     "sik_aciklamalari": {
+      "A": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; derece 1 serebellar kistik tümör bakımından aranan seçenek Pilositik astrositom olduğu için bu şık yanlıştır.",
+      "B": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom derece 1'dir, serebellumda yerleşir ve genellikle kist içinde mural nodül yapar.",
+      "C": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; derece 1 serebellar kistik tümör sorulduğunda ise doğru seçenek Pilositik astrositom olur, bu şık olmaz.",
+      "D": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; derece 1 serebellar kistik tümör açısından doğru olan Pilositik astrositom seçeneğidir; bu şık yanıt değildir.",
+      "E": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom palisadlı serpantin nekroz ile mikrovasküler proliferasyonla tanınır; derece 1 serebellar kistik tümör sorusunun doğru yanıtı ise Pilositik astrositom seçeneğidir, bu şık değildir."
+     },
+     "s": 34,
+     "uslup": "hoca",
+     "id": "k2-40-q38"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Pilositik astrositomda sık görülen genetik değişiklik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "IDH1/IDH2 mutasyonu",
+      "B": "1p/19q kodelesyonu",
+      "C": "TP53 inaktivasyonu",
+      "D": "BRAF aktivasyonu",
+      "E": "EGFR amplifikasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Pilositik astrositomda sıklıkla BRAF aktivasyonu vardır ve IDH mutasyonu yoktur (s. 35).",
+     "sik_aciklamalari": {
+      "A": "İzositrat dehidrogenaz enzimlerinin genlerindeki değişikliktir ve onkometabolit üretimiyle epigenetik değişikliklere yol açar. IDH mutasyonu yetişkin diffüz gliomları IDH-mutant ve IDH-wild type diye ayıran moleküler özelliktir; pilositik astrositomdaki genetik değişiklik açısından doğru olan BRAF aktivasyonu seçeneğidir; bu şık yanıt değildir.",
+      "B": "Birinci kromozomun kısa kolu ile on dokuzuncu kromozomun uzun kolunun birlikte kaybıdır ve IDH mutasyonuyla birlikte oligodendrogliomu tanımlar. Bu değişiklik oligodendrogliomu IDH mutasyonuyla birlikte tanımlayan özelliktir ve astrositom, glioblastom ya da pilositik astrositom için ayırt edici değildir; pilositik astrositomdaki genetik değişiklik sorusunun doğru yanıtı ise BRAF aktivasyonu seçeneğidir, bu şık değildir.",
+      "C": "Hücre döngüsü ve apoptozu denetleyen tümör baskılayıcı genin işlev kaybıdır. TP53 inaktivasyonu astrositomda sık görülen ek bir mutasyondur ve glioblastomda apoptoza direnç sağlar; pilositik astrositomdaki genetik değişiklik bakımından aranan seçenek BRAF aktivasyonu olduğu için bu şık yanlıştır.",
+      "D": "B-Raf kinaz geninin aktive edici mutasyonu ya da translokasyonudur ve MAPK/ERK yolağını uyarır. BRAF aktive edici mutasyonu ya da translokasyonu pilositik astrositomda MAPK yolunu aktive eder; IDH mutasyonu bulunmaz.",
+      "E": "Büyüme faktörü reseptör geninin kopya sayısı artışıdır ve büyüme sinyalini sürekli açık tutar. EGFR amplifikasyonu glioblastomda büyüme sinyalinin sürekli aktif kalmasını sağlar; pilositik astrositomdaki genetik değişiklik sorulduğunda ise doğru seçenek BRAF aktivasyonu olur, bu şık olmaz."
+     },
+     "s": 35,
+     "id": "k2-40-q39"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Pilositik astrositomla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nekroz ve mitoz sıktır",
+      "B": "GFAP pozitif, ince kıl benzeri uzantılı bipolar hücrelerden oluşur",
+      "C": "Genellikle iyi sınırlıdır ve tam rezeksiyon çoğu kez mümkündür",
+      "D": "Rosenthal lifleri ve eozinofilik granüler cisimler görülür",
+      "E": "Genellikle kistiktir ve kist duvarında mural nodül taşır"
+     },
+     "dogru": "A",
+     "aciklama": "Pilositik astrositomda nekroz ve mitoz nadirdir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Pilositik astrositom iyi sınırlı ve düşük dereceli bir tümör olduğundan nekroz ve mitoz nadirdir. Nekroz ile mitozun sık olduğu iddiası yüksek dereceli gliomlara uyar; bu yüzden yanlış olan ifade budur.",
+      "B": "Pilositik astrositom GFAP pozitif, ince kıl benzeri uzantıları olan bipolar hücrelerden oluşur ve bu görünüm tümöre adını verir. İfade doğru olduğu için yanlış ifadeyi soran soruda yanıt değildir.",
+      "C": "Pilositik astrositom genellikle iyi sınırlıdır; bu sayede tam cerrahi rezeksiyon çoğu kez mümkündür ve prognoz iyidir. İfade doğru olduğundan yanlış ifade sorusunda yanıt olamaz.",
+      "D": "Rosenthal lifleri parlak eozinofilik burgu şeklindeki inklüzyonlardır; eozinofilik granüler cisimlerle birlikte pilositik astrositomu işaretler. İfade doğru olduğundan yanlış ifadeyi arayan soruda yanıt değildir.",
+      "E": "Serebellar pilositik astrositom kistik bir tümördür ve kist duvarında mural nodül oluşturur. Bu özellikler tümörün tanımına uyar ve ifade doğrudur; bu yüzden yanlış ifade sorusunda seçilmez."
+     },
+     "s": 35,
+     "uslup": "hoca",
+     "id": "k2-40-q40"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Ependimomun yerleşimini, sınıflamasını ve ependimal rozet ile perivasküler psödorozet bulgularını açıklar (s. 37–39).",
+   "_s": [
+    37,
+    38,
+    39
+   ],
+   "_bp": "bp12",
+   "_baslik": "Ependimom: genel, sınıflama ve morfoloji",
+   "sorular": [
+    {
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Çocuklarda ependimom en sık aşağıdaki bölgelerden hangisinde yerleşir?",
+     "secenekler": {
+      "A": "Omurilik",
+      "B": "Gri–beyaz madde bileşkesi",
+      "C": "Temporal lob",
+      "D": "4. ventrikül çevresi",
+      "E": "Monro deliği çevresi"
+     },
+     "dogru": "D",
+     "aciklama": "Çocuklarda ependimom çoğunlukla 4. ventrikül çevresinde bulunur (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Erişkinde ependimomun, özellikle NF2'li hastalarda en sık görüldüğü yerdir. Omurilik erişkin ependimomunun tipik yerleşimidir; çocuklardaki ependimom yerleşimi sorusunun doğru yanıtı ise 4. ventrikül çevresi seçeneğidir, bu şık değildir.",
+      "B": "Beyin metastazlarının tipik olarak yerleştiği bölgedir. Bu bileşke beyin metastazlarının keskin sınırlı kitleler yaptığı tipik bölgedir; çocuklardaki ependimom yerleşimi bakımından aranan seçenek 4. ventrikül çevresi olduğu için bu şık yanlıştır.",
+      "C": "Gangliogliom ve DNET gibi nöbetle seyreden düşük dereceli nöronal tümörlerin tipik yerleşimidir. Temporal lob nöbetle başvuran nöronal tümörlerin yerleştiği bölgedir; çocuklardaki ependimom yerleşimi konusunda yanıt 4. ventrikül çevresi olduğundan bu şık elenir.",
+      "D": "Çocuklarda ependimomun en sık yerleştiği ve ventrikül tabanından içeriye doğru kitle yaptığı bölgedir. Çocuklarda ependimom çoğunlukla 4. ventrikül çevresinde bulunur; erişkinde ise omurilik tutulumu daha sıktır.",
+      "E": "SEGA'nın kitle yaparak obstrüktif hidrosefaliye yol açtığı bölgedir. Bu bölge tüberöz sklerozdaki SEGA'nın yerleştiği yerdir; çocuklardaki ependimom yerleşimi açısından doğru olan 4. ventrikül çevresi seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 37,
+     "id": "k2-40-q41"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Ependimomda ependimal rozetlerden daha sık görülen, tümör hücrelerinin damar çevresinde dizildiği yapı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Perivasküler psödorozet",
+      "B": "Merkezi nöropil çevresinde rozetler",
+      "C": "Rosenthal lifleri",
+      "D": "Psammoma cisimcikleri",
+      "E": "Kızarmış yumurta görünümü"
+     },
+     "dogru": "A",
+     "aciklama": "Ependimomda perivasküler psödorozetler ependimal rozetlerden daha sık görülür (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Tümör hücrelerinin damar çevresinde dizilmesiyle oluşan yapıdır. Ependimomda lümenli ependimal rozetler az, damar çevresindeki perivasküler psödorozetler ise daha sık görülür.",
+      "B": "Hücrelerin merkezi nöropil çevresinde dizildiği nöronal farklılaşma rozetleridir. Bu rozetler medulloblastomda görülür; damar çevresinde dizilen yapı açısından doğru olan Perivasküler psödorozet seçeneğidir; bu şık yanıt değildir.",
+      "C": "Parlak eozinofilik burgu şeklindeki sitoplazmik inklüzyonlardır. Rosenthal lifleri pilositik astrositomda görülür; damar çevresinde dizilen yapı sorusunun doğru yanıtı ise Perivasküler psödorozet seçeneğidir, bu şık değildir.",
+      "D": "Konsantrik halkalı kalsifikasyonlardır ve girdaplı hücre desenine eşlik eder. Psammoma cisimcikleri meningiomda görülür; damar çevresinde dizilen yapı bakımından aranan seçenek Perivasküler psödorozet olduğu için bu şık yanlıştır.",
+      "E": "Açık sitoplazmalı yuvarlak çekirdekli tümör hücrelerinin oluşturduğu mikroskopik görünümdür. Bu görünüm oligodendrogliomun mikroskopik bulgusudur; damar çevresinde dizilen yapı konusunda yanıt Perivasküler psödorozet olduğundan bu şık elenir."
+     },
+     "s": 38,
+     "id": "k2-40-q42"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Erişkinlerde omurilikte, özellikle nörofibromatozis tip 2'li hastalarda en sık görülen tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pilositik astrositom",
+      "B": "Medulloblastom",
+      "C": "Ependimom",
+      "D": "Oligodendrogliom",
+      "E": "Glioblastom (IDH-wild type)"
+     },
+     "dogru": "C",
+     "aciklama": "Erişkinlerde ependimom en sık omurilikte, özellikle NF2'li hastalarda görülür (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; erişkin omurilik tümörü bakımından aranan seçenek Ependimom olduğu için bu şık yanlıştır.",
+      "B": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; erişkin omurilik tümörü konusunda yanıt Ependimom olduğundan bu şık elenir.",
+      "C": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Erişkinde ependimom en sık omurilikte görülür ve bu durum özellikle NF2'li hastalarda belirgindir.",
+      "D": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; erişkin omurilik tümörü açısından doğru olan Ependimom seçeneğidir; bu şık yanıt değildir.",
+      "E": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom palisadlı serpantin nekroz ile mikrovasküler proliferasyonla tanınır; erişkin omurilik tümörü sorusunun doğru yanıtı ise Ependimom seçeneğidir, bu şık değildir."
+     },
+     "s": 37,
+     "uslup": "hoca",
+     "id": "k2-40-q43"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Nöronal tümörlerin genel özelliklerini, gangliogliom ve DNET'i ayırt eder (s. 40–41).",
+   "_s": [
+    40,
+    41
+   ],
+   "_bp": "bp13",
+   "_baslik": "Nöronal tümörler: gangliogliom ve DNET",
+   "sorular": [
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Temporal lobda neoplastik ganglion hücreleri ile glial hücrelerin birlikte oluşturduğu, nöbetle başvuran DSÖ derece 1 tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "DNET",
+      "B": "Pilositik astrositom",
+      "C": "Oligodendrogliom",
+      "D": "Ependimom",
+      "E": "Gangliogliom"
+     },
+     "dogru": "E",
+     "aciklama": "Gangliogliom neoplastik ganglion hücreleri ile glial hücrelerden oluşan derece 1 tümördür (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Yüzeyel temporal lobda yerleşen, nöbet yapan ve rezeksiyon sonrası çok iyi seyreden DSÖ derece 1 nöronal tümördür. DNET mikroskopide sütunlar halinde dizilmiş küçük yuvarlak nöronal hücrelerle tanınır; ganglion hücreleri ile glial hücre birlikteliği açısından doğru olan Gangliogliom seçeneğidir; bu şık yanıt değildir.",
+      "B": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; ganglion hücreleri ile glial hücre birlikteliği sorusunun doğru yanıtı ise Gangliogliom seçeneğidir, bu şık değildir.",
+      "C": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; ganglion hücreleri ile glial hücre birlikteliği bakımından aranan seçenek Gangliogliom olduğu için bu şık yanlıştır.",
+      "D": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; ganglion hücreleri ile glial hücre birlikteliği konusunda yanıt Gangliogliom olduğundan bu şık elenir.",
+      "E": "Neoplastik ganglion hücreleri ile glial hücrelerden oluşan, temporal lobda yerleşen ve nöbetle başvuran DSÖ derece 1 nöronal tümördür. Gangliogliom neoplastik ganglion hücreleri ve glial hücrelerden oluşur ve temporal lobda nöbetle kendini gösterir."
+     },
+     "s": 41,
+     "uslup": "hoca",
+     "id": "k2-40-q44"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Yüzeyel temporal lobda yerleşen ve mikroskopide merkezde sütunlar halinde dizilmiş küçük yuvarlak nöronal hücreler gösteren derece 1 tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gangliogliom",
+      "B": "DNET",
+      "C": "Oligodendrogliom",
+      "D": "Medulloblastom",
+      "E": "Pilositik astrositom"
+     },
+     "dogru": "B",
+     "aciklama": "DNET yüzeyel temporal lobda yerleşir ve sütunlar halinde küçük nöronal hücreler gösterir (s. 41).",
+     "sik_aciklamalari": {
+      "A": "Neoplastik ganglion hücreleri ile glial hücrelerden oluşan, temporal lobda yerleşen ve nöbetle başvuran DSÖ derece 1 nöronal tümördür. Gangliogliomda ganglion hücreleri glial hücrelerle birlikte bulunur ve %20–50 oranında BRAF mutasyonu görülür; sütunlar halinde nöronal hücreler konusunda yanıt DNET olduğundan bu şık elenir.",
+      "B": "Yüzeyel temporal lobda yerleşen, nöbet yapan ve rezeksiyon sonrası çok iyi seyreden DSÖ derece 1 nöronal tümördür. DNET yüzeyel temporal lobda yerleşir ve sütunlar halinde dizilmiş küçük nöronal hücrelerden oluşur.",
+      "C": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; sütunlar halinde nöronal hücreler açısından doğru olan DNET seçeneğidir; bu şık yanıt değildir.",
+      "D": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; sütunlar halinde nöronal hücreler sorusunun doğru yanıtı ise DNET seçeneğidir, bu şık değildir.",
+      "E": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; sütunlar halinde nöronal hücreler bakımından aranan seçenek DNET olduğu için bu şık yanlıştır."
+     },
+     "s": 41,
+     "id": "k2-40-q45"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Nöronal tümörlerle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Glial tümörlere göre daha sık görülürler",
+      "B": "Nöronal belirteçlere negatiftirler",
+      "C": "Genellikle yüksek dereceli ve hızlı büyüyen tümörlerdir",
+      "D": "Nöbetle değil yalnızca kitle etkisiyle seyreder",
+      "E": "Nöronal belirteç pozitif, düşük dereceli ve yavaş büyür"
+     },
+     "dogru": "E",
+     "aciklama": "Nöronal tümörler nöronal belirteç pozitif, genellikle düşük dereceli ve yavaş büyüyen tümörlerdir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Nöronal tümörler glial tümörlere göre daha az sıklıkta görülür ve genellikle çocuk ile genç erişkinde nöbetle ortaya çıkar. Bu nedenle daha sık oldukları iddiası doğru değildir.",
+      "B": "Nöronal tümörler sinaptofizin, nörofilament ve NeuN gibi nöronal belirteçler için pozitiftir ve bu özellik nöronal kökeni gösterir. Negatif oldukları iddiası tanımlarına aykırıdır.",
+      "C": "Nöronal tümörler genellikle düşük dereceli ve yavaş büyüyen tümörlerdir; gangliogliom ve DNET derece 1'dir. Hızlı büyüyen yüksek dereceli tümör tanımı glioblastoma uyar.",
+      "D": "Nöronal tümörler çocuk ve genç erişkinde tipik olarak nöbetle başvurur. Yalnızca kitle etkisi ile seyrettiği ifadesi bu klinik özellikle çelişir.",
+      "E": "Nöronal tümörler sinaptofizin, nörofilament ve NeuN gibi belirteçlerle pozitiftir. Genellikle düşük derecelidir ve çocuk ile genç erişkinde nöbetle ortaya çıkar."
+     },
+     "s": 40,
+     "id": "k2-40-q46"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Medulloblastomun genel, klinik, moleküler alt tip ve morfolojik özelliklerini açıklar (s. 42–45).",
+   "_s": [
+    42,
+    43,
+    44,
+    45
+   ],
+   "_bp": "bp14",
+   "_baslik": "Medulloblastom: genel, klinik, moleküler alt tip ve morfoloji",
+   "sorular": [
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Çocukta serebellar orta hatta yerleşen, mikroskopide küçük mavi yuvarlak hücreler ve rozetler gösteren, BOS yoluyla damla metastazı yapabilen tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ependimom",
+      "B": "Medulloblastom",
+      "C": "Pilositik astrositom",
+      "D": "DNET",
+      "E": "Primer MSS lenfoması"
+     },
+     "dogru": "B",
+     "aciklama": "Medulloblastom küçük mavi yuvarlak hücreli, BOS'a damla metastazı yapan serebellar tümördür (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; küçük mavi yuvarlak hücre ve damla metastazı sorulduğunda ise doğru seçenek Medulloblastom olur, bu şık olmaz.",
+      "B": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom çocukta orta hat serebellar tümörüdür, küçük mavi yuvarlak hücrelidir ve BOS'a yayılarak damla metastazı yapar.",
+      "C": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; küçük mavi yuvarlak hücre ve damla metastazı sorusunun doğru yanıtı ise Medulloblastom seçeneğidir, bu şık değildir.",
+      "D": "Yüzeyel temporal lobda yerleşen, nöbet yapan ve rezeksiyon sonrası çok iyi seyreden DSÖ derece 1 nöronal tümördür. DNET mikroskopide sütunlar halinde dizilmiş küçük yuvarlak nöronal hücrelerle tanınır; küçük mavi yuvarlak hücre ve damla metastazı bakımından aranan seçenek Medulloblastom olduğu için bu şık yanlıştır.",
+      "E": "Bağışıklık yetmezliğinde MSS'nin en sık tümörüdür ve çoğunlukla diffüz büyük B hücreli tiptedir. Lenfomada damar çevresinde yoğunlaşan CD20 pozitif B hücreleri görülür; küçük mavi yuvarlak hücre ve damla metastazı konusunda yanıt Medulloblastom olduğundan bu şık elenir."
+     },
+     "s": 44,
+     "uslup": "hoca",
+     "id": "k2-40-q47"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Medulloblastomla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Radyosensitiftir ve tedaviyle beş yıllık sağkalım yaklaşık yüzde 75'tir",
+      "B": "Yalnızca serebellumda görülür",
+      "C": "Mikroskopide küçük mavi yuvarlak hücreli tümör görünümündedir",
+      "D": "Erişkinlerde çocuklardan çok daha sık görülür",
+      "E": "Erişkinde lateral yerleşim daha sık görülür"
+     },
+     "dogru": "D",
+     "aciklama": "Medulloblastom çocuklarda çok daha sık, erişkinde nadirdir (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Medulloblastom radyosensitif bir tümördür ve cerrahi, kemoterapi ile radyoterapi birlikte uygulandığında beş yıllık sağkalım yaklaşık yüzde 75'e ulaşır. İfade doğru olduğundan yanlış ifadeyi arayan soruda yanıt değildir.",
+      "B": "Medulloblastom yalnızca serebellumda gelişen embriyonel nöroektodermal bir tümördür ve serebellar foliaların yüzeyine uzanabilir. İfade doğru olduğundan yanlış ifade sorusunda yanıt değildir.",
+      "C": "Medulloblastom yoğun hücreli, hiperkromatik küçük hücrelerden oluşur ve mikroskopide küçük mavi yuvarlak hücreli tümör görünümü verir. İfade doğru olduğundan yanlış ifadeyi soran soruda yanıt değildir.",
+      "D": "Medulloblastom çocuklarda çok daha sık görülür, erişkinde ise nadirdir. Erişkinlerde daha sık görüldüğü iddiası bu epidemiyolojiye aykırı olduğu için yanlış olan ifade budur.",
+      "E": "Medulloblastom çocukta orta hat serebellar tümörüdür, erişkinde ise lateral yerleşim daha sık görülür. İfade doğru olduğundan yanlış ifade sorusunda yanıt değildir."
+     },
+     "s": 42,
+     "uslup": "hoca",
+     "id": "k2-40-q48"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Medulloblastomun moleküler alt tipleri içinde beş yıllık sağkalımı neredeyse yüzde 100 olan alt tip aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "WNT aktivasyonlu alt tip",
+      "B": "SHH yolu bozukluğu",
+      "C": "TP53 mutant alt tip",
+      "D": "SHH aktivasyonlu ve TP53 mutant alt tip birlikte",
+      "E": "PTCH1 germline mutasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "WNT aktivasyonlu medulloblastomda beş yıllık sağkalım neredeyse yüzde 100'dür (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Medulloblastomun beş yıllık sağkalımı neredeyse %100 olan moleküler alt tipidir. WNT aktivasyonlu medulloblastomda beş yıllık sağkalım neredeyse yüzde 100'dür ve moleküler alt tipler arasında en iyi prognozludur.",
+      "B": "PTCH1 tarafından negatif olarak düzenlenen gelişim yolağıdır ve bozulması medulloblastomun SHH alt tipine karşılık gelir. Bu alt tip, beş yıllık sağkalımı neredeyse yüzde 100 olan en iyi prognozlu grup olarak tanımlanmaz; en iyi sağkalım WNT alt tipine aittir.",
+      "C": "TP53 mutant alt tip medulloblastomun prognozu çok kötü olan moleküler alt tiplerinden biridir. Sağkalımı yüksek olan WNT alt tipinin aksine kötü seyirlidir.",
+      "D": "SHH aktivasyonu ile TP53 mutasyonunun birlikteliği medulloblastomda çok kötü prognoz verir ve sağkalımı olumsuz etkiler. Sağkalımı bu kadar olumsuz bir alt tip, beş yıllık sağkalımı neredeyse yüzde 100 olan WNT alt tipinin tam tersidir; bu yüzden soruya yanıt olamaz.",
+      "E": "SHH yolunun negatif düzenleyicisini bozar ve medulloblastom ile deri bazal hücreli karsinom riskini artırır. Bu bir kalıtsal yatkınlık nedenidir, sağkalımı yüzde 100'e yakın olan bir moleküler alt tipin adı değildir; en iyi prognozlu alt tip WNT aktivasyonlu gruptur."
+     },
+     "s": 43,
+     "id": "k2-40-q49"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "PTCH1 geninde germline mutasyonu olan bir kişide aşağıdaki tümör çiftinden hangisinin riski artar?",
+     "secenekler": {
+      "A": "Meningiom ve sekizinci sinir schwannomu",
+      "B": "Hemanjioblastom ve böbrek hücreli karsinom",
+      "C": "Medulloblastom ve deri bazal hücreli karsinomu",
+      "D": "SEGA ve renal anjiyomiyolipom",
+      "E": "Gangliogliom ve DNET"
+     },
+     "dogru": "C",
+     "aciklama": "PTCH1 germline mutasyonu medulloblastom ve deri bazal hücreli karsinom riskini artırır (s. 43).",
+     "sik_aciklamalari": {
+      "A": "Meningiom ve sekizinci sinir schwannomu birlikteliği NF2 gen kaybıyla ilişkili tümör çiftidir. PTCH1 germline mutasyonu bu iki tümörün riskini artırmaz; sorulan çift medulloblastom ve bazal hücreli karsinomdur.",
+      "B": "Hemanjioblastom ve böbrek hücreli karsinom VHL hastalığının tümörleridir ve HIF artışıyla ilişkilidir. PTCH1 yoluyla SHH bozukluğu bu çifti açıklamaz; sorulan çift medulloblastom ve bazal hücreli karsinomdur.",
+      "C": "PTCH1, SHH yolunun negatif düzenleyicisidir ve germline mutasyonunda yol kontrolsüz aktive olur. Bu nedenle medulloblastom ile deri bazal hücreli karsinom riski birlikte artar.",
+      "D": "SEGA ve renal anjiyomiyolipom tüberöz sklerozun lezyonlarıdır ve TSC1/TSC2 mutasyonu üzerinden mTOR aktivasyonuyla gelişir. PTCH1 ile ilişkili değildir; sorulan çift medulloblastom ve bazal hücreli karsinomdur.",
+      "E": "Gangliogliom ve DNET düşük dereceli, nöbetle seyreden derece 1 nöronal tümörlerdir. PTCH1 mutasyonu bu çiftin riskini artırmaz; sorulan çift medulloblastom ve bazal hücreli karsinomdur."
+     },
+     "s": 43,
+     "id": "k2-40-q50"
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Primer MSS lenfomasının bağışıklık yetmezliğiyle ilişkisini, tipini ve morfolojisini açıklar (s. 46–47).",
+   "_s": [
+    46,
+    47
+   ],
+   "_bp": "bp15",
+   "_baslik": "Primer MSS lenfoması",
+   "sorular": [
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Kalp nakli sonrası immünsüpresif tedavi alan 55 yaşındaki hastada baş ağrısı ve bilinç bulanıklığı gelişiyor. Biyopside damar çevresinde yoğunlaşan CD20 pozitif atipik lenfoid hücreler saptanıyor. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Primer MSS lenfoması",
+      "B": "Glioblastom (IDH-wild type)",
+      "C": "Meningiom",
+      "D": "Beyin metastazı",
+      "E": "Medulloblastom"
+     },
+     "dogru": "A",
+     "aciklama": "Primer MSS lenfomasında malign lenfoid hücreler damar çevresinde yoğunlaşır ve CD20 pozitiftir (s. 46, 47).",
+     "sik_aciklamalari": {
+      "A": "Bağışıklık yetmezliğinde MSS'nin en sık tümörüdür ve çoğunlukla diffüz büyük B hücreli tiptedir. Bağışıklık yetmezliğinde MSS'nin en sık tümörü primer MSS lenfomasıdır ve damar çevresinde yoğunlaşan CD20 pozitif B hücreleriyle tanınır.",
+      "B": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom palisadlı serpantin nekroz ile mikrovasküler proliferasyonla tanınır; immünsüpresif hastada CD20 pozitif hücreler bakımından aranan seçenek Primer MSS lenfoması olduğu için bu şık yanlıştır.",
+      "C": "Araknoid meningoepitelyal hücrelerden gelişen, dura ile ilişkili, çoğunlukla iyi huylu ve DSÖ derece 1–3 olan bir erişkin tümörüdür. Meningiom dura tabanlı iyi sınırlı kitle, girdaplı büyüme ve psammoma cisimcikleriyle tanınır; immünsüpresif hastada CD20 pozitif hücreler konusunda yanıt Primer MSS lenfoması olduğundan bu şık elenir.",
+      "D": "Tüm intrakraniyal tümörlerin yarısından fazlasını oluşturur ve en sık akciğer, meme, böbrek, kolon karsinomu ile melanomdan kaynaklanır. Metastazlar gri–beyaz madde bileşkesinde keskin sınırlı, çevresinde ödem ve gliyoz bulunan kitle olarak izlenir; immünsüpresif hastada CD20 pozitif hücreler sorulduğunda ise doğru seçenek Primer MSS lenfoması olur, bu şık olmaz.",
+      "E": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; immünsüpresif hastada CD20 pozitif hücreler açısından doğru olan Primer MSS lenfoması seçeneğidir; bu şık yanıt değildir."
+     },
+     "s": 47,
+     "uslup": "hoca",
+     "id": "k2-40-q51"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Primer MSS lenfomasında immünohistokimyada hangi hücreler pozitiftir?",
+     "secenekler": {
+      "A": "GFAP pozitif astrositler",
+      "B": "Sinaptofizin pozitif nöronlar",
+      "C": "CD20 pozitif B hücreleri",
+      "D": "İnhibin pozitif stromal hücreler",
+      "E": "PAS pozitif eozinofilik materyal"
+     },
+     "dogru": "C",
+     "aciklama": "Primer MSS lenfomasında CD20 pozitif B hücreleri bulunur (s. 47).",
+     "sik_aciklamalari": {
+      "A": "GFAP astrositlerin iskelet proteinidir ve astrositik tümörlerde pozitiftir. MSS lenfomasındaki malign hücreler lenfoid kökenli olduğundan GFAP ile boyanmaz; tanıda CD20 aranır.",
+      "B": "Sinaptofizin nöronal tümörlerde pozitif olan bir nöronal belirteçtir ve nöronal farklılaşmayı gösterir. Lenfoid kökenli MSS lenfomasında malign hücreler bu belirteçle boyanmaz, CD20 pozitiftir.",
+      "C": "CD20 pozitif B hücreleri MSS lenfomasındaki malign lenfoid hücrelerdir ve damar çevresinde yoğunlaşır. Bu hücreler çevre parankime de yayıldığı için tanıda immünohistokimyasal olarak CD20 aranır.",
+      "D": "İnhibin pozitifliği hemanjioblastomda tanıya yardım eden bir bulgudur ve lipid zengin stromal hücrelerde görülür. Lenfomada stromal hücre değil lenfoid hücre pozitifliği aranır.",
+      "E": "PAS pozitif eozinofilik materyal sekretuar meningiomda gland benzeri boşluklarda bulunur. MSS lenfomasının immünohistokimyasal bulgusu değildir; lenfomada CD20 pozitif B hücreleri aranır."
+     },
+     "s": 47,
+     "id": "k2-40-q52"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "EBV ilişkili MSS lenfomalarında aşağıdaki morfolojik bulgulardan hangisi görülür?",
+     "secenekler": {
+      "A": "Rosenthal lifleri",
+      "B": "Psammoma cisimcikleri",
+      "C": "Kızarmış yumurta görünümü",
+      "D": "Homer-Wright rozetleri",
+      "E": "Geniş nekroz alanları"
+     },
+     "dogru": "E",
+     "aciklama": "EBV ilişkili MSS lenfomalarında geniş nekroz alanları görülür (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Rosenthal lifleri parlak eozinofilik burgu şeklindeki inklüzyonlardır ve pilositik astrositomu işaretler. EBV ilişkili MSS lenfomasında beklenen morfolojik bulgu geniş nekrozdur.",
+      "B": "Psammoma cisimcikleri konsantrik halkalı kalsifikasyonlardır ve meningiomun girdaplı hücre desenine eşlik eder. EBV ilişkili MSS lenfomasında görülen bulgu geniş nekrozdur.",
+      "C": "Kızarmış yumurta görünümü oligodendrogliomun açık sitoplazmalı yuvarlak çekirdekli hücrelerini anlatır. Lenfoma hücreleri bu görünümü vermez; EBV ilişkili olguda geniş nekroz izlenir.",
+      "D": "Merkezi nöropil çevresindeki rozetler medulloblastomda nöronal farklılaşmayı gösterir. EBV ilişkili MSS lenfomasının bulgusu değildir; bu olguda geniş nekroz alanları görülür.",
+      "E": "EBV ilişkili MSS lenfomalarında tümör dokusunda geniş nekroz alanları görülür ve bu, olguları ayırt eden morfolojik özelliktir. Malign lenfoid hücreler ayrıca damar çevresinde yoğunlaşır."
+     },
+     "s": 47,
+     "id": "k2-40-q53"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Metastatik beyin tümörlerinin sıklığını, kaynaklarını, yerleşimini ve paraneoplastik sendromları açıklar (s. 52).",
+   "_s": [
+    52
+   ],
+   "_bp": "bp17",
+   "_baslik": "Metastatik beyin tümörleri ve paraneoplastik sendromlar",
+   "sorular": [
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Gri–beyaz madde bileşkesinde yerleşen, keskin sınırlı ve çevresinde ödem ile gliyoz bulunan intrakraniyal kitle aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Glioblastom (IDH-wild type)",
+      "B": "Beyin metastazı",
+      "C": "Meningiom",
+      "D": "Oligodendrogliom",
+      "E": "Medulloblastom"
+     },
+     "dogru": "B",
+     "aciklama": "Beyin metastazı gri–beyaz madde bileşkesinde keskin sınırlı, çevresi ödemli ve gliyotik bir kitledir (s. 52).",
+     "sik_aciklamalari": {
+      "A": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom palisadlı serpantin nekroz ile mikrovasküler proliferasyonla tanınır; gri–beyaz madde bileşkesindeki keskin sınırlı kitle açısından doğru olan Beyin metastazı seçeneğidir; bu şık yanıt değildir.",
+      "B": "Tüm intrakraniyal tümörlerin yarısından fazlasını oluşturur ve en sık akciğer, meme, böbrek, kolon karsinomu ile melanomdan kaynaklanır. Beyin metastazları tipik olarak gri–beyaz madde bileşkesinde, keskin sınırlı kitle halinde bulunur ve çevresinde ödem ile gliyoz yapar.",
+      "C": "Araknoid meningoepitelyal hücrelerden gelişen, dura ile ilişkili, çoğunlukla iyi huylu ve DSÖ derece 1–3 olan bir erişkin tümörüdür. Meningiom dura tabanlı iyi sınırlı kitle, girdaplı büyüme ve psammoma cisimcikleriyle tanınır; gri–beyaz madde bileşkesindeki keskin sınırlı kitle bakımından aranan seçenek Beyin metastazı olduğu için bu şık yanlıştır.",
+      "D": "Oligodendrosit benzeri hücrelerden oluşan, IDH mutasyonu ile 1p/19q kodelesyonu taşıyan ve en iyi prognozlu diffüz gliom türüdür. Oligodendrogliom kızarmış yumurta görünümü ve kümes teli kapiller ağla tanınır; gri–beyaz madde bileşkesindeki keskin sınırlı kitle konusunda yanıt Beyin metastazı olduğundan bu şık elenir.",
+      "E": "Çocuklarda sık görülen, yalnızca serebellumda gelişen ve radyosensitif olan embriyonel nöroektodermal bir tümördür. Medulloblastom küçük mavi yuvarlak hücreler, rozetler ve BOS'a damla metastazıyla tanınır; gri–beyaz madde bileşkesindeki keskin sınırlı kitle sorulduğunda ise doğru seçenek Beyin metastazı olur, bu şık olmaz."
+     },
+     "s": 52,
+     "uslup": "hoca",
+     "id": "k2-40-q54"
+    },
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Akciğer, meme, böbrek, kolon karsinomu ve melanomun beyin metastazlarındaki toplam payı yaklaşık yüzde kaçtır?",
+     "secenekler": {
+      "A": "Yaklaşık yüzde 20",
+      "B": "Yaklaşık yüzde 50",
+      "C": "Yaklaşık yüzde 75",
+      "D": "Yaklaşık yüzde 80",
+      "E": "Yılda yüz binde yaklaşık 24"
+     },
+     "dogru": "D",
+     "aciklama": "Akciğer, meme, böbrek, kolon karsinomu ve melanom birlikte yaklaşık yüzde 80'i oluşturur (s. 52).",
+     "sik_aciklamalari": {
+      "A": "Çocukluk çağı tümörlerinde MSS tümörlerinin payıdır; medulloblastomun pediatrik beyin tümörleri içindeki payı da aynıdır. Bu oran çocukluk çağı tümörlerinde MSS tümörlerinin payını gösterir; beş primerin toplam payı konusunda yanıt Yaklaşık yüzde 80 olduğundan bu şık elenir.",
+      "B": "Erişkin primer malign beyin tümörlerinde glioblastomun payıdır; metastazların intrakraniyal tümörler içindeki payı da yarıyı aşar. Bu oran glioblastomun erişkin primer malign beyin tümörleri içindeki payına karşılık gelir; beş primerin toplam payı sorulduğunda ise doğru seçenek Yaklaşık yüzde 80 olur, bu şık olmaz.",
+      "C": "Medulloblastomda cerrahi, kemoterapi ve radyoterapi ile elde edilen beş yıllık sağkalım oranıdır. Bu oran medulloblastomda tedaviyle elde edilen beş yıllık sağkalımı gösterir; beş primerin toplam payı açısından doğru olan Yaklaşık yüzde 80 seçeneğidir; bu şık yanıt değildir.",
+      "D": "Akciğer, meme, böbrek, kolon karsinomu ve melanomun beyin metastazlarındaki toplam payıdır. Bu beş primer tümör birlikte beyin metastazlarının yaklaşık yüzde 80'inin kaynağıdır.",
+      "E": "ABD'de erişkinlerde intrakraniyal tümör insidansını gösterir ve bunların yaklaşık üçte biri malign özelliktedir. Bu sıklık intrakraniyal tümörlere aittir; beş primerin toplam payı bakımından aranan seçenek Yaklaşık yüzde 80 olduğu için bu şık yanlıştır."
+     },
+     "s": 52,
+     "id": "k2-40-q55"
+    },
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Paraneoplastik sendromlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Doğrudan tümör hücrelerinin sinir dokusuna metastaz yapmasıyla oluşur",
+      "B": "Tümör antijenlerine karşı gelişen antikorlarla ilişkilidir",
+      "C": "Yalnızca primer beyin tümörlerinde görülür",
+      "D": "Kalıtsal tümör sendromları grubundadır",
+      "E": "Obstrüktif hidrosefaliyle karakterizedir"
+     },
+     "dogru": "B",
+     "aciklama": "Paraneoplastik sendromlar tümör antijenlerine karşı antikorlarla ilişkilidir (s. 52).",
+     "sik_aciklamalari": {
+      "A": "Paraneoplastik sendromlar sinir dokusuna tümör metastazıyla değil, tümör antijenlerine karşı gelişen antikorlarla oluşur. Doğrudan metastaz iddiası mekanizmayı yanlış tanımladığı için doğru ifade olamaz.",
+      "B": "Paraneoplastik sendromlar tümör antijenlerine karşı oluşan antikorlarla ilişkilidir ve sinir sistemini etkiler. Serebellar dejenerasyon, limbik ensefalit ve duyusal nöropati bu gruptaki klinik örneklerdir.",
+      "C": "Paraneoplastik sendromlar tümör antijenlerine karşı gelişen antikorlarla ilişkili sinir sistemi tablolarıdır. Tanım tümörün yerleşimine değil antikor yanıtına dayandığından bu ifadedeki 'yalnızca primer beyin tümörleri' kısıtı doğru değildir; serebellar dejenerasyon, limbik ensefalit ve duyusal nöropati bu antikor aracılı örneklerdir.",
+      "D": "Kalıtsal tümör sendromları tüberöz skleroz ve VHL gibi genetik hastalıklardır. Paraneoplastik sendromlar ise tümör antijenlerine karşı antikor aracılı edinsel tablolardır.",
+      "E": "Obstrüktif hidrosefali SEGA gibi Monro deliği çevresindeki kitlelerin sonucudur. Paraneoplastik sendromun belirgin özelliği değildir; bu tablolar tümör antijenlerine karşı gelişen antikor aracılıdır."
+     },
+     "s": 52,
+     "id": "k2-40-q56"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Tüberöz sklerozun MSS bulgularını, SEGA'yı ve TSC1/TSC2–mTOR patogenezini açıklar (s. 53–55).",
+   "_s": [
+    53,
+    54,
+    55
+   ],
+   "_bp": "bp18",
+   "_baslik": "Ailesel tümör sendromları: tüberöz skleroz",
+   "sorular": [
+    {
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Monro deliği çevresinde kitle yapan, obstrüktif hidrosefaliye yol açan ve cerrahi ya da mTOR inhibitörüyle tedavi edilen tümör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gangliogliom",
+      "B": "Ependimom",
+      "C": "Pilositik astrositom",
+      "D": "Subependimal dev hücreli astrositom (SEGA)",
+      "E": "Hemanjioblastom"
+     },
+     "dogru": "D",
+     "aciklama": "SEGA Monro deliği çevresinde kitle yapar ve obstrüktif hidrosefaliye yol açar (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Neoplastik ganglion hücreleri ile glial hücrelerden oluşan, temporal lobda yerleşen ve nöbetle başvuran DSÖ derece 1 nöronal tümördür. Gangliogliomda ganglion hücreleri glial hücrelerle birlikte bulunur ve %20–50 oranında BRAF mutasyonu görülür; Monro deliğini tıkayan tümör sorulduğunda ise doğru seçenek Subependimal dev hücreli astrositom (SEGA) olur, bu şık olmaz.",
+      "B": "Ventrikül sistemini döşeyen ependimden gelişen DSÖ derece 2–3 tümördür; çocuklarda 4. ventrikül çevresinde, erişkinde omurilikte görülür. Ependimom ependimal rozetler ile perivasküler psödorozetlerle tanınır; Monro deliğini tıkayan tümör açısından doğru olan Subependimal dev hücreli astrositom (SEGA) seçeneğidir; bu şık yanıt değildir.",
+      "C": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; Monro deliğini tıkayan tümör sorusunun doğru yanıtı ise Subependimal dev hücreli astrositom (SEGA) seçeneğidir, bu şık değildir.",
+      "D": "Tüberöz sklerozda Monro deliği çevresinde kitle yapan ve obstrüktif hidrosefaliye yol açan tümördür. SEGA tüberöz sklerozun tümörüdür; Monro deliğini tıkayarak obstrüktif hidrosefali yapar ve mTOR inhibitörüne yanıt verir.",
+      "E": "VHL hastalığında serebellar hemisferlerde ve retinada görülen, kistik ve mural nodüllü vasküler bir tümördür. Hemanjioblastom ince duvarlı damarlar, lipid zengin stromal hücreler ve inhibin pozitifliğiyle tanınır; Monro deliğini tıkayan tümör konusunda yanıt Subependimal dev hücreli astrositom (SEGA) olduğundan bu şık elenir."
+     },
+     "s": 54,
+     "uslup": "hoca",
+     "id": "k2-40-q57"
+    },
+    {
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Hamartin ve tuberin kaybında aktivitesi artan ve hücre büyümesini artıran yolak aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "mTOR yolu aktivasyonu",
+      "B": "MAPK/ERK yolu aktivasyonu",
+      "C": "SHH yolu bozukluğu",
+      "D": "HIF–VEGF yolu aktivasyonu",
+      "E": "EGFR aracılı büyüme sinyali yolu"
+     },
+     "dogru": "A",
+     "aciklama": "Hamartin–tuberin kaybında mTOR aktivitesi artar (s. 55).",
+     "sik_aciklamalari": {
+      "A": "Hücre büyümesini ve besin geri bildirimini düzenleyen yolaktır; hamartin–tuberin kaybında aktivitesi artar. Hamartin–tuberin kompleksi mTOR'u negatif düzenler; kaybında mTOR aktivitesi artar ve hücre büyümesi ile hamartom eğilimi çoğalır.",
+      "B": "BRAF aracılığıyla uyarılan hücre çoğalması yolağıdır. Bu yolun uyarılması pilositik astrositomla ilişkilidir; aktivitesi artan yolak konusunda yanıt mTOR yolu aktivasyonu olduğundan bu şık elenir.",
+      "C": "PTCH1 tarafından negatif olarak düzenlenen gelişim yolağıdır. Bu yolun bozulması medulloblastomun SHH alt tipine karşılık gelir; aktivitesi artan yolak sorulduğunda ise doğru seçenek mTOR yolu aktivasyonu olur, bu şık olmaz.",
+      "D": "Hipoksiye duyarlı transkripsiyon faktörü ile büyüme faktörlerinin artışıdır. Bu yolun aktivasyonu VHL hastalığında hemanjioblastom ve böbrek hücreli karsinomla ilişkilidir; aktivitesi artan yolak açısından doğru olan mTOR yolu aktivasyonu seçeneğidir; bu şık yanıt değildir.",
+      "E": "Büyüme faktörü reseptör geninin kopya sayısı artışıyla büyüme sinyalinin sürekli açık kalmasıdır ve glioblastomda EGFR ile PDGFR amplifikasyonlarıyla ilişkilidir. Hamartin–tuberin kaybında artan yolak ise hücre büyümesini ve besin geri bildirimini düzenleyen mTOR yoludur; bu yüzden bu şık yanlıştır."
+     },
+     "s": 55,
+     "id": "k2-40-q58"
+    },
+    {
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Tüberöz sklerozda kortikal tuberlerin yol açtığı klinik tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Obstrüktif hidrosefali",
+      "B": "Paraneoplastik polisitemi",
+      "C": "İnatçı epilepsi",
+      "D": "Deri bazal hücreli karsinomu",
+      "E": "Bilateral sekizinci sinir schwannomu"
+     },
+     "dogru": "C",
+     "aciklama": "Kortikal tuberler inatçı epilepsiye yol açar (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Obstrüktif hidrosefali, SEGA'nın Monro deliğini tıkamasıyla oluşan beyin omurilik sıvısı akış engelidir. Kortikal tuberlerin doğrudan klinik sonucu değil, tüberöz sklerozdaki SEGA'nın sonucudur.",
+      "B": "Paraneoplastik polisitemi VHL hastalığında HIF üzerinden eritropoietin artışıyla görülür. Tüberöz sklerozdaki kortikal tuberlerin klinik sonucu değildir; tuberler inatçı epilepsi yapar.",
+      "C": "Kortikal tuberler glioneuronal hamartomlardır ve inatçı epilepsiye yol açar. Bu nedenle tüberöz sklerozda nöbet kontrolü zor bir klinik sorundur ve ilaç tedavisine dirençlidir.",
+      "D": "Bazal hücreli karsinom riski PTCH1 germline mutasyonuyla ilişkilidir ve SHH yolu bozukluğunu gösterir. Kortikal tuberlerin sonucu değildir; tuberler inatçı epilepsiye yol açar.",
+      "E": "Bilateral sekizinci sinir schwannomu NF2 ile ilişkili bir tablodur ve tümör baskılayıcı gen kaybına bağlıdır. Kortikal tuberler ise glioneuronal hamartomlardır ve inatçı epilepsi yapar."
+     },
+     "s": 54,
+     "id": "k2-40-q59"
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "von Hippel–Lindau hastalığında hemanjioblastomu, VHL–HIF patogenezini ve böbrek hücreli karsinom riskini açıklar (s. 56–57).",
+   "_s": [
+    56,
+    57
+   ],
+   "_bp": "bp19",
+   "_baslik": "von Hippel–Lindau hastalığı",
+   "sorular": [
+    {
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Serebellar hemisferde kistik lezyon ve mural nodül bulunan hastada histolojide ince duvarlı damarlar, lipid zengin stromal hücreler ve inhibin pozitifliği saptanıyor. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Pilositik astrositom",
+      "B": "Glioblastom (IDH-wild type)",
+      "C": "Meningiom",
+      "D": "Primer MSS lenfoması",
+      "E": "Hemanjioblastom"
+     },
+     "dogru": "E",
+     "aciklama": "Hemanjioblastomda ince duvarlı damarlar, lipid zengin stromal hücreler ve inhibin pozitifliği bulunur (s. 57).",
+     "sik_aciklamalari": {
+      "A": "Çocuk ve genç erişkinde serebellumda sık görülen, BRAF aktivasyonlu ve iyi sınırlı bir DSÖ derece 1 gliomdur. Pilositik astrositom kistte mural nodül, Rosenthal lifleri ve bipolar hücrelerle tanınır; lipid zengin inhibin pozitif stromal hücreler konusunda yanıt Hemanjioblastom olduğundan bu şık elenir.",
+      "B": "Erişkin primer malign beyin tümörlerinin yaklaşık yarısını oluşturan, her zaman derece 4 olan astrositik kökenli bir gliomdur. Glioblastom palisadlı serpantin nekroz ile mikrovasküler proliferasyonla tanınır; lipid zengin inhibin pozitif stromal hücreler sorulduğunda ise doğru seçenek Hemanjioblastom olur, bu şık olmaz.",
+      "C": "Araknoid meningoepitelyal hücrelerden gelişen, dura ile ilişkili, çoğunlukla iyi huylu ve DSÖ derece 1–3 olan bir erişkin tümörüdür. Meningiom dura tabanlı iyi sınırlı kitle, girdaplı büyüme ve psammoma cisimcikleriyle tanınır; lipid zengin inhibin pozitif stromal hücreler açısından doğru olan Hemanjioblastom seçeneğidir; bu şık yanıt değildir.",
+      "D": "Bağışıklık yetmezliğinde MSS'nin en sık tümörüdür ve çoğunlukla diffüz büyük B hücreli tiptedir. Lenfomada damar çevresinde yoğunlaşan CD20 pozitif B hücreleri görülür; lipid zengin inhibin pozitif stromal hücreler sorusunun doğru yanıtı ise Hemanjioblastom seçeneğidir, bu şık değildir.",
+      "E": "VHL hastalığında serebellar hemisferlerde ve retinada görülen, kistik ve mural nodüllü vasküler bir tümördür. Hemanjioblastom kistik, mural nodüllü yapıda ince duvarlı damarlar ve lipid zengin inhibin pozitif stromal hücreler içerir ve VHL hastalığıyla ilişkilidir."
+     },
+     "s": 57,
+     "uslup": "hoca",
+     "id": "k2-40-q60"
+    },
+    {
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "VHL fonksiyon kaybında aktivasyonu artan ve VEGF ile büyüme faktörlerinin yükselmesine yol açan yolak aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "mTOR yolu aktivasyonu",
+      "B": "MAPK/ERK yolu aktivasyonu",
+      "C": "HIF–VEGF yolu aktivasyonu",
+      "D": "SHH yolu bozukluğu",
+      "E": "EGFR aracılı büyüme sinyali yolu"
+     },
+     "dogru": "C",
+     "aciklama": "VHL fonksiyon kaybında HIF artar ve VEGF ile büyüme faktörleri yükselir (s. 57).",
+     "sik_aciklamalari": {
+      "A": "Hücre büyümesini ve besin geri bildirimini düzenleyen yolaktır; hamartin–tuberin kaybında aktivitesi artar. mTOR yolu tüberöz sklerozda hamartin–tuberin kaybıyla artar ve SEGA tedavisinde mTOR inhibitörünün hedefidir; VHL kaybında artan yolak sorusunun doğru yanıtı ise HIF–VEGF yolu aktivasyonu seçeneğidir, bu şık değildir.",
+      "B": "BRAF aracılığıyla uyarılan hücre çoğalması yolağıdır. Bu yolun uyarılması pilositik astrositomla ilişkilidir; VHL kaybında artan yolak bakımından aranan seçenek HIF–VEGF yolu aktivasyonu olduğu için bu şık yanlıştır.",
+      "C": "Hipoksiye duyarlı transkripsiyon faktörü ile büyüme faktörlerinin artışıdır. VHL proteini HIF için ubikitin-ligaz kompleksinin parçasıdır; kaybında HIF, VEGF ve büyüme faktörleri artar.",
+      "D": "PTCH1 tarafından negatif olarak düzenlenen gelişim yolağıdır. Bu yolun bozulması medulloblastomun SHH alt tipine karşılık gelir; VHL kaybında artan yolak sorulduğunda ise doğru seçenek HIF–VEGF yolu aktivasyonu olur, bu şık olmaz.",
+      "E": "Büyüme faktörü reseptör geninin kopya sayısı artışıyla büyüme sinyalinin sürekli açık kalmasıdır ve glioblastomda EGFR ile PDGFR amplifikasyonlarıyla ilişkilidir. VHL kaybında artan yolak ise HIF–VEGF yoludur; HIF artışı VEGF ve büyüme faktörlerini yükselttiği için bu şık yanıt değildir."
+     },
+     "s": 57,
+     "id": "k2-40-q61"
+    },
+    {
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "VHL hastalığında bazı tümörlerde paraneoplastik polisitemi gelişmesinin mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "mTOR aktivasyonuyla hücre büyümesinin artması",
+      "B": "BRAF aracılı MAPK yolunun uyarılması",
+      "C": "SHH yolunun bozulması",
+      "D": "ATRX protein kaybı",
+      "E": "HIF artışına bağlı eritropoietin yükselmesi"
+     },
+     "dogru": "E",
+     "aciklama": "VHL kaybında HIF üzerinden eritropoietin artar ve polisitemi görülebilir (s. 57).",
+     "sik_aciklamalari": {
+      "A": "mTOR aktivasyonu tüberöz sklerozda hamartin–tuberin kaybıyla hücre büyümesini artırır. VHL hastalığındaki polisitemi mekanizması değildir; orada HIF üzerinden eritropoietin yükselir.",
+      "B": "BRAF aracılı MAPK yolu uyarısı pilositik astrositomun tümör mekanizmasıdır. VHL hastalığındaki polisiteminin nedeni değildir; orada HIF artışı eritropoietin yükselmesine yol açar.",
+      "C": "SHH yolu bozukluğu PTCH1 mutasyonuyla medulloblastom riskine yol açar. VHL hastalığındaki polisiteminin mekanizması değildir; orada HIF artışına bağlı eritropoietin yükselir.",
+      "D": "ATRX kaybı IDH-mutant astrositomu destekleyen bir bulgudur. VHL hastalığındaki polisitemiyle ilişkili değildir; orada HIF artışı eritropoietin yükselmesine yol açar.",
+      "E": "VHL fonksiyon kaybında HIF artar ve bazı tümörlerde eritropoietin yükselir. Bu durum paraneoplastik polisitemi olarak ortaya çıkar, yani kırmızı hücre üretimi artar."
+     },
+     "s": 57,
+     "id": "k2-40-q62"
+    },
+    {
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "von Hippel–Lindau hastalığında riski artmış olan aşağıdaki malignitelerden hangisidir?",
+     "secenekler": {
+      "A": "Deri bazal hücreli karsinomu",
+      "B": "Böbrek hücreli karsinom",
+      "C": "Renal anjiyomiyolipom",
+      "D": "Medulloblastom",
+      "E": "Meningiom"
+     },
+     "dogru": "B",
+     "aciklama": "VHL hastalığında böbrek hücreli karsinom riski artmıştır (s. 56).",
+     "sik_aciklamalari": {
+      "A": "Bazal hücreli karsinom riski PTCH1 germline mutasyonuyla ilişkilidir ve SHH yolu bozukluğunu gösterir. VHL hastalığında artmış olan malignite ise böbrek hücreli karsinomdur.",
+      "B": "VHL hastalığında hemanjioblastomların yanında böbrek hücreli karsinom riski artmıştır; pankreas, karaciğer ve böbrek kistleri de bulunur. Tümör baskılayıcı VHL geninin kaybı bu yatkınlığı açıklar.",
+      "C": "Renal anjiyomiyolipom tüberöz sklerozun serebral dışı bulgularından biridir ve TSC1/TSC2 mutasyonuyla ilişkilidir. VHL hastalığının malign tümörü değildir; riski artan tümör böbrek hücreli karsinomdur.",
+      "D": "Medulloblastom PTCH1 mutasyonuyla ve SHH yoluyla ilişkilidir. VHL hastalığının tipik tümörü değildir; bu hastalıkta hemanjioblastom ve böbrek hücreli karsinom öne çıkar.",
+      "E": "Meningiom NF2 mutasyonuyla ilişkili, dura tabanlı ve çoğunlukla iyi huylu bir tümördür. VHL hastalığında beklenen tümörler ise hemanjioblastom ve böbrek hücreli karsinomdur."
+     },
+     "s": 56,
+     "id": "k2-40-q63"
+    }
+   ]
+  }
+ ],
+ "sira": 40,
+ "tarih": "2026-27",
+ "soru_sayisi": 63
+}

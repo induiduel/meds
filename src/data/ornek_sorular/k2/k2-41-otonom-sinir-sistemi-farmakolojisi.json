@@ -1,0 +1,2003 @@
+{
+ "id": "k2-41-otonom-sinir-sistemi-farmakolojisi",
+ "sira": 41,
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Otonom Sinir Sistemi Farmakolojisi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "tarih": "2026-11-17",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Otonom sinir sisteminin denetlediği organları, yol şemasını (pregangliyonik–gangliyon–postgangliyonik) ve temel reseptör sınıflarını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-41-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Sempatik ve parasempatik hatlarda pregangliyonik nöronun gangliyonda kullandığı nörotransmiter ve etki ettiği reseptör hangisidir?",
+     "secenekler": {
+      "A": "Noradrenalin – α1 reseptör",
+      "B": "Asetilkolin – nikotinik reseptör",
+      "C": "Asetilkolin – muskarinik reseptör",
+      "D": "Noradrenalin – β1 reseptör",
+      "E": "Dopamin – D1 reseptör"
+     },
+     "dogru": "B",
+     "aciklama": "Her iki otonom hatta pregangliyonik nöron asetilkolin salar ve bu iletici gangliyondaki nikotinik reseptörü uyarır. Gangliyon blokerleri de tam bu ortak basamağı hedef alır, bu yüzden doğru eşleşme budur (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Noradrenalin sempatik postgangliyonik uçta salınan ilettici, α1 ise damar ve göz düz kasında kasılma yapan adrenerjik reseptördür. İkisi de hedef organ düzeyinde çalışır, gangliyondaki ilk sinaps ise kolinerjiktir (s. 12).",
+      "B": "Her iki otonom hatta pregangliyonik nöron asetilkolin salar ve bu iletici gangliyondaki nikotinik reseptörü uyarır. Gangliyon blokerleri de tam bu ortak basamağı hedef alır, bu yüzden doğru eşleşme budur (s. 12).",
+      "C": "Muskarinik reseptörler parasempatik postgangliyonik uçtan sonra hedef organda bulunur ve efektör yanıtı oluşturur. Gangliyondaki aktarım ise nikotinik reseptörle yürüdüğü için bu eşleşme yanlış basamağa aittir (s. 12).",
+      "D": "β1 reseptörü kalpte hız ve kasılma artışı yapan adrenerjik bir reseptördür, noradrenalin ise sempatik postgangliyonik ilettici. Bu ikili hedef organda görev yapar, gangliyonda iletimi sağlamaz (s. 12).",
+      "E": "Dopamin, düşük dozda D1 reseptörleri üzerinden böbrek ve splanknik damarları genişleten bir katekolamin ilaçtır. Otonom gangliyonun standart ileticisi olmadığı için gangliyon sinapsını açıklamaz (s. 26)."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [],
+     "s": 12,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Her iki koldaki pregangliyonik nöronlar nikotinik reseptörler aracılığıyla ACh kullanır — gangliyon blokerleri bu"
+     }
+    },
+    {
+     "id": "k2-41-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Adrenal medullayı uyaran pregangliyonik lif hangi nörotransmiteri salar ve sonuçta kana hangi madde geçer?",
+     "secenekler": {
+      "A": "NA salar; kana asetilkolin geçer",
+      "B": "ACh salar; kana noradrenalin geçer",
+      "C": "Dopamin salar; kana epinefrin geçer",
+      "D": "ACh salar; kana epinefrin geçer",
+      "E": "ACh salar; kana asetilkolin geçer"
+     },
+     "dogru": "D",
+     "aciklama": "Adrenal medulla sempatik innervasyon alır; pregangliyonik lifin salgıladığı ACh nikotinik reseptörü uyarır. Böylece medulla kana epinefrin salar ve bez modifiye bir sempatik gangliyon gibi davranır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Noradrenalin sempatik postgangliyonik uçta salınan ileticidir, medullayı uyaran lif ise ACh kullanır. Kana geçen hormon da asetilkolin değil epinefrindir, bu yüzden ikili baştan sona yanlıştır (s. 3).",
+      "B": "Pregangliyonik ACh doğru basamaktır, ancak medullanın kana verdiği temel madde epinefrindir. Noradrenalin ise adrenerjik uçlarda postgangliyonik ileticidir ve bu şıktaki ikinci kısmı yanlış kılar (s. 3).",
+      "C": "Dopamin, D1, β1 ve α1 reseptörlerine doza bağlı etki eden bir katekolamin ilaçtır. Medullayı uyaran ilettici değildir; medulla nikotinik reseptörler üzerinden ACh ile uyarılır (s. 26).",
+      "D": "Adrenal medulla sempatik innervasyon alır; pregangliyonik lifin salgıladığı ACh nikotinik reseptörü uyarır. Böylece medulla kana epinefrin salar ve bez modifiye bir sempatik gangliyon gibi davranır (s. 3).",
+      "E": "Asetilkolin kolinerjik uçta çok kısa etkili bir ileticidir ve AChE ile hızla yıkılır. Kana hormon olarak karışmaz; medulladan dolaşıma geçen madde epinefrindir (s. 3)."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [],
+     "s": 3,
+     "uslup": "hoca",
+     "gorsel": true
+    },
+    {
+     "id": "k2-41-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Somatik motor sistemin otonom sistemden temel farkı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gangliyon yoktur; ACh çizgili kasa doğrudan etki eder",
+      "B": "Postgangliyonik nörotransmiter noradrenalindir",
+      "C": "Hedef organ düz kas ve bezlerdir",
+      "D": "İletim muskarinik reseptörle yürür",
+      "E": "Pregangliyonik lif adrenal medullayı uyarır"
+     },
+     "dogru": "A",
+     "aciklama": "Somatik sistemde gangliyon bulunmaz ve ACh doğrudan çizgili kasın nikotinik reseptörüne bağlanır. İletim bu nedenle tek nöronla kasa ulaşır ve otonom üç basamaklı yoldan ayrılır (s. 3).",
+     "sik_aciklamalari": {
+      "A": "Somatik sistemde gangliyon bulunmaz ve ACh doğrudan çizgili kasın nikotinik reseptörüne bağlanır. İletim bu nedenle tek nöronla kasa ulaşır ve otonom üç basamaklı yoldan ayrılır (s. 3).",
+      "B": "Noradrenalin sempatik postgangliyonik uçta salınır ve adrenerjik reseptörlere etki eder. Somatik yolda postgangliyonik nöron hiç bulunmadığı için bu özellik somatik sistemi tanımlamaz (s. 12).",
+      "C": "Düz kas ve bezler otonom sistemin hedefleridir; kalp, damar, bağırsak ve bronş işlevini otonom yol düzenler. Somatik sistem ise iskelet kasını denetler (s. 7).",
+      "D": "Muskarinik reseptörler hedef organlarda parasempatik efektör yanıtı oluşturur. Çizgili kasın reseptörü ise nöromüsküler kavşakta bulunan nikotinik NM reseptörüdür (s. 13).",
+      "E": "Adrenal medullayı uyaran pregangliyonik ACh lifi sempatik sistemin parçasıdır ve kana epinefrin salgılatır. Somatik yol yalnız kas iletimidir ve bu basamağı içermez (s. 3)."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [],
+     "s": 3,
+     "uslup": "hoca",
+     "gorsel": true
+    },
+    {
+     "id": "k2-41-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Sempatik ve parasempatik yol karşılaştırmasında aşağıdakilerden hangisi iki hat için ortak bir özellik değildir?",
+     "secenekler": {
+      "A": "Gangliyonda ACh kullanılması",
+      "B": "Gangliyonda nikotinik reseptöre etki edilmesi",
+      "C": "Yolun MSS’den başlayıp gangliyondan geçmesi",
+      "D": "Pregangliyonik nöronun kolinerjik olması",
+      "E": "Postgangliyonik uçta salınan nörotransmiter"
+     },
+     "dogru": "E",
+     "aciklama": "Sempatik postgangliyonik uçta noradrenalin, parasempatik postgangliyonik uçta ACh salınır. Bu basamak iki hatta farklıdır ve iki yolu birbirinden ayıran temel noktadır (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Her iki hatta pregangliyonik nöron ACh kullanır ve gangliyonda iletiyi taşır. Bu basamak ortak olduğu için hatları ayırmaya yaramaz (s. 12).",
+      "B": "Hem sempatik hem parasempatik gangliyonda ACh nikotinik reseptörü uyarır. Ortak bir özelliktir ve gangliyon blokerlerinin hedefini oluşturur. Bu nedenle gangliyon düzeyindeki ilaç etkisi iki hatta birden yansır (s. 12).",
+      "C": "Otonom yol M.S.S., pregangliyonik hücre, gangliyon, postgangliyonik hücre ve hedef doku sırasıyla ilerler. Bu sıra iki hatta da aynıdır, ortak özelliktir (s. 4).",
+      "D": "Her iki koldaki pregangliyonik nöronlar kolinerjiktir ve nikotinik reseptör aracılığıyla ACh kullanır. Ortak bir özellik olduğundan iki hattı ayırt etmeye yaramaz (s. 12).",
+      "E": "Sempatik postgangliyonik uçta noradrenalin, parasempatik postgangliyonik uçta ACh salınır. Bu basamak iki hatta farklıdır ve iki yolu birbirinden ayıran temel noktadır (s. 12)."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [],
+     "s": 12,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Sempatik Hat Parasempatik Hat"
+     }
+    },
+    {
+     "id": "k2-41-q05",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Otonom sinir sisteminde temel reseptör sınıfları aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Muskarinik, nikotinik ve serotonerjik",
+      "B": "Adrenerjik, GABAerjik ve nikotinik",
+      "C": "Muskarinik, nikotinik ve adrenerjik",
+      "D": "Muskarinik, histaminerjik ve adrenerjik",
+      "E": "Nikotinik, glutamaterjik ve adrenerjik"
+     },
+     "dogru": "C",
+     "aciklama": "Otonom sinir sistemi reseptörleri kolinerjik (muskarinik ve nikotinik) ile adrenerjik olmak üzere üç temel sınıfta toplanır. Diğer reseptörler bunların alt tipleridir (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Serotonin reseptörleri 5-HT ailesine ait ayrı bir nörotransmiter reseptör grubudur. Otonom sistemin temel reseptörlerini ise muskarinik, nikotinik ve adrenerjik sınıflar oluşturur (s. 6).",
+      "B": "GABA reseptörleri merkezi sinir sisteminin inhibitör sinapslarında görev yapar. Otonom sistemin temel sınıfı değildir ve listede muskarinik sınıf eksiktir (s. 6).",
+      "C": "Otonom sinir sistemi reseptörleri kolinerjik (muskarinik ve nikotinik) ile adrenerjik olmak üzere üç temel sınıfta toplanır. Diğer reseptörler bunların alt tipleridir (s. 6).",
+      "D": "Histamin reseptörleri başka bir ileticinin reseptör ailesine aittir ve otonom temel sınıflardan biri olarak anılmaz. Gangliyonda ve nöromüsküler kavşakta görev yapan nikotinik sınıf bu listede eksiktir; temel üçlü muskarinik, nikotinik ve adrenerjiktir (s. 6).",
+      "E": "Glutamat reseptörleri merkezi sinir sisteminde uyarıcı iletiyi sağlar. Otonom sistemin temel sınıfı olmadığı gibi muskarinik reseptörler de bu seçenekte bulunmaz (s. 6)."
+     },
+     "bilgi": [
+      6
+     ],
+     "benzer_cikmis": [],
+     "s": 6,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Temel reseptörler olup diğerleri bunların alt tipleridir."
+     }
+    },
+    {
+     "id": "k2-41-q06",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Otonom sinir sistemi ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İskelet kasını istemli olarak denetler",
+      "B": "Yalnız kalp ve damarları düzenler",
+      "C": "Homeostazi yalnız uykuda korunur",
+      "D": "İrade ile kontrol edilemez ve kesintisiz çalışır",
+      "E": "Hedefleri yalnızca çizgili kaslardır"
+     },
+     "dogru": "D",
+     "aciklama": "Otonom sistem iskelet kasının aksine irade ile kontrol edilemez. Vücudun iç dengesini korumak için kesintisiz çalışır ve bu işlev homeostazidir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "İskelet kası somatik sistemin denetimindedir ve istemli kontrol altındadır. Otonom sistem ise iç organlara bilinç dışı hizmet eder (s. 7).",
+      "B": "Otonom sistem kalp ve damarların yanında bağırsak, bez, bronş ve göz düz kaslarını da denetler. Kapsamı kalp ve damarla sınırlı değildir (s. 7).",
+      "C": "Otonom sistem iç dengeyi gün boyu sürekli korur ve çalışması uyku ya da uyanıklıkla sınırlı değildir. Hız, ritim, basınç ve motiliteyi kesintisiz ayarlar (s. 7).",
+      "D": "Otonom sistem iskelet kasının aksine irade ile kontrol edilemez. Vücudun iç dengesini korumak için kesintisiz çalışır ve bu işlev homeostazidir (s. 7).",
+      "E": "Çizgili kas somatik sistemin hedefidir. Otonom sistemin hedefleri kalp, damar, bağırsak, bez ve düz kaslardır. Bu ayrım, otonom sistemin iç organ düzenleyicisi olarak tanımlanmasının temelini oluşturur (s. 7)."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [],
+     "s": 7,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "aksine irade ile kontrol edilemez. Vücudun iç dengesini (homeostazi)"
+     }
+    },
+    {
+     "id": "k2-41-q07",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangileri otonom sinir sisteminin denetlediği yapılardır?\nI. Kalp\nII. Bağırsak bezleri\nIII. İskelet kası\nIV. Bronş düz kası",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Kalp, bağırsak bezleri ve bronş düz kası otonom denetimdedir; hız, ritim, salgı ve bronş tonu otonom sistemce ayarlanır. İskelet kası ise bu sistemin dışında kalan somatik bir hedeftir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Kalp ve bağırsak bezleri doğru seçilmiştir. Bronş tonunu da otonom sistem düzenlediği için bronş düz kasının dışarıda bırakılması seçimi eksik kılar (s. 7).",
+      "B": "Kalp, bağırsak bezleri ve bronş düz kası otonom denetimdedir; hız, ritim, salgı ve bronş tonu otonom sistemce ayarlanır. İskelet kası ise bu sistemin dışında kalan somatik bir hedeftir (s. 7).",
+      "C": "Bağırsak bezleri otonom yapıdır; iskelet kası ise irade ile denetlenen somatik hedeftir. Bu seçim ayrıca kalbi ve bronşu dışarıda bırakır (s. 7).",
+      "D": "Kalp ve bronş düz kası doğrudur. İskelet kası otonom hedef değildir ve bağırsak bezleri listeden düşmüştür. Doğru seçimde bağırsak bezleri de bulunmalıdır, çünkü motilite ve salgıyı otonom sistem ayarlar (s. 7).",
+      "E": "İskelet kasının eklenmesi hatalıdır; irade ile denetlenen iskelet kası otonom sistemden bağımsızdır. Diğer üç yapı ise otonom denetimdedir (s. 7)."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [],
+     "s": 7,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Otonom sinir sistemi; kalp, damarlar, bağırsaklar, bezler ve düz kaslar"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Sinaptik iletim basamaklarını ve ilaçların bu basamaklara (sentez, salıverilme, reseptör, yıkım ve geri alım) müdahale biçimlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-41-q08",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Sinaptik iletimde aksiyon potansiyeli sinir ucuna ulaştığında ilk gerçekleşen olay hangisidir?",
+     "secenekler": {
+      "A": "Veziküler nörotransmiter boşalımı",
+      "B": "Nörotransmiterin geri alınması",
+      "C": "Reseptörün desensitizasyonu",
+      "D": "Nörotransmiterin enzimatik yıkımı",
+      "E": "Postsinaptik hücrede sinyalin sönmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Aksiyon potansiyeli veziküler nörotransmiter boşalımına yol açar ve elektriksel impuls bu basamakta kimyasal sinyale dönüşür. Ardından ilettici postsinaptik reseptöre bağlanır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Aksiyon potansiyeli veziküler nörotransmiter boşalımına yol açar ve elektriksel impuls bu basamakta kimyasal sinyale dönüşür. Ardından ilettici postsinaptik reseptöre bağlanır (s. 8).",
+      "B": "Geri alım iletimin son basamaklarındandır ve sinyal iletildikten sonra gerçekleşir. Aksiyon potansiyelinin hemen ardından beklenen olay ise boşalımdır (s. 8).",
+      "C": "Desensitizasyon agonist ortamda dururken yanıtın azalmasıdır ve iletimin sonraki, uzun süreli bir sonucudur. Sinir ucuna ulaşan impulsun ilk sonucu değildir (s. 8).",
+      "D": "Enzimatik yıkım sinyal iletildikten sonra ileticiyi sinaptik aralıktan uzaklaştırır. Boşalım ve reseptör bağlanmasından sonra gelen bir basamaktır. Yani yıkım, sinyalin sonlandırıldığı geç basamaktır ve aksiyon potansiyelinin ilk sonucu olamaz (s. 8).",
+      "E": "Sinyalin sönmesi, boşalım ve reseptör bağlanmasından sonra yıkım ya da geri alımla gerçekleşir. İlk basamak ise ileticinin sinaptik aralığa salınmasıdır (s. 8)."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": [],
+     "s": 8,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Sinir İletimi: Elektrikten Kimyasal Sinapsa"
+     }
+    },
+    {
+     "id": "k2-41-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bir ilacın sinaptik aralıkta nörotransmiterin enzimatik parçalanmasını engellemesi hangi müdahale basamağına girer?",
+     "secenekler": {
+      "A": "Sentez",
+      "B": "Salıverilme",
+      "C": "Reseptör aktivasyonu",
+      "D": "Veziküler paketleme",
+      "E": "Yıkım"
+     },
+     "dogru": "E",
+     "aciklama": "Nörotransmiter yıkımı ilaç hedefi olabilir; AChE veya MAO inhibisyonu enzimatik parçalanmayı engeller. Böylece ileticinin ömrü uzar ve etkisi güçlenir (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Sentez basamağında ilaç öncül madde sağlayarak ya da enzimi bloke ederek iletici üretimini artırır veya azaltır. Parçalanmayı engellemek bu basamağa girmez (s. 9).",
+      "B": "Salıverilmede ilaç veziküler boşalımı kolaylaştırır ya da engeller. Enzimle parçalanma ise ilettici aralığa çıktıktan sonra olur. Salıverilmeyi etkileyen ilaçlar veziküler boşalımı değiştirir; bu, yıkımı engelleyen ilaçtan farklı bir hedeftir (s. 9).",
+      "C": "Reseptör basamağında ilaç agonist veya antagonist olarak reseptöre bağlanır. İleticiyi parçalayan enzimin engellenmesi reseptöre bağlanma değildir. Reseptöre bağlanan ilaç agonist ya da antagonisttir; yıkım enzimini hedefleyen ilaç ise iletici düzeyini değiştirir (s. 9).",
+      "D": "Veziküle paketleme ileticinin depolanmasını ve korunmasını sağlar. İletici aralığa çıktıktan sonraki enzimatik parçalanma bu basamağın dışındadır. Paketleme sinir ucunda gerçekleştiği için aralıktaki enzimatik yıkımla aynı basamak sayılmaz (s. 18).",
+      "E": "Nörotransmiter yıkımı ilaç hedefi olabilir; AChE veya MAO inhibisyonu enzimatik parçalanmayı engeller. Böylece ileticinin ömrü uzar ve etkisi güçlenir (s. 9)."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [],
+     "s": 9,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "OSS ilaçları, sinaptik iletimin her basamağına müdahale edebilir. Reseptör aktivasyonu veya blokajı, nörotransmiter sentezi,"
+     }
+    },
+    {
+     "id": "k2-41-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İlaç–reseptör etkileşimiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Agonist, nörotransmiterin etkisini taklit eder",
+      "B": "Antagonist, reseptörü bloke eder",
+      "C": "Agonist, reseptörü bloke ederek etki oluşturur",
+      "D": "AChE inhibisyonu iletici ömrünü uzatır",
+      "E": "MAO inhibisyonu iletici ömrünü uzatır"
+     },
+     "dogru": "C",
+     "aciklama": "Agonist reseptörü uyararak nörotransmiteri taklit eder; reseptörü bloke eden ilaç ise antagonisttir. Bu ifade iki kavramı birbirine karıştırdığı için yanlıştır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "İlaçlar reseptörle agonist (taklit) veya antagonist (bloke) olarak etkileşir. Agonist, ileticinin yanıtını reseptörde oluşturduğu için ifade doğrudur. Bu tanım ilaç sınıflamasının çıkış noktasıdır ve parasempatomimetik ile sempatomimetikleri açıklar (s. 17).",
+      "B": "Antagonist reseptöre bağlanarak ileticinin etkisini engeller. Sempatolitikler ve parasempatolitikler bu gruba girer ve ifade doğrudur. Atropin ve propranolol gibi ilaçlar bu mantıkla reseptör düzeyinde yanıtı keser (s. 17).",
+      "C": "Agonist reseptörü uyararak nörotransmiteri taklit eder; reseptörü bloke eden ilaç ise antagonisttir. Bu ifade iki kavramı birbirine karıştırdığı için yanlıştır (s. 17).",
+      "D": "AChE inhibitörleri ACh yıkımını yavaşlatır ve sinaptik ACh düzeyini yükseltir. İleticinin ömrünün uzaması bu enzimin engellenmesinin sonucudur. Miyastenia gravis tedavisinde yararlanılan etki de ACh ömrünün uzamasına dayanır (s. 17).",
+      "E": "MAO katekolaminlerin yıkımında rol oynar ve inhibisyonu NA ile dopamin düzeyini yükseltir. İleticinin ömrü uzadığı için ifade doğrudur (s. 17)."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [],
+     "s": 17,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Agonist (taklit) veya antagonist (bloke) olarak AChE veya MAO inhibisyonu ile nörotransmiter"
+     }
+    },
+    {
+     "id": "k2-41-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Sinaptik geri alım (uptake-1) bloke eden bir ilaç aralıktaki nörotransmiter düzeyini nasıl etkiler?",
+     "secenekler": {
+      "A": "Veziküle paketlenme artar",
+      "B": "İletici birikir ve etki uzar",
+      "C": "Sentez hızı düşer",
+      "D": "İletici aralıkta hızla yıkılır",
+      "E": "Postsinaptik reseptör sayısı azalır"
+     },
+     "dogru": "B",
+     "aciklama": "Geri alım blokajı ileticinin sinir ucuna dönmesini engeller; iletici aralıkta birikir ve reseptör uyarımı uzar. Kokain ve trisiklik antidepresanlar bu mantıkla etki eder (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Paketleme ileticinin sinir ucunda depolanma basamağıdır. Geri alımın engellenmesi bu depolamayı artırmaz, ileticinin uca dönüşünü azaltır. Geri alım engellenince ilettici uca dönemez ve aralıkta uzun süre kalır (s. 17).",
+      "B": "Geri alım blokajı ileticinin sinir ucuna dönmesini engeller; iletici aralıkta birikir ve reseptör uyarımı uzar. Kokain ve trisiklik antidepresanlar bu mantıkla etki eder (s. 17).",
+      "C": "Sentezin azalması öncül madde ya da enzim engellenmesiyle olur. Geri alım blokajı sentez hızını azaltan bir mekanizma değildir (s. 33).",
+      "D": "Hızlı yıkım enzim aktivitesinin artması anlamına gelir. Geri alım blokajı ise ileticinin aralıkta kalmasına yol açar ve ömrünü kısaltmaz (s. 17).",
+      "E": "Reseptör sayısındaki azalma uzun süreli maruziyette ortaya çıkan ayrı bir uyum sürecidir. Geri alım blokajının doğrudan sonucu aralıkta ileticinin birikmesidir (s. 34)."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [],
+     "s": 17,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Öncül madde blokajı veya yalancı prekürsör ile Veziküler boşalımı kolaylaştırır ya da sinaptik geri"
+     }
+    },
+    {
+     "id": "k2-41-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangileri nörotransmiter ömrünü uzatan ilaç mekanizmalarıdır?\nI. AChE inhibisyonu\nII. MAO inhibisyonu\nIII. Reseptör antagonizması\nIV. Yalancı prekürsör kullanımı",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "II ve III",
+      "C": "I, III ve IV",
+      "D": "I ve II",
+      "E": "III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "AChE veya MAO inhibisyonu iletici ömrünü uzatır; ACh ve katekolaminlerin yıkımı yavaşlar. Diğer iki mekanizma ileticiyi korumaz, yanıtı ya da sentezi etkiler (s. 17).",
+     "sik_aciklamalari": {
+      "A": "AChE inhibisyonu doğru seçilmiştir. MAO inhibisyonu da NA ve dopamin yıkımını durdurarak ömrü uzattığı için seçim eksik kalır (s. 17).",
+      "B": "MAO inhibisyonu doğrudur, ancak reseptör antagonisti ileticinin ömrünü değil yanıtını bloke eder. Bu seçim AChE inhibisyonunu da dışarıda bırakır (s. 17).",
+      "C": "AChE inhibisyonu doğrudur. Reseptör antagonizması yanıtı bloke eder, yalancı prekürsör ise sentezi değiştirerek zayıf bir iletici oluşturur ve ikisi de ömrü uzatmaz (s. 17).",
+      "D": "AChE veya MAO inhibisyonu iletici ömrünü uzatır; ACh ve katekolaminlerin yıkımı yavaşlar. Diğer iki mekanizma ileticiyi korumaz, yanıtı ya da sentezi etkiler (s. 17).",
+      "E": "Antagonizma reseptörü kapatır, yalancı prekürsör ise sentez basamağında etki eder. İleticinin ömrünü uzatan yol yıkım enzimlerinin inhibisyonudur. Dolayısıyla iletici ömrünü uzatan seçenekler yalnız AChE ve MAO inhibisyonudur (s. 17)."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [],
+     "s": 17,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "doğrudan reseptörle etkileşir ömrünü uzatır"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Sempatik ve parasempatik sistemin nörotransmiter kodunu, reseptörlerini ve organ etkilerini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k2-41-q13",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Sempatik sistemin postgangliyonik nörotransmiteri ve kullandığı reseptör grubu hangisidir?",
+     "secenekler": {
+      "A": "Noradrenalin – adrenerjik (α, β)",
+      "B": "Asetilkolin – muskarinik",
+      "C": "Noradrenalin – nikotinik",
+      "D": "Asetilkolin – adrenerjik",
+      "E": "Adrenalin – muskarinik"
+     },
+     "dogru": "A",
+     "aciklama": "Sempatik sistemin nörotransmiteri noradrenalindir ve adrenerjik α ile β reseptörlerini kullanır. Sistem savaş ya da kaç yanıtını yürütür (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Sempatik sistemin nörotransmiteri noradrenalindir ve adrenerjik α ile β reseptörlerini kullanır. Sistem savaş ya da kaç yanıtını yürütür (s. 10).",
+      "B": "Asetilkolin ve muskarinik reseptör ikilisi parasempatik postgangliyonik hattın kodudur. Parasempatik sistem dinlen ve sindir yanıtından sorumludur. Parasempatik uyarımda kalp yavaşlar, bronş büzülür ve GI motilite artar (s. 10).",
+      "C": "Nikotinik reseptörler gangliyonda ve nöromüsküler kavşakta bulunur. Noradrenalin ise adrenerjik reseptörlere etki ederek farklı bir hattı temsil eder (s. 13).",
+      "D": "ACh kolinerjik reseptörlere, yani nikotinik ve muskarinik reseptörlere etki eder. Adrenerjik reseptörlerin ileticisi ise noradrenalindir. Bu nedenle adrenerjik reseptör, ACh ile uyarılan bir hedef gibi eşleştirilemez (s. 12).",
+      "E": "Adrenalin adrenal medulladan salınan hormondur ve adrenerjik reseptörlere bağlanır. Muskarinik reseptörler ise ACh için parasempatik hedeflerde bulunur. Adrenalin sempatik postgangliyonik ileticinin yerini alan ayrı bir hormon rolündedir (s. 3)."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [],
+     "s": 10,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Sempatik Sistem Parasempatik Sistem"
+     }
+    },
+    {
+     "id": "k2-41-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "“Dinlen ve sindir” yanıtından sorumlu sistem ve nörotransmiteri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sempatik – noradrenalin",
+      "B": "Parasempatik – noradrenalin",
+      "C": "Sempatik – asetilkolin",
+      "D": "Somatik – dopamin",
+      "E": "Parasempatik – asetilkolin"
+     },
+     "dogru": "E",
+     "aciklama": "Parasempatik sistem dinlen ve sindir yanıtını yürütür ve nörotransmiteri asetilkolindir. Kolinerjik M ve N reseptörlerini kullanır. Bu hat kalpte hızı azaltır ve GI motilite ile salgıyı artırır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Sempatik sistem noradrenalin kullanır ve savaş ya da kaç yanıtından sorumludur. Kalbi hızlandırır ve bronşları açar. Bu nedenle sempatik sistem dinlenme yerine acil durum yanıtını temsil eder (s. 10).",
+      "B": "Parasempatik hat doğru sistem olarak seçilmiştir, ancak ileticisi noradrenalin değil asetilkolindir. Noradrenalin sempatik postgangliyonik uçta salınır. Parasempatik hatta postgangliyonik uçta ACh salındığı için doğru ilettici asetilkolindir (s. 12).",
+      "C": "Sempatik sistemin ana postgangliyonik ileticisi noradrenalindir; ACh yalnız pregangliyonik uçta ve ter bezlerinde kullanılır. Bu sistem dinlenme yanıtını yürütmez (s. 12).",
+      "D": "Somatik sistem çizgili kası ACh ile uyarır ve dopamin kullanmaz. Dinlen ve sindir yanıtı otonom parasempatik hattın işidir (s. 3).",
+      "E": "Parasempatik sistem dinlen ve sindir yanıtını yürütür ve nörotransmiteri asetilkolindir. Kolinerjik M ve N reseptörlerini kullanır. Bu hat kalpte hızı azaltır ve GI motilite ile salgıyı artırır (s. 10)."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [],
+     "s": 10,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "\"Savaş ya da kaç\" yanıtı \"Dinlen ve sindirme\" yanıtı"
+     }
+    },
+    {
+     "id": "k2-41-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisinde sempatik sistemin çıkışı ve gangliyonların konumu doğru verilmiştir?",
+     "secenekler": {
+      "A": "Kraniyosakral; gangliyon hedef organa yakın",
+      "B": "T1–L2; gangliyon hedef organa yakın",
+      "C": "T1–L2; gangliyon omurga yanında",
+      "D": "Kraniyosakral; gangliyon omurga yanında",
+      "E": "S2–S4; gangliyon omurga yanında"
+     },
+     "dogru": "C",
+     "aciklama": "Sempatik sistem T1–L2 torakolomber çıkışlıdır ve gangliyonu omurga yanındadır (s. 11). Bu yüzden pregangliyonik lif kısa, postgangliyonik lif uzun seyreder (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Bu tanım parasempatik sisteme aittir. Parasempatik sistem CN3, CN7, CN9, CN10 ve S2–S4 çıkışlıdır ve gangliyonu hedef organa yakındır (s. 11).",
+      "B": "Torakolomber çıkış sempatiktir, ancak sempatik gangliyon omurga yanındadır. Hedef organa yakın gangliyon parasempatik hatta aittir. Çıkış doğru verilse de gangliyonun yeri sempatik hat için yanlış yazılmıştır (s. 11).",
+      "C": "Sempatik sistem T1–L2 torakolomber çıkışlıdır ve gangliyonu omurga yanındadır (s. 11). Bu yüzden pregangliyonik lif kısa, postgangliyonik lif uzun seyreder (s. 5).",
+      "D": "Kraniyosakral çıkış parasempatik sisteme ait, omurga yanındaki gangliyon ise sempatiktir. İki hattın özelliği bu şıkta karıştırılmıştır. Bu yüzden iki özellik ters taraflara yerleştirilmiş olur ve şık elenir (s. 11).",
+      "E": "S2–S4 parasempatik sakral çıkıştır ve hedef organa yakın gangliyonla ilişkilidir. Omurga yanındaki gangliyon ise sempatik hatta aittir (s. 11)."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "s": 11,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "• Sempatik: T1–L2 (torakolomber) çıkışlı; gangliyon"
+     }
+    },
+    {
+     "id": "k2-41-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Parasempatik sistemle ilgili aşağıdaki bilgilerden hangileri doğrudur?\nI. Çıkışı kraniyosakraldir\nII. CN3, CN7, CN9 ve CN10 liflerini içerir\nIII. Gangliyonu omurga yanındadır\nIV. Gangliyonu hedef organa yakındır",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Parasempatik sistem kraniyosakral çıkışlıdır, CN3, CN7, CN9, CN10 ve S2–S4 liflerini taşır ve gangliyonu hedef organa yakındır. Omurga yanındaki gangliyon sempatik özelliktir (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Kraniyosakral çıkış ve kranyal sinir lifleri doğrudur. Gangliyonun hedef organa yakın olması da doğru olduğundan seçim eksik kalır (s. 11).",
+      "B": "Parasempatik sistem kraniyosakral çıkışlıdır, CN3, CN7, CN9, CN10 ve S2–S4 liflerini taşır ve gangliyonu hedef organa yakındır. Omurga yanındaki gangliyon sempatik özelliktir (s. 11).",
+      "C": "Kranyal lifler ve hedefe yakın gangliyon doğrudur. Omurga yanındaki gangliyon ise sempatik özelliktir ve III parasempatik için yanlıştır (s. 11).",
+      "D": "Kraniyosakral çıkış ve hedefe yakın gangliyon doğrudur. Omurga yanındaki gangliyon sempatiktir, bu yüzden III yanlış kalır. Doğru seçimde kranyal lifler de yer almalıdır ve omurga yanı gangliyon bulunmamalıdır (s. 11).",
+      "E": "Çıkış ve kranyal sinirler doğrudur, omurga yanı gangliyon ise sempatik hatta aittir. Hedefe yakın gangliyon bilgisi de listede bulunmadığı için seçim yanlıştır (s. 11)."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "s": 11,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "S2–S4); gangliyon hedef organa yakın"
+     }
+    },
+    {
+     "id": "k2-41-q17",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sempatik hattın istisnası olarak kolinerjik innervasyon alan yapı hangisidir?",
+     "secenekler": {
+      "A": "Kalp",
+      "B": "Damar düz kası",
+      "C": "Mesane sfinkteri",
+      "D": "Ter bezleri",
+      "E": "Pilomotor kaslar"
+     },
+     "dogru": "D",
+     "aciklama": "Sempatik hattın istisnası ter bezleridir; postgangliyonik uçları kolinerjiktir ve ACh salar. Diğer sempatik hedeflerde noradrenalin kullanılır. Ter bezlerinin kolinerjik olması, sempatik hattın kuralında bilinen tek istisnadır (s. 12).",
+     "sik_aciklamalari": {
+      "A": "Kalp sempatik uyarıyla β1 üzerinden hız ve kasılmayı artırır ve iletici noradrenalindir. Kolinerjik istisna sayılmaz. Sempatik kalp yanıtı bu nedenle adrenerjik hattın tipik örneğidir, istisnası değil (s. 15).",
+      "B": "Damarda sempatik etki α1 aracılı büzülmedir ve iletici noradrenalindir. Parasempatik etki bu dokuda minimaldir. Damar tonusu adrenerjik uyarıyla ayarlandığı için damar kolinerjik istisna olamaz (s. 15).",
+      "C": "Sempatik uyarı sfinkteri α1 üzerinden kasar ve adrenerjik hat kullanılır. Kolinerjik sempatik innervasyon ter bezlerine özgüdür. Sfinkter kasılması da klasik adrenerjik sempatik yanıt olduğundan istisna sayılmaz (s. 15).",
+      "D": "Sempatik hattın istisnası ter bezleridir; postgangliyonik uçları kolinerjiktir ve ACh salar. Diğer sempatik hedeflerde noradrenalin kullanılır. Ter bezlerinin kolinerjik olması, sempatik hattın kuralında bilinen tek istisnadır (s. 12).",
+      "E": "Pilomotor yanıt α1 aracılı adrenerjik sempatik etkidir. Kolinerjik sempatik istisna ise ter bezleridir. Tüylerin dikleşmesi sempatik adrenerjik yanıt olarak öğrenilir ve ter bezinden ayrılır (s. 37)."
+     },
+     "bilgi": [
+      12
+     ],
+     "benzer_cikmis": [],
+     "s": 12,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "İstisna: Ter bezleri → kolinerjik Her iki basamakta da kolinerjik"
+     }
+    },
+    {
+     "id": "k2-41-q18",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Nikotinik reseptörlerin bulunmadığı yapı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Parasempatik postgangliyonik nöroefektör kavşak",
+      "B": "Sempatik gangliyon",
+      "C": "Parasempatik gangliyon",
+      "D": "İskelet kası nöromüsküler kavşağı",
+      "E": "Adrenal medulla"
+     },
+     "dogru": "A",
+     "aciklama": "Parasempatik postgangliyonik uçta ACh muskarinik reseptöre etki eder; nikotinik reseptör bu kavşakta bulunmaz. Muskarinik M1–M3 hedef organda efektör yanıtı sağlar (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Parasempatik postgangliyonik uçta ACh muskarinik reseptöre etki eder; nikotinik reseptör bu kavşakta bulunmaz. Muskarinik M1–M3 hedef organda efektör yanıtı sağlar (s. 13).",
+      "B": "Sempatik gangliyonda pregangliyonik ACh nikotinik NN reseptörünü uyarır. Gangliyon blokerleri bu reseptörü hedef alır. Bu nedenle sempatik gangliyon nikotinik reseptör taşıyan yapılar arasındadır (s. 12).",
+      "C": "Parasempatik gangliyonda da iletim nikotinik reseptörle yürür. Her iki hatta pregangliyonik nöronlar nikotinik reseptör aracılığıyla ACh kullanır. Parasempatik gangliyon da nikotinik reseptör taşıyan bir sinaps olarak sayılır (s. 12).",
+      "D": "Nöromüsküler kavşakta çizgili kasın kasılmasını sağlayan nikotinik NM reseptörleri bulunur. Bu bölgede nikotinik reseptör vardır. Çizgili kas kasılması bu reseptör üzerinden yürüdüğü için seçenek tutarsızdır (s. 13).",
+      "E": "Adrenal medullayı uyaran pregangliyonik ACh nikotinik reseptörle çalışır ve kana epinefrin salgılatır. Medulla nikotinik reseptör taşıdığı için seçenek yanlıştır (s. 3)."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": [],
+     "s": 13,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "• Muskarinik M1–M3: Hedef organlarda parasempatik"
+     }
+    },
+    {
+     "id": "k2-41-q19",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Kalpte kardiyak uyarımı ve bronşlarda gevşemeyi sağlayan adrenerjik reseptörler sırasıyla hangisidir?",
+     "secenekler": {
+      "A": "α1 ve β1",
+      "B": "β2 ve α2",
+      "C": "α2 ve β1",
+      "D": "β1 ve M3",
+      "E": "β1 ve β2"
+     },
+     "dogru": "E",
+     "aciklama": "β1 reseptörü kalpte hız ve kasılma artışıyla kardiyak uyarımı, β2 reseptörü bronş düz kasında gevşemeyi sağlar. Bu ikili β-blokerlerin klinik ayrımı için temeldir (s. 13).",
+     "sik_aciklamalari": {
+      "A": "α1 reseptörü damar ve göz düz kasında kasılma yapar. Bronş gevşemesi ise β2 reseptörü aracılığıyla gerçekleşir. Bu seçimde kalpteki uyarım reseptörü de β1 yerine α1 olarak yazıldığından yanlıştır (s. 13).",
+      "B": "β2 bronkodilatasyondur, ancak kalpteki kardiyak uyarım β1 ile ilgilidir. α2 ise presinaptik geri bildirimde rol oynar. Kalpte uyarım sağlayan reseptör β1 olduğu için ikili sıra bakımından da yanlıştır (s. 13).",
+      "C": "α2 presinaptik uçta NA salınımını azaltır, kalpte uyarım ise β1 aracılıdır. Bronkodilatasyon α2 ile ilişkili değildir. Bronş gevşemesi β2 ile ilişkili olduğundan seçeneğin ikinci kısmı da yanlış kalır (s. 36).",
+      "D": "β1 kalpteki uyarımı sağlar, M3 ise bronşta büzülme ve salgı artışı yapan muskarinik reseptördür. Bronşta gevşeme M3 ile değil β2 ile olur (s. 15).",
+      "E": "β1 reseptörü kalpte hız ve kasılma artışıyla kardiyak uyarımı, β2 reseptörü bronş düz kasında gevşemeyi sağlar. Bu ikili β-blokerlerin klinik ayrımı için temeldir (s. 13)."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": [],
+     "s": 13,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Adrenerjik/Kolinerjik Reseptör Mantığı"
+     }
+    },
+    {
+     "id": "k2-41-q20",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gözde sempatik etkiyle midriyazis, parasempatik etkiyle miyozis oluşturan reseptör çifti hangisidir?",
+     "secenekler": {
+      "A": "β2 ve M2",
+      "B": "α2 ve M3",
+      "C": "α1 ve M3",
+      "D": "β1 ve M2",
+      "E": "α1 ve M2"
+     },
+     "dogru": "C",
+     "aciklama": "Gözde sempatik etki α1 aracılı midriyazis, parasempatik etki M3 aracılı miyozistir. Bu eşleşme pupil çapı yanıtını belirler. Bu ikili organ tablosunda gözün karşılaştırma satırını doğru olarak tamamlar (s. 15).",
+     "sik_aciklamalari": {
+      "A": "β2 bronkodilatasyon ve vazodilatasyon yapar, M2 ise kalpte bradikardi sağlar. İkisi de pupil çapını doğrudan belirlemez. Pupil yanıtı için gereken reseptörler α1 ve M3 olduğundan bu ikili yanlış kalır (s. 15).",
+      "B": "α2 GI kanalda sempatik motilite azalmasından sorumludur ve midriyazis α1 ile olur. M3 miyozis için doğrudur, ancak ilk reseptör yanlıştır (s. 15).",
+      "C": "Gözde sempatik etki α1 aracılı midriyazis, parasempatik etki M3 aracılı miyozistir. Bu eşleşme pupil çapı yanıtını belirler. Bu ikili organ tablosunda gözün karşılaştırma satırını doğru olarak tamamlar (s. 15).",
+      "D": "β1 ve M2 kalbin uyarılması ve yavaşlaması için karşılaştırılan reseptörlerdir. Pupil yanıtıyla doğrudan ilgileri yoktur. Kalp ve pupil satırları ayrı olduğundan reseptör çifti göze taşınamaz (s. 15).",
+      "E": "α1 midriyazis için doğrudur, M2 ise kalpte bradikardi yapar. Parasempatik miyozis M3 aracılı olduğu için ikili yanlış kalır (s. 15)."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": [],
+     "s": 15,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Organ Sempatik Etki Parasempatik Etki Reseptör"
+     }
+    },
+    {
+     "id": "k2-41-q21",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Organ etkileri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Parasempatik uyarı kalpte bradikardi yapar",
+      "B": "Sempatik uyarı bronşta dilatasyon yapar",
+      "C": "Parasempatik uyarı pupilde miyozis yapar",
+      "D": "Sempatik uyarı GI motiliteyi artırır",
+      "E": "Sempatik uyarı mesane sfinkterini kasar"
+     },
+     "dogru": "D",
+     "aciklama": "GI kanalda sempatik etki motilite azalmasıdır; motilite ve salgı artışı parasempatik etkidir. Bu nedenle ifade yanlıştır. Gerçekte sempatik uyarı motiliteyi azaltır, salgı ve motilite artışı parasempatiktir (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Parasempatik etki kalpte hız azalmasıdır ve M2 reseptörü aracılık eder. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 15).",
+      "B": "Bronşta sempatik etki β2 aracılı dilatasyondur. Parasempatik etki ise M3 aracılı büzülmedir. Bu eşleşme doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 15).",
+      "C": "Gözde parasempatik etki M3 aracılı miyozistir, sempatik etki ise α1 aracılı midriyazistir. Bu eşleşme organ tablosuyla uyumludur. İfade doğru olduğundan yanlış ifade olarak seçilmez (s. 15).",
+      "D": "GI kanalda sempatik etki motilite azalmasıdır; motilite ve salgı artışı parasempatik etkidir. Bu nedenle ifade yanlıştır. Gerçekte sempatik uyarı motiliteyi azaltır, salgı ve motilite artışı parasempatiktir (s. 15).",
+      "E": "Mesanede sempatik etki α1 aracılı sfinkter kasılması, parasempatik etki M3 aracılı detrusor kasılmasıdır. Bu bilgi tablodaki mesane satırıyla uyumludur. İfade doğru olduğundan seçilmez (s. 15)."
+     },
+     "bilgi": [
+      15
+     ],
+     "benzer_cikmis": [],
+     "s": 15,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Organ Sempatik Etki Parasempatik Etki Reseptör"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "ACh sentez–salıverilme–yıkım döngüsünü, AChE’nin rolünü ve nörotransmiter sentezini azaltan ilaçları açıklar.",
+   "sorular": [
+    {
+     "id": "k2-41-q22",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "ACh döngüsüyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "ACh tirozin ve asetil-CoA’dan sentezlenir",
+      "B": "ACh, kolin ve asetil-CoA’nın birleşmesiyle üretilir",
+      "C": "ACh yıkımı MAO ile yapılır",
+      "D": "ACh veziküle girmeden doğrudan salınır",
+      "E": "ACh döngüsü ilaç müdahalesine kapalıdır"
+     },
+     "dogru": "B",
+     "aciklama": "ACh sitoplazmada kolin ve asetil-CoA’nın birleşmesiyle sentezlenir. Ürün veziküllere paketlenir ve aksiyon potansiyeli ile ekzositozla salınır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Tirozin adrenerjik hatta katekolamin sentezinin öncülüdür ve ACh sentezinde kullanılmaz. ACh için gereken öncüller kolin ve asetil-CoA’dır (s. 33).",
+      "B": "ACh sitoplazmada kolin ve asetil-CoA’nın birleşmesiyle sentezlenir. Ürün veziküllere paketlenir ve aksiyon potansiyeli ile ekzositozla salınır (s. 18).",
+      "C": "MAO katekolaminlerin yıkımında rol alan enzimdir. ACh’yi ise AChE parçalar ve ortaya çıkan kolin sinir ucuna geri alınır (s. 18).",
+      "D": "ACh veziküllere paketlenir ve korunur; aksiyon potansiyeli ekzositozu başlatır. Serbest sitoplazmik bir salınım mekanizması yoktur. Dolayısıyla vezikül basamağı, sentezden sonra gelen zorunlu bir depolama aşamasıdır (s. 18).",
+      "E": "ACh döngüsünün her basamağı farmakolojik müdahale fırsatıdır. AChE inhibitörleri yıkımı yavaşlatır, hemikolinyum ise kolin uptake’ini bloke eder (s. 18)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "s": 18,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "ACh veziküllere paketlenir Aksiyon potansiyeli ile"
+     }
+    },
+    {
+     "id": "k2-41-q23",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Sinaptik aralıktaki ACh’yi parçalayan enzim ve yıkım sonrası geri alınan ürün aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "AChE; kolin",
+      "B": "MAO; DOPA",
+      "C": "COMT; kolin",
+      "D": "AChE; tirozin",
+      "E": "ACh sentezini yapan enzim; kolin"
+     },
+     "dogru": "A",
+     "aciklama": "AChE ACh’yi parçalar ve ortaya çıkan kolin sinir ucuna geri alınır. Geri alınan kolin ACh üretiminde yeniden kullanılır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "AChE ACh’yi parçalar ve ortaya çıkan kolin sinir ucuna geri alınır. Geri alınan kolin ACh üretiminde yeniden kullanılır (s. 18).",
+      "B": "MAO katekolaminlerin yıkımından sorumlu enzimdir, DOPA ise katekolamin sentez basamağıdır. ACh yıkımıyla ilgileri yoktur. AChE bu işi yaptığı için ACh yıkım enzimi olarak MAO yerine anılır (s. 17).",
+      "C": "COMT adrenalin ve noradrenalini metabolize eden bir enzimdir ve ACh’yi parçalamaz. Kolin geri alımı doğru üründür, ancak enzim yanlıştır (s. 23).",
+      "D": "AChE doğru enzimdir, ancak tirozin katekolamin sentezinin öncülüdür. Yıkım sonrası geri alınan ürün tirozin değil kolindir. Tirozin hidroksilaz basamağı adrenerjik hatta işlediği için ACh yıkımıyla birleşmez (s. 18).",
+      "E": "ACh sentezini yapan enzim kolin ile asetil-CoA’yı birleştirir ve sentez basamağında rol alır. Yıkımda rol almaz ve ACh’yi parçalamaz; sinaptik aralıktaki ACh’yi AChE parçalar (s. 18)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "s": 18,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Kolin + Asetil-CoA AChE ACh'yi parçalar; kolin"
+     }
+    },
+    {
+     "id": "k2-41-q24",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "ACh nöronda sentezlendikten sonra nerede depolanır ve nasıl salınır?",
+     "secenekler": {
+      "A": "Sitoplazmada serbest; difüzyonla",
+      "B": "Mitokondride; aktif taşıyıcıyla",
+      "C": "Veziküllerde; uptake-1 ile",
+      "D": "Aksonda serbest; endositozla",
+      "E": "Veziküllerde; ekzositozla"
+     },
+     "dogru": "E",
+     "aciklama": "ACh veziküllere paketlenir ve korunur; aksiyon potansiyeli ekzositozu tetikler. Böylece ilettici sinaptik aralığa kontrollü biçimde salınır. Bu düzen sayesinde ileticinin sentezi, korunması ve salınımı ayrı basamaklar olarak ilaç hedefi olur (s. 18).",
+     "sik_aciklamalari": {
+      "A": "Serbest sitoplazmada kalan ACh AChE tarafından parçalanırdı. Bu nedenle depolama sitoplazmada değil veziküllerde yapılır. Serbest iletici korunamayacağı için hücre vezikül depolamasına gereksinim duyar (s. 18).",
+      "B": "Mitokondri hücrenin enerji merkezidir ve ACh deposu değildir. ACh salınımı veziküler ekzositozla olur. ACh deposu olarak veziküller bilinir ve salınımda ekzositoz kullanılır (s. 18).",
+      "C": "Uptake-1 ileticinin sinir ucuna geri alınmasını sağlayan sistemdir, salıverilme yolu değildir. Salıverilme ekzositozla gerçekleşir. Depolama doğru olsa da salıverilme mekanizması yanlış verildiğinden seçenek elenir (s. 34).",
+      "D": "Endositoz hücrenin dışarıdan madde almasıdır; ACh salınımı ise ekzositozdur. Depo yeri de akson sitoplazması değil veziküllerdir. Depolama ve salınım şekli birlikte yanlış verildiğinden seçenek tümüyle elenir (s. 18).",
+      "E": "ACh veziküllere paketlenir ve korunur; aksiyon potansiyeli ekzositozu tetikler. Böylece ilettici sinaptik aralığa kontrollü biçimde salınır. Bu düzen sayesinde ileticinin sentezi, korunması ve salınımı ayrı basamaklar olarak ilaç hedefi olur (s. 18)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "s": 18,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "ACh veziküllere paketlenir Aksiyon potansiyeli ile"
+     }
+    },
+    {
+     "id": "k2-41-q25",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "AChE inhibitörleri uygulandığında sinaptik ACh düzeyi ve kolinerjik etki nasıl değişir?",
+     "secenekler": {
+      "A": "ACh azalır, etki kısalır",
+      "B": "ACh sentezi durur",
+      "C": "ACh birikir, etki uzar ve güçlenir",
+      "D": "ACh veziküle paketlenemez",
+      "E": "Reseptör sayısı azalır"
+     },
+     "dogru": "C",
+     "aciklama": "AChE inhibitörleri yıkım frenini kapatır; ACh birikir ve kolinerjik etki hem uzar hem güçlenir. Miyastenia gravis tedavisi bu mantığa dayanır (s. 19).",
+     "sik_aciklamalari": {
+      "A": "ACh’nin azalması AChE aktivitesinin artmasıyla olurdu. İnhibitörler bu enzimi engellediği için ACh yıkımı yavaşlar. Gerçekte etki uzar ve güçlenir, çünkü ACh sinapsta daha uzun süre kalır (s. 19).",
+      "B": "ACh sentezini kolin ve asetil-CoA birleşimi sağlar ve hemikolinyum gibi ilaçlar sentezi azaltabilir. AChE inhibitörleri ise sentezi etkilemez (s. 33).",
+      "C": "AChE inhibitörleri yıkım frenini kapatır; ACh birikir ve kolinerjik etki hem uzar hem güçlenir. Miyastenia gravis tedavisi bu mantığa dayanır (s. 19).",
+      "D": "Veziküler paketleme ayrı bir basamaktır ve AChE inhibitörleri paketlemeyi engellemez. Etkileri yıkımı yavaşlatmaktır. Gerçekte ACh vezikülde korunur ve inhibitör bu basamağa dokunmadan yıkımı yavaşlatır (s. 18).",
+      "E": "Reseptör sayısı inhibitörün doğrudan sonucu değildir. Doğrudan sonuç sinaptik ACh birikimi ve uzamış muskarinik ile nöronal nikotinik etkidir (s. 32)."
+     },
+     "bilgi": [
+      19
+     ],
+     "benzer_cikmis": [],
+     "s": 19,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "kısa etki → uzun ve güçlü • Miyastenia gravis tedavisi"
+     }
+    },
+    {
+     "id": "k2-41-q26",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "AChE inhibisyonunun sonuçları arasında aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Aşırı terleme",
+      "B": "Ağız kuruluğu ve taşikardi",
+      "C": "Bradikardi",
+      "D": "Bronkospazm",
+      "E": "Miyozis"
+     },
+     "dogru": "B",
+     "aciklama": "Ağız kuruluğu ve taşikardi muskarinik blokaj bulgusudur. AChE inhibisyonunda ACh arttığı için terleme, bradikardi, bronkospazm ve miyozis beklenir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "ACh artışı muskarinik uyarımı güçlendirir ve ter bezlerini uyarır. Aşırı terleme AChE inhibisyonunun yan etkisidir. Terleme bu nedenle muskarinik aşırı uyarımın sık görülen bulgusudur (s. 32).",
+      "B": "Ağız kuruluğu ve taşikardi muskarinik blokaj bulgusudur. AChE inhibisyonunda ACh arttığı için terleme, bradikardi, bronkospazm ve miyozis beklenir (s. 32).",
+      "C": "Kalpte M2 uyarımı bradikardi yapar. ACh birikimi bu etkiyi artırdığı için bradikardi beklenir. Bu nedenle bradikardi, AChE inhibisyonunda beklenen bir bulgudur ve elenir (s. 32).",
+      "D": "Bronşta M3 uyarımı büzülme ve salgı artışı yapar. AChE inhibisyonunda bu nedenle bronkospazm gelişebilir. Bronkospazm da ACh artışında beklenen bir sonuçtur ve seçenek elenir (s. 32).",
+      "E": "Gözde M3 uyarımı pupil daralması yapar. ACh birikiminin sonucu olarak miyozis görülür. Pupil daralması bu nedenle AChE inhibisyonunun doğal sonucu olarak kabul edilir (s. 32)."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [],
+     "s": 32,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "• Yan etkiler: aşırı terleme, bradikardi, bronkospazm,"
+     }
+    },
+    {
+     "id": "k2-41-q27",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kolin uptake’ini bloke ederek ACh üretimini azaltan, klinik kullanımı sınırlı olan ilaç hangisidir?",
+     "secenekler": {
+      "A": "α-Metiltirozin",
+      "B": "Metildopa",
+      "C": "Pilokarpin",
+      "D": "Hemikolinyum",
+      "E": "Fizostigmin"
+     },
+     "dogru": "D",
+     "aciklama": "Hemikolinyum kolin uptake’ini bloke ederek kolinerjik hatta ACh sentezini azaltır. Deneysel bir araçtır ve klinik kullanımı sınırlıdır (s. 33).",
+     "sik_aciklamalari": {
+      "A": "α-Metiltirozin tirozin hidroksilazı inhibe eder ve adrenerjik hatta NA ile adrenalin sentezini bozar. Kolinerjik hatta etkili değildir (s. 33).",
+      "B": "Metildopa yalancı prekürsör olarak zayıf adrenerjik sinyal oluşturur ve gebelik hipertansiyonunda tercih edilir. Kolinerjik hatta etkili değildir. Metildopanın hedefi adrenerjik sentez olduğu için ACh üretimini azaltan ilaç olarak anılmaz (s. 33).",
+      "C": "Pilokarpin doğrudan M3 agonistidir ve glokomda göziçi basıncını düşürür. ACh üretimini azaltmaz, muskarinik etkiyi artırır. Pilokarpin ACh üretimini azaltmaz, reseptörü doğrudan uyaran bir agonisttir (s. 56).",
+      "D": "Hemikolinyum kolin uptake’ini bloke ederek kolinerjik hatta ACh sentezini azaltır. Deneysel bir araçtır ve klinik kullanımı sınırlıdır (s. 33).",
+      "E": "Fizostigmin AChE’yi inhibe eden dolaylı parasempatomimetiktir ve ACh birikimine yol açar. ACh sentezini azaltmaz. Fizostigmin yıkımı engelleyerek ACh düzeyini artırır ve sentez hedefli ilaç sayılmaz (s. 53)."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": [],
+     "s": 33,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "araçtır; klinik kullanımı sınırlıdır."
+     }
+    },
+    {
+     "id": "k2-41-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Tirozin hidroksilazı inhibe ederek NA ve adrenalin sentezini bozan, feokromositomada kullanılabilen ilaç hangisidir?",
+     "secenekler": {
+      "A": "α-Metiltirozin",
+      "B": "Hemikolinyum",
+      "C": "Metildopa",
+      "D": "Rezerpin",
+      "E": "Prazosin"
+     },
+     "dogru": "A",
+     "aciklama": "α-Metiltirozin tirozin hidroksilazı inhibe ederek NA ve adrenalin sentezini bozar. Bu mekanizma nedeniyle feokromositomada kullanılabilir. Dolayısıyla feokromositoma ilk basamakta sentez azaltılarak denetlenebilir (s. 33).",
+     "sik_aciklamalari": {
+      "A": "α-Metiltirozin tirozin hidroksilazı inhibe ederek NA ve adrenalin sentezini bozar. Bu mekanizma nedeniyle feokromositomada kullanılabilir. Dolayısıyla feokromositoma ilk basamakta sentez azaltılarak denetlenebilir (s. 33).",
+      "B": "Hemikolinyum kolinerjik hatta kolin uptake’ini bloke eder. Adrenerjik sentezi etkilemez. Hemikolinyum kolinerjik hatta çalıştığı için NA ve adrenalin sentezini hedef almaz (s. 33).",
+      "C": "Metildopa yalancı prekürsör olarak zayıf bir adrenerjik sinyal oluşturur ve gebelik hipertansiyonunda tercih edilir. Tirozin hidroksilazı inhibe etmez (s. 33).",
+      "D": "Rezerpin sempatik uyarıyı bloke eden bir sempatolitiktir. Tirozin hidroksilazı hedef alan ilaç olarak anılmaz. Rezerpin sempatolitik gruptadır ve tirozin hidroksilaz enzimiyle anılan ilaç değildir (s. 22).",
+      "E": "Prazosin α1-selektif bloker olup hipertansiyon ve BPH’de kullanılır. Sentezi bozmaz, reseptörü bloke eder. Prazosin α1 reseptörünü bloke ettiğinden sentez basamağına müdahale etmez (s. 44)."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": [],
+     "s": 33,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "Veziküler kolin uptake'ini bloke Tirozin hidroksilazı inhibe eder → oluşur → zayıf adrenerjik sinyal"
+     }
+    },
+    {
+     "id": "k2-41-q29",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Nörotransmiter sentezini azaltan ilaçlarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Hemikolinyum kolinerjik hatta etkilidir\nII. Metildopa gebelik hipertansiyonunda tercih edilir\nIII. α-Metiltirozin kolinerjik hatta etkilidir\nIV. Metildopa yalancı prekürsör olarak zayıf adrenerjik sinyal oluşturur",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, III ve IV",
+      "D": "III ve IV",
+      "E": "I, II ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Hemikolinyum kolinerjik hatta, metildopa ise adrenerjik hatta etki eder; metildopa yalancı prekürsör olarak zayıf sinyal üretir ve gebelik hipertansiyonunda tercih edilir. Bu üç ifade birlikte sentezi azaltan ilaç grubunu doğru anlatır (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Hemikolinyum ve metildopa ifadeleri doğrudur. Metildopanın yalancı prekürsör mekanizması da doğru olduğundan seçim eksik kalır. Yalancı prekürsör ifadesi de doğru olduğu için bu seçim ifadeleri eksik bırakır (s. 33).",
+      "B": "Metildopa ifadesi doğrudur. α-Metiltirozin ise adrenerjik hatta etkilidir, bu yüzden kolinerjik hatta etkilidir diyen III yanlıştır. II yanlış olmadığı halde III yanlış olduğundan ikili birlikte doğru olamaz (s. 33).",
+      "C": "Hemikolinyum ve yalancı prekürsör ifadeleri doğrudur. α-Metiltirozin adrenerjik hatta çalıştığı için III yanlıştır. III yanlış olduğundan listeye girmesi bu seçimi geçersiz kılar (s. 33).",
+      "D": "Yalancı prekürsör ifadesi doğrudur, α-Metiltirozin ifadesi ise yanlıştır. Hemikolinyum ve metildopanın klinik bilgisi de dışarıda kalmıştır. III yanlış olduğu için bu seçim, doğru ifadelerle birlikte kabul edilemez (s. 33).",
+      "E": "Hemikolinyum kolinerjik hatta, metildopa ise adrenerjik hatta etki eder; metildopa yalancı prekürsör olarak zayıf sinyal üretir ve gebelik hipertansiyonunda tercih edilir. Bu üç ifade birlikte sentezi azaltan ilaç grubunu doğru anlatır (s. 33)."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": [],
+     "s": 33,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "(Kolinerjik Hat) (Adrenerjik Hat) Yalancı prekürsör → α-metil-NA"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "İlaç sınıflarını (sempatomimetik, sempatolitik, parasempatomimetik, parasempatolitik), ko-transmiterleri, geri alım blokajını ve gangliyon ile nöromüsküler kavşak blokerlerini ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-41-q30",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Sempatik uyarıyı bloke eden ilaç grubuna aşağıdakilerden hangisi örnektir?",
+     "secenekler": {
+      "A": "Salbutamol",
+      "B": "Pilokarpin",
+      "C": "Rezerpin",
+      "D": "Atropin",
+      "E": "Dopamin"
+     },
+     "dogru": "C",
+     "aciklama": "Rezerpin sempatolitiktir ve sempatik uyarıyı bloke eden ilaçlar arasında alfa ve beta blokerlerle birlikte sayılır. Bu grup, alfa ve beta blokerlerle birlikte sempatik sistemi baskılar (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Salbutamol β2-selektif agonisttir ve sempatik uyarıyı taklit eder. Bronkodilatasyon sağladığı için sempatomimetik gruptadır. Dolayısıyla salbutamol sempatolitik değil, sempatik uyarıyı artıran gruptadır (s. 22).",
+      "B": "Pilokarpin parasempatik uyarıyı taklit eden doğrudan muskarinik agonisttir. Sempatik sistemi bloke etmez. Pilokarpin muskarinik reseptörü uyardığı için parasempatomimetik gruba girer (s. 22).",
+      "C": "Rezerpin sempatolitiktir ve sempatik uyarıyı bloke eden ilaçlar arasında alfa ve beta blokerlerle birlikte sayılır. Bu grup, alfa ve beta blokerlerle birlikte sempatik sistemi baskılar (s. 22).",
+      "D": "Atropin parasempatolitiktir ve muskarinik reseptörü bloke eder. Sempatolitik grupta yer almaz. Atropin muskarinik reseptörü bloke ettiğinden parasempatolitik grubun örneğidir (s. 22).",
+      "E": "Dopamin sempatik uyarıyı taklit eden bir katekolamin sempatomimetiktir. Bloke edici değil uyarıcı bir ilaçtır. Dopamin D1, β1 ve α1 uyararak sempatik etkiyi artırır (s. 22)."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "s": 22,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Sempatik uyarıyı bloke eder (alfa/beta-blokerler, rezerpin)"
+     }
+    },
+    {
+     "id": "k2-41-q31",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Parasempatik uyarıyı taklit eden ilaçlar hangi grupta yer alır ve örnekleri hangisidir?",
+     "secenekler": {
+      "A": "Parasempatolitik – atropin, skopolamin",
+      "B": "Parasempatomimetik – pilokarpin, betanekol",
+      "C": "Sempatomimetik – adrenalin, dopamin",
+      "D": "Sempatolitik – rezerpin, propranolol",
+      "E": "Parasempatolitik – ipratropiyum, fizostigmin"
+     },
+     "dogru": "B",
+     "aciklama": "Parasempatomimetikler parasempatik uyarıyı taklit eder. Pilokarpin ve betanekol bu grubun doğrudan muskarinik agonistleridir. Her iki örnek de parasempatik hedef organlarda muskarinik uyarım oluşturur (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Atropin ve skopolamin parasempatik uyarıyı bloke eden muskarinik antagonistlerdir. Taklit değil blokaj yaparlar. Bu ilaçlar parasempatik tonusu azalttığı için taklit değil bloke edici gruptadır (s. 22).",
+      "B": "Parasempatomimetikler parasempatik uyarıyı taklit eder. Pilokarpin ve betanekol bu grubun doğrudan muskarinik agonistleridir. Her iki örnek de parasempatik hedef organlarda muskarinik uyarım oluşturur (s. 22).",
+      "C": "Adrenalin ve dopamin sempatik uyarıyı taklit eden sempatomimetiklerdir. Parasempatik hat bu ilaçlarla uyarılmaz. Bu gruptaki ilaçlar adrenerjik reseptörleri uyardığı için parasempatik taklit grubuna eklenemez (s. 22).",
+      "D": "Rezerpin ve propranolol sempatik uyarıyı bloke eden ilaçlardır. Parasempatik taklit grubuna girmezler. Bu ilaçlar adrenerjik uyarıyı kestiği için sempatik taraftadır (s. 22).",
+      "E": "İpratropiyum parasempatolitiktir, fizostigmin ise AChE’yi inhibe eden dolaylı parasempatomimetiktir. İkili karışık bir gruptur ve tanım tutmaz. Fizostigmin dolaylı parasempatomimetik olduğundan ikiliden biri parasempatolitik grupla örtüşmez (s. 22)."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "s": 22,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Parasempatik uyarıyı taklit eder (pilokarpin, betanekol, fizostigmin)"
+     }
+    },
+    {
+     "id": "k2-41-q32",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gangliyon blokerleri hangi reseptörü bloke eder ve hangi iletimi keser?",
+     "secenekler": {
+      "A": "NM; yalnız somatik iletimi",
+      "B": "M3; yalnız parasempatik iletimi",
+      "C": "α1; yalnız sempatik iletimi",
+      "D": "NN; sempatik ve parasempatik iletimi",
+      "E": "NN; yalnız sempatik iletimi"
+     },
+     "dogru": "D",
+     "aciklama": "Gangliyon blokerleri nikotinik NN reseptörünü bloke eder. Böylece her iki otonom hatta pregangliyonik–gangliyonik aktarım kesilir. Bu nedenle gangliyon blokajında hem hipotansiyon hem parasempatik bulgular birlikte görülür (s. 23).",
+     "sik_aciklamalari": {
+      "A": "NM reseptörü nöromüsküler kavşakta bulunur ve nöromüsküler blokerlerin hedefidir. Gangliyon blokerleri ise NN reseptörünü bloke eder. NM blokajı çizgili kas iletimini keser ve anestezide kas gevşemesi sağlar (s. 23).",
+      "B": "M3 reseptörü düz kas ve bezlerde bulunur ve antagonisti ağız kuruluğu yapar. Gangliyon blokerlerinin hedefi M3 değildir. M3 blokajı ağız kuruluğu ve konstipasyon yapan muskarinik antagonistlerin hedefidir (s. 36).",
+      "C": "α1 blokajı damar gevşemesi ve hipotansiyon yapar. Gangliyon blokajı ise hem sempatik hem parasempatik iletiyi keser. Bu seçimde reseptör de iletim türü de gangliyon blokajına uymaz (s. 44).",
+      "D": "Gangliyon blokerleri nikotinik NN reseptörünü bloke eder. Böylece her iki otonom hatta pregangliyonik–gangliyonik aktarım kesilir. Bu nedenle gangliyon blokajında hem hipotansiyon hem parasempatik bulgular birlikte görülür (s. 23).",
+      "E": "NN blokajı doğru reseptörü gösterir. Gangliyon her iki hat için ortak olduğundan iletimin ikisi birden kesilir, yalnız sempatik değil (s. 23)."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [],
+     "s": 23,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Hem sempatik hem parasempatik NM nikotinik reseptörleri hedef inhibe eder. NA/dopamin"
+     }
+    },
+    {
+     "id": "k2-41-q33",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Nöromüsküler kavşak blokerlerinin klinikte başlıca kullanım alanı hangisidir?",
+     "secenekler": {
+      "A": "Anestezide kas gevşemesi",
+      "B": "Hipertansif acil",
+      "C": "Glokom tedavisi",
+      "D": "Anafilaksi",
+      "E": "Miyastenia gravis tedavisi"
+     },
+     "dogru": "A",
+     "aciklama": "Nöromüsküler kavşak blokerleri NM nikotinik reseptörünü hedef alır. Bu mekanizma anestezide kas gevşemesi sağlamak için kullanılır. Süksinilkolin ve roküronyum gibi ilaçlar bu alanın başlıca örnekleridir (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Nöromüsküler kavşak blokerleri NM nikotinik reseptörünü hedef alır. Bu mekanizma anestezide kas gevşemesi sağlamak için kullanılır. Süksinilkolin ve roküronyum gibi ilaçlar bu alanın başlıca örnekleridir (s. 23).",
+      "B": "Hipertansif acilde hızlı etkili IV gangliyon blokeri trimetafan kullanılabilir. Nöromüsküler blokerlerin işlevi ise kas gevşemesidir. Trimetafan gibi gangliyon blokerleri bu endikasyonda kullanılabilir (s. 35).",
+      "C": "Glokomda göziçi basıncını düşürmek için pilokarpin ya da karbakol gibi miyotik ajanlar kullanılır. Nöromüsküler blokerlerin bu alanda yeri yoktur (s. 56).",
+      "D": "Anafilakside adrenalin SC veya IM verilir ve α ile β etkisiyle damar ve bronş yanıtını düzeltir. Nöromüsküler bloker bu tabloda kullanılmaz (s. 26).",
+      "E": "Miyastenia gravisde AChE inhibitörleri ACh etkisini artırır. Nöromüsküler blokerler ise kası gevşettiği için bu tedavide kullanılmaz. Miyastenia gravis ACh etkisinin artırılmasını gerektirir ve kas gevşeticiye ters düşer (s. 19)."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [],
+     "s": 23,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Gangliyon Blokerleri Nöromüsküler Kavşak MAO/COMT İnhibitörleri"
+     }
+    },
+    {
+     "id": "k2-41-q34",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Adrenerjik uçta noradrenalinle birlikte salınan ve vazokonstriktif etkiyi güçlendiren ko-transmiter hangisidir?",
+     "secenekler": {
+      "A": "VIP",
+      "B": "Dopamin",
+      "C": "Asetilkolin",
+      "D": "Substans P",
+      "E": "NPY"
+     },
+     "dogru": "E",
+     "aciklama": "NPY adrenerjik uçta noradrenalinle birlikte salınır. Vazokonstriktif etkiyi potansiyelize ederek damar tonusunu uzun süreli tutar. Bu nedenle NPY adrenerjik damar tonusunu uzun süre yüksek tutan ko-transmiterdir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "VIP kolinerjik uçta ACh ile birlikte salınır ve lokal vazodilatasyon ile salgı modülasyonuna katkı sağlar. Adrenerjik uç ko-transmiteri değildir (s. 27).",
+      "B": "Dopamin D1, β1 ve α1 reseptörlerine doza bağlı etki eden bir katekolamindir. Adrenerjik uçta ko-transmiter peptid olarak anılmaz (s. 26).",
+      "C": "ACh kolinerjik hattın ana ileticisidir. Adrenerjik uçta ko-transmiter olarak değil, kolinerjik uçta ana ilettici olarak çalışır. ACh adrenerjik uçta bulunmadığı için bu seçenek ko-transmiter olarak uyumsuzdur (s. 27).",
+      "D": "Substans P bir nöropeptittir, ancak adrenerjik uç ko-transmiteri olarak bu derste NPY verilir. Doğru eşleşme NPY’dir (s. 29).",
+      "E": "NPY adrenerjik uçta noradrenalinle birlikte salınır. Vazokonstriktif etkiyi potansiyelize ederek damar tonusunu uzun süreli tutar. Bu nedenle NPY adrenerjik damar tonusunu uzun süre yüksek tutan ko-transmiterdir (s. 29)."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": [],
+     "s": 29,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "NPY, noradrenalinin vazokonstriktif etkisini potansiyelize ederek damar tonusunu daha uzun süreli ve güçlü tutar; bu özellik"
+     }
+    },
+    {
+     "id": "k2-41-q35",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kolinerjik uçta ACh ile birlikte salınan ve tükürük bezi ile damarda lokal modülasyon sağlayan peptid hangisidir?",
+     "secenekler": {
+      "A": "NPY",
+      "B": "Dopamin",
+      "C": "VIP",
+      "D": "Noradrenalin",
+      "E": "Somatostatin"
+     },
+     "dogru": "C",
+     "aciklama": "VIP kolinerjik uçta ACh ile birlikte salınır ve ACh’nin muskarinik etkisini tamamlar. Tükürük bezleri ile vasküler düz kasta lokal modülasyon yapar (s. 28).",
+     "sik_aciklamalari": {
+      "A": "NPY adrenerjik uçta noradrenalinle birlikte salınır ve vazokonstriksiyonu güçlendirir. Kolinerjik uç peptidi ise VIP’dir. NPY adrenerjik uç ko-transmiteri olduğundan kolinerjik uç sorusuna uymaz (s. 29).",
+      "B": "Dopamin bir katekolamindir ve doza bağlı D1, β1 ile α1 etkisi gösterir. Kolinerjik uçta ko-transmiter peptid değildir (s. 26).",
+      "C": "VIP kolinerjik uçta ACh ile birlikte salınır ve ACh’nin muskarinik etkisini tamamlar. Tükürük bezleri ile vasküler düz kasta lokal modülasyon yapar (s. 28).",
+      "D": "Noradrenalin sempatik postgangliyonik ana ileticidir ve adrenerjik uçta bulunur. Kolinerjik uçta ACh ile birlikte VIP salınır. Noradrenalin ko-transmiter değil, adrenerjik ucun ana ileticisidir (s. 12).",
+      "E": "Somatostatin bir peptit hormondur ve bu derste kolinerjik uç ko-transmiteri olarak anılmaz. Bu işlevi VIP görür. Soruda sorulan ko-transmiter adrenerjik değil kolinerjik uçla ilgilidir (s. 27)."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [],
+     "s": 28,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Kolinerjik uca ek olarak salgılanan VIP, ACh'nin muskarinik etkisini tamamlar: özellikle tükürük bezleri ve vasküler düz kasta"
+     }
+    },
+    {
+     "id": "k2-41-q36",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Geri alım (uptake-1) blokajı yapan ilaçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kokain NA ve dopamin geri alımını bloke eder",
+      "B": "Kokain hipertansiyon ve taşikardiye yol açar",
+      "C": "Trisiklik antidepresanlar kardiyovasküler yan etki yapar",
+      "D": "Amitriptilin yalnız asetilkolin geri alımını bloke eder",
+      "E": "Amitriptilin NA ve serotonin geri alımını inhibe eder"
+     },
+     "dogru": "D",
+     "aciklama": "Amitriptilin trisiklik antidepresandır ve NA ile serotonin geri alımını inhibe eder. ACh geri alımıyla ilgisi olmadığı için ifade yanlıştır (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Kokain NA ve dopamin geri alımını engeller. Bu blokaj sempatik aşırı aktivasyon yapar. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 34).",
+      "B": "Kokainin geri alım blokajı sempatik aşırı aktivasyona yol açar. Sonuçta hipertansiyon ve taşikardi gelişir. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 34).",
+      "C": "Trisiklik antidepresanlar NA ve serotonin geri alımını inhibe eder. Bu nedenle kardiyovasküler yan etkilere yol açarlar ve ifade doğrudur (s. 34).",
+      "D": "Amitriptilin trisiklik antidepresandır ve NA ile serotonin geri alımını inhibe eder. ACh geri alımıyla ilgisi olmadığı için ifade yanlıştır (s. 34).",
+      "E": "Amitriptilin NA ve serotonin geri alımını engelleyen bir trisiklik antidepresandır. Bu etki geri alım blokajının tipik örneğidir. İfade doğru olduğundan yanlış bulunmaz (s. 34)."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [],
+     "s": 34,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "serotonin geri alımını inhibe eder →"
+     }
+    },
+    {
+     "id": "k2-41-q37",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gangliyon blokajı sonucunda aşağıdakilerden hangileri beklenir?\nI. Vazodilatasyonla kan basıncı düşüşü\nII. Bradikardi\nIII. Konstipasyon\nIV. Göz kuruluğu",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II, III ve IV",
+      "D": "I ve III",
+      "E": "II ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Sempatik blokaj vazodilatasyonla KB düşüşü, parasempatik blokaj konstipasyon ve göz kuruluğu yapar. Parasempatik blokajda bradikardi değil taşikardi görülür (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Vazodilatasyonla KB düşüşü doğrudur. Bradikardi ise parasempatik blokajda görülmez, taşikardi beklenir ve seçim konstipasyon ile göz kuruluğunu da dışarıda bırakır (s. 35).",
+      "B": "Sempatik blokaj vazodilatasyonla KB düşüşü, parasempatik blokaj konstipasyon ve göz kuruluğu yapar. Parasempatik blokajda bradikardi değil taşikardi görülür (s. 35).",
+      "C": "Konstipasyon ve göz kuruluğu doğrudur. Bradikardi beklenmez ve vazodilatasyonla KB düşüşü de listede olmadığı için seçim yanlıştır. Sempatik blokajın KB düşüşü de listede olmadığından seçim eksiktir (s. 35).",
+      "D": "Vazodilatasyonla KB düşüşü ve konstipasyon doğrudur. Göz kuruluğu da parasempatik blokajın bulgusu olduğundan seçim eksik kalır ve elenir (s. 35).",
+      "E": "Göz kuruluğu doğrudur, bradikardi ise beklenmez. Sempatik blokajın KB düşüşü de bu seçimde yer almaz. Bradikardi yerine taşikardi beklendiğinden bu ikili doğru seçim olamaz (s. 35)."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "s": 35,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Sempatik blokaj: vazodilatasyon → Trimetafan: Hızlı etkili IV; \"Geniş alan\" etkisi nedeniyle yan"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Katekolamin ve katekolamin olmayan sempatomimetiklerin reseptör profilini, farmakokinetiğini, endikasyonlarını ve yan etkilerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-41-q38",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Hem doğrudan hem dolaylı mekanizmayla etki eden (karma etkili) sempatomimetik hangisidir?",
+     "secenekler": {
+      "A": "Efedrin",
+      "B": "Adrenalin",
+      "C": "Noradrenalin",
+      "D": "Kokain",
+      "E": "Salbutamol"
+     },
+     "dogru": "A",
+     "aciklama": "Efedrin hem reseptöre doğrudan bağlanır hem NA salınımını artırarak dolaylı etki eder. Bu yüzden karma etkili sempatomimetiktir. Bu çift mekanizma efedrini adrenalinden ve kokainden ayırır (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Efedrin hem reseptöre doğrudan bağlanır hem NA salınımını artırarak dolaylı etki eder. Bu yüzden karma etkili sempatomimetiktir. Bu çift mekanizma efedrini adrenalinden ve kokainden ayırır (s. 24).",
+      "B": "Adrenalin α ve β reseptörlerine doğrudan bağlanan bir katekolamindir. Dolaylı mekanizması yoktur. Adrenalin yalnız doğrudan etkili olduğundan karma etkili sayılmaz (s. 24).",
+      "C": "Noradrenalin α1 >> β1 reseptörlerine doğrudan etki eden bir katekolamindir. Dolaylı yoldan etki etmez. Noradrenalin α ve β reseptörlerini doğrudan uyardığından dolaylı etkisi aranmaz (s. 26).",
+      "D": "Kokain NA ve dopamin geri alımını bloke ederek dolaylı etki eder. Reseptöre doğrudan bağlanmadığı için karma etkili değildir (s. 34).",
+      "E": "Salbutamol β2-selektif agonisttir ve reseptöre doğrudan bağlanır. Dolaylı mekanizması yoktur. Salbutamol yalnız β2 reseptörünü doğrudan uyardığından karma etkili sayılmaz (s. 40)."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [],
+     "s": 24,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "α/β reseptörlere doğrudan NA salınımını artırır veya geri"
+     }
+    },
+    {
+     "id": "k2-41-q39",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Katekolamin yapısındaki sempatomimetiklerin farmakokinetiğiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Oral aktiftir ve santral etki gösterir",
+      "B": "Kan-beyin bariyerini kolay geçer",
+      "C": "Etki süresi katekolamin olmayanlardan uzundur",
+      "D": "Oral biyoyararlanım yüksektir",
+      "E": "Oral biyoyararlanım düşüktür ve etki süresi kısadır"
+     },
+     "dogru": "E",
+     "aciklama": "Katekolaminlerde oral biyoyararlanım düşüktür, kan-beyin bariyeri geçilemez ve etki süresi kısadır. Parenteral yol bu yüzden tercih edilir (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Oral aktiflik ve santral etki katekolamin olmayan sempatomimetiklerin özelliğidir. Katekolaminler bu özelliklere sahip değildir. Oral aktiflik katekolamin olmayanlara özgü olduğundan seçenek ters yazılmıştır (s. 25).",
+      "B": "Katekolaminler polar yapıları nedeniyle kan-beyin bariyerini geçemez. Bariyeri geçebilen ilaçlar katekolamin olmayanlardır. Bariyerden geçen ilaçlar santral etki yapar, katekolaminler yapmaz (s. 25).",
+      "C": "Katekolamin olmayanların etki süresi daha uzundur. Katekolaminlerin etki süresi kısa olduğu için ifade tersine çevrilmiştir. Süre farkı katekolamin olmayanlar lehine olduğundan ifade tersine çevrilmiştir (s. 25).",
+      "D": "Katekolaminler oral yolda GİS ve karaciğerde hızlı metabolize olur. Biyoyararlanım bu yüzden düşüktür. Düşük biyoyararlanım nedeniyle bu ilaçlar SC, IM ya da IV verilir (s. 47).",
+      "E": "Katekolaminlerde oral biyoyararlanım düşüktür, kan-beyin bariyeri geçilemez ve etki süresi kısadır. Parenteral yol bu yüzden tercih edilir (s. 25)."
+     },
+     "bilgi": [
+      25
+     ],
+     "benzer_cikmis": [],
+     "s": 25,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "• Katekolaminler: Oral biyoyararlanım düşük, kan-beyin"
+     }
+    },
+    {
+     "id": "k2-41-q40",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Anafilaksi ve kardiyak arrestte kullanılan, α1, β1 ve β2 reseptörlerine etki eden katekolamin hangisidir?",
+     "secenekler": {
+      "A": "Noradrenalin",
+      "B": "Dopamin",
+      "C": "Adrenalin",
+      "D": "İzoproterenol",
+      "E": "Fenilefrin"
+     },
+     "dogru": "C",
+     "aciklama": "Adrenalin α1, β1 ve β2 reseptörlerine etki eder. Anafilaksi, kardiyak arrest ve bronkospazmda kullanılır. Üç reseptöre birden etkisi onu bu üç endikasyonda ilk seçenek yapar (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Noradrenalin α1 >> β1 etkilidir ve sepsis ile şokta hipotansiyonda IV infüzyonla verilir. β2 etkisi belirgin değildir. Hedefi hipotansiyondur; arrest ve anafilaksi ise adrenalinin kullanım alanıdır (s. 26).",
+      "B": "Dopamin D1, β1 ve α1 reseptörlerine doza bağlı etki eder. Kardiyojenik şok ve böbrek korumasında kullanılır. Dopaminin etkisi doza göre değişir ve hedefi şok ile böbrek perfüzyonudur (s. 26).",
+      "C": "Adrenalin α1, β1 ve β2 reseptörlerine etki eder. Anafilaksi, kardiyak arrest ve bronkospazmda kullanılır. Üç reseptöre birden etkisi onu bu üç endikasyonda ilk seçenek yapar (s. 26).",
+      "D": "İzoproterenol β1 ve β2 reseptörlerine etki eder ve α1 etkisi yoktur. Bradikardi ve bronkospazmda eski kullanımı vardır. İzoproterenolün α1 etkisi bulunmadığı için üç reseptör tanımına uymaz (s. 26).",
+      "E": "Fenilefrin saf α1-agonisttir ve nazal dekonjestan olarak kullanılır. Anafilakside tercih edilen ilaç değildir. Fenilefrin saf α1 agonisti olduğundan β reseptörleri üzerinden etki yapmaz (s. 50)."
+     },
+     "bilgi": [
+      26
+     ],
+     "benzer_cikmis": [],
+     "s": 26,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Adrenalin (Epinefrin — Anafilaksi, kardiyak"
+     }
+    },
+    {
+     "id": "k2-41-q41",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Düşük dozda böbrek ve splanknik damarlarda dilatasyon yapan katekolamin hangisidir?",
+     "secenekler": {
+      "A": "Adrenalin",
+      "B": "Dopamin",
+      "C": "Noradrenalin",
+      "D": "İzoproterenol",
+      "E": "Efedrin"
+     },
+     "dogru": "B",
+     "aciklama": "Düşük doz dopamin D1 aracılığıyla böbrek ve splanknik damarlarda dilatasyon yapar. Bu etkiyle organ perfüzyonunu hedefler. Böylece böbrek korunurken kalp ve damar etkileri daha yüksek dozlara bırakılır (s. 54).",
+     "sik_aciklamalari": {
+      "A": "Adrenalin α1, β1 ve β2 reseptörlerine etki eder ve yüksek dozda vazokonstriksiyon yapar. D1 aracılı renal dilatasyon yapmaz (s. 54).",
+      "B": "Düşük doz dopamin D1 aracılığıyla böbrek ve splanknik damarlarda dilatasyon yapar. Bu etkiyle organ perfüzyonunu hedefler. Böylece böbrek korunurken kalp ve damar etkileri daha yüksek dozlara bırakılır (s. 54).",
+      "C": "Noradrenalin güçlü vazokonstriksiyon yapar ve sepsis hipotansiyonunu hedefler. Renal dilatasyon beklenmez. Noradrenalinin damar etkisi baskın olduğundan renal dilatasyon beklenmez (s. 54).",
+      "D": "İzoproterenol β1 ve β2 agonistidir ve kalp hızını artırıp bronşları açar. D1 reseptörüne etki etmez. Etkileri β1 ve β2 ile sınırlı olduğundan renal dilatasyon yapan ilaç değildir (s. 26).",
+      "E": "Efedrin karma etkilidir ve kalp debisi ile KB’yi artırır. Renal D1 dilatasyonu yapmaz. Efedrinin etkisi α ve β üzerinden olduğundan D1 aracılı etki gösteremez (s. 50)."
+     },
+     "bilgi": [
+      54
+     ],
+     "benzer_cikmis": [],
+     "s": 54,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Dopamin (düşük Böbrek/splanknik"
+     }
+    },
+    {
+     "id": "k2-41-q42",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Katekolaminlerin oral yolla etkisiz olmasının başlıca nedeni hangisidir?",
+     "secenekler": {
+      "A": "Mide asidiyle hızlı bozunma",
+      "B": "Plazma albüminine tam bağlanma",
+      "C": "Böbrekten hızlı atılım",
+      "D": "GİS ve karaciğerde hızlı MAO/COMT yıkımı",
+      "E": "Kan-beyin bariyerini geçememe"
+     },
+     "dogru": "D",
+     "aciklama": "Katekolaminler oral yolda GİS ve karaciğerde hızlı MAO/COMT metabolizmasına uğrar ve biyoyararlanımları kalmaz. Bu yüzden SC, IM veya IV yol kullanılır (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Mide asidi katekolaminlerin oral yoldaki etkisizliğini açıklamaz. Asıl neden enzimatik metabolizmadır. Katekolaminlerin etkisizliği asit nedeniyle değil enzimlerin hızla metabolize etmesiyle ilgilidir (s. 47).",
+      "B": "Albümin bağlanması katekolaminlerin oral etkisizliğinin nedeni olarak verilmez. Neden GİS ve karaciğerdeki hızlı enzimatik yıkımdır. Plazma proteinine bağlanma, oral yoldaki biyoyararlanımın düşmesinin asıl açıklaması sayılmaz (s. 47).",
+      "C": "Böbrek atılımı etki süresini kısaltabilir. Oral etkisizliğin nedeni ise ilk geçişte yıkımdır. İlk geçiş metabolizması atılımdan önce gerçekleştiği için asıl neden atılım olamaz (s. 49).",
+      "D": "Katekolaminler oral yolda GİS ve karaciğerde hızlı MAO/COMT metabolizmasına uğrar ve biyoyararlanımları kalmaz. Bu yüzden SC, IM veya IV yol kullanılır (s. 47).",
+      "E": "Polar yapı nedeniyle bariyer geçilemez ve bu merkezi sinir sistemi etkisini sınırlar. Oral etkisizliği açıklayan neden metabolizmadır. Bariyer geçişi santral etkiyi belirler, oral etkisizliği ise metabolizma belirler (s. 47)."
+     },
+     "bilgi": [
+      47
+     ],
+     "benzer_cikmis": [],
+     "s": 47,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Katekolamin Neden Sürpriz Yapar?"
+     }
+    },
+    {
+     "id": "k2-41-q43",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Adrenalinin yan etkileri arasında aşağıdakilerden hangileri yer alır?\nI. Hiperglisemi\nII. Hipopotasemi\nIII. Tremor\nIV. Miyozis",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "Yalnız IV"
+     },
+     "dogru": "A",
+     "aciklama": "Adrenalin β2/β3 aracılığıyla hiperglisemi ve lipoliz, β2 aracılığıyla hipopotasemi yapar. Tremor da yan etkileri arasındadır, miyozis ise adrenalinin yan etkisi değildir (s. 48).",
+     "sik_aciklamalari": {
+      "A": "Adrenalin β2/β3 aracılığıyla hiperglisemi ve lipoliz, β2 aracılığıyla hipopotasemi yapar. Tremor da yan etkileri arasındadır, miyozis ise adrenalinin yan etkisi değildir (s. 48).",
+      "B": "Hiperglisemi ve hipopotasemi doğrudur. Tremor da adrenalinin yan etkisi olduğundan seçim eksiktir. Bu nedenle tremor da listeye girmeli ve seçimi tamamlamalıdır (s. 48).",
+      "C": "Hipopotasemi ve tremor doğrudur. Miyozis ise parasempatik etkidir ve adrenalin yapmaz, hiperglisemi de listede yoktur. Miyozis listede yanlış olduğundan seçim doğru ifadelerle birlikte kabul edilemez (s. 48).",
+      "D": "Hiperglisemi ve tremor doğrudur. Miyozis yanlıştır ve hipopotasemi dışarıda bırakılmıştır. Miyozis adrenalinin yan etkisi olmadığından bu seçim hatalı ifade içerir (s. 48).",
+      "E": "Miyozis parasempatik etkidir, adrenalin ise midriyazis yönünde etki eder. Seçim doğru yan etkileri dışarıda bırakır. Tek başına miyozis yazıldığından adrenalinin gerçek yan etkileri tümüyle dışarıda kalır (s. 15)."
+     },
+     "bilgi": [
+      49
+     ],
+     "benzer_cikmis": [],
+     "s": 49,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Adrenalin: Kullanım Paterni ve Yan Etki"
+     }
+    },
+    {
+     "id": "k2-41-q44",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Saf α1-agonist olup nazal dekonjestan ve midriyatik olarak kullanılan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Efedrin",
+      "B": "Salbutamol",
+      "C": "Adrenalin",
+      "D": "Prazosin",
+      "E": "Fenilefrin"
+     },
+     "dogru": "E",
+     "aciklama": "Fenilefrin saf α1-agonisttir. Nazal damarlarda konstriksiyon yaparak dekonjestan, gözde midriyazis yaparak midriyatik olarak kullanılır. Bu iki etki birlikte fenilefrini hem burun hem göz ilacı yapar (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Efedrin karma etkilidir (α+β) ve kalp debisi ile KB’yi artırır. Saf α1 agonisti değildir. Efedrin hem α hem β etkilidir ve saf α1 agonistinden bu yönüyle ayrılır (s. 50).",
+      "B": "Salbutamol β2-selektif agonisttir ve bronkodilatasyon yapar. Dekonjestan olarak kullanılmaz. Salbutamol bronşları açar ve damar daraltmadığı için burun tıkanıklığı ilacı olmaz (s. 50).",
+      "C": "Adrenalin α1, β1 ve β2’ye etki eden bir katekolamindir ve parenteral kullanılır. Saf α1 agonisti değildir. Adrenalinin üç reseptör profili saf α1 tanımından farklıdır (s. 26).",
+      "D": "Prazosin α1 reseptörlerini bloke eder ve damarı gevşetir. Agonist etkisi yoktur. Prazosinin etkisi α1 agonisti gibi damarı daraltmak değil gevşetmektir (s. 44).",
+      "E": "Fenilefrin saf α1-agonisttir. Nazal damarlarda konstriksiyon yaparak dekonjestan, gözde midriyazis yaparak midriyatik olarak kullanılır. Bu iki etki birlikte fenilefrini hem burun hem göz ilacı yapar (s. 50)."
+     },
+     "bilgi": [
+      50
+     ],
+     "benzer_cikmis": [],
+     "s": 50,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Karma etki (α+β). Kalp debisi ve β2-selektif. İnhale veya oral Saf α1-agonist. Nazal dekonjestan,"
+     }
+    },
+    {
+     "id": "k2-41-q45",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yüksek doz dopaminin kardiyojenik şokta kasılmayı artırmasını ve vazokonstriksiyon yapmasını sağlayan reseptörler hangisidir?",
+     "secenekler": {
+      "A": "D1 ve M2",
+      "B": "β2 ve D1",
+      "C": "β1 ve α1",
+      "D": "α2 ve β2",
+      "E": "M3 ve α1"
+     },
+     "dogru": "C",
+     "aciklama": "Yüksek doz dopamin β1 aracılığıyla kasılmayı artırır ve α1 aracılığıyla vazokonstriksiyon yapar. Kardiyojenik şok tedavisi bu etkiyi hedefler (s. 54).",
+     "sik_aciklamalari": {
+      "A": "D1 düşük dozda renal dilatasyon yapar, M2 ise kalpte bradikardi yapan muskarinik reseptördür. İkisi de kasılma artışı sağlamaz (s. 54).",
+      "B": "β2 bronkodilatasyon sağlar, D1 ise renal dilatasyon yapar. Bu ikilinin hiçbiri yüksek dozda kasılma artışı ve vazokonstriksiyon yapmaz; bu etki β1 ve α1 ile olur (s. 54).",
+      "C": "Yüksek doz dopamin β1 aracılığıyla kasılmayı artırır ve α1 aracılığıyla vazokonstriksiyon yapar. Kardiyojenik şok tedavisi bu etkiyi hedefler (s. 54).",
+      "D": "α2 presinaptik inhibisyon yapar, β2 ise bronş ve damar gevşetir. Yüksek doz dopaminin kardiyak etkisini açıklamaz. Şokta kasılmayı artıran reseptör β1 olduğundan bu ikili açıklama sağlamaz (s. 36).",
+      "E": "M3 salgı artışı ve bronkospazm yapar, α1 ise vazokonstriksiyon yapar. Kasılma artışı için β1 gerekir. Vazokonstriksiyon α1 ile doğrudur, ancak kasılma β1 gerektirir ve ikili eksik kalır (s. 36)."
+     },
+     "bilgi": [
+      54
+     ],
+     "benzer_cikmis": [],
+     "s": 54,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Adrenalin, noradrenalin ve dopamin aynı katekolamin ailesinden gelmesine karşın farklı reseptör profillerinden dolayı"
+     }
+    },
+    {
+     "id": "k2-41-q46",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Noradrenalinle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "α1 >> β1 etkilidir",
+      "B": "Oral yolla biyoyararlanımı yüksektir",
+      "C": "Şokta IV infüzyonla verilir",
+      "D": "Ekstravazasyonda doku nekrozu yapabilir",
+      "E": "Refleks bradikardiye yol açabilir"
+     },
+     "dogru": "B",
+     "aciklama": "Noradrenalin polar yapısı ve MAO/COMT metabolizması nedeniyle oral yolla etkisizdir ve parenteral kullanılır. İfade bu yüzden yanlıştır (s. 47).",
+     "sik_aciklamalari": {
+      "A": "Noradrenalin α1 >> β1 reseptörlerine etki eder. Bu profil güçlü vazokonstriksiyon yapar ve kan basıncını yükseltir. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 26).",
+      "B": "Noradrenalin polar yapısı ve MAO/COMT metabolizması nedeniyle oral yolla etkisizdir ve parenteral kullanılır. İfade bu yüzden yanlıştır (s. 47).",
+      "C": "Noradrenalin şok veya anestezi kaynaklı hipotansiyonda IV infüzyonla kullanılır. Bu kullanım ilacın klinik yerini gösterir. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 55).",
+      "D": "Noradrenalinin yan etkileri arasında iskemi ve ekstravazasyonda doku nekrozu bulunur. Ekstravazasyonda damar daralması dokuyu iskemiye sokar. İfade doğru olduğundan seçilmez (s. 55).",
+      "E": "Vazokonstriksiyonla artan KB baroreseptör refleksini uyarır. Bu refleks kalbi yavaşlatır ve refleks bradikardi yapabilir. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 55)."
+     },
+     "bilgi": [
+      47
+     ],
+     "benzer_cikmis": [],
+     "s": 47,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Adrenalin ve noradrenalin polar MAO/COMT metabolizması → inhale edildiğinde doğrudan"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Adrenerjik ve muskarinik reseptör alt tiplerini, β-agonist ile adrenerjik bloker ilaçların etkilerini ve yan etkilerini ilişkilendirir.",
+   "sorular": [
+    {
+     "id": "k2-41-q47",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Presinaptik uçtaki α2 reseptörlerinin uyarılması NA salınımını nasıl etkiler?",
+     "secenekler": {
+      "A": "Artırır",
+      "B": "Değiştirmez",
+      "C": "Yıkımı hızlandırır",
+      "D": "Azaltır",
+      "E": "Geri alımı durdurur"
+     },
+     "dogru": "D",
+     "aciklama": "α2 reseptörler presinaptik uçlarda yer alır ve agonist etkisi NA salınımını azaltır. Antagonistlerinde NA artar ve KB yükselir (s. 36).",
+     "sik_aciklamalari": {
+      "A": "NA salınımının artması α2 antagonistinin sonucudur. Agonist uyarımı ise salınımı azaltır. Bu yön α2 antagonistine ait olduğundan agonist uyarımı için yanlıştır (s. 36).",
+      "B": "α2 presinaptik geri bildirim reseptörüdür ve NA salınımını doğrudan denetler. Uyarımı etkisiz kalmaz. Reseptörün işlevi geri bildirimle salınımı denetlemek olduğundan etkisiz denilemez (s. 13).",
+      "C": "NA yıkımı MAO ve COMT enzimleriyle yapılır. α2 uyarımı yıkımı değiştirmez, salınımı azaltır. Yıkım enzimleri ayrı bir sistem olduğundan α2 uyarımı onların hızını belirlemez (s. 23).",
+      "D": "α2 reseptörler presinaptik uçlarda yer alır ve agonist etkisi NA salınımını azaltır. Antagonistlerinde NA artar ve KB yükselir (s. 36).",
+      "E": "Geri alımı durduran ilaçlar kokain ve trisiklik antidepresanlardır. α2 agonisti ise salınımı azaltır. Geri alım blokajı ayrı bir mekanizma olduğundan α2 uyarımıyla eş tutulmaz (s. 34)."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [],
+     "s": 36,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "α2 Presinaptik uçlar NA salınımını azaltır NA artışı, KB yükselir"
+     }
+    },
+    {
+     "id": "k2-41-q48",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "M2 reseptör blokajı (atropin etkisi) kalpte hangi sonucu doğurur?",
+     "secenekler": {
+      "A": "Taşikardi",
+      "B": "Bradikardi",
+      "C": "İletim yavaşlaması",
+      "D": "Kasılma gücünde azalma",
+      "E": "Belirgin hipotansiyon"
+     },
+     "dogru": "A",
+     "aciklama": "M2 reseptörü kalpte yer alır; agonist etkisi bradikardi, antagonist etkisi taşikardidir. Atropin etkisi bu şekilde ortaya çıkar. Bu mekanizma atropinin kalp hızını artıran etkisini açıklar (s. 36).",
+     "sik_aciklamalari": {
+      "A": "M2 reseptörü kalpte yer alır; agonist etkisi bradikardi, antagonist etkisi taşikardidir. Atropin etkisi bu şekilde ortaya çıkar. Bu mekanizma atropinin kalp hızını artıran etkisini açıklar (s. 36).",
+      "B": "Bradikardi M2 agonist etkisidir. Blokaj bu etkiyi ortadan kaldırdığı için bradikardi yapmaz. Bu yüzden bradikardi atropin etkisinin değil, M2 uyarımının sonucudur (s. 36).",
+      "C": "İletim yavaşlaması M2 agonist etkisidir. Blokajda iletim yavaşlamaz, daha hızlı olur. Atropin etkisinde iletim yavaşlamaz, aksine M2 baskısı kalktığı için hız artar (s. 36).",
+      "D": "Kasılma gücü β1 aracılıdır. M2 blokajı kasılma gücünü azaltmaz, kalp hızını artırır. Kalpteki kasılma gücü β1 ile değiştiğinden bu şık M2 blokajına bağlanamaz (s. 36).",
+      "E": "Hipotansiyon α1 blokajı ve gangliyon blokajı ile ilişkilidir. M2 blokajı ise taşikardi yapar. Damar ve gangliyon düzeyindeki etkiler farklı reseptörlerle ilgilidir ve seçeneği açıklamaz (s. 36)."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [],
+     "s": 36,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Reseptör Lokalizasyon Agonist Etkisi Antagonist Etkisi / Yan Etki"
+     }
+    },
+    {
+     "id": "k2-41-q49",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "M3 reseptör antagonistinin yol açtığı klinik etkiler hangisidir?",
+     "secenekler": {
+      "A": "Salgı artışı ve bronkospazm",
+      "B": "Bradikardi ve iletim yavaşlaması",
+      "C": "Hipotansiyon ve ortostatik baş dönmesi",
+      "D": "Taşikardi ve tremor",
+      "E": "Ağız kuruluğu ve konstipasyon"
+     },
+     "dogru": "E",
+     "aciklama": "M3 reseptörler düz kas ve bezlerde yer alır. Antagonist etkisi bu nedenle ağız kuruluğu ve konstipasyondur. Bu bulgular atropin benzeri ilaçların tipik muskarinik antagonist yan etkisidir (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Salgı artışı ve bronkospazm M3 agonist etkisidir. Antagonist bu etkiyi tersine çevirir. Bu bulgular agonist etkisine ait olduğundan antagonist sonucu olarak verilemez (s. 36).",
+      "B": "Bu bulgular M2 agonist etkisidir ve kalpte görülür. M3 blokajının tablosu değildir. Kalpteki bu etkiler M2 reseptörüne bağlıdır ve düz kas ile bezlerdeki M3 ile eşleşmez (s. 36).",
+      "C": "Bu bulgular α1 antagonist etkisidir ve damar gevşemesine bağlıdır. M3 blokajı ile ilişkili değildir. Damar gevşemesi α1 reseptörüne bağlıdır ve muskarinik antagonistte beklenmez (s. 36).",
+      "D": "Taşikardi β1 agonisti ya da M2 blokajıyla, tremor ise β2 agonisti etkisiyle görülür. M3 blokajının bulgusu değildir. Tremor β2 etkisidir ve ikili muskarinik antagonistin sonucunu tanımlamaz (s. 40).",
+      "E": "M3 reseptörler düz kas ve bezlerde yer alır. Antagonist etkisi bu nedenle ağız kuruluğu ve konstipasyondur. Bu bulgular atropin benzeri ilaçların tipik muskarinik antagonist yan etkisidir (s. 36)."
+     },
+     "bilgi": [
+      36
+     ],
+     "benzer_cikmis": [],
+     "s": 36,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Reseptör Lokalizasyon Agonist Etkisi Antagonist Etkisi / Yan Etki"
+     }
+    },
+    {
+     "id": "k2-41-q50",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "β1 reseptör uyarımı böbrekte jukstaglomerüler hücrelerde hangi sonucu doğurur?",
+     "secenekler": {
+      "A": "Renin salınımı azalır",
+      "B": "Anjiyotensin II yıkılır",
+      "C": "Renin salınımı artar",
+      "D": "Aldosteron sentezi durur",
+      "E": "Vazopressin salınır"
+     },
+     "dogru": "C",
+     "aciklama": "β1 reseptörler kalpte ve jukstaglomerüler bölgede yer alır. Agonist uyarımı bu bölgede renin salınımını artırır. Bu nedenle doğru yanıt renin artışıdır (s. 37).",
+     "sik_aciklamalari": {
+      "A": "β1 blokajı renin salınımını azaltır. Agonist uyarımı ise salınımı artırdığı için seçenek ters yöndedir. Renin artışı agonist etkisidir, azalma ise blokaj sonucunda görülür (s. 37).",
+      "B": "Anjiyotensin II yıkımı β1 etkisi değildir. β1 renin salınımını artırarak anjiyotensin oluşumunu başlatır. Renin artışı anjiyotensin oluşumunu başlatan bir basamak olarak bilinir (s. 37).",
+      "C": "β1 reseptörler kalpte ve jukstaglomerüler bölgede yer alır. Agonist uyarımı bu bölgede renin salınımını artırır. Bu nedenle doğru yanıt renin artışıdır (s. 37).",
+      "D": "β1 uyarımı aldosteron sentezini durdurmaz. Renin artışı bu eksenin başlangıcıdır. Aldosteron bu zincirin sonraki basamağıdır ve doğrudan β1 etkisi değildir (s. 37).",
+      "E": "Vazopressin hipofizden salınır ve β1 etkisi değildir. β1 jukstaglomerüler hücrelerde renin salınımını artırır. Böbrekteki β1 yanıtı renin üzerindedir ve hipofiz hormonuyla ilgisi yoktur (s. 37)."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": [],
+     "s": 37,
+     "uslup": "hoca",
+     "gorsel": true
+    },
+    {
+     "id": "k2-41-q51",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Selektif olmayan β-blokerlerle ilgili aşağıdakilerden hangileri doğrudur?\nI. β1 ve β2 reseptörlerini bloke eder\nII. Metoprolol bu gruba örnektir\nIII. Bronkospazm riski taşır\nIV. Astımda kontrendikedir",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Selektif olmayan β-blokerler (propranolol) β1 ve β2’yi bloke eder. β2 blokajı bronş tonunu artırdığı için bronkospazm riski taşır ve astımda kontrendikedir (s. 43).",
+     "sik_aciklamalari": {
+      "A": "β1 ve β2 blokajı doğrudur. Metoprolol ise β1-selektiftir, II yanlıştır ve seçim III ile IV’ü de dışarıda bırakır (s. 39).",
+      "B": "İlk ve üçüncü ifade doğrudur. Metoprolol β1-selektiftir ve astımda daha güvenlidir, bu yüzden II yanlıştır. IV de doğru olduğundan seçim bronkospazmla birlikte kontrendikasyonu eksik bırakır (s. 42).",
+      "C": "Astımda kontrendikasyon doğrudur. Metoprolol ise β1-selektiftir, II yanlıştır ve seçim eksik kalır. I ve III doğru olduğu halde bu seçimde yer almaz ve seçim eksiktir (s. 42).",
+      "D": "Selektif olmayan β-blokerler (propranolol) β1 ve β2’yi bloke eder. β2 blokajı bronş tonunu artırdığı için bronkospazm riski taşır ve astımda kontrendikedir (s. 43).",
+      "E": "Bronkospazm ve kontrendikasyon doğrudur. Metoprolol selektif olmayan grupta değildir ve II yanlıştır. Bu seçimde β1 ve β2 blokajını anlatan I eksiktir ve II yanlıştır (s. 42)."
+     },
+     "bilgi": [
+      43
+     ],
+     "benzer_cikmis": [],
+     "s": 43,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "β2 reseptörler bronş düz kasında gevşeme sağlar. Selektif olmayan β-blokerler β2'yi de bloke edince bronşlar büzülme"
+     }
+    },
+    {
+     "id": "k2-41-q52",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Astım atağında hızlı rahatlama sağlayan β2-selektif agonist hangisidir?",
+     "secenekler": {
+      "A": "Propranolol",
+      "B": "Salbutamol",
+      "C": "Metoprolol",
+      "D": "Prazosin",
+      "E": "Fenilefrin"
+     },
+     "dogru": "B",
+     "aciklama": "Salbutamol β2-selektif agonisttir. Bronş düz kasını gevşetir ve astım atağında hızlı rahatlama sağlar (SABA). Kısa etkili olduğu için atak anında ilk basamak bronkodilatör olarak seçilir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Propranolol selektif olmayan β-blokerdir. Astımda bronkospazm riskini artırdığı için rahatlatıcı değildir. Propranolol bronşları kapattığı için astımlı hastada rahatlatıcı değil riskli bir ilaçtır (s. 42).",
+      "B": "Salbutamol β2-selektif agonisttir. Bronş düz kasını gevşetir ve astım atağında hızlı rahatlama sağlar (SABA). Kısa etkili olduğu için atak anında ilk basamak bronkodilatör olarak seçilir (s. 40).",
+      "C": "Metoprolol β1-selektif bloker olup kalp yetmezliği ve hipertansiyonda kullanılır. Bronkodilatasyon yapmaz. Metoprolol kalbi hedef alır ve astım atağında bronşları açmak için kullanılmaz (s. 42).",
+      "D": "Prazosin α1-selektif blokerdir ve hipertansiyon ile BPH’de kullanılır. Bronkodilatör değildir. Prazosin damar gevşetir ve bronş düz kasını gevşetmek için kullanılmaz (s. 45).",
+      "E": "Fenilefrin saf α1-agonisttir ve dekonjestan ile midriyatik olarak kullanılır. Bronkodilatasyon yapmaz. Fenilefrin damar daraltıcıdır ve astım atağında rahatlatıcı olarak seçilmez (s. 50)."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": [],
+     "s": 40,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "• Kullanım: Astım atağında hızlı rahatlama (kısa etkili"
+     }
+    },
+    {
+     "id": "k2-41-q53",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Salbutamolün tipik yan etkileri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tremor, taşikardi ve hipokalemi",
+      "B": "Bradikardi, miyozis ve terleme",
+      "C": "Ağız kuruluğu, konstipasyon ve midriyazis",
+      "D": "Hipertansiyon, hiperkalemi ve bradikardi",
+      "E": "Ortostatik hipotansiyon ve senkop"
+     },
+     "dogru": "A",
+     "aciklama": "Salbutamolün yan etkileri tremor, taşikardi ve hipokalemidir. Bu bulgular β2 aracılı etkilere bağlıdır. Bu üçlü β2 agonistlerinin klinik izlemde dikkat edilen yan etkileridir (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Salbutamolün yan etkileri tremor, taşikardi ve hipokalemidir. Bu bulgular β2 aracılı etkilere bağlıdır. Bu üçlü β2 agonistlerinin klinik izlemde dikkat edilen yan etkileridir (s. 40).",
+      "B": "Bu bulgular AChE inhibisyonunda ve muskarinik uyarımda görülür. Salbutamolün tablosu değildir. Salbutamol bradikardi değil taşikardi yaptığından bu üçlü ona ait değildir (s. 32).",
+      "C": "Bu bulgular muskarinik antagonist etkisini yansıtır. Salbutamolün yan etki profiliyle ilgisi yoktur. Bu üçlü atropin benzeri ilaçların profilidir ve β2 agonisti için geçerli değildir (s. 36).",
+      "D": "Salbutamol hipokalemi ve taşikardi yapar. Hiperkalemi ve bradikardi bu ilaca uymaz. Hiperkalemi hipokalemi yerine yazıldığından üçlü ilaçla çelişir (s. 40).",
+      "E": "Bu bulgular α1 blokajı ile ilişkilidir ve prazosinde görülür. Salbutamolün yan etkisi değildir. Bu üçlü damar gevşemesine bağlıdır ve β2 agonistlerinde öne çıkmaz (s. 52)."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": [],
+     "s": 40,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "• Yan Etki: Tremor, taşikardi, hipokalemi"
+     }
+    },
+    {
+     "id": "k2-41-q54",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Prazosinin ilk dozunda görülebilen ve ilk dozun yatarken düşük dozla verilmesini gerektiren yan etki hangisidir?",
+     "secenekler": {
+      "A": "Bronkospazm",
+      "B": "Refleks bradikardi",
+      "C": "Hiperglisemi",
+      "D": "Tremor",
+      "E": "İlk doz hipotansiyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Prazosin α1 blokajı ile damarı gevşetir. İlk dozda hipotansiyon ve senkop görülebileceği için ilk doz yatarken düşük dozla verilir (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Bronkospazm selektif olmayan β-blokerlerin yan etkisidir. Prazosin β2’yi bloke etmez. Prazosinin hedefi α1 olduğundan bronş düz kası etkilenmez (s. 43).",
+      "B": "Refleks bradikardi noradrenalin gibi vazokonstriktörlerde görülür. Prazosinde ise hipotansiyon öne çıkar. Prazosinde damar gevşemesi baskındır ve noradrenalin benzeri vazokonstriksiyon görülmez (s. 55).",
+      "C": "Hiperglisemi adrenalinin β2/β3 aracılı yan etkisidir. Prazosin α1 blokajı yapar ve bu etkiyi göstermez. Prazosin α1 blokajı yaptığından hiperglisemi yapan β aracılı etki göstermez (s. 48).",
+      "D": "Tremor β2 agonistlerinin ve adrenalinin yan etkisidir. Prazosin α1 blokajı yapar ve tremor yapmaz. Prazosin β2 uyarmadığından tremor beklenmez, öne çıkan sorun ilk doz hipotansiyonudur (s. 40).",
+      "E": "Prazosin α1 blokajı ile damarı gevşetir. İlk dozda hipotansiyon ve senkop görülebileceği için ilk doz yatarken düşük dozla verilir (s. 45)."
+     },
+     "bilgi": [
+      45
+     ],
+     "benzer_cikmis": [],
+     "s": 45,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "yatarken düşük dozla ver; baş"
+     }
+    },
+    {
+     "id": "k2-41-q55",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Feokromositoma preoperatif hazırlığında kullanılan geri dönüşümsüz α bloker hangisidir?",
+     "secenekler": {
+      "A": "Fentolamin",
+      "B": "Prazosin",
+      "C": "Fenoksibenzamin",
+      "D": "Propranolol",
+      "E": "Metoprolol"
+     },
+     "dogru": "C",
+     "aciklama": "Fenoksibenzamin geri dönüşümsüz α blokerdir. Feokromositoma preoperatif hazırlıkta kullanılır. Geri dönüşümsüz bağlandığı için feokromositomada güvenli bir α blokaj sağlar (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Fentolamin geri dönüşümlü α blokerdir ve hipertansif kriz ile impotans tanısında kullanılır. Geri dönüşümsüz değildir. Bu ilaç geri dönüşümlüdür ve bu özelliğiyle fenoksibenzaminden ayrılır (s. 44).",
+      "B": "Prazosin α1-selektif blokerdir ve hipertansiyon ile BPH’de kullanılır. Geri dönüşümsüz bir bloker değildir. Prazosin seçici α1 blokajı yapar ve bağlanması geri dönüşümsüz değildir (s. 44).",
+      "C": "Fenoksibenzamin geri dönüşümsüz α blokerdir. Feokromositoma preoperatif hazırlıkta kullanılır. Geri dönüşümsüz bağlandığı için feokromositomada güvenli bir α blokaj sağlar (s. 44).",
+      "D": "Propranolol selektif olmayan β-blokerdir ve hipertansiyon, anjina, aritmi ve migrende kullanılır. α bloker değildir. Propranolol β reseptörünü bloke ettiğinden α bloker sorusunda seçilmez (s. 42).",
+      "E": "Metoprolol β1-selektiftir ve kalp yetmezliği ile post-MI korumada kullanılır. α bloker değildir. Metoprolol β1 blokajı yaptığı için α bloker tanımına uymaz (s. 42)."
+     },
+     "bilgi": [
+      44
+     ],
+     "benzer_cikmis": [],
+     "s": 44,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "feokromositoma preoperatif hazırlık"
+     }
+    },
+    {
+     "id": "k2-41-q56",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "α1 blokajı ile ilgili aşağıdakilerden hangileri doğrudur?\nI. Periferik direnci düşürür\nII. Vazodilatasyon yapar\nIII. BPH’de semptomları azaltır\nIV. Bronkospazm yapar",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "α1 blokajı damar düz kasını gevşetir, periferik direnci düşürür ve vazodilatasyonla KB’yi azaltır. BPH’de de semptomları azaltır (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Direncin düşmesi ve vazodilatasyon doğrudur. BPH semptomlarının azalması da α1 blokajının faydası olduğundan seçim eksik kalır. BPH etkisi de doğru olduğu için bu seçim ifadelerden birini dışarıda bırakır (s. 44).",
+      "B": "α1 blokajı damar düz kasını gevşetir, periferik direnci düşürür ve vazodilatasyonla KB’yi azaltır. BPH’de de semptomları azaltır (s. 44).",
+      "C": "Vazodilatasyon ve BPH doğrudur. Bronkospazm β2 blokajının sonucudur ve IV yanlıştır. I de doğru olduğundan bu seçim ifadeyi eksik bırakır (s. 43).",
+      "D": "Direnç düşüşü ve BPH doğrudur. Bronkospazm α1 blokajı ile oluşmaz, β2 blokajıyla ilişkilidir. II de doğru olduğundan bu seçim eksiktir ve IV yanlış ifadedir (s. 43).",
+      "E": "BPH doğrudur. Bronkospazm yanlıştır ve periferik direncin düşmesi dışarıda kalmıştır. I ve II doğru olduğu halde seçimde yer almaz ve IV yanlıştır (s. 44)."
+     },
+     "bilgi": [
+      44
+     ],
+     "benzer_cikmis": [],
+     "s": 44,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "gevşemesi → periferik direnç düşer →"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Parasempatomimetiklerin doğrudan ve dolaylı sınıflarını, ilaçlarını ve SLUDGE bulgularını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-41-q57",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Parasempatomimetiklerin klinik parmak izini oluşturan bulgu kümesi hangisidir?",
+     "secenekler": {
+      "A": "Taşikardi, midriyazis ve GI motilite azalması",
+      "B": "Bradikardi, midriyazis ve retansiyon",
+      "C": "Taşikardi, miyozis ve bronkodilatasyon",
+      "D": "Bradikardi, miyozis ve GI motilite artışı",
+      "E": "Hipertansiyon, midriyazis ve konstipasyon"
+     },
+     "dogru": "D",
+     "aciklama": "Parasempatomimetiklerin klinik parmak izi bradikardi, GI motilite artışı, miyozis ve mesane kasılmasıdır. Bu küme muskarinik uyarımı yansıtır. Bu küme parasempatomimetik zehirlenmelerde ya da aşırı dozda sık beklenen tablodur (s. 53).",
+     "sik_aciklamalari": {
+      "A": "Bu küme sempatik uyarımın ve muskarinik blokajın tablosudur. Parasempatomimetik etkinin tersidir. Bu yüzden küme, parasempatomimetik yerine sempatik uyarımın tablosunu temsil eder (s. 15).",
+      "B": "Bradikardi doğrudur, midriyazis ve retansiyon ise parasempatomimetik tabloya uymaz. Miyozis ve mesane kasılması beklenir. Bu ikilide midriyazis ve retansiyon ters yöndedir, ancak bradikardi tabloya uyar (s. 53).",
+      "C": "Miyozis doğrudur. Taşikardi ve bronkodilatasyon sempatik etkilerdir ve tabloyu bozar. Bu kümede taşikardi ve bronkodilatasyon sempatik taraf olduğundan tablo tutarsızdır (s. 15).",
+      "D": "Parasempatomimetiklerin klinik parmak izi bradikardi, GI motilite artışı, miyozis ve mesane kasılmasıdır. Bu küme muskarinik uyarımı yansıtır. Bu küme parasempatomimetik zehirlenmelerde ya da aşırı dozda sık beklenen tablodur (s. 53).",
+      "E": "Bu bulgular sempatik aşırı aktivasyonu ve muskarinik blokajı düşündürür. Parasempatomimetik tabloya uymaz. Bu kümedeki bulgular muskarinik uyarımın tersini yansıtır (s. 34)."
+     },
+     "bilgi": [
+      53
+     ],
+     "benzer_cikmis": [],
+     "s": 53,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "motilite artışı, miyozis ve mesane kasılması bu sınıfın klinik parmak"
+     }
+    },
+    {
+     "id": "k2-41-q58",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Pilokarpin, betanekol ve karbakol hangi gruba girer?",
+     "secenekler": {
+      "A": "Doğrudan etkili muskarinik agonistler",
+      "B": "Dolaylı etkili AChE inhibitörleri",
+      "C": "Gangliyon blokerleri",
+      "D": "Nöromüsküler kavşak blokerleri",
+      "E": "Muskarinik antagonistler"
+     },
+     "dogru": "A",
+     "aciklama": "Pilokarpin, betanekol ve karbakol muskarinik reseptöre doğrudan bağlanır. Bu nedenle doğrudan etkili agonist grubundadır. Bu gruptaki ilaçlar ACh benzeri etki yaparak parasempatik yanıtı artırır (s. 53).",
+     "sik_aciklamalari": {
+      "A": "Pilokarpin, betanekol ve karbakol muskarinik reseptöre doğrudan bağlanır. Bu nedenle doğrudan etkili agonist grubundadır. Bu gruptaki ilaçlar ACh benzeri etki yaparak parasempatik yanıtı artırır (s. 53).",
+      "B": "Fizostigmin, neostigmin ve donepezil dolaylı agonistlerdir ve AChE’yi inhibe ederek ACh biriktirir. Sorudaki üç ilaç bu gruba girmez (s. 53).",
+      "C": "Gangliyon blokerleri NN reseptörünü bloke eder ve heksametonyum ile trimetafan örnektir. Sorudaki ilaçlar agonisttir. Gangliyon blokerleri agonist değil bloke edici olduğundan seçeneğe uymaz (s. 23).",
+      "D": "Süksinilkolin ve roküronyum gibi ilaçlar NM reseptörünü hedef alır. Sorudaki ilaçların hedefi muskarinik reseptördür. Nöromüsküler blokerler kas gevşemesi sağlar ve sorudaki agonistlerle ilgisi yoktur (s. 23).",
+      "E": "Atropin, skopolamin ve ipratropiyum muskarinik antagonisttir ve parasempatik etkiyi bloke eder. Sorudaki ilaçlar agonisttir. Atropin ve benzerleri antagonist olduğu için agonist üçlüsünü tanımlamaz (s. 22)."
+     },
+     "bilgi": [
+      53
+     ],
+     "benzer_cikmis": [],
+     "s": 53,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "Muskarinik reseptöre doğrudan bağlanır (pilokarpin, betanekol,"
+     }
+    },
+    {
+     "id": "k2-41-q59",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Postoperatif atonik mesane ve GI atonide kullanılan, AChE’ye dirençli doğrudan M3 agonisti hangisidir?",
+     "secenekler": {
+      "A": "Pilokarpin",
+      "B": "Karbakol",
+      "C": "Fizostigmin",
+      "D": "Atropin",
+      "E": "Betanekol"
+     },
+     "dogru": "E",
+     "aciklama": "Betanekol doğrudan M3 agonistidir ve postoperatif atonik mesane ile GI atonide kullanılır. AChE tarafından yıkılmadığı için etkisi uzundur (s. 56).",
+     "sik_aciklamalari": {
+      "A": "Pilokarpin doğrudan M3 agonistidir ve glokomda göziçi basıncını düşürür. Topikal veya oral verilir ve hızlı başlar. Mesane atonisi için değil, göz hastalığı için seçilen bir ilaçtır (s. 56).",
+      "B": "Karbakol M ve N agonistidir ve glokom ile göz cerrahisinde miyozis için topikal kullanılır. Atoni endikasyonu değildir. Kullanım alanı göz olduğundan postoperatif mesane atonisi için ilk seçenek değildir (s. 56).",
+      "C": "Fizostigmin AChE inhibitörüdür ve ACh biriktirir. Doğrudan agonist olmadığı için tanıma uymaz. Fizostigmin dolaylı etkili olduğundan reseptöre doğrudan bağlanan ilaç tanımına uymaz (s. 53).",
+      "D": "Atropin muskarinik antagonisttir ve parasempatik etkiyi bloke eder. Atoniyi düzeltmez. Atropin parasempatik uyarıyı kestiği için atoniyi artırır ve düzeltmez (s. 22).",
+      "E": "Betanekol doğrudan M3 agonistidir ve postoperatif atonik mesane ile GI atonide kullanılır. AChE tarafından yıkılmadığı için etkisi uzundur (s. 56)."
+     },
+     "bilgi": [
+      56
+     ],
+     "benzer_cikmis": [],
+     "s": 56,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Betanekol Doğrudan M3 Postop. atonik Oral/SC; AChE'ye"
+     }
+    },
+    {
+     "id": "k2-41-q60",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Parasempatomimetiklerle ilgili aşağıdakilerden hangileri doğrudur?\nI. Pilokarpin glokomda göziçi basıncını düşürür\nII. Betanekol postoperatif atonik mesanede kullanılır\nIII. Neostigmin doğrudan muskarinik agonisttir\nIV. Karbakol yalnız nikotinik reseptöre etki eder",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "II ve III",
+      "C": "I ve II",
+      "D": "I, II ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Pilokarpin glokomda göziçi basıncını düşürür, betanekol ise postoperatif atonik mesane ve GI atonide kullanılır. Neostigmin dolaylı, karbakol M ve N agonistidir (s. 56).",
+     "sik_aciklamalari": {
+      "A": "Pilokarpin ifadesi doğrudur. Betanekolün mesane atonisindeki kullanımı da doğru olduğundan seçim eksik kalır. II de doğru olduğundan yalnız I yazılması seçimi eksik bırakır (s. 56).",
+      "B": "Betanekol ifadesi doğrudur. Neostigmin ise AChE’yi inhibe eden dolaylı agonisttir ve III yanlıştır. III yanlış olduğundan ikili doğru seçim olarak kabul edilemez (s. 53).",
+      "C": "Pilokarpin glokomda göziçi basıncını düşürür, betanekol ise postoperatif atonik mesane ve GI atonide kullanılır. Neostigmin dolaylı, karbakol M ve N agonistidir (s. 56).",
+      "D": "İlk iki ifade doğrudur. Karbakol M ve N agonistidir, yalnız nikotinik değildir ve IV yanlıştır. IV yanlış olduğundan bu üçlü doğru olamaz (s. 56).",
+      "E": "Neostigmin dolaylı, karbakol M ve N agonistidir. İki ifade de yanlıştır. Bu iki ifade yanlış olduğu için seçim doğru ifadeleri içermez (s. 53)."
+     },
+     "bilgi": [
+      56
+     ],
+     "benzer_cikmis": [],
+     "s": 56,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Betanekol Doğrudan M3 Postop. atonik Oral/SC; AChE'ye"
+     }
+    },
+    {
+     "id": "k2-41-q61",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Parasempatomimetikler ve SLUDGE ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "SLUDGE muskarinik aşırı uyarımı özetler",
+      "B": "SLUDGE bulguları parasempatik blokajda ortaya çıkar",
+      "C": "Kolin agonisti zehirlenmesinde SLUDGE görülür",
+      "D": "E harfi emezisi (kusma) simgeler",
+      "E": "Pilokarpin glokomda göziçi basıncını düşürür"
+     },
+     "dogru": "B",
+     "aciklama": "SLUDGE muskarinik aşırı uyarımı özetler ve kolinerjik agonist ya da AChE inhibitörü zehirlenmesinde görülür. Parasempatik blokajda ise kuruluk ve taşikardi beklenir (s. 56).",
+     "sik_aciklamalari": {
+      "A": "SLUDGE salivation, lacrimation, urination, defecation, GI motilite artışı ve emesisi kapsar. Bu bulgular muskarinik aşırı uyarımı hatırlatır. İfade doğru olduğundan seçilmez (s. 56).",
+      "B": "SLUDGE muskarinik aşırı uyarımı özetler ve kolinerjik agonist ya da AChE inhibitörü zehirlenmesinde görülür. Parasempatik blokajda ise kuruluk ve taşikardi beklenir (s. 56).",
+      "C": "Kolin agonisti zehirlenmesinde veya aşırı dozunda SLUDGE bulguları gözlenir. Bu nedenle SLUDGE zehirlenmenin önemli bir ipucudur. İfade doğru olduğundan seçilmez (s. 56).",
+      "D": "SLUDGE’daki son harf emesis olup kusmayı ifade eder. Kusma da muskarinik aşırı uyarımın bulgusudur. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez (s. 56).",
+      "E": "Pilokarpin doğrudan M3 agonistidir ve glokomda göziçi basıncını düşürür. Bu ifade pilokarpinin göz endikasyonunu doğru verir. İfade doğru olduğundan seçilmez (s. 56)."
+     },
+     "bilgi": [
+      56
+     ],
+     "benzer_cikmis": [],
+     "s": 56,
+     "uslup": "hoca",
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "SLUDGE Kuralı (Muskarinik Aşırı Uyarım): Salivation (tükürük) · Lacrimation (gözyaşı) · Urination (idrara çıkma) ·"
+     }
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 61
+}

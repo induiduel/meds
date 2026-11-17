@@ -1,17 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 824,
-  "baslik": "Otonom sinir sistemi farmakolojisi mekanizma metni ve ara soru düzeltmeleri",
+  "onem": 825,
+  "baslik": "Kurul 2: Santral Sinir Sistemi Tümörleri, Otonom Sinir Sistemi Farmakolojisi ve Nörogelişimsel Bozukluklar sesli dersleri",
   "maddeler": [
-    "Mekanizma metni: Otonom sinir sistemi farmakolojisi dersinin başındaki mekanizmalar, hocanın sesli anlatımı ve ders PDF'i karşılaştırılarak örnekleriyle, ilaç ve hastalık bağlantılarıyla yazıldı.",
-    "Çıkmış analizi: Bu derse bağlı 10 doğrulanmış çıkmış sorunun her biri için neyi ölçtüğü, örneği ve tuzağı ayrıntılı yazıldı.",
-    "Ders analizi sesi: Analizin altı bölümü seslendirildi; dinlerken okunan cümle işaretlenir.",
-    "Kraniyal sinir muayenesi ve serebrovasküler hastalıklar ara sorularının düzeltilmiş metinleri ve sesleri yayında.",
-    "Ara soru seslerinde altyazı zamanlaması güncel seslerle eşitlendi."
+    "Sesli ders: Tıbbi Patoloji — Santral Sinir Sistemi Tümörleri, Tıbbi Farmakoloji — Otonom Sinir Sistemi Farmakolojisi ve Psikiyatri — Nörogelişimsel Bozukluklar bu yılın PDF'inden anlatımlı, EMA sesli olarak eklendi.",
+    "Örnek sorular: üç derse sırasıyla 63, 61 ve 74 örnek soru; sesli çözücü ve hocanın sorabileceği ara sorular eklendi.",
+    "Çıkmış: doğrulanmış çıkmışlar (12, 10, 11) ders içinde işaretlendi ve her biri için ayrıntılı analiz yazıldı.",
+    "Ders içeriği: terim ve kısaltma sözlükleri, ders içerik paketi ve PDF üstü çizimler eklendi."
   ],
   "eklenen": [
-    "Otonom Sinir Sistemi Farmakolojisi mekanizma metni",
-    "Otonom Sinir Sistemi Farmakolojisi ders analizi ve sesi"
+    "SSS Tümörleri sesli dersi",
+    "OSS Farmakolojisi sesli dersi",
+    "Nörogelişimsel Bozukluklar sesli dersi"
   ],
   "degisen": [],
   "duzeltilen": [],

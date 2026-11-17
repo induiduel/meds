@@ -1,0 +1,1060 @@
+{
+ "surum": 1,
+ "key": "k2-42",
+ "kod": "2s11",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Nörogelişimsel Bozukluklar",
+ "ogretim_uyesi": "Uzm. Dr. Pınar Durmaz",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s11"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders nörogelişimsel bozuklukların tanımını ve altı grubunu verir; zihinsel yetersizliği, otizmi, DEHB'yi, özgül öğrenme güçlüğünü ve tik bozukluklarını belirti, tanı ölçütü ve sağaltım yönünden işler.",
+   "maddeler": [
+    {
+     "metin": "Dersin amacı ve nörogelişimsel bozukluk kavramı"
+    },
+    {
+     "metin": "Nörogelişimsel bozukluğun tanımı, erken başlangıcı ve seyri"
+    },
+    {
+     "metin": "Sınıflama (altı grup) ve yaşam boyu ayırıcı tanı"
+    },
+    {
+     "metin": "Zihinsel yetersizlik: tanım, terminoloji ve başvuru nedeni"
+    },
+    {
+     "metin": "Zihinsel yetersizlik: etiyoloji ve risk etmenleri"
+    },
+    {
+     "metin": "Zihinsel yetersizlikte şiddet düzeyleri (IQ) ve sağaltım"
+    },
+    {
+     "metin": "Otizm: tanım, sıklık artışı, başlangıç ve regresif otizm"
+    },
+    {
+     "metin": "Otizm: belirti ve bulgular, 36 ay öncesi erken belirtiler"
+    },
+    {
+     "metin": "Otizm: oluş nedenleri ve sağaltım"
+    },
+    {
+     "metin": "DEHB: tanım, alt türler, tanı ve yaygınlık"
+    },
+    {
+     "metin": "DEHB: belirti ve bulgular, ilişkili sorunlar"
+    },
+    {
+     "metin": "DEHB: etiyoloji ve sağaltım"
+    },
+    {
+     "metin": "Özgül öğrenme güçlüğü: tanım ve okul öncesi belirtiler"
+    },
+    {
+     "metin": "Özgül öğrenme güçlüğü: okul çağı belirtileri ve tanı araçları"
+    },
+    {
+     "metin": "Özgül öğrenme güçlüğü: sağaltım"
+    },
+    {
+     "metin": "Tik bozuklukları: tanım, sınıflama ve Tourette bozukluğu"
+    },
+    {
+     "metin": "Tik bozukluklarında sağaltım"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders nörogelişimsel bozuklukların tanımını ve altı grubunu verir; zihinsel yetersizliği, otizmi, DEHB'yi, özgül öğrenme güçlüğünü ve tik bozukluklarını belirti, tanı ölçütü ve sağaltım yönünden işler.",
+    "Dersin amacı ve nörogelişimsel bozukluk kavramı.",
+    "Nörogelişimsel bozukluğun tanımı, erken başlangıcı ve seyri.",
+    "Sınıflama (altı grup) ve yaşam boyu ayırıcı tanı.",
+    "Zihinsel yetersizlik: tanım, terminoloji ve başvuru nedeni.",
+    "Zihinsel yetersizlik: etiyoloji ve risk etmenleri.",
+    "Zihinsel yetersizlikte şiddet düzeyleri (IQ) ve sağaltım.",
+    "Otizm: tanım, sıklık artışı, başlangıç ve regresif otizm.",
+    "Otizm: belirti ve bulgular, 36 ay öncesi erken belirtiler.",
+    "Otizm: oluş nedenleri ve sağaltım.",
+    "DEHB: tanım, alt türler, tanı ve yaygınlık.",
+    "DEHB: belirti ve bulgular, ilişkili sorunlar.",
+    "DEHB: etiyoloji ve sağaltım.",
+    "Özgül öğrenme güçlüğü: tanım ve okul öncesi belirtiler.",
+    "Özgül öğrenme güçlüğü: okul çağı belirtileri ve tanı araçları.",
+    "Özgül öğrenme güçlüğü: sağaltım.",
+    "Tik bozuklukları: tanım, sınıflama ve Tourette bozukluğu.",
+    "Tik bozukluklarında sağaltım."
+   ],
+   "v": "67467fbb6f"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Nörogelişimsel bozukluğun tanımı, erken başlangıcı ve seyri",
+     "metin": "Tanı belirtilerin betimlenmesine dayanır; özgül etiyolojiye ya da patognomonik özelliğe dayanmaz",
+     "s": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "baslik": "Sınıflama (altı grup) ve yaşam boyu ayırıcı tanı",
+     "metin": "Güncel sınıflamada altı grup: zihinsel yetersizlikler, OSB, DEHB, özgül öğrenme güçlüğü, motor bozukluklar, iletişim bozuklukları",
+     "s": [
+      5,
+      6,
+      7
+     ]
+    },
+    {
+     "baslik": "Zihinsel yetersizlik: tanım, terminoloji ve başvuru nedeni",
+     "metin": "Zihinsel kapasite akıl yürütme, plan yapma, problem çözme ve deneyimle öğrenmeyi kapsar",
+     "s": [
+      8,
+      9
+     ]
+    },
+    {
+     "baslik": "Zihinsel yetersizlik: etiyoloji ve risk etmenleri",
+     "metin": "Etiyoloji heterojendir; genetik, gelişimsel ve edinsel nedenler tek başına ya da birlikte olabilir",
+     "s": [
+      10,
+      11,
+      12,
+      13
+     ]
+    },
+    {
+     "baslik": "Zihinsel yetersizlikte şiddet düzeyleri (IQ) ve sağaltım",
+     "metin": "Hafif IQ 50-69, orta 35-49, ağır 20-34, çok ağır 20 altı",
+     "s": [
+      14,
+      15,
+      16
+     ]
+    },
+    {
+     "baslik": "Otizm: tanım, sıklık artışı, başlangıç ve regresif otizm",
+     "metin": "OYB erken çocuklukta başlayan, yaşam boyu süren sosyal iletişim eksikliği ve sınırlı-tekrarlayan davranışlarla tanımlanır",
+     "s": [
+      17,
+      18
+     ]
+    },
+    {
+     "baslik": "Otizm: belirti ve bulgular, 36 ay öncesi erken belirtiler",
+     "metin": "Göz teması kurmama, adına bakmama, taklit ve ortak dikkat yokluğu erken bebeklikten itibaren görülür",
+     "s": [
+      19,
+      20
+     ]
+    },
+    {
+     "baslik": "Otizm: oluş nedenleri ve sağaltım",
+     "metin": "Nörobiyolojik ve kalıtım etkenleri rol oynar; kesin oluş düzeneği ve tanısal laboratuvar testi yoktur",
+     "s": [
+      21,
+      22
+     ]
+    },
+    {
+     "baslik": "DEHB: tanım, alt türler, tanı ve yaygınlık",
+     "metin": "Temel belirtiler dikkatsizlik, aşırı hareketlilik ve dürtüselliktir; gelişimsel düzeyle uyuşmaz",
+     "s": [
+      23,
+      24,
+      25
+     ]
+    },
+    {
+     "baslik": "DEHB: belirti ve bulgular, ilişkili sorunlar",
+     "metin": "Dikkat eksikliği: çabuk sıkılma, dikkatin kolay çelinmesi, eşya kaybetme, satır atlama",
+     "s": [
+      26,
+      27
+     ]
+    },
+    {
+     "baslik": "DEHB: etiyoloji ve sağaltım",
+     "metin": "Kalıtım çok genli modeldir",
+     "s": [
+      28,
+      29
+     ]
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğü: tanım ve okul öncesi belirtiler",
+     "metin": "Özgül bilişsel alanlardaki eksiklik; genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklük",
+     "s": [
+      30,
+      31
+     ]
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğü: okul çağı belirtileri ve tanı araçları",
+     "metin": "Okul çağında en çok başvuru dönemi; yanlış ve yavaş okuma, harf-hece-satır atlama, ters yazma",
+     "s": [
+      32,
+      33,
+      34
+     ]
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğü: sağaltım",
+     "metin": "Etkililiği kanıtlanmış bir ilaç tedavisi yoktur",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Tik bozuklukları: tanım, sınıflama ve Tourette bozukluğu",
+     "metin": "Tik; ani, hızlı, yineleyici, ritmik olmayan motor hareket ya da ünlemdir ve genellikle çok kısa sürer",
+     "s": [
+      36,
+      37,
+      38
+     ]
+    },
+    {
+     "baslik": "Tik bozukluklarında sağaltım",
+     "metin": "Öncelik eğitim ve destekleyici yaklaşımlardır",
+     "s": [
+      39,
+      40
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Nörogelişimsel bozukluğun tanımı, erken başlangıcı ve seyri: Tanı belirtilerin betimlenmesine dayanır; özgül etiyolojiye ya da patognomonik özelliğe dayanmaz.",
+    "Sınıflama (altı grup) ve yaşam boyu ayırıcı tanı: Güncel sınıflamada altı grup: zihinsel yetersizlikler, OSB, DEHB, özgül öğrenme güçlüğü, motor bozukluklar, iletişim bozuklukları.",
+    "Zihinsel yetersizlik: tanım, terminoloji ve başvuru nedeni: Zihinsel kapasite akıl yürütme, plan yapma, problem çözme ve deneyimle öğrenmeyi kapsar.",
+    "Zihinsel yetersizlik: etiyoloji ve risk etmenleri: Etiyoloji heterojendir; genetik, gelişimsel ve edinsel nedenler tek başına ya da birlikte olabilir.",
+    "Zihinsel yetersizlikte şiddet düzeyleri (IQ) ve sağaltım: Hafif IQ 50-69, orta 35-49, ağır 20-34, çok ağır 20 altı.",
+    "Otizm: tanım, sıklık artışı, başlangıç ve regresif otizm: OYB erken çocuklukta başlayan, yaşam boyu süren sosyal iletişim eksikliği ve sınırlı-tekrarlayan davranışlarla tanımlanır.",
+    "Otizm: belirti ve bulgular, 36 ay öncesi erken belirtiler: Göz teması kurmama, adına bakmama, taklit ve ortak dikkat yokluğu erken bebeklikten itibaren görülür.",
+    "Otizm: oluş nedenleri ve sağaltım: Nörobiyolojik ve kalıtım etkenleri rol oynar; kesin oluş düzeneği ve tanısal laboratuvar testi yoktur.",
+    "DEHB: tanım, alt türler, tanı ve yaygınlık: Temel belirtiler dikkatsizlik, aşırı hareketlilik ve dürtüselliktir; gelişimsel düzeyle uyuşmaz.",
+    "DEHB: belirti ve bulgular, ilişkili sorunlar: Dikkat eksikliği: çabuk sıkılma, dikkatin kolay çelinmesi, eşya kaybetme, satır atlama.",
+    "DEHB: etiyoloji ve sağaltım: Kalıtım çok genli modeldir.",
+    "Özgül öğrenme güçlüğü: tanım ve okul öncesi belirtiler: Özgül bilişsel alanlardaki eksiklik; genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklük.",
+    "Özgül öğrenme güçlüğü: okul çağı belirtileri ve tanı araçları: Okul çağında en çok başvuru dönemi; yanlış ve yavaş okuma, harf-hece-satır atlama, ters yazma.",
+    "Özgül öğrenme güçlüğü: sağaltım: Etkililiği kanıtlanmış bir ilaç tedavisi yoktur.",
+    "Tik bozuklukları: tanım, sınıflama ve Tourette bozukluğu: Tik; ani, hızlı, yineleyici, ritmik olmayan motor hareket ya da ünlemdir ve genellikle çok kısa sürer.",
+    "Tik bozukluklarında sağaltım: Öncelik eğitim ve destekleyici yaklaşımlardır."
+   ],
+   "v": "b61d33bf3a"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Doğrulanmış çıkmışlar otizmin belirti kümelerinde, özgül öğrenme güçlüğünün tanımı ve sağaltımında ve DEHB'nin işlev bozulmasında yoğunlaşır; yedi çıkmış soru aşağıdaki önem maddelerinin bilgisini ölçmüştür.",
+   "maddeler": [
+    {
+     "baslik": "Otizmde başlangıç yaşı ve regresyon",
+     "metin": "Otizm belirtileri genellikle 12-24 aylar arasında başlar; kazanılmış becerilerin yitirilmesi (regresif otizm) de aynı aralıkta görülür.",
+     "neden": "Slaytta belirtilerin başlangıç aralığı ve regresyon vurgulanır; geçen yılın öğrenci notunda da bu satırlar işaretlenmiş.",
+     "s": [
+      18
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Otizmin erken bebeklik belirtileri",
+     "metin": "Otizmde erken bebeklikten itibaren göz teması kurmama, adına bakmama, taklit yapmama ve ortak dikkatin olmaması görülür.",
+     "neden": "2022-23'te ve 2025-26'da soruldu: tanıda yol gösteren bulgular ayırt ettirilir; tıkınırcasına yemek yeme isteği çeldirici olarak konur (küçük yaş listesinde yalnızca uyku ve yeme sorunları anılır).",
+     "s": [
+      19
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Toplumsal belirtiler ile tekrarlayıcı davranışlar",
+     "metin": "Otizmde tekdüze oyun, araba tekerleği döndürme, sallanma, dönen cisimlere ilgi, değişiklikten hoşlanmama ve törensel davranış sınırlı ve tekrarlayan davranış kümesindedir.",
+     "neden": "2020-21'de soruldu: toplumsal-duygusal yetersizliğe örnek olmayan seçenek olarak oyuncakları dizme ve çevirme hareketleri sorulur.",
+     "s": [
+      19
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğünün tanımı",
+     "metin": "Özgül öğrenme güçlüğü, genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklükle belirlidir ve tanı için okula başlamak gerekir.",
+     "neden": "2020-21'de soruldu: zekâ düzeyinin düşük olduğunu söyleyen seçenek yanlış önerme olarak verilir; geçen yılın öğrenci notunda tanım satırı işaretli.",
+     "s": [
+      30
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğünde sağaltım",
+     "metin": "Özgül öğrenme güçlüğünün sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur; temel yaklaşım bireysel özel eğitim programlarıdır.",
+     "neden": "Çıkmışta soruldu (ham belge 2021-2023 aralığı): ilaç ya da diyetle düzeltilebileceğini söyleyen seçenek yanlış önerme olarak verilir.",
+     "s": [
+      35
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "DEHB'nin temel belirtileri ve işlev bozulması",
+     "metin": "DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir; belirtiler akademik, sosyal ve mesleki alanları olumsuz etkiler.",
+     "neden": "2019-20'de soruldu: okul yaşamını etkilemediğini söyleyen seçenek yanlış önerme olarak verilir.",
+     "s": [
+      23
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Tourette bozukluğu",
+     "metin": "Tourette bozukluğunda hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süre gözlenir.",
+     "neden": "Slaytta tanım ve seyir ayrıntılı verilir; tik bozukluklarının ayırt edici ölçütlerinden biri süre ve tik türüdür.",
+     "s": [
+      38
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Otizmde sağaltım ilkeleri",
+     "metin": "Otizm biyolojik temelli olsa da en etkin sağaltım yöntemleri davranışsal girişimler ve eğitimdir; ilaç daha çok ek tanıları ve davranış sorunlarını hedefler.",
+     "neden": "2024-25'te soruldu: nörofeedback gibi yaygın ve kanıtlanmış olmayan bir yöntem doğru bilgi değildir seçeneği olarak verilir.",
+     "s": [
+      22
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Doğrulanmış çıkmışlar otizmin belirti kümelerinde, özgül öğrenme güçlüğünün tanımı ve sağaltımında ve DEHB'nin işlev bozulmasında yoğunlaşır; yedi çıkmış soru aşağıdaki önem maddelerinin bilgisini ölçmüştür.",
+    "Otizmde başlangıç yaşı ve regresyon: Otizm belirtileri genellikle 12-24 aylar arasında başlar; kazanılmış becerilerin yitirilmesi (regresif otizm) de aynı aralıkta görülür.",
+    "Otizmin erken bebeklik belirtileri: Otizmde erken bebeklikten itibaren göz teması kurmama, adına bakmama, taklit yapmama ve ortak dikkatin olmaması görülür.",
+    "Toplumsal belirtiler ile tekrarlayıcı davranışlar: Otizmde tekdüze oyun, araba tekerleği döndürme, sallanma, dönen cisimlere ilgi, değişiklikten hoşlanmama ve törensel davranış sınırlı ve tekrarlayan davranış kümesindedir.",
+    "Özgül öğrenme güçlüğünün tanımı: Özgül öğrenme güçlüğü, genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklükle belirlidir ve tanı için okula başlamak gerekir.",
+    "Özgül öğrenme güçlüğünde sağaltım: Özgül öğrenme güçlüğünün sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur; temel yaklaşım bireysel özel eğitim programlarıdır.",
+    "DEHB'nin temel belirtileri ve işlev bozulması: DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir; belirtiler akademik, sosyal ve mesleki alanları olumsuz etkiler.",
+    "Tourette bozukluğu: Tourette bozukluğunda hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süre gözlenir.",
+    "Otizmde sağaltım ilkeleri: Otizm biyolojik temelli olsa da en etkin sağaltım yöntemleri davranışsal girişimler ve eğitimdir; ilaç daha çok ek tanıları ve davranış sorunlarını hedefler."
+   ],
+   "v": "4bce0924a7"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu analiz, Nörogelişimsel Bozukluklar dersinden çıkmış on bir soruyu otizm yelpazesi bozukluğu, dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) ile özgül öğrenme güçlüğü (ÖÖG) başlıklarında, yalnızca ders slaytlarındaki bilgiye dayanarak açıklar. Her soruda önce ölçülen kavram, sonra slayttaki dayanak, en sonda en güçlü çeldiricinin neden yanlış olduğu ele alınır.",
+   "maddeler": [
+    {
+     "baslik": "2018-2019",
+     "metin": "Yaygın gelişimsel bozukluklu bireyle ilgili aşağıdaki ifadelerden hangisi doğru değildir?",
+     "cevap": "Ergenlik ve erişkinlikte otizm belirtileri ve davranış sorunlarında artış olur",
+     "s": [
+      17
+     ],
+     "aciklama": [
+      "Soru, otizm yelpazesi bozukluğunun doğal gidişini ölçer ve olumsuz kök nedeniyle doğru olmayan ifadeyi aratır.",
+      "Slayt, bozukluğun erken çocuklukta başladığını ve yaşam boyu devam ettiğini vurgular; yani kalıcı bir tablo söz konusudur.",
+      "Ergenlik ve erişkinlikte belirtilerin ve davranış sorunlarının artacağını söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden yanlış ifadedir ve doğru cevaptır.",
+      "Erken başlangıç, sosyal etkileşim ve iletişimde eksiklik ya da yaşam boyu sürme gibi seçenekler slayttaki tanımla birebir örtüştüğü için doğrudur ve çeldirici olarak yanlış seçilmemelidir."
+     ],
+     "ornek": "Otizmli bir gencin sosyal iletişim güçlüğünün yaşam boyu sürebileceği bilinmelidir, ergenlikte kendiliğinden artacağı ya da bozulacağı ezberlenmemelidir.",
+     "tuzak": "Öğrenci yaşam boyu süren bir bozukluğun ergenlikte mutlaka ağırlaşacağını sanır ve olumsuz kökü atlayarak ifadeyi doğru kabul eder."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdaki ifadelerden hangisi otizmli (yaygın gelişimsel bozukluk) birey ile ilgili yanlıştır?",
+     "cevap": "Ergenlik ve erişkinlikte otizm belirtileri ve davranış sorunlarında artış belirgindir",
+     "s": [
+      17
+     ],
+     "aciklama": [
+      "Soru, otizm yelpazesi bozukluğunun doğal gidişini ölçer ve olumsuz kök nedeniyle doğru olmayan ifadeyi aratır.",
+      "Slayt, bozukluğun erken çocuklukta başladığını ve yaşam boyu devam ettiğini vurgular; yani kalıcı bir tablo söz konusudur.",
+      "Ergenlik ve erişkinlikte belirtilerin ve davranış sorunlarının artacağını söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden yanlış ifadedir ve doğru cevaptır.",
+      "Erken başlangıç, sosyal etkileşim ve iletişimde eksiklik ya da yaşam boyu sürme gibi seçenekler slayttaki tanımla birebir örtüştüğü için doğrudur ve çeldirici olarak yanlış seçilmemelidir."
+     ],
+     "ornek": "Erişkin otizmli bireyde erken çocuklukta başlayan iletişim eksikliğinin sürdüğü, ancak belirtilerin artışının dersin bir bulgusu olmadığı örneklenebilir.",
+     "tuzak": "Öğrenci yanlıştır sözcüğünü atlayıp ergenlikte artışı doğru bilgi sanır; kalıcılık ile artış kavramlarını karıştırır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Yaygın gelişimsel bozukluğu (otizm spektrum bozukluğu) olan birey ile ilgili aşağıda verilen ifadelerden hangisi uyuşmaz?",
+     "cevap": "Erişkinlikte otizm belirtileri ve davranış sorunlarında artış olur",
+     "s": [
+      17
+     ],
+     "aciklama": [
+      "Soru, otizm yelpazesi bozukluğunun doğal gidişini ölçer ve olumsuz kök nedeniyle doğru olmayan ifadeyi aratır.",
+      "Slayt, bozukluğun erken çocuklukta başladığını ve yaşam boyu devam ettiğini vurgular; yani kalıcı bir tablo söz konusudur.",
+      "Ergenlik ve erişkinlikte belirtilerin ve davranış sorunlarının artacağını söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden yanlış ifadedir ve doğru cevaptır.",
+      "Erken başlangıç, sosyal etkileşim ve iletişimde eksiklik ya da yaşam boyu sürme gibi seçenekler slayttaki tanımla birebir örtüştüğü için doğrudur ve çeldirici olarak yanlış seçilmemelidir."
+     ],
+     "ornek": "Bir erişkinde çocukluktan beri süren sosyal etkileşim zorluğu otizm tanımına uyar, fakat belirtilerin erişkinlikte artması dersin dayandığı bilgi değildir.",
+     "tuzak": "Öğrenci uyuşmaz ifadesini ararken yaşam boyu süren seyri ile belirtilerin artmasını aynı şey sanır."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Otizm spektrum bozukluğunda (OSB) aşağıdaki klinik bulgulardan hangisi tanı koymada yol gösterici olarak değerlendirilmez?",
+     "cevap": "Tıkınırcasına yemek yeme isteğinin olması",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru, otizm yelpazesi bozukluğunun (OYB) tanıya yön veren erken bulgularını tanıyıp tanımadığını ölçer ve olumsuz kök nedeniyle tanıya yol göstermeyen seçeneği aratır.",
+      "Slayt, erken bebeklikten başlayarak göz teması kurmama, kucağa alınma ve rahatlatılma isteğinin olmaması, taklit yapmama, adına bakmama ve ortak dikkatin bulunmaması gibi bulguları tanıya götüren işaretler olarak sayar.",
+      "Tıkınırcasına yemek yeme isteği bu listede yer almaz; bu nedenle tanı koymada yol gösterici sayılmaz ve doğru cevap odur.",
+      "Adına bakmama ya da taklit yapmama gibi çeldiriciler yanlıştır, çünkü bunlar tam olarak slayttaki sosyal etkileşim ve ortak dikkat eksikliği bulgularıdır ve tanıya yol gösterir."
+     ],
+     "ornek": "Bir yaşındaki bebeğin adı söylenince dönüp bakmaması ve annenin gösterdiği oyuncağa bakmaması, tanı için dikkat çekici bulgudur.",
+     "tuzak": "Öğrenci olumsuz kökü gözden kaçırıp tanıya yol gösteren bulgulardan birini işaretler ve beslenme ile ilgili ilgisiz bir davranışı tanı ölçütü sanır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Otizm spektrum bozukluğunda aşağıdakilerden hangisi “toplumsal-duygusal karşılıkta yetersizlik” bulgusuna örnek değildir?",
+     "cevap": "Oyuncakları dizme, çevirme hareketleri",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru, otizmde toplumsal-duygusal karşılıkta yetersizlik ile sınırlı, tekrarlayan davranış kalıplarını birbirinden ayırıp ayıramadığınızı ölçer; kök olumsuzdur, yani örnek olmayan seçenek aranır.",
+      "Slayt, çocuğun tekdüze biçimde aynı oyunları oynadığını, araba sıralama ya da tekerlek döndürme ve nesne sallama gibi hareketlerden hoşlandığını anlatır; bunlar sınırlı ve tekrarlayan davranış kategorisindedir.",
+      "Oyuncakları dizme ve çevirme hareketleri bu nedenle toplumsal-duygusal karşılık eksikliğine değil, tekrarlayan davranışa örnektir ve doğru cevap odur.",
+      "Göz teması kurmama, adına bakmama ya da paylaşımda bulunmama gibi çeldiriciler karşılıklı sosyal ilişkiyi ilgilendirdiği için bu başlığa örnektir ve bu yüzden doğru cevap olamaz."
+     ],
+     "ornek": "Çocuğun arabaları yan yana dizip tekerleklerini saatlerce çevirmesi tekrarlayan davranıştır; annesinin sesine karşılık vermemesi ise toplumsal-duygusal karşılık eksikliğidir.",
+     "tuzak": "Öğrenci aynı çocukta görülen iki bulgu grubunu birbirine karıştırır ve oyuncak dizmeyi de sosyal karşılık eksikliği sanır."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Aşağıdakilerden hangisi Yaygın Gelişimsel Bozukluklar (YGB) ile ilgili doğru bir bilgi değildir?",
+     "cevap": "Nörofeedback, YGB tedavisinde yaygın ve kanıtlanmış bir yöntemdir.",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru, otizm yelpazesi bozukluğunda en etkin sağaltım yaklaşımını ölçer ve olumsuz kök nedeniyle doğru olmayan bilgiyi aratır.",
+      "Slayt, bozukluğun biyolojik temelli olmasına karşın en etkin sağaltım yöntemlerinin davranışsal girişimler ve eğitim olduğunu söyler; ilaç ise ek tanıları ve çok davranışsal sorunları hedef alır.",
+      "Nörofeedback yaygın ve kanıtlanmış bir yöntem olarak slaytta yer almadığı için yaygın ve kanıtlanmış sayılamaz, bu yüzden doğru cevaptır.",
+      "Davranışsal yaklaşımların öne çıkması, sağaltımın bireye yönelik ve çevresel bağlamı da kapsayan çok boyutlu olması gibi çeldiriciler slayttaki ilkelerle uyuştuğu için doğrudur."
+     ],
+     "ornek": "Otizmli çocuğun iletişim becerilerini geliştirmek için davranışsal program ve özel eğitim uygulanması en etkin yöntemdir.",
+     "tuzak": "Öğrenci biyolojik temelli bozukluğa biyolojik ya da cihazlı bir tedavinin en etkin olacağını sanır; slayt ise davranışsal girişim ve eğitimi öne çıkarır."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi dikkat eksikliği hiperaktivite bozukluğu (DEHB) için söylenemez?",
+     "cevap": "Çocukken tanı alan kişilerde büyük olasılıkla erişkin döneminde düzelir",
+     "s": [
+      23
+     ],
+     "aciklama": [
+      "Soru, dikkat eksikliği ve hiperaktivite bozukluğunun (DEHB) seyrini ölçer ve olumsuz kök nedeniyle söylenemeyecek ifadeyi aratır.",
+      "Slayt, DEHB belirtilerinin gelişimsel düzeyle uyuşmayacak ağırlıkta olduğunu ve kişinin akademik, sosyal ve mesleki alanlardaki yaşamını olumsuz etkilediğini belirtir.",
+      "Çocukluktaki tanının büyük olasılıkla erişkinlikte düzeleceğini söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden söylenemez ve doğru cevaptır.",
+      "Dikkatin kolayca çelinmesi, görevi sürdürememe ya da düşünmeden hareket etme gibi çeldiriciler slayttaki dikkatsizlik ve dürtüsellik belirtileridir; bu nedenle DEHB için söylenebilir."
+     ],
+     "ornek": "Çocukken DEHB tanısı almış bir kişinin sonraki yaşlarda da akademik ve mesleki işlevinin bozulması, slayttaki işlev bozulması bilgisinin örneğidir; kendiliğinden düzeleceği ders bilgisi değildir.",
+     "tuzak": "Öğrenci çocukluk çağı bozukluğu denince erişkinlikte kendiliğinden geçeceğini varsayar ve olumsuz kökte doğru ifadeyi seçer."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) için aşağıdakilerden hangisi söylenemez?",
+     "cevap": "Okul yaşamını etkilemez",
+     "s": [
+      23
+     ],
+     "aciklama": [
+      "Soru, DEHB'nin işlev alanlarına etkisini ölçer ve olumsuz kök nedeniyle söylenemeyecek ifadeyi aratır.",
+      "Slayt, belirtilerin kişinin yaşamını akademik, sosyal ve mesleki alanlarda olumsuz etkilediğini ve uyum becerilerini bozduğunu söyler.",
+      "Bu yüzden okul yaşamını etkilemediğini öne süren ifade slayttaki bilgiyle doğrudan çelişir ve söylenemez; doğru cevap odur.",
+      "Belirtilerin gelişimsel düzeyle uyuşmayacak ağırlıkta olması ya da sosyal alanda olumsuz etkilenme gibi seçenekler slayttaki tanıma uygun olduğundan çeldiricidir ve söylenebilir."
+     ],
+     "ornek": "Sırasını bekleyemeyen, ödevini bitiremeyen ve arkadaşları tarafından dışlanan bir öğrenci DEHB'nin okul yaşamını etkilediğini gösterir.",
+     "tuzak": "Öğrenci DEHB'yi yalnızca hareketlilik sanır ve okul ile akademik başarıya etkisini küçümser."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+     "cevap": "Zekâ düzeyi 85'in altındadır.",
+     "s": [
+      30
+     ],
+     "aciklama": [
+      "Soru, özgül öğrenme güçlüğünün (ÖÖG) tanımındaki zekâ ölçütünü ölçer ve olumsuz kök nedeniyle söylenemeyecek bilgiyi aratır.",
+      "Slayt, ÖÖG'yi genel bilişsel işlevlerde sorun olmadığı hâlde akademik başarıda ciddi düşüklük görülen özgün durum olarak tanımlar.",
+      "Bu nedenle zekâ düzeyinin 85'in altında olduğunu söyleyen ifade tanımla çelişir ve söylenemez; doğru cevap odur.",
+      "Akademik başarıda belirgin düşüklük ya da okula başladıktan sonra tanı konabilmesi gibi seçenekler slayttaki tanımla uyumlu olduğundan yanlış ifade değildir."
+     ],
+     "ornek": "Zekâ testi normal çıkan fakat okuduğunu bir türlü çözemeyen ilkokul çocuğu ÖÖG tablosuna örnektir.",
+     "tuzak": "Öğrenci öğrenme güçlüğünü düşük zekâ ile eş tutar ve genel bilişsel gerilik ile özgül bir akademik eksikliği ayırt edemez."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Annesi tarafından psikiyatriste getirilen 12 yaşındaki Esra'ya özgül öğrenme güçlüğü tanısı konulmuştur. Esra ile ilgili aşağıdakilerden hangisi söylenemez?",
+     "cevap": "İlaç tedavisi veya özel bir diyetle düzeltilebilir",
+     "s": [
+      35
+     ],
+     "aciklama": [
+      "Soru, özgül öğrenme güçlüğünün (ÖÖG) sağaltımında ilacın ve özel diyetin yerini bilip bilmediğinizi ölçer; kök olumsuz olduğu için yanlış ifade aranır.",
+      "Slayt, ÖÖG sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi bulunmadığını açıkça belirtir.",
+      "Temel yaklaşım, yapılandırılmış ve çocuğun bireysel özelliklerine göre kurulan bireysel özel eğitim programlarıdır.",
+      "Bu yüzden ilaç veya özel diyetle düzeltilebileceğini söyleyen seçenek yanlıştır ve doğru cevaptır; özel eğitimin gerekliliği ya da bozukluğun yaşam boyu sürmesi gibi çeldiriciler slayttaki bilgilerle uyumlu olduğu için söylenebilir."
+     ],
+     "ornek": "Okuma güçlüğü olan bir çocuğa ailesi vitamin ve diyet düzenlemesi uygular; ders bilgisine göre asıl çözüm bireysel özel eğitim programıdır.",
+     "tuzak": "Öğrenci ilaç ve diyetin her çocukluk bozukluğunda işe yaradığını varsayar ve özel eğitimi ikinci plana atar."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu analiz, Nörogelişimsel Bozukluklar dersinden çıkmış on bir soruyu otizm yelpazesi bozukluğu, dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) ile özgül öğrenme güçlüğü (ÖÖG) başlıklarında, yalnızca ders slaytlarındaki bilgiye dayanarak açıklar. Her soruda önce ölçülen kavram, sonra slayttaki dayanak, en sonda en güçlü çeldiricinin neden yanlış olduğu ele alınır.",
+    "2018-2019: Yaygın gelişimsel bozukluklu bireyle ilgili aşağıdaki ifadelerden hangisi doğru değildir?",
+    "Cevap: Ergenlik ve erişkinlikte otizm belirtileri ve davranış sorunlarında artış olur.",
+    "Soru, otizm yelpazesi bozukluğunun doğal gidişini ölçer ve olumsuz kök nedeniyle doğru olmayan ifadeyi aratır.",
+    "Slayt, bozukluğun erken çocuklukta başladığını ve yaşam boyu devam ettiğini vurgular; yani kalıcı bir tablo söz konusudur.",
+    "Ergenlik ve erişkinlikte belirtilerin ve davranış sorunlarının artacağını söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden yanlış ifadedir ve doğru cevaptır.",
+    "Erken başlangıç, sosyal etkileşim ve iletişimde eksiklik ya da yaşam boyu sürme gibi seçenekler slayttaki tanımla birebir örtüştüğü için doğrudur ve çeldirici olarak yanlış seçilmemelidir.",
+    "Örnek: Otizmli bir gencin sosyal iletişim güçlüğünün yaşam boyu sürebileceği bilinmelidir, ergenlikte kendiliğinden artacağı ya da bozulacağı ezberlenmemelidir.",
+    "Tuzak: Öğrenci yaşam boyu süren bir bozukluğun ergenlikte mutlaka ağırlaşacağını sanır ve olumsuz kökü atlayarak ifadeyi doğru kabul eder.",
+    "2018-2019: Aşağıdaki ifadelerden hangisi otizmli (yaygın gelişimsel bozukluk) birey ile ilgili yanlıştır?",
+    "Cevap: Ergenlik ve erişkinlikte otizm belirtileri ve davranış sorunlarında artış belirgindir.",
+    "Soru, otizm yelpazesi bozukluğunun doğal gidişini ölçer ve olumsuz kök nedeniyle doğru olmayan ifadeyi aratır.",
+    "Slayt, bozukluğun erken çocuklukta başladığını ve yaşam boyu devam ettiğini vurgular; yani kalıcı bir tablo söz konusudur.",
+    "Ergenlik ve erişkinlikte belirtilerin ve davranış sorunlarının artacağını söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden yanlış ifadedir ve doğru cevaptır.",
+    "Erken başlangıç, sosyal etkileşim ve iletişimde eksiklik ya da yaşam boyu sürme gibi seçenekler slayttaki tanımla birebir örtüştüğü için doğrudur ve çeldirici olarak yanlış seçilmemelidir.",
+    "Örnek: Erişkin otizmli bireyde erken çocuklukta başlayan iletişim eksikliğinin sürdüğü, ancak belirtilerin artışının dersin bir bulgusu olmadığı örneklenebilir.",
+    "Tuzak: Öğrenci yanlıştır sözcüğünü atlayıp ergenlikte artışı doğru bilgi sanır; kalıcılık ile artış kavramlarını karıştırır.",
+    "2019-2020: Yaygın gelişimsel bozukluğu (otizm spektrum bozukluğu) olan birey ile ilgili aşağıda verilen ifadelerden hangisi uyuşmaz?",
+    "Cevap: Erişkinlikte otizm belirtileri ve davranış sorunlarında artış olur.",
+    "Soru, otizm yelpazesi bozukluğunun doğal gidişini ölçer ve olumsuz kök nedeniyle doğru olmayan ifadeyi aratır.",
+    "Slayt, bozukluğun erken çocuklukta başladığını ve yaşam boyu devam ettiğini vurgular; yani kalıcı bir tablo söz konusudur.",
+    "Ergenlik ve erişkinlikte belirtilerin ve davranış sorunlarının artacağını söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden yanlış ifadedir ve doğru cevaptır.",
+    "Erken başlangıç, sosyal etkileşim ve iletişimde eksiklik ya da yaşam boyu sürme gibi seçenekler slayttaki tanımla birebir örtüştüğü için doğrudur ve çeldirici olarak yanlış seçilmemelidir.",
+    "Örnek: Bir erişkinde çocukluktan beri süren sosyal etkileşim zorluğu otizm tanımına uyar, fakat belirtilerin erişkinlikte artması dersin dayandığı bilgi değildir.",
+    "Tuzak: Öğrenci uyuşmaz ifadesini ararken yaşam boyu süren seyri ile belirtilerin artmasını aynı şey sanır.",
+    "2022-2023: Otizm spektrum bozukluğunda (OSB) aşağıdaki klinik bulgulardan hangisi tanı koymada yol gösterici olarak değerlendirilmez?",
+    "Cevap: Tıkınırcasına yemek yeme isteğinin olması.",
+    "Soru, otizm yelpazesi bozukluğunun (OYB) tanıya yön veren erken bulgularını tanıyıp tanımadığını ölçer ve olumsuz kök nedeniyle tanıya yol göstermeyen seçeneği aratır.",
+    "Slayt, erken bebeklikten başlayarak göz teması kurmama, kucağa alınma ve rahatlatılma isteğinin olmaması, taklit yapmama, adına bakmama ve ortak dikkatin bulunmaması gibi bulguları tanıya götüren işaretler olarak sayar.",
+    "Tıkınırcasına yemek yeme isteği bu listede yer almaz; bu nedenle tanı koymada yol gösterici sayılmaz ve doğru cevap odur.",
+    "Adına bakmama ya da taklit yapmama gibi çeldiriciler yanlıştır, çünkü bunlar tam olarak slayttaki sosyal etkileşim ve ortak dikkat eksikliği bulgularıdır ve tanıya yol gösterir.",
+    "Örnek: Bir yaşındaki bebeğin adı söylenince dönüp bakmaması ve annenin gösterdiği oyuncağa bakmaması, tanı için dikkat çekici bulgudur.",
+    "Tuzak: Öğrenci olumsuz kökü gözden kaçırıp tanıya yol gösteren bulgulardan birini işaretler ve beslenme ile ilgili ilgisiz bir davranışı tanı ölçütü sanır.",
+    "2020-2021: Otizm spektrum bozukluğunda aşağıdakilerden hangisi “toplumsal-duygusal karşılıkta yetersizlik” bulgusuna örnek değildir?",
+    "Cevap: Oyuncakları dizme, çevirme hareketleri.",
+    "Soru, otizmde toplumsal-duygusal karşılıkta yetersizlik ile sınırlı, tekrarlayan davranış kalıplarını birbirinden ayırıp ayıramadığınızı ölçer; kök olumsuzdur, yani örnek olmayan seçenek aranır.",
+    "Slayt, çocuğun tekdüze biçimde aynı oyunları oynadığını, araba sıralama ya da tekerlek döndürme ve nesne sallama gibi hareketlerden hoşlandığını anlatır; bunlar sınırlı ve tekrarlayan davranış kategorisindedir.",
+    "Oyuncakları dizme ve çevirme hareketleri bu nedenle toplumsal-duygusal karşılık eksikliğine değil, tekrarlayan davranışa örnektir ve doğru cevap odur.",
+    "Göz teması kurmama, adına bakmama ya da paylaşımda bulunmama gibi çeldiriciler karşılıklı sosyal ilişkiyi ilgilendirdiği için bu başlığa örnektir ve bu yüzden doğru cevap olamaz.",
+    "Örnek: Çocuğun arabaları yan yana dizip tekerleklerini saatlerce çevirmesi tekrarlayan davranıştır; annesinin sesine karşılık vermemesi ise toplumsal-duygusal karşılık eksikliğidir.",
+    "Tuzak: Öğrenci aynı çocukta görülen iki bulgu grubunu birbirine karıştırır ve oyuncak dizmeyi de sosyal karşılık eksikliği sanır.",
+    "2024-2025: Aşağıdakilerden hangisi Yaygın Gelişimsel Bozukluklar (YGB) ile ilgili doğru bir bilgi değildir?",
+    "Cevap: Nörofeedback, YGB tedavisinde yaygın ve kanıtlanmış bir yöntemdir.",
+    "Soru, otizm yelpazesi bozukluğunda en etkin sağaltım yaklaşımını ölçer ve olumsuz kök nedeniyle doğru olmayan bilgiyi aratır.",
+    "Slayt, bozukluğun biyolojik temelli olmasına karşın en etkin sağaltım yöntemlerinin davranışsal girişimler ve eğitim olduğunu söyler; ilaç ise ek tanıları ve çok davranışsal sorunları hedef alır.",
+    "Nörofeedback yaygın ve kanıtlanmış bir yöntem olarak slaytta yer almadığı için yaygın ve kanıtlanmış sayılamaz, bu yüzden doğru cevaptır.",
+    "Davranışsal yaklaşımların öne çıkması, sağaltımın bireye yönelik ve çevresel bağlamı da kapsayan çok boyutlu olması gibi çeldiriciler slayttaki ilkelerle uyuştuğu için doğrudur.",
+    "Örnek: Otizmli çocuğun iletişim becerilerini geliştirmek için davranışsal program ve özel eğitim uygulanması en etkin yöntemdir.",
+    "Tuzak: Öğrenci biyolojik temelli bozukluğa biyolojik ya da cihazlı bir tedavinin en etkin olacağını sanır; slayt ise davranışsal girişim ve eğitimi öne çıkarır.",
+    "2018-2019: Aşağıdakilerden hangisi dikkat eksikliği hiperaktivite bozukluğu (DEHB) için söylenemez?",
+    "Cevap: Çocukken tanı alan kişilerde büyük olasılıkla erişkin döneminde düzelir.",
+    "Soru, dikkat eksikliği ve hiperaktivite bozukluğunun (DEHB) seyrini ölçer ve olumsuz kök nedeniyle söylenemeyecek ifadeyi aratır.",
+    "Slayt, DEHB belirtilerinin gelişimsel düzeyle uyuşmayacak ağırlıkta olduğunu ve kişinin akademik, sosyal ve mesleki alanlardaki yaşamını olumsuz etkilediğini belirtir.",
+    "Çocukluktaki tanının büyük olasılıkla erişkinlikte düzeleceğini söyleyen ifade slayttaki bu bilgiyle desteklenmez, bu yüzden söylenemez ve doğru cevaptır.",
+    "Dikkatin kolayca çelinmesi, görevi sürdürememe ya da düşünmeden hareket etme gibi çeldiriciler slayttaki dikkatsizlik ve dürtüsellik belirtileridir; bu nedenle DEHB için söylenebilir.",
+    "Örnek: Çocukken DEHB tanısı almış bir kişinin sonraki yaşlarda da akademik ve mesleki işlevinin bozulması, slayttaki işlev bozulması bilgisinin örneğidir; kendiliğinden düzeleceği ders bilgisi değildir.",
+    "Tuzak: Öğrenci çocukluk çağı bozukluğu denince erişkinlikte kendiliğinden geçeceğini varsayar ve olumsuz kökte doğru ifadeyi seçer.",
+    "2019-2020: Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) için aşağıdakilerden hangisi söylenemez?",
+    "Cevap: Okul yaşamını etkilemez.",
+    "Soru, DEHB'nin işlev alanlarına etkisini ölçer ve olumsuz kök nedeniyle söylenemeyecek ifadeyi aratır.",
+    "Slayt, belirtilerin kişinin yaşamını akademik, sosyal ve mesleki alanlarda olumsuz etkilediğini ve uyum becerilerini bozduğunu söyler.",
+    "Bu yüzden okul yaşamını etkilemediğini öne süren ifade slayttaki bilgiyle doğrudan çelişir ve söylenemez; doğru cevap odur.",
+    "Belirtilerin gelişimsel düzeyle uyuşmayacak ağırlıkta olması ya da sosyal alanda olumsuz etkilenme gibi seçenekler slayttaki tanıma uygun olduğundan çeldiricidir ve söylenebilir.",
+    "Örnek: Sırasını bekleyemeyen, ödevini bitiremeyen ve arkadaşları tarafından dışlanan bir öğrenci DEHB'nin okul yaşamını etkilediğini gösterir.",
+    "Tuzak: Öğrenci DEHB'yi yalnızca hareketlilik sanır ve okul ile akademik başarıya etkisini küçümser.",
+    "2020-2021: Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+    "Cevap: Zekâ düzeyi 85'in altındadır.",
+    "Soru, özgül öğrenme güçlüğünün (ÖÖG) tanımındaki zekâ ölçütünü ölçer ve olumsuz kök nedeniyle söylenemeyecek bilgiyi aratır.",
+    "Slayt, ÖÖG'yi genel bilişsel işlevlerde sorun olmadığı hâlde akademik başarıda ciddi düşüklük görülen özgün durum olarak tanımlar.",
+    "Bu nedenle zekâ düzeyinin 85'in altında olduğunu söyleyen ifade tanımla çelişir ve söylenemez; doğru cevap odur.",
+    "Akademik başarıda belirgin düşüklük ya da okula başladıktan sonra tanı konabilmesi gibi seçenekler slayttaki tanımla uyumlu olduğundan yanlış ifade değildir.",
+    "Örnek: Zekâ testi normal çıkan fakat okuduğunu bir türlü çözemeyen ilkokul çocuğu ÖÖG tablosuna örnektir.",
+    "Tuzak: Öğrenci öğrenme güçlüğünü düşük zekâ ile eş tutar ve genel bilişsel gerilik ile özgül bir akademik eksikliği ayırt edemez.",
+    "2018-2019: Annesi tarafından psikiyatriste getirilen 12 yaşındaki Esra'ya özgül öğrenme güçlüğü tanısı konulmuştur. Esra ile ilgili aşağıdakilerden hangisi söylenemez?",
+    "Cevap: İlaç tedavisi veya özel bir diyetle düzeltilebilir.",
+    "Soru, özgül öğrenme güçlüğünün (ÖÖG) sağaltımında ilacın ve özel diyetin yerini bilip bilmediğinizi ölçer; kök olumsuz olduğu için yanlış ifade aranır.",
+    "Slayt, ÖÖG sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi bulunmadığını açıkça belirtir.",
+    "Temel yaklaşım, yapılandırılmış ve çocuğun bireysel özelliklerine göre kurulan bireysel özel eğitim programlarıdır.",
+    "Bu yüzden ilaç veya özel diyetle düzeltilebileceğini söyleyen seçenek yanlıştır ve doğru cevaptır; özel eğitimin gerekliliği ya da bozukluğun yaşam boyu sürmesi gibi çeldiriciler slayttaki bilgilerle uyumlu olduğu için söylenebilir.",
+    "Örnek: Okuma güçlüğü olan bir çocuğa ailesi vitamin ve diyet düzenlemesi uygular; ders bilgisine göre asıl çözüm bireysel özel eğitim programıdır.",
+    "Tuzak: Öğrenci ilaç ve diyetin her çocukluk bozukluğunda işe yaradığını varsayar ve özel eğitimi ikinci plana atar."
+   ],
+   "v": "ab0c529900"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%46) ve tanı ve ayırıcı tanı (%15) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%54) ve anlama ve ilişki kurma (%31) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%46) ve tanı ve ayırıcı tanı (%15) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%54) ve anlama ve ilişki kurma (%31) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "d61132510b"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Oyuncakları dizme, çevirme hareketleri",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Otizm spektrum bozukluğunda, aşağıdakilerden hangisi 'toplumsal-duygusal karşılık vermede yetersizlik' ölçütüne örnek değildir?"
+    },
+    {
+     "baslik": "Otizmin erken bebeklik belirtileri",
+     "metin": "2022-23'te ve 2025-26'da soruldu: tanıda yol gösteren bulgular ayırt ettirilir; tıkınırcasına yemek yeme isteği çeldirici olarak konur (küçük yaş listesinde yalnızca uyku ve yeme sorunları anılır)."
+    },
+    {
+     "baslik": "Toplumsal belirtiler ile tekrarlayıcı davranışlar",
+     "metin": "2020-21'de soruldu: toplumsal-duygusal yetersizliğe örnek olmayan seçenek olarak oyuncakları dizme ve çevirme hareketleri sorulur."
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğünün tanımı",
+     "metin": "2020-21'de soruldu: zekâ düzeyinin düşük olduğunu söyleyen seçenek yanlış önerme olarak verilir; geçen yılın öğrenci notunda tanım satırı işaretli."
+    },
+    {
+     "baslik": "Özgül öğrenme güçlüğünde sağaltım",
+     "metin": "Çıkmışta soruldu (ham belge 2021-2023 aralığı): ilaç ya da diyetle düzeltilebileceğini söyleyen seçenek yanlış önerme olarak verilir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Oyuncakları dizme, çevirme hareketleri: Çıkmışlarda 3 kez soruldu. Örnek kök: Otizm spektrum bozukluğunda, aşağıdakilerden hangisi 'toplumsal-duygusal karşılık vermede yetersizlik' ölçütüne örnek değildir?",
+    "Otizmin erken bebeklik belirtileri: 2022-23'te ve 2025-26'da soruldu: tanıda yol gösteren bulgular ayırt ettirilir; tıkınırcasına yemek yeme isteği çeldirici olarak konur (küçük yaş listesinde yalnızca uyku ve yeme sorunları anılır).",
+    "Toplumsal belirtiler ile tekrarlayıcı davranışlar: 2020-21'de soruldu: toplumsal-duygusal yetersizliğe örnek olmayan seçenek olarak oyuncakları dizme ve çevirme hareketleri sorulur.",
+    "Özgül öğrenme güçlüğünün tanımı: 2020-21'de soruldu: zekâ düzeyinin düşük olduğunu söyleyen seçenek yanlış önerme olarak verilir; geçen yılın öğrenci notunda tanım satırı işaretli.",
+    "Özgül öğrenme güçlüğünde sağaltım: Çıkmışta soruldu (ham belge 2021-2023 aralığı): ilaç ya da diyetle düzeltilebileceğini söyleyen seçenek yanlış önerme olarak verilir.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "ee2d30fd16"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders nörogelişimsel bozuklukların tanımını ve altı grubunu verir; zihinsel yetersizliği, otizmi, DEHB'yi, özgül öğrenme güçlüğünü ve tik bozukluklarını belirti, tanı ölçütü ve sağaltım yönünden işler.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders nörogelişimsel bozuklukların tanımını ve altı grubunu verir; zihinsel yetersizliği, otizmi, DEHB'yi, özgül öğrenme güçlüğünü ve tik bozukluklarını belirti, tanı ölçütü ve sağaltım yönünden işler."
+   ],
+   "v": "504cbf80a9"
+  },
+  {
+   "id": "2s11-10",
+   "baslik": "Zihinsel yetersizlikte şiddet düzeyleri",
+   "giris": "Zihinsel yetersizlik şiddeti IQ ile belirlenir: hafif 50-69, orta 35-49, ağır 20-34, çok ağır 20'nin altı.",
+   "s": [
+    14,
+    15
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "konuşmada bir miktar gerilik vardır; günlük konuşmaları yürütür, motor gelişme genellikle normaldir, yeme, temizlik, giyinme, dışkı kontrolü gibi işleri yardımsız görür."
+    },
+    {
+     "metin": "anlama, dil, kendine bakma ve motor becerilerde gerilik vardır; özel eğitimle ikinci sınıf düzeyinde okuma yazma ve saymayı öğrenebilir, basit işleri denetim altında yürütür."
+    },
+    {
+     "metin": "belirgin motor gerilik vardır, dil geç ve çok az gelişir, yaşam boyu başkalarının bakımına bağımlıdır."
+    },
+    {
+     "metin": "çok basit yönergeleri güçlükle anlar; epilepsi ve hareket, görme, işitme bozuklukları bulunabilir."
+    }
+   ],
+   "klip": "o-2s11-10",
+   "ses": [
+    "Zihinsel yetersizlikte şiddet düzeyleri.",
+    "Zihinsel yetersizlik şiddeti IQ ile belirlenir: hafif 50-69, orta 35-49, ağır 20-34, çok ağır 20'nin altı.",
+    "konuşmada bir miktar gerilik vardır; günlük konuşmaları yürütür, motor gelişme genellikle normaldir, yeme, temizlik, giyinme, dışkı kontrolü gibi işleri yardımsız görür.",
+    "anlama, dil, kendine bakma ve motor becerilerde gerilik vardır; özel eğitimle ikinci sınıf düzeyinde okuma yazma ve saymayı öğrenebilir, basit işleri denetim altında yürütür.",
+    "belirgin motor gerilik vardır, dil geç ve çok az gelişir, yaşam boyu başkalarının bakımına bağımlıdır.",
+    "çok basit yönergeleri güçlükle anlar; epilepsi ve hareket, görme, işitme bozuklukları bulunabilir."
+   ],
+   "v": "403d1d4715"
+  },
+  {
+   "id": "2s11-01",
+   "baslik": "Otizmde başlangıç yaşı ve regresyon",
+   "giris": "Otizm belirtileri genellikle 12-24 aylar arasında başlar; kazanılmış becerilerin yitirilmesi (regresif otizm) de aynı aralıkta görülür.",
+   "s": [
+    18
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "belirtiler genellikle 12-24 aylar arasında ortaya çıkar."
+    },
+    {
+     "metin": "aileler bazen daha önce kazanılan becerilerin yitirildiğini anlatır; bu gerileme de genellikle 12-24 aylar arasındadır."
+    },
+    {
+     "metin": "böyle bir gerileme diğer bozukluklarda çok nadirdir, bu nedenle şiddetle otizmi düşündürmelidir."
+    },
+    {
+     "metin": "çocuklar hekime çoğunlukla konuşmama ya da konuşmadaki gerilik nedeniyle getirilir; konuşma gecikmesinin yanında karşısındakini anlamaya ya da izlemeye yönelik davranışlar da yoktur ve çocuk kendini ifade etmeye çalışmaz."
+    }
+   ],
+   "klip": "o-2s11-01",
+   "ses": [
+    "Otizmde başlangıç yaşı ve regresyon.",
+    "Otizm belirtileri genellikle 12-24 aylar arasında başlar; kazanılmış becerilerin yitirilmesi (regresif otizm) de aynı aralıkta görülür.",
+    "belirtiler genellikle 12-24 aylar arasında ortaya çıkar.",
+    "aileler bazen daha önce kazanılan becerilerin yitirildiğini anlatır; bu gerileme de genellikle 12-24 aylar arasındadır.",
+    "böyle bir gerileme diğer bozukluklarda çok nadirdir, bu nedenle şiddetle otizmi düşündürmelidir.",
+    "çocuklar hekime çoğunlukla konuşmama ya da konuşmadaki gerilik nedeniyle getirilir; konuşma gecikmesinin yanında karşısındakini anlamaya ya da izlemeye yönelik davranışlar da yoktur ve çocuk kendini ifade etmeye çalışmaz."
+   ],
+   "v": "d1b4d9330e"
+  },
+  {
+   "id": "2s11-02",
+   "baslik": "Otizmin erken bebeklik belirtileri",
+   "giris": "Otizmde erken bebeklikten itibaren göz teması kurmama, adına bakmama, taklit yapmama ve ortak dikkatin olmaması görülür.",
+   "s": [
+    19
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "göz teması kurulmaz, ad söylendiğinde bakılmaz, taklit yapılmaz ve ortak dikkat yoktur."
+    },
+    {
+     "metin": "kucağa alınmak, rahatlatılmak ya da sakinleştirilmek gibi istekler bulunmaz."
+    },
+    {
+     "metin": "diğer çocuklara ilgi gösterilmez, çocuk onlarla olmaktansa kendi köşesinde yalnız oturmayı yeğler."
+    },
+    {
+     "metin": "konuşan çocuklarda konuşma tekdüzedir, vurgulama yoktur, ses tonu ayarlanamaz; çok yüksek sesle ya da fısıltıyla konuşabilirler."
+    },
+    {
+     "metin": "bu sayfadaki listede yemeyle ilgili bir bulgu yoktur; küçük yaş listesinde (sayfa 20) yalnızca \"uyku ve yeme sorunları\" anılır, tıkınırcasına yemek yeme isteği anılmaz."
+    }
+   ],
+   "klip": "o-2s11-02",
+   "ses": [
+    "Otizmin erken bebeklik belirtileri.",
+    "Otizmde erken bebeklikten itibaren göz teması kurmama, adına bakmama, taklit yapmama ve ortak dikkatin olmaması görülür.",
+    "göz teması kurulmaz, ad söylendiğinde bakılmaz, taklit yapılmaz ve ortak dikkat yoktur.",
+    "kucağa alınmak, rahatlatılmak ya da sakinleştirilmek gibi istekler bulunmaz.",
+    "diğer çocuklara ilgi gösterilmez, çocuk onlarla olmaktansa kendi köşesinde yalnız oturmayı yeğler.",
+    "konuşan çocuklarda konuşma tekdüzedir, vurgulama yoktur, ses tonu ayarlanamaz; çok yüksek sesle ya da fısıltıyla konuşabilirler.",
+    "bu sayfadaki listede yemeyle ilgili bir bulgu yoktur; küçük yaş listesinde (sayfa 20) yalnızca \"uyku ve yeme sorunları\" anılır, tıkınırcasına yemek yeme isteği anılmaz."
+   ],
+   "v": "6843f4e9db"
+  },
+  {
+   "id": "2s11-03",
+   "baslik": "Toplumsal belirtiler ile tekrarlayıcı davranışlar",
+   "giris": "Otizmde tekdüze oyun, araba tekerleği döndürme, sallanma, dönen cisimlere ilgi, değişiklikten hoşlanmama ve törensel davranış sınırlı ve tekrarlayan davranış kümesindedir.",
+   "s": [
+    19
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "hep aynı oyunları oynama, arabaları sıraya dizme, araba tekerleği döndürme, elindeki nesneyi sallama."
+    },
+    {
+     "metin": "sallanma, kendi etrafında dönme, dönen cisimlere özel ilgi (çamaşır makinesini uzun uzun izlemek gibi)."
+    },
+    {
+     "metin": "değişiklikten hoşlanmama, takıntılı ya da törensel davranışlar (hep aynı yoldan gitmek, sabah kalkınca aynı işleri yapmak)."
+    },
+    {
+     "metin": "göz teması kurmama, adına bakmama, taklit yapmama, ortak dikkatin olmaması, diğer çocuklara ilgi göstermeme; oyuncakları dizme ve çevirme bu kümeye girmez."
+    }
+   ],
+   "klip": "o-2s11-03",
+   "ses": [
+    "Toplumsal belirtiler ile tekrarlayıcı davranışlar.",
+    "Otizmde tekdüze oyun, araba tekerleği döndürme, sallanma, dönen cisimlere ilgi, değişiklikten hoşlanmama ve törensel davranış sınırlı ve tekrarlayan davranış kümesindedir.",
+    "hep aynı oyunları oynama, arabaları sıraya dizme, araba tekerleği döndürme, elindeki nesneyi sallama.",
+    "sallanma, kendi etrafında dönme, dönen cisimlere özel ilgi (çamaşır makinesini uzun uzun izlemek gibi).",
+    "değişiklikten hoşlanmama, takıntılı ya da törensel davranışlar (hep aynı yoldan gitmek, sabah kalkınca aynı işleri yapmak).",
+    "göz teması kurmama, adına bakmama, taklit yapmama, ortak dikkatin olmaması, diğer çocuklara ilgi göstermeme; oyuncakları dizme ve çevirme bu kümeye girmez."
+   ],
+   "v": "63357bf676"
+  },
+  {
+   "id": "2s11-08",
+   "baslik": "Otizmde sağaltım ilkeleri",
+   "giris": "Otizm biyolojik temelli olsa da en etkin sağaltım yöntemleri davranışsal girişimler ve eğitimdir; ilaç daha çok ek tanıları ve davranış sorunlarını hedefler.",
+   "s": [
+    22
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "sağaltım çok boyutlu olmak zorundadır; iki temel ilke bireye yönelik planlamak ve çevresel bağlamı da ele almaktır."
+    },
+    {
+     "metin": "bağımsız yaşam becerilerini geliştirmek, yaşam kalitesini artırmak, sosyal becerileri ve iletişimi iyileştirmek; güçlü oldukları alanları geliştirmek."
+    },
+    {
+     "metin": "günümüzde en çok kullanılan yöntemlerin başında davranışsal yaklaşımlar gelir; en etkin yöntemler davranışsal girişimler ve eğitimdir."
+    },
+    {
+     "metin": "ilaç sağaltımı daha çok ek tanıları ve davranışsal sorunları hedef alır."
+    }
+   ],
+   "klip": "o-2s11-08",
+   "ses": [
+    "Otizmde sağaltım ilkeleri.",
+    "Otizm biyolojik temelli olsa da en etkin sağaltım yöntemleri davranışsal girişimler ve eğitimdir; ilaç daha çok ek tanıları ve davranış sorunlarını hedefler.",
+    "sağaltım çok boyutlu olmak zorundadır; iki temel ilke bireye yönelik planlamak ve çevresel bağlamı da ele almaktır.",
+    "bağımsız yaşam becerilerini geliştirmek, yaşam kalitesini artırmak, sosyal becerileri ve iletişimi iyileştirmek; güçlü oldukları alanları geliştirmek.",
+    "günümüzde en çok kullanılan yöntemlerin başında davranışsal yaklaşımlar gelir; en etkin yöntemler davranışsal girişimler ve eğitimdir.",
+    "ilaç sağaltımı daha çok ek tanıları ve davranışsal sorunları hedef alır."
+   ],
+   "v": "f6a8965d3e"
+  },
+  {
+   "id": "2s11-06",
+   "baslik": "DEHB'nin temel belirtileri ve işlev bozulması",
+   "giris": "DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir; belirtiler akademik, sosyal ve mesleki alanları olumsuz etkiler.",
+   "s": [
+    23
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "dikkatsizlik, aşırı hareketlilik ve dürtüsellik; gelişimsel düzeyle uyuşmayacak ağırlıktadır."
+    },
+    {
+     "metin": "kişinin yaşamını akademik, sosyal ve mesleki alanlarda olumsuz etkiler ve uyum becerilerini bozar."
+    },
+    {
+     "metin": "verilen ödevlerden çabuk sıkılma, görevi sürdürememe, çevresel uyaranlarla dikkatin kolayca çelinmesi, hayallere dalma, dinlemiyormuş gibi görünme, eşyaları kaybetme, okurken satır atlama."
+    },
+    {
+     "metin": "yaş ve gelişim düzeyiyle uyumsuz, amaçsız ve görevle bağlantısız hareketlilik."
+    },
+    {
+     "metin": "düşünmeden hareket etme, kuralları umursamama, başkalarının etkinliklerine müdahale etme, sırasını bekleyememe."
+    }
+   ],
+   "klip": "o-2s11-06",
+   "ses": [
+    "DEHB'nin temel belirtileri ve işlev bozulması.",
+    "DEHB'nin temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir; belirtiler akademik, sosyal ve mesleki alanları olumsuz etkiler.",
+    "dikkatsizlik, aşırı hareketlilik ve dürtüsellik; gelişimsel düzeyle uyuşmayacak ağırlıktadır.",
+    "kişinin yaşamını akademik, sosyal ve mesleki alanlarda olumsuz etkiler ve uyum becerilerini bozar.",
+    "verilen ödevlerden çabuk sıkılma, görevi sürdürememe, çevresel uyaranlarla dikkatin kolayca çelinmesi, hayallere dalma, dinlemiyormuş gibi görünme, eşyaları kaybetme, okurken satır atlama.",
+    "yaş ve gelişim düzeyiyle uyumsuz, amaçsız ve görevle bağlantısız hareketlilik.",
+    "düşünmeden hareket etme, kuralları umursamama, başkalarının etkinliklerine müdahale etme, sırasını bekleyememe."
+   ],
+   "v": "e702375575"
+  },
+  {
+   "id": "2s11-04",
+   "baslik": "Özgül öğrenme güçlüğünün tanımı",
+   "giris": "Özgül öğrenme güçlüğü, genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklükle belirlidir ve tanı için okula başlamak gerekir.",
+   "s": [
+    30
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "bireyin özgül bilişsel alanlarda gösterdiği eksikliklerle belirli bir bozukluktur."
+    },
+    {
+     "metin": "genel bilişsel işlevlerde bir sorun yokken çocuğun akademik başarısında ciddi düşüklük vardır; bu nedenle zekâ düzeyi düşüklüğü tanıyı tanımlamaz."
+    },
+    {
+     "metin": "çocuğun okula başlamış olması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gerekir."
+    },
+    {
+     "metin": "zihinsel yetersizlikte genel zihinsel kapasite yeterince gelişmemiştir; özgül öğrenme güçlüğünde ise bozulma özgül alanlarla sınırlıdır."
+    }
+   ],
+   "klip": "o-2s11-04",
+   "ses": [
+    "Özgül öğrenme güçlüğünün tanımı.",
+    "Özgül öğrenme güçlüğü, genel bilişsel işlevlerde sorun olmadığı halde akademik başarıda ciddi düşüklükle belirlidir ve tanı için okula başlamak gerekir.",
+    "bireyin özgül bilişsel alanlarda gösterdiği eksikliklerle belirli bir bozukluktur.",
+    "genel bilişsel işlevlerde bir sorun yokken çocuğun akademik başarısında ciddi düşüklük vardır; bu nedenle zekâ düzeyi düşüklüğü tanıyı tanımlamaz.",
+    "çocuğun okula başlamış olması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gerekir.",
+    "zihinsel yetersizlikte genel zihinsel kapasite yeterince gelişmemiştir; özgül öğrenme güçlüğünde ise bozulma özgül alanlarla sınırlıdır."
+   ],
+   "v": "df6dcd02ab"
+  },
+  {
+   "id": "2s11-09",
+   "baslik": "Özgül öğrenme güçlüğünde alt tanımlayıcılar",
+   "giris": "DSM-5'te tek başlık altında birleşen özgül öğrenme güçlüğünde okuma, yazılı anlatım ve matematik alanları alt tanımlayıcı olarak kodlanır.",
+   "s": [
+    30,
+    32
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "özgül öğrenme bozukluğu başlığı altında birleştirilmiştir; okuma, yazılı anlatım ve matematik alanlarındaki sorunlar tanının alt tanımlayıcılarıdır."
+    },
+    {
+     "metin": "akademik sorunlar belirginleşir ve en çok başvuru bu dönemde olur."
+    },
+    {
+     "metin": "sesleri karıştırma, doğru okuyamama, yanlış ve yavaş okuma, harf, hece ve satır atlama, okuduğunu anlamakta zorlanma."
+    },
+    {
+     "metin": "ters yazma, eksik yazma, harf ve hece atlama, düzgün tümce kurmakta güçlük."
+    },
+    {
+     "metin": "alfabe, günler, aylar, sayılar, çarpım tablosu ve saati öğrenmekte çok zorluk."
+    }
+   ],
+   "klip": "o-2s11-09",
+   "ses": [
+    "Özgül öğrenme güçlüğünde alt tanımlayıcılar.",
+    "DSM-5'te tek başlık altında birleşen özgül öğrenme güçlüğünde okuma, yazılı anlatım ve matematik alanları alt tanımlayıcı olarak kodlanır.",
+    "özgül öğrenme bozukluğu başlığı altında birleştirilmiştir; okuma, yazılı anlatım ve matematik alanlarındaki sorunlar tanının alt tanımlayıcılarıdır.",
+    "akademik sorunlar belirginleşir ve en çok başvuru bu dönemde olur.",
+    "sesleri karıştırma, doğru okuyamama, yanlış ve yavaş okuma, harf, hece ve satır atlama, okuduğunu anlamakta zorlanma.",
+    "ters yazma, eksik yazma, harf ve hece atlama, düzgün tümce kurmakta güçlük.",
+    "alfabe, günler, aylar, sayılar, çarpım tablosu ve saati öğrenmekte çok zorluk."
+   ],
+   "v": "502ec186a9"
+  },
+  {
+   "id": "2s11-05",
+   "baslik": "Özgül öğrenme güçlüğünde sağaltım",
+   "giris": "Özgül öğrenme güçlüğünün sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur; temel yaklaşım bireysel özel eğitim programlarıdır.",
+   "s": [
+    35
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "günümüzde sağaltımda etkililiği kanıtlanmış bir ilaç tedavisi yoktur."
+    },
+    {
+     "metin": "bireysel özel eğitim programlarıdır; bunlar genellikle nöropsikolojik kuramlara dayanır."
+    },
+    {
+     "metin": "programlar yapılandırılmış olur, çocuğun bireysel güçlüklerine uygun kurulur, parçadan bütüne giden tümevarımcı bir tarzda ilerler ve çocuğun birden çok duyusuna yönelik bileşenler içerir."
+    },
+    {
+     "metin": "ilaçla ya da diyetle düzelir ifadesi bu tabloya uymadığı için yanlış önermedir."
+    }
+   ],
+   "klip": "o-2s11-05",
+   "ses": [
+    "Özgül öğrenme güçlüğünde sağaltım.",
+    "Özgül öğrenme güçlüğünün sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur; temel yaklaşım bireysel özel eğitim programlarıdır.",
+    "günümüzde sağaltımda etkililiği kanıtlanmış bir ilaç tedavisi yoktur.",
+    "bireysel özel eğitim programlarıdır; bunlar genellikle nöropsikolojik kuramlara dayanır.",
+    "programlar yapılandırılmış olur, çocuğun bireysel güçlüklerine uygun kurulur, parçadan bütüne giden tümevarımcı bir tarzda ilerler ve çocuğun birden çok duyusuna yönelik bileşenler içerir.",
+    "ilaçla ya da diyetle düzelir ifadesi bu tabloya uymadığı için yanlış önermedir."
+   ],
+   "v": "d2debd32f7"
+  },
+  {
+   "id": "2s11-07",
+   "baslik": "Tourette bozukluğu",
+   "giris": "Tourette bozukluğunda hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süre gözlenir.",
+   "s": [
+    38
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süren bir dönem boyunca gözlenir."
+    },
+    {
+     "metin": "motor tikler genellikle 3-8 yaşlar arasında göz kırpma ve diğer yüz tikleri biçiminde başlar."
+    },
+    {
+     "metin": "burun çekme ve boğaz temizleme gibi tikler 3 yaş gibi erken başlayabilir, ancak tipik olarak motor tiklerden birkaç yıl sonra başlar."
+    },
+    {
+     "metin": "tikler gün içinde nöbetler halinde gelir, haftalar ve aylar içinde şiddeti azalıp artar; nöbet sırasında tikler arasında 0.5-1 saniyelik aralıklar olabilir."
+    },
+    {
+     "metin": "geç ergenlik ve yetişkinlikte düzelme eğilimi vardır."
+    }
+   ],
+   "klip": "o-2s11-07",
+   "ses": [
+    "Tourette bozukluğu.",
+    "Tourette bozukluğunda hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süre gözlenir.",
+    "hem motor tikler hem ses tikleri bir arada bulunur ve bir yıldan uzun süren bir dönem boyunca gözlenir.",
+    "motor tikler genellikle 3-8 yaşlar arasında göz kırpma ve diğer yüz tikleri biçiminde başlar.",
+    "burun çekme ve boğaz temizleme gibi tikler 3 yaş gibi erken başlayabilir, ancak tipik olarak motor tiklerden birkaç yıl sonra başlar.",
+    "tikler gün içinde nöbetler halinde gelir, haftalar ve aylar içinde şiddeti azalıp artar; nöbet sırasında tikler arasında 0.5-1 saniyelik aralıklar olabilir.",
+    "geç ergenlik ve yetişkinlikte düzelme eğilimi vardır."
+   ],
+   "v": "fa5b1bde55"
+  }
+ ]
+}

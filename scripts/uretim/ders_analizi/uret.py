@@ -65,6 +65,7 @@ DUZEY = {"L1_hatirlama": "hatırlama", "L2_anlama_iliski": "anlama ve ilişki ku
 def sade(s: str) -> str:
     """Markdown işaretlerini ve fazla boşluğu atar (ekran + ses ortak düz metin)."""
     s = re.sub(r"\*\*|__|`", "", s or "")
+    s = re.sub(r"\bimza bulgusu", "ayırt edici bulgu", s)  # H-uslup: 'imza' doğal Türkçe değil (profil gerekçesi)
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
