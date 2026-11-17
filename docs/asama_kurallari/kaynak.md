@@ -187,11 +187,11 @@
 
 
 ### H508 — Drive'daki ses dosyasının adı başka dersi gösteriyordu: "TSSB Psikaytr 2" aslında EKT (Tedaviler) dersinin başıydı (2026-11-06)
-- **Önleme:** Ses dosyası, PDF gibi, **içerikle** eşleşir (KURUL2_DERS_STANDARDI §1): hizada slayta düşmeyen ≥3 dk'lık blok "ders dışı" işaretlenir ve aynı kurulun diğer derslerinin slaytlarıyla karşılaştırılır; bir dersin başı/sonu sessizse öbür kayıtlar o derse ait olabilir diye taranır.
+- **Önleme:** Ses dosyası adla değil içerikle eşleşir (KURUL2_DERS_STANDARDI §1): slayta düşmeyen ≥3 dk blok "ders dışı" işaretlenip kurulun öbür dersleriyle karşılaştırılır.
 
 
 ### H530 — Kısık amfi kaydında hoca dökümü uydurma cümlelerle doluyordu (2026-11-10, k2-22/23/24/58)
-- **Çözüm/önleme:** `hoca_dokum.py` ilk 10 dk'nın ortalamasını ölçer; −28 dB'den kısıksa süzgeç + normalleştirme kendiliğinden uygulanır (normal kayıtta 2026-10-27 "ham ses en iyi" bulgusu geçerli kalır). Kısık kayıtta `--model Systran/faster-whisper-large-v3` verilir (35 dk ≈ 6 dk GPU). Döküm hangi derse ait diye dosya adına değil içeriğe bakılır: bu gece "Ses Klibi 1 (1)" adlı kayıt Psikiyatri değil Epilepsi çıktı.
+- **Çözüm/önleme:** `hoca_dokum.py` ilk 10 dk −28 dB'den kısıksa süzgeç + normalleştirme uygular (normal kayıtta ham ses); kısıkta `--model Systran/faster-whisper-large-v3`. Kaydın dersi dosya adından değil içerikten belirlenir.
 
 
 - H537 — A1a/A2 "kanıt" alanları birden çok satırı birleştiren özetler olduğundan değerlendirme kapısından geçmiyordu (2026-11-09/10, dört derste) — betik denetler: `kaynak_kapisi.py`

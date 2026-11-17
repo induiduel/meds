@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 28 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 29 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -23,8 +23,7 @@
 
 
 ### H81 — Amfi kaydı tek parça + VAD ile verilince Whisper "Altyazı M.K." sanrısıyla erken bitti; eşzamanlı tsc OOM'a yol açtı (2026-10-27)
-- **Çözüm / kural:** `hoca_dokum.py`: ham ses, VAD ve istem yok, 60 sn parça + 2 sn bindirme, sanrı süzgeci, her parçadan sonra
-  `.yarim` yazılır ve kaldığı yerden sürer; birim `MemoryMax=4G`. Döküm sürerken `tsc --noEmit` çalıştırılmaz.
+- **Çözüm / kural:** `hoca_dokum.py`: ham ses, VAD/istem yok, 60 sn parça + 2 sn bindirme, sanrı süzgeci, `.yarim` ile kaldığı yerden sürer; `MemoryMax=4G`. Döküm sürerken `tsc --noEmit` yok.
 
 
 ### H104 · Hoca ses kaydı: tek model dökümü sınav vurgularını bozuyordu; kayıt dersin ortasından başlıyordu (2026-10-27, k2-08)
@@ -36,13 +35,11 @@
 
 
 ### H126 · Sesli ders ekranında gen sembolleri okunuşla görünüyordu: "hoks, o te iks, me se iks, paks 6" (2026-10-28, k2-08)
-- **Kural:** Kullanıcıya gösterilen metin daima yazımla (HOX, OTX, PAX6), EMA'ya giden metin okunuşla olur. Tam içerik hattında her yeni v2 metni yazılınca `python3 scripts/uretim/sesli_anlatim/yazim_sozlugu.py` yeniden çalıştırılır ve ekran metni okunuş artığı için gözle denetlenir; `ekran` alanı her cümlede doldurulur (sembol içeren cümlede boş bırakılmaz).
+- **Kural:** Ekran metni daima yazımla (HOX, PAX6), EMA metni okunuşla. Her yeni v2 metninden sonra `scripts/uretim/sesli_anlatim/yazim_sozlugu.py` çalıştırılır; sembollü cümlede `ekran` alanı boş kalmaz.
 
 
 ### H128 · EMA yabancı terimleri yanlış okuyor; anlatım konu geçişini söylemiyor; panel geç, zoom kısa anlatımda, çizim tek renk (2026-10-28)
-- **Kural:** yeni ders seslendirmesinden önce `terim_okunus.py --denetle <anahtar>`; yanlış `KURAL` satırı sözlüğe eklenir.
-  Anlatım yazarı önce `anlatim_plani.md` kurar; başlıksız konu geçişinde "burada konu değişiyor" cümlesi zorunlu.
-  Çizimde birden çok resim varsa `resim: "R#"`, ayrı yapılar ayrı renk, hattı belirsiz bölge `boya: true`.
+- **Kural:** seslendirmeden önce `terim_okunus.py --denetle <anahtar>`, yanlış okunuş sözlüğe. Anlatım önce `anlatim_plani.md`; başlıksız konu geçişi söylenir. Çok resimde `resim: "R#"`, ayrı yapı ayrı renk, belirsiz bölge `boya: true`.
 
 
 ### H448 — `klip_tasi.py` metinle birlikte düzenlenmiş v2'yi eski metne göre yeniden kurup değişen paragrafları boşaltıyordu; `ders-ekle` elle iyileştirilmiş çapayı ezdi (2026-10-30)
@@ -65,15 +62,15 @@
 
 
 ### H508 — Drive'daki ses dosyasının adı başka dersi gösteriyordu: "TSSB Psikaytr 2" aslında EKT (Tedaviler) dersinin başıydı (2026-11-06)
-- **Önleme:** Ses dosyası, PDF gibi, **içerikle** eşleşir (KURUL2_DERS_STANDARDI §1): hizada slayta düşmeyen ≥3 dk'lık blok "ders dışı" işaretlenir ve aynı kurulun diğer derslerinin slaytlarıyla karşılaştırılır; bir dersin başı/sonu sessizse öbür kayıtlar o derse ait olabilir diye taranır.
+- **Önleme:** Ses dosyası adla değil içerikle eşleşir (KURUL2_DERS_STANDARDI §1): slayta düşmeyen ≥3 dk blok "ders dışı" işaretlenip kurulun öbür dersleriyle karşılaştırılır.
 
 
 ### H530 — Kısık amfi kaydında hoca dökümü uydurma cümlelerle doluyordu (2026-11-10, k2-22/23/24/58)
-- **Çözüm/önleme:** `hoca_dokum.py` ilk 10 dk'nın ortalamasını ölçer; −28 dB'den kısıksa süzgeç + normalleştirme kendiliğinden uygulanır (normal kayıtta 2026-10-27 "ham ses en iyi" bulgusu geçerli kalır). Kısık kayıtta `--model Systran/faster-whisper-large-v3` verilir (35 dk ≈ 6 dk GPU). Döküm hangi derse ait diye dosya adına değil içeriğe bakılır: bu gece "Ses Klibi 1 (1)" adlı kayıt Psikiyatri değil Epilepsi çıktı.
+- **Çözüm/önleme:** `hoca_dokum.py` ilk 10 dk −28 dB'den kısıksa süzgeç + normalleştirme uygular (normal kayıtta ham ses); kısıkta `--model Systran/faster-whisper-large-v3`. Kaydın dersi dosya adından değil içerikten belirlenir.
 
 
 ### H532 — CPU'lu `meds-ema` birimi açıkken ders EMA işi GPU yerine CPU'ya düşebiliyordu (2026-11-10)
-- **Çözüm/önleme:** ders sesi üretmeden önce `systemctl --user stop meds-ema` + `cozucu_ses_gpu.sh scripts/uretim/sesli_anlatim/ema_isci.py bekle`; günlükte "EMA Lightning hazır: cuda" görülür. İş bitince birim yeniden başlatılır. Kalıcı çözüm (birimi kaldırmak ya da GPU başlatıcısına çevirmek) kullanıcı kararı bekliyor.
+- **Çözüm/önleme:** ders sesinden önce `systemctl --user stop meds-ema` + `cozucu_ses_gpu.sh scripts/uretim/sesli_anlatim/ema_isci.py bekle`; günlükte "EMA Lightning hazır: cuda" görülür, bitince birim yeniden başlatılır.
 
 
 ### H538 — 5. parti derslerinin anahtarları `MODUL_ANAHTARLAR`'da yoktu: yazımla tutulan kısaltmalar (DSM, EEG, SSRI) harf harf okunmamış olabilir (2026-11-09)
@@ -81,7 +78,7 @@
 
 
 ### H539 — EMA tam MP3 yüklemesi Oracle'daki başka bir dağıtımın sunucu yeniden başlatmasına denk gelince iş "hata"ya düştü (2026-11-09, k2-22)
-- **Önleme:** dağıtım öncesi `dagit.sh` kuyrukta `calisiyor` EMA işi varsa beklemeli ya da işçi `tam/bitir` adımını 3 kez yinelemeli (yapılacak). İşçi günlüğü: `journalctl --user -o cat | grep <key>` (birim değil, scope).
+- **Önleme:** `dagit.sh` kuyrukta `calisiyor` EMA işi varken beklemeli ya da işçi `tam/bitir`'i 3 kez yinelemeli (yapılacak).
 
 
 ### H540 — `kelime_zaman.py --gpu` elle çağrıda `libcublas.so.12` bulamayıp sessizce CPU'ya düştü (2026-11-10)
@@ -89,7 +86,7 @@
 
 
 ### H586 — Çözücü/asistan/Öğren/terim/ek modül seslerinde terim okunuşu ve kısaltma yolu uygulanmıyordu; okunuş 9 yerde, `seslendir` 4 kopya (2026-11-16)
-- **Önleme kuralı:** yeni ses betiği okunuşu yalnız `ses_metin.hazirla`, klibi yalnız `ses_klip` ile üretir; `E.*` genel ayarı ezilmez. Okunuş yolu değişikliğinden sonra toplu üretimden ÖNCE 10 kliplik dinleme sınaması yapılır (harf harf kısaltma, şık etiketi "A,", "O" zamiri, ek modülde "dede"). Sesli ders okunuşu ortak yola `MEDS_OKUNUS_ORTAK=1` ile geçer (karma okunan metni içerdiği için 1.032 paragraf yeniden üretilir — kullanıcı kararı).
+- **Önleme kuralı:** ses betiği okunuşu yalnız `ses_metin.hazirla`, klibi yalnız `ses_klip` ile üretir; `E.*` ezilmez. Okunuş yolu değişince toplu üretimden önce 10 kliplik dinleme sınaması (kısaltma, şık etiketi, "O", "dede"). Sesli ders ortak yola yalnız `MEDS_OKUNUS_ORTAK=1` ile (kullanıcı kararı).
 
 
 - H587 — Öğren destesinde 16 klip 14–22 dakika sürüyordu; ses için kalite kapısı yoktu (2026-11-16) — betik denetler: `ses_kapisi.py`
@@ -99,13 +96,13 @@
 
 - H605 — Son derslerde PDF ↔ metin takibi zayıftı: cümlelerin %19–24'ü yalnız sayfa vurgusu alıyordu (2026-11-17, kullanıcı bildirdi) — betik denetler: `scripts/uretim/sesli_anlatim/artik_capa.py`
 ### H606 — Kurul 3 arşivinde işaret "çapa sayfasından kayıyor", tablo/şema cümleleri yalnız sayfaya düşüyordu (2026-11-17)
-- **Önleme kuralı:** İşaretin sayfası çapanın sayfasından farklı olamaz; komşu sayfa yalnız çapa hiç sayfa vermiyorsa (hizalama
-  boşluğu) ve yalnız `capali` içinde değerlendirilir. Eşik gevşetilmez; eşleşmeyen cümlede doğru yol madde/kutu eşlemesidir, "sayfa"
-  işareti değil.
+- **Önleme kuralı:** İşaret yalnız çapanın sayfasında üretilir (komşu sayfa yalnız çapa sayfası yoksa, `capali` içinde); eşleşmeyen cümle madde/kutuya bağlanır, "sayfa"ya düşmez; eşik gevşetilmez.
 
 
 ### H607 — Arşiv metin üretimi görsel/şema sayfalarında "yanıt yok" verip sayfayı anlatımsız bırakıyordu; ders yayına giremiyordu (2026-11-17)
-- **Önleme kuralı:** Bir üretim adımı, yayın kapısının denetimlerini **kendi içinde** çalıştırmadan "0 HATA" diyemez; boş yanıt
-  "sayfa yok" değil "yeniden dene + yedek yol"dur. Görsel sayfada modelin eline metin verilemiyorsa bağlam (bölüm + komşu başlık)
-  verilir; kaynak dışı bilgi eklenmez.
+- **Önleme kuralı:** Üretim adımı yayın kapısı denetimlerini kendi içinde koşmadan "0 HATA" demez; boş yanıt = yeniden dene + kısa istem; yazısız görselde yalnız bölüm/komşu başlık bağlamı, kaynak dışı bilgi yok.
+
+
+### H609 — Zengin transkript tablo ayrıştırıcısı sayı sözcüğünü kesiyordu (2026-11-17, geliştirme sırasında)
+- **Önleme:** yapı (tablo/sıra) çıkaran betik emin değilse yapı kurmaz, cümleyi korur; tıbbi sayı kesilmez.
 

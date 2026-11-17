@@ -1,19 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 804,
-  "baslik": "Bitirdiklerim: daha net ve doğru hesap",
+  "onem": 805,
+  "baslik": "İçerik hattı: daha hızlı ve tutarlı ders üretimi",
   "maddeler": [
-    "Bitirdiklerim: Özet dört kutuya ayrıldı — İlerleme, Kalan ders süresi, Senin hızınla (kaç gün) ve Şimdiye kadar.",
-    "Doğru süre: Kalan süreler artık her yerde aynı formül ve aynı izleme hızıyla hesaplanıyor; \"Nasıl hesaplanıyor?\" bölümü formülü senin sayılarınla gösteriyor.",
-    "Düzeltme: Bütün konuları hesap dışı bırakılan ders artık \"Tamamlandı\" görünmüyor; yüzdeler aşağı yuvarlanıyor (199/200 artık %100 değil).",
-    "Doğru oranı: En az 10 cevaptan sonra ve kaç cevaba dayandığıyla birlikte gösteriliyor."
+    "Arka plan: Yeni derslerin hazırlanmasında kayıt düzeni sıkılaştırıldı; içerik hattı daha az gereksiz okumayla, daha hızlı çalışır.",
+    "Site kullanımında görünür bir değişiklik yok."
   ],
   "eklenen": [],
   "degisen": [
-    "Bitirdiklerim özet kutuları"
+    "İçerik hattı kayıt kuralları"
   ],
-  "duzeltilen": [
-    "Bitirdiklerim kalan süre ve yüzde hesapları"
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

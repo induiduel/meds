@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 19 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 20 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -72,4 +72,8 @@
 ### H555 — Şık açıklamasında uzunluk dolgusu: aynı "ana bilgi" cümlesi birden çok şıka eklendi (2026-11-12, k2-29 / k2-30)
 - **Önleme:** şık açıklaması kapıyı geçmek için betikle uzatılmaz (AGENTS 14 dolgu yasağı); kısa kalan açıklama elle, o şıkkın kavramıyla yazılır. Önerilen kapı eki: aynı sorunun iki şıkkında birebir aynı ≥6 kelimelik cümle HATA (`sik_aciklama.py`).
 
+
+
+### H608 — 15 Kurul 2 dersinde sesli soru çözücü bağlantısı yoktu; ders sonu penceresi Kurul 2'de hiç açılmıyordu (2026-11-17, kullanıcı bildirdi)
+- **Önleme:** ders ↔ katman eşlemesi kalıcı kodla (kural 15); başlık yalnız geri düşüş.
 

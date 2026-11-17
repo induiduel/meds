@@ -36,7 +36,7 @@
 | `hatalar/on_yuz_tasarim_tema.md` | tasarım, tema, kabuk, düzen, cihaz güvenli alanı | 21 |
 | `hatalar/on_yuz_sayfa_denetimi.md` | sayfa denetimi bulguları, öğrenci sayfaları, veri/eşitleme ekranları | 40 |
 | `hatalar/yonetim_basarim.md` | yönetim paneli ve ön yüz başarımı | 21 |
-| `hatalar/betik_altyapi.md` | betik, LLM zinciri/kilidi, GPU/CPU, kapı altyapısı | 20 |
+| `hatalar/betik_altyapi.md` | betik, LLM zinciri/kilidi, GPU/CPU, kapı altyapısı | 21 |
 | `hatalar/ogren_modul_oyun.md` | Öğren destesi, ek modüller, KMB filmleri, oyunlar | 28 |
 | `hatalar/diger.md` | genel kurallar ve kayıt maddeleri | 5 |
 
@@ -443,4 +443,5 @@
 - **H607** · "Arşiv metin üretimi görsel/şema sayfalarında yanıt yok verip sayfayı anlatımsız bırakıyordu": uzun istem + 9000 token çıktı boş dönüyordu, yazısız fotoğrafta bilgi yok, H109/üslup/H434 yalnız yayın kapısında → kısa istem, bağlamlı görsel yedeği, OCR katmanı, denetim turun içinde, `k3_onar.py` → hatalar/ses.md
 - **H608** · "15 Kurul 2 dersinde sesli çözücü bağlantısı yok, ders sonu penceresi açılmıyor": ders ↔ çözücü eşlemesi yalnız başlık eşitliği (program başlığı ≠ PDF başlığı) + pencere yalnız Kurul 1 branşları → defter kodu önce, pencere her derste → hatalar/soru_cozucu.md
 - **H609** · "Zengin transkript tablosunda kesik sayı": gevşek ek kalıbı çok sözcüklü sayıyı kesiyordu → sayı sözcüğü listesi, eksik satırda tablo kurulmaz → hatalar/ses.md
+- **H610** · "Ders/talimat/hata kaydı yazımı optimizasyonu geri kabartıyor": yazım anında boy/tekrar/kopya denetimi yok → `kayit_kapisi.py` (`kos.py kayit`, pre-commit) → hatalar/betik_altyapi.md
 - **H611** · "Bitirdiklerim'de üç farklı kalan süre, hesap dışı ders Tamamlandı, 199/200=%100": aynı adla üç formül → `hizKatsayisi` tek hız formülü, dört adlı kutu, aşağı yuvarlama → hatalar/on_yuz_sayfa_denetimi.md

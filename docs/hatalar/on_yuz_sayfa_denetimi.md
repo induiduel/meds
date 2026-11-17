@@ -34,7 +34,7 @@
 - **Belirti:** Masaüstünde Araçlar listesi ekranın altında kesik kalıyor, üç satırdan fazlası görünmüyordu.
 - **Kök neden:** `.d15.s15` ekran yüksekliğine sabitlenmişti (`height: calc(100dvh - …)`) ve araç listesi kalan alanda kendi içinde kayıyordu; Test oluştur kutusu büyüdükçe (yeni süzgeç satırları) listeye kalan alan birkaç piksele indi.
 - **Çözüm:** Sabit yükseklik kaldırıldı (sayfa normal kayar); özet kartları tek satır, test kutusu sıkı, araçlar ızgara.
-- **Kural:** İçerik sayfalarında ekrana sabit yükseklik + iç kaydırma kurma; büyüyebilen içerik (süzgeç, liste) başka bölümü görünmez kılar.
+- **Kural:** Sınav vurgusu tek dökümden çıkarılmaz; alıntı birebir (düzeltme `not`ta); gen adı/sayı yalnız slayt ya da öğrenci notuyla örtüşünce vurgu olur; kaydın başladığı slayt rapora yazılır.
 
 ## H106 · Çalışma takvimi (ısı haritası) hücreleri dev görünüyordu (2026-10-27)
 - **Belirti:** İstatistiklerim › Çalışma takvimi geniş ekranda ~80 px'lik kutularla sayfayı kaplıyordu.

@@ -30,6 +30,7 @@ scripts/
 - Ders: `ders_isci/` (yayinla.py, denetle.py) · `sesli_anlatim/` (EMA/XTTS işçisi, cümle/kelime zamanı, pdf_isaret, terim) ·
   `ders_analizi/` · `ders_icerik/` · `ders_video/` · `ogren_ses/` · `ek_modul/`
 - Ses ortak: `ses_ortak/` (`ses_kapisi.py`: ses kalite kapısı + kayıt↔disk↔Oracle boyut denetimi + artık raporu; CPU, salt okunur)
+  · `yeniden_uret.py` (okunus_farki listesindeki klipleri yalnız onları GPU sarmalayıcısıyla yeniden üretir: hazırlık → kapı → atomik takas, sürdürülebilir defter, `geri-al`; sınama `sinama_yeniden_uret.py`)
 - Görsel: `cizim/` (cizim_kapisi, TALIMAT_CIZIM) · `kroki/` · `ara_resim/` · `lottie/` · `kmb/`
 - Soru/çözücü: `spot_cozucu/` (ses.py, onem_dogrula, cozucu_dogrula) · `patoloji_cozucu/` (cozucu_ses_gpu.sh) ·
   `ses_ortak/` (EMA okunuş tek girişi `ses_metin.hazirla` + klip çekirdeği `ses_klip` + `okunus_farki.py` raporu + `sinama_okunus.py` okunuş sınaması, 0 HATA) ·
@@ -49,7 +50,7 @@ scripts/
 - Veri/arama: `pipeline/` (Drive → downloads → temp → database) · `advanced_ai/` (rag_vektor_hatti.py …) · `search/` · `db/` · `db_analiz/`
 - Derleme/sınama: `vite/` (splitLearningDecks, surumDosyasi — vite.config.ts buradan import eder) · `design/` (kontrast kapısı) ·
   `perf/` · `cevrimdisi_sinama/` · `v15/` · `fixtures/` · `artifact_studio/` · `claude_eklenti/`
-- Sağlık/bütçe: `saglik_raporu.py [--canli] [--json] | egilim` tek sağlık raporu · bütçe kapısı `kapilar/butce.py` (+ `butce.json`, tavan yalnız azalır)
+- Sağlık/bütçe: `saglik_raporu.py [--canli] [--json] | egilim` tek sağlık raporu · bütçe kapısı `kapilar/butce.py` (+ `butce.json`, tavan yalnız azalır) · kayıt kapısı `kapilar/kayit_kapisi.py` (yazım kabartması, H610)
 - Tek dosyalık: `gpu_recovery.sh` (GPU kurtarma) · `rag-yeniden-parcala.mts` (RAG yeniden parçalama)
 - Belgeler: `belge_haritasi.py` → `docs/HARITA.md` (belge eklenince yeniden çalıştır) · `betik_haritasi.py` → bu dosyanın kök bölümü
 - **Yönlendirme:** `nereye.py "<görev>"` (katalog `docs/yonlendirme.json`, `--denetle` D8'de) · `bag.py kim|ne|etki|yetim <yol>`

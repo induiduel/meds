@@ -95,15 +95,7 @@
 
 
 ### H127 · Slayttaki şekil/deney anlatılmadı, "ders yorumuna girmez" diye geçildi (2026-10-28, k2-05 Nörolojik Muayene, sayfa 32–33)
-- **Kalıcı çözüm ve kural (Şekil ve deney anlatım kuralı, `KURUL2_DERS_STANDARDI.md` §8.12):**
-  1. **Şekil kaynaktır.** Slayttaki çizim, fotoğraf, şema, grafik, tablo, mikroskopi ve görüntüleme; içindeki oklar, etiketler, işaretler (X, kesik/kalın çizgi, renk), panel karşılaştırmaları ders içeriğidir ve anlatılır. "Slaytta yazmıyor" şekli atlama gerekçesi değildir.
-  2. **Deney/test/muayene görseli** her zaman beş soruyla anlatılır: (a) ne sınanır ve neden yapılır, (b) nasıl uygulanır (görselde ne görülüyorsa adım adım), (c) normal sonuç, (d) her patolojik panel/sonuç ne demektir ve hangi lezyonu gösterir, (e) sonuçlar birbirinden nasıl ayrılır (sınavda karıştırılan çift).
-  3. **Çok panelli şekil:** her panel ayrı ayrı adlandırılır ve karşılaştırılır ("soldaki normal…, ortadaki…, sağdaki…"); işaretlerin anlamı (X = hasarlı yapı, kalın ok = sesin daha güçlü duyulduğu taraf) açıklanır.
-  4. **Yalnız adı geçen kavram/test:** ilk geçtiği yerde 1–2 cümleyle ne olduğu ve ne ölçtüğü söylenir (Terim kuralı §8.5). Ayrıntı slaytta/şekilde ya da hoca dökümünde varsa o kadar açılır; yoksa uydurma yorum eklenmez ama ADI DA BOŞ BIRAKILMAZ.
-  5. **Kaçamak meta cümle YASAK:** "ders bunun yorumuna girmez", "yalnız adını verir", "ölçütünü vermez", "şekilde ayrıntı yok", "nasıl uygulandığı gösterilir" gibi öğrenciye bir şey öğretmeyen cümleler yazılmaz. Gerçekten kaynakta bilgi yoksa cümle hiç yazılmaz; konu olduğu kadar anlatılır.
-  6. **Şekil paragrafı betimlemeyle bitmez:** yalnız "…gösterilir / görülür / yer alır" cümlelerinden oluşan şekil paragrafı eksik sayılır; şeklin öğrettiği bilgi (mekanizma, sonuç, ayırıcı nokta) eklenir.
-  7. **Çizim katmanı anlatımı izler:** her panel/sonuç anlatılırken lazer ve kontur o panele gider (kural 17/18; bir cümle = bir panel).
-  8. **Denetçi şekle bakar:** bağımsız denetçi metni okuduktan sonra şekilli/tablolu her sayfanın görüntüsüne bakıp "şekildeki her panel/işaret anlatıldı mı" listesini işaretler; eksik varsa GEÇMEZ.
+- **Kalıcı çözüm ve kural (`KURUL2_DERS_STANDARDI.md` §8.12, tam metin orada):** Şekil (çizim, şema, tablo, panel, ok/etiket) kaynaktır ve anlatılır. Deney/muayene görseli: ne sınanır, nasıl, normal, her patolojik panel ne demek, karıştırılan çift. Çok panelde her panel adlandırılıp karşılaştırılır; yalnız adı geçen test 1–2 cümleyle tanımlanır, uydurulmaz. Kaçamak meta cümle ("yorumuna girmez") ve yalnız betimlemeyle biten şekil paragrafı YASAK. Lazer/kontur anlatılan panele gider (bir cümle = bir panel); denetçi şekilli her sayfanın görüntüsüne bakar, eksik panel → GEÇMEZ.
 
 ### H470 — Çizim kapısı R0 resim etiketini reddediyordu (2026-11-02)
 - **Önleme:** Görüntüde gösterilen kimlik ile kapının beklediği kimlik aynı dönüşümden geçer; kapı yazarın gördüğü etiketi kabul eder.
@@ -125,8 +117,6 @@
 
 - H605 — Son derslerde PDF ↔ metin takibi zayıftı: cümlelerin %19–24'ü yalnız sayfa vurgusu alıyordu (2026-11-17, kullanıcı bildirdi) — betik denetler: `scripts/uretim/sesli_anlatim/artik_capa.py`
 ### H606 — Kurul 3 arşivinde işaret "çapa sayfasından kayıyor", tablo/şema cümleleri yalnız sayfaya düşüyordu (2026-11-17)
-- **Önleme kuralı:** İşaretin sayfası çapanın sayfasından farklı olamaz; komşu sayfa yalnız çapa hiç sayfa vermiyorsa (hizalama
-  boşluğu) ve yalnız `capali` içinde değerlendirilir. Eşik gevşetilmez; eşleşmeyen cümlede doğru yol madde/kutu eşlemesidir, "sayfa"
-  işareti değil.
+- **Önleme kuralı:** İşaret yalnız çapanın sayfasında üretilir (komşu sayfa yalnız çapa sayfası yoksa, `capali` içinde); eşleşmeyen cümle madde/kutuya bağlanır, "sayfa"ya düşmez; eşik gevşetilmez.
 
 

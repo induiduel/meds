@@ -160,3 +160,8 @@
      `meds/scripts/altyapi/artifact_studio/studyo.py <reçete.json>` tek dosyalık çevrimdışı HTML üretir, `kur.sh` skill'i
      (`.claude/skills/artifact-studyo`) ve önizleme sunucusunu **oturum kökünün** `.claude/launch.json`'una yazar.
      Veri uydurulmaz; kaynak alanı yazılır; büyüklükleri ~10× farklı seriler çift eksende (`"eksen": "sag"`) çizilir.
+
+32. **Kayıt hijyeni — token kabartması yok (ZORUNLU, kullanıcı kararı 2026-11-17, H610):**
+   - Tam içerik işçisi her kipte (tam/tasarruf) ve her ajan; ders verisi yazarken, talimat güncellerken, hata bildirirken
+     mevcut optimizasyonu (read-once `baglam/`, aşama başına tek dosya, bütçe tavanları) bozamaz.
+   - Yayından/commit'ten önce `python3 scripts/kapilar/kos.py kayit` 0 HATA (pre-commit de çalıştırır). Sınırlar ve denetimler: kapının baş yorumu.
