@@ -1,8 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 823,
-  "baslik": "Hocanın sorabileceği sorular güncellendi",
+  "onem": 824,
+  "baslik": "Otonom sinir sistemi farmakolojisi mekanizma metni ve ara soru düzeltmeleri",
   "maddeler": [
+    "Mekanizma metni: Otonom sinir sistemi farmakolojisi dersinin başındaki mekanizmalar, hocanın sesli anlatımı ve ders PDF'i karşılaştırılarak örnekleriyle, ilaç ve hastalık bağlantılarıyla yazıldı.",
+    "Çıkmış analizi: Bu derse bağlı 10 doğrulanmış çıkmış sorunun her biri için neyi ölçtüğü, örneği ve tuzağı ayrıntılı yazıldı.",
+    "Ders analizi sesi: Analizin altı bölümü seslendirildi; dinlerken okunan cümle işaretlenir.",
     "Kraniyal sinir muayenesi ve serebrovasküler hastalıklar ara sorularının düzeltilmiş metinleri ve sesleri yayında.",
     "Ara soru seslerinde altyazı zamanlaması güncel seslerle eşitlendi."
   ],
