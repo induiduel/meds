@@ -28,7 +28,7 @@
 | `hatalar/soru_cozucu.md` | örnek soru, şık açıklaması, sesli çözücü, önem listesi | 18 |
 | `hatalar/ders_metni_anlatim.md` | anlatım metni, slayt sadakati, öğrenci denetçisi | 21 |
 | `hatalar/ders_metni_terim_kisaltma.md` | terim ve kısaltma katmanı, PDF metin ayrıştırma, cümle sayacı | 19 |
-| `hatalar/ders_metni_degerlendirme.md` | değerlendirme kapısı, sayfa haritası, ders içerik paketi, ders analizi | 16 |
+| `hatalar/ders_metni_degerlendirme.md` | değerlendirme kapısı, sayfa haritası, ders içerik paketi, ders analizi, öğrenci sentez notu | 17 |
 | `hatalar/veri_cikmis.md` | çıkmış soru verisi, eşleme, yıl/kurul etiketi | 29 |
 | `hatalar/dagitim_sunucu.md` | dağıtım, Oracle, sunucu, önbellek/SW, çevrimdışı, kimlik | 35 |
 | `hatalar/on_yuz_disa_aktarim.md` | soru dışa aktarıcı, PDF/DOCX dışa aktarım, baskı geometrisi | 11 |
@@ -452,3 +452,4 @@
 - **H615** · "Commit başka oturumun sahnelediği silmeyi içerdi": düz `git commit` bütün index'i işler → `git commit --only -- <yollar>`, push öncesi `show --stat` → hatalar/dagitim_sunucu.md
 - **H617** · "Örnek sorular kapısız yayına girdi (k2-16: 120 geçiştirme şıkkı); eksik katmanlar ayrı ayrı bulundu": yayından önce tek denetim yoktu → `betik_tamamla.py --denetle` yayın kapısı + `onarim_paketi.py` (yalnız hatalı parça) → hatalar/soru_cozucu.md
 - **H618** · "Şık açıklaması cümle sayacı '(s. 9)'u cümle sayıyordu": 48 haksız kalan, 95 haksız geçen → kısaltma noktası cümle sonu değil, eşik aynı → hatalar/soru_cozucu.md
+- **H619** · "Onarım ajanı geçiştirme kalıbını başka sözcükle değiştirip kapıyı geçirdi (k2-16)": toplu regex + kalıp listesi → iki kalıp kapıda, onarımda toplu değiştirme yasak, uygulayıcı konum tabanlı → hatalar/soru_cozucu.md

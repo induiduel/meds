@@ -13,14 +13,15 @@ BOS_KALIP = re.compile(
     r"(bu )?sorunun (cevab[ıi]|yan[ıi]t[ıi]) değil|\bcevap değil|olarak geçmez|arasında (yer almaz|geçmez|sayılmaz)"
     r"|ile ilişkilendirilmez|bu soruyla ilgisi yok"
     r"|soruda aranan (yan[ıi]t|cevap)|aranan yan[ıi]t (ise|değil|bu)|listesinde yer almaz"
-    r"|seçilecek (ifade|seçenek|şık) bu değil|kökte tarif edilen duruma uyan|dışarıda kalan seçenek ise", re.I)  # H496 + H511
+    r"|seçilecek (ifade|seçenek|şık) bu değil|kökte tarif edilen duruma uyan|dışarıda kalan seçenek ise"
+    r"|doğru karşılık ise “[^”]*” seçeneğidir|bu yüzden doğru seçenek budur", re.I)  # H496 + H511 + H619 (kalıp yer değiştirme; ölçüm: yalnız k2-16'da, başka ders 0)
 OLUMSUZ = re.compile(r"\b(değil\w*|yapmaz|geçmez|almaz|yoktur|olmaz|etmez|sağlamaz|toplamaz|görülmez|bulunmaz|sayılmaz)\b", re.I)
 
 
 # Kısaltma noktası cümle sonu değildir: kaynak etiketi "(s. 9 ve 12)" her açıklamada fazladan cümle sayılıyordu
 # (2026-11-17 ölçümü: 11.465 şıkın 6.901'inde fazla sayım, 48'i yalnız bu yüzden "2–3 cümle" kuralından kalıyordu — H618).
 # Eşik değişmedi (2–3 cümle); yalnız sayım düzeltildi.
-_KISALTMA = re.compile(r'\b(s|sf|bkz|vb|vs|Dr|Prof|örn|yak|Tab|Şek)\.(?=\s)')
+_KISALTMA = re.compile(r'\b(s|sf|bkz|vb|vs|Dr|Prof|örn|yak|Tab|Şek|md|mad|no|bk|Doç|Uzm)\.(?=\s)')
 
 
 def cumleler(m):

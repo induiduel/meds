@@ -104,7 +104,7 @@
      "sik_aciklamalari": {
       "A": "NADPH, MEOS yolağının kofaktörüdür ve bu yolak serbest radikal ile H2O2 gibi toksik ara ürünler oluşturur. Alkol dehidrogenaz reaksiyonu ise NAD+ kullanır, bu yüzden eşleştirme ADH için uymaz (s. 7).",
       "B": "Alkol dehidrogenaz hidrojen iyonunu etanolden NAD+'ya aktararak NADH oluşturur; karaciğerde biriken NADH kronik alkolizmdeki metabolik bozukluklara, laktik asidoz ve hipoglisemiye katkıda bulunur. Kofaktör ve sonuç birlikte doğru verilmiştir (s. 6).",
-      "C": "FAD flavin bağımlı dehidrogenazların kofaktörüdür, etanol oksidasyonunda rol almaz. Ketoz alkolde kortizol ve büyüme hormonu artışıyla açıklanır; FAD'ın bu süreçte rolü yoktur (s. 6, 26).",
+      "C": "FAD, slaytta etanol oksidasyonu için anılmayan bir kofaktördür; ADH reaksiyonunda hidrojen NAD+'ya aktarılır. Alkoldeki ketozis ise kortizol ve büyüme hormonu gibi lipolitik faktörlerin artmasıyla açıklanır. Kofaktör de sonuç da ADH reaksiyonuna uymadığı için şık yanlıştır (s. 6, 26).",
       "D": "Reaksiyonda NADH kofaktör değil üründür; NAD+ azalır, NADH artar. Ayrıca aşırı etanol metabolizması glukoneogenezi bozar, artırmaz; bu yüzden hem yön hem sonuç terstir (s. 6, 26).",
       "E": "Asetil-CoA, asetatın kullanımıyla oluşan bir üründür, ADH reaksiyonunun kofaktörü değildir. Alkolik karaciğerde yağ asidi yıkımı azalır ve sentezi artar; yıkım artışı ifadesi de terstir (s. 8, 16)."
      },
@@ -622,7 +622,7 @@
      "aciklama": "Yüksek miktarda alkolle oluşan bellek kaybı NMDA reseptör aktivasyonunun inhibisyonuna bağlı olabilir (s. 12).",
      "sik_aciklamalari": {
       "A": "Etanol GABA-A reseptörünü antagonize etmez, tersine GABA'nın etkisini artırır; GABA-A antagonistleri etanolün bazı etkilerini azaltır. Bellek kaybı bu reseptörün antagonizmasıyla açıklanmaz (s. 12).",
-      "B": "Etanol glutamatın NMDA alt tipi reseptörün katyon kanalını açmasını inhibe eder; NMDA aktivasyonu öğrenme ve bellekte temel rol oynadığından yüksek dozda bellek kaybı bu inhibisyona bağlanır (s. 12).",
+      "B": "Etanol, glutamatın NMDA alt tipi reseptörün katyon kanalını açmasını inhibe eder. Yüksek miktarda alkolle görülen bellek kaybı bu NMDA aktivasyonu inhibisyonuna bağlanır. Soru bu mekanizmayı sorduğu için şık doğrudur (s. 12).",
       "C": "Adenilil siklaz, etanolün etkilediği membran enzimleri arasında sayılır; ancak bellek kaybı özel olarak bu enzime bağlanmaz. Bellekle ilişkilendirilen mekanizma NMDA inhibisyonudur (s. 12).",
       "D": "Na+/K+-ATPaz etanolün etkilediği membran proteinlerinden biridir ve iyon dengesini sürdürür. Bellek kaybı bu pompanın uyarılmasıyla değil glutamat NMDA iletisinin baskılanmasıyla açıklanır (s. 12).",
       "E": "Opioid reseptör blokajı alkol bağımlılığında naltreksonun mekanizmasıdır ve alkol alımını azaltır. Akut alkolün bellek üzerindeki etkisi opioid blokajıyla ilgili değildir (s. 12, 39)."
@@ -729,11 +729,11 @@
      "dogru": "B",
      "aciklama": "Öteki sedatif-hipnotikler gibi alkol bir MSS depresanıdır; yüksek kan konsantrasyonlarında koma, solunum depresyonu ve ölüme yol açar (s. 11).",
      "sik_aciklamalari": {
-      "A": "Hipertansif kriz akut alkol etkisi değildir; akut etanol vazodilatasyon yapar. Hipertansiyon kronik yoğun tüketimle ilişkilendirilen bir sonuçtur, akut ölüm mekanizması değildir (s. 13, 23).",
+      "A": "Hipertansiyon, günde üç içkiden fazla yoğun alkol tüketimiyle sıkı ilişkili kronik bir sonuçtur. Akut etanol ise vazomotor merkezi baskılayıp asetaldehid aracılığıyla vazodilatasyon yapar. Bu nedenle yüksek kan düzeyindeki ölümün mekanizması değildir (s. 13, 23).",
       "B": "Alkol sedatif-hipnotik ailesinden bir MSS depresanıdır; yüksek kan düzeylerinde koma ve solunum depresyonu gelişir, ölüm bu yolla olur. Akut zehirlenme tedavisinin ilk hedefi de bu yüzden solunumu korumaktır (s. 11, 34).",
       "C": "Akut böbrek yetmezliği, akut etanol tüketiminin MSS etkileri arasında sayılan bir ölüm nedeni değildir. Yüksek kan düzeylerinde etanolün akut ölüm nedeni solunum merkezinin depresyonudur (s. 10, 11).",
       "D": "Hepatik ensefalopati kronik alkolik karaciğer hastalığı ve sirozun geç bir komplikasyonudur. Akut yüksek kan alkol düzeyinde ölüm bu yolla değil MSS depresyonuyla gerçekleşir (s. 11, 15).",
-      "E": "Aritmiler ağır içicilerde ve yoksunlukta katekolamin fazlalığı ile elektrolit bozukluğuyla görülebilir; ancak akut yüksek kan alkol düzeyinde ölümün ana mekanizması solunum depresyonu ve komadır (s. 11, 23)."
+      "E": "Ağır içicilerde atriyal ve ventriküler aritmiler görülebilir; yoksunlukta katekolamin fazlalığı ve potasyum-magnezyum bozukluğu ciddi aritmilere yol açar. Yüksek kan alkol düzeyinde ise alkol bir MSS depresanı olarak koma ve solunum depresyonuyla öldürür. Bu yüzden şık yanlıştır (s. 11, 23)."
      },
      "bilgi": [
       38
@@ -1065,9 +1065,9 @@
      "aciklama": "Yüksek miktarda etanolün metabolize edilmesi hepatik glukoneogenezi bozarak hipoglisemiye yol açar; kortizol ve büyüme hormonu artışı ise ketoza neden olur (s. 26).",
      "sik_aciklamalari": {
       "A": "İnsülin salgısının artması alkolde hipogliseminin tanımlanan mekanizması değildir; sorun glukoz üretiminin azalmasıdır. Pankreas üzerinde alkolün etkisi asiner hücre toksisitesi ve pankreatittir (s. 16, 26).",
-      "B": "Glikojen depolarının genişlemesi hipoglisemiye değil glukoz rezervine katkıda bulunurdu. Alkolde karaciğerin glukoz üretimi glukoneogenez düzeyinde aksar, depo genişlemesi söz konusu olmaz (s. 26).",
+      "B": "Glikojen depoları, karaciğerin glukozu saklayıp gerektiğinde kana verdiği rezervdir. Slayt alkoliklerdeki hipoglisemiyi depo değişikliğine değil, yüksek etanol metabolizmasının yarattığı metabolik bozukluğa bağlar. Bu nedenle depo genişlemesi hipogliseminin açıklaması değildir (s. 26).",
       "C": "Alkolde kortizol azalmaz; tersine kortizol ve büyüme hormonu gibi lipolitik faktörler artar ve ketoza yol açar. Hipoglisemi ise glukoneogenez bozukluğuna bağlıdır (s. 26).",
-      "D": "Periferik glukoz kullanımının azalması hiperglisemiye eğilim yaratırdı, hipoglisemiye değil. Alkolde hipogliseminin kaynağı periferik kullanım değil, karaciğerin glukoz yapımındaki aksamadır (s. 26).",
+      "D": "Periferik glukoz kullanımı, kas ve yağ dokusunun kandaki glukozu alıp tüketmesidir. Bu kullanım azalsaydı kan şekeri düşmez, yükselmeye eğilim gösterirdi. Alkolikte hipogliseminin kaynağı karaciğerin glukoz yapımındaki bozulma olduğundan şık yanlıştır (s. 26).",
       "E": "Etanol oksidasyonuyla biriken NADH hepatik glukoneogenezi bozar; karaciğer glukoz üretemediğinde hipoglisemi gelişir. Akut zehirlenmede glukoz verilmesinin gerekçesi budur (s. 6, 26, 34)."
      },
      "bilgi": [
@@ -1433,7 +1433,7 @@
      "dogru": "D",
      "aciklama": "Farmakodinamik etkileşimlerin en önemlisi alkolün öteki MSS depresanlarıyla, özellikle sedatif-hipnotiklerle birleştiğinde oluşan aditif MSS depresyonudur (s. 32).",
      "sik_aciklamalari": {
-      "A": "Asetaminofenle etkileşim farmakokinetiktir: kronik alkol P450'yi indükleyip reaktif metabolit üretimini artırır, glukuronidasyonu inhibe etmez. Farmakodinamik etkileşim sayılmaz (s. 31).",
+      "A": "Asetaminofenle etkileşim farmakokinetiktir: kronik alkol P450'yi indükler ve ilacın reaktif hepatotoksik metabolitlere dönüşümünü artırır. Günde üç ve üzeri içkide hepatotoksisite sıklaşır. Soru farmakodinamik etkileşimi sorduğu için bu şık yanlıştır (s. 31).",
       "B": "Akut alkol alımının öteki ilaçların karaciğerde metabolizmasını inhibe etmesi bir farmakokinetik etkileşimdir; ilacın kan düzeyini değiştirir. Soru etkilerin reseptör ve organ düzeyinde toplandığı farmakodinamik etkileşimi sorduğu için bu seçenek uymaz (s. 30, 32).",
       "C": "Alkol oral hipoglisemiklerin etkisini zayıflatmaz, potansiyalize eder. Yön tersine verilmiştir ve bu etkileşim en önemli farmakodinamik etkileşim olarak anılmaz (s. 32).",
       "D": "Alkol bir MSS depresanıdır; sedatif-hipnotiklerle birleştiğinde etkiler toplanır ve solunum depresyonu riski artar. Bu aditif MSS depresyonu farmakodinamik etkileşimlerin en önemlisidir (s. 32).",
@@ -1622,7 +1622,7 @@
      "dogru": "D",
      "aciklama": "Alkol yoksunluğunda ilaç tedavisinin temel amacı nöbetlerin, deliryumun ve aritmilerin önlenmesidir; elektrolitler düzeltilir ve tiamin başlanır (s. 37).",
      "sik_aciklamalari": {
-      "A": "Karaciğer yağlanması kronik alkolün geri dönüşlü bir komplikasyonudur ve alkolün kesilmesiyle düzelir; yoksunluk ilaç tedavisinin akut amacı bu değildir (s. 15, 37).",
+      "A": "Alkolik karaciğer yağlanması, kronik tüketimde gelişen ve hepatit ile siroza ilerleyebilen geri dönüşlü bir hasardır. Yoksunluk tedavisi ise akut dönemde nöbet, deliryum ve aritmiyi önlemeyi hedefler. Bu yüzden yağlanmayı geriletmek bu tedavinin temel amacı değildir (s. 15, 37).",
       "B": "Tolerans zamanla kendiliğinden geriler; ilaçla hızla ortadan kaldırılması diye bir hedef tanımlanmaz. Detoksifikasyonda ilke uzun etkili sedatif-hipnotik verip yavaş azaltmaktır (s. 37).",
       "C": "Alkol özlemini azaltmak detoksifikasyon sonrası bağımlılık tedavisinin hedefidir; naltrekson ve akamprosat bu amaçla kullanılır. Yoksunluk döneminin akut hedefi yaşamı tehdit eden komplikasyonları önlemektir (s. 37, 39).",
       "D": "Yoksunlukta nöbet eşiği düşer, deliryum tremens ve katekolamin fazlalığına bağlı ciddi aritmiler gelişebilir. İlaç tedavisi bu üç yaşamı tehdit eden komplikasyonu önlemeyi amaçlar (s. 23, 37).",
@@ -1734,7 +1734,7 @@
       "A": "Farmakokinetik indüksiyon kronik alkolde MEOS'un öteki ilaçların klirensini artırmasıdır. Sedatif-hipnotiklerin alkolün yerine geçmesi reseptör düzeyinde ortak GABAerjik mekanizmayla açıklanır (s. 7, 19).",
       "B": "Etanol ve sedatif-hipnotikler GABA-A aracılı iletiyi aynı yönde etkiler; kronik alkolde bu sistem down-regüle olduğu için GABAerjik bir ilaç alkolün yerini doldurup yoksunluğu baskılar. Ortak sistem çapraz toleransın temelidir (s. 12, 19).",
       "C": "Opioid reseptör blokajı naltreksonun alkol alımını azaltma mekanizmasıdır; yoksunlukta alkolün yerine geçmeyi açıklamaz. Benzodiazepinler GABAerjik yoldan etki eder (s. 19, 39).",
-      "D": "Etanol NMDA reseptörünü inhibe eder, agonize etmez; yoksunlukta NMDA up-regülasyonu nöbet eşiğini düşürür. Sedatif-hipnotikler NMDA agonizmasıyla değil GABA-A güçlendirmesiyle alkolün yerini alır (s. 12, 18, 19).",
+      "D": "NMDA reseptörü glutamatın katyon kanalını açtığı reseptördür; etanol bu reseptörü inhibe eder. Kronik tüketimde NMDA up-regülasyonu yoksunluk nöbetlerinin olası nedenidir. Sedatif-hipnotikler alkolün yerini GABA-A iletimindeki ortak değişikliklerle aldığından şık yanlıştır (s. 12, 18, 19).",
       "E": "Asetaldehid birikimi disülfiramla etanol alınınca ortaya çıkan caydırıcı reaksiyondur ve yoksunluk tedavisinde yer almaz. Sedatif-hipnotiklerin yerini alma özelliği GABA iletimine dayanır (s. 8, 19)."
      },
      "bilgi": [
@@ -1845,10 +1845,10 @@
      "dogru": "E",
      "aciklama": "Alkol bağımlılığında kullanılan akamprosat FDA onaylıdır; en iyi tanımlanmış etkileri zayıf NMDA reseptör antagonisti ve GABA-A reseptör aktivatörü olmasıdır (s. 41).",
      "sik_aciklamalari": {
-      "A": "Nalmefen de bir opioid antagonistidir ve alkol kullanım bozukluğunda benzer etkiler gösterir; ancak bu endikasyon için henüz FDA onayı yoktur ve mekanizması NMDA ya da GABA-A ile ilgili değildir (s. 40).",
+      "A": "Nalmefen, naltreksona benzeyen bir opioid antagonistidir. Alkol kullanım bozukluğunda benzer etkiler gösterdiği düşünülür, ancak bu endikasyon için henüz FDA onayı yoktur. Hem onaysız olması hem de opioid reseptörü üzerinden etki etmesi nedeniyle burada yanlıştır (s. 40).",
       "B": "Topiramat nöbet önleyici bir ilaçtır; alkol özlemini azalttığı gösterilmiş olsa da bu endikasyonda FDA onayı yoktur. Zayıf NMDA antagonisti ve GABA-A aktivatörü olarak tanımlanan ilaç akamprosattır (s. 41, 44).",
-      "C": "Naltrekson görece uzun etkili bir opioid antagonistidir ve µ-opioid reseptörlerini bloke ederek alkol özlemini azaltır; FDA onaylıdır ancak NMDA ya da GABA-A üzerinden etki etmez (s. 39).",
-      "D": "Disülfiram aldehid dehidrogenazı inhibe ederek asetaldehid biriktirir ve caydırıcı reaksiyon oluşturur; FDA onaylı üçlüdendir ancak reseptör düzeyinde NMDA ya da GABA-A etkisi yoktur (s. 43).",
+      "C": "Naltrekson, µ-opioid reseptörlerini bloke eden görece uzun etkili bir opioid antagonistidir. Alkol özlemini ve içmeye yeniden başlama hızını azaltır, FDA onaylıdır. Etkisi opioid blokajı olduğundan NMDA ve GABA-A tanımına uymaz (s. 39, 40).",
+      "D": "Disülfiram, aldehid dehidrogenazı inhibe ederek asetaldehid biriktiren caydırıcı bir ilaçtır. Alkolle birlikte flushing, bulantı ve baş ağrısı oluşturur ve FDA onaylı üç ilaçtan biridir. Etkisi enzim inhibisyonu olduğu için NMDA ve GABA-A tanımına uymaz (s. 43).",
       "E": "Akamprosat alkol bağımlılığı için FDA onayı almış ilaçtır; birçok moleküler etkisi içinde en iyi tanımlananlar zayıf NMDA antagonizması ve GABA-A aktivasyonudur. Soru bu profili tarif eder (s. 41)."
      },
      "bilgi": [

@@ -355,7 +355,7 @@
       "B": "Bu seçim IV'ü doğru sayar; oysa total intravenöz anestezi BIS monitörizasyonuyla titre edilir. Ayrıca doğru olan I seçimde yer almaz (s. 16).",
       "C": "Kısa girişimlerde propofol infüzyonu yeterlidir, TIVA'da inhalasyon ajanı kullanılmaz ve bulantı riski azalır, dengeli anestezi de dört ilacın birlikte kullanımına dayanır. IV yanlıştır; çünkü TIVA Bispektral İndeks monitörizasyonuyla titre edilir (s. 16).",
       "D": "IV yanlış olduğu için bu seçim hatalıdır: TIVA'da titrasyon BIS ile yapılır. Doğru olan II de seçimde bulunmaz (s. 16).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; çünkü total intravenöz anestezi Bispektral İndeks ile izlenerek titre edilir (s. 16)."
+      "E": "Total intravenöz anestezi propofol ve remifentanil infüzyonuyla yürütülen, inhalasyon ajanı kullanılmayan bir yöntemdir. Bispektral İndeks monitörizasyonuyla titre edilir ve bulantı riskini azaltır. IV titrasyonun yapılamadığını söylediği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 16)."
      },
      "bilgi": [
       56,
@@ -648,7 +648,7 @@
       "A": "III doğrudur; ancak retiküler sistemin baskılanması (I) ve klorür kanalı süresinin uzaması (IV) da doğrudur. Seçim bunları dışarıda bıraktığı için eksiktir (s. 13).",
       "B": "I ve III doğrudur, fakat nöronal hiperpolarizasyonu klorür kanalının açık kalma süresinin uzamasıyla açıklayan IV de doğrudur. Bu seçim IV'ü dışarıda bıraktığı için eksiktir (s. 13).",
       "C": "Bu seçim II'yi doğru sayar; oysa baskılanma sedasyon, hipnoz ve anestezi sürekliliğinde doz bağımlı gelişir. Doğru olan I de seçimde yer almaz (s. 13).",
-      "D": "Dört ifadenin tümünü doğru sayan seçimde II yanlıştır; çünkü baskılanma doza bağlı olarak sedasyondan hipnoza ve anesteziye ilerler (s. 13).",
+      "D": "IV anestezikler RAS'ı ve kortikal aktiviteyi baskılar, en sık GABA-A reseptörünü potansiyelize ederek hiperpolarizasyon yapar. Bu baskı sedasyon, hipnoz ve anestezi sırasıyla doz bağımlı gelişir. II doz bağımlılığı reddettiği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 13).",
       "E": "İntravenöz anestezikler retiküler aktive edici sistemi baskılar, en yaygın olarak GABA-A reseptörünü potansiyelize eder ve klorür kanalının açık kalma süresini uzatarak hiperpolarizasyon yapar. II yanlıştır; çünkü baskılanma sedasyondan anesteziye doz bağımlı ilerler (s. 13)."
      },
      "bilgi": [
@@ -717,7 +717,7 @@
       "B": "III ve IV doğrudur, ancak II yanlış kabul edilmiştir: inhaler ajanlar kas gevşeticilerin etkisini uzatır. Ayrıca doğru olan I seçimde yer almaz (s. 9).",
       "C": "I ve III doğrudur fakat II yanlıştır; inhaler ajanlar kas gevşeticilerin etkisini kısaltmaz, uzatır. Doğru olan IV de seçimde bulunmaz (s. 9).",
       "D": "Opioid ile benzodiazepin solunum depresyonunu iki katına çıkarabilir, farmakokinetik değişkenler etkileşimi güçlendirir ve ortak hedef sistemler riski artırır. II yanlıştır; çünkü inhaler ajanlar kas gevşeticilerin etkisini uzatır (s. 9).",
-      "E": "Dört ifadenin tamamını doğru sayan bu seçimde II yanlıştır; çünkü inhaler ajanlar kas gevşeticilerin etkisini kısaltmaz, tersine uzatır ve ilaç etkileşiminin bir örneğidir (s. 9)."
+      "E": "Anestezide ilaç etkileşimi, aynı hastada birden çok ajanın ortak hedeflerde birbirinin etkisini değiştirmesidir. Slayttaki pratik örneğe göre inhaler ajanlar kas gevşeticilerin etkisini uzatır. II kısalttığını söylediği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 9)."
      },
      "bilgi": [
       31,
@@ -1068,10 +1068,10 @@
      "aciklama": "Propofol lipid emülsiyonu olarak hazırlanır, soya alerjisinde dikkat gerektirir ve bolus sonrası geçici apneye yol açabilir. III yanlıştır; çünkü açılmış flakonun bekletilmemesinin nedeni ilacın bozulması değil, enfeksiyon bulaşma riskidir (s. 32).",
      "sik_aciklamalari": {
       "A": "I ve II doğrudur; ancak bolus sonrası geçici apne görülmesi de doğrudur ve bu seçim IV'ü dışarıda bırakır. Bu nedenle eksiktir (s. 32).",
-      "B": "Bu seçim III'ü doğru sayar; oysa flakonun bekletilmemesinin nedeni enfeksiyon bulaşma riskidir, kimyasal bozulma değildir. Doğru olan II de seçimde yer almaz (s. 32).",
+      "B": "Propofol yumurta lesitiniyle hazırlanan bir lipid emülsiyonudur ve bolus sonrası geçici apne yapabilir; I ve IV bu yüzden doğrudur. Soya alerjisinde dikkat gerektirmesi de slaytta yer alır. Bu seçim II'yi dışarıda bırakıp yanlış olan III'ü içerdiği için hatalıdır (s. 32).",
       "C": "II ve IV doğrudur ancak III yanlıştır, çünkü bekletme sakıncası enfeksiyon riskidir. Doğru olan I de seçimde bulunmaz (s. 32).",
       "D": "Propofol lipid emülsiyonu olarak hazırlanır, soya alerjisinde dikkat gerektirir ve bolus sonrası geçici apneye yol açabilir. III yanlıştır; çünkü açılmış flakonun bekletilmemesinin nedeni ilacın bozulması değil, enfeksiyon bulaşma riskidir (s. 32).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde III yanlıştır; açılmış flakon enfeksiyon riski nedeniyle bekletilmez, ilaç kimyasal olarak bozulduğu için değil (s. 32)."
+      "E": "Propofol lipid emülsiyonu formülasyonuyla hazırlanır, soya alerjisinde dikkat ister ve bolus sonrası geçici apne yapar. Bu üç özellik I, II ve IV'ü doğrular. Kimyasal bozulmadan söz eden III slaytta yer almadığı için dört ifadeyi birden kapsayan bu seçim hatalıdır (s. 32)."
      },
      "bilgi": [
       152,
@@ -1105,7 +1105,7 @@
       "A": "I ve II doğrudur; ancak miyoklonusun görülmesi ve opioid premedikasyonuyla azaltılabilmesi (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 19).",
       "B": "Bu seçim IV'ü doğru sayar; oysa adrenokortikal baskılanma tek doz sonrası bile görülür, uzun infüzyonda ise belirginleşir. Doğru olan I de seçimde yer almaz (s. 19).",
       "C": "I ve III doğrudur ancak IV yanlıştır, çünkü kortizol sentezi tek dozdan sonra bile baskılanır. Doğru olan II de seçimde bulunmaz (s. 19).",
-      "D": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; adrenokortikal baskılanma yalnız uzun infüzyona özgü değildir, tek doz sonrası bile ortaya çıkar (s. 19).",
+      "D": "Etomidat kardiyovasküler sistemi minimal etkiler, ICP ve göz içi basıncını düşürür; miyoklonusu opioid premedikasyonuyla azaltılır. Adrenokortikal baskılanmada ise tek doz sonrası bile kortizol sentezi 6–24 saat inhibe olur. IV bu nedenle yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 19).",
       "E": "Etomidat kardiyovasküler sistemi minimal etkiler, intrakraniyal ve göz içi basıncını düşürür ve %30–80 hastada görülen miyoklonus opioid premedikasyonuyla azaltılabilir. IV yanlıştır; çünkü kortizol sentezi tek doz sonrası bile baskılanır (s. 19)."
      },
      "bilgi": [
@@ -1139,7 +1139,7 @@
      "sik_aciklamalari": {
       "A": "Ketamin glutamat NMDA reseptörünü bloke ederek bilinç ile çevreden kopmanın eş zamanlı geliştiği disosiyatif durumu oluşturur. İfade doğru olduğundan aranan yanlış ifade değildir (s. 20).",
       "B": "Ketamin noradrenalin geri alımını inhibe ederek kalp hızını ve kan basıncını artırır; bu nedenle septik şok ve travmada hemodinamiyi korur. İfade doğru olduğundan aranan yanlış ifade değildir (s. 35).",
-      "C": "Ketamin bronkodilatasyon yapar; bu özellik astımlı hastalarda bir avantajdır ancak her durumda tercih nedeni sayılmaz. İfade doğru olduğundan aranan yanlış ifade değildir (s. 35).",
+      "C": "Ketamin NMDA antagonizmasıyla etki eden disosiyatif bir anesteziktir ve bronkodilatasyon yapar. Slayt bu özelliği astım hastalarında bir avantaj olarak sayar. İfade doğru olduğu için, yanlış ifadeyi soran bu soruda işaretlenmez (s. 35).",
       "D": "Ketamin NMDA antagonisti bir disosiyatif anestezik olup kafa içi basıncı artırır ve bu nedenle kafa travmasında kontrendikedir. İfade yanlış olduğu ve soru yanlış ifadeyi aradığı için yanıt budur (s. 35).",
       "E": "Ketamin hipersekresyona yol açar; sekresyon artışına bağlı laringospazm riski atropin veya glikopirolat gibi antisiyalogoglarla önlenir. İfade doğru olduğundan aranan yanlış ifade değildir (s. 35)."
      },
@@ -1507,7 +1507,7 @@
       "B": "II ve IV doğrudur; ancak III yanlıştır, çünkü tiyopental kafa içi basıncını azaltır. Ayrıca doğru olan I seçimde yer almaz (s. 18).",
       "C": "Volatil ajanlar serebral vazodilatasyonla kafa içi basıncını artırır, ketamin kafa travmasında kontrendikedir ve hiperventilasyon bu artışı kompanse edebilir. III yanlıştır; çünkü tiyopental kafa içi basıncını azaltır (s. 30).",
       "D": "I ve IV doğrudur fakat III yanlıştır; tiyopental kafa içi basıncını azaltır. Ketamin ICP artışı nedeniyle kontrendike olduğundan II de doğrudur ve seçimde bulunmaz (s. 18).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde III yanlıştır; çünkü tiyopental kafa içi basıncını artırmaz, serebral metabolizmayı baskılayarak azaltır (s. 18)."
+      "E": "Tiyopental redistribüsyonla kısa etkili bir barbitürat indüksiyon ajanıdır. Serebral metabolizmayı ve O₂ tüketimini düşürerek kafa içi basıncını azaltır. III artırdığını söylediği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 18)."
      },
      "bilgi": [
       70,
@@ -1544,7 +1544,7 @@
       "B": "I ve II doğrudur; ancak kapalı boşluklarda genişleme riski (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 29).",
       "C": "IV, azot protoksitin MAC değerinin 105 olması nedeniyle tek başına anestezi için yetersiz olduğu gerçeğiyle çelişir. Ayrıca doğru olan I, II ve III seçimde yer almaz (s. 29).",
       "D": "II ve III doğrudur, ancak IV yanlıştır; azot protoksit tek başına yeterli anestezi sağlayamaz. Ayrıca doğru olan I seçimde yer almaz (s. 29).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; MAC değeri 105 olan azot protoksit tek başına anestezi için yetersizdir (s. 29)."
+      "E": "Azot protoksit güçlü analjezik, zayıf hipnotik etkili ve MAC değeri 105 olan bir inhaler gazdır. Bu yüksek MAC nedeniyle tek başına anestezi yetersizdir, yardımcı ajan olarak kullanılır. IV bu yüzden yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 29)."
      },
      "bilgi": [
       138,
@@ -1959,7 +1959,7 @@
       "B": "II ve III doğrudur; ancak IV yanlıştır, çünkü morfin yavaş başlangıçlı ve uzun etkilidir. Doğru olan I de seçimde bulunmaz (s. 21).",
       "C": "Morfin histamin salınımıyla hipotansiyon yapar, fentanil yüksek dozda göğüs duvarı rijiditesi oluşturur ve remifentanilin etkisi infüzyon kesilince 3–5 dakikada sonlanır. IV yanlıştır; çünkü yavaş başlangıçlı olan morfindir, hızlı başlayan fentanildir (s. 21).",
       "D": "I ve III doğrudur fakat IV yanlıştır; fentanil morfinden daha lipofiliktir ve daha hızlı başlar. Doğru olan II de seçimde yer almaz (s. 34).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; yüksek lipofilite morfine değil fentanile aittir ve hızlı başlangıç sağlar (s. 34)."
+      "E": "Fentanil yüksek lipofilitesi sayesinde 1–2 dakikada etkiye başlayan, morfinden 100 kat güçlü bir opioiddir. Morfin ise yavaş başlangıçlı prototip opioiddir. IV bu özellikleri tersine çevirdiği için yanlıştır ve dört ifadeyi birden kapsayan seçim hatalıdır (s. 34)."
      },
      "bilgi": [
       85,
@@ -1993,7 +1993,7 @@
       "A": "I ve II doğrudur; ancak düşük doz ketaminin NMDA antagonizmasıyla santral sensitizasyonu önlemesi (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 44).",
       "B": "II ve III doğrudur, ancak IV yanlıştır; NSAİİ'ler trombosit disfonksiyonu ve GI kanama riski taşır. Doğru olan I de seçimde yer almaz (s. 44).",
       "C": "I ve III doğrudur fakat IV yanlıştır; NSAİİ'ler böbrek ve trombosit üzerinde olumsuz etkiler yapabilir. Doğru olan II de seçimde bulunmaz (s. 44).",
-      "D": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; NSAİİ'ler trombosit fonksiyonunu ve böbrek akımını korumaz, GI kanama riskini artırır (s. 44).",
+      "D": "NSAİİ ve COX-2 inhibitörleri prostaglandin sentezini inhibe ederek enflamasyonu ve periferik sensitizasyonu azaltır. Slayt trombosit disfonksiyonu, GI kanama ve renal etkilere dikkat çeker. IV bu yan etkileri tersine çevirdiği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 44).",
       "E": "Selekoksib, etorikoksib, meloksikam ve nimesulid COX-2 inhibitörleri ve NSAİİ grubundadır; düşük doz ketamin de NMDA antagonizmasıyla santral sensitizasyonu önler. IV yanlıştır; çünkü NSAİİ'ler trombosit disfonksiyonu, GI kanama ve renal etki riski taşır (s. 44)."
      },
      "bilgi": [
@@ -2299,8 +2299,8 @@
       "A": "Süksinilkolin fasikülasyon ve kas ağrısı yapar, yanık ve crush injury gibi durumlarda hiperkalemiyle kardiyak arreste yol açabilir ve malign hipertermiyi tetikler. IV yanlıştır; çünkü kalıcı depolarizasyonla oluşan blok, kolinesteraz inhibitörleriyle geri çevrilen yarışmalı bir blok değildir (s. 39).",
       "B": "I ve II doğrudur; ancak süksinilkolin genetik yatkınlığı olan hastalarda malign hipertermi tetikleyicisidir (III) ve bu seçim III'ü dışarıda bırakır. Bu nedenle eksiktir (s. 39).",
       "C": "II ve III doğrudur, ancak IV yanlıştır; süksinilkolin yarışmalı bir blok oluşturmaz. Doğru olan I de seçimde yer almaz (s. 39).",
-      "D": "I ve III doğrudur fakat IV yanlıştır; süksinilkolinin yaptığı blok kalıcı depolarizasyondur ve antikolinesterazlarla geri çevrilen yarışmalı bir blok değildir. Doğru olan II de seçimde bulunmaz (s. 39).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; süksinilkolin ACh'yi taklit ederek kalıcı depolarizasyon yapar ve yarışmalı blok oluşturmaz (s. 39)."
+      "D": "Süksinilkolin ACh reseptörünü taklit eden ve kalıcı depolarizasyon yapan depolarizan blokördür; fasikülasyon ağrısı ve malign hipertermi tetiklemesi bu yüzden I ve III'ü doğrular. Yanık ve crush injury'de hiperkalemiyle arrest yapması da doğrudur. Seçim II'yi dışarıda bırakıp yarışmalı geri çevrilmeyi anlatan IV'ü içerdiği için hatalıdır (s. 39).",
+      "E": "Süksinilkolin asetilkolinesterazla yıkılmadan kalıcı depolarizasyon (faz I blok) oluşturan depolarizan blokördür. Antikolinesterazlarla geri çevrilme ise yarışmalı inhibisyon yapan non-depolarizan blokörlere aittir. IV bu nedenle yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 39)."
      },
      "bilgi": [
       198,
@@ -2337,7 +2337,7 @@
       "B": "II ve IV doğrudur, ancak III yanlıştır; non-depolarizan blokörler depolarizasyon oluşturmaz. Doğru olan I de seçimde yer almaz (s. 40).",
       "C": "I ve IV doğrudur fakat III yanlıştır; non-depolarizanlar reseptörü aktive etmeden kompetitif olarak bloke eder. Doğru olan II de seçimde bulunmaz (s. 40).",
       "D": "Süksinilkolin asetilkolini taklit ederek nikotinik reseptörü uyarır, rokuronyum asetilkolinle yarışarak reseptörü bloke eder ve depolarizan blokta kas elektriksel yorgunlukla gevşer. III yanlıştır; çünkü non-depolarizanlar reseptörü aktive etmeden bloke eder (s. 40).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde III yanlıştır; depolarizasyon oluşturan non-depolarizan değil, süksinilkolin gibi depolarizan blokördür (s. 40)."
+      "E": "Non-depolarizan blokörler ACh ile nikotinik reseptör için yarışan ve reseptörü aktive etmeden bloke eden ajanlardır. Depolarizasyon oluşturan ise süksinilkolin gibi depolarizan blokördür. III bu ayrımı tersine çevirdiği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 40)."
      },
      "bilgi": [
       194,
@@ -2626,7 +2626,7 @@
       "B": "I ve II doğrudur; ancak muskarinik yan etkisinin olmaması ve atropine gerek duyulmaması (III) de doğrudur. Bu seçim III'ü dışarıda bıraktığı için eksiktir (s. 48).",
       "C": "II ve III doğrudur, ancak IV yanlıştır; sugammadex benzilizokinolin türevlerinde etkisizdir. Doğru olan I de seçimde yer almaz (s. 56).",
       "D": "I ve III doğrudur fakat IV yanlıştır; sugammadex yalnız aminosteroid blokörlere etkilidir. Doğru olan II de seçimde bulunmaz (s. 56).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; sugammadex yalnızca aminosteroid blokörlere etkilidir, benzilizokinolin türevi blokörlerin bloğunu tersleyemez (s. 56)."
+      "E": "Sugammadex rokuronyum ve vekuronyum gibi aminosteroid blokörleri 1:1 oranında saran bir siklodekstrindir. Atrakuryum gibi benzilizokinolin türevlerinde ise etkisizdir. IV bu nedenle yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 56)."
      },
      "bilgi": [
       252,
@@ -2764,7 +2764,7 @@
       "B": "Yetersiz analjezi, uzamış sedasyon ve nöromüsküler blok rezidüsü uyanmayı gölgeleyen üç etkendir. IV yanlıştır; çünkü iyi bir premedikasyon preoperatif anksiyolizle uyanmada ajitasyon ve ağrı yükünü azaltır (s. 52).",
       "C": "II ve III doğrudur, ancak IV yanlıştır; preoperatif anksiyoliz uyanma sürecinde ajitasyon ve ağrı yükünü azaltır. Doğru olan I de seçimde yer almaz (s. 52).",
       "D": "I ve III doğrudur fakat IV yanlıştır; iyi premedikasyon preoperatif anksiyolizle uyanmayı kolaylaştırır. Doğru olan II de seçimde bulunmaz (s. 52).",
-      "E": "Dört ifadenin tümünü doğru sayan bu seçimde IV yanlıştır; preoperatif anksiyoliz sempatomimetik stres yanıtını küçük başlatarak uyanmadaki ajitasyonu azaltır (s. 52)."
+      "E": "Preoperatif anksiyoliz, ameliyat öncesi kaygıyı gideren premedikasyon basamağıdır; en sık midazolamla yapılır. Sempatomimetik stres yanıtını küçük başlatarak uyanmadaki ajitasyonu ve ağrı yükünü azaltır. IV artırdığını söylediği için yanlıştır ve dördünü birden kapsayan seçim hatalıdır (s. 52)."
      },
      "bilgi": [
       280,

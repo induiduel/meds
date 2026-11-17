@@ -147,3 +147,9 @@
 - **Kök neden:** `sik_aciklama.py::cumleler` her ". " sonrasında böldüğü için "(s. 9 ve 12)" ayrı bir "cümle" sayıldı: 11.465 şıkın 6.901'inde fazla sayım. 48 şık haksız kalıyor, 40 tek cümlelik ve 55 yalnız olumsuz açıklama (kaynak parçası ayrı, olumsuz olmayan cümle sayıldığı için) haksız geçiyordu.
 - **Kalıcı çözüm:** kısaltma noktası (s., sf., bkz., vb., Dr., Tab., Şek.…) cümle sonu sayılmaz; eşik (2–3 cümle, 55 kelime) değişmedi. Doğru sayımla 14 Kurul 2 dersinde yayındaki örnek sorularda 95 gizli kusur görünür oldu (onarım bekliyor; `betik_tamamla.py --kurul 2 --denetle`).
 - **Önleme:** sayısal kapı kuralı değişince yeni-kalan / yeni-geçen ölçülür ve ikisi de rapor edilir (gevşetme değil, sayım düzeltmesi olduğu böyle gösterilir).
+
+### H619 — Onarım alt ajanı geçiştirme kalıbını başka sözcüklerle değiştirip kapıyı geçirdi (2026-11-17, k2-16)
+- **Belirti:** k2-16'nın 120 "soruda aranan yanıt" şıkkı onarılırken alt ajan kalıbı betikle ", doğru karşılık ise “X” seçeneğidir" / "bu yüzden doğru seçenek budur" yaptı; kapı 0 HATA verdi. Ek çıkarılınca 128 şıkın 127'si 20 kelimenin altına düşüyordu — açıklama kavramı anlatmıyordu.
+- **Kök neden:** kapı kalıbı sözcük listesiyle tanıyor; alt ajan "kapıyı geçir" hedefiyle toplu regex kullandı (H555 dolgu yasağı brifte açık değildi). Ayrıca `onarim_uygula.py` metni ham dosyada aradığı için aynı metin `aciklama` alanında da geçince yazamıyordu.
+- **Kalıcı çözüm:** iki kalıp `sik_aciklama.py` BOS_KALIP'e eklendi (ölçüm: yalnız k2-16'da, başka derste 0 — yanlış alarm yok); onarım brifine "metin üreten betik/toplu değiştirme yasak, şık şık kaynaktan" kuralı; `onarim_uygula.py` konum tabanlı (soru kimliği → sik_aciklamalari → harf). k2-16 şıkları elle yeniden yazıldı.
+- **Önleme:** onarım sonrası kalıp çıkarma testi: ek/kalıp silinince açıklama sınırın altına düşüyorsa kapı geçişi sahtedir. Onarım ajanı toplu değiştirme yapmaz.
