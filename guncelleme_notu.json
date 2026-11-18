@@ -1,13 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 831,
-  "baslik": "Sesli dersler: yerel sunucu da güncel ders listesini ve sesleri kullanıyor",
+  "onem": 832,
+  "baslik": "Dağıtım güvenliği: ses eşitleme betikleri sunucu kimliğini doğruluyor",
   "maddeler": [
-    "Altyapı: canlıda yayınlanan sesli dersler ve sesleri her dağıtımda bu bilgisayardaki sunucuya da aktarılıyor; içerik hattı yeni derslerde yerel sunucuyla çalışabiliyor."
+    "Altyapı: ses aktarım betikleri sunucunun SSH anahtarını doğruluyor; anahtar değişirse bağlantı kurulmuyor."
   ],
   "eklenen": [],
   "degisen": [
-    "Dağıtım sonunda sesli dersler yerel sunucuya çekiliyor"
+    "SSH anahtar doğrulaması açıldı"
   ],
   "duzeltilen": [],
   "silinen": []

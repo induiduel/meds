@@ -17,7 +17,7 @@ ANA="$(cd "$(dirname "$0")/../.." && pwd)"
 KURU=""; [[ "${1:-}" == "--kuru" ]] && KURU="-n"
 KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 HOST="ubuntu@${ORACLE_HOST:-92.5.55.109}"
-SSHC="ssh -i $KEY -o StrictHostKeyChecking=no -o ConnectTimeout=15"
+SSHC="ssh -i $KEY -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15"
 UZAK=/home/ubuntu/medsor/meds
 
 cd "$ANA"
