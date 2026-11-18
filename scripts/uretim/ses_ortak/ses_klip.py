@@ -123,9 +123,13 @@ def seslendir(tts, cumleler: list[str], *, okunus: Callable[[str], str], kbps: i
             if not par:
                 continue
             okunan = okunus(par)
+            if not re.search(r"\w", okunan):  # yalnız çizim/noktalama kalan parça (H587: "│ └──┘." → "." → 0 sn, bozuk) okunmaz
+                continue
             for oku in ses_metin.parcala(okunan):
                 wav, n = paragraf(oku) if paragraf else E.paragraf_seslendir(tts, oku, hazir=True)
-                if bozuk_mu(n):
+                # çok kısa parçada ("2." → "iki.", beklenen 1,0 sn / gerçek 0,5 sn) oran ölçüsü anlamsız: bozuk sayılmaz,
+                # yalnız not düşülür (2026-11-17; aksi hâlde numaralı listeli her klip yazılamıyordu)
+                if bozuk_mu(n) and len(oku.strip()) >= 12:
                     raise BozukKlip(f"{n}: {par[:80]}")
                 if n:
                     notlar.append(f"{n}: {par[:50]}")
@@ -188,3 +192,194 @@ def klasor(d: Path, K: dict[str, list[str]], *, surum: str, uret: Callable[[list
     (log or (lambda s: print(f"{time.strftime('%H:%M:%S')} {s}", flush=True)))(
         f"{d.name}: {len(K)} klip, {yeni} yeni ({toplam_sn:.0f} sn ses, {time.time() - t0:.0f} sn'de)")
     return yeni
+
+
+# ── --yeniden: liste tabanlı ZORLA yeniden üretim (2026-11-17, kullanıcı onayı "Okunuş doğru") ─────────────────────────────
+# Klip adı/karması okunan metni içermediği için betikler "dosya var" diye atlar; burada okunus_farki.jsonl satırları
+# (modül/klasör/klip + cumleler + parça → YENİ okunuş) doğrudan seslendirilir. Her klip: geçici ad → ölçüm kapısı
+# (ses_kapisi.olc: çözülebilir, biçim eskisiyle aynı, sessiz değil, düzey kaba bandı, süre/karakter kaba bandı) → eski klip
+# meds_temp/ses_ortak/eski_klipler/<data'ya göreli yol> altına yedek → os.replace. Kayıtta `h` (karma) KORUNUR; sure/zaman/
+# okunus_surum güncellenir. Kaldığı yerden devam: yeniden/yapilan.jsonl. GPU yalnız cozucu_ses_gpu.sh ile çağrılır.
+# Kullanım: cozucu_ses_gpu.sh meds/scripts/uretim/ses_ortak/ses_klip.py --yeniden <liste.jsonl> --modul a,b [--sinir N]
+YENIDEN = _kok.MEDS.parent / "meds_temp/ses_ortak/yeniden"
+YEDEK = _kok.MEDS.parent / "meds_temp/ses_ortak/eski_klipler"
+DATA = _kok.MEDS / "data"
+
+
+def _hedef(r: dict) -> tuple[Path, Path, str]:
+    """→ (mp3 yolu, kayıt dosyası, kayıt anahtarı)."""
+    m, k, klip = r["modul"], r["klasor"], r["klip"]
+    if m == "ogren_ses":
+        d = DATA / "ogren_ses" / k
+        return d / f"{klip}.mp3", d / "kayit.json", klip
+    if m == "terim_ses":
+        return DATA / "terim_ses" / klip[:2] / f"{klip}.mp3", DATA / "terim_ses/kayit.json", klip
+    if m.startswith("ek_modul:"):
+        mod = m.split(":", 1)[1]
+        return (DATA / "ek_moduller/ses" / mod / f"{klip}.mp3",
+                _kok.MEDS / "src/data/ek_moduller" / mod / "klip.json", klip)
+    d = DATA / m / "ses" / k
+    return d / f"{klip}.mp3", d / "kayit.json", klip
+
+
+def _yeniden(argv: list[str]) -> int:
+    import shutil
+    import ses_kapisi as KP
+    sys.path.insert(0, str(_kok.SCRIPTS))
+    import gunluk
+    liste = Path(argv[argv.index("--yeniden") + 1])
+    moduller = set(argv[argv.index("--modul") + 1].split(",")) if "--modul" in argv else None
+    sinir = int(argv[argv.index("--sinir") + 1]) if "--sinir" in argv else None
+    YENIDEN.mkdir(parents=True, exist_ok=True)
+    yp = YENIDEN / "yapilan.jsonl"
+    yapildi = set()
+    if yp.exists():
+        for s in yp.read_text(encoding="utf-8").splitlines():
+            try:
+                o = json.loads(s)
+                yapildi.add((o["modul"], o["klasor"], o["klip"]))
+            except (json.JSONDecodeError, KeyError):
+                pass
+    satirlar = []
+    with liste.open(encoding="utf-8") as f:
+        for s in f:
+            r = json.loads(s)
+            if (moduller is None or r["modul"] in moduller) and not r["modul"].startswith("sesli_ders") \
+                    and (r["modul"], r["klasor"], r["klip"]) not in yapildi:
+                satirlar.append(r)
+    if sinir:
+        satirlar = satirlar[:sinir]
+    import ema_isci as E
+    log = lambda m: print(f"{time.strftime('%H:%M:%S')} {m}", flush=True)  # noqa: E731
+    log(f"yeniden: {len(satirlar)} klip ({', '.join(sorted(moduller or ['hepsi']))}); cihaz {os.environ.get('EMA_CIHAZ')}")
+    if not satirlar:
+        return 0
+    tts = E.model_yukle()
+    ek_K: dict[str, dict] = {}
+    kayitlar: dict[Path, dict] = {}
+    ilerleme = {"moduller": sorted(moduller or []), "toplam": len(satirlar), "yapilan": 0, "hata": 0, "atlanan": 0,
+                "basla": time.strftime("%Y-%m-%d %H:%M:%S"), "hatalar": []}
+    ip = YENIDEN / "ilerleme.json"
+    t0 = time.time()
+    ses_sn = 0.0
+
+    def hata(r, neden):
+        ilerleme["hata"] += 1
+        ilerleme["hatalar"].append({"modul": r["modul"], "klasor": r["klasor"], "klip": r["klip"], "neden": neden[:300]})
+        log(f"  HATA {r['modul']}/{r['klasor']}/{r['klip']}: {neden[:200]}")
+        gunluk.olay("ses_yeniden", "hata", "klip üretilemedi", modul=r["modul"], klasor=r["klasor"], klip=r["klip"], neden=neden[:300])
+
+    for i, r in enumerate(satirlar, 1):
+        mp3_yol, kp, anahtar = _hedef(r)
+        if kp not in kayitlar:
+            kayitlar[kp] = kayit_oku(kp)
+        kayit = kayitlar[kp]
+        if anahtar not in kayit or not mp3_yol.exists():
+            ilerleme["atlanan"] += 1
+            log(f"  ATLA {mp3_yol}: kayıtta/diskte yok")
+            continue
+        try:
+            if r["modul"].startswith("ek_modul:"):
+                mod = r["modul"].split(":", 1)[1]
+                if mod not in ek_K:
+                    import importlib.util
+                    sp = importlib.util.spec_from_file_location("ek_ses", _kok.SCRIPTS / "uretim/ek_modul/ses.py")
+                    em = importlib.util.module_from_spec(sp)
+                    sp.loader.exec_module(em)
+                    ek_K[mod] = em.klipler(mod)
+                par = ek_K[mod].get(anahtar)
+                if par is None or hashlib.sha1("\n".join(par).encode()).hexdigest()[:12] != kayit[anahtar].get("v"):
+                    raise ValueError("ek modül klip metni kayıttaki özetle (v) eşleşmiyor")
+                ok_ = ses_metin.okuyucu(modul=mod)
+                mp3, _z, sure, notlar = E.parca_uret(tts, {"paragraflar": par, "bolumBasi": False}, True, okunus=ok_)
+                if any(bozuk_mu(n) for n in notlar or []):
+                    raise BozukKlip(str(notlar)[:200])
+                motor = sum(len(ok_(p)) for p in par)
+                zaman = None
+            elif r["modul"] == "terim_ses":
+                ok_ = ses_metin.okuyucu(yol="uzun", modul="terim_ses")
+                metin = ok_(r["cumleler"][0])
+                x, n1 = E.paragraf_seslendir(tts, metin, hazir=True)
+                if bozuk_mu(n1):
+                    raise BozukKlip(str(n1))
+                import numpy as np
+                mp3 = E.mp3_kodla((np.clip(x, -1, 1) * 32767).astype("<i2").tobytes(), kbps=48)
+                sure, zaman, notlar, motor = round(len(mp3) * 8 / 48000, 2), None, [n1] if n1 else [], len(metin)
+            else:
+                harita = r["okunus"]
+                mp3, zaman, sure, notlar = seslendir(tts, r["cumleler"], okunus=lambda p: harita[p], kbps=48, E=E)
+                motor = sum(len(v) for v in harita.values())
+        except BozukKlip as e:
+            bozuk_kaydet(klasor=str(mp3_yol.parent), klip=anahtar, hata=str(e), karakter=sum(map(len, r["cumleler"] or [])))
+            hata(r, f"bozuk: {e}")
+            continue
+        except Exception as e:  # noqa: BLE001
+            if "CUDA" in str(e) or "out of memory" in str(e).lower():
+                log(f"CUDA hatası — durduruluyor (yeniden çalıştırınca kalan devam eder): {e}")
+                gunluk.olay("ses_yeniden", "hata", "CUDA hatası, durdu", hata=str(e)[:300])
+                return 75
+            hata(r, f"{type(e).__name__}: {e}")
+            continue
+        gecici = mp3_yol.with_name(f".{mp3_yol.stem}.yeniden.{os.getpid()}.mp3")
+        gecici.write_bytes(mp3)
+        yeni_o, eski_o = KP.olc(gecici), KP.olc(mp3_yol)
+        neden = None
+        if not yeni_o.get("ok") or yeni_o.get("cozme_hatasi"):
+            neden = f"çözülemedi: {yeni_o.get('hata') or yeni_o.get('cozme_hatasi')}"
+        elif eski_o.get("ok") and (yeni_o["sr"], yeni_o["kanal"]) != (eski_o["sr"], eski_o["kanal"]):
+            neden = f"biçim farklı {yeni_o['sr']}/{yeni_o['kanal']} ≠ {eski_o['sr']}/{eski_o['kanal']}"
+        elif (yeni_o.get("sure") or 0) <= 0 or yeni_o.get("max") is None or yeni_o["max"] < KP.SESSIZ_TEPE:
+            neden = "sessiz/boş"
+        elif yeni_o.get("mean") is not None and not (KP.DUZEY_HATA[0] <= yeni_o["mean"] <= KP.DUZEY_HATA[1]):
+            neden = f"düzey {yeni_o['mean']}"
+        elif motor >= 20 and not (KP.ORAN_HATA[0] <= yeni_o["sure"] / (motor / KP.KARAKTER_SN) <= KP.ORAN_HATA[1]):
+            neden = f"süre/karakter {yeni_o['sure'] / (motor / KP.KARAKTER_SN):.2f}"
+        if neden:
+            gecici.unlink(missing_ok=True)
+            hata(r, f"kapı: {neden}")
+            continue
+        yedek = YEDEK / mp3_yol.relative_to(DATA)
+        if not yedek.exists():
+            yedek.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(mp3_yol, yedek)
+        os.replace(gecici, mp3_yol)
+        g = kayit[anahtar]
+        g["sure"] = sure
+        if zaman is not None:
+            g["zaman"] = zaman
+        if r["modul"] == "ogren_ses":
+            g["guncellendi"] = time.strftime("%Y-%m-%d %H:%M:%S")
+        if notlar:
+            g["not"] = notlar
+        else:
+            g.pop("not", None)
+        g["okunus_surum"] = ses_metin.SOZLUK_SURUM
+        if kp.name != "kayit.json" or r["modul"] != "terim_ses" or i % 20 == 0 or i == len(satirlar):
+            atomik_yaz(kp, json.dumps(kayit, ensure_ascii=False, indent=(2 if r["modul"] == "ogren_ses" else 0 if r["modul"].startswith("ek_modul:") else None)))
+        with yp.open("a", encoding="utf-8") as f:
+            f.write(json.dumps({"modul": r["modul"], "klasor": r["klasor"], "klip": r["klip"], "dosya": str(mp3_yol.relative_to(_kok.MEDS)),
+                                "kayit": str(kp.relative_to(_kok.MEDS)), "sure": sure}, ensure_ascii=False) + "\n")
+        ilerleme["yapilan"] += 1
+        ses_sn += sure
+        if i == 200 or i % 50 == 0 or i == len(satirlar):
+            gecen = time.time() - t0
+            kalan = gecen / i * (len(satirlar) - i)
+            ilerleme.update(gecen_sn=round(gecen), tahmini_kalan_sn=round(kalan), ses_sn=round(ses_sn))
+            atomik_yaz(ip, json.dumps(ilerleme, ensure_ascii=False, indent=1))
+            log(f"[{i}/{len(satirlar)}] {gecen:.0f} sn, kalan ≈ {kalan / 60:.0f} dk, hata {ilerleme['hata']}")
+            if i == 200:
+                gunluk.olay("ses_yeniden", "bilgi", "ilk 200 klip süre tahmini", gecen_sn=round(gecen),
+                            klip_basina_sn=round(gecen / i, 2), kalan_dk=round(kalan / 60), toplam=len(satirlar))
+    for kp, kayit in kayitlar.items():
+        if kp.name == "kayit.json" and kp.parent.name == "terim_ses":
+            atomik_yaz(kp, json.dumps(kayit, ensure_ascii=False))
+    ilerleme["bitis"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    atomik_yaz(ip, json.dumps(ilerleme, ensure_ascii=False, indent=1))
+    gunluk.olay("ses_yeniden", "hata" if ilerleme["hata"] else "bilgi", "yeniden üretim turu bitti",
+                **{k: ilerleme[k] for k in ("toplam", "yapilan", "hata", "atlanan")}, moduller=",".join(sorted(moduller or [])))
+    log(f"bitti: {ilerleme['yapilan']} üretildi, {ilerleme['hata']} hata, {ilerleme['atlanan']} atlandı ({time.time() - t0:.0f} sn)")
+    return 1 if ilerleme["hata"] else 0
+
+
+if __name__ == "__main__" and "--yeniden" in sys.argv:
+    sys.exit(_yeniden(sys.argv[1:]))

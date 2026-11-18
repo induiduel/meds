@@ -231,6 +231,10 @@ def _tr_kucuk(s: str) -> str:
     return s.replace("I", "ı").replace("İ", "i").lower()
 
 
+# (b) ek: Türkçe çekim/ek-fiil sonu taşıyan ≥6 harfli tek büyük sözcük ("SIFIRDIR", "YAPMAZLAR") kısaltma değildir (2026-11-17)
+_TR_EK_SON = re.compile(r"^[A-ZÇĞİÖŞÜ]{3,}(?:D[IİUÜ]R|T[IİUÜ]R|LAR|LER|MAZ|MEZ|D[IİUÜ]K)$")
+
+
 def _baslik_kucult(metin: str) -> str:
     """TAMAMI BÜYÜK Türkçe başlık/etiket ("[SINAV SPOTU]", "TOPUK KANI İLE YAPILAN TESTLER") harf harf okunmaz.
     Kural: (a) ≥2 ardışık büyük harfli sözcükten en az biri ≥4 harf ve bilinen kısaltma değilse, dizideki bilinmeyen
@@ -250,7 +254,7 @@ def _baslik_kucult(metin: str) -> str:
             kucult |= {k for k in range(i, j + 1) if es[k].group(0) not in B}
         elif len(dizi) == 1:
             w = dizi[0].group(0)
-            if len(w) >= 4 and w not in B and _TR_OZEL & set(w):
+            if len(w) >= 4 and w not in B and (_TR_OZEL & set(w) or _TR_EK_SON.search(w)):
                 kucult.add(i)
         i = j + 1
     if not kucult:
@@ -308,7 +312,9 @@ _KUCUK_SOZ = re.compile(r"(?<![\wÇĞİÖŞÜçğıöşü-])(?<![\wÇĞİÖŞÜ�
 _EK_OKUNUS_RX = re.compile(r"(?<![\wÇĞİÖŞÜçğıöşü])(" + "|".join(map(re.escape, EK_OKUNUS)) + r")(?=[a-zçğıöşü'’]*(?![\w]))",
                            re.IGNORECASE)
 _IN = re.compile(r"(?<![\wÇĞİÖŞÜçğıöşü])In(?=\s+(?:vivo|vitro|situ|utero)\b)")
-_KUTU = re.compile(r"[\u2500-\u257F\u2580-\u259F]+")  # kutu çizim karakterleri (┌─│): tablo çizimi motoru şaşırtır (H587)
+# kutu çizim (┌─│), blok (▀█), oklar (→↓) ve geometrik şekiller (▼◄►■): tablo/akış çizimi motoru şaşırtır (H587; 2026-11-17:
+# yalnız U+2500–259F temizleniyordu, ▼◄► motor metninde kalıp tumor-biyolojisi 18. adımı üç tohumda da bozdu)
+_KUTU = re.compile(r"[\u2190-\u21FF\u2500-\u257F\u2580-\u259F\u25A0-\u25FF\u27F5-\u27FF]+")
 
 
 def _sakla_bir(okunus_: str, orj: str, korunan: list[str]) -> str:
@@ -335,7 +341,137 @@ def _terim(metin: str) -> str:
 def _kutu_temizle(metin: str) -> str:
     if not _KUTU.search(metin):
         return metin
-    return re.sub(r"\s+", " ", re.sub(r"(?:\s*" + _KUTU.pattern + r"\s*)+", ", ", metin)).strip(" ,")
+    m = re.sub(r"\s+", " ", re.sub(r"(?:\s*" + _KUTU.pattern + r"\s*)+", ", ", metin))
+    m = re.sub(r"(?:\s*,\s*){2,}", ", ", m)            # ardışık çizim parçalarından kalan ", , ,"
+    m = re.sub(r"\(\s*,\s*", "(", re.sub(r"\s*,\s*([.!?;:)])", r"\1", m))
+    return m.strip(" ,")
+
+
+# Satır yapılı kutu tablo/çizim → okunur düz metin (2026-11-17, tumor-biyolojisi 18/24/32). _kutu_temizle tek satıra
+# yassılmış metinde çalışır: o noktada tablo hücreleri satır satır iç içe geçmiştir ("Derinin Bazal │ Derinin en sık…│
+# Hücreli Karsinomu│ eritir…") ve yalnız çerçeveden oluşan satır ayrı "cümle" olarak motora gider (okunuş ".", süre 0).
+# Bu işlev SATIRLAR DURURKEN çağrılır (Öğren: temizle_markdown'dan önce): yatay çizgi satırları grupları ayırır, her
+# grupta tüm satırlarda boş/çerçeve olan dikey koridorlar sütunları verir; sütun parçaları yukarıdan aşağı birleşir,
+# hücreler ", " ile, gruplar ". " ile ayrılır; yalnız çerçeveden oluşan satır parça üretmez. İçerik atılmaz.
+_KUTU_KAR = re.compile(r"[←-⇿─-╿▀-▟■-◿⟵-⟿]")
+_ICERIK = re.compile(r"[0-9A-Za-zÇĞİÖŞÜçğıöşüÂâÎîÛû%]")
+
+
+def _grup_duz(satirlar: list[str]) -> str:
+    gen = max(len(s) for s in satirlar)
+    satirlar = [s.ljust(gen) for s in satirlar]
+    bos = [all(s[x] == " " or _KUTU_KAR.match(s[x]) for s in satirlar) for x in range(gen)]
+    cizgi = [any(_KUTU_KAR.match(s[x]) for s in satirlar) for x in range(gen)]
+    # koridor: çerçeve karakteri taşıyan boş sütun ya da ≥3 boşluk genişliği
+    kor = [False] * gen
+    x = 0
+    while x < gen:
+        if not bos[x]:
+            x += 1
+            continue
+        y = x
+        while y < gen and bos[y]:
+            y += 1
+        if y - x >= 3 or any(cizgi[x:y]):
+            for k in range(x, y):
+                kor[k] = True
+        x = y
+    sutunlar, x = [], 0
+    while x < gen:
+        if kor[x]:
+            x += 1
+            continue
+        y = x
+        while y < gen and not kor[y]:
+            y += 1
+        sutunlar.append((x, y))
+        x = y
+    hucreler = []
+    for a, b in sutunlar:
+        parca = [_KUTU_KAR.sub(" ", s[a:b]).strip() for s in satirlar]
+        h = re.sub(r"\s+", " ", " ".join(p for p in parca if p)).strip()
+        if _ICERIK.search(h):
+            hucreler.append(h.rstrip(" .,;"))
+    return ", ".join(hucreler)
+
+
+def kutu_tablo_duz(metin: str) -> str:
+    """Çok satırlı metindeki kutu çizimli tablo/akış bloklarını okunur satırlara çevirir (bkz. yukarı). Kutu karakteri
+    olmayan metin aynen döner. Blok: kutu karakterli satırlar + aralarındaki/ardındaki düz satırlar (``` çiti içi dahil)."""
+    if not _KUTU_KAR.search(metin):
+        return metin
+    satirlar = metin.split("\n")
+    out: list[str] = []
+    i = 0
+    while i < len(satirlar):
+        if not _KUTU_KAR.search(satirlar[i]):
+            out.append(satirlar[i])
+            i += 1
+            continue
+        j = i  # blok sonu: kutu karakterli son satır + (çit içindeyse) çit kapanışına kadar
+        cit = any(s.strip().startswith("```") for s in out[-2:]) if out else False
+        son = i
+        while j < len(satirlar) and not satirlar[j].strip().startswith("```"):
+            if _KUTU_KAR.search(satirlar[j]):
+                son = j
+            elif not cit and not satirlar[j].strip():
+                break
+            j += 1
+        blok = satirlar[i:(j if cit else son + 1)]
+        gruplar, cur = [], []
+        for s in blok:
+            if not _ICERIK.search(s):  # yalnız çerçeve/ok satırı: grup sınırı (yatay çizgi) ya da hiç
+                if "─" in s or "═" in s:
+                    if cur:
+                        gruplar.append(cur)
+                    cur = []
+                continue
+            cur.append(s)
+        if cur:
+            gruplar.append(cur)
+        cumle = [g for g in (_grup_duz(c) for c in gruplar) if g]
+        if cumle:
+            out.append(". ".join(cumle) + ".")
+        i = j if cit else son + 1
+    return "\n".join(out)
+
+
+# Karşılaştırmalı yüzde (H587, 2026-11-17): "<%0.1'dir" motorda "< yüzde sıfır.1 dir" okunuyordu (simge okunmaz, noktalı
+# ondalık sayı okuyucusunda yok). → "%0,1'den küçüktür" (sayı okuyucusu "yüzde sıfır virgül bir'den küçüktür" yapar).
+_ABL = {"0": "dan", "1": "den", "2": "den", "3": "ten", "4": "ten", "5": "ten", "6": "dan", "7": "den", "8": "den", "9": "dan"}
+_ABL_ONLUK = {"1": "dan", "2": "den", "3": "dan", "4": "tan", "5": "den", "6": "tan", "7": "ten", "8": "den", "9": "dan"}
+_KARS = re.compile(r"([<>≤≥])\s*%\s*(\d+(?:[.,]\d+)?)(?:['’]([a-zçğıöşü]+))?")
+# yüzdesiz karşılaştırma (2026-11-17): birim okunuşunun son ünlüsüne göre ayrılma eki; önü harf/ok olan "<" (p<0.05, <-) dokunulmaz
+_BIRIM_ABL = {"mm": "den", "cm": "den", "µm": "den", "μm": "den", "ml": "den", "mL": "den", "mg": "dan", "kg": "dan", "g": "dan",
+              "mmHg": "dan", "yaş": "tan", "yıl": "dan", "gün": "den", "hafta": "dan", "ay": "dan", "saat": "ten", "dk": "dan"}
+_KARS_SAYI = re.compile(r"(?<![\w<>=\-])([<>≤≥])\s*(\d+(?:[.,]\d+)?)(?:\s*(" + "|".join(sorted(map(re.escape, _BIRIM_ABL), key=len, reverse=True))
+                        + r")(?![\wçğıöşü]))?(?![\d%.,])(?:['’]([a-zçğıöşü]+))?")
+_YUZDE_NOKTA = re.compile(r"%\s*(\d+)\.(\d+)")
+
+
+def _ablatif(sayi: str) -> str:
+    son = re.split(r"[.,]", sayi)[-1].lstrip("0") or "0"
+    if son[-1] != "0" or son == "0":
+        return _ABL[son[-1]]
+    if len(son) >= 2 and son[-2] != "0" and (len(son) == 2 or son[-3:] != "000"):
+        return _ABL_ONLUK[son[-2]]
+    return "den"  # yüz, bin, milyon
+
+
+def _karsilastirma(metin: str) -> str:
+    def f(m):
+        sayi = m.group(2).replace(".", ",")
+        sifat = "küçük" if m.group(1) in "<≤" else "büyük"
+        if m.group(1) in "≤≥":
+            sifat += " ya da eşit"
+        ek = "tür" if (m.group(3) or "").startswith(("d", "t")) and len(m.group(3)) <= 3 else ""
+        return f"%{sayi}'{_ablatif(sayi)} {sifat}{ek}"
+    def g(m):  # yüzdesiz: "< 5 mm" → "5 mm'den küçük", "≥ 0.5" → "0,5'ten büyük ya da eşit"
+        sayi, birim, ek_ = m.group(2).replace(".", ","), m.group(3), m.group(4) or ""
+        sifat = ("küçük" if m.group(1) in "<≤" else "büyük") + (" ya da eşit" if m.group(1) in "≤≥" else "")
+        ek = "tür" if ek_.startswith(("d", "t")) and len(ek_) <= 3 else ""
+        return f"{sayi} {birim}'{_BIRIM_ABL[birim]} {sifat}{ek}" if birim else f"{sayi}'{_ablatif(sayi)} {sifat}{ek}"
+    return _YUZDE_NOKTA.sub(r"%\1,\2", _KARS_SAYI.sub(g, _KARS.sub(f, metin)))
 
 
 def uzun_yol(metin: str, ek_kisaltma: set[str] | None = None) -> str:
@@ -386,6 +522,7 @@ def hazirla(metin: str, *, kurul: int | None = None, ders: str | None = None, mo
     (ör. çözücü klipleri tasarım gereği daima uzun: SURUM ema-2)."""
     y = yol or yol_sec(kurul=kurul, ders=ders, modul=modul)
     metin = re.sub("[\uE000-\uF8FF]", "", metin)  # girdideki simge yazı tipi karakterleri (okunmaz; yer tutucuyla çakışır)
+    metin = _karsilastirma(metin)
     return uzun_yol(metin, ek_kisaltma) if y == "uzun" else bitisik_yol(metin)
 
 

@@ -5,10 +5,13 @@ Kullanım: metin_denetle.py [--yazim] <metin.md> [...]
 --yazim: metin kısaltmaları yazımla tutar (CD2, IL-2); rakam/kısaltma/Yunan denetimi EMA'ya giden okunuşa
 (modul_okunus.donustur) uygulanır (KURUL2_YAPILMAYACAK_HATALAR H23).   → HATA sayısı 0 ise çıkış kodu 0.
 """
-import re, sys
+import os, re, sys
 from pathlib import Path
 
 MIN_W, MAX_W = 1150, 6000
+# Uzun PDF'lerde (arşiv, 60+ sayfa) 6000 kelime tavanı sayfa başına ~100 kelimeye düşüp konuyu kırpıyordu.
+# Hat, sayfa sayısına göre tavanı yükseltir (`MEDS_METIN_MAX_W`); varsayılan değişmez (H618).
+MAX_W = int(os.environ.get("MEDS_METIN_MAX_W") or MAX_W)
 WPM = 112
 # Kurul 2+ dolgu ve asılsız vurgu kalıpları (kullanıcı kuralı 2026-10-22, H22)
 DOLGU = (

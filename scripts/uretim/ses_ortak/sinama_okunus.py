@@ -60,6 +60,18 @@ OKUNUS = [
     ("│ └────┴────┘.", "uzun", "."),
     # bitişik yol (Kurul 1) kutu temizliği ve şık etiketi
     ("┌──┐ │ Benign │ └──┘", "bitisik", "Benign"),
+    # 2026-11-17 (tumor-biyolojisi 18/24/32): ok ve geometrik şekil (▼◄►), yalnız çizimden oluşan parça, "<%0.1'dir"
+    ("│ (Simetrik 2 Kutup) │ └──┬──┘ ▼ ▼ ◄──► (2 Kutup) ▼", "uzun", "(Simetrik iki Kutup), (iki Kutup)"),
+    ("│ └─────┴─────┘.", "bitisik", "."),
+    ("Leyomiyomun sarkoma dönüşüm riski <%0.1'dir.", "uzun", "Leyomiyomun sarkoma dönüşüm riski yüzde sıfır virgül bir den küçüktür."),
+    ("uzak metastaz sıklığı <%0.01'dir (SIFIRDIR)", "uzun", "uzak metastaz sıklığı yüzde sıfır virgül sıfır bir den küçüktür (sıfırdır)"),
+    ("olasılık yüksektir (>%50).", "uzun", "olasılık yüksektir (yüzde elli den büyük)."),
+    # 2026-11-17: yüzdesiz karşılaştırma (birimli/birimsiz); önü harfli "<" (p<0.05) dokunulmaz
+    ("Çap < 5 mm ise", "uzun", "Çap beş mm'den küçük ise"),
+    ("> 2 cm tümör", "uzun", "iki cm'den büyük tümör"),
+    ("değer ≥0.5 olur", "uzun", "değer sıfır virgül beş ten büyük ya da eşit olur"),
+    ("≥ %10 olur", "uzun", "yüzde on dan büyük ya da eşit olur"),
+    ("p<0.05 anlamlı", "uzun", "p<0.05 anlamlı"),
     ("A, Williams sendromu.", "bitisik", "A, Vilyıms sendromu."),
 ]
 
@@ -85,6 +97,14 @@ KURUL = [
 ]
 
 
+# (çok satırlı girdi, beklenen) — ses_metin.kutu_tablo_duz: hücreler sütun sütun birleşir, çerçeve satırı parça üretmez
+TABLO = [
+    ("┌──────┬──────┐\n│ A1   │ B1   │\n│ A2   │ B2   │\n├──────┼──────┤\n│ C    │ D    │\n└──────┴──────┘", "A1 A2, B1 B2. C, D."),
+    ("metin\n```\n┌──┐   ┌──┐\n│ X│   │ Y│\n└┬─┘   └┬─┘\n ▼      ▼\nsol    sağ\n```\nson", "metin\n```\nX, Y. sol, sağ.\n```\nson"),
+    ("düz metin", "düz metin"),
+]
+
+
 def main() -> int:
     v = "-v" in sys.argv
     hata = 0
@@ -102,7 +122,12 @@ def main() -> int:
             print(f"HATA  kurul {tur} {anahtar}: beklenen {bek}, alınan {al}")
         elif v:
             print(f"ok    kurul {tur} {anahtar} → {al}")
-    n = len(OKUNUS) + len(KURUL)
+    for girdi, bek in TABLO:
+        al = S.kutu_tablo_duz(girdi)
+        if al != bek:
+            hata += 1
+            print(f"HATA  tablo {girdi!r}\n      beklenen: {bek!r}\n      alınan  : {al!r}")
+    n = len(OKUNUS) + len(KURUL) + len(TABLO)
     print(f"{n} sınama, {hata} HATA (sözlük {S.SOZLUK_SURUM})")
     return 1 if hata else 0
 

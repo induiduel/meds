@@ -73,8 +73,10 @@ class Rapor:
         if not fark:
             return
         s["degisecek"] += 1
+        # cumleler + her parçanın yeni okunuşu: yeniden üretim (ses_klip --yeniden) motora tam olarak bunu verir (2026-11-17)
         satir = {"modul": modul, "klasor": klasor, "klip": klip,
-                 "fark": [{"metin": p, "eski": e, "yeni": n} for p, e, n in fark]}
+                 "fark": [{"metin": p, "eski": e, "yeni": n} for p, e, n in fark],
+                 "cumleler": cumleler, "okunus": {p: yeni(p) for p in parcalar(cumleler)}}
         self.out.write(json.dumps(satir, ensure_ascii=False) + "\n")
         if len([o for o in self.ornekler if o["modul"] == modul]) < 1 and len(self.ornekler) < 40:
             self.ornekler.append({"modul": modul, "klip": f"{klasor}/{klip}", "eski": fark[0][1][:160], "yeni": fark[0][2][:160]})

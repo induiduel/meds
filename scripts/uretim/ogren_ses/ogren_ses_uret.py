@@ -85,21 +85,25 @@ def slide_metni(slide: dict, index: int) -> str:
                 keys.append(bt or bd)
 
     parts = [p for p in [title, subtitle, narrative] + keys if p]
-    metin = ". ".join(parts)
+    # kutu tablo/çizim satırlar dururken okunur metne çevrilir (yassıltınca hücreler iç içe geçiyor, çerçeve satırı
+    # boş "cümle" oluyordu: tumor-biyolojisi 18/24/32, 2026-11-17). Ekran metnine dokunmaz; yalnız ses cümleleri.
+    metin = ". ".join(ses_metin.kutu_tablo_duz(p) for p in parts)
     return temizle_markdown(metin)
 
 
-_SIRA_IMI = re.compile(r"(?:\d{1,3}|[a-zA-ZçğıöşüÇĞİÖŞÜ]|[ivxIVX]{1,4})[.)]|[-–—•*·▪►]")
+_SIRA_IMI = re.compile(r"\(?(?:\d{1,3}|[a-zA-ZçğıöşüÇĞİÖŞÜ]|[ivxIVX]{1,4})[.)]|[-–—•*·▪►]")
 
 
 def cumlelere_ayir(metin: str) -> list[str]:
     # Cümle sonlarına göre böl (. ! ?)
-    raw = [c.strip() for c in re.split(r"(?<=[.!?])\s+", metin.strip()) if c.strip()]
+    raw = [c.strip() for c in re.split(r"(?<=[.!?])(?<!\(\d\.)(?<!\(\d\d\.)\s+", metin.strip()) if c.strip()]
     # H594: "1." / "2)" / "a." / "-" gibi tek başına sıra imi ayrı cümle olmaz, sonraki cümleye yapışır
     # (yoksa ~0,5 sn'lik parça süre denetiminde bozuk sayılıp bütün adım reddediliyordu). Okunuş değişmez.
     birlesik: list[str] = []
     bekleyen = ""
     for c in raw:
+        if not ses_metin._ICERIK.search(ses_metin._kutu_temizle(c)):
+            continue  # yalnız çerçeve/ok: okunuşu "." → süre 0 (2026-11-17); içerik taşımaz
         if _SIRA_IMI.fullmatch(c):
             bekleyen = f"{bekleyen} {c}" if bekleyen else c
             continue
