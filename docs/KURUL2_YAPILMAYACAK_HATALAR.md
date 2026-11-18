@@ -460,3 +460,4 @@
 - **H623** · "Gece tam hattı k2-40/41/42 betik açıkları": tek dosya varsayımları → dizin denetimi + açık işler → hatalar/betik_altyapi.md
 - **H625** · "Ara soruda şık metni çözücü dosyasında kaymış, kapı 0 HATA verdi (k2-49)": kaynak/cozucu/onem üçünde eşitlik + bağımsız denetçi zorunlu, kapıda tam ders anahtarı → hatalar/soru_cozucu.md
 - **H626** · "Çıkmış soru kökü 90 kelimeyi aşınca çözücü kapısı kaldı": çıkmış kök kısaltılmaz; sınır çıkmışta 120, örnekte 90 → hatalar/soru_cozucu.md
+- **H627** · "k2-36/k2-39 dağıtımı PDF kapısında durdu (SANAL_DESTELER + drive_root unutuldu)": ders_ekle sonrası kayıt + PDF kopyası + statik kapı → hatalar/dagitim_sunucu.md

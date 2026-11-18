@@ -358,6 +358,18 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Psikiyatri /12)Dışa Atım Bozuklukları .pdf', name: '12)Dışa Atım Bozuklukları .pdf', pages: 23, fileId: '1B5-r9jmHPoUy5tP6uxBdXBfBRyKviPA3' } as SourceFile],
   },
+  // 2026-11-18 Aile Hekimliğine Yaklaşım (k2-36): deste yok, okul PDF'i sanal desteyle bağlı (okul Drive'ında dosya adı "WONCA Ağacı").
+  'k2p-k2-36-aile-hekimligine-yaklasim': {
+    title: 'Aile Hekimliğine Yaklaşım',
+    decks: [],
+    files: [{ path: 'Kurul 2/Aile Hekimliği /2)WONCA Ağacı.pdf', name: '2)WONCA Ağacı.pdf', pages: 41, fileId: '1N_AQKkuIfP837t37B1FKVZZgXe6OwJn1' } as SourceFile],
+  },
+  // 2026-11-18 Kolinoseptör Bloke Edici İlaçlar (k2-39): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-39-kolinoseptor-bloke-edici-ilaclar': {
+    title: 'Kolinoseptör Bloke Edici İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /6)Kolinoseptör- Bloke Edici İlaçlar.pdf', name: '6)Kolinoseptör- Bloke Edici İlaçlar.pdf', pages: 51, fileId: '12byFU4tOyNDKwBU98m6TeCFAShJrI9MS' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [

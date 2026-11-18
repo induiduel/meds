@@ -330,3 +330,11 @@
 - **Kök neden:** H505'teki kapı (`ders_pdf_kapisi.py`) yazılmış ama hiçbir yere bağlanmamıştı; yeni destesiz derslerin `SANAL_DESTELER` kaydı yine unutuldu (PDF'ler drive_root'ta md5 eşitti, yalnız kayıt yoktu). Kural belgede kalınca uygulanmıyor.
 - **Kalıcı çözüm:** üç kayıt eklendi. Kapıya sunucusuz `--statik` kipi (kayıt + drive_root dosyası) eklendi ve `deploy/oracle/dagit.sh` dağıtımdan önce bunu zorunlu çalıştırıyor (çıkış 74): hizalaması olup PDF kaydı olmayan ders artık canlıya çıkamaz.
 - **Kural:** yeni sesli ders = SANAL_DESTELER kaydı + `meds-web` restart; kapı dağıtımda zorunlu, atlanamaz.
+
+### H627 — k2-36/k2-39 dağıtımı PDF kapısında durdu: SANAL_DESTELER kaydı ve drive_root dosyası unutuldu (2026-11-18)
+
+- **Belirti:** `dagit.sh` "PDF'i kayıtsız sesli ders var (H624)" ile 74 çıkışıyla durdu; iki yeni ders deckId'si için "sunucuda açılabilir PDF yok".
+- **Kök neden:** Yeni sesli dersin görüntüleyici PDF'i iki ayrı yerden gelir: `src/services/lecturePdfLocator.ts` `SANAL_DESTELER` kaydı ve `meds_downloads/drive_root/Kurul N/<branş> /<dosya>.pdf`. Tam hat runbook'unda (`ders_ekle`) bu adım yok, H624 yalnız dağıtım kapısında yakalıyor.
+- **Çözüm:** İki ders için kayıt eklendi, okul Drive'ından inen PDF'ler drive_root'a (klasör adındaki sondaki boşlukla) kopyalandı; kapı 0 HATA.
+- **Kural:** Yeni ders için `ders_ekle`'den hemen sonra SANAL_DESTELER kaydı + drive_root dosyası + `meds-web` restart; commit'ten önce `python3 scripts/kapilar/ders_pdf_kapisi.py --statik --kok "$PWD"` 0 HATA.
+
