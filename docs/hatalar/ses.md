@@ -258,3 +258,10 @@
 - **Kalıcı çözüm:** üç ders `kelime_zaman.py --key <ders> --oracle --gpu` ile (gpuguard açık) çözüldü, canlıda 64/64, 39/39, 39/39 paragraf. `hata_izleyici.py` takipte yerel dosya yoksa canlı API'de paragraf başına kelime zamanını denetler.
 - **Önleme:** yayından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle (`zaman_isaret`; zamanlayıcı kapalı, kural 20); Oracle katmanı yerelde "yok" sayılmaz.
 
+
+### H629 — Eski ses varyantı yalnız yerelde silinince dagit.sh Oracle'dan geri getirdi; yedek dosyaları kayıt kapısını kilitledi (2026-11-18)
+
+- **Belirti:** k2-36/k2-39'da silinen eski ses varyantları dağıtımdan sonra yerelde yeniden belirdi; ayrıca `kos.py kayit` 6 K4 HATA verip başka oturumların commit'lerini engelledi.
+- **Kök neden:** Sesli ders kaydının (`kayit.json`, MP3, `cumle_zaman`/`kelime_zaman` varyantları) kaynağı Oracle; `dagit.sh` "Oracle → yerel" adımı eksik kayıtları yerele geri yazar. Arşivlemede bırakılan `.yedek` dosyaları da K4 kuralına takıldı.
+- **Çözüm:** Varyant önce Oracle'dan (kayıt + MP3 + zaman dosyaları, yedekle) sonra yerelden çıkarıldı, `meds-server` yeniden başlatıldı; yedekler `_arsiv_veri/`'ye sıkıştırıldı.
+- **Kural:** Ses varyantı kaldırırken önce Oracle'da, sonra yerelde sil ve `meds-server`'ı yeniden başlat; yedeği `_arsiv_veri/` altında `.zst` olarak sakla, `data/` içinde `.yedek` bırakma.

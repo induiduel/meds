@@ -462,3 +462,4 @@
 - **H626** · "Çıkmış soru kökü 90 kelimeyi aşınca çözücü kapısı kaldı": çıkmış kök kısaltılmaz; sınır çıkmışta 120, örnekte 90 → hatalar/soru_cozucu.md
 - **H627** · "k2-36/k2-39 dağıtımı PDF kapısında durdu (SANAL_DESTELER + drive_root unutuldu)": ders_ekle sonrası kayıt + PDF kopyası + statik kapı → hatalar/dagitim_sunucu.md
 - **H628** · "Ders analizinde ham iç etiketler sesli okundu, kanıtsız hoca iddiası 43 derste": üretici düzeltildi, yayın temizlendi, --dogrula tüm derslerde → hatalar/ders_metni_anlatim.md
+- **H629** · "Eski ses varyantı yalnız yerelde silinince Oracle geri getirdi, .yedek dosyaları kayıt kapısını kilitledi": önce Oracle sonra yerel sil, yedek _arsiv_veri .zst → hatalar/ses.md

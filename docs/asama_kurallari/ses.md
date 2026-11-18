@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 30 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 31 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -107,4 +107,8 @@
 ### H612 — k2-33/34/35 kelime zamanı yoktu; izleyici yanlış alarm verdi (2026-11-17)
 - **Önleme:** yayından sonra `kelime_zaman.py --hepsi --saglayici ema-yerel --oracle --gpu` elle (`zaman_isaret`; zamanlayıcı kapalı, kural 20); Oracle katmanı yerelde "yok" sayılmaz.
 
+
+
+### H629 — Eski ses varyantı yalnız yerelde silinince dagit.sh Oracle'dan geri getirdi; yedek dosyaları kayıt kapısını kilitledi (2026-11-18)
+- **Kural:** Ses varyantı kaldırırken önce Oracle'da, sonra yerelde sil ve `meds-server`'ı yeniden başlat; yedeği `_arsiv_veri/` altında `.zst` olarak sakla, `data/` içinde `.yedek` bırakma.
 
