@@ -76,6 +76,10 @@ fi
 if [[ "${MEDS_DAGIT_SES:-1}" != 0 ]]; then
   bash "$ANA/deploy/oracle/ses_esitle.sh" || echo "UYARI: ses eşitlemesi başarısız (çıkış $?) — bash deploy/oracle/ses_esitle.sh ile yeniden deneyin"
 fi
+# Oracle'da yayınlanan sesli dersler → yerel sunucu (3000) da tanısın; yalnız eksik dosya gelir, hiçbir şey ezilmez/silinmez
+if [[ "${MEDS_DAGIT_CEK:-1}" != 0 ]]; then
+  bash "$ANA/deploy/oracle/sesli_cek.sh" || echo "UYARI: sesli ders çekme başarısız (çıkış $?) — bash deploy/oracle/sesli_cek.sh ile yeniden deneyin"
+fi
 
 if [[ -n "$PARCA_REL" ]]; then
   $SSH "cd /home/ubuntu/medsor/meds && python3 scripts/deste_bol.py dogrula --hedef '$PARCA_REL'" \

@@ -1,19 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 830,
-  "baslik": "Otonom Sinir Sistemi Farmakolojisi dersi yayında",
+  "onem": 831,
+  "baslik": "Sesli dersler: yerel sunucu da güncel ders listesini ve sesleri kullanıyor",
   "maddeler": [
-    "Sesli ders: Bu yılın 56 sayfalık slaytından işlenen ders, 32 dakikalık anlatımı, dinlerken metin ve PDF takibi, canlı çizimleri ve çıkmış bağlarıyla yayında.",
-    "Soru çöz: 61 örnek soru ve sesli çözücüsü; her şıkta ne olduğu ve neden doğru ya da yanlış olduğu anlatılıyor.",
-    "En önemliler: 30 önem maddesi, çıkmış kanıtı olanlar işaretli.",
-    "Ders analizi ve mekanizma metni: Hocanın anlattığı mekanizmalar örnekleriyle, ilaç ve hastalık bağlantılarıyla ayrı bir okuma metni olarak eklendi.",
-    "Tıbbi düzeltme: Slayttaki üç hatalı ifade (beta bir blokaj hedefi, katekol halkası, hemikolinyumun bloke ettiği taşıyıcı) ders içeriğinde doğrusuyla anlatılıyor."
+    "Altyapı: canlıda yayınlanan sesli dersler ve sesleri her dağıtımda bu bilgisayardaki sunucuya da aktarılıyor; içerik hattı yeni derslerde yerel sunucuyla çalışabiliyor."
   ],
-  "eklenen": [
-    "Otonom Sinir Sistemi Farmakolojisi sesli dersi",
-    "Otonom Sinir Sistemi Farmakolojisi örnek soruları ve sesli çözücüsü"
+  "eklenen": [],
+  "degisen": [
+    "Dağıtım sonunda sesli dersler yerel sunucuya çekiliyor"
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
