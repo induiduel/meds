@@ -17,6 +17,7 @@ import DersVideo from './DersVideo';
 import HedefFilmi from './HedefFilmi';
 import HikayeFilmi from './HikayeFilmi';
 import INDEX from '../../data/kmb/index.json';
+import VIDEO from '../../data/kmb/video.json';
 import '../../styles/kmb.css';
 
 export type { Adim, Ders, SesKayit } from './kmbVeri';
@@ -29,6 +30,24 @@ const DERSLER = import.meta.glob('../../data/kmb/[0-9][0-9].json');
 const SESLER = import.meta.glob('../../data/kmb/ses_*.json');
 
 const sesUrl = (kod: string, klip: string, h: string) => `${getCustomApiUrl() || ''}/api/cozucu-ses/kmb/ema/${kod}/${klip}.mp3?v=${h}`;
+
+/** Tam ders / basamak filmi MP4 indirme (2026-11-18): yalnız video.json künyesinde olan video (video_disa_aktar.mjs üretir) */
+type VideoKunye = { mb: number; sn: number; v: string };
+function Mp4Indir({ ders, sinif }: { ders: Ders; sinif: string }) {
+  const k = (VIDEO as Record<string, Partial<Record<'ders' | 'basamak', VideoKunye>>>)[ders.kod];
+  if (!k) return null;
+  const dk = (sn: number) => `${Math.round(sn / 60)} dk`;
+  return (
+    <>
+      {(['ders', 'basamak'] as const).filter((t) => k[t]).map((t) => (
+        <a key={t} className={sinif} download href={`${getCustomApiUrl() || ''}/api/kmb-video/${ders.kod}/${t}.mp4?ad=${ders.slug}&v=${k[t]!.v}`}
+          title={`${t === 'ders' ? 'Tüm ders videosu' : 'Basamak filmi'} · ${dk(k[t]!.sn)} · ${k[t]!.mb} MB`}>
+          ⬇ {t === 'ders' ? 'Tüm ders' : 'Basamak filmi'} MP4 ({k[t]!.mb} MB)
+        </a>
+      ))}
+    </>
+  );
+}
 
 function useYol() {
   const oku = () => {
@@ -218,6 +237,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
             <button className="kmb-bag" onClick={() => setVideo(true)}>Tüm ders · tam ekran ›</button>
             <button className="kmb-bag" onClick={() => setHikaye(true)}>Hikâye filmi ›</button>
             {!!ders.rehberBasamaklari?.length && <button className="kmb-bag" onClick={() => setBasamakFilm(true)}>Basamak filmi (KMB rehberi) ›</button>}
+            <Mp4Indir ders={ders} sinif="kmb-bag" />
           </div>
         </section>
         <section className="kmb-anlatim" aria-label="Adımın anlatımı">
@@ -745,6 +765,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
           <button className="kmb-dv-ac" onClick={() => setTum(true)}>Tüm ders · tam ekran</button>
           <button className="kmb-dv-ac" onClick={() => setHikaye(true)}>Hikâye filmi</button>
           {!!ders.rehberBasamaklari?.length && <button className="kmb-dv-ac" onClick={() => setBasamakFilm(true)}>Basamak filmi (KMB rehberi)</button>}
+          <Mp4Indir ders={ders} sinif="kmb-dv-ac" />
         </div>
       </div>
       <nav className="kmb-video-liste" aria-label="Videolar">

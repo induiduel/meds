@@ -31,7 +31,7 @@
 | `hatalar/ders_metni_degerlendirme.md` | değerlendirme kapısı, sayfa haritası, ders içerik paketi, ders analizi, öğrenci sentez notu | 17 |
 | `hatalar/veri_cikmis.md` | çıkmış soru verisi, eşleme, yıl/kurul etiketi | 29 |
 | `hatalar/dagitim_sunucu.md` | dağıtım, Oracle, sunucu, önbellek/SW, çevrimdışı, kimlik | 35 |
-| `hatalar/on_yuz_disa_aktarim.md` | soru dışa aktarıcı, PDF/DOCX dışa aktarım, baskı geometrisi | 11 |
+| `hatalar/on_yuz_disa_aktarim.md` | soru dışa aktarıcı, PDF/DOCX dışa aktarım, baskı geometrisi, KMB mp4 | 12 |
 | `hatalar/on_yuz_oynatici_ders.md` | sesli ders oynatıcısı, ders ekranı, ders hattı ön yüz kayıtları | 26 |
 | `hatalar/on_yuz_tasarim_tema.md` | tasarım, tema, kabuk, düzen, cihaz güvenli alanı | 21 |
 | `hatalar/on_yuz_sayfa_denetimi.md` | sayfa denetimi bulguları, öğrenci sayfaları, veri/eşitleme ekranları | 42 |
@@ -472,3 +472,4 @@
 - **H636** · KMB videolarında ses dokunmadan gelmiyordu (play() dokunuş dışında, NotAllowedError yutuluyordu) → hatalar/on_yuz_oynatici_ders.md
 - **H637** · KMB seslerinde başta ve cümle başlarında kesik (ağ akışı + play() beklerken görüntünün öne kaçması) → hatalar/on_yuz_oynatici_ders.md
 - **H638** · KMB oynatıcı tam ekran: -12px kayma, iç içe tam ekran, kaldırılmayan yön kilidi, uiZoom taşması → hatalar/on_yuz_oynatici_ders.md
+- **H639** · KMB MP4 dışa aktarım: 800×600 kesik kare (başsız ekran), blob: sesi dışarıdan okunamıyor, katman düğmeyi örtüyor → hatalar/on_yuz_disa_aktarim.md
