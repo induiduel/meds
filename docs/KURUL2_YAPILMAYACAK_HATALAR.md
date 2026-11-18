@@ -458,3 +458,5 @@
 - **H621** · "Kapı kalıbı eklenince yalnız tetikleyen kaynak tarandı; ara soru çözücüsünde kaldı": bütün `sik_aciklama` kullanıcıları taranır, tek klip onarımında birlestir koşulmaz → hatalar/soru_cozucu.md
 - **H622** · "Ara soru birleştirmesi SINAMA k2-07 hizalaması yok diye yarıda kalıp bayat yayın bıraktı": eksik ders atlanır, kod kalıcı, onarımdan sonra birlestir+ses aynı turda → hatalar/soru_cozucu.md
 - **H623** · "Gece tam hattı k2-40/41/42 betik açıkları": tek dosya varsayımları → dizin denetimi + açık işler → hatalar/betik_altyapi.md
+- **H625** · "Ara soruda şık metni çözücü dosyasında kaymış, kapı 0 HATA verdi (k2-49)": kaynak/cozucu/onem üçünde eşitlik + bağımsız denetçi zorunlu, kapıda tam ders anahtarı → hatalar/soru_cozucu.md
+- **H626** · "Çıkmış soru kökü 90 kelimeyi aşınca çözücü kapısı kaldı": çıkmış kök kısaltılmaz; sınır çıkmışta 120, örnekte 90 → hatalar/soru_cozucu.md

@@ -1,0 +1,1408 @@
+{
+ "id": "k2-36-aile-hekimligine-yaklasim",
+ "sira": 36,
+ "kurul": 2,
+ "ders": "Aile Hekimliği",
+ "konu": "Aile Hekimliğine Yaklaşım",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Mehmet Murat Şahin",
+ "tarih": "2026-11-16",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Aile hekiminin yasal tanımını, hedefini ve on dört maddelik görev-sorumluluk listesini açıklar (s. 2, 7-10).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aile hekimi koruyucu ve birinci basamak sağlık hizmetlerini aşağıdaki ilkelerden hangisiyle sunar?",
+     "secenekler": {
+      "A": "Yalnız sevkle gelen hastalara",
+      "B": "Belirli yaş gruplarına öncelik vererek",
+      "C": "Yalnız kayıtlı gebe ve çocuklara",
+      "D": "Yaş, cinsiyet ve hastalık ayrımı yapmadan",
+      "E": "Yalnız kronik hastalığı olan kişilere"
+     },
+     "dogru": "D",
+     "aciklama": "Yasal tanım hizmetin yaş, cinsiyet ve hastalık ayrımı yapılmadan, kapsamlı ve devamlı verilmesini ister; grup sınırlayan seçenekler bu ilkeyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Sevkle hasta kabulü ikinci ve üçüncü basamağın çalışma biçimidir. Aile hekimi ise sağlık sistemine ilk temas noktasıdır, kişiler ona doğrudan gelir.",
+      "B": "Yaşa göre öncelik, çocuk ya da yaşlı sağlığı gibi dallara özgü bir yaklaşımdır. Aile hekiminin yasal tanımı yaş ayrımını açıkça dışarıda bırakır.",
+      "C": "Gebe ve çocuk izlemi aile hekiminin görevleri arasındadır. Ne var ki tanım hizmeti tüm kayıtlı kişilere yayar, yalnız bu iki grupla sınırlamak tanımı daraltır.",
+      "D": "Yasal tanım aile hekiminin hizmeti yaş, cinsiyet ve hastalık ayrımı gözetmeden her kişiye vermesini ister. Bu ayrımsızlık aile hekimliğini belirli gruplara bakan dallardan ayırır; bu nedenle ilkeyi doğru tanımlar.",
+      "E": "Kronik hastalar aile hekiminin sürekli izlediği gruplardan biridir. Ancak tanım hizmeti tek bir hasta grubuyla sınırlamaz, kronik hastalığı olmayan kişi de aynı kapsamdadır."
+     },
+     "s": 2,
+     "id": "k2-36-aile-hekimligine-yaklasim-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aile hekiminin çalışma biçimiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnız hastane polikliniğinde nöbetle çalışır",
+      "B": "Tam gün çalışır, gerektiğinde gezici hizmet verir",
+      "C": "Yalnız ev ziyaretleriyle gezici çalışır",
+      "D": "Yalnız uzman sevkiyle hasta kabul eder",
+      "E": "Yarı zamanlı çalışır, gezici hizmet vermez"
+     },
+     "dogru": "B",
+     "aciklama": "Tanım iki çalışma özelliği verir: tam gün esası ve gerektiği ölçüde gezici hizmet; diğer ifadeler ya tam günü ya gezici hizmeti dışlar.",
+     "sik_aciklamalari": {
+      "A": "Hastane polikliniği ve nöbet düzeni ikinci basamağın çalışma biçimidir. Aile hekimi ise birinci basamakta tam gün çalışır ve gerektiğinde kişinin bulunduğu yerde hizmet verir.",
+      "B": "Tanıma göre aile hekimi tam gün esasına göre çalışır ve gerektiği ölçüde gezici sağlık hizmeti verir. Tam gün esasıyla çalışmak ve gerektiğinde gezici hizmet vermek tanımda birlikte yer aldığından ikili doğru eşleşir.",
+      "C": "Gezici hizmet aile hekiminin görevlerinden biridir ama tek çalışma biçimi değildir. Hizmetin esası merkezde tam gün çalışmadır, gezici hizmet gerektiği ölçüde eklenir.",
+      "D": "Uzman sevkiyle çalışmak ikinci basamağa özgüdür. Aile hekimi kayıtlı kişilere doğrudan, açık erişimle hizmet verdiği için bu ifade onun çalışma biçimini tersine çevirir.",
+      "E": "Yarı zamanlı çalışma tanımdaki tam gün esasıyla çelişir. Gezici hizmet de gerektiği ölçüde aile hekiminin yükümlülüğüdür, bu yüzden ifade iki yönden yanlıştır."
+     },
+     "s": 2,
+     "id": "k2-36-aile-hekimligine-yaklasim-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Genel pratisyen ya da aile hekiminin temel hedefi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Organ sistemlerine göre uzmanlaşmak",
+      "B": "İleri tetkikle kesin tanı koymak",
+      "C": "Hastaları hastaneye yönlendirmek",
+      "D": "Yalnız akut yakınmayı gidermek",
+      "E": "Erken tanı koymak"
+     },
+     "dogru": "E",
+     "aciklama": "Genel pratisyen tanımı hedefi 'erken tanı koymak' olarak verir; sevk ve ileri tetkik araçtır, hedef değildir.",
+     "sik_aciklamalari": {
+      "A": "Organ sistemine göre uzmanlaşma diğer klinik dalların yaklaşımıdır. Aile hekimliği bunun karşıtı olarak doğmuş, bireyi bütün olarak ele alan bir dal olarak tanımlanmıştır.",
+      "B": "İleri tetkikle kesin tanı ikinci ve üçüncü basamağın işidir. Aile hekimi tetkik yaptırabilir, ancak tanımında öne çıkan hedef erken evrede tanıya ulaşmaktır.",
+      "C": "Yönlendirme yani sevk, aile hekiminin gerektiğinde kullandığı bir araçtır. Temel hedef değildir; aile hekimi önce sorunu kendisi değerlendirir ve erken tanı koymaya çalışır.",
+      "D": "Akut yakınmaların tedavisi aile hekiminin işinin bir parçasıdır. Fakat aile hekimi kronik ve son dönem hastaları da sürekli izler, bu yüzden hedefi akut sorunla sınırlı değildir.",
+      "E": "Genel pratisyen tanımında hedef açıkça erken tanı koymak olarak verilir. Uzun süreli temas ve yineleyen karşılaşmalar bu erken tanıyı mümkün kılar ve hedefi doğru tamamlar."
+     },
+     "s": 7,
+     "id": "k2-36-aile-hekimligine-yaklasim-q03"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aile hekimi hastasının sağlık ve rahatsızlık hâlini değerlendirirken aşağıdaki öğe gruplarından hangisini birlikte ele alır?",
+     "secenekler": {
+      "A": "Ekonomik ve hukuki öğeler",
+      "B": "Yalnız psikolojik ve kültürel öğeler",
+      "C": "Fiziksel, psikolojik ve toplumsal öğeler",
+      "D": "Yalnız fiziksel bulgu ve laboratuvar",
+      "E": "Genetik ve çevresel öğeler"
+     },
+     "dogru": "C",
+     "aciklama": "Görev tanımına göre aile hekimi fiziksel, psikolojik ve toplumsal öğeleri birlikte değerlendirip bütünleştirir.",
+     "sik_aciklamalari": {
+      "A": "Mali ve düzenleyici çerçeveler WONCA ağacında hekimin bağlamını anlatan kökte yer alır. Hastanın sağlık hâlini değerlendirirken bütünleştirilen öğeler bunlar değildir.",
+      "B": "Psikolojik öğe değerlendirmenin bir parçasıdır, kültür de bütüncül yaklaşımda geçer. Fiziksel öğeyi dışarıda bırakan bu grup görev tanımındaki üçlüyü karşılamaz.",
+      "C": "Aile hekimi değerlendirmede fiziksel, psikolojik ve toplumsal öğeleri dikkate alıp bütünleştirir. Bu üçlü, bütüncül yaklaşımın görev tanımındaki karşılığını doğru biçimde yansıtır.",
+      "D": "Fizik muayene ve laboratuvar biyomedikal değerlendirmenin araçlarıdır. Tek başına kullanıldığında psikolojik ve toplumsal öğeler dışarıda kalır, bu da tanımla uyuşmaz.",
+      "E": "Genetik ve çevresel etkenler hastalık nedenleri arasında düşünülebilir. Ancak aile hekiminin değerlendirme tanımında sayılan üçlü fiziksel, psikolojik ve toplumsal öğelerdir."
+     },
+     "s": 7,
+     "id": "k2-36-aile-hekimligine-yaklasim-q04"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aile hekimi kendisine kayıtlı kişilerin ilk değerlendirmesi için en geç ne kadar süre içinde ev ziyaretinde bulunur ya da kişilerle iletişime geçer?",
+     "secenekler": {
+      "A": "Altı ay",
+      "B": "Bir yıl",
+      "C": "İki yıl",
+      "D": "Bir ay",
+      "E": "Üç ay"
+     },
+     "dogru": "A",
+     "aciklama": "İlk değerlendirme altı ay içinde yapılır; 'yılda en az bir' ise kayıt güncellemesi içindir ve en sık karıştırılan sayıdır.",
+     "sik_aciklamalari": {
+      "A": "Görev listesinin dördüncü maddesine göre aile hekimi kayıtlı kişilerin ilk değerlendirmesini altı ay içinde ev ziyareti ya da iletişimle yapar. Süre altı ay olarak verildiği için iki yıl ya da bir yıl diyen seçenekler bu görevi doğru aktarmaz.",
+      "B": "Bir yıl, kayıtlı kişilerin en az yılda bir kez değerlendirilip kayıtlarının güncellenmesi kuralında geçer. Bu süre yıllık değerlendirme kuralındaki süredir; ilk değerlendirme süresi ise altı aydır.",
+      "C": "İki yıl görev listesinde geçen bir süre değildir. Hem ilk değerlendirme süresi olan altı ayı hem de yıllık güncelleme kuralını aşan bu değer tanımla çelişir.",
+      "D": "Bir aylık süre ilk değerlendirme için öngörülenden kısadır. Görev listesinde ilk değerlendirme için verilen süre altı aydır, dolayısıyla bu sayı yanlış hatırlanmış bir değerdir.",
+      "E": "Üç ay, altı aylık sürenin yarısıdır ve sayısal olarak yakın görünen yanlış bir değerdir. Görev listesindeki dördüncü madde ilk değerlendirme süresini altı ay olarak belirler."
+     },
+     "s": 8,
+     "id": "k2-36-aile-hekimligine-yaklasim-q05"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Evde takibi zorunlu yatalak bir kayıtlı kişiye aile hekiminin sunacağı hizmetin kapsamı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnız tedavi edici hizmet",
+      "B": "Yalnız aşılama gibi koruyucu hizmet",
+      "C": "Yalnız rapor ve reçete düzenleme",
+      "D": "Koruyucu, tanı, tedavi, rehabilitasyon ve danışmanlık",
+      "E": "Yalnız hastaneye sevk işlemi"
+     },
+     "dogru": "D",
+     "aciklama": "Evde takibi zorunlu kişilere koruyucu hizmet ile birinci basamak tanı, tedavi, rehabilitasyon ve danışmanlık evde ya da gezici hizmetle verilir.",
+     "sik_aciklamalari": {
+      "A": "Tedavi evde verilen hizmetin bir parçasıdır. Görev tanımı buna koruyucu hizmet, tanı, rehabilitasyon ve danışmanlığı da eklediği için yalnız tedavi kapsamı daraltır.",
+      "B": "Koruyucu hizmet evde takip edilen kişiye de verilir. Fakat görev tanımı tanı, tedavi, rehabilitasyon ve danışmanlığı da kapsadığından yalnız koruyucu hizmet eksik kalır.",
+      "C": "Rapor ve reçete düzenlemek aile hekiminin ayrı bir görev maddesidir. Evde takip edilen kişiye sunulan hizmet ise bu belgelerle sınırlı değildir, bakımın tamamını içerir.",
+      "D": "Görev listesinin dokuzuncu maddesi evde takibi zorunlu özürlü, yaşlı ve yatalak kişilere bu beş hizmetin evde verilmesini öngörür. Beş hizmet tanı, tedavi ve rehabilitasyonun yanında koruyucu hizmeti ile danışmanlığı da içerir; seçenek bu beşliyi doğru sayar.",
+      "E": "Sevk, aile sağlığı merkezinde tanı ya da tedavisi yapılamayan hasta için kullanılır. Evde takibi zorunlu kişiye ise hizmet evde, yerinde sunulur."
+     },
+     "s": 9,
+     "id": "k2-36-aile-hekimligine-yaklasim-q06"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aile sağlığı merkezinde tanısı konamayan bir hasta sevk edildikten sonra aile hekiminin görevi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastayı yeniden üçüncü basamağa sevk etmek",
+      "B": "Geri bildirimi değerlendirip bakımı koordine etmek",
+      "C": "İkinci basamakta tedaviyi kendisi yürütmek",
+      "D": "Hastanın kaydını hastaneye devretmek",
+      "E": "Hastanın izlemini sonlandırmak"
+     },
+     "dogru": "B",
+     "aciklama": "Aile hekimi sevk ettiği hastanın geri bildirimini değerlendirir; ikinci ve üçüncü basamak tedavi ile evde bakımın koordinasyonunu sağlar, tedaviyi kendisi vermez.",
+     "sik_aciklamalari": {
+      "A": "Üçüncü basamağa sevk gerekirse ikinci basamaktan yapılabilir. Aile hekiminin sevk sonrası görevi yeniden sevk değil, geri bildirimi değerlendirip bakımı koordine etmektir.",
+      "B": "Görev listesinin onuncu maddesine göre aile hekimi sevk edilen hastanın muayene, tetkik, tanı, tedavi ve yatış geri bildirimini değerlendirir. Ayrıca hizmetlerin koordinasyonunu sağlar; bu nedenle sevk sonrası görev, görev listesindeki bu ifadeyle doğru biçimde karşılanır.",
+      "C": "İkinci basamakta yürütülen tedavi aile hekiminin görevi değildir. O tedaviyi ilgili uzman verir; aile hekimi yalnız hastanın hizmetlerini eşgüdümler ve sonuçları değerlendirir, bu ayrım sınavlarda sık sorulur.",
+      "D": "Hastanın kaydı aile hekiminde kalır, çünkü kişiye kapsamlı ve devamlı hizmetten aile hekimi sorumludur. Hastane hastanın kaydını devralan bir birim değildir, bu nedenle devretme görev olamaz.",
+      "E": "İzlemi sonlandırmak süreklilik ilkesine aykırıdır. Aile hekimi sevkten sonra da hastasının hekimi olmayı sürdürür ve sevk sonucunu değerlendirmekle yükümlüdür, dolayısıyla bu seçenek görevi tersine çevirir."
+     },
+     "s": 9,
+     "id": "k2-36-aile-hekimligine-yaklasim-q07"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Entegre sağlık hizmeti sunulan merkezlerde aile hekimi gerektiğinde aşağıdakilerden hangisini yapabilir?",
+     "secenekler": {
+      "A": "Hastayı ameliyata almak",
+      "B": "Yoğun bakım hizmeti vermek",
+      "C": "Uzmanlık kurulu raporu düzenlemek",
+      "D": "Üçüncü basamak rehabilitasyonu yürütmek",
+      "E": "Gözlem amaçlı yatırıp tetkik ve tedavi yapmak"
+     },
+     "dogru": "E",
+     "aciklama": "Entegre merkezlerde aile hekimi gerektiğinde hastayı gözlem amaçlı yatırarak tetkik ve tedavisini yapar.",
+     "sik_aciklamalari": {
+      "A": "Cerrahi girişim ikinci ve üçüncü basamak hastanelerin işidir. Entegre merkezde aile hekimine tanınan yetki gözlem amaçlı yatış ve tetkik-tedavidir.",
+      "B": "Yoğun bakım ileri basamak hastane hizmetidir. Aile hekiminin entegre merkezdeki görevi hastayı gözlem için yatırıp tetkik ve tedavisini yapmakla sınırlıdır.",
+      "C": "Aile hekimi yalnız birinci basamağa ve resmî tabiplere öngörülen raporları düzenler. Entegre merkezle ilgili görev maddesi ise gözlem amaçlı yatışı anlatır.",
+      "D": "Üçüncü basamak rehabilitasyonun yürütülmesi aile hekiminin işi değildir; o yalnız bu hizmetin koordinasyonunu sağlar. Entegre merkezde aile hekiminin yapabildiği iş gözlem amaçlı yatış ile tetkik ve tedavidir.",
+      "E": "Görev listesinin on ikinci maddesi, entegre sağlık hizmeti sunulan merkezlerde aile hekiminin hastayı gerektiğinde gözlem amaçlı yatırarak tetkik ve tedavi etmesini öngörür. Bu madde, aile hekimine gözlem amaçlı yatırma yetkisini doğru olarak verir."
+     },
+     "s": 10,
+     "id": "k2-36-aile-hekimligine-yaklasim-q08"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Aile sağlığı merkezinin yönetimi ve orada çalışan ekibin hizmet içi eğitimi kimin sorumluluğundadır?",
+     "secenekler": {
+      "A": "İl sağlık müdürü",
+      "B": "Hastane başhekimi",
+      "C": "Aile hekimi",
+      "D": "Toplum sağlığı merkezi",
+      "E": "Aile sağlığı elemanı"
+     },
+     "dogru": "C",
+     "aciklama": "Aile hekimi aile sağlığı merkezini yönetir, birlikte çalıştığı ekibi denetler ve hizmet içi eğitimlerini sağlar.",
+     "sik_aciklamalari": {
+      "A": "İl sağlık müdürü il düzeyinde sağlık hizmetlerini düzenleyen idari yöneticidir. Tek tek aile sağlığı merkezlerinin yönetimi ve ekip eğitimi aile hekiminin görevidir.",
+      "B": "Hastane başhekimi ikinci ve üçüncü basamak kurumlarının yöneticisidir. Aile sağlığı merkezi birinci basamak birimidir ve yönetimi orada çalışan aile hekimine aittir.",
+      "C": "Görev listesinin on üçüncü maddesine göre aile hekimi aile sağlığı merkezini yönetir, ekibini denetler ve hizmet içi eğitimlerini sağlar. Merkez yönetimi ve ekip eğitimi başka bir birime değil aile hekimine aittir; seçenek sorumluyu doğru gösterir.",
+      "D": "Toplum sağlığı merkezi toplum düzeyinde halk sağlığı hizmetleri yürüten ayrı bir birimdir. Aile sağlığı merkezinin günlük yönetimi ve ekip eğitimi aile hekimine bırakılmıştır.",
+      "E": "Aile sağlığı elemanı aile hekimiyle birlikte çalışan ekibin üyesidir. Ekip üyesi olarak denetlenen ve hizmet içi eğitimi alan kişidir, merkezi yöneten kişi değildir; yönetim aile hekimine aittir."
+     },
+     "s": 10,
+     "id": "k2-36-aile-hekimligine-yaklasim-q09"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Aile hekiminin görevleriyle ilgili aşağıdaki ifadeler verilmiştir:\nI. Ana çocuk sağlığı ve aile planlaması hizmetlerini verir.\nII. Periyodik sağlık muayenesi yapar.\nIII. Birinci basamağa öngörülen reçete ve sevk evrakını düzenler.\nIV. İkinci basamakta yatırarak tedavi verir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Ana çocuk sağlığı/aile planlaması, periyodik muayene ve reçete-sevk evrakı görev listesindedir; ikinci basamak tedavi değildir.",
+     "sik_aciklamalari": {
+      "A": "Ana çocuk sağlığı ve periyodik muayene görev listesindedir. Ancak reçete ve sevk evrakı düzenlemek de on dördüncü görev maddesidir, bu seçenek doğru bir öncülü eksik bırakır.",
+      "B": "İlk üç ifade görev listesinin üçüncü, altıncı ve on dördüncü maddeleridir. İkinci basamakta tedavi ise aile hekiminin işi değildir, o yalnız koordinasyonu sağlar. Üç ifadenin birlikte yer aldığı seçenek tam ve doğru olandır.",
+      "C": "Periyodik muayene doğru bir görevdir. İkinci basamakta yatırarak tedavi ise aile hekiminin görevi değildir; aile hekimi yalnız entegre merkezde gözlem amaçlı yatış yapabilir.",
+      "D": "Ana çocuk sağlığı ve belge düzenleme doğru görevlerdir. Dördüncü ifade ikinci basamak tedaviyi aile hekimine yüklediği için yanlıştır ve periyodik muayene de eksik kalmıştır.",
+      "E": "Periyodik muayene ve belge düzenleme görev listesindedir. Bu seçenek yanlış olan ikinci basamak tedaviyi içerirken doğru olan ana çocuk sağlığı görevini dışarıda bırakır."
+     },
+     "s": 9,
+     "id": "k2-36-aile-hekimligine-yaklasim-q10"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Aile hekimliğinin İngiltere ve Amerika'daki doğuşunu ve 1974 tanımını tarih sırasıyla açıklar (s. 3-6).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aile hekimliğine duyulan ihtiyacı ilk kez dile getiren kişi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Willard",
+      "B": "Millis",
+      "C": "Olesen",
+      "D": "Francis Peabody",
+      "E": "Mehmet Ungan"
+     },
+     "dogru": "D",
+     "aciklama": "İhtiyaç ilk kez Francis Peabody tarafından aşırı uzmanlaşma gerekçesiyle dile getirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Willard, Millis ile birlikte sağlık sistemini inceleyen raporun yazarıdır. Bu rapor ihtiyacı ilk kez dile getirmemiş, aile hekimliğinin uzmanlık branşı olarak tanımlanmasına zemin hazırlamıştır.",
+      "B": "Millis, Willard ile birlikte sağlık sistemini inceleyen ve Amerikan Tıp Birliği tarafından açıklanan raporu hazırlamıştır. Bu rapor ihtiyacın ilk dile getirilişinden kırk yılı aşkın süre sonra gelmiştir.",
+      "C": "Olesen, aile hekimliğinin amaç ve ilkelerini iki bin yılında ön safta çalışmak üzerinden tanımlayan isimdir. İhtiyacı ilk dile getiren kişi değil, çok daha sonraki bir tanımın sahibidir.",
+      "D": "Doktor Francis Peabody, aşırı uzmanlaşma sonucu hastaların ortada kaldığını söyleyerek bütüncül bir uzmanlık dalına duyulan ihtiyacı ilk kez dile getirmiştir. Bütüncül bakışa duyulan ihtiyacı ilk dile getiren doğru isim bu hekimdir.",
+      "E": "Mehmet Ungan, iki bin on dokuz ile iki bin yirmi bir arasında WONCA Avrupa başkanlığını yürütmüş bir Türk akademisyendir. Aile hekimliği ihtiyacını ilk dile getiren kişi değildir."
+     },
+     "s": 3,
+     "id": "k2-36-aile-hekimligine-yaklasim-q11"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Francis Peabody'ye göre hastayı bir bütün olarak ele alacak yeni bir uzmanlık dalına ihtiyaç duyulmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bulaşıcı hastalık salgınlarının artması",
+      "B": "Tıpta aşırı uzmanlaşma sonucu hastaların ortada kalması",
+      "C": "Hastane yataklarının yetersiz kalması",
+      "D": "Sağlık finansmanının bozulması",
+      "E": "Hekim sayısının yetersiz kalması"
+     },
+     "dogru": "B",
+     "aciklama": "Peabody'ye göre aşırı uzmanlaşma hastaları ortada bırakmış, hastayı bütün olarak ele alan bir dal gerekli hâle gelmiştir.",
+     "sik_aciklamalari": {
+      "A": "Salgın kontrolü halk sağlığının alanıdır. Peabody'nin dile getirdiği ihtiyaç ise uzmanlaşmanın yarattığı bakım boşluğuyla, yani hastanın ortada kalmasıyla ilgilidir.",
+      "B": "Peabody tıp alanındaki aşırı uzmanlaşmanın hastaları ortada bıraktığını ve onları bütün olarak değerlendirecek bir dalın gerektiğini söylemiştir. Yeni dalın gerekçesi, aşırı uzmanlaşmanın bıraktığı bütüncül bakım boşluğudur; seçenek bu nedeni doğru belirtir.",
+      "C": "Yatak yetersizliği hastane kapasitesine ilişkin bir sorundur. Aile hekimliği gereksinimini doğuran neden ise kapasite değil, hastanın bütünlüğünün uzmanlaşma içinde kaybolmasıdır.",
+      "D": "Finansman sorunu Türkiye'de sosyalleştirmenin başarısını engelleyen etkenlerden biridir ve sağlık sisteminin işleyişiyle ilgilidir. Peabody'nin bin dokuz yüz yirmi üçteki gerekçesi ise uzmanlaşmanın hastayı ortada bırakması olduğundan bu seçenek yanlıştır.",
+      "E": "Hekim sayısı bir insan gücü sorunudur. Peabody'nin gerekçesi sayı değil, tıptaki aşırı uzmanlaşmanın hastayı parçalara bölmesi ve kimsenin onu bütün olarak görmemesidir."
+     },
+     "s": 3,
+     "id": "k2-36-aile-hekimligine-yaklasim-q12"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Genel Pratisyenlik Kraliyet Koleji hangi yıl ve ülkede kurulmuştur?",
+     "secenekler": {
+      "A": "1974, Hollanda",
+      "B": "1923, Amerika",
+      "C": "1966, İngiltere",
+      "D": "1969, Amerika",
+      "E": "1952, İngiltere"
+     },
+     "dogru": "E",
+     "aciklama": "Kraliyet Koleji 1952'de İngiltere'de kurulmuş, Peabody'nin görüşüne ilk yanıt olmuştur.",
+     "sik_aciklamalari": {
+      "A": "Bin dokuz yüz yetmiş dört Hollanda, dünyada kabul gören aile hekimliği tanımının yapıldığı toplantıdır. Kolejin kuruluşu değil, uzmanlık tanımının yeridir.",
+      "B": "Bin dokuz yüz yirmi üç, Peabody'nin aile hekimliği ihtiyacını dile getirdiği yıldır. Kraliyet Koleji bu görüşe verilen ilk yanıttır ve daha sonra İngiltere'de kurulmuştur.",
+      "C": "Bin dokuz yüz altmış altı Millis ve Willard raporlarının Amerikan Tıp Birliği'nce açıklandığı yıldır. Kraliyet Koleji bundan on dört yıl önce kurulmuştur.",
+      "D": "Bin dokuz yüz altmış dokuz, Amerika'da aile hekimliğinin uzmanlık branşı olarak tanımlandığı ve akademinin oluşturulduğu yıldır. Kraliyet Koleji İngiliz bir kurumdur.",
+      "E": "Peabody'nin görüşüne ilk yanıt olarak bin dokuz yüz elli ikide İngiltere'de Genel Pratisyenlik Kraliyet Koleji kurulmuştur. Yıl ve ülke birlikte doğru verilmiştir."
+     },
+     "s": 4,
+     "id": "k2-36-aile-hekimligine-yaklasim-q13"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aile hekimliğinin birincil sağlık bakım hizmeti veren yeni bir uzmanlık branşı olarak tanımlandığı yıl aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1952",
+      "B": "1966",
+      "C": "1969",
+      "D": "1974",
+      "E": "1983"
+     },
+     "dogru": "C",
+     "aciklama": "1966 raporlarının ardından 1969'da aile hekimliği yeni bir uzmanlık branşı olarak tanımlanmıştır.",
+     "sik_aciklamalari": {
+      "A": "Bin dokuz yüz elli iki İngiltere'de Genel Pratisyenlik Kraliyet Koleji'nin kurulduğu yıldır. Kolej bir kurumdur, aile hekimliğinin uzmanlık branşı olarak tanımlanması daha sonra gelmiştir.",
+      "B": "Bin dokuz yüz altmış altı, sağlık sistemini inceleyen Millis ve Willard raporlarının açıklandığı yıldır. Bu raporlar branşın tanımlanmasına zemin hazırlamış, tanım üç yıl sonra yapılmıştır.",
+      "C": "Bin dokuz yüz altmış dokuzda birincil sağlık bakımı veren yeni bir uzmanlık branşı olarak aile hekimliği tanımlanmış, Amerikan Aile Hekimleri Akademisi ve Yeterlilik Kurulu oluşturulmuştur. Aile hekimliğinin yeni bir uzmanlık branşı olarak tanımlanması bu yıla denk gelir ve yıl doğru verilmiştir.",
+      "D": "Bin dokuz yüz yetmiş dört, Hollanda'da birinci basamak hekimliğinin ayrı bir klinik uzmanlık dalı olduğu tanımının yapıldığı yıldır. Amerika'daki branş tanımından beş yıl sonradır.",
+      "E": "Bin dokuz yüz seksen üç, aile hekimliği uzmanlığının Türkiye'de Tababet Uzmanlık Tüzüğü'ne girdiği yıldır. Sorulan ise branşın Amerika'da ilk tanımlandığı yıldır."
+     },
+     "s": 4,
+     "id": "k2-36-aile-hekimligine-yaklasim-q14"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Birinci basamak hekimliğinin organ ya da sistem esaslı dallardan farklı bir klinik uzmanlık dalı olduğu tanımı nerede yapılmıştır?",
+     "secenekler": {
+      "A": "1974 Leeuwenhorst toplantısı",
+      "B": "1952 Kraliyet Koleji kuruluşu",
+      "C": "1969 Amerikan akademisinin kuruluşu",
+      "D": "1978 Alma Ata Konferansı",
+      "E": "1972 WONCA kuruluş toplantısı"
+     },
+     "dogru": "A",
+     "aciklama": "1974'te Hollanda'daki Avrupa Aile Hekimleri Eğitimi toplantısında birinci basamak hekimliği ayrı bir klinik uzmanlık dalı olarak tanımlanmıştır.",
+     "sik_aciklamalari": {
+      "A": "Dünyada kabul gören tanım bin dokuz yüz yetmiş dörtte Hollanda'da düzenlenen Avrupa Aile Hekimleri Eğitimi toplantısında yapılmıştır. Bu seçenek, tanımın yapıldığı Hollanda'daki toplantının adını doğru verir.",
+      "B": "Kraliyet Koleji İngiltere'de genel pratisyenliği kurumsallaştıran bir kuruluştur. Kolejin kuruluşu, birinci basamağın ayrı klinik dal olduğu evrensel tanımın yapıldığı toplantı değildir.",
+      "C": "Bin dokuz yüz altmış dokuzda Amerika'da branş tanımlanmış ve akademi kurulmuştur. Bütün dünyada kabul gören tanım ise beş yıl sonra Hollanda'daki toplantıda yapılmıştır.",
+      "D": "Alma Ata Konferansı birincil sağlık bakımını tanımlayıp iki binde herkese sağlık hedefini ilan etmiştir. Ayrı klinik uzmanlık dalı tanımı bundan dört yıl önce Hollanda'da yapılmıştır.",
+      "E": "WONCA bin dokuz yüz yetmiş ikide on sekiz ülke tarafından kurulan dünya örgütüdür. Dünyada kabul gören uzmanlık tanımı ise kuruluştan iki yıl sonra Hollanda'da yapılmıştır."
+     },
+     "s": 6,
+     "id": "k2-36-aile-hekimligine-yaklasim-q15"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Amerikan Aile Hekimleri Akademisi'nin yeni bir tıp disiplininin doğuşuna katkısı hangi yaklaşımla açıklanır?",
+     "secenekler": {
+      "A": "Sistem esaslı uzmanlaşma",
+      "B": "Hastane merkezli bakım",
+      "C": "Organ temelli değerlendirme",
+      "D": "Hastaya genel yaklaşım prensibi",
+      "E": "Doku düzeyinde patoloji odaklılık"
+     },
+     "dogru": "D",
+     "aciklama": "Akademi, organ-doku-sistem ekolünün aksine hastaya genel yaklaşım prensibiyle hareket eden disiplinin doğuşuna katkı sağlamıştır.",
+     "sik_aciklamalari": {
+      "A": "Sistem esaslı uzmanlaşma diğer klinik dalların ilkesidir. Aile hekimliği tanımı birinci basamak hekimliğini tam da bu dallardan ayıran bir uzmanlık olarak kurar.",
+      "B": "Hastane merkezli bakım ikinci ve üçüncü basamağın modelidir. Akademinin yeni disipline katkısı ise birinci basamakta hastaya genel yaklaşım ilkesini yerleştirmek olmuştur, bu nedenle seçenek yanlıştır.",
+      "C": "Organ temelli değerlendirme, bireyi organ, doku ve sistemlere bölen ekolün yaklaşımıdır. Akademi bu ekolün karşısında yer aldığından bu ifade akademinin katkısıyla uyuşmaz.",
+      "D": "Akademi, bireyi organ ve sistemlere bölen ekolün aksine hastaya genel yaklaşım prensibiyle hareket eden yeni bir disiplinin doğuşuna katkıda bulunmuştur. Akademinin katkısının özü, bireyi parçalara bölmeyen genel yaklaşım ilkesidir ve seçenek bunu doğru ifade eder.",
+      "E": "Doku düzeyindeki inceleme patoloji gibi dalların bakışıdır. Aile hekimliğini doğuran yaklaşım ise hastayı parçalara değil bütün olarak görmektir, dolayısıyla bu seçenek sorunun yanıtı olamaz."
+     },
+     "s": 5,
+     "id": "k2-36-aile-hekimligine-yaklasim-q16"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Türkiye'de aile hekimliğinin yasal çerçevesini, sosyalleştirmeden ASM'ye uzanan gelişimini açıklar (s. 11-15).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Türkiye'de aile hekimlerinin hizmet sözleşmesiyle çalışmasını düzenleyen kanun aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tababet Uzmanlık Tüzüğü",
+      "B": "5258 sayılı Aile Hekimliği Kanunu",
+      "C": "12547 sayılı YÖK kararı",
+      "D": "224 sayılı sosyalleştirme yasası",
+      "E": "657 sayılı Devlet Memurları Kanunu"
+     },
+     "dogru": "B",
+     "aciklama": "Aile hekimleri 24.11.2004 tarihli 5258 sayılı Aile Hekimliği Kanunu kapsamında hizmet sözleşmesiyle çalışır.",
+     "sik_aciklamalari": {
+      "A": "Tababet Uzmanlık Tüzüğü uzmanlık dallarını tanımlar; aile hekimliği bu tüzüğe bin dokuz yüz seksen üçte girmiştir. Çalışma sözleşmesini düzenleyen metin değildir.",
+      "B": "İki bin dört tarihli beş bin iki yüz elli sekiz sayılı Aile Hekimliği Kanunu, uzman tabip ve tabiplerin hizmet sözleşmesiyle aile hekimi olarak çalıştırılmasını düzenler. Hizmet sözleşmesi çerçevesini çizen çatı düzenlemeyi doğru veren seçenek bu kanundur.",
+      "C": "Bu karar bin dokuz yüz doksan üçte tıp fakültelerinde aile hekimliği anabilim dallarının kurulmasını uygun görmüştür. Akademik yapılanmayla ilgilidir, çalışma sözleşmesiyle değil.",
+      "D": "İki yüz yirmi dört sayılı yasa bin dokuz yüz altmış birde sağlık hizmetlerini sosyalleştirmiş ve sevk zincirini başlatmıştır. Aile hekimliği sözleşmesini düzenleyen kanun değildir.",
+      "E": "Altı yüz elli yedi sayılı kanun memurların statüsünü düzenler. Aile hekimleri bu kanunun sözleşmeli personel hükümlerine bağlı olmaksızın ayrı bir kanunla çalıştırılır."
+     },
+     "s": 11,
+     "id": "k2-36-aile-hekimligine-yaklasim-q17"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kamu kurumunda kadrolu bir tabip aile hekimliği hizmet sözleşmesi imzaladığında aşağıdakilerden hangisi geçerlidir?",
+     "secenekler": {
+      "A": "Yalnız yarı zamanlı çalışabilir",
+      "B": "Kadrosu kendiliğinden sona erer",
+      "C": "657 sayılı Kanun'un sözleşmeli hükümlerine bağlı çalışır",
+      "D": "Kurumunun onayı aranmaz",
+      "E": "Sözleşme süresince kadrosuyla ilişkisi devam eder"
+     },
+     "dogru": "E",
+     "aciklama": "Kamu personeli tabipler talep ve kurum muvafakatıyla 5258 kapsamında sözleşme imzalar, sözleşme süresince kadroyla ilişkileri sürer.",
+     "sik_aciklamalari": {
+      "A": "Yarı zamanlı çalışma aile hekiminin tanımıyla çelişir. Aile hekimi tam gün esasına göre çalışan hekim olarak tanımlanmıştır, bu yüzden bu ifade geçerli değildir.",
+      "B": "Kadronun kendiliğinden sona ermesi kanundaki düzenlemenin tersidir. Hizmet sözleşmesiyle çalışan tabibin kadrosuyla ilişkisi sözleşme süresince devam eder, dolayısıyla seçenek yanlıştır.",
+      "C": "Kanun, aile hekimlerinin Devlet Memurları Kanunu'nun sözleşmeli personel hükümlerine bağlı olmaksızın çalıştırılmasını öngörür. Bu ifade düzenlemeyle çeliştiği için geçerli değildir.",
+      "D": "Geçiş için hem tabibin talebi hem de kurumunun muvafakatı yani onayı gerekir. Onayın aranmadığını söyleyen ifade yasal çerçeveyle uyuşmadığından yanlıştır.",
+      "E": "Kamu personeli olan tabipler talep ve kurum onayıyla sözleşme imzalar; sözleşme süresince kadroları ile ilişkileri devam eder. Kadro bağının sözleşme boyunca sürmesi, sözleşmenin kadroyu sona erdirmediğini gösterir; bu ilişki doğru aktarılmıştır."
+     },
+     "s": 11,
+     "id": "k2-36-aile-hekimligine-yaklasim-q18"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Türkiye'de sevk zincirini başlatarak birinci basamağı sağlık hizmetlerinin merkezine koyan düzenleme aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1983 Tababet Uzmanlık Tüzüğü değişikliği",
+      "B": "1993 tarihli YÖK kararı",
+      "C": "1961 tarihli 224 sayılı sosyalleştirme yasası",
+      "D": "2004 tarihli Aile Hekimliği Kanunu",
+      "E": "1978 Alma Ata Bildirgesi"
+     },
+     "dogru": "C",
+     "aciklama": "1961'de 224 sayılı yasayla sosyalleştirme sevk zincirini başlatmış, birinci basamağı merkeze koymuştur.",
+     "sik_aciklamalari": {
+      "A": "Bu düzenleme aile hekimliğini uzmanlık dalı olarak tüzüğe eklemiştir. Sevk zinciri ve birinci basamağın merkeze alınması daha önceki sosyalleştirme yasasıyla başlamıştır.",
+      "B": "YÖK kararı tıp fakültelerinde aile hekimliği anabilim dallarının kurulmasıyla ilgilidir. Sağlık hizmet sunumunun örgütlenmesini ve sevk zincirini değiştiren bir düzenleme olmadığından bu seçenek yanlıştır.",
+      "C": "Bin dokuz yüz altmış birde kabul edilen iki yüz yirmi dört sayılı yasa sağlık hizmetlerini sosyalleştirmiş, sevk zincirini başlatıp birinci basamağı merkeze koymuştur. Bu düzenleme iki yüz yirmi dört sayılı yasanın getirdiği sosyalleştirme modelidir. Yasa birinci basamağı örgütlü sevk sisteminin başlangıç halkası yaparak düzenlemeyi doğru anlatır.",
+      "D": "Aile Hekimliği Kanunu aile hekimlerinin sözleşmeyle çalışmasını düzenler. Sevk zincirini ilk başlatan düzenleme ondan kırk yılı aşkın süre önce çıkmıştır.",
+      "E": "Alma Ata uluslararası bir konferanstır ve birincil bakımı sistemin merkezine koymayı önermiştir. Türkiye'deki sosyalleştirme bu fikri Alma Ata'dan çok daha önce uygulamıştır."
+     },
+     "s": 12,
+     "id": "k2-36-aile-hekimligine-yaklasim-q19"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Türkiye'de sağlık hizmetlerinin sosyalleştirilmesinin başarısını engelleyen etkenlerden biridir?",
+     "secenekler": {
+      "A": "Birincil bakım verecek uzmanların olmaması",
+      "B": "Birinci basamağın merkeze alınması",
+      "C": "Alma Ata ilkelerinin benimsenmesi",
+      "D": "Aile sağlığı merkezlerinin açılması",
+      "E": "Sevk zincirinin kurulması"
+     },
+     "dogru": "A",
+     "aciklama": "Sosyalleştirmenin başarısını uzman yokluğu, geleneksel sağlık arama tarzı ve sürdürülebilir finansman eksikliği engellemiştir.",
+     "sik_aciklamalari": {
+      "A": "O dönemde birincil bakım verecek uzmanların olmaması, halkın geleneksel sağlık arama tarzı ve finansman eksikliği başarıyı engellemiştir. Uzman eksikliği, sosyalleştirmenin önündeki insan gücü engelidir; seçenek engeli doğru adlandırır.",
+      "B": "Birinci basamağı merkeze almak sosyalleştirmenin amacıdır ve sistemin değerli yanıdır. Bu nedenle bir engel olarak değil, korunmak istenen ilke olarak anılır ve seçenek yanlıştır.",
+      "C": "Alma Ata bin dokuz yüz yetmiş sekizde, sosyalleştirmeden sonra toplanmıştır. Sosyalleştirme Alma Ata'dan önce aynı fikri savunmuştur, engel olarak sayılmaz.",
+      "D": "Aile sağlığı merkezleri iki bin beşten sonra aile hekimliği uygulamasıyla açılmıştır. Altmışlı yıllardaki sosyalleştirme uygulamasının başarısını etkileyen bir etken olamaz.",
+      "E": "Sevk zinciri sosyalleştirmenin getirdiği bir yeniliktir ve birinci basamağı merkeze koymuştur. Başarıyı engelleyen etken değil, uygulamanın kendisi olduğundan bu seçenek doğru değildir."
+     },
+     "s": 12,
+     "id": "k2-36-aile-hekimligine-yaklasim-q20"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Türkiye'de ilk aile hekimliği anabilim dalı hangi tıp fakültesinde kurulmuştur?",
+     "secenekler": {
+      "A": "Ankara Üniversitesi",
+      "B": "İstanbul Üniversitesi",
+      "C": "Düzce Üniversitesi",
+      "D": "Trakya Üniversitesi",
+      "E": "Karabük Üniversitesi"
+     },
+     "dogru": "D",
+     "aciklama": "1993 YÖK kararının ardından ilk anabilim dalı Trakya Üniversitesi Tıp Fakültesi'nde kurulmuştur.",
+     "sik_aciklamalari": {
+      "A": "Ankara, uzmanlık eğitiminin bin dokuz yüz seksen beşte Sağlık Bakanlığı eğitim ve araştırma hastanelerinde başladığı illerden biridir. İlk anabilim dalı ise başka bir üniversitede kurulmuştur.",
+      "B": "İstanbul, Bakanlık hastanelerinde ilk uzmanlık eğitiminin başladığı üç ilden biridir. Bu bilgi ilk üniversite anabilim dalıyla karıştırılır, ilk anabilim dalı Trakya'dadır.",
+      "C": "Düzce, aile hekimliği uygulamasının iki bin beşte ilk başlatıldığı ildir. Uygulama ile akademik kurulum ayrı kavramlardır; anabilim dalının ilk kurulduğu yer Düzce değil, Trakya Üniversitesi'dir.",
+      "D": "Bin dokuz yüz doksan üç YÖK kararından sonra ilk aile hekimliği anabilim dalı Trakya Üniversitesi Tıp Fakültesi'nde kurulmuş ve asistan eğitimi başlamıştır. Anabilim dalının ilk kurulduğu yer olan Trakya, akademik başlangıcı temsil eder ve fakülteyi doğru belirtir.",
+      "E": "Karabük Üniversitesi aile hekimliği anabilim dalı olan fakültelerden biridir. Ancak Türkiye'de ilk kurulan anabilim dalı Trakya Üniversitesi'ndedir, bu yüzden seçenek yanlıştır."
+     },
+     "s": 13,
+     "id": "k2-36-aile-hekimligine-yaklasim-q21"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Aile hekimliği uzmanlığının Türkiye'de Tababet Uzmanlık Tüzüğü'nde yer aldığı yıl aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1993",
+      "B": "1983",
+      "C": "1961",
+      "D": "1985",
+      "E": "1990"
+     },
+     "dogru": "B",
+     "aciklama": "Sıra: 1983 tüzük → 1985 ilk eğitim → 1990 AHUD → 1993 YÖK kararı ve Trakya.",
+     "sik_aciklamalari": {
+      "A": "Bin dokuz yüz doksan üç, tıp fakültelerinde anabilim dallarının kurulmasını uygun gören YÖK kararının yılıdır. Tüzük düzenlemesi bundan daha eskidir, bu nedenle tüzüğe giriş yılı olarak yanlıştır.",
+      "B": "Aile hekimliği uzmanlığı beş Temmuz bin dokuz yüz seksen üçte Tababet Uzmanlık Tüzüğü'nde yer almıştır. Bu tarih Türkiye'deki uzmanlık gelişim sırasının ilk halkasıdır ve yılı doğru verir.",
+      "C": "Bin dokuz yüz altmış bir, sağlık hizmetlerinin sosyalleştirilmesini başlatan iki yüz yirmi dört sayılı yasanın yılıdır. Uzmanlık tüzüğüyle değil, hizmet örgütlenmesiyle ilgilidir.",
+      "D": "Bin dokuz yüz seksen beş, uzmanlık eğitiminin Ankara, İstanbul ve İzmir'de ilk kez başladığı yıldır. Tüzüğe giriş bundan iki yıl önce olmuştur.",
+      "E": "Bin dokuz yüz doksan, Aile Hekimleri Uzmanlık Derneği'nin kurulduğu yıldır. Uzmanlığın tüzüğe girişi bundan yedi yıl öncedir, dolayısıyla seçenek yanlıştır."
+     },
+     "s": 13,
+     "id": "k2-36-aile-hekimligine-yaklasim-q22"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Türkiye'de aile hekimliği uygulaması Sağlık Bakanlığı politikasıyla ilk kez hangi ilde başlatılmıştır?",
+     "secenekler": {
+      "A": "İzmir",
+      "B": "Edirne",
+      "C": "İstanbul",
+      "D": "Ankara",
+      "E": "Düzce"
+     },
+     "dogru": "E",
+     "aciklama": "Uygulama 15.09.2005'te Düzce'de başlamış, 13.12.2010 itibarıyla tüm Türkiye'ye yayılmıştır.",
+     "sik_aciklamalari": {
+      "A": "İzmir, Bakanlık eğitim ve araştırma hastanelerinde uzmanlık eğitiminin ilk başladığı üç ilden biridir. Uygulamanın başlatıldığı ilk il olmadığından bu seçenek yanlıştır.",
+      "B": "Edirne'deki Trakya Üniversitesi ilk aile hekimliği anabilim dalının kurulduğu yerdir. Akademik ilk ile uygulamanın ilk başladığı il birbirine karıştırılmamalıdır.",
+      "C": "İstanbul, uzmanlık eğitiminin başladığı büyük illerden biridir. Aile hekimliği uygulamasının ilk başlatıldığı il ise Düzce olduğundan bu seçenek uygulamanın başladığı ili göstermez.",
+      "D": "Ankara, uzmanlık eğitiminin seksenli yıllarda ilk başladığı illerden biridir. Uygulamanın ilk başlatıldığı il ise iki bin beşte Düzce olmuştur, bu nedenle seçenek yanlıştır.",
+      "E": "Aile hekimliği uygulaması on beş Eylül iki bin beşte Düzce'de başlamış, iki bin on yılının sonunda bütün Türkiye'de uygulanır olmuştur. Pilot uygulamanın ilk ili olması Düzce'yi geçiş sürecinin başlangıcı yapar ve ili doğru belirler."
+     },
+     "s": 14,
+     "id": "k2-36-aile-hekimligine-yaklasim-q23"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Türkiye'de aile hekimliğinin gelişimiyle ilgili aşağıdaki ifadeler verilmiştir:\nI. Aile Hekimleri Uzmanlık Derneği 1998'de TAHUD adını almıştır.\nII. Aile hekimliği uygulaması ilk kez 2005'te başlamıştır.\nIII. TAHUD 2001'de WONCA'ya temsilci göndermiştir.\nIV. Aile hekimliği 2010 sonunda bütün Türkiye'de uygulanır olmuştur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "AHUD 1990'da kurulup 1998'de TAHUD adını aldı, 2001'de WONCA'ya temsilci gönderdi; uygulama 2005 Düzce'de başlayıp 2010 sonunda ülke geneline yayıldı.",
+     "sik_aciklamalari": {
+      "A": "Dernek adının değişmesi ve uygulamanın iki bin beşte başlaması doğrudur. Ancak WONCA'ya temsilci gönderilmesi ve uygulamanın iki bin on sonunda yayılması da doğru olduğu için bu seçenek eksiktir.",
+      "B": "Uygulamanın başlangıç ve yaygınlaşma tarihleri doğrudur. Derneğe ilişkin ilk ve üçüncü ifadeler de doğru olduğundan bu seçenek iki doğru öncülü dışarıda bırakır.",
+      "C": "İlk üç ifade dernek ve uygulama tarihleri açısından doğrudur. Dördüncü ifade de doğru olduğu için, yaygınlaşmayı dışarıda bırakan bu seçenek eksik kalır.",
+      "D": "Bu seçenek dernekle ilgili iki doğru ifadeyi ve yaygınlaşma tarihini içerir. Düzce'de iki bin beşte başlayan uygulamaya ilişkin ikinci ifade de doğru olduğundan eksiktir.",
+      "E": "Dernek bin dokuz yüz doksan sekizde TAHUD adını almış, iki bin birde WONCA'ya temsilci göndermiştir. Uygulama iki bin beşte başlayıp iki bin on sonunda tüm ülkeye yayılmıştır, dört ifade de doğrudur."
+     },
+     "s": 14,
+     "id": "k2-36-aile-hekimligine-yaklasim-q24"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aile hekimliği uygulamasına geçişle birlikte daha önce sağlık ocağı olarak hizmet veren birimler hangi birime dönüşmüştür?",
+     "secenekler": {
+      "A": "Aile sağlığı merkezi",
+      "B": "Sağlık evi",
+      "C": "Semt polikliniği",
+      "D": "Toplum sağlığı merkezi",
+      "E": "Entegre sağlık merkezi"
+     },
+     "dogru": "A",
+     "aciklama": "Sağlık ocakları Aile Sağlığı Merkezi'ne (ASM) dönüşmüş, 2005'ten bu yana çok sayıda yeni ASM açılmıştır.",
+     "sik_aciklamalari": {
+      "A": "Aile hekimliği uygulamasıyla daha önce sağlık ocağı olarak hizmet veren birimler aile sağlığı merkezine dönüşmüş, iki bin beşten bu yana birçok yeni merkez açılmıştır. Sağlık ocağından dönüşen birimin yeni adı aile sağlığı merkezidir; seçenek adı doğru verir.",
+      "B": "Sağlık evi küçük yerleşimlerde hizmet veren bir birim türüdür. Sağlık ocaklarının aile hekimliği uygulamasıyla dönüştüğü birim ise aile sağlığı merkezi olduğundan bu seçenek yanlıştır.",
+      "C": "Semt polikliniği hastanelere bağlı ayaktan hizmet birimidir. Kayıtlı nüfusa kişisel bakım veren aile hekimliği birimi olmadığından sağlık ocağının dönüştüğü birim değildir.",
+      "D": "Toplum sağlığı merkezi halk sağlığı hizmetlerini toplum düzeyinde yürüten ayrı bir birimdir. Kişiye yönelik birinci basamak hizmeti veren ve sağlık ocağının yerini alan birim değildir.",
+      "E": "Entegre sağlık hizmeti sunulan merkezlerde aile hekimi gözlem amaçlı yatış yapabilir. Sağlık ocaklarının genel olarak dönüştüğü birim ise aile sağlığı merkezidir."
+     },
+     "s": 15,
+     "id": "k2-36-aile-hekimligine-yaklasim-q25"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Aile hekimliğinin amaç ve ilkelerini 1974-2000 tanımlarıyla eşleştirir (s. 16).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Erken tanı koymak ve ilk kararı vermek ilkelerini ortaya koyan aile hekimliği tanımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gay 1995",
+      "B": "Dünya Sağlık Örgütü 1998",
+      "C": "Olesen 2000",
+      "D": "Leeuwenhorst 1974",
+      "E": "WONCA 1991"
+     },
+     "dogru": "D",
+     "aciklama": "Leeuwenhorst 1974: erken tanı, ilk karar, kronik/son dönem hastanın sürekli yönetimi.",
+     "sik_aciklamalari": {
+      "A": "Gay bin dokuz yüz doksan beş, ilkelerle görevler arasındaki ilişkiye ve hastaların ve sağlık sisteminin görevler üzerindeki etkisine odaklanan tanımdır. Erken tanı ilkesini içermediği için seçenek yanlıştır.",
+      "B": "Dünya Sağlık Örgütü tanımı bakımı genel, süreğen, kapsayıcı, koordineli, işbirliğine dayalı, aile ve toplum yönelimli olarak niteler. Erken tanı ilkesi onun değil, daha eski tanımındır.",
+      "C": "Olesen iki bin tanımı ön safta çalışmayı ve sağlık sorunları için bakım sağlayıcı ilk adımları atmayı vurgular. Erken tanı ve ilk karar ilkeleri daha eski bir tanıma aittir.",
+      "D": "Leeuwenhorst bin dokuz yüz yetmiş dört tanımı erken tanı koymayı, ilk kararı vermeyi ve kronik ya da son dönem hastanın sürekli yönetimini üstlenmeyi ilke olarak sayar. Erken tanı ve ilk karar ilkeleri Leeuwenhorst tanımının ayırt edici özelliğidir ve tanım doğru eşleşir.",
+      "E": "WONCA bin dokuz yüz doksan bir tanımı herkese kapsamlı bakım sağlamayı ve gerektiğinde diğer sağlık personelini harekete geçirmeyi öne çıkarır. Erken tanı ilkesinin sahibi değildir."
+     },
+     "s": 16,
+     "id": "k2-36-aile-hekimligine-yaklasim-q26"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Aile hekimliği bakımını genel, süreğen, kapsayıcı, koordineli, işbirliğine dayalı, aile ve toplum yönelimli olarak niteleyen tanım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gay 1995",
+      "B": "Dünya Sağlık Örgütü 1998",
+      "C": "Leeuwenhorst 1974",
+      "D": "WONCA 1991",
+      "E": "Olesen 2000"
+     },
+     "dogru": "B",
+     "aciklama": "Nitelik listesi (genel, süreğen, kapsayıcı, koordineli, işbirliğine dayalı, aile ve toplum yönelimli) WHO 1998 tanımıdır.",
+     "sik_aciklamalari": {
+      "A": "Gay tanımı ilkelerle görevler arasındaki ilişkiyi ve sistemin görevlere etkisini ele alır. Bakımın niteliklerini sayan bir liste vermediği için bu seçenek yanlıştır.",
+      "B": "Dünya Sağlık Örgütü bin dokuz yüz doksan sekiz tanımı bakımı genel, süreğen, kapsayıcı, koordineli, işbirliğine dayalı, aile yönelimli ve toplum yönelimli olarak niteler. Yedi niteleyicinin birlikte sayılması Dünya Sağlık Örgütü tanımının ayırt edici özelliğidir ve eşleşme doğrudur.",
+      "C": "Leeuwenhorst tanımı erken tanı, ilk karar ve kronik hastanın sürekli yönetimine odaklanır. Aile ve toplum yönelimliliği sayan geniş nitelik listesi ona ait değildir.",
+      "D": "WONCA bin dokuz yüz doksan bir kapsamlı bakımı ve diğer sağlık personelini harekete geçirmeyi vurgular. Süreğen, koordineli ve toplum yönelimli nitelemeleri başka bir tanımda geçer.",
+      "E": "Olesen tanımının özü ön safta çalışmak ve ilk adımları atmaktır. Bakımı yedi nitelikle tanımlayan liste daha önceki bir uluslararası örgüt tanımına aittir."
+     },
+     "s": 16,
+     "id": "k2-36-aile-hekimligine-yaklasim-q27"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Gay'in 1995 yılındaki aile hekimliği tanımının odak noktası aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Erken tanı koymak",
+      "B": "Aile yönelimli bakım",
+      "C": "Herkese kapsamlı bakım sağlamak",
+      "D": "Ön safta çalışmak",
+      "E": "İlkelerle görevler arasındaki ilişki"
+     },
+     "dogru": "E",
+     "aciklama": "Gay 1995: ilkelerle görevler arasındaki ilişki ve hastaların/sistemin görevlere etkisi.",
+     "sik_aciklamalari": {
+      "A": "Erken tanı koymak Leeuwenhorst bin dokuz yüz yetmiş dört tanımının ilkesidir. Gay tanımından yirmi bir yıl öncesine ait olduğundan bu seçenek Gay'in odak noktası değildir.",
+      "B": "Aile yönelimli bakım Dünya Sağlık Örgütü bin dokuz yüz doksan sekiz tanımının nitelikleri arasındadır. Gay tanımının odak noktası olmadığı için seçenek yanlıştır.",
+      "C": "Herkese kapsamlı bakım WONCA bin dokuz yüz doksan bir tanımının ilkesidir. Gay tanımı ise bakımın kapsamından çok ilkelerle görevlerin ilişkisine odaklanır.",
+      "D": "Ön safta çalışmak Olesen iki bin tanımının ilkesidir ve çizelgenin son durağıdır. Gay tanımıyla karıştırılan komşu bir tanım olduğundan bu seçenek yanlıştır.",
+      "E": "Gay bin dokuz yüz doksan beş tanımı ilkelerle görevler arasındaki ilişkiyi ve hastaların ve sağlık sisteminin görevler üzerindeki etkisini ele alır. Gay tanımının odağı ilkelerle görevlerin karşılıklı ilişkisidir ve seçenek odağı doğru yansıtır."
+     },
+     "s": 16,
+     "id": "k2-36-aile-hekimligine-yaklasim-q28"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Leeuwenhorst 1974 tanımında yer alan ilkelerden biri değildir?",
+     "secenekler": {
+      "A": "Kronik hastanın sürekli yönetimini üstlenmek",
+      "B": "Son dönem hastanın sürekli yönetimini üstlenmek",
+      "C": "Ön safta çalışmak",
+      "D": "Erken tanı koymak",
+      "E": "İlk kararı vermek"
+     },
+     "dogru": "C",
+     "aciklama": "Leeuwenhorst 1974 ilkeleri erken tanı, ilk karar ve sürekli yönetimdir; ön safta çalışmak Olesen 2000'e aittir.",
+     "sik_aciklamalari": {
+      "A": "Tekrarlayan, kronik ya da son dönem hastaların sürekli yönetim sorumluluğunu üstlenmek Leeuwenhorst tanımının üçüncü ilkesidir. Tanımda yer aldığı için sorulan istisna değildir.",
+      "B": "Son dönem hastalar da Leeuwenhorst tanımındaki sürekli yönetim ilkesinin kapsamındadır. Bu ifade tanımın bir parçası olduğundan ilkelerden biri değildir denilen istisna olamaz.",
+      "C": "Ön safta çalışmak Olesen iki bin tanımının ilkesidir, Leeuwenhorst tanımında yer almaz. Çizelgenin ilk ve son durağı birbirine karıştırıldığında bu tuzak oluşur. Dolayısıyla ön safta çalışmak Leeuwenhorst tanımında yer almayan ilkedir ve soruda aranan seçeneği doğru biçimde oluşturur.",
+      "D": "Erken tanı koymak Leeuwenhorst tanımının ilk ilkesidir ve genel pratisyenin hedefi olarak da geçer. Bu tanımda yer alan bir ilkedir.",
+      "E": "İlk kararı vermek Leeuwenhorst tanımında erken tanıdan hemen sonra sayılan ilkedir. Tanımın içinde yer aldığı için ilkelerden biri değildir ifadesini taşıyan istisna seçenek bu değildir."
+     },
+     "s": 16,
+     "id": "k2-36-aile-hekimligine-yaklasim-q29"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "WONCA'nın yapısını, misyonunu ve aile hekimliği tanımını açıklar (s. 17-19, 26).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "WONCA'nın kuruluş yılı ve kurucu üye ülke sayısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1972 ve 18 ülke",
+      "B": "1972 ve 111 ülke",
+      "C": "1974 ve 133 ülke",
+      "D": "1978 ve 18 ülke",
+      "E": "1952 ve 18 ülke"
+     },
+     "dogru": "A",
+     "aciklama": "WONCA 1972'de 18 üye ülke tarafından kurulmuştur; 111 ülke/bölge ve 133 kuruluş bugünkü büyüklüğüdür.",
+     "sik_aciklamalari": {
+      "A": "WONCA bin dokuz yüz yetmiş iki yılında on sekiz üye ülke tarafından kurulmuştur. Bugün yüz on bir ülke ve bölgede yüz otuz üç üye kuruluşu vardır. Kuruluş yılı ve on sekiz kurucu ülke bilgisi birlikte verilir ve örgütü doğru tanıtır.",
+      "B": "Yüz on bir, WONCA'nın bugün temsil edildiği ülke ve bölge sayısıdır. Kurucu üye sayısı ise on sekiz ülkedir, iki sayı birbirine karıştırılmamalıdır.",
+      "C": "Yüz otuz üç WONCA'nın günümüzdeki üye kuruluş sayısıdır, bin dokuz yüz yetmiş dört ise Hollanda tanımının yılıdır. Kuruluş bilgisiyle ilgisi yoktur.",
+      "D": "Bin dokuz yüz yetmiş sekiz Alma Ata Konferansı'nın yılıdır. WONCA bu konferansa katılan örgütlerden biridir ama altı yıl önce kurulmuştur.",
+      "E": "Bin dokuz yüz elli iki İngiltere'de Kraliyet Koleji'nin kurulduğu yıldır. WONCA ise yirmi yıl sonra on sekiz ülke tarafından kurulmuştur."
+     },
+     "s": 17,
+     "id": "k2-36-aile-hekimligine-yaklasim-q30"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "WONCA'nın misyonu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Organ temelli uzmanlıkları geliştirmek",
+      "B": "Aile hekimlerinin ücretlerini belirlemek",
+      "C": "Ulusal sağlık bakanlıklarını denetlemek",
+      "D": "Dünya halklarının yaşam kalitesini iyileştirmek",
+      "E": "Hastane hizmetlerini yaygınlaştırmak"
+     },
+     "dogru": "D",
+     "aciklama": "WONCA'nın misyonu değerleri ve yüksek bakım standartlarını teşvik ederek dünya halklarının yaşam kalitesini iyileştirmektir.",
+     "sik_aciklamalari": {
+      "A": "Organ temelli uzmanlaşma aile hekimliğinin karşıtı olarak tanımlanan yaklaşımdır. Aile hekimlerinin dünya örgütünün misyonu bu olamaz, bu nedenle seçenek yanlıştır.",
+      "B": "Ücret belirleme ulusal sağlık sistemlerinin ve sözleşmelerin konusudur. WONCA kâr amacı gütmeyen, bakım standartlarını teşvik eden uluslararası bir örgüt olduğundan bu seçenek misyon değildir.",
+      "C": "WONCA bakanlıkları denetleyen bir otorite değildir. Dünya Sağlık Örgütü gibi kuruluşlarla etkileşir ve kurucu üyelerini uluslararası düzeyde temsil eder, bu yüzden seçenek yanlıştır.",
+      "D": "WONCA'nın misyonu insan haklarına saygı ve cinsiyet eşitliği gibi değerleri ve yüksek bakım standartlarını teşvik ederek dünya halklarının yaşam kalitesini iyileştirmektir. Misyon, dünya halklarının yaşam kalitesinin iyileştirilmesi amacında toplanır ve seçenek bunu doğru özetler.",
+      "E": "Hastane hizmetleri ikinci ve üçüncü basamağın alanıdır. WONCA genel pratisyenlik ve aile hekimliğinde, yani birinci basamakta bakım standardını yükseltmeyi hedefler."
+     },
+     "s": 18,
+     "id": "k2-36-aile-hekimligine-yaklasim-q31"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "WONCA tanımına göre aile hekimleri aşağıdaki niteliklerden hangisiyle tanımlanır?",
+     "secenekler": {
+      "A": "Yalnız koruyucu hizmet veren halk sağlıkçılar",
+      "B": "Kapsamlı ve sürekli bakımdan sorumlu kişisel doktorlar",
+      "C": "Acil serviste çalışan nöbetçi hekimler",
+      "D": "Yalnız sevk işlemlerini yürüten koordinatörler",
+      "E": "Belirli organ sistemlerine odaklanan uzmanlar"
+     },
+     "dogru": "B",
+     "aciklama": "WONCA: aile hekimleri kapsamlı ve sürekli bakımdan sorumlu kişisel doktorlardır.",
+     "sik_aciklamalari": {
+      "A": "Koruyucu hizmet aile hekiminin görevlerindendir. Ancak WONCA tanımı tedavi ve sürekli bakımı da kapsayan kişisel doktorluk niteliğini öne çıkarır, bu yüzden seçenek eksik ve yanlıştır.",
+      "B": "WONCA'ya göre aile hekimleri tıbbi bakım arayan her bireye yaş, cinsiyet ve rahatsızlık ayrımı yapmadan kapsamlı ve sürekli bakım sağlamaktan sorumlu kişisel doktorlardır. Ayrım gözetmeme ve süreklilik bu tanımın özüdür ve ifade tanımı doğru yansıtır.",
+      "C": "Acil servis hekimliği hastane tabanlı bir hizmettir. Aile hekimi ise birinci basamakta kayıtlı kişilerine kişisel ve sürekli bakım veren hekimdir, bu nedenle seçenek yanlıştır.",
+      "D": "Koordinasyon aile hekiminin işlevlerinden biridir ama tek işi değildir. WONCA tanımında aile hekimi bakımın kendisinden sorumlu kişisel doktordur, bu yüzden seçenek yanlıştır.",
+      "E": "Belirli organ sistemine odaklanmak diğer uzmanlık dallarının özelliğidir. WONCA tanımı aile hekimini her bireye rahatsızlık ayrımı yapmadan bakan hekim olarak kurar."
+     },
+     "s": 19,
+     "id": "k2-36-aile-hekimligine-yaklasim-q32"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "WONCA'nın aile hekimliği tanımına göre aile hekimi bakımı verirken aşağıdakilerden hangisine saygı gösterir?",
+     "secenekler": {
+      "A": "Uzman hekimin kararına",
+      "B": "Sigorta kurumunun önceliğine",
+      "C": "Hastane protokolüne",
+      "D": "Kurum hiyerarşisine",
+      "E": "Hastanın otonomisine"
+     },
+     "dogru": "E",
+     "aciklama": "Aile hekimi bakımı hastalarının otonomisine saygı göstererek aile, toplum ve kültür bağlamında verir.",
+     "sik_aciklamalari": {
+      "A": "Uzman hekim görüşü gerektiğinde alınır ve aile hekimi bu teması yönetir. Ancak tanımda saygı gösterilmesi istenen öğe hastanın kendi kararıdır.",
+      "B": "Sigorta kurumu finansmanla ilgili bir taraftır ve bakımın verilişini belirlemez. Aile hekiminin bakım verirken gözettiği ilke hastanın otonomisi ile aile, toplum ve kültür bağlamıdır.",
+      "C": "Hastane protokolleri ikinci ve üçüncü basamağın kurallarıdır. Aile hekimi bakımı kişi merkezli verir ve hastanın özerkliğini esas aldığı için bu seçenek yanlıştır.",
+      "D": "Kurum hiyerarşisi yönetimsel bir düzendir ve bakım ilkesi olarak tanımda geçmez. WONCA tanımı bakımın hastanın kendi kararını verme hakkına saygıyla verilmesini ister.",
+      "E": "WONCA tanımında aile hekimi bakımı hastalarının otonomisine, yani kendi kararlarını verme haklarına saygı göstererek verir. Bunu aile, toplum ve kültür bağlamında yapar ve tanımı doğru tamamlar."
+     },
+     "s": 19,
+     "id": "k2-36-aile-hekimligine-yaklasim-q33"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Türkiye'nin WONCA'daki bölgesi ve TAHUD'un bu bölgeye üye olduğu yıl aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asya Pasifik Bölgesi, 2003",
+      "B": "Avrupa Bölgesi, 2001",
+      "C": "Avrupa Bölgesi, 2003",
+      "D": "Doğu Akdeniz Bölgesi, 1998",
+      "E": "Avrupa Bölgesi, 1998"
+     },
+     "dogru": "C",
+     "aciklama": "Türkiye WONCA Avrupa Bölgesi'ndedir; TAHUD 2001'de temsilci göndermiş, 2003'te Avrupa Bölgesi'ne üye olmuştur.",
+     "sik_aciklamalari": {
+      "A": "Yıl doğru verilmiştir ancak Türkiye WONCA'nın Avrupa Bölgesi'nde yer alır. Bölge yanlış olduğu için ifade bir bütün olarak yanlıştır.",
+      "B": "İki bin bir, TAHUD'un WONCA'ya temsilci gönderdiği yıldır. Avrupa Bölgesi'ne üyelik bundan iki yıl sonra gerçekleşmiştir, bu nedenle yıl yanlıştır.",
+      "C": "WONCA'nın yedi bölgesinden Türkiye Avrupa Bölgesi'ndedir. TAHUD iki bin üç yılında WONCA Avrupa Bölgesi'ne üye olmuştur, bu iki bilgi birlikte ifadeyi doğru kılar.",
+      "D": "Bin dokuz yüz doksan sekiz derneğin TAHUD adını aldığı ve temsil yetkisini elde ettiği yıldır. Türkiye'nin WONCA'daki bölgesi ise Avrupa'dır.",
+      "E": "Bölge doğru verilmiştir ama bin dokuz yüz doksan sekiz, temsil yetkisinin alındığı yıldır. Avrupa Bölgesi'ne üyelik iki bin üçte olmuştur, bu yüzden seçenek yanlıştır."
+     },
+     "s": 26,
+     "id": "k2-36-aile-hekimligine-yaklasim-q34"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "WONCA'nın aile hekimliği tanımıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belirli bir organ sistemine odaklanan bir uzmanlıktır",
+      "B": "Aile hekimleri kişisel doktorlardır",
+      "C": "Bakım hastanın kültürü bağlamında verilir",
+      "D": "Kendine özgü eğitim içeriği ve araştırması olan bir disiplindir",
+      "E": "Birinci basamak yönelimli klinik bir uzmanlıktır"
+     },
+     "dogru": "A",
+     "aciklama": "WONCA aile hekimliğini birinci basamak yönelimli, her bireye ayrım yapmadan bakan bir uzmanlık olarak tanımlar; organ odaklılık bu tanımla çelişir.",
+     "sik_aciklamalari": {
+      "A": "Organ sistemine odaklanmak diğer dalların özelliğidir; aile hekimi her bireye rahatsızlık ayrımı yapmadan bakar. Bu ifade tanımla çeliştiği için doğru değildir ve soruda aranan yanlış ifadeyi oluşturur.",
+      "B": "WONCA'ya göre aile hekimleri kapsamlı ve sürekli bakımdan sorumlu kişisel doktorlardır. Bu ifade tanımın bir parçası olduğundan doğrudur, dolayısıyla yanlış ifade aranırken elenir.",
+      "C": "Aile hekimi bakımı hastanın aile, toplum ve kültür bağlamında verir. İfade tanımla uyumlu olduğu için doğrudur ve yanlış ifade aranırken elenir.",
+      "D": "WONCA aile hekimliğini kendine özgü eğitim içeriği, araştırması, kanıt temeli ve klinik uygulaması olan akademik bir disiplin olarak tanımlar. Bu ifade doğrudur.",
+      "E": "Tanım aile hekimliğini birinci basamak yönelimli klinik bir uzmanlık olarak niteler. Bu doğru bir ifade olduğundan yanlış ifade aranırken elenir."
+     },
+     "s": 19,
+     "id": "k2-36-aile-hekimligine-yaklasim-q35"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Akademik disiplin esaslarını, Alma Ata'yı ve altı çekirdek yeterliği sayar (s. 20-23).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi bir bilim dalının akademik disiplin sayılması için gereken esaslardan biri değildir?",
+     "secenekler": {
+      "A": "Üyelerinin olduğu bir dernek",
+      "B": "Kendine özgü eğitim içeriği",
+      "C": "Kanıt temeli",
+      "D": "Hastane yatak kapasitesi",
+      "E": "Disipline has bilimsel dergi"
+     },
+     "dogru": "D",
+     "aciklama": "Disiplin esasları: eğitim içeriği, araştırma, kanıt temeli, klinik uygulama, bilimsel dergi ve dernek.",
+     "sik_aciklamalari": {
+      "A": "Üyelerinin olduğu bir dernek disiplin esaslarının sonuncusudur. Aile hekimliği bu esası Türkiye Aile Hekimleri Uzmanlık Derneği ile karşıladığından bu seçenek esaslardan biridir.",
+      "B": "Kendine özgü eğitim içeriği akademik disiplin sayılmanın ilk esasıdır. Aile hekimliği bu esası karşıladığı için tıp disiplini kabul edilir, dolayısıyla seçenek esaslardandır.",
+      "C": "Kanıt temeli, eğitim içeriği, araştırma ve klinik uygulamayla birlikte sayılan disiplin esaslarından biridir. Listede yer aldığı için sorulan istisna değildir.",
+      "D": "Yatak kapasitesi bir kurumun hizmet büyüklüğünü gösterir, bilim dalının akademik niteliğiyle ilgisi bulunmaz. Disiplin esasları eğitim, araştırma, kanıt, klinik uygulama, dergi ve dernektir. Bu nedenle yatak kapasitesi esaslar arasında sayılmayan, doğru ayrılan seçenektir.",
+      "E": "Disipline has yayımlanan bilimsel dergi akademik disiplin esaslarından biridir. Aile hekimliğinin alanında birçok bilimsel dergi bulunduğundan bu esas karşılanmıştır ve seçenek istisna değildir."
+     },
+     "s": 21,
+     "id": "k2-36-aile-hekimligine-yaklasim-q36"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aile hekimliğinde çekirdek yeterlik kavramındaki çekirdek sözcüğü neyi ifade eder?",
+     "secenekler": {
+      "A": "Asistanlığın ilk yılında öğrenileni",
+      "B": "Sağlık sisteminden bağımsız olarak disiplin için zorunlu olanı",
+      "C": "Hastane uygulamalarına özgü olanı",
+      "D": "Uzmanlık sınavında en sık sorulanı",
+      "E": "Yalnız Türkiye'deki sisteme özgü olanı"
+     },
+     "dogru": "B",
+     "aciklama": "Çekirdek: uygulandığı sağlık sistemine bakılmaksızın disiplin için zorunlu.",
+     "sik_aciklamalari": {
+      "A": "Çekirdek yeterlikler asistanlıktan uzmanlığa kadar kazanılan becerilerdir. Çekirdek sözcüğü öğrenme zamanını değil, disiplin için zorunluluğu anlatır, bu nedenle seçenek yanlıştır.",
+      "B": "Çekirdek sözcüğü, yeterliklerin uygulandığı sağlık sistemine bakmaksızın disiplin için zorunlu olan anlamını taşır. Aile hekimliğini tanımlayan bu yetenekler her ülkede ve her ortamda gereklidir; seçenek çekirdek kavramını doğru açıklar.",
+      "C": "Hastane uygulamaları ikinci ve üçüncü basamağın alanıdır. Çekirdek yeterlikler birinci basamak yönelimli disiplinin her ortamda vazgeçilmez yetenekleri olduğundan seçenek yanlıştır.",
+      "D": "Sınav sıklığı bir yeterliğin çekirdek olup olmadığını belirlemez. Çekirdek yeterlik, disiplinin tanımından doğan ve her sistemde zorunlu olan yetenektir, bu yüzden seçenek yanlıştır.",
+      "E": "Ülkeye özgü yeterlik, uygulandığı sisteme bağlı yeterliktir. Çekirdek ise tam tersine sağlık sisteminden bağımsız olarak zorunlu olanı anlatır, bu nedenle seçenek yanlıştır."
+     },
+     "s": 20,
+     "id": "k2-36-aile-hekimligine-yaklasim-q37"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "WONCA ve Dünya Sağlık Örgütü'nün birincil sağlık bakımını tanımlayıp herkese sağlık hedefini ilan ettiği toplantı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "1991 WONCA tanım toplantısı",
+      "B": "1974 Leeuwenhorst toplantısı",
+      "C": "1972 WONCA kuruluş toplantısı",
+      "D": "1961 sosyalleştirme düzenlemesi",
+      "E": "1978 Alma Ata Konferansı"
+     },
+     "dogru": "E",
+     "aciklama": "Alma Ata 1978: birincil sağlık bakımı tanımlandı, '2000 Yılında Herkese Sağlık' hedefi ilan edildi.",
+     "sik_aciklamalari": {
+      "A": "WONCA bin dokuz yüz doksan bir tanımı kapsamlı bakım ve diğer personeli harekete geçirme ilkelerini vermiştir. Herkese sağlık hedefi bundan önce ilan edilmiştir.",
+      "B": "Leeuwenhorst toplantısı birinci basamak hekimliğinin ayrı bir klinik dal olduğu tanımını yapmıştır. Herkese sağlık hedefi bu toplantıda ilan edilmediğinden seçenek yanlıştır.",
+      "C": "WONCA'nın kuruluşu örgütün doğuşudur. Birincil sağlık bakımının tanımlanıp iki binde herkese sağlık hedefinin ilanı altı yıl sonraki bir konferansta gerçekleşmiştir.",
+      "D": "Sosyalleştirme Türkiye'ye özgü bir yasadır ve birincil bakımın önemini erkenden vurgulamıştır. Uluslararası herkese sağlık hedefi ise başka bir toplantıda ilan edilmiştir.",
+      "E": "Bin dokuz yüz yetmiş sekiz Alma Ata Konferansı'nda Dünya Sağlık Örgütü ve WONCA birincil sağlık bakımını tanımlamış ve iki binde herkese sağlık hedefini ilan etmiştir. Bu buluşma birincil bakımın kilometre taşı olduğu için seçenek doğrudur."
+     },
+     "s": 22,
+     "id": "k2-36-aile-hekimligine-yaklasim-q38"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aile hekimliğinin temel yeterlikleri kaç çekirdek yeterlikte toplanır?",
+     "secenekler": {
+      "A": "Üç",
+      "B": "Dört",
+      "C": "Altı",
+      "D": "On iki",
+      "E": "Yedi"
+     },
+     "dogru": "C",
+     "aciklama": "Altı çekirdek yeterlik (dallar) on iki temel özelliği (yapraklar) toplar.",
+     "sik_aciklamalari": {
+      "A": "Üç sayısı WONCA ağacında gövdedeki uygulama alanlarının ve köklerdeki özelliklerin sayısıdır. Çekirdek yeterliklerin sayısı bundan daha fazla olduğundan seçenek yanlıştır.",
+      "B": "Dört sayısı kişi merkezli bakım dalındaki yaprak sayısıdır. Tüm temel yeterliklerin toplandığı çekirdek yeterlik sayısıyla karıştırılmamalıdır, bu yüzden seçenek yanlıştır.",
+      "C": "Temel yeterlikler altı çekirdek yeterlikte toplanır: birinci basamak yönetimi, kişi merkezli bakım, özgül sorun çözme, kapsamlı, toplum yönelimli ve bütüncül yaklaşım. Çekirdek yeterliklerin sayısı altıdır ve seçenek sayıyı doğru verir.",
+      "D": "On iki, disiplini tanımlayan temel özelliklerin yani ağacın yapraklarının sayısıdır. Bu özellikler altı çekirdek yeterlik altında toplandığından çekirdek yeterlik sayısı olarak yanlıştır.",
+      "E": "Yedi, WONCA'nın dünya genelindeki bölge sayısıdır ve örgütün yapısını anlatır. Aile hekimliğinin çekirdek yeterlik sayısıyla ilgisi olmadığı için seçenek yanlıştır."
+     },
+     "s": 23,
+     "id": "k2-36-aile-hekimligine-yaklasim-q39"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi aile hekimliğinin altı çekirdek yeterliğinden biri değildir?",
+     "secenekler": {
+      "A": "Organ temelli uzmanlaşma",
+      "B": "Toplum yönelimli olma",
+      "C": "Kapsamlı yaklaşım",
+      "D": "Özgül sorun çözme becerileri",
+      "E": "Kişi merkezli bakım"
+     },
+     "dogru": "A",
+     "aciklama": "Altı çekirdek yeterlik: birinci basamak yönetimi, kişi merkezli bakım, özgül sorun çözme, kapsamlı, toplum yönelimli, bütüncül yaklaşım.",
+     "sik_aciklamalari": {
+      "A": "Organ temelli uzmanlaşma diğer klinik dalların yaklaşımıdır ve aile hekimliği tam tersine bireyi bütün olarak ele alır. Organ odaklı uzmanlaşma çekirdek yeterliklerin hiçbirinde yer almaz. Çekirdek yeterlikler hastayı organlara bölmeyen bütüncül bakışı esas alır; bu nedenle organ odaklı uzmanlaşmayı yeterlik saymak doğru olmaz.",
+      "B": "Toplum yönelimli olma beşinci çekirdek yeterliktir. Aile hekimi toplumun sağlığı için özel sorumluluk üstlenir, bu yüzden seçenek altı yeterlikten biridir ve sorulan istisna değildir.",
+      "C": "Kapsamlı yaklaşım dördüncü çekirdek yeterliktir. Akut ve kronik sorunların eşzamanlı yönetimini ve sağlığın teşvikini kapsar, bu nedenle sorulan istisna değildir.",
+      "D": "Özgül sorun çözme becerileri üçüncü çekirdek yeterliktir. Ayrışmamış hastalıkların yönetimini ve prevalansa dayalı karar vermeyi içerdiğinden altı yeterlikten biridir ve istisna değildir.",
+      "E": "Kişi merkezli bakım ikinci çekirdek yeterliktir. Süreklilik, ortak karar, hasta ve ortama dayalılık ve doktor-hasta ilişkisini kapsar, bu yüzden sorulan istisna değildir."
+     },
+     "s": 23,
+     "id": "k2-36-aile-hekimligine-yaklasim-q40"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "WONCA ağacının kök, gövde, dal ve yaprak yapısını açıklar (s. 24-29).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "WONCA ağacında ağacın gövdesini oluşturan uygulama alanları aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İlk temas, koordinasyon, savunuculuk",
+      "B": "Tutum, bilim ve bağlam",
+      "C": "Süreklilik, ortak karar, doktor-hasta ilişkisi",
+      "D": "Klinik görevler, hastalarla iletişim, muayenehanenin yönetimi",
+      "E": "Akut problemler, kronik problemler, iyiliğin teşviki"
+     },
+     "dogru": "D",
+     "aciklama": "Gövde = klinik görevler, hastalarla iletişim, muayenehanenin yönetimi; kökler = tutum, bilim, bağlam.",
+     "sik_aciklamalari": {
+      "A": "Bu ögeler birinci basamak yönetimi dalının yapraklarını oluşturur. Ağacın gövdesi değil, bir dalın yapraklarıdır, bu nedenle gövdeyi oluşturan uygulama alanları olarak yanlış seçenektir.",
+      "B": "Tutum, bilim ve bağlam ağacın kökleridir ve yeterliklerin uygulanmasının temelini oluşturur. Uygulama alanlarının gösterildiği gövde değil köklerin içeriği olduğundan seçenek yanlıştır.",
+      "C": "Bu üçü kişi merkezli bakım dalının yapraklarıdır. Yapraklar temel özellikleri gösterir, gövde ise uygulama alanlarını gösterir, bu yüzden seçenek yanlıştır.",
+      "D": "Uzmanlığın yetkin uygulayıcısı yeterlikleri ağacın gövdesi olan üç alanda gösterir: klinik görevler, hastalarla iletişim ve muayenehanenin yönetimi. Klinik görevler, hastalarla iletişim ve muayenehanenin yönetimi birlikte ağacın gövdesini, yani yetkin uygulayıcılık çerçevesini doğru biçimde kurar.",
+      "E": "Bu ögeler kapsamlı yaklaşım dalının yapraklarıdır. Gövdedeki üç uygulama alanıyla karıştırılmamalıdır; yapraklar dalın özelliklerini, gövde ise uygulama alanlarını gösterir. Gövde klinik görevler, iletişim ve muayenehane yönetimidir."
+     },
+     "s": 27,
+     "id": "k2-36-aile-hekimligine-yaklasim-q41"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "WONCA ağacında çekirdek yeterliklerin uygulanmasının temelini oluşturan kökler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klinik görevler, iletişim, yönetim",
+      "B": "Tutum, bilim ve bağlam",
+      "C": "Altı çekirdek yeterlik",
+      "D": "On iki temel özellik",
+      "E": "Süreklilik, kapsamlılık, koordinasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Kökler: tutum, bilim, bağlam — hekimin özellikleridir ve yeterliklerin uygulanmasının temelidir.",
+     "sik_aciklamalari": {
+      "A": "Bu üç alan ağacın gövdesidir, yani yeterliklerin gösterildiği uygulama alanlarıdır. Çekirdek yeterliklerin uygulanmasının temelini oluşturan kökler olmadığından seçenek yanlıştır. Kökler ise tutum, bilim ve bağlam özellikleridir.",
+      "B": "Ağacın kökleri tutum, bilim ve bağlam olmak üzere üç özelliktir. Bu üç kök, çekirdek yeterliklerin uygulanmasının temellerini doğru biçimde adlandırır.",
+      "C": "Altı çekirdek yeterlik ağacın dallarıdır. Kökler ise bu dalların beslendiği hekim özellikleridir; dallar köklerin yerine geçmediğinden seçenek yanlıştır. Dallar uygulanan yeterlikleri, kökler hekimin temel özelliklerini gösterir.",
+      "D": "On iki temel özellik ağacın yapraklarıdır ve disiplini tanımlar. Köklerdeki üç özellikle karıştırılmamalıdır; yapraklar dallara bağlı özellikleri, kökler ise temeli gösterir.",
+      "E": "Bu kavramlar farklı dalların yapraklarında ve ilke tanımlarında geçer. Ağacın köklerini oluşturan tutum, bilim ve bağlam üçlüsü olmadığından seçenek yanlıştır."
+     },
+     "s": 28,
+     "id": "k2-36-aile-hekimligine-yaklasim-q42"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Hekimin çalışma koşullarını, toplumu, kültürü, mali ve düzenleyici çerçeveleri anlaması WONCA ağacında hangi özellikle tanımlanır?",
+     "secenekler": {
+      "A": "Bütüncül yaklaşım",
+      "B": "Tutumsal",
+      "C": "Bilimsel",
+      "D": "Toplum yönelimli olma",
+      "E": "Bağlamsal"
+     },
+     "dogru": "E",
+     "aciklama": "Bağlamsal kök: çalışma koşulları, toplum, kültür, mali ve düzenleyici çerçevelerin anlaşılması.",
+     "sik_aciklamalari": {
+      "A": "Bütüncül yaklaşım hastanın sorununu biyopsikososyokültürel ve varoluşsal boyutlarıyla ele alan çekirdek yeterliktir. Hekimin kendi çalışma bağlamını anlamasını tanımlamadığından seçenek yanlıştır.",
+      "B": "Tutumsal özellik hekimin mesleki yeteneklerine, değerlerine ve etiğe dayalı tutumlarını anlatır. Çalışma ortamını ve çerçeveleri anlamak başka bir köktür, bu yüzden seçenek yanlıştır.",
+      "C": "Bilimsel özellik eleştirel, araştırmaya dayalı yaklaşım ve sürekli öğrenmedir. Çalışma ortamını, kültürü ve mali çerçeveyi anlamakla ilgili olmadığı için seçenek yanlıştır.",
+      "D": "Toplum yönelimli olma bir çekirdek yeterliktir, yani bir daldır. Hekimin kendi çalışma bağlamını anlaması ise köklerde tanımlanan bir özellik olduğundan seçenek yanlıştır.",
+      "E": "Bağlamsal özellik hekimin kendi bağlamını ve çalıştığı ortamı, yani çalışma koşullarını, toplumu, kültürü, mali ve düzenleyici çerçeveleri anlamasıdır. Ortamı ve çerçeveleri anlama vurgusu bağlamsal özelliği doğru tanımlar."
+     },
+     "s": 28,
+     "id": "k2-36-aile-hekimligine-yaklasim-q43"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tıbbi uygulamaya eleştirel ve araştırmaya dayalı bir yaklaşım göstermek ve bunu sürekli öğrenmeyle sürdürmek WONCA ağacında hangi köke karşılık gelir?",
+     "secenekler": {
+      "A": "Özgül sorun çözme",
+      "B": "Kapsamlı yaklaşım",
+      "C": "Bilimsel",
+      "D": "Tutumsal",
+      "E": "Bağlamsal"
+     },
+     "dogru": "C",
+     "aciklama": "Bilimsel kök: eleştirel, araştırmaya dayalı yaklaşım + sürekli öğrenme ve kalite geliştirme.",
+     "sik_aciklamalari": {
+      "A": "Özgül sorun çözme bir çekirdek yeterliktir, yani bir daldır. Sorudaki eleştirel ve araştırmaya dayalı yaklaşım tanımı ise ağacın köklerinden birini anlattığı için seçenek yanlıştır.",
+      "B": "Kapsamlı yaklaşım akut ve kronik sorunların eşzamanlı yönetimi ile sağlığın teşvikini kapsayan daldır. Bir kök olmadığından eleştirel ve araştırmaya dayalı yaklaşımı tanımlamaz.",
+      "C": "Bilimsel kök tıbbi uygulamaya eleştirel ve araştırmaya dayalı yaklaşımı ve bunun sürekli öğrenme ve kalite geliştirme ile sürdürülmesini anlatır. Eleştirel ve araştırmaya dayalı yaklaşım bilimsel özelliği doğru tanımlar.",
+      "D": "Tutumsal kök mesleki yetenek, değer ve etiğe dayalı tutumlardır. Araştırma ve sürekli öğrenme bu kökün değil, komşu kökün tanımındadır, bu yüzden seçenek yanlıştır.",
+      "E": "Bağlamsal kök hekimin çalıştığı ortamı ve çerçeveleri anlamasıdır. Eleştirel ve araştırmaya dayalı yaklaşımla ve sürekli öğrenmeyle ilgisi olmadığından seçenek yanlıştır."
+     },
+     "s": 29,
+     "id": "k2-36-aile-hekimligine-yaklasim-q44"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "WONCA ağacını hazırlayan kurum ve hazırlandığı yıl aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İsviçre Birinci Basamak Koleji, 2004",
+      "B": "TAHUD, 2003",
+      "C": "Dünya Sağlık Örgütü, 1998",
+      "D": "Kraliyet Koleji, 1952",
+      "E": "Amerikan akademisi, 1969"
+     },
+     "dogru": "A",
+     "aciklama": "WONCA ağacı 2004'te İsviçre Birinci Basamak Koleji'nce yapıldı, WONCA kabul etti, 2011'de güncellendi.",
+     "sik_aciklamalari": {
+      "A": "WONCA ağacı iki bin dörtte İsviçre Birinci Basamak Koleji tarafından yapılmış, WONCA tarafından kabul edilmiş ve iki bin on birde güncellenmiştir. Hazırlayan kurum, kabul eden örgüt ve güncelleme yılı birlikte verildiği için seçenek doğrudur.",
+      "B": "TAHUD iki bin üçte WONCA Avrupa Bölgesi'ne üye olmuştur. Bu bir üyelik tarihidir; ağacı hazırlayan kurum olmadığı için seçenek yanlıştır.",
+      "C": "Dünya Sağlık Örgütü bin dokuz yüz doksan sekizde aile hekimliği bakımının niteliklerini tanımlamıştır. Ağacın hazırlayıcısı olmadığından ve yıl da uyuşmadığından seçenek yanlıştır.",
+      "D": "Genel Pratisyenlik Kraliyet Koleji İngiltere'de bin dokuz yüz elli ikide kurulmuştur. WONCA ağacını hazırlayan kurum olmadığı için seçenek yanlıştır.",
+      "E": "Amerikan Aile Hekimleri Akademisi bin dokuz yüz altmış dokuzda oluşturulmuştur. Ağaç ise çok daha sonra Avrupa'da hazırlandığı için seçenek yanlıştır."
+     },
+     "s": 25,
+     "id": "k2-36-aile-hekimligine-yaklasim-q45"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "WONCA ağacıyla ilgili aşağıdaki ifadeler verilmiştir:\nI. On iki temel özellik ağacın yapraklarıdır.\nII. Altı çekirdek yeterlik ağacın dallarıdır.\nIII. Tutum, bilim ve bağlam ağacın gövdesidir.\nIV. Ağaç 2011 yılında güncellenmiştir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Yaprak = 12 özellik, dal = 6 yeterlik, gövde = 3 uygulama alanı, kök = tutum/bilim/bağlam; ağaç 2011'de güncellendi.",
+     "sik_aciklamalari": {
+      "A": "Yaprak ve dal eşlemesi doğrudur. Ancak ağacın iki bin on birde güncellendiğini söyleyen dördüncü ifade de doğru olduğu için bu seçenek eksiktir.",
+      "B": "Yapraklar on iki temel özellik, dallar altı çekirdek yeterliktir ve ağaç iki bin on birde güncellenmiştir. Tutum, bilim ve bağlam ise gövde değil köklerdir. Doğru olan I, II ve IV'tür, III ise köklerin gövde sanılmasından doğan yanlış öncüldür.",
+      "C": "Dallar doğru eşlenmiştir. Tutum, bilim ve bağlam ise köklerdir; gövde klinik görevler, iletişim ve yönetimdir, bu yüzden üçüncü ifade yanlıştır.",
+      "D": "Yapraklar ve güncelleme yılı doğrudur. Üçüncü ifade kökleri gövde olarak gösterdiği için yanlıştır ve doğru olan ikinci ifade de dışarıda kalmıştır.",
+      "E": "Bu seçenek kökleri gövde diye tanımlayan yanlış üçüncü ifadeyi de içerir. Ağacın gövdesi klinik görevler, hastalarla iletişim ve muayenehanenin yönetimidir."
+     },
+     "s": 27,
+     "id": "k2-36-aile-hekimligine-yaklasim-q46"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Birinci basamak yönetimi ve kişi merkezli bakım özelliklerini ayırt eder (s. 30-33).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Sağlık kaynaklarının verimli kullanımını sağlamaya yönelik aile hekimliği özelliği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastayla ortak karar verme",
+      "B": "Koordinasyon ve savunuculuk",
+      "C": "Sağlık ve iyiliğin teşviki",
+      "D": "İlk temas ve açık erişim",
+      "E": "Süreklilik"
+     },
+     "dogru": "B",
+     "aciklama": "Koordinasyon ve savunuculuk, birinci basamak yönetiminin kaynakların verimli kullanımını sağlayan yaprağıdır.",
+     "sik_aciklamalari": {
+      "A": "Ortak karar verme yönetim kararının hastayla birlikte alınmasıdır ve kişi merkezli bakıma aittir. Kaynak kullanımıyla doğrudan ilgili olmadığı için seçenek yanlıştır.",
+      "B": "Koordinasyon ve savunuculuk sağlık kaynaklarının verimli kullanımını sağlar. Aile hekimi bunu bakımı koordine ederek ve gerektiğinde hasta adına savunuculuk yaparak gerçekleştirir; seçenek bu işleyişi doğru anlatır.",
+      "C": "Sağlık ve iyiliğin teşviki kapsamlı yaklaşım dalında yer alır ve girişimlerle iyilik hâlini geliştirmeyi anlatır. Kaynak verimliliği bu yaprağın tanımında geçmez.",
+      "D": "İlk temas ve açık erişim, aile hekiminin sağlık sistemine ilk giriş noktası olmasını anlatır. Kaynakların verimli kullanımı ise aynı dalın öteki yaprağının amacıdır.",
+      "E": "Süreklilik kişi merkezli bakım dalında bakımın boylamsal devamlılığını anlatır. Sağlık kaynaklarının verimli kullanımını hedefleyen özellik olmadığından seçenek yanlıştır. Kaynak verimliliği koordinasyon ve savunuculuk özelliğine aittir."
+     },
+     "s": 31,
+     "id": "k2-36-aile-hekimligine-yaklasim-q47"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Aile hekiminin gerektiğinde hasta adına diğer uzmanların sunduğu hizmetlerle teması yönetmesi hangi kavramla açıklanır?",
+     "secenekler": {
+      "A": "Bütüncül modelleme",
+      "B": "Toplum yönelimlilik",
+      "C": "Süreklilik",
+      "D": "Ayrışmamış hastalık yönetimi",
+      "E": "Savunuculuk"
+     },
+     "dogru": "E",
+     "aciklama": "Savunuculuk: aile hekimi gerektiğinde hasta adına diğer uzmanların hizmetleriyle teması yönetir.",
+     "sik_aciklamalari": {
+      "A": "Bütüncül modelleme sorunu biyopsikososyokültürel ve varoluşsal boyutlarıyla ele almaktır. Hasta adına uzmanlarla temasın yönetimi bu dalın konusu olmadığından seçenek yanlıştır.",
+      "B": "Toplum yönelimlilik toplumun sağlığı için sorumluluk ve birey-toplum dengesini kapsar. Tek hastanın uzmanlarla temasını yönetmek başka bir yaprağa aittir.",
+      "C": "Süreklilik bakımın doğumdan ölüme uzanan boylamsal devamlılığını anlatır. Hasta adına diğer uzmanlarla teması yönetmek ayrı bir kavram olduğundan seçenek yanlıştır.",
+      "D": "Ayrışmamış hastalık yönetimi, erken evrede belirsiz ortaya çıkan rahatsızlıkların aile hekimince yönetilmesidir. Uzmanlarla temasın hasta adına yönetimini anlatmadığı için seçenek yanlıştır.",
+      "E": "Aile hekimi gerektiğinde hasta adına üstlendiği savunuculuk göreviyle diğer uzmanların sunduğu hizmetlerle teması yönetir. Bu, birinci basamak yönetiminin bir yaprağıdır. Hasta adına temasları yürütme görevi savunuculuk kavramının doğru karşılığıdır."
+     },
+     "s": 31,
+     "id": "k2-36-aile-hekimligine-yaklasim-q48"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aile hekimliği yaklaşımının doğumdan, hatta öncesinden ölüme, hatta sonrasına kadar sürmesi hangi özelliği tanımlar?",
+     "secenekler": {
+      "A": "Kapsamlı yaklaşım",
+      "B": "Bağlamsal özellik",
+      "C": "Boylamsal süreklilik",
+      "D": "Koordinasyon",
+      "E": "İlk temas"
+     },
+     "dogru": "C",
+     "aciklama": "Boylamsal süreklilik: aile hekimliği yaklaşımı doğumdan (bazen öncesinden) ölüme (bazen sonrasına) kadar sürer.",
+     "sik_aciklamalari": {
+      "A": "Kapsamlı yaklaşım akut ve kronik sorunların aynı anda yönetimi ve sağlığın teşvikidir. Zamana yayılan devamlılığı değil, hizmetin kapsamını tanımladığından seçenek yanlıştır.",
+      "B": "Bağlamsal özellik hekimin çalışma ortamını anlamasıdır ve ağacın köklerinden biridir. Bakımın zaman boyunca süresiyle ilgisi olmadığı için seçenek yanlıştır. Bakımın süresini anlatan özellik boylamsal süreklilik özelliğidir.",
+      "C": "Aile hekimi bakımın hastanın gereksinimine göre belirlenen boylamsal yani longitüdinal sürekliliğinden sorumludur. Bu yaklaşım doğumdan ölüme kadar sürer ve süreklilik özelliğini doğru yansıtır.",
+      "D": "Koordinasyon bireye sunulan bakımın düzenlenmesi ve kaynakların verimli kullanımıdır. Bakımın zaman boyunca devamlılığını anlatmadığı için seçenek yanlıştır. Zaman boyunca devamlılığı anlatan özellik boylamsal süreklilik özelliğidir.",
+      "E": "İlk temas aile hekiminin sağlık sistemine giriş noktası olmasıdır. Bakımın yaşam boyu sürmesi farklı bir özellik olduğundan seçenek yanlıştır. Boylamsal süreklilik ise doğumdan ölüme uzanan devamlılıktır."
+     },
+     "s": 33,
+     "id": "k2-36-aile-hekimligine-yaklasim-q49"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aile hekiminin hastanın yönetimine ilişkin kararları hastayla birlikte alması hangi çekirdek yeterliğin özelliğidir?",
+     "secenekler": {
+      "A": "Kişi merkezli bakım",
+      "B": "Birinci basamak yönetimi",
+      "C": "Özgül sorun çözme becerileri",
+      "D": "Toplum yönelimli olma",
+      "E": "Kapsamlı yaklaşım"
+     },
+     "dogru": "A",
+     "aciklama": "Hastayla ortak karar verme kişi merkezli bakımın yapraklarındandır.",
+     "sik_aciklamalari": {
+      "A": "Hastayla ortak karar verme, süreklilik, doktor-hasta ilişkisi ve hasta-ortama dayalılık ile birlikte kişi merkezli bakım dalının yapraklarından biridir. Karar sürecine hastanın katılması kişi merkezli bakım dalının temel özelliğidir ve dalla yaprağı doğru eşleştirir.",
+      "B": "Birinci basamak yönetimi ilk temas ve koordinasyon-savunuculuğu kapsar. Ortak karar verme bu dalın yaprağı olmadığından seçenek yanlıştır. Ortak karar kişi merkezli bakım dalının yaprağıdır.",
+      "C": "Özgül sorun çözme ayrışmamış hastalıklar ve prevalansa dayalı karar vermeyi kapsar. Kararın hastayla paylaşılması başka bir dalın özelliği olduğundan seçenek yanlıştır.",
+      "D": "Toplum yönelimli olma toplumun sağlığı için sorumluluğu anlatır. Bireysel hastayla ortak karar vermeyi tanımlamadığından seçenek yanlıştır. Ortak karar kişi merkezli bakım dalının yaprağıdır.",
+      "E": "Kapsamlı yaklaşım akut ve kronik sorunların eşzamanlı yönetimi ile sağlığın teşvikidir. Ortak karar verme kişi merkezli bakımın yaprağı olduğundan seçenek yanlıştır."
+     },
+     "s": 33,
+     "id": "k2-36-aile-hekimligine-yaklasim-q50"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi kişi merkezli bakım çekirdek yeterliğinin özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Süreklilik",
+      "B": "Hastayla ortak karar verme",
+      "C": "Doktor-hasta ilişkisi",
+      "D": "Prevalansa dayalı karar verme",
+      "E": "Hasta ve ortama dayalı yaklaşım"
+     },
+     "dogru": "D",
+     "aciklama": "Kişi merkezli bakımın yaprakları: hasta ve ortama dayalılık, doktor-hasta ilişkisi, süreklilik, ortak karar; prevalansa dayalı karar özgül sorun çözmeye aittir.",
+     "sik_aciklamalari": {
+      "A": "Süreklilik kişi merkezli bakımın yaprağıdır ve bakımın boylamsal devamlılığını anlatır. Bu dalın özelliği olduğu için sorulan istisna değildir; aranan seçenek bu başlığın dışında kalmalıdır.",
+      "B": "Ortak karar verme kişi merkezli bakımda yönetim kararlarının hastayla birlikte alınmasıdır. Dalın özelliklerinden biri olduğu için istisna sayılmaz, çünkü bu kararlar hastanın katılımıyla şekillenir.",
+      "C": "Doktor-hasta ilişkisi kendine özgü görüşme süreciyle zaman içinde gelişen ilişkiyi anlatır. Kişi merkezli bakımın yaprağı olduğundan sorulan istisna değildir.",
+      "D": "İnsidans ve prevalansa dayalı karar verme özgül sorun çözme becerileri dalının yaprağıdır. Prevalansa dayalı karar verme kişi merkezli bakım dalının yaprağı değildir. Prevalansa dayalı karar verme özgül sorun çözme becerilerine ait olduğundan kişi merkezli bakım dalıyla doğru eşleşmez.",
+      "E": "Hasta ve ortama dayalı, kişi merkezli bir yaklaşım geliştirmek bu dalın ilk özelliğidir. Listeye ait olduğundan istisna olamaz, aranan özellik başka bir dalın yaprağı olmalıdır."
+     },
+     "s": 33,
+     "id": "k2-36-aile-hekimligine-yaklasim-q51"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Özgül sorun çözme becerileri ile kapsamlı yaklaşımın özelliklerini ayırt eder (s. 34-37).",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Birinci basamakta ciddi hastalıkların hastanede olduğundan daha az sıklıkla görülmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ciddi hastaların doğrudan hastaneye kayıtlı olması",
+      "B": "Birinci basamakta hiçbir ön elemenin olmaması",
+      "C": "Aile hekimlerinin ciddi hastalığı tanımaması",
+      "D": "Toplumda ciddi hastalık bulunmaması",
+      "E": "Birinci basamakta tanı testlerinin az olması"
+     },
+     "dogru": "B",
+     "aciklama": "Ön eleme olmadığı için birinci basamakta prevalans ve insidans hastanedekinden farklıdır; ciddi hastalıklar daha seyrektir.",
+     "sik_aciklamalari": {
+      "A": "Aile hekimliğinde kayıt sistemi kişileri aile hekimine bağlar, hastaneye değil. Sıklık farkı kayıttan kaynaklanmaz; nedeni birinci basamakta ön elemenin bulunmamasıdır, bu yüzden seçenek yanlıştır.",
+      "B": "Birinci basamakta hiçbir ön eleme olmadığı için başvuranların çoğu ciddi olmayan sorunlarla gelir. Bu yüzden ciddi hastalıkların birinci basamakta hastanedekinden daha az sıklıkla görüldüğü doğru bir çıkarımdır.",
+      "C": "Bu ifade aile hekiminin bilgisini sorgular ve tanımla ilgisizdir. Sıklık farkı hasta havuzunun yapısından kaynaklanır, hekimin tanıma becerisinden değil; seçenek yanlıştır.",
+      "D": "Ciddi hastalıklar toplumda vardır ve aile hekimi de onlarla karşılaşır. Fark yalnız sıklıktadır; nedeni birinci basamakta hasta seçiminin yapılmamasıdır, bu yüzden seçenek yanlıştır.",
+      "E": "Test olanağı tanı koymayı etkiler ama hastalığın görülme sıklığını değiştirmez. Sıklık farkını açıklayan, birinci basamağa gelen kişilerin önceden elenmemesidir; seçenek yanlıştır."
+     },
+     "s": 35,
+     "id": "k2-36-aile-hekimligine-yaklasim-q52"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Aile hekimliğinde özgül karar verme sürecini belirleyen temel ölçüt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Laboratuvar tetkiklerinin maliyeti",
+      "B": "Uzman hekimin önerisi",
+      "C": "Hastanın sigorta durumu",
+      "D": "Hastanedeki hastalık sıklıkları",
+      "E": "Rahatsızlıkların toplumdaki prevalans ve insidansı"
+     },
+     "dogru": "E",
+     "aciklama": "Özgül sorun çözmede karar, rahatsızlıkların toplumdaki prevalans ve insidansına dayanır.",
+     "sik_aciklamalari": {
+      "A": "Maliyet kaynak kullanımında gözetilen bir etkendir. Özgül sorun çözme becerisinde karar sürecinin belirleyicisi olarak tanımlanan ölçüt olmadığından seçenek yanlıştır. Karar süreci toplumdaki prevalans ve insidansa dayanır.",
+      "B": "Uzman görüşü gerektiğinde alınır ve aile hekimi bu teması koordine eder. Birinci basamağa özgü karar sürecinin temel ölçütü toplumdaki sıklıklardır.",
+      "C": "Sigorta durumu hizmete erişimle ilgili idari bir konudur. Aile hekimliğinin tanımladığı karar verme süreci tıbbi sıklık verisine dayandığından seçenek yanlıştır.",
+      "D": "Hastanedeki sıklıklar ön elemeden geçmiş bir hasta havuzunu yansıtır. Birinci basamakta karar bu değerlerle değil, toplumdaki sıklıklarla verildiğinden seçenek yanlıştır.",
+      "E": "Aile hekimliğinde rahatsızlıkların toplum içindeki prevalans ve insidansının belirleyici olduğu özgün bir karar verme süreci vardır. Birinci basamaktaki hasta havuzu bu karar verme sürecini gerektirir ve seçenek gerekçeyi doğru kurar."
+     },
+     "s": 35,
+     "id": "k2-36-aile-hekimligine-yaklasim-q53"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Zamanı bir araç olarak kullanıp kademeli araştırma yapmak ve belirsizliğe uyum sağlamak hangi çekirdek yeterliğin kapsamındadır?",
+     "secenekler": {
+      "A": "Kişi merkezli bakım",
+      "B": "Birinci basamak yönetimi",
+      "C": "Özgül sorun çözme becerileri",
+      "D": "Bütüncül yaklaşım",
+      "E": "Kapsamlı yaklaşım"
+     },
+     "dogru": "C",
+     "aciklama": "Zamanı araç olarak kullanma, kademeli araştırma ve belirsizliğe uyum özgül sorun çözme becerilerinin yetileridir.",
+     "sik_aciklamalari": {
+      "A": "Kişi merkezli bakım hasta görüşmesini, otonomiye saygıyı ve ortaklığı kapsar. Zamanı araç olarak kullanmak ve kademeli araştırma bu dalın tanımında yer almadığı için bu seçenek yanlıştır.",
+      "B": "Birinci basamak yönetimi ilk teması ve hizmetler arası eşgüdümü kapsar. Belirsizlik karşısında kademeli araştırma bu dalın içeriğinde sayılmaz, çünkü bu beceri başka bir yeterliğe aittir.",
+      "C": "Özgül sorun çözme becerileri zamanı araç olarak kullanarak kademeli araştırma yapmayı ve belirsizliğe uyum sağlamayı içerir. Ayrışmamış durumlarda bu yaklaşım kullanılır ve yeterliği doğru tanımlar.",
+      "D": "Bütüncül yaklaşım sorunu biyopsikososyokültürel ve varoluşsal boyutlarıyla ele alır. Tanısal süreçte zamanın kullanılması bu dalın konusu olmadığı için odak sorunun boyutlarında kalır.",
+      "E": "Kapsamlı yaklaşım çok sayıda yakınmanın eşzamanlı yönetimini ve sağlığın geliştirilmesini kapsar. Zamanı araç olarak kullanma ise sorun çözmeyle ilgili bir yetidir."
+     },
+     "s": 34,
+     "id": "k2-36-aile-hekimligine-yaklasim-q54",
+     "gorsel": true
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Uygun ve etkili girişimlerle sağlık ve iyilik durumunu geliştirmek hangi çekirdek yeterliğin özelliğidir?",
+     "secenekler": {
+      "A": "Kapsamlı yaklaşım",
+      "B": "Kişi merkezli bakım",
+      "C": "Bütüncül yaklaşım",
+      "D": "Birinci basamak yönetimi",
+      "E": "Toplum yönelimli olma"
+     },
+     "dogru": "A",
+     "aciklama": "Sağlık ve iyiliğin teşviki kapsamlı yaklaşımın yaprağıdır.",
+     "sik_aciklamalari": {
+      "A": "Sağlık ve iyiliğin teşviki, akut ve kronik problemlerin birlikte yönetimiyle beraber kapsamlı yaklaşım dalının yaprağıdır. Uygun ve etkili girişimlerle iyiliği geliştirmek, sağlığın teşvikini doğru tarif eder.",
+      "B": "Kişi merkezli bakım süreklilik, ortak karar ve doktor-hasta ilişkisini kapsar. Sağlığın teşviki bu dalın yaprakları arasında olmadığından seçenek yanlıştır.",
+      "C": "Bütüncül yaklaşım sorunun fizik, psikolojik, sosyal, kültürel ve varoluşsal boyutlarını ele alır. İyiliğin teşviki ayrı bir dalın yaprağı olduğundan seçenek yanlıştır.",
+      "D": "Birinci basamak yönetimi ilk temas ve koordinasyon-savunuculuğu kapsar. Sağlık ve iyiliğin teşviki bu dala ait olmadığından seçenek yanlıştır. Sağlığın teşviki kapsamlı yaklaşım dalının yaprağıdır.",
+      "E": "Toplum yönelimli olma toplumun sağlığı için sorumluluk ve kaynak dengesini anlatır. Bireyin iyilik durumunu girişimlerle geliştirmek başka bir dalda tanımlanır."
+     },
+     "s": 37,
+     "id": "k2-36-aile-hekimligine-yaklasim-q55"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Sağlığın geliştirilmesi, korunma, tedavi, bakım, palyasyon ve rehabilitasyonu yönetip koordine edebilme yetisi hangi çekirdek yeterlik kapsamındadır?",
+     "secenekler": {
+      "A": "Toplum yönelimli olma",
+      "B": "Kişi merkezli bakım",
+      "C": "Bütüncül yaklaşım",
+      "D": "Kapsamlı yaklaşım",
+      "E": "Özgül sorun çözme becerileri"
+     },
+     "dogru": "D",
+     "aciklama": "Korunmadan palyasyona tüm bakım evrelerinin yönetimi ve eşgüdümü kapsamlı yaklaşımın yetisidir.",
+     "sik_aciklamalari": {
+      "A": "Toplum yönelimli olma toplum gereksinimlerini kaynaklarla dengelemektir. Bireyin korunmadan rehabilitasyona tüm bakım evrelerini yönetmesi bu dalın tanımında yer almaz, bu yeti kapsamlı yaklaşıma aittir.",
+      "B": "Kişi merkezli bakım otonomiye saygı ve hekim-hasta ilişkisine odaklanır. Bakım evrelerinin yönetimi ve eşgüdümü bu dalın tanımında yer almaz.",
+      "C": "Bütüncül yaklaşım sorunun boyutlarını ele alır, hizmet türlerinin eşgüdümünü değil. Sağlığın geliştirilmesinden rehabilitasyona uzanan yönetim yetisi bu dalda tanımlanmadığı için seçenek eşleşmez.",
+      "D": "Kapsamlı yaklaşım çok sayıda yakınmanın eşzamanlı yönetimini içerir. Ayrıca bu yeterlik sağlığın geliştirilmesi, korunma, tedavi, bakım, palyasyon ve rehabilitasyonun yönetimini ve eşgüdümünü kapsar; seçenek kapsamı doğru verir.",
+      "E": "Özgül sorun çözme becerileri prevalansa dayalı karar, seçici bilgi toplama ve belirsizlik yönetimini kapsar. Korunmadan palyasyona uzanan hizmet yelpazesinin yönetimi başka dalın yetisidir."
+     },
+     "s": 36,
+     "id": "k2-36-aile-hekimligine-yaklasim-q56",
+     "gorsel": true
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Toplum yönelimli olma ve bütüncül yaklaşımı açıklar, yaprak-dal eşlemesini yapar (s. 24, 38-41).",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Hastanın sağlık gereksinimleriyle toplumun sağlık gereksinimlerini var olan kaynaklar açısından dengede uzlaştırmak hangi çekirdek yeterliktir?",
+     "secenekler": {
+      "A": "Kapsamlı yaklaşım",
+      "B": "Toplum yönelimli olma",
+      "C": "Bütüncül yaklaşım",
+      "D": "Özgül sorun çözme becerileri",
+      "E": "Kişi merkezli bakım"
+     },
+     "dogru": "B",
+     "aciklama": "Toplum yönelimli olma: toplumun sağlığı için sorumluluk ve birey-toplum gereksinimlerinin kaynaklar açısından uzlaştırılması.",
+     "sik_aciklamalari": {
+      "A": "Kapsamlı yaklaşım bireyin akut ve kronik sorunlarını birlikte yönetmektir. Birey ile toplum arasında kaynak dengesi kurmak bu dalın tanımında yoktur, bu denge toplum yönelimli olmaya aittir.",
+      "B": "Toplum yönelimli olmada aile hekimi toplumun sağlığı için özel sorumluluk üstlenir. Hastanın gereksinimini toplumun gereksinimiyle var olan kaynaklar açısından dengelemek, toplum yönelimli olmayı doğru tanımlar.",
+      "C": "Bütüncül yaklaşım sorunun biyopsikososyokültürel ve varoluşsal boyutlarını ele alır. Toplum kaynaklarının dengelenmesi bu dalın konusu olmadığı için tarif edilen yeterlik bu değildir.",
+      "D": "Özgül sorun çözme toplumdaki sıklıklara dayalı tanısal karardır. Kaynakların birey ile toplum arasında uzlaştırılması ayrı bir yeterlik olduğundan seçenek yanlıştır.",
+      "E": "Kişi merkezli bakım tek hastanın bağlamına ve tercihine odaklanır. Bireyin gereksinimini toplumun gereksinimiyle dengelemek başka bir dalın tanımı olduğundan seçenek yanlıştır."
+     },
+     "s": 39,
+     "id": "k2-36-aile-hekimligine-yaklasim-q57"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "WONCA ağacında aşağıdaki yaprak–dal eşleştirmeleri verilmiştir:\nI. Ayrışmamış hastalıklar – Özgün problem çözme becerisi\nII. Süreklilik – Kişi merkezli bakım\nIII. Koordinasyon ve savunuculuk – Kapsamlı yaklaşım\nIV. Toplumun sağlığından sorumlu olma – Toplum yönelimli\nBu eşleştirmelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Koordinasyon ve savunuculuk birinci basamak yönetiminin yaprağıdır; diğer üç eşleme doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Ayrışmamış hastalıklar ve süreklilik doğru dallarla eşlenmiştir. Toplumun sağlığından sorumlu olma da toplum yönelimli dalın yaprağı olduğu için bu seçenek eksiktir.",
+      "B": "Ayrışmamış hastalıklar özgün problem çözmenin, süreklilik kişi merkezli bakımın, toplumun sağlığından sorumlu olma toplum yönelimli dalın yaprağıdır. Koordinasyon ise birinci basamak yönetimine aittir. I, II ve IV doğru eşleşmedir, koordinasyonun yanlış dala konduğu III ise dışarıda kalır.",
+      "C": "Süreklilik ile kişi merkezli bakım eşlemesi doğrudur. Koordinasyon ve savunuculuk ise kapsamlı yaklaşımın değil, birinci basamak yönetiminin yaprağıdır; bu yüzden III yanlıştır ve seçenek elenir.",
+      "D": "Bu seçenek yanlış olan koordinasyon-kapsamlı yaklaşım eşlemesini içerir. Ayrıca doğru olan süreklilik-kişi merkezli bakım eşlemesini dışarıda bırakır, bu yüzden seçenek yanlıştır.",
+      "E": "Süreklilik ve toplum yönelimli eşlemeleri doğrudur. Koordinasyon eşlemesi yanlış olduğu için III'ü içeren bu seçenek elenir; ayrıca doğru olan ayrışmamış hastalıklar eşlemesi eksik kalmıştır."
+     },
+     "s": 24,
+     "id": "k2-36-aile-hekimligine-yaklasim-q58",
+     "gorsel": true
+    }
+   ]
+  }
+ ]
+}

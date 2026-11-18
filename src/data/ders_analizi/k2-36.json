@@ -1,0 +1,645 @@
+{
+ "surum": 1,
+ "key": "k2-36",
+ "kod": "2a02",
+ "kurul": 2,
+ "brans": "Aile Hekimliği",
+ "konu": "Aile Hekimliğine Yaklaşım",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Mehmet Murat Şahin",
+ "profil": "Aile Hekimliği",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2a02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Derse giriş"
+    },
+    {
+     "metin": "Aile hekiminin yasal tanımı"
+    },
+    {
+     "metin": "Aile hekimliğinin dünyadaki tarihçesi"
+    },
+    {
+     "metin": "Aile hekiminin görev ve sorumlulukları"
+    },
+    {
+     "metin": "Yasal çerçeve ve Türkiye'de aile hekimliği"
+    },
+    {
+     "metin": "Aile hekimliğinin amaç ve ilkeleri"
+    },
+    {
+     "metin": "Wonca: örgüt, amaç ve tanım"
+    },
+    {
+     "metin": "Akademik disiplin ve temel yeterlikler"
+    },
+    {
+     "metin": "Wonca ağacı"
+    },
+    {
+     "metin": "Birinci basamak yönetimi"
+    },
+    {
+     "metin": "Kişi merkezli bakım"
+    },
+    {
+     "metin": "Özgül sorun çözme becerileri"
+    },
+    {
+     "metin": "Kapsamlı yaklaşım"
+    },
+    {
+     "metin": "Toplum yönelimli olma"
+    },
+    {
+     "metin": "Bütüncül yaklaşım ve dersin özeti"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Derse giriş.",
+    "Aile hekiminin yasal tanımı.",
+    "Aile hekimliğinin dünyadaki tarihçesi.",
+    "Aile hekiminin görev ve sorumlulukları.",
+    "Yasal çerçeve ve Türkiye'de aile hekimliği.",
+    "Aile hekimliğinin amaç ve ilkeleri.",
+    "Wonca: örgüt, amaç ve tanım.",
+    "Akademik disiplin ve temel yeterlikler.",
+    "Wonca ağacı.",
+    "Birinci basamak yönetimi.",
+    "Kişi merkezli bakım.",
+    "Özgül sorun çözme becerileri.",
+    "Kapsamlı yaklaşım.",
+    "Toplum yönelimli olma.",
+    "Bütüncül yaklaşım ve dersin özeti."
+   ],
+   "v": "6e18e8be9d"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Tanım",
+     "metin": "Aile hekimi koruyucu hizmetlerle birinci basamak teşhis, tedavi ve rehabilitasyon hizmetlerini yaş, cinsiyet ve hastalık ayrımı yapmadan verir.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Tarihçe: İngiltere ve Peabody",
+     "metin": "Aile hekimliği 1800-1890 yılları arasında İngiltere'de kurumsallaşmaya başlamıştır.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Tarihçe: 1952–1969",
+     "metin": "Peabody'nin görüşüne ilk yanıt olarak 1952'de İngiltere'de Genel Pratisyenlik Kraliyet Koleji kurulmuştur.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Tarihçe: AAFP ve Avrupa",
+     "metin": "AAFP bireyi organ ve sistemlere bölen ekolün aksine hastaya genel yaklaşım prensibiyle hareket eden bir disiplinin doğuşuna katkı sağlamıştır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Tarihçe: 1974 Leeuwenhorst tanımı",
+     "metin": "Bütün dünyada kabul gören tanım 1974'te Hollanda'daki Avrupa Aile Hekimleri Eğitimi toplantısında yapılmıştır.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Aile hekimliğinin görevleri",
+     "metin": "Genel pratisyen/aile hekiminin hedefi erken tanı koymaktır.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Görev ve sorumluluklar 1–5",
+     "metin": "Aile hekimi kendisine kayıtlı kişileri bir bütün olarak ele alıp koruyucu, tedavi ve rehabilite edici hizmet sunar.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Görev ve sorumluluklar 6–10",
+     "metin": "Periyodik sağlık muayenesi aile hekiminin görevidir.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Görev ve sorumluluklar 11–14",
+     "metin": "Aile hekimi gerektiğinde hastayı gözlem altına alarak tetkik ve tedavisini yapar.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "5258 sayılı Kanun",
+     "metin": "Aile hekimleri 24.11.2004 tarihli 5258 sayılı Aile Hekimliği Kanunu kapsamında çalışır.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Türkiye'de geçmiş: sosyalleştirme",
+     "metin": "1961'de 224 sayılı yasayla sağlık hizmetlerinin sosyalleştirilmesi kabul edilmiştir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Ülkemizde aile hekimliği: uzmanlık",
+     "metin": "Aile hekimliği uzmanlığı 5 Temmuz 1983'te Tababet Uzmanlık Tüzüğü'nde yer almıştır.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Ülkemizde aile hekimliği: dernek ve uygulama",
+     "metin": "Aile Hekimleri Uzmanlık Derneği (AHUD) 22.06.1990'da kurulmuştur.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Uygulamanın gelişimi: ASM",
+     "metin": "Bu değişimle sağlık ocakları Aile Sağlığı Merkezi'ne (ASM) dönüşmüştür.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Amaç ve ilkeler zaman çizelgesi",
+     "metin": "Leeuwenhorst 1974: erken tanı koymak, ilk kararı vermek, tekrarlayan/kronik/son dönem hastanın sürekli yönetimini üstlenmek.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Kısaca WONCA",
+     "metin": "WONCA, genel pratisyen/aile hekimi ulusal dernek ve akademilerinin dünya örgütüdür (Dünya Aile Hekimleri Birliği).",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "WONCA'nın amacı",
+     "metin": "WONCA'nın misyonu değerleri ve yüksek bakım standartlarını teşvik ederek dünya halklarının yaşam kalitesini iyileştirmektir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "WONCA'nın aile hekimliği tanımı",
+     "metin": "WONCA'ya göre aile hekimliği akademik ve bilimsel bir disiplin ve birinci basamak yönelimli klinik bir uzmanlıktır.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Temel yeterlikler",
+     "metin": "Çekirdek, uygulandığı sağlık sistemine bakılmaksızın disiplin için zorunlu olan anlamını taşır.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Tıp disiplini sayılma esasları",
+     "metin": "Akademik disiplin için kendine özgü eğitim içeriği, araştırma, kanıt temeli, klinik uygulama, bilimsel dergi ve dernek gerekir.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Kilometre taşı: Alma Ata",
+     "metin": "WHO ve WONCA 1978 Alma Ata Konferansı'nda birincil sağlık bakımını tanımlamıştır.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Altı çekirdek yeterlik",
+     "metin": "Aile hekimliğinin temel yeterlikleri altı çekirdek yeterlikte (dalda) toplanır.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "WONCA ağacı (şema)",
+     "metin": "WONCA ağacında özgün problem çözme dalının yaprakları ayrışmamış hastalıklar ve insidans/prevalansa dayalı karar vermedir.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "WONCA ağacının kökeni",
+     "metin": "WONCA ağacı 2004'te İsviçre Birinci Basamak Koleji tarafından yapılmış, WONCA tarafından kabul edilmiştir.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "WONCA bölgeleri",
+     "metin": "WONCA World'ün yedi bölgesi vardır; Türkiye Avrupa Bölgesi'nde (Wonca Europe) yer alır.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "WONCA ağacı: yaprak, dal, gövde",
+     "metin": "WONCA ağacında 12 temel özellik ağacın yapraklarıdır.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "WONCA ağacı: kökler — bağlamsal",
+     "metin": "Tutum, bilim ve bağlam ağacın kökleridir ve çekirdek yeterliklerin uygulanmasının temelini oluşturur.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "WONCA ağacı: tutumsal ve bilimsel",
+     "metin": "Tutumsal: hekimin mesleki yeteneklerine, değerlerine ve etiğe dayalı tutumlarıdır.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Birinci basamak yönetimi",
+     "metin": "Aile hekimliği sağlık sistemiyle ilk tıbbi temas noktasıdır; açık ve sınırsız giriş sağlar.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Kişi merkezli bakım",
+     "metin": "Aile hekimliği hasta ve ortama dayalı, kişi merkezli bir yaklaşım geliştirir (hastalık merkezli değil).",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Özgül sorun çözme becerileri",
+     "metin": "Aile hekimi gelişiminin erken evresinde ayrışmamış hâlde ortaya çıkan rahatsızlıkları kendisi yönetir.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Kapsamlı yaklaşım",
+     "metin": "Aile hekimi hastaların akut ve kronik sağlık sorunlarını aynı anda yönetir.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Toplum yönelimli olma",
+     "metin": "Aile hekimi toplumun sağlığı için özel bir sorumluluk üstlenir.",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Bütüncül yaklaşım",
+     "metin": "Bütüncül yaklaşım sağlık sorunlarını biyopsikososyokültürel ve varoluş boyutlarıyla ele alır.",
+     "s": [
+      41
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Tanım: Aile hekimi koruyucu hizmetlerle birinci basamak teşhis, tedavi ve rehabilitasyon hizmetlerini yaş, cinsiyet ve hastalık ayrımı yapmadan verir.",
+    "Tarihçe: İngiltere ve Peabody: Aile hekimliği bin sekiz yüz ile bin sekiz yüz doksan yılları arasında İngiltere'de kurumsallaşmaya başlamıştır.",
+    "Tarihçe: bin dokuz yüz elli iki ile bin dokuz yüz altmış dokuz: Peabody'nin görüşüne ilk yanıt olarak bin dokuz yüz elli iki'de İngiltere'de Genel Pratisyenlik Kraliyet Koleji kurulmuştur.",
+    "Tarihçe: AAFP ve Avrupa: AAFP bireyi organ ve sistemlere bölen ekolün aksine hastaya genel yaklaşım prensibiyle hareket eden bir disiplinin doğuşuna katkı sağlamıştır.",
+    "Tarihçe: bin dokuz yüz yetmiş dört Leeuwenhorst tanımı: Bütün dünyada kabul gören tanım bin dokuz yüz yetmiş dört'te Hollanda'daki Avrupa Aile Hekimleri Eğitimi toplantısında yapılmıştır.",
+    "Aile hekimliğinin görevleri: Genel pratisyen/aile hekiminin hedefi erken tanı koymaktır.",
+    "Görev ve sorumluluklar bir ile beş: Aile hekimi kendisine kayıtlı kişileri bir bütün olarak ele alıp koruyucu, tedavi ve rehabilite edici hizmet sunar.",
+    "Görev ve sorumluluklar altı ile on: Periyodik sağlık muayenesi aile hekiminin görevidir.",
+    "Görev ve sorumluluklar on bir ile on dört: Aile hekimi gerektiğinde hastayı gözlem altına alarak tetkik ve tedavisini yapar.",
+    "beş bin iki yüz elli sekiz sayılı Kanun: Aile hekimleri yirmi dört Kasım iki bin dört tarihli beş bin iki yüz elli sekiz sayılı Aile Hekimliği Kanunu kapsamında çalışır.",
+    "Türkiye'de geçmiş: sosyalleştirme: bin dokuz yüz altmış bir'de iki yüz yirmi dört sayılı yasayla sağlık hizmetlerinin sosyalleştirilmesi kabul edilmiştir.",
+    "Ülkemizde aile hekimliği: uzmanlık: Aile hekimliği uzmanlığı beş Temmuz bin dokuz yüz seksen üç'te Tababet Uzmanlık Tüzüğü'nde yer almıştır.",
+    "Ülkemizde aile hekimliği: dernek ve uygulama: Aile Hekimleri Uzmanlık Derneği (AHUD) yirmi iki Haziran bin dokuz yüz doksan'da kurulmuştur.",
+    "Uygulamanın gelişimi: ASM: Bu değişimle sağlık ocakları Aile Sağlığı Merkezi'ne (ASM) dönüşmüştür.",
+    "Amaç ve ilkeler zaman çizelgesi: Leeuwenhorst bin dokuz yüz yetmiş dört: erken tanı koymak, ilk kararı vermek, tekrarlayan/kronik/son dönem hastanın sürekli yönetimini üstlenmek.",
+    "Kısaca WONCA: WONCA, genel pratisyen/aile hekimi ulusal dernek ve akademilerinin dünya örgütüdür (Dünya Aile Hekimleri Birliği).",
+    "WONCA'nın amacı: WONCA'nın misyonu değerleri ve yüksek bakım standartlarını teşvik ederek dünya halklarının yaşam kalitesini iyileştirmektir.",
+    "WONCA'nın aile hekimliği tanımı: WONCA'ya göre aile hekimliği akademik ve bilimsel bir disiplin ve birinci basamak yönelimli klinik bir uzmanlıktır.",
+    "Temel yeterlikler: Çekirdek, uygulandığı sağlık sistemine bakılmaksızın disiplin için zorunlu olan anlamını taşır.",
+    "Tıp disiplini sayılma esasları: Akademik disiplin için kendine özgü eğitim içeriği, araştırma, kanıt temeli, klinik uygulama, bilimsel dergi ve dernek gerekir.",
+    "Kilometre taşı: Alma Ata: WHO ve WONCA bin dokuz yüz yetmiş sekiz Alma Ata Konferansı'nda birincil sağlık bakımını tanımlamıştır.",
+    "Altı çekirdek yeterlik: Aile hekimliğinin temel yeterlikleri altı çekirdek yeterlikte (dalda) toplanır.",
+    "WONCA ağacı (şema): WONCA ağacında özgün problem çözme dalının yaprakları ayrışmamış hastalıklar ve insidans/prevalansa dayalı karar vermedir.",
+    "WONCA ağacının kökeni: WONCA ağacı iki bin dört'te İsviçre Birinci Basamak Koleji tarafından yapılmış, WONCA tarafından kabul edilmiştir.",
+    "WONCA bölgeleri: WONCA World'ün yedi bölgesi vardır; Türkiye Avrupa Bölgesi'nde (Wonca Europe) yer alır.",
+    "WONCA ağacı: yaprak, dal, gövde: WONCA ağacında on iki temel özellik ağacın yapraklarıdır.",
+    "WONCA ağacı: kökler — bağlamsal: Tutum, bilim ve bağlam ağacın kökleridir ve çekirdek yeterliklerin uygulanmasının temelini oluşturur.",
+    "WONCA ağacı: tutumsal ve bilimsel: Tutumsal: hekimin mesleki yeteneklerine, değerlerine ve etiğe dayalı tutumlarıdır.",
+    "Birinci basamak yönetimi: Aile hekimliği sağlık sistemiyle ilk tıbbi temas noktasıdır; açık ve sınırsız giriş sağlar.",
+    "Kişi merkezli bakım: Aile hekimliği hasta ve ortama dayalı, kişi merkezli bir yaklaşım geliştirir (hastalık merkezli değil).",
+    "Özgül sorun çözme becerileri: Aile hekimi gelişiminin erken evresinde ayrışmamış hâlde ortaya çıkan rahatsızlıkları kendisi yönetir.",
+    "Kapsamlı yaklaşım: Aile hekimi hastaların akut ve kronik sağlık sorunlarını aynı anda yönetir.",
+    "Toplum yönelimli olma: Aile hekimi toplumun sağlığı için özel bir sorumluluk üstlenir.",
+    "Bütüncül yaklaşım: Bütüncül yaklaşım sağlık sorunlarını biyopsikososyokültürel ve varoluş boyutlarıyla ele alır."
+   ],
+   "v": "52f2a78ba6"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu ders aile hekiminin tanımını, görev ve sorumluluklarını ve WONCA ağacındaki altı çekirdek yeterliği işler; çıkmış sorular görev listesi, kişi merkezli bakım, birinci basamak yönetimi, ağacın bölümleri ve bütüncül yaklaşım üzerinde yoğunlaşır.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi aile hekiminin görev ve sorumlulukları arasında yer almaz?",
+     "cevap": "İkinci basamak tedavi vermek",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Bu soru aile hekiminin görev listesindeki maddeleri, listede olmayan bir hizmetten ayırabilmeyi ölçer.",
+      "Doğru cevap ikinci basamak tedavi vermektir, çünkü slayta göre aile hekimi tanı veya tedavisi yapılamayan hastayı sevk eder ve ikinci ve üçüncü basamak tedavi hizmetlerinin yalnız koordinasyonunu sağlar.",
+      "Kayıtlı kişileri altı ay içinde ziyaret etmek, periyodik muayene yapmak, gerektiğinde gözlem ve takip yapmak ve ekibini denetlemek görev listesinde yer aldığından yanlış seçenek olamaz."
+     ],
+     "ornek": "Aile sağlığı merkezinde tanısı konamayan hastayı sevk eden aile hekimi, hastanın hastanedeki tedavisini yürütmek yerine geri bildirimi değerlendirip hizmetleri eşgüdümler.",
+     "tuzak": "Gözlem ve takip görevi ile ikinci basamak tedaviyi karıştırıp ikinci basamak tedaviyi de görev sanmak; oysa aile hekimi onu vermez, yalnız koordinasyonunu sağlar."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "I-IV öncülleri: aile hekiminin görev ve sorumlulukları hangileridir? (I. Hastalık yoktur hasta vardır; II. Öncelikle akut sorunlar; III. Parçalara değil bütüne bakış; IV. Ayrışmamış sorunu olanları üçüncü basamağa yönlendirme)",
+     "cevap": "I ve III",
+     "s": [
+      35
+     ],
+     "aciklama": [
+      "Bu soru aile hekiminin yaklaşımına ilişkin dört önermeyi doğru ya da yanlış olarak ayırabilmeyi ölçer.",
+      "Doğru cevap I ve III'tür, çünkü aile hekimi hastayı parçalara değil bütüne bakarak, hastayı kişi olarak ele alıp değerlendirir; I numaralı ifade ders sayfalarında sözcüğü sözcüğüne geçmez; ancak hastaya bütüncül bakışı özetler.",
+      "II yanlıştır, çünkü kapsamlı yaklaşımda akut ve kronik sağlık sorunları aynı anda yönetilir; öncelikle akut sorunlarla ilgilenmek tanımda yoktur.",
+      "IV de yanlıştır, çünkü ayrışmamış hastalıkları aile hekimi kendisi yönetir, bu hastaları üçüncü basamağa yönlendirmek görevi değildir."
+     ],
+     "ornek": "Bir hastada hem hipertansiyon hem de yeni başlayan, henüz tanı konmamış bir yakınma varsa aile hekimi ikisini birlikte yönetir ve hastayı üçüncü basamağa göndermez.",
+     "tuzak": "Ayrışmamış hastalıkları üst basamağa yönlendirmenin aile hekiminin görevi olduğunu sanmak; oysa özgül sorun çözme becerisi bu hastaların birinci basamakta yönetilmesini içerir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aile hekimliği disiplininin özellikleri ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Bireye, ailesine ve topluma yönelik 'hastalık merkezli' bir yaklaşım geliştirir",
+     "s": [
+      33
+     ],
+     "aciklama": [
+      "Bu soru kişi merkezli bakım yeterliğinin özelliklerini, bu yeterliğe ait olmayan bir yaklaşımdan ayırabilmeyi ölçer.",
+      "Doğru cevap hastalık merkezli yaklaşımdır, çünkü slayta göre aile hekimliği hasta ve ortama dayalı, kişi merkezli bir yaklaşım geliştirir; hastalık merkezli değildir.",
+      "Yaş, cinsiyet ya da başka özelliğe bakmaksızın tüm sağlık sorunlarıyla ilgilenmek, kendine özgü görüşme süreci, akut ve kronik sorunların birlikte yönetimi ve sağlığın teşviki aile hekimliğinin özellikleri olduğundan yanlış sayılmaz."
+     ],
+     "ornek": "Hastanın yalnız tanısına odaklanan bir yaklaşım yerine, hastanın yaşadığı ortamı ve tercihlerini gözeten bir bakım aile hekimliği ilkesine uygundur.",
+     "tuzak": "Disiplinin özelliklerini sayan tüm seçenekleri doğru kabul edip hastalık merkezli ifadeyi gözden kaçırmak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Kurgu Soru: WONCA çekirdek yeterliliklerinden 'birinci basamak yönetimi' kapsamında yer alan özellik hangisidir?",
+     "cevap": "Sağlık sistemiyle ilk tıbbi temas noktasını oluşturup açık ve sınırsız erişim sağlama",
+     "s": [
+      31
+     ],
+     "aciklama": [
+      "Bu soru birinci basamak yönetimi yeterliğinin yapraklarını diğer yeterliklerin özelliklerinden ayırabilmeyi ölçer.",
+      "Doğru cevap sağlık sistemiyle ilk tıbbi temas noktasını oluşturmak ve açık, sınırsız erişim sağlamaktır, çünkü ilk temas, açık erişim ve tüm sağlık sorunları bu yeterliğin yaprağıdır.",
+      "Doğumdan ölüme sürekli bakım kişi merkezli bakıma, ayrışmamış hastalıkların yönetimi özgül sorun çözmeye, akut ve kronik sorunların birlikte yönetimi kapsamlı yaklaşıma ve biyopsikososyal ele alış bütüncül yaklaşıma aittir."
+     ],
+     "ornek": "Hastanın sağlık sistemine ilk başvurduğu, yaşı ya da yakınması ne olursa olsun kabul edildiği hekim, birinci basamak yönetimi yeterliğini yerine getirir.",
+     "tuzak": "Diğer yeterliklerin yapraklarını birinci basamak yönetimine yazmak; özellikle sürekliliği ve ayrışmamış hastalığı bu dala bağlamak."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Ülkemizdeki aile hekimliği uygulamasını önceki sağlık ocağı hekimliğinden ayıran en temel fark aşağıdakilerden hangisidir?",
+     "cevap": "Kişiselleşmiş bakım verilmesi",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Bu soru aile hekimliği uygulamasının önceki sağlık ocağı hekimliğinden ayrıldığı temel noktayı ölçer.",
+      "Doğru cevap kişiselleşmiş bakımdır, çünkü WONCA tanımında aile hekimleri her bireye kapsamlı ve sürekli bakımdan sorumlu kişisel doktorlar olarak tanımlanır.",
+      "Koruyucu hizmet, tedavi edici hizmet ve evde sağlık hizmeti aile hekiminin görevleridir; tanımın ayırt edici özelliği değildir, bu yüzden temel fark olamaz."
+     ],
+     "ornek": "Kayıtlı kişilerinin sorumluluğunu üstlenen ve onlara sürekli bakan kişisel hekim modeli, hizmetin kişiye bağlandığı bakım anlayışını gösterir.",
+     "tuzak": "Aile hekiminin yaptığı herhangi bir hizmeti, örneğin koruyucu ya da evde sağlık hizmetini, temel fark sanmak."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "WONCA ağacına göre 'Koordinasyon ve savunuculuk' ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Ağacın yapraklarını oluşturan on iki temel özellikten biridir.",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Bu soru WONCA ağacındaki bir özelliğin ağacın hangi bölümüne ait olduğunu ölçer.",
+      "Doğru cevap ağacın yapraklarını oluşturan on iki temel özellikten biri olmaktır, çünkü koordinasyon ve savunuculuk birinci basamak yönetimi dalının yapraklarındandır.",
+      "Ağacın dalları altı çekirdek yeterliktir, gövdesi klinik görevler, hastalarla iletişim ve muayenehane yönetimidir, kökleri ise bağlamsal, tutumsal ve bilimsel özelliklerdir; koordinasyon bunların hiçbiri değildir."
+     ],
+     "ornek": "Hastayı uzmanlara yönlendirirken kaynakları verimli kullanan ve gerektiğinde hasta adına savunuculuk yapan hekim, ağacın yaprağını uygulamış olur.",
+     "tuzak": "Yaprak, dal, gövde ve kökü karıştırıp koordinasyonu bir çekirdek yeterliğin kendisi ya da gövde alanı sanmak."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Sağlık sorunlarının bedensel, ruhsal, toplumsal, kültürel ve varoluşsal boyutları ile ele alınmasına ne denir?",
+     "cevap": "Biyopsikososyal (bütüncül) yaklaşım",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Bu soru sağlık sorunlarını çok boyutlu ele alan yaklaşımın adını ölçer.",
+      "Doğru cevap biyopsikososyal, yani bütüncül yaklaşımdır, çünkü slayta göre bütüncül yaklaşım sağlık sorunlarını fizik, psikolojik, sosyal, kültürel ve varoluşçu boyutlarıyla ele alır.",
+      "Toplumsal yaklaşım yalnız toplum boyutuna, biyomedikal ve hastalık merkezli yaklaşımlar yalnız bedensel boyuta odaklandığından tanımı karşılamaz."
+     ],
+     "ornek": "Kronik ağrısı olan bir hastada bedensel nedenin yanında ruhsal durumu, ailesini ve kültürel inançlarını da değerlendiren hekim bütüncül yaklaşım uygular.",
+     "tuzak": "Toplumsal ya da geleneksel gibi tek boyutlu yaklaşımları, çok boyutlu bir tanımı karşılıyormuş gibi seçmek."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kurgu Soru: Aile hekiminin görev ve sorumluluklarıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Kayıtlı kişileri yılda en az bir kez değerlendirerek sağlık kayıtlarını günceller.",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Bu soru aile hekiminin görev listesindeki ayrıntıları doğru biçimde hatırlayıp çeldiricilerden ayırabilmeyi ölçer.",
+      "Doğru cevap kayıtlı kişileri yılda en az bir kez değerlendirip sağlık kayıtlarını güncellemektir, çünkü bu ifade slayttaki sekizinci görevdir.",
+      "İlk değerlendirme için ev ziyareti ya da iletişimin süresi altı aydır, her hastayı gözlem için yatırmak görev değildir ve evde takibi zorunlu kişilere hizmet yalnız evde değil, gezici hizmetle de verilir; bu nedenle diğer seçenekler hatalıdır."
+     ],
+     "ornek": "Aile hekimi bir kayıtlı kişisini ocak ayında değerlendirmişse aynı yıl içinde bir kez daha değerlendirir ve kaydı günceller.",
+     "tuzak": "Altı ay içinde ilk ev ziyareti süresini yıllık değerlendirme süresiyle karıştırmak."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu ders aile hekiminin tanımını, görev ve sorumluluklarını ve WONCA ağacındaki altı çekirdek yeterliği işler; çıkmış sorular görev listesi, kişi merkezli bakım, birinci basamak yönetimi, ağacın bölümleri ve bütüncül yaklaşım üzerinde yoğunlaşır.",
+    "İki bin yirmi beş, iki bin yirmi altı: Aşağıdakilerden hangisi aile hekiminin görev ve sorumlulukları arasında yer almaz?",
+    "Cevap: İkinci basamak tedavi vermek.",
+    "Bu soru aile hekiminin görev listesindeki maddeleri, listede olmayan bir hizmetten ayırabilmeyi ölçer.",
+    "Doğru cevap ikinci basamak tedavi vermektir, çünkü slayta göre aile hekimi tanı veya tedavisi yapılamayan hastayı sevk eder ve ikinci ve üçüncü basamak tedavi hizmetlerinin yalnız koordinasyonunu sağlar.",
+    "Kayıtlı kişileri altı ay içinde ziyaret etmek, periyodik muayene yapmak, gerektiğinde gözlem ve takip yapmak ve ekibini denetlemek görev listesinde yer aldığından yanlış seçenek olamaz.",
+    "Örnek: Aile sağlığı merkezinde tanısı konamayan hastayı sevk eden aile hekimi, hastanın hastanedeki tedavisini yürütmek yerine geri bildirimi değerlendirip hizmetleri eşgüdümler.",
+    "Tuzak: Gözlem ve takip görevi ile ikinci basamak tedaviyi karıştırıp ikinci basamak tedaviyi de görev sanmak; oysa aile hekimi onu vermez, yalnız koordinasyonunu sağlar.",
+    "İki bin yirmi üç, iki bin yirmi dört: bir ile dört arasındaki öncüller: aile hekiminin görev ve sorumlulukları hangileridir? (birinci öncül: hastalık yoktur hasta vardır; ikinci öncül: öncelikle akut sorunlar; üçüncü öncül: parçalara değil bütüne bakış; dördüncü öncül: ayrışmamış sorunu olanları üçüncü basamağa yönlendirme).",
+    "Cevap: bir ve üç.",
+    "Bu soru aile hekiminin yaklaşımına ilişkin dört önermeyi doğru ya da yanlış olarak ayırabilmeyi ölçer.",
+    "Doğru cevap bir ve üçtür, çünkü aile hekimi hastayı parçalara değil bütüne bakarak, hastayı kişi olarak ele alıp değerlendirir; birinci ifade ders sayfalarında sözcüğü sözcüğüne geçmez; ancak hastaya bütüncül bakışı özetler.",
+    "İkinci öncül yanlıştır, çünkü kapsamlı yaklaşımda akut ve kronik sağlık sorunları aynı anda yönetilir; öncelikle akut sorunlarla ilgilenmek tanımda yoktur.",
+    "Dördüncü öncül de yanlıştır, çünkü ayrışmamış hastalıkları aile hekimi kendisi yönetir, bu hastaları üçüncü basamağa yönlendirmek görevi değildir.",
+    "Örnek: Bir hastada hem hipertansiyon hem de yeni başlayan, henüz tanı konmamış bir yakınma varsa aile hekimi ikisini birlikte yönetir ve hastayı üçüncü basamağa göndermez.",
+    "Tuzak: Ayrışmamış hastalıkları üst basamağa yönlendirmenin aile hekiminin görevi olduğunu sanmak; oysa özgül sorun çözme becerisi bu hastaların birinci basamakta yönetilmesini içerir.",
+    "İki bin on dokuz, iki bin yirmi: Aile hekimliği disiplininin özellikleri ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Bireye, ailesine ve topluma yönelik 'hastalık merkezli' bir yaklaşım geliştirir.",
+    "Bu soru kişi merkezli bakım yeterliğinin özelliklerini, bu yeterliğe ait olmayan bir yaklaşımdan ayırabilmeyi ölçer.",
+    "Doğru cevap hastalık merkezli yaklaşımdır, çünkü slayta göre aile hekimliği hasta ve ortama dayalı, kişi merkezli bir yaklaşım geliştirir; hastalık merkezli değildir.",
+    "Yaş, cinsiyet ya da başka özelliğe bakmaksızın tüm sağlık sorunlarıyla ilgilenmek, kendine özgü görüşme süreci, akut ve kronik sorunların birlikte yönetimi ve sağlığın teşviki aile hekimliğinin özellikleri olduğundan yanlış sayılmaz.",
+    "Örnek: Hastanın yalnız tanısına odaklanan bir yaklaşım yerine, hastanın yaşadığı ortamı ve tercihlerini gözeten bir bakım aile hekimliği ilkesine uygundur.",
+    "Tuzak: Disiplinin özelliklerini sayan tüm seçenekleri doğru kabul edip hastalık merkezli ifadeyi gözden kaçırmak.",
+    "İki bin yirmi beş, iki bin yirmi altı: Kurgu Soru: WONCA çekirdek yeterliliklerinden 'birinci basamak yönetimi' kapsamında yer alan özellik hangisidir?",
+    "Cevap: Sağlık sistemiyle ilk tıbbi temas noktasını oluşturup açık ve sınırsız erişim sağlama.",
+    "Bu soru birinci basamak yönetimi yeterliğinin yapraklarını diğer yeterliklerin özelliklerinden ayırabilmeyi ölçer.",
+    "Doğru cevap sağlık sistemiyle ilk tıbbi temas noktasını oluşturmak ve açık, sınırsız erişim sağlamaktır, çünkü ilk temas, açık erişim ve tüm sağlık sorunları bu yeterliğin yaprağıdır.",
+    "Doğumdan ölüme sürekli bakım kişi merkezli bakıma, ayrışmamış hastalıkların yönetimi özgül sorun çözmeye, akut ve kronik sorunların birlikte yönetimi kapsamlı yaklaşıma ve biyopsikososyal ele alış bütüncül yaklaşıma aittir.",
+    "Örnek: Hastanın sağlık sistemine ilk başvurduğu, yaşı ya da yakınması ne olursa olsun kabul edildiği hekim, birinci basamak yönetimi yeterliğini yerine getirir.",
+    "Tuzak: Diğer yeterliklerin yapraklarını birinci basamak yönetimine yazmak; özellikle sürekliliği ve ayrışmamış hastalığı bu dala bağlamak.",
+    "İki bin yirmi, iki bin yirmi bir: Ülkemizdeki aile hekimliği uygulamasını önceki sağlık ocağı hekimliğinden ayıran en temel fark aşağıdakilerden hangisidir?",
+    "Cevap: Kişiselleşmiş bakım verilmesi.",
+    "Bu soru aile hekimliği uygulamasının önceki sağlık ocağı hekimliğinden ayrıldığı temel noktayı ölçer.",
+    "Doğru cevap kişiselleşmiş bakımdır, çünkü WONCA tanımında aile hekimleri her bireye kapsamlı ve sürekli bakımdan sorumlu kişisel doktorlar olarak tanımlanır.",
+    "Koruyucu hizmet, tedavi edici hizmet ve evde sağlık hizmeti aile hekiminin görevleridir; tanımın ayırt edici özelliği değildir, bu yüzden temel fark olamaz.",
+    "Örnek: Kayıtlı kişilerinin sorumluluğunu üstlenen ve onlara sürekli bakan kişisel hekim modeli, hizmetin kişiye bağlandığı bakım anlayışını gösterir.",
+    "Tuzak: Aile hekiminin yaptığı herhangi bir hizmeti, örneğin koruyucu ya da evde sağlık hizmetini, temel fark sanmak.",
+    "İki bin yirmi dört, iki bin yirmi beş: WONCA ağacına göre 'Koordinasyon ve savunuculuk' ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Ağacın yapraklarını oluşturan on iki temel özellikten biridir.",
+    "Bu soru WONCA ağacındaki bir özelliğin ağacın hangi bölümüne ait olduğunu ölçer.",
+    "Doğru cevap ağacın yapraklarını oluşturan on iki temel özellikten biri olmaktır, çünkü koordinasyon ve savunuculuk birinci basamak yönetimi dalının yapraklarındandır.",
+    "Ağacın dalları altı çekirdek yeterliktir, gövdesi klinik görevler, hastalarla iletişim ve muayenehane yönetimidir, kökleri ise bağlamsal, tutumsal ve bilimsel özelliklerdir; koordinasyon bunların hiçbiri değildir.",
+    "Örnek: Hastayı uzmanlara yönlendirirken kaynakları verimli kullanan ve gerektiğinde hasta adına savunuculuk yapan hekim, ağacın yaprağını uygulamış olur.",
+    "Tuzak: Yaprak, dal, gövde ve kökü karıştırıp koordinasyonu bir çekirdek yeterliğin kendisi ya da gövde alanı sanmak.",
+    "İki bin on dokuz, iki bin yirmi: Sağlık sorunlarının bedensel, ruhsal, toplumsal, kültürel ve varoluşsal boyutları ile ele alınmasına ne denir?",
+    "Cevap: Biyopsikososyal (bütüncül) yaklaşım.",
+    "Bu soru sağlık sorunlarını çok boyutlu ele alan yaklaşımın adını ölçer.",
+    "Doğru cevap biyopsikososyal, yani bütüncül yaklaşımdır, çünkü slayta göre bütüncül yaklaşım sağlık sorunlarını fizik, psikolojik, sosyal, kültürel ve varoluşçu boyutlarıyla ele alır.",
+    "Toplumsal yaklaşım yalnız toplum boyutuna, biyomedikal ve hastalık merkezli yaklaşımlar yalnız bedensel boyuta odaklandığından tanımı karşılamaz.",
+    "Örnek: Kronik ağrısı olan bir hastada bedensel nedenin yanında ruhsal durumu, ailesini ve kültürel inançlarını da değerlendiren hekim bütüncül yaklaşım uygular.",
+    "Tuzak: Toplumsal ya da geleneksel gibi tek boyutlu yaklaşımları, çok boyutlu bir tanımı karşılıyormuş gibi seçmek.",
+    "İki bin yirmi dört, iki bin yirmi beş: Kurgu Soru: Aile hekiminin görev ve sorumluluklarıyla ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Kayıtlı kişileri yılda en az bir kez değerlendirerek sağlık kayıtlarını günceller.",
+    "Bu soru aile hekiminin görev listesindeki ayrıntıları doğru biçimde hatırlayıp çeldiricilerden ayırabilmeyi ölçer.",
+    "Doğru cevap kayıtlı kişileri yılda en az bir kez değerlendirip sağlık kayıtlarını güncellemektir, çünkü bu ifade slayttaki sekizinci görevdir.",
+    "İlk değerlendirme için ev ziyareti ya da iletişimin süresi altı aydır, her hastayı gözlem için yatırmak görev değildir ve evde takibi zorunlu kişilere hizmet yalnız evde değil, gezici hizmetle de verilir; bu nedenle diğer seçenekler hatalıdır.",
+    "Örnek: Aile hekimi bir kayıtlı kişisini ocak ayında değerlendirmişse aynı yıl içinde bir kez daha değerlendirir ve kaydı günceller.",
+    "Tuzak: Altı ay içinde ilk ev ziyareti süresini yıllık değerlendirme süresiyle karıştırmak."
+   ],
+   "v": "6444528f66"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Bu dersin çıkmış soru sayısı az; aşağıda yalnız bu dersin doğrulanmış sorularından sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 8 çıkmış soru var; 1 tanesi öncüllü, 2 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Kurgu sorular",
+     "metin": "2 soru kaynak belgeden yeniden kurulmuş kurgu sorudur."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 9, 19, 27, 31, 33, 35, 41."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu dersin çıkmış soru sayısı az; aşağıda yalnız bu dersin doğrulanmış sorularından sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış sekiz çıkmış soru var; bir tanesi öncüllü, iki tanesi olumsuz köklüdür.",
+    "Kurgu sorular: iki soru kaynak belgeden yeniden kurulmuş kurgu sorudur.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: dokuz, on dokuz, yirmi yedi, otuz bir, otuz üç, otuz beş, kırk bir."
+   ],
+   "v": "84a1b8622d"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Görev ve sorumluluklar 6–10",
+     "metin": "Sık yapılan hata: Gözlem ve takip görevi ile ikinci basamak tedaviyi karıştırıp ikinci basamak tedaviyi de görev sanmak; oysa aile hekimi onu vermez, yalnız koordinasyonunu sağlar. Ayrıca: Altı ay içinde ilk ev ziyareti süresini yıllık değerlendirme süresiyle karıştırmak."
+    },
+    {
+     "baslik": "Özgül sorun çözme becerileri",
+     "metin": "Sık yapılan hata: Ayrışmamış hastalıkları üst basamağa yönlendirmenin aile hekiminin görevi olduğunu sanmak; oysa özgül sorun çözme becerisi bu hastaların birinci basamakta yönetilmesini içerir."
+    },
+    {
+     "baslik": "Kişi merkezli bakım",
+     "metin": "Sık yapılan hata: Disiplinin özelliklerini sayan tüm seçenekleri doğru kabul edip hastalık merkezli ifadeyi gözden kaçırmak."
+    },
+    {
+     "baslik": "Birinci basamak yönetimi",
+     "metin": "Sık yapılan hata: Diğer yeterliklerin yapraklarını birinci basamak yönetimine yazmak; özellikle sürekliliği ve ayrışmamış hastalığı bu dala bağlamak."
+    },
+    {
+     "baslik": "WONCA'nın aile hekimliği tanımı",
+     "metin": "Sık yapılan hata: Aile hekiminin yaptığı herhangi bir hizmeti, örneğin koruyucu ya da evde sağlık hizmetini, temel fark sanmak."
+    },
+    {
+     "baslik": "WONCA ağacı: yaprak, dal, gövde",
+     "metin": "Sık yapılan hata: Yaprak, dal, gövde ve kökü karıştırıp koordinasyonu bir çekirdek yeterliğin kendisi ya da gövde alanı sanmak."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Görev ve sorumluluklar altı ile on: Sık yapılan hata: Gözlem ve takip görevi ile ikinci basamak tedaviyi karıştırıp ikinci basamak tedaviyi de görev sanmak; oysa aile hekimi onu vermez, yalnız koordinasyonunu sağlar. Ayrıca: Altı ay içinde ilk ev ziyareti süresini yıllık değerlendirme süresiyle karıştırmak.",
+    "Özgül sorun çözme becerileri: Sık yapılan hata: Ayrışmamış hastalıkları üst basamağa yönlendirmenin aile hekiminin görevi olduğunu sanmak; oysa özgül sorun çözme becerisi bu hastaların birinci basamakta yönetilmesini içerir.",
+    "Kişi merkezli bakım: Sık yapılan hata: Disiplinin özelliklerini sayan tüm seçenekleri doğru kabul edip hastalık merkezli ifadeyi gözden kaçırmak.",
+    "Birinci basamak yönetimi: Sık yapılan hata: Diğer yeterliklerin yapraklarını birinci basamak yönetimine yazmak; özellikle sürekliliği ve ayrışmamış hastalığı bu dala bağlamak.",
+    "WONCA'nın aile hekimliği tanımı: Sık yapılan hata: Aile hekiminin yaptığı herhangi bir hizmeti, örneğin koruyucu ya da evde sağlık hizmetini, temel fark sanmak.",
+    "WONCA ağacı: yaprak, dal, gövde: Sık yapılan hata: Yaprak, dal, gövde ve kökü karıştırıp koordinasyonu bir çekirdek yeterliğin kendisi ya da gövde alanı sanmak.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "79b3b70c69"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "surum": 1,
+ "metinHash": "",
+ "dogrulama": "ham belge + slayt kanıtı, elle (E1, 2026-11-18); 14 çıkmış adayından yalnız Aile Hekimliğine Yaklaşım dersine ait, bankada bulunan ve kanıtı slaytta birebir geçen 8 soru alındı (7 doğrudan, 1 ilgili). Elenen: d3-k2-ah-004 (cikmis_ornek, ham belge yok), 4f0d71643782 (hasta merkezli klinik yöntem bu yılın slaytında yok), 95c346d2b20d/82772df87168 (başka ders: Türkiye'de Sağlık Hizmetleri), bfeee1989e28/917b4c92f940 (Periyodik Muayeneler dersleri).",
+ "q": [
+  {
+   "id": "d3-k2-ah-005",
+   "kok": "Aşağıdakilerden hangisi aile hekiminin görev ve sorumlulukları arasında yer almaz?",
+   "cevap": "İkinci basamak tedavi vermek",
+   "yil": "2025-2026",
+   "s": 9,
+   "seviye": "dogrudan",
+   "kanit": "ikinci ve üçüncü basamak tedavi ve rehabilitasyon hizmetleri",
+   "neden": "s8–s10 görev listesinde altı ay içinde ilk değerlendirme, periyodik muayene, gözlem ve ekibi denetleme birebir sayılır; ikinci ve üçüncü basamak hizmetlerde aile hekiminin görevi tedavi vermek değil koordinasyon sağlamaktır (s9 madde 10).",
+   "kaynak": "Aile_Hekimligi_Kurul2_Cikmis_Sorular.json (2025-2026 Dönem 3 Kurul 2 Sınavı derlemesi), soru 5; banka id d3-k2-ah-005",
+   "dogrulandi": true
+  },
+  {
+   "id": "d3k2-2023-2024-h49",
+   "kok": "I-IV öncülleri: aile hekiminin görev ve sorumlulukları hangileridir? (I. Hastalık yoktur hasta vardır; II. Öncelikle akut sorunlar; III. Parçalara değil bütüne bakış; IV. Ayrışmamış sorunu olanları üçüncü basamağa yönlendirme)",
+   "cevap": "I ve III",
+   "yil": "2023-2024",
+   "s": 35,
+   "seviye": "dogrudan",
+   "kanit": "ayrışmamış bir şekilde ortaya çıkan rahatsızlıkları yönetir",
+   "neden": "IV yanlıştır: s35'e göre aile hekimi ayrışmamış rahatsızlıkları kendisi yönetir; II yanlıştır: s37'ye göre akut ve kronik sorunlar aynı anda yönetilir. I ve III kişi merkezli ve bütüncül yaklaşımı (s33, s41) ifade eder.",
+   "kaynak": "D3K2 2023-2024 Çıkmış.pdf (öğrenci hatırlama listesi), Aile Hekimliği bölümü; banka id d3k2-2023-2024-h49; şıklar hatırlamadan sonradan tamamlandı",
+   "dogrulandi": true
+  },
+  {
+   "id": "past-1790877045124-999254",
+   "kok": "Aile hekimliği disiplininin özellikleri ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+   "cevap": "Bireye, ailesine ve topluma yönelik 'hastalık merkezli' bir yaklaşım geliştirir",
+   "yil": "2019-2020",
+   "s": 33,
+   "seviye": "dogrudan",
+   "kanit": "Hasta ve ortama dayalı; kişi-merkezli bir yaklaşım geliştirir.",
+   "neden": "s33 kişi merkezli yaklaşımı birebir söyler; 'hastalık merkezli' ifadesi bunun tersidir. Diğer şıklar s31 (tüm sağlık sorunları), s37 (akut-kronik eşzamanlı, sağlık ve iyiliğin teşviki) ve s33 (kendine özgü görüşme süreci) metinleridir.",
+   "kaynak": "D3K2 2019-2020.pdf (kâğıt sınavın daktilo metni; KURUL 2 ÇIKMIŞ 3.txt), soru 95; banka id past-1790877045124-999254",
+   "dogrulandi": true
+  },
+  {
+   "id": "d3k2-2025-2026-h51",
+   "kok": "Kurgu Soru: WONCA çekirdek yeterliliklerinden 'birinci basamak yönetimi' kapsamında yer alan özellik hangisidir?",
+   "cevap": "Sağlık sistemiyle ilk tıbbi temas noktasını oluşturup açık ve sınırsız erişim sağlama",
+   "yil": "2025-2026",
+   "s": 31,
+   "seviye": "dogrudan",
+   "kanit": "Sağlık sistemiyle ilk tıbbi temas",
+   "neden": "s31 birinci basamak yönetiminin yapraklarını ilk temas/açık erişim ve koordinasyon-savunuculuk olarak verir. Çeldiriciler başka dalların yaprağıdır: süreklilik kişi merkezli bakım (s33), ayrışmamış hastalık özgül sorun çözme (s35), akut-kronik kapsamlı yaklaşım (s37), biyopsikososyokültürel bütüncül yaklaşım (s41).",
+   "kaynak": "D3K2 2025-2026.pdf (belge başlığı 'DÖNEM 3 KURUL 2 2025-2026', öğrenci hatırlaması), Aile Hekimliği bölümü; banka id d3k2-2025-2026-h51; kurgu soru, şıklar hatırlamadan sonradan tamamlandı",
+   "dogrulandi": true
+  },
+  {
+   "id": "a6ac548ce691",
+   "kok": "Ülkemizdeki aile hekimliği uygulamasını önceki sağlık ocağı hekimliğinden ayıran en temel fark aşağıdakilerden hangisidir?",
+   "cevap": "Kişiselleşmiş bakım verilmesi",
+   "yil": "2020-2021",
+   "s": 19,
+   "seviye": "ilgili",
+   "kanit": "sürekli bakım sağlamadan sorumlu kişisel",
+   "neden": "Slayt sağlık ocağı ile karşılaştırmayı doğrudan yapmaz; s19 aile hekimlerini kayıtlı bireye sürekli bakımdan sorumlu 'kişisel doktor' olarak tanımlar, s15 sağlık ocaklarının ASM'ye dönüştüğünü söyler. Koruyucu, tedavi edici ve evde hizmet her iki modelde de vardı.",
+   "kaynak": "2.Kurul-2021.pdf (2020-21 Dönem 3 Kurul 2 sınavı birleşik çıktısı), soru 127; banka id a6ac548ce691",
+   "dogrulandi": true
+  },
+  {
+   "id": "d3k2-2024-2025-hg5",
+   "kok": "WONCA ağacına göre 'Koordinasyon ve savunuculuk' ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "cevap": "Ağacın yapraklarını oluşturan on iki temel özellikten biridir.",
+   "yil": "2024-2025",
+   "s": 27,
+   "seviye": "dogrudan",
+   "kanit": "özellik (ağacın yaprağı)",
+   "neden": "s27'ye göre 12 temel özellik ağacın yapraklarıdır; s24 ve s31'de koordinasyon ve savunuculuk birinci basamak yönetimi dalının yaprağı olarak geçer. Dallar altı çekirdek yeterlik, gövde üç uygulama alanı, kökler tutum-bilim-bağlamdır (s27–s29).",
+   "kaynak": "D3K2 2024-2025.pdf + D3K2 2024-2025 Düzenlenmiş Sanırım.pdf (06.12.2024 sınav günü öğrenci hatırlamaları); banka id d3k2-2024-2025-hg5; şıklar hatırlamadan sonradan tamamlandı",
+   "dogrulandi": true
+  },
+  {
+   "id": "past-1790877045128-896616",
+   "kok": "Sağlık sorunlarının bedensel, ruhsal, toplumsal, kültürel ve varoluşsal boyutları ile ele alınmasına ne denir?",
+   "cevap": "Biyopsikososyal (bütüncül) yaklaşım",
+   "yil": "2019-2020",
+   "s": 41,
+   "seviye": "dogrudan",
+   "kanit": "biyopsikososyokültürel",
+   "neden": "s41 bütüncül yaklaşımı sağlık sorunlarını biyopsikososyokültürel ve varoluş boyutlarıyla ele almak olarak tanımlar; biyomedikal ve hastalık merkezli yaklaşım bunun karşıtıdır.",
+   "kaynak": "D3K2 2019-2020.pdf (kâğıt sınavın daktilo metni; KURUL 2 ÇIKMIŞ 3.txt), soru 96; banka id past-1790877045128-896616",
+   "dogrulandi": true
+  },
+  {
+   "id": "d3k2-2024-2025-hg6",
+   "kok": "Kurgu Soru: Aile hekiminin görev ve sorumluluklarıyla ilgili aşağıdakilerden hangisi doğrudur?",
+   "cevap": "Kayıtlı kişileri yılda en az bir kez değerlendirerek sağlık kayıtlarını günceller.",
+   "yil": "2024-2025",
+   "s": 9,
+   "seviye": "dogrudan",
+   "kanit": "yılda en az bir defa değerlendirerek sağlık kayıtlarını",
+   "neden": "s9 madde 8 birebir doğrudur. Çeldiriciler slaytla çelişir: ilk değerlendirme iki yıl değil altı ay içinde (s8), ana çocuk sağlığı/aile planlaması aile hekiminin görevidir (s8), gözlem gerektiren hasta ASM'de gözleme alınabilir (s10), evde takipli kişilere koruyucu hizmet de verilir (s9).",
+   "kaynak": "D3K2 2024-2025.pdf + D3K2 2024-2025 Düzenlenmiş Sanırım.pdf (06.12.2024 sınav günü öğrenci hatırlamaları); banka id d3k2-2024-2025-hg6; kurgu soru, şıklar hatırlamadan sonradan tamamlandı",
+   "dogrulandi": true
+  }
+ ]
+}

@@ -165,3 +165,18 @@
 - **Kök neden:** SINAMA k2-07 (data/sinama.json) hizalaması yetim olarak arşive alınmıştı ama 2a07 ara soru seti `onem/`'de kaldı; `hizalama()` sys.exit ile bütün işi kesiyordu. Bu yüzden 13 Kasım sonrası onarımlar (2a62, 2a65 metinleri) ve yerel ses zamanları hiç yayına geçmedi, 2a62/2a65'in yeni metinlerinin sesi de hiç üretilmedi.
 - **Çözüm:** sesli dersi olmayan anahtar uyarıyla atlanır ve dizinden düşer; kodu `onem/`'de kaldıkça dolu sayılır (başka derse verilmez). 2a07.json yayından kaldırıldı (git geçmişi + meds_temp'te duruyor; SINAMA örnek soru dosyası yerinde). 74 eksik klip GPU'da üretildi, bütün ses kayıtları Oracle ile md5 eşit.
 - **Önleme:** birleştirme tek dersin eksiği için bütün kurulu durdurmaz; kaynak (meds_temp) düzeltilince birlestir + ses aynı turda koşulur, `klip v` ↔ `kayit h` uyumu denetlenir.
+
+### H625 — Ara soruda şık metni çözücü dosyasında kaymış, kapı 0 HATA verdi (2026-11-18, k2-49)
+
+- **Belirti:** `cozucu/2a49.json` s5–7'de bazı şıkların metni başka sorunun şıkkıyla karışmıştı ("Sosyal alan", "Bedensel alan" 6. soruda); `kur.py dogrula` 0 HATA verdi, açıklamalar şıkla uyuşmuyordu.
+- **Kök neden:** Kapı soru/şık metninin `kaynak/`, `cozucu/`, `onem/` üçünde aynı olmasını yalnız cozucu↔onem arasında denetliyor; ikisi birlikte bozulunca kaynak ile fark yakalanmıyor.
+- **Çözüm:** Bağımsız denetçi (TALIMAT adım 7) atlanamaz ve kaynakla karşılaştırır; düzeltme üç dosyada birden yapılır. Aynı oturumda tam ders anahtarı ile `kok=data/sesli_anlatim` kullanılmayınca `cizim`/`ders_icerik` kapıları "işaret dosyası yok/paket yok" verir (yanlış alarm): kapıyı çalıştırmadan önce `ls data/sesli_anlatim/isaret | grep <k2-xx>` ile tam anahtarı al.
+- **Kural:** Ara soru düzeltmesi `kaynak/`, `cozucu/`, `onem/` üçünde aynı anda yapılır; bağımsız denetçi turu atlanmaz; kapı komutunda tam ders anahtarı kullanılır.
+
+### H626 — Çıkmış soru kökü 90 kelimeyi aşınca çözücü kapısı kaldı; çıkmış kök kısaltılamaz (2026-11-18, k2-39)
+
+- **Belirti:** `cozucu_dogrula.py` k2-39'da iki çıkmış için "kök çok uzun" (92 ve 101 kelime) verdi; çıkmış kökü birebir kopya olmak zorunda ve `elenen_cikmis` nedenlerinden hiçbiri uymuyordu.
+- **Kök neden:** 90 kelime sınırı örnek soru için konmuştu, çıkmış (kısaltılamaz, klinik vaka kökleri uzun) ayrımı yapılmamıştı.
+- **Çözüm:** Sınır yalnız çıkmışta 120 kelimeye çıkarıldı (`cozucu_dogrula.py`); örnek soru 90 kalır. Başka ders dosyalarında gerileme yok (örnek çözücüler 0 HATA).
+- **Kural:** Çıkmış kökü asla kısaltılmaz ya da gerekçe uydurularak elenmez; sınırı aşıyorsa kapı çıkmış için ayrı sınırı kullanır. Çözücü ayrı bir yazım turu olarak planlanır, açıklama alt sınırı 18 kelimedir.
+

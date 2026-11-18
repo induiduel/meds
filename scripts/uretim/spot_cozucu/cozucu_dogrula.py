@@ -65,7 +65,8 @@ def check(p):
         if kt.get('durum') == 'duzeltildi':
             if len(str(kt.get('not') or '')) < 15: e.append(f'{y}: düzeltme notu yok')
             u.append(f"{y}: DÜZELTİLDİ — {kt.get('not')}")
-        if kelime(q.get('soru')) > 90: e.append(f'{y}: kök çok uzun')
+        # Çıkmış kök birebir kopyadır, kısaltılamaz (H626): sınır çıkmışta 120, örnek soruda 90 kelime
+        if kelime(q.get('soru')) > (120 if b['tur'] == 'cikmis' else 90): e.append(f'{y}: kök çok uzun')
         D.soru_denet(e, u, y, q, pdf_sayilar, maxs, cikmis=True)
         # örnek sorularda ipucu sızıntısı HATA (çıkmışta D.soru_denet uyarır)
         if b['tur'] == 'ornek' and isinstance(q.get('ipucu'), dict) and q.get('dogru') in (q.get('secenekler') or {}):
