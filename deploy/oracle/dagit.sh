@@ -70,6 +70,11 @@ fi
 
 (cd "$WT" && MEDS_DAGIT_ONAYLI=1 bash deploy/oracle/deploy-code.sh "${ARG[@]}")
 
+# H623: git'e girmeyen yerel ses klipleri (çözücü/asistan/ara soru/ek modül) — worktree'de yok, ana ağaçtan eklemeli eşitlenir
+if [[ "${MEDS_DAGIT_SES:-1}" != 0 ]]; then
+  bash "$ANA/deploy/oracle/ses_esitle.sh" || echo "UYARI: ses eşitlemesi başarısız (çıkış $?) — bash deploy/oracle/ses_esitle.sh ile yeniden deneyin"
+fi
+
 if [[ -n "$PARCA_REL" ]]; then
   $SSH "cd /home/ubuntu/medsor/meds && python3 scripts/deste_bol.py dogrula --hedef '$PARCA_REL'" \
     || echo "UYARI: Oracle'da deste monoliti ↔ parçalar ayrışık (rsync eksik ya da katman farkı) — elle denetleyin"
