@@ -16,7 +16,7 @@ fi
 KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
 ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
-SSH="ssh -i $KEY -o StrictHostKeyChecking=no"
+SSH="ssh -i $KEY -o StrictHostKeyChecking=accept-new"
 DUMP=/home/indu/medsor/meds_temp/rag_chunks_sync.dump
 
 echo "==> [1/4] cihazdan rag_chunks dökümü"
