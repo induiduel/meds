@@ -55,6 +55,34 @@ DILIM_ASAMA = {
 }
 
 
+SENTEZ = KOK.parent / "meds_temp" / "ogrenci_sentez" / "ders"
+_SINAV_TETIK = re.compile(r"(?i)hoca|tuza|sor[ua]|sordu|[cç][ıi]km|tus|s[ıi]nav")
+
+
+def _sentez_dilimi(ders: str) -> tuple[list[str], list[str]]:
+    p = SENTEZ / f"{ders}.json"
+    if not p.exists():
+        return [], []
+    v = json.loads(p.read_text(encoding="utf-8"))
+    L = ["\n## Öğrenci sentez notu — hocanın SÖZLÜ vurguları (öğrenci+YZ derlemesi; betikle ayıklandı, kayıpsız)",
+         "> KULLANIM: yalnız 2026-27 slaytında karşılığı olan bilgi anlatıma/önem listesine girer (slaytla eşle, s = sentez",
+         "> sayfası, slayt DEĞİL). İçindeki \"çıkmış/fakülte sorusu\" iddiası doğrulanmış çıkmış DEĞİL → çıkmış damgası/rozeti YASAK;",
+         "> hoca adı/\"amfide söyledi\" iddiası sesle doğrulanmadan \"hoca vurguladı\" denmez (H-dolgu kuralı). Slaytla çelişen bilgi atılır."]
+    LS = []
+    for k in v.get("kaynaklar", []):
+        for b in k.get("birimler", []):
+            if b.get("baslik"):
+                continue
+            metin = re.sub(r"\s+", " ", b.get("metin", "")).strip()
+            sat = f"ös{b.get('sayfa')} «{str(b.get('yol',''))[:60]}» [{','.join(b.get('tetik', []))[:40]}]: {metin}"
+            L.append(sat)
+            if _SINAV_TETIK.search(" ".join(b.get("tetik", []))):
+                LS.append(sat)
+    if LS:
+        LS.insert(0, "\n## Öğrenci sentez notu — sınav/hoca vurgulu birimler (çıkmış damgası DEĞİL; slaytla eşle)")
+    return L, LS
+
+
 def kaynak_md(ders: str, klasor: Path) -> str:
     d = kaynak_dilimleri(ders, klasor)
     return d["_bas"] + "".join(d[k] for k in DILIMLER)
@@ -115,7 +143,12 @@ def kaynak_dilimleri(ders: str, klasor: Path, yalniz_s: set[int] | None = None) 
             metin = str(n.get("hedef") or n.get("not") or n.get("ifade") or "").strip().replace("\n", " ")
             L.append(f"s{n.get('s')} [{oc}]: {metin[:180]}")
         LS += L[-len(on) - 1:]
-    out["hoca"] = "\n".join(L) + ("\n" if L else "")
+    # Öğrenci SENTEZ notu (2026-11-17): hocanın SÖZLÜ vurgularını YZ ile derleyen arkadaş Drive'ı → betikle ayıklanmış
+    # birimler (scripts/uretim/ogrenci_sentez/sentez.py; LLM yok). Sayfa no'su sentez PDF'inindir, slayt değil.
+    L2, LS2 = _sentez_dilimi(ders)
+    L += L2
+    LS += LS2
+    out["hoca"] ="\n".join(L) + ("\n" if L else "")
     out["hoca_sinav"] = "\n".join(LS) + ("\n" if LS else "")
     L = []
     # Doğrulanmış çıkmışlar

@@ -33,24 +33,6 @@ python3 scripts/hat/tam_hat/baglam.py <klasör> --ders <key> --mod <mod>   # <kl
   (`mod.py BAGIMLILIK`) basar. `kosucu.py … --olc`: aşama girdisi tablosu → `meds_temp/hat_olcum/<key>.json`;
   k2-28 toplam ≈80,2k kelime (≈128k token; önceki 175k kelime ölçümü ham döküm + bütün kaynak.md + eski kural setini sayıyordu).
 
-**Nereye baglam, nereye ham slayt (ölçümle, 2026-11-16):**
-- **Örnek soru / önem / çözücü:** `baglam/kaynak.md` + `baglam/sema.md` + `docs/asama_kurallari/<aşama>.md` okur; 33k'lık örnek
-  şablon dosyasını, kapı kaynağını, standart belgelerin tamamını OKUMAZ (birebir slayt zorunluluğu yok; şablon elenir). Gerçek
-  girdi (k2-28 ölçümü): örnek soru ~23,9k kelime (kaynak.md 8,5k + şema 0,2k + kural 15,2k) → ~12,5k (dilim 6,5k + şema + kural 5,8k).
-  Eski "~3,9k" rakamı gerçeği yansıtmıyordu.
-- **Anlatım:** `sayfalar.json`'ı (TAM slayt) + `baglam/sema.md` + `anlatim.md` okur. `slayt.satir` çapası ve `--dogrula`
-  satır-birebir kapısı tam slayt metnini GEREKTİRİR — `baglam/kaynak` yetmez ve kapıyı zayıflatır (`kaynak.md` yoksa satır
-  denetimi atlanıyordu). Anlatımda kazanç şablon değil, **kural özeti sıkıştırmasıdır**.
-
-**Önemli — token'ın asıl belirleyeni:** Alt-ajan tokeni girdi boyutundan çok **araç-çağrısı/iterasyon sayısına** bağlıdır
-(ölçüm: aynı ders 12 çağrıda 132k, 36 çağrıda 181k). Asıl tasarruf kapı-fail yeniden-yazımını azaltmaktır (ilk-geçiş doğruluğu,
-net şema). baglam + sıkıştırılmış özet girdiyi küçültür ama dibi iterasyon belirler. Ders kilidi + hat-başı özet kapısı E0'da otomatiktir.
-
-**Anlatım TEK KAPI (iterasyon + bütünlük, ZORUNLU):** 4 ayrı kapı yerine tek komut —
-`python3 scripts/hat/tam_hat/anlatim_kapi.py <v2 dizin> --sayfalar <sayfalar.json> --key <key>` (turet+dogrula+metin_denetle+
-turkce_uslup birlikte, TÜM sorunlar bir seferde). Kapı `kaynak.md` yoksa `sayfalar.json`'dan üretir → `slayt.satir` birebir
-denetimi ASLA atlanmaz. (Ölçüm: baglam-yalnız anlatım, `kaynak.md` yokken 46 hatalı satırı sessizce geçiriyordu — bu kapı yakalar.)
-
 ### 0.0c Sentez okuma kipi — YALNIZ yönetici açarsa (2026-11-17, deneysel)
 
 `kosucu.py … --sentez` verilmezse hiçbir şey değişmez (standart: alt ajan her sayfanın `op/s-NN.png`'sini açar, H111).
@@ -71,6 +53,47 @@ tanısal görüntü/şema/resim-tablo sayfasının tam PNG'sini açar, seçimini
   Kalite dört yolda eşit (aynı sayfalarda aynı bilgiler; B ve C1 aynı 12 sayfayı seçti). Sentez görsel yazımını −%30 düşürür ama
   tur sayısı artarsa okuma ve çıktı kazancı yer; ancak tek tur kuralıyla (`sentez.md` başında yazılı) net kâra döner.
   **%50 hedefi tutmadı.** Kalan maliyetin çoğu görsel değil, her turda yeniden okunan ajan bağlamı + çıktıdır. Varsayılan yapılmaz.
+
+### 0.0b Aşama başına TEK okuma dosyası (2026-11-17, H594 — ZORUNLU)
+
+Ölçüm (k2-28): aşama girdisinin çoğu ders verisi değil, **bütün okutulan standart belgelerdi** (denetçi 8,9k kelimenin tamamı
+yayın/dağıtım kuralı; kaynak 6,8k'nın 4,1k'sı iki standart) ve aşama başına 6–9 ayrı dosya açılıyordu (araç çağrısı = token).
+- `baglam.py` artık şunları da yazar: **`baglam/is_<katman>.md`** (anlatım, önem listesi, örnek soru, çıkmış analizi) =
+  kural paketi + o aşamanın şema bölümü + veri dilimleri; **`baglam/kural_<aşama>.md`** (değerlendirme→`kural_kaynak`, ders
+  içerik, ses, denetçi, yayın; tam kipte çapa/çizim ve PDF). Değerlendirme baglam'dan önce çalıştığı için kural paketleri E0
+  sonunda `baglam.py … --kural-yalniz` ile üretilir (koşucu `--calistir` bunu yapar).
+- Alt ajan isteminde **yalnız o dosya** verilir. `kural_secici.py --oku` listesini, `--ozet` çıktısını, `sema.md`'yi ve
+  `kaynak_<dilim>.md`'leri AYRICA okutma — hepsi `is_` dosyasının içindedir. İstisna: anlatım `sayfalar.json`'ı (tam slayt)
+  ve doldurulacak `iskelet_<aşama>.json` ayrıca okunur.
+- Kural paketi (`kural_secici.py --paket <aşama|denetci> [--mod]`): aşama özeti + aşama kuralları + genel (hat dışı kimlik
+  listesi hariç) + standart belgelerin **yalnız o aşamaya ait bölümleri, metni aynen** (`BOLUM` haritası). Alınmayan bölümler
+  paketin sonunda adıyla listelenir. Belge yeniden numaralanıp önek boşa düşerse `kural_secici.py --denetle` HATA verir.
+- **Denetçi** artık yayın kurallarını değil kendi paketini okur: kaynak + anlatım + örnek soru aşamalarının en sık hataları,
+  §3 kısmi düzeltme, §7 denetçi sırası, öğreten ders ölçütü, denetçi soruları, şık üç-bilgi kuralı, Türkçe üslup.
+- Dar dilimler: önem listesi hoca vurgusundan yalnız `tur=sinav` olanları alır (anlatım alıntıları `kaynak_hoca.md`'de);
+  çıkmış analizi atomlardan yalnız çıkmışın geçtiği slaytları ±1 alır. Anlatım artık hoca vurgularını + öğrenci önem
+  notlarını da okur (önceden brifte yoktu; kural 21/28 dayanağı).
+- **Ölçüm (k2-28, kelime; `kosucu.py --olc`):** tasarruf 63,8k → **45,5k** (−%29), okunan dosya ~40 → **14**; tam 74,6k → 53,5k.
+  Aşama: değerlendirme 10,7k → 8,1k · anlatım 9,4k → 8,4k (hoca dilimi 2,1k EKLENDİ) · önem 14,1k → 10,1k ·
+  örnek soru 12,0k → 9,4k · çıkmış analizi 6,4k → 4,7k · denetçi 9,1k → 2,9k. Gerçek alt ajan tokeni ilk elle koşulan derste ölçülecek.
+
+**Nereye baglam, nereye ham slayt (ölçümle, 2026-11-16):**
+- **Örnek soru / önem / çözücü:** `baglam/kaynak.md` + `baglam/sema.md` + `docs/asama_kurallari/<aşama>.md` okur; 33k'lık örnek
+  şablon dosyasını, kapı kaynağını, standart belgelerin tamamını OKUMAZ (birebir slayt zorunluluğu yok; şablon elenir). Gerçek
+  girdi (k2-28 ölçümü): örnek soru ~23,9k kelime (kaynak.md 8,5k + şema 0,2k + kural 15,2k) → ~12,5k (dilim 6,5k + şema + kural 5,8k).
+  Eski "~3,9k" rakamı gerçeği yansıtmıyordu.
+- **Anlatım:** `sayfalar.json`'ı (TAM slayt) + `baglam/sema.md` + `anlatim.md` okur. `slayt.satir` çapası ve `--dogrula`
+  satır-birebir kapısı tam slayt metnini GEREKTİRİR — `baglam/kaynak` yetmez ve kapıyı zayıflatır (`kaynak.md` yoksa satır
+  denetimi atlanıyordu). Anlatımda kazanç şablon değil, **kural özeti sıkıştırmasıdır**.
+
+**Önemli — token'ın asıl belirleyeni:** Alt-ajan tokeni girdi boyutundan çok **araç-çağrısı/iterasyon sayısına** bağlıdır
+(ölçüm: aynı ders 12 çağrıda 132k, 36 çağrıda 181k). Asıl tasarruf kapı-fail yeniden-yazımını azaltmaktır (ilk-geçiş doğruluğu,
+net şema). baglam + sıkıştırılmış özet girdiyi küçültür ama dibi iterasyon belirler. Ders kilidi + hat-başı özet kapısı E0'da otomatiktir.
+
+**Anlatım TEK KAPI (iterasyon + bütünlük, ZORUNLU):** 4 ayrı kapı yerine tek komut —
+`python3 scripts/hat/tam_hat/anlatim_kapi.py <v2 dizin> --sayfalar <sayfalar.json> --key <key>` (turet+dogrula+metin_denetle+
+turkce_uslup birlikte, TÜM sorunlar bir seferde). Kapı `kaynak.md` yoksa `sayfalar.json`'dan üretir → `slayt.satir` birebir
+denetimi ASLA atlanmaz. (Ölçüm: baglam-yalnız anlatım, `kaynak.md` yokken 46 hatalı satırı sessizce geçiriyordu — bu kapı yakalar.)
 
 ## 0. Tasarruf kipi (kullanıcı kararı 2026-11-07)
 

@@ -52,7 +52,7 @@
 
 | Belge | Konu | Kelime | Son değişim |
 |---|---|---:|---|
-| `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1209 | 2026-11-16 |
+| `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1209 | 2026-11-18 |
 | `GELISTIRME_YOL_HARITASI.md` | Geliştirme Yol Haritası — veri, site sağlığı, içerik hattı, ses (2026-11-16) | 1584 | 2026-11-16 |
 | `HANTALLIK_KOK_NEDENLERI.md` | Hantallık, yavaşlık ve yanlış üretim — kök neden defteri | 4391 | 2026-11-17 |
 | `ORACLE_REALTIME_DATABASE_REHBERI.md` | Oracle VM Üzerinde Realtime Veritabanı Mimarisi ve Çözüm Rehberi | 640 | 2026-10-12 |

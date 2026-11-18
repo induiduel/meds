@@ -35,7 +35,7 @@ scripts/
 - Soru/çözücü: `spot_cozucu/` (ses.py, onem_dogrula, cozucu_dogrula) · `patoloji_cozucu/` (cozucu_ses_gpu.sh) ·
   `ses_ortak/` (EMA okunuş tek girişi `ses_metin.hazirla` + klip çekirdeği `ses_klip` + `okunus_farki.py` raporu + `sinama_okunus.py` okunuş sınaması, 0 HATA) ·
   `patoloji_cozucu_alt/` · `patoloji_soru_isci/` · `patoloji_onem/` · `patoloji_checkup/` · `sinav_spotlari/` · `cikmis_paket/`
-- Hoca/öğrenci: `hoca_profili/` · `hoca_ara_soru/` · `hoca_vurgu/` · `ogrenci_onem/` · `ogrenci_drive/`
+- Hoca/öğrenci: `hoca_profili/` · `hoca_ara_soru/` · `hoca_vurgu/` · `ogrenci_onem/` · `ogrenci_drive/` · `ogrenci_sentez/` (arkadaş Drive sentez PDF → OCR/MarkItDown → hoca sözlü vurgu birimleri → `baglam.py` hoca dilimi; `sentez.py calistir|fark`)
 - Kamp/tekrar: `son_prova/` · `blok_ozet/` · `kamp/` · `tekrar_analizi/`
 - Çıkmış: `cikmis_dizin/` · `cikmis_2627/` · Arşiv dersleri: `arsiv_25_26/` (adı arşiv ama CANLI üretim)
 - Hastalık: `akbc_disease_pipeline.py` (AKBC hastalık profili hattı)

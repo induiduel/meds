@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 26 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 27 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -96,6 +96,12 @@
 ### H622 — Ara soru birleştirmesi sesli dersi olmayan SINAMA anahtarında yarıda kalıyordu; yayın bayat kalmıştı (2026-11-17)
 - **Önleme:** birleştirme tek dersin eksiği için bütün kurulu durdurmaz; kaynak (meds_temp) düzeltilince birlestir + ses aynı turda koşulur, `klip v` ↔ `kayit h` uyumu denetlenir.
 
-### H623 — Gece tam hattında (k2-40/41/42) çıkan betik açıkları (2026-11-17)
-- **Kural:** yeni ders yayınından önce örnek soru dosyası tam ders anahtarıyla adlandırılmış ve `ornek_sorular/k2/index.json`'da kayıtlı olmalı; `birlestir.py` sonrası başka derslerin farkı sahnelenmez.
+
+### H625 — Ara soruda şık metni çözücü dosyasında kaymış, kapı 0 HATA verdi (2026-11-18, k2-49)
+- **Kural:** Ara soru düzeltmesi `kaynak/`, `cozucu/`, `onem/` üçünde aynı anda yapılır; bağımsız denetçi turu atlanmaz; kapı komutunda tam ders anahtarı kullanılır.
+
+
+### H626 — Çıkmış soru kökü 90 kelimeyi aşınca çözücü kapısı kaldı; çıkmış kök kısaltılamaz (2026-11-18, k2-39)
+- **Kural:** Çıkmış kökü asla kısaltılmaz ya da gerekçe uydurularak elenmez; sınırı aşıyorsa kapı çıkmış için ayrı sınırı kullanır. Çözücü ayrı bir yazım turu olarak planlanır, açıklama alt sınırı 18 kelimedir.
+
 

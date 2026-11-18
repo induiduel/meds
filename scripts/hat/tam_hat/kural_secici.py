@@ -8,6 +8,8 @@ okutulmaz. Bu betik dizin sırasıyla konu dosyalarındaki maddeleri ayrıştır
   kural_secici.py --denetle           → dizin ↔ konu dosyası tutarlılığı + özet bayatlığı + MADDE KAYBI denetimi (kayıp → çıkış 1)
   kural_secici.py --oku <aşama>       → o aşamada okunacak dosyaların listesi (alt ajan istemine)
   kural_secici.py --ozet <aşama>      → o aşamanın en sık tekrarlanan 5–7 hatası (≤300 kelime; istemin başına)
+  kural_secici.py --paket <aşama|denetci|hepsi> [--mod tasarruf] [--yaz <klasör>]
+                                      → aşamanın TEK okuma dosyası (özet + kurallar + standart belgelerin yalnız ilgili bölümleri)
   kural_secici.py --tam <aşama|H<n>>  → kısaltılmamış (kapılı maddeler dahil TAM metin) aşama özeti ya da tek madde
 
 Daraltma (2026-11-16, ölçüm: aşama başına 11–15k kelime; 1171 başlığın yalnız 343'ü benzersizdi, `"soru"` anahtarı
@@ -352,14 +354,157 @@ def oku(asama: str, mod: str = "tam") -> list[str]:
     return [d for d in dosya if (KOK / d).exists()]
 
 
+# ── Aşama kural PAKETİ (2026-11-17, ölçüm k2-28: aşama girdisinin %60–95'i ders verisi değil, BÜTÜN okutulan standart
+# belgelerdi — yayın/denetçi 8,9k kelimenin 6,3k'sı el kitabı; kaynak 6,8k'nın 4,1k'sı iki standart). Paket = aşamanın
+# tek dosyası: özet (ilk geçiş öz-denetimi) + aşama kuralları + genel + standart belgelerin YALNIZ o aşamaya ait bölümleri.
+# Alt ajan 5–7 dosya yerine TEK dosya okur (araç çağrısı da düşer). Bölüm metni AYNEN alınır, özetlenmez; alınmayan
+# bölümler paketin sonunda adıyla listelenir (gerekirse açılır). Haritada olmayan belge bütün girer.
+# Önek = başlığın `#` sonrası metninin başı. "## X" seçilince alt "###" bölümleri de gelir. Önek hiçbir başlığa
+# uymuyorsa --denetle HATA verir (belge yeniden numaralanınca sessiz kural kaybı olmasın).
+BOLUM: dict[str, dict[str, tuple[str, ...]]] = {
+    "kaynak": {"docs/KURUL2_DERS_STANDARDI.md": ("0.", "1.", "3.", "10."),
+               "docs/OGRENCI_ONEM_YONTEMI.md": ("3.", "5.", "6.")},
+    "anlatim": {"docs/KURUL2_DERS_STANDARDI.md": ("0.", "7.", "8."),
+                "docs/OGRENCI_ONEM_YONTEMI.md": ("5.",),
+                "docs/ANLATIM_KURGU_STANDARDI.md": ("2.", "3.", "4.", "5.", "6.", "Konu bütünlüğü")},
+    "ornek_soru": {"docs/OGRENCI_ONEM_YONTEMI.md": ("5.",),
+                   "docs/HOCA_USLUBU_YONTEMI.md": ("4.", "5."),
+                   "docs/SIK_ACIKLAMA_STANDARDI.md": ("Kural:", "Biçim", "Kaynak sırası", "Kalite kapısı")},
+    "yayin": {"docs/KURUL_OTOMASYON_EL_KITABI.md": ("0.", "8.", "10.", "19.", "20.", "21.")},
+}
+# Bağımsız denetçi madde dağıtımında aşama DEĞİL (ASAMALAR'a girmez); kendi paketi var. Eskiden "yayın" kural setini
+# (dağıtım/rsync/commit, 8,9k kelime) okuyordu — tıbbi denetimle ilgisiz. Şimdi: üretim aşamalarının en sık hata özetleri
+# + denetçinin bakacakları. (aşama özetleri, {belge: bölüm önekleri}; boş önek = belge bütün)
+DENETCI_OZET = ("kaynak", "anlatim", "ornek_soru")
+DENETCI_BOLUM: dict[str, tuple[str, ...]] = {
+    "docs/TAM_HAT_HIZLI_AKIS.md": ("3.", "7."),
+    "docs/KURUL2_DERS_STANDARDI.md": ("0.", "8."),
+    "docs/ANLATIM_KURGU_STANDARDI.md": ("5.", "Konu bütünlüğü"),
+    "docs/SIK_ACIKLAMA_STANDARDI.md": ("Kural:",),
+    "docs/OGRENCI_ONEM_YONTEMI.md": ("6.",),
+    "docs/TURKCE_USLUP_STANDARDI.md": (),
+}
+PAKET_ASAMALAR = (*ASAMALAR, "denetci")
+
+
+def _bolumler(metin: str) -> list[tuple[int, str, list[str]]]:
+    """Belge → (düzey, başlık metni, satırlar). Kod bloğu içindeki `#` başlık sayılmaz. Düzey 0 = ilk başlıktan önceki giriş."""
+    out: list[tuple[int, str, list[str]]] = [(0, "", [])]
+    cit = False
+    for s in metin.splitlines():
+        if s.lstrip().startswith("```"):
+            cit = not cit
+        m = None if cit else re.match(r"^(#{1,3}) +(.*)$", s)
+        if m:
+            out.append((len(m.group(1)), m.group(2).strip(), [s]))
+        else:
+            out[-1][2].append(s)
+    return out
+
+
+def bolum_sec(yol: str, onekler: tuple[str, ...]) -> tuple[str, list[str], list[str]]:
+    """(seçilen metin AYNEN, alınmayan başlıklar, hiçbir başlığa uymayan önekler). Önek boşsa belge bütün döner."""
+    metin = (KOK / yol).read_text(encoding="utf-8")
+    if not onekler:
+        return metin.strip(), [], []
+    al: list[str] = []
+    atla: list[str] = []
+    uydu: set[str] = set()
+    acik = 0  # >0: bu düzeydeki seçili bölümün alt bölümlerini de al
+    for duzey, baslik, satir in _bolumler(metin):
+        if duzey == 0:
+            continue
+        o = next((x for x in onekler if baslik.startswith(x)), None)
+        if o is not None:
+            uydu.add(o)
+            acik = duzey
+            al += satir
+        elif acik and duzey > acik:
+            al += satir
+        else:
+            acik = 0
+            if duzey == 2:
+                atla.append(baslik)
+    return "\n".join(al).strip(), atla, [x for x in onekler if x not in uydu]
+
+
+def _genel_dar() -> str:
+    """genel.md'den içerik aşamasına yaramayan kısımlar düşer: gövdesiz başlıklar ve 'Hat dışı maddeler' kimlik listesi."""
+    out: list[str] = []
+    for duzey, baslik, satir in _bolumler((CIKIS / "genel.md").read_text(encoding="utf-8")):
+        if duzey == 3 and not baslik.startswith("Hat dışı") and any(x.strip() for x in satir[1:]):
+            out += satir
+    return "\n".join(out).strip()
+
+
+def paket(asama: str, mod: str = "tam") -> str:
+    """Aşamanın TEK okuma dosyası. Kural metinleri aynen; yalnız aşamayla ilgisiz belge bölümleri dışarıda kalır."""
+    if asama not in PAKET_ASAMALAR:
+        raise SystemExit(f"bilinmeyen aşama: {asama} ({', '.join(PAKET_ASAMALAR)})")
+    p = [f"# Kural paketi — {asama} · kip {mod}",
+         "> ÜRETİLMİŞ: `kural_secici.py --paket`. Bu aşamada kural için YALNIZ bu dosya okunur; listedeki belgeleri ayrıca "
+         "açma. Bir madde belirsizse: `kural_secici.py --tam <H no>`.", ""]
+    if asama == "denetci":
+        p += ["## Bu hatta en sık yapılan hatalar (önce bunlara bak)"]
+        p += [ozet(a) for a in DENETCI_OZET]
+        belgeler = DENETCI_BOLUM
+    else:
+        p += ["## İlk geçişte doğru: yazmadan önce oku, teslimden önce kendin denetle", ozet(asama), "",
+              "## Aşama kuralları", (CIKIS / f"{asama}.md").read_text(encoding="utf-8").split("\n\n", 2)[-1].strip(), "",
+              "## Genel", _genel_dar()]
+        belgeler = {d: BOLUM.get(asama, {}).get(d, ()) for d in oku(asama, mod)
+                    if not d.startswith("docs/asama_kurallari/")}
+    for yol, onek in belgeler.items():
+        if not (KOK / yol).exists():
+            continue
+        metin, atla, _ = bolum_sec(yol, onek)
+        p += ["", f"## Belge: {yol}" + (" (yalnız ilgili bölümler)" if onek else ""), metin]
+        if atla:
+            p.append(f"\n_(Bu aşamaya ait olmadığı için alınmadı — gerekirse `{yol}`: " + " · ".join(a[:48] for a in atla) + ")_")
+    return "\n".join(p) + "\n"
+
+
+def paket_yaz(klasor, mod: str = "tam", asamalar: tuple[str, ...] | None = None) -> dict[str, int]:
+    """<klasör>/baglam/kural_<aşama>.md dosyalarını yazar (baglam.py çağırır). Dönen: aşama → kelime."""
+    hedef = _Path(klasor) / "baglam"
+    hedef.mkdir(parents=True, exist_ok=True)
+    out: dict[str, int] = {}
+    for a in asamalar or PAKET_ASAMALAR:
+        t = paket(a, mod)
+        (hedef / f"kural_{a}.md").write_text(t, encoding="utf-8")
+        out[a] = len(t.split())
+    return out
+
+
+def bolum_denetle() -> list[str]:
+    hata = []
+    for ad, harita in [*BOLUM.items(), ("denetci", DENETCI_BOLUM)]:
+        for yol, onek in harita.items():
+            if not (KOK / yol).exists():
+                hata.append(f"{ad}: belge yok {yol}")
+                continue
+            for o in bolum_sec(yol, onek)[2]:
+                hata.append(f"{ad}: {yol} içinde '{o}' ile başlayan başlık yok (BOLUM haritasını güncelle)")
+    return hata
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--denetle", action="store_true")
     ap.add_argument("--oku")
     ap.add_argument("--ozet")
     ap.add_argument("--tam")
+    ap.add_argument("--paket", help="aşamanın TEK okuma dosyası (özet + kurallar + standartların ilgili bölümleri); 'hepsi' + --yaz <klasör>")
+    ap.add_argument("--yaz", help="--paket çıktısını <klasör>/baglam/kural_<aşama>.md olarak yaz")
     ap.add_argument("--mod", choices=("tam", "tasarruf"), default="tam")
     a = ap.parse_args()
+    if a.paket:
+        if a.yaz:
+            for k, n in paket_yaz(a.yaz, a.mod, None if a.paket == "hepsi" else (a.paket,)).items():
+                print(f"baglam/kural_{k}.md  {n} kelime")
+        else:
+            print(paket(a.paket, a.mod), end="")
+        return 0
     if a.oku:
         print("\n".join(oku(a.oku, a.mod)))
         return 0
@@ -383,6 +528,10 @@ def main() -> int:
         if kayip:
             print("HATA: çıktıda geçmeyen madde (kural kaybı); kural_secici.py çalıştır:\n  " + "\n  ".join(kayip),
                   file=sys.stderr)
+            return 1
+        bh = bolum_denetle()
+        if bh:
+            print("HATA: kural paketi bölüm haritası belgeyle uyuşmuyor:\n  " + "\n  ".join(bh), file=sys.stderr)
             return 1
         print("aşama özetleri güncel")
         return 0

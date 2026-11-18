@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 50 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 53 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -212,6 +212,18 @@
 ### H624 — SSS Tümörleri, OSS Farmakolojisi, Nörogelişimsel Bozukluklar: "Bu dersin PDF'i uygulama içinde açılamıyor" (2026-11-18, kullanıcı; H505 tekrarı)
 - **Kural:** yeni sesli ders = SANAL_DESTELER kaydı + `meds-web` restart; kapı dağıtımda zorunlu, atlanamaz.
 
+
 ### H622 — Ara soru birleştirmesi sesli dersi olmayan SINAMA anahtarında yarıda kalıyordu; yayın bayat kalmıştı (2026-11-17)
 - **Önleme:** birleştirme tek dersin eksiği için bütün kurulu durdurmaz; kaynak (meds_temp) düzeltilince birlestir + ses aynı turda koşulur, `klip v` ↔ `kayit h` uyumu denetlenir.
+
+
+### H623 — Gece tam hattında (k2-40/41/42) çıkan betik açıkları (2026-11-17)
+- **Kural:** yeni ders yayınından önce örnek soru dosyası tam ders anahtarıyla adlandırılmış ve `ornek_sorular/k2/index.json`'da kayıtlı olmalı; `birlestir.py` sonrası başka derslerin farkı sahnelenmez.
+
+### H627 — k2-36/k2-39 dağıtımı PDF kapısında durdu: SANAL_DESTELER kaydı ve drive_root dosyası unutuldu (2026-11-18)
+- **Kural:** Yeni ders için `ders_ekle`'den hemen sonra SANAL_DESTELER kaydı + drive_root dosyası + `meds-web` restart; commit'ten önce `python3 scripts/kapilar/ders_pdf_kapisi.py --statik --kok "$PWD"` 0 HATA.
+
+
+### H629 — Eski ses varyantı yalnız yerelde silinince dagit.sh Oracle'dan geri getirdi; yedek dosyaları kayıt kapısını kilitledi (2026-11-18)
+- **Kural:** Ses varyantı kaldırırken önce Oracle'da, sonra yerelde sil ve `meds-server`'ı yeniden başlat; yedeği `_arsiv_veri/` altında `.zst` olarak sakla, `data/` içinde `.yedek` bırakma.
 

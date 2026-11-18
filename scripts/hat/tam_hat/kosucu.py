@@ -28,6 +28,7 @@ import kok as _kok  # noqa: E402
 
 import argparse
 import json
+import re
 import subprocess
 import time
 import sys
@@ -238,6 +239,18 @@ def main() -> int:
         env = dict(os.environ)
         env.setdefault("MEDS_OTURUM", f"kosucu-{a.ders}-{os.getpid()}")
         print(f"## Çalıştırılıyor (E0 + baglam) · oturum {env['MEDS_OTURUM']}…")
+        # Öğrenci sentez notları (hocanın sözlü vurguları; LLM yok, artımlı): yeni PDF'ler indirilir → MarkItDown/OCR →
+        # vurgu birimleri → meds_temp/ogrenci_sentez/ders/<key>.json; baglam.py "hoca" dilimine ekler. Ağ/eşleme sorunu
+        # bu dersi DURDURMAZ (önbellekteki son geçerli birimler kullanılır) ama HATA açıkça basılır.
+        kur = re.match(r"k(\d+)-", a.ders)
+        if kur and os.environ.get("MEDS_SENTEZ_ATLA") != "1":
+            cmd = ["python3", "scripts/uretim/ogrenci_sentez/sentez.py", "calistir", "--kurul", kur.group(1)]
+            print("$ " + " ".join(cmd))
+            r = subprocess.run(cmd, cwd=KOK, env=env, capture_output=True, text=True)
+            print("\n".join(x for x in r.stdout.splitlines() if not x.startswith(("İndiriliyor", "✓"))))
+            if r.returncode != 0:
+                print(f"UYARI: öğrenci sentez hattı çıkış {r.returncode} — yukarıdaki HATA satırlarını çöz "
+                      f"(eşlemesiz PDF → scripts/uretim/ogrenci_sentez/eslesme.json). {r.stderr[-400:]}", file=sys.stderr)
         # Argümanlar liste olarak (shell yok): enjeksiyon riski yok, ders/klasör metakarakterleri yorumlanmaz.
         adimlar = [("hazirlik", ["python3", "scripts/hat/tam_hat/hazirlik.py", str(a.klasor), "--ders", a.ders, "--mod", a.mod])]
         if a.sentez:  # yönetici kararı; açılmazsa hiçbir şey değişmez

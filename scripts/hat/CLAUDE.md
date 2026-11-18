@@ -7,7 +7,9 @@
 ## Kurallar
 - Giriş: `python3 scripts/hat/tam_hat/kosucu.py <klasör> --ders <key> --mod <tam|tasarruf>`; sırayı yalnız `mod.py` verir.
 - Aşamalar `baglam/`'ı okur; ham slaytı/şablonu tekrar tarama (`docs/TAM_HAT_HIZLI_AKIS.md` §0.0).
-- Alt ajana yalnız `python3 scripts/hat/tam_hat/kural_secici.py --oku <aşama>` listesi + `--ozet <aşama>` (≤300 kelime) verilir;
+- **Alt ajan TEK dosya okur (2026-11-17, H594):** `baglam/is_<katman>.md` (kural paketi + şema + veri) ya da `baglam/kural_<aşama>.md`
+  (`baglam.py` üretir; `kural_secici.py --paket`). `--oku` listesi/`--ozet`/`sema.md`/dilimler ayrıca okutulmaz; denetçi `kural_denetci.md` okur.
+- Elle bakmak için: `python3 scripts/hat/tam_hat/kural_secici.py --oku <aşama>` listesi + `--ozet <aşama>` (≤300 kelime);
   kapılı maddeler tek satırdır, tam metin `--tam <H no|aşama>`. `--denetle` madde kaybını da HATA sayar.
 - `baglam/` dilimli: aşama yalnız kendi `kaynak_<atom|hoca|cikmis|uslup>.md` dilimini okur (`baglam.py` DILIM_ASAMA).
 - LLM çağıran her betik `otomasyon/llm_kilit.py` arkasında (`MEDS_LLM_ELLE=1` yoksa çıkış 75); zamanlayıcı kurma yok (AGENTS kural 20).
