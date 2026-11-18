@@ -77,13 +77,30 @@ def oku_json(p: Path, var=None):
 
 
 # ── cek
+def guvenli_ad(ad: str) -> str:
+    """Drive'dan gelen klasör/dosya adı yol bileşeni olarak güvenli mi (path traversal: ".." / "/" / "\\" / boş / NUL)."""
+    a = str(ad).replace("/", "_").replace("\\", "_").replace("\x00", "")
+    if a.strip() in ("", ".", ".."):
+        raise SystemExit(f"HATA: geçersiz Drive adı {ad!r} — indirme durduruldu")
+    return a
+
+
+def icinde(taban: Path, yol: str) -> Path:
+    """taban/yol; çözülmüş yol tabanın DIŞINA taşıyorsa HATA (md/ocr/vurgu/pdf yazımlarının hepsi buradan geçer)."""
+    t = taban.resolve()
+    h = (taban / yol).resolve()
+    if not h.is_relative_to(t):
+        raise SystemExit(f"HATA: yol {taban.name}/ dışına taşıyor: {yol!r}")
+    return h
+
+
 def cek(kurul: int, zorla: bool) -> list[dict]:
     import ogrenci_drive as OD
     dosyalar = []
 
     def r(i, yol):
         for x in OD.drive_klasor_listele(i):
-            p = yol + [x["name"]]
+            p = yol + [guvenli_ad(x["name"])]
             if "folder" in x["mime"]:
                 r(x["id"], p)
             elif x["mime"] == "application/pdf":
@@ -94,7 +111,7 @@ def cek(kurul: int, zorla: bool) -> list[dict]:
     secili = [d for d in dosyalar if d["yol"].startswith(f"Kurul{kurul}/")]
     yaz_json(IS / "agac.json", dosyalar)
     for d in secili:
-        hedef = IS / "pdf" / d["yol"]
+        hedef = icinde(IS / "pdf", d["yol"])
         OD.dosya_indir(d["id"], hedef, zorla=zorla)
         if not hedef.exists() or hedef.read_bytes()[:4] != b"%PDF":
             raise SystemExit(f"HATA: {d['yol']} PDF değil/inmedi (Drive izin sayfası?)")
@@ -117,7 +134,7 @@ def _ocr_gerekirse(pdf: Path, yol: str, n: int) -> Path:
     ham = subprocess.run(["pdftotext", str(pdf), "-"], capture_output=True, text=True).stdout
     if len(_sozcuk(ham)) >= 40 * n:
         return pdf
-    hedef = IS / "ocr" / yol
+    hedef = icinde(IS / "ocr", yol)
     if hedef.exists() and hedef.stat().st_mtime >= pdf.stat().st_mtime:
         return hedef
     hedef.parent.mkdir(parents=True, exist_ok=True)
@@ -182,9 +199,9 @@ def cevir(secili: list[dict], zorla: bool) -> None:
         raise SystemExit(f"HATA: MarkItDown yok ({MD_PY}); `python3 -m venv .venv-markitdown && .venv-markitdown/bin/pip install 'markitdown[pdf]'`")
     defter = oku_json(DEFTER, {})
     for d in secili:
-        pdf = IS / "pdf" / d["yol"]
+        pdf = icinde(IS / "pdf", d["yol"])
         sha = hashlib.sha256(pdf.read_bytes()).hexdigest()[:16]
-        md = (IS / "md" / d["yol"]).with_suffix(".md")
+        md = icinde(IS / "md", d["yol"]).with_suffix(".md")
         e = defter.get(d["id"], {})
         if not zorla and md.exists() and e.get("sha") == sha and e.get("kapsama", 0) >= 0.98:
             continue
@@ -259,7 +276,7 @@ def bloklar(md: str) -> list[dict]:
 def ayikla(secili: list[dict]) -> dict:
     ozet = {}
     for d in secili:
-        md = (IS / "md" / d["yol"]).with_suffix(".md")
+        md = icinde(IS / "md", d["yol"]).with_suffix(".md")
         metin = md.read_text(encoding="utf-8")
         bl = bloklar(metin)
         birim = []
@@ -279,7 +296,7 @@ def ayikla(secili: list[dict]) -> dict:
         if len(VURGU_RE.findall(katla(govde))) != sum(len(VURGU_RE.findall(katla(b["metin"]))) for b in bl):
             raise SystemExit(f"HATA: blok bölücü metin kaybetti: {d['yol']}")
         alinan = sum(len(VURGU_RE.findall(katla(b["metin"]))) for b in birim)
-        yaz_json((IS / "vurgu" / d["yol"]).with_suffix(".json"),
+        yaz_json(icinde(IS / "vurgu", d["yol"]).with_suffix(".json"),
                  {"kaynak": d["yol"], "drive": d["id"], "tetik_md": top, "tetik_birim": alinan, "birimler": birim})
         ozet[d["yol"]] = (len(birim), top, alinan)
         print(f"ayikla: {d['yol']} {len(birim)} birim · tetik {alinan}/{top}")
@@ -342,8 +359,8 @@ def yayinla(secili: list[dict], es: dict) -> None:
     ders: dict[str, list] = {}
     for d in secili:
         for key in es["sonuc"].get(d["yol"], []):
-            v = oku_json((IS / "vurgu" / d["yol"]).with_suffix(".json"))
-            ders.setdefault(key, []).append({"kaynak": d["yol"], "md": str((IS / "md" / d["yol"]).with_suffix(".md")),
+            v = oku_json(icinde(IS / "vurgu", d["yol"]).with_suffix(".json"))
+            ders.setdefault(key, []).append({"kaynak": d["yol"], "md": str(icinde(IS / "md", d["yol"]).with_suffix(".md")),
                                              "birimler": v["birimler"]})
     for key, k in ders.items():
         yaz_json(IS / "ders" / f"{key}.json", {"ders": key, "tur": "ogrenci_sentez_hoca_sozlu",
