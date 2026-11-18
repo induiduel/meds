@@ -1,13 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 832,
-  "baslik": "Dağıtım güvenliği: ses eşitleme betikleri sunucu kimliğini doğruluyor",
+  "onem": 833,
+  "baslik": "Dağıtım güvenliği: dağıtım betikleri sunucu kimliğini doğruluyor",
   "maddeler": [
-    "Altyapı: ses aktarım betikleri sunucunun SSH anahtarını doğruluyor; anahtar değişirse bağlantı kurulmuyor."
+    "Altyapı: kod dağıtımı ve yönetim paneli eşitlemesi sunucunun SSH anahtarını doğruluyor; anahtar değişirse dağıtım bağlanmıyor."
   ],
   "eklenen": [],
   "degisen": [
-    "SSH anahtar doğrulaması açıldı"
+    "Dağıtımda SSH anahtar doğrulaması açıldı"
   ],
   "duzeltilen": [],
   "silinen": []

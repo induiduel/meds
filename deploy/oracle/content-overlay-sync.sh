@@ -16,7 +16,7 @@ KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
 ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
 ORACLE_DIR="/home/ubuntu/medsor/meds"
-SSH="ssh -i $KEY -o StrictHostKeyChecking=no $ORACLE_USER@$ORACLE_HOST"
+SSH="ssh -i $KEY -o StrictHostKeyChecking=accept-new $ORACLE_USER@$ORACLE_HOST"
 # Worktree'den dağıtılıyorsa çekilen dosya ana çalışma ağacına da yazılır (orada commit'lenmeli)
 MAIN_DIR="$(git -C "$MEDS_DIR" worktree list --porcelain 2>/dev/null | awk '/^worktree /{print $2; exit}')"
 MAIN_DIR="${MAIN_DIR:-$MEDS_DIR}"
@@ -34,7 +34,7 @@ TMPD="$(mktemp -d)"; trap 'rm -rf "$TMPD"' EXIT
 pulled=()
 for rel in "${FILES[@]}"; do
   fk="$TMPD/$(echo "$rel" | tr '/' '_').fark.json"
-  scp -q -i "$KEY" -o StrictHostKeyChecking=no "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/data/content/$rel.fark.json" "$fk"
+  scp -q -i "$KEY" -o StrictHostKeyChecking=accept-new "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/data/content/$rel.fark.json" "$fk"
   for dir in "$MEDS_DIR" "$MAIN_DIR"; do
     out=$(python3 "$MEDS_DIR/scripts/icerik_katman.py" uygula "$fk" "$dir/src/data/$rel") || {
       echo "$out"; echo "DURDU: src/data/$rel kaydı hem Oracle panelinde hem yerelde değişmiş ($dir)."

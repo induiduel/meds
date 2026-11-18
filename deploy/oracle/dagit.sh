@@ -29,7 +29,7 @@ export MEDS_DEPLOY_LOCKED=1
 git -C "$WT" fetch -q origin
 HEDEF="$(git -C "$WT" rev-parse origin/main)"
 
-SSH="ssh -i ${SSH_KEY:-$HOME/.ssh/medsor-oracle.key} -o StrictHostKeyChecking=no -o ConnectTimeout=15 ubuntu@${ORACLE_HOST:-92.5.55.109}"
+SSH="ssh -i ${SSH_KEY:-$HOME/.ssh/medsor-oracle.key} -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15 ubuntu@${ORACLE_HOST:-92.5.55.109}"
 DAMGA="$($SSH 'cat /home/ubuntu/medsor/meds/dist/dagitim.json 2>/dev/null' || true)"
 CANLI="$(python3 -c 'import json,sys;print(json.loads(sys.argv[1] or "{}").get("commit",""))' "$DAMGA")"
 KIRLI="$(python3 -c 'import json,sys;print(len(json.loads(sys.argv[1] or "{}").get("kirli",[])))' "$DAMGA")"

@@ -25,7 +25,7 @@ ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
 # Alt betikler (content-overlay-sync.sh, sync-*.sh) aynı hedefi görsün
 export ORACLE_HOST ORACLE_USER
 ORACLE_DIR="/home/ubuntu/medsor/meds"
-SSH_BASIT="ssh -i $KEY -o StrictHostKeyChecking=no -o ConnectTimeout=15"
+SSH_BASIT="ssh -i $KEY -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15"
 # Mod: değişen dosyalara göre kendiliğinden seçilir (2026-10-20, kod imaja gömülmez, ../..:/app bağlı):
 #   yalnız dist/ / statik / içerik  → yalnız rsync (saniyeler; sayfa diskten sunulur)
 #   sunucu kodu ya da src/data       → docker restart meds-app (~30 sn)
@@ -56,7 +56,7 @@ if [[ "$KIRLI_IZIN" == "0" ]]; then
     exit 77
   fi
 fi
-SSH="ssh -i $KEY -o StrictHostKeyChecking=no -o ControlMaster=auto -o ControlPath=$HOME/.ssh/cm-deploy-%r@%h:%p -o ControlPersist=120"
+SSH="ssh -i $KEY -o StrictHostKeyChecking=accept-new -o ControlMaster=auto -o ControlPath=$HOME/.ssh/cm-deploy-%r@%h:%p -o ControlPersist=120"
 T0=$(date +%s)
 
 echo "==> [0/4] ders işçisi yayınları: Oracle'da yayınlanan dersler önce yerel kaynaklara işlenir"
