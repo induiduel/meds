@@ -52,6 +52,11 @@ def gecer(betik, f):
 def main():
     brans = sys.argv[1]
     taslak = '--taslak' in sys.argv
+    # --kod 2p05[,2f07]: yalnız bu derslerin dosyaları + dizin satırları yazılır (H623, 2026-11-18). Kodsuz çalıştırma bütün
+    # branşı yeniden yazar; ortak çalışma ağacında başka oturumların ses yenilemesini de diff'e taşıyordu.
+    secili = None
+    if '--kod' in sys.argv:
+        secili = set(sys.argv[sys.argv.index('--kod') + 1].split(','))
     W = MEDS.parent / 'meds_temp/spot_cozucu' / brans
     OD, CD = MEDS / 'src/data' / f'{brans}_onem', MEDS / 'src/data' / f'{brans}_cozucu'
     SES = MEDS / 'data' / f'{brans}_cozucu'
@@ -147,6 +152,8 @@ def main():
                                  'sayfa': [min(sayfalar), max(sayfalar)]}))
     json.dump(numara, open(nump, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     # ---- yaz (önce tümü hazır; sonra klasörler yenilenir)
+    if secili is not None:
+        return yaz_secili(brans, secili, onem_d, cozucu_d, OD, CD)
     if OD.exists(): shutil.rmtree(OD)
     OD.mkdir(parents=True)
     for d in onem_d:
@@ -172,6 +179,32 @@ def main():
     print(f'{brans}: önem {len(onem_d)} ders · {sum(len(d["maddeler"]) for d in onem_d)} madde | çözücü {len(D)} set · '
           f'{sum(x["soru"] for x in D)} soru (örnek {sum(x["ornek"] for x in D)} · çıkmış {sum(x["cikmis"] for x in D)}) · '
           f'sesli {sum(x["ses"] for x in D)}/{len(D)} | atlanan {hatali}')
+
+
+def yaz_secili(brans, secili, onem_d, cozucu_d, OD, CD):
+    """Yalnız seçili kodların dosyaları; index.json'larda yalnız onların satırları değişir, öteki satırlar diskteki hâliyle kalır."""
+    eksik = secili - {d['kod'] for d in onem_d}
+    if eksik: sys.exit(f'seçili kod birleştirilemedi (onaylı değil ya da kapıdan geçmedi): {sorted(eksik)}')
+    for d in onem_d:
+        if d['kod'] in secili:
+            json.dump(d, open(OD / f"{d['kod']}.json", 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    oi = json.load(open(OD / 'index.json'))
+    yeni = {d['kod']: {'kod': d['kod'], 'no': d['no'], 'baslik': d['baslik'], 'madde': len(d['maddeler']),
+                       'bant': {str(b): sum(1 for m in d['maddeler'] if min(max(m['puan'] // 10, 4), 9) == b) for b in range(4, 10)}}
+            for d in onem_d if d['kod'] in secili}
+    oi['dersler'] = sorted([x for x in oi['dersler'] if x['kod'] not in yeni] + list(yeni.values()), key=lambda x: x['no'])
+    json.dump(oi, open(OD / 'index.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    benim = [(d, x) for d, x in cozucu_d if d['klasor'] in secili]
+    for f in CD.glob('*.json'):  # seçili dersin eski set dosyaları (set sayısı değişmiş olabilir)
+        if f.name != 'index.json' and re.sub(r'-\d+$', '', f.stem) in secili: f.unlink()
+    for d, _ in benim:
+        json.dump(d, open(CD / f"{d['kod']}.json", 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    ci = json.load(open(CD / 'index.json'))
+    ci['dersler'] = sorted([x for x in ci['dersler'] if re.sub(r'-\d+$', '', x['kod']) not in secili] + [x for _, x in benim],
+                           key=lambda x: (x['no'], x.get('set', 0)))
+    json.dump(ci, open(CD / 'index.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print(f'{brans} (yalnız {sorted(secili)}): çözücü {len(benim)} set · {sum(x["soru"] for _, x in benim)} soru · '
+          f'sesli {sum(x["ses"] for _, x in benim)}/{len(benim)}')
 
 
 if __name__ == '__main__':

@@ -47,6 +47,8 @@ git -C "$WT" checkout -q -f --detach "$HEDEF"
 node "$WT/deploy/oracle/import_denetimi.mjs" "$WT" server.ts || exit 76
 # H505/H624: hizalaması olan her sesli dersin PDF kaydı (SANAL_DESTELER) ve dosyası olmalı — yoksa "PDF uygulama içinde açılamıyor"
 python3 "$WT/scripts/kapilar/ders_pdf_kapisi.py" --statik --kok "$WT" || { echo "DURDU: PDF'i kayıtsız sesli ders var (H624)."; exit 74; }
+# H623: örnek soru dosyası kısa adlı ya da index.json'da yoksa sitede listelenmez
+python3 "$WT/scripts/kapilar/ornek_soru_dizin.py" --kok "$WT" || { echo "DURDU: dizinde olmayan / kısa adlı örnek soru dosyası var (H623)."; exit 72; }
 YENI_ONEM="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["onem"])' "$WT/guncelleme_notu.json")"
 CANLI_ONEM="$(curl -s -m 15 https://api.nofrostlife.com.tr/api/surum | python3 -c 'import json,sys;print(json.load(sys.stdin).get("onem",0))' 2>/dev/null || echo 0)"
 if [[ "$SESSIZ" == "0" && "$YENI_ONEM" -le "$CANLI_ONEM" ]]; then

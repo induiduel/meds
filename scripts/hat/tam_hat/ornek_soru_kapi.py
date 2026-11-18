@@ -56,6 +56,8 @@ def main() -> int:
     hata += _gate("soru_uslup", [PY, "scripts/hat/tam_hat/soru_uslup.py", str(a.dosya)] + (["--uslup", str(a.uslup)] if a.uslup and a.uslup.exists() else []))
     hata += _gate("profil", [PY, "scripts/uretim/hoca_profili/profil_kapisi.py", str(a.dosya), "--ders", a.ders])
     hata += _gate("kaynak", [PY, "scripts/hat/tam_hat/kaynak_kapisi.py", str(a.dosya), str(a.sayfalar)])
+    if "ornek_sorular" in a.dosya.resolve().parts:  # H623: kısa adlı / dizinsiz dosya sitede görünmez
+        hata += _gate("dizin", [PY, "scripts/kapilar/ornek_soru_dizin.py", "--dosya", str(a.dosya)])
 
     # sik_aciklama: her kazanım → her soru → her şık açıklaması (CLI yok, fonksiyonla)
     d = json.loads(a.dosya.read_text(encoding="utf-8"))

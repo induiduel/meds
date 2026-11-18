@@ -1,14 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 828,
-  "baslik": "Dağıtım: sesli çözücü ve asistan sesleri artık her güncellemede sunucuya taşınıyor",
+  "onem": 829,
+  "baslik": "Örnek sorular: beş dersin soruları listede görünür oldu",
   "maddeler": [
-    "Ses: yeni eklenen derslerin sesli çözücü, ara soru, asistan ve ek modül sesleri her dağıtımda sunucuya eksiksiz aktarılıyor; eksik ses kalırsa dağıtım uyarı veriyor."
+    "Örnek sorular: Opioid Analjezikler, Unipolar Depresyon, Kişilik Bozuklukları, Dikkat Eksikliği Hiperaktivite Bozukluğu ve Dışa Atım Bozuklukları derslerinin örnek soruları (toplam 278 soru) ders listesine eklendi.",
+    "İçerik hattı: yeni derslerde örnek soru listesi, çok parçalı hoca kaydı ve ses dosyaları için ek denetimler."
   ],
   "eklenen": [],
-  "degisen": [
-    "Dağıtım ses klasörlerini de eşitliyor"
+  "degisen": [],
+  "duzeltilen": [
+    "Beş dersin örnek soruları listede görünmüyordu"
   ],
-  "duzeltilen": [],
   "silinen": []
 }

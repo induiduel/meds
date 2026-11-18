@@ -68,3 +68,32 @@ if __name__ == "__main__":
     print(f"PROJE   = {PROJE}")
     print(f"CIKMIS  = {CIKMIS}")
     print(f"OZET_KATALOG = {OZET_KATALOG}")
+
+
+# ── pymupdf yoksa .venv-ocr ile yeniden başlat (H623, 2026-11-18) ─────────────────────────────────────────────────────
+# Kök neden: pymupdf yalnız meds/.venv-ocr'da; runbook/kapı komutları düz `python3` ile çağrıldığında değerlendirme,
+# terim/kısaltma, çıkmış konum vb. betikler ModuleNotFoundError ile düşüyordu. Bu kanca sys.meta_path'in SONUNDA durur:
+# yalnız pymupdf/fitz başka hiçbir yerde bulunamazsa devreye girer ve süreci aynı argümanlarla venv Python'unda exec eder.
+# Döngü koruması MEDS_OCR_YENIDEN (venv python'u /usr/bin/python3'e sembolik bağ: yürütülebilir değil sys.prefix karşılaştırılır); venv yoksa ya da zaten venv'deysek hiçbir şey yapmaz (asıl ImportError görünür).
+import os as _os
+import sys as _sys
+
+
+class _OcrVenvKancasi:
+    ADLAR = {"pymupdf", "fitz"}
+
+    def find_spec(self, ad, yol=None, hedef=None):
+        if ad not in self.ADLAR or _os.environ.get("MEDS_OCR_YENIDEN"):
+            return None
+        py = MEDS / ".venv-ocr" / "bin" / "python"
+        if not py.exists() or Path(_sys.prefix).resolve() == (MEDS / ".venv-ocr").resolve() or not _sys.argv or not _sys.argv[0]:
+            return None
+        if _sys.argv[0] in ("-c", "-m"):
+            return None
+        _os.environ["MEDS_OCR_YENIDEN"] = "1"
+        _sys.stdout.flush(); _sys.stderr.flush()
+        _os.execv(str(py), [str(py), *_sys.argv])
+
+
+if not any(isinstance(k, _OcrVenvKancasi) for k in _sys.meta_path):
+    _sys.meta_path.append(_OcrVenvKancasi())

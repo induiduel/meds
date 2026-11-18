@@ -4,7 +4,7 @@
   python3 scripts/hat/tam_hat/hazirlik.py <ders klasörü> --ders <key> [--kurul 2] [--cpu-is 2]
 
 Klasörde beklenenler (olanlar işlenir, olmayan iş atlanır — eksiklik durdurmaz, kural 22):
-  orijinal.pdf (zorunlu) · ogrenci_not.pdf · hoca_ses.m4a
+  orijinal.pdf (zorunlu) · ogrenci_not.pdf · hoca_ses.m4a (çok parçalıysa hoca_ses_2.m4a, hoca_ses_3.m4a …)
 İşler ve kaynak payı (makine 15 GB RAM / 20 çekirdek; Claude oturumları korunur):
   GPU (tek iş):  hoca dökümü → hoca_dokum.json            hoca_dokum_gpu.sh (AGENTS §10 altıncı istisna, ≤2500 MHz)
   CPU (en çok --cpu-is eşzamanlı, her biri CPUQuota=200% MemoryMax=2G):
@@ -81,6 +81,52 @@ def cikmis_aday(sayfalar: Path, kurul: int, cikti: Path) -> list[str]:
     return ["env", f"MEDS_ISCI_API={API}", PY, "-c", kod, str(sayfalar), str(kurul), str(cikti)]
 
 
+def ses_parcalari(k: Path) -> list[Path]:
+    """Hoca sesi tek ya da çok parça olabilir (H623, k2-41: "Part1" + "Part 2"): hoca_ses.m4a, hoca_ses_2.m4a, hoca_ses_3.mp3 …
+    Sıra: parça numarası (numarasız = 1)."""
+    def no(p: Path) -> int:
+        m = re.search(r"hoca_ses[_-]?(\d+)$", p.stem)
+        return int(m.group(1)) if m else 1
+    return sorted((p for p in k.glob("hoca_ses*") if p.suffix.lower() in (".m4a", ".mp3", ".wav", ".ogg", ".aac", ".mp4")), key=no)
+
+
+def dokum_birlestir(parca_dokumleri: list[tuple[str, dict]]) -> dict:
+    """Parça dökümlerini tek zaman çizgisine birleştirir: her parçanın zamanları önceki parçaların süre toplamı kadar kaydırılır.
+    Çıktıda `parcalar` = [{dosya, bas}] (hangi saniyenin hangi kayda ait olduğu)."""
+    out = dict(parca_dokumleri[0][1]); out["segmentler"] = []; out["parcalar"] = []
+    bas = 0.0
+    for dosya, d in parca_dokumleri:
+        out["parcalar"].append({"dosya": dosya, "bas": round(bas, 4)})
+        for sg in d.get("segmentler") or []:
+            y = dict(sg, bas=sg["bas"] + bas, son=sg["son"] + bas)
+            if sg.get("kelimeler"):
+                y["kelimeler"] = [[a + bas, b + bas, *r] for a, b, *r in sg["kelimeler"]]
+            out["segmentler"].append(y)
+        bas += float(d.get("sure") or (d["segmentler"][-1]["son"] if d.get("segmentler") else 0))
+    out["sure"] = bas
+    out["islem_sn"] = sum(float(d.get("islem_sn") or 0) for _, d in parca_dokumleri)
+    return out
+
+
+def hoca_dokum_parcali(k: Path, parcalar: list[Path], log: Path) -> dict:
+    """Her parça GPU'da sırayla dökülür (hoca_dokum_gpu.sh), sonra kaydırmalı birleştirilir → hoca_dokum.json."""
+    if len(parcalar) == 1:
+        return calistir("hoca_dokum", ["sh", str(KOK / "scripts/uretim/ogrenci_drive/hoca_dokum_gpu.sh"), str(parcalar[0]),
+                                       str(k / "hoca_dokum.json")], log)
+    t0 = time.time(); dokumler = []
+    for i, p in enumerate(parcalar, 1):
+        hedef = k / f"hoca_dokum_p{i}.json"
+        if not hedef.exists():
+            r = calistir(f"hoca_dokum_p{i}", ["sh", str(KOK / "scripts/uretim/ogrenci_drive/hoca_dokum_gpu.sh"), str(p), str(hedef)],
+                         log.with_name(f"{log.stem}_p{i}.log"))
+            if r["kod"] != 0:
+                return {"is": "hoca_dokum", "kod": r["kod"], "sn": round(time.time() - t0), "log": r["log"]}
+        dokumler.append((p.name, json.loads(hedef.read_text(encoding="utf-8"))))
+    (k / "hoca_dokum.json").write_text(json.dumps(dokum_birlestir(dokumler), ensure_ascii=False), encoding="utf-8")
+    log.write_text(f"{len(parcalar)} parça birleştirildi: {[p.name for p in parcalar]}\n", encoding="utf-8")
+    return {"is": "hoca_dokum", "kod": 0, "sn": round(time.time() - t0), "log": str(log)}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("klasor", type=Path)
@@ -92,9 +138,14 @@ def main() -> int:
     a = ap.parse_args()
     k = a.klasor.resolve()
     pdf = k / "orijinal.pdf"
-    if not pdf.exists():
-        print(f"HATA: {pdf} yok", file=sys.stderr)
-        return 2
+    if not pdf.exists():  # H623: Drive adıyla indirilmiş tek PDF varsa orijinal.pdf adına bağlanır (sonraki aşamalar bu adı bekler)
+        adaylar = [p for p in k.glob("*.pdf") if p.name != "ogrenci_not.pdf"]
+        if len(adaylar) == 1:
+            pdf.symlink_to(adaylar[0].name)
+            print(f"hat başı: {adaylar[0].name} → orijinal.pdf")
+        else:
+            print(f"HATA: {pdf} yok (klasörde {len(adaylar)} aday PDF; tek PDF'i orijinal.pdf adıyla koyun)", file=sys.stderr)
+            return 2
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     # Hat başı kapıları (kullanıcı kararı 2026-11-16):
     #  1) Aşama özetleri defterden eskiyse kendiliğinden yenilenir (kural_secici --denetle → uret); alt ajanlar hep güncel okur.
@@ -128,11 +179,9 @@ def _govde(a, k: Path, pdf: Path) -> int:
     sonuc: list[dict] = []
     with ThreadPoolExecutor(1) as gpu, ThreadPoolExecutor(max(1, a.cpu_is)) as cpu:
         isler = []
-        ses = k / "hoca_ses.m4a"
-        if ses.exists() and not (k / "hoca_dokum.json").exists():
-            isler.append(gpu.submit(calistir, "hoca_dokum",
-                                    ["sh", str(KOK / "scripts/uretim/ogrenci_drive/hoca_dokum_gpu.sh"), str(ses), str(k / "hoca_dokum.json")],
-                                    L("hoca_dokum")))
+        parcalar = ses_parcalari(k)
+        if parcalar and not (k / "hoca_dokum.json").exists():
+            isler.append(gpu.submit(hoca_dokum_parcali, k, parcalar, L("hoca_dokum")))
         sayfa_is = cpu.submit(calistir, "sayfa_metni", cpu_run("metin", sayfa_metni(pdf, k / "sayfalar.json")), L("sayfa_metni"))
         isler.append(cpu.submit(calistir, "sayfa_goruntu",
                                 cpu_run("goruntu", ["pdftoppm", "-r", "110", "-png", str(pdf), str(k / "op" / "s")]), L("sayfa_goruntu")))

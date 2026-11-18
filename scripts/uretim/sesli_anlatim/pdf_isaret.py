@@ -483,7 +483,22 @@ class Pdf:
 
 
 def pdf_indir(deck_id: str, f: dict, fi: int) -> Path | None:
-    """Yerelde olmayan PDF (Oracle): sunucunun ders PDF ucundan önbelleğe indirilir (Drive kimliği/adıyla eşlenir)."""
+    """Yerelde olmayan PDF (Oracle): sunucunun ders PDF ucundan önbelleğe indirilir (Drive kimliği/adıyla eşlenir).
+    Sunucu ucu boşsa (yeni ders, PDF henüz yayında değil) tam hat klasöründeki orijinal.pdf kullanılır (H623)."""
+    y = _hat_pdf(deck_id) if fi == 0 else None
+    yol = _pdf_indir_api(deck_id, f, fi)
+    return yol or y
+
+
+def _hat_pdf(deck_id: str) -> Path | None:
+    m = re.search(r"k\d+-\d+", deck_id or "")
+    if not m:
+        return None
+    p = _kok.PROJE / "meds_temp" / "ogrenci_ders" / m.group(0) / "orijinal.pdf"
+    return p if p.is_file() else None
+
+
+def _pdf_indir_api(deck_id: str, f: dict, fi: int) -> Path | None:
     ON = Path(os.environ.get("PDF_ONBELLEK", str(KOK / ".pdf_onbellek")))
     ON.mkdir(parents=True, exist_ok=True)
     try:
@@ -636,6 +651,11 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
         md = KOK / "metin" / f"{key}.md"
         if md.exists() and cj.get("mdSha1") == hashlib.sha1(md.read_bytes()).hexdigest() and len(cj.get("p") or []) == len(paras):
             capa_p = cj["p"]
+        elif not os.environ.get("MEDS_CAPASIZ_IZIN"):
+            # H623: metin düzeltmesinden sonra çapa bayatsa önceden SESSİZCE çapasız yola düşülüyordu (takip T5). Artık durur.
+            raise RuntimeError(f"çapa bayat: capa/{key}.json mdSha1 ya da paragraf sayısı metinle tutmuyor — metin düzeltildiyse "
+                               f"önce çapayı eşitleyin (klip_tasi.py / duzeltme_katman.py ya da capa_dogrula.py ile denetleyip "
+                               f"mdSha1'i yenileyin), sonra pdf_isaret --zorla. Bilerek çapasız: MEDS_CAPASIZ_IZIN=1")
     hiz_hash = hashlib.sha1(hz_yol.read_bytes() + (capa_yol.read_bytes() if capa_p else b"")).hexdigest()
     hedef = CIKTI / f"{key}.json"
     if not zorla and hedef.exists():
@@ -739,13 +759,13 @@ def main() -> int:
     ap.add_argument("--zorla", action="store_true", help="güncel olanları da yeniden üret")
     a = ap.parse_args()
     keys = a.key or sorted(p.stem for p in (KOK / "hizalama").glob("*.json"))
-    kotu = 0
+    kotu = hata = 0
     for key in keys:
         try:
             r = ders_isle(key, a.kuru, a.zorla)
         except Exception as e:  # tek ders hatası diğerlerini durdurmasın
             print(f"{key}: HATA {e}")
-            kotu += 1
+            hata += 1
             continue
         if r and r.get("guncel"):
             continue
@@ -755,7 +775,7 @@ def main() -> int:
         durum = "" if r["kapsama"] >= a.esik else "  << EŞİK ALTI"
         kotu += bool(durum)
         print(f"{key}: kapsama {r['kapsama']:.0%} {r['say']}{durum}")
-    return 1 if kotu and a.esik else 0
+    return 1 if hata or (kotu and a.esik) else 0
 
 
 if __name__ == "__main__":
