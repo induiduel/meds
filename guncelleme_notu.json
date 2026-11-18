@@ -1,13 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 850,
+ "onem": 851,
  "baslik": "KMB videoları MP4 olarak indirilebilir",
  "maddeler": [
-  "KMB dersleri: Üretral kateter dersinin tüm ders videosu ve basamak filmi artık MP4 olarak indirilebiliyor (ders sayfasındaki \"Tüm ders MP4\" ve \"Basamak filmi MP4\" düğmeleri). Videolar yalnız anlatımdan oluşur.",
-  "Video dışa aktarım betiği: geçici çalışma dosyaları artık eşitlenen klasöre yazılmıyor."
+  "KMB dersleri: Nazogastrik sonda ve Üretral kateter derslerinin tüm ders videosu ve basamak filmi MP4 olarak indirilebiliyor (ders sayfasındaki \"Tüm ders MP4\" ve \"Basamak filmi MP4\" düğmeleri). Videolar yalnız anlatımdan oluşur."
  ],
  "eklenen": [
-  "KMB tüm ders ve basamak filmi MP4 indirme"
+  "KMB tüm ders ve basamak filmi MP4 indirme (01, 02)"
  ],
  "degisen": [],
  "duzeltilen": [],
