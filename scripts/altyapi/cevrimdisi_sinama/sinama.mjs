@@ -41,7 +41,9 @@ await t.ev(`${M}.katalogYenile(true)`);
 const kat = await t.ev(`${M}.durumAl().katalog.map(p=>({id:p.id,modul:p.modul,bayt:p.bayt}))`);
 const ilk = (m) => kat.find((p) => p.modul === m)?.id;
 const PAKETLER = (process.env.PAKETLER || [...kat.filter((p) => p.modul === 'veri').map((p) => p.id), 'db:sorular', 'ogren:deck-urinary-obstruction',
-  ilk('cozucu'), ilk('onem'), ilk('alt'), ilk('sesli'), kat.find((p) => p.id === 'sayfa:tbg-kampi')?.id].filter(Boolean).join(',')).split(',');
+  ilk('cozucu'), ilk('onem'), ilk('alt'), ilk('sesli'), kat.find((p) => p.id === 'sayfa:tbg-kampi')?.id,
+  // Kurul 2 branşı (H599): çözücü + en önemliler
+  kat.find((p) => /^cozucu:k2noroloji:/.test(p.id))?.id, kat.find((p) => /^onem:k2noroloji:/.test(p.id))?.id].filter(Boolean).join(',')).split(',');
 fs.writeFileSync(`${OUT}/paketler.json`, JSON.stringify(PAKETLER));
 if (!process.env.ATLA_INDIR) {
   console.log('İndiriliyor:', PAKETLER.join(' '));
@@ -64,7 +66,11 @@ const sesli = PAKETLER.find((x) => x.startsWith('sesli:'))?.slice(6);
 const ROTALAR = (process.env.ROTALAR || ['/', '/bugun', '/ogren', deste && `/ogren/${deste}`, '/sorular', '/cikmis', '/calis', '/test', '/sinav-calisma', '/kartlar',
   '/sozluk', '/hastaliklar', '/notlar', '/ozetler', '/spotlar', '/en-onemliler', '/soru-cozucu', '/alternatif-cozucu', '/kazanimlar', '/ornek-sorular',
   '/saglik', '/canliders', sesli && `/canliders/${sesli}`, '/kamp', '/patoloji-check-up', '/genetik-check-up', '/olasi-sorular', '/gecmis-kurullar',
-  '/istatistik', '/bitirdiklerim', '/ayarlar', '/harita', '/ara/apoptoz', '/cevrimdisi'].filter(Boolean).join(',')).split(',');
+  '/istatistik', '/bitirdiklerim', '/ayarlar', '/harita', '/ara/apoptoz', '/cevrimdisi',
+  // Site haritasından sonra eklenen sayfalar (2026-11-17, H599)
+  '/ders-merkezi', '/soru-merkezi', '/kamp-merkezi', '/kaynak-merkezi', '/ek-moduller', '/ek-moduller/yuruyus-kampcilik', '/kmb', '/hucrem', '/oyunlar',
+  '/cikmis-cozucu', '/son-prova', '/sinav-plani', '/takvim', '/program', '/zihin-haritasi', '/soru-haritasi', '/yanlislarim', '/soru-aktar', '/notlarim',
+  '/basarimlar', '/oncelikli-dersler', '/havuz', '/yardim', '/soru-cozucu?brans=k2noroloji', '/en-onemliler?brans=k2noroloji'].filter(Boolean).join(',')).split(',');
 const HATA_RE = /(yüklenemedi|yuklenemedi|bir hata|hata oluştu|başarısız|Failed to fetch|bağlantı kurulamadı|cihazında yok|NetworkError|Something went wrong)/i;
 const rapor = [];
 for (const r of ROTALAR) {

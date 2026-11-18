@@ -22,6 +22,12 @@ export function sayfaPaketleri(adres: string, katalog: Paket[]): string[] {
   if (yol === '/ogren') return onek('ogren:');
   if ((m = yol.match(/^\/canliders\/(.+)$/))) return [`sesli:${decodeURIComponent(m[1])}`];
   if (yol === '/canliders') return onek('sesli:');
+  // v15 ders ayrıntısı (/dersler/ders/kurulN/<key>): dersin sesli paketi (ara soru, analiz, çıkmış ekleriyle)
+  if ((m = yol.match(/^\/ders\/(.+)$/))) return [`sesli:${decodeURIComponent(m[1])}`];
+  // Ek modüller ve KMB (H599)
+  if ((m = yol.match(/^\/ek-moduller\/([^/]+)/))) return tek(`ekmodul:${decodeURIComponent(m[1])}`);
+  if (yol === '/ek-moduller') return onek('ekmodul:');
+  if (yol === '/kmb' || yol.startsWith('/kmb/')) return tek('sayfa:kmb');
   if (yol === '/soru-cozucu') return q('ders') ? tek(`cozucu:${brans}:${q('ders')}`) : onek(`cozucu:${brans}:`);
   // Çıkmış çözücü: paket soruları branşın çözücü derslerinden gelir → branşın tüm çözücü paketleri
   if (yol === '/cikmis-cozucu') return q('brans') ? onek(`cozucu:${q('brans')}:`) : onek('cozucu:');

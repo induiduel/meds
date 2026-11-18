@@ -32,14 +32,16 @@ export interface Paket {
   bagimli?: string[];
   /** İsteğe bağlı öneri: aynı dersin öteki modüllerdeki paketleri (Öğren dersi ↔ soru çözücü / en önemliler) */
   ilgili?: string[];
+  /** Kurul numarası (soru çözücü / en önemliler): istemci ders birimini aynı kurulun sesli dersiyle eşler, kurul süzgecinde gösterir */
+  kurul?: number;
   /** Tür başına sürüm: sessiz indirilen paket yalnız ses değişince "güncelleme var" göstermesin */
   surumT?: { veri: string; ses?: string; pdf?: string };
 }
 
 /** Dosya türü (istemci paketMotoru.dosyaTuru ile aynı kural) */
 export const dosyaTuru = (u: string): 'ses' | 'pdf' | 'veri' =>
-  /\.mp3($|\?)/i.test(u) || /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses)\//.test(u) ? 'ses'
-    : u.startsWith('/api/lecture-pdf/') || u.startsWith('/vendor/pdfjs/') ? 'pdf' : 'veri';
+  /\.mp3($|\?)/i.test(u) || /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses|ek-modul\/ses)\//.test(u) ? 'ses'
+    : u.startsWith('/api/lecture-pdf/') || u.startsWith('/vendor/pdfjs/') || /^\/ek_moduller\/.+\.pdf$/i.test(u) ? 'pdf' : 'veri';
 
 /** PDF.js'in çizim için istediği yardımcı dosyalar (yazı tipi, wasm, renk profili); server.ts /vendor/pdfjs'ten sunar */
 const PDFJS_YARDIMCI = [
@@ -58,7 +60,23 @@ const BRANS: Record<string, string> = {
   patoloji: 'Patoloji', enfeksiyon: 'Enfeksiyon', uroloji: 'Üroloji', genetik: 'Genetik',
   halksagligi: 'Halk Sağlığı', kadindogum: 'Kadın Doğum', farmakoloji: 'Farmakoloji',
 };
-const ASISTAN_ONEK: Record<string, string> = { e: 'enfeksiyon', u: 'uroloji', g: 'genetik', h: 'halksagligi', k: 'kadindogum', f: 'farmakoloji' };
+/**
+ * Kurul 2+ branşları (H599): veri klasörü k<kurul><slug>_cozucu|_onem oluştuğu anda kataloğa girer — ön yüzdeki sekme kuralıyla
+ * (components/spots/brans.ts) aynı. Eskiden yalnız yukarıdaki 7 Kurul 1 branşı sayılıyordu: Kurul 2 soru çözücü / en önemliler /
+ * hoca soruları paket olarak hiç listelenmiyor, klipleri internetsiz çalmıyordu.
+ */
+function tumBranslar(): Record<string, string> {
+  const out: Record<string, string> = { ...BRANS };
+  const ek: Record<string, string> = { patolojihoca: 'Patoloji Hoca', hocaara: 'Hoca sorabilir' };
+  for (const b of (jsonOku(path.join(SRC_DATA, 'dersler', 'branslar.json'))?.branslar || [])) ek[b.slug] ??= b.ad || b.kisa; // tam ad: istemci grupAdi() ile sesli dersin branş adına denk gelir (ders birimi eşlemesi)
+  let adlar: string[] = [];
+  try { adlar = fs.readdirSync(SRC_DATA); } catch { /* veri klasörü yok */ }
+  for (const ad of adlar.sort()) {
+    const m = /^(k([2-6])([a-z]+))_(onem|cozucu)$/.exec(ad);
+    if (m && !out[m[1]]) out[m[1]] = ek[m[3]] || m[3];
+  }
+  return out;
+}
 
 const jsonOku = (p: string): any => {
   try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; }
@@ -112,8 +130,24 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     });
   };
   const ses = (u: string, dosya: string, v?: string): PDosya => ({ u, v, b: boyut(dosya) });
+  const yuru = (kok: string, rel = ''): string[] => {
+    let out: string[] = [];
+    let adlar: fs.Dirent[] = [];
+    try { adlar = fs.readdirSync(path.join(kok, rel), { withFileTypes: true }); } catch { return out; }
+    for (const a of adlar) {
+      if (a.name.startsWith('.')) continue;
+      const r = rel ? `${rel}/${a.name}` : a.name;
+      if (a.isDirectory()) out = out.concat(yuru(kok, r)); else out.push(r);
+    }
+    return out;
+  };
+  const nmKok = process.env.MEDS_NODE_MODULES || path.join(KOK, 'node_modules');
+  const pdfjsYardimci = (): PDosya[] => PDFJS_YARDIMCI.map((f) => ({ u: `/vendor/pdfjs/${f}`, b: boyut(path.join(nmKok, 'pdfjs-dist', f)) }));
 
-  for (const [b, bAd] of Object.entries(BRANS)) {
+  const BRANSLAR = tumBranslar();
+  for (const [b, bAd] of Object.entries(BRANSLAR)) {
+    const kurul = Number(/^k([2-6])/.exec(b)?.[1] || 1);
+    const kEk = kurul > 1 ? `Kurul ${kurul} · ` : '';
     // Soru çözücü: set başına (ders JSON + dizin + Öğren eşlemesi + klipler + ortak klipler)
     const cDizin = jsonOku(path.join(SRC_DATA, `${b}_cozucu`, 'index.json'));
     if (cDizin?.dersler) {
@@ -126,7 +160,7 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
         const klipler = Object.entries<any>(ders.klip || {}).map(([k, x]) =>
           ses(`/api/cozucu-ses/${b}/ema/${klasor}/${k}.mp3`, path.join(DATA, `${b}_cozucu`, 'ses', klasor, `${k}.mp3`), x.v));
         const set = d.setSay > 1 ? ` · Set ${d.set}/${d.setSay}` : '';
-        ekle({ id: `cozucu:${b}:${d.kod}`, modul: 'cozucu', grup: bAd, baslik: `Ders ${d.no} · ${d.baslik}`, alt: `${d.soru} soru${set}`, sira: i },
+        ekle({ id: `cozucu:${b}:${d.kod}`, modul: 'cozucu', grup: bAd, baslik: `Ders ${d.no} · ${d.baslik}`, alt: `${kEk}${d.soru} soru${set}`, sira: i, kurul },
           [...veri(`${b}_cozucu/${d.kod}.json`), ...veri(`${b}_cozucu/index.json`), ...veri(`cozucu_ogren/${b}.json`), ...klipler, ...ortak]);
       });
     }
@@ -135,10 +169,10 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     if (oDizin?.dersler) {
       oDizin.dersler.forEach((d: any, i: number) => {
         const asistan = jsonOku(path.join(SRC_DATA, `${b}_asistan`, `${d.kod}.json`));
-        const aBrans = ASISTAN_ONEK[d.kod[0]] || 'patoloji';
+        // Asistan klasörü branşın kendi klasörüdür (sunucu ucu koddan aynı klasörü çözer: patolojiAsistan.ts::bransKlasor)
         const klipler = Object.entries<any>(asistan?.klip || {}).map(([k, x]) =>
-          ses(`/api/patoloji-asistan/ses/${d.kod}/${k}.mp3`, path.join(DATA, `${aBrans}_asistan`, 'ses', d.kod, `${k}.mp3`), x.v));
-        ekle({ id: `onem:${b}:${d.kod}`, modul: 'onem', grup: bAd, baslik: `Ders ${d.no} · ${d.baslik}`, alt: `${d.madde} madde${asistan ? ' · sesli asistan' : ''}`, sira: i },
+          ses(`/api/patoloji-asistan/ses/${d.kod}/${k}.mp3`, path.join(DATA, `${b}_asistan`, 'ses', d.kod, `${k}.mp3`), x.v));
+        ekle({ id: `onem:${b}:${d.kod}`, modul: 'onem', grup: bAd, baslik: `Ders ${d.no} · ${d.baslik}`, alt: `${kEk}${d.madde} madde${asistan ? ' · sesli asistan' : ''}`, sira: i, kurul },
           [...veri(`${b}_onem/${d.kod}.json`), ...veri(`${b}_onem/index.json`), ...veri(`${b}_asistan/${d.kod}.json`), ...veri(`${b}_asistan/index.json`),
             ...veri(`cozucu_ogren/${b}.json`), ...klipler]);
       });
@@ -151,7 +185,7 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     const ders = jsonOku(path.join(SRC_DATA, 'patoloji_cozucu_alt', `${d.kod}.json`));
     const klipler = (ders?.sorular || []).filter((s: any) => s.mp3).map((s: any) =>
       ses(`/api/patoloji-cozucu-alt/ses/${d.kod}/${s.mp3}`, path.join(DATA, 'patoloji_cozucu_alt', 'ses', d.kod, s.mp3), s.h));
-    ekle({ id: `alt:${d.kod}`, modul: 'alt', grup: 'Patoloji', baslik: `Ders ${d.no} · ${d.baslik}`, alt: `${d.soru} soru`, sira: i },
+    ekle({ id: `alt:${d.kod}`, modul: 'alt', grup: 'Patoloji', baslik: `Ders ${d.no} · ${d.baslik}`, alt: `${d.soru} soru`, sira: i, kurul: 1 },
       [...veri(`patoloji_cozucu_alt/${d.kod}.json`), ...veri('patoloji_cozucu_alt/index.json'), ...klipler]);
   });
 
@@ -170,9 +204,7 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     } catch { /* eşleme yok */ }
     if (pdfler.length) {
       // Görüntüleyici önce eşlemeyi (dosya listesi + slayt→sayfa) ve PDF'li deste listesini ister; PDF.js yardımcıları da gerekir
-      const nm = process.env.MEDS_NODE_MODULES || path.join(KOK, 'node_modules');
-      pdfler.push({ u: `/api/lecture-pdf/deck/${encodeURIComponent(id)}`, b: 4_000 }, { u: '/api/lecture-pdf/decks', b: 60_000 },
-        ...PDFJS_YARDIMCI.map((f) => ({ u: `/vendor/pdfjs/${f}`, b: boyut(path.join(nm, 'pdfjs-dist', f)) })));
+      pdfler.push({ u: `/api/lecture-pdf/deck/${encodeURIComponent(id)}`, b: 4_000 }, { u: '/api/lecture-pdf/decks', b: 60_000 }, ...pdfjsYardimci());
     }
     const grup = String(d.discipline || 'Diğer').split('/')[0].trim();
     ekle({ id: `ogren:${id}`, modul: 'ogren', grup, baslik: d.shortTitle || d.title, alt: `${d.slideCount} adım${sesler.length ? ' · sesli' : ''}${pdfler.length ? ' · PDF' : ''}`, sira: i },
@@ -188,6 +220,56 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     ekle({ id: `kamp:${kurul}:${brans}`, modul: 'veri', grup: 'Kurul kampı', baslik: `Kurul ${kurul} · ${kamp?.baslik || brans}`,
       alt: `${(kamp?.anlatim || []).length} anlatım · ${(kamp?.deneme || []).length} deneme sorusu`, sira: Number(kurul) },
     [...veri(k.slice('src/data/'.length)), ...klipler]);
+  }
+  // Ek modüller (H599; /dersler/ek-moduller): modül başına veri parçaları + görseller (public/ek_moduller/<modül>/) + EMA klipleri
+  // (klip.json → /api/ek-modul/ses) + PDF kitapçıkları ("PDF ile" kipi; PDF.js yardımcılarıyla). Eskiden yalnız JSON'u uygulama
+  // paketine düşüyordu: internetsiz ders sessiz, görselsiz ve PDF'sizdi.
+  (jsonOku(path.join(SRC_DATA, 'ek_moduller', 'index.json'))?.moduller || []).forEach((md: any, i: number) => {
+    const id = String(md.id || '');
+    if (!/^[a-z0-9-]{2,40}$/.test(id)) return;
+    const veriler = Object.keys(m.veri).filter((k) => k.startsWith(`src/data/ek_moduller/${id}/`)).flatMap((k) => veri(k.slice('src/data/'.length)));
+    const acik = yuru(path.join(DIST, 'ek_moduller', id)).map((r) => {
+      // Açık dosyaların adı özetsiz: sürüm boyut + değişme anından (dosya değişince paket "güncelleme var" gösterir, yeniden iner)
+      const tam = path.join(DIST, 'ek_moduller', id, r);
+      let v = '';
+      try { const st = fs.statSync(tam); v = `${st.size}-${Math.floor(st.mtimeMs / 1000)}`; } catch { /* yok */ }
+      return { u: `/ek_moduller/${id}/${r.split('/').map(encodeURIComponent).join('/')}`, b: boyut(tam), v };
+    });
+    const klipler = Object.entries<any>(jsonOku(path.join(SRC_DATA, 'ek_moduller', id, 'klip.json')) || {}).map(([k, x]) =>
+      ses(`/api/ek-modul/ses/${id}/${k}.mp3`, path.join(DATA, 'ek_moduller', 'ses', id, `${k}.mp3`), x?.v));
+    const pdfVar = acik.some((d) => /\.pdf$/i.test(d.u));
+    ekle({ id: `ekmodul:${id}`, modul: 'veri', grup: 'Ek modüller', baslik: md.ad || id, alt: `${md.tur || 'Ek modül'} · Kurul ${md.kurul}${klipler.length ? ' · sesli' : ''}${pdfVar ? ' · PDF' : ''}`, sira: i },
+      [...veri('ek_moduller/index.json'), ...veriler, ...acik, ...klipler, ...(pdfVar ? pdfjsYardimci() : [])]);
+  });
+  // İndirilebilir PDF notlar ve kitapçıklar (public/pdf; Ders çalış › PDF notlar — H599): sekmede açılan dosyalar, sw.js /pdf/ dalı sunar
+  {
+    const pdfNot = yuru(path.join(DIST, 'pdf')).filter((r) => /\.(pdf|html)$/i.test(r)).map((r) => {
+      const tam = path.join(DIST, 'pdf', r);
+      let v = '';
+      try { const st = fs.statSync(tam); v = `${st.size}-${Math.floor(st.mtimeMs / 1000)}`; } catch { /* yok */ }
+      return { u: `/pdf/${r.split('/').map(encodeURIComponent).join('/')}`, b: boyut(tam), v };
+    });
+    if (pdfNot.length) ekle({ id: 'veri:pdfnot', modul: 'veri', grup: 'Başvuru', baslik: 'PDF notlar ve kitapçıklar', alt: `${pdfNot.length} dosya: sayısal notlar, sınav kitapçığı, çözümlü kitapçık`, sira: 1 }, pdfNot);
+  }
+  // KMB görsel sesli asistan (H599; /dersler/kmb): beceri JSON'ları + ses zamanlaması + Lottie sahneleri + EMA klipleri
+  // (data/kmb_cozucu/ses/<kod>/). Klip listesi klasörden okunur (ses_<kod>.json yalnız adım kliplerini taşır; hedef/soru klipleri de var)
+  {
+    const kmbVeri = Object.keys(m.veri).filter((k) => k.startsWith('src/data/kmb/')).flatMap((k) => veri(k.slice('src/data/'.length)));
+    const kmbKlip: PDosya[] = [];
+    for (const k of Object.keys(m.veri)) {
+      const mm = /^src\/data\/kmb\/ses_([0-9a-z]+)\.json$/.exec(k);
+      if (!mm) continue;
+      const ozetler = jsonOku(path.join(KOK, k)) || {};
+      for (const r of yuru(path.join(DATA, 'kmb_cozucu', 'ses', mm[1]))) {
+        if (!/^[a-zA-Z0-9-]{1,40}\.mp3$/.test(r)) continue;
+        const ad = r.replace(/\.mp3$/, '');
+        kmbKlip.push(ses(`/api/cozucu-ses/kmb/ema/${mm[1]}/${ad}.mp3`, path.join(DATA, 'kmb_cozucu', 'ses', mm[1], r), ozetler[ad]?.h));
+      }
+    }
+    if (kmbVeri.length) {
+      ekle({ id: 'sayfa:kmb', modul: 'veri', grup: 'Ek modüller', baslik: 'KMB görsel sesli asistan', alt: `Klinik mesleki beceri: adım adım sahne, video, sınav${kmbKlip.length ? ' · sesli' : ''}`, sira: 50 },
+        [...kmbVeri, ...kmbKlip]);
+    }
   }
   // TBG sınav kampı (/genetik-check-up): kalıp tabloları uygulama kodunda; Ders 7 sesli asistanı (g07) klipleri burada,
   // anlatımın kendisi sesli ders (k1-70) olarak bağımlı paketle iner
@@ -280,12 +362,14 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
   const yaziTipi = [...new Set(html.match(/https:\/\/fonts\.googleapis\.com\/css2\?[^"'\s]+/g) || [])].map((u) => ({ u: u.replace(/&amp;/g, '&'), b: 250_000 }));
   ekle({ id: 'uygulama', modul: 'uygulama', grup: 'Uygulama', baslik: 'Uygulama dosyaları', alt: 'Tüm sayfaların kodu, görünüm ve yazı tipleri', sira: 0, zorunlu: true },
     [...m.kod.filter((f) => !/composer_model/.test(f)).map(parca), ...kucuk.map(parca), ...dizinler.map(parca), ...simgeler, ...yaziTipi,
+      // Ders programının sınıfça düzenlenen hâli (küçük, herkese açık JSON): internetsiz program da güncel düzeni göstersin (H599)
+      ...[1, 2, 3, 4, 5, 6].map((k) => ({ u: `/api/ders-programi/duzen?kurul=${k}`, b: 2_000 })),
       { u: '/index.html', b: boyut(path.join(DIST, 'index.html')), v: m.olusturma }]);
   if (buyuk.length) ekle({ id: 'veri:diger', modul: 'veri', grup: 'Başvuru', baslik: 'Diğer içerik', alt: 'Kalan büyük veri dosyaları', sira: 9 }, buyuk.map(parca));
 
   // İlgili paketler: cozucu_ogren eşlemesi (çözücü dersi → hangi Öğren destesinin slaytlarına dayanıyor). Bir destenin
   // eşlemelerdeki payı ≥%30 ise o ders "ilgili"; iki yönlü yazılır (deste ↔ çözücü, en önemliler)
-  for (const b of Object.keys(BRANS)) {
+  for (const b of Object.keys(BRANSLAR)) {
     const e = jsonOku(path.join(SRC_DATA, 'cozucu_ogren', `${b}.json`));
     if (!e?.desteler || !e?.dersler) continue;
     for (const [kod, x] of Object.entries<any>(e.dersler)) {

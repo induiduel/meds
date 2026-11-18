@@ -234,7 +234,9 @@ function TopluIndir({ katalog, kapat }: { katalog: Paket[]; kapat: () => void })
   const [secim, setSecim] = useState<Secim>({ ses: ayar.ses, pdf: ayar.pdf });
   useEffect(() => { if (!grupSec.length && gruplar.length) setGrupSec(gruplar.slice(0, 1)); }, [gruplar]); // eslint-disable-line react-hooks/exhaustive-deps
   const ac = <T,>(arr: T[], x: T) => (arr.includes(x) ? arr.filter((y) => y !== x) : [...arr, x]);
-  const secilen = katalog.filter((p) => modulSec.includes(p.modul) && (p.modul === 'db' || p.modul === 'veri' || grupSec.includes(p.grup)));
+  // Branş listesinde görünmeyen gruplar (yalnız Öğren destesi olan branşlar) da "Her şey"e girer: hiçbir paket dışarıda kalmaz
+  const hepsiSecili = gruplar.length > 0 && gruplar.every((g) => grupSec.includes(g)) && MODS.every((m) => modulSec.includes(m.id));
+  const secilen = katalog.filter((p) => modulSec.includes(p.modul) && (hepsiSecili || p.modul === 'db' || p.modul === 'veri' || grupSec.includes(p.grup)));
   const eksik = secilen.filter((p) => paketDurumu(p.id) !== 'tamam');
   const bayt = eksik.reduce((a, p) => a + secimliBayt(p, secim), 0);
   const sesB = eksik.reduce((a, p) => a + (p.ek?.ses?.b || 0), 0);
@@ -246,7 +248,13 @@ function TopluIndir({ katalog, kapat }: { katalog: Paket[]; kapat: () => void })
         <button type="button" className="cv15-b is-ikon" onClick={kapat} aria-label="Toplu indirmeyi kapat"><X aria-hidden /></button>
       </header>
       <fieldset className="cv15-alan"><legend className="v15-label">Branşlar</legend>
-        <div className="cv15-cipler">{gruplar.map((g) => <button key={g} type="button" className={`cv15-cip${grupSec.includes(g) ? ' is-on' : ''}`} aria-pressed={grupSec.includes(g)} onClick={() => setGrupSec(ac(grupSec, g))}>{g}</button>)}</div>
+        <div className="cv15-cipler">
+          <button type="button" className={`cv15-cip${hepsiSecili ? ' is-on' : ''}`} aria-pressed={hepsiSecili}
+            onClick={() => { if (hepsiSecili) { setGrupSec(gruplar.slice(0, 1)); } else { setGrupSec(gruplar); setModulSec(MODS.map((m) => m.id)); } }}>
+            Her şey (tüm site)
+          </button>
+          {gruplar.map((g) => <button key={g} type="button" className={`cv15-cip${grupSec.includes(g) ? ' is-on' : ''}`} aria-pressed={grupSec.includes(g)} onClick={() => setGrupSec(ac(grupSec, g))}>{g}</button>)}
+        </div>
       </fieldset>
       <fieldset className="cv15-alan"><legend className="v15-label">İçerik</legend>
         <div className="cv15-cipler">{MODS.map((m) => <button key={m.id} type="button" className={`cv15-cip${modulSec.includes(m.id) ? ' is-on' : ''}`} aria-pressed={modulSec.includes(m.id)} onClick={() => setModulSec(ac(modulSec, m.id))}>{m.ad}</button>)}</div>

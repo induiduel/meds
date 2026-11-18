@@ -14,15 +14,25 @@ for (const p of kat.paketler) {
 const ilkDeste = kat.paketler.find((p) => p.modul === 'ogren').id.slice(6);
 const cd = await (await fetch('http://localhost:3000/api/canli-ders')).json().catch(() => null);
 const cdKey = (cd?.dersler || cd || [])[0]?.key;
+// Site haritasından sonra eklenen sayfalar (2026-11-17): merkezler, ek modüller, KMB, Son Prova, oyunlar, plan/takip ekranları
+const emKat = await (await fetch('http://localhost:3000/api/ek-modul/katalog')).json().catch(() => null);
+const cdK2 = (cd?.dersler || cd || []).find((d) => /^k2-/.test(d.key))?.key;
+const YENI = ['/ders-merkezi', '/soru-merkezi', '/kamp-merkezi', '/kaynak-merkezi', '/ek-moduller', '/ek-moduller/yuruyus-kampcilik', '/kmb', '/hucrem',
+  '/oyunlar', '/cikmis-cozucu', '/son-prova', '/sinav-plani', '/takvim', '/program', '/zihin-haritasi', '/soru-haritasi', '/yanlislarim', '/soru-aktar',
+  '/notlarim', '/basarimlar', '/oncelikli-dersler', '/video-ders', '/topluluk', '/yardim', '/havuz', '/bildirimler',
+  '/soru-cozucu?brans=k2noroloji', '/en-onemliler?brans=k2noroloji', cdK2 && `/ders/${cdK2}`, cdK2 && `/canliders/${cdK2}`];
+const YENI_ROTALAR = YENI;
 const ROTALAR = (process.env.ROTALAR || ['/', '/bugun', '/ogren', `/ogren/${ilkDeste}`, '/sorular', '/cikmis', '/calis', '/test', '/sinav-calisma', '/kartlar',
   '/sozluk', '/hastaliklar', '/notlar', '/ozetler', '/spotlar', '/en-onemliler', '/soru-cozucu', '/alternatif-cozucu', '/kazanimlar', '/ornek-sorular',
   '/saglik', '/canliders', cdKey && `/canliders/${cdKey}`, '/kamp', '/patoloji-check-up', '/genetik-check-up', '/olasi-sorular', '/gecmis-kurullar',
   '/istatistik', '/bitirdiklerim', '/ayarlar', '/siralama', '/harita', '/muzik', '/ses-kayitlari', '/kitapcik', '/guncellemeler', '/asistan', '/ara/apoptoz',
-  '/cevrimdisi'].filter(Boolean).join(',')).split(',');
+  '/cevrimdisi', ...YENI_ROTALAR].filter(Boolean).join(',')).split(',');
 const t = await tarayici({ temiz: true });
+const gizli = (fs.readFileSync(new URL('../../../.env', import.meta.url), 'utf8').match(/^MEDS_PANEL_SECRET=(.*)$/m) || [])[1]?.trim().replace(/^"|"$/g, '');
 let istekler = [];
 t.on((m, p) => { if (m === 'Network.requestWillBeSent') istekler.push({ u: p.request.url, tur: p.type, y: p.request.method }); });
 await t.send('Page.navigate', { url: BASE + '/favicon.ico' }); await sleep(700); await t.ev(SEED);
+if (gizli) await t.ev(`fetch('/api/ai-test/oturum',{method:'POST',headers:{'x-panel-secret':${JSON.stringify(gizli)}}}).then(r=>r.status)`);
 const rapor = {}; const ham = {};
 for (const r of ROTALAR) {
   istekler = [];

@@ -91,3 +91,18 @@ Sesli ders paketi (`sesli:<key>`, `canliDersCevrimdisi.ts`) artık ses + PDF + a
   arka planda iner (oturumda ders başına bir kez; süren indirme varsa dokunmaz).
 - Sınama: `DERS=<key> node scripts/altyapi/cevrimdisi_sinama/sesli_ek.mjs` (vekil :3100 açık olmalı). Yeni katman eklerken üç yer
   birlikte: `cdEkDosyalar()` satırı, sw.js dalı, `sesli_ek.mjs` denemesi.
+
+## 6. Kapsam turu (2026-11-17, H599)
+
+Kataloğun branş listesi koda yazılı 7 Kurul 1 branşıydı; site haritasından sonra eklenen sayfalar da sınama düzeneğinde yoktu.
+
+| Eksik | Paket | Not |
+|---|---|---|
+| Kurul 2+ soru çözücü / en önemliler / hoca soruları | `cozucu:k<N><slug>:<kod>`, `onem:k<N><slug>:<kod>` | `tumBranslar()` `src/data/k<N><slug>_cozucu|_onem` klasörlerinden keşfeder (ön yüz `brans.ts` ile aynı kural); paket `kurul` taşır, ders birimi aynı kurulun sesli dersine bağlanır |
+| Ek modüller (`/dersler/ek-moduller`) | `ekmodul:<id>` | veri parçaları + `public/ek_moduller/<id>/` (görsel, PDF) + `/api/ek-modul/ses` klipleri + PDF.js yardımcıları; sw.js `/ek_moduller/` dalı (Range/206) |
+| KMB görsel sesli asistan (`/dersler/kmb`) | `sayfa:kmb` | beceri JSON + Lottie + `data/kmb_cozucu/ses/<kod>/` klipleri |
+| Tek kişilik oyunlar (Blitz, Hayatta kal, Görselli) | çözücü paketleri | sunucuya ulaşılamazsa `services/oyunYerel.ts` cihazdaki setlerden aynı kuralla soru kurar; canlı oda internet ister |
+
+- Yeni ses ucu eklenince ses kalıbı ÜÇ yerde birlikte güncellenir: `cevrimdisiKatalog.ts::dosyaTuru`, `paketMotoru.ts::SES_RE`, `sw.js::PAKET_SES_RE`.
+- Yeni branş/kurul için koda dokunmak gerekmez; yeni **sayfa türü** eklenince: katalog paketi + `sayfaPaketleri.ts` + `envanter.mjs`/`sinama.mjs` rota listesi.
+- Toplu indir › "Her şey (tüm site)": bütün branşlar × bütün içerik türleri tek dokunuşla kuyruğa girer.

@@ -81,6 +81,9 @@ export function dersBirimleri(katalog: Paket[]): DersBirimi[] {
     let enPuan = 0;
     for (const b of birimler) {
       if (b.grup !== p.grup) continue;
+      // Aynı adlı branş birden çok kurulda var (Patoloji K1/K2): kurulu bilinen paket yalnız kendi kurulunun dersine bağlanır
+      const bk = b.uyeler.find((u) => u.kurul)?.kurul;
+      if (bk && p.kurul && bk !== p.kurul) continue;
       const bens = benzerlik(ad, b.baslik);
       const puan = (b.no === no ? 0.4 : 0) + bens;
       if (puan > enPuan && (bens >= 0.8 || (b.no === no && bens >= 0.45))) { en = b; enPuan = puan; }
@@ -91,7 +94,7 @@ export function dersBirimleri(katalog: Paket[]): DersBirimi[] {
   const tek = new Map<string, DersBirimi>();
   for (const p of bekleyen) {
     const { no, ad } = dersBasligi(p);
-    let k = `${p.grup}#${no || ad}`;
+    let k = `${p.grup}#${p.kurul || ''}#${no || ad}`;
     while (tek.get(k)?.uyeler.some((u) => u.modul === p.modul)) k += '+';
     let b = tek.get(k);
     if (!b) { b = { id: `ders:${k}`, grup: p.grup, no, baslik: ad, uyeler: [] }; tek.set(k, b); birimler.push(b); }

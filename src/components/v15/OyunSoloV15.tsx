@@ -51,8 +51,14 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
     if (getiriyor.current) return;
     getiriyor.current = true;
     const r = await safeJsonFetch<{ sorular: S[] }>(`/api/oyun/sorular?brans=${encodeURIComponent(brans)}${ders ? `&ders=${encodeURIComponent(ders)}` : ''}&n=20${mod === 'gorsel' ? '&gorsel=1' : ''}`);
+    // Sunucuya ulaşılamıyorsa (internetsiz): cihazdaki soru çözücü setlerinden aynı kuralla sorular kurulur (oyunYerel.ts)
+    if (!r.ok || !r.data) {
+      const yerel = await import('../../services/oyunYerel').then((m) => m.yerelOyunSorulari(brans, ders, 20, mod === 'gorsel')).catch(() => []);
+      getiriyor.current = false;
+      if (!yerel.length) { setHata(navigator.onLine ? 'Sorular alınamadı.' : 'Bu oyunun soruları cihazda yok. İnternet varken Çevrimdışı sayfasından bu dersin soru çözücüsünü indir.'); return; }
+      r.data = { sorular: yerel };
+    }
     getiriyor.current = false;
-    if (!r.ok || !r.data) { setHata('Sorular alınamadı.'); return; }
     const yeni = r.data.sorular.filter((x) => !goruldu.current.has(x.id));
     // havuz küçükse (tek ders) görülenleri sıfırla, oyun sürsün
     if (!yeni.length && r.data.sorular.length) { goruldu.current.clear(); setKuyruk((k) => [...k, ...r.data!.sorular]); return; }

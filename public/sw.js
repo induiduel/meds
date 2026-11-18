@@ -39,7 +39,7 @@ const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
 const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
 /** Çevrimdışı merkezi paketleri (src/services/cevrimdisi/paketMotoru.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler */
 const PAKET_CACHE = 'medsor-paket-v1';
-const PAKET_SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses)\//;
+const PAKET_SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses|ek-modul\/ses)\//;
 
 /** İndirilmemiş ses klibi internetsiz istenince verilen 0,4 sn'lik sessiz klip: oynatıcı hata vermez, akış sessiz sürer */
 const SESSIZ_KLIP = '/ses/sessiz.mp3';
@@ -362,6 +362,27 @@ self.addEventListener('fetch', (event) => {
 
   // Tarayıcı içi / eklenti protokollerini atla
   if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  // Ek modüllerin açık dosyaları (/ek_moduller/<modül>/…: görseller, PDF kitapçıkları — H599): çevrimdışı paketi cihaza
+  // yazdıysa oradan (PDF.js Range ister → 206). Eskiden .pdf hiçbir dala girmiyor, sekmede açılınca da uygulama kabuğu dönüyordu.
+  // /pdf/ (indirilebilir PDF notlar, kitapçıklar): aynı kural; pakette yoksa eskisi gibi doğrudan ağ (kabuk verilmez)
+  if (url.origin === self.location.origin && (url.pathname.startsWith('/ek_moduller/') || url.pathname.startsWith('/pdf/'))) {
+    event.respondWith((async () => {
+      if (!paketler) await (paketYukle || paketleriYukle());
+      const tur = /\.pdf$/i.test(url.pathname) ? 'application/pdf' : /\.svg$/i.test(url.pathname) ? 'image/svg+xml' : /\.html$/i.test(url.pathname) ? 'text/html; charset=utf-8' : 'application/octet-stream';
+      if (paketler.has(url.href)) {
+        const hit = await (await caches.open(PAKET_CACHE)).match(url.href);
+        if (hit) return aralikYaniti(req, hit, tur);
+      }
+      try {
+        return await fetch(req);
+      } catch (_) {
+        const yedek = await onbellekte(url.href);
+        return yedek ? aralikYaniti(req, yedek, tur) : new Response(null, { status: 503, headers: { 'X-Cevrimdisi': 'ag-yok' } });
+      }
+    })());
     return;
   }
 

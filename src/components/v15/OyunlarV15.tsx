@@ -94,8 +94,10 @@ export default function OyunlarV15() {
   useV15Baslik({ baslik: 'Oyunlar', alt: oda ? `Oda ${oda}${baslik ? ` · ${baslik}` : ''}` : 'Canlı soru yarışması' });
 
   useEffect(() => {
-    safeJsonFetch<{ kaynaklar: Kaynak[] }>('/api/oyun/kaynaklar').then((r) => {
-      const k = r.ok && r.data?.kaynaklar ? r.data.kaynaklar : [];
+    safeJsonFetch<{ kaynaklar: Kaynak[] }>('/api/oyun/kaynaklar').then(async (r) => {
+      // İnternetsiz: cihazdaki soru çözücü setleri kaynak olur (tek kişilik oyunlar; services/oyunYerel.ts)
+      const k = r.ok && r.data?.kaynaklar ? r.data.kaynaklar
+        : await import('../../services/oyunYerel').then((m) => m.yerelOyunKaynaklari()).catch(() => [] as Kaynak[]);
       setKaynaklar(k);
       if (k[0]) setBrans((b) => b || k[0].brans);
     });
