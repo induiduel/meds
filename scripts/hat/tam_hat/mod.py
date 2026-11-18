@@ -29,7 +29,7 @@ KATMANLAR = [
     ("terim_kisaltma", "terim + kısaltma katmanı (betik)", True, True),
     ("onem_listesi", "En önemlileri: önem listesi (spot_onem, sinav_asistani)", True, True),
     ("ornek_soru", "örnek sorular TEK kategori (genel + hoca üslubu soruları aynı dosyada, ornek_soru_kapi.py tek kapı) + sesli çözücü (hepsi) + EMA sesi", True, True),
-    ("ders_icerik", "ders içerik paketi (ders_icerik_uret.py, betik)", True, True),
+    ("ders_icerik", "ders içerik paketi (ders_icerik_uret.py, betik; bilgi kartı ÜRETİLMEZ — kullanıcı kararı 2026-11-18)", True, True),
     ("betik_tamamla", "LLM'siz katmanları tek komutta tamamla + eksik katman kapısı (betik_tamamla.py; yayın öncesi --denetle 0)", True, True),
     ("denetci", "betik kapıları + tek bağımsız denetçi", True, True),
     ("yayin", "commit + dagit.sh + canlı doğrulama", True, True),

@@ -117,7 +117,7 @@ def uret(key):
     for k, L in (('spotlar', spot), ('tablolar', tab), ('listeler', lis), ('kartlar', kart)): L.extend(ek.get(k, []))
     # Quiz/mini soru ÜRETİLMEZ (kullanıcı kararı 2026-11-17): paket yalnız hazır bilgiyi toplar, oyun/quiz yok.
     if not tab and ek.get('tablolarYok'): out['tablolarYok'] = ek['tablolarYok']  # kaynakta tablo yok: yazılı gerekçe (paketten_ek.py)
-    out['spotlar'] = spot; out['tablolar'] = tab; out['listeler'] = lis; out['kartlar'] = kart; out['quiz'] = []
+    out['spotlar'] = spot; out['tablolar'] = tab; out['listeler'] = lis; out['kartlar'] = []; out['quiz'] = []  # Bilgi kartı ÜRETİLMEZ (kullanıcı kararı 2026-11-18)
     # --- çıkmış soru konumları
     cj = os.path.join(R, 'data/sesli_anlatim/cikmis_konum', key + '.json')
     out['cikmis'] = len(J(cj)) if os.path.exists(cj) else 0

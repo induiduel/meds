@@ -91,7 +91,7 @@ def ek_uret(kisa: str) -> tuple[dict, list[dict]]:
             spot += [{"m": x, "n": s, "s": s, "bolum": b["baslik"]} for x in m]
         if len(m) >= 3:
             lis.append({"t": b["baslik"], "sira": "madde", "m": [{"m": x} for x in m], "n": s, "s": s})
-        kart.append({"o": b["baslik"], "a": " ".join(m[:3]), "c": "Bilgi paketi", "n": s, "s": s})
+        # bilgi kartı ÜRETİLMEZ (kullanıcı kararı 2026-11-18)
     # varlık = atomun sayfasını kapsayan bilgi paketinin başlığı (aynı konudaki atomlar tek kavram kartında toplanır)
     def varlik(a: dict) -> str:
         return next((b["baslik"] for b in bp if a.get("s") in (b.get("s") or [])), a.get("baslik", ""))

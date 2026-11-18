@@ -1,13 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 839,
- "baslik": "Sesli ders kayıtları sadeleştirildi",
+ "onem": 840,
+ "baslik": "Ders içerik paketi sadeleştirildi",
  "maddeler": [
-  "Sesli ders: Aile Hekimliğine Yaklaşım ve Kolinoseptör Bloke Edici İlaçlar derslerinde eski ses kayıtları kaldırıldı, yalnız en güncel ses kaldı."
+  "Ders içerik paketi: yeni derslerde bilgi kartları artık üretilmiyor; içerik hattı daha az yükle çalışıyor."
  ],
  "eklenen": [],
  "degisen": [
-  "2 dersin ses zaman kayıtları"
+  "İçerik hattı: bilgi kartı katmanı kapatıldı"
  ],
  "duzeltilen": [],
  "silinen": []

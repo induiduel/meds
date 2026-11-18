@@ -4,7 +4,7 @@ Kaynak dışı veri yazılmaz: her kayıt slayt/sayfa kaynağı taşır, boş/ya
 import json, os, sys, glob, re
 R = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
 # quiz (mini soru) ZORUNLU değil: kullanıcı kararı 2026-11-17 mini soru/quiz varsayılan kapalı, ders_icerik_uret.py quiz=[] yazar.
-ZORUNLU = ['terimler', 'hastaliklar', 'bilgiler', 'spotlar', 'tablolar', 'listeler', 'kartlar']
+ZORUNLU = ['terimler', 'hastaliklar', 'bilgiler', 'spotlar', 'tablolar', 'listeler']  # kartlar: 2026-11-18'den beri üretilmez (kullanıcı kararı)
 h = 0
 for key in sys.argv[1:]:
     p = os.path.join(R, 'src/data/ders_icerik', key + '.json')
