@@ -1,17 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 826,
-  "baslik": "SSS Tümörleri, OSS Farmakolojisi ve Nörogelişimsel Bozukluklar PDF'leri açılıyor",
+  "onem": 827,
+  "baslik": "Sesli soru çözücü: SSS Tümörleri, OSS Farmakolojisi ve Nörogelişimsel Bozukluklar derslerinin tüm örnek soruları",
   "maddeler": [
-    "Sesli derste bu üç dersin PDF'i artık uygulama içinde açılıyor.",
-    "Yeni ders PDF'siz yayına çıkamasın diye dağıtıma denetim eklendi."
+    "Sesli soru çözücü: üç dersin bütün örnek soruları (63, 61 ve 74 soru) ipucu, şık şık açıklama ve sesli çözümle çözücüye eklendi; her ders üç sete bölündü.",
+    "Ses: bu derslerin çözücü ve ara soru sesleri sunucuya eksiksiz yüklendi."
   ],
   "eklenen": [
-    "SSS Tümörleri sesli dersi",
-    "OSS Farmakolojisi sesli dersi",
-    "Nörogelişimsel Bozukluklar sesli dersi"
+    "SSS Tümörleri çözücüsünde 63 yeni soru",
+    "OSS Farmakolojisi çözücüsünde 61 yeni soru",
+    "Nörogelişimsel Bozukluklar çözücüsünde 74 yeni soru"
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Yeni derslerin çözücü sesleri sunucuda eksikti"
+  ],
   "silinen": []
 }

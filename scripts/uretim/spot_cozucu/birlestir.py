@@ -103,6 +103,11 @@ def main():
             ok3, c3 = gecer('cozucu_dogrula3.py', f3)
             if not ok3: sys.exit(f'{kod}: cozucu_dogrula3 HATA — birleştirilmez\n{c3}')
             S = S + [dict(q, ref=f'k:{i}', tur='ornek') for i, q in enumerate(json.load(open(f3)).get('yeni') or [], 1)]
+        f4 = W / 'cozucu_ders' / f'{kod}.json'  # dersin TÜM örnek soruları (cozucu_ders_dogrula.py, 2026-11-18 H623)
+        if f4.exists():
+            ok4, c4 = gecer('cozucu_ders_dogrula.py', f4)
+            if not ok4: sys.exit(f'{kod}: cozucu_ders_dogrula HATA — birleştirilmez\n{c4}')
+            S = S + [dict(q, tur='ornek') for q in json.load(open(f4)).get('sorular') or []]
         nm = numara.setdefault(kod, {})
         for q in sorted(S, key=lambda q: (q['tur'] != 'ornek', q['ref'])):
             if q['ref'] not in nm: nm[q['ref']] = max(nm.values(), default=0) + 1

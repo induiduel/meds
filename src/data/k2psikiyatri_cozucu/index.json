@@ -200,15 +200,47 @@
    ]
   },
   {
-   "kod": "2s11",
+   "kod": "2s11-1",
    "no": 42,
    "baslik": "Nörogelişimsel Bozukluklar",
-   "soru": 26,
-   "ornek": 19,
-   "cikmis": 7,
+   "soru": 34,
+   "ornek": 33,
+   "cikmis": 1,
    "ses": true,
+   "set": 1,
+   "setSay": 3,
    "sayfa": [
-    4,
+    2,
+    35
+   ]
+  },
+  {
+   "kod": "2s11-2",
+   "no": 42,
+   "baslik": "Nörogelişimsel Bozukluklar",
+   "soru": 34,
+   "ornek": 30,
+   "cikmis": 4,
+   "ses": true,
+   "set": 2,
+   "setSay": 3,
+   "sayfa": [
+    18,
+    28
+   ]
+  },
+  {
+   "kod": "2s11-3",
+   "no": 42,
+   "baslik": "Nörogelişimsel Bozukluklar",
+   "soru": 32,
+   "ornek": 30,
+   "cikmis": 2,
+   "ses": true,
+   "set": 3,
+   "setSay": 3,
+   "sayfa": [
+    29,
     39
    ]
   }

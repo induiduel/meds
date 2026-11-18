@@ -113,15 +113,47 @@
    ]
   },
   {
-   "kod": "2f07",
+   "kod": "2f07-1",
    "no": 41,
    "baslik": "Otonom Sinir Sistemi Farmakolojisi",
-   "soru": 26,
-   "ornek": 17,
-   "cikmis": 9,
+   "soru": 29,
+   "ornek": 25,
+   "cikmis": 4,
    "ses": true,
+   "set": 1,
+   "setSay": 3,
    "sayfa": [
-    6,
+    3,
+    53
+   ]
+  },
+  {
+   "kod": "2f07-2",
+   "no": 41,
+   "baslik": "Otonom Sinir Sistemi Farmakolojisi",
+   "soru": 29,
+   "ornek": 27,
+   "cikmis": 2,
+   "ses": true,
+   "set": 2,
+   "setSay": 3,
+   "sayfa": [
+    18,
+    55
+   ]
+  },
+  {
+   "kod": "2f07-3",
+   "no": 41,
+   "baslik": "Otonom Sinir Sistemi Farmakolojisi",
+   "soru": 29,
+   "ornek": 26,
+   "cikmis": 3,
+   "ses": true,
+   "set": 3,
+   "setSay": 3,
+   "sayfa": [
+    36,
     56
    ]
   },

@@ -96,15 +96,47 @@
    ]
   },
   {
-   "kod": "2p05",
+   "kod": "2p05-1",
    "no": 40,
    "baslik": "Santral Sinir Sistemi Tümörleri",
-   "soru": 31,
-   "ornek": 21,
-   "cikmis": 10,
+   "soru": 32,
+   "ornek": 29,
+   "cikmis": 3,
    "ses": true,
+   "set": 1,
+   "setSay": 3,
    "sayfa": [
-    6,
+    4,
+    35
+   ]
+  },
+  {
+   "kod": "2p05-2",
+   "no": 40,
+   "baslik": "Santral Sinir Sistemi Tümörleri",
+   "soru": 32,
+   "ornek": 27,
+   "cikmis": 5,
+   "ses": true,
+   "set": 2,
+   "setSay": 3,
+   "sayfa": [
+    26,
+    44
+   ]
+  },
+  {
+   "kod": "2p05-3",
+   "no": 40,
+   "baslik": "Santral Sinir Sistemi Tümörleri",
+   "soru": 30,
+   "ornek": 28,
+   "cikmis": 2,
+   "ses": true,
+   "set": 3,
+   "setSay": 3,
+   "sayfa": [
+    43,
     57
    ]
   }
