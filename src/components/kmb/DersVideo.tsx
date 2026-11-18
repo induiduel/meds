@@ -7,7 +7,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
-import LottieVideo, { KMB_DURDUR, LOTTILER, lottieOnYukle, type Birlesik } from './LottieVideo';
+import LottieVideo, { yonKilidiAc, KMB_DURDUR, LOTTILER, lottieOnYukle, type Birlesik } from './LottieVideo';
 import { sesKilidiAc } from './sesKilit';
 import type { Ders, SesKayit } from './kmbVeri';
 
@@ -36,7 +36,7 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yönlendirme kilidi yok */ }
     lockScroll();
     sesKilidiAc(sesOge.current); // açılış dokunuşunun etkinliği sürerken ortak öğenin kilidi
-    return () => { sesOge.current?.pause(); unlockScroll(); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
+    return () => { sesOge.current?.pause(); unlockScroll(); yonKilidiAc(); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
   }, []);
   useEffect(() => { if (sonraki) lottieOnYukle(`adim-${sonraki.id}`).catch(() => {}); }, [sonraki]);
 
@@ -69,7 +69,7 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
       </div>
       <div className="kmb-dv-govde">
         <LottieVideo key={`${a.id}-${basT}`} birlesik={birlesik} ad={`adim-${a.id}`} kod={ders.kod} ses={ses} otomatik doldur
-          onBitti={() => izlendi?.(a.id)} otoSonraki={0} onGoster={setUyanik}
+          onBitti={() => { izlendi?.(a.id); if (!sonraki) document.body.dataset.kmbBitti = 'ders'; /* mp4 dışa aktarım (video_disa_aktar.mjs) bitiş işareti */ }} otoSonraki={0} onGoster={setUyanik}
           sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: ileri } : undefined} />
       </div>
     </div>,

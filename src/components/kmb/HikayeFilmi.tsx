@@ -8,7 +8,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
-import LottieVideo, { KMB_DURDUR, LOTTILER, lottieOnYukle } from './LottieVideo';
+import LottieVideo, { yonKilidiAc, KMB_DURDUR, LOTTILER, lottieOnYukle } from './LottieVideo';
 import type { Ders, SesKayit } from './kmbVeri';
 
 type Kart = { tip: 'acilis' } | { tip: 'kazanim'; ai: number } | { tip: 'video'; ai: number } | { tip: 'bulgu'; ai: number } | { tip: 'son' };
@@ -57,7 +57,7 @@ export default function HikayeFilmi({ ders, ses, onKapat, izlendi, onSinav }: {
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yok */ }
     lockScroll();
     document.body.classList.add('kmb-film-acik');
-    return () => { unlockScroll(); document.body.classList.remove('kmb-film-acik'); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
+    return () => { unlockScroll(); yonKilidiAc(); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('kmb-film-acik'); window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
   }, []);
   // sonraki video önceden yüklenir
   useEffect(() => {

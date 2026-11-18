@@ -16,7 +16,7 @@ import { getCustomApiUrl } from '../../services/api';
 import { type SahneDurum } from './sahneler';
 import SahneGoster, { sahne3bVar, ucBoyutTercih } from './SahneGoster';
 import { uygula } from './eylem';
-import { KMB_DURDUR, sesOnYukle } from './LottieVideo';
+import { yonKilidiAc, KMB_DURDUR, sesOnYukle } from './LottieVideo';
 import { ilAnahtar, ilOku, ilYaz } from './kmbVeri';
 import type { Ders, HedefKart, SesKayit, FilmVurus } from './kmbVeri';
 
@@ -123,7 +123,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav, tur =
     window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'hedef-film' }));
     const f = () => setTam(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', f);
-    return () => { unlockScroll(); document.body.classList.remove('kmb-film-acik'); document.removeEventListener('fullscreenchange', f); audio.current?.pause(); };
+    return () => { unlockScroll(); yonKilidiAc(); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); document.body.classList.remove('kmb-film-acik'); document.removeEventListener('fullscreenchange', f); audio.current?.pause(); };
   }, []);
   // sonraki hedefin sesini önceden indir (geçişte boşluk olmasın)
   useEffect(() => {
@@ -199,11 +199,12 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav, tur =
     const y = izlenen.includes(k.no) ? izlenen : [...izlenen, k.no];
     setIzlenen(y); ilYaz(ilAnahtar(ders.kod, ANAH), y);
     if (hi < K.length - 1) hedefeGit(hi + 1);
-    else { setAsama('son'); setCal(false); setGoster(true); audio.current?.pause(); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
+    else { document.body.dataset.kmbBitti = tur; /* mp4 dışa aktarım bitiş işareti */ setAsama('son'); setCal(false); setGoster(true); audio.current?.pause(); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
   }, [k, izlenen, ders.kod, hi, K.length, hedefeGit]);
 
   const soruyaGec = useCallback(() => {
-    if (!k || !tercih.soru) { bitir(); return; }
+    // mp4 dışa aktarımında (video_disa_aktar.mjs → window.__kmbKayit) yalnız anlatım: hoca sorusu/düşünme payı atlanır
+    if (!k || !tercih.soru || (window as any).__kmbKayit) { bitir(); return; }
     setAsama('soru');
     saat.current = { bas: performance.now(), t: 0 };
     tRef.current = 0; setT(0);
@@ -332,7 +333,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav, tur =
         </div>
         <div className="kmb-hf-baslik"><span className="kmb-hf-no">{ET} {k.no} / {K.length}{BS && (k as any).bolum ? ` · ${(k as any).bolum}` : ''}</span><b>{belge}</b></div>
         <div className="kmb-hf-dugmeler">
-          <button onClick={(e) => { e.stopPropagation(); tamDegistir(); }} aria-label={tam ? 'Tam ekrandan çık' : 'Tam ekran'}><Ikon d={tam ? I.tamCik : I.tam} /></button>
+          {document.fullscreenEnabled && <button onClick={(e) => { e.stopPropagation(); tamDegistir(); }} aria-label={tam ? 'Tam ekrandan çık' : 'Tam ekran'}><Ikon d={tam ? I.tamCik : I.tam} /></button>}
           <button onClick={(e) => { e.stopPropagation(); kapat(); }} aria-label="Kapat"><Ikon d={I.kapat} /></button>
         </div>
       </div>

@@ -178,3 +178,10 @@
 - **Kök neden:** (1) H636 düzeltmesi blob inmeden ses öğesine AĞ adresini koydu; akışta her cümle başı konumlaması tampon bekletti. (2) Döngü, duraklamış sesi `play()` ederken söz çözülene dek görüntü saatini ilerletiyordu; ses geride kalınca >0,3 sn farkla ileri konumlanıp cümle başını atlıyordu.
 - **Çözüm:** Kilit kısa sessiz WAV ile açılır, gerçek ses yalnız blob inince konur (`sesKilit.ts::sesYok`); `play()` sözü beklerken görüntü de bekler.
 - **Kural:** Kilit açmak için gerçek klip ağdan akıtılmaz; ses başlatılırken görüntü saati sesin hazır olmasını bekler, sesi ileri konumlayarak "yetiştirmek" yasak.
+
+### H638 — KMB video oynatıcıda tam ekrana girip çıkamama, tam ekranda dokunma sorunları (2026-11-18)
+
+- **Belirti:** Tam ekran bazen açılmıyor/kapanmıyor; tam ekrandan sonra telefon yatayda kalıyor; tam ekranda dokunuşlar yanlış yere gidiyor, sağ kenarda arkadaki sayfa dokunulabiliyor.
+- **Kök neden:** (1) Telefonda satır içi oynatıcıya verilen `margin: 0 -12px` sahte (iOS) tam ekran katmanını 12 px sola kaydırıyordu; sağda sayfa açıkta kalıyor, arkadaki sayfa da kaydırma kilidi olmadığı için kayıyordu. (2) Ders videosu katmanı (DersVideo) zaten tam ekranken iç oynatıcının düğmesi kendi öğesini ayrıca tam ekrana alıyordu (iç içe): üst çubuk ve Kapat düğmesi kayboluyor, düğme durumu yanlış ("Tam ekran" görünüyor) kalıyordu. (3) Girişte `screen.orientation.lock('landscape')` konuyor, hiçbir çıkışta `unlock` edilmiyordu. (4) Site yazı boyutu (uiZoom, ata öğede CSS zoom) tam ekran katmanını da büyütüp denetimleri ekrandan taşırıyordu.
+- **Çözüm:** Tam ekran/sahte kipte kenar payı sıfır; sahte kipte kaydırma kilidi; doldur kipinde tam ekran hedefi Kapat çubuğunu da içeren katman, durum `fullscreenElement.contains(...)`; her çıkışta ve film kapanışında `yonKilidiAc()`; tam ekranda ata zoom'u tersiyle nötrlenir; Fullscreen API yoksa film katmanlarında işe yaramayan tam ekran düğmesi gizlenir.
+- **Kural:** Tam ekran katmanına satır içi düzenin kenar payı/zoom'u taşınmaz; iç içe tam ekran istenmez (katman varsa onu hedefle); her yön kilidi çıkışta kaldırılır; sahte tam ekranda sayfa kaydırması kilitlenir.

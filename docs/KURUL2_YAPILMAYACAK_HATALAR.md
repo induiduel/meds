@@ -471,3 +471,4 @@
 - **H635** · "Kapılar tıbbi yanlışı yakalamadı": bağımsız denetçi şart → hatalar/betik_altyapi.md
 - **H636** · KMB videolarında ses dokunmadan gelmiyordu (play() dokunuş dışında, NotAllowedError yutuluyordu) → hatalar/on_yuz_oynatici_ders.md
 - **H637** · KMB seslerinde başta ve cümle başlarında kesik (ağ akışı + play() beklerken görüntünün öne kaçması) → hatalar/on_yuz_oynatici_ders.md
+- **H638** · KMB oynatıcı tam ekran: -12px kayma, iç içe tam ekran, kaldırılmayan yön kilidi, uiZoom taşması → hatalar/on_yuz_oynatici_ders.md

@@ -366,7 +366,9 @@
 
 /* tam ekran (gerçek ya da iOS sahte) ve ders videosu (doldur): sahne alanı ekranı kaplar, görüntü ortalanır */
 .kmb-lv.tam, .kmb-lv.doldur { width: 100%; height: 100%; border-radius: 0; background: #fff; --kmb-cubuk-h: 78px; }
-.kmb-lv.sahte { position: fixed; inset: 0; z-index: 2147483001; height: 100dvh; }
+.kmb-lv.sahte { position: fixed; inset: 0; z-index: 2147483001; width: auto; height: 100dvh; overscroll-behavior: contain; }
+/* H638: telefonda satır içi oynatıcının -12px kenar payı tam ekranda katmanı 12 px sola kaydırıyordu (sağda sayfa dokunulabilir kalıyordu) */
+.kmb-lv.tam, .kmb-lv.sahte { margin: 0 !important; }
 .kmb-lv.tam .kmb-lv-sahne, .kmb-lv.doldur .kmb-lv-sahne { flex: 1; aspect-ratio: auto; min-height: 0; }
 .kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { padding: 28px max(12px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); }
 .kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { font-size: clamp(13px, min(1.7vw, 3vh), 22px); }

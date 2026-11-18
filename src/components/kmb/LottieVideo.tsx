@@ -12,6 +12,8 @@
  * Ses: EMA klibi `o-<adım>` (adım videosu) ya da `l-<ad>` (konu videosu); bölüm içinde ses saatine eşlenir, bekleme payında durur.
  * Veri: scripts/uretim/kmb/lottie_uret.py + adim_lottie.py → src/data/kmb/lottie/.
  */
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
+import { elementZoom } from '../../utils/uiZoom';
 import { sesKilidiAc, sesYok } from './sesKilit';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { getCustomApiUrl } from '../../services/api';
@@ -46,6 +48,8 @@ export const LOTTILER: LottieBilgi[] = ESKI.map((v) => (ikiB(v.ad) && YENI.find(
 export const klipAdi = (v: LottieBilgi) => (v.adim ? `o-${v.adim}` : `l-${v.ad}`);
 export const sn = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 export const KMB_DURDUR = 'kmb-durdur';
+/** Tam ekrana girerken konan yatay yön kilidini kaldırır (çıkışta telefon yatayda kilitli kalmasın, H638) */
+export const yonKilidiAc = () => { try { (screen.orientation as any)?.unlock?.(); } catch { /* kilit yok */ } };
 const ATLA = 10;
 
 const ONBELLEK = new Map<string, Promise<any>>();
@@ -414,22 +418,36 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
     window.addEventListener(KMB_DURDUR, f);
     return () => { window.removeEventListener(KMB_DURDUR, f); audio.current?.pause(); };
   }, [ad, durdur]);
+  // H638: tam ekran öğesi bu oynatıcı YA DA onu saran ders/film katmanı (DersVideo) olabilir; çıkışta yön kilidi kaldırılır
   useEffect(() => {
-    const f = () => setTam(document.fullscreenElement === kap.current);
+    const f = () => {
+      const fe = document.fullscreenElement;
+      setTam(!!fe && !!kap.current && fe.contains(kap.current));
+      if (!fe) yonKilidiAc();
+    };
     document.addEventListener('fullscreenchange', f);
     return () => document.removeEventListener('fullscreenchange', f);
   }, []);
+  // sahte tam ekran (iOS): arkadaki sayfa kaymasın, dokunuş sayfaya geçmesin
+  useEffect(() => { if (!sahte) return; lockScroll(); return () => { unlockScroll(); yonKilidiAc(); }; }, [sahte]);
 
   const tamMi = tam || sahte;
+  // site yazı boyutu (uiZoom, ata öğelerde CSS zoom) tam ekran katmanını da büyütüp ekrandan taşırıyordu (H638): tersiyle nötrle
+  const [ataZoom, setAtaZoom] = useState(1);
+  useEffect(() => { if (tamMi && !doldur) setAtaZoom(elementZoom(kap.current?.parentElement)); }, [tamMi, doldur]);
+  // ders/film katmanında (doldur) Fullscreen API yoksa katman zaten pencereyi kaplar: düğme gereksiz
+  const tamDugmesi = !(doldur && !document.fullscreenEnabled);
   const tamEkran = () => {
     if (tamMi) {
       if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
       setSahte(false);
+      yonKilidiAc();
       return;
     }
-    const el = kap.current as any;
-    if (el?.requestFullscreen) el.requestFullscreen().catch(() => setSahte(true));
-    else setSahte(true); // iOS Safari: öğe tam ekranı yok → pencereyi kaplayan katman
+    // doldur kipinde iç öğe değil, üst çubuğu (kapat düğmesi) da içeren katman tam ekrana alınır (iç içe tam ekran YASAK)
+    const el = ((doldur && kap.current?.closest('[role="dialog"]')) || kap.current) as any;
+    if (el?.requestFullscreen) el.requestFullscreen().catch(() => { if (!doldur) setSahte(true); });
+    else if (!doldur) setSahte(true); // iOS Safari: öğe tam ekranı yok → pencereyi kaplayan katman
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yönlendirme kilidi yoksa geç */ }
   };
   /** ±10 sn; seri dokunuşlarda toplam gösterilir (−10, −20 …) */
@@ -565,7 +583,7 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
   const ipBolum = ipucu && ipYerel ? v.bolumler[bolumAn(v, ipucu.t - B0)] : undefined;
   const ipParca = ipucu && birlesik && !ipYerel ? birlesik.parcalar.find((p) => ipucu.t >= p.bas && ipucu.t < p.son) : undefined;
   return (
-    <div ref={kap} className={`kmb-lv${tamMi ? ' tam' : ''}${sahte ? ' sahte' : ''}${kompakt ? ' kompakt' : ''}${doldur ? ' doldur' : ''}${acik ? '' : ' gizli'}${cal ? ' calan' : ''}`}
+    <div ref={kap} style={tamMi && !doldur && Math.abs(ataZoom - 1) > 0.01 ? { zoom: 1 / ataZoom } : undefined} className={`kmb-lv${tamMi ? ' tam' : ''}${sahte ? ' sahte' : ''}${kompakt ? ' kompakt' : ''}${doldur ? ' doldur' : ''}${acik ? '' : ' gizli'}${cal ? ' calan' : ''}`}
       tabIndex={0} onKeyDown={tus} aria-label={`Video: ${v.baslik}`} onMouseLeave={() => { setIpucu(null); if (cal && !menu) setGoster(false); }}>
       <div className="kmb-lv-sahne" ref={sahneKap}>
         {/* durgun ve başta: ilk bölümün bir karesi kapak olarak (boş sahne görünmesin) */}
@@ -662,7 +680,7 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
           <button className={menu === 'cumle' ? 'etkin' : ''} onClick={() => { setMenu((m) => (m === 'cumle' ? '' : 'cumle')); setGoster(true); }} aria-label="Cümle listesi" aria-expanded={menu === 'cumle'} title="Cümleler"><Ikon d={I.liste} /></button>
           <button className="kmb-lv-hiz" onClick={() => { setMenu((m) => (m === 'hiz' ? '' : 'hiz')); setGoster(true); }} aria-label={`Oynatma hızı ${hiz}×`} aria-expanded={menu === 'hiz'}>{hiz}×</button>
           <button className={altyazi ? 'etkin' : ''} onClick={() => setAltyazi((x) => !x)} aria-label="Altyazı" aria-pressed={altyazi} title="Altyazı (c)">CC</button>
-          <button onClick={tamEkran} aria-label={tamMi ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (f)"><Ikon d={tamMi ? I.tamCik : I.tam} /></button>
+          {tamDugmesi && <button onClick={tamEkran} aria-label={tamMi ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (f)"><Ikon d={tamMi ? I.tamCik : I.tam} /></button>}
         </div>
       </div>
     </div>
