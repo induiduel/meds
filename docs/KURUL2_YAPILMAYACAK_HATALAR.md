@@ -469,3 +469,4 @@
 - **H633** · "Destesiz derste ders_pdf.mts ENOENT": geçici boş deste → hatalar/betik_altyapi.md
 - **H634** · "k2-43: bağlamsız terim, denetçi→onayli→ses sırası": → hatalar/ders_metni_terim_kisaltma.md
 - **H635** · "Kapılar tıbbi yanlışı yakalamadı": bağımsız denetçi şart → hatalar/betik_altyapi.md
+- **H636** · KMB videolarında ses dokunmadan gelmiyordu (play() dokunuş dışında, NotAllowedError yutuluyordu) → hatalar/on_yuz_oynatici_ders.md

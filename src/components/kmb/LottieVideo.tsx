@@ -12,6 +12,7 @@
  * Ses: EMA klibi `o-<adım>` (adım videosu) ya da `l-<ad>` (konu videosu); bölüm içinde ses saatine eşlenir, bekleme payında durur.
  * Veri: scripts/uretim/kmb/lottie_uret.py + adim_lottie.py → src/data/kmb/lottie/.
  */
+import { sesKilidiAc } from './sesKilit';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { getCustomApiUrl } from '../../services/api';
 import LINDEX from '../../data/kmb/lottie/index.json';
@@ -60,11 +61,13 @@ export function lottieOnYukle(ad: string): Promise<any> {
 }
 /** EMA klibi bütünüyle belleğe alınır (blob): cümle geçişlerinde ses ağdan yeniden konumlanmaz → takılma yok */
 const SES = new Map<string, Promise<string>>();
+const SES_HAZIR = new Map<string, string>(); // inmiş blob adresleri (dokunuş anında eşzamanlı src için)
 export function sesOnYukle(url: string): Promise<string> {
   let p = SES.get(url);
   if (!p) {
     p = fetch(url).then((r) => (r.ok ? r.blob() : Promise.reject(new Error(String(r.status))))).then((b) => URL.createObjectURL(b))
       .catch(() => { SES.delete(url); return url; });
+    p.then((u) => { if (u !== url) SES_HAZIR.set(url, u); });
     SES.set(url, p);
   }
   return p;
@@ -284,8 +287,12 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
       const a = new Audio();
       a.preload = 'auto';
       audio.current = a;
-      sesOnYukle(url).then((u) => { if (audio.current === a && !a.src) a.src = u; });
-    }
+      const hazir = SES_HAZIR.get(url);
+      if (hazir) a.src = hazir;
+      else sesOnYukle(url).then((u) => { if (audio.current === a && !a.dataset.acik) a.src = u; });
+      // dokunuş anında kilidi aç: blob inmediyse ağ adresiyle (sonraki play() dokunuş dışında olsa da çalsın)
+      sesKilidiAc(a, hazir || url);
+    } else if (audio.current) sesKilidiAc(audio.current);
     saat.current = { bas: performance.now(), t: s };
     tRef.current = s;
     setT(s);
@@ -335,7 +342,11 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
               bekliyor.current = true;
               a.playbackRate = etkinHiz;
               if (Math.abs(a.currentTime - hedef) > 0.3) a.currentTime = Math.max(0, hedef);
-              a.play().catch(() => { /* görüntü iç saatle sürer */ }).finally(() => { bekliyor.current = false; });
+              a.muted = false;
+              a.play().catch((e) => {
+                // tarayıcı engellediyse görüntü sessiz sürmesin: dur, ▶ göster (kullanıcı dokunuşu kilidi açar)
+                if (e?.name === 'NotAllowedError' && audio.current === a) { delete a.dataset.acik; setCal(false); setGoster(true); }
+              }).finally(() => { bekliyor.current = false; });
             }
           } else if (a.readyState < 3 || a.seeking) {
             s = tRef.current; saat.current = { bas: now, t: s };

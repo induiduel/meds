@@ -1,22 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 843,
- "baslik": "Yeni dersler: Psikiyatri ve Farmakoloji",
+ "onem": 844,
+ "baslik": "KMB videolarında ses düzeltmesi",
  "maddeler": [
-  "Konsültasyon-Liyezon Psikiyatrisi, Damgalama ve İntihar ve Kendine Zarar Verme (Psikiyatri) sesli dersleri, örnek soruları ve soru çözücüleriyle eklendi.",
-  "Sempatomimetikler (Tıbbi Farmakoloji) sesli dersi, örnek soruları ve soru çözücüsüyle eklendi."
+  "KMB videoları: ses artık ekrana ikinci kez dokunmadan, oynatmaya basınca hemen geliyor (özellikle iPhone/iPad)."
  ],
- "eklenen": [
-  "Konsültasyon-Liyezon Psikiyatrisi",
-  "Damgalama",
-  "İntihar ve Kendine Zarar Verme",
-  "Sempatomimetikler"
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [
+  "KMB videolarında bazen gelmeyen ses"
  ],
- "degisen": [
-  "Çevrimdışı paket kataloğu",
-  "Tek kişilik oyunlar",
-  "Sesli anlatım okunuşları"
- ],
- "duzeltilen": [],
  "silinen": []
 }

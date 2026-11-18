@@ -8,6 +8,7 @@
  * kipte cümle uzunluğuna göre akar. Denetimler oynarken gizlenir; klavye: boşluk, ←/→ cümle, PgUp/PgDn ya da J/L hedef,
  * f tam ekran, Esc kapat. Veri kapısı: scripts/uretim/kmb/dogrula.py (film vuruşları, öge kimlikleri, zoom 1–2).
  */
+import { sesKilidiAc } from './sesKilit';
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
@@ -78,6 +79,9 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   const kap = useRef<HTMLDivElement>(null);
   const sahneKap = useRef<HTMLDivElement>(null);
   const audio = useRef<HTMLAudioElement | null>(null);
+  // tek kalıcı ses öğesi: kilidi bir kez dokunuşla açılınca otomatik hedef geçişlerinde de çalar (iOS/Safari)
+  const kalici = useRef<HTMLAudioElement | null>(null);
+  const sesNo = useRef(0);
   const saat = useRef({ bas: 0, t: 0 }); // sessiz kip / düşünme sayacı
   const tRef = useRef(0);
   const gizleZ = useRef(0);
@@ -133,21 +137,25 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   const sesBaslat = useCallback(async (ad: string, h: string | undefined, s: number, hiz: number) => {
     audio.current?.pause();
     if (!h) { audio.current = null; return; }
-    const a = new Audio();
+    const a = kalici.current || (kalici.current = new Audio());
+    const no = ++sesNo.current;
     a.preload = 'auto';
     audio.current = a;
     setSesHazir(false);
+    // await'ten önce (dokunuş içinde) kilidi aç; yoksa iOS/Safari play()'i engeller, ses ancak ikinci dokunuşta gelir
+    sesKilidiAc(a, sesUrl(ders.kod, ad, h));
     const u = await sesOnYukle(sesUrl(ders.kod, ad, h));
-    if (audio.current !== a) return;
-    a.src = u;
+    if (audio.current !== a || sesNo.current !== no) return;
+    if (a.src !== u) a.src = u;
+    a.muted = false;
     a.playbackRate = hiz;
     a.currentTime = s;
     try { await a.play(); } catch (e) {
       // hızlı hedef geçişinde bir önceki klibin kesilen play() sözü AbortError ile düşer: o eski klibe aittir, oynatmayı durdurmaz.
       // Yalnız tarayıcının otomatik oynatma engeli (NotAllowedError) filmi duraklatır; kullanıcı ▶ basar.
-      if (audio.current === a && (e as any)?.name === 'NotAllowedError') setCal(false);
+      if (audio.current === a && sesNo.current === no && (e as any)?.name === 'NotAllowedError') { delete a.dataset.acik; setCal(false); }
     }
-    if (audio.current === a) setSesHazir(true);
+    if (audio.current === a && sesNo.current === no) setSesHazir(true);
   }, [ders.kod]);
 
   const oynat = useCallback((s?: number) => {
