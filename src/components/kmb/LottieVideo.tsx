@@ -201,6 +201,16 @@ type Props = {
   doldur?: boolean;
   /** denetimler açıldı/gizlendi (ders videosu üst şeridini aynı anda açıp kapatır) */
   onGoster?: (acik: boolean) => void;
+  /** birleşik ders videosu: adımlar tek video gibi — zaman çubuğu ve süre dersin tamamı, bitişte ekransız geçiş */
+  birlesik?: Birlesik;
+};
+export type Birlesik = {
+  onceki: number; toplam: number; basT?: number;
+  parcalar: { bas: number; son: number; baslik: string }[];
+  /** dersin genel saniyesine git (başka adıma düşebilir) */
+  git: (g: number) => void;
+  /** adımlar arasında ortak ses öğesi (kilidi bir kez açılır, sonraki adımlar dokunuşsuz çalar) */
+  ses: HTMLAudioElement;
 };
 export type VideoTutamac = { bolumeGit: (i: number) => void; oynat: () => void; durdur: () => void };
 
@@ -225,7 +235,7 @@ const I = {
   kapat: 'M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4 17.6 5 12 10.6z',
 };
 
-const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, onBitti, onZaman, sonraki, otoSonraki, bekle, bekleMetin, doldur, onGoster }, ref) {
+const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, onBitti, onZaman, sonraki, otoSonraki, bekle, bekleMetin, doldur, onGoster, birlesik }, ref) {
   const v = LOTTILER.find((x) => x.ad === ad);
   const kap = useRef<HTMLDivElement>(null);
   const sahneKap = useRef<HTMLDivElement>(null);
@@ -284,7 +294,8 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
     const s = bas ?? (tRef.current >= sure - 0.1 ? 0 : tRef.current);
     if (klip && v && !audio.current) {
       const url = klipUrl(kod, v, klip.h);
-      const a = new Audio();
+      const a = birlesik?.ses ?? new Audio();
+      if (birlesik) { a.pause(); a.removeAttribute('src'); }
       a.preload = 'auto';
       audio.current = a;
       const hazir = SES_HAZIR.get(url);
@@ -360,6 +371,8 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
       }
       onceki = now;
       if (s >= sure) {
+        // birleşik ders videosu: bitiş ekranı/geri sayım yok, sıradaki adım aynı anda başlar (tek video gibi)
+        if (birlesik && sonrakiRef.current) { onBitti?.(); sonrakiRef.current.git(); return; }
         s = sure; a?.pause(); tRef.current = s; setT(s); setCal(false); setGoster(true); setBitti(true); onBitti?.();
         return;
       }
@@ -395,7 +408,7 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
     const sk = sv && ses?.[klipAdi(sv)];
     if (sv && sk) sesOnYukle(klipUrl(kod, sv, sk.h)).catch(() => {});
   }, [sonraki, ses, kod]);
-  useEffect(() => { if (otomatik && !dis) oynat(0); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [ad]);
+  useEffect(() => { if (otomatik && !dis) oynat(birlesik?.basT ?? 0); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [ad]);
   useEffect(() => {
     const f = (e: Event) => { if ((e as CustomEvent).detail !== ad) durdur(); };
     window.addEventListener(KMB_DURDUR, f);
@@ -421,6 +434,8 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
   };
   /** ±10 sn; seri dokunuşlarda toplam gösterilir (−10, −20 …) */
   const atla = (yon: 1 | -1) => {
+    const hedefT = tRef.current + yon * ATLA;
+    if (birlesik && (hedefT < 0 || hedefT > sure)) { birlesik.git(birlesik.onceki + hedefT); return; }
     git(tRef.current + yon * ATLA);
     if (cal) saat.current = { bas: performance.now(), t: tRef.current };
     setAtlama((a) => ({ yon, sn: a && a.yon === yon ? a.sn + ATLA : ATLA, k: (a?.k || 0) + 1 }));
@@ -536,10 +551,19 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
     );
   }
   const gt = kayma ?? t; // gösterilen zaman (kaydırırken hedef)
-  const yuzde = (gt / sure) * 100;
+  // birleşik kipte çubuk/süre dersin tamamı: G = önceki adımlar + bu adımdaki an
+  const B0 = birlesik?.onceki ?? 0, TOP = birlesik?.toplam ?? sure;
+  const G = B0 + gt;
+  const yuzde = (G / TOP) * 100;
+  const genelGit = (g: number) => {
+    if (birlesik && (g < B0 || g >= B0 + sure)) { birlesik.git(g); return; }
+    const y = g - B0; git(y); if (cal) saat.current = { bas: performance.now(), t: y };
+  };
   const geriSay = bitti && !otoIptal && !bekle && otoSonraki !== undefined && !!sonraki;
   const onceki = () => bolumeGit(bi - (t - (bolum?.bas ?? 0) > 1.5 ? 0 : 1));
-  const ipBolum = ipucu ? v.bolumler[bolumAn(v, ipucu.t)] : undefined;
+  const ipYerel = ipucu && ipucu.t >= B0 && ipucu.t < B0 + sure;
+  const ipBolum = ipucu && ipYerel ? v.bolumler[bolumAn(v, ipucu.t - B0)] : undefined;
+  const ipParca = ipucu && birlesik && !ipYerel ? birlesik.parcalar.find((p) => ipucu.t >= p.bas && ipucu.t < p.son) : undefined;
   return (
     <div ref={kap} className={`kmb-lv${tamMi ? ' tam' : ''}${sahte ? ' sahte' : ''}${kompakt ? ' kompakt' : ''}${doldur ? ' doldur' : ''}${acik ? '' : ' gizli'}${cal ? ' calan' : ''}`}
       tabIndex={0} onKeyDown={tus} aria-label={`Video: ${v.baslik}`} onMouseLeave={() => { setIpucu(null); if (cal && !menu) setGoster(false); }}>
@@ -570,7 +594,7 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
           </div>
         )}
         {altyazi && bolum?.metin && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`} aria-live="polite"><span>{bolum.metin}</span></div>}
-        {bitti && (
+        {bitti && !(birlesik && sonraki) && (
           <div className="kmb-lv-son">
             {bekle && bekleMetin && <p className="kmb-lv-son-bas">{bekleMetin}</p>}
             {sonraki && !bekle && <p className="kmb-lv-son-bas">{geriSay ? 'Sıradaki birazdan başlıyor' : 'Sıradaki'}</p>}
@@ -606,10 +630,15 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
       </div>
       <div className="kmb-lv-cubuk" onPointerMove={(e) => { if (e.pointerType === 'mouse') uyandir(); }}>
         <div className="kmb-lv-zaman"
-          onPointerMove={(e) => { const r = e.currentTarget.getBoundingClientRect(); const f = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)); setIpucu({ x: f * 100, t: f * sure }); }}
+          onPointerMove={(e) => { const r = e.currentTarget.getBoundingClientRect(); const f = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)); setIpucu({ x: f * 100, t: f * TOP }); }}
           onPointerLeave={() => setIpucu(null)}>
           <div className="kmb-lv-iz">
-            {v.bolumler.map((b, i) => {
+            {birlesik ? birlesik.parcalar.map((p, i) => {
+              const s1 = (p.bas / TOP) * 100, s2 = (p.son / TOP) * 100;
+              const dolu = Math.max(0, Math.min(1, (G - p.bas) / Math.max(0.01, p.son - p.bas)));
+              const etkin = G >= p.bas && G < p.son;
+              return <span key={i} className={`kmb-lv-parca${etkin ? ' etkin' : ''}`} style={{ left: `${s1}%`, width: `${s2 - s1}%` }}><i style={{ width: `${dolu * 100}%` }} /></span>;
+            }) : v.bolumler.map((b, i) => {
               const s1 = (b.bas / sure) * 100, s2 = ((v.bolumler[i + 1]?.bas ?? sure) / sure) * 100;
               const dolu = Math.max(0, Math.min(1, (gt - b.bas) / Math.max(0.01, (v.bolumler[i + 1]?.bas ?? sure) - b.bas)));
               return <span key={i} className={`kmb-lv-parca${i === bi ? ' etkin' : ''}`} style={{ left: `${i === 0 ? 0 : s1}%`, width: `${s2 - (i === 0 ? 0 : s1)}%` }}><i style={{ width: `${dolu * 100}%` }} /></span>;
@@ -618,17 +647,17 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
           <span className="kmb-lv-tutamac" style={{ left: `${yuzde}%` }} />
           {ipucu && (
             <span className="kmb-lv-onizle" style={{ left: `clamp(70px, ${ipucu.x}%, calc(100% - 70px))` }}>
-              <b>{sn(ipucu.t)}</b>{ipBolum && <small>{ipBolum.metin || ipBolum.baslik}</small>}
+              <b>{sn(ipucu.t)}</b>{ipBolum && <small>{ipBolum.metin || ipBolum.baslik}</small>}{ipParca && <small>{ipParca.baslik}</small>}
             </span>
           )}
-          <input type="range" min={0} max={sure} step={0.1} value={gt} aria-label="Zaman" aria-valuetext={`${sn(t)} / ${sn(sure)}, cümle ${bi + 1}`}
-            onChange={(e) => { git(Number(e.target.value)); uyandir(); if (cal) saat.current = { bas: performance.now(), t: Number(e.target.value) }; }} />
+          <input type="range" min={0} max={TOP} step={0.1} value={G} aria-label="Zaman" aria-valuetext={`${sn(G)} / ${sn(TOP)}, cümle ${bi + 1}`}
+            onChange={(e) => { genelGit(Number(e.target.value)); uyandir(); }} />
         </div>
         <div className="kmb-lv-dugmeler">
           <button className="kmb-lv-bol" onClick={onceki} aria-label="Cümlenin başına / önceki cümle" title="Önceki cümle (↑)"><Ikon d={I.onceki} /></button>
           <button onClick={degistir} aria-label={cal ? 'Duraklat' : 'Oynat'} title={cal ? 'Duraklat (boşluk)' : 'Oynat (boşluk)'}><Ikon d={cal ? I.dur : I.oynat} /></button>
           <button className="kmb-lv-bol" onClick={() => bolumeGit(bi + 1)} disabled={bi >= v.bolumler.length - 1} aria-label="Sonraki cümle" title="Sonraki cümle (↓)"><Ikon d={I.sonraki} /></button>
-          <span className="kmb-lv-sure">{sn(gt)} / {sn(sure)}</span>
+          <span className="kmb-lv-sure">{sn(G)} / {sn(TOP)}</span>
           <span className="kmb-lv-baslik">{bolum ? `Cümle ${bi + 1}/${v.bolumler.length}` : ''}</span>
           <button className={menu === 'cumle' ? 'etkin' : ''} onClick={() => { setMenu((m) => (m === 'cumle' ? '' : 'cumle')); setGoster(true); }} aria-label="Cümle listesi" aria-expanded={menu === 'cumle'} title="Cümleler"><Ikon d={I.liste} /></button>
           <button className="kmb-lv-hiz" onClick={() => { setMenu((m) => (m === 'hiz' ? '' : 'hiz')); setGoster(true); }} aria-label={`Oynatma hızı ${hiz}×`} aria-expanded={menu === 'hiz'}>{hiz}×</button>
