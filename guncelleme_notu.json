@@ -1,14 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 844,
- "baslik": "KMB videolarında ses düzeltmesi",
+ "onem": 845,
+ "baslik": "KMB videolarında kesiksiz ses",
  "maddeler": [
-  "KMB videoları: ses artık ekrana ikinci kez dokunmadan, oynatmaya basınca hemen geliyor (özellikle iPhone/iPad)."
+  "KMB videoları: açılıştaki ve cümle başlarındaki ses kesikleri giderildi."
  ],
  "eklenen": [],
  "degisen": [],
  "duzeltilen": [
-  "KMB videolarında bazen gelmeyen ses"
+  "KMB videolarında açılışta ve cümle başlarında kesilen ses"
  ],
  "silinen": []
 }

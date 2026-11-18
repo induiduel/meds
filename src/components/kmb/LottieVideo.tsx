@@ -12,7 +12,7 @@
  * Ses: EMA klibi `o-<adım>` (adım videosu) ya da `l-<ad>` (konu videosu); bölüm içinde ses saatine eşlenir, bekleme payında durur.
  * Veri: scripts/uretim/kmb/lottie_uret.py + adim_lottie.py → src/data/kmb/lottie/.
  */
-import { sesKilidiAc } from './sesKilit';
+import { sesKilidiAc, sesYok } from './sesKilit';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { getCustomApiUrl } from '../../services/api';
 import LINDEX from '../../data/kmb/lottie/index.json';
@@ -289,9 +289,9 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
       audio.current = a;
       const hazir = SES_HAZIR.get(url);
       if (hazir) a.src = hazir;
-      else sesOnYukle(url).then((u) => { if (audio.current === a && !a.dataset.acik) a.src = u; });
-      // dokunuş anında kilidi aç: blob inmediyse ağ adresiyle (sonraki play() dokunuş dışında olsa da çalsın)
-      sesKilidiAc(a, hazir || url);
+      else sesOnYukle(url).then((u) => { if (audio.current === a && sesYok(a)) a.src = u; });
+      // dokunuş anında kilidi aç (sessiz klip): blob inince play() dokunuş dışında olsa da çalar
+      sesKilidiAc(a);
     } else if (audio.current) sesKilidiAc(audio.current);
     saat.current = { bas: performance.now(), t: s };
     tRef.current = s;
@@ -334,8 +334,9 @@ const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({
         const b = v.bolumler.find((x) => x.ses_bas !== undefined && s >= x.bas - 0.05 && s < x.son + 0.15);
         if (b && b.ses_bas !== undefined) {
           const hedef = b.ses_bas + (s - b.bas);
-          if (!a.src) {
-            // ses henüz inmedi: görüntü beklesin
+          if (sesYok(a) || bekliyor.current) {
+            // ses inmedi ya da play() sözü bekliyor: görüntü beklesin (yoksa görüntü öne kaçar, ses sonra ileri
+            // konumlanıp cümle başı kesilir — H637)
             s = tRef.current; saat.current = { bas: now, t: s };
           } else if (a.paused) {
             if (!bekliyor.current && hedef < klip.sure) {

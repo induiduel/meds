@@ -171,3 +171,10 @@
 - **Kök neden:** `LottieVideo` sesi blob olarak `fetch` sonrası src'ye koyup `play()`'i rAF döngüsünden, `HedefFilmi.sesBaslat` ise `await sesOnYukle(...)` sonrasında her klip için YENİ `Audio` öğesiyle çağırıyordu → `play()` kullanıcı dokunuşunun dışında kalıyor, tarayıcı NotAllowedError veriyordu; hata `catch(() => {})` ile yutulup görüntü sessiz sürüyordu.
 - **Çözüm:** `kmb/sesKilit.ts::sesKilidiAc` dokunuş anında (eşzamanlı, await'ten önce) öğeyi sessizce oynatıp kilidini açar; blob inmediyse ağ adresiyle başlanır; `HedefFilmi` tek kalıcı ses öğesi + çağrı sayacı kullanır; engel yine olursa görüntü sessiz sürmez, film durup ▶ gösterilir.
 - **Kural:** Ses `play()`'i asla yalnız `await`/zamanlayıcı/rAF sonrasında ilk kez çağrılmaz; öğe dokunuş işleyicisinde eşzamanlı açılır ve yeniden kullanılır. NotAllowedError yutulmaz, oynatıcı durdurulup kullanıcıya ▶ gösterilir.
+
+### H637 — KMB seslerinde başta 1-2 sn ve cümle başlarında kesikler (2026-11-18)
+
+- **Belirti:** KMB videosu açılışında 1-2 sn ses kesiliyor, bazı cümlelerin başı yutuluyor.
+- **Kök neden:** (1) H636 düzeltmesi blob inmeden ses öğesine AĞ adresini koydu; akışta her cümle başı konumlaması tampon bekletti. (2) Döngü, duraklamış sesi `play()` ederken söz çözülene dek görüntü saatini ilerletiyordu; ses geride kalınca >0,3 sn farkla ileri konumlanıp cümle başını atlıyordu.
+- **Çözüm:** Kilit kısa sessiz WAV ile açılır, gerçek ses yalnız blob inince konur (`sesKilit.ts::sesYok`); `play()` sözü beklerken görüntü de bekler.
+- **Kural:** Kilit açmak için gerçek klip ağdan akıtılmaz; ses başlatılırken görüntü saati sesin hazır olmasını bekler, sesi ileri konumlayarak "yetiştirmek" yasak.

@@ -143,7 +143,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
     audio.current = a;
     setSesHazir(false);
     // await'ten önce (dokunuş içinde) kilidi aç; yoksa iOS/Safari play()'i engeller, ses ancak ikinci dokunuşta gelir
-    sesKilidiAc(a, sesUrl(ders.kod, ad, h));
+    sesKilidiAc(a);
     const u = await sesOnYukle(sesUrl(ders.kod, ad, h));
     if (audio.current !== a || sesNo.current !== no) return;
     if (a.src !== u) a.src = u;
