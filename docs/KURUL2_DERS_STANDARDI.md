@@ -23,6 +23,7 @@
 | Öğrenci notu (işaret, çizim, el yazısı PDF) | Öğrenci Drive'ı (`17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA`) | **sayfa başlıklarıyla** (dosya adı farklı olabilir) |
 | Hoca ses kaydı | Öğrenci Drive'ı | kullanıcının söylediği ders; döküm slaytlarla hizalanır |
 | Çıkmışlar | Banka → ham belge doğrulaması | §3 |
+| **İçerik geliştirici (hocanın sözlü vurguları)** — öğrencinin yapay zekâya derlettiği vurgu PDF'leri | Drive `Donem3` (`1rDVhXMvhgGkU0f71ZHPs6n-qDx5zPry5`) → `Kurul2/` (`1DnktSLN6esZxe7fI89NKm-jeVKn97LS3`, branş klasörleri + ❗Farmakoloji Mehmet Hoca Önemli Yerler❗, Sorular, Tekrar Notları) | `scripts/uretim/ogrenci_sentez/sentez.py` (`KLASOR_ID`, `eslesme.json`) → `meds_temp/ogrenci_sentez/ders/<k2-xx>.json`; tam hat `baglam.py` okur. **Her yeni/yenilenen derste önce `sentez.py calistir --kurul 2` (artımlı, LLM yok); dersin birimi varsa vurgu kaynağıdır** |
 | Geçmiş yıl öğrenci önem notu | `src/data/ogrenci_onem/<ders>.json` + `docs/OGRENCI_ONEM/<ders>.md` | `oku.py --sayfalar` ile bu yılın sayfasına (AGENTS 28, `OGRENCI_ONEM_YONTEMI.md`) |
 
 Kullanıcı eşlemeyi söylediyse o esastır; yine de sayfa başlıkları içerikle doğrulanır, uyuşmazsa sorulur.

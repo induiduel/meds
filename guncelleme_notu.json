@@ -1,14 +1,18 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 834,
-  "baslik": "Dağıtım güvenliği: vektör eşitlemesi de sunucu kimliğini doğruluyor",
-  "maddeler": [
-    "Altyapı: arama vektörlerini sunucuya taşıyan betik de SSH anahtarını doğruluyor; depoda doğrulamasız SSH bağlantısı kalmadı."
-  ],
-  "eklenen": [],
-  "degisen": [
-    "Vektör eşitlemesinde SSH anahtar doğrulaması açıldı"
-  ],
-  "duzeltilen": [],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+ "onem": 835,
+ "baslik": "Beş yeni sesli ders: Opioidler, Unipolar Depresyon, Kişilik Bozuklukları, DEHB, Dışa Atım Bozuklukları",
+ "maddeler": [
+  "Sesli dersler: Opioid Analjezikler, Unipolar Depresyon, Kişilik Bozuklukları, DEHB ve Dışa Atım Bozuklukları dersleri çıkmış bağları ve canlı çizimleriyle yayında.",
+  "Hocanın sorabileceği sorular: bu beş derste, ilgili slayttan sonra açılan ara soru sayfası ve sesli çözümü eklendi.",
+  "Genel Anestezik İlaçlar dersi yeniden düzenlendi."
+ ],
+ "eklenen": [
+  "5 sesli ders + hocanın sorabileceği ara sorular"
+ ],
+ "degisen": [
+  "Genel Anestezik İlaçlar dersi katmanları tamamlandı"
+ ],
+ "duzeltilen": [],
+ "silinen": []
 }
