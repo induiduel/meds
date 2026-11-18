@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-15-noroendokrin-tumorler",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Nöroendokrin Tümörler",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-17 06:07",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "NET 2024-2025 dönem 3.pdf (15 sayfa) kaynağından 24 paragraf / 91 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 9.4,
+        "sayfaSayisi": 15,
+        "bolumSayisi": 4,
+        "paragrafSayisi": 24,
+        "cumleSayisi": 91,
+        "cikmisEslesme": 17
+      }
+    }
+  ]
+}
