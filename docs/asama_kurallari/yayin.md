@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 49 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 50 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -207,6 +207,10 @@
 
 ### H615 — Commit başka oturumun sahnelediği silmeyi içerdi, canlı derleme kırıldı (2026-11-17)
 - **Kural:** Paylaşılan ağaçta commit YALNIZ `git commit --only -- <yollar>` (ya da geçici `GIT_INDEX_FILE`) ile; commit sonrası `git show --stat HEAD` beklenmeyen yol içeriyorsa push edilmez.
+
+
+### H624 — SSS Tümörleri, OSS Farmakolojisi, Nörogelişimsel Bozukluklar: "Bu dersin PDF'i uygulama içinde açılamıyor" (2026-11-18, kullanıcı; H505 tekrarı)
+- **Kural:** yeni sesli ders = SANAL_DESTELER kaydı + `meds-web` restart; kapı dağıtımda zorunlu, atlanamaz.
 
 ### H622 — Ara soru birleştirmesi sesli dersi olmayan SINAMA anahtarında yarıda kalıyordu; yayın bayat kalmıştı (2026-11-17)
 - **Önleme:** birleştirme tek dersin eksiği için bütün kurulu durdurmaz; kaynak (meds_temp) düzeltilince birlestir + ses aynı turda koşulur, `klip v` ↔ `kayit h` uyumu denetlenir.

@@ -1,6 +1,6 @@
 # Aşama kuralları — kaynak
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 53 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 54 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
@@ -211,10 +211,14 @@
 - **Önleme:** Yeni bir betik yazarken **üç kimliği** ayrı tut: (a) sesli ders anahtarı (`k2-62-…`), (b) kayıt defteri id'si (`k2-62`), (c) alt klasör adı (`meds_database_v2/ders_bilgi/k2-62`). Betik hangisini beklediğini kullanım satırında yazsın; karşılaştırma ve dosya yolu **aynı** biçimden kurulsun. "kayıt defterinde yok" hatası görüldüğünde önce anahtarın hangi biçimde olduğu ve dizinin gerçek adı kontrol edilir, kayıt defterine madde eklenmez.
 
 
+
 ### H582 — "Ansiklopedi düzeltmesi Oracle'da dağıtımı durdurabilir / ekrana gelmez" (2026-11-16)
 - **Önleme kuralı:** Kimlik üreten her slug çakışmayı sonekle çözer ve kimlik tekilliği doğrulanır. Panelden/hattan yazılan her src/data dosyası CONTENT_FILES'ta tür olarak kayıtlıdır ve ekran onu ortak yükleyiciden okur.
 
 
 ### H589 — Arama kalite ölçümü belgelenenin çok altında çıktı (hit@5 %95 → %75): ölçüm bozuktu (2026-11-16)
 - **Önleme kuralı:** dizin süzgeci değişince değerlendirme örneklemi de aynı süzgeçle güncellenir; ölçüm tabanı tarih + havuz tanımıyla birlikte yazılır, eski tabanla kıyaslanmaz.
+
+### H620 — Öğrenci sentez PDF'i (jsPDF) MarkItDown'da boş/eksik çıktı; OCR boş satırı hoca vurgusunu yarıda kesti (2026-11-17)
+- **Önleme/Kapı:** `sentez.py calistir` kapısı: kapsama ≥%98 (pdftotext'e karşı), md'deki tetik sayısı == birimlerdeki tetik sayısı, blok bölücü metin düşürürse HATA, eşlemesiz PDF HATA. Önbellek yalnız kapıdan geçmiş çeviriyi atlar. Sentez notunun "çıkmış/hoca söyledi" iddiası doğrulanmış kanıt DEĞİLDİR (çıkmış damgası/"hoca vurguladı" yalnız slayt+ses/çıkmış eşlemesiyle).
 

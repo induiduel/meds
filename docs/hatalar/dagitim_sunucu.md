@@ -324,3 +324,9 @@
 - **Kök neden:** `git add -- <yollar>` ardından düz `git commit` bütün index'i işler; sahne denetimi ile commit arasında başka oturum `git rm` yapmıştı.
 - **Kalıcı çözüm:** iki dosya çalışma ağacına dokunmadan geçici index ile geri getirildi (`ee721f54`), dağıtım 0 hatayla bitti.
 - **Kural:** Paylaşılan ağaçta commit YALNIZ `git commit --only -- <yollar>` (ya da geçici `GIT_INDEX_FILE`) ile; commit sonrası `git show --stat HEAD` beklenmeyen yol içeriyorsa push edilmez.
+
+### H624 — SSS Tümörleri, OSS Farmakolojisi, Nörogelişimsel Bozukluklar: "Bu dersin PDF'i uygulama içinde açılamıyor" (2026-11-18, kullanıcı; H505 tekrarı)
+- **Belirti:** k2-40/41/42 sesli derslerinde görüntüleyici PDF yerine "Drive'da aç" gösteriyordu.
+- **Kök neden:** H505'teki kapı (`ders_pdf_kapisi.py`) yazılmış ama hiçbir yere bağlanmamıştı; yeni destesiz derslerin `SANAL_DESTELER` kaydı yine unutuldu (PDF'ler drive_root'ta md5 eşitti, yalnız kayıt yoktu). Kural belgede kalınca uygulanmıyor.
+- **Kalıcı çözüm:** üç kayıt eklendi. Kapıya sunucusuz `--statik` kipi (kayıt + drive_root dosyası) eklendi ve `deploy/oracle/dagit.sh` dağıtımdan önce bunu zorunlu çalıştırıyor (çıkış 74): hizalaması olup PDF kaydı olmayan ders artık canlıya çıkamaz.
+- **Kural:** yeni sesli ders = SANAL_DESTELER kaydı + `meds-web` restart; kapı dağıtımda zorunlu, atlanamaz.

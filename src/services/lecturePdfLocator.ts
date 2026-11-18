@@ -307,6 +307,22 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Nöroloji/10)Serebrovasküler Hastalıklar.pdf', name: '10)Serebrovasküler Hastalıklar.pdf', pages: 60 } as SourceFile],
   },
+  // 2026-11-18 (H624): k2-40/41/42 yayınlanmış ama kayıtsızdı → "PDF uygulama içinde açılamıyor".
+  'k2p-k2-40': {
+    title: 'Santral Sinir Sistemi Tümörleri',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Patoloji/5)Santral Sinir Sistemi Tümörleri.pdf', name: '5)Santral Sinir Sistemi Tümörleri.pdf', pages: 58 } as SourceFile],
+  },
+  'k2p-k2-41-otonom-sinir-sistemi-farmakolojisi': {
+    title: 'Otonom Sinir Sistemi Farmakolojisi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /7)Otonom Sinir Sistemi Farmakolojisi.pdf', name: '7)Otonom Sinir Sistemi Farmakolojisi.pdf', pages: 56 } as SourceFile],
+  },
+  'k2p-k2-42': {
+    title: 'Nörogelişimsel Bozukluklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /13)NGB.pdf', name: '13)NGB.pdf', pages: 40 } as SourceFile],
+  },
   'k2p-k2-38-travma-ve-stres-baglantili-bozukluklar': {
     title: 'Travma ve Stres Bağlantılı Bozukluklar',
     decks: [],

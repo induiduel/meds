@@ -21,12 +21,36 @@ import kok as _kok  # noqa: E402
 KOK = _kok.MEDS
 ap = argparse.ArgumentParser()
 ap.add_argument('--sunucu', default='http://localhost:3000')
+# --statik (H624): sunucu gerekmez — deckId SANAL_DESTELER/deckPdfSources'ta kayıtlı ve PDF drive_root'ta olmalı.
+# dagit.sh bunu dağıtımdan ÖNCE zorunlu çalıştırır (kayıtsız ders canlıya çıkamaz).
+ap.add_argument('--statik', action='store_true')
+ap.add_argument('--kok', default=None, help='meds kökü (dagit.sh worktree)')
 ap.add_argument('--onek', default='k2-')
 # arşivde kalan, yayında olmayan eski sınama dersleri
 ap.add_argument('--atla', nargs='*', default=['k2-07-genel-anestezik-ilaclar'])
 a = ap.parse_args()
 
-katalog = json.load(urllib.request.urlopen(f'{a.sunucu}/api/lecture-pdf/decks', timeout=30))['decks']
+if a.kok:
+    KOK = pathlib.Path(a.kok)
+
+def statik_katalog():
+    import re, unicodedata
+    ts = (KOK / 'src/services/lecturePdfLocator.ts').read_text()
+    blok = ts[ts.index('export const SANAL_DESTELER'):]
+    blok = blok[:blok.index('\n};')]
+    drive = KOK.parent / 'meds_downloads/drive_root'
+    nfc = lambda x: unicodedata.normalize('NFC', x)
+    var = {nfc(str(p.relative_to(drive))) for p in drive.rglob('*.pdf')} if drive.exists() else None
+    kat = {}
+    for m in re.finditer(r"\n  '([^']+)': \{(.*?)\n  \},", blok, re.S):
+        yollar = re.findall(r"path: '([^']+)'", m.group(2))
+        kat[m.group(1)] = [{'available': var is None or nfc(y) in var} for y in yollar] or [{'available': True}]
+    js = json.loads((KOK / 'src/data/deckPdfSources.json').read_text()).get('decks', {})
+    for k, v in js.items():
+        kat.setdefault(k, [{'available': True}] if v.get('files') else [])
+    return kat
+
+katalog = statik_katalog() if a.statik else json.load(urllib.request.urlopen(f'{a.sunucu}/api/lecture-pdf/decks', timeout=30))['decks']
 hata = 0
 for f in sorted((KOK / 'data/sesli_anlatim/hizalama').glob(f'{a.onek}*.json')):
     if f.stem in a.atla:

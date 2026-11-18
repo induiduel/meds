@@ -1,12 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 825,
-  "baslik": "Kurul 2: Santral Sinir Sistemi Tümörleri, Otonom Sinir Sistemi Farmakolojisi ve Nörogelişimsel Bozukluklar sesli dersleri",
+  "onem": 826,
+  "baslik": "SSS Tümörleri, OSS Farmakolojisi ve Nörogelişimsel Bozukluklar PDF'leri açılıyor",
   "maddeler": [
-    "Sesli ders: Tıbbi Patoloji — Santral Sinir Sistemi Tümörleri, Tıbbi Farmakoloji — Otonom Sinir Sistemi Farmakolojisi ve Psikiyatri — Nörogelişimsel Bozukluklar bu yılın PDF'inden anlatımlı, EMA sesli olarak eklendi.",
-    "Örnek sorular: üç derse sırasıyla 63, 61 ve 74 örnek soru; sesli çözücü ve hocanın sorabileceği ara sorular eklendi.",
-    "Çıkmış: doğrulanmış çıkmışlar (12, 10, 11) ders içinde işaretlendi ve her biri için ayrıntılı analiz yazıldı.",
-    "Ders içeriği: terim ve kısaltma sözlükleri, ders içerik paketi ve PDF üstü çizimler eklendi."
+    "Sesli derste bu üç dersin PDF'i artık uygulama içinde açılıyor.",
+    "Yeni ders PDF'siz yayına çıkamasın diye dağıtıma denetim eklendi."
   ],
   "eklenen": [
     "SSS Tümörleri sesli dersi",

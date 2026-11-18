@@ -45,6 +45,8 @@ if [[ "$CANLI" == "$HEDEF" ]]; then echo "Canlı zaten güncel (${HEDEF:0:8}).";
 git -C "$WT" checkout -q -f --detach "$HEDEF"
 # commit'lenmemiş dosyaya import → canlı açılış çökmesi (2026-10-21)
 node "$WT/deploy/oracle/import_denetimi.mjs" "$WT" server.ts || exit 76
+# H505/H624: hizalaması olan her sesli dersin PDF kaydı (SANAL_DESTELER) ve dosyası olmalı — yoksa "PDF uygulama içinde açılamıyor"
+python3 "$WT/scripts/kapilar/ders_pdf_kapisi.py" --statik --kok "$WT" || { echo "DURDU: PDF'i kayıtsız sesli ders var (H624)."; exit 74; }
 YENI_ONEM="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["onem"])' "$WT/guncelleme_notu.json")"
 CANLI_ONEM="$(curl -s -m 15 https://api.nofrostlife.com.tr/api/surum | python3 -c 'import json,sys;print(json.load(sys.stdin).get("onem",0))' 2>/dev/null || echo 0)"
 if [[ "$SESSIZ" == "0" && "$YENI_ONEM" -le "$CANLI_ONEM" ]]; then
