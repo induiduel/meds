@@ -1,0 +1,43 @@
+{
+ "_aciklama": "Doğrulanmış eşleme (H490, kapi.py) — bkz. k2-15.json açıklaması.",
+ "kayitlar": [
+  {
+   "birim": "psk-s17-b12",
+   "tur": "slayt_disi",
+   "bilgi": "52. Selfmutilasyon için hangisi doğrudur? → Genellikle madde bulamadıklarında veya engellendiklerinde yaparlar",
+   "yok_terimler": [
+    "bulamadıklarında",
+    "engellendiklerinde"
+   ],
+   "gerekce": "2026-27 İntihar ve Kendine Zarar Verme slaytında kendine zarar vermenin madde bulamama ya da engellenme sonrası yapıldığı bilgisi yok; slayt (s31-s33) ortama uyamama ve tahammülsüzlüğün yarattığı baskıdan rahatlama der. Konu bu yılın anlatımına giremez (kural 28)."
+  },
+  {
+   "birim": "psk-s17-b08",
+   "tur": "anlatim",
+   "bilgi": "Daha önce intihar girişimi öyküsü bulunan, 'ölsem de her şey bitse' şeklinde aktif intihar düşüncelerini ifade eden ve yalnız yaşayan 22 yaşındaki bir hastada hekimin acil yaklaşımı ne olmalıdır? → Hastayı acil yatırarak kapalı serviste yakın intihar gözetimine almak",
+   "cumle": [
+    "Örneğin daha önce intihar girişimi olan, ölsem de her şey bitse diyerek ölüm isteğini dile getiren ve tek başına yaşayan genç bir hasta düşünelim.",
+    "Girişim öyküsü, ölüm isteği ve yalnız yaşama birlikte yüksek riski gösterir; bu nedenle gerektiğinde hastaneye yatırılır ve yakından izlenir."
+   ],
+   "anahtar": [
+    "ölsem de her şey bitse",
+    "yatırılır"
+   ],
+   "gerekce": "Vaka cümleleri slayt s14 (girişim öyküsü en önemli risk etmeni), s22 (yalnız yaşama) ve s27 (tıbbi müdahale, güvenlik, yatış) bilgilerini bir hastada birleştirir."
+  },
+  {
+   "birim": "psk-s17-b08",
+   "tur": "anlatim",
+   "bilgi": "Daha önce intihar girişiminde bulunmuş genç bir kızın son zamanlarda okula ve derslere gitmediği, \"Ölsem de kurtulsam, her şey bitse\" tarzında söylemleri olduğu bilinmektedir. Ailesinden uzakta, evde tek başına yaşamakta → Yatış verip hastayı yakından takip etmek",
+   "cumle": [
+    "Örneğin daha önce intihar girişimi olan, ölsem de her şey bitse diyerek ölüm isteğini dile getiren ve tek başına yaşayan genç bir hasta düşünelim.",
+    "Girişim öyküsü, ölüm isteği ve yalnız yaşama birlikte yüksek riski gösterir; bu nedenle gerektiğinde hastaneye yatırılır ve yakından izlenir."
+   ],
+   "anahtar": [
+    "ölsem de her şey bitse",
+    "yatırılır"
+   ],
+   "gerekce": "Aynı vaka: önceki girişim, ölüm isteği ve yalnız yaşama birlikte yüksek riski gösterir, hasta yatırılıp yakından izlenir (s14, s22, s27)."
+  }
+ ]
+}

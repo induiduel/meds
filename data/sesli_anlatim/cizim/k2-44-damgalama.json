@@ -1,0 +1,211 @@
+{
+ "surum": 1,
+ "metinHash": "ea8a733aab7ec0c9b7a232f6c95b095e25b6231f",
+ "p": {
+  "3": {
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Öngörülemezlik",
+      "Kaygı",
+      "Dışlama",
+      "Ayrımcılık"
+     ],
+     "s": 4,
+     "k": [
+      24,
+      130
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.199,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0592,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "tip_ozellik",
+     "sablon_ad": "Tip → ayırt edici özellik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Etken",
+      "İnanç"
+     ],
+     "satirlar": [
+      [
+       "Korku ve dışarıda bırakma",
+       "Korkulmalı"
+      ],
+      [
+       "Otoriterlik",
+       "Kararları başkası vermeli"
+      ],
+      [
+       "Yardımseverlik",
+       "Çocuk gibidir"
+      ]
+     ],
+     "s": 5,
+     "k": [
+      35,
+      156
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2728,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Stereotipi",
+      "Önyargı",
+      "Ayrımcılık"
+     ],
+     "s": 12,
+     "k": [
+      0,
+      33
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.199,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0592,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "18": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Görüşe inanan",
+       "Halk",
+       "Hasta kendisi benimser"
+      ]
+     ],
+     "kutuplar": [
+      "Toplumsal damgalama",
+      "Öz damgalama"
+     ],
+     "s": 19,
+     "k": [
+      0,
+      106
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.261,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1208,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Dayanağı",
+       "Yanlış bilgiyi düzeltme",
+       "Hastayla doğrudan temas"
+      ]
+     ],
+     "kutuplar": [
+      "Eğitim",
+      "İletişim"
+     ],
+     "s": 22,
+     "k": [
+      9,
+      89
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.84
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.261,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1208,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 5,
+  "gecti": 5,
+  "ret": {},
+  "anlam_denetimi": {
+   "bakilan": 5,
+   "duzeltilen": 0,
+   "silinen": 0
+  },
+  "tur": {
+   "sema": 5
+  }
+ }
+}

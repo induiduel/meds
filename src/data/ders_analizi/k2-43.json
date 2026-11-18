@@ -1,0 +1,366 @@
+{
+ "surum": 2,
+ "key": "k2-43",
+ "kod": "2s12",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Konsültasyon Liyezon Psikiyatrisi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Pınar Durmaz",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s12"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Dersin girişi"
+    },
+    {
+     "metin": "Konsültasyon ve liyezon tanımları"
+    },
+    {
+     "metin": "KLP'nin tanımı ve amacı"
+    },
+    {
+     "metin": "Psikiyatrik eş tanıların önemi"
+    },
+    {
+     "metin": "KLP çalışma alanı"
+    },
+    {
+     "metin": "KLP'nin görevleri"
+    },
+    {
+     "metin": "Hastalık sürecinin hasta ve hekim açısından farkı"
+    },
+    {
+     "metin": "Psikosomatik kavramı"
+    },
+    {
+     "metin": "Psikiyatri dışı hekimlerin tanı doğruluğu"
+    },
+    {
+     "metin": "KLP'nin işlevleri"
+    },
+    {
+     "metin": "Ruh sağlığı hizmetlerinin sağlanması"
+    },
+    {
+     "metin": "Psikososyal tıp eğitimi"
+    },
+    {
+     "metin": "Psikososyal araştırmalar"
+    },
+    {
+     "metin": "Lipowski'nin konsültasyon türleri"
+    },
+    {
+     "metin": "Konsültasyonun aciliyeti"
+    },
+    {
+     "metin": "Konsültasyon izlem süreci"
+    },
+    {
+     "metin": "Hastaya yönelik verilerin toplanması"
+    },
+    {
+     "metin": "Hastanın bilgilendirilmesi"
+    },
+    {
+     "metin": "Veri toplamanın sonu ve konsültasyonun başarısı"
+    },
+    {
+     "metin": "Ruhsal durum muayenesinde yaklaşım"
+    },
+    {
+     "metin": "Gizlilik ve ortam"
+    },
+    {
+     "metin": "Ruhsal durum muayenesinin kapsamı"
+    },
+    {
+     "metin": "Muayenenin sonlandırılması"
+    },
+    {
+     "metin": "Yazılı konsültasyon raporu"
+    },
+    {
+     "metin": "Takip ve izleme"
+    },
+    {
+     "metin": "Tıbbi hastalıklarda psikiyatrik tanılar"
+    },
+    {
+     "metin": "Histeri ve diğer önemli hastalık grupları"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Dersin girişi.",
+    "Konsültasyon ve liyezon tanımları.",
+    "KLP'nin tanımı ve amacı.",
+    "Psikiyatrik eş tanıların önemi.",
+    "KLP çalışma alanı.",
+    "KLP'nin görevleri.",
+    "Hastalık sürecinin hasta ve hekim açısından farkı.",
+    "Psikosomatik kavramı.",
+    "Psikiyatri dışı hekimlerin tanı doğruluğu.",
+    "KLP'nin işlevleri.",
+    "Ruh sağlığı hizmetlerinin sağlanması.",
+    "Psikososyal tıp eğitimi.",
+    "Psikososyal araştırmalar.",
+    "Lipowski'nin konsültasyon türleri.",
+    "Konsültasyonun aciliyeti.",
+    "Konsültasyon izlem süreci.",
+    "Hastaya yönelik verilerin toplanması.",
+    "Hastanın bilgilendirilmesi.",
+    "Veri toplamanın sonu ve konsültasyonun başarısı.",
+    "Ruhsal durum muayenesinde yaklaşım.",
+    "Gizlilik ve ortam.",
+    "Ruhsal durum muayenesinin kapsamı.",
+    "Muayenenin sonlandırılması.",
+    "Yazılı konsültasyon raporu.",
+    "Takip ve izleme.",
+    "Tıbbi hastalıklarda psikiyatrik tanılar.",
+    "Histeri ve diğer önemli hastalık grupları."
+   ],
+   "v": "f8e24c0516"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Konsültasyon ve liyezon tanımları",
+     "metin": "Konsültasyon ve liyezon tanımları — Konsültasyon: ilgili dal hekiminin tanı ya da baş etme güçlüğü çektiği hasta için görüş alma talebi; amaç hastanın değerlendirilmesi ve farklı branş uzmanlarınca yardım sunulması.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "KLP'nin tanımı, önemi ve çalışma alanı",
+     "metin": "KLP'nin tanımı, önemi ve çalışma alanı — KLP: fiziksel hastalıklara eşlik eden psikiyatrik bozukluk ve psikososyal sorunların tanısı, tedavisi ve takibi ile ilgilenen psikiyatri disiplini.",
+     "s": [
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "baslik": "KLP'nin görevleri ve üç işlevi",
+     "metin": "KLP'nin görevleri ve üç işlevi — Üç işlev: psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmeti, psikososyal tıp eğitimi, psikososyal araştırma.",
+     "s": [
+      6,
+      10,
+      11,
+      12,
+      13,
+      14
+     ]
+    },
+    {
+     "baslik": "Hastalık süreci, psikosomatik kavramı ve tanı doğruluğu",
+     "metin": "Hekim için hastalık fizyopatolojik ve organik süreçtir; hasta için biyolojik, psikolojik, sosyal, çevresel ve ailesel çok boyutlu bir olgudur.",
+     "s": [
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "baslik": "Lipowski'nin beş konsültasyon türü",
+     "metin": "Lipowski'nin beş konsültasyon türü — Hasta merkezli: tanı güçlüğü/izleme güçlüğü, ayırıcı tanı görüşü.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Konsültasyonun aciliyeti: acil, aynı gün, rutin",
+     "metin": "Çıkmış (ilgili): Acil konsültasyon, psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon ve intihar girişimi gibi durumlardır.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Konsültasyon süreci: veri toplama",
+     "metin": "Beş basamak: veri toplama, ruhsal durum muayenesi, tanı-tedavi planı, planın aktarılması, takip ve izleme.",
+     "s": [
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    {
+     "baslik": "Ruhsal durum muayenesi",
+     "metin": "Ruhsal durum muayenesi — Yargılayıcı, incitici ve küçük düşürücü davranılmaz; hasta tanınır, amaç belirtilir, onam alınır; onam yoksa muayeneden vazgeçilebilir.",
+     "s": [
+      21,
+      22,
+      23,
+      24
+     ]
+    },
+    {
+     "baslik": "Konsültasyon raporu, takip ve izleme",
+     "metin": "Yazılı rapor hekimler arası iletişimdir; konsültasyon talebine neden olan temel soruna odaklanır, açık ifade edilir, gizlilik ve hasta haklarına dikkat edilir.",
+     "s": [
+      25,
+      26
+     ]
+    },
+    {
+     "baslik": "Tıbbi hastalıklarla psikiyatrik tanı ilişkisi",
+     "metin": "Tıbbi hastalıklarla psikiyatrik tanı ilişkisi — Onkolojik ve özürlülük yapan hastalıklarda emosyonel bozukluk, metabolik sendrom, iskemik kardiyak hastalık, hipotiroidi, endokrin hastalıklar ve porfiride anksiyete, kronik ve işlev kaybı yapan hastalıklarda depresyon daha sık.",
+     "s": [
+      27,
+      28
+     ]
+    },
+    {
+     "baslik": "Kapanış sayfası",
+     "metin": "Kapanış sayfası; yeni bilgi içermez.",
+     "s": [
+      29
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Konsültasyon ve liyezon tanımları: Konsültasyon ve liyezon tanımları — Konsültasyon: ilgili dal hekiminin tanı ya da baş etme güçlüğü çektiği hasta için görüş alma talebi; amaç hastanın değerlendirilmesi ve farklı branş uzmanlarınca yardım sunulması.",
+    "KLP'nin tanımı, önemi ve çalışma alanı: KLP'nin tanımı, önemi ve çalışma alanı — KLP: fiziksel hastalıklara eşlik eden psikiyatrik bozukluk ve psikososyal sorunların tanısı, tedavisi ve takibi ile ilgilenen psikiyatri disiplini.",
+    "KLP'nin görevleri ve üç işlevi: KLP'nin görevleri ve üç işlevi — Üç işlev: psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmeti, psikososyal tıp eğitimi, psikososyal araştırma.",
+    "Hastalık süreci, psikosomatik kavramı ve tanı doğruluğu: Hekim için hastalık fizyopatolojik ve organik süreçtir; hasta için biyolojik, psikolojik, sosyal, çevresel ve ailesel çok boyutlu bir olgudur.",
+    "Lipowski'nin beş konsültasyon türü: Lipowski'nin beş konsültasyon türü — Hasta merkezli: tanı güçlüğü/izleme güçlüğü, ayırıcı tanı görüşü.",
+    "Konsültasyonun aciliyeti: acil, aynı gün, rutin: Çıkmış (ilgili): Acil konsültasyon, psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon ve intihar girişimi gibi durumlardır.",
+    "Konsültasyon süreci: veri toplama: Beş basamak: veri toplama, ruhsal durum muayenesi, tanı-tedavi planı, planın aktarılması, takip ve izleme.",
+    "Ruhsal durum muayenesi: Ruhsal durum muayenesi — Yargılayıcı, incitici ve küçük düşürücü davranılmaz; hasta tanınır, amaç belirtilir, onam alınır; onam yoksa muayeneden vazgeçilebilir.",
+    "Konsültasyon raporu, takip ve izleme: Yazılı rapor hekimler arası iletişimdir; konsültasyon talebine neden olan temel soruna odaklanır, açık ifade edilir, gizlilik ve hasta haklarına dikkat edilir.",
+    "Tıbbi hastalıklarla psikiyatrik tanı ilişkisi: Tıbbi hastalıklarla psikiyatrik tanı ilişkisi — Onkolojik ve özürlülük yapan hastalıklarda emosyonel bozukluk, metabolik sendrom, iskemik kardiyak hastalık, hipotiroidi, endokrin hastalıklar ve porfiride anksiyete, kronik ve işlev kaybı yapan hastalıklarda depresyon daha sık.",
+    "Kapanış sayfası: Kapanış sayfası; yeni bilgi içermez."
+   ],
+   "v": "2c0a96de2e"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu iki çıkmış soru, konsültasyon-liyezon psikiyatrisinin iki çekirdeğini ölçer: genel hastanede en sık görülen psikiyatrik tablo ve acil psikiyatri durumlarına yaklaşım.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+     "cevap": "Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır.",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Soru, konsültasyon-liyezon psikiyatrisi ve acil psikiyatri durumları hakkındaki ifadelerden yanlış olanı bulmanızı ister.",
+      "Ders slaytı yalnız acil konsültasyon durumlarını sayar: psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon ve intihar girişimi (s.16).",
+      "Ajitasyonda ilk uygulamanın ne olduğu, deliryumun görülme sıklığı, ağrı ile intihar ilişkisi ve varsanının en sık nedeni slaytta anlatılmaz; bu yüzden soru slayttaki bilgiye yalnız dolaylı olarak dayanır.",
+      "Öğrencinin slayttan çıkarabileceği bilgi şudur: psikotik ajitasyon, deliryum ve intihar girişimi hemen psikiyatri yardımı gerektiren acil durumlardır."
+     ],
+     "ornek": "Serviste yatan bir hastada psikotik ajitasyon geliştiğinde psikiyatri konsültasyonu aciliyete göre hangi grupta istenir?",
+     "tuzak": "Öğrenci ajitasyon yönetiminin ayrıntısına takılır; oysa slayt yalnız psikotik ajitasyonu acil konsültasyon örneği olarak sayar."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Konsültasyon-liyezon psikiyatrisinde (genel hastanede yatan hastalarda) en sık karşılaşılan psikiyatrik tablo aşağıdakilerden hangisidir?",
+     "cevap": "Deliryum",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Soru, genel hastanede yatan hastalarda konsültasyon-liyezon psikiyatrisinde en sık karşılaşılan psikiyatrik tabloyu sorar ve cevap deliryumdur.",
+      "Ders slaytı deliryumu, psikiyatri dışı hekimlerin büyük oranda doğru tanıdığı bozukluklar arasında sayar (s.9) ve psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örneklerinden biri olarak anar (s.16).",
+      "Genel hastanede en sık psikiyatrik tablonun deliryum olduğu bilgisi slaytta yazılı değildir; geçen yılın öğrenci notunda 'KLP'de en sık görülen şizofreni değil deliryum' diye özetlenmiştir.",
+      "Şizofreni bu soruda güçlü çeldiricidir; öğrenci notu en sık tablonun şizofreni değil deliryum olduğunu belirtir. Bipolar bozukluk, obsesif-kompulsif bozukluk ve anoreksiya nervoza slaytta bu bağlamda anılmaz."
+     ],
+     "ornek": "Cerrahi serviste yatan bir hastada deliryum geliştiğinde psikiyatri konsültasyonu aciliyete göre hangi grupta istenir?",
+     "tuzak": "Genel hastanede en sık tablo olarak şizofreni seçilir; geçen yılın öğrenci notuna göre doğrusu deliryumdur."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu iki çıkmış soru, konsültasyon-liyezon psikiyatrisinin iki çekirdeğini ölçer: genel hastanede en sık görülen psikiyatrik tablo ve acil psikiyatri durumlarına yaklaşım.",
+    "2020-2021: Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+    "Cevap: Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır.",
+    "Soru, konsültasyon-liyezon psikiyatrisi ve acil psikiyatri durumları hakkındaki ifadelerden yanlış olanı bulmanızı ister.",
+    "Ders slaytı yalnız acil konsültasyon durumlarını sayar: psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon ve intihar girişimi (s.16).",
+    "Ajitasyonda ilk uygulamanın ne olduğu, deliryumun görülme sıklığı, ağrı ile intihar ilişkisi ve varsanının en sık nedeni slaytta anlatılmaz; bu yüzden soru slayttaki bilgiye yalnız dolaylı olarak dayanır.",
+    "Öğrencinin slayttan çıkarabileceği bilgi şudur: psikotik ajitasyon, deliryum ve intihar girişimi hemen psikiyatri yardımı gerektiren acil durumlardır.",
+    "Örnek: Serviste yatan bir hastada psikotik ajitasyon geliştiğinde psikiyatri konsültasyonu aciliyete göre hangi grupta istenir?",
+    "Tuzak: Öğrenci ajitasyon yönetiminin ayrıntısına takılır; oysa slayt yalnız psikotik ajitasyonu acil konsültasyon örneği olarak sayar.",
+    "2023-2024: Konsültasyon-liyezon psikiyatrisinde (genel hastanede yatan hastalarda) en sık karşılaşılan psikiyatrik tablo aşağıdakilerden hangisidir?",
+    "Cevap: Deliryum.",
+    "Soru, genel hastanede yatan hastalarda konsültasyon-liyezon psikiyatrisinde en sık karşılaşılan psikiyatrik tabloyu sorar ve cevap deliryumdur.",
+    "Ders slaytı deliryumu, psikiyatri dışı hekimlerin büyük oranda doğru tanıdığı bozukluklar arasında sayar (s.9) ve psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örneklerinden biri olarak anar (s.16).",
+    "Genel hastanede en sık psikiyatrik tablonun deliryum olduğu bilgisi slaytta yazılı değildir; geçen yılın öğrenci notunda 'KLP'de en sık görülen şizofreni değil deliryum' diye özetlenmiştir.",
+    "Şizofreni bu soruda güçlü çeldiricidir; öğrenci notu en sık tablonun şizofreni değil deliryum olduğunu belirtir. Bipolar bozukluk, obsesif-kompulsif bozukluk ve anoreksiya nervoza slaytta bu bağlamda anılmaz.",
+    "Örnek: Cerrahi serviste yatan bir hastada deliryum geliştiğinde psikiyatri konsültasyonu aciliyete göre hangi grupta istenir?",
+    "Tuzak: Genel hastanede en sık tablo olarak şizofreni seçilir; geçen yılın öğrenci notuna göre doğrusu deliryumdur."
+   ],
+   "v": "c8dedb4389"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 2 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 2 çıkmış soru var; 0 tanesi öncüllü, 1 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 16."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 2 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 2 çıkmış soru var; 0 tanesi öncüllü, 1 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 16."
+   ],
+   "v": "78dda2b967"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Konsültasyonun aciliyeti: acil, aynı gün, rutin",
+     "metin": "Sık yapılan hata: Öğrenci ajitasyon yönetiminin ayrıntısına takılır; oysa slayt yalnız psikotik ajitasyonu acil konsültasyon örneği olarak sayar. Ayrıca: Genel hastanede en sık tablo olarak şizofreni seçilir; geçen yılın öğrenci notuna göre doğrusu deliryumdur."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Konsültasyonun aciliyeti: acil, aynı gün, rutin: Sık yapılan hata: Öğrenci ajitasyon yönetiminin ayrıntısına takılır; oysa slayt yalnız psikotik ajitasyonu acil konsültasyon örneği olarak sayar. Ayrıca: Genel hastanede en sık tablo olarak şizofreni seçilir; geçen yılın öğrenci notuna göre doğrusu deliryumdur.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "32a23dd2e6"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

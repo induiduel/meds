@@ -1,0 +1,1072 @@
+{
+ "surum": 2,
+ "key": "k2-46",
+ "kod": "2f08",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Sempatomimetikler",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f08"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders adrenalin ve noradrenalinin etkilerini taklit eden sempatomimetikleri ele alır: adrenoseptör alt tipleri ve G proteini yolları, organ sistemlerine etkiler, direkt, indirekt ve karma etkili ilaçlar ile bu ilaçların kardiyovasküler, pulmoner, göz, genitoüriner ve merkezi sinir sistemi kullanımları.",
+   "maddeler": [
+    {
+     "metin": "Ders girişi: sempatomimetik ilaçlar"
+    },
+    {
+     "metin": "Sempatomimetik tanımı ve direkt/indirekt sınıflama"
+    },
+    {
+     "metin": "Adrenoseptörlerin G proteini yapısı ve sinyal yolakları"
+    },
+    {
+     "metin": "Alfa, beta ve dopamin reseptör tipleri ve ikinci ulaklar"
+    },
+    {
+     "metin": "Reseptör regülasyonu ve noradrenalin transportörü (NAT)"
+    },
+    {
+     "metin": "Sempatomimetiklerin tıbbi kimyası (yapı-etki)"
+    },
+    {
+     "metin": "Alfa1 aktivasyonunun kardiyovasküler etkileri"
+    },
+    {
+     "metin": "Alfa2 ve beta aktivasyonunun kardiyovasküler etkileri"
+    },
+    {
+     "metin": "Dopamin reseptör aktivasyonu ve dozlara bağlı etkileri"
+    },
+    {
+     "metin": "Sempatomimetiklerin kalp dışı etkileri (göz, bronş, genitoüriner, bezler)"
+    },
+    {
+     "metin": "Metabolik, endokrin ve MSS etkileri"
+    },
+    {
+     "metin": "Endojen katekolaminler: adrenalin, noradrenalin, dopamin"
+    },
+    {
+     "metin": "Direkt etkili alfa1 agonistleri: fenilefrin, midodrin, metoksamin"
+    },
+    {
+     "metin": "Alfa2 agonistleri ve topikal dekonjestanlar"
+    },
+    {
+     "metin": "Beta agonistleri: izoproterenol, dobutamin, beta2 selektifler"
+    },
+    {
+     "metin": "Karma etkili sempatomimetikler: efedrin ve psödoefedrin"
+    },
+    {
+     "metin": "İndirekt etkili sempatomimetikler: amfetamin ve benzerleri"
+    },
+    {
+     "metin": "Tiramin ve MAO inhibitörü etkileşimi"
+    },
+    {
+     "metin": "Katekolamin geri alım inhibitörleri ve kokain"
+    },
+    {
+     "metin": "Dopamin agonistleri ve akut hipotansiyon/şok tedavisi"
+    },
+    {
+     "metin": "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları"
+    },
+    {
+     "metin": "Dekonjestanlar ve pulmoner uygulamalar"
+    },
+    {
+     "metin": "Anafilaksi ve göz uygulamaları"
+    },
+    {
+     "metin": "Genitoüriner, MSS ve diğer klinik uygulamalar"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders adrenalin ve noradrenalinin etkilerini taklit eden sempatomimetikleri ele alır: adrenoseptör alt tipleri ve G proteini yolları, organ sistemlerine etkiler, direkt, indirekt ve karma etkili ilaçlar ile bu ilaçların kardiyovasküler, pulmoner, göz, genitoüriner ve merkezi sinir sistemi kullanımları.",
+    "Ders girişi: sempatomimetik ilaçlar.",
+    "Sempatomimetik tanımı ve direkt/indirekt sınıflama.",
+    "Adrenoseptörlerin G proteini yapısı ve sinyal yolakları.",
+    "Alfa, beta ve dopamin reseptör tipleri ve ikinci ulaklar.",
+    "Reseptör regülasyonu ve noradrenalin transportörü (NAT).",
+    "Sempatomimetiklerin tıbbi kimyası (yapı-etki).",
+    "Alfa1 aktivasyonunun kardiyovasküler etkileri.",
+    "Alfa2 ve beta aktivasyonunun kardiyovasküler etkileri.",
+    "Dopamin reseptör aktivasyonu ve dozlara bağlı etkileri.",
+    "Sempatomimetiklerin kalp dışı etkileri (göz, bronş, genitoüriner, bezler).",
+    "Metabolik, endokrin ve MSS etkileri.",
+    "Endojen katekolaminler: adrenalin, noradrenalin, dopamin.",
+    "Direkt etkili alfa1 agonistleri: fenilefrin, midodrin, metoksamin.",
+    "Alfa2 agonistleri ve topikal dekonjestanlar.",
+    "Beta agonistleri: izoproterenol, dobutamin, beta2 selektifler.",
+    "Karma etkili sempatomimetikler: efedrin ve psödoefedrin.",
+    "İndirekt etkili sempatomimetikler: amfetamin ve benzerleri.",
+    "Tiramin ve MAO inhibitörü etkileşimi.",
+    "Katekolamin geri alım inhibitörleri ve kokain.",
+    "Dopamin agonistleri ve akut hipotansiyon/şok tedavisi.",
+    "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları.",
+    "Dekonjestanlar ve pulmoner uygulamalar.",
+    "Anafilaksi ve göz uygulamaları.",
+    "Genitoüriner, MSS ve diğer klinik uygulamalar."
+   ],
+   "v": "9033d5b60b"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Sempatik sistemin etkisi: adrenalin ve noradrenalin",
+     "metin": "Sempatik sistemin etkisi noradrenalin ve adrenalinle olur; adrenalin hormon, noradrenalin nörotransmitter gibi davranır.",
+     "s": [
+      2,
+      3
+     ]
+    },
+    {
+     "baslik": "Adrenoseptörlerin G proteini yapısı ve sinyal yolakları",
+     "metin": "Adrenoseptörler yedi transmembran G proteinine kenetli reseptörlerdir; Gs adenilil siklazı uyarır, Gi/Go inhibe eder, Gq/G11 fosfolipaz C'ye bağlar.",
+     "s": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "baslik": "Alfa reseptörlerinin Gq ve Gi üzerinden ikinci ulak yapımı ve beta ile dopamin yolakları",
+     "metin": "Alfa1 Gq üzerinden IP3/DAG ve Ca2+ artışı yapar; alfa2 Gi üzerinden cAMP'yi azaltır.",
+     "s": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+     ]
+    },
+    {
+     "baslik": "Agonist maruziyeti ve adrenoseptör duyarsızlaşması",
+     "metin": "Agoniste uzun maruziyet adrenoseptör duyarsızlaşmasına yol açar.",
+     "s": [
+      15,
+      16,
+      17,
+      18,
+      19
+     ]
+    },
+    {
+     "baslik": "Katekolaminlerde hidroksil grupları ve alfa/beta aktivitesi",
+     "metin": "Katekolaminlerde 3,4-OH grupları maksimum alfa/beta aktivitesi verir; KOMT ile inaktive olduğundan oral etkisizdir.",
+     "s": [
+      19,
+      20,
+      21
+     ]
+    },
+    {
+     "baslik": "Alfa1 aktivasyonunun kardiyovasküler etkileri",
+     "metin": "Cilt ve splanik damarlar alfa ağırlıklıdır; nazal mukoza alfa aktivasyonu dekonjestan etkiyi açıklar.",
+     "s": [
+      22,
+      23,
+      24
+     ]
+    },
+    {
+     "baslik": "Klonidin gibi alfa2 agonistlerin sempatik tonusu düşürmesi",
+     "metin": "Klonidin gibi alfa2 agonistler santral olarak sempatik tonusu düşürür; hipertansiyonda sempatolitik kullanılır.",
+     "s": [
+      25,
+      26,
+      27
+     ]
+    },
+    {
+     "baslik": "Dopaminin renal, splanik ve koroner damarlardaki etkileri",
+     "metin": "IV dopamin D1 ile renal, splanik, koroner damarlarda vazodilatasyon ve natriürez yapar; oligüride kullanılır.",
+     "s": [
+      28,
+      29
+     ]
+    },
+    {
+     "baslik": "Bronkodilatasyon ve midriyazis: kalp dışı sempatomimetik etkiler",
+     "metin": "Beta2 bronkodilatasyon yapar (astım); alfa1 iris radyal kasını kasarak midriyazis yapar (fenilefrin).",
+     "s": [
+      29,
+      30,
+      31
+     ]
+    },
+    {
+     "baslik": "Beta3 lipoliz ve beta2 glikojenoliz: metabolik etkiler",
+     "metin": "Beta3 lipoliz, beta2 hepatik glikojenoliz yapar; yüksek katekolamin metabolik asidoz yapabilir.",
+     "s": [
+      32,
+      33,
+      34,
+      35
+     ]
+    },
+    {
+     "baslik": "Endojen katekolaminler: adrenalin, noradrenalin, dopamin",
+     "metin": "Dopamin noradrenalin öncülüdür; bazal gangliyon eksikliği Parkinson hastalığına yol açar.",
+     "s": [
+      36,
+      37,
+      38
+     ]
+    },
+    {
+     "baslik": "Direkt etkili alfa1 agonistleri: fenilefrin, midodrin, metoksamin",
+     "metin": "Fenilefrin saf alfa1 agonisttir, katekol olmadığından KOMT ile yıkılmaz; midriyatik, dekonjestan ve vazopressördür.",
+     "s": [
+      38,
+      39
+     ]
+    },
+    {
+     "baslik": "Alfa2 agonistleri ve topikal dekonjestanlar",
+     "metin": "Sedasyon alfa2 agonistlerin yan etkisidir ve opioid gereksinimini azaltır.",
+     "s": [
+      40,
+      41
+     ]
+    },
+    {
+     "baslik": "Beta agonistleri: izoproterenol, dobutamin, beta2 selektifler",
+     "metin": "İzoproterenol neredeyse saf beta agonisttir; pozitif kronotrop/inotrop ve güçlü vazodilatördür.",
+     "s": [
+      41,
+      42
+     ]
+    },
+    {
+     "baslik": "Karma etkili sempatomimetikler: efedrin ve psödoefedrin",
+     "metin": "Efedrin yüksek biyoyararlanımlı, uzun etkili, MSS'ye giren hafif uyarıcıdır; beta aktivasyonu nedeniyle eskiden astımda kullanılmıştır.",
+     "s": [
+      43,
+      44
+     ]
+    },
+    {
+     "baslik": "İndirekt etkili sempatomimetikler: amfetamin ve benzerleri",
+     "metin": "İndirekt ajanlar depolanmış katekolaminleri boşaltır (amfetamin) veya NAT'ı bloke eder.",
+     "s": [
+      44,
+      45,
+      46
+     ]
+    },
+    {
+     "baslik": "Tiramin ve MAO inhibitörü etkileşimi",
+     "metin": "MAO inhibitörü (özellikle MAO-A) alanlarda tiramin etkisi şiddetlenir ve belirgin hipertansiyon gelişebilir.",
+     "s": [
+      47,
+      48
+     ]
+    },
+    {
+     "baslik": "Katekolamin geri alım inhibitörleri ve kokain",
+     "metin": "Kokain geri alım inhibisyonuyla periferik sempatomimetik etki yapan lokal anesteziktir; MSS'de dopamin geri alımını inhibe eder.",
+     "s": [
+      49,
+      50
+     ]
+    },
+    {
+     "baslik": "Dopamin agonistleri ve akut hipotansiyon/şok tedavisi",
+     "metin": "Akut hipotansiyonda önce sıvı ve yatırma; vazokonstriksiyon gerekirse noradrenalin, fenilefrin, metoksamin kullanılır.",
+     "s": [
+      51,
+      52,
+      53,
+      54,
+      55
+     ]
+    },
+    {
+     "baslik": "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları",
+     "metin": "Ortostatik hipotansiyonda midodrin, droksidopa, efedrin veya fenilefrin kullanılır.",
+     "s": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+     ]
+    },
+    {
+     "baslik": "Dekonjestanlar ve burun mukozası daralması",
+     "metin": "Dekonjestanlar (fenilefrin, efedrin, psödoefedrin, ksilometazolin, oksimetazolin) burun mukozasını daraltır; rebound hiperemi yapabilir.",
+     "s": [
+      61,
+      62
+     ]
+    },
+    {
+     "baslik": "Anafilakside adrenalin ve göz uygulamaları",
+     "metin": "Anafilakside adrenalin (1:1000, 0,3-0,5 ml) tercihen IM verilir; oto-enjektör taşınır.",
+     "s": [
+      63,
+      64,
+      65
+     ]
+    },
+    {
+     "baslik": "Ritodrin ve terbutalinle erken doğumun geciktirilmesi",
+     "metin": "Ritodrin ve terbutalin erken doğumu geciktirir; efedrin/psödoefedrin stres inkontinansında denenebilir.",
+     "s": [
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Sempatik sistemin etkisi: adrenalin ve noradrenalin: Sempatik sistemin etkisi noradrenalin ve adrenalinle olur; adrenalin hormon, noradrenalin nörotransmitter gibi davranır.",
+    "Adrenoseptörlerin G proteini yapısı ve sinyal yolakları: Adrenoseptörler yedi transmembran G proteinine kenetli reseptörlerdir; Gs adenilil siklazı uyarır, Gi/Go inhibe eder, Gq/G11 fosfolipaz C'ye bağlar.",
+    "Alfa reseptörlerinin Gq ve Gi üzerinden ikinci ulak yapımı ve beta ile dopamin yolakları: Alfa1 Gq üzerinden IP3/DAG ve Ca2+ artışı yapar; alfa2 Gi üzerinden cAMP'yi azaltır.",
+    "Agonist maruziyeti ve adrenoseptör duyarsızlaşması: Agoniste uzun maruziyet adrenoseptör duyarsızlaşmasına yol açar.",
+    "Katekolaminlerde hidroksil grupları ve alfa/beta aktivitesi: Katekolaminlerde 3,4-OH grupları maksimum alfa/beta aktivitesi verir; KOMT ile inaktive olduğundan oral etkisizdir.",
+    "Alfa1 aktivasyonunun kardiyovasküler etkileri: Cilt ve splanik damarlar alfa ağırlıklıdır; nazal mukoza alfa aktivasyonu dekonjestan etkiyi açıklar.",
+    "Klonidin gibi alfa2 agonistlerin sempatik tonusu düşürmesi: Klonidin gibi alfa2 agonistler santral olarak sempatik tonusu düşürür; hipertansiyonda sempatolitik kullanılır.",
+    "Dopaminin renal, splanik ve koroner damarlardaki etkileri: IV dopamin D1 ile renal, splanik, koroner damarlarda vazodilatasyon ve natriürez yapar; oligüride kullanılır.",
+    "Bronkodilatasyon ve midriyazis: kalp dışı sempatomimetik etkiler: Beta2 bronkodilatasyon yapar (astım); alfa1 iris radyal kasını kasarak midriyazis yapar (fenilefrin).",
+    "Beta3 lipoliz ve beta2 glikojenoliz: metabolik etkiler: Beta3 lipoliz, beta2 hepatik glikojenoliz yapar; yüksek katekolamin metabolik asidoz yapabilir.",
+    "Endojen katekolaminler: adrenalin, noradrenalin, dopamin: Dopamin noradrenalin öncülüdür; bazal gangliyon eksikliği Parkinson hastalığına yol açar.",
+    "Direkt etkili alfa1 agonistleri: fenilefrin, midodrin, metoksamin: Fenilefrin saf alfa1 agonisttir, katekol olmadığından KOMT ile yıkılmaz; midriyatik, dekonjestan ve vazopressördür.",
+    "Alfa2 agonistleri ve topikal dekonjestanlar: Sedasyon alfa2 agonistlerin yan etkisidir ve opioid gereksinimini azaltır.",
+    "Beta agonistleri: izoproterenol, dobutamin, beta2 selektifler: İzoproterenol neredeyse saf beta agonisttir; pozitif kronotrop/inotrop ve güçlü vazodilatördür.",
+    "Karma etkili sempatomimetikler: efedrin ve psödoefedrin: Efedrin yüksek biyoyararlanımlı, uzun etkili, MSS'ye giren hafif uyarıcıdır; beta aktivasyonu nedeniyle eskiden astımda kullanılmıştır.",
+    "İndirekt etkili sempatomimetikler: amfetamin ve benzerleri: İndirekt ajanlar depolanmış katekolaminleri boşaltır (amfetamin) veya NAT'ı bloke eder.",
+    "Tiramin ve MAO inhibitörü etkileşimi: MAO inhibitörü (özellikle MAO-A) alanlarda tiramin etkisi şiddetlenir ve belirgin hipertansiyon gelişebilir.",
+    "Katekolamin geri alım inhibitörleri ve kokain: Kokain geri alım inhibisyonuyla periferik sempatomimetik etki yapan lokal anesteziktir; MSS'de dopamin geri alımını inhibe eder.",
+    "Dopamin agonistleri ve akut hipotansiyon/şok tedavisi: Akut hipotansiyonda önce sıvı ve yatırma; vazokonstriksiyon gerekirse noradrenalin, fenilefrin, metoksamin kullanılır.",
+    "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları: Ortostatik hipotansiyonda midodrin, droksidopa, efedrin veya fenilefrin kullanılır.",
+    "Dekonjestanlar ve burun mukozası daralması: Dekonjestanlar (fenilefrin, efedrin, psödoefedrin, ksilometazolin, oksimetazolin) burun mukozasını daraltır; rebound hiperemi yapabilir.",
+    "Anafilakside adrenalin ve göz uygulamaları: Anafilakside adrenalin (1:1000, 0,3-0,5 ml) tercihen IM verilir; oto-enjektör taşınır.",
+    "Ritodrin ve terbutalinle erken doğumun geciktirilmesi: Ritodrin ve terbutalin erken doğumu geciktirir; efedrin/psödoefedrin stres inkontinansında denenebilir."
+   ],
+   "v": "93350db25b"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Doğrulanmış beş çıkmış soru alfa1 ve alfa2 etkileri, fenilefrin, tizanidin ve lokal anestezikle vazokonstriktör kullanımı üzerinedir; sınavda ilaç, reseptör, etki ve endikasyon eşleştirmesi öne çıkar.",
+   "maddeler": [
+    {
+     "baslik": "Alfa1 reseptör aktivasyonu ve kan basıncı",
+     "metin": "Alfa1 aktivasyonu arteriyel ve venöz vazokonstriksiyon yaparak periferik direnci ve kan basıncını artırır.",
+     "neden": "2020-2021 Kurul 2 sınavında adrenerjik reseptör uyarılması yanıtları soruldu; alfa1 etkisi temel bilgidir.",
+     "s": [
+      23
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Fenilefrin ve midriyazis",
+     "metin": "Gözde radyal pupiller dilatör kasdaki alfa1 reseptörlerin fenilefrinle aktivasyonu midriyazis yapar.",
+     "neden": "2020-2021 Kurul 2 sınavında siklopleji yapmadan midriyazis oluşturan ilacın fenilefrin olduğu soruldu.",
+     "s": [
+      29,
+      64
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Alfa2 agonistler ve hipertansiyon",
+     "metin": "Klonidin gibi seçici alfa2 agonistleri MSS'de sempatik aktiviteyi azaltır ve hipertansiyonda sempatolitik olarak kullanılır.",
+     "neden": "2020-2021 Kurul 2 sınavında hipertansiyon tedavisinde kullanılan adrenerjik agonistin alfa2 olduğu soruldu.",
+     "s": [
+      25
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Alfa2 agonistlerin sedasyon ve diğer kullanımları",
+     "metin": "Alfa2 agonistlerde sedasyon bilinen etkidir; deksmedetomidin yoğun bakımda sedasyon, tizanidin santral kas gevşetici olarak kullanılır.",
+     "neden": "2020-2021 Kurul 2 sınavında alfa2 agonisti santral kas gevşetici ilacın tizanidin olduğu soruldu.",
+     "s": [
+      40
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Lokal anestezikle vazokonstriktör kullanımı",
+     "metin": "Alfa agonistler lokal anestezikle birleştirildiğinde sinir bloğu süresi uzar ve toplam doz azalır; tercih edilen ajan adrenalindir, uç organlarda kullanılmaz.",
+     "neden": "2020-2021 Kurul 2 sınavında lokal anesteziğe vazokonstriktör eklenmesinin amaçları soruldu.",
+     "s": [
+      60
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Adrenalin ve noradrenalinin kardiyovasküler farkı",
+     "metin": "Adrenalin alfa ve beta reseptörlere agonisttir; iskelet kası damarlarındaki beta2 aracılı dilatasyonla diyastolik basıncı düşürebilir, noradrenalin ise periferik direnci artırır.",
+     "neden": "Adrenalin ile noradrenalinin basınç yanıtlarının karşılaştırılması klasik zor sorudur.",
+     "s": [
+      37
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Midodrin ve ortostatik hipotansiyon",
+     "metin": "Midodrin, desglimidodrine hidrolize olan alfa1 agonisti ön ilaçtır ve ortostatik hipotansiyonda kullanılır.",
+     "neden": "Ön ilaç özelliği ve endikasyon eşleşmesi sık sorulur.",
+     "s": [
+      39,
+      56
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Beta1 reseptör aktivasyonunun kardiyak etkileri",
+     "metin": "Beta1 aktivasyonu pozitif kronotropik, dromotropik ve inotropik etki yapar; prototipik seçici agonisti dobutamindir.",
+     "neden": "Beta1 etkilerinin tek tek sayılması ve dobutaminin prototip olması sık sorulur.",
+     "s": [
+      27
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Doğrulanmış beş çıkmış soru alfa1 ve alfa2 etkileri, fenilefrin, tizanidin ve lokal anestezikle vazokonstriktör kullanımı üzerinedir; sınavda ilaç, reseptör, etki ve endikasyon eşleştirmesi öne çıkar.",
+    "Alfa1 reseptör aktivasyonu ve kan basıncı: Alfa1 aktivasyonu arteriyel ve venöz vazokonstriksiyon yaparak periferik direnci ve kan basıncını artırır.",
+    "Fenilefrin ve midriyazis: Gözde radyal pupiller dilatör kasdaki alfa1 reseptörlerin fenilefrinle aktivasyonu midriyazis yapar.",
+    "Alfa2 agonistler ve hipertansiyon: Klonidin gibi seçici alfa2 agonistleri MSS'de sempatik aktiviteyi azaltır ve hipertansiyonda sempatolitik olarak kullanılır.",
+    "Alfa2 agonistlerin sedasyon ve diğer kullanımları: Alfa2 agonistlerde sedasyon bilinen etkidir; deksmedetomidin yoğun bakımda sedasyon, tizanidin santral kas gevşetici olarak kullanılır.",
+    "Lokal anestezikle vazokonstriktör kullanımı: Alfa agonistler lokal anestezikle birleştirildiğinde sinir bloğu süresi uzar ve toplam doz azalır; tercih edilen ajan adrenalindir, uç organlarda kullanılmaz.",
+    "Adrenalin ve noradrenalinin kardiyovasküler farkı: Adrenalin alfa ve beta reseptörlere agonisttir; iskelet kası damarlarındaki beta2 aracılı dilatasyonla diyastolik basıncı düşürebilir, noradrenalin ise periferik direnci artırır.",
+    "Midodrin ve ortostatik hipotansiyon: Midodrin, desglimidodrine hidrolize olan alfa1 agonisti ön ilaçtır ve ortostatik hipotansiyonda kullanılır.",
+    "Beta1 reseptör aktivasyonunun kardiyak etkileri: Beta1 aktivasyonu pozitif kronotropik, dromotropik ve inotropik etki yapar; prototipik seçici agonisti dobutamindir."
+   ],
+   "v": "aa3730a5fd"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu analiz, Sempatomimetikler (adrenoseptör agonistleri) dersinden çıkmış beş soruyu alfa1 ve alfa2 reseptör etkileri, fenilefrinin göz ve damar etkisi, alfa2 agonistlerin klinik kullanımı ve lokal anesteziğe vazokonstriktör eklenmesi başlıklarında, yalnızca ders slaytlarındaki bilgiye dayanarak açıklar. Her soruda önce ölçülen kavram, sonra slayttaki dayanak, en sonda en güçlü çeldiricinin neden yanlış olduğu ele alınır.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Adrenerjik reseptörlerin uyarılmasına bağlı yanıtlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "cevap": "Alfa-1 reseptörlerin uyarılması kan basıncını artırır",
+     "s": [
+      23
+     ],
+     "aciklama": [
+      "Soru, adrenerjik reseptör alt tiplerinin damar ve kan basıncı üzerindeki sonuçlarını ayırt edip edemediğinizi ölçer.",
+      "Slayt, alfa1 reseptör aktivasyonunun arteriyel ve venöz vazokonstriksiyon yaptığını, fenilefrin ve midodrin gibi seçici alfa1 agonistlerinin periferik arter direncini artırdığını ve bunun kan basıncında doza bağımlı artış oluşturduğunu bildirir; bu yüzden alfa1 uyarısı kan basıncını artırır ifadesi doğrudur.",
+      "Beta1 uyarısının yağların erimesine yol açtığını söyleyen şık yanlıştır, çünkü lipolizi aktive eden reseptör beta3'tür; beta1 ise kalpte kasılma gücünü ve hızı artırır.",
+      "Beta2 uyarısının kalp hızını artırdığını ya da bronkokonstriksiyon yaptığını söyleyen şıklar yanlıştır, çünkü kalp hızını daha çok beta1 belirler ve bronş düz kasında beta2 bronkodilatasyon sağlar.",
+      "Alfa2 uyarısının presinaptik noradrenalin salıverilmesini artırdığını söyleyen şık da yanlıştır, çünkü alfa2 Gi proteini ile cAMP'yi azaltır ve Tablo 9-3'e göre adrenerjik sinir uçlarında transmitter salıverilmesini inhibe eder."
+     ],
+     "ornek": "Fenilefrin infüzyonu başlanan bir hastada periferik direnç ve kan basıncı artar; refleks olarak kalp hızı yavaşlayabilir.",
+     "tuzak": "Öğrenci alfa2 reseptörünü de damar büzücü sayıp sistemik alfa2 agonistinin tansiyonu yükselttiğini düşünür; oysa sistemik verildiğinde santral etki baskındır ve basınç düşer."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki adrenerjik reseptör agonistlerinden hangisi hipertansiyon tedavisinde kullanılır?",
+     "cevap": "Alfa2 agonist",
+     "s": [
+      25
+     ],
+     "aciklama": [
+      "Soru, adrenerjik reseptör agonistleri arasında hipertansiyon tedavisinde kullanılan grubu seçmenizi ister.",
+      "Slayt, alfa2 agonistlerin hipertansiyon tedavisinde sempatolitik olarak kullanıldığını söyler; sistemik verildiklerinde santral alfa2 etkisiyle sempatik aktivite ve kan basıncı azalır, klonidin, metildopa, guanfasin ve guanabenz bu amaçla anılan ilaçlardır.",
+      "Alfa1 agonisti en güçlü çeldiricidir; çünkü arteriyel ve venöz vazokonstriksiyonla periferik direnci ve kan basıncını artırır, tedavi değil hipotansiyon gibi durumlarda kullanılır.",
+      "Beta agonistleri de çeldiricidir; izoproterenol gibi ajanlar kardiyak debiyi artırır ve beta2 yoluyla direnci düşürür, ancak hipertansiyonu tedavi etme amacı taşımaz."
+     ],
+     "ornek": "Santral etkili alfa2 agonisti klonidin verilen hastada sempatik tonus ve kan basıncı azalır, sedasyon yan etki olarak görülebilir.",
+     "tuzak": "Öğrenci alfa2 agonistinin damarı büzeceğini düşünüp tansiyonu yükselttiğini sanar; vazokonstriksiyon yalnızca lokal, hızlı IV veya çok yüksek dozda görülür."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki ilaçlardan hangisi siklopleji yapmaksızın midriyazis oluşturur?",
+     "cevap": "Fenilefrin",
+     "s": [
+      38
+     ],
+     "aciklama": [
+      "Soru, siklopleji yapmaksızın midriyazis oluşturan ilacı sorar; yanıt fenilefrindir.",
+      "İrisin radyal pupiller dilatör kasında alfa1 reseptörler bulunur; bunların fenilefrin gibi ilaçlarla aktive edilmesi midriyazise yol açar. Fenilefrin saf bir alfa1 agonistidir ve güçlü bir midriyatiktir.",
+      "Atropin, homatropin, siklopentolat ve tropikamid bu derste anlatılmaz; antimuskarinik midriyatik olarak bilinirler, sempatomimetik olmadıklarından alfa1 reseptörlerini uyarmazlar, bu yüzden fenilefrin seçilir.",
+      "Fenilefrinin katekol türevi olmaması nedeniyle KOMT (katekol-O-metiltransferaz) ile inaktive edilmemesi ve etki süresinin katekolaminlerden uzun olması, onu bu amaçla kullanışlı kılar."
+     ],
+     "ornek": "Göz muayenesi için pupillayı genişletmek isteyen hekim, alfa1 agonisti fenilefrin damlası seçer.",
+     "tuzak": "Öğrenci midriyazisi yalnız antimuskarinik ilaçlarla ilişkilendirir; oysa fenilefrin dilatör kastaki alfa1 reseptörleri uyararak göz bebeğini genişletir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Alfa-2 adrenerjik reseptör agonisti olan santral etkili kas gevşetici ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Tizanidin",
+     "s": [
+      40
+     ],
+     "aciklama": [
+      "Soru, alfa2 agonisti olan ve santral etkili kas gevşetici olarak kullanılan ilacı tanıyıp tanımadığınızı ölçer.",
+      "Slayt, alfa2 agonistlerin opioid gereksinimini azalttığını ve tizanidinin santral etkili kas gevşetici olarak kullanıldığını bildirir; santral alfa2 etkisi bu grubun ortak özelliğidir.",
+      "Baklofen, diazepam, sugammadeks ve süksinilkolin bu dersin konusu değildir ve hiçbiri alfa2 agonisti olmadığı için elenir; sorudaki alfa2 agonisti koşulu tizanidini gösterir.",
+      "Ders içindeki komşu alfa2 agonistlerinden klonidin hipertansiyon ve ilaç özlemiyle, deksmedetomidin ise yoğun bakımda sedasyonla anılır; kas gevşetici işlev tizanidine aittir."
+     ],
+     "ornek": "Santral etkili kas gevşetici gereken bir hastada alfa2 agonisti tizanidin seçilir.",
+     "tuzak": "Öğrenci aynı gruptaki klonidini ya da deksmedetomidini kas gevşetici sanar; her alfa2 agonistinin kullanım alanı slaytta ayrı ayrı belirtilmiştir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Lokal anestezik ilaca vazokonstriktör eklenmesiyle aşağıdakilerden hangisi amaçlanmaz?",
+     "cevap": "Lokal anesteziğin advers etkilerini yok etmek",
+     "s": [
+      60
+     ],
+     "aciklama": [
+      "Soru, lokal anesteziğe vazokonstriktör eklenmesinin amaçlarını bilip bilmediğinizi ölçer ve olumsuz kök nedeniyle amaçlanmayan seçeneği aratır.",
+      "Slayt, alfa agonistlerin lokal anestezikle kombinasyonunun sinir bloğu süresini uzattığını ve anestezik dozunu azaltmayı sağladığını söyler; amaç etkiyi yerinde tutmaktır, anesteziğin advers etkilerini tümüyle yok etmek amaçlanmaz.",
+      "Süreyi uzatmak ve lokal anesteziğin sistemik dolaşıma geçişini modüle etmek amaçlanan sonuçlardır, çünkü vazokonstriksiyon bloğun süresini uzatır ve anesteziğin uygulandığı yerin dışına nüfuz etmesini azaltır.",
+      "Spinal postsinaptik alfa adrenoseptör aracılı analjezi ile bölgesel nöronal alımı artırmak s58-60'ta birleşimin amaçları arasında geçmeyen, slayt dışı ifadelerdir; slayta aykırı olmadıkları ve çıkmış soru anahtarında amaçlanan sonuç sayıldıkları için 'amaçlanmaz' değildirler. Slayttaki 'sistemik etkiler genellikle minimaldir ama tamamen ortadan kalkmaz' bilgisiyle doğrudan çelişen tek şık, advers etkileri yok etmek olan B'dir.",
+      "Slayt ayrıca bu amaçla adrenalinin 1:100.000 veya 1:200.000 oranında tercih edildiğini ve iskemik nekroz riski nedeniyle parmak, burun ve kulak gibi uç organlarda önerilmediğini bildirir."
+     ],
+     "ornek": "Diş hekimi lokal anesteziğe adrenalin ekleyerek bloğu uzatır ve toplam anestezik dozunu azaltır.",
+     "tuzak": "Öğrenci olumsuz kökü atlayıp amaçlanan sonuçlardan birini işaretler veya vazokonstriktörün advers etkileri tamamen sildiğini sanır."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu analiz, Sempatomimetikler (adrenoseptör agonistleri) dersinden çıkmış beş soruyu alfa1 ve alfa2 reseptör etkileri, fenilefrinin göz ve damar etkisi, alfa2 agonistlerin klinik kullanımı ve lokal anesteziğe vazokonstriktör eklenmesi başlıklarında, yalnızca ders slaytlarındaki bilgiye dayanarak açıklar. Her soruda önce ölçülen kavram, sonra slayttaki dayanak, en sonda en güçlü çeldiricinin neden yanlış olduğu ele alınır.",
+    "2020-2021: Adrenerjik reseptörlerin uyarılmasına bağlı yanıtlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+    "Cevap: Alfa-1 reseptörlerin uyarılması kan basıncını artırır.",
+    "Soru, adrenerjik reseptör alt tiplerinin damar ve kan basıncı üzerindeki sonuçlarını ayırt edip edemediğinizi ölçer.",
+    "Slayt, alfa1 reseptör aktivasyonunun arteriyel ve venöz vazokonstriksiyon yaptığını, fenilefrin ve midodrin gibi seçici alfa1 agonistlerinin periferik arter direncini artırdığını ve bunun kan basıncında doza bağımlı artış oluşturduğunu bildirir; bu yüzden alfa1 uyarısı kan basıncını artırır ifadesi doğrudur.",
+    "Beta1 uyarısının yağların erimesine yol açtığını söyleyen şık yanlıştır, çünkü lipolizi aktive eden reseptör beta3'tür; beta1 ise kalpte kasılma gücünü ve hızı artırır.",
+    "Beta2 uyarısının kalp hızını artırdığını ya da bronkokonstriksiyon yaptığını söyleyen şıklar yanlıştır, çünkü kalp hızını daha çok beta1 belirler ve bronş düz kasında beta2 bronkodilatasyon sağlar.",
+    "Alfa2 uyarısının presinaptik noradrenalin salıverilmesini artırdığını söyleyen şık da yanlıştır, çünkü alfa2 Gi proteini ile cAMP'yi azaltır ve Tablo 9-3'e göre adrenerjik sinir uçlarında transmitter salıverilmesini inhibe eder.",
+    "Örnek: Fenilefrin infüzyonu başlanan bir hastada periferik direnç ve kan basıncı artar; refleks olarak kalp hızı yavaşlayabilir.",
+    "Tuzak: Öğrenci alfa2 reseptörünü de damar büzücü sayıp sistemik alfa2 agonistinin tansiyonu yükselttiğini düşünür; oysa sistemik verildiğinde santral etki baskındır ve basınç düşer.",
+    "2020-2021: Aşağıdaki adrenerjik reseptör agonistlerinden hangisi hipertansiyon tedavisinde kullanılır?",
+    "Cevap: Alfa2 agonist.",
+    "Soru, adrenerjik reseptör agonistleri arasında hipertansiyon tedavisinde kullanılan grubu seçmenizi ister.",
+    "Slayt, alfa2 agonistlerin hipertansiyon tedavisinde sempatolitik olarak kullanıldığını söyler; sistemik verildiklerinde santral alfa2 etkisiyle sempatik aktivite ve kan basıncı azalır, klonidin, metildopa, guanfasin ve guanabenz bu amaçla anılan ilaçlardır.",
+    "Alfa1 agonisti en güçlü çeldiricidir; çünkü arteriyel ve venöz vazokonstriksiyonla periferik direnci ve kan basıncını artırır, tedavi değil hipotansiyon gibi durumlarda kullanılır.",
+    "Beta agonistleri de çeldiricidir; izoproterenol gibi ajanlar kardiyak debiyi artırır ve beta2 yoluyla direnci düşürür, ancak hipertansiyonu tedavi etme amacı taşımaz.",
+    "Örnek: Santral etkili alfa2 agonisti klonidin verilen hastada sempatik tonus ve kan basıncı azalır, sedasyon yan etki olarak görülebilir.",
+    "Tuzak: Öğrenci alfa2 agonistinin damarı büzeceğini düşünüp tansiyonu yükselttiğini sanar; vazokonstriksiyon yalnızca lokal, hızlı IV veya çok yüksek dozda görülür.",
+    "2020-2021: Aşağıdaki ilaçlardan hangisi siklopleji yapmaksızın midriyazis oluşturur?",
+    "Cevap: Fenilefrin.",
+    "Soru, siklopleji yapmaksızın midriyazis oluşturan ilacı sorar; yanıt fenilefrindir.",
+    "İrisin radyal pupiller dilatör kasında alfa1 reseptörler bulunur; bunların fenilefrin gibi ilaçlarla aktive edilmesi midriyazise yol açar. Fenilefrin saf bir alfa1 agonistidir ve güçlü bir midriyatiktir.",
+    "Atropin, homatropin, siklopentolat ve tropikamid bu derste anlatılmaz; antimuskarinik midriyatik olarak bilinirler, sempatomimetik olmadıklarından alfa1 reseptörlerini uyarmazlar, bu yüzden fenilefrin seçilir.",
+    "Fenilefrinin katekol türevi olmaması nedeniyle KOMT (katekol-O-metiltransferaz) ile inaktive edilmemesi ve etki süresinin katekolaminlerden uzun olması, onu bu amaçla kullanışlı kılar.",
+    "Örnek: Göz muayenesi için pupillayı genişletmek isteyen hekim, alfa1 agonisti fenilefrin damlası seçer.",
+    "Tuzak: Öğrenci midriyazisi yalnız antimuskarinik ilaçlarla ilişkilendirir; oysa fenilefrin dilatör kastaki alfa1 reseptörleri uyararak göz bebeğini genişletir.",
+    "2020-2021: Alfa-2 adrenerjik reseptör agonisti olan santral etkili kas gevşetici ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Tizanidin.",
+    "Soru, alfa2 agonisti olan ve santral etkili kas gevşetici olarak kullanılan ilacı tanıyıp tanımadığınızı ölçer.",
+    "Slayt, alfa2 agonistlerin opioid gereksinimini azalttığını ve tizanidinin santral etkili kas gevşetici olarak kullanıldığını bildirir; santral alfa2 etkisi bu grubun ortak özelliğidir.",
+    "Baklofen, diazepam, sugammadeks ve süksinilkolin bu dersin konusu değildir ve hiçbiri alfa2 agonisti olmadığı için elenir; sorudaki alfa2 agonisti koşulu tizanidini gösterir.",
+    "Ders içindeki komşu alfa2 agonistlerinden klonidin hipertansiyon ve ilaç özlemiyle, deksmedetomidin ise yoğun bakımda sedasyonla anılır; kas gevşetici işlev tizanidine aittir.",
+    "Örnek: Santral etkili kas gevşetici gereken bir hastada alfa2 agonisti tizanidin seçilir.",
+    "Tuzak: Öğrenci aynı gruptaki klonidini ya da deksmedetomidini kas gevşetici sanar; her alfa2 agonistinin kullanım alanı slaytta ayrı ayrı belirtilmiştir.",
+    "2020-2021: Lokal anestezik ilaca vazokonstriktör eklenmesiyle aşağıdakilerden hangisi amaçlanmaz?",
+    "Cevap: Lokal anesteziğin advers etkilerini yok etmek.",
+    "Soru, lokal anesteziğe vazokonstriktör eklenmesinin amaçlarını bilip bilmediğinizi ölçer ve olumsuz kök nedeniyle amaçlanmayan seçeneği aratır.",
+    "Slayt, alfa agonistlerin lokal anestezikle kombinasyonunun sinir bloğu süresini uzattığını ve anestezik dozunu azaltmayı sağladığını söyler; amaç etkiyi yerinde tutmaktır, anesteziğin advers etkilerini tümüyle yok etmek amaçlanmaz.",
+    "Süreyi uzatmak ve lokal anesteziğin sistemik dolaşıma geçişini modüle etmek amaçlanan sonuçlardır, çünkü vazokonstriksiyon bloğun süresini uzatır ve anesteziğin uygulandığı yerin dışına nüfuz etmesini azaltır.",
+    "Spinal postsinaptik alfa adrenoseptör aracılı analjezi ile bölgesel nöronal alımı artırmak s58-60'ta birleşimin amaçları arasında geçmeyen, slayt dışı ifadelerdir; slayta aykırı olmadıkları ve çıkmış soru anahtarında amaçlanan sonuç sayıldıkları için 'amaçlanmaz' değildirler. Slayttaki 'sistemik etkiler genellikle minimaldir ama tamamen ortadan kalkmaz' bilgisiyle doğrudan çelişen tek şık, advers etkileri yok etmek olan B'dir.",
+    "Slayt ayrıca bu amaçla adrenalinin 1:100.000 veya 1:200.000 oranında tercih edildiğini ve iskemik nekroz riski nedeniyle parmak, burun ve kulak gibi uç organlarda önerilmediğini bildirir.",
+    "Örnek: Diş hekimi lokal anesteziğe adrenalin ekleyerek bloğu uzatır ve toplam anestezik dozunu azaltır.",
+    "Tuzak: Öğrenci olumsuz kökü atlayıp amaçlanan sonuçlardan birini işaretler veya vazokonstriktörün advers etkileri tamamen sildiğini sanır."
+   ],
+   "v": "d988ea2ec9"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 5 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 5 çıkmış soru var; 1 tanesi öncüllü, 0 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 23, 25, 38, 40, 60."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 5 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 5 çıkmış soru var; 1 tanesi öncüllü, 0 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 23, 25, 38, 40, 60."
+   ],
+   "v": "14f5e303ea"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Alfa1 aktivasyonunun kardiyovasküler etkileri",
+     "metin": "Sık yapılan hata: Öğrenci alfa2 reseptörünü de damar büzücü sayıp sistemik alfa2 agonistinin tansiyonu yükselttiğini düşünür; oysa sistemik verildiğinde santral etki baskındır ve basınç düşer."
+    },
+    {
+     "baslik": "Klonidin gibi alfa2 agonistlerin sempatik tonusu düşürmesi",
+     "metin": "Sık yapılan hata: Öğrenci alfa2 agonistinin damarı büzeceğini düşünüp tansiyonu yükselttiğini sanar; vazokonstriksiyon yalnızca lokal, hızlı IV veya çok yüksek dozda görülür."
+    },
+    {
+     "baslik": "Endojen katekolaminler: adrenalin, noradrenalin, dopamin",
+     "metin": "Sık yapılan hata: Öğrenci midriyazisi yalnız antimuskarinik ilaçlarla ilişkilendirir; oysa fenilefrin dilatör kastaki alfa1 reseptörleri uyararak göz bebeğini genişletir."
+    },
+    {
+     "baslik": "Alfa2 agonistleri ve topikal dekonjestanlar",
+     "metin": "Sık yapılan hata: Öğrenci aynı gruptaki klonidini ya da deksmedetomidini kas gevşetici sanar; her alfa2 agonistinin kullanım alanı slaytta ayrı ayrı belirtilmiştir."
+    },
+    {
+     "baslik": "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları",
+     "metin": "Sık yapılan hata: Öğrenci olumsuz kökü atlayıp amaçlanan sonuçlardan birini işaretler veya vazokonstriktörün advers etkileri tamamen sildiğini sanır."
+    },
+    {
+     "baslik": "Alfa1 reseptör aktivasyonu ve kan basıncı",
+     "metin": "2020-2021 Kurul 2 sınavında adrenerjik reseptör uyarılması yanıtları soruldu; alfa1 etkisi temel bilgidir."
+    },
+    {
+     "baslik": "Fenilefrin ve midriyazis",
+     "metin": "2020-2021 Kurul 2 sınavında siklopleji yapmadan midriyazis oluşturan ilacın fenilefrin olduğu soruldu."
+    },
+    {
+     "baslik": "Alfa2 agonistler ve hipertansiyon",
+     "metin": "2020-2021 Kurul 2 sınavında hipertansiyon tedavisinde kullanılan adrenerjik agonistin alfa2 olduğu soruldu."
+    },
+    {
+     "baslik": "Alfa2 agonistlerin sedasyon ve diğer kullanımları",
+     "metin": "2020-2021 Kurul 2 sınavında alfa2 agonisti santral kas gevşetici ilacın tizanidin olduğu soruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Alfa1 aktivasyonunun kardiyovasküler etkileri: Sık yapılan hata: Öğrenci alfa2 reseptörünü de damar büzücü sayıp sistemik alfa2 agonistinin tansiyonu yükselttiğini düşünür; oysa sistemik verildiğinde santral etki baskındır ve basınç düşer.",
+    "Klonidin gibi alfa2 agonistlerin sempatik tonusu düşürmesi: Sık yapılan hata: Öğrenci alfa2 agonistinin damarı büzeceğini düşünüp tansiyonu yükselttiğini sanar; vazokonstriksiyon yalnızca lokal, hızlı IV veya çok yüksek dozda görülür.",
+    "Endojen katekolaminler: adrenalin, noradrenalin, dopamin: Sık yapılan hata: Öğrenci midriyazisi yalnız antimuskarinik ilaçlarla ilişkilendirir; oysa fenilefrin dilatör kastaki alfa1 reseptörleri uyararak göz bebeğini genişletir.",
+    "Alfa2 agonistleri ve topikal dekonjestanlar: Sık yapılan hata: Öğrenci aynı gruptaki klonidini ya da deksmedetomidini kas gevşetici sanar; her alfa2 agonistinin kullanım alanı slaytta ayrı ayrı belirtilmiştir.",
+    "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları: Sık yapılan hata: Öğrenci olumsuz kökü atlayıp amaçlanan sonuçlardan birini işaretler veya vazokonstriktörün advers etkileri tamamen sildiğini sanır.",
+    "Alfa1 reseptör aktivasyonu ve kan basıncı: 2020-2021 Kurul 2 sınavında adrenerjik reseptör uyarılması yanıtları soruldu; alfa1 etkisi temel bilgidir.",
+    "Fenilefrin ve midriyazis: 2020-2021 Kurul 2 sınavında siklopleji yapmadan midriyazis oluşturan ilacın fenilefrin olduğu soruldu.",
+    "Alfa2 agonistler ve hipertansiyon: 2020-2021 Kurul 2 sınavında hipertansiyon tedavisinde kullanılan adrenerjik agonistin alfa2 olduğu soruldu.",
+    "Alfa2 agonistlerin sedasyon ve diğer kullanımları: 2020-2021 Kurul 2 sınavında alfa2 agonisti santral kas gevşetici ilacın tizanidin olduğu soruldu.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "bf377b308f"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders adrenalin ve noradrenalinin etkilerini taklit eden sempatomimetikleri ele alır: adrenoseptör alt tipleri ve G proteini yolları, organ sistemlerine etkiler, direkt, indirekt ve karma etkili ilaçlar ile bu ilaçların kardiyovasküler, pulmoner, göz, genitoüriner ve merkezi sinir sistemi kullanımları.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders adrenalin ve noradrenalinin etkilerini taklit eden sempatomimetikleri ele alır: adrenoseptör alt tipleri ve G proteini yolları, organ sistemlerine etkiler, direkt, indirekt ve karma etkili ilaçlar ile bu ilaçların kardiyovasküler, pulmoner, göz, genitoüriner ve merkezi sinir sistemi kullanımları."
+   ],
+   "v": "ab672a9990"
+  },
+  {
+   "id": "2f08-03",
+   "baslik": "Adrenoseptörlerin G proteini bağlantıları",
+   "giris": "Alfa1 reseptörler Gq ile fosfolipaz C'ye, alfa2 Gi ile adenilil siklazın inhibisyonuna, beta reseptörler Gs ile adenilil siklaz aktivasyonuna bağlanır.",
+   "s": [
+    9,
+    11
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Gq ailesi G proteinleri aracılığıyla fosfolipaz C'ye bağlanır; IP3 hücre içi depolardan Ca2+ salıverir, DAG protein kinaz C'yi aktive etmek için Ca2+ ile işbirliği yapar."
+    },
+    {
+     "metin": "Adenilil siklaz aktivitesini inhibitör protein Gi aracılığıyla inhibe eder ve hücre içi cAMP düzeylerinin azalmasına yol açar."
+    },
+    {
+     "metin": "Uyarıcı protein Gs'ye bağlıdır; adenilil siklazı aktive eder ve cAMP artar. Beta aktivasyonunun başlıca ikinci ulağı cAMP'dir."
+    },
+    {
+     "metin": "Karaciğerde beta aracılı cAMP sentezi glikojen fosforilaz aktivasyonuna, kalpte kalsiyum girişinin artmasına yol açar."
+    }
+   ],
+   "klip": "o-2f08-03",
+   "ses": [
+    "Adrenoseptörlerin G proteini bağlantıları.",
+    "Alfa1 reseptörler Gq ile fosfolipaz C'ye, alfa2 Gi ile adenilil siklazın inhibisyonuna, beta reseptörler Gs ile adenilil siklaz aktivasyonuna bağlanır.",
+    "Gq ailesi G proteinleri aracılığıyla fosfolipaz C'ye bağlanır; IP3 hücre içi depolardan Ca2+ salıverir, DAG protein kinaz C'yi aktive etmek için Ca2+ ile işbirliği yapar.",
+    "Adenilil siklaz aktivitesini inhibitör protein Gi aracılığıyla inhibe eder ve hücre içi cAMP düzeylerinin azalmasına yol açar.",
+    "Uyarıcı protein Gs'ye bağlıdır; adenilil siklazı aktive eder ve cAMP artar. Beta aktivasyonunun başlıca ikinci ulağı cAMP'dir.",
+    "Karaciğerde beta aracılı cAMP sentezi glikojen fosforilaz aktivasyonuna, kalpte kalsiyum girişinin artmasına yol açar."
+   ],
+   "v": "56ee97f68a"
+  },
+  {
+   "id": "2f08-10",
+   "baslik": "Alfa1 reseptör aktivasyonu ve kan basıncı",
+   "giris": "Alfa1 aktivasyonu arteriyel ve venöz vazokonstriksiyon yaparak periferik direnci ve kan basıncını artırır.",
+   "s": [
+    23
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Alfa1 reseptörler damar yataklarında yaygındır; aktivasyonları arteriyel ve venöz vazokonstriksiyona neden olur."
+    },
+    {
+     "metin": "Arteriyel direncin artması kan basıncında doza bağımlı bir artış oluşturur."
+    },
+    {
+     "metin": "Normal refleksler varsa kan basıncı artışı baroreseptör aracılı vagal tonus artışıyla kalp hızında belirgin yavaşlama yapar."
+    },
+    {
+     "metin": "Beta1 uyarımı kalp hızını artırır; beta2 uyarımı bronkodilatasyon yapar; beta3 lipolizi artırır; alfa2 presinaptik olarak noradrenalin salıverilmesini azaltır, artırmaz."
+    },
+    {
+     "metin": "Fenilefrin ve midodrin seçici alfa1 agonistleridir."
+    }
+   ],
+   "klip": "o-2f08-10",
+   "ses": [
+    "Alfa1 reseptör aktivasyonu ve kan basıncı.",
+    "Alfa1 aktivasyonu arteriyel ve venöz vazokonstriksiyon yaparak periferik direnci ve kan basıncını artırır.",
+    "Alfa1 reseptörler damar yataklarında yaygındır; aktivasyonları arteriyel ve venöz vazokonstriksiyona neden olur.",
+    "Arteriyel direncin artması kan basıncında doza bağımlı bir artış oluşturur.",
+    "Normal refleksler varsa kan basıncı artışı baroreseptör aracılı vagal tonus artışıyla kalp hızında belirgin yavaşlama yapar.",
+    "Beta1 uyarımı kalp hızını artırır; beta2 uyarımı bronkodilatasyon yapar; beta3 lipolizi artırır; alfa2 presinaptik olarak noradrenalin salıverilmesini azaltır, artırmaz.",
+    "Fenilefrin ve midodrin seçici alfa1 agonistleridir."
+   ],
+   "v": "bb61813722"
+  },
+  {
+   "id": "2f08-12",
+   "baslik": "Alfa2 agonistler ve hipertansiyon",
+   "giris": "Klonidin gibi seçici alfa2 agonistleri MSS'de sempatik aktiviteyi azaltır ve hipertansiyonda sempatolitik olarak kullanılır.",
+   "s": [
+    25
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Klonidin gibi seçici alfa2 agonistleri sempatik aktiviteyi azaltmak için merkezi sinir sisteminde etki eder."
+    },
+    {
+     "metin": "Alfa2 aktivasyonu damarlarda vazokonstriksiyon yapar; ancak bu etki yalnızca lokal, hızlı intravenöz enjeksiyonla veya çok yüksek oral dozlarda görülür."
+    },
+    {
+     "metin": "Santral etkiler vasküler etkiyi gizler ve sempatik tonus ile kan basıncı düşer."
+    },
+    {
+     "metin": "Klonidin, metildopa, guanfasin ve guanabenz hipertansiyon tedavisinde kullanılır."
+    },
+    {
+     "metin": "Alfa1 agonistleri kan basıncını yükseltir; beta agonistleri hipertansiyon ilacı değildir."
+    }
+   ],
+   "klip": "o-2f08-12",
+   "ses": [
+    "Alfa2 agonistler ve hipertansiyon.",
+    "Klonidin gibi seçici alfa2 agonistleri MSS'de sempatik aktiviteyi azaltır ve hipertansiyonda sempatolitik olarak kullanılır.",
+    "Klonidin gibi seçici alfa2 agonistleri sempatik aktiviteyi azaltmak için merkezi sinir sisteminde etki eder.",
+    "Alfa2 aktivasyonu damarlarda vazokonstriksiyon yapar; ancak bu etki yalnızca lokal, hızlı intravenöz enjeksiyonla veya çok yüksek oral dozlarda görülür.",
+    "Santral etkiler vasküler etkiyi gizler ve sempatik tonus ile kan basıncı düşer.",
+    "Klonidin, metildopa, guanfasin ve guanabenz hipertansiyon tedavisinde kullanılır.",
+    "Alfa1 agonistleri kan basıncını yükseltir; beta agonistleri hipertansiyon ilacı değildir."
+   ],
+   "v": "a7dabef413"
+  },
+  {
+   "id": "2f08-13",
+   "baslik": "Beta1 reseptör aktivasyonunun kardiyak etkileri",
+   "giris": "Beta1 aktivasyonu pozitif kronotropik, dromotropik ve inotropik etki yapar; prototipik seçici agonisti dobutamindir.",
+   "s": [
+    27
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kalpteki beta1 aktivasyonu kardiyak hücrelerde kalsiyum akışını artırır; intrinsik miyokardiyal kontraktilite artar (pozitif inotropik etki) ve gevşeme hızlanır."
+    },
+    {
+     "metin": "Pacemaker aktivitesi ve kalp hızı artar (pozitif kronotropik etki)."
+    },
+    {
+     "metin": "İletim hızı artar (pozitif dromotropik etki) ve refrakter periyod kısalır."
+    },
+    {
+     "metin": "Katekolaminlerle kalbin fizyolojik uyarılması koroner kan akımını artırır."
+    },
+    {
+     "metin": "Prototipik beta1 seçici agonisti dobutamindir; izoproterenol beta1 ve beta2'yi birlikte aktive eder."
+    }
+   ],
+   "klip": "o-2f08-13",
+   "ses": [
+    "Beta1 reseptör aktivasyonunun kardiyak etkileri.",
+    "Beta1 aktivasyonu pozitif kronotropik, dromotropik ve inotropik etki yapar; prototipik seçici agonisti dobutamindir.",
+    "Kalpteki beta1 aktivasyonu kardiyak hücrelerde kalsiyum akışını artırır; intrinsik miyokardiyal kontraktilite artar (pozitif inotropik etki) ve gevşeme hızlanır.",
+    "Pacemaker aktivitesi ve kalp hızı artar (pozitif kronotropik etki).",
+    "İletim hızı artar (pozitif dromotropik etki) ve refrakter periyod kısalır.",
+    "Katekolaminlerle kalbin fizyolojik uyarılması koroner kan akımını artırır.",
+    "Prototipik beta1 seçici agonisti dobutamindir; izoproterenol beta1 ve beta2'yi birlikte aktive eder."
+   ],
+   "v": "f6b64751ea"
+  },
+  {
+   "id": "2f08-16",
+   "baslik": "Fenilefrin ve midriyazis",
+   "giris": "Gözde radyal pupiller dilatör kasdaki alfa1 reseptörlerin fenilefrinle aktivasyonu midriyazis yapar.",
+   "s": [
+    29,
+    64
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Irisin radyal pupiller dilatör kasında alfa reseptörler bulunur; fenilefrin gibi ilaçların bu reseptörleri aktive etmesi midriyazise yol açar."
+    },
+    {
+     "metin": "Fenilefrin retina muayenesini kolaylaştırmak için sıklıkla kullanılan etkili bir midriyatik ajandır."
+    },
+    {
+     "metin": "Hafif alerjik kızarıklık ve konjonktival membran kaşıntısında dekonjestan olarak kullanılır; Horner sendromunda lezyon yerini belirlemeye yardım eder."
+    },
+    {
+     "metin": "Antimuskarinik ilaçlar (atropin, homatropin, siklopentolat, tropikamid) midriyazisin yanında siklopleji de yapar; fenilefrin saf alfa1 agonisti olduğu için sikloplejisiz midriyazis yapar."
+    }
+   ],
+   "klip": "o-2f08-16",
+   "ses": [
+    "Fenilefrin ve midriyazis.",
+    "Gözde radyal pupiller dilatör kasdaki alfa1 reseptörlerin fenilefrinle aktivasyonu midriyazis yapar.",
+    "Irisin radyal pupiller dilatör kasında alfa reseptörler bulunur; fenilefrin gibi ilaçların bu reseptörleri aktive etmesi midriyazise yol açar.",
+    "Fenilefrin retina muayenesini kolaylaştırmak için sıklıkla kullanılan etkili bir midriyatik ajandır.",
+    "Hafif alerjik kızarıklık ve konjonktival membran kaşıntısında dekonjestan olarak kullanılır; Horner sendromunda lezyon yerini belirlemeye yardım eder.",
+    "Antimuskarinik ilaçlar (atropin, homatropin, siklopentolat, tropikamid) midriyazisin yanında siklopleji de yapar; fenilefrin saf alfa1 agonisti olduğu için sikloplejisiz midriyazis yapar."
+   ],
+   "v": "489c0e0f02"
+  },
+  {
+   "id": "2f08-19",
+   "baslik": "Adrenalin ve noradrenalinin kardiyovasküler farkı",
+   "giris": "Adrenalin alfa ve beta reseptörlere agonisttir; iskelet kası damarlarındaki beta2 aracılı dilatasyonla diyastolik basıncı düşürebilir, noradrenalin ise periferik direnci artırır.",
+   "s": [
+    37
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Alfa ve beta reseptörlere agonisttir; güçlü vazokonstriktör ve kardiyak uyarandır."
+    },
+    {
+     "metin": "Kalp üzerindeki pozitif inotropik ve kronotropik etkilerle (ağırlıklı beta1) ve birçok damar yatağındaki alfa aracılı vazokonstriksiyonla oluşur."
+    },
+    {
+     "metin": "İskelet kası damarlarındaki beta2 reseptörleri aktive ederek dilatasyon yapar; total periferik direnç düşebilir."
+    },
+    {
+     "metin": "Beta1 reseptörleri adrenalin kadar aktive eder, beta2 üzerine düşük etkilidir; periferik direnci, diyastolik ve sistolik basıncı artırır."
+    },
+    {
+     "metin": "Kan akışı artışında iskelet kasındaki beta2 aktivasyonunun payı vardır."
+    }
+   ],
+   "klip": "o-2f08-19",
+   "ses": [
+    "Adrenalin ve noradrenalinin kardiyovasküler farkı.",
+    "Adrenalin alfa ve beta reseptörlere agonisttir; iskelet kası damarlarındaki beta2 aracılı dilatasyonla diyastolik basıncı düşürebilir, noradrenalin ise periferik direnci artırır.",
+    "Alfa ve beta reseptörlere agonisttir; güçlü vazokonstriktör ve kardiyak uyarandır.",
+    "Kalp üzerindeki pozitif inotropik ve kronotropik etkilerle (ağırlıklı beta1) ve birçok damar yatağındaki alfa aracılı vazokonstriksiyonla oluşur.",
+    "İskelet kası damarlarındaki beta2 reseptörleri aktive ederek dilatasyon yapar; total periferik direnç düşebilir.",
+    "Beta1 reseptörleri adrenalin kadar aktive eder, beta2 üzerine düşük etkilidir; periferik direnci, diyastolik ve sistolik basıncı artırır.",
+    "Kan akışı artışında iskelet kasındaki beta2 aktivasyonunun payı vardır."
+   ],
+   "v": "e16f56ab91"
+  },
+  {
+   "id": "2f08-21",
+   "baslik": "Midodrin ve ortostatik hipotansiyon",
+   "giris": "Midodrin, desglimidodrine hidrolize olan alfa1 agonisti ön ilaçtır ve ortostatik hipotansiyonda kullanılır.",
+   "s": [
+    39,
+    56
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Midodrin enzimatik olarak selektif alfa1 agonisti desglimidodrine hidrolize edilir; uygulamadan yaklaşık 1 saat sonra doruk konsantrasyona ulaşılır."
+    },
+    {
+     "metin": "Otonom sinir sistemi fonksiyon bozukluğuna bağlı ortostatik hipotansiyon; oral yoldan etkili olduğu için kronik tedavide sıklıkla kullanılır."
+    },
+    {
+     "metin": "Hasta ayağa kalktığında görülen basınç düşüşünü azaltır."
+    },
+    {
+     "metin": "Hasta yatar pozisyondayken hipertansiyona yol açabilir; mesane tabanı ve sfinkterde alfa1 aracılı kasılma nedeniyle idrar retansiyonu görülebilir."
+    },
+    {
+     "metin": "Oral efedrin, fenilefrin ve droksidopa denenebilir."
+    }
+   ],
+   "klip": "o-2f08-21",
+   "ses": [
+    "Midodrin ve ortostatik hipotansiyon.",
+    "Midodrin, desglimidodrine hidrolize olan alfa1 agonisti ön ilaçtır ve ortostatik hipotansiyonda kullanılır.",
+    "Midodrin enzimatik olarak selektif alfa1 agonisti desglimidodrine hidrolize edilir; uygulamadan yaklaşık 1 saat sonra doruk konsantrasyona ulaşılır.",
+    "Otonom sinir sistemi fonksiyon bozukluğuna bağlı ortostatik hipotansiyon; oral yoldan etkili olduğu için kronik tedavide sıklıkla kullanılır.",
+    "Hasta ayağa kalktığında görülen basınç düşüşünü azaltır.",
+    "Hasta yatar pozisyondayken hipertansiyona yol açabilir; mesane tabanı ve sfinkterde alfa1 aracılı kasılma nedeniyle idrar retansiyonu görülebilir.",
+    "Oral efedrin, fenilefrin ve droksidopa denenebilir."
+   ],
+   "v": "55c7de2403"
+  },
+  {
+   "id": "2f08-22",
+   "baslik": "Alfa2 agonistlerin sedasyon ve diğer kullanımları",
+   "giris": "Alfa2 agonistlerde sedasyon bilinen etkidir; deksmedetomidin yoğun bakımda sedasyon, tizanidin santral kas gevşetici olarak kullanılır.",
+   "s": [
+    40
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Santral etkili kas gevşetici olarak kullanılan alfa2 agonistidir."
+    },
+    {
+     "metin": "Yoğun bakımda entübe ve mekanik ventilasyonlu hastalarda başlangıç sedasyonu sağlar; ağrı kontrolünde opioid gereksinimini azaltır."
+    },
+    {
+     "metin": "Anestezi öncesi premedikasyonda opioid gereksinimini azaltır ve solunumu baskılamaz; ayrıca hipertansiyon, diyare, ilaç özlemi ve menopozal sıcak basmasında kullanılır."
+    },
+    {
+     "metin": "Sedasyon bu ilaçların bilinen yan etkisidir."
+    },
+    {
+     "metin": "Kas gevşetici olan tizanidin alfa2 agonistidir; baklofen, diazepam gibi diğer gevşeticiler bu grupta yer almaz."
+    }
+   ],
+   "klip": "o-2f08-22",
+   "ses": [
+    "Alfa2 agonistlerin sedasyon ve diğer kullanımları.",
+    "Alfa2 agonistlerde sedasyon bilinen etkidir; deksmedetomidin yoğun bakımda sedasyon, tizanidin santral kas gevşetici olarak kullanılır.",
+    "Santral etkili kas gevşetici olarak kullanılan alfa2 agonistidir.",
+    "Yoğun bakımda entübe ve mekanik ventilasyonlu hastalarda başlangıç sedasyonu sağlar; ağrı kontrolünde opioid gereksinimini azaltır.",
+    "Anestezi öncesi premedikasyonda opioid gereksinimini azaltır ve solunumu baskılamaz; ayrıca hipertansiyon, diyare, ilaç özlemi ve menopozal sıcak basmasında kullanılır.",
+    "Sedasyon bu ilaçların bilinen yan etkisidir.",
+    "Kas gevşetici olan tizanidin alfa2 agonistidir; baklofen, diazepam gibi diğer gevşeticiler bu grupta yer almaz."
+   ],
+   "v": "ab4efaf95a"
+  },
+  {
+   "id": "2f08-29",
+   "baslik": "Lokal anestezikle vazokonstriktör kullanımı",
+   "giris": "Alfa agonistler lokal anestezikle birleştirildiğinde sinir bloğu süresi uzar ve toplam doz azalır; tercih edilen ajan adrenalindir, uç organlarda kullanılmaz.",
+   "s": [
+    60
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Alfa agonistlerin lokal anestezikle kombinasyonu infiltrasyonla yapılan sinir bloğunun süresini büyük ölçüde uzatır ve lokal anesteziğin toplam dozu azaltılabilir; ayrıca lokal anesteziğin uygulama yerinin dışına nüfuz etmesi azalır."
+    },
+    {
+     "metin": "Epinefrin 1:100.000 veya 1:200.000 tercih edilir; noradrenalin, fenilefrin ve diğer alfa agonistler de kullanılabilir."
+    },
+    {
+     "metin": "Kalp ve periferik damarlardaki sistemik etkiler ortaya çıkabilir ancak genellikle minimaldir; advers etkileri ortadan kaldırmak amaçlanmaz."
+    },
+    {
+     "metin": "Uç organ damar yataklarında (parmak, burun, kulak) iskemik nekroz korkusuyla önerilmez."
+    },
+    {
+     "metin": "Adrenalin burun kompresi ve dişeti ipliklerinde topikal kullanılır; kokain adrenalinle karıştırılabilir."
+    }
+   ],
+   "klip": "o-2f08-29",
+   "ses": [
+    "Lokal anestezikle vazokonstriktör kullanımı.",
+    "Alfa agonistler lokal anestezikle birleştirildiğinde sinir bloğu süresi uzar ve toplam doz azalır; tercih edilen ajan adrenalindir, uç organlarda kullanılmaz.",
+    "Alfa agonistlerin lokal anestezikle kombinasyonu infiltrasyonla yapılan sinir bloğunun süresini büyük ölçüde uzatır ve lokal anesteziğin toplam dozu azaltılabilir; ayrıca lokal anesteziğin uygulama yerinin dışına nüfuz etmesi azalır.",
+    "Epinefrin 1:100.000 veya 1:200.000 tercih edilir; noradrenalin, fenilefrin ve diğer alfa agonistler de kullanılabilir.",
+    "Kalp ve periferik damarlardaki sistemik etkiler ortaya çıkabilir ancak genellikle minimaldir; advers etkileri ortadan kaldırmak amaçlanmaz.",
+    "Uç organ damar yataklarında (parmak, burun, kulak) iskemik nekroz korkusuyla önerilmez.",
+    "Adrenalin burun kompresi ve dişeti ipliklerinde topikal kullanılır; kokain adrenalinle karıştırılabilir."
+   ],
+   "v": "a2284c6e98"
+  },
+  {
+   "id": "2f08-28",
+   "baslik": "Anaflakside adrenalin",
+   "giris": "Anaflakside bronkospazm, anjiyoödem ve hipotansiyon parenteral adrenalinle düzelir; tercih edilen yol intramüsküler enjeksiyondur.",
+   "s": [
+    63
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Anaflaktik şok tip I IgE aracılı reaksiyondur; bronkospazm, mukoz membran konjesyonu, anjiyoödem ve şiddetli hipotansiyon görülür."
+    },
+    {
+     "metin": "Parenteral adrenalin (1:1000 solüsyondan 0,3-0,5 ml) ile hızlı yanıt alınır."
+    },
+    {
+     "metin": "Hipotansif hastada cilt kan akımı öngörülemediğinden intramüsküler enjeksiyon tercih edilir; bozulmuş kardiyovasküler fonksiyonda intravenöz uygulama gerekebilir."
+    },
+    {
+     "metin": "Alfa, beta1 ve beta2 reseptörlerin aktivasyonu patofizyolojik olayların geri döndürülmesinde önemlidir."
+    },
+    {
+     "metin": "Böcek ısırığı, şiddetli besin alerjisi riski taşıyanlar adrenalinli oto-enjektör bulundurmalıdır."
+    }
+   ],
+   "klip": "o-2f08-28",
+   "ses": [
+    "Anaflakside adrenalin.",
+    "Anaflakside bronkospazm, anjiyoödem ve hipotansiyon parenteral adrenalinle düzelir; tercih edilen yol intramüsküler enjeksiyondur.",
+    "Anaflaktik şok tip I IgE aracılı reaksiyondur; bronkospazm, mukoz membran konjesyonu, anjiyoödem ve şiddetli hipotansiyon görülür.",
+    "Parenteral adrenalin (1:1000 solüsyondan 0,3-0,5 ml) ile hızlı yanıt alınır.",
+    "Hipotansif hastada cilt kan akımı öngörülemediğinden intramüsküler enjeksiyon tercih edilir; bozulmuş kardiyovasküler fonksiyonda intravenöz uygulama gerekebilir.",
+    "Alfa, beta1 ve beta2 reseptörlerin aktivasyonu patofizyolojik olayların geri döndürülmesinde önemlidir.",
+    "Böcek ısırığı, şiddetli besin alerjisi riski taşıyanlar adrenalinli oto-enjektör bulundurmalıdır."
+   ],
+   "v": "7f1352b993"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "_aciklama": "Doğrulanmış eşleme (H490, kapi.py) — bkz. k2-15.json açıklaması.",
+ "kayitlar": [
+  {
+   "birim": "psk-s18-b02",
+   "tur": "slayt_disi",
+   "bilgi": "Konsültasyon-Liyezon Psikiyatrisi konusunda, aşağıdaki bilgilerden hangisi yanlıştır? → Ajitasyonda, ilk yapılacak uygulama fiziksel kısıtlamadır.",
+   "yok_terimler": [
+    "kısıtlama",
+    "ilk yapılacak"
+   ],
+   "gerekce": "2026-27 Konsültasyon-liyezon psikiyatrisi slaytlarında ajitasyonda ilk uygulamaya ya da fiziksel kısıtlamaya dair bilgi yok; s16 yalnız ajitasyonu acil konsültasyon örneği sayar (kural 28)."
+  },
+  {
+   "birim": "psk-s18-b02",
+   "tur": "slayt_disi",
+   "bilgi": "Konsültasyon-liyezon psikiyatrisinde (genel hastanede yatan hastalarda) en sık karşılaşılan psikiyatrik tablo aşağıdakilerden hangisidir? → Deliryum",
+   "yok_terimler": [
+    "karşılaşılan",
+    "en sık"
+   ],
+   "gerekce": "2026-27 slaytlarında genel hastanede en sık psikiyatrik tablonun ne olduğu söylenmiyor; s16 deliryumu yalnız acil konsültasyon örneği olarak anar (kural 28)."
+  },
+  {
+   "birim": "psk-s18-b01",
+   "tur": "slayt_disi",
+   "bilgi": "Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır? → Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır.",
+   "yok_terimler": [
+    "kısıtlama",
+    "ilk yapılacak"
+   ],
+   "gerekce": "2026-27 Konsültasyon-liyezon psikiyatrisi slaytlarında ajitasyonda ilk uygulamaya ya da fiziksel kısıtlamaya dair bilgi yok; s16 yalnız ajitasyonu acil konsültasyon örneği sayar (kural 28)."
+  }
+ ]
+}

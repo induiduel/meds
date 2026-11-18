@@ -1,0 +1,2282 @@
+{
+  "id": "k2-46-sempatomimetikler",
+  "kurul": 2,
+  "ders": "Tıbbi Farmakoloji",
+  "konu": "Sempatomimetikler (Adrenoseptör Agonistler)",
+  "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+  "kazanimlar": [
+    {
+      "no": 1,
+      "metin": "Sempatomimetik tanımını ve direkt/indirekt sınıflamayı açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q01",
+          "kazanim": 1,
+          "zorluk": "kolay",
+          "soru": "Adrenalin veya noradrenalinin etkilerini taklit eden ilaçlar geleneksel olarak aşağıdakilerden hangisi şeklinde adlandırılır?",
+          "secenekler": {
+            "A": "Sempatomimetik",
+            "B": "Parasempatomimetik",
+            "C": "Adrenoseptör antagonisti",
+            "D": "Ganglion bloker",
+            "E": "Sempatolitik"
+          },
+          "dogru": "A",
+          "aciklama": "Sempatomimetikler adrenalin ve noradrenalinin etkilerini taklit ederek adrenoseptörleri uyaran ilaçlardır. Sempatomimetik adı ilacın kimyasal yapısını değil, adrenalin ve noradrenalini taklit etmesini tanımlar; parasempatomimetik ve sempatolitik terimleriyle karıştırılmamalıdır. Bu adlandırma indirekt ve direkt etkili tüm ajanları kapsar.",
+          "sik_aciklamalari": {
+            "A": "Sempatomimetikler adrenalin ve noradrenalinin etkilerini taklit ederek adrenoseptörleri uyaran ilaçlardır. Sempatomimetik adı ilacın kimyasal yapısını değil, adrenalin ve noradrenalini taklit etmesini tanımlar; parasempatomimetik ve sempatolitik terimleriyle karıştırılmamalıdır. Bu adlandırma indirekt ve direkt etkili tüm ajanları kapsar.",
+            "B": "Parasempatomimetikler asetilkolinin etkilerini taklit eden kolinerjik ilaçlardır. Etkileri adrenerjik değil parasempatik olduğundan adrenalin taklidini anlatan bu tanıma uymaz. Bu sistemin ilaçları adrenerjik sistemin değil kolinerjik sistemin taklitçisidir.",
+            "C": "Adrenoseptör antagonistleri reseptöre bağlanıp katekolamin etkisini engelleyen ilaçlardır. Etkiyi taklit etmek yerine bloke ettikleri için tanımın tersidir. Bu ilaçlar katekolamin etkisini taklit eden sempatomimetiklerin işlevsel karşıtıdır.",
+            "D": "Ganglion blokerler otonom ganglionlarda iletimi keserek sempatik ve parasempatik aktiviteyi birlikte azaltır. Katekolamin etkisini taklit etmedikleri için tanıma uymazlar. Bu ilaçlar otonom ganglionlardaki nikotinik iletime etki eder ve katekolamin reseptörünü doğrudan ilgilendirmez.",
+            "E": "Sempatolitikler sempatik aktiviteyi baskılayan ilaçlardır; klonidin gibi santral etkili alfa2 agonistleri örnektir. Katekolamin etkisini taklit etmeyip azalttıkları için bu tanıma uymazlar. Bu grup ilaçlar sempatik aktiviteyi azaltarak kan basıncını düşürmede kullanılır."
+          },
+          "kanit": {
+            "sayfa": 2
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q02",
+          "kazanim": 1,
+          "zorluk": "orta",
+          "soru": "Aşağıdakilerden hangisi indirekt etkili sempatomimetiklerin etki mekanizmalarından biri değildir?",
+          "secenekler": {
+            "A": "MAO inhibisyonuyla noradrenalin metabolizmasının önlenmesi",
+            "B": "Salıverilmiş katekolaminlerin geri alımının inhibisyonu",
+            "C": "Depolanmış katekolaminlerin sinir ucundan çıkarılması",
+            "D": "Adrenoseptörlere doğrudan bağlanarak G proteinini aktive etmek",
+            "E": "KOMT inhibisyonuyla katekolamin klirensinin azaltılması"
+          },
+          "dogru": "D",
+          "aciklama": "Reseptöre doğrudan bağlanıp G proteinini aktive etmek adrenalin ve noradrenalin gibi direkt agonistlerin özelliğidir. İndirekt ilaçlar katekolamin miktarını artırdığından olumsuz kökün istisnası budur. Bu mekanizma yalnız direkt etkili ajanlara özgüdür ve sorunun ayırt ettiği noktadır.",
+          "sik_aciklamalari": {
+            "A": "MAO inhibitörleri noradrenalinin enzimatik yıkımını azaltarak sinapstaki katekolamin düzeyini yükseltir. Bu da indirekt mekanizmalardan olduğu için istisna sayılmaz. Bu yol noradrenalinin sinapstaki ömrünü uzatarak etkisini artırır.",
+            "B": "Kokain ve trisiklik antidepresanlar noradrenalin transportörünü bloke ederek salıverilmiş katekolaminin sinapsta kalmasını sağlar. Bu indirekt bir yol olduğundan istisna değildir. Bu grubun tipik örnekleri kokain ve trisiklik antidepresanlardır.",
+            "C": "Tiramin gibi ilaçlar depolanmış katekolaminleri adrenerjik sinir ucundan çıkarır ve sinaptik noradrenalini artırır. Bu bir indirekt mekanizma olduğundan kökün aradığı istisna değildir. Klinikte bu grubun tipik örneği tiramin olarak anılır.",
+            "D": "Reseptöre doğrudan bağlanıp G proteinini aktive etmek adrenalin ve noradrenalin gibi direkt agonistlerin özelliğidir. İndirekt ilaçlar katekolamin miktarını artırdığından olumsuz kökün istisnası budur. Bu mekanizma yalnız direkt etkili ajanlara özgüdür ve sorunun ayırt ettiği noktadır.",
+            "E": "KOMT inhibitörleri katekolaminlerin metilasyonla inaktivasyonunu yavaşlatarak etkilerini uzatır. Klirensin azaltılması indirekt mekanizmalar içinde sayıldığından istisna değildir. Bu yol da etkinin süresini uzatan, doğrudan reseptör uyarmayan bir basamaktır."
+          },
+          "kanit": {
+            "sayfa": 3
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q03",
+          "kazanim": 1,
+          "zorluk": "kolay",
+          "soru": "Stres gibi uyaranlara yanıt olarak adrenal medulladan salıverilen ve hormon gibi davranan katekolamin aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Adrenalin",
+            "B": "Dopamin",
+            "C": "Noradrenalin",
+            "D": "Fenilefrin",
+            "E": "İzoproterenol"
+          },
+          "dogru": "A",
+          "aciklama": "Adrenalin adrenal medulladan kana salıverilir ve uzak dokulara hormon gibi etki eder. Adrenalinin kan yoluyla uzak dokulara ulaşması onu hormon, noradrenalinin sinir uçlarından sinapsa salınması onu nörotransmitter gibi davranan katekolamin yapar. Bu nedenle adrenalin için hormon, noradrenalin için nörotransmitter benzetmesi yapılır.",
+          "sik_aciklamalari": {
+            "A": "Adrenalin adrenal medulladan kana salıverilir ve uzak dokulara hormon gibi etki eder. Adrenalinin kan yoluyla uzak dokulara ulaşması onu hormon, noradrenalinin sinir uçlarından sinapsa salınması onu nörotransmitter gibi davranan katekolamin yapar. Bu nedenle adrenalin için hormon, noradrenalin için nörotransmitter benzetmesi yapılır.",
+            "B": "Dopamin noradrenalin sentezinin öncülüdür ve beyinde, renal ve splanik damarlarda kendi reseptörleriyle etki eder. Adrenal medulladan stresle salınan hormon olmadığı için yanlıştır. Dopaminin asıl işlevleri beyin ve damar yataklarındaki dopamin reseptörleriyle ilgilidir.",
+            "C": "Noradrenalin sinir uçlarından sinaptik aralığa salıverilir ve nörotransmitter gibi davranır. Soruda hormon gibi davranan katekolamin sorulduğundan yanlıştır; doğrusu adrenalindir. Bu fark iki katekolaminin salıverildiği yeri ve etki alanını ayırt etmeye yarar.",
+            "D": "Fenilefrin endojen değil sentetik, saf bir alfa1 agonistidir ve midriyatik ile dekonjestan olarak kullanılır. Vücutta üretilen bir hormon olmadığından yanlıştır. Klinikte midriyaz yapmak ve burun tıkanıklığını gidermek için başvurulan bir ilaçtır.",
+            "E": "İzoproterenol sentetik katekolamin türevi, güçlü ve selektif olmayan bir beta agonistidir. Stresle salınan endojen bir hormon olmadığı için yanlıştır. Klinikte kalp bloğu gibi durumlarda kalp hızını artırmak için başvurulur."
+          },
+          "kanit": {
+            "sayfa": 2
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "metin": "Adrenoseptörlerin G proteini yapısını ve sinyal yolaklarını açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q04",
+          "kazanim": 2,
+          "zorluk": "orta",
+          "soru": "Adrenoseptör katekolaminlerce aktive edildiğinde G proteininde ilk olarak aşağıdaki olaylardan hangisi gerçekleşir?",
+          "secenekler": {
+            "A": "IP3 ve DAG oluşumu",
+            "B": "Efektör enzimin aktivitesinin düzenlenmesi",
+            "C": "GDP'nin G proteininin alfa alt biriminden kopması",
+            "D": "Alfa alt biriminin beta-gama biriminden ayrılması",
+            "E": "Fosfodiesteraz aktivasyonu"
+          },
+          "dogru": "C",
+          "aciklama": "Reseptör aktivasyonu GDP'nin G proteininin alfa alt biriminden kopmasını sağlar ve GTP'nin bağlanacağı yeri açar. GTP'nin bağlanması ve alfa alt biriminin ayrılması bu basamaktan sonra gerçekleşir. Bu basamak GTP bağlanmasının ve alfa alt biriminin ayrılmasının önkoşuludur.",
+          "sik_aciklamalari": {
+            "A": "IP3 ve DAG yalnız Gq yoluyla fosfolipaz C aktive olunca oluşan ikinci ulaklardır. Kaskadın geç ürünü olduğundan G proteinindeki ilk olay değildir. Bu ürünler fosfolipaz C yolunun sonunda oluşan ikinci ulaklardır.",
+            "B": "Efektör enzimlerin (adenilil siklaz, fosfolipaz C) düzenlenmesi ayrılmış alfa alt biriminin işlevidir. Zincirin sonunda geldiğinden ilk olay değildir. Bu düzenleme, reseptörün kaskadı başlatmasından en sonra gelen etkidir.",
+            "C": "Reseptör aktivasyonu GDP'nin G proteininin alfa alt biriminden kopmasını sağlar ve GTP'nin bağlanacağı yeri açar. GTP'nin bağlanması ve alfa alt biriminin ayrılması bu basamaktan sonra gerçekleşir. Bu basamak GTP bağlanmasının ve alfa alt biriminin ayrılmasının önkoşuludur.",
+            "D": "Alfa alt biriminin beta-gama biriminden ayrılması GTP bağlandıktan sonra gerçekleşir. İlk değil sonraki basamak olduğundan sıralama hatasıdır. Bu ayrılma, efektörün düzenlenmesini mümkün kılan ikinci basamaktır.",
+            "E": "Fosfodiesteraz alfa alt biriminin efektörlerinden biridir ve cAMP yıkımını düzenler. Kaskadın ileri aşamasında etkilendiğinden ilk olay olamaz. Bu enzim cAMP düzeyini azaltarak etkiyi sonlandıran bir yolda yer alır."
+          },
+          "kanit": {
+            "sayfa": 5
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q05",
+          "kazanim": 2,
+          "zorluk": "kolay",
+          "soru": "Alfa1 reseptörlerini fosfolipaz C'ye bağlayan G protein ailesi aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Gi",
+            "B": "Gs",
+            "C": "Gs ve Gi birlikte",
+            "D": "Go",
+            "E": "Gq ve G11"
+          },
+          "dogru": "E",
+          "aciklama": "Gq ailesi (Gq ve G11) alfa1 reseptörlerini fosfolipaz C'ye bağlar; enzim IP3 ve DAG üretir. Alfa1 sinyalinin G protein bağlantısı budur. Bu protein ailesi hücre içinde kalsiyum salımına giden yolu başlatır.",
+          "sik_aciklamalari": {
+            "A": "Gi adenilil siklazı inhibe eden G proteinidir ve alfa2 reseptörlerinin sinyalini taşır. Fosfolipaz C'ye değil adenilil siklaza bağlandığından yanlıştır. Bu yol cAMP düzeyini düşürerek alfa2 etkisini oluşturur.",
+            "B": "Gs uyarıcı G proteinidir; adenilil siklazı aktive edip cAMP'yi artırır ve beta reseptörlerin aracısıdır. Alfa1'in fosfolipaz C bağlantısı bu protein üzerinden değildir. Klinikte bu yol beta reseptörlerin kalp ve bronştaki etkisinin temelidir.",
+            "C": "Gs adenilil siklazı artırır, Gi ise azaltır; ikisi zıt yönde düzenler. Alfa1'in fosfolipaz C yolu bu proteinlerle değil Gq ve G11 ile aracılandığından yanlıştır. İki proteinin ayrı reseptör ailelerinde çalıştığı unutulmamalıdır.",
+            "D": "Go da Gi gibi inhibitör gruptadır ve adenilil siklaz inhibisyonuyla ilişkilidir. Alfa1'in fosfolipaz C yolunu aracılamadığından yanlıştır. Bu protein de cAMP düşüşüyle ilgili inhibitör yola aittir.",
+            "E": "Gq ailesi (Gq ve G11) alfa1 reseptörlerini fosfolipaz C'ye bağlar; enzim IP3 ve DAG üretir. Alfa1 sinyalinin G protein bağlantısı budur. Bu protein ailesi hücre içinde kalsiyum salımına giden yolu başlatır."
+          },
+          "kanit": {
+            "sayfa": 5
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q06",
+          "kazanim": 2,
+          "zorluk": "zor",
+          "soru": "Beta adrenoseptörlerde agonistlerin göreceli potens sıralaması aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Adrenalin ≥ noradrenalin >> izoproterenol",
+            "B": "İzoproterenol > adrenalin ≥ noradrenalin",
+            "C": "Noradrenalin > adrenalin > izoproterenol",
+            "D": "Adrenalin > izoproterenol > noradrenalin",
+            "E": "İzoproterenol = noradrenalin > adrenalin"
+          },
+          "dogru": "B",
+          "aciklama": "Beta reseptörlerde sentetik izoproterenol en güçlü agonisttir; adrenalin ve noradrenalin ondan zayıftır. Beta potens sıralaması budur. Bu sıra izoproterenolün beta etkisindeki üstünlüğünü gösterir.",
+          "sik_aciklamalari": {
+            "A": "Bu sıralama alfa reseptörlere özgüdür; izoproterenolün alfa üzerindeki etkisi çok azdır. Beta reseptörler için kullanıldığında yanlış olur. Alfa ve beta sıralamaları birbirinin tersine yakın olduğundan karıştırılmamalıdır.",
+            "B": "Beta reseptörlerde sentetik izoproterenol en güçlü agonisttir; adrenalin ve noradrenalin ondan zayıftır. Beta potens sıralaması budur. Bu sıra izoproterenolün beta etkisindeki üstünlüğünü gösterir.",
+            "C": "Beta reseptörlerde en güçlü ajan izoproterenoldür. Noradrenalini en başa koymak beta potensine uymayan, ters kurulmuş bir sıralamadır. Noradrenalinin beta2 ve beta1 üzerindeki etkisi izoproterenole göre zayıftır.",
+            "D": "Beta reseptörde adrenalin izoproterenolü geçemez; en güçlü ajan izoproterenoldür. Bu sıra beta potensini yansıtmadığından yanlıştır. Sıranın başında izoproterenol yer aldığından bu dizilim beta için doğru olamaz.",
+            "E": "Üç ajanın potensi eşit değildir ve izoproterenol belirgin biçimde üstündür. Noradrenalinin adrenalinden güçlü gösterilmesi de beta sıralamasına uymaz. Eşitlik ifadesi ajanlar arasındaki gerçek potens farkını yansıtmaz."
+          },
+          "kanit": {
+            "sayfa": 6
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q07",
+          "kazanim": 2,
+          "zorluk": "orta",
+          "soru": "Dopamin reseptörlerinden D1-benzeri grubu oluşturan alt tipler aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "D1 ve D5",
+            "B": "D4 ve D5",
+            "C": "D2 ve D3",
+            "D": "D2 ve D4",
+            "E": "D3 ve D4"
+          },
+          "dogru": "A",
+          "aciklama": "Beş dopamin reseptör alt tipinden D1 ve D5 D1-benzeri grubu oluşturur ve adenilil siklaz stimülasyonuyla ilişkilidir. D5 de D1 ile birlikte Gs'e bağlanıp cAMP'yi artırır; D2, D3 ve D4 ise Gi ile cAMP'yi azaltan D2-benzeri gruptur. Bu grup adenilil siklaz uyarısıyla damar düz kasını gevşetir.",
+          "sik_aciklamalari": {
+            "A": "Beş dopamin reseptör alt tipinden D1 ve D5 D1-benzeri grubu oluşturur ve adenilil siklaz stimülasyonuyla ilişkilidir. D5 de D1 ile birlikte Gs'e bağlanıp cAMP'yi artırır; D2, D3 ve D4 ise Gi ile cAMP'yi azaltan D2-benzeri gruptur. Bu grup adenilil siklaz uyarısıyla damar düz kasını gevşetir.",
+            "B": "D4 D2-benzeri, D5 ise D1-benzeri gruptadır. Karışık bir çift olduğundan D1-benzeri grubu tam olarak tanımlamaz. Çiftin yarısı doğru olsa da diğer yarısı D2-benzeri olduğundan çift bütün olarak doğru olmaz.",
+            "C": "D2 ve D3 D2-benzeri grubun üyeleridir ve adenilil siklazı inhibe eder. D1-benzeri grupta yer almadıkları için yanlıştır. Bu grup adenilil siklazı baskılar ve presinaptik düzeyde etkilidir.",
+            "D": "D2 ve D4 çifti D2-benzeri ailenin üyeleridir. D1 ailesine ait olmadığı için D1-benzeri grubu tanımlamaz. Bu çiftin hiçbir üyesi adenilil siklazı uyaran D1 ailesinde değildir.",
+            "E": "D3 ve D4'ün ikisi de D2-benzeri gruptadır ve inhibitör sinyal taşır. D1-benzeri grubu oluşturmadıklarından yanlıştır. Bu iki alt tip birlikte adenilil siklaz inhibisyonuna katılan D2-benzeri gruptadır."
+          },
+          "kanit": {
+            "sayfa": 7
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "metin": "Alfa, beta ve dopamin reseptör tiplerini ve ikinci ulaklarını ayırt edebilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q08",
+          "kazanim": 3,
+          "zorluk": "orta",
+          "soru": "Alfa1 reseptörlerinin aktivasyonu fosfolipaz C yoluyla aşağıdaki ikinci ulak çiftlerinden hangisinin oluşmasına yol açar?",
+          "secenekler": {
+            "A": "Glikojen fosforilaz aktivasyonu",
+            "B": "cAMP artışı",
+            "C": "Fosfodiesteraz aktivasyonu",
+            "D": "IP3 ve DAG",
+            "E": "cAMP azalması"
+          },
+          "dogru": "D",
+          "aciklama": "Fosfolipaz C polifosfoinozitidleri hidrolize ederek IP3 ve DAG oluşturur; IP3 hücre içi depolardan Ca2+ salıverir, DAG protein kinaz C'yi aktive eder. Alfa1 yolunun ürünleri bunlardır. Bu iki ulak kalsiyum ve protein kinaz C yoluyla düz kas kasılmasını sağlar.",
+          "sik_aciklamalari": {
+            "A": "Glikojen fosforilaz aktivasyonu karaciğerde beta reseptör aracılı cAMP kaskadının ürünüdür. Alfa1 fosfolipaz C yolunun ikinci ulağı olmadığından yanlıştır. Bu kaskad glukoz salımına yol açan metabolik bir etkiyle ilişkilidir.",
+            "B": "cAMP artışı Gs aracılığıyla beta reseptörlerde adenilil siklaz aktivasyonunun sonucudur. Alfa1 yolu fosfolipaz C'den geçtiğinden yanlıştır. Bu sonuç Gs yolunun özelliğidir ve alfa1 ile karıştırılmamalıdır.",
+            "C": "Fosfodiesteraz aktif alfa alt biriminin efektörlerinden biridir ve cAMP'yi yıkar. Alfa1'in fosfolipaz C kaskadında oluşan ikinci ulak çifti olmadığından yanlıştır. Bu enzim ikinci ulak değil, ulağı yıkan bir efektördür.",
+            "D": "Fosfolipaz C polifosfoinozitidleri hidrolize ederek IP3 ve DAG oluşturur; IP3 hücre içi depolardan Ca2+ salıverir, DAG protein kinaz C'yi aktive eder. Alfa1 yolunun ürünleri bunlardır. Bu iki ulak kalsiyum ve protein kinaz C yoluyla düz kas kasılmasını sağlar.",
+            "E": "cAMP azalması Gi aracılı alfa2 sinyalinin sonucudur. Alfa1'in fosfolipaz C yolunda bu azalma ikinci ulak olarak gelişmez. Bu sonuç alfa2 aktivasyonunda hücre içi yanıtı baskılar."
+          },
+          "kanit": {
+            "sayfa": 9
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q09",
+          "kazanim": 3,
+          "zorluk": "kolay",
+          "soru": "Alfa2 adrenoseptörlerinin aktivasyonu hücre içinde aşağıdakilerden hangisine yol açar?",
+          "secenekler": {
+            "A": "Dopaminin adenilil siklazı uyarması",
+            "B": "Potasyum kanallarının kapanması ve kalsiyum girişinin artması",
+            "C": "Gq aracılığıyla IP3 ve DAG oluşumu",
+            "D": "Gi aracılığıyla adenilil siklazın inhibisyonu ve cAMP düşüşü",
+            "E": "Gs aracılığıyla adenilil siklazın uyarılması"
+          },
+          "dogru": "D",
+          "aciklama": "Alfa2 reseptörler Gi'ye bağlanır, adenilil siklazı inhibe eder ve hücre içi cAMP düzeyini azaltır. Alfa2 sinyalinin temel özelliği budur. Bu yol alfa2'nin presinaptik ve santral baskılayıcı etkisinin temelidir.",
+          "sik_aciklamalari": {
+            "A": "Adenilil siklaz uyarılması D1-benzeri dopamin reseptörleriyle ilişkili bir sinyaldir. Alfa2'nin sinyal yolu olmadığından yanlıştır. Bu yol dopamin reseptörleri için tanımlı olup alfa2'de görülmez.",
+            "B": "Kalsiyum girişini artıran sinyaller kalpte beta reseptörlerle görülür. Alfa2 cAMP'yi azaltan inhibitör bir yoldur; bu seçenek ona uymaz. Bu değişiklikler kalpte uyarıcı beta etkisini anlatır, alfa2'yi değil.",
+            "C": "Gq aracılı fosfolipaz C yoluyla IP3 ve DAG oluşumu alfa1 reseptörlerine aittir. Alfa2 bu yolu değil Gi yolunu kullandığından yanlıştır. Bu yol damar düz kasını kasan alfa1 etkisinin temelidir.",
+            "D": "Alfa2 reseptörler Gi'ye bağlanır, adenilil siklazı inhibe eder ve hücre içi cAMP düzeyini azaltır. Alfa2 sinyalinin temel özelliği budur. Bu yol alfa2'nin presinaptik ve santral baskılayıcı etkisinin temelidir.",
+            "E": "Gs ile adenilil siklaz uyarılması ve cAMP artışı beta reseptör sinyalidir. Alfa2'de ters yönde inhibe edici bir yol bulunduğundan yanlıştır. Bu yol beta reseptörlere özgüdür ve alfa2 için geçerli değildir."
+          },
+          "kanit": {
+            "sayfa": 10
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q10",
+          "kazanim": 3,
+          "zorluk": "orta",
+          "soru": "Aşırı aktif mesane tedavisi için onaylanmış ve mesane detrusor kasını gevşeten seçici beta3 agonisti aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Ritodrin",
+            "B": "Fenilefrin",
+            "C": "Terbutalin",
+            "D": "Dobutamin",
+            "E": "Mirabegron"
+          },
+          "dogru": "E",
+          "aciklama": "Mirabegron seçici beta3 agonistidir; mesane detrusor kasını gevşeterek aşırı aktif mesane tedavisinde kullanılır. Bu etkisi nedeniyle aşırı aktif mesane belirtilerini hafifletir.",
+          "sik_aciklamalari": {
+            "A": "Ritodrin beta2 selektif ajandır ve gebe uterusunu gevşeterek erken doğumu geciktirmede kullanılır. Mesane tedavisinde beta3 etkisiyle kullanılmadığından yanlıştır. Bu ilaç klinikte erken doğum eylemini geciktirmek için kullanılır.",
+            "B": "Fenilefrin saf alfa1 agonistidir ve kasılma, midriyazis ile dekonjestan etki yapar. Detrusoru gevşetmediği için yanlıştır. Bu ilaç klinikte damar kasılmasıyla kan basıncını yükselten bir ajandır.",
+            "C": "Terbutalin beta2 selektif bir agonisttir ve bronkodilatasyonla astım tedavisinde kullanılır. Beta3 selektif olmadığından yanlıştır. Bu ilaç klinikte astım ve KOAH'ta sık başvurulan bir bronkodilatördür.",
+            "D": "Dobutamin prototipik beta1 seçici agonisttir ve kalpte kontraktiliteyi artırır. Mesane gevşetmek için kullanılmadığından yanlıştır. Bu ilaç klinikte kalp yetmezliğinde kısa süreli inotrop olarak verilir.",
+            "E": "Mirabegron seçici beta3 agonistidir; mesane detrusor kasını gevşeterek aşırı aktif mesane tedavisinde kullanılır. Bu etkisi nedeniyle aşırı aktif mesane belirtilerini hafifletir."
+          },
+          "kanit": {
+            "sayfa": 12
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q11",
+          "kazanim": 3,
+          "zorluk": "orta",
+          "soru": "Aşağıdakilerden hangisi D2 reseptörlerinin aktivasyonunun hücresel sonuçlarından biridir?",
+          "secenekler": {
+            "A": "Hücre içi kalsiyum girişinin artması",
+            "B": "Adenilil siklaz stimülasyonu ve cAMP birikimi",
+            "C": "Glikojen fosforilaz kaskadının aktivasyonu",
+            "D": "Adenilil siklazın inhibisyonu ve kalsiyum akışının azalması",
+            "E": "IP3 ve DAG oluşumu"
+          },
+          "dogru": "D",
+          "aciklama": "D2 reseptörler adenilil siklazı inhibe eder, potasyum kanallarını açar ve hücre içine kalsiyum akışını azaltır. Bu inhibitör sinyal D2'ye özgüdür. Bu üç etki birlikte D2'nin hücre uyarılabilirliğini azaltan sinyalini oluşturur.",
+          "sik_aciklamalari": {
+            "A": "D2 aktivasyonunda hücre içine kalsiyum girişi azalır. Artış beta reseptörlerin kalpteki etkisine özgü olduğundan yanlıştır. Bu etki uyarıcı beta sinyaline aittir ve D2'de tersi olur.",
+            "B": "Adenilil siklaz stimülasyonu ve cAMP birikimi D1 reseptörlerinin özelliğidir ve damar düz kasını gevşetir. D2 ise adenilil siklazı baskıladığından yanlıştır. Bu sonuç damarlarda vazodilatasyon yapan D1 reseptörünün özelliğidir.",
+            "C": "Glikojen fosforilaz kaskadı karaciğerde beta reseptör aracılı cAMP sentezinden doğar. D2'nin inhibitör sinyaliyle ilgisi olmadığından yanlıştır. Bu kaskad metabolik bir yanıttır ve D2 reseptörüyle ilişkilendirilemez.",
+            "D": "D2 reseptörler adenilil siklazı inhibe eder, potasyum kanallarını açar ve hücre içine kalsiyum akışını azaltır. Bu inhibitör sinyal D2'ye özgüdür. Bu üç etki birlikte D2'nin hücre uyarılabilirliğini azaltan sinyalini oluşturur.",
+            "E": "IP3 ve DAG oluşumu Gq-fosfolipaz C yolundan, yani alfa1 reseptörlerinden gelir. D2'nin sinyali olmadığından yanlıştır. Bu yol hücre içi kalsiyum salımıyla düz kas kasılmasına götürür."
+          },
+          "kanit": {
+            "sayfa": 13
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q12",
+          "kazanim": 3,
+          "zorluk": "kolay",
+          "soru": "Kalpte beta reseptörlerle uyarılan cAMP sentezinin hücresel sonucu aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Kalsiyumun hücre içine akışının artması",
+            "B": "Kalsiyum girişinin azalması",
+            "C": "Potasyum kanallarının açılması",
+            "D": "Adenilil siklazın inhibisyonu",
+            "E": "Fosfolipaz C üzerinden IP3 oluşumu"
+          },
+          "dogru": "A",
+          "aciklama": "Kalpte beta reseptörlerle uyarılan cAMP sentezi kalsiyumun hücre içine akışını artırır; kontraktilite ve hız yükselir. Beta reseptör Gs ile adenilil siklazı uyararak cAMP'yi artırır; kalpte bu zincir pozitif inotropik ve kronotropik etkiye ulaşır. Bu artış kalbin daha güçlü ve hızlı çalışmasını sağlar.",
+          "sik_aciklamalari": {
+            "A": "Kalpte beta reseptörlerle uyarılan cAMP sentezi kalsiyumun hücre içine akışını artırır; kontraktilite ve hız yükselir. Beta reseptör Gs ile adenilil siklazı uyararak cAMP'yi artırır; kalpte bu zincir pozitif inotropik ve kronotropik etkiye ulaşır. Bu artış kalbin daha güçlü ve hızlı çalışmasını sağlar.",
+            "B": "Kalsiyum girişinin azalması D2 ve alfa2 gibi inhibitör yollarda görülür. Kalpte beta uyarısında giriş artar, azalmaz. Bu azalma kalpte uyarı değil baskılanma anlamına gelirdi.",
+            "C": "Potasyum kanallarının açılması D2 aktivasyonunun özelliğidir ve hücre uyarılabilirliğini azaltır. Kalpte beta uyarısının sonucu olmadığından yanlıştır. Bu etki hücreyi baskılayan bir mekanizma olup kalpte uyarıyla ilgisizdir.",
+            "D": "Adenilil siklaz inhibisyonu Gi aracılı alfa2 etkisidir. Beta reseptörler tersine adenilil siklazı aktive ettiğinden yanlıştır. Bu inhibisyon kalpte uyarıcı etkinin tersini oluşturur.",
+            "E": "IP3 oluşumu Gq-fosfolipaz C yoluna ait olup alfa1 reseptörlerini ilgilendirir. Beta reseptörler Gs-adenilil siklaz yolunu kullandığından yanlıştır. Bu yol damar düz kasını kasan bir reseptör ailesine aittir."
+          },
+          "kanit": {
+            "sayfa": 11
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "metin": "Reseptör regülasyonunu ve noradrenalin transportörünün (NAT) rolünü açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q13",
+          "kazanim": 4,
+          "zorluk": "kolay",
+          "soru": "Bir dokunun belli süre agonist ajana maruz kaldıktan sonra aynı ajanla yapılan sonraki uyarılara daha az yanıt vermesi aşağıdakilerden hangisi olarak adlandırılır?",
+          "secenekler": {
+            "A": "Ön ilaç dönüşümü",
+            "B": "Duyarsızlaşma",
+            "C": "Reseptör selektivitesi",
+            "D": "Baroreseptör refleksi",
+            "E": "Geri alım inhibisyonu"
+          },
+          "dogru": "B",
+          "aciklama": "Duyarsızlaşma, katekolamin veya sempatomimetik kullanımından sonra dokunun aynı ajana daha az yanıt vermesidir ve en çok çalışılan reseptör regülasyonu örneğidir. Bu olay uzun süreli agonist kullanımında ilacın etkisinin zayıflamasına yol açar.",
+          "sik_aciklamalari": {
+            "A": "Ön ilaç dönüşümü, midodrinin desglimidodrine hidrolizi gibi etkisiz bir maddenin aktifleşmesidir. Yanıt azalmasıyla ilgisi olmadığından yanlıştır. Bu süreç ilacın aktif forma dönüşmesini anlatan farklı bir kavramdır.",
+            "B": "Duyarsızlaşma, katekolamin veya sempatomimetik kullanımından sonra dokunun aynı ajana daha az yanıt vermesidir ve en çok çalışılan reseptör regülasyonu örneğidir. Bu olay uzun süreli agonist kullanımında ilacın etkisinin zayıflamasına yol açar.",
+            "C": "Reseptör selektivitesi bir ilacın belirli adrenoseptör tipine tercih göstermesidir. Aynı ajana verilen yanıtın zamanla azalmasını anlatmadığından yanlıştır. Bu özellik ilacın hangi reseptörü tercih ettiğini belirler.",
+            "D": "Baroreseptör refleksi kan basıncı artınca vagal tonusla kalp hızını yavaşlatan fizyolojik bir düzenlemedir. Dokunun ajana duyarsızlaşması olmadığından yanlıştır. Bu refleks fizyolojik olup uzun süreli ilaç maruziyetiyle gelişmez.",
+            "E": "Geri alım inhibisyonu NAT'ın bloke edilmesiyle sinaptik noradrenalinin artması demektir. Reseptör yanıtının azalmasıyla ilgili olmadığından yanlıştır. Bu mekanizma ilaç etkisini artırır ve yanıtın zayıflamasını anlatmaz."
+          },
+          "kanit": {
+            "sayfa": 15
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q14",
+          "kazanim": 4,
+          "zorluk": "orta",
+          "soru": "Kalpteki sinapslarda salıverilen noradrenalinin yaklaşık yüzde kaçı noradrenalin transportörü (NAT) aracılığıyla ortadan kaldırılır?",
+          "secenekler": {
+            "A": "%40",
+            "B": "%60",
+            "C": "%90",
+            "D": "%10",
+            "E": "%100"
+          },
+          "dogru": "C",
+          "aciklama": "NAT kalpteki sinapslarda salıverilen noradrenalinin yaklaşık %90'ını uzaklaştırır; esas temizleme yolu budur. NAT'tan kaçan küçük kısım ekstranöronal hücrelerde KOMT ile metabolize edilir. Bu yüksek oran noradrenalinin sinaptik etkisinin büyük ölçüde NAT ile sonlandığını gösterir.",
+          "sik_aciklamalari": {
+            "A": "Kalpte NAT payı yarıdan fazladır; %40 gerçek payın çok altında kalır. Bu nedenle yanlıştır. Bu oran da kalpteki gerçek NAT payını yansıtmaz.",
+            "B": "Yüzde altmış ve üzeri damar sistemi gibi yerlerde NAT'ın payıdır. Kalpte oran daha yüksek olduğundan yanlıştır. Bu rakam kalp için değil daha çok damar sistemi için verilen alt sınırdır.",
+            "C": "NAT kalpteki sinapslarda salıverilen noradrenalinin yaklaşık %90'ını uzaklaştırır; esas temizleme yolu budur. NAT'tan kaçan küçük kısım ekstranöronal hücrelerde KOMT ile metabolize edilir. Bu yüksek oran noradrenalinin sinaptik etkisinin büyük ölçüde NAT ile sonlandığını gösterir.",
+            "D": "Yüzde on, NAT'ın gerçek payının çok altındadır. Esas temizleme yolunu hafife aldığı için yanlıştır. Bu düşük oran NAT'ın baskın temizleme rolüyle bağdaşmaz.",
+            "E": "NAT noradrenalinin tamamını almaz; kalan kısım ekstrasinaptik boşluğa kaçar, dolaşıma girer veya KOMT ile metabolize olur. Bu yüzden %100 yanlıştır. Kaçan noradrenalinin bir bölümü dolaşıma girer, bir bölümü KOMT ile yıkılır."
+          },
+          "kanit": {
+            "sayfa": 16
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q15",
+          "kazanim": 4,
+          "zorluk": "orta",
+          "soru": "Ekstranöronal hücrelerde noradrenalini metabolize eden enzim aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "KOMT",
+            "B": "Adenilil siklaz",
+            "C": "Fosfodiesteraz",
+            "D": "MAO",
+            "E": "Fosfolipaz C"
+          },
+          "dogru": "A",
+          "aciklama": "NAT'tan kaçan noradrenalin ekstranöronal hücrelerde katekol-O-metiltransferaz (KOMT) ile metabolize edilir. Noradrenalinin sinaptik etkisini esas olarak NAT sonlandırır; KOMT yalnız NAT'tan kaçan kısmı ekstranöronal hücrelerde inaktive eder. Bu enzim ekstranöronal hücrelerdeki metilasyon yoluyla noradrenalini inaktive eder.",
+          "sik_aciklamalari": {
+            "A": "NAT'tan kaçan noradrenalin ekstranöronal hücrelerde katekol-O-metiltransferaz (KOMT) ile metabolize edilir. Noradrenalinin sinaptik etkisini esas olarak NAT sonlandırır; KOMT yalnız NAT'tan kaçan kısmı ekstranöronal hücrelerde inaktive eder. Bu enzim ekstranöronal hücrelerdeki metilasyon yoluyla noradrenalini inaktive eder.",
+            "B": "Adenilil siklaz ATP'den cAMP üretir ve G proteininin efektörüdür. Katekolaminleri yıkmadığından yanlıştır. Bu enzim cAMP üretiminden sorumludur ve G proteininin efektörüdür.",
+            "C": "Fosfodiesteraz cAMP'yi yıkan bir enzimdir ve alfa alt biriminin efektörlerindendir. Katekolamin metabolizmasında rolü olmadığından yanlıştır. Bu enzim ikinci ulak sisteminin bir parçasıdır, katekolamin yıkımıyla ilgisizdir.",
+            "D": "MAO noradrenalini esas olarak nöron sitoplazmasına geri alındıktan sonra DHPG'ye metabolize eder. Ekstranöronal yol KOMT'a ait olduğundan yanlıştır. Bu enzim nöron içinde çalıştığından ekstranöronal metabolizmayı açıklamaz.",
+            "E": "Fosfolipaz C polifosfoinozitidleri IP3 ve DAG'a ayıran bir efektör enzimdir. Noradrenalini metabolize etmediğinden yanlıştır. Bu enzim IP3 ve DAG üretir ve alfa1 sinyalinde çalışır."
+          },
+          "kanit": {
+            "sayfa": 16
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q16",
+          "kazanim": 4,
+          "zorluk": "kolay",
+          "soru": "Dopamini presinaptik nöronal membrandan geri alan transportör aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "KOMT",
+            "B": "MAO",
+            "C": "SERT",
+            "D": "DAT",
+            "E": "NAT"
+          },
+          "dogru": "D",
+          "aciklama": "Dopamin transportörü (DAT) dopamini presinaptik uca geri alır; benzer transportörler noradrenalin için NAT, serotonin için SERT'tir. Bu transportör kokain gibi geri alım inhibitörleriyle bloke edildiğinde dopamin sinapsta birikir.",
+          "sik_aciklamalari": {
+            "A": "KOMT bir transportör değil, katekolaminleri metilleyerek inaktive eden enzimdir; bağırsak ve karaciğerde etkilidir. Dopamini presinaptik uca geri alan bir taşıyıcı olmadığından bu seçenek yanlıştır.",
+            "B": "MAO nöron sitoplazmasında noradrenalini DHPG'ye metabolize eden bir enzimdir. Membran transportörü olmadığından yanlıştır. Bu enzim de membran transportörü olmadığından seçenek elenir.",
+            "C": "SERT serotonini presinaptik uca geri alan transportördür ve serotonin sinapslarının temizlenmesinde görev alır. Dopamin için özgül olan DAT olduğundan bu seçenek yanlıştır.",
+            "D": "Dopamin transportörü (DAT) dopamini presinaptik uca geri alır; benzer transportörler noradrenalin için NAT, serotonin için SERT'tir. Bu transportör kokain gibi geri alım inhibitörleriyle bloke edildiğinde dopamin sinapsta birikir.",
+            "E": "NAT noradrenalini nöron sitoplazmasına geri pompalayan transportördür. Dopamin için özgül olan transportör DAT olduğundan yanlıştır. Bu transportör noradrenalinin nöron içine dönüşünü sağlar."
+          },
+          "kanit": {
+            "sayfa": 17
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q17",
+          "kazanim": 4,
+          "zorluk": "orta",
+          "soru": "Noradrenalin transportörünü selektif olarak bloke ederek sinaptik noradrenalin düzeyini artıran ve dikkat eksikliği bozukluklarında kullanılan ilaç aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Klonidin",
+            "B": "Dobutamin",
+            "C": "Atomoksetin",
+            "D": "Tiramin",
+            "E": "Fenilefrin"
+          },
+          "dogru": "C",
+          "aciklama": "Atomoksetin NAT'ın selektif inhibitörüdür; sinaptik noradrenalini artırır ve dikkat eksikliği bozukluklarında kullanılır. Bu etkiyle sinaptik noradrenalin artar ve alfa ile beta reseptörler daha fazla uyarılır.",
+          "sik_aciklamalari": {
+            "A": "Klonidin santral alfa2 agonistidir ve sempatik aktiviteyi azaltır. NAT inhibitörü olmadığından yanlıştır. Bu ilaç santral olarak sempatik aktiviteyi azaltan bir ajandır.",
+            "B": "Dobutamin kalpte beta1 etkili bir inotroptur ve reseptörü doğrudan aktive eder. Transportörü bloke etmediğinden yanlıştır. Bu ilaç kalpte kasılma gücünü artırır ve acil durumlarda verilir.",
+            "C": "Atomoksetin NAT'ın selektif inhibitörüdür; sinaptik noradrenalini artırır ve dikkat eksikliği bozukluklarında kullanılır. Bu etkiyle sinaptik noradrenalin artar ve alfa ile beta reseptörler daha fazla uyarılır.",
+            "D": "Tiramin depolanmış katekolaminleri sinir ucundan salıverir. NAT'ı bloke etmediği ve terapötik bir ilaç olmadığı için yanlıştır. Bu ilaç indirekt etkilidir ve etkisini transportör blokajıyla değil sinir ucu boşalmasıyla gösterir.",
+            "E": "Fenilefrin saf bir direkt alfa1 agonistidir ve reseptörü doğrudan uyarır. Transportörü bloke etmediğinden yanlıştır. Bu ilaç reseptör düzeyinde doğrudan etki eden bir agonisttir."
+          },
+          "kanit": {
+            "sayfa": 19
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "metin": "Sempatomimetiklerde yapı-etki ilişkisini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q18",
+          "kazanim": 5,
+          "zorluk": "kolay",
+          "soru": "Sempatomimetik ilaçların türetildiği ana bileşik aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Feniletilamin",
+            "B": "İzoproterenol",
+            "C": "Kokain",
+            "D": "Tirozin",
+            "E": "Atomoksetin"
+          },
+          "dogru": "A",
+          "aciklama": "Feniletilamin sempatomimetik ilaçların türetildiği ana bileşiktir; yapısındaki değişiklikler etki aralığını saf alfadan saf betaya kadar değiştirir. Bu yapı üzerindeki sübstitüsyonlar alfa ve beta aktivitesini belirler.",
+          "sik_aciklamalari": {
+            "A": "Feniletilamin sempatomimetik ilaçların türetildiği ana bileşiktir; yapısındaki değişiklikler etki aralığını saf alfadan saf betaya kadar değiştirir. Bu yapı üzerindeki sübstitüsyonlar alfa ve beta aktivitesini belirler.",
+            "B": "İzoproterenol feniletilaminin amino grubuna izopropil eklenmesiyle oluşan türevlerden biridir. Türev olduğu için ana bileşik değildir. Bu ilaç ana bileşikten türeyen ve beta etkisi güçlü bir sempatomimetiktir.",
+            "C": "Kokain lokal anestezik özellikli bir geri alım inhibitörüdür. Sempatomimetiklerin türetildiği bileşik olmadığından yanlıştır. Bu madde farklı bir etki mekanizmasıyla çalışan lokal anesteziktir.",
+            "D": "Tiramin vücutta tirozin metabolizmasının yan ürünüdür; tirozin ise sempatomimetiklerin kimyasal ana yapısı değildir. Ana bileşik feniletilamindir, bu nedenle seçenek yanlıştır.",
+            "E": "Atomoksetin NAT'ın selektif inhibitörüdür. Bir ilaç olup ana yapı olarak kullanılmadığından yanlıştır. Bu ilaç ana bileşik değil, geri alım inhibisyonu yapan terapötik bir ajandır."
+          },
+          "kanit": {
+            "sayfa": 19
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q19",
+          "kazanim": 5,
+          "zorluk": "orta",
+          "soru": "Maksimum alfa ve beta aktivitesi aşağıdaki yapılardan hangisinde bulunur?",
+          "secenekler": {
+            "A": "Amino grubunda büyük eklenti taşıyan beta2 selektiflerde",
+            "B": "C3 hidroksili bulunmayan fenilefride",
+            "C": "Benzen halkasının 3 ve 4 pozisyonlarında -OH grubu taşıyan katekolaminlerde",
+            "D": "Alfa karbonunda eklenti taşıyan katekolamin olmayanlarda",
+            "E": "Beta-hidroksil grubu taşımayan dopaminde"
+          },
+          "dogru": "C",
+          "aciklama": "Maksimum alfa ve beta aktivitesi benzen halkasının 3 ve 4. pozisyonlarında hidroksil taşıyan katekolaminlerde bulunur. Bu yapı hem alfa hem beta reseptörde güçlü etki sağladığından doğru yanıttır.",
+          "sik_aciklamalari": {
+            "A": "Büyük amino eklentisi beta2 selektivitesini sağlar. Maksimum alfa ve beta aktivitesi bu yapının özelliği olmadığından yanlıştır. Bu eklenti beta2 seçiciliğini sağlayan bir yapısal özelliktir.",
+            "B": "C3 hidroksilinin eksikliği gücü önemli ölçüde azaltır; fenilefrin bu yüzden adrenalinden çok daha az etkilidir. Maksimum aktivite sağlamadığından yanlıştır. Hidroksil eksikliği, katekolaminlere göre belirgin güç kaybı doğurur.",
+            "C": "Maksimum alfa ve beta aktivitesi benzen halkasının 3 ve 4. pozisyonlarında hidroksil taşıyan katekolaminlerde bulunur. Bu yapı hem alfa hem beta reseptörde güçlü etki sağladığından doğru yanıttır.",
+            "D": "Alfa karbon eklentileri MAO oksidasyonunu engelleyip etki süresini uzatır. Maksimum alfa ve beta aktivitesi sağlamadığından yanlıştır. Bu eklenti yapısı etki süresini uzatma yönünde işlev görür.",
+            "E": "Direkt etkili agonistler genellikle beta-hidroksil taşır, dopamin taşımaz. Bu, maksimum aktiviteyi sağlayan bir özellik olmadığından yanlıştır. Bu özellik direkt agonistlerin genel yapısal bir bulgusudur, maksimum aktivite sebebi değildir."
+          },
+          "kanit": {
+            "sayfa": 20
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q20",
+          "kazanim": 5,
+          "zorluk": "orta",
+          "soru": "Fenilefrinin etki süresinin katekolaminlerden daha uzun olmasının nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Alfa karbonunda izopropil eklentisi taşıması",
+            "B": "Katekol türevi olmadığı için KOMT ile inaktive edilmemesi",
+            "C": "Beta3 reseptörlere selektif olması",
+            "D": "Dopamin reseptörleri üzerinden etki etmesi",
+            "E": "NAT ile hızla geri alınması"
+          },
+          "dogru": "B",
+          "aciklama": "Katekolaminler bağırsak ve karaciğerdeki KOMT ile inaktive olur. Fenilefrin katekol türevi olmadığından bu yıkımdan kaçar ve etkisi uzar. Bu özellik fenilefrinin oral ve parenteral kullanımında uzun etki sağlar.",
+          "sik_aciklamalari": {
+            "A": "İzopropil eklentisi amino grubuna yapılır ve beta aktivitesini artırır. Etki süresinin nedeni KOMT yıkımının yokluğu olduğundan yanlıştır. Bu eklenti beta aktivitesini artırır ve etki süresini ilgilendirmez.",
+            "B": "Katekolaminler bağırsak ve karaciğerdeki KOMT ile inaktive olur. Fenilefrin katekol türevi olmadığından bu yıkımdan kaçar ve etkisi uzar. Bu özellik fenilefrinin oral ve parenteral kullanımında uzun etki sağlar.",
+            "C": "Fenilefrin saf alfa1 agonistidir ve beta3 seçiciliği yoktur. Etki süresi bu şekilde açıklanmadığından yanlıştır. Fenilefrinin seçiciliği alfa1'dedir ve etki süresi buna bağlı değildir.",
+            "D": "Fenilefrin dopamin reseptörleri üzerinden değil alfa1 reseptörlerle etki eder. Etki süresini açıklamadığından yanlıştır. Dopamin reseptör etkisi fenilefrinin farmakolojisinde yer almaz.",
+            "E": "Hızlı NAT geri alımı etkiyi kısaltırdı. Fenilefrinde uzun etki KOMT yıkımının olmamasıyla ilgili olduğundan yanlıştır. Hızlı geri alım olsaydı etki kısa kalırdı, oysa fenilefrin uzun etkilidir."
+          },
+          "kanit": {
+            "sayfa": 20
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q21",
+          "kazanim": 5,
+          "zorluk": "orta",
+          "soru": "Sempatomimetiklerde amino grubundaki alkil eklentisi uzadıkça hangi reseptör aktivitesi artar?",
+          "secenekler": {
+            "A": "NAT inhibisyonu",
+            "B": "Alfa2 reseptör aktivitesi",
+            "C": "D1 reseptör aktivitesi",
+            "D": "Beta reseptör aktivitesi",
+            "E": "Alfa1 reseptör aktivitesi"
+          },
+          "dogru": "D",
+          "aciklama": "Amino grubundaki alkil eklentisi uzadıkça beta aktivitesi artar. Noradrenaline metil eklenmesi adrenalini oluşturup beta2 reseptörlerdeki aktiviteyi artırır; amino grubuna izopropil eklenmesiyle (izoproterenol) beta aktivitesi daha da artar.",
+          "sik_aciklamalari": {
+            "A": "NAT inhibisyonu bir transportör etkisidir. Amino grubu eklentileri reseptör seçiciliğini değiştirdiğinden yanlıştır. Alkil eklentisi etki yeri olarak reseptörü değil transportörü etkilemez.",
+            "B": "Alfa2 reseptör aktivitesi amino grubundaki alkil zincirinin uzunluğuyla artmaz; bu zincir uzadıkça artan beta aktivitesidir. Bu nedenle seçenek yanlıştır. Alfa2 aktivasyonu Gi aracılığıyla cAMP'yi azaltan farklı bir sinyal yoludur.",
+            "C": "Dopamin reseptör aktivitesi bu yapı-etki ilişkisinin sonucu olarak artmaz. Bu nedenle yanlıştır. Dopamin reseptör etkisi bu yapısal değişikliklerin sonucu değildir.",
+            "D": "Amino grubundaki alkil eklentisi uzadıkça beta aktivitesi artar. Noradrenaline metil eklenmesi adrenalini oluşturup beta2 reseptörlerdeki aktiviteyi artırır; amino grubuna izopropil eklenmesiyle (izoproterenol) beta aktivitesi daha da artar.",
+            "E": "Alfa1 aktivitesi bu eklentilerle artmaz; izoproterenolün alfa etkisi azdır. Bu nedenle yanlıştır. Bu aktivite izoproterenolde zayıftır ve alkil eklentisiyle artmaz."
+          },
+          "kanit": {
+            "sayfa": 21
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q22",
+          "kazanim": 5,
+          "zorluk": "zor",
+          "soru": "Alfa karbondaki eklentilerin, özellikle katekolamin olmayan sempatomimetiklerde sağladığı etki aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "KOMT ile metabolizmayı hızlandırmak",
+            "B": "Beta-hidroksil grubunu kaldırmak",
+            "C": "MAO oksidasyonunu engelleyerek etki süresini uzatmak",
+            "D": "Alfa1 selektivitesini artırmak",
+            "E": "Beta2 selektivitesini artırmak"
+          },
+          "dogru": "C",
+          "aciklama": "Alfa karbon eklentisi, özellikle katekolamin olmayanlarda MAO oksidasyonunu engeller ve etki süresini uzatır. Alfa karbon eklentisi taşımayan katekolaminler MAO ile yıkılırken eklenti bu oksidasyonu engelleyerek etki süresini uzatır. Bu etkisiyle ilaç, vücutta daha uzun süre aktif kalır.",
+          "sik_aciklamalari": {
+            "A": "KOMT ile metabolizma katekolaminlerin sorunudur ve katekol olmayanlarda belirgin değildir. Alfa karbon eklentisi enzimatik yıkımı yavaşlatır, hızlandırmaz; bu nedenle seçenek yanlıştır.",
+            "B": "Beta-hidroksil direkt etkili agonistlerde bulunan bir gruptur. Alfa karbon eklentisi onu kaldırmadığından yanlıştır. Bu grup hidroksil yapısıyla ilgili olup alfa karbon eklentisinin işlevi değildir.",
+            "C": "Alfa karbon eklentisi, özellikle katekolamin olmayanlarda MAO oksidasyonunu engeller ve etki süresini uzatır. Alfa karbon eklentisi taşımayan katekolaminler MAO ile yıkılırken eklenti bu oksidasyonu engelleyerek etki süresini uzatır. Bu etkisiyle ilaç, vücutta daha uzun süre aktif kalır.",
+            "D": "Alfa karbon eklentisi alfa1 seçiciliği sağlamaz. Etkisi metabolizma üzerinedir; bu yüzden yanlıştır. Alfa1 seçiciliği alfa karbon eklentisiyle ilgili bir sonuç değildir.",
+            "E": "Beta2 selektivitesi büyük amino grubu eklentisiyle sağlanır; izoproterenolde izopropil eklentisi beta etkisini artırır. Alfa karbon eklentisi seçicilik vermediğinden seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 21
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "metin": "Alfa1 aktivasyonunun kardiyovasküler etkilerini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q23",
+          "kazanim": 6,
+          "zorluk": "orta",
+          "soru": "Normal refleksleri olan bir kişide fenilefrin ile arteriyel kan basıncı yükseldiğinde kalp hızında aşağıdakilerden hangisi beklenir?",
+          "secenekler": {
+            "A": "Beta1 uyarısıyla belirgin taşikardi",
+            "B": "Hiçbir değişiklik olmaması",
+            "C": "Baroreseptör aracılı vagal tonus artışıyla belirgin yavaşlama",
+            "D": "Sinüs düğümünde pacemaker aktivitesinin artması",
+            "E": "AV düğümde iletim hızının artması"
+          },
+          "dogru": "C",
+          "aciklama": "Kan basıncı artışı baroreseptörleri uyarır ve vagal tonus artar; kalp hızı belirgin yavaşlar. Alfa1 agonistlerinin kalbe doğrudan etkileri nispeten önemsiz olduğundan hız refleks olarak düşer. Bu refleks nedeniyle fenilefrin kalp hızını artırmaz, belirgin biçimde yavaşlatır.",
+          "sik_aciklamalari": {
+            "A": "Fenilefrin saf alfa1 agonistidir ve kalpte beta1 uyarısı yapmaz. Taşikardi beta agonistlerinin özelliği olduğundan yanlıştır. Taşikardi alfa1 agonistinin değil, beta agonistinin tipik bulgusudur.",
+            "B": "Kan basıncı yükselince baroreseptör refleksi devreye girer ve kalp hızı değişir. Hızın sabit kalması beklenmediğinden yanlıştır. Hız değişmesi, baroreseptör refleksinin işlediğini gösterir.",
+            "C": "Kan basıncı artışı baroreseptörleri uyarır ve vagal tonus artar; kalp hızı belirgin yavaşlar. Alfa1 agonistlerinin kalbe doğrudan etkileri nispeten önemsiz olduğundan hız refleks olarak düşer. Bu refleks nedeniyle fenilefrin kalp hızını artırmaz, belirgin biçimde yavaşlatır.",
+            "D": "Pacemaker aktivitesini artıran etki SA düğümdeki beta1 aktivasyonudur. Alfa1 agonisti bu reseptörü uyarmadığından yanlıştır. Bu etki yalnızca doğrudan beta1 uyarısıyla oluşabilir.",
+            "E": "Pozitif dromotropik etki AV düğümde beta1 aktivasyonunun sonucudur. Fenilefrin bu reseptörü uyarmadığından yanlıştır. Bu etki beta1 aracılı olup alfa1 agonistlerinde gözlenmez."
+          },
+          "kanit": {
+            "sayfa": 23
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q24",
+          "kazanim": 6,
+          "zorluk": "kolay",
+          "soru": "Aşağıdaki yanıtlardan hangisi alfa1 adrenoseptörlerin aktivasyonuna bağlı olarak gelişir?",
+          "secenekler": {
+            "A": "Renal damarlarda D1 aracılı vazodilatasyon",
+            "B": "SA düğümde kalp hızı artışı",
+            "C": "Bronş düz kasında gevşeme",
+            "D": "Yağ dokusunda lipolizin artması",
+            "E": "Arteriyel ve venöz vazokonstriksiyon"
+          },
+          "dogru": "E",
+          "aciklama": "Alfa1 reseptörler damar yataklarında yaygındır; aktivasyonları arteriyel ve venöz vazokonstriksiyon yapar ve periferik direnç artar. Alfa bir reseptörleri damar yataklarında yaygın olduğundan bu etki hem arteriyel hem venöz tarafta gelişir; beta2 aracılı vazodilatasyon ise bunun karşıtıdır. Bu yanıt arteriyel direnci ve venöz dönüşü artırarak kan basıncını yükseltir.",
+          "sik_aciklamalari": {
+            "A": "Renal vazodilatasyon dopamin D1 reseptörleriyle gelişir. Alfa1 aktivasyonu tersine vazokonstriksiyon yaptığından yanlıştır. Bu yanıt dopamin reseptörleriyle ilişkili bir vazodilatör yanıttır.",
+            "B": "Pozitif kronotropik etki SA düğümdeki beta1 aktivasyonuyla gelişir. Alfa1 yanıtı olmadığından yanlıştır. Bu etki kalbin hız yanıtıdır ve beta1 reseptörlerle ilişkilidir.",
+            "C": "Bronkodilatasyon beta2 aktivasyonunun sonucudur ve astımda kullanılır. Alfa1 bronş gevşetmediğinden yanlıştır. Bu yanıt bronş düz kasına özgü bir beta2 etkisidir.",
+            "D": "Lipoliz yağ hücrelerindeki beta3 aktivasyonuyla artar ve serbest yağ asitleri dolaşıma verilir. Bu, alfa1 aracılı bir yanıt olmadığından seçenek yanlıştır.",
+            "E": "Alfa1 reseptörler damar yataklarında yaygındır; aktivasyonları arteriyel ve venöz vazokonstriksiyon yapar ve periferik direnç artar. Alfa bir reseptörleri damar yataklarında yaygın olduğundan bu etki hem arteriyel hem venöz tarafta gelişir; beta2 aracılı vazodilatasyon ise bunun karşıtıdır. Bu yanıt arteriyel direnci ve venöz dönüşü artırarak kan basıncını yükseltir."
+          },
+          "kanit": {
+            "sayfa": 23
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q25",
+          "kazanim": 6,
+          "zorluk": "zor",
+          "soru": "Alfa1 agonistiyle kan basıncı yükseldiğinde kalp hızı yavaşlamasına rağmen kardiyak debinin orantılı olarak azalmamasının nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Periferik direncin azalması",
+            "B": "Artan venöz dönüşün atış hacmini artırması",
+            "C": "Kontraktilitenin beta1 aracılı artması",
+            "D": "Sinüs düğümünde pozitif kronotropik etki",
+            "E": "Koroner kan akımının azalması"
+          },
+          "dogru": "B",
+          "aciklama": "Alfa1 aktivasyonu venöz vazokonstriksiyonla venöz dönüşü artırır; atış hacmi yükselir ve hız düşüşünün debiyi orantılı azaltması engellenir. Artan venöz dönüş kalbin daha çok dolmasını ve atım başına daha çok kan pompalamasını sağlar. Bu mekanizma kalp hızı düşse bile atım başına çıkan kan miktarını korur.",
+          "sik_aciklamalari": {
+            "A": "Alfa1 aktivasyonu periferik direnci artırır; kan basıncı artışı buna dayanır. Direnç azalması olmadığından yanlıştır. Direnç artışı debiyi korumaz, aksine kan basıncını yükseltir.",
+            "B": "Alfa1 aktivasyonu venöz vazokonstriksiyonla venöz dönüşü artırır; atış hacmi yükselir ve hız düşüşünün debiyi orantılı azaltması engellenir. Artan venöz dönüş kalbin daha çok dolmasını ve atım başına daha çok kan pompalamasını sağlar. Bu mekanizma kalp hızı düşse bile atım başına çıkan kan miktarını korur.",
+            "C": "Fenilefrin gibi alfa1 agonistleri kalbe beta1 etkisi yapmaz; kalp fonksiyonu üzerine direkt etkileri önemsizdir. Bu yüzden yanlıştır. Alfa1 agonistlerinin kalp üzerine doğrudan etkisi küçüktür.",
+            "D": "Hız yavaşlar, artmaz. Pozitif kronotropik etki beta1 aracılıdır ve alfa1 yanıtında beklenmediğinden yanlıştır. Hız artışı olmaz; baroreseptör refleksi hızı düşürür.",
+            "E": "Debinin korunması koroner akımla açıklanmaz. Asıl neden venöz dönüşün artıp atış hacmini yükseltmesi olduğundan yanlıştır. Asıl belirleyici venöz sistemdeki daralmadır, koroner akım değildir."
+          },
+          "kanit": {
+            "sayfa": 24
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q26",
+          "kazanim": 6,
+          "zorluk": "orta",
+          "soru": "Aşağıdaki damar yataklarından hangisinde alfa mı beta mı aktive olduğuna bağlı olarak kasılma veya gevşeme görülebilir?",
+          "secenekler": {
+            "A": "Cilt damarları",
+            "B": "Mukoza altı damarları",
+            "C": "Splanik damarlar",
+            "D": "Nazal mukoza damarları",
+            "E": "İskelet kası damarları"
+          },
+          "dogru": "E",
+          "aciklama": "İskelet kası damarları alfa aktive olursa kasılır, beta2 aktive olursa gevşer. Alfa aktivasyonu Tablo 9-3'e göre damar düz kasında kasılma, beta2 aktivasyonu ise iskelet kası damarında gevşeme yapar. Bu özellik nedeniyle adrenalinin kas damarlarındaki etkisi dozla değişebilir.",
+          "sik_aciklamalari": {
+            "A": "Cilt damarları ağırlıklı alfa reseptör taşır ve adrenalin ile noradrenaline kasılarak yanıt verir. Çift yönlü yanıt göstermediğinden yanlıştır. Bu damarlar yalnız alfa etkisine yanıt verip kasıldığı için çift yönlü değildir.",
+            "B": "Mukoza damarları alfa aktivasyonuyla kasılır. Kasılma veya gevşemenin reseptöre göre değiştiği yatak iskelet kasıdır; bu yüzden yanlıştır. Mukozal yataklar alfa aktivasyonuna kasılarak yanıt verir ve gevşeme göstermez.",
+            "C": "Splanik damarlar da ağırlıklı alfa reseptör içerir ve kasılarak yanıt verir. Çift yönlü olmadığından yanlıştır. Bu damarlar da yalnız kasılma yanıtı veren bir yataktır.",
+            "D": "Nazal mukoza damarlarında alfa reseptör bulunur; lokal vazokonstriksiyon dekonjestan etkiyi açıklar. Çift yönlü yanıt olmadığından yanlıştır. Bu bölgede alfa aktivasyonu daima kasılma yapar ve dekonjestan etkiyi açıklar.",
+            "E": "İskelet kası damarları alfa aktive olursa kasılır, beta2 aktive olursa gevşer. Alfa aktivasyonu Tablo 9-3'e göre damar düz kasında kasılma, beta2 aktivasyonu ise iskelet kası damarında gevşeme yapar. Bu özellik nedeniyle adrenalinin kas damarlarındaki etkisi dozla değişebilir."
+          },
+          "kanit": {
+            "sayfa": 24
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "metin": "Alfa2 ve beta aktivasyonunun kardiyovasküler etkilerini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q27",
+          "kazanim": 7,
+          "zorluk": "orta",
+          "soru": "Sistemik verilen klonidinin, damardaki alfa2 aracılı vazokonstriktör etkisine rağmen kan basıncını düşürmesinin nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "NAT'ı bloke ederek sinaptik noradrenalini artırması",
+            "B": "Renal D1 aktivasyonuyla natriürez ve vazodilatasyon yapması",
+            "C": "Kalpte beta1 reseptörleri bloke etmesi",
+            "D": "Beta2 aracılı periferik vazodilatasyon oluşturması",
+            "E": "Santral alfa2 etkisiyle sempatik tonusun baskılanması"
+          },
+          "dogru": "E",
+          "aciklama": "Sistemik verildiğinde santral alfa2 etkileri sempatik tonusu ve kan basıncını baskılar; damardaki vazokonstriktör etki gizlenir. Santral alfa iki etkisi sempatik çıkışı azalttığı için damardaki doğrudan vazokonstriksiyon belirgin bir basınç artışı oluşturmaz. Bu nedenle klonidin klinikte antihipertansif olarak kullanılabilir.",
+          "sik_aciklamalari": {
+            "A": "NAT blokajı sinaptik noradrenalini artırır ve basıncı yükseltir. Klonidinin etkisi bu olmadığından yanlıştır. NAT inhibisyonu sempatomimetik etki yapan ilaçların işidir.",
+            "B": "Renal D1 aktivasyonu natriürez yapar ve oligüride böbrek perfüzyonunu düzeltmek için dopaminle kullanılır. Klonidin D1 agonisti olmadığından kan basıncı düşüşünü açıklamaz; seçenek yanlıştır.",
+            "C": "Klonidin beta blokör değil, santral sempatolitik etkili bir alfa2 agonistidir ve sempatik tonusu baskılar. Beta1 reseptörleri bloke etmediğinden seçenek yanlıştır.",
+            "D": "Klonidin beta2 agonisti değildir. Kan basıncı düşüşü MSS'deki alfa2 etkisinden kaynaklandığından yanlıştır. Klonidinin etkisi beta2 uyarısıyla vazodilatasyon yapmak değildir.",
+            "E": "Sistemik verildiğinde santral alfa2 etkileri sempatik tonusu ve kan basıncını baskılar; damardaki vazokonstriktör etki gizlenir. Santral alfa iki etkisi sempatik çıkışı azalttığı için damardaki doğrudan vazokonstriksiyon belirgin bir basınç artışı oluşturmaz. Bu nedenle klonidin klinikte antihipertansif olarak kullanılabilir."
+          },
+          "kanit": {
+            "sayfa": 25
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q28",
+          "kazanim": 7,
+          "zorluk": "orta",
+          "soru": "Alfa2 agonistlerinin damar düz kasında vazokonstriksiyon yaptığı durum aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Reseptör duyarsızlaşması geliştiğinde",
+            "B": "Tedavi dozunda yavaş oral kullanımda",
+            "C": "Hızlı intravenöz enjeksiyon ile verildiklerinde",
+            "D": "Beta2 reseptörler eşzamanlı uyarıldığında",
+            "E": "Sürekli santral sempatolitik etki sırasında"
+          },
+          "dogru": "C",
+          "aciklama": "Vasküler alfa2 vazokonstriksiyonu lokal uygulamada, hızlı IV enjeksiyonla veya çok yüksek oral dozda gözlenir. Hızlı intravenöz enjeksiyonla damardaki alfa2 reseptörlerinin aktivasyonu vazokonstriksiyona yol açar. Sistemik yolla verildiğinde ise bu etki santral alfa2 etkisiyle gizlenir.",
+          "sik_aciklamalari": {
+            "A": "Duyarsızlaşma, agonist maruziyeti sonrası yanıtın azalmasıdır. Alfa2 vazokonstriksiyonunun ortaya çıkması için gerekli bir koşul olmadığından seçenek yanlıştır. Duyarsızlaşma reseptör sayısı ve işlevindeki ayarlamayla gelişen ayrı bir olaydır.",
+            "B": "Tedavi dozunda yavaş oral kullanımda santral alfa2 etkileri sempatik tonusu baskılar ve vasküler etki gizlenir. Vazokonstriksiyon görülmediğinden yanlıştır. Bu kullanımda sempatik baskılayıcı etki öne çıkar ve basınç düşer.",
+            "C": "Vasküler alfa2 vazokonstriksiyonu lokal uygulamada, hızlı IV enjeksiyonla veya çok yüksek oral dozda gözlenir. Hızlı intravenöz enjeksiyonla damardaki alfa2 reseptörlerinin aktivasyonu vazokonstriksiyona yol açar. Sistemik yolla verildiğinde ise bu etki santral alfa2 etkisiyle gizlenir.",
+            "D": "Beta2 uyarısı düz kasta gevşeme ve vazodilatasyon yapar. Alfa2 vazokonstriksiyonunu ortaya çıkaran bir koşul olmadığından, hatta onunla çeliştiğinden seçenek yanlıştır.",
+            "E": "Sürekli santral sempatolitik etki sempatik tonusu ve kan basıncını baskılar; damardaki vazokonstriktör etki bu santral etkiyle gizlenir, bu nedenle seçenek yanlıştır. Bu etki alfa2 agonistlerinin hipertansiyonda sempatolitik olarak kullanılmasının dayanağıdır."
+          },
+          "kanit": {
+            "sayfa": 25
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q29",
+          "kazanim": 7,
+          "zorluk": "orta",
+          "soru": "İzoproterenolün güçlü bir vazodilatör olmasının nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Beta2 aracılı periferik direnç düşüşü yapması",
+            "B": "NAT'ı inhibe ederek noradrenalini artırması",
+            "C": "Alfa1 reseptörleri güçlü biçimde aktive etmesi",
+            "D": "Presinaptik D2 aktivasyonuyla noradrenalin salımını azaltması",
+            "E": "D1 reseptörlerini doğrudan aktive etmesi"
+          },
+          "dogru": "A",
+          "aciklama": "İzoproterenol alfa üzerine etkisi az olan güçlü bir beta agonistidir; beta2 aktivasyonu periferik direnci düşürür. Güçlü vazodilatör olmasının nedeni budur. Bu özellik izoproterenolü vazopresör ajanlardan ayırır.",
+          "sik_aciklamalari": {
+            "A": "İzoproterenol alfa üzerine etkisi az olan güçlü bir beta agonistidir; beta2 aktivasyonu periferik direnci düşürür. Güçlü vazodilatör olmasının nedeni budur. Bu özellik izoproterenolü vazopresör ajanlardan ayırır.",
+            "B": "NAT inhibisyonu sinaptik noradrenalini artıran, kokain ve atomoksetin gibi ilaçlara ait indirekt bir mekanizmadır. İzoproterenolün vazodilatasyonu doğrudan beta2 uyarısına dayandığından seçenek yanlıştır.",
+            "C": "Alfa1 aktivasyonu vazokonstriksiyon yapar ve periferik direnci artırır. İzoproterenolün alfa üzerine etkisi az olduğundan vazodilatasyonu bununla açıklanamaz; seçenek yanlıştır. Vazodilatasyonu beta2 aktivasyonu yapar.",
+            "D": "Presinaptik D2 aktivasyonu noradrenalin salıverilmesini azaltan bir dopamin etkisidir. İzoproterenol dopamin agonisti olmadığından vazodilatasyonu açıklamaz; seçenek yanlıştır. Bu etki dopaminin presinaptik frenleyici işlevine aittir.",
+            "E": "D1 aracılı vazodilatasyon renal, splanik, koroner ve serebral yataklarda dopaminin etkisidir. İzoproterenolün hedefi beta reseptörleri olduğundan seçenek yanlıştır. İzoproterenol D1 değil beta1 ve beta2 reseptörlerini aktive eder."
+          },
+          "kanit": {
+            "sayfa": 26
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q30",
+          "kazanim": 7,
+          "zorluk": "orta",
+          "soru": "AV düğümde beta1 aktivasyonunun etkisi aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Yalnız alfa1 aracılı vazokonstriksiyon yapar",
+            "B": "Kalsiyum girişini azaltır",
+            "C": "İletimi yavaşlatır ve refrakter periyodu uzatır",
+            "D": "Pacemaker aktivitesini baskılar",
+            "E": "İletim hızını artırır ve refrakter periyodu kısaltır"
+          },
+          "dogru": "E",
+          "aciklama": "AV düğümde beta1 aktivasyonu iletim hızını artırır (pozitif dromotropik), refrakter periyodu kısaltır ve kontraktiliteyi yükseltir. Beta bir aktivasyonu sinüs düğümünde hızı, AV düğümde iletimi artırdığından etki hem kronotropik hem dromotropiktir. Bu etkiyle kalp daha hızlı iletir ve daha güçlü atar.",
+          "sik_aciklamalari": {
+            "A": "Alfa1 damar düz kasında etkilidir ve vazokonstriksiyon yapar. AV düğümde beta1 etkisi baskın olduğundan yanlıştır. Bu damar etkisi AV düğümün işleyişini açıklamaz.",
+            "B": "Beta1 uyarısı kalpte kalsiyum girişini artırır ve kontraktiliteyi yükseltir. Girişin azaldığını söyleyen bu seçenek beta1 etkisinin tersini anlattığından yanlıştır. Kalsiyumun hücre içine akışı pozitif inotropik etkinin temelidir.",
+            "C": "İletimi yavaşlatıp refrakter periyodu uzatmak vagal tonus artışının sonucudur. Beta1 etkisinin tersi olduğundan yanlıştır. Bu yavaşlatıcı etki parasempatik uyarının sonucudur.",
+            "D": "Pacemaker aktivitesi SA düğümde beta1 uyarısıyla artar ve kalp hızı yükselir. Baskılanma beta1 etkisinin tersi olduğundan bu seçenek yanlıştır. Beta1 uyarısı pozitif kronotropik etki yapar.",
+            "E": "AV düğümde beta1 aktivasyonu iletim hızını artırır (pozitif dromotropik), refrakter periyodu kısaltır ve kontraktiliteyi yükseltir. Beta bir aktivasyonu sinüs düğümünde hızı, AV düğümde iletimi artırdığından etki hem kronotropik hem dromotropiktir. Bu etkiyle kalp daha hızlı iletir ve daha güçlü atar."
+          },
+          "kanit": {
+            "sayfa": 27
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q31",
+          "kazanim": 7,
+          "zorluk": "kolay",
+          "soru": "Prototipik beta1 seçici agonist aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Terbutalin",
+            "B": "Fenilefrin",
+            "C": "Dobutamin",
+            "D": "Mirabegron",
+            "E": "İzoproterenol"
+          },
+          "dogru": "C",
+          "aciklama": "Dobutamin prototipik beta1 seçici agonisttir ve kalpte kalsiyum akışını artırarak kasılmayı güçlendirir. Tablo 9-2'ye göre dobutamin beta bir > beta iki sıralamasıyla bağlanır; izoproterenol ise beta bir ile beta ikiyi eşit uyarır. Bu seçicilik kalp yetmezliğinde kontraktiliteyi artırmak için yararlıdır.",
+          "sik_aciklamalari": {
+            "A": "Terbutalin beta2 selektiftir ve bronkodilatasyon sağlayarak astımda kullanılır. Prototipik beta1 seçici ajan olmadığından bu seçenek yanlıştır. Beta1 seçici ajan kalpte kontraktiliteyi artıran dobutamindir.",
+            "B": "Fenilefrin saf alfa1 agonistidir ve vazokonstriksiyon yapar. Beta reseptörlere etkisi olmadığından yanlıştır. Bu ilaç beta reseptöre etki etmeyen bir alfa agonistidir.",
+            "C": "Dobutamin prototipik beta1 seçici agonisttir ve kalpte kalsiyum akışını artırarak kasılmayı güçlendirir. Tablo 9-2'ye göre dobutamin beta bir > beta iki sıralamasıyla bağlanır; izoproterenol ise beta bir ile beta ikiyi eşit uyarır. Bu seçicilik kalp yetmezliğinde kontraktiliteyi artırmak için yararlıdır.",
+            "D": "Mirabegron seçici beta3 agonistidir ve detrusor gevşemesi sağlar. Beta1 seçici olmadığından yanlıştır. Bu ilaç mesane düz kasında etkili bir beta3 uyarıcısıdır.",
+            "E": "İzoproterenol beta1 ve beta2'yi birlikte aktive eden seçici olmayan beta agonistidir. Beta1 seçici olmadığından yanlıştır. Bu ilacın beta2 etkisi de bulunduğundan beta1 seçici sayılmaz."
+          },
+          "kanit": {
+            "sayfa": 27
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "metin": "Dopamin reseptör aktivasyonunu ve dozlara bağlı etkilerini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q32",
+          "kazanim": 8,
+          "zorluk": "orta",
+          "soru": "İntravenöz dopaminin renal, splanik, koroner ve serebral damarlarda vazodilatasyon yapmasından sorumlu reseptör aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "D1",
+            "B": "Alfa1",
+            "C": "Alfa2",
+            "D": "Beta3",
+            "E": "D2"
+          },
+          "dogru": "A",
+          "aciklama": "D1 aktivasyonu cAMP birikimiyle damar düz kasını gevşetir ve renal, splanik, koroner, serebral damarlarda vazodilatasyon yapar. Düşük dozdaki bu D1 etkisi, yüksek dozda alfa aracılı vazokonstriksiyonla maskelenir. Bu yanıt dopaminin düşük dozlardaki vazodilatör etkisinin temelidir.",
+          "sik_aciklamalari": {
+            "A": "D1 aktivasyonu cAMP birikimiyle damar düz kasını gevşetir ve renal, splanik, koroner, serebral damarlarda vazodilatasyon yapar. Düşük dozdaki bu D1 etkisi, yüksek dozda alfa aracılı vazokonstriksiyonla maskelenir. Bu yanıt dopaminin düşük dozlardaki vazodilatör etkisinin temelidir.",
+            "B": "Alfa1 aktivasyonu vazokonstriksiyon yapar ve yüksek dopamin dozlarında görülür. Vazodilatasyondan sorumlu olmadığından yanlıştır. Bu yanıt yüksek dopamin dozlarında öne çıkar.",
+            "C": "Alfa2 damarda vazokonstriksiyon yapabilir ve santral olarak sempatik tonusu baskılar. Bu vazodilatasyonu açıklamadığından yanlıştır. Bu reseptör santral etkisiyle kan basıncını düşürür.",
+            "D": "Beta3 yağ dokusu ve mesane ile ilişkilidir. Bu damar yataklarının vazodilatasyonunu aracılamadığından yanlıştır. Bu reseptör lipoliz ve detrusor gevşemesiyle ilgilidir.",
+            "E": "D2 presinaptik olarak noradrenalin salımını azaltır ve adenilil siklazı inhibe eder. Vazodilatasyonun aracısı D1 olduğundan yanlıştır. Bu reseptörün asıl işlevi noradrenalin salımını frenlemektir."
+          },
+          "kanit": {
+            "sayfa": 28
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q33",
+          "kazanim": 8,
+          "zorluk": "orta",
+          "soru": "Presinaptik D2 reseptörlerinin aktivasyonunun sonucu aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Fosfolipaz C aracılı IP3 oluşumu",
+            "B": "Noradrenalin salıverilmesinin artması",
+            "C": "Noradrenalin salıverilmesinin azalması",
+            "D": "NAT'ın bloke olması",
+            "E": "Adenilil siklazın uyarılması"
+          },
+          "dogru": "C",
+          "aciklama": "Presinaptik D2 aktivasyonu noradrenalin salıverilmesini azaltır ve sempatik uç aktivitesini frenler. D2 reseptörleri Gi ile cAMP'yi azalttığından sinir ucundan transmitter salıverilmesi azalır. Bunun dopaminin kardiyovasküler etkilerine katkısı belirsizdir.",
+          "sik_aciklamalari": {
+            "A": "IP3 oluşumu Gq ailesi aracılığıyla fosfolipaz C'nin çalıştığı alfa1 reseptör sinyalidir. D2 reseptörleri fosfolipaz C yolunu kullanmadığından bu seçenek yanlıştır.",
+            "B": "Salıverilmenin artması depolanmış katekolamini boşaltan tiramin gibi ilaçlara özgüdür; D2 aktivasyonu ise tersini yaptığından yanlıştır. Kokain ve atomoksetin gibi ilaçlar salıverilmeyi değil geri alımı, MAO ve KOMT inhibitörleri ise yıkımı engeller.",
+            "C": "Presinaptik D2 aktivasyonu noradrenalin salıverilmesini azaltır ve sempatik uç aktivitesini frenler. D2 reseptörleri Gi ile cAMP'yi azalttığından sinir ucundan transmitter salıverilmesi azalır. Bunun dopaminin kardiyovasküler etkilerine katkısı belirsizdir.",
+            "D": "NAT blokajı kokain veya atomoksetin gibi ilaçların işidir. D2 aktivasyonu transportörü bloke etmediğinden yanlıştır. Bu etki kokain ve atomoksetin gibi ajanlara ait bir mekanizmadır.",
+            "E": "D2 reseptörleri adenilil siklazı inhibe eder; uyarım D1-benzeri reseptörlerin sinyalidir. Presinaptik D2 aktivasyonunun sonucu bu olmadığından seçenek yanlıştır. D2'nin hücre içi sonucu cAMP düşüşüdür."
+          },
+          "kanit": {
+            "sayfa": 28
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q34",
+          "kazanim": 8,
+          "zorluk": "zor",
+          "soru": "Dopaminin yüksek infüzyon hızlarında görülen etkisi aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Beta2 aracılı periferik direnç düşüşü",
+            "B": "D1 aracılı renal vazodilatasyonun daha da artması",
+            "C": "Alfa reseptörleri aktive ederek renal damarlar dahil vazokonstriksiyon yapması",
+            "D": "Kalpte tüm beta1 etkilerinin kaybolması",
+            "E": "Yalnız presinaptik D2 aracılı noradrenalin azalması"
+          },
+          "dogru": "C",
+          "aciklama": "Yüksek infüzyon hızlarında dopamin damarlardaki alfa reseptörleri aktive ederek renal dahil vazokonstriksiyon yapar ve adrenalin etkilerini taklit eder. Düşük dozda D1 etkisi vazodilatasyon yaparken yüksek hızda alfa etkisi öne çıkar; böylece doza bağlı olarak etki tersine döner. Bu etkiyle yüksek doz dopamin adrenaline benzer biçimde davranır.",
+          "sik_aciklamalari": {
+            "A": "Düşük dozlarda dopamin periferik direnci azaltabilir. Yüksek infüzyon hızlarında alfa aracılı vazokonstriksiyon baskın olduğundan beta2 aracılı direnç düşüşü doğru sonuç değildir.",
+            "B": "D1 aracılı renal vazodilatasyon dopaminin düşük dozlardaki etkisidir ve natriürezi artırabilir. Yüksek dozda alfa aracılı vazokonstriksiyon öne çıktığından seçenek yanlıştır.",
+            "C": "Yüksek infüzyon hızlarında dopamin damarlardaki alfa reseptörleri aktive ederek renal dahil vazokonstriksiyon yapar ve adrenalin etkilerini taklit eder. Düşük dozda D1 etkisi vazodilatasyon yaparken yüksek hızda alfa etkisi öne çıkar; böylece doza bağlı olarak etki tersine döner. Bu etkiyle yüksek doz dopamin adrenaline benzer biçimde davranır.",
+            "D": "Dopamin kalpte beta1 reseptörleri aktive eder. Yüksek dozda bu etki kaybolmadığından yanlıştır. Kalpteki beta1 etkisi korunur ve yüksek dozda da sürer.",
+            "E": "Presinaptik D2 aktivasyonu noradrenalin salımını azaltır. Yüksek dozda baskın olan etki alfa aktivasyonu olduğundan yanlıştır. Bu presinaptik etki baskın değildir ve alfa etkisini açıklamaz."
+          },
+          "kanit": {
+            "sayfa": 29
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "metin": "Sempatomimetiklerin kalp dışı etkilerini (göz, bronş, genitoüriner, bezler) açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q35",
+          "kazanim": 9,
+          "zorluk": "kolay",
+          "soru": "Sempatomimetiklerin astım tedavisinde önemli olmasının dayanağı aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Bronşlarda D1 aracılı vazodilatasyon",
+            "B": "Presinaptik D2 aracılı bronkokonstriksiyon azalması",
+            "C": "Bronş düz kasında alfa1 aracılı gevşeme",
+            "D": "Bronş düz kasındaki beta2 aktivasyonuyla bronkodilatasyon",
+            "E": "NAT inhibisyonu"
+          },
+          "dogru": "D",
+          "aciklama": "Bronş düz kasındaki beta2 aktivasyonu bronkodilatasyon yapar; beta2 agonistler bu yüzden astımda önemlidir. Tablo 9-3'e göre solunum sistemindeki beta iki aktivasyonu düz kas gevşemesi sağlar; astımda yararlı olan etki budur. Bu etki beta2 agonistlerini astım tedavisinin temeli yapar.",
+          "sik_aciklamalari": {
+            "A": "D1 aracılı vazodilatasyon renal, splanik, koroner ve serebral damarlarla ilgilidir. Bronş gevşemesini açıklamadığından yanlıştır. Bu yatak damar yatağıdır, bronş düz kası değildir.",
+            "B": "Presinaptik D2 aktivasyonu noradrenalin salıverilmesini azaltır. Astım tedavisinin dayanağı bronş düz kasındaki beta2 aktivasyonu olduğundan bu seçenek yanlıştır. Bu frenleme sempatik uç aktivitesini azaltan ayrı bir etkidir.",
+            "C": "Alfa1 aktivasyonu düz kasta kasılma yapar ve damarlarda vazokonstriksiyon oluşturur. Bronkodilatasyonun aracısı beta2 olduğundan alfa1 aracılı gevşeme ifadesi yanlıştır. Beta2 agonistleri bu nedenle astımda kullanılır.",
+            "D": "Bronş düz kasındaki beta2 aktivasyonu bronkodilatasyon yapar; beta2 agonistler bu yüzden astımda önemlidir. Tablo 9-3'e göre solunum sistemindeki beta iki aktivasyonu düz kas gevşemesi sağlar; astımda yararlı olan etki budur. Bu etki beta2 agonistlerini astım tedavisinin temeli yapar.",
+            "E": "NAT inhibisyonu sinaptik noradrenalini artıran indirekt bir mekanizmadır. Beta2 agonistlerin astımdaki yararı doğrudan beta2 aktivasyonuna dayandığından seçenek yanlıştır. Doğrudan reseptör uyarısı beta2 agonistlerinin etkisidir."
+          },
+          "kanit": {
+            "sayfa": 29
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q36",
+          "kazanim": 9,
+          "zorluk": "orta",
+          "soru": "Fenilefrin gibi ilaçlarla gözde midriyazis oluşmasının mekanizması aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Radyal dilatör kasta beta2 reseptörlerin aktivasyonu",
+            "B": "İrisin radyal pupiller dilatör kasındaki alfa reseptörlerin aktivasyonu",
+            "C": "Aköz humor dışa akışının beta2 ile artması",
+            "D": "D1 aracılı iris vazodilatasyonu",
+            "E": "Beta antagonistleriyle aköz humor üretiminin azalması"
+          },
+          "dogru": "B",
+          "aciklama": "Radyal dilatör kasındaki alfa reseptörlerin aktivasyonu kasın kasılmasıyla pupilla dilatasyonu (midriyazis) yapar. Pupil genişletici kas, alfa bir aktivasyonuyla kasılma yapan düz kastır (Tablo 9-3). Bu kasılma pupilla çapını artırır ve siklopleji yapmaz.",
+          "sik_aciklamalari": {
+            "A": "Beta2 aktivasyonu düz kasta gevşeme yapar (Tablo 9-3); pupil genişletici kasın kasılması ise alfa bir aracılıdır. Bu mekanizma midriyazisi açıklamadığından seçenek yanlıştır. Beta2 ile alfa1'in düz kas üzerindeki karşıt etkisi burada karıştırılmıştır.",
+            "B": "Radyal dilatör kasındaki alfa reseptörlerin aktivasyonu kasın kasılmasıyla pupilla dilatasyonu (midriyazis) yapar. Pupil genişletici kas, alfa bir aktivasyonuyla kasılma yapan düz kastır (Tablo 9-3). Bu kasılma pupilla çapını artırır ve siklopleji yapmaz.",
+            "C": "Aköz humor dışa akışının artması göz içi basıncını düşürür. Pupil genişlemesini açıklamadığından yanlıştır. Bu etki göz içi basıncını düşürmek için kullanılan ayrı bir mekanizmadır.",
+            "D": "D1 aracılı vazodilatasyon renal, splanik, koroner ve serebral damarlarda dopaminin etkisidir. Pupil çapını belirlemediği için midriyazis mekanizması olamaz; seçenek yanlıştır.",
+            "E": "Beta antagonistleri aköz humor üretimini azaltarak göz içi basıncını düşürür. Midriyazis mekanizması olmadığından yanlıştır. Bu mekanizma glokom tedavisinde kullanılır ve pupilla çapıyla ilişkili değildir."
+          },
+          "kanit": {
+            "sayfa": 29
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q37",
+          "kazanim": 9,
+          "zorluk": "orta",
+          "soru": "Göz içi basıncını düşürmek için aköz humor dışa akışını artırarak kullanılabilen ilaç grubu aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Beta adrenoseptör antagonistleri",
+            "B": "Beta1 agonistleri",
+            "C": "D1 agonistleri",
+            "D": "Alfa1 agonistleri",
+            "E": "Alfa2 agonistleri"
+          },
+          "dogru": "E",
+          "aciklama": "Alfa2 agonistleri aköz humorun dışa akışını artırır ve klinikte göz içi basıncını düşürmek için kullanılabilir. Beta agonistlerinin bu yöndeki etkisi azdır; beta antagonistleri ise dışa akışı değil üretimi azaltır. Bu nedenle brimonidin gibi alfa2 agonistleri glokomda göz içi basıncını düşürmek için kullanılır.",
+          "sik_aciklamalari": {
+            "A": "Beta antagonistleri aköz humor üretimini azaltarak glokomda etki eder. Dışa akışı artırmadığından yanlıştır. Bu grup aköz humor üretimini azaltarak glokomda kullanılır.",
+            "B": "Beta1 agonistleri kalpte kontraktiliteyi ve hızı artırır. Aköz humor dışa akışını artırmadığından yanlıştır. Bu grup kalpte kasılma gücünü artırmak için kullanılır.",
+            "C": "D1 agonistleri damar vazodilatasyonu yapar. Göz içi basıncı tedavisinin dayanağı olmadığından yanlıştır. Bu grup damar gevşetici etkisiyle bilinir ve göz basıncıyla ilişkilendirilmez.",
+            "D": "Alfa1 agonistleri irisin radyal dilatör kasını kasarak midriyazis yapar. Aköz humor dışa akışını artırarak göz içi basıncını düşürmedikleri için seçenek yanlıştır.",
+            "E": "Alfa2 agonistleri aköz humorun dışa akışını artırır ve klinikte göz içi basıncını düşürmek için kullanılabilir. Beta agonistlerinin bu yöndeki etkisi azdır; beta antagonistleri ise dışa akışı değil üretimi azaltır. Bu nedenle brimonidin gibi alfa2 agonistleri glokomda göz içi basıncını düşürmek için kullanılır."
+          },
+          "kanit": {
+            "sayfa": 30
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q38",
+          "kazanim": 9,
+          "zorluk": "kolay",
+          "soru": "Alfa1 agonisti midodrin kullanımında görülebilen istenmeyen etki aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "İdrar retansiyonu",
+            "B": "Lökositoz",
+            "C": "Kuru ağız",
+            "D": "Hiperkalemi",
+            "E": "Sedasyon"
+          },
+          "dogru": "A",
+          "aciklama": "Mesane tabanı, üretra sfinkteri ve prostattaki alfa reseptörler kasılmayla idrar tutulmasını sağlar. Midodrinle bu etki aşırı olunca idrar retansiyonu görülebilir. Bu etki, prostat ve mesane tabanındaki alfa1 aktivasyonuna bağlıdır.",
+          "sik_aciklamalari": {
+            "A": "Mesane tabanı, üretra sfinkteri ve prostattaki alfa reseptörler kasılmayla idrar tutulmasını sağlar. Midodrinle bu etki aşırı olunca idrar retansiyonu görülebilir. Bu etki, prostat ve mesane tabanındaki alfa1 aktivasyonuna bağlıdır.",
+            "B": "Lökositoz yüksek konsantrasyonlarda adrenalinin sekestre beyaz hücreleri dolaşıma katmasıyla ilişkilidir. Midodrinin yan etkisi olmadığından yanlıştır. Bu bulgu adrenalinin yüksek konsantrasyon etkisidir.",
+            "C": "Kuru ağız klonidin gibi alfa2 agonistlerin yan etkisidir. Midodrin alfa1 agonisti olduğundan yanlıştır. Bu etki alfa2 agonistlerinin tipik yan etkisidir.",
+            "D": "Beta2 aktivasyonu hücre içine potasyum alımını artırarak hücre dışı potasyumu düşürür. Midodrin alfa1 agonisti olduğundan hiperkalemi yapmaz; yanlıştır. Beta2 aktivasyonu tersine hücre dışı potasyumu düşürür.",
+            "E": "Sedasyon alfa2 agonistlerinin bilinen yan etkisidir ve deksmedetomidin bu nedenle kullanılır. Midodrin alfa1 agonisti olduğundan yanlıştır. Bu etki alfa2 agonistleri için tipiktir ve alfa1 agonistlerine özgü değildir."
+          },
+          "kanit": {
+            "sayfa": 30
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q39",
+          "kazanim": 9,
+          "zorluk": "orta",
+          "soru": "Duktus deferens, seminal vezikül ve prostattaki alfa reseptörlerinin aktivasyonu hangi fizyolojik işlevde rol alır?",
+          "secenekler": {
+            "A": "Apokrin bez salgısının azalması",
+            "B": "Mesane detrusor gevşemesi",
+            "C": "Aköz humor üretimi",
+            "D": "Lipoliz",
+            "E": "Normal ejakülasyon"
+          },
+          "dogru": "E",
+          "aciklama": "Duktus deferens, seminal vezikül ve prostattaki alfa reseptör aktivasyonu normal ejakülasyonda rol alır. Tablo 9-3'te prostat alfa bir aracılı kasılma gösteren doku olarak yer alır; üreme yolundaki bu kasılma ejakülasyona katkı verir. Bu işlev erkek üreme yolundaki alfa aktivasyonuna bağlıdır.",
+          "sik_aciklamalari": {
+            "A": "Apokrin ter bezleri adrenoseptör uyarıcılarına terleme artışıyla yanıt verir. Bu terleme yanıtı ejakülasyon işlevini açıklamadığından seçenek yanlıştır. Ejakülasyonda rol alan alfa aktivasyonu duktus deferens, seminal vezikül ve prostattadır.",
+            "B": "Detrusor gevşemesi beta3 aktivasyonuyla ilişkilidir ve mirabegron bu yoldan etki eder. Duktus deferens ve prostattaki alfa aktivasyonunun işlevi olmadığından seçenek yanlıştır.",
+            "C": "Aköz humor üretimi gözde silier epitelin işlevidir ve beta antagonistleri bunu azaltır. Üreme yolu dokularındaki alfa aktivasyonuyla ilgisi olmadığından seçenek yanlıştır.",
+            "D": "Lipoliz yağ hücrelerindeki beta3 aktivasyonuyla artar ve serbest yağ asitlerini dolaşıma verir. Bu üreme yolu dokularının alfa yanıtı olmadığından seçenek yanlıştır.",
+            "E": "Duktus deferens, seminal vezikül ve prostattaki alfa reseptör aktivasyonu normal ejakülasyonda rol alır. Tablo 9-3'te prostat alfa bir aracılı kasılma gösteren doku olarak yer alır; üreme yolundaki bu kasılma ejakülasyona katkı verir. Bu işlev erkek üreme yolundaki alfa aktivasyonuna bağlıdır."
+          },
+          "kanit": {
+            "sayfa": 31
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "metin": "Sempatomimetiklerin metabolik, endokrin ve MSS etkilerini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q40",
+          "kazanim": 10,
+          "zorluk": "kolay",
+          "soru": "Yağ hücrelerinde aktivasyonu lipolizi artırarak serbest yağ asitleri ve gliserolü dolaşıma veren adrenoseptör aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "D2",
+            "B": "Alfa1",
+            "C": "D1",
+            "D": "Beta3",
+            "E": "Alfa2"
+          },
+          "dogru": "D",
+          "aciklama": "Yağ hücrelerindeki beta3 aktivasyonu lipolizi artırır; serbest yağ asitleri ve gliserol dolaşıma verilir. Beta üç Gs'e bağlı olup cAMP'yi artırarak lipolizi aktive eder; alfa iki ise yağ hücrelerinde lipolizi inhibe eder. Bu reseptör yağ dokusunda enerji kullanımını artıran bir sinyal yolunu başlatır.",
+          "sik_aciklamalari": {
+            "A": "D2 reseptörü adenilil siklazı inhibe eder ve potasyum kanallarını açar. Lipolizi artıran reseptör olmadığından, yani yağ hücresindeki beta3 yanıtını oluşturmadığından seçenek yanlıştır.",
+            "B": "Alfa1 reseptörü Gq aracılığıyla düz kas kasılmasına ve vazokonstriksiyona yol açar. Yağ hücresinde lipolizi artıran reseptör beta3 olduğundan seçenek yanlıştır.",
+            "C": "D1 reseptörü adenilil siklazı uyarır ve damar düz kasını gevşeterek vazodilatasyon yapar. Yağ hücrelerinde lipolizden sorumlu olmadığından seçenek yanlıştır. Lipolizi artıran reseptör beta3'tür.",
+            "D": "Yağ hücrelerindeki beta3 aktivasyonu lipolizi artırır; serbest yağ asitleri ve gliserol dolaşıma verilir. Beta üç Gs'e bağlı olup cAMP'yi artırarak lipolizi aktive eder; alfa iki ise yağ hücrelerinde lipolizi inhibe eder. Bu reseptör yağ dokusunda enerji kullanımını artıran bir sinyal yolunu başlatır.",
+            "E": "Alfa2 reseptörü Gi aracılığıyla cAMP'yi azaltır ve inhibitör sinyal verir. Lipolizi artıran değil baskılayan bir yol olduğundan seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 32
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q41",
+          "kazanim": 10,
+          "zorluk": "orta",
+          "soru": "Beta2 adrenoseptör aktivasyonunun serum potasyumu üzerindeki etkisi aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Yalnız alfa1 aracılı potasyum salımı yapar",
+            "B": "Potasyum dağılımına etkisi alfa2 aracılıdır, beta2 ile ilgisizdir",
+            "C": "Renal potasyum atılımını artırarak serum düzeyini düşürür",
+            "D": "Hücre dışı potasyum düzeyini yükseltir",
+            "E": "Potasyumu hücre içine alarak hücre dışı düzeyi düşürür"
+          },
+          "dogru": "E",
+          "aciklama": "Beta2 aktivasyonu potasyumun hücre içine alımını artırır ve hücre dışı potasyum düşer; bu nedenle bazı durumlarda hiperkalemide adrenalin kullanılır. Tablo 9-3'e göre bu alım iskelet kasındaki beta2 reseptörleri aracılığıyla gerçekleşir. Bu etki, adrenalinin hiperkalemi tedavisindeki yerini açıklar.",
+          "sik_aciklamalari": {
+            "A": "Alfa1 aktivasyonu Gq yoluyla düz kas kasılması yapar ve potasyum dağılımını belirlemez. Hücre içi potasyum alımını beta2 artırdığından bu seçenek yanlıştır.",
+            "B": "Tablo 9-3'e göre potasyum alımı iskelet kasında beta2 aracılıdır; alfa2 etkileri sinir uçları, trombosit ve yağ hücrelerinde görülür. Bu yüzden potasyum dağılımı alfa2'ye bağlanamaz ve seçenek yanlıştır.",
+            "C": "Serum potasyumundaki düşüş böbrekten atılımla değil, iskelet kasında beta2 aracılı hücre içi alımla gerçekleşir. Beta2 etkisi atılım üzerinden açıklanamadığından seçenek yanlıştır.",
+            "D": "Beta2 aktivasyonu potasyumun hücre içine alımını artırır. Hücre dışı potasyumun yükselmesi bunun tersi olduğundan, bu seçenek yanlıştır. Beta2 uyarısı hiperkalemide adrenalinin kullanımına zemin hazırlar.",
+            "E": "Beta2 aktivasyonu potasyumun hücre içine alımını artırır ve hücre dışı potasyum düşer; bu nedenle bazı durumlarda hiperkalemide adrenalin kullanılır. Tablo 9-3'e göre bu alım iskelet kasındaki beta2 reseptörleri aracılığıyla gerçekleşir. Bu etki, adrenalinin hiperkalemi tedavisindeki yerini açıklar."
+          },
+          "kanit": {
+            "sayfa": 33
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q42",
+          "kazanim": 10,
+          "zorluk": "orta",
+          "soru": "Renin salıverilmesi aşağıdaki adrenoseptörlerden hangisi tarafından uyarılır?",
+          "secenekler": {
+            "A": "Beta3",
+            "B": "Beta1",
+            "C": "Alfa2",
+            "D": "Alfa1",
+            "E": "D2"
+          },
+          "dogru": "B",
+          "aciklama": "Renin salıverilmesi beta1 reseptörlerce uyarılır ve alfa2 reseptörlerce inhibe edilir. Beta1 uyarısı renin salıverilmesi yoluyla renin-anjiyotensin sistemini harekete geçirir.",
+          "sik_aciklamalari": {
+            "A": "Beta3 reseptörleri yağ dokusunda lipolizi ve mesanede detrusor gevşemesini sağlar. Renin salıverilmesini uyarmadığından seçenek yanlıştır. Beta3 renin uyarmaz; renin salımını uyaran beta1 reseptörüdür.",
+            "B": "Renin salıverilmesi beta1 reseptörlerce uyarılır ve alfa2 reseptörlerce inhibe edilir. Beta1 uyarısı renin salıverilmesi yoluyla renin-anjiyotensin sistemini harekete geçirir.",
+            "C": "Alfa2 reseptörleri Gi aracılığıyla etki eder ve renin salıverilmesini inhibe eder. Uyarıcı değil baskılayıcı olduğundan seçenek yanlıştır. Alfa2 renin salımını baskılar; uyaran reseptör beta1'dir.",
+            "D": "Alfa1 reseptörleri vazokonstriksiyon ve düz kas kasılması yapar. Renin salıverilmesini uyarmadığından bu seçenek yanlıştır. Alfa1 renin salımında rol oynamaz; uyaran reseptör beta1'dir.",
+            "E": "D2 reseptörleri presinaptik olarak noradrenalin salıverilmesini azaltır ve adenilil siklazı baskılar. Renin salıverilmesini uyarmadığından seçenek yanlıştır. D2 renin salımında rol oynamaz; uyaran reseptör beta1'dir."
+          },
+          "kanit": {
+            "sayfa": 34
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q43",
+          "kazanim": 10,
+          "zorluk": "kolay",
+          "soru": "Katekolaminlerin MSS etkilerinin ancak yüksek infüzyon hızlarında görülmesinin nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Kan-beyin bariyerince neredeyse tamamen dışarıda tutulmaları",
+            "B": "NAT ile hızla geri alınmaları",
+            "C": "Fosfodiesterazla hızlı yıkılmaları",
+            "D": "Beta3 reseptörlerinin beyinde bulunmaması",
+            "E": "Alfa karbon eklentisi taşımaları"
+          },
+          "dogru": "A",
+          "aciklama": "Katekolaminler kan-beyin bariyerince neredeyse tamamen dışarıda tutulur; MSS etkileri ancak yüksek infüzyon hızlarında görülür. Bu yüzden periferik etkileri santral etkilerinden belirgin biçimde önce görülür, sistemik katekolaminlerin santral etkisi düşüktür.",
+          "sik_aciklamalari": {
+            "A": "Katekolaminler kan-beyin bariyerince neredeyse tamamen dışarıda tutulur; MSS etkileri ancak yüksek infüzyon hızlarında görülür. Bu yüzden periferik etkileri santral etkilerinden belirgin biçimde önce görülür, sistemik katekolaminlerin santral etkisi düşüktür.",
+            "B": "NAT sinaptik noradrenalini nöron içine geri alarak temizler. MSS etkisinin yüksek infüzyon hızları dışında görülmemesini açıklayan neden kan-beyin bariyeri olduğundan seçenek yanlıştır.",
+            "C": "Fosfodiesteraz cAMP'yi yıkan bir enzimdir. Katekolaminin beyne girişiyle ilgisi olmadığından yanlıştır. Bu enzim katekolaminlerin yıkımıyla değil ikinci ulak yıkımıyla ilişkilidir.",
+            "D": "Beta3 reseptörleri yağ dokusu ve mesanede işlev görür. Katekolaminin beyne geçip geçmemesi reseptör varlığına değil bariyer geçirgenliğine bağlı olduğundan seçenek yanlıştır.",
+            "E": "Alfa karbon eklentisi MAO oksidasyonunu engeller. Katekolaminlerin yapısında bu eklenti beyne girişi belirlemediğinden yanlıştır. Bu eklenti ilacın metabolizmasıyla ilgilidir ve bariyer geçişini belirlemez."
+          },
+          "kanit": {
+            "sayfa": 35
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "metin": "Adrenalin, noradrenalin ve dopaminin farmakolojik özelliklerini karşılaştırabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q44",
+          "kazanim": 11,
+          "zorluk": "orta",
+          "soru": "Adrenalin enjeksiyonu sonrası diyastolik basınçta görülen düşüşü aşağıdakilerden hangisi açıklar?",
+          "secenekler": {
+            "A": "Beta2 aracılı iskelet kası vazodilatasyonu",
+            "B": "Kalp hızının vagal olarak yavaşlaması",
+            "C": "Venöz dönüşün belirgin biçimde azalması",
+            "D": "D1 aracılı renal vazodilatasyon",
+            "E": "Alfa1 aracılı vazokonstriksiyonun artması"
+          },
+          "dogru": "A",
+          "aciklama": "Adrenalin iskelet kası damarlarındaki beta2 reseptörleri aktive ederek dilatasyon yapar; total periferik direnç ve diyastolik basınç düşer. Beta iki aracılı iskelet kası vazodilatasyonu total periferik direnci düşürdüğünden sistolik basınç yükselirken diyastolik basınç düşebilir. Bu etki adrenalinin sistolik basıncı yükseltirken diyastolik basıncı düşürmesini açıklar.",
+          "sik_aciklamalari": {
+            "A": "Adrenalin iskelet kası damarlarındaki beta2 reseptörleri aktive ederek dilatasyon yapar; total periferik direnç ve diyastolik basınç düşer. Beta iki aracılı iskelet kası vazodilatasyonu total periferik direnci düşürdüğünden sistolik basınç yükselirken diyastolik basınç düşebilir. Bu etki adrenalinin sistolik basıncı yükseltirken diyastolik basıncı düşürmesini açıklar.",
+            "B": "Adrenalinde beta1 aracılı pozitif etkiler vardır. Diyastolik düşüşü açıklayan mekanizma direnç düşüşü olduğundan yanlıştır. Bu durum adrenalinin asıl hemodinamik özelliği değildir.",
+            "C": "Venöz dönüşün azalması diyastolik düşüşün nedeni değildir. Düşüşün nedeni periferik direnç azalması olduğundan yanlıştır. Venöz dönüş artışı kalp debisini yükseltir ve diyastolü düşürmez.",
+            "D": "D1 aracılı renal vazodilatasyon dopaminin düşük doz etkisidir. Adrenalin enjeksiyonundaki diyastolik düşüşü açıklayan beta2 aracılı iskelet kası dilatasyonu olduğundan seçenek yanlıştır.",
+            "E": "Alfa1 aracılı vazokonstriksiyon periferik direnci ve kan basıncını artırır. Diyastolik düşüş yerine yükselme yaptığından bu etki, düşüşü açıklamaz; seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 37
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q45",
+          "kazanim": 11,
+          "zorluk": "orta",
+          "soru": "Noradrenalinin kardiyovasküler etkileri için aşağıdakilerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Beta2'yi adrenalin kadar aktive ederek diyastolü düşürür",
+            "B": "Beta1'i adrenalin kadar aktive eder, periferik direnci artırır",
+            "C": "Alfa reseptörleri üzerinde hiçbir etki göstermez",
+            "D": "Periferik direnci azaltarak sistolik basıncı düşürür",
+            "E": "Yalnız D1 aktivasyonuyla renal vazodilatasyon yapar"
+          },
+          "dogru": "B",
+          "aciklama": "Noradrenalin beta1'i adrenalin kadar güçlü aktive eder, beta2'ye zayıf etki eder; periferik direnç, diyastolik ve sistolik basıncı artırır. Beta iki üzerindeki zayıf etki nedeniyle noradrenalinde adrenalindeki gibi periferik direnç düşüşü görülmez. Bu profil noradrenalini adrenalinden hemodinamik açıdan ayırır.",
+          "sik_aciklamalari": {
+            "A": "Noradrenalin beta1'i adrenalin kadar aktive eder ama beta2 üzerine etkisi düşüktür. Diyastolik basıncı düşüren beta2 aracılı etki adrenaline ait olduğundan seçenek yanlıştır.",
+            "B": "Noradrenalin beta1'i adrenalin kadar güçlü aktive eder, beta2'ye zayıf etki eder; periferik direnç, diyastolik ve sistolik basıncı artırır. Beta iki üzerindeki zayıf etki nedeniyle noradrenalinde adrenalindeki gibi periferik direnç düşüşü görülmez. Bu profil noradrenalini adrenalinden hemodinamik açıdan ayırır.",
+            "C": "Noradrenalin alfa reseptörleri aktive ederek vazokonstriksiyon yapar ve periferik direnci artırır. Alfa reseptörleri hiç uyarmadığını söylemek yanlıştır. Bu etki noradrenalinin kan basıncını yükseltmesini sağlar.",
+            "D": "Noradrenalin periferik direnci, diyastolik ve sistolik kan basıncını artırır. Direnci azaltıp sistolik basıncı düşürdüğünü söyleyen bu ifade yanlıştır. Basıncı düşüren ilaç grubu bu değildir.",
+            "E": "D1 aracılı renal vazodilatasyon dopamin infüzyonunun etkisidir. Noradrenalinin ana etkisi alfa aracılı vazokonstriksiyon ve beta1 uyarısı olduğundan seçenek yanlıştır. Noradrenalin D1 reseptörlerini belirgin biçimde uyarmaz."
+          },
+          "kanit": {
+            "sayfa": 37
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q46",
+          "kazanim": 11,
+          "zorluk": "kolay",
+          "soru": "Noradrenalin sentezinde öncül olan ve bazal gangliyonlardaki eksikliği Parkinson hastalığına yol açan katekolamin aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Tiramin",
+            "B": "Fenilefrin",
+            "C": "Adrenalin",
+            "D": "İzoproterenol",
+            "E": "Dopamin"
+          },
+          "dogru": "E",
+          "aciklama": "Dopamin noradrenalin sentezinin öncülüdür; bazal gangliyonlarda eksikliği Parkinson hastalığına yol açar ve levodopa ile tedavi edilir. Dopamin noradrenalin ve adrenalinden önceki basamakta yer aldığı için öncül katekolamindir. Bu bileşik klinikte levodopa ile ilişkilendirilen katekolamindir.",
+          "sik_aciklamalari": {
+            "A": "Tiramin tirozin metabolizmasının yan ürünüdür ve proteinden zengin fermente besinlerde bulunur. Noradrenalin sentezinin öncülü olmadığı için seçenek yanlıştır. Bu amin noradrenalin sentez zincirinde yer almaz.",
+            "B": "Fenilefrin endojen bir katekolamin değil sentetik alfa1 agonistidir. Parkinson ile ilişkili olmadığından yanlıştır. Bu ilaç sentetiktir ve endojen biyosentez zincirinde yer almaz.",
+            "C": "Adrenalin noradrenalinin öncülü değildir; noradrenalin sentezinde öncül madde dopamindir. Bazal gangliyonlardaki eksikliği Parkinson hastalığına yol açan katekolamin de dopamindir, bu nedenle seçenek yanlıştır.",
+            "D": "İzoproterenol sentetik, güçlü bir beta agonistidir ve alfa üzerine etkisi azdır. Endojen biyosentez zincirinde yer almadığından öncül olamaz; seçenek yanlıştır.",
+            "E": "Dopamin noradrenalin sentezinin öncülüdür; bazal gangliyonlarda eksikliği Parkinson hastalığına yol açar ve levodopa ile tedavi edilir. Dopamin noradrenalin ve adrenalinden önceki basamakta yer aldığı için öncül katekolamindir. Bu bileşik klinikte levodopa ile ilişkilendirilen katekolamindir."
+          },
+          "kanit": {
+            "sayfa": 38
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "metin": "Direkt etkili alfa1 agonistlerini (fenilefrin, midodrin, metoksamin) tanıyabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q47",
+          "kazanim": 12,
+          "zorluk": "kolay",
+          "soru": "Aşağıdakilerden hangisi saf bir alfa1 agonistidir?",
+          "secenekler": {
+            "A": "İzoproterenol",
+            "B": "Fenilefrin",
+            "C": "Dobutamin",
+            "D": "Klonidin",
+            "E": "Terbutalin"
+          },
+          "dogru": "B",
+          "aciklama": "Fenilefrin saf alfa1 agonistidir; güçlü bir midriyatik ve dekonjestandır. Tablo 9-2'de fenilefrin alfa bir > alfa iki >>>>> beta olarak yer alır; klonidin ise alfa iki > alfa bir sıralamasıyla ayrılır. Bu seçicilik, dekonjestan ve midriyatik kullanımını açıklar.",
+          "sik_aciklamalari": {
+            "A": "İzoproterenol güçlü bir beta agonistidir ve alfa etkisi azdır. Alfa1 agonisti olmadığından yanlıştır. Bu ilaç beta reseptörleri güçlü biçimde uyarır.",
+            "B": "Fenilefrin saf alfa1 agonistidir; güçlü bir midriyatik ve dekonjestandır. Tablo 9-2'de fenilefrin alfa bir > alfa iki >>>>> beta olarak yer alır; klonidin ise alfa iki > alfa bir sıralamasıyla ayrılır. Bu seçicilik, dekonjestan ve midriyatik kullanımını açıklar.",
+            "C": "Dobutamin kalpte kontraktiliteyi artıran prototipik beta1 seçici agonisttir. Alfa1 seçici bir ajan olmadığından seçenek yanlıştır. Alfa1 seçici ajan ise fenilefrindir.",
+            "D": "Klonidin alfa2 agonistidir ve santral sempatolitik etki yapar. Saf alfa1 olmadığından yanlıştır. Bu ilaç santral alfa2 uyarısıyla kan basıncını düşürür.",
+            "E": "Terbutalin beta2 selektif bir ajandır; bronş düz kasını gevşeterek astımda kullanılır. Alfa1 agonisti olmadığı ve vazokonstriksiyon yapmadığı için saf alfa1 agonisti sorusunun yanıtı olamaz; seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 38
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q48",
+          "kazanim": 12,
+          "zorluk": "orta",
+          "soru": "Midodrinin ön ilaç olarak etki göstermesinin mekanizması aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Hidrolizle desglimidodrine dönüşmesi",
+            "B": "Doğrudan fenilefrine dönüşmesi",
+            "C": "KOMT ile adrenaline dönüşmesi sonucu",
+            "D": "MAO ile dopamine dönüşmesi",
+            "E": "Dopa dekarboksilaz ile norepinefrine dönüşmesi"
+          },
+          "dogru": "A",
+          "aciklama": "Midodrin enzimatik hidrolizle selektif alfa1 agonisti desglimidodrine dönüşen bir ön ilaçtır. Etkili olan, hidroliz ürünü olan desglimidodrindir; midodrinin kendisi bu nedenle ön ilaç sayılır. Midodrin uygulandıktan yaklaşık bir saat sonra desglimidodrin doruk konsantrasyonuna ulaşır.",
+          "sik_aciklamalari": {
+            "A": "Midodrin enzimatik hidrolizle selektif alfa1 agonisti desglimidodrine dönüşen bir ön ilaçtır. Etkili olan, hidroliz ürünü olan desglimidodrindir; midodrinin kendisi bu nedenle ön ilaç sayılır. Midodrin uygulandıktan yaklaşık bir saat sonra desglimidodrin doruk konsantrasyonuna ulaşır.",
+            "B": "Midodrin enzimatik hidrolizle desglimidodrine dönüşür; aktif metaboliti fenilefrin değildir. Doğrudan fenilefrine dönüştüğünü söyleyen seçenek yanlıştır. Aktif madde selektif alfa1 agonisti desglimidodrindir.",
+            "C": "KOMT katekolaminleri metilleyerek inaktive eden bir enzimdir. Midodrini aktive etmediğinden yanlıştır. Bu enzim ön ilacın aktivasyonunda değil yıkımında rol alır.",
+            "D": "MAO katekolaminleri ve tiramini metabolize eden bir enzimdir. Midodrinin aktivasyonunda rol almayıp yıkım enzimi olduğundan, dopamine dönüşme ifadesi yanlıştır. Midodrin MAO ile değil hidrolizle aktive olur.",
+            "E": "Dopa dekarboksilaz ile norepinefrine dönüşmek droksidopanın özelliğidir. Midodrin desglimidodrine hidrolize olduğundan yanlıştır. Bu yol başka bir ön ilacın, droksidopanın aktivasyonudur."
+          },
+          "kanit": {
+            "sayfa": 39
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q49",
+          "kazanim": 12,
+          "zorluk": "orta",
+          "soru": "Midodrin kullanan otonom disfonksiyonlu hastada izlenmesi gereken önemli istenmeyen etki aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Hiperkalemi",
+            "B": "Yatar pozisyonda hipertansiyon",
+            "C": "Lökositoz",
+            "D": "Sedasyon",
+            "E": "Ayakta ağır hipotansiyon"
+          },
+          "dogru": "B",
+          "aciklama": "Midodrin ayakta kan basıncı düşüşünü azaltır ancak yatar pozisyonda hipertansiyona yol açabilir. Alfa bir aracılı vazokonstriksiyon ayakta ortostatik düşüşü azaltırken yatarken periferik direnç artışı kan basıncını yükseltir. Bu istenmeyen etki nedeniyle yatar pozisyonda hipertansiyon riski izlenir.",
+          "sik_aciklamalari": {
+            "A": "Beta2 aktivasyonu potasyumu hücre içine alımı artırarak hücre dışı potasyumu düşürür. Midodrin alfa1 agonisti olduğundan hiperkalemi yapmaz; seçenek yanlıştır. Midodrinin asıl sorunu yatar pozisyonda gelişen hipertansiyondur.",
+            "B": "Midodrin ayakta kan basıncı düşüşünü azaltır ancak yatar pozisyonda hipertansiyona yol açabilir. Alfa bir aracılı vazokonstriksiyon ayakta ortostatik düşüşü azaltırken yatarken periferik direnç artışı kan basıncını yükseltir. Bu istenmeyen etki nedeniyle yatar pozisyonda hipertansiyon riski izlenir.",
+            "C": "Lökositoz yüksek konsantrasyonlarda adrenalinin sekestre beyaz hücreleri dolaşıma katmasıyla ilişkilidir. Midodrinin izlenen yan etkisi olmadığından seçenek yanlıştır. Midodrin kullanımında beyaz hücre artışı beklenen bir bulgu değildir.",
+            "D": "Sedasyon klonidin ve deksmedetomidin gibi alfa2 agonistlerin bilinen yan etkisidir. Midodrin alfa1 agonisti olduğundan bu seçenek yanlıştır. Midodrin alfa2 agonisti olmadığından sedasyon beklenmez.",
+            "E": "Midodrin ayakta kan basıncı düşüşünü azaltır; ayakta daha ağır hipotansiyon yapmaz. İlacın asıl sakıncası hastanın yatar pozisyonunda hipertansiyona yol açmasıdır, bu nedenle seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 39
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "metin": "Alfa2 agonistlerini ve topikal dekonjestanları tanıyabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q50",
+          "kazanim": 13,
+          "zorluk": "orta",
+          "soru": "Aşağıdakilerden hangisi hipertansiyon tedavisinde kullanılan alfa2 agonistlerinden biri değildir?",
+          "secenekler": {
+            "A": "Guanfasin",
+            "B": "Fenilefrin",
+            "C": "Metildopa",
+            "D": "Klonidin",
+            "E": "Guanabenz"
+          },
+          "dogru": "B",
+          "aciklama": "Fenilefrin alfa1 agonistidir; vazokonstriksiyonla kan basıncını yükseltir. Hipertansiyon tedavisinde kullanılan alfa2 agonisti olmadığından kökün istisnasıdır. Bu ilaç vazopresör olarak hipotansiyonda kullanılır.",
+          "sik_aciklamalari": {
+            "A": "Guanfasin alfa2 agonistidir ve hipertansiyon tedavisinde kullanılır. Alfa2 agonisti antihipertansif olduğundan olumsuz kökün istisnası olamaz; seçenek yanlıştır. Alfa2 agonisti olduğundan antihipertansif listede yer alır.",
+            "B": "Fenilefrin alfa1 agonistidir; vazokonstriksiyonla kan basıncını yükseltir. Hipertansiyon tedavisinde kullanılan alfa2 agonisti olmadığından kökün istisnasıdır. Bu ilaç vazopresör olarak hipotansiyonda kullanılır.",
+            "C": "Metildopa santral alfa2 yoluyla sempatik tonusu azaltan antihipertansiftir. Alfa2 agonisti antihipertansif olduğundan kökün istisnası olamaz; seçenek yanlıştır. Santral alfa2 etkisiyle basıncı düşürdüğü için listede yer alır.",
+            "D": "Klonidin alfa2 agonisti olarak santral sempatik aktiviteyi azaltır ve hipertansiyon tedavisinde kullanılır. İstisna olmadığından yanlıştır. Bu ilaç santral etkisiyle sempatik tonusu azaltır.",
+            "E": "Guanabenz alfa2 agonistidir ve hipertansiyon tedavisinde yararlıdır. Alfa2 agonisti antihipertansif olduğundan kökün istisnası olamaz; seçenek yanlıştır. Klonidine benzer antihipertansif olduğu için listede yer alır."
+          },
+          "kanit": {
+            "sayfa": 40
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q51",
+          "kazanim": 13,
+          "zorluk": "kolay",
+          "soru": "Yoğun bakımda entübe ve ventile hastalarda sedasyon için kullanılan alfa2 agonisti aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Dobutamin",
+            "B": "Midodrin",
+            "C": "Fenilefrin",
+            "D": "Oksimetazolin",
+            "E": "Deksmedetomidin"
+          },
+          "dogru": "E",
+          "aciklama": "Deksmedetomidin alfa2 agonistidir ve yoğun bakımda entübe ve ventile hastalarda sedasyon için kullanılır. Klonidin gibi deksmedetomidin de alfa iki agonistidir ve santral sempatik çıkışı azaltır. Bu ilaç ayrıca opioid gereksinimini azaltır.",
+          "sik_aciklamalari": {
+            "A": "Dobutamin kalpte kontraktiliteyi artıran beta1 etkili bir inotroptur. Yoğun bakımda sedasyon sağlamadığından seçenek yanlıştır. Sedasyon için seçilecek ilaç alfa2 agonisti deksmedetomidindir.",
+            "B": "Midodrin ön ilaç olarak desglimidodrine dönüşen alfa1 agonistidir ve ortostatik hipotansiyonda kullanılır. Sedasyon yapmadığından seçenek yanlıştır. Midodrinin yeri ortostatik hipotansiyon tedavisidir.",
+            "C": "Fenilefrin alfa1 agonistidir ve midriyatik ile dekonjestan olarak kullanılır. Sedasyon yapmadığından yanlıştır. Bu ilaç sedasyon için kullanılan alfa2 agonistlerinden değildir.",
+            "D": "Oksimetazolin burun mukozasında vazokonstriksiyon yapan topikal bir dekonjestandır ve burun tıkanıklığında kullanılır. Yoğun bakımda sedasyon sağlamadığından, sedasyon için alfa2 agonisti deksmedetomidin gerektiğinden seçenek yanlıştır.",
+            "E": "Deksmedetomidin alfa2 agonistidir ve yoğun bakımda entübe ve ventile hastalarda sedasyon için kullanılır. Klonidin gibi deksmedetomidin de alfa iki agonistidir ve santral sempatik çıkışı azaltır. Bu ilaç ayrıca opioid gereksinimini azaltır."
+          },
+          "kanit": {
+            "sayfa": 40
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q52",
+          "kazanim": 13,
+          "zorluk": "kolay",
+          "soru": "Burun mukozası vazokonstriksiyonu yaparak topikal dekonjestan olarak kullanılan direkt etkili alfa agonist çifti aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Midodrin ve droksidopa",
+            "B": "Atomoksetin ve reboksetin",
+            "C": "Oksimetazolin ve ksilometazolin",
+            "D": "Dobutamin ve dopamin",
+            "E": "Terbutalin ve albuterol"
+          },
+          "dogru": "C",
+          "aciklama": "Oksimetazolin ve ksilometazolin direkt etkili alfa agonistleridir; burun mukozası vazokonstriksiyonuyla topikal dekonjestan olarak kullanılır. Dekonjestan etki burun mukozasındaki alfa aracılı vazokonstriksiyona dayanır. Bu iki ilaç uzun etkili topikal dekonjestan olarak bilinir.",
+          "sik_aciklamalari": {
+            "A": "Midodrin ve droksidopa ortostatik hipotansiyonda basıncı yükseltmek için kullanılır. Topikal dekonjestan olmadıklarından seçenek yanlıştır. Dekonjestan çifti ise oksimetazolin ve ksilometazolindir.",
+            "B": "Atomoksetin ve reboksetin NAT'ı bloke eden geri alım inhibitörleridir. Burun mukozasında vazokonstriksiyon yapan dekonjestan olmadıklarından seçenek yanlıştır. Bu çiftin kullanım alanı dikkat eksikliği ve depresyondur.",
+            "C": "Oksimetazolin ve ksilometazolin direkt etkili alfa agonistleridir; burun mukozası vazokonstriksiyonuyla topikal dekonjestan olarak kullanılır. Dekonjestan etki burun mukozasındaki alfa aracılı vazokonstriksiyona dayanır. Bu iki ilaç uzun etkili topikal dekonjestan olarak bilinir.",
+            "D": "Dobutamin ve dopamin kalp ve dolaşım etkili ilaçlardır. Dekonjestan olmadığından yanlıştır. Bu çift şok ve kalp yetmezliğinde inotrop olarak kullanılır.",
+            "E": "Terbutalin ve albuterol beta2 selektiftir ve bronkodilatasyon yapar. Dekonjestan olmadığından yanlıştır. Bu çift astım ve erken doğum gibi beta2 hedefli kullanımlara aittir."
+          },
+          "kanit": {
+            "sayfa": 41
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "metin": "Beta agonistlerini (izoproterenol, dobutamin, beta2 selektifler) ayırt edebilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q53",
+          "kazanim": 14,
+          "zorluk": "orta",
+          "soru": "Dobutaminin izoproterenole göre farkını en iyi tanımlayan ifade aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Saf alfa1 agonisti olması",
+            "B": "Kronotropik etkisinin inotropik etkisinden daha belirgin olması",
+            "C": "Katekolamin olmadığı için KOMT'tan etkilenmemesi",
+            "D": "Yalnız beta2 selektif olması",
+            "E": "Kronotropik etkiye kıyasla daha fazla inotropik etki göstermesi"
+          },
+          "dogru": "E",
+          "aciklama": "Dobutamin izoproterenole göre kronotropik etkiye kıyasla daha fazla inotropik etki gösterir. Aralarındaki fark budur. Bu özellik dobutaminin kalp yetmezliğinde kullanımını destekler.",
+          "sik_aciklamalari": {
+            "A": "Dobutamin alfa1 ve beta etkili karmaşık bir profile sahiptir. Saf alfa1 agonisti olmadığından yanlıştır. Dobutaminin etkisi tek bir alfa1 etkisine indirgenemez.",
+            "B": "Kronotropik etkinin inotropik etkiden belirgin olması izoproterenolün profiline yakındır. Dobutamin için tersi geçerli olduğundan yanlıştır. İzoproterenolde kalp hızı artışı daha belirgindir.",
+            "C": "Dobutamin kimyasal yapı olarak dopamine benzer ve alfa1 ile beta aracılı karmaşık bir profile sahiptir. KOMT'tan etkilenmeme ayırıcı bir özellik olmadığından seçenek yanlıştır.",
+            "D": "Dobutamin prototipik beta1 seçici agonisttir. Yalnız beta2 selektif olduğunu söyleyen bu ifade, dobutaminin kalp etkisine ters düştüğünden yanlıştır. Dobutaminin ayırt edici özelliği inotropik etkinin kronotropik etkiden belirgin olmasıdır.",
+            "E": "Dobutamin izoproterenole göre kronotropik etkiye kıyasla daha fazla inotropik etki gösterir. Aralarındaki fark budur. Bu özellik dobutaminin kalp yetmezliğinde kullanımını destekler."
+          },
+          "kanit": {
+            "sayfa": 42
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q54",
+          "kazanim": 14,
+          "zorluk": "kolay",
+          "soru": "Erken doğumu geciktirmek amacıyla gebe uterusu gevşetmek için kullanılan beta2 selektif ajan aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Klonidin",
+            "B": "Ritodrin",
+            "C": "Midodrin",
+            "D": "Dobutamin",
+            "E": "Fenilefrin"
+          },
+          "dogru": "B",
+          "aciklama": "Ritodrin beta2 selektif bir ajandır ve gebe uterusunu gevşeterek erken doğumu geciktirmede kullanılır. Tablo 9-3'e göre uterustaki beta iki aktivasyonu düz kas gevşemesi sağlar. Bu seçicilik uterus gevşemesini beta2 yoluyla sağlar.",
+          "sik_aciklamalari": {
+            "A": "Klonidin santral alfa2 agonistidir ve antihipertansif olarak kullanılır. Uterusu gevşetmediğinden erken doğumu geciktirmede kullanılmaz; seçenek yanlıştır. Uterusu gevşeten ajan ritodrin gibi beta2 selektif ilaçlardır.",
+            "B": "Ritodrin beta2 selektif bir ajandır ve gebe uterusunu gevşeterek erken doğumu geciktirmede kullanılır. Tablo 9-3'e göre uterustaki beta iki aktivasyonu düz kas gevşemesi sağlar. Bu seçicilik uterus gevşemesini beta2 yoluyla sağlar.",
+            "C": "Midodrin alfa1 agonisti ön ilaçtır. Düz kas kasılmasına yol açtığından uterus gevşetmeyeceği için yanlıştır. Bu ilaç ortostatik hipotansiyon tedavisinde kullanılır.",
+            "D": "Dobutamin prototipik beta1 agonisttir ve etkisi esas olarak kalptedir. Beta2 selektif olmadığından uterusu gevşetmez; seçenek yanlıştır. Dobutamin kalpte inotropiye yöneliktir ve uterusu hedeflemez.",
+            "E": "Fenilefrin saf alfa1 agonistidir ve vazokonstriksiyon yapar. Uterus düz kasını gevşetmediğinden erken doğumu geciktirmede kullanılmaz; seçenek yanlıştır. Fenilefrinin kullanım alanı midriyazis ve dekonjestandır."
+          },
+          "kanit": {
+            "sayfa": 42
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "metin": "Karma etkili sempatomimetikleri (efedrin, psödoefedrin) tanıyabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q55",
+          "kazanim": 15,
+          "zorluk": "orta",
+          "soru": "Efedrin ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": {
+            "A": "Yalnız direkt etkili bir alfa1 agonistidir ve MSS'ye giremez",
+            "B": "Hem direkt hem indirekt etkilidir ve MSS'ye girerek hafif uyarıcı etki yapar",
+            "C": "Beta2 selektif bir ajandır ve oral biyoyararlanımı düşüktür",
+            "D": "Yalnız indirekt etkilidir ve etkisi MAO inhibitörleriyle ortaya çıkar",
+            "E": "Katekol türevidir ve KOMT ile hızla inaktive olduğu için etkisi kısadır"
+          },
+          "dogru": "B",
+          "aciklama": "Efedrin Ephedra bitkisinde bulunan karma etkili sempatomimetiktir; hem reseptörlere hem katekolamin salımına etki eder ve MSS'ye girerek hafif uyarıcıdır. Santral sinir sistemine girebildiği için hafif uyarıcıdır; ayrıca biyoyararlanımı yüksektir ve etkisi saatlerce sürer. Bu karma etki efedrinin hem direkt hem indirekt yönlü olduğunu gösterir.",
+          "sik_aciklamalari": {
+            "A": "Efedrin Ephedra bitkisinde bulunan karma etkili bir sempatomimetiktir. Hem reseptörlere hem katekolamin salımına etki eder ve MSS'ye girer; bu nedenle etkisi saf direkt alfa1 agonizmiyle sınırlı değildir.",
+            "B": "Efedrin Ephedra bitkisinde bulunan karma etkili sempatomimetiktir; hem reseptörlere hem katekolamin salımına etki eder ve MSS'ye girerek hafif uyarıcıdır. Santral sinir sistemine girebildiği için hafif uyarıcıdır; ayrıca biyoyararlanımı yüksektir ve etkisi saatlerce sürer. Bu karma etki efedrinin hem direkt hem indirekt yönlü olduğunu gösterir.",
+            "C": "Efedrin beta reseptörleri aktive etse de saf beta2 selektif değildir; biyoyararlanımı yüksektir. Düşük biyoyararlanım ifadesi yanlıştır. Gerçekte biyoyararlanımı yüksek ve etkisi uzundur.",
+            "D": "Efedrin yalnız indirekt değil karma etkilidir ve reseptörleri doğrudan da uyarır. Bu nedenle yanlıştır. Etkisi yalnızca indirekt mekanizmayla sınırlı değildir.",
+            "E": "Katekol türevi olup KOMT ile hızla inaktive olan grup katekolaminlerdir. Efedrinin etkisi uzun olduğundan yanlıştır. Bu özellik efedrine değil katekolaminlere aittir."
+          },
+          "kanit": {
+            "sayfa": 43
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q56",
+          "kazanim": 15,
+          "zorluk": "kolay",
+          "soru": "Satışı, metamfetaminin yasa dışı üretiminde öncül olarak kullanılması nedeniyle kısıtlanmış, birçok reçetesiz dekonjestan karışımında bulunan sempatomimetik aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Modafinil",
+            "B": "Psödoefedrin",
+            "C": "Fenilefrin",
+            "D": "Tizanidin",
+            "E": "Ksilometazolin"
+          },
+          "dogru": "B",
+          "aciklama": "Psödoefedrin efedrinin enantiyomeridir ve birçok reçetesiz dekonjestan karışımında bulunur. Metamfetamin üretiminde öncül olduğundan satışı kısıtlanmıştır. Bu madde nedeniyle eczanelerde satışı denetlenir.",
+          "sik_aciklamalari": {
+            "A": "Modafinil amfetaminden farklı bir psikostimülandır ve narkolepside onaylıdır. Dekonjestan karışımlarda bulunmadığından yanlıştır. Bu ilacın etkisi uyanıklık artışıdır ve dekonjestanla ilgisizdir.",
+            "B": "Psödoefedrin efedrinin enantiyomeridir ve birçok reçetesiz dekonjestan karışımında bulunur. Metamfetamin üretiminde öncül olduğundan satışı kısıtlanmıştır. Bu madde nedeniyle eczanelerde satışı denetlenir.",
+            "C": "Fenilefrin saf alfa1 agonistidir ve nazal dekonjestan spreylerde kullanılır. Satış kısıtlamasına yol açan öncül olmadığından yanlıştır. Bu ilaç dekonjestan olarak kullanılır ve öncül kısıtlaması yoktur.",
+            "D": "Tizanidin spastisiteyi azaltmak için kullanılan santral etkili alfa2 agonistidir. Dekonjestan karışımlarda bulunmadığından ve metamfetamin öncülü olmadığından seçenek yanlıştır. Satışı kısıtlanan ajan psödoefedrindir.",
+            "E": "Ksilometazolin uzun etkili topikal dekonjestandır ve burun mukozasında vazokonstriksiyon yapar. Metamfetamin öncülü sayılmadığından yanlıştır. Bu ilaç dekonjestan olarak etkili olup kötüye kullanım öncülü sayılmaz."
+          },
+          "kanit": {
+            "sayfa": 44
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "metin": "İndirekt etkili sempatomimetikleri (amfetamin ve benzerleri) açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q57",
+          "kazanim": 16,
+          "zorluk": "orta",
+          "soru": "Amfetamin benzeri yer değiştirici indirekt etkili ilaçların temel mekanizması aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Adrenoseptörlere doğrudan bağlanarak G proteini aktive etmek",
+            "B": "Gi proteinini aktive ederek adenilil siklazı baskılamak",
+            "C": "Sempatik sinir ucuna girip depolanmış katekolaminleri boşaltmak",
+            "D": "Fosfodiesterazı inhibe ederek cAMP'yi artırmak",
+            "E": "KOMT'u inhibe ederek katekolamin yıkımını durdurmak"
+          },
+          "dogru": "C",
+          "aciklama": "Amfetamin benzeri ilaçlar sempatik sinir ucuna girer ve depolanmış katekolaminleri boşaltır; sinaptik noradrenalin artar. Bu yer değiştirici mekanizmadır. Bu mekanizma amfetaminin ve benzerlerinin sempatomimetik etkisini açıklar.",
+          "sik_aciklamalari": {
+            "A": "Doğrudan reseptör agonizmi adrenalin ve fenilefrin gibi direkt ajanların mekanizmasıdır. Yer değiştiriciler katekolamin salımıyla etki ettiğinden yanlıştır. Bu mekanizma adrenalin gibi direkt agonistlere özgüdür.",
+            "B": "Gi aktivasyonu alfa2 reseptörlerinin sinyal yoludur ve adenilil siklazı baskılar. Amfetamin benzeri yer değiştirici ilaçlar bu yolla etki etmediğinden seçenek yanlıştır.",
+            "C": "Amfetamin benzeri ilaçlar sempatik sinir ucuna girer ve depolanmış katekolaminleri boşaltır; sinaptik noradrenalin artar. Bu yer değiştirici mekanizmadır. Bu mekanizma amfetaminin ve benzerlerinin sempatomimetik etkisini açıklar.",
+            "D": "Fosfodiesteraz cAMP'yi yıkan bir efektör enzimdir. Amfetaminlerin indirekt etkisi sinir ucundan katekolamin boşalması olduğundan yanlıştır. Bu yol reseptör sonrası bir enzimi ilgilendirir ve amfetaminin mekanizması değildir.",
+            "E": "KOMT inhibisyonu enzimatik yıkımı engelleyen üçüncü indirekt mekanizmadır. Yer değiştiricilerin ayırt edici özelliği olmadığından yanlıştır. Bu mekanizma yer değiştiricilerin değil enzim inhibitörlerinin etkisidir."
+          },
+          "kanit": {
+            "sayfa": 44
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q58",
+          "kazanim": 16,
+          "zorluk": "orta",
+          "soru": "Metamfetaminin amfetaminden farkını en iyi tanımlayan ifade aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Etkisini NAT'ı aktive ederek gösterir",
+            "B": "Santral etkilerinin periferik etkilerine oranı daha düşüktür",
+            "C": "Yalnız direkt alfa1 agonisti olarak etki eder",
+            "D": "Santral etkilerinin periferik etkilerine oranı daha yüksektir",
+            "E": "Kan-beyin bariyerini geçemez"
+          },
+          "dogru": "D",
+          "aciklama": "Metamfetamin amfetamin türevi bir sempatomimetiktir; santral etkilerinin periferik etkilere oranı amfetaminden yüksektir. Amfetamin gibi metamfetamin de santral uyarıcıdır; ayrım santral etkilerin periferik etkilere oranındadır. Bu fark metamfetaminin MSS etkisini daha belirgin kılar.",
+          "sik_aciklamalari": {
+            "A": "Amfetamin benzeri ilaçlar sinir ucuna girip depolanmış katekolamini boşaltır; NAT'ın etkilerini bozarak geri alımı inhibe etmek ise indirekt etkinin ayrı bir mekanizmasıdır. Hiçbiri NAT'ı aktive etmediğinden seçenek yanlıştır.",
+            "B": "Metamfetamin amfetamin türevi bir sempatomimetiktir. Santral etkilerin periferik etkilere oranı amfetaminden yüksek olduğundan, oranın düşük olduğunu söyleyen ifade yanlıştır. Bu yüksek oran metamfetaminin MSS etkisini belirgin kılar.",
+            "C": "Metamfetamin amfetamin benzeri indirekt etkili bir ilaçtır ve katekolamin salıverilmesi yoluyla etki eder. Direkt alfa1 agonisti olarak tanımlamak yanlıştır. Etki mekanizması direkt reseptör uyarısı değildir.",
+            "D": "Metamfetamin amfetamin türevi bir sempatomimetiktir; santral etkilerinin periferik etkilere oranı amfetaminden yüksektir. Amfetamin gibi metamfetamin de santral uyarıcıdır; ayrım santral etkilerin periferik etkilere oranındadır. Bu fark metamfetaminin MSS etkisini daha belirgin kılar.",
+            "E": "Amfetamin ve metamfetamin MSS'ye kolayca girer. Bariyeri geçememesi söz konusu olmadığından yanlıştır. Her iki ilaç da santral sinir sistemine kolayca geçer."
+          },
+          "kanit": {
+            "sayfa": 45
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q59",
+          "kazanim": 16,
+          "zorluk": "zor",
+          "soru": "Noradrenalin ve dopamin transportörlerini inhibe eden, serotonin ve glutamatı artıran, GABA düzeyini düşüren ve narkolepside onaylı psikostimülan aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Metilfenidat",
+            "B": "Amfetamin",
+            "C": "Modafinil",
+            "D": "Kokain",
+            "E": "Efedrin"
+          },
+          "dogru": "C",
+          "aciklama": "Modafinil amfetaminden farklı bir psikostimülandır; noradrenalin ve dopamin transportörlerini inhibe eder, serotonin ile glutamatı artırır, GABA'yı düşürür. Modafinil ve armodafinil narkolepside onaylı olup amfetaminden farklı psikostimülanlar olarak tanımlanır. Bu ilacın mekanizması tam olarak bilinmez ve narkolepside onaylıdır.",
+          "sik_aciklamalari": {
+            "A": "Metilfenidat amfetamine benzer etkili bir ilaçtır ve DEHB'de kullanılır. Anlatılan nörokimyasal profil modafinilde olduğundan yanlıştır. Bu ilaç amfetamine benzer etkili bir uyarıcıdır.",
+            "B": "Amfetamin noradrenalin ve dopamin salıverilmesine dayanan bir yer değiştiricidir. Bu glutamat ve GABA profili modafinile ait olduğundan yanlıştır. Bu ilaç yer değiştirici mekanizmayla çalışır.",
+            "C": "Modafinil amfetaminden farklı bir psikostimülandır; noradrenalin ve dopamin transportörlerini inhibe eder, serotonin ile glutamatı artırır, GABA'yı düşürür. Modafinil ve armodafinil narkolepside onaylı olup amfetaminden farklı psikostimülanlar olarak tanımlanır. Bu ilacın mekanizması tam olarak bilinmez ve narkolepside onaylıdır.",
+            "D": "Kokain transmiter geri alımını inhibe eden bir lokal anesteziktir. GABA düşürücü profil modafinile özgü olduğundan yanlıştır. Bu ilaç dopamin geri alımını inhibe eden bir lokal anesteziktir.",
+            "E": "Efedrin karma etkili sempatomimetiktir ve hafif MSS uyarıcıdır. Anlatılan profil modafinilde görüldüğünden yanlıştır. Bu ilaç hem direkt hem indirekt etkili bir sempatomimetiktir."
+          },
+          "kanit": {
+            "sayfa": 46
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "metin": "Tiramin ve MAO inhibitörü etkileşimini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q60",
+          "kazanim": 17,
+          "zorluk": "orta",
+          "soru": "Tiraminin oral alındığında normalde inaktif olmasının nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Alfa karbon eklentisi taşıması",
+            "B": "NAT tarafından tamamen geri alınması",
+            "C": "Kan-beyin bariyerini geçerek beyinde birikmesi",
+            "D": "Karaciğerde MAO ile hemen metabolize olması",
+            "E": "Bağırsaktaki KOMT ile alfa1 agonistine dönüşmesi"
+          },
+          "dogru": "D",
+          "aciklama": "Tiramin karaciğerde MAO ile hemen metabolize edilir; yüksek ilk geçiş etkisi nedeniyle oral alındığında normalde inaktiftir. MAO inhibitörü kullanımında bu ilk geçiş metabolizması engellendiği için tiramin etkili hale gelir. Bu etkisi tiramini oral yoldan zararsız kılar.",
+          "sik_aciklamalari": {
+            "A": "Alfa karbon eklentisi MAO oksidasyonunu engelleyen bir özelliktir. Tiramin MAO'ya duyarlı olduğundan hemen metabolize olur; yanlıştır. Tiramin bu eklentiyi taşımaz ve MAO'ya duyarlıdır.",
+            "B": "NAT sinaptik noradrenalin temizliğinden sorumlu transportördür. Oral tiraminin inaktif kalma nedeni karaciğer MAO'su olduğundan yanlıştır. Bu transportör sinaptik temizlikten sorumludur.",
+            "C": "Kan-beyin bariyerinin geçilmesi MSS etkisini belirler. Oral inaktivite karaciğer ilk geçiş metabolizmasıyla ilgili olduğundan yanlıştır. Oral inaktivite bariyer geçişiyle değil ilk geçiş etkisiyle ilgilidir.",
+            "D": "Tiramin karaciğerde MAO ile hemen metabolize edilir; yüksek ilk geçiş etkisi nedeniyle oral alındığında normalde inaktiftir. MAO inhibitörü kullanımında bu ilk geçiş metabolizması engellendiği için tiramin etkili hale gelir. Bu etkisi tiramini oral yoldan zararsız kılar.",
+            "E": "KOMT katekolaminleri bağırsak ve karaciğerde inaktive eder. Tiraminin oral inaktivitesini MAO açıkladığından yanlıştır. Bu enzim tiramini değil katekolaminleri inaktive eder."
+          },
+          "kanit": {
+            "sayfa": 48
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q61",
+          "kazanim": 17,
+          "zorluk": "orta",
+          "soru": "MAO-A inhibitörü kullanan bir hastanın tiraminden zengin fermente besinler tüketmesi sonucunda aşağıdakilerden hangisi beklenir?",
+          "secenekler": {
+            "A": "Belirgin kan basıncı artışı",
+            "B": "Hiperkalemi",
+            "C": "Bronkospazm",
+            "D": "Ortostatik hipotansiyon",
+            "E": "Bradikardi ve sedasyon"
+          },
+          "dogru": "A",
+          "aciklama": "MAO inhibisyonu tiramin metabolizmasını engeller; tiramin depolanmış katekolaminleri salar ve belirgin kan basıncı artışına yol açar. Tiramin depolanmış katekolaminleri yerinden boşaltan indirekt etkili bir ajandır. Bu nedenle MAO inhibitörü kullananlara fermente besin kısıtlaması önerilir.",
+          "sik_aciklamalari": {
+            "A": "MAO inhibisyonu tiramin metabolizmasını engeller; tiramin depolanmış katekolaminleri salar ve belirgin kan basıncı artışına yol açar. Tiramin depolanmış katekolaminleri yerinden boşaltan indirekt etkili bir ajandır. Bu nedenle MAO inhibitörü kullananlara fermente besin kısıtlaması önerilir.",
+            "B": "Beta2 aktivasyonu potasyumu hücre içine alımı artırarak hücre dışı potasyumu düşürür. Tiramin ile MAO inhibitörü etkileşiminin sonucu elektrolit bozukluğu değil kan basıncı artışı olduğundan seçenek yanlıştır.",
+            "C": "Tiramin noradrenalin benzeri vazopresör yanıt oluşturur. Bronkospazm tipik sonuç olmadığından yanlıştır. Tiraminin ana sonucu bronş düz kasında değil damarlarda ortaya çıkar.",
+            "D": "Tiramin depolanmış katekolaminleri salıverir ve noradrenaline benzer vazopresör etki yapar. Bu etkileşimde basınç yükseldiğinden ortostatik hipotansiyon beklenmez; seçenek yanlıştır. Beklenen sonuç belirgin kan basıncı artışıdır.",
+            "E": "Bradikardi ve sedasyon santral alfa2 etkisine benzer bir tablodur. Tiramin sempatik aşırı uyarı yaptığından yanlıştır. Tiramin sempatik uyarı yaptığından bu tablo beklenmez."
+          },
+          "kanit": {
+            "sayfa": 48
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "metin": "Katekolamin geri alım inhibitörlerini ve kokainin etkisini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q62",
+          "kazanim": 18,
+          "zorluk": "orta",
+          "soru": "Kokainin MSS'deki başlıca etkisi aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "MAO-A enzimini seçici olarak inhibe etmek",
+            "B": "Alfa2 reseptörlerden cAMP'yi düşürmek",
+            "C": "Haz merkezlerinde dopamin geri alımını inhibe etmek",
+            "D": "Depolanmış dopamini sinir ucundan boşaltmak",
+            "E": "D2 reseptörleri doğrudan uyarmak"
+          },
+          "dogru": "C",
+          "aciklama": "Kokainin MSS'deki başlıca etkisi haz merkezlerindeki nöronlara dopamin geri alımını inhibe etmektir; dopamin sinapslarda artar. Dopamin geri alımının engellenmesi sinapsta dopamini artırır; noradrenalin transportörünün bloke edilmesi ise periferde noradrenalin birikimine yol açar. Bu etkisi kokainin bağımlılık yapıcı etkisini açıklar.",
+          "sik_aciklamalari": {
+            "A": "MAO inhibisyonu katekolamin metabolizmasını engelleyen ayrı bir indirekt mekanizmadır. Kokain enzimi değil transportörü bloke ettiğinden MSS'deki başlıca etkisi bu olamaz; seçenek yanlıştır.",
+            "B": "cAMP düşüşü alfa2 aktivasyonuna ait bir sinyaldir. Kokainin dopamin geri alım inhibisyonuyla ilgisi olmadığından yanlıştır. Bu sinyal yolu kokainin etkisinde yer almaz.",
+            "C": "Kokainin MSS'deki başlıca etkisi haz merkezlerindeki nöronlara dopamin geri alımını inhibe etmektir; dopamin sinapslarda artar. Dopamin geri alımının engellenmesi sinapsta dopamini artırır; noradrenalin transportörünün bloke edilmesi ise periferde noradrenalin birikimine yol açar. Bu etkisi kokainin bağımlılık yapıcı etkisini açıklar.",
+            "D": "Depolanmış katekolaminleri boşaltan ilaçlar amfetamin benzeri yer değiştiricilerdir. Kokain geri alımı inhibe ettiğinden yanlıştır. Bu yol amfetamin benzeri ilaçların mekanizmasıdır.",
+            "E": "Kokain reseptör agonisti değil geri alım inhibitörüdür ve transmiterin sinapsta kalmasını sağlar. D2 reseptörlerini doğrudan uyarmadığından seçenek yanlıştır. Başlıca etki dopamin geri alımının inhibisyonudur."
+          },
+          "kanit": {
+            "sayfa": 50
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q63",
+          "kazanim": 18,
+          "zorluk": "kolay",
+          "soru": "Dengeli serotonin ve noradrenalin geri alım inhibitörü olan, fibromiyalji ağrısı için de onaylı antidepresan aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Atomoksetin",
+            "B": "Klonidin",
+            "C": "Duloksetin",
+            "D": "Reboksetin",
+            "E": "Metilfenidat"
+          },
+          "dogru": "C",
+          "aciklama": "Duloksetin dengeli bir serotonin ve noradrenalin geri alım inhibitörüdür; antidepresan olarak kullanılır ve fibromiyalji ağrısı için onaylıdır. Seçici noradrenalin transportör inhibitörü atomoksetinden bu dengeli etkisiyle ayrılır.",
+          "sik_aciklamalari": {
+            "A": "Atomoksetin NAT'ın selektif inhibitörüdür ve dikkat eksikliği bozukluklarında kullanılır. Dengeli serotonin etkisi olmadığından yanlıştır. Bu ilaç dikkat eksikliğinde kullanılır ve selektif NAT inhibitörüdür.",
+            "B": "Klonidin santral alfa2 agonistidir ve hipertansiyonda kullanılır. Geri alım inhibitörü olmadığından fibromiyalji için onaylı serotonin-noradrenalin inhibitörü değildir; seçenek yanlıştır.",
+            "C": "Duloksetin dengeli bir serotonin ve noradrenalin geri alım inhibitörüdür; antidepresan olarak kullanılır ve fibromiyalji ağrısı için onaylıdır. Seçici noradrenalin transportör inhibitörü atomoksetinden bu dengeli etkisiyle ayrılır.",
+            "D": "Reboksetin atomoksetine benzer NAT inhibitörüdür ve esas olarak majör depresyonda kullanılır. Dengeli bir inhibitör olmadığından yanlıştır. Bu ilaç esas olarak majör depresyonda kullanılır.",
+            "E": "Metilfenidat amfetamin benzeri uyarıcıdır ve DEHB'de kullanılır. Fibromiyalji için onaylı inhibitör olmadığından yanlıştır. Bu ilaç psikostimülan olarak DEHB'de kullanılır."
+          },
+          "kanit": {
+            "sayfa": 50
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 19,
+      "metin": "Dopamin agonistlerini ve akut hipotansiyon/şok tedavisini açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q64",
+          "kazanim": 19,
+          "zorluk": "kolay",
+          "soru": "Bazı damar yataklarında vazodilatasyon yapan D1 agonisti olan ve ağır hipertansiyonun intravenöz tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Efedrin",
+            "B": "Dobutamin",
+            "C": "Fenoldopam",
+            "D": "Noradrenalin",
+            "E": "Midodrin"
+          },
+          "dogru": "C",
+          "aciklama": "Fenoldopam D1 agonistidir; bazı damar yataklarında vazodilatasyon yapar ve başlıca endikasyonu ağır hipertansiyonun IV tedavisidir. Tablo 9-2'de fenoldopam D1 >> D2 sıralamasıyla D1 reseptörüne seçici bağlanır. Bu ilaç bu özelliğiyle diğer vazopresörlerden ayrılır.",
+          "sik_aciklamalari": {
+            "A": "Efedrin hem direkt hem indirekt etkili karma bir sempatomimetiktir ve kan basıncını yükseltebilir. D1 agonisti olmadığından ağır hipertansiyon tedavisinde kullanılmaz; seçenek yanlıştır.",
+            "B": "Dobutamin kalpte kontraktiliteyi artıran beta1 seçici bir inotroptur. D1 agonisti olmadığından ağır hipertansiyonun IV tedavisinde kullanılmaz; seçenek yanlıştır. Dobutamin hipertansiyonu değil düşük debiyi hedefler.",
+            "C": "Fenoldopam D1 agonistidir; bazı damar yataklarında vazodilatasyon yapar ve başlıca endikasyonu ağır hipertansiyonun IV tedavisidir. Tablo 9-2'de fenoldopam D1 >> D2 sıralamasıyla D1 reseptörüne seçici bağlanır. Bu ilaç bu özelliğiyle diğer vazopresörlerden ayrılır.",
+            "D": "Noradrenalin periferik direnci ve kan basıncını artıran bir vazopresördür. D1 agonisti olmadığından hipertansiyonun IV tedavisinde kullanılmaz; seçenek yanlıştır. Noradrenalin hipertansiyon tedavisine değil şoka yöneliktir.",
+            "E": "Midodrin alfa1 agonisti ön ilaçtır ve ortostatik hipotansiyonda kan basıncını yükseltir. Hipertansiyon tedavisinde kullanılmadığından, soruda istenen yarar bu olmadığı için seçenek yanlıştır. Midodrin hipertansiyonu artırabileceğinden bu amaçla kullanılmaz."
+          },
+          "kanit": {
+            "sayfa": 51
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q65",
+          "kazanim": 19,
+          "zorluk": "kolay",
+          "soru": "Serebral, renal ve kardiyak kanlanmanın korunduğu akut hipotansiyonda genel yaklaşım aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Fenilefrin infüzyonuyla basıncı yükseltmek",
+            "B": "Yüksek doz dopamin vermek",
+            "C": "İzoproterenol vermek",
+            "D": "Hemen noradrenalin infüzyonu başlamak",
+            "E": "Hastayı yatırıp yeterli sıvı sağlamak"
+          },
+          "dogru": "E",
+          "aciklama": "Hayati organ kanlanması korunuyorsa hipotansiyon genelde doğrudan tedavi gerektirmez; hasta yatırılır ve yeterli sıvı sağlanır. Bu yaklaşım gereksiz ilaç yan etkilerinden kaçınmayı sağlar.",
+          "sik_aciklamalari": {
+            "A": "Fenilefrin alfa1 agonistidir ve vazokonstriksiyonla kan basıncını yükseltir. Acil tehdit yokken basıncı sempatomimetikle yükseltmek morbiditeyi artırabileceğinden seçenek yanlıştır. Organ kanlanması korunmuşken bu girişim gerekli değildir.",
+            "B": "Yüksek doz dopamin alfa aracılı vazokonstriksiyon yapar. Organ kanlanması korunmuşken gereksiz olduğundan yanlıştır. Bu girişim dopaminin vazokonstriktör dozuna denk gelir.",
+            "C": "İzoproterenol kalp hızını ve işini artıran güçlü beta agonistidir. Bu durumda gereksiz olduğundan yanlıştır. Bu ilaç kalbi gereksiz yere uyarır.",
+            "D": "Acil tehdit yokken sempatomimetikle basıncı yükseltmek morbiditeyi artırabilir. Noradrenalin ilk tercih olmadığından yanlıştır. Bu girişim organ kanlanması korunmuşken zararlı olabilir.",
+            "E": "Hayati organ kanlanması korunuyorsa hipotansiyon genelde doğrudan tedavi gerektirmez; hasta yatırılır ve yeterli sıvı sağlanır. Bu yaklaşım gereksiz ilaç yan etkilerinden kaçınmayı sağlar."
+          },
+          "kanit": {
+            "sayfa": 52
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q66",
+          "kazanim": 19,
+          "zorluk": "orta",
+          "soru": "Ventrikül disfonksiyonunda semptomlarda kısa süreli rahatlama sağlayan pozitif inotroplar aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Fenilefrin veya metoksamin",
+            "B": "Klonidin veya guanfasin",
+            "C": "Midodrin veya droksidopa",
+            "D": "Oksimetazolin veya ksilometazolin",
+            "E": "Dopamin veya dobutamin"
+          },
+          "dogru": "E",
+          "aciklama": "Dopamin veya dobutamin gibi pozitif inotroplar kontraktiliteyi artırır ve ventrikül disfonksiyonunda semptomlarda kısa süreli rahatlama sağlar. İnotropik etki beta bir reseptör aktivasyonuyla ortaya çıkar; dopaminin D1 etkisi ise renal, koroner ve diğer damarlarda vazodilatasyon yapar. Bu ilaçlar kalbin pompa işlevini kısa süreli destekler.",
+          "sik_aciklamalari": {
+            "A": "Fenilefrin ve metoksamin direkt etkili alfa1 agonistleridir ve vazokonstriksiyon yapar. İnotrop olarak kullanılmadığından yanlıştır. Bu ilaçlar kalbi değil damarları hedefler.",
+            "B": "Klonidin ve guanfasin alfa2 agonistleridir ve sempatik tonusu baskılar. Pozitif inotrop olmadığından yanlıştır. Bu ilaçlar sempatik tonusu düşürerek etki eder.",
+            "C": "Midodrin ve droksidopa ortostatik hipotansiyon tedavisinde kullanılan ajanlardır. Ventrikül disfonksiyonunda kısa süreli inotropik rahatlama sağlamadıklarından seçenek yanlıştır. Bu ilaçlar kalbi değil ayakta basıncı hedefler.",
+            "D": "Oksimetazolin ve ksilometazolin burun mukozasında vazokonstriksiyon yapan topikal dekonjestanlardır. Kalpte inotropik etki için kullanılmadıklarından seçenek yanlıştır. Bu ilaçlar kalbin pompa işlevine etki etmez.",
+            "E": "Dopamin veya dobutamin gibi pozitif inotroplar kontraktiliteyi artırır ve ventrikül disfonksiyonunda semptomlarda kısa süreli rahatlama sağlar. İnotropik etki beta bir reseptör aktivasyonuyla ortaya çıkar; dopaminin D1 etkisi ise renal, koroner ve diğer damarlarda vazodilatasyon yapar. Bu ilaçlar kalbin pompa işlevini kısa süreli destekler."
+          },
+          "kanit": {
+            "sayfa": 54
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "metin": "Kronik ortostatik hipotansiyon ile kardiyak ve lokal vazokonstriksiyon uygulamalarını açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q67",
+          "kazanim": 20,
+          "zorluk": "orta",
+          "soru": "Ayakta durunca venöz göllenmeyle gelişen kan basıncı düşüşünü normalde engelleyen mekanizma aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Beta2 aracılı iskelet kası vazodilatasyonu",
+            "B": "Renal D1 aracılı vazodilatasyon yapması",
+            "C": "Refleks sempatik aktivasyon ve vazokonstriksiyon",
+            "D": "NAT inhibisyonu ile noradrenalin artışı",
+            "E": "Vagal tonusun belirgin biçimde artması"
+          },
+          "dogru": "C",
+          "aciklama": "Normalde refleks sempatik aktivasyon kalp hızını artırır ve arteriyel ile venöz vazokonstriksiyon yapar; ayakta durunca basınç düşüşünü engeller. Bu refleks yolu alfa bir aracılı vazokonstriksiyon ve beta bir aracılı hız artışıyla çalışır. Bu refleks bozulursa kronik ortostatik hipotansiyon gelişir.",
+          "sik_aciklamalari": {
+            "A": "Beta2 aracılı iskelet kası vazodilatasyonu periferik direnci düşürür ve adrenalinin diyastolik düşüşünü açıklar. Ayakta durunca gereken yanıt vazokonstriksiyon olduğundan seçenek yanlıştır.",
+            "B": "D1 aracılı vazodilatasyon renal ve splanik damarlarda dopaminin etkisidir. Ayakta durunca basınç düşüşünü engelleyen bir mekanizma olmadığından seçenek yanlıştır. Bu yanıt dopaminin renal etkisine aittir.",
+            "C": "Normalde refleks sempatik aktivasyon kalp hızını artırır ve arteriyel ile venöz vazokonstriksiyon yapar; ayakta durunca basınç düşüşünü engeller. Bu refleks yolu alfa bir aracılı vazokonstriksiyon ve beta bir aracılı hız artışıyla çalışır. Bu refleks bozulursa kronik ortostatik hipotansiyon gelişir.",
+            "D": "NAT inhibisyonu ilaçla oluşan bir durumdur. Fizyolojik refleks olmadığından yanlıştır. Bu etki ilaçlarla ilişkili bir kavramdır ve doğal bir mekanizma değildir.",
+            "E": "Vagal tonus artışı kalp hızını yavaşlatır. Ayakta durunca basınç düşüşünü engellemek yerine kötüleştireceğinden seçenek yanlıştır. Vagal artış refleks yanıtın tersi yönündedir."
+          },
+          "kanit": {
+            "sayfa": 55
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q68",
+          "kazanim": 20,
+          "zorluk": "orta",
+          "soru": "Dopa dekarboksilaz tarafından norepinefrine dönüştürülen ve ortostatik hipotansiyon tedavisi için onaylı sentetik molekül aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Droksidopa",
+            "B": "Dobutamin",
+            "C": "Fenoldopam",
+            "D": "Tiramin",
+            "E": "Midodrin"
+          },
+          "dogru": "A",
+          "aciklama": "Droksidopa dopa dekarboksilaz tarafından norepinefrine dönüştürülen sentetik bir moleküldür; ortostatik hipotansiyon tedavisi için onaylıdır. Etkili olan, dönüşüm sonucu oluşan norepinefrindir; bu nedenle droksidopa ön ilaç sayılır.",
+          "sik_aciklamalari": {
+            "A": "Droksidopa dopa dekarboksilaz tarafından norepinefrine dönüştürülen sentetik bir moleküldür; ortostatik hipotansiyon tedavisi için onaylıdır. Etkili olan, dönüşüm sonucu oluşan norepinefrindir; bu nedenle droksidopa ön ilaç sayılır.",
+            "B": "Dobutamin kalpte beta1 etkili bir inotroptur ve şokta kullanılır. Norepinefrine dönüşmediğinden ve ortostatik hipotansiyon için onaylı olmadığından seçenek yanlıştır. Dobutamin kalp debisini artırmaya yöneliktir.",
+            "C": "Fenoldopam D1 agonistidir ve ağır hipertansiyonun IV tedavisinde kullanılır. Basıncı düşürdüğünden ortostatik hipotansiyon tedavisine uygun olmadığından seçenek yanlıştır. Fenoldopam bu nedenle hipotansiyonda uygun değildir.",
+            "D": "Tiramin katekolamin salıverir ve parenteral etkisi noradrenaline benzer. Ortostatik hipotansiyon için onaylı ilaç olmadığından yanlıştır. Bu madde besinlerde bulunan bir yan üründür.",
+            "E": "Midodrin desglimidodrine hidrolize olan bir ön ilaçtır ve alfa1 agonistidir. Norepinefrine dönüşmediğinden yanlıştır. Bu ilaç farklı bir ön ilaçtır ve aktivasyonu hidrolizle olur."
+          },
+          "kanit": {
+            "sayfa": 57
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q69",
+          "kazanim": 20,
+          "zorluk": "kolay",
+          "soru": "Farmakolojik kardiyak stres testi olarak enjeksiyon yoluyla kullanılan ilaç aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Oksimetazolin",
+            "B": "Dobutamin",
+            "C": "Klonidin",
+            "D": "Fenilefrin",
+            "E": "Fenoldopam"
+          },
+          "dogru": "B",
+          "aciklama": "Dobutamin injeksiyonu farmakolojik bir kardiyak stres testi olarak kullanılır. Dobutamin beta bir seçici olduğundan kalpte hız ve kontraktilite artışı yapar (beta bir > beta iki); miyokard kasılmasını güçlendirir. Koroner ve sistemik vazodilatasyona da yol açar.",
+          "sik_aciklamalari": {
+            "A": "Oksimetazolin burun mukozasında vazokonstriksiyon yapan topikal bir dekonjestandır ve burun tıkanıklığında kullanılır. Kalbi strese sokmadığından farmakolojik kardiyak stres testinde kullanılmaz; seçenek yanlıştır.",
+            "B": "Dobutamin injeksiyonu farmakolojik bir kardiyak stres testi olarak kullanılır. Dobutamin beta bir seçici olduğundan kalpte hız ve kontraktilite artışı yapar (beta bir > beta iki); miyokard kasılmasını güçlendirir. Koroner ve sistemik vazodilatasyona da yol açar.",
+            "C": "Klonidin santral alfa2 agonistidir ve sempatik tonusu baskılar. Kalbi strese sokmadığından farmakolojik kardiyak stres testinde kullanılmaz; seçenek yanlıştır. Klonidinin yeri hipertansiyondur.",
+            "D": "Fenilefrin saf alfa1 agonistidir ve vazokonstriksiyon yapar. Kalbin hızını ve kasılmasını artırmadığından stres testi için kullanılmaz; seçenek yanlıştır. Fenilefrinin yeri dekonjestan ve midriyazistir.",
+            "E": "Fenoldopam D1 agonisti vazodilatördür ve hipertansiyon için kullanılır. Stres testinde kullanılmadığından yanlıştır. Bu ilaç vazodilatasyon yapar ve strese yol açmaz."
+          },
+          "kanit": {
+            "sayfa": 58
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q70",
+          "kazanim": 20,
+          "zorluk": "orta",
+          "soru": "Kokainin nazofarinks cerrahisinde kullanılmasının nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Hemostaz ve lokal anesteziyi birleştirmesi",
+            "B": "Bronkodilatasyon sağlaması",
+            "C": "Santral sedasyon yapması",
+            "D": "Uterus gevşemesi sağlaması",
+            "E": "Pupil dilatasyonunu önlemesi"
+          },
+          "dogru": "A",
+          "aciklama": "Kokain hem lokal anestezik hem periferik sempatomimetik etki yaptığından hemostaz ve lokal anesteziyi birleştirir; bazen adrenalinle karıştırılır. Kokainin NAT blokajına bağlı sempatomimetik vazokonstriksiyonu kanamayı azaltır; lokal anestezik etki ise ağrıyı giderir. Bu özellik kokaini cerrahide benzersiz kılar.",
+          "sik_aciklamalari": {
+            "A": "Kokain hem lokal anestezik hem periferik sempatomimetik etki yaptığından hemostaz ve lokal anesteziyi birleştirir; bazen adrenalinle karıştırılır. Kokainin NAT blokajına bağlı sempatomimetik vazokonstriksiyonu kanamayı azaltır; lokal anestezik etki ise ağrıyı giderir. Bu özellik kokaini cerrahide benzersiz kılar.",
+            "B": "Bronkodilatasyon beta2 aktivasyonuyla sağlanır ve astımda kullanılır. Kokainin nazofarinks cerrahisindeki nedeni olmadığından seçenek yanlıştır. Kokainin cerrahideki yeri hemostaz ve anestezidir.",
+            "C": "Kokain MSS'ye girer ve amfetamine benzer uyarıcı etki yapar. Sedasyon alfa2 agonistlerine özgü olduğundan seçenek yanlıştır. Kokainin MSS etkisi uyarıdır.",
+            "D": "Uterus gevşetmek beta2 selektif ajanların işidir. Kokain beta2 agonisti olmadığından nazofarinks cerrahisindeki kullanımını açıklamaz; seçenek yanlıştır. Kokainin yeri hemostaz ve lokal anestezidir.",
+            "E": "Kokain periferik sempatomimetik etki yapar ve pupil dilatasyonunu önleyen bir ilaç değildir. Cerrahideki kullanım nedeni hemostaz ve anestezi olduğundan seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 59
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q71",
+          "kazanim": 20,
+          "zorluk": "orta",
+          "soru": "Lokal anestezikle birlikte adrenalin kullanılması aşağıdaki bölgelerden hangisinde iskemik nekroz riski nedeniyle önerilmez?",
+          "secenekler": {
+            "A": "Parmak, burun ve kulak",
+            "B": "Diş eti ve yanak mukozası",
+            "C": "Kafa derisi",
+            "D": "Gövde cildi",
+            "E": "Uyluk ön yüzü kasları"
+          },
+          "dogru": "A",
+          "aciklama": "Parmak, burun ve kulak gibi uç organlarda lokal anestezikle adrenalin iskemik nekroz riski taşır ve önerilmez. Uç organlarda adrenalinin alfa aracılı vazokonstriksiyonu kan akımını daha da bozarak iskemik nekroza yol açar. Bu risk, uç dokuların kanlanmasının kolayca bozulabilmesinden doğar.",
+          "sik_aciklamalari": {
+            "A": "Parmak, burun ve kulak gibi uç organlarda lokal anestezikle adrenalin iskemik nekroz riski taşır ve önerilmez. Uç organlarda adrenalinin alfa aracılı vazokonstriksiyonu kan akımını daha da bozarak iskemik nekroza yol açar. Bu risk, uç dokuların kanlanmasının kolayca bozulabilmesinden doğar.",
+            "B": "Diş eti ve yanak mukozası iyi kanlanan dokulardır ve uç organlara özgü son dolaşım sorunu taşımaz. Adrenalin kısıtlaması bu bölgeler için tanımlanmadığından seçenek yanlıştır.",
+            "C": "Kafa derisi zengin damar ağıyla beslenen bir dokudur ve uç organlar gibi son dolaşımla beslenmez. İskemik nekroz kısıtlaması burada tanımlanmadığından seçenek yanlıştır.",
+            "D": "Gövde cildi geniş ve iyi kanlanan bir dokudur; uç organlar gibi son dolaşımla beslenmez. İskemik nekroz kısıtlaması burada tanımlanmadığından seçenek yanlıştır.",
+            "E": "Uyluk büyük kas kitlesi içeren ve iyi kanlanan bir bölgedir. Uç organlara özgü iskemik nekroz kısıtlaması burada tanımlanmadığından seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 60
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 21,
+      "metin": "Dekonjestan ve pulmoner uygulamaları açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q72",
+          "kazanim": 21,
+          "zorluk": "kolay",
+          "soru": "Nazal dekonjestan kullanımından sonra görülebilen istenmeyen etki aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Rebound hiperemi",
+            "B": "Hipoglisemi",
+            "C": "Bronkospazm",
+            "D": "Sedasyon",
+            "E": "Hiperkalemi"
+          },
+          "dogru": "A",
+          "aciklama": "Mukoz dekonjestanlar kullanıldıktan sonra rebound hiperemi gelişebilir; burun mukozası tekrar kızarır ve tıkanıklık artar. Alfa aracılı vazokonstriksiyon sona erince damarlar yeniden genişler ve tıkanıklık geri döner. Bu durum dekonjestanın uzun süreli kullanımında sorun çıkarır.",
+          "sik_aciklamalari": {
+            "A": "Mukoz dekonjestanlar kullanıldıktan sonra rebound hiperemi gelişebilir; burun mukozası tekrar kızarır ve tıkanıklık artar. Alfa aracılı vazokonstriksiyon sona erince damarlar yeniden genişler ve tıkanıklık geri döner. Bu durum dekonjestanın uzun süreli kullanımında sorun çıkarır.",
+            "B": "Hipoglisemi sempatomimetiklerin metabolik etkilerinde glikojenolizle glukoz artışının tersidir. Dekonjestan kullanımı sonrası tanımlı bir etki olmadığından seçenek yanlıştır. Dekonjestanın bilinen sorunu rebound hiperemidir.",
+            "C": "Bronkospazm dekonjestanların tipik istenmeyen etkisi değildir. Astımda tedavi edilen bir sorun olduğundan yanlıştır. Bu sorun dekonjestanın değil bronş hastalığının konusudur.",
+            "D": "Sedasyon klonidin ve deksmedetomidin gibi alfa2 agonistlerin sistemik yan etkisidir. Topikal dekonjestan sonrası beklenen etki olmadığından seçenek yanlıştır. Dekonjestanın bilinen sorunu rebound hiperemidir.",
+            "E": "Beta2 aktivasyonu potasyum alımını artırarak hücre dışı potasyumu düşürür. Dekonjestan kullanımıyla hiperkalemi gelişmediğinden seçenek yanlıştır. Dekonjestan kullanımında gerçek sorun rebound hiperemidir."
+          },
+          "kanit": {
+            "sayfa": 61
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q73",
+          "kazanim": 21,
+          "zorluk": "orta",
+          "soru": "Kronik astımda uzun etkili beta2 agonistlerin tek başına kullanılmaması önerilir; bunun nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Alfa1 aracılı bronkokonstriksiyon oluşturmaları",
+            "B": "Tek başına kullanımda morbiditeyi artırabilmeleri",
+            "C": "Beta1 selektif olup bronş düz kasında etkisiz kalmaları",
+            "D": "Bronş düz kasında beta2 aktivasyonunun kasılma yapması",
+            "E": "Yalnız akut atakta etkili olmaları"
+          },
+          "dogru": "B",
+          "aciklama": "Kronik astımda uzun etkili beta2 agonistler tek başına kullanılırsa morbiditeyi artırabilir; bu yüzden steroidlere ek olarak verilirler. Kısa etkili preparatlar yalnız astım semptomlarının akut tedavisinde geçici olarak kullanılır. Bu uyarı nedeniyle kombinasyon tedavisi esas alınır.",
+          "sik_aciklamalari": {
+            "A": "Uzun etkili beta2 agonistleri beta2 reseptörleri seçici olarak uyarır ve alfa1 aktivasyonu yapmaz. Bronkokonstriksiyon oluşturmadıklarından seçenek yanlıştır. Bu nedenle uzun etkili ajanlar bronkodilatör olarak kalır.",
+            "B": "Kronik astımda uzun etkili beta2 agonistler tek başına kullanılırsa morbiditeyi artırabilir; bu yüzden steroidlere ek olarak verilirler. Kısa etkili preparatlar yalnız astım semptomlarının akut tedavisinde geçici olarak kullanılır. Bu uyarı nedeniyle kombinasyon tedavisi esas alınır.",
+            "C": "Uzun etkili ajanlar beta2 selektif olup bronş düz kasını gevşetir; beta1 selektif olan dobutamin ise kalpte etkilidir. Tek başına kullanılmamalarının nedeni bu değildir; asıl neden morbiditenin artabilmesidir.",
+            "D": "Tablo 9-3'e göre solunum sistemindeki beta2 aktivasyonu düz kas gevşemesi sağlayarak bronkodilatasyon yapar; kasılma yapan etki alfa bir aracılıdır. Sorun bu değil, tek başına kullanımda morbiditenin artabilmesidir; seçenek yanlıştır.",
+            "E": "Kısa etkili ajanlar akut tedavide kullanılır; uzun etkililer kronik kullanımdadır. Gerekçe bu olmadığından yanlıştır. Bu ifade kısa etkili ajanları anlatır."
+          },
+          "kanit": {
+            "sayfa": 62
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q74",
+          "kazanim": 21,
+          "zorluk": "orta",
+          "soru": "KOAH'ta günde bir kez kullanımla onaylı uzun etkili beta2 agonistleri aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Albuterol, terbutalin ve metaproterenol",
+            "B": "Oksimetazolin, ksilometazolin ve fenilefrin",
+            "C": "Klonidin, guanfasin ve deksmedetomidin",
+            "D": "İndakaterol, olodaterol ve vilanterol",
+            "E": "Dobutamin, dopamin ve izoproterenol"
+          },
+          "dogru": "D",
+          "aciklama": "İndakaterol, olodaterol ve vilanterol ultra uzun etkili beta2 agonistleridir ve KOAH'ta günde bir kez kullanım için onaylıdır. Günde bir doz kolaylığı bu ultra uzun etkili ajanlara aittir; kısa etkili albuterol ve terbutalin ise astım semptomlarının akut tedavisinde geçici kullanılır.",
+          "sik_aciklamalari": {
+            "A": "Albuterol, terbutalin ve metaproterenol kısa etkili beta2 agonistleridir ve akut astım tedavisinde kullanılır. Günde bir kez kullanımla onaylı olmadığından yanlıştır. Bu ajanlar bu amaçla kısa süreli kullanılır.",
+            "B": "Oksimetazolin, ksilometazolin ve fenilefrin burun mukozasına uygulanan alfa agonist dekonjestanlardır. Beta2 agonisti olmadıklarından KOAH tedavisinde kullanılmazlar; seçenek yanlıştır. KOAH'ta günde bir kez kullanılanlar indakaterol, olodaterol ve vilanteroldür.",
+            "C": "Klonidin, guanfasin ve deksmedetomidin alfa2 agonistleridir. Bronş düz kasını gevşetmediklerinden KOAH'ta kullanılan beta2 agonistleri değildir; seçenek yanlıştır. KOAH'ta günde bir kez kullanılanlar indakaterol, olodaterol ve vilanteroldür.",
+            "D": "İndakaterol, olodaterol ve vilanterol ultra uzun etkili beta2 agonistleridir ve KOAH'ta günde bir kez kullanım için onaylıdır. Günde bir doz kolaylığı bu ultra uzun etkili ajanlara aittir; kısa etkili albuterol ve terbutalin ise astım semptomlarının akut tedavisinde geçici kullanılır.",
+            "E": "Dobutamin, dopamin ve izoproterenol kalp ve dolaşım amaçlı ajanlardır. Uzun etkili beta2 agonisti olmadığından yanlıştır. Bu ajanlar bronş değil dolaşım hedeflidir."
+          },
+          "kanit": {
+            "sayfa": 62
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 22,
+      "metin": "Anafilaksi ve göz uygulamalarını açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q75",
+          "kazanim": 22,
+          "zorluk": "orta",
+          "soru": "Anaflakside hipotansif hastada adrenalinin tercih edilen uygulama yolu aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Topikal uygulama",
+            "B": "Oral yol",
+            "C": "Subkutan enjeksiyon",
+            "D": "Her durumda intravenöz infüzyon",
+            "E": "İntramüsküler enjeksiyon"
+          },
+          "dogru": "E",
+          "aciklama": "Hipotansif hastada cilt kan akımı öngörülemediğinden adrenalin için tercih edilen yol intramüsküler enjeksiyondur. Cilt kan akımı hipotansiyonda öngörülemediği için deri altı enjeksiyondan emilim güvenilmez olur. Bu yol emilimin güvenilir olduğu bir yoldur.",
+          "sik_aciklamalari": {
+            "A": "Topikal adrenalin burun kompresleri ve dişeti iplikleri gibi lokal vazokonstriksiyon amacıyla kullanılır. Anaflakside sistemik etki sağlamadığından seçenek yanlıştır. Bu yol anaflaksi tedavisinde kullanılmaz.",
+            "B": "Katekolaminler bağırsak ve karaciğerde bulunan KOMT ile inaktive olur; adrenalin de bir katekolamin olduğundan oral yolla etkili değildir. Anaflakside hızlı yanıt gerektiğinden hipotansif hastada tercih edilen yol intramüsküler enjeksiyondur.",
+            "C": "Subkutan enjeksiyonda emilim cilt kan akımına bağlıdır. Hipotansif hastada cilt kan akımı öngörülemediğinden güvenilir olmayan bu yol seçenek olarak yanlıştır.",
+            "D": "Kardiyovasküler fonksiyonu bozulanlarda IV gerekebilir. Hipotansif hastada tercih edilen yol IM olduğundan yanlıştır. Bu yol yalnızca kardiyovasküler fonksiyonu bozulanlarda gerekir.",
+            "E": "Hipotansif hastada cilt kan akımı öngörülemediğinden adrenalin için tercih edilen yol intramüsküler enjeksiyondur. Cilt kan akımı hipotansiyonda öngörülemediği için deri altı enjeksiyondan emilim güvenilmez olur. Bu yol emilimin güvenilir olduğu bir yoldur."
+          },
+          "kanit": {
+            "sayfa": 63
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q76",
+          "kazanim": 22,
+          "zorluk": "orta",
+          "soru": "Adrenalinin anaflaksinin patofizyolojik olaylarını geri çevirmesinin dayanağı aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "D1 aracılı renal vazodilatasyon",
+            "B": "Yalnız beta2 aktivasyonuyla bronkodilatasyon yapması",
+            "C": "NAT inhibisyonu",
+            "D": "Yalnız alfa1 aktivasyonuyla vazokonstriksiyon yapması",
+            "E": "Alfa, beta1 ve beta2 reseptörleri aktive etmesi"
+          },
+          "dogru": "E",
+          "aciklama": "Adrenalin alfa, beta1 ve beta2 reseptörleri aktive ederek bronkospazm, hipotansiyon ve mukoza konjesyonu gibi anaflaksi olaylarını geri çevirir. Alfa etkisi vazokonstriksiyonla hipotansiyonu ve mukoza konjesyonunu, beta iki etkisi bronkospazmı düzeltir. Bu geniş etki profili adrenaliniyle tek ilaçla çok olayı çözer.",
+          "sik_aciklamalari": {
+            "A": "D1 aracılı renal vazodilatasyon dopaminin etkisidir. Adrenalin dopamin reseptörünü değil alfa, beta1 ve beta2'yi uyardığından anaflaksiyi geri çevirmesini açıklamaz; seçenek yanlıştır.",
+            "B": "Beta2 aktivasyonu bronkodilatasyon yapar ancak anaflaksinin hipotansiyon ve mukoza konjesyonu da vardır. Yalnız beta2 etkisi tabloyu tam geri çevirmediğinden seçenek yanlıştır.",
+            "C": "NAT inhibisyonu kokain ve atomoksetin gibi indirekt ilaçların mekanizmasıdır. Adrenalin doğrudan reseptörleri uyardığından seçenek yanlıştır. Adrenalinin mekanizması doğrudan alfa ve beta aktivasyonudur.",
+            "D": "Alfa1 aktivasyonu vazokonstriksiyon yapar ve hipotansiyonu düzeltir. Bronkospazmı çözmediğinden anaflaksinin tüm olaylarını tek başına geri çeviremez; seçenek yanlıştır. Bu yüzden beta etkileri de gereklidir.",
+            "E": "Adrenalin alfa, beta1 ve beta2 reseptörleri aktive ederek bronkospazm, hipotansiyon ve mukoza konjesyonu gibi anaflaksi olaylarını geri çevirir. Alfa etkisi vazokonstriksiyonla hipotansiyonu ve mukoza konjesyonunu, beta iki etkisi bronkospazmı düzeltir. Bu geniş etki profili adrenaliniyle tek ilaçla çok olayı çözer."
+          },
+          "kanit": {
+            "sayfa": 64
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q77",
+          "kazanim": 22,
+          "zorluk": "kolay",
+          "soru": "Göz içi basıncını azaltan alfa2 selektif agonist aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Brimonidin",
+            "B": "Fenilefrin",
+            "C": "Mirabegron",
+            "D": "Dobutamin",
+            "E": "Timolol"
+          },
+          "dogru": "A",
+          "aciklama": "Brimonidin göz içi basıncını azaltan alfa2 selektif agonisttir; apraklonidin de aynı gruptandır. Apraklonidin de alfa iki agonistidir; alfa iki agonistleri aköz humor dışa akışını artırarak göz içi basıncını düşürür. Bu nedenle glokomda kullanılabilir.",
+          "sik_aciklamalari": {
+            "A": "Brimonidin göz içi basıncını azaltan alfa2 selektif agonisttir; apraklonidin de aynı gruptandır. Apraklonidin de alfa iki agonistidir; alfa iki agonistleri aköz humor dışa akışını artırarak göz içi basıncını düşürür. Bu nedenle glokomda kullanılabilir.",
+            "B": "Fenilefrin alfa1 agonistidir ve midriyatiktir. Göz içi basıncını azaltan alfa2 agonisti olmadığından yanlıştır. Bu ilaç göz muayenesinde pupilla genişletmek için kullanılır.",
+            "C": "Mirabegron beta3 agonistidir ve mesane detrusorunu gevşeterek aşırı aktif mesanede kullanılır. Göz içi basıncını azaltmadığından seçenek yanlıştır. Mirabegronun yeri aşırı aktif mesanedir.",
+            "D": "Dobutamin kalpte kontraktiliteyi artıran beta1 etkili bir inotroptur ve şokta kullanılır. Göz içi basıncını azaltan alfa2 agonisti olmadığından seçenek yanlıştır.",
+            "E": "Timolol bir beta blokördür ve aköz humor üretimini azaltarak glokomda kullanılır. Agonist olmadığından yanlıştır. Bu ilaç antagonisttir ve agonistlerden ayrılır."
+          },
+          "kanit": {
+            "sayfa": 65
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    },
+    {
+      "no": 23,
+      "metin": "Genitoüriner, MSS ve diğer klinik uygulamaları açıklayabilme",
+      "sorular": [
+        {
+          "id": "k2-46-sempatomimetikler-q78",
+          "kazanim": 23,
+          "zorluk": "orta",
+          "soru": "Ritodrin ve terbutalinin erken doğumu birkaç gün ertelemesinin klinik yararı aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Doğumu tamamen önleyerek gebeliği sonlandırması",
+            "B": "Fetüsün akciğerlerini doğrudan olgunlaştırması",
+            "C": "Alfa1 aracılı uterus kasılmasını artırması",
+            "D": "RDS insidansını azaltan kortikosteroidlere zaman kazandırması",
+            "E": "Uterus kontraksiyonlarını güçlendirmesi"
+          },
+          "dogru": "D",
+          "aciklama": "Beta2 agonistleri doğumu birkaç gün erteleyerek RDS insidansını azaltan kortikosteroidlere zaman kazandırır. Kortikosteroidler yenidoğan respiratuar distres sendromu insidansını azaltır; beta iki agonistleri doğumu geciktirerek bunun için zaman kazandırır. Bu kazanılan süre fetüs için yararlıdır.",
+          "sik_aciklamalari": {
+            "A": "Beta2 agonistleri doğumu yalnız birkaç gün erteleyebilir. Gebeliği sonlandırmadıkları ve doğumu tamamen önlemediklerinden seçenek yanlıştır. Gerçek yarar birkaç günlük zaman kazanımıdır.",
+            "B": "Fetal akciğer olgunlaşmasını sağlayan ve RDS insidansını azaltan ilaçlar kortikosteroidlerdir. Beta2 agonistleri bunu doğrudan yapmadığından seçenek yanlıştır. Bu zaman kazanımı steroidin etkisini mümkün kılar.",
+            "C": "Beta2 agonistleri alfa1 reseptörleri uyarmaz. Uterusu gevşettiklerinden alfa1 aracılı kasılmayı artırmaları söz konusu değildir; seçenek yanlıştır. Beta2 etkisi gevşeme yönündedir.",
+            "D": "Beta2 agonistleri doğumu birkaç gün erteleyerek RDS insidansını azaltan kortikosteroidlere zaman kazandırır. Kortikosteroidler yenidoğan respiratuar distres sendromu insidansını azaltır; beta iki agonistleri doğumu geciktirerek bunun için zaman kazandırır. Bu kazanılan süre fetüs için yararlıdır.",
+            "E": "Beta2 agonistleri gebe uterusunu gevşetir ve kasılmaları azaltarak erken doğumu geciktirir. Kontraksiyonları güçlendirmedikleri için seçenek yanlıştır; asıl yarar kortikosteroidlere zaman kazandırmalarıdır."
+          },
+          "kanit": {
+            "sayfa": 66
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q79",
+          "kazanim": 23,
+          "zorluk": "orta",
+          "soru": "Stres inkontinansında bazen etkili olan oral sempatomimetikler aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Dobutamin veya dopamin",
+            "B": "Mirabegron",
+            "C": "Efedrin veya psödoefedrin",
+            "D": "Klonidin veya guanfasin",
+            "E": "Terbutalin veya ritodrin"
+          },
+          "dogru": "C",
+          "aciklama": "Oral efedrin veya psödoefedrin mesane tabanı ve üretra sfinkterindeki alfa reseptörleri uyararak stres inkontinansında bazen etkilidir. Alfa bir uyarımı mesane tabanı ve üretra sfinkterinde kasılma yaparak idrar tutmayı destekler. Bu ilaçlar bu amaçla ek bir kullanım alanı oluşturur.",
+          "sik_aciklamalari": {
+            "A": "Dobutamin ve dopamin kalpte kasılmayı artıran inotroplardır ve şokta kullanılır. Mesane tabanı ve üretra sfinkteri üzerinden stres inkontinansında kullanılmadıklarından seçenek yanlıştır.",
+            "B": "Mirabegron detrusoru gevşetir ve aşırı aktif mesanede kullanılır. Stres inkontinansı için kullanılmadığından yanlıştır. Bu ilaç yalnızca detrusor aşırı aktivitesinde yarar sağlar.",
+            "C": "Oral efedrin veya psödoefedrin mesane tabanı ve üretra sfinkterindeki alfa reseptörleri uyararak stres inkontinansında bazen etkilidir. Alfa bir uyarımı mesane tabanı ve üretra sfinkterinde kasılma yaparak idrar tutmayı destekler. Bu ilaçlar bu amaçla ek bir kullanım alanı oluşturur.",
+            "D": "Klonidin ve guanfasin alfa2 agonistleridir ve sempatik tonusu baskılar. Stres inkontinansında kullanılmadıklarından seçenek yanlıştır. Stres inkontinansında efedrin veya psödoefedrin denenir.",
+            "E": "Terbutalin ve ritodrin beta2 agonistleridir ve uterus ile bronş düz kasını gevşetir. Stres inkontinansında kullanılmadıklarından seçenek yanlıştır. Stres inkontinansında efedrin veya psödoefedrin denenir."
+          },
+          "kanit": {
+            "sayfa": 66
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q80",
+          "kazanim": 23,
+          "zorluk": "orta",
+          "soru": "Uzatılmış salınımlı metilfenidat preparatlarının okul çağı çocuklarında sağladığı yarar aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Doz rejimini basitleştirmesi ve uyumu artırması",
+            "B": "Noradrenalin transportörünü seçici olarak inhibe etmesi",
+            "C": "Alfa2 agonisti olarak santral sempatik çıkışı azaltması",
+            "D": "Beta2 aracılı bronkodilatasyon yapması",
+            "E": "Hipertansiyon tedavisi sağlaması"
+          },
+          "dogru": "A",
+          "aciklama": "Uzatılmış salınımlı metilfenidat okul çağı çocuklarında doz rejimini basitleştirir ve uyumu artırır. Bu özellik tedaviye uyumu kolaylaştırdığı için seçenek doğrudur.",
+          "sik_aciklamalari": {
+            "A": "Uzatılmış salınımlı metilfenidat okul çağı çocuklarında doz rejimini basitleştirir ve uyumu artırır. Bu özellik tedaviye uyumu kolaylaştırdığı için seçenek doğrudur.",
+            "B": "Noradrenalin transportörünü seçici inhibe eden ilaç atomoksetindir; metilfenidat ise amfetamin türü bir uyarıcıdır. Uzatılmış salınımın sağladığı yarar bu değil, doz rejiminin basitleşmesidir; seçenek yanlıştır.",
+            "C": "Klonidin gibi alfa2 agonistleri santral sempatik çıkışı azaltan ilaçlardır; metilfenidat ise amfetamin türü bir uyarıcıdır. Uzatılmış salınımın okul çağı çocuklarındaki yararı doz rejiminin basitleşmesidir; bu seçenek yanlıştır.",
+            "D": "Bronkodilatasyon beta2 selektif ajanların etkisidir; metilfenidat ise amfetamin türü bir santral uyarıcıdır. Uzatılmış salınım preparatının okul çağı çocuklarındaki yararı bu değil, doz rejiminin basitleşmesidir; seçenek yanlıştır.",
+            "E": "Metilfenidat bazı çocuklarda düşük dozla DEHB'de etkili olan amfetamin benzeri bir uyarıcıdır. Hipertansiyon tedavisinde kullanılmadığından, soruda istenen yarar bu olmadığı için seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 68
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q81",
+          "kazanim": 23,
+          "zorluk": "orta",
+          "soru": "Klonidinin bağırsaktan tuz ve su emilimini artırarak otonomik nöropatili diyabetiklerde sağladığı etki aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Kabızlık oluşturması",
+            "B": "Diyare tedavisi",
+            "C": "Midriyazis",
+            "D": "Bronkodilatasyon",
+            "E": "Uterus gevşemesi"
+          },
+          "dogru": "B",
+          "aciklama": "Klonidin bağırsaktan tuz ve su emilimini artırır ve otonomik nöropatili diyabetiklerde diyare tedavisinde etkilidir. Klonidin alfa iki agonistidir; alfa iki aracılı etki bağırsakta tuz ve su emilimini artırarak diyareyi azaltır. Bu etki özellikle otonomik nöropatide yararlıdır.",
+          "sik_aciklamalari": {
+            "A": "Klonidin bağırsaktan tuz ve su emilimini artırarak diyareyi azaltır. Kabızlık oluşturmak amaç olmadığı gibi bu yararın tersi olduğundan seçenek yanlıştır.",
+            "B": "Klonidin bağırsaktan tuz ve su emilimini artırır ve otonomik nöropatili diyabetiklerde diyare tedavisinde etkilidir. Klonidin alfa iki agonistidir; alfa iki aracılı etki bağırsakta tuz ve su emilimini artırarak diyareyi azaltır. Bu etki özellikle otonomik nöropatide yararlıdır.",
+            "C": "Midriyazis irisin radyal dilatör kasındaki alfa1 aktivasyonuyla oluşur ve fenilefrinle sağlanır. Klonidinin diyaredeki etkisi olmadığından seçenek yanlıştır. Klonidinin alanı diyare ve hipertansiyondur.",
+            "D": "Bronkodilatasyon bronş düz kasındaki beta2 aktivasyonuyla sağlanır. Klonidin beta2 agonisti olmadığından diyare tedavisindeki etkisi bu değildir; seçenek yanlıştır. Klonidin diyarede bağırsak emilimine etki eder.",
+            "E": "Uterus gevşemesi, ritodrin ve terbutalin gibi beta2 agonistlerin gebe uterusundaki etkisidir. Klonidin bu etkiyi yapmadığından diyare tedavisindeki yararını açıklamaz; seçenek yanlıştır."
+          },
+          "kanit": {
+            "sayfa": 68
+          },
+          "benzer_cikmis": []
+        },
+        {
+          "id": "k2-46-sempatomimetikler-q82",
+          "kazanim": 23,
+          "zorluk": "kolay",
+          "soru": "Amfetaminlerin suistimal edilmelerinin nedeni aşağıdakilerden hangisidir?",
+          "secenekler": {
+            "A": "Ağrı kesici etkileri",
+            "B": "Bronkodilatör etkileri",
+            "C": "Kas gevşetici etkileri",
+            "D": "Sedatif etkileri",
+            "E": "Öforik etkileri"
+          },
+          "dogru": "E",
+          "aciklama": "Amfetaminlerin öforik etkisi suistimal edilmelerinin nedenidir; ayrıca uyarıcı ve uyku erteleyici etkileri vardır. Bu etki amfetaminleri kötüye kullanım açısından riskli kılar.",
+          "sik_aciklamalari": {
+            "A": "Amfetaminler uyarıcı ve uyku erteleyici etkili ilaçlardır; dikkati artırırlar. Ağrı kesici etkileri öne çıkmadığından suistimal nedeni olamaz; suistimale yol açan öforik etkileridir, bu yüzden seçenek yanlıştır.",
+            "B": "Bronkodilatasyon bronş düz kasındaki beta2 aktivasyonuyla olur ve astımda kullanılır. Amfetaminlerin suistimal nedeni olmadığından seçenek yanlıştır. Suistimal nedeni öforik etkidir.",
+            "C": "Kas gevşetici etki tizanidin gibi alfa2 agonistlerine aittir. Amfetaminlerin suistimal nedeni olmadığından yanlıştır. Bu etki farklı bir ilaç grubuna aittir.",
+            "D": "Amfetaminler MSS uyarıcısıdır; uyanıklığı artırır ve uykuyu erteler. Sedatif etki yapmadıklarından suistimal nedeni olamaz; seçenek yanlıştır. Suistimal nedeni öforik etkidir.",
+            "E": "Amfetaminlerin öforik etkisi suistimal edilmelerinin nedenidir; ayrıca uyarıcı ve uyku erteleyici etkileri vardır. Bu etki amfetaminleri kötüye kullanım açısından riskli kılar."
+          },
+          "kanit": {
+            "sayfa": 66
+          },
+          "benzer_cikmis": []
+        }
+      ]
+    }
+  ],
+  "sira": 46,
+  "tarih": "2026-11-18",
+  "soru_sayisi": 82
+}

@@ -1,0 +1,43 @@
+{
+ "surum": 1,
+ "metinHash": "",
+ "dogrulama": "Ham sınav belgesi + slayt kanıtı, elle (E1, kip tam, 2026-11-18); öğrenci notu katmanı istenmedi, hoca sesi yok.",
+ "q": [
+  {
+   "id": "d3-k2-psi-017",
+   "cevap": "Ruhsal hastalığı olan kişinin olumsuz kalıp yargıları benimseyerek kendisini yetersiz ve tehlikeli görmesi",
+   "yil": "2025-2026",
+   "s": 19,
+   "seviye": "dogrudan",
+   "kanit": "gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi",
+   "kaynak": "pastQuestions.json bank id d3-k2-psi-017 (2025-2026 Dönem 3 Kurul 2 Sınavı, Psikiyatri_Kurul2_Cikmis_Sorular.json, soru 17); kök ve cevap bankadaki kayıtla birebir.",
+   "dogrulandi": true,
+   "neden": "Soru kökü 'içselleştirilmiş damgalamayı tanımlar' der; slayt 19 öz damgalamayı halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin hastanın kendisi tarafından benimsenmesi olarak tanımlar, bu B şıkkıdır. A şıkkı toplumsal damgalama, C yapısal ayrımcılık (s17), E bireysel ayrımcılıktır (s14).",
+   "kok": "Aşağıdakilerden hangisi içselleştirilmiş damgalamayı tanımlar?"
+  },
+  {
+   "id": "d3k2-2023-2024-h62",
+   "cevap": "I, II, III ve IV",
+   "yil": "2023-2024",
+   "s": 13,
+   "seviye": "dogrudan",
+   "kanit": "dünya görüsünün bütünleşmesi ile oluşan bakış açısına “tutum” denir",
+   "kaynak": "pastQuestions.json bank id d3k2-2023-2024-h62 (D3K2 2023-2024 Çıkmış.pdf, öğrenci hatırlamasından kurulmuş kayıt, Damgalama); kök bankadaki yeniden kurulmuş kökle, cevap kayıtla aynıdır.",
+   "dogrulandi": true,
+   "neden": "Damgalamayı oluşturan süreç slaytlarda stereotipi (s10), önyargı (s11), ayrımcılık (s12) ve tutum (s13) olarak sayılır; empatinin damgalama sürecindeki bir bileşen olarak geçtiği yer yoktur. Doğru cevap I, II, III ve IV'tür (C).",
+   "kok": "Kurgu Soru: Damgalamanın nedenleriyle ilgili aşağıdaki kavramlar veriliyor:\nI. Stereotipiler\nII. Önyargılar\nIII. Ayrımcılık\nIV. Tutum\nV. Empati\nBunlardan hangileri ruhsal hastalığı olan bireylerin damgalanmasına yol açan süreçte yer alır?"
+  },
+  {
+   "id": "q-2__kurul_-4",
+   "cevap": "Empati",
+   "yil": "2024-2025",
+   "s": 12,
+   "seviye": "dogrudan",
+   "kanit": "kişi için bu davranış, ayrımcılık ve dışlayıcı davranışlardır",
+   "kaynak": "pastQuestions.json bank id q-2__kurul_-4 (2024-2025, 2. kurul .pdf, Damgalama); ham kayıtta şık yoktur, kök ve şıklar hatırlamadan yeniden kurulmuştur, cevap anahtarı C (empati).",
+   "dogrulandi": true,
+   "neden": "Slayt 10-12 (s12 dahil) damgalama sürecinin bileşenlerini stereotipi, önyargı ve ayrımcılık olarak tanımlar; empati bu zincirde yer almaz. Etiketleme slaytta ayrı bileşen olarak anlatılmaz (s20'de yalnız 'etiketlendiklerinde' geçer); cevap anahtarı empatidir (C).",
+   "kok": "Kurgu Soru: Hangisi damgalama sürecinin bileşenlerinden biri değildir?"
+  }
+ ]
+}

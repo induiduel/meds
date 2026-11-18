@@ -27,7 +27,7 @@
 | `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2894 | 2026-11-17 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2576 | 2026-11-18 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 7165 | 2026-11-18 | AGENTS/CLAUDE, 12 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 7241 | 2026-11-18 | AGENTS/CLAUDE, 12 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |
@@ -40,7 +40,7 @@
 | `SORU_HAVUZU_MOTORU.md` | Soru havuzu motoru (`src/services/recall/`, hatirlama-v1 · 2026-10-13) | 940 | 2026-11-16 | 1 betik |
 | `SORU_USLUBU.md` | Örnek soru üslubu (kullanıcı kararı 2026-10-28; H119) | 344 | 2026-11-16 | 4 betik |
 | `TAHTA_OYUNLARI.md` | Tahta Oyunları — Go, Çizgi Yarışı, XOX (altyapı + kural + arayüz planı) | 1052 | 2026-11-10 | 6 betik |
-| `TAM_HAT_HIZLI_AKIS.md` | Tam içerik hattı — hızlı ve hatasız akış (kullanıcı kararı 2026-10-28) | 2290 | 2026-11-17 | AGENTS/CLAUDE, 3 betik |
+| `TAM_HAT_HIZLI_AKIS.md` | Tam içerik hattı — hızlı ve hatasız akış (kullanıcı kararı 2026-10-28) | 2290 | 2026-11-18 | AGENTS/CLAUDE, 3 betik |
 | `TURKCE_USLUP_STANDARDI.md` | Türkçe Üslup Standardı — öğrenciye okunan ve gösterilen tüm metinler (ZORUNLU) | 477 | 2026-10-18 | 39 betik |
 | `V13_ADA_PLAN.md` | v13 "Ada" — tam yeniden tasarım planı | 875 | 2026-11-16 | 1 betik |
 | `V15_PLAN.md` | v15 "Yalın" — koda geçiş planı | 2159 | 2026-11-16 | 4 betik |

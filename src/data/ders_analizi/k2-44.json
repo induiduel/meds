@@ -1,0 +1,898 @@
+{
+ "surum": 2,
+ "key": "k2-44",
+ "kod": "2s13",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Damgalama",
+ "ogretim_uyesi": "Uzm. Dr. Pınar Durmaz",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s13"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders damgalamanın tanımını, tarihçesini ve nedenlerini verir; damgalama sürecinin kavramlarını (stereotipi, önyargı, ayrımcılık, tutum), ayrımcılığın üç düzeyini ve içselleştirilmiş damgalamayı işler; damgalamayı azaltmada eğitim ve iletişimi anlatır.",
+   "maddeler": [
+    {
+     "metin": "Damgalamaya giriş"
+    },
+    {
+     "metin": "Damgalamanın etkenleri ve sonuçları"
+    },
+    {
+     "metin": "Damgalamanın sosyal biliş basamakları"
+    },
+    {
+     "metin": "Ayrımcılığın düzeyleri ve toplumsal damgalama"
+    },
+    {
+     "metin": "İçselleştirilmiş damgalama"
+    },
+    {
+     "metin": "Damgalamayla mücadele"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders damgalamanın tanımını, tarihçesini ve nedenlerini verir; damgalama sürecinin kavramlarını (stereotipi, önyargı, ayrımcılık, tutum), ayrımcılığın üç düzeyini ve içselleştirilmiş damgalamayı işler; damgalamayı azaltmada eğitim ve iletişimi anlatır.",
+    "Damgalamaya giriş.",
+    "Damgalamanın etkenleri ve sonuçları.",
+    "Damgalamanın sosyal biliş basamakları.",
+    "Ayrımcılığın düzeyleri ve toplumsal damgalama.",
+    "İçselleştirilmiş damgalama.",
+    "Damgalamayla mücadele."
+   ],
+   "v": "c5f8cb8fe1"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Damgalama, bir kişinin ya da grubun ruhsal hastalık,",
+     "metin": "Damgalama, bir kişinin ya da grubun ruhsal hastalık, etnik grup, ilaç kötüye kullanımı veya fiziksel yetersizlik gibi özelliklerine dayanarak olumsuz değerlendirilmesidir.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Cüzzam ilk damgalanan hastalıklardandır; tanrının insana verdiği bir",
+     "metin": "Cüzzam ilk damgalanan hastalıklardandır; tanrının insana verdiği bir kötülük olarak görülmüştür.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen en önemli",
+     "metin": "Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen en önemli değişken, hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanmasıdır.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Birinci etken: ruhsal hastalıklı bireylerden korkulmalı ve bu",
+     "metin": "Birinci etken: ruhsal hastalıklı bireylerden korkulmalı ve bu nedenle toplumun dışında tutulmalıdır inancıdır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Damgalamanın en acı ve yıkıcı etkisi, kişide toplumun",
+     "metin": "Damgalamanın en acı ve yıkıcı etkisi, kişide toplumun bir üyesi olmadığı duygusu bırakmasıdır.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Basmakalıp düşünceler, bir sosyal grubun birçok üyesi tarafından",
+     "metin": "Basmakalıp düşünceler, bir sosyal grubun birçok üyesi tarafından bilinen bilgi yapılarıdır.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Damgalama süreci yaşam kalitesinde azalma, düşük benlik saygısı,",
+     "metin": "Damgalama süreci yaşam kalitesinde azalma, düşük benlik saygısı, depresif belirtiler, işsizlik ve gelir kaybı, sosyal çevrenin daralması ile sonuçlanır.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Damgalanma sistematik olarak aşamalar halinde gerçekleşir ve zamanla",
+     "metin": "Damgalanma sistematik olarak aşamalar halinde gerçekleşir ve zamanla basmakalıplaşır.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Stereotipi, ruhsal hastalığı olan kişilerin nasıl oldukları konusunda",
+     "metin": "Stereotipi, ruhsal hastalığı olan kişilerin nasıl oldukları konusunda toplumun daha önce üzerinde hemfikir olduğu ortak görüşü temsil eder.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal",
+     "metin": "Önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve",
+     "metin": "Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve duygusal yanıtların davranışa yansımasıdır.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun",
+     "metin": "Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun olarak şekillenir.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Ayrımcılığın düzeylerinden biri bireyseldir.",
+     "metin": "Ayrımcılığın düzeylerinden biri bireyseldir.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Psikiyatrik bozukluğun türüne göre inançlar değişse de toplumsal",
+     "metin": "Psikiyatrik bozukluğun türüne göre inançlar değişse de toplumsal tutumlarda tehlikelilik ve zayıflık stereotipleri dikkat çeker.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Yaygın olumsuz inanışlardan biri ruhsal hastalıkların gerçek birer",
+     "metin": "Yaygın olumsuz inanışlardan biri ruhsal hastalıkların gerçek birer hastalık olmadığıdır.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri",
+     "metin": "Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasına yapısal ayrımcılık denir.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Ruhsal hastalığı olanlar açık ayrımcılığa uğramasalar bile psikiyatriye",
+     "metin": "Ruhsal hastalığı olanlar açık ayrımcılığa uğramasalar bile psikiyatriye başvurduktan ve tanı aldıktan sonra kendilerini damgalanmış hisseder.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "İçselleştirilmiş damgalama ya da öz damgalama, halkın inandığı",
+     "metin": "İçselleştirilmiş damgalama ya da öz damgalama, halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Kişi akıl hastası olarak etiketlendiğinde kendisini basmakalıpların hedefindeki",
+     "metin": "Kişi akıl hastası olarak etiketlendiğinde kendisini basmakalıpların hedefindeki grubun üyesi sayar.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Damgalayıcı tutumu değiştirmek için öne çıkan iki koşul",
+     "metin": "Damgalayıcı tutumu değiştirmek için öne çıkan iki koşul eğitim ve iletişimdir.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek",
+     "metin": "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek toplumun damgalayıcı tutumunu değiştirmeyi amaçlar.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "İletişim temelli müdahale programları yapısal damgalamanın ve öz",
+     "metin": "İletişim temelli müdahale programları yapısal damgalamanın ve öz damgalamanın etkilerini azaltır.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Damgalamaya karşı mücadelenin yanlış bilgi ve inançları değiştirmekle",
+     "metin": "Damgalamaya karşı mücadelenin yanlış bilgi ve inançları değiştirmekle başlaması gerektiği düşünülür.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Psikiyatrik bozuklukların türleri ve doğası hakkında bilgi sahibi",
+     "metin": "Psikiyatrik bozuklukların türleri ve doğası hakkında bilgi sahibi olmak toplumun davranışları üzerinde etkili olur.",
+     "s": [
+      25
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Damgalama, bir kişinin ya da grubun ruhsal hastalık,: Damgalama, bir kişinin ya da grubun ruhsal hastalık, etnik grup, ilaç kötüye kullanımı veya fiziksel yetersizlik gibi özelliklerine dayanarak olumsuz değerlendirilmesidir.",
+    "Cüzzam ilk damgalanan hastalıklardandır; tanrının insana verdiği bir: Cüzzam ilk damgalanan hastalıklardandır; tanrının insana verdiği bir kötülük olarak görülmüştür.",
+    "Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen en önemli: Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen en önemli değişken, hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanmasıdır.",
+    "Birinci etken: ruhsal hastalıklı bireylerden korkulmalı ve bu: Birinci etken: ruhsal hastalıklı bireylerden korkulmalı ve bu nedenle toplumun dışında tutulmalıdır inancıdır.",
+    "Damgalamanın en acı ve yıkıcı etkisi, kişide toplumun: Damgalamanın en acı ve yıkıcı etkisi, kişide toplumun bir üyesi olmadığı duygusu bırakmasıdır.",
+    "Basmakalıp düşünceler, bir sosyal grubun birçok üyesi tarafından: Basmakalıp düşünceler, bir sosyal grubun birçok üyesi tarafından bilinen bilgi yapılarıdır.",
+    "Damgalama süreci yaşam kalitesinde azalma, düşük benlik saygısı,: Damgalama süreci yaşam kalitesinde azalma, düşük benlik saygısı, depresif belirtiler, işsizlik ve gelir kaybı, sosyal çevrenin daralması ile sonuçlanır.",
+    "Damgalanma sistematik olarak aşamalar halinde gerçekleşir ve zamanla: Damgalanma sistematik olarak aşamalar halinde gerçekleşir ve zamanla basmakalıplaşır.",
+    "Stereotipi, ruhsal hastalığı olan kişilerin nasıl oldukları konusunda: Stereotipi, ruhsal hastalığı olan kişilerin nasıl oldukları konusunda toplumun daha önce üzerinde hemfikir olduğu ortak görüşü temsil eder.",
+    "Önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal: Önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir.",
+    "Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve: Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve duygusal yanıtların davranışa yansımasıdır.",
+    "Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun: Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun olarak şekillenir.",
+    "Ayrımcılığın düzeylerinden biri bireyseldir.: Ayrımcılığın düzeylerinden biri bireyseldir.",
+    "Psikiyatrik bozukluğun türüne göre inançlar değişse de toplumsal: Psikiyatrik bozukluğun türüne göre inançlar değişse de toplumsal tutumlarda tehlikelilik ve zayıflık stereotipleri dikkat çeker.",
+    "Yaygın olumsuz inanışlardan biri ruhsal hastalıkların gerçek birer: Yaygın olumsuz inanışlardan biri ruhsal hastalıkların gerçek birer hastalık olmadığıdır.",
+    "Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri: Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasına yapısal ayrımcılık denir.",
+    "Ruhsal hastalığı olanlar açık ayrımcılığa uğramasalar bile psikiyatriye: Ruhsal hastalığı olanlar açık ayrımcılığa uğramasalar bile psikiyatriye başvurduktan ve tanı aldıktan sonra kendilerini damgalanmış hisseder.",
+    "İçselleştirilmiş damgalama ya da öz damgalama, halkın inandığı: İçselleştirilmiş damgalama ya da öz damgalama, halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+    "Kişi akıl hastası olarak etiketlendiğinde kendisini basmakalıpların hedefindeki: Kişi akıl hastası olarak etiketlendiğinde kendisini basmakalıpların hedefindeki grubun üyesi sayar.",
+    "Damgalayıcı tutumu değiştirmek için öne çıkan iki koşul: Damgalayıcı tutumu değiştirmek için öne çıkan iki koşul eğitim ve iletişimdir.",
+    "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek: Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek toplumun damgalayıcı tutumunu değiştirmeyi amaçlar.",
+    "İletişim temelli müdahale programları yapısal damgalamanın ve öz: İletişim temelli müdahale programları yapısal damgalamanın ve öz damgalamanın etkilerini azaltır.",
+    "Damgalamaya karşı mücadelenin yanlış bilgi ve inançları değiştirmekle: Damgalamaya karşı mücadelenin yanlış bilgi ve inançları değiştirmekle başlaması gerektiği düşünülür.",
+    "Psikiyatrik bozuklukların türleri ve doğası hakkında bilgi sahibi: Psikiyatrik bozuklukların türleri ve doğası hakkında bilgi sahibi olmak toplumun davranışları üzerinde etkili olur."
+   ],
+   "v": "a47ac050aa"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Doğrulanmış üç çıkmış soru (2023-24, 2024-25, 2025-26) öz damgalamanın tanımını ve damgalama sürecinin kavramlarını (empati bu kavramlardan biri değildir) ölçmüştür; geçen yılın öğrenci notu da bu iki konuyu işaretlemiştir.",
+   "maddeler": [
+    {
+     "baslik": "İçselleştirilmiş (öz) damgalama",
+     "metin": "İçselleştirilmiş damgalama (öz damgalama), halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+     "neden": "2025-26 sınavında öz damgalamanın tanımı soruldu; geçen yılın öğrenci notunda da bu tanım işaretlenmiş.",
+     "s": [
+      19
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Damgalama sürecinde yer alan kavramlar: stereotipi, önyargı, ayrımcılık ve tutum",
+     "metin": "Damgalama sürecinde stereotipi, önyargı, ayrımcılık ve tutum yer alır; empati bu kavramlardan biri değildir.",
+     "neden": "2023-24 ve 2024-25 sınavlarında bu kavramlar soruldu; \"damgalama bileşeni olmayan\" sorusunun yanıtı empatidir.",
+     "s": [
+      10,
+      11,
+      13
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Stereotipi",
+     "metin": "Stereotipi, toplumun ruhsal hastalığı olan kişilerin nasıl olduğu konusunda önceden hemfikir olduğu ortak görüştür; olumlu ya da olumsuz olabilir.",
+     "neden": "Slaytta ayrı bir tanım başlığıyla verilir (sayfa 10); 2023-24 sınavındaki h62 sorusunda seçenek I olarak geçer.",
+     "s": [
+      10
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Önyargı",
+     "metin": "Önyargılar stereotipileri destekler; hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır.",
+     "neden": "Geçen yılın öğrenci notunda önyargı başlığı çıkmış soru sinyaliyle işaretlenmiş (A birimi).",
+     "s": [
+      7,
+      11
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Damgalamada tanımlanan üç etken",
+     "metin": "Damgalamada korku ve dışarıda bırakma, otoriterlik ve yardımseverlik olmak üzere üç etken tanımlanmıştır.",
+     "neden": "Geçen yılın öğrencileri üç etkenin adlarını sarıyla işaretlemiş; öz damgalama sorusu da bu birimle ilişkilidir (A birimi).",
+     "s": [
+      5
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Ayrımcılığın üç düzeyi",
+     "metin": "Çalışmalarda ayrımcılığın üç düzeyi tanımlanmıştır: bireysel, toplumsal/yapısal ve kendini damgalama.",
+     "neden": "Slaytta sayı ve üç düzey açıkça verilir; öz damgalamanın ayrımcılık içindeki yerini gösterir.",
+     "s": [
+      14
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Ayrımcılık ve önyargının davranışsal sonucu",
+     "metin": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır; önyargı davranışsal tepki olarak ayırıma neden olur ve korku kaçınma davranışına yol açar.",
+     "neden": "Slaytta önyargıdan ayrımcılığa geçiş işveren örneğiyle somutlaştırılır.",
+     "s": [
+      7,
+      12
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Toplumun ruhsal hastalıklara tutumunu belirleyen en önemli değişken",
+     "metin": "Toplumun tutumunu belirleyen en önemli değişken, hastaların \"tehlikeli\" ve \"ne zaman ne yapacağı bilinmeyen\" kişiler olarak algılanmasıdır.",
+     "neden": "Slayt bu değişkeni \"en önemli\" diye vurgular; neden damgalandıkları sorusunun yanıtıdır.",
+     "s": [
+      4
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Doğrulanmış üç çıkmış soru (2023-24, 2024-25, 2025-26) öz damgalamanın tanımını ve damgalama sürecinin kavramlarını (empati bu kavramlardan biri değildir) ölçmüştür; geçen yılın öğrenci notu da bu iki konuyu işaretlemiştir.",
+    "İçselleştirilmiş (öz) damgalama: İçselleştirilmiş damgalama (öz damgalama), halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+    "Damgalama sürecinde yer alan kavramlar: stereotipi, önyargı, ayrımcılık ve tutum: Damgalama sürecinde stereotipi, önyargı, ayrımcılık ve tutum yer alır; empati bu kavramlardan biri değildir.",
+    "Stereotipi: Stereotipi, toplumun ruhsal hastalığı olan kişilerin nasıl olduğu konusunda önceden hemfikir olduğu ortak görüştür; olumlu ya da olumsuz olabilir.",
+    "Önyargı: Önyargılar stereotipileri destekler; hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır.",
+    "Damgalamada tanımlanan üç etken: Damgalamada korku ve dışarıda bırakma, otoriterlik ve yardımseverlik olmak üzere üç etken tanımlanmıştır.",
+    "Ayrımcılığın üç düzeyi: Çalışmalarda ayrımcılığın üç düzeyi tanımlanmıştır: bireysel, toplumsal/yapısal ve kendini damgalama.",
+    "Ayrımcılık ve önyargının davranışsal sonucu: Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır; önyargı davranışsal tepki olarak ayırıma neden olur ve korku kaçınma davranışına yol açar.",
+    "Toplumun ruhsal hastalıklara tutumunu belirleyen en önemli değişken: Toplumun tutumunu belirleyen en önemli değişken, hastaların \"tehlikeli\" ve \"ne zaman ne yapacağı bilinmeyen\" kişiler olarak algılanmasıdır."
+   ],
+   "v": "9816efe19b"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin üç çıkmışı damgalama sürecinin kavramları üzerinde toplanır: damgalamayı oluşturan stereotipi, önyargı, ayrımcılık ve tutum zinciri (sayfa 10-13), empatinin bu zincirde yer almaması (sayfa 12) ve içselleştirilmiş damgalamanın tanımı (sayfa 19). Sorular tanımı terimle, terimi tanımla eşleştirmeyi ve zincire ait olmayan kavramı bulmayı sınar. Bu yüzden her kavramı kısa bir tanımla ve süreçteki sırasıyla öğrenmek gerekir.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi içselleştirilmiş damgalamayı tanımlar?",
+     "cevap": "Ruhsal hastalığı olan kişinin olumsuz kalıp yargıları benimseyerek kendisini yetersiz ve tehlikeli görmesi",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru, içselleştirilmiş damgalamanın tanımını toplumsal damgalama, yapısal ayrımcılık ve bireysel ayrımcılıktan ayırmayı ölçer.",
+      "Doğru cevap sayfa 19'a dayanır: içselleştirilmiş ya da öz damgalama, halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir; kişi kendisini yetersiz ve tehlikeli görür.",
+      "En güçlü çeldirici toplumun hastaları tehlikeli ve öngörülemez algılamasıdır; bu, damgalayan tarafın tutumudur ve kişinin kendisinde gelişen öz damgalama değildir. Bütçe ve sigorta kapsamı seçeneği sayfa 17'deki yapısal ayrımcılığı, işe alımdaki ayrımcılık ise bireysel düzeyi anlatır."
+     ],
+     "ornek": "Psikotik bozukluk tanısı alan bir kişi, insanların hastaları tehlikeli bulduğunu duyduktan sonra kendisi için de aynısını düşünür ve insanlardan uzaklaşır; bu tablo içselleştirilmiş damgalamadır.",
+     "tuzak": "Toplumun hastayı tehlikeli algılaması ile hastanın bu görüşü kendisi için benimsemesi karıştırılır; öz damgalamada görüşü benimseyen hastanın kendisidir."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Kurgu Soru: Damgalamanın nedenleriyle ilgili aşağıdaki kavramlar veriliyor: I. Stereotipiler II. Önyargılar III. Ayrımcılık IV. Tutum V. Empati Bunlardan hangileri ruhsal hastalığı olan bireylerin damgalanmasına yol açan süreçte yer alır?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru, damgalama sürecinde yer alan kavramları sayarak empatiyi çeldirici olarak ayırmayı ölçer.",
+      "Doğru cevap sayfa 10-13'e dayanır: stereotipi toplumun ortak görüşüdür, önyargı stereotipiyi destekleyip olumsuz duygu doğurur, ayrımcılık bunun davranışa yansımasıdır ve tutum bakış açısının dünya görüşüyle bütünleşmesidir; dört kavram süreçte yer alır.",
+      "En güçlü çeldirici beşinci kavram olarak empatiyi de içeren şıktır; empati bu zincirde anlatılmaz. Yalnız ilk iki ya da üç kavramı sayan şıklar ise eksiktir, çünkü ayrımcılık ve tutum da süreçte yer alır."
+     ],
+     "ornek": "Damgalama sürecini sıralayan bir öğrenci toplumun ortak görüşünden başlayıp duygusal tepkiye, davranışa ve en sonda bakış açısının oluşmasına gider; bu sırada empatiye yer vermez.",
+     "tuzak": "Tutumun süreçten ayrı bir kavram sanılıp ayrımcılığa kadar sayılması ve empatinin zincire eklenmesi."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kurgu Soru: Hangisi damgalama sürecinin bileşenlerinden biri değildir?",
+     "cevap": "Empati",
+     "s": [
+      12
+     ],
+     "aciklama": [
+      "Soru, damgalama sürecinin bileşenlerini bilip zincirde olmayan kavramı bulmayı ölçer.",
+      "Doğru cevap empatidir: sayfa 10-12'de süreç stereotipi, önyargı ve ayrımcılık olarak tanımlanır ve empati bu kavramlar arasında anlatılmaz.",
+      "Stereotipler, önyargı ve ayrımcılık şıkları sürecin bileşenleridir. Etiketleme şıkkı slaytlarda ayrı bir bileşen olarak anlatılmaz, yalnız sayfa 20'de kişinin akıl hastası olarak etiketlenmesinden söz edilir; bu yüzden asıl ayrım empati ile süreç kavramları arasındadır."
+     ],
+     "ornek": "Aşağıdaki kavramlardan hangisi ruhsal hastalığı olan kişiye karşı oluşan olumsuz süreçte yer almaz: toplumun ortak görüşü, olumsuz duygu, dışlayıcı davranış ya da empati.",
+     "tuzak": "Empati ve etiketlemenin damgalama bileşeni sanılması; slayta göre süreç stereotipi, önyargı ve ayrımcılıktan oluşur."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin üç çıkmışı damgalama sürecinin kavramları üzerinde toplanır: damgalamayı oluşturan stereotipi, önyargı, ayrımcılık ve tutum zinciri (sayfa 10-13), empatinin bu zincirde yer almaması (sayfa 12) ve içselleştirilmiş damgalamanın tanımı (sayfa 19). Sorular tanımı terimle, terimi tanımla eşleştirmeyi ve zincire ait olmayan kavramı bulmayı sınar. Bu yüzden her kavramı kısa bir tanımla ve süreçteki sırasıyla öğrenmek gerekir.",
+    "2025-2026: Aşağıdakilerden hangisi içselleştirilmiş damgalamayı tanımlar?",
+    "Cevap: Ruhsal hastalığı olan kişinin olumsuz kalıp yargıları benimseyerek kendisini yetersiz ve tehlikeli görmesi.",
+    "Soru, içselleştirilmiş damgalamanın tanımını toplumsal damgalama, yapısal ayrımcılık ve bireysel ayrımcılıktan ayırmayı ölçer.",
+    "Doğru cevap sayfa 19'a dayanır: içselleştirilmiş ya da öz damgalama, halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir; kişi kendisini yetersiz ve tehlikeli görür.",
+    "En güçlü çeldirici toplumun hastaları tehlikeli ve öngörülemez algılamasıdır; bu, damgalayan tarafın tutumudur ve kişinin kendisinde gelişen öz damgalama değildir. Bütçe ve sigorta kapsamı seçeneği sayfa 17'deki yapısal ayrımcılığı, işe alımdaki ayrımcılık ise bireysel düzeyi anlatır.",
+    "Örnek: Psikotik bozukluk tanısı alan bir kişi, insanların hastaları tehlikeli bulduğunu duyduktan sonra kendisi için de aynısını düşünür ve insanlardan uzaklaşır; bu tablo içselleştirilmiş damgalamadır.",
+    "Tuzak: Toplumun hastayı tehlikeli algılaması ile hastanın bu görüşü kendisi için benimsemesi karıştırılır; öz damgalamada görüşü benimseyen hastanın kendisidir.",
+    "2023-2024: Kurgu Soru: Damgalamanın nedenleriyle ilgili aşağıdaki kavramlar veriliyor: I. Stereotipiler II. Önyargılar III. Ayrımcılık IV. Tutum V. Empati Bunlardan hangileri ruhsal hastalığı olan bireylerin damgalanmasına yol açan süreçte yer alır?",
+    "Cevap: I, II, III ve IV.",
+    "Soru, damgalama sürecinde yer alan kavramları sayarak empatiyi çeldirici olarak ayırmayı ölçer.",
+    "Doğru cevap sayfa 10-13'e dayanır: stereotipi toplumun ortak görüşüdür, önyargı stereotipiyi destekleyip olumsuz duygu doğurur, ayrımcılık bunun davranışa yansımasıdır ve tutum bakış açısının dünya görüşüyle bütünleşmesidir; dört kavram süreçte yer alır.",
+    "En güçlü çeldirici beşinci kavram olarak empatiyi de içeren şıktır; empati bu zincirde anlatılmaz. Yalnız ilk iki ya da üç kavramı sayan şıklar ise eksiktir, çünkü ayrımcılık ve tutum da süreçte yer alır.",
+    "Örnek: Damgalama sürecini sıralayan bir öğrenci toplumun ortak görüşünden başlayıp duygusal tepkiye, davranışa ve en sonda bakış açısının oluşmasına gider; bu sırada empatiye yer vermez.",
+    "Tuzak: Tutumun süreçten ayrı bir kavram sanılıp ayrımcılığa kadar sayılması ve empatinin zincire eklenmesi.",
+    "2024-2025: Kurgu Soru: Hangisi damgalama sürecinin bileşenlerinden biri değildir?",
+    "Cevap: Empati.",
+    "Soru, damgalama sürecinin bileşenlerini bilip zincirde olmayan kavramı bulmayı ölçer.",
+    "Doğru cevap empatidir: sayfa 10-12'de süreç stereotipi, önyargı ve ayrımcılık olarak tanımlanır ve empati bu kavramlar arasında anlatılmaz.",
+    "Stereotipler, önyargı ve ayrımcılık şıkları sürecin bileşenleridir. Etiketleme şıkkı slaytlarda ayrı bir bileşen olarak anlatılmaz, yalnız sayfa 20'de kişinin akıl hastası olarak etiketlenmesinden söz edilir; bu yüzden asıl ayrım empati ile süreç kavramları arasındadır.",
+    "Örnek: Aşağıdaki kavramlardan hangisi ruhsal hastalığı olan kişiye karşı oluşan olumsuz süreçte yer almaz: toplumun ortak görüşü, olumsuz duygu, dışlayıcı davranış ya da empati.",
+    "Tuzak: Empati ve etiketlemenin damgalama bileşeni sanılması; slayta göre süreç stereotipi, önyargı ve ayrımcılıktan oluşur."
+   ],
+   "v": "5b232731db"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Hocanın çok sayıda çıkmış sorusuna dayanan, güvenilir bir profil.",
+   "guven": "yuksek",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%44) ve tanı ve ayırıcı tanı (%20) sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%53) ve hatırlama (%38) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın çok sayıda çıkmış sorusuna dayanan, güvenilir bir profil.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%44) ve tanı ve ayırıcı tanı (%20) sorulur.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%53) ve hatırlama (%38) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+   ],
+   "v": "a671c02d38"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "İçselleştirilmiş damgalama ya da öz damgalama, halkın inandığı",
+     "metin": "Sık yapılan hata: Toplumun hastayı tehlikeli algılaması ile hastanın bu görüşü kendisi için benimsemesi karıştırılır; öz damgalamada görüşü benimseyen hastanın kendisidir."
+    },
+    {
+     "baslik": "Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun",
+     "metin": "Sık yapılan hata: Tutumun süreçten ayrı bir kavram sanılıp ayrımcılığa kadar sayılması ve empatinin zincire eklenmesi."
+    },
+    {
+     "baslik": "Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve",
+     "metin": "Sık yapılan hata: Empati ve etiketlemenin damgalama bileşeni sanılması; slayta göre süreç stereotipi, önyargı ve ayrımcılıktan oluşur."
+    },
+    {
+     "baslik": "İçselleştirilmiş (öz) damgalama",
+     "metin": "2025-26 sınavında öz damgalamanın tanımı soruldu; geçen yılın öğrenci notunda da bu tanım işaretlenmiş."
+    },
+    {
+     "baslik": "Damgalama sürecinde yer alan kavramlar: stereotipi, önyargı, ayrımcılık ve tutum",
+     "metin": "2023-24 ve 2024-25 sınavlarında bu kavramlar soruldu; \"damgalama bileşeni olmayan\" sorusunun yanıtı empatidir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; profilde en yüksek payı bu tür alıyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "İçselleştirilmiş damgalama ya da öz damgalama, halkın inandığı: Sık yapılan hata: Toplumun hastayı tehlikeli algılaması ile hastanın bu görüşü kendisi için benimsemesi karıştırılır; öz damgalamada görüşü benimseyen hastanın kendisidir.",
+    "Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun: Sık yapılan hata: Tutumun süreçten ayrı bir kavram sanılıp ayrımcılığa kadar sayılması ve empatinin zincire eklenmesi.",
+    "Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve: Sık yapılan hata: Empati ve etiketlemenin damgalama bileşeni sanılması; slayta göre süreç stereotipi, önyargı ve ayrımcılıktan oluşur.",
+    "İçselleştirilmiş (öz) damgalama: 2025-26 sınavında öz damgalamanın tanımı soruldu; geçen yılın öğrenci notunda da bu tanım işaretlenmiş.",
+    "Damgalama sürecinde yer alan kavramlar: stereotipi, önyargı, ayrımcılık ve tutum: 2023-24 ve 2024-25 sınavlarında bu kavramlar soruldu; \"damgalama bileşeni olmayan\" sorusunun yanıtı empatidir.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; profilde en yüksek payı bu tür alıyor."
+   ],
+   "v": "5ada6ecff2"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders damgalamanın tanımını, tarihçesini ve nedenlerini verir; damgalama sürecinin kavramlarını (stereotipi, önyargı, ayrımcılık, tutum), ayrımcılığın üç düzeyini ve içselleştirilmiş damgalamayı işler; damgalamayı azaltmada eğitim ve iletişimi anlatır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders damgalamanın tanımını, tarihçesini ve nedenlerini verir; damgalama sürecinin kavramlarını (stereotipi, önyargı, ayrımcılık, tutum), ayrımcılığın üç düzeyini ve içselleştirilmiş damgalamayı işler; damgalamayı azaltmada eğitim ve iletişimi anlatır."
+   ],
+   "v": "7753b2a636"
+  },
+  {
+   "id": "2s13-08",
+   "baslik": "Toplumun ruhsal hastalıklara tutumunu belirleyen en önemli değişken",
+   "giris": "Toplumun tutumunu belirleyen en önemli değişken, hastaların \"tehlikeli\" ve \"ne zaman ne yapacağı bilinmeyen\" kişiler olarak algılanmasıdır.",
+   "s": [
+    4
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "hastaların \"tehlikeli\" ve \"ne zaman ne yapacağı bilinmeyen kişiler\" olarak algılanmasıdır."
+    },
+    {
+     "metin": "hastaların önceden kestirilemeyen, alışılmışın dışında davranışları ve düzeni bozmaları toplumda kaygı uyandırır."
+    },
+    {
+     "metin": "birey ya da toplum kendisini ürküten, rahatsız eden bir durumla karşılaştığında sıklıkla onu kendisinden dışlayıp yabancılaştırma yoluna gider."
+    },
+    {
+     "metin": "toplum açısından düzeni bozan, huzursuzluk yaratan ve toplumsal yaşantı için tekin olmayan kişiler damgalanıp toplum dışına itilirler."
+    },
+    {
+     "metin": "bu algı, stereotipinin içeriğiyle de aynıdır."
+    }
+   ],
+   "klip": "o-2s13-08",
+   "ses": [
+    "Toplumun ruhsal hastalıklara tutumunu belirleyen en önemli değişken.",
+    "Toplumun tutumunu belirleyen en önemli değişken, hastaların \"tehlikeli\" ve \"ne zaman ne yapacağı bilinmeyen\" kişiler olarak algılanmasıdır.",
+    "hastaların \"tehlikeli\" ve \"ne zaman ne yapacağı bilinmeyen kişiler\" olarak algılanmasıdır.",
+    "hastaların önceden kestirilemeyen, alışılmışın dışında davranışları ve düzeni bozmaları toplumda kaygı uyandırır.",
+    "birey ya da toplum kendisini ürküten, rahatsız eden bir durumla karşılaştığında sıklıkla onu kendisinden dışlayıp yabancılaştırma yoluna gider.",
+    "toplum açısından düzeni bozan, huzursuzluk yaratan ve toplumsal yaşantı için tekin olmayan kişiler damgalanıp toplum dışına itilirler.",
+    "bu algı, stereotipinin içeriğiyle de aynıdır."
+   ],
+   "v": "88db193635"
+  },
+  {
+   "id": "2s13-05",
+   "baslik": "Damgalamada tanımlanan üç etken",
+   "giris": "Damgalamada korku ve dışarıda bırakma, otoriterlik ve yardımseverlik olmak üzere üç etken tanımlanmıştır.",
+   "s": [
+    5
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "ruhsal hastalıklı bireylerden korkulmalıdır ve bu nedenle toplumun dışında tutulmalıdırlar."
+    },
+    {
+     "metin": "ruhsal hastalıklı bireyler sorumsuzdur, bu nedenle kararlar diğerleri tarafından verilmelidir."
+    },
+    {
+     "metin": "şiddetli ruhsal hastalığı olan bireyler çocuk gibidir ve bakıma ihtiyaçları vardır."
+    },
+    {
+     "metin": "ruhsal hastalıklı bireyler hastalıklarının nedeni için sorumlu olarak görülmektedirler."
+    },
+    {
+     "metin": "bu tutumlar ayırımcı davranışlara öncülük etmektedir."
+    },
+    {
+     "metin": "dışlama için korku, karar verme yetkisini almak için otoriterlik, çocuk gibi görüp bakım sunmak için yardımseverlik gerekçe gösterilir."
+    }
+   ],
+   "klip": "o-2s13-05",
+   "ses": [
+    "Damgalamada tanımlanan üç etken.",
+    "Damgalamada korku ve dışarıda bırakma, otoriterlik ve yardımseverlik olmak üzere üç etken tanımlanmıştır.",
+    "ruhsal hastalıklı bireylerden korkulmalıdır ve bu nedenle toplumun dışında tutulmalıdırlar.",
+    "ruhsal hastalıklı bireyler sorumsuzdur, bu nedenle kararlar diğerleri tarafından verilmelidir.",
+    "şiddetli ruhsal hastalığı olan bireyler çocuk gibidir ve bakıma ihtiyaçları vardır.",
+    "ruhsal hastalıklı bireyler hastalıklarının nedeni için sorumlu olarak görülmektedirler.",
+    "bu tutumlar ayırımcı davranışlara öncülük etmektedir.",
+    "dışlama için korku, karar verme yetkisini almak için otoriterlik, çocuk gibi görüp bakım sunmak için yardımseverlik gerekçe gösterilir."
+   ],
+   "v": "f4eed56c0c"
+  },
+  {
+   "id": "2s13-04",
+   "baslik": "Önyargı",
+   "giris": "Önyargılar stereotipileri destekler; hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır.",
+   "s": [
+    7,
+    11
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir."
+    },
+    {
+     "metin": "önyargılar sonucu hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır."
+    },
+    {
+     "metin": "önyargılı insanlar olumsuz basmakalıpları (\"ruhsal hastalıklı bütün insanlar saldırgandır\") onaylar ve olumsuz duygusal tepkiler gösterir (\"onların hepsi beni ürkütür\")."
+    },
+    {
+     "metin": "önyargı davranışsal tepki olarak ayırıma neden olur; korku ise kaçınma davranışına yol açar."
+    }
+   ],
+   "klip": "o-2s13-04",
+   "ses": [
+    "Önyargı.",
+    "Önyargılar stereotipileri destekler; hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır.",
+    "önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir.",
+    "önyargılar sonucu hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır.",
+    "önyargılı insanlar olumsuz basmakalıpları (\"ruhsal hastalıklı bütün insanlar saldırgandır\") onaylar ve olumsuz duygusal tepkiler gösterir (\"onların hepsi beni ürkütür\").",
+    "önyargı davranışsal tepki olarak ayırıma neden olur; korku ise kaçınma davranışına yol açar."
+   ],
+   "v": "44b0030043"
+  },
+  {
+   "id": "2s13-07",
+   "baslik": "Ayrımcılık ve önyargının davranışsal sonucu",
+   "giris": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır; önyargı davranışsal tepki olarak ayırıma neden olur ve korku kaçınma davranışına yol açar.",
+   "s": [
+    7,
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "ayrımcılık, değerlendirilen bir durum sonucu ortaya çıkan bilişsel ve duygusal yanıtların davranışa yansımasıdır."
+    },
+    {
+     "metin": "bu davranış ayrımcılık ve dışlayıcı davranışlardır."
+    },
+    {
+     "metin": "önyargılı davranışların sonucu olabileceği gibi bireyin olumsuz stereotipilere sahip olması sonucunda da ortaya çıkabilir."
+    },
+    {
+     "metin": "önyargı davranışsal tepki olarak ayırıma neden olur; korku kaçınma davranışına neden olur."
+    },
+    {
+     "metin": "işverenler çevrelerinde ruhsal hastalıklı bireyler istemezler ve onlara yaptıkları iş için ücret ödemezler; bu, ayrımcılığın davranışsal örneğidir."
+    }
+   ],
+   "klip": "o-2s13-07",
+   "ses": [
+    "Ayrımcılık ve önyargının davranışsal sonucu.",
+    "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır; önyargı davranışsal tepki olarak ayırıma neden olur ve korku kaçınma davranışına yol açar.",
+    "ayrımcılık, değerlendirilen bir durum sonucu ortaya çıkan bilişsel ve duygusal yanıtların davranışa yansımasıdır.",
+    "bu davranış ayrımcılık ve dışlayıcı davranışlardır.",
+    "önyargılı davranışların sonucu olabileceği gibi bireyin olumsuz stereotipilere sahip olması sonucunda da ortaya çıkabilir.",
+    "önyargı davranışsal tepki olarak ayırıma neden olur; korku kaçınma davranışına neden olur.",
+    "işverenler çevrelerinde ruhsal hastalıklı bireyler istemezler ve onlara yaptıkları iş için ücret ödemezler; bu, ayrımcılığın davranışsal örneğidir."
+   ],
+   "v": "db059a3733"
+  },
+  {
+   "id": "2s13-02",
+   "baslik": "Damgalama sürecinde yer alan kavramlar: stereotipi, önyargı, ayrımcılık ve tutum",
+   "giris": "Damgalama sürecinde stereotipi, önyargı, ayrımcılık ve tutum yer alır; empati bu kavramlardan biri değildir.",
+   "s": [
+    10,
+    11,
+    13
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "toplumların ortak görüşünü temsil eder; ruhsal hastalığı olan kişilerin nasıl olduğu konusunda toplumun önceden hemfikir olduğu kavramdır."
+    },
+    {
+     "metin": "stereotipileri destekler; sonucunda öfke ve korku gibi olumsuz duygusal tepkiler gelişir."
+    },
+    {
+     "metin": "bilişsel ve duygusal yanıtların davranışa yansımasıdır; ruhsal hastalığı olan kişi için bu davranış ayrımcılık ve dışlayıcı davranışlardır."
+    },
+    {
+     "metin": "kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır; insanlar ruhsal bozukluğu olan bireylere yönelik genellikle olumsuz tutumlara sahiptir."
+    },
+    {
+     "metin": "ders sürece stereotipi, önyargı, ayrımcılık ve tutumu yerleştirir; empati bu kavramlar arasında anılmaz, dolayısıyla damgalamanın bileşenlerinden biri değildir."
+    }
+   ],
+   "klip": "o-2s13-02",
+   "ses": [
+    "Damgalama sürecinde yer alan kavramlar: stereotipi, önyargı, ayrımcılık ve tutum.",
+    "Damgalama sürecinde stereotipi, önyargı, ayrımcılık ve tutum yer alır; empati bu kavramlardan biri değildir.",
+    "toplumların ortak görüşünü temsil eder; ruhsal hastalığı olan kişilerin nasıl olduğu konusunda toplumun önceden hemfikir olduğu kavramdır.",
+    "stereotipileri destekler; sonucunda öfke ve korku gibi olumsuz duygusal tepkiler gelişir.",
+    "bilişsel ve duygusal yanıtların davranışa yansımasıdır; ruhsal hastalığı olan kişi için bu davranış ayrımcılık ve dışlayıcı davranışlardır.",
+    "kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır; insanlar ruhsal bozukluğu olan bireylere yönelik genellikle olumsuz tutumlara sahiptir.",
+    "ders sürece stereotipi, önyargı, ayrımcılık ve tutumu yerleştirir; empati bu kavramlar arasında anılmaz, dolayısıyla damgalamanın bileşenlerinden biri değildir."
+   ],
+   "v": "0792dfa4c1"
+  },
+  {
+   "id": "2s13-03",
+   "baslik": "Stereotipi",
+   "giris": "Stereotipi, toplumun ruhsal hastalığı olan kişilerin nasıl olduğu konusunda önceden hemfikir olduğu ortak görüştür; olumlu ya da olumsuz olabilir.",
+   "s": [
+    10
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "stereotipi, toplumların ortak görüşünü temsil eder; ruhsal hastalığı olan kişilerin nasıl olduğu konusunda toplumun daha önce üzerinde hemfikir olduğu kavramdır."
+    },
+    {
+     "metin": "\"hasta bir kişi\" denildiğinde kişi durumu öncelikle stereotipiler eşliğinde algılar."
+    },
+    {
+     "metin": "stereotipiler olumlu ve olumsuz şeklinde gruplanır."
+    },
+    {
+     "metin": "birçok çalışma toplumdaki ruhsal bozukluğu olan birey için oluşan stereotipinin \"tehlikeli\" ve \"ne yapacağı belli olmayan birey\" olduğunu göstermiştir."
+    },
+    {
+     "metin": "önyargı stereotipiyi destekler; bu nedenle önyargı ile karıştırılmamalıdır."
+    }
+   ],
+   "klip": "o-2s13-03",
+   "ses": [
+    "Stereotipi.",
+    "Stereotipi, toplumun ruhsal hastalığı olan kişilerin nasıl olduğu konusunda önceden hemfikir olduğu ortak görüştür; olumlu ya da olumsuz olabilir.",
+    "stereotipi, toplumların ortak görüşünü temsil eder; ruhsal hastalığı olan kişilerin nasıl olduğu konusunda toplumun daha önce üzerinde hemfikir olduğu kavramdır.",
+    "\"hasta bir kişi\" denildiğinde kişi durumu öncelikle stereotipiler eşliğinde algılar.",
+    "stereotipiler olumlu ve olumsuz şeklinde gruplanır.",
+    "birçok çalışma toplumdaki ruhsal bozukluğu olan birey için oluşan stereotipinin \"tehlikeli\" ve \"ne yapacağı belli olmayan birey\" olduğunu göstermiştir.",
+    "önyargı stereotipiyi destekler; bu nedenle önyargı ile karıştırılmamalıdır."
+   ],
+   "v": "3dea3c4b01"
+  },
+  {
+   "id": "2s13-10",
+   "baslik": "Tutum",
+   "giris": "Tutum, kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan, büyüdüğü topluma uygun şekillenen bakış açısıdır.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun olarak şekillenir."
+    },
+    {
+     "metin": "bu bakış açısı kişinin olaylar karşısında verdiği duygusal reaksiyonları da etkiler."
+    },
+    {
+     "metin": "bazen pozitif bazen negatif olur."
+    },
+    {
+     "metin": "kişideki bu reaksiyonlar ve dünya görüşünün bütünleşmesi ile oluşan bakış açısına \"tutum\" denir."
+    },
+    {
+     "metin": "insanlar ruhsal bozukluğu olan bireylere yönelik genellikle olumsuz tutumlara sahiptir."
+    }
+   ],
+   "klip": "o-2s13-10",
+   "ses": [
+    "Tutum.",
+    "Tutum, kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan, büyüdüğü topluma uygun şekillenen bakış açısıdır.",
+    "kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun olarak şekillenir.",
+    "bu bakış açısı kişinin olaylar karşısında verdiği duygusal reaksiyonları da etkiler.",
+    "bazen pozitif bazen negatif olur.",
+    "kişideki bu reaksiyonlar ve dünya görüşünün bütünleşmesi ile oluşan bakış açısına \"tutum\" denir.",
+    "insanlar ruhsal bozukluğu olan bireylere yönelik genellikle olumsuz tutumlara sahiptir."
+   ],
+   "v": "5479ba8b37"
+  },
+  {
+   "id": "2s13-06",
+   "baslik": "Ayrımcılığın üç düzeyi",
+   "giris": "Çalışmalarda ayrımcılığın üç düzeyi tanımlanmıştır: bireysel, toplumsal/yapısal ve kendini damgalama.",
+   "s": [
+    14
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "ayrımcılığın düzeyleri üçtür; dört değildir."
+    },
+    {
+     "metin": "kişilerin tutum ve düşüncelerinden doğan ayrımcılıktır."
+    },
+    {
+     "metin": "toplumda yaygın olumsuz inanışlar (toplumsal) ile toplumsal kurallar ve düzenlemelerin sistematik biçimde ruhsal hastalığı olan bireyleri sıkıntıya sokması (yapısal) bu düzeydedir."
+    },
+    {
+     "metin": "içselleştirilmiş damgalamadır; kişi damgalayıcı görüşleri kendine uygular."
+    },
+    {
+     "metin": "stereotipi, önyargı ve tutum damgalama sürecinin kavramlarıdır, ayrımcılığın düzeyi değildir."
+    }
+   ],
+   "klip": "o-2s13-06",
+   "ses": [
+    "Ayrımcılığın üç düzeyi.",
+    "Çalışmalarda ayrımcılığın üç düzeyi tanımlanmıştır: bireysel, toplumsal/yapısal ve kendini damgalama.",
+    "ayrımcılığın düzeyleri üçtür; dört değildir.",
+    "kişilerin tutum ve düşüncelerinden doğan ayrımcılıktır.",
+    "toplumda yaygın olumsuz inanışlar (toplumsal) ile toplumsal kurallar ve düzenlemelerin sistematik biçimde ruhsal hastalığı olan bireyleri sıkıntıya sokması (yapısal) bu düzeydedir.",
+    "içselleştirilmiş damgalamadır; kişi damgalayıcı görüşleri kendine uygular.",
+    "stereotipi, önyargı ve tutum damgalama sürecinin kavramlarıdır, ayrımcılığın düzeyi değildir."
+   ],
+   "v": "88ee860478"
+  },
+  {
+   "id": "2s13-09",
+   "baslik": "Yapısal ayrımcılık",
+   "giris": "Yapısal ayrımcılık, toplumsal kuralların ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasıdır.",
+   "s": [
+    17
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "ayrımcılık yalnızca bireysel tutum ve düşüncelerin basit birer sonucu değildir."
+    },
+    {
+     "metin": "ruhsal hastalığı olan bireyleri toplumsal kurallar ve düzenlemeler de sistematik olarak sıkıntıya sokabilir; buna yapısal ayrımcılık denir."
+    },
+    {
+     "metin": "psikiyatri bakım hizmetleri ve araştırmalarıyla ilgili bütçelerin ve yönetmeliklerin oluşturulmasında yönetsel ayrımcılık görülür."
+    },
+    {
+     "metin": "ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması yönetsel ayrımcılıktır."
+    },
+    {
+     "metin": "bireysel ayrımcılık kişinin davranışıdır; yapısal ayrımcılık kuralların ve düzenlemelerin kendisindedir."
+    }
+   ],
+   "klip": "o-2s13-09",
+   "ses": [
+    "Yapısal ayrımcılık.",
+    "Yapısal ayrımcılık, toplumsal kuralların ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasıdır.",
+    "ayrımcılık yalnızca bireysel tutum ve düşüncelerin basit birer sonucu değildir.",
+    "ruhsal hastalığı olan bireyleri toplumsal kurallar ve düzenlemeler de sistematik olarak sıkıntıya sokabilir; buna yapısal ayrımcılık denir.",
+    "psikiyatri bakım hizmetleri ve araştırmalarıyla ilgili bütçelerin ve yönetmeliklerin oluşturulmasında yönetsel ayrımcılık görülür.",
+    "ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması yönetsel ayrımcılıktır.",
+    "bireysel ayrımcılık kişinin davranışıdır; yapısal ayrımcılık kuralların ve düzenlemelerin kendisindedir."
+   ],
+   "v": "99b7305e5a"
+  },
+  {
+   "id": "2s13-01",
+   "baslik": "İçselleştirilmiş (öz) damgalama",
+   "giris": "İçselleştirilmiş damgalama (öz damgalama), halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+   "s": [
+    19
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "içselleştirilmiş damgalama ya da öz damgalama, genel halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir."
+    },
+    {
+     "metin": "kişinin geliştirdiği ve tutunduğu doğru olmayan, uyum göstermeyen inançlardır; örnekleri \"başkaları için tehlikeliyim\" ve \"kendi hayatımı yönetmede yetersizim\" düşünceleridir."
+    },
+    {
+     "metin": "ruhsal hastalığı olan kişiler psikiyatriye başvurduktan ve tanı aldıktan sonra, açık bir ayrımcılık ya da kötü davranışa maruz kalmasalar bile kendilerini damgalanmış hissederler."
+    },
+    {
+     "metin": "toplumun damgalayıcı görüşü dışarıdan gelir; öz damgalamada bu görüş kişinin kendi içine alınmış olur."
+    },
+    {
+     "metin": "ayrımcılığın üç düzeyinden biri olan kendini damgalama, bireysel ve toplumsal/yapısal düzeylerden farklı olarak kişinin kendi inançlarında yer alır."
+    }
+   ],
+   "klip": "o-2s13-01",
+   "ses": [
+    "İçselleştirilmiş (öz) damgalama.",
+    "İçselleştirilmiş damgalama (öz damgalama), halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+    "içselleştirilmiş damgalama ya da öz damgalama, genel halkın inandığı tehlikelilik ve yetersizlik gibi damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+    "kişinin geliştirdiği ve tutunduğu doğru olmayan, uyum göstermeyen inançlardır; örnekleri \"başkaları için tehlikeliyim\" ve \"kendi hayatımı yönetmede yetersizim\" düşünceleridir.",
+    "ruhsal hastalığı olan kişiler psikiyatriye başvurduktan ve tanı aldıktan sonra, açık bir ayrımcılık ya da kötü davranışa maruz kalmasalar bile kendilerini damgalanmış hissederler.",
+    "toplumun damgalayıcı görüşü dışarıdan gelir; öz damgalamada bu görüş kişinin kendi içine alınmış olur.",
+    "ayrımcılığın üç düzeyinden biri olan kendini damgalama, bireysel ve toplumsal/yapısal düzeylerden farklı olarak kişinin kendi inançlarında yer alır."
+   ],
+   "v": "d05d1d9653"
+  }
+ ]
+}

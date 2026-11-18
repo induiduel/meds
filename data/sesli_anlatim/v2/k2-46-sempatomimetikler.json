@@ -1,0 +1,6714 @@
+{
+ "surum": 2,
+ "ders_id": "k2-46",
+ "anahtar": "k2-46-sempatomimetikler",
+ "baslik": "Sempatomimetikler (Adrenoseptör Agonistler)",
+ "bolumler": [
+  {
+   "id": "k2-46-b01",
+   "baslik": "Ders girişi: sempatomimetik ilaçlar",
+   "paragraflar": [
+    {
+     "id": "k2-46-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-46-c0001",
+       "ses": "Bu derste sempatomimetik ilaçları, yani adrenalin ve noradrenalinin etkilerini taklit eden ilaçları öğreneceğiz.",
+       "ekran": "Sempatomimetik ilaçlar: adrenalin ve noradrenalini taklit eden ilaçlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Adrenoseptör Agonistler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0002",
+       "ses": "Önce reseptör moleküler farmakolojisini, sonra organ etkilerini, en sonda tek tek ilaçları ve klinik kullanımlarını göreceğiz, çünkü ilacın etkisi hangi reseptörü uyardığına göre belirlenir.",
+       "ekran": "Plan: reseptör, organ etkisi, ilaç, klinik kullanım",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b02",
+   "baslik": "Sempatomimetik tanımı ve direkt/indirekt sınıflama",
+   "paragraflar": [
+    {
+     "id": "k2-46-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-46-c0003",
+       "ses": "Sempatik sinir sistemi neredeyse tüm organ sistemlerinin önemli bir düzenleyicisidir ve özellikle kan basıncının düzenlenmesinde etkilidir.",
+       "ekran": "Sempatik sistem: tüm organların düzenleyicisi, kan basıncında etkili",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Sempatik sinir sistemi neredeyse tüm"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0004",
+       "ses": "Sempatik uyarının esas etkileri, sinir uçlarından noradrenalin, norepinefrin, salınması ve noradrenalinin postsinaptik bölgelerdeki adrenoseptörleri aktive etmesiyle ortaya çıkar.",
+       "ekran": "Sinir ucundan noradrenalin salınır, adrenoseptörleri aktive eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "noradrenalin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0005",
+       "ses": "Stres gibi uyaranlara yanıt olarak adrenal medulla da adrenalin salar.",
+       "ekran": "Stres: adrenal medulladan adrenalin salınımı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "adrenal medulla adrenalin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0006",
+       "ses": "Adrenalin bir hormon gibi, noradrenalin ise bir nörotransmitter gibi davranır; yani adrenalin kan yoluyla, noradrenalin sinaps aralığında etki eder.",
+       "ekran": "Adrenalin: hormon gibi; noradrenalin: nörotransmitter gibi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Adrenalin bir hormon gibi davranırken"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0007",
+       "ses": "Adrenalin veya noradrenalinin etkilerini taklit eden ilaçlara geleneksel olarak sempatomimetik ilaçlar denir.",
+       "ekran": "Sempatomimetik ilaç: adrenalin/noradrenalin etkisini taklit eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "geleneksel olarak sempatomimetik ilaçlar denir"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-46-c0008",
+       "ses": "Sempatomimetikler, aktive ettikleri reseptör spektrumuna göre gruplandırılır.",
+       "ekran": "Sınıflama ölçütü: aktive edilen reseptör spektrumu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "aktive ettikleri reseptör spektrumuna"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0009",
+       "ses": "Adrenalin ve noradrenalin direkt agonisttir, yani reseptöre doğrudan bağlanıp onu aktive eder.",
+       "ekran": "Direkt agonist: adrenalin ve noradrenalin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "direkt"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0010",
+       "ses": "İndirekt agonistlerin etkisi ise endojen katekolaminlerin, yani adrenalin, noradrenalin ve dopaminin etkilerini artırma yeteneğine bağlıdır; kendileri reseptöre bağlanarak değil, salınan noradrenalini çoğaltarak etki ederler.",
+       "ekran": "İndirekt agonist: endojen katekolamin (adrenalin, noradrenalin, dopamin) etkisini artırır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "indirekt agonistlerdir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0011",
+       "ses": "İndirekt ajanların üç mekanizması vardır: depolanmış katekolaminin boşaltılması, geri alımın engellenmesi ve metabolizmanın engellenmesi.",
+       "ekran": "İndirekt mekanizma: boşaltma, geri alım inhibisyonu, metabolizma inhibisyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "üç farklı mekanizmadan birini gösterir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0012",
+       "ses": "Birincisinde ilaç depolanmış katekolaminleri adrenerjik sinir ucundan çıkarır; örnek olarak tiramin verilebilir.",
+       "ekran": "(1) Depodan boşaltma: tiramin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "tiramin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0013",
+       "ses": "İkincisinde ilaç salınmış katekolaminlerin geri alımını inhibe eder; kokain ve trisiklik antidepresanlar bu gruptadır.",
+       "ekran": "(2) Geri alım inhibisyonu: kokain, trisiklik antidepresanlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "kokain ve trisiklik antidepresanlar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0014",
+       "ses": "Üçüncüsünde noradrenalinin enzimatik yıkımı önlenir; monoamin oksidaz yani em a o inhibitörleri ile katekol o metiltransferaz yani ka o em te inhibitörleri salınmış noradrenalinin temizlenmesini azaltır.",
+       "ekran": "(3) Yıkım inhibisyonu: MAO ve KOMT inhibitörleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "monoamin oksidaz (MAO)"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b03",
+   "baslik": "Adrenoseptörlerin G proteini yapısı ve sinyal yolakları",
+   "paragraflar": [
+    {
+     "id": "k2-46-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-46-c0015",
+       "ses": "Sempatomimetik ilaçların etkilerinin temelinde moleküler farmakoloji yatar; katekolaminlerin etkilerine hücre yüzeyindeki reseptörler aracılık eder.",
+       "ekran": "Katekolamin etkisine hücre yüzeyi reseptörleri aracılık eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Katekolaminlerin etkilerine hücre-yüzey reseptörleri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0016",
+       "ses": "Adrenoseptörler tipik G proteinine kenetli reseptörlerdir.",
+       "ekran": "Adrenoseptörler: G proteinine kenetli reseptörler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Adrenoseptörler normal G-proteine kenetli reseptörlerdir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0017",
+       "ses": "Reseptör proteini membranı yedi kez karşıdan karşıya geçer; böylece üç hücre dışı ve üç hücre içi halka oluşur, slayttaki adıyla kangal.",
+       "ekran": "7 transmembran yapı: 3 ekstraselüler, 3 intraselüler halka (kangal)",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "membranı yedi kez"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0018",
+       "ses": "Proteinin ucu hücre dışında N-terminali, hücre içinde C-terminali olarak bulunur.",
+       "ekran": "Ekstraselüler N-terminali, intraselüler C-terminali",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "bir intraselüler C-terminali vardır"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-46-c0019",
+       "ses": "G proteinine kenetli reseptörler, aktiviteleri kendileri tarafından düzenlenen çeşitli efektör proteinlere G proteinleri aracılığıyla bağlanır.",
+       "ekran": "Reseptör efektör proteine G proteini ile bağlanır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "çeşitli efektör proteinlere G proteinleriyle"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0020",
+       "ses": "Her G proteini alfa, beta ve gama alt birimlerinden oluşur ve G proteinleri kendine özgü alfa alt birimlerine göre sınıflandırılır.",
+       "ekran": "G proteini: alfa, beta, gama alt birimleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "alt birimlerinden oluşur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0021",
+       "ses": "Adrenoseptör işlevinde özel öneme sahip beş G proteini vardır: ge es, ge i, ge o, ge ku ve ge on bir.",
+       "ekran": "Önemli G proteinleri: Gs, Gi, Go, Gq, G11",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gs; adenilil siklazın inhibitör"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0022",
+       "ses": "Ge es adenilil siklazın uyarıcı G proteinidir.",
+       "ekran": "Gs: adenilil siklazı uyarır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "uyarıcı G proteini olan Gs"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0023",
+       "ses": "Ge i ve ge o adenilil siklazı baskılayan inhibitör G proteinleridir.",
+       "ekran": "Gi ve Go: adenilil siklazı baskılar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "adenilil siklazın inhibitör G proteinleri olan Gi ve Go"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0024",
+       "ses": "Ge ku ve ge on bir ise alfa bir reseptörlerini fosfolipaz C enzimine bağlar.",
+       "ekran": "Gq ve G11: reseptör fosfolipaz C bağlantısı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "fosfolipaz C'ye bağlayan G proteinleri olan Gq ve G11"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0025",
+       "ses": "Katekolaminler reseptörü aktive edince guanozin difosfat yani ge de pe, G proteininin alfa alt biriminden ayrılır.",
+       "ekran": "Reseptör aktivasyonu: GDP alfa alt biriminden ayrılır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "guanozin difosfatın (GDP) G proteinin"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-46-c0026",
+       "ses": "Ge de pe ayrıldıktan sonra guanozin trifosfat yani ge te pe G proteinine bağlanır ve alfa alt birimi beta-gama biriminden ayrılır.",
+       "ekran": "GTP bağlanır, alfa alt birimi beta-gama'dan ayrılır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "guanozin trifosfat (GTP) bu G proteinine bağlanır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0027",
+       "ses": "Aktif ge te pe bağlı alfa alt birimi efektörün aktivitesini düzenler.",
+       "ekran": "Aktif GTP-alfa efektörü düzenler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Aktif GTP-bağlı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0028",
+       "ses": "Adrenoseptörle aktive olan alfa alt biriminin efektörleri adenilil siklaz, cGMP fosfodiesteraz, fosfolipaz C ve iyon kanallarıdır.",
+       "ekran": "Efektörler: adenilil siklaz, fosfodiesteraz, fosfolipaz C, iyon kanalları",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "fosfodiesteraz, fosfolipaz C ve iyon kanallarıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0029",
+       "ses": "Bağlı ge te pe, ge de pe ve fosfata hidrolize olunca alfa alt birimi beta-gama ile yeniden birleşir ve inaktive olur.",
+       "ekran": "GTP hidrolizi, yeniden birleşme: alfa alt birimi inaktif",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "hidrolizi ile"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0030",
+       "ses": "Adrenoseptörler ilk olarak farmakolojik yöntemle tanımlanmış, göreceli güçleri karşılaştırılmıştır.",
+       "ekran": "Adrenoseptörler farmakolojik olarak sınıflanmıştır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Adrenoseptörler ilk başta farmakolojik olarak nitelendirilmiştir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0031",
+       "ses": "Alfa reseptörlerde adrenalin noradrenalinden daha güçlü ya da eşit güçtedir ve ikisi de izoproterenolden çok daha güçlüdür.",
+       "ekran": "Alfa: adrenalin ≥ noradrenalin >> izoproterenol",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "adrenalin ≥ noradrenalin >> izoproterenol"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0032",
+       "ses": "Beta reseptörlerde izoproterenol adrenalinden daha güçlüdür, adrenalin ise noradrenalinden daha güçlü ya da eşit güçtedir.",
+       "ekran": "Beta: izoproterenol > adrenalin ≥ noradrenalin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "izoproterenol > adrenalin ≥ noradrenalin"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-46-c0033",
+       "ses": "Dopamin endojen bir katekolamindir ve spesifik dopamin reseptörleriyle etkileşerek çeşitli biyolojik etkiler oluşturur.",
+       "ekran": "Dopamin: kendi reseptörleri aracılığıyla etki eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "spesifik dopamin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0034",
+       "ses": "Dopamin reseptörleri alfa ve beta reseptörlerden farklıdır ve özellikle beyinde, splanik ve renal damar sistemlerinde önemlidir.",
+       "ekran": "Dopamin reseptörleri: beyin, splanik ve renal damarlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "splanik ve renal damar sistemlerinde"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0035",
+       "ses": "Moleküler klonlama ile beş dopamin reseptör alt tipi belirlenmiştir.",
+       "ekran": "Moleküler klonlama: 5 dopamin reseptör alt tipi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Moleküler klonlama"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0036",
+       "ses": "İkisi D bir benzeri, yani D bir ve D beş; üçü D iki benzeri, yani D iki, D üç ve D dört reseptörüdür.",
+       "ekran": "D1-benzeri: D1, D5; D2-benzeri: D2, D3, D4",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "D1-benzeri (D1 ve D5)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-46-c0037",
+       "ses": "Tablo dokuz bir adrenoseptör tiplerini, agonist ve antagonistlerini, bağlandıkları G proteinini ve etkilerini tek bir yerde toplar; tablodaki ilaç adları ileride tek tek anlatılacaktır.",
+       "ekran": "Tablo 9-1: adrenoseptör tipleri ve alt tipleri (ilaçlar ileride anlatılacak)",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "Tablo 9-1 adrenoseptör tipleri ve alt tipleri"
+       }
+      },
+      {
+       "id": "k2-46-c0038",
+       "ses": "Alfa bir tipinin agonisti fenilefrin, antagonisti prazosindir; G proteini ge ku olup etkisi i pe üç ile de a ge artışıdır.",
+       "ekran": "Alfa1: fenilefrin, prazosin, Gq, IP3 ve DAG artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "alfa1 satırı"
+       }
+      },
+      {
+       "id": "k2-46-c0039",
+       "ses": "Alfa iki tipinin agonistleri klonidin ve oksimetazolin, antagonisti yohimbindir; G proteini ge i olup ve cAMP azalır.",
+       "ekran": "Alfa2: klonidin, yohimbin, Gi, cAMP azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "alfa2 satırı"
+       }
+      },
+      {
+       "id": "k2-46-c0040",
+       "ses": "Beta tipinin agonisti izoproterenol, antagonisti propranololdür; G proteini ge es olup cAMP artar.",
+       "ekran": "Beta: izoproterenol, propranolol, Gs, cAMP artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "beta satırı"
+       }
+      },
+      {
+       "id": "k2-46-c0041",
+       "ses": "Beta bir için dobutamin agonist, betaksolol antagonisttir; beta iki için albuterol agonist, butoksamin antagonisttir.",
+       "ekran": "Beta1: dobutamin, betaksolol; Beta2: albuterol, butoksamin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "beta1 ve beta2 satırları"
+       }
+      },
+      {
+       "id": "k2-46-c0042",
+       "ses": "Dopamin tipinde D bir ve D beş ge es ile cAMP'yi artırır; D iki, D üç ve D dört ise ge i ile cAMP'yi azaltır.",
+       "ekran": "D1, D5: Gs, cAMP artar; D2, D3, D4: Gi, cAMP azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "dopamin satırları"
+       }
+      },
+      {
+       "id": "k2-46-c0043",
+       "ses": "D bir için fenoldopam, D iki için bromokriptin agonisttir; D dört için antagonist olarak klozapin gösterilmiştir.",
+       "ekran": "Fenoldopam: D1; bromokriptin: D2; klozapin: D4 antagonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "dopamin agonist ve antagonistleri"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b04",
+   "baslik": "Alfa, beta ve dopamin reseptör tipleri ve ikinci ulaklar",
+   "paragraflar": [
+    {
+     "id": "k2-46-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-46-c0044",
+       "ses": "Alfa reseptörler iki gruptur; önce alfa bir reseptörleri anlatılır.",
+       "ekran": "Reseptör tipleri: A. Alfa reseptörler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Alfa Reseptörler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0045",
+       "ses": "Alfa bir reseptörleri ge ku ailesi G proteinleri aracılığıyla fosfolipaz C enzimine bağlanır.",
+       "ekran": "Alfa1: Gq ile fosfolipaz C",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Gq ailesinden G proteinleri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0046",
+       "ses": "Fosfolipaz C polifosfoinozitidleri hidrolize ederek inozitol bir dört beş trifosfat yani i pe üç ve diaçilgliserol yani de a ge oluşturur.",
+       "ekran": "Fosfolipaz C: IP3 ve DAG oluşturur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "inozitol 1,4,5-trifosfat (IP3)"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0047",
+       "ses": "I pe üç hücre içi depolardaki kalsiyumun serbestleşmesini sağlar; böylece sitoplazmada serbest kalsiyum artar ve kalsiyum bağımlı bazı protein kinazlar aktive olur.",
+       "ekran": "IP3: depodan Ca2+ salar, kalsiyum bağımlı protein kinazlar aktive olur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "IP3, hücre içi depolarda tutulan"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0048",
+       "ses": "Alfa bir aktivasyonu plazma membranından kalsiyumun içeri girişini de artırır.",
+       "ekran": "Alfa1: membrandan Ca2+ girişi artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "kalsiyumun içeri girişini artırır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0049",
+       "ses": "De a ge ise kalsiyumla birlikte protein kinaz C'yi aktive eder; protein kinaz C birçok sinyal yolunun aktivitesini düzenler.",
+       "ekran": "DAG + Ca2+: protein kinaz C aktivasyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "DAG, birçok sinyal yolunun"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-46-c0050",
+       "ses": "Alfa bir reseptörleri ayrıca ilk olarak peptid büyüme faktörleri için tanımlanmış, tirozin kinazları aktive eden sinyal yolaklarını da aktive eder.",
+       "ekran": "Alfa1: tirozin kinaz yolakları da aktive olur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "tirozin kinazları aktive eden peptid"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0051",
+       "ses": "Alfa iki reseptörleri adenilil siklaz aktivitesini inhibe eder ve hücre içi siklik adenozin monofosfat yani cAMP düzeyini azaltır.",
+       "ekran": "Alfa2: adenilil siklaz inhibisyonu, cAMP azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "adenilil siklaz aktivitesini inhibe eder"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0052",
+       "ses": "Alfa iki aracılı bu inhibisyonu inhibitör regülatör protein ge i iletir.",
+       "ekran": "Alfa2 inhibisyonunu Gi aktarır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "inhibitör regülatör"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-46-c0053",
+       "ses": "Beta reseptörlerin üç alt tipinin hepsi, adenilil siklazı aktive eden uyarıcı protein ge es proteinine bağlıdır ve hücre içi cAMP düzeyini artırır.",
+       "ekran": "Beta1, beta2, beta3: Gs, adenilil siklaz uyarılır, cAMP artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "uyarıcı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0054",
+       "ses": "Beta reseptör aktivasyonunun başlıca ikinci ulağı cAMP'dir; ikinci ulak, reseptör uyarısını hücre içine taşıyan küçük moleküldür.",
+       "ekran": "Beta reseptör: ikinci ulak cAMP",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "başlıca ikinci ulağı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0055",
+       "ses": "Karaciğerde beta reseptörlerle artan cAMP sentezi, glikojen fosforilaz aktivasyonuyla sonuçlanan bir olaylar zincirine yol açar.",
+       "ekran": "Karaciğer: cAMP artar, glikojen fosforilaz aktive olur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "glikojen fosforilaz aktivasyonu"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0056",
+       "ses": "Kalpte beta reseptörlerle artan cAMP sentezi, kalsiyumun hücre membranından içeri akışını artırır.",
+       "ekran": "Kalp: cAMP artar, hücre içine Ca2+ akışı artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "kalsiyumun hücre"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-46-c0057",
+       "ses": "Beta reseptör aktivasyonu düz kas gevşemesini de sağlar.",
+       "ekran": "Beta aktivasyonu: düz kas gevşemesi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "düz kas gevşemesini de sağlar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0058",
+       "ses": "Beta adrenoseptörler kalpte, cAMP değişikliklerinden bağımsız olarak ge es aracılı biçimde voltaj duyarlı kalsiyum kanallarını da aktive edebilir.",
+       "ekran": "Kalpte Gs ile voltaj duyarlı Ca2+ kanalları, cAMP'den bağımsız",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "voltaj-duyarlı kalsiyum kanallarını aktive edebilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0059",
+       "ses": "Belirli koşullarda beta iki reseptörleri ge ku proteinlerine de bağlanabilir.",
+       "ekran": "Beta2: bazı koşullarda Gq'ya bağlanabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Gq proteinlerine bağlanabilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0060",
+       "ses": "Beta üç adrenoseptörü beta bir ve beta iki'ye göre daha düşük afiniteli, ama duyarsızlaşmaya daha dirençli bir reseptördür.",
+       "ekran": "Beta3: düşük afinite, duyarsızlaşmaya dirençli",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "ama duyarsızlaşmaya daha dirençlidir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0061",
+       "ses": "Beta üç birçok dokuda bulunur, fakat insanlarda fizyolojik ya da patolojik rolü açık değildir.",
+       "ekran": "Beta3: insanda rolü açık değil",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Birçok dokuda bulunur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0062",
+       "ses": "Beta üç reseptörleri mesanenin detrusor kasında da bulunur ve gevşemesine neden olur.",
+       "ekran": "Beta3: detrusor gevşemesi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "detrusor kasında da eksprese edilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0063",
+       "ses": "Seçici beta üç agonisti mirabegron, aşırı aktif mesane semptomlarının tedavisi için onaylanmıştır.",
+       "ekran": "Mirabegron: seçici beta3 agonisti, aşırı aktif mesane",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "mirabegron"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-46-c0064",
+       "ses": "Dopamin reseptörlerinde D bir reseptörü tipik olarak adenilil siklaz uyarımıyla ilişkilidir.",
+       "ekran": "D1: adenilil siklaz uyarımı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "D1 reseptörü tipik olarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0065",
+       "ses": "Dopaminin damar yataklarındaki gevşetici etkisi, düz kaslarda cAMP birikimine bağlıdır.",
+       "ekran": "D1'e bağlı düz kas gevşemesi: cAMP birikimi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "cAMP birikimine bağlıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0066",
+       "ses": "D iki reseptörleri adenilil siklaz aktivitesini inhibe eder, potasyum kanallarını açar ve hücre içine kalsiyum akışını azaltır.",
+       "ekran": "D2: adenilil siklaz inhibisyonu, K+ kanalı açılır, Ca2+ girişi azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "potasyum"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0067",
+       "ses": "Reseptör seçiciliği açısından klinikte kullanılan adrenerjik agonistlerin çoğu temel adrenoseptör tipleri için seçicidir.",
+       "ekran": "Reseptör seçiciliği: temel tipler için var",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Reseptör Seçiciliği"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0068",
+       "ses": "Ancak bu ilaçların alt tipler için seçiciliği yoktur.",
+       "ekran": "Alt tip seçiciliği yok",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "bu ana grupların alt"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-46-c0069",
+       "ses": "Tablo dokuz iki göreceli reseptör afinitelerini verir: fenilefrin ve metoksamin alfa bir, alfa ikiden güçlü ve betadan çok daha güçlü bağlanır; klonidin ve metilnoradrenalin alfa iki, alfa birden güçlüdür; noradrenalinde alfa bir ile alfa iki eşit, beta bir beta ikiden çok güçlüdür; adrenalinde beta bir ile beta iki de eşittir; dobutamin beta bir, beta ikiden güçlüdür; izoproterenolde beta bir ile beta iki eşittir; albuterol, terbutalin, metaproterenol ve ritodrin ise beta iki, beta birden çok daha güçlüdür.",
+       "ekran": "Tablo 9-2: fenilefrin α1>α2; klonidin α2>α1; noradrenalin β1>>β2; adrenalin β1=β2; dobutamin β1>β2; albuterol β2>>β1",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Tablo 9-2'de karşılaştırılmıştır"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b05",
+   "baslik": "Reseptör regülasyonu ve noradrenalin transportörü (NAT)",
+   "paragraflar": [
+    {
+     "id": "k2-46-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-46-c0070",
+       "ses": "Reseptör regülasyonu başlığında şu temel nokta vurgulanır: adrenoseptörler aracılığıyla oluşan yanıtlar sabit ve durağan değildir.",
+       "ekran": "Reseptör regülasyonu: yanıtlar sabit değildir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Adrenoseptörler aracılığıyla oluşan yanıtlar sabit"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0071",
+       "ses": "Adrenoseptörlerin hücre yüzeyindeki sayısı ve işlevi katekolaminler, diğer hormonlar ve ilaçlar, yaş ve bazı hastalıklar tarafından düzenlenir.",
+       "ekran": "Sayı ve işlev: katekolamin, hormon, ilaç, yaş, hastalık",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "sayısı ve fonksiyonu"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0072",
+       "ses": "Bu değişiklikler dokunun katekolaminlere yanıtının boyutunu değiştirebilir ve tedavi sürecinde klinik açıdan önemli olabilir.",
+       "ekran": "Yanıt boyutu değişir, klinik önemi vardır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "klinik açıdan önemli olabilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0073",
+       "ses": "Reseptör regülasyonunun en çok çalışılmış örneklerinden biri adrenoseptör duyarsızlaşmasıdır; katekolamin ya da sempatomimetik ilaç kullanımından sonra gelişebilir.",
+       "ekran": "Adrenoseptör duyarsızlaşması",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "adrenoseptör duyarsızlaşmasıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0074",
+       "ses": "Bir doku belli bir süre agoniste maruz kaldıktan sonra aynı ajanla sonraki uyarılarda genellikle daha az yanıt verir.",
+       "ekran": "Duyarsızlaşma: sürekli agonist sonrası azalmış yanıt",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "daha az yanıt verir hale"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-46-c0075",
+       "ses": "Noradrenalin transportörü, en a te, başlığında önce sinaptik noradrenalinin akıbeti anlatılır.",
+       "ekran": "Noradrenalin transportörü (NAT)",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Noradrenalin Transportörü"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0076",
+       "ses": "Sinaps aralığına salınan noradrenalin, beklenen etkiyi oluşturmak için postsinaptik adrenoseptörlere bağlanır.",
+       "ekran": "Noradrenalin postsinaptik adrenoseptöre bağlanır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "postsinaptik adrenoseptörlere bağlanır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0077",
+       "ses": "Nörotransmitter salınımı düzenli bir olay olduğu gibi, nörotransmitterin ortamdan uzaklaştırılması da etkin olmalıdır.",
+       "ekran": "Salınım kadar uzaklaştırma da etkin olmalıdır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "uzaklaştırılma mekanizmaları da oldukça etkin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0078",
+       "ses": "Bunu sağlayan esas yol noradrenalin transportörüdür, yani en a te.",
+       "ekran": "Esas uzaklaştırma yolu: NAT",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "esas yol noradrenalin transportörüdür"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0079",
+       "ses": "En a te, kalpteki sinapslarda salınan noradrenalinin yüzde doksan'ını ortadan kaldırdığı için özellikle önemlidir.",
+       "ekran": "Kalp sinapsları: NAT noradrenalinin %90'ını uzaklaştırır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "%90'ını ortadan kaldırdığından"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0080",
+       "ses": "Kalan noradrenalin sinaps dışı boşluğa kaçıp kan dolaşımına girebilir ya da sinir dışı hücrelere alınıp ka o em te ile metabolize edilebilir.",
+       "ekran": "Kalan: kan dolaşımı veya KOMT ile yıkım",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "ekstra nöronal hücrelere alınarak"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-46-c0081",
+       "ses": "Sinaptik yapıların daha az gelişmiş olduğu damar sistemi gibi yerlerde de uzaklaştırmanın yüzde altmış veya daha fazlası en a te aracılığıyla olur.",
+       "ekran": "Damar sistemi: uzaklaştırmanın ≥%60'ı NAT ile",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "uzaklaştırmanın %60 veya daha fazlası"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0082",
+       "ses": "En a te genellikle presinaptik nöronal membran üzerinde bulunur ve sinaptik noradrenalini sinir hücresinin sitoplazmasına geri pompalar.",
+       "ekran": "NAT: presinaptik membran, noradrenalini sitoplazmaya geri pompalar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "presinaptik nöronal membran üzerine"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0083",
+       "ses": "Hücre içinde noradrenalin veziküllere geri girebilir ya da monoamin oksidaz ile dihidroksifenilglikole yani de ha pe ge'ye metabolize edilir.",
+       "ekran": "Hücre içi: vezikül veya MAO ile DHPG",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "dihidroksifenilglikole (DHPG)"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0084",
+       "ses": "Vücudun başka yerlerindeki benzer transportörler dopamini, yani de a te ile, serotonini, yani es e er te ile ve diğer nörotransmitterleri uzaklaştırır.",
+       "ekran": "DAT: dopamin; SERT: serotonin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "dopamin transportörü, DAT"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-46-c0085",
+       "ses": "Şekil dokuz üç monoamin transportörlerinin ilaçlarla nasıl hedeflendiğini üç panelde gösterir.",
+       "ekran": "Şekil 9-3: monoamin transportörleri ve ilaçlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "Şekil 9-3 üç panel"
+       }
+      },
+      {
+       "id": "k2-46-c0086",
+       "ses": "A panelinde noradrenalin, en a te aracılığıyla sinir ucuna geri alınır ve veziküler monoamin transportörü yani ve em a te aracılığıyla veziküllerde depolanır.",
+       "ekran": "A: NAT geri alım, VMAT ile depolama",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "A paneli"
+       }
+      },
+      {
+       "id": "k2-46-c0087",
+       "ses": "B panelinde indirekt etkili amfetamin en a te ile hücreye girer; noradrenalin vezikülden sitoplazmaya çıkar ve en a te ters yönde çalışarak noradrenalini sinaps aralığına taşır.",
+       "ekran": "B: amfetamin, tersine taşınma, sinapsta noradrenalin artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "B paneli"
+       }
+      },
+      {
+       "id": "k2-46-c0088",
+       "ses": "C panelinde yine indirekt etkili kokain en a te'a bağlanarak taşımayı engeller; geri alınamayan noradrenalin sinaps aralığında birikir.",
+       "ekran": "C: kokain NAT'ı bloke eder, noradrenalin birikir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "C paneli"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-46-c0089",
+       "ses": "En a te'ın blokajı noradrenalinin bu temel uzaklaştırma yolunu bozar; sinaptik noradrenalin düzeyi artar ve alfa ile beta adrenoseptörler daha fazla uyarılır.",
+       "ekran": "NAT blokajı: sinaptik noradrenalin artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "NAT'ın blokajı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0090",
+       "ses": "En a te'ı bloke eden ajanlar, nonselektif psikostimülan kokain ile en a te selektif atomoksetin ve reboksetindir.",
+       "ekran": "Kokain (nonselektif); atomoksetin, reboksetin (NAT-selektif)",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "NAT-selektif ajanlar olan atomoksetin ya da reboksetin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0091",
+       "ses": "Sempatomimetik ilaçların tıbbi kimyasında ana bileşik feniletilamindir; sempatomimetikler bu bileşikten türetilmiştir.",
+       "ekran": "Tıbbi kimya: ana bileşik feniletilamin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Feniletilamin, sempatomimetik ilaçların türetildiği ana bileşik"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0092",
+       "ses": "Feniletilamindeki değişiklikler, ilacın reseptörlere afinitesine ve intrinsik aktivitesine bağlı olarak etki aralığını değiştirir.",
+       "ekran": "Yapı değişikliği: afinite ve intrinsik aktivite değişir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "intrinsik aktivitede olduğu gibi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0093",
+       "ses": "Bu aralık neredeyse saf alfa aktivitesinden, metoksamin örneğindeki gibi, saf beta aktivitesine, izoproterenol örneğindeki gibi uzanır.",
+       "ekran": "Metoksamin: saf alfa; izoproterenol: saf beta",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "metoksamin"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b06",
+   "baslik": "Sempatomimetiklerin tıbbi kimyası (yapı-etki)",
+   "paragraflar": [
+    {
+     "id": "k2-46-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-46-c0094",
+       "ses": "Feniletilamin yapısında benzen halkasına eklenmeler, ilacın etkisini belirler.",
+       "ekran": "Yapı-etki: A. Benzen halkasına eklenme",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Benzen Halkasına Eklenme"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0095",
+       "ses": "Maksimum alfa ve beta aktivitesi, benzen halkasının üç ve dört pozisyonlarında hidroksil grubu taşıyan ilaçlarda, yani katekolaminlerde bulunur.",
+       "ekran": "Katekolamin: 3 ve 4 pozisyonunda -OH, maksimum alfa ve beta aktivitesi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "pozisyonlarında -OH grubu içeren ilaçlar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0096",
+       "ses": "Halkada başka değişiklik yoksa, özellikle C üç pozisyonundaki hidroksilin eksikliği ilacın gücünü önemli ölçüde azaltabilir.",
+       "ekran": "C3 hidroksili eksikse güç belirgin azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "C3 pozisyonundaki hidroksilin eksikliği"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0097",
+       "ses": "Örneğin fenilefrin, adrenalinden çok daha az etkilidir.",
+       "ekran": "Fenilefrin adrenalinden daha az etkili",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "fenilefrin adrenalinden çok daha az etkilidir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0098",
+       "ses": "Katekolaminler katekol o metiltransferaz yani ka o em te ile inaktive olur ve bu enzim bağırsakta ve karaciğerde bulunduğundan katekolaminler oral yolla etkili değildir.",
+       "ekran": "KOMT bağırsak ve karaciğerde: katekolamin oral etkisiz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "oral yolla etkili değildir"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-46-c0099",
+       "ses": "Amino grubuna eklenmelerde alkil eklentisinin uzunluğu arttıkça beta reseptör aktivitesi artma eğilimindedir.",
+       "ekran": "B. Amino grubu: alkil uzadıkça beta aktivitesi artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "alkil eklentilerinin uzunluğu arttıkça"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0100",
+       "ses": "Örneğin noradrenaline metil eklenmesi adrenalini oluşturur ve beta iki reseptörlerdeki aktiviteyi artırır.",
+       "ekran": "Noradrenalin + metil = adrenalin, beta2 artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "noradrenaline metil eklenmesi adrenalini oluşturarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0101",
+       "ses": "Amino grubuna izopropil eklenmesiyle izoproterenol oluşur ve beta aktivitesi daha da artar; beta iki selektif agonistler genelde büyük bir amino grubu eklentisi gerektirir.",
+       "ekran": "İzopropil: izoproterenol, beta aktivitesi daha da artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "izopropil eklenmesiyle"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0102",
+       "ses": "Alfa karbon üzerine eklenmeler, özellikle katekolamin olmayan ilaçlarda em a o'nun oksidasyonunu engeller ve etki süresini uzatır.",
+       "ekran": "C. Alfa karbon eklentisi: MAO oksidasyonu engellenir, etki uzar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Alfa karbondaki eklentiler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0103",
+       "ses": "Beta karbonda ise direkt etkili agonistler genellikle bir beta-hidroksil grubu taşır, dopamin taşımaz.",
+       "ekran": "D. Beta karbon: direkt agonistlerde -OH vardır, dopaminde yoktur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Direkt-etkili agonistler, genellikle bir"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b07",
+   "baslik": "Alfa1 aktivasyonunun kardiyovasküler etkileri",
+   "paragraflar": [
+    {
+     "id": "k2-46-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-46-c0104",
+       "ses": "Sempatomimetik ilaçların organ sistemlerine etkileri kardiyovasküler sistemden başlar.",
+       "ekran": "Organ etkileri: kardiyovasküler sistem",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kardiyovasküler Sistem"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0105",
+       "ses": "Alfa ve beta adrenoseptörler çok yaygın bulunduğundan sempatomimetiklerin kardiyovasküler etkileri belirgindir.",
+       "ekran": "Alfa ve beta yaygın: belirgin kardiyovasküler etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "adrenoseptörler çok yaygın şekilde bulunduğundan"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0106",
+       "ses": "Tablo dokuz üç alt tiplerin dokulardaki dağılımını ve etkilerini verir: alfa bir damar düz kasında kasılma yapar, pupilayı genişletir ve kalpte kasılma kuvvetini artırır; alfa iki sinir uçlarında transmitter salıverilmesini inhibe eder ve trombosit agregasyonu yapar; beta bir kalpte kasılmanın gücünü ve hızını, renin salıverilmesini artırır; beta iki solunum sistemi, uterus ve damar düz kasında gevşeme sağlar; beta üç yağ hücresinde lipolizi aktive eder.",
+       "ekran": "Tablo 9-3: α1 kasılma; α2 transmitter inhibisyonu; β1 kalp ve renin; β2 düz kas gevşemesi; β3 lipoliz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tablo 9-3'te sunulmuştur"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-46-c0107",
+       "ses": "Alfa bir reseptör aktivasyonunun etkileri anlatılırken önce damar yatağına bakılır: alfa bir reseptörleri damar yataklarında yaygındır ve aktivasyonları arteriyel ve venöz vazokonstriksiyona neden olur.",
+       "ekran": "Alfa1: arteriyel ve venöz vazokonstriksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "aktivasyonu arteriyel ve venöz vazokonstriksiyona neden olur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0108",
+       "ses": "Alfa bir aktivasyonunun kalp fonksiyonu üzerine doğrudan etkileri nispeten önemsizdir.",
+       "ekran": "Kalp üzerine direkt etki önemsiz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Kalp fonksiyonu üzerine direkt etkileri nispeten daha önemsizdir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0109",
+       "ses": "Fenilefrin ve midodrin seçici alfa bir agonistleridir ve uygulandıklarında periferik arter direnci artar.",
+       "ekran": "Fenilefrin, midodrin: seçici alfa1 agonistleri, direnç artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Fenilefrin ve midodrin seçici"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0110",
+       "ses": "Arteriyel direncin artması genellikle kan basıncında doza bağımlı bir artış oluşturur.",
+       "ekran": "Alfa1: kan basıncı doza bağımlı artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "doza bağımlı bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0111",
+       "ses": "Bu bilgi çıkmış sorularda soruldu.",
+       "ekran": "Çıkmış: alfa1 uyarılması kan basıncını artırır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "a8f1566baefe"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "kan basıncında doza bağımlı bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0112",
+       "ses": "Normal kardiyovasküler refleksler varsa, kan basıncındaki artış baroreseptör aracılı vagal tonus artışına yol açar ve kalp hızı belirgin biçimde yavaşlar.",
+       "ekran": "Refleks: baroreseptör, vagal tonus artar, kalp hızı yavaşlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "vagal tonusta baroreseptör aracılı"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-46-c0113",
+       "ses": "Alfa bir agonistinde kalp hızı azalsa da kardiyak debi aynı oranda azalmayabilir, çünkü artan venöz dönüş atış hacmini artırır.",
+       "ekran": "Debi orantılı azalmaz: venöz dönüş atış hacmini artırır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "artan venöz dönüş atış hacmini artırır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0114",
+       "ses": "Ayrıca kalbin alfa adrenoseptörle doğrudan uyarılması, kasılma gücünü artıran orta dereceli bir pozitif inotropik etki oluşturabilir.",
+       "ekran": "Alfa uyarımı: orta dereceli pozitif inotropi (kasılma gücü artışı)",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "orta dereceli bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0115",
+       "ses": "Damar yataklarında ağırlıklı reseptör tipi değişir; bu farklar Tablo dokuz dört'te gösterilmiştir.",
+       "ekran": "Damar yatağına göre reseptör farkı: Tablo 9-4",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Tablo 9-4"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0116",
+       "ses": "Cilt damarları ağırlıklı olarak alfa reseptörler içerir ve splanik damarlarda olduğu gibi adrenalin ile noradrenaline kasılarak yanıt verir.",
+       "ekran": "Cilt ve splanik damarlar: alfa, kasılır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Cilt damarları ağırlıklı olarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0117",
+       "ses": "İskelet kasındaki damarlar, alfa mı beta mı aktive olduğuna bağlı olarak kasılabilir ya da gevşeyebilir.",
+       "ekran": "İskelet kası damarı: alfa ile kasılır, beta ile gevşer",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "reseptörün mü yoksa"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0118",
+       "ses": "Nazal mukoza damarlarında alfa reseptörleri bulunur; sempatomimetiklerin lokal vazokonstriksiyonu bu yüzden dekonjestan etki sağlar.",
+       "ekran": "Nazal mukoza alfa: vazokonstriksiyon, dekonjestan etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "dekonjestan etkilerini açıklar"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b08",
+   "baslik": "Alfa2 ve beta aktivasyonunun kardiyovasküler etkileri",
+   "paragraflar": [
+    {
+     "id": "k2-46-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-46-c0119",
+       "ses": "Alfa iki reseptör aktivasyonunda klonidin gibi seçici alfa iki agonistleri, sempatik aktiviteyi azaltmak için merkezi sinir sisteminde etki eder.",
+       "ekran": "Alfa2 agonisti klonidin: MSS'de sempatik aktiviteyi azaltır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "sempatik aktiviteyi azaltmak için MSS'de"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0120",
+       "ses": "Alfa iki adrenoseptörleri damar sisteminde de bulunur ve aktivasyonları vazokonstriksiyona yol açar.",
+       "ekran": "Damarda alfa2: vazokonstriksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "damar sisteminde bulunur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0121",
+       "ses": "Bu etki alfa iki agonistleri lokal olarak, hızlı intravenöz enjeksiyonla ya da çok yüksek oral dozlarda verildiğinde görülür.",
+       "ekran": "Vazokonstriksiyon: lokal, hızlı IV veya çok yüksek oral doz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "hızlı intravenöz enjeksiyonla"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0122",
+       "ses": "Sistemik yolla verildiklerinde bu damar etkisi, sempatik tonusu ve kan basıncını baskılayan santral alfa iki etkisiyle gizlenir.",
+       "ekran": "Sistemik verilince santral etki damar etkisini gizler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "santral etkileri ile gizlenir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0123",
+       "ses": "Bu nedenle alfa iki agonistleri hipertansiyon tedavisinde, sempatik tonusu baskılayan ilaçlar, yani sempatolitikler olarak kullanılır.",
+       "ekran": "Alfa2 agonistleri: hipertansiyonda sempatolitik (sempatik tonusu baskılar)",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "hipertansiyon tedavisinde sempatolitikler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0124",
+       "ses": "Bu bilgi çıkmış sorularda soruldu.",
+       "ekran": "Çıkmış: alfa2 agonisti hipertansiyonda kullanılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2020-2021-q146"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "hipertansiyon tedavisinde sempatolitikler"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-46-c0125",
+       "ses": "Beta reseptör aktivasyonunun kardiyovasküler etkileri hem beta bir hem de beta iki reseptörlerin aktivasyonuyla ortaya çıkar.",
+       "ekran": "Beta: beta1 ve beta2 kardiyovasküler etkiler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Beta-Reseptör Aktivasyonunun Etkileri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0126",
+       "ses": "İzoproterenol selektif olmayan bir beta agonisttir ve hem beta bir hem de beta iki reseptörlerini aktive eder.",
+       "ekran": "İzoproterenol: selektif olmayan beta agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Reseptör Aktivasyonunun Etkileri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0127",
+       "ses": "Kalpteki beta bir uyarımı kontraktiliteyi artırır ve kalp hızını artıran sinüs düğümünü doğrudan aktive ederek kardiyak debiyi yükseltir.",
+       "ekran": "Kalpte beta1: kontraktilite ve hız artar, debi artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "kontraktiliteyi artırarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0128",
+       "ses": "Beta iki reseptörlerinin aktivasyonu periferik direnci düşürür ve bazı damar yataklarında vazodilatasyon yapar.",
+       "ekran": "Beta2: periferik direnç düşer, vazodilatasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "periferik direnci de düşürür"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0129",
+       "ses": "Kalp üzerindeki doğrudan etkileri çoğunlukla beta bir belirler, ancak beta iki ve daha az oranda alfa reseptörler de özellikle kalp yetmezliğinde bu etkilerde rol alır.",
+       "ekran": "Kalpte beta1 baskın; kalp yetmezliğinde beta2 ve daha az oranda alfa da rol alır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "özellikle kalp yetmezliğinde"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-46-c0130",
+       "ses": "Dobutamin prototipik beta bir seçici agonisttir.",
+       "ekran": "Dobutamin: prototipik beta1 seçici agonist",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "dobutamindir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0131",
+       "ses": "Kalpteki beta bir aktivasyonu kardiyak hücrelerde kalsiyum akışını artırır.",
+       "ekran": "Beta1: kalp hücresinde Ca2+ akışı artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "kardiyak hücrelerde kalsiyum akışının artmasına"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0132",
+       "ses": "Sinüs düğümündeki beta bir aktivasyonu pacemaker aktivitesini ve kalp hızını artırır; buna pozitif kronotropik etki denir.",
+       "ekran": "SA düğüm: pozitif kronotropik etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "pozitif kronotropik etki"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0133",
+       "ses": "Atriyoventriküler düğümde beta bir uyarımı iletim hızını artırır, bu pozitif dromotropik etkidir, ve refrakter periyodu kısaltır.",
+       "ekran": "AV düğüm: pozitif dromotropik etki, refrakter periyot kısalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "refrakter periyod kısalır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0134",
+       "ses": "Beta bir aktivasyonu ayrıca kendiliğinden kasılma gücünü artırır, bu pozitif inotropik etkidir, ve gevşemeyi hızlandırır.",
+       "ekran": "Pozitif inotropik etki, gevşeme hızlanır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "pozitif inotropik etki"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0135",
+       "ses": "Katekolaminlerle kalbin fizyolojik uyarılması koroner kan akımını artırır.",
+       "ekran": "Fizyolojik uyarı: koroner akım artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "koroner"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0136",
+       "ses": "İnsan kalbinde beta üç adrenoseptör ifadesi saptanmıştır ve hastalık durumlarında artar.",
+       "ekran": "Beta3: insan kalbinde var, hastalıkta upregüle olur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "upregüle olur"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b09",
+   "baslik": "Dopamin reseptör aktivasyonu ve dozlara bağlı etkileri",
+   "paragraflar": [
+    {
+     "id": "k2-46-p028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-46-c0137",
+       "ses": "Dopamin reseptör aktivasyonunda damar etkisi şöyledir: intravenöz dopamin, D bir reseptörleri aracılığıyla renal, splanik, koroner ve serebral damarlarda vazodilatasyon yapar.",
+       "ekran": "IV dopamin: D1 ile renal, splanik, koroner, serebral vazodilatasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "renal, splanik, koroner, serebral"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0138",
+       "ses": "Renal damarlarda D bir aktivasyonu natriüreze de neden olabilir.",
+       "ekran": "Renal D1: natriürez",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "natriürezise de neden olabilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0139",
+       "ses": "Dopaminin böbrek etkisinden klinikte, oligüri yani anormal az idrar çıkışında böbrek perfüzyonunu düzeltmek için yararlanılır.",
+       "ekran": "Oligüri: böbrek perfüzyonunu düzeltmek için dopamin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "oligüri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0140",
+       "ses": "Presinaptik D iki reseptörlerinin aktivasyonu noradrenalin salınmasını azaltır, ancak bunun dopaminin kardiyovasküler etkilerine katkısı belirsizdir.",
+       "ekran": "Presinaptik D2: noradrenalin salınımı azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "noradrenalin salıverilmesini azaltır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0141",
+       "ses": "Dopamin kalpteki beta bir reseptörlerini de aktive eder ve düşük dozlarda periferik direnç azalabilir.",
+       "ekran": "Beta1 aktivasyonu; düşük dozda direnç azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Düşük"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-46-c0142",
+       "ses": "Dopaminin yüksek infüzyon hızlarında alfa reseptörleri aktive olur ve renal damar yatağı dahil vazokonstriksiyon gelişir.",
+       "ekran": "Yüksek hızda dopamin: alfa, renal dahil vazokonstriksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Yüksek infüzyon hızlarında"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0143",
+       "ses": "Sonuç olarak yüksek hızda dopamin infüzyonu adrenalinin etkilerini taklit edebilir.",
+       "ekran": "Yüksek doz dopamin adrenalini taklit eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "adrenalinin etkilerini"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0144",
+       "ses": "Kalp dışı etkilerde adrenoseptörler neredeyse tüm organ sistemlerinde bulunur.",
+       "ekran": "Kalp dışı etkiler: adrenoseptörler her organ sisteminde",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Adrenoseptörler neredeyse tüm organ sistemlerinde"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0145",
+       "ses": "Bronş düz kasındaki beta iki reseptörlerinin aktivasyonu bronkodilatasyona yol açar; bu yüzden beta iki agonistleri astım tedavisinde önemlidir.",
+       "ekran": "Bronşta beta2: bronkodilatasyon, astım tedavisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "bronkodilatasyona yol açar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0146",
+       "ses": "Gözde irisin radyal pupiller dilatör kasında alfa reseptörler bulunur; fenilefrin gibi ilaçlar bunları aktive ederek midriyaz yapar.",
+       "ekran": "Göz: radyal dilatör kasta alfa, fenilefrin midriyazis yapar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "radyal pupiller dilatör kasında"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0189",
+       "ses": "Bu bilgi çıkmış sorularda soruldu.",
+       "ekran": "Çıkmış: fenilefrinle midriyazis",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "5a5925894fda"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "radyal pupiller dilatör kasında"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b10",
+   "baslik": "Sempatomimetiklerin kalp dışı etkileri (göz, bronş, genitoüriner, bezler)",
+   "paragraflar": [
+    {
+     "id": "k2-46-p030",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-46-c0147",
+       "ses": "Alfa iki agonistleri gözde aköz hümörün dışa akışını artırır ve klinikte göz içi basıncını düşürmek için kullanılabilir.",
+       "ekran": "Alfa2 agonisti: aköz hümör çıkışı artar, göz içi basıncı düşer",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "aköz humorun dışa-akışını artırır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0148",
+       "ses": "Beta agonistlerin etkisi azdır, ancak beta antagonistleri aköz hümör üretimini azaltır ve glokom tedavisinde kullanılır.",
+       "ekran": "Beta antagonisti: aköz hümör üretimi azalır, glokom",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "aköz humor üretimini azaltır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0149",
+       "ses": "Genitoüriner organlarda mesane tabanında, üretra sfinkterinde ve prostatta kasılmayı sağlayan alfa reseptörleri bulunur; bu kasılma idrar tutmayı sağlar.",
+       "ekran": "Mesane tabanı, üretra sfinkteri, prostat: alfa, kasılma, idrar tutma",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "idrar tutmayı sağlayan"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0150",
+       "ses": "Mesane tabanı ve prostat kasılmasında rol alan spesifik alfa bir alt tipi belirgin değildir, ancak alfa bir A önemli bir role sahip olabilir.",
+       "ekran": "Alfa1A: önemli rol olabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "belirgin değildir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0151",
+       "ses": "Bu etki, alfa bir agonisti midodrin kullanımında istenmeyen etki olarak idrar retansiyonunun neden görülebildiğini açıklar.",
+       "ekran": "Midodrin: idrar retansiyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "idrar retansiyonu görülebildiğini"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p031",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-46-c0152",
+       "ses": "Duktus deferens, seminal veziküller ve prostatta alfa reseptör aktivasyonu normal ejakülasyonda rol alır.",
+       "ekran": "Alfa reseptörler: ejakülasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Duktus deferens, seminal veziküller"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0153",
+       "ses": "Ejakülasyondan sonra erektil dokuların gevşemesi de sempatik sinirlerden salınan noradrenalinle olur.",
+       "ekran": "Ejakülasyon sonrası: erektil doku gevşemesi, noradrenalin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "erektil dokuların gevşemesi de"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0154",
+       "ses": "Tükürük bezleri amilaz ve su salgısını düzenleyen adrenoseptörler taşır; klonidin gibi alfa iki agonistleri ise kuru ağız yapar.",
+       "ekran": "Tükürük bezi: klonidin kuru ağız yapar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "kuru"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0155",
+       "ses": "Apokrin ter bezleri adrenoseptör uyarıcılarına terleme artışıyla yanıt verir.",
+       "ekran": "Apokrin ter bezi: terleme artışı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Apokrin ter bezleri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0156",
+       "ses": "Bunlar genellikle psikolojik stresle ilişkili, termoregülatör olmayan apokrin bezlerdir.",
+       "ekran": "Termoregülatör değil, stresle ilişkili",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "termoregülatör olmayan apokrin bezlerdir"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b11",
+   "baslik": "Metabolik, endokrin ve MSS etkileri",
+   "paragraflar": [
+    {
+     "id": "k2-46-p032",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-46-c0157",
+       "ses": "Metabolik etkilerde yağ hücrelerindeki beta üç adrenoseptörlerin aktivasyonu lipolizi artırır ve kana serbest yağ asidi ile gliserol salınımı artar.",
+       "ekran": "Yağ dokusu beta3: lipoliz artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "lipolizi artırarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0158",
+       "ses": "Sempatomimetik ilaçlar karaciğerde glikojenolizi artırarak dolaşıma daha fazla glukoz salar.",
+       "ekran": "Karaciğer: glikojenoliz artar, glukoz salınır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "glikojenolizi artırarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0159",
+       "ses": "İnsan karaciğerinde katekolaminlerin etkilerine daha çok beta iki reseptörleri aracılık eder, ancak alfa bir reseptörleri de rol alıyor olabilir.",
+       "ekran": "İnsan karaciğeri: beta2 baskın, alfa1 de olabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "insan karaciğerinde"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0160",
+       "ses": "Yüksek konsantrasyonlarda katekolaminler metabolik asidoza da yol açabilir.",
+       "ekran": "Yüksek katekolamin: metabolik asidoz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "metabolik asidoza da yol açabilir"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-46-c0161",
+       "ses": "Endojen adrenalin ya da sempatomimetik ilaçlarla beta iki adrenoseptörlerin aktivasyonu hücre içine potasyum alımını artırır ve hücre dışı potasyum düşer.",
+       "ekran": "Beta2: K+ hücre içine girer, plazma potasyumu düşer",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "potasyum alımını artırarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0162",
+       "ses": "Bu nedenle stres sırasında plazma potasyumu düşer, egzersiz sırasında ise plazma potasyumunun yükselmesi önlenir.",
+       "ekran": "Stres: potasyum düşer; egzersizde yükselme önlenir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "egzersiz sırasında plazma potasyumunun yükselmesini önler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0163",
+       "ses": "Bu reseptörlerin blokajı egzersizde oluşan plazma potasyum yüksekliğini daha da şiddetlendirebilir.",
+       "ekran": "Beta2 blokajı: egzersizde potasyum yüksekliği artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "daha da şiddetlendirebilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0164",
+       "ses": "Bazı durumlarda hiperkalemi tedavisinde adrenalin kullanılır.",
+       "ekran": "Adrenalin: hiperkalemi tedavisinde kullanılabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "hiperkalemi tedavisinde adrenalin"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p034",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-46-c0165",
+       "ses": "Pankreas adacıklarında beta reseptörler insülin salınımını artırma, alfa iki reseptörler azaltma eğilimindedir.",
+       "ekran": "Pankreas: beta artırır, alfa2 azaltır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "insülin salıverilmesini"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0166",
+       "ses": "Yine de insülin salınımının en önemli düzenleyicisi plazma glukoz konsantrasyonudur.",
+       "ekran": "İnsülin salınımının asıl düzenleyicisi: plazma glukozu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "en önemli düzenleyicisi plazmadaki glukoz"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0167",
+       "ses": "Renin salınımı beta bir reseptörlerle uyarılır ve alfa iki reseptörlerle inhibe edilir.",
+       "ekran": "Renin: beta1 uyarır, alfa2 inhibe eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "renin salıverilmesi de"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0168",
+       "ses": "Adrenoseptörler ayrıca paratiroid hormonu, kalsitonin, tiroksin ve gastrin salınımını düzenler.",
+       "ekran": "PTH, kalsitonin, tiroksin, gastrin salınımı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "paratiroid hormonu, kalsitonin, tiroksin ve gastrin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0169",
+       "ses": "Yüksek konsantrasyonlarda adrenalin, sekestre olmuş beyaz kan hücrelerinin dolaşıma katılmasını sağlar ve lökositoza yol açar.",
+       "ekran": "Yüksek adrenalin: lökositoz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "lökositoza yol açar"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p035",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-46-c0170",
+       "ses": "Merkezi sinir sistemi etkilerinde sempatomimetiklerin etkisi, kan-beyin bariyerini geçme yeteneklerine göre büyük ölçüde değişir.",
+       "ekran": "MSS etkisi: kan-beyin bariyerini geçmeye bağlı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "kan-beyin bariyerini geçebilme yeteneklerine göre"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0171",
+       "ses": "Katekolaminler bu bariyerden neredeyse tamamen dışarıda tutulur; öznel em es es etkileri ancak yüksek infüzyon hızlarında görülür.",
+       "ekran": "Katekolaminler bariyeri geçemez, yüksek hızda MSS etkisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "neredeyse tamamen dışarıda tutulur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0172",
+       "ses": "Bu etkiler sinirlilikten adrenalin hücumu hissine ya da yaklaşan bir felaket hissine kadar değişir.",
+       "ekran": "Sinirlilik, adrenalin hücumu hissi, yaklaşan felaket hissi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "yaklaşan bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0173",
+       "ses": "Beta adrenoseptörlerin taşikardi ve tremor gibi periferik etkileri anksiyetenin somatik belirtilerine benzer.",
+       "ekran": "Beta periferik etki: taşikardi, tremor; anksiyete benzeri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "taşikardi ve tremor gibi periferik"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b12",
+   "baslik": "Endojen katekolaminler: adrenalin, noradrenalin, dopamin",
+   "paragraflar": [
+    {
+     "id": "k2-46-p036",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-46-c0174",
+       "ses": "Belirli sempatomimetik ilaçlara endojen katekolaminlerden başlanır; adrenalin hem alfa hem beta reseptörlere agonisttir.",
+       "ekran": "Adrenalin: alfa ve beta agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "hem"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0175",
+       "ses": "Adrenalin bu nedenle çok güçlü bir vazokonstriktör ve kardiyak uyarandır.",
+       "ekran": "Adrenalin: güçlü vazokonstriktör ve kardiyak uyarıcı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "çok güçlü bir vazokonstriktör ve kardiyak uyarandır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0176",
+       "ses": "Adrenalin sonrası sistolik kan basıncı artışı, kalpteki pozitif inotropik ve kronotropik etkilerine, ağırlıklı beta bir, ve birçok damar yatağındaki vazokonstriksiyona, alfa, bağlıdır.",
+       "ekran": "Sistolik artış: beta1 inotropi ve kronotropi + alfa vazokonstriksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "sistolik kan basıncı artışı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0177",
+       "ses": "Adrenalin ayrıca iskelet kası damarlarındaki beta iki reseptörleri aktive ederek bu damarları genişletir.",
+       "ekran": "Beta2: iskelet kası damarı dilatasyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "iskelet kası kan damarlarındaki"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p037",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-46-c0178",
+       "ses": "Adrenalin enjeksiyonunda bazen görülen diyastolik basınç düşüşü, aslında toplam periferik direncin düşmüş olmasıyla açıklanır.",
+       "ekran": "Diyastolik düşüş: toplam periferik direnç azalmıştır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "diyastolik basınç düşüşünü"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0179",
+       "ses": "Egzersiz sırasında kan akışının artmasında iskelet kasındaki beta iki reseptörlerinin aktivasyonunun payı vardır.",
+       "ekran": "Egzersiz: iskelet kası beta2",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Egzersiz sırasında kan akışının artmasında"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0180",
+       "ses": "Noradrenalin, norepinefrin, hem alfa bir hem alfa iki reseptörlere agonisttir.",
+       "ekran": "Noradrenalin: alfa1 ve alfa2 agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Noradrenalin (norepinefrin) hem"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0181",
+       "ses": "Noradrenalin beta bir reseptörleri de adrenalin kadar güçle aktive eder, ama beta iki reseptörler üzerindeki etkisi düşüktür.",
+       "ekran": "Noradrenalin: beta1 adrenalin gibi, beta2 zayıf",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "düşük etki gösterir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0182",
+       "ses": "Bu nedenle noradrenalin periferik direnci, diyastolik ve sistolik kan basıncını artırır.",
+       "ekran": "Noradrenalin: direnç, diyastolik ve sistolik basınç artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "periferik direnci, diyastolik ve sistolik kan basıncını artırır"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p038",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-46-c0183",
+       "ses": "Dopamin noradrenalin sentezinde öncül maddedir ve endojen dopamin sodyum atılımının ve böbrek işlevinin düzenlenmesinde daha önemli etkilere sahip olabilir.",
+       "ekran": "Dopamin: noradrenalin öncülü; sodyum atılımı ve böbrek işlevi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "noradrenalin sentezinde öncül maddedir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0184",
+       "ses": "Bazal gangliyonlarda dopamin eksikliği, öncülü levodopa ile tedavi edilen Parkinson hastalığına yol açar.",
+       "ekran": "Bazal ganglion dopamin eksikliği: Parkinson, levodopa",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "levodopa ile tedavi edilen Parkinson"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0185",
+       "ses": "Dopamin reseptörleri antipsikotik ilaçların da hedefidir.",
+       "ekran": "Dopamin reseptörü: antipsikotik hedefi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "antipsikotik ilaçlar için hedeftir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0186",
+       "ses": "Direkt etkili sempatomimetiklerden fenilefrin saf bir alfa bir agonistidir.",
+       "ekran": "Fenilefrin: saf alfa1 agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "saf bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0187",
+       "ses": "Fenilefrin katekol türevi olmadığı için ka o em te ile inaktive edilmez ve etki süresi katekolaminlere göre daha uzundur.",
+       "ekran": "Fenilefrin: KOMT'a dirençli, etki süresi uzun",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "KOMT enzimi ile inaktive edilmez"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0188",
+       "ses": "Fenilefrin güçlü bir midriyatik ve dekonjestandır ve kan basıncını yükseltmek için de kullanılabilir.",
+       "ekran": "Fenilefrin: midriyatik, dekonjestan, kan basıncını yükseltir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Güçlü bir midriyatik ve dekonjestandır"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b13",
+   "baslik": "Direkt etkili alfa1 agonistleri: fenilefrin, midodrin, metoksamin",
+   "paragraflar": [
+    {
+     "id": "k2-46-p039",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-46-c0190",
+       "ses": "Midodrin, enzimatik olarak seçici alfa bir agonisti olan desglimidodrine hidrolize edilen bir ön ilaçtır.",
+       "ekran": "Midodrin: ön ilaç, desglimidodrin alfa1 agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "ön-ilaçtır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0191",
+       "ses": "Midodrin uygulandıktan yaklaşık bir saat sonra desglimidodrin doruk konsantrasyonlarına ulaşır.",
+       "ekran": "Desglimidodrin doruğu: yaklaşık 1 saat",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "yaklaşık 1 saat sonra desglimidodrin doruk"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0192",
+       "ses": "Midodrinin temel endikasyonu, otonom sinir sistemi işlevinin bozulmasına bağlı ortostatik hipotansiyon tedavisidir.",
+       "ekran": "Midodrin: otonom disfonksiyona bağlı ortostatik hipotansiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "ortostatik hipotansiyon"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0193",
+       "ses": "Midodrin hasta ayağa kalktığında görülen kan basıncı düşüşünü azaltmada etkilidir, ancak hasta yatarken hipertansiyona yol açabilir.",
+       "ekran": "Midodrin: ayakta düşüşü azaltır, yatarken hipertansiyon yapabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "hasta yatar pozisyonda iken"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0194",
+       "ses": "Metoksamin farmakolojik olarak fenilefrin gibi davranır, çünkü temel olarak direkt etkili bir alfa bir agonistidir.",
+       "ekran": "Metoksamin: fenilefrin gibi, direkt alfa1 agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Metoksamin farmakolojik olarak fenilefrin gibi davranır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0195",
+       "ses": "Metoksamin parenteral kullanıma uygundur, ancak klinik uygulamaları azdır ve hipotansif durumlarla sınırlıdır.",
+       "ekran": "Metoksamin: parenteral, sınırlı kullanım",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "parenteral kullanıma uygundur"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b14",
+   "baslik": "Alfa2 agonistleri ve topikal dekonjestanlar",
+   "paragraflar": [
+    {
+     "id": "k2-46-p040",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-46-c0196",
+       "ses": "Alfa iki selektif agonistler, santral sinir sistemindeki etkileriyle kan basıncını düşürür, ancak doğrudan damara verilirse vazokonstriksiyon yapabilir.",
+       "ekran": "Alfa2 agonistleri: santral etkiyle basınç düşer, doğrudan damarda vazokonstriksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "santral sinir sistemindeki etkileri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0197",
+       "ses": "Klonidin, metildopa, guanfasin ve guanabenz hipertansiyon tedavisinde kullanılır.",
+       "ekran": "Klonidin, metildopa, guanfasin, guanabenz: hipertansiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "klonidin, metildopa, guanfasin ve guanabenz"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0198",
+       "ses": "Sedasyon bu ilaçların bilinen bir yan etkisidir.",
+       "ekran": "Sedasyon: bilinen yan etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Sedasyon"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0199",
+       "ses": "Deksmedetomidinin başlıca endikasyonu, yoğun bakımda entübe edilen ve mekanik ventilasyon uygulanan hastalarda başlangıç sedasyonu sağlamaktır.",
+       "ekran": "Deksmedetomidin: yoğun bakımda entübe hastada sedasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "deksmedetomidinin başlıca endikasyonu"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0200",
+       "ses": "Deksmedetomidin ayrıca ağrı kontrolünde opioid gereksinimini azaltır.",
+       "ekran": "Deksmedetomidin: opioid gereksinimi azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "opioid gereksinimini azaltır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0201",
+       "ses": "Tizanidin santral etkili bir kas gevşetici olarak kullanılır.",
+       "ekran": "Tizanidin: santral etkili kas gevşetici",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Tizanidin santral etkili bir kas gevşetici"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0202",
+       "ses": "Bu bilgi çıkmış sorularda soruldu.",
+       "ekran": "Çıkmış: tizanidin santral etkili alfa2 agonisti kas gevşetici",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "5d76925ac6c0"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Tizanidin santral etkili bir kas gevşetici"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p041",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-46-c0203",
+       "ses": "Oksimetazolin ve ksilometazolin direkt etkili alfa agonistleridir.",
+       "ekran": "Oksimetazolin, ksilometazolin: direkt alfa agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Oksimetazolin ve ksilometazolin direkt etkili"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0204",
+       "ses": "Bu ilaçlar burun mukozasında vazokonstriksiyon yaptıkları için topikal dekonjestan olarak kullanılır.",
+       "ekran": "Burun mukozasında vazokonstriksiyon: topikal dekonjestan",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "topikal dekonjestanlar olarak kullanılmaktadırlar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0205",
+       "ses": "İzoproterenol, izoprenalin, çok güçlü bir beta reseptör agonistidir ve alfa reseptörler üzerindeki etkisi azdır.",
+       "ekran": "İzoproterenol: çok güçlü beta agonisti, alfa etkisi az",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "çok güçlü bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0206",
+       "ses": "İzoproterenol pozitif kronotropik ve inotropik etkilere sahiptir ve neredeyse yalnız beta reseptörleri aktive ettiği için güçlü bir vazodilatördür.",
+       "ekran": "İzoproterenol: pozitif kronotrop ve inotrop, güçlü vazodilatör",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "pozitif kronotropik ve inotropik etkilere sahiptir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0207",
+       "ses": "Beta selektif agonistler önemlidir, çünkü beta bir ve beta iki etkileri tam olmasa da birbirinden ayrılabilir ve bu, bazı kullanımlarda yan etkileri azaltmaya yeter.",
+       "ekran": "Beta selektif agonistler: yan etki azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "yan etkileri"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b15",
+   "baslik": "Beta agonistleri: izoproterenol, dobutamin, beta2 selektifler",
+   "paragraflar": [
+    {
+     "id": "k2-46-p042",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-46-c0208",
+       "ses": "Dobutamin başlangıçta kısmen beta bir selektif bir ajan sayılmıştır, ancak etkileri daha karmaşıktır.",
+       "ekran": "Dobutamin: beta1 selektif sayılır, etkisi karmaşık",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "başlangıçta kısmen bir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0209",
+       "ses": "Dobutaminin kimyasal yapısı dopamine benzer ve etkilerine daha çok alfa ve beta reseptörlerin aktivasyonu aracılık eder.",
+       "ekran": "Dobutamin: yapısı dopamine benzer, alfa ve beta aktivasyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Kimyasal yapısı dopamine benzer"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0210",
+       "ses": "Dobutaminin pozitif inotropik etkisi, ağırlıklı olarak beta aktivitesine sahip izomerden kaynaklanır.",
+       "ekran": "Dobutamin: pozitif inotropik etki, beta izomeri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "pozitif inotropik bir etkiye sahiptir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0211",
+       "ses": "Dobutaminin izoproterenole göre kronotropik etkisine kıyasla inotropik etkisi nispeten fazladır.",
+       "ekran": "İzoproterenole göre inotropi/kronotropi oranı yüksek",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "kronotropik etkiye göre nispeten daha fazla inotropik"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0212",
+       "ses": "Terbutalin, albuterol, yani salbutamol, metaproterenol, salmeterol, formoterol ve indakaterol gibi beta iki selektif ajanlar astım tedavisinde önemlidir.",
+       "ekran": "Beta2 selektif ajanlar: astım tedavisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "astım"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0213",
+       "ses": "Başka bir kullanım alanı, ritodrinle erken doğumda uterusu gevşetmektir.",
+       "ekran": "Ritodrin: erken doğumda uterus gevşemesi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "ritodrin"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b16",
+   "baslik": "Karma etkili sempatomimetikler: efedrin ve psödoefedrin",
+   "paragraflar": [
+    {
+     "id": "k2-46-p043",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-46-c0214",
+       "ses": "Karma etkili sempatomimetikler hem direkt hem indirekt etki gösterir; bunların başında efedrin gelir.",
+       "ekran": "Karma etkili sempatomimetikler: efedrin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Karma-Etkili Sempatomimetikler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0215",
+       "ses": "Efedrin çeşitli bitkilerde bulunur ve yaygın kullanılan bitkisel bir ilaç olan Ephedra içinde yer alır.",
+       "ekran": "Efedrin: Ephedra bitkisinde bulunur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Efedrin çeşitli bitkilerde bulunur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0216",
+       "ses": "Efedrinin biyoyararlanımı yüksektir ve saatler süren nispeten uzun bir etki süresi vardır.",
+       "ekran": "Efedrin: yüksek biyoyararlanım, uzun etki süresi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "biyoyararlanımı yüksektir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0217",
+       "ses": "Efedrin beta reseptörleri aktive edebildiği için eskiden astımda kullanılmıştır ve santral sinir sistemine girdiği için hafif uyarıcıdır.",
+       "ekran": "Efedrin: beta aktivasyonu, hafif MSS uyarıcısı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "hafif uyarıcıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0218",
+       "ses": "Efedrinin enantiyomerlerinden biri olan psödoefedrin, reçetesiz satılan birçok dekonjestan karışımda bulunur.",
+       "ekran": "Psödoefedrin: reçetesiz dekonjestan karışımlarda",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "psödoefedrin reçetesiz satılan"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p044",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-46-c0219",
+       "ses": "Psödoefedrin metamfetaminin yasa dışı üretiminde öncül madde olarak kullanıldığı için satışı kısıtlanmıştır.",
+       "ekran": "Psödoefedrin: metamfetamin öncülü, satışı kısıtlı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Metamfetaminin yasa dışı üretiminde"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0220",
+       "ses": "İndirekt etkili sempatomimetikler iki farklı mekanizmadan birine sahip olabilir.",
+       "ekran": "İndirekt etkili sempatomimetikler: iki mekanizma",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "İndirekt Etkili Sempatomimetikler"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0221",
+       "ses": "Birinci mekanizmada ilaç sempatik sinir uçlarına girer ve depolanmış katekolamin yapılı transmiteri yerinden boşaltır.",
+       "ekran": "1. Depolanmış transmiteri yerinden boşaltır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "depolanmış katekolamin yapılı transmiteri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0222",
+       "ses": "Bu ilaçlara amfetamin benzeri ya da yer değiştirici ilaçlar denir.",
+       "ekran": "Amfetamin benzeri / yer değiştirici ilaçlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "yer değiştirici"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0223",
+       "ses": "İkinci mekanizmada ilaç en a te'ın işlevini bozarak salınmış transmiterlerin geri alımını inhibe eder.",
+       "ekran": "2. NAT'ı bozarak geri alımı inhibe eder",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "noradrenalin transportörü NAT'ın etkilerini bozarak"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b17",
+   "baslik": "İndirekt etkili sempatomimetikler: amfetamin ve benzerleri",
+   "paragraflar": [
+    {
+     "id": "k2-46-p045",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-46-c0224",
+       "ses": "Amfetamin benzerlerinde amfetamin, genellikle merkezi sinir sistemi uyarıcısı olarak kullanımı ve suistimali nedeniyle önemlidir.",
+       "ekran": "Amfetamin: MSS uyarıcısı, suistimal",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Amfetamin genellikle santral sinir sistemi uyaranı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0225",
+       "ses": "Amfetaminin farmakokinetiği efedrine benzer, ancak amfetamin santral sinir sistemine daha kolay girer ve ruh hali, uyanıklık ve iştah üzerinde belirgin etki gösterir.",
+       "ekran": "Amfetamin: efedrine benzer, MSS'ye kolay girer; uyarıcı ve iştah azaltıcı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "daha kolay girerek"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0226",
+       "ses": "Amfetaminin etkilerine noradrenalin ve belli bir dereceye kadar dopamin salınımı aracılık eder.",
+       "ekran": "Amfetamin etkisi: noradrenalin ve dopamin salınımı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "noradrenalin ve belli bir dereceye kadar da"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0227",
+       "ses": "Metamfetamin, en metilamfetamin, amfetamine çok benzer, ancak santral etkilerinin periferik etkilerine oranı daha da yüksektir.",
+       "ekran": "Metamfetamin: santral/periferik oran daha yüksek",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Metamfetamin (N-metilamfetamin)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p046",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-46-c0228",
+       "ses": "Metilfenidat, temel farmakolojik etkileri ve suistimal potansiyeli amfetaminlere benzeyen bir amfetamin türevidir.",
+       "ekran": "Metilfenidat: amfetamin türevi, suistimal potansiyeli",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Metilfenidat temel farmakolojik etkileri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0229",
+       "ses": "Metilfenidat bazı çocuklarda dikkat eksikliği hiperaktivite bozukluğunda etkili olabilir.",
+       "ekran": "Metilfenidat: DEHB",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "dikkat eksikliği hiperaktivite"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0230",
+       "ses": "Modafinil ve armodafinil kimyasal yapı, nörokimyasal profil ve davranışsal etkiler bakımından amfetaminden farklı psikostimülanlardır ve etki mekanizmaları tam bilinmez.",
+       "ekran": "Modafinil, armodafinil: amfetaminden farklı psikostimülan",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Modafinil ve armodafinil"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0231",
+       "ses": "Modafinil ve armodafinil hem noradrenalin hem dopamin transportörlerini inhibe eder; serotonin ve glutamatın sinaptik düzeyini artırır, gaba düzeyini düşürür.",
+       "ekran": "Noradrenalin ve dopamin transportörleri inhibe, GABA azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Hem noradrenalin hem de dopamin transportörlerini"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b18",
+   "baslik": "Tiramin ve MAO inhibitörü etkileşimi",
+   "paragraflar": [
+    {
+     "id": "k2-46-p047",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-46-c0232",
+       "ses": "Tiramin vücutta tirozin metabolizmasının yan ürünüdür.",
+       "ekran": "Tiramin: tirozin metabolizmasının yan ürünü",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Tiramin vücutta tirozin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0233",
+       "ses": "Tiramin proteinden zengin besinlerde fermantasyon sırasında tirozinin dekarboksilasyonuyla yüksek miktarlarda oluşur; Tablo dokuz beş'te bira, eski peynir (özellikle çedar, gravyer ve rokfor), tavuk karaciğeri, fermente sosis, tütsülenmiş veya salamura balık ve bira mayası sayılır, kırmızı şarapta ise miktar azdır (sıfır ile üç miligram), tablo notuna göre her zaman tehlikeli miktarda tiramin yalnız peynir, sosis, salamura balık ve bira mayasında bulunur.",
+       "ekran": "Tiramin: fermente, proteinli besinlerde bol (Tablo 9-5); her zaman tehlikeli miktar: peynir, sosis, salamura balık, bira mayası; kırmızı şarap yalnız 0-3 mg",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "dekarboksilasyonu yoluyla"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p048",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k2-46-c0234",
+       "ses": "Tiramin karaciğerde em a o tarafından hemen metabolize edilir ve çok yüksek ilk geçiş etkisi nedeniyle ağızdan alınınca normalde inaktiftir.",
+       "ekran": "Tiramin oral: MAO ile ilk geçiş, normalde inaktif",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "çok yüksek"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0235",
+       "ses": "Parenteral verilirse tiramin, depolanmış katekolaminlerin salınmasıyla indirekt sempatomimetik etki gösterir.",
+       "ekran": "Parenteral tiramin: depolanmış katekolamin salınır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Parenteral yolla uygulanırsa"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0236",
+       "ses": "Bu yüzden tiraminin etki spektrumu noradrenaline benzer.",
+       "ekran": "Tiramin etkisi noradrenaline benzer",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "etki spektrumu noradrenaline benzemektedir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0237",
+       "ses": "Em a o inhibitörleriyle, özellikle em a o a izoformunun inhibitörleriyle tedavi edilen hastalarda tiraminin etkileri büyük ölçüde şiddetlenir ve kan basıncında belirgin artışa yol açabilir.",
+       "ekran": "MAO inhibitörü + tiramin: belirgin kan basıncı artışı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "MAO-A izoformunun"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b19",
+   "baslik": "Katekolamin geri alım inhibitörleri ve kokain",
+   "paragraflar": [
+    {
+     "id": "k2-46-p049",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k2-46-c0238",
+       "ses": "Katekolamin geri alım inhibitörleri noradrenalin, dopamin ve serotonin amin transportörlerini inhibe eden, klinikte kullanılan birçok ilacı kapsar.",
+       "ekran": "Geri alım inhibitörleri: NA, dopamin, serotonin transportörleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "amin transportörlerin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0239",
+       "ses": "Birçok antidepresan, özellikle eski trisiklik antidepresanlar, noradrenalin ve serotonin geri alımını farklı derecelerde inhibe edebilir.",
+       "ekran": "Trisiklik antidepresanlar: noradrenalin ve serotonin geri alımı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "trisiklik antidepresanlar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0240",
+       "ses": "Atomoksetin noradrenalin geri alım transportörünün selektif inhibitörüdür; etkisi noradrenerjik sinapslarda noradrenalin düzeyinin artmasına bağlıdır ve dikkat eksikliği bozukluklarında kullanılır.",
+       "ekran": "Atomoksetin: NAT selektif inhibitörü, dikkat eksikliği",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Atomoksetin noradrenalin geri-alım"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0241",
+       "ses": "Reboksetin atomoksetine benzer özelliktedir, ancak esas olarak majör depresyon bozukluğu için kullanılır.",
+       "ekran": "Reboksetin: majör depresyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "majör depresyon"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0242",
+       "ses": "Sibutramin serotonin ve noradrenalin geri alım inhibitörüdür ve başlangıçta obezitenin uzun süreli tedavisi için iştah kesici olarak onaylanmıştır.",
+       "ekran": "Sibutramin: serotonin ve noradrenalin geri alım inhibitörü, iştah kesici",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Sibutramin bir serotonin"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p050",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k2-46-c0243",
+       "ses": "Duloksetin dengeli serotonin ve noradrenalin geri alım inhibitörü etkisi olan, yaygın kullanılan bir antidepresandır.",
+       "ekran": "Duloksetin: dengeli SNRI antidepresan",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Duloksetin yaygın şekilde kullanılan"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0244",
+       "ses": "Duloksetin ve bir diğer serotonin-noradrenalin transportör blokörü olan milnasipran, fibromiyalji ağrısının tedavisi için onay almıştır.",
+       "ekran": "Duloksetin, milnasipran: fibromiyalji ağrısı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "fibromyaljide görülen ağrı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0245",
+       "ses": "Kokain, noradrenerjik sinapslarda geri alımın inhibisyonuna bağlı periferik sempatomimetik etkisi olan bir lokal anesteziktir.",
+       "ekran": "Kokain: geri alım inhibisyonu, lokal anestezik",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "geri-alımının"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0246",
+       "ses": "Kokain merkezi sinir sistemine kolayca girer ve amfetamine göre daha kısa süren, daha şiddetli amfetamin benzeri psikolojik etki yapar.",
+       "ekran": "Kokain: MSS'ye girer, amfetamine göre kısa ve şiddetli etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "daha kısa"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0247",
+       "ses": "Kokainin merkezi sinir sistemindeki başlıca etkisi, beynin haz merkezlerindeki nöronlara dopamin geri alımını inhibe etmesidir.",
+       "ekran": "Kokain: haz merkezlerinde dopamin geri alımı inhibisyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "dopamin geri-alımını inhibe etmektir"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b20",
+   "baslik": "Dopamin agonistleri ve akut hipotansiyon/şok tedavisi",
+   "paragraflar": [
+    {
+     "id": "k2-46-p051",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k2-46-c0248",
+       "ses": "Dopamin agonistleri başlığında, vücutta dopamine dönüşen levodopa ve santral etkili dopamin agonistleri Parkinson hastalığı ve prolaktinemi tedavisinde büyük öneme sahiptir.",
+       "ekran": "Levodopa ve dopamin agonistleri: Parkinson, prolaktinemi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Parkinson hastalığı ve prolaktinemi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0249",
+       "ses": "Fenoldopam bazı damar yataklarında seçici periferik vazodilatasyon yapan bir D bir reseptör agonistidir.",
+       "ekran": "Fenoldopam: D1 agonisti, periferik vazodilatasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "selektif şekilde periferik"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0250",
+       "ses": "Fenoldopamın başlıca endikasyonu ağır hipertansiyonun intravenöz tedavisidir.",
+       "ekran": "Fenoldopam: ağır hipertansiyon, IV",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "ağır hipertansiyonun intravenöz tedavisidir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0251",
+       "ses": "Sempatomimetiklerin tedavi amaçlı kullanımlarında sempatik sistemin kan basıncı kontrolündeki önemi nedeniyle başlıca alanlardan biri kardiyovasküler durumlardır.",
+       "ekran": "Tedavi amaçlı kullanım: kardiyovasküler uygulamalar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Kardiyovasküler Uygulamalar"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p052",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k2-46-c0252",
+       "ses": "Akut hipotansiyon tedavisinde nedenler şiddetli hemoraji, kan hacminin azalması, nörolojik hastalık veya kazalar, antihipertansiflerin yüksek dozu ya da yan etkileri ve enfeksiyondur.",
+       "ekran": "Akut hipotansiyon nedenleri: kanama, hacim kaybı, nörolojik hasar, ilaç, enfeksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Akut hipotansiyon şiddetli hemoraji"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0253",
+       "ses": "Serebral, renal ve kardiyak kanlanma korunuyorsa hipotansiyonun kendisi genellikle doğrudan tedavi gerektirmez.",
+       "ekran": "Perfüzyon korunuyorsa doğrudan tedavi gerekmez",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "doğrudan tedavi gerektirmez"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0254",
+       "ses": "Asıl sorun saptanıp tedavi edilene dek hasta yatar pozisyona alınır ve yeterli sıvı hacmi sağlanır.",
+       "ekran": "Yatar pozisyon ve yeterli sıvı hacmi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "yatar pozisyona alıp"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0255",
+       "ses": "Hastaya acil tehdit yoksa kan basıncını yükseltmek için sempatomimetik kullanmak morbiditeyi artırabilir.",
+       "ekran": "Acil tehdit yoksa sempatomimetik morbiditeyi artırabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "morbiditeyi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0256",
+       "ses": "Hipotansif acil durumda ise sempatomimetikler serebral ve koroner kan akımını korumak için kullanılabilir.",
+       "ekran": "Hipotansif acil durum: serebral ve koroner akımı korur",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "serebral ve koroner kan akımını korumak için"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p053",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k2-46-c0257",
+       "ses": "Uygun sıvı veya kan verildiğinde akut hipotansiyon tedavisi genellikle kısa sürer.",
+       "ekran": "Sıvı veya kan verilince tedavi kısa sürer",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "tedavi genelde kısa"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0258",
+       "ses": "Vazokonstriksiyon istenirse noradrenalin, fenilefrin ve metoksamin gibi direkt etkili alfa agonistleri kullanılır.",
+       "ekran": "Vazokonstriksiyon: noradrenalin, fenilefrin, metoksamin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "noradrenalin, fenilefrin ve metoksamin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0259",
+       "ses": "Şok, hayati organların kanlanmasında önemli azalmaya ve çok sayıda sistemik etkiye yol açan karmaşık bir akut kardiyovasküler sendromdur.",
+       "ekran": "Şok: hayati organ kanlanması azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "karmaşık bir akut kardiyovasküler sendromdur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0260",
+       "ses": "Şok genellikle hipotansiyon, mental durumda değişiklik, oligüri ve metabolik asidozla seyreder.",
+       "ekran": "Şok: hipotansiyon, mental değişiklik, oligüri, asidoz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "mental durumda değişiklik, oligüri"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0261",
+       "ses": "Şoka yol açan başlıca üç mekanizma hipovolemi, kalp yetmezliği ve damar direncinin değişmesidir.",
+       "ekran": "Şok mekanizmaları: hipovolemi, kalp yetmezliği, direnç değişimi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "hipovolemi, kalp yetmezliği ve damar direncinin değişmesidir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0262",
+       "ses": "Şok tedavisinin başlıca dayanağı volümün yerine konması ve altta yatan hastalığın tedavisidir.",
+       "ekran": "Şok tedavisi: volüm yerine koyma, altta yatan hastalığı tedavi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "volümün yerine konması"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p054",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k2-46-c0263",
+       "ses": "Şokta çoğu tipte refleks sempatik aktivasyonun aracılık ettiği şiddetli vazokonstriksiyon bulunur.",
+       "ekran": "Şok: refleks sempatik vazokonstriksiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "refleks sempatik sinir sistemi aktivasyonunun"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0264",
+       "ses": "Serebral, koroner ve renal kanlanmayı düzeltmek için periferik direnci artırmak yerine azaltmak daha yararlı olabilir.",
+       "ekran": "Perfüzyon için direnci azaltmak yararlı olabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "periferik direnci artırmaktan ziyade azaltmak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0265",
+       "ses": "Kardiyojenik şok ve akut kalp yetmezliği genellikle şiddetli miyokard infarktüsüne bağlıdır ve prognozu kötüdür.",
+       "ekran": "Kardiyojenik şok: miyokard infarktüsü, kötü prognoz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "şiddetli miyokard infarktüsüne bağlıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0266",
+       "ses": "Ileri ventrikül disfonksiyonunda dopamin veya dobutamin gibi pozitif inotropik ajanlar kalp yetmezliği semptomlarında kısa süreli rahatlama sağlayabilir.",
+       "ekran": "Dopamin, dobutamin: kısa süreli rahatlama",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "pozitif inotropik ajanlar"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p055",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k2-46-c0267",
+       "ses": "Dopamin ve dobutamin düşük ve orta dozlarda kardiyak debiyi artırabilir ve noradrenaline kıyasla daha az periferik vazokonstriksiyon yapar.",
+       "ekran": "Dopamin, dobutamin: debi artar, vazokonstriksiyon daha az",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "düşük ve orta dozlarda"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0268",
+       "ses": "İzoproterenol, dopamin ve dobutamine göre kalp hızını ve kalbin işini daha fazla artırır.",
+       "ekran": "İzoproterenol: hız ve iş yükü daha fazla artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "kalp hızını ve kalbin işini daha fazla artırır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0269",
+       "ses": "Şok hastaları bu girişimlere yanıt vermeyebilir; o durumda kan basıncını korumak için vazokonstriktör kullanılır.",
+       "ekran": "Yanıt yoksa vazokonstriktör",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "vazokonstriktörlerin kullanılmasıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0270",
+       "ses": "Kronik ortostatik hipotansiyonda ayakta dururken yerçekimi venöz göllenmeye yol açar ve venöz dönüş azalır.",
+       "ekran": "Kronik ortostatik hipotansiyon: venöz göllenme, dönüş azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "venöz göllenmeye yol açarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0271",
+       "ses": "Normalde refleks sempatik aktivasyonla kalp hızı artar, periferik arteriyel ve venöz vazokonstriksiyon olur ve kan basıncının düşmesi önlenir.",
+       "ekran": "Normal refleks: hız artar, vazokonstriksiyon, düşüş önlenir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "refleks sempatik aktivasyonla birlikte"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b21",
+   "baslik": "Kronik ortostatik hipotansiyon, kardiyak ve lokal vazokonstriksiyon uygulamaları",
+   "paragraflar": [
+    {
+     "id": "k2-46-p056",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-46-c0272",
+       "ses": "Kronik ortostatik hipotansiyon, kan basıncını düzenleyen otonomik reflekslerin bozulmasıyla gelişebilir.",
+       "ekran": "Otonomik refleks bozukluğu: kronik ortostatik hipotansiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "otonomik reflekslerin bozulması"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0273",
+       "ses": "Nedenleri otonomik işlevi etkileyen ilaçlar, yani imipramin ve diğer trisiklik antidepresanlar, idrar retansiyonu için kullanılan alfa blokörler ve diüretiklerdir.",
+       "ekran": "İlaçlar: trisiklikler, alfa blokörler, diüretikler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "imipramin ve diğer trisiklik antidepresanlar"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0274",
+       "ses": "Periferik otonom disfonksiyona yol açan diyabet ve otonom sinir sisteminin primer dejeneratif bozuklukları da neden olur.",
+       "ekran": "Diyabet ve primer dejeneratif otonom bozukluklar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "diyabet ve"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0275",
+       "ses": "Tedavi yollarından biri periferik direnci artırmaktır ve bu amaçla alfa reseptörleri aktive eden ilaçlar kullanılabilir.",
+       "ekran": "Tedavi: periferik direnci artıran alfa agonistleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "periferik direnci artırmaktır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0276",
+       "ses": "Oral yolla etkili alfa bir agonisti midodrin bu endikasyonda sıklıkla kullanılır; oral efedrin ya da fenilefrin gibi diğer sempatomimetikler de denenebilir.",
+       "ekran": "Midodrin sık kullanılır; efedrin, fenilefrin denenebilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "sıklıkla kullanılmaktadır"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p057",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k2-46-c0277",
+       "ses": "Ortostatik hipotansiyon tedavisinde daha yeni bir yaklaşım, dopa dekarboksilaz tarafından norepinefrine dönüştürülen sentetik molekül droksidopadır.",
+       "ekran": "Droksidopa: dopa dekarboksilaz ile norepinefrine dönüşür",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "droksidopadır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0278",
+       "ses": "Parkinson tedavisinde levodopayı dopamine çeviren enzim de budur ve droksidopa ortostatik hipotansiyon tedavisi için onaylanmıştır.",
+       "ekran": "Aynı enzim levodopayı dopamine çevirir; droksidopa onaylı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "ortostatik hipotansiyonun tedavisi için onaylanmıştır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0279",
+       "ses": "Kardiyak uygulamalarda adrenalin kalp durması sonrası resüsitasyon sırasında kullanılır.",
+       "ekran": "Adrenalin: kalp durması sonrası resüsitasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "kalp durması sonrası resüsitasyon sırasında"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0280",
+       "ses": "İzoproterenol ve adrenalin gibi katekolaminler tam kalp bloğu ve kardiyak arrestin geçici acil tedavisinde kullanılır.",
+       "ekran": "İzoproterenol, adrenalin: tam kalp bloğu, arrest",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "tam kalp bloğunun ve kardiyak arrestin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0281",
+       "ses": "Adrenalin, kan akımını koroner damarlara ve beyne yeniden dağıtarak kardiyopulmoner resüsitasyon sırasında yararlı olabilir.",
+       "ekran": "Adrenalin: akım koroner ve beyne dağılır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "yeniden dağılması yoluyla"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p058",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k2-46-c0282",
+       "ses": "Dobutamin enjeksiyonu farmakolojik bir kardiyak stres testi olarak kullanılır.",
+       "ekran": "Dobutamin: farmakolojik kardiyak stres testi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "farmakolojik bir kardiyak stres testi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0283",
+       "ses": "Dobutamin miyokard kasılmasını güçlendirir ve koroner ile sistemik vazodilatasyon yapar.",
+       "ekran": "Dobutamin: kasılma artar, vazodilatasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "miyokard kasılmasını güçlendirir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0284",
+       "ses": "Lokal vazokonstriksiyon oluşturmak istendiğinde amaç, cerrahide hemostaz sağlamak, lokal anesteziklerin uygulandıkları yerin dışına yayılmasını azaltmak ve mukoz membran konjesyonunu azaltmaktır.",
+       "ekran": "Lokal vazokonstriksiyon: hemostaz, anestezik yayılımı, mukoza konjesyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "hemostaz elde etmek"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0285",
+       "ses": "Bu durumların hepsinde alfa reseptör aktivasyonu istenir; ajan, gereken maksimum etkiye, istenen süreye ve uygulama yoluna göre seçilir.",
+       "ekran": "Alfa aktivasyonu; ajan etki, süre ve yola göre seçilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "uygulama yoluna bağlıdır"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p059",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k2-46-c0286",
+       "ses": "Yüz, ağız ve nazofarinks cerrahilerinde etkin hemostaz için lokal olarak yüksek konsantrasyonda uygulanabilen etkili ilaçlar gerekir.",
+       "ekran": "Yüz, ağız, nazofarinks cerrahisi: yüksek konsantrasyonlu lokal ilaç",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "nazofarinks cerrahilerinde"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0287",
+       "ses": "Adrenalin genellikle burun kanaması için burun kompreslerinde ve gingivektomide dişeti iplerinde topikal uygulanır.",
+       "ekran": "Adrenalin: burun kanamasında kompres, gingivektomide ip",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "dişeti ipliklerinde"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0288",
+       "ses": "Kokain bazen nazofarinks cerrahisinde kullanılır, çünkü hemostaz sağlayan bir etkiyle lokal anesteziyi birleştirir.",
+       "ekran": "Kokain: hemostaz + lokal anestezi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "hemostaz bir etkiyle lokal anesteziyi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0289",
+       "ses": "Maksimum hemostaz ve lokal anestezi için kokain bazen adrenalinle karıştırılır.",
+       "ekran": "Kokain + adrenalin karışımı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "adrenalinle karıştırılır"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p060",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k2-46-c0290",
+       "ses": "Lokal anestezik ilaca vazokonstriktör eklenmesinin amacı, infiltrasyonla yapılan sinir bloğunun süresini büyük ölçüde uzatmak ve lokal anesteziğin toplam dozunu azaltmaktır.",
+       "ekran": "Alfa agonist + lokal anestezik: blok süresi uzar, toplam doz azalır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "sinir bloğunun süresini büyük ölçüde uzatır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0291",
+       "ses": "Bu bilgi çıkmış sorularda soruldu.",
+       "ekran": "Çıkmış: vazokonstriktör eklemek anestezik yan etkisini yok etmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Çıkmış",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2020-2021-q109"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "sinir bloğunun süresini büyük ölçüde uzatır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0292",
+       "ses": "Bu amaçla yüz binde bir veya iki yüz binde bir oranında epinefrin, adrenalin, tercih edilen ajandır; noradrenalin, fenilefrin ve diğer alfa agonistleri de kullanılır.",
+       "ekran": "Tercih: adrenalin 1:100.000 veya 1:200.000",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "1:100.000 veya 1:200.000"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0293",
+       "ses": "Kalp ve periferik damarlarda sistemik etkiler lokal uygulamayla bile ortaya çıkabilir, ancak genellikle çok azdır.",
+       "ekran": "Lokal uygulamada sistemik etki genelde minimal",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "genellikle minimaldir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0294",
+       "ses": "İskemik nekroz korkusu nedeniyle parmak, burun ve kulak gibi uç organ damar yataklarında lokal anesteziyle birlikte adrenalin kullanılması önerilmez.",
+       "ekran": "Uç organlarda adrenalin önerilmez: iskemik nekroz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "önerilmez"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b22",
+   "baslik": "Dekonjestanlar ve pulmoner uygulamalar",
+   "paragraflar": [
+    {
+     "id": "k2-46-p061",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k2-46-c0295",
+       "ses": "Mukoz membran dekonjestanları, burun mukozasının hacmini küçülterek saman nezlesi ve daha az oranda soğuk algınlığındaki rahatsızlığı azaltan alfa agonistleridir.",
+       "ekran": "Mukoz dekonjestanlar: alfa agonistleri, saman nezlesi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "burun mukozasının hacmini"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0296",
+       "ses": "Bu etkilere alfa bir reseptörleri aracılık ediyor olabilir; ancak bu ilaçların kullanımından sonra rebound hiperemi gelişebilir.",
+       "ekran": "Rebound hiperemi riski",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "rebound hiperemi gelişebilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0297",
+       "ses": "Damar kasılmasında alfa iki reseptörlerin aktivasyonu da rol alabilir ve nazal dekonjestan spreylerde sıklıkla fenilefrin kullanılır.",
+       "ekran": "Nazal sprey: sıklıkla fenilefrin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "nazal dekonjestan spreylerin içinde sıklıkla fenilefrin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0298",
+       "ses": "Efedrin ya da izomerlerinden psödoefedrin gibi ajanlar oral verilince daha uzun etki süresi elde edilir.",
+       "ekran": "Oral efedrin, psödoefedrin: uzun etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "oral yoldan uygulanmasıyla daha uzun bir etki süresi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0299",
+       "ses": "Uzun etkili topikal dekonjestanlar ksilometazolin ve oksimetazolindir.",
+       "ekran": "Uzun etkili topikal: ksilometazolin, oksimetazolin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "ksilometazolin ve oksimetazolindir"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p062",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k2-46-c0300",
+       "ses": "Pulmoner uygulamalar, sempatomimetiklerin en önemli kullanım alanlarından biri olan bronşiyal astım ve kronik obstrüktif akciğer hastalığı yani koah tedavisini kapsar.",
+       "ekran": "Pulmoner kullanım: astım ve KOAH",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "bronşiyal astım ve kronik obstrüktif akciğer hastalığı"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0301",
+       "ses": "Bu amaçla albuterol, yani salbutamol, terbutalin ve metaproterenol gibi beta iki selektif ilaçlar kullanılır.",
+       "ekran": "Beta2 selektif: albuterol, terbutalin, metaproterenol",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "albuterol (salbutamol), terbutalin, metaproterenol"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0302",
+       "ses": "Kısa etkili preparatlar yalnız astım semptomlarının akut tedavisinde geçici olarak kullanılabilir.",
+       "ekran": "Kısa etkili: akut semptom tedavisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "sadece astım semptomlarının akut"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0303",
+       "ses": "Erişkinlerde kronik astım tedavisinde uzun etkili beta iki agonistleri yalnız steroidlere ek olarak kullanılmalıdır, çünkü tek başına kullanılırsa morbiditeyi artırabilir.",
+       "ekran": "Uzun etkili beta2: yalnız steroide ek, tek başına morbidite artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "sadece steroidlere ek olarak kullanılmalıdır"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0304",
+       "ses": "Uzun etkili beta iki agonistleri koah'ta da kullanılır; ultra uzun etkili indakaterol, olodaterol ve vilanterol günde bir kez kullanım için ef de a onayı almıştır.",
+       "ekran": "KOAH: indakaterol, olodaterol, vilanterol, günde bir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "indakaterol, olodaterol ve vilanterol"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b23",
+   "baslik": "Anafilaksi ve göz uygulamaları",
+   "paragraflar": [
+    {
+     "id": "k2-46-p063",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "id": "k2-46-c0305",
+       "ses": "Anafilaksi, yani anafilaktik şok ve erken tip I i ge e aracılı reaksiyonlar, hem solunum hem kalp damar sistemini etkiler.",
+       "ekran": "Anafilaksi: tip I IgE aracılı, solunum ve kalp-damar etkilenir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "Anaflaktik şok ve bu tür erken"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0306",
+       "ses": "Bronkospazm, mukoz membran konjesyonu, anjiyoödem ve şiddetli hipotansiyon genellikle parenteral adrenalin uygulamasına hızlı yanıt verir.",
+       "ekran": "Parenteral adrenalin: hızlı yanıt",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "parenteral yoldan adrenalin uygulamasına"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0307",
+       "ses": "Adrenalin dozu olarak bin de bir adrenalin solüsyonundan sıfır virgül üç ile sıfır virgül beş mililitre verilir.",
+       "ekran": "Adrenalin 1:1000 solüsyon, 0,3-0,5 ml",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "1:1000"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0308",
+       "ses": "Hipotansif hastalarda cilt kan akımı ve deri altı enjeksiyondan sonraki emilim öngörülemediğinden tercih edilen yol intramüsküler enjeksiyon olabilir.",
+       "ekran": "Hipotansif hastada tercih: intramüsküler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "intramüsküler injeksiyon olabilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0309",
+       "ses": "Kardiyovasküler işlevi bozulan bazı hastalarda intravenöz adrenalin gerekebilir.",
+       "ekran": "Bazı hastalarda IV adrenalin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "intravenöz adrenalin"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p064",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k2-46-c0310",
+       "ses": "Adrenalinin alfa, beta bir ve beta iki reseptörlerini aktive etmesi, anafilaksinin altında yatan patofizyolojik olayların geri döndürülmesinde önemli olabilir.",
+       "ekran": "Adrenalin: alfa, beta1, beta2 aktivasyonu anafilaksiyi geri çevirir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "önemli olabilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0311",
+       "ses": "Böcek ısırığı duyarlılığı, şiddetli besin alerjisi ya da diğer anafilaksi riski taşıyan hastaların adrenalini bir otoenjektör içinde yanlarında taşıması önerilir.",
+       "ekran": "Riskli hasta: adrenalin otoenjektörü taşımalı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "oto-enjektör içerisinde adrenalin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0312",
+       "ses": "Göz uygulamalarında fenilefrin retina muayenesini kolaylaştırmak için sık kullanılan etkili bir midriyatiktir.",
+       "ekran": "Göz: fenilefrin, retina muayenesi için midriyatik",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "retina muayenesini kolaylaştırmak için"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0313",
+       "ses": "Fenilefrin ayrıca hafif alerjik kızarıklık ve konjonktival kaşıntı için dekonjestan olarak da kullanılır.",
+       "ekran": "Fenilefrin: konjonktival dekonjestan",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "konjonktival membranların kaşıntısı"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p065",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k2-46-c0314",
+       "ses": "Göz damlası olarak sempatomimetikler Horner sendromundaki lezyonun yerini belirlemek için de kullanılabilir.",
+       "ekran": "Göz damlası: Horner sendromunda lezyon yeri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "Horner sendromundaki lezyonun yerini"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0315",
+       "ses": "Glokom, çeşitli sempatomimetiklere ve sempatoplejik ilaçlara yanıt verir.",
+       "ekran": "Glokom: sempatomimetik ve sempatoplejik yanıt",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "Glokom çeşitli"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0316",
+       "ses": "Apraklonidin ve brimonidin göz içi basıncını azaltan alfa iki selektif agonistlerdir ve beta bloke edici timolol glokom tedavisinde kullanım için onaylıdır.",
+       "ekran": "Apraklonidin, brimonidin: alfa2; timolol: beta bloker",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "apraklonidin ve brimonidin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0317",
+       "ses": "Genitoüriner uygulamalarda beta iki selektif ajanlar gebe uterusu gevşetir; ritodrin, terbutalin ve benzerleri erken doğumu engellemek için kullanılır.",
+       "ekran": "Ritodrin, terbutalin: erken doğumu engeller",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "gebe uterusunu gevşetir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0318",
+       "ses": "Amaç, fetusun yeterince olgunlaşabilmesi için doğumu yeterince geciktirmektir.",
+       "ekran": "Amaç: doğumu geciktirip fetüsün olgunlaşmasını sağlamak",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "fetusun yeterince olgunlaşabilmesini"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-46-b24",
+   "baslik": "Genitoüriner, MSS ve diğer klinik uygulamalar",
+   "paragraflar": [
+    {
+     "id": "k2-46-p066",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k2-46-c0319",
+       "ses": "Ritodrin ve terbutalin gibi beta iki agonistleri doğumu birkaç gün erteleyebilir ve bu gecikme, yenidoğan respiratuar distres sendromu görülme sıklığını azaltan kortikosteroidlerin uygulanması için zaman tanır.",
+       "ekran": "Birkaç gün erteleme: kortikosteroid için zaman",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "doğumu birkaç gün erteleyebilir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0320",
+       "ses": "Stres inkontinansında oral sempatomimetik tedavi bazen etkilidir; efedrin ya da psödoefedrin denenebilir.",
+       "ekran": "Stres inkontinansı: efedrin, psödoefedrin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "stres inkontinansı tedavisinde etkilidir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0321",
+       "ses": "Santral sinir sistemi uygulamalarında amfetaminler ruh halini yükselten, yani öforik etkiye sahiptir ve bu etki suistimalin nedenidir.",
+       "ekran": "Amfetamin: öforik etki, suistimal nedeni",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "ruh durumunu yükseltici"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0322",
+       "ses": "Amfetaminler ayrıca uyarıcı ve uykuyu erteleyici etkiye sahiptir; bu etki tekrar gerektiren becerilerde dikkat artışı ve elektroensefalogramda hızlanma şeklinde görülür.",
+       "ekran": "Amfetamin: uyarıcı, uyku erteleyici, EEG hızlanması",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "elektro ensefalogramda hızlanma"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p067",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k2-46-c0323",
+       "ses": "Amfetaminlerin uyarıcı etkisinin tedavi amaçlı kullanımlarından biri narkolepsidir.",
+       "ekran": "Amfetamin: narkolepsi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "narkolepsi"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0324",
+       "ses": "Amfetaminden farklı bir uyarıcı olan modafinil ve armodafinil narkolepside kullanım için onay almıştır.",
+       "ekran": "Modafinil, armodafinil: narkolepsi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "modafinil ve armodafinil"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0325",
+       "ses": "Obez kişilerde kısa süre uygulanan amfetaminlerle kilo kontrolünde uzun süreli iyileşme sağlandığına dair kanıt yoktur.",
+       "ekran": "Amfetamin: kilo kontrolünde uzun süreli yarar kanıtı yok",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "kilo kontrolünde uzun-süreli"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0326",
+       "ses": "Santral etkili sempatomimetikler için bir diğer kullanım alanı dikkat eksikliği hiperaktivite bozukluğudur, yani de e he be.",
+       "ekran": "DEHB: dikkat kısalığı, hiperkinetik davranış, öğrenme sorunu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "dikkat eksikliği hiperaktivite bozukluğudur"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0327",
+       "ses": "De e he be'nin bulunduğu bazı hastalar düşük doz metilfenidata iyi yanıt verir.",
+       "ekran": "DEHB: düşük doz metilfenidat",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "düşük dozlarda metilfenidat"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p068",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k2-46-c0328",
+       "ses": "Metilfenidatın uzatılmış salımlı formülasyonları, özellikle okul çağındaki çocuklarda doz rejimini basitleştirebilir ve tedaviye uyumu artırabilir.",
+       "ekran": "Uzatılmış salımlı metilfenidat: doz basitleşir, uyum artar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "uzatılmış-salan formülasyonları"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0329",
+       "ses": "De e he be'li çocuklarda alfa iki agonistleri klonidin ve guanfasinin yavaş ya da sürekli salan preparatları da etkilidir.",
+       "ekran": "DEHB: klonidin ve guanfasin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "klonidin ve guanfasinin yavaş veya sürekli salan"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0330",
+       "ses": "Norepinefrin geri alım inhibitörü atomoksetin de bazen de e he be'de kullanılır.",
+       "ekran": "Atomoksetin: DEHB'de bazen",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Norepinefrin geri alım inhibitörü atomoksetin"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0331",
+       "ses": "Alfa iki agonisti klonidinin temel kullanım alanı hipertansiyondur; diğer kullanımları da vardır.",
+       "ekran": "Klonidin: asıl kullanım hipertansiyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "temel kullanım alanı hipertansiyon tedavisi olmakla birlikte"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0332",
+       "ses": "Klonidin bağırsaktan tuz ve su emilimini artırdığı için otonomik nöropatisi olan diyabetiklerde diyare tedavisinde etkili bulunmuştur.",
+       "ekran": "Klonidin: diyabetik otonomik nöropatide diyare",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "otonomik nöropati bulunan diyabetiklerde diyare"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p069",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k2-46-c0333",
+       "ses": "Klonidin narkotik ve alkolün kesilmesi sırasındaki ilaç özlemini azaltmada etkilidir ve sigara bırakmayı kolaylaştırabilir.",
+       "ekran": "Klonidin: bağımlılıkta özlem azalır, sigara bırakma",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "ilaç özlemini azaltmada etkilidir"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0334",
+       "ses": "Klonidin ayrıca menopozal sıcak basmasını azaltmak için kullanılmıştır.",
+       "ekran": "Klonidin: menopozal sıcak basması",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "menopozal sıcak basmasını"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0335",
+       "ses": "Klonidin bazen anestezi öncesinde premedikasyon olarak da kullanılır; ağrı kontrolünde opioid gereksinimini azaltır ve solunumu baskılamaz.",
+       "ekran": "Klonidin premedikasyon: opioid gereksinimi azalır, solunum baskılanmaz",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "premedikasyon olarak"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0336",
+       "ses": "Deksmedetomidin yoğun bakımda ve anestezi sırasında sedasyon için kullanılan bir alfa iki agonistidir.",
+       "ekran": "Deksmedetomidin: sedasyon, alfa2 agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "yoğun bakım koşullarında ve anestezi sırasında"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0337",
+       "ses": "Tizanidin kas gevşetici olarak kullanılan bir alfa iki agonistidir.",
+       "ekran": "Tizanidin: kas gevşetici alfa2 agonisti",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "kas gevşetici olarak kullanılan"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-46-p070",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k2-46-c0338",
+       "ses": "Ders kaynağı Katzung's Basic & Clinical Pharmacology'nin on altıncı baskısıdır.",
+       "ekran": "Kaynak: Katzung's Basic & Clinical Pharmacology, 16. baskı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Basic & Clinical Pharmacology"
+        ]
+       }
+      },
+      {
+       "id": "k2-46-c0339",
+       "ses": "Özetle sempatomimetikler, adrenalin ve noradrenalinin etkisini direkt reseptör uyarımıyla ya da indirekt yoldan taklit eder.",
+       "ekran": "Özet: direkt ve indirekt sempatomimetikler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-46-c0340",
+       "ses": "Hangi reseptörün uyarıldığı etkiyi belirler: alfa bir vazokonstriksiyon, alfa iki santral sempatik baskılama, beta bir kalp uyarımı, beta iki bronkodilatasyon yapar.",
+       "ekran": "Özet: reseptör tipi etkiyi belirler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      },
+      {
+       "id": "k2-46-c0341",
+       "ses": "Klinik kullanım da bu etkilerden çıkar: hipotansiyon ve şokta vazokonstriktör ve inotroplar, astımda beta iki agonistleri, hipertansiyonda alfa iki agonistleri, anafilakside adrenalin kullanılır.",
+       "ekran": "Özet: klinik kullanımlar reseptör etkisinden çıkar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

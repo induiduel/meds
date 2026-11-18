@@ -1,0 +1,1734 @@
+{
+ "id": "k2-45-intihar-ve-kendine-zarar-verme",
+ "sira": 45,
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "İntihar ve Kendine Zarar Verme",
+ "ogretim_uyesi": "Uzm.Dr. Pınar Durmaz",
+ "tarih": "2026-11-18",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "İntiharın çok faktörlü, önlenebilir bir acil durum olduğunu ve psikiyatrik hastalıklardaki sıklığını açıklar (s. 2).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Psikiyatrik hastalıklarda yaşam boyu en az bir kez intihar düşüncesi ya da girişimi görülme oranı yaklaşık yüzde kaçtır?",
+     "secenekler": {
+      "A": "%90",
+      "B": "%10",
+      "C": "%34",
+      "D": "%60",
+      "E": "%72"
+     },
+     "dogru": "A",
+     "aciklama": "Psikiyatrik hastalıkların yaklaşık %90'ında yaşam boyu en az bir kez intihar düşüncesi veya girişimi görülür (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Psikiyatrik hastalığı olanların yaklaşık %90'ında yaşam boyunca en az bir kez intihar düşüncesi veya girişimi görülür. Bu yüksek oran, psikiyatrik hastaların intihar açısından düzenli sorgulanmasının dayanağıdır.",
+      "B": "%10, psikiyatrik hastalıklardaki gerçek sıklığın çok altında kalan bir orandır. İntihar düşüncesi ya da girişimi küçük bir azınlığa özgü bir olay olmayıp bu hastaların büyük çoğunluğunda yaşam boyu görülür.",
+      "C": "%34, intihar düşüncesi olanların bir plan yapma oranını gösterir. Bu değer düşünceden plana geçişi anlatır; psikiyatrik hastalıklarda yaşam boyu düşünce ya da girişim görülme oranı bundan belirgin biçimde yüksektir.",
+      "D": "%60, tamamlanmış intiharlarda duygudurum bozukluğunun payını anlatan orandır. Psikiyatrik hastalıklarda yaşam boyu düşünce veya girişim görülme oranı ise başka bir ölçüdür ve bu değerden yüksektir.",
+      "E": "%72, intihar planı yapanların girişimde bulunma oranıdır ve plan basamağındaki riski gösterir. Psikiyatrik hastalıklarda yaşam boyu intihar düşüncesi ya da girişimi oranı bundan da yüksek, yaklaşık %90'dır."
+     },
+     "s": 2,
+     "id": "k2-45-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "İntihar davranışının doğası ve nedenleri hakkında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek bir psikiyatrik tanının kaçınılmaz ve değişmez sonucu olan bir davranıştır",
+      "B": "Yalnızca genetik yatkınlıkla açıklanan ve çevreden bağımsız bir durumdur",
+      "C": "Yalnızca ekonomik sıkıntıların doğrudan sonucu olarak ortaya çıkan bir davranıştır",
+      "D": "Önlenmesi mümkün olmayan bir ölüm nedenidir",
+      "E": "Psikiyatrik, biyolojik, sosyal, kültürel ve çevresel etkenlerin birlikte rol oynadığı süreçtir"
+     },
+     "dogru": "E",
+     "aciklama": "İntihar çok faktörlü bir süreçtir; psikiyatrik, biyolojik, sosyal, kültürel ve çevresel etkenler birlikte rol oynar (s. 2).",
+     "sik_aciklamalari": {
+      "A": "Psikiyatrik tanı intiharın en önemli etkenlerinden biridir; yine de tek başına kaçınılmaz sonuç doğurmaz. Biyolojik, sosyal, kültürel ve çevresel etkenler de sürece katılır, bu yüzden tek nedene indirgemek yanlıştır.",
+      "B": "Genetik etmenler ailede girişim öyküsü yoluyla riski artırır; ancak intihar yalnız kalıtımla açıklanamaz. Sosyal, kültürel ve çevresel etkenler de sürece katıldığı için bu ifade eksik kalır.",
+      "C": "Ekonomik sorunlar, çevresel risk etmenlerinden yalnızca biridir ve intiharı tek başına açıklamaz. Süreç psikiyatrik, biyolojik, sosyal ve kültürel etkenlerin birlikte rol oynadığı çok boyutlu bir yapıdadır.",
+      "D": "İntihar, dünya çapında önlenebilir ölüm nedenleri arasında üst sıralarda yer alır. Erken tanı, uygun müdahale ve yakın takip ile önlenebildiği için önlenemez bir ölüm nedeni olarak tanımlanması yanlıştır.",
+      "E": "İntihar, tek bir davranıştan çok, psikiyatrik, biyolojik, sosyal, kültürel ve çevresel etkenlerin bir arada rol oynadığı bir süreçtir. Bu nedenle değerlendirme bütün bu boyutları kapsayacak biçimde yapılır."
+     },
+     "s": 2,
+     "id": "k2-45-q02"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "İntihar davranışının basamaklarını (düşünce, plan, girişim, tamamlanmış intihar) sıralar (s. 3).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "İntihar davranışının basamakları içinde, düşünce ve planın ardından gelen ve kişinin eylemi gerçekleştirip yaşamını sürdürdüğü basamak aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İntihar düşüncesi",
+      "B": "İntihar girişimi",
+      "C": "İntihar planı",
+      "D": "Tamamlanmış intihar",
+      "E": "Utanç intiharı"
+     },
+     "dogru": "B",
+     "aciklama": "İntihar davranışı basamakları intihar düşüncesi ve planı, intihar girişimi ve tamamlanmış intihardır; düşünce ve planın ardından gelen, kişinin yaşamını sürdürdüğü basamak girişimdir (s. 3).",
+     "sik_aciklamalari": {
+      "A": "İntihar düşüncesi, kendini öldürmeye ilişkin düşünceleri anlatır ve davranış basamaklarının başlangıcıdır. Eylemin gerçekleştirildiği bir basamak olmadığından sorulan basamak olarak seçilemez.",
+      "B": "İntihar girişimi, düşünce ve planın ardından gelen basamaktır; kişi ölüm ya da yaralanmayla sonuçlanabilecek eylemi gerçekleştirir ve yaşamını sürdürür. Tamamlanmış intihardan bu yönüyle ayrılır.",
+      "C": "İntihar planı, düşüncenin ayrıntılanıp somutlaşmasıdır ve düşünceyle birlikte aynı başlangıç basamağında yer alır. Kişi henüz eylemi gerçekleştirmediği için sorulan basamak değildir.",
+      "D": "Tamamlanmış intihar, eylemin ölümle sonuçlandığı son basamaktır. Soruda kişinin eylemi gerçekleştirip yaşamını sürdürdüğü basamak sorulduğundan tamamlanmış intihar bu tanıma uymaz.",
+      "E": "Utanç intiharı, aşağılanma ya da aşırı utanç sonrasında ani ve dürtüsel gelişen girişimleri anlatır. Basamaklı sürecin bir halkası değil, belirli bir kişilik duyarlılığı üzerinde ortaya çıkan girişim biçimidir."
+     },
+     "s": 3,
+     "id": "k2-45-q03"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "İntiharın küresel sıklığını, girişim-tamamlanma oranını ve genç erişkinlerdeki yerini bilir (s. 4).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Dünya Sağlık Örgütü verilerine göre tamamlanmış intihar nedeniyle her yıl yaklaşık kaç kişi ölmektedir?",
+     "secenekler": {
+      "A": "80 bin",
+      "B": "300 bin",
+      "C": "1,5 milyon",
+      "D": "800 bin",
+      "E": "3 milyon"
+     },
+     "dogru": "D",
+     "aciklama": "DSÖ'ye göre tamamlanmış intihar her yıl 800 bin kişiyi, yaklaşık 40 saniyede bir kişiyi kapsar (s. 4).",
+     "sik_aciklamalari": {
+      "A": "80 bin, bildirilen yıllık ölüm sayısının yaklaşık on katı altında kalır. Her 40 saniyede bir kişinin ölmesi, yılda yaklaşık 800 bin kişiye karşılık geldiğinden bu değer gerçeği yansıtmaz.",
+      "B": "300 bin, gerçek yıllık sayının çok altındadır. Her 40 saniyede bir kişinin tamamlanmış intiharla ölmesi yılda yaklaşık 800 bin kişiye ulaştığı için bu seçenek eksik bir tahmin verir.",
+      "C": "1,5 milyon, Dünya Sağlık Örgütünün bildirdiği yıllık tamamlanmış intihar sayısını fazlasıyla aşar. Yıllık sayı yaklaşık 800 bin kişidir ve bu değer olduğundan yüksek gösterilmiştir.",
+      "D": "Dünya Sağlık Örgütü verilerine göre tamamlanmış intihar her yıl yaklaşık 800 bin kişinin ölümüne yol açar; bu yaklaşık 40 saniyede bir kişiye denk gelir. Rakam intiharın halk sağlığı sorunu sayılmasının dayanağıdır.",
+      "E": "3 milyon, abartılı bir tahmindir. Her 40 saniyede bir kişinin intihar nedeniyle ölmesi yılda yaklaşık 800 bin kişi anlamına gelir; bu seçenek yıllık sayıyı yaklaşık dört kat büyütür."
+     },
+     "s": 4,
+     "id": "k2-45-q04"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İntihar girişimlerinin sıklığı tamamlanmış intiharlarla karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Girişimler ve tamamlanmış intiharlar yaklaşık eşit sıklıktadır",
+      "B": "Girişimler yaklaşık 3 kat daha fazladır",
+      "C": "Girişimler tahminen yaklaşık 20 kat daha fazladır",
+      "D": "Tamamlanmış intiharlar girişimlerden yaklaşık 20 kat daha fazladır",
+      "E": "Girişimler yaklaşık 100 kat daha fazladır"
+     },
+     "dogru": "C",
+     "aciklama": "İntihar girişimleri tamamlanmış intiharlardan tahminen 20 kat fazladır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Girişimlerin ve tamamlanmış intiharların eşit sıklıkta olduğu savı gerçeği yansıtmaz. Girişimler, tamamlanmış intiharlardan çok daha sık görülür ve bu fark intiharı önemli bir halk sağlığı sorunu yapar.",
+      "B": "Üç kat, kadınlarda girişimin ve erkeklerde tamamlanmış intiharın görülme farkını anlatan değerdir. Girişim ile tamamlanmış intihar arasındaki tahmini sıklık farkı bundan çok daha büyüktür.",
+      "C": "Her tamamlanmış intihara karşılık çok daha fazla girişim yaşanır ve tahmini oran yaklaşık 20 kattır. Bu fark, girişim öyküsü olan kişilerin sayıca büyük bir risk grubu oluşturduğunu gösterir.",
+      "D": "Bu ifade ilişkiyi ters kurar. Sıklık bakımından fazla olan girişimlerdir; tamamlanmış intiharlar ise girişimlerin görece küçük bir bölümünü oluşturur ve yaklaşık 20 kat daha seyrektir.",
+      "E": "Yüz kat, girişimi izleyen yılda tamamlanmış intihar riskindeki artış çarpanıdır. Girişimlerin tamamlanmış intiharlara göre sayısal sıklığı ise tahminen yaklaşık 20 kattır ve iki değer birbirine karıştırılmamalıdır."
+     },
+     "s": 4,
+     "id": "k2-45-q05"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Genç erişkinlerde (15–29 yaş) intiharın ölüm nedenleri arasındaki yeri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İkinci veya üçüncü sırada yer alır",
+      "B": "Birinci sırada tek ölüm nedenidir",
+      "C": "Beşinci ile onuncu sıralar arasında yer alır",
+      "D": "İlk on ölüm nedeni içinde bulunmaz",
+      "E": "Yalnızca yaşlılarda önemli bir ölüm nedenidir"
+     },
+     "dogru": "A",
+     "aciklama": "15–29 yaş genç erişkinlerde intihar ikinci veya üçüncü sıradaki ölüm nedenidir (s. 4).",
+     "sik_aciklamalari": {
+      "A": "15–29 yaş genç erişkinlerde intihar oranı ölüm nedenleri arasında ikinci veya üçüncü sıradadır. Bu durum, intiharın genç yaş grubunda öncelikli bir halk sağlığı sorunu olduğunu gösterir.",
+      "B": "İntiharın genç erişkinlerde her zaman birinci sırada tek ölüm nedeni olduğu söylenemez. Bildirilen yer ikinci veya üçüncü sıradır ve ülkelere, kültüre, sosyoekonomik düzeye göre risk değişir.",
+      "C": "Beşinci ile onuncu sıralar arasında yer alması, intiharın genç erişkinlerdeki ağırlığını olduğundan düşük gösterir. İntihar bu yaş grubunda ölüm nedenleri arasında ilk üç sıra içinde bulunur.",
+      "D": "İntihar genç erişkinlerde ilk sıralarda yer alan bir ölüm nedenidir ve ilk on dışında kalmaz. Bu seçenek, sorunun yaygınlığını yok sayarak halk sağlığı önemini azımsar.",
+      "E": "İntihar yaşlılarda önemli bir sorun olsa da yalnızca onlara özgü değildir. Genç erişkinlerde de ikinci veya üçüncü sıradaki ölüm nedeni olduğu için ergenler ve gençler de riskli gruptur."
+     },
+     "s": 4,
+     "id": "k2-45-q06"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "İntihar düşüncesinin kimlerde sorgulanacağını ve hekimle görüşme gerçeğini açıklar (s. 5).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "İntihar edenlerin yaklaşık üçte ikisinin ölümden önceki ay içinde yaptığı bilinen şey aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aile bireylerine vasiyet bırakmış olması",
+      "B": "Alkol ya da madde kullanımına başlamış olması",
+      "C": "İşinden ayrılmış olması",
+      "D": "Ruh sağlığı programına yazılmış olması",
+      "E": "Herhangi bir hekimle görüşmüş olması"
+     },
+     "dogru": "E",
+     "aciklama": "İntihar edenlerin 2/3'ü intihardan önceki ay içinde herhangi bir hekimle görüşmüştür (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Vasiyet bırakma gibi ölüme ilişkin hazırlıklar, riskin yüksek olduğunu gösteren plan ayrıntılarıdır. Üçte ikilik oran ise hekimle görüşmeye aittir ve vasiyet bırakmayla ilişkilendirilmemiştir.",
+      "B": "Alkol ve madde kullanımı yüksek riskli klinik durumlar arasındadır. Yine de üçte ikilik oran madde kullanımıyla ilgili değil, intihardan önceki ay içinde bir hekimle görüşülmesiyle ilgilidir.",
+      "C": "İşsizlik, riski artıran bir sosyodemografik etmendir. Ancak intihar edenlerin üçte ikisine ait bilgi işten ayrılma ile ilgili değil, intihardan önceki ay içindeki hekim görüşmesiyle ilgilidir.",
+      "D": "Üçte ikilik oran herhangi bir hekimle görüşmeyi anlatır ve bir ruh sağlığı programına kayıt ya da belirli bir branş şartı içermez. Bu nedenle ruh sağlığı programına yazılmış olmak bilgiyi doğru yansıtmaz.",
+      "E": "İntihar edenlerin yaklaşık üçte ikisi intihardan önceki ay içinde herhangi bir hekimle görüşmüştür. Soruda sorulan bilgi budur; oran belirli bir branşla sınırlı değildir."
+     },
+     "s": 5,
+     "id": "k2-45-q07"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "İntihar düşünceleri açısından hangi hastaların sorgulanması gerekir?",
+     "secenekler": {
+      "A": "Yalnızca depresyon tanısı alan hastalar",
+      "B": "Bütün psikiyatri hastaları, ilk değerlendirmede ve izlemde",
+      "C": "Yalnızca daha önce girişimde bulunmuş hastalar",
+      "D": "Yalnızca intihar düşüncesini kendiliğinden dile getiren hastalar",
+      "E": "Yalnızca psikotik belirtileri olan hastalar"
+     },
+     "dogru": "B",
+     "aciklama": "Bütün psikiyatri hastaları intihar düşünceleri konusunda ilk değerlendirmede ve izlemde sorgulanmalıdır (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Depresyon intihar için önemli bir risk etmenidir; ancak sorgulama yalnızca depresyonlu hastalarla sınırlı tutulmaz. Tüm psikiyatri hastalarının sorgulanması, başka tanı gruplarındaki riskli olguları gözden kaçırmayı önler.",
+      "B": "Bütün psikiyatri hastaları, hem ilk değerlendirmede hem de izlem sırasında intihar düşünceleri açısından sorgulanır. Tamamlanmış intiharların yaklaşık %90'ında psikiyatrik tanı bulunması bu uygulamayı gerekli kılar.",
+      "C": "Girişim öyküsü en önemli risk etmenidir; yine de henüz girişimde bulunmamış hastalarda da düşünce vardır. Sorgulama öyküyle sınırlanırsa ilk girişimini yapacak riskli hastalar saptanamaz.",
+      "D": "İntihar hakkında sormaktan kaçınılmamalıdır; sorulması intiharı düşünmeyen kişiye fikir vermez, eğilimli bazı kişilerde ise rahatlama sağlar. Bu yüzden sorgulamayı yalnızca düşüncesini kendiliğinden söyleyenlerle sınırlamak yanlıştır.",
+      "E": "Emredici halüsinasyonlar gibi psikotik belirtiler yüksek riskli klinik durumlardan biridir. Buna karşın sorgulama bütün psikiyatri hastalarını kapsar ve psikotik belirtilerle sınırlandırılamaz."
+     },
+     "s": 5,
+     "id": "k2-45-q08"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "İntihar açısından yüksek riskli klinik durumları sayar (s. 6).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi intihar açısından yüksek riskli klinik durumlar arasında yer alır?",
+     "secenekler": {
+      "A": "Gebelik durumunun bulunması",
+      "B": "18 yaşından küçük çocuk sahibi olma durumu",
+      "C": "Aileye karşı güçlü sorumluluk hissi taşıma",
+      "D": "Emredici halüsinasyonlu ve paranoid hezeyanlı psikotik belirtiler",
+      "E": "Kültürel, dinî ve manevi değerlerin güçlü olması"
+     },
+     "dogru": "D",
+     "aciklama": "Yüksek riskli durumlar: yakın girişim, psikotik belirtiler, ağır depresyon, psikotik/disforik mani, alkol-madde eşlikli bozukluklar (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Gebelik, yaşama devam etmek için bir neden oluşturan ve riski azaltan koruyucu etmenlerden biridir. Bu nedenle yüksek riskli klinik durumlardan biri olarak gösterilemez.",
+      "B": "18 yaşından küçük çocuk sahibi olmak kişiye yaşamaya devam etmek için güçlü bir neden verir. Riski azaltan bu koruyucu etmen, yüksek riskli klinik durumlar listesine ait değildir.",
+      "C": "Aileye karşı sorumluluk hissi, kişiyi yaşama bağlayan ve riski azaltan koruyucu etmenlerdendir. Yüksek riskli klinik durum olarak gösterilmesi, koruyucu özelliği risk etmeniyle karıştırmak olur.",
+      "D": "Psikotik belirtiler, özellikle emredici halüsinasyonlar ve paranoid hezeyanlar, intihar açısından yüksek riskli klinik durumlar arasındadır. Hastanın bu belirtilerin etkisiyle davranabilmesi riski artırır.",
+      "E": "Kültürel, dinî ve manevi değerler, intihara karşı olumsuz tutum oluşturarak riski azaltan koruyucu etmenlerdir. Bu özellik yüksek riskli klinik durum değil, kişiyi koruyan bir unsurdur."
+     },
+     "s": 6,
+     "id": "k2-45-q09"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "İntihar risk etmenleri değerlendirme başlıklarını ve düşünce ciddiyetinin bileşenlerini ayırt eder (s. 7).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "İntihar düşüncesinin ciddiyetini değerlendirirken aşağıdakilerden hangisi birlikte ele alınır?",
+     "secenekler": {
+      "A": "Yalnızca kişinin yaşı ve cinsiyeti gibi sosyodemografik özellikleri",
+      "B": "Yalnızca sosyal destek düzeyi ve yakınlarla ilişkiler",
+      "C": "Planın varlığı, ayrıntıları ve kurtulma beklentisi",
+      "D": "Yalnızca çevresel etmenler ve yaşanılan bölgenin koşulları",
+      "E": "Yalnızca ailedeki girişim öyküsü ve kalıtsal yatkınlık"
+     },
+     "dogru": "C",
+     "aciklama": "İntihar düşüncesinin ciddiyeti plan, planın ayrıntıları ve kurtulma olasılığı ile değerlendirilir (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Yaş ve cinsiyet sosyodemografik risk etmenleridir ve riske genel bir çerçeve çizer. Düşüncenin ciddiyetini ise planın varlığı, ayrıntıları ve kurtulma beklentisi belirler; yalnız demografik bilgi bunu göstermez.",
+      "B": "Sosyal destek, riskin ayrı bir değerlendirme başlığıdır ve güvenliğin sağlanmasında yararlıdır. Düşüncenin ciddiyetini ise plan, plan ayrıntıları ve kurtulma olasılığı belirler; destek düzeyi tek başına yeterli değildir.",
+      "C": "Düşüncenin ciddiyeti; intihar planının olup olmadığı, planın ayrıntıları ve kişinin kurtulma olasılığına ilişkin beklentisi birlikte değerlendirilerek belirlenir. Bu bilgiler riskin düzeyini ve müdahalenin aciliyetini yansıtır.",
+      "D": "Savaş, göç ve ekonomik sorunlar gibi çevresel etmenler riske katkı yapan ayrı bir değerlendirme alanıdır. Ciddiyet çevreyle değil, planın ayrıntıları ve kurtulma beklentisiyle ölçülür.",
+      "E": "Ailedeki girişim öyküsü genetik yatkınlık ve model alma yoluyla riski artırır. Yine de düşüncenin ciddiyetini tek başına göstermez; ciddiyet planın ayrıntıları ve kurtulma olasılığıyla değerlendirilir."
+     },
+     "s": 7,
+     "id": "k2-45-q10"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Cinsiyet farkını ve sosyodemografik risk etmenlerini açıklar (s. 8).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Cinsiyet ile intihar davranışı ilişkisi hakkında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kadınlarda girişim yaklaşık 3 kat, erkeklerde tamamlanmış intihar yaklaşık 3 kat fazladır",
+      "B": "Erkeklerde hem girişim hem tamamlanmış intihar daha sıktır",
+      "C": "Kadınlarda hem girişim hem tamamlanmış intihar daha sıktır",
+      "D": "Erkeklerde girişim kadınlardan 3 kat daha sıktır",
+      "E": "İki cinsiyet arasında hiçbir fark bulunmaz"
+     },
+     "dogru": "A",
+     "aciklama": "Kadınlar 3 kat fazla girişimde bulunurken erkeklerde tamamlanmış intihar 3 kat fazladır (s. 8).",
+     "sik_aciklamalari": {
+      "A": "Kadınlar yaklaşık 3 kat daha fazla girişimde bulunurken erkeklerde tamamlanmış intihar yaklaşık 3 kat daha sıktır. Bu ayrım hem risk değerlendirmesinde hem de önleme çalışmalarında dikkate alınır.",
+      "B": "Erkeklerde yalnızca tamamlanmış intihar daha sık görülür. Girişim ise kadınlarda yaklaşık 3 kat daha sıktır; bu nedenle erkeklerde hem girişimin hem tamamlanmanın fazla olduğu söylenemez.",
+      "C": "Kadınlarda girişim belirgin biçimde daha sıktır, fakat tamamlanmış intihar erkeklerde yaklaşık 3 kat fazladır. Bu seçenek kadınlarda iki ölçütte birden artış olduğunu varsayarak ayrımı bozar.",
+      "D": "Bu ifade cinsiyet farkını tersine çevirir. Girişim kadınlarda yaklaşık 3 kat sık, tamamlanmış intihar ise erkeklerde yaklaşık 3 kat sıktır; erkeklerde girişimin fazla olduğu söylenemez.",
+      "E": "İki cinsiyet arasında girişim ve tamamlanma bakımından belirgin fark vardır. Erkek cinsiyet sosyodemografik risk etmenleri arasında sayılır, dolayısıyla fark olmadığı savı gerçeği yansıtmaz."
+     },
+     "s": 8,
+     "id": "k2-45-q11"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki sosyodemografik özelliklerden hangileri intihar riskini artırır?\nI. Yalnız yaşama\nII. İşsizlik\nIII. 18 yaşından küçük çocuk sahibi olma\nIV. Ekonomik sıkıntılar",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Yalnız yaşama, işsizlik ve ekonomik sıkıntı riski artırır; 18 yaşından küçük çocuk sahibi olma koruyucudur (s. 8, 24).",
+     "sik_aciklamalari": {
+      "A": "Yalnız yaşama ve işsizlik riski artırır. Ancak ekonomik sıkıntılar da aynı sosyodemografik risk listesinde yer aldığı için bu seçenek doğru bir öncülü dışarıda bırakarak eksik kalır.",
+      "B": "İşsizlik riski artırır, fakat III. öncül koruyucu bir etmendir. Bu seçenek koruyucu bir özelliği riski artıranlar arasına alır ve yalnız yaşama ile ekonomik sıkıntıyı dışarıda bırakır.",
+      "C": "Ekonomik sıkıntı riski artıran bir etmendir; III. öncül ise koruyucudur. Bu seçenek koruyucu etmeni listeye alır ve yalnız yaşama ile işsizlik gibi doğru öncülleri eksik bırakır.",
+      "D": "Dördüncü öncül doğru olsa da III. öncül yanlıştır: küçük çocuk sahibi olmak koruyucu bir etmendir. Dört öncülün tamamını kabul etmek, koruyucu bir etmeni risk olarak yorumlamaya yol açar.",
+      "E": "Yalnız yaşama, işsizlik ve ekonomik sıkıntılar sosyodemografik risk etmenleridir. 18 yaşından küçük çocuk sahibi olmak ise yaşama devam etmek için neden oluşturan koruyucu bir özelliktir; bu yüzden III. öncül dışarıda kalır."
+     },
+     "s": 8,
+     "id": "k2-45-q12"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Gençlerde intihar riskini artıran süreçleri açıklar (s. 9).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Gençlerde intihar riskini artıran süreçleri en iyi özetleyen ifade aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca biyolojik olgunlaşmaya bağlı hormonal değişiklikler",
+      "B": "Yoğun değişimler, artan stresler ve yetersiz sorun çözme becerisi",
+      "C": "Yalnızca bedensel düşkünlük ve kronik hastalıklar",
+      "D": "Yaşamak için neden bulamama ve kendini gereksiz hissetme",
+      "E": "Yeme içme reddi ve yaşamsal ilaçları kullanmama"
+     },
+     "dogru": "B",
+     "aciklama": "Gençlerde yoğun değişim, artan stresler, gelecek belirsizliği ve sorun çözme becerisinin yetersizliği riski artırır (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Hormonal ya da biyolojik olgunlaşma gençlerdeki değişimin yalnızca bir yönüdür. Psikolojik ve sosyal değişiklikler ile artan çevresel stresler de rol oynadığından risk tek bir biyolojik süreçle açıklanamaz.",
+      "B": "Gençlerde yoğun psikolojik, biyolojik ve sosyal değişiklikler, artan çevresel stresler, gelecek belirsizliği ve sorun çözme becerisinin yetersizliği birlikte riski yükseltir. Psikiyatrik hastalıkların ve alkol-madde kullanımının başlaması da tabloya eklenir.",
+      "C": "Bedensel düşkünlük ve hastalıklar yaşlılarda öne çıkan nedenlerdir ve girişimleri daha ölümcül kılar. Gençlerdeki risk ise değişim, stres, belirsizlik ve baş etme becerisinin yetersizliği ile ilgilidir.",
+      "D": "Yaşamak için nedeni olmama ve kendini gereksiz hissetme, yaşlılardaki intihar nedenlerini anlatır. Gençlerde ise gelecekle ilgili belirsizlik ve sorun çözme becerilerinin yetersizliği daha belirgindir.",
+      "E": "Yeme içme reddi ve yaşamsal ilaçları kullanmama, yaşlılara özgü pasif intihar örnekleridir. Gençlerdeki riski açıklayan süreçler arasında yer almayıp yaşlılıktaki özel duruma aittir."
+     },
+     "s": 9,
+     "id": "k2-45-q13"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Yaşlılarda intihar nedenlerini ve pasif intiharı açıklar (s. 10).",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Yaşlılarda özel durum olarak ele alınan pasif intihara aşağıdakilerden hangisi örnektir?",
+     "secenekler": {
+      "A": "Ayrıntılı bir intihar planı hazırlama",
+      "B": "Kendine zarar verme eylemini tekrarlama",
+      "C": "Alkol kullanımına yeni başlama",
+      "D": "Yaşamsal ilaçları kullanmama",
+      "E": "Vasiyet hazırlayıp mezar yeri alma"
+     },
+     "dogru": "D",
+     "aciklama": "Yaşlılarda yeme içme reddi ve yaşamsal ilaçları kullanmama özel durum olan pasif intiharlardır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Ayrıntılı bir intihar planı hazırlamak açık ve planlı bir davranıştır. Yaşlılarda özel durum olarak anılan pasif intihar ise yeme içme reddi ve yaşamsal ilaçları kullanmama biçiminde görülür; bu yüzden ikisi karıştırılmamalıdır.",
+      "B": "Tekrarlayan kendine zarar verme, ayrı bir klinik tablodur ve ergenlikte başlar. Yaşlılarda özel durum olarak anılan pasif intihar ise yeme içme reddi ya da ilaçları kullanmama biçiminde görülür.",
+      "C": "Alkol ve madde kullanımının başlaması gençlerde riski artıran etmenler arasında anılır. Yaşlılardaki pasif intihar ise yeme içme reddi ve yaşamsal ilaçları kullanmama biçiminde görüldüğünden bu seçenek tanıma uymaz.",
+      "D": "Yaşlılarda özel durum olarak anılan pasif intihar, yeme içme reddi ve yaşamsal ilaçları kullanmama biçiminde görülür. Yaşamsal ilaçları kullanmama bu tanımın örneğidir.",
+      "E": "Vasiyet hazırlama ve mezar yeri alma gibi davranışlar, intihar sonrası için yapılan planın göstergesidir. Bu davranışlar riskin yüksek olduğuna işaret eder ve pasif intihar tanımıyla örtüşmez."
+     },
+     "s": 10,
+     "id": "k2-45-q14"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Yaşlılarda intihar girişimleri gençlerle karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Girişimler daha az ölümcüldür",
+      "B": "Girişimler çoğunlukla ani ve dürtüsel utanç intiharı biçimindedir",
+      "C": "Girişimler daha ölümcüldür; bedensel düşkünlük ve hastalıklar riski artırır",
+      "D": "Bireyselleşme isteği başlıca nedendir",
+      "E": "Sorun çözme becerilerinin yetersizliği tek belirleyicidir"
+     },
+     "dogru": "C",
+     "aciklama": "Yaşlılarda bedensel düşkünlük ve hastalıklar riski artırır, girişimler daha ölümcüldür (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Girişimlerin yaşlılarda daha az ölümcül olduğu savı gerçeğin tersidir. Yaşlılarda bedensel düşkünlük nedeniyle girişimler daha ölümcül sonuçlanır ve bu yüzden erken fark edilmesi önemlidir.",
+      "B": "Ani ve dürtüsel utanç intiharları, narsisistik yaralanmalara duyarlı kişilerde aşağılanma sonrasında görülür. Yaşlılardaki nedenler ise yaşamak için neden olmama, gereksiz hissetme ve bedensel hastalıklardır.",
+      "C": "Yaşlılarda bedensel düşkünlük ve hastalıklar intihar riskini artırır ve girişimler daha ölümcül sonuçlanır. Yaşamak için nedeni olmama ve kendini gereksiz hissetme de bu dönemin öne çıkan nedenleridir.",
+      "D": "Bireyselleşme isteği ve sosyal destek sistemlerinin azalması gençlerdeki nedenler arasındadır. Yaşlılarda öne çıkan nedenler bedensel düşkünlük, hastalıklar ve kendini gereksiz hissetmedir.",
+      "E": "Sorun çözme becerilerinin yetersizliği gençlerde riski artıran nedenlerden biridir. Yaşlılardaki tablo tek bir etkenle açıklanmaz; bedensel düşkünlük, hastalık ve gereksiz hissetme birlikte rol oynar."
+     },
+     "s": 10,
+     "id": "k2-45-q15"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "İntihar açısından riskli meslek gruplarını ve nedenlerini bilir (s. 11).",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi intihar açısından riskli meslek gruplarından biridir?",
+     "secenekler": {
+      "A": "Sağlık çalışanları (hekim, hemşire)",
+      "B": "Sınıf öğretmenliği yapan eğitim çalışanları",
+      "C": "Büro hizmetlerinde çalışan muhasebe görevlileri",
+      "D": "Mahkemelerde görev yapan avukatlık mesleği mensupları",
+      "E": "Fabrika ve şantiyelerde çalışan mühendisler"
+     },
+     "dogru": "A",
+     "aciklama": "Çiftçiler (erkek), sağlık çalışanları, veteriner hekimler, asker ve polisler riskli mesleklerdir (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Hekim, diş hekimi ve hemşire gibi sağlık çalışanları riskli meslek grupları arasında anılır. Bu grupta iş stresi, profesyonel yalıtılmışlık ve yardım aramaya isteksizlik riski yükseltir.",
+      "B": "Öğretmenlik, riskli meslek gruplarının sayıldığı listede bulunmaz. Bu listede çiftçiler, sağlık çalışanları, veteriner hekimler ile asker ve polisler vardır ve bu gruplarda araçlara ulaşım kolaydır.",
+      "C": "Muhasebecilik riskli meslek gruplarından biri olarak anılmaz. Riskli gruplar çiftçiler, sağlık çalışanları, veteriner hekimler, asker ve polislerdir; bu gruplarda araçlara ulaşım kolaydır.",
+      "D": "Avukatlık riskli meslek gruplarından biri olarak anılmaz. Risk, araçlara ulaşımın kolay olduğu ve profesyonel yalıtılmışlığın görüldüğü çiftçi, sağlık çalışanı, asker ve polis gibi mesleklerde öne çıkar.",
+      "E": "Mühendislik, riskli meslek gruplarının sayıldığı listede bulunmaz. Liste çiftçileri, sağlık çalışanlarını, veteriner hekimleri ile asker ve polisleri kapsar; bunlarda iş stresi ve profesyonel yalıtılmışlık öne çıkar."
+     },
+     "s": 11,
+     "id": "k2-45-q16"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Bazı mesleklerde intihar riskinin yüksek olmasının nedenleri arasında aşağıdakilerden hangisi sayılır?",
+     "secenekler": {
+      "A": "Sosyal desteğin fazlalığı",
+      "B": "Stresle baş etme becerisinin fazla olması",
+      "C": "İş olanaklarının fazlalığı",
+      "D": "18 yaşından küçük çocuk sahibi olma",
+      "E": "Yalıtılmışlık ve yardım aramaya isteksizlik"
+     },
+     "dogru": "E",
+     "aciklama": "Riskli mesleklerde araçlara ulaşım kolaylığı, iş stresi, profesyonel yalıtılmışlık ve yardım aramaya isteksizlik rol oynar (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Sosyal desteğin fazla olması koruyucu bir etmendir. Riskli mesleklerde ise yalıtılmışlık ve yardım aramaya isteksizlik öne çıktığından bu seçenek gerekçeyi tersine çevirir.",
+      "B": "Stresle baş etme becerisinin güçlü olması, intihar riskini azaltan bir koruyucu özelliktir. Riskli mesleklerde ise iş stresi artar; bu nedenle güçlü baş etme becerisi riskin gerekçesi olamaz.",
+      "C": "İş olanaklarının azlığı, çevresel risk etmenleri arasında yer alan bir sorundur. Riskli mesleklerin gerekçesi ise iş stresi, profesyonel yalıtılmışlık ve araçlara kolay ulaşımdır.",
+      "D": "18 yaşından küçük çocuk sahibi olmak kişiyi yaşama bağlayan koruyucu bir etmendir. Mesleğe özgü riskin açıklaması iş stresi ve yalıtılmışlık gibi özelliklerdir; bu seçenek riski değil korumayı anlatır.",
+      "E": "Riskli mesleklerde iş stresi, araçlara ulaşımın kolay olması, profesyonel yalıtılmışlık ve yardım aramaya isteksizlik riski artırır. Kişi sorun yaşadığında destek aramaktan kaçınabilir."
+     },
+     "s": 11,
+     "id": "k2-45-q17"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "İntihar düşüncesinin varlığının ve ciddiyetinin riskteki yerini, düşünce-plan-girişim oranlarını açıklar (s. 12).",
+   "sorular": [
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "İntihar düşüncesi olanların %34'ünün plan yaptığı bildirilmiştir. İntihar planı yapanların kaçı girişimde bulunur?",
+     "secenekler": {
+      "A": "%15",
+      "B": "%72",
+      "C": "%50",
+      "D": "%60",
+      "E": "%90"
+     },
+     "dogru": "B",
+     "aciklama": "Kessler ve arkadaşlarına göre düşünceden plana %34, plandan girişime %72 geçiş vardır (s. 12).",
+     "sik_aciklamalari": {
+      "A": "%15, plan yapanlardaki gerçek girişim oranının çok altındadır. Plan yapanların büyük çoğunluğu girişimde bulunur ve bu nedenle plan, yüksek risk için güçlü bir uyarıdır.",
+      "B": "Kessler ve arkadaşlarına göre intihar düşüncesi olanların %34'ü plan yapar, intihar planı yapanların ise %72'si girişimde bulunur. Bu oran planın düşünceye göre çok daha yüksek bir risk basamağı olduğunu gösterir.",
+      "C": "Plandan girişime geçiş oranı %50'den yüksektir. Plan yapanların yaklaşık %72'si girişimde bulunur, bu nedenle yarı yarıya olduğu düşüncesi riski olduğundan düşük gösterir.",
+      "D": "%60, tamamlanmış intiharlarda duygudurum bozukluğunun payını anlatır. Plan yapanlardaki girişim oranı ise ayrı bir ölçüdür; bu iki değer birbirine karıştırılmamalıdır.",
+      "E": "%90, psikiyatrik hastalıklarda yaşam boyu düşünce ya da girişim görülme oranına yakın bir değerdir. Plan yapanlardaki girişim oranı %72 olduğundan bu seçenek abartılıdır."
+     },
+     "s": 12,
+     "id": "k2-45-q18"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "İntihar düşüncesinin ciddiyeti hakkında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Her zaman plan içerir",
+      "B": "Pasif ölüm düşünceleri değerlendirme dışında bırakılır",
+      "C": "Ciddiyet yalnızca psikiyatrik tanıya göre belirlenir",
+      "D": "Pasif ölüm düşüncelerinden öldürücü planlara kadar değişebilir",
+      "E": "Ölüm düşüncesi hiçbir zaman plana dönüşmez"
+     },
+     "dogru": "D",
+     "aciklama": "İntihar düşüncesinin ciddiyeti pasif ölüm düşüncelerinden öldürücü planlara kadar değişebilir (s. 12).",
+     "sik_aciklamalari": {
+      "A": "İntihar düşüncesi her zaman planla birlikte bulunmaz. Düşünce olanların yaklaşık %34'ü plan yapar; kalan kısmında düşünce plana dönüşmeden pasif ölüm temennisi düzeyinde de kalabilir.",
+      "B": "Pasif ölüm düşünceleri, ciddiyet yelpazesinin en hafif ucunu oluşturur ve değerlendirmeye mutlaka alınır. Bunların risk taşımadığı düşüncesi, düşüncenin ilerleyebileceğini göz ardı etmek olur.",
+      "C": "Ciddiyet; planın varlığı, ayrıntıları ve kişinin kurtulma beklentisi gibi özelliklerle değerlendirilir. Tanı bu değerlendirmeye katkı yapar ancak ciddiyeti tek başına belirlemez.",
+      "D": "İntihar düşüncesi, hafif bir pasif ölüm düşüncesinden ayrıntılı ve öldürücü bir plana kadar değişebilir. Bu geniş aralık nedeniyle her düşüncenin ciddiyeti ayrıca değerlendirilir.",
+      "E": "Her intihar düşüncesi plana dönüşmez, ancak düşünce olanların yaklaşık %34'ü plan yapar ve plan yapanların %72'si girişimde bulunur. Bu nedenle ölüm düşüncesinin hiçbir zaman plana dönüşmediği söylenemez."
+     },
+     "s": 12,
+     "id": "k2-45-q19"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "İntihar planının ciddiyetini belirleyen soruları ve yüksek risk göstergelerini bilir (s. 13).",
+   "sorular": [
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi intihar riskinin yüksek olduğunu gösterir?",
+     "secenekler": {
+      "A": "Planın bulunmaması ve düşüncenin belirsiz olması",
+      "B": "Kişinin planının ölümcül olmadığını düşünmesi",
+      "C": "Tarih, yöntem ve yerin belirlendiği, kesinleştirilmiş ve ayrıntılandırılmış bir plan",
+      "D": "Ölümle ilgili hiçbir hazırlık yapılmamış olması",
+      "E": "Uygulanması olanaksız, tamamen belirsiz bir fikrin bulunması"
+     },
+     "dogru": "C",
+     "aciklama": "Tarih, yöntem ve yer belirlenmiş, kesinleştirilmiş ayrıntılı plan intihar riskinin yüksek olduğunu gösterir (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Planın bulunmaması ve düşüncenin belirsiz olması, ciddiyeti düşüren bir tablodur. Yüksek risk ise ayrıntılı ve kesinleşmiş planla ilişkilidir; bu seçenek bu ilişkiyi tersine çevirir.",
+      "B": "Kişi planın ölümcül olmadığını düşünüyorsa düşüncenin ciddiyeti daha düşüktür. Planın ölümcül olması ya da kişinin öyle sanması riski artırır; bu seçenek bunun tersini söyler.",
+      "C": "Tarih, yöntem ve yerin belirlendiği, uygulanabilir ve ayrıntılandırılmış plan intihar riskinin yüksek olduğunu gösterir. Ölüm sonrası için hazırlık yapılmışsa risk daha da artar.",
+      "D": "Vasiyet gibi ölümle ilgili hazırlıkların yapılması riski artırır. Hiçbir hazırlığın bulunmaması ise yüksek risk işareti olmadığından bu seçenek riskin yüksek olduğunu göstermez.",
+      "E": "Uygulanabilir olmayan ve belirsiz bir fikir, düşük ciddiyetle ilişkilidir. Yüksek riskte plan uygulanabilir, kesinleşmiş ve ayrıntılandırılmıştır; bu nedenle belirsiz fikir yüksek risk göstergesi sayılamaz."
+     },
+     "s": 13,
+     "id": "k2-45-q20"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "İntihar girişimi öyküsünün en önemli risk etmeni olduğunu ve riski artıran özelliklerini açıklar (s. 14).",
+   "sorular": [
+    {
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi intihar için en önemli risk etmeni olarak kabul edilir?",
+     "secenekler": {
+      "A": "Önceki intihar girişimi öyküsü",
+      "B": "Erkek cinsiyette olmak ve genç yaşta bulunmak",
+      "C": "Yalnız yaşamak ve sosyal desteğin zayıf olması",
+      "D": "Ekonomik sıkıntılar ve gelir düzeyindeki düşüş",
+      "E": "Başka bir ülkeye göç etmiş olmak"
+     },
+     "dogru": "A",
+     "aciklama": "İntihar girişimi öyküsü en önemli risk etmenidir (s. 14).",
+     "sik_aciklamalari": {
+      "A": "İntihar girişimi öyküsü en önemli risk etmenidir. Tamamlanmış intihar olgularının yaklaşık yarısında daha önce en az bir girişim bulunur ve yaklaşık dörtte birinde girişim önceki yıl içindedir.",
+      "B": "Erkek cinsiyet bir sosyodemografik risk etmenidir ve tamamlanmış intiharın erkeklerde daha sık olmasını açıklar. Buna rağmen en önemli risk etmeni olarak önceki girişim öyküsü vurgulanır.",
+      "C": "Yalnız yaşama, sosyal desteğin azalmasıyla riski artıran bir sosyodemografik etmendir. Önceki girişim öyküsü kadar güçlü bir belirleyici olarak gösterilmediği için en önemli etmen sayılamaz.",
+      "D": "Ekonomik sıkıntılar kişinin yaşamını zorlayarak riski artıran sosyodemografik etmenlerdendir. En önemli risk etmeni ise girişim öyküsüdür; ekonomik sorunlar onun gerisinde kalır.",
+      "E": "Göç, güvenlik duygusunu sarsan ve çevresel etmenler arasında anılan bir risk etmenidir. Öngörücülüğü en yüksek etmen ise geçmiş girişim öyküsüdür; göç bu bakımdan ikinci planda kalır."
+     },
+     "s": 14,
+     "id": "k2-45-q21"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "İntihar girişimini izleyen yılda tamamlanmış intihar riski yaklaşık kaç kat artar?",
+     "secenekler": {
+      "A": "3 kat",
+      "B": "10 kat",
+      "C": "20 kat",
+      "D": "40 kat",
+      "E": "100 kat"
+     },
+     "dogru": "E",
+     "aciklama": "Girişimi izleyen yılda intihar riski 100 kat fazladır (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Üç kat, kadınlarda girişimin ve erkeklerde tamamlanmış intiharın görülme farkını anlatan bir değerdir. Girişim sonrası yıldaki risk artışı bundan çok daha büyüktür.",
+      "B": "On kat, çocuklukta cinsel ve fiziksel taciz öyküsünün bağımsız risk artışını anlatır. Girişimi izleyen yıldaki artış ise bu değerin yaklaşık on katıdır ve iki durum karıştırılmamalıdır.",
+      "C": "Yirmi kat, girişimlerin tamamlanmış intiharlara göre tahmini sıklık farkıdır. Bu değer girişim sonrası yıldaki risk artışını değil, iki olayın sayısal oranını anlatır.",
+      "D": "Kırk kat, bildirilen risk artışıyla uyuşmayan bir değerdir. Girişimi izleyen yılda risk yaklaşık 100 kat artar ve bu nedenle bu seçenek riski olduğundan düşük gösterir.",
+      "E": "Girişimi izleyen yılda tamamlanmış intihar riski yaklaşık 100 kat artar. Bu yüksek artış, girişim sonrası ilk dönemin yakın izlem gerektirdiğini gösterir."
+     },
+     "s": 14,
+     "id": "k2-45-q22"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Girişim öyküsü olan bir hastada aşağıdakilerden hangisi yüksek riske işaret eder?",
+     "secenekler": {
+      "A": "Girişimin uzun yıllar önce, tek kez olması",
+      "B": "Kişinin hayatta kaldığı için hayıflanması",
+      "C": "Girişimin kolayca fark edilmesi ve tıbbi sonuç doğurmaması",
+      "D": "Girişimin ölümcül olmayan bir biçimde gerçekleşmesi",
+      "E": "Girişimden sonra kişinin hayatta kalmaktan memnun olması"
+     },
+     "dogru": "B",
+     "aciklama": "Yakın girişim, birden fazla girişim, ölümcül yöntem, tespiti zor girişim ve hayatta kaldığı için hayıflanma risk bulgularıdır (s. 14).",
+     "sik_aciklamalari": {
+      "A": "Uzun yıllar önce yaşanmış tek bir girişim görece düşük riskli bir öyküdür. Yüksek riskli öyküde girişim yakın zamanlıdır ve birden fazla kez yinelenmiştir.",
+      "B": "Girişimden sağ kurtulduğu için hayıflanmak, ciddi bir ölüm niyetini yansıtır ve yüksek riskli girişim öyküsünün özelliklerindendir. Yakın zamanlı girişim, birden fazla girişim ve ölümcül yöntem kullanımı da bu gruba girer.",
+      "C": "Tespit edilmesi zor girişim ve tehlikeli tıbbi sonuç oluşması riski artırır. Kolay fark edilen ve tıbbi sonuç doğurmayan girişim ise daha az ciddi sayıldığı için yüksek risk göstergesi değildir.",
+      "D": "Ölümcül yöntem kullanımı yüksek risk göstergesidir. Ölümcül olmayan bir biçimde yapılan girişim ise ciddiyeti daha düşük bir öyküyü yansıtır ve bu nedenle yüksek risk işareti sayılmaz.",
+      "E": "Kişinin hayatta kaldığı için hayıflanması risk bulgusudur; hayatta kaldığı için memnun olması ise bunun tersidir. Memnuniyet, ölüm niyetinin sürmediğini düşündürdüğünden yüksek riske işaret etmez."
+     },
+     "s": 14,
+     "id": "k2-45-q23"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Ailede intihar girişimi öyküsünün riski artırma yollarını açıklar (s. 15).",
+   "sorular": [
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Ailede intihar girişimi öyküsünün riski artırmasında aşağıdakilerden hangisi rol oynar?",
+     "secenekler": {
+      "A": "Kültürsüzleşme",
+      "B": "Medya etkisi",
+      "C": "Hapiste olma",
+      "D": "Psikodinamik etmenler (model alma)",
+      "E": "Mahrumiyet bölgesinde yaşama"
+     },
+     "dogru": "D",
+     "aciklama": "Ailede girişim öyküsü genetik etmenler, psikiyatrik yatkınlık ve model alma ile riski artırır (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Kültürsüzleşme, kişinin yeni bir kültüre uyum güçlüğüyle ilgili çevresel bir risk etmenidir. Ailedeki girişim öyküsü ise genetik yatkınlık ve model alma yoluyla etki eder.",
+      "B": "Medya etkisi, çevresel etmenler başlığında anılan bir risk etmenidir. Ailede girişim öyküsünün mekanizmaları ise genetik etmenler, yatkınlık ve model almadır; medya bu mekanizmalara girmez.",
+      "C": "Hapiste olmak, kişinin özgürlüğünü ve sosyal çevresini kaybettiği çevresel bir risk etmenidir. Ailede girişim öyküsü bu başlıkla değil, genetik yatkınlık ve model almayla açıklanır.",
+      "D": "Model alma gibi psikodinamik etmenler, ailedeki girişim öyküsünün riski artırma yollarındandır. Genetik etmenler ve psikiyatrik hastalıklara yatkınlık da aynı başlık altında yer alır.",
+      "E": "Mahrumiyet bölgesinde yaşama, yoksunlukla ilgili çevresel bir risk etmenidir. Ailede girişim öyküsünün riski artırması ise genetik etmenler ve model alma gibi mekanizmalarla ilişkilidir."
+     },
+     "s": 15,
+     "id": "k2-45-q24"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Hayata son vermeyi isteme nedeni olan kayıp türlerini ayırt eder (s. 16).",
+   "sorular": [
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Göç ya da taşınma sonrasında yaşanan ve kişinin hayatına son vermeyi istemesine yol açabilen kayıp türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İlişki kaybı",
+      "B": "Bedensel yeti kaybı",
+      "C": "Güvenlik duygusunun kaybı",
+      "D": "Kendilik değerinde kayıp",
+      "E": "Akut bir stresörün bulunması"
+     },
+     "dogru": "C",
+     "aciklama": "Güvenlik duygusunun kaybı göç ve taşınma gibi durumlarda ortaya çıkar (s. 16).",
+     "sik_aciklamalari": {
+      "A": "İlişki kaybı boşanma ve sevilen birinin ölümü gibi durumları anlatır. Göç ve taşınmayla özdeşleşen kayıp ise güvenlik duygusunun kaybıdır; bu nedenle bu seçenek farklı bir kayıp türüne aittir.",
+      "B": "Bedensel yeti kaybı kaza ve hastalık sonucu gelişen bir kayıptır. Göç veya taşınmanın yarattığı kayıp ise güvenlik duygusuna aittir; bu seçenek yanlış kayıp türünü gösterir.",
+      "C": "Güvenlik duygusunun kaybı göç ve taşınma gibi durumlarda yaşanır. Hayatına son vermeyi isteme nedenleri arasında sayılan bu kayıp, kişinin güvende hissettiği çevreyi yitirmesiyle ilgilidir.",
+      "D": "Kendilik değerinde ya da toplumsal statüde kayıp, işten çıkarılma ve iflas gibi durumlarla ilişkilidir. Göç ve taşınma ise kişinin güvenlik duygusunu yitirmesine yol açar.",
+      "E": "Akut bir stresörün bulunması ya da kriz durumu ayrı bir neden başlığıdır. Göç ve taşınma ise özellikle güvenlik duygusunun kaybı olarak adlandırılan kayıp türüyle ilişkilendirilir."
+     },
+     "s": 16,
+     "id": "k2-45-q25"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "İşten çıkarılma ya da iflas sonucu oluşan ve intihar riskini artıran kayıp türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kendilik değeri ya da toplumsal statüde kayıp",
+      "B": "İlişki kaybı",
+      "C": "Bedensel yeti kaybı",
+      "D": "Güvenlik duygusunun kaybı",
+      "E": "Umutsuzluk ve geleceği olumsuz değerlendirme"
+     },
+     "dogru": "A",
+     "aciklama": "Kendilik değerinde ya da toplumsal statüde kayıplara işten çıkarılma ve iflas örnektir (s. 16).",
+     "sik_aciklamalari": {
+      "A": "İşten çıkarılma ve iflas, kişinin kendilik değerini ve toplumsal statüsünü zedeler. Bu tür kayıplar, hayatına son vermeyi isteme nedenleri arasında yer alır ve intihar riskini artırır.",
+      "B": "İlişki kaybı boşanma ve ölüm gibi durumları kapsar. İşten çıkarılma ve iflas ise kişinin kendilik değeriyle ve statüsüyle ilgili olduğundan ilişki kaybı başlığında değerlendirilmez.",
+      "C": "Bedensel yeti kaybı kaza ve hastalık sonucunda gelişir. İşten çıkarılma ve iflas ise bedensel işlevle değil, kişinin toplumsal konumuyla ilgili olduğundan bu başlıkta yer almaz.",
+      "D": "Güvenlik duygusunun kaybı göç ve taşınma gibi durumlarla ilişkilidir. İşten çıkarılma ve iflas ise statü ve kendilik değeri kaybına örnek olduğundan güvenlik duygusuyla özdeşleştirilmez.",
+      "E": "Umutsuzluk ve geleceği olumsuz değerlendirme, hayatına son vermeyi isteme nedenleri içinde ayrı bir başlıktır. İşten çıkarılma ve iflas ise somut olarak kendilik değerinde ve statüde kaybı örnekler."
+     },
+     "s": 16,
+     "id": "k2-45-q26"
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Utanç intiharlarını ve ümitsizliğin öngörücülüğünü açıklar (s. 17).",
+   "sorular": [
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Utanç intiharı aşağıdakilerden hangisi ile tanımlanır?",
+     "secenekler": {
+      "A": "Aylarca süren ayrıntılı planlamanın ardından gelen girişimler",
+      "B": "Emredici halüsinasyonlar nedeniyle ortaya çıkan girişimler",
+      "C": "Yaşlılarda yeme içme reddi ile giden pasif intiharlar",
+      "D": "Kronik ağrıya bağlı gelişen girişimler",
+      "E": "Narsisistik yaralanmaya duyarlı kişide aşağılanma sonrası ani, dürtüsel girişimler"
+     },
+     "dogru": "E",
+     "aciklama": "Utanç intiharları narsisistik yaralanmalara duyarlı kişilerde aşağılanma ya da utanç sonrası ani dürtüsel girişimlerdir (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Utanç intiharları ani ve dürtüseldir. Aylarca süren ayrıntılı planlama ise planlı ve aşamalı gelişen intihar davranışını anlatır; bu yüzden utanç intiharının tanımına uymaz.",
+      "B": "Emredici halüsinasyonlar psikotik belirtilerle ilişkili yüksek riskli bir klinik durumdur. Utanç intiharının mekanizması ise aşağılanma ve aşırı utanç duygusunun kaldırılamamasıdır.",
+      "C": "Yeme içme reddi ve yaşamsal ilaçları kullanmama yaşlılara özgü pasif intihar örnekleridir. Utanç intiharı ise ani ve dürtüsel bir girişimdir ve pasif bir bırakma davranışı değildir.",
+      "D": "Kronik ağrı, tıbbi hastalıklarla ilişkili bir risk etmenidir. Utanç intiharının dayanağı ise narsisistik yaralanma ve aşağılanmadır; bu seçenek bedensel bir nedeni gösterir.",
+      "E": "Utanç intiharında narsisistik yaralanmalara duyarlı kişi, aşağılandığını düşündüğünde ya da çok utandığında bunu kaldıramaz. Sonuçta ani ve dürtüsel intihar girişimleri ortaya çıkar."
+     },
+     "s": 17,
+     "id": "k2-45-q27"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi intihar riskini depresyonun şiddetinden daha iyi öngörebildiği bildirilen özelliktir?",
+     "secenekler": {
+      "A": "Hastalığın başlangıç yaşının küçük olması",
+      "B": "Yoğun ümitsizlik ve olumsuz gelecek beklentisi",
+      "C": "Kişinin eğitim düzeyi ile mesleki geçmişi",
+      "D": "Medeni durumunun dul ya da boşanmış olması",
+      "E": "Uyku düzenindeki bozulmanın süresi ve ağırlığı"
+     },
+     "dogru": "B",
+     "aciklama": "Yoğun ümitsizlik intihar riskini depresyonun şiddetinden daha iyi öngörebilir (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Hastalığın başlangıç yaşı, riski depresyon şiddetinden daha iyi öngören bir özellik olarak bildirilmemiştir. Öngörücülüğü yüksek olan özellik, yoğun ümitsizlik ve gelecekle ilgili olumsuz beklentilerdir.",
+      "B": "Yoğun ümitsizlik ya da gelecekle ilgili olumsuz beklentiler, intihar riskini depresyonun şiddetinden daha iyi öngörür. Bu nedenle ümitsizliğin ayrıca sorgulanması değerlendirmede önem taşır.",
+      "C": "Eğitim düzeyi sosyodemografik bir bilgidir ve riskin ana göstergeleri içinde anılmaz. Depresyonun şiddetinden daha iyi öngörücü olarak bildirilen etmen ise yoğun ümitsizliktir ve soru bu özelliği arar.",
+      "D": "Medeni durum, dul ya da boşanmış olma gibi sosyodemografik değerlendirmede yer alır. Depresyon şiddetinden daha iyi bir öngörücü olarak bildirilen özellik ise yoğun ümitsizliktir.",
+      "E": "Uyku düzeninin bozulması riskle ilişkili olabilir. Yine de depresyon şiddetinden daha iyi öngörücü olarak bildirilen özellik uyku bozukluğunun süresi değil, yoğun ümitsizliktir."
+     },
+     "s": 17,
+     "id": "k2-45-q28"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Çocukluk çağı travmasının uzun vadeli etkisini ve risk artışını bilir (s. 18).",
+   "sorular": [
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Çocuklukta cinsel ve fiziksel taciz öyküsü olması intihar riskini yaklaşık kaç kat artıran bağımsız bir risk etmenidir?",
+     "secenekler": {
+      "A": "2 kat",
+      "B": "20 kat",
+      "C": "50 kat",
+      "D": "10 kat",
+      "E": "100 kat"
+     },
+     "dogru": "D",
+     "aciklama": "Çocukken cinsel ve fiziksel taciz öyküsü intihar için bağımsız risk etmenidir ve riski 10 kat artırır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "İki kat, çocukluk çağı tacizinin bildirilen etkisini olduğundan düşük gösterir. Bağımsız risk etmeni olarak bu öykü riski yaklaşık 10 kat artırır ve bu nedenle iki kat yetersiz bir tahmindir.",
+      "B": "Yirmi kat, girişimlerin tamamlanmış intiharlara göre tahmini sıklık farkıdır. Çocukluk çağı travmasının bağımsız risk artışı ise yaklaşık 10 kattır ve bu iki değer farklı kavramlara aittir.",
+      "C": "Elli kat, bildirilen risk artışının çok üzerinde bir değerdir. Çocukluk çağında cinsel ve fiziksel taciz öyküsünde artış yaklaşık 10 kat olduğu için bu seçenek riski abartır.",
+      "D": "Çocukken cinsel ve fiziksel taciz öyküsü, intihar için bağımsız bir risk etmenidir ve riski yaklaşık 10 kat artırır. Bu bilgi, erken yaştaki olumsuz olayların uzun vadeli etkisini gösterir.",
+      "E": "Yüz kat, girişimi izleyen yılda tamamlanmış intihar riskindeki artışı anlatır. Çocukluk çağı travmasının bağımsız risk artışı ise yaklaşık 10 kattır ve bu seçenek iki etmeni karıştırır."
+     },
+     "s": 18,
+     "id": "k2-45-q29"
+    },
+    {
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "Küçük yaşlarda yaşanan olumsuz yaşam olayları, intihara eğilimli bireylerin yaklaşık yüzde kaçında bildirilmiştir?",
+     "secenekler": {
+      "A": "%1–5",
+      "B": "%50–60",
+      "C": "%10–40",
+      "D": "%70–80",
+      "E": "%90–100"
+     },
+     "dogru": "C",
+     "aciklama": "Küçük yaşlarda olumsuz yaşam olayları intihara eğilimli bireylerin %10–40'ında vardır (s. 18).",
+     "sik_aciklamalari": {
+      "A": "%1–5, olumsuz yaşam olaylarının görülme sıklığını çok düşük gösterir. İntihara eğilimli bireylerde küçük yaşlardaki olumsuz olaylar bildirilen aralığa göre bundan çok daha sık görülür.",
+      "B": "%50–60, bildirilen orandan yüksektir. İntihara eğilimli bireylerde küçük yaşta olumsuz yaşam olayları %10–40 aralığında görülür ve bu nedenle bu aralık oranı abartır.",
+      "C": "Küçük yaşlarda yaşanan olumsuz yaşam olayları, intihara eğilimli bireylerin yaklaşık %10–40'ında bildirilir. Bu olaylar uzun vadeli etkileriyle intihar riskini artırır.",
+      "D": "%70–80, bu bilginin çok üzerinde bir orandır. Küçük yaşlardaki olumsuz yaşam olayı bildirimi intihara eğilimli bireylerde %10–40 arasında olduğundan bu seçenek riski olduğundan büyük gösterir.",
+      "E": "%90–100, olumsuz yaşam olaylarının hemen herkeste bulunduğunu söyler ve gerçeği yansıtmaz. İntihara eğilimli bireylerde küçük yaşta olumsuz yaşam olayı oranı %10–40 aralığında bildirilmiştir."
+     },
+     "s": 18,
+     "id": "k2-45-q30"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Tamamlanmış intiharlarda psikiyatrik tanı dağılımını açıklar (s. 19).",
+   "sorular": [
+    {
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Tamamlanmış intiharlarda en sık saptanan psikiyatrik tanı grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Duygudurum bozukluğu",
+      "B": "Alkol-madde kötüye kullanımı ya da bağımlılığı",
+      "C": "Anksiyete bozuklukları",
+      "D": "Psikotik bozukluklar ya da şizofreni",
+      "E": "Kişilik bozuklukları"
+     },
+     "dogru": "A",
+     "aciklama": "Tamamlanmış intiharlarda duygudurum bozukluğu %60 ile en sık tanı grubudur (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Duygudurum bozukluğu, tamamlanmış intiharların yaklaşık %60'ında saptanır ve en sık görülen tanı grubudur. Bu yüksek pay, depresyon ve bipolar bozuklukta intihar riskinin özenle değerlendirilmesini gerektirir.",
+      "B": "Alkol-madde kötüye kullanımı ya da bağımlılığı tamamlanmış intiharların yaklaşık %25–50'sinde bulunur. İkinci sıklıktaki bu grup, duygudurum bozukluğunun yaklaşık %60'lık payının altında kaldığı için en sık tanı değildir.",
+      "C": "Anksiyete bozuklukları tamamlanmış intiharların yaklaşık %15–20'sinde görülür. Bu pay duygudurum bozukluğunun ve alkol-madde sorunlarının altında kaldığından en sık saptanan tanı grubu olarak gösterilemez.",
+      "D": "Psikotik bozukluklar ya da şizofreni tamamlanmış intiharların yaklaşık %10'unda bulunur. Bu oran duygudurum bozukluğunun payından çok düşüktür; bu yüzden en sık tanı grubu olamaz.",
+      "E": "Kişilik bozuklukları, özellikle sınır ve antisosyal tipler, tamamlanmış intiharların yaklaşık %5–10'unda saptanır. Bu pay duygudurum bozukluğundan oldukça düşük olduğundan en sık tanı grubu değildir."
+     },
+     "s": 19,
+     "id": "k2-45-q31"
+    },
+    {
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Tamamlanmış intiharların yaklaşık yüzde kaçında anksiyete bozuklukları saptanır?",
+     "secenekler": {
+      "A": "%3",
+      "B": "%35",
+      "C": "%60",
+      "D": "%90",
+      "E": "%15–20"
+     },
+     "dogru": "E",
+     "aciklama": "Tamamlanmış intiharlarda anksiyete bozuklukları yaklaşık %15–20'dir (s. 19).",
+     "sik_aciklamalari": {
+      "A": "%3 değeri, anksiyete bozukluklarının bildirilen payının altında kalır. Tamamlanmış intiharlarda bu grubun payı yaklaşık %15–20'dir ve bu nedenle seçenek riski olduğundan küçük gösterir.",
+      "B": "%35, anksiyete bozukluklarının payını abartır. Tamamlanmış intiharlarda anksiyete bozukluklarının oranı yaklaşık %15–20'dir ve bu değer alkol-madde sorunlarının oranından da düşüktür.",
+      "C": "%60, tamamlanmış intiharlarda duygudurum bozukluğunun payını anlatır. Anksiyete bozukluklarının oranı ise yaklaşık %15–20'dir ve bu iki grup birbirine karıştırılmamalıdır.",
+      "D": "%90, tamamlanmış intiharlarda herhangi bir psikiyatrik tanının bulunma oranına yakındır. Anksiyete bozukluğu tek bir tanı grubudur ve payı yaklaşık %15–20'dir.",
+      "E": "Anksiyete bozuklukları tamamlanmış intiharların yaklaşık %15–20'sinde görülür. Payı duygudurum bozukluğundan ve alkol-madde sorunlarından düşük olsa da psikiyatrik tanı dağılımında anılması gereken bir gruptur."
+     },
+     "s": 19,
+     "id": "k2-45-q32"
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "İntihar riski ile tıbbi hastalıklar arasındaki ilişkiyi açıklar (s. 20).",
+   "sorular": [
+    {
+     "kazanim": 19,
+     "zorluk": "zor",
+     "soru": "İntihar girişiminde bulunan 60 yaş üstü kişilerde tıbbi hastalık bildirilme oranı yaklaşık yüzde kaçtır?",
+     "secenekler": {
+      "A": "%10",
+      "B": "%70",
+      "C": "%25",
+      "D": "%40",
+      "E": "%90"
+     },
+     "dogru": "B",
+     "aciklama": "İntihar girişimi olanların yaklaşık %40'ında, 60 yaş üstünde %70'inde tıbbi hastalık vardır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "%10, 60 yaş üstü girişim grubundaki tıbbi hastalık oranının çok altındadır. Bu yaş grubunda tıbbi hastalık bildirimi %70 olduğundan seçenek hastalığın riskteki rolünü hafife alır.",
+      "B": "İntihar girişiminde bulunanların genelinde tıbbi hastalık oranı yaklaşık %40'tır; 60 yaş üstünde bu oran %70'e çıkar. Bu fark, yaşlılarda bedensel hastalıkların riskteki ağırlığını gösterir.",
+      "C": "%25 de bildirilen değerin altındadır. Girişimde bulunanların genelinde bile tıbbi hastalık oranı yaklaşık %40 olup 60 yaş üstünde %70'e yükseldiği için bu seçenek eksik kalır.",
+      "D": "%40, girişimde bulunan kişilerin genelindeki tıbbi hastalık oranıdır. Altmış yaş üstünde bu oran daha yüksek, %70 düzeyindedir; seçenek yaş grubunu ayırt etmeden genel değeri verir.",
+      "E": "%90 bu yaş grubunda bildirilen oranın üzerindedir. Altmış yaş üstü girişim grubunda tıbbi hastalık oranı %70 olduğundan bu seçenek hastalığın payını abartır."
+     },
+     "s": 20,
+     "id": "k2-45-q33"
+    },
+    {
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi intihar riskini artıran kronik ya da ilerleyici seyirli tıbbi hastalıklar arasında sayılır?",
+     "secenekler": {
+      "A": "Kendiliğinden iyileşen akut bir enfeksiyon",
+      "B": "Basit bir cilt lezyonu",
+      "C": "Geçici baş ağrısı",
+      "D": "Huntington hastalığı",
+      "E": "Mevsimsel alerji"
+     },
+     "dogru": "D",
+     "aciklama": "Kanser, AIDS, Huntington hastalığı, MS gibi kronik ya da ilerleyici hastalıklar, kronik ağrı ve uykusuzluk riski artırır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Kendiliğinden iyileşen akut bir enfeksiyon geçici bir hastalıktır. Riski artıran tıbbi hastalıklar kronik ya da ilerleyici seyirli olduğundan bu seçenek tanıma uymaz.",
+      "B": "Basit bir cilt lezyonu ağır, ilerleyici bir hastalık özelliği taşımaz. Riskle ilişkilendirilen tıbbi hastalıklar kronik ya da ilerleyici seyirlidir; bu nedenle bu seçenek listeye uymaz.",
+      "C": "Geçici baş ağrısı kronik ağrıdan farklıdır ve kendiliğinden geçer. İntihar riskini artıran durum sürekli seyreden kronik ağrıdır; bu yüzden geçici baş ağrısı bu başlığa girmez.",
+      "D": "Huntington hastalığı, kanser, AIDS ve multipl skleroz gibi kronik ya da ilerleyici seyirli hastalıklarla birlikte intihar riskini artıran tıbbi hastalıklar arasında anılır. Kronik ağrı ve uykusuzluk da aynı başlıkta yer alır.",
+      "E": "Mevsimsel alerji, belirli dönemlerde ortaya çıkan ve ağır seyirli olmayan bir durumdur. Riski artıran hastalıklar ise kanser, AIDS, Huntington hastalığı ve multipl skleroz gibi kronik ya da ilerleyici olanlardır."
+     },
+     "s": 20,
+     "id": "k2-45-q34"
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "İntihar riskini artıran çevresel etmenleri sayar (s. 21).",
+   "sorular": [
+    {
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi intihar riskini artıran çevresel etmenlerden biridir?",
+     "secenekler": {
+      "A": "Kronik ağrı",
+      "B": "Anhedoni",
+      "C": "Kültürsüzleşme (akültürasyon)",
+      "D": "Ailede girişim öyküsü",
+      "E": "Utanç ve narsisistik yaralanma"
+     },
+     "dogru": "C",
+     "aciklama": "Çevresel etmenler: savaş, felaket, kültürsüzleşme, ayrımcılık, hapiste olma, ekonomik sorunlar, göç, medya etkisi (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Kronik ağrı çevresel bir etmen değil, tıbbi hastalıklar başlığındaki bir risk etmenidir. Kronik ağrı ve uykusuzluk intihar riskini artırır; ancak sınıflama bakımından çevresel etmenlerden ayrılır.",
+      "B": "Anhedoni, haz alamama durumudur ve psikiyatrik muayenede saptanan riski artıran bulgulardandır. Çevresel etmen değil, muayene bulgusudur; bu yüzden çevresel etmenler başlığına girmez.",
+      "C": "Kültürsüzleşme, kişinin yeni bir kültüre uyum güçlüğü yaşadığı çevresel bir risk etmenidir. Savaşlar, felaketler, ayrımcılık, göç ve medya etkisi gibi diğer çevresel etmenlerle aynı başlıkta yer alır.",
+      "D": "Ailede girişim öyküsü genetik yatkınlık ve model alma yoluyla riski artırır. Girişim öyküsü başlığına bağlı olduğundan çevresel etmenlerden ayrı değerlendirilir.",
+      "E": "Utanç ve narsisistik yaralanma, hayatına son vermeyi isteme nedenleri arasında yer alan bir başlıktır. Kişinin iç yaşantısına ait olduğundan çevresel etmen olarak sınıflanmaz."
+     },
+     "s": 21,
+     "id": "k2-45-q35"
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Sosyal desteğin intihar riski ve güvenlik açısından önemini açıklar (s. 22).",
+   "sorular": [
+    {
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "Sosyal destekle intihar riski arasındaki ilişki hakkında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Aile, yakın arkadaş ve akrabalar güvenliğin sağlanmasında yararlı olabilir",
+      "B": "Sosyal izolasyon riski azaltır",
+      "C": "Sosyal desteğin varlığı risk belirlenmesinde önem taşımaz",
+      "D": "Yalnız yaşamak koruyucu bir etmendir",
+      "E": "Yakınlarla iş birliği güvenlik için gereksizdir"
+     },
+     "dogru": "A",
+     "aciklama": "Sosyal destek riski belirlemede önemlidir; yakınlar kişinin güvenliğinin sağlanmasına yardımcı olabilir (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Sosyal destek intihar riskinin belirlenmesinde oldukça önemlidir. Aile, yakın arkadaş ve akrabalar kişinin güvenliğinin sağlanmasında yararlı olabilir; destek eksikliği ise riski artırır.",
+      "B": "Sosyal izolasyon ya da yalnız yaşama intihar riskini artırır. Bu seçenek ilişkiyi tersine çevirerek izolasyonu riski azaltan bir durum gibi göstermektedir.",
+      "C": "Sosyal desteğin olup olmaması intihar riskini belirlemekte oldukça önemlidir. Bu seçenek desteği önemsiz kabul ederek, risk değerlendirmesindeki yerini yok saymaktadır.",
+      "D": "Yalnız yaşama sosyodemografik risk etmenleri arasında yer alır. Koruyucu etmenler ise aile ve sosyal desteğin güçlü olması gibi özelliklerdir; yalnız yaşamak koruyucu değildir.",
+      "E": "Aile ya da hasta yakınlarıyla iş birliği kurulması kişinin güvenliğinin sağlanması için yararlıdır. Bu seçenek, iş birliğini gereksiz kabul ederek, değerlendirme ve müdahale ilkesine ters düşer."
+     },
+     "s": 22,
+     "id": "k2-45-q36"
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Psikiyatrik muayene bulgularından deliryum ve akut zehirlenmenin riske etkisini açıklar (s. 23).",
+   "sorular": [
+    {
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Dikkat, uyanıklık ve farkındalığın bozulmasının (deliryum, akut zehirlenme) intihar riskini artırma mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sosyal desteğin azalması",
+      "B": "Ailede girişim öyküsünün ortaya çıkması",
+      "C": "Kültürsüzleşmenin başlaması",
+      "D": "Gelir düzeyinin düşmesi",
+      "E": "Yargılama yetisinin olumsuz etkilenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Dikkat, uyanıklık ve farkındalığın bozulması (deliryum, akut zehirlenme) yargılama yetisini olumsuz etkiler (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Sosyal destekteki azalma riski artıran ayrı bir başlıktır. Deliryum ve zehirlenmede riski artıran mekanizma ise sosyal çevre değil, yargılama yetisinin bozulmasıdır.",
+      "B": "Ailede girişim öyküsü geçmişe ait bir risk etmenidir ve genetik ile model alma yoluyla işler. Deliryum ya da zehirlenme bu öyküyü oluşturmaz; riski yargılamadaki bozulma artırır.",
+      "C": "Kültürsüzleşme, kişinin yeni bir kültüre uyum güçlüğüyle ilgili çevresel bir etmendir. Dikkat ve farkındalık bozukluğu bu mekanizmayla ilişkili değildir; riski yargılama yetisinin bozulması artırır.",
+      "D": "Gelir düzeyindeki düşüş ekonomik sorunlar başlığında yer alan çevresel bir etmendir. Deliryumdaki risk artışı ise ekonomik durumla değil, yargılama yetisinin bozulmasıyla açıklanır.",
+      "E": "Dikkat, uyanıklık ve farkındalık bozulduğunda kişinin yargılama yetisi olumsuz etkilenir. Deliryum ya da akut zehirlenmede bu durum intihar riskini artırabilir."
+     },
+     "s": 23,
+     "id": "k2-45-q37"
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "metin": "İntihara karşı koruyucu etmenleri ve en önemli koruyucu etmeni bilir (s. 24).",
+   "sorular": [
+    {
+     "kazanim": 23,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi intihara karşı koruyucu etmenler arasında yer alır?",
+     "secenekler": {
+      "A": "Tek başına yaşama durumu ve yalnızlık",
+      "B": "18 yaşından küçük çocuk sahibi olma",
+      "C": "İş bulamama ve işsiz kalma durumu",
+      "D": "Dürtüsellik ve düşünmeden davranma",
+      "E": "Kişinin içgörüsünün yetersiz olması"
+     },
+     "dogru": "B",
+     "aciklama": "Koruyucu etmenler: aile ve sosyal destek, gebelik, 18 yaşından küçük çocuk sahibi olma, sorumluluk hissi, suçluluk, olumsuz tutum, kültürel/dinî/manevi değerler (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Yalnız yaşama sosyodemografik bir risk etmenidir ve sosyal destekten yoksunluğu yansıtır. Koruyucu bir özellik olmadığı gibi, tam tersine riski artıran etkenlerden biri olarak değerlendirilir.",
+      "B": "Gebelik, 18 yaşından küçük çocuk sahibi olma ve aileye karşı sorumluluk hissi koruyucu etmenlerdir. Bu etmenler kişiye yaşamaya devam etmek için neden sağlayarak intihar davranışını ve riskini azaltır.",
+      "C": "İşsizlik, ekonomik güvenceyi ve toplumsal statüyü zedeleyen sosyodemografik bir risk etmenidir. Yaşamaya devam etmek için neden sağlamadığından koruyucu etmenlerden biri olarak değerlendirilemez.",
+      "D": "Dürtüsellik, psikiyatrik muayenede saptanan ve intihar riskini artırabilen bir bulgudur. Kişinin eylemlerini düşünmeden gerçekleştirmesini içerir; bu yüzden koruyucu değil riski artırıcı bir özelliktir.",
+      "E": "İçgörü eksikliği, kişinin kendi durumunun farkında olmaması demektir ve muayenede riski artırabilen bir bulgudur. Koruyucu bir özellik taşımaz, aksine riski yükselten özelliklerden biridir."
+     },
+     "s": 24,
+     "id": "k2-45-q38"
+    },
+    {
+     "kazanim": 23,
+     "zorluk": "orta",
+     "soru": "Koruyucu etmenler içinde en önemlisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yüksek gelir düzeyine sahip olmak",
+      "B": "Sağlık sektöründe çalışmak ve meslekte ilerlemek",
+      "C": "Büyük kentlerde yaşamak ve kalabalık içinde olmak",
+      "D": "Yaşamaya devam etmek için nedenlerin olması",
+      "E": "Uzun süreli bireysel çalışma alışkanlığı"
+     },
+     "dogru": "D",
+     "aciklama": "Koruyucu etmenlerde en önemlisi yaşama devam etmek için nedenlerin olmasıdır (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Yüksek gelir düzeyi koruyucu etmenler listesinde anılmaz. En önemli koruyucu etmen olarak kişinin yaşamaya devam etme nedenleri vurgulanır; yüksek gelir bunu tek başına sağlamaz.",
+      "B": "Sağlık çalışanları aslında riskli meslek gruplarındandır ve iş stresi ile yardım aramaya isteksizlik yaşarlar. Bu nedenle sağlık sektöründe çalışmak koruyucu bir özellik olarak gösterilemez.",
+      "C": "Yaşanılan yer koruyucu etmenler arasında anılmaz. En önemli koruyucu etmen, yaşama devam etmek için nedenlerin bulunmasıdır; büyük kentte yaşama bu işlevi tek başına görmez.",
+      "D": "Koruyucu etmenler içinde en önemlisi kişinin yaşamaya devam etmek için nedenlerinin olmasıdır. Aile desteği, sorumluluk duygusu ve değerler bu nedenleri oluşturur.",
+      "E": "Uzun süreli bireysel çalışma alışkanlığı koruyucu etmenler arasında anılmaz. Koruyucu özellikler aile ve sosyal destek, gebelik, çocuk sahibi olma ve değerler gibi yaşama bağlayan unsurlardır."
+     },
+     "s": 24,
+     "id": "k2-45-q39"
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "metin": "İntihar değerlendirmesinde hastayla ilişki kurma ilkelerini ve soru sırasını açıklar (s. 25).",
+   "sorular": [
+    {
+     "kazanim": 24,
+     "zorluk": "kolay",
+     "soru": "İntihar riski değerlendirilirken hastayla ilişki kurulurken hangi tutum benimsenmelidir?",
+     "secenekler": {
+      "A": "Otoriter ve yönlendirici",
+      "B": "Yargılayıcı ve öğüt veren",
+      "C": "Sakin, yargılamayan ve empatik",
+      "D": "Mesafeli ve yalnızca tanı odaklı",
+      "E": "Telaşlı ve alarm veren"
+     },
+     "dogru": "C",
+     "aciklama": "Değerlendirmede ilişki sakin, yargılamayan ve empatik biçimde kurulur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Otoriter ve yönlendirici tutum hastanın kendini açmasını zorlaştırır. Değerlendirmede hasta yargılanmadan dinlenir; bu nedenle otoriter yaklaşım ilişki kurmak için uygun değildir.",
+      "B": "Yargılayıcı tutum ve öğüt verme hastayı geri çekilmeye iter ve düşüncelerini saklamasına yol açar. Değerlendirmede ilişki yargılamayan ve empatik bir yaklaşıma dayanır.",
+      "C": "Hastayla ilişki sakin, yargılamayan ve empatik bir yaklaşımla kurulur. Bu tutum hastanın düşüncelerini rahatça paylaşmasını kolaylaştırır ve değerlendirmenin doğruluğunu artırır.",
+      "D": "Mesafeli ve yalnızca tanı odaklı tutum güven oluşturmaz. Hastayla ilişki sakin ve empatik bir yaklaşımla kurulduğunda hasta intihar düşüncelerini daha rahat paylaşır.",
+      "E": "Telaşlı ve alarm veren bir tutum hastayı kaygılandırabilir. Değerlendirmede sakin davranmak, ilişkinin temel koşullarındandır ve hastanın kendini güvende hissetmesini sağlar."
+     },
+     "s": 25,
+     "id": "k2-45-q40"
+    },
+    {
+     "kazanim": 24,
+     "zorluk": "zor",
+     "soru": "İntihar hakkında genelden özele doğru konuşulurken en genel soru aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ölmüş olmayı istedi mi?",
+      "B": "Planının ayrıntıları neler?",
+      "C": "İntihar planı var mı?",
+      "D": "İntihar girişiminde bulundu mu?",
+      "E": "İntihar düşüncesi var mı?"
+     },
+     "dogru": "A",
+     "aciklama": "Genelden özele sıra: ölmüş olmayı istedi mi, düşünce, plan, plan ayrıntıları, girişim ve ayrıntıları (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Görüşme genelden özele ilerler ve ilk basamakta kişinin ölmüş olmayı isteyip istemediği sorulur. Ardından intihar düşüncesi, plan, planın ayrıntıları ve girişim öyküsü sorgulanır.",
+      "B": "Planın ayrıntıları, genelden özele sıralamanın en özel sorularından biridir. Kişinin önce ölmeyi isteyip istemediği, düşüncesi ve planı olup olmadığı sorulduktan sonra ayrıntılara geçilir.",
+      "C": "İntihar planı olup olmadığı sorusu, düşünce sorusunun ardından gelen ilerlemiş bir basamaktır. Görüşmenin başında en genel soru olarak kişinin ölmüş olmayı isteyip istemediği sorulur.",
+      "D": "Girişim öyküsü ve ayrıntıları, genelden özele sıralamanın son basamağıdır. Görüşme bu noktaya ölmüş olmayı isteme, düşünce, plan ve plan ayrıntıları sorgulandıktan sonra gelir.",
+      "E": "İntihar düşüncesi var mı sorusu, ölmüş olmayı isteme sorusundan sonra gelen bir basamaktır. Bu nedenle genelden özele sıralamada en genel soru değil, ikinci basamak olarak yer alır."
+     },
+     "s": 25,
+     "id": "k2-45-q41"
+    }
+   ]
+  },
+  {
+   "no": 25,
+   "metin": "İntihar hakkında sormaktan kaçınılmaması gerektiğini gerekçesiyle açıklar (s. 26).",
+   "sorular": [
+    {
+     "kazanim": 25,
+     "zorluk": "orta",
+     "soru": "İntihar hakkında soru sormanın hastaya etkisi için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hastanın aklına intihar fikrini getirir, bu yüzden kaçınılmalıdır",
+      "B": "Hastanın kaygısını her zaman artırır ve riski yükseltir",
+      "C": "Yalnızca girişimde bulunmuş hastalarda yapılmalıdır",
+      "D": "Hastayla ilişkiyi bozar ve tedavi uyumunu azaltır",
+      "E": "İntiharı hiç düşünmeyen kişiye bu fikri getirmez; bazı kişilerde rahatlama sağlar"
+     },
+     "dogru": "E",
+     "aciklama": "İntihar hakkında sormak bu fikri aşılamaz, bazı hastalarda rahatlama sağlar (s. 26).",
+     "sik_aciklamalari": {
+      "A": "İntihar hakkında sorulması, intiharı hiç düşünmeyen kişinin aklına bu fikri getirmez. Bu yüzden sormaktan kaçınmak için öne sürülen bu gerekçe yanlıştır ve değerlendirmeyi geciktirebilir.",
+      "B": "Soru sormak riski yükseltmez, aksine hastayı rahatlatabilir. Sorgulamanın kaygıyı artırdığı ve riski yükselttiği savı gerçeği yansıtmaz; bu yüzden değerlendirmede sorgulamadan kaçınılmaz.",
+      "C": "Bütün psikiyatri hastaları ilk değerlendirmede ve izlemde sorgulanır. Yalnızca girişimde bulunmuş hastalarla sınırlandırmak, henüz girişimde bulunmamış riskli hastaları gözden kaçırmaya yol açar.",
+      "D": "Sorgulama hastaya duygularını paylaşma fırsatı verir ve bazı kişilerde rahatlama sağlar. Bu nedenle ilişkiyi bozduğu ya da tedavi uyumunu azalttığı söylenemez.",
+      "E": "İntihar hakkında sormak, intiharı hiç düşünmeyen kişinin aklına bu fikri getirmez. İntihara eğilimli bazı kişilerde ise duygularını paylaşma olanağı sağladığı için rahatlatıcı da olur."
+     },
+     "s": 26,
+     "id": "k2-45-q42"
+    }
+   ]
+  },
+  {
+   "no": 26,
+   "metin": "Yüksek riskli ya da girişimde bulunmuş hastada ilk adımları ve taburculuk ilkesini açıklar (s. 27).",
+   "sorular": [
+    {
+     "kazanim": 26,
+     "zorluk": "zor",
+     "soru": "Daha önce intihar girişiminde bulunmuş bir hastada gereken tıbbi müdahale yapıldıktan sonra bir sonraki adım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastanın hemen taburcu edilmesi",
+      "B": "Güvenliğin sağlanması",
+      "C": "Aile ile iş birliği kurulması",
+      "D": "Uygun psikiyatrik yaklaşımın belirlenmesi",
+      "E": "Gerektiğinde hastaneye yatırılma"
+     },
+     "dogru": "B",
+     "aciklama": "Sıra: tıbbi müdahale, güvenlik, aile ile iş birliği, psikiyatrik yaklaşım, gerekirse yatış (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Taburculuk sürecin sonunda gündeme gelir ve öncesinde intihar riski yeniden değerlendirilir. Tıbbi müdahaleden hemen sonra yapılacak adım hastanın taburcu edilmesi değil, güvenliğin sağlanmasıdır.",
+      "B": "Girişimde bulunmuş ya da yüksek riskli hastada önce gereken tıbbi müdahale yapılır. Hemen ardından güvenlik sağlanır, sonra aile ile iş birliği kurulur ve uygun psikiyatrik yaklaşım belirlenir.",
+      "C": "Aile ya da hasta yakınlarıyla iş birliği, güvenliğin sağlanmasından sonraki adımdır. Tıbbi müdahalenin hemen ardından yapılması gereken ise hastanın güvenliğini sağlamaktır.",
+      "D": "Uygun psikiyatrik yaklaşımın belirlenmesi, güvenliğin sağlanması ve aile ile iş birliğinin ardından gelir. Tıbbi müdahaleden hemen sonraki adım olarak güvenlik önceliklidir.",
+      "E": "Gerektiğinde hastaneye yatırma, sıralamanın daha ileri bir aşamasıdır ve psikiyatrik yaklaşımla birlikte karara bağlanır. Tıbbi müdahaleden hemen sonra önce güvenlik sağlanır."
+     },
+     "s": 27,
+     "id": "k2-45-q43"
+    },
+    {
+     "kazanim": 26,
+     "zorluk": "orta",
+     "soru": "Tedavi sonrasında intihar girişiminde bulunmuş hasta taburcu edilirken aşağıdakilerden hangisi mutlaka yapılmalıdır?",
+     "secenekler": {
+      "A": "Riskin ortadan kalktığı varsayılarak ek değerlendirme yapılmaması",
+      "B": "Yalnızca ilaç yazılması",
+      "C": "Ailenin süreçten dışlanması",
+      "D": "İntihar riskinin yeniden değerlendirilmesi",
+      "E": "Güvenlik önlemlerinin gevşetilmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Taburculuk sırasında intihar riski mutlaka yeniden değerlendirilmelidir (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Risk, tedavi sonrasında kendiliğinden ortadan kalkmış sayılmaz. Taburculuk öncesinde riskin yeniden değerlendirilmesi gerekir; ek değerlendirme yapılmaması bu temel ilkeye ters düşer.",
+      "B": "Yalnızca ilaç yazmak taburculuk öncesindeki risk değerlendirmesinin yerini tutmaz. Hastanın intihar riski yeniden değerlendirilmeli, güvenlik ve izlem konuları da ele alınmalıdır.",
+      "C": "Aile ya da hasta yakınlarıyla iş birliği kurulmaya çalışılır, çünkü yakınlar güvenliğin sağlanmasında yararlıdır. Ailenin süreçten dışlanması bu ilkeye ters düşer.",
+      "D": "Hasta taburcu edilirken intihar riski mutlaka yeniden değerlendirilmelidir. Tedavi sonrasında riskin sürebileceği göz ardı edilmez ve taburculuk kararı bu değerlendirmeye dayandırılır.",
+      "E": "Ölümcül araçlara ulaşılabilirliğin sınırlanması güvenliğin sağlanması için önemlidir. Taburculukta bu önlemleri gevşetmek, riskin sürebileceği gerçeğini göz ardı etmek anlamına gelir."
+     },
+     "s": 27,
+     "id": "k2-45-q44"
+    }
+   ]
+  },
+  {
+   "no": 27,
+   "metin": "İntihar riskinin tedavi seçeneklerini sayar (s. 28).",
+   "sorular": [
+    {
+     "kazanim": 27,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi intihar riski olan hastada tedavi seçenekleri arasında yer alan ilaçlardan biridir?",
+     "secenekler": {
+      "A": "Biperiden",
+      "B": "Levodopa",
+      "C": "Lityum",
+      "D": "Fenitoin",
+      "E": "Morfin"
+     },
+     "dogru": "C",
+     "aciklama": "Tedavi: etyolojiye yönelik farmakoterapi (lityum), psikoterapiler, EKT (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Biperiden antikolinerjik bir ilaçtır ve ekstrapiramidal yan etkilerin tedavisinde kullanılır. İntihar riskine yönelik farmakoterapi seçeneği olarak anılan ilaç ise lityumdur.",
+      "B": "Levodopa, Parkinson hastalığında dopamin eksikliğini gidermek için kullanılan bir ilaçtır. İntihar riskinin tedavisinde anılan farmakoterapi seçeneği ise etyolojiye yönelik olarak kullanılan lityumdur.",
+      "C": "Lityum, intihar riskinde etyolojiye yönelik farmakoterapi içinde anılan bir ilaçtır. Psikoterapiler ve elektrokonvülsif tedavi ile birlikte intihar riskinin tedavi seçeneklerini oluşturur ve soruda aranan ilaç odur.",
+      "D": "Fenitoin, epilepsi tedavisinde kullanılan bir antiepileptik ilaçtır. İntihar riskinin tedavisinde anılan ilaç ise lityumdur ve fenitoin bu amaçla kullanılan ilaçlardan biri olarak gösterilmez.",
+      "E": "Morfin, ağrı tedavisinde kullanılan bir opioid analjeziktir. Tedavi seçenekleri etyolojiye yönelik farmakoterapi olarak lityumu, psikoterapi olarak bilişsel davranışçı ve sorun çözme terapilerini, ayrıca elektrokonvülsif tedaviyi içerir; morfin bunlar arasında anılmaz."
+     },
+     "s": 28,
+     "id": "k2-45-q45"
+    },
+    {
+     "kazanim": 27,
+     "zorluk": "orta",
+     "soru": "İntihar riski olan hastada tedavi seçenekleri olarak psikoterapi ve diğer yöntemler için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bilişsel davranışçı terapi, sorun çözme terapileri ve elektrokonvülsif tedavi",
+      "B": "Yalnızca psikanaliz uygulanır ve başka yöntem düşünülmez",
+      "C": "Yalnızca aile terapisi uygulanır ve başka yöntem düşünülmez",
+      "D": "Psikoterapi hiç uygulanmaz, yalnızca düzenli izlem yapılır",
+      "E": "Elektrokonvülsif tedavi hiçbir koşulda düşünülmez"
+     },
+     "dogru": "A",
+     "aciklama": "Psikoterapiler: BDT ve sorun çözme terapileri; ayrıca EKT ve farmakoterapi (s. 28).",
+     "sik_aciklamalari": {
+      "A": "İntihar riskinde bilişsel davranışçı terapi ve sorun çözme terapileri psikoterapi seçenekleri arasındadır. Bunlara etyolojiye yönelik farmakoterapi ve EKT de eklenir.",
+      "B": "Psikanaliz, tedavi seçenekleri arasında tek başına anılan bir yöntem değildir. Psikoterapi olarak bilişsel davranışçı terapi ve sorun çözme terapileri sayılır ve tek yöntem sınırlaması yanlıştır.",
+      "C": "Aile terapisi tedavi seçenekleri arasında tek yöntem olarak sunulmaz. Tedavi bilişsel davranışçı terapi, sorun çözme terapileri, farmakoterapi ve EKT gibi birden çok seçenekten oluşur.",
+      "D": "Psikoterapiler tedavi seçeneklerindendir. Yalnızca izlem yapılması ve psikoterapi uygulanmaması, bilişsel davranışçı terapi ve sorun çözme terapilerinin tedavideki yerini yok saymak olur.",
+      "E": "Elektrokonvülsif tedavi, tedavi seçenekleri arasında yer alır. Bu nedenle hiçbir koşulda düşünülmeyeceği söylenemez; tedavi planı hastanın durumuna göre farmakoterapi, psikoterapi ve EKT'yi içerir."
+     },
+     "s": 28,
+     "id": "k2-45-q46"
+    }
+   ]
+  },
+  {
+   "no": 28,
+   "metin": "İntiharın önlenmesine biyopsikososyal ve multidisipliner yaklaşımı açıklar (s. 29).",
+   "sorular": [
+    {
+     "kazanim": 28,
+     "zorluk": "orta",
+     "soru": "İntiharın önlenmesi için kritik öneme sahip olan yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca hastaneye yatış tedavisinin uygulanması ve izlenmesi",
+      "B": "Yalnızca tek bir ilacın düzenli biçimde kullanılması",
+      "C": "Yalnızca bireysel psikoterapi seanslarının yürütülmesi",
+      "D": "Risk değerlendirmesinden ve sorgulamadan kaçınılması",
+      "E": "Multidisipliner ekip, toplum temelli programlar ve hızlı müdahale protokolleri"
+     },
+     "dogru": "E",
+     "aciklama": "Önlemede multidisipliner ekip, toplum temelli programlar ve hızlı müdahale protokolleri kritiktir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Hastaneye yatış gerektiğinde başvurulan bir adımdır, fakat önlemenin tek dayanağı olamaz. İntihar çok boyutlu bir durumdur ve önleme ekip çalışması ile toplum temelli programları da gerektirir.",
+      "B": "Tek bir ilaç, çok boyutlu nedenleri olan karmaşık bir durumu önleyemez. Önleme için biyopsikososyal değerlendirme, ekip çalışması ve toplum temelli programlar birlikte gerekir.",
+      "C": "Bireysel psikoterapi tedavi seçeneklerinden biridir. Ancak önleme multidisipliner ekip çalışması ve toplum temelli koruyucu programlarla yürütüldüğünden psikoterapi tek başına yeterli sayılmaz.",
+      "D": "Risk değerlendirmesi ve erken tanı önlemenin temelidir. Değerlendirmeden kaçınmak riskli kişilerin gözden kaçmasına yol açar ve önleme hedefine ters düşer.",
+      "E": "İntiharın önlenmesinde multidisipliner ekip çalışması, toplum temelli koruyucu ruh sağlığı programları ve hızlı müdahale protokolleri kritik öneme sahiptir. En iyi yaklaşım biyopsikososyal değerlendirme, erken tanı ve yakın takibe dayanır."
+     },
+     "s": 29,
+     "id": "k2-45-q47"
+    },
+    {
+     "kazanim": 28,
+     "zorluk": "zor",
+     "soru": "İntihara yaklaşım ilkeleri açısından en uygun ifade aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca biyolojik nedenlere odaklanılarak değerlendirilmelidir ve sosyal boyut dışlanmalıdır",
+      "B": "Çok boyutlu karmaşık durumdur; biyopsikososyal değerlendirme, erken tanı ve yakın takip gerekir",
+      "C": "Yalnızca sosyal destek sağlanması yeterlidir ve başka müdahaleye gerek yoktur",
+      "D": "Takip ancak yeni bir girişim olduktan sonra başlatılmalıdır ve öncesinde gerekmez",
+      "E": "Tek ve basit bir nedenle açıklanan, kolayca önlenen bir durumdur"
+     },
+     "dogru": "B",
+     "aciklama": "İntihar çok boyutludur; yaklaşım biyopsikososyal değerlendirme, erken tanı, müdahale ve yakın takibe dayanır (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Biyolojik etkenler intiharın nedenleri arasında önemlidir; ancak psikolojik ve sosyal boyutlar da değerlendirilir. Yalnızca biyolojik nedenlere odaklanmak çok boyutlu yaklaşımla çelişir.",
+      "B": "İntihar çok boyutlu nedenleri olan karmaşık bir klinik durumdur. Bu nedenle yaklaşım biyopsikososyal değerlendirme, erken tanı, uygun müdahale ve yakın takibe dayanır.",
+      "C": "Sosyal destek koruyucu bir etmendir; ancak tek başına yeterli sayılmaz. İntiharda değerlendirme biyopsikososyaldır ve erken tanı, müdahale ile yakın takibi de içerir.",
+      "D": "Yakın takip, yaklaşımın baştan itibaren bir parçasıdır. Takibin ancak yeni bir girişimden sonra başlatılması, erken tanı ve önleme ilkesine ters düşer.",
+      "E": "İntihar çok boyutlu nedenleri olan karmaşık bir klinik durumdur. Tek ve basit bir nedene indirgenmesi, biyopsikososyal değerlendirme gereğini göz ardı etmek anlamına gelir."
+     },
+     "s": 29,
+     "id": "k2-45-q48"
+    }
+   ]
+  },
+  {
+   "no": 29,
+   "metin": "Kendine zarar verme davranışının terimlerini ve tanımını bilir (s. 30).",
+   "sorular": [
+    {
+     "kazanim": 29,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışı literatürde aşağıdaki terimlerden hangileriyle adlandırılmıştır?",
+     "secenekler": {
+      "A": "Self-esteem, self-image ve self-care",
+      "B": "Self-control, self-report ve self-help",
+      "C": "Self-injury, self-esteem ve self-image",
+      "D": "Self-injury, self-mutilation ve self-harm",
+      "E": "Self-mutilation, self-report ve self-care"
+     },
+     "dogru": "D",
+     "aciklama": "Kendine zarar verme literatürde self-injury, self-mutilation ve self-harm olarak adlandırılır (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Self-esteem benlik saygısını, self-image benlik imgesini, self-care ise öz bakımı anlatır. Bu terimler kendine zarar verme davranışının literatürdeki adı olarak kullanılmaz.",
+      "B": "Self-control öz denetimi, self-report kendini bildirmeyi, self-help ise kendi kendine yardımı anlatır. Bu terimler kendine zarar verme davranışını adlandırmaz.",
+      "C": "Bu seçenekte yalnız self-injury doğrudur. Self-esteem benlik saygısını, self-image benlik imgesini anlatır ve bu iki terim kendine zarar verme davranışının literatürdeki adı değildir.",
+      "D": "Kendine zarar verme davranışı literatürde self-injury, self-mutilation ve self-harm terimleriyle adlandırılır. Self-injury ve self-mutilation genellikle birlikte kullanılır ve kişinin kendi bedenine doğrudan yönelttiği girişimi anlatır.",
+      "E": "Self-mutilation kendine zarar verme davranışını anlatır; ancak self-report kendini bildirmeyi, self-care ise öz bakımı ifade eder. Bu iki terim davranışın literatürdeki adları arasında değildir."
+     },
+     "s": 30,
+     "id": "k2-45-q49"
+    }
+   ]
+  },
+  {
+   "no": 30,
+   "metin": "Kendine zarar verme davranışının tanımlayıcı özelliklerini sayar (s. 31).",
+   "sorular": [
+    {
+     "kazanim": 30,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışının tanımlayıcı özellikleri arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Bilinçli ölüm isteğiyle yapılması",
+      "B": "Yaşamı doğrudan tehdit eden ölümcül sonuç hedeflemesi",
+      "C": "Tekrarlayıcı olması, ölümcül olmaması ve yaşamı tehdit etmemesi",
+      "D": "Tek seferlik ve tekrarlamayan bir eylem olması",
+      "E": "Vücudun hiçbir bölümüne zarar verilmemesi"
+     },
+     "dogru": "C",
+     "aciklama": "Kendine zarar verme: vücudun belirli bölümlerine zarar, tekrarlayıcı, ölümcül olmayan, yaşamı tehdit etmeyen davranıştır (s. 31).",
+     "sik_aciklamalari": {
+      "A": "Bilinçli ölüm isteğiyle yapılan eylem intihar girişimini tanımlar. Kendine zarar vermede ise kişinin bilinçli bir ölüm isteği bulunmaz ve davranış yaşamı tehdit etmeyen bir yapıdadır.",
+      "B": "Yaşamı doğrudan tehdit eden ve ölümcül sonuç hedefleyen davranış, intihar girişimine özgüdür. Kendine zarar vermenin özelliği ise ölümcül olmaması ve yaşamı tehdit etmemesidir.",
+      "C": "Kendine zarar verme davranışı tekrarlayıcıdır, ölümcül değildir ve yaşamı tehdit etmez. Kişi bu davranışla ortama uyamamanın ve tahammülsüzlüğün yarattığı baskıya karşı kendine yardım etmeye çalışır.",
+      "D": "Kendine zarar verme tekrarlayıcı bir davranıştır ve kişi bunu zaman içinde yineler. Tek seferlik, tekrarlamayan bir eylem olarak tanımlanması bu özelliğe ters düşer.",
+      "E": "Davranış vücudun belirli bölümlerine zarar verme biçiminde tanımlanır. Vücudun hiçbir bölümüne zarar verilmediği ifadesi, tanımın en temel özelliğine ters düşer."
+     },
+     "s": 31,
+     "id": "k2-45-q50"
+    }
+   ]
+  },
+  {
+   "no": 31,
+   "metin": "Kendine zarar verme davranışını tanımlar ve intihar girişiminden ayırır (s. 32).",
+   "sorular": [
+    {
+     "kazanim": 31,
+     "zorluk": "zor",
+     "soru": "Kendine zarar verme davranışını intihar girişiminden ayıran temel özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kişinin bilinçli bir ölüm isteğinin bulunmaması",
+      "B": "Doku hasarıyla sonuçlanmaması",
+      "C": "Yalnızca tek seferlik olması",
+      "D": "Yalnızca psikotik hastalarda görülmesi",
+      "E": "Kişinin kendi bedenine yönelik bir girişimde bulunmaması"
+     },
+     "dogru": "A",
+     "aciklama": "Kendine zarar verme, bilinçli ölüm isteği olmadan, isteyerek yapılan, doku hasarıyla sonuçlanan girişimdir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Kendine zarar verme davranışı, kişinin bilinçli bir ölüm isteği olmadan, isteyerek ve amaçlı olarak yaptığı, doku hasarıyla sonuçlanan bir girişimdir. Ayırıcı nokta ölüm niyetinin bulunmamasıdır.",
+      "B": "Doku hasarı, kendine zarar verme tanımının zaten parçasıdır ve davranış doku hasarıyla sonuçlanır. Bu nedenle doku hasarının oluşmaması, kendine zarar verme ile intihar girişimini ayıran özellik olamaz.",
+      "C": "Kendine zarar verme tekrarlayıcı bir davranıştır. Yalnızca tek seferlik olması, bu davranışı tanımlayan özellikle çelişir ve intihar girişiminden ayırt etmeye yarayan bir ölçüt değildir.",
+      "D": "Kendine zarar verme en sık kişilik bozukluklarında, özellikle borderline tipte bildirilir; psikotik ve affektif bozukluklarda da görülür. Yalnızca psikotik hastalara özgü olmadığından ayırıcı bir özellik sayılmaz.",
+      "E": "Kendine zarar verme tanım gereği kişinin kendi bedenine yönelik girişimidir. Bedene yönelik girişimde bulunulmaması, davranışın temel tanımıyla çeliştiğinden bu seçenek ayırıcı özelliği anlatmaz."
+     },
+     "s": 32,
+     "id": "k2-45-q51"
+    }
+   ]
+  },
+  {
+   "no": 32,
+   "metin": "Kendine zarar verme davranışının dört tanı ölçütünü açıklar (s. 33).",
+   "sorular": [
+    {
+     "kazanim": 32,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi kendine zarar verme davranışını tanımlamada kullanılan dört ölçütten biri değildir?",
+     "secenekler": {
+      "A": "Kendini kesme ya da yakma davranışlarından birinin sürekli tekrarlanması",
+      "B": "Zarar vermeden önce gerilim duygusunun bulunması",
+      "C": "Fiziksel acıyla birlikte rahatlama, zevk alma ve hoşa gitme duygusu yaşanması",
+      "D": "Utanma duygusu nedeniyle zarar izlerinin gizlenmeye çalışılması",
+      "E": "Eylemin sonunda izlerin açıkça sergilenmek istenmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Ölçütler: sürekli kesme/yakma, öncesinde gerilim, acıyla rahatlama ve zevk, izleri ya da kanı gizleme (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Kendini kesme ya da yakma davranışlarından birinin sürekli tekrarlanması, tanımlayıcı ölçütlerin birincisidir. Davranışın tekrarlayıcı yapısını anlatır; bu nedenle ölçütlerden biri olduğu için aranan seçenek değildir.",
+      "B": "Zarar vermeden önce gerilim duygusunun bulunması ölçütlerden biridir. Davranışın ardından gelen rahatlamayı açıklayan bu özellik tanımın parçası olduğundan aranan, yani ölçüt olmayan ifade değildir.",
+      "C": "Fiziksel acıyla birlikte rahatlama, zevk alma ve hoşa gitme duygusunun yaşanması ölçütlerden biridir. Dört tanımlayıcı özellikten biri olduğu için bu ifade ölçüt olmayan seçenek olarak seçilemez.",
+      "D": "Utanma duygusu nedeniyle izleri gizlemeye çalışma, dört ölçütün sonuncusudur ve davranışı tanımlayan özelliklerden biridir. Ölçütlerden biri olduğu için aranan, yani ölçüt olmayan ifade bu seçenek olamaz.",
+      "E": "Utanma ve damgalanma korkusu nedeniyle kişi zarar verme izlerini ya da kanı gizlemeye çalışır; bu davranış dördüncü ölçüttür. İzlerin açıkça sergilenmek istenmesi ölçütlerle çelişir, bu nedenle aranan ifadedir."
+     },
+     "s": 33,
+     "id": "k2-45-q52"
+    },
+    {
+     "kazanim": 32,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışında kişinin utanma duygusu ve damgalanma korkusu karşısında yaptığı davranış aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Zarar izlerini yakınlarına göstererek yardım isteme",
+      "B": "Zarar verme izlerini ya da kanı gizlemeye çalışma",
+      "C": "Davranışı sonlandırıp tedavi arama",
+      "D": "Gerilim hissinin ortadan kalkması",
+      "E": "Eylemi kamuya açık alanlarda tekrarlama"
+     },
+     "dogru": "B",
+     "aciklama": "Dördüncü ölçüt: utanma ve damgalanma korkusu nedeniyle izleri ya da kanı gizleme (s. 33).",
+     "sik_aciklamalari": {
+      "A": "Zarar izlerini yakınlarına göstererek yardım istemek, gizleme ölçütüyle çelişir. Ölçüt, utanma ve damgalanma korkusu nedeniyle izleri saklamaya çalışmayı tanımlar; yardım isteme bu tabloda yer almaz.",
+      "B": "Utanma ve damgalanma korkusu karşısında kişi kendine zarar verme izlerini ya da kanı gizlemeye çalışır. Bu davranış, kendine zarar vermeyi tanımlayan dört ölçütten biridir.",
+      "C": "Tedaviye başvurmak, kişinin yardım arayışını gösteren sağlıklı bir davranıştır. Utanma ve damgalanma korkusu ise kişiyi tam tersine izleri ve kanı saklamaya iter; bu nedenle dört ölçütten biri olan gizleme ile ters düşer.",
+      "D": "Gerilim hissi eylemden önce ortaya çıkan ikinci ölçüttür. Utanmaya ve damgalanma korkusuna karşı yapılan davranış ise gerilimin ortadan kalkması değil, izleri gizlemeye çalışmaktır.",
+      "E": "Eylemi kamuya açık alanlarda tekrarlamak ölçütler arasında yoktur. Utanma ve damgalanma korkusu kişiyi tam tersine, izleri ve kanı saklamaya iter ve davranış gizli kalır."
+     },
+     "s": 33,
+     "id": "k2-45-q53"
+    }
+   ]
+  },
+  {
+   "no": 33,
+   "metin": "Kendine zarar verme davranışının sıklığını ve dört ana grubunu bilir (s. 34).",
+   "sorular": [
+    {
+     "kazanim": 33,
+     "zorluk": "kolay",
+     "soru": "Günümüzde kaç kişiden en az birinin kendini tedaviye gereksinim duyacak şekilde yaraladığı bildirilmiştir?",
+     "secenekler": {
+      "A": "60",
+      "B": "6",
+      "C": "6000",
+      "D": "600",
+      "E": "60 bin"
+     },
+     "dogru": "D",
+     "aciklama": "600 kişiden en az biri kendini tedaviye gereksinim duyacak şekilde yaralamaktadır (s. 34).",
+     "sik_aciklamalari": {
+      "A": "60 kişide bir oranı davranışın sıklığını olduğundan on kat yüksek gösterir. Bildirilen sıklık 600 kişide en az birdir ve bu nedenle seçenek davranışın yaygınlığını abartır.",
+      "B": "6 kişide bir oranı, kendine zarar vermenin hemen herkeste görüldüğünü ima eder. Bildirilen sıklık 600 kişide bir kişidir; bu seçenek davranışın yaygınlığını çok büyütmektedir.",
+      "C": "6000 kişide bir oranı, davranışın sıklığını olduğundan on kat düşük gösterir. Tedaviye gereksinim duyacak düzeyde kendini yaralama 600 kişide en az bir kişide görülür.",
+      "D": "Yaklaşık 600 kişiden en az birinin kendini tedaviye gereksinim duyacak şekilde yaraladığı bildirilmiştir. Bu oran, kendine zarar verme davranışının toplumda hiç de nadir olmadığını gösterir.",
+      "E": "60 bin kişide bir oranı bildirilen sıklığın çok altındadır. Tedavi gerektirecek düzeyde kendini yaralama 600 kişide en az birinde görülür ve bu davranış sanıldığından yaygındır."
+     },
+     "s": 34,
+     "id": "k2-45-q54"
+    },
+    {
+     "kazanim": 33,
+     "zorluk": "orta",
+     "soru": "Kendini kesmek ve kendini yakmak, kendine zarar verme davranışının hangi ana grubunda yer alır?",
+     "secenekler": {
+      "A": "Tipik kendine zarar verme davranışları",
+      "B": "Psikotik kendine zarar verme davranışları",
+      "C": "Dürtüsel kendine zarar verme davranışları",
+      "D": "Kompulsif kendine zarar verme davranışları",
+      "E": "Konversif kendine zarar verme davranışları"
+     },
+     "dogru": "C",
+     "aciklama": "Dürtüsel grup: kendini kesmek, yakmak ve kendine vurmak (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Tipik grup kafa vurma, dudak ısırma, tırnak yeme gibi davranışları içerir. Kendini kesme ve yakma bu grubun örneği olarak anılmaz; bu davranışlar dürtüsel gruba aittir.",
+      "B": "Psikotik grup, göz çıkarma ve organ kesme gibi psikotik belirtilerle ilişkili ağır davranışları kapsar. Kendini kesme ve yakma psikotik gruba değil, dürtüsel gruba girer.",
+      "C": "Kendini kesmek, kendini yakmak ve kendine vurmak dürtüsel kendine zarar verme grubunda sayılır. Dört ana gruptan biri olan bu grup, soruda sorulan davranış örneklerini barındırır.",
+      "D": "Kompulsif grup saç yolma, deri çimdikleme ve tırnak yeme gibi davranışları kapsar. Kendini kesme ve yakma bu grupta değil, dürtüsel grupta yer alır.",
+      "E": "Konversif diye adlandırılan bir ana grup tanımlanmamıştır. Kendine zarar vermenin dört ana grubu tipik, psikotik, kompulsif ve dürtüseldir; kesme ve yakma dürtüsel gruptadır."
+     },
+     "s": 34,
+     "id": "k2-45-q55"
+    },
+    {
+     "kazanim": 33,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışı hangi dört ana gruba ayrılır?",
+     "secenekler": {
+      "A": "Tipik, psikotik, kompulsif ve dürtüsel",
+      "B": "Tipik, atipik, ritüel ve sosyal",
+      "C": "Psikotik, konversif, dissosiyatif ve sosyal",
+      "D": "Dürtüsel, kompulsif, fobik ve paranoid",
+      "E": "Tipik, kompulsif, depresif ve manik"
+     },
+     "dogru": "A",
+     "aciklama": "Dört ana grup: tipik, psikotik, kompulsif, dürtüsel (s. 34).",
+     "sik_aciklamalari": {
+      "A": "Kendine zarar verme davranışı tipik, psikotik, kompulsif ve dürtüsel olmak üzere dört ana gruba ayrılır. Her grubun kendine özgü davranış örnekleri vardır ve sınıflama bu dört başlıktan oluşur.",
+      "B": "Atipik, ritüel ve sosyal gruplar bu sınıflamada yer almaz. Kendine zarar verme davranışı tipik, psikotik, kompulsif ve dürtüsel olarak dört ana gruba ayrılır.",
+      "C": "Konversif ve dissosiyatif gruplar kendine zarar verme sınıflamasının ana başlıkları değildir. Sınıflama tipik, psikotik, kompulsif ve dürtüsel olmak üzere dört gruptan oluşur.",
+      "D": "Fobik ve paranoid gruplar kendine zarar verme sınıflamasında yer almaz. Dört ana grup tipik, psikotik, kompulsif ve dürtüsel olarak adlandırılır.",
+      "E": "Depresif ve manik gruplar kendine zarar verme sınıflamasının başlıkları değildir. Ana gruplar tipik, psikotik, kompulsif ve dürtüsel davranışlar olarak sıralanır."
+     },
+     "s": 34,
+     "id": "k2-45-q56"
+    }
+   ]
+  },
+  {
+   "no": 34,
+   "metin": "Kendini kesme davranışının baskınlığını ve bölge seçimini açıklar (s. 35).",
+   "sorular": [
+    {
+     "kazanim": 34,
+     "zorluk": "kolay",
+     "soru": "Tekrarlanan kendine zarar verme davranışları içinde baskın olan biçim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kendini yakma",
+      "B": "Kendine vurma",
+      "C": "Kemik kırma",
+      "D": "Yaraların iyileşmesine izin vermeme",
+      "E": "Kendini kesme"
+     },
+     "dogru": "E",
+     "aciklama": "Tekrarlanan kendine zarar vermede kendini kesme baskındır (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Kendini yakma %35 ile kesmeden sonra gelir. Tekrarlanan davranışlar içinde sıklığı kesmenin yaklaşık yarısı kadardır; bu nedenle baskın biçim olarak gösterilemez.",
+      "B": "Kendine vurma %30 ile kendini kesme ve yakmadan sonra gelir. Tekrarlanan davranışlar içinde baskın olan biçim değil, daha seyrek bildirilen bir biçimdir.",
+      "C": "Kemik kırma yaklaşık %8 ile oldukça seyrek bildirilen bir davranıştır. Tekrarlanan kendine zarar verme davranışları içinde baskın biçim ise kendini kesmedir ve sıklık bakımından kemik kırmadan çok öndedir.",
+      "D": "Yaraların iyileşmesine izin vermeme yaklaşık %22 oranında bildirilmiştir. Bu oran kendini kesmenin %72'lik payının çok altındadır ve davranış baskın biçim sayılamaz.",
+      "E": "Tekrarlanan kendine zarar verme davranışlarında kendini kesme daha baskındır ve %72 ile en sık bildirilen biçimdir. Kol ve bileklerin kolay ulaşılabilir olması bu davranışı sık hale getirir."
+     },
+     "s": 35,
+     "id": "k2-45-q57"
+    },
+    {
+     "kazanim": 34,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışında kolların ve bileklerin sık seçilmesinin gerekçesi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca bu bölgelerin zarar vermeye elverişli tek bölge olması",
+      "B": "Kolay ulaşılabilir olması",
+      "C": "Bu bölgelerin görünmez olması nedeniyle gizlenmenin kolay olması",
+      "D": "Yalnızca psikotik hastaların bu bölgeleri seçmesi",
+      "E": "Yaşlılarda bu bölgelerin daha hassas olması"
+     },
+     "dogru": "B",
+     "aciklama": "Kolları ve bilekleri kesmek kolay ulaşılabilirlik nedeniyle sık görülür (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Kol ve bilekler dışında vücudun çeşitli bölgelerinde de zarar verme davranışları görülür. Bu nedenle bu bölgelerin zarar vermeye elverişli tek bölge olduğu söylenemez.",
+      "B": "Kolların ve bileklerin kendine zarar verme bölgesi olarak sık görülmesi, bu bölgelere kolay ulaşılabilmesine bağlanır. Kol ve bilekler dışında vücudun çeşitli bölgelerinde de zarar verme davranışlarına rastlanır.",
+      "C": "Sık görülmenin gerekçesi olarak kolay ulaşılabilirlik belirtilir. Bu bölgelerin gizlenmesinin kolay olması gerekçe olarak sunulmaz; ayrıca kişi izleri gizlemeye zaten çalışır.",
+      "D": "Kol ve bilek seçimi psikotik hastalarla sınırlı bir durum değildir. Davranış ergenlikte başlar ve sık görülen bölge seçiminin gerekçesi kolay ulaşılabilirliktir.",
+      "E": "Kendine zarar verme erken ergenlikte başlar ve yaşlılardaki hassasiyetle ilgili değildir. Kol ve bileklerin sık seçilmesinin gerekçesi bu bölgelere kolayca ulaşılabilmesidir."
+     },
+     "s": 35,
+     "id": "k2-45-q58"
+    }
+   ]
+  },
+  {
+   "no": 35,
+   "metin": "Kendine zarar verme davranış biçimlerinin sıklıklarını bilir (s. 36).",
+   "sorular": [
+    {
+     "kazanim": 35,
+     "zorluk": "orta",
+     "soru": "Tekrarlanan kendine zarar verme davranışında çoğul yöntem kullanımı yaklaşık yüzde kaçta görülür?",
+     "secenekler": {
+      "A": "%8",
+      "B": "%22",
+      "C": "%35",
+      "D": "%75",
+      "E": "%50"
+     },
+     "dogru": "D",
+     "aciklama": "Kendine zarar vermede genellikle (%75) çoğul yöntem kullanılır (s. 36).",
+     "sik_aciklamalari": {
+      "A": "%8, kemik kırma gibi seyrek biçimlerin oranıdır. Çoğul yöntem kullanımı ise çok daha sıktır ve yaklaşık %75'tir; bu nedenle bu seçenek çoğul yöntem oranını çok düşük gösterir.",
+      "B": "%22, yaraların iyileşmesine izin vermeme ve sürekli kolunu kaşıma davranışlarının oranıdır. Çoğul yöntem kullanımı bu değerin çok üzerindedir ve yaklaşık %75'tir.",
+      "C": "%35, kendini yakma davranışının sıklığıdır. Çoğul yöntem kullanımı ise yaklaşık %75'tir; seçenek bir davranış biçiminin oranını çoğul yöntem oranıyla karıştırır.",
+      "D": "Kendine zarar verme davranışında genellikle yaklaşık %75 oranında çoğul yöntem kullanılır. Yani bu kişilerin çoğu zararı birden fazla biçimde verir.",
+      "E": "%50 değeri çoğul yöntem kullanımının gerçek oranının altındadır. Bildirilen oran yaklaşık %75'tir ve kişilerin büyük çoğunluğu birden fazla yöntem kullanır."
+     },
+     "s": 36,
+     "id": "k2-45-q59"
+    },
+    {
+     "kazanim": 35,
+     "zorluk": "zor",
+     "soru": "Tekrarlanan kendine zarar verme davranışları içinde kendini kesmeden sonra en sık bildirilen biçim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kendine vurma",
+      "B": "Yaraların iyileşmesine izin vermeme",
+      "C": "Kendini yakma",
+      "D": "Sürekli kolunu kaşımak",
+      "E": "Kemik kırma"
+     },
+     "dogru": "C",
+     "aciklama": "Sıklık: kesme %72, yakma %35, vurma %30, yaraların iyileşmesine izin vermeme %22, kaşıma %22, kemik kırma %8 (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Kendine vurma %30 ile kendini yakmadan sonra gelir. Kendini kesmeden sonra en sık bildirilen biçim bu davranış değil, üçüncü sıklıktaki biçimdir ve kendini yakmanın gerisinde kalır.",
+      "B": "Yaraların iyileşmesine izin vermeme %22 ile kendini yakma ve kendine vurmanın altında kalır. Kesmeden sonra en sık bildirilen biçim bu davranış değildir.",
+      "C": "Tekrarlanan kendine zarar verme davranışlarında sıklık sıralaması kendini kesme %72, kendini yakma %35, kendine vurma %30 biçimindedir. Kesmeden sonra en sık bildirilen biçim kendini yakmadır.",
+      "D": "Sürekli kolunu kaşımak %22 ile yakma ve vurmanın altında kalır. Kendini kesmeden sonraki sıklık sıralamasında dördüncü ya da beşinci sırada yer alır.",
+      "E": "Kemik kırma %8 ile en seyrek bildirilen biçimlerdendir. Kendini kesmeden sonra en sık bildirilen biçim olarak değil, sıralamanın sonlarında yer alır."
+     },
+     "s": 36,
+     "id": "k2-45-q60"
+    }
+   ]
+  },
+  {
+   "no": 36,
+   "metin": "Kendine zarar vermenin başlangıç dönemini ve sık görüldüğü grupları bilir (s. 37).",
+   "sorular": [
+    {
+     "kazanim": 36,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışı çoğunlukla hangi dönemde başlar?",
+     "secenekler": {
+      "A": "Erken adolesan (ergenlik) döneminde",
+      "B": "Yaşlılık döneminde",
+      "C": "Orta yaşlarda",
+      "D": "Okul öncesi dönemde",
+      "E": "Yetişkinliğin ikinci yarısında"
+     },
+     "dogru": "A",
+     "aciklama": "Kendine zarar verme erken adolesan döneminde başlar (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Kendine zarar verme davranışının çoğunlukla erken adolesan, yani ergenlik döneminde başladığı konusunda görüş birliği vardır. Bu davranışın ritüelleri ise kültürlere göre değişiklik gösterir.",
+      "B": "Davranışın başlangıcı yaşlılık dönemi değildir. Kendine zarar verme çoğunlukla erken ergenlikte başlar; yaşlılık dönemi ise ayrı bir risk dönemi olarak intihar nedenleri bağlamında ele alınır.",
+      "C": "Başlangıç yaşı orta yaş olarak bildirilmemiştir. Kendine zarar verme davranışı çoğunlukla ergenlik döneminde başlar ve bu konuda görüş birliği vardır.",
+      "D": "Davranışın başlangıç dönemi olarak erken ergenlik belirtilir. Okul öncesi dönemde başlama bildirilmemiştir; bu seçenek başlangıç yaşını gerçeğin çok altında gösterir.",
+      "E": "Bu davranış ileri yetişkinlikte başlamaz. Başlangıç dönemi erken adolesan dönemdir ve görüş birliği bu yöndedir; seçenek başlangıç yaşını ileri yetişkinliğe kaydırır."
+     },
+     "s": 37,
+     "id": "k2-45-q61"
+    },
+    {
+     "kazanim": 36,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışı hangi grupta daha sık görülür?",
+     "secenekler": {
+      "A": "Eğitim ve gelir düzeyi yüksek olanlarda",
+      "B": "Evli ve çocuk sahibi kişilerde",
+      "C": "Yaşlı ve emekli kişilerde",
+      "D": "Yalnızca erkeklerde",
+      "E": "Eğitim ve gelir düzeyi düşük olan bekârlarda"
+     },
+     "dogru": "E",
+     "aciklama": "Kendine zarar verme eğitim ve gelir düzeyi düşük olanlarda, bekârlarda sık görülür (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Davranış, eğitim ve gelir düzeyi düşük olanlarda daha sık bildirilir. Düzeyi yüksek olanlarda daha sık görüldüğü söylenemez; bu seçenek ilişkiyi ters yöne çevirmektedir.",
+      "B": "Davranış bekârlarda daha sık görülür. Evli ve çocuk sahibi kişilerin daha sık etkilendiği bildirilmemiştir; çocuk sahibi olmak intihar için koruyucu etmenlerden biridir.",
+      "C": "Kendine zarar vermenin başlangıcı ergenliktir ve sık görülen grup yaşlı ve emekli kişiler değildir. Seçenek davranışı yaşlılık dönemine ait gibi göstermektedir.",
+      "D": "Kendine zarar vermede cinsiyete özgü bir sınırlama bildirilmemiştir. Daha sık görüldüğü grup eğitim ve gelir düzeyi düşük bekârlardır; yalnızca erkeklerde görüldüğü söylenemez.",
+      "E": "Kendine zarar verme davranışı sıklıkla eğitim ve gelir düzeyi düşük olanlarda ve bekârlarda görülür. Davranışın başlangıç dönemi ise çoğunlukla ergenliktir ve bu özellikler birlikte değerlendirilir."
+     },
+     "s": 37,
+     "id": "k2-45-q62"
+    }
+   ]
+  },
+  {
+   "no": 37,
+   "metin": "Kendine zarar vermenin ilişkili olduğu tanı gruplarını sayar (s. 38).",
+   "sorular": [
+    {
+     "kazanim": 37,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışı en sık hangi tanı grubunda bildirilmiştir?",
+     "secenekler": {
+      "A": "Majör affektif bozukluklar",
+      "B": "Kişilik bozuklukları, özellikle borderline tipte",
+      "C": "Akut ve kronik psikotik bozukluklar",
+      "D": "Cinsel kimlik bozuklukları",
+      "E": "Hiçbir psikiyatrik tanı ile ilişkili değildir"
+     },
+     "dogru": "B",
+     "aciklama": "Kendine zarar verme en sık kişilik bozukluklarında, özellikle borderline tipte görülür (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Majör affektif bozukluklarda kendine zarar verme sıklıkla görülür. Ancak en sık bildirilen grup kişilik bozukluklarıdır; bu nedenle majör affektif bozukluklar en sık grup değildir.",
+      "B": "Kendine zarar verme en sık kişilik bozukluklarında, özellikle borderline kişilik bozukluğunda bildirilmiştir. Psikotik ve affektif bozukluklarda da sıklıkla görülür, ancak en sık grup kişilik bozukluklarıdır.",
+      "C": "Akut ve kronik psikotik bozukluklarda kendine zarar verme sık görülür. Buna rağmen en sık tanı grubu olarak özellikle borderline tipte kişilik bozuklukları bildirilmiştir.",
+      "D": "Cinsel kimlik bozukluklarında da kendine zarar verme sıklıkla görülür. En sık bildirilen tanı grubu ise kişilik bozukluklarıdır ve bu grup bunun ötesinde değildir.",
+      "E": "Kendine zarar verme kişilik bozuklukları, psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozuklukları gibi tanı gruplarında sıklıkla görülür. Bu nedenle hiçbir tanıyla ilişkili olmadığı söylenemez."
+     },
+     "s": 38,
+     "id": "k2-45-q63"
+    }
+   ]
+  },
+  {
+   "no": 38,
+   "metin": "Kendine zarar vermeye belirti olarak yaklaşmanın ilkelerini ve bilgi eksikliğini açıklar (s. 39).",
+   "sorular": [
+    {
+     "kazanim": 38,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışına yaklaşımla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Altta yatan hastalığın tedavisiyle davranış mutlaka kendiliğinden kaybolur",
+      "B": "Konuya ilişkin yeterli bilgi ve veri bulunmaktadır",
+      "C": "Davranış tedavi edilmemelidir",
+      "D": "Belirti sayıp uygun müdahale yapmak hastanın gördüğü zararı azaltabilir",
+      "E": "Davranış yalnızca yatış gerektirir"
+     },
+     "dogru": "D",
+     "aciklama": "Davranışı belirti kabul edip uygun müdahalelerde bulunmak zararı azaltabilir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Davranışın altta yatan ya da birlikte görüldüğü durumun tedavisiyle ortadan kalkmasını beklemek klinik uygulamada yeterli değildir. Bu seçenek davranışın kendiliğinden kaybolacağını varsayarak yanlış bir güvence verir.",
+      "B": "Kendine zarar verme sık karşılaşılan bir klinik durumdur; buna rağmen konu hakkında yeterince bilgi ve veri olduğunu söylemek mümkün değildir. Yeterli bilgi birikimi bulunduğu savı bu nedenle gerçeği yansıtmaz.",
+      "C": "Davranış belirti olarak kabul edilip uygun müdahalelerde bulunulmalıdır. Tedavi edilmemesi, hastanın gördüğü zararı azaltma olanağını göz ardı etmek anlamına gelir.",
+      "D": "Kendine zarar verme davranışı bir belirti olarak kabul edilip doğrudan uygun müdahalelerde bulunulduğunda hastanın gördüğü zarar azalabilir. Altta yatan durumun tedavisiyle ortadan kalkmasını beklemek tek başına yeterli olmaz.",
+      "E": "Yaklaşım tek bir yöntemle sınırlı değildir. Davranışı belirti kabul edip doğrudan uygun müdahalede bulunmak esastır; yatış dışındaki müdahaleler de hastanın gördüğü zararı azaltabilir."
+     },
+     "s": 39,
+     "id": "k2-45-q64"
+    },
+    {
+     "kazanim": 38,
+     "zorluk": "orta",
+     "soru": "Kendine zarar verme davranışına yönelik spesifik müdahaleler hakkında aşağıdakilerden hangisi söylenebilir?",
+     "secenekler": {
+      "A": "Etkinlikleri kesin olarak kanıtlanmıştır ve bu konuda şüphe yoktur",
+      "B": "Yeni yöntemlerin geliştirilmesine gerek yoktur",
+      "C": "Etkinlikleri hakkında yeterli bilgi yoktur; yöntemlerin geliştirilmesi gerekir",
+      "D": "Yalnızca yatış tedavisi etkilidir",
+      "E": "Konu çok sayıda yayınla ayrıntılı biçimde incelenmiştir"
+     },
+     "dogru": "C",
+     "aciklama": "Spesifik müdahalelerin etkinliği konusunda yeterli bilgi yoktur; yöntemlerin geliştirilmesi gerekir (s. 39).",
+     "sik_aciklamalari": {
+      "A": "Spesifik müdahalelerin etkinliği konusunda yeterli sayıda bilgi bulunmamaktadır. Kesin kanıt bulunduğu söylenemez; bu seçenek eldeki sınırlı bilgiyi gerçekte olduğundan güçlü gösterir.",
+      "B": "Spesifik müdahale yöntemlerinin geliştirilmesi gereklidir. Yeni yöntemlere gerek olmadığı düşüncesi, etkinlik bilgisinin yetersizliğini ve davranışın sık görülmesini göz ardı eder.",
+      "C": "Spesifik müdahalelerin etkinliği konusunda yeterli sayıda bilgi yoktur. Bu nedenle kendine zarar verme davranışına özgü müdahale yöntemlerinin geliştirilmesi gerekir; konu hâlâ yeterince çalışılmamıştır.",
+      "D": "Yalnızca yatış tedavisinin etkili olduğuna dair kesin bir bilgi yoktur. Spesifik müdahalelerin etkinliği henüz yeterince bilinmemektedir ve bu nedenle bu seçenek kanıtsız bir iddiadır.",
+      "E": "Konu hakkında çok fazla yayın yapılmadığı söylenebilir. Çok sayıda yayınla ayrıntılı biçimde incelendiği düşüncesi bu eksikliği ve yeterli bilgi bulunmadığı gerçeğini yansıtmaz."
+     },
+     "s": 39,
+     "id": "k2-45-q65"
+    }
+   ]
+  }
+ ]
+}

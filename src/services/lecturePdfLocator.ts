@@ -318,6 +318,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /7)Otonom Sinir Sistemi Farmakolojisi.pdf', name: '7)Otonom Sinir Sistemi Farmakolojisi.pdf', pages: 56 } as SourceFile],
   },
+  // 2026-11-18 k2-43 Konsültasyon-Liyezon Psikiyatrisi: deste yok, okul PDF'i sanal desteyle bağlı (H627).
+  'k2p-k2-43': {
+    title: 'Konsültasyon-Liyezon Psikiyatrisi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /16)Konsültasyon-Liyezyon Psikiyatrisi.pdf', name: '16)Konsültasyon-Liyezyon Psikiyatrisi.pdf', pages: 29, fileId: '1XFnx2cE2Eqdtxn8cX86tyGqg4yKlxfDP' } as SourceFile],
+  },
   'k2p-k2-42': {
     title: 'Nörogelişimsel Bozukluklar',
     decks: [],
@@ -369,6 +375,24 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     title: 'Kolinoseptör Bloke Edici İlaçlar',
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /6)Kolinoseptör- Bloke Edici İlaçlar.pdf', name: '6)Kolinoseptör- Bloke Edici İlaçlar.pdf', pages: 51, fileId: '12byFU4tOyNDKwBU98m6TeCFAShJrI9MS' } as SourceFile],
+  },
+  // 2026-11-18 Damgalama (k2-44): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-44-damgalama': {
+    title: 'Damgalama',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /15)Damgalama .pdf', name: '15)Damgalama .pdf', pages: 25, fileId: '1HxlqscK07z5pqXfqUYUV57XYjm3ZUcZj' } as SourceFile],
+  },
+  // 2026-11-18 İntihar ve Kendine Zarar Verme (k2-45): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-45': {
+    title: 'İntihar ve Kendine Zarar Verme',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /14)İntihar.pdf', name: '14)İntihar.pdf', pages: 40, fileId: '1nzqZ9x7N5YYOdKw9iDdAETa20YXw4YqG' } as SourceFile],
+  },
+  // 2026-11-18 Sempatomimetikler (k2-46): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-46-sempatomimetikler': {
+    title: 'Sempatomimetikler',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /8)Adrenoseptör Agonistler- Sempatomimetik İlaçlar.pdf', name: '8)Adrenoseptör Agonistler- Sempatomimetik İlaçlar.pdf', pages: 70, fileId: '1XvzBvCXmqEr6AvEopn208NGg7_6O9T_g' } as SourceFile],
   },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',

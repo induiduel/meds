@@ -1,0 +1,1444 @@
+{
+ "id": "k2-44-damgalama",
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "Damgalama",
+ "ogretim_uyesi": "Uzm. Dr. Pınar Durmaz",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Damgalamanın tanımını ve dayanak olan özellikleri açıklar (s. 2).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Bir kişinin ya da grubun ruhsal hastalık, etnik grup veya fiziksel yetersizlik gibi özelliklerine dayanarak kusurlu ve gözden düşmüş sayılmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Tutum",
+      "B": "Ayrımcılık",
+      "C": "Damgalama",
+      "D": "Stereotipi",
+      "E": "Önyargı"
+     },
+     "dogru": "C",
+     "aciklama": "Damgalama, kişi ya da grubun ruhsal hastalık, etnik grup, ilaç kötüye kullanımı veya fiziksel yetersizlik gibi özelliklerine dayanarak olumsuz değerlendirilmesidir.",
+     "sik_aciklamalari": {
+      "A": "Tutum, kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır. Çevredeki topluma uygun biçimde şekillenir; belirli özelliklere dayanarak kusurlu sayılmayı adlandıran bir kavram değildir.",
+      "B": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır ve ruhsal hastalığı olan kişi için dışlayıcı davranışlar biçiminde görülür. Damgalamanın davranışsal sonucudur; kusurlu sayılma yargısının kendisi değil, bu yargının eyleme dönmüş halidir.",
+      "C": "Damgalama, kişi ya da grubun ruhsal hastalık, etnik grup, ilaç kötüye kullanımı veya fiziksel yetersizlik gibi özelliklerine dayanarak olumsuz değerlendirilmesidir. Soruda tarif edilen kusurlu ve gözden düşmüş sayılma tam olarak bu kavramın içeriğidir.",
+      "D": "Stereotipi, toplumun ruhsal hastalığı olan kişilerin nasıl oldukları konusunda önceden hemfikir olduğu ortak görüştür. Bir düşünce kalıbıdır; kişiyi kusurlu sayıp gözden düşüren bütün süreci değil, bu sürecin bilişsel parçasını adlandırır.",
+      "E": "Önyargı, stereotipileri destekleyen ve öfke, korku gibi olumsuz duygusal tepkilere yol açan bileşendir. Damgalamanın duygusal basamağıdır; tanımdaki dayanak özelliklere göre kişiyi bütünüyle değersiz sayma durumunu tek başına karşılamaz."
+     },
+     "s": 2,
+     "id": "k2-44-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Damgalamayla ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İlaç kötüye kullanımına dayanabilir",
+      "B": "Yalnızca ruhsal hastalığı olan kişilere yönelik görülür",
+      "C": "Etnik grup özelliğine dayanabilir",
+      "D": "Fiziksel yetersizliğe dayanabilir",
+      "E": "Erken çağlardan beri en çok ruhsal hastalığı olanlar maruz kalmıştır"
+     },
+     "dogru": "B",
+     "aciklama": "Damgalama pek çok olgu ve durum için görülür; ruhsal hastalık yalnızca dayanak olabilen özelliklerden biridir.",
+     "sik_aciklamalari": {
+      "A": "İlaç kötüye kullanımı, kusurlu sayılmaya dayanak olan özellikler arasında yer alır. Damgalama bu özelliğe sahip kişiyi olumsuz değerlendirir; ifade doğru olduğu için yanlış seçeneği arayan soruda işe yaramaz.",
+      "B": "Damgalama pek çok olgu ve durum için görülür; ruhsal hastalık yalnızca dayanak olabilen özelliklerden biridir. Bu ifade kapsamı gereksiz yere daralttığı için yanlıştır; etnik grup, ilaç kötüye kullanımı ve fiziksel yetersizlik de aynı mekanizmaya konu olur.",
+      "C": "Etnik grup, damgalamanın dayanağı olabilen özelliklerden biridir ve kişi ya da grubun bu özellik nedeniyle gözden düşmüş sayılmasına yol açar. Doğru bir ifadedir, bu nedenle yanlış ifade aranan soruda elenir.",
+      "D": "Fiziksel yetersizlik de ruhsal hastalık gibi damgalamanın dayanağı olabilir. İfade tanımla uyumludur ve doğrudur; sorunun istediği yanlış ifade bu değildir.",
+      "E": "Erken çağlardan bu yana damgalama ve ayrımcılığa en fazla maruz kalan kesim ruhsal hastalığı olan kişilerdir. İfade bilgiyi doğru aktardığı için yanlış ifade arayan soruda elenir."
+     },
+     "s": 2,
+     "uslup": "hoca",
+     "id": "k2-44-q02"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Damgalanan hastalıkların tarihçesini cüzzam, frengi, tüberküloz, kanser ve AIDS örnekleriyle sıralar (s. 3).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Tarihte damgalanan hastalıklarla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Cüzzam, tanrının insana verdiği bir kötülük olarak görülmüştür",
+      "B": "AIDS için Allah'ın günahkârlara verdiği ceza yorumu yapılmıştır",
+      "C": "Frengiye yakalananlar 15. yüzyılda toplum tarafından lanetlenmiştir",
+      "D": "AIDS, 1980'lerde ortaya çıkmış ve önceleri homoseksüel hastalığı olarak bilinmiştir",
+      "E": "Tüberküloz, 18. yüzyılda üst sınıfa ait bir hastalık olarak görülmüştür"
+     },
+     "dogru": "E",
+     "aciklama": "Tüberküloz 18. yüzyılda adı konduğunda alt sınıfa ait bir hastalık olarak görülmüştür; üst sınıfa ait bir hastalık denmesi bu tarihsel bilgiyi tersine çevirir.",
+     "sik_aciklamalari": {
+      "A": "Cüzzam ilk damgalanan hastalıklardandır ve tanrının insana verdiği bir kötülük sayılmıştır. İfade doğru olduğu için söylenemeyecek ifade aranan soruda yer almaz.",
+      "B": "1980'lerde ortaya çıkan AIDS için Allah'ın günahkârlara verdiği bir ceza yorumları yapılmıştır. Hastalık damgalanmanın tarihsel örneğidir; ifade doğru olduğundan seçenek elenir.",
+      "C": "Frengi hastaları on beşinci yüzyılda toplumca lanetlenmiştir ve hastalık damgalamanın tarihsel örneklerinden biridir. Hastalığa yakalananların lanetlenmesi, hastalığın kişinin ahlaki suçu gibi görüldüğünü gösterir. Tarihe uygun aktarıldığı için bu seçenek söylenemeyecek ifade değildir.",
+      "D": "AIDS 1980'lerde ortaya çıkmış, önceleri homoseksüel hastalığı olarak bilinmiştir ve bu bilgi damgalanan hastalıkların tarihçesinde yer alır. İfade doğru olduğu için yanlış ifadeyi arayan soruda cevap olamaz.",
+      "E": "18. yüzyılda adı konan tüberküloz, üst sınıfa değil alt sınıfa ait bir hastalık olarak görülmüştür. İfade bu yönüyle tarihsel gerçeği tersine çevirir, bu yüzden söylenemeyecek ifade odur."
+     },
+     "s": 3,
+     "uslup": "hoca",
+     "id": "k2-44-q03"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "1900'lü yıllardan itibaren hastalarına karşı önyargılı davranılan ve ayrımcı yaklaşımlar son yirmi yıla kadar süren hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kanser",
+      "B": "Cüzzam",
+      "C": "Frengi",
+      "D": "Tüberküloz",
+      "E": "AIDS"
+     },
+     "dogru": "A",
+     "aciklama": "Kanser hastalarına karşı 1900'lü yıllardan itibaren önyargılı davranılmış ve ayrımcı yaklaşımlar son yirmi yıla kadar sürmüştür.",
+     "sik_aciklamalari": {
+      "A": "Kanser hastalarına karşı 1900'lü yıllardan itibaren önyargılı davranılmış, ayrımcı yaklaşımlar son yirmi yıla kadar devam etmiştir. Sorudaki iki özellik bu hastalıkta birleşir.",
+      "B": "Cüzzam ilk damgalanan hastalıklardandır ve tanrının insana verdiği bir kötülük olarak görülmüştür. Damgalanması 1900'lü yıllara dayanan bir örnek olarak anılmaz.",
+      "C": "Frengi hastalığına yakalananlar 15. yüzyılda toplum tarafından lanetlenmiştir. Damgalanması 1900'lü yıllardan çok daha eski bir döneme aittir, bu yüzden soruda anlatılan hastalık olamaz.",
+      "D": "Tüberküloz 18. yüzyılda adı konduğunda alt sınıfa ait bir hastalık olarak görülmüştür. Damgalanması 1900'lü yıllarda başlayan bir örnek değildir.",
+      "E": "AIDS 1980'lerde ortaya çıkmış, önceleri homoseksüel hastalığı olarak bilinmiş ve hakkında Allah'ın günahkârlara verdiği bir ceza olduğu yorumları yapılmıştır. 1900'lü yıllardan itibaren önyargı gören hastalık bu değildir."
+     },
+     "s": 3,
+     "uslup": "hoca",
+     "id": "k2-44-q04"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Ruhsal hastalıkların niçin damgalandığını, tehlikeli ve öngörülemez algılanmanın rolüyle açıklar (s. 4).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen başlıca değişken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastaların çocuk gibi görülmesi ve bakıma ihtiyaç duyması",
+      "B": "Hastaların hastalıklarının nedeninden sorumlu görülmesi",
+      "C": "Hastaların acı çekmediğine dair inanış",
+      "D": "Hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanması",
+      "E": "Hastaların sorumsuz sayılması ve kararların başkalarınca verilmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen başlıca değişken, hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Şiddetli ruhsal hastalığı olan bireylerin çocuk gibi olduğu ve bakıma ihtiyaç duyduğu inancı damgalamanın üçüncü etkenidir. Tutumu belirleyen başlıca değişken tehlikeli ve öngörülemez algılanmadır, çocuk gibi görme değildir.",
+      "B": "Hastaların hastalıklarının nedeni için sorumlu görülmesi damgalamada tanımlanan bir tutumdur ve ayrımcı davranışlara öncülük eder. Tutumu belirleyen başlıca değişken ise tehlikeli algısıdır.",
+      "C": "Ruhsal bozukluğu olan kişilerin acı çekmediği, toplumda yaygın olumsuz inanışlar arasında sayılır. Bu inanış tutumu belirleyen başlıca değişken değildir; öne çıkan unsur tehlikelilik ve öngörülemezlik algısıdır.",
+      "D": "Toplumun ruhsal hastalıklara ilişkin tutumunu belirleyen başlıca değişken, hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanmasıdır. Bu algı kaygı uyandırır ve dışlamanın zeminini hazırlar.",
+      "E": "Sorumsuzluk ve kararların başkalarınca verilmesi inancı otoriterlik etkenine karşılık gelir. Damgalayıcı bir inançtır, ancak toplumun tutumunu belirleyen en önemli değişken olarak anılan algı bu değildir."
+     },
+     "s": 4,
+     "id": "k2-44-q05"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Ruhsal hastalıkların damgalanma nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ürküten durumla karşılaşan kişi onu kendisinden dışlayıp yabancılaştırır",
+      "B": "Önceden kestirilemeyen davranışlar toplumda kaygı uyandırır",
+      "C": "Hastaların kestirilemez ve tehlikeli sayılması tutumu belirler",
+      "D": "Dışlayıp yabancılaştırma ayrımcılığın başlangıcıdır",
+      "E": "Düzeni bozan ve huzursuzluk yaratan kişiler toplum içinde korunup desteklenir"
+     },
+     "dogru": "E",
+     "aciklama": "Düzeni bozan, huzursuzluk yaratan ve toplumsal yaşantı için tekin olmayan kişiler damgalanıp toplum dışına itilir.",
+     "sik_aciklamalari": {
+      "A": "Birey ya da toplum kendisini ürküten ve rahatsız eden bir durumla karşılaşınca onu dışlayıp yabancılaştırır. Bu doğru bir ifadedir, yanlış seçenek olamaz.",
+      "B": "Hastaların alışılmışın dışındaki ve önceden kestirilemeyen davranışları toplumda kaygı uyandırır. Bu kaygı, ruhsal hastalığın damgalanmasının ilk halkasıdır. İfadenin bilgisi doğru olduğundan yanlış seçenek olarak aranmaz.",
+      "C": "Hastaların tehlikeli ve ne yapacağı bilinmeyen kişiler olarak algılanması toplumun tutumunu belirleyen başlıca değişkendir. İfade doğrudur, yanlış ifade arayan soruda cevap sayılmaz.",
+      "D": "Ürküten durumun dışlanıp yabancılaştırılması ayrımcılığın başlangıcıdır. Birey ya da toplum rahatsız edici duruma karşı uzaklaşmayı seçtiğinde ayrımcı davranış doğmaya başlar. Cümle bu zinciri doğru kurduğu için yanlış değildir.",
+      "E": "Düzeni bozan, huzursuzluk yaratan ve toplumsal yaşantı için tekin olmayan kişiler damgalanıp toplum dışına itilir. İfade bunun tersini söylediği için yanlıştır."
+     },
+     "s": 4,
+     "uslup": "hoca",
+     "id": "k2-44-q06"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Birey ya da toplum kendisini ürküten ve rahatsız eden bir durumla karşılaştığında onu kendisinden dışlayıp yabancılaştırma yoluna gittiğinde, bu davranış aşağıdakilerden hangisinin başlangıcı sayılır?",
+     "secenekler": {
+      "A": "Stereotipi",
+      "B": "Ayrımcılık",
+      "C": "Tutum",
+      "D": "İçselleştirilmiş damgalama",
+      "E": "Önyargı"
+     },
+     "dogru": "B",
+     "aciklama": "Ürküten durumu kendinden dışlayıp yabancılaştırma yoluna gitmek, ayrımcılığın başlangıcıdır.",
+     "sik_aciklamalari": {
+      "A": "Stereotipi, toplumun ruhsal hastalığı olan kişilerin nasıl oldukları konusunda önceden hemfikir olduğu ortak görüştür. Dışlama davranışı değil, düşünce kalıbıdır; bu yüzden başlangıç noktası olarak seçilmez.",
+      "B": "Ürküten ve rahatsız eden durumu kendinden dışlayıp yabancılaştırmak bir davranıştır ve ayrımcılığın başlangıcı sayılır. Düzeni bozan kişiler bu yolla toplum dışına itilir.",
+      "C": "Tutum, kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır. Dışlama davranışını değil, bu davranışın arkasındaki bakış açısını anlatır.",
+      "D": "İçselleştirilmiş damgalama, damgalayıcı görüşlerin ruhsal hastalığı olan kişinin kendisi tarafından benimsenmesidir. Toplumun ya da bireyin dışlama davranışı değil, hastanın iç dünyasıdır.",
+      "E": "Önyargı, stereotipileri destekleyen ve öfke ve korku gibi olumsuz duygulara yol açan tepkidir. Dışlama bir duygu değil davranıştır, bu nedenle bu davranışın başlangıcı olarak önyargı seçilmez."
+     },
+     "s": 4,
+     "id": "k2-44-q47"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Damgalamada tanımlanan üç etkeni (korku ve dışarıda bırakma, otoriterlik, yardımseverlik) ayırt eder (s. 5).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Damgalamada tanımlanan üç etken aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Önyargı, otoriterlik, yardımseverlik",
+      "B": "Yardımseverlik, tutum, korku ve dışarıda bırakma",
+      "C": "Korku ve dışarıda bırakma, otoriterlik, stereotipi",
+      "D": "Korku ve dışarıda bırakma, otoriterlik, yardımseverlik",
+      "E": "Otoriterlik, ayrımcılık, yardımseverlik"
+     },
+     "dogru": "D",
+     "aciklama": "Damgalamada tanımlanan etkenler korku ve dışarıda bırakma, otoriterlik ve yardımseverliktir.",
+     "sik_aciklamalari": {
+      "A": "Otoriterlik ve yardımseverlik gerçekten etkenlerdir, fakat önyargı bu üçlüde yer almaz. Önyargı stereotipileri destekleyen duygusal reaksiyondur ve ilk etken korku ve dışarıda bırakmadır.",
+      "B": "Tutum, kişinin reaksiyonları ile dünya görüşünün bütünleşmesinden doğan bakış açısıdır ve etkenlerden biri değildir. Bu üçlüde ayrıca otoriterlik etkeni eksiktir. Bu nedenle etkenler sırasıyla verilmiş sayılamaz.",
+      "C": "İlk iki etken doğru verilmiştir, ancak stereotipi etkenlerden biri değildir. Stereotipi toplumun ortak görüşünü temsil eden bir bilişsel yapıdır; üçüncü etken yardımseverliktir.",
+      "D": "Damgalamada tanımlanan etkenler korku ve dışarıda bırakma, otoriterlik ve yardımseverliktir. Her biri ruhsal hastalıklı bireylere yönelik ayrı bir damgalayıcı inancı adlandırır.",
+      "E": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır; damgalamanın etkenlerinden biri sayılmaz. Doğru üçlüde ayrımcılığın yerini korku ve dışarıda bırakma etkeni alır. Bu seçenek bir davranış kavramını etken listesine karıştırır."
+     },
+     "s": 5,
+     "id": "k2-44-q07"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ruhsal hastalıklı bireylerin sorumsuz olduğu ve kararların başkaları tarafından verilmesi gerektiği inancına karşılık gelen etken hangisidir?",
+     "secenekler": {
+      "A": "Otoriterlik",
+      "B": "Önyargı",
+      "C": "Stereotipi",
+      "D": "Korku ve dışarıda bırakma",
+      "E": "Yardımseverlik"
+     },
+     "dogru": "A",
+     "aciklama": "Otoriterlik etkeni, ruhsal hastalıklı bireylerin sorumsuz olduğu ve bu nedenle kararların diğerleri tarafından verilmesi gerektiği inancıdır.",
+     "sik_aciklamalari": {
+      "A": "Otoriterlik etkeni, ruhsal hastalıklı bireylerin sorumsuz olduğu ve bu nedenle kararların diğerleri tarafından verilmesi gerektiği inancıdır. Hastanın karar yetkisini başkasına devreden bu yaklaşım damgalayıcı bir tutumdur.",
+      "B": "Önyargı, stereotipileri destekleyen ve öfke ile korku gibi olumsuz duygulara yol açan bileşendir. Kararların başkalarınca verilmesi gerektiği inancı ise otoriterlik etkenine aittir. İkisi birbirine karıştırılmamalıdır.",
+      "C": "Stereotipi, toplumun ruhsal hastalığı olan kişiler hakkında önceden üzerinde hemfikir olduğu ortak görüştür. Üç etkenden biri olan karar yetkisi inancını ayırt edecek bir kavram değildir.",
+      "D": "Korku ve dışarıda bırakma etkeni, bireylerden korkulması ve bu nedenle toplumun dışında tutulması gerektiği inancıdır. Karar yetkisiyle değil, uzaklaştırmayla ilgilidir.",
+      "E": "Yardımseverlik etkeni, şiddetli ruhsal hastalığı olan bireylerin çocuk gibi olduğu ve bakıma ihtiyaç duyduğu inancıdır. İyi niyetli görünür, fakat karar yetkisinin devri otoriterlikte ele alınır."
+     },
+     "s": 5,
+     "id": "k2-44-q08"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Damgalamada tanımlanan etkenlerle ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Otoriterlik etkeni, kararların diğerlerince verilmesi gerektiği inancını içerir",
+      "B": "Korku etkeni, bireylerin toplumun dışında tutulması gerektiği inancını içerir",
+      "C": "Yardımseverlik, bireylerin sorumsuz olduğu ve kararların başkalarınca verilmesi gerektiği inancıdır",
+      "D": "Bu tutumlar ayrımcı davranışlara öncülük eder",
+      "E": "Hastalar hastalıklarının nedeninden sorumlu görülür"
+     },
+     "dogru": "C",
+     "aciklama": "Sorumsuzluk ve kararların başkalarınca verilmesi inancı otoriterlik etkenidir.",
+     "sik_aciklamalari": {
+      "A": "Otoriterlik, ruhsal hastalıklı bireylerin sorumsuz sayılıp kararların diğerlerince verilmesi gerektiğini savunur. İfade etkeni doğru tanımlar, bu yüzden doğru değil denilen seçenek olamaz.",
+      "B": "Korku ve dışarıda bırakma etkeni, bireylerden korkulması ve toplum dışında tutulması gerektiği inancıdır. İfade doğrudur, olumsuz kökte aranan seçenek değildir.",
+      "C": "Sorumsuzluk ve kararların başkalarınca verilmesi inancı otoriterlik etkenidir. Yardımseverlik ise şiddetli ruhsal hastalığı olanların çocuk gibi olduğu ve bakıma ihtiyaç duyduğu inancıdır, bu yüzden ifade doğru değildir.",
+      "D": "Damgalamadaki etkenlerden doğan tutumlar ayrımcı davranışlara öncülük eder. Korku, otoriterlik ve yardımseverlik inançları davranışa dönüştüğünde dışlama ve karar yetkisinin elinden alınması görülür. Bilgi doğru olduğundan yanlış seçenek değildir.",
+      "E": "Ruhsal hastalıklı bireyler hastalıklarının nedeni için sorumlu görülür ve bu tutum ayrımcı davranışlara öncülük eder. Hasta, hastalığını kendi seçmiş gibi değerlendirildiğinde destek yerine suçlanır. İfade etkenlerin sonucunu doğru verir."
+     },
+     "s": 5,
+     "uslup": "hoca",
+     "id": "k2-44-q09"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Damgalanmanın bireyde bıraktığı yıkıcı etkiyi ve sonuçlarını sayar (s. 6).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Ruhsal hastalığa sahip bireylerde damgalamanın özellikle acı ve yıkıcı olan etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikiyatrik tedaviye uyumda belirgin azalma görülmesi",
+      "B": "Toplumun üyesi olmadığı duygusunun doğması",
+      "C": "Benlik saygısında belirgin azalma görülmesi",
+      "D": "İşsizlik ve gelir kaybı yaşanması",
+      "E": "Sosyal uyumda belirgin bozulma görülmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Damgalamanın özellikle acı ve yıkıcı etkisi, kişide toplumun bir üyesi olmadığı duygusu bırakmasıdır.",
+     "sik_aciklamalari": {
+      "A": "Psikiyatrik tedaviye uyumda azalma damgalanmanın sonuçları arasında sayılır. Acı ve yıkıcı olarak öne çıkan etki ise bireyin toplumun parçası olmadığını hissetmesidir.",
+      "B": "Damgalamanın özellikle acı ve yıkıcı etkisi, kişide toplumun bir üyesi olmadığı duygusu bırakmasıdır. Birey kendisini toplumun dışında hisseder ve bu duygu diğer olumsuz sonuçların zeminini oluşturur.",
+      "C": "Benlik saygısında azalma, damgalanan bireylerde görülen sonuçlardandır; kişi kendini değersiz algılamaya başlar. Ancak özellikle yıkıcı olarak adlandırılan etki, toplumun bir üyesi olmadığı duygusudur. Bu nedenle soruda sorulan etki bu değildir.",
+      "D": "İşsizlik ve gelir kaybı, damgalanmanın somut sonuçlarındandır ve kişinin geçimini doğrudan etkiler. Ancak özellikle acı ve yıkıcı olarak vurgulanan etki, kişide toplumun bir üyesi olmadığı duygusunun doğmasıdır; işsizlik bu duygunun yanında ikincil bir sonuç kalır.",
+      "E": "Sosyal uyumda bozulma, damgalanmanın sonuçlarındandır ve kişinin çevresiyle ilişkisini zorlaştırır. Özellikle acı ve yıkıcı vurgulanan etki ise kişide toplumun bir üyesi olmadığı duygusunun doğmasıdır. Sosyal uyum bozukluğu bu duygunun yanında ikincil kalır."
+     },
+     "s": 6,
+     "id": "k2-44-q10"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Ruhsal hastalıklı olarak damgalanan bireylerin yaşadığı sonuçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Benlik saygısı azalır",
+      "B": "Psikiyatrik tedaviye uyum artar",
+      "C": "Sosyal uyum bozulur",
+      "D": "Moral bozukluğu görülür",
+      "E": "İşsizlik ve gelir kaybı yaşanır"
+     },
+     "dogru": "B",
+     "aciklama": "Damgalanma, psikiyatrik tedaviye uyumda azalmaya yol açar; kişi tedaviye başvurmaktan ya da sürdürmekten çekinir.",
+     "sik_aciklamalari": {
+      "A": "Damgalanma benlik saygısında azalmaya neden olur; kişi toplumun gözündeki değersizliği kendi değeri gibi algılar. Bu doğru bir sonuçtur ve sorunun aradığı yanlış ifade olamaz.",
+      "B": "Damgalanma, psikiyatrik tedaviye uyumda azalmaya yol açar; kişi tedaviye başvurmaktan ya da sürdürmekten çekinir. Uyumun arttığını söyleyen ifade bu ilişkiyi tersine çevirdiği için yanlıştır.",
+      "C": "Sosyal uyumda bozulma damgalanmanın sonuçlarındandır; kişinin toplumla ilişkisi gerilir ve dışlanma artar. Bilgi doğru olduğundan yanlış ifadeyi arayan soruda cevap sayılmaz.",
+      "D": "Moral bozukluğu, damgalanan bireylerde görülen olumsuz sonuçlardandır. Kişi toplumun kendisini reddedeceğine ve değersizleştireceğine inandığında ruh hali bozulur. Bilgi doğrudur, bu yüzden yanlış seçenek değildir.",
+      "E": "Damgalanan bireyler işsizlik ve gelir kaybı yaşayabilir; işverenlerin ruhsal hastalıklı kişiyi çevresinde istememesi bu sonucu doğurur. Bilgi derse uygundur ve yanlış ifade değildir."
+     },
+     "s": 6,
+     "uslup": "hoca",
+     "id": "k2-44-q11"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Basmakalıp düşünceyi ve önyargılı kişinin sosyal biliş tepkilerini açıklar (s. 7).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Bir sosyal grubun birçok üyesi tarafından bilinen bilgi yapılarına ne ad verilir?",
+     "secenekler": {
+      "A": "Tutum",
+      "B": "İçselleştirilmiş damgalama",
+      "C": "Basmakalıp düşünce",
+      "D": "Ayrımcılık",
+      "E": "Önyargı"
+     },
+     "dogru": "C",
+     "aciklama": "Basmakalıp düşünceler, bir sosyal grubun birçok üyesi tarafından bilinen bilgi yapılarıdır.",
+     "sik_aciklamalari": {
+      "A": "Tutum, kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesinden doğan bakış açısıdır ve büyüdüğü çevreye uygun şekillenir. Toplumca bilinen ortak bir bilgi yapısını adlandırmaz; o işlev basmakalıp düşünceye aittir.",
+      "B": "İçselleştirilmiş damgalama, damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir. Grubun birçok üyesince bilinen bilgi yapısı değil, bu yapının kişide benimsenmesidir.",
+      "C": "Basmakalıp düşünceler, bir sosyal grubun birçok üyesi tarafından bilinen bilgi yapılarıdır. Ruhsal hastalıklarla ilgili olanlar suçlama, tehlike ve yetersizliği içerir ve damgalamanın bilişsel temelini oluşturur.",
+      "D": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır. Grubun birçok üyesince bilinen bir bilgi yapısı olmayıp davranış düzeyinde görülen bir sonuçtur. Dışlayıcı davranışlar bu kavrama girer.",
+      "E": "Önyargı, olumsuz basmakalıbı onaylamak ve buna olumsuz duygusal tepki göstermektir. Grubun birçok üyesince bilinen bilgi yapısını değil, bu yapıya katılma durumunu anlatır."
+     },
+     "s": 7,
+     "id": "k2-44-q12"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Damgalamanın sosyal biliş boyutunda önyargılı kişiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Olumsuz duygusal tepki gösterir",
+      "B": "Davranışsal tepki olarak ayrıma neden olur",
+      "C": "Olumsuz basmakalıbı onaylar",
+      "D": "Olumsuz basmakalıpların geçerli olmadığını düşünür",
+      "E": "Korku, kaçınma davranışına neden olur"
+     },
+     "dogru": "D",
+     "aciklama": "Önyargılı kişi olumsuz basmakalıpları onaylar; geçerli olduğunu düşünmeyenler ise basmakalıpların yalnızca farkında olan kişilerdir.",
+     "sik_aciklamalari": {
+      "A": "Önyargılı kişi, basmakalıbı onaylamasının sonucunda olumsuz duygusal tepkiler gösterir; örneğin hepsi beni ürkütür diye düşünür. Bu doğru bir bilgidir ve yanlış seçenek olarak aranmaz.",
+      "B": "Önyargı, davranışsal tepki olarak ayrıma neden olur. Bu bilgi önyargının duygusal basamağının davranışa dönüştüğünü gösterir ve doğrudur; bu yüzden yanlış ifade değildir.",
+      "C": "Önyargılı kişi, ruhsal hastalıklı bütün insanların saldırgan olduğu gibi olumsuz basmakalıbı onaylar. Bu onay, olumsuz duygusal tepkinin dayanağını oluşturur. Cümle bilgiyi doğru aktardığı için yanlış değildir.",
+      "D": "Önyargılı kişi olumsuz basmakalıpları onaylar; geçerli olduğunu düşünmeyenler ise basmakalıpların yalnızca farkında olan kişilerdir. İfade bu ayrımı tersine çevirdiği için yanlıştır.",
+      "E": "Önyargılı kişide gelişen korku, kaçınma davranışına neden olur. İşverenlerin ruhsal hastalıklı bireyleri çevrelerinde istememesi bu kaçınmanın örneğidir. Cümle doğrudur ve yanlış ifade arayan soruda cevap olamaz."
+     },
+     "s": 7,
+     "uslup": "hoca",
+     "id": "k2-44-q13"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "İçsel damgalanmanın sonuçlarını ve hastalık şiddeti ile ilişkisini açıklar (s. 8).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "İçsel damgalanmanın sonuçları arasında aşağıdakilerden hangisi görülmez?",
+     "secenekler": {
+      "A": "İşsizlik ve gelir kaybı",
+      "B": "Yaşam kalitesinde azalma",
+      "C": "Depresif belirtiler",
+      "D": "Düşük benlik saygısı",
+      "E": "Sosyal çevrede genişleme"
+     },
+     "dogru": "E",
+     "aciklama": "İçsel damgalanma, sosyal çevrede genişleme değil, daha fazla daralma ile sonuçlanır.",
+     "sik_aciklamalari": {
+      "A": "İşsizlik ve gelir kaybı damgalama sürecinin sonuçlarındandır; işverenlerin ruhsal hastalığı olan kişiyi çevrelerinde istememesiyle ilişkilidir. Görülen bir sonuç olduğu için aranan seçenek değildir.",
+      "B": "Damgalama süreci yaşam kalitesinden ödün verme ile sonuçlanır; kişinin günlük işlevi ve memnuniyeti azalır. Bu sonuç görüldüğü için sorunun aradığı görülmeyen seçenek değildir.",
+      "C": "Depresif semptomlar içsel damgalanma sürecinin sonuçları arasındadır; kişinin moral bozukluğu ve değersizlik duygusu bu tabloya eşlik eder. Görülen bir sonuç olduğundan cevap olamaz.",
+      "D": "Düşük benlik saygısı içsel damgalanmanın sonuçlarındandır; kişi kendisini toplumun damgalayıcı gözüyle değerlendirir. Görülen bir sonuç olduğu için aranan seçenek değildir.",
+      "E": "İçsel damgalanma, sosyal çevrede genişleme değil, daha fazla daralma ile sonuçlanır. Kişi damgalanmış hissettikçe ilişkilerden çekilir. Sonuçlar arasında görülmeyen seçenek bu yüzden budur."
+     },
+     "s": 8,
+     "uslup": "hoca",
+     "id": "k2-44-q14"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi hastalığın şiddeti, tedaviye uyum ve içsel damgalanma arasındaki ilişkiyi doğru tanımlar?",
+     "secenekler": {
+      "A": "Şiddet arttıkça içsel damgalanma artar, tedaviye uyum ve belirtilerde düzelmeyle azalır",
+      "B": "İçsel damgalanma hastalığın şiddetinden bağımsızdır",
+      "C": "Şiddet arttıkça içsel damgalanma azalır, düzelme ile artar",
+      "D": "Belirtilerde düzelme içsel damgalanmada belirgin artış yapar",
+      "E": "Tedaviye uyum arttıkça içsel damgalanma da artar"
+     },
+     "dogru": "A",
+     "aciklama": "Hastalığın şiddeti arttıkça içsel damgalanma artar.",
+     "sik_aciklamalari": {
+      "A": "Hastalığın şiddeti arttıkça içsel damgalanma artar. Tedaviye uyum ve belirtilerde düzelme olduğunda ise içsel damgalanma azalır. İlişki bu yönüyle iki yönlü işler ve soruda doğru tanımlanmıştır.",
+      "B": "Hastalığın şiddeti ile içsel damgalanma arasında ilişki saptanmıştır; şiddet arttıkça içsel damgalanma da artar. Bu nedenle bağımsızlık iddiası bilgiyle çelişir ve ilişkiyi doğru tanımlamaz.",
+      "C": "Bu seçenek ilişkiyi tamamen tersine çevirir. Şiddetin artması içsel damgalanmayı azaltmaz, artırır; belirtilerde düzelme ise içsel damgalanmayı azaltır. Yönler yanlış verildiği için seçenek elenir.",
+      "D": "Belirtilerde düzelme, içsel damgalanmanın azalmasıyla birliktedir ve kişi toplumun gözündeki değersizlik inancından uzaklaşır. Düzelmenin damgalanmayı artırdığını söyleyen seçenek bu bilgiyi tersine çevirir ve hastalık şiddeti ile damgalanma arasındaki ilişkiyi doğru tanımlamaz.",
+      "E": "Tedaviye uyum arttıkça içsel damgalanma azalır, artmaz. Seçenek uyum ile damgalanma arasındaki yönü ters kurar ve bu yüzden ilişkiyi doğru tanımlamaz."
+     },
+     "s": 8,
+     "id": "k2-44-q15"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Damgalanma sürecinin aşamalı yapısını ve kavramsallaştırmaların işlevini açıklar (s. 9).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Damgalanma süreci nasıl gerçekleşir?",
+     "secenekler": {
+      "A": "Sistematik olarak aşamalar halinde ve zamanla basmakalıplaşarak",
+      "B": "Yalnızca tedaviye uyumun bozulmasıyla",
+      "C": "Kişinin kendini etiketlemesiyle başlayarak toplumda sona erer",
+      "D": "Tek bir aşamada ve ani biçimde",
+      "E": "Yalnızca yönetsel düzenlemeler yoluyla"
+     },
+     "dogru": "A",
+     "aciklama": "Damgalanma sistematik olarak aşamalar halinde gerçekleşir ve zamanla basmakalıplaşır.",
+     "sik_aciklamalari": {
+      "A": "Damgalanma sistematik olarak aşamalar halinde gerçekleşir ve zamanla basmakalıplaşır. Süreç bu yapısıyla düzenli bir ilerleme gösterir ve ilerledikçe düşünce kalıpları yerleşir.",
+      "B": "Tedaviye uyumda azalma, damgalanmanın bir sonucudur, sürecin kendisi değildir. Sürecin kendisi aşamalar halinde ve basmakalıplaşarak gerçekleşir; sonuç ile süreç burada karıştırılmıştır.",
+      "C": "Etiketlenme, öz damgalamanın bir basamağıdır ve sürecin tamamını anlatmaz. Damgalanma süreci aşamalıdır ve zamanla basmakalıplaşır; kişinin kendini etiketlemesiyle başlayıp toplumda sonlanan bir sıra tanımlanmamıştır.",
+      "D": "Damgalanma tek aşamalı ve ani değildir; aşamalar halinde ilerler. Bu seçenek sürecin sistematik yapısını yok sayar ve basmakalıplaşmayı da açıklamaz.",
+      "E": "Yönetsel düzenlemeler yapısal ayrımcılığın örnekleridir ve damgalanma sürecinin yalnızca bir boyutunu oluşturur. Süreç yalnızca bu yolla değil, sistematik aşamalar halinde ilerler."
+     },
+     "s": 9,
+     "id": "k2-44-q16"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Damgalanma sürecine ilişkin kavramsallaştırmalar aşağıdakilerden hangisini sağlar?",
+     "secenekler": {
+      "A": "Tedaviye uyumun kendiliğinden artmasını sağlar",
+      "B": "Sürecin açık ve net anlaşılmasını kolaylaştırır",
+      "C": "Sürecin kendiliğinden sonlanmasını sağlar",
+      "D": "Hastalığın şiddetini doğrudan azaltmayı sağlar",
+      "E": "Yapısal ayrımcılığı ortadan kaldırmayı sağlar"
+     },
+     "dogru": "B",
+     "aciklama": "Kavramsallaştırmalar, damgalanma sürecinin açık ve net biçimde anlaşılmasını kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "Tedaviye uyum, damgalanma azaldığında düzelen bir sonuçtur ve damgalanmanın sonuç tarafında yer alır. Kavramsallaştırmaların işlevi uyumu artırmak değil, damgalanma sürecini açık ve net anlaşılır kılmaktır; seçenek sonuç ile işlevi birbirine karıştırır.",
+      "B": "Kavramsallaştırmalar, damgalanma sürecinin açık ve net biçimde anlaşılmasını kolaylaştırır. Süreci basamaklara ve kavramlara ayırarak görünür kılar, böylece sürecin nasıl işlediği öğrenilebilir; sorunun sorduğu işlev tam olarak budur.",
+      "C": "Kavramsallaştırmalar süreci kendiliğinden sonlandırmaz; yalnızca anlaşılmasını kolaylaştırır. Damgalanma ise müdahale gerektiren bir süreçtir ve kavramlar tek başına bunu çözmez; seçenek işlevi olduğundan fazla gösterir.",
+      "D": "Hastalığın şiddeti ile içsel damgalanma ilişkilidir; ancak kavramsallaştırmalar hastalığın şiddetini değiştirmez. İşlevleri sürecin anlaşılmasını kolaylaştırmakla sınırlıdır, bu yüzden hastalık şiddetine etki ettikleri söylenemez.",
+      "E": "Yapısal ayrımcılık toplumsal kurallar ve düzenlemelerle ilgilidir ve bütçe, yönetmelik gibi alanlarda görülür. Kavramsallaştırmalar bunları ortadan kaldırmaz, yalnızca damgalanma sürecinin anlaşılmasına yardım eder; seçenek kavramlara düzenleme gücü yükler."
+     },
+     "s": 9,
+     "id": "k2-44-q17"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Stereotipiyi tanımlar ve ruhsal bozukluğu olan birey için oluşan stereotipiyi bilir (s. 10).",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Ruhsal hastalığı olan kişilerin nasıl oldukları konusunda toplumun daha önce üzerinde hemfikir olduğu ortak görüşü temsil eden kavram hangisidir?",
+     "secenekler": {
+      "A": "Tutum",
+      "B": "Öz damgalama",
+      "C": "Önyargı",
+      "D": "Stereotipi",
+      "E": "Ayrımcılık"
+     },
+     "dogru": "D",
+     "aciklama": "Stereotipi, toplumların ortak görüşünü temsil eder ve ruhsal hastalığı olan kişilerin nasıl oldukları konusunda daha önce üzerinde hemfikir olunan görüştür.",
+     "sik_aciklamalari": {
+      "A": "Tutum, kişinin duygusal reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır. Toplumun üzerinde hemfikir olduğu ortak görüş değil, kişisel bir bakış açısıdır.",
+      "B": "Öz damgalama, damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir. Toplumun ortak görüşünü temsil etmez; o görüşün kişide yer etmesini anlatır.",
+      "C": "Önyargı, stereotipileri destekleyen ve öfke ile korku gibi olumsuz duygulara yol açan bileşendir. Ortak görüşün kendisi değil, ona eşlik eden duygusal tepkidir.",
+      "D": "Stereotipi, toplumların ortak görüşünü temsil eder ve ruhsal hastalığı olan kişilerin nasıl oldukları konusunda daha önce üzerinde hemfikir olunan görüştür. Hasta bir kişi denildiğinde durum önce stereotipiler eşliğinde algılanır.",
+      "E": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır. Toplumun üzerinde hemfikir olduğu ortak görüşü değil, bu görüşten doğan dışlayıcı davranışı anlatır; ortak görüş stereotipidir."
+     },
+     "s": 10,
+     "id": "k2-44-q18"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Stereotipilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ruhsal bozukluğu olan birey için tehlikeli ve ne yapacağı belli olmayan stereotipisi oluşur",
+      "B": "Toplumların ortak görüşünü temsil ederler",
+      "C": "Yalnızca negatif biçimde oluşurlar",
+      "D": "Hasta bir kişi denildiğinde durum önce stereotipiler eşliğinde algılanır",
+      "E": "Pozitif ve negatif olarak gruplanırlar"
+     },
+     "dogru": "C",
+     "aciklama": "Stereotipiler pozitif ve negatif şeklinde gruplanır.",
+     "sik_aciklamalari": {
+      "A": "Toplumdaki ruhsal bozukluğu olan birey için oluşan stereotipi, tehlikeli ve ne yapacağı belli olmayan birey şeklindedir. Birçok çalışma bunu göstermiştir ve ifade bilgiyi doğru aktarır.",
+      "B": "Stereotipi, toplumların ortak görüşünü temsil eder; ruhsal hastalığı olan kişilerin nasıl oldukları konusunda toplumun daha önce hemfikir olduğu görüştür. Bilgi doğru olduğu için yanlış ifade değildir.",
+      "C": "Stereotipiler pozitif ve negatif şeklinde gruplanır. Yalnızca negatif oldukları yönündeki ifade bu sınıflamaya aykırı olduğu için yanlıştır; ruhsal bozukluk için oluşan stereotipi olumsuz olsa da kavram iki yönlüdür.",
+      "D": "Hasta bir kişi denildiğinde kişi öncelikle stereotipiler eşliğinde durumu algılar. Yani stereotipi, karşıdaki kişiyi tanımadan önce zihinde hazır bekleyen çerçevedir. Bilgi doğrudur ve yanlış seçenek değildir.",
+      "E": "Stereotipiler pozitif ve negatif olarak iki gruba ayrılır; bu sınıflama bilgiye uygundur. Ruhsal bozukluk için oluşan stereotipi olumsuz olsa da kavram iki yönlüdür, bu yüzden ifade doğrudur ve yanlış seçenek değildir."
+     },
+     "s": 10,
+     "uslup": "hoca",
+     "id": "k2-44-q19"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Toplumda ruhsal bozukluğu olan birey için oluşan stereotipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çocuk gibi ve bakıma muhtaç birey",
+      "B": "Sorumsuz ve kararları başkalarınca verilmesi gereken birey",
+      "C": "Kendi hatası nedeniyle hastalanan birey",
+      "D": "Gerçek bir hastalığı bulunmayan birey",
+      "E": "Tehlikeli ve ne yapacağı belli olmayan birey"
+     },
+     "dogru": "E",
+     "aciklama": "Toplumdaki ruhsal bozukluğu olan birey için oluşan stereotipi tehlikeli ve ne yapacağı belli olmayan birey şeklindedir.",
+     "sik_aciklamalari": {
+      "A": "Çocuk gibi olma ve bakıma ihtiyaç duyma, yardımseverlik etkeninin inancıdır. Toplumdaki ortak stereotipi olarak öne çıkan görüş tehlikeli ve öngörülemez birey imgesidir.",
+      "B": "Sorumsuz olma ve kararların başkalarınca verilmesi gerektiği inancı otoriterlik etkeninin içeriğidir. Birçok çalışmada toplumdaki stereotipi olarak vurgulanan imge ise tehlikeli ve ne yapacağı belli olmayan bireydir.",
+      "C": "Kendi hataları nedeniyle hastalandığı inanışı toplumdaki yaygın olumsuz inanışlardandır. Stereotipi olarak öne çıkan imge ise tehlikeli ve ne yapacağı belli olmayan bireydir.",
+      "D": "Ruhsal hastalıkların gerçek birer hastalık olmadığı, toplumdaki yaygın olumsuz inanışlardan biridir. Çalışmalarda stereotipi olarak belirtilen imge ise tehlikeli ve öngörülemez bireydir.",
+      "E": "Toplumdaki ruhsal bozukluğu olan birey için oluşan stereotipi tehlikeli ve ne yapacağı belli olmayan birey şeklindedir. Birçok çalışmanın gösterdiği bu görüş, ruhsal hastalığa yönelik korkunun temelini oluşturur."
+     },
+     "s": 10,
+     "id": "k2-44-q20"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Önyargıyı tanımlar ve damgalama sürecinin bileşenlerini ayırt eder (s. 11).",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Stereotipileri destekleyen ve sonucunda farklı duygusal reaksiyonların gelişebildiği kavram aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Önyargı",
+      "B": "Yapısal ayrımcılık",
+      "C": "Öz damgalama",
+      "D": "Tutum",
+      "E": "Ayrımcılık"
+     },
+     "dogru": "A",
+     "aciklama": "Önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir.",
+     "sik_aciklamalari": {
+      "A": "Önyargılar stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir. Önyargı bu yönüyle damgalamanın duygusal basamağıdır ve soruda tanımlanan kavram odur.",
+      "B": "Yapısal ayrımcılık, toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olanları sistematik olarak sıkıntıya sokmasıdır. Kişinin duygusal reaksiyonuyla ilgili bir kavram değildir.",
+      "C": "Öz damgalama, damgalayıcı görüşlerin kişi tarafından kendi hakkında benimsenmesidir. Stereotipileri destekleyen ve toplumsal düzeyde duygusal reaksiyon doğuran kavram olarak önyargı öne çıkar.",
+      "D": "Tutum, reaksiyonların ve dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır. Kişinin genel bakışını anlatır; stereotipileri destekleme ve farklı duygusal reaksiyon doğurma işlevi önyargıya aittir.",
+      "E": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır ve dışlayıcı eylemlerle kendini gösterir. Stereotipileri destekleyen ve duygusal reaksiyon doğuran basamak değil, bunların davranışsal sonucudur; destekleme işlevi önyargıya aittir."
+     },
+     "s": 11,
+     "id": "k2-44-q21"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Önyargılar sonucu hastalara karşı oluşan duygular genellikle aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Utanma ve yetersizlik duyguları",
+      "B": "Öfke ve korku",
+      "C": "Sorumluluk ve yardımseverlik",
+      "D": "Moral bozukluğu ve benlik saygısında azalma",
+      "E": "Umut ve tedaviye inanç"
+     },
+     "dogru": "B",
+     "aciklama": "Önyargılar sonucu hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır.",
+     "sik_aciklamalari": {
+      "A": "Utanma ve yetersizlik duyguları, içselleştirilmiş damgalamada kişinin kendi hakkında yaşadığı duygulardır. Önyargılı toplumun hastalara karşı hissettiği duygu öfke ve korkudur.",
+      "B": "Önyargılar sonucu hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır. Bu duygular dışlama ve kaçınma davranışının zeminini oluşturur.",
+      "C": "Yardımseverlik, damgalamanın üçüncü etkenidir ve hastaların çocuk gibi görülmesine dayanır. Önyargının hastalara karşı oluşturduğu duygular ise öfke ve korkudur; etken ile duygu birbirinden ayrılmalıdır.",
+      "D": "Moral bozukluğu ve benlik saygısında azalma, damgalanan bireyin yaşadığı sonuçlardır. Önyargının hastalara yönelik oluşturduğu duygu ise öfke ve korkudur; sonuçlar ile duygular karıştırılmamalıdır.",
+      "E": "Umut ve tedaviye inanç, iletişim temelli müdahalelerin artırmayı hedeflediği unsurlardır. Hastalara yönelik önyargının doğurduğu duygular değil, müdahale sonucunda kazanılması istenen olumlu bir durumdur."
+     },
+     "s": 11,
+     "id": "k2-44-q22"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Önyargıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Stereotipileri destekler",
+      "B": "Genellikle öfke ve korku gibi duygulara yol açar",
+      "C": "Stereotipileri zayıflatır ve duygusal tepkiyi ortadan kaldırır",
+      "D": "Davranışsal tepki olarak ayrıma neden olabilir",
+      "E": "Önyargılı kişi olumsuz basmakalıbı onaylar"
+     },
+     "dogru": "C",
+     "aciklama": "Önyargılar stereotipileri zayıflatmaz, destekler ve farklı duygusal reaksiyonlara yol açar.",
+     "sik_aciklamalari": {
+      "A": "Önyargılar stereotipileri destekler; toplumun ortak görüşü, önyargılı kişinin duygusal tepkisiyle pekişir. Bu cümle doğru olduğundan doğru değil denilen seçenek olamaz.",
+      "B": "Önyargılar sonucu hastalara karşı oluşan duygular genellikle öfke ve korku gibi olumsuz duygulardır. Cümle bu duyguları doğru verir ve aranan yanlış seçenek değildir.",
+      "C": "Önyargılar stereotipileri zayıflatmaz, destekler ve farklı duygusal reaksiyonlara yol açar. Duygusal tepkiyi ortadan kaldırdığı iddiası bilgiyle çelişir, bu yüzden doğru değildir.",
+      "D": "Önyargı, davranışsal tepki olarak ayrıma neden olur; kişi duygusal tepkisini dışlayıcı eyleme taşır. Cümle doğru olduğundan doğru değil denilen seçenek sayılmaz.",
+      "E": "Önyargılı insanlar olumsuz basmakalıpları onaylar; ruhsal hastalıklı bütün insanların saldırgan olduğuna inanmak buna örnektir. Cümle doğrudur ve bu soruda aranan seçenek değildir."
+     },
+     "s": 11,
+     "uslup": "hoca",
+     "id": "k2-44-q23"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi damgalama sürecinin bileşenlerinden biridir ve damgalamada tanımlanan üç etkenden biri değildir?",
+     "secenekler": {
+      "A": "Kendini damgalama",
+      "B": "Yardımseverlik",
+      "C": "Otoriterlik",
+      "D": "Önyargı",
+      "E": "Korku ve dışarıda bırakma"
+     },
+     "dogru": "D",
+     "aciklama": "Önyargı, stereotipileri destekleyerek damgalama sürecinin bileşenlerinden biridir; damgalamada tanımlanan etkenler ise korku ve dışarıda bırakma, otoriterlik ve yardımseverliktir.",
+     "sik_aciklamalari": {
+      "A": "Kendini damgalama etken değildir, ancak ayrımcılığın üç düzeyinden biri olarak sayılır. Damgalama sürecinin bileşenleri stereotipi, önyargı, ayrımcılık ve tutum olarak anlatıldığı için kendini damgalama bileşen koşulunu karşılamaz.",
+      "B": "Yardımseverlik, şiddetli ruhsal hastalığı olan bireylerin çocuk gibi olduğu ve bakıma ihtiyaç duyduğu inancına dayanan üçüncü etkendir. Etken olduğu için etken olmayan kavramı arayan soruda doğru seçenek değildir.",
+      "C": "Otoriterlik, ruhsal hastalıklı bireylerin sorumsuz sayılıp kararların diğerleri tarafından verilmesi gerektiği inancına dayanan etkendir. Damgalamanın üç etkeninden biri olduğu için etken olmayan kavramı arayan soruda yanlış bir seçenektir.",
+      "D": "Önyargı, stereotipileri destekleyerek damgalama sürecinin bir bileşenidir ve etkenler arasında bulunmaz. Etkenler korku ve dışarıda bırakma, otoriterlik ve yardımseverliktir; önyargı bunlardan ayrı bir bileşendir.",
+      "E": "Korku ve dışarıda bırakma, damgalamanın üç etkeninden ilkidir. Ruhsal hastalıklı bireylerden korkulması ve toplumun dışında tutulması gerektiği inancını içerir. Etken olduğu için etken olmayan kavramı arayan soruda cevap sayılmaz."
+     },
+     "s": 11,
+     "id": "k2-44-q24"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Ayrımcılığı tanımlar ve ruhsal hastalığı olan kişide görünümünü açıklar (s. 12).",
+   "sorular": [
+    {
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Değerlendirilen durum sonucu ortaya çıkan bilişsel ve duygusal yanıtların davranışa yansıması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Öz damgalama",
+      "B": "Tutum",
+      "C": "Stereotipi",
+      "D": "Önyargı",
+      "E": "Ayrımcılık"
+     },
+     "dogru": "E",
+     "aciklama": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır.",
+     "sik_aciklamalari": {
+      "A": "Öz damgalama, damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir ve kişinin kendisine yönelik inancını anlatır. Değerlendirilen durumun davranışa yansımasını değil, benimsenmiş inancı kapsar; davranışa yansıma ayrımcılığın tanımıdır.",
+      "B": "Tutum, reaksiyonlar ve dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır ve büyüdüğü çevreye uygun şekillenir. Davranışa yansıyan yanıtı değil, kişinin genel bakışını anlatır; davranışa dönüşen yanıtın adı ayrımcılıktır.",
+      "C": "Stereotipi, toplumun ortak görüşünü temsil eden bilişsel yapıdır ve hasta kişiyi algılarken zihinde hazır bekler. Davranışa yansıma aşamasını değil, düşünce düzeyini anlatır; davranışa yansıma ayrımcılığın tanımıdır.",
+      "D": "Önyargı, stereotipileri destekleyen duygusal reaksiyondur ve öfke ile korku gibi olumsuz duygulara yol açar. Davranışa yansıma değil, duygusal basamaktır; ayrımcılık bu basamağın davranışa dönüşmüş halidir.",
+      "E": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır. Ruhsal hastalığı olan kişi için bu davranış dışlayıcı davranışlar biçiminde ortaya çıkar ve soruda tanımlanan kavram odur."
+     },
+     "s": 12,
+     "id": "k2-44-q25"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Ayrımcılıkla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Önyargılı davranışların sonucu olarak görülebilir",
+      "B": "Negatif stereotipilere sahip olma sonucunda da ortaya çıkabilir",
+      "C": "Ruhsal hastalığı olan kişi için dışlayıcı davranışlar biçiminde görülür",
+      "D": "Yalnızca önyargılı davranışların sonucunda ortaya çıkar",
+      "E": "Bilişsel ve duygusal yanıtların davranışa yansımasıdır"
+     },
+     "dogru": "D",
+     "aciklama": "Ayrımcılık, önyargılı davranışların sonucu olabileceği gibi bireyin negatif stereotipilere sahip olması sonucu da ortaya çıkabilir.",
+     "sik_aciklamalari": {
+      "A": "Önyargılı davranışların sonucunda ayrımcılık görülebilir; duygusal tepki dışlayıcı eylemle sonuçlandığında ayrımcılık ortaya çıkar. Ayrımcılığın bir kaynağını doğru belirttiği için bu cümle yanlış ifade değildir.",
+      "B": "Ayrımcılık, bireyin negatif stereotipilere sahip olması sonucu da ortaya çıkabilir. Yani önyargıdan geçmeden de olumsuz kalıp yargı davranışa dönüşebilir; cümle doğrudur.",
+      "C": "Ruhsal olarak hasta bir kişi için bu davranış ayrımcılık ve dışlayıcı davranışlardır; kişi toplum içinde uzaklaştırılır. Tanım doğru verildiği için yanlış ifadeyi arayan soruda doğru seçenek olmaz.",
+      "D": "Ayrımcılık, önyargılı davranışların sonucu olabileceği gibi bireyin negatif stereotipilere sahip olması sonucu da ortaya çıkabilir. Yalnızca önyargıya bağlama iddiası bu yüzden yanlıştır.",
+      "E": "Ayrımcılık, değerlendirilen durum sonucu ortaya çıkan bilişsel ve duygusal yanıtların davranışa yansımasıdır. Düşünce ve duygunun eyleme dönüşmüş hali olduğu için bu tanım doğrudur ve yanlış seçenek değildir."
+     },
+     "s": 12,
+     "uslup": "hoca",
+     "id": "k2-44-q26"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Psikotik bozukluk tanılı 26 yaşındaki bir kişinin iş başvurusunu, işveren 'hepsi beni ürkütür' diyerek reddediyor. İşverenin bu davranışı aşağıdakilerden hangisine örnektir?",
+     "secenekler": {
+      "A": "Yapısal ayrımcılık",
+      "B": "Stereotipi",
+      "C": "Önyargı",
+      "D": "İçselleştirilmiş damgalama",
+      "E": "Ayrımcılık"
+     },
+     "dogru": "E",
+     "aciklama": "İşverenin başvuruyu reddetmesi, olumsuz yargı ve duygunun davranışa yansımasıdır.",
+     "sik_aciklamalari": {
+      "A": "Yapısal ayrımcılık, toplumsal kurallar ve düzenlemelerin sistematik biçimde ruhsal hastalığı olanları sıkıntıya sokmasıdır. Vakadaki davranış tek bir işverenin bireysel tepkisidir.",
+      "B": "Stereotipi, toplumun ortak görüşünü temsil eden düşünce yapısıdır. İşverenin başvuruyu reddetme eylemi bir düşünce değil, davranıştır; bu nedenle ayrımcılık kavramına girer.",
+      "C": "Önyargı, olumsuz basmakalıbın onaylanması ve olumsuz duygusal tepkidir. İşverenin ürkme duygusu önyargıyı gösterir; başvurunun reddedilmesi ise davranışa dönüşen basamak olan ayrımcılıktır.",
+      "D": "İçselleştirilmiş damgalama, kişinin damgalayıcı görüşleri kendi hakkında benimsemesidir. Vakada işveren damgalayıcı görüşü başka bir kişiye uyguluyor; bu nedenle tablo öz damgalama değildir.",
+      "E": "İşverenin başvuruyu reddetmesi, olumsuz yargı ve duygunun davranışa yansımasıdır. Ruhsal hastalıklı bireyi çevresinde istememe ve dışlama bu kavramın tipik görünümüdür."
+     },
+     "s": 12,
+     "uslup": "hoca",
+     "id": "k2-44-q27"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Tutumu tanımlar ve toplumun ruhsal bozukluğa yönelik tutumunu açıklar (s. 13).",
+   "sorular": [
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Kişideki duygusal reaksiyonlar ile dünya görüşünün bütünleşmesiyle oluşan bakış açısına ne ad verilir?",
+     "secenekler": {
+      "A": "Önyargı",
+      "B": "Tutum",
+      "C": "Stereotipi",
+      "D": "Öz damgalama",
+      "E": "Ayrımcılık"
+     },
+     "dogru": "B",
+     "aciklama": "Tutum, kişilerin yaşama bakış açısıdır ve duygusal reaksiyonlar ile dünya görüşünün bütünleşmesiyle oluşur.",
+     "sik_aciklamalari": {
+      "A": "Önyargı, stereotipileri destekleyen duygusal tepkidir ve öfke ile korkuya yol açar. Bakış açısının bütünleşmiş halini değil, duygusal bir parçasını anlatır; reaksiyonlarla dünya görüşünün bütünleşmesinin adı tutumdur.",
+      "B": "Tutum, kişilerin yaşama bakış açısıdır ve duygusal reaksiyonlar ile dünya görüşünün bütünleşmesiyle oluşur. Büyüdüğü çevredeki topluma uygun şekillenir ve soruda tanımlanan kavram budur.",
+      "C": "Stereotipi, toplumun ortak görüşünü temsil eden bilgi yapısıdır ve toplumun önceden hemfikir olduğu bir düşünceyi anlatır. Kişinin reaksiyonlarıyla dünya görüşünün bütünleşmesinden doğan bakış açısını adlandırmaz.",
+      "D": "Öz damgalama, damgalayıcı görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir. Kişinin genel bakış açısını tanımlamaz; yalnızca kendisine yönelik damgalayıcı inancı kapsar.",
+      "E": "Ayrımcılık, bilişsel ve duygusal yanıtların davranışa yansımasıdır ve dışlayıcı eylemlerde görülür. Bütünleşmiş bakış açısını değil, davranış düzeyini anlatır; bakış açısının adı tutumdur."
+     },
+     "s": 13,
+     "id": "k2-44-q28"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Tutumla ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "İnsanlar ruhsal bozukluğu olan bireylere yönelik genellikle pozitif tutumlara sahiptir",
+      "B": "Kişilerin yaşama bakış açısı büyüdüğü çevredeki topluma uygun şekillenir",
+      "C": "Kişinin olaylar karşısında verdiği duygusal reaksiyonlarını etkiler",
+      "D": "Reaksiyonların ve dünya görüşünün bütünleşmesiyle oluşur",
+      "E": "Reaksiyonlar bazen pozitif, bazen negatif olur"
+     },
+     "dogru": "A",
+     "aciklama": "İnsanlar ruhsal bozukluğu olan bireylere yönelik genellikle negatif tutumlara sahiptir.",
+     "sik_aciklamalari": {
+      "A": "İnsanlar ruhsal bozukluğu olan bireylere yönelik genellikle negatif tutumlara sahiptir. Pozitif tutum iddiası bu bilgiyi tersine çevirdiği için söylenemeyecek ifadedir.",
+      "B": "Yaşama bakış açısı kişinin büyüdüğü çevredeki topluma uygun olarak şekillenir. Tutumun toplumsal kökenini anlatan bu cümle doğrudur ve söylenemez denilen seçenek değildir.",
+      "C": "Bakış açısı kişinin olaylar karşısında verdiği duygusal reaksiyonları da etkiler. Tutum ile duygu arasındaki bu bağ doğru verilmiştir ve ifade söylenemez değildir.",
+      "D": "Tutum, reaksiyonlar ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır ve kişinin olaylar karşısındaki tepkisini etkiler. Tanım doğru verildiği için söylenemeyecek ifade değildir.",
+      "E": "Kişideki reaksiyonlar bazen pozitif bazen negatif olabilir ve tutumun yönü buna göre belirlenir. Bu cümle doğru verildiği için söylenemez denilen seçenek olmaz."
+     },
+     "s": 13,
+     "uslup": "hoca",
+     "id": "k2-44-q29"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Ayrımcılığın üç düzeyini sayar (s. 14).",
+   "sorular": [
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Çalışmalarda tanımlanan ayrımcılık düzeylerinin sayısı kaçtır?",
+     "secenekler": {
+      "A": "Altı",
+      "B": "Beş",
+      "C": "Üç",
+      "D": "İki",
+      "E": "Dört"
+     },
+     "dogru": "C",
+     "aciklama": "Çalışmalarda ayrımcılığın üç düzeyi tanımlanmıştır: bireysel, toplumsal/yapısal ve kendini damgalama.",
+     "sik_aciklamalari": {
+      "A": "Altı düzeyli bir sınıflama anlatılmaz. Çalışmalarda ayrımcılığın düzeyleri üç başlık halinde sayılır: bireysel, toplumsal/yapısal ve kendini damgalama; bu yüzden altı sayısı yanlıştır.",
+      "B": "Beş sayısı damgalanmaya maruz kalan en yaygın tanı gruplarının sayısıdır: psikotik, bipolar, depresif, anksiyete ve madde kullanım bozuklukları. Ayrımcılık düzeylerinin sayısı değildir.",
+      "C": "Çalışmalarda ayrımcılığın üç düzeyi tanımlanmıştır: bireysel, toplumsal/yapısal ve kendini damgalama. Doğru sayı üçtür ve diğer seçenekler başka başlıkların sayısını verir.",
+      "D": "İki sayısı damgalayıcı tutumu değiştirmek için öne çıkan koşulların sayısıdır: eğitim ve iletişim. Ayrımcılığın düzeyleri ise iki değil üç tanedir, bu yüzden seçenek elenir.",
+      "E": "Dört sayısı damgalama sürecini oluşturan kavramların sayısıdır: stereotipi, önyargı, ayrımcılık ve tutum. Ayrımcılığın düzeyleri bunlardan ayrıdır ve üç tanedir, bu yüzden seçenek elenir."
+     },
+     "s": 14,
+     "id": "k2-44-q30"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Çalışmalarda tanımlanan ayrımcılık düzeyleri aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Toplumsal/yapısal, önyargı, kendini damgalama",
+      "B": "Bireysel, stereotipi, kendini damgalama",
+      "C": "Bireysel, toplumsal/yapısal, kendini damgalama, tutum",
+      "D": "Bireysel, toplumsal/yapısal, kendini damgalama",
+      "E": "Bireysel, toplumsal/yapısal, önyargı"
+     },
+     "dogru": "D",
+     "aciklama": "Ayrımcılığın üç düzeyi bireysel, toplumsal/yapısal ve kendini damgalamadır.",
+     "sik_aciklamalari": {
+      "A": "Önyargı ayrımcılığın düzeylerinden biri değildir; stereotipileri destekleyen duygusal tepkidir. Üçlüde önyargının yerine bireysel düzey gelmelidir, bu yüzden seçenek düzeyleri yanlış sıralar.",
+      "B": "Stereotipi ayrımcılığın bir düzeyi değil, toplumun ortak görüşünü temsil eden bilişsel yapıdır. Doğru üçlüde ortadaki düzey toplumsal/yapısal olandır; bu seçenek onu stereotipiyle değiştirir.",
+      "C": "Tutum ayrımcılığın düzeylerinden biri değildir; kişinin reaksiyonları ile dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır. Bu seçenek üç düzeye dördüncü bir öğe ekler.",
+      "D": "Ayrımcılığın üç düzeyi bireysel, toplumsal/yapısal ve kendini damgalamadır. Her biri ayrımcılığın farklı bir odak noktasını gösterir; seçenek bu üçlüyü eksiksiz verir.",
+      "E": "Önyargı bir düzey adı değildir; stereotipileri destekleyen duygusal tepkiyi anlatır. Üçüncü düzey kendini damgalamadır ve seçenek onu atlayarak yanlış bir üçlü kurar."
+     },
+     "s": 14,
+     "id": "k2-44-q31"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Toplumsal damgalamada öne çıkan stereotipileri ve tarihsel bağlamı açıklar (s. 15).",
+   "sorular": [
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik bozukluğun türüne göre inançlar değişse de toplumsal tutumlarda hangi stereotipler dikkat çeker?",
+     "secenekler": {
+      "A": "Acı çekmeme ve normal yaşama dönememe",
+      "B": "Sorumsuzluk ve çocuksuluk",
+      "C": "Tehlikelilik ve zayıflık",
+      "D": "Düşük iş seviyesi ve sorumlu pozisyona uygunsuzluk",
+      "E": "Gerçek hastalık olmama ve kendi hatasından hastalanma"
+     },
+     "dogru": "C",
+     "aciklama": "Toplumun inanç ve yargıları bozukluğun türüne ve niteliğine göre değişse de toplumsal tutumlarda tehlikelilik ve zayıflık stereotipleri dikkat çeker.",
+     "sik_aciklamalari": {
+      "A": "Acı çekmeme ve normal yaşama dönememe, toplumdaki yaygın olumsuz inanışlar arasındadır. Toplumsal tutumlar çerçevesinde dikkat çeken stereotipiler ise tehlikelilik ve zayıflıktır.",
+      "B": "Sorumsuzluk ve çocuk gibi görme, damgalamanın etkenlerinde yer alan inançlardır. Toplumsal tutumlarda öne çıkan stereotipiler ise tehlikelilik ve zayıflıktır; etkenlerle stereotipiler ayrı düzeylerdir.",
+      "C": "Toplumun inanç ve yargıları bozukluğun türüne ve niteliğine göre değişse de toplumsal tutumlarda tehlikelilik ve zayıflık stereotipleri dikkat çeker. Bu iki imge hemen her bozukluk için tekrar eder.",
+      "D": "Düşük iş seviyesi ve sorumlu pozisyona uygunsuzluk, iyileşenlerin iş yaşamına dair yaygın olumsuz düşüncelerdir. Toplumsal tutumlarda dikkat çeken stereotipiler ise tehlikelilik ve zayıflıktır.",
+      "E": "Gerçek hastalık olmama ve kendi hatasından hastalanma, yaygın olumsuz inanışlardandır ve toplumda ruhsal hastalığa bakışı yansıtır. Toplumsal tutumlar çerçevesinde dikkat çeken stereotipiler ise tehlikelilik ve zayıflıktır."
+     },
+     "s": 15,
+     "id": "k2-44-q32"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Damgalamanın toplumsal boyutuyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Toplumsal tutumlar tarihsel olarak doğru bilgi ve inançlarla şekillenmiştir",
+      "B": "Yanlış bilgi ve inançlar toplumsal tutumları şekillendirir",
+      "C": "Tehlikelilik ve zayıflık stereotipleri dikkat çeker",
+      "D": "İnançlar bozukluğun türüne ve niteliğine göre değişebilir",
+      "E": "Cüzzam tanrının insana verdiği bir kötülük olarak görülmüştür"
+     },
+     "dogru": "A",
+     "aciklama": "Damgalama tarihsel bağlamda incelendiğinde toplumsal tutumları yanlış bilgi ve inançların şekillendirdiği görülür.",
+     "sik_aciklamalari": {
+      "A": "Damgalama tarihsel bağlamda incelendiğinde toplumsal tutumları yanlış bilgi ve inançların şekillendirdiği görülür. Doğru bilgiye dayanıldığını söyleyen ifade bunun tersini söylediği için yanlıştır.",
+      "B": "Yanlış bilgi ve inançların toplumsal tutumları şekillendirdiği görülür; yanlış bilgi damgalamanın tarihsel zeminidir. İfade doğru olduğu için yanlış seçenek değildir.",
+      "C": "Toplumsal tutumlar çerçevesinde tehlikelilik ve zayıflık stereotipleri dikkat çeker. Bu stereotipler bozukluğun türü değişse de öne çıkar; ifade doğrudur ve yanlış seçenek değildir.",
+      "D": "Toplumun inanç ve yargıları psikiyatrik bozukluğun türüne ve niteliğine göre değişebilir. Bu değişkenlik bilgisi doğrudur; ifade yanlış seçenek olarak aranmaz.",
+      "E": "Cüzzam, tarihsel olarak tanrının insana verdiği bir kötülük sayılmıştır ve ilk damgalanan hastalıklardandır. Bilgi doğrudur ve yanlış ifade olarak aranmaz."
+     },
+     "s": 15,
+     "uslup": "hoca",
+     "id": "k2-44-q33"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Toplumdaki yaygın olumsuz inanışları sayar (s. 16).",
+   "sorular": [
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi toplumda ruhsal hastalıklara yönelik yaygın olumsuz inanışlardan biri değildir?",
+     "secenekler": {
+      "A": "Ruh hastaları kurumlarda kilitli tutulmalıdır",
+      "B": "Bozukluklarına rağmen daha tatmin edici bir yaşam sürülebilir",
+      "C": "Ruh hastaları tehlikelidir",
+      "D": "Ruhsal bozukluğu olan kişiler kendi hataları nedeniyle hastalanır",
+      "E": "Ruh hastası olan birey asla normal yaşamına dönemez"
+     },
+     "dogru": "B",
+     "aciklama": "Bozukluğuna rağmen daha tatmin edici bir yaşam sürülebileceği, iletişim temelli müdahalelerin deneyimle göstermeyi amaçladığı bilgidir.",
+     "sik_aciklamalari": {
+      "A": "Ruh hastalarının kurumlarda kilitli tutulması gerektiği, toplumda yaygın olumsuz inanışlardandır ve dışlamayı meşrulaştırır. Olumsuz bir inanış olduğu için olumsuz olmayan seçeneği arayan soruda yanlış bir seçenektir.",
+      "B": "Bozukluğuna rağmen daha tatmin edici bir yaşam sürülebileceği, iletişim temelli müdahalelerin deneyimle göstermeyi amaçladığı bilgidir. Olumsuz bir inanış olmadığı için aranan seçenek budur.",
+      "C": "Ruh hastalarının tehlikeli olduğu, toplumdaki yaygın olumsuz inanışlardandır ve korkuyu besleyen temel görüştür. Olumsuz inanış olduğu için olumsuz olmayan seçeneği arayan soruda yanlış bir seçenektir.",
+      "D": "Ruhsal bozukluğu olan kişilerin kendi hataları nedeniyle hastalandığı, yaygın olumsuz inanışlardandır ve hastayı suçlayıcı bir yargıdır. Olumsuz inanış olduğu için aranan seçenek değildir.",
+      "E": "Ruh hastası olan bireyin asla normal yaşamına dönemeyeceği, toplumdaki yaygın olumsuz inanışlardandır ve iyileşme olasılığını yok sayar. Olumsuz inanış olduğundan aranan seçenek değildir."
+     },
+     "s": 16,
+     "uslup": "hoca",
+     "id": "k2-44-q34"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Araştırmalara göre toplumda ruhsal hastalıklara yönelik yaygın olumsuz inanışlardan biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tutum çevredeki topluma uygun şekillenir",
+      "B": "Damgalanma aşamalar halinde gerçekleşir",
+      "C": "Temas ve eğitim programları öz damgalamayı azaltır",
+      "D": "Eğitim, mitleri doğru kavramlarla değiştirir",
+      "E": "Ruhsal bozukluğu olan birey ve gençler acı çekmezler"
+     },
+     "dogru": "E",
+     "aciklama": "Ruhsal bozukluğu olan birey ve gençlerin acı çekmediği, toplumda yaygın olumsuz inanışlardan biridir.",
+     "sik_aciklamalari": {
+      "A": "Tutumun çevredeki topluma uygun şekillenmesi, tutumun oluşumunu açıklayan bir bilgidir. Olumsuz bir inanış değildir ve yaygın olumsuz inanışlar listesinde bulunmaz.",
+      "B": "Damgalanmanın sistematik olarak aşamalar halinde gerçekleşmesi bir süreç tanımıdır ve basmakalıplaşmayla sonuçlanır. Toplumda ruhsal hastalığa yönelik yaygın olumsuz inanışlar sıralamasının bir maddesi değildir.",
+      "C": "Temas ve eğitim programlarının öz damgalamayı azalttığı ifadesi müdahale programlarının etkisini anlatır. Toplumdaki yaygın olumsuz inanışlar listesinde bulunmaz; bir inanış değil, bir müdahale bilgisidir.",
+      "D": "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek tutumu değiştirmeyi amaçlayan bir koşuldur. Olumsuz bir inanış değil, bir müdahale yaklaşımıdır.",
+      "E": "Ruhsal bozukluğu olan birey ve gençlerin acı çekmediği, toplumda yaygın olumsuz inanışlardan biridir. Acı çekmeyi yok saymak damgalayıcı bir yargıdır."
+     },
+     "s": 16,
+     "id": "k2-44-q35"
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Yapısal ayrımcılığı tanımlar ve yönetsel örneklerini bilir (s. 17).",
+   "sorular": [
+    {
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasına ne ad verilir?",
+     "secenekler": {
+      "A": "Kendini damgalama",
+      "B": "Önyargı",
+      "C": "Bireysel ayrımcılık",
+      "D": "Yapısal ayrımcılık",
+      "E": "Stereotipi"
+     },
+     "dogru": "D",
+     "aciklama": "Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasına yapısal ayrımcılık denir.",
+     "sik_aciklamalari": {
+      "A": "Kendini damgalama, damgalayıcı görüşlerin kişi tarafından benimsenmesidir ve ayrımcılığın üçüncü düzeyidir. Kuralların ve düzenlemelerin oluşturduğu sistematik sıkıntıyı anlatmaz; o tanım yapısal ayrımcılığa aittir.",
+      "B": "Önyargı, olumsuz duygusal tepkilere yol açan ve stereotipileri destekleyen bileşendir. Kural ve düzenlemelerle ilgili değildir; toplumsal kuralların sistematik etkisi yapısal ayrımcılıkla adlandırılır.",
+      "C": "Bireysel düzeydeki ayrımcılık, kişilerin tutum ve düşüncelerinin davranışa yansımasıdır. Toplumsal kural ve düzenlemelerin sistematik etkisini anlatmaz; o etki yapısal ayrımcılığın alanıdır.",
+      "D": "Toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olan bireyleri sistematik olarak sıkıntıya sokmasına yapısal ayrımcılık denir. Bütçeler, yönetmelikler ve sigorta kapsamı bu ayrımcılığın alanıdır.",
+      "E": "Stereotipi, toplumun ortak görüşünü temsil eden bilgi yapısıdır. Kural ve düzenlemelerin oluşturduğu sistematik ayrımcılığı adlandırmaz; bu işlev yapısal ayrımcılığa aittir."
+     },
+     "s": 17,
+     "id": "k2-44-q36"
+    },
+    {
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "41 yaşında psikotik bozukluk tanılı bir hastanın tedavi giderleri, hastalığı nedeniyle sağlık sigortası kapsamı dışında bırakılıyor. Bu durum aşağıdakilerden hangisine örnektir?",
+     "secenekler": {
+      "A": "Tutum",
+      "B": "Önyargı",
+      "C": "Yapısal ayrımcılık",
+      "D": "Stereotipi",
+      "E": "İçselleştirilmiş damgalama"
+     },
+     "dogru": "C",
+     "aciklama": "Ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması, yönetsel ayrımcılığın ve dolayısıyla yapısal ayrımcılığın örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Tutum, kişinin dünya görüşünden doğan bakış açısıdır. Kapsam dışı bırakma bireysel bakış açısı değil, düzenleme düzeyindeki bir uygulamadır ve yapısal ayrımcılık olarak adlandırılır.",
+      "B": "Önyargı, olumsuz basmakalıbın onaylanması ve olumsuz duygusal tepkidir. Sigorta kapsamı dışında bırakma duygusal bir tepki olmayıp düzenlemenin kendisidir ve yapısal ayrımcılıktır.",
+      "C": "Ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması, yönetsel ayrımcılığın ve dolayısıyla yapısal ayrımcılığın örneğidir. Ayrımcılık yalnız bireysel tutumların sonucu değildir; düzenlemeler de sistematik sıkıntı yaratır.",
+      "D": "Stereotipi, toplumun ortak düşünce yapısıdır ve davranış düzeyinde bir uygulamayı anlatmaz. Sigorta kapsamının daraltılması bir düşünce değil, kuralla uygulanan bir ayrımdır ve yapısal ayrımcılığa girer.",
+      "E": "İçselleştirilmiş damgalamada kişi damgalayıcı görüşleri kendi hakkında benimser. Vakadaki sorun kişinin kendi inancı değil, sigorta düzenlemesinin kendisidir; bu yüzden tablo öz damgalama değildir."
+     },
+     "s": 17,
+     "uslup": "hoca",
+     "id": "k2-44-q37"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "İçselleştirilmiş damgalamanın tanı sonrası görünümünü ve tanı gruplarını açıklar (s. 18).",
+   "sorular": [
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Ruhsal hastalığı olan kişiler açık bir ayrımcılığa uğramasalar bile tanı aldıktan sonra ne yaşar?",
+     "secenekler": {
+      "A": "Hastalığın şiddeti kendiliğinden azalır",
+      "B": "Kendilerini damgalanmış hisseder",
+      "C": "Tedaviye uyumu artar",
+      "D": "Kendilik değeri yükselir",
+      "E": "Sosyal ilişkileri genişler"
+     },
+     "dogru": "B",
+     "aciklama": "Açık ayrımcılık ya da kötü davranışa maruz kalınmasa bile tanı aldıktan sonra kişi kendini damgalanmış hisseder.",
+     "sik_aciklamalari": {
+      "A": "Hastalığın şiddeti ile içsel damgalanma arasında doğru orantı vardır ve damgalanma belirtileri azaltmaz. Tanı sonrasında beklenen durum hastalığın kendiliğinden hafiflemesi değil, kendini damgalanmış hissetmedir.",
+      "B": "Açık ayrımcılık ya da kötü davranışa maruz kalınmasa bile tanı aldıktan sonra kişi kendini damgalanmış hisseder. Utanma, yetersizlik duyguları ve sosyal ilişkilerden kaçınma bu tablonun parçalarıdır.",
+      "C": "Damgalanma psikiyatrik tedaviye uyumda azalmaya yol açar. Tanı sonrası uyum artışı beklenmez; kişi damgalanmış hissettiğinde tedaviden uzaklaşabilir, bu yüzden seçenek tabloya uymaz.",
+      "D": "İçselleştirilmiş damgalamada kendilik değerinde düşme ortaya çıkar. Yükselme bu tabloya aykırıdır; tanı sonrası kişi kendini değersiz ve yetersiz algılamaya başlar.",
+      "E": "Damgalanmış hisseden bireyde sosyal ilişkilerden kaçınma ortaya çıkar. Sosyal çevrenin genişlemesi beklenmez; tersine çevre daralır, bu yüzden seçenek tabloya uymaz."
+     },
+     "s": 18,
+     "id": "k2-44-q38"
+    },
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Kullanılan psikiyatrik tanının damgalayıcı içeriği arttıkça aşağıdakilerden hangisi görülür?",
+     "secenekler": {
+      "A": "Belirtilerin şiddeti artar",
+      "B": "Sosyal ilişkilere katılım artar",
+      "C": "Tedaviye uyum artar",
+      "D": "Belirtilerin şiddeti azalır",
+      "E": "Kendilik değeri yükselir"
+     },
+     "dogru": "A",
+     "aciklama": "Psikiyatrik tanının damgalayıcı içeriği ne kadar fazlaysa belirtilerin şiddeti de o kadar artar.",
+     "sik_aciklamalari": {
+      "A": "Psikiyatrik tanının damgalayıcı içeriği ne kadar fazlaysa belirtilerin şiddeti de o kadar artar. Damgalayıcı tanı, içselleştirilmiş damgalamayı güçlendirerek tabloyu ağırlaştırır.",
+      "B": "İçselleştirilmiş damgalamada kişi sosyal ilişkilerden kaçınır ve çevresiyle bağını zayıflatır. Katılımın artması bu bilgiyle uyumsuzdur; damgalayıcı içerik arttıkça kişinin çevreden çekilmesi de artar.",
+      "C": "Damgalanma tedaviye uyumda azalma getirir. Damgalayıcı tanı arttıkça uyumun artması beklenmez; kişi tanıdan utanıp tedaviden kaçınabilir ve bu yüzden seçenek yanlıştır.",
+      "D": "Damgalayıcı içerik arttıkça belirtiler hafiflemez, ağırlaşır ve tablo kötüleşir. Seçenek ilişkinin yönünü yanlış verir; tanının damgalayıcı niteliği öz damgalamayı güçlendirerek tabloyu kötüleştirir.",
+      "E": "Damgalayıcı içerik arttıkça kendilik değeri düşer ve kişi kendini değersiz görür. Yükselme iddiası ilişkinin tersidir; damgalayıcı tanı kişinin kendini daha değersiz görmesine neden olur."
+     },
+     "s": 18,
+     "id": "k2-44-q39"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "İçselleştirilmiş damgalamayı (öz damgalamayı) tanımlar ve içerdiği inançları sayar (s. 19).",
+   "sorular": [
+    {
+     "kazanim": 18,
+     "zorluk": "kolay",
+     "soru": "Kişinin olumsuz kalıp yargıları benimseyerek kendisini yetersiz ve tehlikeli görmesi aşağıdakilerden hangisini tanımlar?",
+     "secenekler": {
+      "A": "Tutum",
+      "B": "Yapısal ayrımcılık",
+      "C": "Stereotipi",
+      "D": "Önyargı",
+      "E": "İçselleştirilmiş damgalama"
+     },
+     "dogru": "E",
+     "aciklama": "İçselleştirilmiş damgalama ya da öz damgalama, genel halkın inandığı tehlikelilik ve yetersizlik gibi görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir.",
+     "sik_aciklamalari": {
+      "A": "Tutum, reaksiyonlar ve dünya görüşünün bütünleşmesiyle oluşan bakış açısıdır. Kendini yetersiz ve tehlikeli görme durumunu özel olarak adlandırmaz; bunun adı içselleştirilmiş damgalamadır.",
+      "B": "Yapısal ayrımcılık, toplumsal kurallar ve düzenlemelerin ruhsal hastalığı olanlar için sistematik sıkıntı oluşturmasıdır. Kişinin kendi hakkındaki inancını anlatmaz; o inanç içselleştirilmiş damgalamadır.",
+      "C": "Stereotipi, toplumun ortak görüşüdür ve kişi dışında oluşmuş bir düşünce yapısıdır. Kişinin bu görüşü benimseyip kendine uygulaması ise içselleştirilmiş damgalamadır; soruda anlatılan bu ikinci basamaktır.",
+      "D": "Önyargı, başkalarına yönelik olumsuz basmakalıpların onaylanması ve olumsuz duygusal tepkidir. Kişinin kendisini yetersiz ve tehlikeli görmesi başka bir kavramdır ve içselleştirilmiş damgalama adını taşır.",
+      "E": "İçselleştirilmiş damgalama ya da öz damgalama, genel halkın inandığı tehlikelilik ve yetersizlik gibi görüşlerin ruhsal hastalığı olan kişi tarafından benimsenmesidir. Kişi kendisini bu kalıp yargılara uyan biri olarak görür."
+     },
+     "s": 19,
+     "id": "k2-44-q40"
+    },
+    {
+     "kazanim": 18,
+     "zorluk": "zor",
+     "soru": "İçselleştirilmiş damgalamayla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Doğru olmayan ve uyum göstermeyen inançların içeriği olarak kavramlaştırılır",
+      "B": "Genel halkın inandığı tehlikelilik ve yetersizlik görüşlerinin benimsenmesidir",
+      "C": "Kişi başkaları için tehlikeli olduğuna inanabilir",
+      "D": "Damgalayıcı görüşler genel halk tarafından değil, kişinin kendisi tarafından üretilir",
+      "E": "Kişi kendi hayatını yönetmede yetersiz olduğuna inanabilir"
+     },
+     "dogru": "D",
+     "aciklama": "İçselleştirilmiş damgalamada genel halkın inandığı damgalayıcı görüşler ruhsal hastalığı olan kişi tarafından benimsenir.",
+     "sik_aciklamalari": {
+      "A": "İçselleştirilmiş damgalama, kişinin geliştirdiği ve tutunduğu doğru olmayan, uyum göstermeyen inançların içeriği olarak kavramlaştırılır. Tanım doğrudur ve yanlış seçenek olarak aranmaz.",
+      "B": "Öz damgalama, genel halkın inandığı tehlikelilik ve yetersizlik gibi görüşlerin kişi tarafından benimsenmesidir. Kaynağı halkın inancıdır ve ifade doğrudur; yanlış ifade arayan soruda cevap sayılmaz.",
+      "C": "Öz damgalamada kişinin geliştirdiği inançlardan biri başkaları için tehlikeli olduğudur. Bu doğru bir bilgidir ve yanlış ifade arayan soruda cevap olamaz.",
+      "D": "İçselleştirilmiş damgalamada genel halkın inandığı damgalayıcı görüşler ruhsal hastalığı olan kişi tarafından benimsenir. Görüşlerin kaynağı kişinin kendisi değildir, bu yüzden ifade yanlıştır.",
+      "E": "Öz damgalamada kişi kendi hayatını yönetmede yetersiz olduğuna inanır ve bu inanç içselleştirilmiş damgalamanın iki tipik içeriğinden biridir. İnanç doğru verilmiştir, bu yüzden yanlış ifade değildir."
+     },
+     "s": 19,
+     "uslup": "hoca",
+     "id": "k2-44-q41"
+    },
+    {
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "34 yaşında psikotik bozukluk tanılı bir erkek hasta 'başkaları için tehlikeliyim, kendi hayatımı yönetemem' diyerek insanlardan uzak duruyor. Bu tablo aşağıdakilerden hangisini gösterir?",
+     "secenekler": {
+      "A": "Önyargı",
+      "B": "İçselleştirilmiş damgalama",
+      "C": "Ayrımcılık",
+      "D": "Stereotipi",
+      "E": "Yapısal ayrımcılık"
+     },
+     "dogru": "B",
+     "aciklama": "Hasta, genel halkın inandığı tehlikelilik ve yetersizlik görüşlerini kendisi hakkında benimsemiştir.",
+     "sik_aciklamalari": {
+      "A": "Önyargı, olumsuz basmakalıpların onaylanması ve olumsuz duygusal tepkidir. Hastanın kendini tehlikeli ve yetersiz sanması bunun ötesinde, kişinin kendisine uyguladığı bir inançtır.",
+      "B": "Hasta, genel halkın inandığı tehlikelilik ve yetersizlik görüşlerini kendisi hakkında benimsemiştir. Başkaları için tehlikeli ve yaşamını yönetmede yetersiz olduğuna inanması öz damgalamanın iki tipik inancıdır.",
+      "C": "Ayrımcılık, yanıtların başkalarına yönelik dışlayıcı davranışa yansımasıdır. Vakadaki hasta kendi hakkında inanç geliştirmiştir, kimseye ayrım yapmamaktadır; bu nedenle tablo öz damgalamadır.",
+      "D": "Stereotipi, toplumun ortak düşüncesidir ve kişinin dışında bulunan bir görüşü anlatır. Vakada bu düşüncenin hasta tarafından benimsenmesi söz konusudur ve benimseme içselleştirilmiş damgalamayı oluşturur.",
+      "E": "Yapısal ayrımcılık, kural ve düzenlemelerle ilgilidir. Vakada bir düzenleme değil, hastanın kendine ilişkin inancı vardır; bu yüzden tablo içselleştirilmiş damgalamaya uyar."
+     },
+     "s": 19,
+     "uslup": "hoca",
+     "id": "k2-44-q42"
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Etiketlenmenin öz damgalamadaki rolünü ve basmakalıpların iletim yollarını açıklar (s. 20).",
+   "sorular": [
+    {
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Olumsuz şakalar, yorumlar ve medya betimlemelerine maruz kalma sürdükçe aşağıdakilerden hangisi artar?",
+     "secenekler": {
+      "A": "Stereotipinin pozitif türü",
+      "B": "Yapısal ayrımcılık",
+      "C": "Tedaviye uyum",
+      "D": "Kendilik değeri",
+      "E": "İçselleştirilmiş damgalama"
+     },
+     "dogru": "E",
+     "aciklama": "Kültürel basmakalıplara maruz kalma devam ettikçe içselleştirilmiş damgalama artar.",
+     "sik_aciklamalari": {
+      "A": "Stereotipiler pozitif ve negatif olarak gruplanır, ancak olumsuz şakalara maruz kalmanın artırdığı unsur bir stereotipi türü değil, kişinin damgalayıcı görüşleri içselleştirmesidir. Seçenek iki kavramı birbirine karıştırır.",
+      "B": "Yapısal ayrımcılık, bütçe, yönetmelik ve sigorta düzenlemeleriyle ilgilidir. Şaka ve medya betimlemeleri ise kişide öz damgalamayı artırır; iki kavram farklı düzeydedir.",
+      "C": "Damgalanma tedaviye uyumda azalma getirir. Olumsuz mesajlara maruz kalmanın artırdığı unsur uyum değil, öz damgalamadır; uyum aslında bu süreçte azalır.",
+      "D": "İçselleştirilmiş damgalamada kendilik değeri düşer. Maruziyetin artırdığı şey kendilik değeri değil, öz damgalamadır; kendilik değeri ise bu süreçte azalır ve seçenek ilişkinin yönünü yanlış verir.",
+      "E": "Kültürel basmakalıplara maruz kalma devam ettikçe içselleştirilmiş damgalama artar. Olumsuz şakalar, yorumlar ve medya betimlemeleri bu basmakalıpların iletildiği yollardır ve soruda aranan artış budur."
+     },
+     "s": 20,
+     "id": "k2-44-q43"
+    },
+    {
+     "kazanim": 19,
+     "zorluk": "zor",
+     "soru": "Etiketlenme ve öz damgalamayla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Üyelik isteyerek ya da istemeyerek benimsenebilir",
+      "B": "Kültürel basmakalıplar medya betimlemeleriyle iletilir",
+      "C": "Kişi yalnızca başkaları tarafından etiketlenirse kendisini hedef grubun üyesi sayar",
+      "D": "Basmakalıplara maruz kalma sürdükçe öz damgalama artar",
+      "E": "Kişi kendisi etiketlediğinde de hedef grubun üyesi sayar"
+     },
+     "dogru": "C",
+     "aciklama": "Kişi kendileri ya da diğerleri tarafından akıl hastası olarak etiketlendiğinde kendisini basmakalıpların hedefindeki grubun üyesi sayar.",
+     "sik_aciklamalari": {
+      "A": "Kişi, isteyerek ya da istemeyerek kendisini basmakalıpların hedefindeki grubun üyesi sayar. Etiketlenmeye verilen bu tepki doğru aktarılmıştır ve yanlış seçenek değildir.",
+      "B": "Kültürel basmakalıplar, olumsuz şakalar, yorumlar ve medya betimlemeleri yoluyla iletilir. Bu yollar toplumsal ortamdan kişiye ulaşır; cümle doğrudur ve yanlış ifade değildir.",
+      "C": "Kişi kendileri ya da diğerleri tarafından akıl hastası olarak etiketlendiğinde kendisini basmakalıpların hedefindeki grubun üyesi sayar. Yalnızca başkalarınca etiketlenmeyi şart koşan ifade yanlıştır.",
+      "D": "Kişi kültürel basmakalıplara maruz kalmaya devam ettiği sürece içselleştirilmiş damgalama artar. Süreklilik, benimsemeyi pekiştirir; cümle doğrudur ve yanlış seçenek olarak aranmaz.",
+      "E": "Kişi kendisi ya da diğerleri tarafından etiketlenebilir; etiketleyen kişinin kendisi olması da kişiyi hedef grubun üyesi yapar. Bilgi doğrudur ve yanlış ifade arayan soruda cevap sayılmaz."
+     },
+     "s": 20,
+     "uslup": "hoca",
+     "id": "k2-44-q44"
+    },
+    {
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Kültürel basmakalıpların kişiye iletildiği yollar arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Olumsuz şakalar, yorumlar ve medya betimlemeleri",
+      "B": "Sağlık sigortası kapsamına ilişkin düzenlemeler",
+      "C": "Psikiyatri bakım hizmetlerinin bütçe payları",
+      "D": "Tedaviye uyumun giderek azalması",
+      "E": "Mitleri düzelten eğitim programları"
+     },
+     "dogru": "A",
+     "aciklama": "Ruhsal hastalıklı kişiler hakkındaki olumsuz şakalar, yorumlar ve medya betimlemeleri kültürel basmakalıpların iletildiği yollardır.",
+     "sik_aciklamalari": {
+      "A": "Ruhsal hastalıklı kişiler hakkındaki olumsuz şakalar, yorumlar ve medya betimlemeleri kültürel basmakalıpların iletildiği yollardır. Bu yollardan maruziyet sürdükçe öz damgalama artar.",
+      "B": "Ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması, yapısal ayrımcılığın bir örneğidir. Basmakalıpların kişiye ulaştığı bir yol olarak değil, düzenleme düzeyinde bir ayrım olarak ele alınır.",
+      "C": "Psikiyatri bakım hizmetlerine ayrılan bütçeler, yönetsel ayrımcılığın örneğidir ve düzenleme düzeyindeki bir ayrımdır. Kişiye kültürel basmakalıp ileten bir yol değil, yapısal bir sorundur.",
+      "D": "Tedaviye uyum, damgalanmanın etkilediği bir sonuç ölçütüdür ve damgalanma arttıkça azalır. Basmakalıpların iletildiği bir yol değil, damgalanmanın sonunda değişen bir değişkendir.",
+      "E": "Eğitim programları, mitleri doğru kavramlarla değiştirerek damgalayıcı tutumu değiştirmeyi amaçlar. Basmakalıpları ileten bir yol değil, onları düzeltmeyi hedefleyen bir müdahaledir."
+     },
+     "s": 20,
+     "id": "k2-44-q45"
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "Damgalayıcı tutumu değiştirmede öne çıkan iki koşulu bilir (s. 21).",
+   "sorular": [
+    {
+     "kazanim": 20,
+     "zorluk": "kolay",
+     "soru": "Damgalayıcı tutumu değiştirmek için öne çıkan iki önemli koşul aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Önyargı ve tutum",
+      "B": "Eğitim ve etiketleme",
+      "C": "İletişim ve basmakalıplaşma",
+      "D": "Etiketleme ve yönetsel düzenleme",
+      "E": "Eğitim ve iletişim"
+     },
+     "dogru": "E",
+     "aciklama": "Damgalayıcı tutumu değiştirmek için öne çıkan iki koşul eğitim ve iletişimdir.",
+     "sik_aciklamalari": {
+      "A": "Önyargı ve tutum damgalamayı oluşturan kavramlardır; değiştirilmesi hedeflenen unsurlardır, değiştirmeye yarayan koşullar değildir. Öne çıkan koşullar eğitim ve iletişimdir, bu yüzden seçenek yanlıştır.",
+      "B": "Etiketlenme, öz damgalamayı artıran bir basamaktır; tutumu değiştiren bir koşul olamaz. İki koşuldan ilki eğitimdir ama ikincisi etiketleme değil iletişimdir.",
+      "C": "Basmakalıplaşma, damgalanma sürecinin zamanla ulaştığı sonuçtur ve tutumu değiştiren koşul değildir. İkinci koşul iletişimdir, fakat birinci koşul eğitimdir ve seçenek onu eksik bırakır.",
+      "D": "Etiketleme öz damgalamayı, yönetsel düzenleme yapısal ayrımcılığı ilgilendirir; ikisi de tutumu değiştirmek için öne çıkan koşul değildir. Koşullar eğitim ve iletişimdir.",
+      "E": "Damgalayıcı tutumu değiştirmek için öne çıkan iki koşul eğitim ve iletişimdir. Eğitim mitleri doğru kavramlarla değiştirmeyi, iletişim ise doğrudan etkileşimi hedefler."
+     },
+     "s": 21,
+     "id": "k2-44-q46"
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Eğitim ve iletişim yaklaşımlarının amaçlarını ayırt eder (s. 22).",
+   "sorular": [
+    {
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek toplumun damgalayıcı tutumunu değiştirmeyi amaçlayan yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Stereotipi",
+      "B": "Eğitim",
+      "C": "Yapısal ayrımcılık",
+      "D": "Etiketlenme",
+      "E": "İletişim"
+     },
+     "dogru": "B",
+     "aciklama": "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek toplumun damgalayıcı tutumunu değiştirmeyi amaçlar.",
+     "sik_aciklamalari": {
+      "A": "Stereotipi, toplumun ortak görüşüdür ve eğitimle değiştirilmek istenen unsurdur. Kendisi bir yaklaşım olmadığından mitleri doğru kavramlarla değiştirmeyi amaçlayan seçenek değildir.",
+      "B": "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirerek toplumun damgalayıcı tutumunu değiştirmeyi amaçlar. Bilgi yoluyla yanlış inançları hedefler ve soruda tarif edilen yaklaşım odur.",
+      "C": "Yapısal ayrımcılık, toplumsal kural ve düzenlemelerin ruhsal hastalığı olanları sıkıntıya sokmasıdır. Tutumu değiştirmeyi amaçlayan bir yaklaşım olamaz; değiştirilmesi gereken bir sorundur.",
+      "D": "Etiketlenme, kişinin akıl hastası olarak adlandırılmasıdır ve öz damgalamayı artırır. Tutumu değiştirmeyi amaçlayan bir yaklaşım değil, damgalamayı pekiştiren bir basamaktır.",
+      "E": "İletişim, tanı almış kişilerle doğrudan etkileşim kurarak damgalayıcı tutuma meydan okur. Mitleri doğru kavramlarla değiştirmek ise eğitimin işlevidir; bu yüzden tarif edilen yaklaşım iletişim değildir."
+     },
+     "s": 22,
+     "id": "k2-44-q48"
+    },
+    {
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "İletişim yaklaşımıyla ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Mitleri doğru kavramlarla değiştirerek tutumu değiştirmeyi amaçlar",
+      "B": "Damgalayıcı tutuma meydan okumayı amaçlar",
+      "C": "Kişilerarası etkileşim yoluyla tutumun değişmesine katkıda bulunur",
+      "D": "Tanı almış kişilerle doğrudan etkileşim kurmayı içerir",
+      "E": "Öne çıkan iki koşuldan ikincisidir"
+     },
+     "dogru": "A",
+     "aciklama": "Mitleri doğru kavramlarla değiştirmek eğitimin amacıdır.",
+     "sik_aciklamalari": {
+      "A": "Mitleri doğru kavramlarla değiştirmek eğitimin amacıdır. İletişim ise tanı almış kişilerle doğrudan etkileşim kurmayı amaçlar, bu yüzden ifade doğru değildir.",
+      "B": "İletişim, doğrudan etkileşimle damgalayıcı tutuma meydan okur ve eğitimin yanında öne çıkan ikinci koşuldur. Bu cümle iletişimin amacını doğru aktardığı için doğru olmayan ifade değildir.",
+      "C": "Kişilerarası etkileşim, toplumdaki damgalayıcı tutumun değişmesine katkıda bulunmuştur ve hastaların damgalanmış hissetmesini engellemiştir. Cümle iletişim yaklaşımının etkisini doğru aktarır, bu yüzden doğru olmayan ifade değildir.",
+      "D": "İletişim, psikiyatrik bozukluk tanısı almış kişilerle doğrudan etkileşim kurmayı amaçlar. Bu bilgi doğru verilmiştir ve doğru değil denilen seçenek olamaz.",
+      "E": "Öne çıkan iki koşuldan birincisi eğitim, ikincisi iletişimdir. Sıra doğru verilmiştir ve cümle bilgiyle uyumlu olduğu için doğru olmayan ifade değildir."
+     },
+     "s": 22,
+     "uslup": "hoca",
+     "id": "k2-44-q49"
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "İletişim temelli müdahalelerin etkisini ve temel amacını açıklar (s. 23).",
+   "sorular": [
+    {
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "İletişim temelli müdahalelerin temel amacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Basmakalıpları toplumda yaygınlaştırmak",
+      "B": "Psikiyatri bakım bütçelerini artırmak",
+      "C": "Hastaların kararlarının başkaları tarafından verilmesini sağlamak",
+      "D": "Bozukluğa rağmen daha tatmin edici bir yaşam sürülebileceğini deneyimle göstermek",
+      "E": "Hastaları toplumdan ayrı tutarak korumak"
+     },
+     "dogru": "D",
+     "aciklama": "İletişim temelli müdahalelerin temel amacı, kişilere bozukluklarına rağmen daha tatmin edici bir yaşam sürebileceklerini deneyim yoluyla göstermektir.",
+     "sik_aciklamalari": {
+      "A": "Basmakalıpların toplumda yaygınlaşması damgalamayı besler ve öz damgalamayı artırır. İletişim temelli müdahale ise damgalamayı azaltmayı hedefler, bu nedenle amacı bunun tersidir.",
+      "B": "Bütçelerin düzenlenmesi yönetsel ayrımcılık alanıdır ve toplumsal düzeydeki bir konudur. İletişim temelli müdahale kişilerarası etkileşimle çalışır; temel amacı hastalara deneyimle umut kazandırmaktır.",
+      "C": "Kararların başkalarınca verilmesi otoriterlik etkenidir ve damgalayıcı bir inançtır. Müdahalenin hedefi bu inancı pekiştirmek değil, değiştirmektir; bu nedenle amaç olamaz.",
+      "D": "İletişim temelli müdahalelerin temel amacı, kişilere bozukluklarına rağmen daha tatmin edici bir yaşam sürebileceklerini deneyim yoluyla göstermektir. Böylece hastaların tedaviye olan umut ve inançları artar.",
+      "E": "Toplumun dışında tutma, korku ve dışarıda bırakma etkenidir. İletişim temelli müdahalelerin hedefi bunun tersidir; deneyimle tatmin edici bir yaşamın mümkün olduğunu göstermeyi amaçlar."
+     },
+     "s": 23,
+     "id": "k2-44-q50"
+    },
+    {
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Psikotik bozukluk tanılı 38 yaşındaki bir hastanın, aynı tanıyı almış ve iyileşmiş kişilerle yüz yüze görüşmesi sağlanıyor. Bu müdahale hastada hangi sonucu hedefler?",
+     "secenekler": {
+      "A": "Yapısal ayrımcılığın bireysel düzeyde yeniden artması",
+      "B": "Kendilik değerinde belirgin bir düşme olması",
+      "C": "Damgalanmış hissetmenin azalması ve tedaviye umudun artması",
+      "D": "Sosyal ilişkilerden kaçınmanın daha da artması",
+      "E": "İçselleştirilmiş damgalamanın giderek artması"
+     },
+     "dogru": "C",
+     "aciklama": "Kişilerarası etkileşim, toplumdaki damgalayıcı tutumun değişmesine katkıda bulunur ve hastaların damgalanmış hissetmesini engeller.",
+     "sik_aciklamalari": {
+      "A": "İletişim temelli programlar yapısal damgalamanın etkilerini azaltır. Yapısal ayrımcılığın artması hedeflenen bir sonuç değildir; müdahalenin amacı bunun tersidir ve damgalanmanın azalmasıdır.",
+      "B": "Kendilik değerinde düşme öz damgalamanın bir sonucudur. Doğrudan etkileşime dayanan müdahalenin hedefi bu tabloyu azaltmaktır, yani hedeflenen sonuç düşüş değildir.",
+      "C": "Kişilerarası etkileşim, toplumdaki damgalayıcı tutumun değişmesine katkıda bulunur ve hastaların damgalanmış hissetmesini engeller. Amaç, bozukluğa rağmen tatmin edici yaşamın mümkün olduğunu deneyimle göstererek tedaviye umut ve inancı artırmaktır.",
+      "D": "Sosyal ilişkilerden kaçınma öz damgalamanın bir bulgusudur. Doğrudan etkileşim ise bu kaçınmayı azaltmayı amaçlar; bu nedenle hedeflenen sonuç artış olamaz.",
+      "E": "İçselleştirilmiş damgalama, olumsuz şakalara ve medya betimlemelerine maruziyetle artar. İletişim temelli müdahale ise öz damgalamanın etkilerini azaltır; bu yüzden hedeflenen sonuç artış değildir."
+     },
+     "s": 23,
+     "uslup": "hoca",
+     "id": "k2-44-q51"
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "metin": "Damgalamaya karşı mücadelenin yanlış bilgiyi değiştirmekle başladığını açıklar (s. 24).",
+   "sorular": [
+    {
+     "kazanim": 23,
+     "zorluk": "orta",
+     "soru": "Damgalamaya karşı mücadelenin hangi adımla başlaması gerektiği düşünülmektedir?",
+     "secenekler": {
+      "A": "Sigorta kapsamını daraltmakla",
+      "B": "Hastaları toplumdan ayırmakla",
+      "C": "Basmakalıpların geçerliliğini onaylamakla",
+      "D": "Yanlış bilgi ve inançları değiştirmekle",
+      "E": "Kararları başkalarına bırakmakla"
+     },
+     "dogru": "D",
+     "aciklama": "Tarihsel bağlamda yanlış bilgi ve inançlar toplumsal tutumları şekillendirmiştir.",
+     "sik_aciklamalari": {
+      "A": "Sigorta kapsamının dışında bırakma yapısal ayrımcılığın örneğidir ve damgalamayı artırır. Mücadele ayrımcılığı artıran düzenlemelerle değil, yanlış bilgi ve inançları değiştirmekle başlar.",
+      "B": "Toplumdan ayırma, korku ve dışarıda bırakma etkeninin sonucudur ve damgalamayı artırır. Mücadele bunun tersiyle, yani yanlış bilgi ve inançları düzeltmekle başlar.",
+      "C": "Basmakalıpların geçerliliğini onaylamak önyargının özelliğidir ve damgalamayı sürdürür. Mücadele bu yargıları sürdürmekle değil, yanlış bilgi ve inançları değiştirmekle başlar; seçenek bu sıralamayı tersine çevirir.",
+      "D": "Tarihsel bağlamda yanlış bilgi ve inançlar toplumsal tutumları şekillendirmiştir. Bu nedenle damgalamaya karşı mücadelenin bu yanlış bilgi ve inançları değiştirmekle başlaması gerektiği düşünülür.",
+      "E": "Kararların başkalarına bırakılması otoriterlik etkenidir ve damgalayıcı bir inançtır. Mücadele bu inancı güçlendirerek başlamaz; yanlış bilgi ve inançlar değiştirilmelidir ve seçenek bu ilkeye aykırıdır."
+     },
+     "s": 24,
+     "id": "k2-44-q52"
+    },
+    {
+     "kazanim": 23,
+     "zorluk": "orta",
+     "soru": "Damgalamaya karşı mücadeleyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Damgalama sürecinde rol oynayan durum ve özelliklerin ele alınmasına gerek yoktur",
+      "B": "Tarihsel olarak yanlış bilgi ve inançlar toplumsal tutumları şekillendirmiştir",
+      "C": "Rol oynayan durum ve özellikler dikkatlice ele alınmalıdır",
+      "D": "Eğitim, mitleri doğru kavramlarla değiştirmeyi amaçlar",
+      "E": "Mücadele yanlış bilgi ve inançları değiştirmekle başlamalıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Çeşitli çalışmalar doğrultusunda damgalama sürecinde rol oynadığı görülen durumlar ve özellikler dikkatlice ele alınmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Çeşitli çalışmalar doğrultusunda damgalama sürecinde rol oynadığı görülen durumlar ve özellikler dikkatlice ele alınmalıdır. Gerek olmadığı iddiası bu yüzden yanlıştır.",
+      "B": "Damgalama tarihsel bağlamda incelendiğinde yanlış bilgi ve inançların toplumsal tutumları şekillendirdiği görülür. Tarihsel örnekler olarak cüzzam ve frengi akla gelir; cümle doğrudur.",
+      "C": "Damgalama sürecinde rol oynadığı görülen durumlar ve özellikler dikkatlice ele alınmalıdır. Mücadele bu etkenler tanınmadan başarılı olamaz; cümle doğrudur ve yanlış değildir.",
+      "D": "Eğitim, psikiyatrik bozukluklar hakkındaki mitleri doğru kavramlarla değiştirmeyi amaçlar ve yanlış bilgiyi düzelttiği için mücadelenin ilk adımıdır. Cümle doğru olduğundan yanlış ifade değildir.",
+      "E": "Mücadelenin yanlış bilgi ve inançları değiştirmekle başlaması gerektiği düşünülür. Sorunun kaynağı yanlış bilgi olduğu için çözüm de bilgiden başlar; cümle doğrudur."
+     },
+     "s": 24,
+     "uslup": "hoca",
+     "id": "k2-44-q53"
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "metin": "Toplumsal müdahale programlarının kapsamını ve etkisini açıklar (s. 25).",
+   "sorular": [
+    {
+     "kazanim": 24,
+     "zorluk": "orta",
+     "soru": "Toplumsal düzeydeki müdahale programlarının hangi damgalama türleri üzerinde olumlu etki yapacağı belirtilmiştir?",
+     "secenekler": {
+      "A": "Yalnızca bireysel düzeydeki ayrımcılık",
+      "B": "Yalnızca öz damgalamanın kendisi",
+      "C": "Yalnızca yapısal damgalamanın kendisi",
+      "D": "Yalnızca stereotipi ile önyargı bileşenleri",
+      "E": "Öz damgalama ile sosyal ve yapısal damgalama"
+     },
+     "dogru": "E",
+     "aciklama": "Toplumsal düzeydeki müdahale programlarının öz damgalamanın yanı sıra sosyal ve yapısal damgalama üzerinde de olumlu etkileri olacağı belirtilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Bireysel ayrımcılık, ayrımcılığın üç düzeyinden biridir ancak programların olumlu etkilediği tür olarak tek başına belirtilmemiştir. Programlar öz, sosyal ve yapısal damgalamayı kapsar.",
+      "B": "Programların etkisi öz damgalamayla sınırlı değildir. Sosyal ve yapısal damgalama da olumlu etkilenir; bu yüzden yalnızca tek tür belirten seçenek eksiktir.",
+      "C": "Yapısal damgalama etkilenen türlerden biridir, ancak tek değildir. Öz damgalama ve sosyal damgalama da olumlu etkilenir; seçenek kapsamı gereksiz daraltır.",
+      "D": "Stereotipi ve önyargı damgalamanın bileşenleridir. Programların olumlu etkilediği damgalama türleri ise öz, sosyal ve yapısal damgalamadır; bileşen ile tür birbirine karıştırılmıştır.",
+      "E": "Toplumsal düzeydeki müdahale programlarının öz damgalamanın yanı sıra sosyal ve yapısal damgalama üzerinde de olumlu etkileri olacağı belirtilmiştir. Etki tek bir türle sınırlı değildir."
+     },
+     "s": 25,
+     "id": "k2-44-q54"
+    },
+    {
+     "kazanim": 24,
+     "zorluk": "orta",
+     "soru": "Temas ve eğitim programlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Damgalamaya karşı mücadele sürecini kolaylaştırırlar",
+      "B": "Programların içeriği tüm sosyal gruplar için aynı olmalıdır",
+      "C": "İçerik, grupların yapısına uygun belirlenmelidir",
+      "D": "Toplumun farklı unsurlarına yönelik uygulanırlar",
+      "E": "Bozuklukların türleri ve doğası hakkında bilgi toplum davranışlarını etkiler"
+     },
+     "dogru": "B",
+     "aciklama": "Programların içeriği toplumun farklı unsurlarının ve sosyal gruplarının yapısına uygun olarak belirlenmelidir.",
+     "sik_aciklamalari": {
+      "A": "Uygun içerikle uygulanan temas ve eğitim programları damgalamaya karşı mücadele sürecini kolaylaştırır. Cümle programların işlevini doğru aktarır ve yanlış seçenek değildir.",
+      "B": "Programların içeriği toplumun farklı unsurlarının ve sosyal gruplarının yapısına uygun olarak belirlenmelidir. Tüm gruplar için aynı içerik öngörmek bu ilkeye aykırıdır.",
+      "C": "Programların içerikleri, toplumun farklı unsurlarının ve sosyal gruplarının yapısına uygun olarak belirlenmelidir. Her grubun ihtiyacı farklı olduğu için cümle doğrudur ve yanlış değildir.",
+      "D": "Temas ve eğitim programları, toplumun farklı unsurları ve sosyal gruplarına yönelik uygulanır. Programların tek bir kesime değil, farklı gruplara ulaşması hedeflenir; cümle doğrudur.",
+      "E": "Psikiyatrik bozuklukların türleri ve doğası hakkında bilgi sahibi olmak toplumun davranışları üzerinde etkili olur. Bilgi, tutumu davranışa yansımadan önce değiştirir; cümle doğrudur."
+     },
+     "s": 25,
+     "uslup": "hoca",
+     "id": "k2-44-q55"
+    }
+   ]
+  }
+ ],
+ "sira": 44,
+ "tarih": "2026-11-18",
+ "soru_sayisi": 55
+}

@@ -1,0 +1,1314 @@
+{
+ "id": "k2-43-konsultasyon-liyezon-psikiyatrisi",
+ "sira": 43,
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "Konsültasyon Liyezon Psikiyatrisi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Pınar Durmaz",
+ "tarih": "2026-11-18",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Konsültasyon ve liyezon kavramlarını tanımlar, ikisini birbirinden ayırır ve liyezonun kapsamını açıklar (s. 2).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Bir klinikle sürekli ve düzenli işbirliğini ifade eden, yalnız tanı ve tedavi değil eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsayan kavram aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Konsültasyon",
+      "B": "Takip ve izleme",
+      "C": "Psikosomatik",
+      "D": "Liyezon",
+      "E": "Ruhsal durum muayenesi"
+     },
+     "dogru": "D",
+     "aciklama": "Liyezon bir klinik ile sürekli ve düzenli işbirliğini anlatır ve yalnız tanı-tedavi hizmetleriyle sınırlı kalmayıp eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar. Konsültasyon ise tek bir hasta için görüş alma talebidir.",
+     "sik_aciklamalari": {
+      "A": "Konsültasyon, ilgili dal hekiminin tanı ya da baş etme güçlüğü çektiği tek bir hasta için görüş alma talebidir. Klinikle sürekli ve düzenli işbirliğini anlatmadığı için tanıma uymaz.",
+      "B": "Takip ve izleme, konsültasyon sürecinin beşinci ve son basamağıdır ve hastanın sonraki değerlendirmelerini kapsar. Bir klinikle sürekli ve düzenli işbirliğini anlatan kavram olmadığı için doğru değildir.",
+      "C": "Psikosomatik, akıl ve beden etkileşimini ifade eden ve ilk kez Christian Heinroth tarafından tanımlanan bir kavramdır. Bir hizmet biçimini değil bir etkileşimi anlattığı için tanıma uymaz.",
+      "D": "Liyezon, bir klinik ile sürekli ve düzenli işbirliğini içerir ve yalnız tanı-tedaviyi değil eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar. Soruda tarif edilen kavram olduğu için doğru cevaptır.",
+      "E": "Ruhsal durum muayenesi sürecin ikinci basamağıdır ve hastanın ruhsal durumunun alanlara göre değerlendirilmesini içerir. Klinik işbirliğini anlatan bir kavram olmadığından doğru değildir."
+     },
+     "s": 2,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Konsültasyon ve liyezon ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Konsültasyon bir hasta ile ilgili görüş alma talebidir",
+      "B": "Konsültasyonda amaç hastanın değerlendirilmesidir",
+      "C": "Liyezon bir klinik ile sürekli işbirliğini içerir",
+      "D": "Liyezon yalnız tanı ve tedavi hizmetlerini kapsar",
+      "E": "Liyezon koruyucu sağlık görevlerini de kapsar"
+     },
+     "dogru": "D",
+     "aciklama": "Liyezon kavramı yalnız tanı ve tedavi hizmetlerini içermez; eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar. Bu yüzden 'yalnız tanı ve tedavi' ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Konsültasyon, ilgili dal hekiminin tanı ya da baş etme güçlüğü çektiği bir hasta ile ilgili görüş alma talebidir. İfade tanımı doğru aktardığı için yanlış ifade aranırken elenir.",
+      "B": "Konsültasyonda esas amaç hastanın değerlendirilmesi ve hastaya farklı branş uzmanlarınca yardım sunulmasıdır. İfade tanıma uygundur; bu nedenle yanlış ifade aranırken elenir.",
+      "C": "Liyezon, bir klinik ile sürekli ve düzenli işbirliğini içerir; konsültasyondan farkı bu süreklilikte yatar. İfade tanıma uygun olduğu için yanlış ifade aranırken elenir.",
+      "D": "Liyezon yalnız tanı ve tedavi hizmetlerini içermez; eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar. Bu nedenle 'yalnız' diyen ifade yanlıştır ve doğru cevaptır.",
+      "E": "Liyezonun koruyucu sağlık görevlerini de kapsadığı doğrudur; bu görev eğitim ve acil müdahale ile birlikte sayılır. İfade doğru olduğundan elenir."
+     },
+     "s": 2,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Liyezon kavramının kapsamı ile ilgili aşağıdakilerden hangisi doğru değildir?",
+     "secenekler": {
+      "A": "Eğitim görevlerini içerir",
+      "B": "Tek hastaya yönelik görüş talebidir",
+      "C": "Koruyucu sağlık görevlerini içerir",
+      "D": "Tanı ve tedavi hizmetlerini içerir",
+      "E": "Acil müdahale görevlerini içerir"
+     },
+     "dogru": "B",
+     "aciklama": "Liyezon bir klinik ile sürekli ve düzenli işbirliğidir; tanı-tedavinin yanında eğitim, acil müdahale ve koruyucu sağlık görevlerini kapsar. Tek bir hasta için görüş talebinin yanıtlanması konsültasyonun tanımıdır.",
+     "sik_aciklamalari": {
+      "A": "Liyezon kavramı eğitim görevlerini de kapsar; hizmetin yalnız tanı ve tedaviden ibaret olmadığını gösterir. Bu bilgi bilinen tanımla uyumlu olduğundan doğru olmayan ifade aranırken elenir.",
+      "B": "Tek bir hasta için görüş alma talebinin yanıtlanması konsültasyonun tanımıdır; liyezon ise bir klinik ile sürekli ve düzenli işbirliğidir. Bu nedenle ifade liyezonu tanımlamaz ve doğru cevaptır.",
+      "C": "Liyezon kavramı koruyucu sağlık görevlerini de kapsar ve hizmeti yalnız tedaviyle sınırlamaz. Bu bilgi bilinen tanımla uyumlu olduğundan doğru olmayan ifade aranırken elenir.",
+      "D": "Liyezon, eğitim ve koruyucu sağlık görevlerinin yanında tanı ve tedavi hizmetlerini de içerir. İfade doğru bir bilgi verdiğinden, doğru olmayanı arayan soruda seçilmez.",
+      "E": "Liyezon kavramı acil müdahale görevlerini de içerir; bir klinikle sürekli işbirliğinin bir yansımasıdır. Bu bilgi bilinen tanımla uyumlu olduğundan doğru olmayan ifade aranırken elenir."
+     },
+     "s": 2,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q03"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Konsültasyon-liyezon psikiyatrisini tanımlar; psikiyatrik eş tanıların önemini ve çalışma alanını açıklar (s. 3-5).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Fiziksel hastalıklara eşlik eden psikiyatrik bozukluk ve psikososyal sorunların tanısı, tedavisi ve takibiyle ilgilenen psikiyatri disiplini aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikofarmakoloji",
+      "B": "Adli psikiyatri",
+      "C": "Konsültasyon-liyezon psikiyatrisi",
+      "D": "Çocuk ve ergen psikiyatrisi",
+      "E": "Geriatrik psikiyatri"
+     },
+     "dogru": "C",
+     "aciklama": "Konsültasyon-liyezon psikiyatrisi, fiziksel hastalıklara eşlik eden psikiyatrik bozukluk ve psikososyal sorunlarla ilgilenir. Diğer alanların odağı farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Psikofarmakoloji psikiyatrik ilaçların etkisini inceleyen bir alandır. Fiziksel hastalığa eşlik eden bozuklukların tanı, tedavi ve takibini bütün olarak üstlenen disiplin KLP'dir; bu nedenle şık doğru değildir.",
+      "B": "Adli psikiyatri hukuki sorunlarla ilgilenen bir alandır. Fiziksel hastalıklara eşlik eden psikiyatrik bozuklukların takibini tanımlayan disiplin olmadığı için doğru değildir; bu tanım KLP'ye aittir.",
+      "C": "Konsültasyon-liyezon psikiyatrisi fiziksel hastalıklara eşlik eden psikiyatrik bozukluk ve psikososyal sorunların tanısı, tedavisi ve takibiyle ilgilenir. Bu nedenle doğru cevaptır.",
+      "D": "Çocuk ve ergen psikiyatrisi, yaş grubuna göre tanımlanan bir alandır ve fiziksel hastalığa eşlik eden bozukluklara odaklanmaz. Bu nedenle tarif edilen disiplin değildir.",
+      "E": "Geriatrik psikiyatri yaşlı hastalara odaklanan bir alandır. Fiziksel hastalıklara eşlik eden bozuklukların tanı-tedavi-takibini tanımlayan disiplin olmadığı için doğru değildir; bu tanım KLP'ye aittir."
+     },
+     "s": 3,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q04"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Konsültasyon-liyezon psikiyatrisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Psikiyatrik eş tanılar tıbbi hastalığın seyrini şiddetlendirebilir",
+      "B": "Psikiyatrik eş tanılar hastanede kalış süresini uzatabilir",
+      "C": "Psikiyatrik eş tanılar bakım maliyetlerini artırabilir",
+      "D": "Bedensel hastalık saptanmayan fiziksel yakınmalar çalışma alanına girer",
+      "E": "KLP hizmetlerinin hastane yatış sürelerini uzattığını gösteren çalışmalar vardır"
+     },
+     "dogru": "E",
+     "aciklama": "KLP hizmetlerinin tedavi uyumunu artırdığı ve yatış sürelerini kısaltarak maliyetleri düşürdüğünü gösteren çalışmalar vardır; süreyi uzattığı ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Psikiyatrik eş tanılar genellikle tıbbi hastalığın seyrini şiddetlendirir ve önemli sıkıntıya yol açar. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "B": "Eş tanılar hastanede kalış süresini uzatır; bu nedenle tıbbi hastalığa eşlik eden psikiyatrik sorunların tanınması ve değerlendirilmesi önemlidir. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "C": "Eş tanılar bakım maliyetlerini artırır ve sağlık hizmetine ek yük bindirir. İfade bilinen bilgiyle uyumlu olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Herhangi bir bedensel hastalık tespit edilmemesine rağmen görülen fiziksel yakınmalar, KLP çalışma alanına girer. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "KLP hizmetleri tedavi uyumunu artırır ve hastane yatış sürelerini kısaltarak maliyetleri düşürür. Bu nedenle yatış sürelerini uzattığını söyleyen ifade yanlıştır ve doğru cevaptır."
+     },
+     "s": 5,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q05"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Konsültasyon-liyezon psikiyatrisinin üç işlevini, hizmet ve tedavi biçimlerini, eğitim ve medikolegal görevlerini açıklar (s. 6, 10-14).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Konsültasyon-liyezon psikiyatrisinin işlevlerinden biri olan ve psikiyatri dışı sağlık çalışanlarına yönelik yürütülen faaliyet aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikososyal tıp alanında eğitim",
+      "B": "Transplantasyon öncesi değerlendirme",
+      "C": "Rutin liyezon vizitleri",
+      "D": "Konsültasyon raporu yazımı",
+      "E": "Takip kaydı tutma"
+     },
+     "dogru": "A",
+     "aciklama": "Psikososyal tıp alanında eğitim, KLP'nin üç ana işlevinden biridir ve esas olarak psikiyatri dışı kliniklerde görev yapan sağlık çalışanlarına verilir.",
+     "sik_aciklamalari": {
+      "A": "Psikososyal tıp alanında eğitim, KLP'nin üç ana işlevinden biridir ve esas olarak psikiyatri dışı kliniklerde çalışan sağlık çalışanlarına verilir. Bu nedenle doğru cevaptır.",
+      "B": "Transplantasyon öncesi değerlendirme KLP'nin diğer görevlerinden biridir ve medikolegal görüşlerle birlikte anılır. Üç ana işlev başlığında ayrı bir işlev olarak sayılmadığı için doğru değildir.",
+      "C": "Rutin liyezon vizitleri, hastanın izlenmesini kolaylaştıran bir takip uygulamasıdır; yapılamazsa takip gereken vakalar kayıt edilir. Üç ana işlevden biri olmadığı için bu soruda doğru değildir.",
+      "D": "Konsültasyon raporu yazımı sürecin bir parçası olan hekimler arası iletişim aracıdır. Üç ana işlevden biri değildir, bu yüzden doğru değildir.",
+      "E": "Takip kaydı tutma, rutin vizit yapılamadığında takip gereken vakaları gözden kaçırmamak için yapılır. Üç ana işlev başlığından biri olmadığı için bu soruda doğru değildir."
+     },
+     "s": 13,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q06"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Konsültasyon-liyezon psikiyatrisi kapsamında uygulanabilecek tedavi örnekleri olarak sayılanlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Karar verme yeterliliğinin değerlendirilmesi",
+      "B": "Acil tıbbi müdahaleler",
+      "C": "Psikoterapiler",
+      "D": "Aile terapileri",
+      "E": "Psikiyatrik ilaç kullanımı"
+     },
+     "dogru": "A",
+     "aciklama": "KLP kapsamında uygulanabilecek tedaviler olarak psikiyatrik ilaç, acil tıbbi müdahale, psikoterapi ve aile terapisi sayılır; karar verme yeterliliğinin değerlendirilmesi ise medikolegal görüş görevidir, tedavi örneği değildir.",
+     "sik_aciklamalari": {
+      "A": "Karar verme yeterliliğinin değerlendirilmesi, KLP'nin medikolegal görüş görevlerindendir ve tedavi onay ve reddinde istenir. Tedavi örnekleri arasında sayılmadığı için doğru cevaptır.",
+      "B": "Acil tıbbi müdahaleler, KLP kapsamında uygulanabilecek tedavilerden biridir ve hemen yardım gerektiren durumlarda başvurulur. İfade doğru olduğu için yanlış ifade aranırken elenir.",
+      "C": "Psikoterapiler, KLP kapsamında uygulanabilecek tedavilerden biridir ve ilaç tedavisini tamamlayabilir. İfade doğru olduğu için yanlış ifade aranırken elenir; aranan şık tedavi olmayandır.",
+      "D": "Aile terapileri, KLP kapsamında uygulanabilecek tedavilerden biridir ve hastanın yakın çevresini sürece katar. İfade doğru olduğu için yanlış ifade aranırken elenir.",
+      "E": "Psikiyatrik ilaç kullanımı, KLP kapsamında uygulanabilecek tedaviler arasındadır ve uygun görülen medikal tedavi başlanarak yapılır. İfade doğru olduğu için elenir."
+     },
+     "s": 12,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q07"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Psikososyal sorunların daha sık ve acil olduğu özellikli birimler olarak sayılanlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Yoğun bakım",
+      "B": "Palyatif bakım",
+      "C": "Diyaliz ünitesi",
+      "D": "Yanık birimi",
+      "E": "Genel poliklinik"
+     },
+     "dogru": "E",
+     "aciklama": "Yoğun bakım, palyatif bakım, diyaliz ünitesi ve yanık birimi psikososyal sorunların daha sık ve acil olduğu özellikli yerlerdir; genel poliklinik bunlardan biri değildir.",
+     "sik_aciklamalari": {
+      "A": "Yoğun bakım, psikososyal sorunların daha sık ve acil olduğu özellikli birimlerden biridir ve liyezon işbirliğinin önemli olduğu yerdir. Bu nedenle sayılmayan şık değildir.",
+      "B": "Palyatif bakım ünitesi, psikososyal sorunların daha sık ve acil olduğu özellikli yerlerden biridir ve liyezon işbirliğinin önemli olduğu bir birimdir. Bu nedenle sayılmayan şık değildir.",
+      "C": "Diyaliz ünitesi özellikli birimlerden biridir ve psikososyal sorunların daha sık ve acil olduğu yerlerdendir. Liyezon işbirliği burada önemlidir; bu nedenle sayılmayan şık değildir.",
+      "D": "Yanık birimi, psikososyal sorunların daha sık ve acil olduğu özellikli yerlerden biridir ve liyezon işbirliğinin önemli olduğu bir birimdir. Bu nedenle sayılmayan şık değildir.",
+      "E": "Genel poliklinik ayaktan hastaların başvurduğu olağan hizmet birimidir. Psikososyal sorunların daha sık ve acil olduğu özellikli birimler yoğun bakım, palyatif bakım, diyaliz ve yanık birimidir; bu nedenle doğru cevaptır."
+     },
+     "s": 13,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q08"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Tedaviyi onaylama ya da reddetme konusunda kişinin karar verme yeterliliğinin değerlendirilmesi, konsültasyon-liyezon psikiyatrisinin aşağıdaki görevlerinden hangisine girer?",
+     "secenekler": {
+      "A": "Eğitim",
+      "B": "Medikolegal konularda görüş sunma",
+      "C": "Psikoterapi uygulama",
+      "D": "Takip ve izleme",
+      "E": "Veri toplama"
+     },
+     "dogru": "B",
+     "aciklama": "Tedavi onay ve reddinde karar verme yeterliliğinin değerlendirilmesi, transplantasyon öncesi değerlendirme gibi KLP'nin medikolegal konulardaki görüş sunma görevine girer.",
+     "sik_aciklamalari": {
+      "A": "Eğitim, KLP'nin ikinci önemli işlevidir ve psikiyatri dışı sağlık çalışanlarına verilir. Karar verme yeterliliğinin değerlendirilmesini tanımlamadığı için doğru değildir.",
+      "B": "Tedavi onay ve reddinde kişinin karar verme yeterliliğinin değerlendirilmesi, transplantasyon öncesi değerlendirme ile birlikte KLP'nin medikolegal konularda görüş sunma görevine girer. Bu nedenle doğru cevaptır.",
+      "C": "Psikoterapi, KLP kapsamında uygulanabilecek tedavi biçimlerinden biridir; yeterlilik değerlendirmesi ise hukuki nitelikte bir görüş sunma görevidir. Bu nedenle şık doğru değildir.",
+      "D": "Takip ve izleme, konsültasyon sürecinin son basamağıdır ve hastanın gidişini kapsar. Karar verme yeterliliğinin değerlendirilmesi bu basamağın içeriği olmadığı için şık doğru değildir.",
+      "E": "Veri toplama, sürecin ilk basamağıdır ve hastaya ilişkin bilgilerin edinilmesini kapsar. Karar verme yeterliliği değerlendirmesi veri toplamanın amacı olmadığı için doğru değildir."
+     },
+     "s": 6,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q09"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Konsültasyon-liyezon psikiyatrisinin işlevleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Eğitim, konsültasyon-liyezon hekimlerinin birinci önemli görevidir",
+      "B": "Ruh sağlığı hizmeti psikiyatri dışı kliniklerdeki hastalara sunulur",
+      "C": "Eğitimin esas grubu psikiyatri dışı kliniklerde çalışan sağlık çalışanlarıdır",
+      "D": "Araştırma klinik hizmetleri artırır ve ileri tedavi yöntemlerinin gelişmesini sağlar",
+      "E": "İşlevler üç ana başlıkta toplanır"
+     },
+     "dogru": "A",
+     "aciklama": "Psikososyal tıp alanında eğitim, konsültasyon-liyezon hekimlerinin birinci değil ikinci önemli görevidir; birinci işlev ruh sağlığı hizmetinin sağlanmasıdır. Diğer önermeler bilgilerle uyumludur.",
+     "sik_aciklamalari": {
+      "A": "Eğitim, konsültasyon-liyezon hekimlerinin birinci değil ikinci önemli görevidir; ifade bu yüzden yanlıştır ve doğru cevaptır. Birinci işlev psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmeti sağlamaktır.",
+      "B": "Ruh sağlığı hizmeti, psikiyatri dışı kliniklerdeki hastalara sağlanır ve konsültasyon, liyezon ve tedaviyi bütün olarak kapsar. İfade doğru bir bilgi verdiğinden yanlışı arayan soruda seçilmez.",
+      "C": "Eğitim verilecek esas grup, psikiyatri dışı diğer kliniklerde görev yapan sağlık çalışanlarıdır ve eğitim psikososyal tıp alanındadır. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Araştırma, klinik hizmetleri artırır ve ileri tedavi yöntemlerinin gelişmesini sağlar; bu nedenle üçüncü işlevdir. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Üç ana başlık ruh sağlığı hizmeti, eğitim ve araştırmadır; ifade işlevlerin sayısını ve içeriğini doğru verir. Doğru bir bilgi olduğundan yanlış ifadeyi arayan soruda seçilmez."
+     },
+     "s": 14,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q10"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Psikosomatik kavramını ve psikiyatri dışı hekimlerin psikiyatrik bozuklukları tanıma durumunu açıklar (s. 7-9).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hastalıklarla ilişkili psikosomatik süreçleri ilk kez tanımlayan Alman doktor aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Christian Heinroth",
+      "B": "Lipowski",
+      "C": "Freud",
+      "D": "Kraepelin",
+      "E": "Jaspers"
+     },
+     "dogru": "A",
+     "aciklama": "Psikosomatik süreçleri ilk kez Alman doktor Christian Heinroth tanımlamıştır. Lipowski ise konsültasyonları beş türe ayıran araştırmacı olarak anılır.",
+     "sik_aciklamalari": {
+      "A": "Christian Heinroth, hastalıklarla ilişkili psikosomatik süreçleri ilk kez tanımlayan Alman doktordur ve kavram akıl ile beden etkileşimini ifade eder. Bu nedenle doğru cevaptır.",
+      "B": "Lipowski, psikiyatrik konsültasyonları esas soruna göre beş alt gruba ayıran araştırmacıdır. Psikosomatik süreçleri ilk tanımlayan kişi olmadığı için doğru değildir.",
+      "C": "Psikosomatik kavramı akıl ve beden etkileşimini anlatır ve ilk kez Heinroth tarafından tanımlanmıştır. Freud bu kavramın ilk tanımlayıcısı olmadığı için şık doğru değildir.",
+      "D": "Hastalıklarla ilişkili psikosomatik süreçleri ilk kez tanımlayan kişi Alman doktor Heinroth'tur. Kraepelin bu süreçlerin ilk tanımlayıcısı olmadığından şık doğru cevap olamaz.",
+      "E": "Heinroth, akıl ile beden etkileşimini anlatan psikosomatik süreçleri ilk tanımlayan Alman doktordur. Jaspers bu ilk tanımı yapan kişi olmadığı için şık doğru değildir."
+     },
+     "s": 8,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q11"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Psikiyatri dışı hekimlerin büyük oranda doğru tanıdığı bozukluklar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Bilişsel bozukluk",
+      "B": "Deliryum",
+      "C": "Psikotik bozukluk",
+      "D": "Alkol madde kullanım bozuklukları",
+      "E": "Depresyon"
+     },
+     "dogru": "E",
+     "aciklama": "Bilişsel bozukluk, deliryum, psikotik bozukluk ve alkol madde kullanım bozuklukları büyük oranda doğru tanınır; ajitasyon, depresyon, anksiyete ve konversiyon belirtileri nedeniyle istenen konsültasyonların yarısından fazlasında ise bu belirtileri karşılayan ruhsal hastalık saptanmamıştır; depresyon bu ikinci gruptadır.",
+     "sik_aciklamalari": {
+      "A": "Bilişsel bozukluklar, psikiyatri dışı hekimlerce büyük oranda doğru tanınan bozukluklardandır. Bu nedenle doğru tanınmayanlar arasında değildir ve doğru cevap olamaz.",
+      "B": "Deliryum, psikiyatri dışı hekimlerce büyük oranda doğru tanınan bozukluklardandır ve aynı zamanda acil konsültasyon örneğidir. Bu nedenle doğru tanınmayanlar arasında değildir ve doğru cevap olamaz.",
+      "C": "Psikotik bozukluklar, psikiyatri dışı hekimlerce büyük oranda doğru tanınan bozukluklardandır. Bu nedenle doğru tanınmayanlar arasında değildir ve doğru cevap olamaz; aranan şık bu grup dışındadır.",
+      "D": "Alkol madde kullanım bozuklukları da psikiyatri dışı hekimlerce büyük oranda doğru tanınan gruptadır. Bu nedenle doğru tanınmayanlar arasında değildir ve doğru cevap olamaz.",
+      "E": "Depresyon, ajitasyon, anksiyete ve konversiyonla birlikte, bu belirtiler nedeniyle istenen konsültasyonların yarısından fazlasında karşılığı bir ruhsal hastalık bulunmayan gruptadır. Bu nedenle doğru cevaptır."
+     },
+     "s": 9,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q12"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Psikosomatik kavramı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Süreçleri ilk kez Christian Heinroth tanımlamıştır",
+      "B": "Kelime olarak akıl ve beden etkileşimini ifade eder",
+      "C": "Zaman içinde yanlış kullanılmaya başlanmıştır",
+      "D": "Yanlış yaklaşımlar beden ile ruh ayrımını artırmıştır",
+      "E": "Akıl ve bedenin birbirinden ayrılabileceğini ifade eder"
+     },
+     "dogru": "E",
+     "aciklama": "Psikosomatik kelime olarak akıl ve beden etkileşimini ifade eder ve ikisi birbirinden ayrılamaz; ayrılabileceği ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Hastalıklarla ilişkili psikosomatik süreçleri ilk kez Alman doktor Christian Heinroth tanımlamıştır. İfade doğru bir bilgi verdiğinden yanlışı arayan soruda seçilmez.",
+      "B": "Psikosomatik, kelime olarak akıl ve beden etkileşimini ifade eder ve ikisinin birbirinden ayrılamayacağını vurgular. İfade doğru bir tanım verdiğinden yanlışı arayan soruda seçilmez.",
+      "C": "Kavram zaman içinde yanlış kullanılmaya başlanmış ve organik neden bulunamayınca psikiyatrik işbirliğine başvurulur olmuştur. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Yanlış yaklaşımlar beden ile ruh ayrımının daha da artmasına neden olmuştur. İfade doğru bir bilgi verdiğinden yanlışı arayan soruda seçilmez.",
+      "E": "Psikosomatik, akıl ve bedenin birbirinden ayrılamaz olduğunu ifade eder ve etkileşimi vurgular. Ayrılabileceğini söyleyen ifade bu nedenle yanlıştır ve doğru cevaptır."
+     },
+     "s": 8,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q13"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Lipowski'nin beş konsültasyon türünü ayırt eder (s. 15).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hastanın tanısındaki zorluk ya da izleme güçlüğü nedeniyle istenen ve ayırıcı tanıya ilişkin görüş bildirilmesini amaçlayan konsültasyon türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hekim merkezli",
+      "B": "Durum merkezli",
+      "C": "Kriz merkezli",
+      "D": "Geniş merkezli",
+      "E": "Hasta merkezli"
+     },
+     "dogru": "E",
+     "aciklama": "Hasta merkezli konsültasyon tanıdaki zorluk ya da izleme güçlüğü nedeniyle istenir ve ayırıcı tanıya ilişkin görüş amaçlanır. Kriz merkezli tür ise uyum ve baş etme güçlüğünün nedenini anlamaya yöneliktir.",
+     "sik_aciklamalari": {
+      "A": "Hekim merkezli konsültasyon, hekimin hastayla iletişimindeki güçlüğün aşılması için istenir. Sorun hekim-hasta ilişkisinde olduğundan tanı güçlüğünü anlatan bu soruya uymaz.",
+      "B": "Durum merkezli konsültasyon, hasta ile tedavi ekibi arasındaki çatışma ve güçlüklere dönük yardım isteğidir. Tanı güçlüğü söz konusu olmadığından soruya uymaz.",
+      "C": "Kriz merkezli konsültasyonda uyum ve baş etme güçlüğünün nedeni anlaşılmaya ve uygun medikal müdahale yapılmaya çalışılır. Ayırıcı tanı görüşü istenmediği için soruyu yanıtlamaz.",
+      "D": "Geniş merkezli konsültasyonda hasta, tedavi ekibi ve aile arasındaki sorunun çözümü amaçlanır. Tanı güçlüğüne değil ilişki sorununa dönük olduğundan soruya uymaz.",
+      "E": "Hasta merkezli konsültasyon, hastanın tanısındaki zorluk ya da izleme güçlüğü nedeniyle istenir ve ayırıcı tanıya ilişkin görüş bildirilmesini amaçlar. Soruda anlatılan bu olduğu için doğru cevaptır."
+     },
+     "s": 15,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q14"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bir hastanın hastalığına uyum sağlayamadığı ve baş etmekte güçlük çektiği bildirilerek, nedenin anlaşılması ve uygun medikal müdahalenin yapılması için istenen konsültasyon hangi türdendir?",
+     "secenekler": {
+      "A": "Hasta merkezli",
+      "B": "Kriz merkezli",
+      "C": "Hekim merkezli",
+      "D": "Durum merkezli",
+      "E": "Geniş merkezli"
+     },
+     "dogru": "B",
+     "aciklama": "Uyum ve baş etme güçlüğünün nedeninin anlaşılması ve uygun medikal müdahalenin yapılması kriz merkezli konsültasyonun amacıdır. Hasta merkezli tür tanı güçlüğüne, diğer üçü iletişim ya da çatışmaya dönüktür.",
+     "sik_aciklamalari": {
+      "A": "Hasta merkezli konsültasyon tanı ya da izleme güçlüğü nedeniyle istenir ve ayırıcı tanı görüşü amaçlar. Soruda sorun tanı değil uyum olduğundan bu tür uymaz.",
+      "B": "Kriz merkezli konsültasyonda uyum ve baş etme güçlüğünün nedeni anlaşılmaya ve uygun medikal müdahale yapılmaya çalışılır. Soruda tarif edilen durumla birebir örtüştüğü için doğru cevaptır.",
+      "C": "Hekim merkezli konsültasyon, hekimin hasta ile iletişim ve etkileşiminde yaşadığı güçlüğün aşılması için istenir. Soruda sorun hekimin iletişiminde değil hastanın uyumunda olduğundan bu tür uymaz.",
+      "D": "Durum merkezli konsültasyon, hasta ile tedavi ekibi arasındaki çatışma ve güçlüklere dönük yardım isteğidir. Soruda ekip çatışması anlatılmadığı, hastanın baş etme güçlüğü anlatıldığı için bu tür uymaz.",
+      "E": "Geniş merkezli konsültasyonda hasta, tedavi ekibi ve aile arasında bir sorun vardır. Soruda aile ya da ekip sorunu yer almadığından bu tür uymaz."
+     },
+     "s": 15,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q15"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Hasta, tedavi ekibi ve aile arasında bir sorun bulunduğu için, öncelikle bu sorunun çözümlenmesine dönük yardım istenen konsültasyon türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hasta merkezli",
+      "B": "Kriz merkezli",
+      "C": "Geniş merkezli",
+      "D": "Hekim merkezli",
+      "E": "Durum merkezli"
+     },
+     "dogru": "C",
+     "aciklama": "Hasta, tedavi ekibi ve aile arasındaki sorun geniş merkezli konsültasyonun tanımıdır. Durum merkezli türde yalnız hasta ile tedavi ekibi arasındaki çatışma vardır, aile işin içinde değildir.",
+     "sik_aciklamalari": {
+      "A": "Hasta merkezli konsültasyon, hastanın tanısındaki zorluk ya da izleme güçlüğü nedeniyle istenir ve ayırıcı tanı görüşü amaçlar. Soruda aile de sorunun içinde olduğundan bu tür uymaz.",
+      "B": "Kriz merkezli konsültasyon uyum ve baş etme güçlüğünün nedenini anlamaya yöneliktir. Soruda ekip ve aile arasındaki sorun anlatıldığı için uymaz.",
+      "C": "Geniş merkezli konsültasyonda hasta, tedavi ekibi ve aile arasında bir sorun vardır ve öncelikle bunun çözülmesi istenir. Soruda anlatılan tam olarak budur, doğru cevaptır.",
+      "D": "Hekim merkezli konsültasyonda hekim, hasta ile iletişimindeki güçlüğün aşılması için yardım ister. Soruda hekimin iletişim sorunu değil ekip ve aile arasındaki sorun anlatıldığından uymaz.",
+      "E": "Durum merkezli konsültasyon yalnız hasta ile tedavi ekibi arasındaki çatışmaya dönüktür. Aile işin içinde olduğundan bir sonraki tür olan geniş merkezli olur."
+     },
+     "s": 15,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q16"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Hekimin hastayla iletişim ve etkileşiminde yaşadığı güçlüğün aşılması için istenen konsültasyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hasta merkezli",
+      "B": "Kriz merkezli",
+      "C": "Durum merkezli",
+      "D": "Hekim merkezli",
+      "E": "Geniş merkezli"
+     },
+     "dogru": "D",
+     "aciklama": "Hekim merkezli konsültasyonda hekim, hasta ile iletişimindeki güçlüğün aşılması için yardım ister. Durum merkezli türde sorun hasta ile tedavi ekibi arasındaki çatışmadır.",
+     "sik_aciklamalari": {
+      "A": "Hasta merkezli konsültasyon, tanıdaki zorluk ya da izleme güçlüğü nedeniyle istenir ve ayırıcı tanıya ilişkin görüş bildirilmesini amaçlar. Hekimin iletişim sorununu anlatmadığı için uymaz.",
+      "B": "Kriz merkezli konsültasyon, hastanın uyum ve baş etme güçlüğünün nedenini anlamaya yöneliktir. Soruda sorun hekimin kendi iletişiminde olduğundan bu tür uymaz.",
+      "C": "Durum merkezli konsültasyon hasta ile tedavi ekibi arasındaki çatışmayı konu alır. Hekimin hastayla iletişim güçlüğünü değil ekip çatışmasını anlattığından uymaz.",
+      "D": "Hekim merkezli konsültasyonda hekim, hasta ile iletişim ve etkileşiminde yaşadığı güçlüğün aşılması için yardım ister. Soruda tarif edilen durum tam olarak bu olduğu için doğru cevaptır.",
+      "E": "Geniş merkezli konsültasyonda hasta, tedavi ekibi ve aile arasındaki sorun çözülmek istenir. Soruda aile ya da ekip sorunu olmadığı için uymaz."
+     },
+     "s": 15,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q17"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Lipowski, psikiyatrik konsültasyonları esas soruna ya da amaca göre kaç alt grupta tanımlamıştır?",
+     "secenekler": {
+      "A": "Üç",
+      "B": "Dört",
+      "C": "Beş",
+      "D": "Altı",
+      "E": "Yedi"
+     },
+     "dogru": "C",
+     "aciklama": "Lipowski psikiyatrik konsültasyonları hasta, kriz, hekim, durum ve geniş merkezli olmak üzere beş alt grupta tanımlamıştır. Üç, aciliyete göre yapılan sınıflamanın grup sayısıdır ve karıştırılabilir.",
+     "sik_aciklamalari": {
+      "A": "Üç sayısı, acil, aynı gün ve rutin gruplarından oluşan aciliyet sınıflamasının grup sayısıdır. Lipowski sınıflaması üç değil beş gruptan oluştuğu için şık doğru değildir.",
+      "B": "Dört sayısı Lipowski sınıflamasının grup sayısı değildir. Lipowski konsültasyonları hasta, kriz, hekim, durum ve geniş merkezli olmak üzere beş türe ayırmıştır; doğru sayı beştir.",
+      "C": "Lipowski, psikiyatrik konsültasyonları esas soruna ya da amaca göre hasta, kriz, hekim, durum ve geniş merkezli olmak üzere beş gruba ayırmıştır. Bu nedenle doğru cevaptır.",
+      "D": "Altı sayısı Lipowski sınıflamasının grup sayısı değildir. Sınıflama hasta, kriz, hekim, durum ve geniş merkezli olmak üzere beş türden oluşur; doğru sayı beştir.",
+      "E": "Yedi sayısı Lipowski sınıflamasının grup sayısı değildir. Sınıflama hasta, kriz, hekim, durum ve geniş merkezli olmak üzere beş türden oluşur; doğru sayı beştir."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q18"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hasta ile tedavi ekibi arasındaki çatışma ve güçlüklere dönük yardım isteği nedeniyle istenen konsültasyon, Lipowski sınıflamasına göre hangi türdendir?",
+     "secenekler": {
+      "A": "Hasta merkezli",
+      "B": "Kriz merkezli",
+      "C": "Hekim merkezli",
+      "D": "Durum merkezli",
+      "E": "Geniş merkezli"
+     },
+     "dogru": "D",
+     "aciklama": "Hasta ile tedavi ekibi arasındaki çatışmaya dönük yardım istenen tür durum merkezlidir. Aile de sorunun içindeyse tür geniş merkezli olur.",
+     "sik_aciklamalari": {
+      "A": "Hasta merkezli konsültasyon, tanıdaki zorluk ya da izleme güçlüğü nedeniyle istenir ve ayırıcı tanı görüşü amaçlar. Soruda tanı değil ekip çatışması anlatıldığı için bu tür uymaz.",
+      "B": "Kriz merkezli konsültasyonda hastanın uyum ve baş etme güçlüğünün nedeni anlaşılmaya ve uygun medikal müdahale yapılmaya çalışılır. Soruda anlatılan ekip çatışması olduğu için bu tür uymaz.",
+      "C": "Hekim merkezli konsültasyonda hekim, hasta ile iletişim ve etkileşiminde yaşadığı güçlüğün aşılması için yardım ister. Soruda hekimin kendi iletişimi değil ekip çatışması anlatıldığı için uymaz.",
+      "D": "Durum merkezli konsültasyon, hasta ile tedavi ekibi arasındaki çatışma ve güçlüklere dönük yardım istenmesidir. Soruda anlatılan tam olarak budur; bu nedenle doğru cevaptır.",
+      "E": "Geniş merkezli konsültasyonda hasta, tedavi ekibi ve aile arasında bir sorun vardır. Soruda aile sorunu anlatılmadığı için uymaz; ekip çatışması durum merkezli türe aittir."
+     },
+     "s": 15,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q19"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Konsültasyonları aciliyete göre sınıflandırır ve acil konsültasyon durumlarını sayar (s. 16).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyonların aciliyete göre sınıflandırılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sınıflama hastanın durumuna ve servisin ihtiyaçlarına göre yapılır",
+      "B": "Acil olmayan ama aynı gün görülmesi gereken hastalar ayrı bir gruptur",
+      "C": "Rutin konsültasyonlar çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır",
+      "D": "Aynı gün görülmesi gereken hastalar acil grubunun içinde sayılır",
+      "E": "Acil konsültasyonda psikiyatri hekiminin hemen yardımı gerekir"
+     },
+     "dogru": "D",
+     "aciklama": "Aynı gün içinde görülmesi gereken hastalar acil olmayan ayrı bir ikinci gruptur; acil grup psikiyatri hekiminin hemen yardımını gerektiren durumlardan oluşur. Bu nedenle bu ifade yanlıştır, diğer dört ifade sınıflamayı doğru tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Aciliyete göre sınıflama, hastanın durumunu ve servisin ihtiyaçlarını ölçüt alır; amaç görülme önceliğini belirlemektir. Bu ifade sınıflamayı doğru aktardığı için yanlış ifade aranırken elenir.",
+      "B": "Acil olmayan ancak aynı gün içinde görülmesi gereken hastalar sınıflamanın ikinci grubudur; acil ile rutin arasındaki ara basamağı oluşturur. İfade doğrudur, bu nedenle yanlış ifade aranırken elenir.",
+      "C": "Rutin konsültasyonlar çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır ve hemen yardım gerektirmez. Bu tanım sınıflamayla uyumludur, dolayısıyla yanlış ifade değildir.",
+      "D": "Aynı gün görülmesi gereken hastalar acil olmayan, ayrı bir gruptur; acil grup yalnız hemen yardım gerektiren durumlardan oluşur. İki grubu birleştirmek sınıflamayı bozduğu için bu ifade yanlıştır ve doğru cevaptır.",
+      "E": "Acil konsültasyon, psikiyatri hekiminin hemen yardımını gerektiren durumları kapsar; deliryum, psikotik ajitasyon ve intihar girişimi örnektir. İfade doğrudur, bu nedenle yanlış ifade aranırken elenir."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q20"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Bir serviste yatan hastada hemen müdahale gerektirmeyen, ancak gün bitmeden görülmesi istenen ruhsal yakınmalar nedeniyle psikiyatri konsültasyonu isteniyor. Bu istek aciliyete göre hangi gruptadır?",
+     "secenekler": {
+      "A": "Acil konsültasyon",
+      "B": "Aynı gün görülmesi gereken konsültasyon",
+      "C": "Rutin konsültasyon",
+      "D": "Hekim merkezli konsültasyon",
+      "E": "Geniş merkezli konsültasyon"
+     },
+     "dogru": "B",
+     "aciklama": "Acil olmayan ancak aynı gün içinde görülmesi gereken hastalar aciliyet sınıflamasının ikinci grubunu oluşturur. Hekim ve geniş merkezli konsültasyonlar aciliyete değil, konsültasyonun amacına göre yapılan Lipowski sınıflamasına aittir.",
+     "sik_aciklamalari": {
+      "A": "Acil konsültasyon psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon ve intihar girişimi gibi durumlar içindir. Soruda hasta acil değil, aynı gün içinde görülebilir olduğundan bu grup uymaz.",
+      "B": "Aynı gün görülmesi gereken konsültasyon, acil olmayan ancak aynı gün içinde değerlendirilmesi gereken hastaları kapsayan ikinci gruptur. Soruda tarif edilen hasta tam olarak bu tanıma uyduğu için doğru cevaptır.",
+      "C": "Rutin konsültasyonlar çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır ve aynı gün görülme zorunluluğu taşımaz. Hastanın aynı gün değerlendirilmesi gerektiği belirtildiğinden bu grup uymaz.",
+      "D": "Hekim merkezli konsültasyon, hekimin hastayla iletişiminde yaşadığı güçlüğün aşılması için istenir; Lipowski sınıflamasına aittir. Aciliyete göre yapılan sınıflamayla ilgisi olmadığı için burada karşılık bulmaz.",
+      "E": "Geniş merkezli konsültasyon, hasta, tedavi ekibi ve aile arasındaki sorunun çözümü için istenir ve Lipowski sınıflamasındadır. Aciliyet ölçütünü değil konsültasyonun amacını anlattığından soruyu yanıtlamaz."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q21"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon durumlarından biridir?",
+     "secenekler": {
+      "A": "Hekimin hastayla iletişim güçlüğü",
+      "B": "Rutin izlem amaçlı değerlendirme",
+      "C": "Deliryum",
+      "D": "Hastaya bilgi verilmemesi",
+      "E": "Konsültasyon raporunun yazılması"
+     },
+     "dogru": "C",
+     "aciklama": "Deliryum, psikotik ajitasyon ve intihar girişimi psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örnekleridir. Hekimin iletişim güçlüğü hekim merkezli konsültasyonu, izlem amaçlı değerlendirme rutin grubu tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Hekimin hastayla iletişim güçlüğü hekim merkezli konsültasyonun nedenidir ve Lipowski sınıflamasındadır. Hemen yardım gerektiren bir acil durum olmadığı için acil konsültasyon örneği sayılmaz.",
+      "B": "Rutin izlem amaçlı değerlendirme, çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlı konsültasyonların niteliğidir. Hemen yardım gerektirmediğinden acil grubun örneği değildir.",
+      "C": "Deliryum, psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örneklerinin başında gelir; psikotik ajitasyon ve intihar girişimi diğer örneklerdir. Bu nedenle doğru cevap deliryumdur.",
+      "D": "Hastaya bilgi verilmemesi, ajitasyon, uyum sorunu ya da depresyonu anlamaya ışık tutan bir veri toplama bulgusudur. Kendi başına hemen yardım gerektiren bir durum olmadığı için acil konsültasyon örneği değildir.",
+      "E": "Konsültasyon raporunun yazılması, konsültasyon sürecinin bir parçasıdır ve hekimler arası yazılı iletişimi sağlar. Hastanın içinde bulunduğu bir klinik durumu değil bir işlemi anlattığı için acil konsültasyon gerektiren durumlardan biri değildir."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q22"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Acil konsültasyon gerektiren durumlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Deliryum acil konsültasyon örneğidir",
+      "B": "Rutin izlem konsültasyonları acil grubun örneğidir",
+      "C": "İntihar girişimi acil konsültasyon örneğidir",
+      "D": "Acil konsültasyon hemen psikiyatrik yardım gerektirir",
+      "E": "Psikotik ajitasyon acil konsültasyon örneğidir"
+     },
+     "dogru": "B",
+     "aciklama": "Rutin konsültasyonlar çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır ve acil değildir; acil grup deliryum, psikotik ajitasyon ve intihar girişimi gibi hemen yardım gerektiren durumlardan oluşur.",
+     "sik_aciklamalari": {
+      "A": "Deliryum, psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örneklerinin başında gelen bir durumdur. İfade sınıflamayı doğru aktardığı için yanlış ifade aranırken elenir.",
+      "B": "Rutin izlem konsültasyonları çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır; acil değildirler. Bu nedenle acil grubun örneği saymak yanlıştır ve doğru cevaptır.",
+      "C": "İntihar girişimi, acil konsültasyonun tipik örneklerinden biridir ve psikiyatri hekiminin hemen yardımını gerektirir. İfade doğrudur; bu nedenle yanlış ifade aranırken elenir.",
+      "D": "Acil konsültasyonun ayırt edici özelliği, psikiyatri hekiminin hemen yardımını gerektirmesidir; bu yüzden aynı gün ya da rutin gruplardan ayrılır. İfade doğru olduğu için elenir.",
+      "E": "Psikotik ajitasyon, psikiyatri hekiminin hemen yardımını gerektiren durumlardandır ve acil konsültasyon örneği olarak sayılır. İfade doğru olduğu için yanlış ifade aranırken elenir."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q23"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Ortopedi servisinde yatan yaşlı hastada deliryum geliştiği fark ediliyor ve psikiyatri konsültasyonu isteniyor. Bu istek aciliyete göre hangi gruba girer?",
+     "secenekler": {
+      "A": "Acil konsültasyon",
+      "B": "Rutin konsültasyon",
+      "C": "Aynı gün görülmesi gereken konsültasyon",
+      "D": "Hekim merkezli konsültasyon",
+      "E": "Durum merkezli konsültasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Deliryum, psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örnekleri arasındadır. Rutin, izlem amaçlı ve aynı gün görülecek konsültasyonlar acil olmayan gruplardır; hekim ve durum merkezli türler ise aciliyete değil amaca göre yapılan sınıflamadandır.",
+     "sik_aciklamalari": {
+      "A": "Acil konsültasyon, psikiyatri hekiminin hemen yardımını gerektiren durumlar içindir; deliryum, psikotik ajitasyon ve intihar girişimi bunun örnekleridir. Hastada deliryum geliştiği için istek bu gruba girer ve bu nedenle doğru cevaptır.",
+      "B": "Rutin konsültasyonlar çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır ve hemen yardım gerektirmez. Deliryum hemen yardım gerektirdiğinden hasta bu gruba girmez.",
+      "C": "Aynı gün görülmesi gereken konsültasyon, acil olmayan ancak gün içinde değerlendirilmesi gereken hastalar içindir ve aciliyet sınıflamasının ikinci grubudur. Deliryum psikiyatri hekiminin hemen yardımını gerektirdiğinden hasta bu gruba girmez.",
+      "D": "Hekim merkezli konsültasyon, hekimin hastayla iletişiminde yaşadığı güçlüğün aşılması için istenir ve Lipowski'nin amaca göre yaptığı sınıflamaya aittir. Soru aciliyet derecesini sorduğundan bu tür soruyu yanıtlamaz.",
+      "E": "Durum merkezli konsültasyon, hasta ile tedavi ekibi arasındaki çatışmaya dönüktür ve Lipowski'nin amaca göre yaptığı sınıflamadadır. Soru aciliyet derecesini sorduğundan bu tür soruyu yanıtlamaz."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q24"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Psikiyatri hekiminin hemen yardımını gerektiren durumlardan biri olarak aşağıdakilerden hangisi sayılır?",
+     "secenekler": {
+      "A": "Psikotik ajitasyon",
+      "B": "Rutin liyezon vizitine katılma",
+      "C": "Tedavi planının hekime aktarılması",
+      "D": "Takip kaydının tutulması",
+      "E": "Konsültasyon raporunun yazılması"
+     },
+     "dogru": "A",
+     "aciklama": "Psikotik ajitasyon, deliryum ve intihar girişimi ile birlikte psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon durumlarındandır. Diğer şıklar konsültasyon sürecinin işlemleridir, hastanın acil klinik durumu değildir.",
+     "sik_aciklamalari": {
+      "A": "Psikotik ajitasyon, psikiyatri hekiminin hemen yardımını gerektiren durumlardandır ve deliryum ile intihar girişimiyle birlikte acil konsültasyonun örneklerini oluşturur. Bu nedenle doğru cevaptır.",
+      "B": "Rutin liyezon vizitleri, hastayı izlemeyi kolaylaştıran düzenli ziyaretlerdir ve hemen yardım gerektirmeyen bir izlem uygulamasıdır. Hastanın acil bir klinik durumunu tanımlamadığı için acil konsültasyon durumu değildir.",
+      "C": "Tanı-tedavi planının hekime aktarılması, konsültasyon sürecinin dördüncü basamağıdır ve bir işlemdir. Hemen yardım gerektiren bir hasta durumunu anlatmadığı için acil konsültasyon durumlarından biri değildir.",
+      "D": "Takip kaydı tutma, rutin vizit yapılamadığında takip gereken vakaları gözden kaçırmamak için yapılan bir kayıt işlemidir. Hemen yardım gerektiren bir klinik durum olmadığı için acil konsültasyon örneği değildir.",
+      "E": "Konsültasyon raporunun yazılması sürecin bir işlemidir ve hekimler arası iletişimi sağlar. Hastanın acil bir klinik durumunu tanımlamadığı için acil konsültasyon örneği değildir."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q25"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "KLP'de deliryum ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Acil konsültasyon gerektiren durumlardandır",
+      "B": "Psikiyatri dışı hekimlerce büyük oranda doğru tanınır",
+      "C": "Psikiyatri hekiminin hemen yardımını gerektirir",
+      "D": "Psikotik ajitasyon ve intihar girişimiyle aynı acil grupta yer alır",
+      "E": "Rutin ve izlem amaçlı konsültasyon grubuna girer"
+     },
+     "dogru": "E",
+     "aciklama": "KLP'de deliryum, psikiyatri hekiminin hemen yardımını gerektirdiği için acil konsültasyon grubundadır ve psikiyatri dışı hekimlerce büyük oranda doğru tanınır; rutin ve izlem amaçlı konsültasyon grubuna girmez.",
+     "sik_aciklamalari": {
+      "A": "Deliryum, psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon durumlarından biridir ve bu gruptaki ilk örnektir. İfade doğru olduğundan yanlış ifadeyi arayan soruda seçilmez.",
+      "B": "Psikiyatri dışı hekimler bilişsel bozukluk, deliryum, psikotik bozukluk ve alkol madde kullanım bozukluklarını büyük oranda doğru tanır. İfade doğru bir bilgi verdiğinden yanlışı arayan soruda seçilmez.",
+      "C": "Acil konsültasyonun tanımı, psikiyatri hekiminin hemen yardımını gerektirmesidir ve deliryum bu tanıma uyar. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Deliryum, psikotik ajitasyon ve intihar girişimi acil konsültasyonun üç örneğidir ve aynı grupta toplanır. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Rutin konsültasyonlar çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır; deliryum ise hemen yardım gerektirdiği için bu gruba girmez. İfade bu nedenle yanlıştır ve doğru cevaptır."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q26"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "KLP'de acil konsültasyon gerektiren ve psikiyatri dışı hekimlerce büyük oranda doğru tanınan bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Depresyon",
+      "B": "Anksiyete bozukluğu",
+      "C": "Konversiyon bozukluğu",
+      "D": "Histeri",
+      "E": "Deliryum"
+     },
+     "dogru": "E",
+     "aciklama": "KLP'de deliryum, psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örneğidir ve psikiyatri dışı hekimlerce büyük oranda doğru tanınır.",
+     "sik_aciklamalari": {
+      "A": "Depresyon belirtileri nedeniyle istenen konsültasyonların yarısından fazlasında bu belirtileri karşılayan bir ruhsal hastalık bulunmamıştır. Acil konsültasyon örnekleri arasında anılmadığı için bu bozukluk sorudaki iki özelliğe uymaz.",
+      "B": "Anksiyete belirtileri nedeniyle istenen konsültasyonların yarısından fazlasında bu belirtileri karşılayan bir ruhsal hastalık tespit edilmemiştir. Hemen yardım gerektiren durumlar içinde anılmadığı için bu bozukluk sorunun ikinci özelliğini karşılamaz.",
+      "C": "Konversiyon belirtileri nedeniyle istenen konsültasyonların yarısından fazlasında bu belirtileri karşılayan bir ruhsal hastalık tespit edilmemiştir. Acil grubun örnekleri deliryum, psikotik ajitasyon ve intihar girişimidir; konversiyon bunlardan biri değildir.",
+      "D": "Histeri, konsültasyon psikiyatrisinde önemli ancak yaygın olmayan bir sorundur ve hastaların ancak küçük bir kısmı sevk edilir. Hemen yardım gerektiren bir acil durum olarak anılmadığı için bu bozukluk soruya uymaz.",
+      "E": "KLP'de deliryum, psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon örneğidir ve psikiyatri dışı hekimlerce büyük oranda doğru tanınır. Sorudaki iki özelliği birlikte taşıdığı için doğru cevaptır."
+     },
+     "s": 16,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q27"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Konsültasyon sürecinin beş basamağını, veri toplamayı, hastaya bilgi verilmesini ve başarıyı etkileyen faktörleri açıklar (s. 17-21).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Psikiyatrik konsültasyon sürecinin beş basamağı arasında aşağıdakilerden hangisi ikinci basamaktır?",
+     "secenekler": {
+      "A": "Hastaya yönelik verilerin toplanması",
+      "B": "Ruhsal durum muayenesi",
+      "C": "Tanı ve tedavi planının hazırlanması",
+      "D": "Planın hastaya ve ilgili hekime aktarılması",
+      "E": "Takip ve izleme"
+     },
+     "dogru": "B",
+     "aciklama": "Süreç sırasıyla veri toplama, ruhsal durum muayenesi, tanı-tedavi planı, planın aktarılması ve takip-izleme basamaklarından oluşur; muayene ikinci basamaktır.",
+     "sik_aciklamalari": {
+      "A": "Hastaya yönelik verilerin toplanması sürecin birinci basamağıdır ve muayenenin en önemli adımlarından biridir. İkinci basamak olmadığı için bu soruda doğru değildir.",
+      "B": "Ruhsal durum muayenesi sürecin ikinci basamağıdır; veri toplamadan sonra yapılır ve hastanın ruhsal durumunun alanlara göre değerlendirilmesini içerir. Bu nedenle doğru cevaptır.",
+      "C": "Tanı ve tedavi planının hazırlanması üçüncü basamaktır ve muayeneden sonra yapılır. Sıralamada ikinci sırada yer almadığı için bu soruda doğru değildir.",
+      "D": "Tanı-tedavi planının hastaya ve ilgili hekime aktarılması dördüncü basamaktır ve planın hazırlanmasından sonra gelir. Sıralamada ikinci sırada olmadığı için bu soruda doğru değildir.",
+      "E": "Takip ve izleme, sürecin beşinci ve son basamağıdır ve hastanın sonraki gidişini kapsar. İkinci sırada yer almadığı için bu soruda doğru değildir."
+     },
+     "s": 17,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q28"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyon sürecinde tanı ve tedavi planı hazırlandıktan hemen sonra gelen basamak aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ruhsal durum muayenesi",
+      "B": "Hastaya yönelik verilerin toplanması",
+      "C": "Takip ve izleme",
+      "D": "Tanı-tedavi planının aktarılması",
+      "E": "Konsültasyon talebinin yeniden değerlendirilmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Plan hazırlandıktan sonra hastaya ve ilgili hekime aktarılır; takip ve izleme ise en son basamaktır. Veri toplama ile muayene planın öncesinde yer alır.",
+     "sik_aciklamalari": {
+      "A": "Ruhsal durum muayenesi ikinci basamaktır ve plan hazırlanmadan önce yapılır. Sorulan basamak plandan sonra geldiği için bu şık doğru değildir.",
+      "B": "Hastaya yönelik verilerin toplanması süreçte en başta gelir ve muayeneyi hazırlar. Plan hazırlandıktan sonra gelen basamağı sormadığı için doğru değildir.",
+      "C": "Takip ve izleme sürecin en son basamağıdır ve planın aktarılmasından sonra gelir. Plan hazırlandıktan hemen sonra gelen basamak olmadığı için doğru değildir.",
+      "D": "Tanı ve tedavi planı hazırlandıktan hemen sonra plan hastaya ve ilgili hekime aktarılır; bu dördüncü basamaktır. Bu nedenle doğru cevaptır.",
+      "E": "Süreç beş basamaktır: veri toplama, muayene, plan, aktarım ve takip-izleme. Konsültasyon talebinin yeniden değerlendirilmesi bu basamaklardan biri olmadığı için hazırlanan plandan sonra gelen adım diye seçilemez."
+     },
+     "s": 17,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q29"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Başarılı bir psikiyatrik konsültasyonda etkili üç faktör aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Hastanın sorumlu hekimi, servis hemşiresi ve hasta",
+      "B": "Konsültasyon-liyezon psikiyatristi, hasta yakını ve hasta",
+      "C": "Hastanın sorumlu hekimi, konsültasyon-liyezon psikiyatristi ve hasta",
+      "D": "Hastanın sorumlu hekimi, konsültasyon-liyezon psikiyatristi ve hasta yakını",
+      "E": "Servis hemşiresi, hasta yakını ve hasta"
+     },
+     "dogru": "C",
+     "aciklama": "Etkili üç faktör hastanın medikal durumundan sorumlu hekim, konsültasyon-liyezon psikiyatristi ve hastanın kendisidir. Hemşire ve hasta yakını veri toplamada önemli bilgi kaynağıdır, ancak bu üçlünün içinde sayılmaz.",
+     "sik_aciklamalari": {
+      "A": "Sorumlu hekim ile hasta, üç etkili faktörün ikisidir. Servis hemşiresi veri toplamada değerli bir bilgi kaynağıdır ancak faktör sayılmaz; konsültasyon-liyezon psikiyatristi eksik kaldığı için ifade doğru değildir.",
+      "B": "Konsültasyon-liyezon psikiyatristi ve hasta, üç faktörün ikisidir. Hasta yakını faktör olarak sayılmaz ve hastanın medikal durumundan sorumlu hekim eksik kaldığından ifade doğru değildir.",
+      "C": "Hastanın medikal durumundan sorumlu hekim, konsültasyon-liyezon psikiyatristi ve hastanın kendisi başarılı konsültasyonda etkili üç faktördür. Bu nedenle doğru cevaptır.",
+      "D": "Sorumlu hekim ile konsültasyon-liyezon psikiyatristi doğru faktörlerdir; üçüncü faktör ise hastanın kendisidir. Hasta yakını faktör sayılmadığından ifade doğru değildir.",
+      "E": "Servis hemşiresi veri toplamada bilgi kaynağıdır; hasta yakını da süreçte yer alabilir. Ancak ikisi etkili üç faktör değildir ve sorumlu hekim ile psikiyatrist eksik kaldığından ifade doğru değildir."
+     },
+     "s": 21,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q30"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyonda veri toplama aşamasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Muayenenin en önemli adımlarından biridir",
+      "B": "Laboratuvar sonuçları mutlaka bilinmelidir",
+      "C": "Hastanın kullandığı ilaçların psikoaktif ilaçlarla etkileşimi göz önünde bulundurulur",
+      "D": "Yalnız özgeçmiş ve soygeçmiş bilgisi yeterlidir",
+      "E": "Servis hemşireleriyle görüşülür"
+     },
+     "dogru": "D",
+     "aciklama": "Yalnız hastaya ait özgeçmiş-soygeçmiş bilgisinin alınması yetersiz sonuçlar doğurur; servis işleyişi, aile, ilaçlar, laboratuvar ve hemşire görüşmesi de gerekir.",
+     "sik_aciklamalari": {
+      "A": "Veri toplama, muayenenin en önemli adımlarından biridir ve konsültasyon sürecinin ilk basamağıdır. İfade doğrudur; bu nedenle yanlış ifade aranırken elenir.",
+      "B": "Laboratuvar sonuçları mutlaka bilinmelidir ve gerekli olduğunda diğer kliniklerden ek konsültasyonlar istenir. İfade doğru olduğu için yanlış ifade aranırken elenir.",
+      "C": "Hastanın kullandığı tıbbi ilaçların endikasyon alanları ve psikoaktif ilaçlarla etkileşimleri göz önünde bulundurulur. İfade doğru olduğu için yanlış ifade aranırken elenir.",
+      "D": "Yalnız özgeçmiş ve soygeçmiş bilgisinin alınması yetersiz sonuçlar doğurur; servis işleyişi, aile, ilaç ve laboratuvar da değerlendirilmelidir. Bu nedenle 'yeterlidir' diyen ifade yanlıştır ve doğru cevaptır.",
+      "E": "Servis hemşireleri hastalarla devamlı ilgilendiği ve günlük takibi yaptığı için, bilgi toplanırken onlarla da görüşülür. İfade bilinen bilgiyle uyumlu olduğundan yanlış ifade aranırken elenir."
+     },
+     "s": 18,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q31"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Kliniklerde hastalarla devamlı ilgilenen, günlük takiplerini yapan ve tedavi yanıtlarını gözleyen büyük oranda hangi sağlık çalışanı grubudur?",
+     "secenekler": {
+      "A": "Hemşireler",
+      "B": "Asistan hekimler",
+      "C": "Sosyal hizmet uzmanları",
+      "D": "Psikologlar",
+      "E": "Diyetisyenler"
+     },
+     "dogru": "A",
+     "aciklama": "Hastalarla devamlı ilgilenen, günlük takip yapan ve tedavi yanıtını gözleyen büyük oranda servis hemşireleridir; veri toplarken onlarla da görüşülmelidir.",
+     "sik_aciklamalari": {
+      "A": "Hemşireler, kliniklerde hastalarla devamlı ilgilenen, günlük takipleri yapan ve tedavi yanıtlarını gözleyen büyük oranda sağlık çalışanlarıdır. Bu nedenle doğru cevaptır.",
+      "B": "Asistan hekimler hastanın tedavisinde görev alır, ancak günlük takip ve tedavi yanıtını gözlemeyi büyük oranda hemşirelere atfeder. Bu yüzden doğru değildir.",
+      "C": "Sosyal hizmet uzmanları hastanın sosyal sorunlarıyla ilgilenir; devamlı günlük takip ve tedavi yanıtı gözlemi onların işi olarak anılmaz. Bu yüzden doğru değildir.",
+      "D": "Psikologlar ruhsal değerlendirmeye katkı verir; ancak kliniklerde hastalarla devamlı ilgilenen ve günlük takibi yapan grup olarak anılmaz. Bu görev büyük oranda hemşirelere aittir.",
+      "E": "Diyetisyenler beslenme planıyla ilgilenir. Kliniklerde hastalarla devamlı ilgilenen, günlük takip yapan ve tedavi yanıtlarını gözleyen kişiler büyük oranda hemşirelerdir; bu nedenle doğru değildir."
+     },
+     "s": 18,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q32"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Klinikte yatan bir hastaya hastalığı hakkında bilgi verilmemiş olması aşağıdakilerden hangisini anlamaya ışık tutabilir?",
+     "secenekler": {
+      "A": "Hastanın olası ajitasyonunu, uyum sorununu ya da depresyonunu",
+      "B": "Hastanın laboratuvar sonuçlarındaki bozukluğu",
+      "C": "Hekimin hasta ile iletişim güçlüğünü",
+      "D": "Hastanın kullandığı ilaçların etkileşimini",
+      "E": "Hastanın ailesindeki ruhsal hastalığı"
+     },
+     "dogru": "A",
+     "aciklama": "Hastaya bilgi verilmemiş olması hastadaki olası ajitasyonu, uyum sorununu ya da depresyonu anlamaya ışık tutar; diğer şıklar bilgilendirme eksikliğiyle doğrudan ilişkilendirilen durumlar değildir.",
+     "sik_aciklamalari": {
+      "A": "Hastaya hastalığı hakkında bilgi verilmemiş olması hastadaki olası ajitasyonu, uyum sorununu ya da depresyonu anlamaya ışık tutar. Bu nedenle doğru cevaptır.",
+      "B": "Laboratuvar sonuçları veri toplamanın ayrı bir başlığıdır ve hastanın bilgi eksikliğini açıklamaz. Bilgilendirilmemenin anlattığı durumlarla ilişkisi kurulmadığı için doğru değildir.",
+      "C": "Hekimin hasta ile iletişim güçlüğü hekim merkezli konsültasyonun konusudur. Hastaya bilgi verilmemesinin yol açtığı bir tablo olarak anılmadığı için doğru değildir.",
+      "D": "İlaç etkileşimleri, hastanın kullandığı tıbbi ve psikoaktif ilaçlar arasındaki ilişkiyi ifade eder ve veri toplamada değerlendirilir. Bilgilendirme eksikliğinin sonucu olmadığı için doğru değildir.",
+      "E": "Ailedeki ruhsal hastalık, soygeçmiş verisi olarak veri toplamada sorgulanır. Hastaya hastalığı hakkında bilgi verilmemesinin açıkladığı bir durum olmadığı için doğru değildir."
+     },
+     "s": 19,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q33"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Psikiyatrik konsültasyon süreci kaç alt başlık altında sınıflandırılabilir?",
+     "secenekler": {
+      "A": "Üç",
+      "B": "Dört",
+      "C": "Altı",
+      "D": "Beş",
+      "E": "Yedi"
+     },
+     "dogru": "D",
+     "aciklama": "Süreç hastaya yönelik verilerin toplanması, ruhsal durum muayenesi, tanı-tedavi planı, planın aktarılması ve takip-izleme olmak üzere beş alt başlıktır.",
+     "sik_aciklamalari": {
+      "A": "Üç sayısı konsültasyonun aciliyete göre gruplarının ya da üç işlevin sayısıdır. Süreç üç değil beş basamaktan oluştuğu için şık doğru değildir.",
+      "B": "Dört sayısı sürecin basamak sayısı değildir. Süreç veri toplama, ruhsal durum muayenesi, plan hazırlama, planın aktarılması ve takip-izleme olmak üzere beş basamaktan oluşur; doğru sayı beştir.",
+      "C": "Altı sayısı sürecin basamak sayısı değildir. Süreç veri toplama, ruhsal durum muayenesi, plan hazırlama, planın aktarılması ve takip-izleme olmak üzere beş basamaktan oluşur; doğru sayı beştir.",
+      "D": "Süreç veri toplama, ruhsal durum muayenesi, plan hazırlama, planın aktarılması ve takip-izleme olmak üzere beş basamaktır. Bu nedenle doğru cevaptır.",
+      "E": "Yedi sayısı sürecin basamak sayısı değildir. Süreç veri toplama, ruhsal durum muayenesi, plan hazırlama, planın aktarılması ve takip-izleme olmak üzere beş basamaktan oluşur; doğru sayı beştir."
+     },
+     "s": 17,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q34"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Başarılı bir psikiyatrik konsültasyonda etkili faktörlerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Etkili üç faktör vardır",
+      "B": "Hasta yakını faktörlerden biridir",
+      "C": "Hastanın kendisi faktörlerden biridir",
+      "D": "Konsültasyon-liyezon psikiyatristi faktörlerden biridir",
+      "E": "Hastanın medikal durumundan sorumlu hekim faktörlerden biridir"
+     },
+     "dogru": "B",
+     "aciklama": "Etkili üç faktör sorumlu hekim, konsültasyon-liyezon psikiyatristi ve hastanın kendisidir; hasta yakını bu faktörler arasında sayılmaz.",
+     "sik_aciklamalari": {
+      "A": "Başarılı konsültasyonda etkili üç faktör vardır; faktör sayısı bilinen bilgiyle birebir uyuşur. Doğru bir bilgi olduğundan yanlış ifadeyi arayan soruda seçilmez.",
+      "B": "Hasta yakını, etkili üç faktörden biri olarak sayılmaz; faktörler sorumlu hekim, psikiyatrist ve hastanın kendisidir. Bu nedenle ifade yanlıştır ve doğru cevaptır.",
+      "C": "Hastanın kendisi, etkili üç faktörün üçüncüsüdür ve sürece katılımı konsültasyonun başarısını etkiler. Bu ifade bilinen bilgiyle uyumludur ve doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Konsültasyon-liyezon psikiyatristi, etkili üç faktörün ikincisidir ve psikiyatrik değerlendirmeyi yapan kişidir. Bu ifade bilinen bilgiyle uyumludur ve doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Hastanın medikal durumundan sorumlu hekim, üç faktörün birincisidir ve hastanın tedavisini yürüten kişidir. İfade doğru olduğundan yanlışı arayan soruda seçilmez."
+     },
+     "s": 21,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q35"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyonda veri toplanırken aşağıdakilerden hangisi değerlendirilmesi gerekenler arasında yer almaz?",
+     "secenekler": {
+      "A": "Hastaya tanı ve tedavi planının aktarılması",
+      "B": "Kullanılan ilaçların psikoaktif ilaçlarla etkileşimi",
+      "C": "Hastayla ilgili laboratuvar sonuçları",
+      "D": "Servis hemşireleriyle yapılan görüşme",
+      "E": "Hastanın yattığı servisin işleyişi"
+     },
+     "dogru": "A",
+     "aciklama": "Veri toplamada servis işleyişi, aile, ilaçlar ve etkileşimleri, laboratuvar sonuçları ve hemşire görüşmesi değerlendirilir; tanı ve tedavi planının hastaya aktarılması sürecin dördüncü basamağıdır.",
+     "sik_aciklamalari": {
+      "A": "Hastaya tanı ve tedavi planının aktarılması, konsültasyon sürecinin dördüncü basamağıdır; veri toplama ise ilk basamaktır ve servis işleyişi, aile, ilaçlar, laboratuvar ve hemşire görüşmesi gibi bilgilere dayanır. Bu nedenle doğru cevaptır.",
+      "B": "Kullanılan ilaçların endikasyonları ve psikoaktif ilaçlarla etkileşimleri, veri toplama aşamasında göz önünde bulundurulması gereken bilgilerdendir. Bu nedenle değerlendirilmeyenler arasında değildir.",
+      "C": "Laboratuvar sonuçları mutlaka bilinmelidir ve veri toplamanın temel unsurlarındandır; gerekirse diğer kliniklerden ek konsültasyon istenir. Bu nedenle değerlendirilmeyenler arasında değildir.",
+      "D": "Servis hemşireleri hastayla devamlı ilgilendiği ve günlük takibi yaptığı için onlarla görüşmek veri toplamanın parçasıdır. Bu nedenle değerlendirilmeyenler arasında değildir.",
+      "E": "Hastanın yattığı servisin işleyişi, veri toplama aşamasında mutlaka değerlendirilmesi gereken bilgilerden biridir ve gerektiğinde aile bilgisiyle birlikte ele alınır. Bu nedenle değerlendirilmeyenler arasında değildir."
+     },
+     "s": 18,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q36"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Konsültasyon öncesinde hastaya psikiyatrik konsültasyon hakkında bilgi verilmediği öğreniliyor. Bu durumda yapılması gereken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Konsültasyon iptal edilir",
+      "B": "Hasta bilgilendirilmeden muayene yapılır",
+      "C": "Bilgilendirme yapılmamasının nedeni araştırılır",
+      "D": "Bilgi yalnızca hasta yakınlarına verilir",
+      "E": "Hastanın itirazı dikkate alınmadan görüşme başlatılır"
+     },
+     "dogru": "C",
+     "aciklama": "Hastanın etik ve yasal açılardan konsültasyondan haberdar edilmesi gerekir; bilgilendirme yapılmamışsa nedeni araştırılır.",
+     "sik_aciklamalari": {
+      "A": "Konsültasyonu iptal etmek, hastanın sorunlarının çözümü için gereken değerlendirmeyi engeller ve ona yardım edilmesini geciktirir. Bilgilendirme eksikliğinin nedeninin araştırılması gerektiği için şık doğru değildir.",
+      "B": "Hastayı bilgilendirmeden muayene etmek, hastanın etik ve yasal açılardan konsültasyondan haberdar edilmesi gerektiği ilkesine aykırıdır. Bilgilendirme eksikliği giderilmediği için şık doğru değildir.",
+      "C": "Bilgilendirme yapılmamışsa nedeni araştırılmalıdır; hasta etik ve yasal açılardan konsültasyondan haberdar edilmelidir. Soruda tarif edilen durumda doğru yaklaşım budur, bu nedenle doğru cevaptır.",
+      "D": "Bilgiyi yalnızca yakınlara vermek, hastanın kendisinin konsültasyondan haberdar edilmesi gerektiği ilkesine aykırıdır. Hasta bilgilendirilmediği ve nedeni araştırılmadığı için şık doğru değildir.",
+      "E": "Hastanın itirazını yok saymak, onam ilkesine ve yargılamayan yaklaşıma aykırıdır. Bilgilendirme eksikliğinin nedeni de araştırılmadığı için bu yaklaşım doğru değildir."
+     },
+     "s": 19,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q37"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Ruhsal durum muayenesinin onam, gizlilik, yaklaşım, değerlendirme alanları ve sonlandırma ilkelerini açıklar (s. 21-24).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyonda hasta bilgilendirilmesine rağmen onam vermiyor ve görüşmeyi reddediyor. Bu durumda aşağıdakilerden hangisi yapılabilir?",
+     "secenekler": {
+      "A": "Hastaya onam vermesi için baskı uygulanır",
+      "B": "Muayeneden vazgeçilebilir",
+      "C": "Görüşme hasta yakınları olmadan zorla yapılır",
+      "D": "Hastanın görüşmeyi reddetmesi dikkate alınmadan muayene tamamlanır",
+      "E": "Hasta cezalandırılarak görüşme sürdürülür"
+     },
+     "dogru": "B",
+     "aciklama": "Hastanın onam vermediği ya da görüşmeyi reddettiği durumlarda muayeneden vazgeçilebilir. Hastaya baskı uygulamak, cezalandırmak ya da reddi yok saymak onam ilkesiyle ve yargılamayan yaklaşımla çelişir.",
+     "sik_aciklamalari": {
+      "A": "Hastaya baskı yapmak yargılamayan yaklaşımla ve onam ilkesiyle çelişir; onam bilgilendirmeden sonra hastanın kendi isteğiyle alınır. Bu nedenle doğru değildir.",
+      "B": "Hasta bilgilendirildikten sonra onam vermezse ya da görüşmeyi reddederse muayeneden vazgeçilebilir; onam, görüşmenin temel koşuludur. Bu yaklaşım onam ilkesine uygun olduğu için doğru cevaptır.",
+      "C": "Hasta reddettiği hâlde görüşmeyi zorla yürütmek onam ilkesini çiğner. Hasta yakınlarının varlığı da reddi ortadan kaldırmaz, bu nedenle doğru değildir.",
+      "D": "Hastanın reddini yok sayıp muayeneyi tamamlamak onam ilkesine aykırıdır. Hasta görüşmeyi reddettiğinde muayeneden vazgeçilebilir; bu nedenle ret dikkate alınmadan sürdürülen muayene doğru yaklaşım değildir.",
+      "E": "Hastayı cezalandırmak, hastanın cezalandırılıyor hissine kapılmaması gerektiği ilkesine aykırıdır ve ilişkiyi bozar. Onam ve yargılamayan yaklaşım gereği muayenede böyle bir tutum uygun değildir."
+     },
+     "s": 21,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q38"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyonda ruhsal durum muayenesi sırasındaki hekim tutumuyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Hastanın tutumu hekimin yaklaşımından etkilenmez",
+      "B": "Hastaya yargılayıcı davranmak muayeneyi kolaylaştırır",
+      "C": "Objektif ve yargılamadan uzak yaklaşım sonraki olumlu ilişkiler için temeldir",
+      "D": "Hastanın cezalandırılıyor hissine kapılması tedaviye uyumu artırır",
+      "E": "Küçük düşürücü ifadeler hastanın içgörüsünü geliştirir"
+     },
+     "dogru": "C",
+     "aciklama": "Hekimin objektif, yargılamadan uzak yaklaşımı hastanın konsültasyona tutumunu olumlu etkiler ve sonraki ilişkilerin temelidir. Yargılayıcı, incitici ve küçük düşürücü tutum hastayı cezalandırılıyor hissine sürükler.",
+     "sik_aciklamalari": {
+      "A": "Hekimin yaklaşımı, hastanın psikiyatrik konsültasyona ilişkin tutumunu doğrudan etkileyen bir faktördür. Bu nedenle tutumun hekimin yaklaşımından etkilenmediğini söyleyen ifade yanlıştır.",
+      "B": "Muayene sırasında yargılayıcı davranmak hastanın cezalandırılıyor hissine kapılmasına yol açar ve sonraki ilişkiyi zedeler. Bu nedenle muayeneyi kolaylaştırdığı söylenemez, doğru değildir.",
+      "C": "Hekimin objektif ve yargılamadan uzak yaklaşımı, hastanın tutumunu olumlu etkiler ve daha sonraki olumlu ilişkiler için temeldir. Bu nedenle doğru cevaptır.",
+      "D": "Hastanın cezalandırılıyor hissine kapılmaması gerekir; bu his hastanın konsültasyona tutumunu olumsuz etkiler. Bu nedenle cezalandırılma hissinin tedaviye uyumu artırdığı iddiası bilgiyle uyuşmaz, doğru değildir.",
+      "E": "Küçük düşürücü ifadeler hastayı incitir ve hekim-hasta ilişkisini zedeler. İçgörüyü geliştirdiği iddiası bilinen bilgiyle uyuşmadığı için doğru değildir; hekim yargılamadan uzak durmalıdır."
+     },
+     "s": 21,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q39"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik konsültasyonların süreklilik ve gizlilik boyutuyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Konsültasyonlar genellikle tek seferlik gerçekleşmez",
+      "B": "Takipler hastanın medikal tedavisi boyunca sürebilir",
+      "C": "Zamana yayılan yakın ilişkide gizlilik daha çok önem kazanır",
+      "D": "Gizlilik ortamı sağlanamasa da muayeneye hemen geçilir",
+      "E": "Ortam hastanın fiziksel durumu elverdiği ölçüde uygun hale getirilir"
+     },
+     "dogru": "D",
+     "aciklama": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir; bu yüzden gizlilik ortamı olmadan hemen muayeneye geçilir ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Psikiyatrik konsültasyonlar genellikle tek seferlik gerçekleşmez; hasta zamana yayılan takiplerle izlenir. Bu ifade bilinen bilgiyle uyumlu olduğu için yanlış ifade aranırken elenir.",
+      "B": "Hastanın medikal tedavisi boyunca sürece yayılmış takipler gerekebilir ve bu takipler hekim-hasta ilişkisini sürekli kılar. İfade doğru olduğu için yanlış ifade aranırken elenir.",
+      "C": "Hasta ile konsültan hekim arasında zamana yayılan yakın bir ilişki oluştuğundan gizlilik daha fazla önem kazanır. İfade doğru olduğu için elenir.",
+      "D": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir. Bu nedenle gizlilik olmadan muayeneye geçilir diyen ifade yanlıştır ve doğru cevaptır.",
+      "E": "Gizlilik için ortam, hastanın fiziksel durumu, bakımı ve tedavi teknikleri elverdiği ölçüde uygun hale getirilir. İfade doğru olduğu için yanlış ifade aranırken elenir."
+     },
+     "s": 22,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q40"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Konsültasyon istenen hastada ruhsal durum muayenesi sırasında değerlendirilmesi gereken alanlar arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Bilinç düzeyi",
+      "B": "İçgörü",
+      "C": "Kullanılan ilaçların psikoaktif ilaçlarla etkileşimi",
+      "D": "İntihar potansiyeli",
+      "E": "Bellek"
+     },
+     "dogru": "C",
+     "aciklama": "Dış görünüş, yönelim, bilinç, içgörü, davranış ve duygulanım, düşünce içeriği, bellek, psikotik özellikler ve intihar potansiyeli değerlendirme alanlarıdır; ilaç etkileşimi ise veri toplama basamağında ele alınır.",
+     "sik_aciklamalari": {
+      "A": "Bilinç düzeyi, ruhsal durum muayenesinde değerlendirilen alanlardan biridir ve hastanın uyanıklık durumunu yansıtır. Muayenenin parçası olduğu için değerlendirilmeyen şık değildir ve doğru cevap olamaz.",
+      "B": "İçgörü, hastanın hastalığına ilişkin farkındalığıdır ve ruhsal durum muayenesinin değerlendirme alanlarından biridir. Muayenenin parçası olduğu için değerlendirilmeyen şık değildir ve doğru cevap olamaz.",
+      "C": "Kullanılan ilaçların psikoaktif ilaçlarla etkileşimi, sürecin ilk basamağı olan veri toplamada göz önünde bulundurulur; ruhsal durum muayenesinin alanlarından biri değildir. Bu nedenle doğru cevaptır.",
+      "D": "İntihar potansiyeli, hastanın güvenliğini ilgilendiren ve ruhsal durum muayenesinde mutlaka değerlendirilen alanlardan biridir. Muayenenin parçası olduğu için değerlendirilmeyen şık değildir ve doğru cevap olamaz.",
+      "E": "Bellek, hastanın hatırlama işlevini yansıtan ve ruhsal durum muayenesinde değerlendirilen alanlardan biridir. Muayenenin parçası olduğu için değerlendirilmeyen şık değildir ve doğru cevap olamaz."
+     },
+     "s": 23,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q41"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Ruhsal durum muayenesi sonlandırılırken konsültan psikiyatri hekiminin yapması gereken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tedavi ayrıntılarını tek başına hastaya açıklamak",
+      "B": "Hastaya yalnızca teşekkür edip ayrılmak",
+      "C": "Değerlendirmesini kısaca belirtip servis hekimine yönlendirmek",
+      "D": "Değerlendirmesini hastadan saklamak",
+      "E": "Hasta yakınlarına bilgi verip hastayı bilgilendirmemek"
+     },
+     "dogru": "C",
+     "aciklama": "Konsültan hekim hastaya durumunu ve değerlendirmesini kısaca belirtir, tedavi planının genel çerçevesini verir ve daha ileri düzenlemeler için kendi servis hekiminin bilgi vereceğini söyler.",
+     "sik_aciklamalari": {
+      "A": "Ayrıntılı tedavi düzenlemelerini hastanın kendi servis hekimi anlatır. Konsültan hekimin bunları tek başına açıklaması uygun değildir; bu nedenle şık doğru değildir.",
+      "B": "Hastaya yalnızca teşekkür edip ayrılmak, değerlendirmenin kısaca paylaşılmasını ve tedavi planının genel çerçevesinin anlatılmasını atlar. Bu nedenle muayene sonunda beklenen uygun yaklaşım değildir.",
+      "C": "Konsültan hekim değerlendirmesini kısaca belirtir, genel planı anlatır ve ileri düzenlemeler için servis hekiminin bilgi vereceğini söyler. Bu nedenle doğru cevaptır.",
+      "D": "Konsültan hekim, hastaya durumunu ve hastalığına ilişkin değerlendirmesini kısaca belirtmelidir. Değerlendirmeyi hastadan saklamak bu ilkeye aykırı olduğundan uygun yaklaşım değildir.",
+      "E": "Yalnızca yakınlara bilgi verip hastayı bilgilendirmemek, hastanın bilgilendirilme hakkıyla çelişir. Muayene sonunda hastaya bilgi verilmesi gerektiğinden bu yaklaşım uygun değildir."
+     },
+     "s": 24,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q42"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Konsültan hekimin ruhsal durum muayenesinden önce yapması gerekenler arasında aşağıdakilerden hangisi vardır?",
+     "secenekler": {
+      "A": "Hastanın onamını almadan görüşmeye başlamak",
+      "B": "Tanıyı koyup tedavi planını açıklamak",
+      "C": "Hasta yakınlarının onayını hastanın yerine almak",
+      "D": "Kendisini tanıtıp görüşmenin amacını belirtmek",
+      "E": "Muayeneyi gizlilik ortamı aranmadan başlatmak"
+     },
+     "dogru": "D",
+     "aciklama": "Konsültan hekim muayeneden önce hastayı tanımalı, kendisini tanıtmalı, görüşmenin amacını hasta ve yakınlarına belirtmeli ve hastanın onamını almalıdır.",
+     "sik_aciklamalari": {
+      "A": "Onam almadan görüşmeye başlamak onam ilkesine aykırıdır; hasta bilgilendirildikten sonra onamı alınmalıdır. Bu nedenle muayeneden önce yapılması gerekenler arasında değildir.",
+      "B": "Tanı koyma ve tedavi planını açıklama muayeneden sonraki basamaklardır; muayeneden önce hekim hastayı tanır ve kendisini tanıtır. Bu nedenle şık doğru değildir.",
+      "C": "Onam hastanın kendi kararıdır ve yakınların onayı hastanın yerine geçemez. Hastanın bilgilendirilip onamının kendisinden alınması gerekir; bu yüzden yakın onayıyla ilerlemek doğru bir hazırlık sayılmaz.",
+      "D": "Konsültan hekim muayeneden önce hastayı tanıyıp kendisini hastaya tanıtmalı, ayrıca görüşmenin amacını hasta ve yakınlarına belirtmelidir. Bu nedenle doğru cevaptır.",
+      "E": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir; ortam aranmadan başlatmak bu ilkeye aykırıdır. Bu nedenle şık doğru değildir."
+     },
+     "s": 21,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q43"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Konsültasyon istenen hastaların özellikleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Büyük çoğunluğu fiziksel olarak güçsüzdür",
+      "B": "Çoğunlukla güçlü ve hareketlidirler",
+      "C": "Düşük kilolu olabilirler",
+      "D": "Letarjik olabilirler",
+      "E": "Yatak bağımlı olabilirler"
+     },
+     "dogru": "B",
+     "aciklama": "Konsültasyon istenen hastaların büyük çoğunluğu fiziksel olarak güçsüzdür; yatak bağımlı, düşük kilolu, letarjik ve çökkün duygudurumlu olabilirler.",
+     "sik_aciklamalari": {
+      "A": "Hastaların büyük çoğunluğunun fiziksel olarak güçsüz olduğu bilgisi bilinen bilgiyle uyumludur ve muayene yaklaşımını etkiler. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "B": "Hastaların büyük çoğunluğu fiziksel olarak güçlü ve hareketli değil, güçsüzdür; yatak bağımlı, düşük kilolu ve letarjik olabilirler. İfade bu nedenle yanlıştır ve doğru cevaptır.",
+      "C": "Konsültasyon istenen hastalar düşük kilolu olabilir; bu özellik bu hastaların fiziksel güçsüzlüğünü yansıtır. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Konsültasyon istenen hastalar letarjik ve çökkün duygudurumlu olabilir; bu özellikler muayene yaklaşımını etkiler. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Konsültasyon istenen hastalar yatak bağımlı olabilir; bu durum hastanın muayenesinin yatak başında yapılmasını gerektirir. İfade doğru olduğundan yanlışı arayan soruda seçilmez."
+     },
+     "s": 21,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q44"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Çok yataklı bir odada yatan hastada psikiyatrik muayene yapılması isteniyor; ortamda gizlilik sağlanamıyor. Aşağıdakilerden hangisi doğru yaklaşımdır?",
+     "secenekler": {
+      "A": "Muayeneye hemen geçilir, gizlilik sonradan düşünülür",
+      "B": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan muayeneye geçilmez",
+      "C": "Muayene hasta yakınları dinlerken yapılır",
+      "D": "Hastanın isteği sorulmadan görüşme başlatılır",
+      "E": "Gizlilik yalnızca raporda gözetilir"
+     },
+     "dogru": "B",
+     "aciklama": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir; ortam hastanın durumu elverdiği ölçüde uygun hale getirilir.",
+     "sik_aciklamalari": {
+      "A": "Muayeneye hemen geçip gizliliği sonraya bırakmak, gizlilik ortamı sağlanmadan muayeneye geçilmeyeceği ilkesine aykırıdır. Gizlilik muayeneden önce sağlanması gereken bir koşuldur, bu nedenle şık doğru değildir.",
+      "B": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir; ortam hastanın durumu elverdiği ölçüde uygun hale getirilir. Soruda doğru yaklaşım budur.",
+      "C": "Muayenenin başkaları dinlerken yapılması gizlilik ilkesine aykırıdır; zamana yayılan yakın ilişkide gizlilik daha da önem kazanır. Bu nedenle şık doğru değildir.",
+      "D": "Hastanın isteği sorulmadan görüşme başlatmak onam ilkesine aykırıdır. Onam alınmalı ve gizlilik ortamı da sağlanmalıdır; bu nedenle bu yaklaşım doğru değildir.",
+      "E": "Gizlilik yalnız raporda değil, muayene ortamında da gözetilir. Fiziksel rahatlık ve gizlilik ortamı sağlandıktan sonra muayeneye geçilir; bu yüzden gizliliğin yalnız raporda gözetildiğini söyleyen şık hatalıdır."
+     },
+     "s": 22,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q45"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Ruhsal durum muayenesinin değerlendirme alanlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Bütüncül yaklaşım önemlidir",
+      "B": "Fiziksel, psikolojik ve sosyal durumlar göz önüne alınır",
+      "C": "Hastalık öncesi ruhsal durum sorgulanır",
+      "D": "Geçmiş psikiyatrik öykü sorgulanır",
+      "E": "Yönelim durumu ve bilinç düzeyi muayenede değerlendirilmez"
+     },
+     "dogru": "E",
+     "aciklama": "Yönelim durumu ve bilinç düzeyi, dış görünüş, içgörü, davranış, düşünce içeriği, bellek, psikotik özellikler ve intihar potansiyeli ile birlikte değerlendirilen alanlardandır.",
+     "sik_aciklamalari": {
+      "A": "Ruhsal durum muayenesinde bütüncül yaklaşım önemlidir ve hastanın bütün durumlarını birlikte değerlendirmeyi gerektirir. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "B": "Fiziksel, psikolojik ve sosyal bütün durumlar muayene esnasında göz önüne alınır; bu bütüncül yaklaşımın gereğidir. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "C": "Hastalık öncesi ruhsal durum da sorgulanmalıdır; bu bilgi hastanın şimdiki durumunu karşılaştırmaya olanak verir. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Geçmiş psikiyatrik öykü de sorgulanmalıdır; öykü, hastanın mevcut tablosunu yorumlamaya yardım eder. İfade bilinen bilgiyle uyumlu olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Yönelim durumu ve bilinç düzeyi, ruhsal durum muayenesinin değerlendirme alanlarındandır; hastanın zaman, yer ve uyanıklık durumunu yansıtırlar. Değerlendirilmediğini söyleyen ifade yanlıştır ve doğru cevaptır."
+     },
+     "s": 23,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q46"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Ruhsal durum muayenesi sonlandırılırken konsültan hekimin hastaya yaptığı açıklamalarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Durumuna ilişkin değerlendirmesini kısaca belirtir",
+      "B": "Tedavi planının genel çerçevesini anlatır",
+      "C": "İleri düzenlemeler için servis hekiminin bilgi vereceğini söyler",
+      "D": "İleri düzenlemeleri hastanın kendi servis hekimi bildirir",
+      "E": "Tüm ayrıntılı tedavi düzenlemelerini tek başına açıklar"
+     },
+     "dogru": "E",
+     "aciklama": "Konsültan hekim değerlendirmesini kısaca belirtir, genel çerçeveyi anlatır ve daha ileri düzenlemeler için hastanın kendi servis hekiminin bilgi vereceğini söyler.",
+     "sik_aciklamalari": {
+      "A": "Konsültan hekim hastaya durumu ve hastalığına ilişkin değerlendirmesini kısaca belirtir; bu, muayene sonunda hastanın bilgilendirilmesinin ilk adımıdır. İfade doğru olduğundan elenir.",
+      "B": "Tedavi planının genel çerçevesine ait bilgi hastaya verilir; ayrıntı verilmez, yalnız çerçeve çizilir. İfade bilinen bilgiyle uyumlu olduğundan yanlışı arayan soruda seçilmez.",
+      "C": "Konsültan hekim, daha ileri düzenlemeler için hastanın kendi servis hekiminin bilgi vereceğini söyler. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "İleri düzenlemeleri hastanın kendi servis hekimi bildirir; bu görev konsültan hekime ait değildir. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Konsültan hekim ayrıntılı tedavi düzenlemelerini tek başına açıklamaz; ileri düzenlemeleri servis hekimi bildirir. Bu nedenle ifade yanlıştır ve doğru cevaptır."
+     },
+     "s": 24,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q47"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Konsültasyon raporunun içeriğini ve takip-izleme ilkelerini açıklar (s. 25-26).",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Konsültasyon raporuyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Rapor konsültasyon talebine neden olan temel soruna odaklanmalıdır",
+      "B": "Rapor hasta ile ilgili bütün bilgileri sınırsız içermelidir",
+      "C": "Rapor yalnız hasta yakınlarına yönelik hazırlanır",
+      "D": "Raporda hasta gizliliği göz ardı edilir",
+      "E": "Rapor hekimler arası iletişim sağlamaz"
+     },
+     "dogru": "A",
+     "aciklama": "Konsültasyon raporunda konsültasyon talebine neden olan temel soruna odaklanmak önemlidir; rapor hekimler arası iletişimi sağlar ve gizlilik gerektiren bilgilerde hastanın bireysel haklarına dikkat edilir.",
+     "sik_aciklamalari": {
+      "A": "Rapor, konsültasyon talebine neden olan temel soruna odaklanır ve hekimler arası iletişimi sağlar; konsültan düşüncesini açıklayıcı ve çözümleyici biçimde ifade eder. Bu nedenle doğru cevaptır.",
+      "B": "Konsültasyon raporu, hasta ile ilgili tüm bilgileri sınırsızca içermez; tedavinin gerektirdiği bilgileri içerir ve gizlilik gerektiren bilgilerde hastanın bireysel haklarını gözetir. Bu nedenle ifade doğru değildir.",
+      "C": "Konsültasyon raporu, hekimler arası bir iletişim aracıdır ve hastanın sorunlarının çözümlenmesine hizmet eder. Yalnız hasta yakınlarına yönelik hazırlanan bir belge olduğu söylenemez; ifade doğru değildir.",
+      "D": "Raporda hastanın gizliliği ve bireysel hakları gözetilir; gizlilik gerektiren bilgilerde sorumluluk taşınır. Gizliliğin göz ardı edildiğini söyleyen ifade bu nedenle yanlıştır.",
+      "E": "Yazılı konsültasyon, hastanın sorunlarının çözümlenmesi açısından hekimler arası iletişimi sağlayan özgün bir tıbbi dökümandır. İletişim sağlamadığını söyleyen ifade bu nedenle doğru değildir."
+     },
+     "s": 25,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q48"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Konsültasyon sonrası klinik takip gereksiniminin türleri arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Klinik",
+      "B": "Diagnostik",
+      "C": "Terapötik",
+      "D": "Eğitime dönük",
+      "E": "Medikolegal"
+     },
+     "dogru": "E",
+     "aciklama": "Takip gereksinimi klinik, diagnostik, terapötik ve eğitime dönük olabilir. Medikolegal görüş KLP'nin görevleri arasında anılır, ancak takip gereksiniminin türlerinden biri değildir.",
+     "sik_aciklamalari": {
+      "A": "Klinik takip gereksinimi, sayılan dört takip türünden biridir. Türler arasında yer aldığı için doğru cevap olamaz; aranan şık türler arasında olmayandır.",
+      "B": "Diagnostik takip, tanıya yönelik izlem gereksinimidir ve klinik takip türlerinden biridir. Türler arasında yer aldığı için doğru cevap olamaz; aranan şık türler arasında olmayandır.",
+      "C": "Terapötik takip, tedaviye yönelik izlem gereksinimidir ve takip türlerinden biridir. Türler arasında yer aldığı için doğru cevap olamaz; aranan şık türler arasında olmayandır.",
+      "D": "Eğitime dönük takip gereksinimi, klinik, diagnostik ve terapötik takiple birlikte sayılan dört takip türünden biridir. Türler arasında yer aldığı için aranan şık olamaz.",
+      "E": "Medikolegal görüş, KLP'nin görevlerinden biridir ve karar verme yeterliliğinin değerlendirilmesini içerir. Takip gereksiniminin dört türünden biri olmadığı için doğru cevaptır."
+     },
+     "s": 26,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q49"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Konsültasyon raporuyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hekimler arası iletişim sağlar",
+      "B": "Özgün bir tıbbi dökümandır",
+      "C": "Konsültasyon talebine neden olan temel soruna odaklanır",
+      "D": "Hastanın tedavisinin gerektirdiği bilgileri içerir",
+      "E": "Gizlilik gerektiren bilgiler hasta haklarına bakılmadan yazılır"
+     },
+     "dogru": "E",
+     "aciklama": "Gizlilik gerektiren bilgilerde hastanın bireysel haklarına ilişkin sorumluluk taşınır; bu hakların göz ardı edildiği ifade yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Yazılı konsültasyon, hekimler arası iletişim sağlar ve hastanın sorunlarının çözümüne hizmet eder. İfade bilinen bilgiyle uyumlu olduğundan yanlışı arayan soruda seçilmez.",
+      "B": "Biyopsikososyal değerlendirmeye ilişkin rapor, özgün bir tıbbi dökümandır ve hastanın tıbbi kaydının bir parçasıdır. İfade doğru olduğundan yanlışı arayan soruda seçilmez.",
+      "C": "Raporda konsültasyon talebine neden olan temel soruna odaklanmak önemlidir; rapor sorulan soruyu yanıtlamalıdır. İfade bilinen bilgiyle uyumlu olduğundan yanlışı arayan soruda seçilmez.",
+      "D": "Rapor hastanın tedavisinin gerektirdiği bilgileri içermelidir ve konsültan düşüncesini açıklayıcı biçimde ifade eder. İfade bilinen bilgiyle uyumlu olduğundan yanlışı arayan soruda seçilmez.",
+      "E": "Gizlilik gerektiren bilgilerde hastanın bireysel haklarına ilişkin sorumlu olunmalıdır; hakların gözetilmemesi bu sorumluluğa aykırıdır. İfade bu nedenle yanlıştır ve doğru cevaptır."
+     },
+     "s": 25,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q50"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Konsültan hekimin herhangi bir psikiyatrik hastalık düşünmediği bir hastada, konsültasyon raporunda aşağıdakilerden hangisi yapılmalıdır?",
+     "secenekler": {
+      "A": "Rapor yazılmaz",
+      "B": "Hastalık varmış gibi tedavi önerilir",
+      "C": "Durum, boyutu ne olursa olsun belirtilir",
+      "D": "Hasta tekrar konsültasyona çağrılmaz",
+      "E": "Durum yalnız sözlü olarak aktarılır"
+     },
+     "dogru": "C",
+     "aciklama": "Herhangi bir psikiyatrik hastalık düşünülmüyorsa, problemin boyutu ne olursa olsun bu ifade edilmelidir.",
+     "sik_aciklamalari": {
+      "A": "Rapor yazılmaması, yazılı konsültasyonun hekimler arası iletişimi sağlama işlevini ortadan kaldırır. Bu durumun da ifade edilmesi gerektiği için şık doğru değildir.",
+      "B": "Psikiyatrik hastalık düşünülmeyen hastaya hastalık varmış gibi tedavi önermek yanlış yönlendirir. Durumun açıkça ifade edilmesi gerektiği için şık doğru değildir.",
+      "C": "Herhangi bir psikiyatrik hastalık düşünülmüyorsa, problemin boyutu ne olursa olsun bu durum açıkça ifade edilmelidir. Soruda tarif edilen durumda doğru yaklaşım budur, bu nedenle doğru cevaptır.",
+      "D": "Takip gereksinimi ayrıca değerlendirilir ve hasta izlenmeye devam edilebilir. Esas olan, durumun raporda açıkça ifade edilmesidir; bu yüzden hastanın bir daha izlenmeyeceğini söyleyen şık hatalıdır.",
+      "E": "Yazılı konsültasyon, hekimler arası iletişimi sağlayan tıbbi bir dökümandır. Durumun yalnız sözlü aktarılması bu işleve uymadığı için şık doğru değildir."
+     },
+     "s": 26,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q51"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Tıbbi hastalıklarla psikiyatrik tanılar arasındaki ilişkiyi ve histeri gibi önemli diğer grupları açıklar (s. 27-28).",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki tıbbi hastalıklardan hangisinde anksiyete bozukluğunun daha sık bildirildiği belirtilmiştir?",
+     "secenekler": {
+      "A": "Hipotiroidi",
+      "B": "Akut apandisit",
+      "C": "Akut bronşit",
+      "D": "Basit idrar yolu enfeksiyonu",
+      "E": "Ayak bileği burkulması"
+     },
+     "dogru": "A",
+     "aciklama": "Metabolik sendrom, iskemik kardiyak hastalık, hipotiroidi, endokrin hastalıklar ve porfiride anksiyete bozukluğu daha sık bildirilmiştir; diğer şıklardaki durumlar bu gruplar arasında anılmaz.",
+     "sik_aciklamalari": {
+      "A": "Hipotiroidi endokrin bir hastalıktır ve anksiyete bozukluğunun daha sık bildirildiği hastalıklar arasındadır; metabolik sendrom ve iskemik kardiyak hastalık da aynı gruptadır. Bu nedenle doğru cevaptır.",
+      "B": "Akut apandisit kısa süreli akut bir hastalıktır; anksiyete bozukluğu ile özel ilişkisi bildirilen hastalıklar anılırken bu hastalıktan söz edilmez. Bu nedenle soruda doğru seçenek olamaz.",
+      "C": "Akut bronşit kısa süreli akut bir enfeksiyondur; anksiyete bozukluğu ile özel ilişkisi bildirilen hastalıklar anılırken bu hastalıktan söz edilmez. Bu nedenle soruda doğru seçenek olamaz.",
+      "D": "Basit idrar yolu enfeksiyonu kısa süreli akut bir durumdur; anksiyete bozukluğu ile özel ilişkisi bildirilen hastalıklar anılırken bu durumdan söz edilmez. Bu nedenle soruda doğru seçenek olamaz.",
+      "E": "Ayak bileği burkulması geçici bir yaralanmadır; anksiyete bozukluğu ile özel ilişkisi bildirilen hastalıklar anılırken bu durumdan söz edilmez. Bu nedenle soruda doğru seçenek olamaz."
+     },
+     "s": 27,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q52"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Histerinin konsültasyon psikiyatrisinde yaygın olmamasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hastalığın çok nadir görülmesi",
+      "B": "Hastaların ancak küçük bir kısmının sevk edilmesi",
+      "C": "Hastalığın tedavi gerektirmemesi",
+      "D": "Hastalığın yalnız psikiyatri kliniklerinde görülmesi",
+      "E": "Hastaların acil olarak değerlendirilmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Histeri önemli olmakla birlikte hastaların ancak küçük bir kısmı sevk edildiği için konsültasyon psikiyatrisinde yaygın değildir; hastalığın nadir olduğu söylenmemiştir.",
+     "sik_aciklamalari": {
+      "A": "Nadir görülme iddiası hatalıdır; histeri konsültasyon psikiyatrisinde önemli bir sorundur ve yaygın olmamasının nedeni hastaların ancak küçük bir kısmının sevk edilmesidir. Bu nedenle nadir bir hastalık olduğunu söyleyen seçenek doğru değildir.",
+      "B": "Histeri konsültasyon psikiyatrisinde önemli ancak yaygın olmayan bir sorundur; yaygın olmamasının nedeni hastaların ancak küçük bir kısmının sevk edilmesidir. Bu nedenle doğru cevaptır.",
+      "C": "Tedavi gerektirmediği iddiası bilgiyle uyuşmaz; histeri değerlendirme gerektiren, önemli bir sorundur. Yaygın olmamasının nedeni az sevk edilmesidir, bu nedenle bu seçenek doğru değildir.",
+      "D": "Histeri, konsültasyon psikiyatrisinde karşılaşılan önemli bir sorundur; yalnız psikiyatri kliniklerinde görüldüğü söylenmez. Yaygın olmama nedeni az sevk edilmesidir, bu nedenle şık doğru değildir.",
+      "E": "Aciliyet sınıflaması acil, aynı gün ve rutin gruplarını tanımlar; hastaların acil olarak değerlendirilmesi diye bir kural içermez. Histerinin yaygın olmama nedeni az sevk edilmesidir, bu nedenle şık doğru değildir."
+     },
+     "s": 28,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q53"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Akut hastalıklara kıyasla daha sık depresyon gelişen hastalıklar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kendiliğinden iyileşen akut enfeksiyonlar",
+      "B": "Kısa süreli cerrahi girişimler",
+      "C": "İşlev kaybına yol açan kronik hastalıklar",
+      "D": "Hafif seyirli geçici yakınmalar",
+      "E": "Tek seferlik küçük yaralanmalar"
+     },
+     "dogru": "C",
+     "aciklama": "Akut hastalıklara kıyasla kronik hastalıklarda, yapı, işlev, yetenek ve işlevsellikte önemli kayıplara yol açan hastalıklarda daha sıklıkla depresyon gelişir.",
+     "sik_aciklamalari": {
+      "A": "Kendiliğinden iyileşen akut enfeksiyonlar kısa sürelidir ve kalıcı işlev kaybı bırakmaz. Depresyonun daha sık geliştiği grup bunlar olmadığı için şık doğru değildir.",
+      "B": "Kısa süreli cerrahi girişimler geçici bir durumdur ve kalıcı işlev kaybı bırakmaz. Depresyonun daha sık geliştiği grup bunlar olmadığı için şık doğru değildir.",
+      "C": "Yapı, işlev, yetenek ve işlevsellikte önemli kayıplara yol açan kronik hastalıklarda depresyon, akut hastalıklara kıyasla daha sık gelişir. Soruda sorulan grup budur, bu nedenle doğru cevaptır.",
+      "D": "Hafif seyirli geçici yakınmalar işlevselliği kalıcı olarak bozmaz ve kısa sürede geçer. Depresyonun daha sık geliştiği grup bu yakınmalar olmadığı için şık doğru değildir.",
+      "E": "Tek seferlik küçük yaralanmalar geçici ve hafif durumlardır; işlev kaybı bırakmadan iyileşirler. Depresyonun daha sık geliştiği grup bu yaralanmalar olmadığı için şık doğru değildir."
+     },
+     "s": 27,
+     "id": "k2-43-konsultasyon-liyezon-psikiyatrisi-q54"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 54
+}

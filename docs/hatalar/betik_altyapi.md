@@ -254,3 +254,39 @@
 - **Kalıcı çözüm (8), 2026-11-18:** `deploy/oracle/ses_esitle.sh` — `data/*_cozucu*/ses*`, `data/*_asistan*/ses*`, `data/ek_moduller/ses` kökleri ana ağaçtan Oracle'a eklemeli eşitlenir (`--update`, silme yok, `sudo rsync` + `--chown ubuntu`), sonra kök başına Oracle ≥ yerel sayısı doğrulanır (eksikte çıkış 73). `dagit.sh` deploy-code.sh'tan sonra kendiliğinden çağırır (`MEDS_DAGIT_SES=0` atlar); `--kuru` önizler. `data/sesli_anlatim/ses` kapsam dışı (Oracle'da üretilir).
 - **Kalıcı çözüm (1–6), 2026-11-18:** (1) `hazirlik.py` `hoca_ses*.{m4a,mp3,…}` parçalarını sırayla döker, süre kaydırmalı birleştirir (`parcalar` alanı); `orijinal.pdf` yoksa klasördeki tek PDF'i bağlar. (2) `scripts/kok.py` içe aktarma kancası: pymupdf/fitz bulunamazsa süreç `.venv-ocr` ile yeniden başlar. (3) `pdf_isaret.pdf_indir` sunucu ucu boşsa `meds_temp/ogrenci_ders/<kNN>/orijinal.pdf`'e düşer (terim/kısaltma dahil). (4) `scripts/kapilar/ornek_soru_dizin.py` — `ornek_soru_kapi.py` ve `dagit.sh` (çıkış 72) çağırır; ilk çalıştırma k2-33/34/35/49/50'yi dizinde YOK buldu (sitede listelenmiyordu) → eklendi. (5) `birlestir.py <brans> --kod 2p05[,…]` yalnız seçili derslerin dosyaları + dizin satırlarını yazar. (6) `pdf_isaret` bayat çapada artık HATA verir (çıkış 1; bilerek çapasız `MEDS_CAPASIZ_IZIN=1`); taramada mevcut derslerde bayat çapa 0.
 - **Ek (9), 2026-11-18:** yerel sunucu (3000) yeni dersleri tanımıyordu (`/api/canli-ders/<key>` 404): sesli dersler Oracle'da yayınlanır, kod dağıtımı `/data`'yı taşımaz; yerel `dersler.json` 61 ders geride, MP3'ler yoktu. Çözüm `deploy/oracle/sesli_cek.sh` (+`sesli_cek_birlestir.py`): Oracle → yerel, kayıt defterleri anahtar bazında birleşir (yerel-only korunur), dosyalar yalnız eksikse gelir; `dagit.sh` sonunda çağırır (`MEDS_DAGIT_CEK=0` atlar). İlk eşitlemede ayrıca Oracle'da daha yeni 1.570 dosya `--update` ile çekildi, yerelde commit'lenmemiş 4 dosya korundu.
+
+
+### H630 — Masaüstü oturumunda çizim anlam denetimi bağımsız koşmadı (llm_kilit INVOCATION_ID'yi zamanlayıcı sandı) (2026-11-18)
+
+- **Belirti:** Masaüstü oturumunda çizim anlam denetimi bağımsız koşmadı (llm_kilit INVOCATION_ID'yi zamanlayıcı sandı).
+- **Kök neden:** Masaüstü uygulamasından açılan kabukta `INVOCATION_ID` tanımlı; `llm_kilit.serbest()` bunu systemd zamanlayıcısı sayıp `MEDS_LLM_ELLE=1`'i yok saydı (çıkış 75). Çizim ajanı panelleri kendisi inceleyip önbelleğe tamam yazdı, çizim anlamı bağımsız denetçiden geçmedi.
+- **Çözüm:** Kilit gevşetilmedi; ikinci tur bağımsız denetçi panelleri okuyup GEÇER dedi (k2-44).
+- **Kural:** Çizim anlam denetimi çıkış 75 verirse paneller ana oturumdan bağımsız denetçiye okutulur; ajanın kendi 'tamam' önbelleği tek başına yeterli sayılmaz. Kilit mantığı ayrıca düzeltilmeli (INVOCATION_ID yerine MEDS_LLM_PANEL/üst süreç denetimi).
+
+### H631 — betik_tamamla kelime_zaman katmanını yeni derste yanlışlıkla ✗ gösterdi (2026-11-18)
+
+- **Belirti:** betik_tamamla kelime_zaman katmanını yeni derste yanlışlıkla ✗ gösterdi.
+- **Kök neden:** `betik_tamamla.py` varsayılan olarak canlı siteyi (`nofrostlife.com.tr`) sorgular; yayın öncesi ders orada yok.
+- **Çözüm:** Yerel sunucuya yönlendirilince geçti: `MEDS_ORACLE_API_URL=http://127.0.0.1:3000`.
+- **Kural:** Yayın öncesi `betik_tamamla.py` her zaman `MEDS_ORACLE_API_URL=http://127.0.0.1:3000` ile koşulur; ✗ yalnız yayın sonrası canlıya karşı anlamlıdır.
+
+### H632 — Yeni derste kısaltma kapısı (BDT) ve sesli_cek capa/metin bayatlığı (2026-11-18)
+
+- **Belirti:** Yeni derste kısaltma kapısı (BDT) ve sesli_cek capa/metin bayatlığı.
+- **Kök neden:** `kisaltma_sozlugu.py otomatik` ders `/api/canli-ders` altında kayıtlı olmadan çalışmaz; değerlendirme kapısı sözlükte olmayan kısaltmada HATA verdi. Ayrıca `sesli_cek.sh` `--ignore-existing` ile çektiği için metin değişince yerel `capa`/`hizalama`/`metin` eski kaldı.
+- **Çözüm:** BDT girdisi `src/data/kisaltma_sozluk.json`'a eklendi (geçici); capa/hizalama/metin her `ders_ekle` sonrası Oracle'dan elle rsync edildi (k2-45).
+- **Kural:** Yeni ders: ders_ekle sonrası kısaltma `otomatik --yaz` koşulur, kapıdan önce eksik kısaltma sözlüğe elle eklenir; metin değişince capa/hizalama/metin Oracle'dan zorla çekilir (ignore-existing atlanır).
+
+### H633 — ders_pdf.mts destesiz derste ENOENT veriyor (2026-11-18)
+
+- **Belirti:** ders_pdf.mts destesiz derste ENOENT veriyor.
+- **Kök neden:** Sesli ders destesi yok; `ders_pdf.mts` `src/data/decks/items/k2p-<key>.json` bekliyor.
+- **Çözüm:** Geçici `{"title":..,"slides":[]}` yazıldı, PDF üretildi, dosya silindi (k2-44).
+- **Kural:** Destesiz yeni derste pdf_tasarim için geçici boş deste yaz → ders_pdf.mts → pdf_tarama.py 0 HATA → geçici dosyayı sil.
+
+### H635 — k2-43..46: paket kategori/terim üretimi ve tıbbi yanlışı kapıların yakalamaması (2026-11-18)
+
+- **Belirti:** k2-45'te denetçi, anlatımda "ölsem de her şey bitse" cümlesinin "aktif intihar düşüncesi" diye yazıldığını yakaladı (slayta göre pasif ölüm isteği); ders içeriğinde "tespit/düşük/içgörü" terimleri yanlış anlamla, tedavi maddeleri "İlaç" etiketiyle çıktı. Tıbbi yanlış kapıların hepsinden 0 HATA ile geçmişti.
+- **Kök neden:** (1) Kapılar biçim/kaynak eşleşmesi denetler, kavram doğruluğunu (pasif/aktif ayrımı) denetlemez; öğrenci notu eşleme anahtarı ("aktif intihar") yazara sızdı. (2) `terim_sozlugu.py otomatik` terimi slayttaki anlamı karşılaştırmadan genel sözlükten alır. (3) `paket_kur.py` KATEGORI sözlüğü `tedavi` türünü `drug` (İlaç) kategorisine çevirir; `paketten_ek.py` bilgi paketi maddelerine "Atom: id" ve "Çıkmış (…)" iç etiketlerini ekrana kopyalar.
+- **Çözüm:** cümleler "ölüm isteği" olarak düzeltildi, terimler elle çıkarıldı, kategori `treatment` yapıldı, iç etiketler temizlendi; değişen anlatım için ses/zaman döngüsü yenilendi. Her ders 3–4 tur bağımsız denetçiyle GEÇER oldu.
+- **Kural:** Kapı 0 HATA tıbbi doğruluk kanıtı değildir; her derste bağımsız denetçi GEÇER şartı kalkmaz, düzeltmeden sonra yeniden denetlenir. Yeni derste `terim_sozlugu` çıktısı slayt bağlamına göre elle taranır; `paket_kur.py` `tedavi → drug` eşlemesi ve `paketten_ek.py` iç etiket kopyası kod düzeltmesi bekliyor (açık iş).

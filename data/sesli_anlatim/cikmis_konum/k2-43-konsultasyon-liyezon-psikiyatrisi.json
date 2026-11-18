@@ -1,0 +1,32 @@
+{
+ "surum": 1,
+ "dogrulama": "ham belge + slayt kanıtı, elle (E1 değerlendirme, 2026-11-18)",
+ "q": [
+  {
+   "id": "19301ed8f053",
+   "kok": "Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+   "cevap": "Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır.",
+   "yil": "2020-2021",
+   "s": 16,
+   "seviye": "ilgili",
+   "kanit": "yardımını gerektiren deliryum, psikotik ajitasyon,",
+   "kaynak": "`D3K2 2020-2021.pdf` (d3k2_tum/kaynak/y2020.pdf) s.42, soru 80 (kimlik y2020#80; metin/y2020.txt satır 2334; aynı soru aynı belgenin s.94/144/198/249/299 kopyalarında da var), Psikiyatri bölümü: 'Konsültasyon-Liyezon Psikiyatrisi konusunda, aşağıdaki bilgilerden hangisi yanlıştır?' ✓ işareti: 'Ajitasyonda, ilk yapılacak uygulama fiziksel kısıtlamadır.' Ham şıklar: deliryum %15–30, şiddetli ağrı-intihar girişimi, ajitasyonda fiziksel kısıtlama, KLP'de varsanıların en sık nedeni deliryum, KLP'de ağrı sorunu çözülünce uyku sorunu da çözülür. Bankadaki kayıt (2020-2021 Kurul 2, sunulan asıl kayıt) kökü 've acil psikiyatri durumları' diye yeniden yazılmış ve E şıkkı değişmiştir; doğru cevap ve A-D şıkları ham belgeyle aynıdır. Gizli kopyası bccf4df0f069 /tek'te 404 verir, yalnız bu kimlik kullanılır.",
+   "dogrulandi": true,
+   "anahtar_notu": "Cevap anahtarı tıbbi tutarlılık açısından kontrol edildi (H19): ajitasyonda ilk basamak fiziksel kısıtlama değil sözel yatıştırma ve ortam düzenlemesidir; kısıtlama son seçenektir, yani 'yanlış olan' şık C doğrudur.",
+   "neden": "Slayt s16 acil konsültasyon grubunu deliryum, psikotik ajitasyon ve intihar girişimi olarak sayar; sorunun ajitasyon, deliryum ve acil psikiyatri durumlarıyla ilgili kısmı bu slaytla ilişkilidir. Ajitasyonda ilk uygulamanın ne olduğu, deliryum sıklığı (%15–30), varsanının en sık nedeni ve ağrı bilgisi slaytta YOKTUR; bu yüzden seviye 'ilgili'dir, doğrudan değildir."
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-27",
+   "kok": "Konsültasyon-liyezon psikiyatrisinde (genel hastanede yatan hastalarda) en sık karşılaşılan psikiyatrik tablo aşağıdakilerden hangisidir?",
+   "cevap": "Deliryum",
+   "yil": "2023-2024",
+   "s": 16,
+   "seviye": "ilgili",
+   "kanit": "yardımını gerektiren deliryum, psikotik ajitasyon,",
+   "kaynak": "`Nöropsikiyatri gis kardiyo -2023-2024-Çıkmışları_240625_053302 (2).pdf` (d3k2_tum/kaynak/y2023.pdf) s.5, madde 27 (kimlik y2023#27; metin/y2023.txt satır 170): öğrenci el yazısı hatırlama satırı 'KLPde en sık görülen şizofreni değil deliryum'. Ham belgede yalnız kök + cevap vardır; bankadaki beş şık sonradan tamamlanmıştır (şıklar özgün değildir).",
+   "dogrulandi": true,
+   "anahtar_notu": "Cevap (deliryum) ham belgedeki hatırlama satırıyla ve tıbbi bilgiyle tutarlıdır (genel hastanede KLP'nin en sık karşılaştığı organik tablo deliryumdur); şıklar sonradan tamamlandığı için öğrenciye belirtilir.",
+   "neden": "Slayt s16 deliryumu psikiyatri hekiminin hemen yardımını gerektiren acil konsültasyon durumları arasında sayar; slayt 'en sık' demez, bu yüzden seviye 'ilgili'dir."
+  }
+ ]
+}

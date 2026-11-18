@@ -1,0 +1,1068 @@
+{
+ "surum": 2,
+ "key": "k2-45",
+ "kod": "2s14",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "İntihar ve Kendine Zarar Verme",
+ "ogretim_uyesi": "Uzm.Dr. Pınar Durmaz",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s14"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders intiharı bir süreç olarak ele alır: davranış basamakları, sıklık, risk etmenleri (sosyodemografik, önceki girişim, düşüncenin ciddiyeti, yaşama son vermeyi isteme nedenleri, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek, muayene bulguları), koruyucu etmenler, değerlendirmenin genel ilkeleri ve tedavi. İkinci bölüm kendine zarar verme davranışının tanımı, ölçütleri, türleri, sıklığı ve kişilik bozukluklarıyla ilişkisini anlatır.",
+   "maddeler": [
+    {
+     "metin": "Derse giriş ve intihar davranışı"
+    },
+    {
+     "metin": "Sıklık ve risk değerlendirmesine genel bakış"
+    },
+    {
+     "metin": "Sosyodemografik risk etmenleri"
+    },
+    {
+     "metin": "İntihar düşüncesinin ciddiyeti"
+    },
+    {
+     "metin": "Girişim öyküsü, nedenler ve hastalıklar"
+    },
+    {
+     "metin": "Çevre, sosyal destek, muayene ve koruyucu etmenler"
+    },
+    {
+     "metin": "Değerlendirme ilkeleri, müdahale ve önleme"
+    },
+    {
+     "metin": "Kendine zarar verme davranışı"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders intiharı bir süreç olarak ele alır: davranış basamakları, sıklık, risk etmenleri (sosyodemografik, önceki girişim, düşüncenin ciddiyeti, yaşama son vermeyi isteme nedenleri, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek, muayene bulguları), koruyucu etmenler, değerlendirmenin genel ilkeleri ve tedavi. İkinci bölüm kendine zarar verme davranışının tanımı, ölçütleri, türleri, sıklığı ve kişilik bozukluklarıyla ilişkisini anlatır.",
+    "Derse giriş ve intihar davranışı.",
+    "Sıklık ve risk değerlendirmesine genel bakış.",
+    "Sosyodemografik risk etmenleri.",
+    "İntihar düşüncesinin ciddiyeti.",
+    "Girişim öyküsü, nedenler ve hastalıklar.",
+    "Çevre, sosyal destek, muayene ve koruyucu etmenler.",
+    "Değerlendirme ilkeleri, müdahale ve önleme.",
+    "Kendine zarar verme davranışı."
+   ],
+   "v": "6bfebd9309"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "İntihar: acil ve önlenebilir",
+     "metin": "İntihar psikiyatrinin en önemli acil konularından biridir ve önlenebilir ölüm nedenleri arasında üst sıralarda yer alır.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "İntihar davranışı basamakları",
+     "metin": "İntihar davranışı; intihar düşüncesi, planı, girişimi ve tamamlanmış intihar basamaklarından oluşan bir süreklilik olarak ele alınır.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Her yıl intiharla ölen kişi sayısı",
+     "metin": "DSÖ verilerine göre her yıl yaklaşık 800 bin kişi intiharla ölür; 40 saniyede 1 kişi kendini öldürür.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Bütün psikiyatri hastaları sorgulanmalı",
+     "metin": "Bütün psikiyatri hastaları ilk değerlendirmede ve izlemde intihar düşünceleri açısından sorgulanmalıdır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Yüksek riskli durum: yakın girişim",
+     "metin": "Yakın dönemde intihar girişimi yüksek riskli klinik durumlardan biridir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "İntihar riski değerlendirmesi başlıkları",
+     "metin": "İntihar riski değerlendirmesinde sosyodemografik etmenler, düşüncenin ciddiyeti, plan, geçmiş girişim, nedenler, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek ve psikiyatrik muayene birlikte ele alınır.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Cinsiyet ve girişim-tamamlanma farkı",
+     "metin": "Kadınlar erkeklerden 3 kat fazla girişimde bulunurken erkeklerde tamamlanmış intihar 3 kat fazladır.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Gençlerde nedenler: değişim",
+     "metin": "Gençlerde yoğun psikolojik, biyolojik ve sosyal değişiklikler ile çevresel streslerin artması intihar nedenleri arasındadır.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Yaşlılarda nedenler",
+     "metin": "Yaşlılarda yaşamak için nedeni olmama, kendini gereksiz hissetme, bedensel düşkünlük ve hastalıklar intihar nedenleridir.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Riskli meslekler",
+     "metin": "Çiftçiler (erkek), sağlık çalışanları, veteriner hekimler, askerler ve polisler intihar açısından riskli mesleklerdir.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "İntihar düşüncesi en önemli etmenlerdendir",
+     "metin": "İntihar düşüncesinin varlığı en önemli risk etmenlerinden biridir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Ciddiyeti belirleyen sorular",
+     "metin": "Ciddiyet; plan var mı, planın ayrıntıları, ölümcüllük, düşünülen yöntemler ve ölüme hazırlık (vasiyet gibi) sorgulanarak belirlenir.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "En önemli risk etmeni",
+     "metin": "Önceki intihar girişimi öyküsü en önemli risk etmenidir.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Ailede girişim öyküsü",
+     "metin": "Ailede intihar girişimi öyküsü genetik etmenler, psikiyatrik hastalıklara yatkınlık ve psikodinamik etmenler (model alma) üzerinden risk oluşturur.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Kayıplar ve hayata son vermek isteme",
+     "metin": "Kayıplar (boşanma, ölüm gibi ilişki kaybı; kaza, hastalık gibi bedensel yeti kaybı; göç, taşınma gibi güvenlik duygusu kaybı; işten çıkarılma, iflas gibi statü kaybı) kişiyi hayatına son vermek istemeye götürebilir.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Utanç intiharları",
+     "metin": "Narsisistik yaralanmalara duyarlı kişi aşağılandığını düşündüğünde ya da çok utandığında ani, dürtüsel intihar girişiminde bulunabilir; buna utanç intiharları denir.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Çocukken cinsel ve fiziksel taciz öyküsü",
+     "metin": "Çocukken cinsel ve fiziksel taciz öyküsü intihar için bağımsız risk etmenidir ve riski 10 kat artırır.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Duygudurum bozukluğu",
+     "metin": "Tamamlanmış intiharların %60'ında duygudurum bozukluğu bulunur.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Tıbbi hastalıklar",
+     "metin": "İntihar girişiminde bulunanların yaklaşık %40'ında (60 yaş üstünde %70) tıbbi hastalık bildirilmiştir.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Çevresel etmenler",
+     "metin": "Savaşlar, felaketler, akültürasyon, ayrımcılık, hapiste olma, ekonomik sorunlar, göç ve medya etkisi çevresel risk etmenleridir.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Sosyal destek",
+     "metin": "Sosyal desteğin olup olmaması intihar riskini belirlemede oldukça önemlidir; sosyal izolasyon ve yalnız yaşama riski artırır.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Deliryum ve zehirlenme",
+     "metin": "Dikkat, uyanıklık ve farkındalığın bozulması yargılamayı olumsuz etkiler (deliryum, akut zehirlenmeler).",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Koruyucu etmenlerin etkisi",
+     "metin": "Koruyucu etmenler intihar davranışı ve riskini azaltır, stresle baş etme becerisini ve stres yönetimini artırır.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Hastayla ilişki kurulurken sakin yaklaşım",
+     "metin": "Hastayla ilişki kurulurken sakin, yargılamayan ve empatik bir yaklaşım benimsenir.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Sormaktan kaçınılmaz",
+     "metin": "İntihar hakkında konuşmaktan ya da soru sormaktan kaçınılmamalıdır; intiharı hiç düşünmeyen bir kişinin aklına bu fikri getirmez.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "İntihar riski yüksekse önce tıbbi müdahale",
+     "metin": "İntihar riski yüksekse ya da kişi girişimde bulunduysa önce gereken tıbbi müdahale yapılır.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Tedavide etyolojiye yönelik farmakoterapi",
+     "metin": "Tedavide etyolojiye yönelik farmakoterapi (lityum), psikoterapiler (bilişsel davranışçı terapi, sorun çözme terapileri) ve EKT kullanılır.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Biyopsikososyal yaklaşım",
+     "metin": "İntihar çok boyutlu nedenleri olan karmaşık bir klinik durumdur; en iyi yaklaşım biyopsikososyal değerlendirme, erken tanı, uygun müdahale ve yakın takiptir.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Kendine zarar verme terimleri",
+     "metin": "Kendine zarar verme davranışı literatürde self-injury, self-mutilation ve self-harm olarak adlandırılır.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Kendine zarar verme özellikleri",
+     "metin": "Kendine zarar verme belirli vücut bölümlerine zarar verme, tekrarlayıcılık, ölümcül olmama ve yaşamı tehdit etmeme gibi özellikler taşır.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Kendine zarar verme tanımı",
+     "metin": "Kendine zarar verme tekrarlayıcı, bilinçli ölüm isteği olmadan isteyerek ve amaçlı yapılan, doku hasarıyla sonuçlanan, kişinin kendi bedenine yönelik girişimidir.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Dört ölçüt: tekrar ve gerilim",
+     "metin": "Tanı ölçütleri kesme ya da yakma davranışının sürekli tekrarlanması ve zarar vermeden önce gerilim duygusudur.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Kendini tedavi gerektirecek şekilde yaralayan kişiler",
+     "metin": "600 kişiden en az birinin kendini tedavi gerektirecek şekilde yaraladığı bildirilmiştir.",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Kendini kesme baskındır",
+     "metin": "Tekrarlanan kendine zarar verme davranışlarında kendini kesme daha baskındır; kol ve bilekler kolay ulaşılabilirlikleri nedeniyle sık görülen bölgelerdir.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Davranış sıklığı",
+     "metin": "Tekrarlanan kendine zarar verme davranışlarında kendini kesme %72, kendini yakma %35, kendine vurma %30 sıklıktadır.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Kendine zarar verme erken adolesan dönemde başlar",
+     "metin": "Kendine zarar verme erken adolesan dönemde başlar; çoğunlukla ergenlikte başladığı konusunda görüş birliği vardır.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Kendine zarar verme kişilik bozuklukları ve psikotik bozukluklar",
+     "metin": "Kendine zarar verme kişilik bozuklukları, akut-kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında sık görülür.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Kendine zarar verme davranışı belirti olarak ele alınır",
+     "metin": "Altta yatan durumun tedavisiyle kendine zarar verme davranışının ortadan kalkmasını beklemek yeterli değildir; davranış bir belirti kabul edilerek doğrudan müdahale edilmelidir.",
+     "s": [
+      39
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "İntihar: acil ve önlenebilir: İntihar psikiyatrinin en önemli acil konularından biridir ve önlenebilir ölüm nedenleri arasında üst sıralarda yer alır.",
+    "İntihar davranışı basamakları: İntihar davranışı; intihar düşüncesi, planı, girişimi ve tamamlanmış intihar basamaklarından oluşan bir süreklilik olarak ele alınır.",
+    "Her yıl intiharla ölen kişi sayısı: DSÖ verilerine göre her yıl yaklaşık 800 bin kişi intiharla ölür; 40 saniyede 1 kişi kendini öldürür.",
+    "Bütün psikiyatri hastaları sorgulanmalı: Bütün psikiyatri hastaları ilk değerlendirmede ve izlemde intihar düşünceleri açısından sorgulanmalıdır.",
+    "Yüksek riskli durum: yakın girişim: Yakın dönemde intihar girişimi yüksek riskli klinik durumlardan biridir.",
+    "İntihar riski değerlendirmesi başlıkları: İntihar riski değerlendirmesinde sosyodemografik etmenler, düşüncenin ciddiyeti, plan, geçmiş girişim, nedenler, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek ve psikiyatrik muayene birlikte ele alınır.",
+    "Cinsiyet ve girişim-tamamlanma farkı: Kadınlar erkeklerden 3 kat fazla girişimde bulunurken erkeklerde tamamlanmış intihar 3 kat fazladır.",
+    "Gençlerde nedenler: değişim: Gençlerde yoğun psikolojik, biyolojik ve sosyal değişiklikler ile çevresel streslerin artması intihar nedenleri arasındadır.",
+    "Yaşlılarda nedenler: Yaşlılarda yaşamak için nedeni olmama, kendini gereksiz hissetme, bedensel düşkünlük ve hastalıklar intihar nedenleridir.",
+    "Riskli meslekler: Çiftçiler (erkek), sağlık çalışanları, veteriner hekimler, askerler ve polisler intihar açısından riskli mesleklerdir.",
+    "İntihar düşüncesi en önemli etmenlerdendir: İntihar düşüncesinin varlığı en önemli risk etmenlerinden biridir.",
+    "Ciddiyeti belirleyen sorular: Ciddiyet; plan var mı, planın ayrıntıları, ölümcüllük, düşünülen yöntemler ve ölüme hazırlık (vasiyet gibi) sorgulanarak belirlenir.",
+    "En önemli risk etmeni: Önceki intihar girişimi öyküsü en önemli risk etmenidir.",
+    "Ailede girişim öyküsü: Ailede intihar girişimi öyküsü genetik etmenler, psikiyatrik hastalıklara yatkınlık ve psikodinamik etmenler (model alma) üzerinden risk oluşturur.",
+    "Kayıplar ve hayata son vermek isteme: Kayıplar (boşanma, ölüm gibi ilişki kaybı; kaza, hastalık gibi bedensel yeti kaybı; göç, taşınma gibi güvenlik duygusu kaybı; işten çıkarılma, iflas gibi statü kaybı) kişiyi hayatına son vermek istemeye götürebilir.",
+    "Utanç intiharları: Narsisistik yaralanmalara duyarlı kişi aşağılandığını düşündüğünde ya da çok utandığında ani, dürtüsel intihar girişiminde bulunabilir; buna utanç intiharları denir.",
+    "Çocukken cinsel ve fiziksel taciz öyküsü: Çocukken cinsel ve fiziksel taciz öyküsü intihar için bağımsız risk etmenidir ve riski 10 kat artırır.",
+    "Duygudurum bozukluğu: Tamamlanmış intiharların %60'ında duygudurum bozukluğu bulunur.",
+    "Tıbbi hastalıklar: İntihar girişiminde bulunanların yaklaşık %40'ında (60 yaş üstünde %70) tıbbi hastalık bildirilmiştir.",
+    "Çevresel etmenler: Savaşlar, felaketler, akültürasyon, ayrımcılık, hapiste olma, ekonomik sorunlar, göç ve medya etkisi çevresel risk etmenleridir.",
+    "Sosyal destek: Sosyal desteğin olup olmaması intihar riskini belirlemede oldukça önemlidir; sosyal izolasyon ve yalnız yaşama riski artırır.",
+    "Deliryum ve zehirlenme: Dikkat, uyanıklık ve farkındalığın bozulması yargılamayı olumsuz etkiler (deliryum, akut zehirlenmeler).",
+    "Koruyucu etmenlerin etkisi: Koruyucu etmenler intihar davranışı ve riskini azaltır, stresle baş etme becerisini ve stres yönetimini artırır.",
+    "Hastayla ilişki kurulurken sakin yaklaşım: Hastayla ilişki kurulurken sakin, yargılamayan ve empatik bir yaklaşım benimsenir.",
+    "Sormaktan kaçınılmaz: İntihar hakkında konuşmaktan ya da soru sormaktan kaçınılmamalıdır; intiharı hiç düşünmeyen bir kişinin aklına bu fikri getirmez.",
+    "İntihar riski yüksekse önce tıbbi müdahale: İntihar riski yüksekse ya da kişi girişimde bulunduysa önce gereken tıbbi müdahale yapılır.",
+    "Tedavide etyolojiye yönelik farmakoterapi: Tedavide etyolojiye yönelik farmakoterapi (lityum), psikoterapiler (bilişsel davranışçı terapi, sorun çözme terapileri) ve EKT kullanılır.",
+    "Biyopsikososyal yaklaşım: İntihar çok boyutlu nedenleri olan karmaşık bir klinik durumdur; en iyi yaklaşım biyopsikososyal değerlendirme, erken tanı, uygun müdahale ve yakın takiptir.",
+    "Kendine zarar verme terimleri: Kendine zarar verme davranışı literatürde self-injury, self-mutilation ve self-harm olarak adlandırılır.",
+    "Kendine zarar verme özellikleri: Kendine zarar verme belirli vücut bölümlerine zarar verme, tekrarlayıcılık, ölümcül olmama ve yaşamı tehdit etmeme gibi özellikler taşır.",
+    "Kendine zarar verme tanımı: Kendine zarar verme tekrarlayıcı, bilinçli ölüm isteği olmadan isteyerek ve amaçlı yapılan, doku hasarıyla sonuçlanan, kişinin kendi bedenine yönelik girişimidir.",
+    "Dört ölçüt: tekrar ve gerilim: Tanı ölçütleri kesme ya da yakma davranışının sürekli tekrarlanması ve zarar vermeden önce gerilim duygusudur.",
+    "Kendini tedavi gerektirecek şekilde yaralayan kişiler: 600 kişiden en az birinin kendini tedavi gerektirecek şekilde yaraladığı bildirilmiştir.",
+    "Kendini kesme baskındır: Tekrarlanan kendine zarar verme davranışlarında kendini kesme daha baskındır; kol ve bilekler kolay ulaşılabilirlikleri nedeniyle sık görülen bölgelerdir.",
+    "Davranış sıklığı: Tekrarlanan kendine zarar verme davranışlarında kendini kesme %72, kendini yakma %35, kendine vurma %30 sıklıktadır.",
+    "Kendine zarar verme erken adolesan dönemde başlar: Kendine zarar verme erken adolesan dönemde başlar; çoğunlukla ergenlikte başladığı konusunda görüş birliği vardır.",
+    "Kendine zarar verme kişilik bozuklukları ve psikotik bozukluklar: Kendine zarar verme kişilik bozuklukları, akut-kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında sık görülür.",
+    "Kendine zarar verme davranışı belirti olarak ele alınır: Altta yatan durumun tedavisiyle kendine zarar verme davranışının ortadan kalkmasını beklemek yeterli değildir; davranış bir belirti kabul edilerek doğrudan müdahale edilmelidir."
+   ],
+   "v": "af5997f1d2"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse beş çıkmış soru bağlanmıştır; gençler ve yaşlılarda nedenler, girişim sonrası ilk basamak, yatış kararı, kendine zarar vermenin türleri ve tanı grupları soruldu.",
+   "maddeler": [
+    {
+     "baslik": "Yaşlılarda intihar nedenleri",
+     "metin": "Yaşlılarda intiharın nedenleri yaşamak için nedeni olmama, kendini gereksiz hissetme ve bedensel düşkünlük ile hastalıklardır.",
+     "neden": "2020-21 sınavında yaşlılarda neden olmayan seçenek soruldu; gençlerin nedenleriyle karıştırılması klasik tuzaktır.",
+     "s": [
+      10
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Gençlerde intihar nedenleri",
+     "metin": "Gençlerde nedenler yoğun psikolojik, biyolojik ve sosyal değişiklikler, bireyselleşme isteği, desteğin azalması ve sorun çözme becerisinin yetersizliğidir.",
+     "neden": "Gençler ve yaşlılar karşılaştırması 2020-21 çıkmışının cevabını belirler.",
+     "s": [
+      9
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Girişimden sonra önce tıbbi müdahale",
+     "metin": "Riski yüksek ya da girişimde bulunmuş kişide önce gereken tıbbi müdahale yapılır, sonra güvenlik sağlanır.",
+     "neden": "2025-26 sınavında girişimde bulunan hastaya ilk yapılacak işlem soruldu.",
+     "s": [
+      27
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Yüksek riskte güvenlik ve hastaneye yatış",
+     "metin": "Daha önce intihar girişimi öyküsü olan, ölsem de her şey bitse diyerek ölüm isteğini dile getiren ve yalnız yaşayan genç hasta yüksek risklidir; güvenlik sağlanır, gerektiğinde hastaneye yatırılıp yakından izlenir.",
+     "neden": "2025-26 sınavında önceki girişimi olan, yalnız yaşayan genç hastada yatış soruldu.",
+     "s": [
+      27
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kendine zarar verme davranışının tanımı",
+     "metin": "Kendine zarar verme, bilinçli ölüm isteği olmadan, isteyerek ve amaçlı yapılan, doku hasarıyla sonuçlanan tekrarlayıcı bir girişimdir.",
+     "neden": "Slayt tanımı, amacı ve dört ölçütü ayrıntılı verir; amacın ölmek olmadığı özellikle belirtilir.",
+     "s": [
+      32
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "İntihar sorgusu genelden özele ilerler",
+     "metin": "İntihar hakkında genelden özele konuşulur: ölmüş olmayı isteme, düşünce, plan, planın ayrıntıları, girişim.",
+     "neden": "Geçmiş yılın öğrenci notunda genelden özele sorgulama basamakları işaretlendi.",
+     "s": [
+      25
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Kendine zarar verme türleri",
+     "metin": "Kendine zarar verme dört gruba ayrılır: tipik, psikotik, kompulsif ve dürtüsel.",
+     "neden": "2018-19 sınavında hangi eylemlerin self-mutilasyon kapsamına girdiği soruldu.",
+     "s": [
+      34
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Tamamlanmış intiharda psikiyatrik tanı dağılımı",
+     "metin": "Tamamlanmış intiharların yaklaşık %90'ında psikiyatrik tanı vardır; duygudurum bozukluğu %60 ile ilk sıradadır.",
+     "neden": "2018-19 sınavında intihara en eğilimli bozukluk grubu soruldu; slayttan dolaylı çözülür.",
+     "s": [
+      5,
+      19
+     ],
+     "cikmis": true
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse beş çıkmış soru bağlanmıştır; gençler ve yaşlılarda nedenler, girişim sonrası ilk basamak, yatış kararı, kendine zarar vermenin türleri ve tanı grupları soruldu.",
+    "Yaşlılarda intihar nedenleri: Yaşlılarda intiharın nedenleri yaşamak için nedeni olmama, kendini gereksiz hissetme ve bedensel düşkünlük ile hastalıklardır.",
+    "Gençlerde intihar nedenleri: Gençlerde nedenler yoğun psikolojik, biyolojik ve sosyal değişiklikler, bireyselleşme isteği, desteğin azalması ve sorun çözme becerisinin yetersizliğidir.",
+    "Girişimden sonra önce tıbbi müdahale: Riski yüksek ya da girişimde bulunmuş kişide önce gereken tıbbi müdahale yapılır, sonra güvenlik sağlanır.",
+    "Yüksek riskte güvenlik ve hastaneye yatış: Daha önce intihar girişimi öyküsü olan, ölsem de her şey bitse diyerek ölüm isteğini dile getiren ve yalnız yaşayan genç hasta yüksek risklidir; güvenlik sağlanır, gerektiğinde hastaneye yatırılıp yakından izlenir.",
+    "Kendine zarar verme davranışının tanımı: Kendine zarar verme, bilinçli ölüm isteği olmadan, isteyerek ve amaçlı yapılan, doku hasarıyla sonuçlanan tekrarlayıcı bir girişimdir.",
+    "İntihar sorgusu genelden özele ilerler: İntihar hakkında genelden özele konuşulur: ölmüş olmayı isteme, düşünce, plan, planın ayrıntıları, girişim.",
+    "Kendine zarar verme türleri: Kendine zarar verme dört gruba ayrılır: tipik, psikotik, kompulsif ve dürtüsel.",
+    "Tamamlanmış intiharda psikiyatrik tanı dağılımı: Tamamlanmış intiharların yaklaşık %90'ında psikiyatrik tanı vardır; duygudurum bozukluğu %60 ile ilk sıradadır."
+   ],
+   "v": "c4fe3f78ca"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu analiz, intihar riskinin değerlendirilmesi, ilk müdahale sırası ve kendine zarar verme davranışının sınıflaması üzerine çıkmış beş soruyu ders slaytlarındaki bilgiyle açıklar.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi, yaşlılarda intihar girişimi nedenlerinden biri değildir?",
+     "cevap": "Bireyselleşme isteği",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Soru, yaşlılardaki intihar nedenleriyle gençlerdeki nedenleri ayırt edebilmeyi ölçer; kökte olumsuz ifade (değildir) bulunduğu için yanlış olanı seçmek gerekir.",
+      "Slayt 10'a göre yaşlılarda yaşamak için nedeni olmama, kendini gereksiz hissetme ve bedensel düşkünlük ile hastalıklar intihar nedenleridir; hastalık olarak yalnızca bedensel hastalıklar geçer.",
+      "Bireyselleşme isteği slayt 9'da gençlerin nedenleri arasındadır ve yaşlılar listesinde yer almaz; doğru cevap bu yüzden budur. Psikiyatrik hastalıklar ise slayt 9'da gençlerin nedenleri arasında anılır, slayt 10'da yaşlılar için ayrıca yazılmamıştır; bu yüzden soru, bu şıkkı ayırt etmek için slayt dışı bir çıkarım da gerektirir.",
+      "Güçlü çeldirici kendini gereksiz hissetme ve bedensel hastalıklardır; ikisi de yaşlılık listesinde yer aldığından kök yanlış olanı sorduğu için elenir."
+     ],
+     "ornek": "Gençlerde sosyal desteğin azalması ve sorun çözme becerisinin yetersizliği risk sayılırken, yaşlılarda kendini gereksiz hissetme ve bedensel düşkünlük öne çıkar.",
+     "tuzak": "Olumsuz kök cümlesini (değildir) gözden kaçırıp yaşlılara ait doğru nedeni işaretlemek ve gençlik nedenlerini yaşlılığa taşımak."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Majör depresyon bozukluğu II. Antisosyal kişilik bozukluğu III. Şizofreni IV. Dikkat eksikliği/hiperaktivite bozukluğu Yukarıda verilen bozukluklardan hangisi/hangileri intihara en eğilimli grubu oluşturur?",
+     "cevap": "I ve III",
+     "s": [
+      19
+     ],
+     "aciklama": [
+      "Soru, intihara en eğilimli psikiyatrik hastalık gruplarını seçtirir; olasılığı en yüksek tanıları ayırt etmeyi ölçer.",
+      "Slayt 19'a göre tamamlanmış intiharların yüzde 60'ında duygudurum bozukluğu, yaklaşık yüzde 10'unda psikotik bozukluk ya da şizofreni bulunur; majör depresyon bir duygudurum bozukluğu olduğundan I ve III doğru kabul edilir.",
+      "Antisosyal kişilik bozukluğu slaytta kişilik bozukluklarının yüzde 5 ile 10'luk payı içinde sınır kişilikle birlikte anılır; oran duygudurum bozukluğundan çok düşüktür, bu yüzden en eğilimli grup sayılmaz.",
+      "Dikkat eksikliği ve hiperaktivite bozukluğu slaytta yer almaz; soruyu ders notu doğrudan karşılamaz, yalnız oran sıralaması üzerinden dolaylı destek verir. Güçlü çeldirici antisosyal kişiliği de ekleyen şıktır."
+     ],
+     "ornek": "Anahtara göre majör depresyon ve şizofreni intihara en eğilimli gruptur; slayta göre tamamlanmış intiharlarda en sık duygudurum bozukluğu görülür, oran yüzde altmıştır.",
+     "tuzak": "Slaytta anılan her tanıyı eşit riskli sanmak; oran farkını (duygudurum yüzde 60, şizofreni yüzde 10, kişilik bozukluğu yüzde 5 ile 10) gözden kaçırmak."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Amputasyon II. Yüzeyel cilt kesisi III. Kafa travması IV. Kendini asma Yukarıda verilen eylemlerden hangisi/hangileri self-mutilasyonun kapsamına girer?",
+     "cevap": "I, II ve III",
+     "s": [
+      34
+     ],
+     "aciklama": [
+      "Soru, kendine zarar verme davranışının kapsamını, yani hangi eylemlerin bu başlığa girdiğini ölçer.",
+      "Slayt 34, davranışı tipik, psikotik, kompulsif ve dürtüsel olmak üzere dörde ayırır; göz çıkarma ve organ kesme psikotik, kendini kesme, yakma ve vurma dürtüsel, kafa vurma ise tipik gruptadır. Bu nedenle amputasyon (organ kesme), yüzeyel cilt kesisi ve kafa travması (kafa vurma) kapsama girer; slayt amputasyon ve kafa travması sözcüklerini aynen kullanmaz, soru bunları bu gruplara eşler.",
+      "Slayt 31'e göre kendine zarar verme ölümcül olmayan ve yaşamı tehdit etmeyen bir davranıştır, slayt 32'ye göre bilinçli ölüm isteği olmadan yapılır; kendini asma ölüm amaçlı olduğundan intihardır ve kapsam dışıdır.",
+      "Güçlü çeldirici dördüncü maddeyi de ekleyen şıktır; ölümcül yöntemi kendine zarar vermeyle karıştıran öğrenci orada düşer."
+     ],
+     "ornek": "Bir hasta kolunu tekrar tekrar keserek gerginliğini azaltıyorsa bu kendine zarar verme sayılır; aynı hasta ölmek amacıyla asılırsa bu intihar girişimidir.",
+     "tuzak": "Kendini asma gibi ölümcül ve ölüm amaçlı eylemi, kendine zarar verme kapsamında saymak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Daha önce intihar girişiminde bulunmuş genç bir kızın son zamanlarda okula ve derslere gitmediği, \"Ölsem de kurtulsam, her şey bitse\" tarzında söylemleri olduğu bilinmektedir. Ailesinden uzakta, evde tek başına yaşamaktadır. Bu hastada ilk olarak nasıl bir tedavi yaklaşımı başlatılmalıdır?",
+     "cevap": "Yatış verip hastayı yakından takip etmek",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Soru, daha önce girişimi olan ve ölüm isteği dile getiren, tek başına yaşayan genç bir kızda ilk tedavi kararını ölçer; yani riskin yüksek olduğunu fark edip güvenli ortamı seçmeyi sınar.",
+      "Slayt 27'ye göre intihar riski yüksekse ya da girişim olmuşsa güvenlik sağlanır, ailenin işbirliği aranır ve gerektiğinde hasta hastaneye yatırılır; slayt 14'e göre önceki girişim en önemli risk etmenidir, bu olguda ailenin uzakta olması da koruyucu desteği azaltır.",
+      "Antidepresan verip göndermek, ayaktan takip, durumu kötüleşince gelmesini söylemek ya da bir hafta sonra görmek, yüksek riskli kişiyi izlemesiz bırakır; güçlü çeldirici ayaktan takiptir, çünkü tedavi gibi görünür ama güvenliği sağlamaz."
+     ],
+     "ornek": "Önceki girişimi olan, yalnız yaşayan ve ölüm istediğini söyleyen bir kişi başvurduğunda ilk karar eve göndermek değil, güvenliği sağlayan yakın izlemdir.",
+     "tuzak": "Ayaktan antidepresan başlamayı yeterli tedavi sanıp risk düzeyine göre yatış gereksinimini atlamak."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "İntihar girişiminde bulunan 22 yaşındaki bir kız hastaneye başvuruyor. Bu hastaya ilk olarak ne yapılmalıdır?",
+     "cevap": "Hastanın tıbbi durumu değerlendirilmeli ve gereken tıbbi müdahale yapılmalıdır",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Soru, girişimde bulunmuş bir hastaya yaklaşımda işlem sırasını ölçer; kökteki ilk olarak sözcüğü sıralamayı belirler.",
+      "Slayt 27'ye göre önce gereken tıbbi müdahale yapılır; ardından güvenlik sağlanır, aile ya da yakınlarla işbirliği kurulur, uygun psikiyatrik yaklaşım belirlenir ve gerektiğinde yatış yapılır. Bu nedenle birinci basamak hastanın tıbbi durumunun değerlendirilmesi ve müdahalesidir.",
+      "Aileyle görüşme, yatış ve antidepresan sonraki adımlardır; plan ayrıntısını sorgulamak da risk değerlendirmesinin parçası olsa da yaşamsal tıbbi durum çözülmeden önce gelmez.",
+      "Psikiyatri servisine yatırmak, slayt 27'deki sıraya göre ilk basamak değil, sonraki adımdır; gerektiğinde uygulandığı için güçlü bir çeldiricidir."
+     ],
+     "ornek": "Girişim sonrası acile gelen bir kişide önce vücut bulguları ve gereken tıbbi tedavi ele alınır, psikiyatrik karar bunun ardından verilir.",
+     "tuzak": "İntihar konusunu psikiyatrik bir durum sayıp tıbbi müdahaleyi atlayarak doğrudan yatış ya da ilaç kararına gitmek."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu analiz, intihar riskinin değerlendirilmesi, ilk müdahale sırası ve kendine zarar verme davranışının sınıflaması üzerine çıkmış beş soruyu ders slaytlarındaki bilgiyle açıklar.",
+    "2020-2021: Aşağıdakilerden hangisi, yaşlılarda intihar girişimi nedenlerinden biri değildir?",
+    "Cevap: Bireyselleşme isteği.",
+    "Soru, yaşlılardaki intihar nedenleriyle gençlerdeki nedenleri ayırt edebilmeyi ölçer; kökte olumsuz ifade (değildir) bulunduğu için yanlış olanı seçmek gerekir.",
+    "Slayt 10'a göre yaşlılarda yaşamak için nedeni olmama, kendini gereksiz hissetme ve bedensel düşkünlük ile hastalıklar intihar nedenleridir; hastalık olarak yalnızca bedensel hastalıklar geçer.",
+    "Bireyselleşme isteği slayt 9'da gençlerin nedenleri arasındadır ve yaşlılar listesinde yer almaz; doğru cevap bu yüzden budur. Psikiyatrik hastalıklar ise slayt 9'da gençlerin nedenleri arasında anılır, slayt 10'da yaşlılar için ayrıca yazılmamıştır; bu yüzden soru, bu şıkkı ayırt etmek için slayt dışı bir çıkarım da gerektirir.",
+    "Güçlü çeldirici kendini gereksiz hissetme ve bedensel hastalıklardır; ikisi de yaşlılık listesinde yer aldığından kök yanlış olanı sorduğu için elenir.",
+    "Örnek: Gençlerde sosyal desteğin azalması ve sorun çözme becerisinin yetersizliği risk sayılırken, yaşlılarda kendini gereksiz hissetme ve bedensel düşkünlük öne çıkar.",
+    "Tuzak: Olumsuz kök cümlesini (değildir) gözden kaçırıp yaşlılara ait doğru nedeni işaretlemek ve gençlik nedenlerini yaşlılığa taşımak.",
+    "2018-2019: I. Majör depresyon bozukluğu II. Antisosyal kişilik bozukluğu III. Şizofreni IV. Dikkat eksikliği/hiperaktivite bozukluğu Yukarıda verilen bozukluklardan hangisi/hangileri intihara en eğilimli grubu oluşturur?",
+    "Cevap: I ve III.",
+    "Soru, intihara en eğilimli psikiyatrik hastalık gruplarını seçtirir; olasılığı en yüksek tanıları ayırt etmeyi ölçer.",
+    "Slayt 19'a göre tamamlanmış intiharların yüzde 60'ında duygudurum bozukluğu, yaklaşık yüzde 10'unda psikotik bozukluk ya da şizofreni bulunur; majör depresyon bir duygudurum bozukluğu olduğundan I ve III doğru kabul edilir.",
+    "Antisosyal kişilik bozukluğu slaytta kişilik bozukluklarının yüzde 5 ile 10'luk payı içinde sınır kişilikle birlikte anılır; oran duygudurum bozukluğundan çok düşüktür, bu yüzden en eğilimli grup sayılmaz.",
+    "Dikkat eksikliği ve hiperaktivite bozukluğu slaytta yer almaz; soruyu ders notu doğrudan karşılamaz, yalnız oran sıralaması üzerinden dolaylı destek verir. Güçlü çeldirici antisosyal kişiliği de ekleyen şıktır.",
+    "Örnek: Anahtara göre majör depresyon ve şizofreni intihara en eğilimli gruptur; slayta göre tamamlanmış intiharlarda en sık duygudurum bozukluğu görülür, oran yüzde altmıştır.",
+    "Tuzak: Slaytta anılan her tanıyı eşit riskli sanmak; oran farkını (duygudurum yüzde 60, şizofreni yüzde 10, kişilik bozukluğu yüzde 5 ile 10) gözden kaçırmak.",
+    "2018-2019: I. Amputasyon II. Yüzeyel cilt kesisi III. Kafa travması IV. Kendini asma Yukarıda verilen eylemlerden hangisi/hangileri self-mutilasyonun kapsamına girer?",
+    "Cevap: I, II ve III.",
+    "Soru, kendine zarar verme davranışının kapsamını, yani hangi eylemlerin bu başlığa girdiğini ölçer.",
+    "Slayt 34, davranışı tipik, psikotik, kompulsif ve dürtüsel olmak üzere dörde ayırır; göz çıkarma ve organ kesme psikotik, kendini kesme, yakma ve vurma dürtüsel, kafa vurma ise tipik gruptadır. Bu nedenle amputasyon (organ kesme), yüzeyel cilt kesisi ve kafa travması (kafa vurma) kapsama girer; slayt amputasyon ve kafa travması sözcüklerini aynen kullanmaz, soru bunları bu gruplara eşler.",
+    "Slayt 31'e göre kendine zarar verme ölümcül olmayan ve yaşamı tehdit etmeyen bir davranıştır, slayt 32'ye göre bilinçli ölüm isteği olmadan yapılır; kendini asma ölüm amaçlı olduğundan intihardır ve kapsam dışıdır.",
+    "Güçlü çeldirici dördüncü maddeyi de ekleyen şıktır; ölümcül yöntemi kendine zarar vermeyle karıştıran öğrenci orada düşer.",
+    "Örnek: Bir hasta kolunu tekrar tekrar keserek gerginliğini azaltıyorsa bu kendine zarar verme sayılır; aynı hasta ölmek amacıyla asılırsa bu intihar girişimidir.",
+    "Tuzak: Kendini asma gibi ölümcül ve ölüm amaçlı eylemi, kendine zarar verme kapsamında saymak.",
+    "2025-2026: Daha önce intihar girişiminde bulunmuş genç bir kızın son zamanlarda okula ve derslere gitmediği, \"Ölsem de kurtulsam, her şey bitse\" tarzında söylemleri olduğu bilinmektedir. Ailesinden uzakta, evde tek başına yaşamaktadır. Bu hastada ilk olarak nasıl bir tedavi yaklaşımı başlatılmalıdır?",
+    "Cevap: Yatış verip hastayı yakından takip etmek.",
+    "Soru, daha önce girişimi olan ve ölüm isteği dile getiren, tek başına yaşayan genç bir kızda ilk tedavi kararını ölçer; yani riskin yüksek olduğunu fark edip güvenli ortamı seçmeyi sınar.",
+    "Slayt 27'ye göre intihar riski yüksekse ya da girişim olmuşsa güvenlik sağlanır, ailenin işbirliği aranır ve gerektiğinde hasta hastaneye yatırılır; slayt 14'e göre önceki girişim en önemli risk etmenidir, bu olguda ailenin uzakta olması da koruyucu desteği azaltır.",
+    "Antidepresan verip göndermek, ayaktan takip, durumu kötüleşince gelmesini söylemek ya da bir hafta sonra görmek, yüksek riskli kişiyi izlemesiz bırakır; güçlü çeldirici ayaktan takiptir, çünkü tedavi gibi görünür ama güvenliği sağlamaz.",
+    "Örnek: Önceki girişimi olan, yalnız yaşayan ve ölüm istediğini söyleyen bir kişi başvurduğunda ilk karar eve göndermek değil, güvenliği sağlayan yakın izlemdir.",
+    "Tuzak: Ayaktan antidepresan başlamayı yeterli tedavi sanıp risk düzeyine göre yatış gereksinimini atlamak.",
+    "2025-2026: İntihar girişiminde bulunan 22 yaşındaki bir kız hastaneye başvuruyor. Bu hastaya ilk olarak ne yapılmalıdır?",
+    "Cevap: Hastanın tıbbi durumu değerlendirilmeli ve gereken tıbbi müdahale yapılmalıdır.",
+    "Soru, girişimde bulunmuş bir hastaya yaklaşımda işlem sırasını ölçer; kökteki ilk olarak sözcüğü sıralamayı belirler.",
+    "Slayt 27'ye göre önce gereken tıbbi müdahale yapılır; ardından güvenlik sağlanır, aile ya da yakınlarla işbirliği kurulur, uygun psikiyatrik yaklaşım belirlenir ve gerektiğinde yatış yapılır. Bu nedenle birinci basamak hastanın tıbbi durumunun değerlendirilmesi ve müdahalesidir.",
+    "Aileyle görüşme, yatış ve antidepresan sonraki adımlardır; plan ayrıntısını sorgulamak da risk değerlendirmesinin parçası olsa da yaşamsal tıbbi durum çözülmeden önce gelmez.",
+    "Psikiyatri servisine yatırmak, slayt 27'deki sıraya göre ilk basamak değil, sonraki adımdır; gerektiğinde uygulandığı için güçlü bir çeldiricidir.",
+    "Örnek: Girişim sonrası acile gelen bir kişide önce vücut bulguları ve gereken tıbbi tedavi ele alınır, psikiyatrik karar bunun ardından verilir.",
+    "Tuzak: İntihar konusunu psikiyatrik bir durum sayıp tıbbi müdahaleyi atlayarak doğrudan yatış ya da ilaç kararına gitmek."
+   ],
+   "v": "f23d4d0493"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Hocanın çok sayıda çıkmış sorusuna dayanan, güvenilir bir profil.",
+   "guven": "yuksek",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%44) ve tanı ve ayırıcı tanı (%20) sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%53) ve hatırlama (%38) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın çok sayıda çıkmış sorusuna dayanan, güvenilir bir profil.",
+    "Soru kökü: Sorular çoğunlukla yanlış ifadeyi bulma (%33) ve doğrudan bilgi sorusu (%23) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%44) ve tanı ve ayırıcı tanı (%20) sorulur.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%53) ve hatırlama (%38) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+   ],
+   "v": "a671c02d38"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Gençlerde nedenler: değişim",
+     "metin": "Sık yapılan hata: Olumsuz kök cümlesini (değildir) gözden kaçırıp yaşlılara ait doğru nedeni işaretlemek ve gençlik nedenlerini yaşlılığa taşımak."
+    },
+    {
+     "baslik": "Duygudurum bozukluğu",
+     "metin": "Sık yapılan hata: Slaytta anılan her tanıyı eşit riskli sanmak; oran farkını (duygudurum yüzde 60, şizofreni yüzde 10, kişilik bozukluğu yüzde 5 ile 10) gözden kaçırmak."
+    },
+    {
+     "baslik": "Kendini tedavi gerektirecek şekilde yaralayan kişiler",
+     "metin": "Sık yapılan hata: Kendini asma gibi ölümcül ve ölüm amaçlı eylemi, kendine zarar verme kapsamında saymak."
+    },
+    {
+     "baslik": "İntihar riski yüksekse önce tıbbi müdahale",
+     "metin": "Sık yapılan hata: Ayaktan antidepresan başlamayı yeterli tedavi sanıp risk düzeyine göre yatış gereksinimini atlamak. Ayrıca: İntihar konusunu psikiyatrik bir durum sayıp tıbbi müdahaleyi atlayarak doğrudan yatış ya da ilaç kararına gitmek."
+    },
+    {
+     "baslik": "Yaşlılarda intihar nedenleri",
+     "metin": "2020-21 sınavında yaşlılarda neden olmayan seçenek soruldu; gençlerin nedenleriyle karıştırılması klasik tuzaktır."
+    },
+    {
+     "baslik": "Girişimden sonra önce tıbbi müdahale",
+     "metin": "2025-26 sınavında girişimde bulunan hastaya ilk yapılacak işlem soruldu."
+    },
+    {
+     "baslik": "Yüksek riskte güvenlik ve hastaneye yatış",
+     "metin": "2025-26 sınavında önceki girişimi olan, yalnız yaşayan genç hastada yatış soruldu."
+    },
+    {
+     "baslik": "Kendine zarar verme türleri",
+     "metin": "2018-19 sınavında hangi eylemlerin self-mutilasyon kapsamına girdiği soruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; profilde en yüksek payı bu tür alıyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Gençlerde nedenler: değişim: Sık yapılan hata: Olumsuz kök cümlesini (değildir) gözden kaçırıp yaşlılara ait doğru nedeni işaretlemek ve gençlik nedenlerini yaşlılığa taşımak.",
+    "Duygudurum bozukluğu: Sık yapılan hata: Slaytta anılan her tanıyı eşit riskli sanmak; oran farkını (duygudurum yüzde 60, şizofreni yüzde 10, kişilik bozukluğu yüzde 5 ile 10) gözden kaçırmak.",
+    "Kendini tedavi gerektirecek şekilde yaralayan kişiler: Sık yapılan hata: Kendini asma gibi ölümcül ve ölüm amaçlı eylemi, kendine zarar verme kapsamında saymak.",
+    "İntihar riski yüksekse önce tıbbi müdahale: Sık yapılan hata: Ayaktan antidepresan başlamayı yeterli tedavi sanıp risk düzeyine göre yatış gereksinimini atlamak. Ayrıca: İntihar konusunu psikiyatrik bir durum sayıp tıbbi müdahaleyi atlayarak doğrudan yatış ya da ilaç kararına gitmek.",
+    "Yaşlılarda intihar nedenleri: 2020-21 sınavında yaşlılarda neden olmayan seçenek soruldu; gençlerin nedenleriyle karıştırılması klasik tuzaktır.",
+    "Girişimden sonra önce tıbbi müdahale: 2025-26 sınavında girişimde bulunan hastaya ilk yapılacak işlem soruldu.",
+    "Yüksek riskte güvenlik ve hastaneye yatış: 2025-26 sınavında önceki girişimi olan, yalnız yaşayan genç hastada yatış soruldu.",
+    "Kendine zarar verme türleri: 2018-19 sınavında hangi eylemlerin self-mutilasyon kapsamına girdiği soruldu.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; profilde en yüksek payı bu tür alıyor."
+   ],
+   "v": "0c692eb599"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders intiharı bir süreç olarak ele alır: davranış basamakları, sıklık, risk etmenleri (sosyodemografik, önceki girişim, düşüncenin ciddiyeti, yaşama son vermeyi isteme nedenleri, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek, muayene bulguları), koruyucu etmenler, değerlendirmenin genel ilkeleri ve tedavi. İkinci bölüm kendine zarar verme davranışının tanımı, ölçütleri, türleri, sıklığı ve kişilik bozukluklarıyla ilişkisini anlatır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders intiharı bir süreç olarak ele alır: davranış basamakları, sıklık, risk etmenleri (sosyodemografik, önceki girişim, düşüncenin ciddiyeti, yaşama son vermeyi isteme nedenleri, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek, muayene bulguları), koruyucu etmenler, değerlendirmenin genel ilkeleri ve tedavi. İkinci bölüm kendine zarar verme davranışının tanımı, ölçütleri, türleri, sıklığı ve kişilik bozukluklarıyla ilişkisini anlatır."
+   ],
+   "v": "b64fc4ae66"
+  },
+  {
+   "id": "2s14-08",
+   "baslik": "Tamamlanmış intiharda psikiyatrik tanı dağılımı",
+   "giris": "Tamamlanmış intiharların yaklaşık %90'ında psikiyatrik tanı vardır; duygudurum bozukluğu %60 ile ilk sıradadır.",
+   "s": [
+    5,
+    19
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "%60."
+    },
+    {
+     "metin": "Alkol madde kötüye kullanımı ya da bağımlılığı: %25 ile %50."
+    },
+    {
+     "metin": "%15 ile %20."
+    },
+    {
+     "metin": "%10."
+    },
+    {
+     "metin": "%5 ile %10, özellikle sınır ve ASKB."
+    },
+    {
+     "metin": "Dikkat eksikliği hiperaktivite bozukluğu bu listede yer almaz; bu nedenle 2018-19 sorusu slayttan yalnız dolaylı yanıtlanır."
+    }
+   ],
+   "klip": "o-2s14-08",
+   "ses": [
+    "Tamamlanmış intiharda psikiyatrik tanı dağılımı.",
+    "Tamamlanmış intiharların yaklaşık %90'ında psikiyatrik tanı vardır; duygudurum bozukluğu %60 ile ilk sıradadır.",
+    "%60.",
+    "Alkol madde kötüye kullanımı ya da bağımlılığı: %25 ile %50.",
+    "%15 ile %20.",
+    "%10.",
+    "%5 ile %10, özellikle sınır ve ASKB.",
+    "Dikkat eksikliği hiperaktivite bozukluğu bu listede yer almaz; bu nedenle 2018-19 sorusu slayttan yalnız dolaylı yanıtlanır."
+   ],
+   "v": "b08917c91b"
+  },
+  {
+   "id": "2s14-02",
+   "baslik": "Gençlerde intihar nedenleri",
+   "giris": "Gençlerde nedenler yoğun psikolojik, biyolojik ve sosyal değişiklikler, bireyselleşme isteği, desteğin azalması ve sorun çözme becerisinin yetersizliğidir.",
+   "s": [
+    9
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yoğun psikolojik, biyolojik ve sosyal değişiklikler yaşanır, çevresel stresler artar."
+    },
+    {
+     "metin": "Sosyal destek sistemlerinin desteği azalır."
+    },
+    {
+     "metin": "Psikiyatrik hastalıklar ve alkol madde kullanımı bu dönemde başlar."
+    },
+    {
+     "metin": "Gelecekle ilgili belirsizlik vardır ve sorun çözme becerileri yetersiz kalır."
+    },
+    {
+     "metin": "Bu liste yaşlılardaki nedenlerle (yaşamak için nedeni olmama, kendini gereksiz hissetme) karıştırılmamalıdır."
+    }
+   ],
+   "klip": "o-2s14-02",
+   "ses": [
+    "Gençlerde intihar nedenleri.",
+    "Gençlerde nedenler yoğun psikolojik, biyolojik ve sosyal değişiklikler, bireyselleşme isteği, desteğin azalması ve sorun çözme becerisinin yetersizliğidir.",
+    "Yoğun psikolojik, biyolojik ve sosyal değişiklikler yaşanır, çevresel stresler artar.",
+    "Sosyal destek sistemlerinin desteği azalır.",
+    "Psikiyatrik hastalıklar ve alkol madde kullanımı bu dönemde başlar.",
+    "Gelecekle ilgili belirsizlik vardır ve sorun çözme becerileri yetersiz kalır.",
+    "Bu liste yaşlılardaki nedenlerle (yaşamak için nedeni olmama, kendini gereksiz hissetme) karıştırılmamalıdır."
+   ],
+   "v": "3847079b80"
+  },
+  {
+   "id": "2s14-01",
+   "baslik": "Yaşlılarda intihar nedenleri",
+   "giris": "Yaşlılarda intiharın nedenleri yaşamak için nedeni olmama, kendini gereksiz hissetme ve bedensel düşkünlük ile hastalıklardır.",
+   "s": [
+    10
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Yaşamak için nedeni olmama, kendini gereksiz hissetme, bedensel düşkünlük ve hastalıklar."
+    },
+    {
+     "metin": "Yaşlılarda yapılan girişimler daha ölümcüldür."
+    },
+    {
+     "metin": "Yeme içme reddi ve yaşamsal ilaçları kullanmama özel bir durum olarak ayrıca anılır."
+    },
+    {
+     "metin": "Bireyselleşme isteği, sorun çözme becerisinin yetersizliği ve alkol madde kullanımının başlaması gençlerin nedenleridir; yaşlılar listesine girmez."
+    }
+   ],
+   "klip": "o-2s14-01",
+   "ses": [
+    "Yaşlılarda intihar nedenleri.",
+    "Yaşlılarda intiharın nedenleri yaşamak için nedeni olmama, kendini gereksiz hissetme ve bedensel düşkünlük ile hastalıklardır.",
+    "Yaşamak için nedeni olmama, kendini gereksiz hissetme, bedensel düşkünlük ve hastalıklar.",
+    "Yaşlılarda yapılan girişimler daha ölümcüldür.",
+    "Yeme içme reddi ve yaşamsal ilaçları kullanmama özel bir durum olarak ayrıca anılır.",
+    "Bireyselleşme isteği, sorun çözme becerisinin yetersizliği ve alkol madde kullanımının başlaması gençlerin nedenleridir; yaşlılar listesine girmez."
+   ],
+   "v": "d7fb397378"
+  },
+  {
+   "id": "2s14-09",
+   "baslik": "Utanç intiharı ve kişilik bozuklukları",
+   "giris": "Narsisistik yaralanmaya duyarlı kişide aşağılanma ve utanç, ani dürtüsel intihar girişimine yol açabilir; sınır ve ASKB özellikle öne çıkar.",
+   "s": [
+    17,
+    19
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Narsisistik yaralanmalara duyarlı kişi aşağılandığını düşündüğünde ya da çok utandığında bunu kaldıramayabilir."
+    },
+    {
+     "metin": "Ani dürtüsel intihar girişimleri ortaya çıkar."
+    },
+    {
+     "metin": "Tamamlanmış intiharların %5 ile %10'unda bulunur; özellikle sınır ve ASKB akılda tutulmalıdır."
+    },
+    {
+     "metin": "Yoğun ümitsizlik ya da gelecekle ilgili olumsuz beklentiler de intihar riskini yükseltir."
+    }
+   ],
+   "klip": "o-2s14-09",
+   "ses": [
+    "Utanç intiharı ve kişilik bozuklukları.",
+    "Narsisistik yaralanmaya duyarlı kişide aşağılanma ve utanç, ani dürtüsel intihar girişimine yol açabilir; sınır ve ASKB özellikle öne çıkar.",
+    "Narsisistik yaralanmalara duyarlı kişi aşağılandığını düşündüğünde ya da çok utandığında bunu kaldıramayabilir.",
+    "Ani dürtüsel intihar girişimleri ortaya çıkar.",
+    "Tamamlanmış intiharların %5 ile %10'unda bulunur; özellikle sınır ve ASKB akılda tutulmalıdır.",
+    "Yoğun ümitsizlik ya da gelecekle ilgili olumsuz beklentiler de intihar riskini yükseltir."
+   ],
+   "v": "b79a93d5ea"
+  },
+  {
+   "id": "2s14-07",
+   "baslik": "İntihar sorgusu genelden özele ilerler",
+   "giris": "İntihar hakkında genelden özele konuşulur: ölmüş olmayı isteme, düşünce, plan, planın ayrıntıları, girişim.",
+   "s": [
+    25
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Hastayla ilişki sakin, yargılamayan ve empatik biçimde kurulur."
+    },
+    {
+     "metin": "Ölmüş olmayı istedi mi, intihar düşüncesi var mı, intihar planı var mı, planın ayrıntıları neler."
+    },
+    {
+     "metin": "İntihar girişiminde bulundu mu, bulunduysa ayrıntıları neler."
+    },
+    {
+     "metin": "Planın ölümcüllüğü, tarihin, yöntemin ve yerin belirlenmiş olması ve ölüm sonrası hazırlıklar riski yükseltir."
+    },
+    {
+     "metin": "Sorgu sonucunda önceki girişim, ölüm isteği ve yalnız yaşama birlikte saptanırsa hasta gerektiğinde hastaneye yatırılır."
+    }
+   ],
+   "klip": "o-2s14-07",
+   "ses": [
+    "İntihar sorgusu genelden özele ilerler.",
+    "İntihar hakkında genelden özele konuşulur: ölmüş olmayı isteme, düşünce, plan, planın ayrıntıları, girişim.",
+    "Hastayla ilişki sakin, yargılamayan ve empatik biçimde kurulur.",
+    "Ölmüş olmayı istedi mi, intihar düşüncesi var mı, intihar planı var mı, planın ayrıntıları neler.",
+    "İntihar girişiminde bulundu mu, bulunduysa ayrıntıları neler.",
+    "Planın ölümcüllüğü, tarihin, yöntemin ve yerin belirlenmiş olması ve ölüm sonrası hazırlıklar riski yükseltir.",
+    "Sorgu sonucunda önceki girişim, ölüm isteği ve yalnız yaşama birlikte saptanırsa hasta gerektiğinde hastaneye yatırılır."
+   ],
+   "v": "2baa8c9c7d"
+  },
+  {
+   "id": "2s14-03",
+   "baslik": "Girişimden sonra önce tıbbi müdahale",
+   "giris": "Riski yüksek ya da girişimde bulunmuş kişide önce gereken tıbbi müdahale yapılır, sonra güvenlik sağlanır.",
+   "s": [
+    27
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Önce gereken tıbbi müdahale yapılır, ardından güvenlik sağlanır."
+    },
+    {
+     "metin": "Aile ya da hasta yakınlarıyla işbirliği kurulmaya çalışılır."
+    },
+    {
+     "metin": "Uygun psikiyatrik yaklaşım belirlenip uygulanır; gerektiğinde hastaneye yatırılır."
+    },
+    {
+     "metin": "İntihar düşüncesinin sorgulanması, antidepresan başlanması ya da yatış, tıbbi müdahalenin önüne geçmez."
+    }
+   ],
+   "klip": "o-2s14-03",
+   "ses": [
+    "Girişimden sonra önce tıbbi müdahale.",
+    "Riski yüksek ya da girişimde bulunmuş kişide önce gereken tıbbi müdahale yapılır, sonra güvenlik sağlanır.",
+    "Önce gereken tıbbi müdahale yapılır, ardından güvenlik sağlanır.",
+    "Aile ya da hasta yakınlarıyla işbirliği kurulmaya çalışılır.",
+    "Uygun psikiyatrik yaklaşım belirlenip uygulanır; gerektiğinde hastaneye yatırılır.",
+    "İntihar düşüncesinin sorgulanması, antidepresan başlanması ya da yatış, tıbbi müdahalenin önüne geçmez."
+   ],
+   "v": "07cf25c811"
+  },
+  {
+   "id": "2s14-04",
+   "baslik": "Yüksek riskte güvenlik ve hastaneye yatış",
+   "giris": "Daha önce intihar girişimi öyküsü olan, ölsem de her şey bitse diyerek ölüm isteğini dile getiren ve yalnız yaşayan genç hasta yüksek risklidir; güvenlik sağlanır, gerektiğinde hastaneye yatırılıp yakından izlenir.",
+   "s": [
+    27
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Daha önce intihar girişimi öyküsü olan, \"ölsem de her şey bitse\" diyerek ölüm isteğini dile getiren ve yalnız yaşayan genç hasta yüksek risklidir; güvenlik sağlanır, gerektiğinde hastaneye yatırılıp yakından izlenir."
+    },
+    {
+     "metin": "İntihar girişimi öyküsü en önemli risk etmenidir (s14); sosyal izolasyon ya da yalnız yaşama riski artırır (s22)."
+    },
+    {
+     "metin": "Önce gereken tıbbi müdahale yapılır, güvenlik sağlanır, aile ya da hasta yakınlarıyla işbirliği kurulur, uygun psikiyatrik yaklaşım belirlenir ve gerektiğinde hastaneye yatırılır (s27)."
+    },
+    {
+     "metin": "Kişinin güvenliğinin sağlanması ve ölümcül araçlara ulaşılabilirliğin sınırlanması önemlidir."
+    },
+    {
+     "metin": "Antidepresan verip göndermek, ayaktan takip etmek ya da kötüleşince gelmesini söylemek yüksek riskte güvenliği sağlamaz."
+    }
+   ],
+   "klip": "o-2s14-04",
+   "ses": [
+    "Yüksek riskte güvenlik ve hastaneye yatış.",
+    "Daha önce intihar girişimi öyküsü olan, ölsem de her şey bitse diyerek ölüm isteğini dile getiren ve yalnız yaşayan genç hasta yüksek risklidir; güvenlik sağlanır, gerektiğinde hastaneye yatırılıp yakından izlenir.",
+    "Daha önce intihar girişimi öyküsü olan, \"ölsem de her şey bitse\" diyerek ölüm isteğini dile getiren ve yalnız yaşayan genç hasta yüksek risklidir; güvenlik sağlanır, gerektiğinde hastaneye yatırılıp yakından izlenir.",
+    "İntihar girişimi öyküsü en önemli risk etmenidir (s14); sosyal izolasyon ya da yalnız yaşama riski artırır (s22).",
+    "Önce gereken tıbbi müdahale yapılır, güvenlik sağlanır, aile ya da hasta yakınlarıyla işbirliği kurulur, uygun psikiyatrik yaklaşım belirlenir ve gerektiğinde hastaneye yatırılır (s27).",
+    "Kişinin güvenliğinin sağlanması ve ölümcül araçlara ulaşılabilirliğin sınırlanması önemlidir.",
+    "Antidepresan verip göndermek, ayaktan takip etmek ya da kötüleşince gelmesini söylemek yüksek riskte güvenliği sağlamaz."
+   ],
+   "v": "9c423744fc"
+  },
+  {
+   "id": "2s14-05",
+   "baslik": "Kendine zarar verme davranışının tanımı",
+   "giris": "Kendine zarar verme, bilinçli ölüm isteği olmadan, isteyerek ve amaçlı yapılan, doku hasarıyla sonuçlanan tekrarlayıcı bir girişimdir.",
+   "s": [
+    32
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Tekrarlayıcıdır, bilinçli ölüm isteği yoktur, isteyerek ve amaçlı yapılır, doku hasarına yol açar, kişinin kendi bedenine yöneliktir."
+    },
+    {
+     "metin": "Ölmek değildir; ortama uyamamanın ve tahammülsüzlüğün yarattığı baskıya karşı rahatlamadır."
+    },
+    {
+     "metin": "Kesme ya da yakmayı sürekli tekrarlama, öncesinde gerilim duygusu, fiziksel acıyla birlikte rahatlama ve zevk alma, izleri ya da kanı gizlemeye çalışma."
+    },
+    {
+     "metin": "Ortama uyamama ve baskıya tahammülsüzlük bu davranışın zeminini oluşturur."
+    }
+   ],
+   "klip": "o-2s14-05",
+   "ses": [
+    "Kendine zarar verme davranışının tanımı.",
+    "Kendine zarar verme, bilinçli ölüm isteği olmadan, isteyerek ve amaçlı yapılan, doku hasarıyla sonuçlanan tekrarlayıcı bir girişimdir.",
+    "Tekrarlayıcıdır, bilinçli ölüm isteği yoktur, isteyerek ve amaçlı yapılır, doku hasarına yol açar, kişinin kendi bedenine yöneliktir.",
+    "Ölmek değildir; ortama uyamamanın ve tahammülsüzlüğün yarattığı baskıya karşı rahatlamadır.",
+    "Kesme ya da yakmayı sürekli tekrarlama, öncesinde gerilim duygusu, fiziksel acıyla birlikte rahatlama ve zevk alma, izleri ya da kanı gizlemeye çalışma.",
+    "Ortama uyamama ve baskıya tahammülsüzlük bu davranışın zeminini oluşturur."
+   ],
+   "v": "b0b438255a"
+  },
+  {
+   "id": "2s14-06",
+   "baslik": "Kendine zarar verme türleri",
+   "giris": "Kendine zarar verme dört gruba ayrılır: tipik, psikotik, kompulsif ve dürtüsel.",
+   "s": [
+    34
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, deriyi çimdiklemek ya da tırmalamak, kendini ısırmak ve saç yolmak."
+    },
+    {
+     "metin": "Göz çıkarmak ve organ kesmek."
+    },
+    {
+     "metin": "Saç yolmak, deriyi çimdiklemek ve tırnak yemek."
+    },
+    {
+     "metin": "Kendini kesmek, kendini yakmak ve kendine vurmak."
+    },
+    {
+     "metin": "Bilinçli ölüm isteğiyle yapılan eylem bu tanıma girmez."
+    }
+   ],
+   "klip": "o-2s14-06",
+   "ses": [
+    "Kendine zarar verme türleri.",
+    "Kendine zarar verme dört gruba ayrılır: tipik, psikotik, kompulsif ve dürtüsel.",
+    "Kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, deriyi çimdiklemek ya da tırmalamak, kendini ısırmak ve saç yolmak.",
+    "Göz çıkarmak ve organ kesmek.",
+    "Saç yolmak, deriyi çimdiklemek ve tırnak yemek.",
+    "Kendini kesmek, kendini yakmak ve kendine vurmak.",
+    "Bilinçli ölüm isteğiyle yapılan eylem bu tanıma girmez."
+   ],
+   "v": "12e454584a"
+  },
+  {
+   "id": "2s14-10",
+   "baslik": "Kendine zarar verme en sık kişilik bozukluklarında",
+   "giris": "Kendine zarar verme en sık kişilik bozukluklarında, özellikle borderline kişilik bozukluğunda görülür.",
+   "s": [
+    38
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kişilik bozuklukları, akut ve kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında sıktır."
+    },
+    {
+     "metin": "Kişilik bozuklukları, özellikle borderline kişilik bozukluğu."
+    },
+    {
+     "metin": "Borderline kişilik bozukluğunda nadir görüldüğü ifadesi slayttaki bilgiyle çelişir."
+    },
+    {
+     "metin": "Davranış çoğunlukla ergenlik döneminde başlar."
+    },
+    {
+     "metin": "Altta yatan durumun tedavisiyle bu davranışın kendiliğinden ortadan kalkmasını beklemek yeterli değildir."
+    }
+   ],
+   "klip": "o-2s14-10",
+   "ses": [
+    "Kendine zarar verme en sık kişilik bozukluklarında.",
+    "Kendine zarar verme en sık kişilik bozukluklarında, özellikle borderline kişilik bozukluğunda görülür.",
+    "Kişilik bozuklukları, akut ve kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında sıktır.",
+    "Kişilik bozuklukları, özellikle borderline kişilik bozukluğu.",
+    "Borderline kişilik bozukluğunda nadir görüldüğü ifadesi slayttaki bilgiyle çelişir.",
+    "Davranış çoğunlukla ergenlik döneminde başlar.",
+    "Altta yatan durumun tedavisiyle bu davranışın kendiliğinden ortadan kalkmasını beklemek yeterli değildir."
+   ],
+   "v": "3d9d3d6d3b"
+  }
+ ]
+}
