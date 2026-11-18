@@ -167,3 +167,10 @@
 - **Kök neden:** "hoca katmanını ekle" görevi vurgu cümlesini amaç sanıyor; `hoca` alanının yalnız sınav vurgusu için olduğu ve dayanaksız/yinelenen vurgu cümlesinin H22 dolgusu sayıldığı istemde yoktu. `v2_birlestir.py` cümle kimliklerini her koşuda sıfırdan numaralıyor; kimlik korunmazsa klip/çapa/çıkmış bağları kayar.
 - **Çözüm/önleme:** Akış: A1b (ses_hizasi + hoca_vurgulari + "Anlatıma eklenecekler") → `yayinla.py kimlik` → yalnız var olan paragraflara ekleme (yeni paragraf/silme/sıra değişikliği yok) → birleştirme sonrası eski kimlikleri metinle geri yazma (`meds_temp/ogrenci_ders/k2-58/is/hoca_rev.py kimlik`) → bağımsız denetçi (yalnız değişen cümleler) → `yayin_hazirla_destesiz.sh` → `klip_tasi.py <key> --eski <eski.md>` → `sesli_yayinla.py` (EMA yalnız değişen klipleri üretir: 4–9 klip) → Oracle `meds-cumle-zaman` + `meds-kelime-zaman-hat`. `hoca` alanına yalnız `tur: sinav` bağlanır (`yayinla.py yaz` dogrulaması HATA verir); bilgiyi tekrar eden vurgu cümlesi yazılmaz, yalnız alan bağlanır; hocanın "sınavda çıkar" demesi doğrulanmış çıkmış değildir.
 
+
+### H628 — Ders analizi: ham iç etiketler sesli okundu, kanıtsız "hoca en çok soruyor" 43 derste yayındaydı (2026-11-18)
+
+- **Belirti:** `ders_analizi/k2-35.json` ve `k2-36.json` ses alanlarında "Tanım: Atom: k2-36-a01." okunuyordu; k2-20/k2-40'ta ham profil anahtarı ("ilac_yan_etki"); 43 derste "…ayrı not et; hoca en çok bunu soruyor." cümlesi vardı.
+- **Kök neden:** Üretici (`uret.py`) paket başvurusunu atom metnine çevirmiyor, odağı dal profilinden alıp kanıtsız hoca iddiası ekliyor ve `--dogrula` bunları yakalamıyordu.
+- **Çözüm:** Üretici düzeltildi (atom metni, ham çıkmıştan öncül/olumsuz sayımı, kesik cümle ve iç etiket kapısı, sürüm 2); yayındaki 43 dosyadan kanıtsız cümle çıkarıldı, k2-35/k2-20/k2-40 onarıldı; `--dogrula` tüm derslerde 0 HATA.
+- **Kural:** Ders analizinde "hoca …" iddiası yalnız doğrulanmış kanıtla yazılır; ses alanında iç etiket, ham anahtar ve rakam bulunmaz; üreticiyi değiştirince `uret.py --dogrula` bütün derslerde koşulur.
