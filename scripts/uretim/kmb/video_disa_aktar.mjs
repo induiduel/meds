@@ -47,7 +47,8 @@ const DUGME = { ders: 'Tüm ders · tam ekran', basamak: 'Basamak filmi (KMB reh
 
 async function kaydet(tur) {
   const ad = `${ders.kod}-${ders.slug}-${tur}`;
-  const is = path.join(OUT, `.${ad}`);
+  // çalışma klasörü (kareler, Chrome profili) meds_temp'te: OUT ses_esitle.sh ile Oracle'a eşitlenir, oraya çöp gitmesin (H639)
+  const is = path.join(KOK, 'meds_temp/kmb_video', `.${ad}`);
   fs.rmSync(is, { recursive: true, force: true }); fs.mkdirSync(path.join(is, 'kare'), { recursive: true });
   const log = (...a) => console.log(`[${tur}]`, ...a);
   const PORT = 9300 + Math.floor(Math.random() * 600);
