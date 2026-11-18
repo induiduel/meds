@@ -34,7 +34,7 @@ const tercihYaz = (p: Partial<Tercih>) => { try { localStorage.setItem(TERCIH, J
 const sesUrl = (kod: string, klip: string, h: string) => `${getCustomApiUrl() || ''}/api/cozucu-ses/kmb/ema/${kod}/${klip}.mp3?v=${h}`;
 
 /** Bölümün cümleleri — Hedefler kartındaki sesle (h-<no>) aynı sıra */
-export const filmCumleleri = (k: HedefKart) => [`Hedef ${k.no}. ${k.ne}`, ...k.nasil, k.neden, 'Sınavda sık yapılan bir hata var.', k.hata];
+export const filmCumleleri = (k: HedefKart, etiket = 'Hedef') => [`${etiket} ${k.no}. ${k.ne}`, ...k.nasil, k.neden, 'Sınavda sık yapılan bir hata var.', k.hata];
 /** Cümlenin evresi: başlık kartı / nasıl / neden / sık hata */
 const evre = (k: HedefKart, i: number): 'ne' | 'nasil' | 'neden' | 'hata' => (i === 0 ? 'ne' : i <= k.nasil.length ? 'nasil' : i === k.nasil.length + 1 ? 'neden' : 'hata');
 const EVRE_AD = { ne: 'Ne yaparsın', nasil: 'Nasıl', neden: 'Neden', hata: 'Sık hata', soru: 'Hoca sorar' } as const;
@@ -72,10 +72,17 @@ const I = {
   onay: 'M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z',
 };
 
-export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
+export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav, tur = 'hedef' }: {
   ders: Ders; ses: SesKayit | null; bas?: number; onKapat: () => void; onSinav?: () => void;
+  /** 'basamak': KMB Eğitim Rehberi uygulama basamakları (rehberBasamaklari, rehberdeki sıra; ses p-<no>) — 2026-11-18 */
+  tur?: 'hedef' | 'basamak';
 }) {
-  const K = ders.hedefCalisma || [];
+  const BS = tur === 'basamak';
+  const K: HedefKart[] = (BS ? ders.rehberBasamaklari : ders.hedefCalisma) || [];
+  const ET = BS ? 'Basamak' : 'Hedef';
+  const ON = BS ? 'p' : 'h';
+  const ANAH = BS ? 'basamakfilm' : 'hedeffilm';
+  const belgeMetni = (x: HedefKart) => (BS ? (x as any).belge as string : ders.hedefler.find((h) => h.no === x.no)?.metin) || x.ne;
   const kap = useRef<HTMLDivElement>(null);
   const sahneKap = useRef<HTMLDivElement>(null);
   const audio = useRef<HTMLAudioElement | null>(null);
@@ -94,11 +101,11 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   const [tercih, setTercih] = useState(tercihOku);
   const [kam, setKam] = useState<Kamera>(TAM);
   const [sesHazir, setSesHazir] = useState(true);
-  const [izlenen, setIzlenen] = useState<number[]>(() => ilOku<number[]>(ilAnahtar(ders.kod, 'hedeffilm'), []));
+  const [izlenen, setIzlenen] = useState<number[]>(() => ilOku<number[]>(ilAnahtar(ders.kod, ANAH), []));
   const k = K[hi];
-  const cumleler = useMemo(() => (k ? filmCumleleri(k) : []), [k]);
-  const klip = k ? ses?.[`h-${k.no}`] : undefined;
-  const soruKlip = k ? ses?.[`h-${k.no}-s`] : undefined;
+  const cumleler = useMemo(() => (k ? filmCumleleri(k, ET) : []), [k, ET]);
+  const klip = k ? ses?.[`${ON}-${k.no}`] : undefined;
+  const soruKlip = k ? ses?.[`${ON}-${k.no}-s`] : undefined;
   const zaman = useMemo<[number, number][]>(() => (klip?.zaman?.length === cumleler.length ? klip.zaman : sessizZaman(cumleler)), [klip, cumleler]);
   const sure = klip ? klip.sure : (zaman[zaman.length - 1]?.[1] ?? 1) + 0.3;
   // etkin cümle: zaman çizelgesinde t'nin düştüğü (cümle arası boşlukta önceki cümle kalır)
@@ -122,7 +129,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   useEffect(() => {
     const s = K[hi + 1];
     if (!s || !ses) return;
-    for (const ad of [`h-${s.no}`, `h-${s.no}-s`]) { const z = ses[ad]; if (z) sesOnYukle(sesUrl(ders.kod, ad, z.h)).catch(() => {}); }
+    for (const ad of [`${ON}-${s.no}`, `${ON}-${s.no}-s`]) { const z = ses[ad]; if (z) sesOnYukle(sesUrl(ders.kod, ad, z.h)).catch(() => {}); }
   }, [hi, K, ses, ders.kod]);
 
   const durdur = useCallback(() => { audio.current?.pause(); setCal(false); setGoster(true); }, []);
@@ -165,7 +172,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
     setAsama('anlatim');
     setCal(true);
     gizlemeKur();
-    sesBaslat(`h-${k?.no}`, klip?.h, b, tercih.hiz);
+    sesBaslat(`${ON}-${k?.no}`, klip?.h, b, tercih.hiz);
   }, [sure, k, klip, tercih.hiz, sesBaslat, gizlemeKur]);
 
   const hedefeGit = useCallback((i: number, otomatik = true) => {
@@ -174,7 +181,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
     setHi(j); setAsama('anlatim'); setKam(TAM);
     tRef.current = 0; setT(0);
     saat.current = { bas: performance.now(), t: 0 };
-    ilYaz(ilAnahtar(ders.kod, 'hedeffilm-son'), j);
+    ilYaz(ilAnahtar(ders.kod, `${ANAH}-son`), j);
     setCal(otomatik);
     if (otomatik) gizlemeKur();
   }, [K.length, ders.kod, gizlemeKur]);
@@ -182,7 +189,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   useEffect(() => {
     if (!k || !cal) return;
     gizlemeKur();
-    sesBaslat(`h-${k.no}`, klip?.h, 0, tercihOku().hiz);
+    sesBaslat(`${ON}-${k.no}`, klip?.h, 0, tercihOku().hiz);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hi]);
   useEffect(() => { if (!cal) audio.current?.pause(); else if (audio.current?.paused && asama !== 'dusun' && audio.current.src) audio.current.play().catch(() => {}); }, [cal, asama]);
@@ -190,7 +197,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   const bitir = useCallback(() => {
     if (!k) return;
     const y = izlenen.includes(k.no) ? izlenen : [...izlenen, k.no];
-    setIzlenen(y); ilYaz(ilAnahtar(ders.kod, 'hedeffilm'), y);
+    setIzlenen(y); ilYaz(ilAnahtar(ders.kod, ANAH), y);
     if (hi < K.length - 1) hedefeGit(hi + 1);
     else { setAsama('son'); setCal(false); setGoster(true); audio.current?.pause(); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
   }, [k, izlenen, ders.kod, hi, K.length, hedefeGit]);
@@ -200,7 +207,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
     setAsama('soru');
     saat.current = { bas: performance.now(), t: 0 };
     tRef.current = 0; setT(0);
-    sesBaslat(`h-${k.no}-s`, soruKlip?.h, 0, tercih.hiz);
+    sesBaslat(`${ON}-${k.no}-s`, soruKlip?.h, 0, tercih.hiz);
   }, [k, tercih.soru, tercih.hiz, soruKlip, sesBaslat, bitir]);
 
   // ——— oynatma döngüsü (≈15 fps durum güncellemesi): ses varsa ses saati, yoksa iç saat
@@ -273,7 +280,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
     if (asama !== 'anlatim') { setAsama('anlatim'); }
     tRef.current = b; setT(b); saat.current = { bas: performance.now(), t: b };
     if (audio.current?.src && asama === 'anlatim') { audio.current.currentTime = b; if (cal) audio.current.play().catch(() => {}); }
-    else if (cal) sesBaslat(`h-${k?.no}`, klip?.h, b, tercih.hiz);
+    else if (cal) sesBaslat(`${ON}-${k?.no}`, klip?.h, b, tercih.hiz);
     uyandir();
   };
   const degistir = () => { if (asama === 'son') return; if (cal) durdur(); else { setCal(true); gizlemeKur(); if (!audio.current?.src && asama === 'anlatim') oynat(tRef.current); else saat.current = { bas: performance.now(), t: tRef.current }; } };
@@ -293,7 +300,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
 
   if (!k) return null;
   const toplamIlerleme = ((hi + (asama === 'son' ? 1 : Math.min(1, t / sure))) / K.length) * 100;
-  const belge = ders.hedefler.find((h) => h.no === k.no)?.metin || k.ne;
+  const belge = belgeMetni(k);
   // cümle içi kelime akışı: cümlenin geçen oranına göre kelimeler belirir (ses cümleyi okurken yazı da akar)
   const [cb, cs] = zaman[ci] || [0, 1];
   const oran = asama === 'anlatim' ? Math.min(1, Math.max(0, (t - cb) / Math.max(0.3, cs - cb))) : 1;
@@ -311,19 +318,19 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   } : { left: '-3%', top: '-3%', width: '106%', height: '106%', opacity: 0 };
 
   return createPortal(
-    <div ref={kap} className={`kmb-hf kmb-kok${goster || !cal ? '' : ' uyku'}${hataEvresi ? ' hata' : ''}${tam ? ' tam' : ''}`} role="dialog" aria-label={`Hedefler filmi: ${ders.ad}`}
+    <div ref={kap} className={`kmb-hf kmb-kok${goster || !cal ? '' : ' uyku'}${hataEvresi ? ' hata' : ''}${tam ? ' tam' : ''}`} role="dialog" aria-label={`${BS ? 'Basamak' : 'Hedefler'} filmi: ${ders.ad}`}
       tabIndex={-1} onKeyDown={tus} onPointerMove={uyandir} onClick={() => { if (!goster) uyandir(); }}>
       {/* üst: hedef şeridi + başlık + düğmeler */}
       <div className="kmb-hf-ust">
-        <div className="kmb-hf-serit" role="tablist" aria-label="Hedefler">
+        <div className="kmb-hf-serit" role="tablist" aria-label={BS ? 'Basamaklar' : 'Hedefler'}>
           {K.map((x, j) => (
-            <button key={x.no} role="tab" aria-selected={j === hi} title={`Hedef ${x.no}: ${ders.hedefler.find((h) => h.no === x.no)?.metin || ''}`}
+            <button key={x.no} role="tab" aria-selected={j === hi} title={`${ET} ${x.no}: ${belgeMetni(x)}`}
               className={`${j === hi ? 'etkin' : ''}${j < hi || izlenen.includes(x.no) ? ' gecti' : ''}`} onClick={(e) => { e.stopPropagation(); hedefeGit(j); }}>
               {j === hi && asama !== 'son' && <i style={{ width: `${Math.min(100, (t / sure) * 100)}%` }} />}
             </button>
           ))}
         </div>
-        <div className="kmb-hf-baslik"><span className="kmb-hf-no">Hedef {k.no} / {K.length}</span><b>{belge}</b></div>
+        <div className="kmb-hf-baslik"><span className="kmb-hf-no">{ET} {k.no} / {K.length}{BS && (k as any).bolum ? ` · ${(k as any).bolum}` : ''}</span><b>{belge}</b></div>
         <div className="kmb-hf-dugmeler">
           <button onClick={(e) => { e.stopPropagation(); tamDegistir(); }} aria-label={tam ? 'Tam ekrandan çık' : 'Tam ekran'}><Ikon d={tam ? I.tamCik : I.tam} /></button>
           <button onClick={(e) => { e.stopPropagation(); kapat(); }} aria-label="Kapat"><Ikon d={I.kapat} /></button>
@@ -346,7 +353,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
           {asama === 'anlatim' && ci === 0 && (
             <div className="kmb-hf-kart" key={`kart-${hi}`}>
               <span className="kmb-hf-kart-no"><b>{k.no}</b><small>/ {K.length}</small></span>
-              <span className="kmb-hf-kart-ust">KMB belgesi · Öğrenim hedefi</span>
+              <span className="kmb-hf-kart-ust">{BS ? `KMB Eğitim Rehberi · Uygulama basamağı${(k as any).bolum ? ` · ${(k as any).bolum}` : ""}` : "KMB belgesi · Öğrenim hedefi"}</span>
               <h2>{belge}</h2>
             </div>
           )}
@@ -359,7 +366,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
                 <div className="kmb-hf-dusun">
                   <svg viewBox="0 0 36 36" aria-hidden><circle cx="18" cy="18" r="15.5" /><circle cx="18" cy="18" r="15.5" className="dolum" style={{ strokeDashoffset: 97.4 * (1 - Math.min(1, t / DUSUN_SN)) }} /></svg>
                   <span>Kendi cevabını ver… <b>{Math.max(0, Math.ceil(DUSUN_SN - t))}</b></span>
-                  <button className="ana" onClick={bitir}>{hi < K.length - 1 ? 'Sıradaki hedef ›' : 'Bitir ›'}</button>
+                  <button className="ana" onClick={bitir}>{hi < K.length - 1 ? `Sıradaki ${ET.toLocaleLowerCase('tr')} ›` : 'Bitir ›'}</button>
                 </div>
               ) : <span className="kmb-hf-soru-alt">Soru okunuyor…</span>}
               <details className="kmb-hf-cevap"><summary>Cevabı göster</summary><p><b>Ne:</b> {k.ne}</p>{k.nasil.map((c, i) => <p key={i}>{c}</p>)}<p><b>Neden:</b> {k.neden}</p></details>
@@ -368,18 +375,18 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
           {/* bitiş: tüm hedefler */}
           {asama === 'son' && (
             <div className="kmb-hf-son" onClick={(e) => e.stopPropagation()}>
-              <h2>Tüm hedefleri izledin</h2>
-              <p>KMB belgesindeki {K.length} öğrenim hedefi, her birinin nasıl yapıldığı, nedeni ve sınavda sık yapılan hatası.</p>
-              <ol>{K.map((x, j) => <li key={x.no} style={{ animationDelay: `${j * 70}ms` }}><Ikon d={I.onay} /><span>{ders.hedefler.find((h) => h.no === x.no)?.metin}</span></li>)}</ol>
+              <h2>{BS ? 'Tüm basamakları izledin' : 'Tüm hedefleri izledin'}</h2>
+              <p>{BS ? `KMB Eğitim Rehberi'ndeki ${K.length} uygulama basamağı, rehberdeki sırayla` : `KMB belgesindeki ${K.length} öğrenim hedefi`}, her birinin nasıl yapıldığı, nedeni ve sınavda sık yapılan hatası.</p>
+              <ol>{K.map((x, j) => <li key={x.no} style={{ animationDelay: `${j * 70}ms` }}><Ikon d={I.onay} /><span>{belgeMetni(x)}</span></li>)}</ol>
               <div className="kmb-denetim">
                 <button className="ana" onClick={() => hedefeGit(0)}>↻ Baştan izle</button>
                 {onSinav && <button onClick={() => { kapat(); onSinav(); }}>Sınava geç ›</button>}
-                <button onClick={kapat}>Hedef kartlarına dön</button>
+                <button onClick={kapat}>{BS ? 'Kapat' : 'Hedef kartlarına dön'}</button>
               </div>
             </div>
           )}
           {!sesHazir && cal && <span className="kmb-hf-yukleniyor">Ses yükleniyor…</span>}
-          {!klip && asama === 'anlatim' && <span className="kmb-hf-sessiz">Sessiz kip: bu hedefin sesi henüz yok</span>}
+          {!klip && asama === 'anlatim' && <span className="kmb-hf-sessiz">Sessiz kip: bu {BS ? 'basamağın' : 'hedefin'} sesi henüz yok</span>}
         </div>
         <aside className="kmb-hf-ray" aria-label="Bölümün evreleri">
           {evreler.map((e) => (
@@ -399,11 +406,11 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
           </p>
         )}
         <div className="kmb-hf-denetim">
-          <button onClick={() => hedefeGit(hi - 1)} disabled={hi === 0} aria-label="Önceki hedef"><Ikon d={I.onceki} /></button>
+          <button onClick={() => hedefeGit(hi - 1)} disabled={hi === 0} aria-label={`Önceki ${ET.toLocaleLowerCase('tr')}`}><Ikon d={I.onceki} /></button>
           <button onClick={() => cumleyeGit(ci - 1)} disabled={asama !== 'anlatim' || ci === 0} aria-label="Önceki cümle"><Ikon d={I.geri} /></button>
           <button className="ana" onClick={degistir} disabled={asama === 'son'} aria-label={cal ? 'Duraklat' : 'Oynat'}><Ikon d={cal ? I.dur : I.oynat} /></button>
           <button onClick={() => (asama === 'anlatim' && ci < cumleler.length - 1 ? cumleyeGit(ci + 1) : asama === 'anlatim' ? soruyaGec() : bitir())} disabled={asama === 'son'} aria-label="Sonraki cümle"><Ikon d={I.ileri} /></button>
-          <button onClick={() => hedefeGit(hi + 1)} disabled={hi >= K.length - 1} aria-label="Sonraki hedef"><Ikon d={I.sonraki} /></button>
+          <button onClick={() => hedefeGit(hi + 1)} disabled={hi >= K.length - 1} aria-label={`Sonraki ${ET.toLocaleLowerCase('tr')}`}><Ikon d={I.sonraki} /></button>
           <span className="kmb-hf-bosluk" />
           <span className="kmb-hf-ilerleme" aria-hidden><i style={{ width: `${toplamIlerleme}%` }} /></span>
           <button className={`kmb-hf-metin${tercih.soru ? ' etkin' : ''}`} onClick={soruAc} title="Her hedefin sonunda hocanın sorusu sorulsun" aria-pressed={tercih.soru}>Sorular</button>

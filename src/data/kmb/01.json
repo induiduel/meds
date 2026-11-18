@@ -3588,5 +3588,1482 @@
     }
    ]
   }
+ ],
+ "rehber": {
+  "kaynak": "KMB Eğitim Rehberi 2025–2026, Nazogastrik Sonda Uygulama Becerisi (s. 30–31)",
+  "basamakSayisi": 17
+ },
+ "rehberBasamaklari": [
+  {
+   "no": 1,
+   "bolum": "Takma",
+   "belge": "Hekim kendini tanıtır. Yapılacak işlemle ilgili hasta bilgilendirilir ve izin alınır: çok ağrılı ve rahatsız edici olabilir; yemek borusunda yırtılma, burun ve boğazda kanama, tahriş, işlem başarısızlığı gelişebilir.",
+   "ne": "Kendini tanıtır, işlemi ve olası sorunları anlatır, hastanın iznini alırsın.",
+   "nasil": [
+    "Hastanın yanına gidip \"Merhaba, ben Doktor …, size burnunuzdan mideye ince bir sonda takacağım\" diye başlarsın.",
+    "İşlemin ağrılı ve mide bulandırıcı olabileceğini, yemek borusunda yırtılma, burunda kanama, tahriş ya da işlemin başarısız olabileceğini söyler, sorusu olup olmadığını sorar ve onayını alırsın."
+   ],
+   "neden": "Ne olacağını bilen hasta öğürse bile başını geri atmaz, yutkunma komutlarına uyar ve işlem kısa sürer.",
+   "hata": "Kendini tanıtmadan ve izin almadan doğrudan sondaya uzanmak.",
+   "hoca": "Hastaya hangi riskleri anlatırsın?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hekim"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hekim",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "bolum": "Takma",
+   "belge": "Tedavi tepsisinin eksiksiz hazır olduğu kontrol edilir. Sondanın tespiti için burun üzerinden taşmayacak uzunluk ve kalınlıkta flaster hazırlanır. Nazogastrik sonda ve çam uçlu enjektör paketinden çıkarılır, 50 ml'lik çam uçlu enjektöre hava çekilir. Eldiven giyilir.",
+   "ne": "Tepsiyi kontrol eder, flasteri keser, sondayı ve enjektörü açar, enjektöre hava çeker ve eldiven giyersin.",
+   "nasil": [
+    "Tepside sonda, kayganlaştırıcı jel, elli mililitrelik çan uçlu enjektör, stetoskop, flaster, kusma poşeti, havlu ve dren torbası olduğunu tek tek kontrol edersin; flasteri burnun üzerinden taşmayacak incelikte kesersin.",
+    "Sondanın paketini işlemden hemen önce açarsın; çan uçlu enjektöre önceden hava çeker, sonra eldivenini giyersin."
+   ],
+   "neden": "Normal enjektör sondanın ağzına oturmaz, hava yanından kaçar; çan uçlu enjektör ise sondaya tam oturur ve yer kontrolünde kullanılır.",
+   "hata": "Normal enjektör hazırlamak ya da sonda paketini çok önceden açıp tepside bekletmek.",
+   "hoca": "Bu işlem için hangi malzemeleri hazırlarsın?",
+   "sahne": "ng-malzeme",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "nm-sonda"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-malzeme",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-sonda"
+      }
+     ],
+     "odak": "nm-sonda",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nm-jel"
+      },
+      {
+       "t": "etiket",
+       "id": "nm-enjektor-can"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-kalinlik"
+      }
+     ],
+     "odak": "nm-kalinlik",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nm-enjektor-can"
+      }
+     ],
+     "odak": "nm-enjektor-can",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nm-enjektor-normal"
+      }
+     ],
+     "odak": "nm-enjektor-normal",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nm-enjektor-normal",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nm-enjektor-normal",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "bolum": "Takma",
+   "belge": "Nazogastrik sonda burun ucu–kulak memesi–sternum alt ucu hattı boyunca tutulur. Mideye kadar gönderilecek sonda uzunluğu ölçülür.",
+   "ne": "Sondayı burun ucundan kulak memesine, oradan sternumun alt ucuna uzatarak ilerletilecek uzunluğu ölçersin.",
+   "nasil": [
+    "Sondanın ucunu burun ucuna koyar, kulak memesine götürür, oradan sternumun alt ucuna, yani epigastriuma kadar indirirsin.",
+    "Bu noktaya denk gelen çizgiyi ya da santimetre sayısını aklında tutarsın; sondayı işaretli yere kadar ilerleteceksin."
+   ],
+   "neden": "İnsanların boyu ve kilosu çok farklıdır; herkese tek bir uzunluk yoktur, mideye ulaşan mesafeyi hastanın kendi üzerinde ölçersin.",
+   "hata": "Ölçüm yapmadan sondayı rastgele bir uzunlukta ilerletmek.",
+   "hoca": "Sondanın uzunluğunu hangi noktalarla ölçersin?",
+   "sahne": "ng-govde",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nb-sonda-olcu"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-govde",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-sonda-olcu"
+      }
+     ],
+     "odak": "nb-burun",
+     "zoom": 1.35
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nb-olcu-1"
+      }
+     ],
+     "odak": "nb-kulak",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nb-olcu-2"
+      }
+     ],
+     "odak": "nb-ksifoid",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nb-isaret"
+      }
+     ],
+     "odak": "nb-isaret",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nb-burun"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-kulak"
+      },
+      {
+       "t": "etiket",
+       "id": "nb-ksifoid"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nb-burun"
+      }
+     ],
+     "odak": "nb-burun",
+     "zoom": 1.35
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "bolum": "Takma",
+   "belge": "Hasta oturtulur. Eline kusma poşeti verilir. Hastanın göğsü üzerine havlu yerleştirilir.",
+   "ne": "Hastayı oturtur, eline kusma poşeti verir, göğsüne havlu örtersin.",
+   "nasil": [
+    "Hastayı dik oturur pozisyona getirirsin; kusma poşetini hastanın eline verirsin.",
+    "Havluyu hastanın göğsüne bir yemek peçetesi gibi örtersin; havlu yoksa altına serilen bez ya da peçete de işini görür."
+   ],
+   "neden": "Hasta işlem sırasında öğürür, öksürür, tükürür; poşet ve örtü hem hastayı hem çevreyi kirlenmekten korur.",
+   "hata": "Hastayı sırtüstü yatırarak ya da poşet vermeden işleme başlamak.",
+   "hoca": "Hastaya hangi pozisyonu verirsin, eline ne verirsin?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hasta"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-poset",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-poset",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hasta",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "bolum": "Takma",
+   "belge": "Tüpün 5 cm distaline kadar vazelin sürülür, sonda burun deliğinden içeri sokulur, önce burun tabanına paralel, daha sonra aşağıya ve arkaya doğru burun ucu–kulak mesafesi kadar ilerletilir.",
+   "ne": "Sondanın ucundaki beş santimetreyi kayganlaştırır, burun tabanına paralel olarak ilerletirsin.",
+   "nasil": [
+    "Sondanın uç beş santimetresine kayganlaştırıcı sürersin; rehberde vazelin yazar, hoca ise su bazlı jeli tercih eder ve vazelini yalnız hiçbir şey yoksa çok az kullanmayı söyler.",
+    "Sondayı burun deliğinden sokup burun tabanına, yani sert damağa paralel düz itersin; burun ucu ile kulak memesi arası kadar gidince aşağıya ve arkaya yönelirsin."
+   ],
+   "neden": "Burun boşluğu düz arkaya uzanır; sondayı yukarı doğru itersen burnun tavanına takılır, kanama ve ağrı olur.",
+   "hata": "Sondayı yukarı, burnun tavanına doğru itmek ya da hiç kayganlaştırmadan sokmak.",
+   "hoca": "Sondayı burunda hangi doğrultuda ilerletirsin?",
+   "sahne": "ng-kesit",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nk-sonda"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-kesit",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      }
+     ],
+     "odak": "nk-burun-delik",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-ok-duz"
+      }
+     ],
+     "odak": "nk-sert-damak",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-ok-asagi"
+      }
+     ],
+     "odak": "nk-orofarinks",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nk-sonda"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-sert-damak"
+      }
+     ],
+     "odak": "nk-sert-damak",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nk-kafa-tabani",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nk-burun-bosluk",
+     "zoom": 1.25
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "bolum": "Takma",
+   "belge": "Hastanın başına hafif fleksiyon yaptırılır, sonda ilerletilirken hastanın yutkunması istenir ve yutkunma sırasında sonda itilerek yemek borusuna ulaşılır. Solunum sıkıntısı (şiddetli öksürük, siyanoz) olursa sonda hemen geri çekilir.",
+   "ne": "Hastanın başını hafifçe öne eğdirir, yutkunurken sondayı itersin; öksürük ya da morarma olursa hemen geri çekersin.",
+   "nasil": [
+    "Başını öne eğdirince farinksten yemek borusuna giden yol açılır; hasta başını geri atmasın diye elini hafifçe başının arkasına koyabilirsin.",
+    "Sonda boğaza gelince \"Yutkun\" dersin; yutkunmayı anlamayana ekmek yutar gibi yutkunmasını söyler ya da yutabiliyorsa biraz su içirirsin, her yutkunmada sondayı biraz itersin."
+   ],
+   "neden": "Yutkunma sırasında gırtlak kapanır, sonda trakeaya değil yemek borusuna kayar.",
+   "hata": "Şiddetli öksürük ya da morarma olduğu hâlde sondayı itmeye devam etmek.",
+   "hoca": "Hasta neden yutkundurulur, öksürürse ne yaparsın?",
+   "sahne": "ng-kesit",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nk-sonda"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-kesit",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-sonda"
+      }
+     ],
+     "odak": "nk-orofarinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nk-orofarinks"
+      }
+     ],
+     "odak": "nk-orofarinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nk-su"
+      }
+     ],
+     "odak": "nk-su",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nk-epiglot"
+      },
+      {
+       "t": "goster",
+       "id": "nk-epiglot-kapali"
+      }
+     ],
+     "odak": "nk-larinks",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nk-trakea"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nk-trakea",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nk-trakea",
+     "zoom": 1.25
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "bolum": "Takma",
+   "belge": "Sonda ölçülen miktar kadar içeri itilerek mideye ulaşılır. Yeri doğrulamak için sondadan hava enjekte edilirken stetoskopla epigastrik bölgede gurlama sesi duyulmaya çalışılır. Başka yöntemde enjektör ya da aspiratörle negatif basınç uygulanarak mide içeriğinin gelip gelmediği kontrol edilir.",
+   "ne": "Sondayı ölçtüğün işarete kadar iter, hava verip epigastriumu dinleyerek ya da mide içeriği aspire ederek yerini doğrularsın.",
+   "nasil": [
+    "Bir elinle sondayı tutarken stetoskopu epigastriuma koyar, çan uçlu enjektördeki havayı birden verirsin; suya hava üflenmiş gibi bir gurlama sesi duyarsın.",
+    "Ses gelmezse sonda midede değildir; geri çeker, yeniden denersin. İkinci yol olarak enjektörle negatif basınç uygulayıp mide içeriği gelip gelmediğine bakarsın."
+   ],
+   "neden": "Sıvı dolu mideye verilen hava gurlama yapar; sonda trakeadaysa hava zaten hava dolu bir yapıya gider ve bu ses duyulmaz.",
+   "hata": "Havayı yavaş vermek ya da sondayı tutmadan dinlemeye geçip sondanın kaymasına izin vermek.",
+   "hoca": "Sondanın midede olduğunu nasıl doğrularsın?",
+   "sahne": "ng-mide",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nd-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nd-enjektor"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-mide",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-enjektor"
+      }
+     ],
+     "odak": "nd-enjektor",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-stetoskop"
+      }
+     ],
+     "odak": "nd-epigastr",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-hava"
+      },
+      {
+       "t": "goster",
+       "id": "nd-ses"
+      }
+     ],
+     "odak": "nd-mide",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nd-ses"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-enjektor"
+      }
+     ],
+     "odak": "nd-enjektor",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nd-enjektor",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nd-enjektor",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "bolum": "Takma",
+   "belge": "Burun kenarı peçete ile temizlenir ve flaster ile sonda buruna tespit edilir.",
+   "ne": "Burun kenarını peçeteyle silip sondayı flasterle buruna sabitlersin.",
+   "nasil": [
+    "Önce burun çevresindeki jeli ve salgıyı peçeteyle silersin, yoksa flaster yapışmaz.",
+    "İnce kestiğin flasterin bir ucunu burna yapıştırır, diğer ucunu sondanın etrafına sararsın; terleyen ya da yağlı cildi olan hastada üzerine ikinci bir bant eklersin."
+   ],
+   "neden": "Sabitlenmeyen sonda kayar, ucu yemek borusuna ya da hava yoluna çıkabilir.",
+   "hata": "Kalın bir flasterle burun deliğini kapatmak; hasta o delikten rahat nefes alabilmelidir.",
+   "hoca": "Sondayı buruna nasıl sabitlersin?",
+   "sahne": "ng-burun",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nr-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nr-flaster-burun"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-burun",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nr-flaster-burun"
+      }
+     ],
+     "odak": "nr-flaster-burun",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-flaster-sarim"
+      }
+     ],
+     "odak": "nr-flaster-sarim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-ek-bant"
+      }
+     ],
+     "odak": "nr-ek-bant",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nr-flaster-burun"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-delik-sol"
+      }
+     ],
+     "odak": "nr-delik-sol",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nr-delik-sol",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nr-delik-sol",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "bolum": "Takma",
+   "belge": "Sonda aracılığıyla mideye 300 ml sıvı verip boşaltılarak mide içeriği temizlenir.",
+   "ne": "Mide yıkaması için sondadan yaklaşık üç yüz mililitre sıvı verip geri boşaltırsın.",
+   "nasil": [
+    "Rehber üç yüz mililitre yazar; hoca derste üç yüz ile beş yüz mililitre arası sıvı verildiğini anlatır.",
+    "Sonra sondanın ucuna dren torbasını takarsın; sıvı akmaya başlayınca torbanın emişiyle mide içeriği torbaya dolar, işlem gelen sıvı temizlenene dek tekrarlanır."
+   ],
+   "neden": "Bu basamak beceri rehberinin amacıdır: nazogastrik sondayla mide yıkaması yapmak.",
+   "hata": "Verilen sıvıyı geri boşaltmadan yeniden sıvı vermeye devam etmek.",
+   "hoca": "Mide yıkamasında ne kadar sıvı verirsin, nasıl boşaltırsın?",
+   "sahne": "ng-mide",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nd-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nd-su"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-mide",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nd-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nd-su"
+      }
+     ],
+     "odak": "nd-mide",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nd-su"
+      }
+     ],
+     "odak": "nd-mide",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "nd-su"
+      },
+      {
+       "t": "goster",
+       "id": "nd-torba"
+      }
+     ],
+     "odak": "nd-torba",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "ciz",
+       "id": "nd-akis"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nd-sonda"
+      }
+     ],
+     "odak": "nd-sonda",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nd-sonda",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nd-sonda",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "bolum": "Takma",
+   "belge": "Kullanılan malzeme ve ambalajı toplanır. Eller yıkanır.",
+   "ne": "Kullandığın malzemeleri ve ambalajları toplar, ellerini yıkarsın.",
+   "nasil": [
+    "Açılan paketleri, kullanılmış gazlı bezi ve eldivenleri tıbbi atığa atarsın.",
+    "Eldiveni çıkardıktan sonra ellerini su ve sabunla yıkarsın."
+   ],
+   "neden": "Sağlık çalışanının elleri hastane enfeksiyonlarının önemli bir taşıyıcısıdır; eldiven giysen de el yıkamanın yerini tutmaz.",
+   "hata": "Eldiven giydim diye işlem sonunda elleri yıkamamak.",
+   "hoca": "İşlem bitince ne yaparsın?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-lavabo"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-eldiven"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-eldiven"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-lavabo",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "bolum": "Takma",
+   "belge": "Sondanın yerleştirilme nedeni ve saati, sondanın tipi, hastanın işlemlere olası direnci, müdahalelerin etkinliği dosyaya kaydedilir.",
+   "ne": "Sondayı neden ve ne zaman taktığını, tipini ve işlemin nasıl geçtiğini dosyaya yazarsın.",
+   "nasil": [
+    "Takılma nedenini, saatini ve sondanın tipini, kalınlığını yazarsın.",
+    "Hastanın işleme direnç gösterip göstermediğini ve yaptığın müdahalelerin işe yarayıp yaramadığını da eklersin."
+   ],
+   "neden": "Kayıt, sondanın ne zaman değiştirileceğini ya da çıkarılacağını ve bir sorun çıkarsa nedenini bilmeyi sağlar.",
+   "hata": "İşlemi yapıp dosyaya hiçbir şey yazmamak.",
+   "hoca": "Sonda takınca dosyaya neleri kaydedersin?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hekim"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hekim",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "bolum": "Çıkarma",
+   "belge": "Nazogastrik sondanın çıkarılması: İşlem hakkında hastaya açıklama yapılır.",
+   "ne": "Sondayı çıkarmadan önce hastaya ne yapacağını açıklarsın.",
+   "nasil": [
+    "Yine hastanın başına gidip kendini tanıtır, sondayı çıkaracağını söylersin.",
+    "Takarken olduğu kadar olmasa da çıkarırken de mide bulantısı olabileceğini anlatırsın."
+   ],
+   "neden": "Sonda boğazdan geçerken öğürme refleksini uyarır; hazırlıklı hasta başını çekmez.",
+   "hata": "Hastaya söylemeden sondayı birden çekmek.",
+   "hoca": "Sondayı çıkarmadan önce hastaya ne söylersin?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hekim"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hekim",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "bolum": "Çıkarma",
+   "belge": "Hasta oturur pozisyona getirilir. Eline kusma poşeti verilir. Hastanın göğsü üzerine havlu yerleştirilir. Eldiven giyilir.",
+   "ne": "Hastayı oturtur, eline kusma poşeti verir, göğsüne havlu örter ve eldiven giyersin.",
+   "nasil": [
+    "Takarken yaptığın hazırlığı aynen tekrarlarsın: hasta oturur, poşet elindedir.",
+    "Göğsüne havlu örtersin; sondayı bu havluya sararak çıkaracağın için havlu çıkarma işleminin parçasıdır."
+   ],
+   "neden": "Sonda çıkarken sümük ve mide içeriği gelir; poşet ve havlu bunların her yere bulaşmasını önler.",
+   "hata": "Çıkarma işlemini kısa diye hazırlıksız ve eldivensiz yapmak.",
+   "hoca": "Çıkarmadan önce hangi hazırlığı yaparsın?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hasta"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-poset",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-poset",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hasta",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "bolum": "Çıkarma",
+   "belge": "Nazogastrik sondayı burna tespit eden flaster açılır.",
+   "ne": "Sondayı buruna tutturan flasteri açarsın.",
+   "nasil": [
+    "Flasteri burnu tahriş etmeden yavaşça sökersin.",
+    "Sondanın etrafına sardığın kısmı da çözer, sondayı serbest bırakırsın."
+   ],
+   "neden": "Flaster sökülmeden çekilen sonda burnu zorlar ve cildi tahriş eder.",
+   "hata": "Flasteri açmadan sondayı çekmeye başlamak.",
+   "hoca": "Sondayı çekmeden önce ne yaparsın?",
+   "sahne": "ng-burun",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "nr-sonda"
+    },
+    {
+     "t": "goster",
+     "id": "nr-flaster-burun"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-burun",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-sonda"
+      },
+      {
+       "t": "goster",
+       "id": "nr-flaster-burun"
+      }
+     ],
+     "odak": "nr-flaster-burun",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-flaster-sarim"
+      }
+     ],
+     "odak": "nr-flaster-sarim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "nr-ek-bant"
+      }
+     ],
+     "odak": "nr-ek-bant",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "nr-flaster-burun"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "nr-delik-sol"
+      }
+     ],
+     "odak": "nr-delik-sol",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "nr-delik-sol",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "nr-delik-sol",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "bolum": "Çıkarma",
+   "belge": "Sonda dışarı doğru çekilir ve hastanın göğsündeki kâğıt havluya sarılarak atılır.",
+   "ne": "Sondayı dışarı çeker, göğüsteki havluya sararak atarsın.",
+   "nasil": [
+    "Sondayı tek ve düzgün bir hareketle dışarı çekersin.",
+    "Çıkan kısmı göğüsteki havluyla toplayarak sarar, havluyla birlikte atarsın."
+   ],
+   "neden": "Sondanın üzeri sümük ve mide içeriğiyle kaplıdır; havluya sarmazsan bu partiküller hastaya ve çevreye saçılır.",
+   "hata": "Sondayı havada sallayarak çekip çevreyi kirletmek.",
+   "hoca": "Sondayı neden havluya sararak çıkarırsın?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "goster",
+     "id": "np-sonda"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-sonda"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-ortu"
+      },
+      {
+       "t": "goster",
+       "id": "np-poset"
+      }
+     ],
+     "odak": "np-ortu",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-sonda"
+      }
+     ],
+     "odak": "np-sonda",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "gizle",
+       "id": "np-sonda"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-ortu"
+      }
+     ],
+     "odak": "np-ortu",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-ortu",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-ortu",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "bolum": "Çıkarma",
+   "belge": "Eldivenler çıkarılır ve tıbbi atık kutusuna atılır. Eller yıkanır.",
+   "ne": "Eldivenlerini çıkarıp tıbbi atık kutusuna atar, ellerini yıkarsın.",
+   "nasil": [
+    "Eldiveni dış yüzüne dokunmadan ters çevirerek çıkarırsın.",
+    "Tıbbi atık kutusuna atar, sonra ellerini su ve sabunla yıkarsın."
+   ],
+   "neden": "Eldivenin dış yüzü mide içeriği ve salgılarla kirlenmiştir; doğru çıkarma ve el yıkama bulaşmayı önler.",
+   "hata": "Eldiveni normal çöpe atmak ya da eldivenden sonra elleri yıkamamak.",
+   "hoca": "Eldivenleri nereye atarsın?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-lavabo"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "goster",
+       "id": "np-eldiven"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-eldiven"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-lavabo"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-lavabo",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-lavabo",
+     "zoom": 1.3
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "bolum": "Çıkarma",
+   "belge": "Nazogastrik sondanın çıkarıldığı saat kaydedilir.",
+   "ne": "Sondanın çıkarıldığı saati dosyaya yazarsın.",
+   "nasil": [
+    "Çıkarma saatini hasta dosyasına kaydedersin.",
+    "İşlem sırasında bir sorun olduysa onu da not edersin."
+   ],
+   "neden": "Takılma ve çıkarılma saatleri birlikte, sondanın ne kadar kaldığını gösterir.",
+   "hata": "Takma saatini yazıp çıkarma saatini kaydetmeyi unutmak.",
+   "hoca": "Sonda çıkınca neyi kaydedersin?",
+   "sahne": "ng-pozisyon",
+   "eylem": [
+    {
+     "t": "vurgula",
+     "id": "np-hekim"
+    }
+   ],
+   "film": [
+    {
+     "sahne": "ng-pozisyon",
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hasta"
+      }
+     ],
+     "odak": "np-hasta",
+     "zoom": 1.25
+    },
+    {
+     "eylem": [
+      {
+       "t": "etiket",
+       "id": "np-hasta"
+      }
+     ],
+     "zoom": 1.0
+    },
+    {
+     "eylem": [
+      {
+       "t": "vurgula",
+       "id": "np-hekim"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.2
+    },
+    {
+     "eylem": [
+      {
+       "t": "renk",
+       "id": "np-hekim",
+       "renk": "kirmizi"
+      }
+     ],
+     "odak": "np-hekim",
+     "zoom": 1.3
+    }
+   ]
+  }
  ]
 }

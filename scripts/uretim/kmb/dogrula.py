@@ -150,8 +150,15 @@ def denetle(p: Path, S):
     for b in sn['bul']: adim_bag(b, f'bul {b["id"]}')
     hc = d.get('hedefCalisma', [])
     if sorted(x['no'] for x in hc) != sorted(h['no'] for h in d['hedefler']): H.append('hedefCalisma: her öğrenim hedefi için tam bir kart olmalı')
-    for x in hc:
-        y = f'hedef kartı {x["no"]}'
+    # KMB Eğitim Rehberi basamakları (2026-11-18, ZORUNLU her KMB dersi): rehberdeki sıra ve sayıyla birebir, Basamak filmi
+    rb = d.get('rehberBasamaklari') or []
+    if not rb: H.append('rehberBasamaklari yok: KMB Eğitim Rehberi basamakları her derste zorunlu (rehber_basamak.py)')
+    elif [x['no'] for x in rb] != list(range(1, len(rb) + 1)): H.append('rehberBasamaklari: no 1..n sırasıyla olmalı (rehberdeki sıra)')
+    elif (d.get('rehber') or {}).get('basamakSayisi') != len(rb) or not (d.get('rehber') or {}).get('kaynak'): H.append('rehber: kaynak ve basamakSayisi eksik/uyumsuz')
+    for x in rb:
+        if not x.get('belge'): H.append(f'rehber basamağı {x["no"]}: belge (rehber metni) boş')
+    for tur, x in [('hedef kartı', x) for x in hc] + [('rehber basamağı', x) for x in rb]:
+        y = f'{tur} {x["no"]}'
         if x['sahne'] not in S: H.append(f'{y}: sahne yok')
         eylem_denetle(x.get('eylem'), x['sahne'], y)
         for k in ('ne', 'neden', 'hata', 'hoca'):

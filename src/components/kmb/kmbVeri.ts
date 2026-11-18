@@ -15,6 +15,9 @@ export type Ders = {
   kod: string; slug: string; ad: string; belgeKodu: string; amac: string;
   hedefler: { no: number; metin: string; adimlar: string[] }[];
   hedefCalisma?: HedefKart[];
+  /** KMB Eğitim Rehberi uygulama basamakları, rehberdeki sıra (Basamak filmi; scripts/uretim/kmb/rehber_basamak.py) */
+  rehber?: { kaynak: string; basamakSayisi: number };
+  rehberBasamaklari?: (HedefKart & { belge: string; bolum?: string })[];
   adimlar: Adim[];
   sinav: { akislar: Akis[]; senaryolar: Senaryo[]; bul: Bul[] };
 };

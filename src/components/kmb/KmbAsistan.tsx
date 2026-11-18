@@ -139,6 +139,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
   const [gorsel, setGorsel] = useState(false);
   const [video, setVideo] = useState(false);
   const [hikaye, setHikaye] = useState(false);
+  const [basamakFilm, setBasamakFilm] = useState(false); // KMB Eğitim Rehberi basamakları (HedefFilmi tur=basamak)
   const [liste, setListe] = useState(false);
   // adım videosu bitince altında tek soru (o adıma bağlı vaka/OSCE basamağı); yanıtlanana dek otomatik geçiş bekler
   const [kontrol, setKontrol] = useState<'yok' | 'acik' | 'bitti'>('yok');
@@ -216,6 +217,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
             <label className="kmb-oto"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Bitince sonraki adıma geç</label>
             <button className="kmb-bag" onClick={() => setVideo(true)}>Tüm ders · tam ekran ›</button>
             <button className="kmb-bag" onClick={() => setHikaye(true)}>Hikâye filmi ›</button>
+            {!!ders.rehberBasamaklari?.length && <button className="kmb-bag" onClick={() => setBasamakFilm(true)}>Basamak filmi (KMB rehberi) ›</button>}
           </div>
         </section>
         <section className="kmb-anlatim" aria-label="Adımın anlatımı">
@@ -253,6 +255,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
       </div>
       {video && <DersVideo ders={ders} ses={ses} bas={ai} onKapat={() => setVideo(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
       {hikaye && <HikayeFilmi ders={ders} ses={ses} onKapat={() => setHikaye(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
+      {basamakFilm && <HedefFilmi tur="basamak" ders={ders} ses={ses} onKapat={() => setBasamakFilm(false)} />}
     </div>
   );
 }
@@ -727,6 +730,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
   const [oto, setOto] = useState(false);
   const [tum, setTum] = useState(false);
   const [hikaye, setHikaye] = useState(false);
+  const [basamakFilm, setBasamakFilm] = useState(false); // KMB Eğitim Rehberi basamakları (HedefFilmi tur=basamak)
   const v = liste[vi];
   const sonraki = liste[vi + 1];
   const sec = (i: number) => { setOto(true); setVi(i); window.scrollTo({ top: 0, behavior: 'smooth' }); };
@@ -740,6 +744,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
           <h2>{v.baslik}</h2>
           <button className="kmb-dv-ac" onClick={() => setTum(true)}>Tüm ders · tam ekran</button>
           <button className="kmb-dv-ac" onClick={() => setHikaye(true)}>Hikâye filmi</button>
+          {!!ders.rehberBasamaklari?.length && <button className="kmb-dv-ac" onClick={() => setBasamakFilm(true)}>Basamak filmi (KMB rehberi)</button>}
         </div>
       </div>
       <nav className="kmb-video-liste" aria-label="Videolar">
@@ -759,6 +764,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
       </nav>
       {tum && <DersVideo ders={ders} ses={ses} onKapat={() => setTum(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
       {hikaye && <HikayeFilmi ders={ders} ses={ses} onKapat={() => setHikaye(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
+      {basamakFilm && <HedefFilmi tur="basamak" ders={ders} ses={ses} onKapat={() => setBasamakFilm(false)} />}
     </div>
   );
 }

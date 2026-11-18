@@ -34,6 +34,8 @@ Kayıttan net duyulamayan sayı/süre (`dogrulanacak: true`) öğrenciye kesin b
 | A9 | Kalan beceriler: NG sonda, atel, burun kanaması, hava yolu, enjeksiyon — **ses kaydı geldikçe** A2–A6 tekrar | ⏳ kaynak bekleniyor |
 | A10 | Bağımsız denetçi geçişi (yazar + denetçi), yayın (`dagit.sh`) | ⏳ |
 
+| A8c | **Basamak filmi** (2026-11-18, kullanıcı kararı, HER KMB dersi ZORUNLU): okulun **KMB Eğitim Rehberi** PDF'indeki uygulama basamakları, rehberdeki **sıra ve sayıyla birebir** `rehberBasamaklari` (`belge` = rehber metni, `bolum` Takma/Çıkarma); her kart ne/nasıl/neden/sık hata/hoca sorar, metin rehber + **hoca ses dökümüyle** zenginleştirilir (dökümde net duyulamayan sayı yazılmaz). Görsel koreografi `harita` → hedef kartının `film`'i. `HedefFilmi tur="basamak"`, ses `p-N`/`p-N-s`; betik `rehber_basamak.py`, kapı `dogrula.py` (yoksa HATA) | ✅ 01, 02 |
+
 ## 3. Veri şeması (`src/data/kmb/<kod>.json`)
 
 ```
@@ -63,7 +65,11 @@ bash meds/scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/uretim/k
 1. Kaynağı `meds_temp/kmb/kaynak/` altına koy, ses kaydını yazıya dök.
 2. `index.json`'da becerinin `durum`unu `hazirlaniyor` yap; `<kod>.json`'u hedeflerden başlat.
 3. Gerekirse `sahneler.tsx`'e yeni sahne (her öge `id`'li, etiketi `lbl-<id>`).
-4. `dogrula.py` 0 HATA → `ses.py <kod>` (GPU) → `npx vite build` → durum `hazir`.
+4. **Basamak filmi:** rehber PDF'inden becerinin basamaklarını sırasıyla kartlara yaz (`meds_temp/kmb/rehber/<beceri>_basamak.json`;
+   PDF metni `belge`, içerik rehber + hoca dökümü, `harita` = en yakın hedef kartı) →
+   `python3 meds/scripts/uretim/kmb/rehber_basamak.py <kod> <kartlar.json> --kaynak "<rehber, beceri, sayfa>"`. Hoca kaydı dökümü
+   yoksa `hoca_dokum_gpu.sh <ses> <çıktı.json>` (GPU, kural 10). Kaynak: `meds_temp/kmb/kaynak/KMB_Egitim_Rehberi_2025_26.pdf`.
+5. `dogrula.py` 0 HATA → `ses.py <kod>` (GPU) → `npx vite build` → durum `hazir`.
 
 ## 6. Ekran ve hata istatistiği (2026-10-31, H459)
 

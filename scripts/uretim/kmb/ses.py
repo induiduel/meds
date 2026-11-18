@@ -53,6 +53,9 @@ def klipler(d: dict) -> dict[str, list[str]]:
     for x in d.get('hedefCalisma', []):
         K[f'h-{x["no"]}'] = [oku(f'Hedef {x["no"]}. {x["ne"]}'), *[oku(c) for c in x['nasil']], oku(x['neden']), 'Sınavda sık yapılan bir hata var.', oku(x['hata'])]
         K[f'h-{x["no"]}-s'] = [oku(f'Hedef {x["no"]}. {x["hoca"]}'), 'Önce kendin sesli anlat, sonra cevabı aç.']
+    for x in d.get('rehberBasamaklari', []):  # Basamak filmi (KMB Eğitim Rehberi sırası)
+        K[f'p-{x["no"]}'] = [oku(f'Basamak {x["no"]}. {x["ne"]}'), *[oku(c) for c in x['nasil']], oku(x['neden']), 'Sınavda sık yapılan bir hata var.', oku(x['hata'])]
+        K[f'p-{x["no"]}-s'] = [oku(f'Basamak {x["no"]}. {x["hoca"]}'), 'Önce kendin sesli anlat, sonra cevabı aç.']
     lidx = VERI / ('lottie/index.json' if d['kod'] == '02' else 'lottie2b/index.json')  # 01: yalnız 2B, ad öneki ng-
     if lidx.exists() and d['kod'] in ('02', '01'):
         for v in json.loads(lidx.read_text(encoding='utf-8')):
