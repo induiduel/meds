@@ -18,11 +18,13 @@ export interface CozSecenek {
   /** Bu dizilimle aynı çıkan çözüm reddedilir (aynı perler, yalnız sıra farklıysa da aynıdır) */
   mevcut: number[][];
   adimSinir?: number;
+  /** Arama süresi, ms */
+  sure?: number;
 }
 
 const imza = (l: number[][]) => l.map((g) => g.slice().sort((a, b) => a - b).join(',')).sort().join('|');
 
-export function masayiCoz(o: CozSecenek): { perler: number[][]; elden: number[] } | null {
+export function tamCoz(o: CozSecenek): { perler: number[][]; elden: number[] } | null {
   let rnd = (o.tohum * 2654435761) >>> 0 || 1;
   const rand = () => { rnd ^= rnd << 13; rnd >>>= 0; rnd ^= rnd >> 17; rnd ^= rnd << 5; rnd >>>= 0; return rnd / 4294967296; };
   const karistir = <X,>(l: X[]) => { for (let i = l.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [l[i], l[j]] = [l[j], l[i]]; } return l; };
@@ -34,8 +36,9 @@ export function masayiCoz(o: CozSecenek): { perler: number[][]; elden: number[] 
   let en: { perler: number[][]; elden: number; } | null = null;
   let adim = 0;
   const sinir = o.adimSinir ?? 8000;
-  const bitis = Date.now() + 700;
-  const elKul = () => cozum.flat().filter((id) => !tum.find((t) => t.id === id)!.zorunlu).length;
+  const bitis = Date.now() + (o.sure ?? 700);
+  const zorunluMu = new Map(tum.map((t) => [t.id, t.zorunlu]));
+  const elKul = () => { let n = 0; for (const p of cozum) for (const id of p) if (!zorunluMu.get(id)) n++; return n; };
   const gecerliOnbellek = new Map<string, boolean>();
   const gecerli = (ids: number[]) => { const k = ids.slice().sort((a, b) => a - b).join(','); let v = gecerliOnbellek.get(k); if (v === undefined) { v = o.gecerli(ids); gecerliOnbellek.set(k, v); } return v; };
 
@@ -90,7 +93,7 @@ export function masayiCoz(o: CozSecenek): { perler: number[][]; elden: number[] 
     for (const t of kalan.slice(0, 6)) { const a = adaylar(t); if (!secAday || a.length < secAday.length) { secilen = t; secAday = a; } if (!a.length) return false; }
     void secilen;
     for (const p of secAday!) {
-      if (p.filter((id) => !tum.find((t) => t.id === id)!.zorunlu).length + elKul() > o.elSinir) continue;
+      if (p.filter((id) => !zorunluMu.get(id)).length + elKul() > o.elSinir) continue;
       p.forEach((id) => kul.add(id)); cozum.push(p);
       const bitti = ara();
       cozum.pop(); p.forEach((id) => kul.delete(id));
@@ -103,4 +106,54 @@ export function masayiCoz(o: CozSecenek): { perler: number[][]; elden: number[] 
   const sonuc = en as { perler: number[][]; elden: number };
   const elSet = new Set(o.el);
   return { perler: sonuc.perler, elden: sonuc.perler.flat().filter((id) => elSet.has(id)) };
+}
+
+/**
+ * Güçlü arama: küçük masada önce tam çözüm; kalabalık masada (ya da tam çözüm bulunamazsa) yerel komşuluk araması —
+ * mevcut geçerli dizilimden başlar, ortak renk/sayıyı paylaşan 2–4 peri ve onlarla ilgili el taşlarını küçük bir alt
+ * problem olarak yeniden çözer, sonucu yerine koyar; süre bitene dek yineler. Her adım geçerli kaldığı için sonuç hep geçerlidir.
+ */
+export function masayiCoz(o: CozSecenek): { perler: number[][]; elden: number[] } | null {
+  const toplam = o.sure ?? 1200, bas = Date.now();
+  const masaSay = o.masa.length;
+  let en: { perler: number[][]; elden: number[] } | null = null;
+  if (masaSay <= 24) {
+    en = tamCoz({ ...o, sure: Math.min(400, toplam / 2) });
+    if (en && en.elden.length >= Math.min(o.elSinir, o.el.length)) return en;
+  }
+  let rnd = ((o.tohum + 7) * 2246822519) >>> 0 || 3;
+  const rand = () => { rnd ^= rnd << 13; rnd >>>= 0; rnd ^= rnd >> 17; rnd ^= rnd << 5; rnd >>>= 0; return rnd / 4294967296; };
+  const ilk = imza(o.mevcut);
+  let cur = o.mevcut.map((p) => p.slice());
+  let elKalan = o.el.slice();
+  let elden: number[] = [];
+  const ilgili = (a: number[], b: number[]) => {
+    const da = a.map(o.deger).filter(Boolean) as { s: number; r: number }[], db = b.map(o.deger).filter(Boolean) as { s: number; r: number }[];
+    return da.some((x) => db.some((y) => x.r === y.r || x.s === y.s));
+  };
+  let deneme = 0;
+  while (Date.now() - bas < toplam && cur.length) {
+    deneme++;
+    // Çekirdek per: önce elden taş alabilecek olanlar, sonra rastgele
+    const adayCekirdek = cur.map((p, i) => ({ i, puan: elKalan.some((e) => ilgili(p, [e])) ? 1 + rand() : rand() })).sort((a, b) => b.puan - a.puan);
+    const ci = adayCekirdek[Math.floor(rand() * Math.min(adayCekirdek.length, 4))].i;
+    const komsu = cur.map((p, i) => i).filter((i) => i !== ci && ilgili(cur[ci], cur[i]));
+    for (let i = komsu.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [komsu[i], komsu[j]] = [komsu[j], komsu[i]]; }
+    const secilen = [ci, ...komsu.slice(0, 1 + Math.floor(rand() * 3))];
+    const altPer = secilen.map((i) => cur[i]);
+    const altEl = elKalan.filter((e) => altPer.some((p) => ilgili(p, [e])));
+    const kalanSinir = o.elSinir - elden.length;
+    const r = tamCoz({ ...o, masa: altPer.flat(), el: kalanSinir > 0 ? altEl : [], elSinir: Math.max(0, kalanSinir), mevcut: altPer, tohum: o.tohum * 131 + deneme, adimSinir: 2500, sure: 120 });
+    if (!r) continue;
+    const sec = new Set(secilen);
+    cur = [...cur.filter((_, i) => !sec.has(i)), ...r.perler];
+    const kul = new Set(r.elden);
+    elKalan = elKalan.filter((e) => !kul.has(e));
+    elden = [...elden, ...r.elden];
+    // El taşları bittiyse ve masa yeterince değiştiyse erken bitir
+    if ((elden.length >= Math.min(o.elSinir, o.el.length) || !elKalan.length) && deneme >= 6) break;
+  }
+  if (imza(cur) === ilk && !elden.length) return en;
+  const yeni = { perler: cur, elden };
+  return en && en.elden.length >= yeni.elden.length ? en : yeni;
 }

@@ -622,7 +622,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     const gecerli = (ids: number[]) => { const ts = tasAl(ids); return acik ? !!A.acikPer(ts, okey ?? null) : okey ? ts.length >= 3 && !!Z.perCoz(ts, okey) : !!Y.perTuru(ts); };
     const mevcut = masaPerler.map((p) => p.taslar.map((t) => t.id));
     let r: ReturnType<typeof masayiCoz> = null;
-    for (let i = 0; i < 4 && !r; i++) r = masayiCoz({ masa: mevcut.flat(), el: g.elim.map((t) => t.id), elSinir: Math.max(0, g.elim.length - 1), deger, gecerli, tohum: ++dizTohum.current, mevcut });
+    for (let i = 0; i < 2 && !r; i++) r = masayiCoz({ masa: mevcut.flat(), el: g.elim.map((t) => t.id), elSinir: Math.max(0, g.elim.length - 1), deger, gecerli, tohum: ++dizTohum.current, mevcut, sure: 700 });
     if (!r) return olmadi([], 'Bu masadaki taşlarla farklı bir geçerli dizilim bulunamadı.');
     setDuzen2({ gruplar: r.perler, secili: [], en: [] });
     setSecili([]); sesCal('birak');
