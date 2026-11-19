@@ -1,12 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 854,
- "baslik": "Masayı diz: İşlenebilir önde",
+ "onem": 855,
+ "baslik": "Per önerileri ve sürüklenebilir perler",
  "maddeler": [
-  "Masayı diz: yeni \"İşlenebilir önde\" dizimi, elindeki taşları işleyebileceğin perleri öne alır (en çok taş alan başta)."
+  "Taş oyunları: 1–2 taş seçince ıstakanın üstünde kurulabilecek perler önerilir; eksik taşlar kesik çizgiyle, elindeki tamamlayıcılar parlayarak gösterilir. Öneriye dokununca taşlar seçilir.",
+  "Masadaki perleri adlarının yanındaki tutamaçtan sürükleyerek istediğin sıraya koyabilirsin (yalnız senin görünümün)."
  ],
  "eklenen": [
-  "Masa için \"İşlenebilir önde\" dizimi"
+  "Per önerileri ve eksik taş işareti",
+  "Perleri sürükleyerek sıralama"
  ],
  "degisen": [],
  "duzeltilen": [],

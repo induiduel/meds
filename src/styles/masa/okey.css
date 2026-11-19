@@ -450,3 +450,16 @@
 .om-eylem-bilgi { min-width: 150px; }
 .om-eylem-durum { white-space: normal; line-height: 1.25; }
 .om-eylem-dugmeler { flex: 0 1 auto; flex-wrap: wrap; }
+
+/* Per sürükleme (görünüm sırası) */
+.om-per-tutamac { cursor: grab; touch-action: none; display: inline-flex; align-items: center; gap: 2px; }
+.om-per-tutamac-ikon { opacity: 0.55; font-size: 11px; }
+.om-per--tasinan { opacity: 0.45; }
+.om-per--birakhedef .om-per-taslar { box-shadow: -4px 0 0 0 rgb(var(--om-isik)); border-radius: 4px; }
+
+/* Per önerileri: ıstakanın üstünde akışta, masayı örtmez */
+.om-oneri { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; max-width: 100%; }
+.om-oneri-per { display: inline-flex; align-items: center; gap: 1px; padding: 3px 8px 3px 4px; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 10px; background: rgba(0, 0, 0, 0.32); color: #fff; font: inherit; cursor: pointer; }
+.om-oneri-per--tam { border-color: rgb(var(--om-isik)); box-shadow: 0 0 10px rgba(var(--om-isik), 0.5); }
+.om-oneri-eksik { opacity: 0.4; outline: 2px dashed rgba(255, 255, 255, 0.85); outline-offset: -2px; filter: grayscale(0.3); }
+.om-oneri-not { margin-left: 5px; font-size: 11px; font-weight: 700; white-space: nowrap; opacity: 0.9; }

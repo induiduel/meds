@@ -17,6 +17,7 @@ import Koltuk, { AtikYigini, CEZA_BILGI, CezaRozetleri } from './Rakipler';
 import { useSurukle, type Hedef, type Kaynak, type Rect } from './surukle';
 import { TasGorsel } from './Tas';
 import { formasyon } from './formasyon';
+import { perOnerileri } from './perOneri';
 import { diz, gruplar, komsuGrup, tasi, uzlas, yuvaOku, yuvaSirasi, yuvaYaz, type YuvaDurum } from './yuva';
 import '../../../styles/masa/okey.css';
 import '../../../styles/masa/okey-acik.css';
@@ -495,7 +496,22 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
       || (a.tur === 'seri' ? a.taslar[0].r - b.taslar[0].r || a.taslar[0].s - b.taslar[0].s : a.taslar[0].s - b.taslar[0].s)));
   // "Masayı diz" açılınca masa hep dizili görünür (iki modda da); zorlu modda el bitince de dizilir
   const elBitti = g.bitti || oda.asama !== 'oyun';
-  const gorunenPerler = useMemo(() => ((masaDizili || (zorlu && elBitti)) ? perSirala(g.perler, masaDizili || 'renk') : g.perler), [g.perler, zorlu, elBitti, masaDizili, islekSay]);
+  const siraliPerler = useMemo(() => ((masaDizili || (zorlu && elBitti)) ? perSirala(g.perler, masaDizili || 'renk') : g.perler), [g.perler, zorlu, elBitti, masaDizili, islekSay]);
+  /** Oyuncunun sürükleyerek verdiği per sırası (yalnız görünüm); dizme kipi değişince ya da yeni elde sıfırlanır */
+  const [perSira, setPerSira] = useState<number[] | null>(null);
+  useEffect(() => { setPerSira(null); }, [masaDizili, g.elNo]);
+  const gorunenPerler = useMemo(() => {
+    if (!perSira) return siraliPerler;
+    const yer = new Map(perSira.map((id, i) => [id, i]));
+    const bilinen = siraliPerler.filter((p) => yer.has(p.id)).sort((a, b) => yer.get(a.id)! - yer.get(b.id)!);
+    return [...bilinen, ...siraliPerler.filter((p) => !yer.has(p.id))];
+  }, [siraliPerler, perSira]);
+  const perTasi = (kimden: number, kime: number) => {
+    const l = gorunenPerler.map((p) => p.id), i = l.indexOf(kimden), j = l.indexOf(kime);
+    if (i < 0 || j < 0) return;
+    l.splice(i, 1); l.splice(j, 0, kimden);
+    setPerSira(l); sesCal('birak');
+  };
   const [duzen2, setDuzen2] = useState<{ gruplar: number[][]; secili: number[]; /** Perlerin düzenleme başındaki piksel genişlikleri */ en: number[] } | null>(null);
   /** Taslak başlangıcı: perler ekranda durdukları sırayla alınır; boşalan per yer tutucu olarak kalır (hiçbir per yer değiştirmez) */
   const taslakBasla = (secili: number[]) => { const l = gorunenPerler.filter((p) => p.tur !== 'cift'); setDuzen2({ gruplar: l.map((p) => p.taslar.map((t) => t.id)), secili, en: l.map((p) => (kokRef.current?.querySelector(`.om-per[data-per="${p.id}"] .om-per-taslar`) as HTMLElement | null)?.offsetWidth ?? 0) }); };
@@ -656,6 +672,9 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     : zorunlu.per ? 'Açabileceğin per var' : zorunlu.islek ? 'İşlenecek taşın var' : cekebilir ? 'Sıra sende: taş çek' : 'Eli devredebilirsin';
 
   /* ---------------- sürükleme / seçim hedefleri ---------------- */
+  /** 1–2 taş seçiliyken kurulabilecek perler; eldeki tamamlayıcı taşlar ıstakada parlar, eksikler soluk çizilir */
+  const oneriler = useMemo(() => (duzen2 || sur.sur || !secili.length || secili.length > 2 ? [] : perOnerileri(secili, g.elim, (id) => { const t = elMap.get(id); return !t ? null : okey ? Z.gercek(t, okey) : t.s === 0 ? null : { s: t.s, r: t.r }; })), [secili, g.elim, elMap, okey, duzen2, sur.sur]);
+  const oneriTas = useMemo(() => new Set(oneriler.flatMap((o) => o.taslar.map((t) => t.id).filter((id): id is number => id !== undefined && !seciliKume.has(id)))), [oneriler, seciliKume]);
   const aktifIds = sur.sur ? (sur.sur.src === 'el' ? sur.sur.ids : []) : secili;
   const uygun = useMemo(() => {
     const s = new Set<string>();
@@ -722,6 +741,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
               onUc={(per, uc) => hedefeDokun(() => { if (duzen2) duzenTasi(per - 1000); else if (secili.length) isle(secili, per, uc); })}
               onPer={(per) => hedefeDokun(() => { if (duzen2) duzenTasi(per - 1000); else if (secili.length) isle(secili, per); })}
               onYeni={() => hedefeDokun(() => { if (duzen2) duzenTasi('yeni'); else if (secili.length) perAc(secili); })}
+              onSira={duzen2 ? undefined : perTasi}
               enAz={duzen2 ? new Map(duzen2.en.map((n, i) => [1000 + i, n])) : undefined}
               onTas={kilit ? undefined : (per, id) => hedefeDokun(() => masaTasDokun(per, id))}
               duzen={duzen2 ? { secili: new Set(duzen2.secili), gecersiz: taslakGecersiz, onTas: (id) => setDuzen2((d) => d && (!elMap.has(id) && !masaTas.has(id) ? d : elMap.has(id)
@@ -763,6 +783,21 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
 
       <div className="om-alt">
         {bildirim && <div key={bildirim.n} className={`om-bildirim om-bildirim--${bildirim.tur}`} role="status">{bildirim.metin}</div>}
+        {oneriler.length > 0 && (
+          <div className="om-oneri" role="list" aria-label="Per önerileri">
+            {oneriler.map((o, i) => {
+              const tam = o.eksik === 0;
+              return (
+                <button key={i} type="button" role="listitem" className={`om-oneri-per${tam ? ' om-oneri-per--tam' : ''}`}
+                  title={tam ? 'Hepsi elinde: dokun, seç' : `Eksik ${o.eksik} taş${o.jokerle ? ' (jokerle tamamlanabilir)' : ''}`}
+                  onClick={() => { const ids = o.taslar.map((t) => t.id).filter((id): id is number => id !== undefined); setSecili(ids); }}>
+                  {o.taslar.map((t, k) => <TasGorsel key={k} className={t.id === undefined ? 'om-oneri-eksik' : undefined} tas={{ id: t.id ?? -2 - k, s: t.s, r: t.r as Tas['r'] }} boy={Math.max(16, Math.round(duzen.b * 0.5))} renkler={renkler} tema={tema} />)}
+                  <span className="om-oneri-not">{tam ? 'Hazır' : `${o.eksik} eksik${o.jokerle ? ' · joker' : ''}`}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
         <EylemCubugu eylemler={eylemler} durum={durumYazi} kisa={duzen.kisa}>
           {benO && ((benO.cezalar?.length ?? 0) > 0 || benO.takim) && <span className="om-benrozet">{benO.takim && <em className={`om-takim om-takim--${benO.takim}`}>Takım {benO.takim}</em>}<CezaRozetleri o={benO} /></span>}
           {remiAcilis && (
@@ -778,7 +813,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
         </EylemCubugu>
         <Istaka
           yuva={yuva} taslar={elMap} b={duzen.b} renkler={renkler} tema={tema} okey={okey}
-          secili={seciliKume} kaynak={sur.sur?.src === 'el' ? new Set(sur.sur.ids) : BOS_KUME} ipucu={ipucu?.taslar ?? BOS_KUME}
+          secili={seciliKume} kaynak={sur.sur?.src === 'el' ? new Set(sur.sur.ids) : BOS_KUME} ipucu={oneriTas.size ? new Set([...(ipucu?.taslar ?? []), ...oneriTas]) : ipucu?.taslar ?? BOS_KUME}
           gizli={taslakEl.size ? new Set([...can.gizli, ...taslakEl]) : can.gizli} yeni={can.yeni} sarsilan={can.sarsilan} yandan={g.yandanAlinan ?? undefined}
           siraBende={siraBende} isilti={can.isilti} hedefAcik={secili.length > 0 && !sur.sur} rectler={rectler} sabit={sabit}
           onYuva={(i) => hedefeDokun(() => { if (secili.length && yuva.d[i] === null) { yuvaKoy(tasi(yuva, yuvaSirasi(yuva, secili), i)); setSecili([]); sesCal('birak'); } })}

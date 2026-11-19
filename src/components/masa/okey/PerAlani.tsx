@@ -40,6 +40,8 @@ export interface PerAlaniProps {
   onTas?(per: number, id: number): void;
   /** Düzenleme kipi: perin en az kaplayacağı genişlik, px (taş çıkınca / per boşalınca komşu perler yer değiştirmesin) */
   enAz?: ReadonlyMap<number, number>;
+  /** Peri sürükleyip başka perin yerine bırakma (yalnız görünüm sırası); sahip etiketi tutamaçtır */
+  onSira?(kimden: number, kime: number): void;
 }
 
 export default function PerAlani(p: PerAlaniProps) {
@@ -53,6 +55,22 @@ export default function PerAlani(p: PerAlaniProps) {
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+  // Per sürükleme: tutamaçtan basılır, bırakılan perin yerine geçer
+  const [tasinan, setTasinan] = useState<{ id: number; hedef: number | null; x: number; y: number } | null>(null);
+  const perTut = (e: React.PointerEvent, id: number) => {
+    if (!p.onSira || e.button !== 0) return;
+    e.stopPropagation(); e.preventDefault();
+    const bul = (x: number, y: number) => { const el = (document.elementFromPoint(x, y) as HTMLElement | null)?.closest('.om-per') as HTMLElement | null; const h = el ? Number(el.dataset.per) : NaN; return Number.isFinite(h) && h !== id ? h : null; };
+    setTasinan({ id, hedef: null, x: e.clientX, y: e.clientY });
+    const hareket = (ev: PointerEvent) => setTasinan({ id, hedef: bul(ev.clientX, ev.clientY), x: ev.clientX, y: ev.clientY });
+    const birak = (ev: PointerEvent) => {
+      window.removeEventListener('pointermove', hareket); window.removeEventListener('pointerup', birak); window.removeEventListener('pointercancel', birak);
+      const h = ev.type === 'pointerup' ? bul(ev.clientX, ev.clientY) : null;
+      setTasinan(null);
+      if (h !== null) p.onSira!(id, h);
+    };
+    window.addEventListener('pointermove', hareket); window.addEventListener('pointerup', birak); window.addEventListener('pointercancel', birak);
+  };
   const bilgi = useMemo(() => p.perler.map((per) => ({ per, uc: per.taslar.length ? uclar(per, p.okey) : { bas: false, son: false, grup: false } })), [p.perler, p.okey]);
   // En büyük sığan taş boyu: satırlara açgözlü paketleme benzetimi
   const b = useMemo(() => {
@@ -85,8 +103,8 @@ export default function PerAlani(p: PerAlaniProps) {
           );
           const perUygun = [...p.uygun].some((k) => k.startsWith(`${per.id}:`));
           return (
-            <div key={per.id} className={`om-per om-per--${per.tur}${p.duzen?.gecersiz.has(per.id) ? ' om-per--gecersiz' : ''}${perUygun ? ' om-per--uygun' : ''}${p.aktif && !perUygun ? ' om-per--sonuk' : ''}${p.ipucuPer === per.id ? ' om-per--ipucu' : ''}${p.bolunen.has(per.id) ? ' om-per--bolundu' : ''}${per.taslar.length ? '' : ' om-per--bos'}`} data-om-hedef="per" data-per={per.id} onClick={(e) => { e.stopPropagation(); p.onPer(per.id); }}>
-              <span className="om-per-sahip">{per.sahip === p.oda.ben ? 'Sen' : oyuncuAdi(p.oda, per.sahip)}</span>
+            <div key={per.id} className={`om-per om-per--${per.tur}${p.duzen?.gecersiz.has(per.id) ? ' om-per--gecersiz' : ''}${perUygun ? ' om-per--uygun' : ''}${p.aktif && !perUygun ? ' om-per--sonuk' : ''}${p.ipucuPer === per.id ? ' om-per--ipucu' : ''}${p.bolunen.has(per.id) ? ' om-per--bolundu' : ''}${per.taslar.length ? '' : ' om-per--bos'}${tasinan?.id === per.id ? ' om-per--tasinan' : ''}${tasinan?.hedef === per.id ? ' om-per--birakhedef' : ''}`} data-om-hedef="per" data-per={per.id} onClick={(e) => { e.stopPropagation(); p.onPer(per.id); }}>
+              <span className={`om-per-sahip${p.onSira ? ' om-per-tutamac' : ''}`} {...(p.onSira ? { onPointerDown: (e: React.PointerEvent) => perTut(e, per.id), title: 'Peri sürükleyerek yerini değiştir' } : null)}>{p.onSira && <span className="om-per-tutamac-ikon" aria-hidden="true">⠿</span>}{per.sahip === p.oda.ben ? 'Sen' : oyuncuAdi(p.oda, per.sahip)}</span>
               <div className="om-per-taslar" style={p.enAz?.get(per.id) ? { minWidth: p.enAz.get(per.id), minHeight: `calc(var(--om-b) * ${TAS_ORAN})` } : undefined}>
                 {uc.bas && ucYuva('bas')}
                 {per.taslar.map((t) => (
