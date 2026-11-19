@@ -277,3 +277,9 @@
 - **Kök neden:** İki katman üst üste: (1) `.om-duzenserit` `position:absolute; bottom:8px` ile masanın (om-masa, %100 yükseklik) alt perlerinin ÜSTÜNE biniyordu; dar ekranda düğmeler sütun kipine geçip şeridi büyütüyordu. (2) `duzenleBasla`/`masaTasDokun` 2–3 satırlık uzun 'bilgi' baloncuğunu (`.om-bildirim`, ıstakanın üstünde mutlak) 4,6 sn boyunca masanın üstüne basıyordu.
 - **Kalıcı çözüm:** Şerit akışa alındı (sahne `:has(.om-duzenserit)` iken sütun flex; masa kalan yüksekliği alır), yönerge kısa metin olarak şeridin içinde; uzun düzenleme baloncukları kaldırıldı.
 - **Önleme:** Oyun sırasında etkileşim gerektiren alanın (masa, ıstaka) üstüne mutlak konumlu kalıcı/uzun öge konmaz; kip göstergesi akışta yer kaplar, yönerge tek satır.
+
+### H641 — "Masayı diz" taş oyunlarında çalışmıyordu (2026-11-20)
+- **Belirti:** Masayı dizdirince taşlar yeni kombinasyonlara girmiyor; bazı oyunlarda düğme hiç yok.
+- **Kök neden:** (1) `masadiz` eylemi `OkeyMasa.tsx`'te yalnız `yedili` kolunda tanımlıydı; açık masa (Remi ailesi) ve 101'de yoktu. (2) Var olduğu yerde de yalnız perlerin **görünüm sırasını** değiştiriyordu (perSirala); hiçbir taşı yeni pere taşımıyordu — kullanıcının beklediği "masayı yeniden diz" hamlesi hiç yazılmamıştı.
+- **Kalıcı çözüm:** `okey/masaCoz.ts` tam örtü çözücüsü: masadaki tüm taşları (zorunlu) + elden katılabilenleri (en çok, atacak taş bırakarak) oyunun kendi doğrulayıcısıyla geçerli yeni perlere bölüştürür, mevcut dizilimle aynısını reddeder, tohumla farklı dizilim verir. Sonuç düzenleme taslağı olarak gösterilir, Onayla ile `duzenle`/açık hamle gider. "Masayı diz" ve "Görünümü diz" artık eylem kollarının dışında, bütün taş oyunlarında (düz okey hariç).
+- **Önleme:** Oyun türü kollarına (acik/yedili/101) ayrılmış eylem listesinde ortak eylem tek bir kolda tanımlanmaz; ortak eylemler kollardan sonra tek yerde eklenir. "Dizme" dendiğinde görünüm mü hamle mi olduğu adla ayrılır.

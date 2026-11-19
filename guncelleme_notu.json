@@ -1,16 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 855,
- "baslik": "Per önerileri ve sürüklenebilir perler",
+ "onem": 856,
+ "baslik": "Masayı diz artık taşları yeniden dizer",
  "maddeler": [
-  "Taş oyunları: 1–2 taş seçince ıstakanın üstünde kurulabilecek perler önerilir; eksik taşlar kesik çizgiyle, elindeki tamamlayıcılar parlayarak gösterilir. Öneriye dokununca taşlar seçilir.",
-  "Masadaki perleri adlarının yanındaki tutamaçtan sürükleyerek istediğin sıraya koyabilirsin (yalnız senin görünümün)."
+  "Taş oyunları: \"Masayı diz\" masadaki tüm taşları (ve elinden katılabilenleri) yepyeni geçerli perlere yeniden dizer; sonucu görüp Onayla ile uygularsın, beğenmezsen \"Başka dizilim\".",
+  "Düğme artık bütün taş oyunlarında var (Remi ailesi ve 101 dahil). Perlerin yalnız görünüm sırası için \"Görünümü diz\"."
  ],
  "eklenen": [
-  "Per önerileri ve eksik taş işareti",
-  "Perleri sürükleyerek sıralama"
+  "Masayı yeniden dizen çözücü"
  ],
  "degisen": [],
- "duzeltilen": [],
+ "duzeltilen": [
+  "\"Masayı diz\" bazı oyunlarda yoktu, yalnız sırayı değiştiriyordu (H641)"
+ ],
  "silinen": []
 }

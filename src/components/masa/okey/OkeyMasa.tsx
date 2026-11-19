@@ -18,6 +18,7 @@ import { useSurukle, type Hedef, type Kaynak, type Rect } from './surukle';
 import { TasGorsel } from './Tas';
 import { formasyon } from './formasyon';
 import { perOnerileri } from './perOneri';
+import { masayiCoz } from './masaCoz';
 import { diz, gruplar, komsuGrup, tasi, uzlas, yuvaOku, yuvaSirasi, yuvaYaz, type YuvaDurum } from './yuva';
 import '../../../styles/masa/okey.css';
 import '../../../styles/masa/okey-acik.css';
@@ -610,6 +611,23 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
 
   /* ---------------- eylem çubuğu ---------------- */
   const ik = { size: 18, 'aria-hidden': true } as const;
+  /** Masayı yeniden diz: masadaki tüm taşlar (ve elden katılabilenler) yepyeni geçerli perlere bölüştürülür, taslak olarak gösterilir */
+  const dizTohum = useRef(0);
+  const yenidenDizHak = siraBende && masaPerler.length > 0 && (acik ? !remi || !!benO?.acti : yuzbir ? !!benO?.acti : hak);
+  const yenidenDiz = () => {
+    if (!siraBende) return void siraYok([]);
+    if (!yenidenDizHak) return olmadi([], acik ? `Masaya dokunmak için önce elinden en az ${A.REMI_ACILIS} sayı açmalısın.` : 'Masayı dizmek için önce per açmalısın.');
+    const deger = (id: number) => { const t = masaTas.get(id) ?? elMap.get(id); return !t ? null : okey ? Z.gercek(t, okey) : t.s === 0 ? null : { s: t.s, r: t.r }; };
+    const tasAl = (ids: number[]) => ids.map((id) => masaTas.get(id) ?? elMap.get(id)!).filter(Boolean);
+    const gecerli = (ids: number[]) => { const ts = tasAl(ids); return acik ? !!A.acikPer(ts, okey ?? null) : okey ? ts.length >= 3 && !!Z.perCoz(ts, okey) : !!Y.perTuru(ts); };
+    const mevcut = masaPerler.map((p) => p.taslar.map((t) => t.id));
+    let r: ReturnType<typeof masayiCoz> = null;
+    for (let i = 0; i < 4 && !r; i++) r = masayiCoz({ masa: mevcut.flat(), el: g.elim.map((t) => t.id), elSinir: Math.max(0, g.elim.length - 1), deger, gecerli, tohum: ++dizTohum.current, mevcut });
+    if (!r) return olmadi([], 'Bu masadaki taşlarla farklı bir geçerli dizilim bulunamadı.');
+    setDuzen2({ gruplar: r.perler, secili: [], en: [] });
+    setSecili([]); sesCal('birak');
+    bildir(r.elden.length ? `Yeni dizilim: elinden ${r.elden.length} taş da masaya giriyor. Onayla ile uygula.` : 'Yeni dizilim hazır. Onayla ile uygula ya da yeniden dizdir.', 'bilgi');
+  };
   const eylemler: Eylem[] = [];
   if (acik) {
     if (remi && !benO?.acti) eylemler.push({ ad: 'ac', etiket: 'Aç', ikon: <LockOpen {...ik} />, etkin: siraBende && !!remiAcilis && remiAcilis.toplam >= A.REMI_ACILIS, birincil: true, ipucu: `Istakada boşlukla ayırdığın perlerin toplamı en az ${A.REMI_ACILIS}`, calis: () => { if (remiAcilis) acikGonder([...masaIds(), ...remiAcilis.perler], remiAcilis.perler.flat()); } });
@@ -630,7 +648,6 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     );
     eylemler.push(
       { ad: 'sirala', etiket: 'Sırala', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala },
-      { ad: 'masadiz', etiket: masaDizili ? MASA_KIP_AD[masaDizili].kisa : 'Masayı diz', ikon: <LayoutGrid {...ik} />, etkin: g.perler.length > 1, ipucu: 'Masadaki perleri işlenebilirliğe, renge, sayıya, oyuncuya, uzunluğa, türe ya da açılış sırasına göre göster', calis: () => { const sira: (false | MasaKip)[] = [false, 'islek', 'renk', 'sayi', 'tur', 'boy', 'sahip']; const y = sira[(sira.indexOf(masaDizili) + 1) % sira.length]; setMasaDizili(y); bildir(y ? `Masa ${MASA_KIP_AD[y].uzun}` : 'Masa açılış sırasında', 'bilgi'); } },
     );
     eylemler.push({ ad: 'duzenle', etiket: 'Masayı düzenle', ikon: <Pencil {...ik} />, etkin: siraBende && hak && g.perler.length > 0 && !duzen2, calis: duzenleBasla });
     if (asistan) eylemler.push(
@@ -697,6 +714,10 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
   const yan = duzen.genis && k >= 2;
   const sag = yan ? rakipler[0] : undefined, sol = yan ? rakipler[k - 1] : undefined;
   const ust = (yan ? rakipler.slice(1, k - 1) : rakipler).slice().reverse();
+  if (!duz) eylemler.push(
+    { ad: 'yenidiz', etiket: duzen2 ? 'Başka dizilim' : 'Masayı diz', ikon: <Wand2 {...ik} />, etkin: !kilit && yenidenDizHak, ipucu: 'Masadaki taşları (ve elinden katılabilenleri) yepyeni geçerli perlere yeniden dizer; Onayla ile uygulanır', calis: yenidenDiz },
+    { ad: 'masadiz', etiket: masaDizili ? `Görünüm: ${MASA_KIP_AD[masaDizili].kisa}` : 'Görünümü diz', ikon: <LayoutGrid {...ik} />, etkin: g.perler.length > 1, ipucu: 'Masadaki perleri işlenebilirliğe, renge, sayıya, oyuncuya, uzunluğa, türe ya da açılış sırasına göre göster', calis: () => { const sira: (false | MasaKip)[] = [false, 'islek', 'renk', 'sayi', 'tur', 'boy', 'sahip']; const y = sira[(sira.indexOf(masaDizili) + 1) % sira.length]; setMasaDizili(y); bildir(y ? `Masa ${MASA_KIP_AD[y].uzun}` : 'Masa açılış sırasında', 'bilgi'); } },
+  );
   const koltuk = (o: typeof rakipler[number], yon: 'ust' | 'sol' | 'sag') => (
     <Koltuk key={o.id} oda={oda} g={g} o={o} yon={yon} sarsil={can.sarsilan.has(o.id)} gizli={can.gizli} alinabilir={cekebilir && atikli && onceki?.id === o.id && !!yanTas} />
   );
