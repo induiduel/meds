@@ -6,6 +6,7 @@ import { masa } from '../../services/masa/istemci';
 import { OYUN_ADI, TEPKILER, unoModTanim, type OdaGorunum, type OkeyGorunum } from '../../services/masa/tipler';
 import { oyuncuAdi, sesCal, tercihYaz, titret, useTercih } from './ortak';
 import { DavetYapragi } from './MasaLobi';
+import { SohbetDugme } from './MasaSohbet';
 import { Avatar, Onay, SkorTablo, Yaprak, cezaBilgi, puanYaz, sadeAd, tasMi } from './kabukOrtak';
 
 export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merkezeDon }: {
@@ -76,6 +77,7 @@ export default function MasaUstCubuk({ oda, baglanti, gecikme, kurallarAc, merke
       <button type="button" className="mk-cubuk-dugme is-skor" onClick={() => setSkor(true)} aria-label={`Skor tablosu. Toplam puanın ${puanYaz(puanim)}`}>
         <Trophy size={18} /><b className={puanim < 0 ? 'is-eksi' : ''}>{puanYaz(puanim)}</b>
       </button>
+      <SohbetDugme />
       <div className="mk-tepki-kap" ref={tepkiKap}>
         <button type="button" className="mk-cubuk-dugme" onClick={() => setTepki((a) => !a)} aria-label="Tepki gönder" aria-expanded={tepki}><Smile size={20} /></button>
         <AnimatePresence>

@@ -473,3 +473,4 @@
 - **H637** · KMB seslerinde başta ve cümle başlarında kesik (ağ akışı + play() beklerken görüntünün öne kaçması) → hatalar/on_yuz_oynatici_ders.md
 - **H638** · KMB oynatıcı tam ekran: -12px kayma, iç içe tam ekran, kaldırılmayan yön kilidi, uiZoom taşması → hatalar/on_yuz_oynatici_ders.md
 - **H639** · KMB MP4 dışa aktarım: 800×600 kesik kare (başsız ekran), blob: sesi dışarıdan okunamıyor, katman düğmeyi örtüyor → hatalar/on_yuz_disa_aktarim.md
+- **H640** · Taş oyunlarında "Masayı düzenliyorsun" şeridi ve uzun baloncuk masayı örtüyordu (mutlak konum) → hatalar/ogren_modul_oyun.md

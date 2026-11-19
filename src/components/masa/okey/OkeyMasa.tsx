@@ -519,17 +519,11 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
       if (r) return void oduncGonder(r, secili);
     }
     taslakBasla([id]);
-    bildir(secili.length
-      ? 'Bu taş seçtiklerinle doğrudan per olmuyor: masayı düzenliyorsun. Taşları seçip bir pere ya da “+ Ayrı per”e dokun, sonra Onayla.'
-      : 'Masayı düzenliyorsun: taşları seçip bir pere ya da “+ Ayrı per”e dokun; ıstakandan da taş katabilirsin. Bitince Onayla.', 'bilgi');
   };
   const duzenleBasla = () => {
     if (!siraBende) return void siraYok([]);
     if (acik ? remi && !benO?.acti : !hak) return olmadi([], acik ? `Masaya dokunmak için önce elinden en az ${A.REMI_ACILIS} sayı açmalısın.` : 'Masayı düzenlemek için önce per açmalısın.');
     taslakBasla([]);
-    bildir(acik
-      ? 'Masadaki ve ıstakandaki taşlara dokunarak seç, sonra bir pere ya da “+ Ayrı per”e dokun. Elinden koyduğun taşa dokununca ıstakana döner; masadaki taşlar ele dönmez, Vazgeç her şeyi geri koyar.'
-      : 'Masadaki ve ıstakandaki taşlara dokunarak seç, sonra bir pere ya da “+ Ayrı per”e dokun. Masadan aldığın taşı elindekilerle yeni per yapabilirsin; masadaki taşlar ele dönmez.', 'bilgi');
   };
   const duzenTasi = (hedef: number | 'yeni', surIds?: number[]) => {
     const elSec = (surIds ?? secili).filter((id) => !taslakEl.has(id));
@@ -679,7 +673,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
         <div className="om-sahne">
           {duzen2 && (
             <div className="om-duzenserit" role="toolbar" aria-label="Masayı düzenle">
-              <span>Masayı düzenliyorsun{duzen2.secili.length ? ` · ${duzen2.secili.length} taş seçili` : ''}</span>
+              <span className="om-duzenserit-yazi"><b>Masayı düzenliyorsun</b>{duzen2.secili.length ? ` · ${duzen2.secili.length} taş seçili: bir pere ya da “+ Ayrı per”e dokun` : ' · taşlara dokunup seç'}</span>
               <button type="button" className="om-dugme" onClick={() => setDuzen2(null)}><X size={16} aria-hidden="true" /> Vazgeç</button>
               <button type="button" className="om-dugme om-dugme--birincil" disabled={taslakGecersiz.size > 0} onClick={duzenOnayla}><Check size={16} aria-hidden="true" /> Onayla</button>
             </div>

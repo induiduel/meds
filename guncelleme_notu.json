@@ -1,14 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 851,
- "baslik": "KMB videoları MP4 olarak indirilebilir",
+ "onem": 852,
+ "baslik": "Oyun masasına sohbet geldi",
  "maddeler": [
-  "KMB dersleri: Nazogastrik sonda ve Üretral kateter derslerinin tüm ders videosu ve basamak filmi MP4 olarak indirilebiliyor (ders sayfasındaki \"Tüm ders MP4\" ve \"Basamak filmi MP4\" düğmeleri). Videolar yalnız anlatımdan oluşur."
+  "Oyun masası: üst çubuktaki sohbet düğmesiyle masadakilere mesaj yazabilir, emoji ve çıkartma gönderebilirsin.",
+  "Taş oyunları: \"Masayı düzenliyorsun\" şeridi artık perlerin üstünü örtmüyor; düzenleme rahatça yapılabiliyor."
  ],
  "eklenen": [
-  "KMB tüm ders ve basamak filmi MP4 indirme (01, 02)"
+  "Oyun masası sohbeti (yazı, emoji, çıkartma)"
  ],
  "degisen": [],
- "duzeltilen": [],
+ "duzeltilen": [
+  "Masa düzenleme şeridinin perleri örtmesi (H640)"
+ ],
  "silinen": []
 }

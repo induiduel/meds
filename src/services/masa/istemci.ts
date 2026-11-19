@@ -260,6 +260,7 @@ class MasaIstemci {
   bitir() { this.gonder({ t: 'bitir' }); }
   botDevral(hedef: string) { this.gonder({ t: 'botDevral', hedef }); }
   tepki(e: string) { this.gonder({ t: 'tepki', e }); }
+  sohbet(ileti: { m: string } | { s: string }) { this.gonder({ t: 'sohbet', ...ileti }); }
   /** Masadan kalk (oyundaysa yerine bot oynar) */
   cik() { this.gonder({ t: 'cik' }); }
   adYaz(ad: string) { try { localStorage.setItem(AD_KEY, ad.trim().slice(0, 24)); } catch { /* yok */ } }

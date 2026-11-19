@@ -18,7 +18,7 @@ import { erisimJetonuDogrula } from '../kimlikDogrulama';
 import { bayrakAcik } from '../yonetim16/siteAyar';
 import { MOTORLAR } from './motorlar';
 import {
-  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR, GO_SURELER, unoModTanim, unoOyuncuUygun,
+  EL_SECENEK, OKEY_TEMALAR, OYUNCU_SINIR, OYUN_ADI, SOHBET_CIKARTMA, SOHBET_MAKS, TEPKILER, UNO_TEMALAR, VARSAYILAN_RENKLER, UNO_MODLAR, GO_SURELER, unoModTanim, unoOyuncuUygun,
   type ElOzet, type ElSonuc, type Istatistik, type IstemciMesaj, type OdaAsama, type OdaAyar, type OdaGorunum, type OdaOzet,
   type Olay, type OyunTur, type Rng, type SunucuMesaj, type Takim,
 } from './tipler';
@@ -309,6 +309,7 @@ class MasaSunucu {
         h.bot = true;
         return this.yayin(oda, [{ t: 'botDevraldi', o: h.id }]);
       }
+      case 'sohbet': return this.sohbet(b, oda, id, m);
       case 'tepki': {
         if (!(TEPKILER as readonly string[]).includes(m.e)) return;
         return this.yayin(oda, [{ t: 'tepki', o: id, e: m.e }], false);
@@ -347,6 +348,7 @@ class MasaSunucu {
     const kisi = this.izleyici.get(oda.kod)?.get(b.id);
     if (!kisi) return this.hata(b, 'Bu odada değilsin.', 'oda-yok');
     if (m.t === 'cik') return this.ayril(b);
+    if (m.t === 'sohbet') return this.sohbet(b, oda, b.id, m);
     if (m.t === 'tepki') return (TEPKILER as readonly string[]).includes(m.e) ? this.yayin(oda, [{ t: 'tepki', o: b.id, e: m.e }], false) : undefined;
     if (m.t === 'koltukIste') {
       const hedef = oda.oyuncular.find((k) => k.id === m.hedef);
@@ -570,6 +572,23 @@ class MasaSunucu {
       elSonuc: oda.elSonuc, skor: oda.skor, eller: oda.eller.slice(-30), surum: oda.surum,
       geriAl: oda.geri?.kim === ben ? oda.geri.durumlar.length : 0,
     };
+  }
+
+  /** Masa sohbeti: yazı ya da çıkartma; kayda geçmez, kişi başı hız sınırlı */
+  private sohbetSon = new Map<string, number[]>();
+  private sohbet(b: Bag, oda: Oda, o: string, m: { m?: unknown; s?: unknown }) {
+    const simdi = Date.now();
+    const son = (this.sohbetSon.get(b.id) || []).filter((t) => simdi - t < 10_000);
+    if (son.length >= 6) return this.hata(b, 'Çok hızlı yazıyorsun, biraz bekle.');
+    let olay: Olay;
+    if (typeof m.s === 'string' && (SOHBET_CIKARTMA as readonly string[]).includes(m.s)) olay = { t: 'sohbet', o, s: m.s };
+    else if (typeof m.m === 'string') {
+      const yazi = m.m.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, SOHBET_MAKS);
+      if (!yazi) return;
+      olay = { t: 'sohbet', o, m: yazi };
+    } else return;
+    son.push(simdi); this.sohbetSon.set(b.id, son);
+    return this.yayin(oda, [olay], false);
   }
 
   /** Herkese kendi görünümünü yollar. kalici=false: yalnız bağlantı/tepki gibi kayda değmeyen değişiklik */

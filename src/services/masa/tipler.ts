@@ -666,6 +666,8 @@ export type IstemciMesaj =
   | { t: 'bitir' }
   | { t: 'botDevral'; hedef: string }
   | { t: 'tepki'; e: string }
+  /** Masa sohbeti: yazı (m) ya da çıkartma (s, SOHBET_CIKARTMA'dan) */
+  | { t: 'sohbet'; m?: string; s?: string }
   | { t: 'koltukIste'; hedef: string }
   | { t: 'koltukVer'; kime: string; hedef?: string }
   | { t: 'koltukRed'; kime: string }
@@ -680,6 +682,9 @@ export type SunucuMesaj =
   | { t: 'hata'; mesaj: string; kod?: 'kimlik' | 'kimlik-bekle' | 'oda-yok' | 'dolu' | 'basladi' | 'hamle' | 'kapali' }
   | { t: 'pong'; z: number; s: number };
 
+/** Sohbet çıkartmaları (büyük gösterilen emoji) ve yazı sınırı */
+export const SOHBET_CIKARTMA = ['🎉', '🤝', '😤', '🥳', '😴', '🙏', '💪', '🤦', '👀', '🫡', '😈', '🍀'] as const;
+export const SOHBET_MAKS = 200;
 export const TEPKILER = ['👏', '😂', '😮', '😢', '🔥', '❤️', '😎', '🤔'] as const;
 export const OYUN_ADI: Record<OyunTur, string> = { yedili: 'Yedili Okey', takim: 'Takım Yedili', yuzbir: '101 Okey', uno: 'Uno', go: 'Go', cizgi: 'Çizgi Yarışı', xox: 'XOX', remi: 'Remi', kastet: 'Kastet', duz: 'Düz Okey', pisti: 'Pişti', domino: 'Taş Domino' };
 /** Takım Yedili kişi başı taş: 5–6 oyuncuda 4, 2–4 oyuncuda kurucunun seçtiği 7 ya da 14 */

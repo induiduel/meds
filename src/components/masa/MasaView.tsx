@@ -17,6 +17,7 @@ import { Bildirimler, HataSiniri, Yaprak, bildir, sadeAd } from './kabukOrtak';
 import MasaMerkez from './MasaMerkez';
 import MasaLobi from './MasaLobi';
 import MasaUstCubuk from './MasaUstCubuk';
+import { SohbetPanel } from './MasaSohbet';
 import { ElSonu, MacSonu } from './MasaSonuc';
 import MasaIstatistik from './MasaIstatistik';
 import type { KuralSekme } from './MasaKurallar';
@@ -279,6 +280,8 @@ function MasaOyun({ oda, baglanti, gecikme, ucanlar, kurallarAc, istatAc, merkez
           )}
           {macAcik && oda.asama === 'bitti' && <MacSonu key="mac" oda={oda} istatAc={istatAc} />}
         </AnimatePresence>
+
+        <SohbetPanel oda={oda} />
 
         <div className="mk-ucanlar" aria-hidden="true">
           <AnimatePresence>

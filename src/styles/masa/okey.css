@@ -431,9 +431,14 @@
 /* Düzenlemede boşalan per: yeri korunur, taş bırakılabilir */
 .om-per--bos .om-per-taslar { outline: 2px dashed rgba(255, 255, 255, 0.35); outline-offset: -2px; }
 .om-per--gecersiz .om-per-taslar { box-shadow: 0 0 0 2px #e5484d, 0 0 12px rgba(229, 72, 77, 0.5); border-radius: 6px; }
-.om-duzenserit { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); z-index: 30; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center;
-  max-width: calc(100% - 16px); padding: 6px 10px; border-radius: 12px; background: rgba(15, 20, 25, 0.86); color: #fff; font-size: 13px; }
-.om-duzenserit .om-dugme { min-height: 34px; }
+.om-sahne:has(> .om-duzenserit) { display: flex; flex-direction: column; }
+.om-sahne:has(> .om-duzenserit) > .om-masa { flex: 1; min-height: 0; height: auto; }
+/* Düzenleme şeridi masanın üstünde akışta durur: perleri örtmez (eski hâli masanın altına yüzen kutuydu) */
+.om-duzenserit { position: relative; z-index: 30; flex: none; display: flex; gap: 6px; align-items: center; margin: 0 auto 6px; max-width: 100%;
+  padding: 4px 6px 4px 12px; border-radius: 10px; background: rgba(15, 20, 25, 0.78); color: #fff; font-size: 12.5px; }
+.om-duzenserit-yazi { flex: 1 1 auto; min-width: 0; line-height: 1.25; }
+.om-duzenserit .om-dugme { min-height: 32px; flex: none; }
+.om-kok--dar .om-duzenserit .om-dugme { flex-direction: row; height: 32px; min-width: 0; font-size: 12px; }
 
 /* Dar ekran eylem çubuğu (H525): 3–4 satıra yığılmasın; tek satır, simge üstte kısa yazı, yatay kaydırılır, durum yazısı kesilmez */
 .om-kok--dar .om-eylem-dugmeler { flex-wrap: nowrap; min-height: 0; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; padding: 2px 2px 4px; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }

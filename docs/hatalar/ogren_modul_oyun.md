@@ -271,3 +271,9 @@
 - **Kalıcı çözüm:** `Array.isArray(oyuncular)` önce sınanır, `cezalar` alanı `Array.isArray` ile doğrulanır; `MasaSonuc` (`satirlar`, `s.cezalar`), `okey/Rakipler` ve `okey/OkeyMasa` aynı korumaya alındı.
 - **Önleme:** `?.` **alan** korur, **dizi metotlarını** korumaz: `X.filter(...)` öncesi `Array.isArray(X)` sınanır. Sunucudan gelen oyun durumu eski biçimli olabileceği için istemci her dizi alanını varsaymak yerine doğrular.
 
+
+### H640 — Taş oyunlarında "Masayı düzenliyorsun" yüzen ögeleri masayı örtüyordu (2026-11-20)
+- **Belirti:** Masa düzenleme kipinde ekranın ortasında/altında yüzen kutular perleri kapatıyor, düzenleme yapılamıyordu.
+- **Kök neden:** İki katman üst üste: (1) `.om-duzenserit` `position:absolute; bottom:8px` ile masanın (om-masa, %100 yükseklik) alt perlerinin ÜSTÜNE biniyordu; dar ekranda düğmeler sütun kipine geçip şeridi büyütüyordu. (2) `duzenleBasla`/`masaTasDokun` 2–3 satırlık uzun 'bilgi' baloncuğunu (`.om-bildirim`, ıstakanın üstünde mutlak) 4,6 sn boyunca masanın üstüne basıyordu.
+- **Kalıcı çözüm:** Şerit akışa alındı (sahne `:has(.om-duzenserit)` iken sütun flex; masa kalan yüksekliği alır), yönerge kısa metin olarak şeridin içinde; uzun düzenleme baloncukları kaldırıldı.
+- **Önleme:** Oyun sırasında etkileşim gerektiren alanın (masa, ıstaka) üstüne mutlak konumlu kalıcı/uzun öge konmaz; kip göstergesi akışta yer kaplar, yönerge tek satır.
