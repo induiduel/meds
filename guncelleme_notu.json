@@ -1,17 +1,19 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 852,
- "baslik": "Oyun masasına sohbet geldi",
+ "onem": 853,
+ "baslik": "Taş oyunlarında akıllı dizme",
  "maddeler": [
-  "Oyun masası: üst çubuktaki sohbet düğmesiyle masadakilere mesaj yazabilir, emoji ve çıkartma gönderebilirsin.",
-  "Taş oyunları: \"Masayı düzenliyorsun\" şeridi artık perlerin üstünü örtmüyor; düzenleme rahatça yapılabiliyor."
+  "Istaka: \"Diz\" artık 5 biçimde dizer — Akıllı (hazır perler, yarım seriler, yarım gruplar, çiftler), Renge göre, Sayıya göre, Çiftler önde, Büyük sayılar önde.",
+  "Masayı diz: perler renge, sayıya, türe, uzunluğa ya da oyuncuya göre gösterilebilir.",
+  "Istaka daha geniş: kümeler arasında boşluk bırakmak için daha çok yer var."
  ],
  "eklenen": [
-  "Oyun masası sohbeti (yazı, emoji, çıkartma)"
+  "Istaka akıllı dizme ve yeni dizilimler",
+  "Masa için yeni dizme seçenekleri"
  ],
- "degisen": [],
- "duzeltilen": [
-  "Masa düzenleme şeridinin perleri örtmesi (H640)"
+ "degisen": [
+  "Istaka genişliği"
  ],
+ "duzeltilen": [],
  "silinen": []
 }
