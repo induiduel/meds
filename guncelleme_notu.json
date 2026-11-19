@@ -1,19 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 853,
- "baslik": "Taş oyunlarında akıllı dizme",
+ "onem": 854,
+ "baslik": "Masayı diz: İşlenebilir önde",
  "maddeler": [
-  "Istaka: \"Diz\" artık 5 biçimde dizer — Akıllı (hazır perler, yarım seriler, yarım gruplar, çiftler), Renge göre, Sayıya göre, Çiftler önde, Büyük sayılar önde.",
-  "Masayı diz: perler renge, sayıya, türe, uzunluğa ya da oyuncuya göre gösterilebilir.",
-  "Istaka daha geniş: kümeler arasında boşluk bırakmak için daha çok yer var."
+  "Masayı diz: yeni \"İşlenebilir önde\" dizimi, elindeki taşları işleyebileceğin perleri öne alır (en çok taş alan başta)."
  ],
  "eklenen": [
-  "Istaka akıllı dizme ve yeni dizilimler",
-  "Masa için yeni dizme seçenekleri"
+  "Masa için \"İşlenebilir önde\" dizimi"
  ],
- "degisen": [
-  "Istaka genişliği"
- ],
+ "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }

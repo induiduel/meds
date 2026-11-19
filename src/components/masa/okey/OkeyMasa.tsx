@@ -22,8 +22,8 @@ import '../../../styles/masa/okey.css';
 import '../../../styles/masa/okey-acik.css';
 
 const BOS_KUME: ReadonlySet<number> = new Set();
-type MasaKip = 'renk' | 'sayi' | 'tur' | 'boy' | 'sahip';
-const MASA_KIP_AD: Record<MasaKip, { kisa: string; uzun: string }> = { renk: { kisa: 'Renge göre', uzun: 'renge göre dizildi (seriler önde)' }, sayi: { kisa: 'Sayıya göre', uzun: 'sayıya göre dizildi' }, tur: { kisa: 'Türe göre', uzun: 'türe göre dizildi (gruplar önde)' }, boy: { kisa: 'Uzunluğa göre', uzun: 'uzun perler önde dizildi' }, sahip: { kisa: 'Oyuncuya göre', uzun: 'oyuncuya göre dizildi (seninkiler önde)' } };
+type MasaKip = 'islek' | 'renk' | 'sayi' | 'tur' | 'boy' | 'sahip';
+const MASA_KIP_AD: Record<MasaKip, { kisa: string; uzun: string }> = { islek: { kisa: 'İşlenebilir önde', uzun: 'dizildi: elindeki taşları işleyebileceğin perler önde (en çok taş alan başta)' }, renk: { kisa: 'Renge göre', uzun: 'renge göre dizildi (seriler önde)' }, sayi: { kisa: 'Sayıya göre', uzun: 'sayıya göre dizildi' }, tur: { kisa: 'Türe göre', uzun: 'türe göre dizildi (gruplar önde)' }, boy: { kisa: 'Uzunluğa göre', uzun: 'uzun perler önde dizildi' }, sahip: { kisa: 'Oyuncuya göre', uzun: 'oyuncuya göre dizildi (seninkiler önde)' } };
 type Kip = 'seri' | 'grup' | 'per' | 'akilli' | 'cift' | 'yuksek';
 const KIP_AD: Record<Kip, string> = { akilli: 'Akıllı: perler, yarım seriler, yarım gruplar, çiftler', per: 'Perlere göre', seri: 'Renge göre', grup: 'Sayıya göre', cift: 'Çiftler önde', yuksek: 'Büyük sayılar önde' };
 
@@ -474,7 +474,18 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
   /* ---------------- masa: diz (görünüm) ve düzenle (hamle) ---------------- */
   const zorlu = !asistan;
   /** 'renk': önce seriler (renk, sonra sayı), ardından gruplar · 'sayi': hepsi en küçük sayısına göre */
-  const perSirala = (l: Per[], kip: MasaKip = 'renk') => l.slice().sort((a, b) => kip === 'sahip'
+  const [masaDizili, setMasaDizili] = useState<false | MasaKip>(false);
+  /** Her per için elden işlenebilecek taş sayısı ('İşlenebilir önde' dizimi) */
+  const islekSay = useMemo(() => {
+    const m = new Map<number, number>();
+    if (masaDizili !== 'islek') return m;
+    for (const t of g.elim) for (const pid of new Set(yerler(t).map((y) => y.per))) m.set(pid, (m.get(pid) || 0) + 1);
+    return m;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [g.elim, g.perler, yerler, masaDizili]);
+  const perSirala = (l: Per[], kip: MasaKip = 'renk') => l.slice().sort((a, b) => kip === 'islek'
+    ? (islekSay.get(b.id) || 0) - (islekSay.get(a.id) || 0) || (a.tur === b.tur ? 0 : a.tur === 'seri' ? -1 : 1) || a.taslar[0].r - b.taslar[0].r || a.taslar[0].s - b.taslar[0].s
+    : kip === 'sahip'
     ? (a.sahip === b.sahip ? 0 : a.sahip === ben ? -1 : b.sahip === ben ? 1 : String(a.sahip).localeCompare(String(b.sahip))) || (a.tur === b.tur ? 0 : a.tur === 'seri' ? -1 : 1) || a.taslar[0].r - b.taslar[0].r || a.taslar[0].s - b.taslar[0].s
     : kip === 'boy' ? b.taslar.length - a.taslar.length || a.taslar[0].r - b.taslar[0].r || a.taslar[0].s - b.taslar[0].s
     : kip === 'tur' ? (a.tur === b.tur ? 0 : a.tur === 'grup' ? -1 : b.tur === 'grup' ? 1 : a.tur === 'seri' ? -1 : 1) || a.taslar[0].s - b.taslar[0].s || a.taslar[0].r - b.taslar[0].r
@@ -483,9 +494,8 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     : (a.tur === b.tur ? 0 : a.tur === 'seri' ? -1 : 1)
       || (a.tur === 'seri' ? a.taslar[0].r - b.taslar[0].r || a.taslar[0].s - b.taslar[0].s : a.taslar[0].s - b.taslar[0].s)));
   // "Masayı diz" açılınca masa hep dizili görünür (iki modda da); zorlu modda el bitince de dizilir
-  const [masaDizili, setMasaDizili] = useState<false | MasaKip>(false);
   const elBitti = g.bitti || oda.asama !== 'oyun';
-  const gorunenPerler = useMemo(() => ((masaDizili || (zorlu && elBitti)) ? perSirala(g.perler, masaDizili || 'renk') : g.perler), [g.perler, zorlu, elBitti, masaDizili]);
+  const gorunenPerler = useMemo(() => ((masaDizili || (zorlu && elBitti)) ? perSirala(g.perler, masaDizili || 'renk') : g.perler), [g.perler, zorlu, elBitti, masaDizili, islekSay]);
   const [duzen2, setDuzen2] = useState<{ gruplar: number[][]; secili: number[]; /** Perlerin düzenleme başındaki piksel genişlikleri */ en: number[] } | null>(null);
   /** Taslak başlangıcı: perler ekranda durdukları sırayla alınır; boşalan per yer tutucu olarak kalır (hiçbir per yer değiştirmez) */
   const taslakBasla = (secili: number[]) => { const l = gorunenPerler.filter((p) => p.tur !== 'cift'); setDuzen2({ gruplar: l.map((p) => p.taslar.map((t) => t.id)), secili, en: l.map((p) => (kokRef.current?.querySelector(`.om-per[data-per="${p.id}"] .om-per-taslar`) as HTMLElement | null)?.offsetWidth ?? 0) }); };
@@ -604,7 +614,7 @@ function Masa({ oda, g }: { oda: OdaGorunum; g: OkeyGorunum }) {
     );
     eylemler.push(
       { ad: 'sirala', etiket: 'Sırala', ikon: <ArrowDownUp {...ik} />, etkin: !kilit && g.elim.length > 1, calis: sirala },
-      { ad: 'masadiz', etiket: masaDizili ? MASA_KIP_AD[masaDizili].kisa : 'Masayı diz', ikon: <LayoutGrid {...ik} />, etkin: g.perler.length > 1, ipucu: 'Masadaki perleri renge, sayıya, oyuncuya, uzunluğa, türe ya da açılış sırasına göre göster', calis: () => { const sira: (false | MasaKip)[] = [false, 'renk', 'sayi', 'tur', 'boy', 'sahip']; const y = sira[(sira.indexOf(masaDizili) + 1) % sira.length]; setMasaDizili(y); bildir(y ? `Masa ${MASA_KIP_AD[y].uzun}` : 'Masa açılış sırasında', 'bilgi'); } },
+      { ad: 'masadiz', etiket: masaDizili ? MASA_KIP_AD[masaDizili].kisa : 'Masayı diz', ikon: <LayoutGrid {...ik} />, etkin: g.perler.length > 1, ipucu: 'Masadaki perleri işlenebilirliğe, renge, sayıya, oyuncuya, uzunluğa, türe ya da açılış sırasına göre göster', calis: () => { const sira: (false | MasaKip)[] = [false, 'islek', 'renk', 'sayi', 'tur', 'boy', 'sahip']; const y = sira[(sira.indexOf(masaDizili) + 1) % sira.length]; setMasaDizili(y); bildir(y ? `Masa ${MASA_KIP_AD[y].uzun}` : 'Masa açılış sırasında', 'bilgi'); } },
     );
     eylemler.push({ ad: 'duzenle', etiket: 'Masayı düzenle', ikon: <Pencil {...ik} />, etkin: siraBende && hak && g.perler.length > 0 && !duzen2, calis: duzenleBasla });
     if (asistan) eylemler.push(
