@@ -1,5 +1,5 @@
 import React, { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, Eraser, Headphones, RotateCcw, Search, X } from 'lucide-react';
+import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, ListMusic, Eraser, Headphones, RotateCcw, Search, X } from 'lucide-react';
 import { TemizleDiyalog } from '../canliDers/CdIlerlemeTemizle';
 import { cdCevrimdisiKayitlari, CD_CEVRIMDISI_DEGISTI } from '../canliDers/canliDersCevrimdisiKayit';
 import { linkClick, navigateTo, pathFor } from '../../router';
@@ -11,6 +11,9 @@ import { bransYolu, dersAdi, dersSirala, dersSurumleri, dersYolu, hocaYaz, kurul
 import SurumSecV15 from './SurumSecV15';
 import { cdDersSesSurumu } from '../canliDers/canliDersStore';
 import { Halka } from './Halka';
+import { ListeEkleDugme, Listem, TopluEkleDugme } from '../canliDers/CanliDersListem';
+import { useCdListe } from '../canliDers/canliDersListe';
+import '../../styles/canli-ders.css';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/ogren.css';
 
@@ -20,7 +23,7 @@ import '../../styles/v15/ogren.css';
  * Liste kendi alanında kayar; sayfa sabit. "2025-26 arşivi" çipi (?donem=2025-2026) geçen yılın kayıtlarını listeler;
  * arşiv dersleri ders ayrıntısında değil doğrudan oynatıcıda açılır (ayrıntı sayfası yalnız güncel dönemi bilir).
  */
-type Durum = 'tum' | 'yeni' | 'yarim' | 'bitti' | 'indirilen';
+type Durum = 'tum' | 'yeni' | 'yarim' | 'bitti' | 'indirilen' | 'liste';
 /** "Yeni" = henüz hiç dinlemediğin (listede eklenme tarihi yok; uydurma tarih kullanılmaz) */
 const DURUM: [Durum, string][] = [['tum', 'Tümü'], ['yeni', 'Yeni'], ['yarim', 'Yarım kalan'], ['bitti', 'Bitti'], ['indirilen', 'İndirilen']];
 type Sira = 'sira' | 'son' | 'kisa';
@@ -44,7 +47,13 @@ export default function SesliListeV15() {
   const [ara, setAra] = useState('');
   const [araAcik, setAraAcik] = useState(false);
   const q = fold(useDeferredValue(ara).trim());
-  const [durum, setDurum] = useState<Durum>('tum');
+  const [durum, setDurum] = useState<Durum>(() => (location.hash === '#listem' ? 'liste' : 'tum'));
+  const listeN = useCdListe((s) => s.keys.length);
+  useEffect(() => {
+    const f = () => { if (location.hash === '#listem') setDurum('liste'); };
+    window.addEventListener('hashchange', f);
+    return () => window.removeEventListener('hashchange', f);
+  }, []);
   const [sira, setSira] = useState<Sira>('sira');
   const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
   const [temizleAcik, setTemizleAcik] = useState(false);
@@ -95,6 +104,9 @@ export default function SesliListeV15() {
               <button type="button" role="radio" aria-checked={!arsiv} aria-current={!arsiv ? 'page' : undefined} onClick={() => setArsiv(false)} title="Bu yılın (2026-2027) sesli dersleri">Bu yıl</button>
               <button type="button" role="radio" aria-checked={arsiv} aria-current={arsiv ? 'page' : undefined} onClick={() => setArsiv(true)} title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />Arşiv</button>
             </div>
+            <button type="button" className={`o15-cip sl15-liste-cip${durum === 'liste' ? ' is-on' : ''}`} aria-pressed={durum === 'liste'} onClick={() => setDurum('liste')} title="Oynatma listelerim">
+              <ListMusic aria-hidden />Listem{listeN ? ` (${listeN})` : ''}
+            </button>
             {DURUM.map(([id, t]) => (
               <button key={id} type="button" className={`o15-cip${durum === id ? ' is-on' : ''}`} aria-pressed={durum === id} onClick={() => setDurum(id)}>{t}</button>
             ))}
@@ -118,20 +130,25 @@ export default function SesliListeV15() {
       <div className="sl15-alan">
         {dersler === null ? (
           <span className="v15-skel b15-skel" aria-hidden />
+        ) : durum === 'liste' ? (
+          <div className="sl15-listem"><Listem dersler={dersler} onTumu={() => setDurum('tum')} /></div>
         ) : gruplar.length ? (
           gruplar.map((g) => (
             <section key={g.ad} className="sl15-grup" aria-label={g.kisa}>
+              <div className="sl15-bas-sat">
               <a className="sl15-bas" href={bransYolu(kurul, g.ad)} onClick={linkClick(() => navigateTo(bransYolu(kurul, g.ad)))} {...(arsiv ? { onClick: (e: React.MouseEvent) => e.preventDefault(), 'aria-disabled': true, tabIndex: -1 } : {})}>
                 <b>{g.kisa}</b>
                 <span className="v15-cap">{g.biten}/{g.dersler.length} bitti</span>
                 <span className="v15-bar sl15-bar" aria-hidden><span style={{ width: `${g.dersler.length ? (g.biten / g.dersler.length) * 100 : 0}%` }} /></span>
                 <ChevronRight className="v15-chev" aria-hidden />
               </a>
+              <TopluEkleDugme keys={g.liste.map((d) => d.key)} ad={g.kisa} />
+              </div>
               <ul className="b15-list v15-card" role="list">
                 {g.liste.map((d) => {
                   const i = ilerleme(d);
                   return (
-                    <li key={d.key}>
+                    <li key={d.key} className="sl15-li">
                       <a className="b15-row" href={satirYolu(d.key)} onClick={linkClick(() => navigateTo(satirYolu(d.key)))}>
                         <span className={`v15-tile ${i.tekrar ? 'is-tekrar' : i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.tekrar ? <RotateCcw aria-hidden /> : i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                         <span className="b15-row-t">
@@ -140,6 +157,7 @@ export default function SesliListeV15() {
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
+                      <ListeEkleDugme dersKey={d.key} baslik={d.baslik} />
                       <SurumSecV15 surumler={dersSurumleri(d.key, liste0)}
                         aktif={dersSurumleri(d.key, liste0).find((s) => s.vid && cdDersSesSurumu(s.key) === s.vid) || dersSurumleri(d.key, liste0).find((s) => s.yeni)} />
                     </li>

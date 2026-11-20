@@ -1,20 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 858,
- "baslik": "Sesli derste birden çok oynatma listesi",
+ "onem": 859,
+ "baslik": "Sesli dersler listesinde oynatma listesi",
  "maddeler": [
-  "Sesli ders: istediğin kadar adlandırılmış oynatma listesi kur; Listem sekmesinden liste seç, yeniden adlandır, sil.",
-  "Toplu ekle: her branş başlığında ve Blok özetlerde \"Tümünü ekle\" ile bütün dersleri tek dokunuşla seçili listeye ekle.",
-  "Sesli ders ekranında \"Listelerim\" düğmesiyle listelerine tek dokunuşla geç; tekrar (ders/liste, 1×–∞) aynen çalışır."
+  "Sesli dersler ekranında yeni \"Listem\" çipi: listelerini burada seç, oynat, sırala, tekrar ayarla.",
+  "Her dersin yanında \"Listeme ekle\", her branş başlığında \"Tümünü ekle\" düğmesi."
  ],
  "eklenen": [
-  "Çoklu oynatma listesi",
-  "Branş/blok toplu ekleme",
-  "Ders ekranında Listelerim düğmesi"
+  "Sesli dersler ekranında Listem çipi + satır/branş ekleme düğmeleri"
  ],
- "degisen": [
-  "Tekrar tercihi artık hesaplar arası eşitlenir"
- ],
+ "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }

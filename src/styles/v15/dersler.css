@@ -410,3 +410,12 @@ a.k15-kart:hover { border-color: var(--color-accent); }
    ama sağında sıralama/arama düğmesi varken bu taşma düğmenin ALTINA giriyordu: telefonda "Arşiv" hapının üstüne sıralama
    simgesi biniyor, tablette son hap yarım kesiliyordu. Sağında kardeş varken sağ taşma kapatılır (solma maskesi kalır). */
 :root[data-v15='on'] .o15-ust > .o15-cipler.v15-hscroll:not(:last-child) { margin-right: 0; }
+/* Oynatma listesi (2026-11-20) */
+.sl15-bas-sat { display: flex; align-items: center; gap: 8px; }
+.sl15-bas-sat .sl15-bas { flex: 1; min-width: 0; }
+.sl15 .b15-list li.sl15-li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+.sl15 .b15-list li.sl15-li > :not(.b15-row):not(.cd-btn) { grid-column: 1 / -1; }
+.sl15 .b15-list li.sl15-li > .cd-btn { margin-right: 10px; }
+.sl15-liste-cip { display: inline-flex; align-items: center; gap: 6px; }
+.sl15-liste-cip svg { width: 16px; height: 16px; }
+.sl15-listem { display: flex; flex-direction: column; gap: 10px; }
