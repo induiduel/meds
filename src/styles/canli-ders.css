@@ -1382,3 +1382,30 @@ a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none
   .cd-lm-kart.v15-card { border-radius: var(--v15-r-lg, 16px); }
   .cd-lm-oynat.v15-btn { height: 42px; padding: 0 14px; }
 }
+/* Oynatıcıda liste seçici (2026-11-20) */
+.cd-ldsec { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; min-width: 0; }
+.cd-ldsec select { min-width: 0; max-width: 170px; height: 36px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: var(--v15-r-md, 12px); background: var(--color-field); color: var(--color-ink); font: 600 13px/1 var(--v15-font, inherit); text-overflow: ellipsis; }
+.cd-ldsec-on { display: inline-flex; align-items: center; gap: 4px; font: 600 12.5px/1 var(--font-mono, ui-monospace, monospace); color: var(--color-accent); }
+.cd-ldsec-on svg, .cd-ldsec .cd-btn svg { width: 15px; height: 15px; }
+.cd-ldm { width: min(280px, calc(100vw - 24px)); }
+.cd-ldm [role='radiogroup'] { max-height: 50vh; overflow-y: auto; }
+.cd-ldm-alt { display: flex; gap: 6px; justify-content: space-between; padding: 8px 6px 4px; border-top: 1px solid var(--color-line-soft, var(--color-line)); margin-top: 4px; }
+.cd-ldm-alt .cd-btn { flex: 1; justify-content: center; }
+/* Listem satırı indirme durumu (2026-11-20) */
+.cd-lm-oge { grid-template-columns: 36px 30px minmax(0, 1fr) 40px 40px; }
+.cd-ind { position: relative; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.cd-ind svg { width: 20px; height: 20px; }
+.cd-ind.is-cihazda { color: var(--color-ok, #2a9d5c); cursor: default; animation: cd-ind-pop .35s ease-out; }
+.cd-ind.is-yok:hover:not(:disabled) { color: var(--color-accent); background: var(--color-field); }
+.cd-ind.is-yok:disabled { opacity: .35; cursor: default; }
+.cd-ind.is-hata { color: var(--color-danger, #d33); }
+.cd-ind.is-iniyor svg { width: 26px; height: 26px; transform: rotate(-90deg); }
+.cd-ind.is-iniyor circle { fill: none; stroke-width: 2.6; }
+.cd-ind-iz { stroke: var(--color-line); }
+.cd-ind-dolu { stroke: var(--color-accent); stroke-linecap: round; stroke-dasharray: 56.55; transition: stroke-dashoffset .3s; }
+.cd-ind.is-iniyor small { position: absolute; font: 700 8.5px/1 var(--font-mono, ui-monospace, monospace); color: var(--color-accent); }
+.cd-ind.is-iniyor::after { content: ''; position: absolute; inset: 2px; border-radius: 50%; border: 2px solid transparent; border-top-color: color-mix(in srgb, var(--color-accent) 35%, transparent); animation: cd-ind-don 1.1s linear infinite; }
+@keyframes cd-ind-don { to { transform: rotate(360deg); } }
+@keyframes cd-ind-pop { 0% { transform: scale(.5); opacity: 0; } 70% { transform: scale(1.15); } 100% { transform: scale(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .cd-ind.is-iniyor::after, .cd-ind.is-cihazda { animation: none; } }
+@media (max-width: 600px) { .cd-lm-oge { grid-template-columns: 36px 22px minmax(0, 1fr) 38px 42px; } }

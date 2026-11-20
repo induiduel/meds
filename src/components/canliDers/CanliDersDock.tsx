@@ -10,7 +10,7 @@ import {
   CD_HIZLAR, cdDuraklat, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
   fmtSure, useCd,
 } from './canliDersStore';
-import { ListeDockDenetim, TekrarSecici } from './CanliDersListem';
+import { ListeDockDenetim, ListeDockMenu, ListeDockSecici, TekrarSecici } from './CanliDersListem';
 import { CdDaha } from './CanliDersDaha';
 import { cdMotivasyonKur } from './canliDersMotivasyon';
 import { cdTvMi, cdTvTus, type TvEylem } from './CanliDersTv';
@@ -556,6 +556,7 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
             </div>
           </div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Ses</b></span><SesSecici /></div>
+          <div className="cd15-sat"><span className="cd15-sat-t"><b>Oynatma listesi</b><small>Seç ve sırayla çal</small></span><ListeDockSecici /></div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Tekrar</b><small>Ders bitince ne olsun</small></span><TekrarSecici /></div>
           <label className="cd15-sat"><span className="cd15-sat-t"><b>Bölüm sonunda dur</b><small>Her bölüm bitince ses durur, sorar</small></span><BolumDurAnahtar /></label>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>MP3 indir</b></span><IndirBag /></div>
@@ -656,6 +657,7 @@ function TamOynatici({ onKucult }: { onKucult: () => void }) {
           <HizSecici />
           <CdDaha etiket="Oynatıcı seçenekleri (ses, tekrar, MP3)" yukari className="cd-dock-daha">
             <div className="cd-daha-satir"><span>Ses</span><SesSecici /></div>
+            <div className="cd-daha-satir"><span>Liste</span><ListeDockSecici /></div>
             <div className="cd-daha-satir"><span>Tekrar</span><TekrarSecici /></div>
             <div className="cd-daha-satir"><span>MP3 indir</span><IndirBag /></div>
           </CdDaha>
@@ -685,6 +687,7 @@ function MiniOynatici() {
       </button>
       <OynatDugme />
       <ListeDockDenetim mini />
+      <ListeDockMenu />
       <button type="button" className="cd-ib cd-mini-hiz" onClick={cdHizDongu} aria-label={`Oynatma hızı ${hizYaz(rate)} (değiştir)`} title="Hız">
         {hizYaz(rate)}
       </button>

@@ -4,13 +4,14 @@
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  BarChart3, CalendarDays, Check, CloudOff, Download, GripVertical, Headphones, ListChecks, ListCheck, Pencil, Plus, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
+  BarChart3, CalendarDays, Check, CloudOff, CircleCheck, CloudDownload, Download, GripVertical, Headphones, ListChecks, ListCheck, Pencil, Plus, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
 } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { cdTercihVaryant, cdToggle, fmtSure, useCd, type CdListeDers } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import { CD_CEVRIMDISI_DEGISTI, cdCevrimdisiKayitlari } from './canliDersCevrimdisiKayit';
 import { useCevrimici } from './CanliDersCevrimdisi';
+import { cdCevrimdisiIndir, cdCevrimdisiIptal, useCdCevrimdisi } from './canliDersCevrimdisi';
 import { denemeGruplari, denemeKod, denemeKur, denemeSonuc, type DenemeGrup } from './listeDeneme';
 import { bransTanim } from '../spots/brans';
 import { cozucuDizinYukle, useIlerleme } from '../spots/cozucu/cozucuVeri';
@@ -59,6 +60,71 @@ export function ListelerimDugme() {
     <button type="button" className="cd-btn" onClick={() => navigateTo(`${pathFor('canli_ders')}#listem`)} title="Oynatma listelerimi aç">
       <ListMusic aria-hidden /> <span>Listelerim{l ? ` · ${l.ad} (${l.keys.length})` : ''}</span>
     </button>
+  );
+}
+
+/** Oynatıcıda liste seçici: liste seç + oynat (çalan listeyse "Çalıyor") */
+export function ListeDockSecici() {
+  const listeler = useCdListe((s) => s.listeler);
+  const seciliId = useCdListe((s) => s.seciliId);
+  const sira = useCdListeSira();
+  const l = listeler.find((x) => x.id === seciliId);
+  return (
+    <span className="cd-ldsec">
+      <select value={seciliId} onChange={(e) => cdListeSec(e.target.value)} aria-label="Oynatma listesi">
+        {listeler.map((x) => <option key={x.id} value={x.id}>{x.ad} ({x.keys.length})</option>)}
+      </select>
+      {sira >= 0 ? (
+        <span className="cd-ldsec-on"><ListMusic aria-hidden />{sira + 1}/{l?.keys.length}</span>
+      ) : (
+        <button type="button" className="cd-btn is-ince" disabled={!l?.keys.length} onClick={() => cdListeOynat()} title="Bu listeyi baştan oynat">
+          <Play aria-hidden /><span>Oynat</span>
+        </button>
+      )}
+    </span>
+  );
+}
+
+/** Küçük oynatıcıda liste düğmesi + açılır seçici */
+export function ListeDockMenu() {
+  const [acik, setAcik] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const listeler = useCdListe((s) => s.listeler);
+  const seciliId = useCdListe((s) => s.seciliId);
+  const sira = useCdListeSira();
+  useEffect(() => {
+    if (!acik) return;
+    const dis = (e: PointerEvent) => { if (!ref.current?.contains(e.target as Node)) setAcik(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') setAcik(false); };
+    document.addEventListener('pointerdown', dis);
+    document.addEventListener('keydown', esc);
+    return () => { document.removeEventListener('pointerdown', dis); document.removeEventListener('keydown', esc); };
+  }, [acik]);
+  return (
+    <div className="cd-menu-kap" ref={ref}>
+      <button type="button" className={`cd-ib${sira >= 0 ? ' is-on' : ''}`} aria-haspopup="dialog" aria-expanded={acik}
+        onClick={() => setAcik((x) => !x)} aria-label="Oynatma listesi seç" title="Oynatma listesi">
+        <ListMusic aria-hidden />
+      </button>
+      {acik && (
+        <div className="cd-tk-menu cd-ldm" role="dialog" aria-label="Oynatma listeleri">
+          <div role="radiogroup" aria-label="Liste">
+            {listeler.map((l) => (
+              <button key={l.id} type="button" role="radio" aria-checked={l.id === seciliId} className="cd-tk-mod" onClick={() => cdListeSec(l.id)}>
+                <span className="cd-tk-nokta" aria-hidden />
+                <span><b>{l.ad}</b><small>{l.keys.length} ders{l.id === seciliId && sira >= 0 ? ` · çalıyor ${sira + 1}/${l.keys.length}` : ''}</small></span>
+              </button>
+            ))}
+          </div>
+          <div className="cd-ldm-alt">
+            <button type="button" className="cd-btn is-ince" disabled={!listeler.find((l) => l.id === seciliId)?.keys.length}
+              onClick={() => { cdListeOynat(); setAcik(false); }}><Play aria-hidden /><span>Baştan oynat</span></button>
+            <button type="button" className="cd-btn is-ince" onClick={() => { setAcik(false); navigateTo(`${pathFor('canli_ders')}#listem`); }}>
+              <ListMusic aria-hidden /><span>Listelerim</span></button>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -305,7 +371,7 @@ function ListeIndir({ keys }: { keys: string[] }) {
     let hata = 0;
     for (let i = 0; i < liste.length; i++) {
       setIs({ i, n: liste.length, hata });
-      try { await (await import('./canliDersCevrimdisi')).cdCevrimdisiIndir(liste[i]); } catch { hata++; }
+      try { await cdCevrimdisiIndir(liste[i]); } catch { hata++; }
     }
     setIs(null);
     if (hata) window.alert(`${hata} ders indirilemedi; yeniden dene.`);
@@ -316,6 +382,30 @@ function ListeIndir({ keys }: { keys: string[] }) {
     <button type="button" className="cd-btn is-ince cd-lm-indir" onClick={indir} disabled={!online || typeof caches === 'undefined'}
       title={online ? `${eksik.length} dersi internetsiz dinlemek için indir` : 'İndirmek için internet gerekir'}>
       <Download aria-hidden /><span>İndir ({eksik.length})</span>
+    </button>
+  );
+}
+
+/** Satırda indirme durumu: cihazda (yeşil onay) · iniyor (dönen yüzde halkası, dokun → iptal) · yok (dokun → indir) */
+function IndirDurum({ dersKey, baslik }: { dersKey: string; baslik: string }) {
+  const { kayit, is } = useCdCevrimdisi(dersKey);
+  const online = useCevrimici();
+  if (is && !is.hata) {
+    const o = Math.max(0.04, Math.min(1, is.oran || 0));
+    return (
+      <button type="button" className="cd-ind is-iniyor" onClick={() => cdCevrimdisiIptal(dersKey)}
+        aria-label={`İniyor %${Math.round(o * 100)}: ${baslik} (iptal için dokun)`} title={`İniyor %${Math.round(o * 100)} · iptal için dokun`}>
+        <svg viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="12" r="9" className="cd-ind-iz" /><circle cx="12" cy="12" r="9" className="cd-ind-dolu" style={{ strokeDashoffset: 56.55 * (1 - o) }} /></svg>
+        <small>{Math.round(o * 100)}</small>
+      </button>
+    );
+  }
+  if (kayit) return <span className="cd-ind is-cihazda" role="img" aria-label={`Cihazda: ${baslik}`} title="Cihazda · internetsiz çalar"><CircleCheck aria-hidden /></span>;
+  return (
+    <button type="button" className={`cd-ind is-yok${is?.hata ? ' is-hata' : ''}`} disabled={!online || typeof caches === 'undefined'}
+      onClick={() => { void cdCevrimdisiIndir(dersKey).catch(() => {}); }}
+      aria-label={`${is?.hata ? 'İndirilemedi, yeniden dene' : 'İndir'}: ${baslik}`} title={is?.hata ? `İndirilemedi: ${is.hata}` : online ? 'Çevrimdışı dinlemek için indir' : 'İndirmek için internet gerekir'}>
+      <CloudDownload aria-hidden />
     </button>
   );
 }
@@ -547,10 +637,10 @@ export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: ()
                     <small>
                       <span>{cdDersEtiketi(d)}</span>
                       {v && <span>{fmtSure(v.sureSn)}</span>}
-                      {cihazda && <span className="cd-lm-cd" title="Cihazda, internetsiz çalar"><Download aria-label="Cihazda" /></span>}
                       {calamaz && <span>İnternet gerekir</span>}
                     </small>
                   </button>
+                  <IndirDurum dersKey={d.key} baslik={d.baslik} />
                   <button type="button" className="cd-btn is-ikon cd-lm-cikar" onClick={() => cdListeCikar(d.key)} aria-label={`Listeden çıkar: ${d.baslik}`} title="Listeden çıkar">
                     <X aria-hidden />
                   </button>

@@ -80,7 +80,7 @@ function listelerOku(): { listeler: CdListe[]; seciliId: string } {
   let listeler: CdListe[] = Array.isArray(v?.listeler)
     ? (v!.listeler as any[])
         .filter((l) => l && typeof l.id === 'string')
-        .map((l) => ({ id: l.id, ad: String(l.ad || 'Liste').slice(0, 40), keys: temizKeys(l.keys), olusturma: Number(l.olusturma) || undefined, ist: l.ist && typeof l.ist === 'object' ? { ...bosIst(), ...l.ist } : bosIst() }))
+        .map((l) => ({ id: l.id, ad: String(l.ad || 'Liste').slice(0, 40), keys: temizKeys(l.keys), olusturma: Number(l.olusturma) || Date.now(), ist: l.ist && typeof l.ist === 'object' ? { ...bosIst(), ...l.ist } : bosIst() }))
     : [];
   if (!listeler.length) listeler = [{ id: 'listem', ad: 'Listem', keys: keysOku(), olusturma: Date.now(), ist: bosIst() }];
   const seciliId = listeler.some((l) => l.id === v?.seciliId) ? String(v!.seciliId) : listeler[0].id;
