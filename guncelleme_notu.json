@@ -1,22 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 860,
- "baslik": "Oynatma listeleri yenilendi: sürükle-bırak, deneme, istatistik",
+ "onem": 861,
+ "baslik": "Altyapı: otomatik site sınaması için giriş iyileştirildi",
  "maddeler": [
-  "Sürükle-bırak: dersleri tutamaktan tutup sürükleyerek sırala (telefon ve tablette de çalışır).",
-  "Tekrar artık listede açıkça seçiliyor: Kapalı / Ders / Liste ve 1×, 2×, 3×, ∞.",
-  "Çevrimdışı: \"İndir\" ile listenin tüm derslerini cihaza al; internetsiz yalnız cihazdaki dersler çalar.",
-  "Liste sonu deneme: listedeki derslerin örnek sorularından sesli çözücü; liste bitince de önerilir.",
-  "İstatistik: dinlenen süre, bitirilen ders, tekrar, liste turu, oluşturma ve son dinleme tarihi."
+  "Altyapı: otomatik site sınamaları için ayrı giriş yolu eklendi; öğrenci kullanımı değişmedi."
  ],
- "eklenen": [
-  "Sürükle-bırak sıralama",
-  "Liste denemesi (sesli çözücü)",
-  "Liste istatistikleri",
-  "Listeyi indir"
- ],
+ "eklenen": [],
  "degisen": [
-  "Listem tasarımı v15 diline uyarlandı"
+  "Test girişi altyapısı"
  ],
  "duzeltilen": [],
  "silinen": []
