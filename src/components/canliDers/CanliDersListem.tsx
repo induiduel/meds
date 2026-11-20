@@ -4,13 +4,31 @@
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  ArrowDown, ArrowUp, Check, ListCheck, Pencil, Plus, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
+  BarChart3, CalendarDays, Check, CloudOff, Download, GripVertical, Headphones, ListChecks, ListCheck, Pencil, Plus, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
 } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { cdTercihVaryant, cdToggle, fmtSure, useCd, type CdListeDers } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
+import { CD_CEVRIMDISI_DEGISTI, cdCevrimdisiKayitlari } from './canliDersCevrimdisiKayit';
+import { useCevrimici } from './CanliDersCevrimdisi';
+import { denemeGruplari, denemeKod, denemeKur, denemeSonuc, type DenemeGrup } from './listeDeneme';
+import { bransTanim } from '../spots/brans';
+import { cozucuDizinYukle, useIlerleme } from '../spots/cozucu/cozucuVeri';
+import { guvenliLazy } from '../../utils/guvenliLazy';
+import { toast } from '../ui/Toast';
+
+const SoruCozucu = guvenliLazy(() => import('../spots/cozucu/SoruCozucu'));
+
+// Liste sonuna gelinince deneme önerisi (Listem ekranı açık olmasa da)
+if (typeof window !== 'undefined') {
+  window.addEventListener('cd:liste-bitti', () => {
+    toast.info('Liste bitti', 'Bu listenin derslerinden kısa bir sesli soru denemesi çözmek ister misin?', {
+      label: 'Denemeyi aç', onClick: () => navigateTo(`${pathFor('canli_ders')}#liste-deneme`),
+    });
+  });
+}
 import {
-  CD_TEKRAR_SAYILAR, cdListeAdlandir, cdListeSec, cdListeSil, cdListeTopluEkle, cdListeYeni, cdListeAtla, cdListeCikar, cdListeDegistir, cdListeOynat, cdListeTasi, cdListeTemizle, cdTekrarAyarla,
+  CD_TEKRAR_SAYILAR, cdListeAdlandir, cdListeSec, cdListeSil, cdListeTopluEkle, cdListeYeni, cdListeAtla, cdListeCikar, cdListeDegistir, cdListeKonumla, cdListeOzetleri, cdListeOynat, cdListeTasi, cdListeTemizle, cdTekrarAyarla,
   tekrarSayiYaz, useCdListe, useCdListeSira, type CdTekrarMod,
 } from './canliDersListe';
 
@@ -244,15 +262,214 @@ export function ListeDockDenetim({ mini, dar }: { mini?: boolean; dar?: boolean 
 
 /* ---------------- liste görünümü ---------------- */
 
+/** Tekrar: tür + kaç kez, açılır menü olmadan doğrudan seçilir (liste ekranı) */
+function TekrarSerit() {
+  const mod = useCdListe((s) => s.mod);
+  const sayi = useCdListe((s) => s.sayi);
+  const TURLER: [CdTekrarMod, string, React.ReactNode][] = [
+    ['kapali', 'Kapalı', null], ['ders', 'Ders', <Repeat1 key="d" aria-hidden />], ['liste', 'Liste', <Repeat key="l" aria-hidden />],
+  ];
+  return (
+    <div className="cd-lm-tekrar">
+      <span className="cd-lm-et">Tekrar</span>
+      <div className="cd-lm-seg" role="radiogroup" aria-label="Tekrar türü">
+        {TURLER.map(([m, ad, ik]) => (
+          <button key={m} type="button" role="radio" aria-checked={mod === m} onClick={() => cdTekrarAyarla(m)}
+            title={MODLAR.find((x) => x.mod === m)?.alt}>{ik}{ad}</button>
+        ))}
+      </div>
+      <div className={`cd-lm-seg is-sayi${mod === 'kapali' ? ' is-kapali' : ''}`} role="radiogroup" aria-label="Tekrar sayısı">
+        {CD_TEKRAR_SAYILAR.map((n) => (
+          <button key={n} type="button" role="radio" aria-checked={mod !== 'kapali' && sayi === n} disabled={mod === 'kapali'}
+            aria-label={n === 0 ? 'Sınırsız' : `${n} kez`} title={n === 0 ? 'Sınırsız döngü' : `${n} kez daha çal`}
+            onClick={() => cdTekrarAyarla(mod, n)}>{tekrarSayiYaz(n)}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** Listedeki indirilmemiş dersleri sırayla cihaza indirir (çevrimdışı dinleme) */
+function ListeIndir({ keys }: { keys: string[] }) {
+  const [kayit, setKayit] = useState(() => cdCevrimdisiKayitlari());
+  const [is, setIs] = useState<{ i: number; n: number; hata: number } | null>(null);
+  const online = useCevrimici();
+  useEffect(() => {
+    const f = () => setKayit(cdCevrimdisiKayitlari());
+    window.addEventListener(CD_CEVRIMDISI_DEGISTI, f);
+    return () => window.removeEventListener(CD_CEVRIMDISI_DEGISTI, f);
+  }, []);
+  const eksik = keys.filter((k) => !kayit[k]);
+  const indir = async () => {
+    const liste = eksik.slice();
+    let hata = 0;
+    for (let i = 0; i < liste.length; i++) {
+      setIs({ i, n: liste.length, hata });
+      try { await (await import('./canliDersCevrimdisi')).cdCevrimdisiIndir(liste[i]); } catch { hata++; }
+    }
+    setIs(null);
+    if (hata) window.alert(`${hata} ders indirilemedi; yeniden dene.`);
+  };
+  if (is) return <span className="cd-btn is-ince cd-lm-indir is-is" role="status"><span className="cd-spin" aria-hidden />{is.i + 1}/{is.n} iniyor</span>;
+  if (!eksik.length) return <span className="cd-lm-cihazda" title="Listedeki bütün dersler cihazda; internetsiz çalar"><CloudOff aria-hidden />Hepsi cihazda</span>;
+  return (
+    <button type="button" className="cd-btn is-ince cd-lm-indir" onClick={indir} disabled={!online || typeof caches === 'undefined'}
+      title={online ? `${eksik.length} dersi internetsiz dinlemek için indir` : 'İndirmek için internet gerekir'}>
+      <Download aria-hidden /><span>İndir ({eksik.length})</span>
+    </button>
+  );
+}
+
+const saatYaz = (sn: number) => {
+  const dk = Math.round(sn / 60);
+  return dk < 60 ? `${dk} dk` : `${Math.floor(dk / 60)} sa ${dk % 60 ? `${dk % 60} dk` : ''}`.trim();
+};
+const tarihYaz = (ms?: number) => (ms ? new Date(ms).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' }) : '—');
+const goreli = (ms?: number) => {
+  if (!ms) return 'Henüz dinlenmedi';
+  const g = Math.floor((Date.now() - ms) / 864e5);
+  return g <= 0 ? 'Bugün' : g === 1 ? 'Dün' : `${g} gün önce`;
+};
+
+function ListeIstatistik() {
+  const l = useCdListe((s) => s.listeler.find((x) => x.id === s.seciliId));
+  const i = l?.ist;
+  const ogeler: [React.ReactNode, string, string][] = [
+    [<Headphones key="h" aria-hidden />, saatYaz(i?.sn || 0), 'Dinlenen süre'],
+    [<ListChecks key="b" aria-hidden />, String(i?.ders || 0), 'Bitirilen ders'],
+    [<Repeat1 key="t" aria-hidden />, String(i?.tekrar || 0), 'Ders tekrarı'],
+    [<Repeat key="l" aria-hidden />, String(i?.tur || 0), 'Liste turu'],
+    [<CalendarDays key="c" aria-hidden />, tarihYaz(l?.olusturma), 'Oluşturuldu'],
+    [<BarChart3 key="s" aria-hidden />, goreli(i?.son), 'Son dinleme'],
+  ];
+  return (
+    <section className="cd-lm-ist" aria-label="Liste istatistikleri">
+      {ogeler.map(([ik, v, ad]) => (
+        <div key={ad} className="cd-lm-ist-k"><span className="cd-lm-ist-i">{ik}</span><b>{v}</b><small>{ad}</small></div>
+      ))}
+    </section>
+  );
+}
+
+function ListeDeneme({ dersler, onAc }: { dersler: CdListeDers[]; onAc: (g: DenemeGrup) => void }) {
+  const seciliId = useCdListe((s) => s.seciliId);
+  const ilerleme = useIlerleme();
+  const gruplar = useMemo(() => denemeGruplari(dersler), [dersler]);
+  if (!dersler.length) return null;
+  return (
+    <section className="cd-lm-deneme" aria-label="Liste denemesi">
+      <div className="cd-lm-deneme-bas">
+        <b>Liste sonu deneme</b>
+        <small>Listedeki derslerin örnek sorularından sesli çözücü. Liste bitince de önerilir.</small>
+      </div>
+      {!gruplar.length ? (
+        <p className="cd-lm-deneme-yok">Bu listedeki dersler için henüz sesli çözücü sorusu yok.</p>
+      ) : (
+        <div className="cd-lm-deneme-ler">
+          {gruplar.map((g) => {
+            const o = ilerleme[denemeKod(seciliId, g.brans)] ? denemeSonuc(seciliId, g.brans, g.soru) : null;
+            return (
+              <button key={g.brans} type="button" className="cd-lm-deneme-k" onClick={() => onAc(g)}>
+                <span className="cd-lm-deneme-ust"><b>{bransTanim(g.brans).ad}</b><small>{g.kodlar.length} ders · {g.soru} soru</small></span>
+                {o && o.cozulen > 0 && (
+                  <span className="cd-lm-deneme-skor">
+                    <span className="cd-lm-deneme-bar" aria-hidden><i style={{ width: `${(o.d / g.soru) * 100}%` }} /><i className="is-y" style={{ width: `${(o.y / g.soru) * 100}%` }} /></span>
+                    <small>{o.d} doğru · {o.y} yanlış{o.tamam ? '' : ` · ${o.cozulen}/${g.soru}`}</small>
+                  </span>
+                )}
+                <span className="v15-btn is-primary cd-lm-deneme-git"><Play aria-hidden />{o?.tamam ? 'Yeniden çöz' : o?.cozulen ? 'Devam et' : 'Başla'}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </section>
+  );
+}
+
 export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: () => void }) {
   const keys = useCdListe((s) => s.keys);
   const sira = useCdListeSira();
   const playing = useCd((s) => s.playing);
+  const online = useCevrimici();
   const [onay, setOnay] = useState(false);
+  const [kayit, setKayit] = useState(() => cdCevrimdisiKayitlari());
+  useEffect(() => {
+    const f = () => setKayit(cdCevrimdisiKayitlari());
+    window.addEventListener(CD_CEVRIMDISI_DEGISTI, f);
+    return () => window.removeEventListener(CD_CEVRIMDISI_DEGISTI, f);
+  }, []);
+  // Oynatma kuyruğu eşzamanlı başlasın (mobil izin) — sayfadaki liste özetlerini depoya ver
+  useEffect(() => { if (dersler.length) cdListeOzetleri(dersler); }, [dersler]);
   const harita = useMemo(() => new Map(dersler.map((d) => [d.key, d])), [dersler]);
   const ogeler = useMemo(() => keys.map((k) => harita.get(k)).filter((d): d is CdListeDers => !!d), [keys, harita]);
   const toplam = ogeler.reduce((a, d) => a + ((cdTercihVaryant(d.varyantlar) || d.varsayilan)?.sureSn || 0), 0);
   const caliyorKey = sira >= 0 ? keys[sira] : null;
+  const listeAd = useCdListe((s) => s.listeler.find((l) => l.id === s.seciliId)?.ad || 'Listem');
+  const seciliId = useCdListe((s) => s.seciliId);
+  const [deneme, setDeneme] = useState<DenemeGrup | null>(null);
+  const denemeAc = (g: DenemeGrup) => setDeneme(g);
+  // Liste bitti bildiriminden gelindiyse ilk denemeyi aç
+  useEffect(() => {
+    const f = () => {
+      if (location.hash !== '#liste-deneme') return;
+      const g = denemeGruplari(ogeler)[0];
+      if (g) setDeneme(g);
+      try { history.replaceState(history.state, '', location.pathname + location.search + '#listem'); } catch { /* yok */ }
+    };
+    f();
+    window.addEventListener('hashchange', f);
+    return () => window.removeEventListener('hashchange', f);
+  }, [ogeler]);
+  const denemeKaynak = useMemo(() => (deneme ? {
+    ders: () => denemeKur(seciliId, listeAd, deneme),
+    dizin: () => cozucuDizinYukle(deneme.brans),
+    etiket: `${listeAd} denemesi`,
+  } : null), [deneme, seciliId, listeAd]);
+
+  /* sürükle-bırak (fare + dokunmatik, pointer olayları) */
+  const olRef = useRef<HTMLOListElement>(null);
+  const [surukle, setSurukle] = useState<{ key: string; hedef: number; dy: number } | null>(null);
+  const basla = (e: React.PointerEvent, key: string) => {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    const ol = olRef.current; if (!ol) return;
+    const li = (e.currentTarget as HTMLElement).closest('li')!;
+    const y0 = e.clientY;
+    const satirlar = [...ol.children] as HTMLElement[];
+    const ortalar = satirlar.map((r) => { const b = r.getBoundingClientRect(); return b.top + b.height / 2; });
+    const i0 = satirlar.indexOf(li);
+    const sc = ol.closest('.sl15-alan, .cdl-icerik') as HTMLElement | null;
+    const s0 = sc?.scrollTop || 0;
+    let hedef = i0;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    setSurukle({ key, hedef, dy: 0 });
+    const hareket = (ev: PointerEvent) => {
+      const dy = ev.clientY - y0;
+      const y = ortalar[i0] + dy + ((sc?.scrollTop || 0) - s0);
+      hedef = ortalar.filter((o, j) => j !== i0 && o < y).length;
+      setSurukle({ key, hedef, dy });
+      // kenara yaklaşınca kaydır
+      if (sc) { const b = sc.getBoundingClientRect(); if (ev.clientY < b.top + 40) sc.scrollTop -= 8; else if (ev.clientY > b.bottom - 40) sc.scrollTop += 8; }
+    };
+    const bitir = () => {
+      window.removeEventListener('pointermove', hareket);
+      window.removeEventListener('pointerup', bitir);
+      window.removeEventListener('pointercancel', bitir);
+      cdListeKonumla(key, hedef);
+      setSurukle(null);
+    };
+    window.addEventListener('pointermove', hareket);
+    window.addEventListener('pointerup', bitir);
+    window.addEventListener('pointercancel', bitir);
+  };
+  const tusla = (e: React.KeyboardEvent, key: string) => {
+    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      cdListeTasi(key, e.key === 'ArrowUp' ? -1 : 1);
+      requestAnimationFrame(() => olRef.current?.querySelector<HTMLElement>(`[data-k="${CSS.escape(key)}"] .cd-lm-tut`)?.focus());
+    }
+  };
 
   useEffect(() => {
     if (!onay) return;
@@ -260,88 +477,98 @@ export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: ()
     return () => window.clearTimeout(t);
   }, [onay]);
 
-  const listeAd = useCdListe((s) => s.listeler.find((l) => l.id === s.seciliId)?.ad || 'Listem');
-  if (!ogeler.length) {
-    return (
-      <>
-      <ListeSecici />
-      <div className="cd-bos cd-lm-bos">
-        <span className="cd-ikon" aria-hidden><ListMusic /></span>
-        <p><b>"{listeAd}" boş.</b> Tüm dersler sekmesinde <ListPlus aria-label="listeye ekle" className="cd-satir-ikon" /> ile tek ders, branş başlığındaki <b>Tümünü ekle</b> ile bütün branşı ekle; liste sırayla, kendiliğinden çalar.</p>
-        <button type="button" className="cd-btn" onClick={onTumu}>Tüm derslere git</button>
-      </div>
-      </>
-    );
-  }
+  // sürüklenirken gösterilecek sıra
+  const gorunen = useMemo(() => {
+    if (!surukle) return ogeler;
+    const a = ogeler.filter((d) => d.key !== surukle.key);
+    const d = ogeler.find((x) => x.key === surukle.key);
+    if (d) a.splice(surukle.hedef, 0, d);
+    return a;
+  }, [ogeler, surukle]);
 
   return (
     <section className="cd-lm" aria-label={listeAd}>
       <ListeSecici />
-      <div className="cd-lm-bas">
-        <div className="cd-lm-bilgi">
-          <b>{listeAd}</b>
-          <small>{ogeler.length} ders · {fmtSure(toplam)}</small>
+      {!ogeler.length ? (
+        <div className="cd-bos cd-lm-bos">
+          <span className="cd-ikon" aria-hidden><ListMusic /></span>
+          <p><b>"{listeAd}" boş.</b> Ders satırındaki <ListPlus aria-label="listeye ekle" className="cd-satir-ikon" /> ile tek ders, branş başlığındaki <b>Tümünü ekle</b> ile bütün branşı ekle. Liste sırayla, kendiliğinden çalar.</p>
+          <button type="button" className="cd-btn" onClick={onTumu}>Derslere git</button>
         </div>
-        <div className="cd-lm-eylem">
-          <TekrarSecici yukari={false} />
-          {sira >= 0 ? (
-            <button type="button" className="cd-btn is-ana" onClick={cdToggle}>
-              {playing ? <Pause aria-hidden /> : <Play aria-hidden />}
-              <span>{playing ? 'Duraklat' : 'Sürdür'}</span>
-            </button>
-          ) : (
-            <button type="button" className="cd-btn is-ana" onClick={() => cdListeOynat()}>
-              <Play aria-hidden />
-              <span>Listeyi oynat</span>
-            </button>
-          )}
-          <button
-            type="button"
-            className={`cd-btn is-ikon${onay ? ' is-tehlike' : ''}`}
-            onClick={() => (onay ? (cdListeTemizle(), setOnay(false)) : setOnay(true))}
-            aria-label={onay ? 'Emin misin? Listeyi temizle' : 'Listeyi temizle'}
-            title={onay ? 'Onaylamak için yeniden dokun' : 'Listeyi temizle'}
-          >
-            <Trash2 aria-hidden />
-          </button>
-        </div>
-      </div>
-      <ol className="cd-satirlar cd-lm-ogeler">
-        {ogeler.map((d, k) => {
-          const v = cdTercihVaryant(d.varyantlar) || d.varsayilan;
-          const bu = d.key === caliyorKey;
-          return (
-            <li key={d.key} className={`cd-satir${bu ? ' is-caliyor' : ''}`}>
-              <div className="cd-satir-ana cd-lm-satir">
-                <span className="cd-no" aria-hidden>{k + 1}</span>
-                <button
-                  type="button"
-                  className="cd-satir-ad cd-lm-ad"
-                  onClick={() => (bu ? cdToggle() : cdListeOynat(d.key))}
-                  aria-label={bu ? `${playing ? 'Duraklat' : 'Sürdür'}: ${d.baslik}` : `Listeyi bu dersten oynat: ${d.baslik}`}
-                >
-                  <b>{cdDersEtiketi(d)} · {d.baslik}</b>
-                  <small>
-                    <span>{v ? fmtSure(v.sureSn) : ''}</span>
-                    {bu && <span className="cd-chip is-on">{playing ? 'Çalıyor' : 'Duraklatıldı'}</span>}
-                  </small>
+      ) : (
+        <>
+          <div className="cd-lm-kart v15-card">
+            <div className="cd-lm-bas">
+              <span className="cd-lm-kapak" aria-hidden><ListMusic /></span>
+              <div className="cd-lm-bilgi">
+                <b>{listeAd}</b>
+                <small>{ogeler.length} ders · {fmtSure(toplam)}{!online && ' · çevrimdışı'}</small>
+              </div>
+              {sira >= 0 ? (
+                <button type="button" className="v15-btn is-primary cd-lm-oynat" onClick={cdToggle}>
+                  {playing ? <Pause aria-hidden /> : <Play aria-hidden />}<span>{playing ? 'Duraklat' : 'Sürdür'}</span>
                 </button>
-                <div className="cd-satir-eylem cd-lm-eylem-s">
-                  <button type="button" className="cd-btn is-ikon" onClick={() => cdListeTasi(d.key, -1)} disabled={k === 0} aria-label={`Yukarı taşı: ${d.baslik}`} title="Yukarı">
-                    <ArrowUp aria-hidden />
+              ) : (
+                <button type="button" className="v15-btn is-primary cd-lm-oynat" onClick={() => cdListeOynat()}>
+                  <Play aria-hidden /><span>Oynat</span>
+                </button>
+              )}
+            </div>
+            <div className="cd-lm-alt">
+              <TekrarSerit />
+              <div className="cd-lm-sag">
+                <ListeIndir keys={ogeler.map((d) => d.key)} />
+                <button type="button" className={`cd-btn is-ikon${onay ? ' is-tehlike' : ''}`}
+                  onClick={() => (onay ? (cdListeTemizle(), setOnay(false)) : setOnay(true))}
+                  aria-label={onay ? 'Emin misin? Listeyi boşalt' : 'Listeyi boşalt'} title={onay ? 'Onaylamak için yeniden dokun' : 'Listeyi boşalt'}>
+                  <Trash2 aria-hidden />
+                </button>
+              </div>
+            </div>
+          </div>
+          <ol className={`cd-lm-ogeler${surukle ? ' is-surukle' : ''}`} ref={olRef}>
+            {gorunen.map((d, k) => {
+              const v = cdTercihVaryant(d.varyantlar) || d.varsayilan;
+              const bu = d.key === caliyorKey;
+              const cihazda = !!kayit[d.key];
+              const calamaz = !online && !cihazda;
+              const tutulan = surukle?.key === d.key;
+              return (
+                <li key={d.key} data-k={d.key} className={`cd-lm-oge${bu ? ' is-caliyor' : ''}${tutulan ? ' is-tutulan' : ''}${calamaz ? ' is-calamaz' : ''}`}>
+                  <button type="button" className="cd-lm-tut" onPointerDown={(e) => basla(e, d.key)} onKeyDown={(e) => tusla(e, d.key)}
+                    aria-label={`Sırayı değiştir: ${d.baslik} (ok tuşlarıyla taşı)`} title="Sürükleyerek sırala">
+                    <GripVertical aria-hidden />
                   </button>
-                  <button type="button" className="cd-btn is-ikon" onClick={() => cdListeTasi(d.key, 1)} disabled={k === ogeler.length - 1} aria-label={`Aşağı taşı: ${d.baslik}`} title="Aşağı">
-                    <ArrowDown aria-hidden />
+                  <span className="cd-lm-no" aria-hidden>{bu && playing ? <span className="cd-lm-eq"><i /><i /><i /></span> : k + 1}</span>
+                  <button type="button" className="cd-lm-ad" disabled={calamaz}
+                    onClick={() => (bu ? cdToggle() : cdListeOynat(d.key))}
+                    aria-label={bu ? `${playing ? 'Duraklat' : 'Sürdür'}: ${d.baslik}` : `Listeyi bu dersten oynat: ${d.baslik}`}>
+                    <b>{d.baslik}</b>
+                    <small>
+                      <span>{cdDersEtiketi(d)}</span>
+                      {v && <span>{fmtSure(v.sureSn)}</span>}
+                      {cihazda && <span className="cd-lm-cd" title="Cihazda, internetsiz çalar"><Download aria-label="Cihazda" /></span>}
+                      {calamaz && <span>İnternet gerekir</span>}
+                    </small>
                   </button>
-                  <button type="button" className="cd-btn is-ikon" onClick={() => cdListeCikar(d.key)} aria-label={`Listeden çıkar: ${d.baslik}`} title="Listeden çıkar">
+                  <button type="button" className="cd-btn is-ikon cd-lm-cikar" onClick={() => cdListeCikar(d.key)} aria-label={`Listeden çıkar: ${d.baslik}`} title="Listeden çıkar">
                     <X aria-hidden />
                   </button>
-                </div>
-              </div>
-            </li>
-          );
-        })}
-      </ol>
+                </li>
+              );
+            })}
+          </ol>
+          <p className="cd-lm-ipucu"><GripVertical aria-hidden /> Sırayı değiştirmek için tutup sürükle.</p>
+          <ListeDeneme dersler={ogeler} onAc={denemeAc} />
+          <ListeIstatistik />
+        </>
+      )}
+      {deneme && denemeKaynak && (
+        <React.Suspense fallback={null}>
+          <SoruCozucu key={`${seciliId}-${deneme.brans}`} brans={deneme.brans} kod={denemeKod(seciliId, deneme.brans)}
+            kaynak={denemeKaynak} onClose={() => setDeneme(null)} />
+        </React.Suspense>
+      )}
     </section>
   );
 }

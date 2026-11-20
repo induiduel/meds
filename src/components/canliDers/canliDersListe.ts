@@ -24,7 +24,11 @@ const TEKRAR_KEY = 'medsoru_canli_ders_tekrar_v1';
  *  LISTE_KEY seçili listenin aynası olarak yazılmaya devam eder (eski sürüm sekmeleri/eşitleme kırılmasın). */
 const LISTELER_KEY = 'medsoru_canli_ders_listeler_v1';
 
-export interface CdListe { id: string; ad: string; keys: string[] }
+/** Liste istatistiği: sn = liste çalarken dinlenen süre, ders = listeden bitirilen ders, tekrar = ders tekrarı,
+ *  tur = listenin baştan sona bitişi, son = son dinleme (ms) */
+export interface CdListeIst { sn: number; ders: number; tekrar: number; tur: number; son?: number }
+export interface CdListe { id: string; ad: string; keys: string[]; olusturma?: number; ist?: CdListeIst }
+export const bosIst = (): CdListeIst => ({ sn: 0, ders: 0, tekrar: 0, tur: 0 });
 
 export interface CdListeState {
   /** Seçili listenin dersleri */
@@ -76,9 +80,9 @@ function listelerOku(): { listeler: CdListe[]; seciliId: string } {
   let listeler: CdListe[] = Array.isArray(v?.listeler)
     ? (v!.listeler as any[])
         .filter((l) => l && typeof l.id === 'string')
-        .map((l) => ({ id: l.id, ad: String(l.ad || 'Liste').slice(0, 40), keys: temizKeys(l.keys) }))
+        .map((l) => ({ id: l.id, ad: String(l.ad || 'Liste').slice(0, 40), keys: temizKeys(l.keys), olusturma: Number(l.olusturma) || undefined, ist: l.ist && typeof l.ist === 'object' ? { ...bosIst(), ...l.ist } : bosIst() }))
     : [];
-  if (!listeler.length) listeler = [{ id: 'listem', ad: 'Listem', keys: keysOku() }];
+  if (!listeler.length) listeler = [{ id: 'listem', ad: 'Listem', keys: keysOku(), olusturma: Date.now(), ist: bosIst() }];
   const seciliId = listeler.some((l) => l.id === v?.seciliId) ? String(v!.seciliId) : listeler[0].id;
   return { listeler, seciliId };
 }
@@ -155,7 +159,7 @@ export function cdListeSec(id: string) {
 }
 export function cdListeYeni(ad: string, keys: string[] = []): string {
   const id = yeniId();
-  const listeler = [...st.listeler, { id, ad: ad.trim().slice(0, 40) || `Liste ${st.listeler.length + 1}`, keys: temizKeys(keys) }];
+  const listeler = [...st.listeler, { id, ad: ad.trim().slice(0, 40) || `Liste ${st.listeler.length + 1}`, keys: temizKeys(keys), olusturma: Date.now(), ist: bosIst() }];
   listelerYaz(listeler, st.seciliId);
   set({ listeler });
   cdListeSec(id);
@@ -176,6 +180,43 @@ export function cdListeSil(id: string) {
   listelerYaz(listeler, seciliId);
   set({ listeler, seciliId, keys: listeler.find((l) => l.id === seciliId)!.keys, ...(id === st.seciliId ? { aktif: false, aktifKey: null } : {}) });
 }
+/* ---------------- istatistik ---------------- */
+let istKirli = false;
+function istEkle(p: Partial<Record<keyof CdListeIst, number>>, kaydet = false) {
+  const id = st.seciliId;
+  const listeler = st.listeler.map((l) => {
+    if (l.id !== id) return l;
+    const i = { ...bosIst(), ...l.ist };
+    for (const [k, v] of Object.entries(p)) (i as any)[k] = k === 'son' ? v : ((i as any)[k] || 0) + (v || 0);
+    return { ...l, ist: i };
+  });
+  istKirli = true;
+  st = { ...st, listeler };
+  if (kaydet) istYaz(); else subs.forEach((f) => f());
+}
+function istYaz() {
+  if (!istKirli) return;
+  istKirli = false;
+  listelerYaz(st.listeler, st.seciliId);
+  subs.forEach((f) => f());
+}
+// Dinleme süresi: liste çalarken oynatıcı zamanındaki ilerleme (atlama/sarma sayılmaz)
+let sonT = -1;
+let sonKey: string | null = null;
+if (typeof window !== 'undefined') {
+  cdAbone(() => {
+    const c = cdDurum();
+    if (!c.playing || !cdListeCaliyor()) { sonT = -1; return; }
+    if (c.key !== sonKey) { sonKey = c.key; sonT = c.t; return; }
+    const dt = c.t - sonT;
+    sonT = c.t;
+    if (dt > 0 && dt < 3) istEkle({ sn: dt, son: Date.now() });
+  });
+  window.setInterval(istYaz, 30000);
+  window.addEventListener('pagehide', istYaz);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') istYaz(); });
+}
+
 /** Birden çok dersi seçili listenin sonuna ekler (zaten olanları atlar); eklenen sayıyı döndürür */
 export function cdListeTopluEkle(keys: string[]): number {
   const yeni = temizKeys(keys).filter((k) => !st.keys.includes(k));
@@ -196,6 +237,17 @@ export function cdListeTasi(key: string, yon: -1 | 1) {
   if (i < 0 || j < 0 || j >= st.keys.length) return;
   const k = st.keys.slice();
   [k[i], k[j]] = [k[j], k[i]];
+  keysGuncelle(k);
+}
+/** Sürükle-bırak: dersi verilen sıraya taşı */
+export function cdListeKonumla(key: string, hedef: number) {
+  const i = st.keys.indexOf(key);
+  if (i < 0) return;
+  const j = Math.max(0, Math.min(st.keys.length - 1, hedef));
+  if (i === j) return;
+  const k = st.keys.slice();
+  k.splice(i, 1);
+  k.splice(j, 0, key);
   keysGuncelle(k);
 }
 export function cdListeTemizle() {
@@ -266,7 +318,9 @@ function bitti() {
   }
   const listeden = cdListeCaliyor();
   // Ders tekrarı
+  if (listeden) istEkle({ ders: 1, son: Date.now() });
   if (st.mod === 'ders' && (st.sayi === 0 || st.dersTur < st.sayi)) {
+    if (listeden) istEkle({ tekrar: 1 }, true);
     set({ dersTur: st.dersTur + 1 });
     cdOynat({ key: s.key, no: s.no, baslik: s.baslik, varyantlar: s.varyantlar }, s.vid || undefined, { t: 0 });
     return;
@@ -279,6 +333,8 @@ function bitti() {
   let j = st.keys.indexOf(st.aktifKey!);
   j = j < 0 ? sonIdx : j + 1;
   if (j >= st.keys.length) {
+    istEkle({ tur: 1 }, true);
+    try { window.dispatchEvent(new CustomEvent('cd:liste-bitti', { detail: { id: st.seciliId } })); } catch { /* yok */ }
     if (st.mod === 'liste' && st.keys.length && (st.sayi === 0 || st.listeTur < st.sayi)) {
       set({ listeTur: st.listeTur + 1 });
       j = 0;
