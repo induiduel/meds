@@ -1250,3 +1250,11 @@ a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none
 .cd-orn-kapsam { display: flex; gap: 6px; padding: 0 12px 8px; }
 .cd-orn-kapsam > button { height: 28px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: 600 12.5px/1 var(--font-sans); cursor: pointer; }
 .cd-orn-kapsam > button.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+/* Çoklu oynatma listesi seçici + toplu ekle (2026-11-20) */
+.cd-lsec { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 10px; }
+.cd-lsec-c { cursor: pointer; min-height: 34px; }
+.cd-lsec-c small { opacity: .7; margin-left: 4px; }
+.cd-lsec-form { display: flex; gap: 4px; align-items: center; }
+.cd-lsec-form input { min-height: 34px; padding: 0 10px; border-radius: 10px; border: 1px solid var(--cd-cizgi, currentColor); background: transparent; color: inherit; font: inherit; width: 160px; }
+.cd-toplu { white-space: nowrap; }
+.cd-toplu.is-on { opacity: .7; }

@@ -1,16 +1,20 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 857,
- "baslik": "Masayı diz kalabalık masada da çalışıyor",
+ "onem": 858,
+ "baslik": "Sesli derste birden çok oynatma listesi",
  "maddeler": [
-  "Taş oyunları: \"Masayı diz\" araması güçlendirildi; çok kalabalık masada da hızla yeni ve geçerli bir dizilim bulur, elindeki taşlardan olabildiğince çoğunu masaya katar."
+  "Sesli ders: istediğin kadar adlandırılmış oynatma listesi kur; Listem sekmesinden liste seç, yeniden adlandır, sil.",
+  "Toplu ekle: her branş başlığında ve Blok özetlerde \"Tümünü ekle\" ile bütün dersleri tek dokunuşla seçili listeye ekle.",
+  "Sesli ders ekranında \"Listelerim\" düğmesiyle listelerine tek dokunuşla geç; tekrar (ders/liste, 1×–∞) aynen çalışır."
  ],
- "eklenen": [],
+ "eklenen": [
+  "Çoklu oynatma listesi",
+  "Branş/blok toplu ekleme",
+  "Ders ekranında Listelerim düğmesi"
+ ],
  "degisen": [
-  "Masayı diz araması (yerel komşuluk araması)"
+  "Tekrar tercihi artık hesaplar arası eşitlenir"
  ],
- "duzeltilen": [
-  "Kalabalık masada dizilim bulunamaması"
- ],
+ "duzeltilen": [],
  "silinen": []
 }

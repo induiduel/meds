@@ -34,7 +34,7 @@ import { useCdTur } from './useCdTur';
 import { useUzunBasSecim } from './cdUzunBas';
 import { cdTurGoruldu } from './canliDersTurDurum';
 import { cdDersEtiketi } from './canliDersKategori';
-import { ListeEkleDugme } from './CanliDersListem';
+import { ListeEkleDugme, ListelerimDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
 import { cdMotivasyonAyarla, useCdMotivasyonAcik } from './canliDersMotivasyon';
@@ -729,6 +729,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
               </button>
               <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
               <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+              <ListelerimDugme />
               <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
               {detay.pdf && <VideoOlusturDugme detay={detay} />}
               <MotivasyonDugme />
@@ -886,6 +887,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                       <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
                     </button>
                     <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+              <ListelerimDugme />
                     {detay.vurgu && (
                       <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}
                         title="Çıkmışta, örnek sorularda ve spotlarda geçen cümleleri kırmızı ve işaretli göster">

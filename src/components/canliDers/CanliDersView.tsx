@@ -19,7 +19,7 @@ import CanliDersDers from './CanliDersDers';
 import { TopluPdfDugme } from './CanliDersTopluPdf';
 import { SesliMetinAktarDugme } from './CanliDersAktarPencere';
 import { cdListeOzetleri, useCdListe } from './canliDersListe';
-import { ListeEkleDugme, Listem } from './CanliDersListem';
+import { ListeEkleDugme, Listem, TopluEkleDugme } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
 import { CD_SPOT_BRANS, cdBransKisa, cdBransSlug, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
@@ -369,7 +369,7 @@ function CanliDersListe() {
             <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
           ) : gorunum === 'blok' ? (
             <section className="cd-kat cdl-kat">
-              <div className="cdl-kat-bas"><span className="cdl-kat-ad"><b>Blok özetler</b><small>Birkaç dersi tek sesli derste, çıkmış sorulara odaklanarak anlatır. Her biri bir ile iki saat arası.</small></span></div>
+              <div className="cdl-kat-bas"><span className="cdl-kat-ad"><b>Blok özetler</b><small>Birkaç dersi tek sesli derste, çıkmış sorulara odaklanarak anlatır. Her biri bir ile iki saat arası.</small></span><TopluEkleDugme keys={blok.map((d) => d.key)} ad="Blok özetler" /></div>
               <ul className="cd-satirlar">{blok.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}</ul>
             </section>
           ) : gorunum === 'yildiz' ? (
@@ -648,6 +648,7 @@ function KategoriBolumu({ kat, ds, bitenN, sonraki, acik, onDegistir, children }
           <span className="cd-ilerleme" aria-hidden><i style={{ transform: `scaleX(${ds.length ? bitenN / ds.length : 0})` }} /></span>
           <small>{bitenN}/{ds.length} bitti</small>
         </span>
+        <TopluEkleDugme keys={ds.map((d) => d.key)} ad={kat.ad} />
         {sonraki && (
           <button type="button" className="cd-btn is-ince cdl-kat-sira" onClick={() => dersAc(sonraki.key)} title={`Sıradaki: ${sonraki.baslik}`}>
             <Play aria-hidden /> <span>{bitenN ? 'Sıradakini aç' : 'Başla'}</span>

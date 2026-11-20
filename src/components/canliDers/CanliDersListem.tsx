@@ -4,13 +4,13 @@
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  ArrowDown, ArrowUp, ListCheck, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
+  ArrowDown, ArrowUp, Check, ListCheck, Pencil, Plus, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
 } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { cdTercihVaryant, cdToggle, fmtSure, useCd, type CdListeDers } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import {
-  CD_TEKRAR_SAYILAR, cdListeAtla, cdListeCikar, cdListeDegistir, cdListeOynat, cdListeTasi, cdListeTemizle, cdTekrarAyarla,
+  CD_TEKRAR_SAYILAR, cdListeAdlandir, cdListeSec, cdListeSil, cdListeTopluEkle, cdListeYeni, cdListeAtla, cdListeCikar, cdListeDegistir, cdListeOynat, cdListeTasi, cdListeTemizle, cdTekrarAyarla,
   tekrarSayiYaz, useCdListe, useCdListeSira, type CdTekrarMod,
 } from './canliDersListe';
 
@@ -31,6 +31,98 @@ export function ListeEkleDugme({ dersKey, baslik, etiketli }: { dersKey: string;
       {ekli ? <ListCheck aria-hidden /> : <ListPlus aria-hidden />}
       {etiketli && <span>{ekli ? 'Listemde' : 'Listeme ekle'}</span>}
     </button>
+  );
+}
+
+/** Sesli ders ekranından listelere tek dokunuşla geçiş (seçili liste adı + ders sayısı) */
+export function ListelerimDugme() {
+  const l = useCdListe((s) => s.listeler.find((x) => x.id === s.seciliId));
+  return (
+    <button type="button" className="cd-btn" onClick={() => navigateTo(`${pathFor('canli_ders')}#listem`)} title="Oynatma listelerimi aç">
+      <ListMusic aria-hidden /> <span>Listelerim{l ? ` · ${l.ad} (${l.keys.length})` : ''}</span>
+    </button>
+  );
+}
+
+/* ---------------- toplu ekle ---------------- */
+
+/** Bir branşın / bloğun bütün derslerini seçili listeye ekler; hepsi listedeyse "Listede" gösterir */
+export function TopluEkleDugme({ keys, ad }: { keys: string[]; ad: string }) {
+  const listeAd = useCdListe((s) => s.listeler.find((l) => l.id === s.seciliId)?.ad || 'Listem');
+  const eksik = useCdListe((s) => keys.filter((k) => !s.keys.includes(k)).length);
+  const [son, setSon] = useState<number | null>(null);
+  useEffect(() => {
+    if (son == null) return;
+    const t = window.setTimeout(() => setSon(null), 2500);
+    return () => window.clearTimeout(t);
+  }, [son]);
+  if (!keys.length) return null;
+  const hepsi = eksik === 0;
+  return (
+    <button
+      type="button"
+      className={`cd-btn is-ince cd-toplu${hepsi ? ' is-on' : ''}`}
+      onClick={(e) => { e.stopPropagation(); if (!hepsi) setSon(cdListeTopluEkle(keys)); }}
+      disabled={hepsi}
+      title={hepsi ? `Hepsi "${listeAd}" listesinde` : `${ad}: ${eksik} dersi "${listeAd}" listesine ekle`}
+      aria-label={hepsi ? `${ad}: hepsi ${listeAd} listesinde` : `${ad}: ${eksik} dersi ${listeAd} listesine ekle`}
+    >
+      {hepsi ? <ListCheck aria-hidden /> : <ListPlus aria-hidden />}
+      <span>{son != null ? `${son} eklendi` : hepsi ? 'Listede' : `Tümünü ekle (${eksik})`}</span>
+    </button>
+  );
+}
+
+/* ---------------- liste seçici (çoklu liste) ---------------- */
+
+function ListeSecici() {
+  const listeler = useCdListe((s) => s.listeler);
+  const seciliId = useCdListe((s) => s.seciliId);
+  const [duzen, setDuzen] = useState<null | { id: string | null; ad: string }>(null);
+  const [silOnay, setSilOnay] = useState<string | null>(null);
+  const kaydet = () => {
+    if (!duzen) return;
+    if (duzen.id) cdListeAdlandir(duzen.id, duzen.ad);
+    else cdListeYeni(duzen.ad);
+    setDuzen(null);
+  };
+  return (
+    <div className="cd-lsec" role="tablist" aria-label="Listelerim">
+      {listeler.map((l) =>
+        duzen?.id === l.id ? null : (
+          <button key={l.id} type="button" role="tab" aria-selected={l.id === seciliId}
+            className={`cd-chip cd-lsec-c${l.id === seciliId ? ' is-on' : ''}`} onClick={() => cdListeSec(l.id)}>
+            {l.ad} <small>{l.keys.length}</small>
+          </button>
+        ),
+      )}
+      {duzen ? (
+        <form className="cd-lsec-form" onSubmit={(e) => { e.preventDefault(); kaydet(); }}>
+          <input autoFocus maxLength={40} value={duzen.ad} placeholder="Liste adı" aria-label="Liste adı"
+            onChange={(e) => setDuzen({ ...duzen, ad: e.target.value })} onKeyDown={(e) => e.key === 'Escape' && setDuzen(null)} />
+          <button type="submit" className="cd-btn is-ikon" aria-label="Kaydet" title="Kaydet"><Check aria-hidden /></button>
+          <button type="button" className="cd-btn is-ikon" aria-label="Vazgeç" title="Vazgeç" onClick={() => setDuzen(null)}><X aria-hidden /></button>
+        </form>
+      ) : (
+        <>
+          <button type="button" className="cd-btn is-ince" onClick={() => setDuzen({ id: null, ad: '' })} title="Yeni liste">
+            <Plus aria-hidden /> <span>Yeni liste</span>
+          </button>
+          <button type="button" className="cd-btn is-ikon" title="Listeyi yeniden adlandır" aria-label="Seçili listeyi yeniden adlandır"
+            onClick={() => setDuzen({ id: seciliId, ad: listeler.find((l) => l.id === seciliId)?.ad || '' })}>
+            <Pencil aria-hidden />
+          </button>
+          {listeler.length > 1 && (
+            <button type="button" className={`cd-btn is-ikon${silOnay === seciliId ? ' is-tehlike' : ''}`}
+              title={silOnay === seciliId ? 'Silmek için yeniden dokun' : 'Listeyi sil'}
+              aria-label={silOnay === seciliId ? 'Emin misin? Listeyi sil' : 'Seçili listeyi sil'}
+              onClick={() => (silOnay === seciliId ? (cdListeSil(seciliId), setSilOnay(null)) : setSilOnay(seciliId))}>
+              <Trash2 aria-hidden />
+            </button>
+          )}
+        </>
+      )}
+    </div>
   );
 }
 
@@ -168,21 +260,26 @@ export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: ()
     return () => window.clearTimeout(t);
   }, [onay]);
 
+  const listeAd = useCdListe((s) => s.listeler.find((l) => l.id === s.seciliId)?.ad || 'Listem');
   if (!ogeler.length) {
     return (
+      <>
+      <ListeSecici />
       <div className="cd-bos cd-lm-bos">
         <span className="cd-ikon" aria-hidden><ListMusic /></span>
-        <p><b>Listen boş.</b> Tüm dersler sekmesinde <ListPlus aria-label="listeye ekle" className="cd-satir-ikon" /> ile ders ekle; liste sırayla, kendiliğinden çalar.</p>
+        <p><b>"{listeAd}" boş.</b> Tüm dersler sekmesinde <ListPlus aria-label="listeye ekle" className="cd-satir-ikon" /> ile tek ders, branş başlığındaki <b>Tümünü ekle</b> ile bütün branşı ekle; liste sırayla, kendiliğinden çalar.</p>
         <button type="button" className="cd-btn" onClick={onTumu}>Tüm derslere git</button>
       </div>
+      </>
     );
   }
 
   return (
-    <section className="cd-lm" aria-label="Listem">
+    <section className="cd-lm" aria-label={listeAd}>
+      <ListeSecici />
       <div className="cd-lm-bas">
         <div className="cd-lm-bilgi">
-          <b>Listem</b>
+          <b>{listeAd}</b>
           <small>{ogeler.length} ders · {fmtSure(toplam)}</small>
         </div>
         <div className="cd-lm-eylem">

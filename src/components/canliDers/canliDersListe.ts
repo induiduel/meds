@@ -20,9 +20,17 @@ export const tekrarSayiYaz = (n: CdTekrarSayi) => (n === 0 ? '∞' : `${n}×`);
 
 const LISTE_KEY = 'medsoru_canli_ders_liste_v1';
 const TEKRAR_KEY = 'medsoru_canli_ders_tekrar_v1';
+/** Birden çok adlandırılmış liste (2026-11-20). Eski tek liste (LISTE_KEY) ilk açılışta "Listem" adıyla buraya taşınır;
+ *  LISTE_KEY seçili listenin aynası olarak yazılmaya devam eder (eski sürüm sekmeleri/eşitleme kırılmasın). */
+const LISTELER_KEY = 'medsoru_canli_ders_listeler_v1';
+
+export interface CdListe { id: string; ad: string; keys: string[] }
 
 export interface CdListeState {
+  /** Seçili listenin dersleri */
   keys: string[];
+  listeler: CdListe[];
+  seciliId: string;
   mod: CdTekrarMod;
   sayi: CdTekrarSayi;
   /** Liste oynatması başlatıldı mı (şu an çalan dersin listeden gelip gelmediği ayrıca denetlenir) */
@@ -60,7 +68,22 @@ const keysOku = () => {
   return Array.isArray(v) ? [...new Set(v.filter((x): x is string => typeof x === 'string' && !!x))] : [];
 };
 
-let st: CdListeState = { keys: keysOku(), ...tekrarOku(), aktif: false, aktifKey: null, dersTur: 0, listeTur: 0 };
+const temizKeys = (v: unknown) =>
+  Array.isArray(v) ? [...new Set(v.filter((x): x is string => typeof x === 'string' && !!x))] : [];
+const yeniId = () => `l${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+function listelerOku(): { listeler: CdListe[]; seciliId: string } {
+  const v = oku<{ listeler?: unknown; seciliId?: unknown } | null>(LISTELER_KEY, null);
+  let listeler: CdListe[] = Array.isArray(v?.listeler)
+    ? (v!.listeler as any[])
+        .filter((l) => l && typeof l.id === 'string')
+        .map((l) => ({ id: l.id, ad: String(l.ad || 'Liste').slice(0, 40), keys: temizKeys(l.keys) }))
+    : [];
+  if (!listeler.length) listeler = [{ id: 'listem', ad: 'Listem', keys: keysOku() }];
+  const seciliId = listeler.some((l) => l.id === v?.seciliId) ? String(v!.seciliId) : listeler[0].id;
+  return { listeler, seciliId };
+}
+const ilk = listelerOku();
+let st: CdListeState = { keys: ilk.listeler.find((l) => l.id === ilk.seciliId)!.keys, ...ilk, ...tekrarOku(), aktif: false, aktifKey: null, dersTur: 0, listeTur: 0 };
 /** Çalan ders listeden çıkarılırsa sıradaki dizin (aktifKey artık listede değil) */
 let sonIdx = 0;
 /** dersTur hangi derse ait (başka ders çalınca sıfırlanır) */
@@ -83,7 +106,10 @@ export function useCdListe<T>(sel: (s: CdListeState) => T): T {
 // Başka sekme / profil eşitlemesi değiştirirse
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (e) => {
-    if (e.key === LISTE_KEY || e.key == null) keysGuncelle(keysOku(), false);
+    if (e.key === LISTELER_KEY || e.key == null) {
+      const l = listelerOku();
+      set({ ...l, keys: l.listeler.find((x) => x.id === l.seciliId)!.keys });
+    }
     if (e.key === TEKRAR_KEY || e.key == null) set(tekrarOku());
   });
 }
@@ -111,8 +137,50 @@ function keysGuncelle(keys: string[], kaydet = true) {
       if (eski >= 0) sonIdx = st.keys.slice(0, eski).filter((k) => keys.includes(k)).length;
     }
   }
-  if (kaydet) yaz(LISTE_KEY, keys);
-  set({ keys, ...(keys.length ? {} : { aktif: false }) });
+  const listeler = st.listeler.map((l) => (l.id === st.seciliId ? { ...l, keys } : l));
+  if (kaydet) listelerYaz(listeler, st.seciliId);
+  set({ keys, listeler, ...(keys.length ? {} : { aktif: false }) });
+}
+function listelerYaz(listeler: CdListe[], seciliId: string) {
+  yaz(LISTELER_KEY, { listeler, seciliId });
+  yaz(LISTE_KEY, listeler.find((l) => l.id === seciliId)?.keys || []);
+}
+/* ---------------- çoklu liste ---------------- */
+export function cdListeSec(id: string) {
+  const l = st.listeler.find((x) => x.id === id);
+  if (!l || id === st.seciliId) return;
+  listelerYaz(st.listeler, id);
+  // Çalan liste değişti: o anki ders sürer, bitince sıradakine geçilmez
+  set({ seciliId: id, keys: l.keys, aktif: false, aktifKey: null, listeTur: 0 });
+}
+export function cdListeYeni(ad: string, keys: string[] = []): string {
+  const id = yeniId();
+  const listeler = [...st.listeler, { id, ad: ad.trim().slice(0, 40) || `Liste ${st.listeler.length + 1}`, keys: temizKeys(keys) }];
+  listelerYaz(listeler, st.seciliId);
+  set({ listeler });
+  cdListeSec(id);
+  return id;
+}
+export function cdListeAdlandir(id: string, ad: string) {
+  const a = ad.trim().slice(0, 40);
+  if (!a) return;
+  const listeler = st.listeler.map((l) => (l.id === id ? { ...l, ad: a } : l));
+  listelerYaz(listeler, st.seciliId);
+  set({ listeler });
+}
+/** Listeyi siler; son liste silinmez, boşaltılır */
+export function cdListeSil(id: string) {
+  if (st.listeler.length <= 1) return cdListeTemizle();
+  const listeler = st.listeler.filter((l) => l.id !== id);
+  const seciliId = id === st.seciliId ? listeler[0].id : st.seciliId;
+  listelerYaz(listeler, seciliId);
+  set({ listeler, seciliId, keys: listeler.find((l) => l.id === seciliId)!.keys, ...(id === st.seciliId ? { aktif: false, aktifKey: null } : {}) });
+}
+/** Birden çok dersi seçili listenin sonuna ekler (zaten olanları atlar); eklenen sayıyı döndürür */
+export function cdListeTopluEkle(keys: string[]): number {
+  const yeni = temizKeys(keys).filter((k) => !st.keys.includes(k));
+  if (yeni.length) keysGuncelle([...st.keys, ...yeni]);
+  return yeni.length;
 }
 export const cdListedeMi = (key: string) => st.keys.includes(key);
 export function cdListeEkle(key: string) {
