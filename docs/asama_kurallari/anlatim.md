@@ -1,6 +1,6 @@
 # Aşama kuralları — anlatim
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 24 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 25 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H2 — Türkçeye uymayan ifade ve iç etiketler (2026-10-18)
 - **Kurul 2'de doğrusu:** Doğal, eksiksiz, anlaşılır Türkçe; çeviri mecaz ve iç etiket yok; tam cümle.
@@ -97,4 +97,8 @@
 
 ### H628 — Ders analizi: ham iç etiketler sesli okundu, kanıtsız "hoca en çok soruyor" 43 derste yayındaydı (2026-11-18)
 - **Kural:** Ders analizinde "hoca …" iddiası yalnız doğrulanmış kanıtla yazılır; ses alanında iç etiket, ham anahtar ve rakam bulunmaz; üreticiyi değiştirince `uret.py --dogrula` bütün derslerde koşulur.
+
+
+### H642 — Ekleme tabanlı anlatım revizyonunda klip_tasi katmanları boşaltıyor, 6000 kelime tavanı zenginleştirmeyi kesiyor (2026-11-21, k2-46)
+- **Kural:** Ekleme tabanlı revizyonda (H531) sıra: anlık görüntü → ekleme → `klip_tasi` → katmanları kimlikle geri yaz → vurgu türet → kapılar. 60+ sayfalı derste `MEDS_METIN_MAX_W` hat ve yayın komutlarında aynı değerle verilir. Kalıcı kod düzeltmesi (klip_tasi kimlik eşlemesi) açık iş.
 

@@ -1,17 +1,16 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 862,
- "baslik": "Listede indirme durumu ve oynatıcıda liste seçici",
+ "onem": 863,
+ "baslik": "Sempatomimetikler sesli dersi zenginleştirildi",
  "maddeler": [
-  "Listem: her derste indirme durumu — cihazda (yeşil onay), iniyor (dönen yüzde halkası, dokun → iptal), indirilmemiş (dokun → indir).",
-  "Oynatıcı: ders ekranındaki oynatıcı seçeneklerinde ve küçük oynatıcıda liste seçici; listeyi seç, baştan oynat.",
-  "Eski listelerin oluşturma tarihi artık görünür."
+  "Sempatomimetikler: mekanizmalar adım adım ve daha sade anlatılıyor (reseptör → ikinci ulak → organ etkisi).",
+  "Slayttaki ilaçlarla yeni klinik örnekler: tiramin–MAO inhibitörü, fenilefrin, klonidin, dobutamin, albuterol, lokal anestezikle adrenalin.",
+  "Çıkmış sorulan konularda doğru cevabı komşu kavramdan ayıran açıklamalar eklendi; ders yeniden seslendirildi."
  ],
- "eklenen": [
-  "Satır indirme durumu",
-  "Oynatıcıda liste seçici"
+ "eklenen": [],
+ "degisen": [
+  "Sempatomimetikler sesli dersi"
  ],
- "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }

@@ -475,3 +475,5 @@
 - **H639** · KMB MP4 dışa aktarım: 800×600 kesik kare (başsız ekran), blob: sesi dışarıdan okunamıyor, katman düğmeyi örtüyor → hatalar/on_yuz_disa_aktarim.md
 - **H640** · Taş oyunlarında "Masayı düzenliyorsun" şeridi ve uzun baloncuk masayı örtüyordu (mutlak konum) → hatalar/ogren_modul_oyun.md
 - **H641** · "Masayı diz" çalışmıyordu: yalnız yedili kolunda + yalnız görünüm sırası; taşları yeni perlere bölüştüren çözücü yoktu → hatalar/ogren_modul_oyun.md
+- **H642** · Ekleme tabanlı anlatım revizyonunda klip_tasi değişen paragrafların katmanlarını boşaltıyor; 6000 kelime tavanı 60+ sayfalı derste zenginleştirmeyi kesiyor → hatalar/ders_metni_anlatim.md
+- **—** · Sesli ders "İlerlemeyi temizle" yenileyince eski ilerleme geri geliyordu (birikimli eşitleme anahtarında silme) → hatalar/on_yuz_oynatici_ders.md

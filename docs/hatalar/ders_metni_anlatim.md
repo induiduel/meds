@@ -174,3 +174,10 @@
 - **Kök neden:** Üretici (`uret.py`) paket başvurusunu atom metnine çevirmiyor, odağı dal profilinden alıp kanıtsız hoca iddiası ekliyor ve `--dogrula` bunları yakalamıyordu.
 - **Çözüm:** Üretici düzeltildi (atom metni, ham çıkmıştan öncül/olumsuz sayımı, kesik cümle ve iç etiket kapısı, sürüm 2); yayındaki 43 dosyadan kanıtsız cümle çıkarıldı, k2-35/k2-20/k2-40 onarıldı; `--dogrula` tüm derslerde 0 HATA.
 - **Kural:** Ders analizinde "hoca …" iddiası yalnız doğrulanmış kanıtla yazılır; ses alanında iç etiket, ham anahtar ve rakam bulunmaz; üreticiyi değiştirince `uret.py --dogrula` bütün derslerde koşulur.
+
+### H642 — Ekleme tabanlı anlatım revizyonunda klip_tasi katmanları boşaltıyor, 6000 kelime tavanı zenginleştirmeyi kesiyor (2026-11-21, k2-46)
+
+- **Belirti:** k2-46 Sempatomimetikler'e paragraf içi 68 cümle eklenince `klip_tasi.py` değişen 49 paragrafın çapa/çizim/hizalama/vurgu/çıkmış konum kaydını boşalttı (hizalamaya önceki sayfa `guven 0`); `metin_denetle.py` 6384 kelimede "kelime > 6000" HATA verdi; `klip_tasi`'den önce yazılan vurgu katmanı silindi.
+- **Kök neden:** `klip_tasi.py` paragrafı yalnız metni birebir aynıysa taşıyor, cümle kimliğine bakmıyor. `metin_denetle` tavanı sayfa sayısından bağımsız 6000 (H618 değişkeni hat dışında verilmiyor). Vurgu dizini eski metne göre denetleniyor.
+- **Çözüm:** Katmanlar revizyon öncesi anlık görüntüden cümle kimliğiyle geri yazıldı (`meds_temp/ogrenci_ders/k2-46/is/rev.py`); kapılar `MEDS_METIN_MAX_W=<sayfa×140>` ile koşuldu (eşik gevşetilmedi, H618 formülü); vurgu `klip_tasi` sonrası `KV.vurgu_turet` ile.
+- **Kural:** Ekleme tabanlı revizyonda (H531) sıra: anlık görüntü → ekleme → `klip_tasi` → katmanları kimlikle geri yaz → vurgu türet → kapılar. 60+ sayfalı derste `MEDS_METIN_MAX_W` hat ve yayın komutlarında aynı değerle verilir. Kalıcı kod düzeltmesi (klip_tasi kimlik eşlemesi) açık iş.
