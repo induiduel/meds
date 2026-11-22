@@ -106,7 +106,6 @@
 ### H643 — Farmakoloji zenginleştirme turu: çıkmış rozetleri hiç görünmüyordu, eski çalışma klasörü yeni metni ezdi (2026-11-22)
 - **Kural:** Yayından önce `curl /api/canli-ders/<key>` `cikmisKonum` sayısı `cikmis_konum` dosyasındaki soru sayısıyla (karantina hariç) karşılaştırılır; `null` ise ders tamamlanmış sayılmaz. `sesli_yayinla.py --v2` klasöründeki `konusma_metni.md` kelime sayısı yerel `metin/<key>.md` ile aynı olmadan çalıştırılmaz. `kos.py anlatim` metin kapısı `--yazim` kipiyle hizalanacak (açık iş).
 
-
 ### H644 — Basit dilli V2 sürümlerinde denetçinin en sık yakaladığı üç hata: tekrar eden ek cümle, aralığı tek sayıya indirme, İngilizce harf okunuşu (2026-11-22, psikiyatri 16 ders)
 - **Kural:** Basit dil sürümünde ek cümle önceki cümleyi yinelemez; aralık iki sınırıyla aktarılır, örnek sayı uydurulmaz; kaynağın söylemediği neden kurulmaz; kısaltma Türkçe okunur (di es em). V1 cümlesi aynen kalırsa çizimi `cizim_tasi.py` taşır.
 
