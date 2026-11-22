@@ -1,6 +1,6 @@
 # Aşama kuralları — anlatim
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 25 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 27 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H2 — Türkçeye uymayan ifade ve iç etiketler (2026-10-18)
 - **Kurul 2'de doğrusu:** Doğal, eksiksiz, anlaşılır Türkçe; çeviri mecaz ve iç etiket yok; tam cümle.
@@ -101,4 +101,12 @@
 
 ### H642 — Ekleme tabanlı anlatım revizyonunda klip_tasi katmanları boşaltıyor, 6000 kelime tavanı zenginleştirmeyi kesiyor (2026-11-21, k2-46)
 - **Kural:** Ekleme tabanlı revizyonda (H531) sıra: anlık görüntü → ekleme → `klip_tasi` → katmanları kimlikle geri yaz → vurgu türet → kapılar. 60+ sayfalı derste `MEDS_METIN_MAX_W` hat ve yayın komutlarında aynı değerle verilir. Kalıcı kod düzeltmesi (klip_tasi kimlik eşlemesi) açık iş.
+
+
+### H643 — Farmakoloji zenginleştirme turu: çıkmış rozetleri hiç görünmüyordu, eski çalışma klasörü yeni metni ezdi (2026-11-22)
+- **Kural:** Yayından önce `curl /api/canli-ders/<key>` `cikmisKonum` sayısı `cikmis_konum` dosyasındaki soru sayısıyla (karantina hariç) karşılaştırılır; `null` ise ders tamamlanmış sayılmaz. `sesli_yayinla.py --v2` klasöründeki `konusma_metni.md` kelime sayısı yerel `metin/<key>.md` ile aynı olmadan çalıştırılmaz. `kos.py anlatim` metin kapısı `--yazim` kipiyle hizalanacak (açık iş).
+
+
+### H644 — Basit dilli V2 sürümlerinde denetçinin en sık yakaladığı üç hata: tekrar eden ek cümle, aralığı tek sayıya indirme, İngilizce harf okunuşu (2026-11-22, psikiyatri 16 ders)
+- **Kural:** Basit dil sürümünde ek cümle önceki cümleyi yinelemez; aralık iki sınırıyla aktarılır, örnek sayı uydurulmaz; kaynağın söylemediği neden kurulmaz; kısaltma Türkçe okunur (di es em). V1 cümlesi aynen kalırsa çizimi `cizim_tasi.py` taşır.
 

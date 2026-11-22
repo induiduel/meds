@@ -1,16 +1,16 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
- "onem": 863,
- "baslik": "Sempatomimetikler sesli dersi zenginleştirildi",
+ "onem": 864,
+ "baslik": "Psikiyatri dersleri için çok basit dilli V2 sürümü",
  "maddeler": [
-  "Sempatomimetikler: mekanizmalar adım adım ve daha sade anlatılıyor (reseptör → ikinci ulak → organ etkisi).",
-  "Slayttaki ilaçlarla yeni klinik örnekler: tiramin–MAO inhibitörü, fenilefrin, klonidin, dobutamin, albuterol, lokal anestezikle adrenalin.",
-  "Çıkmış sorulan konularda doğru cevabı komşu kavramdan ayıran açıklamalar eklendi; ders yeniden seslendirildi."
+  "Psikiyatri: 16 sesli dersin yeni V2 sürümü eklendi; konular daha ayrıntılı, adım adım ve çok sade bir dille anlatılıyor.",
+  "Eski anlatım (V1) korunuyor; ders oynatıcısındaki sürüm seçiminden V1 ile V2 arasında geçebilirsin.",
+  "Her yeni terim ilk geçtiği yerde gündelik sözcüklerle açıklanıyor, karıştırılan kavramlar \"şunu karıştırma\" diye ayrılıyor."
  ],
- "eklenen": [],
- "degisen": [
-  "Sempatomimetikler sesli dersi"
+ "eklenen": [
+  "Psikiyatri sesli dersleri · V2 (basit dil)"
  ],
+ "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }
