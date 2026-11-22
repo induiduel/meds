@@ -1,6 +1,6 @@
 {
  "surum": 2,
- "metinHash": "20b5a5803b15246af0faf54a55db5c6897dc3e17",
+ "metinHash": "59cd0482d9d7426c91c7b4ab77b2249552a72595",
  "dogrulama": "ham belge + slayt kanıtı, elle (A1, 2026-11-02); p/c/metinHash anlatım v2'sinden",
  "q": [
   {
@@ -79,7 +79,7 @@
    "dogrulandi": true,
    "neden": "Anterograd amnezi: midazolam (s33). PDF'te cevap işareti yok; slayttan doğrulandı.",
    "p": 32,
-   "c": 7,
+   "c": 8,
    "skor": 1.0,
    "d": 0
   },
@@ -175,7 +175,7 @@
    "dogrulandi": true,
    "neden": "Anestezi vermeden analjezi: azot protoksit (s29).",
    "p": 28,
-   "c": 3,
+   "c": 4,
    "skor": 1.0,
    "d": 0
   },
@@ -191,7 +191,7 @@
    "dogrulandi": true,
    "neden": "Difüzyon hipoksisi s29'da; doğru şıktaki B12 bilgisi slaytta yok. PDF'te cevap işareti yok.",
    "p": 28,
-   "c": 10,
+   "c": 12,
    "skor": 1.0,
    "d": 0
   },
@@ -207,7 +207,7 @@
    "dogrulandi": true,
    "neden": "FA/FI eğrisi ve nitröz oksidin λ değeri slaytta yok; yalnız λ düştükçe denge hızlanır ilkesi (s24).",
    "p": 23,
-   "c": 9,
+   "c": 10,
    "skor": 1.0,
    "d": 0
   },
@@ -255,7 +255,7 @@
    "dogrulandi": true,
    "neden": "Propofol IV (s32), izofluran ve sevofluran inhaler (s26-27); alfentanil slaytta yok. PDF'te cevap işareti yok.",
    "p": 31,
-   "c": 1,
+   "c": 2,
    "skor": 1.0,
    "d": 0
   },
@@ -383,7 +383,7 @@
    "dogrulandi": true,
    "neden": "Flumazenil benzodiazepin antagonisti (s33, diazepam s33).",
    "p": 32,
-   "c": 12,
+   "c": 13,
    "skor": 1.0,
    "d": 0
   },
@@ -399,7 +399,7 @@
    "dogrulandi": true,
    "neden": "Benzodiazepin aşırı dozu geri çevirme: flumazenil (s33).",
    "p": 32,
-   "c": 12,
+   "c": 13,
    "skor": 1.0,
    "d": 0
   },
@@ -415,7 +415,7 @@
    "dogrulandi": true,
    "neden": "Flumazenil benzodiazepin etkisini ortadan kaldırır (s33). Kurgu Soru etiketli.",
    "p": 32,
-   "c": 12,
+   "c": 13,
    "skor": 1.0,
    "d": 0
   }

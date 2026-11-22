@@ -1,6 +1,6 @@
 {
  "surum": 2,
- "metinHash": "0671eb20a8999f115db6ae11d8f97161331f470c",
+ "metinHash": "c6bd0e6b6b0025e4fd6784daa01f8acfc40863dc",
  "dogrulama": "ham belge + slayt kanıtı, elle (A1, 2026-11-02); p/c/metinHash anlatım v2'sinden",
  "q": [
   {
@@ -31,7 +31,7 @@
    "dogrulandi": true,
    "neden": "Soru hipno-sedatif ilaç grubunu bütün olarak soruyor; buspiron da bu grubun içinde (s7), ayırt edici yanı GABA ile etkileşmemesi.",
    "p": 5,
-   "c": 5,
+   "c": 7,
    "skor": 1.0,
    "d": 0
   },
@@ -47,7 +47,7 @@
    "dogrulandi": true,
    "neden": "Dört önermenin dördü de ayrı slaytlarda birebir geçiyor (s9, s8, s39, s2); hoca dört ayrı sayfayı tek soruda birleştirmiş.",
    "p": 8,
-   "c": 4,
+   "c": 5,
    "skor": 1.0,
    "d": 0
   },
@@ -63,7 +63,7 @@
    "dogrulandi": true,
    "neden": "Üç önerme s39'daki uyarı cümlesinin parçalara ayrılmış hâli; IV (endoskopide ketaminle kombinasyon) slaytta yok, s45 yalnız kısa etkili oral formülasyonlardan söz ediyor.",
    "p": 38,
-   "c": 4,
+   "c": 5,
    "skor": 1.0,
    "d": 0
   },
@@ -95,7 +95,7 @@
    "dogrulandi": true,
    "neden": "Yanlış önerme s9'un son maddesinin tersine çevrilmiş hâli; diğer dört şık s8-s10'da birebir geçiyor.",
    "p": 8,
-   "c": 6,
+   "c": 7,
    "skor": 1.0,
    "d": 0
   },
@@ -111,7 +111,7 @@
    "dogrulandi": true,
    "neden": "Soru s11'in cümlesindeki dört ana molekülü seçenek listesine çevirmiş; s12 Şekil 22-5 aynı dört okun desmetildiazepamda birleştiğini gösteriyor.",
    "p": 10,
-   "c": 2,
+   "c": 3,
    "skor": 1.0,
    "d": 0
   },
@@ -127,7 +127,7 @@
    "dogrulandi": true,
    "neden": "II yanlış: s48'e göre benzodiazepinlerin terapötik aralığı geniştir. Bankadaki IV önermesi 'psikolojik bağımlılık' diyor, ham belgede 'psikotik bağımlılık' yazıyor; ham belgedeki yazım hatası bankada düzeltilmiş.",
    "p": 9,
-   "c": 6,
+   "c": 8,
    "skor": 1.0,
    "d": 0
   },
@@ -143,7 +143,7 @@
    "dogrulandi": true,
    "neden": "I yanlış: Tablo 22-1'de zaleplon ve zolpidemin yarı ömrü 1-3,5 saat. III yanlış: s40 ani kesilmenin rebound uykusuzluk yaptığını söylüyor. II ve IV Tablo 22-1'deki diazepam ve klorazepat satırlarına dayanıyor.",
    "p": 12,
-   "c": 6,
+   "c": 10,
    "skor": 1.0,
    "d": 0
   },
@@ -175,7 +175,7 @@
    "dogrulandi": true,
    "neden": "Klorazepat Tablo 22-1'de t½ 50-100 saatlik nordiazepama dönüşen tek seçenek; triazolam, eszopiklon, zaleplon ve zolpidem kısa yarı ömürlü, s13 bunları artık etkinin az görüldüğü grupta sayıyor.",
    "p": 12,
-   "c": 2,
+   "c": 3,
    "skor": 1.0,
    "d": 0
   },
@@ -191,7 +191,7 @@
    "dogrulandi": true,
    "neden": "Soru kökü s33'ün cümlesinin birebir kopyası; çeldiriciler aynı dersin hipnotikleri (triazolam, eszopiklon, zaleplon, zolpidem).",
    "p": 32,
-   "c": 8,
+   "c": 9,
    "skor": 1.0,
    "d": 0
   },
@@ -207,7 +207,7 @@
    "dogrulandi": true,
    "neden": "q131 ile aynı soru, farklı yılda ve şık sırası değişmiş olarak sorulmuş. Hocanın flumazenili her yıl sorduğunu gösteriyor.",
    "p": 32,
-   "c": 8,
+   "c": 9,
    "skor": 1.0,
    "d": 0
   },
@@ -271,7 +271,7 @@
    "dogrulandi": true,
    "neden": "Çeldiriciler aynı dersin başka gruplarından: diazepam benzodiazepin, etanol basit yapılı sedatif (s6), glutetimid barbitürat benzeri (s4), desmetildiazepam aktif metabolit (s11).",
    "p": 6,
-   "c": 2,
+   "c": 3,
    "skor": 1.0,
    "d": 0
   },
@@ -287,7 +287,7 @@
    "dogrulandi": true,
    "neden": "4ad14de03d24 ile aynı soru, 2023-2024'te aynen yinelenmiş. Üç yıl arayla birebir tekrar eden tek soru.",
    "p": 6,
-   "c": 2,
+   "c": 3,
    "skor": 1.0,
    "d": 0
   },
@@ -303,7 +303,7 @@
    "dogrulandi": true,
    "neden": "En yakın yılın sorusu, doğrudan s18'in iki cümlesinden kurulmuş: çeldiriciler (diazepam, lorazepam, eszopiklon, zolpidem) ikinci cümlede indüklemeyen grup olarak sayılanlar.",
    "p": 17,
-   "c": 5,
+   "c": 7,
    "skor": 1.0,
    "d": 0
   },
@@ -319,7 +319,7 @@
    "dogrulandi": true,
    "neden": "Dört çeldirici s38'deki dört maddenin yeniden yazımı; doğru cevap listede olmayan, slaytta hiç geçmeyen bir özellik. Geçen yılın sınavında sorulduğu için bu yıl da güçlü aday.",
    "p": 37,
-   "c": 6,
+   "c": 8,
    "skor": 1.0,
    "d": 0
   },
@@ -351,7 +351,7 @@
    "dogrulandi": true,
    "neden": "Dersin ilk iki slaytının tanım cümleleri dört önermeye bölünmüş; hocanın giriş sayfalarını sorduğunu gösteren en açık örnek.",
    "p": 0,
-   "c": 5,
+   "c": 6,
    "skor": 1.0,
    "d": 0
   },
@@ -399,7 +399,7 @@
    "dogrulandi": true,
    "neden": "III yanlış: s31 bağımlılığın geliştiğini söylüyor. IV s40'taki rebound uykusuzluk cümlesi, II s24'teki düşük dozda anksiyoliz bilgisi.",
    "p": 39,
-   "c": 7,
+   "c": 8,
    "skor": 1.0,
    "d": 0
   },

@@ -170,6 +170,26 @@
        "id": "k2-58-c0006"
       },
       {
+       "ses": "Yani trafikte araç kullanan ya da ilaçla birlikte içki alan kişi bağımlı olmasa bile kötüye kullanan sayılır; ölçüt bağımlılık değil, tehlikeli durum ve ısrardır.",
+       "ekran": "Kötüye kullanım: tehlikeli durum + ısrar · bağımlılık gerekmez",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "istenmeyen sonuçlara rağmen içmeye devam edenler"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0348"
+      },
+      {
        "ses": "Alkol bağımlısında ise bu kötüye kullanımın üstüne fiziksel bağımlılık eklenir; fiziksel bağımlılığın iki göstergesi tolerans ve yoksunluk belirtileridir.",
        "ekran": "**Bağımlılık** = kötüye kullanım + **fiziksel bağımlılık** (tolerans, yoksunluk)",
        "duzey": 0,
@@ -385,6 +405,26 @@
        "id": "k2-58-c0014"
       },
       {
+       "ses": "Örneğin yetmiş kilogramlık bir kişide bu hacim kabaca otuz beş ile kırk dokuz litre arasındadır.",
+       "ekran": "70 kg: 35–49 L dağılım hacmi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Etanolün dağılım hacmi total vücut suyuna yakındır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0349"
+      },
+      {
        "ses": "Dağılım hacmini, alınan alkolün içinde seyreldiği su havuzu gibi düşünebilirsin; havuz küçükse aynı miktar alkol daha yüksek düzey yapar.",
        "ekran": "Benzetme: dağılım hacmi = alkolün seyreldiği **su havuzu**; havuz küçük → düzey yüksek",
        "duzey": 0,
@@ -512,6 +552,26 @@
         "tablo": null
        },
        "id": "k2-58-c0019"
+      },
+      {
+       "ses": "Zinciri sadeleştirirsek içki mideden ve bağırsaktan emilir, suyla her yere dağılır, zarlardan geçip beyne ulaşır; bu yüzden etki önce merkezi sinir sisteminde hissedilir.",
+       "ekran": "Emilim → dağılım → beyin: etki önce MSS'de",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "santral sinir sisteminde etanolün konsantrasyonu hızla artar"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0350"
       }
      ]
     },
@@ -856,6 +916,26 @@
        "id": "k2-58-c0031"
       },
       {
+       "ses": "Sırayı basit tutalım: birinci basamak etanolün asetaldehide dönüşmesidir, ikinci basamak asetaldehidin asetata dönüşmesidir; ADH birinciyi, ALDH ikinciyi yürütür.",
+       "ekran": "Etanol →(ADH) asetaldehid →(ALDH) asetat",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "alkolün asetaldehide dönüşümünü katalize eden sitozolik enzimler ailesi olan alkol dehidrogenaz (ADH) yolağıdır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0351"
+      },
+      {
        "ses": "Sitozolik demek, enzimin hücrenin sıvı kısmında, yani sitoplazmada çalışması demektir; öteki iki enzim farklı yerlerde oturur.",
        "ekran": "**Sitozol** = hücre sıvısı; üç enzimin yeri farklı",
        "duzey": 0,
@@ -958,6 +1038,26 @@
         "tablo": null
        },
        "id": "k2-58-c0035"
+      },
+      {
+       "ses": "Bu yüzden aynı içkiyi içen erkek ve kadının kana geçen alkol miktarı eşit değildir; erkekte bir kısmı dolaşıma girmeden mide içinde yıkılır.",
+       "ekran": "Erkek: bir kısım midede yıkılır · kadın: daha az",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Erkeklerde etanolün ADH ile metabolizması bir ölçüde midede oluşur"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0352"
       }
      ]
     },
@@ -1045,6 +1145,26 @@
        "id": "k2-58-c0038"
       },
       {
+       "ses": "Yani alkol yıkılırken karaciğer hücresi hidrojen yüklü NADH ile dolar ve bu fazlalık, hücrenin başka işlerde kullanacağı NAD artıyı tüketir.",
+       "ekran": "Alkol yıkımı: NADH artar, NAD artı azalır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "alkol oksidasyonu karaciğerde fazla miktarda, çoğunluğu NADH olmak üzere, indirgeyici ajan salgılanmasına neden olur"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0353"
+      },
+      {
        "ses": "Bu NADH fazlasının, kronik alkolizme eşlik eden metabolik bozukluklara ve akut zehirlenmede sık görülen laktik asidoz ile hipoglisemiye katkıda bulunduğu düşünülür.",
        "ekran": "Aşırı NADH → **laktik asidoz**, **hipoglisemi**, kronik metabolik bozukluklar",
        "duzey": 0,
@@ -1076,6 +1196,26 @@
         "tablo": null
        },
        "id": "k2-58-c0039"
+      },
+      {
+       "ses": "İki sonucu böyle akılda tutabilirsin: NADH fazlası laktik asit birikimine yol açıp asidoza, glukoz üretimini bozup hipoglisemiye götürür.",
+       "ekran": "NADH fazlası → laktik asidoz + hipoglisemi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "laktik asidoz ve hipoglisemiye katkıda bulunduğu sanılmaktadır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0354"
       },
       {
        "ses": "Yönü iyi öğrenin: etanol yıkımı NADH'ı artırır, yani NAD artı bölü NADH oranını düşürür.",
@@ -1192,6 +1332,26 @@
        "id": "k2-58-c0043"
       },
       {
+       "ses": "Böyle bir soruda sitozol ve mitokondri çeldirici olur: sitozolde ADH, mitokondride ALDH çalışır, mikrozomda ise MEOS bulunur.",
+       "ekran": "Sitozol: ADH · mitokondri: ALDH · mikrozom: MEOS",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Mikrozomal Etanol-Oksidleyici Sistem (MEOS)"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0355"
+      },
+      {
        "ses": "MEOS kofaktör olarak NAD yerine NADPH kullanır ve başlıca sitokrom P450 enzimlerinden oluşur: CYP2E1, CYP1A2 ve CYP3A4.",
        "ekran": "Kofaktör **NADPH**; enzimler **CYP2E1**, 1A2, 3A4",
        "duzey": 0,
@@ -1219,6 +1379,26 @@
         "tablo": null
        },
        "id": "k2-58-c0044"
+      },
+      {
+       "ses": "Kofaktörleri karıştırmamak gerekir: ADH yolu NAD artıyı, MEOS yolu NADPH'yi kullanır.",
+       "ekran": "ADH: NAD artı · MEOS: NADPH",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "etanol metabolizmasında kofaktör olarak NADPH'yi kullanır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0356"
       },
       {
        "ses": "Kronik alkol tüketiminde MEOS etkinliği indüklenmiş durumdadır; yani sürekli alkol, bu enzim sistemini çoğaltır.",
@@ -1296,6 +1476,26 @@
        "id": "k2-58-c0047"
       },
       {
+       "ses": "Somut örnek vermek gerekirse, kronik içicide sitokrom P450 ile yıkılan bir ilaç alkol yokken kullanılandan daha çabuk temizlenir ve beklenen etkiyi vermeyebilir.",
+       "ekran": "Kronik içici: P450 ile yıkılan ilaç daha çabuk temizlenir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "MEOS sistemini oluşturan sitokrom P450'lerle elimine olan diğer ilaçların klirensini"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0357"
+      },
+      {
        "ses": "İkinci sonuç daha tehlikelidir: sitokrom P450 tepkimelerinden çıkan toksik ara ürünler, yani toksinler, serbest radikaller ve hidrojen peroksit de belirgin biçimde artar.",
        "ekran": "Sonuç 2: **toksik ara ürünler ↑** (toksinler, serbest radikaller, H2O2)",
        "duzey": 0,
@@ -1319,6 +1519,26 @@
         "tablo": null
        },
        "id": "k2-58-c0048"
+      },
+      {
+       "ses": "Serbest radikal, hücre zarına ve DNA'ya saldırabilen kararsız bir moleküldür; bu yüzden MEOS'un artması karaciğer hasarına zemin hazırlar.",
+       "ekran": "MEOS artışı → serbest radikal → hasar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "toksik ara-ürünlerin (toksinler, serbest radikaller, H202) oluşumunu da belirgin derecede artırır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0358"
       }
      ]
     },
@@ -1350,6 +1570,26 @@
         "tablo": null
        },
        "id": "k2-58-c0049"
+      },
+      {
+       "ses": "Basitçe söylersek asetaldehid zehirli bir ara üründür, asetat ise sonraki basamağa geçen daha zararsız üründür; ALDH zehirli ürünü temizleyen enzimdir.",
+       "ekran": "ALDH: zehirli asetaldehidi temizler",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "mitokondriyal NAD- bağımlı aldehid dehidrogenaz (ALDH) tarafından katalize edilen"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0359"
       },
       {
        "ses": "Bu bilgi çıkmış sınavda sorulmuştur: asetaldehidi oksitleyen mitokondriyal, NAD bağımlı enzimin adı boşluk doldurma biçiminde sorulmuş, doğru cevap aldehid dehidrogenaz olmuştur.",
@@ -1497,6 +1737,26 @@
         "tablo": null
        },
        "id": "k2-58-c0054"
+      },
+      {
+       "ses": "Disülfiram bu enzimi kapatınca yıkım zinciri ikinci basamakta tıkanır; ilk basamak çalışmayı sürdürdüğü için asetaldehid giderek birikir.",
+       "ekran": "Disülfiram: 2. basamak tıkanır, asetaldehid birikir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Asetaldehidin oksidasyonu, alkol bağımlılarında caydırıcı olarak kullanılan bir ilaç olan disülfiram tarafından inhibe edilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0360"
       },
       {
        "ses": "Disülfiramın aldehid dehidrogenazı engellediği çıkmış sınavda sorulmuştur.",
@@ -1734,6 +1994,24 @@
         "tablo": null
        },
        "id": "k2-58-c0062"
+      },
+      {
+       "ses": "Şemayı tek cümleyle okumak için yukarıdan aşağı gidin: etanol ADH ya da MEOS ile asetaldehide, asetaldehid ALDH ile asetata dönüşür; her ilaç yalnız bir basamağı kapatır.",
+       "ekran": "Şema: etanol → asetaldehid → asetat · her ilaç tek basamağı kapatır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "Şekil 23-1 fomepizol ve disülfiram eksi okları",
+        "tablo": null
+       },
+       "id": "k2-58-c0361"
       },
       {
        "ses": "Fomepizol ise sahte içkideki metanolle zehirlenmede kullanılır.",
@@ -2087,6 +2365,26 @@
        "id": "k2-58-c0074"
       },
       {
+       "ses": "Akut tolerans, aynı içki içilirken bile vücudun alışmaya başlamasıdır; bu yüzden etki kan düzeyi düşerken değil yükselirken daha belirgindir.",
+       "ekran": "Akut tolerans: etki yükselirken belirgin",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Bu MSS etkileri kan düzeyi yükseldikçe belirginleşir, çünkü birkaç saat içmeden sonra alkolün etkilerine akut tolerans gelişmeye başlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0362"
+      },
+      {
        "ses": "Kronik içicilerde tolerans kalıcı hâle gelmiştir; aynı etkilerin görülmesi için çok daha yüksek kan düzeyi gerekir.",
        "ekran": "Kronik içici: **tolerans** → aynı etki için daha yüksek düzey",
        "duzey": 0,
@@ -2162,6 +2460,26 @@
        "id": "k2-58-c0077"
       },
       {
+       "ses": "Yani aynı kan düzeyi iki kişide bambaşka görünür: kronik alkolik yürüyüp konuşurken, alkolle ilk kez karşılaşan kişi komaya girebilir.",
+       "ekran": "Aynı düzey: kronik alkolik ayık · tolerans yok → koma",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "tolerans gelişmemiş bir bireyde bu konsantrasyon belirgin zehirlenmeye hatta komaya yol açabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0363"
+      },
+      {
        "ses": "Unutmayın, alkol öteki sedatif hipnotikler gibi bir merkezi sinir sistemi depresanıdır; yüksek kan düzeylerinde koma, solunum depresyonu ve ölüm yapar.",
        "ekran": "Alkol = **MSS depresanı**: koma, **solunum depresyonu**, ölüm",
        "duzey": 0,
@@ -2189,6 +2507,26 @@
         "tablo": null
        },
        "id": "k2-58-c0078"
+      },
+      {
+       "ses": "Bu nedenle ayık görünen bir kronik alkoliğe bakarak kan düzeyini küçümsemek yanlıştır; görünüm değil ölçülen düzey belirleyicidir.",
+       "ekran": "Görünüm değil ölçülen düzey belirleyici",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "alkol bir MSS depresanıdır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0364"
       }
      ]
     },
@@ -2349,6 +2687,26 @@
        "id": "k2-58-c0084"
       },
       {
+       "ses": "Bu kanıt tersinden de okunabilir: GABA-A'yı güçlendiren ilaçlar alkolün etkisini artırıyorsa, alkol de aynı yolu kullanıyor demektir.",
+       "ekran": "GABA-mimetik alkolü artırır → ortak yol",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "GABA-mimetiklerin alkolün akut etkilerinin çoğunu şiddetlendirmesi"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0365"
+      },
+      {
        "ses": "İkinci hedef glutamattır: etanol, glutamat reseptörlerinin NMDA alt tipinin katyon kanalını açma özelliğini engeller.",
        "ekran": "Hedef 2: **NMDA** katyon kanalını açmasını **inhibe eder**",
        "duzey": 0,
@@ -2426,6 +2784,26 @@
         "tablo": null
        },
        "id": "k2-58-c0087"
+      },
+      {
+       "ses": "Yani içkinin etkisindeyken yaşananların sonradan hatırlanamaması, NMDA reseptörünün susturulmasıyla ilişkilendirilir.",
+       "ekran": "Bellek kaybı → NMDA engeli",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Yüksek miktarlarda alkol ile oluşan bellek kaybı, NMDA reseptör aktivasyonunun inhibisyonuna bağlı olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0366"
       },
       {
        "ses": "İpucu olarak şöyle eşleyebilirsiniz: sedasyon GABA'dan, unutma NMDA'dan gelir.",
@@ -2579,6 +2957,26 @@
         "tablo": null
        },
        "id": "k2-58-c0092"
+      },
+      {
+       "ses": "Soğuk ortamda, örneğin kışın açık havada kalan ve alkol almış biri bu yüzden hipotermi açısından risk altındadır.",
+       "ekran": "Soğukta alkol: hipotermi riski",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "vazodilatasyona bağlı hipotermi soğuk ortamlarda iyice belirginleşebilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0367"
       },
       {
        "ses": "Etanol uterus düz kasını da gevşetir; daha etkili ve güvenilir uterus gevşeticiler, yani kalsiyum kanal antagonistleri bulunmadan önce erken doğumu engellemek için damar yoluyla kullanılmıştır.",
@@ -2759,6 +3157,26 @@
        "id": "k2-58-c0098"
       },
       {
+       "ses": "Zinciri sadeleştirelim: MEOS çalışır, serbest radikal artar, glutatyon harcanır, glutatyon bitince radikaller hücreye zarar verir.",
+       "ekran": "MEOS → radikal → glutatyon biter → hasar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "glutatyon deplesyonu (tükenme) ile birlikte artan oksidatif stres"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0368"
+      },
+      {
        "ses": "Alkole bağlı ölüm nedenleri arasında karaciğer hastalığı, kanser, kazalar ve intihar vardır.",
        "ekran": "Ölüm nedenleri: **karaciğer hastalığı, kanser, kazalar, intihar**",
        "duzey": 0,
@@ -2873,6 +3291,26 @@
        "id": "k2-58-c0102"
       },
       {
+       "ses": "Bu basamaklardan yalnız ilki geri dönüşlüdür; alkol bırakılırsa yağlanma düzelebilir, hepatit ve siroz ise ilerlemiş basamaklardır.",
+       "ekran": "Yalnız yağlanma geri dönüşlü",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Reversibl bir durum olan alkolik karaciğer yağlanması, önce alkolik hepatite ve sonunda siroz ve karaciğer yetmezliğine dönüşebilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0369"
+      },
+      {
        "ses": "Karaciğer hastalığı riski hem ortalama günlük miktara hem de kullanım süresine bağlıdır; kadınlar erkeklere göre alkolün karaciğer zehirleyici etkisine daha duyarlıdır.",
        "ekran": "Risk: **günlük miktar + süre**; **kadın daha duyarlı** (hepatotoksisite)",
        "duzey": 0,
@@ -2954,6 +3392,26 @@
         "tablo": null
        },
        "id": "k2-58-c0105"
+      },
+      {
+       "ses": "Zinciri sade tutarsak siroz karaciğerden kan geçişini zorlaştırır, toplardamarlarda basınç yükselir, yemek borusu ve mide toplardamarları genişleyip varis olur, varis yırtılınca büyük kanama gelişir.",
+       "ekran": "Siroz → portal basınç artar → varis → kanama",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Siroz, yüksek portal kan basıncına, özofagus ve mide venöz varislerine katkıda bulunur"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0370"
       }
      ]
     },
@@ -3070,6 +3528,26 @@
        "id": "k2-58-c0109"
       },
       {
+       "ses": "Yani karaciğere ulaşan zarar iki yoldan gelir: kendi içinde yıkılan alkolden ve bozulan bağırsak duvarından sızan bakteri artıklarından.",
+       "ekran": "Zarar: alkol yıkımı + bağırsaktan gelen endotoksin",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "doğal bağışıklık sistemini aktive ederek karaciğerde inflamasyona ve hasara neden olur"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0371"
+      },
+      {
        "ses": "Pankreas da hedef organdır: kronik alkol alımı, kronik pankreatitin en önemli nedenidir.",
        "ekran": "**Kronik pankreatitin en önemli nedeni** = kronik alkol",
        "duzey": 0,
@@ -3124,6 +3602,26 @@
        "id": "k2-58-c0111"
       },
       {
+       "ses": "Kısaca doğrudan hücre zehirlenmesi ile protein tıkaçları ve taş oluşumu birleşir; sonuç kronik pankreatittir.",
+       "ekran": "Asiner hücre zehirlenmesi + tıkaç/taş → kronik pankreatit",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "protein plakları ile kalsiyum karbonat içeren taşların oluşumunu tetikler"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0372"
+      },
+      {
        "ses": "Kronik alkolikler gastrite yatkındır ve içme sırasında kan ve plazma proteini kaybına aşırı duyarlıdır; bu kayıp anemiye ve protein malnütrisyonuna katkıda bulunur.",
        "ekran": "**Gastrit** + içerken kan/plazma protein kaybı → **anemi, protein malnütrisyonu**",
        "duzey": 0,
@@ -3151,6 +3649,26 @@
         "tablo": null
        },
        "id": "k2-58-c0112"
+      },
+      {
+       "ses": "Yani sürekli sızan mide mukozası hem kanı hem proteini götürür; kansızlık ve protein yetersizliği bu yüzden birlikte görülür.",
+       "ekran": "Gastrit: kan + protein kaybı → anemi, malnütrisyon",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kronik alkolikler gastrit oluşumuna eğilimlidirler"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0373"
       }
      ]
     },
@@ -3493,6 +4011,26 @@
        "id": "k2-58-c0124"
       },
       {
+       "ses": "Yani bastıran etanol çekilince, çoğalmış uyarıcı yolak denetimsiz çalışır; titreme, ajitasyon ve nöbet bu aşırı uyarılmanın yansımalarıdır.",
+       "ekran": "Etanol çekilir → çoğalmış uyarıcı yolak denetimsiz",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "aynı yolağın hiperaktivitesine bağlı olabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0374"
+      },
+      {
        "ses": "Somut aday da verilir: NMDA reseptörlerinin ve voltaj bağımlı kalsiyum kanallarının yukarı düzenlenmesi, yoksunluk sırasındaki nöbetlerin altında yatan neden olabilir.",
        "ekran": "**NMDA + voltaj-bağımlı Ca kanalı up-regülasyonu** → yoksunluk **nöbetleri**",
        "duzey": 0,
@@ -3520,6 +4058,26 @@
         "tablo": null
        },
        "id": "k2-58-c0125"
+      },
+      {
+       "ses": "NMDA uyarıcı olduğu için bunun çoğalması, etanol yokken beynin aşırı kolay ateşlenmesi, yani nöbet eşiğinin düşmesi demektir.",
+       "ekran": "NMDA artar → nöbet eşiği düşer",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Glutamat reseptörlerinin NMDA alt-tipinin ve voltaj-bağımlı Ca++ kanallarının up-regülasyonu"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0375"
       }
      ]
     },
@@ -3551,6 +4109,26 @@
         "tablo": null
        },
        "id": "k2-58-c0126"
+      },
+      {
+       "ses": "Böylece yoksunlukta tablo iki yönlüdür: GABA tarafı zayıflar, NMDA tarafı güçlenir; beyin hem az frenlenir hem fazla uyarılır.",
+       "ekran": "GABA-A azalır + NMDA artar → yoksunluk",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "GABAA-aracılı yanıtların down-regülasyonuna"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0376"
       },
       {
        "ses": "GABAerjik iletiyi artıran sedatif hipnotik ilaçlar, yoksunlukta alkolün yerine geçebilir; bu gözlem GABA'nın tolerans ve yoksunlukta önemli rol oynadığını düşündürür.",
@@ -3601,6 +4179,26 @@
         "tablo": null
        },
        "id": "k2-58-c0128"
+      },
+      {
+       "ses": "Kısa bir örnek: yoksunluktaki kişiye alkol yerine kontrollü dozda benzodiazepin verilirse GABA sistemi aynı biçimde uyarılır ve beyin aniden frensiz kalmaz.",
+       "ekran": "Alkol yerine benzodiazepin → GABA sistemi desteklenir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "GABA iletimindeki değişikliklerin tolerans ve yoksunlukta önemli bir rol oynadığına inanılmaktadır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0377"
       },
       {
        "ses": "Alkol ayrıca beynin ödül sisteminde çalışan serotonin, opioidler ve dopaminin yerel düzeylerini etkiler; bağımlılık tedavisinde opioid sistemini hedefleyen ilaç buraya dayanır.",
@@ -3820,6 +4418,26 @@
        "id": "k2-58-c0135"
       },
       {
+       "ses": "Üçlüyü akılda tutmak için gözden, dengeden ve bilinçten gidin: göz kaslarında felç, yürürken denge kaybı ve zihinsel karışıklık.",
+       "ekran": "Göz felci · ataksi · konfüzyon",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "eksternal göz kaslarının paralizi, ataksi ve bir konfüzyon durumu ile karakterize"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0378"
+      },
+      {
        "ses": "Nedeni tiamin, yani B1 vitamini eksikliğidir; alkolizm olmadan nadiren görülür, çünkü alkolikte suda çözünen vitaminlerin emilimi bozuktur.",
        "ekran": "Neden: **tiamin (B1) eksikliği**; alkolizm dışında nadir",
        "duzey": 0,
@@ -3870,6 +4488,26 @@
         "tablo": null
        },
        "id": "k2-58-c0137"
+      },
+      {
+       "ses": "Folik asit eksikliği ise aynı hastada kansızlığı açıklar; sinir tablosunu tiamin, kan tablosunu folik asit eksikliği açıkladığı için ikisi karıştırılmaz.",
+       "ekran": "Tiamin: sinir tablosu · folik asit: anemi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "eksternal göz kaslarının paralizi, ataksi ve bir konfüzyon durumu ile karakterize"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0379"
       }
      ]
     },
@@ -4001,6 +4639,26 @@
         "tablo": null
        },
        "id": "k2-58-c0142"
+      },
+      {
+       "ses": "Burada ayrım şudur: etanolün görme bozukluğu ağrısız ve yavaş gelişen bir bulanıklıktır, metanolünki ise çok daha ağırdır ve körlüğe varabilir.",
+       "ekran": "Etanol: ağrısız bulanıklık · metanol: ağır, körlüğe gidebilir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Metanol gibi etanol yerine geçebilen maddelerin alımı ciddi görme bozuklukları oluşturabilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0380"
       }
      ]
     }
@@ -4229,6 +4887,26 @@
        "id": "k2-58-c0150"
       },
       {
+       "ses": "Mantık basittir: yoksunlukta katekolamin fazlası kalbi aşırı uyarır, potasyum ve magnezyum eksikse kalbin elektrik dengesi de bozulur; ikisi birleşince ciddi ritim bozukluğu çıkar.",
+       "ekran": "Katekolamin fazlası + K/Mg bozukluğu → aritmi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "aşırı katekolamin salıverilmesi ve potasyum veya magnezyum metabolizması bozukluklarını yansıtan ciddi aritmiler"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0381"
+      },
+      {
        "ses": "Üçüncü başlık hipertansiyondur: günde üç içkiden fazla yoğun tüketim ile hipertansiyon arasında sıkı bir ilişki vardır.",
        "ekran": "**KVS 3: hipertansiyon** — günde **>3 içki** ile sıkı ilişki",
        "duzey": 0,
@@ -4285,6 +4963,26 @@
         "tablo": null
        },
        "id": "k2-58-c0152"
+      },
+      {
+       "ses": "Örneğin günde üç içkiden fazla içen birinde tansiyon yüksek bulunursa, kilo, tuz, kahve ya da sigara hesaba katılsa bile alkol bağımsız bir neden olarak düşünülmelidir.",
+       "ekran": "Alkol: şişmanlık, tuz, kahve, sigaradan bağımsız hipertansiyon nedeni",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Alkolün hipertansiyon olgularının yaklaşık %5'inden sorumlu olduğu bildirilmiştir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0382"
       }
      ]
     },
@@ -4345,6 +5043,26 @@
         "tablo": null
        },
        "id": "k2-58-c0154"
+      },
+      {
+       "ses": "Kolay ayırmak için: aşırı alkol kalbe zarar verir, orta derecede tüketim ise epidemiyolojik olarak koruyucu görünür; iki cümle çelişmez, çünkü doz farklıdır.",
+       "ekran": "Aşırı: zararlı · orta: koruyucu (epidemiyolojik)",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Orta derecede alkol tüketiminin koroner kalp hastalığını (KKH, CHD), iskemik inmeyi ve periferik arter hastalığını önlediğine ilişkin güçlü epidemiyolojik kanıtlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0383"
       },
       {
        "ses": "Bunun iki açıklaması vardır ve ilki etanolün yüksek yoğunluklu lipoprotein, yani HDL kolesterol düzeyini yükseltmesidir.",
@@ -4469,6 +5187,26 @@
         "tablo": null
        },
        "id": "k2-58-c0158"
+      },
+      {
+       "ses": "Kemik iliği kan hücrelerinin üretildiği yerdir; çoğalma baskılanınca kırmızı, beyaz ve pıhtılaşmayı sağlayan hücrelerin yapımı birlikte azalabilir.",
+       "ekran": "Kemik iliği baskılanır → tüm hücre dizileri azalır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Alkol hematopoezi metabolik ve nutrisyonel etkileri ile endirekt olarak etkiler"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0384"
       },
       {
        "ses": "Kronik içicide en yaygın hematolojik bozukluk, alkole bağlı folik asit eksikliğinden kaynaklanan hafif anemidir.",
@@ -4712,6 +5450,26 @@
         "tablo": null
        },
        "id": "k2-58-c0167"
+      },
+      {
+       "ses": "Ketoz, vücudun şeker yerine yağı yakıp keton üretmesidir; kortizol ve büyüme hormonu yağ yıkımını artırdığı için ketozu körükler.",
+       "ekran": "Kortizol + büyüme hormonu ↑ → yağ yıkımı → ketoz",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "aşırı lipolitik faktörlerin, özellikle de kortizol ve büyüme hormonunun artması sonucu ketozise"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0385"
       }
      ]
     }
@@ -5164,6 +5922,26 @@
         "tablo": null
        },
        "id": "k2-58-c0182"
+      },
+      {
+       "ses": "Basit zincir şudur: anne içer, alkol plasentadan geçer, fetüs onu kendi enzimiyle yıkayamaz; temizlenme annenin karaciğerine bağlı kalır.",
+       "ekran": "Anne içer → plasenta → fetüs yıkamaz",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Fetüs karaciğerinde alkol dehidrogenaz aktivitesi yoktur veya minimaldir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0386"
       }
      ]
     }
@@ -5240,6 +6018,26 @@
        "id": "k2-58-c0184"
       },
       {
+       "ses": "Yani aynı alkol bir dokuda bağışıklığı susturur, ötekinde fazla çalıştırır; akciğerde sorun savunmasızlık, karaciğerde ve pankreasta sorun aşırı iltihaptır.",
+       "ekran": "Akciğer: baskılanma · karaciğer/pankreas: aşırı etkinlik",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "bazı dokularda (örn, akciğer) immun fonksiyon inhibe edilmesine karşın"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0387"
+      },
+      {
        "ses": "Akciğerde bildirilen değişiklikler alveoler makrofaj işlevinin baskılanması, granülositlerin kemotaksisinin engellenmesi ve T hücrelerinin sayı ve işlevinin azalmasıdır.",
        "ekran": "Akciğer: **alveoler makrofaj ↓**, granülosit **kemotaksis ↓**, **T hücre** sayı/işlev ↓",
        "duzey": 0,
@@ -5271,6 +6069,26 @@
         "tablo": null
        },
        "id": "k2-58-c0185"
+      },
+      {
+       "ses": "Alveoler makrofaj akciğerin temizlik hücresidir, granülositlerin kemotaksisi ise bu hücrelerin enfeksiyon bölgesine yürümesidir; ikisi bozulunca akciğer mikroba karşı korumasız kalır.",
+       "ekran": "Makrofaj + kemotaksi bozulur → akciğer korumasız",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "alveolar makrofaj fonksiyonunun supresyonu, granülositlerin kemotaksisinin inhibisyonu"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0388"
       }
      ]
     },
@@ -5339,6 +6157,26 @@
         "tablo": null
        },
        "id": "k2-58-c0187"
+      },
+      {
+       "ses": "Örneğin alkolik bir hasta pnömoni geçirirse hem enfeksiyona yatkın hem savunması zayıf olduğu için seyrin daha ağır olmasını bekleriz.",
+       "ekran": "Alkolik + pnömoni: ağır seyir, ölüm riski ↑",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "pnömonili hastalarda morbiditeyi kötüleştirir ve mortalite riskini artırır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0389"
       },
       {
        "ses": "Sekizinci başlık kanser riskindeki artıştır: kronik alkol ağız, yutak, gırtlak, yemek borusu ve karaciğer kanseri riskini artırır.",
@@ -5548,6 +6386,26 @@
         "tablo": null
        },
        "id": "k2-58-c0194"
+      },
+      {
+       "ses": "Etkileşimin iki türü vardır: farmakokinetik etkileşim ikinci ilacın düzeyini, farmakodinamik etkileşim ise etkisini değiştirir.",
+       "ekran": "Kinetik: düzey değişir · dinamik: etki değişir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "ikinci ilacın farmakodinami ve farmakokinetiklerindeki değişikliklerden kaynaklanan"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0390"
       }
      ]
     },
@@ -5662,6 +6520,26 @@
         "tablo": null
        },
        "id": "k2-58-c0198"
+      },
+      {
+       "ses": "Örneğin günde üç içki içen ve ağrı için parasetamol alan birinde artmış P450 daha çok zehirli metabolit üretir; aynı doz karaciğere daha çok yük bindirir.",
+       "ekran": "Kronik içici + parasetamol → daha çok zehirli metabolit",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "asetaminofenin reaktif hepatotoksik metabolitlerine dönüşümünün bir sonucu olarak hepatotoksisite insidensini artırmaktadır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0391"
       }
      ]
     },
@@ -5749,6 +6627,26 @@
        "id": "k2-58-c0201"
       },
       {
+       "ses": "Bu ilaçlar akut alkolle birlikte alınınca yıkımları yavaşlayacağı için düzeyleri yükselir; aynı doz beklenenden güçlü etki yapar.",
+       "ekran": "Akut alkol: bu ilaçların düzeyi ↑",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Fenotiazinler, trisiklik antidepresanlar ve sedatif-hipnotik ilaçlar"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0392"
+      },
+      {
        "ses": "Farmakodinamik etkileşimler de büyük önem taşır; en önemlisi alkolün öteki merkezi sinir sistemi depresanlarıyla, özellikle sedatif hipnotiklerle birleşince oluşan toplamsal, yani aditif depresyondur.",
        "ekran": "**Farmakodinamik**: sedatif-hipnotiklerle **aditif MSS depresyonu** (en önemlisi)",
        "duzey": 0,
@@ -5834,6 +6732,26 @@
         "tablo": null
        },
        "id": "k2-58-c0204"
+      },
+      {
+       "ses": "Somut bir örnek: şeker düşürücü hap kullanan diyabetli içki içerse, alkolün hipoglisemi yapmasıyla ilacın aynı etkisi birleşir.",
+       "ekran": "Oral hipoglisemik + alkol → hipoglisemi",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "vazodilatörler ve oral hipoglisemik ajanlar dahil, sedatif olmayan birçok ilacın farmakolojik etkilerini de potansiyalize eder"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0393"
       }
      ]
     }
@@ -6074,6 +6992,26 @@
        "id": "k2-58-c0212"
       },
       {
+       "ses": "Çünkü bilinci bulanık kişide solunum yavaşlar ve kusmuk soluk yoluna kaçar; tehlikeli olan bu iki komplikasyondur.",
+       "ekran": "Solunum depresyonu + aspirasyon",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "en önemli hedef, solunum depresyonunun ve kusmuğun aspirasyonunun önlenmesidir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0394"
+      },
+      {
        "ses": "Çok yüksek kan etanol düzeylerinde bile solunum ve dolaşım desteklendiği sürece yaşam mümkündür; ölen olgularda ortalama kan alkol düzeyi dört yüz miligram desilitrenin üstündedir.",
        "ekran": "Solunum + KVS desteklenirse yaşam mümkün; ölümde ortalama **>400 mg/dL**",
        "duzey": 0,
@@ -6217,6 +7155,26 @@
         "tablo": null
        },
        "id": "k2-58-c0217"
+      },
+      {
+       "ses": "Bu belirtilerin hepsi uyarılma fazlasını gösterir: beyin hem aşırı uyarılmış hem de kolay ateşlenir durumdadır.",
+       "ekran": "Yoksunluk = beyinde uyarılma fazlası",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "motor ajitasyon, anksiyete, uykusuzluk ve nöbet eşiğinde düşme ile karakterize bir sendrom ortaya çıkar"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0395"
       },
       {
        "ses": "Nöbet eşiğinin düşmesi, bağımlılık bölümünde gördüğümüz çoğalmış NMDA reseptörlerinin ve kalsiyum kanallarının etanol kalkınca baskısız kalmasıdır.",
@@ -6499,6 +7457,24 @@
        "id": "k2-58-c0227"
       },
       {
+       "ses": "Deliryum tremensi öteki üç tablodan ayıran, yalnız en geç başlaması değil, otonom bulgular ile bilinç bozukluğunun birlikte olmasıdır.",
+       "ekran": "DT: otonom bulgu + deliryum birlikte",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [],
+        "sekil": "Şekil 23-2 kırmızı altıgen deliryum tremens",
+        "tablo": null
+       },
+       "id": "k2-58-c0396"
+      },
+      {
        "ses": "Şeklin altyazısı zamanı netleştirir: deliryum tremens tipik olarak alkol kesilmesinden kırk sekiz ile yetmiş iki saat sonra ortaya çıkar.",
        "ekran": "Deliryum tremens tipik başlangıç **48–72 saat**",
        "duzey": 0,
@@ -6653,6 +7629,26 @@
         "tablo": null
        },
        "id": "k2-58-c0233"
+      },
+      {
+       "ses": "Gerekçe, tiamin eksikliğine bağlı Wernicke-Korsakoff sendromundan korunmaktır.",
+       "ekran": "Tiamin gerekçesi: Wernicke-Korsakoff sendromundan korunma",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Tiamin tedavisine bütün olgularda başlanır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0397"
       },
       {
        "ses": "Şiddetli olgularda detoksifikasyon için özgül ilaç tedavisinin iki ana ilkesi vardır.",
@@ -6854,6 +7850,26 @@
         "tablo": null
        },
        "id": "k2-58-c0240"
+      },
+      {
+       "ses": "Örneğin karaciğeri sağlam bir hastada diazepam seyrek dozla yeter; sirozlu hastada aynı ilaç birikip etkisini uzatabileceği için lorazepam seçilir.",
+       "ekran": "Sağlam karaciğer: diazepam · siroz: lorazepam",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "kısa- etkili ilaçlar özellikle karaciğer hastalığı olan alkoliklerde faydalıdır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0398"
       },
       {
        "ses": "Benzodiazepinler hafif ve orta olgularda ağızdan, daha şiddetli yoksunlukta ise parenteral, yani damar ya da kas yoluyla verilir.",
@@ -7162,6 +8178,26 @@
         "tablo": null
        },
        "id": "k2-58-c0250"
+      },
+      {
+       "ses": "Naltrekson ile nalmefeni karıştırmamak için: ikisi de opioid antagonistidir, ancak bu endikasyon için yalnız naltrekson onaylıdır.",
+       "ekran": "Naltrekson: onaylı · nalmefen: onaysız",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Başka bir opioid antagonisti olan Nalmefen"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0399"
       },
       {
        "ses": "Kullanımı kolaydır: alkolizm tedavisinde genellikle ağızdan günde tek doz elli miligram verilir.",
@@ -8335,6 +9371,26 @@
         "tablo": null
        },
        "id": "k2-58-c0290"
+      },
+      {
+       "ses": "Bu yüzden metanol içen kişi ilk saatlerde yalnız sarhoş ya da gastritli görünebilir; asıl tehlike metabolitler birikince başlar.",
+       "ekran": "Metanol: ilk saatlerde sarhoşluk, tehlike gecikmeli",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "ciddi toksisite belirtileri ortaya çıkmadan 6-30 saat geçmesi gerekir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0400"
       }
      ]
     },
@@ -8435,6 +9491,24 @@
        "id": "k2-58-c0294"
       },
       {
+       "ses": "Folat bu basamakta yardımcıdır; eksikse format birikir, bu da metanol zehirlenmesinde folat verilmesinin mantığını açıklar.",
+       "ekran": "Folat: formatı CO2'ye çevirmeye yardımcı",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [],
+        "sekil": "Şekil 23-3 folat bağımlı yolak oku",
+        "tablo": null
+       },
+       "id": "k2-58-c0401"
+      },
+      {
        "ses": "Sağ üstte iki yuvarlak kutu, fomepizol ve etanol, eksi işaretli oklarla ilk basamağa, alkol dehidrogenaza yönelir.",
        "ekran": "İnhibitörler: **fomepizol** ve **etanol** ⊣ **ADH** (ilk basamak)",
        "duzey": 0,
@@ -8487,6 +9561,24 @@
         "tablo": null
        },
        "id": "k2-58-c0296"
+      },
+      {
+       "ses": "Yani ilaç ya da etanol zinciri ilk basamakta durdurur; engel ne kadar erken konursa toksik metabolit o kadar az oluşur.",
+       "ekran": "Engel ilk basamakta → toksik metabolit azalır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [],
+        "sekil": "Şekil 23-3 altyazı",
+        "tablo": null
+       },
+       "id": "k2-58-c0402"
       }
      ]
     },
@@ -8628,7 +9720,7 @@
        "id": "k2-58-c0301"
       },
       {
-       "ses": "Sarhoş görünen ve birden görme kaybından yakınan hastada metanol düşünülmelidir.",
+       "ses": "Sarhoş görünen ve görme kaybından yakınan hastada metanol düşünülmelidir.",
        "ekran": "Sarhoş görünüm + ani **görme kaybı** → metanol düşün",
        "duzey": 1,
        "vurgu": [
@@ -8715,6 +9807,26 @@
         "tablo": null
        },
        "id": "k2-58-c0303"
+      },
+      {
+       "ses": "Örneğin serum metanolü otuz miligram desilitre bulunan hastada tedavi gerekir; yetmiş bulunan hastada hemodiyaliz de gerekir.",
+       "ekran": "30 mg/dL: tedavi · 70 mg/dL: hemodiyaliz",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Serum metanol konsantrasyonunun 20 mg/dL’den yüksek olması tedavi gerektirir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0403"
       },
       {
        "ses": "Her zehirlenmede olduğu gibi metanolde de önce solunum desteklenir.",
@@ -8823,6 +9935,26 @@
         "tablo": null
        },
        "id": "k2-58-c0307"
+      },
+      {
+       "ses": "Enzimi kapatmanın mantığı açıktır: zehirli olan metabolitlerdir, enzim ise onları üreten kapıdır; kapı kapanınca metanol zehirli ürüne dönüşemez.",
+       "ekran": "ADH engeli → zehirli metabolit oluşmaz",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Metanolün karaciğerde oksidasyonundan sorumlu başlıca enzim alkol dehidrogenaz'dır"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0404"
       }
      ]
     },
@@ -9580,6 +10712,26 @@
         "tablo": null
        },
        "id": "k2-58-c0334"
+      },
+      {
+       "ses": "Örneğin tatlı tadı yüzünden antifriz içmiş, görme şikâyeti olmayan ve idrarında oksalat kristali bulunan bir çocukta etilen glikol düşünülmelidir.",
+       "ekran": "Antifriz + oksalat kristali + görme yok → etilen glikol",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "serum etilen glikol konsantrasyonu toksik eşiğin (20-30 mg/dL) altına düşene kadar devam edilir"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-58-c0405"
       },
       {
        "ses": "Etilen glikolde de fomepizolün alternatifi etanoldür; aynı enzim kapısını tutma mantığı burada da geçerlidir.",
