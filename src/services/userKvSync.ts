@@ -28,6 +28,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_kmb_[a-z0-9_-]+$/,
   // Son Prova: aşama/check-up/deneme ilerlemesi (components/sonProva/spIlerleme.ts)
   /^medsoru_son_prova_v1$/,
+  // Ders özeti: ders başına kaldığı klip/saniye ve bitti işareti (components/dersOzet/dersOzetVeri.ts)
+  /^medsoru_ders_ozet_v1$/,
   // 60 planı: günlük saat ve sınav senaryosu girdileri/sonuçları (components/takip/SinavPlani, SinavSenaryo)
   /^medsoru_sinav_(plani_saat|senaryo)_v1$/,
   // Canlı ders oynatma listesi ve tekrar tercihi
@@ -281,6 +283,14 @@ export function mergeKvJsonValue(key: string, olderRaw: string, newerRaw: string
   if (!olderRaw || !newerRaw || olderRaw === newerRaw) return newerRaw || olderRaw;
   try {
     if (key === 'medsoru_basarim_sayac_v1') return sayacBirlestir(olderRaw, newerRaw);
+    if (key === 'medsoru_ders_ozet_v1') {
+      // Ders başına en yeni kayıt (at) kazanır; bir cihazda bitirilen ders ötekinde kaybolmaz
+      const a = JSON.parse(olderRaw) || {};
+      const b = JSON.parse(newerRaw) || {};
+      const m: Record<string, any> = { ...a };
+      for (const [d, r] of Object.entries(b) as [string, any][]) if (!m[d] || String(r?.at || '') >= String(m[d]?.at || '')) m[d] = r;
+      return JSON.stringify(m);
+    }
     if (key === 'medsoru_calisma_takip_v1') {
       const a = JSON.parse(olderRaw);
       const b = JSON.parse(newerRaw);

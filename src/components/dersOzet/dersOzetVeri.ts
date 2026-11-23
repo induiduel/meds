@@ -64,4 +64,8 @@ export function ozIlerlemeYaz(ders: string, p: Partial<OzIlerleme> | null) {
   try { localStorage.setItem(ILERLEME_KEY, JSON.stringify(t)); } catch { /* özel pencere: yalnız bellekte */ }
   abone.forEach((f) => f());
 }
+// Hesaptan gelen güncelleme (userKvSync storage olayı) ya da başka sekme: önbelleği boşalt, ekranı yenile
+if (typeof window !== 'undefined') window.addEventListener('storage', (e) => {
+  if (e.key === ILERLEME_KEY || e.key === null) { onbellek = null; abone.forEach((f) => f()); }
+});
 export const useOzIlerleme = () => useSyncExternalStore((f) => { abone.add(f); return () => abone.delete(f); }, oku, oku);

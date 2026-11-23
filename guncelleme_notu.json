@@ -1,31 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 874,
-  "baslik": "Yeni ders: Nörodejeneratif Hastalıklar ve Genetiği",
+  "onem": 870,
+  "baslik": "Ders özeti ilerlemen artık hesabına kaydediliyor",
   "maddeler": [
-    "Tıbbi Genetikte Nörodejeneratif Hastalıklar ve Genetiği dersinin sesli anlatım metni eklendi; ses hazırlanıyor."
+    "Ders özetinde 'bitirdim' işaretin ve kaldığın yer hesabına eşitlenir; telefonda başlayıp bilgisayarda sürdürebilirsin."
   ],
-  "eklenen": [
-    "Ders özeti (Kurul 2, 50 ders)"
+  "eklenen": [],
+  "degisen": [
+    "Ders özeti: ilerleme cihazlar arası eşitleniyor"
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "Ders özeti",
-      "nerede": {
-        "ad": "Ders çalış › Ders özeti",
-        "yol": "/dersler/ders-ozeti/kurul2"
-      },
-      "amac": "Sınavdan önce bir dersi kısa özetten, çıkmışlarıyla ve sesli dinleyerek hızlıca bitirmek.",
-      "islevler": [
-        "Bölümlü özet maddeleri, Spot/Ayırıcı/Klinik ve Çıkmış rozetleri",
-        "Akılda kalması gerekenler listesi",
-        "Sesli dinleme (okunan madde işaretlenir)",
-        "Dersin sorularını sesli çözüm"
-      ],
-      "ipucu": "Dinlemeye başladıktan sonra bir maddeye dokununca oradan okur."
-    }
-  ]
+  "yenilikler": []
 }

@@ -46,8 +46,9 @@ mevcut çözücüsü, EMA klipli) · "Yalnız çıkmışlar" · bölüm atlama �
 "Çıkmış" rozeti, slayt sayfası) · Akılda kalması gerekenler · açılır çıkmış soru listesi (kök + cevap). Alt oynatıcı:
 önceki/sonraki bölüm, hız (1–1,75×, tarayıcıda hatırlanır), ilerleme; okunan madde işaretlenir ve görünür tutulur;
 dinleme başladıktan sonra maddeye dokununca oradan okur.
+İlerleme `medsoru_ders_ozet_v1` ({ders: {klip, t, bitti, at}}) profil eşitlemesindedir (`userKvSync` SYNC_PATTERNS + ders başına en yeni `at` birleştirmesi); hesaptan gelen değişiklik `storage` olayıyla ekrana yansır.
 
 ## Durum (2026-11-23)
 Pilot k2-15 onaylandı; 50 Kurul 2 dersi yayında (2.435 madde, ~7,8 sa ses, denetçi 50/50 GEÇER). Sesli dersi/slayt metni olmayan
 dersler (k2-25, 32, 47, 48, 51–57, 59–61, 63) kapsam dışı; sesli dersleri gelince aynı hat (`topla.py` hizalamadaki PDF'i okur).
-Farmakoloji yazımında Opus `[bio]` filtresi → alt ajan `model: sonnet`. Kapı ayrıntıları ve tuzaklar: H646.
+İlerleme hesaba eşitlenir (2026-11-23, onem 870). Farmakoloji yazımında Opus `[bio]` filtresi → alt ajan `model: sonnet`. Kapı ayrıntıları ve tuzaklar: H646.
