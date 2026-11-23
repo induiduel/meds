@@ -25,6 +25,7 @@ export function sayfaPaketleri(adres: string, katalog: Paket[]): string[] {
   // v15 ders ayrıntısı (/dersler/ders/kurulN/<key>): dersin sesli paketi (ara soru, analiz, çıkmış ekleriyle)
   if ((m = yol.match(/^\/ders\/(.+)$/))) return [`sesli:${decodeURIComponent(m[1])}`];
   // Ek modüller ve KMB (H599)
+  if (yol.startsWith('/ders-ozeti')) return onek('dersozet:');
   if ((m = yol.match(/^\/ek-moduller\/([^/]+)/))) return tek(`ekmodul:${decodeURIComponent(m[1])}`);
   if (yol === '/ek-moduller') return onek('ekmodul:');
   if (yol === '/kmb' || yol.startsWith('/kmb/')) return tek('sayfa:kmb');

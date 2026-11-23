@@ -168,6 +168,12 @@ export function disYol(adres: string): string {
       return birlestir('/dersler/zihin-haritasi', sp, hash);
     case 'kartlar':
       return birlestir(`/dersler/kartlar${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
+    case 'ders-ozeti': {
+      // /ders-ozeti[/<ders>]?kurul=N → /dersler/ders-ozeti/kurulN/<ders> (ders kimliği kurulu taşır: k2-15)
+      const k = s[1] ? anahtarKurul(s[1]) : sorguKurul(sp);
+      sp.delete('kurul');
+      return birlestir(`/dersler/ders-ozeti${k ? `/kurul${k}` : ''}${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
+    }
     case 'ek-moduller': {
       // /ek-moduller[/<modül>]?kurul=N&b=<bölüm>&konu=<konu> → /dersler/ek-moduller/kurulN/<modül>/<bölüm>/<konu>
       const k = sorguKurul(sp), b = s[1] ? sp.get('b') : null, konu = b ? sp.get('konu') : null;
@@ -338,6 +344,12 @@ export function icYol(adres: string): string {
     if (arac === 'ozetler') return birlestir(`/ozetler${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'program') return birlestir(s[2] === 'ekle' ? '/program-ekle' : '/program', sp, hash);
     if (arac === 'zihin-haritasi') return birlestir('/zihin-haritasi', sp, hash);
+    if (arac === 'ders-ozeti') {
+      const k = kurulSeg(s[2]);
+      const r = s.slice(k ? 3 : 2);
+      if (!r[0]) koy('kurul', k);
+      return birlestir(`/ders-ozeti${r[0] ? `/${enc(r[0])}` : ''}`, sp, hash);
+    }
     if (arac === 'ek-moduller') {
       const k = kurulSeg(s[2]);
       const r = s.slice(k ? 3 : 2);

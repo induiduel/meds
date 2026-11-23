@@ -89,3 +89,4 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - 2026-10-28 (H406): adreste kurul biçimi kanonik `kurulN`; eski `kurul_N` (yol parçası) ve `?kurul=kurul_N|kurulN` okunur, `kurulN` / `?kurul=N`'ye çevrilir (siteHaritasi `ayir`, açılışta replaceState).
 - 2026-10-30: `/sorular/disa-aktar` (iç `/soru-aktar`, takma ad `/disa-aktar`) — Soru dışa aktarıcı (PDF/DOCX/PPTX); Soru çöz merkezinde ve menüde.
 - 2026-11-10: `/dersler/ek-moduller[/kurul<N>[/<modül>[/<bölüm>[/<konu>]]]]` (iç `/ek-moduller/<modül>?kurul=&b=&konu=`) — Ek modüller: seçmeli/geçici dersler; bölümler `ders`, `spot`, `sinav-oncesi`, `sorular` (konu id'si, `genel`, `deneme`), `hoca` (set id'si), `foy` (konu id'si; çalışma föyü + PDF oluşturma). Ders çalış merkezinde ve menüde.
+- 2026-11-23: `/dersler/ders-ozeti[/kurul<N>[/<ders>]]` (iç `/ders-ozeti[/<ders>]?kurul=N`) — Ders özeti: akılda kalması gerekenler, sesli özet, sesli soru çözümü (`docs/DERS_OZETI_MODULU.md`).

@@ -180,3 +180,17 @@
 - **Çözüm:** Sınır yalnız çıkmışta 120 kelimeye çıkarıldı (`cozucu_dogrula.py`); örnek soru 90 kalır. Başka ders dosyalarında gerileme yok (örnek çözücüler 0 HATA).
 - **Kural:** Çıkmış kökü asla kısaltılmaz ya da gerekçe uydurularak elenmez; sınırı aşıyorsa kapı çıkmış için ayrı sınırı kullanır. Çözücü ayrı bir yazım turu olarak planlanır, açıklama alt sınırı 18 kelimedir.
 
+
+## H646 — Ders özeti kapısının "en çok %20 çıkmış atlanabilir" sınırı yazarları sahte kapsama itti; Yunan harfi ses kapısını düşürdü (2026-11-23, Ders özeti)
+
+- **Belirti:** Kurul 2 ders özeti (yeni modül) yazarları k2-05 (KİBAS), k2-07 (3 çıkmış), k2-10, k2-43, k2-45 (q70) gibi derslerde
+  çıkmışı cevabı çıkmayan maddeye bağladı; bağımsız denetçiler "sahte bağlantı" diye KALIR verdi. Ses üretiminde k2-41/46'da
+  6 klip "süre oranı" eşiğinden yazılmadı.
+- **Kök neden:** (1) `ders_ozet/dogrula.py` ilk sürümü atlanan çıkmış oranını HATA sayıyordu; slaytta cevabı olmayan çıkmışı dürüstçe
+  atlayan yazar kapıyı geçmek için zayıf bağ kurmak zorunda kalıyordu (kapı yanlış davranışı ödüllendirdi). (2) Metinde α/β/µ ve
+  "1:100.000" yazımı okunuşta karaktere göre çok uzayınca `ses_klip` bozuk klip sınaması (süre/karakter) üç tohumda da reddetti.
+- **Çözüm:** Oran sınırı UYARI'ya indi, atlama gerekçesini bağımsız denetçi doğrular; çıkmışı hiç kapsanmayan derste `cikmis_kapsam: {}`
+  geçerli. Kapı Yunan harfini ve `1:N` oranını HATA sayar ("alfa 1", "beta 2", "A-beta 42", "100 binde 1" yazılır). Görsel (metinsiz)
+  PDF sayfaları `topla.py`'de sayfa olarak kalır; denetçi PDF görselinden doğrulayınca madde doğru sayfaya bağlanır.
+- **Kural:** Kapı eşiği, kaynakta olmayan bilgiyi zorla "kapsatmaya" iten biçimde konmaz; kapsam oranı uyarıdır, doğruluk denetçidedir.
+  Seslendirilen metinde Yunan harfi ve iki noktalı oran yazılmaz.

@@ -92,6 +92,7 @@ export type AppRoute =
   | 'yanlislarim'
   | 'soru_aktar'
   | 'ek_moduller'
+  | 'ders_ozeti'
   | 'bildirimler'
   | 'gecmis_kurullar'
   | 'kamp'
@@ -170,6 +171,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   yanlislarim: '/yanlislarim',
   soru_aktar: '/soru-aktar',
   ek_moduller: '/ek-moduller',
+  ders_ozeti: '/ders-ozeti',
   bildirimler: '/bildirimler',
   gecmis_kurullar: '/gecmis-kurullar',
   kamp: '/kamp',
@@ -253,6 +255,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   yanlislarim: 'Yanlışlarım',
   soru_aktar: 'Soru dışa aktarıcı',
   ek_moduller: 'Ek modüller',
+  ders_ozeti: 'Ders özeti',
   bildirimler: 'Bildirimler',
   gecmis_kurullar: 'Geçmiş kurullar',
   kamp: 'Kurul kampı',
@@ -425,6 +428,8 @@ export const ALIASES: Record<string, AppRoute> = {
   'disa-aktar': 'soru_aktar',
   'ek-moduller': 'ek_moduller',
   ek_moduller: 'ek_moduller',
+  'ders-ozeti': 'ders_ozeti',
+  ders_ozeti: 'ders_ozeti',
   bildirimler: 'bildirimler',
   'hücrem': 'hucrem',
   'notlarım': 'notlarim',

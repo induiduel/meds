@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 27 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 28 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -104,4 +104,9 @@
 ### H626 — Çıkmış soru kökü 90 kelimeyi aşınca çözücü kapısı kaldı; çıkmış kök kısaltılamaz (2026-11-18, k2-39)
 - **Kural:** Çıkmış kökü asla kısaltılmaz ya da gerekçe uydurularak elenmez; sınırı aşıyorsa kapı çıkmış için ayrı sınırı kullanır. Çözücü ayrı bir yazım turu olarak planlanır, açıklama alt sınırı 18 kelimedir.
 
+
+
+### H646 — Ders özeti kapısının "en çok %20 çıkmış atlanabilir" sınırı yazarları sahte kapsama itti; Yunan harfi ses kapısını düşürdü (2026-11-23, Ders özeti)
+- **Kural:** Kapı eşiği, kaynakta olmayan bilgiyi zorla "kapsatmaya" iten biçimde konmaz; kapsam oranı uyarıdır, doğruluk denetçidedir.
+  Seslendirilen metinde Yunan harfi ve iki noktalı oran yazılmaz.
 

@@ -75,6 +75,7 @@ const VideoDersV15 = guvenliLazy(() => import('../components/v15/VideoDersV15'))
 const OyunlarV15 = guvenliLazy(() => import('../components/v15/OyunlarV15'));
 const MasaView = guvenliLazy(() => import('../components/masa/MasaView'));
 const EkModullerV15 = guvenliLazy(() => import('../components/v15/ekModul/EkModullerV15'));
+const DersOzetView = guvenliLazy(() => import('../components/dersOzet/DersOzetView'));
 const SoruAktarV15 = guvenliLazy(() => import('../components/v15/SoruAktarV15'));
 const DersProgramiV15 = guvenliLazy(() => import('../components/v15/DersProgramiV15'));
 const ProgramEkleV15 = guvenliLazy(() => import('../components/v15/ProgramEkleV15'));
@@ -703,6 +704,13 @@ export function Gorunumler(p: GorunumBaglami) {
           </Suspense>
         )}
 
+
+        {/* TAB: /ders-ozeti (görünen /dersler/ders-ozeti/kurul<N>/<ders>) — Ders özeti: akılda kalması gerekenler + sesli özet + sesli soru */}
+        {gorunenTab === 'ders_ozeti' && (
+          <Suspense fallback={<ViewFallback />}>
+            <DersOzetView />
+          </Suspense>
+        )}
 
         {/* TAB: /ek-moduller (görünen /dersler/ek-moduller/kurul<N>/<modül>/…) — seçmeli/geçici ders modülleri */}
         {gorunenTab === 'ek_moduller' && (

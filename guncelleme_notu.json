@@ -1,15 +1,33 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 868,
-  "baslik": "Psikiyatri V2 derslerinde slayt işaretleri düzeltildi",
+  "onem": 869,
+  "baslik": "Yeni: Ders özeti — Kurul 2'nin 50 dersi akılda kalması gerekenlerle",
   "maddeler": [
-    "Psikiyatri V2 sesli derslerinde okunan cümle artık slayttaki doğru satırda işaretleniyor; yalnız sayfa vurgusu kalmadı.",
-    "Parantezli slayt sözcükleri ve kısa başlıklar da eşleşiyor; tablo cümlesi yanlış sayfaya atlamıyor."
+    "Ders çalış › Ders özeti: her dersin çıkmışları, spot bilgileri, ayırıcı ve klinik noktaları kısa maddelerle; her madde slayt sayfasıyla.",
+    "Sesli dinle: özet EMA sesiyle okunur, okunan madde işaretlenir; hız ayarı ve kaldığın yerden sürdürme var.",
+    "Sesli soru çöz: dersin örnek ve çıkmış soruları sesli çözümle; 'Bu özeti bitirdim' ile ilerlemeni izle."
   ],
   "eklenen": [
-    "Psikiyatri sesli dersleri · V2 (basit dil)"
+    "Ders özeti (Kurul 2, 50 ders)"
   ],
   "degisen": [],
   "duzeltilen": [],
-  "silinen": []
+  "silinen": [],
+  "yenilikler": [
+    {
+      "ad": "Ders özeti",
+      "nerede": {
+        "ad": "Ders çalış › Ders özeti",
+        "yol": "/dersler/ders-ozeti/kurul2"
+      },
+      "amac": "Sınavdan önce bir dersi kısa özetten, çıkmışlarıyla ve sesli dinleyerek hızlıca bitirmek.",
+      "islevler": [
+        "Bölümlü özet maddeleri, Spot/Ayırıcı/Klinik ve Çıkmış rozetleri",
+        "Akılda kalması gerekenler listesi",
+        "Sesli dinleme (okunan madde işaretlenir)",
+        "Dersin sorularını sesli çözüm"
+      ],
+      "ipucu": "Dinlemeye başladıktan sonra bir maddeye dokununca oradan okur."
+    }
+  ]
 }

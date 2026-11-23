@@ -48,11 +48,12 @@
 | `YONETIM_V16_KIT.md` | Yönetim v16 — kabuk, kit ve sunucu yardımcıları | 2505 | 2026-10-28 | 7 betik |
 | `YONETIM_V16_PLAN.md` | Yönetim v16 Planı: baştan kurulum | 3997 | 2026-11-16 | 1 betik |
 
-## Hiçbir yerden anılmayan belgeler (7) — eski olabilir; bağlayıcı sayma, gerekirse doğrula
+## Hiçbir yerden anılmayan belgeler (8) — eski olabilir; bağlayıcı sayma, gerekirse doğrula
 
 | Belge | Konu | Kelime | Son değişim |
 |---|---|---:|---|
 | `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1209 | 2026-11-18 |
+| `DERS_OZETI_MODULU.md` | Ders Özeti modülü (Kurul 2+) — tasarım ve veri biçimi | 480 | izlenmiyor |
 | `GELISTIRME_YOL_HARITASI.md` | Geliştirme Yol Haritası — veri, site sağlığı, içerik hattı, ses (2026-11-16) | 1584 | 2026-11-16 |
 | `HANTALLIK_KOK_NEDENLERI.md` | Hantallık, yavaşlık ve yanlış üretim — kök neden defteri | 4391 | 2026-11-17 |
 | `ORACLE_REALTIME_DATABASE_REHBERI.md` | Oracle VM Üzerinde Realtime Veritabanı Mimarisi ve Çözüm Rehberi | 640 | 2026-10-12 |
