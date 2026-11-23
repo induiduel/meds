@@ -1,0 +1,61 @@
+{
+ "ders": "k2-55",
+ "not": "Kural 28 kapısı için eşleme (k2-55 Panik Bozukluk ve Agorafobi, A birimleri b02/b03/b04/b06). Cümleler yayındaki sesli metinde birebir vardır; yeni cümle eklenmedi.",
+ "kayitlar": [
+  {
+   "birim": "psk-s12-b03",
+   "tur": "anlatim",
+   "bilgi": "SSS'DE katekolamin düzeylerinde artış; Locus seruleusta artmış noradrenerjik aktivite; Beyin sapı kemoreseptörlerinin duyarlılığında artış",
+   "cumle": [
+    "merkezi sinir sisteminde katekolamin düzeyleri artmıştır",
+    "Locus coeruleus noradrenalin salan bir çekirdektir ve panik bozuklukta noradrenerjik etkinliği artmıştır",
+    "beyin sapı kemoreseptörleri, yani kandaki karbondioksit gibi kimyasal değişimleri algılayan alıcılar, CO2'ye aşırı duyarlıdır"
+   ],
+   "anahtar": ["katekolamin", "noradrenerjik", "kemoreseptör"],
+   "gerekce": "2026-27 s.7 'Biyolojik kuramlar' kutusu SSS'de katekolamin artışı, locus coeruleus'ta noradrenerjik etkinlik ve beyin sapı kemoreseptörlerinin aşırı duyarlılığını verir; anlatımın nörokimyasal ve solunum kuramı paragrafı üç bilgiyi de birebir söyler (SSS = merkezi sinir sistemi, locus seruleus = locus coeruleus yazım farkı)."
+  },
+  {
+   "birim": "psk-s12-b04",
+   "tur": "anlatim",
+   "bilgi": "(9) depersonalizasyon: ↱ kişinin vücuduna yabancılaşması",
+   "cumle": [
+    "Derealizasyonda çevre gerçek dışı gelir, depersonalizasyonda ise kişi kendine yabancılaşır"
+   ],
+   "anahtar": ["yabancılaş"],
+   "gerekce": "2026-27 s.12 depersonalizasyonu derealizasyonla birlikte 11. belirti olarak sayar (yabancılaşma ifadesi slaytta yok); anlatım derealizasyon/depersonalizasyon ayrımını (çevre gerçek dışı / kişi kendine yabancılaşır) belirti kartı paragrafında verir. 'Vücuduna' ayrıntısı bu yılın slaytında geçmediği için eklenmedi."
+  },
+  {
+   "birim": "psk-s12-b02",
+   "tur": "anlatim",
+   "bilgi": "Kadınlarda … 2-3 kat fazladır; Hastalık … daha çok 20'li yaşlarda başlar",
+   "cumle": [
+    "panik bozukluk kadınlarda erkeklere göre iki ila üç kat daha sıktır",
+    "en sık yirmili yaşlarda başladığı ve çoğunda başlangıcın otuz yaşından önce olduğu bilgisi çıkmış sınavda sorulmuştur"
+   ],
+   "anahtar": ["kadınlarda", "yaşlarda"],
+   "gerekce": "2026-27 s.5 '2–3 kat kadınlarda daha sık' kutusu ve 'en sık 20'li yaşlarda başlar' satırı; anlatım epidemiyoloji paragrafında iki bilgiyi sayılar yazıyla birebir söyler (2-3 = iki ila üç, 20'li = yirmili)."
+  },
+  {
+   "birim": "psk-s12-b06",
+   "tur": "anlatim",
+   "bilgi": "Bilişsel yetiler; çevresini tanımama, algı bozukluğu; Öze yabancılaşma (depersonalizasyon), gerçekdışılaşma (derealizasyon)",
+   "cumle": [
+    "Bilişsel yetiler ataklar dışında normaldir; atakta depersonalizasyon ve derealizasyon görülebilir"
+   ],
+   "anahtar": ["depersonalizasyon", "derealizasyon"],
+   "gerekce": "2026-27 s.13 'Bilişsel yetiler' kutusu: ataklar dışında normal, atakta depersonalizasyon ve derealizasyon görülebilir; anlatım ruhsal durum muayenesi paragrafında bunu birebir verir. 'Çevresini tanımama, algı bozukluğu' ifadeleri bu yılın slaytında yoktur, bu yüzden anlatıma girmedi."
+  },
+  {
+   "birim": "psk-s12-b06",
+   "tur": "anlatim",
+   "bilgi": "Duygulanım; nöbetler sırasında ileri derecede korku ve uyarılmışlık hali; en büyük korkusu nöbetleri tekrar yaşamaktır (beklenti anksiyetesi); ölüm/delirme korkusu, özdenetimini yitirme korkusu belirgindir",
+   "cumle": [
+    "atakta yoğun korku ve uyarılmışlık görülür",
+    "Atağın ardından en büyük korku yeni atak korkusudur, yani beklenti anksiyetesidir",
+    "Atak sırasında hasta kontrolünü kaybedeceği, kalp krizi geçireceği ya da çıldıracağı korkusuna kapılır"
+   ],
+   "anahtar": ["korku", "uyarılmışlık", "beklenti anksiyetesi"],
+   "gerekce": "2026-27 s.13 'Duygulanım' kutusu atakta yoğun korku ve uyarılmışlık, sonrasında en büyük korkunun yeni atak (beklenti anksiyetesi) olduğunu söyler; s.12 kontrolünü kaybetme, çıldırma ve ölüm korkusunu sayar. Anlatım bu bilgileri ruhsal durum muayenesi ve kavramlar paragraflarında birebir verir."
+  }
+ ]
+}

@@ -1,0 +1,1402 @@
+{
+ "id": "k2-54-yaygin-anksiyete-bozuklugu",
+ "sira": 54,
+ "kurul": 2,
+ "ders": "Psikiyatri",
+ "konu": "Yaygın Anksiyete Bozukluğu",
+ "ogretim_uyesi": "Doç. Dr. Zuhal Koç Apaydın",
+ "tarih": "2026-11-23",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Kaygı ile korkuyu ayırır; normal kaygının uyum sağlayıcı niteliğini ve patolojik hale gelme koşulunu açıklar (s. 2, 3).",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bilinen, dış odaklı, belirli ya da çatışmasız tehdide verilen yanıt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kaygı",
+      "B": "Korku",
+      "C": "Endişe",
+      "D": "Gerginlik",
+      "E": "Panik"
+     },
+     "dogru": "B",
+     "aciklama": "Bilinen, dış odaklı, belirli ve çatışmasız tehdide verilen yanıt korkudur.",
+     "sik_aciklamalari": {
+      "A": "Kaygı, bilinmeyen, iç odaklı, belirsiz ya da çatışmalı tehdide verilen yanıttır. Sorudaki tehdit bilinen ve dış odaklı olduğu için seçenek yanlıştır.",
+      "B": "Korku, bilinen, dış odaklı, belirli ya da çatışmasız tehdide verilen yanıttır ve kişi neden korktuğunu bilir. Sorunun anlattığı özelliklerin tümüne uyduğu için doğru cevaptır.",
+      "C": "Endişe, YAB'de aşırı kaygıyla birlikte anılan ve birçok olay hakkında süren bir durumdur. Bilinen, dış odaklı tehdide verilen yanıtın adı olmadığı için seçenek yanlıştır.",
+      "D": "Gerginlik, YAB'de kas gerginliği olarak bedensel eşlik eden bir belirtidir ve baş, boyun ve omuz ağrılarıyla birlikte görülür. Tehdide verilen yanıtın adı olmadığı için seçenek yanlıştır.",
+      "E": "Panik, panik bozuklukta beklenmedik atak olarak görülen ve yeni atak endişesiyle süren bir tablodur. Bilinen dış tehdide verilen genel yanıtın adı olmadığı için seçenek yanlıştır."
+     },
+     "s": 3,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Normal kaygı tehdide karşı uyum sağlayıcı bir yanıt olarak hangi sistemlerin etkileşimiyle oluşur?",
+     "secenekler": {
+      "A": "Sempatik ve parasempatik sistem",
+      "B": "Yalnızca sempatik sistem",
+      "C": "Yalnızca parasempatik sistem",
+      "D": "Sempatik ve somatik sistem",
+      "E": "Parasempatik ve somatik sistem"
+     },
+     "dogru": "A",
+     "aciklama": "Normal kaygı sempatik ve parasempatik sistemlerin etkileşimiyle tehdide karşı uyum sağlayıcı bir yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Sempatik ve parasempatik sistemlerin etkileşimi, vücudu tehdide hazırlayan ve sonra dengeye döndüren otonom düzenlemeyi sağlar. Normal kaygının uyum sağlayıcı yanıtını oluşturduğu için doğru cevaptır.",
+      "B": "Yalnızca sempatik sistem, iki sistemden yalnız birini anar. Normal kaygı sempatik ve parasempatik sistemlerin etkileşimiyle oluştuğu için tek sistem içeren seçenek yanlıştır.",
+      "C": "Yalnızca parasempatik sistem, iki sistemden yalnız ikincisini anar. Normal kaygı sempatik ve parasempatik sistemlerin etkileşimiyle oluştuğunda bu seçenek eksiktir ve yanlıştır.",
+      "D": "Sempatik ve somatik sistem eşleşmesi, parasempatik sistemi dışarıda bırakır. Normal kaygı sempatik ve parasempatik sistemlerin etkileşimiyle oluşan bir yanıt olduğu için seçenek yanlıştır.",
+      "E": "Parasempatik ve somatik sistem eşleşmesi, sempatik sistemi dışarıda bırakır. Normal kaygının oluşumunda sempatik ve parasempatik sistemler birlikte çalıştığı için bu eşleşme yanlıştır."
+     },
+     "s": 3,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Normal kaygı hangi durumda kronik ve patolojik hale gelir?",
+     "secenekler": {
+      "A": "Savunmalar ve başa çıkma yetersiz kalınca",
+      "B": "Tehdit bilinen ve dış odaklı olunca",
+      "C": "Sempatik sistem etkinleşince",
+      "D": "Belirli bir soruna odaklanılınca",
+      "E": "Olay stres etkeni sayılmayınca"
+     },
+     "dogru": "A",
+     "aciklama": "Savunmalar ve başa çıkma mekanizmaları yetersiz kalıp ego uygun işlev göremezse kaygı kronik ve patolojik olur.",
+     "sik_aciklamalari": {
+      "A": "Savunmalar ve başa çıkma mekanizmaları yetersiz kalıp ego uygun işlev göremezse kaygı kronik ve patolojik hale gelir. Sorulan koşulu verdiği için doğru cevaptır.",
+      "B": "Bilinen ve dış odaklı tehdit, korkunun özelliğidir ve uyum sağlayıcı bir yanıt oluşturur. Kaygının patolojik olmasının koşulunu vermediği için seçenek yanlıştır.",
+      "C": "Sempatik sistemin etkinleşmesi, normal kaygıda da görülen ve tehdide karşı vücudu hazırlayan uyum sağlayıcı bir yanıtın parçasıdır. Patolojik hale gelmeyi açıklamadığı için seçenek yanlıştır.",
+      "D": "Belirli bir soruna odaklanmak, normal endişenin özelliğidir ve kişiyi problem çözmeye yönlendirir. Kaygının patolojik hale gelmesinin koşulu olmadığı için seçenek yanlıştır.",
+      "E": "Olayın stres etkeni olarak algılanmaması kaygıyı artırmaz, tersine tetikleyici ortadan kalkar. Kişi olayları stres etkeni olarak algılar ve savunmalar yetersiz kalırsa kaygı patolojik olduğu için seçenek yanlıştır."
+     },
+     "s": 3,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q03"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Normal endişe ile YAB'deki patolojik endişeyi kontrol, kapsam, orantı, bedensel eşlik ve sonuç bakımından karşılaştırır (s. 4).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Normal endişe ile patolojik endişenin karşılaştırılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Normal endişe kontrol edilebilir",
+      "B": "Patolojik endişe orantısızdır",
+      "C": "Normal endişe problem çözmeye yönlendirir",
+      "D": "Patolojik endişe belirli bir soruna odaklıdır",
+      "E": "Patolojik endişede işlevsellik düşer"
+     },
+     "dogru": "D",
+     "aciklama": "Belirli ve gerçek bir soruna odaklılık normal endişenin özelliğidir; patolojik endişe pek çok alana yayılır.",
+     "sik_aciklamalari": {
+      "A": "Normal endişe kontrol edilebilir ve ertelenebilir bir niteliktedir; kişi gerektiğinde onu bırakıp başka işe geçebilir. Bu özellik normal endişeye ait doğru bilgi olduğundan yanlış ifade bu değildir.",
+      "B": "Patolojik endişe olasılık ve olası sonuçla orantısızdır; küçük bir olasılık büyük bir tehdit gibi yaşanır. Önerme doğru olduğu için yanlış değildir.",
+      "C": "Normal endişe problem çözmeye yönlendirir ve kişiye eylem için gerekli uyarıyı sağlar. Bu işlev normal endişeyi tanımladığı için doğru bir önermedir.",
+      "D": "Belirli ve gerçek bir soruna odaklanmak normal endişenin özelliğidir; patolojik endişe pek çok alana yayılır ve konudan konuya kayar. Önerme özellikleri yer değiştirdiği için yanlıştır ve doğru cevaptır.",
+      "E": "Patolojik endişe belirgin sıkıntıya ve toplumsal ya da mesleki alanlarda işlevsellikte düşmeye yol açar. Bu sonuç hastalıklı endişeyi tarif ettiğinden önerme doğrudur."
+     },
+     "s": 4,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q04"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi normal endişeyi patolojik endişeden ayıran ölçütlerden biri değildir?",
+     "secenekler": {
+      "A": "Endişenin yoğunluğu",
+      "B": "Endişenin süresi",
+      "C": "Endişenin kontrol edilebilirliği",
+      "D": "Yarattığı işlev kaybı",
+      "E": "Endişenin içeriği"
+     },
+     "dogru": "E",
+     "aciklama": "Ayrımı içerik değil; yoğunluk, süre, kontrol edilebilirlik ve işlev kaybı belirler.",
+     "sik_aciklamalari": {
+      "A": "Endişenin yoğunluğu, normal ve patolojik endişeyi ayıran ölçütlerden biridir ve patolojik endişede orantısız biçimde yüksektir. Bu nedenle ayırt edici ölçütler içinde sayılır.",
+      "B": "Endişenin süresi, ayrımı belirleyen ölçütlerden biridir ve patolojik endişe süreğen, normal endişe ise geçicidir. Bu nedenle ayırt edici ölçütler içinde sayılır.",
+      "C": "Kontrol edilebilirlik, ayrımı belirleyen ölçütlerden biridir; normal endişe kontrol edilebilir ve ertelenebilir, patolojik endişe ise kontrol edilemez. Bu nedenle ayırt edici ölçütlerdendir.",
+      "D": "Yarattığı işlev kaybı, ayrımı belirleyen ölçütlerden biridir ve patolojik endişe belirgin sıkıntı ile işlevsellikte düşme yaratır. Bu nedenle ayırt edici ölçütlerdendir.",
+      "E": "Endişenin içeriği yani konusu ayrımı belirlemez; sağlık, aile, iş ya da para hem normal hem patolojik endişede konu olabilir. İçerik ayırt edici bir ölçüt olmadığı için doğru cevaptır."
+     },
+     "s": 4,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q05"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğundaki patolojik endişenin özelliklerinden biri değildir?",
+     "secenekler": {
+      "A": "Kontrol edilemez ve süreğendir",
+      "B": "Pek çok alana yayılır",
+      "C": "Olasılıkla orantısızdır",
+      "D": "Kas gerginliği ve uyku bozukluğu eşlik eder",
+      "E": "Problem çözmeye yönlendirir"
+     },
+     "dogru": "E",
+     "aciklama": "Problem çözmeye yönlendirmek normal endişenin özelliğidir; patolojik endişe sıkıntı ve işlev kaybı yaratır.",
+     "sik_aciklamalari": {
+      "A": "Kontrol edilemezlik ve süreğenlik patolojik endişenin temel niteliğidir ve hasta endişesini durduramadığını söyler. Patolojik endişeye ait olduğu için seçenek aranan değildir.",
+      "B": "Pek çok alana yayılma ve konudan konuya kayma, patolojik endişeyi belirli bir soruna odaklı normal endişeden ayırır. Patolojik endişeye ait olduğu için seçenek aranan değildir.",
+      "C": "Olasılık ve olası sonuçla orantısızlık, küçük bir ihtimalin büyük bir tehdit gibi yaşanmasıdır ve patolojik endişeyi tanımlar. Patolojik endişeye ait olduğu için seçenek aranan değildir.",
+      "D": "Kas gerginliği, yorgunluk ve uyku bozukluğu, patolojik endişeye eşlik eden bedensel belirtilerdir. Patolojik endişeye ait olduğu için seçenek aranan değildir.",
+      "E": "Problem çözmeye yönlendirmek, gerçek bir soruna odaklı normal endişenin işlevidir. Patolojik endişe belirgin sıkıntıya ve işlevsellikte düşmeye yol açtığı için bu özellik ona ait değildir ve doğru cevaptır."
+     },
+     "s": 4,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q06"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "YAB'yi tanımlar; serbest yüzen kaygıyı, birinci basamaktaki sıklığı, cinsiyet oranını ve yaygınlık sayılarını açıklar (s. 5, 6).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Birinci basamak sağlık hizmetlerine başvuranlarda en sık görülen anksiyete bozukluğu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Panik bozukluk",
+      "B": "Yaygın anksiyete bozukluğu",
+      "C": "Sosyal anksiyete bozukluğu",
+      "D": "Özgül fobi",
+      "E": "Obsesif kompulsif bozukluk"
+     },
+     "dogru": "B",
+     "aciklama": "YAB, birinci basamak başvurularında en sık görülen anksiyete bozukluğudur.",
+     "sik_aciklamalari": {
+      "A": "Panik bozukluk, beklenmedik panik atakları ve yeni atak endişesiyle seyreden bir anksiyete bozukluğudur. Birinci basamağa başvuranlarda en sık görülen anksiyete bozukluğu olmadığı için seçenek yanlıştır.",
+      "B": "Yaygın anksiyete bozukluğu, birçok konuya yayılan ve kontrol edilemeyen endişeyle seyreder ve birinci basamağa başvuranlarda en sık görülen anksiyete bozukluğudur. Bu nedenle doğru cevaptır.",
+      "C": "Sosyal anksiyete bozukluğunda endişe başkalarınca olumsuz değerlendirilme ve utanma üzerinedir ve kişi sosyal ortamlarda sıkıntı yaşar. Birinci basamakta en sık görülen anksiyete bozukluğu olmadığı için seçenek yanlıştır.",
+      "D": "Özgül fobi, belirli bir nesne ya da duruma yönelik korkudur ve odak belirlidir. Birinci basamakta en sık görülen anksiyete bozukluğu bu değildir.",
+      "E": "Obsesif kompulsif bozuklukta ego-distonik obsesyonlar ve kompulsiyonlar vardır ve kişi bunları kendine yabancı bulur. Birinci basamakta en sık görülen anksiyete bozukluğu olmadığı için seçenek yanlıştır."
+     },
+     "s": 5,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q07"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunun tanımıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Belli bir nesneye odaklanmamıştır",
+      "B": "Serbest yüzen kaygı olarak anılır",
+      "C": "Kadınlarda yaklaşık iki kat sıktır",
+      "D": "Endişenin konusu sabit kalır",
+      "E": "Birçok olay hakkında aşırı endişedir"
+     },
+     "dogru": "D",
+     "aciklama": "YAB'de endişenin konusu sağlık, aile, iş, para gibi alanlar arasında zamanla değişir.",
+     "sik_aciklamalari": {
+      "A": "Belli bir nesneye, yere, organa, saplantılı düşünceye ya da zorlantıya odaklanmamış olması YAB'nin tanımına dahildir ve kaygıyı yaygın kılar. Bu bilgi tanıma uyduğu için yanlış ifade bu değildir.",
+      "B": "Serbest yüzen kaygı, belirli bir odağı olmayan yaygın bunaltıyı anlatır ve YAB için kullanılan addır. Önerme doğru olduğu için cevap olmaz.",
+      "C": "YAB kadınlarda erkeklere göre yaklaşık iki kat daha sık görülür ve kadın cinsiyet aynı zamanda bir risk etmenidir. Bu epidemiyolojik bilgi doğru olduğundan yanlış ifade bu değildir.",
+      "D": "YAB'de endişenin konusu sabit kalmaz; sağlık, aile, iş, para ve gündelik sorumluluklar arasında zamanla değişir. Önerme yanlış olduğundan doğru cevaptır.",
+      "E": "YAB birçok olay ya da etkinlik hakkında en az 6 ay süren aşırı kaygı ve endişeyi anlatır. Önerme doğru olduğu için cevap olmaz."
+     },
+     "s": 5,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q08"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunun yaşam boyu yaygınlığı ve kadın/erkek oranı aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "%1,8 ve 1:1",
+      "B": "%3,7 ve 1:2",
+      "C": "%3,7 ve 2:1",
+      "D": "%5,0 ve 3:1",
+      "E": "%1,6 ve 2:1"
+     },
+     "dogru": "C",
+     "aciklama": "Yaşam boyu yaygınlık %3,7 ve kadın/erkek oranı 2:1'dir.",
+     "sik_aciklamalari": {
+      "A": "%1,8, yaşam boyu değil, 12 aylık yaygınlık değeridir ve kadın/erkek oranı bire bir değildir. Kadınlarda hastalık iki kat sık olduğundan seçenek yanlıştır.",
+      "B": "%3,7 yaşam boyu yaygınlıktır ancak oran ters verilmiştir. Hastalık erkeklerde değil kadınlarda iki kat sık görüldüğü için seçenek yanlıştır.",
+      "C": "Yaşam boyu yaygınlık %3,7'dir ve kadın/erkek oranı 2:1'dir; yani kadınlarda iki kat sıktır. İki değer de doğru verildiği için doğru cevaptır.",
+      "D": "%5,0, yüksek gelirli ülkelerdeki yaygınlık değeridir ve genel yaşam boyu yaygınlığı vermez. Kadın/erkek oranı da 3:1 olarak verilmiş, oysa doğru değer 2:1'dir.",
+      "E": "%1,6, düşük gelirli ülkelerdeki yaygınlıktır ve genel yaşam boyu yaygınlık değildir. Oran doğru verilmiş olsa da yaygınlık yanlış olduğundan seçenek yanlıştır."
+     },
+     "s": 6,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q09"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğunun epidemiyolojisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ortanca başlangıç yaşı yaklaşık 30'dur",
+      "B": "Etkilenenlerin yaklaşık yarısı tedavi arar",
+      "C": "Yaygınlık gelir düzeyiyle azalır",
+      "D": "Başlangıç diğer anksiyete bozukluklarından geçtir",
+      "E": "12 aylık yaygınlık %1,8'dir"
+     },
+     "dogru": "C",
+     "aciklama": "Yaygınlık ülkenin gelir düzeyiyle artar; yüksek gelirli ülkelerde %5,0, düşük gelirlilerde %1,6'dır.",
+     "sik_aciklamalari": {
+      "A": "Ortanca başlangıç yaşı yaklaşık 30'dur ve bu yaş, hastalığın erişkin dönemde başladığını gösterir. Bu epidemiyolojik bilgi doğru olduğundan yanlış ifade bu değildir.",
+      "B": "Etkilenenlerin yalnızca yaklaşık yarısı tedavi arayışına girer ve tanı çoğu zaman yıllar sonra konur. Önerme doğru olduğu için yanlış değildir.",
+      "C": "Yaygınlık ülkenin gelir düzeyiyle artar; yüksek gelirli ülkelerde %5,0, orta gelirlilerde %2,8, düşük gelirlilerde %1,6'dır. Önerme bu ilişkiyi tersine çevirdiği için yanlıştır ve doğru cevaptır.",
+      "D": "YAB diğer anksiyete bozukluklarından daha geç başlar ve ortanca başlangıç yaşı yaklaşık 30'dur. Önerme doğru olduğu için yanlış değildir.",
+      "E": "12 aylık yaygınlık %1,8'dir ve yaşam boyu yaygınlık olan %3,7'den düşüktür. Önerme doğru olduğu için yanlış değildir."
+     },
+     "s": 6,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q10"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Yaygın anksiyete bozukluğunun ortanca başlangıç yaşı yaklaşık kaçtır?",
+     "secenekler": {
+      "A": "10",
+      "B": "20",
+      "C": "30",
+      "D": "45",
+      "E": "60"
+     },
+     "dogru": "C",
+     "aciklama": "YAB'nin ortanca başlangıç yaşı yaklaşık 30'dur ve diğer anksiyete bozukluklarından geçtir.",
+     "sik_aciklamalari": {
+      "A": "10 yaşı, YAB'nin ortanca başlangıç yaşı olan yaklaşık 30'un çok altındadır ve erken çocukluğa denk gelir. Ortanca başlangıç yaklaşık 30 olduğu için seçenek yanlıştır.",
+      "B": "20 yaşı, YAB'nin ortanca başlangıç yaşı olan yaklaşık 30'un altındadır. Hastalık diğer anksiyete bozukluklarından geç başladığı için bu değer ortancayı yansıtmaz ve seçenek yanlıştır.",
+      "C": "Ortanca başlangıç yaşı yaklaşık 30'dur ve bu YAB'yi diğer anksiyete bozukluklarından daha geç başlayan bir hastalık yapar. Sorulan değer olduğu için doğru cevaptır.",
+      "D": "45 yaşı, orta yetişkinlik dönemidir ve YAB'nin ortanca başlangıcından daha ileridir. Ortanca başlangıç yaklaşık 30 olduğu için seçenek yanlıştır.",
+      "E": "60 yaşı, ileri yetişkinlik dönemidir ve YAB'nin ortanca başlangıcından çok daha ileridir. Ortanca başlangıç yaklaşık 30 olduğu için seçenek yanlıştır."
+     },
+     "s": 6,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q11"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "YAB'nin risk etmenlerini ve eşlik eden bozuklukları ayırır; majör depresyonun en sık eş tanı olduğunu belirtir (s. 7).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğuna eşlik eden bozukluklar arasında yer alır?",
+     "secenekler": {
+      "A": "Kadın cinsiyet",
+      "B": "Nevrotizm",
+      "C": "Düşük sosyo-ekonomik durum",
+      "D": "Kronik bedensel hastalık",
+      "E": "Alkol ve madde kullanım bozuklukları"
+     },
+     "dogru": "E",
+     "aciklama": "Alkol ve madde kullanım bozuklukları, risk etmeni değil eşlik eden bozukluk olarak sayılır.",
+     "sik_aciklamalari": {
+      "A": "Kadın cinsiyet, YAB için bir risk etmenidir ve hastalık kadınlarda yaklaşık iki kat sık görülür. Ruhsal bir bozukluk olmayıp kişisel özellik olduğundan eş tanı sütununda bulunmaz.",
+      "B": "Nevrotizm, davranışsal ketlenme ve sorunları içe atma eğilimiyle birlikte kişilik düzeyindeki bir risk etmenidir. Bir bozukluk değil eğilim olduğundan eş tanı sütununda değil, risk sütunundadır.",
+      "C": "Düşük sosyo-ekonomik durum, süregen stres ve kaynak kısıtı getiren bir risk etmenidir. Ruhsal bir bozukluk olmadığından eş tanı sütununda değil, risk sütunundadır.",
+      "D": "Kronik bedensel hastalık, süregen stres yükü getiren bir risk etmenidir ve YAB'den önce ya da sonra bulunabilir. Eşlik eden ruhsal bozukluklar sütununda yer almadığı için seçenek yanlıştır.",
+      "E": "Alkol ve madde kullanım bozuklukları, majör depresyon, panik bozukluk ve distimi ile birlikte eşlik eden bozukluklar sütunundadır. Risk etmeni olmayıp eş tanı sayıldığı için doğru cevaptır."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q12"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunun risk etmenleri ve eşlik eden bozukluklarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Nevrotizm risk etmenidir",
+      "B": "Kronik bedensel hastalık risk etmenidir",
+      "C": "Majör depresyon en sık eş tanıdır",
+      "D": "Distimi eşlik edebilir",
+      "E": "Madde kullanımı risk etmenidir"
+     },
+     "dogru": "E",
+     "aciklama": "Madde kullanım bozuklukları risk etmeni listesinde değil, eş tanılar arasındadır.",
+     "sik_aciklamalari": {
+      "A": "Nevrotizm ve davranışsal ketlenme, sorunları içe atma eğilimiyle birlikte kişilik düzeyindeki risk etmenleridir ve YAB'ye yatkınlık oluşturur. Önerme risk listesine uyduğu için doğrudur.",
+      "B": "Kronik bedensel hastalık, süregen stres yükü getirdiği için YAB risk etmenleri arasında sayılır ve hastalığın gelişimini kolaylaştırır. Önerme risk listesine uyduğu için doğrudur.",
+      "C": "Majör depresyon, çökkün duygudurum ve anhedoniyle giden bir bozukluktur ve YAB'ye en sık eşlik eden tanıdır; oranlar yüzde altmışlara varır. Önerme tabloya uyduğu için doğrudur.",
+      "D": "Distimi, süregen depresif bozukluktur ve panik bozukluk, sosyal anksiyete ile özgül fobi gibi YAB'ye eşlik edebilir. Önerme doğru olduğundan cevap olmaz.",
+      "E": "Madde kullanımı YAB'de eşlik eden bozukluklar sütunundadır; risk etmenleri sütununda değil, eş tanı olarak hastalığa eşlik eder. Bu yüzden önerme yanlıştır ve doğru cevaptır."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q13"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğuna en sık eşlik eden tanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Majör depresyon",
+      "B": "Panik bozukluk",
+      "C": "Özgül fobi",
+      "D": "Distimi",
+      "E": "Sosyal anksiyete bozukluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Majör depresyon YAB'ye en sık eşlik eden tanıdır ve oranlar yüzde altmışlara varır.",
+     "sik_aciklamalari": {
+      "A": "Majör depresyon, çökkün duygudurum ve anhedoni ile seyreden bir duygudurum bozukluğudur ve YAB'ye en sık eşlik eden tanıdır. Oranlar yüzde altmışlara vardığı için doğru cevaptır.",
+      "B": "Panik bozukluk, beklenmedik panik atakları ve yeni atak endişesiyle giden bir anksiyete bozukluğudur ve YAB'ye eşlik edebilir. Ancak eş tanılar arasında en sık görülen bu değildir.",
+      "C": "Özgül fobi, belirli bir nesne ya da duruma yönelik aşırı korkudur ve YAB'ye eşlik eden bozukluklar arasında sayılır. En sık eşlik eden tanı majör depresyon olduğu için seçenek yanlıştır.",
+      "D": "Distimi, süregen depresif bozukluktur ve YAB'ye eşlik eden tanılar arasında sayılır. Majör depresyona göre daha az sıklıkla eşlik ettiği için en sık eş tanı değildir.",
+      "E": "Sosyal anksiyete bozukluğunda endişe olumsuz değerlendirilme ve utanma üzerinedir ve YAB'ye eşlik edebilir. Majör depresyon kadar sık olmadığı için en sık eş tanı değildir."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q14"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunda eş tanılarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Hastaların çoğunda en az bir eş tanı vardır",
+      "B": "Majör depresyon oranları yüzde altmışlara varır",
+      "C": "Panik bozukluk eşlik edebilir",
+      "D": "Hastaların çoğu eş tanısız saf YAB'dir",
+      "E": "Distimi eşlik edebilir"
+     },
+     "dogru": "D",
+     "aciklama": "Saf YAB azdır; hastaların çoğunda en az bir eş tanı bulunur.",
+     "sik_aciklamalari": {
+      "A": "Hastaların çoğunda en az bir eş tanı bulunur ve bu YAB'nin klinik özelliğidir. Önerme tabloyu doğru yansıttığı için yanlış değildir.",
+      "B": "Majör depresyon en sık eş tanıdır ve oranlar yüzde altmışlara kadar çıkar. Önerme tabloyu doğru yansıttığı için doğrudur, yanlış değildir.",
+      "C": "Panik bozukluk, sosyal anksiyete bozukluğu ve özgül fobi gibi anksiyete bozuklukları YAB'ye eşlik edebilir. Önerme doğru olduğu için aranan yanlış ifade değildir.",
+      "D": "Eş tanısız saf YAB hastaların azınlığındadır, çoğunlukta en az bir eş tanı vardır. Önerme bu bilgiye ters düştüğü için yanlıştır ve doğru cevaptır.",
+      "E": "Distimi, süregen depresif bozukluk olarak YAB'ye eşlik edebilir ve eş tanılar arasında sayılır. Önerme tabloya uyduğu için doğrudur, yanlış değildir."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q15"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğunun risk etmenlerinden biridir?",
+     "secenekler": {
+      "A": "Çocuklukta kötü muamele görmüş olma",
+      "B": "Majör depresyonun birlikte bulunması",
+      "C": "Panik bozukluğun birlikte bulunması",
+      "D": "Distiminin birlikte bulunması",
+      "E": "Özgül fobinin birlikte bulunması"
+     },
+     "dogru": "A",
+     "aciklama": "Çocuklukta kötü muamele ve olumsuz yaşam olayları risk etmenidir; majör depresyon, panik bozukluk, distimi ve özgül fobi eşlik eden bozukluklardır.",
+     "sik_aciklamalari": {
+      "A": "Çocuklukta kötü muamele ve olumsuz yaşam olayları, YAB risk etmenleri listesinde yer alır ve hastalığa zemin hazırlayan erken dönem stresini anlatır. Yatkınlığı artıran bir öykü özelliği olduğu için doğru cevaptır.",
+      "B": "Majör depresyon, YAB'ye en sık eşlik eden tanıdır ve oranlar yüzde altmışlara kadar çıkar. Hastalığa yatkınlık yaratan bir öykü değil, birlikte bulunan ayrı bir bozukluk olduğu için seçenek yanlıştır.",
+      "C": "Panik bozukluk, YAB'ye eşlik edebilen anksiyete bozukluklarındandır ve eşlik eden bozukluklar sütununda yer alır. Yatkınlık yaratan bir öykü değil eş tanı olduğu için seçenek yanlıştır.",
+      "D": "Distimi, süregen depresif bozukluktur ve YAB'ye eşlik edebilir. Eş tanılar sütununda bulunduğu, yatkınlık yaratan bir öykü özelliği olmadığı için seçenek yanlıştır.",
+      "E": "Özgül fobi, panik bozukluk ve sosyal anksiyete bozukluğuyla birlikte YAB'ye eşlik eden bozukluklardandır. Yatkınlık yaratan bir öykü olmayıp eş tanı olarak sayıldığı için seçenek yanlıştır."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q55"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Otuz yaşında bir kadının öyküsünde çocuklukta kötü muamele, düşük sosyo-ekonomik durum ve sorunlarını içe atma eğilimi vardır. Bu özellikler yaygın anksiyete bozukluğu açısından nasıl değerlendirilir?",
+     "secenekler": {
+      "A": "Risk etmenleridir",
+      "B": "Eşlik eden bozukluklardır",
+      "C": "Tanı ölçütlerinin C maddesidir",
+      "D": "Ayırıcı tanıda dışlanacak durumlardır",
+      "E": "Ruhsal durum muayenesi bulgularıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Çocuklukta kötü muamele, düşük sosyo-ekonomik durum ve sorunları içe atma eğilimi YAB risk etmenleridir.",
+     "sik_aciklamalari": {
+      "A": "Çocuklukta kötü muamele, düşük sosyo-ekonomik durum ve sorunları içe atma eğilimi, YAB risk etmenleri listesinde yer alan öykü özellikleridir. Hastalığa yatkınlığı artırdıkları için doğru cevaptır.",
+      "B": "Eşlik eden bozukluklar majör depresyon, panik bozukluk, distimi ve madde kullanım bozukluğu gibi birlikte bulunan tanılardır. Çocukluk deneyimi ve sosyo-ekonomik koşullar bir tanı olmadığı için seçenek yanlıştır.",
+      "C": "DSM-5-TR C ölçütü, altı belirtiden en az üçünün kaygıya eşlik etmesini ister ve huzursuzluk, kolay yorulma, kas gerginliği gibi belirtileri sayar. Öykü özellikleri bu belirtilerden olmadığı için seçenek yanlıştır.",
+      "D": "Ayırıcı tanıda tıbbi durumlar, ilaç ve madde etkileri ile diğer ruhsal bozukluklar dışlanır. Çocukluk öyküsü ve sosyo-ekonomik koşullar dışlanacak bir tanı olmadığı için seçenek yanlıştır.",
+      "E": "Ruhsal durum muayenesi görünüm, konuşma, duygulanım, bilişsel yetiler, düşünce ve uyku alanlarındaki bulguları değerlendirir. Geçmiş öykü özellikleri muayene bulgusu olmadığı için seçenek yanlıştır."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q56"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "YAB'nin nörokimyasal ve genetik etkenlerini, kalıtılabilirlik ve aile risk oranlarını açıklar (s. 8, 9).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunda GABA-A-benzodiazepin reseptör sistemindeki temel bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABAerjik inhibisyonda yetersizlik",
+      "B": "GABAerjik inhibisyonda artış",
+      "C": "Glutamat salınımında azalma",
+      "D": "Serotonin düzeyinde sabitlenme",
+      "E": "Dopamin geri alımında artış"
+     },
+     "dogru": "A",
+     "aciklama": "GABA-A-benzodiazepin reseptör sisteminde GABAerjik inhibisyon yetersizdir.",
+     "sik_aciklamalari": {
+      "A": "GABA, merkezi sinir sisteminin baskılayıcı iletisidir ve YAB'de bu GABAerjik inhibisyon yetersizdir. Sistem yeterince baskılayamadığı için kaygı artar, bu yüzden doğru cevaptır.",
+      "B": "GABAerjik inhibisyonun artması sinir sistemini baskılayarak sakinleştirici etki yapar ve anksiyeteyi azaltır. YAB'de bu inhibisyon artmadığı, yetersiz kaldığı için seçenek yanlıştır.",
+      "C": "Glutamat, uyarıcı iletidir ve YAB'de glutamat disregülasyonu bulunur; sorun iletinin düzensizliğidir. Salınımın azalması bu tabloda tarif edilmediği için seçenek yanlıştır.",
+      "D": "Serotonin disregülasyonu tehdit algısı, endişe ve duygu düzenlemeyle ilişkilidir ve düzenin bozulmasını anlatır. Düzeyinin sabitlenmesi bu tablonun bulgusu olmadığı için seçenek yanlıştır.",
+      "E": "Dopamin geri alımı, YAB etiyolojisinde öne çıkan bir bulgu değildir. Etiyolojide GABA, serotonin, noradrenalin ve glutamat anıldığı için seçenek yanlıştır."
+     },
+     "s": 9,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q16"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğunun nörokimyasal etiyolojisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Serotonin disregülasyonu vardır",
+      "B": "Glutamat disregülasyonu vardır",
+      "C": "α2-adrenerjik reseptör duyarlılığı artmıştır",
+      "D": "HPA ekseninde aşırı uyarılmışlık vardır",
+      "E": "GABAerjik inhibisyon yetersizdir"
+     },
+     "dogru": "C",
+     "aciklama": "Noradrenalin sisteminde α2-adrenerjik otoreseptör duyarlılığı artmaz, azalır.",
+     "sik_aciklamalari": {
+      "A": "Serotonin disregülasyonu, tehdit algısı, endişe ve duygu düzenlemeyle ilişkilidir ve YAB'nin nörokimyasal bulgularındandır. Bu önerme doğru olduğundan yanlış ifade değildir.",
+      "B": "Glutamat disregülasyonu, uyarıcı iletinin düzeninin bozulmasıdır ve YAB'de bulunan nörokimyasal değişikliklerden biridir. Önerme etiyolojiyi doğru yansıttığı için aranan yanlış ifade bu değildir.",
+      "C": "Noradrenalin sisteminde α2-adrenerjik otoreseptör duyarlılığında azalma vardır ve artış söz konusu değildir. Önerme yönü ters verdiği için yanlıştır ve doğru cevaptır.",
+      "D": "HPA ekseni ve otonom sinir sisteminde aşırı uyarılmışlık vardır ve stres yanıtını yürütür; bu bedensel belirtilerin zeminini hazırlar. Önerme bulguyu doğru yansıttığı için yanlış değildir.",
+      "E": "GABA-A-benzodiazepin reseptör sisteminde GABAerjik inhibisyon yetersizdir ve baskılayıcı sistem kaygıyı yeterince durduramaz. Önerme nörokimyasal bulguyu doğru verdiği için yanlış değildir."
+     },
+     "s": 9,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q17"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İkiz çalışmalarında yaygın anksiyete bozukluğunun kalıtılabilirliği yaklaşık yüzde kaçtır?",
+     "secenekler": {
+      "A": "%10",
+      "B": "%20",
+      "C": "%30",
+      "D": "%60",
+      "E": "%90"
+     },
+     "dogru": "C",
+     "aciklama": "İkiz çalışmalarında YAB kalıtılabilirliği yaklaşık %30'dur ve genetik katkıyı gösterir.",
+     "sik_aciklamalari": {
+      "A": "%10, kalıtılabilirliği çok düşük gösterir ve genetik katkıyı olduğundan az tahmin eder. İkiz çalışmalarında bulunan değer bundan yüksek olduğu için seçenek yanlıştır.",
+      "B": "%20, kalıtılabilirliği düşük gösterir ve genetik katkıyı olduğundan az tahmin eden bir değerdir. İkiz çalışmalarında yaklaşık %30 bulunduğu için seçenek yanlıştır.",
+      "C": "%30, ikiz çalışmalarında bulunan yaklaşık kalıtılabilirliktir ve çevresel etkenlerin de belirgin bir paya sahip olduğunu gösterir. Sorulan değer olduğu için doğru cevaptır.",
+      "D": "%60, genetik katkıyı olduğundan fazla gösteren bir değerdir ve aile ile ikiz verileriyle örtüşmez. İkiz çalışmalarında yaklaşık %30 bulunduğu için bu seçenek yanlıştır.",
+      "E": "%90, neredeyse tamamen genetik bir hastalığı gösterir ve YAB için geçerli değildir. İkiz çalışmalarında yaklaşık %30 bulunduğu için seçenek yanlıştır."
+     },
+     "s": 9,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q18"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Yapılan GWAS çalışmasında yaygın anksiyete bozukluğu için tanımlanan risk lokusu sayısı ve öne çıkan yolak hangisidir?",
+     "secenekler": {
+      "A": "58 lokus, GABAerjik yolak",
+      "B": "58 lokus, dopaminerjik yolak",
+      "C": "25 lokus, GABAerjik yolak",
+      "D": "122 lokus, serotonerjik yolak",
+      "E": "30 lokus, glutamaterjik yolak"
+     },
+     "dogru": "A",
+     "aciklama": "GWAS çalışması 58 risk lokusu tanımlamış ve GABAerjik yolağı öne çıkarmıştır.",
+     "sik_aciklamalari": {
+      "A": "58 lokus ve GABAerjik yolak, GWAS çalışmasının bulgusudur ve YAB'nin poligenik yapısını gösterir. GABAerjik yolak aynı zamanda nörokimyasal bozukluğun da özüdür, bu yüzden doğru cevaptır.",
+      "B": "58 lokus sayısı doğru verilmiştir ancak öne çıkan yolak dopaminerjik olarak yazılmıştır. GWAS çalışmasında öne çıkan yolak GABAerjik olduğu için seçenek yanlıştır.",
+      "C": "GABAerjik yolak doğrudur ancak 25 lokus sayısı yanlıştır; yaklaşık %25 değeri birinci derece akrabalardaki etkilenme oranıdır. Lokus sayısı 58 olduğu için seçenek yanlıştır.",
+      "D": "122.000 değeri, çalışmaya katılan hasta sayısıdır ve lokus sayısı değildir. Tanımlanan lokus sayısı 58, yolak ise GABAerjiktir, bu yüzden seçenek yanlıştır.",
+      "E": "30 değeri, ikiz çalışmalarındaki kalıtılabilirlik yüzdesidir ve lokus sayısı değildir. Tanımlanan lokus sayısı 58, yolak ise GABAerjik olduğu için seçenek yanlıştır."
+     },
+     "s": 9,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q19"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Amigdala ve prefrontal korteks arasındaki tehdit ve düzenleme devresindeki bozukluğu açıklar (s. 10).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunda tehdit uyaranlarına aşırı reaktivite gösteren ve belirsiz uyaranları tehdit olarak yorumlayan beyin yapısı hangisidir?",
+     "secenekler": {
+      "A": "Hipokampus",
+      "B": "Amigdala",
+      "C": "Talamus",
+      "D": "Singulat girus arka bölümü",
+      "E": "Serebellum"
+     },
+     "dogru": "B",
+     "aciklama": "Amigdala tehdit uyaranlarına aşırı reaktiftir ve belirsiz uyaranları tehdit olarak yorumlar.",
+     "sik_aciklamalari": {
+      "A": "Hipokampus, bir beyin yapısıdır ve dersteki nöral devre tarifinde amigdala ile prefrontal korteksin yanında anılmaz. Tehdit uyaranlarına aşırı reaktif olan yapı amigdala olduğu için seçenek yanlıştır.",
+      "B": "Amigdala, tehdit uyaranlarına aşırı reaktiftir ve belirsiz uyaranları tehdit olarak yorumlar; HPA ekseni ve otonom yanıtı yürütür. Sorudaki tanıma uyduğu için doğru cevaptır.",
+      "C": "Talamus, bir beyin yapısıdır ve dersteki nöral devre tarifinde amigdalanın ve prefrontal korteksin yerini almaz. Belirsiz uyaranları tehdit olarak yorumlayan yapı amigdala olduğu için seçenek yanlıştır.",
+      "D": "Singulat girusun arka bölümü bu devrede anılmaz; ön singulat ise prefrontal düzenleme devresinin parçasıdır. Tehdit uyaranlarına aşırı reaktif yapı olmadığı için seçenek yanlıştır.",
+      "E": "Serebellum, bir beyin yapısıdır ve dersteki nöral devre tarifinde anılmaz; devre amigdala ve prefrontal korteksle tanımlanır. Tehdit uyaranlarına aşırı reaktif yapı amigdala olduğu için seçenek yanlıştır."
+     },
+     "s": 10,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q20"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğundaki nöral devrelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Amigdala tehdide aşırı reaktiftir",
+      "B": "Prefrontal korteksin inhibitör kontrolü artmıştır",
+      "C": "Amigdala-PFK bağlantısında işlevsel bozukluk vardır",
+      "D": "Amigdala HPA ekseni ve otonom yanıtı yürütür",
+      "E": "Ön singulat düzenleyici devrenin parçasıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Prefrontal korteksin amigdala üzerindeki inhibitör kontrolü artmaz, zayıflamıştır.",
+     "sik_aciklamalari": {
+      "A": "Amigdala tehdit uyaranlarına aşırı reaktif davranır ve belirsiz uyaranları bile tehdit gibi yorumlar. Bu önerme devredeki bulguyu doğru verdiğinden yanlış ifade değildir.",
+      "B": "Prefrontal korteksin amigdala üzerindeki düzenleyici yani inhibitör kontrolü zayıflamıştır ve bu durum amigdalanın aşırı reaktif kalmasına yol açar. Önerme kontrolün arttığını söylediği için yanlıştır ve doğru cevaptır.",
+      "C": "Amigdala ile prefrontal korteks arasındaki duygu düzenleme devresinde fonksiyonel bağlantı bozukluğu vardır ve bu bozukluk duygusal yanıtın düzenlenmesini aksatır. Önerme devredeki bulguyu doğru verdiği için yanlış değildir.",
+      "D": "Amigdala, HPA eksenini ve otonom yanıtı yürüterek terleme, çarpıntı gibi bedensel kaygı belirtilerini oluşturur. Önerme bu işlevi doğru verdiği için yanlış ifade değildir.",
+      "E": "Ön singulat ve ventromedial prefrontal korteks, amigdalayı düzenleyen prefrontal devrenin bölümleridir ve duygu düzenlemesini sağlar. Önerme devreyi doğru tarif ettiği için yanlış değildir."
+     },
+     "s": 10,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q21"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "YAB'ye ilişkin psikoanalitik, bilişsel-davranışçı, belirsizliğe tahammülsüzlük, bilişsel kaçınma ve metabilişsel modelleri ayırt eder (s. 11).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Endişenin belirsizliği kontrol etme çabası olarak görüldüğü psikolojik model aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psikoanalitik model",
+      "B": "Bilişsel kaçınma modeli",
+      "C": "Metabilişsel model",
+      "D": "Belirsizliğe tahammülsüzlük modeli",
+      "E": "Bilişsel-davranışçı model"
+     },
+     "dogru": "D",
+     "aciklama": "Belirsizliğe tahammülsüzlük modelinde belirsizlik kabul edilemez bulunur ve endişe onu kontrol etme çabasıdır.",
+     "sik_aciklamalari": {
+      "A": "Psikoanalitik modelde kaygı çözümlenmemiş bilinçdışı çatışmaların bir belirtisidir ve odak bilinçdışı çatışmadır. Endişeyi belirsizliği kontrol çabası olarak görmediği için sorulan model bu değildir.",
+      "B": "Bilişsel kaçınma modelinde sözel-düşünsel endişe yoğun duygusal ve bedensel uyarılmayı bastırır ve böylece olumsuz pekiştirilir. Belirsizliği kontrol etme çabasına dayanmadığı için seçenek yanlıştır.",
+      "C": "Metabilişsel modelde endişelenmek beni hazırlar ve endişem kontrolden çıkacak inançları vardır; endişe hakkında endişe sürer. Belirsizliğe tahammülsüzlüğe dayanmadığı için seçenek yanlıştır.",
+      "D": "Belirsizliğe tahammülsüzlük modelinde belirsizlik kabul edilemez ve tehdit edici bulunur ve endişe onu kontrol etme çabasıdır. Sorulan tanımı verdiği için doğru cevaptır.",
+      "E": "Bilişsel-davranışçı modelde algılanan tehdide yanlış ve kusurlu tepki vardır; tehlike abartılır, baş etme gücü küçümsenir. Belirsizliği kontrol etme çabasını esas almadığı için seçenek yanlıştır."
+     },
+     "s": 11,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q22"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğunun psikolojik modelleriyle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Psikoanalitik: bilinçdışı çatışma",
+      "B": "Bilişsel kaçınma: endişenin uyarılmayı bastırması",
+      "C": "Metabilişsel: endişe hakkında endişe",
+      "D": "Bilişsel-davranışçı: tehlikeyi küçümseme",
+      "E": "Belirsizliğe tahammülsüzlük: belirsizlik tehdit edicidir"
+     },
+     "dogru": "D",
+     "aciklama": "Bilişsel-davranışçı modelde tehlike küçümsenmez, abartılır; baş etme gücü küçümsenir.",
+     "sik_aciklamalari": {
+      "A": "Psikoanalitik modelde kaygı çözümlenmemiş bilinçdışı çatışmaların bir belirtisidir ve odak, kişinin iç dünyasındaki bilinçdışı çatışmadır. Eşleştirme modeli doğru tanımladığından yanlış değildir.",
+      "B": "Bilişsel kaçınmada sözel-düşünsel endişe yoğun duygusal ve bedensel uyarılmayı bastırır ve böylece pekiştirilir. Eşleştirme doğru olduğu için yanlış değildir.",
+      "C": "Metabilişsel modelde endişelenmek beni hazırlar ve endişem kontrolden çıkacak inançları, endişe hakkında endişeyi doğurur. Eşleştirme doğru olduğu için yanlış değildir.",
+      "D": "Bilişsel-davranışçı modelde tehlike abartılır ve baş etme gücü küçümsenir; bu çarpık değerlendirme kaygıyı sürdürür. Eşleştirme tehlikenin küçümsendiğini söylediği için yanlıştır ve doğru cevaptır.",
+      "E": "Belirsizliğe tahammülsüzlük modelinde belirsizlik kabul edilemez ve tehdit edici bulunur ve endişe onu kontrol etme çabasıdır. Eşleştirme bu modeli doğru tanımladığı için yanlış değildir."
+     },
+     "s": 11,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q23"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Ruhsal durum muayenesinde görünüm, konuşma, duygulanım, bilişsel yeti, düşünce ve uyku bulgularını açıklar (s. 12, 13).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Yoğun kaygı yaşayan 34 yaşındaki bir hasta dikkatinin çabuk dağıldığını ve bazı şeyleri geçici olarak unuttuğunu söylüyor. Bu yakınmalar ruhsal durum muayenesinin hangi alanına girer?",
+     "secenekler": {
+      "A": "Duygulanım",
+      "B": "Bilişsel yetiler",
+      "C": "Uyku",
+      "D": "Düşünce içeriği",
+      "E": "Görünüm ve davranış"
+     },
+     "dogru": "B",
+     "aciklama": "Dikkatin çabuk dağılması ve geçici unutkanlık bilişsel yetiler alanının bulgularıdır.",
+     "sik_aciklamalari": {
+      "A": "Duygulanım, hastanın duygusal durumunu anlatır ve YAB'de bun, bungunluk ve bunaltı olarak tarif edilir. Dikkat ve unutkanlık duygu değil zihinsel işlev olduğu için seçenek yanlıştır.",
+      "B": "Bilişsel yetiler, dikkat, bellek ve konsantrasyon gibi zihinsel işlevleri kapsar. Yorucu sıkıntı nedeniyle dikkat çabuk dağılıp geçici unutkanlık olduğu için doğru cevaptır.",
+      "C": "Uyku alanı uykuya dalmakta güçlük, sık uyanma ve dinlendirmeyen uykuyu kapsar. Dikkat ve unutkanlık uyku ile ilgili olmadığı için seçenek yanlıştır.",
+      "D": "Düşünce içeriği hastanın zihnini meşgul eden konuları anlatır ve YAB'de tasalar baskındır. Dikkat ve unutkanlık düşünce içeriğine değil zihinsel işleve ait olduğu için seçenek yanlıştır.",
+      "E": "Görünüm ve davranış alanı huzursuzluk, endişeli yüz, gergin duruş ve çabuk irkilmeyi kapsar. Dikkat ve unutkanlık dışarıdan görülen bir davranış olmadığı için seçenek yanlıştır."
+     },
+     "s": 13,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q24"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunda ruhsal durum muayenesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Duygulanım bunaltı olarak tarif edilir",
+      "B": "Düşünce içeriğinde tasalar baskındır",
+      "C": "Konuşma düzensizdir ve bağlantısızdır",
+      "D": "Uykuya dalmakta güçlük olur",
+      "E": "Dikkat çabuk dağılır"
+     },
+     "dogru": "C",
+     "aciklama": "YAB'de konuşma düzenlidir; seste titreklik olabilir ama konuşma bağlantısız değildir.",
+     "sik_aciklamalari": {
+      "A": "Duygulanım bun, bungunluk ve bunaltı olarak tarif edilir ve sıklıkla ruhsal çökkünlük eşlik eder. Önerme muayene bulgusunu doğru yansıttığı için doğrudur.",
+      "B": "Düşünce içeriğinde tasalar baskındır ve sabırsız anlatım nedeniyle düşünce süreci hızlanmış gibi görünebilir; bunlar ruhsal durum muayenesinde izlenen bulgulardır. Önerme muayene bulgusunu doğru yansıttığından doğrudur.",
+      "C": "Konuşma YAB'de düzenlidir; seste heyecanlı bir titreklik ve zor konuşma olabilir ama bağlantısızlık görülmez. Önerme tabloya ters düştüğü için yanlıştır ve doğru cevaptır.",
+      "D": "Uykuya dalmakta güçlük, sık uyanma ve dinlendirmeyen uyku, anksiyetenin uyku alanındaki bulgularıdır ve işlevselliği bozar. Bu bulgular tabloya uyduğu için yanlış olan önerme değildir.",
+      "E": "Yorucu sıkıntı nedeniyle dikkat çabuk dağılır ve geçici unutkanlıklar olabilir; bunlar bilişsel yetilerdeki bulgulardır. Önerme bilişsel yeti bulgularını doğru yansıttığı için aranan yanlış ifade bu değildir."
+     },
+     "s": 13,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q25"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Yaygın anksiyete bozukluğunda duygulanım nasıl tarif edilir?",
+     "secenekler": {
+      "A": "Künt ve donuk",
+      "B": "Taşkın ve coşkulu",
+      "C": "Bun, bungunluk ve bunaltı",
+      "D": "Uygunsuz ve yüzeysel",
+      "E": "Duygusal küntleşme"
+     },
+     "dogru": "C",
+     "aciklama": "Duygulanım bun, bungunluk ve bunaltı olarak tarif edilir ve sıklıkla ruhsal çökkünlük eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Künt ve donuk duygulanım, duygusal ifadenin belirgin azalmasıdır ve YAB'nin duygulanım tarifi değildir. YAB'de duygulanım bunaltı, bun ve bungunlukla anlatıldığı için seçenek yanlıştır.",
+      "B": "Taşkın ve coşkulu duygulanım yükselmiş duygudurumun özelliğidir ve YAB tablosuna uymaz. YAB'de duygulanım bunaltı yönündedir, bu yüzden seçenek yanlıştır.",
+      "C": "Bun, bungunluk ve bunaltı, YAB'deki duygulanımı anlatan tariflerdir ve sıklıkla ruhsal çökkünlük eşlik eder. Sorulan tarifi verdiği için doğru cevaptır.",
+      "D": "Uygunsuz ve yüzeysel duygulanım, duygunun içeriğe uymamasıdır ve YAB'nin duygulanım tarifi değildir. YAB'de duygulanım bunaltı olarak anlatıldığı için seçenek yanlıştır.",
+      "E": "Duygusal küntleşme, duygusal tepkinin silikleşmesidir ve YAB tablosuna uymaz. YAB'de duygulanım bunaltı ve gerginlik yönünde olduğu için seçenek yanlıştır."
+     },
+     "s": 13,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q26"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Bedensel ve fizyolojik belirtileri sistemlere göre ayırır; otonom aşırı uyarılmayı yorumlar (s. 14).",
+   "sorular": [
+    {
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Yaygın anksiyete bozukluğundaki bedensel belirtilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Otonomik aktivitede azalma görülür",
+      "B": "Terleme ve sık idrara çıkma olur",
+      "C": "Kan basıncında yükselme görülebilir",
+      "D": "Boğazda düğümlenme hissi olabilir",
+      "E": "Kas gerginliği ve titreme eşlik eder"
+     },
+     "dogru": "A",
+     "aciklama": "Bedensel belirtiler otonom aşırı uyarılmayı yansıtır; otonomik aktivite azalmaz, artar.",
+     "sik_aciklamalari": {
+      "A": "Otonomik aktivite anksiyetede azalmaz, aşırı uyarılma nedeniyle artar ve terleme, çarpıntı gibi belirtilerin kaynağıdır. Bu önerme tabloya ters düştüğü için yanlıştır ve doğru cevaptır.",
+      "B": "Terleme ve sık idrara çıkma, otonom belirtilerdir ve sempatik aşırı uyarılmanın bulgusudur. Bu önerme anksiyete tablosuna uygun olduğu için doğrudur.",
+      "C": "Kan basıncında yükselme ve çarpıntı kardiyovasküler belirtilerdir ve otonom aşırı uyarılmayı yansıtır. Bu önerme tabloya uygun olduğundan doğrudur, aranan yanlış ifade değildir.",
+      "D": "Boğazda düğümlenme hissi, nefes almakta güçlük ve hava açlığıyla birlikte solunum belirtileri grubundadır. Bu önerme tabloya uyan doğru bir bilgi olduğu için aranan yanlış ifade değildir.",
+      "E": "Kas gerginliği, baş, boyun ve omuz ağrıları ile titreme kas-iskelet belirtileridir ve anksiyetede sık görülür. Bu önerme doğru olduğundan cevap olmaz."
+     },
+     "s": 14,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q27"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Ağız kuruluğu, bulantı-kusma ve sık dışkılama yaygın anksiyete bozukluğunda hangi sistem belirtileri arasındadır?",
+     "secenekler": {
+      "A": "Kardiyovasküler",
+      "B": "Solunum",
+      "C": "Gastrointestinal",
+      "D": "Nörolojik",
+      "E": "Kas-iskelet"
+     },
+     "dogru": "C",
+     "aciklama": "Ağız kuruluğu, bulantı-kusma ve sık dışkılama gastrointestinal belirtilerdir.",
+     "sik_aciklamalari": {
+      "A": "Kardiyovasküler belirtiler çarpıntı, kan basıncında yükselme, yüzde solukluk ya da kızarmadır. Ağız ve bağırsak yakınmaları bu gruba girmediği için yanlıştır.",
+      "B": "Solunum belirtileri nefes almakta güçlük, hava açlığı ve boğazda düğümlenme hissidir. Sindirim kanalına ait yakınmaları kapsamadığı için bu seçenek yanlıştır.",
+      "C": "Gastrointestinal belirtiler ağız kuruluğu, bulantı-kusma ve sık dışkılamadır; sindirim kanalındaki otonom aşırı uyarılmayı gösterir. Sorudaki üç yakınma bu gruba girdiği için doğru cevaptır.",
+      "D": "Nörolojik belirtiler ellerde ve ayaklarda uyuşma, karıncalanma ve baş dönmesidir ve sinir sistemiyle ilgili yakınmaları anlatır. Sindirim kanalı yakınmalarını içermediği için bu seçenek yanlıştır.",
+      "E": "Kas-iskelet belirtileri kas gerginliği, baş, boyun ve omuz ağrıları ile titremedir. Ağız kuruluğu ve bağırsak yakınmalarını kapsamadığı için yanlıştır."
+     },
+     "s": 14,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q28"
+    },
+    {
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Nefes almakta güçlük, hava açlığı ve boğazda düğümlenme hissi yaygın anksiyete bozukluğunda hangi sistem belirtileri arasındadır?",
+     "secenekler": {
+      "A": "Kardiyovasküler",
+      "B": "Solunum",
+      "C": "Gastrointestinal",
+      "D": "Otonom",
+      "E": "Nörolojik"
+     },
+     "dogru": "B",
+     "aciklama": "Nefes almakta güçlük, hava açlığı ve boğazda düğümlenme hissi solunum belirtileridir.",
+     "sik_aciklamalari": {
+      "A": "Kardiyovasküler belirtiler çarpıntı, kan basıncında yükselme, yüzde solukluk ya da kızarmadır ve dolaşım sistemini ilgilendirir. Nefes ve boğaz yakınmalarını kapsamadığı için seçenek yanlıştır.",
+      "B": "Solunum belirtileri nefes almakta güçlük, hava açlığı ve boğazda düğümlenme hissidir. Sorudaki üç yakınma bu gruba girdiği için doğru cevaptır.",
+      "C": "Gastrointestinal belirtiler ağız kuruluğu, bulantı-kusma ve sık dışkılamadır ve sindirim kanalındaki aşırı uyarılmayı gösterir. Nefes ve boğaz yakınmalarını kapsamadığı için seçenek yanlıştır.",
+      "D": "Otonom belirtiler terleme ve sık idrara çıkmadır ve sempatik aşırı uyarılmayı yansıtır. Nefes ve boğaz yakınmalarını kapsamadığı için seçenek yanlıştır.",
+      "E": "Nörolojik belirtiler ellerde ve ayaklarda uyuşma, karıncalanma ve baş dönmesidir ve sinir sistemiyle ilgili yakınmaları anlatır. Nefes ve boğaz yakınmalarını kapsamadığı için seçenek yanlıştır."
+     },
+     "s": 14,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q29"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Hastanın kliniğe başvuru biçimini ve çocuk, ergen, yaşlı ile gebelikteki özel görünümleri açıklar (s. 15).",
+   "sorular": [
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğu hastalarının klinik başvurusuyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Çoğu hasta doğrudan psikiyatriye başvurur",
+      "B": "Baş ağrısı ve kas ağrıları ön plandadır",
+      "C": "Tekrarlayan tetkikler sıktır",
+      "D": "Çocukta tek belirti yeterlidir",
+      "E": "Yaşlıda geç başlangıçta ilaç etkisi araştırılır"
+     },
+     "dogru": "A",
+     "aciklama": "Çoğu hasta psikiyatriye değil, aile hekimi ve dahiliye gibi polikliniklere başvurur.",
+     "sik_aciklamalari": {
+      "A": "Çoğu hasta psikiyatriye değil, aile hekimi, dahiliye, kardiyoloji, nöroloji ve gastroenteroloji polikliniklerine başvurur. Önerme bu bilgiye ters düştüğü için yanlıştır ve doğru cevaptır.",
+      "B": "Baş ağrısı, kas ağrıları, çarpıntı, mide-bağırsak yakınmaları, uykusuzluk ve yorgunluk başvuruda ön plandadır. Önerme doğru olduğu için yanlış değildir.",
+      "C": "Tekrarlayan başvurular ve tetkikler bu hastalarda sıktır; endişe sorulmazsa tanı atlanır ve hasta farklı polikliniklerde dolaşır. Bu önerme tabloya uyduğundan yanlış ifade değildir.",
+      "D": "Çocuk ve ergende tanı için tek belirti yeterlidir ve okul başarısı, mükemmeliyetçilik, güvence arama görülür. Önerme doğru olduğu için yanlış değildir.",
+      "E": "Yaşlıda geç başlangıçta tıbbi hastalık ve ilaç etkisi mutlaka araştırılır; çünkü organik nedenler anksiyeteyi taklit edebilir. Bu önerme doğru olduğundan seçenek yanlış değildir."
+     },
+     "s": 15,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q30"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi çocuk ve ergenlerde yaygın anksiyete bozukluğuyla ilgili bilgilerden biri değildir?",
+     "secenekler": {
+      "A": "Mükemmeliyetçilik görülür",
+      "B": "Sürekli güvence arama görülür",
+      "C": "Okul başarısıyla ilgili endişe olur",
+      "D": "Tanı için bir belirti yeterlidir",
+      "E": "Tanı için altı belirtinin tamamı gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Çocuklarda C ölçütü için tek belirti yeterlidir; altı belirtinin tamamı gerekmez.",
+     "sik_aciklamalari": {
+      "A": "Mükemmeliyetçilik, çocuk ve ergende YAB'nin tipik görünümlerinden biridir ve okul başarısıyla birlikte görülür. Bu görünümün bir parçası olduğu için seçenek aranan bilgi değildir.",
+      "B": "Sürekli güvence arama, çocuk ve ergende endişenin davranışa yansıyan biçimidir ve YAB'de sık görülür. Bu görünümün bir parçası olduğu için seçenek aranan değildir.",
+      "C": "Okul başarısıyla ilgili endişe, çocuk ve ergende görülen endişe konularından biridir ve okul başarısı ile birlikte anılır. Bu görünümün bir parçası olduğu için seçenek aranan bilgi değildir.",
+      "D": "Çocuklarda C ölçütü için bir belirti yeterlidir ve bu erişkindeki üç belirti eşiğinden farklıdır. Bilginin doğru olduğu için seçenek aranan değildir.",
+      "E": "Altı belirtinin tamamını aramak ne erişkinde ne çocukta ölçüttür; erişkinde en az üç, çocukta bir belirti yeterlidir. Bu bilgi yanlış olduğu için seçenek doğru cevaptır."
+     },
+     "s": 15,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q31"
+    },
+    {
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "70 yaşında, yaşamında ilk kez yaygın endişe yakınması başlayan bir hastada tanıdan önce aşağıdakilerden hangisi yapılmalıdır?",
+     "secenekler": {
+      "A": "Yalnızca ilaç öyküsü alınır",
+      "B": "Yalnızca ölçek uygulanır",
+      "C": "Tıbbi hastalık ve ilaç etkisi araştırılır",
+      "D": "Yalnızca tiroid testi istenir",
+      "E": "Yalnızca ailede anksiyete öyküsü sorulur"
+     },
+     "dogru": "C",
+     "aciklama": "Geç başlangıçta tıbbi hastalık ve ilaç etkisi mutlaka araştırılır.",
+     "sik_aciklamalari": {
+      "A": "İlaç öyküsü, anksiyeteyi tetikleyen ilaçları saptamak için gereklidir. Ancak geç başlangıçta tıbbi hastalıkların da araştırılması gerektiğinden yalnızca ilaç öyküsüyle yetinmek eksik kalır ve seçenek yanlıştır.",
+      "B": "Ölçekler tarama ve şiddet izlemi için kullanılır. Geç başlangıçta tıbbi hastalık ve ilaç etkisi araştırılması gerektiğinden yalnızca ölçek uygulamak tanıyı güvenceye almaz ve seçenek yanlıştır.",
+      "C": "Yaşlıda geç başlangıçta tıbbi hastalık ve ilaç etkisi mutlaka araştırılır; çünkü hipertiroidi, kalp ve solunum hastalıkları ile ilaçlar anksiyeteyi taklit edebilir. Bu yaklaşım doğru olduğu için doğru cevaptır.",
+      "D": "Tiroid fonksiyon testleri, hipertiroidiyi saptayarak anksiyeteyi taklit eden bir tıbbi nedeni dışlar. Geç başlangıçta tıbbi hastalıkların ve ilaç etkisinin tümü araştırıldığı için yalnızca tiroid testi yeterli değildir ve seçenek yanlıştır.",
+      "E": "Ailede anksiyete ya da depresyon öyküsü, YAB'de bir risk etmenidir. Geç başlangıçta tıbbi hastalık ve ilaç etkisi araştırılması gerektiğinden yalnızca aile öyküsü sormak yeterli olmadığı için seçenek yanlıştır."
+     },
+     "s": 15,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q32"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "DSM-5-TR A-F tanı ölçütlerini, süre eşiğini ve altı belirtiden en az üçü koşulunu açıklar (s. 16, 17).",
+   "sorular": [
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "38 yaşında, üç aydır birçok konuda denetleyemediği aşırı endişe yaşayan, huzursuz ve kolay yorulan hastada yaygın anksiyete bozukluğu tanısını engelleyen ölçüt hangisidir?",
+     "secenekler": {
+      "A": "İşlevsellikte düşme bulunması",
+      "B": "Endişenin birçok konuya yayılması",
+      "C": "Süre ölçütünün 6 aydan kısa olması",
+      "D": "Kolay yorulma belirtisinin bulunması",
+      "E": "Endişeyi denetlemede güçlük olması"
+     },
+     "dogru": "C",
+     "aciklama": "Tanı için en az 6 aylık süre gerekir; üç aylık tablo A ölçütünün süre koşulunu karşılamaz.",
+     "sik_aciklamalari": {
+      "A": "İşlevsellikte düşme, D ölçütünde yer alır ve kaygının toplumsal ya da mesleki alanlarda yarattığı bozulmayı gösterir. Tanıyı engelleyen değil, tanı için gerekli olan bir ölçüttür.",
+      "B": "Endişenin birçok olay ya da etkinliğe yayılması A ölçütünün konusudur ve YAB'yi tek konuya odaklı kaygılardan ayırır. Hastada birçok konuda endişe bulunduğu için bu ölçüt tanıyı destekler.",
+      "C": "En az 6 aylık süre, A ölçütünün zorunlu parçasıdır ve geçici endişeden kalıcı bozukluğu ayırır. Üç aylık tablo bu süreyi karşılamadığı için tanı engellenir; doğru cevap budur.",
+      "D": "Kolay yorulma, C ölçütündeki altı belirtiden biridir ve eşik üç belirti olduğu için tanıyı destekler. Hastada bu belirtinin bulunması tanıyı engellemez, ölçüte katkı sağlar.",
+      "E": "Endişeyi denetim altına almakta güçlük, B ölçütüdür ve patolojik endişeyi normal endişeden ayırır. Hastanın endişelerini denetleyememesi B ölçütünü karşılar ve tanıyı destekler."
+     },
+     "s": 16,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q33"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğunun DSM-5-TR tanı ölçütlerinden biri değildir?",
+     "secenekler": {
+      "A": "Endişeyi denetlemede güçlük olması",
+      "B": "Panik atak öyküsünün bulunması",
+      "C": "Belirgin sıkıntı ya da işlev kaybı",
+      "D": "Başka ruhsal bozuklukla açıklanamama",
+      "E": "En az 6 aylık süre"
+     },
+     "dogru": "B",
+     "aciklama": "Panik atak öyküsü YAB ölçütü değildir; beklenmedik panik atakları panik bozukluğu ayırt eder.",
+     "sik_aciklamalari": {
+      "A": "Endişeyi denetim altına almakta güçlük, B ölçütüdür ve patolojik endişeyi normal endişeden ayırır. Bu yüzden tanı ölçütleri içinde yer alan bir bulgudur.",
+      "B": "Panik atak öyküsü, panik bozukluğun beklenmedik ataklarına ait bir bulgudur ve ayırıcı tanıda YAB'den ayıran özelliktir. YAB ölçütleri içinde yer almadığı için doğru cevaptır.",
+      "C": "Klinik açıdan belirgin sıkıntı ya da işlevsellikte düşme, D ölçütüdür ve kaygının toplumsal ya da mesleki alanlarda yarattığı bozulmayı gösterir. Tanının gerekli koşullarından biridir.",
+      "D": "Başka bir ruhsal bozuklukla daha iyi açıklanamama, F ölçütüdür ve panik bozukluk, OKB, TSSB gibi tabloların dışlanmasını gerektirir. Tanı koydurmak için aranan koşullardandır.",
+      "E": "En az 6 aylık süre, A ölçütünün zorunlu parçasıdır ve geçici endişeden kalıcı bozukluğu ayırır. Tanının temel zaman koşulu olduğu için ölçütler içinde sayılır."
+     },
+     "s": 16,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q34"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "DSM-5-TR C ölçütüne göre yaygın anksiyete bozukluğunda altı belirtiden en az kaçının eşlik etmesi gerekir?",
+     "secenekler": {
+      "A": "Bir",
+      "B": "İki",
+      "C": "Üç",
+      "D": "Dört",
+      "E": "Beş"
+     },
+     "dogru": "C",
+     "aciklama": "C ölçütü için altı belirtiden en az üçünün eşlik etmesi gerekir; çocuklarda bir belirti yeterlidir.",
+     "sik_aciklamalari": {
+      "A": "Bir belirti, DSM-5-TR'de yalnızca çocuklar için yeterli sayılan eşiktir. Erişkinde altı belirtiden en az üçü arandığı için bu sayı ölçütü karşılamaz ve seçenek yanlıştır.",
+      "B": "İki belirti, erişkin için C ölçütündeki eşiğin altındadır ve tanıyı koymaya yetmez. Tanı için gereken belirti sayısı bundan fazla olduğu için seçenek yanlıştır.",
+      "C": "Altı belirtiden en az üçü eşlik ettiğinde C ölçütü karşılanır. Bu eşik erişkin için geçerlidir ve çocuklarda bir belirti yeterlidir, bu yüzden doğru cevaptır.",
+      "D": "Dört belirti, erişkin için C ölçütündeki eşiğin üzerindedir ve zorunlu değildir. Ölçüt altı belirtiden en az üçünü istediği için bu sayı gerekli olmayıp seçenek yanlıştır.",
+      "E": "Beş belirti, C ölçütündeki eşiğin çok üzerindedir ve gerekli değildir. Ölçüt altı belirtiden en az üçünü istediği için bu sayı aranmaz ve seçenek yanlıştır."
+     },
+     "s": 16,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q35"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "YAB'nin DSM-5-TR C ölçütündeki belirtilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kolay yorulma belirtilerden biridir",
+      "B": "Kas gerginliği belirtilerden biridir",
+      "C": "İrritabilite belirtilerden biridir",
+      "D": "Çarpıntı belirtilerden biridir",
+      "E": "Uyku bozukluğu belirtilerden biridir"
+     },
+     "dogru": "D",
+     "aciklama": "Çarpıntı otonom bir belirtidir ve C ölçütündeki altı belirtiden biri değildir.",
+     "sik_aciklamalari": {
+      "A": "Kolay yorulma, C ölçütündeki altı belirtiden biridir ve kişinin gün içinde çabuk bitkin düşmesini anlatır. Listede yer alan gerçek bir belirti olduğu için yanlış ifade bu değildir.",
+      "B": "Kas gerginliği, C ölçütündeki altı belirtiden biridir ve anksiyetede baş, boyun, omuz ağrılarıyla birlikte sık görülür. Listede bulunan belirtilerden olduğu için aranan yanlış ifade bu değildir.",
+      "C": "İrritabilite yani çabuk sinirlenme, C ölçütündeki belirtilerdendir ve gündelik uyaranlara orantısız tepki vermeyi anlatır. Bu belirti ölçütte yazılı olduğundan doğru bir ifadedir.",
+      "D": "Çarpıntı kardiyovasküler bir bulgudur ve C ölçütündeki altı belirtiden biri değildir; bu belirtiler huzursuzluk, kolay yorulma, odaklanma güçlüğü, irritabilite, kas gerginliği ve uyku bozukluğudur. Önerme yanlış olduğundan doğru cevaptır.",
+      "E": "Uyku bozukluğu, C ölçütündeki altı belirtiden biridir ve uykuya dalma güçlüğü ya da dinlendirmeyen uykuyla kendini gösterir. Ölçütte sayılan bir belirti olduğundan ifade doğrudur."
+     },
+     "s": 16,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q36"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Hipertiroidi gibi tıbbi bir durumun etkisiyle açıklanabilen kaygı hangi DSM-5-TR ölçütüyle dışlanır?",
+     "secenekler": {
+      "A": "A ölçütü",
+      "B": "B ölçütü",
+      "C": "C ölçütü",
+      "D": "D ölçütü",
+      "E": "E ölçütü"
+     },
+     "dogru": "E",
+     "aciklama": "E ölçütü bozukluğun bir maddenin ya da başka bir tıbbi durumun etkisine bağlanamayacağını belirtir.",
+     "sik_aciklamalari": {
+      "A": "A ölçütü, en az 6 aylık sürede çoğu gün süren aşırı kaygı ve endişeyi tarif eder. Tıbbi nedenlerin dışlanmasıyla ilgili olmadığı için seçenek yanlıştır.",
+      "B": "B ölçütü, kişinin endişelerini denetim altına almakta güçlük çekmesini tarif eder ve patolojik endişeyi normalden ayırır. Tıbbi nedenlerin dışlanmasıyla ilgili olmadığı için seçenek yanlıştır.",
+      "C": "C ölçütü, altı belirtiden en az üçünün eşlik etmesini ister ve huzursuzluk, kolay yorulma gibi belirtileri sayar. Tıbbi nedenleri dışlamadığı için seçenek yanlıştır.",
+      "D": "D ölçütü, belirgin sıkıntı ya da toplumsal ve mesleki alanlarda işlevsellikte düşmeyi ister ve kaygının yarattığı bozulmayı gösterir. Tıbbi nedenleri dışlamadığı için seçenek yanlıştır.",
+      "E": "E ölçütü, bozukluğun kötüye kullanılan madde, ilaç ya da hipertiroidi gibi tıbbi durumun fizyolojik etkilerine bağlanamayacağını belirtir. Sorudaki dışlamayı yaptığı için doğru cevaptır."
+     },
+     "s": 17,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q37"
+    },
+    {
+     "kazanim": 11,
+     "zorluk": "zor",
+     "soru": "45 yaşında, günde sekiz fincan kahve içen, çarpıntı ve sürekli endişe yakınması olan hastada yaygın anksiyete bozukluğu tanısından önce hangi ölçüt özellikle değerlendirilmelidir?",
+     "secenekler": {
+      "A": "Madde etkisine bağlanamama",
+      "B": "Belirtilerin sayısı",
+      "C": "Denetleme güçlüğü",
+      "D": "Süre ölçütü",
+      "E": "İşlevsellikte düşme"
+     },
+     "dogru": "A",
+     "aciklama": "Kafein bir madde etkisidir; E ölçütü gereği kaygının madde etkisine bağlanamaması aranır.",
+     "sik_aciklamalari": {
+      "A": "Kafein, anksiyeteyi tetikleyen bir maddedir ve E ölçütü kaygının maddenin fizyolojik etkisine bağlanamamasını ister. Aşırı kahve tüketiminde bu ölçüt özellikle sorgulandığı için doğru cevaptır.",
+      "B": "Belirtilerin sayısı C ölçütünün konusudur ve altı belirtiden en az üçünü ister. Kahve tüketimi sayıyı değil, kaygının kaynağını sorgulattığı için seçenek öncelikli değildir.",
+      "C": "Denetleme güçlüğü, B ölçütüdür ve endişeyi durduramama durumudur. Kahve öyküsü bu ölçütle değil kaygının nedeniyle ilgili olduğundan seçenek öncelikli değildir.",
+      "D": "Süre ölçütü, en az 6 aylık süreyi arar ve A ölçütünün parçasıdır. Aşırı kahve tüketimi süreyi değil, kaygının kaynağını sorgulattığı için seçenek öncelikli değildir.",
+      "E": "İşlevsellikte düşme, D ölçütüdür ve kaygının yarattığı bozulmayı gösterir. Kahve öyküsü bu ölçütü değil, nedensel etkiyi sorgulattığı için seçenek öncelikli değildir."
+     },
+     "s": 17,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q38"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Tanı için klinik görüşmeyi, tarama ölçeklerini ve organik nedenleri dışlayan tetkikleri açıklar (s. 18).",
+   "sorular": [
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Türkçe YAB-7 formunda kesme puanı kaçtır?",
+     "secenekler": {
+      "A": "3",
+      "B": "5",
+      "C": "8",
+      "D": "10",
+      "E": "15"
+     },
+     "dogru": "C",
+     "aciklama": "YAB-7 Türkçe formunda kesme puanı 8'dir.",
+     "sik_aciklamalari": {
+      "A": "3, YAB-2 ölçeğinde ileri değerlendirme için kullanılan eşiktir ve iki maddelik ölçeğe aittir. YAB-7 Türkçe formunun kesme puanı olmadığı için seçenek yanlıştır.",
+      "B": "5, YAB-7'de hafif düzeyin başladığı puandır ve şiddet sınıflamasında kullanılır. Türkçe formun kesme puanı olmadığı için seçenek yanlıştır.",
+      "C": "8, YAB-7 Türkçe formunda tarama için kullanılan kesme puanıdır ve ölçeğin 0 ile 21 arasındaki aralığında yer alır. Sorulan değeri doğru verdiği için doğru cevaptır.",
+      "D": "10, YAB-7'de orta düzeyin başladığı puandır ve şiddet sınıflamasında kullanılır. Türkçe formun kesme puanı olmadığı için seçenek yanlıştır.",
+      "E": "15, YAB-7'de ağır düzeyin başladığı puandır ve şiddet sınıflamasında kullanılır. Türkçe formun kesme puanı olmadığı için seçenek yanlıştır."
+     },
+     "s": 18,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q39"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğunun değerlendirilmesinde kullanılan ölçeklerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Ölçekler tarama ve şiddet izlemi içindir",
+      "B": "YAB-7 0-21 puan arasındadır",
+      "C": "HAM-A klinisyen tarafından uygulanır",
+      "D": "Tanı ölçeklerle tek başına konur",
+      "E": "YAB-2'de 3 ve üzeri ileri değerlendirme gerektirir"
+     },
+     "dogru": "D",
+     "aciklama": "Tanı klinik görüşmeyle konur; ölçekler tarama ve şiddet izlemi için kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Ölçekler tarama ve şiddet izlemi içindir ve tanı klinik görüşmeye aittir. Bu önerme ölçeklerin rolünü doğru anlattığı için yanlış ifade değildir.",
+      "B": "YAB-7 ölçeği 0 ile 21 puan arasında değişir ve 5, 10, 15 sırasıyla hafif, orta, ağır düzeyi gösterir. Önerme doğru olduğu için yanlış değildir.",
+      "C": "HAM-A, klinisyen tarafından uygulanan bir değerlendirme ölçeğidir ve hastanın kendi doldurduğu formlardan ayrılır. Bu önerme ölçeğin kullanımını doğru anlattığından yanlış ifade bu değildir.",
+      "D": "Tanı klinik görüşmeyle konur ve ölçekler tek başına tanı koydurmaz. Önerme ölçeği tanı aracı sayarak bu bilgiye ters düştüğü için yanlıştır ve doğru cevaptır.",
+      "E": "YAB-2 ölçeğinde ilk iki madde sorulur ve puan 3 ve üzeri ise ileri değerlendirme yapılır. Önerme doğru olduğu için yanlış değildir."
+     },
+     "s": 18,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q40"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğu şüphesinde tiroid hastalıklarını dışlamak için hangi testler istenir?",
+     "secenekler": {
+      "A": "Tam kan sayımı ve B12",
+      "B": "TSH ve sT4",
+      "C": "Açlık kan şekeri",
+      "D": "Elektrolit ve kalsiyum",
+      "E": "EKG ve idrarda madde taraması"
+     },
+     "dogru": "B",
+     "aciklama": "Tiroid fonksiyon testleri olan TSH ve sT4 organik nedenleri dışlamak için istenir.",
+     "sik_aciklamalari": {
+      "A": "Tam kan sayımı ve B12, anemi ve B12 eksikliği gibi nedenleri araştırır ve organik dışlama tetkikleri arasındadır. Tiroid işlevini göstermediği için bu seçenek yanlıştır.",
+      "B": "TSH ve sT4, tiroid fonksiyon testleridir ve hipertiroidiyi saptayarak anksiyeteyi taklit eden bir tıbbi nedeni dışlar. Sorulan tiroid araştırmasını yaptığı için doğru cevaptır.",
+      "C": "Açlık kan şekeri, hipoglisemi ve diyabet gibi metabolik nedenleri araştırır ve dışlama tetkiklerindendir. Tiroid işlevini göstermediği için bu seçenek yanlıştır.",
+      "D": "Elektrolitler kalsiyumu da içerir ve elektrolit bozukluklarıyla hipoparatiroidi gibi anksiyeteyi taklit eden nedenleri araştırır. Tiroid işlevini değerlendirmediği için bu seçenek yanlıştır.",
+      "E": "EKG, ritim bozukluklarını araştırmak için ve idrarda madde taraması, madde etkisini saptamak için gerektiğinde yapılır. Tiroid işlevini göstermediği için bu seçenek yanlıştır."
+     },
+     "s": 18,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q41"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunda organik nedenleri dışlamaya yönelik değerlendirmeyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Öykü ilaç, kafein, alkol ve maddeyi kapsar",
+      "B": "Fizik muayene ve vital bulgular alınır",
+      "C": "Elektrolitlerde kalsiyum da değerlendirilir",
+      "D": "EKG her hastada rutin olarak istenir",
+      "E": "İdrarda madde taraması gerektiğinde yapılır"
+     },
+     "dogru": "D",
+     "aciklama": "EKG ve idrarda madde taraması her hastada değil, gerektiğinde istenir.",
+     "sik_aciklamalari": {
+      "A": "Ayrıntılı öykü ilaçları, kafeini, alkolü ve maddeyi sorgular ve anksiyeteyi tetikleyen etkenleri saptar. Bu önerme değerlendirme basamağını doğru anlattığı için yanlış değildir.",
+      "B": "Fizik muayene ve vital bulgular, anksiyeteyi taklit eden organik hastalık işaretlerini araştırmak için alınır. Bu önerme değerlendirme basamağını doğru tarif ettiğinden yanlış ifade değildir.",
+      "C": "Elektrolit incelemesi kalsiyumu da içerir ve hipoparatiroidi gibi anksiyeteyi taklit eden nedenleri araştırır. Bu önerme tetkikin kapsamını doğru verdiğinden aranan yanlış ifade değildir.",
+      "D": "EKG, kalp ritmini ve iletiyi gösteren bir tetkiktir ve gerektiğinde istenir, her hastada rutin olarak alınmaz. Önerme rutin istemi söylediği için yanlıştır ve doğru cevaptır.",
+      "E": "İdrarda madde taraması, madde etkisinden şüphelenildiğinde gerektiğinde yapılan bir tetkiktir ve kaygının maddeye bağlı olup olmadığını gösterir. Önerme bu kullanımı doğru anlattığı için yanlış değildir."
+     },
+     "s": 18,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q42"
+    },
+    {
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "YAB-2 ölçeğinde ilk iki madde sorulduktan sonra kaç ve üzeri puan ileri değerlendirme gerektirir?",
+     "secenekler": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "5",
+      "E": "8"
+     },
+     "dogru": "C",
+     "aciklama": "YAB-2'de puan 3 ve üzeri ise ileri değerlendirme yapılır.",
+     "sik_aciklamalari": {
+      "A": "1 puan, iki maddelik ölçekte düşük bir değerdir ve ileri değerlendirme eşiği değildir. Eşik 3 ve üzeri olduğu için seçenek yanlıştır.",
+      "B": "2 puan, iki maddelik ölçekte eşiğin hemen altındadır ve ileri değerlendirme gerektirmez. Eşik 3 ve üzeri olduğu için seçenek yanlıştır.",
+      "C": "YAB-2 ölçeğinde ilk iki madde sorulur ve puan 3 ve üzeri ise ileri değerlendirme yapılır. Eşik değerini doğru verdiği için doğru cevaptır.",
+      "D": "5, YAB-7 ölçeğinde hafif düzeyin başladığı puandır ve YAB-2 eşiği değildir. YAB-2'de eşik 3 olduğu için seçenek yanlıştır.",
+      "E": "8, YAB-7 Türkçe formunun kesme puanıdır ve YAB-2 eşiği değildir. YAB-2'de eşik 3 olduğu için seçenek yanlıştır."
+     },
+     "s": 18,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q43"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "YAB'nin ayırıcı tanısındaki tıbbi durumları, ilaç ve madde etkilerini sayar (s. 19, 20).",
+   "sorular": [
+    {
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğunun ayırıcı tanısındaki tıbbi durumlardan biri değildir?",
+     "secenekler": {
+      "A": "Hipertiroidi",
+      "B": "Feokromositoma",
+      "C": "Astım",
+      "D": "Paroksismal atriyal taşikardi",
+      "E": "Psikotik bozukluk"
+     },
+     "dogru": "E",
+     "aciklama": "Psikotik bozukluk tıbbi durum değil, psikiyatrik ayırıcı tanı grubundadır.",
+     "sik_aciklamalari": {
+      "A": "Hipertiroidi, endokrin ayırıcı tanılar arasındadır ve çarpıntı, huzursuzluk yaparak anksiyeteyi taklit eder. Tıbbi ayırıcı tanı listesinde yer aldığı için seçenek yanlıştır.",
+      "B": "Feokromositoma, katekolamin salgılayan bir tümördür ve endokrin ayırıcı tanılar arasında yer alır. Tıbbi ayırıcı tanı listesinde bulunduğu için seçenek yanlıştır.",
+      "C": "Astım, solunum yollarını tutan bir hastalıktır ve nefes darlığıyla anksiyeteyi taklit eder. Tıbbi ayırıcı tanı listesinde solunum grubunda bulunduğu için seçenek yanlıştır.",
+      "D": "Paroksismal atriyal taşikardi, kardiyovasküler ayırıcı tanılardandır ve ani başlayan çarpıntıyla anksiyeteyi taklit eder. Tıbbi ayırıcı tanı listesinde bulunduğu için seçenek yanlıştır.",
+      "E": "Psikotik bozukluklar sanrı ve varsanılarla giden ruhsal bozukluklardır ve psikiyatrik ayırıcı tanı grubundadır. Tıbbi durumlar listesinde bulunmadığı için bu seçenek doğru cevaptır."
+     },
+     "s": 20,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q44"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğunun ayırıcı tanısında yoksunluk başlığı altında sayılır?",
+     "secenekler": {
+      "A": "Alkol",
+      "B": "Kafein",
+      "C": "Nikotin",
+      "D": "Amfetamin",
+      "E": "Kokain"
+     },
+     "dogru": "A",
+     "aciklama": "Ayırıcı tanıda yoksunluk başlığı altında alkol, opioid ve sedatif-hipnotikler sayılır.",
+     "sik_aciklamalari": {
+      "A": "Alkol, ayırıcı tanı listesinde yoksunluk başlığı altında sayılır ve alkol yoksunluğu anksiyeteyi taklit edebilir. Yoksunluk başlığında yer alan madde olduğu için doğru cevaptır.",
+      "B": "Kafein, ayırıcı tanı listesinde entoksikasyon başlığı altında yer alır ve aşırı alımda anksiyeteyi taklit eder. Yoksunluk başlığında alkol, opioid ve sedatif-hipnotikler sayıldığı için seçenek yanlıştır.",
+      "C": "Nikotin, ayırıcı tanı listesinde entoksikasyon başlığı altında yer alan bir maddedir ve aşırı alımda kaygıyı artırır. Yoksunluk başlığı alkol, opioid ve sedatif-hipnotiklerden oluştuğu için seçenek yanlıştır.",
+      "D": "Amfetamin, ayırıcı tanı listesinde entoksikasyon başlığı altında yer alan uyarıcı bir maddedir. Yoksunluk başlığında alkol, opioid ve sedatif-hipnotikler sayıldığı için seçenek yanlıştır.",
+      "E": "Kokain, ayırıcı tanı listesinde entoksikasyon başlığı altında yer alan uyarıcı bir maddedir ve huzursuzluk ile çarpıntıyı taklit eder. Yoksunluk başlığı farklı maddelerden oluştuğu için seçenek yanlıştır."
+     },
+     "s": 20,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q45"
+    },
+    {
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğunun kardiyovasküler ayırıcı tanılarından biri değildir?",
+     "secenekler": {
+      "A": "Anjina",
+      "B": "Kalp yetmezliği",
+      "C": "Mitral kapak prolapsusu",
+      "D": "Paroksismal atriyal taşikardi",
+      "E": "Astım"
+     },
+     "dogru": "E",
+     "aciklama": "Astım kardiyovasküler değil, solunum grubundaki ayırıcı tanıdır.",
+     "sik_aciklamalari": {
+      "A": "Anjina, koroner yetersizliğe bağlı göğüs ağrısı ve çarpıntıyla anksiyeteyi taklit edebilen kardiyovasküler bir ayırıcı tanıdır. Kardiyovasküler listede yer aldığı için seçenek yanlıştır.",
+      "B": "Kalp yetmezliği, nefes darlığı ve çarpıntıyla anksiyeteyi taklit edebilen kardiyovasküler bir ayırıcı tanıdır. Kardiyovasküler listede yer aldığı için seçenek yanlıştır.",
+      "C": "Mitral kapak prolapsusu, çarpıntı ve göğüs yakınmalarıyla anksiyeteyi taklit edebilen kardiyovasküler bir ayırıcı tanıdır. Kardiyovasküler listede yer aldığı için seçenek yanlıştır.",
+      "D": "Paroksismal atriyal taşikardi, ani başlayan çarpıntı ataklarıyla anksiyeteyi taklit eden kardiyovasküler bir ayırıcı tanıdır. Kardiyovasküler listede yer aldığı için seçenek yanlıştır.",
+      "E": "Astım, solunum yollarını tutan bir hastalıktır ve nefes darlığıyla anksiyeteyi taklit eder; ayırıcı tanıda solunum grubunda sayılır. Kardiyovasküler grupta bulunmadığı için doğru cevaptır."
+     },
+     "s": 20,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q46"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "YAB'yi panik bozukluk, sosyal anksiyete, OKB, TSSB, depresyon ve uyum bozukluğundan ayıran özellikleri açıklar (s. 21).",
+   "sorular": [
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "29 yaşındaki hasta ansızın başlayan ve kısa sürede doruğa çıkan yoğun korku nöbetleri yaşıyor, endişesi yeni bir nöbet geçirmek üzerine odaklanıyor. Ayırıcı tanıda ilk düşünülecek bozukluk hangisidir?",
+     "secenekler": {
+      "A": "Yaygın anksiyete bozukluğu",
+      "B": "Panik bozukluk",
+      "C": "Hastalık kaygısı bozukluğu",
+      "D": "Travma sonrası stres bozukluğu",
+      "E": "Kaygılı uyum bozukluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Beklenmedik panik atakları ve yeni atak endişesi panik bozukluğu YAB'den ayırır.",
+     "sik_aciklamalari": {
+      "A": "Yaygın anksiyete bozukluğunda endişe gündelik yaşam sorunlarına yayılır ve beklenmedik panik atakları ön planda değildir. Soruda tarif edilen tablo bu bozukluğa uymadığı için yanlıştır.",
+      "B": "Panik bozuklukta beklenmedik panik atakları vardır ve endişe yeni atak olacağı üzerinedir. Soruda tarif edilen iki özelliği de taşıdığı için doğru cevaptır.",
+      "C": "Hastalık kaygısı bozukluğunda endişe tek konuya, ciddi bir hastalığa sahip olmaya odaklıdır. Atak endişesi bu bozukluğun ayırt edici özelliği olmadığı için seçenek yanlıştır.",
+      "D": "Travma sonrası stres bozukluğunda travmatik olay, yeniden yaşantılama, kaçınma ve aşırı uyarılmışlık vardır. Sorudaki tabloda travma öyküsü olmadığı için seçenek yanlıştır.",
+      "E": "Kaygılı uyum bozukluğu belirli bir stres etkenine yanıttır ve stres etkeni sonlanınca 6 ayı aşmaz. Atak endişesi bu bozukluğu tanımlamadığı için seçenek yanlıştır."
+     },
+     "s": 21,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q47"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğunun ayırıcı tanısındaki bozukluklarla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Sosyal anksiyete: olumsuz değerlendirilme endişesi",
+      "B": "Hastalık kaygısı: tek bir ciddi hastalık",
+      "C": "TSSB: travmatik olay ve yeniden yaşantılama",
+      "D": "Depresyon: ruminasyon geleceğe yöneliktir",
+      "E": "Psikotik bozukluk: sanrı ve varsanı"
+     },
+     "dogru": "D",
+     "aciklama": "Depresif bozukluklarda ruminasyon geçmişe yöneliktir; eşleştirme bu yönü tersine çevirmiştir.",
+     "sik_aciklamalari": {
+      "A": "Sosyal anksiyete bozukluğunda endişe başkalarınca olumsuz değerlendirilme ve utanma üzerinedir ve ayırıcı tanıda YAB'den bu odakla ayrılır. Eşleştirme tabloya uyduğundan doğru bir bilgidir.",
+      "B": "Hastalık kaygısı bozukluğunda endişe tek bir konuya, ciddi bir hastalığa sahip olmaya odaklıdır ve ayırıcı tanıda YAB'den bu odakla ayrılır. Eşleştirme doğru olduğu için yanlış değildir.",
+      "C": "Travma sonrası stres bozukluğunda travmatik olay, yeniden yaşantılama, kaçınma ve aşırı uyarılmışlık vardır ve ayırıcı tanıda bu dörtlüyle ayrılır. Eşleştirme tabloya uyduğundan yanlış değildir.",
+      "D": "Depresif bozukluklarda çökkün duygudurum ve anhedoni ön plandadır ve ruminasyon geçmişe yöneliktir. Eşleştirme ruminasyonu geleceğe yönelik gösterdiği için yanlıştır ve doğru cevaptır.",
+      "E": "Psikotik bozukluklarda sanrı ve varsanılar vardır ve kaygı ikincil bir belirtidir; bu yüzden YAB'den ayrılır. Bu eşleşme ayırıcı tanı tablosuyla örtüştüğü için yanlış değildir."
+     },
+     "s": 21,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q48"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "42 yaşında, tüm endişesi bedeninde ciddi bir illet taşıdığı düşüncesine odaklanan hastada ayırıcı tanıda ilk düşünülecek bozukluk hangisidir?",
+     "secenekler": {
+      "A": "Hastalık kaygısı bozukluğu",
+      "B": "Yaygın anksiyete bozukluğu",
+      "C": "Panik bozukluk",
+      "D": "Obsesif kompulsif bozukluk",
+      "E": "Sosyal anksiyete bozukluğu"
+     },
+     "dogru": "A",
+     "aciklama": "Endişenin tek konuya, ciddi bir hastalığa sahip olmaya odaklanması hastalık kaygısı bozukluğunun özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Hastalık kaygısı bozukluğunda endişe tek konuya, ciddi bir hastalığa sahip olmaya odaklıdır. Sorudaki odak tek konuya yönelik olduğu için doğru cevaptır.",
+      "B": "Yaygın anksiyete bozukluğunda endişe birçok olay ya da etkinliğe yayılır ve konudan konuya kayar. Sorudaki tek konuya odaklanma bu bozukluğa uymadığı için seçenek yanlıştır.",
+      "C": "Panik bozuklukta beklenmedik panik atakları vardır ve endişe yeni atak olacağı üzerinedir. Sorudaki tek bir hastalığa odaklanma bu bozukluğu tanımlamadığı için seçenek yanlıştır.",
+      "D": "Obsesif kompulsif bozuklukta ego-distonik obsesyonlar ve kompulsiyonlar vardır. Sorudaki endişenin tek bir hastalığa odaklanması bu bozukluğu tanımlamadığı için seçenek yanlıştır.",
+      "E": "Sosyal anksiyete bozukluğunda endişe başkalarınca olumsuz değerlendirilme ve utanma üzerinedir. Sorudaki tek bir hastalığa odaklanma bu bozukluğu tanımlamadığı için seçenek yanlıştır."
+     },
+     "s": 21,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q49"
+    },
+    {
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Kaygılı uyum bozukluğunda stres etkeni sonlandıktan sonra belirtilerin sürebileceği en uzun süre (üst sınır) hangisidir?",
+     "secenekler": {
+      "A": "1 ay",
+      "B": "3 ay",
+      "C": "6 ay",
+      "D": "12 ay",
+      "E": "24 ay"
+     },
+     "dogru": "C",
+     "aciklama": "Kaygılı uyum bozukluğunda stres etkeni sonlanınca belirtiler 6 ayı aşmaz; üst sınır 6 aydır.",
+     "sik_aciklamalari": {
+      "A": "1 ay, belirtilerin sürebileceği üst sınırın çok altında kalan bir değerdir. Kaygılı uyum bozukluğunda stres etkeni sonlandıktan sonra üst sınır 6 ay olduğu için seçenek yanlıştır.",
+      "B": "3 ay, belirtilerin sürebileceği üst sınırın altında kalan ve sınıra ulaşmayan bir değerdir. Kaygılı uyum bozukluğunda üst sınır 6 ay olduğu için seçenek yanlıştır.",
+      "C": "Kaygılı uyum bozukluğu belirli bir stres etkenine yanıttır ve stres etkeni sonlanınca belirtiler 6 ayı aşmaz; üst sınır 6 aydır. YAB ise en az 6 ay süren tabloyu ister, bu yüzden doğru cevaptır.",
+      "D": "12 ay, uyum bozukluğunun süre sınırının üzerindedir ve kalıcı bir tabloyu düşündürür. Stres etkeni sonlandıktan sonra üst sınır 6 ay olduğu için seçenek yanlıştır.",
+      "E": "24 ay, uyum bozukluğunun süre sınırının çok üzerindedir ve kalıcı bir bozukluğu düşündürür. Stres etkeni sonlandıktan sonra üst sınır 6 ay olduğu için seçenek yanlıştır."
+     },
+     "s": 21,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q50"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "YAB'nin seyrini, kötü gidiş belirteçlerini ve özkıyım riskini açıklar (s. 22).",
+   "sorular": [
+    {
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğunda kötü gidiş belirteçlerinden biri değildir?",
+     "secenekler": {
+      "A": "Erken başlangıç",
+      "B": "Kadın cinsiyet",
+      "C": "Eş tanıların bulunması",
+      "D": "Tedaviye zayıf yanıt",
+      "E": "Erkek cinsiyet"
+     },
+     "dogru": "E",
+     "aciklama": "Kötü gidiş belirteçleri arasında kadın cinsiyet sayılır; erkek cinsiyet bu belirteçlerden değildir.",
+     "sik_aciklamalari": {
+      "A": "Erken başlangıç, kötü gidiş belirteçlerindendir ve daha uzun, dirençli bir seyri gösterir. Bu belirteç listede yer aldığı için seçenek aranan bilgi değildir ve yanlıştır.",
+      "B": "Kadın cinsiyet, YAB'de kötü gidiş belirteçlerinden biridir ve aynı zamanda hastalığın iki kat sık görüldüğü gruptur. Listede yer aldığı için bu seçenek yanlıştır.",
+      "C": "Depresyon ve madde kullanımı gibi eş tanılar, seyri ağırlaştırdığı için kötü gidiş belirteçlerindendir. Listede yer aldığı için bu seçenek yanlıştır.",
+      "D": "Tedaviye zayıf yanıt, hastalığın kalıcı olacağını gösteren bir kötü gidiş belirtecidir ve izlemde dikkat gerektirir. Bu belirteç listede yer aldığı için seçenek yanlıştır.",
+      "E": "Erkek cinsiyet, YAB'de kötü gidiş belirteçleri içinde sayılan cinsiyet değildir; sayılan belirteç kadın cinsiyettir ve erkeklerde hastalık daha az görülür. Belirteç olmayan seçenek bu olduğu için doğru cevaptır."
+     },
+     "s": 22,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q51"
+    },
+    {
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Yaygın anksiyete bozukluğunun gidişi ve sonlanışıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Seyir kronik ve dalgalıdır",
+      "B": "Kendiliğinden tam düzelme oranı yüksektir",
+      "C": "Yaşam kalitesi belirgin düşer",
+      "D": "Özkıyım riski artmıştır",
+      "E": "Yaşam olayları alevlenmelerde etkilidir"
+     },
+     "dogru": "B",
+     "aciklama": "YAB'de kendiliğinden tam düzelme oranı düşüktür; seyir kronik ve dalgalıdır.",
+     "sik_aciklamalari": {
+      "A": "Seyir kronik ve dalgalıdır ve hastaların çoğu kendimi bildim bileli endişeliyim der. Önerme hastalığın doğal seyrini doğru anlattığı için yanlış değildir.",
+      "B": "Kendiliğinden tam düzelme oranı düşüktür; bu yüzden hastalık uzun yıllar sürer. Önerme düzelme oranını yüksek gösterdiği için yanlıştır ve doğru cevaptır.",
+      "C": "İşlevsellik ve yaşam kalitesi belirgin düşer ve hastalar sağlık hizmetlerini sık kullanır. Bu sonuç kronik seyrin doğal bir parçası olduğundan önerme doğrudur.",
+      "D": "Özkıyım riski artmıştır ve eşlik eden depresyonla daha da yükselir; bu yüzden her hastada sorgulanır. Bu bilgi tabloyu doğru yansıttığından yanlış ifade bu değildir.",
+      "E": "Yaşam olayları hastalığın başlangıcında ve alevlenmelerinde etkilidir ve çevresel yükün seyri belirlediğini gösterir. Önerme doğru olduğundan aranan yanlış ifade değildir."
+     },
+     "s": 22,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q52"
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Vakada karşılanan ölçütleri, dışlanacak durumları, istenecek tetkikleri ve sorgulanacak eş tanıyı belirler (s. 23).",
+   "sorular": [
+    {
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Bir yıldır çocuklarının sağlığı, işi ve maddi durumu için endişelerini durduramayan, kolay yorulan 34 yaşındaki öğretmen kadında mutlaka sorgulanması gereken eş tanı hangisidir?",
+     "secenekler": {
+      "A": "Majör depresyon",
+      "B": "Psikotik bozukluk",
+      "C": "Özgül fobi",
+      "D": "Hastalık kaygısı bozukluğu",
+      "E": "Travma sonrası stres bozukluğu"
+     },
+     "dogru": "A",
+     "aciklama": "YAB'de depresyon ve özkıyım düşüncesi her hastada mutlaka sorgulanır.",
+     "sik_aciklamalari": {
+      "A": "Majör depresyon, YAB'ye en sık eşlik eden tanıdır ve özkıyım riskini artırır. Depresyon ve özkıyım her hastada mutlaka sorgulandığı için doğru cevaptır.",
+      "B": "Psikotik bozukluk, sanrı ve varsanılarla giden bir bozukluktur ve YAB'de kaygı ikincildir. Bu hastada mutlaka sorgulanacak eş tanı olarak öne çıkmadığı için seçenek yanlıştır.",
+      "C": "Özgül fobi, belirli bir nesne ya da duruma yönelik korkudur ve YAB'ye eşlik edebilir. Mutlaka sorgulanması gereken eş tanı olarak öne çıkmadığı için seçenek yanlıştır.",
+      "D": "Hastalık kaygısı bozukluğunda endişe tek konuya, ciddi bir hastalığa sahip olmaya odaklıdır. Vakada endişeler çok konuludur, bu yüzden mutlaka sorgulanacak eş tanı bu değildir.",
+      "E": "Travma sonrası stres bozukluğunda travmatik olay, yeniden yaşantılama ve kaçınma vardır. Vakada travma öyküsü anlatılmadığı için mutlaka sorgulanacak eş tanı bu değildir."
+     },
+     "s": 7,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q53"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Dersin özet noktalarını bir arada değerlendirir: odak yokluğu, sıklık, bedensel başvuru, 6 ay ve 3 belirti, dışlama ve seyir (s. 24).",
+   "sorular": [
+    {
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Yaygın anksiyete bozukluğunun akılda kalacak noktalarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Özü kontrol edilemeyen ve orantısız endişedir",
+      "B": "Birinci basamakta en sık anksiyete bozukluğudur",
+      "C": "Hastalar çoğunlukla ruhsal yakınmalarla başvurur",
+      "D": "Tıbbi durum ve madde etkileri dışlanmalıdır",
+      "E": "Seyir kronik, özkıyım riski artmıştır"
+     },
+     "dogru": "C",
+     "aciklama": "Hastalar çoğunlukla ruhsal değil, bedensel yakınmalarla başvurur ve endişe sorulmazsa tanı atlanır.",
+     "sik_aciklamalari": {
+      "A": "YAB'nin özü, birçok konuya yayılan, kontrol edilemeyen ve orantısız endişedir ve tanımın temelini oluşturur. Bu özet doğru olduğu için yanlış önerme değildir.",
+      "B": "YAB, birinci basamak sağlık hizmetlerine başvuranlarda en sık görülen anksiyete bozukluğudur ve yaşam boyu yaklaşık yüzde dört görülür. Önerme doğru olduğu için yanlış değildir.",
+      "C": "Hastalar çoğunlukla ruhsal değil bedensel yakınmalarla başvurur ve endişe sorulmazsa tanı atlanır. Önerme başvuruyu ruhsal yakınmalara bağladığı için yanlıştır ve doğru cevaptır.",
+      "D": "Tıbbi durumlar, ilaç ve madde etkileri, kafein dahil, tanı öncesinde mutlaka dışlanmalıdır ve bu dışlama E ölçütünün gereğidir. Önerme özetle uyumlu olduğu için yanlış değildir.",
+      "E": "Seyir kronik olup depresyon ve özkıyım riski her hastada değerlendirilmelidir; çünkü eş tanılar ve özkıyım riski artmıştır. Önerme özetle uyumlu olduğu için doğrudur."
+     },
+     "s": 24,
+     "id": "k2-54-yaygin-anksiyete-bozuklugu-q54"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 56
+}

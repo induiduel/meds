@@ -1,0 +1,948 @@
+{
+ "surum": 2,
+ "key": "k2-51",
+ "kod": "2f11",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f11"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Kolinerjik nörotransmisyon: sentez, yıkım ve reseptörler"
+    },
+    {
+     "metin": "Kolinomimetiklerin yapısı ve sınıflaması"
+    },
+    {
+     "metin": "Direkt etkili kolinomimetikler"
+    },
+    {
+     "metin": "Kolinesteraz inhibitörleri"
+    },
+    {
+     "metin": "Organofosfat zehirlenmesi"
+    },
+    {
+     "metin": "Klinik vakalar ve ders özeti"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Kolinerjik nörotransmisyon: sentez, yıkım ve reseptörler.",
+    "Kolinomimetiklerin yapısı ve sınıflaması.",
+    "Direkt etkili kolinomimetikler.",
+    "Kolinesteraz inhibitörleri.",
+    "Organofosfat zehirlenmesi.",
+    "Klinik vakalar ve ders özeti."
+   ],
+   "v": "755c00217a"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Dersin hedefleri: iletim, reseptör alt tipleri, direkt ve indirekt kolinomimetikler",
+     "metin": "İletim ve reseptör alt tipleri, direkt ve indirekt kolinomimetikler hedeflenir.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Dersin yol haritası: beş bölüm (nörotransmisyon, direkt kolinomimetikler, kolinesteraz inhibitörleri, organofosfat zehirlenmesi)",
+     "metin": "Beş bölüm: kolinerjik nörotransmisyon, direkt kolinomimetikler, kolinesteraz inhibitörleri, organofosfat zehirlenmesi, klinik vakalar.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Kolinerjik nöronlar: preganglionik lifler ACh salar, ganglionda NN reseptörü",
+     "metin": "Sempatik ve parasempatik preganglionik lifler ACh salar, ganglionda NN reseptörü uyarılır.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "ACh sentezi ve salımı",
+     "metin": "Kolin alımı (CHT; hemikolinyum bloke eder), sentez (ChAT), depolama (VAChT; vesamikol bloke eder) ve salım dört basamaktır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "ACh yıkımı: AChE asetilkolinin etkisini hızla sonlandırır",
+     "metin": "AChE ACh'nin etkisini hızla sonlandırır.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Muskarinik (M1–M5, G proteini) ve nikotinik reseptörler",
+     "metin": "Muskarinik M1–M5 G proteinine bağlıdır; efektör organlarda ve SSS'de, daha yavaş yanıt verir.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Muskarinik sinyal yolları: M1, M3, M5 kalsiyum artışı; M2, M4 cAMP azalması",
+     "metin": "M1, M3, M5 Gq/11–PLC–IP3+DAG–Ca²⁺ artışı; M2, M4 Gi/o–cAMP azalması ve K⁺ kanalı açılması.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Muskarinik uyarının doku yanıtları: gözde miyozis, kalpte bradikardi",
+     "metin": "Göz: miyozis, akomodasyon spazmı, göz içi basıncı düşer. Kalp: bradikardi, AV ileti yavaşlaması.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Nikotinik reseptörler: NN otonom ganglionlarda, NM iskelet kası motor son plağında",
+     "metin": "NN: otonom ganglionlar, adrenal medulla, SSS; NM: iskelet kası motor son plağı.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Kolinomimetiklerin farmakokinetiği: kuaterner aminlerin oral emilimi zayıf",
+     "metin": "Kuaterner aminler (betanekol, karbakol, neostigmin, edrofonyum): oral emilim zayıf, BBB'yi geçmez, periferik etki.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Kolinomimetiklerin sınıflaması: direkt etkililer (kolin esterleri, alkaloidler) ve indirektler",
+     "metin": "Direkt etkililer: kolin esterleri ve alkaloidler (reseptör agonizmi).",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Kolin esterlerinin seçiciliği: asetilkolin ve karbakol M ve N reseptörlere etkir",
+     "metin": "Asetilkolin ve karbakol M ve N'ye etkir; asetilkolin AChE ile çok hızlı yıkılır, karbakol dirençlidir.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Asetilkolin: hızlı hidroliz nedeniyle sistemik tedavide kullanılmaz",
+     "metin": "Hızlı hidroliz nedeniyle sistemik tedavide kullanılmaz; IV bolusta vazodilatasyon, hipotansiyon, refleks taşikardi.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Betanekol: oral seçici muskarinik agonist, nonobstrüktif retansiyon",
+     "metin": "Oral seçici muskarinik agonist; postoperatif ve doğum sonrası nonobstrüktif retansiyonda, nörojenik mesanede seçilmiş kullanım.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Karbakol (glokomda topikal, miyozis) ve metakolin",
+     "metin": "Karbakol glokomda topikal: miyozis ve göz içi basıncı düşer.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Pilokarpin: tersiyer amin, miyozis ve glokom",
+     "metin": "Pilocarpus kökenli tersiyer amin; miyozis ve trabeküler dışa akım artışı (glokom).",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Sevimelin (M1 ve M3, Sjögren kseröstomisi) ve diğer muskarinik agonistler",
+     "metin": "Sevimelin M1 ve M3 tercihlidir ve Sjögren'de kseröstomiyi azaltır.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Nikotin ve vareniklin",
+     "metin": "Vareniklin α4β2 kısmi agonisti, sigara bırakmayı destekler; akut nikotin toksisitesi bulantı, titreme, konvülsiyon, solunum felci.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Direkt etkili ilaçlar bir bakışta: betanekol, karbakol, metakolin",
+     "metin": "Betanekol: M, üriner retansiyon, obstrüksiyon. Karbakol: M ve N, oküler miyozis, lokal kullanım. Metakolin: M ağırlıklı, provokasyon testi, bronkospazm.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Kolinomimetiklerde yan etkiler: muskarinik fazlalık (SLUDGE) ve kontrendikasyonlar",
+     "metin": "Muskarinik fazlalık SLUDGE (salivasyon, lakrimasyon, idrar, defekasyon, GİS krampı, kusma), terleme, bradikardi, hipotansiyon.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Kolinesteraz türleri: AChE sinapslarda ACh yıkan temel enzim",
+     "metin": "AChE: kolinerjik sinapslar ve eritrositler; sinaptik ACh'yi yıkan temel enzim.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "İnhibisyon mekanizması: edrofonyum geri dönüşümlü, karbamatlar enzimi karbamiller",
+     "metin": "Edrofonyum nonkovalent geri dönüşümlü, kısa etkilidir; karbamatlar enzimi karbamiller ve etki saatler sürer.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Kolinesteraz inhibitörlerinin alt sınıfları: geri dönüşümlüler (edrofonyum, karbamatlar) ve santral ajanlar",
+     "metin": "Geri dönüşümlüler: edrofonyum, karbamatlar (neostigmin, piridostigmin, fizostigmin), santral ajanlar (donepezil, rivastigmin, galantamin).",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Edrofonyum: kuaterner, SSS'ye geçmez, kısa etki süresi",
+     "metin": "Kuaterner, SSS'ye geçmez, etki süresi 5–15 dakikadır; kas gücünde hızlı geçici artış yapar.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Neostigmin: kuaterner periferik karbamat, motor son plakta nikotinik etki",
+     "metin": "Kuaterner periferik karbamat; motor son plakta doğrudan nikotinik etkisi de vardır.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Piridostigmin: oral kuaterner karbamat, miyastenide temel seçenek",
+     "metin": "Oral kuaterner karbamat, etkisi neostigminden uzundur; miyasteninin semptomatik tedavisinde temel seçenek.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Fizostigmin: lipofilik tersiyer amin, BBB'yi geçer",
+     "metin": "Lipofilik tersiyer amin, BBB'yi geçer; seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Alzheimer hastalığında santral AChE inhibitörleri: donepezil, rivastigmin, galantamin ve ACh yıkımı",
+     "metin": "Kolinerjik kayıp nedeniyle ACh yıkımı azaltılır; donepezil, rivastigmin, galantamin hafif–orta evrede semptomatik fayda verir.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "AChE inhibitörlerinin klinik kullanım özeti: edrofonyum, neostigmin, piridostigmin",
+     "metin": "Edrofonyum (kuaterner, çok kısa, tarihsel tanı), neostigmin (orta, blok antagonizması), piridostigmin (daha uzun, miyasteni idamesi).",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Miyastenia gravis: nikotinik reseptörlere karşı otoantikorlar ve kas güçsüzlüğü",
+     "metin": "NM nikotinik reseptörlere karşı otoantikorlar; yorulmakla artan kas güçsüzlüğü, pitozis, diplopi.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Miyastenik kriz mi, kolinerjik kriz mi?",
+     "metin": "Miyastenik kriz ilaç yetersizliğiyle, kolinerjik kriz aşırı inhibitörle ilişkilidir.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Nöromüsküler blok antagonizması",
+     "metin": "Süksinilkolin BChE ile yıkılır; antagonizma beklenmez, blok uzamışsa BChE eksikliği düşünülür.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Organofosfat kaynakları: insektisitler ve sinir ajanları (sarin, VX)",
+     "metin": "İnsektisitler (paration, malation, klorpirifos) ve sinir ajanları (sarin, tabun, soman, VX).",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Organofosfatlar: fosforilasyon, aging ve geri dönüşümsüz inhibisyon",
+     "metin": "Fosforilasyon (aktif serin), aging (oksimle reaktivasyon kaybolur), toparlanma yeni enzim sentezine bağlı.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Klinik tablo: muskarinik, nikotinik ve santral bulgular",
+     "metin": "Muskarinik: miyozis, salivasyon, bronkore, bradikardi, ishal, idrar kaçırma. Nikotinik: fasikülasyon, kas zayıflığı, solunum kası felci.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Organofosfat zehirlenmesinde tedavi akışı: dekontaminasyon, hava yolu, atropin, pralidoksim",
+     "metin": "1 personel güvenliği ve dekontaminasyon, 2 hava yolu ve oksijen, 3 atropini muskarinik bulgulara göre titre et, 4 pralidoksimi aging öncesi erken başla, 5 konvülsiyonda benzodiazepin.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Organofosfat: ara sendrom ve gecikmiş nöropati",
+     "metin": "Gecikmiş nöropati birkaç hafta sonra distal motor nöropati; atropin ve pralidoksimle akut kriz düzelse de çıkabilir.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Atropin: muskarinik reseptör antagonisti, nikotinik güçsüzlüğü düzeltmez",
+     "metin": "Muskarinik reseptör antagonistidir; nikotinik güçsüzlük ve felci düzeltmez.",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Pralidoksim: erken verilirse enzim yeniden aktif olur",
+     "metin": "Erken verilirse fosforil grubunu uzaklaştırır, enzim yeniden aktif olur, periferik nikotinik bulgular düzelebilir.",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Vaka 1: miyastenia gravis",
+     "metin": "Akşam artan pitozis, diplopi, çiğneme güçlüğü: miyastenia gravis; piridostigmin; antikor ve elektrofizyoloji; edrofonyum testi tarihsel.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Vaka 2: organofosfat zehirlenmesi",
+     "metin": "Tarlada ilaçlama sonrası terleme, salivasyon, miyozis, bradikardi, fasikülasyon, nefes darlığı: organofosfat zehirlenmesi.",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Vaka 3: postoperatif üriner retansiyon, mekanik obstrüksiyon yoksa betanekol",
+     "metin": "Mekanik obstrüksiyon yoksa betanekol (direkt) veya neostigmin (indirekt); astım ve obstrüksiyon dışlanır, öncelik mesanenin boşaltılması.",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Kolinesteraz inhibitörlerinin yan etkileri",
+     "metin": "Muskarinik etkiler kolinomimetiklerle ortak, inhibitöre özgü fark birikime bağlı doz aşımı; nikotinik: kas krampı, fasikülasyon, depolarizasyon bloğu.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Özet: kolinerjik farmakoloji akış şeması (ACh sentezi, salım, reseptörler, AChE)",
+     "metin": "ACh sentezi, salım, M/N reseptörleri, AChE ile yıkım; direkt agonistler, atropin, AChE inhibitörleri ve erken pralidoksim şemadaki müdahale noktalarıdır.",
+     "s": [
+      45
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Dersin hedefleri: iletim, reseptör alt tipleri, direkt ve indirekt kolinomimetikler: İletim ve reseptör alt tipleri, direkt ve indirekt kolinomimetikler hedeflenir.",
+    "Dersin yol haritası: beş bölüm (nörotransmisyon, direkt kolinomimetikler, kolinesteraz inhibitörleri, organofosfat zehirlenmesi): Beş bölüm: kolinerjik nörotransmisyon, direkt kolinomimetikler, kolinesteraz inhibitörleri, organofosfat zehirlenmesi, klinik vakalar.",
+    "Kolinerjik nöronlar: preganglionik lifler ACh salar, ganglionda NN reseptörü: Sempatik ve parasempatik preganglionik lifler ACh salar, ganglionda NN reseptörü uyarılır.",
+    "ACh sentezi ve salımı: Kolin alımı (CHT; hemikolinyum bloke eder), sentez (ChAT), depolama (VAChT; vesamikol bloke eder) ve salım dört basamaktır.",
+    "ACh yıkımı: AChE asetilkolinin etkisini hızla sonlandırır: AChE ACh'nin etkisini hızla sonlandırır.",
+    "Muskarinik (M1–M5, G proteini) ve nikotinik reseptörler: Muskarinik M1–M5 G proteinine bağlıdır; efektör organlarda ve SSS'de, daha yavaş yanıt verir.",
+    "Muskarinik sinyal yolları: M1, M3, M5 kalsiyum artışı; M2, M4 cAMP azalması: M1, M3, M5 Gq/11–PLC–IP3+DAG–Ca²⁺ artışı; M2, M4 Gi/o–cAMP azalması ve K⁺ kanalı açılması.",
+    "Muskarinik uyarının doku yanıtları: gözde miyozis, kalpte bradikardi: Göz: miyozis, akomodasyon spazmı, göz içi basıncı düşer. Kalp: bradikardi, AV ileti yavaşlaması.",
+    "Nikotinik reseptörler: NN otonom ganglionlarda, NM iskelet kası motor son plağında: NN: otonom ganglionlar, adrenal medulla, SSS; NM: iskelet kası motor son plağı.",
+    "Kolinomimetiklerin farmakokinetiği: kuaterner aminlerin oral emilimi zayıf: Kuaterner aminler (betanekol, karbakol, neostigmin, edrofonyum): oral emilim zayıf, BBB'yi geçmez, periferik etki.",
+    "Kolinomimetiklerin sınıflaması: direkt etkililer (kolin esterleri, alkaloidler) ve indirektler: Direkt etkililer: kolin esterleri ve alkaloidler (reseptör agonizmi).",
+    "Kolin esterlerinin seçiciliği: asetilkolin ve karbakol M ve N reseptörlere etkir: Asetilkolin ve karbakol M ve N'ye etkir; asetilkolin AChE ile çok hızlı yıkılır, karbakol dirençlidir.",
+    "Asetilkolin: hızlı hidroliz nedeniyle sistemik tedavide kullanılmaz: Hızlı hidroliz nedeniyle sistemik tedavide kullanılmaz; IV bolusta vazodilatasyon, hipotansiyon, refleks taşikardi.",
+    "Betanekol: oral seçici muskarinik agonist, nonobstrüktif retansiyon: Oral seçici muskarinik agonist; postoperatif ve doğum sonrası nonobstrüktif retansiyonda, nörojenik mesanede seçilmiş kullanım.",
+    "Karbakol (glokomda topikal, miyozis) ve metakolin: Karbakol glokomda topikal: miyozis ve göz içi basıncı düşer.",
+    "Pilokarpin: tersiyer amin, miyozis ve glokom: Pilocarpus kökenli tersiyer amin; miyozis ve trabeküler dışa akım artışı (glokom).",
+    "Sevimelin (M1 ve M3, Sjögren kseröstomisi) ve diğer muskarinik agonistler: Sevimelin M1 ve M3 tercihlidir ve Sjögren'de kseröstomiyi azaltır.",
+    "Nikotin ve vareniklin: Vareniklin α4β2 kısmi agonisti, sigara bırakmayı destekler; akut nikotin toksisitesi bulantı, titreme, konvülsiyon, solunum felci.",
+    "Direkt etkili ilaçlar bir bakışta: betanekol, karbakol, metakolin: Betanekol: M, üriner retansiyon, obstrüksiyon. Karbakol: M ve N, oküler miyozis, lokal kullanım. Metakolin: M ağırlıklı, provokasyon testi, bronkospazm.",
+    "Kolinomimetiklerde yan etkiler: muskarinik fazlalık (SLUDGE) ve kontrendikasyonlar: Muskarinik fazlalık SLUDGE (salivasyon, lakrimasyon, idrar, defekasyon, GİS krampı, kusma), terleme, bradikardi, hipotansiyon.",
+    "Kolinesteraz türleri: AChE sinapslarda ACh yıkan temel enzim: AChE: kolinerjik sinapslar ve eritrositler; sinaptik ACh'yi yıkan temel enzim.",
+    "İnhibisyon mekanizması: edrofonyum geri dönüşümlü, karbamatlar enzimi karbamiller: Edrofonyum nonkovalent geri dönüşümlü, kısa etkilidir; karbamatlar enzimi karbamiller ve etki saatler sürer.",
+    "Kolinesteraz inhibitörlerinin alt sınıfları: geri dönüşümlüler (edrofonyum, karbamatlar) ve santral ajanlar: Geri dönüşümlüler: edrofonyum, karbamatlar (neostigmin, piridostigmin, fizostigmin), santral ajanlar (donepezil, rivastigmin, galantamin).",
+    "Edrofonyum: kuaterner, SSS'ye geçmez, kısa etki süresi: Kuaterner, SSS'ye geçmez, etki süresi 5–15 dakikadır; kas gücünde hızlı geçici artış yapar.",
+    "Neostigmin: kuaterner periferik karbamat, motor son plakta nikotinik etki: Kuaterner periferik karbamat; motor son plakta doğrudan nikotinik etkisi de vardır.",
+    "Piridostigmin: oral kuaterner karbamat, miyastenide temel seçenek: Oral kuaterner karbamat, etkisi neostigminden uzundur; miyasteninin semptomatik tedavisinde temel seçenek.",
+    "Fizostigmin: lipofilik tersiyer amin, BBB'yi geçer: Lipofilik tersiyer amin, BBB'yi geçer; seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir.",
+    "Alzheimer hastalığında santral AChE inhibitörleri: donepezil, rivastigmin, galantamin ve ACh yıkımı: Kolinerjik kayıp nedeniyle ACh yıkımı azaltılır; donepezil, rivastigmin, galantamin hafif–orta evrede semptomatik fayda verir.",
+    "AChE inhibitörlerinin klinik kullanım özeti: edrofonyum, neostigmin, piridostigmin: Edrofonyum (kuaterner, çok kısa, tarihsel tanı), neostigmin (orta, blok antagonizması), piridostigmin (daha uzun, miyasteni idamesi).",
+    "Miyastenia gravis: nikotinik reseptörlere karşı otoantikorlar ve kas güçsüzlüğü: NM nikotinik reseptörlere karşı otoantikorlar; yorulmakla artan kas güçsüzlüğü, pitozis, diplopi.",
+    "Miyastenik kriz mi, kolinerjik kriz mi?: Miyastenik kriz ilaç yetersizliğiyle, kolinerjik kriz aşırı inhibitörle ilişkilidir.",
+    "Nöromüsküler blok antagonizması: Süksinilkolin BChE ile yıkılır; antagonizma beklenmez, blok uzamışsa BChE eksikliği düşünülür.",
+    "Organofosfat kaynakları: insektisitler ve sinir ajanları (sarin, VX): İnsektisitler (paration, malation, klorpirifos) ve sinir ajanları (sarin, tabun, soman, VX).",
+    "Organofosfatlar: fosforilasyon, aging ve geri dönüşümsüz inhibisyon: Fosforilasyon (aktif serin), aging (oksimle reaktivasyon kaybolur), toparlanma yeni enzim sentezine bağlı.",
+    "Klinik tablo: muskarinik, nikotinik ve santral bulgular: Muskarinik: miyozis, salivasyon, bronkore, bradikardi, ishal, idrar kaçırma. Nikotinik: fasikülasyon, kas zayıflığı, solunum kası felci.",
+    "Organofosfat zehirlenmesinde tedavi akışı: dekontaminasyon, hava yolu, atropin, pralidoksim: 1 personel güvenliği ve dekontaminasyon, 2 hava yolu ve oksijen, 3 atropini muskarinik bulgulara göre titre et, 4 pralidoksimi aging öncesi erken başla, 5 konvülsiyonda benzodiazepin.",
+    "Organofosfat: ara sendrom ve gecikmiş nöropati: Gecikmiş nöropati birkaç hafta sonra distal motor nöropati; atropin ve pralidoksimle akut kriz düzelse de çıkabilir.",
+    "Atropin: muskarinik reseptör antagonisti, nikotinik güçsüzlüğü düzeltmez: Muskarinik reseptör antagonistidir; nikotinik güçsüzlük ve felci düzeltmez.",
+    "Pralidoksim: erken verilirse enzim yeniden aktif olur: Erken verilirse fosforil grubunu uzaklaştırır, enzim yeniden aktif olur, periferik nikotinik bulgular düzelebilir.",
+    "Vaka 1: miyastenia gravis: Akşam artan pitozis, diplopi, çiğneme güçlüğü: miyastenia gravis; piridostigmin; antikor ve elektrofizyoloji; edrofonyum testi tarihsel.",
+    "Vaka 2: organofosfat zehirlenmesi: Tarlada ilaçlama sonrası terleme, salivasyon, miyozis, bradikardi, fasikülasyon, nefes darlığı: organofosfat zehirlenmesi.",
+    "Vaka 3: postoperatif üriner retansiyon, mekanik obstrüksiyon yoksa betanekol: Mekanik obstrüksiyon yoksa betanekol (direkt) veya neostigmin (indirekt); astım ve obstrüksiyon dışlanır, öncelik mesanenin boşaltılması.",
+    "Kolinesteraz inhibitörlerinin yan etkileri: Muskarinik etkiler kolinomimetiklerle ortak, inhibitöre özgü fark birikime bağlı doz aşımı; nikotinik: kas krampı, fasikülasyon, depolarizasyon bloğu.",
+    "Özet: kolinerjik farmakoloji akış şeması (ACh sentezi, salım, reseptörler, AChE): ACh sentezi, salım, M/N reseptörleri, AChE ile yıkım; direkt agonistler, atropin, AChE inhibitörleri ve erken pralidoksim şemadaki müdahale noktalarıdır."
+   ],
+   "v": "311e15edbf"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu ders kolinerjik sinir iletimini, kolinomimetik ilaçları, kolinesteraz inhibitörlerini ve organofosfat zehirlenmesinin tedavisini kapsar. Çıkmış sorular sinaptik asetilkolin yaşam döngüsünden antidot seçimine kadar uzanır; çoğu doğrudan slayttaki sınıflama ve tedavi akışına dayanır.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Organofosfatlı kolinesteraz inhibitörü ile zehirlenmede antidot olarak aşağıdaki ilaçlardan hangisi kullanılır?",
+     "cevap": "Atropin",
+     "s": [
+      39
+     ],
+     "aciklama": [
+      "Soru, organofosfat zehirlenmesinde hangi ilacın muskarinik bulguları ortadan kaldıran antidot olduğunu ölçer.",
+      "Organofosfat asetilkolinesterazı (AChE) bloke ettiği için sinapsta asetilkolin birikir ve aşırı muskarinik uyarı doğar. Slayt 39 atropini muskarinik reseptör antagonisti olarak verir, slayt 37 ise atropinin bronş sekresyonları ve ventilasyona göre titre edildiğini söyler.",
+      "Pilokarpin ve karbakol doğrudan agonisttir, fizostigmin ve neostigmin ise kolinesterazı inhibe eder; bunlar zehirlenmeyi artırır, antidot olamaz."
+     ],
+     "ornek": "Böcek ilacı içen hastada tükürük, bronş sekresyonu ve bradikardi arttı; bunları geri çeviren muskarinik reseptör antagonisti hangisidir?",
+     "tuzak": "Kolinerjik ilaçlar arasında kalan şıkları antidot sanmak; oysa bunlar zehirlenmeyi oluşturan mekanizmanın aynısını yapar."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Pilokarpin ve kolin esterleri gibi ilaçlar yüksek dozlarda aşırı muskarinik bulgulara neden olurlar. Bu bulgular bulantı, kusma, diyare, salivasyon, acil idrar yapma gereksinimi, terleme, ciddi vazodilatasyon ve bronkokonstriksiyonu içerir. Bu etkilerin tamamı kompetitif blok ile ortadan kaldırılmak istenirse hangi ilaç kullanılabilir?",
+     "cevap": "Atropin",
+     "s": [
+      21
+     ],
+     "aciklama": [
+      "Soru, aşırı muskarinik bulguların kompetitif blokla giderileceği ilacı sorar.",
+      "Slayt 21, bulantı, kusma, salivasyon, terleme, bradikardi gibi muskarinik fazlalığın antidotunun atropin olduğunu söyler; slayt 39 atropini muskarinik reseptör antagonisti olarak tanımlar. Kompetitif blok demek, ilacın reseptörde asetilkolinle yarışarak yerini tutması demektir.",
+      "Noradrenalin ve dopamin adrenerjik uyarıcıdır, histamin ayrı bir reseptör sistemine etkir, lidokain ise sodyum kanalı bloke eden yerel anesteziktir; hiçbiri muskarinik reseptörü kompetitif olarak bloke etmez."
+     ],
+     "ornek": "Pilokarpin aşırı dozunda gelen hastada terleme ve tükürük artışını geri çeviren ilaç hangisidir?",
+     "tuzak": "Noradrenalin gibi sempatik bir ilacın muskarinik fazlalığı dengeleyeceğini sanmak; fizyolojik karşıt değil, reseptör düzeyinde rakip ilaç gerekir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Hangi kolinesteraz inhibitörünün kullanım alanı yanlış verilmiştir?",
+     "cevap": "Terazosin — Miyastenia gravis",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Soru, kolinesterazı inhibe eden ilaçların kullanım alanlarını eşleştirme bilgisini ölçer ve yanlış eşleşmeyi bulmayı ister.",
+      "Slayt 26 neostigminin, slayt 25 edrofonyumun, slayt 27 piridostigminin miyasteni gravis ile ilişkili olduğunu gösterir. Terazosin kolinesteraz inhibitörü değildir; slaytta geçmeyen, alfa reseptör bloke eden bir ilaçtır, bu yüzden eşleşme yanlıştır.",
+      "Ambenonyum şıkkı slaytta yer almaz; bu şık sorunun yanlış eşleşmesi olarak aranmaz, çünkü cevap açıkça kolinesteraz inhibitörü olmayan ilaçtadır."
+     ],
+     "ornek": "Miyasteni gravisin semptomatik tedavisinde temel oral seçenek olarak hangi kuaterner karbamat kullanılır?",
+     "tuzak": "Soru kökündeki yanlış arama yönünü kaçırıp tanıdık görünen ilaç adlarının hepsini doğru sanmak; önce ilacın kolinesteraz inhibitörü olup olmadığına bakılmalıdır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi indirekt etkili kolinomimetik değildir?",
+     "cevap": "Tranilsipromin",
+     "s": [
+      30
+     ],
+     "aciklama": [
+      "Soru, indirekt etkili kolinomimetiklerin kapsamını ve bu grupta olmayan ilacı ayırt etmeyi ölçer.",
+      "Slayt 12, kolinomimetikleri direkt ve indirekt olarak ikiye ayırır; indirekt grup asetilkolinesterazı (AChE) inhibe eden ilaçlardır ve inhibisyon sonucu asetilkolin birikir. Edrofonyum, neostigmin, piridostigmin ve ekotiyofat bu gruptadır (slayt 23, 24, 30).",
+      "Tranilsipromin monoamin oksidaz inhibitörüdür, kolinesterazı inhibe etmez; slaytta geçmez ve bu soruda yalnızca çeldiricidir."
+     ],
+     "ornek": "Aşağıdaki ilaçlardan hangisi asetilkolinesterazı inhibe ederek dolaylı kolinomimetik etki yapar: piridostigmin mi, metoprolol mu?",
+     "tuzak": "İsmi bir enzim inhibitörü gibi duyulan ilacı AChE inhibitörü sanmak; indirekt etki yalnızca kolinesterazın inhibisyonuyla oluşur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi direkt etkili kolinoseptör stimülan (kolin esteri) değildir?",
+     "cevap": "Metoprolol",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Soru, kolin esterlerinin hangileri olduğunu bilip bu gruba girmeyen ilacı bulmayı ölçer.",
+      "Slayt 13, direkt etkili kolin esterlerini asetilkolin, metakolin, karbakol ve betanekol olarak sayar; bunlar kolinoseptörü doğrudan uyarır. Metoprolol beta reseptör bloke edici bir ilaçtır, kolinoseptörü uyarmaz ve kolin esteri değildir.",
+      "Dört kolin esteri farklı seçicilikte olsa da hepsi direkt agonisttir; yanıltıcı olan şey adının bir kolinerjik ilaca benzemesidir."
+     ],
+     "ornek": "Muskarinik reseptörü uyaran, asetilkolinesteraz ve bütirilkolinesterazın yıkımına dirençli kolin esteri hangisidir?",
+     "tuzak": "Ağırlıklı muskarinik etkili ilaçlarla beta blokörü karıştırmak; yalnızca kolin esteri iskeleti olanlar bu gruptadır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Sinir ucundaki artmış kalsiyum konsantrasyonu aşağıdaki olaylardan hangisinin gerçekleşmesini sağlar?",
+     "cevap": "Sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar",
+     "s": [
+      5
+     ],
+     "aciklama": [
+      "Soru, asetilkolin salımında kalsiyumun rolünü ölçer.",
+      "Slayt 5, asetilkolin salımının kalsiyum bağımlı ekzositozla olduğunu söyler. Sinir ucunda kalsiyum artınca sinaptik veziküller presinaptik membrana kaynaşır ve içerikleri sinaptik aralığa boşalır; botulinum toksini bu salımı engeller.",
+      "Kalsiyum asetilkolinesterazı inhibe etmez, dopamin sentezini kesmez, noradrenalinin adrenaline dönüşmesini sağlamaz ve veziküllerin sinir ucunda parçalanmasına yol açmaz; bu seçenekler soru bağlamında kalsiyumun işlevi değildir."
+     ],
+     "ornek": "Botulinum toksini asetilkolin salımını hangi basamakta engeller: veziküllerin membranla kaynaşmasında mı, sentezde mi?",
+     "tuzak": "Kalsiyumu bütün nörotransmitter basamaklarında rolü varmış gibi düşünmek; kalsiyumun burada görevi ekzositozu başlatmaktır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Asetilkolin sitoplazmada aşağıdaki hangi enzimin katalitik etkisiyle kolin ve asetil-KoA'dan sentez edilir?",
+     "cevap": "Kolin asetiltransferaz",
+     "s": [
+      5
+     ],
+     "aciklama": [
+      "Soru, asetilkolinin sinir ucunda hangi enzimle sentezlendiğini ölçer.",
+      "Slayt 5, kolin ve asetil-KoA'dan asetilkolin üretiminin kolin asetiltransferaz (ChAT) enzimiyle olduğunu gösterir. Kolin, kolin taşıyıcısı ile sinir ucuna alınır; yapılan asetilkolin vezikül taşıyıcısıyla veziküle girer.",
+      "Asetilkolinesteraz asetilkolini yıkar, sentezlemez (slayt 6). Monoamin oksidaz, katekol-O-metiltransferaz ve tirozin hidroksilaz katekolamin yolunun enzimleridir ve asetilkolinle ilgisi yoktur."
+     ],
+     "ornek": "Asetilkolini sentezleyen enzimle yıkan enzim arasındaki fark nedir?",
+     "tuzak": "Sentez ve yıkım enzimlerinin adını birbirine çevirmek; kolin asetiltransferaz yapar, asetilkolinesteraz yıkar."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisinde nikotinik tipte kolinerjik reseptörler iletimde görev almaz?",
+     "cevap": "Postsinaptik kolinerjik nöroefektör kavşakta",
+     "s": [
+      7
+     ],
+     "aciklama": [
+      "Soru, nikotinik reseptörlerin hangi kavşaklarda görev aldığını, hangisinde almadığını ölçer.",
+      "Slayt 7 ve 10, nikotinik reseptörlerin otonom ganglionlarda, adrenal medullada, motor son plakta ve merkezi sinir sisteminde bulunduğunu söyler. Dolayısıyla parasempatik ve sempatik ganglion, adrenal bez ve nöromüsküler kavşak nikotinik iletim yapar.",
+      "Postsinaptik kolinerjik nöroefektör kavşakta ise efektör organdaki reseptör muskarinik tiptir (slayt 4, 7). Ganglion ile hedef organ arasındaki bu basamak ayrımı sorunun asıl noktasıdır."
+     ],
+     "ornek": "Parasempatik hedef organda asetilkolinin etkisini hangi tip reseptör aracılar: muskarinik mi, nikotinik mi?",
+     "tuzak": "Her kolinerjik kavşağın nikotinik olduğunu sanmak; ganglion ve kas nikotinik, parasempatik hedef organ muskariniktir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Otonomik nöroefektör kavşaklarda asetilkolinin ve diğer kolinomimetik ilaçların etkileri parasempatomimetik etkiler olarak adlandırılır. Parasempatomimetik etkiler aşağıdaki hangi reseptör aracılığıyla oluşur?",
+     "cevap": "Muskarinik reseptörler",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Soru, parasempatomimetik etkilerin hangi reseptör üzerinden oluştuğunu ölçer.",
+      "Slayt 4 parasempatik hedef organdaki reseptörü muskarinik olarak gösterir; slayt 9 muskarinik uyarının doku yanıtlarını sıralar: miyozis, bradikardi, bronkokonstriksiyon, salgı artışı ve gastrointestinal hareketlilik artışı. Bu yanıtlar parasempatik uyarıya benzediğinden etkilere bu ad verilir.",
+      "Parasempatomimetik terimi slaytta geçmez, eşleme dolaylıdır. Nikotinik reseptör ganglion ve kasta iletim yapar, dopaminerjik, adrenerjik ve mü opioid reseptörler kolinerjik sistemin reseptörleri değildir."
+     ],
+     "ornek": "Pilokarpin gözde miyozis yapıyorsa bu etkiyi hangi tip reseptör üzerinden oluşturur?",
+     "tuzak": "Nikotinik reseptörü de parasempatik hedef organda etkili sanmak; hedef organ yanıtı muskarinik reseptörle olur."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Glokom tedavisinde kullanılan direkt etkili kolinerjik agonist aşağıdakilerden hangisidir?",
+     "cevap": "Pilokarpin",
+     "s": [
+      17
+     ],
+     "aciklama": [
+      "Soru, glokomda kullanılan direkt etkili kolinerjik agonisti ve bu gruptaki ilaçların ayrımını ölçer.",
+      "Slayt 17, pilokarpinin Pilocarpus kökenli doğal bir alkaloit olduğunu, miyozis ve trabeküler dışa akım artışıyla göz içi basıncını düşürdüğünü söyler; slayt 20 de bunu glokom kullanımıyla özetler. Pilokarpin doğrudan muskarinik reseptörü uyarır.",
+      "Ekotiyofat ve izoflurofat organofosfattır, yani indirekt etkilidir (slayt 23). Fizostigmin de kolinesterazı inhibe eden indirekt ajandır (slayt 28); soru direkt agonist istediği için bu şıklar elenir."
+     ],
+     "ornek": "Gözde trabeküler dışa akımı artırarak göz içi basıncını düşüren, Pilocarpus kökenli direkt muskarinik agonist hangisidir?",
+     "tuzak": "Glokomda kullanılan ilaçların hepsini direkt agonist saymak; kolinesteraz inhibitörleri indirekt etkilidir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Kolinerjik toksikasyona ilişkin aşağıdaki ifadeler veriliyor: I. Muskarinik etkiler bir dereceye kadar tedavi edilebilir. Nikotinik agonistler ve antagonistler transmisyonu bloke ettiklerinden tedavileri yoktur. II. Kimyasal savaş için hazırlanan sinir gazları ve parationun güçlü muskarinik etkilerini engellemek için atropine çok yüksek dozlarda ihtiyaç duyulabilir. Atropinizasyon etkileri olan ağız kuruluğu, miyozisin tersine dönmesi gibi etkiler görülene kadar İV vermek gerekebilir. III. Oksim türevleri pralidoksim (PAM), diasetilmonoksim (DAM), obidoksim gibi organofosfor-kolinesteraz kompleksinden aktif enzim oluşturabilen ajanlar olup çok önemlidirler. IV. Pralidoksim ve obidoksim organofosfat zehirlenmesinde santral etkilerin tamamını düzeltir. Diasetilmonoksim SSS'nin kolinesterazını bütünüyle rejenere edebilir. Bu ifadelerden hangisi ya da hangileri söylenemez?",
+     "cevap": "Yalnız IV",
+     "s": [
+      40
+     ],
+     "aciklama": [
+      "Soru, kolinerjik toksikasyon ifadeleri arasında doğru olmayanı bulmayı ister; cevap yalnız dördüncü ifadedir.",
+      "Slayt 40, pralidoksimin kuaterner amin olduğunu ve merkezi sinir sistemine geçmediğini söyler; bu yüzden merkezi etkilerin tamamını düzeltmez. Dördüncü ifade bu nedenle yanlıştır.",
+      "Muskarinik etkiler atropinle düzeltilir ve yüksek dozlara gereksinim olabilir (slayt 37, 39), oksimler fosforillenmiş enzimi yeniden aktive eder (slayt 40); ilk üç ifade bu akışla uyumludur ve doğru olduğu için soruda aranmaz."
+     ],
+     "ornek": "Pralidoksim neden organofosfat zehirlenmesinde merkezi sinir sistemi bulgularını düzeltmez?",
+     "tuzak": "Kuaterner amin yapısındaki pralidoksimin kan beyin bariyerini geçip merkezi etki yaptığını sanmak; periferik nikotinik bulguları düzeltir, santrali tam düzeltmez."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Santral sinir sistemine kolayca girebilen dolaylı etkili kolinomimetik hangisidir?",
+     "cevap": "Fizostigmin",
+     "s": [
+      28
+     ],
+     "aciklama": [
+      "Soru, kolinesterazı inhibe eden ve merkezi sinir sistemine geçebilen ilacı ayırt etmeyi ölçer.",
+      "Slayt 28, fizostigmini lipofilik tersiyer amin olarak tanımlar; bu yapı kan beyin bariyerini geçmesini sağlar. Slayt 30 de tersiyer yapıdaki fizostigmini merkezi sinir sistemine geçen ajan olarak özetler.",
+      "Neostigmin kuaterner yapıdadır ve merkezi sinir sistemine geçmez (slayt 26). Betanekol, muskarin ve nikotin kolinesteraz inhibitörü değildir, yani dolaylı etkili sayılmaz; soru hem dolaylı etkiyi hem bariyeri geçmeyi birlikte arar."
+     ],
+     "ornek": "Hangisi kan beyin bariyerini geçen tersiyer aminli kolinesteraz inhibitörüdür: fizostigmin mi, piridostigmin mi?",
+     "tuzak": "Neostigmin ve fizostigmini birbirine karıştırmak; yük taşıyan kuaterner yapı bariyeri geçemez, tersiyer yapı geçer."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdaki maddeler veriliyor: I. Arsenik II. Trisiklik antidepresanlar III. Siyanür IV. Organofosfatlı insektisitler Pralidoksim, bunlardan hangisinin/hangilerinin neden olduğu zehirlenmelerde antidot olarak kullanılır?",
+     "cevap": "Yalnız IV",
+     "s": [
+      37
+     ],
+     "aciklama": [
+      "Soru, pralidoksimin hangi zehirlenmede antidot olduğunu ölçer.",
+      "Slayt 37 ve 40, pralidoksimin organofosfat zehirlenmesinde, enzimin geri dönüşümsüz hale gelmesinden (aging) önce erken başlanan antidot olduğunu söyler. Pralidoksim fosforil grubunu uzaklaştırır ve asetilkolinesterazı yeniden aktif hale getirir; bu mekanizma yalnız organofosfat için geçerlidir.",
+      "Arsenik, trisiklik antidepresan ve siyanür zehirlenmeleri kolinesterazın fosforillenmesiyle oluşmaz. Bu nedenle pralidoksimin bu üç zehirlenmede etkisi beklenmez ve bu şıklar elenir."
+     ],
+     "ornek": "Hangi zehirlenmede fosforillenmiş asetilkolinesterazı yeniden aktive etmek için pralidoksim kullanılır?",
+     "tuzak": "Antidotun her zehirlenmede geçerli olduğunu düşünmek; pralidoksim yalnız kolinesteraz inhibisyonuna dayanan zehirlenmede mantıklıdır."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Neostigmin kolinesterazı bloke eder ve nöromüsküler nikotinik reseptörleri direkt olarak aktive eder. II. Sinaptik asetilkolinin etkisinin sonlandırılmasında bütirilkolinesterazın (psödokolinesteraz) etkisi önemsizdir. III. Bazı kolinesteraz inhibitörleri direkt etkiye sahiptir, neostigmin gibi. IV. İntravenöz asetilkolin verilmeye kalkışılırsa ortalama 15 saniyelik bir etki için çok büyük miktarlarda vermek gerekir. Kolinomimetikler için yukarıdaki ifadelerden hangisi/hangileri doğrudur?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      26
+     ],
+     "aciklama": [
+      "Soru, kolinomimetiklerle ilgili dört ifadenin doğruluğunu ayrı ayrı sınar; dördü de doğrudur.",
+      "Neostigmin kolinesterazı bloke eder ve motor son plakta nikotinik reseptöre doğrudan da etkir (slayt 26); bu hem birinci hem üçüncü ifadeyi doğrular. Sinaptik asetilkolini yıkan temel enzim asetilkolinesterazdır, bütirilkolinesteraz plazma ve karaciğerdedir (slayt 22), bu yüzden sinaptik sonlanmada önemsizdir.",
+      "Asetilkolin hızlı hidroliz nedeniyle sistemik tedavide kullanılmaz (slayt 14); damar içi uygulamada çok kısa süre etki edeceğinden büyük miktar gerekir, dördüncü ifade de doğrudur.",
+      "Bu nedenle kısmi seçenekler (A, B, C, D) ifadelerin en az birini yanlış sayar ve elenir."
+     ],
+     "ornek": "Neostigmin kolinesterazı bloke etmenin yanında motor son plakta ayrıca ne yapar?",
+     "tuzak": "Dört ifadeden birini şüpheyle yanlış sayıp tüm ifadeler doğru olabileceğini hesaba katmamak."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların oluşturduğu nöromüsküler blokajı geri döndüren ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Neostigmin",
+     "s": [
+      33
+     ],
+     "aciklama": [
+      "Soru, nondepolarizan kas gevşeticilerin oluşturduğu bloğun hangi ilaçla geri çevrildiğini ölçer.",
+      "Slayt 33, nondepolarizan blokta neostigminin asetilkolinesterazı inhibe ettiğini, asetilkolinin biriktiğini ve reseptördeki yarışın geri çevrildiğini söyler. Atropin veya glikopirolat, bradikardi ve salivasyon gibi muskarinik yan etkiler için birlikte verilir (slayt 26, 33).",
+      "Sugammadeks, flumazenil, baklofen ve dantrolen bu dersin slaytında bu amaçla geçmez; sorunun cevabı slayttaki antagonizma mekanizmasına dayanır."
+     ],
+     "ornek": "Nondepolarizan blok antagonizmasında neostigmine eşlik eden muskarinik yan etkiyi önlemek için hangi ilaç verilir?",
+     "tuzak": "Süksinilkolin bloğunda da neostigminin işe yarayacağını sanmak; slayt 33'e göre süksinilkolin bloğu uzamışsa neostigmin etkisizdir."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Asetilkolin uygulamasının oluşturduğu aşağıdaki etkilerden hangisi atropin tarafından engellenemez?",
+     "cevap": "Çizgili kaslarda fasikülasyon",
+     "s": [
+      39
+     ],
+     "aciklama": [
+      "Soru, asetilkolinin muskarinik ve nikotinik etkilerini ayırıp atropinin hangisini engelleyemediğini ölçer.",
+      "Atropin muskarinik antagonisttir ve nikotinik güçsüzlüğü ya da felci düzeltmez (slayt 39). Çizgili kasta fasikülasyon nikotinik (NM) etkidir (slayt 36), bu yüzden atropinle engellenmez.",
+      "Bağırsak hareketlerinde artış, salya artışı, bradikardi ve miyozis muskarinik etkilerdir (slayt 9); bunlar atropinle engellenir. Bu yüzden diğer dört şık atropinin engelleyebildiği etkilerdir."
+     ],
+     "ornek": "Organofosfat zehirlenmesinde atropin verildi; kas fasikülasyonları ve solunum kası güçsüzlüğü neden sürer?",
+     "tuzak": "Asetilkolinin her etkisinin atropinle ortadan kalkacağını sanmak; atropin yalnız muskarinik reseptörde çalışır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "I. Glokom II. Postoperatif atonik ileus III. Myastenia gravis IV. Alzheimer hastalığı Yukarıdakilerden hangisi/hangileri parasempatomimetiklerin endikasyonlarındandır?",
+     "cevap": "I, II, III ve IV",
+     "s": [
+      26
+     ],
+     "aciklama": [
+      "Soru, kolinomimetik ilaçların klinik kullanım alanlarının geniş kapsamını ölçer; dört durumun hepsi doğrudur.",
+      "Glokomda pilokarpin ve karbakol kullanılır (slayt 16, 17), postoperatif ileusta neostigmin seçilmiş olgularda kullanılır (slayt 26), miyastenide neostigmin ve piridostigmin kullanılır (slayt 26, 27). Alzheimer hastalığında donepezil, rivastigmin ve galantamin gibi santral kolinesteraz inhibitörleri özellikle hafif ve orta evrede kullanılır (slayt 29).",
+      "Bu nedenle kısmi seçenekler (yalnız I, I ve II, I-II-III, II-III-IV) bir endikasyonu atladığı için elenir."
+     ],
+     "ornek": "Alzheimer hastalığında semptomatik fayda sağlayan santral kolinesteraz inhibitörlerine bir örnek veriniz.",
+     "tuzak": "Alzheimer ve ileus gibi görünüşte kolinerjik olmayan alanları listeden çıkarmak; slayt bunların da kolinesteraz inhibitörü endikasyonu olduğunu gösterir."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "DFP, TEPP, dimefoks, mipafoks, paration, malation gibi organofosfatlar ve G serisi sinir ajanları (tabun, sarin, soman) ile oluşan zehirlenmede tedavi nasıl sağlanır?",
+     "cevap": "Fosforillenmiş asetilkolinesterazı yeniden aktive ederek",
+     "s": [
+      40
+     ],
+     "aciklama": [
+      "Soru, organofosfat zehirlenmesinde tedavinin enzim düzeyinde nasıl çalıştığını ölçer.",
+      "Organofosfatlar asetilkolinesterazı fosforiller ve zehirlenmenin mekanizması budur. Pralidoksim bu fosforil grubunu uzaklaştırır ve enzimi yeniden aktif hale getirir (slayt 40, 37); erken verilirse periferik nikotinik bulgular da düzelebilir.",
+      "Asetilkolinesterazı inhibe etmek ya da inaktive etmek zehirlenmenin kendisini tarif eder, tedaviyi değil. Presinaptik ACh miktarını artırmak ya da azaltmak da pralidoksimin mekanizması değildir."
+     ],
+     "ornek": "Pralidoksim organofosfatla fosforillenmiş enzime ne yapar?",
+     "tuzak": "Zehirlenme mekanizmasını (inhibisyon) tedavi mekanizmasıyla karıştırmak; tedavi enzimi yeniden aktive etmektir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Parathion ile oluşan toksisite hangi ilaçlarla/ajanlarla/uygulamalarla tedavi edilebilir?",
+     "cevap": "Atropin ve pralidoksim",
+     "s": [
+      37
+     ],
+     "aciklama": [
+      "Soru, paration zehirlenmesinin hangi ilaç çiftiyle tedavi edildiğini ölçer.",
+      "Slayt 34 parationu organofosfat olarak sayar; slayt 37 tedavi akışında atropini muskarinik bulgular düzelene kadar titre etmeyi, pralidoksimi ise aging öncesi erken başlamayı söyler. Atropin muskarinik bulguları, pralidoksim ise enzimi yeniden aktive ederek nikotinik bulguları da düzeltir.",
+      "Antikonvülzan ilaç yalnız konvülsiyon geliştiğinde eklenen destektir (slayt 37, benzodiazepin), tek başına tedavi sayılmaz. Hemodiyaliz ve hiperbarik oksijen slayttaki akışta yoktur, nikotin ise zehirlenmeyi artıran bir agonisttir."
+     ],
+     "ornek": "Organofosfat zehirlenmesinde muskarinik bulguları ve fosforillenmiş enzimi hedefleyen iki ilaç hangisidir?",
+     "tuzak": "Yalnız atropinin yeterli olduğunu sanmak; atropin enzimi geri getirmez, pralidoksim ise muskarinik bulguları gidermez."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi santral ve periferik sinir sisteminde sinaptik aralıkta esteraz enzimi tarafından yıkımlanır?",
+     "cevap": "Asetilkolin",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, asetilkolinesteraz enziminin hangi nörotransmitteri yıktığını ölçer.",
+      "Slayt 6 ve 22, asetilkolinesterazın kolinerjik sinapslarda ve eritrositlerde bulunduğunu ve sinaptik asetilkolini hızla yıkan temel enzim olduğunu söyler. Bu yüzden enzimin inhibisyonu asetilkolini biriktirir ve indirekt kolinomimetik etki doğar.",
+      "Serotonin, dopamin, adrenalin ve histamin bu enzimin substratı değildir; bunların yıkımı başka enzimlerle olur ve bu şıklar kolinerjik sistemle ilgisizdir."
+     ],
+     "ornek": "Asetilkolinesterazı inhibe eden bir ilaç hangi nörotransmitterin sinapsta birikmesine yol açar?",
+     "tuzak": "Esteraz enzimini her nörotransmitterin yıkımına bağlamak; asetilkolinesteraz yalnız asetilkolini yıkar."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu ders kolinerjik sinir iletimini, kolinomimetik ilaçları, kolinesteraz inhibitörlerini ve organofosfat zehirlenmesinin tedavisini kapsar. Çıkmış sorular sinaptik asetilkolin yaşam döngüsünden antidot seçimine kadar uzanır; çoğu doğrudan slayttaki sınıflama ve tedavi akışına dayanır.",
+    "2020-2021: Organofosfatlı kolinesteraz inhibitörü ile zehirlenmede antidot olarak aşağıdaki ilaçlardan hangisi kullanılır?",
+    "Cevap: Atropin.",
+    "Soru, organofosfat zehirlenmesinde hangi ilacın muskarinik bulguları ortadan kaldıran antidot olduğunu ölçer.",
+    "Organofosfat asetilkolinesterazı (AChE) bloke ettiği için sinapsta asetilkolin birikir ve aşırı muskarinik uyarı doğar. Slayt 39 atropini muskarinik reseptör antagonisti olarak verir, slayt 37 ise atropinin bronş sekresyonları ve ventilasyona göre titre edildiğini söyler.",
+    "Pilokarpin ve karbakol doğrudan agonisttir, fizostigmin ve neostigmin ise kolinesterazı inhibe eder; bunlar zehirlenmeyi artırır, antidot olamaz.",
+    "Örnek: Böcek ilacı içen hastada tükürük, bronş sekresyonu ve bradikardi arttı; bunları geri çeviren muskarinik reseptör antagonisti hangisidir?",
+    "Tuzak: Kolinerjik ilaçlar arasında kalan şıkları antidot sanmak; oysa bunlar zehirlenmeyi oluşturan mekanizmanın aynısını yapar.",
+    "2020-2021: Pilokarpin ve kolin esterleri gibi ilaçlar yüksek dozlarda aşırı muskarinik bulgulara neden olurlar. Bu bulgular bulantı, kusma, diyare, salivasyon, acil idrar yapma gereksinimi, terleme, ciddi vazodilatasyon ve bronkokonstriksiyonu içerir. Bu etkilerin tamamı kompetitif blok ile ortadan kaldırılmak istenirse hangi ilaç kullanılabilir?",
+    "Cevap: Atropin.",
+    "Soru, aşırı muskarinik bulguların kompetitif blokla giderileceği ilacı sorar.",
+    "Slayt 21, bulantı, kusma, salivasyon, terleme, bradikardi gibi muskarinik fazlalığın antidotunun atropin olduğunu söyler; slayt 39 atropini muskarinik reseptör antagonisti olarak tanımlar. Kompetitif blok demek, ilacın reseptörde asetilkolinle yarışarak yerini tutması demektir.",
+    "Noradrenalin ve dopamin adrenerjik uyarıcıdır, histamin ayrı bir reseptör sistemine etkir, lidokain ise sodyum kanalı bloke eden yerel anesteziktir; hiçbiri muskarinik reseptörü kompetitif olarak bloke etmez.",
+    "Örnek: Pilokarpin aşırı dozunda gelen hastada terleme ve tükürük artışını geri çeviren ilaç hangisidir?",
+    "Tuzak: Noradrenalin gibi sempatik bir ilacın muskarinik fazlalığı dengeleyeceğini sanmak; fizyolojik karşıt değil, reseptör düzeyinde rakip ilaç gerekir.",
+    "2020-2021: Hangi kolinesteraz inhibitörünün kullanım alanı yanlış verilmiştir?",
+    "Cevap: Terazosin — Miyastenia gravis.",
+    "Soru, kolinesterazı inhibe eden ilaçların kullanım alanlarını eşleştirme bilgisini ölçer ve yanlış eşleşmeyi bulmayı ister.",
+    "Slayt 26 neostigminin, slayt 25 edrofonyumun, slayt 27 piridostigminin miyasteni gravis ile ilişkili olduğunu gösterir. Terazosin kolinesteraz inhibitörü değildir; slaytta geçmeyen, alfa reseptör bloke eden bir ilaçtır, bu yüzden eşleşme yanlıştır.",
+    "Ambenonyum şıkkı slaytta yer almaz; bu şık sorunun yanlış eşleşmesi olarak aranmaz, çünkü cevap açıkça kolinesteraz inhibitörü olmayan ilaçtadır.",
+    "Örnek: Miyasteni gravisin semptomatik tedavisinde temel oral seçenek olarak hangi kuaterner karbamat kullanılır?",
+    "Tuzak: Soru kökündeki yanlış arama yönünü kaçırıp tanıdık görünen ilaç adlarının hepsini doğru sanmak; önce ilacın kolinesteraz inhibitörü olup olmadığına bakılmalıdır.",
+    "2020-2021: Aşağıdakilerden hangisi indirekt etkili kolinomimetik değildir?",
+    "Cevap: Tranilsipromin.",
+    "Soru, indirekt etkili kolinomimetiklerin kapsamını ve bu grupta olmayan ilacı ayırt etmeyi ölçer.",
+    "Slayt 12, kolinomimetikleri direkt ve indirekt olarak ikiye ayırır; indirekt grup asetilkolinesterazı (AChE) inhibe eden ilaçlardır ve inhibisyon sonucu asetilkolin birikir. Edrofonyum, neostigmin, piridostigmin ve ekotiyofat bu gruptadır (slayt 23, 24, 30).",
+    "Tranilsipromin monoamin oksidaz inhibitörüdür, kolinesterazı inhibe etmez; slaytta geçmez ve bu soruda yalnızca çeldiricidir.",
+    "Örnek: Aşağıdaki ilaçlardan hangisi asetilkolinesterazı inhibe ederek dolaylı kolinomimetik etki yapar: piridostigmin mi, metoprolol mu?",
+    "Tuzak: İsmi bir enzim inhibitörü gibi duyulan ilacı AChE inhibitörü sanmak; indirekt etki yalnızca kolinesterazın inhibisyonuyla oluşur.",
+    "2020-2021: Aşağıdakilerden hangisi direkt etkili kolinoseptör stimülan (kolin esteri) değildir?",
+    "Cevap: Metoprolol.",
+    "Soru, kolin esterlerinin hangileri olduğunu bilip bu gruba girmeyen ilacı bulmayı ölçer.",
+    "Slayt 13, direkt etkili kolin esterlerini asetilkolin, metakolin, karbakol ve betanekol olarak sayar; bunlar kolinoseptörü doğrudan uyarır. Metoprolol beta reseptör bloke edici bir ilaçtır, kolinoseptörü uyarmaz ve kolin esteri değildir.",
+    "Dört kolin esteri farklı seçicilikte olsa da hepsi direkt agonisttir; yanıltıcı olan şey adının bir kolinerjik ilaca benzemesidir.",
+    "Örnek: Muskarinik reseptörü uyaran, asetilkolinesteraz ve bütirilkolinesterazın yıkımına dirençli kolin esteri hangisidir?",
+    "Tuzak: Ağırlıklı muskarinik etkili ilaçlarla beta blokörü karıştırmak; yalnızca kolin esteri iskeleti olanlar bu gruptadır.",
+    "2020-2021: Sinir ucundaki artmış kalsiyum konsantrasyonu aşağıdaki olaylardan hangisinin gerçekleşmesini sağlar?",
+    "Cevap: Sinaptik veziküllerin presinaptik membrana kaynaşmasını sağlar.",
+    "Soru, asetilkolin salımında kalsiyumun rolünü ölçer.",
+    "Slayt 5, asetilkolin salımının kalsiyum bağımlı ekzositozla olduğunu söyler. Sinir ucunda kalsiyum artınca sinaptik veziküller presinaptik membrana kaynaşır ve içerikleri sinaptik aralığa boşalır; botulinum toksini bu salımı engeller.",
+    "Kalsiyum asetilkolinesterazı inhibe etmez, dopamin sentezini kesmez, noradrenalinin adrenaline dönüşmesini sağlamaz ve veziküllerin sinir ucunda parçalanmasına yol açmaz; bu seçenekler soru bağlamında kalsiyumun işlevi değildir.",
+    "Örnek: Botulinum toksini asetilkolin salımını hangi basamakta engeller: veziküllerin membranla kaynaşmasında mı, sentezde mi?",
+    "Tuzak: Kalsiyumu bütün nörotransmitter basamaklarında rolü varmış gibi düşünmek; kalsiyumun burada görevi ekzositozu başlatmaktır.",
+    "2019-2020: Asetilkolin sitoplazmada aşağıdaki hangi enzimin katalitik etkisiyle kolin ve asetil-KoA'dan sentez edilir?",
+    "Cevap: Kolin asetiltransferaz.",
+    "Soru, asetilkolinin sinir ucunda hangi enzimle sentezlendiğini ölçer.",
+    "Slayt 5, kolin ve asetil-KoA'dan asetilkolin üretiminin kolin asetiltransferaz (ChAT) enzimiyle olduğunu gösterir. Kolin, kolin taşıyıcısı ile sinir ucuna alınır; yapılan asetilkolin vezikül taşıyıcısıyla veziküle girer.",
+    "Asetilkolinesteraz asetilkolini yıkar, sentezlemez (slayt 6). Monoamin oksidaz, katekol-O-metiltransferaz ve tirozin hidroksilaz katekolamin yolunun enzimleridir ve asetilkolinle ilgisi yoktur.",
+    "Örnek: Asetilkolini sentezleyen enzimle yıkan enzim arasındaki fark nedir?",
+    "Tuzak: Sentez ve yıkım enzimlerinin adını birbirine çevirmek; kolin asetiltransferaz yapar, asetilkolinesteraz yıkar.",
+    "2019-2020: Aşağıdakilerden hangisinde nikotinik tipte kolinerjik reseptörler iletimde görev almaz?",
+    "Cevap: Postsinaptik kolinerjik nöroefektör kavşakta.",
+    "Soru, nikotinik reseptörlerin hangi kavşaklarda görev aldığını, hangisinde almadığını ölçer.",
+    "Slayt 7 ve 10, nikotinik reseptörlerin otonom ganglionlarda, adrenal medullada, motor son plakta ve merkezi sinir sisteminde bulunduğunu söyler. Dolayısıyla parasempatik ve sempatik ganglion, adrenal bez ve nöromüsküler kavşak nikotinik iletim yapar.",
+    "Postsinaptik kolinerjik nöroefektör kavşakta ise efektör organdaki reseptör muskarinik tiptir (slayt 4, 7). Ganglion ile hedef organ arasındaki bu basamak ayrımı sorunun asıl noktasıdır.",
+    "Örnek: Parasempatik hedef organda asetilkolinin etkisini hangi tip reseptör aracılar: muskarinik mi, nikotinik mi?",
+    "Tuzak: Her kolinerjik kavşağın nikotinik olduğunu sanmak; ganglion ve kas nikotinik, parasempatik hedef organ muskariniktir.",
+    "2019-2020: Otonomik nöroefektör kavşaklarda asetilkolinin ve diğer kolinomimetik ilaçların etkileri parasempatomimetik etkiler olarak adlandırılır. Parasempatomimetik etkiler aşağıdaki hangi reseptör aracılığıyla oluşur?",
+    "Cevap: Muskarinik reseptörler.",
+    "Soru, parasempatomimetik etkilerin hangi reseptör üzerinden oluştuğunu ölçer.",
+    "Slayt 4 parasempatik hedef organdaki reseptörü muskarinik olarak gösterir; slayt 9 muskarinik uyarının doku yanıtlarını sıralar: miyozis, bradikardi, bronkokonstriksiyon, salgı artışı ve gastrointestinal hareketlilik artışı. Bu yanıtlar parasempatik uyarıya benzediğinden etkilere bu ad verilir.",
+    "Parasempatomimetik terimi slaytta geçmez, eşleme dolaylıdır. Nikotinik reseptör ganglion ve kasta iletim yapar, dopaminerjik, adrenerjik ve mü opioid reseptörler kolinerjik sistemin reseptörleri değildir.",
+    "Örnek: Pilokarpin gözde miyozis yapıyorsa bu etkiyi hangi tip reseptör üzerinden oluşturur?",
+    "Tuzak: Nikotinik reseptörü de parasempatik hedef organda etkili sanmak; hedef organ yanıtı muskarinik reseptörle olur.",
+    "2019-2020: Glokom tedavisinde kullanılan direkt etkili kolinerjik agonist aşağıdakilerden hangisidir?",
+    "Cevap: Pilokarpin.",
+    "Soru, glokomda kullanılan direkt etkili kolinerjik agonisti ve bu gruptaki ilaçların ayrımını ölçer.",
+    "Slayt 17, pilokarpinin Pilocarpus kökenli doğal bir alkaloit olduğunu, miyozis ve trabeküler dışa akım artışıyla göz içi basıncını düşürdüğünü söyler; slayt 20 de bunu glokom kullanımıyla özetler. Pilokarpin doğrudan muskarinik reseptörü uyarır.",
+    "Ekotiyofat ve izoflurofat organofosfattır, yani indirekt etkilidir (slayt 23). Fizostigmin de kolinesterazı inhibe eden indirekt ajandır (slayt 28); soru direkt agonist istediği için bu şıklar elenir.",
+    "Örnek: Gözde trabeküler dışa akımı artırarak göz içi basıncını düşüren, Pilocarpus kökenli direkt muskarinik agonist hangisidir?",
+    "Tuzak: Glokomda kullanılan ilaçların hepsini direkt agonist saymak; kolinesteraz inhibitörleri indirekt etkilidir.",
+    "2018-2019: Kolinerjik toksikasyona ilişkin aşağıdaki ifadeler veriliyor: I. Muskarinik etkiler bir dereceye kadar tedavi edilebilir. Nikotinik agonistler ve antagonistler transmisyonu bloke ettiklerinden tedavileri yoktur. II. Kimyasal savaş için hazırlanan sinir gazları ve parationun güçlü muskarinik etkilerini engellemek için atropine çok yüksek dozlarda ihtiyaç duyulabilir. Atropinizasyon etkileri olan ağız kuruluğu, miyozisin tersine dönmesi gibi etkiler görülene kadar İV vermek gerekebilir. III. Oksim türevleri pralidoksim (PAM), diasetilmonoksim (DAM), obidoksim gibi organofosfor-kolinesteraz kompleksinden aktif enzim oluşturabilen ajanlar olup çok önemlidirler. IV. Pralidoksim ve obidoksim organofosfat zehirlenmesinde santral etkilerin tamamını düzeltir. Diasetilmonoksim SSS'nin kolinesterazını bütünüyle rejenere edebilir. Bu ifadelerden hangisi ya da hangileri söylenemez?",
+    "Cevap: Yalnız IV.",
+    "Soru, kolinerjik toksikasyon ifadeleri arasında doğru olmayanı bulmayı ister; cevap yalnız dördüncü ifadedir.",
+    "Slayt 40, pralidoksimin kuaterner amin olduğunu ve merkezi sinir sistemine geçmediğini söyler; bu yüzden merkezi etkilerin tamamını düzeltmez. Dördüncü ifade bu nedenle yanlıştır.",
+    "Muskarinik etkiler atropinle düzeltilir ve yüksek dozlara gereksinim olabilir (slayt 37, 39), oksimler fosforillenmiş enzimi yeniden aktive eder (slayt 40); ilk üç ifade bu akışla uyumludur ve doğru olduğu için soruda aranmaz.",
+    "Örnek: Pralidoksim neden organofosfat zehirlenmesinde merkezi sinir sistemi bulgularını düzeltmez?",
+    "Tuzak: Kuaterner amin yapısındaki pralidoksimin kan beyin bariyerini geçip merkezi etki yaptığını sanmak; periferik nikotinik bulguları düzeltir, santrali tam düzeltmez.",
+    "2018-2019: Santral sinir sistemine kolayca girebilen dolaylı etkili kolinomimetik hangisidir?",
+    "Cevap: Fizostigmin.",
+    "Soru, kolinesterazı inhibe eden ve merkezi sinir sistemine geçebilen ilacı ayırt etmeyi ölçer.",
+    "Slayt 28, fizostigmini lipofilik tersiyer amin olarak tanımlar; bu yapı kan beyin bariyerini geçmesini sağlar. Slayt 30 de tersiyer yapıdaki fizostigmini merkezi sinir sistemine geçen ajan olarak özetler.",
+    "Neostigmin kuaterner yapıdadır ve merkezi sinir sistemine geçmez (slayt 26). Betanekol, muskarin ve nikotin kolinesteraz inhibitörü değildir, yani dolaylı etkili sayılmaz; soru hem dolaylı etkiyi hem bariyeri geçmeyi birlikte arar.",
+    "Örnek: Hangisi kan beyin bariyerini geçen tersiyer aminli kolinesteraz inhibitörüdür: fizostigmin mi, piridostigmin mi?",
+    "Tuzak: Neostigmin ve fizostigmini birbirine karıştırmak; yük taşıyan kuaterner yapı bariyeri geçemez, tersiyer yapı geçer.",
+    "2018-2019: Aşağıdaki maddeler veriliyor: I. Arsenik II. Trisiklik antidepresanlar III. Siyanür IV. Organofosfatlı insektisitler Pralidoksim, bunlardan hangisinin/hangilerinin neden olduğu zehirlenmelerde antidot olarak kullanılır?",
+    "Cevap: Yalnız IV.",
+    "Soru, pralidoksimin hangi zehirlenmede antidot olduğunu ölçer.",
+    "Slayt 37 ve 40, pralidoksimin organofosfat zehirlenmesinde, enzimin geri dönüşümsüz hale gelmesinden (aging) önce erken başlanan antidot olduğunu söyler. Pralidoksim fosforil grubunu uzaklaştırır ve asetilkolinesterazı yeniden aktif hale getirir; bu mekanizma yalnız organofosfat için geçerlidir.",
+    "Arsenik, trisiklik antidepresan ve siyanür zehirlenmeleri kolinesterazın fosforillenmesiyle oluşmaz. Bu nedenle pralidoksimin bu üç zehirlenmede etkisi beklenmez ve bu şıklar elenir.",
+    "Örnek: Hangi zehirlenmede fosforillenmiş asetilkolinesterazı yeniden aktive etmek için pralidoksim kullanılır?",
+    "Tuzak: Antidotun her zehirlenmede geçerli olduğunu düşünmek; pralidoksim yalnız kolinesteraz inhibisyonuna dayanan zehirlenmede mantıklıdır.",
+    "2018-2019: I. Neostigmin kolinesterazı bloke eder ve nöromüsküler nikotinik reseptörleri direkt olarak aktive eder. II. Sinaptik asetilkolinin etkisinin sonlandırılmasında bütirilkolinesterazın (psödokolinesteraz) etkisi önemsizdir. III. Bazı kolinesteraz inhibitörleri direkt etkiye sahiptir, neostigmin gibi. IV. İntravenöz asetilkolin verilmeye kalkışılırsa ortalama 15 saniyelik bir etki için çok büyük miktarlarda vermek gerekir. Kolinomimetikler için yukarıdaki ifadelerden hangisi/hangileri doğrudur?",
+    "Cevap: I, II, III ve IV.",
+    "Soru, kolinomimetiklerle ilgili dört ifadenin doğruluğunu ayrı ayrı sınar; dördü de doğrudur.",
+    "Neostigmin kolinesterazı bloke eder ve motor son plakta nikotinik reseptöre doğrudan da etkir (slayt 26); bu hem birinci hem üçüncü ifadeyi doğrular. Sinaptik asetilkolini yıkan temel enzim asetilkolinesterazdır, bütirilkolinesteraz plazma ve karaciğerdedir (slayt 22), bu yüzden sinaptik sonlanmada önemsizdir.",
+    "Asetilkolin hızlı hidroliz nedeniyle sistemik tedavide kullanılmaz (slayt 14); damar içi uygulamada çok kısa süre etki edeceğinden büyük miktar gerekir, dördüncü ifade de doğrudur.",
+    "Bu nedenle kısmi seçenekler (A, B, C, D) ifadelerin en az birini yanlış sayar ve elenir.",
+    "Örnek: Neostigmin kolinesterazı bloke etmenin yanında motor son plakta ayrıca ne yapar?",
+    "Tuzak: Dört ifadeden birini şüpheyle yanlış sayıp tüm ifadeler doğru olabileceğini hesaba katmamak.",
+    "2022-2023: Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların oluşturduğu nöromüsküler blokajı geri döndüren ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Neostigmin.",
+    "Soru, nondepolarizan kas gevşeticilerin oluşturduğu bloğun hangi ilaçla geri çevrildiğini ölçer.",
+    "Slayt 33, nondepolarizan blokta neostigminin asetilkolinesterazı inhibe ettiğini, asetilkolinin biriktiğini ve reseptördeki yarışın geri çevrildiğini söyler. Atropin veya glikopirolat, bradikardi ve salivasyon gibi muskarinik yan etkiler için birlikte verilir (slayt 26, 33).",
+    "Sugammadeks, flumazenil, baklofen ve dantrolen bu dersin slaytında bu amaçla geçmez; sorunun cevabı slayttaki antagonizma mekanizmasına dayanır.",
+    "Örnek: Nondepolarizan blok antagonizmasında neostigmine eşlik eden muskarinik yan etkiyi önlemek için hangi ilaç verilir?",
+    "Tuzak: Süksinilkolin bloğunda da neostigminin işe yarayacağını sanmak; slayt 33'e göre süksinilkolin bloğu uzamışsa neostigmin etkisizdir.",
+    "2022-2023: Asetilkolin uygulamasının oluşturduğu aşağıdaki etkilerden hangisi atropin tarafından engellenemez?",
+    "Cevap: Çizgili kaslarda fasikülasyon.",
+    "Soru, asetilkolinin muskarinik ve nikotinik etkilerini ayırıp atropinin hangisini engelleyemediğini ölçer.",
+    "Atropin muskarinik antagonisttir ve nikotinik güçsüzlüğü ya da felci düzeltmez (slayt 39). Çizgili kasta fasikülasyon nikotinik (NM) etkidir (slayt 36), bu yüzden atropinle engellenmez.",
+    "Bağırsak hareketlerinde artış, salya artışı, bradikardi ve miyozis muskarinik etkilerdir (slayt 9); bunlar atropinle engellenir. Bu yüzden diğer dört şık atropinin engelleyebildiği etkilerdir.",
+    "Örnek: Organofosfat zehirlenmesinde atropin verildi; kas fasikülasyonları ve solunum kası güçsüzlüğü neden sürer?",
+    "Tuzak: Asetilkolinin her etkisinin atropinle ortadan kalkacağını sanmak; atropin yalnız muskarinik reseptörde çalışır.",
+    "2025-2026: I. Glokom II. Postoperatif atonik ileus III. Myastenia gravis IV. Alzheimer hastalığı Yukarıdakilerden hangisi/hangileri parasempatomimetiklerin endikasyonlarındandır?",
+    "Cevap: I, II, III ve IV.",
+    "Soru, kolinomimetik ilaçların klinik kullanım alanlarının geniş kapsamını ölçer; dört durumun hepsi doğrudur.",
+    "Glokomda pilokarpin ve karbakol kullanılır (slayt 16, 17), postoperatif ileusta neostigmin seçilmiş olgularda kullanılır (slayt 26), miyastenide neostigmin ve piridostigmin kullanılır (slayt 26, 27). Alzheimer hastalığında donepezil, rivastigmin ve galantamin gibi santral kolinesteraz inhibitörleri özellikle hafif ve orta evrede kullanılır (slayt 29).",
+    "Bu nedenle kısmi seçenekler (yalnız I, I ve II, I-II-III, II-III-IV) bir endikasyonu atladığı için elenir.",
+    "Örnek: Alzheimer hastalığında semptomatik fayda sağlayan santral kolinesteraz inhibitörlerine bir örnek veriniz.",
+    "Tuzak: Alzheimer ve ileus gibi görünüşte kolinerjik olmayan alanları listeden çıkarmak; slayt bunların da kolinesteraz inhibitörü endikasyonu olduğunu gösterir.",
+    "2025-2026: DFP, TEPP, dimefoks, mipafoks, paration, malation gibi organofosfatlar ve G serisi sinir ajanları (tabun, sarin, soman) ile oluşan zehirlenmede tedavi nasıl sağlanır?",
+    "Cevap: Fosforillenmiş asetilkolinesterazı yeniden aktive ederek.",
+    "Soru, organofosfat zehirlenmesinde tedavinin enzim düzeyinde nasıl çalıştığını ölçer.",
+    "Organofosfatlar asetilkolinesterazı fosforiller ve zehirlenmenin mekanizması budur. Pralidoksim bu fosforil grubunu uzaklaştırır ve enzimi yeniden aktif hale getirir (slayt 40, 37); erken verilirse periferik nikotinik bulgular da düzelebilir.",
+    "Asetilkolinesterazı inhibe etmek ya da inaktive etmek zehirlenmenin kendisini tarif eder, tedaviyi değil. Presinaptik ACh miktarını artırmak ya da azaltmak da pralidoksimin mekanizması değildir.",
+    "Örnek: Pralidoksim organofosfatla fosforillenmiş enzime ne yapar?",
+    "Tuzak: Zehirlenme mekanizmasını (inhibisyon) tedavi mekanizmasıyla karıştırmak; tedavi enzimi yeniden aktive etmektir.",
+    "2020-2021: Parathion ile oluşan toksisite hangi ilaçlarla/ajanlarla/uygulamalarla tedavi edilebilir?",
+    "Cevap: Atropin ve pralidoksim.",
+    "Soru, paration zehirlenmesinin hangi ilaç çiftiyle tedavi edildiğini ölçer.",
+    "Slayt 34 parationu organofosfat olarak sayar; slayt 37 tedavi akışında atropini muskarinik bulgular düzelene kadar titre etmeyi, pralidoksimi ise aging öncesi erken başlamayı söyler. Atropin muskarinik bulguları, pralidoksim ise enzimi yeniden aktive ederek nikotinik bulguları da düzeltir.",
+    "Antikonvülzan ilaç yalnız konvülsiyon geliştiğinde eklenen destektir (slayt 37, benzodiazepin), tek başına tedavi sayılmaz. Hemodiyaliz ve hiperbarik oksijen slayttaki akışta yoktur, nikotin ise zehirlenmeyi artıran bir agonisttir.",
+    "Örnek: Organofosfat zehirlenmesinde muskarinik bulguları ve fosforillenmiş enzimi hedefleyen iki ilaç hangisidir?",
+    "Tuzak: Yalnız atropinin yeterli olduğunu sanmak; atropin enzimi geri getirmez, pralidoksim ise muskarinik bulguları gidermez.",
+    "2019-2020: Aşağıdakilerden hangisi santral ve periferik sinir sisteminde sinaptik aralıkta esteraz enzimi tarafından yıkımlanır?",
+    "Cevap: Asetilkolin.",
+    "Soru, asetilkolinesteraz enziminin hangi nörotransmitteri yıktığını ölçer.",
+    "Slayt 6 ve 22, asetilkolinesterazın kolinerjik sinapslarda ve eritrositlerde bulunduğunu ve sinaptik asetilkolini hızla yıkan temel enzim olduğunu söyler. Bu yüzden enzimin inhibisyonu asetilkolini biriktirir ve indirekt kolinomimetik etki doğar.",
+    "Serotonin, dopamin, adrenalin ve histamin bu enzimin substratı değildir; bunların yıkımı başka enzimlerle olur ve bu şıklar kolinerjik sistemle ilgisizdir.",
+    "Örnek: Asetilkolinesterazı inhibe eden bir ilaç hangi nörotransmitterin sinapsta birikmesine yol açar?",
+    "Tuzak: Esteraz enzimini her nörotransmitterin yıkımına bağlamak; asetilkolinesteraz yalnız asetilkolini yıkar."
+   ],
+   "v": "89f8838c25"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 20 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 20 çıkmış soru var; 4 tanesi öncüllü, 4 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 5, 6, 7, 9, 13, 17, 21, 26, 27, 28, 30, 33, 37, 39, 40."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 20 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 20 çıkmış soru var; 4 tanesi öncüllü, 4 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 5, 6, 7, 9, 13, 17, 21, 26, 27, 28, 30, 33, 37, 39, 40."
+   ],
+   "v": "79caaf853c"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Atropin: muskarinik reseptör antagonisti, nikotinik güçsüzlüğü düzeltmez",
+     "metin": "Sık yapılan hata: Kolinerjik ilaçlar arasında kalan şıkları antidot sanmak; oysa bunlar zehirlenmeyi oluşturan mekanizmanın aynısını yapar. Ayrıca: Asetilkolinin her etkisinin atropinle ortadan kalkacağını sanmak; atropin yalnız muskarinik reseptörde çalışır."
+    },
+    {
+     "baslik": "Kolinomimetiklerde yan etkiler: muskarinik fazlalık (SLUDGE) ve kontrendikasyonlar",
+     "metin": "Sık yapılan hata: Noradrenalin gibi sempatik bir ilacın muskarinik fazlalığı dengeleyeceğini sanmak; fizyolojik karşıt değil, reseptör düzeyinde rakip ilaç gerekir."
+    },
+    {
+     "baslik": "Piridostigmin: oral kuaterner karbamat, miyastenide temel seçenek",
+     "metin": "Sık yapılan hata: Soru kökündeki yanlış arama yönünü kaçırıp tanıdık görünen ilaç adlarının hepsini doğru sanmak; önce ilacın kolinesteraz inhibitörü olup olmadığına bakılmalıdır."
+    },
+    {
+     "baslik": "AChE inhibitörlerinin klinik kullanım özeti: edrofonyum, neostigmin, piridostigmin",
+     "metin": "Sık yapılan hata: İsmi bir enzim inhibitörü gibi duyulan ilacı AChE inhibitörü sanmak; indirekt etki yalnızca kolinesterazın inhibisyonuyla oluşur."
+    },
+    {
+     "baslik": "Kolin esterlerinin seçiciliği: asetilkolin ve karbakol M ve N reseptörlere etkir",
+     "metin": "Sık yapılan hata: Ağırlıklı muskarinik etkili ilaçlarla beta blokörü karıştırmak; yalnızca kolin esteri iskeleti olanlar bu gruptadır."
+    },
+    {
+     "baslik": "ACh sentezi ve salımı",
+     "metin": "Sık yapılan hata: Kalsiyumu bütün nörotransmitter basamaklarında rolü varmış gibi düşünmek; kalsiyumun burada görevi ekzositozu başlatmaktır. Ayrıca: Sentez ve yıkım enzimlerinin adını birbirine çevirmek; kolin asetiltransferaz yapar, asetilkolinesteraz yıkar."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Atropin: muskarinik reseptör antagonisti, nikotinik güçsüzlüğü düzeltmez: Sık yapılan hata: Kolinerjik ilaçlar arasında kalan şıkları antidot sanmak; oysa bunlar zehirlenmeyi oluşturan mekanizmanın aynısını yapar. Ayrıca: Asetilkolinin her etkisinin atropinle ortadan kalkacağını sanmak; atropin yalnız muskarinik reseptörde çalışır.",
+    "Kolinomimetiklerde yan etkiler: muskarinik fazlalık (SLUDGE) ve kontrendikasyonlar: Sık yapılan hata: Noradrenalin gibi sempatik bir ilacın muskarinik fazlalığı dengeleyeceğini sanmak; fizyolojik karşıt değil, reseptör düzeyinde rakip ilaç gerekir.",
+    "Piridostigmin: oral kuaterner karbamat, miyastenide temel seçenek: Sık yapılan hata: Soru kökündeki yanlış arama yönünü kaçırıp tanıdık görünen ilaç adlarının hepsini doğru sanmak; önce ilacın kolinesteraz inhibitörü olup olmadığına bakılmalıdır.",
+    "AChE inhibitörlerinin klinik kullanım özeti: edrofonyum, neostigmin, piridostigmin: Sık yapılan hata: İsmi bir enzim inhibitörü gibi duyulan ilacı AChE inhibitörü sanmak; indirekt etki yalnızca kolinesterazın inhibisyonuyla oluşur.",
+    "Kolin esterlerinin seçiciliği: asetilkolin ve karbakol M ve N reseptörlere etkir: Sık yapılan hata: Ağırlıklı muskarinik etkili ilaçlarla beta blokörü karıştırmak; yalnızca kolin esteri iskeleti olanlar bu gruptadır.",
+    "ACh sentezi ve salımı: Sık yapılan hata: Kalsiyumu bütün nörotransmitter basamaklarında rolü varmış gibi düşünmek; kalsiyumun burada görevi ekzositozu başlatmaktır. Ayrıca: Sentez ve yıkım enzimlerinin adını birbirine çevirmek; kolin asetiltransferaz yapar, asetilkolinesteraz yıkar.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "4b3c740c24"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

@@ -1,0 +1,2985 @@
+{
+ "mdSha1": "829edb0078128f7efd0d59b104bdeaf218c9636b",
+ "p": [
+  [
+   {
+    "ses": "Lokal anestezik ilaçlar, bilinci kapatmadan bir bölgenin ağrısını geçici olarak ortadan kaldıran ilaçlardır ve bu ders onları temel bilimden kliniğe kadar işler.",
+    "sayfa": 1,
+    "satir": [
+     "Temel Bilimden Kliniğe",
+     "Farmakoloji Dersi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Ders beş bölümde ilerler: kullanım alanları ve blok mekanizması, ester yapılı ajanlar, amid yapılı ajanlar, diğer lokal anestezik maddeler ve en sonda güvenlik özeti.",
+    "sayfa": 1,
+    "satir": [],
+    "sekil": null
+   },
+   {
+    "ses": "Ester ve amid ayrımı dersin ana ölçütüdür, çünkü metabolizma, alerji ve stabilite profilleri bu ayrıma göre değişir.",
+    "sayfa": 1,
+    "satir": [],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anesteziklerin kullanım alanları, bilinç kaybı yaşatmadan bölgesel ağrı kontrolü sağlamalarına dayanır.",
+    "sayfa": 2,
+    "satir": [
+     "Bilinç kaybı yaşatmadan bölgesel ağrı kontrolü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu bölümde sırasıyla tanımı, klinik uygulama alanlarını, sinir liflerinin bloke olma sırasını ve pratik ipuçlarını göreceğiz.",
+    "sayfa": 2,
+    "satir": [
+     "klinik uygulama alanları, mekanizmaları ve pratik ipuçları"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anestezi, bilinç tamamen korunurken belirli bir bölgedeki duyusal iletinin geri dönüşlü olarak bloke edilmesidir.",
+    "sayfa": 3,
+    "satir": [
+     "Bilinç tamamen korunurken belirli bir"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Geri dönüşlü, yani reversibl, demek ilaç etkisi geçince duyunun geri dönmesi demektir.",
+    "sayfa": 3,
+    "satir": [
+     "düşük dozda reversibl etki"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki, sinir liflerinde aksiyon potansiyelinin, yani sinirin elektriksel iletisinin durdurulmasıyla ortaya çıkar.",
+    "sayfa": 3,
+    "satir": [
+     "Sinir liflerinde aksiyon",
+     "potansiyeli iletimi durdurulur"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki doza bağımlıdır: doz arttıkça blok derinleşir, düşük dozda ise etki geri dönüşlüdür.",
+    "sayfa": 3,
+    "satir": [
+     "Doz arttıkça blok derinleşir"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki yalnız sinirle sınırlı değildir; uyarılabilen her hücre etkilenir, bu yüzden kalp kası ve santral sinir sistemi de ilacın hedefi olabilir.",
+    "sayfa": 3,
+    "satir": [
+     "Sadece sinir değil; kalp kası ve",
+     "santral sinir sistemi de etkilenir"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İlaç kana geçip tüm vücuda yayıldığında, yani sistemik olduğunda, bu geniş etki toksisiteye dönüşür; ileride göreceğimiz kalp ve beyin bulguları bu yüzden ortaya çıkar.",
+    "sayfa": 3,
+    "satir": [
+     "Tüm Uyarılabilir"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anesteziklerin klinik uygulama alanları dört başlıkta toplanır: infiltrasyon, periferik sinir bloğu, spinal anestezi ve epidural anestezi.",
+    "sayfa": 4,
+    "satir": [
+     "Klinik Uygulama Alanları"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İnfiltrasyon anestezisinde ilaç doğrudan doku içine enjekte edilir; küçük cerrahi girişimler, dikiş atma ve cilt lezyonu çıkarma gibi yüzeyel işlemlerde kullanılır.",
+    "sayfa": 4,
+    "satir": [
+     "Küçük cerrahi girişimler, dikiş atma, cilt lezyonu",
+     "İnfiltrasyon Anestezisi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Periferik sinir bloğunda ilaç hedef sinirin çevresine verilir; dijital, infraorbital, supraorbital ve mental sinir blokları örnektir.",
+    "sayfa": 4,
+    "satir": [
+     "Digital, infraorbital, supraorbital ve mental sinir blokları",
+     "hedef sinir çevresine enjeksiyon"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bunlar sırasıyla parmak, göz altı, kaş üstü ve çene bölgesinin sinirleridir.",
+    "sayfa": 4,
+    "satir": [
+     "Digital, infraorbital, supraorbital ve mental sinir blokları"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Spinal anestezide ilaç beyin omurilik sıvısının içine enjekte edilir ve alt ekstremite ile karın bölgesi girişimlerinde yaygın olarak seçilir.",
+    "sayfa": 4,
+    "satir": [
+     "BOS içine enjeksiyon; alt ekstremite ve abdominal",
+     "Spinal Anestezi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Epidural anestezi ise omurilik sıvısının dışındaki epidural boşluğa uygulanır ve doğum ağrısı yönetiminde ve uzun süreli ameliyat sonrası ağrı kesmede kullanılır.",
+    "sayfa": 4,
+    "satir": [
+     "Obstetrikte doğum ağrısı yönetimi ve uzun süreli",
+     "Epidural Anestezi"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anestezikler tüm sinir liflerini eşit hızda bloke etmez; blok belirli bir sıra izler ve slayttaki merdiven çizimi bu sırayı gösterir.",
+    "sayfa": 5,
+    "satir": [
+     "Lokal anestezikler tüm sinir liflerini eşit hızda bloke",
+     "Blok Sırası: Küçükten Büyüğe"
+    ],
+    "sekil": "üç basamaklı merdiven çizimi: sinir lifi blok sırası"
+   },
+   {
+    "ses": "Merdivenin birinci basamağında küçük çaplı B lifleri bulunur; bunlar otonom, yani istemsiz çalışan, liflerdir ve damar çapı ile salgı işlevini yürüttüğü için ilk bloke olur.",
+    "sayfa": 5,
+    "satir": [
+     "B lifleri (otonom): İlk bloke olanlar",
+     "vazomotor"
+    ],
+    "sekil": "merdivenin birinci basamağı: B lifleri"
+   },
+   {
+    "ses": "İkinci basamakta C ve A delta lifleri bloke olur; bunlar duyusal liflerdir, dolayısıyla ağrı ve ısı iletimi yavaşlar.",
+    "sayfa": 5,
+    "satir": [
+     "C ve Aδ lifleri (duyusal)",
+     "Ağrı ve ısı iletimi yavaşlar"
+    ],
+    "sekil": "merdivenin ikinci basamağı: C ve A delta lifleri"
+   },
+   {
+    "ses": "Üçüncü ve son basamakta A alfa, A beta ve A gama lifleri bulunur; bunlar motor ve konum duyusunu taşıyan proprioseptif liflerdir ve en geç etkilenir.",
+    "sayfa": 5,
+    "satir": [
+     "Aα, Aβ, Aγ lifleri (motor/proprioseptif)",
+     "En son ve"
+    ],
+    "sekil": "merdivenin üçüncü basamağı: A alfa, A beta, A gama lifleri"
+   },
+   {
+    "ses": "Çizimin altındaki eksen ilkeyi özetler: lif çapı arttıkça lifi bloke etmek için gereken anestezik konsantrasyonu da artar.",
+    "sayfa": 5,
+    "satir": [
+     "Lif çapı arttıkça gerekli anestezik",
+     "konsantrasyonu da artar"
+    ],
+    "sekil": "merdivenin altındaki eksen: lif çapı arttıkça gerekli konsantrasyon artar"
+   },
+   {
+    "ses": "Bu sıra, blokta ağrı ve ısı duyusunun kas gücünden önce etkilendiğini gösterir.",
+    "sayfa": 5,
+    "satir": [
+     "Ağrı ve ısı iletimi yavaşlar"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anestezik uygularken üç klinik ipucu öne çıkar: toplam doz hesabı, vazokonstriktör kullanımı ve analjezinin yayılım yönü.",
+    "sayfa": 6,
+    "satir": [
+     "Klinik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Büyük yara ve kesilerde toplam doz hesaplanır ve toksik eşiğin altında kalmak zorunludur.",
+    "sayfa": 6,
+    "satir": [
+     "Büyük yara ve kesilerde",
+     "toksik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Vazokonstriktör, damarı daraltan maddedir; lokal anesteziğe epinefrin eklenmesi sistemik emilimi yavaşlatır ve lokal etki süresini uzatır.",
+    "sayfa": 6,
+    "satir": [
+     "Epinefrin eklenmesi sistemik",
+     "absorpsiyonu yavaşlatır",
+     "lokal etki süresini uzatır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: lokal anestezik solüsyonuna vazokonstriktör katılmasının amacı, etki süresinin artırılmasıdır.",
+    "sayfa": 6,
+    "satir": [
+     "lokal etki süresini uzatır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Amaç advers etkileri ortadan kaldırmak değildir; emilimi yavaşlatarak etkiyi bölgede tutmak ve süreyi uzatmaktır.",
+    "sayfa": 6,
+    "satir": [
+     "Epinefrin eklenmesi sistemik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Analjezi yayılımı proksimalden distale doğru ilerler, yani gövdeye yakın bölgeden uca doğru, ve klinik değerlendirmede bu yön referans alınır.",
+    "sayfa": 6,
+    "satir": [
+     "Analjezi yayılımı proksimalden distale",
+     "Proksimalden Distale"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Ester yapılı lokal anestezikler, tarihsel olarak ilk kullanılan gruptur.",
+    "sayfa": 7,
+    "satir": [
+     "Tarihsel olarak ilk kullanılan grup"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu grubu üç özellik belirler: hızlı plazma hidrolizi, para-aminobenzoik asit, yani paba, adlı metabolit ve alerji profili; bu yüzden günümüz klinik pratiğinde sınırlı yer bulurlar.",
+    "sayfa": 7,
+    "satir": [
+     "hızlı plazma hidrolizi, PABA"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Ester grubunun kimyasal özelliği, yapıda amino-ester bağının bulunmasıdır.",
+    "sayfa": 8,
+    "satir": [
+     "Yapılarında amino-ester"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu bağ plazma pseudokolinesterazları, yani kandaki ester bağını kıran enzimler, tarafından hızla hidrolize edilir; hidroliz, bir bağın su yardımıyla kırılması demektir.",
+    "sayfa": 8,
+    "satir": [
+     "pseudokolinesterazları tarafından"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Birinci özellik hızlı hidrolizdir: ester yapılı ilaçlar plazma esterazlarıyla parçalanır ve bunun için karaciğere gereksinim duymaz.",
+    "sayfa": 8,
+    "satir": [
+     "Plazma esterazları ile",
+     "parçalanır; karaciğer"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkinci özellik paba metabolitidir; metabolit ilacın yıkımıyla oluşan maddedir ve burada açığa çıkan paba alerjik reaksiyonları tetikler.",
+    "sayfa": 8,
+    "satir": [
+     "Para-aminobenzoik asit",
+     "alerjik reaksiyonların tetikçisi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Üçüncü özellik düşük stabilitedir: ester yapılı ilaçlar ısı ve ışığa duyarlıdır, bu yüzden saklarken dikkat gerekir.",
+    "sayfa": 8,
+    "satir": [
+     "Isı ve ışığa duyarlılık",
+     "saklamada dikkat gerektirir"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Kokain, tarihin ilk lokal anesteziğidir; bin sekiz yüz seksen dörtte Koller göz cerrahisinde kullanarak lokal anestezinin kapılarını açmıştır.",
+    "sayfa": 9,
+    "satir": [
+     "Koller tarafından göz",
+     "Tarihsel İlk"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kokainin eşsiz mekanizması, adrenalin ve noradrenalin geri alımını engelleyen tek lokal anestezik olmasıdır.",
+    "sayfa": 9,
+    "satir": [
+     "Adrenalin ve noradrenalin geri",
+     "alımını engelleyen tek lokal"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sempatomimetik, sempatik sinir sistemini uyaran demektir; geri alım engellenince noradrenalin sinaptik aralıkta kalır ve damarlar büzülür.",
+    "sayfa": 9,
+    "satir": [
+     "Sempatomimetik etki nedeniyle"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu yüzden kokain tek başına vazokonstriktör etki gösterir ve kulak burun boğaz cerrahisinde doğal vazokonstriktör sağlar.",
+    "sayfa": 9,
+    "satir": [
+     "burun-boğaz cerrahisinde doğal",
+     "vazokonstriktör sağlar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Güncel kullanımı yalnızca topikaldir, yani yüzeye uygulanır, ve kötüye kullanım potansiyeli nedeniyle çok sınırlıdır.",
+    "sayfa": 9,
+    "satir": [
+     "Yalnızca topikal, özellikle ORL",
+     "kullanım potansiyeli nedeniyle çok"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Prokain, lokal anestezikler arasında referans ajan kabul edilir ve potens değeri bire eşittir.",
+    "sayfa": 10,
+    "satir": [
+     "Potens = 1",
+     "Referans Ajan"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Potens, ilacın gücüdür ve tüm diğer lokal anesteziklerin gücü prokaine göre karşılaştırılır.",
+    "sayfa": 10,
+    "satir": [
+     "Tüm lokal anesteziklerin potens"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki süresi yirmi ile altmış dakikadır ve vazokonstriktörle uzatılabilir.",
+    "sayfa": 10,
+    "satir": [
+     "20–60 dakika; vazokonstriktör ile"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Başlangıç yaklaşık yedi dakikadır, yani etkinin başlama süresi olan onset nispeten yavaştır.",
+    "sayfa": 10,
+    "satir": [
+     "nispeten yavaş onset"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Günümüzde prokain temel olarak infiltrasyon anestezisinde kullanılır; uzun girişimlerde tetrakain ile kombinasyon önerilir.",
+    "sayfa": 10,
+    "satir": [
+     "Günümüzde temel olarak infiltrasyon",
+     "tetrakain ile kombinasyon önerilir"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Klorprokain, nesakain adıyla da bilinir ve prokainin kimyasal olarak değiştirilmiş hâlidir.",
+    "sayfa": 11,
+    "satir": [
+     "Klorprokain (Nesakain)",
+     "Modifiye Hali"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu değişiklik daha hızlı başlangıç sağlar ve özellikle epidural anestezide yoğun kullanım avantajı kazandırır.",
+    "sayfa": 11,
+    "satir": [
+     "daha hızlı başlangıç ve özellikle epidural"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki süresi yaklaşık kırk beş dakikadır ve analjezik etki ani biçimde sonlanabilir.",
+    "sayfa": 11,
+    "satir": [
+     "45 dakika"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Tetrakain, ametokain adıyla da anılır ve spinal anestezinin güçlü adayıdır.",
+    "sayfa": 12,
+    "satir": [
+     "Tetrakain (Ametokain)"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Prokaine kıyasla on kat daha güçlü ve on kat daha toksiktir.",
+    "sayfa": 12,
+    "satir": [
+     "Prokaine kıyasla 10 kat daha güçlü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki süresi iki ile üç saattir ve vazokonstriktörle birlikte kullanıldığında daha da uzar.",
+    "sayfa": 12,
+    "satir": [
+     "Vazokonstriktörle birlikte kullanıldığında"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Maksimum doz yüz miligramdır; spinalde yüzde yarım ile bir, gözde yüzde yarımlık solüsyon kullanılır.",
+    "sayfa": 12,
+    "satir": [
+     "Maks. Doz",
+     "Spinal: %0,5–1 solüsyon"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Spinal anestezide standart ajan olarak kullanılır; absorpsiyon yavaş olduğu için etki başlangıcı gecikebilir.",
+    "sayfa": 12,
+    "satir": [
+     "Spinal anestezide standart ajan olarak kullanılır",
+     "Absorpsiyon yavaş olduğundan etki başlangıcı gecikebilir"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Spinal boşlukta esteraz bulunmadığı için etki emilimle sınırlı kalır.",
+    "sayfa": 12,
+    "satir": [
+     "Spinal boşlukta esteraz bulunmadığından"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kardiyak asistol, yani kalp durması, ya da ventriküler fibrilasyon yapabilme riski nedeniyle dikkatli doz yönetimi zorunludur.",
+    "sayfa": 12,
+    "satir": [
+     "Kardiyak asistol veya ventriküler"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Esterlerde metabolizma hızı, üç bölmeli bir huni çizimiyle gösterilir: soldaki dar uçta klorprokain, ortada tetrakain, sağdaki geniş bölmede prokain yer alır.",
+    "sayfa": 13,
+    "satir": [
+     "Esterlerde Metabolizma Hızları",
+     "Klorprokain"
+    ],
+    "sekil": "üç bölmeli huni çizimi: klorprokain, tetrakain, prokain"
+   },
+   {
+    "ses": "Bölmelerin soldan sağa dizilişi hız sırasını göstermez; hız sırası çizimin altındaki yazıda verilir ve klorprokain, sonra prokain, en sonda tetrakain şeklindedir.",
+    "sayfa": 13,
+    "satir": [
+     "Klorprokain > Prokain > Tetrakain"
+    ],
+    "sekil": "huni çizimi altındaki hız sıralaması"
+   },
+   {
+    "ses": "Hidroliz hızı yükseldikçe sistemik toksisite potansiyeli ve stabil kalma süresi azalır.",
+    "sayfa": 13,
+    "satir": [
+     "Hidroliz hızı yükseldikçe sistemik toksisite"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu sıralama hem güvenlik hem klinik planlama açısından kritik bir referanstır.",
+    "sayfa": 13,
+    "satir": [
+     "kritik bir referanstır"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Esterlerin klinik dezavantajları iki başlıkta toplanır: düşük stabilite ve yüksek alerji potansiyeli.",
+    "sayfa": 14,
+    "satir": [
+     "Düşük Stabilite"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Isı ve ışığa karşı hassas yapı yüzünden saklama koşullarına dikkat edilmezse etki kaybı olur ve steril raf ömrü amidlere kıyasla kısadır.",
+    "sayfa": 14,
+    "satir": [
+     "Isı ve ışığa karşı hassas yapı",
+     "Steril raf ömrü amidlere kıyasla kısadır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Alerji potansiyeli yüksektir, çünkü paba metaboliti bağışıklık sistemini tetikler ve anafilaksi, yani ani ve ağır alerji, dahil ciddi reaksiyonlar görülebilir.",
+    "sayfa": 14,
+    "satir": [
+     "PABA (para-aminobenzoik asit) metaboliti immün",
+     "Yüksek Alerji Potansiyeli"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Amid grubu bu iki sorunu taşımaz; sıradaki bölümde bu grubu göreceğiz.",
+    "sayfa": 14,
+    "satir": [
+     "amid grubu bu riski taşımaz"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Amid yapılı lokal anestezikler karaciğerde yavaş metabolize olur, üstün stabilite gösterir ve çok düşük alerji profiline sahiptir.",
+    "sayfa": 15,
+    "satir": [
+     "Karaciğerde yavaş metabolizma",
+     "üstün stabilite ve çok düşük alerji"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Slayt bu üç özelliği modern klinik pratiğin temel taşı olarak niteler.",
+    "sayfa": 15,
+    "satir": [
+     "modern klinik pratiğin temel taşları"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Amidlerin öne çıkmasının nedeni, esterlerin kısıtlı stabilitesi ve alerji potansiyelinin fark edilmesidir; amid yapılı ajanlar bin dokuz yüz kırklardan itibaren kullanılmaya başlamıştır.",
+    "sayfa": 16,
+    "satir": [
+     "itibaren amid yapılı",
+     "Neden Amidler Öne Çıktı?"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Amidlerin yıkımı yavaş ve kontrollüdür: karaciğer mikrozomal enzimleriyle, yani ilaç yıkan karaciğer enzimleriyle, metabolize edilirler ve plazma esterazlarına bağımlı değildir.",
+    "sayfa": 16,
+    "satir": [
+     "Karaciğer mikrozomal",
+     "plazma esterazlarına bağımlı değil"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Stabilite üstündür: ısı, asit ve alkaliden büyük ölçüde etkilenmezler ve raf ömürleri uzundur.",
+    "sayfa": 16,
+    "satir": [
+     "Isı, asit ve alkaliden büyük"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Alerji riski minimaldir, çünkü paba metaboliti oluşturmazlar; alerjik reaksiyonlar oldukça nadirdir.",
+    "sayfa": 16,
+    "satir": [
+     "PABA metaboliti oluşturmaz"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lidokain bin dokuz yüz kırk sekizde kullanıma girmiştir ve altın standart sayılır.",
+    "sayfa": 17,
+    "satir": [
+     "Lidokain (1948)",
+     "Altın Standart"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Altın standart denmesinin nedeni, tarihte en çok çalışılan ve en geniş endikasyon, yani kullanım alanı, yelpazesine sahip lokal anestezik olması ve profilinin dengeli olmasıdır.",
+    "sayfa": 17,
+    "satir": [
+     "Tarihte en çok çalışılan",
+     "Farmakolojik profilinin"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Isı, asit ve alkalilerden etkilenmez ve otoklavlanabilir, yani buharla sterilize edilebilir.",
+    "sayfa": 17,
+    "satir": [
+     "autoklavlanabilir",
+     "etkilenmez;"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Doku içinde hızlı yayılır ve birkaç dakikada etkili blok sağlar.",
+    "sayfa": 17,
+    "satir": [
+     "Doku içinde hızlı yayılım",
+     "birkaç dakikada etkili"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Vazokonstriktör eklenince etki süresi iki buçuk saate çıkar.",
+    "sayfa": 17,
+    "satir": [
+     "2,5 saate çıkar",
+     "Epinefrin ile"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Damar içinden verildiğinde ventriküler aritmilerin, yani karıncık kaynaklı ritim bozukluklarının, tedavisinde de kullanılır.",
+    "sayfa": 17,
+    "satir": [
+     "IV olarak ventriküler"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Mepivakain, lidokainin yapısal benzeridir ve benzer potens ile başlangıç hızına sahiptir; ancak üç kritik fark gösterir.",
+    "sayfa": 18,
+    "satir": [
+     "Lidokainin yapısal benzeri olan"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Birinci fark, tekrarlanan dozlarda birikme eğilimidir; karaciğer kapasitesi aşılabileceği için uzun süreli tekrarlı kullanımda risk vardır.",
+    "sayfa": 18,
+    "satir": [
+     "Tekrarlanan dozlarda birikme",
+     "Uzun Tekrarlı Kullanım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkinci fark, doğum açısından dikkattir: mepivakain plasentadan geçer ve fetüste, yani anne karnındaki bebekte, birikim yapabilir, bu yüzden doğumda dikkatli kullanılmalıdır.",
+    "sayfa": 18,
+    "satir": [
+     "Plasentadan geçer ve fetüste",
+     "Obstetrik Dikkat"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Üçüncü fark, intrinsik vazokonstriksiyon özelliğidir; bu sayede epinefrin gerektirmeden, yani vazokonstriktörsüz kullanılabilir.",
+    "sayfa": 18,
+    "satir": [
+     "Intrinsik vazokonstriksiyon",
+     "özelliği sayesinde epinefrin"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Bupivakain, en uzun etkili amid lokal anesteziklerden biridir ve özellikle doğum ağrısı yönetiminde ve uzun cerrahi girişimlerde tercih edilir.",
+    "sayfa": 19,
+    "satir": [
+     "En uzun etkili amid lokal",
+     "Bupivakain: Uzun Etkili"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Epidural ve kaudal blokta doğumda yaygındır; kaudal blok omurganın en alt kısmından yapılan epidural uygulamadır ve uzun etki süresi avantaj sağlar.",
+    "sayfa": 19,
+    "satir": [
+     "Obstetrikte yaygın; uzun etki",
+     "Epidural / Kaudal Blok"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Uzun etkinin temel açıklaması yüzde doksan beş protein bağlanmasıdır.",
+    "sayfa": 19,
+    "satir": [
+     "95 protein bağlanması",
+     "Yüksek Protein Bağlanması"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kardiyotoksisite, yani kalp üzerindeki toksik etki, bupivakainin ana riskidir: ventriküler aritmi riski vardır ve yüzeyel anestezi için uygun değildir.",
+    "sayfa": 19,
+    "satir": [
+     "Ventriküler aritmi riski; yüzeyel",
+     "Kardiyotoksisite"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Damar içine kaçan dozda kardiyak arrest, yani kalp durması, riski yüksektir; bu yüzden enjeksiyondan önce pistonu geri çekip kan gelmediğini görmek, yani aspirasyon, zorunludur.",
+    "sayfa": 19,
+    "satir": [
+     "İntravasküler enjeksiyonda",
+     "Dikkatli aspirasyon zorunludur"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Esterlerin plazma pseudokolinesterazları tarafından hidroliz edilme hızı, hem etki süresini hem sistemik toksisite riskini belirler.",
+    "sayfa": 20,
+    "satir": [
+     "hidroliz edilme hızı",
+     "Hidroliz Hızı Neden Önemli?"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Hızlı hidrolizde etki kısa sürer ve sistemik birikim riski düşüktür.",
+    "sayfa": 20,
+    "satir": [
+     "Hızlı hidroliz: Kısa etki süresi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yavaş hidrolizde etki uzundur, ancak toksisite potansiyeli artar; slayttaki çizim bunu üç bölmede gösterir.",
+    "sayfa": 20,
+    "satir": [
+     "Yavaş hidroliz: Uzun etki süresi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Çizimde klorprokain en hızlı hidroliz ve en düşük sistemik riskle yer alır.",
+    "sayfa": 20,
+    "satir": [],
+    "sekil": "üç bölmeli ok çizimi: klorprokain, prokain, tetrakain"
+   },
+   {
+    "ses": "Prokain orta hızda hidroliz olur ve orta riskli konumdadır.",
+    "sayfa": 20,
+    "satir": [],
+    "sekil": "üç bölmeli ok çizimi: klorprokain, prokain, tetrakain"
+   },
+   {
+    "ses": "Tetrakain en yavaş hidroliz, en yüksek toksisite potansiyeli ve en uzun etki süresiyle çizimin son bölmesindedir.",
+    "sayfa": 20,
+    "satir": [],
+    "sekil": "üç bölmeli ok çizimi: klorprokain, prokain, tetrakain"
+   },
+   {
+    "ses": "Pseudokolinesteraz enzimi genetik olarak eksik olan hastalarda tüm esterler daha uzun ve daha toksik etki gösterebilir.",
+    "sayfa": 20,
+    "satir": [
+     "Pseudokolinesteraz genetik eksikliği"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Ester ve amid grupları arasındaki alerji farkı, metabolitlerinden kaynaklanır.",
+    "sayfa": 21,
+    "satir": [
+     "Esterler vs Amidler: Alerji Mekanizması"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Esterler hidrolizle paba açığa çıkarır ve paba antijenik etkilidir, yani bağışıklık sisteminin hedefi olabilir.",
+    "sayfa": 21,
+    "satir": [
+     "Hidroliz ile PABA"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Amidlerde paba oluşmaz ve alerji çok nadirdir.",
+    "sayfa": 21,
+    "satir": [
+     "PABA oluşmaz,"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sorumlu metabolit olan paba, immün sistemi aktive ederek lokal veya sistemik alerjik reaksiyonlara yol açabilir.",
+    "sayfa": 21,
+    "satir": [
+     "immün sistemi aktive ederek lokal veya sistemik"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Prokainin referans olmasının gerekçesi, diğer ajanların gücünün onun katları olarak ifade edilebilmesidir.",
+    "sayfa": 22,
+    "satir": [
+     "potens değeri = 1 olarak kabul edilen",
+     "Prokain: \"Referans\" Olmasının"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: lokal anesteziklerin potensi hangi ilaca göre kıyaslanır sorusunun cevabı prokaindir.",
+    "sayfa": 22,
+    "satir": [
+     "potens değeri = 1 olarak kabul edilen"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Referans prokaindir; tetrakain ya da lidokain gibi daha güçlü ajanlar referans değil, karşılaştırılan ajanlardır.",
+    "sayfa": 22,
+    "satir": [
+     "Tüm diğer ajanların gücü karşılaştırılır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Potens ve etki süresi arttıkça toksisite de paralel olarak yükselir.",
+    "sayfa": 22,
+    "satir": [
+     "Potens ve etki süresi arttıkça"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Lidokainin potensi yaklaşık ikidir, yani prokainin iki katı güçtedir.",
+    "sayfa": 22,
+    "satir": [
+     "Potens ≈ 2"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bupivakainin potensi yaklaşık sekizdir; prokainin sekiz katı güç ve toksisite taşır.",
+    "sayfa": 22,
+    "satir": [
+     "Potens ≈ 8"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Tetrakainin potensi yaklaşık ondur; en güçlü ester ve en yüksek toksisiteli ajandır.",
+    "sayfa": 22,
+    "satir": [
+     "Potens ≈ 10"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Prokainin klinik zaman çizgisi, dört balonlu bir çizimle ve yanındaki dört satırla gösterilir.",
+    "sayfa": 23,
+    "satir": [
+     "Başlangıç ve Süre"
+    ],
+    "sekil": "dört balonlu zaman çizgisi çizimi ve dört satırlık dakika listesi"
+   },
+   {
+    "ses": "Sıfırıncı dakika enjeksiyon anıdır.",
+    "sayfa": 23,
+    "satir": [
+     "Enjeksiyon anı"
+    ],
+    "sekil": "zaman çizgisinin birinci satırı ve balonu"
+   },
+   {
+    "ses": "Yedinci dakikada etki başlar.",
+    "sayfa": 23,
+    "satir": [
+     "Etki başlangıcı"
+    ],
+    "sekil": "zaman çizgisinin ikinci satırı ve balonu"
+   },
+   {
+    "ses": "Yirminci ile altmışıncı dakika arası pik etki ve etki süresidir.",
+    "sayfa": 23,
+    "satir": [
+     "Pik etki ve etki süresi"
+    ],
+    "sekil": "zaman çizgisinin üçüncü satırı ve balonu"
+   },
+   {
+    "ses": "Vazokonstriktör yoksa etki yirmi ile otuz dakika sürer; epinefrinle bu süre kırk beş ile altmış dakikaya çıkar.",
+    "sayfa": 23,
+    "satir": [
+     "Yoksa 20–30 dk, epinefrin ile 45–60"
+    ],
+    "sekil": "zaman çizgisinin dördüncü satırı ve balonu"
+   },
+   {
+    "ses": "Vazokonstriktörlü ve vazokonstriktörsüz formlar klinik olarak mevcuttur ve seçim cerrahi süresine göre yapılır.",
+    "sayfa": 23,
+    "satir": [
+     "Vazokonstriktörlü ve vazokonstriktörsüz formlar klinik olarak mevcuttur"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Prokainin kullanım alanı daralmıştır; lokal anestezi tarihinde köşe taşı olmasına rağmen günümüzde kullanımı giderek azalmaktadır.",
+    "sayfa": 24,
+    "satir": [
+     "Prokain, lokal anestezi tarihinde",
+     "Kullanım Alanı Daralıyor"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Birinci neden düşük potenstir: lidokain ve bupivakain gibi daha güçlü alternatifler klinikte öne geçmiştir.",
+    "sayfa": 24,
+    "satir": [
+     "Daha güçlü alternatifler",
+     "Düşük Potens"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkinci neden yavaş başlangıçtır: yaklaşık yedi dakikalık onset, acil ve hızlı blok gereken vakalarda dezavantajdır.",
+    "sayfa": 24,
+    "satir": [
+     "dakika onset süresi",
+     "Yavaş Başlangıç"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Güncel endikasyonu yalnızca infiltrasyon anestezisi ve eğitim amaçlı referans olarak kullanımdır.",
+    "sayfa": 24,
+    "satir": [
+     "Temel olarak yalnızca",
+     "Güncel Endikasyon"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Uzun cerrahi girişimlerde tek bir ajanın sağlayamadığı süre ve güç dengesini yakalamak için prokain ve tetrakain birlikte kullanılabilir.",
+    "sayfa": 25,
+    "satir": [
+     "Uzun cerrahi girişimlerde",
+     "Prokain + Tetrakain"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu kombinasyonda prokain, tetrakaine göre daha çabuk başlayan etkiyi sağlar; tetrakain ise uzun süre yoğun bloğu sürdürür.",
+    "sayfa": 25,
+    "satir": [
+     "Prokain: Görece hızlı başlangıç",
+     "Tetrakain: Uzun süre boyunca"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Toplam doz hesabında iki ajanın maksimum dozları ayrı ayrı dikkate alınmalıdır.",
+    "sayfa": 25,
+    "satir": [
+     "Toplam doz hesabında her iki ajanın"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Klorprokain hızlı hidroliz özelliği sayesinde hem çabuk başlar hem çabuk biter; analjezinin neden aniden bitebildiği buradan anlaşılır.",
+    "sayfa": 26,
+    "satir": [
+     "Hızlı Başlangıç, Hızlı Son",
+     "Klorprokain, hızlı hidroliz özelliği"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki başlangıcı prokaine kıyasla daha hızlıdır ve birkaç dakika içinde blok oluşur.",
+    "sayfa": 26,
+    "satir": [
+     "Prokaine kıyasla daha hızlı",
+     "birkaç dakika içinde blok oluşur"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etkinin görece ani ve beklenmedik biçimde sonlanması, hızlı hidrolizin doğrudan sonucudur.",
+    "sayfa": 26,
+    "satir": [
+     "görece ani ve beklenmedik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Klinik dikkat olarak, klorprokain uzun işlemlerde tek başına yeterli olmayabilir ve ek doz planı yapılmalıdır.",
+    "sayfa": 26,
+    "satir": [
+     "Uzun işlemlerde tek başına",
+     "yeterli olmayabilir; ek doz planı"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Klorprokainin konsantrasyonu uygulama tipine göre seçilir; infiltrasyonda yüzde bir ile iki kullanılır.",
+    "sayfa": 27,
+    "satir": [
+     "%1–2 konsantrasyonlarda uygulanır",
+     "İnfiltrasyon"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sinir bloğunda da yüzde bir ile iki yeterlidir; bu aralık küçük cerrahi alanlara infiltrasyon ve periferik sinir blokajı için uygundur.",
+    "sayfa": 27,
+    "satir": [
+     "%1–2 konsantrasyon; periferik sinir",
+     "Sinir Bloğu"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kaudal ve epidural uygulamada yüzde iki ile üç kullanılır, çünkü daha derin blok gerektiren uygulamalardır.",
+    "sayfa": 27,
+    "satir": [
+     "%2–3 konsantrasyon; daha derin blok",
+     "Kaudal / Epidural"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Konsantrasyon seçimi hedef dokunun türüne, işlemin derinliğine ve beklenen süreye göre yapılır.",
+    "sayfa": 27,
+    "satir": [
+     "Konsantrasyon seçimi hedef dokunun"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Doz hesabında hastanın kilosunu temel almak güvenlik açısından zorunludur.",
+    "sayfa": 27,
+    "satir": [
+     "temel almak güvenlik açısından zorunludur"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Klorprokain görece güvenlidir, çünkü hızlı hidroliz sistemik birikimi minimumda tutar ve santral sinir sistemi toksisitesi diğer esterlere kıyasla nadirdir.",
+    "sayfa": 28,
+    "satir": [
+     "Neden Görece Güvenli?",
+     "sistemik birikimi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Hızlı metabolizasyon plazma düzeyini düşük tutar.",
+    "sayfa": 28,
+    "satir": [
+     "plazma düzeyini düşük tutar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "pKa, ilacın yarısının iyonize olduğu pe ha değeridir ve klorprokainde sekiz virgül dokuzdur; bu görece yüksektir, yani vücut pe ha değerinde iyonize fraksiyon fazladır.",
+    "sayfa": 28,
+    "satir": [
+     "pKa = 8,9",
+     "Görece yüksek pKa"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Slayt klorprokaini hem hızlı başlangıçlı hem yüksek pKa'lı verir; sonraki bir slayttaki düşük pKa kuralıyla çeliştiği için bu iki bilgi slayttaki gibi ayrı ayrı bilinmelidir.",
+    "sayfa": 28,
+    "satir": [
+     "Görece yüksek pKa"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yüksek konsantrasyonlarda ve intratekal, yani omurilik sıvısına, kullanımda araknoidit, yani omurilik zarı iltihabı, riski bildirilmiştir.",
+    "sayfa": 28,
+    "satir": [
+     "intratekal kullanımda arachnoidit",
+     "Nörotoksisite Dikkat"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Klorprokain, bupivakain ve opioidlerle aynı anda ya da ardışık uygulandığında bu ilaçların analjezik ve anestezik etkilerini belirgin biçimde zayıflatabilir.",
+    "sayfa": 29,
+    "satir": [
+     "Klorprokain, bupivakain ve opioidlerle aynı",
+     "Kombinasyon ve Etkileşim"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Opioidler, morfin benzeri güçlü ağrı kesicilerdir.",
+    "sayfa": 29,
+    "satir": [
+     "opioidlerle"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Olası mekanizma, klorprokainin oluşturduğu lokal pe ha değişimi ya da reseptör kompetisyonudur, yani aynı reseptör için yarışmadır.",
+    "sayfa": 29,
+    "satir": [
+     "Olası mekanizma"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu yüzden epidural kombinasyon planı yapılırken klorprokainin etkileşimi göz ardı edilmemelidir.",
+    "sayfa": 29,
+    "satir": [
+     "Epidural kombinasyon planı yapılırken"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Tetrakainin farmakokinetiği dört başlıkta özetlenir: absorpsiyon, dağılım, metabolizma ve eliminasyon.",
+    "sayfa": 30,
+    "satir": [
+     "Tetrakain: Farmakoloji Özeti"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Absorpsiyon yavaştır; uygulama bölgesinden sistemik dolaşıma geçiş sınırlıdır.",
+    "sayfa": 30,
+    "satir": [
+     "Yavaş absorpsiyon",
+     "dolaşıma geçiş sınırlıdır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Dağılımda yüksek lipofilite öne çıkar; yani yağda çözünürlüğü sayesinde sinir dokusuna hızlı penetrasyon ve yoğun birikim sağlar.",
+    "sayfa": 30,
+    "satir": [
+     "Yüksek lipofilite",
+     "sinir dokusuna hızlı penetrasyon"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Metabolizma kolinesterazla yavaş gerçekleşir; esterlerin çoğu hızlı yıkılırken tetrakainde bu yavaşlık uzun etkinin nedenidir.",
+    "sayfa": 30,
+    "satir": [
+     "Kolinesteraz ile yavaş parçalanma",
+     "etki"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Eliminasyon böbreklerden olur ve yavaş hidroliz nedeniyle toksik birikime dikkat edilmelidir.",
+    "sayfa": 30,
+    "satir": [
+     "Böbreklerden atılım",
+     "birikime dikkat"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Tetrakain zaten uzun etkilidir; epinefrin gibi bir vazokonstriktör eklenmesi bu süreyi daha da uzatır ve klinik planlamada esneklik sağlar.",
+    "sayfa": 31,
+    "satir": [
+     "Tetrakain zaten uzun etkili bir",
+     "Klinik Zamanlama Esnekliği"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Vazokonstriktörsüz spinal anestezide etki süresi, az önce gördüğümüz gibi iki ile üç saattir.",
+    "sayfa": 31,
+    "satir": [
+     "Spinal anestezide 2–3 saat etki",
+     "Vazokonstriktörsüz"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Vazokonstriktörlü uygulamada etki süresi belirgin biçimde uzar ve uzun cerrahi girişimlerde avantaj sağlar.",
+    "sayfa": 31,
+    "satir": [
+     "Etki süresi belirgin şekilde uzar",
+     "Vazokonstriktörlü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Spinal anestezide intratekal epinefrin kullanımında omurilik kan akımındaki değişikliğe dikkat edilmelidir.",
+    "sayfa": 31,
+    "satir": [
+     "İntratekal epinefrin kullanımında",
+     "Spinal Dikkat"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Tetrakainin kardiyak risk uyarısı iki tabloya dayanır: kardiyak asistol ve ventriküler fibrilasyon.",
+    "sayfa": 32,
+    "satir": [
+     "Kardiyak Risk Uyarısı"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yüksek sistemik dozlarda kalp durması görülebilir; bu yüzden damar içi enjeksiyondan kaçınılmalıdır.",
+    "sayfa": 32,
+    "satir": [
+     "Yüksek sistemik dozlarda",
+     "kalp durması görülebilir"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Ventriküler fibrilasyonda kalp kası düzensiz titrer; miyokartta sodyum kanallarının blokajı fatal aritmi riski doğurur.",
+    "sayfa": 32,
+    "satir": [
+     "Miyokartta",
+     "blokajı ile fatal aritmi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Güçlü etkinliğine karşın tetrakainde her uygulamada kalbin sürekli izlenmesi ve resüsitasyon, yani canlandırma, hazırlığı şarttır.",
+    "sayfa": 32,
+    "satir": [
+     "Risk–Fayda Dengesi",
+     "kardiyak monitorizasyon ve resüsitasyon"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Topikal lokal anestezide ilaç yüzeye uygulanır ve mukoza yüzeyinden emilerek etki gösterir.",
+    "sayfa": 33,
+    "satir": [
+     "Mukozal Absorpsiyon Mantığı",
+     "Topikal Lokal Anestezi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kokain, lidokain ve benzeri ajanlar mukozadan hızlı emilir; bu özellik işlem öncesi kısa süreli anestezide büyük avantajdır.",
+    "sayfa": 33,
+    "satir": [
+     "yüzeyinden hızlı emilerek etki gösterir",
+     "anestezide büyük avantaj sağlar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İltihaplı veya yaralanmış, yani travmatize, dokuda emilim hızlanır ve toksisite riski yükselir.",
+    "sayfa": 33,
+    "satir": [
+     "İnflamasyonlu veya travmatize"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Göz ve konjonktivada tetrakain ve proparakain, göz işlemlerinden önce damla olarak kullanılır.",
+    "sayfa": 33,
+    "satir": [
+     "Tetrakain, proparakain",
+     "Göz ve Konjonktiva"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Burun-boğaz bölgesinde kokain ve lidokain, endoskopi ve cerrahi hazırlıkta sprey olarak kullanılır.",
+    "sayfa": 33,
+    "satir": [
+     "Kokain, lidokain — endoskopi",
+     "Burun-Boğaz (ORL)"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Ağız içinde benzokain jel, diş hekimliğinde enjeksiyon öncesi hazırlık için kullanılır.",
+    "sayfa": 33,
+    "satir": [
+     "Benzokain jel",
+     "Ağız İçi"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Topikal ve enjeksiyonla uygulama aynı amaca hizmet eder, ancak farmakokinetik süreçleri, yani ilacın emilimi, dağılımı, yıkımı ve atılımı, tamamen farklıdır.",
+    "sayfa": 34,
+    "satir": [
+     "Her iki uygulama yolu aynı amaca",
+     "Farmakolojik Farklılıklar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Topikalde öncelikli parametre absorpsiyon hızı ve doku geçirgenliğidir.",
+    "sayfa": 34,
+    "satir": [
+     "Topikalde absorpsiyon hızı"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Enjeksiyonda aspirasyon kontrolü ve damar içine kaçmaktan kaçınma hayati önem taşır.",
+    "sayfa": 34,
+    "satir": [
+     "Enjeksiyonda aspirasyon kontrolü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkisinde de doz ve konsantrasyon hesabı toksisite riskini belirler.",
+    "sayfa": 34,
+    "satir": [
+     "İkisinde de doz-konsantrasyon"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Kokainin vazokonstriksiyonu avantaj ve risk olmak üzere iki yüz taşır, çünkü kokain tek başına vazokonstriktör etki gösteren lokal anesteziktir.",
+    "sayfa": 35,
+    "satir": [
+     "Vazokonstriksiyon'un İki Yüzü",
+     "Kokain tek başına vazokonstrüktör etki"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Avantajı, ek vazokonstriktör gerektirmemesidir: kanama azalır ve cerrahi saha temiz kalır.",
+    "sayfa": 35,
+    "satir": [
+     "Ek vazokonstrüktör gerektirmez",
+     "Avantaj"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Riski, ek epinefrin eklenmesinin tehlikeli olmasıdır: hipertansif kriz, yani tehlikeli kan basıncı yükselmesi, ve kardiyak komplikasyon riski artar.",
+    "sayfa": 35,
+    "satir": [
+     "Ek epinefrin eklenmesi tehlikelidir",
+     "Risk"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu yüzden kokain ile birlikte asla ek vazokonstriktör kullanılmamalıdır; kokain zaten damarı büzdüğü için ikinci bir vazokonstriktör tehlikeyi artırır.",
+    "sayfa": 35,
+    "satir": [
+     "Kokain ile birlikte asla ek"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Spinal ve epidural anestezide ajan seçimi, slayttaki dört katmanlı elmas çizimiyle özetlenir ve yanındaki dört kutu yukarıdan aşağıya okunur.",
+    "sayfa": 36,
+    "satir": [
+     "Spinal ve Epidural Anestezide Ajan Seçimi"
+    ],
+    "sekil": "dört katmanlı elmas çizimi ve yanındaki dört kutu"
+   },
+   {
+    "ses": "En üstteki kutuda yaygın tercih olarak bupivakain ve ropivakain verilir.",
+    "sayfa": 36,
+    "satir": [
+     "Tercih: Bupivakain/Ropivakain"
+    ],
+    "sekil": "elmasın birinci kutusu"
+   },
+   {
+    "ses": "İkinci kutuda amidler yer alır: karaciğerde metabolize olurlar ve daha güvenilirdir.",
+    "sayfa": 36,
+    "satir": [
+     "Karaciğerde metabolize, daha güvenilir"
+    ],
+    "sekil": "elmasın ikinci kutusu"
+   },
+   {
+    "ses": "Üçüncü kutuda esterler yer alır: beyin omurilik sıvısında esteraz yoktur ve etki emilimle biter.",
+    "sayfa": 36,
+    "satir": [
+     "BOS'ta esteraz yok",
+     "Esterlerin Özelliği"
+    ],
+    "sekil": "elmasın üçüncü kutusu"
+   },
+   {
+    "ses": "En alttaki kutu karar sorusudur: ester mi amid mi, ve ilk karar yapı tipidir.",
+    "sayfa": 36,
+    "satir": [
+     "İlk karar: yapı tipi",
+     "Ester veya Amid?"
+    ],
+    "sekil": "elmasın dördüncü kutusu"
+   },
+   {
+    "ses": "İntratekal uygulamada esteraz bulunmadığı için ester ajanların etkisi yalnızca vasküler emilimle sonlanır; bu nedenle modern pratikte amidler, yani bupivakain ve ropivakain, yaygın seçimdir.",
+    "sayfa": 36,
+    "satir": [
+     "İntratekal uygulamada BOS'ta",
+     "Bu nedenle modern pratikte amidler"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Slayt tetrakaini de spinalde standart ajan olarak anar ve seçim kılavuzunda bupivakainle birlikte verir; ikisi de spinalde geçerli seçenek olarak bilinmelidir.",
+    "sayfa": 36,
+    "satir": [
+     "Tercih: Bupivakain/Ropivakain"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Biyotransformasyon güvenilirliği ve alerji profili, yani ilacın vücutta dönüşümünün öngörülebilirliği ve alerji riski, klinik seçimi doğrudan etkiler.",
+    "sayfa": 36,
+    "satir": [
+     "biyotransformasyon güvenilirliği"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: klorprokain, ropivakain, kokain ve benzokain arasından epidural yolla kullanılanlar klorprokain ve ropivakaindir.",
+    "sayfa": 36,
+    "satir": [
+     "Tercih: Bupivakain/Ropivakain",
+     "Spinal ve epidural için yaygın seçim"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kokain yalnızca topikal kullanılır ve benzokain suda çözünürlüğü çok düşük olduğu için yalnızca topikal uygulanır; ikisi epidural ajan değildir.",
+    "sayfa": 36,
+    "satir": [
+     "Spinal ve epidural için yaygın seçim",
+     "Amidlerin Özelliği"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Artikain, hem kanda hem karaciğerde metabolize edilen bir lokal anesteziktir.",
+    "sayfa": 37,
+    "satir": [
+     "Artikain hem kanda hem karaciğerde",
+     "Artikain: Kan + Karaciğer"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Plazma esterazları da devreye girerek hızlı parçalanmaya katkı sağlar; bu çift metabolizma yolu, diğer amidlere kıyasla daha kısa bir yarı ömür sağlar.",
+    "sayfa": 37,
+    "satir": [
+     "Plazma esterazları da devreye",
+     "Kanda Metabolizma"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yarı ömür, ilacın kandaki miktarının yarıya inme süresidir ve kısa yarı ömür hızlı dönüşüm isteyen uygulamalar için uygundur.",
+    "sayfa": 37,
+    "satir": [
+     "Hızlı dönüşüm isteyen",
+     "Kısa Yarı Ömür"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Mükemmel doku penetrasyonu nedeniyle artikain, diş hekimliğinde dental bloklarda sık kullanılır.",
+    "sayfa": 37,
+    "satir": [
+     "Mükemmel doku penetrasyonu",
+     "Diş Hekimliği Tercihi"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Amidlerin metabolizma hızı karaciğer kapasitesine bağlıdır; bu yüzden karaciğer işlevi bozuk hastalarda görece kontrendikasyon, yani kullanılmaması gereken durum, oluşturabilir.",
+    "sayfa": 38,
+    "satir": [
+     "Amidlerin karaciğer kapasitesine",
+     "karaciğer"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Prilokain, en hızlı yıkılan amiddir; ancak methemoglobinemi, yani hemoglobinin oksijen taşıyamaz hâle gelmesi, riski taşır.",
+    "sayfa": 38,
+    "satir": [
+     "Prilokain: En hızlı yıkılan amid"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Lidokain ve mepivakain orta hızda metabolize olur.",
+    "sayfa": 38,
+    "satir": [
+     "Lidokain / Mepivakain: Orta hızda"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bupivakain en yavaş yıkılan amiddir; uzun etki sağlar ancak yüksek toksisite riski taşır.",
+    "sayfa": 38,
+    "satir": [
+     "Bupivakain: En yavaş yıkım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Karaciğer yetmezliğinde doz azaltımı ve yakın monitorizasyon şarttır.",
+    "sayfa": 38,
+    "satir": [
+     "Karaciğer yetmezliğinde doz"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Bölgesel bloklarda lokal anesteziğin kan dolaşımına karışması, lokal etkinin kaybolmasına ek olarak ciddi sistemik toksisite tablolarını tetikleyebilir.",
+    "sayfa": 39,
+    "satir": [
+     "Lokal anesteziklerin intravasküler",
+     "Kan Dolaşımına Karıştığında"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Toksisite üç aşamada ilerler; birinci aşama nöronal belirtilerdir: metalik tat, ağız çevresinde uyuşma, huzursuzluk ve kulak çınlaması.",
+    "sayfa": 39,
+    "satir": [
+     "Metalik tat, perioral uyuşma",
+     "Nöronal Belirtiler"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkinci aşama ilerleyici tablodur: konvülsiyon, yani nöbet, bilinç kaybı ve solunum depresyonu gelişir.",
+    "sayfa": 39,
+    "satir": [
+     "Konvülsiyonlar, bilinç kaybı",
+     "İlerleyici Tablo"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Üçüncü aşama kardiyak toksisitedir: ventriküler aritmi ve kardiyak arrest görülür, özellikle bupivakainde.",
+    "sayfa": 39,
+    "satir": [
+     "Ventriküler aritmi, kardiyak",
+     "Kardiyak Toksisite"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Aspirasyon, enjeksiyondan önce şırınga pistonunun geri çekilmesidir; kan gelirse iğne damar içindedir.",
+    "sayfa": 40,
+    "satir": [
+     "Enjeksiyondan önce şırınga",
+     "Aspirasyon Nedir?"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Aspirasyon, intravasküler enjeksiyonu önlemenin en temel ve en basit yoludur ve göz ardı edilemez.",
+    "sayfa": 40,
+    "satir": [
+     "İntravasküler enjeksiyonu",
+     "Neden Kritik?"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Test dozu, özellikle epidural kateter yerleştirildikten sonra epinefrinli test dozu ile damar içi pozisyonun doğrulanmasıdır.",
+    "sayfa": 40,
+    "satir": [
+     "Özellikle epidural kateter",
+     "Test Dozu"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Aspirasyon iğnenin konumunu, test dozu ise kateterin konumunu doğrulayarak birbirini tamamlar.",
+    "sayfa": 40,
+    "satir": [
+     "Özellikle epidural kateter"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Prokain ve lidokain gibi ana ajanların dışında kalan lokal anestezik maddeler, özel kullanım alanları ve eşsiz farmakolojik profilleriyle öne çıkar.",
+    "sayfa": 41,
+    "satir": [
+     "Ana grupların dışında kalan",
+     "Diğer Lokal Kullanılan"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu bölümde önce benzokain, dibukain ve lidokainle prilokainin ötektik karışımı olan emla gibi tek tek ajanları, sonra sınıflaması daha zor maddeleri göreceğiz.",
+    "sayfa": 41,
+    "satir": [
+     "Ana grupların dışında kalan"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Benzokain, yüzeyel anestezinin ester temsilcisidir ve suda çözünürlüğü son derece düşük olan paba türevi bir ester anesteziktir.",
+    "sayfa": 42,
+    "satir": [
+     "Benzokain, suda çözünürlüğü son",
+     "Benzokain: Yüzeyel Anestezinin"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Suda çözünürlüğü çok düşük olduğu için yalnızca topikal uygulanır; bu özellik hem avantajı hem riski belirler.",
+    "sayfa": 42,
+    "satir": [
+     "yalnızca topikal",
+     "Yüzeyel Kalma Stratejisi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sprey, jel ve pastil formları vardır; ağız içi, yutak ve deri topikal anestezisinde kullanılır.",
+    "sayfa": 42,
+    "satir": [
+     "Sprey, jel, pastil",
+     "Klinik Kullanım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Avantajı, sistemik emilimin minimal olmasıdır; oral veya topikal formda güvenlidir.",
+    "sayfa": 42,
+    "satir": [
+     "Sistemik emilim",
+     "Avantaj"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kritik riski, yüksek dozlarda methemoglobinemi tetikleyicisi olmasıdır ve bu risk çocuklarda daha belirgindir.",
+    "sayfa": 42,
+    "satir": [
+     "methemoglobinemi",
+     "Kritik Risk"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Dibukain, amid grubunda yer almasına karşın yapısal olarak klasik amidlerden ayrışan, kinolin türevi güçlü bir ajandır.",
+    "sayfa": 43,
+    "satir": [
+     "Dibukain amid grubunda yer",
+     "Dibukain: Kinolin Türevi Güçlü Ajan"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Etki gücü lidokainin çok üzerindedir ve yüksek toksisite profiliyle eşleşir.",
+    "sayfa": 43,
+    "satir": [
+     "Lidokainin çok üzerinde potens",
+     "Etki Gücü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Güncel kullanımı topikal anestezi ve bazı tanısal testlerle sınırlıdır.",
+    "sayfa": 43,
+    "satir": [
+     "Topikal anestezi ve bazı tanısal",
+     "Güncel Kullanım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Dibukain sayısı, pseudokolinesteraz enzim aktivitesini ölçen tanısal testtir; slayta göre bu test süksinilkolin duyarlılığını belirler, süksinilkolin ise anestezide kullanılan bir kas gevşetici ilaçtır.",
+    "sayfa": 43,
+    "satir": [
+     "Pseudokolinesteraz enzim",
+     "Dibukain Sayısı"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Enzim eksikliğinde esterlerin uzun etkilediğini hatırlarsak, bu enzimi ölçen testin neden tanısal olduğu anlaşılır.",
+    "sayfa": 43,
+    "satir": [
+     "Pseudokolinesteraz enzim"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Emla, ingilizce eutectic mixture of local anesthetics ifadesinin kısaltmasıdır; Türkçesi lokal anesteziklerin ötektik karışımıdır.",
+    "sayfa": 44,
+    "satir": [
+     "EMLA (Eutectic Mixture of Local",
+     "EMLA: Eşsiz Bir Topikal Karışım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Ötektik karışımın erime noktası, tek başına kullanılan her iki ajanın erime noktasından daha düşüktür.",
+    "sayfa": 44,
+    "satir": [
+     "erime noktasından daha düşük bir"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu sayede karışım oda sıcaklığında sıvı formda kalır ve deri penetrasyonu maksimum olur.",
+    "sayfa": 44,
+    "satir": [
+     "Karışım oda sıcaklığında",
+     "Ötektik Özellik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bileşimi yüzde iki buçuk lidokain ile yüzde iki buçuk prilokaindir ve her ikisi de amid grubundadır.",
+    "sayfa": 44,
+    "satir": [
+     "%2,5 Lidokain + %2,5",
+     "Bileşim"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: çocuklarda damar yolu öncesi kullanılan emla karışımı, yüzde iki buçuk lidokain ve yüzde iki buçuk prilokaindir.",
+    "sayfa": 44,
+    "satir": [
+     "%2,5 Lidokain + %2,5",
+     "Bileşim"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bileşenlerin ikisi de amid olduğu için karışımda benzokain gibi ester yapılı bir ajan yoktur.",
+    "sayfa": 44,
+    "satir": [
+     "Prilokain — her ikisi de"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Klinik kullanımı, iğne fobisi olan çocuklarda damar yolu açımı öncesi altın standart olmasıdır.",
+    "sayfa": 44,
+    "satir": [
+     "İğne fobisi olan",
+     "Klinik Kullanım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Dikkat noktası, prilokain kaynaklı methemoglobinemi riski ve üç aydan küçük bebeklerde dikkatli kullanımdır.",
+    "sayfa": 44,
+    "satir": [
+     "Methemoglobinemi riski (prilokain",
+     "Dikkat"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "İdeal lokal anestezik arayışı, iki denge ve bir uyarlama ilkesine dayanır.",
+    "sayfa": 45,
+    "satir": [
+     "İdeal Lokal Anestezik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Farmakokinetik dengede, yani ilacın vücuttaki seyrinde, hızlı başlangıç, yeterli süre ve güvenli metabolizma birlikte aranır; hiçbir tek ilaç bunu mükemmel sağlayamaz.",
+    "sayfa": 45,
+    "satir": [
+     "Hiçbir tek ilaç bu dengeyi",
+     "Farmakokinetik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Farmakodinamik dengede, yani ilacın etkisinde, güçlü duyusal blok, minimal motor blok ve düşük sistemik toksisite üçgeni hedeflenir.",
+    "sayfa": 45,
+    "satir": [
+     "Güçlü duyusal blok +",
+     "Farmakodinamik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu yüzden klinik uyarlama gerekir: ajan seçimi bölgeye, süreye ve hastaya özgü yapılır ve slayt bunu bireyselleştirilmiş tıbbın en eski örneği olarak niteler.",
+    "sayfa": 45,
+    "satir": [
+     "Bölgeye, süreye ve hastaya özgü",
+     "Klinik Tailoring"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Adjuvan, ana ilaca eklenerek etkisini güçlendiren yardımcı maddedir; lokal anestezikler adjuvanlarla çok daha esnek ve uzun süreli blok sağlar.",
+    "sayfa": 46,
+    "satir": [
+     "Lokal anestezikler adjuvanlarla",
+     "Neden Adjuvan?"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Epinefrin, vazokonstriksiyon yaparak etki süresini yüzde elli ile yüz oranında artırır.",
+    "sayfa": 46,
+    "satir": [
+     "Epinefrin: Vazokonstriksiyon ile"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sodyum bikarbonat pe ha değerini yükseltir; böylece iyonize olmayan, yani zardan geçebilen, fraksiyon artar ve başlangıç hızlanır.",
+    "sayfa": 46,
+    "satir": [
+     "Sodyum bikarbonat: pH'ı yükselterek",
+     "olmayan fraksiyon artar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Deksametazon, periferik bloklarda analjezi süresini iki katına çıkarabilir.",
+    "sayfa": 46,
+    "satir": [
+     "Deksametazon: Periferik bloklarda"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: dört öncüllü soruda sodyum bikarbonat eklenmesiyle iyonize olmayan kısmın artması ve bloğun daha hızlı oluşması doğru kabul edilmiştir.",
+    "sayfa": 46,
+    "satir": [
+     "Sodyum bikarbonat: pH'ı yükselterek",
+     "onset hızlanır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Aynı soruda sodyum kanallarını bloke etmek de doğru öncül sayılmıştır; slayt bu blokajı aksiyon potansiyelinin durma nedeni olarak verir ve doğru cevap ikinci ile dördüncü öncüldür.",
+    "sayfa": 46,
+    "satir": [
+     "Adjuvanların Gücü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Birinci öncül yanlıştır: slayt lokal anesteziklerin zayıf asit olduğunu söylemez; tersine yüksek lipofilitenin sinir dokusuna hızlı penetrasyon ve güçlü blok sağladığını söyler.",
+    "sayfa": 46,
+    "satir": [
+     "Adjuvanların Gücü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Üçüncü öncül de yanlıştır: etil klorür, benzil alkol ve kapsaisin amid yapılı değildir ve bunlara dersin son slaytlarında geleceğiz.",
+    "sayfa": 46,
+    "satir": [
+     "Adjuvanların Gücü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Lokal anestezikler hafif asidik yapıdadır diyen ifade de yanlıştır; slayt asidik yapıdan söz etmez, yalnızca pe ha yükselince iyonize olmayan kısmın arttığını anlatır.",
+    "sayfa": 46,
+    "satir": [
+     "Adjuvanların Gücü"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Deksmedetomidin ve magnezyum, klasik adjuvanlara ek olarak farklı reseptör mekanizmalarını hedefleyen yeni nesil moleküllerdir.",
+    "sayfa": 47,
+    "satir": [
+     "Deksmedetomidin ve Magnezyum",
+     "Farmakolojik Yenilik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Deksmedetomidin alfa iki adrenerjik agonisttir, yani alfa iki reseptörünü uyarır; sinir bloğu süresini uzatır, sedatif katkı ve hemodinamik stabilite sağlar.",
+    "sayfa": 47,
+    "satir": [
+     "Alfa-2 adrenerjik agonist",
+     "Deksmedetomidin"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Hemodinamik stabilite, kan basıncı ve kalp hızının dengede kalması demektir.",
+    "sayfa": 47,
+    "satir": [
+     "hemodinamik stabilite sağlar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Magnezyum, NMDA reseptörünü, yani ağrı iletisinde rol oynayan glutamat reseptörünü bloke eder; bu ağrı iletisini ayarlar ve ameliyat sonrası opioid ihtiyacını azaltır.",
+    "sayfa": 47,
+    "satir": [
+     "NMDA reseptör blokajı",
+     "opioid ihtiyacını azaltır"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Last, ingilizce local anesthetic systemic toxicity ifadesinin kısaltmasıdır ve lokal anestezik sistemik toksisitesi anlamına gelir.",
+    "sayfa": 48,
+    "satir": [
+     "LAST: Local Anesthetic",
+     "Systemic Toxicity"
+    ],
+    "sekil": "üç basamaklı şerit: erken belirtiler, nöronal tablo, kardiyak yıkım"
+   },
+   {
+    "ses": "Slayttaki üç basamaklı şerit, daha önce gördüğümüz toksisite sırasını bu adla verir ve birinci basamakta baş dönmesini de ekler.",
+    "sayfa": 48,
+    "satir": [
+     "Erken Belirtiler",
+     "Perioral uyuşma, metalik tat, tinnitus"
+    ],
+    "sekil": "şeridin birinci basamağı: erken belirtiler"
+   },
+   {
+    "ses": "İkinci basamak nöronal tablodur: konvülsiyon, bilinç kaybı ve solunum depresyonu.",
+    "sayfa": 48,
+    "satir": [
+     "Nöronal Tablo",
+     "Konvülsiyonlar, bilinç kaybı, solunum depresyonu"
+    ],
+    "sekil": "şeridin ikinci basamağı: nöronal tablo"
+   },
+   {
+    "ses": "Üçüncü basamak kardiyak yıkımdır: ventriküler aritmi ve kardiyak arrestin yanında bradikardi, yani kalp hızının yavaşlaması, görülür ve özellikle bupivakainle ilişkilidir.",
+    "sayfa": 48,
+    "satir": [
+     "Kardiyak Yıkım",
+     "Ventriküler aritmi, bradikardi, kardiyak arrest"
+    ],
+    "sekil": "şeridin üçüncü basamağı: kardiyak yıkım"
+   }
+  ],
+  [
+   {
+    "ses": "Lipid emülsiyon, last tedavisinde kullanılır; lipid lavabosu teorisine göre damardan verilen yağ emülsiyonu, kanda çözünen lipofil anestezik molekülleri kandan çekip alır.",
+    "sayfa": 49,
+    "satir": [
+     "Damardan verilen yağ",
+     "Lipid Lavabosu Teorisi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu çekim kardiyak ve nöronal toksisiteyi hızla azaltır; erken ve yeterli dozda verilen lipid emülsiyon hayat kurtarıcıdır.",
+    "sayfa": 49,
+    "satir": [
+     "Erken ve yeterli dozda lipid",
+     "kardiyak/nöronal toksisiteyi hızla"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Protokol yüzde yirmilik lipid emülsiyondur: kilogram başına bir buçuk mililitre damar içi bolus, ardından dakikada kilogram başına sıfır virgül yirmi beş mililitre infüzyon verilir.",
+    "sayfa": 49,
+    "satir": [
+     "1,5 mL/kg IV bolus",
+     "%20 Lipid Emülsiyon"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Slayt bu doza asra protokolü adını verir; asra, Amerikan Bölgesel Anestezi ve Ağrı Tıbbı Derneği'nin kısaltmasıdır.",
+    "sayfa": 49,
+    "satir": [
+     "ASRA kılavuzları: Her anestezi setinde Intralipid",
+     "Hazır Bulundurun"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Slayta göre asra kılavuzlarında her anestezi setinde intralipid hazır bulundurulması gerekir.",
+    "sayfa": 49,
+    "satir": [
+     "ASRA kılavuzları: Her anestezi setinde Intralipid"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Özel hasta gruplarında doz yönetimi üç durumda değişir: obezite, karaciğer ya da böbrek yetmezliği ve gebelik.",
+    "sayfa": 50,
+    "satir": [
+     "Özel Hasta Gruplarında Doz Yönetimi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Obezitede doz ideal vücut ağırlığı üzerinden hesaplanır; total vücut ağırlığı kullanılmamalıdır, aksi hâlde toksik doz aşımı riski artar.",
+    "sayfa": 50,
+    "satir": [
+     "İdeal vücut ağırlığı üzerinden",
+     "Obezite"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Karaciğer veya böbrek yetmezliğinde amid grubu ilaçlarda yüzde yirmi ile elli doz azaltımı önerilir ve metabolizma kapasitesi değerlendirilmelidir.",
+    "sayfa": 50,
+    "satir": [
+     "Amid grubu ilaçlarda %20–50 doz",
+     "Yetmezliği"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Gebelikte bupivakain ve ropivakain tercih edilir; protein bağlanmasındaki değişimler ve fetal geçiş göz önünde bulundurulur.",
+    "sayfa": 50,
+    "satir": [
+     "Bupivakain ve ropivakain tercih",
+     "Gebelik"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Geleceğin lokal anestezikleri, mevcut ilaçların kısıtlamalarını aşmak için üç yönde gelişmektedir.",
+    "sayfa": 51,
+    "satir": [
+     "Mevcut ilaçların kısıtlamalarını",
+     "Geleceğin Lokal Anestezikleri"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Birinci yön lipozomal enkapsülasyondur, yani ilacın yağ keseciği içine alınmasıdır; lipozomal bupivakain tek dozda yetmiş iki saate varan ameliyat sonrası analjezi sağlar.",
+    "sayfa": 51,
+    "satir": [
+     "Lipozomal bupivakain — tek",
+     "Lipozomal"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkinci yön uzun etkili moleküler tasarımdır; düşük kardiyotoksisite profiliyle günlerce süren sinir bloğu hedeflenir.",
+    "sayfa": 51,
+    "satir": [
+     "Düşük kardiyotoksisite",
+     "Uzun Etkili Moleküler"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Üçüncü yön hedefe yönelik sistemlerdir; yalnızca hedef sinir üzerinde etki ve komşu dokularda minimum yan etki amaçlanır.",
+    "sayfa": 51,
+    "satir": [
+     "Sadece hedef sinir üzerinde",
+     "Hedefe Yönelik"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Modern klinik zorluklar dört başlıkta toplanır: iltihaplı dokuda etkinlik kaybı, parestezi riski, last yönetimi ve hemodinamik stabilite.",
+    "sayfa": 52,
+    "satir": [
+     "Modern Klinik Zorluklar"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İltihaplı dokuda asidik ortam nedeniyle iyonize fraksiyon artar, membranı geçen nötr form azalır ve blok yetersiz kalır.",
+    "sayfa": 52,
+    "satir": [
+     "Asidik ortamda iyonize fraksiyon artar",
+     "İltihaplı Dokuda Etkinlik Kaybı"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu, sodyum bikarbonatın pe ha değerini yükselterek başlangıcı hızlandırmasının tersidir.",
+    "sayfa": 52,
+    "satir": [
+     "membranı"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Parestezi, yani karıncalanma tipi anormal duyu, riski vardır; artikain ve prilokain kullanımında nadir nöropati bildirilmiştir ve sinire yakın enjeksiyonlarda dikkat gerekir.",
+    "sayfa": 52,
+    "satir": [
+     "Artikain ve prilokain kullanımında nadir",
+     "Parestezi Riski"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "last yönetiminde lipid emülsiyon hazırlığı ve tatbikat protokolleri gerekir; geç tanı mortaliteyi artırır.",
+    "sayfa": 52,
+    "satir": [
+     "Lipid emülsiyon hazırlığı ve tatbikat",
+     "LAST Yönetimi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Hemodinamik stabilite açısından vazokonstriktörsüz solüsyonlar kalp hızı ve tansiyon üzerinde anlamlı etki gösterebilir.",
+    "sayfa": 52,
+    "satir": [
+     "Vazokonstriktörsüz solüsyonlar kalp hızı",
+     "Hemodinamik Stabilite"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anestezide ilaç ve teknoloji birleşimi dört alanda ilerler.",
+    "sayfa": 53,
+    "satir": [
+     "İlaç–Teknoloji Kombinasyonları",
+     "Dijital Çağda Lokal Anestezi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Uzatılmış etkili formülasyonlar saatler değil günler süren ameliyat sonrası analjezi sağlar ve opioid ihtiyacını dramatik biçimde düşürür.",
+    "sayfa": 53,
+    "satir": [
+     "Saatler değil günler",
+     "Uzatılmış Etkili"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İmplante dağıtım sistemleri hedef dokuda kontrollü salınım sağlar ve pik ile vadi, yani en yüksek ve en düşük, konsantrasyon dalgalanmalarını önler.",
+    "sayfa": 53,
+    "satir": [
+     "Hedef dokuda kontrollü",
+     "İmplante Dağıtım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yazılım kontrollü infüzyon, dijital cihaz entegrasyonuyla doz hassasiyetini artırır ve hata payını azaltır.",
+    "sayfa": 53,
+    "satir": [
+     "Dijital cihaz",
+     "Yazılım Kontrollü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Multimodal, yani birden çok yöntemi birleştiren, ağrı yönetiminde lokal anestezikler opioid tüketimini azaltan stratejinin merkezinde yer alır.",
+    "sayfa": 53,
+    "satir": [
+     "tüketimini azaltan",
+     "Multimodal Ağrı"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Klinik pratikte ajan seçimi dört farmakokinetik parametreye dayanır: pKa, lipofilite, protein bağlanması ve dansite.",
+    "sayfa": 54,
+    "satir": [
+     "Farmakokinetik Temel Parametreler",
+     "Klinik Pratikte Ajan Seçimi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Düşük pKa hızlı başlangıç sağlar; slayttaki örnekte lidokainin pKa değeri yedi virgül dokuz, bupivakainin sekiz virgül birdir.",
+    "sayfa": 54,
+    "satir": [
+     "Düşük pKa → hızlı başlangıç",
+     "lidokain pKa 7,9"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yüksek lipofilite, yani yağ çözünürlüğü, uzun etki ve güçlü blok sağlar.",
+    "sayfa": 54,
+    "satir": [
+     "Yüksek yağ çözünürlüğü"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Yüksek protein bağlanması uzun etki süresi sağlar; bupivakainin yüzde doksan beş bağlanması bunun örneğidir.",
+    "sayfa": 54,
+    "satir": [
+     "Yüksek bağlanma → uzun etki"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Dansite, yani solüsyonun yoğunluğu, spinal uygulamada ilacın yayılımını belirler.",
+    "sayfa": 54,
+    "satir": [
+     "Spinal uygulamada ilaç yayılımını",
+     "Dansitesi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İdeal ajan hızlı başlangıcı, yeterli süreyi, düşük toksisiteyi ve doku uyumunu birleştirir.",
+    "sayfa": 54,
+    "satir": [
+     "İdeal ajan: hızlı başlangıç"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Lokal anestezi dersinin bu slaytı, bilimsel zeminden geleceğe uzanan üç mesaj verir.",
+    "sayfa": 55,
+    "satir": [
+     "Zeminden Geleceğe"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İğnenin hikâyesi, ince uçlu teknik ve yavaş enjeksiyonun komplikasyon riskini en aza indirirken hasta konforunu en üst düzeye çıkardığını söyler.",
+    "sayfa": 55,
+    "satir": [
+     "İnce uçlu teknik ve yavaş",
+     "İğnenin Hikâyesi"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Farmakolojik dönüşüm, basit bloktan ileri düzey ameliyat sonrası ağrı kontrolüne ve tek ajandan multimodal analjeziye geçiştir.",
+    "sayfa": 55,
+    "satir": [
+     "Basit bloktan ileri düzey",
+     "Farmakolojik"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sürekli öğrenme, nörokimya ve inflamasyon yönetimindeki yeni bilgilerin başarı oranını sürekli artırdığını vurgular.",
+    "sayfa": 55,
+    "satir": [
+     "Nörokimya ve inflamasyon yönetimindeki",
+     "Sürekli Öğrenme"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Özet bölümü, beş balonlu bir çizimle başlar: büyük balonda esterlerin hızlı metabolizması, yanında paba alerjisi, sağda amidlerin yavaş metabolizması yazar.",
+    "sayfa": 56,
+    "satir": [
+     "Özet: Lokal Anestezikler",
+     "Esterler — Hızlı"
+    ],
+    "sekil": "beş balonlu özet çizimi"
+   },
+   {
+    "ses": "Altta düşük alerji balonu amidlere, paba alerjisi balonu esterlere aittir; yani alerji ve metabolizma hızı aynı ayrımın iki yüzüdür.",
+    "sayfa": 56,
+    "satir": [
+     "PABA Alerjisi",
+     "Düşük Alerji"
+    ],
+    "sekil": "PABA alerjisi ve düşük alerji balonları"
+   },
+   {
+    "ses": "Üstteki küçük balon özel ajanları gösterir; bunlar prokain ve lidokain gibi klasik ajanlar dışındaki maddelerdir ve bir kısmı ester, bir kısmı ne ester ne amiddir.",
+    "sayfa": 56,
+    "satir": [
+     "Özel Ajanlar"
+    ],
+    "sekil": "özel ajanlar balonu"
+   }
+  ],
+  [
+   {
+    "ses": "Ester ve amid karşılaştırma tablosu, beş özelliği yan yana verir.",
+    "sayfa": 57,
+    "satir": [
+     "Ester vs Amid: Temel Karşılaştırma"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Kimyasal bağ, esterlerde ester bağı, amidlerde amid bağıdır.",
+    "sayfa": 57,
+    "satir": [
+     "Kimyasal Bağ"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Metabolizma esterlerde plazma esterazlarıyla, amidlerde karaciğer mikrozomal enzimleriyle olur.",
+    "sayfa": 57,
+    "satir": [
+     "Karaciğer mikrozomal enzimler"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Alerji riski esterlerde yüksektir ve paba kaynaklıdır, amidlerde çok nadirdir; stabilite ise esterlerde düşük, amidlerde yüksektir.",
+    "sayfa": 57,
+    "satir": [
+     "Yüksek (PABA)",
+     "Alerji Riski",
+     "Stabilite"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Örneklerde esterler prokain, tetrakain ve kokain; amidler lidokain, bupivakain ve artikaindir.",
+    "sayfa": 57,
+    "satir": [
+     "Prokain, tetrakain, kokain"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: ester yapılı olmayan lokal anestezik hangisidir sorusunun cevabı lidokaindir.",
+    "sayfa": 57,
+    "satir": [
+     "Lidokain, bupivakain, artikain"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Ester olmayanı bulmak için tabloya bakılır: prokain, tetrakain ve kokain ester grubundadır, lidokain ise amid grubundadır.",
+    "sayfa": 57,
+    "satir": [
+     "Prokain, tetrakain, kokain"
+    ],
+    "sekil": null,
+    "tablo": true
+   }
+  ],
+  [
+   {
+    "ses": "Seçim kılavuzu, her klinik durumu uygun ajana ve gerekçesine bağlar.",
+    "sayfa": 58,
+    "satir": [
+     "Lokal Anestezik Seçim Kılavuzu"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Küçük cerrahi infiltrasyonda yüzde bir ile iki lidokain seçilir, çünkü başlangıç hızlıdır ve tolerabilite iyidir.",
+    "sayfa": 58,
+    "satir": [
+     "Lidokain %1–2"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Doğum epiduralinde yüzde sıfır virgül yirmi beş bupivakain seçilir; uzun etki ve düşük motor blok sağlar.",
+    "sayfa": 58,
+    "satir": [
+     "Bupivakain %0,25"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Spinal anestezide bupivakain ya da tetrakain seçilir, çünkü etkileri kararlı ve uzundur.",
+    "sayfa": 58,
+    "satir": [
+     "Bupivakain / Tetrakain"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Diş hekimliğinde yüzde dört artikain seçilir, çünkü doku penetrasyonu mükemmeldir.",
+    "sayfa": 58,
+    "satir": [
+     "Artikain %4"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Çıkmış sınavda sorulmuştur: ketamin, kodein, simetidin ve artikain arasından lokal anestezik olan yalnızca artikaindir.",
+    "sayfa": 58,
+    "satir": [
+     "Artikain %4"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Artikain, tablodaki diş hekimliği ajanıdır ve amid yapılı lokal anesteziktir; diğer üç ilaç bu derste lokal anestezik olarak geçmez.",
+    "sayfa": 58,
+    "satir": [
+     "Artikain %4"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Çocukta damar yolu öncesi topikal uygulamada emla krem seçilir; deri penetrasyonu ağrısızdır.",
+    "sayfa": 58,
+    "satir": [
+     "EMLA krem"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Kulak burun boğaz cerrahisinde topikal olarak yüzde dört ile on kokain seçilir; anestezi ile doğal vazokonstriksiyon birlikte sağlanır.",
+    "sayfa": 58,
+    "satir": [
+     "Kokain %4–10",
+     "vazokonstrüksiyon"
+    ],
+    "sekil": null,
+    "tablo": true
+   }
+  ],
+  [
+   {
+    "ses": "Kritik güvenlik uyarıları dört kutuda toplanır.",
+    "sayfa": 59,
+    "satir": [
+     "Kritik Güvenlik Uyarıları: Unutmayın!"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bupivakain kardiyotoksisitesi en yüksek amiddir ve damar içi enjeksiyondan kesinlikle kaçınılmalıdır.",
+    "sayfa": 59,
+    "satir": [
+     "Kardiyotoksisitesi en yüksek amid",
+     "Bupivakain"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Benzokain ve prilokain methemoglobinemi riski taşır; tekrarlayan dozlarda ve çocuklarda dikkat gerekir.",
+    "sayfa": 59,
+    "satir": [
+     "Methemoglobinemi riski; tekrarlayan",
+     "Benzokain / Prilokain"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Ester grubunda paba alerjisi vardır ve anafilaksi öyküsü olanlarda amid tercih edilmelidir.",
+    "sayfa": 59,
+    "satir": [
+     "anafilaksi tarihçesi olanlarda amid",
+     "Ester Grubu"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "last hazırlığı için yüzde yirmilik intralipid her lokal anestezi uygulamasında hazır bulundurulmalıdır.",
+    "sayfa": 59,
+    "satir": [
+     "%20 Intralipid her lokal anestezi",
+     "LAST Hazırlığı"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Dersin beş ana çıkarımı vardır.",
+    "sayfa": 60,
+    "satir": [
+     "Temel Mesajlar: 5 Ana Çıkarım"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Birincisi grup farklılıklarını bilmektir: ester ile amid arasında metabolizma, alerji ve stabilite profilleri klinik seçimi belirler.",
+    "sayfa": 60,
+    "satir": [
+     "Grup Farklılıklarını Bilin",
+     "Ester vs Amid — metabolizma"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "İkincisi doza saygı göstermektir: her ajan için maksimum doz hesabı zorunludur ve vücut ağırlığı ile hasta profiline göre bireyselleştirilir.",
+    "sayfa": 60,
+    "satir": [
+     "Doza Saygı Gösterin",
+     "Her ajan için maksimum doz hesabı"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Üçüncüsü aspirasyonu unutmamaktır: her enjeksiyondan önce yapılan aspirasyon last'ın en ucuz ve en etkili önlemidir.",
+    "sayfa": 60,
+    "satir": [
+     "Aspirasyonu Unutmayın",
+     "Her enjeksiyondan önce aspirasyon"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Dördüncüsü last'a hazırlıklı olmaktır: lipid emülsiyon hazır tutulur ve belirtiler erkenden tanınır.",
+    "sayfa": 60,
+    "satir": [
+     "LAST'a Hazırlıklı Olun",
+     "Lipid emülsiyon hazır"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Beşincisi teknolojiyle evrilmektir: adjuvanlar, uzatılmış formülasyonlar ve dijital infüzyon lokal anestezi pratiğini geliştirir.",
+    "sayfa": 60,
+    "satir": [
+     "Teknoloji ile Evrilin",
+     "Adjuvanlar, uzatılmış formülasyonlar"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Dersin ilkesi üç parçalıdır: doğru ajan, doğru doz ve doğru teknik.",
+    "sayfa": 61,
+    "satir": [
+     "Doğru Ajan"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu üçlü ilke, bilimsel zemini sağlam ve hastaya özel yaklaşımla uygulanan lokal anestezinin güvenli, etkili ve ağrısız cerrahi standardını mümkün kıldığını söyler.",
+    "sayfa": 61,
+    "satir": [
+     "güvenli, etkili ve ağrısız cerrahi",
+     "Bu üçlü ilke, lokal anestezi pratiğinin"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Temel bilim tarafında farmakokinetik ve farmakodinamik ilkeler klinik kararın zeminini oluşturur.",
+    "sayfa": 61,
+    "satir": [
+     "Farmakokinetik ve",
+     "Temel Bilim"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Klinik uygulama tarafında teknik beceri, hasta değerlendirmesi ve ilaç seçimi bir bütündür.",
+    "sayfa": 61,
+    "satir": [
+     "Teknik beceri, hasta",
+     "Klinik Uygulama"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Sürekli gelişim ise yeni formülasyonlar ve protokollerle lokal anestezinin her yıl daha güvenli hale geldiği anlamına gelir.",
+    "sayfa": 61,
+    "satir": [
+     "Yeni formülasyonlar ve protokollerle",
+     "Sürekli Gelişim"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Prokain, lidokain gibi klasik ajanların dışında, özel durumlarda kullanılan farklı lokal anestezik maddeler vardır; bir kısmı ester yapılıdır, bir kısmı ne ester ne amiddir.",
+    "sayfa": 62,
+    "satir": [
+     "Klasik ester ve amid gruplarının dışında",
+     "Diğer Lokal Kullanılan Anestezik Maddeler"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Topikal ve yüzeyel etkililer arasında benzil alkol küçük enjeksiyonlarda ve kaşıntı gidermede kullanılır.",
+    "sayfa": 62,
+    "satir": [
+     "Benzil Alkol: Özellikle küçük enjeksiyonlar",
+     "Topikal ve Yüzeyel Etkililer"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Diklonin boğaz ağrısı ve oral mukozal uygulamalarda, pramoksin ise dermatolojik preparatlarda kaşıntı ve ağrı için kullanılır.",
+    "sayfa": 62,
+    "satir": [
+     "Diklonin: Boğaz ağrısı ve oral mukozal",
+     "Pramoksin: Dermatolojik preparatlarda"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Proparakain oftalmolojide göz muayeneleri öncesi yüzeyel anestezi için kullanılır; klorbutanol, yani dişinol, diş ağrısında kullanılır ve sedatif özelliği de vardır.",
+    "sayfa": 62,
+    "satir": [
+     "Proparakain: Oftalmolojide",
+     "Klorbutanol (Dişinol)"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Kapsaisin, midalgan adıyla bilinir; doğrudan lokal anestezik olmasa da vanilloid reseptörlerini aktive ederek nöropatik ağrı ve kas ağrılarında desensitizasyon, yani duyarsızlaştırma, sağlar.",
+    "sayfa": 62,
+    "satir": [
+     "Kapsaisin (Midalgan)",
+     "Özel Kullanım Alanları"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Butilamin benzoat bazı karışımlarda ve lokal infiltrasyonda kullanılabilen bir ester türevidir; butamben pikrat ise yüzeyel ve infiltrasyon anestezisinde kullanılan daha uzun etkili bir esterdir.",
+    "sayfa": 62,
+    "satir": [
+     "Butilamin Benzoat",
+     "Butamben Pikrat"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Ortoform diş hekimliğinde ve bazı topikal preparatlarda yer alan bir ester türevidir; siklometikain sülfat topikal anestezik olarak kullanılır; saligenin geleneksel bir alkol türevidir.",
+    "sayfa": 62,
+    "satir": [
+     "Ortoform: Diş hekimliğinde",
+     "Saligenin: Geleneksel olarak"
+    ],
+    "sekil": null
+   },
+   {
+    "ses": "Bu ajanların çoğu yüzeyel uygulamalar veya özel klinik durumlar için geliştirilmiştir ve sistemik toksisite profilleri klasik amidlerden farklı olabilir.",
+    "sayfa": 62,
+    "satir": [
+     "Bu ajanların çoğu yüzeyel uygulamalar"
+    ],
+    "sekil": null
+   }
+  ],
+  [
+   {
+    "ses": "Sentetik topikal ajanlar tablosu, altı ilacı kimyasal yapı, etki mekanizması ve klinik özellik açısından karşılaştırır.",
+    "sayfa": 63,
+    "satir": [
+     "Sentetik"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Tablodaki ajanların hepsinin ortak mekanizması voltaj kapılı sodyum kanallarının blokajıdır; kanal kapanınca aksiyon potansiyeli ilerleyemez.",
+    "sayfa": 63,
+    "satir": [
+     "Voltaj kapılı Na"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Butilamin benzoat ya da butamben, suda çok az çözünen bir paba esteridir; yalnızca topikal kullanılır, absorpsiyonu yavaştır ve yüzeyel etkisi uzun sürer.",
+    "sayfa": 63,
+    "satir": [
+     "PABA esteri, suda çok az"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Butamben pikrat, butamben ile pikrik asit tuzudur; yanık ve yüzeysel yaralarda kullanılır ve pikrat nedeniyle duyarlılaşma ve irritasyon riski taşır.",
+    "sayfa": 63,
+    "satir": [
+     "Butamben + pikrik asit tuzu"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Ortoform aminohidroksibenzoat esteridir ve suda çözünmez; yara ve ülser yüzeyinde uzun süreli analjezi sağlar, emilimi yavaştır ve sistemik toksisitesi düşüktür.",
+    "sayfa": 63,
+    "satir": [
+     "Aminohidroksibenzoat esteri"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Proparakain bir esterdir ve oftalmolojide kornea anestezisi için kullanılır; başlangıcı yaklaşık on beş ile otuz saniye, süresi yaklaşık on beş dakikadır.",
+    "sayfa": 63,
+    "satir": [
+     "Oftalmolojide kornea anestezisi"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Propoksikain paba türevi bir esterdir; genellikle prokainle birlikte ve diş hekimliğinde infiltrasyon için kullanılır, hızlı hidroliz olur.",
+    "sayfa": 63,
+    "satir": [
+     "Genellikle prokainle kombine"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Siklometikain sülfat bir esterdir ve yanık, hemoroid ve küçük cilt lezyonlarında topikal olarak kullanılır.",
+    "sayfa": 63,
+    "satir": [
+     "Yanık, hemoroid ve küçük cilt lezyonlarında"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Tablonun altındaki not, esterlerin plazma kolinesterazıyla hidrolize olduğunu ve paba kaynaklı alerji riskinin unutulmaması gerektiğini hatırlatır.",
+    "sayfa": 63,
+    "satir": [
+     "Esterler plazma kolinesterazı ile"
+    ],
+    "sekil": null,
+    "tablo": true
+   }
+  ],
+  [
+   {
+    "ses": "Özel mekanizmalı ajanlar tablosu, ne ester ne amid olan ya da farklı çalışan maddeleri karşılaştırır.",
+    "sayfa": 64,
+    "satir": [
+     "Özel Mekanizmalı Ajanlar"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Diklonin keton türevidir, yani ne ester ne amiddir; sodyum kanalını bloke eder ve ağız ile boğaz mukozasında topikal kullanılır.",
+    "sayfa": 64,
+    "satir": [
+     "Keton türevi (ne ester ne amid)"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Diklonin dakikalar içinde başlar, yaklaşık bir saat sürer ve pastil ile sprey formları vardır.",
+    "sayfa": 64,
+    "satir": [
+     "dakikalar içinde başlar, yaklaşık 1 saat"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Pramoksin, pramokain adıyla da anılır; morfolin türevidir, ne ester ne amiddir, cilt ve mukozada kaşıntı ile ağrı için kullanılır ve duyarlılaştırma riski düşüktür.",
+    "sayfa": 64,
+    "satir": [
+     "Morfolin türevi (ne ester ne amid)"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Klorbutanol klorlu bir tersiyer alkoldür; zayıf sodyum kanal blokajı ve hafif sedatif etki gösterir, diş ağrısı damlalarında koruyucu ve antiseptik olarak da yer alır.",
+    "sayfa": 64,
+    "satir": [
+     "Klorlu tersiyer alkol"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Benzil alkol aromatik bir alkoldür; zayıf lokal anestezik ve koruyucudur, bakteri üremesini durdurur ve topikal ile küçük enjeksiyonlarda kullanılır.",
+    "sayfa": 64,
+    "satir": [
+     "Aromatik alkol"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Saligenin salisil alkoldür; tarihsel topikal kullanımı vardır, zayıf yüzeyel anestezi yapar ve antiseptik ile hafif antiinflamatuvar etkilidir.",
+    "sayfa": 64,
+    "satir": [
+     "Salisil alkol"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Etil klorür, uçucu halojenli hidrokarbon yapısında bir soğutucu spreydir ve hızlı buharlaşma ile sinir iletimini soğukla geçici olarak bloke eder.",
+    "sayfa": 64,
+    "satir": [
+     "Uçucu halojenli hidrokarbon"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Etil klorür cilt üzerinde saniyeler içinde etki eder ve kısa sürelidir; küçük işlemlerde ve enjeksiyon öncesi kullanılır, yanıcıdır ve soğuk yanığı riski taşır.",
+    "sayfa": 64,
+    "satir": [
+     "Cilt üzerinde saniyeler içinde etki"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Kapsaisin vanilloid türevidir ve sodyum kanalını bloke etmez; vanilloid reseptör agonistidir ve substans P tükenmesi, yani ağrı iletisinde rol alan maddenin azalması, ile desensitizasyon yapar.",
+    "sayfa": 64,
+    "satir": [
+     "Na⁺ kanalını bloke etmez"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Kapsaisin başlangıçta yanma hissi verir, sonra nöropatik ve kas ağrısında analjezi sağlar.",
+    "sayfa": 64,
+    "satir": [
+     "yanma hissi, sonra"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Çıkmış sınavdaki üçüncü öncül bu yüzden yanlıştır: etil klorür, benzil alkol ve kapsaisin amid yapılı değildir.",
+    "sayfa": 64,
+    "satir": [
+     "Uçucu halojenli hidrokarbon"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Tablonun notu, bu ajanların çoğunun zayıf veya yüzeyel etkili olduğunu ve klasik ester ile amid grubundan farklı mekanizmalar içerebileceğini söyler.",
+    "sayfa": 64,
+    "satir": [
+     "Bu ajanların çoğu zayıf veya"
+    ],
+    "sekil": null,
+    "tablo": true
+   },
+   {
+    "ses": "Dersi toparlarsak, lokal anestezikler bilinç kaybı olmadan bölgesel ağrı kontrolü sağlar ve ester ile amid ayrımı seçimin temelidir.",
+    "sayfa": 64,
+    "satir": [],
+    "sekil": null
+   },
+   {
+    "ses": "Metabolizma, alerji ve stabilite bu ayrıma göre değişir; doz hesabı, aspirasyon ve lipid emülsiyon hazırlığı da güvenliğin üç dayanağıdır.",
+    "sayfa": 64,
+    "satir": [],
+    "sekil": null
+   },
+   {
+    "ses": "Ajan seçimi, bölgeye, işlemin süresine ve hastaya göre bireyselleştirilir.",
+    "sayfa": 64,
+    "satir": [],
+    "sekil": null
+   }
+  ]
+ ]
+}

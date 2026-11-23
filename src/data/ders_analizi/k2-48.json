@@ -1,0 +1,778 @@
+{
+ "surum": 2,
+ "key": "k2-48",
+ "kod": "2f10",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Lokal Anestezik İlaçlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f10"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Ders girişi: lokal anestezikler ve dersin planı"
+    },
+    {
+     "metin": "Lokal anestezinin tanımı, doza bağımlılığı ve klinik uygulama alanları"
+    },
+    {
+     "metin": "Sinir liflerinde blok sırası ve lif çapı"
+    },
+    {
+     "metin": "Klinik ipuçları: toplam doz, vazokonstriktör ve analjezi yayılımı"
+    },
+    {
+     "metin": "Ester yapılı lokal anesteziklerin temel özellikleri"
+    },
+    {
+     "metin": "Kokain: geri alım inhibisyonu ve tek başına vazokonstriktör etki"
+    },
+    {
+     "metin": "Prokain: referans ajan, potens ve başlangıç"
+    },
+    {
+     "metin": "Klorprokain: hızlı başlangıç ve epidural kullanım"
+    },
+    {
+     "metin": "Tetrakain: güçlü spinal ajan ve uzun etki"
+    },
+    {
+     "metin": "Esterlerde metabolizma hızı sıralaması"
+    },
+    {
+     "metin": "Esterlerin dezavantajları: düşük stabilite ve PABA alerjisi"
+    },
+    {
+     "metin": "Amid yapılı lokal anesteziklerin avantajları"
+    },
+    {
+     "metin": "Lidokain ve mepivakain"
+    },
+    {
+     "metin": "Bupivakain: uzun etki, yüksek protein bağlanması ve kardiyotoksisite"
+    },
+    {
+     "metin": "Hidroliz hızının etki süresine ve toksisiteye etkisi"
+    },
+    {
+     "metin": "Alerji mekanizması: ester ve amid karşılaştırması"
+    },
+    {
+     "metin": "Prokain: referans olmasının gerekçesi, zaman çizgisi ve kombinasyon"
+    },
+    {
+     "metin": "Klorprokain: ani biten analjezi, doz, güvenlik ve etkileşim"
+    },
+    {
+     "metin": "Tetrakain: farmakoloji, süre uzaması ve kardiyak risk"
+    },
+    {
+     "metin": "Topikal lokal anestezi ve topikal-enjeksiyon farkları"
+    },
+    {
+     "metin": "Kokainde vazokonstriksiyonun avantajı ve riski"
+    },
+    {
+     "metin": "Spinal ve epidural anestezide ajan seçimi"
+    },
+    {
+     "metin": "Artikain, prilokain ve amidlerin metabolizma hızı"
+    },
+    {
+     "metin": "Sistemik toksisite belirtileri ve aspirasyon"
+    },
+    {
+     "metin": "Diğer lokal anestezik maddeler: benzokain ve dibukain"
+    },
+    {
+     "metin": "EMLA: ötektik lidokain-prilokain karışımı"
+    },
+    {
+     "metin": "İdeal lokal anestezik ve adjuvanlar"
+    },
+    {
+     "metin": "LAST belirtileri ve lipid emülsiyon tedavisi"
+    },
+    {
+     "metin": "Özel hasta grupları, modern zorluklar, gelecek ve ajan seçimi parametreleri"
+    },
+    {
+     "metin": "Özet: ester-amid karşılaştırması, seçim kılavuzu ve güvenlik uyarıları"
+    },
+    {
+     "metin": "Klasik ajanların dışındaki lokal anestezik maddeler ve ders sonu"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders girişi: lokal anestezikler ve dersin planı.",
+    "Lokal anestezinin tanımı, doza bağımlılığı ve klinik uygulama alanları.",
+    "Sinir liflerinde blok sırası ve lif çapı.",
+    "Klinik ipuçları: toplam doz, vazokonstriktör ve analjezi yayılımı.",
+    "Ester yapılı lokal anesteziklerin temel özellikleri.",
+    "Kokain: geri alım inhibisyonu ve tek başına vazokonstriktör etki.",
+    "Prokain: referans ajan, potens ve başlangıç.",
+    "Klorprokain: hızlı başlangıç ve epidural kullanım.",
+    "Tetrakain: güçlü spinal ajan ve uzun etki.",
+    "Esterlerde metabolizma hızı sıralaması.",
+    "Esterlerin dezavantajları: düşük stabilite ve PABA alerjisi.",
+    "Amid yapılı lokal anesteziklerin avantajları.",
+    "Lidokain ve mepivakain.",
+    "Bupivakain: uzun etki, yüksek protein bağlanması ve kardiyotoksisite.",
+    "Hidroliz hızının etki süresine ve toksisiteye etkisi.",
+    "Alerji mekanizması: ester ve amid karşılaştırması.",
+    "Prokain: referans olmasının gerekçesi, zaman çizgisi ve kombinasyon.",
+    "Klorprokain: ani biten analjezi, doz, güvenlik ve etkileşim.",
+    "Tetrakain: farmakoloji, süre uzaması ve kardiyak risk.",
+    "Topikal lokal anestezi ve topikal-enjeksiyon farkları.",
+    "Kokainde vazokonstriksiyonun avantajı ve riski.",
+    "Spinal ve epidural anestezide ajan seçimi.",
+    "Artikain, prilokain ve amidlerin metabolizma hızı.",
+    "Sistemik toksisite belirtileri ve aspirasyon.",
+    "Diğer lokal anestezik maddeler: benzokain ve dibukain.",
+    "EMLA: ötektik lidokain-prilokain karışımı.",
+    "İdeal lokal anestezik ve adjuvanlar.",
+    "LAST belirtileri ve lipid emülsiyon tedavisi.",
+    "Özel hasta grupları, modern zorluklar, gelecek ve ajan seçimi parametreleri.",
+    "Özet: ester-amid karşılaştırması, seçim kılavuzu ve güvenlik uyarıları.",
+    "Klasik ajanların dışındaki lokal anestezik maddeler ve ders sonu."
+   ],
+   "v": "ebe2ed37e1"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Lokal anestezinin tanımı, doza bağımlılığı ve klinik uygulama alanları",
+     "metin": "Lokal anestezi bilinç korunurken belirli bir bölgedeki duyusal iletinin geri dönüşlü olarak bloke edilmesidir; blok doza bağımlıdır ve yalnız sinirleri değil kalp kası ile santral sinir sistemini de etkiler.",
+     "s": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "baslik": "Sinir liflerinde blok sırası ve lif çapı",
+     "metin": "Blok selektif bir sıra izler: önce B lifleri (otonom; vazomotor ve salgı), sonra C ve Aδ lifleri (ağrı ve ısı), en son Aα, Aβ, Aγ lifleri (motor/proprioseptif).",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Klinik ipuçları: toplam doz hesabı, epinefrin eklenmesi ve analjezi yayılımı",
+     "metin": "Büyük yara ve kesilerde toplam doz hesabı yapılır ve toksik eşiğin altında kalınır.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Ester yapılı ajanlar: esterlerde pseudokolinesteraz ile hızlı hidroliz",
+     "metin": "Esterlerde amino-ester (-COO-) bağı plazma pseudokolinesterazları tarafından hızla hidrolize edilir; karaciğer gerekmez.",
+     "s": [
+      7,
+      8
+     ]
+    },
+    {
+     "baslik": "Kokain: geri alım inhibisyonu, tek başına vazokonstriktör etki ve topikal kullanım",
+     "metin": "Kokain 1884'te Koller tarafından göz cerrahisinde kullanılan tarihin ilk lokal anesteziğidir; adrenalin ve noradrenalin geri alımını engelleyen tek lokal anesteziktir.",
+     "s": [
+      9,
+      35
+     ]
+    },
+    {
+     "baslik": "Prokain: referans ajan, potens, başlangıç-süre ve kullanım alanı",
+     "metin": "Prokain potens değeri 1 kabul edilen referans ajandır; diğer ajanların gücü bununla karşılaştırılır (lidokain ≈2, bupivakain ≈8, tetrakain ≈10); potens ve süre arttıkça toksisite artar.",
+     "s": [
+      10,
+      22,
+      23,
+      24,
+      25
+     ]
+    },
+    {
+     "baslik": "Klorprokain: hızlı başlangıç, kısa etki, epidural kullanım ve ilaç etkileşimi",
+     "metin": "Klorprokain prokainin modifiye halidir; daha hızlı başlar, özellikle epidural anestezide kullanılır; etki ~45 dakikadır ve ani bitebilir.",
+     "s": [
+      11,
+      26,
+      27,
+      28,
+      29
+     ]
+    },
+    {
+     "baslik": "Tetrakain: güçlü spinal ajan, uzun etki ve kardiyak risk",
+     "metin": "Tetrakain prokainden 10 kat güçlü ve 10 kat toksiktir; spinal anestezide standart ajandır; etki 2–3 saattir ve vazokonstriktörle daha da uzar; maksimum doz 100 mg.",
+     "s": [
+      12,
+      30,
+      31,
+      32
+     ]
+    },
+    {
+     "baslik": "Esterlerde hidroliz hızı, etki süresi ve pseudokolinesteraz",
+     "metin": "Hidroliz hızı etki süresini ve sistemik toksisiteyi belirler: hızlı hidroliz kısa etki ve düşük birikim, yavaş hidroliz uzun etki ve artan toksisite potansiyeli sağlar.",
+     "s": [
+      13,
+      20
+     ]
+    },
+    {
+     "baslik": "Esterlerin dezavantajları: düşük stabilite ve PABA alerjisi",
+     "metin": "PABA metaboliti immün sistemi tetikler; anafilaksi dahil alerjik reaksiyonlar görülebilir; amidlerde PABA oluşmaz ve alerji çok nadirdir.",
+     "s": [
+      14,
+      21
+     ]
+    },
+    {
+     "baslik": "Amidlerin esterlere göre stabilite ve alerji avantajı",
+     "metin": "Amidler 1940'lardan itibaren esterlerin stabilite ve alerji sorunları nedeniyle öne çıkmıştır.",
+     "s": [
+      15,
+      16
+     ]
+    },
+    {
+     "baslik": "Lidokain ve mepivakain",
+     "metin": "Mepivakain lidokain benzeridir; tekrarlayan dozlarda birikir, plasentadan geçer ve fetüste birikebilir; intrinsik vazokonstriksiyonu nedeniyle epinefrin gerektirmez.",
+     "s": [
+      17,
+      18
+     ]
+    },
+    {
+     "baslik": "Bupivakain: uzun etki, yüksek protein bağlanması ve kardiyotoksisite",
+     "metin": "Bupivakain en uzun etkili amidlerden biridir; epidural/kaudal blok ve doğum ağrısında yaygındır; %95 protein bağlanması uzun etkiyi açıklar.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Topikal lokal anestezi ve topikal–enjeksiyon farkları",
+     "metin": "Topikalde absorpsiyon ve doku geçirgenliği, enjeksiyonda aspirasyon ve intravasküler kaçınma öncelikli; ikisinde de doz-konsantrasyon toksisiteyi belirler.",
+     "s": [
+      33,
+      34
+     ]
+    },
+    {
+     "baslik": "Spinal ve epidural anestezide ajan seçimi",
+     "metin": "Spinal ve epidural için yaygın seçim bupivakain/ropivakaindir.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Artikain ve amidlerin metabolizma hızı",
+     "metin": "Artikain hem kanda (plazma esterazları) hem karaciğerde metabolize edilir; kısa yarı ömürlüdür ve diş hekimliğinde dental bloklarda sık kullanılır.",
+     "s": [
+      37,
+      38
+     ]
+    },
+    {
+     "baslik": "Sistemik toksisite belirtileri ve aspirasyon",
+     "metin": "İntravasküler sızma sistemik toksisiteye yol açar: önce metalik tat, perioral uyuşma, huzursuzluk, tinnitus; sonra konvülsiyon, bilinç kaybı, solunum depresyonu; son olarak ventriküler aritmi ve kardiyak arrest (özellikle bupivakain).",
+     "s": [
+      39,
+      40
+     ]
+    },
+    {
+     "baslik": "Benzokain (topikal PABA türevi ester) ve dibukain",
+     "metin": "Benzokain suda çözünürlüğü çok düşük PABA türevi bir esterdir; yalnızca topikal kullanılır, sistemik emilim minimaldır; yüksek dozda özellikle çocuklarda methemoglobinemi tetikleyebilir.",
+     "s": [
+      41,
+      42,
+      43
+     ]
+    },
+    {
+     "baslik": "EMLA: ötektik lidokain-prilokain karışımı",
+     "metin": "EMLA %2,5 lidokain + %2,5 prilokain içeren ötektik bir karışımdır; oda sıcaklığında sıvıdır ve deri penetrasyonu maksimumdur.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "İdeal lokal anestezik yoktur: ajan seçimi ve adjuvanlar",
+     "metin": "Hiçbir tek ilaç ideal dengeyi sağlayamaz; ajan bölgeye, süreye ve hastaya göre seçilir.",
+     "s": [
+      45,
+      46,
+      47
+     ]
+    },
+    {
+     "baslik": "LAST belirtileri ve lipid emülsiyon tedavisi",
+     "metin": "LAST erken belirtileri perioral uyuşma, metalik tat, tinnitus, huzursuzluk, baş dönmesidir; nöronal tablo konvülsiyon, bilinç kaybı, solunum depresyonudur; kardiyak yıkımda ventriküler aritmi, bradikardi, arrest görülür.",
+     "s": [
+      48,
+      49
+     ]
+    },
+    {
+     "baslik": "Özel hasta grupları: obezitede ideal vücut ağırlığı, karaciğer ve böbrek yetmezliğinde doz azaltımı",
+     "metin": "Obezitede ideal vücut ağırlığı, karaciğer/böbrek yetmezliğinde amidlerde %20–50 doz azaltımı, gebelikte bupivakain/ropivakain tercih edilir.",
+     "s": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+     ]
+    },
+    {
+     "baslik": "Özet: ester–amid karşılaştırması, seçim kılavuzu ve güvenlik uyarıları",
+     "metin": "Güvenlik: bupivakain IV verilmez; benzokain/prilokain methemoglobinemi; PABA alerjisinde amid; her uygulamada %20 Intralipid hazır; her enjeksiyondan önce aspirasyon.",
+     "s": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+     ]
+    },
+    {
+     "baslik": "Diğer topikal maddeler: butamben, ortoform, proparakain ve siklometikain",
+     "metin": "Butilamin benzoat/butamben, butamben pikrat, ortoform, proparakain, propoksikain ve siklometikain sülfat topikal veya yüzeyel kullanılan esterlerdir ve Na⁺ kanalını bloke eder.",
+     "s": [
+      62,
+      63,
+      64
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Lokal anestezinin tanımı, doza bağımlılığı ve klinik uygulama alanları: Lokal anestezi bilinç korunurken belirli bir bölgedeki duyusal iletinin geri dönüşlü olarak bloke edilmesidir; blok doza bağımlıdır ve yalnız sinirleri değil kalp kası ile santral sinir sistemini de etkiler.",
+    "Sinir liflerinde blok sırası ve lif çapı: Blok selektif bir sıra izler: önce B lifleri (otonom; vazomotor ve salgı), sonra C ve Aδ lifleri (ağrı ve ısı), en son Aα, Aβ, Aγ lifleri (motor/proprioseptif).",
+    "Klinik ipuçları: toplam doz hesabı, epinefrin eklenmesi ve analjezi yayılımı: Büyük yara ve kesilerde toplam doz hesabı yapılır ve toksik eşiğin altında kalınır.",
+    "Ester yapılı ajanlar: esterlerde pseudokolinesteraz ile hızlı hidroliz: Esterlerde amino-ester (-COO-) bağı plazma pseudokolinesterazları tarafından hızla hidrolize edilir; karaciğer gerekmez.",
+    "Kokain: geri alım inhibisyonu, tek başına vazokonstriktör etki ve topikal kullanım: Kokain 1884'te Koller tarafından göz cerrahisinde kullanılan tarihin ilk lokal anesteziğidir; adrenalin ve noradrenalin geri alımını engelleyen tek lokal anesteziktir.",
+    "Prokain: referans ajan, potens, başlangıç-süre ve kullanım alanı: Prokain potens değeri 1 kabul edilen referans ajandır; diğer ajanların gücü bununla karşılaştırılır (lidokain ≈2, bupivakain ≈8, tetrakain ≈10); potens ve süre arttıkça toksisite artar.",
+    "Klorprokain: hızlı başlangıç, kısa etki, epidural kullanım ve ilaç etkileşimi: Klorprokain prokainin modifiye halidir; daha hızlı başlar, özellikle epidural anestezide kullanılır; etki ~45 dakikadır ve ani bitebilir.",
+    "Tetrakain: güçlü spinal ajan, uzun etki ve kardiyak risk: Tetrakain prokainden 10 kat güçlü ve 10 kat toksiktir; spinal anestezide standart ajandır; etki 2–3 saattir ve vazokonstriktörle daha da uzar; maksimum doz 100 mg.",
+    "Esterlerde hidroliz hızı, etki süresi ve pseudokolinesteraz: Hidroliz hızı etki süresini ve sistemik toksisiteyi belirler: hızlı hidroliz kısa etki ve düşük birikim, yavaş hidroliz uzun etki ve artan toksisite potansiyeli sağlar.",
+    "Esterlerin dezavantajları: düşük stabilite ve PABA alerjisi: PABA metaboliti immün sistemi tetikler; anafilaksi dahil alerjik reaksiyonlar görülebilir; amidlerde PABA oluşmaz ve alerji çok nadirdir.",
+    "Amidlerin esterlere göre stabilite ve alerji avantajı: Amidler 1940'lardan itibaren esterlerin stabilite ve alerji sorunları nedeniyle öne çıkmıştır.",
+    "Lidokain ve mepivakain: Mepivakain lidokain benzeridir; tekrarlayan dozlarda birikir, plasentadan geçer ve fetüste birikebilir; intrinsik vazokonstriksiyonu nedeniyle epinefrin gerektirmez.",
+    "Bupivakain: uzun etki, yüksek protein bağlanması ve kardiyotoksisite: Bupivakain en uzun etkili amidlerden biridir; epidural/kaudal blok ve doğum ağrısında yaygındır; %95 protein bağlanması uzun etkiyi açıklar.",
+    "Topikal lokal anestezi ve topikal–enjeksiyon farkları: Topikalde absorpsiyon ve doku geçirgenliği, enjeksiyonda aspirasyon ve intravasküler kaçınma öncelikli; ikisinde de doz-konsantrasyon toksisiteyi belirler.",
+    "Spinal ve epidural anestezide ajan seçimi: Spinal ve epidural için yaygın seçim bupivakain/ropivakaindir.",
+    "Artikain ve amidlerin metabolizma hızı: Artikain hem kanda (plazma esterazları) hem karaciğerde metabolize edilir; kısa yarı ömürlüdür ve diş hekimliğinde dental bloklarda sık kullanılır.",
+    "Sistemik toksisite belirtileri ve aspirasyon: İntravasküler sızma sistemik toksisiteye yol açar: önce metalik tat, perioral uyuşma, huzursuzluk, tinnitus; sonra konvülsiyon, bilinç kaybı, solunum depresyonu; son olarak ventriküler aritmi ve kardiyak arrest (özellikle bupivakain).",
+    "Benzokain (topikal PABA türevi ester) ve dibukain: Benzokain suda çözünürlüğü çok düşük PABA türevi bir esterdir; yalnızca topikal kullanılır, sistemik emilim minimaldır; yüksek dozda özellikle çocuklarda methemoglobinemi tetikleyebilir.",
+    "EMLA: ötektik lidokain-prilokain karışımı: EMLA %2,5 lidokain + %2,5 prilokain içeren ötektik bir karışımdır; oda sıcaklığında sıvıdır ve deri penetrasyonu maksimumdur.",
+    "İdeal lokal anestezik yoktur: ajan seçimi ve adjuvanlar: Hiçbir tek ilaç ideal dengeyi sağlayamaz; ajan bölgeye, süreye ve hastaya göre seçilir.",
+    "LAST belirtileri ve lipid emülsiyon tedavisi: LAST erken belirtileri perioral uyuşma, metalik tat, tinnitus, huzursuzluk, baş dönmesidir; nöronal tablo konvülsiyon, bilinç kaybı, solunum depresyonudur; kardiyak yıkımda ventriküler aritmi, bradikardi, arrest görülür.",
+    "Özel hasta grupları: obezitede ideal vücut ağırlığı, karaciğer ve böbrek yetmezliğinde doz azaltımı: Obezitede ideal vücut ağırlığı, karaciğer/böbrek yetmezliğinde amidlerde %20–50 doz azaltımı, gebelikte bupivakain/ropivakain tercih edilir.",
+    "Özet: ester–amid karşılaştırması, seçim kılavuzu ve güvenlik uyarıları: Güvenlik: bupivakain IV verilmez; benzokain/prilokain methemoglobinemi; PABA alerjisinde amid; her uygulamada %20 Intralipid hazır; her enjeksiyondan önce aspirasyon.",
+    "Diğer topikal maddeler: butamben, ortoform, proparakain ve siklometikain: Butilamin benzoat/butamben, butamben pikrat, ortoform, proparakain, propoksikain ve siklometikain sülfat topikal veya yüzeyel kullanılan esterlerdir ve Na⁺ kanalını bloke eder."
+   ],
+   "v": "2f4fee888f"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu analiz, Lokal Anestezik İlaçlar dersinden çıkmış on iki soruyu, ders içeriğindeki bilgiye dayanarak açıklar. Her soruda önce ölçülen kavram, sonra ders içeriğindeki dayanak, en sonda en güçlü çeldiricinin neden yanlış olduğu anlatılır; ders içeriğinde işlenmeyen ayrıntılar açıkça belirtilir.",
+   "maddeler": [
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Ketamin II. Kodein III. Simetidin IV. Artikain Yukarıdaki ilaçlardan hangisi/hangileri lokal anesteziktir?",
+     "cevap": "Yalnız IV",
+     "s": [
+      58
+     ],
+     "aciklama": [
+      "Soru, ketamin, kodein, simetidin ve artikain arasından hangilerinin lokal anestezik olduğunu ayırt edip edemediğinizi ölçer.",
+      "Seçim kılavuzu ve karşılaştırma tablosu artikainin amid yapılı lokal anestezikler arasında yer aldığını, diş hekimliğinde yüzde dört konsantrasyonda mükemmel doku penetrasyonuyla tercih edildiğini bildirir; bu nedenle yalnızca dördüncü öncül doğrudur.",
+      "Artikain hem kanda hem karaciğerde metabolize edilen kısa yarı ömürlü bir amiddir ve ester ile amid örnekleri tablosunda lidokain ve bupivakainle birlikte sayılır.",
+      "Ketamin, kodein ve simetidin ders içeriğindeki lokal anestezik gruplarında geçmez; bu yüzden bu ilaçları içeren seçenekler yanlıştır."
+     ],
+     "ornek": "Diş hekimliğinde dental blok için seçilen yüzde dört çözelti artikaindir ve bir amid lokal anesteziktir.",
+     "tuzak": "Öğrenci listede tanıdığı ilaç adlarının hepsini lokal anestezik sanıp kalabalık seçenekleri işaretler; oysa yalnızca artikain bu gruptadır."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Lokal anestezik solüsyonlarına vazokonstriktör hangi amaçla katılır?",
+     "cevap": "Etki süresinin artırılması",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, lokal anestezik çözeltisine vazokonstriktör eklenmesinin amacını ölçer.",
+      "Ders içeriğine göre epinefrin eklenmesi sistemik absorpsiyonu yavaşlatır ve lokal etki süresini uzatır; adjuvanlar bölümü bu süre artışını yüzde elli ile yüz olarak verir.",
+      "Bu nedenle doğru yanıt etki süresinin artırılmasıdır.",
+      "Çözeltinin stabilizasyonu, apirojenitesi ya da çözünürlüğü ilaç üretimiyle ilgili özelliklerdir ve vazokonstriktörün amacı değildir; metabolizasyonu artırmak ise ilacı daha hızlı yıkarak süreyi kısaltırdı."
+     ],
+     "ornek": "Lidokaine epinefrin eklendiğinde etki süresi yaklaşık 2,5 saate çıkar.",
+     "tuzak": "Öğrenci vazokonstriktörü ilacın kimyasal özelliklerini düzelten bir katkı maddesi sanar; oysa yalnızca emilimi yavaşlatarak süreyi uzatır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi en kısa etkili lokal anestezik ajandır?",
+     "cevap": "Prokain",
+     "s": [
+      20
+     ],
+     "aciklama": [
+      "Soru, listedeki ajanlar arasında etki süresi en kısa olanı bulmayı ister.",
+      "Ders içeriği esterlerde hidroliz hızının etki süresini belirlediğini söyler: hızlı hidroliz kısa etki ve düşük sistemik birikim, yavaş hidroliz uzun etki sağlar.",
+      "Prokain hızla hidrolize olan bir esterdir; hız sıralaması klorprokain, prokain, tetrakain biçimindedir ve tetrakain yavaş parçalandığı için iki ile üç saat etkilidir.",
+      "Bupivakain en yavaş yıkılan amiddir ve uzun etkilidir; ropivakain da bupivakainle birlikte spinal ve epidural anestezide yaygın seçilen amiddir ve karaciğerde metabolize edilir, bu yüzden prokain kadar kısa etkili değildir."
+     ],
+     "ornek": "Hidroliz hızı en yüksek olan ester, etki süresi en kısa ester olarak beklenir.",
+     "tuzak": "Öğrenci hızlı hidrolizin kısa etki demek olduğunu bilir ama prokain ile klorprokaini karıştırıp seçenek olmayan klorprokaine yönelebilir; oysa bu soruda seçenekler arasında hızla hidrolize olan tek ester prokaindir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Lokal anesteziklere ilişkin aşağıdaki ifadeler veriliyor: I. Lokal anestezikler genellikle zayıf asitlerdir, lipofiliteleri düşüktür. II. Sodyum kanallarının iç yüzeyindeki reseptörlerine bağlanırlar. III. Etil klorür, benzil alkol ve kapsaisin amid yapılı lokal anestezik ajanlardır. IV. Bir strateji olarak bikarbonat ilavesiyle noniyonize konsantrasyon artırılırsa bölgesel blok daha hızlı oluşur. Bunlardan hangisi/hangileri doğrudur?",
+     "cevap": "II ve IV",
+     "s": [
+      46
+     ],
+     "aciklama": [
+      "Soru, lokal anesteziklerin kimyasal karakteri, etki yeri, bazı topikal maddelerin yapısı ve bikarbonatın etkisi hakkındaki dört ifadeden hangilerinin doğru olduğunu ölçer.",
+      "Ders içeriği sodyum bikarbonatın pH'ı yükselterek iyonize olmayan fraksiyonu artırdığını ve onset'i hızlandırdığını açıkça bildirir; bu nedenle dördüncü ifade doğrudur.",
+      "Etil klorürün soğutarak, benzil alkolün aromatik alkol olarak, kapsaisinin ise TRPV1 agonizmiyle etki ettiği anlatılmıştır; bu maddeler amid yapılı lokal anestezik değildir, bu yüzden üçüncü ifade yanlıştır.",
+      "Zayıf asit karakteri ve sodyum kanalının iç yüzeyindeki reseptörler ders içeriğinde ayrıca işlenmediğinden birinci ve ikinci ifadeler için dayanak yanıt anahtarıdır; anahtara göre doğru yanıt ikinci ve dördüncü ifadelerdir."
+     ],
+     "ornek": "Bikarbonat eklenen bir lokal anestezikte iyonize olmayan form arttığı için blok daha çabuk başlar.",
+     "tuzak": "Öğrenci etil klorür, benzil alkol ve kapsaisini de lokal anestezik ailesine katıp amid yapılı sanar; oysa bunların yapıları ve etki biçimleri klasik gruplardan farklıdır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Lidokain ve prilokain, deride yüzeysel lokal anestezi amacıyla pediatride İV uygulamadan önce sık kullanılır. Bu bileşim (EMLA) nasıl meydana getirilir?",
+     "cevap": "%2,5 lidokain + %2,5 prilokain",
+     "s": [
+      44
+     ],
+     "aciklama": [
+      "Soru, EMLA kremini oluşturan iki amidi ve konsantrasyonlarını ölçer.",
+      "Ders içeriğine göre EMLA yüzde 2,5 lidokain ve yüzde 2,5 prilokain içeren ötektik bir karışımdır ve her iki ajan da amid grubundandır.",
+      "Ötektik yapı sayesinde karışım oda sıcaklığında sıvı kalır ve deri penetrasyonu maksimumdur; iğne fobisi olan çocuklarda damar yolu öncesi altın standarttır.",
+      "Yüzde 1, 5, 10 ya da 25 gibi oranlar karışımın bileşimini yansıtmaz; en yakın çeldirici yüzde 5 seçeneğidir, çünkü gerçek değerin iki katıdır."
+     ],
+     "ornek": "Çocukta damar yolu açılmadan önce deriye sürülen krem, iki amidin eşit oranlı ötektik karışımıdır.",
+     "tuzak": "Öğrenci oranı yüzde 5 ya da yüzde 10 gibi yuvarlak bir sayı sanar; oysa her iki ajan da yüzde 2,5 oranındadır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Lokal anesteziklerin sistemik kullanımında doz artışı hangi sistemik etkiye neden olmaz?",
+     "cevap": "Plastisite",
+     "s": [
+      39
+     ],
+     "aciklama": [
+      "Soru, lokal anesteziklerin sistemik dozu arttığında ortaya çıkabilecek etkileri tanıyıp listede olmayanı bulmayı ister.",
+      "Ders içeriği intravasküler sızmanın ciddi sistemik toksisite tablolarını tetiklediğini, önce metalik tat, perioral uyuşma, huzursuzluk ve tinnitus, sonra konvülsiyon, bilinç kaybı ve solunum depresyonu görüldüğünü bildirir.",
+      "Bu belirti zinciri toksisite seçeneğiyle örtüşür; plastisite ise ders içeriğindeki hiçbir belirti ya da etki başlığında geçmez ve yanıt anahtarı bu seçeneği doğru kabul eder.",
+      "Ektopik impuls baskılanması ve santral sensitizasyon başlıkları ders içeriğinde ayrıca işlenmemiştir; bu soruda dayanak toksisite belirtileri ve yanıt anahtarıdır."
+     ],
+     "ornek": "Doz arttıkça metalik tat ve tinnitusla başlayan tablo konvülsiyon ve solunum depresyonuna ilerleyebilir.",
+     "tuzak": "Öğrenci toksisiteyi yalnızca kalp ve beyinle sınırlı sanıp seçeneklerdeki yabancı kavramlara takılır; oysa yapılacak iş toksisite belirtileri zincirinde yer almayan sözcüğü bulmaktır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Lokal anestezik ilaca vazokonstriktör eklenmesiyle aşağıdakilerden hangisi amaçlanmaz?",
+     "cevap": "Lokal anesteziğin advers etkilerini yok etmek",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, vazokonstriktör eklenmesinin amaçları arasında yer almayanı bulmayı ister.",
+      "Ders içeriğine göre epinefrin sistemik absorpsiyonu yavaşlatır ve lokal etki süresini uzatır; yani süre artışı ve sistemik dolaşıma geçişin düzenlenmesi amaçlanır.",
+      "Epinefrin eklenmesi istenmeyen etkileri ortadan kaldırmaz; ders içeriği yalnızca emilimin yavaşlamasından ve sürenin uzamasından söz eder, bu nedenle advers etkileri yok etmek amaçlanmaz.",
+      "Spinal alfa adrenoseptör aracılı analjezi ve nöronal alımın artışı ders içeriğinde ayrıca anlatılmamıştır; bu seçenekler yanıt anahtarına göre amaçlanan sonuçlar arasında sayılır."
+     ],
+     "ornek": "Epinefrinli lidokain, epinefrinsiz lidokaine göre bölgeden daha yavaş emilir ve daha uzun etki eder.",
+     "tuzak": "Öğrenci vazokonstriktörün lokal anestezik toksisitesini tümüyle sıfırladığını düşünür; oysa yalnızca emilimi yavaşlatır ve doz hesabı yine zorunludur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Lokal anesteziklerin potensi aşağıdaki üyelerden hangisine göre kıyaslanır?",
+     "cevap": "Prokain",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru, lokal anesteziklerin potens karşılaştırmasında referans alınan ajanı sorar.",
+      "Ders içeriği prokainin potens değeri 1 kabul edilen referans ajan olduğunu ve diğer tüm ajanların gücünün bu değer üzerinden karşılaştırıldığını bildirir.",
+      "Lidokain yaklaşık 2, bupivakain yaklaşık 8, tetrakain yaklaşık 10 potens gösterir; tetrakain en güçlü ester olduğu için güçlü bir çeldiricidir ama o kıyaslanan bir ajandır, referans değildir.",
+      "Benzokain ve kokain yalnızca topikal kullanılan ajanlardır ve potens kıyaslamasında referans rolleri yoktur."
+     ],
+     "ornek": "Bupivakainin potensi yaklaşık 8 ise bu, prokainin sekiz katı güçte olduğu anlamına gelir.",
+     "tuzak": "Öğrenci en güçlü ajanı referans sanıp tetrakaini seçer; oysa referans, gücü bir birim kabul edilen prokaindir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Lokal anestezikler için aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Hafif asidik yapıya sahiptirler",
+     "s": [
+      46
+     ],
+     "aciklama": [
+      "Soru, lokal anesteziklerle ilgili beş ifadeden yanlış olanı bulmayı ister.",
+      "Ders içeriği bazı lokal anestezik çözeltilerine vazokonstriktör eklendiğini, sodyum bikarbonatın pH'ı yükselterek iyonize olmayan fraksiyonu artırdığını ve spinal ile epidural gibi nöroaksiyel anestezide lokal anesteziklerin kullanıldığını anlatır; bu üç ifade doğrudur.",
+      "İltihaplı asidik dokuda iyonize fraksiyonun arttığı ve nötr formun azalarak bloğu yetersiz kıldığı bilgisi de, ilaçların asidik değil bazik ortamda daha etkin nötr forma geçtiğini düşündürür.",
+      "Hafif asidik yapıya sahip oldukları ifadesi ders içeriğinde yer almaz ve yanıt anahtarına göre yanlış ifadedir; duyu modalitelerini tamamen ortadan kaldırdıkları ifadesi ise ders içeriğinde ayrıca işlenmemiştir."
+     ],
+     "ornek": "Bikarbonat eklenmesi lokal anestezik ilacın zardan geçebilen formunu artırarak başlangıç süresini kısaltır.",
+     "tuzak": "Öğrenci lokal anestezik ilaçların asidik olduğunu ya da duyuyu tamamen kaldırdığını doğru sanabilir; oysa bu ifadeler ders içeriğiyle uyuşmaz."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Ester yapılı olmayan lokal anestezik hangisidir?",
+     "cevap": "Lidokain",
+     "s": [
+      57
+     ],
+     "aciklama": [
+      "Soru, ester yapılı olmayan, yani amid yapılı lokal anesteziği bulmayı ister.",
+      "Ester ve amid karşılaştırma tablosu esterlere prokain, tetrakain ve kokain; amidlere lidokain, bupivakain ve artikain örnek verir.",
+      "Lidokain karaciğer mikrozomal enzimleriyle metabolize edilen, alerjisi çok nadir ve ısı, asit ve alkaliden etkilenmeyen bir amiddir; bu yüzden ester yapılı olmayan ajan lidokaindir.",
+      "Prokain, tetrakain, kokain ve benzokain ester grubundadır; özellikle benzokain suda çözünürlüğü çok düşük PABA türevi bir ester olduğu için çeldirici olarak amid sanılabilir ama ester yapılıdır."
+     ],
+     "ornek": "Plazma esterazlarıyla yıkılmayıp karaciğerde metabolize edilen lokal anesteziklere lidokain, bupivakain ve artikain örnektir.",
+     "tuzak": "Öğrenci ajanları adının sonuna bakarak gruplayıp ester amid ayrımını yapar; oysa grup ayrımı -COO- ve -NHCO- bağına dayanır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Kurgu Soru: I. Klorprokain II. Ropivakain III. Kokain IV. Benzokain Yukarıdaki lokal anesteziklerden hangileri epidural yolla kullanılır?",
+     "cevap": "I ve II",
+     "s": [
+      36
+     ],
+     "aciklama": [
+      "Soru, klorprokain, ropivakain, kokain ve benzokaindan hangilerinin epidural yolla kullanıldığını ölçer.",
+      "Ders içeriğine göre klorprokain prokainin modifiye halidir ve özellikle epidural anestezide yoğun kullanılır; kaudal ve epidural uygulamada yüzde iki ile üç konsantrasyonda verilir.",
+      "Ropivakain bupivakainle birlikte spinal ve epidural anestezide yaygın seçilen amiddir; bu iki ajan epidural kullanımı karşılar.",
+      "Kokain yalnızca topikal olarak ORL cerrahisinde, benzokain ise yalnızca topikal olarak ağız içinde ve deri yüzeyinde kullanılır; bu yüzden üçüncü ve dördüncü öncülü içeren seçenekler yanlıştır."
+     ],
+     "ornek": "Doğum ağrısında epidural analjezi için bupivakain, uzun etkili ve düşük motor blok sağladığı için tercih edilir.",
+     "tuzak": "Öğrenci kokainin güçlü bir lokal anestezik olduğunu bildiği için onu da epidural yolda sayar; oysa yalnızca topikal kullanılır."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Lokal anesteziklerle ilgili; I. Hedef bir bölgeye enjekte edildikleri için sistemik dağılımdan, dolayısıyla dağılım hacminden bahsetmek zordur. II. Doğum esnasında epidural anestezi uygulanan hastanın ıkınması zayıflar. III. Lokal anestezinin oluşturduğu anestezi sinir lifine eşit dağılmaz; tam tersine sinir gövdesine radyal penetre olur ve longitüdinal yayılım gösterir. IV. Lokal anesteziklere vazokonstriktör eklenmesinin avantajı, dağılımı hızlandırmak ve metabolizmayı artırmaktır. ifadelerinden hangisi/hangileri doğrudur?",
+     "cevap": "I, II ve III",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, lokal anesteziklerin dağılımı, epidural doğum analjezisinin sonucu, sinir lifine yayılımı ve vazokonstriktörün avantajı hakkındaki dört ifadeden hangilerinin doğru olduğunu ölçer.",
+      "Ders içeriği epinefrin eklenmesinin sistemik absorpsiyonu yavaşlattığını ve etki süresini uzattığını söyler; dağılımı hızlandırmak ve metabolizmayı artırmak vazokonstriktörün amacı değildir, bu yüzden dördüncü ifade yanlıştır.",
+      "Dağılım hacmi, doğum eyleminde ıkınmanın zayıflaması ve radyal penetrasyon bilgileri ders içeriğinde ayrıca işlenmemiştir; bu üç ifade için dayanak yanıt anahtarıdır ve anahtar birinci, ikinci ve üçüncü ifadeleri doğru sayar.",
+      "Dördüncü ifadeyi içeren her seçenek vazokonstriktörün metabolizmayı artırdığı yanlışını kabul ettiği için elenir."
+     ],
+     "ornek": "Epinefrin eklenmesi dağılımı hızlandırmak için değil, absorpsiyonu yavaşlatıp süreyi uzatmak için yapılır.",
+     "tuzak": "Öğrenci vazokonstriktörün ilacı hızla dağıtıp metabolizmayı artırdığını sanır; oysa tam tersine emilimi yavaşlatır."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu analiz, Lokal Anestezik İlaçlar dersinden çıkmış on iki soruyu, ders içeriğindeki bilgiye dayanarak açıklar. Her soruda önce ölçülen kavram, sonra ders içeriğindeki dayanak, en sonda en güçlü çeldiricinin neden yanlış olduğu anlatılır; ders içeriğinde işlenmeyen ayrıntılar açıkça belirtilir.",
+    "2018-2019: I. Ketamin II. Kodein III. Simetidin IV. Artikain Yukarıdaki ilaçlardan hangisi/hangileri lokal anesteziktir?",
+    "Cevap: Yalnız IV.",
+    "Soru, ketamin, kodein, simetidin ve artikain arasından hangilerinin lokal anestezik olduğunu ayırt edip edemediğinizi ölçer.",
+    "Seçim kılavuzu ve karşılaştırma tablosu artikainin amid yapılı lokal anestezikler arasında yer aldığını, diş hekimliğinde yüzde dört konsantrasyonda mükemmel doku penetrasyonuyla tercih edildiğini bildirir; bu nedenle yalnızca dördüncü öncül doğrudur.",
+    "Artikain hem kanda hem karaciğerde metabolize edilen kısa yarı ömürlü bir amiddir ve ester ile amid örnekleri tablosunda lidokain ve bupivakainle birlikte sayılır.",
+    "Ketamin, kodein ve simetidin ders içeriğindeki lokal anestezik gruplarında geçmez; bu yüzden bu ilaçları içeren seçenekler yanlıştır.",
+    "Örnek: Diş hekimliğinde dental blok için seçilen yüzde dört çözelti artikaindir ve bir amid lokal anesteziktir.",
+    "Tuzak: Öğrenci listede tanıdığı ilaç adlarının hepsini lokal anestezik sanıp kalabalık seçenekleri işaretler; oysa yalnızca artikain bu gruptadır.",
+    "2018-2019: Lokal anestezik solüsyonlarına vazokonstriktör hangi amaçla katılır?",
+    "Cevap: Etki süresinin artırılması.",
+    "Soru, lokal anestezik çözeltisine vazokonstriktör eklenmesinin amacını ölçer.",
+    "Ders içeriğine göre epinefrin eklenmesi sistemik absorpsiyonu yavaşlatır ve lokal etki süresini uzatır; adjuvanlar bölümü bu süre artışını yüzde elli ile yüz olarak verir.",
+    "Bu nedenle doğru yanıt etki süresinin artırılmasıdır.",
+    "Çözeltinin stabilizasyonu, apirojenitesi ya da çözünürlüğü ilaç üretimiyle ilgili özelliklerdir ve vazokonstriktörün amacı değildir; metabolizasyonu artırmak ise ilacı daha hızlı yıkarak süreyi kısaltırdı.",
+    "Örnek: Lidokaine epinefrin eklendiğinde etki süresi yaklaşık 2,5 saate çıkar.",
+    "Tuzak: Öğrenci vazokonstriktörü ilacın kimyasal özelliklerini düzelten bir katkı maddesi sanar; oysa yalnızca emilimi yavaşlatarak süreyi uzatır.",
+    "2019-2020: Aşağıdakilerden hangisi en kısa etkili lokal anestezik ajandır?",
+    "Cevap: Prokain.",
+    "Soru, listedeki ajanlar arasında etki süresi en kısa olanı bulmayı ister.",
+    "Ders içeriği esterlerde hidroliz hızının etki süresini belirlediğini söyler: hızlı hidroliz kısa etki ve düşük sistemik birikim, yavaş hidroliz uzun etki sağlar.",
+    "Prokain hızla hidrolize olan bir esterdir; hız sıralaması klorprokain, prokain, tetrakain biçimindedir ve tetrakain yavaş parçalandığı için iki ile üç saat etkilidir.",
+    "Bupivakain en yavaş yıkılan amiddir ve uzun etkilidir; ropivakain da bupivakainle birlikte spinal ve epidural anestezide yaygın seçilen amiddir ve karaciğerde metabolize edilir, bu yüzden prokain kadar kısa etkili değildir.",
+    "Örnek: Hidroliz hızı en yüksek olan ester, etki süresi en kısa ester olarak beklenir.",
+    "Tuzak: Öğrenci hızlı hidrolizin kısa etki demek olduğunu bilir ama prokain ile klorprokaini karıştırıp seçenek olmayan klorprokaine yönelebilir; oysa bu soruda seçenekler arasında hızla hidrolize olan tek ester prokaindir.",
+    "2019-2020: Lokal anesteziklere ilişkin aşağıdaki ifadeler veriliyor: I. Lokal anestezikler genellikle zayıf asitlerdir, lipofiliteleri düşüktür. II. Sodyum kanallarının iç yüzeyindeki reseptörlerine bağlanırlar. III. Etil klorür, benzil alkol ve kapsaisin amid yapılı lokal anestezik ajanlardır. IV. Bir strateji olarak bikarbonat ilavesiyle noniyonize konsantrasyon artırılırsa bölgesel blok daha hızlı oluşur. Bunlardan hangisi/hangileri doğrudur?",
+    "Cevap: II ve IV.",
+    "Soru, lokal anesteziklerin kimyasal karakteri, etki yeri, bazı topikal maddelerin yapısı ve bikarbonatın etkisi hakkındaki dört ifadeden hangilerinin doğru olduğunu ölçer.",
+    "Ders içeriği sodyum bikarbonatın pH'ı yükselterek iyonize olmayan fraksiyonu artırdığını ve onset'i hızlandırdığını açıkça bildirir; bu nedenle dördüncü ifade doğrudur.",
+    "Etil klorürün soğutarak, benzil alkolün aromatik alkol olarak, kapsaisinin ise TRPV1 agonizmiyle etki ettiği anlatılmıştır; bu maddeler amid yapılı lokal anestezik değildir, bu yüzden üçüncü ifade yanlıştır.",
+    "Zayıf asit karakteri ve sodyum kanalının iç yüzeyindeki reseptörler ders içeriğinde ayrıca işlenmediğinden birinci ve ikinci ifadeler için dayanak yanıt anahtarıdır; anahtara göre doğru yanıt ikinci ve dördüncü ifadelerdir.",
+    "Örnek: Bikarbonat eklenen bir lokal anestezikte iyonize olmayan form arttığı için blok daha çabuk başlar.",
+    "Tuzak: Öğrenci etil klorür, benzil alkol ve kapsaisini de lokal anestezik ailesine katıp amid yapılı sanar; oysa bunların yapıları ve etki biçimleri klasik gruplardan farklıdır.",
+    "2020-2021: Lidokain ve prilokain, deride yüzeysel lokal anestezi amacıyla pediatride İV uygulamadan önce sık kullanılır. Bu bileşim (EMLA) nasıl meydana getirilir?",
+    "Cevap: %2,5 lidokain + %2,5 prilokain.",
+    "Soru, EMLA kremini oluşturan iki amidi ve konsantrasyonlarını ölçer.",
+    "Ders içeriğine göre EMLA yüzde 2,5 lidokain ve yüzde 2,5 prilokain içeren ötektik bir karışımdır ve her iki ajan da amid grubundandır.",
+    "Ötektik yapı sayesinde karışım oda sıcaklığında sıvı kalır ve deri penetrasyonu maksimumdur; iğne fobisi olan çocuklarda damar yolu öncesi altın standarttır.",
+    "Yüzde 1, 5, 10 ya da 25 gibi oranlar karışımın bileşimini yansıtmaz; en yakın çeldirici yüzde 5 seçeneğidir, çünkü gerçek değerin iki katıdır.",
+    "Örnek: Çocukta damar yolu açılmadan önce deriye sürülen krem, iki amidin eşit oranlı ötektik karışımıdır.",
+    "Tuzak: Öğrenci oranı yüzde 5 ya da yüzde 10 gibi yuvarlak bir sayı sanar; oysa her iki ajan da yüzde 2,5 oranındadır.",
+    "2020-2021: Lokal anesteziklerin sistemik kullanımında doz artışı hangi sistemik etkiye neden olmaz?",
+    "Cevap: Plastisite.",
+    "Soru, lokal anesteziklerin sistemik dozu arttığında ortaya çıkabilecek etkileri tanıyıp listede olmayanı bulmayı ister.",
+    "Ders içeriği intravasküler sızmanın ciddi sistemik toksisite tablolarını tetiklediğini, önce metalik tat, perioral uyuşma, huzursuzluk ve tinnitus, sonra konvülsiyon, bilinç kaybı ve solunum depresyonu görüldüğünü bildirir.",
+    "Bu belirti zinciri toksisite seçeneğiyle örtüşür; plastisite ise ders içeriğindeki hiçbir belirti ya da etki başlığında geçmez ve yanıt anahtarı bu seçeneği doğru kabul eder.",
+    "Ektopik impuls baskılanması ve santral sensitizasyon başlıkları ders içeriğinde ayrıca işlenmemiştir; bu soruda dayanak toksisite belirtileri ve yanıt anahtarıdır.",
+    "Örnek: Doz arttıkça metalik tat ve tinnitusla başlayan tablo konvülsiyon ve solunum depresyonuna ilerleyebilir.",
+    "Tuzak: Öğrenci toksisiteyi yalnızca kalp ve beyinle sınırlı sanıp seçeneklerdeki yabancı kavramlara takılır; oysa yapılacak iş toksisite belirtileri zincirinde yer almayan sözcüğü bulmaktır.",
+    "2020-2021: Lokal anestezik ilaca vazokonstriktör eklenmesiyle aşağıdakilerden hangisi amaçlanmaz?",
+    "Cevap: Lokal anesteziğin advers etkilerini yok etmek.",
+    "Soru, vazokonstriktör eklenmesinin amaçları arasında yer almayanı bulmayı ister.",
+    "Ders içeriğine göre epinefrin sistemik absorpsiyonu yavaşlatır ve lokal etki süresini uzatır; yani süre artışı ve sistemik dolaşıma geçişin düzenlenmesi amaçlanır.",
+    "Epinefrin eklenmesi istenmeyen etkileri ortadan kaldırmaz; ders içeriği yalnızca emilimin yavaşlamasından ve sürenin uzamasından söz eder, bu nedenle advers etkileri yok etmek amaçlanmaz.",
+    "Spinal alfa adrenoseptör aracılı analjezi ve nöronal alımın artışı ders içeriğinde ayrıca anlatılmamıştır; bu seçenekler yanıt anahtarına göre amaçlanan sonuçlar arasında sayılır.",
+    "Örnek: Epinefrinli lidokain, epinefrinsiz lidokaine göre bölgeden daha yavaş emilir ve daha uzun etki eder.",
+    "Tuzak: Öğrenci vazokonstriktörün lokal anestezik toksisitesini tümüyle sıfırladığını düşünür; oysa yalnızca emilimi yavaşlatır ve doz hesabı yine zorunludur.",
+    "2020-2021: Lokal anesteziklerin potensi aşağıdaki üyelerden hangisine göre kıyaslanır?",
+    "Cevap: Prokain.",
+    "Soru, lokal anesteziklerin potens karşılaştırmasında referans alınan ajanı sorar.",
+    "Ders içeriği prokainin potens değeri 1 kabul edilen referans ajan olduğunu ve diğer tüm ajanların gücünün bu değer üzerinden karşılaştırıldığını bildirir.",
+    "Lidokain yaklaşık 2, bupivakain yaklaşık 8, tetrakain yaklaşık 10 potens gösterir; tetrakain en güçlü ester olduğu için güçlü bir çeldiricidir ama o kıyaslanan bir ajandır, referans değildir.",
+    "Benzokain ve kokain yalnızca topikal kullanılan ajanlardır ve potens kıyaslamasında referans rolleri yoktur.",
+    "Örnek: Bupivakainin potensi yaklaşık 8 ise bu, prokainin sekiz katı güçte olduğu anlamına gelir.",
+    "Tuzak: Öğrenci en güçlü ajanı referans sanıp tetrakaini seçer; oysa referans, gücü bir birim kabul edilen prokaindir.",
+    "2020-2021: Lokal anestezikler için aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Hafif asidik yapıya sahiptirler.",
+    "Soru, lokal anesteziklerle ilgili beş ifadeden yanlış olanı bulmayı ister.",
+    "Ders içeriği bazı lokal anestezik çözeltilerine vazokonstriktör eklendiğini, sodyum bikarbonatın pH'ı yükselterek iyonize olmayan fraksiyonu artırdığını ve spinal ile epidural gibi nöroaksiyel anestezide lokal anesteziklerin kullanıldığını anlatır; bu üç ifade doğrudur.",
+    "İltihaplı asidik dokuda iyonize fraksiyonun arttığı ve nötr formun azalarak bloğu yetersiz kıldığı bilgisi de, ilaçların asidik değil bazik ortamda daha etkin nötr forma geçtiğini düşündürür.",
+    "Hafif asidik yapıya sahip oldukları ifadesi ders içeriğinde yer almaz ve yanıt anahtarına göre yanlış ifadedir; duyu modalitelerini tamamen ortadan kaldırdıkları ifadesi ise ders içeriğinde ayrıca işlenmemiştir.",
+    "Örnek: Bikarbonat eklenmesi lokal anestezik ilacın zardan geçebilen formunu artırarak başlangıç süresini kısaltır.",
+    "Tuzak: Öğrenci lokal anestezik ilaçların asidik olduğunu ya da duyuyu tamamen kaldırdığını doğru sanabilir; oysa bu ifadeler ders içeriğiyle uyuşmaz.",
+    "2023-2024: Ester yapılı olmayan lokal anestezik hangisidir?",
+    "Cevap: Lidokain.",
+    "Soru, ester yapılı olmayan, yani amid yapılı lokal anesteziği bulmayı ister.",
+    "Ester ve amid karşılaştırma tablosu esterlere prokain, tetrakain ve kokain; amidlere lidokain, bupivakain ve artikain örnek verir.",
+    "Lidokain karaciğer mikrozomal enzimleriyle metabolize edilen, alerjisi çok nadir ve ısı, asit ve alkaliden etkilenmeyen bir amiddir; bu yüzden ester yapılı olmayan ajan lidokaindir.",
+    "Prokain, tetrakain, kokain ve benzokain ester grubundadır; özellikle benzokain suda çözünürlüğü çok düşük PABA türevi bir ester olduğu için çeldirici olarak amid sanılabilir ama ester yapılıdır.",
+    "Örnek: Plazma esterazlarıyla yıkılmayıp karaciğerde metabolize edilen lokal anesteziklere lidokain, bupivakain ve artikain örnektir.",
+    "Tuzak: Öğrenci ajanları adının sonuna bakarak gruplayıp ester amid ayrımını yapar; oysa grup ayrımı -COO- ve -NHCO- bağına dayanır.",
+    "2025-2026: Kurgu Soru: I. Klorprokain II. Ropivakain III. Kokain IV. Benzokain Yukarıdaki lokal anesteziklerden hangileri epidural yolla kullanılır?",
+    "Cevap: I ve II.",
+    "Soru, klorprokain, ropivakain, kokain ve benzokaindan hangilerinin epidural yolla kullanıldığını ölçer.",
+    "Ders içeriğine göre klorprokain prokainin modifiye halidir ve özellikle epidural anestezide yoğun kullanılır; kaudal ve epidural uygulamada yüzde iki ile üç konsantrasyonda verilir.",
+    "Ropivakain bupivakainle birlikte spinal ve epidural anestezide yaygın seçilen amiddir; bu iki ajan epidural kullanımı karşılar.",
+    "Kokain yalnızca topikal olarak ORL cerrahisinde, benzokain ise yalnızca topikal olarak ağız içinde ve deri yüzeyinde kullanılır; bu yüzden üçüncü ve dördüncü öncülü içeren seçenekler yanlıştır.",
+    "Örnek: Doğum ağrısında epidural analjezi için bupivakain, uzun etkili ve düşük motor blok sağladığı için tercih edilir.",
+    "Tuzak: Öğrenci kokainin güçlü bir lokal anestezik olduğunu bildiği için onu da epidural yolda sayar; oysa yalnızca topikal kullanılır.",
+    "2018-2019: Lokal anesteziklerle ilgili; I. Hedef bir bölgeye enjekte edildikleri için sistemik dağılımdan, dolayısıyla dağılım hacminden bahsetmek zordur. II. Doğum esnasında epidural anestezi uygulanan hastanın ıkınması zayıflar. III. Lokal anestezinin oluşturduğu anestezi sinir lifine eşit dağılmaz; tam tersine sinir gövdesine radyal penetre olur ve longitüdinal yayılım gösterir. IV. Lokal anesteziklere vazokonstriktör eklenmesinin avantajı, dağılımı hızlandırmak ve metabolizmayı artırmaktır. ifadelerinden hangisi/hangileri doğrudur?",
+    "Cevap: I, II ve III.",
+    "Soru, lokal anesteziklerin dağılımı, epidural doğum analjezisinin sonucu, sinir lifine yayılımı ve vazokonstriktörün avantajı hakkındaki dört ifadeden hangilerinin doğru olduğunu ölçer.",
+    "Ders içeriği epinefrin eklenmesinin sistemik absorpsiyonu yavaşlattığını ve etki süresini uzattığını söyler; dağılımı hızlandırmak ve metabolizmayı artırmak vazokonstriktörün amacı değildir, bu yüzden dördüncü ifade yanlıştır.",
+    "Dağılım hacmi, doğum eyleminde ıkınmanın zayıflaması ve radyal penetrasyon bilgileri ders içeriğinde ayrıca işlenmemiştir; bu üç ifade için dayanak yanıt anahtarıdır ve anahtar birinci, ikinci ve üçüncü ifadeleri doğru sayar.",
+    "Dördüncü ifadeyi içeren her seçenek vazokonstriktörün metabolizmayı artırdığı yanlışını kabul ettiği için elenir.",
+    "Örnek: Epinefrin eklenmesi dağılımı hızlandırmak için değil, absorpsiyonu yavaşlatıp süreyi uzatmak için yapılır.",
+    "Tuzak: Öğrenci vazokonstriktörün ilacı hızla dağıtıp metabolizmayı artırdığını sanır; oysa tam tersine emilimi yavaşlatır."
+   ],
+   "v": "85e1d5cb71"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 12 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 12 çıkmış soru var; 4 tanesi öncüllü, 2 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Kurgu sorular",
+     "metin": "1 soru kaynak belgeden yeniden kurulmuş kurgu sorudur."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 6, 20, 22, 36, 39, 44, 46, 57, 58."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 12 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 12 çıkmış soru var; 4 tanesi öncüllü, 2 tanesi olumsuz köklüdür.",
+    "Kurgu sorular: 1 soru kaynak belgeden yeniden kurulmuş kurgu sorudur.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 6, 20, 22, 36, 39, 44, 46, 57, 58."
+   ],
+   "v": "77d834712d"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Özet: ester–amid karşılaştırması, seçim kılavuzu ve güvenlik uyarıları",
+     "metin": "Sık yapılan hata: Öğrenci listede tanıdığı ilaç adlarının hepsini lokal anestezik sanıp kalabalık seçenekleri işaretler; oysa yalnızca artikain bu gruptadır. Ayrıca: Öğrenci ajanları adının sonuna bakarak gruplayıp ester amid ayrımını yapar; oysa grup ayrımı -COO- ve -NHCO- bağına dayanır."
+    },
+    {
+     "baslik": "Klinik ipuçları: toplam doz hesabı, epinefrin eklenmesi ve analjezi yayılımı",
+     "metin": "Sık yapılan hata: Öğrenci vazokonstriktörü ilacın kimyasal özelliklerini düzelten bir katkı maddesi sanar; oysa yalnızca emilimi yavaşlatarak süreyi uzatır. Ayrıca: Öğrenci vazokonstriktörün lokal anestezik toksisitesini tümüyle sıfırladığını düşünür; oysa yalnızca emilimi yavaşlatır ve doz hesabı yine zorunludur."
+    },
+    {
+     "baslik": "Esterlerde hidroliz hızı, etki süresi ve pseudokolinesteraz",
+     "metin": "Sık yapılan hata: Öğrenci hızlı hidrolizin kısa etki demek olduğunu bilir ama prokain ile klorprokaini karıştırıp seçenek olmayan klorprokaine yönelebilir; oysa bu soruda seçenekler arasında hızla hidrolize olan tek ester prokaindir."
+    },
+    {
+     "baslik": "İdeal lokal anestezik yoktur: ajan seçimi ve adjuvanlar",
+     "metin": "Sık yapılan hata: Öğrenci etil klorür, benzil alkol ve kapsaisini de lokal anestezik ailesine katıp amid yapılı sanar; oysa bunların yapıları ve etki biçimleri klasik gruplardan farklıdır. Ayrıca: Öğrenci lokal anestezik ilaçların asidik olduğunu ya da duyuyu tamamen kaldırdığını doğru sanabilir; oysa bu ifadeler ders içeriğiyle uyuşmaz."
+    },
+    {
+     "baslik": "EMLA: ötektik lidokain-prilokain karışımı",
+     "metin": "Sık yapılan hata: Öğrenci oranı yüzde 5 ya da yüzde 10 gibi yuvarlak bir sayı sanar; oysa her iki ajan da yüzde 2,5 oranındadır."
+    },
+    {
+     "baslik": "Sistemik toksisite belirtileri ve aspirasyon",
+     "metin": "Sık yapılan hata: Öğrenci toksisiteyi yalnızca kalp ve beyinle sınırlı sanıp seçeneklerdeki yabancı kavramlara takılır; oysa yapılacak iş toksisite belirtileri zincirinde yer almayan sözcüğü bulmaktır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Özet: ester–amid karşılaştırması, seçim kılavuzu ve güvenlik uyarıları: Sık yapılan hata: Öğrenci listede tanıdığı ilaç adlarının hepsini lokal anestezik sanıp kalabalık seçenekleri işaretler; oysa yalnızca artikain bu gruptadır. Ayrıca: Öğrenci ajanları adının sonuna bakarak gruplayıp ester amid ayrımını yapar; oysa grup ayrımı -COO- ve -NHCO- bağına dayanır.",
+    "Klinik ipuçları: toplam doz hesabı, epinefrin eklenmesi ve analjezi yayılımı: Sık yapılan hata: Öğrenci vazokonstriktörü ilacın kimyasal özelliklerini düzelten bir katkı maddesi sanar; oysa yalnızca emilimi yavaşlatarak süreyi uzatır. Ayrıca: Öğrenci vazokonstriktörün lokal anestezik toksisitesini tümüyle sıfırladığını düşünür; oysa yalnızca emilimi yavaşlatır ve doz hesabı yine zorunludur.",
+    "Esterlerde hidroliz hızı, etki süresi ve pseudokolinesteraz: Sık yapılan hata: Öğrenci hızlı hidrolizin kısa etki demek olduğunu bilir ama prokain ile klorprokaini karıştırıp seçenek olmayan klorprokaine yönelebilir; oysa bu soruda seçenekler arasında hızla hidrolize olan tek ester prokaindir.",
+    "İdeal lokal anestezik yoktur: ajan seçimi ve adjuvanlar: Sık yapılan hata: Öğrenci etil klorür, benzil alkol ve kapsaisini de lokal anestezik ailesine katıp amid yapılı sanar; oysa bunların yapıları ve etki biçimleri klasik gruplardan farklıdır. Ayrıca: Öğrenci lokal anestezik ilaçların asidik olduğunu ya da duyuyu tamamen kaldırdığını doğru sanabilir; oysa bu ifadeler ders içeriğiyle uyuşmaz.",
+    "EMLA: ötektik lidokain-prilokain karışımı: Sık yapılan hata: Öğrenci oranı yüzde 5 ya da yüzde 10 gibi yuvarlak bir sayı sanar; oysa her iki ajan da yüzde 2,5 oranındadır.",
+    "Sistemik toksisite belirtileri ve aspirasyon: Sık yapılan hata: Öğrenci toksisiteyi yalnızca kalp ve beyinle sınırlı sanıp seçeneklerdeki yabancı kavramlara takılır; oysa yapılacak iş toksisite belirtileri zincirinde yer almayan sözcüğü bulmaktır.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "f52e291b62"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

@@ -1,0 +1,1548 @@
+{
+ "id": "k2-47-adrenoseptor-antagonist-ilaclar",
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Adrenoseptör Antagonist İlaçlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Adrenerjik sistemi, adrenoseptör tiplerini, sinyal yollarını ve antagonist sınıflamasını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q01",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Presinaptik α2 reseptörleri hangi G proteini aracılığıyla çalışır ve aktivasyonunun sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gq; IP3 ve DAG artar, vazokonstriksiyon olur",
+      "B": "Gs; cAMP artar, bronkodilatasyon olur",
+      "C": "Gi; cAMP azalır ve noradrenalin salınımı azalır",
+      "D": "Gi; cAMP artar ve noradrenalin salınımı artar",
+      "E": "Gq; noradrenalin salınımı artar"
+     },
+     "dogru": "C",
+     "aciklama": "α2 reseptörü presinaptik otoreseptördür ve Gi üzerinden cAMP'yi azaltır. Aktivasyonu noradrenalin salınımını inhibe eder.",
+     "sik_aciklamalari": {
+      "A": "Gq ve IP3 ile DAG yolu damar düz kasındaki α1 reseptörüne aittir ve vazokonstriksiyon yapar. Presinaptik α2 reseptörü ise Gi ile çalışır.",
+      "B": "Gs üzerinden cAMP artışı β reseptörlerine aittir ve β2 aktivasyonu bronkodilatasyon yapar. Presinaptik α2 reseptörü ise Gi ile çalışır ve cAMP'yi azaltır.",
+      "C": "Presinaptik α2 reseptörü Gi üzerinden cAMP'yi azaltır ve noradrenalin salınımını inhibe eder. Bu geri besleme mekanizması nedeniyle seçenek doğrudur.",
+      "D": "Gi üzerinden çalışan reseptör cAMP'yi artırmaz, azaltır. Noradrenalin salınımını artıran etki α2 aktivasyonunun değil, α2 blokajının sonucudur ve non-seçici blokörlerde görülür.",
+      "E": "Gq yolu α1 reseptörüne özgüdür ve IP3 ile DAG aracılığıyla damar düz kasını kasar. Presinaptik α2 aktivasyonu ise noradrenalin salınımını azaltır, artırmaz."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "I. α1 aktivasyonu damar düz kasında vazokonstriksiyon yapar. II. β2 aktivasyonu bronkodilatasyon yapar. III. β1 aktivasyonu böbrekte renin salgısını azaltır. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "α1 aktivasyonu damarda vazokonstriksiyon, β2 aktivasyonu bronkodilatasyon yapar. β1 aktivasyonu ise renin salgısını artırır ve RAAS'ı aktive eder.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü β2 aktivasyonu bronkodilatasyon, vazodilatasyon ve uterus gevşemesi yapar. Bu yüzden seçenek eksik kalır.",
+      "B": "Birinci ve ikinci ifade doğrudur. Üçüncü ifade yanlıştır, çünkü β1 aktivasyonu böbrekte renin salgısını artırır; bu nedenle yalnız ilk iki ifadeyi seçmek doğrudur.",
+      "C": "Bu seçenek üçüncü ifadeyi doğru sayar; oysa β1 aktivasyonu böbrekte renin salgısını artırır ve RAAS'ı aktive eder. Ayrıca ikinci ifade de doğru olduğundan seçenek eksik ve hatalıdır.",
+      "D": "Üçüncü ifade bu seçenekte doğru sayılır; oysa β1 aktivasyonu renin salgısını artırır, azaltmaz. Birinci ifade de doğru olduğundan bu birleşim kabul edilemez.",
+      "E": "Üç ifadeyi birden seçmek renin etkisinin yönünü yanlış varsayar. β1 aktivasyonu böbrekte renin salgısını artırarak RAAS'ı aktive eder; bu nedenle üçüncü ifade doğru değildir."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q03",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Beta blokörlerin astımda kontrendike olmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "β2 blokajıyla bronkodilatasyonun engellenmesi",
+      "B": "α1 blokajıyla bronş düz kasının kasılması",
+      "C": "β1 blokajıyla renin salgısının artması",
+      "D": "α2 blokajıyla noradrenalin salınımının artması",
+      "E": "Gq yolunun aktivasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "β2 reseptörleri bronşta bulunur ve aktivasyonları bronkodilatasyon yapar. Beta blokörler bu etkiyi engelleyerek astımda bronkospazma yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "β2 reseptörleri bronş düz kasında bronkodilatasyon yapar. Beta blokör bu gevşemeyi engellediği için astımda kontrendikedir ve bu nedenle seçenek doğrudur.",
+      "B": "Bronş düz kasındaki gevşemeyi sağlayan reseptör β2 reseptörüdür. Beta blokörlerin astımdaki sorunu α1 blokajıyla ilgili değil, β2 blokajıyla ilgilidir ve bronkospazm riski bundan doğar.",
+      "C": "β1 aktivasyonu böbrekte renin salgısını artırır ve beta blokör bu salgıyı azaltır. Astımdaki kontrendikasyon renin yoluyla değil, bronşlardaki β2 blokajıyla açıklanır.",
+      "D": "α2 blokajı noradrenalin salınımını artıran bir etkidir ve non-seçici alfa blokörlerle ilgilidir. Beta blokörlerin astım sorunu bu mekanizmayla ilişkili değildir.",
+      "E": "Gq yolu α1 reseptörlerinde IP3 ve DAG aracılığıyla vazokonstriksiyon yapar. Beta blokörlerin bronkospazm riski ise β2 blokajından kaynaklanır, Gq aktivasyonundan kaynaklanmaz."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Non-seçici alfa blokörleri ve feokromositoma hazırlığındaki yerlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q04",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Feokromositoma nedeniyle ameliyata hazırlanan hastada ilaçların veriliş sırası aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Önce beta blokör, sonra alfa blokör",
+      "B": "Önce alfa blokör, sonra beta blokör",
+      "C": "Yalnızca beta blokör",
+      "D": "Önce fentolamin, sonra fenoksibenzamin",
+      "E": "Alfa ve beta blokör aynı anda"
+     },
+     "dogru": "B",
+     "aciklama": "Alfa blokaj damar tonüsünü ve hipertansif kriz riskini önce kontrol altına alır. Beta blokör taşikardi için ardından eklenir; sıra tersine çevrilirse hipertansif kriz şiddetlenir.",
+     "sik_aciklamalari": {
+      "A": "Beta blokörle başlamak damarlardaki alfa kaynaklı daralmayı denetimsiz bırakır. Bu sıra hipertansif krizi şiddetlendirdiği için hazırlıkta kullanılmaz; beta blokör ancak alfa blokajdan sonra eklenir.",
+      "B": "Fenoksibenzamin ameliyattan 7-14 gün önce başlanan geri dönüşümsüz bir alfa blokördür. Taşikardi kontrolü için beta blokör alfa blokajdan sonra eklendiğinden bu sıra doğrudur.",
+      "C": "Yalnızca beta blokör verildiğinde alfa blokaj kurulmamış olur ve hipertansif kriz şiddetlenir. Feokromositoma hazırlığında beta blokör tek başına yeterli bir yaklaşım sayılmaz.",
+      "D": "Fentolamin geri dönüşümlü ve parenteral kullanılan bir alfa blokördür; hipertansif krizde ya da tanısal testte yer alır. Preoperatif hazırlığın altın standardı ise fenoksibenzamindir ve ameliyattan günler önce başlanır.",
+      "E": "Aynı anda başlamak, beta blokajı alfa blokaj kurulmadan etkin hâle getirir. Hazırlıkta alfa blokaj 7-14 gün önce başlar ve yeterli olduğunda taşikardi için beta blokör eklenir."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "I. Fenoksibenzamin geri dönüşümsüz bağlanan alkilleyici bir ajandır. II. Fentolamin geri dönüşümlü kompetitif bir antagonisttir ve parenteral kullanılır. III. Fenoksibenzaminin etkisi 2-3 saat sürer. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız II",
+      "C": "I ve II",
+      "D": "I ve III",
+      "E": "II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Fenoksibenzamin irreversibl bağlanır ve etkisi 24-48 saat sürer. Fentolamin reversibl kompetitif antagonisttir ve IV veya IM kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü fentolamin geri dönüşümlü kompetitif bir antagonisttir ve parenteral kullanılır. Bu yüzden seçenek eksik kalır.",
+      "B": "Bu seçenek yalnız ikinci ifadeyi doğru sayar; ancak birinci ifade de doğrudur, çünkü fenoksibenzamin geri dönüşümsüz bağlanan alkilleyici bir ajandır. Bu yüzden seçenek eksik kalır.",
+      "C": "Birinci ve ikinci ifade doğrudur. Fenoksibenzamin irreversibl, fentolamin reversibl etki eder; üçüncü ifade yanlış olduğu için yalnız bu ikisini birlikte seçmek doğrudur.",
+      "D": "Üçüncü ifade yanlıştır, çünkü fenoksibenzaminin etkisi 24-48 saat sürer; 2-3 saatlik süre kısa etkili prazosine aittir. Bu yüzden üçüncü ifade birinci ifadeyle birlikte seçilemez.",
+      "E": "Üçüncü ifade yanlıştır; 2-3 saatlik etki prazosine aittir ve fenoksibenzamin 24-48 saat etkilidir. Bu birleşim hem üçüncü ifadeyi içerdiği için hatalı hem de birinci ifadeyi dışarıda bıraktığı için eksiktir."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q06",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Feokromositoma tanısında kullanılan ölçüm aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Plazma renin aktivitesi",
+      "B": "Serum LDL ve trigliserit",
+      "C": "Kan glukoz düzeyi",
+      "D": "Serum T3 ve T4",
+      "E": "İdrar veya plazma metanefrin"
+     },
+     "dogru": "E",
+     "aciklama": "Feokromositoma adrenal medulladan aşırı katekolamin salgılayan bir tümördür. Tanısı idrar veya plazma metanefrin ölçümü ve BT veya MRI ile konur.",
+     "sik_aciklamalari": {
+      "A": "Plazma renin aktivitesi β1 aktivasyonuyla ilişkili renin salgısını yansıtır ve RAAS aktivasyonunu gösterir. Feokromositoma tanısı için kullanılan test değildir; tanı metanefrin ölçümüne dayanır.",
+      "B": "LDL ve trigliserit, beta blokörlerin yan etkisi olarak artan lipid parametreleridir. Feokromositoma tanısında kullanılmaz; bu tümörde tanıyı idrar ya da plazma metanefrini koydurur.",
+      "C": "Kan glukozu hipoglisemi ve beta blokör etkileşimiyle ilgili izlenen bir değerdir. Feokromositoma tanısını koydurmaz; bu amaçla metanefrin ölçümü ve BT ya da MRI kullanılır.",
+      "D": "T3 ve T4 hipertiroidide ve tirotoksik krizde önem taşıyan hormonlardır. Feokromositoma tanısı ise adrenal medulladan salgılanan katekolaminlerin yıkım ürünü olan metanefrinin ölçümüyle konur.",
+      "E": "Feokromositoma tanısı idrar veya plazma metanefrin ölçümüne dayanır ve BT ya da MRI ile desteklenir. Adrenal medulladan salgılanan katekolaminleri yansıttığı için bu seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 8
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Non-seçici alfa blokörlerde refleks taşikardiye katkıda bulunan mekanizma aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Postsinaptik β1 reseptörlerinin bloke edilmesi",
+      "B": "Santral α2 aktivasyonuyla kan basıncının düşmesi",
+      "C": "Noradrenalin geri alımının tamamen durması",
+      "D": "α1 reseptörlerinin uyarılması",
+      "E": "Presinaptik α2 blokajıyla noradrenalin salınımının artması"
+     },
+     "dogru": "E",
+     "aciklama": "Non-seçici alfa blokörler α2 reseptörlerini de bloke eder. Presinaptik geri besleme ortadan kalkar, noradrenalin salınımı artar ve refleks taşikardiye katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "Postsinaptik β1 blokajı kalp hızını düşürür ve taşikardiyi azaltır. Non-seçici alfa blokörlerde taşikardiyi artıran etki α2 blokajına bağlı noradrenalin artışıdır.",
+      "B": "Santral α2 aktivasyonu klonidin etkisidir ve kan basıncını düşürür. Bu mekanizma alfa blokörlerin refleks taşikardisini açıklamaz; taşikardi presinaptik α2 blokajına bağlı noradrenalin artışından gelir.",
+      "C": "Noradrenalin geri alımı bu refleks taşikardinin temeli olarak tanımlanmaz. Taşikardiye katkı, non-seçici blokörlerde presinaptik α2 blokajıyla geri beslemenin kalkmasından ve salınımın artmasından gelir.",
+      "D": "α1 reseptörlerinin uyarılması vazokonstriksiyon yapar, blokajı ise vazodilatasyon ve hipotansiyon yapar. Refleks taşikardi bu hipotansiyona eşlik eden α2 blokajı etkisiyle artar.",
+      "E": "Non-seçici ajanlar α1 ile birlikte α2 reseptörlerini de bloke eder. Presinaptik geri besleme kalktığı için noradrenalin salınımı artar ve refleks taşikardiye katkıda bulunur; seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Seçici α1 blokörlerin özelliklerini ve ilk doz fenomenini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Seçici α1 blokörlerde refleks taşikardinin non-seçicilere göre daha az görülmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Presinaptik α2 reseptörlerinin bloke edilmemesi",
+      "B": "β1 reseptörlerinin uyarılması",
+      "C": "Noradrenalin geri alımının artması",
+      "D": "Reseptöre geri dönüşümsüz bağlanma",
+      "E": "Santral α2 aktivasyonu"
+     },
+     "dogru": "A",
+     "aciklama": "Seçici α1 blokörler α2 reseptörlerini etkilemez, bu yüzden presinaptik geri besleme korunur ve noradrenalin salınımı kontrolde kalır. Refleks taşikardi bu nedenle daha azdır.",
+     "sik_aciklamalari": {
+      "A": "Seçici α1 blokörler yalnız postsinaptik α1 reseptörünü bloke eder ve presinaptik α2 serbest kalır. Noradrenalin salınımı artmadığı için refleks taşikardi azdır; bu nedenle seçenek doğrudur.",
+      "B": "β1 reseptörleri kalpte pozitif kronotropi, inotropi ve dromotropi yapar. Seçici α1 blokörler bu reseptörleri uyarmaz; taşikardideki azalma presinaptik α2 reseptörünün korunmasına bağlıdır.",
+      "C": "Noradrenalinin geri alımı, sinaptik aralıktaki iletici miktarını belirleyen ayrı bir süreçtir. Seçici α1 blokörlerde bu süreç değişmez; refleks taşikardinin azlığı geri besleme halkasının korunmasından gelir.",
+      "D": "Geri dönüşümsüz bağlanma, alkilleyici ajan olan fenoksibenzamine özgüdür ve etkisi 24-48 saat sürer. Prazosin, doksazosin ve terazosin seçici α1 blokörlerdir; taşikardinin azlığı bağlanma biçiminden değil α2 reseptörünün korunmasından kaynaklanır.",
+      "E": "Santral α2 aktivasyonu klonidin etkisidir ve kan basıncını düşürür. Bu, α1 blokajıyla ilgisiz ayrı bir mekanizmadır; seçici α1 blokörlerde taşikardinin az olması presinaptik geri beslemenin korunmasından gelir."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q29"
+     ]
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Prazosin gibi seçici α1 blokörlerin ilk dozunun gece yatmadan önce verilmesinin amacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ortostatik hipotansiyona bağlı senkop riskini azaltmak",
+      "B": "Gece α2 reseptörlerini daha iyi bloke etmek",
+      "C": "Refleks bradikardiyi önlemek",
+      "D": "Emilimi hızlandırmak",
+      "E": "Geri dönüşümsüz bağlanmayı sağlamak"
+     },
+     "dogru": "A",
+     "aciklama": "Seçici α1 blokörler ilk doz fenomeni olarak ortostatik hipotansiyon yapar. İlk dozun gece yatmadan önce verilmesi bu hipotansiyona bağlı senkop riskini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Seçici α1 blokörler ilk dozda ortostatik hipotansiyon ve senkop yapabilir. İlk dozun gece yatmadan önce verilmesi bu riski azalttığı için seçenek doğrudur.",
+      "B": "Seçici α1 blokörler α2 reseptörlerini etkilemez; α2 blokajı non-seçici ajanların özelliğidir. Gece verilmesinin amacı reseptör seçiciliğini artırmak değil ilk doz hipotansiyonunu güvenli geçirmektir.",
+      "C": "Alfa blokörlerin tipik sorunu hipotansiyon ve non-seçicilerde refleks taşikardidir. Gece verilme amacı refleks yanıtı yönetmek değil, ilk doz ortostatik hipotansiyonunu güvenle geçirmektir.",
+      "D": "Emilim hızı ilk dozun gece verilmesinin gerekçesi değildir. İlaç, yataktan aniden kalkıldığında oluşabilecek senkopu önlemek amacıyla yatmadan önce alınır; böylece hasta yatar durumda olduğu için düşme riski azalır.",
+      "E": "Geri dönüşümsüz bağlanma fenoksibenzaminin özelliğidir ve etkisi 24-48 saat sürer. Prazosin gibi seçici α1 blokörler bu özelliği taşımaz; gece verilme nedeni ilk doz fenomenidir."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Doksazosinin etki süresi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "20-22 saat",
+      "B": "2-3 saat",
+      "C": "12 saat",
+      "D": "24-48 saat",
+      "E": "Yaklaşık 9 dakika"
+     },
+     "dogru": "A",
+     "aciklama": "Doksazosin uzun etkilidir, etki süresi 20-22 saattir ve günde tek doz kullanılır. Prazosin 2-3 saat, terazosin 12 saat etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Doksazosin uzun etkili bir seçici α1 blokördür ve etkisi 20-22 saat sürer. Günde 1 doz kullanılabildiği için seçenek doğrudur.",
+      "B": "2-3 saatlik etki kısa etkili prazosine aittir ve ilk doz hipotansiyonu belirgindir. Doksazosinin etkisi bundan çok daha uzundur ve günde tek doz kullanılır.",
+      "C": "12 saatlik orta-uzun etki süresi terazosine aittir ve BPH semptomlarında etkilidir. Doksazosin ise bundan daha uzun, 20-22 saat etkilidir.",
+      "D": "24-48 saatlik etki fenoksibenzaminin geri dönüşümsüz bağlanmasından kaynaklanır. Doksazosin ise geri dönüşümlü bağlanan seçici bir α1 blokördür ve etkisi 20-22 saattir.",
+      "E": "Yaklaşık 9 dakikalık yarılanma ömrü ultrakısa etkili esmolola aittir ve ilaç yalnız intravenöz verilir. Doksazosin ise oral ve uzun etkili bir α1 blokördür."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "BPH'da α1A seçici blokörlerin etkisini ve yan etkilerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Benign prostat hiperplazisinde tamsulosin ve alfuzosinin tercih edilmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prostatta β2 reseptörlerinin baskın olması",
+      "B": "Presinaptik α2 reseptörlerini uyarmaları",
+      "C": "Prostat dokusunda β3 reseptörü yoğunluğu",
+      "D": "Üretra ve mesane boynunda α1A reseptörlerinin baskın olması",
+      "E": "Noradrenalin salınımını artırmaları"
+     },
+     "dogru": "D",
+     "aciklama": "BPH'da üretra ve mesane boynu düz kasında α1A reseptörleri hâkimdir. Blokajı düz kas tonüsünü ve üretral direnci azaltarak işeme semptomlarını hafifletir.",
+     "sik_aciklamalari": {
+      "A": "β2 reseptörleri bronş, damar ve uterusta bulunur ve gevşeme yapar. BPH tedavisinin dayanağı üretra ve mesane boynundaki α1A blokajıdır, bu nedenle prostat için β2 blokajı gerekçe olarak gösterilmez.",
+      "B": "Presinaptik α2 reseptörleri noradrenalin salınımını azaltan otoreseptörlerdir. Bu reseptörleri uyarmak BPH'ın düz kas tonüsünü azaltan mekanizma değildir; yarar α1A blokajından gelir.",
+      "C": "β3 reseptörleri yağ dokusu ve mesanede bulunur ve Gs yoluyla cAMP'yi artırır. Tamsulosin ve alfuzosinin etkisi β3 yoğunluğuna değil α1A blokajına dayanır.",
+      "D": "Üretra ve mesane boynu düz kasında α1A reseptörleri hâkimdir. Tamsulosin ve alfuzosin bu reseptörü seçici bloke ederek üretral direnci düşürür; bu yüzden seçenek doğrudur.",
+      "E": "Alfa blokörler noradrenalin salınımını artırmaz; seçici ajanlar presinaptik geri beslemeyi korur. BPH belirtilerinin hafiflemesi düz kas tonüsünün ve üretral direncin azalmasına bağlıdır."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q148"
+     ]
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "65 yaşındaki erkek hasta benign prostat hiperplazisi nedeniyle tamsulosin kullanmaktadır ve katarakt ameliyatına alınacaktır. Bu hastada ameliyat sırasında hangi komplikasyon açısından dikkatli olunmalıdır?",
+     "secenekler": {
+      "A": "Retrograd ejakülasyon",
+      "B": "Akut kalp yetmezliği dekompanzasyonu",
+      "C": "AV blok",
+      "D": "İntraoperatif floppy iris sendromu",
+      "E": "Bronkospazm"
+     },
+     "dogru": "D",
+     "aciklama": "Tamsulosin kullanan hastada katarakt ameliyatı planlanıyorsa göz hekimi uyarılmalıdır. İntraoperatif floppy iris sendromu ciddi bir komplikasyona yol açabilir.",
+     "sik_aciklamalari": {
+      "A": "Retrograd ejakülasyon tamsulosinin bilinen cinsel yan etkisidir. Katarakt cerrahisindeki özel risk ise bu değil, iris dokusunu ilgilendiren floppy iris sendromudur ve göz hekimi bu konuda uyarılır.",
+      "B": "Akut kalp yetmezliği dekompanzasyonu beta blokörlerin kardiyak yan etkisidir. Tamsulosin kullanan hastada katarakt ameliyatındaki özel risk ise iris sendromudur ve alfa blokörlerle ilişkilidir.",
+      "C": "AV blok beta blokörlerin iletimi yavaşlatması sonucu görülen bir yan etkidir. Alfa blokör ve katarakt cerrahisi bağlamında floppy iris sendromu akla gelmelidir.",
+      "D": "Tamsulosin ve diğer alfa blokörler perioperatif floppy iris sendromuna yol açabilir. Katarakt cerrahisi planlanan hastada göz hekimi uyarılmalı olduğu için seçenek doğrudur.",
+      "E": "Bronkospazm β2 blokajına bağlı beta blokör yan etkisidir. Alfa blokör kullanan hastada katarakt cerrahisinde dikkat edilecek komplikasyon floppy iris sendromudur."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Alfa blokörlerin yan etkilerini, kontrendikasyonlarını ve ilaç etkileşimlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q13",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "I. Sildenafil ile doksazosin birlikte ciddi semptomatik hipotansiyona yol açabilir. II. Tamsulosin retrograd ejakülasyon yapabilir. III. Alfa blokörler perioperatif floppy iris sendromuna neden olabilir. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "PDE5 inhibitörleri alfa blokörlerle ciddi hipotansiyon yapar. Tamsulosin retrograd ejakülasyona, alfa blokörler perioperatif floppy iris sendromuna neden olabilir.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak tamsulosinin retrograd ejakülasyon yapabilmesi ve alfa blokörlerin floppy iris sendromuna neden olabilmesi de doğrudur. Bu yüzden seçenek eksik kalır.",
+      "B": "Bu seçenek ilk iki ifadeyi doğru sayar; ancak alfa blokörlerin perioperatif floppy iris sendromuna neden olabilmesi de doğrudur. Bu yüzden seçenek eksik kalır.",
+      "C": "Bu seçenek birinci ve üçüncü ifadeyi doğru sayar; ancak tamsulosinin retrograd ejakülasyon yapabilmesi de doğrudur, çünkü bu bilinen bir cinsel yan etkidir. Bu yüzden seçenek eksik kalır.",
+      "D": "Bu seçenek ikinci ve üçüncü ifadeyi doğru sayar; ancak sildenafil veya tadalafil ile doksazosin ya da tamsulosinin birlikte ciddi semptomatik hipotansiyon yapabilmesi de doğrudur. Bu yüzden seçenek eksik kalır.",
+      "E": "Üç ifade de alfa blokörlerin bilinen yan etki ve etkileşimleridir: PDE5 inhibitörüyle ciddi hipotansiyon, tamsulosinde retrograd ejakülasyon ve floppy iris sendromu. Bu nedenle üçünü birlikte seçmek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q14",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Alfa blokörlerle birlikte kullanıldığında ciddi semptomatik hipotansiyona yol açan ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Dihidropiridin kalsiyum kanal blokörleri",
+      "B": "PDE5 inhibitörleri",
+      "C": "MAO inhibitörleri",
+      "D": "Sülfonilüreler",
+      "E": "Kardiyoselektif beta blokörler"
+     },
+     "dogru": "B",
+     "aciklama": "Sildenafil ve tadalafil gibi PDE5 inhibitörleri alfa blokörlerle birlikte ciddi semptomatik hipotansiyon yapar. Kombinasyondan kaçınılır ya da çok dikkatli titre edilir.",
+     "sik_aciklamalari": {
+      "A": "Dihidropiridinler, örneğin amlodipin, beta blokörle birlikte görece güvenli kullanılır. Alfa blokörlerin PDE5 inhibitörleriyle olan ciddi hipotansiyon etkileşimi bu grupla tanımlanmaz.",
+      "B": "PDE5 inhibitörleri alfa blokörlerle birlikte ciddi semptomatik hipotansiyon yapar. Doksazosin veya tamsulosinle sildenafil ya da tadalafil kombinasyonu bu nedenle sorunlu olduğundan seçenek doğrudur.",
+      "C": "MAO inhibitörleri beta blokörlerle birlikte hipertansif kriz riski taşır. Alfa blokörlerle ciddi hipotansiyon etkileşimi ise bu grupla değil PDE5 inhibitörleriyle ortaya çıkar.",
+      "D": "Sülfonilüreler beta blokörlerle birlikte hipogliseminin taşikardi belirtisini maskeler. Alfa blokörlerle ciddi hipotansiyon etkileşimi ise bu grupla değil PDE5 inhibitörleriyle tanımlanır.",
+      "E": "Kardiyoselektif beta blokörler alfa blokörlerle ciddi hipotansiyon etkileşimiyle tanınmaz. Bu etkileşim sildenafil ve tadalafil gibi PDE5 inhibitörleriyle tanımlanır ve kombinasyondan kaçınılır."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Beta blokörlerin sınıflamasını ve temel farmakodinamik özelliklerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q15",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "I. Propranolol lipofildir ve SSS'ye girer. II. Atenolol ve nadolol böbrekle atılır. III. Metoprolol hidrofiliktir ve SSS yan etkisi yapmaz. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Propranolol ve metoprolol lipofildir, SSS'ye girip uyku bozukluğu ve kabus yapar. Atenolol ve nadolol hidrofiliktir ve böbrekle atılır.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü atenolol ve nadolol hidrofilik ajanlardır ve böbrekle atılır. Bu yüzden seçenek eksik kalır.",
+      "B": "Propranolol lipofildir ve SSS'ye girer, atenolol ile nadolol ise hidrofiliktir ve böbrekle atılır. Üçüncü ifade yanlıştır; bu nedenle birinci ve ikinci ifadeyi birlikte seçmek doğrudur.",
+      "C": "Bu seçenek üçüncü ifadeyi doğru sayar; oysa metoprolol propranolol gibi lipofildir, SSS'ye girer ve uyku bozukluğu ile kabus yapabilir. Üçüncü ifade yanlış olduğu için bu birleşim kabul edilemez.",
+      "D": "Bu seçenek üçüncü ifadeyi de doğru sayar; oysa metoprolol hidrofilik değil lipofil bir ajandır ve SSS yan etkileri yapabilir. Ayrıca birinci ifade doğru olduğu için seçenek hem fazla hem eksiktir.",
+      "E": "Üç ifadeyi birden seçmek metoprololün hidrofilik olduğunu varsayar. Oysa metoprolol lipofildir ve hepatik olarak metabolize edilir; böbrekle atılan hidrofilik ajanlar atenolol ve nadololdür."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q105"
+     ]
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q16",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "İntrinsik sempatomimetik aktivitesi olan, yani reseptörü hem bloke eden hem zayıf aktive eden beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Propranolol",
+      "B": "Atenolol",
+      "C": "Bisoprolol",
+      "D": "Metoprolol",
+      "E": "Pindolol"
+     },
+     "dogru": "E",
+     "aciklama": "ISA'lı ajanlar reseptörü hem bloke eder hem zayıf aktive eder; istirahat kalp hızını çok düşürmez. Örnekleri pindolol ve asebutololdür.",
+     "sik_aciklamalari": {
+      "A": "Propranolol prototip non-seçici beta blokördür ve membran stabilize edici etkisiyle bilinir. ISA özelliğiyle tanımlanan ajan olmadığı için bu soruda yanıt olamaz.",
+      "B": "Atenolol hidrofilik, böbrekle atılan kardiyoselektif bir beta blokördür. ISA özelliği taşıyan ajanlar pindolol ve asebutololdür; atenolol ise bu özelliğiyle değil, SSS yan etkisinin azlığıyla tanımlanır.",
+      "C": "Bisoprolol en yüksek β1/β2 seçicilik oranına sahip ajandır. Öne çıkan özelliği seçicilik üstünlüğüdür, reseptörü kısmen aktive etme özelliği değildir.",
+      "D": "Metoprolol lipofil, CYP2D6 ile metabolize edilen bir kardiyoselektif ajandır. Reseptörü kısmen aktive eden ISA özelliğiyle tanımlanan bir ajan olmadığı için bu soruda yanıt olamaz.",
+      "E": "Pindolol ISA özelliği taşır; reseptörü hem bloke eder hem zayıf aktive eder. İstirahat kalp hızına etkisi azdır ve bradikardi riski düşüktür, bu nedenle seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q17",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Lokal anestezik benzeri membran stabilize edici etkisiyle bilinen beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pindolol",
+      "B": "Atenolol",
+      "C": "Propranolol",
+      "D": "Bisoprolol",
+      "E": "Esmolol"
+     },
+     "dogru": "C",
+     "aciklama": "Membran stabilizasyonu lokal anestezik benzeri bir etkidir ve yüksek dozda görülür. En belirgin örneği propranololdür; klinik önemi sınırlıdır.",
+     "sik_aciklamalari": {
+      "A": "Pindolol ISA özelliğiyle bilinir ve istirahat kalp hızını çok düşürmez. Membran stabilize edici etkisiyle öne çıkan ajan ise prototip non-seçici blokör olan propranololdür.",
+      "B": "Atenolol hidrofilik kardiyoselektif bir ajandır ve SSS yan etkisi azdır. Membran stabilize edici etkiyle tanımlanan ajan ise prototip non-seçici blokör propranololdür.",
+      "C": "Propranolol prototip non-seçici beta blokördür ve lokal anestezik benzeri membran stabilize edici etkisi en belirgin olan ajandır. Bu özelliği nedeniyle seçenek doğrudur.",
+      "D": "Bisoprolol β1/β2 seçicilik oranı en yüksek olan ajandır. Öne çıkan özelliği membran stabilizasyonu değil, seçicilik üstünlüğüdür ve kalp yetmezliğindeki mortalite kanıtıdır.",
+      "E": "Esmolol yalnız intravenöz kullanılan ultrakısa etkili bir ajandır. Membran stabilize edici etkiyle tanımlanan ajan o değildir; lokal anestezik benzeri bu özellik propranolola atfedilir."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q18",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "I. Kardiyoselektivite yüksek dozda kaybolur. II. Kardiyoselektif ajanlar astımlı hastalarda görece güvenlidir. III. ISA'lı ajanlar istirahat kalp hızını belirgin düşürür. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız II",
+      "C": "I ve II",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Kardiyoselektivite β1'e tercihli bağlanmadır, yüksek dozda kaybolur ve astımlıda görece güvenlik sağlar. ISA'lı ajanlar ise istirahat kalp hızını çok düşürmez.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü kardiyoselektif ajanlar astımlı hastalarda görece güvenlidir. Bu yüzden seçenek eksik kalır.",
+      "B": "Bu seçenek yalnız ikinci ifadeyi doğru sayar; ancak birinci ifade de doğrudur, çünkü kardiyoselektivite yüksek dozda kaybolur ve yüksek doz astımlıda risk taşır. Bu yüzden seçenek eksik kalır.",
+      "C": "Birinci ve ikinci ifade doğrudur; üçüncü ifade yanlıştır. ISA'lı ajanlar reseptörü zayıf aktive ettiği için istirahat kalp hızını çok düşürmez, bu yüzden seçenek doğrudur.",
+      "D": "Bu seçenek üçüncü ifadeyi doğru sayar; oysa ISA'lı ajanlar reseptörü zayıf aktive ettiği için istirahat kalp hızını çok düşürmez. Birinci ifade de doğru olduğundan bu birleşim kabul edilemez.",
+      "E": "Üç ifadeyi birden seçmek ISA'nın etkisini ters varsayar. ISA'lı ajanlar reseptörü zayıf aktive eder ve istirahat kalp hızını belirgin düşürmez."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Non-seçici beta blokörlerin özelliklerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q19",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Nadolol ile ilgili aşağıdakilerden hangisi söylenebilir?",
+     "secenekler": {
+      "A": "Lipofildir ve SSS'ye girerek kabus yapar",
+      "B": "İntravenöz kullanılan ultrakısa etkili bir ajandır",
+      "C": "Hidrofiliktir ve günde bir doz kullanılır",
+      "D": "ISA taşır ve istirahat kalp hızını düşürmez",
+      "E": "Yalnızca topikal göz damlası olarak kullanılır"
+     },
+     "dogru": "C",
+     "aciklama": "Nadolol uzun etkili ve hidrofilik bir beta blokördür; günde tek doz kullanılır. Hipertansiyon ve anjina tedavisinde yer alır.",
+     "sik_aciklamalari": {
+      "A": "Lipofil olan ve SSS'ye geçen ajanlar propranolol ile metoprololdür. Nadolol ise hidrofiliktir ve böbrekle atılır; bu yüzden kabus gibi SSS yan etkileri nadololde belirgin değildir.",
+      "B": "İntravenöz kullanılan ultrakısa etkili beta blokör esmololdür ve yarılanma ömrü yaklaşık 9 dakikadır. Nadolol ise uzun etkilidir ve günde 1 doz kullanılır.",
+      "C": "Nadolol hidrofilik ve uzun etkili bir beta blokördür; günde 1 doz kullanılır ve hipertansiyon ile anjinada kullanılır. Bu özellikler seçeneği doğru kılar.",
+      "D": "ISA özelliği pindolol ve asebutolol gibi ajanlara aittir ve bu ajanlar istirahat kalp hızını çok düşürmez. Nadolol uzun etkili ve hidrofilik bir ajan olarak tanımlanır, ISA taşıyan olarak değil.",
+      "E": "Topikal göz damlası olarak glokomda kullanılan beta blokör timololdür. Nadolol ise sistemik kullanılır, uzun etkilidir ve günde tek dozla hipertansiyon ile anjinada yer alır."
+     },
+     "kanit": {
+      "sayfa": 15
+     },
+     "benzer_cikmis": [
+      "4ab1b9169736"
+     ]
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Kardiyoselektif beta blokörlerin özelliklerini karşılaştırabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q20",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "β1/β2 seçicilik oranı en yüksek olan beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atenolol",
+      "B": "Metoprolol",
+      "C": "Propranolol",
+      "D": "Karvedilol",
+      "E": "Bisoprolol"
+     },
+     "dogru": "E",
+     "aciklama": "Bisoprolol en yüksek β1/β2 seçicilik oranına sahip beta blokördür. Günde tek doz kullanılır ve CIBIS-II çalışmasında kalp yetmezliğinde mortaliteyi azaltmıştır.",
+     "sik_aciklamalari": {
+      "A": "Atenolol kardiyoselektif ve hidrofilik bir ajandır; böbrekle atılır ve renal yetmezlikte doz ayarı gerektirir. Seçicilik oranı bisoprololden düşük olduğu için bu soruda yanıt olamaz.",
+      "B": "Metoprolol klinik pratikte en yaygın kullanılan kardiyoselektif ajandır ve lipofildir. Seçicilik oranı bisoprololün seçiciliğini aşmaz; üstelik yüksek dozda seçiciliği kaybolur.",
+      "C": "Propranolol prototip non-seçici beta blokördür ve hem β1 hem β2 reseptörlerini bloke eder. Bu yüzden seçicilik oranı yüksek olan ajan değildir.",
+      "D": "Karvedilol non-seçici β blokör ve α1 blokördür. Kombine blokaj yaptığı için kardiyoselektif bir ajan değildir ve β1/β2 seçicilik oranıyla öne çıkmaz.",
+      "E": "Bisoprolol en seçici β1 antagonistidir ve β1/β2 seçicilik oranı en yüksektir. Kalp yetmezliğinde mortaliteyi azaltması da bu ajanın klinik önemini gösterir; seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q21",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "I. Metoprolol lipofildir ve CYP2D6 ile metabolize edilir. II. Metoprolol yüksek dozda da seçiciliğini korur. III. Kalp yetmezliğinde uzatılmış salınımlı form tercih edilir. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız II",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Metoprolol lipofildir, hepatik metabolizmayla CYP2D6 üzerinden elimine edilir ve kalp yetmezliğinde uzatılmış salınımlı form tercih edilir. Yüksek dozda seçiciliği kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız ikinci ifadeyi doğru sayar; oysa metoprololün β1 seçiciliği yüksek dozda kaybolur. Ayrıca birinci ve üçüncü ifade doğrudur, bu yüzden seçenek hem yanlış hem eksiktir.",
+      "B": "Bu seçenek ikinci ifadeyi de doğru sayar; oysa metoprololün β1 seçiciliği yüksek dozda kaybolur. Birinci ifade doğru olsa da üçüncü ifade de doğru olduğundan seçenek hatalıdır.",
+      "C": "Birinci ve üçüncü ifade doğrudur. Metoprolol lipofildir, CYP2D6 ile metabolize edilir ve kalp yetmezliğinde uzatılmış salınımlı Beloc ZOK formu tercih edilir; bu nedenle seçenek doğrudur.",
+      "D": "Bu seçenek ikinci ifadeyi doğru sayar; oysa metoprololün seçiciliği yüksek dozda kaybolur. Birinci ifade de doğru olduğundan bu birleşim kabul edilemez.",
+      "E": "Üç ifadeyi birden seçmek seçiciliğin dozdan bağımsız olduğunu varsayar. Oysa metoprololün β1 seçiciliği yüksek dozda kaybolur; bu yüzden ikinci ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q22",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "ASCOT çalışmasında stroke korumasında dezavantajlı bulunan beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bisoprolol",
+      "B": "Karvedilol",
+      "C": "Nebivolol",
+      "D": "Atenolol",
+      "E": "Propranolol"
+     },
+     "dogru": "D",
+     "aciklama": "ASCOT çalışmasında atenolol temelli tedavi stroke korumasında dezavantajlı bulunmuştur. Atenolol hidrofiliktir ve böbrekle atılır.",
+     "sik_aciklamalari": {
+      "A": "Bisoprolol CIBIS-II çalışmasıyla kalp yetmezliğinde mortaliteyi azaltan ajan olarak bilinir. ASCOT çalışmasındaki stroke dezavantajı ise bu ilaçla değil atenololle ilişkilendirilir.",
+      "B": "Karvedilol COPERNICUS ve CAPRICORN çalışmalarıyla kalp yetmezliğinde mortaliteyi azaltır. ASCOT karşılaştırmasındaki stroke dezavantajı ise bu ilaca değil, hidrofilik atenolole aittir.",
+      "C": "Nebivolol endotel kaynaklı NO artışıyla vazodilatasyon yapan üçüncü kuşak bir ajandır. ASCOT çalışmasındaki stroke dezavantajı bu özelliğiyle tanımlanan ilaca değil atenolole aittir.",
+      "D": "Atenolol hidrofilik, böbrekle atılan bir kardiyoselektif ajandır ve renal yetmezlikte doz ayarı ister. ASCOT çalışmasında atenolol temelli tedavi stroke korumasında dezavantajlı bulunduğu için seçenek doğrudur.",
+      "E": "Propranolol prototip non-seçici ve lipofil bir ajandır. ASCOT çalışmasındaki stroke dezavantajı ise bu ilaca değil, hidrofilik ve böbrekle atılan atenolole aittir."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q23",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Kalp yetmezliğinde metoprololün hangi formu tercih edilir?",
+     "secenekler": {
+      "A": "Hızlı salınımlı form",
+      "B": "Uzatılmış salınımlı form",
+      "C": "Yalnızca intravenöz form",
+      "D": "Topikal damla formu",
+      "E": "Transdermal form"
+     },
+     "dogru": "B",
+     "aciklama": "Metoprolol hızlı salınımlı Beloc ve uzatılmış salınımlı Beloc ZOK formlarında bulunur. Kalp yetmezliğinde uzatılmış salınımlı form tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Hızlı salınımlı form Beloc adıyla bulunur ve metoprololün kısa süreli etkili biçimidir. Kalp yetmezliğinde tercih edilen form ise uzatılmış salınımlı olandır.",
+      "B": "Metoprololün uzatılmış salınımlı formu, yani Beloc ZOK, kalp yetmezliğinde tercih edilir. Bu nedenle seçenek doğrudur ve diğer formlar bu endikasyonda öne çıkmaz.",
+      "C": "Yalnız intravenöz kullanılan ajan esmololdür ve ultrakısa etkilidir. Metoprololün kalp yetmezliğinde tercih edilen formu ise oral kullanılan uzatılmış salınımlı formdur.",
+      "D": "Topikal damla formu timolol ve betaksolol gibi glokom ilaçlarına aittir. Metoprololün kalp yetmezliğinde tercih edilen formu ise oral uzatılmış salınımlı formdur.",
+      "E": "Transdermal form metoprolol için tanımlanmış bir form değildir. Kalp yetmezliğinde metoprololün oral uzatılmış salınımlı formu tercih edilir ve bu form Beloc ZOK adıyla bulunur."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q24",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "I. Bisoprolol günde tek dozla kullanılır. II. Bisoprololün renal ve hepatik çift atılım yolu vardır. III. Bisoprolol kalp yetmezliğinde mortaliteyi azaltmaz. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız II",
+      "C": "I ve II",
+      "D": "I ve III",
+      "E": "II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Bisoprolol günde tek doz kullanılır, renal ve hepatik çift atılım yoluna sahiptir ve CIBIS-II çalışmasında kalp yetmezliğinde mortaliteyi azaltmıştır.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü bisoprololün renal ve hepatik çift atılım yolu vardır. Bu yüzden seçenek eksik kalır.",
+      "B": "Bu seçenek yalnız ikinci ifadeyi doğru sayar; ancak birinci ifade de doğrudur, çünkü bisoprolol günde tek dozla kullanılır. Bu yüzden seçenek eksik kalır.",
+      "C": "Bisoprolol günde tek dozla kullanılır ve renal ile hepatik çift atılım yoluna sahiptir. Üçüncü ifade yanlış olduğu için bu seçenek doğrudur.",
+      "D": "Bu seçenek üçüncü ifadeyi doğru sayar; oysa CIBIS-II çalışmasında bisoprolol kalp yetmezliğinde mortaliteyi azaltmıştır. Bu yüzden üçüncü ifadeyi içeren hiçbir birleşim doğru olamaz.",
+      "E": "Bu seçenek ikinci ve üçüncü ifadeyi doğru sayar; oysa bisoprolol CIBIS-II çalışmasında mortaliteyi azaltmıştır. Birinci ifade de doğru olduğundan bu birleşim kabul edilemez."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Esmololün ultrakısa etkili β1 blokör olarak özelliklerini ve kullanımını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q25",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Yarılanma ömrü yaklaşık 9 dakika olan ve yalnızca intravenöz kullanılan beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nadolol",
+      "B": "Esmolol",
+      "C": "Bisoprolol",
+      "D": "Betaksolol",
+      "E": "Timolol"
+     },
+     "dogru": "B",
+     "aciklama": "Esmolol eritrosit esterazlarıyla hızla hidrolize edilen ultrakısa etkili bir beta blokördür. İnfüzyon durunca etkisi dakikalar içinde kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Nadolol uzun etkili ve hidrofilik bir beta blokördür ve günde 1 doz kullanılır. Ultrakısa etkili ve yalnız intravenöz bir ajan olmadığı için yarılanma ömrü 9 dakikalık ilaç olamaz.",
+      "B": "Esmolol yalnızca intravenöz kullanılır ve yarılanma ömrü yaklaşık 9 dakikadır. Eritrosit esterazlarıyla hızla yıkıldığı için titrasyon avantajı sağlar; bu özellikler seçeneği doğru kılar.",
+      "C": "Bisoprolol günde tek doz kullanılan, renal ve hepatik atılımlı oral bir ajandır. Yarılanma ömrü 10-12 saattir, bu nedenle dakikalarla ölçülen yarılanma ömrüne sahip ajan değildir.",
+      "D": "Betaksolol hem hipertansiyonda hem glokomda kullanılan kardiyoselektif bir ajandır. Topikal damla ve tablet biçimi vardır; intravenöz bir ilaç olmadığı için dakikalık yarılanma ömrüyle ilişkilendirilmez.",
+      "E": "Timolol topikal göz damlası olarak glokomda göz içi basıncını düşüren bir beta blokördür. Sistemik değil yerel kullanıldığı için ultrakısa etkili intravenöz bir ajan sayılmaz."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q26",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Esmolol infüzyonu sırasında bronkospazm veya hipotansiyon gelişen hastada aşağıdakilerden hangisi uygulanır?",
+     "secenekler": {
+      "A": "İnfüzyon kesilir ve etki dakikalar içinde düzelir",
+      "B": "Etkiyi artırmak için ek bolus doz verilir",
+      "C": "Hazırlık için fenoksibenzamin başlanır",
+      "D": "Etkinin 24-48 saat sürmesi beklenir",
+      "E": "Non-seçici propranolole geçilir"
+     },
+     "dogru": "A",
+     "aciklama": "Esmolol eritrosit esterazlarıyla hızla yıkılır ve infüzyon durunca etki dakikalar içinde kaybolur. Bronkospazm veya hipotansiyon bu nedenle hızla düzelir.",
+     "sik_aciklamalari": {
+      "A": "Esmololün etkisi infüzyon durduğunda dakikalar içinde kaybolur. Bronkospazm veya hipotansiyon geliştiğinde infüzyonu kesmek yeterli olduğu için bu seçenek doğrudur ve ek bir ilaç gerekmez.",
+      "B": "Ek bolus doz esmololün yan etkilerini artırır. İlaç zaten kısa etkili olduğu için sorun infüzyon kesilerek çözülür; yeni doz vermek gerekmez.",
+      "C": "Fenoksibenzamin feokromositoma hazırlığında kullanılan geri dönüşümsüz bir alfa blokördür. Esmololün yan etkisi ise bu ilaçla değil, infüzyonun kesilmesiyle kısa sürede düzelir.",
+      "D": "24-48 saatlik etki süresi fenoksibenzamine aittir. Esmololde ise etki infüzyon bitince dakikalar içinde kaybolur ve yan etkinin düzelmesi için uzun süre beklemek gerekmez.",
+      "E": "Propranolol non-seçici bir ajandır ve bronkospazm riski daha yüksektir. Esmololün yan etkisi gelişen hastada ilacı kesmek yeterlidir, başka beta bloköre geçmek gerekmez."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Betaksolol ve timolol ile glokomda beta blokajını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q27",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Betaksolol glokomda göz içi basıncını hangi mekanizmayla düşürür?",
+     "secenekler": {
+      "A": "Aköz hümör üretimini artırarak",
+      "B": "Siliyer cisimde α1 reseptörlerini bloke ederek",
+      "C": "Presinaptik α2 reseptörlerini uyararak",
+      "D": "Siliyer cisimde aköz hümör üretimini azaltarak",
+      "E": "Retinada β3 reseptörlerini uyararak"
+     },
+     "dogru": "D",
+     "aciklama": "Siliyer cisimde beta blokajı aköz hümör üretimini azaltır. Betaksolol göz içi basıncını %20-25 düşürür ve optik sinir hasarını yavaşlatır.",
+     "sik_aciklamalari": {
+      "A": "Aköz hümör üretiminin artması göz içi basıncını yükseltir ve glokomu kötüleştirir. Betaksolol ise siliyer cisimdeki beta blokajıyla üretimi azaltarak basıncı düşürür ve optik sinir hasarını yavaşlatır.",
+      "B": "Betaksolol bir beta blokördür ve α1 blokajı glokomdaki etkisini açıklamaz. Göz içi basıncındaki düşüş siliyer cisimdeki beta blokajına ve azalan aköz hümör üretimine dayanır.",
+      "C": "Presinaptik α2 aktivasyonu noradrenalin salınımını azaltan bir geri besleme mekanizmasıdır. Betaksololün glokomdaki etkisini bu mekanizma açıklamaz; etki siliyer cisimdeki beta blokajına dayanır.",
+      "D": "Siliyer cisimdeki beta blokajı aköz hümör üretimini azaltır ve göz içi basıncı düşer. Betaksolol bu mekanizmayla glokomun ilerlemesini yavaşlattığı için seçenek doğrudur.",
+      "E": "β3 reseptörleri yağ dokusu ve mesanede bulunur ve glokom tedavisinin hedefi değildir. Betaksolol glokomda siliyer cisimdeki beta blokajıyla aköz hümör üretimini azaltır."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q148"
+     ]
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q28",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Astım eşliğindeki glokomda timolole kısmen alternatif olarak tercih edilebilen beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Propranolol",
+      "B": "Nadolol",
+      "C": "Pindolol",
+      "D": "Karvedilol",
+      "E": "Betaksolol"
+     },
+     "dogru": "E",
+     "aciklama": "Betaksolol kardiyoselektif bir beta blokördür ve topikal göz damlası biçimiyle göz içi basıncını düşürür. Astım eşliğindeki glokomda timolole alternatif olabilir.",
+     "sik_aciklamalari": {
+      "A": "Propranolol non-seçici bir ajandır ve bronkospazm riski taşır. Astım eşliğindeki glokomda tercih edilen bir topikal ajan olarak tanımlanmaz; bu amaçta kardiyoselektif betaksolol öne çıkar.",
+      "B": "Nadolol sistemik kullanılan uzun etkili hidrofilik bir ajandır ve günde tek doz verilir. Glokomda kullanılan bir topikal damla biçimi tanımlanmaz; topikal ajanlar timolol ve betaksololdür.",
+      "C": "Pindolol ISA'lı bir ajandır ve hipertansiyonda sistemik kullanılır. Astımlı glokom hastasında tercih edilen topikal ajan olarak tanımlanmaz; bu amaçta betaksolol kullanılabilir.",
+      "D": "Karvedilol α1 ve non-seçici β blokördür ve kalp yetmezliğinde kullanılır. Glokom damlası biçimi tanımlanmaz ve astımlı hastada non-seçici blokaj sorun yaratır.",
+      "E": "Betaksolol kardiyoselektif ve topikal damla biçimi olan bir ajandır. Astım eşliğindeki glokomda timolole kısmen alternatif olarak tercih edilebildiği için seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Kombine α ve β blokörlerin özelliklerini ve endikasyonlarını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q29",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Karvedilol ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca β1 seçici blokaj yapar",
+      "B": "β1, β2 ve α1 blokajı yapar ve antioksidan etki gösterir",
+      "C": "ISA taşır ve membran stabilizasyonu yoktur",
+      "D": "Yalnızca intravenöz kullanılan ultrakısa etkili bir ajandır",
+      "E": "α2 reseptörlerini seçici bloke eder"
+     },
+     "dogru": "B",
+     "aciklama": "Karvedilol β1, β2 ve α1 blokajı yaparak kalp hızını ve periferik direnci azaltır. Ayrıca antioksidan etkilidir ve HFrEF'te kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Yalnızca β1 seçici blokaj yapan ajanlar bisoprolol ve metoprolol gibi kardiyoselektif ilaçlardır. Karvedilol β1 ve β2 ile birlikte α1 reseptörünü de bloke eder.",
+      "B": "Karvedilol β1, β2 ve α1 blokajı yapar; bu sayede ön yükü ve art yükü azaltır. Antioksidan etkisi de vardır; bu nedenle seçenek doğrudur.",
+      "C": "Karvedilolde ISA yoktur, membran stabilizasyonu ise vardır. ISA özelliği taşıyan beta blokörler pindolol ve asebutololdür; bu ajanlar istirahat kalp hızını çok düşürmez.",
+      "D": "Yalnız intravenöz kullanılan ultrakısa etkili ajan esmololdür. Karvedilol ise oral bir ilaçtır ve düşük doz olan 3.125 mg'dan başlanıp yavaş yavaş titre edilir.",
+      "E": "Karvedilol α1 reseptörünü bloke eder; α2 reseptörü üzerinde seçici bir etkisi tanımlanmaz. Kombine blokajı β1, β2 ve α1 reseptörlerini kapsar ve vazodilatasyonla yük azaltır."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q30",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Gebelikte hipertansif acilde ilk tercih edilen intravenöz ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nitroprussid",
+      "B": "ACE inhibitörü",
+      "C": "Labetalol",
+      "D": "ARB",
+      "E": "Fentolamin"
+     },
+     "dogru": "C",
+     "aciklama": "Labetalol α1, β1 ve β2 blokajı yapar ve uteroplazental kan akımını korur. ACE inhibitörleri, ARB'ler ve nitroprussid gebelikte kontrendikedir.",
+     "sik_aciklamalari": {
+      "A": "Nitroprussid gebelikte kontrendike olan bir vazodilatör ilaçtır. Hipertansif acilde başka hastalarda kullanılsa da gebelikte ilk tercih edilen ilaç olarak önerilmez.",
+      "B": "ACE inhibitörleri anjiyotensin sistemini baskılayan ilaçlardır ve gebelikte kontrendikedir. Bu nedenle gebelikteki hipertansif acilde ilk tercih olarak seçilmezler; bu amaçta intravenöz labetalol kullanılır.",
+      "C": "Labetalol hızlı başlangıçlı bir kombine blokördür ve refleks taşikardi yapmaz. Uteroplazental kan akımını koruduğu ve gebelikte hipertansif acilde ilk tercih olduğu için seçenek doğrudur.",
+      "D": "ARB'ler anjiyotensin reseptörlerini bloke eden ilaçlardır ve gebelikte kontrendikedir. Hipertansiyonu düşürseler bile gebelikteki hipertansif acilde kullanılmazlar; bu amaçta intravenöz labetalol tercih edilir.",
+      "E": "Fentolamin geri dönüşümlü bir alfa blokördür ve parenteral kullanılır; hipertansif kriz ve noradrenalin infiltrasyon nekrozunda yer alır. Gebelikteki hipertansif acilin ilk tercihi değildir."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q31",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "COPERNICUS ve CAPRICORN çalışmalarıyla kalp yetmezliğinde mortaliteyi azalttığı gösterilen, α1 ve β blokajı yapan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Labetalol",
+      "B": "Karvedilol",
+      "C": "Atenolol",
+      "D": "Doksazosin",
+      "E": "Nebivolol"
+     },
+     "dogru": "B",
+     "aciklama": "Karvedilol non-seçici β blokör ve α1 blokördür; kalp yetmezliğinde mortaliteyi azaltır. COPERNICUS ve CAPRICORN çalışmaları bu etkiyi göstermiştir.",
+     "sik_aciklamalari": {
+      "A": "Labetalol de α1, β1 ve β2 blokajı yapar ancak hipertansif acil ve gebelik hipertansiyonunda öne çıkar. Kalp yetmezliği mortalite çalışmaları karvedilole aittir.",
+      "B": "Karvedilol α1 ve non-seçici β blokajı yapar, antioksidan etkilidir ve COPERNICUS ile CAPRICORN'da mortaliteyi azaltmıştır. Bu nedenle seçenek doğrudur.",
+      "C": "Atenolol hidrofilik kardiyoselektif bir ajandır. α1 blokajı yapmaz ve kalp yetmezliğinde COPERNICUS ile CAPRICORN çalışmalarıyla ilişkilendirilen ilaç karvedilol olduğundan bu seçenek uygun olmaz.",
+      "D": "Doksazosin seçici α1 blokördür ve hipertansiyon ile BPH'da kullanılır. β blokajı yapmadığı için kalp yetmezliği mortalite çalışmalarıyla anılmaz; bu çalışmalar karvedilole aittir.",
+      "E": "Nebivolol β1 seçici ve NO aracılı vazodilatör bir ajandır. α1 blokajı yapmaz ve bu iki çalışmayla değil, endotelden NO salınımıyla tanımlanır."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q32",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Labetalol ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnız β1 seçici blokaj yapar",
+      "B": "Etkisi infüzyon bitince dakikalar içinde kaybolur",
+      "C": "Gebelikte kontrendikedir",
+      "D": "Refleks taşikardi yapmaz ve uteroplazental kan akımını korur",
+      "E": "Feokromositomada fentolamine tercih edilir"
+     },
+     "dogru": "D",
+     "aciklama": "Labetalol α1, β1 ve β2 blokajı yapar; β blokajı nedeniyle refleks taşikardi yapmaz ve uteroplazental kan akımını korur. Gebelikte kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Labetalol α1, β1 ve β2 blokajı yapar; yalnız β1 seçici bir ajan değildir. β:α oranı IV'de 7:1, oralde 3:1'dir.",
+      "B": "Etkisinin infüzyon bitince dakikalar içinde kaybolması esmolole aittir. Labetalolün ise IV başlangıç etkisi hızlıdır ve 5 dakikada gelir; infüzyonla titre edilerek kullanılır.",
+      "C": "Labetalol preeklampsi ve eklampside gebelikte güvenle kullanılır. Gebelikte kontrendike olan ilaçlar ise ACE inhibitörleri, ARB'ler ve nitroprussiddir; labetalol bu gruba girmez.",
+      "D": "Labetalolde β blokaj nedeniyle refleks taşikardi görülmez ve uteroplazental kan akımı korunur. Gebelikte güvenle kullanılabildiği için seçenek doğrudur ve hipertansif acilde tercih edilir.",
+      "E": "Feokromositomada fentolamin yoksa labetalol alternatiftir. Yani labetalol fentolamine tercih edilen bir ilaç olarak değil, fentolaminin bulunmadığı durumda kullanılan ikinci bir seçenek olarak yer alır ve gebelikte de kullanılabilir."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Beta blokörlerin yan etkilerini, kontrendikasyonlarını ve kullanım alanlarını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q33",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi beta blokörlerin yan etkilerinden biri değildir?",
+     "secenekler": {
+      "A": "Bradikardi",
+      "B": "AV blok",
+      "C": "Soğuk ekstremiteler",
+      "D": "HDL kolesterol artışı",
+      "E": "Kabus görme"
+     },
+     "dogru": "D",
+     "aciklama": "Beta blokörler LDL ve trigliserid artışına, HDL azalmasına yol açar. Bradikardi, AV blok, soğuk ekstremiteler ve lipofil ajanlarda kabus beklenen yan etkilerdir.",
+     "sik_aciklamalari": {
+      "A": "Bradikardi, β1 blokajına bağlı beklenen bir yan etkidir ve kalp hızının yavaşlaması anlamına gelir. Beta blokörlerin kardiyak yan etkilerinin başında yer alır.",
+      "B": "AV blok, özellikle Mİ sonrasında görülebilen kardiyak bir yan etkidir. Beta blokörler AV iletimi yavaşlattığı için bu durum beklenen bir sonuçtur.",
+      "C": "Vazokonstriksiyona bağlı soğuk ekstremiteler beta blokörlerin kardiyak yan etkileri arasındadır. Periferik arter hastalığı olanlarda bu yan etki nedeniyle dikkatli olunur; dolayısıyla beklenen bir sonuçtur.",
+      "D": "Beta blokörler HDL kolesterolü azaltır, LDL ve trigliseridi artırır. HDL artışı beklenmediği için bu seçenek yan etki olmayan ifadedir ve doğru yanıttır.",
+      "E": "Lipofil beta blokörler santral sinir sistemine geçer ve uyku bozukluğu ile kabusa yol açar. Kabus bu nedenle beklenen bir yan etkidir."
+     },
+     "kanit": {
+      "sayfa": 25
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q132"
+     ]
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q34",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Aşağıdakilerden hangisi beta blokörler için mutlak kontrendikasyon değildir?",
+     "secenekler": {
+      "A": "Stabil KOAH",
+      "B": "Semptomatik bradikardi",
+      "C": "Dekompanse akut kalp yetmezliği",
+      "D": "Yüksek dereceli AV blok",
+      "E": "Şiddetli reaktif hava yolu hastalığı"
+     },
+     "dogru": "A",
+     "aciklama": "Stabil KOAH göreceli kontrendikasyondur ve kardiyoselektif ajan dikkatli kullanılabilir. Semptomatik bradikardi, yüksek dereceli AV blok, dekompanse akut kalp yetmezliği ve şiddetli reaktif hava yolu hastalığı mutlaktır.",
+     "sik_aciklamalari": {
+      "A": "Stabil KOAH göreceli kontrendikasyondur ve kardiyoselektif ajan dikkatle kullanılabilir. Mutlak kontrendikasyon olmadığı için bu seçenek, sorunun aradığı doğru yanıttır ve kardiyoselektif ajanlar bu hastalarda görece daha güvenlidir.",
+      "B": "Kalp hızı 50/dk altındaki semptomatik bradikardi beta blokör için mutlak kontrendikasyondur. Beta blokör kalp hızını yavaşlattığı için bradikardiyi daha da derinleştirir.",
+      "C": "Dekompanse akut kalp yetmezliğinde, yani ıslak veya akut alevlenme sırasında, beta blokör kullanılmaz. Bu durum mutlak kontrendikasyon olarak kabul edilir.",
+      "D": "İkinci ve üçüncü derece AV blok, pacemaker yoksa, beta blokör için mutlak kontrendikasyondur. Beta blokör iletimi yavaşlattığı için mevcut bloku ağırlaştırır.",
+      "E": "Şiddetli reaktif hava yolu hastalığı, yani ağır astım, beta blokör için mutlak kontrendikasyondur. β2 blokajı bronş gevşemesini engelleyerek bronkospazmı tetikleyebilir."
+     },
+     "kanit": {
+      "sayfa": 26
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q35",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi beta blokörlerin kullanım alanlarından biri değildir?",
+     "secenekler": {
+      "A": "Esansiyel tremor",
+      "B": "Migren profilaksisi",
+      "C": "Özefagus varisi kanama profilaksisi",
+      "D": "Benign prostat hiperplazisi",
+      "E": "Hipertiroidide semptom kontrolü"
+     },
+     "dogru": "D",
+     "aciklama": "Beta blokörler esansiyel tremor, migren profilaksisi, varis kanama profilaksisi ve hipertiroidi semptomlarında kullanılır. BPH ise α1A seçici alfa blokörlerle tedavi edilir.",
+     "sik_aciklamalari": {
+      "A": "Propranolol esansiyel tremorda birinci basamak tedavidir. Periferik β2 blokajıyla el tremoru dramatik azalır; bu nedenle esansiyel tremor beta blokörlerin kullanım alanlarındandır.",
+      "B": "Propranolol ve metoprolol migren profilaksisinde kullanılan beta blokörlerdir. Serebral vazodilatasyonu önleme ve serotonin modülasyonu bu kullanım alanının mekanizmasıdır; migren beta blokör endikasyonudur.",
+      "C": "Non-seçici beta blokörler portal ven basıncını düşürür ve özefagus varisi kanama profilaksisinde kullanılır. Bu nedenle beta blokörlerin kullanım alanlarındandır.",
+      "D": "BPH tedavisinde tamsulosin ve alfuzosin gibi α1A seçici alfa blokörler kullanılır. Beta blokörlerin kullanım alanı olmadığı için bu seçenek sorunun doğru yanıtıdır.",
+      "E": "Hipertiroidide taşikardi, tremor, terleme ve anksiyete semptomlarını beta blokörler kontrol eder. Tiroid hormon sentezini etkilemezler ama semptomlara yardım ederler ve bu nedenle kullanım alanlarındandır."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q36",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Beta blokörlerle bronkospazm hangi ajan grubunda daha sık görülür?",
+     "secenekler": {
+      "A": "Kardiyoselektif beta blokörler",
+      "B": "Seçici α1 blokörler",
+      "C": "Non-seçici beta blokörler",
+      "D": "Esmolol gibi ultrakısa ajanlar",
+      "E": "Hidrofilik ajanlar"
+     },
+     "dogru": "C",
+     "aciklama": "Bronkospazm non-seçici beta blokörlerde kardiyoselektiflerden daha sık görülür. Non-seçici ajanlar β2 reseptörlerini de bloke eder.",
+     "sik_aciklamalari": {
+      "A": "Kardiyoselektif ajanlar β1 reseptörüne tercihli bağlandığı için bronkospazma daha az yol açar. Astımlı hastalarda görece güvenli kabul edilirler ve bronkospazm riski bu grupta daha düşüktür.",
+      "B": "Seçici α1 blokörler beta reseptörlerini bloke etmez. Bu grubun tipik yan etkileri ortostatik hipotansiyon ve ilk doz senkopudur; bronkospazm ise β2 blokajına bağlıdır ve bu grubun sorunu olarak tanımlanmaz.",
+      "C": "Non-seçici beta blokörler β1 ile birlikte β2 reseptörlerini de bloke eder. Bronkospazm bu gruplarda daha sık olduğundan seçenek doğrudur.",
+      "D": "Esmolol de kardiyoselektiftir ve bronkospazm gelişirse infüzyon kesilince hızla düzelir. Daha sık bronkospazm yapan grup ise β2 reseptörünü de bloke eden non-seçici ajanlardır.",
+      "E": "Hidrofilik olmak bronkospazm riskini belirlemez; bu özellik atılım yolunu ve SSS geçişini ilgilendirir. Risk β2 blokajına bağlıdır ve non-seçici ajanlarda daha fazladır."
+     },
+     "kanit": {
+      "sayfa": 25
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Beta blokör ani kesme sendromunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q37",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Uzun süre beta blokör kullanan hastada ilaç aniden bırakıldığında rebound tablosunun temel nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "α reseptörlerinin down-regülasyonu",
+      "B": "Karaciğerde ilaç birikmesi",
+      "C": "Noradrenalin sentezinin durması",
+      "D": "Presinaptik α2 aktivasyonu",
+      "E": "β reseptörlerinin up-regülasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Kronik blokajda β reseptörleri up-regüle olur. İlaç aniden kesilince endojen katekolaminlere aşırı duyarlılık gelişir; taşikardi, hipertansiyon ve anjina görülür.",
+     "sik_aciklamalari": {
+      "A": "Rebound tablosu α reseptörlerindeki bir değişikliğe değil β reseptör sayısındaki artışa bağlıdır. Kronik beta blokaj β reseptörlerini up-regüle eder, α reseptörlerini azaltmaz.",
+      "B": "Beta blokörler karaciğerde birikerek değil reseptör düzeyinde etki eder. İlaç kesilince ortaya çıkan tablo, reseptörlerin up-regülasyonla katekolaminlere aşırı duyarlı hâle gelmesiyle açıklanır.",
+      "C": "Noradrenalin sentezi beta blokajda durmaz; sorun reseptör tarafındadır. Kesilme sonrası endojen katekolaminler up-regüle olmuş β reseptörlerine bağlanarak taşikardi ve hipertansiyon yapar.",
+      "D": "Presinaptik α2 aktivasyonu noradrenalin salınımını azaltan bir geri besleme mekanizmasıdır. Beta blokör kesilmesindeki rebound bu mekanizmayla değil β reseptörlerinin up-regülasyonuyla ilgilidir.",
+      "E": "Uzun süreli blokaj β reseptörlerinin up-regüle olmasına yol açar. İlaç aniden kesildiğinde bu duyarlı reseptörler katekolaminlere aşırı yanıt verir; bu nedenle seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 26
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Klinik açıdan önemli ilaç etkileşimlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q38",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Beta blokör ile insülin birlikte kullanan diyabetik hastada hipoglisemi sırasında maskelenmeyen belirti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Terleme",
+      "B": "Taşikardi",
+      "C": "Hipertansiyon",
+      "D": "Bronkospazm",
+      "E": "Nazal konjesyon"
+     },
+     "dogru": "A",
+     "aciklama": "Beta blokörler hipogliseminin taşikardi belirtisini maskeler. Yalnızca terleme görünmeye devam eder.",
+     "sik_aciklamalari": {
+      "A": "Beta blokör altında hipogliseminin taşikardi belirtisi maskelenir ve yalnızca terleme görünür. Bu nedenle seçenek doğrudur ve sık kan şekeri takibi gerekir.",
+      "B": "Taşikardi hipogliseminin β blokajıyla maskelenen belirtisidir. Beta blokör alan hastada bu belirti ortaya çıkmayabilir ve hasta hipoglisemiyi geç fark edebilir.",
+      "C": "Hipertansiyon hipogliseminin tipik belirtisi olarak tanımlanmaz. Beta blokör ile insülin etkileşimi, hipoglisemiye eşlik eden sempatik belirtilerin maskelenmesiyle ilgilidir ve yalnız terleme görünür kalır.",
+      "D": "Bronkospazm non-seçici beta blokörlerin β2 blokajına bağlı bir yan etkisidir. Hipoglisemi sırasında görülecek bir belirti olarak ele alınmaz; etkileşim belirtilerin maskelenmesiyle ilgilidir.",
+      "E": "Nazal konjesyon alfa blokörlerin vazodilatasyona bağlı yan etkisidir. Beta blokör ve insülin etkileşiminde ise hipoglisemi belirtilerinin maskelenmesi söz konusudur ve bu belirti anılmaz."
+     },
+     "kanit": {
+      "sayfa": 25
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q39",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Beta blokörle birlikte kullanıldığında AV blok ve bradikardi riskini artıran ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Verapamil",
+      "B": "Amlodipin",
+      "C": "Sildenafil",
+      "D": "İnsülin",
+      "E": "Fenoksibenzamin"
+     },
+     "dogru": "A",
+     "aciklama": "Verapamil veya diltiazem beta blokörle birlikte AV blok ve bradikardi riskini artırır. Dihidropiridinlerle kombinasyon görece güvenlidir.",
+     "sik_aciklamalari": {
+      "A": "Verapamil AV iletimi yavaşlatan bir kalsiyum kanal blokörüdür. Beta blokörle birlikte AV blok ve bradikardi riskini artırdığı için seçenek doğrudur.",
+      "B": "Amlodipin bir dihidropiridindir ve beta blokörle kombinasyonu görece güvenlidir. AV blok ve bradikardi riskini belirgin artıran ajanlar ise verapamil veya diltiazemdir.",
+      "C": "Sildenafil alfa blokörlerle ciddi hipotansiyon yapan bir PDE5 inhibitörüdür. Beta blokörle AV blok riski artışı ise bu ilaçla tanımlanmaz; o risk kalsiyum kanal blokörlerinde görülür.",
+      "D": "İnsülin beta blokörle birlikte hipogliseminin taşikardi belirtisini maskeler. AV blok ve bradikardi riskinin artması ise bu etkileşimin konusu olmayıp kalsiyum kanal blokörleriyle ilgilidir.",
+      "E": "Fenoksibenzamin feokromositoma hazırlığında alfa blokaj için kullanılır. Beta blokörle birlikte AV blok riskini artıran ilaç olarak tanımlanmaz; bu etki verapamil ve diltiazemle ilişkilidir."
+     },
+     "kanit": {
+      "sayfa": 28
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Beta blokörlerin farmakokinetik özelliklerini karşılaştırabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q40",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Bisoprololün yarılanma ömrü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "3-7 saat",
+      "B": "4-6 saat",
+      "C": "6-9 saat",
+      "D": "10-12 saat",
+      "E": "7-10 saat"
+     },
+     "dogru": "D",
+     "aciklama": "Bisoprololün yarılanma ömrü 10-12 saattir ve günde tek doz kullanılır. Hepatik ve renal çift atılım yolu vardır.",
+     "sik_aciklamalari": {
+      "A": "3-7 saatlik yarılanma ömrü metoprolole aittir. Bisoprolol bundan belirgin biçimde daha uzun etkilidir ve günde tek doz olarak kullanılır.",
+      "B": "4-6 saatlik yarılanma ömrü propranolole aittir. Bisoprololün yarılanma ömrü bundan uzundur; bu uzunluk günde tek dozla kullanımı mümkün kılar.",
+      "C": "6-9 saatlik yarılanma ömrü atenolole aittir ve bu ilaç böbrekle atılır. Bisoprolol 10-12 saatle bundan da uzun etkilidir ve çift atılım yoluna sahiptir.",
+      "D": "Bisoprololün yarılanma ömrü 10-12 saattir. Bu uzun süre, renal ve hepatik çift atılım yoluyla birlikte günde tek doz kullanımı mümkün kıldığı için seçenek doğrudur.",
+      "E": "7-10 saatlik yarılanma ömrü karvedilole aittir. Bisoprololün yarılanma ömrü bu aralığı aşar ve 10-12 saattir; ayrıca bisoprolol en seçici β1 antagonistidir."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Hipertansiyon ve kalp yetmezliğinde adrenoseptör antagonistlerinin yerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q41",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Azalmış ejeksiyon fraksiyonlu kalp yetmezliğinde mortaliteyi azalttığı gösterilen üç beta blokör aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Atenolol, propranolol, esmolol",
+      "B": "Esmolol, nadolol, timolol",
+      "C": "Pindolol, asebutolol, timolol",
+      "D": "Bisoprolol, karvedilol, metoprolol süksinat",
+      "E": "Atenolol, betaksolol, sotalol"
+     },
+     "dogru": "D",
+     "aciklama": "HFrEF'te bisoprolol, karvedilol ve metoprolol süksinat mortaliteyi azaltan kanıtlı ajanlardır. ESC 2021 kılavuzunda bu öneri Sınıf IA düzeyindedir.",
+     "sik_aciklamalari": {
+      "A": "Atenolol ve propranolol kalp yetmezliğinde kanıtlı üçlü içinde yer almaz; esmolol ise yalnız intravenöz kullanılan kısa etkili bir ajandır. Kalp yetmezliğinde kanıtlı olan bisoprolol, karvedilol ve metoprolol süksinattır.",
+      "B": "Esmolol akut kullanılan ultrakısa etkili bir ajandır; nadolol ve timolol kalp yetmezliği mortalite kanıtıyla öne çıkmaz. Timolol topikal olarak glokomda kullanılır.",
+      "C": "Pindolol ve asebutolol ISA'lı ajanlardır; timolol göz damlası olarak glokomda kullanılır. Bu üçlü kalp yetmezliğinde mortalite azaltan kanıtlı ajanlar arasında değildir.",
+      "D": "Bisoprolol, karvedilol ve metoprolol süksinat HFrEF'te mortaliteyi azaltır. ESC 2021 kılavuzunda Sınıf IA öneri taşıdıkları için bu üçlü doğrudur.",
+      "E": "Atenolol hidrofilik bir ajandır, betaksolol glokomda kullanılır, sotalol ise Sınıf III etkili bir antiaritmiktir. Kalp yetmezliğinde kanıtlı olan üçlü bu değildir."
+     },
+     "kanit": {
+      "sayfa": 31
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q42",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Hipertansiyonla birlikte aşağıdaki durumlardan hangisi varsa beta blokör ideal seçimdir?",
+     "secenekler": {
+      "A": "Reaktif hava yolu hastalığı",
+      "B": "Semptomatik bradikardi",
+      "C": "Supraventriküler taşikardi veya atriyal fibrilasyon",
+      "D": "Yüksek dereceli AV blok",
+      "E": "Dekompanse akut kalp yetmezliği"
+     },
+     "dogru": "C",
+     "aciklama": "SVT, AF hız kontrolü ve hipertansiyon birlikteliğinde beta blokör ideal seçimdir; metoprolol veya bisoprolol tercih edilir. Kontrendikasyon durumlarında kullanılmaz.",
+     "sik_aciklamalari": {
+      "A": "Reaktif hava yolu hastalığında beta blokör kontrendikedir, çünkü β2 blokajı bronkospazmı tetikler. Bu durum beta blokörün ideal olduğu bir birliktelik olarak kabul edilmez.",
+      "B": "Semptomatik bradikardi beta blokör için mutlak kontrendikasyondur. Beta blokör kalp hızını daha da düşürdüğü için ritim bozukluğu eşlik etse bile ideal bir seçim olmaz.",
+      "C": "Supraventriküler taşikardi veya AF ile hipertansiyon birlikteliğinde beta blokör ideal seçimdir ve metoprolol ya da bisoprolol tercih edilir. Bu nedenle seçenek doğrudur.",
+      "D": "Yüksek dereceli AV blokta, pacemaker yoksa, beta blokör mutlak kontrendikedir. İletimi yavaşlattığı için mevcut bloku ağırlaştırır ve bu durum ideal seçim olduğunu göstermez.",
+      "E": "Dekompanse akut kalp yetmezliğinde beta blokör başlanmaz ve bu durum kontrendikasyondur. Kompanse hastalarda start low, go slow prensibiyle kullanılır; dekompanse hastada ideal seçim sayılmaz."
+     },
+     "kanit": {
+      "sayfa": 31
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q43",
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "CIBIS-II çalışmasında bisoprolol ile kalp yetmezliğinde elde edilen sonuç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mortalitede değişiklik olmaması",
+      "B": "Stroke korumasında diğer beta blokörlere üstünlük",
+      "C": "Mortalitede %35 artış",
+      "D": "QT uzamasında artış",
+      "E": "Mortalitede %34 relatif azalma"
+     },
+     "dogru": "E",
+     "aciklama": "CIBIS-II çalışmasında bisoprolol ile mortalitede %34 relatif azalma görülmüştür. COPERNICUS ve CAPRICORN ise karvedilolle yapılmış kalp yetmezliği çalışmalarıdır.",
+     "sik_aciklamalari": {
+      "A": "Bisoprolol CIBIS-II çalışmasında kalp yetmezliğinde mortaliteyi azaltmıştır, bu yüzden mortalitede değişiklik olmaması bu sonuçla çelişir. Beta blokörler kronik sempatik aktivasyonun zararını tersine çevirir.",
+      "B": "Stroke korumasında dezavantaj ASCOT çalışmasında atenolol için bildirilmiştir. CIBIS-II ise bisoprololün kalp yetmezliğinde mortaliteyi azalttığı çalışmadır ve bu iki çalışma karıştırılmamalıdır.",
+      "C": "Mortalitede artış değil azalma, bisoprololün CIBIS-II çalışmasındaki sonucudur. Beta blokörler kalp yetmezliğinde kronik sempatik aktivasyonun zararını tersine çevirerek mortaliteyi ve hospitalizasyonu azaltır.",
+      "D": "QT uzaması sotalolün Sınıf III etkisine bağlı proaritmik riskidir ve beta blokörlerin kalp yetmezliği çalışmalarıyla ilgisizdir. CIBIS-II bisoprololle mortalite azalmasını gösterir.",
+      "E": "CIBIS-II çalışmasında bisoprolol kalp yetmezliğinde mortalitede %34 relatif azalma sağlamıştır. Bu sonuç kanıtlı bir beta blokör etkisini gösterdiği için seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q44",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Kalp yetmezliğinde beta blokör başlama zamanlaması için aşağıdakilerden hangisi söylenebilir?",
+     "secenekler": {
+      "A": "Akut dekompanse alevlenmede ilk basamak olarak başlanır",
+      "B": "Hasta kompanse iken düşük dozla başlanıp yavaş titre edilir",
+      "C": "Yüksek yükleme dozuyla hızlı başlanır",
+      "D": "Yalnız intravenöz esmololle başlanır",
+      "E": "Dekompanse hastada mevcut doz hemen artırılır"
+     },
+     "dogru": "B",
+     "aciklama": "Kalp yetmezliğinde beta blokör hasta kompanse iken başlanır ve start low, go slow prensibiyle titre edilir. Akut dekompanse yetmezlikte başlanmaz.",
+     "sik_aciklamalari": {
+      "A": "Akut dekompanse kalp yetmezliğinde beta blokör başlanmaz; mevcut beta blokör ise düşürülerek sürdürülmeye çalışılır. Bu yaklaşım ilk basamak olarak uygun değildir.",
+      "B": "Beta blokör kalp yetmezliğinde hasta kompanse iken düşük dozla başlanır ve yavaş titre edilir. Bu prensip start low, go slow olduğu için seçenek doğrudur.",
+      "C": "Yüksek yükleme dozu start low, go slow prensibine aykırıdır. Kalp yetmezliğinde beta blokör düşük dozla başlatılır ve hasta kompanse iken yavaşça artırılır.",
+      "D": "Esmolol ultrakısa etkili intravenöz bir ajandır ve kronik kalp yetmezliğinin başlangıç tedavisi olarak tanımlanmaz. Kanıtlı oral ajanlar bisoprolol, karvedilol ve metoprolol süksinattır.",
+      "E": "Dekompanse hastada doz artırmak ters bir yaklaşımdır. Akut dekompanse yetmezlikte mevcut beta blokör düşürülerek sürdürülmeye çalışılır ve yeni başlama yapılmaz."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Beta blokörlerin Sınıf II antiaritmik etkisini ve aritmi tedavisindeki kullanımını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q45",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "I. Beta blokörler AV düğümde iletimi yavaşlatır ve PR mesafesini uzatır. II. Beta blokörler SA düğümde spontan depolarizasyon hızını azaltır. III. Beta blokörler fibrilasyon eşiğini düşürür. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız III",
+      "C": "I ve II",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Beta blokörler Sınıf II antiaritmiktir; AV iletimi yavaşlatır, SA düğümde depolarizasyon hızını azaltır ve fibrilasyon eşiğini yükseltir.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü beta blokajda SA düğümde spontan depolarizasyon hızı azalır. Bu yüzden seçenek eksik kalır.",
+      "B": "Bu seçenek yalnız üçüncü ifadeyi doğru sayar; oysa beta blokajda fibrilasyon eşiği yükselir ve aritmi riski azalır. Eşiği düşürmek Sınıf II antiaritmik etkinin tersidir.",
+      "C": "Birinci ve ikinci ifade doğrudur. İletim yavaşlar, PR uzar ve SA düğümde depolarizasyon hızı azalır; üçüncü ifade yanlış olduğundan bu seçenek doğrudur.",
+      "D": "Bu seçenek üçüncü ifadeyi doğru sayar; oysa fibrilasyon eşiği beta blokajda düşmez, yükselir. Ayrıca birinci ifade de doğru olduğundan bu birleşim kabul edilemez.",
+      "E": "Üç ifadeyi birden seçmek fibrilasyon eşiğinin düştüğünü varsayar. Oysa beta blokajda eşik yükselir ve aritmi riski azalır; bu yüzden üçüncü ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q46",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "I. Akut SVT dönüşümünde IV metoprolol veya esmolol kullanılır. II. AF hız kontrolünde metoprolol veya bisoprolol kullanılır. III. Beta blokörler AV düğümde iletimi hızlandırır. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız III",
+      "C": "I ve II",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Akut SVT dönüşümünde IV metoprolol veya esmolol, AF hız kontrolünde metoprolol veya bisoprolol kullanılır. Beta blokörler AV iletimi yavaşlatır.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek yalnız birinci ifadeyi doğru sayar; ancak ikinci ifade de doğrudur, çünkü AF hız kontrolünde metoprolol veya bisoprolol kullanılır. Bu yüzden seçenek eksik kalır.",
+      "B": "Bu seçenek yalnız üçüncü ifadeyi doğru sayar; oysa beta blokörler AV düğümde iletim hızını yavaşlatır ve PR mesafesini uzatır, hızlandırmaz. Birinci ve ikinci ifade de doğrudur.",
+      "C": "Birinci ve ikinci ifade doğrudur. Üçüncü ifade yanlıştır çünkü beta blokajda AV iletim yavaşlar; bu nedenle yalnız ilk iki ifadeyi seçmek doğrudur.",
+      "D": "Bu seçenek üçüncü ifadeyi doğru sayar; oysa AV iletim beta blokajda yavaşlar. Birinci ifade de doğru olduğundan bu birleşim kabul edilemez.",
+      "E": "Üç ifadeyi birden seçmek AV iletimin hızlandığını varsayar. Beta blokörler iletimi yavaşlatır ve PR mesafesini uzatır, bu nedenle üçüncü ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Tirotoksikoz, migren ve tremorda beta blokör kullanımını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q47",
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Tirotoksik krizde ilk tercih edilen ve T4'ün T3'e dönüşümünü de inhibe eden beta blokör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Propranolol",
+      "B": "Atenolol",
+      "C": "Metoprolol",
+      "D": "Esmolol",
+      "E": "Nadolol"
+     },
+     "dogru": "A",
+     "aciklama": "Propranolol T4'ün T3'e dönüşümünü inhibe eder ve tirotoksik krizde ilk tercih edilen beta blokördür. Beta blokörler tiroid hormon sentezini etkilemez, yalnızca semptomları kontrol eder.",
+     "sik_aciklamalari": {
+      "A": "Propranolol T4'ün T3'e dönüşümünü inhibe eden ekstra bir etkiye sahiptir. Tirotoksik krizde ilk tercih edilen beta blokör olduğu için seçenek doğrudur.",
+      "B": "Atenolol hipertiroidide semptom kontrolünde kullanılabilen bir ajandır. Tirotoksik krizin ilk tercihi ve T4'ün T3'e dönüşümünü engelleyen ajan propranololdür.",
+      "C": "Metoprolol de hipertiroidide semptom kontrolünde kullanılabilir ancak T4'ün T3'e dönüşümünü inhibe etmez. Tirotoksik krizde ilk tercih edilen beta blokör propranololdür.",
+      "D": "Esmolol yalnız intravenöz kullanılan ultrakısa etkili bir ajandır. Tirotoksik kriz tedavisinin ilk tercihi olarak tanımlanmaz ve T4'ün T3'e dönüşümünü inhibe etmesiyle bilinmez.",
+      "E": "Nadolol uzun etkili hidrofilik bir ajandır ve hipertansiyon ile anjinada kullanılır. Tirotoksik krizde ilk tercih ve T4'ten T3'e dönüşümü inhibe eden ajan değildir."
+     },
+     "kanit": {
+      "sayfa": 34
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q48",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Tirotoksik kriz tedavisinde propranolole eklenen ilaç grubunu gösteren seçenek aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnız kortikosteroid ve diüretik",
+      "B": "Lugol ve verapamil",
+      "C": "PTU veya metimazol, Lugol, kortikosteroid",
+      "D": "Sülfonilüre ve insülin",
+      "E": "Fenoksibenzamin ve Lugol"
+     },
+     "dogru": "C",
+     "aciklama": "Tirotoksik krizde propranolol, PTU veya metimazol, Lugol, kortikosteroid ve destek tedavisi birlikte uygulanır. Propranolol semptomları kontrol eder.",
+     "sik_aciklamalari": {
+      "A": "Kortikosteroid tirotoksik kriz tedavisinin bir parçasıdır ancak diüretik bu protokolde yer almaz. Protokolde ayrıca antitiroid ilaç ve Lugol de gereklidir, bu nedenle bu kombinasyon eksiktir.",
+      "B": "Lugol protokolün bir parçasıdır; verapamil ise AF hız kontrolünde alternatif bir ajandır. Tirotoksik krizde antitiroid ilaç ve kortikosteroid de gerekir.",
+      "C": "Tirotoksik kriz tedavisi propranolol, PTU veya metimazol, Lugol, kortikosteroid ve destek tedavisinden oluşur. Bu üçlü protokolün propranolole eklenen bileşenlerini doğru biçimde verir.",
+      "D": "Sülfonilüre ve insülin diyabet tedavisinde kullanılır ve tirotoksik kriz protokolünün bileşeni değildir. Protokolün esası antitiroid ilaç, Lugol ve kortikosteroiddir; propranolol bunlara eşlik eder.",
+      "E": "Fenoksibenzamin feokromositoma hazırlığında kullanılan geri dönüşümsüz alfa blokördür. Tirotoksik krizde ise propranolole PTU veya metimazol, Lugol ve kortikosteroid eklenir; alfa blokör gerekmez."
+     },
+     "kanit": {
+      "sayfa": 34
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q49",
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Esansiyel tremorda birinci basamak tedavi olarak kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atenolol",
+      "B": "Doksazosin",
+      "C": "Fentolamin",
+      "D": "Propranolol",
+      "E": "Esmolol"
+     },
+     "dogru": "D",
+     "aciklama": "Esansiyel tremorda propranolol birinci basamak tedavidir; periferik β2 blokajıyla el tremoru dramatik azalır. Primidonla kombine edilebilir.",
+     "sik_aciklamalari": {
+      "A": "Atenolol hipertiroidide semptom kontrolünde kullanılabilir ancak esansiyel tremorda birinci basamak ajan olarak tanımlanmaz. Bu amaçta periferik β2 blokajı da yapan propranolol tercih edilir.",
+      "B": "Doksazosin seçici α1 blokördür ve hipertansiyon ile BPH'da kullanılır. Esansiyel tremor tedavisinde yer almaz; bu amaçta beta blokör olan propranolol birinci basamaktır.",
+      "C": "Fentolamin parenteral kullanılan geri dönüşümlü bir alfa blokördür ve hipertansif kriz gibi durumlarda yer alır. Esansiyel tremor tedavisi için tanımlanmaz.",
+      "D": "Propranolol esansiyel tremorda birinci basamak tedavidir ve periferik β2 blokajıyla el tremorunu azaltır. Bu nedenle seçenek doğrudur ve primidonla kombine edilebilir.",
+      "E": "Esmolol ultrakısa etkili intravenöz bir ajandır ve akut durumlarda kullanılır. Esansiyel tremorun uzun süreli tedavisinde tercih edilen ilaç değildir, bu amaçta propranolol kullanılır."
+     },
+     "kanit": {
+      "sayfa": 35
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q50",
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Migren profilaksisinde kullanılan beta blokörler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Propranolol ve metoprolol",
+      "B": "Atenolol ve nadolol",
+      "C": "Bisoprolol ve esmolol",
+      "D": "Betaksolol ve sotalol",
+      "E": "Karvedilol ve labetalol"
+     },
+     "dogru": "A",
+     "aciklama": "Propranolol ve metoprolol migren profilaksisinde kullanılan beta blokörlerdir. Mekanizma serebral vazodilatasyonu önleme ve serotonin modülasyonudur.",
+     "sik_aciklamalari": {
+      "A": "Propranolol ve metoprolol migren profilaksisinde kullanılan beta blokörlerdir. Serebral vazodilatasyonu önleyip serotonini modüle ettikleri için bu seçenek sorunun doğru yanıtıdır.",
+      "B": "Atenolol ve nadolol hidrofilik ajanlardır ve migren profilaksisi ajanı olarak anılmaz. Migren profilaksisinde kullanılan ikili propranolol ve metoprololdür ve ikisi de lipofildir.",
+      "C": "Bisoprolol kalp yetmezliğinde, esmolol ise akut intravenöz kullanımda öne çıkar. Migren profilaksisinde kullanılan ajanlar bunlar değil, serebral vazodilatasyonu önleyen propranolol ve metoprololdür.",
+      "D": "Betaksolol glokomda topikal kullanılan kardiyoselektif bir ajandır; sotalol ise Sınıf II ve Sınıf III etkili bir antiaritmiktir. Migren profilaksisinde kullanılan ajanlar propranolol ve metoprololdür.",
+      "E": "Karvedilol ve labetalol kombine blokördür ve kalp yetmezliği ile hipertansif acilde kullanılır. Migren profilaksisinde kullanılan ikili bunlar değil, propranolol ve metoprololdür."
+     },
+     "kanit": {
+      "sayfa": 35
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "Portal hipertansiyon ve özefagus varisi profilaksisinde beta blokörleri açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q51",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Özefagus varisi primer ve sekonder kanama profilaksisinde tercih edilen beta blokörler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atenolol veya esmolol",
+      "B": "Propranolol veya karvedilol",
+      "C": "Metoprolol veya bisoprolol",
+      "D": "Esmolol veya betaksolol",
+      "E": "Timolol veya pindolol"
+     },
+     "dogru": "B",
+     "aciklama": "Non-seçici beta blokörler portal ven basıncını düşürür. Özefagus varisi profilaksisinde propranolol veya karvedilol tercih edilir ve karvedilol daha etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Atenolol kardiyoselektif, esmolol ise yalnız intravenöz kısa etkili bir ajandır. Portal basıncı düşürerek varis kanamasını önleyen ajanlar bunlar değil, non-seçici beta blokörlerdir.",
+      "B": "Propranolol ve karvedilol portal ven basıncını düşüren non-seçici ajanlardır. Özefagus varisi kanama profilaksisinde tercih edildikleri ve karvedilol daha etkili olduğu için seçenek doğrudur.",
+      "C": "Metoprolol ve bisoprolol kardiyoselektiftir; bu amaçta non-seçici ajanlar tercih edilir. Bu ikili AF hız kontrolünde ve kalp yetmezliğinde öne çıkar.",
+      "D": "Esmolol ve betaksolol kardiyoselektif ajanlardır; betaksolol ayrıca glokomda kullanılır. Portal basınç düşürmede non-seçici ajanlar esas olduğu için bu ikili tercih edilmez.",
+      "E": "Timolol topikal olarak glokomda, pindolol ise ISA'lı bir ajan olarak hipertansiyonda kullanılır. Özefagus varisi profilaksisinde tercih edilen ajanlar değildir; bu amaçta propranolol veya karvedilol seçilir."
+     },
+     "kanit": {
+      "sayfa": 36
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Nebivolol ve sotalolün özel farmakolojik özelliklerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q52",
+     "kazanim": 21,
+     "zorluk": "zor",
+     "soru": "Sotalol ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnız β1 seçici blokaj yapar ve QT'yi kısaltır",
+      "B": "Sodyum kanal blokajı yapan Sınıf I ajandır",
+      "C": "Kombine α1 ve β blokördür",
+      "D": "Yalnız intravenöz kullanılan ultrakısa etkili ajandır",
+      "E": "Beta blokajla birlikte potasyum kanal blokajı yapar ve QT'yi uzatır"
+     },
+     "dogru": "E",
+     "aciklama": "Sotalol β1 ve β2 blokajı yapar, potasyum kanallarını da bloke eder ve QTc'yi uzatır. Bu yüzden Torsades de Pointes riski taşır.",
+     "sik_aciklamalari": {
+      "A": "Sotalol β1 ve β2 reseptörlerini bloke eder ve QT'yi kısaltmaz, uzatır. Yalnız β1 seçici olan ajanlar bisoprolol ve metoprolol gibi ilaçlardır.",
+      "B": "Sotalol Sınıf II ve Sınıf III etkiye sahiptir ve Sınıf I ajan değildir. Beta blokaj yanında potasyum kanal blokajı yaparak aksiyon potansiyeli süresini uzatır.",
+      "C": "Kombine α1 ve β blokaj karvedilol ve labetalolün özelliğidir. Sotalolün ikinci etkisi alfa blokajı değil, aksiyon potansiyeli süresini uzatan potasyum kanal blokajıdır.",
+      "D": "Yalnız intravenöz kullanılan ultrakısa etkili beta blokör esmololdür. Sotalol ise Sotacor adıyla tablet olarak bulunan ve QTc'yi uzatan bir antiaritmiktir.",
+      "E": "Sotalol hem Sınıf II beta blokaj hem Sınıf III potasyum kanal blokajı yapan antiaritmiktir. Aksiyon potansiyeli süresini ve QT'yi uzattığı için seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 39
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q53",
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "Nebivololü diğer beta blokörlerden ayıran özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Belirgin intrinsik sempatomimetik aktivite taşıması",
+      "B": "Endotel kaynaklı NO artışıyla vazodilatasyon yapması",
+      "C": "Karvedilol gibi α1 reseptörlerini de bloke etmesi",
+      "D": "Yalnızca intravenöz ve ultrakısa etkili olması",
+      "E": "Potasyum kanallarını bloke ederek QT'yi uzatması"
+     },
+     "dogru": "B",
+     "aciklama": "Nebivolol β1 seçici blokaja ek olarak endotelden NO salınımını artırır. Periferik vasküler direnç azalır ve ISA yoktur.",
+     "sik_aciklamalari": {
+      "A": "Nebivololde ISA yoktur ve membran stabilizasyonu minimaldir. ISA özelliği taşıyan beta blokörler pindolol ve asebutololdür; nebivolol ise NO aracılı vazodilatasyonuyla ayrılır.",
+      "B": "Nebivolol üçüncü kuşak, β1 seçici bir ajandır ve endotelden NO salınımını artırır. Bu vazodilatör mekanizma onu ayırdığı için seçenek doğrudur.",
+      "C": "α1 blokajı karvedilol ve labetalol gibi kombine blokörlerin özelliğidir. Nebivololü diğer beta blokörlerden ayıran özellik, endotelden NO salınımını artırarak vazodilatasyon yapmasıdır.",
+      "D": "Nebivolol oral kullanılan bir ajandır ve Lobivon 5 mg tablet olarak bulunur. Yalnız intravenöz kullanılan ajan esmololdür, bu nedenle bu özellik nebivololü ayırmaz.",
+      "E": "Potasyum kanal blokajı sotalolün Sınıf III etkisini oluşturur ve QT uzamasına yol açar. Nebivololü diğer beta blokörlerden ayıran özellik ise NO aracılı vazodilatasyondur."
+     },
+     "kanit": {
+      "sayfa": 38
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-47-adrenoseptor-antagonist-ilaclar-q54",
+     "kazanim": 21,
+     "zorluk": "zor",
+     "soru": "Sotalol kullanan hastada QTc kaç milisaniyenin üzerine çıkarsa ilaç kesilir?",
+     "secenekler": {
+      "A": "300",
+      "B": "350",
+      "C": "500",
+      "D": "400",
+      "E": "450"
+     },
+     "dogru": "C",
+     "aciklama": "Sotalolde QTc 500 ms üzerinde ise ilaç kesilir. Hipokalemi QT uzaması ve Torsades de Pointes riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "300 milisaniyelik QTc normalin altındadır ve ilacın kesilmesi için sınır değildir. Sotalolde kesme eşiği 500 milisaniyenin üzerindeki QTc değeridir ve Torsades de Pointes riskine karşı konur.",
+      "B": "350 milisaniyelik QTc ilacın kesilmesini gerektiren bir değer değildir. Sotalol, QTc 500 milisaniyeyi aşınca Torsades de Pointes riski nedeniyle kesilir.",
+      "C": "Sotalol kullanan hastada QTc 500 milisaniyeyi aşarsa ilaç kesilir. Bu eşik Torsades de Pointes riskine karşı sınır olduğu için seçenek doğrudur.",
+      "D": "400 milisaniyelik QTc bu ilaçta kesme eşiği olarak tanımlanmaz. Sotalolün kesme eşiği 500 milisaniyedir ve hipokalemi QT uzaması riskini artırarak bu eşiğe yaklaşmayı kolaylaştırır.",
+      "E": "450 milisaniye kesme eşiğinin altında kalır ve ilacın kesilmesini gerektirmez. Sotalol QTc 500 milisaniyenin üzerinde kesilir ve hipokalemi QT uzaması riskini artırır."
+     },
+     "kanit": {
+      "sayfa": 39
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  }
+ ],
+ "sira": 47,
+ "tarih": "2026-11-19",
+ "soru_sayisi": 54
+}

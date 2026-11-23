@@ -1,0 +1,1548 @@
+{
+ "id": "k2-48-lokal-anestezik-ilaclar",
+ "sira": 48,
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Lokal Anestezik İlaçlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "tarih": "2026-11-23",
+ "soru_sayisi": 53,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Lokal anestezinin tanımını, doza bağımlılığını ve klinik uygulama yöntemlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Lokal anesteziyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Etki yalnızca sinir liflerinde görülür",
+      "B": "Blok geri dönüşsüz bir etkidir",
+      "C": "Bilinç kaybı beklenen etkidir",
+      "D": "Doz arttıkça blok derinleşir",
+      "E": "Kalp kası etkilenmez"
+     },
+     "dogru": "D",
+     "aciklama": "Lokal anestezik blok doza bağımlıdır; miktar arttıkça blok derinleşir, düşük dozda ise etki geri dönüşlüdür. Bu nedenle ifade doğrudur. Bu özellik dozun klinikte ayarlanabilmesini sağlar.",
+     "sik_aciklamalari": {
+      "A": "Lokal anestezikler yalnızca sinirleri değil, kalp kası ve santral sinir sistemi dahil tüm uyarılabilir hücreleri etkiler. Bu yüzden etkinin yalnız sinir liflerinde kaldığını söylemek yanlıştır.",
+      "B": "Lokal anestezide bölgesel duyusal ileti geri dönüşlü biçimde bloke edilir ve ilacın etkisi geçince duyu yeniden gelir. Kalıcı bir blok lokal anestezinin tanımına uymaz.",
+      "C": "Lokal anestezi bilinç tamamen korunurken belirli bir bölgedeki duyusal iletiyi keser. Bilinç kaybı bölgesel ağrı kontrolünün değil, genel anestezinin sonucudur.",
+      "D": "Lokal anestezik blok doza bağımlıdır; miktar arttıkça blok derinleşir, düşük dozda ise etki geri dönüşlüdür. Bu nedenle ifade doğrudur. Bu özellik dozun klinikte ayarlanabilmesini sağlar.",
+      "E": "Lokal anestezikler kalp kası ve santral sinir sistemi dahil tüm uyarılabilir hücrelere etki eder. Bu özellik sistemik toksisitenin temelini oluşturduğundan ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q02",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Lokal anestezi uygulama yöntemleriyle ilgili aşağıdaki ifadeler veriliyor:\nI. Spinal anestezide ilaç BOS içine enjekte edilir.\nII. Epidural anestezi obstetrikte doğum ağrısı yönetiminde kullanılır.\nIII. Periferik sinir blokları ilacın yüzeyel dokuya serpilmesiyle yapılır.\nIV. İnfiltrasyon anestezisinde ilaç hedef sinir çevresine enjekte edilir.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "II ve III",
+      "D": "I, II ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Spinal anestezide ilaç BOS içine verilir ve epidural anestezi obstetrikte doğum ağrısı yönetiminde kullanılır. Üçüncü ve dördüncü öncüller yöntemleri yanlış tanımladığı için yalnızca bu ikisi doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Spinal anestezi ilacın BOS içine enjekte edildiği, alt ekstremite ve abdominal girişimlerde yaygın tercih edilen yöntemdir. Tek başına bu öncül doğrudur, ancak epidural anestezinin doğum ağrısındaki yeri de doğru olduğundan seçenek eksik kalır.",
+      "B": "Spinal anestezide ilaç BOS içine verilir ve epidural anestezi obstetrikte doğum ağrısı yönetiminde kullanılır. Üçüncü ve dördüncü öncüller yöntemleri yanlış tanımladığı için yalnızca bu ikisi doğrudur.",
+      "C": "Epidural anestezi doğum ağrısı yönetiminde ve uzun süreli postoperatif analjezide kullanılır. Periferik sinir blokları ise ilacın hedef sinir çevresine enjekte edilmesiyle yapılır, yüzeye serpilmesiyle değil; bu nedenle üçüncü öncül yanlıştır.",
+      "D": "İlk iki öncül doğrudur, fakat infiltrasyon anestezisinde ilaç hedef sinir çevresine değil doğrudan doku içine enjekte edilir. Hedef sinir çevresine enjeksiyon periferik sinir bloğunun özelliğidir.",
+      "E": "Periferik sinir bloğu hedef sinir çevresine, infiltrasyon anestezisi ise doğrudan doku içine enjeksiyonla yapılır. Üçüncü ve dördüncü öncüller yöntemlerin tanımlarını birbiriyle değiştirdiği için yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 4
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Lokal anestezikle sinir liflerinin blok sırasını ve lif çapı ilişkisini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q03",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Lokal anestezikle sinir bloğu gelişirken ilk bloke olan lif grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "C lifleri",
+      "B": "Aδ lifleri",
+      "C": "Aα lifleri",
+      "D": "Aβ lifleri",
+      "E": "B lifleri"
+     },
+     "dogru": "E",
+     "aciklama": "B lifleri otonom liflerdir ve vazomotor ile salgı fonksiyonunu yürütür. Blok selektif bir sıra izlediğinden ilk bloke olan lifler bunlardır, bu yüzden doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "C lifleri ağrı ve ısı iletiminden sorumlu duyusal liflerdir. Blokta B liflerinden sonra etkilenirler; bu liflerde blok geliştiğinde ağrı ve ısı iletimi yavaşlar.",
+      "B": "Aδ lifleri C lifleriyle birlikte ağrı ve ısı duyusunu taşır. Blok sırasında otonom B liflerinden sonra, motor liflerden önce bloke olurlar.",
+      "C": "Aα lifleri motor ve proprioseptif fonksiyonu yürüten kalın liflerdir. Blokta en son ve en geç etkilenen gruba girer; lif çapı arttıkça gereken anestezik konsantrasyonu da artar.",
+      "D": "Aβ lifleri Aα ve Aγ ile birlikte motor ve proprioseptif lifler grubundadır. Bu kalın lifler blokta en geç etkilenenlerdir, bu nedenle blok sırasının başında yer almazlar.",
+      "E": "B lifleri otonom liflerdir ve vazomotor ile salgı fonksiyonunu yürütür. Blok selektif bir sıra izlediğinden ilk bloke olan lifler bunlardır, bu yüzden doğru yanıt budur."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q04",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Lokal anestezik blok sırasıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Tüm sinir lifleri eşit hızda bloke olur.\nII. B lifleri ilk bloke olur ve vazomotor fonksiyon etkilenir.\nIII. C ve Aδ liflerinde blok ağrı ve ısı iletimini yavaşlatır.\nIV. Motor ve proprioseptif lifler en son etkilenir.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız II",
+      "B": "I ve II",
+      "C": "II, III ve IV",
+      "D": "I, II ve III",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Blok önce otonom B liflerinde, sonra ağrı ve ısıyı taşıyan C ile Aδ liflerinde, en son motor ve proprioseptif liflerde gelişir. Birinci öncül yanlış, diğer üçü doğrudur; bu nedenle bu seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "B liflerinin ilk bloke olması ve vazomotor fonksiyonun etkilenmesi doğrudur. Ancak ağrı ve ısı iletimini taşıyan C ile Aδ liflerindeki blok ve motor liflerin en son etkilenmesi de doğru olduğundan seçenek eksik kalır.",
+      "B": "Birinci öncül yanlıştır, çünkü lokal anestezikler tüm sinir liflerini eşit hızda bloke etmez ve blok selektif bir sıra izler. İkinci öncül ise doğrudur ama bu seçenek birinci öncülü içerdiği için hatalıdır.",
+      "C": "Blok önce otonom B liflerinde, sonra ağrı ve ısıyı taşıyan C ile Aδ liflerinde, en son motor ve proprioseptif liflerde gelişir. Birinci öncül yanlış, diğer üçü doğrudur; bu nedenle bu seçenek doğrudur.",
+      "D": "İkinci ve üçüncü öncüller doğrudur, ancak birinci öncül blokun eşit hızda geliştiğini söyleyerek yanlış bilgi verir. Ayrıca motor liflerin en son etkilendiğini söyleyen dördüncü öncül de atlanmıştır.",
+      "E": "Dört öncülün hepsini doğru sayan seçenek, blokun tüm liflerde eşit hızda geliştiği yanlışını da kabul eder. Oysa blok küçükten büyüğe doğru selektif bir sıra izler."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Toplam doz hesabını, epinefrin eklenmesinin etkisini ve analjezi yayılımını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Büyük yara ve kesilerde toksisite nedeniyle lokal anestezik uygulanırken aşağıdakilerden hangisine öncelikle dikkat edilmelidir?",
+     "secenekler": {
+      "A": "Yalnızca topikal ajan seçilmesi",
+      "B": "Aspirasyondan vazgeçilmesi",
+      "C": "Toplam dozun hesaplanması",
+      "D": "Vazokonstriktörün kesinlikle eklenmemesi",
+      "E": "Ester yapılı ajan tercih edilmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Büyük yara ve kesilerde toplam doz hesaplanır ve toksik eşiğin altında kalınır; bu nedenle doğru yaklaşım toplam doz hesabıdır. Her ajan için maksimum doz hesabı zorunludur.",
+     "sik_aciklamalari": {
+      "A": "Topikal ajanlar mukoza ve yüzey anestezisinde kullanılır; inflamasyonlu dokuda emilimleri ve toksisite riskleri artar. Geniş yara ve kesi için bu tek başına güvenli bir önlem değildir.",
+      "B": "Aspirasyon enjeksiyondan önce pistonun geri çekilmesidir ve intravasküler enjeksiyonu önlemenin en temel yoludur. Büyük yaralarda da bırakılmaz, çünkü kan dolaşımına karışan ilaç ciddi toksisiteye yol açar.",
+      "C": "Büyük yara ve kesilerde toplam doz hesaplanır ve toksik eşiğin altında kalınır; bu nedenle doğru yaklaşım toplam doz hesabıdır. Her ajan için maksimum doz hesabı zorunludur.",
+      "D": "Epinefrin gibi vazokonstriktörler sistemik absorpsiyonu yavaşlatır ve etki süresini uzatır. Yalnız kokain gibi kendi vazokonstriktör etkisi olan ajanlarla ek vazokonstriktör kullanılmaz.",
+      "E": "Esterler plazma esterazlarıyla hızla yıkılır ancak PABA metaboliti nedeniyle alerji riski taşır. Yara büyüklüğü ajan yapısını değil, toplam doz sınırını belirler."
+     },
+     "kanit": {
+      "sayfa": 6
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q06",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Epinefrin eklenmesi lokal anestezik etki süresini yaklaşık hangi oranda artırır?",
+     "secenekler": {
+      "A": "%50–100",
+      "B": "%10–20",
+      "C": "%110–150",
+      "D": "%200–300",
+      "E": "Değiştirmez"
+     },
+     "dogru": "A",
+     "aciklama": "Epinefrin vazokonstriksiyon yaparak ilacın bölgeden uzaklaşmasını geciktirir ve etki süresini yüzde elli ile yüz arasında artırır. Bu aralık doğru yanıttır ve epinefrinin süre uzatıcı gücünü gösterir.",
+     "sik_aciklamalari": {
+      "A": "Epinefrin vazokonstriksiyon yaparak ilacın bölgeden uzaklaşmasını geciktirir ve etki süresini yüzde elli ile yüz arasında artırır. Bu aralık doğru yanıttır ve epinefrinin süre uzatıcı gücünü gösterir.",
+      "B": "Bu oran epinefrinin süre uzatıcı etkisini olduğundan çok düşük gösterir. Vazokonstriksiyonla sağlanan uzama bunun birkaç katıdır. Gerçek artış yüzde elli ile yüz aralığındadır.",
+      "C": "Yüzde 110–150 artış, sürenin ikinin katından fazlasına çıkması demektir. Epinefrinle sağlanan uzama ise en fazla yüzde yüzdür, yani süre en çok iki kat olur. Deksametazon periferik bloklarda analjezi süresini iki katına çıkarabilen ayrı bir adjuvandır.",
+      "D": "Üç kata yaklaşan bir uzama epinefrinle sağlanmaz. Epinefrinin etkisi vazokonstriksiyonla sınırlıdır ve süreyi en fazla yaklaşık iki katına çıkarır. Doğru aralık yüzde elli ile yüzdür.",
+      "E": "Epinefrin lokal anesteziğin sistemik absorpsiyonunu yavaşlatarak etki süresini uzatır. Bu yüzden vazokonstriktör eklenmesi sürede belirgin bir değişiklik yapar. Gerçekte süre yüzde elli ile yüz arasında artar."
+     },
+     "kanit": {
+      "sayfa": 46
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Ester yapılı lokal anesteziklerin yapısal ve farmakokinetik özelliklerini sıralayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q07",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Plazma pseudokolinesterazlarıyla hızla yıkılmanın mekanizmasını oluşturan kimyasal bağ hangisidir?",
+     "secenekler": {
+      "A": "Amid bağı",
+      "B": "Keton yapısı",
+      "C": "Morfolin halkası",
+      "D": "Amino-ester bağı",
+      "E": "Kinolin halkası"
+     },
+     "dogru": "D",
+     "aciklama": "Esterlerin yapısındaki amino-ester bağı plazma pseudokolinesterazları tarafından hızla hidrolize edilir. Bu nedenle esterler karaciğer gerekmeden parçalanır ve doğru yanıt bu bağdır.",
+     "sik_aciklamalari": {
+      "A": "Amid bağı amid yapılı ajanların özelliğidir ve karaciğer mikrozomal enzimleriyle yavaş yıkılır. Plazma esterazları bu bağa etki etmez. Amidler ısı, asit ve alkaliden büyük ölçüde etkilenmez.",
+      "B": "Keton türevi yapı diklonin gibi ne ester ne amid olan bir ajana aittir. Esterlerde hızlı hidrolizi sağlayan bağ değildir. Diklonin ağız-boğaz mukozasında topikal kullanılan bir ajandır.",
+      "C": "Morfolin halkası pramoksinin yapısını oluşturur ve bu ajan ne ester ne amiddir. Esterlerin plazma esterazlarıyla yıkılmasıyla ilgisi yoktur. Pramoksin cilt ve mukozada kaşıntı ve ağrı için yüzeyel etki sağlar.",
+      "D": "Esterlerin yapısındaki amino-ester bağı plazma pseudokolinesterazları tarafından hızla hidrolize edilir. Bu nedenle esterler karaciğer gerekmeden parçalanır ve doğru yanıt bu bağdır.",
+      "E": "Kinolin halkası amid grubunda olmasına karşın klasik amidlerden ayrışan dibukainin yapısıdır. Esterlerin hidroliz özelliğini açıklamaz. Dibukain çok güçlü ve toksik bir ajandır; potensi lidokainin çok üzerindedir."
+     },
+     "kanit": {
+      "sayfa": 8
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ester yapılı lokal anesteziklerde aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Plazma pseudokolinesterazlarıyla hızlı hidroliz",
+      "B": "PABA metaboliti oluşumu",
+      "C": "Isı ve ışığa duyarlılık",
+      "D": "Alerjik reaksiyon riski",
+      "E": "Karaciğer enzimlerine bağımlı yavaş yıkım"
+     },
+     "dogru": "E",
+     "aciklama": "Karaciğer mikrozomal enzimleriyle yavaş ve kontrollü metabolizma amidlerin özelliğidir. Esterler plazma esterazlarıyla yıkıldığından bu özellik esterlerde beklenmez ve doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Esterlerin amino-ester bağı plazma pseudokolinesterazları tarafından hızla hidrolize edilir. Bu, esterlerin temel özelliğidir ve beklenen bir bulgudur. Karaciğer gerekmeksizin gerçekleşen bu yıkım esterlerde kısa etkiyle ilişkilidir.",
+      "B": "Esterler hidrolizle antijenik etkili PABA açığa çıkarır. PABA alerjik reaksiyonların tetikçisi olduğundan bu özellik esterlerde beklenir. Amidlerde ise PABA oluşmaz ve alerji çok nadirdir.",
+      "C": "Esterlerin stabilitesi düşüktür; ısı ve ışığa duyarlı oldukları için saklamada dikkat gerekir. Bu özellik esterlerde beklenen bir bulgudur. Amidler ise ısı, asit ve alkaliden büyük ölçüde etkilenmez.",
+      "D": "PABA metaboliti immün sistemi aktive ederek lokal veya sistemik alerjik reaksiyonlara yol açabilir. Alerji eğilimi amidlere kıyasla esterlerde çok daha fazladır.",
+      "E": "Karaciğer mikrozomal enzimleriyle yavaş ve kontrollü metabolizma amidlerin özelliğidir. Esterler plazma esterazlarıyla yıkıldığından bu özellik esterlerde beklenmez ve doğru yanıttır."
+     },
+     "kanit": {
+      "sayfa": 8
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Kokainin geri alım inhibisyonunu, vazokonstriktör etkisini ve topikal kullanımını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q09",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Adrenalin ve noradrenalinin geri alımını inhibe eden tek lokal anestezik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lidokain",
+      "B": "Kokain",
+      "C": "Prokain",
+      "D": "Mepivakain",
+      "E": "Benzokain"
+     },
+     "dogru": "B",
+     "aciklama": "Kokain adrenalin ve noradrenalinin geri alımını engelleyen tek lokal anesteziktir. Bu etkisi doğal vazokonstriksiyon sağladığından burun-boğaz cerrahisinde kullanılır; doğru yanıt kokaindir.",
+     "sik_aciklamalari": {
+      "A": "Lidokain altın standart kabul edilen, geniş endikasyonlu bir amid lokal anesteziktir. Katekolamin geri alımını engellemez; vazokonstriktör eklendiğinde etki süresi 2,5 saate çıkar.",
+      "B": "Kokain adrenalin ve noradrenalinin geri alımını engelleyen tek lokal anesteziktir. Bu etkisi doğal vazokonstriksiyon sağladığından burun-boğaz cerrahisinde kullanılır; doğru yanıt kokaindir.",
+      "C": "Prokain potens değeri 1 kabul edilen referans esterdir ve temel olarak infiltrasyonda kullanılır. Katekolamin geri alımına etki eden bir özelliği yoktur.",
+      "D": "Mepivakainin intrinsik vazokonstriksiyon özelliği vardır ve epinefrinsiz kullanılabilir. Ancak katekolamin geri alımını engelleyen tek lokal anestezik kokaindir; bu yüzden mepivakain doğru yanıt değildir.",
+      "E": "Benzokain suda çözünürlüğü çok düşük PABA türevi bir esterdir ve yalnızca topikal kullanılır. Katekolamin geri alımını engellemez. Methemoglobinemi riski ise yüksek dozlarda bu ajanın tanınan sorunudur."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kokainle birlikte ek epinefrin kullanılmasının sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etki süresinin güvenle uzaması",
+      "B": "Hipertansif kriz riskinin artması",
+      "C": "Kanamanın artması",
+      "D": "Alerjik reaksiyonların önlenmesi",
+      "E": "Plazma esteraz aktivitesinin artması"
+     },
+     "dogru": "B",
+     "aciklama": "Kokain adrenalin ve noradrenalin geri alımını engellediğinden zaten güçlü bir vazokonstriktör etki yapar. Ek epinefrin hipertansif kriz ve kardiyak komplikasyon riskini artırdığı için doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Epinefrin diğer lokal anesteziklerde süreyi güvenle uzatır. Kokainde ise ek vazokonstriktör gerekmez ve eklenmesi tehlikelidir. Epinefrinli kombinasyon hipertansif kriz ve kardiyak komplikasyon riskini artırır.",
+      "B": "Kokain adrenalin ve noradrenalin geri alımını engellediğinden zaten güçlü bir vazokonstriktör etki yapar. Ek epinefrin hipertansif kriz ve kardiyak komplikasyon riskini artırdığı için doğru yanıt budur.",
+      "C": "Kokain kendi vazokonstriksiyonuyla kanamayı azaltır ve cerrahi sahayı temiz tutar. Ek epinefrin bu avantajı artırmaz, yalnızca kardiyovasküler riski yükseltir. Bu nedenle kanama artışı beklenmez.",
+      "D": "Alerjik reaksiyonlar esterlerin PABA metabolitiyle ilgilidir ve epinefrin eklenmesi bunu önlemez. Kokainde ek epinefrin güvenlik sorunu doğurur. Epinefrinin böyle bir koruyucu etkisi tanımlanmamıştır.",
+      "E": "Epinefrin plazma esteraz aktivitesini artırmaz; yalnızca vazokonstriksiyonla emilimi yavaşlatır. Kokainle birlikte kullanımında ise amaç dışı kardiyak risk ortaya çıkar. Esteraz aktivitesi bu etkileşimde rol oynamaz."
+     },
+     "kanit": {
+      "sayfa": 35
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q11",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kokainle ilgili aşağıdakilerden hangisi söylenemez?",
+     "secenekler": {
+      "A": "Tarihin ilk lokal anesteziğidir",
+      "B": "Burun-boğaz cerrahisinde topikal kullanılır",
+      "C": "Spinal anestezide standart ajandır",
+      "D": "Kendi başına vazokonstriktör etki gösterir",
+      "E": "Kötüye kullanım potansiyeli nedeniyle sınırlı kullanılır"
+     },
+     "dogru": "C",
+     "aciklama": "Kokain yalnızca topikal, özellikle ORL cerrahisinde kullanılır. Spinal anestezide standart ajan olan tetrakaindir; bu nedenle ifade söylenemez ve doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Kokain 1884'te Koller tarafından göz cerrahisinde kullanılmış ve lokal anestezinin kapılarını açmıştır. İfade doğrudur, bu yüzden aranan olumsuz seçenek değildir.",
+      "B": "Kokain sempatomimetik etkisiyle burun-boğaz cerrahisinde doğal vazokonstriktör sağlar ve yalnızca topikal kullanılır. İfade doğrudur. Kokainin başlıca kullanım alanı bu cerrahidir, bu yüzden ifade soruda yanıt olamaz.",
+      "C": "Kokain yalnızca topikal, özellikle ORL cerrahisinde kullanılır. Spinal anestezide standart ajan olan tetrakaindir; bu nedenle ifade söylenemez ve doğru yanıttır.",
+      "D": "Kokain tek başına vazokonstriktör etki gösteren lokal anesteziktir. Bu özellik cerrahi sahayı temiz tutarken ek vazokonstriktör kullanımını tehlikeli kılar. Ek epinefrin hipertansif kriz riskini artırır.",
+      "E": "Kokainin güncel kullanımı kötüye kullanım potansiyeli nedeniyle çok sınırlıdır. İfade doğrudur. Kokain yalnızca topikal ve özellikle ORL cerrahisinde kullanılır, enjeksiyonla kullanılmaz."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Prokainin referans potensini, etki süresini ve kullanım alanını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q12",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Prokainin potens değeri 1 kabul edildiğinde lidokain, bupivakain ve tetrakainin potens değerleri sırasıyla yaklaşık kaçtır?",
+     "secenekler": {
+      "A": "2, 8 ve 10",
+      "B": "1, 4 ve 6",
+      "C": "4, 2 ve 10",
+      "D": "8, 2 ve 10",
+      "E": "10, 8 ve 2"
+     },
+     "dogru": "A",
+     "aciklama": "Prokain potens değeri 1 kabul edilen referans ajandır. Lidokain yaklaşık 2, bupivakain yaklaşık 8, tetrakain yaklaşık 10 potens gösterir; sıralama doğru olduğundan seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Prokain potens değeri 1 kabul edilen referans ajandır. Lidokain yaklaşık 2, bupivakain yaklaşık 8, tetrakain yaklaşık 10 potens gösterir; sıralama doğru olduğundan seçenek doğrudur.",
+      "B": "Bu değerler lidokainin potensini prokaine eşit, diğer ajanları ise olduğundan düşük gösterir. Lidokain prokainin iki katı güçtedir. Prokain tüm değerlerin kıyaslandığı referans olduğundan yalnızca 1 değerini alır.",
+      "C": "Lidokain ile bupivakainin değerleri yer değiştirmiş durumdadır. Bupivakainin potensi yaklaşık 8 iken lidokainin yaklaşık 2'dir. Lidokain ile bupivakainin yerini doğru kurmak sıralamayı belirler.",
+      "D": "Bu seçenek lidokain ile bupivakain değerlerini ters yazar. Lidokain yaklaşık 2, bupivakain yaklaşık 8 potens gösterir. Bupivakain lidokainden dört kat daha güçlüdür.",
+      "E": "Sıralama tersine çevrilmiştir. Tetrakain en güçlü esterdir ve potensi yaklaşık 10'dur; lidokain ise yaklaşık 2'dir. Bu nedenle sıra tersine çevrilmiş olup doğru dizilim 2, 8 ve 10 olmalıdır."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q13",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Prokain günümüzde temel olarak hangi uygulamada kullanılır?",
+     "secenekler": {
+      "A": "Spinal anestezi",
+      "B": "Doğum epiduralı",
+      "C": "Göz yüzeyi anestezisi",
+      "D": "İnfiltrasyon anestezisi",
+      "E": "Periferik sinir bloğu"
+     },
+     "dogru": "D",
+     "aciklama": "Prokain düşük potensi nedeniyle günümüzde temel olarak yalnızca infiltrasyon anestezisinde ve eğitim amaçlı referans olarak kullanılır. Doğru yanıt infiltrasyon anestezisidir.",
+     "sik_aciklamalari": {
+      "A": "Spinal anestezide tetrakain standart ajandır; sık tercih de bupivakaine kaymıştır. Prokainin bu alandaki yeri günümüzde kalmamıştır. Prokain günümüzde yalnız infiltrasyon ve eğitim amaçlı referansta kalmıştır.",
+      "B": "Doğum epiduralinde uzun etki ve düşük motor blok sağlayan bupivakain tercih edilir. Prokain epidural kullanımda öne çıkmaz. Prokainin düşük potensi bu tür uzun uygulamalar için yetersizdir.",
+      "C": "Göz ve konjonktiva işlemlerinde tetrakain ve proparakain damla olarak kullanılır. Prokain bu alanın ajanı değildir. Prokainin kullanımı ise yalnızca infiltrasyon anestezisinde sürmektedir.",
+      "D": "Prokain düşük potensi nedeniyle günümüzde temel olarak yalnızca infiltrasyon anestezisinde ve eğitim amaçlı referans olarak kullanılır. Doğru yanıt infiltrasyon anestezisidir.",
+      "E": "Daha güçlü alternatifler olan lidokain ve bupivakain klinikte öne geçmiştir. Prokain sinir bloklarında günümüzde pek tercih edilmez. Prokainin kalan kullanım alanı infiltrasyon anestezisidir."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q14",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Prokain ve tetrakainle ilgili aşağıdaki ifadeler veriliyor:\nI. Prokainin potens değeri 1 kabul edilir.\nII. Tetrakain prokaine kıyasla 10 kat daha güçlü ve 10 kat daha toksiktir.\nIII. Birlikte kullanıldığında toplam doz hesabında yalnızca prokainin maksimum dozu esas alınır.\nIV. Tetrakain uzun süre boyunca yoğun blok sürdürür.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "I ve II",
+      "C": "II ve III",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Prokain referans potens değeridir, tetrakain prokainden 10 kat güçlü ve toksiktir ve uzun süre yoğun blok sürdürür. Üçüncü öncül yanlıştır, çünkü kombinasyonda iki ajanın maksimum dozları ayrı ayrı dikkate alınır; bu nedenle seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Prokain referans potens değeridir, tetrakain prokainden 10 kat güçlü ve toksiktir ve uzun süre yoğun blok sürdürür. Üçüncü öncül yanlıştır, çünkü kombinasyonda iki ajanın maksimum dozları ayrı ayrı dikkate alınır; bu nedenle seçenek doğrudur.",
+      "B": "İlk iki öncül doğrudur. Ancak tetrakainin uzun süre yoğun blok sürdürmesini söyleyen dördüncü öncül de doğru olduğundan bu seçenek eksik kalır.",
+      "C": "Tetrakainin prokainden 10 kat güçlü ve toksik olması doğrudur. Üçüncü öncül ise yanlıştır, çünkü toplam doz hesabında her iki ajanın maksimum dozu ayrı ayrı gözetilir.",
+      "D": "Dördüncü öncül doğrudur, ancak üçüncü öncül toplam doz hesabında yalnız prokaini esas aldığı için yanlıştır. Her iki ajanın maksimum dozu ayrı ayrı dikkate alınmalıdır.",
+      "E": "Dört öncülün hepsini doğru sayan seçenek üçüncü öncülün yanlışını kabul eder. Kombinasyonlarda yalnız prokainin değil, iki ajanın da maksimum dozu hesaba katılır."
+     },
+     "kanit": {
+      "sayfa": [
+       10,
+       12,
+       25
+      ]
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Klorprokainin farmakolojisini, doz aralıklarını ve ilaç etkileşimini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q15",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Prokainin modifiye hali olan ve özellikle epidural anestezide yoğun kullanılan ester aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tetrakain",
+      "B": "Benzokain",
+      "C": "Kokain",
+      "D": "Artikain",
+      "E": "Klorprokain"
+     },
+     "dogru": "E",
+     "aciklama": "Klorprokain prokain yapısında yapılan kimyasal değişikliklerle elde edilir; daha hızlı başlangıç sağlar ve epidural anestezide yoğun kullanılır. Doğru yanıt klorprokaindir.",
+     "sik_aciklamalari": {
+      "A": "Tetrakain spinal anestezinin güçlü adayıdır ve prokainden 10 kat güçlü ve toksiktir. Prokainin modifiye hali olarak değil, ayrı bir güçlü ester olarak bilinir.",
+      "B": "Benzokain suda çözünürlüğü çok düşük PABA türevi bir esterdir ve yalnızca topikal kullanılır. Epidural anestezide yer almaz. Bu ajanın etki alanı sprey, jel ve pastil gibi yüzeysel formlarla sınırlıdır.",
+      "C": "Kokain tarihin ilk lokal anesteziğidir ve yalnızca topikal kullanılır. Prokainin türevi değildir. Epidural anestezide yoğun kullanılan ajan ise prokainin değiştirilmiş hali olan klorprokaindir.",
+      "D": "Artikain hem kanda hem karaciğerde metabolize edilen bir amiddir ve diş hekimliğinde tercih edilir. Prokainin modifiye hali değildir. Ayrıca kanda plazma esterazlarıyla da yıkılır.",
+      "E": "Klorprokain prokain yapısında yapılan kimyasal değişikliklerle elde edilir; daha hızlı başlangıç sağlar ve epidural anestezide yoğun kullanılır. Doğru yanıt klorprokaindir."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q16",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Klorprokainin kaudal ve epidural uygulamada kullanılan konsantrasyonu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "%2–3",
+      "B": "%0,25",
+      "C": "%1–2",
+      "D": "%4–10",
+      "E": "%0,5–1"
+     },
+     "dogru": "A",
+     "aciklama": "Klorprokain daha derin blok gerektiren kaudal ve epidural uygulamalarda yüzde iki ile üç konsantrasyonda kullanılır. Doğru yanıt bu aralıktır. Daha yüksek konsantrasyon daha derin blok sağlar.",
+     "sik_aciklamalari": {
+      "A": "Klorprokain daha derin blok gerektiren kaudal ve epidural uygulamalarda yüzde iki ile üç konsantrasyonda kullanılır. Doğru yanıt bu aralıktır. Daha yüksek konsantrasyon daha derin blok sağlar.",
+      "B": "Bu düşük konsantrasyon doğum epiduralinde tercih edilen bupivakainin değeridir. Klorprokain için kullanılan aralık bundan çok yüksektir. Klorprokain için kaudal ve epidural aralık yüzde iki ile üçtür.",
+      "C": "Bu aralık klorprokainin infiltrasyon ve sinir bloğundaki konsantrasyonudur. Kaudal ve epidural uygulamada daha derin blok için daha yüksek konsantrasyon gerekir.",
+      "D": "Bu aralık ORL cerrahisinde topikal kullanılan kokainin konsantrasyonudur. Klorprokainle ilgisi yoktur. Klorprokain kaudal ve epiduralde yüzde iki ile üç konsantrasyonda, daha derin blok için kullanılır.",
+      "E": "Bu aralık spinal anestezide kullanılan tetrakain solüsyonunun konsantrasyonudur. Klorprokainin epidural aralığı değildir. Klorprokain ise kaudal ve epiduralde yüzde iki ile üç konsantrasyonda, daha derin blok için kullanılır."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q17",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Klorprokain ile birlikte ya da ardışık uygulandığında analjezik ve anestezik etkisi zayıflayabilen ilaçlar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lidokain ve mepivakain",
+      "B": "Bupivakain ve opioidler",
+      "C": "Epinefrin ve deksametazon",
+      "D": "Prokain ve tetrakain",
+      "E": "Benzokain ve prilokain"
+     },
+     "dogru": "B",
+     "aciklama": "Klorprokain bupivakain ve opioidlerle birlikte verildiğinde bu ilaçların analjezik ve anestezik etkisini belirgin biçimde zayıflatabilir. Olası mekanizma lokal pH değişimi veya reseptör kompetisyonudur; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Lidokain ve mepivakain orta hızda metabolize edilen amidlerdir. Klorprokainle etkisini kaybettikleri bilinen ilaçlar değildir. Etkileşim uyarısı bu ikili için değil bupivakain ve opioidler için yapılmıştır.",
+      "B": "Klorprokain bupivakain ve opioidlerle birlikte verildiğinde bu ilaçların analjezik ve anestezik etkisini belirgin biçimde zayıflatabilir. Olası mekanizma lokal pH değişimi veya reseptör kompetisyonudur; doğru yanıt budur.",
+      "C": "Epinefrin ve deksametazon lokal anestezik bloğu uzatan adjuvanlardır. Klorprokainin etkisini zayıflattığı ilaçlar olarak tanımlanmaz. Klorprokainle etkileşimi uyarılan ilaçlar ise bupivakain ve opioidlerdir.",
+      "D": "Prokain ve tetrakain da ester grubundandır; uzun girişimlerde birlikte kullanılabilirler. Klorprokainle etkileşim bu ikili için bildirilen bir sorun değildir. Etkileşimden etkilenen ilaçlar bupivakain ve opioidlerdir.",
+      "E": "Benzokain ve prilokain methemoglobinemi riski taşıyan ajanlardır. Klorprokainle etkileşimleri bu risk üzerinden tanımlanmaz. Bu etkileşim lokal pH değişimi veya reseptör kompetisyonuyla açıklanır ve bupivakain ile opioidleri ilgilendirir."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Tetrakainin potensini, etki süresini ve kardiyak risk profilini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q18",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Spinal anestezide standart ajan olarak kullanılan ve prokainden 10 kat daha güçlü ester aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prokain",
+      "B": "Klorprokain",
+      "C": "Tetrakain",
+      "D": "Kokain",
+      "E": "Benzokain"
+     },
+     "dogru": "C",
+     "aciklama": "Tetrakain prokaine kıyasla 10 kat daha güçlü ve 10 kat daha toksiktir, spinal anestezide standart ajan olarak kullanılır. Doğru yanıt tetrakaindir.",
+     "sik_aciklamalari": {
+      "A": "Prokain potens değeri 1 kabul edilen referans ajandır. Kendi gücü kıyas noktası olduğundan prokainden daha güçlü olamaz. Spinalde bu referans değil, ondan 10 kat güçlü tetrakain standart ajandır.",
+      "B": "Klorprokain prokainin modifiye halidir, hızlı başlar ve epidural anestezide yoğun kullanılır. Spinalin standart ajanı değildir. Spinalin standart ajanı ise güçlü bir ester olan tetrakaindir.",
+      "C": "Tetrakain prokaine kıyasla 10 kat daha güçlü ve 10 kat daha toksiktir, spinal anestezide standart ajan olarak kullanılır. Doğru yanıt tetrakaindir.",
+      "D": "Kokain yalnızca topikal, özellikle ORL cerrahisinde kullanılan ilk lokal anesteziktir. Spinal anestezide kullanılmaz. Kokainin yeri topikal ORL cerrahisidir; spinal anestezi için tetrakain tercih edilir.",
+      "E": "Benzokain suda çözünürlüğü çok düşük olduğundan yalnızca topikal kullanılır. Spinal anestezi için uygun bir ajan değildir. Bu ajan sprey, jel ve pastil gibi yüzeysel formlarda kalır."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q19",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Tetrakainin etki süresinin uzun olması hangi mekanizmayla açıklanır?",
+     "secenekler": {
+      "A": "Karaciğerde hızlı metabolize edilmesi",
+      "B": "Lipid emülsiyonla kandan çekilmesi",
+      "C": "Kolinesteraz ile yavaş parçalanması",
+      "D": "Methemoglobin oluşturması",
+      "E": "%95 protein bağlanması"
+     },
+     "dogru": "C",
+     "aciklama": "Tetrakain kolinesteraz tarafından yavaşça parçalanır ve bu nedenle etki süresi 2–3 saate uzar. Doğru yanıt yavaş hidrolizdir. Yıkım yavaş olduğu için süre uzar ve toksik birikime dikkat gerekir.",
+     "sik_aciklamalari": {
+      "A": "Hızlı karaciğer metabolizması etki süresini kısaltır. Tetrakain bir esterdir ve karaciğerde değil, kolinesterazla yavaşça yıkılır. Bu nedenle ifade tetrakainin uzun etki süresini açıklamaz ve yanlıştır.",
+      "B": "Lipid emülsiyon lokal anestezik sistemik toksisitesinin tedavisinde kullanılır ve lipofil molekülleri kandan çeker. Etki süresini uzatan bir özellik değildir. Bu etki tedaviye aittir.",
+      "C": "Tetrakain kolinesteraz tarafından yavaşça parçalanır ve bu nedenle etki süresi 2–3 saate uzar. Doğru yanıt yavaş hidrolizdir. Yıkım yavaş olduğu için süre uzar ve toksik birikime dikkat gerekir.",
+      "D": "Methemoglobinemi benzokain ve prilokainin riskidir. Tetrakainin etki süresiyle ilgisi yoktur. Bu risk yüksek dozlarda ve özellikle çocuklarda daha belirgin biçimde ortaya çıkar.",
+      "E": "Yüzde 95 protein bağlanması bupivakainin uzun etki süresini açıklayan özelliğidir. Tetrakainde uzun etki yavaş hidrolizden kaynaklanır. Yüksek protein bağlanması ve uzun etki bir arada bupivakainde bulunur."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q20",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Tetrakainle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yüksek sistemik dozda kardiyak asistol yapabilir",
+      "B": "Vazokonstriktörle etki süresi daha da uzar",
+      "C": "Spinal boşlukta etkisi emilimle sınırlanır",
+      "D": "Hızla hidrolize olduğundan birikim yapmaz",
+      "E": "Böbreklerden atılır"
+     },
+     "dogru": "D",
+     "aciklama": "Tetrakain kolinesteraz ile yavaş parçalandığı ve böbreklerden atıldığı için toksik birikime dikkat edilmesi gerekir. İfade yanlıştır ve doğru yanıttır. Hızlı hidroliz klorprokainin özelliğidir.",
+     "sik_aciklamalari": {
+      "A": "Tetrakain miyokartta sodyum kanallarını bloke ederek ventriküler fibrilasyon ve kalp durması yapabilir. İfade doğrudur. Bu nedenle IV enjeksiyondan kaçınılmalı ve kardiyak monitorizasyon sağlanmalıdır.",
+      "B": "Tetrakain zaten uzun etkilidir; epinefrin eklenmesi süreyi daha da uzatarak klinik planlamada esneklik sağlar. İfade doğrudur. Vazokonstriktörsüz kullanımda spinalde etki süresi 2–3 saattir.",
+      "C": "Spinal boşlukta esteraz bulunmadığından tetrakainin etkisi emilimle sınırlı kalır. İfade doğrudur. Bu nedenle etkinin sonlanması boşluktan sistemik dolaşıma geçişe bağlıdır ve ifade yanlış değildir.",
+      "D": "Tetrakain kolinesteraz ile yavaş parçalandığı ve böbreklerden atıldığı için toksik birikime dikkat edilmesi gerekir. İfade yanlıştır ve doğru yanıttır. Hızlı hidroliz klorprokainin özelliğidir.",
+      "E": "Tetrakain böbreklerden atılır ve yavaş hidroliz nedeniyle toksik birikime dikkat edilmelidir. İfade doğrudur. Yavaş atılım ve yavaş hidroliz birikim riskini artırır; bu yüzden ifade yanlış değildir."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Esterlerde hidroliz hızının etki süresi ve toksisiteyle ilişkisini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q21",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Esterlerde hidroliz hızı arttıkça sistemik toksisite potansiyeli ve stabil kalma süresi nasıl değişir?",
+     "secenekler": {
+      "A": "İkisi de artar",
+      "B": "Toksisite artar, stabilite azalır",
+      "C": "Toksisite azalır, stabilite artar",
+      "D": "İkisi de değişmez",
+      "E": "İkisi de azalır"
+     },
+     "dogru": "E",
+     "aciklama": "Hızlı hidroliz kısa etki süresi ve düşük sistemik birikim riski sağlar. Bu nedenle hidroliz hızı yükseldikçe hem toksisite potansiyeli hem stabil kalma süresi azalır; seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Hidroliz hızının artması ilacın hızla parçalanması demektir. Hızlı parçalanan bir ajanın toksisitesi ve stabil kalma süresi artmaz, azalır. Artış yavaş hidrolizde görülür.",
+      "B": "Hızlı hidroliz sistemik birikimi azalttığı için toksisite potansiyeli de düşer. Toksisitenin artması yavaş hidrolizde, örneğin tetrakainde görülür. Bu nedenle iki özelliğin zıt yönde değiştiği iddiası doğru değildir.",
+      "C": "Toksisitenin azalması doğrudur, ancak hızlı hidroliz stabil kalma süresini de kısaltır. Stabilitenin artması yavaş yıkılan ajanlara özgüdür. Hızlı hidrolizde ikisi birlikte azalır.",
+      "D": "Hidroliz hızı etki süresini ve sistemik toksisite riskini doğrudan belirler. Bu yüzden hız değiştiğinde bu iki özellik de değişir. Bu iki özellik hız arttıkça birlikte azalır.",
+      "E": "Hızlı hidroliz kısa etki süresi ve düşük sistemik birikim riski sağlar. Bu nedenle hidroliz hızı yükseldikçe hem toksisite potansiyeli hem stabil kalma süresi azalır; seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 13
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q22",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Plazma pseudokolinesteraz aktivitesinin genetik olarak eksik olduğu hastalarda ester yapılı lokal anestezikler nasıl etki gösterir?",
+     "secenekler": {
+      "A": "Daha kısa ve daha az toksik",
+      "B": "Etkisiz kalır",
+      "C": "Yalnızca alerjik etki gösterir",
+      "D": "Daha uzun ve daha toksik",
+      "E": "Amidlerle aynı sürede etkilenir"
+     },
+     "dogru": "D",
+     "aciklama": "Esterler plazma pseudokolinesterazlarıyla hidrolize edildiğinden bu enzimin eksikliğinde yıkım yavaşlar. Sonuçta tüm esterler daha uzun ve daha toksik etki gösterebilir; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Enzim eksikliği yıkımı hızlandırmaz, yavaşlatır. Yıkım yavaşlayınca etki süresi uzar ve toksisite potansiyeli artar. Pseudokolinesteraz eksikliğinde tüm esterler bu nedenle daha uzun ve daha toksik etki gösterir.",
+      "B": "Esterler plazma pseudokolinesterazlarıyla yıkılır; enzim eksik olduğunda yıkım yavaşlar. Sonuçta ilaç etkisiz kalmaz, tersine daha uzun ve daha toksik etki gösterebilir.",
+      "C": "Alerji ester metabolitinin PABA olmasıyla ilgilidir ve enzim eksikliğiyle doğrudan ilişkili değildir. Enzim eksikliğinin asıl sonucu uzamış ve daha toksik etkidir.",
+      "D": "Esterler plazma pseudokolinesterazlarıyla hidrolize edildiğinden bu enzimin eksikliğinde yıkım yavaşlar. Sonuçta tüm esterler daha uzun ve daha toksik etki gösterebilir; doğru yanıt budur.",
+      "E": "Amidler karaciğer mikrozomal enzimleriyle yıkılır ve plazma esterazlarına bağımlı değildir. Bu nedenle pseudokolinesteraz eksikliği yalnızca esterlerin etkisini değiştirir. Bu durum amid yapılı ajanların süresini değiştirmez."
+     },
+     "kanit": {
+      "sayfa": 20
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Esterlerin düşük stabilite ve PABA alerjisi dezavantajlarını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q23",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Esterlerde alerjik reaksiyonlardan sorumlu metabolit aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pikrik asit",
+      "B": "Para-aminobenzoik asit",
+      "C": "Substans P",
+      "D": "Methemoglobin",
+      "E": "Pseudokolinesteraz"
+     },
+     "dogru": "B",
+     "aciklama": "Esterler hidrolizle antijenik etkili para-aminobenzoik asit, yani PABA açığa çıkarır. Bu metabolit immün sistemi aktive ederek lokal veya sistemik alerjik reaksiyonlara yol açar; doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Pikrik asit butamben pikratın tuz bileşenidir ve duyarlılaşma ile irritasyon riskiyle ilişkilidir. Esterlerin hidrolizinde ortaya çıkan alerjenik metabolit değildir. Pikrat nedeniyle duyarlılaşma riski butamben pikrata özgüdür.",
+      "B": "Esterler hidrolizle antijenik etkili para-aminobenzoik asit, yani PABA açığa çıkarır. Bu metabolit immün sistemi aktive ederek lokal veya sistemik alerjik reaksiyonlara yol açar; doğru yanıttır.",
+      "C": "Substans P nöropeptittir ve kapsaisin ile tükenmesi desensitizasyon sağlar. Esterlerin alerji metaboliti olarak tanımlanmaz. Kapsaisin başlangıçta yanma hissi yapar ve nöropatik ağrıda kullanılır.",
+      "D": "Methemoglobin benzokain ve prilokain gibi ajanların yol açtığı kan bulgusudur. Esterlerin alerji tetikleyicisi değildir. Alerjik reaksiyonlar ise esterlerin hidrolizinde açığa çıkan PABA ile ilişkilidir.",
+      "E": "Pseudokolinesteraz esterleri hidrolize eden plazma enzimidir. Alerji yapan metabolit değil, yıkımı sağlayan enzimdir. Alerji ise enzimin değil, hidroliz sonucunda açığa çıkan metabolitin sonucudur."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q24",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "PABA alerjisi ya da anafilaksi öyküsü olan bir hastada lokal anestezik seçerken hangi grup tercih edilmelidir?",
+     "secenekler": {
+      "A": "Ester yapılı ajanlar",
+      "B": "Yalnızca kokain",
+      "C": "Yalnızca benzokain",
+      "D": "Yalnızca tetrakain",
+      "E": "Amid yapılı ajanlar"
+     },
+     "dogru": "E",
+     "aciklama": "Amidler PABA metaboliti oluşturmaz ve alerjik reaksiyonlar oldukça nadirdir. Bu nedenle PABA alerjisi veya anafilaksi öyküsü olan hastada amid tercih edilir; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Esterler hidrolizle PABA açığa çıkarır ve anafilaksi dahil ciddi alerjik reaksiyonlara yol açabilir. Alerji öyküsünde bu grup tercih edilmez. Bu yüzden anafilaksi öyküsünde amid yapılı ajan seçilir.",
+      "B": "Kokain bir esterdir ve esterlerin alerji riskini taşır. Üstelik güncel kullanımı topikal ORL cerrahisiyle sınırlıdır. PABA alerjisinde bu ajan da güvenli bir seçenek sayılmaz.",
+      "C": "Benzokain PABA türevi bir esterdir ve alerji öyküsünde en uygunsuz seçeneklerden biridir. Ayrıca yüksek dozda methemoglobinemi riski taşır. Bu iki risk birlikte seçimi olumsuz etkiler.",
+      "D": "Tetrakain ester grubundandır ve PABA kaynaklı alerji riski taşır. Alerji öyküsü olan hastada amid grubu seçilmelidir. Spinal anestezide kullanılan bu güçlü ester kardiyak risk de taşır.",
+      "E": "Amidler PABA metaboliti oluşturmaz ve alerjik reaksiyonlar oldukça nadirdir. Bu nedenle PABA alerjisi veya anafilaksi öyküsü olan hastada amid tercih edilir; doğru yanıt budur."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Amid yapılı lokal anesteziklerin avantajlarını ve ester grubundan farkını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q25",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Amid yapılı lokal anesteziklerin 1940'lardan itibaren klinik uygulamaya girmesi, esterlerdeki hangi sorunların sonucudur?",
+     "secenekler": {
+      "A": "Esterlerin çok uzun etki süresi",
+      "B": "Esterlerin kısıtlı stabilitesi ve alerji potansiyeli",
+      "C": "Esterlerin karaciğer toksisitesi",
+      "D": "Esterlerin spinal anestezide güvenilir olması",
+      "E": "Amidlerin plazma esterazlarıyla yıkılması"
+     },
+     "dogru": "B",
+     "aciklama": "Esterlerin ısı ve ışığa duyarlılığı ile PABA kaynaklı alerji potansiyeli fark edilince 1940'lardan itibaren amid yapılı ajanlar klinik sahneye çıktı. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Esterlerin sorunu etki süresinin uzunluğu değildir. Klorprokain gibi esterler hızlı yıkılır; asıl sorun stabilite ve alerjidir. Esterlerin hızlı hidrolizi aksine kısa etkiyle ilişkilidir.",
+      "B": "Esterlerin ısı ve ışığa duyarlılığı ile PABA kaynaklı alerji potansiyeli fark edilince 1940'lardan itibaren amid yapılı ajanlar klinik sahneye çıktı. Doğru yanıt budur.",
+      "C": "Esterler karaciğere gereksinmeden plazma esterazlarıyla yıkılır. Bu yüzden karaciğer toksisitesi amidlerin öne çıkma nedeni olamaz. Esterlerin sorunları düşük stabilite ve PABA alerjisidir.",
+      "D": "Esterlerin spinal anestezide güvenilir olduğu doğru değildir; BOS'ta esteraz bulunmadığından etkileri yalnızca vasküler emilimle sonlanır. 1940'lardan itibaren amidlerin öne çıkmasının gerekçesi ise esterlerin düşük stabilitesi ve PABA alerjisidir.",
+      "E": "Amidler plazma esterazlarına bağımlı değildir; karaciğer mikrozomal enzimleriyle yavaş ve kontrollü metabolize edilir. Bu ifade amidlerin özelliğini ters aktarır. Gelişmeyi tetikleyen bu özellik değildir."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Lidokain ve mepivakainin özelliklerini ve klinik kullanımlarını karşılaştırabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q26",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Lidokaine vazokonstriktör eklendiğinde etki süresi yaklaşık ne kadara çıkar?",
+     "secenekler": {
+      "A": "20 dakika",
+      "B": "45 dakika",
+      "C": "2,5 saat",
+      "D": "6 saat",
+      "E": "72 saat"
+     },
+     "dogru": "C",
+     "aciklama": "Lidokain birkaç dakikada etkili blok oluşturur ve vazokonstriktör eklenmesiyle etki süresi 2,5 saate çıkar. Doğru yanıt bu süredir. Bu değer vazokonstriktörün süre uzatıcı etkisini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Yirmi dakika, prokainin vazokonstriktörsüz süresine yakın bir değerdir. Lidokain vazokonstriktörle bundan çok daha uzun etki gösterir. Bu süre lidokainin vazokonstriktörlü etkisini yansıtmaz.",
+      "B": "Kırk beş dakika klorprokainin yaklaşık etki süresidir. Lidokainin vazokonstriktörle uzayan süresi daha uzundur. Epinefrin lidokainin etki süresini saatlere uzatır ve bu değeri aşar.",
+      "C": "Lidokain birkaç dakikada etkili blok oluşturur ve vazokonstriktör eklenmesiyle etki süresi 2,5 saate çıkar. Doğru yanıt bu süredir. Bu değer vazokonstriktörün süre uzatıcı etkisini gösterir.",
+      "D": "Altı saat lidokain için tanımlanmış bir süre değildir. Vazokonstriktörle uzayan süre 2,5 saattir. Epinefrinle sağlanan uzama bu kadar fazla değildir ve 2,5 saat civarında kalır.",
+      "E": "Yetmiş iki saate varan analjezi lipozomal bupivakain gibi uzatılmış etkili formülasyonlarla sağlanır. Lidokainin süresi bununla kıyaslanamaz. Lidokain bu süreye ulaşan bir ajan değildir."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q27",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "Lidokainle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Isıya duyarlı olduğundan autoklavlanamaz",
+      "B": "Etkisi bir saatten sonra başlar",
+      "C": "IV olarak ventriküler aritmileri tedavi eder",
+      "D": "Plazma esterazlarıyla yıkılır",
+      "E": "PABA metaboliti oluşturur"
+     },
+     "dogru": "C",
+     "aciklama": "Lidokain intravenöz olarak ventriküler aritmilerin tedavisinde de kullanılır; bu, lokal anestezi dışındaki önemli bir kullanımıdır. Isı, asit ve alkaliden etkilenmediği için autoklavlanabilir; ifade doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Lidokain ısı, asit ve alkalilerden etkilenmez ve autoklavlanabilir. Isı ve ışığa duyarlılık esterlerin özelliğidir. Bu dayanıklılık lidokainin klinik kullanımda sağladığı önemli bir üstünlüktür.",
+      "B": "Lidokain doku içinde hızlı yayılır ve birkaç dakikada etkili blok oluşturur. Geç başlangıç ona özgü değildir. Hızlı başlangıç lidokainin başlıca özelliklerindendir.",
+      "C": "Lidokain intravenöz olarak ventriküler aritmilerin tedavisinde de kullanılır; bu, lokal anestezi dışındaki önemli bir kullanımıdır. Isı, asit ve alkaliden etkilenmediği için autoklavlanabilir; ifade doğrudur.",
+      "D": "Lidokain amid yapılıdır ve karaciğerde orta hızda metabolize edilir. Plazma esterazlarıyla yıkım esterlerin özelliğidir. Amid ajanlar plazma esterazlarına bağımlı olmayan, karaciğer enzimleriyle yıkılan ajanlardır.",
+      "E": "Amidler PABA metaboliti oluşturmaz ve alerjileri çok nadirdir. PABA esterlerin hidrolizinde ortaya çıkar. Bu nedenle lidokainde alerjik reaksiyon çok nadirdir."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q28",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Mepivakainle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tekrarlayan dozlarda birikmez",
+      "B": "Plasentadan geçmez",
+      "C": "Ester yapılıdır",
+      "D": "Epinefrin gerektirmeden kullanılabilir",
+      "E": "Doğumda ilk tercih edilir"
+     },
+     "dogru": "D",
+     "aciklama": "Mepivakainin intrinsik vazokonstriksiyon özelliği vardır; bu yüzden epinefrin eklenmeden kullanılabilir. İfade doğrudur. Mepivakain bu özelliğiyle lidokainden ayrılan, epinefrine gereksinim duymayan bir amiddir.",
+     "sik_aciklamalari": {
+      "A": "Mepivakain tekrarlanan dozlarda birikme eğilimi gösterir ve karaciğer kapasitesi aşılabilir. Birikmeme iddiası yanlıştır. Bu yüzden tekrarlayan uygulamalarda karaciğer kapasitesi gözetilerek dikkatli olunmalıdır.",
+      "B": "Mepivakain plasentadan geçer ve fetüste birikim yapabilir. Bu yüzden doğumda dikkatli kullanılmalıdır. Doğumda bu özellik fetüs açısından ayrı bir dikkat gerektirir ve ifade yanlıştır.",
+      "C": "Mepivakain lidokainin yapısal benzeridir ve amid grubundadır. Ester yapılı bir ajan değildir. Lidokainle benzer potens ve başlangıç hızına sahip olması da bu yapıyla uyumludur.",
+      "D": "Mepivakainin intrinsik vazokonstriksiyon özelliği vardır; bu yüzden epinefrin eklenmeden kullanılabilir. İfade doğrudur. Mepivakain bu özelliğiyle lidokainden ayrılan, epinefrine gereksinim duymayan bir amiddir.",
+      "E": "Plasentadan geçip fetüste birikebildiği için mepivakain doğumda dikkatli kullanılması gereken bir ajandır. İlk tercih sayılmaz. Gebelikte bupivakain ve ropivakain gibi ajanların tercih edildiği bilinir."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Bupivakainin uzun etkisini, protein bağlanmasını ve kardiyotoksisitesini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q29",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Bupivakainin etki süresinin uzun olması hangi mekanizmayla açıklanır?",
+     "secenekler": {
+      "A": "Plazma esterazlarıyla hızlı yıkım",
+      "B": "Düşük potens",
+      "C": "İntrinsik vazokonstriksiyon",
+      "D": "Çok hızlı hidroliz",
+      "E": "%95 protein bağlanması"
+     },
+     "dogru": "E",
+     "aciklama": "Bupivakain plazma proteinlerine yüzde 95 oranında bağlanır ve bu durum uzun etki süresinin temel açıklamasıdır. Doğru yanıt budur. Bu özellik bupivakainin uzun etkisini açıklayan temel unsurdur.",
+     "sik_aciklamalari": {
+      "A": "Plazma esterazlarıyla hızlı yıkım esterlerin özelliğidir ve etki süresini kısaltır. Bupivakain bir amiddir. Uzun etkinin nedeni bu yıkım değil, yüksek protein bağlanmasıdır.",
+      "B": "Bupivakainin potensi yaklaşık 8'dir; yani prokainin 8 katı güçtedir. Düşük potens uzun etkiyi açıklayamaz. Aksine bupivakain güçlü ve uzun etkili bir amiddir.",
+      "C": "İntrinsik vazokonstriksiyon özelliği mepivakainde tanımlanmıştır. Bupivakainin uzun etkisi protein bağlanmasına dayanır. Bu özellik epinefrin gerektirmeden kullanıma olanak tanır, bupivakainin uzun etkisini açıklamaz.",
+      "D": "Hızlı hidroliz kısa etki süresi sağlar. Bupivakain amid olduğu için hidrolizle değil karaciğerde yavaşça yıkılır. Aslında bupivakain en yavaş yıkılan amid olup uzun etkisi buna da uyar.",
+      "E": "Bupivakain plazma proteinlerine yüzde 95 oranında bağlanır ve bu durum uzun etki süresinin temel açıklamasıdır. Doğru yanıt budur. Bu özellik bupivakainin uzun etkisini açıklayan temel unsurdur."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q30",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Bupivakainin intravasküler enjeksiyonunda aşağıdaki sorunlardan hangisi öncelikle beklenir?",
+     "secenekler": {
+      "A": "Methemoglobinemi",
+      "B": "Arachnoidit",
+      "C": "Hipertansif kriz",
+      "D": "Kardiyak arrest",
+      "E": "PABA alerjisi"
+     },
+     "dogru": "D",
+     "aciklama": "Bupivakainin intravasküler enjeksiyonunda kardiyak arrest riski yüksektir ve ventriküler aritmi görülür. Bu nedenle IV enjeksiyondan kesinlikle kaçınılır; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Methemoglobinemi riski benzokain ve prilokain için tanımlanmıştır. Bupivakainin ana tehlikesi kardiyotoksisitedir. Bupivakain enjeksiyonunda ise intravasküler sızma kardiyak arrest riski taşır ve aspirasyon zorunludur.",
+      "B": "Arachnoidit riski klorprokainin yüksek konsantrasyonlarda intratekal kullanımında bildirilmiştir. Bupivakain enjeksiyonunun öncelikli riski değildir. Bupivakain intravasküler verildiğinde asıl tehlike kalp üzerinde ortaya çıkan ventriküler aritmidir.",
+      "C": "Hipertansif kriz kokaine ek epinefrin eklenmesiyle ilişkilidir. Bupivakainde beklenen sorun kardiyak toksisitedir. Bupivakainin intravasküler sızması ventriküler aritmi ve kardiyak arrest riski doğurur.",
+      "D": "Bupivakainin intravasküler enjeksiyonunda kardiyak arrest riski yüksektir ve ventriküler aritmi görülür. Bu nedenle IV enjeksiyondan kesinlikle kaçınılır; doğru yanıt budur.",
+      "E": "PABA alerjisi esterlerin metabolitiyle ilgilidir. Bupivakain amid olduğundan alerji çok nadirdir. Bupivakainin asıl tehlikesi, damar içine sızdığında ortaya çıkan ventriküler aritmi ve kardiyak arresttir."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Topikal lokal anestezinin kullanım alanlarını ve topikal ile enjeksiyon farkını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q31",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Oftalmolojik işlemlerden önce göz ve konjonktivada damla olarak kullanılan ajanlar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kokain ve lidokain",
+      "B": "Tetrakain ve proparakain",
+      "C": "Benzokain ve prilokain",
+      "D": "Bupivakain ve ropivakain",
+      "E": "Artikain ve mepivakain"
+     },
+     "dogru": "B",
+     "aciklama": "Göz ve konjonktivada tetrakain ve proparakain oftalmolojik işlemler öncesi damla olarak uygulanır. Doğru yanıt bu ikilidir. Her ikisi de ester yapılı topikal ajanlardır.",
+     "sik_aciklamalari": {
+      "A": "Kokain ve lidokain burun-boğaz hazırlığında endoskopi ve cerrahi öncesi sprey olarak kullanılır. Göz damlası olarak tanımlanmaz. Bu ikili ORL hazırlığında mukozadan hızlı emilerek etki gösterir.",
+      "B": "Göz ve konjonktivada tetrakain ve proparakain oftalmolojik işlemler öncesi damla olarak uygulanır. Doğru yanıt bu ikilidir. Her ikisi de ester yapılı topikal ajanlardır.",
+      "C": "Benzokain ağız içinde jel olarak, prilokain ise EMLA içinde deri anestezisinde kullanılır. Göz damlası değildir. Her iki ajan da methemoglobinemi riski taşıdığı için özellikle çocuklarda dikkat gerektirir.",
+      "D": "Bupivakain ve ropivakain spinal ve epidural anestezide yaygın seçilen amidlerdir. Göz yüzeyi damlası değildir. Bu iki amid uzun etkili bloklar için tercih edilir.",
+      "E": "Artikain diş hekimliği, mepivakain ise infiltrasyon ve bloklarda kullanılan amidlerdir. Göz damlası olarak kullanılmazlar. Mepivakain ayrıca intrinsik vazokonstriksiyon özelliğiyle epinefrinsiz kullanılabilir."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Spinal ve epidural anestezide ajan seçimini ve BOS'ta esteraz yokluğunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q32",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "İntratekal uygulamada ester ajanların etkisinin yalnızca vasküler emilimle sonlanmasını hangi mekanizma açıklar?",
+     "secenekler": {
+      "A": "BOS'un asidik olması",
+      "B": "Yüksek protein bağlanması",
+      "C": "Karaciğer metabolizmasının yavaşlığı",
+      "D": "Düşük lipofilite",
+      "E": "BOS'ta esteraz bulunmaması"
+     },
+     "dogru": "E",
+     "aciklama": "Esterleri parçalayan esteraz BOS'ta bulunmaz; bu yüzden ester ajanların etkisi yalnızca vasküler emilimle sonlanır. Doğru yanıt budur ve amidler bu nedenle tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "BOS pH'sının bu etkide rolü tanımlanmamıştır. Asidik ortam iltihaplı dokuda iyonize fraksiyonu artırarak blok yetersizliğine yol açar, bununla ilgisi yoktur.",
+      "B": "Yüksek protein bağlanması etki süresini uzatır ve bupivakainin özelliğidir. Esterlerin BOS'ta emilimle sonlanmasını açıklamaz. Bupivakainin yüzde 95 protein bağlanması uzun etkisini açıklar.",
+      "C": "Karaciğer metabolizması amidlerin yıkım yoludur. Esterler karaciğere gereksinmeden plazma esterazlarıyla yıkılır. BOS'ta esterlerin yıkımını belirleyen etken ise esteraz yokluğudur ve bu durum amidleri öne çıkarır.",
+      "D": "Lipofilite blokun gücünü ve süresini etkiler, ancak esterlerin BOS'ta emilimle sonlanmasının nedeni esteraz yokluğudur. Esteraz yokluğu amidlerin tercih edilmesini de açıklar.",
+      "E": "Esterleri parçalayan esteraz BOS'ta bulunmaz; bu yüzden ester ajanların etkisi yalnızca vasküler emilimle sonlanır. Doğru yanıt budur ve amidler bu nedenle tercih edilir."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Artikainin metabolizmasını ve amidlerin metabolizma hızı sıralamasını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q33",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Hem kanda hem karaciğerde metabolize edilen ve bu nedenle diğer amidlere kıyasla daha kısa yarı ömürlü olan amid aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bupivakain",
+      "B": "Mepivakain",
+      "C": "Artikain",
+      "D": "Lidokain",
+      "E": "Dibukain"
+     },
+     "dogru": "C",
+     "aciklama": "Artikain hem kanda plazma esterazlarıyla hem karaciğerde metabolize edilir ve bu çift yol yarı ömrü kısaltır. Mükemmel doku penetrasyonuyla diş hekimliğinde sık kullanılır; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Bupivakain en yavaş yıkılan amiddir; uzun etki ve yüksek toksisite riski taşır. Kısa yarı ömürlü bir ajan değildir. Bu yüzden kısa yarı ömür özelliği bupivakaine uymaz.",
+      "B": "Mepivakain orta hızda metabolize edilir ve tekrarlayan dozlarda birikme eğilimi gösterir. Kanda ek bir yıkım yoluna sahip değildir. Bu nedenle artikainin çift yıkım yolu mepivakainde bulunmaz.",
+      "C": "Artikain hem kanda plazma esterazlarıyla hem karaciğerde metabolize edilir ve bu çift yol yarı ömrü kısaltır. Mükemmel doku penetrasyonuyla diş hekimliğinde sık kullanılır; doğru yanıt budur.",
+      "D": "Lidokain orta hızda metabolize edilen altın standart bir amiddir. Kanda ek yıkım yolu tanımlanmamıştır. Hem kanda hem karaciğerde yıkım artikainin ayırt edici özelliğidir.",
+      "E": "Dibukain kinolin türevi, çok güçlü ve toksik bir ajandır. Kısa yarı ömrüyle bilinmez. Amid grubunda olsa da kanda ek yıkım yolu tanımlanmamıştır."
+     },
+     "kanit": {
+      "sayfa": 37
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q34",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Amid yapılı ajanlar metabolizma hızına göre en hızlıdan en yavaşa doğru aşağıdakilerden hangisinde doğru sıralanmıştır?",
+     "secenekler": {
+      "A": "Bupivakain, lidokain, prilokain",
+      "B": "Prilokain, lidokain, bupivakain",
+      "C": "Lidokain, prilokain, bupivakain",
+      "D": "Mepivakain, bupivakain, prilokain",
+      "E": "Prilokain, bupivakain, lidokain"
+     },
+     "dogru": "B",
+     "aciklama": "Prilokain en hızlı yıkılan amiddir, lidokain ve mepivakain orta hızda metabolize edilir ve bupivakain en yavaş yıkılandır. Sıralama doğrudur. Prilokain hızlı yıkımına karşın methemoglobinemi riski taşır.",
+     "sik_aciklamalari": {
+      "A": "Bu sıralama tam tersidir. Bupivakain en yavaş yıkılan amiddir ve uzun etki ile yüksek toksisite riski taşır. En hızlı yıkılan amid ise prilokaindir.",
+      "B": "Prilokain en hızlı yıkılan amiddir, lidokain ve mepivakain orta hızda metabolize edilir ve bupivakain en yavaş yıkılandır. Sıralama doğrudur. Prilokain hızlı yıkımına karşın methemoglobinemi riski taşır.",
+      "C": "Lidokain orta hızdadır; en hızlı yıkılan amid prilokaindir. Sıralamanın başı bu nedenle yanlıştır. Lidokain ve mepivakain orta hızda, bupivakain ise en yavaş yıkılır.",
+      "D": "Bu sıralama prilokainin en hızlı yıkıldığı bilgisini bozar. Prilokain en hızlı, bupivakain en yavaş yıkılan amiddir. Mepivakain ise lidokain gibi orta hızda metabolize edilir.",
+      "E": "Prilokain başta doğrudur, ancak bupivakain lidokaine göre daha yavaş yıkılır ve sıralamanın sonunda yer alır. Lidokain orta hızda yıkılan bir amiddir ve bupivakainden önce gelir."
+     },
+     "kanit": {
+      "sayfa": 38
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q35",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Karaciğer yetmezliği olan hastalarda amid yapılı lokal anesteziklerle ilgili aşağıdaki ifadeler veriliyor:\nI. Amidlerin karaciğer kapasitesine bağımlılığı görece kontrendikasyon oluşturabilir.\nII. Doz azaltımı ve yakın monitorizasyon gerekir.\nIII. Amid grubu ilaçlarda %20–50 doz azaltımı önerilir.\nIV. Amidler karaciğerden bağımsız olarak plazma esterazlarıyla yıkılır.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Amidlerin karaciğer kapasitesine bağımlılığı görece kontrendikasyon oluşturur; doz azaltımı ve yakın monitorizasyon gerekir ve %20–50 azaltım önerilir. Dördüncü öncül yanlıştır, çünkü amidler karaciğer mikrozomal enzimleriyle yıkılır. Bu nedenle seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Amidlerin karaciğer kapasitesine bağımlılığı görece kontrendikasyon oluşturur; doz azaltımı ve yakın monitorizasyon gerekir ve %20–50 azaltım önerilir. Dördüncü öncül yanlıştır, çünkü amidler karaciğer mikrozomal enzimleriyle yıkılır. Bu nedenle seçenek doğrudur.",
+      "B": "İlk iki öncül doğrudur. Ancak amid grubunda yüzde yirmi ile elli doz azaltımı önerildiğini söyleyen üçüncü öncül de doğru olduğundan bu seçenek eksik kalır.",
+      "C": "Doz azaltımı ve monitorizasyon gereklidir, fakat amidler plazma esterazlarıyla değil karaciğer mikrozomal enzimleriyle yıkılır. Dördüncü öncül yanlıştır. Üçüncü öncül de doğrudur ve bu seçenekte eksiktir.",
+      "D": "Yüzde yirmi ile elli doz azaltımı doğrudur. Dördüncü öncül ise amidlerin yıkımını plazma esterazlarına bağladığı için yanlıştır. Birinci ve ikinci öncüller de doğru olduğundan bu seçenek eksik ve hatalıdır.",
+      "E": "Dört öncülü de kabul eden seçenek, amidlerin plazma esterazlarıyla yıkıldığı hatasını da onaylar. Amidler karaciğerde metabolize edilir. Dördüncü öncül yanlıştır, bu yüzden seçenek geçersizdir."
+     },
+     "kanit": {
+      "sayfa": [
+       38,
+       50
+      ]
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Sistemik toksisite belirtilerini, aspirasyonu ve test dozunun önemini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q36",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Lokal anestezik sistemik toksisitesinde en erken görülen belirtiler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kardiyak arrest",
+      "B": "Konvülsiyon",
+      "C": "Metalik tat ve perioral uyuşma",
+      "D": "Solunum depresyonu",
+      "E": "Bilinç kaybı"
+     },
+     "dogru": "C",
+     "aciklama": "Sistemik toksisite önce metalik tat, perioral uyuşma, huzursuzluk ve tinnitus gibi nöronal belirtilerle başlar. Doğru yanıt bu erken belirtilerdir. Huzursuzluk ve tinnitus da bu erken tabloya eşlik eder.",
+     "sik_aciklamalari": {
+      "A": "Kardiyak arrest toksisitenin geç ve ağır sonucudur; özellikle bupivakainle görülür. Erken belirti değildir. Toksisite ilerlediğinde ventriküler aritmi ve arrest ortaya çıkar, ilk belirti ise nöronaldir.",
+      "B": "Konvülsiyonlar toksisite ilerleyince gelişen ilerleyici tablonun parçasıdır. İlk belirti değildir. Önce metalik tat, perioral uyuşma, huzursuzluk ve tinnitus gibi hafif nöronal belirtiler ortaya çıkar.",
+      "C": "Sistemik toksisite önce metalik tat, perioral uyuşma, huzursuzluk ve tinnitus gibi nöronal belirtilerle başlar. Doğru yanıt bu erken belirtilerdir. Huzursuzluk ve tinnitus da bu erken tabloya eşlik eder.",
+      "D": "Solunum depresyonu konvülsiyon ve bilinç kaybıyla birlikte görülen ilerleyici tablonun bulgusudur. Bu bulgu ilk değil, ilerlemiş toksisitede görülür ve önce hafif nöronal belirtiler başlar.",
+      "E": "Bilinç kaybı nöronal belirtilerin ilerlemesiyle ortaya çıkar. Erken belirti sayılmaz. Bu bulgu konvülsiyonlarla birlikte, ilerlemiş toksisitenin göstergesi olarak ve hafif belirtilerden sonra görülür."
+     },
+     "kanit": {
+      "sayfa": 39
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q37",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Epidural kateter yerleştirildikten sonra damar içi konumu doğrulamak için hangi uygulama yapılır?",
+     "secenekler": {
+      "A": "Lipid emülsiyon bolusu",
+      "B": "Sodyum bikarbonat infüzyonu",
+      "C": "Magnezyum bolusu",
+      "D": "Epinefrinli test dozu",
+      "E": "Deksmedetomidin infüzyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Epidural kateter yerleştirme sonrası epinefrinli test dozu verilerek damar içi pozisyon doğrulanır. Doğru yanıt budur. Bu uygulama özellikle epidural kateterlerde güvenlik amacıyla yapılır.",
+     "sik_aciklamalari": {
+      "A": "Lipid emülsiyon lokal anestezik sistemik toksisitesinin tedavisinde kullanılır. Kateter konumunu doğrulamaz. Tedavi, erken ve yeterli dozda uygulandığında hayat kurtarıcıdır ve her sette hazır bulunmalıdır.",
+      "B": "Sodyum bikarbonat pH'ı yükselterek başlangıcı hızlandıran bir adjuvandır. Damar içi konum testi değildir. Bu etkisiyle onset hızlanır ancak kateter konumu hakkında bilgi vermez.",
+      "C": "Magnezyum NMDA blokajıyla postoperatif ağrıyı modüle eden bir adjuvandır. Kateter doğrulamasında kullanılmaz. Opioid ihtiyacını azaltan bu ajan, kateterin damar içinde olup olmadığı hakkında bilgi vermez.",
+      "D": "Epidural kateter yerleştirme sonrası epinefrinli test dozu verilerek damar içi pozisyon doğrulanır. Doğru yanıt budur. Bu uygulama özellikle epidural kateterlerde güvenlik amacıyla yapılır.",
+      "E": "Deksmedetomidin alfa-2 agonisttir ve blok süresini uzatır. Kateter konumunu belirleme amacıyla verilmez. Sedatif katkı ve hemodinamik stabilite sağlar ancak damar içi konumu göstermez."
+     },
+     "kanit": {
+      "sayfa": 40
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Benzokain ve dibukainin yapısal özelliklerini ve klinik önemini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q38",
+     "kazanim": 18,
+     "zorluk": "kolay",
+     "soru": "Suda çözünürlüğü son derece düşük olan, PABA türevi ve yalnızca topikal kullanılan ester aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Prokain",
+      "B": "Tetrakain",
+      "C": "Dibukain",
+      "D": "Prilokain",
+      "E": "Benzokain"
+     },
+     "dogru": "E",
+     "aciklama": "Benzokain suda çözünürlüğü son derece düşük PABA türevi bir esterdir. Bu nedenle yalnızca topikal uygulanır; sprey, jel ve pastil formları vardır ve doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Prokain infiltrasyonda kullanılan referans esterdir; benzokain gibi yalnızca topikal değildir. Potens değeri 1 kabul edilir ve diğer ajanlar onunla karşılaştırılır. Suda çözünürlüğü çok düşük PABA türevi olan benzokain ise yalnızca topikal uygulanır.",
+      "B": "Tetrakain spinal anestezide standart ajan olarak kullanılan güçlü bir esterdir. Yalnızca topikal değildir. Spinalde %0,5–1, gözde %0,5 solüsyon olarak kullanılan bu ester çok daha geniş uygulanır.",
+      "C": "Dibukain amid grubunda yer alan, kinolin türevi güçlü bir ajandır. PABA türevi bir ester değildir. Dibukain sayısı ise pseudokolinesteraz aktivitesini ölçen tanısal testtir.",
+      "D": "Prilokain en hızlı yıkılan amiddir ve EMLA içinde yer alır. Ester değil amiddir. Methemoglobinemi riski taşır ve PABA türevi bir ester değildir.",
+      "E": "Benzokain suda çözünürlüğü son derece düşük PABA türevi bir esterdir. Bu nedenle yalnızca topikal uygulanır; sprey, jel ve pastil formları vardır ve doğru yanıttır."
+     },
+     "kanit": {
+      "sayfa": 42
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q39",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Dibukain sayısı aşağıdakilerden hangisini ölçen tanısal testtir?",
+     "secenekler": {
+      "A": "Pseudokolinesteraz enzim aktivitesi",
+      "B": "Plazma pH düzeyi",
+      "C": "Methemoglobin düzeyi",
+      "D": "Karaciğer enzim kapasitesi",
+      "E": "Kan lipid düzeyi"
+     },
+     "dogru": "A",
+     "aciklama": "Dibukain sayısı pseudokolinesteraz enzim aktivitesini ölçen tanısal testtir ve süksinilkolin duyarlılığını belirler. Doğru yanıt budur. Bu özelliğiyle dibukain amid grubunda yer almasına karşın tanısal testle anılan benzersiz bir ajandır.",
+     "sik_aciklamalari": {
+      "A": "Dibukain sayısı pseudokolinesteraz enzim aktivitesini ölçen tanısal testtir ve süksinilkolin duyarlılığını belirler. Doğru yanıt budur. Bu özelliğiyle dibukain amid grubunda yer almasına karşın tanısal testle anılan benzersiz bir ajandır.",
+      "B": "Plazma pH'ı dibukain sayısıyla ölçülmez. Dibukain amid grubunda yer alan çok güçlü bir ajandır ve bu testle enzim aktivitesi değerlendirilir.",
+      "C": "Methemoglobin düzeyi benzokain ve prilokain gibi ajanların riskiyle ilgilidir. Dibukain sayısı bunu ölçmez. Bu testle ölçülen parametre, plazmadaki pseudokolinesteraz enzim aktivitesidir.",
+      "D": "Dibukain sayısı karaciğer mikrozomal enzimlerini değil, plazmadaki pseudokolinesteraz aktivitesini ölçer. Test, süksinilkolin duyarlılığını belirleyen ve plazmada bulunan enzimin etkinliğini değerlendirir.",
+      "E": "Kan lipid düzeyi lipid emülsiyon tedavisiyle ilgili kavramdır. Dibukain sayısıyla ilişkisi yoktur. Lipid emülsiyon lokal anestezik toksisitesinde tedavi amacıyla kullanılır; test amacıyla değil."
+     },
+     "kanit": {
+      "sayfa": 43
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "EMLA karışımının bileşimini, ötektik özelliğini ve kullanım alanını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q40",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "EMLA kremi ötektik bir karışım olduğu için aşağıdaki özelliklerden hangisine sahiptir?",
+     "secenekler": {
+      "A": "Yalnızca sistemik yolla etki eder",
+      "B": "Ester grubundan iki ajan içerir",
+      "C": "Methemoglobinemi riski taşımaz",
+      "D": "Oda sıcaklığında sıvı kalır ve derinin penetrasyonu maksimumdur",
+      "E": "Bileşenlerden daha yüksek erime noktasına sahiptir"
+     },
+     "dogru": "D",
+     "aciklama": "EMLA her iki ajanın tek başına erime noktasından daha düşük bir erime noktasına sahip ötektik bir karışımdır. Bu nedenle oda sıcaklığında sıvı kalır ve deri penetrasyonu maksimumdur; doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "EMLA topikal uygulanan, deri yüzeyi için tasarlanmış bir karışımdır. Etkisi ötektik yapı sayesinde deri penetrasyonuna dayanır. Ötektik yapı deriden emilimi kolaylaştırdığı için çocuklarda damar yolu öncesi tercih edilir.",
+      "B": "EMLA %2,5 lidokain ve %2,5 prilokain içerir ve her ikisi de amid grubundandır. Ester içermez. Bu bileşim EMLA kremini iki amidin ötektik karışımı yapar.",
+      "C": "Prilokain kaynaklı methemoglobinemi riski vardır ve 3 aydan küçüklerde dikkatli kullanılmalıdır. EMLA bu riskten muaf değildir. Bu risk karışımdaki prilokain bileşeninden kaynaklanır ve çocuklarda önemlidir.",
+      "D": "EMLA her iki ajanın tek başına erime noktasından daha düşük bir erime noktasına sahip ötektik bir karışımdır. Bu nedenle oda sıcaklığında sıvı kalır ve deri penetrasyonu maksimumdur; doğru yanıttır.",
+      "E": "Ötektik karışımın erime noktası, tek başına kullanılan her iki ajanın erime noktasından daha düşüktür. Bu özellik karışımı oda sıcaklığında sıvı tutar."
+     },
+     "kanit": {
+      "sayfa": 44
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "İdeal lokal anestezik ölçütlerini ve adjuvanların etkilerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q41",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Sodyum bikarbonatın lokal anestezik bloğun başlama süresini kısaltması hangi mekanizmayla gerçekleşir?",
+     "secenekler": {
+      "A": "İyonize fraksiyonu artırması",
+      "B": "İyonize olmayan fraksiyonu artırması",
+      "C": "Vazokonstriksiyon oluşturması",
+      "D": "NMDA reseptörünü bloke etmesi",
+      "E": "Alfa-2 reseptörünü uyarması"
+     },
+     "dogru": "B",
+     "aciklama": "Sodyum bikarbonat pH'ı yükselterek iyonize olmayan fraksiyonu artırır; zardan geçen bu nötr form arttığı için onset hızlanır. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "İyonize fraksiyon artarsa zarı geçen nötr form azalır ve blok yetersizliği ortaya çıkar; bu iltihaplı asidik dokunun sorunudur. Bikarbonat bunun tersini yapar.",
+      "B": "Sodyum bikarbonat pH'ı yükselterek iyonize olmayan fraksiyonu artırır; zardan geçen bu nötr form arttığı için onset hızlanır. Doğru yanıt budur.",
+      "C": "Vazokonstriksiyon epinefrinin etkisidir ve süreyi uzatır. Bikarbonatın etkisi pH üzerinden başlangıcı hızlandırmaktır. Bikarbonat ise pH'ı yükselterek iyonize olmayan fraksiyonu artırır ve onset'i hızlandırır.",
+      "D": "NMDA reseptör blokajı magnezyumun etkisidir ve postoperatif ağrıyı modüle eder. Bikarbonatın mekanizması bu değildir. Bikarbonatın etkisi ise pH'ı yükselterek iyonize olmayan fraksiyonu artırmasına dayanır.",
+      "E": "Alfa-2 adrenerjik agonizma deksmedetomidinin etkisidir ve bloğun süresini uzatır. Bikarbonatın başlama süresini kısaltmasını açıklamaz. Bikarbonat reseptör üzerinden değil, pH değişimiyle etki eder."
+     },
+     "kanit": {
+      "sayfa": 46
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q42",
+     "kazanim": 20,
+     "zorluk": "zor",
+     "soru": "Adjuvanlarla ilgili aşağıdaki ifadeler veriliyor:\nI. Deksmedetomidin alfa-2 agonisttir ve sinir bloğu süresini uzatır.\nII. Magnezyum NMDA reseptör blokajıyla opioid ihtiyacını azaltır.\nIII. Deksametazon periferik bloklarda analjezi süresini yarıya düşürür.\nIV. Sodyum bikarbonat iyonize fraksiyonu artırarak onset'i hızlandırır.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "Yalnız I",
+      "C": "I, II ve III",
+      "D": "II ve IV",
+      "E": "I, II ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Deksmedetomidin alfa-2 agonisttir ve blok süresini uzatır; magnezyum NMDA blokajıyla opioid ihtiyacını azaltır. Üçüncü ve dördüncü öncüller yanlıştır, bu yüzden bu seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Deksmedetomidin alfa-2 agonisttir ve blok süresini uzatır; magnezyum NMDA blokajıyla opioid ihtiyacını azaltır. Üçüncü ve dördüncü öncüller yanlıştır, bu yüzden bu seçenek doğrudur.",
+      "B": "Deksmedetomidin için verilen bilgi doğrudur. Magnezyumun NMDA blokajı ve opioid tasarrufu da doğru olduğundan seçenek eksik kalır. Deksmedetomidin sedatif katkı ve hemodinamik stabilite de sağlar.",
+      "C": "Deksametazon periferik bloklarda analjezi süresini yarıya düşürmez, iki katına çıkarabilir. Bu nedenle üçüncü öncül yanlıştır. Deksametazonun gerçek etkisi analjezi süresini uzatmaktır.",
+      "D": "Magnezyum öncülü doğrudur ancak bikarbonat iyonize olmayan fraksiyonu artırır, iyonize fraksiyonu değil. Ayrıca deksmedetomidin öncülü de doğrudur. Bu yüzden bikarbonat öncülü yanlıştır.",
+      "E": "Dördüncü öncül yanlıştır; sodyum bikarbonat pH'ı yükselterek iyonize olmayan fraksiyonu artırır. İyonize fraksiyonu artırmak onset'i hızlandırmaz. Bu nedenle bu seçenek hatalıdır."
+     },
+     "kanit": {
+      "sayfa": [
+       46,
+       47
+      ]
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "LAST belirtilerini ve lipid emülsiyon tedavisini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q43",
+     "kazanim": 21,
+     "zorluk": "zor",
+     "soru": "Lokal anestezik sistemik toksisitesinde uygulanan lipid emülsiyon tedavisinin doz şeması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "%20 emülsiyon, 1,5 mL/kg bolus ve 0,25 mL/kg/dk infüzyon",
+      "B": "%20 emülsiyon, 0,25 mL/kg bolus ve 1,5 mL/kg/dk infüzyon",
+      "C": "%20 emülsiyon, 1,5 mL/kg bolus ve 2,5 mL/kg/dk infüzyon",
+      "D": "%20 emülsiyon, 15 mL/kg bolus ve 0,25 mL/kg/dk infüzyon",
+      "E": "%2 emülsiyon, 1,5 mL/kg bolus ve 0,25 mL/kg/dk infüzyon"
+     },
+     "dogru": "A",
+     "aciklama": "ASRA protokolünde yüzde yirmi lipid emülsiyon 1,5 mL/kg intravenöz bolus olarak verilir. Ardından 0,25 mL/kg/dk infüzyon sürdürülür ve doğru yanıt bu şemadır.",
+     "sik_aciklamalari": {
+      "A": "ASRA protokolünde yüzde yirmi lipid emülsiyon 1,5 mL/kg intravenöz bolus olarak verilir. Ardından 0,25 mL/kg/dk infüzyon sürdürülür ve doğru yanıt bu şemadır.",
+      "B": "Bu şema bolus ile infüzyon miktarlarını yer değiştirir. Bolus 1,5 mL/kg, infüzyon ise 0,25 mL/kg/dk olmalıdır.",
+      "C": "Bolus miktarı doğrudur, fakat infüzyon hızı protokolden on kat yüksektir. Doğru infüzyon 0,25 mL/kg/dk olmalıdır. Aşırı infüzyon hızı protokolde yer almaz.",
+      "D": "İnfüzyon hızı doğrudur, ancak bolus miktarı protokolün on katıdır. Doğru bolus 1,5 mL/kg olarak verilir. Aşırı bolus miktarı protokolde yer almaz.",
+      "E": "Bolus ve infüzyon miktarları doğru olsa da kullanılan emülsiyon yüzde yirmilik olmalıdır; yüzde ikilik bir konsantrasyon protokolde tanımlanmamıştır. Erken ve yeterli dozda uygulanan lipid emülsiyon hayat kurtarıcıdır."
+     },
+     "kanit": {
+      "sayfa": 49
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q44",
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "LAST tedavisinde lipid emülsiyonun etki mekanizmasıyla ilgili aşağıdaki ifadeler veriliyor:\nI. Damardan verilen yağ emülsiyonu kanda çözünen lipofil anestezik molekülleri kandan çekip alır.\nII. Kardiyak ve nöronal toksisiteyi hızla azaltır.\nIII. Erken ve yeterli dozda verilmesi hayat kurtarıcıdır.\nIV. Etkisini yalnızca lokal doku düzeyinde gösterir.\nBunlardan hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II ve III",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Lipid sink teorisine göre yağ emülsiyonu lipofil anestezik molekülleri kandan çeker, kardiyak ve nöronal toksisiteyi hızla azaltır ve erken verildiğinde hayat kurtarır. Dördüncü öncül yanlıştır; etki kan düzeyindedir. Bu nedenle seçenek doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Lipid sink teorisine göre yağ emülsiyonu lipofil anestezik molekülleri kandan çeker, kardiyak ve nöronal toksisiteyi hızla azaltır ve erken verildiğinde hayat kurtarır. Dördüncü öncül yanlıştır; etki kan düzeyindedir. Bu nedenle seçenek doğrudur.",
+      "B": "İlk iki öncül doğrudur. Ancak erken ve yeterli dozda verilen lipid emülsiyonun hayat kurtarıcı olduğunu söyleyen üçüncü öncül de doğru olduğundan bu seçenek eksik kalır.",
+      "C": "Toksisitenin hızla azalması ve hayat kurtarıcı etki doğrudur. Birinci öncül ise tedavinin temel mekanizmasını, yani kandan lipofil moleküllerin çekilmesini anlatır ve o da doğrudur.",
+      "D": "Dördüncü öncül yanlıştır çünkü lipid emülsiyon damardan verilir ve kandaki molekülleri hedefler. Üçüncü öncül ise doğrudur ve bu seçenekte eksiktir.",
+      "E": "Dört öncülün hepsini doğru sayan seçenek, emülsiyonun yalnızca lokal doku düzeyinde etki ettiği yanlışını da kabul eder. Etki kandaki lipofil moleküller üzerinden gerçekleşir."
+     },
+     "kanit": {
+      "sayfa": 49
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Özel hasta gruplarında doz yönetimini, iltihaplı dokudaki etkinlik kaybını ve yeni formülasyonları açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q45",
+     "kazanim": 22,
+     "zorluk": "kolay",
+     "soru": "Obez bir hastada lokal anestezik hesaplamasında hangi ağırlık esas alınmalıdır?",
+     "secenekler": {
+      "A": "Total vücut ağırlığı",
+      "B": "Beden kitle indeksi",
+      "C": "İdeal vücut ağırlığı",
+      "D": "Yalnızca boy",
+      "E": "Karaciğer ağırlığı"
+     },
+     "dogru": "C",
+     "aciklama": "Obezitede doz ideal vücut ağırlığı üzerinden hesaplanır. Total vücut ağırlığı kullanılırsa toksik doz aşımı riski artar; doğru yanıt budur. Bu yaklaşım aşırı doz riskini azaltır.",
+     "sik_aciklamalari": {
+      "A": "Total vücut ağırlığı üzerinden yapılan hesap obezlerde toksik doz aşımına yol açabilir. Bu nedenle kullanılmamalıdır. Doz aşımı ve toksisite riski tam da bu yanlış hesaplamadan doğar.",
+      "B": "Doz hesabında beden kitle indeksi değil ağırlık esas alınır. Obezitede esas alınan ağırlık ideal vücut ağırlığıdır ve total ağırlık toksik doz aşımı riski doğurur.",
+      "C": "Obezitede doz ideal vücut ağırlığı üzerinden hesaplanır. Total vücut ağırlığı kullanılırsa toksik doz aşımı riski artar; doğru yanıt budur. Bu yaklaşım aşırı doz riskini azaltır.",
+      "D": "Doz hesabında boy tek başına ölçüt değildir. Obezitede ideal vücut ağırlığı esas alınır. Boy yerine ağırlık esas alındığı için obezlerde ideal ağırlık kullanılır.",
+      "E": "Karaciğer kapasitesi amidlerin dozunu etkiler. Ancak doz hesabında esas alınan ağırlık, obezlerde ideal vücut ağırlığıdır ve karaciğer ağırlığı bir ölçüt değildir."
+     },
+     "kanit": {
+      "sayfa": 50
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q46",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Karaciğer veya böbrek yetmezliğinde amid grubu lokal anesteziklerde önerilen doz azaltımı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "%5–10",
+      "B": "%60–80",
+      "C": "%90–100",
+      "D": "%20–50",
+      "E": "Doz artırımı"
+     },
+     "dogru": "D",
+     "aciklama": "Karaciğer veya böbrek yetmezliğinde amid grubu ilaçlarda yüzde yirmi ile elli doz azaltımı önerilir ve metabolizma kapasitesi değerlendirilir. Doğru yanıt bu aralıktır.",
+     "sik_aciklamalari": {
+      "A": "Bu azaltım, metabolizma kapasitesindeki kaybı karşılamak için yetersizdir. Önerilen azaltım yüzde yirmi ile elli arasındadır. Metabolizma kapasitesi değerlendirilmeli ve yakın izlem yapılmalıdır.",
+      "B": "Bu oran önerilenin üzerindedir. Amid grubu ilaçlarda öneri yüzde yirmi ile elli azaltımdır. Karaciğer veya böbrek yetmezliğinde, metabolizma kapasitesinin değerlendirilmesi de gerekir.",
+      "C": "Dozu neredeyse tamamen kısmak önerilmez; öneri yüzde yirmi ile elli arasında bir azaltımdır. Önerilen aralık amid grubu için yalnızca yüzde yirmi ile ellidir.",
+      "D": "Karaciğer veya böbrek yetmezliğinde amid grubu ilaçlarda yüzde yirmi ile elli doz azaltımı önerilir ve metabolizma kapasitesi değerlendirilir. Doğru yanıt bu aralıktır.",
+      "E": "Metabolizma kapasitesi azalmışken doz artırmak toksisiteyi yükseltir. Bu hastalarda doz azaltılır ve yakın monitorizasyon yapılır. Amid grubu ilaçlarda öneri, yüzde yirmi ile elli doz azaltımıdır."
+     },
+     "kanit": {
+      "sayfa": 50
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q47",
+     "kazanim": 22,
+     "zorluk": "kolay",
+     "soru": "Lipozomal bupivakain tek enjeksiyonla postoperatif analjeziyi en fazla ne kadar uzatabilir?",
+     "secenekler": {
+      "A": "6 saat",
+      "B": "12 saat",
+      "C": "24 saat",
+      "D": "120 saat",
+      "E": "72 saat"
+     },
+     "dogru": "E",
+     "aciklama": "Lipozomal enkapsülasyon sayesinde bupivakain tek dozda 72 saate varan postoperatif analjezi sağlar. Doğru yanıt bu süredir. Bu süre standart lokal anesteziklerden çok uzundur.",
+     "sik_aciklamalari": {
+      "A": "Altı saat lipozomal bupivakainin sağladığı sürenin çok altındadır. Bu formülasyon günlerce süren analjezi hedefler. Gerçekte tek dozla 72 saate varan bir analjezi elde edilebilir.",
+      "B": "On iki saat, lipozomal formülasyonun sunduğu uzun etkiyi yansıtmaz. Sağlanan süre 72 saate kadar çıkar. Bu formülasyon saatler değil günler süren etki hedefler.",
+      "C": "Yirmi dört saat lipozomal bupivakainin süresinden kısadır. Tek dozda 72 saate varan analjezi sağlanabilir. Lipozomal enkapsülasyon bu süreyi yaklaşık üç katına çıkarmayı amaçlar.",
+      "D": "Beş güne uzanan bir süre bu formülasyon için tanımlanmamıştır. Sağlanan analjezi 72 saate kadardır. Bu değer tanımlanmış üst sınırın oldukça üzerindedir ve gerçekçi değildir.",
+      "E": "Lipozomal enkapsülasyon sayesinde bupivakain tek dozda 72 saate varan postoperatif analjezi sağlar. Doğru yanıt bu süredir. Bu süre standart lokal anesteziklerden çok uzundur."
+     },
+     "kanit": {
+      "sayfa": 51
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q48",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "İltihaplı dokuda lokal anestezik etkinliğinin azalmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İyonize fraksiyonun artması",
+      "B": "Protein bağlanmasının azalması",
+      "C": "Plazma esteraz aktivitesinin artması",
+      "D": "Vazokonstriksiyon",
+      "E": "Lipofilitenin artması"
+     },
+     "dogru": "A",
+     "aciklama": "İltihaplı dokuda asidik ortam iyonize fraksiyonu artırır ve membranı geçen nötr formu azaltır. Sonuçta blok yetersizliği ortaya çıkar; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "İltihaplı dokuda asidik ortam iyonize fraksiyonu artırır ve membranı geçen nötr formu azaltır. Sonuçta blok yetersizliği ortaya çıkar; doğru yanıt budur.",
+      "B": "Protein bağlanması etki süresini belirler ve iltihaplı dokudaki blok yetersizliğinin açıklaması değildir. Blok yetersizliği asidik ortamda iyonize fraksiyonun artması ve nötr formun azalmasıyla gelişir.",
+      "C": "Esteraz aktivitesi esterlerin yıkımını belirler; iltihaplı dokudaki blok yetersizliği asidik pH'ın iyonizasyonu artırmasından kaynaklanır. Nötr formun azalması blok yetersizliğinin gerçek nedenidir.",
+      "D": "Vazokonstriksiyon sistemik absorpsiyonu yavaşlatır ve süreyi uzatır. İltihaplı dokuda etkinlik kaybının nedeni değildir. Asıl neden, asidik ortamda iyonize fraksiyonun artması ve membranı geçen nötr formun azalmasıdır.",
+      "E": "Yüksek lipofilite uzun etki ve güçlü blok sağlar. İltihaplı dokudaki sorun lipofilite değil, iyonizasyondur. Asidik ortam iyonize fraksiyonu artırarak membranı geçen nötr formu azaltır."
+     },
+     "kanit": {
+      "sayfa": 52
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "metin": "Ester ve amid karşılaştırmasını, ajan seçim kılavuzunu ve güvenlik uyarılarını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q49",
+     "kazanim": 23,
+     "zorluk": "orta",
+     "soru": "Doğum epiduralinde uzun etki ve düşük motor blok sağladığı için tercih edilen ajan ve konsantrasyonu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lidokain %1–2",
+      "B": "Artikain %4",
+      "C": "Kokain %4–10",
+      "D": "EMLA krem",
+      "E": "Bupivakain %0,25"
+     },
+     "dogru": "E",
+     "aciklama": "Doğum epiduralinde uzun etki ve düşük motor blok sağladığı için yüzde 0,25 bupivakain tercih edilir. Doğru yanıt budur. Obstetrikte yaygın olan bu ajan IV yolla verilmemelidir.",
+     "sik_aciklamalari": {
+      "A": "Lidokain yüzde bir ile iki küçük cerrahi infiltrasyonda tercih edilir. Doğum epiduralinin ajanı değildir. Hızlı başlangıç ve iyi tolerabilite bu tercihin gerekçesidir.",
+      "B": "Artikain yüzde dört diş hekimliğinde mükemmel doku penetrasyonu nedeniyle tercih edilir. Doğum epiduralinde ise uzun etkili ve düşük motor blok sağlayan bupivakain tercih edilir.",
+      "C": "Kokain yüzde dört ile on, ORL cerrahisinde topikal anestezi ve doğal vazokonstriksiyon için kullanılır. Doğum epiduralinde ise bu ajan değil bupivakain tercih edilir.",
+      "D": "EMLA krem çocukta damar yolu öncesi topikal anestezide tercih edilir. Epidural kullanımı yoktur. Ağrısız deri penetrasyonu sağlaması nedeniyle yalnızca deri yüzeyi anestezisinde tercih edilir.",
+      "E": "Doğum epiduralinde uzun etki ve düşük motor blok sağladığı için yüzde 0,25 bupivakain tercih edilir. Doğru yanıt budur. Obstetrikte yaygın olan bu ajan IV yolla verilmemelidir."
+     },
+     "kanit": {
+      "sayfa": 58
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q50",
+     "kazanim": 23,
+     "zorluk": "zor",
+     "soru": "Klinik duruma göre tercih edilen lokal anestezik eşleşmeleri veriliyor:\nI. Küçük cerrahi infiltrasyon: lidokain %1–2\nII. Diş hekimliği: artikain %4\nIII. Çocukta IV öncesi topikal anestezi: kokain\nIV. ORL cerrahisi topikal: kokain %4–10\nBunlardan hangileri doğru bir eşleşmedir?",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "I ve II",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Küçük infiltrasyonda lidokain, diş hekimliğinde artikain ve ORL topikal anestezisinde kokain doğru eşleşmelerdir. Çocukta IV öncesi topikal anestezide EMLA kullanıldığından üçüncü eşleşme yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Küçük infiltrasyonda lidokain, diş hekimliğinde artikain ve ORL topikal anestezisinde kokain doğru eşleşmelerdir. Çocukta IV öncesi topikal anestezide EMLA kullanıldığından üçüncü eşleşme yanlıştır.",
+      "B": "İlk iki eşleşme doğrudur, fakat ORL cerrahisinde topikal anestezi için yüzde dört ile on kokain de doğru eşleşmedir. Lidokain, artikain ve kokain eşleşmeleri birlikte doğru kabul edilmelidir.",
+      "C": "Artikain eşleşmesi doğrudur. Çocukta IV öncesi topikal anestezi için tercih edilen EMLA kremdir, kokain değil. Küçük cerrahi infiltrasyonda lidokain ve ORL topikalinde kokain eşleşmeleri de doğrudur.",
+      "D": "Üçüncü eşleşme yanlıştır; çocukta damar yolu öncesi deride EMLA kullanılır. Ayrıca diş hekimliği için artikain eşleşmesi de doğrudur. Bu seçenek çocuk için kokainin tercih edildiğini yanlış olarak kabul eder.",
+      "E": "Dört eşleşmeyi de doğru sayan seçenek, çocukta IV öncesi topikal anestezi için kokainin tercih edildiği yanlışını da kabul eder. Bu amaçla EMLA krem kullanılır."
+     },
+     "kanit": {
+      "sayfa": 58
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q51",
+     "kazanim": 23,
+     "zorluk": "orta",
+     "soru": "Methemoglobinemi riski taşıyan lokal anestezikler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bupivakain ve prokain",
+      "B": "Benzokain ve prilokain",
+      "C": "Lidokain ve mepivakain",
+      "D": "Tetrakain ve kokain",
+      "E": "Artikain ve klorprokain"
+     },
+     "dogru": "B",
+     "aciklama": "Benzokain yüksek dozlarda methemoglobinemi tetikleyicisidir; prilokain de EMLA içinde methemoglobinemi riski taşır. Tekrarlayan dozlarda ve çocuklarda dikkat gerekir; doğru yanıt bu ikilidir.",
+     "sik_aciklamalari": {
+      "A": "Bupivakainin başlıca riski kardiyotoksisite, prokainin ise PABA alerjisidir. İkisi de methemoglobinemi yapan ajan olarak tanımlanmaz. Doğrusu, methemoglobinemi riskini benzokain ve prilokain taşır.",
+      "B": "Benzokain yüksek dozlarda methemoglobinemi tetikleyicisidir; prilokain de EMLA içinde methemoglobinemi riski taşır. Tekrarlayan dozlarda ve çocuklarda dikkat gerekir; doğru yanıt bu ikilidir.",
+      "C": "Lidokain ve mepivakain orta hızda metabolize edilen amidlerdir. Methemoglobinemi riskiyle anılmazlar. Methemoglobinemi riski benzokain ve prilokainle ilişkilidir ve tekrarlayan dozlarda dikkat gerektirir.",
+      "D": "Tetrakainin riski kardiyak asistol, kokainin riski ise ek epinefrinle hipertansif krizdir. Methemoglobinemi bu iki ajanla ilişkilendirilmez. Methemoglobinemi riskini taşıyan ajanlar bunlardan farklıdır.",
+      "E": "Artikain ve prilokainle nadir parestezi bildirilmiştir; klorprokainde ise arachnoidit riski vardır. Methemoglobinemi yapan ajanlar bunlar değildir. Methemoglobinemi riski benzokain ve prilokainde bulunur."
+     },
+     "kanit": {
+      "sayfa": [
+       38,
+       42,
+       59
+      ]
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "metin": "Klasik ester ve amid gruplarının dışındaki lokal anestezik maddeleri ayırt edebilme",
+   "sorular": [
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q52",
+     "kazanim": 24,
+     "zorluk": "orta",
+     "soru": "Etki mekanizması sodyum kanalı blokajına dayanmayan, TRPV1 agonisti olan ve substans P tükenmesiyle desensitizasyon sağlayan madde hangisidir?",
+     "secenekler": {
+      "A": "Etil klorür",
+      "B": "Kapsaisin",
+      "C": "Diklonin",
+      "D": "Pramoksin",
+      "E": "Klorbutanol"
+     },
+     "dogru": "B",
+     "aciklama": "Kapsaisin sodyum kanalını bloke etmez; TRPV1 agonisti olarak başlangıçta yanma hissi yapar, substans P tükenmesiyle desensitizasyon sağlayarak nöropatik ve kas ağrısında analjezi verir. Doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Etil klorür uçucu halojenli hidrokarbondur ve hızlı buharlaşmayla soğutarak sinir iletimini geçici bloke eder. TRPV1 üzerinden etki etmez. Etkisi saniyeler içinde başlar, kısa sürer ve soğuk yanığı riski taşır.",
+      "B": "Kapsaisin sodyum kanalını bloke etmez; TRPV1 agonisti olarak başlangıçta yanma hissi yapar, substans P tükenmesiyle desensitizasyon sağlayarak nöropatik ve kas ağrısında analjezi verir. Doğru yanıttır.",
+      "C": "Diklonin keton türevidir ve sodyum kanal blokajı yapar. Ağız-boğaz mukozasında topikal kullanılır. Etkisi dakikalar içinde başlar ve yaklaşık 1 saat sürer.",
+      "D": "Pramoksin morfolin türevidir ve sodyum kanal blokajı yaparak cilt ve mukozada kaşıntı ve ağrıyı azaltır. Duyarlılaştırma riski düşük olan bu ajan TRPV1 üzerinden etki etmez.",
+      "E": "Klorbutanol klorlu tersiyer alkoldür; zayıf sodyum kanal blokajı ve hafif sedatif etki gösterir. Diş ağrısı damlalarında ve koruyucu ya da antiseptik olarak kullanılır."
+     },
+     "kanit": {
+      "sayfa": 62
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-48-lokal-anestezik-ilaclar-q53",
+     "kazanim": 24,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki lokal anestezik maddelerden hangisi ne ester ne amid yapılıdır?",
+     "secenekler": {
+      "A": "Proparakain",
+      "B": "Butamben",
+      "C": "Diklonin",
+      "D": "Ortoform",
+      "E": "Propoksikain"
+     },
+     "dogru": "C",
+     "aciklama": "Diklonin keton türevidir; ne ester ne amiddir. Sodyum kanal blokajı yapar ve ağız-boğaz mukozasında pastil ve sprey formlarıyla kullanılır; doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Proparakain bir esterdir ve oftalmolojide kornea anestezisinde kullanılır. Ester olduğu için aranan madde değildir. Etkisi yaklaşık 15–30 saniyede başlar ve yaklaşık 15 dakika sürer.",
+      "B": "Butamben PABA esteridir ve suda çok az çözünür; yalnızca topikal kullanılır. Ester olduğundan aranan madde değildir. Yavaş absorpsiyon ve uzun süreli yüzeyel etki gösterir.",
+      "C": "Diklonin keton türevidir; ne ester ne amiddir. Sodyum kanal blokajı yapar ve ağız-boğaz mukozasında pastil ve sprey formlarıyla kullanılır; doğru yanıttır.",
+      "D": "Ortoform aminohidroksibenzoat esteridir ve suda çözünmez. Ester yapılı olduğu için aranan madde değildir. Yara ve ülser yüzeyinde uzun süreli yüzeyel analjezi sağlar.",
+      "E": "Propoksikain PABA türevi bir esterdir ve diş hekimliğinde infiltrasyonda kullanılır. Ester yapılı olduğundan aranan madde değildir. Genellikle prokainle kombine edilir ve hızlı hidrolize olur."
+     },
+     "kanit": {
+      "sayfa": 62
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  }
+ ]
+}

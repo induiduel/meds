@@ -1,0 +1,597 @@
+{
+ "surum": 2,
+ "key": "k2-52",
+ "kod": "2g03",
+ "kurul": 2,
+ "brans": "Genetik",
+ "konu": "Davranış Genetiği",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "profil": "Tıbbi Genetik",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2g03"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Davranış genetiğinin tanımı ve tarihçesi"
+    },
+    {
+     "metin": "Davranışsal genetik araştırmaların odağı ve davranış genetiğinin yasaları"
+    },
+    {
+     "metin": "İkiz çalışmaları ve ayrı büyüyen ikizler"
+    },
+    {
+     "metin": "Monoamin yapıları, D4DR geni ve cinsiyet kromozomu sendromlarında davranış"
+    },
+    {
+     "metin": "Türe özgü davranış, içgüdüsel ve öğrenilmiş davranış"
+    },
+    {
+     "metin": "Davranış genetiğinde kalıtımı inceleme yöntemleri"
+    },
+    {
+     "metin": "Otizm: tanım ve birlikte görüldüğü durumlar"
+    },
+    {
+     "metin": "Otizmde duyarlı gen saptama yöntemleri, 7q bölgesi ve bağlantı analizi"
+    },
+    {
+     "metin": "Mental retardasyon (entelektüel yetersizlik): tanım, epidemiyoloji, etiyoloji ve genel bulgular"
+    },
+    {
+     "metin": "MR genetiği: en iyi bilinen sendromlar ve Down sendromu"
+    },
+    {
+     "metin": "Williams ve Prader-Willi sendromları"
+    },
+    {
+     "metin": "Frajil X sendromu: tanım, sıklık, FMR1 geni ve dinamik mutasyon"
+    },
+    {
+     "metin": "Frajil X: tam mutasyon taşıyıcıları ve Sherman paradoksu"
+    },
+    {
+     "metin": "Frajil X: klinik, davranış, konuşma, skorlama, moleküler test ve prenatal tanı"
+    },
+    {
+     "metin": "Lesch-Nyhan sendromu"
+    },
+    {
+     "metin": "Huntington koresi"
+    },
+    {
+     "metin": "Şizofreni ve genetiği"
+    },
+    {
+     "metin": "Alzheimer hastalığı"
+    },
+    {
+     "metin": "Alkol bağımlılığının genetiği"
+    },
+    {
+     "metin": "Tourette sendromu: tanım, belirtiler ve nedenler"
+    },
+    {
+     "metin": "Tourette sendromunun genetiği"
+    },
+    {
+     "metin": "Bipolar (manik-depresif) hastalığın genetiği"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Davranış genetiğinin tanımı ve tarihçesi.",
+    "Davranışsal genetik araştırmaların odağı ve davranış genetiğinin yasaları.",
+    "İkiz çalışmaları ve ayrı büyüyen ikizler.",
+    "Monoamin yapıları, D4DR geni ve cinsiyet kromozomu sendromlarında davranış.",
+    "Türe özgü davranış, içgüdüsel ve öğrenilmiş davranış.",
+    "Davranış genetiğinde kalıtımı inceleme yöntemleri.",
+    "Otizm: tanım ve birlikte görüldüğü durumlar.",
+    "Otizmde duyarlı gen saptama yöntemleri, 7q bölgesi ve bağlantı analizi.",
+    "Mental retardasyon (entelektüel yetersizlik): tanım, epidemiyoloji, etiyoloji ve genel bulgular.",
+    "MR genetiği: en iyi bilinen sendromlar ve Down sendromu.",
+    "Williams ve Prader-Willi sendromları.",
+    "Frajil X sendromu: tanım, sıklık, FMR1 geni ve dinamik mutasyon.",
+    "Frajil X: tam mutasyon taşıyıcıları ve Sherman paradoksu.",
+    "Frajil X: klinik, davranış, konuşma, skorlama, moleküler test ve prenatal tanı.",
+    "Lesch-Nyhan sendromu.",
+    "Huntington koresi.",
+    "Şizofreni ve genetiği.",
+    "Alzheimer hastalığı.",
+    "Alkol bağımlılığının genetiği.",
+    "Tourette sendromu: tanım, belirtiler ve nedenler.",
+    "Tourette sendromunun genetiği.",
+    "Bipolar (manik-depresif) hastalığın genetiği."
+   ],
+   "v": "8f47a7ba24"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Davranış genetiğinin tanımı ve tarihçesi",
+     "metin": "Davranış genetiği: genetik yöntemler ve araştırma tasarımlarıyla insan ve hayvanların davranışlarındaki farklılıkların doğasını ve kökenini inceleyen bilim dalıdır.",
+     "s": [
+      2,
+      3
+     ]
+    },
+    {
+     "baslik": "Davranışsal genetik araştırmaların odağı ve davranış genetiğinin yasaları",
+     "metin": "İlk insan davranışsal genetik araştırması zeka ve akıl hastalığı üzerine 1920'lerde başlamıştır.",
+     "s": [
+      4,
+      5
+     ]
+    },
+    {
+     "baslik": "İkiz çalışmaları ve ayrı büyüyen ikizler",
+     "metin": "Thomas Bouchard ve ark.'nın Minnesota ikiz çalışması: identik ikizler yaşamlarının erken evrelerinde ayrı tutulup farklı ev ortamlarında yetiştirildi; çevre farklılığına rağmen aynı psikiyatrik hastalıklara eğilim ve aynı kişisel özellikler bulundu (örnek: Jim Springer ve Jim Lewis).",
+     "s": [
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "baslik": "Monoamin yapıları, D4DR geni ve cinsiyet kromozomu sendromlarında davranış",
+     "metin": "Slayt, kişiliği ve davranışı etkileyen genetik etkiyi sorgular; D4DR geni 11p üzerindedir ve dopamin reseptör proteinini şifreler.",
+     "s": [
+      9,
+      10,
+      11
+     ]
+    },
+    {
+     "baslik": "Türe özgü davranış, içgüdüsel ve öğrenilmiş davranış",
+     "metin": "Türe özgü davranış, bir hayvan türüne özgü tipik davranış örüntüleridir; o türün normal üyelerinin tümü uygun ve ortak koşullarda bu davranışı gösterir.",
+     "s": [
+      12,
+      13
+     ]
+    },
+    {
+     "baslik": "Davranış genetiğinde kalıtımı inceleme yöntemleri",
+     "metin": "Kalıtımı incelemek için kullanılan yöntemler: (1) pedigri analizi ve bağlantı (linkage) analizi, (2) rekombinant DNA analizleri, (3) ikiz metodu ile birlikte moleküler yöntemlerin kullanımı.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Otizm: tanım ve birlikte görüldüğü durumlar",
+     "metin": "Asperger sendromu: sosyal etkileşimde zorluk ve tekrarlayıcı davranışlar; zeka normal veya ortalamanın üzerinde olabilir; nörogelişimsel bir farklılık olarak anılır ve Otizm Spektrum Bozukluğu (OSB) ile birlikte gösterilir.",
+     "s": [
+      15,
+      16
+     ]
+    },
+    {
+     "baslik": "Otizmde duyarlı gen saptama yöntemleri, 7q bölgesi ve bağlantı analizi",
+     "metin": "Geçmiş yıl öğrenci önem derlemesinde A birimi (otizmde duyarlı gen saptama yöntemleri; bu yılın slaytında s17'de karşılığı var); aynı bilgi çıkmışta yöntem sorusuyla sorulmuştur.",
+     "s": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+     ]
+    },
+    {
+     "baslik": "Mental retardasyon (entelektüel yetersizlik): tanım, epidemiyoloji, etiyoloji ve genel bulgular",
+     "metin": "Genel bulgular: düşük IQ, toplumsal uyum becerilerinde ve kendi kendine yardımda yetersizlik, gelişme geriliği, konvülsiyonlar, psikiyatrik bozukluklar (depresyon) ve davranış bozuklukları (öfke nöbetleri, saldırgan davranış).",
+     "s": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+     ]
+    },
+    {
+     "baslik": "MR genetiği: en iyi bilinen sendromlar ve Down sendromu",
+     "metin": "Geçmiş yıl öğrenci önem derlemesinde A birimi (MR genetiği: en iyi bilinen sendromlar; bu yılın slaytında s29'da karşılığı var); aynı bilgi çıkmışta 'MR nedeni olmayan sendrom' sorusuyla sorulmuştur.",
+     "s": [
+      29,
+      30,
+      31
+     ]
+    },
+    {
+     "baslik": "Williams ve Prader-Willi sendromları",
+     "metin": "Williams sendromu otozomal dominant geçişlidir; olguların %90-95'inde ELN (elastin) genini içeren 7q11.23 delesyonu sorumludur.",
+     "s": [
+      32,
+      33,
+      34
+     ]
+    },
+    {
+     "baslik": "Frajil X sendromu: tanım, sıklık, FMR1 geni ve dinamik mutasyon",
+     "metin": "FMR1 geni 1991'de Xq27.3'e lokalize edilip klonlanmıştır; 17 ekzonlu, 632 aa'lik FMR1 proteinini kodlar; protein beyin, testis, lenfosit ve plasenta dokusunda bulunur; gen dinamik mutasyon sonucu inaktive olur.",
+     "s": [
+      35,
+      36,
+      37,
+      38,
+      39
+     ]
+    },
+    {
+     "baslik": "Frajil X: tam mutasyon taşıyıcıları ve Sherman paradoksu",
+     "metin": "Tam mutasyon taşıyıcısı dişilerin 1/3'ünde hafif MR (matematikte başarısız, okuma/yazmada başarılı), 1/3'ü normal, 1/3'ünde şizofreni benzeri bulgular görülür.",
+     "s": [
+      40,
+      41,
+      42
+     ]
+    },
+    {
+     "baslik": "Frajil X: klinik, davranış, konuşma, skorlama, moleküler test ve prenatal tanı",
+     "metin": "Moleküler test postnatal: fiziksel/davranış özelliği taşıyanlar, ailede Frajil X öyküsü, ailede etiyolojisi aydınlatılmamış MR; prenatal: ailede moleküler tanılı olgu, etiyolojisi saptanmamış MR, taşıyıcı annelerin fetüsleri.",
+     "s": [
+      43,
+      44,
+      45,
+      46,
+      47
+     ]
+    },
+    {
+     "baslik": "Lesch-Nyhan sendromu",
+     "metin": "Xq26-q27.2'deki HPRT geni mutasyonu sorumludur (9 ekzon, 43 kb DNA, kodlanan alanda 657 nükleotid); HPRT1 Lesch-Nyhan ile ilişkilendirilen bilinen tek gendir; kalıtılabilir ya da yeni (spontan) mutasyondur.",
+     "s": [
+      48,
+      49,
+      50,
+      51,
+      52
+     ]
+    },
+    {
+     "baslik": "Huntington koresi: otozomal dominant geçişli, sinsi başlayan hastalık",
+     "metin": "Genelde 30-50 yaş civarında ortaya çıkan, sinsi başlayan, otozomal dominant geçişli bir hastalıktır; 4-7/100.000'de görülür.",
+     "s": [
+      53,
+      54,
+      55
+     ]
+    },
+    {
+     "baslik": "Şizofreni ve genetiği",
+     "metin": "Genetik: şizofreninin 2, 5, 9, 13, 16, 17, 19 ve X kromozomlarındaki değişikliklerle ortaya çıktığı rapor edilmiştir; 11q21-22'deki mutasyonlar şizofreni ve diğer psikotik bozukluklarla, HLA A9 aleli de şizofreniyle ilişkilendirilmiştir.",
+     "s": [
+      56,
+      57,
+      58
+     ]
+    },
+    {
+     "baslik": "Alzheimer hastalığı",
+     "metin": "İlk kez 1906'da Alman Dr. Alois Alzheimer tarafından tanımlanmıştır; günlük yaşamsal aktivitelerde azalma ve kognitif fonksiyonlarda bozulma ile giden ilerleyici nörodejeneratif hastalıktır; hafıza, düşünce ve davranış etkilenir; demansın en sık nedenidir.",
+     "s": [
+      59,
+      60,
+      61,
+      62,
+      63
+     ]
+    },
+    {
+     "baslik": "Alkol bağımlılığının genetiği",
+     "metin": "Alkol bağımlılarının (aile hikâyesi olan) çocuklarında 3-8 kat artmış risk; alkolik evden uzaklaştırılsa da çocukta 4 kat artmış risk; erkekte aile hikâyesiyle 2-4 kat artmış risk; MZ/DZ ikizlerde oran 2/1; görüntüde genetik %60, çevre %40 (heterojen ve poligenik).",
+     "s": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+     ]
+    },
+    {
+     "baslik": "Tourette sendromu: tanım, belirtiler ve nedenler",
+     "metin": "Geçmiş yıl öğrenci önem derlemesinde A birimi (Tourette sendromu; bu yılın slaytında s72'de karşılığı var); aynı bilgi çıkmışta tanım ve 'tiklerin ana belirtisi olduğu hastalık' soruları olarak sorulmuştur.",
+     "s": [
+      71,
+      72,
+      73,
+      74,
+      75
+     ]
+    },
+    {
+     "baslik": "Tourette sendromunun genetiği: genetik ve çevresel faktörler, SLITRK1",
+     "metin": "TS genetik ve çevresel faktörlerin etkisiyle oluşur; moleküler patolojisi tam bilinmez ve genetik analiz testi yoktur; 13q31'de lokalize SLITRK1 tek ekzonlu bir aday gendir.",
+     "s": [
+      76,
+      77,
+      78,
+      79
+     ]
+    },
+    {
+     "baslik": "Bipolar (manik-depresif) hastalığın genetiği",
+     "metin": "Bipolar hastalık toplumda sık görülen bir duygu-durum (mood) bozukluğudur ve psikiyatrik hastalıklar arasında en çok genetik araştırma yapılanıdır; aile ve ikiz çalışmaları genetik temeli açıklamış, monozigotik ikizlerde yüksek konkordans gösterilmiştir.",
+     "s": [
+      80,
+      81,
+      82
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Davranış genetiğinin tanımı ve tarihçesi: Davranış genetiği: genetik yöntemler ve araştırma tasarımlarıyla insan ve hayvanların davranışlarındaki farklılıkların doğasını ve kökenini inceleyen bilim dalıdır.",
+    "Davranışsal genetik araştırmaların odağı ve davranış genetiğinin yasaları: İlk insan davranışsal genetik araştırması zeka ve akıl hastalığı üzerine 1920'lerde başlamıştır.",
+    "İkiz çalışmaları ve ayrı büyüyen ikizler: Thomas Bouchard ve ark.'nın Minnesota ikiz çalışması: identik ikizler yaşamlarının erken evrelerinde ayrı tutulup farklı ev ortamlarında yetiştirildi; çevre farklılığına rağmen aynı psikiyatrik hastalıklara eğilim ve aynı kişisel özellikler bulundu (örnek: Jim Springer ve Jim Lewis).",
+    "Monoamin yapıları, D4DR geni ve cinsiyet kromozomu sendromlarında davranış: Slayt, kişiliği ve davranışı etkileyen genetik etkiyi sorgular; D4DR geni 11p üzerindedir ve dopamin reseptör proteinini şifreler.",
+    "Türe özgü davranış, içgüdüsel ve öğrenilmiş davranış: Türe özgü davranış, bir hayvan türüne özgü tipik davranış örüntüleridir; o türün normal üyelerinin tümü uygun ve ortak koşullarda bu davranışı gösterir.",
+    "Davranış genetiğinde kalıtımı inceleme yöntemleri: Kalıtımı incelemek için kullanılan yöntemler: (1) pedigri analizi ve bağlantı (linkage) analizi, (2) rekombinant DNA analizleri, (3) ikiz metodu ile birlikte moleküler yöntemlerin kullanımı.",
+    "Otizm: tanım ve birlikte görüldüğü durumlar: Asperger sendromu: sosyal etkileşimde zorluk ve tekrarlayıcı davranışlar; zeka normal veya ortalamanın üzerinde olabilir; nörogelişimsel bir farklılık olarak anılır ve Otizm Spektrum Bozukluğu (OSB) ile birlikte gösterilir.",
+    "Otizmde duyarlı gen saptama yöntemleri, 7q bölgesi ve bağlantı analizi: Geçmiş yıl öğrenci önem derlemesinde A birimi (otizmde duyarlı gen saptama yöntemleri; bu yılın slaytında s17'de karşılığı var); aynı bilgi çıkmışta yöntem sorusuyla sorulmuştur.",
+    "Mental retardasyon (entelektüel yetersizlik): tanım, epidemiyoloji, etiyoloji ve genel bulgular: Genel bulgular: düşük IQ, toplumsal uyum becerilerinde ve kendi kendine yardımda yetersizlik, gelişme geriliği, konvülsiyonlar, psikiyatrik bozukluklar (depresyon) ve davranış bozuklukları (öfke nöbetleri, saldırgan davranış).",
+    "MR genetiği: en iyi bilinen sendromlar ve Down sendromu: Geçmiş yıl öğrenci önem derlemesinde A birimi (MR genetiği: en iyi bilinen sendromlar; bu yılın slaytında s29'da karşılığı var); aynı bilgi çıkmışta 'MR nedeni olmayan sendrom' sorusuyla sorulmuştur.",
+    "Williams ve Prader-Willi sendromları: Williams sendromu otozomal dominant geçişlidir; olguların %90-95'inde ELN (elastin) genini içeren 7q11.23 delesyonu sorumludur.",
+    "Frajil X sendromu: tanım, sıklık, FMR1 geni ve dinamik mutasyon: FMR1 geni 1991'de Xq27.3'e lokalize edilip klonlanmıştır; 17 ekzonlu, 632 aa'lik FMR1 proteinini kodlar; protein beyin, testis, lenfosit ve plasenta dokusunda bulunur; gen dinamik mutasyon sonucu inaktive olur.",
+    "Frajil X: tam mutasyon taşıyıcıları ve Sherman paradoksu: Tam mutasyon taşıyıcısı dişilerin 1/3'ünde hafif MR (matematikte başarısız, okuma/yazmada başarılı), 1/3'ü normal, 1/3'ünde şizofreni benzeri bulgular görülür.",
+    "Frajil X: klinik, davranış, konuşma, skorlama, moleküler test ve prenatal tanı: Moleküler test postnatal: fiziksel/davranış özelliği taşıyanlar, ailede Frajil X öyküsü, ailede etiyolojisi aydınlatılmamış MR; prenatal: ailede moleküler tanılı olgu, etiyolojisi saptanmamış MR, taşıyıcı annelerin fetüsleri.",
+    "Lesch-Nyhan sendromu: Xq26-q27.2'deki HPRT geni mutasyonu sorumludur (9 ekzon, 43 kb DNA, kodlanan alanda 657 nükleotid); HPRT1 Lesch-Nyhan ile ilişkilendirilen bilinen tek gendir; kalıtılabilir ya da yeni (spontan) mutasyondur.",
+    "Huntington koresi: otozomal dominant geçişli, sinsi başlayan hastalık: Genelde 30-50 yaş civarında ortaya çıkan, sinsi başlayan, otozomal dominant geçişli bir hastalıktır; 4-7/100.000'de görülür.",
+    "Şizofreni ve genetiği: Genetik: şizofreninin 2, 5, 9, 13, 16, 17, 19 ve X kromozomlarındaki değişikliklerle ortaya çıktığı rapor edilmiştir; 11q21-22'deki mutasyonlar şizofreni ve diğer psikotik bozukluklarla, HLA A9 aleli de şizofreniyle ilişkilendirilmiştir.",
+    "Alzheimer hastalığı: İlk kez 1906'da Alman Dr. Alois Alzheimer tarafından tanımlanmıştır; günlük yaşamsal aktivitelerde azalma ve kognitif fonksiyonlarda bozulma ile giden ilerleyici nörodejeneratif hastalıktır; hafıza, düşünce ve davranış etkilenir; demansın en sık nedenidir.",
+    "Alkol bağımlılığının genetiği: Alkol bağımlılarının (aile hikâyesi olan) çocuklarında 3-8 kat artmış risk; alkolik evden uzaklaştırılsa da çocukta 4 kat artmış risk; erkekte aile hikâyesiyle 2-4 kat artmış risk; MZ/DZ ikizlerde oran 2/1; görüntüde genetik %60, çevre %40 (heterojen ve poligenik).",
+    "Tourette sendromu: tanım, belirtiler ve nedenler: Geçmiş yıl öğrenci önem derlemesinde A birimi (Tourette sendromu; bu yılın slaytında s72'de karşılığı var); aynı bilgi çıkmışta tanım ve 'tiklerin ana belirtisi olduğu hastalık' soruları olarak sorulmuştur.",
+    "Tourette sendromunun genetiği: genetik ve çevresel faktörler, SLITRK1: TS genetik ve çevresel faktörlerin etkisiyle oluşur; moleküler patolojisi tam bilinmez ve genetik analiz testi yoktur; 13q31'de lokalize SLITRK1 tek ekzonlu bir aday gendir.",
+    "Bipolar (manik-depresif) hastalığın genetiği: Bipolar hastalık toplumda sık görülen bir duygu-durum (mood) bozukluğudur ve psikiyatrik hastalıklar arasında en çok genetik araştırma yapılanıdır; aile ve ikiz çalışmaları genetik temeli açıklamış, monozigotik ikizlerde yüksek konkordans gösterilmiştir."
+   ],
+   "v": "a28fce64fe"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu derste çıkmış altı soru, mental retardasyon sendromlarını, davranış genetiğinin yöntemlerini, Tourette sendromunun tanımını ve ana belirtisini ve Huntington hastalığının klinik ve genetik özelliklerini ölçer.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi mental retardasyon (zihinsel yetersizlik) gösteren sendromlardan değildir?",
+     "cevap": "Turner",
+     "s": [
+      29
+     ],
+     "aciklama": [
+      "Bu soru, mental retardasyon yani zihinsel yetersizlik gösteren sendromların hangileri olduğunu bilip bilmediğinizi olumsuz kökle ölçer.",
+      "Slaytta yaklaşık yedi yüz elli genetik hastalığın mental retardasyonla ilişkilendirildiği, en iyi bilinenlerin ise Down, Williams, Frajil X ve Prader-Willi sendromları olduğu belirtilir.",
+      "Şıklardaki Down, Williams, Prader-Willi ve Frajil X bu listede yer aldığı için mental retardasyonla ilişkilidir; Turner sendromu slaytta geçmediğinden olumsuz kökün doğru cevabı odur.",
+      "En güçlü çeldirici Frajil X sendromudur, çünkü en sık X'e bağlı mental retardasyon nedeni olarak bilinir ve listenin yabancı bir üyesi sanılabilir."
+     ],
+     "ornek": "Aynı bilgi, en iyi bilinen mental retardasyon sendromlarını sayın biçiminde ya da listede olmayan sendromu bulun biçiminde de sorulabilir.",
+     "tuzak": "Soru olumsuz kökle sorulduğu için listede olan sendromlardan birini seçmek; oysa aranan, listede bulunmayan sendromdur."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Davranış genetiği çalışmalarında kullanılan yöntemler: I. İkiz çalışmaları II. Asosiyasyon (ilişki) çalışmaları III. Bağlantı (linkage) analizi IV. Mutasyon analizi Yukarıdakilerden hangileri davranış genetiği çalışmalarında kullanılan yöntemlerdendir?",
+     "cevap": "I, II ve III",
+     "s": [
+      14
+     ],
+     "aciklama": [
+      "Bu soru, davranış genetiğinde kalıtımı incelemek için kullanılan yöntemleri öncüllü olarak sayıp sayamadığınızı ölçer.",
+      "Slaytta yöntemler pedigri ve bağlantı analizi, rekombinant DNA analizleri ve ikiz metodunun moleküler yöntemlerle birlikte kullanımı olarak verilir; otizm bölümünde ise ilişki yani asosiasyon çalışmaları da anılır.",
+      "İkiz çalışmaları, asosiasyon çalışmaları ve bağlantı analizi yöntem olduğu için bir, iki ve üçüncü öncül doğrudur; mutasyon analizi yöntemler arasında sayılmadığı için dördüncü öncül yanlıştır ve doğru cevap bir, iki ve üçtür.",
+      "En güçlü çeldirici dört öncülün tümünü içeren seçenektir, çünkü mutasyon analizi genetikle ilgili bir kavram olduğundan yöntem sanılabilir."
+     ],
+     "ornek": "Aynı bilgi, bağlantı analizi ve ikiz çalışmasının davranış genetiğinde kullanılıp kullanılmadığını soran doğru yanlış önermeleriyle de sorulabilir.",
+     "tuzak": "Mutasyon analizini de yöntem sayıp dört öncülün tümünü seçmek; oysa slayt yöntemler arasında mutasyon analizini saymaz."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Bir yıldan uzun süredir tekrarlayan basit motor ve vokal (ses) tikleri bir arada bulunan çocukta en olası tanı hangisidir?",
+     "cevap": "Tourette bozukluğu",
+     "s": [
+      72
+     ],
+     "aciklama": [
+      "Bu soru, tekrarlayan basit motor ve vokal tiklerin birlikte bulunduğu tabloyu doğru ada bağlayıp bağlayamadığınızı ölçer.",
+      "Slayta göre Tourette sendromu, tekrarlayan basit motor ve vokal tiklerle karakterize nöropsikiyatrik ve nörogelişimsel bir davranış bozukluğudur; motor tikler başını ani çevirme, omuz silkme ve kolların sıçrayıcı hareketini, vokal tikler homurdanma, boğaz temizleme ve yüksek sesli soluk almayı içerir.",
+      "Soruda hem basit motor hem vokal tikler bir arada bulunduğu için doğru cevap Tourette bozukluğudur; slayt tanımı iki tik türünün birlikteliğine dayanır ve bir yıllık süre ölçütü slaytta geçmez.",
+      "En güçlü çeldiriciler tek tür tikle giden bozukluk seçenekleridir; bu bozukluklar slaytta anlatılmaz, slayt Tourette sendromunu iki tik türünün birlikteliğiyle tanımlar."
+     ],
+     "ornek": "Aynı bilgi, başını ani çeviren, omuz silken ve boğaz temizleyen bir çocukta en olası tanıyı soran kısa bir vaka olarak da sorulabilir.",
+     "tuzak": "İki tik türünü ayırt etmeyip yalnız motor ya da yalnız vokal tiki olan bozukluğu seçmek; oysa Tourette tanımında ikisi birlikte bulunur."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Tikler aşağıdaki hastalıklardan hangisinin ana belirtisidir?",
+     "cevap": "Tourette sendromu",
+     "s": [
+      73
+     ],
+     "aciklama": [
+      "Bu soru, tiklerin hangi hastalığın ana belirtisi olduğunu bilip bilmediğinizi ölçer.",
+      "Slaytta Tourette sendromunun ana belirtilerinin tikler olduğu, kişinin birkaç hafta ya da ay süren basit geçici tiklerden uzun süreli karmaşık tiklere kadar değişen tiklere sahip olabileceği ve belirtilerin genellikle beş ile on yaşlarında başladığı belirtilir.",
+      "Bu nedenle Tourette sendromu doğru cevaptır.",
+      "En güçlü çeldirici Lesch-Nyhan sendromudur, çünkü bu sendromda da kendine zarar verme gibi tekrarlayıcı davranışlar görülür; ancak onun ana bulgusu tik değil kompülsif kendine zarar vermedir."
+     ],
+     "ornek": "Aynı bilgi, ilk belirtileri baş ve boyun bölgesinde motor tiklerle başlayan çocuk hastada tanıyı sorarak da kullanılabilir.",
+     "tuzak": "Tekrarlayıcı davranış gösteren başka sendromları, örneğin Lesch-Nyhan'ı, tikle karıştırmak."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Huntington koresi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Otozomal dominant geçişli olup CAG trinükleotid tekrar artışı sonucu ortaya çıkar.",
+     "s": [
+      55
+     ],
+     "aciklama": [
+      "Bu soru, Huntington koresinin kalıtım biçimini ve genetik mekanizmasını birlikte bilip bilmediğinizi ölçer.",
+      "Slayta göre Huntington koresi otozomal dominant geçişlidir ve trinükleotit yani CAG tekrarları sonucu ortaya çıkar; gen dördüncü kromozomda haritalanmıştır.",
+      "Bu iki bilgiyi birlikte veren şık doğrudur; otozomal resesif geçiş ve çocukluk başlangıcı, X kromozomu, farklı tekrar dizisi ya da bilişsel işlevlerin korunduğunu söyleyen şıklar slayta aykırıdır.",
+      "En güçlü çeldiriciler FXN genindeki GAA tekrar artışını anan şık ile bilişsel işlevlerin korunduğunu söyleyen şıktır; Huntington'da tekrar dizisi CAG'dir, gen dördüncü kromozomdadır ve slayta göre demans gelişir."
+     ],
+     "ornek": "Aynı bilgi, hangi hastalığın otozomal dominant geçip CAG tekrar artışıyla oluştuğu sorulacak biçimde de çıkabilir.",
+     "tuzak": "Tekrar artışı mekanizmasını bilip dizisini ya da kalıtım tipini karıştırmak; Huntington'da CAG ve otozomal dominant geçiş birlikte verilir."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Otozomal dominant kalıtım gösteren, tüm vücutta istemsiz koreiform hareket bozukluğu ve ilerleyici demans ile seyreden nörodejeneratif hastalık hangisidir?",
+     "cevap": "Huntington hastalığı",
+     "s": [
+      53
+     ],
+     "aciklama": [
+      "Bu soru, otozomal dominant geçen, istemsiz koreiform hareket ve ilerleyici demansla seyreden nörodejeneratif hastalığı tanıyıp tanımadığınızı ölçer.",
+      "Slaytta Huntington koresi otozomal dominant geçişli olarak anılır; klasik olarak nöbetlerin eşlik ettiği demans, rijidite ve kore vardır ve kore istemsiz, ani başlangıçlı, kısa süreli hareket bozukluğudur.",
+      "Bu nedenle tarif edilen tablo Huntington hastalığıdır.",
+      "En güçlü çeldirici Alzheimer hastalığıdır, çünkü slayt onu demansın en sık nedeni olarak anar; ancak otozomal dominant kalıtım ve kore tablosu slaytta yalnız Huntington için verilir."
+     ],
+     "ornek": "Aynı bilgi, ortalama otuz ile elli yaşlarda sinsi başlayan kore ve demanslı hastada tanıyı soran vaka olarak da sorulabilir.",
+     "tuzak": "Demansla seyreden her hastalığı Alzheimer sanıp koreyi gözden kaçırmak; kore ve demans birlikteliği Huntington'ı gösterir."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu derste çıkmış altı soru, mental retardasyon sendromlarını, davranış genetiğinin yöntemlerini, Tourette sendromunun tanımını ve ana belirtisini ve Huntington hastalığının klinik ve genetik özelliklerini ölçer.",
+    "2025-2026: Aşağıdakilerden hangisi mental retardasyon (zihinsel yetersizlik) gösteren sendromlardan değildir?",
+    "Cevap: Turner.",
+    "Bu soru, mental retardasyon yani zihinsel yetersizlik gösteren sendromların hangileri olduğunu bilip bilmediğinizi olumsuz kökle ölçer.",
+    "Slaytta yaklaşık yedi yüz elli genetik hastalığın mental retardasyonla ilişkilendirildiği, en iyi bilinenlerin ise Down, Williams, Frajil X ve Prader-Willi sendromları olduğu belirtilir.",
+    "Şıklardaki Down, Williams, Prader-Willi ve Frajil X bu listede yer aldığı için mental retardasyonla ilişkilidir; Turner sendromu slaytta geçmediğinden olumsuz kökün doğru cevabı odur.",
+    "En güçlü çeldirici Frajil X sendromudur, çünkü en sık X'e bağlı mental retardasyon nedeni olarak bilinir ve listenin yabancı bir üyesi sanılabilir.",
+    "Örnek: Aynı bilgi, en iyi bilinen mental retardasyon sendromlarını sayın biçiminde ya da listede olmayan sendromu bulun biçiminde de sorulabilir.",
+    "Tuzak: Soru olumsuz kökle sorulduğu için listede olan sendromlardan birini seçmek; oysa aranan, listede bulunmayan sendromdur.",
+    "2023-2024: Davranış genetiği çalışmalarında kullanılan yöntemler: I. İkiz çalışmaları II. Asosiyasyon (ilişki) çalışmaları III. Bağlantı (linkage) analizi IV. Mutasyon analizi Yukarıdakilerden hangileri davranış genetiği çalışmalarında kullanılan yöntemlerdendir?",
+    "Cevap: I, II ve III.",
+    "Bu soru, davranış genetiğinde kalıtımı incelemek için kullanılan yöntemleri öncüllü olarak sayıp sayamadığınızı ölçer.",
+    "Slaytta yöntemler pedigri ve bağlantı analizi, rekombinant DNA analizleri ve ikiz metodunun moleküler yöntemlerle birlikte kullanımı olarak verilir; otizm bölümünde ise ilişki yani asosiasyon çalışmaları da anılır.",
+    "İkiz çalışmaları, asosiasyon çalışmaları ve bağlantı analizi yöntem olduğu için bir, iki ve üçüncü öncül doğrudur; mutasyon analizi yöntemler arasında sayılmadığı için dördüncü öncül yanlıştır ve doğru cevap bir, iki ve üçtür.",
+    "En güçlü çeldirici dört öncülün tümünü içeren seçenektir, çünkü mutasyon analizi genetikle ilgili bir kavram olduğundan yöntem sanılabilir.",
+    "Örnek: Aynı bilgi, bağlantı analizi ve ikiz çalışmasının davranış genetiğinde kullanılıp kullanılmadığını soran doğru yanlış önermeleriyle de sorulabilir.",
+    "Tuzak: Mutasyon analizini de yöntem sayıp dört öncülün tümünü seçmek; oysa slayt yöntemler arasında mutasyon analizini saymaz.",
+    "2023-2024: Bir yıldan uzun süredir tekrarlayan basit motor ve vokal (ses) tikleri bir arada bulunan çocukta en olası tanı hangisidir?",
+    "Cevap: Tourette bozukluğu.",
+    "Bu soru, tekrarlayan basit motor ve vokal tiklerin birlikte bulunduğu tabloyu doğru ada bağlayıp bağlayamadığınızı ölçer.",
+    "Slayta göre Tourette sendromu, tekrarlayan basit motor ve vokal tiklerle karakterize nöropsikiyatrik ve nörogelişimsel bir davranış bozukluğudur; motor tikler başını ani çevirme, omuz silkme ve kolların sıçrayıcı hareketini, vokal tikler homurdanma, boğaz temizleme ve yüksek sesli soluk almayı içerir.",
+    "Soruda hem basit motor hem vokal tikler bir arada bulunduğu için doğru cevap Tourette bozukluğudur; slayt tanımı iki tik türünün birlikteliğine dayanır ve bir yıllık süre ölçütü slaytta geçmez.",
+    "En güçlü çeldiriciler tek tür tikle giden bozukluk seçenekleridir; bu bozukluklar slaytta anlatılmaz, slayt Tourette sendromunu iki tik türünün birlikteliğiyle tanımlar.",
+    "Örnek: Aynı bilgi, başını ani çeviren, omuz silken ve boğaz temizleyen bir çocukta en olası tanıyı soran kısa bir vaka olarak da sorulabilir.",
+    "Tuzak: İki tik türünü ayırt etmeyip yalnız motor ya da yalnız vokal tiki olan bozukluğu seçmek; oysa Tourette tanımında ikisi birlikte bulunur.",
+    "2025-2026: Tikler aşağıdaki hastalıklardan hangisinin ana belirtisidir?",
+    "Cevap: Tourette sendromu.",
+    "Bu soru, tiklerin hangi hastalığın ana belirtisi olduğunu bilip bilmediğinizi ölçer.",
+    "Slaytta Tourette sendromunun ana belirtilerinin tikler olduğu, kişinin birkaç hafta ya da ay süren basit geçici tiklerden uzun süreli karmaşık tiklere kadar değişen tiklere sahip olabileceği ve belirtilerin genellikle beş ile on yaşlarında başladığı belirtilir.",
+    "Bu nedenle Tourette sendromu doğru cevaptır.",
+    "En güçlü çeldirici Lesch-Nyhan sendromudur, çünkü bu sendromda da kendine zarar verme gibi tekrarlayıcı davranışlar görülür; ancak onun ana bulgusu tik değil kompülsif kendine zarar vermedir.",
+    "Örnek: Aynı bilgi, ilk belirtileri baş ve boyun bölgesinde motor tiklerle başlayan çocuk hastada tanıyı sorarak da kullanılabilir.",
+    "Tuzak: Tekrarlayıcı davranış gösteren başka sendromları, örneğin Lesch-Nyhan'ı, tikle karıştırmak.",
+    "2023-2024: Huntington koresi ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Otozomal dominant geçişli olup CAG trinükleotid tekrar artışı sonucu ortaya çıkar.",
+    "Bu soru, Huntington koresinin kalıtım biçimini ve genetik mekanizmasını birlikte bilip bilmediğinizi ölçer.",
+    "Slayta göre Huntington koresi otozomal dominant geçişlidir ve trinükleotit yani CAG tekrarları sonucu ortaya çıkar; gen dördüncü kromozomda haritalanmıştır.",
+    "Bu iki bilgiyi birlikte veren şık doğrudur; otozomal resesif geçiş ve çocukluk başlangıcı, X kromozomu, farklı tekrar dizisi ya da bilişsel işlevlerin korunduğunu söyleyen şıklar slayta aykırıdır.",
+    "En güçlü çeldiriciler FXN genindeki GAA tekrar artışını anan şık ile bilişsel işlevlerin korunduğunu söyleyen şıktır; Huntington'da tekrar dizisi CAG'dir, gen dördüncü kromozomdadır ve slayta göre demans gelişir.",
+    "Örnek: Aynı bilgi, hangi hastalığın otozomal dominant geçip CAG tekrar artışıyla oluştuğu sorulacak biçimde de çıkabilir.",
+    "Tuzak: Tekrar artışı mekanizmasını bilip dizisini ya da kalıtım tipini karıştırmak; Huntington'da CAG ve otozomal dominant geçiş birlikte verilir.",
+    "2018-2019: Otozomal dominant kalıtım gösteren, tüm vücutta istemsiz koreiform hareket bozukluğu ve ilerleyici demans ile seyreden nörodejeneratif hastalık hangisidir?",
+    "Cevap: Huntington hastalığı.",
+    "Bu soru, otozomal dominant geçen, istemsiz koreiform hareket ve ilerleyici demansla seyreden nörodejeneratif hastalığı tanıyıp tanımadığınızı ölçer.",
+    "Slaytta Huntington koresi otozomal dominant geçişli olarak anılır; klasik olarak nöbetlerin eşlik ettiği demans, rijidite ve kore vardır ve kore istemsiz, ani başlangıçlı, kısa süreli hareket bozukluğudur.",
+    "Bu nedenle tarif edilen tablo Huntington hastalığıdır.",
+    "En güçlü çeldirici Alzheimer hastalığıdır, çünkü slayt onu demansın en sık nedeni olarak anar; ancak otozomal dominant kalıtım ve kore tablosu slaytta yalnız Huntington için verilir.",
+    "Örnek: Aynı bilgi, ortalama otuz ile elli yaşlarda sinsi başlayan kore ve demanslı hastada tanıyı soran vaka olarak da sorulabilir.",
+    "Tuzak: Demansla seyreden her hastalığı Alzheimer sanıp koreyi gözden kaçırmak; kore ve demans birlikteliği Huntington'ı gösterir."
+   ],
+   "v": "d838040c63"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Hocanın çok sayıda çıkmış sorusuna dayanan, güvenilir bir profil.",
+   "guven": "yuksek",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%60) ve yanlış ifadeyi bulma (%9) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok sınıflama ve adlandırma (%24) ve mekanizma (%22) sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi anlama ve ilişki kurma (%52) ve hatırlama (%46) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın çok sayıda çıkmış sorusuna dayanan, güvenilir bir profil.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%60) ve yanlış ifadeyi bulma (%9) biçimindedir.",
+    "Sorulan bilgi: En çok sınıflama ve adlandırma (%24) ve mekanizma (%22) sorulur.",
+    "Düzey: Soruların düzeyi anlama ve ilişki kurma (%52) ve hatırlama (%46) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+   ],
+   "v": "0ed5722f64"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "MR genetiği: en iyi bilinen sendromlar ve Down sendromu",
+     "metin": "Sık yapılan hata: Soru olumsuz kökle sorulduğu için listede olan sendromlardan birini seçmek; oysa aranan, listede bulunmayan sendromdur."
+    },
+    {
+     "baslik": "Davranış genetiğinde kalıtımı inceleme yöntemleri",
+     "metin": "Sık yapılan hata: Mutasyon analizini de yöntem sayıp dört öncülün tümünü seçmek; oysa slayt yöntemler arasında mutasyon analizini saymaz."
+    },
+    {
+     "baslik": "Tourette sendromu: tanım, belirtiler ve nedenler",
+     "metin": "Sık yapılan hata: İki tik türünü ayırt etmeyip yalnız motor ya da yalnız vokal tiki olan bozukluğu seçmek; oysa Tourette tanımında ikisi birlikte bulunur. Ayrıca: Tekrarlayıcı davranış gösteren başka sendromları, örneğin Lesch-Nyhan'ı, tikle karıştırmak."
+    },
+    {
+     "baslik": "Huntington koresi: otozomal dominant geçişli, sinsi başlayan hastalık",
+     "metin": "Sık yapılan hata: Tekrar artışı mekanizmasını bilip dizisini ya da kalıtım tipini karıştırmak; Huntington'da CAG ve otozomal dominant geçiş birlikte verilir. Ayrıca: Demansla seyreden her hastalığı Alzheimer sanıp koreyi gözden kaçırmak; kore ve demans birlikteliği Huntington'ı gösterir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; profilde en yüksek payı bu tür alıyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "MR genetiği: en iyi bilinen sendromlar ve Down sendromu: Sık yapılan hata: Soru olumsuz kökle sorulduğu için listede olan sendromlardan birini seçmek; oysa aranan, listede bulunmayan sendromdur.",
+    "Davranış genetiğinde kalıtımı inceleme yöntemleri: Sık yapılan hata: Mutasyon analizini de yöntem sayıp dört öncülün tümünü seçmek; oysa slayt yöntemler arasında mutasyon analizini saymaz.",
+    "Tourette sendromu: tanım, belirtiler ve nedenler: Sık yapılan hata: İki tik türünü ayırt etmeyip yalnız motor ya da yalnız vokal tiki olan bozukluğu seçmek; oysa Tourette tanımında ikisi birlikte bulunur. Ayrıca: Tekrarlayıcı davranış gösteren başka sendromları, örneğin Lesch-Nyhan'ı, tikle karıştırmak.",
+    "Huntington koresi: otozomal dominant geçişli, sinsi başlayan hastalık: Sık yapılan hata: Tekrar artışı mekanizmasını bilip dizisini ya da kalıtım tipini karıştırmak; Huntington'da CAG ve otozomal dominant geçiş birlikte verilir. Ayrıca: Demansla seyreden her hastalığı Alzheimer sanıp koreyi gözden kaçırmak; kore ve demans birlikteliği Huntington'ı gösterir.",
+    "Çalışma yolu: Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; profilde en yüksek payı bu tür alıyor."
+   ],
+   "v": "fee01c8bfc"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

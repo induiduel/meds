@@ -1,0 +1,462 @@
+{
+ "surum": 2,
+ "key": "k2-54",
+ "kod": "2s17",
+ "kurul": 2,
+ "brans": "Psikiyatri",
+ "konu": "Yaygın Anksiyete Bozukluğu",
+ "ogretim_uyesi": "Doç. Dr. Zuhal Koç Apaydın",
+ "profil": "Psikiyatri",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2s17"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Ders girişi"
+    },
+    {
+     "metin": "Kaygı ve korku kavramları, normal kaygı"
+    },
+    {
+     "metin": "Normal endişe ve YAB'deki patolojik endişe"
+    },
+    {
+     "metin": "YAB tanımı ve epidemiyolojisi"
+    },
+    {
+     "metin": "Risk etmenleri ve eşlik eden bozukluklar"
+    },
+    {
+     "metin": "Biyolojik ve genetik etkenler"
+    },
+    {
+     "metin": "Nöral devreler: tehdit ve düzenleme"
+    },
+    {
+     "metin": "Psikolojik modeller"
+    },
+    {
+     "metin": "Ruhsal durum muayenesinde YAB"
+    },
+    {
+     "metin": "Bedensel ve fizyolojik belirtiler"
+    },
+    {
+     "metin": "Hasta kliniğe nasıl başvurur"
+    },
+    {
+     "metin": "DSM-5-TR tanı ölçütleri (A-F)"
+    },
+    {
+     "metin": "Değerlendirme ve tarama"
+    },
+    {
+     "metin": "Tıbbi ayırıcı tanı"
+    },
+    {
+     "metin": "Psikiyatrik ayırıcı tanı"
+    },
+    {
+     "metin": "Gidiş ve sonlanış"
+    },
+    {
+     "metin": "Vaka: 34 yaşında öğretmen"
+    },
+    {
+     "metin": "Akılda kalacaklar"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders girişi.",
+    "Kaygı ve korku kavramları, normal kaygı.",
+    "Normal endişe ve YAB'deki patolojik endişe.",
+    "YAB tanımı ve epidemiyolojisi.",
+    "Risk etmenleri ve eşlik eden bozukluklar.",
+    "Biyolojik ve genetik etkenler.",
+    "Nöral devreler: tehdit ve düzenleme.",
+    "Psikolojik modeller.",
+    "Ruhsal durum muayenesinde YAB.",
+    "Bedensel ve fizyolojik belirtiler.",
+    "Hasta kliniğe nasıl başvurur.",
+    "DSM-5-TR tanı ölçütleri (A-F).",
+    "Değerlendirme ve tarama.",
+    "Tıbbi ayırıcı tanı.",
+    "Psikiyatrik ayırıcı tanı.",
+    "Gidiş ve sonlanış.",
+    "Vaka: 34 yaşında öğretmen.",
+    "Akılda kalacaklar."
+   ],
+   "v": "2c7e2db8c3"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Kaygı ve korku kavramları, normal kaygı",
+     "metin": "Normal kaygı sempatik ve parasempatik sistemlerin etkileşimiyle tehdide karşı uyum sağlayıcı bir yanıttır; savunmalar ve başa çıkma mekanizmaları yetersiz kalıp ego uygun işlev göremezse kaygı kronik ve patolojik hale gelir.",
+     "s": [
+      2,
+      3
+     ]
+    },
+    {
+     "baslik": "Normal endişe ve YAB'deki patolojik endişe",
+     "metin": "Normal endişe kontrol edilebilir, ertelenebilir, belirli bir soruna odaklı ve olasılık-sonuçla orantılıdır; hafif geçici bedensel eşlik eder ve problem çözmeye yönlendirir.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "YAB tanımı: en az altı ay süren, kontrol edilmesi güç aşırı kaygı ve endişe",
+     "metin": "YAB birçok olay ya da etkinlik hakkında en az 6 ay boyunca çoğu gün süren, kontrol edilmesi güç, aşırı kaygı ve endişedir; belli bir nesneye odaklanmayan serbest yüzen kaygı olarak yaşanır.",
+     "s": [
+      5,
+      6
+     ]
+    },
+    {
+     "baslik": "Risk etmenleri ve eşlik eden bozukluklar",
+     "metin": "Risk etmenleri: kadın cinsiyet, ailede anksiyete ya da depresyon öyküsü, çocuklukta kötü muamele ve olumsuz yaşam olayları, düşük sosyo-ekonomik durum, davranışsal ketlenme, nevrotizm ve sorunları içe atma eğilimi, kronik bedensel hastalık.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Biyolojik etkenler: GABAerjik inhibisyon yetersizliği ve serotonin disregülasyonu",
+     "metin": "Nörokimyasal: GABA-A–benzodiazepin reseptör sisteminde GABAerjik inhibisyon yetersizliği, serotonin (5-HT) disregülasyonu, noradrenalinde α2 otoreseptör duyarlılığında azalma, glutamat disregülasyonu, HPA ekseni ve otonom sinir sisteminde aşırı uyarılmışlık.",
+     "s": [
+      8,
+      9
+     ]
+    },
+    {
+     "baslik": "Nöral devreler: tehdit ve düzenleme",
+     "metin": "Prefrontal korteksin (vmPFK, ön singulat) amigdala üzerindeki inhibitör kontrolü zayıflamıştır; amigdala–PFK bağlantısında duygu düzenleme devresinde fonksiyonel bağlantı bozukluğu vardır.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Psikolojik modeller: psikoanalitik görüşte kaygı bilinçdışı çatışmaların belirtisi",
+     "metin": "Psikoanalitik: kaygı çözümlenmemiş bilinçdışı çatışmaların belirtisidir.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Ruhsal durum muayenesinde YAB: görünüm, davranış, huzursuzluk ve gergin duruş",
+     "metin": "Görünüm ve davranış: genel huzursuzluk, endişeli yüz, gergin duruş, çabuk irkilme ve çabuk kızma. Konuşma ve ilişki: seste heyecanlı titreklik, zor konuşma, ancak konuşma düzenlidir.",
+     "s": [
+      12,
+      13
+     ]
+    },
+    {
+     "baslik": "Bedensel belirtiler: kardiyovasküler (çarpıntı) ve solunum belirtileri",
+     "metin": "Kardiyovasküler: çarpıntı, kan basıncında yükselme, yüzde solukluk ya da kızarma. Solunum: nefes almakta güçlük, hava açlığı, boğazda düğümlenme hissi.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Hasta kliniğe nasıl başvurur",
+     "metin": "Çoğu hasta psikiyatriye değil; aile hekimi, dahiliye, kardiyoloji, nöroloji ve gastroenteroloji polikliniklerine başvurur; baş ağrısı, kas ağrıları, çarpıntı, mide-bağırsak yakınmaları, uykusuzluk ve yorgunluk ön plandadır.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "DSM-5-TR tanı ölçütleri (A-F)",
+     "metin": "Çıkmış sorular: süre ölçütü (6 ay; 1 ay yeterli değildir) ve tanı için belirtilerin en az altı ay sürmesi.",
+     "s": [
+      16,
+      17
+     ]
+    },
+    {
+     "baslik": "Değerlendirme ve tarama",
+     "metin": "Tanı klinik görüşmeyle konur; ölçekler tarama ve şiddet izlemi içindir. YAB-7 (GAD-7) 0-21 puan, 5/10/15 hafif/orta/ağır, Türkçe formda kesme puanı 8; YAB-2 ilk 2 madde, 3 ve üzeri ise ileri değerlendirme; HAM-A klinisyen tarafından uygulanır.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Tıbbi ayırıcı tanı: kardiyovasküler nedenler (anemi, anjina, kalp yetmezliği, hipertansiyon)",
+     "metin": "Kardiyovasküler: anemi, anjina, kalp yetmezliği, hipertansiyon, mitral kapak prolapsusu, MI, paroksismal atriyal taşikardi. Solunum: astım, KOAH, pulmoner emboli.",
+     "s": [
+      19,
+      20
+     ]
+    },
+    {
+     "baslik": "Psikiyatrik ayırıcı tanı: panik bozukluk, sosyal anksiyete bozukluğu ve diğerleri",
+     "metin": "Panik bozukluk: beklenmedik panik atakları, endişe yeni atak olacağı üzerine. Sosyal anksiyete bozukluğu: olumsuz değerlendirilme ve utanma. OKB: ego-distonik obsesyonlar ve kompulsiyonlar; YAB'de gündelik yaşam sorunlarına dair endişe.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Gidiş ve sonlanış: kronik ve dalgalı seyir, kendiliğinden düzelme oranı düşük",
+     "metin": "Kronik ve dalgalı seyirlidir, kendiliğinden tam düzelme oranı düşüktür; hastaların çoğu “kendimi bildim bileli endişeliyim” der; yaşam olayları başlangıçta ve alevlenmelerde etkilidir.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Vaka: aile hekimine baş ağrısı ve uykusuzlukla başvuran 34 yaşında kadın öğretmen",
+     "metin": "Aile hekimine baş ağrısı, boyun-omuz ağrısı ve uykusuzlukla başvuran 34 yaşında kadın; yaklaşık bir yıldır çocuklarının sağlığı, okul işleri ve maddi durum konusunda endişelerini durduramıyor, kolay yoruluyor, dikkatini toplayamıyor, çabuk sinirleniyor, günde 5-6 fincan kahve içiyor, panik atak öyküsü yok.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Akılda kalacaklar: YAB özü birçok konuya yayılan, kontrol edilemeyen endişe",
+     "metin": "YAB'nin özü birçok konuya yayılan, kontrol edilemeyen ve orantısız endişedir; yaşam boyu yaklaşık %4, kadınlarda 2 kat, birinci basamakta en sık anksiyete bozukluğudur.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Kaynakça: Ruscio, Kessler ve Hettema çalışmaları; kapanış",
+     "metin": "Kaynakça: DSM-5-TR (APA, 2022), ICD-11 6B00, Ruscio 2017 (JAMA Psychiatry), Kessler 2005, Hettema 2001, Strom 2025 (Nature Genetics GWAS), Stein ve Sareen 2015, Kaplan ve Sadock, Öztürk ve Uluşahin.",
+     "s": [
+      25,
+      26,
+      27
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Kaygı ve korku kavramları, normal kaygı: Normal kaygı sempatik ve parasempatik sistemlerin etkileşimiyle tehdide karşı uyum sağlayıcı bir yanıttır; savunmalar ve başa çıkma mekanizmaları yetersiz kalıp ego uygun işlev göremezse kaygı kronik ve patolojik hale gelir.",
+    "Normal endişe ve YAB'deki patolojik endişe: Normal endişe kontrol edilebilir, ertelenebilir, belirli bir soruna odaklı ve olasılık-sonuçla orantılıdır; hafif geçici bedensel eşlik eder ve problem çözmeye yönlendirir.",
+    "YAB tanımı: en az altı ay süren, kontrol edilmesi güç aşırı kaygı ve endişe: YAB birçok olay ya da etkinlik hakkında en az 6 ay boyunca çoğu gün süren, kontrol edilmesi güç, aşırı kaygı ve endişedir; belli bir nesneye odaklanmayan serbest yüzen kaygı olarak yaşanır.",
+    "Risk etmenleri ve eşlik eden bozukluklar: Risk etmenleri: kadın cinsiyet, ailede anksiyete ya da depresyon öyküsü, çocuklukta kötü muamele ve olumsuz yaşam olayları, düşük sosyo-ekonomik durum, davranışsal ketlenme, nevrotizm ve sorunları içe atma eğilimi, kronik bedensel hastalık.",
+    "Biyolojik etkenler: GABAerjik inhibisyon yetersizliği ve serotonin disregülasyonu: Nörokimyasal: GABA-A–benzodiazepin reseptör sisteminde GABAerjik inhibisyon yetersizliği, serotonin (5-HT) disregülasyonu, noradrenalinde α2 otoreseptör duyarlılığında azalma, glutamat disregülasyonu, HPA ekseni ve otonom sinir sisteminde aşırı uyarılmışlık.",
+    "Nöral devreler: tehdit ve düzenleme: Prefrontal korteksin (vmPFK, ön singulat) amigdala üzerindeki inhibitör kontrolü zayıflamıştır; amigdala–PFK bağlantısında duygu düzenleme devresinde fonksiyonel bağlantı bozukluğu vardır.",
+    "Psikolojik modeller: psikoanalitik görüşte kaygı bilinçdışı çatışmaların belirtisi: Psikoanalitik: kaygı çözümlenmemiş bilinçdışı çatışmaların belirtisidir.",
+    "Ruhsal durum muayenesinde YAB: görünüm, davranış, huzursuzluk ve gergin duruş: Görünüm ve davranış: genel huzursuzluk, endişeli yüz, gergin duruş, çabuk irkilme ve çabuk kızma. Konuşma ve ilişki: seste heyecanlı titreklik, zor konuşma, ancak konuşma düzenlidir.",
+    "Bedensel belirtiler: kardiyovasküler (çarpıntı) ve solunum belirtileri: Kardiyovasküler: çarpıntı, kan basıncında yükselme, yüzde solukluk ya da kızarma. Solunum: nefes almakta güçlük, hava açlığı, boğazda düğümlenme hissi.",
+    "Hasta kliniğe nasıl başvurur: Çoğu hasta psikiyatriye değil; aile hekimi, dahiliye, kardiyoloji, nöroloji ve gastroenteroloji polikliniklerine başvurur; baş ağrısı, kas ağrıları, çarpıntı, mide-bağırsak yakınmaları, uykusuzluk ve yorgunluk ön plandadır.",
+    "DSM-5-TR tanı ölçütleri (A-F): Çıkmış sorular: süre ölçütü (6 ay; 1 ay yeterli değildir) ve tanı için belirtilerin en az altı ay sürmesi.",
+    "Değerlendirme ve tarama: Tanı klinik görüşmeyle konur; ölçekler tarama ve şiddet izlemi içindir. YAB-7 (GAD-7) 0-21 puan, 5/10/15 hafif/orta/ağır, Türkçe formda kesme puanı 8; YAB-2 ilk 2 madde, 3 ve üzeri ise ileri değerlendirme; HAM-A klinisyen tarafından uygulanır.",
+    "Tıbbi ayırıcı tanı: kardiyovasküler nedenler (anemi, anjina, kalp yetmezliği, hipertansiyon): Kardiyovasküler: anemi, anjina, kalp yetmezliği, hipertansiyon, mitral kapak prolapsusu, MI, paroksismal atriyal taşikardi. Solunum: astım, KOAH, pulmoner emboli.",
+    "Psikiyatrik ayırıcı tanı: panik bozukluk, sosyal anksiyete bozukluğu ve diğerleri: Panik bozukluk: beklenmedik panik atakları, endişe yeni atak olacağı üzerine. Sosyal anksiyete bozukluğu: olumsuz değerlendirilme ve utanma. OKB: ego-distonik obsesyonlar ve kompulsiyonlar; YAB'de gündelik yaşam sorunlarına dair endişe.",
+    "Gidiş ve sonlanış: kronik ve dalgalı seyir, kendiliğinden düzelme oranı düşük: Kronik ve dalgalı seyirlidir, kendiliğinden tam düzelme oranı düşüktür; hastaların çoğu “kendimi bildim bileli endişeliyim” der; yaşam olayları başlangıçta ve alevlenmelerde etkilidir.",
+    "Vaka: aile hekimine baş ağrısı ve uykusuzlukla başvuran 34 yaşında kadın öğretmen: Aile hekimine baş ağrısı, boyun-omuz ağrısı ve uykusuzlukla başvuran 34 yaşında kadın; yaklaşık bir yıldır çocuklarının sağlığı, okul işleri ve maddi durum konusunda endişelerini durduramıyor, kolay yoruluyor, dikkatini toplayamıyor, çabuk sinirleniyor, günde 5-6 fincan kahve içiyor, panik atak öyküsü yok.",
+    "Akılda kalacaklar: YAB özü birçok konuya yayılan, kontrol edilemeyen endişe: YAB'nin özü birçok konuya yayılan, kontrol edilemeyen ve orantısız endişedir; yaşam boyu yaklaşık %4, kadınlarda 2 kat, birinci basamakta en sık anksiyete bozukluğudur.",
+    "Kaynakça: Ruscio, Kessler ve Hettema çalışmaları; kapanış: Kaynakça: DSM-5-TR (APA, 2022), ICD-11 6B00, Ruscio 2017 (JAMA Psychiatry), Kessler 2005, Hettema 2001, Strom 2025 (Nature Genetics GWAS), Stein ve Sareen 2015, Kaplan ve Sadock, Öztürk ve Uluşahin."
+   ],
+   "v": "777c69d8e6"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu derste çıkmış beş soru, yaygın anksiyete bozukluğunda otonom belirtilerin yönünü, risk etmenleri ile eşlik eden bozuklukların ayrımını, tanı için gereken süreyi ve anksiyetenin bilişsel belirtilerini ölçer.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Yaygın anksiyete bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
+     "cevap": "Otonomik aktivitede azalma mevcuttur.",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Bu soru, yaygın anksiyete bozukluğunda bedensel belirtilerin hangi yönde değiştiğini ve tanı ölçütlerinin doğru bilinip bilinmediğini yanlış önerme kökü ile ölçer.",
+      "Slaytta bedensel belirtilerin çarpıntı, kan basıncında yükselme, terleme, sık idrara çıkma ve kas gerginliği gibi otonom aşırı uyarılma bulguları olduğu gösterilir; bu yüzden otonomik aktivitede azalma olduğunu söyleyen ifade yanlıştır ve doğru cevaptır.",
+      "En güçlü çeldirici, tanı için belirtilerin en az altı ay sürmesi gerektiğini söyleyen seçenektir; bu süre A ölçütünde yazılıdır ve diğer seçeneklerle birlikte doğru önermelerden biridir."
+     ],
+     "ornek": "Terleme, çarpıntı ve sık idrara çıkma yakınması olan anksiyeteli bir hastada otonom aktivitenin azaldığını söyleyen ifade yanlıştır.",
+     "tuzak": "Tablo bedensel yakınmalarla seyrettiği için otonom aktivitenin azaldığı sanılır; oysa bütün bu belirtiler otonom aşırı uyarılmayı yani artışı gösterir."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
+     "cevap": "Madde kullanımının olması",
+     "s": [
+      7
+     ],
+     "aciklama": [
+      "Bu soru, yaygın anksiyete bozukluğunun risk etmenleri ile eşlik eden bozuklukları birbirinden ayırıp ayıramadığınızı olumsuz kökle ölçer.",
+      "Slaytta risk etmenleri olarak kadın cinsiyet, ailede anksiyete ya da depresyon öyküsü, çocuklukta kötü muamele ve olumsuz yaşam olayları, düşük sosyo-ekonomik durum, davranışsal ketlenme, nevrotizm, sorunları içe atma eğilimi ve kronik bedensel hastalık sayılır; alkol ve madde kullanım bozuklukları ise eşlik eden bozukluklar sütunundadır.",
+      "Düşük sosyo-ekonomik durum, kötü muamele ve sorunları içe atma eğilimi seçenekleri risk listesinde yazılı olduğu için elenir; madde kullanımı ise eşlik eden bozukluklar sütunundadır.",
+      "Çocukluktaki davranım bozuklukları seçeneği slaytta hiç geçmez; bu yüzden slayt bilgisiyle bu seçenek ile madde kullanımı seçeneği ayrılamaz ve soru çözücüde kullanılmaz."
+     ],
+     "ornek": "Alkol kullanım bozukluğu olan bir hastada yaygın anksiyete bozukluğu varsa alkol kullanımı risk etmeni değil, eşlik eden bozukluk olarak yazılır.",
+     "tuzak": "Alkol ve madde kullanımı kaygıyı artırdığı için risk etmeni sanılır; oysa dersteki düzende eşlik eden bozukluklar arasında yer alır."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Yaygın anksiyete bozukluğu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Tanı için belirtilerin en az 1 ay sürmesi yeterlidir",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Bu soru, yaygın anksiyete bozukluğunun tanı ölçütlerini, özellikle süre koşulunu yanlış önerme kökü ile ölçer.",
+      "DSM-5-TR A ölçütüne göre aşırı kaygı ve endişe en az altı aylık bir sürenin çoğu gününde bulunmalıdır; bu yüzden tanı için belirtilerin en az bir ay sürmesinin yeterli olduğunu söyleyen ifade yanlıştır ve doğru cevaptır.",
+      "Birçok olaya yayılan endişe, endişeyi denetlemede güçlük ve huzursuzluk, kolay yorulma, kas gerginliği ile uyku bozukluğu gibi eşlik eden belirtiler ölçütlerde yazılı olduğu için doğrudur.",
+      "Beşinci seçenek tedaviyle ilgilidir ve derste tedavi işlenmez; soru yalnız süre ölçütünü ölçer ve yanlış olan tek önerme süreyi kısaltan seçenektir."
+     ],
+     "ornek": "Dört haftadır yaygın endişe yakınması olan hastada belirtiler tanı koymak için süre bakımından yetersizdir.",
+     "tuzak": "Kısa süreli endişe ile süreğen bozukluk karıştırılır ve bir ay ya da üç ay gibi kısa süreler doğru sanılır; oysa süre ölçütü en az altı aydır."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Hangisi anksiyetenin bilişsel belirtileri arasında yer alır?",
+     "cevap": "Dikkat eksikliği, konsantre olamama ve unutkanlık",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Bu soru, anksiyetenin belirtilerini duygulanım, bilişsel ve bedensel alanlara ayırıp ayıramadığınızı ölçer.",
+      "Slaytta ruhsal durum muayenesinde bilişsel yetiler başlığı altında yorucu sıkıntı nedeniyle dikkatin çabuk dağıldığı ve geçici unutkanlıkların olabildiği belirtilir; bu yüzden dikkat eksikliği, konsantre olamama ve unutkanlık bilişsel belirtidir ve doğru cevaptır.",
+      "Duygulanım alanı derste bun, bungunluk ve bunaltı olarak tarif edilir; kalp çarpıntısı, terleme ve nefes alamama bedensel belirtilere, yerinde duramama davranış bulgusuna, uyku düzensizliği ise uyku alanına girdiği için bu seçenekler bilişsel yetilerle ilgili olmadığından elenir.",
+      "En güçlü çeldirici kalp çarpıntısı, terleme ve nefes alamamadır, çünkü anksiyetenin en bilinen belirtileridir ancak bilişsel değil bedensel belirtilerdir."
+     ],
+     "ornek": "Yoğun kaygı yaşayan bir hasta dikkatinin çabuk dağıldığını ve bazı şeyleri geçici olarak unuttuğunu söylüyorsa bu yakınma bilişsel yetilere aittir.",
+     "tuzak": "Anksiyetenin en bilinen belirtileri çarpıntı ve terleme olduğu için bunlar bilişsel sanılır; oysa dikkat ve unutkanlık bilişsel alanı oluşturur."
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi anksiyetenin bilişsel belirtileri arasında yer alır?",
+     "cevap": "Dikkat eksikliği, konsantre olamama ve unutkanlık",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Bu soru, aynı yıl Kurul 4 sınavında da sorulduğu biçimiyle anksiyetenin bilişsel belirtilerini diğer belirti alanlarından ayırmayı ölçer.",
+      "Ruhsal durum muayenesinde bilişsel yetiler alanında dikkatin çabuk dağılması ve geçici unutkanlık yer alır; bu nedenle dikkat eksikliği, konsantre olamama ve unutkanlık bilişsel belirtidir ve doğru cevaptır.",
+      "Derste duygulanım bun, bungunluk ve bunaltı olarak tarif edilir, yerinde duramama huzursuzluk ve gergin duruş gibi görünüm ve davranış bulgusudur, kalp çarpıntısı ile terleme bedensel belirtidir, uyku düzensizliği ise uyku alanındadır.",
+      "En güçlü çeldirici korku, endişe ve kaygıdır, çünkü anksiyetenin tanımına en yakın duyguları sayar; ancak dikkat ve unutkanlık bilişsel yetilerin bulgusudur ve duygulanım dersteki tarife göre bunaltıdır."
+     ],
+     "ornek": "Dikkatini toplayamayan ve sık sık unutkanlık yaşayan anksiyeteli bir hastada bu yakınmalar bilişsel belirti olarak yazılır.",
+     "tuzak": "Kaygı ve endişe anksiyetenin kendisi olduğu için bilişsel sanılır; oysa dersteki duygulanım tarifi bun, bungunluk ve bunaltıdır ve bilişsel yetiler dikkat ile belleği kapsar."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu derste çıkmış beş soru, yaygın anksiyete bozukluğunda otonom belirtilerin yönünü, risk etmenleri ile eşlik eden bozuklukların ayrımını, tanı için gereken süreyi ve anksiyetenin bilişsel belirtilerini ölçer.",
+    "2020-2021: Yaygın anksiyete bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
+    "Cevap: Otonomik aktivitede azalma mevcuttur.",
+    "Bu soru, yaygın anksiyete bozukluğunda bedensel belirtilerin hangi yönde değiştiğini ve tanı ölçütlerinin doğru bilinip bilinmediğini yanlış önerme kökü ile ölçer.",
+    "Slaytta bedensel belirtilerin çarpıntı, kan basıncında yükselme, terleme, sık idrara çıkma ve kas gerginliği gibi otonom aşırı uyarılma bulguları olduğu gösterilir; bu yüzden otonomik aktivitede azalma olduğunu söyleyen ifade yanlıştır ve doğru cevaptır.",
+    "En güçlü çeldirici, tanı için belirtilerin en az altı ay sürmesi gerektiğini söyleyen seçenektir; bu süre A ölçütünde yazılıdır ve diğer seçeneklerle birlikte doğru önermelerden biridir.",
+    "Örnek: Terleme, çarpıntı ve sık idrara çıkma yakınması olan anksiyeteli bir hastada otonom aktivitenin azaldığını söyleyen ifade yanlıştır.",
+    "Tuzak: Tablo bedensel yakınmalarla seyrettiği için otonom aktivitenin azaldığı sanılır; oysa bütün bu belirtiler otonom aşırı uyarılmayı yani artışı gösterir.",
+    "2022-2023: Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
+    "Cevap: Madde kullanımının olması.",
+    "Bu soru, yaygın anksiyete bozukluğunun risk etmenleri ile eşlik eden bozuklukları birbirinden ayırıp ayıramadığınızı olumsuz kökle ölçer.",
+    "Slaytta risk etmenleri olarak kadın cinsiyet, ailede anksiyete ya da depresyon öyküsü, çocuklukta kötü muamele ve olumsuz yaşam olayları, düşük sosyo-ekonomik durum, davranışsal ketlenme, nevrotizm, sorunları içe atma eğilimi ve kronik bedensel hastalık sayılır; alkol ve madde kullanım bozuklukları ise eşlik eden bozukluklar sütunundadır.",
+    "Düşük sosyo-ekonomik durum, kötü muamele ve sorunları içe atma eğilimi seçenekleri risk listesinde yazılı olduğu için elenir; madde kullanımı ise eşlik eden bozukluklar sütunundadır.",
+    "Çocukluktaki davranım bozuklukları seçeneği slaytta hiç geçmez; bu yüzden slayt bilgisiyle bu seçenek ile madde kullanımı seçeneği ayrılamaz ve soru çözücüde kullanılmaz.",
+    "Örnek: Alkol kullanım bozukluğu olan bir hastada yaygın anksiyete bozukluğu varsa alkol kullanımı risk etmeni değil, eşlik eden bozukluk olarak yazılır.",
+    "Tuzak: Alkol ve madde kullanımı kaygıyı artırdığı için risk etmeni sanılır; oysa dersteki düzende eşlik eden bozukluklar arasında yer alır.",
+    "2025-2026: Yaygın anksiyete bozukluğu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Tanı için belirtilerin en az 1 ay sürmesi yeterlidir.",
+    "Bu soru, yaygın anksiyete bozukluğunun tanı ölçütlerini, özellikle süre koşulunu yanlış önerme kökü ile ölçer.",
+    "DSM-5-TR A ölçütüne göre aşırı kaygı ve endişe en az altı aylık bir sürenin çoğu gününde bulunmalıdır; bu yüzden tanı için belirtilerin en az bir ay sürmesinin yeterli olduğunu söyleyen ifade yanlıştır ve doğru cevaptır.",
+    "Birçok olaya yayılan endişe, endişeyi denetlemede güçlük ve huzursuzluk, kolay yorulma, kas gerginliği ile uyku bozukluğu gibi eşlik eden belirtiler ölçütlerde yazılı olduğu için doğrudur.",
+    "Beşinci seçenek tedaviyle ilgilidir ve derste tedavi işlenmez; soru yalnız süre ölçütünü ölçer ve yanlış olan tek önerme süreyi kısaltan seçenektir.",
+    "Örnek: Dört haftadır yaygın endişe yakınması olan hastada belirtiler tanı koymak için süre bakımından yetersizdir.",
+    "Tuzak: Kısa süreli endişe ile süreğen bozukluk karıştırılır ve bir ay ya da üç ay gibi kısa süreler doğru sanılır; oysa süre ölçütü en az altı aydır.",
+    "2018-2019: Hangisi anksiyetenin bilişsel belirtileri arasında yer alır?",
+    "Cevap: Dikkat eksikliği, konsantre olamama ve unutkanlık.",
+    "Bu soru, anksiyetenin belirtilerini duygulanım, bilişsel ve bedensel alanlara ayırıp ayıramadığınızı ölçer.",
+    "Slaytta ruhsal durum muayenesinde bilişsel yetiler başlığı altında yorucu sıkıntı nedeniyle dikkatin çabuk dağıldığı ve geçici unutkanlıkların olabildiği belirtilir; bu yüzden dikkat eksikliği, konsantre olamama ve unutkanlık bilişsel belirtidir ve doğru cevaptır.",
+    "Duygulanım alanı derste bun, bungunluk ve bunaltı olarak tarif edilir; kalp çarpıntısı, terleme ve nefes alamama bedensel belirtilere, yerinde duramama davranış bulgusuna, uyku düzensizliği ise uyku alanına girdiği için bu seçenekler bilişsel yetilerle ilgili olmadığından elenir.",
+    "En güçlü çeldirici kalp çarpıntısı, terleme ve nefes alamamadır, çünkü anksiyetenin en bilinen belirtileridir ancak bilişsel değil bedensel belirtilerdir.",
+    "Örnek: Yoğun kaygı yaşayan bir hasta dikkatinin çabuk dağıldığını ve bazı şeyleri geçici olarak unuttuğunu söylüyorsa bu yakınma bilişsel yetilere aittir.",
+    "Tuzak: Anksiyetenin en bilinen belirtileri çarpıntı ve terleme olduğu için bunlar bilişsel sanılır; oysa dikkat ve unutkanlık bilişsel alanı oluşturur.",
+    "2018-2019: Aşağıdakilerden hangisi anksiyetenin bilişsel belirtileri arasında yer alır?",
+    "Cevap: Dikkat eksikliği, konsantre olamama ve unutkanlık.",
+    "Bu soru, aynı yıl Kurul 4 sınavında da sorulduğu biçimiyle anksiyetenin bilişsel belirtilerini diğer belirti alanlarından ayırmayı ölçer.",
+    "Ruhsal durum muayenesinde bilişsel yetiler alanında dikkatin çabuk dağılması ve geçici unutkanlık yer alır; bu nedenle dikkat eksikliği, konsantre olamama ve unutkanlık bilişsel belirtidir ve doğru cevaptır.",
+    "Derste duygulanım bun, bungunluk ve bunaltı olarak tarif edilir, yerinde duramama huzursuzluk ve gergin duruş gibi görünüm ve davranış bulgusudur, kalp çarpıntısı ile terleme bedensel belirtidir, uyku düzensizliği ise uyku alanındadır.",
+    "En güçlü çeldirici korku, endişe ve kaygıdır, çünkü anksiyetenin tanımına en yakın duyguları sayar; ancak dikkat ve unutkanlık bilişsel yetilerin bulgusudur ve duygulanım dersteki tarife göre bunaltıdır.",
+    "Örnek: Dikkatini toplayamayan ve sık sık unutkanlık yaşayan anksiyeteli bir hastada bu yakınmalar bilişsel belirti olarak yazılır.",
+    "Tuzak: Kaygı ve endişe anksiyetenin kendisi olduğu için bilişsel sanılır; oysa dersteki duygulanım tarifi bun, bungunluk ve bunaltıdır ve bilişsel yetiler dikkat ile belleği kapsar."
+   ],
+   "v": "d45573334a"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 5 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 5 çıkmış soru var; 0 tanesi öncüllü, 3 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 7, 9, 13, 16."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 5 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 5 çıkmış soru var; 0 tanesi öncüllü, 3 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 7, 9, 13, 16."
+   ],
+   "v": "738a37504e"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Biyolojik etkenler: GABAerjik inhibisyon yetersizliği ve serotonin disregülasyonu",
+     "metin": "Sık yapılan hata: Tablo bedensel yakınmalarla seyrettiği için otonom aktivitenin azaldığı sanılır; oysa bütün bu belirtiler otonom aşırı uyarılmayı yani artışı gösterir."
+    },
+    {
+     "baslik": "Risk etmenleri ve eşlik eden bozukluklar",
+     "metin": "Sık yapılan hata: Alkol ve madde kullanımı kaygıyı artırdığı için risk etmeni sanılır; oysa dersteki düzende eşlik eden bozukluklar arasında yer alır."
+    },
+    {
+     "baslik": "DSM-5-TR tanı ölçütleri (A-F)",
+     "metin": "Sık yapılan hata: Kısa süreli endişe ile süreğen bozukluk karıştırılır ve bir ay ya da üç ay gibi kısa süreler doğru sanılır; oysa süre ölçütü en az altı aydır."
+    },
+    {
+     "baslik": "Ruhsal durum muayenesinde YAB: görünüm, davranış, huzursuzluk ve gergin duruş",
+     "metin": "Sık yapılan hata: Anksiyetenin en bilinen belirtileri çarpıntı ve terleme olduğu için bunlar bilişsel sanılır; oysa dikkat ve unutkanlık bilişsel alanı oluşturur. Ayrıca: Kaygı ve endişe anksiyetenin kendisi olduğu için bilişsel sanılır; oysa dersteki duygulanım tarifi bun, bungunluk ve bunaltıdır ve bilişsel yetiler dikkat ile belleği kapsar."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Biyolojik etkenler: GABAerjik inhibisyon yetersizliği ve serotonin disregülasyonu: Sık yapılan hata: Tablo bedensel yakınmalarla seyrettiği için otonom aktivitenin azaldığı sanılır; oysa bütün bu belirtiler otonom aşırı uyarılmayı yani artışı gösterir.",
+    "Risk etmenleri ve eşlik eden bozukluklar: Sık yapılan hata: Alkol ve madde kullanımı kaygıyı artırdığı için risk etmeni sanılır; oysa dersteki düzende eşlik eden bozukluklar arasında yer alır.",
+    "DSM-5-TR tanı ölçütleri (A-F): Sık yapılan hata: Kısa süreli endişe ile süreğen bozukluk karıştırılır ve bir ay ya da üç ay gibi kısa süreler doğru sanılır; oysa süre ölçütü en az altı aydır.",
+    "Ruhsal durum muayenesinde YAB: görünüm, davranış, huzursuzluk ve gergin duruş: Sık yapılan hata: Anksiyetenin en bilinen belirtileri çarpıntı ve terleme olduğu için bunlar bilişsel sanılır; oysa dikkat ve unutkanlık bilişsel alanı oluşturur. Ayrıca: Kaygı ve endişe anksiyetenin kendisi olduğu için bilişsel sanılır; oysa dersteki duygulanım tarifi bun, bungunluk ve bunaltıdır ve bilişsel yetiler dikkat ile belleği kapsar.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "e9abff2162"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

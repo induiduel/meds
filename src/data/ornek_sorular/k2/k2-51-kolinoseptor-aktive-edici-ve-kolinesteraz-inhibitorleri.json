@@ -1,0 +1,1860 @@
+{
+ "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri",
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "sira": 51,
+ "tarih": "2026-11-23",
+ "soru_sayisi": 61,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Dersin hedeflerini ve öğrenme çıktılarını açıklayabilme.",
+   "sorular": []
+  },
+  {
+   "no": 2,
+   "metin": "Dersin yol haritasını ve beş ana bölümünü sıralayabilme.",
+   "sorular": []
+  },
+  {
+   "no": 3,
+   "metin": "Kolinerjik nöronların otonom sistemdeki yerini ve reseptör eşleşmelerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q01",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Otonom ganglionlarda asetilkolinin hızlı iletimini sağlayan reseptör alt tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "NM",
+      "B": "M2",
+      "C": "M3",
+      "D": "NN",
+      "E": "M4"
+     },
+     "dogru": "D",
+     "aciklama": "NN, ligand kapılı katyon kanalıdır ve otonom ganglionlarda, adrenal medullada ve merkezi sinir sisteminde bulunur. Asetilkolin bağlanınca net sodyum girişi ile hızlı depolarizasyon oluşur. Ganglionik iletimi bu reseptör sağladığı için doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "NM reseptörü iskelet kası motor son plağında bulunan nikotinik alt tiptir. Somatik motor lif ganglion olmadan doğrudan iskelet kasını uyarır. Ganglionik iletim bu alt tipin işlevi değildir.",
+      "B": "M2 muskarinik bir alt tiptir ve G proteinine bağlıdır; kalpte bulunur. Gi/o üzerinden cAMP azalması ve potasyum kanalı açılması yapar. Yanıtı hızlı depolarizasyon değil, daha yavaş ve düzenleyicidir.",
+      "C": "M3 muskarinik alt tiptir ve düz kas ile bezlerde bulunur. Gq/11 yolu ile hücre içi kalsiyumu artırır. Yanıtı yavaş ve düzenleyicidir, ganglionik hızlı iletimden sorumlu değildir.",
+      "D": "NN, ligand kapılı katyon kanalıdır ve otonom ganglionlarda, adrenal medullada ve merkezi sinir sisteminde bulunur. Asetilkolin bağlanınca net sodyum girişi ile hızlı depolarizasyon oluşur. Ganglionik iletimi bu reseptör sağladığı için doğru yanıt budur.",
+      "E": "M4 muskarinik alt tiptir ve Gi/o üzerinden cAMP azalması yapar. G proteinine bağlı olduğundan yanıtı yavaştır. Ganglionlardaki hızlı iletim ligand kapılı kanal gerektirir."
+     },
+     "kanit": {
+      "sayfa": 4
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Asetilkolin sentezi ve salımının basamaklarını ve bu basamakları bloke eden ajanları açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q02",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Vesamikol asetilkolin döngüsünde aşağıdaki basamaklardan hangisini bloke eder?",
+     "secenekler": {
+      "A": "Kolin alımı",
+      "B": "Ca²⁺ bağımlı salım",
+      "C": "Sinaptik yıkım",
+      "D": "Veziküle depolama",
+      "E": "Kolin asetilasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Asetilkolin VAChT ile veziküle taşınır ve vesamikol bu taşınmayı bloke eder. Böylece veziküllerde asetilkolin depolanamaz. Bu nedenle doğru yanıt veziküle depolamadır.",
+     "sik_aciklamalari": {
+      "A": "Kolin alımı CHT taşıyıcısıyla olur ve bu taşıyıcıyı hemikolinyum bloke eder. Vesamikolün hedefi bu basamak değildir. İki ilaç asetilkolin döngüsünün farklı noktalarında etki eder.",
+      "B": "Salım Ca²⁺ bağımlı ekzositozla olur ve botulinum toksini bu basamağı engeller. Salım, depolamadan sonra gelen dördüncü basamaktır. Vesamikolün etkilediği yer burası değildir.",
+      "C": "Sinaptik aralıkta asetilkolini asetilkolinesteraz yıkar ve etkiyi hızla sonlandırır. Bu enzimin inhibisyonu asetilkolin birikimine yol açar. Vesamikol enzimi değil, vezikül taşıyıcısını etkiler.",
+      "D": "Asetilkolin VAChT ile veziküle taşınır ve vesamikol bu taşınmayı bloke eder. Böylece veziküllerde asetilkolin depolanamaz. Bu nedenle doğru yanıt veziküle depolamadır.",
+      "E": "Kolin ve asetil-KoA'dan asetilkolin sentezini ChAT enzimi sağlar. Sentez, depolamadan önceki ikinci basamaktır. Vesamikol bu enzimi değil, sentez sonrası veziküle taşınmayı bloke eder."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q03",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Botulinum toksini ile ilgili şu ifadeler veriliyor:\nI. Asetilkolin salımını engeller.\nII. Kolin alımını bloke eder.\nIII. Nöromüsküler kavşakta iletimi keser.\nIV. Asetilkolinesterazı inhibe eder.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "II ve IV",
+      "B": "I ve III",
+      "C": "I, II ve III",
+      "D": "Yalnız I",
+      "E": "III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Botulinum toksini asetilkolinin Ca²⁺ bağımlı ekzositozla salımını engeller. Salım olmayınca nöromüsküler kavşakta iletim kesilir. Bu nedenle birinci ve üçüncü ifade doğrudur ve doğru yanıt I ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Kolin alımını hemikolinyum bloke eder; botulinum toksininin hedefi bu basamak değildir. Asetilkolinesterazı ise edrofonyum, karbamatlar ve organofosfatlar inhibe eder. Bu nedenle ikinci ve dördüncü ifadeler yanlıştır.",
+      "B": "Botulinum toksini asetilkolinin Ca²⁺ bağımlı ekzositozla salımını engeller. Salım olmayınca nöromüsküler kavşakta iletim kesilir. Bu nedenle birinci ve üçüncü ifade doğrudur ve doğru yanıt I ve III'tür.",
+      "C": "Birinci ve üçüncü ifadeler doğrudur ancak kolin alımını bloke etmek botulinum toksininin etkisi değildir. Bu basamağı hemikolinyum bloke eder. İkinci ifadeyi içeren seçenek bu yüzden yanlıştır.",
+      "D": "Yalnız birinci ifadeyi doğru sayar. Oysa salım engellenince nöromüsküler kavşakta iletim de kesilir, yani üçüncü ifade de doğrudur. Seçenek bu nedenle eksik kalır.",
+      "E": "Üçüncü ifade doğrudur ancak dördüncü ifade yanlıştır, çünkü toksin asetilkolinesterazı inhibe etmez. Enzimi inhibe eden ilaçlar asetilkolini biriktirir, toksin ise salımı engeller. Birinci ifadenin atlanması da seçeneği eksik bırakır."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Asetilkolin yıkımını ve asetilkolinesteraz inhibisyonunun sonucunu açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q04",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Asetilkolinesteraz enziminin inhibisyonunun doğrudan sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kolin alımının artması",
+      "B": "Veziküler depolamanın bozulması",
+      "C": "Sinaptik asetilkolinin birikmesi",
+      "D": "Asetilkolin sentezinin durması",
+      "E": "Muskarinik reseptör sayısının azalması"
+     },
+     "dogru": "C",
+     "aciklama": "Asetilkolinesteraz asetilkolinin etkisini hızla sonlandıran enzimdir. Enzim inhibe edilince asetilkolin yıkılamaz ve sinaptik aralıkta birikir. Bu nedenle inhibitörler indirekt kolinomimetik etki oluşturur; doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Kolin alımı CHT taşıyıcısıyla olur ve enzim inhibisyonundan doğrudan etkilenmez. Asetilkolinin yıkımından çıkan kolin geri alınır, ancak enzimi inhibe etmek bu taşıyıcıyı artırmaz. Doğrudan sonuç asetilkolin birikimidir.",
+      "B": "Veziküle depolamayı VAChT sağlar ve vesamikol bu basamağı bloke eder. Asetilkolinesterazın inhibisyonu bu taşıyıcıyı bozmaz. Enzim inhibitörleri yalnız yıkım basamağını etkiler.",
+      "C": "Asetilkolinesteraz asetilkolinin etkisini hızla sonlandıran enzimdir. Enzim inhibe edilince asetilkolin yıkılamaz ve sinaptik aralıkta birikir. Bu nedenle inhibitörler indirekt kolinomimetik etki oluşturur; doğru yanıt budur.",
+      "D": "Asetilkolin sentezi ChAT enzimiyle yapılır ve yıkım enziminin inhibisyonundan doğrudan etkilenmez. Yıkım azaldığı için asetilkolin artar, sentezin durması beklenmez. Enzim inhibitörleri yalnız yıkım basamağını etkiler; sentez ve depolama basamakları aynı kalır.",
+      "E": "Reseptör sayısındaki değişiklik uzun süreli uyum olayıdır ve enzim inhibisyonunun doğrudan sonucu değildir. Enzim inhibisyonunun hemen görülen sonucu asetilkolinin birikmesidir."
+     },
+     "kanit": {
+      "sayfa": 6
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Muskarinik ve nikotinik reseptörleri yapı, yer ve yanıt hızı açısından karşılaştırabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q05",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Muskarinik reseptörlerle ilgili aşağıdaki özelliklerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ligand kapılı katyon kanalı olmaları",
+      "B": "Hızlı depolarizasyon yapmaları",
+      "C": "Yalnız motor son plakta bulunmaları",
+      "D": "Yalnız ganglionda bulunmaları",
+      "E": "G proteinine bağlı olmaları"
+     },
+     "dogru": "E",
+     "aciklama": "Muskarinik reseptörler M1 ile M5 arasındaki alt tiplerden oluşur ve G proteinine bağlıdır. Efektör organlarda ve merkezi sinir sisteminde bulunur, yanıtları daha yavaş ve düzenleyicidir. Doğru yanıt G proteinine bağlı olmalarıdır.",
+     "sik_aciklamalari": {
+      "A": "Ligand kapılı katyon kanalı olmak nikotinik reseptörlerin özelliğidir. Asetilkolin bağlanınca kanal açılır ve net sodyum girişi olur. Muskarinik reseptörler kanal değil, G proteinli reseptördür.",
+      "B": "Hızlı depolarizasyon nikotinik reseptörlerin yanıtıdır. Muskarinik yanıt G proteini ve ikinci ulak üzerinden gelişir, bu yüzden daha yavaş ve düzenleyicidir.",
+      "C": "Motor son plakta nikotinik NM reseptörleri bulunur. Muskarinik reseptörler efektör organlarda ve merkezi sinir sisteminde yer alır, motor son plakta değil.",
+      "D": "Ganglionda hızlı iletimi NN nikotinik reseptörleri sağlar. Muskarinik reseptörler yalnız ganglionda bulunmaz; kalp, düz kas ve bezler gibi efektör organlarda da bulunur.",
+      "E": "Muskarinik reseptörler M1 ile M5 arasındaki alt tiplerden oluşur ve G proteinine bağlıdır. Efektör organlarda ve merkezi sinir sisteminde bulunur, yanıtları daha yavaş ve düzenleyicidir. Doğru yanıt G proteinine bağlı olmalarıdır."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Muskarinik sinyal yollarını ve alt tiplerin dağılımını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q06",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Kalpteki muskarinik uyarı sonrasında hücre içinde aşağıdaki olaylardan hangisi gerçekleşir?",
+     "secenekler": {
+      "A": "Gq/11 aracılı IP3 ve DAG artışı",
+      "B": "Ligand kapılı Na⁺ girişi",
+      "C": "Gi/o aracılı cAMP azalması",
+      "D": "Gs aracılı cAMP artışı",
+      "E": "Tirozin kinaz aktivasyonu"
+     },
+     "dogru": "C",
+     "aciklama": "Kalpte M2 alt tipi bulunur ve Gi/o ile cAMP azalması ve K⁺ kanalı açılması yapar. Bu değişiklik bradikardi ve AV ileti yavaşlaması olarak ortaya çıkar. Doğru yanıt bu yoldur.",
+     "sik_aciklamalari": {
+      "A": "Gq/11 aracılı IP3 ve DAG artışı M1, M3 ve M5 alt tiplerinin yoludur ve kalsiyumu artırır. Kalpte bulunan alt tip M2 olduğundan bu yol kalpteki uyarının mekanizması değildir.",
+      "B": "Ligand kapılı katyon kanalı nikotinik reseptörlerin yapısıdır ve net sodyum girişiyle depolarizasyon yapar. Muskarinik reseptörler G proteinine bağlıdır, kanal değildir.",
+      "C": "Kalpte M2 alt tipi bulunur ve Gi/o ile cAMP azalması ve K⁺ kanalı açılması yapar. Bu değişiklik bradikardi ve AV ileti yavaşlaması olarak ortaya çıkar. Doğru yanıt bu yoldur.",
+      "D": "Gs aracılı cAMP artışı muskarinik uyarıda görülmez; M2 yolunda cAMP azalır ve kalp yavaşlar. Muskarinik alt tipler Gq/11 ve Gi/o yollarını kullanır.",
+      "E": "Tirozin kinaz aktivasyonu muskarinik sinyal yolu değildir; muskarinik yollar G proteini aracılığıyla yürür. Kalpte bu yol Gi/o aracılı cAMP azalması ve potasyum kanalı açılmasıdır."
+     },
+     "kanit": {
+      "sayfa": 8
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Muskarinik uyarının doku yanıtlarını sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q07",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Muskarinik uyarıya bağlı yanıtlar arasında I. Miyozis, II. Bradikardi, III. Bronkodilatasyon, IV. Detrüsör kasılması sayılmıştır. Hangisi ya da hangileri yanlıştır?",
+     "secenekler": {
+      "A": "Yalnız III",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Muskarinik uyarı bronkokonstriksiyon ve sekresyon artışı yapar. Üçüncü ifade bunun tersini söylediği için yanlıştır; diğerleri doğrudur. Bu nedenle doğru yanıt yalnız III'tür.",
+     "sik_aciklamalari": {
+      "A": "Muskarinik uyarı bronkokonstriksiyon ve sekresyon artışı yapar. Üçüncü ifade bunun tersini söylediği için yanlıştır; diğerleri doğrudur. Bu nedenle doğru yanıt yalnız III'tür.",
+      "B": "Miyozis, göz içi basıncında azalma, bradikardi ve AV ileti yavaşlaması muskarinik uyarının gerçek sonuçlarıdır. Bu iki ifade doğru olduğu için yanlış ifade sayılmaz. Yanlış olan ifade bronş yanıtını tersine çeviren ifadedir.",
+      "C": "Bradikardi ile detrüsör kasılması ve sfinkter gevşemesi muskarinik uyarının doğru yanıtlarıdır. Bu iki ifade yanlış sayılamaz; yanlış olan bronş yanıtını anlatan ifadedir.",
+      "D": "Birinci, ikinci ve dördüncü ifadeler muskarinik uyarının doğru sonuçlarını anlatır. Bunlar yanlış olarak işaretlenemez; yalnız bronş etkisini ters veren ifade yanlıştır.",
+      "E": "Dört ifadenin hepsi yanlış olsaydı muskarinik uyarının hiçbir etkisi doğru verilmemiş olurdu. Oysa miyozis, bradikardi ve detrüsör kasılması doğrudur; yanlış olan tek ifade vardır."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q08",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Muskarinik uyarıya bağlı damar yanıtı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "NO aracılı vazodilatasyon",
+      "B": "Doğrudan vazokonstriksiyon",
+      "C": "Reflekse bağlı taşikardi",
+      "D": "Mesane sfinkterinde kasılma",
+      "E": "Trabeküler dışa akımda azalma"
+     },
+     "dogru": "A",
+     "aciklama": "Damarda muskarinik uyarı NO aracılı vazodilatasyon yapar. Bu nedenle intravenöz asetilkolin bolusu vazodilatasyon ve hipotansiyon verir. Doğru yanıt NO aracılı vazodilatasyondur.",
+     "sik_aciklamalari": {
+      "A": "Damarda muskarinik uyarı NO aracılı vazodilatasyon yapar. Bu nedenle intravenöz asetilkolin bolusu vazodilatasyon ve hipotansiyon verir. Doğru yanıt NO aracılı vazodilatasyondur.",
+      "B": "Doğrudan vazokonstriksiyon muskarinik uyarının yanıtı değildir; muskarinik uyarı damar düz kasında NO aracılı gevşeme yapar, kasılma yapmaz. Asetilkolin bolusu bu nedenle hipotansiyon verir. Damarda beklenen yanıt gevşemedir.",
+      "C": "Refleks taşikardi vazodilatasyon ve hipotansiyona karşı kalbin refleks yanıtıdır. Muskarinik uyarının damardaki doğrudan yanıtı değil, ikincil bir sonucudur. Damardaki birincil muskarinik yanıt gevşemedir.",
+      "D": "Mesane sfinkteri muskarinik uyarıyla gevşer, detrüsör kasılır. Sfinkterde kasılma damar yanıtı değildir ve muskarinik etkiye de ters düşer. Mesane boşalması bu iki etkinin birleşimiyle sağlanır.",
+      "E": "Göz içinde trabeküler dışa akım muskarinik uyarıyla artar ve göz içi basıncı düşer. Bu göze ait bir yanıttır, damar yanıtı değildir."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Nikotinik reseptörlerin NN ve NM alt tiplerini ve yanıt mekanizmasını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q09",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Nikotinik reseptörlerle ilgili şu ifadeler veriliyor:\nI. NM reseptörleri iskelet kası motor son plağında bulunur.\nII. NN reseptörleri otonom ganglionlarda bulunur.\nIII. NN reseptörleri adrenal medullada bulunur.\nIV. NM reseptörleri kalpte bulunur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "Yalnız I",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "NM reseptörleri iskelet kası motor son plağında, NN reseptörleri ise otonom ganglionlarda ve adrenal medullada bulunur. Kalpte bulunan reseptör muskariniktir. Bu nedenle ilk üç ifade doğrudur ve doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur ancak NM reseptörleri kalpte değil iskelet kası motor son plağında bulunur. Kalpteki reseptör muskarinik M2 alt tipidir. Dördüncü ifade yanlış olduğu için bu seçenek hatalıdır.",
+      "B": "NM reseptörleri iskelet kası motor son plağında, NN reseptörleri ise otonom ganglionlarda ve adrenal medullada bulunur. Kalpte bulunan reseptör muskariniktir. Bu nedenle ilk üç ifade doğrudur ve doğru yanıt I, II ve III'tür.",
+      "C": "İkinci ifade doğrudur ancak dördüncü ifade yanlıştır; kalpte nikotinik NM reseptörü yerine muskarinik M2 reseptörü bulunur. Ayrıca birinci ve üçüncü ifadeler de doğrudur ve bu seçenekte eksik bırakılmıştır.",
+      "D": "Yalnız birinci ifadeyi doğru sayar; oysa NN reseptörlerinin otonom ganglionlarda ve adrenal medullada bulunması da doğrudur. Seçenek bu iki doğru ifadeyi dışarıda bıraktığı için eksiktir.",
+      "E": "Dört ifadenin hepsi doğru olsaydı NM reseptörü kalpte de bulunurdu. Oysa kalpte muskarinik M2 reseptörü bulunur ve dördüncü ifade yanlıştır. Bu nedenle seçenek hatalıdır."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q10",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Nikotinik reseptörün asetilkolinle uyarılması sonucunda aşağıdakilerden hangisi gerçekleşir?",
+     "secenekler": {
+      "A": "cAMP düzeyinde azalma",
+      "B": "IP3 ve DAG artışı",
+      "C": "K⁺ kanalı açılması ve hiperpolarizasyon",
+      "D": "Gi/o aktivasyonu",
+      "E": "Net Na⁺ girişi ve depolarizasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Nikotinik reseptör pentamerik bir kanaldır ve asetilkolin bağlanınca açılır. Katyon geçişi ve net sodyum girişi depolarizasyon oluşturur. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "cAMP azalması muskarinik M2 ve M4 alt tiplerinin Gi/o yoluyla yaptığı değişikliktir. Nikotinik reseptör G proteinine bağlı olmadığı için ikinci ulak değişimi doğrudan yapmaz.",
+      "B": "IP3 ve DAG artışı M1, M3 ve M5 alt tiplerinin Gq/11 yoluyla yaptığı değişikliktir. Nikotinik reseptör iyon kanalı olduğundan bu sinyal yolunu kullanmaz.",
+      "C": "Potasyum kanalı açılması ve hiperpolarizasyon muskarinik M2 yanıtının özelliğidir. Nikotinik reseptör ise net sodyum girişiyle depolarizasyon yapar, bu yüzden yanıt ters yöndedir.",
+      "D": "Gi/o aktivasyonu G proteinine bağlı muskarinik alt tiplerin yoludur. Nikotinik reseptör ligand kapılı kanal olduğundan G proteini kullanmaz. Nikotinik yanıt kanalın açılmasıyla gelişen hızlı depolarizasyondur.",
+      "E": "Nikotinik reseptör pentamerik bir kanaldır ve asetilkolin bağlanınca açılır. Katyon geçişi ve net sodyum girişi depolarizasyon oluşturur. Doğru yanıt budur."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Kolinomimetiklerin farmakokinetiğinde kuaterner ve tersiyer aminlerin farkını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q11",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Kuaterner amin yapıdaki kolinomimetiklerle ilgili şu ifadeler veriliyor:\nI. Oral emilimleri zayıftır.\nII. Kan-beyin bariyerini geçerler.\nIII. Santral etki oluştururlar.\nIV. Etkileri periferiktir.\nBu ifadelerden hangisi ya da hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "II ve III",
+      "C": "II, III ve IV",
+      "D": "Yalnız IV",
+      "E": "I ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Kuaterner aminlerde oral emilim zayıftır ve kan-beyin bariyeri geçilmez, bu yüzden etki periferiktir. Birinci ve dördüncü ifadeler bu özellikleri anlatır. Doğru yanıt I ve IV'tür.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek kan-beyin bariyerini geçmeyi ve santral etkiyi kuaternerlere atfeder. Oysa bu iki özellik tersiyer aminlerin özelliğidir; pilokarpin, fizostigmin, donepezil ve galantamin bu gruptadır.",
+      "B": "Bariyeri geçmek ve santral etki vermek tersiyer aminlerin özelliğidir. Kuaternerlerde bariyer geçilmez, bu nedenle ikinci ve üçüncü ifadeler birlikte doğru olamaz.",
+      "C": "Bu seçenek yalnız dördüncü ifadeyi doğru verir ama ikinci ve üçüncüyü de ekler. Kuaterner yapıda bariyer geçilmediği için bu iki ifade yanlıştır.",
+      "D": "Etkinin periferik olması doğrudur; ancak bu seçenek oral emilimin zayıf olduğunu söyleyen birinci ifadeyi atlar. Birinci ifade de kuaternerlerin doğru özelliğidir.",
+      "E": "Kuaterner aminlerde oral emilim zayıftır ve kan-beyin bariyeri geçilmez, bu yüzden etki periferiktir. Birinci ve dördüncü ifadeler bu özellikleri anlatır. Doğru yanıt I ve IV'tür."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q12",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaçlardan hangisi kuaterner amin yapıdadır?",
+     "secenekler": {
+      "A": "Pilokarpin",
+      "B": "Fizostigmin",
+      "C": "Edrofonyum",
+      "D": "Donepezil",
+      "E": "Galantamin"
+     },
+     "dogru": "C",
+     "aciklama": "Edrofonyum kuaterner amindir; kan-beyin bariyerini geçmez ve kas gücünde hızlı, geçici artış yapar. Etkisi periferiktir. Bu nedenle doğru yanıt edrofonyumdur.",
+     "sik_aciklamalari": {
+      "A": "Pilokarpin tersiyer aminli doğal bir alkaloiddir ve kan-beyin bariyerini geçer. Glokomda ve kseröstomide kullanılır. Oral emilimi iyidir ve tersiyer olduğu için kuaterner aminlerden ayrılır.",
+      "B": "Fizostigmin lipofilik tersiyer amindir ve kan-beyin bariyerini geçer. Seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir. Tersiyer yapıda olduğu için kuaterner aminlerin aksine santral etki verir.",
+      "C": "Edrofonyum kuaterner amindir; kan-beyin bariyerini geçmez ve kas gücünde hızlı, geçici artış yapar. Etkisi periferiktir. Bu nedenle doğru yanıt edrofonyumdur.",
+      "D": "Donepezil tersiyer yapıdadır ve santral etki verir; Alzheimer hastalığında kullanılır. Kuaterner aminler gibi periferik kalmaz. Kan-beyin bariyerini geçmesi bu kullanımın temel koşuludur.",
+      "E": "Galantamin tersiyer amindir, kan-beyin bariyerini geçer ve santral kolinesteraz inhibitörü olarak Alzheimer hastalığında kullanılır. Kuaterner yapıda değildir. Santral etkisi bu yapısından kaynaklanır."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Kolinomimetikleri direkt ve indirekt etkili gruplara sınıflayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q13",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki ilaçlar veriliyor:\nI. Asetilkolin\nII. Pilokarpin\nIII. Neostigmin\nIV. Karbakol\nBunlardan hangileri direkt etkili kolinomimetiktir?",
+     "secenekler": {
+      "A": "I ve III",
+      "B": "II ve III",
+      "C": "III ve IV",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Asetilkolin ve karbakol kolin esteri, pilokarpin ise doğal alkaloiddir; üçü de reseptörü doğrudan uyarır. Neostigmin AChE inhibitörüdür ve indirekt etkilidir. Bu nedenle doğru yanıt I, II ve IV'tür.",
+     "sik_aciklamalari": {
+      "A": "Asetilkolin direkt etkilidir ancak neostigmin kolinesterazı inhibe eden indirekt ajandır. Pilokarpin ve karbakol da direkt gruptadır ve bu seçenekte eksik bırakılmıştır.",
+      "B": "Pilokarpin direkt etkilidir fakat neostigmin AChE inhibisyonuyla asetilkolini biriktirdiği için indirekt gruptadır. Asetilkolin ve karbakol da direkt etkili olduğundan seçenek hem eksik hem de hatalıdır.",
+      "C": "Karbakol direkt etkili kolin esteridir ancak neostigmin indirekt etkilidir. Asetilkolin ve pilokarpin de direkt etkili gruptadır, fakat bu iki ilaç seçenekte atlanmıştır.",
+      "D": "Asetilkolin ve karbakol kolin esteri, pilokarpin ise doğal alkaloiddir; üçü de reseptörü doğrudan uyarır. Neostigmin AChE inhibitörüdür ve indirekt etkilidir. Bu nedenle doğru yanıt I, II ve IV'tür.",
+      "E": "Dört ilacın hepsi direkt olsaydı neostigmin de reseptörü doğrudan uyarırdı. Oysa neostigmin kolinesteraz inhibitörüdür ve asetilkolini biriktirerek dolaylı etki yapar."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Kolin esterlerinin seçiciliğini ve enzimlere duyarlılığını karşılaştırabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q14",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Yalnız muskarinik reseptörleri uyaran ve asetilkolinesteraz ile butirilkolinesterazın her ikisine dirençli olan kolin esteri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Betanekol",
+      "B": "Asetilkolin",
+      "C": "Metakolin",
+      "D": "Karbakol",
+      "E": "Nikotin"
+     },
+     "dogru": "A",
+     "aciklama": "Betanekol M reseptörünü uyarır ve AChE ile BChE'ye dirençlidir. Oral kullanılabilen bu özellik nonobstrüktif üriner retansiyonda işe yarar. Bu nedenle doğru yanıt betanekoldür.",
+     "sik_aciklamalari": {
+      "A": "Betanekol M reseptörünü uyarır ve AChE ile BChE'ye dirençlidir. Oral kullanılabilen bu özellik nonobstrüktif üriner retansiyonda işe yarar. Bu nedenle doğru yanıt betanekoldür.",
+      "B": "Asetilkolin M ve N reseptörlerini uyarır ve AChE ile çok hızlı yıkılır. Hem seçici değildir hem de enzime dirençli değildir.",
+      "C": "Metakolin ağırlıklı olarak M reseptörünü uyarır ve AChE'ye daha dirençlidir. Betanekol kadar seçici ve iki enzime birden dirençli bir ajan olarak tanımlanmaz.",
+      "D": "Karbakol M ve N reseptörlerini birlikte uyarır ve AChE'ye dirençlidir. Nikotinik etkisi de olduğu için yalnız muskarinik değildir. Bu yüzden direkt etkili ve geniş etkili bir kolin esteri olarak sınıflanır.",
+      "E": "Nikotin kolin esteri değil, NN reseptörlerini uyaran bir alkaloiddir. Sigara bırakma tedavisinde yerine koyma amacıyla kullanılır. Sigara bırakmada ise vareniklin kısmi agonist olarak kullanılır."
+     },
+     "kanit": {
+      "sayfa": 13
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Asetilkolinin referans molekül olarak özelliklerini ve istisnai kullanımını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q15",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Asetilkolinin intravenöz bolus uygulanmasının doğrudan hemodinamik sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Vazodilatasyon ve hipotansiyon",
+      "B": "Hipertansiyon ve bradikardi",
+      "C": "Vazokonstriksiyon ve taşikardi",
+      "D": "Taşikardi ve hipertansiyon",
+      "E": "Bronkodilatasyon ve hipertansiyon"
+     },
+     "dogru": "A",
+     "aciklama": "İntravenöz asetilkolin bolusu vazodilatasyon ve hipotansiyon yapar; refleks taşikardi görülebilir. Bu etki damarlardaki muskarinik uyarıya bağlıdır. Doğru yanıt vazodilatasyon ve hipotansiyondur.",
+     "sik_aciklamalari": {
+      "A": "İntravenöz asetilkolin bolusu vazodilatasyon ve hipotansiyon yapar; refleks taşikardi görülebilir. Bu etki damarlardaki muskarinik uyarıya bağlıdır. Doğru yanıt vazodilatasyon ve hipotansiyondur.",
+      "B": "Hipertansiyon muskarinik damar yanıtıyla uyuşmaz, çünkü damarda NO aracılı gevşeme olur. Bradikardi kalpte görülür ama hipertansiyon beklenmez. Beklenen sonuç tansiyon düşmesidir.",
+      "C": "Asetilkolin damarları genişletir ve tansiyonu düşürür; vazokonstriksiyon bu yanıtla uyuşmaz. Taşikardi ancak refleks olarak ve hipotansiyondan sonra görülebilir. Bu nedenle bu ikili doğrudan hemodinamik sonuç sayılmaz.",
+      "D": "Taşikardi refleks olarak görülebilir, fakat hipertansiyon asetilkolinin etkisi değildir. Damar gevşemesi nedeniyle tansiyon düşer. Asetilkolin damar düz kasında NO aracılı gevşemeyi uyarır.",
+      "E": "Bronkodilatasyon muskarinik etkiye ters düşer; asetilkolin bronkokonstriksiyon yapar. Hipertansiyon da beklenmez. Bronş düz kasında muskarinik uyarı daralma ve sekresyon artışı yapar, genişleme yapmaz."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q16",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Göz cerrahisinde intraoküler miyozis oluşturmak için kullanılabilen ve sistemik tedavide yer almayan kolin esteri hangisidir?",
+     "secenekler": {
+      "A": "Betanekol",
+      "B": "Sevimelin",
+      "C": "Vareniklin",
+      "D": "Asetilkolin",
+      "E": "Metakolin"
+     },
+     "dogru": "D",
+     "aciklama": "Asetilkolin AChE ile çok hızlı yıkıldığı için sistemik tedavide kullanılmaz. Göz cerrahisinde istisna olarak intraoküler miyozis oluşturabilir. Bu nedenle doğru yanıt asetilkolindir.",
+     "sik_aciklamalari": {
+      "A": "Betanekol oral kullanılan seçici muskarinik agonisttir ve üriner retansiyonda düşünülür. Göz cerrahisi kullanımı yoktur. Detrüsör kasılmasını artırarak mesane boşalmasına yardımcı olur.",
+      "B": "Sevimelin M1 ve M3 tercihli agonisttir ve Sjögren sendromunda kseröstomiyi azaltır. Kolin esteri değildir ve göz cerrahisinde kullanılmaz. Kseröstomide bez sekresyonunu artırarak etki eder.",
+      "C": "Vareniklin α4β2 kısmi agonistidir ve sigara bırakmayı destekler. Vareniklinin sık yan etkisi bulantıdır. Kolin esteri değildir ve göz cerrahisinde miyozis amacıyla kullanılmaz.",
+      "D": "Asetilkolin AChE ile çok hızlı yıkıldığı için sistemik tedavide kullanılmaz. Göz cerrahisinde istisna olarak intraoküler miyozis oluşturabilir. Bu nedenle doğru yanıt asetilkolindir.",
+      "E": "Metakolin bronş hiperreaktivitesi için provokasyon testinde kullanılır. Astımlıda verilmez, göz cerrahisi kullanımı tanımlanmamıştır. Bronkospazm oluşturabildiği için astımlı hastada ve resüsitasyon olanağı yokken verilmez."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Betanekolün endikasyonlarını ve kontrendikasyonunu açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q17",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Postoperatif nonobstrüktif üriner retansiyonda kullanılan oral seçici muskarinik agonist aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nikotin",
+      "B": "Betanekol",
+      "C": "Vareniklin",
+      "D": "Atropin",
+      "E": "Fizostigmin"
+     },
+     "dogru": "B",
+     "aciklama": "Betanekol oral kullanılan seçici muskarinik agonisttir. Detrüsör kasılmasını artırır, sfinkteri gevşetir ve postoperatif ya da doğum sonrası nonobstrüktif retansiyonda düşünülür. Doğru yanıt betanekoldür.",
+     "sik_aciklamalari": {
+      "A": "Nikotin NN reseptörlerini uyarır ve sigara bırakmada yerine koyma tedavisinde kullanılır. Muskarinik agonist değildir. Bu nedenle detrüsör kasılmasını artırarak retansiyonu gidermez.",
+      "B": "Betanekol oral kullanılan seçici muskarinik agonisttir. Detrüsör kasılmasını artırır, sfinkteri gevşetir ve postoperatif ya da doğum sonrası nonobstrüktif retansiyonda düşünülür. Doğru yanıt betanekoldür.",
+      "C": "Vareniklin α4β2 nikotinik kısmi agonistidir ve sigara bırakmayı destekler. Mesane işlevini düzenlemez. Nikotinik reseptörler üzerinden etki eder, mesane detrüsörünü kasmaz.",
+      "D": "Atropin muskarinik reseptör antagonistidir; detrüsörü gevşetir ve retansiyonu kötüleştirir. Agonist olmadığı için bu amaçla kullanılmaz. Retansiyonda amaç detrüsörü kasmaktır, gevşetmek değil.",
+      "E": "Fizostigmin tersiyer yapıdaki bir kolinesteraz inhibitörüdür. Agonist değil indirekt etkilidir ve retansiyonda yeri yoktur. Santral ve periferik etki verir ancak mesane boşalmasını sağlamak için tercih edilmez."
+     },
+     "kanit": {
+      "sayfa": 15
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q18",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Betanekolle ilgili şu ifadeler veriliyor:\nI. Oral kullanılan seçici muskarinik agonisttir.\nII. Mekanik obstrüksiyonda kontrendikedir.\nIII. Postoperatif nonobstrüktif retansiyonda düşünülebilir.\nIV. Nikotinik reseptörleri uyarır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "I, II ve III",
+      "C": "II ve III",
+      "D": "Yalnız I",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Betanekol oral seçici muskarinik agonisttir, mekanik obstrüksiyonda kontrendikedir ve nonobstrüktif retansiyonda düşünülür. Dördüncü ifade yanlıştır. Doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Bu seçenek dördüncü ifadeyi doğru sayar; oysa betanekol seçici muskarinik agonisttir ve nikotinik reseptörleri uyarmaz. Ayrıca doğru olan ikinci ve üçüncü ifadeleri dışarıda bırakır.",
+      "B": "Betanekol oral seçici muskarinik agonisttir, mekanik obstrüksiyonda kontrendikedir ve nonobstrüktif retansiyonda düşünülür. Dördüncü ifade yanlıştır. Doğru yanıt I, II ve III'tür.",
+      "C": "İkinci ve üçüncü ifadeler doğrudur ancak bu seçenek birinci ifadeyi atlar. Betanekolün oral kullanılan seçici muskarinik agonist olması da doğrudur.",
+      "D": "Yalnız birinci ifadeyi doğru sayar; oysa kontrendikasyon ve endikasyon ifadeleri de doğrudur. Eksik işaretleme yapılmış olur. Mekanik obstrüksiyonda kontrendikasyon, nonobstrüktif retansiyonda endikasyon geçerlidir.",
+      "E": "Dört ifadenin hepsi doğru olsaydı betanekol nikotinik reseptörleri de uyarırdı. Betanekol seçici muskarinik etkilidir, dördüncü ifade yanlıştır. Nikotinik uyarı ayrı bir ilaç grubunun, örneğin nikotinin özelliğidir."
+     },
+     "kanit": {
+      "sayfa": 15
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Karbakol ve metakolinin klinik kullanımlarını ve dikkat edilecek noktalarını ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q19",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Bronş hiperreaktivitesi için provokasyon testinde kullanılan ve astımlı hastaya verilmeyen kolin esteri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Metakolin",
+      "B": "Betanekol",
+      "C": "Karbakol",
+      "D": "Pilokarpin",
+      "E": "Sevimelin"
+     },
+     "dogru": "A",
+     "aciklama": "Metakolin ağırlıklı muskarinik etkili kolin esteridir ve bronş hiperreaktivitesi için provokasyon testinde kullanılır. Bronkospazm yapabildiğinden astımlı hastaya ve resüsitasyon olanağı yokken verilmez. Doğru yanıt metakolindir.",
+     "sik_aciklamalari": {
+      "A": "Metakolin ağırlıklı muskarinik etkili kolin esteridir ve bronş hiperreaktivitesi için provokasyon testinde kullanılır. Bronkospazm yapabildiğinden astımlı hastaya ve resüsitasyon olanağı yokken verilmez. Doğru yanıt metakolindir.",
+      "B": "Betanekol üriner retansiyonda oral kullanılır; bronş provokasyonu amacıyla kullanılmaz. Mekanik obstrüksiyonda kontrendikedir. Kolin esteri olmasına karşın bronş provokasyonu için seçilen ajan metakolindir.",
+      "C": "Karbakol glokomda topikal kullanılır; miyozis yapar ve göz içi basıncını düşürür. Bronş provokasyon testi için kullanılmaz. Metakolin ise ağırlıklı muskarinik etkisiyle bronkospazm oluşturur.",
+      "D": "Pilokarpin glokom ve kseröstomide kullanılan tersiyer aminli alkaloiddir. Fazlası terleme, salivasyon ve bradikardi yapar. Bronş provokasyon testinde kullanılan ajan pilokarpin değil metakolindir.",
+      "E": "Sevimelin M1 ve M3 tercihli agonisttir ve kseröstomiyi azaltır. Bronş provokasyon testi ile ilgisi tanımlanmamıştır. Muskarinik yan etkiler dozu sınırlar ve bronş testinde kullanılan ajan metakolindir."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q20",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Glokomda topikal kullanılan, M ve N reseptörlerini uyaran ve asetilkolinesteraza dirençli kolin esteri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetilkolin",
+      "B": "Metakolin",
+      "C": "Betanekol",
+      "D": "Vareniklin",
+      "E": "Karbakol"
+     },
+     "dogru": "E",
+     "aciklama": "Karbakol M ve N reseptörlerini uyarır, AChE'ye dirençlidir ve glokomda topikal kullanıldığında miyozis yapıp göz içi basıncını düşürür. Doğru yanıt karbakoldür.",
+     "sik_aciklamalari": {
+      "A": "Asetilkolin de M ve N reseptörlerini uyarır ancak AChE ile çok hızlı yıkılır. Bu nedenle topikal glokom tedavisi için uygun değildir.",
+      "B": "Metakolin ağırlıklı M reseptörünü uyarır ve bronş provokasyon testinde kullanılır. Glokom tedavisinde yeri yoktur. Astımlı hastaya verilmemesi gereken bir ajandır.",
+      "C": "Betanekol yalnız muskarinik reseptörü uyarır ve üriner retansiyonda oral kullanılır. N reseptörlerini uyarmaz. Mekanik obstrüksiyonda kontrendikedir ve glokomda topikal kullanım için seçilmez.",
+      "D": "Vareniklin kolin esteri değildir; α4β2 kısmi agonistidir ve sigara bırakmada kullanılır. Bulantı en sık dikkat edilen yan etkisidir. Glokomda topikal kullanılmaz.",
+      "E": "Karbakol M ve N reseptörlerini uyarır, AChE'ye dirençlidir ve glokomda topikal kullanıldığında miyozis yapıp göz içi basıncını düşürür. Doğru yanıt karbakoldür."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Pilokarpinin etki mekanizmasını, endikasyonlarını ve yan etkilerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q21",
+     "kazanim": 16,
+     "zorluk": "kolay",
+     "soru": "Sjögren sendromu ve radyoterapi sonrası kseröstomide oral kullanılan, Pilocarpus kökenli tersiyer amin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Betanekol",
+      "B": "Karbakol",
+      "C": "Edrofonyum",
+      "D": "Pilokarpin",
+      "E": "Neostigmin"
+     },
+     "dogru": "D",
+     "aciklama": "Pilokarpin Pilocarpus kökenli tersiyer aminli klasik doğal alkaloiddir. Muskarinik reseptörü uyararak bez sekresyonunu artırdığı için kseröstomide oral kullanılır. Bu nedenle doğru yanıt pilokarpindir.",
+     "sik_aciklamalari": {
+      "A": "Betanekol kuaterner amindir ve oral kullanılan seçici muskarinik agonisttir. Detrüsör kasılmasını artırarak üriner retansiyonda mesane boşalmasını sağlar. Kseröstomi endikasyonu yoktur; bu amaç için pilokarpin kullanılır.",
+      "B": "Karbakol kuaterner yapıdadır ve glokomda topikal kullanılarak miyozis yapar. Göz içi basıncını düşürür. Kseröstomide oral kullanımı tanımlanmamıştır; bu amaçla tersiyer yapıdaki pilokarpin seçilir.",
+      "C": "Edrofonyum kuaterner kolinesteraz inhibitörüdür ve tarihsel tanı ilacıdır. Doğal alkaloid değildir ve bez sekresyonu için kullanılmaz. Kolinesterazı inhibe ederek asetilkolini biriktirir.",
+      "D": "Pilokarpin Pilocarpus kökenli tersiyer aminli klasik doğal alkaloiddir. Muskarinik reseptörü uyararak bez sekresyonunu artırdığı için kseröstomide oral kullanılır. Bu nedenle doğru yanıt pilokarpindir.",
+      "E": "Neostigmin periferik etkili kuaterner karbamattır ve miyasteni ile ileusta kullanılır. Pilocarpus kökenli değildir. Kolinesterazı inhibe ederek dolaylı etki yapar ve bez sekresyonu için seçilmez."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q22",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Pilokarpinin yüksek dozunda görülen yan etkiler aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Kuru ağız, midriyazis ve taşikardi",
+      "B": "Konstipasyon, retansiyon ve taşikardi",
+      "C": "Terleme, salivasyon ve bradikardi",
+      "D": "Hipertansiyon, taşikardi ve tremor",
+      "E": "Bronkodilatasyon, midriyazis ve kuruluk"
+     },
+     "dogru": "C",
+     "aciklama": "Pilokarpin muskarinik agonisttir; fazlası terleme, salivasyon ve bradikardi yapar. Bu üçlü muskarinik fazlalığın tipik sonucudur ve dozu sınırlayan yan etkilerdir. Bu nedenle doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Kuru ağız, midriyazis ve taşikardi antimuskarinik etkinin bulgularıdır. Pilokarpin muskarinik agonist olduğu için tam tersi bulgular verir. Muskarinik uyarıda ise ağız salgısı artar, pupil daralır ve nabız yavaşlar.",
+      "B": "Konstipasyon, retansiyon ve taşikardi antimuskarinik ilaçların yan etkileridir. Pilokarpin ise bez salgısını ve motiliteyi artırır. Antimuskarinik etki bağırsak ve mesane motilitesini azaltır.",
+      "C": "Pilokarpin muskarinik agonisttir; fazlası terleme, salivasyon ve bradikardi yapar. Bu üçlü muskarinik fazlalığın tipik sonucudur ve dozu sınırlayan yan etkilerdir. Bu nedenle doğru yanıt budur.",
+      "D": "Hipertansiyon, taşikardi ve tremor muskarinik fazlalığın bulguları değildir; pilokarpin fazlası terleme, salivasyon ve bradikardi yapar. Muskarinik uyarı bez salgısını artırır ve kalbi yavaşlatır. Bu nedenle bu seçenek pilokarpinin yan etkilerini yansıtmaz.",
+      "E": "Bronkodilatasyon, midriyazis ve kuruluk atropin benzeri etkilerdir. Pilokarpin bronkokonstriksiyon, miyozis ve salgı artışı yapar. Muskarinik agonistin etkisi atropinin etkisinin tersidir."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Sevimelin ve diğer muskarinik agonistlerin seçiciliğini ve kullanımını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q23",
+     "kazanim": 17,
+     "zorluk": "kolay",
+     "soru": "M1 ve M3 tercihli agonist olan ve Sjögren sendromunda kseröstomiyi azaltan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Vareniklin",
+      "B": "Betanekol",
+      "C": "Sevimelin",
+      "D": "Edrofonyum",
+      "E": "Nikotin"
+     },
+     "dogru": "C",
+     "aciklama": "Sevimelin M1 ve M3 tercihli muskarinik agonisttir ve Sjögren sendromunda kseröstomiyi azaltır. Pilokarpin gibi bez sekresyonunu artırır. Doğru yanıt sevimelindir.",
+     "sik_aciklamalari": {
+      "A": "Vareniklin α4β2 nikotinik kısmi agonistidir; sigara bırakmayı destekler. Muskarinik reseptörlere etkisiyle tanımlanmaz. Muskarinik etkisi ile değil nikotinik kısmi agonizmi ile kullanılır.",
+      "B": "Betanekol seçici muskarinik agonisttir ve üriner retansiyonda kullanılır. Alt tip tercihi ve kseröstomi endikasyonuyla tanımlanmaz. Sevimelin gibi M1 ve M3 tercihi göstermez.",
+      "C": "Sevimelin M1 ve M3 tercihli muskarinik agonisttir ve Sjögren sendromunda kseröstomiyi azaltır. Pilokarpin gibi bez sekresyonunu artırır. Doğru yanıt sevimelindir.",
+      "D": "Edrofonyum kuaterner kolinesteraz inhibitörüdür ve agonist değildir. Etkisi kısa süreli olup tarihsel tanıda kullanılmıştır. Kolinesterazı inhibe ederek asetilkolini biriktirir ve reseptör agonisti değildir.",
+      "E": "Nikotin NN reseptörlerini uyarır ve sakız ya da bant biçiminde yerine koyma tedavisinde kullanılır. Muskarinik agonist değildir. Kseröstomide yeri yoktur ve sigara bırakmada kullanılır."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Nikotin ve vareniklinin etkilerini ve toksisitesini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q24",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "α4β2 nikotinik kısmi agonisti olan ve sigara bırakmayı destekleyen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nikotin",
+      "B": "Vareniklin",
+      "C": "Pilokarpin",
+      "D": "Betanekol",
+      "E": "Neostigmin"
+     },
+     "dogru": "B",
+     "aciklama": "Vareniklin α4β2 nikotinik reseptörlerin kısmi agonistidir ve sigara bırakmayı destekler. Bulantı en sık dikkat edilen yan etkisidir. Bu nedenle doğru yanıt vareniklindir.",
+     "sik_aciklamalari": {
+      "A": "Nikotin NN reseptörlerini uyarır ve sakız ya da bant biçiminde yerine koyma tedavisinde kullanılır. Kısmi agonist olarak tanımlanmaz. Tam agonist gibi etki eder ve yüksek maruziyette blok yapabilir.",
+      "B": "Vareniklin α4β2 nikotinik reseptörlerin kısmi agonistidir ve sigara bırakmayı destekler. Bulantı en sık dikkat edilen yan etkisidir. Bu nedenle doğru yanıt vareniklindir.",
+      "C": "Pilokarpin muskarinik agonisttir ve glokom ile kseröstomide kullanılır. Terleme ve salivasyon yapabilir. Nikotinik reseptörlere etki etmediği için sigara bırakma ilacı değildir.",
+      "D": "Betanekol muskarinik agonisttir ve üriner retansiyonda kullanılır. Detrüsör kasılmasıyla mesane boşalmasına yardımcı olur. Sigara bırakmada yeri yoktur, çünkü nikotinik reseptörlere etki etmez.",
+      "E": "Neostigmin kuaterner kolinesteraz inhibitörüdür ve miyasteni ile blok antagonizmasında kullanılır. Sigara bırakma ilacı değildir. Kolinesterazı inhibe ederek asetilkolin birikimi yapar."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q25",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Akut nikotin toksisitesinde görülen bulgular aşağıdakilerden hangisinde birlikte verilmiştir?",
+     "secenekler": {
+      "A": "Midriyazis, taşikardi ve kuru ağız",
+      "B": "Miyozis, bradikardi ve bronkore",
+      "C": "Sedasyon, miyozis ve solunum depresyonu",
+      "D": "Bulantı, titreme, konvülsiyon ve solunum felci",
+      "E": "Hipotansiyon, bradikardi ve poliüri"
+     },
+     "dogru": "D",
+     "aciklama": "Akut nikotin toksisitesi bulantı, titreme, konvülsiyon ve solunum felci yapabilir. Nikotin NN reseptörlerini uyarır, yüksek maruziyette blok gelişebilir. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Midriyazis, taşikardi ve kuru ağız antimuskarinik toksisitenin bulgularıdır. Nikotin toksisitesi bu tabloyla uyuşmaz. Nikotin toksisitesi ise uyarıcı ve konvülsif bulgularla seyreder.",
+      "B": "Miyozis, bradikardi ve bronkore organofosfat zehirlenmesindeki muskarinik bulgulardır. Akut nikotin toksisitesinin tipik tablosu değildir. Nikotin zehirlenmesinde ise titreme ve konvülsiyon öne çıkar.",
+      "C": "Sedasyon, miyozis ve solunum depresyonu akut nikotin toksisitesinin bulguları değildir. Akut nikotin toksisitesi bulantı, titreme, konvülsiyon ve solunum felci olarak ortaya çıkar. Nikotin NN reseptörlerini uyarır ve yüksek maruziyette blok yapabilir.",
+      "D": "Akut nikotin toksisitesi bulantı, titreme, konvülsiyon ve solunum felci yapabilir. Nikotin NN reseptörlerini uyarır, yüksek maruziyette blok gelişebilir. Doğru yanıt budur.",
+      "E": "Hipotansiyon, bradikardi ve poliüri nikotin toksisitesinin özelliği olarak tanımlanmaz. Tablo uyarıcı ve solunumu felç edici etkilerle ilerler. Solunum felci en ciddi sonuçtur."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Direkt etkili ilaçları hedef, kullanım ve dikkat edilecek noktalar açısından eşleştirebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q26",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki ilaç ve kullanım eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Betanekol – Üriner retansiyon",
+      "B": "Karbakol – Oküler miyozis",
+      "C": "Metakolin – Provokasyon testi",
+      "D": "Vareniklin – Sigara bırakma",
+      "E": "Sevimelin – Glokom"
+     },
+     "dogru": "E",
+     "aciklama": "Sevimelin M1 ve M3 tercihli agonisttir ve Sjögren sendromunda kseröstomiyi azaltır. Glokom endikasyonu yoktur; glokomda pilokarpin ve karbakol kullanılır. Bu eşleştirme yanlış olduğu için doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Betanekol oral kullanılan seçici muskarinik agonisttir ve nonobstrüktif üriner retansiyonda düşünülür. Mekanik obstrüksiyonda ise kontrendikedir. Bu eşleştirme doğru olduğu için yanlış eşleştirme sayılmaz.",
+      "B": "Karbakol lokal kullanılarak oküler miyozis oluşturur ve göz içi basıncını düşürür. Glokomda topikal uygulanır. Bu eşleştirme doğru olduğu için yanlış eşleştirme sayılmaz.",
+      "C": "Metakolin bronş hiperreaktivitesi için provokasyon testinde kullanılır. Astımlı hastada ve resüsitasyon olanağı yokken verilmez. Bu eşleştirme doğru olduğu için yanlış eşleştirme sayılmaz.",
+      "D": "Vareniklin α4β2 kısmi agonistidir ve sigara bırakmayı destekler. Bulantı dikkat edilmesi gereken yan etkisidir. Bu eşleştirme doğru olduğu için yanlış eşleştirme sayılmaz.",
+      "E": "Sevimelin M1 ve M3 tercihli agonisttir ve Sjögren sendromunda kseröstomiyi azaltır. Glokom endikasyonu yoktur; glokomda pilokarpin ve karbakol kullanılır. Bu eşleştirme yanlış olduğu için doğru yanıt budur."
+     },
+     "kanit": {
+      "sayfa": 20
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "Kolinomimetiklerin yan etkilerini ve kontrendikasyonlarını sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q27",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Muskarinik fazlalığı tanımlayan SLUDGE kısaltmasında yer almayan bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lakrimasyon",
+      "B": "Defekasyon",
+      "C": "Taşikardi",
+      "D": "Salivasyon",
+      "E": "Kusma"
+     },
+     "dogru": "C",
+     "aciklama": "SLUDGE salivasyon, lakrimasyon, idrar, defekasyon, GİS krampı ve kusmayı içerir. Muskarinik fazlalıkta bradikardi görülür, taşikardi görülmez. Bu nedenle doğru yanıt taşikardidir; kısaltmada yer almayan bulgu budur.",
+     "sik_aciklamalari": {
+      "A": "Lakrimasyon gözyaşı salgısının artışıdır ve SLUDGE'ın L harflerinden biridir. Gözyaşı bezlerindeki muskarinik uyarıyla artar. Muskarinik fazlalığın tipik bulgusu olduğundan kısaltmanın içinde yer alır.",
+      "B": "Defekasyon GİS motilitesinin artmasıyla oluşur ve SLUDGE'ın D harflerinden biridir. Muskarinik uyarı GİS motilitesini artırdığı için kısaltmanın içinde yer alan bulgulardandır. Muskarinik fazlalığın tipik bir göstergesidir.",
+      "C": "SLUDGE salivasyon, lakrimasyon, idrar, defekasyon, GİS krampı ve kusmayı içerir. Muskarinik fazlalıkta bradikardi görülür, taşikardi görülmez. Bu nedenle doğru yanıt taşikardidir; kısaltmada yer almayan bulgu budur.",
+      "D": "Salivasyon tükürük salgısının artışıdır ve SLUDGE'ın S harfidir. Tükürük bezlerindeki muskarinik uyarıyla artar. Bu nedenle salivasyon muskarinik fazlalık tablosunun ilk bulgularındandır.",
+      "E": "Kusma muskarinik fazlalıkta GİS uyarısıyla görülür ve SLUDGE'ın son bulgusudur. Kısaltmanın içinde yer alır. Kusma GİS motilite artışının sonucudur."
+     },
+     "kanit": {
+      "sayfa": 21
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q28",
+     "kazanim": 20,
+     "zorluk": "zor",
+     "soru": "Kolinomimetik ilaçlardan kaçınılması gereken durumlarla ilgili şu ifadeler veriliyor:\nI. Astım\nII. Peptik ülser\nIII. Mekanik gastrointestinal obstrüksiyon\nIV. Glokom\nBu durumlardan hangisinde ya da hangilerinde kaçınılır?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve II",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Astım, peptik ülser ve mekanik GİS ya da üriner obstrüksiyonda kolinomimetiklerden kaçınılır. Glokomda ise pilokarpin ve karbakol gibi ajanlar kullanılır. Doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Astım, peptik ülser ve mekanik GİS ya da üriner obstrüksiyonda kolinomimetiklerden kaçınılır. Glokomda ise pilokarpin ve karbakol gibi ajanlar kullanılır. Doğru yanıt I, II ve III'tür.",
+      "B": "Astım ve peptik ülser kaçınılacak durumlardır ancak bu seçenek mekanik obstrüksiyonu atlar. Mekanik GİS ya da üriner obstrüksiyon da kontrendikasyondur.",
+      "C": "Peptik ülser kaçınılacak durumdur, fakat glokom kolinomimetiklerin kullanım alanıdır. Pilokarpin miyozis yaparak göz içi basıncını düşürür. Karbakol da glokomda topikal kullanılır.",
+      "D": "Mekanik obstrüksiyon kaçınılacak durumdur ancak glokom bunlardan değildir. Glokomda karbakol topikal olarak kullanılır. Pilokarpin de glokomda trabeküler dışa akımı artırır.",
+      "E": "Dört durumun hepsinde kaçınılsaydı glokom tedavisinde kolinomimetik kullanılamazdı. Oysa pilokarpin ve karbakol glokomda etkilidir. Bu nedenle glokom kaçınılacak durumlardan biri sayılmaz."
+     },
+     "kanit": {
+      "sayfa": 21
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Asetilkolinesteraz ve butirilkolinesteraz türlerini yerleşim ve substrat açısından ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q29",
+     "kazanim": 21,
+     "zorluk": "kolay",
+     "soru": "Plazmada bulunan ve süksinilkolinin metabolizmasında görevli enzim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetilkolinesteraz",
+      "B": "Kolin asetiltransferaz",
+      "C": "Monoamin oksidaz",
+      "D": "Katekol-O-metiltransferaz",
+      "E": "Butirilkolinesteraz"
+     },
+     "dogru": "E",
+     "aciklama": "Butirilkolinesteraz plazmada ve karaciğerde bulunan psödokolinesterazdır. Süksinilkolini hızla yıkar ve nöromüsküler blokun süresini belirler. Bu nedenle sorunun doğru yanıtı butirilkolinesterazdır.",
+     "sik_aciklamalari": {
+      "A": "Asetilkolinesteraz kolinerjik sinapslarda ve eritrositlerde bulunur ve sinaptik asetilkolini yıkar. Süksinilkolinin yıkımında rol almaz. Süksinilkolini yıkan enzim, plazmada ve karaciğerde bulunan butirilkolinesterazdır.",
+      "B": "Kolin asetiltransferaz asetilkolin sentezini sağlayan enzimdir. Yıkım enzimi değildir. Kolin ve asetil-KoA'dan asetilkolin üretir ve süksinilkolinin metabolizmasında görev almaz.",
+      "C": "Monoamin oksidaz katekolaminlerin yıkımında rol alan bir enzimdir. Süksinilkolini metabolize etmez. Katekolaminler ve serotonin gibi monoaminleri yıkar ve kolinerjik iletimde yer almaz.",
+      "D": "Katekol-O-metiltransferaz katekolaminleri metilleyerek yıkar. Süksinilkolinin metabolizmasında görevli değildir. Kolinesteraz ailesinden değildir ve kolinerjik iletimde de yer almaz; yıkım hedefi katekolaminlerdir.",
+      "E": "Butirilkolinesteraz plazmada ve karaciğerde bulunan psödokolinesterazdır. Süksinilkolini hızla yıkar ve nöromüsküler blokun süresini belirler. Bu nedenle sorunun doğru yanıtı butirilkolinesterazdır."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q30",
+     "kazanim": 21,
+     "zorluk": "kolay",
+     "soru": "Asetilkolinesteraz enzimi aşağıdaki yerlerden hangisinde bulunur?",
+     "secenekler": {
+      "A": "Plazma ve karaciğer",
+      "B": "Kolinerjik sinapslar ve eritrositler",
+      "C": "Yalnız karaciğer",
+      "D": "Yalnız plazma",
+      "E": "Adrenal korteks"
+     },
+     "dogru": "B",
+     "aciklama": "Asetilkolinesteraz kolinerjik sinapslarda ve eritrositlerde bulunur. Sinaptik asetilkolini yıkayan temel enzimdir ve etkiyi hızla sonlandırır. Bu nedenle doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Plazma ve karaciğer butirilkolinesterazın bulunduğu yerlerdir. Bu enzim psödokolinesterazdır ve süksinilkolini yıkar. Asetilkolinesteraz ise kolinerjik sinapslarda ve eritrositlerde bulunan temel yıkım enzimidir.",
+      "B": "Asetilkolinesteraz kolinerjik sinapslarda ve eritrositlerde bulunur. Sinaptik asetilkolini yıkayan temel enzimdir ve etkiyi hızla sonlandırır. Bu nedenle doğru yanıt budur.",
+      "C": "Yalnız karaciğerde bulunması asetilkolinesterazın dağılımını anlatmaz. Enzim sinapslarda ve eritrositlerde bulunur. Karaciğer ve plazma ise butirilkolinesterazın yerleşim yerleridir ve bu enzim süksinilkolini yıkar.",
+      "D": "Yalnız plazmada bulunması butirilkolinesteraz için de eksik bir tanımdır. Asetilkolinesterazın yeri sinapslar ve eritrositlerdir. Plazmada ve karaciğerde bulunan enzim ise psödokolinesterazdır.",
+      "E": "Adrenal korteks asetilkolinesterazın tanımlanan yerlerinden değildir. Enzim kolinerjik iletimin olduğu sinapslarda bulunur. Adrenal medulla ise NN reseptörleri taşıyan bir yapıdır."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Kolinesteraz inhibisyonunun üç tip bağlanma mekanizmasını karşılaştırabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q31",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Kolinesteraz inhibitörlerinin bağlanma mekanizmalarıyla ilgili şu ifadeler veriliyor:\nI. Edrofonyum enzime nonkovalent bağlanır.\nII. Karbamatlar enzimi karbamiller.\nIII. Organofosfatlar enzimi fosforiller.\nIV. Organofosfatlarda aging sonrası reaktivasyon mümkündür.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Edrofonyum enzime nonkovalent, geri dönüşümlü bağlanır; karbamatlar enzimi karbamiller; organofosfatlar enzimi fosforiller. Aging sonrasında reaktivasyon mümkün değildir. Bu nedenle doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci ifadeler doğrudur; ancak organofosfatların enzimi fosforillediğini söyleyen üçüncü ifade de doğrudur ve bu seçenekte atlanmıştır. Fosforilasyon, organofosfatların enzimi geri dönüşümsüz inhibe etme basamağıdır.",
+      "B": "Edrofonyum enzime nonkovalent, geri dönüşümlü bağlanır; karbamatlar enzimi karbamiller; organofosfatlar enzimi fosforiller. Aging sonrasında reaktivasyon mümkün değildir. Bu nedenle doğru yanıt I, II ve III'tür.",
+      "C": "İkinci ifade doğrudur fakat aging sonrası reaktivasyon mümkün değildir, yani dördüncü ifade yanlıştır. Edrofonyumun nonkovalent bağlanması da doğrudur ve bu seçenekte eksik bırakılmıştır.",
+      "D": "Organofosfatların enzimi fosforillemesi doğrudur ancak aging sonrası reaktivasyon mümkün değildir; dördüncü ifade yanlıştır. Seçenek ayrıca doğru olan ilk iki ifadeyi atlar.",
+      "E": "Dört ifadenin hepsi doğru olsaydı aging sonrasında oksimle reaktivasyon mümkün olurdu. Oysa aging ile kompleks kararlılaşır ve reaktivasyon kaybolur, dördüncü ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q32",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Organofosfat zehirlenmesinde pralidoksimin etkisiz kalmasına yol açan olay aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aging",
+      "B": "Kolin geri alımının artması",
+      "C": "Veziküler depolamanın bozulması",
+      "D": "Ca²⁺ kanalı açılması",
+      "E": "Muskarinik reseptör sayısının artması"
+     },
+     "dogru": "A",
+     "aciklama": "Aging ile enzim-organofosfat kompleksi kararlılaşır ve oksimle reaktivasyon kaybolur. Pralidoksim aging sonrasında etkisizdir, bu yüzden erken başlanır. Doğru yanıt agingdir.",
+     "sik_aciklamalari": {
+      "A": "Aging ile enzim-organofosfat kompleksi kararlılaşır ve oksimle reaktivasyon kaybolur. Pralidoksim aging sonrasında etkisizdir, bu yüzden erken başlanır. Doğru yanıt agingdir.",
+      "B": "Kolin geri alımı asetilkolinin yıkımından sonra CHT taşıyıcısıyla olur. Pralidoksimin etkisini ortadan kaldırmaz; bu işlem enzim inhibisyonuyla ilgili değildir. Pralidoksimin etkisini aging belirler.",
+      "C": "Veziküler depolama VAChT ile olur ve vesamikol bunu bloke eder. Bu basamak asetilkolin döngüsünün sentez sonrasındaki aşamasıdır. Pralidoksimin etkinliğini aging belirler, depolama değil.",
+      "D": "Ca²⁺ kanalı açılması asetilkolinin ekzositozla salımını sağlar. Oksimin enzimi reaktive etme olanağını etkilemez. Pralidoksimin etkisi ise enzimdeki fosforil grubunun kaderine bağlıdır.",
+      "E": "Muskarinik reseptör sayısı organofosfat zehirlenmesinde pralidoksimin etkisini belirlemez. Etkisizlik enzim kompleksinin kararlılaşmasına, yani agingine bağlıdır. Pralidoksim reseptöre değil enzime etki eder."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "metin": "Kolinesteraz inhibitörlerinin alt sınıflarını sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q33",
+     "kazanim": 23,
+     "zorluk": "kolay",
+     "soru": "Kalabar fasulyesinden (Physostigma venenosum) elde edilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Pilokarpin",
+      "B": "Edrofonyum",
+      "C": "Fizostigmin",
+      "D": "Donepezil",
+      "E": "Betanekol"
+     },
+     "dogru": "C",
+     "aciklama": "Fizostigmin Kalabar fasulyesinden elde edilen alkaloiddir; lipofilik tersiyer amindir ve kan-beyin bariyerini geçer. Seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir. Bu nedenle doğru yanıt fizostigmindir.",
+     "sik_aciklamalari": {
+      "A": "Pilokarpin Pilocarpus kökenli tersiyer aminli doğal alkaloiddir ve muskarinik reseptörü doğrudan uyarır. Glokom ve kseröstomide kullanılır. Kalabar fasulyesinden değil, Pilocarpus bitkisinden elde edilir.",
+      "B": "Edrofonyum nonkovalent bağlanan kuaterner kolinesteraz inhibitörüdür ve etkisi yaklaşık 5–15 dakika sürer. Tarihsel olarak miyasteni tanısında kullanılmıştır. Kalabar fasulyesiyle ilişkilendirilen ilaç fizostigmindir.",
+      "C": "Fizostigmin Kalabar fasulyesinden elde edilen alkaloiddir; lipofilik tersiyer amindir ve kan-beyin bariyerini geçer. Seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir. Bu nedenle doğru yanıt fizostigmindir.",
+      "D": "Donepezil tersiyer yapıdaki santral kolinesteraz inhibitörüdür ve Alzheimer hastalığında kullanılır. Hafif–orta evrede semptomatik fayda sağlar. Kalabar fasulyesiyle ilişkilendirilen ilaç fizostigmindir.",
+      "E": "Betanekol oral kullanılan seçici muskarinik agonisttir ve nonobstrüktif üriner retansiyonda düşünülür. Mekanik obstrüksiyonda kontrendikedir. Kalabar fasulyesinden elde edilen ilaç fizostigmindir, betanekol değildir."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "metin": "Edrofonyumun etki süresini ve klinik yerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q34",
+     "kazanim": 24,
+     "zorluk": "orta",
+     "soru": "Etki süresi yaklaşık 5–15 dakika olan ve miyastenia gravis ayırıcı tanısında tarihsel olarak kullanılan kolinesteraz inhibitörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Neostigmin",
+      "B": "Edrofonyum",
+      "C": "Piridostigmin",
+      "D": "Fizostigmin",
+      "E": "Donepezil"
+     },
+     "dogru": "B",
+     "aciklama": "Edrofonyum yaklaşık 5–15 dakika etkili kuaterner amindir ve kas gücünde hızlı, geçici artış yapar. Miyasteni ayırıcı tanısında tarihsel olarak kullanılmıştır. Doğru yanıt edrofonyumdur.",
+     "sik_aciklamalari": {
+      "A": "Neostigmin etkisi orta sürelidir ve blok antagonizmasında kullanılır. Etki süresi edrofonyumdan uzundur. Orta süreli etkisiyle nondepolarizan blok antagonizmasında tercih edilir.",
+      "B": "Edrofonyum yaklaşık 5–15 dakika etkili kuaterner amindir ve kas gücünde hızlı, geçici artış yapar. Miyasteni ayırıcı tanısında tarihsel olarak kullanılmıştır. Doğru yanıt edrofonyumdur.",
+      "C": "Piridostigmin oral kullanılan, etkisi neostigminden uzun olan karbamattır ve miyasteni idamesinde kullanılır. Kısa etkili tanı ilacı değildir. Edrofonyumun ise etkisi dakikalar sürer.",
+      "D": "Fizostigmin tersiyer yapıdadır ve santral bulguları düzeltmek için seçilmiş olgularda kullanılır. Tanı testi olarak tanımlanmamıştır. Fizostigminin etkisi kısa–orta sürelidir.",
+      "E": "Donepezil santral etkili bir kolinesteraz inhibitörüdür ve Alzheimer hastalığında kullanılır. Miyasteni tanısında yeri yoktur. Santral ajanların etki süresi ajana bağlıdır."
+     },
+     "kanit": {
+      "sayfa": 25
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q35",
+     "kazanim": 24,
+     "zorluk": "orta",
+     "soru": "Edrofonyumun günümüzde miyastenik kriz ve kolinerjik kriz ayrımında rutin önerilmemesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etkisinin çok uzun sürmesi",
+      "B": "Kan-beyin bariyerini geçmesi",
+      "C": "Reseptöre geri dönüşümsüz bağlanması",
+      "D": "Karaciğerde aktif metabolite dönüşmesi",
+      "E": "Ciddi bradikardi ve solunum riski taşıması"
+     },
+     "dogru": "E",
+     "aciklama": "Edrofonyum kas gücünü hızlı ve geçici artırır ancak ciddi bradikardi ve solunum riski taşır. Bu nedenle rutin tanı ve kriz ayrımı için önerilmez. Doğru yanıt bu risktir.",
+     "sik_aciklamalari": {
+      "A": "Edrofonyumun etkisi yaklaşık 5–15 dakikadır, yani kısadır. Çok uzun sürmesi gibi bir özelliği yoktur. Süre kısalığı nedeniyle dakikalar içinde geçici artış yapar.",
+      "B": "Edrofonyum kuaterner amindir ve SSS'ye geçmez. Kan-beyin bariyerini geçmek onun özelliği değildir. Santral etki vermemesi bu yapısından kaynaklanır ve periferik etkiyle sınırlıdır.",
+      "C": "Edrofonyum enzime nonkovalent ve geri dönüşümlü bağlanır. Geri dönüşümsüz bağlanma organofosfatların özelliğidir ve aging ile kalıcı hale gelir. Karbamatlar enzimi karbamilleyerek saatler süren etki yapar.",
+      "D": "Karaciğerde aktif metabolite dönüşme okson oluşumu gibi organofosfat metabolizmasında görülür. Edrofonyum için tanımlanmamıştır. Edrofonyum enzime nonkovalent bağlanır ve kısa etkilidir.",
+      "E": "Edrofonyum kas gücünü hızlı ve geçici artırır ancak ciddi bradikardi ve solunum riski taşır. Bu nedenle rutin tanı ve kriz ayrımı için önerilmez. Doğru yanıt bu risktir."
+     },
+     "kanit": {
+      "sayfa": 25
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 25,
+   "metin": "Neostigminin özelliklerini ve kullanım alanlarını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q36",
+     "kazanim": 25,
+     "zorluk": "orta",
+     "soru": "Neostigminle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kuaterner aminli karbamattır",
+      "B": "Motor son plakta doğrudan nikotinik etkisi vardır",
+      "C": "Miyastenide kullanılır",
+      "D": "Santral antimuskarinik bulguları düzeltir",
+      "E": "Seçilmiş üriner retansiyon olgularında kullanılır"
+     },
+     "dogru": "D",
+     "aciklama": "Neostigmin kuaterner yapıdadır ve SSS'ye geçmez; bu nedenle santral bulguları düzeltemez. Santral antimuskarinik toksisitede tersiyer fizostigmin kullanılır. Yanlış ifade budur, doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Neostigmin periferik etkili kuaterner karbamattır. Bu ifade doğrudur ve yanlış arayan soruda yanıt olamaz. Kan-beyin bariyerini geçemediği için SSS'ye ulaşmaz.",
+      "B": "Neostigmin kolinesterazı bloke etmenin yanında motor son plakta doğrudan nikotinik etki de gösterir. Bu ifade doğrudur. Bu ikili etki neostigmini diğer inhibitörlerden ayıran özelliktir.",
+      "C": "Neostigmin miyastenide kullanılan kolinesteraz inhibitörlerindendir. Bu ifade doğrudur. Piridostigmin gibi miyasteninin semptomatik tedavisinde yer alan ve asetilkolini biriktiren bir ajandır.",
+      "D": "Neostigmin kuaterner yapıdadır ve SSS'ye geçmez; bu nedenle santral bulguları düzeltemez. Santral antimuskarinik toksisitede tersiyer fizostigmin kullanılır. Yanlış ifade budur, doğru yanıttır.",
+      "E": "Neostigmin seçilmiş ileus ve üriner retansiyon olgularında kullanılır. Bu ifade doğrudur. Bu kullanım yalnız mekanik obstrüksiyon yokken ve seçilmiş olgularda düşünülür."
+     },
+     "kanit": {
+      "sayfa": 26
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q37",
+     "kazanim": 25,
+     "zorluk": "orta",
+     "soru": "Nondepolarizan nöromüsküler bloğun neostigminle geri çevrilmesinde atropin veya glikopirolatın birlikte verilmesinin amacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bradikardi ve salivasyonu önlemek",
+      "B": "Nondepolarizan bloğu derinleştirmek",
+      "C": "Neostigminin yıkımını hızlandırmak",
+      "D": "Nikotinik reseptörleri bloke etmek",
+      "E": "Süksinilkolin etkisini artırmak"
+     },
+     "dogru": "A",
+     "aciklama": "Neostigmin asetilkolini biriktirdiği için muskarinik yan etkiler, yani bradikardi ve salivasyon oluşabilir. Atropin veya glikopirolat bu muskarinik etkileri önler. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Neostigmin asetilkolini biriktirdiği için muskarinik yan etkiler, yani bradikardi ve salivasyon oluşabilir. Atropin veya glikopirolat bu muskarinik etkileri önler. Doğru yanıt budur.",
+      "B": "Bloğu derinleştirmek neostigminin amacının tersidir; ilaç reseptör yarışını geri çevirerek bloğu kaldırır. Atropin bloğun derinliğini değiştirmez. Eşlik eden ilacın görevi ise muskarinik yan etkileri baskılamaktır.",
+      "C": "Atropin neostigminin yıkımını hızlandırmaz. Eşlik eden ilaç muskarinik yan etkiler için verilir, ilaç kinetiğini değiştirmek için değil. İlacın yıkımı ayrı bir süreçtir.",
+      "D": "Atropin muskarinik antagonisttir, nikotinik reseptörleri bloke etmez. Nikotinik etki nöromüsküler bloğun çözülmesi için gereklidir. Bu yüzden atropin yalnız muskarinik yan etkiler için eşlik eder.",
+      "E": "Süksinilkolin BChE ile yıkılır ve antagonizma beklenmez. Atropinin eşlik etme amacı süksinilkolinle ilgili değildir. Atropin yalnız neostigminin muskarinik yan etkilerini önler."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 26,
+   "metin": "Piridostigminin miyastenideki yerini ve yan etkilerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q38",
+     "kazanim": 26,
+     "zorluk": "orta",
+     "soru": "Miyasteninin semptomatik tedavisinde temel seçenek olan oral kuaterner karbamat aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fizostigmin",
+      "B": "Edrofonyum",
+      "C": "Donepezil",
+      "D": "Piridostigmin",
+      "E": "Pilokarpin"
+     },
+     "dogru": "D",
+     "aciklama": "Piridostigmin oral kullanılan kuaterner karbamattır ve etkisi neostigminden daha uzundur. Miyasteninin semptomatik tedavisinde temel seçenektir. Bu nedenle doğru yanıt piridostigmindir.",
+     "sik_aciklamalari": {
+      "A": "Fizostigmin tersiyer yapıdadır ve SSS'ye geçer. Miyasteni idamesinde değil, seçilmiş antimuskarinik zehirlenmelerde kullanılır. Lipofilik yapısı nedeniyle santral etkisi vardır.",
+      "B": "Edrofonyum kuaterner aminlerdendir ve etkisi yaklaşık 5–15 dakika sürer. Tarihsel olarak tanıda kullanılmıştır. Kısa etkisi nedeniyle idame tedavide kullanılmaz.",
+      "C": "Donepezil santral etkili kolinesteraz inhibitörüdür ve Alzheimer hastalığında kullanılır. Miyasteni için temel seçenek değildir. Santral etkili olduğu için kuaterner karbamatlardan ayrılır.",
+      "D": "Piridostigmin oral kullanılan kuaterner karbamattır ve etkisi neostigminden daha uzundur. Miyasteninin semptomatik tedavisinde temel seçenektir. Bu nedenle doğru yanıt piridostigmindir.",
+      "E": "Pilokarpin muskarinik agonisttir ve glokom ile kseröstomide kullanılır. Miyastenideki nikotinik reseptör sorununu düzeltmez. Etkisi yalnız muskarinik reseptör uyarısıyla sınırlıdır ve iskelet kasına ulaşmaz."
+     },
+     "kanit": {
+      "sayfa": 27
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q39",
+     "kazanim": 26,
+     "zorluk": "zor",
+     "soru": "Piridostigminin aşırı dozunda gelişebilen klinik tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Miyastenik kriz",
+      "B": "Ara sendrom",
+      "C": "Kolinerjik kriz",
+      "D": "Gecikmiş nöropati",
+      "E": "Süksinilkolin bloğunun uzaması"
+     },
+     "dogru": "C",
+     "aciklama": "Piridostigminin aşırı dozu kolinerjik krize yol açabilir. Gastrointestinal yan etkiler dozla artar ve aşırı kolinerjik uyarı belirginleşir. Bu nedenle doğru yanıt kolinerjik krizdir.",
+     "sik_aciklamalari": {
+      "A": "Miyastenik kriz ilaç yetersizliğiyle ilişkilidir ve hastalığın alevlenmesidir. Aşırı doz değil, yetersiz doz bu tabloya yol açar. Piridostigmin dozu yetersizse bu tablo gelişir.",
+      "B": "Ara sendrom organofosfat zehirlenmesinden genellikle 24–96 saat sonra gelişen proksimal kas güçsüzlüğüdür. İlaç aşırı dozunun sonucu değildir. Solunum yetmezliği ile birlikte destekleyici solunum bakımı gerektirir.",
+      "C": "Piridostigminin aşırı dozu kolinerjik krize yol açabilir. Gastrointestinal yan etkiler dozla artar ve aşırı kolinerjik uyarı belirginleşir. Bu nedenle doğru yanıt kolinerjik krizdir.",
+      "D": "Gecikmiş nöropati organofosfat zehirlenmesinden birkaç hafta sonra gelişen distal motor nöropatidir. Piridostigmin dozuyla ilişkili değildir. Organofosfat zehirlenmesinin geç dönem komplikasyonudur.",
+      "E": "Süksinilkolin bloğunun uzaması plazma kolinesterazı olan BChE'nin yıkımıyla ilgilidir. Süksinilkolin AChE ile değil BChE ile yıkılır. Piridostigmin aşırı dozunun sonucu değildir, o kolinerjik krize yol açar."
+     },
+     "kanit": {
+      "sayfa": 27
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 27,
+   "metin": "Fizostigminin özelliklerini, kullanımını ve risklerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q40",
+     "kazanim": 27,
+     "zorluk": "orta",
+     "soru": "Fizostigminle ilgili şu ifadeler veriliyor:\nI. Tersiyer aminlerdendir.\nII. Kan-beyin bariyerini geçer.\nIII. Seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir.\nIV. Trisiklik antidepresan toksisitesinde tercih edilir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "I, II ve III",
+      "C": "II ve IV",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Fizostigmin lipofilik tersiyer amindir, kan-beyin bariyerini geçer ve seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir. Trisiklik antidepresan toksisitesinde kaçınılır. Bu nedenle doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur ancak trisiklik antidepresan toksisitesinde fizostigmin tercih edilmez, kaçınılır. Ayrıca ikinci ve üçüncü ifadeler de doğru olduğundan seçenek eksiktir.",
+      "B": "Fizostigmin lipofilik tersiyer amindir, kan-beyin bariyerini geçer ve seçilmiş antimuskarinik zehirlenmelerde santral bulguları düzeltebilir. Trisiklik antidepresan toksisitesinde kaçınılır. Bu nedenle doğru yanıt I, II ve III'tür.",
+      "C": "İkinci ifade doğrudur fakat dördüncü ifade yanlıştır; trisiklik antidepresan toksisitesinde konvülsiyon ve bradikardi riski nedeniyle kaçınılır. Birinci ve üçüncü ifadeler de doğrudur.",
+      "D": "Üçüncü ifade doğrudur ancak dördüncü ifade yanlıştır, çünkü trisiklik antidepresan toksisitesi fizostigmin için kaçınılan durumdur. Birinci ve ikinci ifadeler de doğrudur ve atlanmıştır.",
+      "E": "Dört ifadenin hepsi doğru olsaydı fizostigmin trisiklik antidepresan toksisitesinde de seçilirdi. Oysa bu durumda konvülsiyon ve bradikardi riski nedeniyle kaçınılır."
+     },
+     "kanit": {
+      "sayfa": 28
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 28,
+   "metin": "Alzheimer hastalığında santral kolinesteraz inhibitörlerinin yerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q41",
+     "kazanim": 28,
+     "zorluk": "orta",
+     "soru": "Alzheimer hastalığında hafif–orta evrede semptomatik fayda sağlayan santral kolinesteraz inhibitörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Piridostigmin",
+      "B": "Edrofonyum",
+      "C": "Donepezil",
+      "D": "Betanekol",
+      "E": "Neostigmin"
+     },
+     "dogru": "C",
+     "aciklama": "Donepezil santral etkili kolinesteraz inhibitörüdür. Alzheimer hastalığındaki kolinerjik kaybı asetilkolin yıkımını azaltarak dengeler ve hafif–orta evrede semptomatik fayda verir. Doğru yanıt donepezildir.",
+     "sik_aciklamalari": {
+      "A": "Piridostigmin kuaterner karbamattır ve SSS'ye geçmez. Miyasteni idamesinde kullanılır, Alzheimer tedavisinde yeri yoktur. Santral etkisi bulunmadığı için Alzheimer belirtilerini etkilemez.",
+      "B": "Edrofonyum kuaterner yapıdadır ve kısa etkili tarihsel tanı ilacıdır. SSS'ye geçmez. Alzheimer belirtilerinde ise SSS'ye geçen santral ajanlar gerekir.",
+      "C": "Donepezil santral etkili kolinesteraz inhibitörüdür. Alzheimer hastalığındaki kolinerjik kaybı asetilkolin yıkımını azaltarak dengeler ve hafif–orta evrede semptomatik fayda verir. Doğru yanıt donepezildir.",
+      "D": "Betanekol direkt muskarinik agonisttir ve üriner retansiyonda kullanılır. Kolinesteraz inhibitörü değildir. Muskarinik etki yapar ancak kolinerjik kaybı santral düzeyde gidermez.",
+      "E": "Neostigmin periferik etkili kuaterner karbamattır ve SSS'ye geçmez. Alzheimer belirtilerinde kullanılmaz. Kuaterner yapısı nedeniyle santral kolinerjik kayba etki edemez."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q42",
+     "kazanim": 28,
+     "zorluk": "zor",
+     "soru": "Alzheimer hastalığında santral kolinesteraz inhibitörleriyle ilgili şu ifadeler veriliyor:\nI. Asetilkolin yıkımını azaltırlar.\nII. Hastalığın seyrini durdururlar.\nIII. Hafif–orta evrede semptomatik fayda sağlarlar.\nIV. Bulantı ve bradikardi yapabilirler.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "II, III ve IV",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Santral kolinesteraz inhibitörleri asetilkolin yıkımını azaltır, hafif–orta evrede semptomatik fayda verir ve bulantı ya da bradikardi yapabilir. Hastalığın seyrini değiştirmezler. Doğru yanıt I, III ve IV'tür.",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur ancak ikinci ifade yanlıştır; bu ilaçlar hastalığı durdurmaz. Üçüncü ve dördüncü doğru ifadeler de dışarıda kalmıştır. Hastalığı durdurma beklentisi yanlıştır.",
+      "B": "İkinci ifade yanlıştır, çünkü hastalığın seyri değişmez. Üçüncü ifade doğru olsa da seçenek yanlış ifadeyi de içerir. Birinci ve dördüncü ifadeler doğru olduğundan seçenek eksiktir.",
+      "C": "Bu seçenek hastalığı durdurma ifadesini de içerir; oysa ilaçlar yalnız semptomatik fayda sağlar. Birinci ifade eksiktir. Hastalığı durdurma yanılgısı bu ilaçlara ilişkin sık bir hatadır.",
+      "D": "Santral kolinesteraz inhibitörleri asetilkolin yıkımını azaltır, hafif–orta evrede semptomatik fayda verir ve bulantı ya da bradikardi yapabilir. Hastalığın seyrini değiştirmezler. Doğru yanıt I, III ve IV'tür.",
+      "E": "Dört ifadenin hepsi doğru olsaydı bu ilaçlar hastalığı durdururdu. Oysa seyir değişmez, ikinci ifade yanlıştır. Santral inhibitörler yalnız semptomatik fayda sağlar."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 29,
+   "metin": "Kolinesteraz inhibitörlerinin klinik kullanım özetini karşılaştırabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q43",
+     "kazanim": 29,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki kolinesteraz inhibitörü ve kullanım eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fizostigmin – Alzheimer belirtileri",
+      "B": "Edrofonyum – Tarihsel tanı",
+      "C": "Neostigmin – Blok antagonizması",
+      "D": "Piridostigmin – Miyasteni idamesi",
+      "E": "Donepezil – Alzheimer belirtileri"
+     },
+     "dogru": "A",
+     "aciklama": "Fizostigmin tersiyerdir ve SSS'ye geçer; antimuskarinik toksisitede kullanılır. Alzheimer belirtileri için santral ajanlar kullanılır, bu nedenle eşleştirme yanlıştır ve doğru yanıttır.",
+     "sik_aciklamalari": {
+      "A": "Fizostigmin tersiyerdir ve SSS'ye geçer; antimuskarinik toksisitede kullanılır. Alzheimer belirtileri için santral ajanlar kullanılır, bu nedenle eşleştirme yanlıştır ve doğru yanıttır.",
+      "B": "Edrofonyum çok kısa etkilidir ve tarihsel olarak tanıda kullanılmıştır. Bu eşleştirme doğrudur. Kuaterner yapıdadır, SSS'ye geçmez ve etkisi birkaç dakikayla sınırlıdır.",
+      "C": "Neostigmin orta süreli etkilidir ve nondepolarizan blok antagonizmasında kullanılır. Bu eşleştirme doğrudur. Kuaterner karbamattır, SSS'ye geçmez ve muskarinik yan etki için atropin eşlik eder.",
+      "D": "Piridostigmin daha uzun etkilidir ve miyasteni idamesinde kullanılır. Bu eşleştirme doğrudur. Oral kullanılan kuaterner karbamattır ve etkisi neostigminden daha uzundur.",
+      "E": "Donepezil SSS'ye geçen santral bir ajandır ve Alzheimer belirtilerinde kullanılır. Bu eşleştirme doğrudur. Hafif–orta evrede semptomatik fayda sağlar ve hastalığın seyrini değiştirmez."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 30,
+   "metin": "Miyastenia gravisin patogenezini, klinik bulgularını ve tedavisini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q44",
+     "kazanim": 30,
+     "zorluk": "orta",
+     "soru": "Miyastenia gravisin temel patogenezi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "M3 reseptörlere karşı antikorlar",
+      "B": "Asetilkolinesterazın aşırı aktivitesi",
+      "C": "Presinaptik ACh sentezinin durması",
+      "D": "Botulinum toksini etkisi",
+      "E": "NM nikotinik reseptörlere karşı otoantikorlar"
+     },
+     "dogru": "E",
+     "aciklama": "Miyastenia gravis NM nikotinik reseptörlere karşı antikorların yaptığı otoimmün hastalıktır. Nöromüsküler kavşakta iletim bozulur ve kas güçsüzlüğü yorulmakla artar. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "M3 reseptörleri düz kas ve bezlerde bulunan muskarinik alt tiptir. Miyasteni iskelet kasındaki nikotinik reseptörleri hedef alır. Muskarinik reseptörler otoantikorların hedefi değildir.",
+      "B": "Asetilkolinesterazın aşırı aktivitesi miyastenide tanımlanmaz. Tedavide tersine enzim inhibitörleri kullanılır. Asetilkolinesteraz inhibitörleri bu enzimi baskılayarak asetilkolini artırır ve kas gücünü iyileştirir.",
+      "C": "Presinaptik asetilkolin sentezinin durması hastalığın mekanizması değildir. Sorun postsinaptik reseptörlere yönelik antikorlardır. Presinaptik uçta asetilkolin sentezi ve salımı korunmuştur; bozulan postsinaptik reseptör işlevidir.",
+      "D": "Botulinum toksini asetilkolin salımını engeller ve botulizme yol açar. Miyasteni otoimmün bir hastalıktır, toksinle oluşmaz. Botulizmde iletim kesilir ancak otoantikor bulunmaz.",
+      "E": "Miyastenia gravis NM nikotinik reseptörlere karşı antikorların yaptığı otoimmün hastalıktır. Nöromüsküler kavşakta iletim bozulur ve kas güçsüzlüğü yorulmakla artar. Doğru yanıt budur."
+     },
+     "kanit": {
+      "sayfa": 31
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 31,
+   "metin": "Miyastenik kriz ile kolinerjik krizi ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q45",
+     "kazanim": 31,
+     "zorluk": "orta",
+     "soru": "Miyastenik kriz ve kolinerjik krizle ilgili şu ifadeler veriliyor:\nI. Miyastenik kriz ilaç yetersizliğiyle ilişkilidir.\nII. Kolinerjik kriz aşırı inhibitör dozuyla ilişkilidir.\nIII. Her iki krizde solunum desteği önceliklidir.\nIV. Edrofonyum yatak başı ayırımda güncel rutindir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Miyastenik kriz ilaç yetersizliğiyle, kolinerjik kriz aşırı inhibitörle ilişkilidir; her ikisinde solunum desteği önceliklidir. Edrofonyum yatak başı ayırımda güncel rutin değildir. Bu nedenle doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Birinci ve ikinci ifade doğrudur; ancak her iki krizde solunum desteğinin öncelikli olduğunu söyleyen üçüncü ifade de doğrudur ve bu seçenekte atlanmıştır. Bu iki kriz türünde de önce hava yolu ve solunum güvence altına alınır.",
+      "B": "İkinci ifade doğrudur fakat edrofonyum yatak başı ayırımda güncel rutin değildir, bu nedenle dördüncü ifade yanlıştır. Birinci ve üçüncü ifadeler de doğrudur ve atlanmıştır.",
+      "C": "Miyastenik kriz ilaç yetersizliğiyle, kolinerjik kriz aşırı inhibitörle ilişkilidir; her ikisinde solunum desteği önceliklidir. Edrofonyum yatak başı ayırımda güncel rutin değildir. Bu nedenle doğru yanıt I, II ve III'tür.",
+      "D": "Üçüncü ifade doğrudur ancak edrofonyum güncel rutin değildir; ciddi bradikardi ve solunum riski taşır. Birinci ve ikinci ifadeler de doğru olduğundan seçenek eksiktir.",
+      "E": "Dört ifadenin hepsi doğru olsaydı edrofonyum yatak başı ayırımda rutin olarak kullanılırdı. Oysa kas gücünü artırsa da güncel rutin değildir, dördüncü ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 32,
+   "metin": "Nöromüsküler blok antagonizmasında neostigminin yerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q46",
+     "kazanim": 32,
+     "zorluk": "zor",
+     "soru": "Süksinilkolin sonrası blok uzayan hastada neostigmin etkisiz kalıyorsa altta yatan en olası neden aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetilkolinesteraz fazlalığı",
+      "B": "Nikotinik reseptör yoğunluğunda artış",
+      "C": "Kolin asetiltransferaz eksikliği",
+      "D": "Muskarinik reseptör blokajı",
+      "E": "Butirilkolinesteraz eksikliği"
+     },
+     "dogru": "E",
+     "aciklama": "Süksinilkolin plazma kolinesterazı ile yıkılır ve bu enzim eksikse blok uzar. Neostigmin bu durumda etkisizdir. Bu nedenle doğru yanıt butirilkolinesteraz eksikliğidir.",
+     "sik_aciklamalari": {
+      "A": "Süksinilkolin bu enzimle değil, plazma kolinesterazıyla yıkılır. Asetilkolinesteraz sinaptik asetilkolini yıkan enzimdir ve süksinilkolinin yıkımında rol almaz. Fazlalığı bloğun uzamasını açıklamaz.",
+      "B": "Nikotinik reseptör yoğunluğunun artması bloğun uzamasını açıklamaz. Uzamış blokta sorun ilacın yıkımının yavaşlamasıdır. Reseptör yoğunluğu ilacın yıkım hızını belirleyen bir etken değildir.",
+      "C": "Kolin asetiltransferaz asetilkolin sentezini sağlayan enzimdir. Eksikliği süksinilkolinin yıkım hızını etkilemez. Süksinilkolin plazma kolinesterazıyla yıkıldığı için blok uzamasının nedeni bu enzimin eksikliği değildir.",
+      "D": "Muskarinik reseptör blokajı bradikardi ve salgı azalması gibi etkiler verir. Nöromüsküler blok uzamasının nedeni değildir. Atropin blok uzamasını değil muskarinik bulguları ilgilendirir.",
+      "E": "Süksinilkolin plazma kolinesterazı ile yıkılır ve bu enzim eksikse blok uzar. Neostigmin bu durumda etkisizdir. Bu nedenle doğru yanıt butirilkolinesteraz eksikliğidir."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 33,
+   "metin": "Organofosfatların kaynaklarını ve maruziyet risklerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q47",
+     "kazanim": 33,
+     "zorluk": "kolay",
+     "soru": "Organofosfatlarla ilgili şu ifadeler veriliyor:\nI. Sarin sinir ajanıdır.\nII. Paration insektisittir.\nIII. Malation aktif okson metabolitine dönüşür.\nIV. Klorpirifos sinir ajanıdır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve IV",
+      "B": "II ve IV",
+      "C": "III ve IV",
+      "D": "I, II, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Sarin sinir ajanıdır, paration insektisittir ve malation aktif okson metabolitine dönüşür. Klorpirifos ise insektisitler arasında yer alır. Bu nedenle doğru yanıt I, II ve III'tür.",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur fakat klorpirifos sinir ajanı değil, insektisit grubundaki organofosfattır. İkinci ve üçüncü ifadeler de doğru olduğundan seçenek hem eksik hem hatalıdır.",
+      "B": "İkinci ifade doğrudur ancak klorpirifos insektisit grubundandır, sinir ajanı değildir. Birinci ve üçüncü ifadeler de doğrudur, fakat bu seçenekte atlanmıştır.",
+      "C": "Üçüncü ifade doğrudur fakat dördüncü ifade yanlıştır; sinir ajanları sarin, tabun, soman ve VX'tir. Birinci ve ikinci ifadeler de doğrudur, ancak seçenekte yer verilmemiştir.",
+      "D": "Dört ifadenin hepsi doğru olsaydı klorpirifos da sinir ajanı olurdu. Oysa klorpirifos paration ve malation gibi insektisit organofosfatlardandır. Bu nedenle dördüncü ifade yanlıştır.",
+      "E": "Sarin sinir ajanıdır, paration insektisittir ve malation aktif okson metabolitine dönüşür. Klorpirifos ise insektisitler arasında yer alır. Bu nedenle doğru yanıt I, II ve III'tür."
+     },
+     "kanit": {
+      "sayfa": 34
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q48",
+     "kazanim": 33,
+     "zorluk": "orta",
+     "soru": "Paration ve malationun dönüştüğü aktif metabolit aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Oksim",
+      "B": "Okson",
+      "C": "Karbamil",
+      "D": "Kolin",
+      "E": "Atropin"
+     },
+     "dogru": "B",
+     "aciklama": "Paration ve malation aktif okson metabolitlerine dönüşür. Bu metabolitler asetilkolinesterazı fosforiller ve zehirlenmeye yol açar. Bu nedenle doğru yanıt oksondur.",
+     "sik_aciklamalari": {
+      "A": "Oksim pralidoksim gibi reaktivatörlerin işlevsel grubudur ve fosforil grubunu enzimden uzaklaştırır. Organofosfatın metaboliti değildir. Bu nedenle zehirlenmenin değil, tedavinin parçasıdır ve aging öncesinde işe yarar.",
+      "B": "Paration ve malation aktif okson metabolitlerine dönüşür. Bu metabolitler asetilkolinesterazı fosforiller ve zehirlenmeye yol açar. Bu nedenle doğru yanıt oksondur.",
+      "C": "Karbamil karbamatların enzime bağladığı gruptur. Organofosfatlar ise enzimi fosforiller. Karbamillenen enzim yavaş hidrolizle geri döner ve etki yaklaşık olarak saatler sürer.",
+      "D": "Kolin asetilkolin sentezinin ve yıkımının ürünüdür. Organofosfatın aktif metaboliti değildir. Kolin asetilkolinin yıkımından sonra geri alınan bir moleküldür ve zehirlenmeyi oluşturmaz.",
+      "E": "Atropin muskarinik antidottur. Organofosfatlardan oluşan bir metabolit değildir. Tedavide bronş sekresyonlarını kontrol etmek için titre edilen bir ilaçtır ve zehirlenmenin tedavisinde kullanılır."
+     },
+     "kanit": {
+      "sayfa": 34
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 34,
+   "metin": "Organofosfatların enzimi geri dönüşümsüz inhibe etme mekanizmasını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q49",
+     "kazanim": 34,
+     "zorluk": "orta",
+     "soru": "Organofosfatlar asetilkolinesteraz enziminin hangi bölgesine bağlanarak etki eder?",
+     "secenekler": {
+      "A": "Kolin taşıyıcısı",
+      "B": "Veziküler taşıyıcı",
+      "C": "Muskarinik reseptör bölgesi",
+      "D": "Aktif serin bölgesi",
+      "E": "Nikotinik kanal gözeneği"
+     },
+     "dogru": "D",
+     "aciklama": "Organofosfatlar AChE'nin aktif serin bölgesine bağlanarak enzimi fosforiller. Aging sonrası bu bağ kararlılaşır ve reaktivasyon kaybolur. Bu nedenle doğru yanıt aktif serin bölgesidir.",
+     "sik_aciklamalari": {
+      "A": "Kolin taşıyıcısı CHT'dir ve hemikolinyum tarafından bloke edilir. Organofosfatlar bu taşıyıcıyı hedeflemez. Hedef, serin kalıntısı taşıyan enzimin aktif bölgesidir.",
+      "B": "Veziküler taşıyıcı VAChT'dir ve vesamikol tarafından bloke edilir. Organofosfatların hedefi değildir. Organofosfatın hedefi yıkım enziminin aktif serin bölgesi olarak bilinir.",
+      "C": "Muskarinik reseptörü atropin bloke eder. Organofosfatlar reseptöre değil, enzime bağlanır. Organofosfatların hedefi ise yıkım enziminin aktif serin bölgesidir ve reseptöre bağlanma yoktur.",
+      "D": "Organofosfatlar AChE'nin aktif serin bölgesine bağlanarak enzimi fosforiller. Aging sonrası bu bağ kararlılaşır ve reaktivasyon kaybolur. Bu nedenle doğru yanıt aktif serin bölgesidir.",
+      "E": "Nikotinik kanal gözeneği iyon geçişini sağlar. Organofosfatlar kanalı değil, yıkım enzimini etkiler. Organofosfatın bağlandığı yer enzimin aktif serin bölgesidir ve iyon kanalıyla ilgisi yoktur."
+     },
+     "kanit": {
+      "sayfa": 35
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 35,
+   "metin": "Organofosfat zehirlenmesinin muskarinik, nikotinik ve santral bulgularını sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q50",
+     "kazanim": 35,
+     "zorluk": "orta",
+     "soru": "Organofosfat zehirlenmesinde aşağıdaki bulgulardan hangisi santral bulgudur?",
+     "secenekler": {
+      "A": "Miyozis",
+      "B": "Fasikülasyon",
+      "C": "Bronkore",
+      "D": "İdrar kaçırma",
+      "E": "Konvülsiyon"
+     },
+     "dogru": "E",
+     "aciklama": "Santral bulgular ajitasyon, konfüzyon, konvülsiyon ve komadır. Konvülsiyon bu gruptadır ve benzodiazepinle tedavi edilir. Doğru yanıt konvülsiyondur; en kritik sonuç ise solunum yetmezliğidir.",
+     "sik_aciklamalari": {
+      "A": "Miyozis muskarinik bulgulardandır ve pupil kasındaki muskarinik uyarıyla oluşur. Atropinle düzelebilen periferik bir bulgudur. Santral gruba girmez; santral bulgular ajitasyon, konfüzyon, konvülsiyon ve komadır.",
+      "B": "Fasikülasyon nikotinik bulgudur ve motor son plaktaki nikotinik uyarıyı gösterir. Santral değildir. Erken verilen pralidoksim bu periferik nikotinik bulguları düzeltebilir.",
+      "C": "Bronkore muskarinik bulgudur ve bronş sekresyonu artışıyla ilgilidir. Santral bulgu sayılmaz. Atropin tedavisi bronş sekresyonları kontrol altına alınana kadar titre edilir.",
+      "D": "İdrar kaçırma muskarinik bulgudur ve detrüsör kasılması ile sfinkter gevşemesine bağlıdır. Santral değildir. Atropinle düzelebilen periferik bir muskarinik bulgudur ve santral gruba girmez.",
+      "E": "Santral bulgular ajitasyon, konfüzyon, konvülsiyon ve komadır. Konvülsiyon bu gruptadır ve benzodiazepinle tedavi edilir. Doğru yanıt konvülsiyondur; en kritik sonuç ise solunum yetmezliğidir."
+     },
+     "kanit": {
+      "sayfa": 36
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 36,
+   "metin": "Organofosfat zehirlenmesinde tedavi akışını sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q52",
+     "kazanim": 36,
+     "zorluk": "kolay",
+     "soru": "Organofosfat zehirlenmesinde gelişen konvülsiyonda hangi ilaç uygulanır?",
+     "secenekler": {
+      "A": "Benzodiazepin",
+      "B": "Atropin",
+      "C": "Pralidoksim",
+      "D": "Fizostigmin",
+      "E": "Neostigmin"
+     },
+     "dogru": "A",
+     "aciklama": "Organofosfat zehirlenmesinde konvülsiyon gelişirse benzodiazepin uygulanır. Santral bulguları baskılamak tedavi akışının beşinci basamağıdır ve antidotlarla birlikte yürütülür. Bu nedenle doğru yanıt benzodiazepindir.",
+     "sik_aciklamalari": {
+      "A": "Organofosfat zehirlenmesinde konvülsiyon gelişirse benzodiazepin uygulanır. Santral bulguları baskılamak tedavi akışının beşinci basamağıdır ve antidotlarla birlikte yürütülür. Bu nedenle doğru yanıt benzodiazepindir.",
+      "B": "Atropin muskarinik bulguları kontrol eder ve bronş sekresyonlarına göre titre edilir. Konvülsiyonu durdurmak için ayrıca benzodiazepin gerekir. Bu nedenle atropin konvülsiyon tedavisi sayılmaz.",
+      "C": "Pralidoksim fosforillenmiş enzimi aging öncesinde yeniden aktive eder. Kuaterner yapıdadır ve SSS'ye geçmez, bu nedenle konvülsiyonu kontrol etmez. Konvülsiyon için benzodiazepin gerekir.",
+      "D": "Fizostigmin kolinesteraz inhibitörüdür ve konvülsiyon ile bradikardi riski taşır. Zehirlenmeyi ağırlaştırdığı için organofosfat tedavisinde kullanılmaz. Konvülsiyon için bunun yerine benzodiazepin uygulanır.",
+      "E": "Neostigmin kuaterner yapıdaki kolinesteraz inhibitörüdür ve SSS'ye geçmez. Organofosfat zehirlenmesinde kolinerjik fazlalığı artırır ve konvülsiyonu düzeltmez. Konvülsiyon için benzodiazepin uygulanır."
+     },
+     "kanit": {
+      "sayfa": 37
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 37,
+   "metin": "Organofosfat sonrası ara sendrom ve gecikmiş nöropatiyi ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q53",
+     "kazanim": 37,
+     "zorluk": "orta",
+     "soru": "Organofosfat zehirlenmesinin akut kolinerjik krizinden 48 saat sonra proksimal kas güçsüzlüğü ve solunum yetmezliği gelişen hastada en olası tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gecikmiş nöropati",
+      "B": "Ara sendrom",
+      "C": "Miyastenik kriz",
+      "D": "Akut kolinerjik kriz",
+      "E": "Botulizm"
+     },
+     "dogru": "B",
+     "aciklama": "Ara sendrom akut kolinerjik krizden genellikle 24–96 saat sonra proksimal kas güçsüzlüğü ve solunum yetmezliği yapar. Destekleyici solunum bakımı esastır. Doğru yanıt ara sendromdur.",
+     "sik_aciklamalari": {
+      "A": "Gecikmiş nöropati birkaç hafta sonra gelişen distal motor nöropatidir. Zamanlaması ve kas dağılımı farklıdır. Ara sendrom daha erken dönemde ortaya çıkar ve proksimal kasları tutar.",
+      "B": "Ara sendrom akut kolinerjik krizden genellikle 24–96 saat sonra proksimal kas güçsüzlüğü ve solunum yetmezliği yapar. Destekleyici solunum bakımı esastır. Doğru yanıt ara sendromdur.",
+      "C": "Miyastenik kriz miyastenia gravisli hastada ilaç yetersizliğiyle gelişir ve hastalığın alevlenmesidir. Kökte böyle bir hasta verilmemiştir. Organofosfat sonrası kırk sekizinci saat tablosunu bu kriz açıklamaz.",
+      "D": "Akut kolinerjik kriz ilk saatlerde muskarinik ve nikotinik bulgularla ortaya çıkar. Hasta bu dönemi geçmiştir. Ara sendrom bu krizden sonra 24–96 saat içinde başlar.",
+      "E": "Botulizm asetilkolin salımının botulinum toksiniyle engellenmesidir. Organofosfat maruziyeti sonrası tablo değildir. Organofosfat sonrası kas güçsüzlüğü ise kolinesteraz inhibisyonu ve asetilkolin birikimine bağlıdır."
+     },
+     "kanit": {
+      "sayfa": 38
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q54",
+     "kazanim": 37,
+     "zorluk": "kolay",
+     "soru": "Organofosfat zehirlenmesinden birkaç hafta sonra gelişen distal motor nöropatinin adı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ara sendrom",
+      "B": "Akut kolinerjik kriz",
+      "C": "Miyastenik kriz",
+      "D": "Kolinerjik kriz",
+      "E": "Gecikmiş nöropati"
+     },
+     "dogru": "E",
+     "aciklama": "Gecikmiş nöropati birkaç hafta sonra gelişen distal motor nöropatidir. Bazı ajanlarda geri dönüşümsüzdür ve atropin ile pralidoksim akut krizi düzeltse de ortaya çıkabilir. Bu nedenle doğru yanıt gecikmiş nöropatidir.",
+     "sik_aciklamalari": {
+      "A": "Ara sendrom daha erken, 24–96 saat içinde proksimal kas güçsüzlüğü ve solunum yetmezliği yapar. Distal motor nöropati değildir. Destekleyici solunum bakımı esastır.",
+      "B": "Akut kolinerjik kriz ilk saatlerde muskarinik ve nikotinik bulgularla görülür. Haftalar sonra gelişen bir tablo değildir. Bu dönemde muskarinik ve nikotinik bulgular baskındır.",
+      "C": "Miyastenik kriz miyastenia gravis hastalarındaki ilaç yetersizliği tablosudur. Organofosfat sonrası nöropati değildir. Kriz tablosu organofosfat maruziyetiyle değil, miyasteni tedavisindeki yetersizlikle ilişkilidir.",
+      "D": "Kolinerjik kriz aşırı kolinerjik uyarının erken tablosudur. Haftalar sonra gelişen distal nöropati bu adı taşımaz. Kolinerjik kriz muskarinik ve nikotinik bulguların aşırılığıyla seyreder.",
+      "E": "Gecikmiş nöropati birkaç hafta sonra gelişen distal motor nöropatidir. Bazı ajanlarda geri dönüşümsüzdür ve atropin ile pralidoksim akut krizi düzeltse de ortaya çıkabilir. Bu nedenle doğru yanıt gecikmiş nöropatidir."
+     },
+     "kanit": {
+      "sayfa": 38
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 38,
+   "metin": "Atropinin muskarinik antidot olarak yerini ve sınırlarını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q55",
+     "kazanim": 38,
+     "zorluk": "orta",
+     "soru": "Organofosfat zehirlenmesinde atropin tedavisinin hedefi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Midriyazis oluşması",
+      "B": "Kalp hızının yükselmesi",
+      "C": "Bronş sekresyonlarının kontrolü",
+      "D": "Fasikülasyonun düzelmesi",
+      "E": "Kuru ağız oluşması"
+     },
+     "dogru": "C",
+     "aciklama": "Atropin tedavisinin hedefi bronş sekresyonlarının kontrolü ve ventilasyonun düzelmesidir. Atropin bu amaçla muskarinik bulgular düzelene kadar titre edilir. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Midriyazis hedef değildir; miyozisin tersine dönmesi tedavi sonlanım ölçütü sayılmaz. Atropin dozu solunum bulgularına göre ayarlanır. Gözdeki bulgu doz ayarında ölçüt olarak kullanılmaz.",
+      "B": "Kalp hızının yükselmesi hedef değildir. Taşikardiyi izlemek yerine bronş sekresyonları ve ventilasyon izlenir. Doz ayarında ölçüt, solunum yollarının kuruması ve havalanmanın düzelmesidir.",
+      "C": "Atropin tedavisinin hedefi bronş sekresyonlarının kontrolü ve ventilasyonun düzelmesidir. Atropin bu amaçla muskarinik bulgular düzelene kadar titre edilir. Doğru yanıt budur.",
+      "D": "Fasikülasyon nikotinik bulgudur ve atropin düzeltmez. Nikotinik bulgular için erken pralidoksim gerekir. Atropin yalnız muskarinik bulguları, yani sekresyonları ve bradikardiyi düzeltir.",
+      "E": "Kuru ağız atropinin yan etkisidir ve tedavi hedefi olarak tanımlanmaz. Hedef solunumdur. Doz, bronş sekresyonlarının kontrolüne ve ventilasyonun düzelmesine göre ayarlanır."
+     },
+     "kanit": {
+      "sayfa": 39
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 39,
+   "metin": "Pralidoksimin AChE reaktivatörü olarak etkisini ve sınırlarını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q56",
+     "kazanim": 39,
+     "zorluk": "orta",
+     "soru": "Pralidoksimin santral sinir sistemi bulgularını düzeltememesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tersiyer amin yapıda olması",
+      "B": "Muskarinik reseptörü bloke etmesi",
+      "C": "Aging oluşturması",
+      "D": "Kuaterner amin yapıda olması",
+      "E": "Karbamatları aktive etmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Pralidoksim kuaterner amindir ve kan-beyin bariyerini geçmez. Bu nedenle santral bulguları düzeltemez, ancak periferik nikotinik bulguları düzeltebilir. Doğru yanıt kuaterner amin yapısıdır.",
+     "sik_aciklamalari": {
+      "A": "Tersiyer aminler bariyeri geçer ve santral etki verir. Pralidoksim tersiyer değil kuaterner yapıdadır. Santral etki vermek için ilacın tersiyer olması gerekirdi.",
+      "B": "Muskarinik reseptörü bloke etmek atropinin işlevidir. Pralidoksim reseptöre değil, fosforillenmiş enzime etki eder. Bu nedenle muskarinik bulguları pralidoksim değil atropin düzeltir.",
+      "C": "Aging, organofosfat enzim kompleksinin kararlılaşmasıdır ve pralidoksimin özelliği değildir. Pralidoksim aging sonrasında etkisizdir. Santral bulguların düzelmemesi bununla değil kuaterner yapıyla ilgilidir.",
+      "D": "Pralidoksim kuaterner amindir ve kan-beyin bariyerini geçmez. Bu nedenle santral bulguları düzeltemez, ancak periferik nikotinik bulguları düzeltebilir. Doğru yanıt kuaterner amin yapısıdır.",
+      "E": "Karbamatları aktive etmek pralidoksimin işlevi değildir. Karbamat zehirlenmesinde rutin kullanımı önerilmez. Karbamatla oluşan enzim bağı zaten yavaş hidrolizle geri döner."
+     },
+     "kanit": {
+      "sayfa": 40
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q57",
+     "kazanim": 39,
+     "zorluk": "orta",
+     "soru": "Pralidoksimin karbamat zehirlenmesindeki yeri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İlk seçilecek antidottur",
+      "B": "Rutin kullanımı önerilmez",
+      "C": "Atropinin yerine geçer",
+      "D": "Aging'i tersine çevirir",
+      "E": "Santral bulguları düzeltir"
+     },
+     "dogru": "B",
+     "aciklama": "Karbamat zehirlenmesinde pralidoksimin rutin kullanımı önerilmez. Karbamatlar enzimi karbamiller ve yavaş hidrolizle geri dönüş olur. Doğru yanıt rutin kullanımın önerilmemesidir.",
+     "sik_aciklamalari": {
+      "A": "Pralidoksim organofosfat zehirlenmesinde fosforillenmiş enzimi aktive eden antidottur. Karbamat zehirlenmesinde ilk seçilecek antidot olarak tanımlanmaz. Karbamatlarda enzim yavaş hidrolizle geri döndüğü için rutin reaktivatör gerekmez.",
+      "B": "Karbamat zehirlenmesinde pralidoksimin rutin kullanımı önerilmez. Karbamatlar enzimi karbamiller ve yavaş hidrolizle geri dönüş olur. Doğru yanıt rutin kullanımın önerilmemesidir.",
+      "C": "Atropin muskarinik reseptörü bloke eden antidottur. Pralidoksimin işlevi farklıdır, atropinin yerine geçmez. Muskarinik bulguları atropin giderir, pralidoksim ise enzimi yeniden aktive eder.",
+      "D": "Aging oluştuktan sonra oksimle reaktivasyon kaybolur ve bu süreç tersine çevrilemez. Pralidoksim aging sonrası etkisizdir. Pralidoksim bu nedenle aging öncesinde erken verilir.",
+      "E": "Pralidoksim kuaterner amindir ve SSS'ye geçmez. Santral bulguları düzeltmez. Karbamat zehirlenmesinde ise rutin kullanımı önerilmez ve yalnız organofosfatta antidot sayılır."
+     },
+     "kanit": {
+      "sayfa": 40
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 40,
+   "metin": "Miyastenia gravis vakasında tanı ve ilk ilacı belirleyebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q58",
+     "kazanim": 40,
+     "zorluk": "zor",
+     "soru": "28 yaşındaki kadın hasta, akşam saatlerinde artan göz kapağı düşüklüğü, çift görme ve çiğneme güçlüğü ile başvuruyor. Bu hastada en olası tanı ve semptomatik tedavide temel seçenek aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Miyastenia gravis – piridostigmin",
+      "B": "Miyastenia gravis – atropin",
+      "C": "Organofosfat zehirlenmesi – pralidoksim",
+      "D": "Kolinerjik kriz – neostigmin",
+      "E": "Botulizm – edrofonyum"
+     },
+     "dogru": "A",
+     "aciklama": "Yorulmakla artan pitozis, diplopi ve çiğneme güçlüğü miyastenia gravisi gösterir. Semptomatik tedavide temel seçenek piridostigmindir. Doğru yanıt miyastenia gravis ve piridostigmindir.",
+     "sik_aciklamalari": {
+      "A": "Yorulmakla artan pitozis, diplopi ve çiğneme güçlüğü miyastenia gravisi gösterir. Semptomatik tedavide temel seçenek piridostigmindir. Doğru yanıt miyastenia gravis ve piridostigmindir.",
+      "B": "Tanı doğru olsa da atropin muskarinik antagonisttir ve nikotinik reseptör sorununu düzeltmez. Tedavide kolinesteraz inhibitörü gerekir. Miyastenide tedavi, enzim inhibitörü olan piridostigmin ile yapılır.",
+      "C": "Organofosfat zehirlenmesinde muskarinik ve nikotinik bulgular ile salgı artışı görülür. Akşam artan pitozis ve diplopi bu tabloya uymaz. Bu hastada fasikülasyon ve miyozis gibi bulgular tanımlanmamıştır.",
+      "D": "Kolinerjik kriz aşırı inhibitör dozuyla ilişkilidir. Kökte inhibitör kullanımı bildirilmemiştir ve tablo yorulmayla artan kas güçsüzlüğüdür. Doğru tanı kolinerjik kriz değil miyastenia gravistir.",
+      "E": "Botulizm asetilkolin salımının engellenmesiyle olur. Edrofonyum rutin tedavi değil, tarihsel tanı ilacıdır. Hastanın yakınmaları toksin öyküsü değil, yorulmayla artan kas güçsüzlüğünü gösterir."
+     },
+     "kanit": {
+      "sayfa": 41
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 41,
+   "metin": "Organofosfat zehirlenmesi vakasında tanı, mekanizma ve tedaviyi belirleyebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q51",
+     "kazanim": 41,
+     "zorluk": "zor",
+     "soru": "45 yaşındaki çiftçi, tarlada ilaçlama sonrası terleme, salivasyon, miyozis, bradikardi, fasikülasyon ve nefes darlığı ile acil servise getiriliyor. Personel güvenliği, dekontaminasyon ve hava yolu sağlandıktan sonra antidot tedavisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atropin ve erken pralidoksim",
+      "B": "Yalnız atropin",
+      "C": "Yalnız pralidoksim",
+      "D": "Neostigmin ve atropin",
+      "E": "Fizostigmin ve pralidoksim"
+     },
+     "dogru": "A",
+     "aciklama": "Tablo organofosfat zehirlenmesidir. Muskarinik bulgular için atropin titre edilir, nikotinik güçsüzlük için aging öncesinde erken pralidoksim verilir. Doğru yanıt atropin ve erken pralidoksimdir.",
+     "sik_aciklamalari": {
+      "A": "Tablo organofosfat zehirlenmesidir. Muskarinik bulgular için atropin titre edilir, nikotinik güçsüzlük için aging öncesinde erken pralidoksim verilir. Doğru yanıt atropin ve erken pralidoksimdir.",
+      "B": "Atropin muskarinik bulguları düzeltir ancak fasikülasyon ve solunum kası güçsüzlüğü gibi nikotinik bulguları düzeltmez. Enzimin yeniden aktivasyonu için pralidoksim de gerekir.",
+      "C": "Pralidoksim enzimi yeniden aktive eder ancak muskarinik bulguların hızlı kontrolü için atropin gereklidir. Tek başına yetersiz kalır. İki antidot birbirini tamamlar ve ikisi birlikte verilir.",
+      "D": "Neostigmin kolinesteraz inhibitörüdür ve zehirlenmeyi ağırlaştırır. Hastada zaten enzim inhibisyonu vardır, ilaç eklemek kolinerjik fazlalığı artırır. Kolinesterazı daha da inhibe eden ilaçlar bu tabloda kullanılmaz.",
+      "E": "Fizostigmin de kolinesteraz inhibitörüdür ve organofosfat tablosunu kötüleştirir. Pralidoksim yerinde olsa da fizostigmin tedavide yer almaz. İki ilacın birleşimi antidot sayılmaz."
+     },
+     "kanit": {
+      "sayfa": 37
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 42,
+   "metin": "Postoperatif üriner retansiyon vakasında farmakolojik yaklaşımları belirleyebilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q59",
+     "kazanim": 42,
+     "zorluk": "orta",
+     "soru": "Mekanik obstrüksiyonu olmayan postoperatif üriner retansiyonda indirekt yaklaşım olarak düşünülebilecek ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Betanekol",
+      "B": "Metakolin",
+      "C": "Neostigmin",
+      "D": "Vareniklin",
+      "E": "Atropin"
+     },
+     "dogru": "C",
+     "aciklama": "Neostigmin AChE inhibitörüdür ve indirekt yaklaşımla asetilkolini biriktirir. Mekanik obstrüksiyon yokken postoperatif üriner retansiyonda düşünülebilir. Bu nedenle doğru yanıt neostigmindir.",
+     "sik_aciklamalari": {
+      "A": "Betanekol muskarinik agonisttir ve direkt yaklaşımı temsil eder. Soru indirekt yaklaşımı sorar. Neostigmin ise AChE inhibitörüdür ve asetilkolini biriktirerek dolaylı etki yapar.",
+      "B": "Metakolin bronş provokasyon testinde kullanılır. Üriner retansiyonda yeri yoktur. Üriner retansiyonda ise betanekol gibi direkt ya da neostigmin gibi indirekt ajanlar düşünülür.",
+      "C": "Neostigmin AChE inhibitörüdür ve indirekt yaklaşımla asetilkolini biriktirir. Mekanik obstrüksiyon yokken postoperatif üriner retansiyonda düşünülebilir. Bu nedenle doğru yanıt neostigmindir.",
+      "D": "Vareniklin α4β2 kısmi agonistidir ve sigara bırakma ilacıdır. Mesane işlevi için kullanılmaz. Muskarinik agonistler ya da AChE inhibitörleri ise mesane boşalmasına yardımcı olur.",
+      "E": "Atropin muskarinik antagonisttir ve detrüsörü gevşeterek retansiyonu kötüleştirir. Bu nedenle üriner retansiyonda kolinerjik yaklaşımın tersi bir etki yapar. Önerilen yaklaşım betanekol ya da neostigmin gibi ajanlardır."
+     },
+     "kanit": {
+      "sayfa": 43
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 43,
+   "metin": "Kolinesteraz inhibitörlerinin yan etkilerini sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q60",
+     "kazanim": 43,
+     "zorluk": "orta",
+     "soru": "Kolinesteraz inhibitörlerinin nikotinik yan etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kas krampı ve fasikülasyon",
+      "B": "Baş dönmesi ve kabus",
+      "C": "Kilo kaybı",
+      "D": "Salivasyon ve bradikardi",
+      "E": "Terleme"
+     },
+     "dogru": "A",
+     "aciklama": "Kolinesteraz inhibitörlerinin nikotinik yan etkisi kas krampı ve fasikülasyondur. Aşırı dozda depolarizasyon bloğu gelişir ve kas güçsüzlüğüne yol açar. Doğru yanıt budur.",
+     "sik_aciklamalari": {
+      "A": "Kolinesteraz inhibitörlerinin nikotinik yan etkisi kas krampı ve fasikülasyondur. Aşırı dozda depolarizasyon bloğu gelişir ve kas güçsüzlüğüne yol açar. Doğru yanıt budur.",
+      "B": "Baş dönmesi ve kabus santral ajanların yan etkileridir. Nikotinik değil santral grup sayılır. Nikotinik grupta kas krampı, fasikülasyon ve aşırı dozda depolarizasyon bloğu bulunur.",
+      "C": "Kilo kaybı santral ajanların yan etkisidir. Nikotinik etkinin sonucu değildir. Santral grupta baş dönmesi ve kabus da bu ilaçlarla birlikte görülür.",
+      "D": "Salivasyon ve bradikardi muskarinik yan etkilerdir. Kolinomimetiklerle ortaktır. Nikotinik yan etki ise kas krampı ve fasikülasyondur, yani iskelet kasına ait bir bulgudur.",
+      "E": "Terleme muskarinik fazlalığın bulgusudur ve kolinomimetiklerle ortaktır. Antidotu atropin olan muskarinik toksisitenin tipik bir parçasıdır. Nikotinik yan etki sayılmaz, çünkü iskelet kasıyla ilgili değildir."
+     },
+     "kanit": {
+      "sayfa": 44
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 44,
+   "metin": "Kolinerjik farmakolojinin akış şemasında ilaç müdahale noktalarını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri-q61",
+     "kazanim": 44,
+     "zorluk": "orta",
+     "soru": "Kolinerjik akış şemasında atropinin müdahale ettiği basamak aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetilkolin sentezi",
+      "B": "Asetilkolin salımı",
+      "C": "Asetilkolinin yıkımı",
+      "D": "Muskarinik reseptörün bloke edilmesi",
+      "E": "Kolin geri alımı"
+     },
+     "dogru": "D",
+     "aciklama": "Atropin muskarinik reseptörü bloke eder. Bu nedenle organofosfat zehirlenmesindeki muskarinik bulguları azaltır ve bronş sekresyonlarını kontrol eder. Doğru yanıt reseptörün bloke edilmesidir.",
+     "sik_aciklamalari": {
+      "A": "Asetilkolin sentezi ChAT enzimiyle olur. Atropin sentezi değil, sentezlenip salınan asetilkolinin reseptördeki etkisini engeller. Bu nedenle sentez basamağı atropinin hedefi sayılmaz.",
+      "B": "Salım basamağını botulinum toksini engeller. Atropin salımı etkilemez; salınan asetilkolinin muskarinik reseptördeki etkisini engeller. Bu fark atropini toksinden ayırır ve reseptör düzeyinde etki ettiğini gösterir.",
+      "C": "Yıkım basamağında AChE rol alır ve inhibitörler bu basamağı etkiler. Atropin enzim inhibitörü değildir. Atropin muskarinik antagonisttir ve enzimi değil reseptörü etkiler, bu yüzden yıkımı değiştirmez.",
+      "D": "Atropin muskarinik reseptörü bloke eder. Bu nedenle organofosfat zehirlenmesindeki muskarinik bulguları azaltır ve bronş sekresyonlarını kontrol eder. Doğru yanıt reseptörün bloke edilmesidir.",
+      "E": "Kolin geri alımı CHT ile olur ve hemikolinyum bu basamağı bloke eder. Atropinin hedefi bu taşıyıcı değildir. Atropin muskarinik reseptörde etki eder."
+     },
+     "kanit": {
+      "sayfa": 45
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  }
+ ]
+}

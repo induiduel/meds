@@ -1,0 +1,484 @@
+{
+ "surum": 2,
+ "key": "k2-47",
+ "kod": "2f09",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Adrenoseptör Antagonist İlaçlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f09"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Ders girişi: adrenoseptör antagonist ilaçlar"
+    },
+    {
+     "metin": "Adrenerjik sistem, reseptör tipleri ve antagonist sınıflaması"
+    },
+    {
+     "metin": "Non-seçici alfa blokörler: fenoksibenzamin, fentolamin ve feokromositoma"
+    },
+    {
+     "metin": "Seçici α1 blokörler: prazosin, doksazosin, terazosin"
+    },
+    {
+     "metin": "BPH'da α1A seçici blokörler: tamsulosin ve alfuzosin"
+    },
+    {
+     "metin": "Alfa blokör yan etkileri ve kontrendikasyonları"
+    },
+    {
+     "metin": "Beta blokör sınıflaması ve temel farmakodinamik özellikler"
+    },
+    {
+     "metin": "Non-seçici beta blokörler: propranolol, nadolol, timolol, pindolol"
+    },
+    {
+     "metin": "Kardiyoselektif beta blokörler: metoprolol, bisoprolol, atenolol"
+    },
+    {
+     "metin": "Esmolol: ultrakısa etkili β1 blokör"
+    },
+    {
+     "metin": "Betaxolol: göz hastalıklarında beta blokaj"
+    },
+    {
+     "metin": "Tarihsel mola: Sir James Black ve propranolol"
+    },
+    {
+     "metin": "Kombine α+β blokörler: karvedilol ve labetalol"
+    },
+    {
+     "metin": "Beta blokör endikasyon özeti, yan etkileri ve kontrendikasyonları"
+    },
+    {
+     "metin": "Beta blokör ani kesme sendromu"
+    },
+    {
+     "metin": "Klinik açıdan önemli ilaç etkileşimleri"
+    },
+    {
+     "metin": "Karşılaştırmalı farmakokinetik tablo"
+    },
+    {
+     "metin": "Hipertansiyon ve kalp yetmezliğinde adrenoseptör antagonistleri"
+    },
+    {
+     "metin": "Aritmi tedavisinde beta blokörler (Sınıf II antiaritmikler)"
+    },
+    {
+     "metin": "Tirotoksikoz, migren, tremor ve anksiyetede beta blokörler"
+    },
+    {
+     "metin": "Portal hipertansiyon ve özefagus varisi profilaksisi"
+    },
+    {
+     "metin": "Türkiye'deki adrenoseptör antagonistleri, nebivolol ve sotalol"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders girişi: adrenoseptör antagonist ilaçlar.",
+    "Adrenerjik sistem, reseptör tipleri ve antagonist sınıflaması.",
+    "Non-seçici alfa blokörler: fenoksibenzamin, fentolamin ve feokromositoma.",
+    "Seçici α1 blokörler: prazosin, doksazosin, terazosin.",
+    "BPH'da α1A seçici blokörler: tamsulosin ve alfuzosin.",
+    "Alfa blokör yan etkileri ve kontrendikasyonları.",
+    "Beta blokör sınıflaması ve temel farmakodinamik özellikler.",
+    "Non-seçici beta blokörler: propranolol, nadolol, timolol, pindolol.",
+    "Kardiyoselektif beta blokörler: metoprolol, bisoprolol, atenolol.",
+    "Esmolol: ultrakısa etkili β1 blokör.",
+    "Betaxolol: göz hastalıklarında beta blokaj.",
+    "Tarihsel mola: Sir James Black ve propranolol.",
+    "Kombine α+β blokörler: karvedilol ve labetalol.",
+    "Beta blokör endikasyon özeti, yan etkileri ve kontrendikasyonları.",
+    "Beta blokör ani kesme sendromu.",
+    "Klinik açıdan önemli ilaç etkileşimleri.",
+    "Karşılaştırmalı farmakokinetik tablo.",
+    "Hipertansiyon ve kalp yetmezliğinde adrenoseptör antagonistleri.",
+    "Aritmi tedavisinde beta blokörler (Sınıf II antiaritmikler).",
+    "Tirotoksikoz, migren, tremor ve anksiyetede beta blokörler.",
+    "Portal hipertansiyon ve özefagus varisi profilaksisi.",
+    "Türkiye'deki adrenoseptör antagonistleri, nebivolol ve sotalol."
+   ],
+   "v": "aba8ee7d23"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Adrenerjik sistem, reseptör tipleri ve antagonist sınıflaması",
+     "metin": "Noradrenalin ve adrenalin adrenoseptörlere bağlanarak etki eder; adrenoseptör antagonistleri bu reseptörleri bloke ederek sempatik sistemi inhibe eder.",
+     "s": [
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "baslik": "Non-seçici alfa blokörler: fenoksibenzamin, fentolamin ve feokromositoma",
+     "metin": "Alfa blokörler α1 ve/veya α2 reseptörlerini bloke ederek sempatik tonüsü azaltır; hipertansiyon, BPH ve feokromositomada kullanılır.",
+     "s": [
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "baslik": "Seçici α1 blokörler: prazosin, doksazosin, terazosin",
+     "metin": "Seçici α1 blokörler α2'yi etkilemeden postsinaptik α1'i bloke eder; presinaptik geri besleme korunur, noradrenalin salınımı kontrolde kalır ve refleks taşikardi non-seçicilere göre azdır.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "BPH'da α1A seçici blokörler: tamsulosin ve alfuzosin",
+     "metin": "Tamsulosin (α1A seçici) prostat ve üretrada seçici etkilidir, kan basıncına etkisi minimaldir ve BPH'da birinci basamaktır.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Alfa blokörlerde en önemli yan etki ortostatik hipotansiyon ve kontrendikasyonlar",
+     "metin": "En önemli yan etki ortostatik hipotansiyondur; ayrıca refleks taşikardi (non-seçicilerde belirgin), ilk doz senkop riski, nazal konjesyon, baş dönmesi, yorgunluk ve retrograd ejakülasyon (tamsulosin) görülür.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Beta blokör sınıflaması ve temel farmakodinamik özellikler",
+     "metin": "Beta blokörler hipertansiyon, koroner arter hastalığı, kalp yetmezliği ve aritmi tedavisinde geniş endikasyon alanına sahiptir.",
+     "s": [
+      12,
+      13,
+      14
+     ]
+    },
+    {
+     "baslik": "Non-seçici beta blokörler: propranolol, nadolol, timolol, pindolol",
+     "metin": "Non-seçici beta blokörler β1 ve β2'yi bloke eder; bronkospazm, vazodilatasyon bozukluğu ve hipoglisemi maskelenmesi gibi yan etkileri açıklar.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Kardiyoselektif beta blokörler: metoprolol, bisoprolol, atenolol",
+     "metin": "Metoprolol en yaygın kullanılan kardiyoselektif beta blokördür; bronkospazm ve periferik vazokonstriksiyon yan etkileri daha azdır, ancak yüksek dozda seçicilik kaybolur.",
+     "s": [
+      16,
+      17
+     ]
+    },
+    {
+     "baslik": "Esmolol: ultrakısa etkili β1 blokör",
+     "metin": "Esmolol yalnızca intravenöz kullanılan, ultrakısa etkili (yarılanma ömrü ~9 dk) kardiyoselektif beta blokördür; eritrosit esterazlarıyla hızla hidrolize edilir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Betaxolol: göz hastalıklarında beta blokaj",
+     "metin": "Betaxolol hem sistemik hipertansiyonda hem kronik açık açılı glokomda kullanılan kardiyoselektif beta blokördür; topikal damla göz içi basıncını azaltıp glokom ilerlemesini yavaşlatır.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Tarihsel mola: Sir James Black ve propranolol",
+     "metin": "Sir James Black (1924-2010) 1960'larda propranololu sentezledi, anjina tedavisinde devrim yarattı ve 1988 Nobel Fizyoloji veya Tıp Ödülü'nü aldı; simetidini (H2 antagonist) de geliştirdi.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Kombine α+β blokörler: karvedilol ve labetalol",
+     "metin": "Karvedilol ve labetalol hem alfa hem beta adrenoseptörleri bloke eder; kalp yetmezliği ve hipertansif acillerde hemodinamik avantaj sağlar.",
+     "s": [
+      21,
+      22,
+      23
+     ]
+    },
+    {
+     "baslik": "Beta blokör endikasyon özeti, yan etkileri ve kontrendikasyonları",
+     "metin": "Görüntüdeki (s24) endikasyon özeti: kardiyovasküler (HT, anjina, MI sonrası koruma, azalmış EF'li KY, supraventriküler aritmi, AF hız kontrolü), nörolojik (migren profilaksisi, esansiyel tremor), endokrin (hipertiroidi semptom kontrolü, feokromositoma - alfa sonrası), göz (glokom: timolol, betaxolol topikal), diğer (portal hipertansiyon/özefagus varisi profilaksisi, anksiyete - propranolol).",
+     "s": [
+      24,
+      25,
+      26
+     ]
+    },
+    {
+     "baslik": "Beta blokör ani kesme sendromu",
+     "metin": "Uzun süre beta blokör kullanımında β reseptörleri up-regüle olur; ilaç aniden kesilince endojen katekolaminlere aşırı duyarlılık (rebound) gelişir.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Beta blokör ilaç etkileşimleri: verapamil, diltiazem ve AV blok",
+     "metin": "Verapamil veya diltiazem + beta blokör: AV blok ve bradikardi riski artar; dihidropiridinlerle (amlodipin) kombinasyon görece güvenlidir.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Beta blokörlerin karşılaştırmalı farmakokinetiği: propranolol, lipofilite ve hepatik atılım",
+     "metin": "Propranolol: β1+β2, lipofilite yüksek, hepatik atılım, T½ 4-6 saat, membran stabilizasyonu ve migren.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Hipertansiyon kılavuzlarında beta blokörler ve kalp yetmezliği",
+     "metin": "Modern HT kılavuzlarında (ESC/ESH 2018) beta blokörler tüm hastalarda birinci basamak olmaktan çıkmıştır; belirli endikasyonlarda güçlü önerilir.",
+     "s": [
+      30,
+      31,
+      32
+     ]
+    },
+    {
+     "baslik": "Aritmi tedavisinde beta blokörler (Sınıf II antiaritmikler)",
+     "metin": "Beta blokörler Vaughan Williams sınıflamasında Sınıf II antiaritmiktir; SA düğümde otomatisiteyi, AV düğümde iletimi yavaşlatır.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Tirotoksikoz, migren, tremor ve anksiyetede beta blokörler",
+     "metin": "Hipertiroidizmde taşikardi, tremor, terleme ve anksiyete β reseptör duyarlılığı artışına bağlıdır; beta blokörler tiroid hormon sentezini etkilemez, yalnızca semptomu kontrol eder.",
+     "s": [
+      34,
+      35
+     ]
+    },
+    {
+     "baslik": "Portal hipertansiyon ve özefagus varisi profilaksisi",
+     "metin": "Özefagus varisi primer ve sekonder kanama profilaksisinde propranolol veya karvedilol tercih edilir; hedef istirahat KH'ında %25 azalma veya KH ≤55/dk.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Türkiye'deki adrenoseptör antagonistleri, nebivolol ve sotalol",
+     "metin": "Kombine ve diğer: karvedilol (Dilatrend, Coreg), labetalol (Trandate tablet + ampul), nebivolol (Lobivon), sotalol (Sotacor).",
+     "s": [
+      37,
+      38,
+      39
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Adrenerjik sistem, reseptör tipleri ve antagonist sınıflaması: Noradrenalin ve adrenalin adrenoseptörlere bağlanarak etki eder; adrenoseptör antagonistleri bu reseptörleri bloke ederek sempatik sistemi inhibe eder.",
+    "Non-seçici alfa blokörler: fenoksibenzamin, fentolamin ve feokromositoma: Alfa blokörler α1 ve/veya α2 reseptörlerini bloke ederek sempatik tonüsü azaltır; hipertansiyon, BPH ve feokromositomada kullanılır.",
+    "Seçici α1 blokörler: prazosin, doksazosin, terazosin: Seçici α1 blokörler α2'yi etkilemeden postsinaptik α1'i bloke eder; presinaptik geri besleme korunur, noradrenalin salınımı kontrolde kalır ve refleks taşikardi non-seçicilere göre azdır.",
+    "BPH'da α1A seçici blokörler: tamsulosin ve alfuzosin: Tamsulosin (α1A seçici) prostat ve üretrada seçici etkilidir, kan basıncına etkisi minimaldir ve BPH'da birinci basamaktır.",
+    "Alfa blokörlerde en önemli yan etki ortostatik hipotansiyon ve kontrendikasyonlar: En önemli yan etki ortostatik hipotansiyondur; ayrıca refleks taşikardi (non-seçicilerde belirgin), ilk doz senkop riski, nazal konjesyon, baş dönmesi, yorgunluk ve retrograd ejakülasyon (tamsulosin) görülür.",
+    "Beta blokör sınıflaması ve temel farmakodinamik özellikler: Beta blokörler hipertansiyon, koroner arter hastalığı, kalp yetmezliği ve aritmi tedavisinde geniş endikasyon alanına sahiptir.",
+    "Non-seçici beta blokörler: propranolol, nadolol, timolol, pindolol: Non-seçici beta blokörler β1 ve β2'yi bloke eder; bronkospazm, vazodilatasyon bozukluğu ve hipoglisemi maskelenmesi gibi yan etkileri açıklar.",
+    "Kardiyoselektif beta blokörler: metoprolol, bisoprolol, atenolol: Metoprolol en yaygın kullanılan kardiyoselektif beta blokördür; bronkospazm ve periferik vazokonstriksiyon yan etkileri daha azdır, ancak yüksek dozda seçicilik kaybolur.",
+    "Esmolol: ultrakısa etkili β1 blokör: Esmolol yalnızca intravenöz kullanılan, ultrakısa etkili (yarılanma ömrü ~9 dk) kardiyoselektif beta blokördür; eritrosit esterazlarıyla hızla hidrolize edilir.",
+    "Betaxolol: göz hastalıklarında beta blokaj: Betaxolol hem sistemik hipertansiyonda hem kronik açık açılı glokomda kullanılan kardiyoselektif beta blokördür; topikal damla göz içi basıncını azaltıp glokom ilerlemesini yavaşlatır.",
+    "Tarihsel mola: Sir James Black ve propranolol: Sir James Black (1924-2010) 1960'larda propranololu sentezledi, anjina tedavisinde devrim yarattı ve 1988 Nobel Fizyoloji veya Tıp Ödülü'nü aldı; simetidini (H2 antagonist) de geliştirdi.",
+    "Kombine α+β blokörler: karvedilol ve labetalol: Karvedilol ve labetalol hem alfa hem beta adrenoseptörleri bloke eder; kalp yetmezliği ve hipertansif acillerde hemodinamik avantaj sağlar.",
+    "Beta blokör endikasyon özeti, yan etkileri ve kontrendikasyonları: Görüntüdeki (s24) endikasyon özeti: kardiyovasküler (HT, anjina, MI sonrası koruma, azalmış EF'li KY, supraventriküler aritmi, AF hız kontrolü), nörolojik (migren profilaksisi, esansiyel tremor), endokrin (hipertiroidi semptom kontrolü, feokromositoma - alfa sonrası), göz (glokom: timolol, betaxolol topikal), diğer (portal hipertansiyon/özefagus varisi profilaksisi, anksiyete - propranolol).",
+    "Beta blokör ani kesme sendromu: Uzun süre beta blokör kullanımında β reseptörleri up-regüle olur; ilaç aniden kesilince endojen katekolaminlere aşırı duyarlılık (rebound) gelişir.",
+    "Beta blokör ilaç etkileşimleri: verapamil, diltiazem ve AV blok: Verapamil veya diltiazem + beta blokör: AV blok ve bradikardi riski artar; dihidropiridinlerle (amlodipin) kombinasyon görece güvenlidir.",
+    "Beta blokörlerin karşılaştırmalı farmakokinetiği: propranolol, lipofilite ve hepatik atılım: Propranolol: β1+β2, lipofilite yüksek, hepatik atılım, T½ 4-6 saat, membran stabilizasyonu ve migren.",
+    "Hipertansiyon kılavuzlarında beta blokörler ve kalp yetmezliği: Modern HT kılavuzlarında (ESC/ESH 2018) beta blokörler tüm hastalarda birinci basamak olmaktan çıkmıştır; belirli endikasyonlarda güçlü önerilir.",
+    "Aritmi tedavisinde beta blokörler (Sınıf II antiaritmikler): Beta blokörler Vaughan Williams sınıflamasında Sınıf II antiaritmiktir; SA düğümde otomatisiteyi, AV düğümde iletimi yavaşlatır.",
+    "Tirotoksikoz, migren, tremor ve anksiyetede beta blokörler: Hipertiroidizmde taşikardi, tremor, terleme ve anksiyete β reseptör duyarlılığı artışına bağlıdır; beta blokörler tiroid hormon sentezini etkilemez, yalnızca semptomu kontrol eder.",
+    "Portal hipertansiyon ve özefagus varisi profilaksisi: Özefagus varisi primer ve sekonder kanama profilaksisinde propranolol veya karvedilol tercih edilir; hedef istirahat KH'ında %25 azalma veya KH ≤55/dk.",
+    "Türkiye'deki adrenoseptör antagonistleri, nebivolol ve sotalol: Kombine ve diğer: karvedilol (Dilatrend, Coreg), labetalol (Trandate tablet + ampul), nebivolol (Lobivon), sotalol (Sotacor)."
+   ],
+   "v": "1f11c036e6"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu derste çıkmış beş soru, seçici alfa blokörlerin mekanizmasını, beta blokörlerin farmakokinetiğini ve yan etkilerini, adrenoseptör antagonistlerinin tedavi alanlarını ve beta blokör sınıfındaki ilaçların tanınmasını ölçer.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Anjina pektoris, hipertansiyon ve aritmi tedavisinde aşağıdakilerden hangisi kullanılamaz?",
+     "cevap": "Metamizol",
+     "s": [
+      15
+     ],
+     "aciklama": [
+      "Bu soru, anjina, hipertansiyon ve aritmi tedavisinde kullanılabilen ilaçlar arasında beta blokör olmayanı bulmayı ölçer.",
+      "Timolol, betaksolol, nebivolol ve nadolol beta blokördür; nadolol uzun etkili ve hidrofiliktir, nebivolol hipertansiyonda, betaksolol hipertansiyon ve glokomda, timolol ise topikal olarak glokomda kullanılır.",
+      "Metamizol ise beta blokör sınıfında değildir; bu nedenle anjina, hipertansiyon ve aritmi tedavisinde kullanılamaz ve doğru yanıt odur.",
+      "En güçlü çeldirici timololdür, çünkü yalnız göz damlası olarak bilindiği için sistemik bir beta blokör olmadığı sanılabilir."
+     ],
+     "ornek": "Aynı bilgi, aşağıdaki ilaçlardan hangisinin beta blokör olmadığı sorusuyla da sorulabilir ve yanıt yine metamizoldür.",
+     "tuzak": "Timololü yalnız göz damlası sanıp beta blokör sınıfından saymamak; oysa timolol da bir beta blokördür."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Hangi adrenoseptör antagonistinin etki mekanizması yanlış verilmiştir?",
+     "cevap": "Doksazosin — Alfa-2 ve beta-2 blokaj",
+     "s": [
+      9
+     ],
+     "aciklama": [
+      "Bu soru, hangi adrenoseptör antagonistinin etki mekanizmasının yanlış verildiğini sorarak seçici ve non-seçici alfa blokörleri ayırt edip edemediğinizi ölçer.",
+      "Doksazosin, prazosin ve terazosin gibi seçici alfa bir blokörler yalnızca postsinaptik alfa bir reseptörünü bloke eder; alfa iki reseptörlerini etkilemezler ve beta reseptörlerine etkileri yoktur.",
+      "Bu nedenle doksazosin için alfa iki ve beta iki blokajı yazılması yanlıştır ve doğru yanıt odur.",
+      "En güçlü çeldiriciler fenoksibenzamin ve fentolamindir; ikisi de alfa bir ve alfa iki reseptörlerini bloke eder, farkları geri dönüşümsüz ve geri dönüşümlü bağlanmadır."
+     ],
+     "ornek": "Aynı bilgi, prazosinin beta reseptörlerini de bloke edip etmediği sorusuyla sorulabilir; yanıt etmez, çünkü prazosin seçici bir alfa bir blokördür.",
+     "tuzak": "Seçici bir ilaca alfa iki blokajı yüklemek; alfa iki blokajı yalnızca non-seçici ajanlara aittir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Beta reseptör antagonistleri için aşağıdakilerden hangisi doğru değildir?",
+     "cevap": "Beta reseptör antagonistlerinden propranolol ve penbutolol yetersiz lipofiliteleri nedeniyle kan-beyin bariyerini aşamazlar.",
+     "s": [
+      15
+     ],
+     "aciklama": [
+      "Bu soru, beta blokörlerin farmakokinetik özelliklerinden hangisinin yanlış olduğunu sorar ve lipofiliteyle merkezi sinir sistemine geçişi ölçer.",
+      "Propranolol lipofildir ve merkezi sinir sistemine geçişi belirgindir; bu nedenle uyku bozukluğu ve kabus yapar.",
+      "Bu yüzden propranolol ve penbutololün yetersiz lipofilitesi nedeniyle kan-beyin bariyerini aşamadığını söyleyen ifade yanlıştır ve doğru yanıt odur.",
+      "Güçlü çeldirici nadolol ifadesidir; nadolol hidrofiliktir, böbrekle atılır ve uzun etkilidir, yani lipofil ajanlarla karşıt özellik gösterir."
+     ],
+     "ornek": "Aynı bilgi, kabus ve uyku bozukluğunun lipofil ajanlarda mı hidrofilik ajanlarda mı daha sık görüldüğü sorusuyla da sorulabilir; yanıt lipofil ajanlardır.",
+     "tuzak": "Propranololün merkezi etkisinin olmadığını düşünmek; oysa lipofil olduğu için merkezi sinir sistemine girer."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Beta reseptör antagonisti ilaçların advers etkilerinden hangisini klinik olarak görmek mümkün olmaz?",
+     "cevap": "Ağır sedasyon",
+     "s": [
+      25
+     ],
+     "aciklama": [
+      "Bu soru, beta blokörlerin klinik olarak görülmesi beklenmeyen yan etkisini sorar ve yan etki profilini bilmeyi ölçer.",
+      "Beta blokörler bradikardi, atriyoventriküler blok, akut kalp yetmezliği dekompanzasyonu ve vazokonstriksiyona bağlı soğuk ekstremiteler yapar; lipofil ajanlar ayrıca uyku bozukluğu, kabus, depresyon ve yorgunluğa yol açar.",
+      "Ağır sedasyon bu yan etki listesinde yer almadığı için görülmesi beklenmeyen yan etki odur ve doğru yanıttır.",
+      "En güçlü çeldirici depresyondur; depresyon lipofil ajanların bilinen merkezi yan etkisidir ve bu nedenle yanıt olamaz."
+     ],
+     "ornek": "Aynı bilgi, lipofil bir beta blokör kullanan hastada hangi yakınmanın beklendiği sorusuyla da sorulabilir; yanıt uyku bozukluğu ve kabustur.",
+     "tuzak": "Canlı rüya ve kabusu beta blokörle ilişkilendirmemek; bunlar lipofil ajanlara bağlı bilinen yan etkilerdir."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu derste çıkmış beş soru, seçici alfa blokörlerin mekanizmasını, beta blokörlerin farmakokinetiğini ve yan etkilerini, adrenoseptör antagonistlerinin tedavi alanlarını ve beta blokör sınıfındaki ilaçların tanınmasını ölçer.",
+    "2020-2021: Anjina pektoris, hipertansiyon ve aritmi tedavisinde aşağıdakilerden hangisi kullanılamaz?",
+    "Cevap: Metamizol.",
+    "Bu soru, anjina, hipertansiyon ve aritmi tedavisinde kullanılabilen ilaçlar arasında beta blokör olmayanı bulmayı ölçer.",
+    "Timolol, betaksolol, nebivolol ve nadolol beta blokördür; nadolol uzun etkili ve hidrofiliktir, nebivolol hipertansiyonda, betaksolol hipertansiyon ve glokomda, timolol ise topikal olarak glokomda kullanılır.",
+    "Metamizol ise beta blokör sınıfında değildir; bu nedenle anjina, hipertansiyon ve aritmi tedavisinde kullanılamaz ve doğru yanıt odur.",
+    "En güçlü çeldirici timololdür, çünkü yalnız göz damlası olarak bilindiği için sistemik bir beta blokör olmadığı sanılabilir.",
+    "Örnek: Aynı bilgi, aşağıdaki ilaçlardan hangisinin beta blokör olmadığı sorusuyla da sorulabilir ve yanıt yine metamizoldür.",
+    "Tuzak: Timololü yalnız göz damlası sanıp beta blokör sınıfından saymamak; oysa timolol da bir beta blokördür.",
+    "2020-2021: Hangi adrenoseptör antagonistinin etki mekanizması yanlış verilmiştir?",
+    "Cevap: Doksazosin — Alfa-2 ve beta-2 blokaj.",
+    "Bu soru, hangi adrenoseptör antagonistinin etki mekanizmasının yanlış verildiğini sorarak seçici ve non-seçici alfa blokörleri ayırt edip edemediğinizi ölçer.",
+    "Doksazosin, prazosin ve terazosin gibi seçici alfa bir blokörler yalnızca postsinaptik alfa bir reseptörünü bloke eder; alfa iki reseptörlerini etkilemezler ve beta reseptörlerine etkileri yoktur.",
+    "Bu nedenle doksazosin için alfa iki ve beta iki blokajı yazılması yanlıştır ve doğru yanıt odur.",
+    "En güçlü çeldiriciler fenoksibenzamin ve fentolamindir; ikisi de alfa bir ve alfa iki reseptörlerini bloke eder, farkları geri dönüşümsüz ve geri dönüşümlü bağlanmadır.",
+    "Örnek: Aynı bilgi, prazosinin beta reseptörlerini de bloke edip etmediği sorusuyla sorulabilir; yanıt etmez, çünkü prazosin seçici bir alfa bir blokördür.",
+    "Tuzak: Seçici bir ilaca alfa iki blokajı yüklemek; alfa iki blokajı yalnızca non-seçici ajanlara aittir.",
+    "2020-2021: Beta reseptör antagonistleri için aşağıdakilerden hangisi doğru değildir?",
+    "Cevap: Beta reseptör antagonistlerinden propranolol ve penbutolol yetersiz lipofiliteleri nedeniyle kan-beyin bariyerini aşamazlar.",
+    "Bu soru, beta blokörlerin farmakokinetik özelliklerinden hangisinin yanlış olduğunu sorar ve lipofiliteyle merkezi sinir sistemine geçişi ölçer.",
+    "Propranolol lipofildir ve merkezi sinir sistemine geçişi belirgindir; bu nedenle uyku bozukluğu ve kabus yapar.",
+    "Bu yüzden propranolol ve penbutololün yetersiz lipofilitesi nedeniyle kan-beyin bariyerini aşamadığını söyleyen ifade yanlıştır ve doğru yanıt odur.",
+    "Güçlü çeldirici nadolol ifadesidir; nadolol hidrofiliktir, böbrekle atılır ve uzun etkilidir, yani lipofil ajanlarla karşıt özellik gösterir.",
+    "Örnek: Aynı bilgi, kabus ve uyku bozukluğunun lipofil ajanlarda mı hidrofilik ajanlarda mı daha sık görüldüğü sorusuyla da sorulabilir; yanıt lipofil ajanlardır.",
+    "Tuzak: Propranololün merkezi etkisinin olmadığını düşünmek; oysa lipofil olduğu için merkezi sinir sistemine girer.",
+    "2020-2021: Beta reseptör antagonisti ilaçların advers etkilerinden hangisini klinik olarak görmek mümkün olmaz?",
+    "Cevap: Ağır sedasyon.",
+    "Bu soru, beta blokörlerin klinik olarak görülmesi beklenmeyen yan etkisini sorar ve yan etki profilini bilmeyi ölçer.",
+    "Beta blokörler bradikardi, atriyoventriküler blok, akut kalp yetmezliği dekompanzasyonu ve vazokonstriksiyona bağlı soğuk ekstremiteler yapar; lipofil ajanlar ayrıca uyku bozukluğu, kabus, depresyon ve yorgunluğa yol açar.",
+    "Ağır sedasyon bu yan etki listesinde yer almadığı için görülmesi beklenmeyen yan etki odur ve doğru yanıttır.",
+    "En güçlü çeldirici depresyondur; depresyon lipofil ajanların bilinen merkezi yan etkisidir ve bu nedenle yanıt olamaz.",
+    "Örnek: Aynı bilgi, lipofil bir beta blokör kullanan hastada hangi yakınmanın beklendiği sorusuyla da sorulabilir; yanıt uyku bozukluğu ve kabustur.",
+    "Tuzak: Canlı rüya ve kabusu beta blokörle ilişkilendirmemek; bunlar lipofil ajanlara bağlı bilinen yan etkilerdir."
+   ],
+   "v": "bb5e402e69"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 4 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 4 çıkmış soru var; 0 tanesi öncüllü, 2 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 9, 15, 25."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 4 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 4 çıkmış soru var; 0 tanesi öncüllü, 2 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 9, 15, 25."
+   ],
+   "v": "59e5ba8b80"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Non-seçici beta blokörler: propranolol, nadolol, timolol, pindolol",
+     "metin": "Sık yapılan hata: Timololü yalnız göz damlası sanıp beta blokör sınıfından saymamak; oysa timolol da bir beta blokördür. Ayrıca: Propranololün merkezi etkisinin olmadığını düşünmek; oysa lipofil olduğu için merkezi sinir sistemine girer."
+    },
+    {
+     "baslik": "Seçici α1 blokörler: prazosin, doksazosin, terazosin",
+     "metin": "Sık yapılan hata: Seçici bir ilaca alfa iki blokajı yüklemek; alfa iki blokajı yalnızca non-seçici ajanlara aittir."
+    },
+    {
+     "baslik": "Beta blokör endikasyon özeti, yan etkileri ve kontrendikasyonları",
+     "metin": "Sık yapılan hata: Canlı rüya ve kabusu beta blokörle ilişkilendirmemek; bunlar lipofil ajanlara bağlı bilinen yan etkilerdir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Non-seçici beta blokörler: propranolol, nadolol, timolol, pindolol: Sık yapılan hata: Timololü yalnız göz damlası sanıp beta blokör sınıfından saymamak; oysa timolol da bir beta blokördür. Ayrıca: Propranololün merkezi etkisinin olmadığını düşünmek; oysa lipofil olduğu için merkezi sinir sistemine girer.",
+    "Seçici α1 blokörler: prazosin, doksazosin, terazosin: Sık yapılan hata: Seçici bir ilaca alfa iki blokajı yüklemek; alfa iki blokajı yalnızca non-seçici ajanlara aittir.",
+    "Beta blokör endikasyon özeti, yan etkileri ve kontrendikasyonları: Sık yapılan hata: Canlı rüya ve kabusu beta blokörle ilişkilendirmemek; bunlar lipofil ajanlara bağlı bilinen yan etkilerdir.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "48ba173cd8"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

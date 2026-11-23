@@ -290,3 +290,24 @@
 - **Kök neden:** (1) Kapılar biçim/kaynak eşleşmesi denetler, kavram doğruluğunu (pasif/aktif ayrımı) denetlemez; öğrenci notu eşleme anahtarı ("aktif intihar") yazara sızdı. (2) `terim_sozlugu.py otomatik` terimi slayttaki anlamı karşılaştırmadan genel sözlükten alır. (3) `paket_kur.py` KATEGORI sözlüğü `tedavi` türünü `drug` (İlaç) kategorisine çevirir; `paketten_ek.py` bilgi paketi maddelerine "Atom: id" ve "Çıkmış (…)" iç etiketlerini ekrana kopyalar.
 - **Çözüm:** cümleler "ölüm isteği" olarak düzeltildi, terimler elle çıkarıldı, kategori `treatment` yapıldı, iç etiketler temizlendi; değişen anlatım için ses/zaman döngüsü yenilendi. Her ders 3–4 tur bağımsız denetçiyle GEÇER oldu.
 - **Kural:** Kapı 0 HATA tıbbi doğruluk kanıtı değildir; her derste bağımsız denetçi GEÇER şartı kalkmaz, düzeltmeden sonra yeniden denetlenir. Yeni derste `terim_sozlugu` çıktısı slayt bağlamına göre elle taranır; `paket_kur.py` `tedavi → drug` eşlemesi ve `paketten_ek.py` iç etiket kopyası kod düzeltmesi bekliyor (açık iş).
+
+### H649 — Öğrenci önem kapısı "takılıyor": vektör servisi sağlıklı görünürken yanıt vermiyordu, sonra yalnız yavaştı (2026-11-23)
+
+- **Belirti:** `ogrenci_onem/kapi.py` 100 sn–15 dk içinde bitmedi; alt ajanlar kapıyı "çalıştırılamadı" diye atladı, ana oturum zaman aşımıyla iki kez kesti.
+- **Kök neden:** (1) `meds-embed-bge` (:8094) `/health` "ok" dönerken `/embed` istekleri asılı kalıyordu (BrokenPipe birikimi). (2) Yeniden başlatınca çalıştı ama `CPUQuota=200%` ile tek metin ~4,6 sn; kapı yüzlerce metni vektörlediği için ders başına ~4 dk sürüyor — zaman aşımı kısa seçilmişti.
+- **Çözüm:** `systemctl --user restart meds-embed-bge`; kapı süre sınırı olmadan arka planda koşuldu (5 derste 0 HATA'ya indirildi).
+- **Kural:** Kapı bitmiyorsa önce `curl -X POST :8094/embed` ile gerçek istek dene (sağlık ucu yetmez). Öğrenci önem kapısına <10 dk zaman aşımı koyma; alt ajan "servis yok" diyorsa kapıyı ana oturum koşar.
+
+### H650 — Branş birleştiricileri: tam birleştirme başka dersleri yeniden yazıyor; ara soru birleştirmesinde onay listesi yok (2026-11-23)
+
+- **Belirti:** `spot_cozucu/birlestir.py k2farmakoloji` (kodsuz) 8 başka dersin çözücü dosyasını değiştirdi. `hoca_ara_soru/kur.py birlestir 2` denetlenmemiş ara soru setlerini (2a53, 2a54, 2a56) dizine aldı.
+- **Kök neden:** Spot birleştirici kodsuz çağrıda bütün branşı yeniden üretir (H623 `--kod` seçeneği var ama varsayılan değil). Ara soru birleştiricisi çalışma alanındaki geçerli her `cozucu/<kod>.json`'u alır; spot hattaki `onayli.json` karşılığı yoktur.
+- **Çözüm:** Değişen dosyalar `git checkout` ile geri alındı, yalnız `--kod <kod>` ile birleştirildi. Ara sorularda commit yalnız bütün setler denetçiden GEÇER aldıktan sonra yapıldı.
+- **Kural:** Spot birleştirici HER ZAMAN `--kod`. Ara soru birleştirmesi sonrası `git status src/data/k<N>hocaara_cozucu/` ile yalnız onaylı kodların girdiği doğrulanır; denetlenmemiş set varken commit yapılmaz. Açık iş: `kur.py birlestir`'e onay listesi.
+
+### H651 — Alt ajan çözücü kodunu defterden almadı, uydurdu (k2-56: 2s56 ≠ defter 2s19) (2026-11-23)
+
+- **Belirti:** `betik_tamamla.py k2-56` "defter kodu 2s19 → sesli çözücü YOK"; çözücü 2s56 koduyla yayına alınıp seslendirilmişti.
+- **Kök neden:** E2b brifi kodu vermedi; yazar dersin numarasından kod türetti. Diğer 7 derste yazar `src/data/dersler/k2.json`'dan doğru kodu aldı.
+- **Çözüm:** Çalışma alanı, ders klasörü, `onayli.json`, `numara.json`, `src/data` dosyaları ve dizin kayıtları 2s19'a taşındı, eski ses silindi, yeniden birleştirilip seslendirildi.
+- **Kural:** Brif çözücü/önem kodunu AÇIKÇA verir (defterden). Çözücü yayınından önce `betik_tamamla.py <ders>` `cozucu_bag` satırı ✓ olmalı.

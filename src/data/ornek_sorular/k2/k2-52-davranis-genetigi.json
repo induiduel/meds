@@ -1,0 +1,1548 @@
+{
+ "id": "k2-52-davranis-genetigi",
+ "kurul": 2,
+ "ders": "Tıbbi Genetik",
+ "konu": "Davranış Genetiği",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Davranış genetiğinin tanımını, tarihçesini ve ikizleri ilk kullanan bilim insanını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Genetik araştırmalarda ikizleri ilk kullanan bilim insanı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Thomas Bouchard",
+      "B": "Alois Alzheimer",
+      "C": "Francis Galton",
+      "D": "Turkheimer",
+      "E": "Chabris"
+     },
+     "dogru": "C",
+     "aciklama": "Francis Galton, genetik araştırmalarda ikizleri ilk kullanan kişidir ve bugünkü istatistiksel analiz yöntemlerinin çoğuna öncülük etmiştir.",
+     "sik_aciklamalari": {
+      "A": "Thomas Bouchard Minnesota'da ayrı büyüyen identik ikizleri inceleyen araştırmacıdır. Genetik araştırmalarda ikizleri ilk kullanan kişi olmadığı için bu seçenek yanlıştır.",
+      "B": "Alois Alzheimer 1906'da Alzheimer hastalığını tanımlayan Alman hekimdir ve adı hastalığa verilmiştir. İkiz çalışmalarıyla ilişkisi olmadığı için bu seçenek yanlıştır.",
+      "C": "Sir Francis Galton davranış ve genetik arasındaki ilişkinin dayandığı çalışmaları yapmış, genetik araştırmalarda ikizleri ilk kullanan kişi olmuştur. Bu yüzden doğru cevaptır.",
+      "D": "Turkheimer 2000'de davranış genetiğinin üç yasasını tanımlamış araştırmacıdır. Genetik araştırmalarda ikizleri ilk kullanan kişi olmadığı için bu seçenek yanlıştır ve cevap olamaz.",
+      "E": "Chabris ve arkadaşları 2015'te davranış genetiğinin dördüncü yasasını önermiştir. İkizleri ilk kullanan bilim insanı olmadığı için bu seçenek yanlıştır ve cevap olamaz."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Davranış genetiğinin dört yasasını ve araştırma odağını sayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q02",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Turkheimer'in tanımladığı davranış genetiği yasalarından biri aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aile ortamının etkisi genlerden fazladır",
+      "B": "Tüm insan davranış özellikleri kalıtsaldır",
+      "C": "Davranış yalnızca çevreyle belirlenir",
+      "D": "Her davranışı tek bir gen belirler",
+      "E": "Kalıtım yalnızca ruhsal hastalıklarda etkilidir"
+     },
+     "dogru": "B",
+     "aciklama": "Birinci yasa tüm insan davranış özelliklerinin bir dereceye kadar genetik çeşitlilikten etkilendiğini söyler; ikinci yasa ise aile ortamının etkisini genlerden az bulur.",
+     "sik_aciklamalari": {
+      "A": "Aynı ailede büyümenin etkisi genlerin etkisinden daha azdır; bu ikinci yasanın içeriğidir. Seçenek aile ortamının etkisini genlerden fazla göstererek yasayı tersine çevirdiği için bu soruda yanlıştır.",
+      "B": "Birinci yasa, tüm insan davranış özelliklerinin bir dereceye kadar genetik çeşitlilikten etkilendiğini, yani kalıtsal olduğunu bildirir. Davranış genetiğinin temel dayanağı budur ve bu nedenle doğru cevaptır.",
+      "C": "Davranış yalnızca çevreyle belirleniyor olsaydı genetik katkıdan söz edilemezdi. Yasalar, çevrenin yanında genetik çeşitliliğin de her davranış özelliğine bir dereceye kadar katkı yaptığını gösterir.",
+      "D": "Dördüncü yasaya göre tipik bir davranış özelliği, her biri çok küçük pay taşıyan çok sayıda genetik değişkenle ilişkilidir. Tek bir gen davranışı belirlemez, bu yüzden bu ifade yanlıştır.",
+      "E": "Birinci yasa yalnızca ruhsal hastalıkları değil tüm insan davranış özelliklerini kapsar. Kalıtımı tek bir alana bağlamak yasanın kapsamını daraltır, bu nedenle seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "MZ ve DZ ikizlerin karşılaştırılmasının ve ayrı büyüyen ikiz çalışmalarının genetik katkıyı nasıl gösterdiğini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q03",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aynı anda döllenen iki ovumdan gelişen ikizler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Monozigotik ikizler",
+      "B": "Çevresel etkiyle benzeşen ikizler",
+      "C": "Aynı hastalığı paylaşan ikizler",
+      "D": "Dizigotik ikizler",
+      "E": "Minnesota çalışmasındaki ikizler"
+     },
+     "dogru": "D",
+     "aciklama": "Dizigotik ikizler aynı anda döllenen iki ovumdan gelişir ve MZ ikizlerin yarısı kadar birbirine benzer; MZ ikizler tek ovumdan gelir.",
+     "sik_aciklamalari": {
+      "D": "Dizigotik ikizler aynı anda döllenen iki ayrı ovumdan gelişir. Genetik olarak MZ ikizlerin yarısı kadar benzerdirler, bu yüzden tanıma uyan doğru cevaptır.",
+      "A": "Monozigotik ikizler tek bir fertilize ovumdan geldikleri için genetik olarak birbirinin aynıdır. İki ovumdan gelişen ikizler bu gruba girmediği için seçenek yanlıştır.",
+      "B": "Çevresel etkiyle benzeşen ikizler, genetik yapıya göre ayrılan bir ikiz tipi değildir. Davranış çevreden kaynaklanıyorsa DZ ikizlerin de MZ kadar benzer olması beklenir; bu ifade ikiz tipini tanımlamadığı için seçenek yanlıştır.",
+      "C": "Aynı hastalığı paylaşma, ikizlerin davranışsal benzerliğini anlatan bir sonuçtur ve ikiz tipini belirlemez. Aynı anda döllenen iki ovumdan gelişme ise dizigotik ikizleri tanımlar, bu yüzden seçenek yanlıştır.",
+      "E": "Minnesota çalışmasında erken evrede ayrı tutulup farklı evlerde yetiştirilen identik ikizler incelenmiştir. Bu ikizler tek ovumdan geldiği için iki ovumdan gelişen ikizleri tanımlamaz ve seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 6
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Erken yaşta ayrı tutulup farklı evlerde yetiştirilen identik ikizleri inceleyen çalışmanın sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aynı psikiyatrik hastalıklara eğilim paylaşılmıştır",
+      "B": "Davranışsal hiçbir benzerlik görülmemiştir",
+      "C": "Yalnızca fiziksel benzerlik saptanmıştır",
+      "D": "Çevre etkisi genetik etkiden baskın bulunmuştur",
+      "E": "Davranışı belirleyen tek gen tanımlanmıştır"
+     },
+     "dogru": "A",
+     "aciklama": "Bouchard ve arkadaşlarının Minnesota çalışmasında çevresel farklılıklara rağmen ikizlerin aynı psikiyatrik hastalıklara eğilimi ve aynı kişisel özellikleri paylaştığı görüldü.",
+     "sik_aciklamalari": {
+      "A": "Bouchard ve arkadaşları, çevresel farklılıklara rağmen ayrı büyüyen identik ikizlerin aynı psikiyatrik hastalıklara eğilim gösterdiğini ve aynı kişisel özellikleri paylaştığını buldu. Bu nedenle doğru cevaptır.",
+      "B": "Ayrı evlerde büyümelerine rağmen ikizler aynı psikiyatrik hastalıklara eğilim gösterdi ve çevreyle ilişki kurmada aynı özellikleri paylaştı. Benzerlik olmadığını söyleyen seçenek çalışmanın bulgusuyla çeliştiği için yanlıştır.",
+      "C": "Çalışma yalnız fiziksel benzerliği değil, çevreyle ilişki kurma biçimi ve hastalık eğilimi gibi davranışsal özellikleri de benzer buldu. Bu seçenek sonucu eksik aktarır.",
+      "D": "Çevre farklı olduğu halde benzerliğin sürmesi genetik katkıyı destekler. Çevre etkisinin genetik etkiden baskın olduğunu söylemek çalışmanın sonucuna ters düştüğü için yanlıştır.",
+      "E": "Bu çalışmalar davranışın genetik geçişli olduğunu destekler ancak hangi genlerin önemli olduğunu açıklamaz. Tek bir davranış geninin tanımlandığını söylemek sonucu abarttığı için yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Dopamin, D4DR geni ve monoamin yapılarının davranışla ilişkisini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi beyindeki dopamin azalmasıyla ilişkili değildir?",
+     "secenekler": {
+      "A": "Donuk ve kararsız kişilik",
+      "B": "Hareketlenmekten aciz kişilik",
+      "C": "Kaşif ruhlu ve maceracı kişilik",
+      "D": "Parkinson hastalığı",
+      "E": "Hafıza kaybı ve düşük enerji"
+     },
+     "dogru": "C",
+     "aciklama": "Kaşif ruhlu ve maceracı kişilik dopamin artışıyla ilişkilidir; dopamin azalması donuk ve kararsız kişilik, Parkinson hastalığı, hafıza kaybı ve düşük enerjiyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Donuk ve kararsız kişilik, derste beyindeki dopamin azalması başlığı altında sayılan bir özelliktir. Dopamin azalmasıyla ilişkili olduğu için olumsuz kökün aradığı seçenek olamaz ve bu seçenek yanlıştır.",
+      "B": "Hareketlenmekten aciz kişilik de derste beyindeki dopamin azalması başlığı altında sayılır. Dopamin azalmasıyla ilişkili olduğundan olumsuz kökün aradığı seçenek olamaz ve bu seçenek yanlıştır.",
+      "C": "Kaşif ruhlu ve maceracı kişilik beyindeki dopamin artışıyla ilişkilendirilir. Dopamin azalmasında ise bu özellik beklenmediği için seçenek olumsuz kökün doğru cevabıdır.",
+      "D": "Parkinson hastalığı beyindeki dopamin azalmasıyla ilişkilendirilen nörolojik bir hastalıktır ve hareketlenmekten aciz kişilik tablosuyla birlikte anılır. Dopamin azalmasının sonucu olduğundan olumsuz kökte cevap olamaz.",
+      "E": "Dopamin azalmasında konsantrasyon sorunları, hafıza kaybı, düşük enerji, yorgunluk ve uykusuzluk görülür. Bu seçenek azalmanın tipik bulgusunu verdiğinden, olumsuz kökün aradığı ifade olamaz."
+     },
+     "kanit": {
+      "sayfa": 9
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Türe özgü davranışı ve insan davranışında içgüdüsel ile öğrenilmiş ayrımını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q06",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Türe özgü davranış nasıl ortaya çıkar?",
+     "secenekler": {
+      "A": "Yalnızca öğrenme yoluyla",
+      "B": "Çevreden bağımsız olarak",
+      "C": "Yalnızca kültürel aktarımla",
+      "D": "Rastlantısal biçimde",
+      "E": "Kalıtımsal temelin çevreyle etkileşimiyle"
+     },
+     "dogru": "E",
+     "aciklama": "Türe özgü davranış içgüdüseldir ve kalıtımsal temeli vardır; ancak temel çevreyle etkileşim olmadan ifade edilemez.",
+     "sik_aciklamalari": {
+      "E": "Türe özgü davranışın kalıtımsal bir temeli vardır ancak bu temel çevreyle etkileşim olmadan kendini ifade edemez. Davranış hem türden gelen miras hem çevresel koşulların sonucu olduğundan doğru cevaptır.",
+      "A": "Öğrenme, çevre ve kültüre dayanan davranışların kaynağıdır ve içgüdüsel davranışlardan ayrılır. Türe özgü davranış içgüdüsel olduğundan yalnızca öğrenmeyle kazanıldığı ifadesi yanlıştır.",
+      "B": "Kalıtımsal temel çevreyle etkileşimde bulunmadan kendini ifade edemez ve davranış ortaya çıkmak için uygun koşullara gereksinim duyar. Çevreden bağımsız ortaya çıktığını söylemek bu bilgiye aykırı olduğundan seçenek yanlıştır.",
+      "C": "Kültürel aktarım öğrenilmiş davranışların kaynağıdır. Türe özgü davranış ise içgüdüsel olduğu ve türün tüm normal üyelerinde görüldüğü için seçenek yanlıştır.",
+      "D": "Türe özgü davranış, türün normal üyelerinin tümünün uygun ve ortak koşullarda gösterdiği düzenli bir davranış örüntüsüdür. Rastlantısal ortaya çıktığı ifadesi bu tanıma aykırı olduğu için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Davranış genetiğinde kalıtımı inceleme yöntemlerini ve tek yumurta ikizlerinin kullanım nedenini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q07",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "I. Kalıtımı incelemek için pedigri analizi ve bağlantı analizi kullanılır. II. Monozigot ikizlerde görülen farklar çevresel nedenlerden kaynaklanır. III. Monozigot ikizler farklı zigottan gelişir. Bu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Pedigri ve bağlantı analizi kullanılır; tek yumurta ikizleri aynı zigottan geliştiği için aralarındaki farklar çevreye bağlanır. Üçüncü ifade yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur ama ikinci ifade de doğru olduğu için yalnız birinciyi seçmek eksik kalır. Monozigot ikizlerdeki farklar çevresel nedenlerle açıklanır.",
+      "B": "Pedigri ve bağlantı analizi yöntemlerdendir; monozigot ikizler aynı zigottan geliştiği için kalıtımsal yapıları aynıdır ve görülen farklar çevresel nedenlerdendir. Üçüncü ifade yanlış olduğundan bu seçenek doğrudur.",
+      "C": "Üçüncü ifade yanlıştır, çünkü monozigot ikizler farklı değil aynı zigottan gelişir. Ayrıca ikinci ifade doğru olduğundan bu seçenek hem hatalı öncül içerir hem de eksiktir.",
+      "D": "Bu seçenek birinci ifadeyi dışarıda bırakır, oysa pedigri ve bağlantı analizi kalıtımı incelemede kullanılır. Üçüncü ifade de yanlış olduğundan seçenek hatalıdır.",
+      "E": "Üç ifadenin hepsini doğru saymak monozigot ikizlerin farklı zigottan geliştiği yanlışını kabul etmek olur. Tek yumurta ikizleri aynı zigottan gelişir."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q08",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Tek yumurta ikizleri arasında görülen farklar nasıl açıklanır?",
+     "secenekler": {
+      "A": "Çevresel nedenlerle",
+      "B": "Farklı zigottan gelişmeyle",
+      "C": "Kalıtımsal yapı farkıyla",
+      "D": "Cinsiyet farkıyla",
+      "E": "Gen dizisi farkıyla"
+     },
+     "dogru": "A",
+     "aciklama": "Tek yumurta ikizleri aynı zigottan geliştikleri için kalıtımsal yapıları aynıdır; görülen farklar çevresel nedenlere bağlanabilir.",
+     "sik_aciklamalari": {
+      "A": "Tek yumurta ikizleri aynı zigottan geliştikleri için kalıtımsal yapıları aynıdır ve görülen farklar çevresel nedenlerden kaynaklanır. Bu nedenle davranış genetiğinde tek yumurta ikizleri kullanılır, seçenek doğrudur.",
+      "B": "Tek yumurta ikizleri farklı zigottan değil, aynı zigottan gelişir ve bu yüzden kalıtımsal yapıları aynıdır. Bu seçenek ikiz tipini yanlış tanımladığı için aradaki farkları açıklayamaz.",
+      "C": "Tek yumurta ikizlerinin kalıtımsal yapıları aynıdır, bu yüzden aralarında genetik fark beklenmez. Farkı kalıtımsal yapıya bağlamak bu bilgiye aykırı olduğundan seçenek yanlıştır.",
+      "D": "Derse göre tek yumurta ikizleri arasındaki fark cinsiyetle değil, çevresel nedenlerle açıklanır; kalıtımsal yapıları aynıdır. Cinsiyet farkına bağlamak bu bilgiye uymadığı için seçenek yanlıştır.",
+      "E": "Tek yumurta ikizlerinin gen dizisi aynıdır ve aralarında genetik fark olmaz. Gen dizisi farkıyla açıklamak bu bilgiye aykırı olduğu için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Otizmin tanımını ve Asperger sendromuyla ilişkisini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q09",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Asperger sendromunun özelliğidir?",
+     "secenekler": {
+      "A": "Ağır zihinsel yetersizlik vardır",
+      "B": "Makroorşidizm görülür",
+      "C": "Kompülsif kendine zarar verme görülür",
+      "D": "Zeka normal veya ortalamanın üzerinde olabilir",
+      "E": "Hiperfaji ana bulgudur"
+     },
+     "dogru": "D",
+     "aciklama": "Asperger sendromunda sosyal etkileşim zorlukları ve tekrarlayıcı davranışlar vardır; zeka normal veya ortalamanın üzerinde olabilir.",
+     "sik_aciklamalari": {
+      "A": "Asperger sendromunda zeka normal veya ortalamanın üzerinde olabilir; ağır zihinsel yetersizlik tabloya ait değildir. Bu seçenek zekanın düşük olduğunu varsaydığı için yanlıştır.",
+      "B": "Makroorşidizm Frajil X sendromunda puberte sonrası görülen fiziksel bulgudur ve ergenlikte testis büyümesini anlatır. Asperger sendromuyla ilişkilendirilmediği için bu seçenek yanlıştır.",
+      "C": "Kompülsif kendine zarar verme Lesch-Nyhan sendromunun en önemli klinik anormalliğidir ve ısırma ile çiğnemeyi içerir. Asperger sendromunun tanımında yer almadığından seçenek yanlıştır.",
+      "D": "Asperger sendromunda sosyal etkileşimde zorluk ve tekrarlayıcı davranışlar bulunur, ancak zeka normal veya ortalamanın üzerinde olabilir. Bu özellik hastalığı ayırt ettiği için doğru cevaptır.",
+      "E": "Hiperfaji Prader-Willi sendromunda görülen aşırı yeme davranışıdır ve obsesyonlarla birlikte seyreder. Asperger sendromunun özelliği olarak tanımlanmadığı için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Otizmde duyarlı gen saptama yöntemlerini, 7q bölgesini ve bağlantı analizini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q10",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otizmde klonlanmak istenen DNA parçasının ürünü olan protein bilinmiyorsa gen nasıl klonlanır?",
+     "secenekler": {
+      "A": "Fonksiyonel klonlama",
+      "B": "Pozisyonel klonlama",
+      "C": "Pedigri analizi",
+      "D": "İkiz metodu",
+      "E": "Rekombinant DNA analizi"
+     },
+     "dogru": "B",
+     "aciklama": "İlgili DNA parçasının ürünü olan protein biliniyorsa fonksiyonel klonlama, bilinmiyorsa pozisyonel klonlama yapılır.",
+     "sik_aciklamalari": {
+      "A": "Fonksiyonel klonlama, klonlanmak istenen DNA parçasının oluşturduğu protein bilindiğinde uygulanan yaklaşımdır. Soruda protein bilinmediği için bu yaklaşım kullanılamaz, seçenek yanlıştır.",
+      "B": "Klonlanmak istenen DNA parçasının oluşturduğu protein bilinmiyorsa pozisyonel klonlama çalışmaları yapılır. Gen, haritadaki konumuna göre bulunur, bu yüzden doğru cevaptır.",
+      "C": "Pedigri analizi ailedeki kalıtım örüntüsünü inceleyen bir yöntemdir ve kalıtımı incelemede kullanılır. Klonlama türünü belirleyen bir yaklaşım olmadığı için bu soruya cevap vermez.",
+      "D": "İkiz metodu genetik ve çevresel katkıyı karşılaştırmak için kullanılan bir yöntemdir. Bir DNA parçasının klonlanma biçimiyle ilgisi olmadığından seçenek yanlıştır.",
+      "E": "Rekombinant DNA analizleri kalıtımı incelemede kullanılan genel yöntemlerdendir. Soru proteinin bilinip bilinmemesine göre değişen klonlama türünü sorduğu için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q11",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Otistik çocuklarda yapılan genetik haritalama çalışmalarında en duyarlı bulunan bölge hangisidir?",
+     "secenekler": {
+      "A": "11p bölgesi",
+      "B": "13q31 bölgesi",
+      "C": "7q bölgesi",
+      "D": "Xq27.3 bölgesi",
+      "E": "4. kromozom"
+     },
+     "dogru": "C",
+     "aciklama": "Otistik çocuklarda genetik haritalamada en duyarlı alan 7q bölgesidir; bu bölgede RELN, FOXP2, WNT2, HOXA1 ve HOXB1 genleri bildirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "11p bölgesi dopamin reseptör proteinini şifreleyen D4DR genini taşır ve kişilik özellikleriyle ilişkilendirilir. Otizmin en duyarlı bölgesi olarak tanımlanmadığı için seçenek yanlıştır.",
+      "B": "13q31 bölgesi Tourette sendromunda tanımlanan aday gen SLITRK1'in yerleştiği bölgedir. Otizm haritalamasında en duyarlı alan olarak bildirilmediği için seçenek yanlıştır.",
+      "C": "Otistik çocuklarda en duyarlı alan 7q bölgesidir. Bu bölgedeki klonlama çalışmaları otizmden sorumlu olabilecek birçok aday geni bildirmiştir; bu yüzden doğru cevaptır.",
+      "D": "Xq27.3 bölgesi Frajil X sendromundaki FMR1 genini taşır ve mental retardasyonla ilişkilidir. Otizm olgularında en duyarlı alan olarak bildirilen bölge olmadığı için seçenek yanlıştır.",
+      "E": "Dördüncü kromozom Huntington hastalığı geninin haritalandığı kromozomdur ve CAG tekrarlarıyla ilişkilidir. Otizmde en duyarlı alan olarak anılmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q12",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Bağlantı analizi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tek bir hasta birey yeterlidir",
+      "B": "Bağlı genler gametlere bağımsız dağılır",
+      "C": "Farklı kromozomlardaki genler bağlıdır",
+      "D": "Yalnızca sağlıklı bireyler incelenir",
+      "E": "Bir ailede birden fazla etkilenmiş olgu gerekir"
+     },
+     "dogru": "E",
+     "aciklama": "Bağlantı analizi çalışmalarında bir ailede birden fazla etkilenmiş olguya ihtiyaç vardır; bağlı genler gametlere birlikte gitme eğilimindedir.",
+     "sik_aciklamalari": {
+      "A": "Bağlantı analizinde marker paylaşımı karşılaştırılacağı için bir ailede birden fazla etkilenmiş olgu gerekir. Tek bir hasta bireyin incelenmesi bu karşılaştırmayı yapmaya yetmediğinden seçenek yanlıştır.",
+      "B": "Bağlı genler gametlere bağımsız değil, birlikte gitme eğilimi gösterir. Bağımsız dağılım bağlantının yokluğunu anlattığı için bu seçenek bağlantı analizini yanlış tanımlar.",
+      "C": "Bağlı genler aynı kromozom üzerinde birbirine yakın, ayrı lokuslara yerleşmiş genlerdir. Farklı kromozomlardaki genler için bağlantıdan söz edilmediğinden seçenek yanlıştır.",
+      "D": "Bağlantı analizinde etkilenmiş olgular incelenir ve marker alellerinin paylaşımı hasta kardeşlerde araştırılır. Yalnız sağlıklı bireyleri incelemek bağlantıyı gösteremeyeceği için seçenek yanlıştır.",
+      "E": "Bağlantı analizi çalışmalarında bir ailede birden fazla etkilenmiş olguya ihtiyaç vardır. Hasta iki kardeşin bir marker alelini şansla beklenenden fazla paylaşması lokusun hastalıkla ilişkili olduğunu gösterir; bu yüzden doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 21
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q13",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Otizmde duyarlı gen saptamada kromozom anomalilerinin saptanması ve ilişki (asosiasyon) çalışmalarıyla birlikte kullanılan üçüncü yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ayrı büyüyen ikiz çalışmaları",
+      "B": "Frajil X için moleküler test",
+      "C": "Genetik bağlantı analizleri",
+      "D": "D4DR geninin genotiplenmesi",
+      "E": "Frajil X için prenatal tanı"
+     },
+     "dogru": "C",
+     "aciklama": "Otizmde duyarlı gen saptama yöntemleri kromozom anomalilerinin saptanması, ilişki çalışmaları ve genetik bağlantı analizleridir; bunlar hastalığın moleküler mekanizmasının ortaya çıkarılmasında önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Ayrı büyüyen ikiz çalışmaları genetik ve çevresel katkıyı birbirinden ayırmak için kullanılan bir yöntemdir. Otizmde duyarlı gen saptama yöntemleri arasında sayılmadığı için bu seçenek bu soruda yanlıştır.",
+      "B": "Frajil X için moleküler test, FMR1 genindeki tekrar sayısını gösteren ve zihinsel gerilik olgularında istenen bir tanı testidir. Otizmde duyarlı gen saptama yöntemlerinden biri olmadığı için seçenek yanlıştır.",
+      "C": "Otizmde duyarlı gen saptamada kromozom anomalilerinin saptanması ve ilişki çalışmalarının yanında genetik bağlantı analizleri de kullanılır. Üç yöntem birlikte hastalığın moleküler mekanizmasını ortaya çıkarmaya yardım ettiği için bu seçenek doğrudur.",
+      "D": "D4DR geni dopamin D4 reseptörünü kodlar ve yenilik arayışı gibi davranış özellikleriyle ilişkilendirilir. Otizmde duyarlı gen saptama yöntemleri arasında yer almadığı için bu seçenek yanlış cevaptır.",
+      "E": "Frajil X için prenatal tanı, doğmamış çocukta FMR1 genindeki tam mutasyonu araştıran bir tanı yaklaşımıdır. Otizmde duyarlı gen saptama yöntemlerinden biri olmadığı için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Mental retardasyonun tanımını, sıklığını ve genel bulgularını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q14",
+     "kazanim": 9,
+     "zorluk": "kolay",
+     "soru": "Mental retardasyon tanımında kullanılan IQ sınırı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "70-75'in altı",
+      "B": "50'nin altı",
+      "C": "85'in altı",
+      "D": "100'ün altı",
+      "E": "20'nin altı"
+     },
+     "dogru": "A",
+     "aciklama": "Mental retardasyon, IQ'nun anlamlı derecede ortalamanın altında olması (IQ<70-75) ve en az iki alanda ilişkili sınırlama bulunması olarak tanımlanır.",
+     "sik_aciklamalari": {
+      "A": "Mental retardasyon tanımında IQ'nun 70-75'in altında olması ve belirli alanların en az ikisinde sınırlama bulunması aranır. Toplumun yaklaşık %3'ünde bu düzey bildirildiğinden doğru cevaptır.",
+      "B": "IQ 50'nin altı, derste mental retardasyon tanımı için verilen eşik değildir. Tanımda eşik 70-75'in altındaki IQ değeridir ve en az iki alanda sınırlama aranır; bu yüzden seçenek yanlıştır.",
+      "C": "IQ 85'in altı ortalamanın biraz altını kapsayan geniş bir aralıktır. Mental retardasyon tanımındaki eşik bundan çok daha düşük olduğundan seçenek yanlıştır.",
+      "D": "IQ 100'ün altı normal dağılımın ortalamasının altını kapsar ve nüfusun büyük bölümünü içine alır. Mental retardasyon tanımında eşik çok daha düşük olduğundan seçenek yanlıştır.",
+      "E": "IQ 20'nin altı derste tanım eşiği olarak verilmez; yalnız Down sendromunda IQ 20-85 aralığı bildirilir. Mental retardasyon tanımındaki eşik 70-75'in altı olduğundan bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q15",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Mental retardasyonlu olguların yaklaşık yüzde kaçında kendine ciddi zarar veren hareketler gözlenir?",
+     "secenekler": {
+      "A": "%1-3",
+      "B": "%30-40",
+      "C": "%50",
+      "D": "%5-17",
+      "E": "%80"
+     },
+     "dogru": "D",
+     "aciklama": "Mental retardasyonlu olguların %5-17'sinde ısırma, saç yolma, kafa vurma ve göz çıkarmaya yeltenme gibi self mutilasyon gözlenir.",
+     "sik_aciklamalari": {
+      "A": "Bu oran, olguların küçük bir bölümünde görülen kendine zarar vermeyi bile eksik anlatır. Self mutilasyon %5-17 aralığında bildirildiği için bu düşük değer yanlıştır.",
+      "B": "Bu oran self mutilasyonun olguların büyük bölümünde görüldüğünü ima eder. Gerçekte yalnız küçük bir bölümde, %5-17 aralığında görüldüğü için seçenek yanlıştır.",
+      "C": "Derste verilen etiyoloji tablosuna göre yüzde elli, nedeni bilinmeyen olguların oranıdır ve kendine zarar verme oranı değildir. Self mutilasyon %5-17 aralığında bildirildiği için bu seçenek yanlıştır.",
+      "D": "Mental retardasyonlu olguların %5-17'sinde ısırma, saçlarını yolma, kafasını vurma ve gözlerini çıkarmaya yeltenme gibi kendine ciddi zarar veren hareketler gözlenir. Bu nedenle doğru cevaptır.",
+      "E": "Bu oran yüksek bir değerdir ve hiçbir davranış bulgusu için bu bölümde verilmemiştir. Olguların büyük çoğunluğunda self mutilasyon görülmediğinden seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 28
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Mental retardasyonla ilişkili en iyi bilinen sendromları ve Down sendromunun davranış özelliklerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q16",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Mental retardasyon ile yaklaşık kaç farklı genetik hastalık ilişkilendirilmiştir?",
+     "secenekler": {
+      "A": "Yaklaşık 75",
+      "B": "Yaklaşık 150",
+      "C": "Yaklaşık 750",
+      "D": "Yaklaşık 1500",
+      "E": "Yaklaşık 3000"
+     },
+     "dogru": "C",
+     "aciklama": "Bugün için yaklaşık 750 farklı genetik hastalık mental retardasyonla ilişkilendirilmiştir; en iyi bilinenler Down, Williams, Frajil X ve Prader-Willi sendromlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Bu sayı bildirilen değerin onda biri kadardır. Mental retardasyonla ilişkili genetik hastalık sayısı çok daha fazla, yaklaşık 750 olarak bildirildiği için seçenek yanlıştır.",
+      "B": "Bu sayı bildirilen değerin çok altındadır ve genetik nedenlerin geniş bir hastalık grubunu kapsadığını yansıtmaz. İlişkilendirilen hastalık sayısı yaklaşık 750 olduğundan seçenek yanlıştır.",
+      "C": "Yaklaşık 750 farklı genetik hastalığın mental retardasyonla ilişkilendirildiği bildirilir. En iyi bilinenleri Down, Williams, Frajil X ve Prader-Willi sendromlarıdır; bu nedenle doğru cevaptır.",
+      "D": "Bu sayı bildirilen değerin yaklaşık iki katıdır ve gerçek değeri abartır. Mental retardasyonla ilişkilendirilen genetik hastalık sayısı yaklaşık 750 olduğundan seçenek yanlıştır.",
+      "E": "Bu sayı gerçek değerin birkaç katıdır ve abartılmıştır. Mental retardasyonla ilişkilendirilen genetik hastalık sayısı yaklaşık 750 olduğundan, bu büyüklük bildirilen değere uymaz ve seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q17",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Mental retardasyonla ilişkili en iyi bilinen sendromlar aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Down, Williams, Frajil X, Prader-Willi",
+      "B": "Down, Turner, Frajil X, Williams",
+      "C": "Williams, Lesch-Nyhan, Down, Turner",
+      "D": "Prader-Willi, Huntington, Down, Williams",
+      "E": "Frajil X, Turner, Huntington, Down"
+     },
+     "dogru": "A",
+     "aciklama": "En iyi bilinen mental retardasyon sendromları Down, Williams, Frajil X ve Prader-Willi sendromlarıdır; Turner, Lesch-Nyhan ve Huntington bu listede yer almaz.",
+     "sik_aciklamalari": {
+      "A": "Mental retardasyonla ilişkili en iyi bilinen sendromlar Down, Williams, Frajil X ve Prader-Willi sendromlarıdır. Dört sendromun tümü bu listeyi eksiksiz oluşturduğu için doğru cevaptır.",
+      "B": "Bu dizilim en iyi bilinen mental retardasyon sendromları listesine Turner sendromunu ekler. Turner bu listede yer almaz, bu nedenle dizilim yanlıştır.",
+      "C": "Lesch-Nyhan ayrı bir sendromdur ve Turner de en iyi bilinen mental retardasyon sendromları arasında anılmaz. Prader-Willi ve Frajil X'in dizilimde bulunmaması da seçeneği yanlış kılar.",
+      "D": "Huntington koresi ileri yaşta başlayan bir nörodejeneratif hastalıktır ve en iyi bilinen mental retardasyon sendromları arasında anılmaz. Williams ve Frajil X'in eksikliği de seçeneği yanlış yapar.",
+      "E": "Turner ve Huntington en iyi bilinen mental retardasyon sendromları arasında anılmaz; Huntington ileri yaşta başlayan nörodejeneratif bir hastalıktır. Williams ve Prader-Willi de dizilimde bulunmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q18",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Genetik mental retardasyonun en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Williams sendromu",
+      "B": "Prader-Willi sendromu",
+      "C": "Lesch-Nyhan sendromu",
+      "D": "Down sendromu",
+      "E": "Huntington koresi"
+     },
+     "dogru": "D",
+     "aciklama": "Down sendromu 21. kromozom trizomisiyle genetik mental retardasyonun en sık nedenidir; Frajil X ise en sık X'e bağlı nedendir.",
+     "sik_aciklamalari": {
+      "A": "Williams sendromu 7q11.23 delesyonuyla ortaya çıkan otozomal dominant bir sendromdur ve IQ genellikle 50-60 arasındadır. Mental retardasyonun en sık nedeni değildir.",
+      "B": "Prader-Willi sendromu hiperfaji, obsesyon ve kompülsiyonla seyreden bir sendromdur ve mental retardasyonla ilişkilidir. Genetik mental retardasyonun en sık nedeni olarak tanımlanmadığı için seçenek yanlıştır.",
+      "C": "Lesch-Nyhan sendromu X'e bağlı resesif bir pürin metabolizma bozukluğudur ve yaklaşık 1/380.000 canlı doğumda görülür. Bu kadar seyrek bir hastalık en sık neden olamaz.",
+      "D": "Down sendromu genetik mental retardasyonun en sık nedenidir ve 21. kromozom trizomisi görülür. Davranış sorunları da bu tabloya eşlik ettiği için doğru cevaptır.",
+      "E": "Huntington koresi 30-50 yaş civarında başlayan nörodejeneratif bir hastalıktır ve kore, demans ve rijiditeyle seyreder. Genetik mental retardasyonun en sık nedeni olarak sayılmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q19",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Down sendromu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "IQ 20-85 aralığındadır",
+      "B": "21. kromozom trizomisi vardır",
+      "C": "Görsel hafıza işitsel hafızadan biraz daha iyidir",
+      "D": "Dil kabiliyetinde gerilik gözlenir",
+      "E": "Sözel dil bilgisi korunmuştur"
+     },
+     "dogru": "E",
+     "aciklama": "Down sendromunda sözel dil bilgisinde aşırı derecede zorluk gözlenir, dolayısıyla korunmuş olduğunu söylemek yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Down sendromunda IQ 20-85 aralığındadır ve zeka düzeyi geniş bir aralıkta değişir. Bu ifade doğru olduğundan, yanlış ifadeyi arayan köke cevap olamaz.",
+      "B": "Down sendromunun genetik temeli 21. kromozom trizomisidir ve bu ifade doğrudur. Soru yanlış ifadeyi aradığı için bu seçenek köke cevap vermez.",
+      "C": "Down sendromunda kısa süreli hafıza problemlerine rağmen görsel hafıza işitsel hafızaya göre biraz daha iyidir. İfade doğru olduğu için yanlış ifadeyi arayan köke uygun değildir.",
+      "D": "Down sendromunda dil kabiliyetlerinde gerilik gözlenir ve bu ifade doğrudur. Soru yanlış ifadeyi aradığından, doğru bir bilgi veren bu seçenek köke uygun değildir.",
+      "E": "Down sendromunda sözel dil bilgisinde aşırı derecede zorluklar ve dil kabiliyetinde gerilik gözlenir. Korunmuş olduğunu söyleyen ifade yanlış olduğundan doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Williams ve Prader-Willi sendromlarının genetik ve davranış özelliklerini ayırt edebilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q20",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Williams sendromlu olguların büyük çoğunluğundan sorumlu genetik değişiklik hangisidir?",
+     "secenekler": {
+      "A": "21. kromozom trizomisi",
+      "B": "7q11.23'te ELN genini içeren delesyon",
+      "C": "Xq27.3'te CGG tekrar artışı",
+      "D": "Xq26-q27.2'de HPRT mutasyonu",
+      "E": "Kromozom 4'te CAG tekrar artışı"
+     },
+     "dogru": "B",
+     "aciklama": "Williams sendromunda olguların %90-95'inde ELN (elastin) genini içeren 7q11.23 delesyonu sorumludur ve sendrom otozomal dominant geçer.",
+     "sik_aciklamalari": {
+      "A": "21. kromozom trizomisi Down sendromunun genetik nedenidir. Williams sendromu ise 7q11.23 delesyonuyla oluşan bir delesyon sendromu olduğundan bu seçenek yanlıştır.",
+      "B": "Williams sendromunda olguların %90-95'inde elastin geni olan ELN'yi içeren 7q11.23 bölgesinde delesyon sorumludur. Sendrom otozomal dominant geçtiği için bu seçenek doğru cevaptır.",
+      "C": "Xq27.3'teki CGG tekrar artışı Frajil X sendromunun dinamik mutasyonudur ve FMR1 geninde görülür. Williams sendromunun mekanizması bu olmadığı için seçenek yanlıştır.",
+      "D": "HPRT mutasyonu Lesch-Nyhan sendromuna yol açan genetik değişikliktir ve aşırı ürik asit üretimiyle seyreder. Williams sendromuyla ilişkili olmadığı için seçenek yanlıştır.",
+      "E": "Kromozom 4'teki CAG tekrar artışı Huntington koresinin mekanizmasıdır ve otozomal dominant geçer. Williams sendromunda böyle bir tekrar artışı olmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q21",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Zengin kelime hazinesine sahip, akıcı ve kavgacı üslupta konuşan, sese aşırı duyarlı hastada en olası sendrom hangisidir?",
+     "secenekler": {
+      "A": "Down sendromu",
+      "B": "Prader-Willi sendromu",
+      "C": "Frajil X sendromu",
+      "D": "Lesch-Nyhan sendromu",
+      "E": "Williams sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Williams sendromunda zengin kelime hazinesi, akıcı ve kavgacı üslup, sese aşırı duyarlılık, anksiyete ve yüz tanıma kaybı görülür.",
+     "sik_aciklamalari": {
+      "A": "Down sendromunda dil kabiliyetinde gerilik ve sözel dil bilgisinde aşırı zorluk vardır. Zengin kelime hazinesi bu sendromun özelliği olmadığından tabloya uymaz ve seçenek yanlıştır.",
+      "B": "Prader-Willi sendromunda hiperfaji, obsesyon ve kompülsiyon ile ağlama ve gülme nöbetleri görülür. Zengin kelime hazinesi ve sese aşırı duyarlılık bu sendromun tablosunda yer almaz.",
+      "C": "Frajil X sendromunda konuşma patlayıcı, tekrarlayıcı ve sapkındır; ekolali görülür. Zengin kelime hazinesi ve akıcı konuşma bu sendromu tanımlamadığı için seçenek yanlıştır.",
+      "D": "Lesch-Nyhan sendromunun en önemli bulgusu kompülsif kendine zarar vermedir. Konuşma ve ses duyarlılığıyla ilgili özellikler tabloya uymadığı için seçenek yanlıştır.",
+      "E": "Williams sendromlu hastalar zengin kelime hazinesine sahiptir, akıcı ve kavgacı bir üslupta konuşur ve sese aşırı duyarlıdır. Bu tablo ayırt edici olduğundan doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q22",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Çoğu hastada hiperfaji, obsesyon ve kompülsiyon görülen sendrom aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Williams sendromu",
+      "B": "Prader-Willi sendromu",
+      "C": "Down sendromu",
+      "D": "Lesch-Nyhan sendromu",
+      "E": "Frajil X sendromu"
+     },
+     "dogru": "B",
+     "aciklama": "Prader-Willi sendromunda çoğu hastada hiperfaji, obsesyon ve kompülsiyon ile ağlama ve gülme nöbetleri görülür.",
+     "sik_aciklamalari": {
+      "A": "Williams sendromunda zengin kelime hazinesi, sese aşırı duyarlılık ve anksiyete öne çıkar. Hiperfaji bu sendromun bulgusu olarak tanımlanmadığı için seçenek yanlıştır.",
+      "B": "Prader-Willi sendromunda çoğu hastada hiperfaji, obsesyonlar, kompülsiyonlar ve ağlama ve gülme nöbetleri görülür. Davranış adaptasyonunda bozukluk da eşlik eder, bu yüzden doğru cevaptır.",
+      "C": "Down sendromunda IQ 20-85 aralığındadır ve dil kabiliyetinde gerilik vardır. Hiperfaji ve kompülsiyon bu tabloda ön planda olmadığı için seçenek yanlıştır.",
+      "D": "Lesch-Nyhan sendromunda kompülsif kendine zarar verme öne çıkar ve hastalar parmaklarını ısırır. Hiperfaji bu sendromun tanımında yer almadığı için seçenek yanlıştır.",
+      "E": "Frajil X sendromunda dikkat eksikliği, hiperaktivite ve otistik bulgular görülür. Hiperfaji ise bu sendromun davranış özelliği olarak tanımlanmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 34
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Frajil X sendromunun sıklığını, FMR1 genini ve dinamik mutasyon mekanizmasını açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q23",
+     "kazanim": 12,
+     "zorluk": "kolay",
+     "soru": "En sık X'e bağlı mental retardasyon nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lesch-Nyhan sendromu",
+      "B": "Williams sendromu",
+      "C": "Frajil X sendromu",
+      "D": "Prader-Willi sendromu",
+      "E": "Down sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Frajil X en sık X'e bağlı mental retardasyon nedenidir ve erkeklerde orta derece mental retardasyonun Down sendromundan sonra en sık nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Lesch-Nyhan sendromu X'e bağlı resesif geçer ve yaklaşık 1/380.000 canlı doğumda görülen çok seyrek bir hastalıktır. Bu seyreklik nedeniyle en sık neden olamaz.",
+      "B": "Williams sendromu otozomal dominant geçişlidir ve 7q11.23 delesyonuyla oluşur, X kromozomuna bağlı değildir. Bu nedenle en sık X'e bağlı mental retardasyon nedeni olarak sayılamaz.",
+      "C": "Frajil X sendromu en sık X'e bağlı mental retardasyon nedenidir. Erkeklerde orta derece mental retardasyonun Down sendromundan sonra en sık nedenidir, bu yüzden doğru cevaptır.",
+      "D": "Prader-Willi sendromu hiperfaji ve kompülsiyonla seyreden bir sendromdur ve X'e bağlı bir hastalık olarak tanımlanmaz. Bu nedenle seçenek soruya uymaz.",
+      "E": "Down sendromu genetik mental retardasyonun en sık nedenidir ancak 21. kromozom trizomisine bağlıdır ve X'e bağlı değildir. Bu nedenle seçenek soruya uymaz."
+     },
+     "kanit": {
+      "sayfa": 36
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q24",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "FMR1 geni ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Xq27.3'e lokalizedir ve 17 ekzonludur",
+      "B": "Kromozom 4'e lokalizedir ve 9 ekzonludur",
+      "C": "Xq26-q27.2'de yer alır",
+      "D": "11p'de yer alır ve dopamin reseptörünü kodlar",
+      "E": "7q11.23'te yer alır ve elastini kodlar"
+     },
+     "dogru": "A",
+     "aciklama": "FMR1 geni 1991'de Xq27.3'e lokalize edilip klonlanmıştır; 17 ekzonludur ve 632 aa'lik protein kodlar.",
+     "sik_aciklamalari": {
+      "A": "FMR1 geni Xq27.3'e lokalize edilmiş ve klonlanmıştır. Gen 17 ekzonludur ve ürünü FMR1 proteinidir; bilgi doğru olduğu için bu seçenek doğru cevaptır.",
+      "B": "Kromozom 4 Huntington geninin haritalandığı kromozomdur ve CAG tekrarlarıyla ilişkilidir. FMR1 geni ise X kromozomunda, Xq27.3 bölgesinde bulunduğundan bu seçenek yanlıştır.",
+      "C": "Xq26-q27.2 bölgesi Lesch-Nyhan sendromundaki HPRT genini taşır ve pürin metabolizmasıyla ilişkilidir. FMR1 geninin konumu Xq27.3 olduğundan, bu bölge soruya uymaz ve seçenek yanlıştır.",
+      "D": "11p bölgesi dopamin reseptör proteinini şifreleyen D4DR genini taşır ve kişilik özellikleriyle ilişkilendirilir. FMR1 geni bu bölgede bulunmadığı için seçenek yanlıştır.",
+      "E": "7q11.23 bölgesi Williams sendromunda delesyona uğrayan ELN genini içerir ve elastinle ilişkilidir. FMR1 geninin yeri burası olmadığı için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 37
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q25",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Frajil X sendromunda FMR1 geninin 5' UTR bölgesindeki (CGG)n sayısının kaçın üzerine çıkması premutasyona yol açar?",
+     "secenekler": {
+      "A": "10'un üzerine",
+      "B": "100'ün üzerine",
+      "C": "200'ün üzerine",
+      "D": "50'nin üzerine",
+      "E": "1000'in üzerine"
+     },
+     "dogru": "D",
+     "aciklama": "(CGG)n sayısının 50'nin üzerine çıkması premutasyon, sonraki kuşaklarda 200'ün üzerine çıkması tam mutasyon oluşturur.",
+     "sik_aciklamalari": {
+      "A": "10'un üzerindeki tekrar sayısı derste verilen bir eşik değildir; premutasyon eşiği 50'nin üstüdür. Bu nedenle bu seçenek premutasyonu tanımlamaz ve yanlıştır.",
+      "B": "100 değeri premutasyon eşiği olarak verilmemiştir ve gerçek eşiğin üzerindedir. Premutasyon tekrar sayısı 50'nin üzerine çıktığında başladığı için seçenek yanlıştır.",
+      "C": "200'ün üzerindeki tekrar sayısı tam mutasyonun eşiğidir ve gen aktivitesinin kaybıyla ilişkilidir. Premutasyon bundan önceki basamak olduğundan, bu eşik değeri soruya uymaz ve seçenek yanlıştır.",
+      "D": "CGG tekrar sayısının 50'nin üstüne çıkması kişide premutasyon oluşturur. Sayı sonraki kuşaklarda 200'ün üzerine çıkarsa tam mutasyon gelişir; bu nedenle doğru cevaptır.",
+      "E": "1000 değeri bildirilen eşiklerin çok üstündedir ve bu hastalıkta tanımlanmış bir sınır değildir. Premutasyon ve tam mutasyon çok daha düşük sayılarda tanımlandığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 38
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q26",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Frajil X sendromunda tam mutasyonlu bireylerde gen aktivitesinin kaybolması hangi mekanizmayla gerçekleşir?",
+     "secenekler": {
+      "A": "Genin tümüyle delesyonu",
+      "B": "Promotör bölgesinin metillenmesi",
+      "C": "21. kromozomun fazlalığı",
+      "D": "Pürin metabolizması enzim eksikliği",
+      "E": "Tekrar sayısının stabil kalması"
+     },
+     "dogru": "B",
+     "aciklama": "Tam mutasyonlu bireylerde genin promotör bölgesi metillendiğinden aktivitesi kaybolur ve FMR1 proteini kısmen ya da tümüyle yapılamaz.",
+     "sik_aciklamalari": {
+      "A": "Frajil X'te gen silinmez; üçlü tekrar artışı ve promotör metilasyonu nedeniyle susturulur. Delesyon bu hastalığın mekanizması olmadığı için seçenek yanlıştır.",
+      "B": "Tam mutasyonlu bireylerde genin promotör bölgesi metillenir ve gen aktivitesi kaybolur. FMR1 proteini kısmen ya da tümüyle yapılamadığı için doğru cevaptır.",
+      "C": "21. kromozomun fazlalığı Down sendromunun nedenidir ve trizomi olarak adlandırılır. Frajil X sendromu X kromozomundaki tekrar artışına bağlı olduğundan seçenek yanlıştır.",
+      "D": "Pürin metabolizması enzim eksikliği Lesch-Nyhan sendromunun nedenidir ve aşırı ürik asit üretimine yol açar. Frajil X sendromunda böyle bir enzim eksikliği olmadığı için seçenek yanlıştır.",
+      "E": "Normal bireylerde üçlü tekrar sayısı ebeveynden çocuğa stabil geçer. Premutasyonda tekrarlar kararsızdır ve artar; stabil kalması hastalığı açıklamadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 38
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Frajil X'te tam mutasyon taşıyıcılarını ve Sherman paradoksunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q27",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Frajil X sendromunda tam mutasyon taşıyıcısı dişilerde aşağıdakilerden hangisi görülebilir?",
+     "secenekler": {
+      "A": "Makroorşidizm",
+      "B": "Supravalvüler aortik stenoz",
+      "C": "Şizofreni benzeri bulgular",
+      "D": "Hiperfaji",
+      "E": "Elfin yüz görünümü"
+     },
+     "dogru": "C",
+     "aciklama": "Tam mutasyon taşıyıcısı dişilerin üçte birinde hafif mental retardasyon, üçte birinde normal zeka, üçte birinde şizofreni benzeri bulgular görülür.",
+     "sik_aciklamalari": {
+      "A": "Makroorşidizm puberte sonrası erkeklerde görülen fiziksel bulgudur ve büyük testislerle seyreder. Dişi taşıyıcılar için tanımlanmadığından, tam mutasyonlu dişilerde görülebilecekler arasında olmadığı için bu seçenek yanlıştır.",
+      "B": "Supravalvüler aortik stenoz Williams sendromunda görülen kalp bulgusudur ve elfin yüzle birliktedir. Frajil X ile ilişkili olarak anılmadığı için seçenek yanlıştır.",
+      "C": "Tam mutasyon taşıyıcısı dişilerin üçte birinde şizofreni benzeri bulgular görülür; üçte birinde hafif mental retardasyon, üçte birinde normal zeka vardır. Bu yüzden doğru cevaptır.",
+      "D": "Hiperfaji Prader-Willi sendromunda görülen aşırı yeme davranışıdır ve obsesyonlarla birliktedir. Frajil X'li dişi taşıyıcıların bulgusu olarak tanımlanmadığı için seçenek yanlıştır.",
+      "E": "Elfin yüz görünümü Williams sendromunun tipik yüz bulgusudur ve kısa boyla birliktedir. Frajil X'te ise uzun ve ince yüz görüldüğü için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 40
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q28",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Asemptomatik bir babanın geni taşıyıcı kızına iletmesi ve zeka geriliğinin probandın erkek torunlarında ortaya çıkması hangi adla bilinir?",
+     "secenekler": {
+      "A": "Dinamik mutasyon",
+      "B": "Ekspansiyon",
+      "C": "Premutasyon",
+      "D": "Tam mutasyon",
+      "E": "Sherman paradoksu"
+     },
+     "dogru": "E",
+     "aciklama": "Frajil X'in tipik aile profili Sherman paradoksu olarak bilinir: asemptomatik baba geni kızına iletir ve zeka geriliği erkek torunlarda ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Dinamik mutasyon, tekrar dizisinin kuşaklar boyunca kararsız biçimde artmasını anlatan mekanizmadır ve hastalığın nedenini açıklar. Aile profilini tanımlayan ad olmadığı için seçenek yanlıştır.",
+      "B": "Ekspansiyon, premutasyondaki tekrar sayısının gametogenez sırasında kuşaktan kuşağa giderek artmasını anlatan bir kavramdır. Aile profilinin adı olmadığı için seçenek yanlıştır.",
+      "C": "Premutasyon, tekrar sayısının 50'nin üzerine çıkmasıyla oluşan düzeydir ve taşıyıcılık durumunu anlatır. Soruda sorulan aile profilinin adı olmadığı için seçenek yanlıştır.",
+      "D": "Tam mutasyon, tekrar sayısının 200'ün üzerine çıkmasıyla oluşur ve gen aktivitesi kaybolur. Bu bir mutasyon düzeyidir, aile profilinin adı olmadığı için seçenek yanlıştır.",
+      "E": "Frajil X'in tipik aile profili Sherman paradoksu olarak bilinir. Asemptomatik baba geni taşıyıcı kızına iletir ve zeka geriliği probandın erkek torunlarında ortaya çıkar; bu nedenle doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 42
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q29",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Frajil X sendromunda taşıyıcılık taramaları ve prognostik analizin büyük önem taşımasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Yalnızca erkeklerin etkilenmesi",
+      "B": "Tekrar sayısının her kuşakta azalması",
+      "C": "Hastalığın tanınmadan taşıyıcılarla kalıtılması",
+      "D": "Hastalığın otozomal resesif geçmesi",
+      "E": "Taşıyıcıların her zaman belirti vermesi"
+     },
+     "dogru": "C",
+     "aciklama": "Hastalık normal görünümlü premutasyon taşıyıcısı kadın veya erkekler yoluyla kuşaklar boyunca tanınmadan kalıtılabildiği için taşıyıcılık taramaları önemlidir.",
+     "sik_aciklamalari": {
+      "A": "Hastalık yalnız erkekleri etkilemez; tam mutasyonlu dişilerde de hafif mental retardasyon ve şizofreni benzeri bulgular görülebilir. Bu nedenle taramanın nedeni bu değildir ve seçenek yanlıştır.",
+      "B": "Premutasyonda tekrar sayısı kuşaktan kuşağa geçerken azalmaz, gametogenez sırasında giderek artabilir. Sayının azalması hastalığın mekanizmasına uymadığı için bu seçenek yanlıştır.",
+      "C": "Hastalık normal görünümlü premutasyon taşıyıcısı kadın veya erkekler yoluyla kuşaklar boyunca tanınmadan kalıtılabilir. Bu yüzden taşıyıcılık taramaları ve prognostik analiz önem taşır, seçenek doğrudur.",
+      "D": "Frajil X, X'e bağlı bir hastalıktır ve dinamik mutasyonla ilişkilidir. Otozomal resesif geçiş bu sendromun kalıtım biçimini açıklamadığı için seçenek yanlıştır.",
+      "E": "Premutasyon taşıyıcıları normal görünümlüdür ve belirti vermeyebilir, bu yüzden hastalık tanınmadan aktarılabilir. Taşıyıcıların her zaman belirti verdiği ifadesi bu bilgiyle çeliştiği için yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 42
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Frajil X'in klinik bulgularını, moleküler test endikasyonlarını ve prenatal tanıyı açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q30",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Frajil X sendromunun fiziksel bulgularından biri değildir?",
+     "secenekler": {
+      "A": "Büyük ve belirgin kulaklar",
+      "B": "Uzun ve ince yüz",
+      "C": "Düz tabanlık",
+      "D": "Supravalvüler aortik stenoz",
+      "E": "Pektus ekskavatum"
+     },
+     "dogru": "D",
+     "aciklama": "Supravalvüler aortik stenoz Williams sendromunun bulgusudur; Frajil X'te uzun ince yüz, büyük kulaklar, düz tabanlık ve pektus ekskavatum görülür.",
+     "sik_aciklamalari": {
+      "A": "Büyük ve belirgin kulaklar Frajil X sendromunun fiziksel özelliklerindendir ve tanıda dikkat çeker. Sendromda bulunduğu için olumsuz kökün aradığı seçenek olamaz.",
+      "B": "Uzun ve ince yüz Frajil X sendromunun tipik fiziksel bulgusudur ve büyük kulaklarla birlikte görülür. Sendromda bulunduğu için olumsuz kökün aradığı seçenek olamaz.",
+      "C": "Düz tabanlık Frajil X sendromunda görülen diğer fiziksel özelliklerdendir ve eklem gevşekliğiyle birliktedir. Sendromda bulunduğu için olumsuz kökün aradığı seçenek olamaz.",
+      "D": "Supravalvüler aortik stenoz Williams sendromunun tipik kalp bulgusudur ve elfin yüzle birliktedir. Frajil X'in fiziksel özellikleri arasında sayılmadığı için olumsuz kökün doğru cevabıdır.",
+      "E": "Çökük göğüs kafesi yani pektus ekskavatum Frajil X sendromunda görülebilen göğüs kafesi bulgusudur. Sendromda bulunduğu için olumsuz kökün aradığı seçenek olamaz."
+     },
+     "kanit": {
+      "sayfa": 43
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q31",
+     "kazanim": 14,
+     "zorluk": "zor",
+     "soru": "Çocuğunda Frajil X sendromu bulunan annelerle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca erkek çocuğu olanlar taşıyıcıdır",
+      "B": "Tümü taşıyıcıdır; her gebelikte prenatal tanı gerekir",
+      "C": "Taşıyıcılık yalnızca şüpheli olgularda aranır",
+      "D": "Prenatal tanı yalnızca ilk gebelikte yapılır",
+      "E": "Fetüste test yapılması gerekmez"
+     },
+     "dogru": "B",
+     "aciklama": "Çocuğunda Frajil X sendromu olan tüm anneler taşıyıcıdır ve her gebelikte prenatal tanı yapılmalıdır.",
+     "sik_aciklamalari": {
+      "A": "Taşıyıcılık annenin çocuğunun cinsiyetine bağlı değildir; çocuğunda Frajil X olan tüm anneler taşıyıcıdır. Bu ifade kapsamı yalnız erkek çocuğu olan annelere daralttığı için yanlıştır.",
+      "B": "Çocuğunda Frajil X sendromu olan tüm anneler taşıyıcıdır ve her gebelikte prenatal tanı yapılmalıdır. Ailedeki riskli kişilerde de moleküler test yapılır; bu nedenle ifade doğrudur.",
+      "C": "Aile hikayesi olan kişilerde moleküler test yapılır ve taşıyıcı saptanan kadınlara prenatal tanı önerilir. Taşıyıcılığın yalnız şüpheli olgularda aranması bu kurala aykırı olduğundan seçenek yanlıştır.",
+      "D": "Prenatal tanı yalnız ilk gebelikte değil, her gebelikte yapılmalıdır, çünkü taşıyıcı annenin her fetüsü risk altındadır. İlk gebelikle sınırlamak öğretilen kurala aykırıdır ve seçenek yanlıştır.",
+      "E": "Taşıyıcı olduğu bilinen annelerin fetüslerinde moleküler test yapılır ve bu tanı yöntemi hastalığı gebelikte saptar. Fetüs testinin gerekmediğini söylemek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 46
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Lesch-Nyhan sendromunun genetiğini ve davranış özelliklerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q32",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "Lesch-Nyhan sendromunda hangi enzim eksikliği aşırı ürik asit üretimine yol açar?",
+     "secenekler": {
+      "A": "Hipoksantin-guanin fosforibozil transferaz",
+      "B": "Alkol dehidrogenaz",
+      "C": "Aldehit dehidrogenaz",
+      "D": "Histidin dekarboksilaz",
+      "E": "Elastin"
+     },
+     "dogru": "A",
+     "aciklama": "Lesch-Nyhan sendromu hipoksantin-guanin fosforibozil transferaz (HGPRTaz) eksikliği nedeniyle aşırı ürik asit üretimiyle giden pürin metabolizma bozukluğudur.",
+     "sik_aciklamalari": {
+      "A": "Lesch-Nyhan sendromunda hipoksantin-guanin fosforibozil transferaz eksiktir. Bu eksiklik aşırı ürik asit üretimiyle giden pürin metabolizma bozukluğuna yol açtığı için doğru cevaptır.",
+      "B": "Alkol dehidrogenaz alkolün asetaldehite çevrilmesinde rol alan enzimdir ve alkol metabolizmasının ilk basamağını yürütür. Lesch-Nyhan sendromunda eksik olan enzim olmadığı için seçenek yanlıştır.",
+      "C": "Mitokondriyal aldehit dehidrogenaz asetaldehitin asetata çevrilmesinde görev alır ve alkol metabolizmasının ikinci basamağını yürütür. Lesch-Nyhan sendromunun enzim eksikliği olmadığı için seçenek yanlıştır.",
+      "D": "Histidin dekarboksilaz histamin sentezinde yer alan enzimdir ve Tourette sendromunda ilişkili gen olarak anılır. Lesch-Nyhan sendromundaki enzim eksikliği bu enzim olmadığı için seçenek yanlıştır.",
+      "E": "Elastin, ELN geninin ürünü olan yapısal bir proteindir ve enzim değildir. Williams sendromuyla ilişkili olduğundan Lesch-Nyhan sendromundaki enzim eksikliğini açıklamaz."
+     },
+     "kanit": {
+      "sayfa": 49
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q33",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Xq26-q27.2'deki HPRT gen mutasyonuna bağlı, sadece erkek çocukları etkileyen hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Williams sendromu",
+      "B": "Frajil X sendromu",
+      "C": "Huntington koresi",
+      "D": "Lesch-Nyhan sendromu",
+      "E": "Prader-Willi sendromu"
+     },
+     "dogru": "D",
+     "aciklama": "Lesch-Nyhan sendromu X'e bağlı resesiftir, HPRT gen mutasyonu Xq26-q27.2'dedir ve sadece erkek çocuklar etkilenir.",
+     "sik_aciklamalari": {
+      "A": "Williams sendromu otozomal dominant geçişlidir ve 7q11.23 delesyonuyla oluşur. HPRT geniyle ilişkili olmadığı ve X'e bağlı olmadığı için seçenek yanlıştır.",
+      "B": "Frajil X sendromunun geni Xq27.3'te bulunan FMR1'dir ve dinamik mutasyonla ilişkilidir. HPRT geni bu hastalıkla ilişkili olmadığı için seçenek yanlıştır.",
+      "C": "Huntington koresi otozomal dominant geçişlidir ve kromozom 4 üzerindeki gende CAG tekrarlarıyla oluşur. HPRT mutasyonuyla ilişkili olmadığı için seçenek yanlıştır.",
+      "D": "Lesch-Nyhan sendromu X'e bağlı resesif geçer ve HPRT geni mutasyonu bu hastalığa yol açar. Sadece erkek çocuklar etkilendiği için bu seçenek doğru cevaptır.",
+      "E": "Prader-Willi sendromu hiperfaji ve kompülsiyonla seyreden bir sendromdur. HPRT mutasyonuna bağlı olmadığı ve X'e bağlı resesif geçiş göstermediği için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 48
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q34",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Lesch-Nyhan sendromunun en önemli klinik anormalliği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Makroorşidizm",
+      "B": "Hiperfaji",
+      "C": "Kompülsif self destrüktif davranış",
+      "D": "Ağlama ve gülme nöbetleri",
+      "E": "Supravalvüler aortik stenoz"
+     },
+     "dogru": "C",
+     "aciklama": "Lesch-Nyhan sendromunun en önemli klinik anormalliği kompülsif self destrüktif davranışlardır; hastalar kendine ve çevresine zarar verebilir.",
+     "sik_aciklamalari": {
+      "A": "Makroorşidizm Frajil X sendromunda puberte sonrası görülen fiziksel bir bulgudur ve büyük testislerle seyreder. Lesch-Nyhan sendromunun ana klinik özelliği olmadığı için seçenek yanlıştır.",
+      "B": "Hiperfaji Prader-Willi sendromunun davranış özelliğidir ve aşırı yeme ile kendini gösterir. Lesch-Nyhan sendromunda ön planda olan bulgu olmadığı için seçenek yanlıştır.",
+      "C": "Lesch-Nyhan sendromunun en önemli klinik anormalliği kompülsif self destrüktif davranışlardır. Self mutilasyon, agresif ve saldırgan davranış görülür; bu yüzden doğru cevaptır.",
+      "D": "Ağlama ve gülme nöbetleri Prader-Willi sendromunda gözlenen davranış bulgusudur ve hiperfajiyle birliktedir. Lesch-Nyhan sendromunun en önemli anormalliği olarak tanımlanmadığı için seçenek yanlıştır.",
+      "E": "Supravalvüler aortik stenoz Williams sendromunda görülen kalp bulgusudur ve elastin geniyle ilişkilidir. Lesch-Nyhan sendromunun ana klinik özelliği olmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 52
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q35",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Lesch-Nyhan sendromlu bir hastadaki kendine zarar verme davranışıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ağrı hissi yoktur ve davranış isteklidir",
+      "B": "Yalnızca kendine zarar verir",
+      "C": "Yalnızca erişkinlerde görülür",
+      "D": "Dil bozukluğuna bağlı gelişir",
+      "E": "Ağrı hissi vardır ve davranış kompülsiftir"
+     },
+     "dogru": "E",
+     "aciklama": "Bu davranışta ağrı hissi vardır ve davranış kompülsiftir; hastalar çevresindeki insanlara da zarar verebilir.",
+     "sik_aciklamalari": {
+      "A": "Hastanın ağrı duymadığı ifadesi yanlıştır; bu davranışta ağrı hissi vardır ve davranış kompülsiftir. Ağrı olmadığını ve davranışın istekli olduğunu söylemek bu bilgiye aykırı olduğundan seçenek yanlıştır.",
+      "B": "Lesch-Nyhan sendromunda hastalar kendilerine zarar vermenin yanında çevresindeki insanlara da zarar verebilir. Yalnız kendine zarar verdiğini söylemek bu bilgiyle çeliştiği için yanlıştır.",
+      "C": "Daha büyük çocuklar el parmaklarını ısırır ve koparır, yani davranış çocukluk döneminde görülür. Yalnız erişkinlere bağlamak bu bilgiye uymadığı için seçenek yanlıştır.",
+      "D": "Lesch-Nyhan sendromundaki davranış kompülsif niteliktedir ve pürin metabolizma bozukluğu zemininde ortaya çıkar. Dil bozukluğuna bağlı olarak tanımlanmadığı için seçenek yanlıştır.",
+      "E": "Lesch-Nyhan sendromundaki kendine zarar verme davranışında ağrı hissi vardır ve davranış kompülsiftir. Hastalar ayrıca agresif ve saldırgandır, bu nedenle ifade doğrudur."
+     },
+     "kanit": {
+      "sayfa": 52
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Huntington koresinin klinik özelliklerini ve genetiğini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q36",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Huntington koresinde ortaya çıkan kore, aşağıdakilerden hangisini ifade eder?",
+     "secenekler": {
+      "A": "İstemsiz ve ani hareket bozukluğu",
+      "B": "Hareketlerde belirgin yavaşlama",
+      "C": "Kas tonusunda yaygın artış",
+      "D": "Tekrarlayan basit vokal tik",
+      "E": "Uyaran olmaksızın gerçekleşen algı"
+     },
+     "dogru": "A",
+     "aciklama": "Kore, istemsiz, ani başlangıçlı ve kısa süreli hareket bozukluğudur; hareketlerde yavaşlama bradikinezidir.",
+     "sik_aciklamalari": {
+      "A": "Kore, istemsiz, ani başlangıçlı ve kısa süreli hareket bozukluğudur. Huntington koresinde nöbetlerin eşlik ettiği demans ve rijidite ile birlikte klasik bulgudur, bu yüzden doğru cevaptır.",
+      "B": "Hareketlerde yavaşlama bradikinezidir ve Huntington'da görülen ayrı bir nörolojik bulgudur. Kore ise hareket fazlalığı olduğundan yavaşlamayı anlatan bu seçenek koreyi tanımlamaz.",
+      "C": "Kas tonusunda artış rijiditeye karşılık gelir ve Huntington'da kore ile birlikte görülür. Koreyi tanımlayan kavram olmadığı için bu seçenek yanlıştır.",
+      "D": "Tekrarlayan basit vokal tikler Tourette sendromunun bulgusudur ve ses çıkarma ile kendini gösterir. Kore ise bir hareket bozukluğudur, bu nedenle seçenek yanlıştır.",
+      "E": "Uyaran olmaksızın gerçekleşen algılamalar varsanıdır ve şizofrenide görülen karakteristik bir semptomdur. Kore ise bir hareket bozukluğu olduğundan bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 53
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q37",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Huntington koresinde görülen kişilik değişikliklerinden biridir?",
+     "secenekler": {
+      "A": "Hiperfaji",
+      "B": "Kavgacı üslupta konuşma",
+      "C": "Kompülsif kendine zarar verme",
+      "D": "Paranoya",
+      "E": "Maceracı kişilik"
+     },
+     "dogru": "D",
+     "aciklama": "Huntington koresinde inatçılık, karamsarlık, ilgisizlik, irritabilite, anksiyete, depresyon ve paranoya gibi kişilik değişiklikleri görülür.",
+     "sik_aciklamalari": {
+      "A": "Hiperfaji Prader-Willi sendromunun davranış bulgusudur ve aşırı yeme ile kendini gösterir. Huntington'daki kişilik değişiklikleri listesinde yer almadığı için seçenek yanlıştır.",
+      "B": "Kavgacı üslupta konuşma Williams sendromunda görülen konuşma özelliğidir ve zengin kelime hazinesiyle birliktedir. Huntington koresinin kişilik değişikliği olmadığı için seçenek yanlıştır.",
+      "C": "Kompülsif kendine zarar verme Lesch-Nyhan sendromunun en önemli klinik bulgusudur. Huntington koresine özgü bir kişilik değişikliği olmadığı için seçenek yanlıştır.",
+      "D": "Huntington koresinde inatçılık, karamsarlık, ilgisizlik, irritabilite, anksiyete, depresyon ve paranoya gibi kişilik değişiklikleri görülür. Paranoya bu listede yer aldığı için doğru cevaptır.",
+      "E": "Maceracı kişilik beyindeki dopamin artışıyla ilişkilendirilen bir özelliktir ve kaşif ruhlu davranışla birlikte anılır. Huntington koresindeki kişilik değişiklikleri listesinde bulunmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 54
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q38",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Huntington hastalığının geni hangi kromozom üzerinde haritalanmıştır?",
+     "secenekler": {
+      "A": "Kromozom 7",
+      "B": "Kromozom 11",
+      "C": "Kromozom 21",
+      "D": "X kromozomu",
+      "E": "Kromozom 4"
+     },
+     "dogru": "E",
+     "aciklama": "HD geni 1983'te kromozom 4 üzerinde haritalanmıştır; hastalık CAG trinükleotit tekrarları sonucu ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Kromozom 7 üzerindeki 7q bölgesi otizmde en duyarlı alandır ve 7q11.23 Williams sendromunun bölgesidir. Huntington geni burada haritalanmadığı için seçenek yanlıştır.",
+      "B": "Kromozom 11 dopamin D2 reseptör geni DRD2'nin ve şizofreni ile ilişkili 11q21-22 bölgesinin yeridir. Huntington geni burada değil, kromozom 4 üzerinde olduğu için seçenek yanlıştır.",
+      "C": "Kromozom 21 Down sendromunda trizomisi görülen kromozomdur ve genetik mental retardasyonun en sık nedeniyle ilişkilidir. Huntington geni burada haritalanmadığı için seçenek yanlıştır.",
+      "D": "X kromozomu Frajil X ve Lesch-Nyhan gibi X'e bağlı hastalıkların yeridir. Huntington hastalığı otozomal dominant geçtiği için gen X kromozomunda değildir ve seçenek yanlıştır.",
+      "E": "Huntington hastalığının geni HD, 1983'te kromozom 4 üzerinde haritalanmıştır ve hastalık CAG trinükleotit tekrarlarıyla ortaya çıkar. Bu bilgi doğru olduğu için seçenek doğrudur."
+     },
+     "kanit": {
+      "sayfa": 55
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q39",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki hastalık ve mekanizma eşleşmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Frajil X - CAG tekrar artışı",
+      "B": "Huntington koresi - CGG tekrar artışı",
+      "C": "Huntington koresi - CAG tekrar artışı",
+      "D": "Lesch-Nyhan - CAG tekrar artışı",
+      "E": "Williams - CGG tekrar artışı"
+     },
+     "dogru": "C",
+     "aciklama": "Huntington koresi CAG trinükleotit tekrarlarıyla, Frajil X ise FMR1 geninde CGG tekrar artışıyla ortaya çıkar.",
+     "sik_aciklamalari": {
+      "A": "Frajil X'in mekanizması FMR1 geninin 5' UTR bölgesindeki CGG tekrar artışıdır ve gen aktivitesinin kaybına yol açar. Eşleşmede CAG verildiği için seçenek yanlıştır.",
+      "B": "Huntington'da tekrar artışı CAG dizisindedir; CGG ise Frajil X'in tekrar dizisidir. Eşleşme tekrar dizisini karıştırdığı için, Huntington'a CGG vermek yanlış olur ve bu seçenek yanlıştır.",
+      "C": "Huntington koresi trinükleotit CAG tekrarları sonucu ortaya çıkan bir hastalıktır ve otozomal dominant geçer. Eşleşme doğru olduğu için doğru cevaptır.",
+      "D": "Lesch-Nyhan sendromu tekrar artışı değil, HPRT gen mutasyonuyla ortaya çıkan enzim eksikliğidir ve aşırı ürik asit üretir. Bu eşleşme yanlıştır.",
+      "E": "Williams sendromu 7q11.23 delesyonuyla oluşur ve ELN genini içerir. CGG tekrar artışıyla ilişkili olmadığı için, bu eşleşme yanlıştır ve seçenek doğru cevap olamaz."
+     },
+     "kanit": {
+      "sayfa": 55
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Şizofreninin epidemiyolojisini, semptomlarını ve genetiğini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q40",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Monozigotik ikizlerde birinde şizofreni varsa diğerinde görülme riski yüzde kaçtır?",
+     "secenekler": {
+      "A": "%12",
+      "B": "%47",
+      "C": "%39",
+      "D": "%1",
+      "E": "%60"
+     },
+     "dogru": "B",
+     "aciklama": "Monozigotik ikizlerde birinde şizofreni görülürse diğerinde görülme riski %47'dir; bir ebeveynde %12, her iki ebeveynde %39'dur.",
+     "sik_aciklamalari": {
+      "A": "Yüzde on iki, bir ebeveynde şizofreni varsa bir sonraki nesle geçme olasılığıdır ve ikiz riskinden düşüktür. İkizdeki risk olmadığı için seçenek yanlıştır.",
+      "B": "Monozigotik ikizlerde birinde şizofreni görülürse diğerinde görülme riski %47'dir. Genetik katkıyı gösteren en yüksek değer olduğu için bu seçenek doğru cevaptır.",
+      "C": "Yüzde otuz dokuz, her iki ebeveynde şizofreni varsa nesle geçme olasılığıdır. İkizdeki risk olan yüzde kırk yediden düşük olduğu için seçenek yanlıştır.",
+      "D": "Yüzde bir şizofreninin yaşam boyu prevalansıdır ve hastalığın toplumda görülme sıklığını anlatır. İkizdeki hastalık riskini göstermediği için bu seçenek yanlıştır.",
+      "E": "Yüzde altmış, alkol bağımlılığında genetik katkı payı olarak gösterilen orandır ve alkolizmin genetik yönünü anlatır. Şizofrenide monozigotik ikiz riskini göstermediği için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 56
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q41",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Şizofreninin yaşam boyu prevalansı ve başlangıç yaşı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "%1; 5-10 yaş arası",
+      "B": "%3; 15-35 yaş arası",
+      "C": "%12; 30-50 yaş arası",
+      "D": "%1; 15-35 yaş arası",
+      "E": "%47; 15-35 yaş arası"
+     },
+     "dogru": "D",
+     "aciklama": "Şizofreni genelde 15-35 yaşlar arasında başlar ve yaşam boyu prevalansı %1'dir; erkeklerde daha erken başlar.",
+     "sik_aciklamalari": {
+      "A": "Yüzde bir doğru prevalanstır ancak beş ile on yaş Tourette sendromunun başlangıç dönemidir. Şizofreni bu yaşlarda başlamadığı için seçenek yanlıştır.",
+      "B": "Yüzde üç değeri toplumda mental retardasyon sıklığını anlatır ve IQ 70-75'in altındaki kişileri kapsar. Şizofrenide yaşam boyu prevalans yüzde bir olduğu için seçenek yanlıştır.",
+      "C": "Yüzde on iki bir ebeveyndeki nesle geçme olasılığıdır ve otuz ile elli yaş Huntington'ın başlangıç dönemidir. Prevalans ve yaş birlikte yanlış olduğundan seçenek yanlıştır.",
+      "D": "Şizofreni genelde 15-35 yaşlar arasında başlar ve yaşam boyu prevalansı %1'dir. Erkeklerde daha erken başlangıçlı olduğundan bu seçenek doğru cevaptır.",
+      "E": "Yüzde kırk yedi ikizdeki risktir ve prevalansı anlatmaz. Yaş aralığı doğru olsa da oran yanlış olduğundan, bu seçenek hem değeri hem anlamı bakımından yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 56
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q42",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Bir uyaran olmaksızın gerçekleşen algılamalar aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Varsanı",
+      "B": "Sanrı",
+      "C": "Dezorganize konuşma",
+      "D": "Donakalım",
+      "E": "Negatif semptomatoloji"
+     },
+     "dogru": "A",
+     "aciklama": "Varsanı, uyaran olmaksızın gerçekleşen algılamadır; sanrı ise aksi kanıtlansa da ısrar edilen yanlış inançtır.",
+     "sik_aciklamalari": {
+      "A": "Varsanı yani halüsinasyon, bir uyaran olmaksızın gerçekleşen algılamadır ve işitsel, görsel, koku, tat veya temas alanlarında olabilir. Bu yüzden doğru cevaptır.",
+      "B": "Sanrı, aksinin kanıtlanmasına karşın kişinin doğruluğunda ısrar ettiği yanlış inançtır. Uyaransız algılamayı değil, inanç bozukluğunu anlattığı için bu seçenek yanlıştır.",
+      "C": "Dezorganize konuşma, şizofreninin karakteristik semptomlarından biri olarak derste sayılır ve konuşmayla ilgilidir. Uyaransız algılamanın tanımı olmadığı için bu seçenek yanlıştır.",
+      "D": "Donakalım balmumu belirtisi olarak anılır ve dezorganize davranışlar arasında yer alan bir motor belirtidir. Algı bozukluğu olmadığı için seçenek yanlıştır.",
+      "E": "Negatif semptomatoloji, şizofreninin karakteristik semptom gruplarından biri olarak derste sayılır ve ayrı bir semptom grubudur. Uyaransız algılamayı tanımlamadığı için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 57
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q43",
+     "kazanim": 17,
+     "zorluk": "zor",
+     "soru": "Şizofreni ve diğer psikotik bozukluklarla ilişkili olduğu bildirilen kromozom bölgesi hangisidir?",
+     "secenekler": {
+      "A": "7q11.23",
+      "B": "13q31",
+      "C": "11q21-22",
+      "D": "3p13.3",
+      "E": "22q12"
+     },
+     "dogru": "C",
+     "aciklama": "11. kromozomun 11q21-22 bölgesindeki mutasyonlar şizofreni ve diğer psikotik bozukluklarla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "7q11.23, Williams sendromunda ELN geninin delesyona uğradığı bölgedir ve elastin ile ilişkilidir. Şizofreni ile ilişkilendirilen bölge olmadığı için bu seçenek yanlıştır.",
+      "B": "13q31, Tourette sendromunda tek ekzonlu aday gen SLITRK1'in bölgesidir ve tikle ilişkilidir. Şizofreni ile ilişkili bölge olmadığı için seçenek yanlıştır.",
+      "C": "11. kromozomun 11q21-22 bölgesindeki mutasyonların şizofreni ve diğer psikotik bozukluklarla ilişkili olduğu bildirilmiştir. Bu bilgi doğru olduğu için seçenek doğrudur.",
+      "D": "3p13.3, bipolar hastalıkta GSK3-beta'ya ait 50 SNP'nin saptandığı bölgedir ve duygu durum bozukluğuyla ilişkilidir. Şizofreni bölgesi olmadığı için seçenek yanlıştır.",
+      "E": "22q12, bipolar hastalıkta GRK3 yatkınlık geninin bulunduğu bölgedir ve popülasyon çalışmalarıyla ortaya konmuştur. Şizofrenide anılan bölge olmadığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 58
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Alzheimer hastalığının tanımını ve evrelerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q44",
+     "kazanim": 18,
+     "zorluk": "kolay",
+     "soru": "Demansın en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Huntington koresi",
+      "B": "Parkinson hastalığı",
+      "C": "Şizofreni",
+      "D": "Tourette sendromu",
+      "E": "Alzheimer hastalığı"
+     },
+     "dogru": "E",
+     "aciklama": "Alzheimer hastalığı ilerleyici nörodejeneratif bir hastalıktır ve demansın en sık nedenidir.",
+     "sik_aciklamalari": {
+      "A": "Huntington koresinde demans bulunur ancak hastalık 4-7/100.000 sıklığında görülen seyrek bir hastalıktır. Demansın en sık nedeni olamaz, bu nedenle seçenek yanlıştır.",
+      "B": "Parkinson hastalığı beyindeki dopamin azalmasıyla ilişkili hareket bozukluğuyla giden nörolojik bir hastalıktır. Demansın en sık nedeni olarak tanımlanmadığı için seçenek yanlıştır.",
+      "C": "Şizofreni 15-35 yaşta başlayan, sanrı ve varsanıyla seyreden bir psikotik bozukluktur. Demansa neden olan bir hastalık olarak tanımlanmadığı için seçenek yanlıştır.",
+      "D": "Tourette sendromu tiklerle karakterizedir ve çocuklukta başlayan bir davranış bozukluğudur. Demansa neden olan bir hastalık olarak tanımlanmadığı için seçenek yanlıştır.",
+      "E": "Alzheimer hastalığı günlük yaşamsal aktivitelerde azalma ve kognitif bozulma ile giden ilerleyici nörodejeneratif hastalıktır. Demansın en sık nedeni olduğu için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 59
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q45",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Alzheimer hastalığında yalnızca ileri evrede görülen bulgudur?",
+     "secenekler": {
+      "A": "Eğlendiği şeylere ilgisini kaybetme",
+      "B": "Total inkontinans",
+      "C": "Bildiği yolda kaybolma",
+      "D": "Evden kaçma",
+      "E": "Eşyaların yerini bulamama"
+     },
+     "dogru": "B",
+     "aciklama": "İleri evrede aile üyelerini tanıyamama, yürümenin kaybolması ve total inkontinans görülür; diğer seçenekler erken ve orta evre bulgularıdır.",
+     "sik_aciklamalari": {
+      "A": "Eğlendiği şeylere olan ilgisini kaybetme Alzheimer hastalığının erken evre bulgularındandır ve kişilik değişiklikleriyle birlikte görülür. İleri evrede aranan özgü bulgu olmadığı için seçenek yanlıştır.",
+      "B": "Alzheimer'ın ileri evresinde aile üyelerini tanıyamama, günlük aktiviteleri yapamama, yürümenin kaybolması ve total inkontinans görülür. Total inkontinans yalnız bu evrede sayıldığı için seçenek doğru cevaptır.",
+      "C": "Bildiği yolda kaybolma Alzheimer hastalığının erken evre bulgusudur ve yakın bellek kaybıyla birlikte görülür. İleri evreye özgü olmadığı için seçenek yanlıştır.",
+      "D": "Evden kaçma Alzheimer hastalığının orta evre bulgusudur ve uzak bellek sorunlarıyla birliktedir. İleri evrede hasta yürüyemez hale geldiği için seçenek yanlıştır.",
+      "E": "Eşyaların yerini bulamama Alzheimer hastalığının erken evre bulgularındandır ve yakın bellek kaybıyla birliktedir. İleri evre için ayırt edici olmadığından seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 61
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Alkol bağımlılığının genetik risk faktörlerini ve metabolizma genlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q46",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Alkolik bir evden uzaklaştırılsa dahi alkol bağımlılarının çocuklarındaki risk artışı kaç kattır?",
+     "secenekler": {
+      "A": "2 kat",
+      "B": "3 kat",
+      "C": "8 kat",
+      "D": "4 kat",
+      "E": "10 kat"
+     },
+     "dogru": "D",
+     "aciklama": "Alkolik evden uzaklaştırılsa dahi çocukta 4 kat artmış risk vardır; bu genetik katkıyı gösterir.",
+     "sik_aciklamalari": {
+      "A": "İki kat, aile hikayesi olan erkeklerde alkolizm riskinin artış aralığı olan iki ile dört katın alt sınırıdır. Evden uzaklaştırılan çocuk için verilen değer olmadığı için seçenek yanlıştır.",
+      "B": "Üç kat, alkol bağımlılarının çocuklarında bildirilen üç ile sekiz kat aralığının alt sınırıdır. Evden uzaklaştırılan çocuk için verilen değer olmadığı için seçenek yanlıştır.",
+      "C": "Sekiz kat, alkol bağımlılarının çocuklarında bildirilen üç ile sekiz kat aralığının üst sınırıdır. Evden uzaklaştırılan çocuklar için bildirilen sayı olmadığından seçenek yanlıştır.",
+      "D": "Alkolik evden uzaklaştırılsa dahi çocuğunda 4 kat artmış risk vardır. Çevre değişse de riskin sürmesi genetik katkıyı gösterir; bu yüzden doğru cevaptır.",
+      "E": "On kat bildirilen değerlerin üzerindedir ve alkol bağımlılığı bölümünde verilmemiştir. Evden uzaklaştırılan çocuklarda risk dört kat arttığı için seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 65
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q47",
+     "kazanim": 19,
+     "zorluk": "zor",
+     "soru": "Nöropeptid Y hangi süreçlerle ilişkilendirilir?",
+     "secenekler": {
+      "A": "Stres, kaygı, iştah ve bağımlılık",
+      "B": "Uyku ritmi ve karar verme",
+      "C": "Ödül, zevk ve hafıza",
+      "D": "Alkolün asetaldehite dönüşümü",
+      "E": "Ağrı hissinin azalması"
+     },
+     "dogru": "A",
+     "aciklama": "Nöropeptid Y stres, kaygı, iştah, duygu durumu ve bağımlılıkla ilişkilidir ve alkolizmde genetik faktörler arasında sayılır.",
+     "sik_aciklamalari": {
+      "A": "Nöropeptid Y stres, kaygı, iştah, duygu durumu ve bağımlılıkla ilişkilidir ve alkolizmde genetik faktörler arasında sayılır. Bu işlevleri tanımladığı için doğru cevaptır.",
+      "B": "Uyku ritmi ve karar verme yetisi norepinefrinle ilişkilidir ve dikkat ile uyanıklığı da düzenler. Nöropeptid Y'nin işlevi olmadığı için seçenek yanlıştır.",
+      "C": "Ödül, zevk ve hafıza dopaminle ilişkilidir ve dopamin motivasyonu da etkiler. Bu işlevler nöropeptid Y'yi tanımlamadığı için bu seçenek yanlıştır.",
+      "D": "Alkolün asetaldehite dönüşümü alkol dehidrogenaz enziminin işidir ve alkol metabolizmasının ilk basamağıdır. Nöropeptid Y bir nöropeptit olduğundan bu basamakta rol almaz, seçenek yanlıştır.",
+      "E": "Ağrı hissinin azalması opioidlerin etkisidir ve opioid reseptörlerine bağlanarak ortaya çıkar. Nöropeptid Y bu işlevle tanımlanmadığı için bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 66
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q48",
+     "kazanim": 19,
+     "zorluk": "zor",
+     "soru": "Asetaldehitin asetata dönüştüğü basamakta hangi alel artan asetaldehit birikimine yol açar?",
+     "secenekler": {
+      "A": "ADH 2-2",
+      "B": "ADH 2-3",
+      "C": "ADH 3-1",
+      "D": "DRD2 Taq1-A1",
+      "E": "ALDH 2-2"
+     },
+     "dogru": "E",
+     "aciklama": "Asetaldehitten asetata basamağında ALDH 2-2 aleli artan asetaldehitle ilişkilidir; alkolden asetaldehite basamağında ADH aleller rol alır.",
+     "sik_aciklamalari": {
+      "A": "ADH 2-2 alkolden asetaldehite geçiş basamağındaki alellerdendir ve artan asetaldehitle ilişkilidir. Soru ikinci basamağı, yani asetaldehitten asetata geçişi sorduğu için seçenek yanlıştır.",
+      "B": "ADH 2-3 alkolden asetaldehite geçiş basamağında artan asetaldehitle ilişkili bir alel olarak tanımlanır. İkinci basamak için verilen alel olmadığından seçenek yanlıştır.",
+      "C": "ADH 3-1 de birinci basamağa ait olan ve artan asetaldehitle ilişkilendirilen bir aleldir. Asetaldehitten asetata basamağı ALDH ile gösterildiği için seçenek yanlıştır.",
+      "D": "DRD2 Taq1-A1 dopamin D2 reseptör genindeki polimorfizmdir ve alkolizm yatkınlığıyla araştırılmıştır. Alkol metabolizması basamaklarındaki alelleri anlatmadığı için bu seçenek yanlıştır.",
+      "E": "Asetaldehitten asetata basamağında artan asetaldehitle ilişkili alel ALDH 2-2'dir. Mitokondriyal aldehit dehidrogenaz bu basamağı yürüttüğü için bu seçenek doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 67
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q49",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Alkolizmde araştırılan 5-HTTLPR polimorfizmi hangi genin promotöründe yer alır?",
+     "secenekler": {
+      "A": "Dopamin D2 reseptör geni",
+      "B": "Huntington geni",
+      "C": "Serotonin taşıyıcı geni",
+      "D": "Alkol dehidrogenaz geni",
+      "E": "Elastin geni"
+     },
+     "dogru": "C",
+     "aciklama": "5-HTTLPR polimorfizmi serotonin transporter geni HTT'nin promotöründedir; Huntington geni HD olarak adlandırılır ve farklıdır.",
+     "sik_aciklamalari": {
+      "A": "Dopamin D2 reseptör geni DRD2'dir ve Taq1-A1 polimorfizmleri alkolizmde araştırılmıştır. 5-HTTLPR bu genin promotöründe değil, serotonin taşıyıcı geninde bulunduğu için bu seçenek yanlıştır.",
+      "B": "Huntington geni HD olarak anılır ve kromozom 4 üzerindedir. Alkolizmdeki HTT ayrı bir gendir ve serotonin taşıyıcısını kodladığı için seçenek yanlıştır.",
+      "C": "5-HTTLPR, serotonin transporter geni HTT'nin promotöründeki fonksiyonel polimorfizmdir ve alkolizmde araştırılmıştır. Bu bilgi doğru olduğu için bu seçenek doğru cevaptır.",
+      "D": "Alkol dehidrogenaz geni kromozom 4 üzerinde kodlanır ve ADH2 ile ADH3 fonksiyonel olarak polimorfiktir. 5-HTTLPR bu genin değil, serotonin taşıyıcı geninin polimorfizmi olduğundan seçenek yanlıştır.",
+      "E": "Elastin geni ELN, Williams sendromunda delesyona uğrayan genle ilişkilidir. Alkolizmdeki 5-HTTLPR polimorfizmiyle ilişkisi olmadığı için bu seçenek yanlıştır ve cevap olamaz."
+     },
+     "kanit": {
+      "sayfa": 69
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "Tourette sendromunun tanımını, belirtilerini ve nedenlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q50",
+     "kazanim": 20,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi Tourette sendromundaki vokal tiklerden biridir?",
+     "secenekler": {
+      "A": "Omuz silkme",
+      "B": "Boğaz temizleme",
+      "C": "Başını ani çevirme",
+      "D": "Kolların sıçrayıcı hareketi",
+      "E": "Göz kırpma"
+     },
+     "dogru": "B",
+     "aciklama": "Tourette sendromunda vokal tikler homurdanma, boğaz temizleme ve yüksek sesli soluk almadır; diğer seçenekler motor tiklerdir.",
+     "sik_aciklamalari": {
+      "A": "Omuz silkme motor tiktir ve basit tikler arasında sayılır. Vokal tik ses çıkaran tik olduğundan, hareketle kendini gösteren bu seçenek yanlıştır.",
+      "B": "Vokal tiklerde homurdanma, boğaz temizleme ve yüksek sesli soluk alma bulunur. Boğaz temizleme ses çıkaran bir tik olduğu için doğru cevaptır.",
+      "C": "Başını ani çevirme motor tikler arasında sayılır ve baş ile boyun bölgesinde görülür. Ses çıkarmadığı için vokal tik olmadığından bu seçenek yanlıştır.",
+      "D": "Kolların sıçrayıcı tarzda hareketi motor tiktir ve hareket olarak kendini gösterir. Vokal tikler ses ve soluk ile ilgili olduğundan seçenek yanlıştır.",
+      "E": "Göz kırpma basit motor tiklerden biridir ve yüzde görülen kısa bir harekettir. Ses çıkarmadığı için vokal tik olmadığından seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 72
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q51",
+     "kazanim": 20,
+     "zorluk": "zor",
+     "soru": "Tourette sendromunun tanımıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Nöropsikiyatrik ve nörogelişimsel bir davranış bozukluğudur",
+      "B": "Yalnızca motor tiklerle karakterizedir",
+      "C": "Yalnızca vokal tiklerle karakterizedir",
+      "D": "Tikler genellikle erişkinlikte başlar",
+      "E": "Zeka geriliği ana bulgusudur"
+     },
+     "dogru": "A",
+     "aciklama": "Tourette sendromu tekrarlayan basit motor ve vokal tiklerle karakterize nöropsikiyatrik ve nörogelişimsel bir davranış bozukluğudur.",
+     "sik_aciklamalari": {
+      "A": "Tourette sendromu tekrarlayan basit motor ve vokal tiklerle karakterize nöropsikiyatrik ve nörogelişimsel bir davranış bozukluğudur. Tanımı doğru verdiği için seçenek doğrudur.",
+      "B": "Tanımda motor tiklerin yanında vokal tikler de bulunur ve ikisi birlikte aranır. Yalnız motor tikli tablo bu tanımı karşılamadığı için seçenek yanlıştır.",
+      "C": "Tanımda vokal tiklerin yanında motor tikler de bulunur ve ikisi birlikte aranır. Yalnız vokal tikli tablo bu tanıma uymadığı için seçenek yanlıştır.",
+      "D": "Tikler çocukluk döneminde başlar; birçok hastada 10'lu yaşların başında, belirtiler genellikle 5-10 yaşlarında başlar. Erişkinlikte başlangıç ifadesi bu bilgiye aykırı olduğundan seçenek yanlıştır.",
+      "E": "Tourette sendromunun ana belirtileri tiklerdir ve zeka geriliği bu tablonun tanımında yer almaz. Zeka geriliğini ana bulgu saymak yanlış olduğundan seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 72
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-52-davranis-genetigi-q52",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Tourette sendromunda karmaşık tik değildir?",
+     "secenekler": {
+      "A": "Zıplama",
+      "B": "Daireler çizerek dönme",
+      "C": "Dürtüsel olarak nesnelere dokunma",
+      "D": "Küfür etme",
+      "E": "Göz kırpma"
+     },
+     "dogru": "E",
+     "aciklama": "Göz kırpma basit tiktir; zıplama, daireler çizerek dönme, dürtüsel dokunma, ekolali ve koprolali karmaşık tiklerdir.",
+     "sik_aciklamalari": {
+      "A": "Zıplama karmaşık tikler arasında sayılır ve karmaşık hareket dizisini içerir. Karmaşık tik olduğu için olumsuz kökün aradığı seçenek olamaz ve bu seçenek yanlıştır.",
+      "B": "Daireler çizerek dönme karmaşık tiktir ve daha şiddetli versiyona aittir. Karmaşık tik olduğu için olumsuz kökün aradığı seçenek olamaz ve bu seçenek yanlıştır.",
+      "C": "Dürtüsel olarak nesnelere dokunma karmaşık tiktir ve çok basamaklı bir davranıştır. Karmaşık tik olduğu için olumsuz kökün aradığı seçenek olamaz ve bu seçenek yanlıştır.",
+      "D": "Küfür etme yani koprolali karmaşık vokal tiktir ve ekolali ile birlikte anılır. Karmaşık tik olduğu için olumsuz kökün aradığı seçenek olamaz.",
+      "E": "Göz kırpma, burnunu çekme, omuz silkme ve yüzünü buruşturma gibi basit tiklerdendir. Karmaşık tik olmadığı için olumsuz kökün doğru cevabıdır."
+     },
+     "kanit": {
+      "sayfa": 74
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Tourette sendromunun genetiğini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q53",
+     "kazanim": 21,
+     "zorluk": "zor",
+     "soru": "Tourette sendromunun genetiği ve tanısı ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Monogenik neden olguların çoğundadır",
+      "B": "Tanıda genetik analiz testi kullanılır",
+      "C": "SLITRK1 çok ekzonlu bir gendir",
+      "D": "Monogenik neden bireylerin %2'sinden azındadır",
+      "E": "Yalnızca çevresel faktörlerle oluşur"
+     },
+     "dogru": "D",
+     "aciklama": "Tourette sendromunun nedeni bireylerin %2'sinden daha azında monogeniktir; hastalık genetik ve çevresel faktörlerin etkisiyle oluşur ve genetik analiz testi yoktur.",
+     "sik_aciklamalari": {
+      "A": "Monogenik neden olguların çoğunda değil, bireylerin %2'sinden azındadır ve nadir bir durumdur. Bu ifade oranı tersine çevirdiği için seçenek yanlıştır.",
+      "B": "Hastalığın moleküler patolojisi tam bilinmez ve genetik analiz testi yoktur. Tanıda genetik testin kullanıldığını söylemek bu bilgiye aykırı olduğundan seçenek yanlıştır.",
+      "C": "13q31 bölgesindeki SLITRK1 tek ekzonlu bir aday gendir ve Tourette sendromunda tanımlanmıştır. Çok ekzonlu olduğunu söylemek bu bilgiyle çeliştiği için seçenek yanlıştır.",
+      "D": "Tourette sendromunun nedeni bireylerin %2'sinden daha azında monogeniktir. Hastalık genetik ve çevresel faktörlerin ortak etkisiyle oluştuğu için bu ifade doğrudur.",
+      "E": "Tourette sendromu genetik ve çevresel faktörlerin ortak etkisiyle oluşur. Yalnız çevresel faktörlere bağlamak bu bilgiye aykırı olduğundan bu seçenek yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 78
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Bipolar hastalığın genetiğini ve yatkınlık genlerini açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-52-davranis-genetigi-q54",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Bipolar hastalıkta 22q12 bölgesinde yer alan yatkınlık geni hangisidir?",
+     "secenekler": {
+      "A": "GRK3",
+      "B": "GSK3-beta",
+      "C": "PFKL",
+      "D": "SLITRK1",
+      "E": "RELN"
+     },
+     "dogru": "A",
+     "aciklama": "Bipolar hastalıkta 3p13.3'te GSK3-beta'ya ait 50 SNP, 22q12'de GRK3 ve 21q22.3'te PFKL yatkınlık genleri tanımlanmıştır.",
+     "sik_aciklamalari": {
+      "A": "Bipolar hastalıkta 22q12 bölgesinde yer alan yatkınlık geni GRK3'tür. Bu gen bipolar hastalarda yapılan popülasyon çalışmalarıyla ortaya konmuştur, bu yüzden doğru cevaptır.",
+      "B": "GSK3-beta için 3p13.3 bölgesinde 50 SNP saptanmıştır ve bipolar hastalıkla ilişkilidir. 22q12 bölgesinde yer alan gen olmadığı için seçenek yanlıştır.",
+      "C": "PFKL, 21q22.3 bölgesinde yer alan bir yatkınlık genidir ve bipolar hastalıkla ilişkilendirilmiştir. 22q12 bölgesinin geni olmadığı için bu seçenek yanlıştır.",
+      "D": "SLITRK1, 13q31 bölgesinde yer alan ve Tourette sendromu için tanımlanan aday gendir. Bipolar hastalıkla ilişkili olmadığı için bu seçenek yanlıştır.",
+      "E": "RELN, 7q bölgesinde yer alan ve otizmden sorumlu olabileceği bildirilen gendir. Bipolar hastalıkla ilişkili olmadığı için bu seçenek yanlıştır ve cevap olamaz."
+     },
+     "kanit": {
+      "sayfa": 82
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  }
+ ],
+ "sira": 52,
+ "tarih": "2026-11-23",
+ "soru_sayisi": 54
+}
