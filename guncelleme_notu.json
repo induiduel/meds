@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 872,
-  "baslik": "Yeni ders: Lokal Anestezik İlaçlar",
+  "onem": 873,
+  "baslik": "Yeni sesli dersler: Davranış Genetiği; farmakoloji derslerinde ses",
   "maddeler": [
-    "Farmakolojide Lokal Anestezik İlaçlar dersinin sesli anlatım metni eklendi; ses hazırlanıyor."
+    "Tıbbi Genetikte Davranış Genetiği dersinin sesli anlatım metni eklendi; ses hazırlanıyor.",
+    "Adrenoseptör Antagonist İlaçlar ve Kolinoseptör Aktive Edici İlaçlar derslerinin sesi, kelime takibi ve PDF işaretleri hazır."
   ],
   "eklenen": [
     "Ders özeti (Kurul 2, 50 ders)"
