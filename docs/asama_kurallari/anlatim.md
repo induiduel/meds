@@ -1,6 +1,6 @@
 # Aşama kuralları — anlatim
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 27 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 28 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H2 — Türkçeye uymayan ifade ve iç etiketler (2026-10-18)
 - **Kurul 2'de doğrusu:** Doğal, eksiksiz, anlaşılır Türkçe; çeviri mecaz ve iç etiket yok; tam cümle.
@@ -108,4 +108,8 @@
 
 ### H644 — Basit dilli V2 sürümlerinde denetçinin en sık yakaladığı üç hata: tekrar eden ek cümle, aralığı tek sayıya indirme, İngilizce harf okunuşu (2026-11-22, psikiyatri 16 ders)
 - **Kural:** Basit dil sürümünde ek cümle önceki cümleyi yinelemez; aralık iki sınırıyla aktarılır, örnek sayı uydurulmaz; kaynağın söylemediği neden kurulmaz; kısaltma Türkçe okunur (di es em). V1 cümlesi aynen kalırsa çizimi `cizim_tasi.py` taşır.
+
+
+### H645 · PDF işareti "yalnız sayfa"ya düşüyordu (2026-11-23)
+- **Kural:** Eklenen açıklama cümlesi açıkladığı slayt satırına çapalanır; boş `satir` bırakılmaz. Tablo çapasına satır da yazılır.
 

@@ -199,3 +199,9 @@
 - **Kök neden:** `anlatim_kapi.py` tekrarı, aralık bozulmasını, kaynak dışı çıkarımı ve okunuş dilini ölçmez (yalnız rakam/kısaltma biçimi ve satır çapası). Sadeleştirme isteği yazarı "açıkla, neden'ini söyle" yönüne iter; kaynağın söylemediği nedeni üretmek bu yönün doğal hatasıdır.
 - **Çözüm:** Her ders için bağımsız denetçi → `denetim.json` (kimlik + tam öneri cümlesi ya da SIL) → `meds_temp/psikiyatri_v2/uygula.py` (kimlikle uygular, çıkmış/hoca alanlı cümleyi silmez) → kapı → değişen kimliklerin yeniden denetimi. Denetçinin kendi önerisi de tekrar üretebildi (k2-11, k2-19 ikinci tur) — ikinci tur atlanmaz.
 - **Kural:** Basit dil sürümünde ek cümle önceki cümleyi yinelemez; aralık iki sınırıyla aktarılır, örnek sayı uydurulmaz; kaynağın söylemediği neden kurulmaz; kısaltma Türkçe okunur (di es em). V1 cümlesi aynen kalırsa çizimi `cizim_tasi.py` taşır.
+
+### H645 · PDF işareti "yalnız sayfa"ya düşüyordu (2026-11-23)
+- **Belirti:** Psikiyatri V2'lerin 10'unda takip kapısı T5: işaretlerin %5–20'si yalnız sayfa vurgusu; k2-15'te tablo cümlesi komşu sayfaya işaretlendi.
+- **Kök neden:** `pdf_isaret.py` PDF kelimesini yalnız boşlukla böler ("EKT(elektrokonvülzif" → kök `ekt(e`), konuşma tarafı noktalamadan da böler; çapa satırı tutmuyordu. Kısa başlık çapası ("Nöroplastisite") uzun maddenin parçasıyken ≥0,5 oran kuralı reddediyordu. `tablo` çapalı sayfada find_tables tablo görmeyince satır denenmeden ±1 sayfadaki görsele kaçılıyordu. V2'de boş `satir`lı açıklama cümleleri de vardı.
+- **Çözüm:** PDF kelimesi `KELIME` ile parçalanır; tüm kökleri sırayla geçen kısa çapa kabul; tablo çapasında önce aynı sayfanın satırları; boş çapa aynı paragraf+sayfadaki önceki (yoksa sonraki) çapalı satırı devralır (`meds_temp/psikiyatri_v2/capa_miras.py`, `miras:1`). 16 V2: T5 0 HATA.
+- **Kural:** Eklenen açıklama cümlesi açıkladığı slayt satırına çapalanır; boş `satir` bırakılmaz. Tablo çapasına satır da yazılır.

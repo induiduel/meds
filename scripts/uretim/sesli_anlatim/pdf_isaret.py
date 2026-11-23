@@ -199,11 +199,14 @@ class Sayfa:
             mi = len(self.maddeler) - 1
             for w, box in ws:
                 acik["metin"].append(w)
-                k = kok(w)
-                if k:
-                    self.kelimeler.append((k, mi, box))
-                    acik["kok"] += 1
-                    acik["koks"].add(k)
+                # H645: PDF kelimesi boşlukla bölünür ("EKT(elektrokonvülzif"); konuşma tarafı (tokenler) KELIME ile
+                # noktalamadan da böler. Aynı parçalama yapılmazsa kök "ekt(e" olur, çapa satırı tutmaz → "sayfa".
+                for parca in (KELIME.findall(w) or [w]):
+                    k = kok(parca)
+                    if k:
+                        self.kelimeler.append((k, mi, box))
+                        acik["kok"] += 1
+                        acik["koks"].add(k)
             acik["bitti"] = bool(re.search(r"[.!?:]$", ws[-1][0])) or im
         self.tablolar = []
         try:
@@ -341,7 +344,9 @@ def capa_maddeleri(sy: Sayfa, satirlar: list[str]) -> set[int]:
             for b in range(a, min(a + 4, len(sy.maddeler))):
                 kok_say += madde_kokleri(sy, b)
                 ort = len(lcs(hedef, kok_say))
-                if ort / len(hedef) >= MADDE_ORAN and ort / max(1, len(kok_say)) >= 0.5:
+                # H645: kısa çapa (başlık sözcüğü "Nöroplastisite") uzun maddenin parçasıysa ≥0,5 oranı tutmazdı → tüm
+                # kökleri sırayla maddede geçiyorsa da kabul (en kısa aralık, ilk madde).
+                if ort / len(hedef) >= MADDE_ORAN and (ort / max(1, len(kok_say)) >= 0.5 or ort == len(hedef)):
                     if en is None or (b - a, -ort) < (en[1] - en[0], -en[2]):
                         en = (a, b, ort)
                     break
@@ -597,6 +602,12 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
         isr = sekil_isareti(sy, int(sayfa), capalar)
         if isr:
             return isr
+        # H645: tablo metin olarak dizilmiş ama find_tables tanımamış (k2-15 s.29 prognoz tablosu): çapa satırları bu
+        # sayfada tutuyorsa komşu sayfaya kaçmadan buradaki satırlar işaretlenir.
+        st0 = [x for c in capalar for x in ([c["satir"]] if isinstance(c.get("satir"), str) else (c.get("satir") or [])) if x]
+        ms0 = capa_maddeleri(sy, st0) if st0 else set()
+        if ms0:
+            return {"s": int(sayfa), **eslestir_capa(cumle, sy, ms0)}
         # çapanın sayfasında görsel yok: hizalama kayması (±1) — komşu sayfadaki görsel (R# dizini o sayfaya ait değil)
         yalin = [{k: v for k, v in c.items() if k not in ("resim", "kutu")} for c in capalar]
         for s2 in (int(sayfa) + 1, int(sayfa) - 1):

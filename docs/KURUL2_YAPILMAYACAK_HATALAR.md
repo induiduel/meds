@@ -479,3 +479,4 @@
 - **—** · Sesli ders "İlerlemeyi temizle" yenileyince eski ilerleme geri geliyordu (birikimli eşitleme anahtarında silme) → hatalar/on_yuz_oynatici_ders.md
 - **H643** · Çıkmış konum dosyasında metinHash yoktu (rozetler görünmüyordu); bayat --v2 klasörü yeni metni ezdi; commitsiz yayın dagit ile geri alındı; anlatım kapısı okunuş kipine bağlandı; satir çapası maddeye çevrildi → hatalar/ders_metni_anlatim.md
 - **H644** · Basit dilli V2: tekrar eden ek cümle, aralığı tek sayıya indirme, kaynak dışı neden, İngilizce harf okunuşu → hatalar/ders_metni_anlatim.md
+- **H645** · PDF işareti yalnız sayfaya düşüyordu: PDF kelimesi noktalamadan bölünmüyordu, kısa çapa/tablo çapası, boş satır → hatalar/ders_metni_anlatim.md
