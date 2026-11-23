@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 866,
-  "baslik": "Farmakoloji sesli derslerinde metin takibi düzeltildi",
+  "onem": 867,
+  "baslik": "Sesli derslerde PDF işaretleri iyileştirildi",
   "maddeler": [
-    "Zenginleştirilen 8 farmakoloji dersinde vurgulanan kelime ve cümle artık sesle birebir ilerliyor.",
-    "PDF üzerindeki işaretler yeni anlatıma göre yenilendi."
+    "Opioid analjezikler ve intihar derslerinde anlatılan cümle artık PDF üzerinde doğru maddeyi işaretliyor.",
+    "Ders içerik hattının denetim araçları düzeltildi; gelecekteki ders güncellemeleri daha hızlı ve hatasız yayınlanacak."
   ],
   "eklenen": [
     "Psikiyatri sesli dersleri · V2 (basit dil)"

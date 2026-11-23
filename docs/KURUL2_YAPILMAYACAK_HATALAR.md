@@ -475,7 +475,7 @@
 - **H639** · KMB MP4 dışa aktarım: 800×600 kesik kare (başsız ekran), blob: sesi dışarıdan okunamıyor, katman düğmeyi örtüyor → hatalar/on_yuz_disa_aktarim.md
 - **H640** · Taş oyunlarında "Masayı düzenliyorsun" şeridi ve uzun baloncuk masayı örtüyordu (mutlak konum) → hatalar/ogren_modul_oyun.md
 - **H641** · "Masayı diz" çalışmıyordu: yalnız yedili kolunda + yalnız görünüm sırası; taşları yeni perlere bölüştüren çözücü yoktu → hatalar/ogren_modul_oyun.md
-- **H642** · Ekleme tabanlı anlatım revizyonunda klip_tasi değişen paragrafların katmanlarını boşaltıyor; 6000 kelime tavanı 60+ sayfalı derste zenginleştirmeyi kesiyor → hatalar/ders_metni_anlatim.md
+- **H642** · Ekleme tabanlı anlatım revizyonunda klip_tasi değişen paragrafların katmanlarını boşaltıyor; 6000 kelime tavanı 60+ sayfalı derste zenginleştirmeyi kesiyor (klip_tasi cümle düzeyi taşıma ile çözüldü, 2026-11-23) → hatalar/ders_metni_anlatim.md
 - **—** · Sesli ders "İlerlemeyi temizle" yenileyince eski ilerleme geri geliyordu (birikimli eşitleme anahtarında silme) → hatalar/on_yuz_oynatici_ders.md
-- **H643** · Çıkmış konum dosyasında metinHash yoktu (rozetler görünmüyordu); bayat --v2 klasörü yeni metni ezdi; kos anlatim --yazim kipi → hatalar/ders_metni_anlatim.md
+- **H643** · Çıkmış konum dosyasında metinHash yoktu (rozetler görünmüyordu); bayat --v2 klasörü yeni metni ezdi; commitsiz yayın dagit ile geri alındı; anlatım kapısı okunuş kipine bağlandı; satir çapası maddeye çevrildi → hatalar/ders_metni_anlatim.md
 - **H644** · Basit dilli V2: tekrar eden ek cümle, aralığı tek sayıya indirme, kaynak dışı neden, İngilizce harf okunuşu → hatalar/ders_metni_anlatim.md

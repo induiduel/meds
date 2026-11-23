@@ -100,7 +100,7 @@
 
 
 ### H642 — Ekleme tabanlı anlatım revizyonunda klip_tasi katmanları boşaltıyor, 6000 kelime tavanı zenginleştirmeyi kesiyor (2026-11-21, k2-46)
-- **Kural:** Ekleme tabanlı revizyonda (H531) sıra: anlık görüntü → ekleme → `klip_tasi` → katmanları kimlikle geri yaz → vurgu türet → kapılar. 60+ sayfalı derste `MEDS_METIN_MAX_W` hat ve yayın komutlarında aynı değerle verilir. Kalıcı kod düzeltmesi (klip_tasi kimlik eşlemesi) açık iş.
+- **Kural:** Ekleme tabanlı revizyonda (H531) sıra: anlık görüntü → ekleme → `klip_tasi` → katmanları kimlikle geri yaz → vurgu türet → kapılar. 60+ sayfalı derste `MEDS_METIN_MAX_W` hat ve yayın komutlarında aynı değerle verilir. Kalıcı kod düzeltmesi (2026-11-23): `klip_tasi.py` yalnız cümle eklenmiş paragrafı (`cumle_esle`: eski cümleler aynen + aynı sırada) cümle düzeyinde taşır; gerçek tur verisinde (k2-58/21/41) elle kimlikle geri yazımla 1.031/1.031 çapa ve 40/40 çıkmış konumu birebir aynı çıktı. Elle `rev.py` geri yazımı artık gerekmez; eklenen cümleye yalnız sayfa çapası konur, madde/resim çapası ayrıca yazılır.
 
 
 ### H643 — Farmakoloji zenginleştirme turu: çıkmış rozetleri hiç görünmüyordu, eski çalışma klasörü yeni metni ezdi (2026-11-22)

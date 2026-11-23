@@ -76,6 +76,12 @@ def main() -> int:
     hata += [f"[iskelet] {x}" for x in ISK.denetle(d)]
 
     # 3) metin_denetle (kendi ayrıntısını basar; sayısını toplar)
+    # Kurul 2+ / modül derslerinde EMA'ya okunuş gider (ses_metin.hazirla: GABA→gaba, NMDA→ne me de a); kısaltma/rakam
+    # denetimi yazıma değil okunuşa uygulanmalı (H643 ek 4: `--yazim`siz kapı doğru okunan 110 kısaltmayı HATA sayıyordu).
+    sys.path.insert(0, str(KOK / "scripts" / "uretim" / "ses_ortak"))
+    from ses_metin import yol_sec
+    MD.YAZIM = yol_sec(ders=a.key) == "uzun"  # Kurul 1 ("bitisik") eski davranışta kalır
+    print(f"metin_denetle kipi: {'okunuş (--yazim)' if MD.YAZIM else 'yazım'}")
     buf = io.StringIO()
     with redirect_stdout(buf):
         md_n = MD.denetle(dizin / "konusma_metni.md")
