@@ -1,0 +1,74 @@
+{
+ "surum": 1,
+ "dogrulama": "Kurul 2 çıkmış bankasında konusu Panik Bozukluk olan ve panik/agorafobi/beklenti anksiyetesi/derealizasyon terimleriyle iki geçişte taranan tüm yılların soruları ile meds_downloads ve İndirilenler altındaki tüm ham sınav PDF'lerinin metin taraması karşılaştırıldı. 4 soru ham belgede yeri görülen, slaytta kanıtı olan sorudur. Eşlenmeyenler: d3-k2-psi-015 (kaynağı öğrenci hatırlama listesi, ham belge yok), d3k2-2023-2024-h43 (özgül fobi ayırıcı tanısı, k2-56), d3k2-2018-2019-k4-q49 (DSM-IV sınıflaması), YAB/uyum/OKB/bipolar soruları (başka ders), farmakoloji soruları.",
+ "q": [
+  {
+   "id": "d3-f-108",
+   "kok": "Aşağıdakilerden hangisi panik bozukluk ile ilgili yanlış bir bilgidir?",
+   "cevap": "Çarpıntıdan sonra en sık görülen bedensel belirtiler sırasıyla baş dönmesi ve kulak çınlamasıdır.",
+   "yil": "2021-2022",
+   "s": 12,
+   "seviye": "dogrudan",
+   "kanit": "Kültüre özgü belirtiler (kulak çınlaması, boyun ağrısı, baş ağrısı, kontrolsüz bağırma ya da ağlama) görülebilir ama 4 belirtiden biri sayılmaz.",
+   "kaynak": "22 final_230619_145249.pdf s.14 (soru 79; doğru şık kalın basılı: C)",
+   "dogrulandi": true,
+   "konu": "Panik Bozukluk ve Agorafobi",
+   "neden": "Slayt kulak çınlamasını 13 belirtiden biri saymaz (kültüre özgü belirti, 4 belirtiden biri değil); \"çarpıntıdan sonra en sık baş dönmesi ve kulak çınlaması\" ifadesi slaytta yoktur ve yanlıştır. Diğer şıklar slaytla uyumludur: 20'li yaşlarda başlangıç (s5), katekolamin/locus coeruleus/kemoreseptör (s7), kadında 2-3 kat (s5), beklenmedik yineleyici ataklar (s4).",
+   "anahtar_notu": "basılı anahtar: soru kökü altında doğru şık kalın yazılı (C); banka cevabıyla uyuşuyor",
+   "kopyalar": [
+    "q-22_final_230619_145249-79",
+    "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-79"
+   ],
+   "p": 11,
+   "c": 10
+  },
+  {
+   "id": "q-KURUL_2_C_IKMIS__3-46",
+   "kok": "Aşağıdakilerden hangisi panik bozukluğun bilişsel belirtileri arasında yer almaz?",
+   "cevap": "Beklenti anksiyetesi",
+   "yil": "2019-2020",
+   "s": 13,
+   "seviye": "dogrudan",
+   "kanit": "Atakta yoğun korku ve uyarılmışlık; sonrasında en büyük korku yeni atak: beklenti anksiyetesi",
+   "kaynak": "KURUL 2 ÇIKMIŞ 3.pdf s.14 (soru 46); aynı soru D3K2 2019-2020.pdf s.15",
+   "dogrulandi": true,
+   "konu": "Panik Bozukluk ve Agorafobi",
+   "neden": "Slayt beklenti anksiyetesini ruhsal durum muayenesinde duygulanım başlığına yerleştirir; bilişsel yetilerde ise atakta depersonalizasyon ve derealizasyon görülür (s13, s12 pembe bilişsel kartlar). Bu nedenle bilişsel belirtiler arasında yer almayan beklenti anksiyetesidir.",
+   "anahtar_notu": "basılı anahtar yok; slayt ve tıbbi tutarlılık kontrol edildi (duygulanım alanı)",
+   "yil_notu": "Yıl bankadaki etiket ve D3K2 2019-2020.pdf dosya adından; belge içinde basılı yıl yok",
+   "p": 12,
+   "c": 6
+  },
+  {
+   "id": "d3k2-2018-2019-k4-q52",
+   "kok": "Hangisi panik bozukluğun klinik belirtileri arasında yer almaz?",
+   "cevap": "Hipoventilasyon",
+   "yil": "2018-2019",
+   "s": 7,
+   "seviye": "ilgili",
+   "kanit": "Hava açlığı, nefes darlığı ve hiperventilasyon bu mekanizmayla açıklanır",
+   "kaynak": "Kurul IV Sınavı.pdf s.8 (soru 52, KBÜ 3. Sınıf 4. Kurul, 04.03.2019; aynı kâğıt D3K2 2021-2022-2023.pdf s.8)",
+   "dogrulandi": true,
+   "konu": "Panik Bozukluk ve Agorafobi",
+   "neden": "Slayt panik bozuklukta solunum değişikliği olarak hiperventilasyonu (s7) anlatır; hipoventilasyon slaytta yoktur. Panik nöbet, kaçınma davranışı, davranış değişikliği ve beklenti anksiyetesi ise tanımın parçalarıdır (s4, s14).",
+   "anahtar_notu": "resmî cevap anahtarı (Kurul IV Cevap Anahtarı.pdf, 04.03.2019): 52 = B; görselle doğrulandı, banka cevabıyla uyuşuyor"
+  },
+  {
+   "id": "d3-b-070",
+   "kok": "Panik bozukluk ile ilgili aşağıda verilen bilgilerden hangisi yanlıştır?",
+   "cevap": "Hastalık herhangi bir yaşta gelişebilmekle birlikte daha çok 30'lu yaşlarda başlar.",
+   "yil": "2022-2023",
+   "s": 5,
+   "seviye": "dogrudan",
+   "kanit": "Panik bozukluk her yaşta başlayabilir; en sık 20’li yaşlarda başlar ve hastaların çoğunda başlangıç 30 yaşından öncedir.",
+   "kaynak": "22-23D3Butunleme_101817.pdf s.15 (Psikiyatri bölümü, 2022-2023 Dönem 3 Bütünleme)",
+   "dogrulandi": true,
+   "konu": "Panik Bozukluk ve Agorafobi",
+   "neden": "Slayt en sık başlangıç yaşını 20'li yaşlar olarak verir; \"daha çok 30'lu yaşlarda\" ifadesi yanlıştır. Yaşam boyu %1,5-5 sıklık slaytta farklı (%1,7) yazılı olduğundan bu şık anlatımda esas alınmaz; kadında 2-3 kat (s5), kaçınma (s4) ve beklenmedik yineleyici atak (s4) slaytla uyumludur.",
+   "anahtar_notu": "basılı anahtar yok; slayt ve tıbbi tutarlılık kontrol edildi",
+   "p": 4,
+   "c": 9
+  }
+ ],
+ "metinHash": "2f8e832f52fed7bdf66f445f5a37f7320e982cd3"
+}
