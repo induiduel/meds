@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 869,
-  "baslik": "Yeni: Ders özeti — Kurul 2'nin 50 dersi akılda kalması gerekenlerle",
+  "onem": 870,
+  "baslik": "Yeni ders: Adrenoseptör Antagonist İlaçlar",
   "maddeler": [
-    "Ders çalış › Ders özeti: her dersin çıkmışları, spot bilgileri, ayırıcı ve klinik noktaları kısa maddelerle; her madde slayt sayfasıyla.",
-    "Sesli dinle: özet EMA sesiyle okunur, okunan madde işaretlenir; hız ayarı ve kaldığın yerden sürdürme var.",
-    "Sesli soru çöz: dersin örnek ve çıkmış soruları sesli çözümle; 'Bu özeti bitirdim' ile ilerlemeni izle."
+    "Farmakolojide Adrenoseptör Antagonist İlaçlar dersinin sesli anlatım metni eklendi; ses hazırlanıyor.",
+    "Yeni farmakoloji, genetik ve psikiyatri dersleri için PDF görüntüleyici kayıtları ve kısaltma sözlüğü güncellendi."
   ],
   "eklenen": [
     "Ders özeti (Kurul 2, 50 ders)"

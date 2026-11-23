@@ -62,6 +62,8 @@ STOP = {
     "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII",
     "DR", "PROF", "DOC", "ARS", "GOR", "UZM", "OPR", "AM", "VE", "BU", "NE", "BIR", "ILE", "ICIN", "VEYA",
     "TIP", "FAK", "UNV", "SAY", "SIRA", "TABLO", "SEKIL", "KAYNAK", "SLYAT", "SLAY", "TR", "EN", "VK",
+    "COO", "NHCO",  # kimyasal bağ formülü (-COO- ester, -NHCO- amid; k2-48), kısaltma değil
+    "ANCAK",  # slaytta büyük harfle "ANCAK:" (k2-47 s.32), bağlaç
     "HI", "BJ", "ON", "OFF",  # kaynakça yazar baş harfleri; ON/OFF hücreleri (k2-06 s.43) İngilizce sözcük (HI Kaplan, BJ Sadock — k2-11 s.43), kısaltma değil
 }
 

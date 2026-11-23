@@ -394,6 +394,54 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /8)Adrenoseptör Agonistler- Sempatomimetik İlaçlar.pdf', name: '8)Adrenoseptör Agonistler- Sempatomimetik İlaçlar.pdf', pages: 70, fileId: '1XvzBvCXmqEr6AvEopn208NGg7_6O9T_g' } as SourceFile],
   },
+  // 2026-11-23 Adrenoseptör Antagonist İlaçlar (k2-47): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-47-adrenoseptor-antagonist-ilaclar': {
+    title: 'Adrenoseptör Antagonist İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /9)Adrenoseptor-Antagonist-Ilaclar.pdf', name: '9)Adrenoseptor-Antagonist-Ilaclar.pdf', pages: 40, fileId: '1XUngQdqfONiMCGrjEsPPU_HfxL3HC9L2' } as SourceFile],
+  },
+  // 2026-11-23 Lokal Anestezik İlaçlar (k2-48): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-48-lokal-anestezik-ilaclar': {
+    title: 'Lokal Anestezik İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /10)Lokal Anestezik İlaçlar:Temel Bilimden Kliniğe.pdf', name: '10)Lokal Anestezik İlaçlar:Temel Bilimden Kliniğe.pdf', pages: 64, fileId: '1sAmg-E-Mj6-u33zmK_f3SKFkWl6r3nGu' } as SourceFile],
+  },
+  // 2026-11-23 Kolinoseptör Aktive Edici İlaçlar ve Kolinesteraz İnhibitörleri (k2-51): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-51-kolinoseptor-aktive-edici-ve-kolinesteraz-inhibitorleri': {
+    title: 'Kolinoseptör Aktive Edici İlaçlar ve Kolinesteraz İnhibitörleri',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /11)Kolinoseptor-Aktive-Edici-ve-Kolinesteraz-Inhibitorleri.pdf', name: '11)Kolinoseptor-Aktive-Edici-ve-Kolinesteraz-Inhibitorleri.pdf', pages: 46, fileId: '1dQ63ClQywir4OzySRAjmYaCe-6nHGjND' } as SourceFile],
+  },
+  // 2026-11-23 Davranış Genetiği (k2-52): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-52-davranis-genetigi': {
+    title: 'Davranış Genetiği',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Genetik/3)DAVRANIŞ GENETİĞİ.pdf', name: '3)DAVRANIŞ GENETİĞİ.pdf', pages: 82, fileId: '1IJA6tZ2N3tUeHOTWHzhptfvEsLBOqErP' } as SourceFile],
+  },
+  // 2026-11-23 Nörodejeneratif Hastalıklar ve Genetiği (k2-53): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-53-norodejeneratif-hastaliklar-ve-genetigi': {
+    title: 'Nörodejeneratif Hastalıklar ve Genetiği',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Genetik/4)NÖRODEJENERATİF HASTALIKLAR VE GENETİĞİ.pdf', name: '4)NÖRODEJENERATİF HASTALIKLAR VE GENETİĞİ.pdf', pages: 82, fileId: '1dADGsoaggdKRXe9dE_sadTkSN_EuG9Sl' } as SourceFile],
+  },
+  // 2026-11-23 Yaygın Anksiyete Bozukluğu (k2-54): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-54-yaygin-anksiyete-bozuklugu': {
+    title: 'Yaygın Anksiyete Bozukluğu',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /17)YAB.pdf', name: '17)YAB.pdf', pages: 27, fileId: '1Ewx-pgpy2rOdSsxNXW_BVlG0Cq1OsPgf' } as SourceFile],
+  },
+  // 2026-11-23 Panik Bozukluk ve Agorafobi (k2-55): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-55-panik-bozukluk': {
+    title: 'Panik Bozukluk ve Agorafobi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /18)Panik Bozukluk.pdf', name: '18)Panik Bozukluk.pdf', pages: 25, fileId: '1-YvVTaNrim3w03b8R9a25ntU_4exnJTR' } as SourceFile],
+  },
+  // 2026-11-23 Fobik Bozukluklar (k2-56): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-56-fobik-bozukluklar': {
+    title: 'Fobik Bozukluklar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Psikiyatri /19)Fobik Bozukluklar.pdf', name: '19)Fobik Bozukluklar.pdf', pages: 22, fileId: '1mW5pwDslDq772Y9abi-SNd-g24-CY2Nt' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [
