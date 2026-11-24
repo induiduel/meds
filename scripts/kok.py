@@ -97,3 +97,18 @@ class _OcrVenvKancasi:
 
 if not any(isinstance(k, _OcrVenvKancasi) for k in _sys.meta_path):
     _sys.meta_path.append(_OcrVenvKancasi())
+
+
+def panel_basligi() -> dict:
+    """Sunucuya giden iç istek için yönetici doğrulaması (H655: erişim sınırından sonra kimliksiz istek 500 alıyordu).
+    MEDS_PANEL_SECRET ortamdan ya da meds/.env'den okunur; yazdırılmaz. Yoksa boş sözlük."""
+    s = _os.environ.get("MEDS_PANEL_SECRET", "").strip()
+    if not s:
+        try:
+            for satir in (MEDS / ".env").read_text(encoding="utf-8").splitlines():
+                if satir.startswith("MEDS_PANEL_SECRET="):
+                    s = satir.split("=", 1)[1].strip().strip('"').strip("'")
+                    break
+        except OSError:
+            pass
+    return {"x-panel-secret": s} if s else {}

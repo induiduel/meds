@@ -134,7 +134,7 @@ def konusma_parcalari(sinir: list[float], sess: list[tuple[int, int]]) -> list[l
 
 def ders_isle(key: str, zorla: bool, kuru: bool) -> str:
     # üretim sunucusunun bot koruması urllib'in varsayılan kimliğini 403 ile reddediyor (pdf_isaret.py ile aynı)
-    with urllib.request.urlopen(urllib.request.Request(f"{API}/api/canli-ders/{key}", headers={"User-Agent": "medsor-sesli-anlatim/1"}), timeout=30) as r:
+    with urllib.request.urlopen(urllib.request.Request(f"{API}/api/canli-ders/{key}", headers={"User-Agent": "medsor-sesli-anlatim/1", **_kok.panel_basligi()}), timeout=30) as r:
         d = json.load(r)
     paras = [p for b in d["bolumler"] for p in b["paragraflar"]]
     metin_hash = hashlib.sha1("\n".join(p["metin"] for p in paras).encode("utf-8")).hexdigest()
@@ -223,7 +223,7 @@ def main():
     if a.key:
         keys = [a.key]
     elif a.hepsi:
-        with urllib.request.urlopen(f"{API}/api/canli-ders?sinama=1", timeout=30) as r:
+        with urllib.request.urlopen(urllib.request.Request(f"{API}/api/canli-ders?sinama=1", headers=_kok.panel_basligi()), timeout=30) as r:
             keys = [x["key"] for x in json.load(r)["dersler"]]
     else:
         ap.error("--key ya da --hepsi")

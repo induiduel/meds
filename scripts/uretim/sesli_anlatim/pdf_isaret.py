@@ -63,7 +63,7 @@ KOK = MEDS / "data" / "sesli_anlatim"
 CIKTI = KOK / "isaret"
 API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
 # Üretim sunucusunun bot koruması urllib'in varsayılan kimliğini 403 ile reddediyor: açık kimlik gönderilir.
-UA = {"User-Agent": "medsor-sesli-anlatim/1"}
+UA = {"User-Agent": "medsor-sesli-anlatim/1", **_kok.panel_basligi()}
 
 
 def api_iste(url: str, timeout: int = 30) -> "urllib.request.Request":

@@ -373,7 +373,7 @@ def varyant_isle(paras: list[dict], z: list, mp3: Path) -> tuple[dict[str, list[
 
 
 def api_json(yol: str):
-    req = urllib.request.Request(f"{API}{yol}", headers={"User-Agent": "Mozilla/5.0 (meds-kelime-zaman)"})
+    req = urllib.request.Request(f"{API}{yol}", headers={"User-Agent": "Mozilla/5.0 (meds-kelime-zaman)", **_kok.panel_basligi()})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 
