@@ -442,6 +442,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Psikiyatri /19)Fobik Bozukluklar.pdf', name: '19)Fobik Bozukluklar.pdf', pages: 22, fileId: '1mW5pwDslDq772Y9abi-SNd-g24-CY2Nt' } as SourceFile],
   },
+  // 2026-11-24 Felçler (k2-32): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-32-felcler': {
+    title: 'Felçler',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/10)Felçler.pdf', name: '10)Felçler.pdf', pages: 33, fileId: '1LIX6pai58SIlUvc6Hw9bUT8rVnI3zOMo' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [
