@@ -733,7 +733,7 @@ export const SoruCozucu: React.FC<Props> = ({
     const ms = (navigator as Navigator & { mediaSession?: MediaSession }).mediaSession;
     if (!ms || !ders) return;
     try {
-      ms.metadata = new MediaMetadata({ title: q ? `Soru ${i + 1}` : ders.baslik, artist: `${bt.ad} · Soru çözücü`, album: `${ders.no}) ${ders.baslik}${setAdi(ders) ? ` · ${setAdi(ders)}` : ''}` });
+      ms.metadata = new MediaMetadata({ title: q ? `Soru ${i + 1}` : ders.baslik, artist: `${bt.ad} · Soru çözücü`, album: `${ders.kod === '_tum' ? '' : ders.no + ') '}${ders.baslik}${setAdi(ders) ? ` · ${setAdi(ders)}` : ''}` });
       ms.setActionHandler('nexttrack', () => ileri());
       ms.setActionHandler('previoustrack', () => geri());
     } catch { /* desteklenmiyor */ }
@@ -772,7 +772,7 @@ export const SoruCozucu: React.FC<Props> = ({
         <button type="button" className="sc-ikon" onClick={onClose} aria-label="Soru çözücüyü kapat"><X /></button>
         <div className="sc-ders">
           <button type="button" className="sc-ders-b" onClick={() => !ozelSorular?.length && setDersMenu((v) => !v)} aria-expanded={ozelSorular?.length ? undefined : dersMenu} aria-haspopup={ozelSorular?.length ? undefined : 'listbox'}>
-            <span className="sc-ders-no">{ders?.no ?? '…'}</span>
+            <span className="sc-ders-no">{ders?.kod === '_tum' ? '✓' : (ders?.no ?? '…')}</span>
             <span className="sc-ders-t"><small>{ozelSorular?.length ? 'Sınav Çalışması' : bt.ad} · {kaynak?.etiket || 'soru çözücü'}{ders && setAdi(ders) ? ` · ${setAdi(ders)}` : ''}{mod === 'cikmis' && tekrar ? ' · çıkmış sorular' : tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
             {!ozelSorular?.length && <ChevronDown aria-hidden />}
           </button>
