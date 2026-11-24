@@ -62,6 +62,8 @@ export interface CdListeDers {
   kurulNo?: number;
   baslik: string;
   sira: number;
+  /** Siteye eklenme anı (ms) — liste "Eklenme tarihi" sıralaması */
+  eklendi?: number;
   varsayilan: CdVaryant;
   varyantlar: CdVaryant[];
   pdf: boolean;

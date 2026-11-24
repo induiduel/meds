@@ -69,6 +69,8 @@ interface KayitVaryant {
   klipler?: string[];
   /** Metin sürümü adı (v1, v2…): metin düzeltilip yeniden seslendirilen derste eski ve yeni ses oynatıcıda ayrılsın (elle yazılır) */
   surumAd?: string;
+  /** Sesin üretildiği an (ISO); listede "Eklenme tarihi" sıralaması bundan */
+  olusturuldu?: string;
 }
 
 const oku = <T,>(p: string, bos: T): T => {
@@ -266,6 +268,8 @@ export function registerCanliDersRoutes(app: Express) {
           kurul: b.kurul,
           baslik: d.baslik,
           sira: d.sira,
+          // Siteye eklenme: ilk sesin üretildiği an (yoksa ses dosyasının tarihi) — listede "Eklenme tarihi" sıralaması
+          eklendi: ((t) => (Number.isFinite(t) ? t : undefined))(Math.min(...vs.map((v) => Date.parse(v.olusturuldu || '') || surum(d.key, v.id) || Infinity))),
           desteId: d.desteId || (isArsiv ? `k${b.kurul}p-${d.key}` : undefined),
           varsayilan: ozet(d.key)(vs[0]),
           varyantlar: vs.map(ozet(d.key)),

@@ -7,7 +7,7 @@ import { icKonum } from '../../siteHaritasi';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
-import { bransYolu, dersAdi, dersSirala, dersSurumleri, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
+import { bransYolu, dersAdi, dersNumaralari, dersSirala, type DersSiraTur, dersSurumleri, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import SurumSecV15 from './SurumSecV15';
 import { cdDersSesSurumu } from '../canliDers/canliDersStore';
 import { Halka } from './Halka';
@@ -26,8 +26,13 @@ import '../../styles/v15/ogren.css';
 type Durum = 'tum' | 'yeni' | 'yarim' | 'bitti' | 'indirilen' | 'liste';
 /** "Yeni" = henüz hiç dinlemediğin (listede eklenme tarihi yok; uydurma tarih kullanılmaz) */
 const DURUM: [Durum, string][] = [['tum', 'Tümü'], ['yeni', 'Yeni'], ['yarim', 'Yarım kalan'], ['bitti', 'Bitti'], ['indirilen', 'İndirilen']];
-type Sira = 'sira' | 'son' | 'kisa';
-const SIRA: [Sira, string][] = [['sira', 'Ders sırası'], ['son', 'Son dinlenen'], ['kisa', 'Kısa olan önce']];
+type Sira = DersSiraTur | 'son' | 'kisa';
+const SIRA: [Sira, string][] = [['drive', 'Drive sırası'], ['program', 'Ders programı'], ['eklenme', 'Eklenme tarihi'], ['son', 'Son dinlenen'], ['kisa', 'Kısa olan önce']];
+const SIRA_ANAHTAR = 'sl15-sira';
+const ilkSira = (): Sira => {
+  try { const v = localStorage.getItem(SIRA_ANAHTAR); if (SIRA.some(([id]) => id === v)) return v as Sira; } catch { /* depolama kapalı */ }
+  return 'drive';
+};
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
 export default function SesliListeV15() {
@@ -54,7 +59,10 @@ export default function SesliListeV15() {
     window.addEventListener('hashchange', f);
     return () => window.removeEventListener('hashchange', f);
   }, []);
-  const [sira, setSira] = useState<Sira>('sira');
+  const [sira, setSiraHam] = useState<Sira>(ilkSira);
+  const setSira = (v: Sira) => { setSiraHam(v); try { localStorage.setItem(SIRA_ANAHTAR, v); } catch { /* depolama kapalı */ } };
+  // Numara ve temel sıra: Drive / ders programı / eklenme; "son"/"kısa" yalnız yeniden dizer, numara Drive'dan
+  const numTur: DersSiraTur = sira === 'program' || sira === 'eklenme' ? sira : 'drive';
   const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
   const [temizleAcik, setTemizleAcik] = useState(false);
   useEffect(() => {
@@ -70,7 +78,8 @@ export default function SesliListeV15() {
       branslar
         .map((b) => ({
           ...b,
-          liste: dersSirala(b.dersler).filter((d) => {
+          numara: dersNumaralari(b.dersler, numTur),
+          liste: dersSirala(b.dersler, numTur).filter((d) => {
             const i = ilerleme(d);
             if (durum === 'yeni' && (i.bitti || i.t != null)) return false;
             if (durum === 'indirilen' && !indirilen[d.key]) return false;
@@ -81,7 +90,7 @@ export default function SesliListeV15() {
           biten: b.dersler.filter((d) => ilerleme(d).bitti).length,
         }))
         .filter((g) => g.liste.length),
-    [branslar, durum, q, ilerleme, sira, indirilen],
+    [branslar, durum, q, ilerleme, sira, numTur, indirilen],
   );
   useV15Baslik({ baslik: arsiv ? 'Sesli dersler · Arşiv' : 'Sesli dersler', alt: `${arsiv ? '2025-2026 · ' : ''}Kurul ${kurul}${dersler ? ` · ${toplam} ders` : ''}` });
 
@@ -152,7 +161,7 @@ export default function SesliListeV15() {
                       <a className="b15-row" href={satirYolu(d.key)} onClick={linkClick(() => navigateTo(satirYolu(d.key)))}>
                         <span className={`v15-tile ${i.tekrar ? 'is-tekrar' : i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.tekrar ? <RotateCcw aria-hidden /> : i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                         <span className="b15-row-t">
-                          <b>{dersAdi(d)}{indirilen[d.key] && <Download className="sl15-indi" aria-label="İndirildi" />}</b>
+                          <b>{dersAdi(d, g.numara.get(d.key))}{indirilen[d.key] && <Download className="sl15-indi" aria-label="İndirildi" />}</b>
                           <span>{i.tekrar && <em className="sl15-tekrar">{i.tur > 0 ? `${i.tur + 1}. tekrar` : 'Tekrarda'} · %{i.pct}</em>}{[hocaYaz(d.hoca), sureDk(dersSurumleri(d.key, liste0).find((x) => x.yeni)?.sureSn || i.sure)].filter(Boolean).join(' · ')}</span>
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />

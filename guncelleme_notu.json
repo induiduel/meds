@@ -1,15 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 885,
-  "baslik": "Sesli derste soru ayarları Görünüm menüsünde",
+  "onem": 886,
+  "baslik": "Sesli derslerde sıralama seçenekleri",
   "maddeler": [
-    "**Sesli ders:** \"Soruları derste kendiliğinden göster\" ve \"Soruyu otomatik çöz\" artık Görünüm ayarları › Okuma sekmesinde her zaman açılıp kapatılabilir."
+    "**Sıralama:** Sesli ders listesinde Drive sırası, Ders programı ve Eklenme tarihi seçenekleri eklendi; seçim cihazda hatırlanır.",
+    "**Numaralar:** Ders numaraları seçilen sıraya göre boşluksuz verilir; henüz eklenmemiş dersler numara boşluğu bırakmaz."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Sesli ders listesi sıralama seçenekleri"
+  ],
   "degisen": [
     "Sesli ders ara soru ayarları Görünüm › Okuma sekmesine taşındı"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sesli ders numaralarındaki boşluklar"
+  ],
   "silinen": [],
   "yenilikler": [
     {
