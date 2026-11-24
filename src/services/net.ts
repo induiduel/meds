@@ -114,7 +114,9 @@ let onUcus = 0;
 export async function arkaPlanFetch(url: string, init: RequestInit = {}): Promise<Response> {
   await onPlanBosalinca(init.signal || undefined);
   const f = nativeFetchRef || fetch;
-  return f(url, { ...init, priority: 'low' } as RequestInit);
+  // Ham fetch jeton eklemez: API alt alanına (api.nofrostlife.com.tr) HttpOnly medya çerezi gitsin, yoksa erişim kapısı
+  // reddeder ve paket "Bağlantı sorunu" ile yarıda kalır (2026-11-24). Sunucu CORS'u kendi alanına credentials verir.
+  return f(url, { credentials: 'include', ...init, priority: 'low' } as RequestInit);
 }
 export async function onPlanBosalinca(signal?: AbortSignal) {
   const bas = Date.now();

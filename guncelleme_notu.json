@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 893,
-  "baslik": "Ses yüklenirken artık bekleme görünüyor",
+  "onem": 895,
+  "baslik": "Çevrimdışı indirme düzeltildi",
   "maddeler": [
-    "**Ses yükleniyor:** Sesli ders, örnek soru çözücü ve diğer sesli işlevlerde ses inene kadar ekranın altında \"Ses yükleniyor…\" ibaresi çıkıyor; sessizlik artık \"ses yok\" gibi görünmüyor."
+    "**Çevrimdışı:** \"Bağlantı sorunu: dosya inmedi\" hatasıyla yarıda kalan ders indirmeleri düzeltildi; yarıda kalanları \"Yeniden dene\" ile tamamlayabilirsin."
   ],
-  "eklenen": [
-    "Ses yükleniyor göstergesi"
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Çevrimdışı paket indirme"
+  ],
   "silinen": [],
   "yenilikler": []
 }
