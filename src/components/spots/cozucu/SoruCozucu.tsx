@@ -10,6 +10,13 @@ import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../../utils/dev
 import { openPwaInstallGuide } from '../../../services/pwaService';
 import { toast } from '../../ui/Toast';
 import { Metin } from '../onem/OnemMadde';
+import { navigateTo, pathFor } from '../../../router';
+
+/** Check-up (sesli ders listesi) bağlantısıyla gelindiyse dersin anahtarı (?dk=); "Derste dinle" ilgili paragrafa gider (?ara=) */
+const dersteDinleYolu = (metin: string): string | null => {
+  const dk = new URLSearchParams(location.search).get('dk');
+  return dk ? `${pathFor('canli_ders', dk)}?ara=${encodeURIComponent(metin.slice(0, 300))}` : null;
+};
 import {
   HARFLER, TERCIH_KEY, VARSAYILAN_SES, cozucuDersYukle, cozucuDizinYukle, ilerlemeOku, ilerlemeYaz, klipYolu, sesListesi, setAdi,
   type CDers, type CDizin, type CSoru, type Harf, type Klip, type Sonuc,
@@ -929,6 +936,9 @@ export const SoruCozucu: React.FC<Props> = ({
                 {ogrenVar && !ogrenAcik && (
                   <button type="button" className="sc-ogren-b" onClick={() => setOgrenAcik(true)}><BookOpenText aria-hidden />Bu bilgiyi Öğren'de gör</button>
                 )}
+              {durum !== 'dogru' || yardim ? (() => { const y = dersteDinleYolu(q.cozum); return y ? (
+                  <button type="button" className="sc-btn sc-derste" onClick={() => navigateTo(y)}><Headphones aria-hidden />Sesli derste bu bölümü dinle</button>
+                ) : null; })() : null}
               </div>
             )}
 
@@ -975,7 +985,7 @@ export const SoruCozucu: React.FC<Props> = ({
                   <ul>{sorular.filter((x) => tekrarlik.includes(x.no)).map((x) => (
                     <li key={x.no}><button type="button" onClick={() => { setBitti(false); setI(sorular.indexOf(x)); }}>
                       <b>{x.soru}</b><span>{x.dogru}) {x.secenekler[x.dogru]}</span>
-                    </button></li>
+                    </button>{(() => { const y = dersteDinleYolu(x.cozum); return y ? <button type="button" className="sc-btn sc-derste" onClick={() => navigateTo(y)}><Headphones aria-hidden />Derste dinle</button> : null; })()}</li>
                   ))}</ul>
                 </div>
               )}

@@ -14,6 +14,8 @@ import { cdDersSesSurumu } from '../canliDers/canliDersStore';
 import { Halka } from './Halka';
 import { ListeEkleDugme, Listem, TopluEkleDugme } from '../canliDers/CanliDersListem';
 import { useCdListe } from '../canliDers/canliDersListe';
+import { dersCozucu } from '../canliDers/dersCozucu';
+import { ClipboardCheck } from 'lucide-react';
 import '../../styles/canli-ders.css';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/ogren.css';
@@ -62,6 +64,8 @@ export default function SesliListeV15() {
   const numTur: DersSiraTur = sira === 'program' || sira === 'eklenme' ? sira : 'drive';
   const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
   const [temizleAcik, setTemizleAcik] = useState(false);
+  /** Açık ders satırı (akordeon): aynı anda tek ders açık */
+  const [acik, setAcik] = useState<string | null>(null);
   useEffect(() => {
     const f = () => setIndirilen(cdCevrimdisiKayitlari());
     window.addEventListener(CD_CEVRIMDISI_DEGISTI, f);
@@ -163,9 +167,27 @@ export default function SesliListeV15() {
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
+                      <button type="button" className={`v15-ib sl15-ac${acik === d.key ? ' is-acik' : ''}`} aria-expanded={acik === d.key}
+                        aria-label={acik === d.key ? 'Ders seçeneklerini kapat' : 'Ders seçeneklerini aç'} onClick={() => setAcik((a) => (a === d.key ? null : d.key))}>
+                        <ChevronDown aria-hidden />
+                      </button>
                       <ListeEkleDugme dersKey={d.key} baslik={d.baslik} />
                       <SurumSecV15 surumler={dersSurumleri(d.key, liste0)}
                         aktif={dersSurumleri(d.key, liste0).find((s) => s.vid && cdDersSesSurumu(s.key) === s.vid) || dersSurumleri(d.key, liste0).find((s) => s.yeni)} />
+                      {acik === d.key && (() => {
+                        const c = dersCozucu(d.baslik, d.key);
+                        const url = c ? `${c.url}&dk=${encodeURIComponent(d.key)}` : null;
+                        return (
+                          <div className="sl15-panel">
+                            {url ? (
+                              <a className="v15-btn is-soft" href={url} onClick={linkClick(() => navigateTo(url))}>
+                                <ClipboardCheck aria-hidden />Sesli check-up · {c!.soru} soru
+                              </a>
+                            ) : <span className="v15-cap">Bu ders için check-up soruları henüz hazır değil.</span>}
+                            <small className="v15-cap">Örnek ve çıkmış sorular sesli çözülür; yanlışlarının açıklamasını görüp dersin ilgili bölümünü dinleyebilirsin.</small>
+                          </div>
+                        );
+                      })()}
                     </li>
                   );
                 })}
