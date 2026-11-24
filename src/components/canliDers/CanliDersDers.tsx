@@ -1980,8 +1980,11 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
       if (!ws.length) return -1;
       const k = cdKonusulanKarakter();
       if (!k) return -1;
-      // yalnız o an konuşulan kelimenin slayttaki karşılığı; karşılıksız kelimede işaret yok
-      return ws.findIndex((w) => k.c >= w[0] && k.c < w[1]);
+      // H655: anlatım slaytı birebir okumaz. Karşılığı olmayan kelimede (bağlaç, hocanın kendi sözü) vurgu sönmez,
+      // son karşılığı olan kelimede kalır; cümle başlar başlamaz ilk karşılık yanar (geç kalmaz).
+      let f = 0;
+      for (let q = 0; q < ws.length; q++) if (ws[q][0] <= k.c) f = q; else break;
+      return f;
     });
     // H60 / H61: Çizim KESİNLİKLE yalnız o an okunan cümlenin kendi çizimidir (isr.z).
     // Sayfadaki tüm çizimler toplanamaz; aksi takdirde aynı anda 3 konum işaretlenir, iç içe çizgiler biner

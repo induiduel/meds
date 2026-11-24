@@ -56,6 +56,7 @@ import pymupdf  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pdf_hizala import INDIR, STOP, katla  # noqa: E402
+import anlam_esle  # noqa: E402  H655: anlatım ≠ slayt metni → anlam eşlemesi
 
 MEDS = _kok.MEDS
 KOK = MEDS / "data" / "sesli_anlatim"
@@ -70,7 +71,7 @@ def api_iste(url: str, timeout: int = 30) -> "urllib.request.Request":
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
 GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
-SURUM = 8  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+SURUM = 10  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
 MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
 BULLET_PREFIX = re.compile(r"^[^\wçğıöşüâîû]+", re.I)
@@ -316,6 +317,13 @@ def eslestir(cumle: str, sy: Sayfa):
         if i is not None:
             es.append((i, j)); kul_i.add(i); kul_j.add(j)
     es.sort()
+    if tam:
+        # H655: tam okunan maddede aradaki (slaytta birebir geçmeyen) kelimeler de sırayla kutuya bağlanır
+        idx = [j for j, (_, mi, _) in enumerate(sy.kelimeler) if mi in tam]
+        yer = {j: q for q, j in enumerate(idx)}
+        dol = anlam_esle.w_doldur(tk, [sy.kelimeler[j] for j in idx], [(i, yer[j]) for i, j in es if j in yer])
+        if dol:
+            es = [(i, idx[q]) for i, q in dol]
     w = [[tk[i][1], tk[i][2], *sy.n(sy.kelimeler[j][2])] for i, j in es]
     l, tablo = [], 0
     for m in sorted(tam):
@@ -360,6 +368,8 @@ def eslestir_capa(cumle: str, sy: Sayfa, ms: set[int]):
     tk = tokenler(cumle)
     idx = [j for j, (_, mi, _) in enumerate(sy.kelimeler) if mi in ms]
     es = lcs([k for k, _, _ in tk], [sy.kelimeler[j][0] for j in idx]) if tk else []
+    # H655: anlatım slaytı başka sözcüklerle anlatır; ortak kökler çapa, aradakiler sırayla dağıtılır (vurgu kesintisiz)
+    es = anlam_esle.w_doldur(tk, [sy.kelimeler[j] for j in idx], es) or es
     w = [[tk[i][1], tk[i][2], *sy.n(sy.kelimeler[idx[j]][2])] for i, j in es]
     l, tablo = [], 0
     for m in sorted(ms):
@@ -641,7 +651,42 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
         isr = sekil_isareti(sy, int(sayfa), [{"sekil": cumle}] if TABLO_SOZ.search(cumle) else [{}])
         if isr:
             return isr
+    # H655: çapa sayfası doğru ama cümle maddeyi başka sözcüklerle anlatıyor → aynı sayfada anlam eşlemesi
+    if ANLAM:
+        ar = anlam_isaret(cumle, pdf, int(sayfa), komsu=False)
+        if ar:
+            return {"s": int(sayfa), **ar[0]}
     return {"s": int(sayfa), "t": "sayfa", "l": [], "w": []}
+
+
+ANLAM = os.environ.get("MEDS_ANLAM_ESLE", "1") != "0"
+
+
+def anlam_isaret(cumle: str, pdf: "Pdf", s0: int, komsu: bool = True):
+    """H655: cümlenin anlamca karşılığı olan madde (bge-m3 + kelime kanıtı). Dönüş (işaret, sayfa) | None."""
+    tk = tokenler(cumle)
+    if len(tk) < 3:
+        return None
+    S = {k for k, _, _ in tk}
+    adaylar = []
+    for s in ((s0, s0 - 1, s0 + 1) if komsu else (s0,)):
+        sy = pdf.sayfa(s)
+        if not sy:
+            continue
+        for m, md in enumerate(sy.maddeler):
+            if md["koks"]:
+                adaylar.append((s, m, md, md["koks"], md["kok"]))
+    global ANLAM
+    try:
+        b = anlam_esle.en_iyi_madde(cumle, adaylar, S, s0)
+    except Exception as e:  # vektör servisi yoksa kelime eşlemesiyle devam (bu çalışmada bir daha denenmez)
+        print(f"anlam eşlemesi kapalı ({e})", file=sys.stderr)
+        ANLAM = False
+        return None
+    if not b:
+        return None
+    s, m, _ = b
+    return eslestir_capa(cumle, pdf.sayfa(s), {m}), s
 
 
 def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
@@ -730,6 +775,12 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
                 if r and n >= max(1, esik) and (en[1] is None or n > en[0]):
                     en = (n, r, s)
             n, r, s = en
+            # H655: kelime kanıtı zayıfsa (yok / yalnız kelime / <3 ortak kök) anlam eşlemesi atanan sayfa ±1'de maddeyi seçer
+            if ANLAM and (not r or r["t"] == "kelime" or n < 3):
+                ar = anlam_isaret(cumle, pdf, s0)
+                if ar:
+                    r, s = ar
+                    say["anlam"] = say.get("anlam", 0) + 1
             if not r:
                 r = zayif_esle(cumle, pdf.sayfa(s0))
                 s = s0
@@ -747,7 +798,7 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
             say[isr["t"]] += 1
             liste.append(isr)
         c_out[str(p["i"])] = liste
-    toplam = sum(v for k, v in say.items() if k != "capa") or 1
+    toplam = sum(v for k, v in say.items() if k not in ("capa", "anlam")) or 1
     say.pop("capa") if not say["capa"] else None
     kapsama = (say["metin"] + say["tablo"] + say["kelime"] + say["resim"]) / toplam
     sonuc = {"surum": SURUM, "metinHash": metin_hash, "hizHash": hiz_hash, "c": c_out}

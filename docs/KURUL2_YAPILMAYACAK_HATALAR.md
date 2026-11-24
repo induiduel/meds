@@ -491,3 +491,4 @@
 - **H652** · Sesli ders ara soru "kendiliğinden göster" ayarı yalnız kapalı özelliğin kendi sayfasındaydı → Görünüm › Okuma anahtarı → hatalar/on_yuz_oynatici_ders.md
 - **H653** · Ses inerken sessizlik "ses yok" sanılıyordu → tek yerden "Ses yükleniyor…" göstergesi → hatalar/on_yuz_oynatici_ders.md
 - **H654** · Analiz sekmesi çöktü: k2-41 `ozetEksik` liste yerine düz metin → hatalar/on_yuz_oynatici_ders.md
+- **H655** · Metin takibi slaytı birebir okunuyor sanıyordu → anlam eşlemesi + kesintisiz vurgu → hatalar/on_yuz_oynatici_ders.md

@@ -24,3 +24,6 @@
 /* Öğren sahnesi soru odağı/cevap vurgusu (eski index.css) */
 .ls-stage ::highlight(ms-q-focus) { background-color: color-mix(in srgb, #2f6fdf 22%, transparent); }
 .ls-stage ::highlight(ms-q-answer) { background-color: color-mix(in srgb, #1f9d55 30%, transparent); text-decoration: underline 2px #1f9d55; }
+
+/* H655: sesli soru çözücüde o an okunan kelime (SoruCozucu.tsx, kapsamlı) */
+.sc-sahne ::highlight(sc-okunan) { background-color: rgba(253, 224, 71, 0.55); color: inherit; }

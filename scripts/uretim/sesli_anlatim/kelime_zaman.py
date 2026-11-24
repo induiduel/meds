@@ -141,6 +141,23 @@ def sade(s: str) -> str:
     return "".join(c for c in s if c.isalnum() and not unicodedata.combining(c))
 
 
+KZ_MODEL_AD = os.environ.get("KZ_MODEL", "medium")
+ASR_ONB = _kok.PROJE / "meds_temp" / "kelime_zaman" / "asr"
+
+
+def tani_dosya(mp3: Path, pcm: np.ndarray) -> tuple[str, list[float]]:
+    """Tüm dosyanın tanıması önbellekli (H655): hizalama kuralı değişince Whisper yeniden çalışmaz."""
+    st = mp3.stat()
+    f = ASR_ONB / (hashlib.sha1(f"{mp3.resolve()}:{st.st_size}:{KZ_MODEL_AD}".encode()).hexdigest()[:20] + ".json")
+    if f.exists():
+        d = json.loads(f.read_text())
+        return d["h"], d["z"]
+    th, tz = tani(pcm)
+    ASR_ONB.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps({"h": th, "z": [round(t, 3) for t in tz]}))
+    return th, tz
+
+
 def tani(pcm: np.ndarray) -> tuple[str, list[float]]:
     """Tanınan sade harf dizisi + her harfin zamanı (kelime süresine yayılmış)."""
     try:
@@ -173,29 +190,91 @@ def _tani(pcm: np.ndarray) -> tuple[str, list[float]]:
     return "".join(harf), zaman
 
 
+_OKUNUS = None
+_okunus_onb: dict[str, str] = {}
+
+
+def okunus_kur(key: str | None):
+    """H655: ses ekrandaki metni değil EMA okunuşunu söyler ("5 mg" → "beş miligram", "IV" → "intravenöz"). Hizalama
+    okunuşla yapılmazsa bu kelimelerde harfler tutmaz, kelimeler aynı ana yığılır (takip geç kalır/sıçrar)."""
+    global _OKUNUS
+    _okunus_onb.clear()
+    try:
+        sys.path.insert(0, str(_kok.SCRIPTS / "uretim" / "ses_ortak"))
+        import ses_metin  # noqa: E402
+        _OKUNUS = ses_metin.okuyucu(ders=key) if key else None
+    except Exception as e:  # okunuş yoksa ekran metniyle (eski davranış)
+        print(f"okunuş yüklenemedi ({e}); ekran metniyle hizalanıyor", file=sys.stderr)
+        _OKUNUS = None
+
+
+def okunan_harf(w: str) -> str:
+    if _OKUNUS is None:
+        return sade(w)
+    if w not in _okunus_onb:
+        try:
+            o = sade(_OKUNUS(w))
+        except Exception:
+            o = ""
+        _okunus_onb[w] = o or sade(w)
+    return _okunus_onb[w]
+
+
+HIZ_UST = 40.0  # sn başına en çok bu kadar sade harf (EMA ≈ 14–18; 1,5 hızda bile ≤ 30)
+
+
+def _tutarli_capalar(capa: list[tuple[int, float, int]]) -> set[int]:
+    """(kelime j, zaman t, harf konumu c) çapalarından zamanı artan ve konuşma hızı makul en uzun zincir (aykırı,
+    uzak bir yere sıçramış eşleşme atılır). O(n²) — paragraf başına yüzlerce çapa."""
+    n = len(capa)
+    if n < 2:
+        return {j for j, _, _ in capa}
+    en = [1] * n
+    onc = [-1] * n
+    for b in range(n):
+        jb, tb, cb = capa[b]
+        for a in range(max(0, b - 60), b):
+            ja, ta, ca = capa[a]
+            if tb > ta and (cb - ca) / max(tb - ta, 1e-3) <= HIZ_UST and en[a] + 1 > en[b]:
+                en[b], onc[b] = en[a] + 1, a
+    b = max(range(n), key=lambda i: en[i])
+    out = set()
+    while b >= 0:
+        out.add(capa[b][0]); b = onc[b]
+    return out
+
+
 def paragraf_hizala(metin: str, bas: float, son: float, th: str, tz: list[float], ti0: int, ti1: int) -> list[float]:
     """Paragrafın kelime başlangıçları; th[ti0:ti1] bu paragrafın tanınan harfleri."""
     kel = [m.group(0) for m in KELIME_RE.finditer(metin)]
     if not kel:
         return []
-    # metin harfleri ve her harfin ait olduğu kelime
+    # metin harfleri (EMA okunuşu, H655) ve her harfin ait olduğu kelime
     mh: list[str] = []
     sahip: list[int] = []
+    kbas: list[int] = []
     for j, w in enumerate(kel):
-        for c in sade(w):
+        kbas.append(len(mh))
+        for c in okunan_harf(w):
             mh.append(c)
             sahip.append(j)
     zam: list[float | None] = [None] * len(kel)
     if mh and ti1 > ti0:
         sm = SequenceMatcher(None, "".join(mh), th[ti0:ti1], autojunk=False)
         for blk in sm.get_matching_blocks():
-            if blk.size < 2:
+            # H655: 2 harflik blok ("an", "ir") her yerde bulunur, kelimeyi uzak bir ana bağlıyordu → ≥3 harf
+            if blk.size < 3:
                 continue
             for k in range(blk.size):
                 j = sahip[blk.a + k]
                 t = tz[ti0 + blk.b + k]
-                if zam[j] is None:  # bloklar metin sırasıyla gelir: kelimenin ilk eşleşen harfi
+                if zam[j] is None and blk.a + k == kbas[j]:  # kelimenin İLK harfi eşleştiyse başlangıcı odur
                     zam[j] = t
+                elif zam[j] is None and k == 0:  # blok kelimenin ortasından başlıyor: harf oranıyla geri al
+                    zam[j] = t - 0.06 * (blk.a - kbas[j])
+        capa = [(j, z, kbas[j]) for j, z in enumerate(zam) if z is not None]
+        iyi = _tutarli_capalar(capa)
+        zam = [z if j in iyi else None for j, z in enumerate(zam)]
     # eşleşmeyen kelimeler: karakter oranıyla komşulardan doldur
     uz = [max(1, len(w)) for w in kel]
     birikim = np.cumsum([0] + uz[:-1]).astype(float)
@@ -239,7 +318,7 @@ def klipli_isle(key: str, paras: list[dict], z: list, mp3: Path, klipler: list[s
     eksik = [p for p in paras if p["i"] < len(z) and z[p["i"]] and len(w.get(klipler[p["i"]]) or []) != kel_say[p["i"]]]
     pcm = coz(mp3) if eksik else None
     if eksik and len(eksik) > len(paras) / 2:
-        th, tz = tani(pcm)
+        th, tz = tani_dosya(mp3, pcm)
         tza = np.array(tz)
         for p in eksik:
             bas, son = float(z[p["i"]][0]), float(z[p["i"]][1])
@@ -271,7 +350,7 @@ def klipli_isle(key: str, paras: list[dict], z: list, mp3: Path, klipler: list[s
 def varyant_isle(paras: list[dict], z: list, mp3: Path) -> tuple[dict[str, list[float]], str]:
     t0 = time.time()
     pcm = coz(mp3)
-    th, tz = tani(pcm)
+    th, tz = tani_dosya(mp3, pcm)
     tza = np.array(tz)
     p_out: dict[str, list[float]] = {}
     eslesen = toplam = 0
@@ -286,7 +365,7 @@ def varyant_isle(paras: list[dict], z: list, mp3: Path) -> tuple[dict[str, list[
         p_out[str(i)] = ts
         toplam += len(ts)
         # ölçüm: tanınan pencerede kaç kelime harfi eşleşti (kaba kalite göstergesi)
-        mh = "".join(sade(w) for w in KELIME_RE.findall(p["metin"]))
+        mh = "".join(okunan_harf(w) for w in KELIME_RE.findall(p["metin"]))
         if mh and ti1 > ti0:
             eslesen += int(SequenceMatcher(None, mh, th[ti0:ti1], autojunk=False).ratio() * len(ts))
     sure = len(pcm) / SR
@@ -320,6 +399,7 @@ def oracle_gonder() -> str:
 
 def ders_isle(key: str, vid_sec: str | None, zorla: bool, kuru: bool, saglayici: str | None = None,
               oracle: bool = False) -> str:
+    okunus_kur(key)
     d = api_json(f"/api/canli-ders/{key}")
     paras = [p for b in d["bolumler"] for p in b["paragraflar"]]
     metin_hash = hashlib.sha1("\n".join(p["metin"] for p in paras).encode("utf-8")).hexdigest()

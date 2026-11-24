@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 30 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 31 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -116,4 +116,7 @@
 
 ### H651 — Alt ajan çözücü kodunu defterden almadı, uydurdu (k2-56: 2s56 ≠ defter 2s19) (2026-11-23)
 - **Kural:** Brif çözücü/önem kodunu AÇIKÇA verir (defterden). Çözücü yayınından önce `betik_tamamla.py <ders>` `cozucu_bag` satırı ✓ olmalı.
+
+### H655 · Sesli ders ve örnek soruda metin takibi yanlış yeri gösteriyor / geç kalıyor (2026-11-24)
+- **Önleme:** Anlatım ↔ slayt/metin eşlemesinde birebir metin beklenmez; sözcük eşleşmesi tek ölçüt olamaz (anlam + sıra). Seste olmayan metin için zaman uydurulmaz: metni değişen ses varyantı ya yeniden seslendirilir ya da sunulmaz.
 

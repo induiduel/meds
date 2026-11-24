@@ -1,9 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 897,
-  "baslik": "Derste dinle sesi ilgili yerden başlatıyor",
+  "onem": 898,
+  "baslik": "Sesli derste ve örnek soruda metin takibi düzeltildi",
   "maddeler": [
-    "**Derste dinle:** Check-up'ta yanlış yaptığın sorudan sesli derse geçince ses ilgili paragrafın başından, yumuşak girişle başlar."
+    "Sesli derste hocanın anlatımı slayttan farklı sözcüklerle olsa da PDF üzerinde doğru madde işaretlenir.",
+    "Slayttaki vurgu artık konuşma boyunca kesintisiz ilerler; geç yanmaz, arada sönmez.",
+    "Örnek soru çözücüde okunan cümleye anında geçilir ve okunan kelime metin üzerinde işaretlenir.",
+    "Metni sonradan değişmiş eski ses sürümleri kaldırıldı; her derste metinle birebir uyan güncel ses çalınır."
   ],
   "eklenen": [],
   "degisen": [

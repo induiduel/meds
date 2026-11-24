@@ -180,6 +180,8 @@ export const SoruCozucu: React.FC<Props> = ({
   const siraRef = useRef(0); // her yeni sıra eskisini geçersiz kılar
   const otoRef = useRef<number | null>(null);
   const kokRef = useRef<HTMLDivElement>(null);
+  /** H655: okunan klip cümlesinin seste [başlangıç, bitiş] saniyesi — kelime takibi bunun içinde hece oranıyla yürür */
+  const okumaRef = useRef<{ b: number; e: number } | null>(null);
   const devamRef = useRef<(() => void) | null>(null); // duraklatılan sıranın kalanı
 
   const sorular = useMemo(() => {
@@ -348,6 +350,7 @@ export const SoruCozucu: React.FC<Props> = ({
       const kb = klipBilgi(a.klasor, a.klip);
       const k = kb?.k;
       const yedek = () => {
+        okumaRef.current = null;
         // Klip bulunamayan durumlarda veya sesli soru çözücüde: tarayıcının Türkçe sesiyle cümle cümle oku
         const hasTTS = typeof window !== 'undefined' && 'speechSynthesis' in window;
         if (hasTTS) {
@@ -405,9 +408,11 @@ export const SoruCozucu: React.FC<Props> = ({
       el.ontimeupdate = () => {
         const t = el.currentTime;
         if (t >= kesSn) { el.ontimeupdate = null; el.onended = null; el.pause(); sonraki(); return; }
-        let j = k.zaman.findIndex(([b, e]) => t >= b - 0.05 && t < e + 0.4);
-        if (j < 0) j = k.zaman.filter(([b]) => b <= t).length - 1;
-        j = Math.max(0, j);
+        // H655: eskiden "t < e + 0,4" kuyruğu önceki cümleyi 0,4 sn fazla tutuyordu (yeni cümleye geç geçiş).
+        // Başlamış son cümle etkindir (0,08 sn öne alma: göz algısı gecikmesi).
+        let j = 0;
+        for (let q = 0; q < k.zaman.length; q++) if (k.zaman[q][0] <= t + 0.08) j = q;
+        okumaRef.current = k.zaman[j] ? { b: k.zaman[j][0], e: k.zaman[j][1] } : null;
         if (j !== son) { son = j; a.onCumle?.(j); }
       };
       el.onended = () => { el.onended = null; sonraki(); };
@@ -421,6 +426,44 @@ export const SoruCozucu: React.FC<Props> = ({
     adim(0);
   }, [durdur, klipBilgi, tercih.hiz, brans, ozelSorular]);
   useEffect(() => () => { durdur(); if (otoRef.current) window.clearTimeout(otoRef.current); }, [durdur]);
+
+  // H655: okunan KELİMENİN ekranda işaretlenmesi (CSS Highlight API; React DOM'una dokunmaz). Klibin cümle zamanı
+  // ölçülüdür (ses_klip birleştirmesi), cümle içinde kelime hece sayısıyla paylaştırılır.
+  useEffect(() => {
+    const H = (globalThis as { CSS?: { highlights?: Map<string, unknown> } }).CSS?.highlights;
+    const HL = (globalThis as { Highlight?: new (...r: Range[]) => unknown }).Highlight;
+    if (!H || !HL) return;
+    const SEC: Record<string, string> = {
+      kok: 'h2.is-aktif', sik: '.sc-sik.is-okunuyor > span', ipucu: '.sc-ipucu.is-aktif p',
+      aciklama: '.sc-aciklamalar li.is-aktif p', cozum: '.sc-cozum.is-aktif > p', not: '.sc-kisanot li.is-aktif',
+    };
+    if (!caliyor || !okunan || !SEC[okunan.yer]) { H.delete('sc-okunan'); return; }
+    let raf = 0, sonKey = '';
+    const hece = (w: string) => Math.max(1, (w.match(/[aeıioöuüâîû]/gi) || []).length + (/\d/.test(w) ? w.replace(/\D/g, '').length * 1.5 : 0));
+    const dongu = () => {
+      raf = requestAnimationFrame(dongu);
+      const z = okumaRef.current, el = audio.current, kap = kokRef.current?.querySelector(SEC[okunan.yer]);
+      if (!z || !el || !kap || el.paused) return;
+      const kel: { n: Text; b: number; e: number; h: number }[] = [];
+      const tw = document.createTreeWalker(kap, NodeFilter.SHOW_TEXT);
+      for (let n = tw.nextNode() as Text | null; n; n = tw.nextNode() as Text | null) {
+        for (const m of n.data.matchAll(/\S+/g)) kel.push({ n, b: m.index!, e: m.index! + m[0].length, h: hece(m[0]) });
+      }
+      if (!kel.length) return;
+      const top = kel.reduce((a, k) => a + k.h, 0);
+      const oran = Math.min(1, Math.max(0, (el.currentTime + 0.08 - z.b) / Math.max(0.2, z.e - z.b)));
+      let acc = 0, w = 0;
+      for (; w < kel.length - 1; w++) { if (acc + kel[w].h > oran * top) break; acc += kel[w].h; }
+      const key = `${okunan.yer}${okunan.h || ''}${okunan.j ?? ''}:${w}`;
+      if (key === sonKey) return;
+      sonKey = key;
+      const r = document.createRange();
+      r.setStart(kel[w].n, kel[w].b); r.setEnd(kel[w].n, kel[w].e);
+      H.set('sc-okunan', new HL(r));
+    };
+    raf = requestAnimationFrame(dongu);
+    return () => { cancelAnimationFrame(raf); H.delete('sc-okunan'); };
+  }, [caliyor, okunan]);
   useEffect(() => { if (audio.current) audio.current.playbackRate = tercih.hiz; }, [tercih.hiz]);
 
   // ---------- adım kurucular
