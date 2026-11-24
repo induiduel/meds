@@ -482,6 +482,8 @@ def dogrula(key: str) -> list[str]:
                     hata.append(str(h))
     if o.get("ozet") is None and not o.get("ozetEksik"):
         hata.append("özet yok ama eksik gerekçesi de yok")
+    if "ozetEksik" in o and not (isinstance(o["ozetEksik"], list) and all(isinstance(x, str) for x in o["ozetEksik"])):
+        hata.append("ozetEksik metin listesi olmalı (ekran .join çağırır; düz metin sayfayı çökertir — H: k2-41)")
     return hata
 
 

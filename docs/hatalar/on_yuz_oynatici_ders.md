@@ -208,3 +208,9 @@
 - **Kök neden:** Her oynatıcı kendi `Audio`'sunu açıyor; dosya inene/arabelleğe alınana kadar hiçbiri durum göstermiyordu.
 - **Çözüm:** `src/services/sesYukleniyor.ts` (`main.tsx`'te kurulur) `HTMLMediaElement.prototype.play`'i sarar; `HTMLAudioElement` `readyState<3` iken ya da `waiting`'de 250 ms sonra alt ortada "Ses yükleniyor…" gösterir, `playing/pause/ended/error`'da kaldırır. Stil `styles/motion.css`.
 - **Önleme:** Yeni sesli işlev ayrıca gösterge yazmaz; `play()`'i atlayan (Web Audio API) oynatıcı eklenirse aynı gösterge ona da bağlanır.
+
+## H654 · Ders analizi `ozetEksik.join is not a function` (2026-11-24)
+- **Belirti:** canlı derste analiz sekmesi açılınca sayfa çöker.
+- **Kök neden:** `src/data/ders_analizi/k2-41.json` içinde `ozetEksik` elle düz metin yazıldı (cfc10441); `CdDersAnaliz.tsx` liste bekleyip `.join` çağırır; `uret.py --dogrula` alanın türüne bakmıyordu.
+- **Çözüm:** veri listeye çevrildi; doğrulayıcı tür denetimi ekledi; ekran metin/listeyi kabul eder.
+- **Önleme:** şemadaki liste alanı elle yazılırken tür korunur; `uret.py --dogrula` 0 HATA olmadan yayın yok.

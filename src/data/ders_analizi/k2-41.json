@@ -535,7 +535,9 @@
   }
  ],
  "ozet": null,
- "ozetEksik": "Slayt bazlı ders özeti bu katmanda üretilmedi; dersin tam metni ders özetleri bölümündeki Otonom Sinir Sistemi Farmakolojisi mekanizmalar metnindedir.",
+ "ozetEksik": [
+  "slayt bazlı ders özeti (tam metin Ders özetleri › Otonom Sinir Sistemi Farmakolojisi mekanizmalar metninde)"
+ ],
  "_cikmisAnalizZorunlu": true,
  "_kaynak": "Ders PDF'i (65 slayt), hoca ses kaydı (Farma OSS Part1/Part2, üç geçişli döküm: ham ve süzgeçli ses, large-v3 ve medium), bu derse bağlı 10 doğrulanmış çıkmış soru."
 }

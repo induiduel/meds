@@ -100,7 +100,7 @@ export function CdDersAnaliz({ dersKey, baslangic = 'analiz', onKapat }: { dersK
         <div className="da-govde">
           {d && sekme === 'ozet' && !d.ozet && (
             <p className="da-bos">Ders özeti, dersin içerikleri tamamlandıktan sonra onlardan hazırlanır.
-              {d.ozetEksik?.length ? ` Henüz eksik: ${d.ozetEksik.join(', ')}.` : ''}</p>
+              {d.ozetEksik?.length ? ` Henüz eksik: ${([] as string[]).concat(d.ozetEksik).join(', ')}.` : ''}</p>
           )}
           {bolumler.map((b, i) => (
             <section key={b.id} id={`da-${b.id}`} className={`da-bolum${calan === b.id ? ' is-calan' : ''}`}>
