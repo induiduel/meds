@@ -413,12 +413,16 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 /* Oynatma listesi (2026-11-20) */
 .sl15-bas-sat { display: flex; align-items: center; gap: 8px; }
 .sl15-bas-sat .sl15-bas { flex: 1; min-width: 0; }
-.sl15 .b15-list li.sl15-li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; }
-.sl15 .b15-list li.sl15-li > :not(.b15-row):not(.cd-btn):not(.sl15-ac) { grid-column: 1 / -1; }
-.sl15 .sl15-ac svg { transition: transform .2s; }
-.sl15 .sl15-ac.is-acik svg { transform: rotate(180deg); }
-.sl15 .sl15-panel { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 4px 16px 14px 64px; }
-@media (max-width: 600px) { .sl15 .sl15-panel { padding-left: 16px; } }
+.sl15 .b15-list li.sl15-li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+.sl15 .b15-list li.sl15-li > :not(.b15-row):not(.cd-btn) { grid-column: 1 / -1; }
+.sl15 button.sl15-ac-bas { background: none; border: 0; font: inherit; color: inherit; cursor: pointer; text-align: left; }
+.sl15 .sl15-ac-ok { width: 18px; height: 18px; flex: none; transition: transform .2s; transform: rotate(-90deg); opacity: .8; }
+.sl15 .sl15-ac-bas.is-acik .sl15-ac-ok { transform: none; }
+.sl15 .sl15-checkup { flex: none; white-space: nowrap; }
+.sl15 .sl15-acilan { animation: sl15-ac .18s ease-out; }
+@keyframes sl15-ac { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sl15 .sl15-acilan, .sl15 .sl15-ac-ok { animation: none; transition: none; } }
+@media (max-width: 600px) { .sl15 .sl15-checkup { padding-inline: 10px; } }
 .sl15 .b15-list li.sl15-li > .cd-btn { margin-right: 10px; }
 .sl15-liste-cip { display: inline-flex; align-items: center; gap: 6px; }
 .sl15-liste-cip svg { width: 16px; height: 16px; }

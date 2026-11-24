@@ -14,7 +14,7 @@ import { cdDersSesSurumu } from '../canliDers/canliDersStore';
 import { Halka } from './Halka';
 import { ListeEkleDugme, Listem, TopluEkleDugme } from '../canliDers/CanliDersListem';
 import { useCdListe } from '../canliDers/canliDersListe';
-import { dersCozucu } from '../canliDers/dersCozucu';
+import { bransCheckup } from '../canliDers/dersCozucu';
 import { ClipboardCheck } from 'lucide-react';
 import '../../styles/canli-ders.css';
 import '../../styles/v15/dersler.css';
@@ -64,8 +64,9 @@ export default function SesliListeV15() {
   const numTur: DersSiraTur = sira === 'program' || sira === 'eklenme' ? sira : 'drive';
   const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
   const [temizleAcik, setTemizleAcik] = useState(false);
-  /** Açık ders satırı (akordeon): aynı anda tek ders açık */
-  const [acik, setAcik] = useState<string | null>(null);
+  /** Açık branş (akordeon): aynı anda tek branş açık; arama/süzgeç varken hepsi açık (sonuç gizlenmesin) */
+  const [acikBrans, setAcikBrans] = useState<string | null>(null);
+  const bransDegis = (ad: string) => setAcikBrans((a) => (a === ad ? null : ad));
   useEffect(() => {
     const f = () => setIndirilen(cdCevrimdisiKayitlari());
     window.addEventListener(CD_CEVRIMDISI_DEGISTI, f);
@@ -93,6 +94,7 @@ export default function SesliListeV15() {
         .filter((g) => g.liste.length),
     [branslar, durum, q, ilerleme, sira, numTur, indirilen],
   );
+  const acikMi = (ad: string) => !!q || durum !== 'tum' || acikBrans === ad;
   useV15Baslik({ baslik: arsiv ? 'Sesli dersler · Arşiv' : 'Sesli dersler', alt: `${arsiv ? '2025-2026 · ' : ''}Kurul ${kurul}${dersler ? ` · ${toplam} ders` : ''}` });
 
   return (
@@ -146,15 +148,26 @@ export default function SesliListeV15() {
           gruplar.map((g) => (
             <section key={g.ad} className="sl15-grup" aria-label={g.kisa}>
               <div className="sl15-bas-sat">
-              <a className="sl15-bas" href={bransYolu(kurul, g.ad)} onClick={linkClick(() => navigateTo(bransYolu(kurul, g.ad)))} {...(arsiv ? { onClick: (e: React.MouseEvent) => e.preventDefault(), 'aria-disabled': true, tabIndex: -1 } : {})}>
+              <button type="button" className={`sl15-bas sl15-ac-bas${acikMi(g.ad) ? ' is-acik' : ''}`} aria-expanded={acikMi(g.ad)} onClick={() => bransDegis(g.ad)}
+                title={acikMi(g.ad) ? `${g.kisa} derslerini gizle` : `${g.kisa} derslerini göster`}>
+                <ChevronDown className="sl15-ac-ok" aria-hidden />
                 <b>{g.kisa}</b>
                 <span className="v15-cap">{g.biten}/{g.dersler.length} bitti</span>
                 <span className="v15-bar sl15-bar" aria-hidden><span style={{ width: `${g.dersler.length ? (g.biten / g.dersler.length) * 100 : 0}%` }} /></span>
-                <ChevronRight className="v15-chev" aria-hidden />
-              </a>
+              </button>
+              {!arsiv && (() => {
+                const c = bransCheckup(g.dersler.map((d) => d.key));
+                return c ? (
+                  <a className="v15-btn is-soft sl15-checkup" href={c.url} onClick={linkClick(() => navigateTo(c.url))}
+                    title={`${g.kisa}: ${c.ders} dersin örnek ve çıkmış soruları tek check-up'ta, sesli`}>
+                    <ClipboardCheck aria-hidden />Check-up · {c.soru} soru
+                  </a>
+                ) : null;
+              })()}
               <TopluEkleDugme keys={g.liste.map((d) => d.key)} ad={g.kisa} />
+              {!arsiv && <a className="v15-ib sl15-brans-git" href={bransYolu(kurul, g.ad)} onClick={linkClick(() => navigateTo(bransYolu(kurul, g.ad)))} aria-label={`${g.kisa} sayfası`} title={`${g.kisa} sayfası`}><ChevronRight aria-hidden /></a>}
               </div>
-              <ul className="b15-list v15-card" role="list">
+              {acikMi(g.ad) && <ul className="b15-list v15-card sl15-acilan" role="list">
                 {g.liste.map((d) => {
                   const i = ilerleme(d);
                   return (
@@ -167,31 +180,13 @@ export default function SesliListeV15() {
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
-                      <button type="button" className={`v15-ib sl15-ac${acik === d.key ? ' is-acik' : ''}`} aria-expanded={acik === d.key}
-                        aria-label={acik === d.key ? 'Ders seçeneklerini kapat' : 'Ders seçeneklerini aç'} onClick={() => setAcik((a) => (a === d.key ? null : d.key))}>
-                        <ChevronDown aria-hidden />
-                      </button>
                       <ListeEkleDugme dersKey={d.key} baslik={d.baslik} />
                       <SurumSecV15 surumler={dersSurumleri(d.key, liste0)}
                         aktif={dersSurumleri(d.key, liste0).find((s) => s.vid && cdDersSesSurumu(s.key) === s.vid) || dersSurumleri(d.key, liste0).find((s) => s.yeni)} />
-                      {acik === d.key && (() => {
-                        const c = dersCozucu(d.baslik, d.key);
-                        const url = c ? `${c.url}&dk=${encodeURIComponent(d.key)}` : null;
-                        return (
-                          <div className="sl15-panel">
-                            {url ? (
-                              <a className="v15-btn is-soft" href={url} onClick={linkClick(() => navigateTo(url))}>
-                                <ClipboardCheck aria-hidden />Sesli check-up · {c!.soru} soru
-                              </a>
-                            ) : <span className="v15-cap">Bu ders için check-up soruları henüz hazır değil.</span>}
-                            <small className="v15-cap">Örnek ve çıkmış sorular sesli çözülür; yanlışlarının açıklamasını görüp dersin ilgili bölümünü dinleyebilirsin.</small>
-                          </div>
-                        );
-                      })()}
                     </li>
                   );
                 })}
-              </ul>
+              </ul>}
             </section>
           ))
         ) : (

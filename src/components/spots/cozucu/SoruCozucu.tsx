@@ -11,12 +11,31 @@ import { openPwaInstallGuide } from '../../../services/pwaService';
 import { toast } from '../../ui/Toast';
 import { Metin } from '../onem/OnemMadde';
 import { navigateTo, pathFor } from '../../../router';
+import { kodDersKey } from '../../canliDers/dersCozucu';
+import { cdListeGetir } from '../../canliDers/canliDersStore';
 
 /** Check-up (sesli ders listesi) bağlantısıyla gelindiyse dersin anahtarı (?dk=); "Derste dinle" ilgili paragrafa gider (?ara=) */
-const checkupMu = () => !!new URLSearchParams(location.search).get('dk');
-const dersteDinleYolu = (metin: string): string | null => {
-  const dk = new URLSearchParams(location.search).get('dk');
+const checkupMu = () => { const sp = new URLSearchParams(location.search); return !!sp.get('dk') || sp.get('checkup') === '1'; };
+/** Check-up'tan gelindiyse "Derste dinle" ilgili sesli derste o paragrafa gider (?dinle=1&ara=). Ders: ?dk= (tek ders) ya da
+ *  branş check-up'ında sorunun kaynak dersi (kodDersKey). */
+const dersteDinleYolu = (metin: string, kaynakKod?: string): string | null => {
+  const dk = new URLSearchParams(location.search).get('dk') || (checkupMu() ? kodDersKey(kaynakKod) : null);
   return dk ? `${pathFor('canli_ders', dk)}?dinle=1&ara=${encodeURIComponent(metin.slice(0, 400))}` : null;
+};
+/** Ders defteri kimliği kısa ("k2-31"); sesli ders adresi tam anahtar ister ("k2-31-medulla-…"): tıklayınca listeden çözülür */
+const dersteDinle = async (yolu: string) => {
+  const m = /\/([^/?]+)\?/.exec(yolu);
+  const id = m?.[1];
+  if (id) {
+    try {
+      const liste = await cdListeGetir();
+      if (!liste.some((d) => d.key === id)) {
+        const tam = liste.find((d) => d.key.startsWith(`${id}-`) && !/-v\d+$/.test(d.key)) || liste.find((d) => d.key.startsWith(`${id}-`));
+        if (tam) yolu = yolu.replace(`/${id}?`, `/${tam.key}?`);
+      }
+    } catch { /* liste yoksa olduğu gibi */ }
+  }
+  navigateTo(yolu);
 };
 import {
   HARFLER, TERCIH_KEY, VARSAYILAN_SES, cozucuDersYukle, cozucuDizinYukle, ilerlemeOku, ilerlemeYaz, klipYolu, sesListesi, setAdi,
@@ -331,7 +350,7 @@ export const SoruCozucu: React.FC<Props> = ({
       const o = alt || dizin?.ortak[klip];
       return o ? { k: { v: o.v, sure: o.sure, zaman: [] }, ses: alt ? ses : varsayilanSes } : undefined;
     }
-    const alt = ses !== varsayilanSes ? ders?.klipSes?.[ses]?.[klip] : undefined;
+    const alt = ses !== varsayilanSes ? ders?.klipSes?.[ses]?.[`${klasor}/${klip}`] || ders?.klipSes?.[ses]?.[klip] : undefined;
     if (alt) return { k: alt, ses };
     // paket dersinde sorular farklı derslerin klasöründen gelir: klipler "<klasör>/<klip>" anahtarıyla
     const k = ders?.klip[`${klasor}/${klip}`] || ders?.klip[klip];
@@ -982,8 +1001,8 @@ export const SoruCozucu: React.FC<Props> = ({
                 {ogrenVar && !ogrenAcik && (
                   <button type="button" className="sc-ogren-b" onClick={() => setOgrenAcik(true)}><BookOpenText aria-hidden />Bu bilgiyi Öğren'de gör</button>
                 )}
-              {durum !== 'dogru' || yardim ? (() => { const y = dersteDinleYolu(`${q.cozum} ${q.secenekler[q.dogru]}`); return y ? (
-                  <button type="button" className="sc-btn sc-derste" onClick={() => navigateTo(y)}><Headphones aria-hidden />Sesli derste bu bölümü dinle</button>
+              {durum !== 'dogru' || yardim ? (() => { const y = dersteDinleYolu(`${q.cozum} ${q.secenekler[q.dogru]}`, q.kaynak?.kod); return y ? (
+                  <button type="button" className="sc-btn sc-derste" onClick={() => { void dersteDinle(y); }}><Headphones aria-hidden />Sesli derste bu bölümü dinle</button>
                 ) : null; })() : null}
               </div>
             )}
@@ -1031,7 +1050,7 @@ export const SoruCozucu: React.FC<Props> = ({
                   <ul>{sorular.filter((x) => tekrarlik.includes(x.no)).map((x) => (
                     <li key={x.no}><button type="button" onClick={() => { setBitti(false); setI(sorular.indexOf(x)); }}>
                       <b>{x.soru}</b><span>{x.dogru}) {x.secenekler[x.dogru]}</span>
-                    </button>{(() => { const y = dersteDinleYolu(`${x.cozum} ${x.secenekler[x.dogru]}`); return y ? <button type="button" className="sc-btn sc-derste" onClick={() => navigateTo(y)}><Headphones aria-hidden />Derste dinle</button> : null; })()}</li>
+                    </button>{(() => { const y = dersteDinleYolu(`${x.cozum} ${x.secenekler[x.dogru]}`, x.kaynak?.kod); return y ? <button type="button" className="sc-btn sc-derste" onClick={() => { void dersteDinle(y); }}><Headphones aria-hidden />Derste dinle</button> : null; })()}</li>
                   ))}</ul>
                 </div>
               )}

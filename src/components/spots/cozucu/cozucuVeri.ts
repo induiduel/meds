@@ -47,10 +47,37 @@ const bellek = new Map<string, Promise<CDers>>();
 /** Panel görünürlüğü (cozucu:<dizin>/<kod>, kurul:<n>) */
 const kapali = (brans: Brans, kod: string) => icerikGizli('cozucu', `${brans}_cozucu/${kod}`);
 export const cozucuVar = (brans: Brans = 'patoloji') => !!DOSYA[yol(brans, 'index')];
+/** Branş check-up'ı: dizindeki tüm derslerin soruları tek pakette (sesli liste › branş › Check-up) */
+export const TUM_KOD = '_tum';
+const tumPaket = async (brans: Brans): Promise<CDers> => {
+  const dz = await cozucuDizinYukle(brans);
+  const dersler = await Promise.all(dz.dersler.map((x) => cozucuDersYukle(x.kod, brans).catch(() => null)));
+  const sorular: CSoru[] = [];
+  const klip: Record<string, Klip> = {};
+  const klipSes: Record<string, Record<string, Klip>> = {};
+  const anahtar = (kl: string, k: string) => (k.includes('/') ? k : `${kl}/${k}`);
+  dersler.forEach((d) => {
+    if (!d) return;
+    const kl = d.klasor || d.kod;
+    for (const [k, v] of Object.entries(d.klip || {})) klip[anahtar(kl, k)] = v;
+    for (const [ses, kk] of Object.entries(d.klipSes || {})) for (const [k, v] of Object.entries(kk)) (klipSes[ses] ||= {})[anahtar(kl, k)] = v;
+    for (const q of d.sorular) sorular.push({
+      ...q, no: sorular.length + 1, klasor: q.klasor || kl, kn: q.kn ?? q.no,
+      kaynak: q.kaynak || { kod: d.kod, no: q.no, baslik: d.baslik, dersNo: d.no },
+    });
+  });
+  return { kod: TUM_KOD, no: 0, baslik: 'Check-up · tüm konular', sorular, klip, klipSes };
+};
 export const cozucuDersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<CDers> => {
   const a = `${brans}/${kod}`;
   let p = bellek.get(a);
   if (!p) {
+    if (kod === TUM_KOD) {
+      p = tumPaket(brans);
+      p.catch(() => bellek.delete(a));
+      bellek.set(a, p);
+      return p;
+    }
     const f = DOSYA[yol(brans, kod)];
     if (!f || kod === 'index') return Promise.reject(new Error(`ders yok: ${kod}`));
     if (kapali(brans, kod)) return Promise.reject(new Error('Bu içerik şu an kapalı'));

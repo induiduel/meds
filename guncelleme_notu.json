@@ -1,17 +1,21 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 900,
-  "baslik": "Check-up: yanlış soruda otomatik geçiş durdu",
+  "onem": 901,
+  "baslik": "Sesli derslerde branş check-up",
   "maddeler": [
-    "**Sesli check-up:** Yanlış ya da yardımla çözdüğün soruda sonraki soruya kendiliğinden geçilmez; açıklamayı okuyup \"Sesli derste bu bölümü dinle\"ye basabilirsin."
+    "**Sesli dersler:** Branşlar (Nöroloji, Psikiyatri…) açılır kapanır; biri açılınca diğeri kapanır.",
+    "**Branş check-up:** Her branşın tüm konularının örnek ve çıkmış soruları tek check-up'ta sesli çözülür.",
+    "**Derste dinle:** Yanlış yaptığın sorunun açıklamasından o sorunun dersine, ilgili bölümden dinlemeye geçebilirsin."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Branş check-up"
+  ],
   "degisen": [
-    "Check-up otomatik geçişi"
+    "Sesli ders listesi branş düzeyinde açılır kapanır"
   ],
-  "duzeltilen": [
-    "Derste dinle düğmesinin kaybolması"
+  "duzeltilen": [],
+  "silinen": [
+    "Ders satırındaki açılır panel"
   ],
-  "silinen": [],
   "yenilikler": []
 }

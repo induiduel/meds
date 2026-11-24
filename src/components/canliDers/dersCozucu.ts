@@ -31,3 +31,25 @@ const bul = (baslik: string | undefined, hoca: boolean | 'ara', key?: string): D
 export const dersCozucu = (baslik?: string, key?: string): DersCozucu | null => bul(baslik, false, key);
 export const dersHocaCozucu = (baslik?: string, key?: string): DersCozucu | null => bul(baslik, true, key);
 export const dersAraCozucu = (baslik?: string, key?: string): DersCozucu | null => bul(baslik, 'ara', key);
+
+/** Çözücü kodu → sesli ders anahtarı (ders defteri; set eki "-N" atılır). Check-up'ta "Derste dinle" için. */
+const KEY = new Map<string, string>();
+for (const [k, kd] of KOD) KEY.set(kd, k);
+export const kodDersKey = (kod?: string): string | null => (kod ? KEY.get(kod) || KEY.get(kod.replace(/-\d+$/, '')) || null : null);
+/**
+ * Branş check-up'ı: branştaki derslerin (anahtarları) çözücü dizinini bulur; o dizindeki TÜM derslerin soruları tek
+ * pakette (kod "_tum", cozucuVeri) sesli çözülür. Hoca/ara soru dizinleri hariç (bul ile aynı).
+ */
+export const bransCheckup = (keys: string[]): { url: string; soru: number; ders: number } | null => {
+  const kodlar = new Set(keys.map((k) => KOD.get(kisaKey(k))).filter(Boolean) as string[]);
+  if (!kodlar.size) return null;
+  let en: { brans: string; n: number; soru: number; ders: number } | null = null;
+  for (const [yol, d] of Object.entries(IZ)) {
+    const brans = yol.match(/data\/(k[^/]*)_cozucu\//)?.[1];
+    if (!brans || brans.endsWith('hoca') || brans.endsWith('hocaara')) continue;
+    const ds = d.dersler || [];
+    const n = ds.filter((x) => kodlar.has(x.kod) || kodlar.has(x.kod.replace(/-\d+$/, ''))).length;
+    if (n && (!en || n > en.n)) en = { brans, n, soru: ds.reduce((t, x) => t + (x.soru ?? x.madde ?? 0), 0), ders: new Set(ds.map((x) => x.kod.replace(/-\d+$/, ''))).size };
+  }
+  return en ? { url: `/soru-cozucu?brans=${en.brans}&ders=_tum&coz=1&checkup=1`, soru: en.soru, ders: en.ders } : null;
+};
