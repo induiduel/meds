@@ -17,7 +17,7 @@ import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device
 import { openPwaInstallGuide } from '../../services/pwaService';
 import { cumleDuzeyleri } from '../../utils/maddele';
 import {
-  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, cdBolumAtla, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdParagraftanCal, cdSesUrl, cdTercihVaryant, cdToggle, cdBolumAtla, fmtSure, useCd, type CdDetay,
   useCdNumara,
 } from './canliDersStore';
 import { useDersEkranTercih, useYatayDokunmatik } from '../../services/dersEkranTercih';
@@ -288,14 +288,20 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
     if (!pStr && ara) {
       const kel = (x: string) => x.toLocaleLowerCase('tr-TR').replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter((w) => w.length > 3).map((w) => w.slice(0, 5));
       const hedef = new Set(kel(ara));
-      let en = -1, enP = 0;
+      let en = -1, enP = 0, enN = 0;
       if (hedef.size) detay.bolumler.forEach((b) => b.paragraflar.forEach((p) => {
         const k = new Set(kel(p.metin));
         let n = 0; hedef.forEach((w) => { if (k.has(w)) n += 1; });
         const puan = n / hedef.size;
-        if (puan > enP) { enP = puan; en = p.i; }
+        if (puan > enP) { enP = puan; en = p.i; enN = n; }
       }));
-      if (en >= 0 && enP >= 0.45) pStr = String(en);
+      // dinle=1 (check-up): sorunun kökü + çözümü gelir, açıklama metni ders metnini birebir izlemez → eşik 0,3 + en az 3 ortak kelime
+      const dinle = sp.get('dinle') === '1';
+      if (en >= 0 && (dinle ? enP >= 0.3 && enN >= 3 : enP >= 0.45)) {
+        pStr = String(en);
+        // Check-up "Derste dinle": ses de bu paragraftan (kesiksiz, yumuşak girişle) başlar
+        if (dinle) cdParagraftanCal(detay, en).then((ok) => { if (ok) setBaglanti('bagli'); });
+      }
     }
     if (!pStr) return;
     const pIdx = parseInt(pStr, 10);

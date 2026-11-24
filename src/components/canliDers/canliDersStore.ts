@@ -995,6 +995,43 @@ export function cdParagrafa(i: number, oynat = true) {
   cdAtla(r[0]);
   if (oynat && audio?.paused) audio.play().catch(() => {});
 }
+/**
+ * "Derste dinle" (check-up → ?ara=): sesi bulunan paragrafın başından kesiksiz başlatır.
+ * Kesik duyulmasın diye: ders yüklenip zamanlama bağlanana dek beklenir, paragraf (= cümle) başının hemen öncesine
+ * atlanır, atlama sonrası tampon dolana (canplay) dek beklenir ve ses ~0,4 sn'de sıfırdan yükseltilerek açılır.
+ */
+export async function cdParagraftanCal(o: CdOzet, i: number): Promise<boolean> {
+  const bekle = (ms: number) => new Promise((r) => setTimeout(r, ms));
+  if (st.key !== o.key) cdOynat(o, undefined, { oynat: false });
+  const a = ses();
+  for (let n = 0; n < 60 && !cdAralik(i); n++) await bekle(100);
+  const r = cdAralik(i);
+  if (!r || st.key !== o.key) return false;
+  a.pause();
+  const olay = (ad: string, ms: number) => new Promise<void>((res) => {
+    const t = setTimeout(res, ms);
+    a.addEventListener(ad, () => { clearTimeout(t); res(); }, { once: true });
+  });
+  if (a.readyState < 1) await olay('loadedmetadata', 6000);
+  const hedef = Math.max(0, r[0] - 0.06);
+  cdAtla(hedef);
+  if (a.readyState < 3) await olay('canplay', 5000);
+  const v0 = a.volume > 0 ? a.volume : 1;
+  a.volume = 0;
+  try { await a.play(); } catch (e: any) {
+    a.volume = v0;
+    if (e?.name === 'NotAllowedError') set({ hata: 'Oynatmak için düğmeye dokunun.' });
+    return false;
+  }
+  const bas = performance.now();
+  const yukselt = () => {
+    const k = Math.min(1, (performance.now() - bas) / 400);
+    a.volume = v0 * k * k;
+    if (k < 1 && !a.paused) requestAnimationFrame(yukselt); else a.volume = v0;
+  };
+  requestAnimationFrame(yukselt);
+  return true;
+}
 export function cdKapat() {
   konumKaydet();
   if (audio) {
