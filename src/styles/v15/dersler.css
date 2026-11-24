@@ -427,3 +427,22 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15-liste-cip { display: inline-flex; align-items: center; gap: 6px; }
 .sl15-liste-cip svg { width: 16px; height: 16px; }
 .sl15-listem { display: flex; flex-direction: column; gap: 10px; }
+/* 2026-11-25: branş başlığı — geniş dokunma alanı (ok solda 18 px'ti, solundaki boşluk tıklanmıyordu) + tablet/telefon düzeni */
+.sl15 .sl15-bas-sat { flex-wrap: wrap; row-gap: 6px; }
+.sl15 button.sl15-ac-bas { min-height: 44px; padding: 6px 10px; margin-left: -10px; border-radius: 12px; }
+.sl15 button.sl15-ac-bas:hover { background: color-mix(in srgb, var(--color-ink) 5%, transparent); }
+.sl15 button.sl15-ac-bas:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.sl15 .sl15-ac-bas b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sl15 .sl15-ac-bas .v15-cap { flex: none; white-space: nowrap; }
+.sl15 .sl15-ac-bas .sl15-bar { min-width: 40px; }
+@media (max-width: 1100px) {
+  .sl15 button.sl15-ac-bas { flex: 1 1 100%; margin-left: -10px; max-width: calc(100% + 10px); }
+  .sl15 .sl15-ac-bas .sl15-bar { max-width: none; flex: 1 1 60px; }
+  .sl15 .sl15-checkup { margin-left: 26px; }
+  .sl15 .sl15-brans-git { margin-left: auto; }
+}
+@media (max-width: 520px) {
+  .sl15 .sl15-checkup { margin-left: 0; flex: 1 1 auto; justify-content: center; min-width: 0; }
+  .sl15 .sl15-bas-sat .cd-toplu > span { display: none; }
+  .sl15 .sl15-bas-sat .cd-toplu { min-height: 40px; min-width: 40px; justify-content: center; }
+}
