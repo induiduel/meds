@@ -2,6 +2,7 @@ import { installKabukBayraklari } from './services/kabukBayraklari';
 import './services/netInstall';
 import { adresKatmaniniKur } from './siteHaritasi';
 import { installAdminFetchAuth } from './services/adminFetchAuth';
+import { installSesYukleniyor } from './services/sesYukleniyor';
 import { Component, ErrorInfo, ReactNode } from 'react';
 import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
 import { createRoot } from 'react-dom/client';
@@ -125,6 +126,7 @@ if (typeof window !== 'undefined') {
 
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();
+installSesYukleniyor();
 installNetworkBanner();
 installUpdatePrompt();
 installBakimEkrani();

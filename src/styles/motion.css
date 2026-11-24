@@ -40,3 +40,9 @@ input[type="checkbox"]:checked, input[type="radio"]:checked { animation: mo-chec
   details[open] > :not(summary),
   input[type="checkbox"]:checked, input[type="radio"]:checked { animation: none !important; }
 }
+
+/* Ses yükleniyor göstergesi (src/services/sesYukleniyor.ts) */
+.ses-yukleniyor{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,8px);z-index:9999;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(20,22,28,.88);color:#fff;font-size:13px;font-weight:500;box-shadow:0 4px 16px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease}
+.ses-yukleniyor.gorunur{opacity:1;transform:translate(-50%,0)}
+.ses-yukleniyor__donen{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:ses-yuk-don .8s linear infinite}
+@keyframes ses-yuk-don{to{transform:rotate(360deg)}}

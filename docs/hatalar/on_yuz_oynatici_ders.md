@@ -202,3 +202,9 @@
 - **Kök neden:** Ayar yalnız ara soru sayfasının alt çubuğundaydı; varsayılan kapalı olduğu için sayfa ancak elle açılınca görünüyordu, "hepsini çöz" (ünlem) akışında ise hiç gösterilmiyordu. Ayar ile ayara ulaşmanın tek yolu aynı kapalı kapının arkasındaydı.
 - **Çözüm:** `CdHocaAra.tsx › useHocaAraTercih` (abone olunabilir ortak tercih) eklendi; Görünüm çekmecesi › Okuma sekmesinde "Soruları derste kendiliğinden göster" ve "Soruyu otomatik çöz" anahtarları her zaman görünür. Soru sayfasındaki kutular aynı tercihi okur/yazar.
 - **Önleme:** Bir özelliği açan/kapatan ayar, o özellik kapalıyken de ulaşılabilir kalıcı bir yerde (ayar çekmecesi) durur; yalnız özelliğin kendi ekranına konmaz.
+
+## H653 · Ses yüklenirken sessizlik "ses yok" sanılıyor (2026-11-24)
+- **Belirti:** Örnek soru çözücü, sesli ders, terim sesi vb. ilk tıklamada bir süre sessiz; öğrenci sesin olmadığını sanıyor.
+- **Kök neden:** Her oynatıcı kendi `Audio`'sunu açıyor; dosya inene/arabelleğe alınana kadar hiçbiri durum göstermiyordu.
+- **Çözüm:** `src/services/sesYukleniyor.ts` (`main.tsx`'te kurulur) `HTMLMediaElement.prototype.play`'i sarar; `HTMLAudioElement` `readyState<3` iken ya da `waiting`'de 250 ms sonra alt ortada "Ses yükleniyor…" gösterir, `playing/pause/ended/error`'da kaldırır. Stil `styles/motion.css`.
+- **Önleme:** Yeni sesli işlev ayrıca gösterge yazmaz; `play()`'i atlayan (Web Audio API) oynatıcı eklenirse aynı gösterge ona da bağlanır.

@@ -485,3 +485,4 @@
 - **H647** · "Site herkese açıktı; yalnız Arzu Türk + yönetici isteği": yalnız ekran kapamak veriyi durdurmaz → sunucu kapısı + tek izinli liste (`erisimSiniri.ts`), kayıt açık/giriş kapalı → hatalar/dagitim_sunucu.md
 - **—** · Erişim kapısı sonrası ses/slayt/çevrimdışı indirme 403 (başlıksız istekler; jeton çerezi GET-only) → hatalar/dagitim_sunucu.md
 - **H652** · Sesli ders ara soru "kendiliğinden göster" ayarı yalnız kapalı özelliğin kendi sayfasındaydı → Görünüm › Okuma anahtarı → hatalar/on_yuz_oynatici_ders.md
+- **H653** · Ses inerken sessizlik "ses yok" sanılıyordu → tek yerden "Ses yükleniyor…" göstergesi → hatalar/on_yuz_oynatici_ders.md
