@@ -492,3 +492,4 @@
 - **H653** · Ses inerken sessizlik "ses yok" sanılıyordu → tek yerden "Ses yükleniyor…" göstergesi → hatalar/on_yuz_oynatici_ders.md
 - **H654** · Analiz sekmesi çöktü: k2-41 `ozetEksik` liste yerine düz metin → hatalar/on_yuz_oynatici_ders.md
 - **H655** · Metin takibi slaytı birebir okunuyor sanıyordu → anlam eşlemesi + kesintisiz vurgu → hatalar/on_yuz_oynatici_ders.md
+- **H656** · Çıkmış PDF toplaması: ders etiketi sayfalar arası taşındı, sızan kökler, OCR artığı → aynı sayfa başlığı + sızma ayırma + izli düzeltme → hatalar/veri_cikmis.md

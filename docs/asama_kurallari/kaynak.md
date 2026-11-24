@@ -1,6 +1,6 @@
 # Aşama kuralları — kaynak
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 55 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 56 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
@@ -219,10 +219,17 @@
 ### H589 — Arama kalite ölçümü belgelenenin çok altında çıktı (hit@5 %95 → %75): ölçüm bozuktu (2026-11-16)
 - **Önleme kuralı:** dizin süzgeci değişince değerlendirme örneklemi de aynı süzgeçle güncellenir; ölçüm tabanı tarih + havuz tanımıyla birlikte yazılır, eski tabanla kıyaslanmaz.
 
+
 ### H620 — Öğrenci sentez PDF'i (jsPDF) MarkItDown'da boş/eksik çıktı; OCR boş satırı hoca vurgusunu yarıda kesti (2026-11-17)
 - **Önleme/Kapı:** `sentez.py calistir` kapısı: kapsama ≥%98 (pdftotext'e karşı), md'deki tetik sayısı == birimlerdeki tetik sayısı, blok bölücü metin düşürürse HATA, eşlemesiz PDF HATA. Önbellek yalnız kapıdan geçmiş çeviriyi atlar. Sentez notunun "çıkmış/hoca söyledi" iddiası doğrulanmış kanıt DEĞİLDİR (çıkmış damgası/"hoca vurguladı" yalnız slayt+ses/çıkmış eşlemesiyle).
 
 
 ### H648 — Değerlendirme paketinin kazanım başlığı ilk maddeyle örtüşmüyor; hata ancak çıkmış analizi kapısında yakalanıyor (2026-11-23, k2-47…k2-56)
 - **Kural:** E1 yazımında her bilgi paketinin ilk maddesi başlığın özetidir (≥2 ortak kök) ve slayt_supheli satırı olamaz. Kalıcı çözüm (2026-11-24): `degerlendirme_dogrula.py` aynı örtüşmeyi denetler — ders analizi henüz yoksa (E1'deki yeni ders) HATA, analizi olan eski derste UYARI.
+
+### H656 — Çıkmış PDF toplamasında üç ayrı kök neden: ders etiketi taşması, kaynak metnin kendi OCR artığı, sızmış sorular (2026-11-24)
+- **Önleme kuralı:** PDF'ten toplu soru çıkarırken (a) ders etiketi asla sayfalar arası taşınmaz, (b) kaynak metnin kendi OCR hatası
+  "OCR hatası" diye düzeltilmez — yalnız kanıtlı düzeltme listesiyle ve izlenerek, (c) bir kayıtta 5'ten çok şık ya da şık içinde
+  cue sözcüğü görülürse ayrıştırıcı düzeltilir, (d) cevap yoksa boş bırakılır ve `uyarilar`'a yazılır, (e) yıl/ branş yalnız
+  doğrulanmış DB eşleşmesinden devralınır ve kaynağı etiketlenir.
 

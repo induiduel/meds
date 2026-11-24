@@ -234,3 +234,26 @@
 - **Kök neden:** 2026-10-12'den beri dizinleyici birleştirmede gizlenen kopyaları ve karantinadaki kayıtları bilerek DİZİNLEMİYOR (`localRagEngine.ts`, `mergedInto`); değerlendirme betiği ise örneklemi tüm 6.662 kayıttan çekiyordu (1.567'si gizli kopya). Dizinde olmayan soru "bulunamadı" sayılıyordu (74 kaçağın 36'sı). Belgedeki değer birleştirme öncesine (2026-10-03) aitti.
 - **Kalıcı çözüm:** örneklem dizinle aynı süzgeçten geçiyor (`sitede()`); yeni taban %87 / %60 / %34, `CLAUDE.md` Retrieval bölümüne tarihle yazıldı.
 - **Önleme kuralı:** dizin süzgeci değişince değerlendirme örneklemi de aynı süzgeçle güncellenir; ölçüm tabanı tarih + havuz tanımıyla birlikte yazılır, eski tabanla kıyaslanmaz.
+
+## H656 — Çıkmış PDF toplamasında üç ayrı kök neden: ders etiketi taşması, kaynak metnin kendi OCR artığı, sızmış sorular (2026-11-24)
+- **Belirti:** 8 PDF'ten toplanan 2.512 sorunun ilk koşusunda (a) 1.704 kayıt `ders=None`, (b) 870 kayıt "FARMAKOLOJİ" görünüyordu,
+  (c) bazı şıkların içinde bir sonraki sorunun kökü vardı ("…A 35. Aşağıdakilerden hangisi düzensiz proliferatif endometriumun…"),
+  (d) cevapsız 1.719 kayıt, (e) 24 kayıtta şık metni "A) …" harfiyle başlıyordu.
+- **Kök neden:** (1) `ana4.py` sayfa başlığını `ders_carry` ile SAYFALAR ARASI taşıyordu; ana.pdf'de başlık yalnız 80–88. sayfalarda
+  geçiyor, o taşma 1.800'den fazla soruya yanlış ders yazdı. (2) Göğüs/nöroloji gibi taranmış PDF'lerin kaynak görüntüsünde kendi OCR
+  artığı var ("omekten", "LDHt", "Plevralefüzyon"); model bunları birebir aktardı, imla düzeltmesi yapılmadı. (3) Kök/şık ayrımı
+  paragraf tabanlı olduğu için sonraki sorunun numaralı kökü önceki şıkkın sonuna yapıştı. (4) Cevap yalnız PDF işaretinden veya
+  DB eşleşmesinden alınıyor; ikisi de yoksa uydurulmadı (doğru davranış). (5) `sik_temizle` şık başındaki "A)" etiketini yalnız
+  tek geçişte siliyordu, madde imli ("• A) …") biçimde kalıyordu.
+- **Kalıcı çözüm:** `ders_carry` kaldırıldı: ders yalnız aynı sayfada görülen başlıktan atanır; yoksa DB eşleşmesinden (`db`), benzer
+  sorudan (`db_benzer`), komşu DB sorularının branş oylamasından (`db_yakin`) veya dosya adından (`dosya`) alınır, hiçbiri yoksa
+  `Belirsiz`. Kök/şık ayıklaması `kok_temizle`/`sik_temizle` ile tek yerde yapılır (madde imi + soru numarası + şık etiketi).
+  `sizan_soruyu_ayir` şık/kök içine sızmış `N. …hangisi…?` kalıbını ayrı kayda çevirir. OCR artıkları için güvenli düzeltme
+  listesi (`DUZELT`) yalnız açık hataları düzeltir, her değişiklik `duzeltmeler` + `ham_kok` alanında izlenir.
+  `ana.pdf`in "Sıra No / Cevap" tablolarında doğru şık KALIN fontla dizili olduğu için `ana_anahtar.py` pdfminer font imzasından
+  okur (84/91 soru işaretlendi); şık içindeki "(doğru)/(yanlış)" hoca şerhleri CEVAP SAYILMAZ, yalnız `not` alanına yazılır
+  (Graves sorusunda 4 şık "(doğru)" etiketliydi — çok işaretli olurdu).
+- **Önleme kuralı:** PDF'ten toplu soru çıkarırken (a) ders etiketi asla sayfalar arası taşınmaz, (b) kaynak metnin kendi OCR hatası
+  "OCR hatası" diye düzeltilmez — yalnız kanıtlı düzeltme listesiyle ve izlenerek, (c) bir kayıtta 5'ten çok şık ya da şık içinde
+  cue sözcüğü görülürse ayrıştırıcı düzeltilir, (d) cevap yoksa boş bırakılır ve `uyarilar`'a yazılır, (e) yıl/ branş yalnız
+  doğrulanmış DB eşleşmesinden devralınır ve kaynağı etiketlenir.
