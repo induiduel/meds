@@ -338,3 +338,20 @@
 - **Çözüm:** İki ders için kayıt eklendi, okul Drive'ından inen PDF'ler drive_root'a (klasör adındaki sondaki boşlukla) kopyalandı; kapı 0 HATA.
 - **Kural:** Yeni ders için `ders_ekle`'den hemen sonra SANAL_DESTELER kaydı + drive_root dosyası + `meds-web` restart; commit'ten önce `python3 scripts/kapilar/ders_pdf_kapisi.py --statik --kok "$PWD"` 0 HATA.
 
+
+### H647 — Site herkese açıktı; "yalnız Arzu Türk + yönetici" isteği yalnız ekranla karşılanamazdı (2026-11-23)
+- **Belirti (istek):** "Site yalnızca Arzu Türk ve yönetici tarafından kullanılabilir olsun, diğerlerine hata sayfası göster; veritabanı yüklenmesin, içeriklere erişemesinler."
+- **Kök neden riski:** Uygulamada yalnız giriş kapısı vardı (`girisKapisi`); giriş yapan herkes tüm `/api/*` verisini (committees, questions, past-exams, ses, PDF) alabiliyordu. İstemcide tek ekran kapamak yetmez: jetonla doğrudan API çağrısı veriyi yine indirir. Ayrıca izinli liste kodun beş yerine dağılsaydı H320–H329'daki "aynı kural çok yerden düzenleniyor" hatası tekrarlanırdı.
+- **Kalıcı çözüm (iki katman, TEK liste):**
+  - `src/services/erisimSiniri.ts` — izinli e-posta listesi (`ERISIM_EPOSTALARI`: 3 Arzu Türk adresi + yönetici), `erisimEpostasiIzinli`, ortak mesaj, `erisimEngelliMi()` (senkron localStorage okuması). Arzu katmanı (`arzuKimlik.ts`) de aynı listeyi kullanır.
+  - Sunucu: `src/services/erisimKapisi.ts`, `server.ts`'de gövde ayrıştırıcıdan sonra/veri uçlarından önce. İzinli olmayan oturum → 403 `{ code: 'ERISIM_KAPALI' }`. Yönetici (anahtar/loopback/jeton), yapay zekâ test çerezi ve kimlik/bakım/sağlık/sürüm/site-ayar uçları muaf; `/api/admin/*` kendi kapısını uygular. Kayıt AÇIK kalır (kullanıcı kararı): hesap açılır, giriş yapılır, uygulamaya girilemez.
+  - İstemci: `main.tsx` engelli oturumda eşitleme/presence/çevrimdışı paket/veritabanı istatistiği kurmaz; `App.tsx` kabuk yerine `components/system/ErisimKapali.tsx` (kapatılamaz hata ekranı, "Çıkış yap") çizer; kurul/soru/canlı abonelik efektleri `erisimEngelli` ile erken döner. Giriş başarısında izinsiz hesap sayfayı yeniler ki açılış kurulumları hiç başlamasın.
+  - Jeton: `adminFetchAuth.ts` artık oturum açmış her kullanıcının jetonunu kendi `/api/*` isteklerine ekler (sunucu artık jeton istiyor); çevrimdışıyken eklemez (SW önbelleği çalışsın). SSE için `oturumTokenForStream()`.
+- **Doğrulama:** uzak IP + anonim `/api/committees` → 403; izinli Arzu jetonuyla → 200 (committees/questions/SSE); izinsiz kayıtlı deneme hesabıyla tarayıcı → "Bu hesaba site kapalı" ekranı; loopback panel → 200. Test hesabı meds-pg'den silindi.
+- **Kural:** Erişim sınırı yalnız istemci ekranıyla kurulmaz; veri ucu sunucuda kapı olmadan yayına çıkmaz. İzinli liste tek dosyada (`erisimSiniri.ts`) yaşar — yeni istisna oraya eklenir, başka yere kopyalanmaz. Giriş jetonu gerektiren yeni bir okuma ucu eklenirse `adminFetchAuth.jetonEklenir()` kapsamı kontrol edilir.
+
+### Erişim kapısı sonrası ses/slayt/çevrimdışı indirme 403 ("Ses dosyası açılamadı") (2026-11-24)
+- **Belirti:** İzinli hesapta sesli ders "Ses dosyası açılamadı", slaytlar yüklenmiyor, çevrimdışı indirme yarıda kalıyor.
+- **Kök neden:** 2026-11-23 erişim kapısı (`erisimKapisi.ts`) kimliği yalnız `Authorization` başlığından okuyordu. `<audio src>`, `<img>`, Background Fetch ve service worker istekleri bu başlığı taşıyamaz; global `fetch` sarmalayıcısı (`adminFetchAuth.ts`) yalnız sayfa içi `fetch`'e jeton ekler → bu istekler 403.
+- **Çözüm:** `auth.ts` erişim jetonunu `medsor_jeton` çerezine de yazar (ömrü jetonla, canlıda `Domain=nofrostlife.com.tr`, 4 dk'da bir yenileme); kapı başlık yoksa çerezi **yalnız GET/HEAD**'de kabul eder (CSRF). CORS kendi alan adlarına kökeni yansıtıp `Allow-Credentials` verir; Background Fetch istekleri `credentials: 'include'`.
+- **Önleme:** Erişim/kimlik kapısı eklerken başlık taşıyamayan istekleri (ses, görsel, PDF, arka plan indirmesi, SW) ayrıca sına; yazma uçlarına çerezle kimlik verme.

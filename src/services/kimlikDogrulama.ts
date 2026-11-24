@@ -82,8 +82,20 @@ export function bearerToken(req: express.Request): string {
 /**
  * Jeton yoksa { user: null }; jeton var ama geçersizse { invalid: true } (istemci yeniden giriş yapmalı).
  */
-export async function requestUser(req: express.Request): Promise<{ user: VerifiedUser | null; invalid?: boolean; revoked?: boolean }> {
-  const token = bearerToken(req);
+/** Tarayıcının başlık gönderemediği istekler (<audio>/<img>/PDF) için erişim jetonu çerezi. auth.ts yazar. */
+export const JETON_CEREZI = 'medsor_jeton';
+export function cerezJetonu(req: express.Request): string {
+  const m = new RegExp(`(?:^|;\\s*)${JETON_CEREZI}=([^;]+)`).exec(String(req.headers.cookie || ''));
+  try { return m ? decodeURIComponent(m[1]) : ''; } catch { return ''; }
+}
+
+/**
+ * Jeton yoksa { user: null }; jeton var ama geçersizse { invalid: true } (istemci yeniden giriş yapmalı).
+ * cerezli: başlık yoksa çerezdeki jeton — YALNIZ GET/HEAD (salt okuma; çerezle durum değiştiren istek = CSRF açığı).
+ */
+export async function requestUser(req: express.Request, cerezli = false): Promise<{ user: VerifiedUser | null; invalid?: boolean; revoked?: boolean }> {
+  const okuma = req.method === 'GET' || req.method === 'HEAD';
+  const token = bearerToken(req) || (cerezli && okuma ? cerezJetonu(req) : '');
   if (!token) return { user: null };
   const user = erisimJetonuDogrula(token);
   if (!user) return { user: null, invalid: true };

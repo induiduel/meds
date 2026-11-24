@@ -482,4 +482,6 @@
 - **H644** · Basit dilli V2: tekrar eden ek cümle, aralığı tek sayıya indirme, kaynak dışı neden, İngilizce harf okunuşu → hatalar/ders_metni_anlatim.md
 - **H645** · PDF işareti yalnız sayfaya düşüyordu: PDF kelimesi noktalamadan bölünmüyordu, kısa çapa/tablo çapası, boş satır → hatalar/ders_metni_anlatim.md
 - **H646** · Ders özeti kapısının %20 atlama sınırı sahte çıkmış bağlantısına itti (UYARI'ya indi); Yunan harfi/1:N oranı EMA ses kapısını düşürdü → hatalar/soru_cozucu.md
+- **H647** · "Site herkese açıktı; yalnız Arzu Türk + yönetici isteği": yalnız ekran kapamak veriyi durdurmaz → sunucu kapısı + tek izinli liste (`erisimSiniri.ts`), kayıt açık/giriş kapalı → hatalar/dagitim_sunucu.md
+- **—** · Erişim kapısı sonrası ses/slayt/çevrimdışı indirme 403 (başlıksız istekler; jeton çerezi GET-only) → hatalar/dagitim_sunucu.md
 - **H652** · Sesli ders ara soru "kendiliğinden göster" ayarı yalnız kapalı özelliğin kendi sayfasındaydı → Görünüm › Okuma anahtarı → hatalar/on_yuz_oynatici_ders.md

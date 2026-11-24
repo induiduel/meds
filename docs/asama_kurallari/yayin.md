@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 55 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 56 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -229,6 +229,9 @@
 - **Kural:** Ses varyantı kaldırırken önce Oracle'da, sonra yerelde sil ve `meds-server`'ı yeniden başlat; yedeği `_arsiv_veri/` altında `.zst` olarak sakla, `data/` içinde `.yedek` bırakma.
 
 - H647 — Site herkese açıktı; "yalnız Arzu Türk + yönetici" isteği yalnız ekranla karşılanamazdı (2026-11-23) — betik denetler: `erisimSiniri.ts`
+### Erişim kapısı sonrası ses/slayt/çevrimdışı indirme 403 ("Ses dosyası açılamadı") (2026-11-24)
+- **Önleme:** Erişim/kimlik kapısı eklerken başlık taşıyamayan istekleri (ses, görsel, PDF, arka plan indirmesi, SW) ayrıca sına; yazma uçlarına çerezle kimlik verme.
+
 ### H650 — Branş birleştiricileri: tam birleştirme başka dersleri yeniden yazıyor; ara soru birleştirmesinde onay listesi yok (2026-11-23)
 - **Kural:** Spot birleştirici HER ZAMAN `--kod`. Ara soru birleştirmesi sonrası `git status src/data/k<N>hocaara_cozucu/` ile yalnız onaylı kodların girdiği doğrulanır; denetlenmemiş set varken commit yapılmaz. Kalıcı çözüm (2026-11-24): `kur.py birlestir` artık `k<N>hocaara/onayli.json` listesindeki kodları birleştirir (yayındaki 59 setle başlatıldı); TALIMAT 8. adım güncellendi.
 

@@ -86,6 +86,10 @@ const kayitOku = (): Kayit | null => {
 };
 
 let kayit: Kayit | null = typeof window !== 'undefined' ? kayitOku() : null;
+// Açılış: önceki sürümden kalan oturumda jeton çerezi yok ya da süresi geçmiş olabilir (ses/PDF 403) — yaz, gerekirse yenile
+if (kayit) setTimeout(() => { if (kayit) { jetonCereziYaz(kayit.token, kayit.exp); void jetonAl(false).catch(() => {}); } }, 0);
+// Uzun ses dinlemede çerez jetonu bitmesin (ses parça istekleri yeni jeton ister): 4 dk'da bir, yalnız bitmeye yakınsa yeniler
+if (typeof window !== 'undefined') setInterval(() => { if (kayit && navigator.onLine !== false) void jetonAl(false).catch(() => {}); }, 240_000);
 const durumDinleyicileri = new Set<Dinleyici>();
 const jetonDinleyicileri = new Set<Dinleyici>();
 let hazir = false;
@@ -138,11 +142,26 @@ function yay(jetonDegisti = true) {
   if (jetonDegisti) for (const f of jetonDinleyicileri) { try { f(mevcut); } catch (e) { console.warn(e); } }
 }
 
+/** Erişim jetonu çerezi: <audio>/<img>/PDF istekleri Authorization başlığı taşıyamaz; sunucu erişim kapısı GET'te bunu okur
+ *  (kimlikDogrulama.ts › JETON_CEREZI). Ömrü jetonla aynı; SameSite=Lax + Secure (https'te). */
+function jetonCereziYaz(token?: string, exp?: number) {
+  try {
+    if (typeof document === 'undefined') return;
+    const guvenli = location.protocol === 'https:' ? '; Secure' : '';
+    // Canlıda API ayrı alt alanda (api.nofrostlife.com.tr): çerez ana alana yazılır ki <audio>/PDF istekleri oraya da taşısın
+    const alan = /(^|\.)nofrostlife\.com\.tr$/.test(location.hostname) ? '; Domain=nofrostlife.com.tr' : '';
+    if (!token) { document.cookie = `medsor_jeton=; Path=/; Max-Age=0; SameSite=Lax${guvenli}${alan}`; return; }
+    const sn = Math.max(60, Math.floor((exp || 0) - Date.now() / 1000));
+    document.cookie = `medsor_jeton=${encodeURIComponent(token)}; Path=/; Max-Age=${sn}; SameSite=Lax${guvenli}${alan}`;
+  } catch { /* çerez kapalı */ }
+}
+
 function kayitYaz(k: Kayit | null, bildir = true) {
   const onceki = kayit?.user.uid || null;
   kayit = k;
   if (k) safeStorage.setItem(KIMLIK_KEY, JSON.stringify(k));
   else safeStorage.removeItem(KIMLIK_KEY);
+  jetonCereziYaz(k?.token, k?.exp);
   mevcut = k ? kullaniciYap(k) : null;
   if (bildir) yay(true);
   else if (onceki !== (k?.user.uid || null)) yay(true);
@@ -160,6 +179,7 @@ async function jetonAl(force: boolean): Promise<string> {
         if (kayit && kayit.yenileme === yenileme) {
           kayit = { ...kayit, token: j.token, exp: j.exp, user: { ...kayit.user, ...j.user } };
           safeStorage.setItem(KIMLIK_KEY, JSON.stringify(kayit));
+          jetonCereziYaz(j.token, j.exp);
           mevcut = kullaniciYap(kayit);
           for (const f of jetonDinleyicileri) { try { f(mevcut); } catch { /* yok */ } }
         }
