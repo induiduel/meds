@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { Check, Headphones } from 'lucide-react';
 import { linkClick, navigateTo } from '../../router';
 import { icKonum } from '../../siteHaritasi';
-import { cdBransKisa, cdBransSlug } from '../canliDers/canliDersKategori';
+import { cdBransKisa, cdBransSlug, cdSiraTur } from '../canliDers/canliDersKategori';
 import { useV15Baslik } from './baslik';
 import { dersAdi, dersBransi, dersKurulu, dersSirala, dersSurumleri, dersYolu, hocaYaz, merkezYolu, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import SurumSecV15 from './SurumSecV15';
@@ -25,7 +25,7 @@ export default function BransV15() {
 
   const liste = useMemo(() => {
     if (!dersler) return null;
-    return dersSirala(dersler.filter((d) => (!kurulQ || dersKurulu(d) === kurulQ) && cdBransSlug(dersBransi(d)) === slug));
+    return dersSirala(dersler.filter((d) => (!kurulQ || dersKurulu(d) === kurulQ) && cdBransSlug(dersBransi(d)) === slug), cdSiraTur());
   }, [dersler, slug, kurulQ]);
   const ad = liste?.[0] ? cdBransKisa(dersBransi(liste[0])) : slug.replace(/-/g, ' ');
   const kurul = kurulQ ?? (liste?.[0] ? dersKurulu(liste[0]) : 1);

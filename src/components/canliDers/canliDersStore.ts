@@ -12,7 +12,7 @@ import { ekranYazimiEslemeli } from '../../services/ekranYazim';
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
 import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKayit';
-import { cdDersEtiketi } from './canliDersKategori';
+import { cdDersEtiketi, cdNumaraAbone, cdNumaraKaydet, cdNumaraSurum } from './canliDersKategori';
 import { bitir as konuBitir, sureEkle } from '../../services/calismaTakip';
 
 /** Bir PDF sayfasındaki öğrenci notu işaretleri (sayfa oranı 0–1) */
@@ -224,7 +224,7 @@ export function cdListeGetir(yenile = false, donem: '2026-2027' | '2025-2026' | 
       }
       r.data!.dersler.forEach((d) => surumKaydet(d.key, d.varyantlar as any));
       return r.data!.dersler.slice().sort((a, b) => (a.kurul || 1) - (b.kurul || 1) || (a.sira ?? 0) - (b.sira ?? 0));
-    });
+    }).then((ds) => { cdNumaraKaydet(ds); return ds; });
     listeCache.set(donem, p);
   }
   return listeCache.get(donem)!;
@@ -1078,3 +1078,10 @@ subscribe(() => {
   msSonCumle = k;
   msMeta();
 });
+
+/** Ders numarası listedeki sıradan gelir: liste yüklü değilse (oynatıcı doğrudan açıldı) yükletir ve numara hazır olunca yeniden çizer */
+export function useCdNumara(): number {
+  const v = useSyncExternalStore(cdNumaraAbone, cdNumaraSurum);
+  if (!v) void cdListeGetir().catch(() => { /* çevrimdışı: sunucu numarası kalır */ });
+  return v;
+}

@@ -14,6 +14,7 @@ import { navigateTo, pathFor } from '../../router';
 import {
   CD_KONUM_OLAY, cdDosyaAdi, cdGunlukGetir, cdKonumListesi, cdMedspakUrl, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
   type CdGunluk, type CdListeDers, type CdVaryant,
+  useCdNumara,
 } from './canliDersStore';
 import CanliDersDers from './CanliDersDers';
 import { TopluPdfDugme } from './CanliDersTopluPdf';
@@ -51,6 +52,7 @@ export function sonProvaYolu(key: string): string | null {
 }
 
 export default function CanliDersView({ dersKey }: { dersKey?: string }) {
+  useCdNumara(); // devam kartı / listem etiketleri seçili sıradaki numarayla
   const sp = dersKey ? sonProvaYolu(dersKey) : null;
   const { v15 } = useAppearance();
   useSiteAyar();

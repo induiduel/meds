@@ -18,6 +18,7 @@ import { openPwaInstallGuide } from '../../services/pwaService';
 import { cumleDuzeyleri } from '../../utils/maddele';
 import {
   cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, cdBolumAtla, fmtSure, useCd, type CdDetay,
+  useCdNumara,
 } from './canliDersStore';
 import { useDersEkranTercih, useYatayDokunmatik } from '../../services/dersEkranTercih';
 import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useMasaUygun } from './CdSesliEk';
@@ -169,10 +170,13 @@ export interface CdKamp { geri: React.ReactNode }
 
 export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp?: CdKamp }) {
   const [vurguAcik, setVurguAcik] = useVurguAcik();
+  // Numara listedeki seçili sıradan (Drive / ders programı / eklenme); liste gelince başlık ve etiket yenilenir
+  const numaraSurum = useCdNumara();
   // Bitirdiklerim: ses çalarken süreyi depo sayar; duraklatılmışken metni/slaytı okumak da bu derse sayılır
   const buDersCaliyor = useCd((s) => s.key === dersKey && s.playing);
   useKonuSayaci('sesli', buDersCaliyor ? null : dersKey);
   const [detay, setDetay] = useState<CdDetay | null>(null);
+  useEffect(() => { if (detay && numaraSurum) document.title = `${cdDersEtiketi(detay)} · ${detay.baslik} · Sesli ders · MeDSor`; }, [detay, numaraSurum]);
   const [hata, setHata] = useState<string | null>(null);
   const [baglanti, setBaglanti] = useState<'bagli' | 'yuklendi' | 'baska' | null>(null);
   const [genis, setGenis] = useState(genisMi);

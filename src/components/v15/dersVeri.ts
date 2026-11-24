@@ -2,7 +2,7 @@ import { useCdKonumSurum } from '../canliDers/CdIlerlemeTemizle';
 import { useEffect, useMemo, useState } from 'react';
 import { pathFor } from '../../router';
 import { cdKonumListesi, cdListeGetir, cdSurumler, type CdListeDers, type CdSurum } from '../canliDers/canliDersStore';
-import { cdBransKisa, cdBransSlug, cdTekSurum } from '../canliDers/canliDersKategori';
+import { cdBransKisa, cdBransSlug, cdNo, cdTekSurum } from '../canliDers/canliDersKategori';
 import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { kurulKimlikten } from '../kurul/KurulSuzgec';
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
@@ -92,7 +92,7 @@ export const hocaYaz = (h?: string) =>
     .map((w) => w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1))
     .join(' ');
 
-export const dersAdi = (d: Pick<CdListeDers, 'no' | 'baslik' | 'parca'>, no?: number) => `${no ?? d.no}. ${d.baslik}${d.parca ? ` · Part ${d.parca}` : ''}`;
+export const dersAdi = (d: Pick<CdListeDers, 'no' | 'baslik' | 'parca'> & { key?: string }, no?: number) => `${no ?? cdNo(d)}. ${d.baslik}${d.parca ? ` · Part ${d.parca}` : ''}`;
 
 /** Görünen adresler */
 export const bransYolu = (kurul: number, brans: string) => `/dersler/canliders/kurul${kurul}/${cdBransSlug(brans)}`;
@@ -112,31 +112,7 @@ export function kurulBranslari(ds: CdListeDers[], kurul: number) {
     .sort((a, b) => (a.ad === 'Diğer' ? 1 : 0) - (b.ad === 'Diğer' ? 1 : 0) || b.dersler.length - a.dersler.length || a.ad.localeCompare(b.ad, 'tr'));
 }
 
-const noSayi = (d: CdListeDers) => d.listeNo ?? (Number(d.no) || 9999);
-/** Liste sırası: drive = branş içi numara (Drive dosya adı / ders defteri kodu), program = ders programındaki sıra
- *  (anahtar numarası k2-NN), eklenme = siteye eklenme anı (ilk ses). Numara sabit değil, seçilen sıradan türetilir. */
-export type DersSiraTur = 'drive' | 'program' | 'eklenme';
-const programNo = (d: CdListeDers) => Number(/^(?:y25-)?k\d+-(\d+)/.exec(d.key)?.[1]) || 9999;
-/** Modül/Son Prova/Blok özet gibi numarasız dersler sona düşer ve numara almaz */
-const numarasiz = (d: CdListeDers) => !Number.isFinite(Number(d.no));
-const surumsuz = (key: string) => key.replace(/-v\d+$/, '');
-export const dersSirala = (ds: CdListeDers[], tur: DersSiraTur = 'drive') => ds.slice().sort((a, b) =>
-  Number(numarasiz(a)) - Number(numarasiz(b))
-  || (tur === 'program' ? programNo(a) - programNo(b) : tur === 'eklenme' ? (a.eklendi ?? 9e15) - (b.eklendi ?? 9e15) : 0)
-  || noSayi(a) - noSayi(b) || (a.parca ?? 0) - (b.parca ?? 0) || (a.sira ?? 0) - (b.sira ?? 0));
-/** Seçilen sıraya göre boşluksuz 1..N numara. V2/V3 V1'le, Part 1/2 ve aynı PDF'e hizalı dersler aynı numarayı paylaşır. */
-export function dersNumaralari(ds: CdListeDers[], tur: DersSiraTur = 'drive'): Map<string, number> {
-  const m = new Map<string, number>();
-  const grup = new Map<string, number>();
-  for (const d of dersSirala(ds, tur)) {
-    if (numarasiz(d)) continue;
-    // Drive sırasında aynı PDF numarası tek numara (asıl dersi gizli V2/V3 de kaydırmasın); diğerlerinde ders (sürümsüz anahtar)
-    const g = tur === 'drive' || d.parca ? `pdf:${d.no}` : surumsuz(d.key);
-    if (!grup.has(g)) grup.set(g, grup.size + 1);
-    m.set(d.key, grup.get(g)!);
-  }
-  return m;
-}
+export { dersSirala, dersNumaralari, type DersSiraTur } from '../canliDers/canliDersKategori';
 
 /** Dersin V1/V2/V3 sürümleri (ders sürümü …-v2 + adlandırılmış ses sürümleri); ana ders ya da sürüm anahtarından çağrılabilir */
 export function dersSurumleri(key: string, d: DersListeDurum): CdSurum[] {

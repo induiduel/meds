@@ -7,6 +7,7 @@ import { icKonum } from '../../siteHaritasi';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
+import { cdSiraKaydet, cdSiraSecimi } from '../canliDers/canliDersKategori';
 import { bransYolu, dersAdi, dersNumaralari, dersSirala, type DersSiraTur, dersSurumleri, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import SurumSecV15 from './SurumSecV15';
 import { cdDersSesSurumu } from '../canliDers/canliDersStore';
@@ -28,11 +29,7 @@ type Durum = 'tum' | 'yeni' | 'yarim' | 'bitti' | 'indirilen' | 'liste';
 const DURUM: [Durum, string][] = [['tum', 'Tümü'], ['yeni', 'Yeni'], ['yarim', 'Yarım kalan'], ['bitti', 'Bitti'], ['indirilen', 'İndirilen']];
 type Sira = DersSiraTur | 'son' | 'kisa';
 const SIRA: [Sira, string][] = [['drive', 'Drive sırası'], ['program', 'Ders programı'], ['eklenme', 'Eklenme tarihi'], ['son', 'Son dinlenen'], ['kisa', 'Kısa olan önce']];
-const SIRA_ANAHTAR = 'sl15-sira';
-const ilkSira = (): Sira => {
-  try { const v = localStorage.getItem(SIRA_ANAHTAR); if (SIRA.some(([id]) => id === v)) return v as Sira; } catch { /* depolama kapalı */ }
-  return 'drive';
-};
+const ilkSira = (): Sira => { const v = cdSiraSecimi(); return SIRA.some(([id]) => id === v) ? (v as Sira) : 'drive'; };
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
 export default function SesliListeV15() {
@@ -60,7 +57,7 @@ export default function SesliListeV15() {
     return () => window.removeEventListener('hashchange', f);
   }, []);
   const [sira, setSiraHam] = useState<Sira>(ilkSira);
-  const setSira = (v: Sira) => { setSiraHam(v); try { localStorage.setItem(SIRA_ANAHTAR, v); } catch { /* depolama kapalı */ } };
+  const setSira = (v: Sira) => { setSiraHam(v); cdSiraKaydet(v); };
   // Numara ve temel sıra: Drive / ders programı / eklenme; "son"/"kısa" yalnız yeniden dizer, numara Drive'dan
   const numTur: DersSiraTur = sira === 'program' || sira === 'eklenme' ? sira : 'drive';
   const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
