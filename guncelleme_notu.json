@@ -1,6 +1,6 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 888,
+  "onem": 889,
   "baslik": "Ders numaraları her yerde aynı",
   "maddeler": [
     "**Sesli dersler:** Oynatıcı, branş sayfası ve devam kartı, listede seçtiğin sıradaki (Drive / Ders programı / Eklenme tarihi) numarayı gösterir."

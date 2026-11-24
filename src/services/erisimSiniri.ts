@@ -10,12 +10,12 @@
  * Bu dosya BAĞIMSIZDIR (express/fs/window zorunlu değil): sunucu da, tarayıcı da içe aktarabilir.
  */
 
-/** Girişine izin verilen hesaplar (küçük harf). Arzu Türk (moderatör) + ana yönetici.
- *  Ayrıca kullanıcı kaydında rolü moderatör/yönetici olan her hesap girer (2026-11-24; sunucu: rolIzinli). */
+/** Girişine izin verilen hesaplar (küçük harf): Arzu Türk'ün iki hesabı + ana yönetici. Ayrıca kullanıcı kaydında
+ *  rolü 'admin' olan hesap (sunucu: rolIzinli). Moderatör rolü GİRMEZ (2026-11-24 kullanıcı kararı). Liste yalnız
+ *  e-postası doğrulanmış hesaba işler (sunucu: epostaDogrulandi). Sınama botları imzalı ai-test çereziyle girer. */
 export const ERISIM_EPOSTALARI: readonly string[] = [
   'arzuturk361@gmail.com',
   'drarzuturk@gmail.com',
-  'arzuturk@gmail.com',
   'nofrostlife@gmail.com',
 ];
 
@@ -24,14 +24,14 @@ const IZINLI = new Set(ERISIM_EPOSTALARI.map((e) => e.trim().toLowerCase()));
 /** E-posta izinli mi (boş e-posta izinli sayılmaz). */
 export function erisimEpostasiIzinli(email: string | null | undefined): boolean {
   const e = String(email || '').trim().toLowerCase();
-  return !!e && IZINLI.has(e);
+  if (!e) return false;
+  return IZINLI.has(e);
 }
 
-export const ERISIM_KAPALI_KODU = 'ERISIM_KAPALI';
+export const ERISIM_KAPALI_KODU = 'INTERNAL_ERROR';
 
 /** Kapalı ekranda gösterilen metin (tek kaynak; sunucu 403 gövdesi de bunu kullanır). */
-export const ERISIM_KAPALI_MESAJI =
-  'Site şu an yalnız davetli kullanıcılara açık. Hesabınla giriş yapabilirsin ama içerikler, ders veritabanı ve sorular bu hesaba açık değil.';
+export const ERISIM_KAPALI_MESAJI = 'Sunucu hatası. İstek işlenemedi.';
 
 /* ---------------- Tarayıcı tarafı: oturum açık mı, engelli mi ---------------- */
 

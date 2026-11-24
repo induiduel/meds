@@ -359,7 +359,7 @@ export default function App() {
     let iptal = false;
     void fetchMyAccess().then((a) => {
       if (iptal || !a) return;
-      const rolVar = a.role !== 'student' && !a.suspended;
+      const rolVar = a.role === 'admin' && !a.suspended; // moderatör girmez (2026-11-24)
       const onceki = erisimIzinliMi(currentUser.email);
       rolIzniKaydet(currentUser.email, rolVar);
       if (rolVar !== onceki) { try { window.location.reload(); } catch { /* yok */ } }

@@ -399,7 +399,14 @@ app.use(panelOracleProxyMiddleware());
 // Enable CORS for all origins (canlı alan adı ve tünel erişimi). Gövde ayrıştırıcılardan ÖNCE: bozuk/çok büyük
 // JSON 400/413 yanıtı da başlığı taşısın (yoksa tarayıcı ağ hatası, SW "çevrimdışı" sanıyordu).
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  // Kendi alan adlarımız (site ↔ api. alt alanı) kimlik bilgili istek yapabilir: arka plan indirmesi (Background Fetch)
+  // başlık taşıyamaz, erişim kapısını jeton çereziyle geçer (2026-11-24). Diğer kökenler eskisi gibi '*' ve çerezsiz.
+  const koken = String(req.headers.origin || '');
+  if (/^https:\/\/([a-z0-9-]+\.)*nofrostlife\.com\.tr$/.test(koken)) {
+    res.header('Access-Control-Allow-Origin', koken);
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.vary('Origin');
+  } else res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
   // Sabit liste yeni bir başlık eklendiğinde (x-voter-uid, x-user-id) tarayıcıda
   // "Failed to fetch" veriyordu; köken * ve kimlik bilgisi yok, istenen başlığı yansıtmak güvenli.
@@ -494,11 +501,22 @@ app.use(icerikKapisi({ isAdmin: (req) => isRequestAdmin(req) }));
 // Erişim sınırı (2026-11-23, kullanıcı kararı): site yalnız Arzu Türk + yönetici. İzinli listede olmayan
 // oturum /api/* verisini (committees, questions, past-exams, ders/ses…) ALAMAZ; kayıt ve kimlik uçları açık kalır.
 // Gövde ayrıştırıcıdan sonra, veri uçlarından önce. Kaynak: src/services/erisimSiniri.ts (tek liste).
+// E-posta doğrulaması (auth_hesaplar) 60 sn önbellekli: her istekte veritabanına gidilmez
+const _dogrulamaOnbellek = new Map<string, { v: boolean; t: number }>();
+async function epostaDogrulandiOnbellekli(uid: string, email: string): Promise<boolean> {
+  const k = `${uid}|${email}`;
+  const o = _dogrulamaOnbellek.get(k);
+  if (o && Date.now() - o.t < 60_000) return o.v;
+  const r = await pgDb.query('select 1 from auth_hesaplar where uid = $1 and lower(email) = $2 and eposta_dogrulandi and not devre_disi', [uid, email]);
+  const v = (r.rows?.length || 0) > 0;
+  _dogrulamaOnbellek.set(k, { v, t: Date.now() });
+  return v;
+}
 app.use(erisimKapisi({
   aiTestGecerli,
-  // 2026-11-24: moderatör ve yönetici rolündeki hesaplar da girer (Kullanıcılar › Roller'den verilir)
-  rolIzinli: (uid, email) => loadUsers().some((u: any) => u && (u.uid === uid || (email && String(u.email || '').toLowerCase() === email))
-    && (u.role === 'moderator' || u.role === 'admin') && !suspensionActive(u.suspension)),
+  // 2026-11-24: yalnız yönetici rolü (uid ile); moderatör ve öğrenciler GİRMEZ (kullanıcı kararı)
+  rolIzinli: (uid) => loadUsers().some((u: any) => u && u.uid === uid && u.role === 'admin' && !suspensionActive(u.suspension)),
+  epostaDogrulandi: epostaDogrulandiOnbellekli,
 }));
 // AB17/AB18: bakım kipi (MEDS_BAKIM=1 ya da POST /api/admin/bakim; varsayılan kapalı) + istemci hata bildirimi
 const bakimCtl = registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
