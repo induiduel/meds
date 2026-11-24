@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-05-sarilikli-hastaya-yaklasim",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Sarılıklı Hastaya Yaklaşım",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-25 00:44",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "6. Sarılıklı Hastaya Yaklaşım.pdf (52 sayfa) kaynağından 101 paragraf / 411 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 39.3,
+        "sayfaSayisi": 52,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 101,
+        "cumleSayisi": 411,
+        "cikmisEslesme": 29
+      }
+    }
+  ]
+}
