@@ -484,5 +484,9 @@
 - **H646** · Ders özeti kapısının %20 atlama sınırı sahte çıkmış bağlantısına itti (UYARI'ya indi); Yunan harfi/1:N oranı EMA ses kapısını düşürdü → hatalar/soru_cozucu.md
 - **H647** · "Site herkese açıktı; yalnız Arzu Türk + yönetici isteği": yalnız ekran kapamak veriyi durdurmaz → sunucu kapısı + tek izinli liste (`erisimSiniri.ts`), kayıt açık/giriş kapalı → hatalar/dagitim_sunucu.md
 - **—** · Erişim kapısı sonrası ses/slayt/çevrimdışı indirme 403 (başlıksız istekler; jeton çerezi GET-only) → hatalar/dagitim_sunucu.md
+- **H648** · Değerlendirme paketinde kazanım başlığı ilk maddeyle örtüşmüyor; yalnız çıkmış analizi kapısı yakalıyor → hatalar/ders_metni_degerlendirme.md
+- **H649** · Öğrenci önem kapısı takılıyor: vektör servisi sağlık ucu "ok" ama /embed asılı; düzelince ders başına ~4 dk → hatalar/betik_altyapi.md
+- **H650** · Spot birleştirici kodsuz tüm branşı yeniden yazar; ara soru birleştirmesinde onay listesi yok → hatalar/betik_altyapi.md
+- **H651** · Alt ajan çözücü kodunu defterden almadı, uydurdu (2s56 ≠ 2s19) → hatalar/betik_altyapi.md
 - **H652** · Sesli ders ara soru "kendiliğinden göster" ayarı yalnız kapalı özelliğin kendi sayfasındaydı → Görünüm › Okuma anahtarı → hatalar/on_yuz_oynatici_ders.md
 - **H653** · Ses inerken sessizlik "ses yok" sanılıyordu → tek yerden "Ses yükleniyor…" göstergesi → hatalar/on_yuz_oynatici_ders.md

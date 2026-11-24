@@ -3,7 +3,7 @@
 > Belgeleri gezmeden önce buraya bak; yalnız işinin belgesini aç (AGENTS 'Yönlendirme').
 > Yeniden üret: `python3 scripts/altyapi/belge_haritasi.py`. "Anıldığı yer" = AGENTS.md/CLAUDE.md ya da betiklerin belgeyi adıyla anması.
 
-## Bağlayıcı / kullanılan belgeler (40)
+## Bağlayıcı / kullanılan belgeler (41)
 
 | Belge | Konu (ilk başlık) | Kelime | Son değişim | Anıldığı yer |
 |---|---|---:|---|---|
@@ -14,6 +14,7 @@
 | `CIZIM_KURALLARI.md` | Canlı çizim ve işaretleme kuralları (bütün kurullar, bütün dersler, bütün PDF'ler) | 1937 | 2026-11-16 | AGENTS/CLAUDE, 10 betik |
 | `CLAUDE.md` | docs/ — proje belgeleri | 94 | 2026-11-16 | AGENTS/CLAUDE, 16 betik |
 | `DERS_ICERIK_BICIMI.md` | Ders içerik paketi biçimi (Terimler · Hastalıklar · Bilgiler · Tablolar · Sorular · Kartla | 591 | 2026-11-16 | 2 betik |
+| `DERS_OZETI_MODULU.md` | Ders Özeti modülü (Kurul 2+) — tasarım ve veri biçimi | 725 | 2026-11-23 | 1 betik |
 | `DIS_AJAN_YOL_HARITASI.md` | Dış yapay zekâ ajanları için tam içerik işçisi yol haritası (kullanıcı kararı 2026-10-29) | 2329 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `FAZ8_DUZELTME_TALIMATLARI.md` | Faz 8 — Düzeltme ve Geliştirme Talimatları | 845 | 2026-11-16 | 1 betik |
 | `GELECEK_PLANLAMASI.md` | GELECEK PLANLAMASI — MeDSor tam otomatik içerik ve tahmin sistemi | 3895 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
@@ -27,7 +28,7 @@
 | `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2894 | 2026-11-17 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2576 | 2026-11-18 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 7478 | 2026-11-23 | AGENTS/CLAUDE, 12 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 7676 | 2026-11-24 | AGENTS/CLAUDE, 12 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |
@@ -35,7 +36,7 @@
 | `PATOLOJI_SORU_ESLEME_TABLOSU.md` | Patoloji 2026-27 Kurul 1: soru ↔ slayt eşleme tablosu (30 soru) | 2179 | 2026-10-29 | 2 betik |
 | `SAGLIK_BAKANLIGI_PLANI.md` | Sağlık Bakanlığı sekmesi — plan (2026-10-14) | 1318 | 2026-11-16 | 3 betik |
 | `SIK_ACIKLAMA_STANDARDI.md` | Şık Açıklama Standardı — "Yardım al", yanlış şık ve çözüm açıklamaları (ZORUNLU) | 643 | 2026-11-16 | 32 betik |
-| `SITE_HARITASI_KURALLARI.md` | Site haritası ve adres kuralları (2026-10-21, kullanıcı kararı) | 970 | 2026-11-10 | AGENTS/CLAUDE, 5 betik |
+| `SITE_HARITASI_KURALLARI.md` | Site haritası ve adres kuralları (2026-10-21, kullanıcı kararı) | 987 | 2026-11-23 | AGENTS/CLAUDE, 5 betik |
 | `SORU_EKLEME_AJAN_PROMPTU.md` | Soru Ekleme: Serbest Metin → Ayrıştırıcı Ajan → Küme → Yeniden İnşa | 2936 | 2026-11-16 | 1 betik |
 | `SORU_HAVUZU_MOTORU.md` | Soru havuzu motoru (`src/services/recall/`, hatirlama-v1 · 2026-10-13) | 940 | 2026-11-16 | 1 betik |
 | `SORU_USLUBU.md` | Örnek soru üslubu (kullanıcı kararı 2026-10-28; H119) | 344 | 2026-11-16 | 4 betik |
@@ -48,12 +49,11 @@
 | `YONETIM_V16_KIT.md` | Yönetim v16 — kabuk, kit ve sunucu yardımcıları | 2505 | 2026-10-28 | 7 betik |
 | `YONETIM_V16_PLAN.md` | Yönetim v16 Planı: baştan kurulum | 3997 | 2026-11-16 | 1 betik |
 
-## Hiçbir yerden anılmayan belgeler (8) — eski olabilir; bağlayıcı sayma, gerekirse doğrula
+## Hiçbir yerden anılmayan belgeler (7) — eski olabilir; bağlayıcı sayma, gerekirse doğrula
 
 | Belge | Konu | Kelime | Son değişim |
 |---|---|---:|---|
 | `CEVRIMDISI_YOL_HARITASI.md` | Çevrimdışı çalışma — analiz ve yol haritası (2026-10-20) | 1209 | 2026-11-18 |
-| `DERS_OZETI_MODULU.md` | Ders Özeti modülü (Kurul 2+) — tasarım ve veri biçimi | 480 | izlenmiyor |
 | `GELISTIRME_YOL_HARITASI.md` | Geliştirme Yol Haritası — veri, site sağlığı, içerik hattı, ses (2026-11-16) | 1584 | 2026-11-16 |
 | `HANTALLIK_KOK_NEDENLERI.md` | Hantallık, yavaşlık ve yanlış üretim — kök neden defteri | 4391 | 2026-11-17 |
 | `ORACLE_REALTIME_DATABASE_REHBERI.md` | Oracle VM Üzerinde Realtime Veritabanı Mimarisi ve Çözüm Rehberi | 640 | 2026-10-12 |
