@@ -1,16 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 899,
-  "baslik": "Sesli ders zamanlama ve işaret üretimi canlıda yeniden çalışıyor",
+  "onem": 900,
+  "baslik": "Check-up: yanlış soruda otomatik geçiş durdu",
   "maddeler": [
-    "Yeni ve güncellenen sesli derslerde cümle zamanlaması ve PDF işaretleri sunucuda yeniden kendiliğinden üretilir."
+    "**Sesli check-up:** Yanlış ya da yardımla çözdüğün soruda sonraki soruya kendiliğinden geçilmez; açıklamayı okuyup \"Sesli derste bu bölümü dinle\"ye basabilirsin."
   ],
   "eklenen": [],
   "degisen": [
-    "Derste dinle sesi paragraftan başlatır"
+    "Check-up otomatik geçişi"
   ],
   "duzeltilen": [
-    "Check-up paragraf eşleşmesi"
+    "Derste dinle düğmesinin kaybolması"
   ],
   "silinen": [],
   "yenilikler": []

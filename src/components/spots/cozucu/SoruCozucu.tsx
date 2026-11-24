@@ -13,6 +13,7 @@ import { Metin } from '../onem/OnemMadde';
 import { navigateTo, pathFor } from '../../../router';
 
 /** Check-up (sesli ders listesi) bağlantısıyla gelindiyse dersin anahtarı (?dk=); "Derste dinle" ilgili paragrafa gider (?ara=) */
+const checkupMu = () => !!new URLSearchParams(location.search).get('dk');
 const dersteDinleYolu = (metin: string): string | null => {
   const dk = new URLSearchParams(location.search).get('dk');
   return dk ? `${pathFor('canli_ders', dk)}?dinle=1&ara=${encodeURIComponent(metin.slice(0, 400))}` : null;
@@ -518,8 +519,10 @@ export const SoruCozucu: React.FC<Props> = ({
     if (h === q.dogru) {
       setDurum('dogru');
       sonucYaz(q.no, yardim || elenen.length ? 'd2' : 'd');
+      // Check-up (?dk=): yanlış/yardımla çözülen soruda otomatik geçiş yok — "derste dinle" düğmesi kaybolmasın
+      const dur = checkupMu() && (yardim || elenen.length > 0);
       calSira([{ klasor: q.klasor || klasorAdi, klip: `d-${q.kn ?? q.no}`, metinler: ['Doğru!', q.cozum], onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null) }, ...notAdimlari(q)], () => {
-        if (tercih.otomatik) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 900);
+        if (tercih.otomatik && !dur) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 900);
       });
       kaydir('.sc-cozum');
     } else {
@@ -559,7 +562,7 @@ export const SoruCozucu: React.FC<Props> = ({
     }, ...notAdimlari(q));
     // çözüm bitince (otomatik geçiş açıksa) sonraki soruya
     calSira(adimlar, () => {
-      if (tercih.otomatik) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1400);
+      if (tercih.otomatik && !checkupMu()) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1400);
     });
   };
   // ---------- otomatik çöz: oku → çözüm yolu → yanlışları gerekçesiyle ele → doğruyu açıkla → çözüm
