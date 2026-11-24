@@ -1,0 +1,1589 @@
+{
+ "id": "k2-32-felcler",
+ "kurul": 2,
+ "ders": "Nöroloji",
+ "konu": "Felçler",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "sira": 32,
+ "tarih": "2026-11-12",
+ "soru_sayisi": 55,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Parezi ve pleji adlandırmalarını tanımlayabilme ve kas zaafında düşünülecek dört düzeyi sıralayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Yalnızca her iki bacağında güçsüzlük bulunan hastada kullanılan terim aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Triparezi",
+      "B": "Paraparezi",
+      "C": "Monoparezi",
+      "D": "Kuadriparezi",
+      "E": "Hemiparezi"
+     },
+     "dogru": "B",
+     "aciklama": "Paraparezi ya da parapleji, her iki bacaktaki güçsüzlüğü anlatır. Monoparezi tek uzvu, triparezi üç ekstremiteyi, kuadriparezi ise her iki kol ve bacağı kapsar.",
+     "sik_aciklamalari": {
+      "A": "Triparezi, üç ekstremitede birlikte görülen güç kaybını anlatır. Burada yalnız iki alt uzuv etkilendiği için tanıma uymaz, çünkü üçüncü bir uzuv tutulmuş değildir.",
+      "B": "Paraparezi ya da parapleji, her iki bacakta görülen güçsüzlüğü anlatır. Alt uzuvların iki yanlı tutulduğu bu tabloda terim doğrudur. Bu adlandırma periferik sinirler için de geçerlidir.",
+      "C": "Monoparezi, tek bir uzuvda görülen güç kaybını anlatır. Kol ya da bacaklardan yalnız biri etkilenir. Her iki bacağın birlikte tutulduğu bu tabloda terim uymaz.",
+      "D": "Kuadriparezi ya da tetraparezi, her iki kol ve bacakta güç kaybı olması demektir. Yalnızca bacakların tutulduğu bu hastada kollar etkilenmediğinden terim kullanılmaz.",
+      "E": "Hemiparezi, vücudun bir yarısındaki kasların güç kaybını anlatır ve aynı taraftaki kol ile bacağı kapsar. İki bacağın tutulduğu tabloda vücut yarısı tanımı karşılanmaz."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kas gücü azalmasıyla ilgili aşağıdaki adlandırmalardan hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Triparezi, üç ekstremitede güç kaybıdır",
+      "B": "Paraparezi, her iki kolda güçsüzlüktür",
+      "C": "Kuadriparezi, kol ve bacakların tümünde güçsüzlüktür",
+      "D": "Hemipleji, vücut yarısındaki kasların güç kaybıdır",
+      "E": "Monoparezi, tek uzuvda güç kaybıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Paraparezi ya da parapleji her iki bacaktaki güçsüzlüğü anlatır, kolları kapsamaz. Diğer adlandırmaların hepsi tanımlarıyla uyumludur.",
+     "sik_aciklamalari": {
+      "A": "Triparezi, üç ekstremitede birlikte görülen güç kaybını anlatan bir adlandırmadır. Bu tanım adlandırmayla uyumludur ve ifade doğrudur, bu nedenle yanlış olan seçenek olarak seçilemez.",
+      "B": "Paraparezi ya da parapleji, her iki kolu değil her iki bacağı ilgilendirir. Kolda güçsüzlük bu terimle anlatılmaz, bu yüzden ifade yanlıştır ve doğru yanıttır.",
+      "C": "Kuadriparezi ya da tetraparezi, her iki kol ve bacakta güç kaybını anlatır. Dört ekstremitenin tamamının tutulduğu bu tanım doğru verilmiştir.",
+      "D": "Hemipleji, vücudun bir yarısındaki kasların güç kaybıdır ve aynı taraftaki kol ile bacağı kapsar. Tanım doğru olduğu için ifade yanlış değildir.",
+      "E": "Monoparezi, kol ya da bacaklardan yalnız birinde görülen güç kaybını anlatır. Tanım doğru verildiği için bu ifade yanlış olarak sayılamaz ve aranan yanlış ifade olamaz."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Birinci motor nöronun yolunu, piramidal yolun çaprazlaşmasını ve lezyon ile felç tarafı ilişkisini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q03",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Birinci motor nöronun yolu olan piramidal yolun lezyonlarıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Medulla spinalis lezyonu karşı tarafta felç yapar",
+      "B": "Medulla spinalis lezyonu yalnız yüzde zaaf yapar",
+      "C": "Beyindeki lezyon aynı tarafta zaaf yapar",
+      "D": "Beyindeki lezyon karşı tarafta zaaf yapar",
+      "E": "Lezyon yeri felç tarafını etkilemez"
+     },
+     "dogru": "D",
+     "aciklama": "Piramidal yollar çaprazlaştığı için beyindeki lezyonlar karşı tarafta zaaf yapar. Medulla spinalis lezyonları ise aynı tarafta felç yapar.",
+     "sik_aciklamalari": {
+      "A": "Piramidal yolların çaprazlaşması nedeniyle medulla spinalis lezyonları aynı tarafta felç yapar. Karşı tarafta felç beklenmez, bu nedenle ifade tersini söylediği için hatalıdır.",
+      "B": "Medulla spinalis lezyonlarında felç lezyonla aynı taraftadır ve yüz tutulmaz. Zaafın yalnızca yüzde görülmesi bu lezyonun bilinen tablosuyla çelişir ve ifadeyi geçersiz kılar.",
+      "C": "Beyindeki lezyonun aynı tarafta zaaf yapması, çaprazlaşmayı göz ardı eden bir düşüncedir. Piramidal yol karşı taraftaki kasların istemli hareketini sağladığından zaaf karşı tarafta ortaya çıkar.",
+      "D": "Piramidal yollar çaprazlaştığı için beyindeki bir lezyon karşı taraftaki ekstremite ve gövde kaslarında zaaf yapar. Bu ifade çaprazlaşma kuralını doğru yansıtır.",
+      "E": "Felç tarafı, lezyonun beyinde ya da medulla spinaliste olmasına göre belirlenir. Beyin lezyonları karşı, omurilik lezyonları aynı tarafta zaaf yaptığından lezyon yeri felç tarafını etkiler."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Kortikobulber yolun bir kısmı beyin sapında çaprazlaşarak hangi yapılarla sinaps yapar?",
+     "secenekler": {
+      "A": "Kranyal sinir nükleusları",
+      "B": "Ön boynuz hücreleri",
+      "C": "Miyonöral plaklar",
+      "D": "Kapsüla interna lifleri",
+      "E": "Periferik sinir uçları"
+     },
+     "dogru": "A",
+     "aciklama": "Kortikobulber yolun bir kısmı beyin sapında çaprazlaşarak kranyal sinir nükleuslarıyla sinaps yapar. Ön boynuz hücreleri ise medulla spinalis boyunca uzanır.",
+     "sik_aciklamalari": {
+      "A": "Kortikobulber yolun bir kısmı beyin sapında çaprazlaşır ve kranyal sinir nükleuslarıyla sinaps yapar. Böylece yüz, dil ve yutma gibi kasların hareketi için gerekli bağlantı kurulur ve seçim doğrudur.",
+      "B": "Ön boynuz hücreleri medulla spinalis boyunca uzanan ikinci motor nöron hücreleridir. Kortikobulber yolun hedefi beyin sapı nükleuslarıdır, bu hücreler değildir.",
+      "C": "Miyonöral plak, motor sinirlerin uç dallarının çizgili kas telleriyle yaptığı sinaps bölgesidir. Kortikobulber yolun sinaps yaptığı yer bu bağlantı değil, kranyal sinir nükleuslarıdır.",
+      "D": "Kapsüla interna, piramidal yolun kompakt seyrettiği bölgedir. Kortikobulber yolun sinaps yaptığı yer kapsüla interna değil, beyin sapındaki kranyal sinir nükleuslarıdır.",
+      "E": "Periferik sinir uçları motor sinirlerin kasa ulaşan dallarıdır. Kortikobulber yol bunlarla doğrudan sinaps yapmaz, aradaki ikinci motor nöron hücreleri olan nükleuslarla sinaps yapar."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "İkinci motor nöronun yerleşimini, sinir-kas bağlantısını ve çizgili kası ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q05",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "İkinci motor nöronun bulunduğu yapılar aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Piramidal ve kortikobulber yollar",
+      "B": "Miyonöral plak ve çizgili kas",
+      "C": "Korteks ve kapsüla interna",
+      "D": "Motor kranyal çekirdekler ve ön boynuz hücreleri",
+      "E": "Kapsüla interna ve piramidal yol"
+     },
+     "dogru": "D",
+     "aciklama": "İkinci motor nöron, beyin sapındaki motor kranyal sinir nükleuslarında ve medulla spinalis boyunca uzanan ön boynuz hücrelerinde bulunur. Bu hücreler aynı taraftaki kasları innerve eder.",
+     "sik_aciklamalari": {
+      "A": "Piramidal ve kortikobulber yollar, istemli hareketi başlatan birinci motor nöronun yollarıdır. İkinci motor nöron bu yolların ilettiği uyarıyı alan alt nörondur.",
+      "B": "Miyonöral plak, motor sinir uçlarının kas telleriyle yaptığı sinaps bölgesidir; çizgili kas ise hareketi gerçekleştiren son organdır. Bunlar ikinci motor nöronun hücre yerleşimi sayılmaz.",
+      "C": "Korteks ve kapsüla interna birinci motor nöronun yolu üzerindedir. Alt motor nöronun hücre gövdeleri burada değil, beyin sapı çekirdeklerinde ve ön boynuzdadır.",
+      "D": "İkinci motor nöron, alt ya da periferik motor nörondur ve beyin sapındaki motor kranyal sinir nükleuslarında ile medulla spinalis boyunca uzanan ön boynuz hücrelerinde yer alır. Bu yerleşim doğrudur.",
+      "E": "Kapsüla interna piramidal yolun kompakt geçtiği bölgedir ve birinci motor nöron düzeyine aittir. Ön boynuz ve beyin sapı çekirdekleri gibi alt nöron hücrelerini içermez."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q06",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Medulla spinalis boyunca uzanan ön boynuz hücreleri hangi kasları innerve eder?",
+     "secenekler": {
+      "A": "Karşı taraftaki kol, bacak ve gövde kaslarını",
+      "B": "Aynı taraftaki kol, bacak ve gövde kaslarını",
+      "C": "Karşı taraftaki dil ve yutma kaslarını",
+      "D": "Aynı taraftaki göz ve yüz kaslarını",
+      "E": "Yalnız her iki bacak kaslarını"
+     },
+     "dogru": "B",
+     "aciklama": "Ön boynuz hücreleri aynı taraftaki kol, bacak ve gövde kaslarını innerve eder. Beyin sapı nükleusları ise aynı taraftaki göz, yüz, dil, çiğneme ve yutma kaslarını innerve eder.",
+     "sik_aciklamalari": {
+      "A": "Karşı taraftaki kasların hareketini sağlayan yapı piramidal yoldur. Ön boynuz hücreleri ise aynı tarafın kaslarına ulaşır, bu yüzden karşı taraf ifadesi doğru olmaz.",
+      "B": "Ön boynuz hücreleri ikinci motor nöronun medulla spinalis boyunca uzanan bölümüdür ve aynı taraftaki kol, bacak ve gövde kaslarını innerve eder. İfade doğru verilmiştir.",
+      "C": "Dil ve yutma kaslarını innerve eden hücreler beyin sapı nükleuslarındadır ve aynı tarafı besler. Ön boynuz hücreleri bu kasları değil, kol, bacak ve gövde kaslarını innerve eder.",
+      "D": "Göz ve yüz kaslarını aynı tarafta innerve eden hücreler beyin sapındaki motor kranyal sinir nükleuslarıdır. Ön boynuz hücreleri medulla spinaliste yer aldığından kol, bacak ve gövdeye giden liflerin kaynağıdır.",
+      "E": "Ön boynuz hücreleri yalnız bacaklara değil, kol ve gövde kaslarına da lif gönderir. Bu nedenle sadece bacak kaslarıyla sınırlı bir ifade ön boynuzun işlevini eksik anlatır."
+     },
+     "kanit": {
+      "sayfa": 7
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Kas zaafının dağılımına göre hastalanan motor düzeyi belirleyebilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q07",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Her iki yanlı, ekstremite köklerinde belirgin, segmenter dağılıma uymayan zaaf ve Gowers arazı saptanan hastada hangi düzey hastalanmıştır?",
+     "secenekler": {
+      "A": "Ön boynuz hücreleri",
+      "B": "Doğrudan çizgili kas",
+      "C": "Miyonöral plak",
+      "D": "Birinci motor nöron",
+      "E": "Periferik sinir"
+     },
+     "dogru": "B",
+     "aciklama": "Çizgili kas hastalıklarında zaaf segmenter ya da periferik sinir dağılımına uymaz, ekstremite köklerinde belirgin ve iki yanlıdır; Gowers arazı görülür. Bu tablo kas düzeyine işaret eder.",
+     "sik_aciklamalari": {
+      "A": "Ön boynuz hücre ya da ön kök lezyonunda zaaf, aynı medulla segmentinden innerve edilen kaslarda, yani miyotom dağılımında görülür. Segmenter dağılıma uymayan zaaf bu düzeyi düşündürmez.",
+      "B": "Çizgili kas hastalıklarında zaaf segmenter ya da periferik sinir dağılımına uymaz ve ekstremite köklerinde belirgin ve iki yanlıdır. Gowers arazı da bu düzeye özgü olduğundan seçim doğrudur.",
+      "C": "Miyonöral plak hastalıklarında zaaf başlıca beyin sapı inervasyonlu kaslarda belirgindir, ekstremitelerde ise proksimal kaslar tutulur. Gowers arazı bu düzey için değil, çizgili kas hastalıkları için belirtilir.",
+      "D": "Birinci motor nöron hastalıklarında zaaf kolda ekstansör, bacakta fleksör kaslarda belirgindir ve tonus artar. Köklerde belirgin iki yanlı zaaf ile Gowers arazı bu düzeyin tablosu değildir.",
+      "E": "Periferik sinir lezyonunda zaaf o sinirin dağıldığı kaslarda görülür. Sinir dağılımına uymayan, iki yanlı ve kök bölgelerinde belirgin zaaf periferik sinir tablosuna uymaz."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q08",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Birinci motor nöron hastalıklarında kas zaafı hangi kas gruplarında belirgindir?",
+     "secenekler": {
+      "A": "Kolda ve bacakta yalnız ekstansör kaslarda",
+      "B": "Yalnızca proksimal kas gruplarında",
+      "C": "Kolda ve bacakta yalnız fleksör kaslarda",
+      "D": "Kolda fleksör, bacakta ekstansör kaslarda",
+      "E": "Kolda ekstansör, bacakta fleksör kaslarda"
+     },
+     "dogru": "E",
+     "aciklama": "Birinci motor nöron hastalıklarında zaaf üst ekstremitede ekstansör, bacakta fleksör kaslarda belirgindir. Spastisitedeki baskın tonus artışı ise kolda fleksör, bacakta ekstansör gruptadır.",
+     "sik_aciklamalari": {
+      "A": "Hem kolda hem bacakta yalnız ekstansör kasların tutulması, birinci motor nöron zaafının tanımlanmış dağılımına uymaz. Bu hastalıkta kolda ekstansör, bacakta ise fleksör kaslar öne çıkar.",
+      "B": "Proksimal kasların baskın tutulumu, miyonöral plak hastalıkları ile çizgili kas hastalıklarının dağılımıdır. Birinci motor nöron zaafı ise kolda ekstansör, bacakta fleksör gruplarda ayırt edilir.",
+      "C": "Hem kolda hem bacakta yalnız fleksör kasların tutulması, birinci motor nöron zaafının dağılımı değildir. Kolda ekstansör ve bacakta fleksör gruplar baskındır.",
+      "D": "Kolda fleksör, bacakta ekstansör dağılımı zaafın değil, spastisitenin yani tonus artışının baskın olduğu kas gruplarını anlatır. Zaaf ise tam ters gruplarda belirgindir.",
+      "E": "Birinci motor nöron hastalıklarında zaaf üst ekstremitede ekstansör kaslarda, bacakta ise fleksör kaslarda belirgindir. Bu dağılım birinci motor nöron düzeyini işaret eder ve doğrudur."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q09",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Zaafı ekstremite uçlarında belirgin olan, az çok simetrik seyreden ve kranyal sinirleri de tutabilen hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Polinöropati",
+      "B": "Kas distrofisi",
+      "C": "Poliomiyelit",
+      "D": "Myastenia gravis",
+      "E": "Psödobulber paralizi"
+     },
+     "dogru": "A",
+     "aciklama": "Polinöropatide birden fazla periferik sinir genellikle simetrik olarak hastalanır; zaaf ekstremite uçlarındadır ve kranyal sinirler tutulabilir. Poliomiyelit ise asimetrik felçlerle seyreder.",
+     "sik_aciklamalari": {
+      "A": "Polinöropatide zaaf az çok simetriktir ve ekstremite uçlarında belirgindir. Kranyal sinirler de tutulabildiği için verilen özelliklerin tümü bu hastalıkla uyuştuğundan seçim doğrudur.",
+      "B": "Kas distrofisi ailesel ve ilerleyici seyirli olup zaaf simetriktir ve proksimal kasları tutar. Ekstremite uçlarında belirgin zaaf ile kranyal sinir tutulumu bu hastalığın tablosu değildir.",
+      "C": "Poliomiyelit ön boynuz hücresinin akut iltihabı olup genellikle ateşli bir devreyi izleyen asimetrik kol ve bacak felçleri yapar. Simetrik ve uçlarda belirgin zaaf bu hastalığın özelliği değildir.",
+      "D": "Myastenia gravis miyonöral ileti bozukluğudur ve zaaf başlıca oküler, bulber ve boyun kaslarında, ekstremitelerde ise proksimal kaslarda belirginleşir. Uçlarda belirgin zaaf bu hastalığı göstermez.",
+      "E": "Psödobulber paralizi, beynin iki yanında laküner infarktlarla kortikobulber liflerin hastalanmasından kaynaklanır. Ekstremite uçlarında simetrik zaaf bu tablonun tanımlayıcı özelliği değildir."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Tonus ve tendon reflekslerindeki değişimleri birinci ve ikinci motor nöron hastalıklarında karşılaştırabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q10",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Spastisite ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Pasif harekette kaslar gevşek hissedilir",
+      "B": "Myastenia gravis'te belirgin biçimde artar",
+      "C": "Tonus artışı kolda ekstansör, bacakta fleksör kaslarda baskındır",
+      "D": "İkinci motor nöron hastalıklarında belirgin hale gelir",
+      "E": "Tonus artışı kolda fleksör, bacakta ekstansör kaslarda baskındır"
+     },
+     "dogru": "E",
+     "aciklama": "Spastisite, bir kas grubunda daha belirgin olan hipertonidir ve birinci motor nöron hastalıklarında kolda fleksör, bacakta ekstansör grupta baskındır. İkinci motor nöron hastalıklarında ise tonus azalır.",
+     "sik_aciklamalari": {
+      "A": "Pasif harekette kasların gevşek hissedilmesi hipotoniyi anlatır ve ikinci motor nöron hastalıklarında görülür. Spastisitede ise tonus artmıştır, kaslar gergin kalır.",
+      "B": "Myastenia gravis miyonöral ileti bozukluğudur ve bu hastalıkta kas tonusu değişmez. Spastisite ise tonus artışıdır, bu yüzden bu hastalığın bir özelliği olarak gösterilemez.",
+      "C": "Kolda ekstansör, bacakta fleksör dağılımı spastisitenin değil, birinci motor nöron zaafının baskın olduğu kas gruplarını anlatır. Tonus artışı ise kolda fleksör, bacakta ekstansör kaslarda öne çıkar.",
+      "D": "İkinci motor nöron hastalıklarında tonus artmaz, azalır ve hipotoni gelişir. Spastisite birinci motor nöron düzeyine ait olduğu için bu ifade yanlıştır.",
+      "E": "Birinci motor nöron hastalıklarında tonus artar ve bu hipertoni kolda fleksör, bacakta ekstansör kas grubunda baskındır. Bir kas grubunda daha belirgin olan bu tonus artışına spastisite denir ve ifade doğrudur."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q11",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Piramidal yol hastalıklarında tendon reflekslerinin artmasının temel nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Periferik sinir lezyonuna bağlı duyu kaybı",
+      "B": "Refleks kavsinin eferent kolunun hastalanması",
+      "C": "Piramidal sistemin inhibitör etkisinin kalkması",
+      "D": "Çizgili kas liflerinin erimesi",
+      "E": "Miyonöral iletinin bozulması"
+     },
+     "dogru": "C",
+     "aciklama": "Piramidal sistemin spinal refleks kavsi üzerindeki inhibitör etkisi kalktığı için tendon refleksleri artar. İkinci motor nöron lezyonunda ise refleks kavsinin eferent kolu hastalandığından refleksler azalır ya da kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Periferik sinir lezyonu zaafla birlikte duyu kusuru yapabilir ve refleks kavsini etkileyerek refleksleri azaltır. Refleks artışının temel nedeni olarak gösterilemez, çünkü bu durumda refleksler azalır.",
+      "B": "Refleks kavsinin eferent kolunun hastalanması ikinci motor nöron lezyonunda görülür. Bu durumda refleksler artmaz, tersine azalır ya da tamamen kaybolur.",
+      "C": "Piramidal yolun refleks kavsini baskılayan etkisi, bu yolun hastalanmasıyla ortadan kalkar. Bunun sonucunda tendon refleksleri artar, bu nedenle seçim doğrudur.",
+      "D": "Çizgili kas liflerinin erimesi primer kas hastalıklarında ve alt motor nöron hastalıklarında atrofi olarak görülür. Refleks artışı bu yolla açıklanamaz, çünkü primer kas hastalıklarında refleksler genellikle normal kalır.",
+      "E": "Miyonöral ileti bozukluğu myastenia gravis'te görülür ve bu hastalıkta tendon refleksleri normaldir. Refleks artışını açıklayan bir mekanizma sayılamaz, çünkü refleksler bu bozuklukta zaten artmaz."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q12",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Pasif harekette kasların gevşek hissedildiği, tendon reflekslerinin kaybolduğu, patolojik refleks bulunmayan ve kasları erimiş hastada zaaf hangi düzeyden kaynaklanır?",
+     "secenekler": {
+      "A": "Beyin korteksi",
+      "B": "İkinci motor nöron",
+      "C": "Birinci motor nöron",
+      "D": "Piramidal yol",
+      "E": "Kapsüla interna"
+     },
+     "dogru": "B",
+     "aciklama": "Tonus azalması, tendon reflekslerinin azalması ya da kaybolması, atrofi ve patolojik refleks olmaması ikinci motor nöron hastalığını gösterir. Birinci motor nöronda tonus ve refleksler artar, patolojik refleks vardır.",
+     "sik_aciklamalari": {
+      "A": "Korteks ya da kortekse yakın bir lezyon birinci motor nöron düzeyindedir ve çoğunlukla monoparezi yapar. Tonus azalması ve refleks kaybı ile atrofi bu düzeyle uyuşmaz.",
+      "B": "İkinci motor nöron hastalıklarında tonus azalır, tendon refleksleri azalır ya da kaybolur, kaslar atrofiktir ve patolojik refleks yoktur. Bulguların tümü bu düzeyle uyumlu olduğundan seçim doğrudur.",
+      "C": "Birinci motor nöron hastalıklarında tonus ve tendon refleksleri artar, patolojik refleksler ortaya çıkar ve felçli ekstremitede atrofi görülmez. Verilen bulgular bunun tersidir.",
+      "D": "Piramidal yol, birinci motor nöronun yoludur ve hastalandığında tendon refleksleri artar, Babinski gibi patolojik refleksler ortaya çıkar. Refleks kaybı ve atrofi bu düzeyin bulguları değildir.",
+      "E": "Kapsüla internada piramidal yol kompakt seyreder ve lezyonu vücut yarısını eşit etkileyen bir hemipleji yapar. Refleks kaybı ve kas erimesi bu lezyonun tablosu değildir."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": [
+      "past-q-KURUL_2_C_IKMIS__3-92"
+     ]
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Patolojik reflekslerin kortikospinal yol hastalıklarında ortaya çıktığını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q13",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Muayenede Hoffmann delili, klonus ve Babinski delili saptanan hastada zaaf hangi düzeydendir?",
+     "secenekler": {
+      "A": "Sinir-kas bağlantısı",
+      "B": "Periferik sinir",
+      "C": "Birinci motor nöron",
+      "D": "İkinci motor nöron",
+      "E": "Doğrudan çizgili kas"
+     },
+     "dogru": "C",
+     "aciklama": "Babinski, Hoffmann delilleri ve klonus gibi patolojik refleksler kortikospinal yol hastalıklarında, yani birinci motor nöron düzeyinde ortaya çıkar. Alt motor nöron, myastenia gravis ve primer kas hastalıklarında patolojik refleks yoktur.",
+     "sik_aciklamalari": {
+      "A": "Sinir-kas bağlantısı hastalığına örnek myastenia gravis'te tendon refleksleri normaldir ve patolojik refleks yoktur. Patolojik reflekslerin varlığı bu düzeyi düşündürmez.",
+      "B": "Periferik sinir lezyonunda zaaf o sinirin dağıldığı kaslarda görülür ve ikinci motor nöron düzeyindedir. Patolojik refleks bu düzeyde görülen bir bulgu değildir.",
+      "C": "Babinski, Hoffmann ve klonus gibi patolojik refleksler kortikospinal yol hastalıklarında ortaya çıkar. Kortikospinal yol birinci motor nöronun yolu olduğundan seçim doğrudur.",
+      "D": "İkinci motor nöron hastalıklarında tendon refleksleri azalır ya da kaybolur ve patolojik refleks görülmez. Verilen bulgular bu düzeyin tablosuyla bağdaşmaz.",
+      "E": "Primer kas hastalıklarında patolojik refleks görülmez ve tendon refleksleri belirgin atrofi olmadıkça normal kalabilir. Üç patolojik bulgunun birlikte varlığı bu düzeye uymaz."
+     },
+     "kanit": {
+      "sayfa": 13
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q52"
+     ]
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Kas atrofisinin birinci ve ikinci motor nöron hastalıklarındaki durumunu ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q14",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Birinci motor nöron hastalığında felçli kol ve bacaktaki kas atrofisiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Atrofi yalnız proksimal kaslarda belirgindir",
+      "B": "Atrofi yoktur, inaktiviteye bağlı incelme olabilir",
+      "C": "Kaslar belirgin biçimde atrofiktir",
+      "D": "Atrofi fasikülasyonlarla birlikte görülür",
+      "E": "Kas erimesi tanı için zorunludur"
+     },
+     "dogru": "B",
+     "aciklama": "Birinci motor nöron hastalığında felçli kol ve bacakta atrofi yoktur; yalnızca inaktiviteye bağlı global bir incelme görülebilir. Alt motor nöron hastalıklarında ise kaslar atrofiktir.",
+     "sik_aciklamalari": {
+      "A": "Atrofinin proksimal kaslarda belirginleşmesi, kas hastalıklarının zaaf dağılımına uyan bir özelliktir. Birinci motor nöron hastalığında böyle bir atrofi tarif edilmemiştir.",
+      "B": "Birinci motor nöron hastalığında felçli ekstremitede gerçek bir kas atrofisi yoktur. Yalnızca hareketsizliğe bağlı global bir incelme görülebildiği için ifade doğrudur.",
+      "C": "Belirgin atrofi alt motor nöron hastalıklarının bulgusudur. Birinci motor nöron hastalığında felçli ekstremitedeki kaslar atrofik değildir, bu nedenle bu ifade yanlıştır.",
+      "D": "Fasikülasyonlar piramidal yol hastalıklarında görülmez; ikinci motor nöron hastalığında, lezyon ön boynuz hücrelerindeyse dikkati çeker. Dolayısıyla birinci motor nöronda atrofi ile fasikülasyon birlikteliği beklenmez.",
+      "E": "Birinci motor nöron hastalığında atrofi bulunmadığı için kas erimesi tanıda gerekli bir ölçüt olamaz. Tanıda tendon reflekslerinin artması ve Babinski delili gibi bulgular öne çıkar."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Fasikülasyonun ve duyu kusurunun motor düzeylere göre dağılımını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q15",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Fasikülasyonlarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca uyku sırasında ortaya çıkar",
+      "B": "Myastenia gravis'te yaygın olarak görülür",
+      "C": "Deri altında seyirmeler şeklindedir",
+      "D": "Duyu kusuruyla birlikte seyreder",
+      "E": "Piramidal yol hastalıklarında belirgindir"
+     },
+     "dogru": "C",
+     "aciklama": "Fasikülasyonlar deri altında seyirmeler şeklindedir ve spontan görülebilir; gerekirse kaslara elle ya da çekiçle vurularak ortaya çıkarılır. Piramidal yol hastalıklarında görülmez.",
+     "sik_aciklamalari": {
+      "A": "Fasikülasyonların yalnız uyku sırasında görüldüğü bilgisi yoktur; bunlar spontan görülebilir ya da kasa vurularak ortaya çıkarılır. Bu nedenle ifade fasikülasyonu doğru tanımlamaz.",
+      "B": "Myastenia gravis'te fasikülasyon yoktur; tabloda kolay yorulma, ptoz ve diplopi gibi bulgular öne çıkar. Fasikülasyon ise deri altı seyirmelerle giden ve ön boynuz hücre lezyonunda dikkati çeken bir bulgudur.",
+      "C": "Fasikülasyonlar deri altında seyirmeler şeklindedir ve spontan görülebilir. Kendiliğinden görülmediğinde kaslara elle ya da çekiçle vurmak gerekebildiği için ifade doğrudur.",
+      "D": "Duyu kusuru, lezyon periferik sinirdeyse kas zaafına eşlik edebilir. Fasikülasyon ise ön boynuz hücre lezyonunda görülen bir bulgudur ve ön boynuz hastalığında duyu kusuru yoktur.",
+      "E": "Piramidal yol hastalıklarında kaslarda fasikülasyon görülmez. Fasikülasyon, lezyon ön boynuz hücrelerindeyse ikinci motor nöron hastalığında dikkati çeker; bu yüzden fasikülasyonu piramidal yol hastalığına bağlayan ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 15
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q158"
+     ]
+    },
+    {
+     "id": "k2-32-felcler-q16",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki lezyon yerlerinden hangisi tek başına hastalandığında kas zaafıyla birlikte duyu kusuru görülebilir?",
+     "secenekler": {
+      "A": "Çizgili kasın primer hastalığı",
+      "B": "Miyonöral plak",
+      "C": "Periferik sinir",
+      "D": "Ön boynuz hücreleri",
+      "E": "Kortikospinal yol"
+     },
+     "dogru": "C",
+     "aciklama": "Lezyon periferik sinirdeyse kas zaafı ile birlikte duyu kusuru bulunabilir. Tek başına kortikospinal yol ve ön boynuz hastalıklarında, miyonöral plak ve çizgili kasın primer hastalıklarında duyu kusuru yoktur.",
+     "sik_aciklamalari": {
+      "A": "Çizgili kasın primer hastalıklarında duyu kusuru görülmez; kas zaafı ve atrofi ön plandadır. Duyu bulgusunun varlığı bu düzeyi desteklemez, çünkü bu hastalıklarda duyu etkilenmez.",
+      "B": "Miyonöral plak hastalıklarında, örneğin myastenia gravis'te, duyu kusuru görülmez. Tablo kolay yorulma, diplopi ve ptoz gibi motor belirtilerle sınırlıdır.",
+      "C": "Periferik sinir lezyonunda kas zaafı ile birlikte duyu kusuru bulunabilir. Tek başına kortikospinal yol ve ön boynuz hastalıklarında, miyonöral plak ve çizgili kasın primer hastalıklarında duyu kusuru görülmediğinden bu seçim doğrudur.",
+      "D": "Ön boynuz hücreleri ikinci motor nöronun hücreleridir ve bu hücrelerin hastalıklarında duyu kusuru yoktur. Zaaf fasikülasyonlarla birlikte duyu bulgusuz seyreder.",
+      "E": "Kortikospinal yol birinci motor nöronun yoludur ve istemli hareketi sağlar. Tek başına hastalandığında zaafa duyu kusuru eşlik etmez. Kapsüla internadaki hemiplejide duyu kusuru eşlik edebilir, ancak bu tek başına kortikospinal yol hastalığı tablosu değildir; bu yüzden bu seçim yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Birinci motor nöron, ikinci motor nöron, myastenia gravis ve kas hastalığını karşılaştırma tablosuna göre ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q17",
+     "kazanim": 9,
+     "zorluk": "zor",
+     "soru": "Kas zaafı olan hastada tonus ve tendon refleksleri değişmemiş; patolojik refleks, atrofi ve fasikülasyon yoktur. Zaaf başlıca oküler, bulber ve boyun kaslarındadır. En olası tanı hangisidir?",
+     "secenekler": {
+      "A": "Kas distrofisi",
+      "B": "Polinöropati",
+      "C": "Myastenia gravis",
+      "D": "Amiyotrofik lateral skleroz",
+      "E": "Poliomiyelit"
+     },
+     "dogru": "C",
+     "aciklama": "Tonus ve tendon refleksleri değişmez; patolojik refleks, atrofi ve fasikülasyon yoktur ve zaaf başlıca oküler, bulber ve boyun kaslarındadır. Bu bulgular myastenia gravis tablosudur.",
+     "sik_aciklamalari": {
+      "A": "Kas distrofisinde atrofi ve kuvvetsizlik simetriktir ve proksimal kasları tutar; ördek yürüyüşü ve Gowers arazı görülür. Atrofinin bulunmadığı, oküler ve bulber kaslarda belirgin zaaf bu hastalığın tablosu değildir.",
+      "B": "Polinöropatide felç ikinci motor nöron tipindedir; tonus ve refleksler azalır, atrofi görülür ve duyu kusuru eldiven çorap tarzındadır. Zaaf ekstremite uçlarında olduğundan oküler ve bulber kaslarda belirgin zaafla uyuşmaz.",
+      "C": "Myastenia gravis miyonöral ileti bozukluğudur; tonus ve tendon refleksleri değişmez, patolojik refleks, atrofi ve fasikülasyon görülmez. Zaafın oküler, bulber ve boyun kaslarında belirgin olması da tabloyla uyumlu olduğundan seçim doğrudur.",
+      "D": "Amiyotrofik lateral sklerozda dil ve el kaslarında atrofi ile yaygın fasikülasyonlar görülür ve derin tendon refleksleri artar. Atrofi ve fasikülasyonun bulunmadığı, refleksleri değişmeyen bir tablo bu hastalığa uymaz.",
+      "E": "Poliomiyelit ön boynuz hücresinin akut iltihabıdır ve felçler ikinci motor nöron tipindedir; refleksler alınmaz, tutulan kaslarda atrofi olur. Reflekslerin ve kas hacminin korunduğu bir tablo bu hastalıkla bağdaşmaz."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q18",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Kas zaafı olan hastada kas atrofisi vardır; fasikülasyon, patolojik refleks ve duyu kusuru yoktur, kas enzimleri artmıştır. Zaaf hangi düzeyden kaynaklanır?",
+     "secenekler": {
+      "A": "Birinci motor nöron",
+      "B": "Ön boynuz hücreleri",
+      "C": "Periferik sinir",
+      "D": "Doğrudan çizgili kas",
+      "E": "Miyonöral plak"
+     },
+     "dogru": "D",
+     "aciklama": "Kas hastalığında atrofi vardır; patolojik refleks, fasikülasyon ve duyu kusuru yoktur, EMG özellikleri değişir ve kas enzimleri artabilir. Bu tablo çizgili kas düzeyine uyar.",
+     "sik_aciklamalari": {
+      "A": "Birinci motor nöron hastalıklarında felçli ekstremitede atrofi yoktur ve patolojik refleksler vardır. Atrofinin bulunduğu, patolojik refleksin olmadığı tablo bu düzeye uymaz.",
+      "B": "Ön boynuz hücrelerinin hastalığında atrofi görülür fakat kaslarda fasikülasyonlar dikkati çeker. Fasikülasyonun bulunmadığı bu tablo, ön boynuz tutulumunu düşündürmez ve kas hastalığına daha uygundur.",
+      "C": "Periferik sinir lezyonunda kas zaafıyla birlikte duyu kusuru bulunabilir. Duyu kusurunun olmadığı bu tablo sinirden çok doğrudan kasın hastalığına uyar.",
+      "D": "Çizgili kas hastalıklarında kas atrofisi vardır; patolojik refleks, fasikülasyon ve duyu kusuru yoktur, EMG özellikleri değişir ve kas enzimleri artabilir. Bulgular bu düzeyle uyumlu olduğundan seçim doğrudur.",
+      "E": "Miyonöral plak hastalığına örnek olan myastenia gravis'te kas atrofisi yoktur ve zaaf antikolinesterazla düzelir. Atrofinin belirgin olduğu bu tablo bu düzeye uymaz."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q19",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Birinci motor nöron hastalığı ile ilgili aşağıdaki bulgular veriliyor.\nI. Kas tonusu artar.\nII. Tendon refleksleri artar.\nIII. Felçli ekstremitede atrofi görülür.\nIV. Fasikülasyonlar görülür.\nBu bulgulardan hangisi ya da hangileri görülür?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I, II ve III",
+      "D": "II, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Birinci motor nöron hastalığında tonus ve tendon refleksleri artar. Felçli ekstremitede atrofi ve fasikülasyon görülmez, bunlar ikinci motor nöron bulgularıdır.",
+     "sik_aciklamalari": {
+      "B": "Birinci motor nöron hastalığında tonus artar ve tendon refleksleri artar. Felçli ekstremitede atrofi ile fasikülasyon görülmediğinden yalnızca ilk iki bulgu doğrudur.",
+      "A": "Tonus artışı birinci motor nöron bulgusudur ve doğrudur. Ancak tendon reflekslerinin artması da aynı düzeyin bulgusu olduğundan yalnız tonus artışını seçmek eksik kalır.",
+      "C": "Tonus ve tendon refleksi artışı doğrudur. Felçli kol ve bacakta atrofi ise birinci motor nöron hastalığında yoktur, yalnız inaktiviteye bağlı global bir incelme görülebilir.",
+      "D": "Tendon reflekslerinin artması doğrudur. Atrofi ve fasikülasyon ise alt motor nöron bulgularıdır; fasikülasyon özellikle lezyon ön boynuz hücrelerindeyse dikkati çeker.",
+      "E": "Dört bulgunun tümünü seçmek, ikinci motor nöron bulgusu olan atrofi ve fasikülasyonu da birinci motor nörona yüklemek demektir. Piramidal yol hastalıklarında fasikülasyon görülmez."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Babinski delilinin ve piramidal yol hastalığındaki önemli noktaların değerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q20",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Kas kuvveti normal olan bir hastada tek başına Babinski delili saptanıyor. Bu bulgu aşağıdakilerden hangisini gösterir?",
+     "secenekler": {
+      "A": "Piramidal yol hastalığını",
+      "B": "Primer kas hastalığını",
+      "C": "Hiçbir hastalığı düşündürmez",
+      "D": "Miyonöral ileti bozukluğunu",
+      "E": "İkinci motor nöron hastalığını"
+     },
+     "dogru": "A",
+     "aciklama": "Tek başına Babinski delili bile piramidal yol hastalığını gösteren çok önemli ve yeterli bir bulgudur. Kas kuvveti normal olsa da bu bulguyu taşıyan kişide piramidal yol hastadır.",
+     "sik_aciklamalari": {
+      "A": "Tek başına Babinski delili bile piramidal yol hastalığını gösteren çok önemli ve yeterli bir bulgudur. Kas kuvveti normal olsa da bu bulgu saptanan kişide piramidal yol hastadır, bu nedenle seçim doğrudur.",
+      "B": "Primer kas hastalıklarında patolojik refleks görülmez ve tendon refleksleri belirgin atrofi olmadıkça normal kalabilir. Babinski delili ise kortikospinal yol hastalığında ortaya çıkan patolojik bir reflekstir.",
+      "C": "Babinski delili kuvvet normal olsa bile çok önemli ve yeterli bir bulgudur. Tek başına bile piramidal yol hastalığını gösterdiğinden hiçbir hastalığı düşündürmediği yargısı yanlıştır.",
+      "D": "Myastenia gravis gibi miyonöral ileti bozukluklarında patolojik refleks görülmez ve tendon refleksleri normaldir. Babinski delili bu düzeyi düşündürmez, çünkü bu delil piramidal yol hastalığının bulgusudur.",
+      "E": "İkinci motor nöron hastalıklarında tendon refleksleri azalır ya da kaybolur. Babinski delili ise piramidal yol hastalığının bulgusu olduğundan bu düzeyi göstermez."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q52"
+     ]
+    },
+    {
+     "id": "k2-32-felcler-q21",
+     "kazanim": 10,
+     "zorluk": "orta",
+     "soru": "Piramidal yol hastalıklarının tanısında aşağıdaki bulgulardan hangisinin tek başına değeri çok sınırlıdır?",
+     "secenekler": {
+      "A": "Kuvvet normalken saptanan Babinski delili",
+      "B": "Tendon reflekslerinin artmasıyla Babinski delili birlikteliği",
+      "C": "Akut dönemde Babinski delilinin varlığı",
+      "D": "Tek başına Babinski delili",
+      "E": "Diğer piramidal belirtiler olmaksızın Hoffmann delili"
+     },
+     "dogru": "E",
+     "aciklama": "Diğer piramidal belirtilerle birlikte olmayan Hoffmann delilinin değeri çok sınırlıdır. Tek başına Babinski delili ise piramidal yol hastalığını gösteren çok önemli ve yeterli bir bulgudur.",
+     "sik_aciklamalari": {
+      "A": "Kas kuvveti normal olsa bile Babinski delili saptanan kişide piramidal yol hastadır. Bu durum bulgunun tanısal değerinin yüksek olduğunu gösterir.",
+      "B": "Tendon reflekslerinin artması ve Babinski delili, piramidal yol hastalıklarında en sık rastlanılan bulgulardır. İkisinin birlikteliği tanıyı güçlendirir, değerinin sınırlı olduğu söylenemez.",
+      "C": "Piramidal yolun akut hastalanmasında başlangıçta hipotoni ve refleks kaybı görülebilir, fakat Babinski delili varsa bu birinci motor nöron hastalığının yeterli kanıtıdır. Bulgunun değeri sınırlı değildir.",
+      "D": "Tek başına Babinski delili bile piramidal yol hastalığını gösteren çok önemli ve yeterli bir bulgudur. Bu nedenle değeri sınırlı olan bulgu değildir.",
+      "E": "Diğer piramidal belirtilerle birlikte olmayan Hoffmann delilinin değeri çok sınırlıdır. Bu bulgu tek başına piramidal yol hastalığını göstermeye yetmediği için seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q22",
+     "kazanim": 10,
+     "zorluk": "zor",
+     "soru": "Akut başlayan sağ hemiparezide felçli tarafta tonus azalmış, tendon refleksleri alınamıyor ve sağ Babinski delili pozitiftir. Bu tablo hangi düzeydeki hastalıkla uyumludur?",
+     "secenekler": {
+      "A": "Periferik sinir",
+      "B": "İkinci motor nöron",
+      "C": "Doğrudan çizgili kas",
+      "D": "Birinci motor nöron",
+      "E": "Sinir-kas bağlantısı"
+     },
+     "dogru": "D",
+     "aciklama": "Piramidal yolun akut hastalanmasında başlangıçta hipotoni ve refleks kaybı görülebilir. Babinski delili bulunuyorsa bu, olayın birinci motor nöron hastalığına bağlı olduğunun yeterli kanıtıdır.",
+     "sik_aciklamalari": {
+      "A": "Periferik sinir lezyonunda zaaf o sinirin dağıldığı kaslarda görülür ve patolojik refleks yoktur. Vücut yarısını tutan hemiparezi ve Babinski delili sinir lezyonuyla açıklanamaz.",
+      "B": "Tonus ve refleks azalması ikinci motor nöron düzeyini düşündürür, ancak ikinci motor nöron hastalığında patolojik refleks yoktur. Ayrıca hemiplejiyi bu düzeyin yapması olasılığı yok gibidir.",
+      "C": "Primer kas hastalıklarında patolojik refleks görülmez ve zaaf iki yanlıdır, proksimal kaslarda belirgindir. Tek taraflı hemiparezi ile Babinski delili bu düzeye uymaz.",
+      "D": "Piramidal yolun akut hastalanmasında başlangıçta hipertoni yerine hipotoni ve refleks kaybı görülebilir. Babinski delili varsa bu bulgu olayın birinci motor nöron hastalığına bağlı olduğunun yeterli kanıtıdır, seçim doğrudur.",
+      "E": "Sinir-kas bağlantısı hastalığına örnek myastenia gravis'te tonus ve tendon refleksleri değişmez, patolojik refleks yoktur. Babinski delilinin varlığı bu düzeyi dışlar."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q23",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "Hemipleji hemen daima hangi yapının hastalanmasına bağlıdır?",
+     "secenekler": {
+      "A": "Piramidal yol",
+      "B": "Ön boynuz hücreleri",
+      "C": "Miyonöral plak",
+      "D": "Çizgili kas",
+      "E": "Periferik sinirler"
+     },
+     "dogru": "A",
+     "aciklama": "Hemipleji hemen daima piramidal yolun hastalanmasına bağlıdır. İkinci motor nöron hastalığının hemipleji yapması olasılığı yok gibidir.",
+     "sik_aciklamalari": {
+      "A": "Hemipleji hemen daima piramidal yolun hastalanmasına bağlıdır. İkinci motor nöron hastalığının hemipleji yapması olasılığı yok gibi olduğundan bu seçim doğrudur.",
+      "B": "Ön boynuz hücreleri ikinci motor nöronun hücreleridir ve bunların hastalığında zaaf aynı medulla segmentinden innerve edilen kaslarda görülür. Vücut yarısını tutan hemipleji bu düzeyin sonucu değildir.",
+      "C": "Miyonöral plak hastalıklarında zaaf başlıca beyin sapı inervasyonlu kaslarda, ekstremitelerde ise proksimal kaslarda belirgindir. Vücut yarısını tutan hemipleji bu düzeyin tablosu değildir.",
+      "D": "Çizgili kas hastalıklarında zaaf segmenter ya da periferik sinir dağılımına uymaz; ekstremite köklerinde belirgin ve iki yanlıdır. Tek taraflı hemipleji bu hastalıkların seyrinde beklenmez.",
+      "E": "Periferik sinir lezyonunda zaaf o sinirin dağıldığı kaslarda görülür; polinöropatide ise simetrik ve uçlarda belirgindir. Vücudun bir yarısını kapsayan hemipleji bu tablolara uymaz."
+     },
+     "kanit": {
+      "sayfa": 18
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Hemiplejide akut ve yavaş gelişen tablonun tonus ve refleks özelliklerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q24",
+     "kazanim": 11,
+     "zorluk": "kolay",
+     "soru": "Serebrovasküler hastalığın akut döneminde felçli tarafta tonus ve derin tendon refleksleri nasıldır?",
+     "secenekler": {
+      "A": "Tonus ve refleksler artmıştır",
+      "B": "Tonus ve refleksler azalmıştır",
+      "C": "Tonus artmış, refleksler azalmıştır",
+      "D": "Tonus azalmış, refleksler artmıştır",
+      "E": "Tonus ve refleksler normaldir"
+     },
+     "dogru": "B",
+     "aciklama": "Akut dönemde felçli tarafta tonus ve derin tendon refleksleri azalır, tablo flask ve gevşektir. Zamanla tonus artar ve spastisite gelişir, refleksler artar.",
+     "sik_aciklamalari": {
+      "A": "Tonus ve reflekslerin artması akut evrede değil, zamanla gelişen spastik evrede görülür. Akut dönemde felçli taraf flask, yani gevşek bir tablo gösterir.",
+      "B": "Akut dönemde felçli tarafta tonus ve derin tendon refleksleri azalır ve kaslar gevşektir. Bu flask evre zamanla spastisiteye ve refleks artışına dönüştüğü için seçim doğrudur.",
+      "C": "Tonus artışı akut dönemde görülmez, zamanla gelişen spastisitenin bulgusudur. Akut evrede hem tonus hem refleksler azalmıştır ve tablo flask, yani gevşektir.",
+      "D": "Refleks artışı akut dönemde değil, daha sonra ortaya çıkan evrede görülür. Akut evrede tonusla birlikte refleksler de belirgin biçimde azalmıştır.",
+      "E": "Akut dönemde felçli tarafta tonus ve refleksler normal kalmaz. Bu dönemde ikisinin de azaldığı flask tablo gelişir ve kaslar gevşek bulunur."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q25",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Beyin tümörü gibi yavaş gelişen hemiparezide tonus ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Önce hipotoni, sonra spastisite gelişir",
+      "B": "Flask dönem yoktur, tonus başlangıçtan itibaren artmıştır",
+      "C": "Tonus ilerleyici biçimde azalır",
+      "D": "Tonus hiçbir dönemde değişmez",
+      "E": "Başlangıçta belirgin flask dönem görülür"
+     },
+     "dogru": "B",
+     "aciklama": "Yavaş gelişen felçlerde kuvvetsizlik bir bölgeden başlar ve zamanla vücut yarısını alacak şekilde ilerler. Flask dönem yoktur, başlangıçtan itibaren tonus artmıştır.",
+     "sik_aciklamalari": {
+      "A": "Önce hipotoni sonra spastisite sırası, akut dönemde flask evrenin ardından spastisitenin geliştiği felçleri anlatır. Yavaş gelişen felçte flask dönem olmadığından bu sıra görülmez.",
+      "B": "Yavaş gelişen felçlerde flask dönem yoktur ve başlangıçtan itibaren tonus artmıştır. Kuvvetsizlik bir bölgeden başlayıp zamanla vücut yarısını alacak biçimde ilerlediği için seçim doğrudur.",
+      "C": "Tonusun azalması ikinci motor nöron düzeyine özgüdür ve pasif harekette kaslar gevşek hissedilir. Yavaş gelişen hemiparezide ise başlangıçtan itibaren artmış tonus vardır.",
+      "D": "Tonus hiçbir dönemde değişmiyorsa tablo birinci motor nöron hastalığına uymaz, çünkü bu hastalıkta tonus artar. Yavaş gelişen felçte tonus başlangıçtan itibaren artmıştır.",
+      "E": "Belirgin flask dönem akut gelişen felçlere özgüdür. Yavaş gelişen felçlerde bu dönem hiç yoktur ve tonus baştan itibaren artmıştır, bu nedenle bu ifade yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Piramidal hemiplejide lezyon düzeyine göre korteks, kapsüla interna, beyin sapı ve medulla spinalis tablolarını ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q26",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Yüz, kol ve bacağı eşit biçimde etkileyen bir hemipleji ve eşlik edebilen duyu kusuru olan hastada lezyon en olası nerededir?",
+     "secenekler": {
+      "A": "Periferik sinir",
+      "B": "Ön boynuz",
+      "C": "Kapsüla interna",
+      "D": "Korteks",
+      "E": "Medulla spinalis"
+     },
+     "dogru": "C",
+     "aciklama": "Kapsüla internada piramidal yol kompakttır ve lezyon vücut yarısını eşit şekilde etkileyen bir hemipleji yapar. Duyu kusuru da eşlik edebilir.",
+     "sik_aciklamalari": {
+      "A": "Periferik sinir lezyonunda zaaf o sinirin dağıldığı kaslarla sınırlıdır. Yüz, kol ve bacağı birlikte kapsayan tek taraflı bir hemipleji sinir dağılımına uymaz.",
+      "B": "Ön boynuz hücre lezyonlarında zaaf aynı medulla segmentinden innerve edilen kaslarda görülür ve duyu kusuru yoktur. Vücut yarısını eşit etkileyen hemipleji bu düzeyde beklenmez.",
+      "C": "Kapsüla internada piramidal yol kompakttır ve lezyon vücut yarısını eşit şekilde etkileyen bir hemipleji yapar. Duyu kusuru da eşlik edebildiğinden seçim doğrudur.",
+      "D": "Korteks ya da kortekse yakın bir lezyon yolların tümünü hastalandırmayabilir. Lezyon çok geniş olmadıkça yüz, kol ve bacak birlikte tutulmaz ve monoparezi görülür.",
+      "E": "Medulla spinalis lezyonunda felç lezyonla aynı taraftadır ve yüz tutulmaz. Yüzü de içine alan, eşit dağılımlı hemipleji bu lezyonun tablosu değildir."
+     },
+     "kanit": {
+      "sayfa": 20
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q27",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Kortekse yakın, sınırlı bir lezyonda aşağıdaki tablolardan hangisi görülebilir?",
+     "secenekler": {
+      "A": "Kuadriparezi ve sfinkter kusuru",
+      "B": "Lezyonla aynı tarafta bacak felci, yüzün sağlam kalması",
+      "C": "Kranyal sinir felçleriyle birlikte çapraz felç",
+      "D": "Yüz, kol ve bacağı eşit etkileyen hemipleji",
+      "E": "Monoparezi ve epileptik nöbetler"
+     },
+     "dogru": "E",
+     "aciklama": "Korteks ya da kortekse yakın lezyon yolların tümünü hastalandırmayabilir ve lezyon çok geniş olmadıkça yüz, kol ve bacak birlikte tutulmaz. Kortikal bulgular ve epileptik nöbetler eşlik edebilir.",
+     "sik_aciklamalari": {
+      "A": "İki taraflı medulla spinalis tutulumu kuadriparezi ya da paraparezi yapar ve sfinkter kusuru eşlik eder. Sınırlı bir kortikal lezyon böyle yaygın bir tablo oluşturmaz.",
+      "B": "Felcin lezyonla aynı tarafta olması ve yüzün tutulmaması medulla spinalis lezyonunun özelliğidir. Beyin lezyonları ise karşı tarafta zaaf yapar, bu yüzden bu tabloyla karışmaz.",
+      "C": "Kranyal sinir felçleriyle birlikte seyreden çapraz felç beyin sapı lezyonunun tablosudur. Kortikal bir lezyonun bu tabloyu vermesi beklenen bir durum değildir.",
+      "D": "Vücut yarısını eşit etkileyen hemipleji, piramidal yolun kompakt olduğu kapsüla interna lezyonunun tablosudur. Sınırlı kortikal lezyonda yüz, kol ve bacak birlikte tutulmaz.",
+      "E": "Korteks ya da kortekse yakın bir lezyon yolların tümünü hastalandırmayabilir ve yüz, kol ve bacak birlikte tutulmayıp monoparezi görülür. Kortikal bulgular ve epileptik nöbetler de eşlik edebildiği için seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 20
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q28",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Sağ bacağında piramidal tipte felç bulunan, yüzü ve kolları normal olan hastada lezyon en olası nerededir?",
+     "secenekler": {
+      "A": "Sağ serebral hemisfer",
+      "B": "Sağ kapsüla interna",
+      "C": "Sol kapsüla interna",
+      "D": "Servikal altında sağ medulla spinalis yarısı",
+      "E": "Servikal altında sol medulla spinalis yarısı"
+     },
+     "dogru": "D",
+     "aciklama": "Medulla spinalis lezyonunda felç lezyonla aynı taraftadır ve yüz tutulmaz; servikal bölgenin altındaki lezyon aynı taraftaki bacağı etkiler. Beyin lezyonları ise karşı tarafta zaaf yapar, bu yüzden bu tabloyla karışmaz.",
+     "sik_aciklamalari": {
+      "A": "Beyindeki lezyonlar karşı tarafta zaaf yapar. Sağ hemisfer lezyonu sol tarafta zaaf oluşturacağından, yüzü ve kolları normal olan hastadaki sağ bacak felcini açıklamaz.",
+      "B": "Kapsüla internada piramidal yol kompakttır ve lezyon vücut yarısını eşit etkiler. Ayrıca beyin lezyonları karşı tarafı tuttuğundan sağ kapsüla lezyonu sol tarafta felç yapar.",
+      "C": "Sol kapsüla interna lezyonu sağ vücut yarısını eşit şekilde etkileyen bir hemipleji yapar. Yüz ve kolları normal olan, yalnız bacağı tutulan bir tablo bu lezyonla uyumlu değildir.",
+      "D": "Medulla spinalis lezyonunda felç lezyonla aynı taraftadır ve yüz tutulmaz. Servikal bölgenin altındaki lezyon aynı taraftaki bacağı etkilediğinden seçim doğrudur.",
+      "E": "Medulla spinalis lezyonları aynı tarafta felç yapar, bu nedenle sağ bacaktaki felç sol yarıya ait bir lezyonu göstermez. Piramidal yolların çaprazlaşması beyin düzeyindeki lezyonlar için geçerlidir."
+     },
+     "kanit": {
+      "sayfa": 21
+     },
+     "benzer_cikmis": [
+      "9d2e0b3d81c4"
+     ]
+    },
+    {
+     "id": "k2-32-felcler-q29",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Beyin sapı lezyonunda aşağıdaki tablolardan hangisi görülür?",
+     "secenekler": {
+      "A": "Vücut yarısını eşit etkileyen hemipleji ve duyu kusuru",
+      "B": "Monoparezi ve epileptik nöbetler",
+      "C": "Kranyal sinir felçleriyle birlikte çapraz felç",
+      "D": "Lezyonla aynı tarafta felç, yüzün sağlam kalması",
+      "E": "Ekstremite uçlarında simetrik zaaf"
+     },
+     "dogru": "C",
+     "aciklama": "Beyin sapı lezyonu kraniyal sinir felçleriyle birlikte seyreden çapraz felç yapar. Diğer seçeneklerdeki tablolar kapsüla interna, korteks, medulla spinalis ve periferik sinir düzeylerine aittir.",
+     "sik_aciklamalari": {
+      "A": "Vücut yarısını eşit etkileyen ve duyu kusurunun eşlik edebildiği hemipleji, piramidal yolun kompakt olduğu kapsüla interna lezyonunun tablosudur. Beyin sapı lezyonu bunun yerine kraniyal sinir felçleriyle birlikte çapraz felç yapar.",
+      "B": "Monoparezi ve epileptik nöbetler korteks ya da kortekse yakın sınırlı bir lezyonun bulgularıdır. Beyin sapı lezyonunda tablo kraniyal sinir felçleriyle birlikte çapraz felç olarak gelişir.",
+      "C": "Beyin sapı lezyonu kraniyal sinir felçleriyle birlikte seyreden çapraz felç yapar. Hem sinir çekirdeklerinin hem de piramidal yolun bu düzeyde etkilenmesi tabloyu belirler, seçim doğrudur.",
+      "D": "Felcin lezyonla aynı tarafta olması ve yüzün tutulmaması medulla spinalis lezyonunun özelliğidir. Beyin sapı lezyonunda kraniyal sinirler de tutulduğu için tablo çapraz felçtir.",
+      "E": "Ekstremite uçlarında simetrik zaaf polinöropatinin tablosudur ve ikinci motor nöron tipinde felç yapar. Beyin sapı lezyonunda ise kraniyal sinir felçleriyle birlikte çapraz felç görülür."
+     },
+     "kanit": {
+      "sayfa": 21
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Paraplejinin nedenlerini, Brown-Séquard sendromunu ve spinal düzey tayinini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q30",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Paraplejinin en sık nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Periferik nöropatiler",
+      "B": "Kortekste bacak motor merkezinin iki yanlı hastalığı",
+      "C": "Medulla spinalisin yarısının hastalanması",
+      "D": "Kas hastalıkları",
+      "E": "Medulla spinalisteki iki yanlı kortikospinal lezyon"
+     },
+     "dogru": "E",
+     "aciklama": "Parapleji en sık kortikospinal yolların medulla spinalisteki bilateral lezyonuna bağlıdır. Kortikal iki yanlı hastalık, periferik nöropatiler ve kas hastalıkları da neden olabilir ama daha seyrektir.",
+     "sik_aciklamalari": {
+      "A": "Periferik nöropatiler de paraplejiye yol açabilir ve zaaf periferik sinirlerin dağılımında ortaya çıkar. Fakat paraplejinin en sık görülen nedeni değildir.",
+      "B": "Kortekste bacakların motor merkezinde iki yanlı hastalanma da paraplejiye neden olabilir. Ancak en sık neden bu değil, kortikospinal yolların medulla spinalisteki lezyonudur.",
+      "C": "Medulla spinalisin yarısının hastalanması Brown-Séquard sendromudur ve lezyon tarafında felç yapar. Tek taraflı bu tablo paraplejinin değil, tek taraflı felcin açıklamasıdır.",
+      "D": "Kas hastalıkları paraplejiye yol açabilir ve zaaf segmenter ya da sinir dağılımına uymaz. Yine de en sık neden bu grup değildir.",
+      "E": "Parapleji en sık kortikospinal yolların medulla spinalisteki iki yanlı lezyonuna bağlıdır. Bacaklardaki kuvvetsizliğe gövdede belirli bir yüksekliğe kadar çıkan hipoestezi ve sfinkter kusuru eşlik edebildiğinden seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q31",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Sağ bacağında piramidal tipte felç, sağda vibrasyon ve pozisyon duyusu kaybı, solda ağrı ve ısı duyusu kaybı olan hastada tanı nedir?",
+     "secenekler": {
+      "A": "Polinöropati",
+      "B": "Psödobulber paralizi",
+      "C": "Kapsüla interna lezyonu",
+      "D": "İki yanlı kortikospinal yol lezyonu",
+      "E": "Brown-Séquard sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "Medulla spinalisin yarısının hastalanması Brown-Séquard sendromudur. Lezyon tarafında piramidal felç ve derin duyu bozukluğu, karşı tarafta ağrı ve ısı duyusu kaybı görülür.",
+     "sik_aciklamalari": {
+      "A": "Polinöropati birden fazla periferik sinirin simetrik hastalanmasıdır ve duyu kusuru eldiven çorap tarzındadır. Bir bacakta felç ve karşı bacakta ağrı ısı kaybı bu hastalığın dağılımı değildir.",
+      "B": "Psödobulber paralizi beynin iki yanındaki laküner infarktların kortikobulber lifleri hastalandırmasıyla gelişir. Yutma güçlüğü ve yersiz ağlama gibi bulgular verir, taraflara ayrışan duyu kaybı vermez.",
+      "C": "Kapsüla interna lezyonu vücut yarısını eşit şekilde etkileyen bir hemipleji yapar ve duyu kusuru eşlik edebilir. Bacakta aynı tarafta felç ile karşı tarafta ağrı ve ısı kaybı bu lezyonu düşündürmez.",
+      "D": "İki yanlı kortikospinal yol lezyonu paraplejiye yol açar ve gövdede belirli bir yüksekliğe kadar hipoestezi ile sfinkter kusuru eşlik edebilir. Taraflar arasında ayrışan duyu bulguları bu tabloda beklenmez.",
+      "E": "Brown-Séquard sendromu, medulla spinalisin yarısının hastalanmasıdır. Lezyon tarafında piramidal tipte felç ve derin duyu bozukluğu, karşı tarafta ise ağrı ve ısı duyusu kaybı görüldüğü için seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q32",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Brown-Séquard sendromunda lezyonun karşı tarafında hangi duyu kaybı görülür?",
+     "secenekler": {
+      "A": "Ağrı ve ısı duyusu kaybı",
+      "B": "Pasif hareket duyusu kaybı",
+      "C": "Pozisyon duyusu kaybı",
+      "D": "Tüm duyu modalitelerinin kaybı",
+      "E": "Vibrasyon duyusu kaybı"
+     },
+     "dogru": "A",
+     "aciklama": "Brown-Séquard sendromunda lezyonun karşı tarafında ağrı ve ısı duyusu kaybolur. Lezyon tarafında ise vibrasyon, pozisyon ve pasif hareket duyusu gibi derin duyu bozukluğu görülür.",
+     "sik_aciklamalari": {
+      "A": "Brown-Séquard sendromunda lezyonun karşı tarafında ağrı ve ısı duyusunda kayıp olur. Bu nedenle seçim doğrudur ve duyu bulguları iki yanda farklı türdedir.",
+      "B": "Pasif hareket duyusu, vibrasyon ve pozisyon duyusuyla birlikte derin duyu bozukluğunu oluşturur ve lezyon tarafında kaybolur. Karşı tarafta bu duyu korunur.",
+      "C": "Pozisyon duyusu kaybı derin duyu bozukluğunun parçasıdır ve lezyon tarafında ortaya çıkar. Karşı tarafta etkilenen duyu bu değil, ağrı ve ısıdır.",
+      "D": "Brown-Séquard sendromunda tüm duyular bir arada kaybolmaz. Lezyon tarafında vibrasyon, pozisyon ve pasif hareket duyusu, karşı tarafta ise ağrı ve ısı duyusu kaybolur.",
+      "E": "Vibrasyon duyusu kaybı, lezyon tarafında görülen derin duyu bozukluğunun parçasıdır. Lezyonun karşı tarafında bu duyu korunur ve kayıp ağrı ile ısıdadır."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q33",
+     "kazanim": 13,
+     "zorluk": "orta",
+     "soru": "Spinal paraplejili hastada duyu kusurunun üst sınırı göbek hizasındadır. Lezyon hangi düzeydedir?",
+     "secenekler": {
+      "A": "Üçüncü ve dördüncü torakal düzey",
+      "B": "Servikal düzey",
+      "C": "Beyin sapı düzeyi",
+      "D": "Kapsüla interna düzeyi",
+      "E": "Onuncu torakal düzey"
+     },
+     "dogru": "E",
+     "aciklama": "Spinal paraplejide duyu kusurunun üst düzeyi lezyonun üst düzeyini gösterir. Göbek hizası onuncu torakal düzeye karşılık gelir.",
+     "sik_aciklamalari": {
+      "A": "Meme hizasında çember şeklinde ağrı, üçüncü ve dördüncü torakal düzeyi gösterir. Duyu sınırı göbek hizasında olan hastada lezyon bu kadar yukarıda değildir.",
+      "B": "Piramidal paraparezide bacaklarda refleksler artmışken kollarda alınamıyorsa lezyon servikal bölgededir. Duyu sınırı göbek hizasındaysa lezyon servikal değil, gövde düzeyinde yer alır.",
+      "C": "Beyin sapı lezyonu kraniyal sinir felçleriyle birlikte seyreden çapraz felç yapar. Gövdede belirli bir duyu düzeyi veren spinal paraplejiyi açıklamaz.",
+      "D": "Kapsüla interna lezyonu vücut yarısını eşit etkileyen bir hemipleji yapar. Gövdede belirli bir yükseklikte sınır veren duyu kusuru bu lezyonun değil, medulla spinalis lezyonunun işaretidir.",
+      "E": "Spinal paraplejide duyu kusurunun üst düzeyi lezyonun üst düzeyini gösterir. Duyu sınırı göbek hizasında ise lezyon onuncu torakal düzeydedir, bu nedenle seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q34",
+     "kazanim": 13,
+     "zorluk": "zor",
+     "soru": "Bacaklarında derin tendon refleksleri artmış olan paraparezili hastada kollardaki refleksler alınamıyor. Lezyon en olası nerededir?",
+     "secenekler": {
+      "A": "Onuncu torakal düzey",
+      "B": "Periferik sinirler",
+      "C": "Kapsüla interna",
+      "D": "Servikal bölge",
+      "E": "Beyin sapı"
+     },
+     "dogru": "D",
+     "aciklama": "Kaybolan derin tendon refleksi lezyon düzeyini gösterir. Piramidal paraparezide bacaklarda refleksler artmışken kollarda alınamıyorsa lezyon servikal bölgededir.",
+     "sik_aciklamalari": {
+      "A": "Duyu düzeyi göbek hizasındaysa lezyon onuncu torakal düzeydedir. Kollarda refleks kaybı ise bu kadar aşağıdaki bir lezyonla açıklanamaz, bu yüzden bu seçim elenir.",
+      "B": "Periferik sinir lezyonlarında refleksler azalır ya da kaybolur ve zaaf sinir dağılımındadır. Bacaklarda refleks artışının varlığı piramidal yolun hastalandığını gösterir.",
+      "C": "Kapsüla interna lezyonu vücut yarısını eşit etkileyen hemipleji yapar. İki bacakta refleks artışı ve kollarda refleks kaybı gibi düzey gösteren bir tablo oluşturmaz.",
+      "D": "Kaybolan derin tendon refleksi lezyon düzeyini gösterir. Piramidal paraparezide bacaklarda refleksler artmış olmasına rağmen kollarda alınamıyorsa lezyon servikal bölgededir, bu nedenle seçim doğrudur.",
+      "E": "Beyin sapı lezyonu kraniyal sinir felçleriyle birlikte çapraz felç yapar. Bacaklarda refleks artışı ile kollarda refleks kaybının birlikteliği bu düzeyde beklenmez."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Histerik felçlerin kas zaafı nedenleri arasında anıldığını bilme.",
+   "sorular": []
+  },
+  {
+   "no": 15,
+   "metin": "Psödobulber paralizinin mekanizmasını ve klinik bulgularını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q35",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Yutma güçlüğü, dizartri, ufak adımla yürüme, derin tendon refleks artışı, Babinski delili, idrar kaçırma ve yersiz ağlama gülmeleri olan hastada dilde atrofi ve fasikülasyon yoktur. En olası tanı nedir?",
+     "secenekler": {
+      "A": "Poliomiyelit",
+      "B": "Polinöropati",
+      "C": "Myastenia gravis",
+      "D": "Psödobulber paralizi",
+      "E": "Amiyotrofik lateral skleroz"
+     },
+     "dogru": "D",
+     "aciklama": "Psödobulber paralizi, beynin iki yanındaki ufak laküner infarktlarla kortikospinal ve kortikobulber yolların hastalanmasıdır. Dilde atrofi ve fasikülasyon görülmez.",
+     "sik_aciklamalari": {
+      "A": "Poliomiyelit ön boynuz hücresinin akut iltihabıdır ve felçler ikinci motor nöron tipinde olur. Refleksler alınmaz ve patolojik refleks yoktur, oysa bu hastada refleks artışı ve Babinski vardır.",
+      "B": "Polinöropatide felç ikinci motor nöron tipindedir ve tendon refleksleri azalır. Refleks artışı ve Babinski delili bu hastalıkla bağdaşmaz, çünkü bunlar piramidal yol bulgularıdır.",
+      "C": "Myastenia gravis'te tendon refleksleri normaldir ve patolojik refleks görülmez. Hastalık miyonöral ileti bozukluğudur, bu nedenle refleks artışı, Babinski ve idrar kaçırma tabloya uymaz.",
+      "D": "Psödobulber paralizi, beynin iki yanındaki ufak laküner infarktların kortikospinal ve kortikobulber yolları hastalandırmasıyla gelişir. Yutma güçlüğü, dizartri, refleks artışı, Babinski, idrar kaçırma ve yersiz ağlama gülmeler tabloyu oluşturduğundan seçim doğrudur.",
+      "E": "Amiyotrofik lateral sklerozda da yutma kusuru, dizartri ve refleks artışı görülür. Ancak bu hastalıkta dil ve el kaslarında atrofi ile yaygın fasikülasyon bulunduğundan, dilde atrofi olmayan bu tabloyu açıklamaz."
+     },
+     "kanit": {
+      "sayfa": 26
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q36",
+     "kazanim": 15,
+     "zorluk": "zor",
+     "soru": "Psödobulber paralizi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "İdrar kaçırma ve yersiz ağlama eşlik eder",
+      "B": "Tek taraflı geniş bir infarktla oluşur",
+      "C": "Derin tendon refleksleri artar ve Babinski görülür",
+      "D": "Yutma güçlüğü ve dizartri görülür",
+      "E": "Dilde atrofi ve fasikülasyon görülmez"
+     },
+     "dogru": "B",
+     "aciklama": "Psödobulber paralizi, kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında ortaya çıkan ufak laküner infarktların oluşturduğu tablodur. Tek taraflı geniş infarkt bu tanıma uymaz.",
+     "sik_aciklamalari": {
+      "A": "İdrar kaçırma, yersiz ağlama ve gülmeler psödobulber paralizi tablosuna eşlik eder. İfade bu hastalığın klinik tablosuyla uyumludur ve yanlış değildir.",
+      "B": "Psödobulber paralizi, kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında ortaya çıkan ufak laküner infarktların oluşturduğu tablodur. Tek taraflı geniş bir infarktla oluştuğunu söyleyen ifade bu nedenle yanlıştır ve doğru yanıttır.",
+      "C": "Derin tendon refleks artışı ve Babinski, kortikospinal yolun tutulduğunu gösteren psödobulber paralizi bulgularıdır. İfade doğru olduğu için yanlış olan seçenek değildir.",
+      "D": "Yutma güçlüğü ve dizartri, ufak adımla yürüme ve refleks artışıyla birlikte psödobulber paralizinin klinik bulgularıdır. İfade tabloyu doğru anlattığından yanlış sayılmaz.",
+      "E": "Psödobulber paralizi, kortikobulber liflerin bilateral hastalanmasına bağlı bir tablodur ve çekirdekler hastalanmaz. Dilde atrofi ve fasikülasyon görülmemesi bu mekanizmayla uyumludur; ifade doğrudur."
+     },
+     "kanit": {
+      "sayfa": 26
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q37",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Psödobulber paralizinin temel mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Ön boynuz hücresinin akut iltihabı",
+      "B": "Kranyal sinir çekirdeklerinin hastalanması",
+      "C": "Kortikobulber liflerin iki yanlı hastalanması",
+      "D": "Miyonöral ileti bozukluğu",
+      "E": "Periferik sinirlerin simetrik hastalanması"
+     },
+     "dogru": "C",
+     "aciklama": "Psödobulber paralizi kortikobulber liflerin bilateral hastalanmasına bağlıdır. Motor nöron hastalığından farklı olarak, kranyal sinir çekirdekleri değil kortikobulber lifler iki yanlı hastalanır.",
+     "sik_aciklamalari": {
+      "A": "Ön boynuz hücresinin akut iltihabı poliomiyelitin temel olayıdır ve ateşli devreyi izleyen asimetrik felçler yapar. Psödobulber paralizinin mekanizması bu değildir.",
+      "B": "Kranyal sinir çekirdeklerinin hastalanması motor nöron hastalığındaki mekanizmadır ve dilde atrofi ile fasikülasyon yapar. Psödobulber paralizide çekirdekler değil, onlara inen lifler hastalanır.",
+      "C": "Psödobulber paralizi, kortikobulber liflerin iki yanlı hastalanmasına bağlıdır ve beynin iki yanındaki ufak laküner infarktlarla ortaya çıkar. Bu nedenle seçim doğrudur.",
+      "D": "Miyonöral ileti bozukluğu myastenia gravis'in temel bozukluğudur ve kolay yorulma ile kuvvetsizlik yapar. Psödobulber paralizide ileti değil, kortikobulber lifler hastalanır.",
+      "E": "Periferik sinirlerin simetrik hastalanması polinöropatidir ve zaaf ekstremite uçlarında belirgindir. Psödobulber paralizide hastalanan yapı periferik sinir değil, beyindeki kortikobulber liflerdir."
+     },
+     "kanit": {
+      "sayfa": 26
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Motor nöron hastalığını ve amiyotrofik lateral sklerozun bulgularını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q38",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "Yutma kusuru, dil hareketlerinde güçlük, dizartri, kol ve bacaklarda kuvvetsizlik, derin tendon refleks artışı, Babinski delili, dil ve el kaslarında atrofi ile yaygın fasikülasyon bulunan; duyu kusuru olmayan hastada en olası tanı nedir?",
+     "secenekler": {
+      "A": "Multipl skleroz",
+      "B": "Polinöropati",
+      "C": "Poliomiyelit",
+      "D": "Psödobulber paralizi",
+      "E": "Amiyotrofik lateral skleroz"
+     },
+     "dogru": "E",
+     "aciklama": "Her iki motor nöron birlikte tutulduğunda amiyotrofik lateral skleroz denir. Refleks artışı ve Babinski birinci, dil ve el atrofisi ile fasikülasyon ikinci motor nöronu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Multipl skleroz genç yaşta başlar ve piramidal bulgular, serebellar bulgular, kraniyal nöropati, duyu ve sfinkter bozukluklarıyla seyreder. Duyu kusurunun olmaması, atrofi ve yaygın fasikülasyonun bulunması bu hastalığa uymaz.",
+      "B": "Polinöropatide felç ikinci motor nöron tipindedir ve duyu kusuru eldiven çorap tarzındadır. Duyu kusurunun olmadığı, refleksleri artmış bir tablo bu hastalığa uymaz.",
+      "C": "Poliomiyelitte felçler ikinci motor nöron tipindedir, refleksler alınmaz ve patolojik refleks yoktur. Refleks artışı ve Babinski delili bu hastalığı düşündürmez.",
+      "D": "Psödobulber paralizide kortikobulber liflerin iki yanlı hastalığı vardır ve dilde atrofi ile fasikülasyon görülmez. Dil ve el kaslarındaki atrofi ile yaygın fasikülasyonlar bu tabloyu dışlar.",
+      "E": "Her iki motor nöron birlikte tutulduğunda amiyotrofik lateral skleroz denir. Derin tendon refleks artışı, Babinski ve Hoffmann birinci motor nöronu gösterir. Dil ve el kaslarında atrofi ile yaygın fasikülasyon ikinci motor nöronu gösterir, duyu kusuru yoktur ve seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 27
+     },
+     "benzer_cikmis": [
+      "6fc14196f6c3"
+     ]
+    },
+    {
+     "id": "k2-32-felcler-q39",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Amiyotrofik lateral sklerozda aşağıdaki bulgulardan hangisi görülmez?",
+     "secenekler": {
+      "A": "Duyu kusuru",
+      "B": "Babinski delili",
+      "C": "Yaygın fasikülasyonlar",
+      "D": "Dizartri",
+      "E": "Dil ve el kaslarında atrofi"
+     },
+     "dogru": "A",
+     "aciklama": "Motor nöron hastalığında duyu kusuru yoktur. Dil ve el kaslarında atrofi, yaygın fasikülasyonlar, Babinski delili ve dizartri ise amiyotrofik lateral sklerozda görülür.",
+     "sik_aciklamalari": {
+      "A": "Motor nöron hastalığında duyu kusuru yoktur. Hastalık birinci ve ikinci motor nöronları tuttuğundan duyu kusuru bu tabloda beklenmez ve görülmeyen bulgu olarak doğru yanıttır.",
+      "B": "Babinski delili kortikospinal yol hastalığında ortaya çıkan patolojik bir reflekstir ve bu hastalıkta birinci motor nöron tutulumunu gösterir. Bu yüzden görülmeyen bulgu sayılmaz.",
+      "C": "Yaygın fasikülasyonlar deri altında seyirmeler şeklinde ikinci motor nöron tutulumunun bulgusudur. Amiyotrofik lateral sklerozda görüldüğü için görülmeyen bulgu olarak seçilemez.",
+      "D": "Yutma kusuru, dil hareketlerinde güçlük ve dizartri amiyotrofik lateral sklerozda görülen bulgulardır. Dizartri bu hastalıkta bulunduğundan görülmeyen bulgu olarak seçilemez ve aranan ifade olamaz.",
+      "E": "Dil ve el kaslarında atrofi, ikinci motor nöronun tutulduğunu gösteren ve bu hastalıkta görülen bir bulgudur. Bu nedenle görülmeyen bulgu değildir."
+     },
+     "kanit": {
+      "sayfa": 27
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q40",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Amiyotrofik lateral sklerozda aşağıdaki bulgulardan hangisi birinci motor nöron tutulumunu gösterir?",
+     "secenekler": {
+      "A": "Duyu kusuru",
+      "B": "Yaygın fasikülasyonlar",
+      "C": "Dil kaslarında atrofi",
+      "D": "Babinski delili",
+      "E": "El kaslarında atrofi"
+     },
+     "dogru": "D",
+     "aciklama": "Babinski delili kortikospinal yol hastalığının, yani birinci motor nöron tutulumunun bulgusudur. Dil ve el atrofisi ile fasikülasyonlar ise ikinci motor nöronu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Motor nöron hastalığında duyu kusuru yoktur. Dolayısıyla duyu kusuru ne birinci ne de ikinci motor nöron tutulumunu gösteren bir bulgudur.",
+      "B": "Yaygın fasikülasyonlar ikinci motor nöronun, özellikle ön boynuz hücrelerinin tutulduğunu gösterir. Piramidal yol hastalıklarında fasikülasyon görülmez, bu yüzden birinci motor nöronu göstermez.",
+      "C": "Dil kaslarında atrofi, ikinci motor nöron tutulumunun bulgusudur. Atrofi alt motor nöron hastalıklarında görülür ve bu nedenle birinci motor nöronu göstermez.",
+      "D": "Babinski delili, kortikospinal yol hastalıklarında ortaya çıkan patolojik bir reflekstir ve birinci motor nöron tutulumunu gösterir. Amiyotrofik lateral sklerozda bu delil bulunduğundan seçim doğrudur.",
+      "E": "El kaslarında atrofi de ikinci motor nöronun tutulduğunu gösterir. Birinci motor nöron hastalığında ise felçli kol ve bacakta atrofi yoktur."
+     },
+     "kanit": {
+      "sayfa": 27
+     },
+     "benzer_cikmis": [
+      "6fc14196f6c3"
+     ]
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Santral ve periferik tip yüz felcini ayırt edebilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q41",
+     "kazanim": 17,
+     "zorluk": "kolay",
+     "soru": "Santral tip yüz felci yüzün hangi bölümünde görülür?",
+     "secenekler": {
+      "A": "Yüzün alt yarısında",
+      "B": "Hem üst hem alt yarısında",
+      "C": "Yalnız göz çevresinde",
+      "D": "Yüzün üst yarısında",
+      "E": "Yalnız alın bölgesinde"
+     },
+     "dogru": "A",
+     "aciklama": "Santral tip yüz felci piramidal yol hastalıklarında görülür ve yüzün alt yarısında ortaya çıkar. Periferik tipte ise hem üst hem alt yüz yarımı etkilenir.",
+     "sik_aciklamalari": {
+      "A": "Santral tip yüz felci piramidal yol hastalıklarında görülür ve yüzün alt yarısında ortaya çıkar. Periferik tipten farkı üst yüzün tutulmamasıdır, bu nedenle seçim doğrudur.",
+      "B": "Yüzün hem üst hem alt yarımının birlikte tutulması periferik tip yüz felcinin özelliğidir. Lezyon Nervus fasiyalis çekirdeği ya da sinirin kendisindedir.",
+      "C": "Gözü kapatamama, yani lagoftalmi, periferik tip yüz felcinin bulgusudur ve hem üst hem alt yüzün tutulmasıyla birliktedir. Santral tipin zaafı ise yüzün alt yarısında görülür.",
+      "D": "Yüzün üst yarısının tutulması santral tipin özelliği değildir. Santral tipte zaaf alt yarıdadır; üst yarının da tutulması periferik tipin bulgusudur.",
+      "E": "Yalnız alın bölgesini sınırlı tutan bir yüz felci santral tipi tanımlamaz. Santral tipte zaaf yüzün alt yarısında görülür, bu yüzden yalnız alınla sınırlı bir tablo tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 28
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q42",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Santral tip yüz felcine yol açan lezyon hangi düzeydedir?",
+     "secenekler": {
+      "A": "Nervus fasiyalis çekirdeğine kadar olan piramidal yol",
+      "B": "Medulla spinalis ön boynuz hücreleri",
+      "C": "Nervus fasiyalis sinirinin gövdesi",
+      "D": "Nervus fasiyalis çekirdeğinin kendisi",
+      "E": "Miyonöral plak"
+     },
+     "dogru": "A",
+     "aciklama": "Santral tip yüz felci piramidal yol hastalıklarında görülür ve Nervus fasiyalis çekirdeğine kadar olan herhangi bir noktadaki lezyonla oluşur. Çekirdek ya da sinirin kendisindeki lezyonlar periferik tipe yol açar.",
+     "sik_aciklamalari": {
+      "A": "Santral tip yüz felci piramidal yol hastalıklarında görülür ve Nervus fasiyalis çekirdeğine kadar olan herhangi bir noktadaki lezyonla ortaya çıkar. Bu nedenle seçim doğrudur.",
+      "B": "Ön boynuz hücreleri medulla spinalis boyunca uzanan ikinci motor nöron hücreleridir ve kol, bacak ve gövde kaslarını innerve eder. Yüz kaslarına ait santral tip felcin lezyon yeri bu hücreler değildir.",
+      "C": "Sinirin kendisindeki lezyon periferik tip yüz felci yapar ve hem üst hem alt yüz yarımı etkilenir. Santral tip ise çekirdeğe kadar olan yol lezyonlarına bağlıdır.",
+      "D": "Nervus fasiyalis çekirdeği ya da sinirin kendisindeki lezyonlar periferik tip yüz felci yapar. Santral tip, çekirdeğe kadar olan yolun lezyonuyla ortaya çıkar, çekirdeğin kendisiyle değil.",
+      "E": "Miyonöral plak motor sinir uçlarının çizgili kas telleriyle sinaps yaptığı bölgedir ve bu düzeyin hastalıkları başlıca beyin sapı kaslarında zaaf yapar. Santral tip yüz felcinin lezyon yeri burası değildir."
+     },
+     "kanit": {
+      "sayfa": 28
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q43",
+     "kazanim": 17,
+     "zorluk": "orta",
+     "soru": "Periferik tip yüz felcinde hasta gözünü kapatmaya çalıştığında göz küresinin yukarı kayması hangi adla bilinir?",
+     "secenekler": {
+      "A": "Bell fenomeni",
+      "B": "Hoffmann delili",
+      "C": "Fasikülasyon",
+      "D": "Gowers arazı",
+      "E": "Babinski delili"
+     },
+     "dogru": "A",
+     "aciklama": "Bell fenomeni, gözünü kapatmaya çalışan hastada göz küresinin yukarı kaymasıdır. Periferik tip yüz felcinde hasta gözünü kapatamaz, yani lagoftalmi vardır.",
+     "sik_aciklamalari": {
+      "A": "Bell fenomeni, gözünü kapatmaya çalışan hastada göz küresinin yukarı kaymasıdır. Periferik tip yüz felcinde hasta gözünü kapatamadığı için bu bulgu görülür ve seçim doğrudur.",
+      "B": "Hoffmann delili de kortikospinal yol hastalıklarında görülen patolojik bir reflekstir. Gözün kapanmaya çalışırken yukarı kaymasını tanımlayan bir bulgu olarak kullanılmaz.",
+      "C": "Fasikülasyon, kaslarda deri altında görülen seyirmelerdir ve ön boynuz hücre lezyonlarında dikkati çeker. Göz küresinin yukarı kaymasıyla ilgili bir terim değildir.",
+      "D": "Gowers arazı, çizgili kas hastalıklarında ekstremite köklerindeki zaafla birlikte görülen bir bulgudur. Yüz felcindeki göz küresi hareketini tanımlayan bir terim değildir.",
+      "E": "Babinski delili, kortikospinal yol hastalıklarında ortaya çıkan patolojik bir reflekstir. Göz kapatma sırasında göz küresinin yukarı kaymasını anlatan bir bulgu değildir."
+     },
+     "kanit": {
+      "sayfa": 28
+     },
+     "benzer_cikmis": [
+      "d3k2-2020-2021-q141"
+     ]
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Multipl sklerozun klinik özelliklerini ve seyrini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q44",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Genç yaşta başlayan, piramidal ve serebellar bulgular, kraniyal nöropati, duyu ve sfinkter bozukluğu ile iyileşme ve kötüleşme dönemleri gösteren immün hastalık hangisidir?",
+     "secenekler": {
+      "A": "Multipl skleroz",
+      "B": "Amiyotrofik lateral skleroz",
+      "C": "Poliomiyelit",
+      "D": "Polinöropati",
+      "E": "Myastenia gravis"
+     },
+     "dogru": "A",
+     "aciklama": "Multipl skleroz genç yaşta başlayan, piramidal ve serebellar bulgular, kraniyal nöropati, duyu ve sfinkter bozukluklarıyla giden immün bir hastalıktır. İyileşme ve kötüleşme dönemleri gösterir.",
+     "sik_aciklamalari": {
+      "A": "Multipl skleroz genç yaşta başlayan, piramidal ve serebellar bulgular, kraniyal nöropati, duyu ve sfinkter bozukluklarıyla giden immün bir hastalıktır. İyileşme ve kötüleşme dönemleri göstermesi de tanımla örtüştüğünden seçim doğrudur.",
+      "B": "Amiyotrofik lateral skleroz, sebebi iyi bilinmeyen ve ilerleyici bir motor nöron hastalığıdır ve duyu kusuru yoktur. Dönemler halinde iyileşme ve duyu bozukluğu bu tabloya uymaz.",
+      "C": "Poliomiyelit ön boynuz hücresinin akut iltihabıdır ve ateşli bir devreyi izleyen asimetrik felçler yapar. Dönemler halinde iyileşme ve kötüleşme gösteren immün tablo bu hastalığa uymaz.",
+      "D": "Polinöropati birden fazla periferik sinirin genellikle simetrik hastalanmasıdır ve zaaf ekstremite uçlarındadır. Serebellar bulgular ve iyileşme kötüleşme dönemleri bu hastalığın özelliği değildir.",
+      "E": "Myastenia gravis miyonöral ileti bozukluğudur ve kolay yorulma, diplopi, ptoz gibi bulgularla seyreder. Piramidal ve serebellar bulgular ile sfinkter bozukluğu bu hastalıkta tarif edilmez."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q45",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Multipl skleroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genç yaşlarda başlar",
+      "B": "Ataklardan sonra sekel kalmaz",
+      "C": "Akut zaaf günler haftalar içinde iyileşebilir",
+      "D": "İyileşme ve kötüleşme dönemleri gösterir",
+      "E": "İmmün bir hastalıktır"
+     },
+     "dogru": "B",
+     "aciklama": "Multipl sklerozda ataklardan sonra arta kalan sekeller birikerek özürlülüğe sebep olur. Bu nedenle sekel kalmadığını söyleyen ifade yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Multipl skleroz genç yaşlarda başlayan ve piramidal, serebellar bulgularla giden bir hastalıktır. Başlangıç yaşına ilişkin bu bilgi tanımla uyumlu olduğundan ifade yanlış sayılmaz.",
+      "B": "Ataklardan sonra arta kalan sekeller birikerek özürlülüğe sebep olur. Bu nedenle sekel kalmadığını söyleyen ifade hastalığın seyrine ters düşer, yanlıştır ve doğru yanıttır.",
+      "C": "Oldukça akut yerleşen bir zaafın günler haftalar içinde iyileştiği görülür ve bu durum atak sonrası düzelmeyi anlatır. İfade hastalığın seyrini doğru anlattığından yanlış sayılmaz.",
+      "D": "Multipl skleroz iyileşme ve kötüleşme dönemleri gösteren bir hastalıktır. Atak ve düzelme dönemlerinin birbirini izlemesi tanımın temel parçası olduğundan ifade yanlış değildir.",
+      "E": "Multipl skleroz kraniyal nöropati, duyu ve sfinkter bozukluklarıyla giden immün bir hastalıktır. Hastalığın immün niteliği tanımda yer aldığından ifade yanlış sayılmaz."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q46",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Multipl skleroz ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İyileşme ve kötüleşme dönemleri gösteren immün bir hastalıktır",
+      "B": "Miyonöral ileti bozukluğudur",
+      "C": "Periferik sinirleri tutan simetrik bir hastalıktır",
+      "D": "Ön boynuz hücresinin akut iltihabıdır",
+      "E": "Yaşlı yaşta başlayan, ilerleyici bir kas hastalığıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Multipl skleroz, iyileşme ve kötüleşme dönemleri gösteren immün bir hastalıktır. Akut yerleşen zaaf günler haftalar içinde iyileşebilir, ancak sekeller birikerek özürlülüğe yol açar.",
+     "sik_aciklamalari": {
+      "A": "Multipl skleroz iyileşme ve kötüleşme dönemleri gösteren immün bir hastalıktır. Ataklardan sonra arta kalan sekeller birikerek özürlülüğe sebep olduğundan bu ifade doğrudur ve hastalığın seyrini anlatır.",
+      "B": "Miyonöral ileti bozukluğu myastenia gravis'tir ve kaslarda kolay yorulma ile kuvvetsizlikle karakterizedir. Multipl sklerozda ise piramidal, serebellar, duyu ve sfinkter bozuklukları görülür.",
+      "C": "Periferik sinirleri genellikle simetrik olarak tutan hastalık polinöropatidir ve zaaf ekstremite uçlarında olur. Multipl skleroz ise piramidal bulgular, serebellar yollar ve kraniyal nöropatilerle seyreder.",
+      "D": "Ön boynuz hücresinin akut iltihabı poliomiyelittir ve ateşli devreyi izleyen asimetrik felçler yapar. Multipl skleroz ise genç yaşta başlayan, dönemler halinde seyreden bir hastalıktır.",
+      "E": "Multipl skleroz genç yaşlarda başlar ve kas hastalığı değil, piramidal ve serebellar yolları tutan bir hastalıktır. İlerleyici kas hastalığı tanımı ise kas distrofilerine uyar."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Poliomiyelitin klinik ve felç özelliklerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q47",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Ateşli bir devreyi izleyen asimetrik kol ve bacak felçleri gelişen hastada refleksler alınmıyor, tutulan kaslarda atrofi var ve duyu kusuru yoktur. En olası tanı nedir?",
+     "secenekler": {
+      "A": "Polinöropati",
+      "B": "Amiyotrofik lateral skleroz",
+      "C": "Psödobulber paralizi",
+      "D": "Poliomiyelit",
+      "E": "Myastenia gravis"
+     },
+     "dogru": "D",
+     "aciklama": "Poliomiyelit ön boynuz hücresinin akut iltihabıdır; ateşli devreyi izleyen asimetrik felçler yapar. Refleksler alınmaz, tutulan kaslarda atrofi olur ve duyu kusuru olmaz.",
+     "sik_aciklamalari": {
+      "A": "Polinöropatide zaaf genellikle simetriktir ve ekstremite uçlarında belirgindir; duyu kusuru eldiven çorap tarzındadır. Asimetrik felç ve duyu kusurunun olmaması bu hastalığa uymaz.",
+      "B": "Amiyotrofik lateral sklerozda derin tendon refleksleri artar ve Babinski delili vardır. Refleksleri alınmayan asimetrik bir felç bu hastalığın tablosu değildir.",
+      "C": "Psödobulber paralizide yutma güçlüğü, dizartri, refleks artışı ve Babinski görülür. Ateşli bir devreyi izleyen asimetrik ekstremite felçleri bu tabloya uymaz.",
+      "D": "Poliomiyelit ön boynuz hücresinin akut iltihabıdır ve genellikle ateşli bir devreyi izleyen asimetrik kol ve bacak felçleri yapar. Refleksler alınmaz, tutulan kaslarda atrofi olur ve duyu kusuru olmaz; seçim doğrudur.",
+      "E": "Myastenia gravis'te tendon refleksleri normaldir ve kas atrofisi yoktur; belirtiler dalgalanma gösterir. Refleksi alınmayan, atrofili asimetrik felç bu hastalığa uymaz."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q48",
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Poliomiyelitle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Solunum kaslarındaki zaaf hayatı tehdit eder",
+      "B": "Tutulan kaslarda atrofi olur",
+      "C": "Duyu kusuru görülür",
+      "D": "Felçler ikinci motor nöron tipindedir",
+      "E": "Ön boynuz hücresinin akut iltihabıdır"
+     },
+     "dogru": "C",
+     "aciklama": "Poliomiyelitte duyu kusuru olmaz. Hastalık ön boynuz hücresinin akut iltihabıdır ve felçler ikinci motor nöron tipindedir.",
+     "sik_aciklamalari": {
+      "A": "Poliomiyelitte solunum kaslarındaki zaaf hayatı tehdit eder. İfade hastalığın ciddi sonucunu doğru yansıttığından doğrudur ve yanlış olan seçenek olarak seçilemez.",
+      "B": "Poliomiyelitte tutulan kaslarda atrofi olur, çünkü ikinci motor nöron tipi felçte kaslar atrofiktir. İfade hastalığın bilinen bir bulgusunu anlattığından doğrudur ve yanlış olan seçenek olarak seçilemez.",
+      "C": "Poliomiyelitte duyu kusuru olmaz. Hastalık ön boynuz hücrelerini tuttuğundan tablo motor bulgularla seyreder, bu yüzden duyu kusuru görüldüğünü söyleyen ifade yanlıştır ve doğru yanıttır.",
+      "D": "Poliomiyelitte felçler ikinci motor nöron tipindedir; refleksler alınmaz ve patolojik refleks yoktur. Ön boynuz hücresinin hastalığı olan poliomiyelitte bu tablo beklenir ve ifade doğrudur.",
+      "E": "Poliomiyelit, medulla spinalis boyunca uzanan ön boynuz hücrelerinin akut iltihabi bir hastalığıdır. Tanım doğru verildiği için bu ifade yanlış değildir ve elenir."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q49",
+     "kazanim": 19,
+     "zorluk": "orta",
+     "soru": "Poliomiyelitte beyin sapındaki çekirdeklerin etkilenmesi aşağıdakilerden hangisine yol açar?",
+     "secenekler": {
+      "A": "Damak, farinks, larinks ve dil felçleri",
+      "B": "Yaygın patolojik refleksler",
+      "C": "Eldiven çorap tarzı duyu kusuru",
+      "D": "Yersiz ağlama ve gülmeler",
+      "E": "Ptoz ve diplopi"
+     },
+     "dogru": "A",
+     "aciklama": "Poliomiyelitte beyin sapındaki çekirdekler etkilenebilir ve yumuşak damak, farinks, larinks ve dil felçleri olur. Bu çekirdekler damak, farinks, larinks ve dil kaslarını innerve ettiğinden felçler bu bölgelerde görülür.",
+     "sik_aciklamalari": {
+      "A": "Poliomiyelitte beyin sapındaki çekirdekler etkilenebilir ve yumuşak damak, farinks, larinks ve dil felçleri olur. Soru bu tutulumu sorduğu için seçim doğrudur.",
+      "B": "Patolojik refleksler kortikospinal yol hastalıklarında ortaya çıkar. Poliomiyelitte refleksler alınmaz ve patolojik refleks yoktur, bu nedenle beyin sapı tutulumuyla ilişkili bir bulgu değildir.",
+      "C": "Eldiven çorap tarzı duyu kusuru polinöropatinin bulgusudur. Poliomiyelitte duyu kusuru olmaz; beyin sapı tutulumu yumuşak damak, farinks, larinks ve dil gibi yapıların felciyle ortaya çıkar.",
+      "D": "Yersiz ağlama ve gülmeler psödobulber paralizide idrar kaçırma gibi bulgularla birlikte eşlik eder. Poliomiyelitte beyin sapı tutulumu bu bulgularla değil, damak ve dil gibi yapıların felciyle kendini gösterir.",
+      "E": "Ptoz ve diplopi myastenia gravis'in en sık belirtileri arasındadır ve miyonöral ileti bozukluğuna bağlıdır. Poliomiyelitte beyin sapı tutulumu damak, farinks, larinks ve dil felçleriyle ortaya çıkar."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "Polinöropatinin dağılımını ve bulgularını açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q50",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Her iki elde ve ayakta eldiven çorap tarzı duyu kusuru, ekstremite uçlarında simetrik zaaf ve azalmış refleksleri olan hastada en olası tanı nedir?",
+     "secenekler": {
+      "A": "Amiyotrofik lateral skleroz",
+      "B": "Polinöropati",
+      "C": "Kas distrofisi",
+      "D": "Poliomiyelit",
+      "E": "Myastenia gravis"
+     },
+     "dogru": "B",
+     "aciklama": "Polinöropati birden fazla periferik sinirin genellikle simetrik hastalanmasıdır. Zaaf ekstremite uçlarındadır, felç ikinci motor nöron tipindedir ve duyu kusuru eldiven çorap tarzındadır.",
+     "sik_aciklamalari": {
+      "A": "Amiyotrofik lateral skleroz birinci ve ikinci motor nöronu birlikte tutan bir hastalıktır ve derin tendon refleksleri artar. Duyu bulgusuz, refleksi artmış bu tablo, duyu kusuru olan ve refleksleri azalan hastayı açıklamaz.",
+      "B": "Polinöropati birden fazla periferik sinirin genellikle simetrik hastalanmasıdır. Zaaf ekstremite uçlarında olur, felç ikinci motor nöron tipindedir ve duyu kusuru eldiven çorap tarzındadır; seçim doğrudur.",
+      "C": "Kas distrofisinde zaaf simetriktir fakat proksimal kasları tutar ve duyu kusuru görülmez. Uçlarda belirgin zaaf ve duyu kusuru bu hastalığa uymaz.",
+      "D": "Poliomiyelit asimetrik kol ve bacak felçleri yapar ve duyu kusuru olmaz. Eldiven çorap tarzı duyu kusuru ve simetrik uç zaafı bu hastalığa uymaz.",
+      "E": "Myastenia gravis'te tendon refleksleri normaldir ve zaaf başlıca oküler, bulber ve boyun kaslarındadır. Bu dağılım, ekstremite uçlarında simetrik zaafla seyreden polinöropatiden farklı bir tablodur."
+     },
+     "kanit": {
+      "sayfa": 31
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q51",
+     "kazanim": 20,
+     "zorluk": "orta",
+     "soru": "Polinöropati ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Felç ikinci motor nöron tipindedir",
+      "B": "Duyu kusuru eldiven çorap tarzındadır",
+      "C": "Zaaf ekstremite uçlarında belirgindir",
+      "D": "Zaaf proksimal kaslarda belirgindir",
+      "E": "Kranyal sinirler tutulabilir"
+     },
+     "dogru": "D",
+     "aciklama": "Polinöropatide zaaf ekstremite uçlarında belirgindir, proksimal kaslarda değil. Proksimal zaaf miyonöral plak ve çizgili kas hastalıklarında görülür.",
+     "sik_aciklamalari": {
+      "A": "Polinöropatide felç ikinci motor nöron tipindedir, yani tonus ve refleksler azalır ve kaslar atrofiktir. Bu tanım hastalığı doğru anlattığından ifade yanlış sayılmaz.",
+      "B": "Polinöropatide duyu kusuru eldiven çorap tarzındadır. İfade hastalığın bilinen duyu bulgusunu doğru anlattığından yanlış sayılmaz ve aranan yanlış ifade bu değildir.",
+      "C": "Polinöropatide zaaf az çok simetriktir ve ekstremite uçlarında belirgindir. İfade hastalığın zaaf dağılımını doğru anlattığından yanlış sayılmaz ve bu nedenle elenir.",
+      "D": "Polinöropatide zaaf ekstremite uçlarında belirgindir, proksimal kaslarda değil. Proksimal kaslardaki belirgin zaaf miyonöral plak ve çizgili kas hastalıklarına özgü olduğundan bu ifade yanlıştır ve doğru yanıttır.",
+      "E": "Polinöropatide birden fazla periferik sinir hastalandığından kranyal sinirler de tutulabilir. İfade hastalığın yaygın sinir tutulumuna uygun olduğundan yanlış bir ifade değildir."
+     },
+     "kanit": {
+      "sayfa": 31
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q52",
+     "kazanim": 20,
+     "zorluk": "zor",
+     "soru": "Polinöropatiyi poliomiyelitten ayıran bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tendon reflekslerinin azalması",
+      "B": "Kas atrofisinin varlığı",
+      "C": "Eldiven çorap tarzı duyu kusuru",
+      "D": "Patolojik refleks bulunmaması",
+      "E": "Tonusun azalması"
+     },
+     "dogru": "C",
+     "aciklama": "Polinöropatide duyu kusuru eldiven çorap tarzındadır, poliomiyelitte ise duyu kusuru olmaz. İkisinde de felç ikinci motor nöron tipindedir.",
+     "sik_aciklamalari": {
+      "A": "İkinci motor nöron tipi felçte tendon refleksleri azalır ya da kaybolur. Poliomiyelitte refleksler alınmaz, polinöropatide de felç bu tipte olduğundan bu bulgu ayırıcı değildir.",
+      "B": "Poliomiyelitte tutulan kaslarda atrofi olur ve ikinci motor nöron tipi felçte kaslar atrofiktir. Atrofi iki hastalıkta ortak olduğundan ayırıcı değildir.",
+      "C": "Polinöropatide duyu kusuru eldiven çorap tarzındadır, poliomiyelitte ise duyu kusuru olmaz. İki hastalıkta da felç ikinci motor nöron tipinde olduğundan ayırıcı bulgu duyu kusurudur ve seçim doğrudur.",
+      "D": "Poliomiyelitte patolojik refleks yoktur ve polinöropatide de felç ikinci motor nöron tipinde olduğundan patolojik refleks beklenmez. Bu durum iki hastalığı birbirinden ayırmaz.",
+      "E": "Her iki hastalıkta da felç ikinci motor nöron tipindedir ve ikinci motor nöron hastalıklarında tonus azalır. Bu nedenle tonus azalması iki hastalığı ayırmaz."
+     },
+     "kanit": {
+      "sayfa": 30
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Myastenia gravis'in miyonöral ileti bozukluğu olarak klinik özelliklerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q53",
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "Kaslarda kolay yorulma, diplopi, ptoz ve belirtilerde dalgalanma bulunan hastada temel bozukluk aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kasın ailesel ve ilerleyici hastalığı",
+      "B": "Ön boynuz hücresinin akut iltihabı",
+      "C": "Kortikobulber liflerin iki yanlı hastalığı",
+      "D": "Periferik sinirlerin simetrik hastalanması",
+      "E": "Miyonöral ileti bozukluğu"
+     },
+     "dogru": "E",
+     "aciklama": "Myastenia gravis miyonöral ileti bozukluğudur ve kaslarda kolay yorulma ile kuvvetsizlikle karakterizedir. Diplopi, ptoz ve dalgalanma da bu tabloya uyar.",
+     "sik_aciklamalari": {
+      "A": "Kasın ailesel ve ilerleyici hastalığı kas distrofisidir ve simetrik proksimal zaaf yapar. Ptoz ve diplopi gibi oküler belirtilerle dalgalanan seyir bu mekanizmaya uymaz.",
+      "B": "Ön boynuz hücresinin akut iltihabı poliomiyelitin temel olayıdır ve asimetrik felçlerle seyreder. Kolay yorulma, ptoz ve dalgalanan belirtiler bu mekanizmayla açıklanmaz.",
+      "C": "Kortikobulber liflerin iki yanlı hastalanması psödobulber paralizi yapar ve yutma güçlüğü ile yersiz ağlamaya yol açar. Kolay yorulma ve dalgalanma bu hastalığın özelliği değildir.",
+      "D": "Periferik sinirlerin simetrik hastalanması polinöropatidir ve zaaf ekstremite uçlarında olur. Ptoz ve diplopi ile dalgalanan kuvvetsizlik bu mekanizmanın tablosu değildir.",
+      "E": "Myastenia gravis miyonöral ileti bozukluğudur ve kaslarda kolay yorulma ile kuvvetsizlikle karakterizedir. Diplopi, ptoz ve belirtilerde dalgalanma da bu bozuklukla uyumlu olduğundan seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-32-felcler-q54",
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi myastenia gravis'in en sık belirtilerinden biri değildir?",
+     "secenekler": {
+      "A": "Diplopi",
+      "B": "Boyun kaslarında kuvvetsizlik",
+      "C": "Ptoz",
+      "D": "Çiğneme ve yutma güçlüğü",
+      "E": "Yaygın fasikülasyonlar"
+     },
+     "dogru": "E",
+     "aciklama": "Myastenia gravis'in en sık belirtileri diplopi, ptoz, çiğneme ve yutma güçlüğü, fonasyon bozuklukları ve boyun kaslarında kuvvetsizliktir. Fasikülasyon bu hastalıkta görülmez.",
+     "sik_aciklamalari": {
+      "A": "Diplopi, yani çift görme, myastenia gravis'in en sık belirtilerinden biridir. Bu nedenle bu belirti hastalığa özgü olmayan bulgu olarak seçilemez.",
+      "B": "Boyun kaslarında kuvvetsizlik, myastenia gravis'in en sık belirtilerinden biridir ve zaafın oküler, bulber ve boyun kaslarında belirginleşmesiyle uyumludur. Bu yüzden aranan yanıt olamaz.",
+      "C": "Ptoz, yani üst göz kapağında düşme, myastenia gravis'in en sık belirtileri arasındadır. Hastalığın tipik bulgusu olduğundan aranan yanıt olamaz.",
+      "D": "Çiğneme ve yutma güçlüğü, myastenia gravis'te sık görülen bulber kas belirtileridir. Hastalıkla uyumlu bir belirti olduğu için aranan ifade olamaz.",
+      "E": "Myastenia gravis'te fasikülasyon yoktur; fasikülasyon ön boynuz hücre lezyonunda dikkati çeken bir bulgudur. En sık belirtiler diplopi, ptoz, çiğneme ve yutma güçlüğü, fonasyon bozuklukları ve boyun kaslarında kuvvetsizlik olduğundan seçim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Kas distrofileri, miyotoni ve polimiyozit gibi kas hastalıklarını ve kas distrofisinin özelliklerini açıklayabilme.",
+   "sorular": [
+    {
+     "id": "k2-32-felcler-q55",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Ailesel ve ilerleyici seyirli, simetrik proksimal kas zaafı, ördek yürüyüşü ve Gowers arazı olan hastada en olası tanı nedir?",
+     "secenekler": {
+      "A": "Myastenia gravis",
+      "B": "Amiyotrofik lateral skleroz",
+      "C": "Poliomiyelit",
+      "D": "Kas distrofisi",
+      "E": "Polinöropati"
+     },
+     "dogru": "D",
+     "aciklama": "Kas distrofileri genellikle ailesel ve ilerleyicidir; atrofi ve kuvvetsizlik simetriktir ve proksimal kasları tutar. Ördek yürüyüşü ile Gowers arazı da görülür.",
+     "sik_aciklamalari": {
+      "A": "Myastenia gravis'te zaaf başlıca oküler, bulber ve boyun kaslarındadır ve belirtiler dalgalanma gösterir. Ailesel ilerleyici seyir, ördek yürüyüşü ve Gowers arazı bu hastalığa özgü değildir.",
+      "B": "Amiyotrofik lateral skleroz, sebebi iyi bilinmeyen ilerleyici bir motor nöron hastalığıdır ve refleks artışı, Babinski ve fasikülasyonlarla seyreder. Gowers arazı ve ördek yürüyüşü bu hastalığın bulguları değildir.",
+      "C": "Poliomiyelit ön boynuz hücresinin akut iltihabıdır ve ateşli devreyi izleyen asimetrik felçler yapar. Ailesel, simetrik ve ilerleyici proksimal zaaf bu hastalığa uymaz.",
+      "D": "Kas distrofileri genellikle ailesel ve ilerleyicidir; atrofi ve kuvvetsizlik simetriktir ve proksimal kasları tutar. Ördek yürüyüşü ile Gowers arazı da bu hastalıkta görüldüğünden seçim doğrudur.",
+      "E": "Polinöropatide zaaf ekstremite uçlarında belirgindir ve duyu kusuru eldiven çorap tarzındadır. Proksimal kas zaafı, ördek yürüyüşü ve Gowers arazı bu hastalığın özelliği değildir."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  }
+ ]
+}

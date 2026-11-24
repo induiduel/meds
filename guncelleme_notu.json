@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 882,
-  "baslik": "Yeni ders: Felçler",
+  "onem": 883,
+  "baslik": "Felçler dersi tamamlandı",
   "maddeler": [
-    "Nörolojide Felçler dersinin sesli anlatım metni eklendi; ses hazırlanıyor."
+    "**Felçler (Nöroloji):** sesli dersin çizimleri, terim ve kısaltma kutuları eklendi.",
+    "**Örnek sorular:** 55 soru ve sesli soru çözücü yayında; hocanın sorabileceği ara sorular derste."
   ],
   "eklenen": [],
   "degisen": [

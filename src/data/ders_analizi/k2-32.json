@@ -1,0 +1,571 @@
+{
+ "surum": 2,
+ "key": "k2-32",
+ "kod": "2n09",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Felçler",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n09"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Felçler: kas güçsüzlüğünün düzeyini bulmak"
+    },
+    {
+     "metin": "Kas gücü azalması: parezi, pleji ve kas zaafının dört düzeyi"
+    },
+    {
+     "metin": "Birinci motor nöron: piramidal yol, çaprazlaşma ve lezyon tarafı"
+    },
+    {
+     "metin": "İkinci motor nöron, sinir-kas bağlantısı ve çizgili kas"
+    },
+    {
+     "metin": "Kas gücü azalmasında ayırıcı tanı: kas zaafının dağılımı"
+    },
+    {
+     "metin": "Tonus ve tendon refleksleri: birinci ve ikinci motor nöron karşıtlığı"
+    },
+    {
+     "metin": "Patolojik refleksler: yalnız kortikospinal yol hastalığında"
+    },
+    {
+     "metin": "Kas atrofisi: birinci ve ikinci motor nöron ayrımı"
+    },
+    {
+     "metin": "Fasikülasyon ve duyu kusuru: motor düzeylere göre dağılım"
+    },
+    {
+     "metin": "Karşılaştırma tablosu: birinci motor nöron, ikinci motor nöron, myastenia gravis, kas hastalığı"
+    },
+    {
+     "metin": "Önemli noktalar: Babinski ve piramidal yol hastalığı"
+    },
+    {
+     "metin": "Hemipleji ve hemiparezi: akut ve yavaş gelişen tablo"
+    },
+    {
+     "metin": "Piramidal hemiplejide lokalizasyon: korteks, kapsüla interna, beyin sapı, m. spinalis"
+    },
+    {
+     "metin": "Parapleji: nedenler, Brown-Séquard sendromu ve spinal düzey tayini"
+    },
+    {
+     "metin": "Histerik felçler"
+    },
+    {
+     "metin": "Psödobulber paralizi: bilateral kortikobulber tutulum"
+    },
+    {
+     "metin": "Motor nöron hastalığı ve amiyotrofik lateral skleroz"
+    },
+    {
+     "metin": "Yüz felci: santral ve periferik tip"
+    },
+    {
+     "metin": "Multipl skleroz: ataklarla seyreden immün hastalık"
+    },
+    {
+     "metin": "Poliomiyelit: ön boynuz hücresinin akut iltihabı"
+    },
+    {
+     "metin": "Polinöropati: simetrik periferik sinir tutulumu"
+    },
+    {
+     "metin": "Myastenia gravis: miyonöral iletinin bozulması"
+    },
+    {
+     "metin": "Kas hastalıkları: distrofiler, miyotoni ve polimiyozit"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Felçler: kas güçsüzlüğünün düzeyini bulmak.",
+    "Kas gücü azalması: parezi, pleji ve kas zaafının dört düzeyi.",
+    "Birinci motor nöron: piramidal yol, çaprazlaşma ve lezyon tarafı.",
+    "İkinci motor nöron, sinir-kas bağlantısı ve çizgili kas.",
+    "Kas gücü azalmasında ayırıcı tanı: kas zaafının dağılımı.",
+    "Tonus ve tendon refleksleri: birinci ve ikinci motor nöron karşıtlığı.",
+    "Patolojik refleksler: yalnız kortikospinal yol hastalığında.",
+    "Kas atrofisi: birinci ve ikinci motor nöron ayrımı.",
+    "Fasikülasyon ve duyu kusuru: motor düzeylere göre dağılım.",
+    "Karşılaştırma tablosu: birinci motor nöron, ikinci motor nöron, myastenia gravis, kas hastalığı.",
+    "Önemli noktalar: Babinski ve piramidal yol hastalığı.",
+    "Hemipleji ve hemiparezi: akut ve yavaş gelişen tablo.",
+    "Piramidal hemiplejide lokalizasyon: korteks, kapsüla interna, beyin sapı, m. spinalis.",
+    "Parapleji: nedenler, Brown-Séquard sendromu ve spinal düzey tayini.",
+    "Histerik felçler.",
+    "Psödobulber paralizi: bilateral kortikobulber tutulum.",
+    "Motor nöron hastalığı ve amiyotrofik lateral skleroz.",
+    "Yüz felci: santral ve periferik tip.",
+    "Multipl skleroz: ataklarla seyreden immün hastalık.",
+    "Poliomiyelit: ön boynuz hücresinin akut iltihabı.",
+    "Polinöropati: simetrik periferik sinir tutulumu.",
+    "Myastenia gravis: miyonöral iletinin bozulması.",
+    "Kas hastalıkları: distrofiler, miyotoni ve polimiyozit."
+   ],
+   "v": "f1c9fbc909"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Kas gücü azalması: parezi, pleji ve kas zaafının dört düzeyi",
+     "metin": "Kas gücü azalması sinir sistemi hastalıklarında en sık görülen belirtidir; derecesine göre parezi (kısmi güç kaybı) ya da paralizi/pleji (tam güç kaybı) denir ve kas zaafı dört düzeyden birinden kaynaklanır.",
+     "s": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "baslik": "Birinci motor nöron: piramidal yol, çaprazlaşma ve lezyon tarafı",
+     "metin": "Birinci motor nöron istemli hareketi sağlayan yolun ilk nöronudur (üst motor nöron); piramidal ya da kortikospinal yol, karşı taraftaki ekstremite ve gövde kaslarının istemli hareketini sağlar.",
+     "s": [
+      5,
+      6
+     ]
+    },
+    {
+     "baslik": "İkinci motor nöron, sinir-kas bağlantısı ve çizgili kas",
+     "metin": "İkinci motor nöron (alt motor nöron, periferik motor nöron) beyin sapı motor kraniyal sinir nükleuslarında ve m. spinalis boyunca uzanan ön boynuz hücrelerinde bulunur.",
+     "s": [
+      7,
+      8
+     ]
+    },
+    {
+     "baslik": "Kas gücü azalmasında ayırıcı tanı: kas zaafının dağılımı",
+     "metin": "Kas gücü azalmasında ayırıcı tanının ilk basamağı kas zaafının dağılımıdır; dağılım zaafın hangi motor düzeyden kaynaklandığını gösterir.",
+     "s": [
+      9,
+      10
+     ]
+    },
+    {
+     "baslik": "Tonus ve tendon refleksleri: birinci ve ikinci motor nöron karşıtlığı",
+     "metin": "Tonus ve tendon refleksleri birinci ve ikinci motor nöron hastalıklarında zıt yönde değişir.",
+     "s": [
+      11,
+      12
+     ]
+    },
+    {
+     "baslik": "Patolojik refleksler: yalnız kortikospinal yol hastalığında",
+     "metin": "Patolojik refleksler (Babinski, Hoffmann, klonus) yalnız kortikospinal yol, yani birinci motor nöron hastalıklarında ortaya çıkar.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Kas atrofisi: birinci ve ikinci motor nöron ayrımı",
+     "metin": "Kas atrofisi birinci ve ikinci motor nöronu ayıran bulgulardandır: birinci motor nöron hastalıklarında felçli kol ve bacakta atrofi yoktur.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Fasikülasyon ve duyu kusuru: motor düzeylere göre dağılım",
+     "metin": "Fasikülasyon ve duyu kusuru motor düzeyleri ayırt eder: piramidal yol hastalıklarında kaslarda fasikülasyon görülmez.",
+     "s": [
+      15,
+      16
+     ]
+    },
+    {
+     "baslik": "Karşılaştırma tablosu: birinci motor nöron, ikinci motor nöron, myastenia gravis, kas hastalığı",
+     "metin": "Karşılaştırma tablosu birinci motor nöron, ikinci motor nöron, myastenia gravis ve kas hastalığını zaaf dağılımı, tonus, tendon refleksi, patolojik refleks, atrofi, fasikülasyon, duyu kusuru ve ek özelliklerle ayırır.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Önemli noktalar: Babinski ve piramidal yol hastalığı",
+     "metin": "Önemli noktalar: piramidal yol hastalıklarında en sık rastlanan bulgular tendon reflekslerinin artması ve Babinski delilidir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Hemipleji ve hemiparezi: akut ve yavaş gelişen tablo",
+     "metin": "Hemipleji ve hemiparezide akut dönem ile zamanla gelişen dönem ayrılır; akut SVH'de felçli tarafta tonus ve DTR azalır (flask, gevşek).",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Piramidal hemiplejide lokalizasyon: korteks, kapsüla interna, beyin sapı, m. spinalis",
+     "metin": "Piramidal hemiplejide lezyonun yeri korteks, kapsüla interna, beyin sapı ve m. spinalis düzeylerinde farklı tablo verir.",
+     "s": [
+      20,
+      21
+     ]
+    },
+    {
+     "baslik": "Parapleji: nedenler, Brown-Séquard sendromu ve spinal düzey tayini",
+     "metin": "Parapleji kortekste bacakların motor merkezinde iki yanlı hastalanma, periferik nöropatiler, kas hastalıkları ve en sık olarak kortikospinal yolların m. spinalisteki bilateral lezyonu nedeniyle görülür.",
+     "s": [
+      22,
+      23,
+      24
+     ]
+    },
+    {
+     "baslik": "Histerik felçler",
+     "metin": "Histerik felçler bölümü slaytta yalnız başlık olarak yer alır; sayfada ayrıca bilgi verilmez.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Psödobulber paralizi: bilateral kortikobulber tutulum",
+     "metin": "Psödobulber paralizi kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında ufak laküner infarktların ortaya çıkardığı tablodur.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Motor nöron hastalığı ve amiyotrofik lateral skleroz",
+     "metin": "Motor nöron hastalığı birinci ve/veya ikinci motor nöronun sebebi iyi bilinmeyen yaygın ve ilerleyici hastalığıdır; her iki nöron birlikte tutulduğunda amiyotrofik lateral skleroz (ALS) denir.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Yüz felci: santral ve periferik tip",
+     "metin": "Yüz felci santral ve periferik tip olarak ikiye ayrılır.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Multipl skleroz: ataklarla seyreden immün hastalık",
+     "metin": "Multipl skleroz genç yaşlarda başlayan, piramidal bulgular, serebellar yollar, kraniyal nöropatiler, duyu ve sfinkter bozukluklarıyla giden immün bir hastalıktır.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Poliomiyelit: ön boynuz hücresinin akut iltihabı",
+     "metin": "Poliomiyelit ön boynuz hücresinin akut iltihabi bir hastalığıdır.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Polinöropati: simetrik periferik sinir tutulumu",
+     "metin": "Polinöropati birden fazla periferik sinirin herhangi bir nedenle ve genellikle simetrik olarak hastalanmasıdır.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Myastenia gravis: miyonöral iletinin bozulması",
+     "metin": "Myastenia gravis miyonöral ileti bozukluğudur; kaslarda kolay yorulma ve kuvvetsizlikle karakterizedir.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Kas hastalıkları: distrofiler, miyotoni ve polimiyozit",
+     "metin": "Kas hastalıkları kas distrofileri, miyotoni ve polimiyozit-dermatomiyozitten oluşur.",
+     "s": [
+      33
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Kas gücü azalması: parezi, pleji ve kas zaafının dört düzeyi: Kas gücü azalması sinir sistemi hastalıklarında en sık görülen belirtidir; derecesine göre parezi (kısmi güç kaybı) ya da paralizi/pleji (tam güç kaybı) denir ve kas zaafı dört düzeyden birinden kaynaklanır.",
+    "Birinci motor nöron: piramidal yol, çaprazlaşma ve lezyon tarafı: Birinci motor nöron istemli hareketi sağlayan yolun ilk nöronudur (üst motor nöron); piramidal ya da kortikospinal yol, karşı taraftaki ekstremite ve gövde kaslarının istemli hareketini sağlar.",
+    "İkinci motor nöron, sinir-kas bağlantısı ve çizgili kas: İkinci motor nöron (alt motor nöron, periferik motor nöron) beyin sapı motor kraniyal sinir nükleuslarında ve m. spinalis boyunca uzanan ön boynuz hücrelerinde bulunur.",
+    "Kas gücü azalmasında ayırıcı tanı: kas zaafının dağılımı: Kas gücü azalmasında ayırıcı tanının ilk basamağı kas zaafının dağılımıdır; dağılım zaafın hangi motor düzeyden kaynaklandığını gösterir.",
+    "Tonus ve tendon refleksleri: birinci ve ikinci motor nöron karşıtlığı: Tonus ve tendon refleksleri birinci ve ikinci motor nöron hastalıklarında zıt yönde değişir.",
+    "Patolojik refleksler: yalnız kortikospinal yol hastalığında: Patolojik refleksler (Babinski, Hoffmann, klonus) yalnız kortikospinal yol, yani birinci motor nöron hastalıklarında ortaya çıkar.",
+    "Kas atrofisi: birinci ve ikinci motor nöron ayrımı: Kas atrofisi birinci ve ikinci motor nöronu ayıran bulgulardandır: birinci motor nöron hastalıklarında felçli kol ve bacakta atrofi yoktur.",
+    "Fasikülasyon ve duyu kusuru: motor düzeylere göre dağılım: Fasikülasyon ve duyu kusuru motor düzeyleri ayırt eder: piramidal yol hastalıklarında kaslarda fasikülasyon görülmez.",
+    "Karşılaştırma tablosu: birinci motor nöron, ikinci motor nöron, myastenia gravis, kas hastalığı: Karşılaştırma tablosu birinci motor nöron, ikinci motor nöron, myastenia gravis ve kas hastalığını zaaf dağılımı, tonus, tendon refleksi, patolojik refleks, atrofi, fasikülasyon, duyu kusuru ve ek özelliklerle ayırır.",
+    "Önemli noktalar: Babinski ve piramidal yol hastalığı: Önemli noktalar: piramidal yol hastalıklarında en sık rastlanan bulgular tendon reflekslerinin artması ve Babinski delilidir.",
+    "Hemipleji ve hemiparezi: akut ve yavaş gelişen tablo: Hemipleji ve hemiparezide akut dönem ile zamanla gelişen dönem ayrılır; akut SVH'de felçli tarafta tonus ve DTR azalır (flask, gevşek).",
+    "Piramidal hemiplejide lokalizasyon: korteks, kapsüla interna, beyin sapı, m. spinalis: Piramidal hemiplejide lezyonun yeri korteks, kapsüla interna, beyin sapı ve m. spinalis düzeylerinde farklı tablo verir.",
+    "Parapleji: nedenler, Brown-Séquard sendromu ve spinal düzey tayini: Parapleji kortekste bacakların motor merkezinde iki yanlı hastalanma, periferik nöropatiler, kas hastalıkları ve en sık olarak kortikospinal yolların m. spinalisteki bilateral lezyonu nedeniyle görülür.",
+    "Histerik felçler: Histerik felçler bölümü slaytta yalnız başlık olarak yer alır; sayfada ayrıca bilgi verilmez.",
+    "Psödobulber paralizi: bilateral kortikobulber tutulum: Psödobulber paralizi kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında ufak laküner infarktların ortaya çıkardığı tablodur.",
+    "Motor nöron hastalığı ve amiyotrofik lateral skleroz: Motor nöron hastalığı birinci ve/veya ikinci motor nöronun sebebi iyi bilinmeyen yaygın ve ilerleyici hastalığıdır; her iki nöron birlikte tutulduğunda amiyotrofik lateral skleroz (ALS) denir.",
+    "Yüz felci: santral ve periferik tip: Yüz felci santral ve periferik tip olarak ikiye ayrılır.",
+    "Multipl skleroz: ataklarla seyreden immün hastalık: Multipl skleroz genç yaşlarda başlayan, piramidal bulgular, serebellar yollar, kraniyal nöropatiler, duyu ve sfinkter bozukluklarıyla giden immün bir hastalıktır.",
+    "Poliomiyelit: ön boynuz hücresinin akut iltihabı: Poliomiyelit ön boynuz hücresinin akut iltihabi bir hastalığıdır.",
+    "Polinöropati: simetrik periferik sinir tutulumu: Polinöropati birden fazla periferik sinirin herhangi bir nedenle ve genellikle simetrik olarak hastalanmasıdır.",
+    "Myastenia gravis: miyonöral iletinin bozulması: Myastenia gravis miyonöral ileti bozukluğudur; kaslarda kolay yorulma ve kuvvetsizlikle karakterizedir.",
+    "Kas hastalıkları: distrofiler, miyotoni ve polimiyozit: Kas hastalıkları kas distrofileri, miyotoni ve polimiyozit-dermatomiyozitten oluşur."
+   ],
+   "v": "59c4042d30"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu derste çıkmış yedi soru, patolojik reflekslerin hangi düzeye ait olduğunu, ikinci motor nöron bulgularını, fasikülasyonu, periferik tip yüz felcini, motor nöron hastalığındaki refleks değişimini ve medulla spinalis lezyonunda felç tarafını ölçer.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki reflekslerden hangisinin alınması patolojiktir?",
+     "cevap": "Babinski refleksi",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Bu soru, normal muayenede alınan refleksler ile hastalığı gösteren patolojik refleksi ayırt edip edemediğinizi ölçer.",
+      "Kortikospinal yol hastalıklarında Babinski ve Hoffmann delilleri ile klonus gibi patolojik refleksler ortaya çıkar; alt motor nöron, myastenia gravis ve primer kas hastalıklarında patolojik refleks yoktur.",
+      "Bu nedenle verilen seçenekler arasında alınması patolojik olan tek refleks Babinski refleksidir ve doğru yanıt odur.",
+      "En güçlü çeldirici tendon refleksleridir; çünkü piramidal yol hastalıklarında artarlar, ancak refleksin yalnızca alınması patolojik sayılmaz."
+     ],
+     "ornek": "Aynı bilgi, kortikospinal yol hastalığında hangi bulgunun ortaya çıktığı sorusuyla da sorulabilir ve yanıt yine Babinski delilidir.",
+     "tuzak": "Artmış tendon refleksini patolojik refleks sanmak; patolojik refleks Babinski, Hoffmann ve klonus gibi normalde bulunmayan bulgulardır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon hangisinde olamaz?",
+     "cevap": "Dorsal spinal kord",
+     "s": [
+      21
+     ],
+     "aciklama": [
+      "Bu soru, lezyon yeri ile felç tarafı ilişkisini bilip bilmediğinizi ve medulla spinalis lezyonunun dağılımını ölçer.",
+      "Piramidal yollar çaprazlaştığından beyindeki lezyonlar karşı tarafta zaaf yapar; medulla spinalis lezyonları ise aynı tarafta felç yapar ve yüz tutulmaz.",
+      "Servikal bölgenin altındaki lezyon aynı taraftaki bacağı etkilediğinden sağ vücut yarımındaki zaaf ve refleks artışı dorsal spinal kord lezyonuyla açıklanamaz ve doğru yanıt odur.",
+      "En güçlü çeldirici servikal spinal kord seçeneğidir; servikal bölgedeki lezyon aynı taraftaki ekstremiteleri etkileyebildiği için sağ yarım zaafını açıklayabilir."
+     ],
+     "ornek": "Aynı bilgi, sağ bacakta piramidal felç olan ve yüzü sağlam hastada lezyonun hangi tarafta olduğu sorusuyla da sorulabilir; yanıt aynı taraftaki medulla spinalistir.",
+     "tuzak": "Medulla spinalis lezyonunu da beyin lezyonu gibi karşı tarafta felç yapar sanmak; omurilikte felç lezyonla aynı taraftadır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+     "cevap": "Fasikülasyon",
+     "s": [
+      15
+     ],
+     "aciklama": [
+      "Bu soru, ikinci motor nöron hasarına özgü bulguyu birinci motor nöron bulgularından ayırmayı ölçer.",
+      "İkinci motor nöron hastalıklarında lezyon ön boynuz hücrelerindeyse kaslarda deri altında seyirmeler şeklinde fasikülasyonlar dikkati çeker; piramidal yol hastalıklarında fasikülasyon görülmez.",
+      "Bu nedenle fasikülasyon ikinci motor nöron hasarında beklenen bulgudur ve doğru yanıt odur.",
+      "En güçlü çeldiriciler derin tendon refleks artışı, tonus artışı ve patolojik reflekstir; üçü de birinci motor nöron bulgusudur, ikinci motor nöronda tonus ve refleksler azalır."
+     ],
+     "ornek": "Aynı bilgi, kaslarda deri altında seyirmelerin hangi düzeyin hasarını gösterdiği sorusuyla da sorulabilir ve yanıt ön boynuz hücreleridir.",
+     "tuzak": "Refleks ve tonus artışını ikinci motor nöron hasarına yüklemek; ikinci motor nöronda bunlar azalır."
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+     "cevap": "Fasikülasyon",
+     "s": [
+      15
+     ],
+     "aciklama": [
+      "Bu soru, aynı bilgiyi seçenekleri farklı sırayla vererek yeniden sorar ve ikinci motor nöron hasarındaki beklenen bulguyu ölçer.",
+      "İkinci motor nöron hastalığında lezyon ön boynuz hücrelerindeyse kaslarda fasikülasyonlar dikkati çeker ve bunlar deri altında seyirmeler şeklindedir.",
+      "Derin tendon refleks artışı, kronik dönemde tonus artışı ve patolojik refleksler birinci motor nöron bulgularıdır; duyu kusuru ise ön boynuz hastalığında yoktur, ancak lezyon periferik sinirdeyse bulunabilir.",
+      "Bu nedenle doğru yanıt fasikülasyondur ve seçenek sırası değişse de gerekçe aynıdır."
+     ],
+     "ornek": "Aynı bilgi, ikinci motor nöron hastalığında hangi bulgunun gözlenmediği sorusuyla da sorulabilir; yanıt fasikülasyon dışındaki birinci motor nöron bulgularıdır.",
+     "tuzak": "Duyu kusurunu ikinci motor nöron hasarının sabit bulgusu saymak; ön boynuz lezyonunda duyu kusuru yoktur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi periferik tipte yüz felci için doğru değildir?",
+     "cevap": "Göz sıkma korunur",
+     "s": [
+      28
+     ],
+     "aciklama": [
+      "Bu soru, periferik tip yüz felcinin özelliklerini bilip bilmediğinizi ve doğru olmayan ifadeyi bulmanızı ölçer.",
+      "Periferik tip, N. fasiyalis çekirdeği ya da sinirin kendisindeki lezyonla oluşur, hem üst hem alt yüz yarımını etkiler ve hasta gözünü kapatamaz, yani lagoftalmi vardır.",
+      "Bu nedenle göz sıkmanın korunduğunu söyleyen ifade yanlıştır ve doğru yanıt odur.",
+      "En güçlü çeldirici lagoftalmi seçeneğidir; çünkü göz kapatma güçlüğü periferik tipin bulgusudur ve bu ifade doğrudur."
+     ],
+     "ornek": "Aynı bilgi, gözünü kapatmaya çalışan hastada göz küresinin yukarı kaymasının hangi adla bilindiği sorusuyla da sorulabilir; yanıt Bell fenomenidir.",
+     "tuzak": "Santral ve periferik tipi karıştırmak; göz kapatma güçlüğü ve üst yüzün tutulması periferik tipte görülür."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Kas güçsüzlüğü (felç) nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Motor nöron hastalığında derin tendon refleksleri azalır.",
+     "s": [
+      27
+     ],
+     "aciklama": [
+      "Bu soru, kas güçsüzlüğü nedenlerinin zaaf dağılımını ve motor nöron hastalığının refleks bulgusunu bilip bilmediğinizi ölçer.",
+      "Motor nöron hastalığında birinci ve ikinci motor nöron birlikte tutulur ve derin tendon refleksleri artar; Hoffmann ve Babinski de görülür.",
+      "Bu nedenle motor nöron hastalığında derin tendon reflekslerinin azaldığını söyleyen ifade yanlıştır ve doğru yanıt odur.",
+      "Diğer ifadeler doğrudur: miyopatilerde proksimal, polinöropatilerde distal kaslarda zaaf beklenir, nöromüsküler kavşak kusurunda oküler ve bulber kaslar tutulur ve medulla spinalis lezyonunda parapleji ile sfinkter kusuru görülür."
+     ],
+     "ornek": "Aynı bilgi, amiyotrofik lateral sklerozda hangi refleks bulgusunun görüldüğü sorusuyla da sorulabilir; yanıt derin tendon refleks artışıdır.",
+     "tuzak": "Alt motor nöron tutulumunu görüp reflekslerin azalacağını sanmak; motor nöron hastalığında üst motor nöron da tutulduğu için refleksler artar."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "İkinci motor nöron (alt motor nöron) tutulumu ile ilgili aşağıdaki bulgular veriliyor: I. Kas tonusu azalır. II. Derin tendon refleksleri azalır. III. Kas atrofisi olur. IV. Patolojik refleksler görülür. Bu bulgulardan hangisi/hangileri görülür?",
+     "cevap": "I, II ve III",
+     "s": [
+      13
+     ],
+     "aciklama": [
+      "Bu soru, ikinci motor nöron tutulumunda görülen bulguların tamamını öncüllerle ayırt etmenizi ölçer.",
+      "İkinci motor nöron hastalıklarında tonus azalır, tendon refleksleri azalır ya da kaybolur ve kaslar atrofiktir; patolojik refleks yoktur.",
+      "Bu nedenle ilk üç bulgunun birlikte seçildiği birleşim doğrudur ve doğru yanıt odur.",
+      "En güçlü çeldirici dördüncü öncülü de ekleyen birleşimdir; çünkü patolojik refleksler kortikospinal yol hastalığına, yani birinci motor nöron düzeyine aittir."
+     ],
+     "ornek": "Aynı bilgi, birinci motor nöron hastalığında hangi bulguların görüldüğü öncüllü sorusuyla da sorulabilir; yanıt tonus ve tendon refleks artışı ile patolojik reflekslerdir.",
+     "tuzak": "Patolojik refleksleri alt motor nöron bulgusu saymak; bu refleksler yalnızca kortikospinal yol hastalıklarında ortaya çıkar."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu derste çıkmış yedi soru, patolojik reflekslerin hangi düzeye ait olduğunu, ikinci motor nöron bulgularını, fasikülasyonu, periferik tip yüz felcini, motor nöron hastalığındaki refleks değişimini ve medulla spinalis lezyonunda felç tarafını ölçer.",
+    "2020-2021: Aşağıdaki reflekslerden hangisinin alınması patolojiktir?",
+    "Cevap: Babinski refleksi.",
+    "Bu soru, normal muayenede alınan refleksler ile hastalığı gösteren patolojik refleksi ayırt edip edemediğinizi ölçer.",
+    "Kortikospinal yol hastalıklarında Babinski ve Hoffmann delilleri ile klonus gibi patolojik refleksler ortaya çıkar; alt motor nöron, myastenia gravis ve primer kas hastalıklarında patolojik refleks yoktur.",
+    "Bu nedenle verilen seçenekler arasında alınması patolojik olan tek refleks Babinski refleksidir ve doğru yanıt odur.",
+    "En güçlü çeldirici tendon refleksleridir; çünkü piramidal yol hastalıklarında artarlar, ancak refleksin yalnızca alınması patolojik sayılmaz.",
+    "Örnek: Aynı bilgi, kortikospinal yol hastalığında hangi bulgunun ortaya çıktığı sorusuyla da sorulabilir ve yanıt yine Babinski delilidir.",
+    "Tuzak: Artmış tendon refleksini patolojik refleks sanmak; patolojik refleks Babinski, Hoffmann ve klonus gibi normalde bulunmayan bulgulardır.",
+    "2020-2021: Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon hangisinde olamaz?",
+    "Cevap: Dorsal spinal kord.",
+    "Bu soru, lezyon yeri ile felç tarafı ilişkisini bilip bilmediğinizi ve medulla spinalis lezyonunun dağılımını ölçer.",
+    "Piramidal yollar çaprazlaştığından beyindeki lezyonlar karşı tarafta zaaf yapar; medulla spinalis lezyonları ise aynı tarafta felç yapar ve yüz tutulmaz.",
+    "Servikal bölgenin altındaki lezyon aynı taraftaki bacağı etkilediğinden sağ vücut yarımındaki zaaf ve refleks artışı dorsal spinal kord lezyonuyla açıklanamaz ve doğru yanıt odur.",
+    "En güçlü çeldirici servikal spinal kord seçeneğidir; servikal bölgedeki lezyon aynı taraftaki ekstremiteleri etkileyebildiği için sağ yarım zaafını açıklayabilir.",
+    "Örnek: Aynı bilgi, sağ bacakta piramidal felç olan ve yüzü sağlam hastada lezyonun hangi tarafta olduğu sorusuyla da sorulabilir; yanıt aynı taraftaki medulla spinalistir.",
+    "Tuzak: Medulla spinalis lezyonunu da beyin lezyonu gibi karşı tarafta felç yapar sanmak; omurilikte felç lezyonla aynı taraftadır.",
+    "2020-2021: Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+    "Cevap: Fasikülasyon.",
+    "Bu soru, ikinci motor nöron hasarına özgü bulguyu birinci motor nöron bulgularından ayırmayı ölçer.",
+    "İkinci motor nöron hastalıklarında lezyon ön boynuz hücrelerindeyse kaslarda deri altında seyirmeler şeklinde fasikülasyonlar dikkati çeker; piramidal yol hastalıklarında fasikülasyon görülmez.",
+    "Bu nedenle fasikülasyon ikinci motor nöron hasarında beklenen bulgudur ve doğru yanıt odur.",
+    "En güçlü çeldiriciler derin tendon refleks artışı, tonus artışı ve patolojik reflekstir; üçü de birinci motor nöron bulgusudur, ikinci motor nöronda tonus ve refleksler azalır.",
+    "Örnek: Aynı bilgi, kaslarda deri altında seyirmelerin hangi düzeyin hasarını gösterdiği sorusuyla da sorulabilir ve yanıt ön boynuz hücreleridir.",
+    "Tuzak: Refleks ve tonus artışını ikinci motor nöron hasarına yüklemek; ikinci motor nöronda bunlar azalır.",
+    "2021-2022: Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+    "Cevap: Fasikülasyon.",
+    "Bu soru, aynı bilgiyi seçenekleri farklı sırayla vererek yeniden sorar ve ikinci motor nöron hasarındaki beklenen bulguyu ölçer.",
+    "İkinci motor nöron hastalığında lezyon ön boynuz hücrelerindeyse kaslarda fasikülasyonlar dikkati çeker ve bunlar deri altında seyirmeler şeklindedir.",
+    "Derin tendon refleks artışı, kronik dönemde tonus artışı ve patolojik refleksler birinci motor nöron bulgularıdır; duyu kusuru ise ön boynuz hastalığında yoktur, ancak lezyon periferik sinirdeyse bulunabilir.",
+    "Bu nedenle doğru yanıt fasikülasyondur ve seçenek sırası değişse de gerekçe aynıdır.",
+    "Örnek: Aynı bilgi, ikinci motor nöron hastalığında hangi bulgunun gözlenmediği sorusuyla da sorulabilir; yanıt fasikülasyon dışındaki birinci motor nöron bulgularıdır.",
+    "Tuzak: Duyu kusurunu ikinci motor nöron hasarının sabit bulgusu saymak; ön boynuz lezyonunda duyu kusuru yoktur.",
+    "2020-2021: Aşağıdakilerden hangisi periferik tipte yüz felci için doğru değildir?",
+    "Cevap: Göz sıkma korunur.",
+    "Bu soru, periferik tip yüz felcinin özelliklerini bilip bilmediğinizi ve doğru olmayan ifadeyi bulmanızı ölçer.",
+    "Periferik tip, N. fasiyalis çekirdeği ya da sinirin kendisindeki lezyonla oluşur, hem üst hem alt yüz yarımını etkiler ve hasta gözünü kapatamaz, yani lagoftalmi vardır.",
+    "Bu nedenle göz sıkmanın korunduğunu söyleyen ifade yanlıştır ve doğru yanıt odur.",
+    "En güçlü çeldirici lagoftalmi seçeneğidir; çünkü göz kapatma güçlüğü periferik tipin bulgusudur ve bu ifade doğrudur.",
+    "Örnek: Aynı bilgi, gözünü kapatmaya çalışan hastada göz küresinin yukarı kaymasının hangi adla bilindiği sorusuyla da sorulabilir; yanıt Bell fenomenidir.",
+    "Tuzak: Santral ve periferik tipi karıştırmak; göz kapatma güçlüğü ve üst yüzün tutulması periferik tipte görülür.",
+    "2020-2021: Kas güçsüzlüğü (felç) nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Motor nöron hastalığında derin tendon refleksleri azalır.",
+    "Bu soru, kas güçsüzlüğü nedenlerinin zaaf dağılımını ve motor nöron hastalığının refleks bulgusunu bilip bilmediğinizi ölçer.",
+    "Motor nöron hastalığında birinci ve ikinci motor nöron birlikte tutulur ve derin tendon refleksleri artar; Hoffmann ve Babinski de görülür.",
+    "Bu nedenle motor nöron hastalığında derin tendon reflekslerinin azaldığını söyleyen ifade yanlıştır ve doğru yanıt odur.",
+    "Diğer ifadeler doğrudur: miyopatilerde proksimal, polinöropatilerde distal kaslarda zaaf beklenir, nöromüsküler kavşak kusurunda oküler ve bulber kaslar tutulur ve medulla spinalis lezyonunda parapleji ile sfinkter kusuru görülür.",
+    "Örnek: Aynı bilgi, amiyotrofik lateral sklerozda hangi refleks bulgusunun görüldüğü sorusuyla da sorulabilir; yanıt derin tendon refleks artışıdır.",
+    "Tuzak: Alt motor nöron tutulumunu görüp reflekslerin azalacağını sanmak; motor nöron hastalığında üst motor nöron da tutulduğu için refleksler artar.",
+    "2019-2020: İkinci motor nöron (alt motor nöron) tutulumu ile ilgili aşağıdaki bulgular veriliyor: I. Kas tonusu azalır. II. Derin tendon refleksleri azalır. III. Kas atrofisi olur. IV. Patolojik refleksler görülür. Bu bulgulardan hangisi/hangileri görülür?",
+    "Cevap: I, II ve III.",
+    "Bu soru, ikinci motor nöron tutulumunda görülen bulguların tamamını öncüllerle ayırt etmenizi ölçer.",
+    "İkinci motor nöron hastalıklarında tonus azalır, tendon refleksleri azalır ya da kaybolur ve kaslar atrofiktir; patolojik refleks yoktur.",
+    "Bu nedenle ilk üç bulgunun birlikte seçildiği birleşim doğrudur ve doğru yanıt odur.",
+    "En güçlü çeldirici dördüncü öncülü de ekleyen birleşimdir; çünkü patolojik refleksler kortikospinal yol hastalığına, yani birinci motor nöron düzeyine aittir.",
+    "Örnek: Aynı bilgi, birinci motor nöron hastalığında hangi bulguların görüldüğü öncüllü sorusuyla da sorulabilir; yanıt tonus ve tendon refleks artışı ile patolojik reflekslerdir.",
+    "Tuzak: Patolojik refleksleri alt motor nöron bulgusu saymak; bu refleksler yalnızca kortikospinal yol hastalıklarında ortaya çıkar."
+   ],
+   "v": "0e7ccb7f30"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 7 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 7 çıkmış soru var; 1 tanesi öncüllü, 3 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 13, 15, 21, 27, 28."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 7 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 7 çıkmış soru var; 1 tanesi öncüllü, 3 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 13, 15, 21, 27, 28."
+   ],
+   "v": "b266897522"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Patolojik refleksler: yalnız kortikospinal yol hastalığında",
+     "metin": "Sık yapılan hata: Artmış tendon refleksini patolojik refleks sanmak; patolojik refleks Babinski, Hoffmann ve klonus gibi normalde bulunmayan bulgulardır. Ayrıca: Patolojik refleksleri alt motor nöron bulgusu saymak; bu refleksler yalnızca kortikospinal yol hastalıklarında ortaya çıkar."
+    },
+    {
+     "baslik": "Piramidal hemiplejide lokalizasyon: korteks, kapsüla interna, beyin sapı, m. spinalis",
+     "metin": "Sık yapılan hata: Medulla spinalis lezyonunu da beyin lezyonu gibi karşı tarafta felç yapar sanmak; omurilikte felç lezyonla aynı taraftadır."
+    },
+    {
+     "baslik": "Fasikülasyon ve duyu kusuru: motor düzeylere göre dağılım",
+     "metin": "Sık yapılan hata: Refleks ve tonus artışını ikinci motor nöron hasarına yüklemek; ikinci motor nöronda bunlar azalır. Ayrıca: Duyu kusurunu ikinci motor nöron hasarının sabit bulgusu saymak; ön boynuz lezyonunda duyu kusuru yoktur."
+    },
+    {
+     "baslik": "Yüz felci: santral ve periferik tip",
+     "metin": "Sık yapılan hata: Santral ve periferik tipi karıştırmak; göz kapatma güçlüğü ve üst yüzün tutulması periferik tipte görülür."
+    },
+    {
+     "baslik": "Motor nöron hastalığı ve amiyotrofik lateral skleroz",
+     "metin": "Sık yapılan hata: Alt motor nöron tutulumunu görüp reflekslerin azalacağını sanmak; motor nöron hastalığında üst motor nöron da tutulduğu için refleksler artar."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Patolojik refleksler: yalnız kortikospinal yol hastalığında: Sık yapılan hata: Artmış tendon refleksini patolojik refleks sanmak; patolojik refleks Babinski, Hoffmann ve klonus gibi normalde bulunmayan bulgulardır. Ayrıca: Patolojik refleksleri alt motor nöron bulgusu saymak; bu refleksler yalnızca kortikospinal yol hastalıklarında ortaya çıkar.",
+    "Piramidal hemiplejide lokalizasyon: korteks, kapsüla interna, beyin sapı, m. spinalis: Sık yapılan hata: Medulla spinalis lezyonunu da beyin lezyonu gibi karşı tarafta felç yapar sanmak; omurilikte felç lezyonla aynı taraftadır.",
+    "Fasikülasyon ve duyu kusuru: motor düzeylere göre dağılım: Sık yapılan hata: Refleks ve tonus artışını ikinci motor nöron hasarına yüklemek; ikinci motor nöronda bunlar azalır. Ayrıca: Duyu kusurunu ikinci motor nöron hasarının sabit bulgusu saymak; ön boynuz lezyonunda duyu kusuru yoktur.",
+    "Yüz felci: santral ve periferik tip: Sık yapılan hata: Santral ve periferik tipi karıştırmak; göz kapatma güçlüğü ve üst yüzün tutulması periferik tipte görülür.",
+    "Motor nöron hastalığı ve amiyotrofik lateral skleroz: Sık yapılan hata: Alt motor nöron tutulumunu görüp reflekslerin azalacağını sanmak; motor nöron hastalığında üst motor nöron da tutulduğu için refleksler artar.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "0e8fd17c1b"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}
