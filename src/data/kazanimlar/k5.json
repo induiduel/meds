@@ -4300,6 +4300,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Akut Lösemiler",
          "explanation": "Auer cisimcikleri miyeloid blastlara özgüdür ve akut miyeloid lösemiyi (AML) akut lenfoblastik lösemiden ayırmada kullanılan önemli bir morfolojik ipucudur.\n\n- **Yapı:** Primer (azurofilik) granüllerin birleşmesiyle oluşan çubuk şeklinde inklüzyonlar; miyeloperoksidaz pozitiftir.\n- **AML tanısı:** Kemik iliğinde blast oranı %20 veya üzeri; bazı rekürren genetik anomalilerde (t(15;17), t(8;21), inv(16)) blast oranından bağımsız tanı konur.\n- **Akut promiyelositik lösemi:** t(15;17) PML-RARA füzyonu; çok sayıda Auer cisimciği içeren faggot hücreler ve yaygın damar içi pıhtılaşma riski; tüm-trans retinoik asit ile tedavi edilir.\n- **Diğer cisimcikler:** Russell ve Dutcher cisimcikleri plazma hücresinde, Reed-Sternberg hücresi Hodgkin lenfomada, smudge hücreler KLL'de görülür.\n- **İmmünfenotip:** Miyeloid blastlar CD13, CD33, CD117 ve MPO eksprese eder.\n\nSınav: Auer cisimciği görülen blast miyeloid kökenlidir; lenfoblastik lösemide bulunmaz."
+        },
+        {
+         "id": "cl-p11-dahiliye-p129-20",
+         "questionNumber": 20,
+         "stem": "Aşağıdaki ifadelerden hangisi yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Lenfomalı hastalarda hümoral immünite normaldir"
+          },
+          {
+           "key": "B",
+           "text": "Endemik Burkitt Lenfomanın %95 oranında Ebstein Barr virüsü enfeksiyonu ilişkisi bulunur"
+          },
+          {
+           "key": "C",
+           "text": "T hücreli lenfomaların en sık görülen alt tipi foliküler lenfomalardır"
+          },
+          {
+           "key": "D",
+           "text": "Primer myelofibroz çevre kanında lökoeritroblastik tablo, ekstramedüller hematopoez ve splenomegali ile karakterize klonal bir hastalıktır"
+          },
+          {
+           "key": "E",
+           "text": "Kronik myeloid löseminin blastik fazında periferik yayma veya kemik iliğinde blast oranı %20'nin üzerindedir"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "T ve NK Hücreli Lenfomalar",
+         "explanation": "T hücreli lenfomalar nadirdir; en sık görülen lenfoma alt tipleri B hücreli kökenlidir ve foliküler lenfoma bir B hücreli lenfomadır. Bu yüzden C şıkkı yanlıştır.\n\n- **Lenfoma ve bağışıklık:** Hümoral yanıt tümör tipine göre değişir; bu şık genel bir özet olarak verilmiştir ve sorunun asıl hatası C şıkkındadır.\n- **Endemik Burkitt lenfoma:** Olguların yaklaşık %95'inde Epstein-Barr virüsü ilişkisi bulunur.\n- **Primer myelofibroz:** Çevre kanında lökoeritroblastik tablo, ekstramedüller hematopoez ve splenomegali ile giden klonal miyeloproliferatif hastalıktır.\n- **Kronik myeloid lösemi:** Blastik fazda periferik kanda veya kemik iliğinde blast oranı %20'nin üzerindedir.\n\nSınav: Foliküler lenfoma t(14;18) ile giden B hücreli lenfomadır; T hücreli lenfoma alt tipi olarak sunulması klasik tuzaktır."
         }
        ],
        "ornekSorular": [],
@@ -4894,6 +4926,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Kronik Miyeloproliferatif Neoplaziler",
          "explanation": "Polisitemia veranın tükenmiş (spent) fazı post-PV miyelofibrozdur: kemik iliği fibrozisi, ekstramedüller hematopoez ve primer miyelofibrozise benzer klinik tablo görülür.\n\n- **Proliferatif faz:** JAK2 V617F ile EPO'dan bağımsız eritrositoz, lökositoz ve trombositoz; düşük serum EPO, pletora, kaşıntı ve tromboz riski.\n- **Fibrotik dönüşüm:** Olguların yaklaşık %15–20'sinde yıllar içinde megakaryosit kaynaklı PDGF ve TGF-β fibrozisi tetikler.\n- **Bulgular:** Masif splenomegali, anemi, lökoeritroblastik kan tablosu (çekirdekli eritrosit, miyelosit), gözyaşı damlası şeklinde eritrositler ve kuru aspirasyon.\n- **Lösemik dönüşüm:** Az sayıda olguda AML'ye dönüşüm olur; lenfoid dönüşüm beklenmez.\n\nSınav: PV'de EPO düşüktür; tükenmiş fazda eritrositoz yerini anemi ve fibrozise bırakır, tablo primer miyelofibrozu taklit eder."
+        },
+        {
+         "id": "cl-p11-dahiliye-p060-4",
+         "questionNumber": 4,
+         "stem": "Myeloproliferatif Hastalıklar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Polisitemia Verada kırmızı kan hücre kütlesinde artış vardır"
+          },
+          {
+           "key": "B",
+           "text": "Primer myelofibrozda extramedüller hematopoez ve splenomegali görülebilir"
+          },
+          {
+           "key": "C",
+           "text": "Reaktif trombositozda trombosit sayısı genellikle 1 milyon üzerindedir"
+          },
+          {
+           "key": "D",
+           "text": "Polisitemia Verada Lökosit Alkalen Fosfataz (LAP) skoru yüksektir"
+          },
+          {
+           "key": "E",
+           "text": "Kronik Myeloid Lösemide imatinib mesilat kullanılır"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kronik Miyeloproliferatif Neoplaziler",
+         "explanation": "Reaktif trombositozda trombosit sayısı çoğunlukla 600.000 civarında kalır ve 1 milyonu nadiren aşar; bu yüzden C şıkkı yanlış ifadedir.\n\n- **Polisitemia vera:** Eritrosit kitlesi artar ve lökosit alkalen fosfataz (LAP) skoru yüksek bulunur.\n- **Primer miyelofibroz:** Kemik iliğinde fibrozis gelişir; ekstramedüller hematopoez ve splenomegali tabloya eşlik edebilir.\n- **Reaktif trombositoz:** Enfeksiyon, demir eksikliği, cerrahi ve splenektomi gibi nedenlerle gelişen geçici bir yanıttır; trombosit sayısı genellikle esansiyel trombositemideki kadar yüksek değildir.\n- **Kronik myeloid lösemi:** BCR-ABL tirozin kinazı baskılayan imatinib mesilat ilk basamak tedavidir.\n\nSınav: LAP skoru polisitemia verada yüksek, kronik myeloid lösemide düşüktür; reaktif trombositozda sayı çok yüksek değildir."
         }
        ],
        "ornekSorular": [],
@@ -24462,6 +24526,70 @@
          "discipline": "İç Hastalıkları",
          "topic": "Anemi Tanı, Patofizyoloji ve Sınıflaması",
          "explanation": "Kanama ve hemoliz rejeneratif anemilerdir; beklenen yanıt retikülositozdur, bu nedenle retikülositopeni bildiren D şıkkı yanlıştır.\n\n- **Retikülosit:** Çekirdeksiz, RNA kalıntısı taşıyan genç eritrosittir; periferde yaklaşık bir gün içinde olgunlaşır.\n- **Rejeneratif ve hiporejeneratif ayrım:** Retikülosit üretim indeksi >2–3 ise kayıp/yıkım, <2 ise üretim bozukluğu düşünülür.\n- **Eritrosit indeksleri:** MCV boyutu, MCH ve MCHC hemoglobin içeriğini, RDW anizositozu gösterir.\n- **RDW'nin ayırıcı tanıdaki yeri:** Mikrositer anemide RDW yüksekliği demir eksikliğini, normal RDW talasemi taşıyıcılığını destekler.\n\nSınav: Akut kanama veya hemolizde retikülositopeni görülüyorsa eşlik eden bir kemik iliği sorunu (aplastik kriz gibi) aranmalıdır."
+        },
+        {
+         "id": "cl-p11-dahiliye-p062-2",
+         "questionNumber": 2,
+         "stem": "Anemiler ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Ferritin vücuttaki demir depolarını gösteren bir belirteç olsa da aynı zamanda akut faz reaktan da olduğu için inflamatuar hadiselerde yükselir"
+          },
+          {
+           "key": "B",
+           "text": "Demir eksikliğinde hipokrom ve mikrositer anemi meydana gelir, doğurganlık çağında olan ve adet dönemi nedeniyle kan kaybı olan kadınlar yüksek risk grubundadır"
+          },
+          {
+           "key": "C",
+           "text": "Soluk limon sarısı cilt rengi ve glossit (dilde papillalar silinmiş, dil biftek görünümünde) Vit B12 eksikliğinde karakteristik bulgulardır"
+          },
+          {
+           "key": "D",
+           "text": "Yiyecekler ile alınan Vitamin B12 (kobalamin)'nin emilebilmesi için mideden salgılanan intrensek faktöre bağlanması gereklidir"
+          },
+          {
+           "key": "E",
+           "text": "Vücuttaki bir kanama veya artmış eritrosit yıkımı (hemoliz) neticesinde retikülositopeni meydana gelir"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "İç Hastalıkları",
+         "topic": "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+         "explanation": "Kanama ya da artmış eritrosit yıkımı (hemoliz) sonrasında kemik iliği kaybı telafi etmek için eritrosit üretimini artırır; bu nedenle retikülositopeni değil retikülositoz görülür. E şıkkı doğru olmayan ifadedir.\n\n- **Ferritin:** Depo demirini yansıtır ancak akut faz reaktanı olduğu için enflamasyonda yükselir.\n- **Demir eksikliği anemisi:** Hipokrom mikrositer tablo vardır; adet gören doğurganlık çağındaki kadınlar yüksek risk grubudur.\n- **B12 eksikliği:** Soluk limon sarısı cilt ve glossit (biftek dil) karakteristik bulgulardır.\n- **İntrensek faktör:** Diyetteki B12'nin terminal ileumda emilmesi için mide parietal hücrelerinden salgılanan intrensek faktöre bağlanması gerekir.\n- **Retikülosit yanıtı:** Kemik iliği yeterliyse retikülosit sayısı artar; azalma yetersiz üretimi gösterir.\n\nSınav: Kanama ve hemolizde retikülositoz, aplastik ve yetersiz üretim anemilerinde retikülositopeni beklenir."
+        },
+        {
+         "id": "cl-p11-dahiliye-p062-6",
+         "questionNumber": 6,
+         "stem": "Anemiler ile ilgili doğru olmayan ifade aşağıdakilerden hangisidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "MCV; eritrositlerin ortalama büyüklüğünü tanımlar ve aneminin morfolojik olarak (mikrositer, normositer, makrositer) sınıflandırmasında en önemli parametredir"
+          },
+          {
+           "key": "B",
+           "text": "Çeliozis (ağız köşelerinde yara) Vitamin B2 (Riboflavin) eksikliğinde görülen karakteristik bir bulgudur"
+          },
+          {
+           "key": "C",
+           "text": "Eritropoietin, primer olarak karaciğer tarafından üretilen ve kemik iliğinde eritropoezi uyaran bir hormondur"
+          },
+          {
+           "key": "D",
+           "text": "Pika ve kaşık tırnak demir eksikliği anemisinde görülen karakteristik birer bulgudur"
+          },
+          {
+           "key": "E",
+           "text": "Vejeteryan diyet, kötü sosyoekonomik koşullar ve malnutrisyonlu hastalar, Vit B12 eksikliği açısından yüksek risk grubudur"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "İç Hastalıkları",
+         "topic": "Anemi Tanı, Patofizyoloji ve Sınıflaması",
+         "explanation": "Eritropoietin böbreklerde (peritübüler interstisyel fibroblastlarda) üretilir; karaciğer yalnızca fetal dönemde başlıca üretim yeridir. Bu nedenle \"primer olarak karaciğer tarafından üretilir\" ifadesi yanlıştır.\n\n- **MCV:** Eritrosit ortalama hacmini verir ve anemiyi mikrositer, normositer, makrositer olarak sınıflayan en önemli göstergedir.\n- **Riboflavin eksikliği:** Çeliozis (ağız köşesinde fissür) ve anguler stomatit görülür.\n- **Demir eksikliği:** Pika (buz, toprak gibi besin dışı maddeleri yeme isteği) ve kaşık tırnak (koilonişi) tipik bulgulardır.\n- **B12 eksikliği:** Vejetaryen diyet, malnutrisyon ve düşük sosyoekonomik koşullar yüksek risk oluşturur.\n- **Böbrek hastalığı:** Eritropoietin yapımı azaldığı için kronik böbrek hastalığında normokrom normositer anemi gelişir.\n\nSınav: Eritropoietin böbrekten salgılanır; kronik böbrek yetmezliği anemisi bu hormonun eksikliğine bağlıdır."
         },
         {
          "id": "d3-k5-dah-012",

@@ -3384,7 +3384,40 @@
        "id": "k3-d3-c3-kz-3",
        "metin": "GİS Motilite Bozuklukları klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "cl-p11-dahiliye-p001-9",
+         "questionNumber": 9,
+         "stem": "Özofagus kanseri ile motilite bozukluğunu ayırt etmede hangi anamnez bilgisi daha önemlidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Kilo kaybı olması"
+          },
+          {
+           "key": "B",
+           "text": "Katı ve sıvı eş zamanlı yutma zorluğu"
+          },
+          {
+           "key": "C",
+           "text": "Katılarla başlayan progresif disfaji"
+          },
+          {
+           "key": "D",
+           "text": "Önce sıvıları yutmakta zorlanmayla başlayan disfaji"
+          },
+          {
+           "key": "E",
+           "text": "Odinofaji varlığı"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "İç Hastalıkları",
+         "topic": "GİS Motilite Bozuklukları",
+         "explanation": "Disfajinin başlangıç biçimi, mekanik darlık ile motilite bozukluğunu ayırmada en yararlı anamnez ögesidir. Yutma güçlüğünün önce hangi kıvamdaki besinle başladığı ve nasıl ilerlediği sorgulanmalıdır.\n\n- **Mekanik obstrüksiyon:** Özofagus kanserinde lümen tümörle giderek daraldığı için önce katılarda, sonra yarı katı ve sıvılarda ilerleyici yutma güçlüğü gelişir.\n- **Motilite bozukluğu:** Akalazya ve yaygın özofagus spazmında peristaltizm ya da sfinkter gevşemesi bozulduğundan yutma güçlüğü katı ve sıvılarda baştan birlikte görülür.\n- **Ortak bulgular:** Kilo kaybı ve odinofaji her iki durumda da bulunabileceğinden ayırt ettiriciliği düşüktür.\n\nSınav: Katılarla başlayıp ilerleyen disfaji kanseri, katı ve sıvıda baştan birlikte olan disfaji motilite bozukluğunu düşündürür."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -11961,7 +11994,40 @@
        "id": "k3-d4-c9-kz-3",
        "metin": "Bağırsak Polipler ve Polipozis Sendromları klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "cl-p11-dahiliye-p001-7",
+         "questionNumber": 7,
+         "stem": "Aşağıdakilerden hangisi bir polipin kansere dönüşme riskinin en yüksek olduğu durumdur?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Hamartomatöz polip olması"
+          },
+          {
+           "key": "B",
+           "text": "Polipin adenomatöz yapıda olması"
+          },
+          {
+           "key": "C",
+           "text": "Poliplerin genç yaşta ortaya çıkması"
+          },
+          {
+           "key": "D",
+           "text": "Polipin saplı olması"
+          },
+          {
+           "key": "E",
+           "text": "Polipin çok sayıda olması"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Bağırsak Polipler ve Polipozis Sendromları",
+         "explanation": "Kolorektal poliplerde kanser riski polipin tipine, boyutuna, displazi derecesine ve sayısına göre değişir. Soruda riskin en yüksek olduğu durum sorulmaktadır; polipin çok sayıda olması polipozis sendromlarına işaret eder.\n\n- **Çoklu polip:** Ailesel adenomatöz polipozis gibi sendromlarda yüzlerce adenom bulunur ve tedavi edilmezse kolon kanseri hemen her hastada gelişir; sayı arttıkça risk belirgin yükselir.\n- **Adenomatöz yapı:** Adenomlar kansere öncül neoplastik lezyonlardır; ancak tek bir adenomda risk boyut, villöz komponent ve displaziye bağlıdır.\n- **Hamartomatöz polip:** Soliter hamartomatöz poliplerde malign dönüşüm düşüktür; polipozis sendromlarında risk artar.\n- **Sap ve yaş:** Saplı yapı ya da genç yaşta ortaya çıkma tek başına kanser riskini belirlemez.\n\nSınav: Çok sayıda polip (polipozis) kanser riskinin en yüksek olduğu durumdur. Not: Adenomatöz yapı da risk taşır; kaynakta işaretli cevap E olduğundan bu şık korunmuştur."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -12225,7 +12291,40 @@
        "id": "k3-d4-c10-kz-2",
        "metin": "Kolorektal Kanser Patogenezi ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "cl-p11-dahiliye-p002-11",
+         "questionNumber": 11,
+         "stem": "54 yaşında erkek hasta sağ üst karın ağrısı ile başvuruyor. Fizik muayenede karaciğer kot altında 3 cm irregüler olarak ele geliyor ve ultrasonda karaciğerde çok sayıda metastatik kitle saptanıyor. Karaciğer biyopsisi kolon kanseri metastazı ile uyumlu olarak gelen hastada aşağıdakilerden hangisi kolon kanserinin sağ kolon kökenli olduğunu düşündürür?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Diyare atakları"
+          },
+          {
+           "key": "B",
+           "text": "Kabızlık"
+          },
+          {
+           "key": "C",
+           "text": "Gayta kalibrasyonunda azalma"
+          },
+          {
+           "key": "D",
+           "text": "Hematokezya"
+          },
+          {
+           "key": "E",
+           "text": "Melena"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kolorektal Adenokarsinom ve Apandisit",
+         "explanation": "Kolon kanserinin kliniği tümörün bulunduğu bölgeye göre değişir; sağ ve sol kolonun lümen genişliği ve dışkı kıvamı farklıdır. Bu hastada sağ kolon kökenli olduğunu düşündüren bulgu sorulmaktadır.\n\n- **Sağ kolon:** Lümen geniş ve içerik sıvıya yakın olduğundan tümör geç dönemde tıkanma yapar; kanama çoğunlukla gizlidir ve anemi, halsizlik öne çıkar. Kaynakta diyare atakları sağ kolon bulgusu olarak işaretlenmiştir.\n- **Sol kolon ve rektum:** Lümen dar ve dışkı katıdır; kabızlık, dışkı kalibrasyonunda azalma ve taze kanama (hematokezya) sol kolon bulgularıdır.\n- **Melena:** Siyah katran kıvamlı dışkı daha çok üst gastrointestinal kanamayı düşündürür; kolon kanseri kanaması çoğunlukla dışkıyla karışık ve gizli seyreder.\n\nSınav: Kabızlık, gayta kalibrasyonunda azalma ve hematokezya sol kolon; sağ kolonda ise gizli kanama, anemi ve diyare atakları öne çıkar. Not: Kaynakta işaretli cevap A'dır; melena şıkkı tartışmalı olabilir."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -14569,7 +14668,40 @@
        "id": "k3-d4-c14-kz-3",
        "metin": "Kolestatik Karaciğer Hastalıkları klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "cl-p11-dahiliye-p001-5",
+         "questionNumber": 5,
+         "stem": "Primer biliyer siroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Semptomların tedavisinde kolestiramin ve rifampin kullanılabilir"
+          },
+          {
+           "key": "B",
+           "text": "Tedavide ursodeoksikolik asit kullanılır"
+          },
+          {
+           "key": "C",
+           "text": "Otoimmün hastalıklarla birliktelik olabilir"
+          },
+          {
+           "key": "D",
+           "text": "Ksantelazma ve ksantom hastalık seyrinde gelişebilir"
+          },
+          {
+           "key": "E",
+           "text": "Süpüratif kolanjit ve ekstrahepatik safra kanallarının harabiyeti vardır"
+          }
+         ],
+         "year": "Yılı belirsiz",
+         "discipline": "İç Hastalıkları",
+         "topic": "Kolestatik Karaciğer Hastalıkları",
+         "explanation": "Primer biliyer siroz (primer biliyer kolanjit), antimitokondriyal antikorların eşlik ettiği, otoimmün kökenli ve yavaş ilerleyen kolestatik bir karaciğer hastalığıdır. Hasar intrahepatik küçük ve orta çaplı safra kanallarında toplanır.\n\n- **Patoloji:** Portal alanlarda lenfositik infiltrasyon, granülom ve safra kanallarında non-süpüratif (irinsiz) destrüksiyon görülür; ekstrahepatik safra yolları sağlamdır.\n- **Klinik ve laboratuvar:** Orta yaşlı kadınlarda kaşıntı, yorgunluk, alkalen fosfataz yüksekliği ve antimitokondriyal antikor pozitifliği tipiktir.\n- **Tedavi:** Ursodeoksikolik asit temel tedavidir; kaşıntı için kolestiramin ve rifampin kullanılabilir.\n- **Birliktelikler:** Sjögren sendromu, tiroidit ve skleroderma gibi otoimmün hastalıklar eşlik edebilir; uzun süren kolestaz ksantelazma ve ksantom oluşturabilir.\n\nSınav: Süpüratif kolanjit ve ekstrahepatik safra yolu harabiyeti primer biliyer sirozun değil, tıkayıcı ya da enfekte safra yolu hastalıklarının bulgusudur; bu nedenle yanlış ifade E şıkkıdır."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []

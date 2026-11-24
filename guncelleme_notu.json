@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 880,
-  "baslik": "İçerik hattında iki denetim iyileştirmesi",
+  "onem": 881,
+  "baslik": "Klinik çıkmış sorular güncellendi",
   "maddeler": [
-    "Yeni derslerin bilgi paketi denetimi artık kazanım başlığı uyumsuzluğunu ilk aşamada yakalıyor.",
-    "Hocanın sorabileceği ara sorular yalnız bağımsız denetimden geçtikten sonra yayına giriyor."
+    "Klinik ders çıkmış derlemelerinden 20 yeni soru eklendi, 52 soruya kaynak ve düzeltme işlendi.",
+    "Kurul 3 ve Kurul 5 kazanımlarının çıkmış soru listeleri yeni sorularla güncellendi."
   ],
-  "eklenen": [
-    "Ders özeti (Kurul 2, 50 ders)"
-  ],
+  "eklenen": [],
   "degisen": [
-    "Ders özeti: ilerleme cihazlar arası eşitleniyor"
+    "Kazanım çıkmış soru listeleri (Kurul 3, 5)"
   ],
   "duzeltilen": [],
   "silinen": [],
