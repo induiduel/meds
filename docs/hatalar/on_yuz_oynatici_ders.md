@@ -196,3 +196,9 @@
 - **Belirti:** Mesane V2/V3 "Patoloji 26" (Böbrek'in yanında), İnvaziv Serviks V2/V3 "Patoloji 39" (listenin en sonunda) görünüyordu.
 - **Kök neden:** Kurul 1 numarası PDF'in Drive dosya adındaki "26)" gibi sayıdan okunuyor; çakışan numaralar `canliDers.ts › BRANS_DUZELT` ile yalnız V1 anahtarına düzeltilmişti. `…-v2/-v3` anahtarları düzeltmeyi bulamayıp aynı PDF'in hatalı numarasına düşüyordu.
 - **Çözüm/önleme:** `bransBilgisi` elle düzeltme ve yedek tabloda sürüm ekini (`-v\d+`) atıp V1 kaydına da bakar. Yeni sürüm anahtarı eklerken V1 düzeltmesi kendiliğinden geçer; ayrı kayıt yazma.
+
+## H652 — Sesli derste "Derste kendiliğinden göster" ayarı bulunamıyordu (2026-11-24)
+- **Belirti:** Kullanıcı ara soruların derste kendiliğinden çıkmasını açıp kapatacak yeri göremedi.
+- **Kök neden:** Ayar yalnız ara soru sayfasının alt çubuğundaydı; varsayılan kapalı olduğu için sayfa ancak elle açılınca görünüyordu, "hepsini çöz" (ünlem) akışında ise hiç gösterilmiyordu. Ayar ile ayara ulaşmanın tek yolu aynı kapalı kapının arkasındaydı.
+- **Çözüm:** `CdHocaAra.tsx › useHocaAraTercih` (abone olunabilir ortak tercih) eklendi; Görünüm çekmecesi › Okuma sekmesinde "Soruları derste kendiliğinden göster" ve "Soruyu otomatik çöz" anahtarları her zaman görünür. Soru sayfasındaki kutular aynı tercihi okur/yazar.
+- **Önleme:** Bir özelliği açan/kapatan ayar, o özellik kapalıyken de ulaşılabilir kalıcı bir yerde (ayar çekmecesi) durur; yalnız özelliğin kendi ekranına konmaz.

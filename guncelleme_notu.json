@@ -1,15 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 884,
-  "baslik": "Sesli ders sıralaması düzeltildi",
+  "onem": 885,
+  "baslik": "Sesli derste soru ayarları Görünüm menüsünde",
   "maddeler": [
-    "**Sesli dersler:** Mesane ve İnvaziv Serviks derslerinin V2/V3 sürümleri listede doğru yerine (Patoloji 27 ve 29) taşındı."
+    "**Sesli ders:** \"Soruları derste kendiliğinden göster\" ve \"Soruyu otomatik çöz\" artık Görünüm ayarları › Okuma sekmesinde her zaman açılıp kapatılabilir."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Sesli ders listesinde V2/V3 sürüm sıralaması"
+  "degisen": [
+    "Sesli ders ara soru ayarları Görünüm › Okuma sekmesine taşındı"
   ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": [
     {

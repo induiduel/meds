@@ -56,11 +56,19 @@ export function useHocaAra(key: string | null | undefined): AraDers | null {
 const TERCIH = 'medsoru_hoca_ara_oto_v1';
 // Varsayılan KAPALI (kullanıcı kararı 2026-11-17): ara soru kendiliğinden açılmaz; ünlem düğmesi/çip ile erişilir, ayardan açılır
 const otoAcik = () => { try { return localStorage.getItem(TERCIH) === '1'; } catch { return false; } };
-const otoYaz = (v: boolean) => { try { localStorage.setItem(TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } };
+const tercihDinleyici = new Set<() => void>();
+const tercihAbone = (f: () => void) => { tercihDinleyici.add(f); return () => { tercihDinleyici.delete(f); }; };
+const otoYaz = (v: boolean) => { try { localStorage.setItem(TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } tercihDinleyici.forEach((f) => f()); };
 /* ── tercih: soru okununca kendiliğinden çözülsün mü (2026-11-06; kapalıysa öğrenci şık seçer ya da Çöz'e basar) ── */
 const COZ_TERCIH = 'medsoru_hoca_ara_coz_v1';
 const cozAcik = () => { try { return localStorage.getItem(COZ_TERCIH) !== '0'; } catch { return true; } };
-const cozYaz = (v: boolean) => { try { localStorage.setItem(COZ_TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } };
+const cozYaz = (v: boolean) => { try { localStorage.setItem(COZ_TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } tercihDinleyici.forEach((f) => f()); };
+/** Görünüm çekmecesi › Okuma: ara soru tercihleri her zaman buradan açılıp kapanır (2026-11-24; soru sayfasındaki kutu yalnız soru açılınca görünüyordu) */
+export function useHocaAraTercih(): { oto: boolean; setOto: (v: boolean) => void; coz: boolean; setCoz: (v: boolean) => void } {
+  const oto = useSyncExternalStore(tercihAbone, otoAcik);
+  const coz = useSyncExternalStore(tercihAbone, cozAcik);
+  return { oto, setOto: otoYaz, coz, setCoz: cozYaz };
+}
 
 /* ── açık sayfa durumu ── */
 type Acik = { veri: AraDers; liste: AraSoru[]; i: number; hepsi: boolean; caliyordu: boolean; devam: number | null } | null;
@@ -166,8 +174,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   const [vurgu, setVurgu] = useState<string | null>(null); // 'kok' | harf | 'anlatim'
   const [kalan, setKalan] = useState(BEKLE_SN);
   const [durdu, setDurdu] = useState(false);
-  const [oto, setOto] = useState(otoAcik);
-  const [otoCoz, setOtoCoz] = useState(cozAcik);
+  const { oto, setOto, coz: otoCoz, setCoz: setOtoCoz } = useHocaAraTercih();
   const otoCozRef = useRef(otoCoz);
   otoCozRef.current = otoCoz;
   const akis = useRef(0);
@@ -254,7 +261,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   };
   const hemenCoz = () => { akis.current++; cozVeAnlat(q.no, null); };
   const otoCozDegis = (v: boolean) => {
-    setOtoCoz(v); cozYaz(v);
+    setOtoCoz(v);
     if (v && evre === 'dusun') hemenCoz(); // bekleyen soruyu hemen çöz
   };
   const duraklat = () => {
@@ -306,7 +313,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
         <footer className="ha-alt">
           {!hepsi && (
             <label className="ha-oto">
-              <input type="checkbox" checked={oto} onChange={(e) => { setOto(e.target.checked); otoYaz(e.target.checked); }} />
+              <input type="checkbox" checked={oto} onChange={(e) => setOto(e.target.checked)} />
               Derste kendiliğinden göster
             </label>
           )}

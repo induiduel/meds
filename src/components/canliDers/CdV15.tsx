@@ -14,6 +14,7 @@ import { penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, 
 import { useAppearance } from '../../utils/appearance';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import '../../styles/v15/sesli.css';
+import { useHocaAraTercih } from './CdHocaAra';
 import { PDF_GORUNUM, pdfGorunumAyarla, terimYardimciAyarla, usePdfGorunum, useTerimYardimci, type PdfGorunumId } from './CdTerimKatman';
 
 export type CdGorunum = 'metin' | 'ikisi' | 'pdf' | 'altyazi';
@@ -258,6 +259,7 @@ export function CdV15Gorunum(p: {
   const [okuma, setOkuma] = useOkuma();
   const g = usePdfGorunum();
   const terim = useTerimYardimci();
+  const ara = useHocaAraTercih();
   const [appFs, toggleAppFs] = useAppFullscreen();
   const katmanlar = KATMAN_SIRA.filter((id) => PDF_GORUNUM.some((x) => x.id === id));
   const acikN = katmanlar.filter((id) => g[id]).length + (p.terimVar && terim ? 1 : 0);
@@ -329,6 +331,8 @@ export function CdV15Gorunum(p: {
             {p.vurguVar && (
               <Anahtar ad="Önemli yerleri vurgula" acik="Çıkmışta, örnek sorularda ve spotlarda geçen cümleler işaretlenir" deger={p.vurgu} set={p.setVurgu} />
             )}
+            <Anahtar ad="Soruları derste kendiliğinden göster" acik="Hocanın sorabileceği soru, ilgili paragraf bitince ekrana gelir" deger={ara.oto} set={ara.setOto} />
+            <Anahtar ad="Soruyu otomatik çöz" acik="Soru okununca cevap ve açıklama kendiliğinden gelir" deger={ara.coz} set={ara.setCoz} />
           </div>
         )}
       </div>
