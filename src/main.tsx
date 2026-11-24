@@ -50,6 +50,7 @@ import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { arkaPlanPushKur } from './services/arkaPlanPush';
 import { cevrimdisiGibi, sunucuyaUlasilir } from './services/cevrimdisi/baglanti';
 import { hizliMod, hizliModuKur } from './services/hizliMod';
+import { erisimEngelliMi } from './services/erisimSiniri';
 import { prefetchRoute } from './routePrefetch';
 import './styles/hizli.css';
 
@@ -67,14 +68,17 @@ markDeviceClasses();
 // PWA & Çevrimdışı Servis Başlatıcı
 if (typeof window !== 'undefined') {
   pwaService.initServiceWorker().catch(() => {});
-  offlineDatabaseService.loadStats().catch(() => {});
-  arkaPlanPushKur();
-  // Sayfa kapalıyken biten canlı ders indirmeleri (sw.js bekleme önbelleği) açılışta kaydedilir
-  if ('caches' in window) {
-    void caches.has('medsoru-cd-bekleyen').then((v) => { if (v) return import('./components/canliDers/canliDersCevrimdisi').then((m) => m.cdBekleyenleriTamamla()); }).catch(() => {});
+  // Erişim engelli oturum: veritabanı/ses/görsel indirilmez (2026-11-23)
+  if (!erisimEngelliMi()) {
+    offlineDatabaseService.loadStats().catch(() => {});
+    arkaPlanPushKur();
+    // Sayfa kapalıyken biten canlı ders indirmeleri (sw.js bekleme önbelleği) açılışta kaydedilir
+    if ('caches' in window) {
+      void caches.has('medsoru-cd-bekleyen').then((v) => { if (v) return import('./components/canliDers/canliDersCevrimdisi').then((m) => m.cdBekleyenleriTamamla()); }).catch(() => {});
+    }
+    // Çevrimdışı merkezi: yarım kalan indirmeler sürer, çevrimdışı moddaysa uygulama ve ders güncellemeleri iner (services/cevrimdisi)
+    if (!hizliMod()) window.setTimeout(() => { void import('./services/cevrimdisi/paketMotoru').then((m) => m.cevrimdisiBaslat()).catch(() => {}); }, 2500);
   }
-  // Çevrimdışı merkezi: yarım kalan indirmeler sürer, çevrimdışı moddaysa uygulama ve ders güncellemeleri iner (services/cevrimdisi)
-  if (!hizliMod()) window.setTimeout(() => { void import('./services/cevrimdisi/paketMotoru').then((m) => m.cevrimdisiBaslat()).catch(() => {}); }, 2500);
 }
 
 // Klavye açılıp kapanırken görsel alanı izle: katmanlar --vvh ile kısalır,
@@ -124,24 +128,34 @@ installToastBridge();
 installNetworkBanner();
 installUpdatePrompt();
 installBakimEkrani();
-installNotesSync();
-// Günlük önce kurulur: sekme gizlenince önce son ziyaret yazılır, sonra eşitleme gönderir
-installEtkinlikGunlugu();
-installWebVitals(); // gerçek kullanıcı başarım ölçümü (%25 örnek, boşta kurulur)
-installUserDataAutoBackup();
-installStudyTimer();
-if (hizliMod()) {
-  // TV / performans modu: yan kurulumlar yok; yalnız sesli ders ve çözücü kodu önden iner
-  prefetchRoute('canli_ders');
-  window.setTimeout(() => { prefetchRoute('soru_cozucu'); prefetchRoute('cikmis_cozucu'); }, 1500);
+// Erişim sınırı (2026-11-23): site yalnız Arzu Türk + yönetici. İzinli listede olmayan oturumda hiçbir eşitleme/
+// ön yükleme/çevrimdışı indirme kurulmaz; App yalnız hata ekranını çizer. Liste tek kaynak: services/erisimSiniri.ts
+if (erisimEngelliMi()) {
+  installKabukBayraklari();
 } else {
-  installPullToRefresh();
-  installPresence();
-  prefetchIdle();
-  installAutoReveal();
-  installSelectionShare();
+  kurulumVeEsitleme();
 }
-installKabukBayraklari();
+
+function kurulumVeEsitleme() {
+  installNotesSync();
+  // Günlük önce kurulur: sekme gizlenince önce son ziyaret yazılır, sonra eşitleme gönderir
+  installEtkinlikGunlugu();
+  installWebVitals(); // gerçek kullanıcı başarım ölçümü (%25 örnek, boşta kurulur)
+  installUserDataAutoBackup();
+  installStudyTimer();
+  if (hizliMod()) {
+    // TV / performans modu: yan kurulumlar yok; yalnız sesli ders ve çözücü kodu önden iner
+    prefetchRoute('canli_ders');
+    window.setTimeout(() => { prefetchRoute('soru_cozucu'); prefetchRoute('cikmis_cozucu'); }, 1500);
+  } else {
+    installPullToRefresh();
+    installPresence();
+    prefetchIdle();
+    installAutoReveal();
+    installSelectionShare();
+  }
+  installKabukBayraklari();
+}
 
 // Auto reload on stale Vite chunk after a new deployment
 // (Wi-Fi bağlı ama internetsizken de yenilenmez: önce sunucuya ulaşılıyor mu bakılır)

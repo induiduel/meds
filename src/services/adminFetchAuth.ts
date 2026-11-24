@@ -45,16 +45,12 @@ function isOurApi(input: RequestInfo | URL): boolean {
 }
 
 /**
- * Öğrenci jetonu (2026-10-20, başarım): giriş yapmış her öğrencinin yazma istekleri (POST/PUT/PATCH/DELETE) ve
- * /api/basarim/* istekleri de jeton taşır; sunucu topluluk eylemlerini (soru, yorum, beğeni …) doğrulanmış kişiye yazar.
+ * Jeton eklenmesi gereken istekler (2026-11-23): erişim sınırı yüzünden sunucu /api/* verisini yalnız izinli
+ * hesabın jetonuyla verir; bu yüzden oturum açmış kullanıcının jetonu GET'lerde de eklenir (aynı köken,
+ * üçüncü tarafa asla gitmez). Öğrenci jetonu eskiden yalnız yazma + birkaç uçta eklenirdi.
  */
-function ogrenciJetonu(input: RequestInfo | URL, init?: RequestInit): boolean {
-  const m = String(init?.method || (typeof Request !== 'undefined' && input instanceof Request ? input.method : 'GET')).toUpperCase();
-  if (m !== 'GET' && m !== 'HEAD') return true;
-  const raw = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
-  // Okuma isteklerinden yalnız jeton gerektirenler: başarım, ATP kilitli içerik (olası sorular), topluluk (kendi mesajın),
-  // arkadaşlık + kişi/profil (2026-11-10: jetonsuz GET'te sunucu kişiyi tanımıyor, liste/profil boş geliyordu)
-  try { return /^\/api\/((basarim|olasi-sorular|topluluk|kisi)\/|arkadas(\/|$))/.test(new URL(raw, window.location.href).pathname); } catch { return false; }
+function jetonEklenir(): boolean {
+  return true;
 }
 
 let installed = false;
@@ -69,7 +65,7 @@ export function installAdminFetchAuth() {
         const panelSecret = getStoredPanelSecret();
         const { auth, getLocalAdminSession } = await import('./auth');
         // Açılışta oturum henüz geri yüklenmemişse yönetici istekleri jetonsuz gidip reddedilmesin
-        if (!auth?.currentUser && (getLocalAdminSession() || ogrenciJetonu(input, init)) && typeof (auth as any)?.authStateReady === 'function') {
+        if (!auth?.currentUser && (getLocalAdminSession() || jetonEklenir()) && typeof (auth as any)?.authStateReady === 'function') {
           await Promise.race([(auth as any).authStateReady(), new Promise((r) => setTimeout(r, 4000))]).catch(() => {});
         }
         const user = auth?.currentUser;
@@ -83,12 +79,17 @@ export function installAdminFetchAuth() {
           modified = true;
         }
 
-        if (user && (String(user.email || '').toLowerCase() === ADMIN || ogrenciJetonu(input, init))) {
+        if (user && (String(user.email || '').toLowerCase() === ADMIN || jetonEklenir())) {
           if (!headers.has('Authorization')) {
-            const token = await user.getIdToken();
-            if (token) {
-              headers.set('Authorization', `Bearer ${token}`);
-              modified = true;
+            // Çevrimdışıyken jeton eklenmez: service worker o an önbellekten yanıt verebilsin (jetonlu istek
+            // "kişisel" sayılıp önbelleğe alınmıyordu; bkz. public/sw.js). Ağ yokken jetonun anlamı da yok.
+            const cevrimdisi = typeof navigator !== 'undefined' && navigator.onLine === false;
+            if (!cevrimdisi) {
+              const token = await user.getIdToken();
+              if (token) {
+                headers.set('Authorization', `Bearer ${token}`);
+                modified = true;
+              }
             }
           }
         }
@@ -107,17 +108,24 @@ export function installAdminFetchAuth() {
 /** EventSource başlık taşıyamaz: yönetici jetonu canlı olay akışının adresine eklenir (yalnız /api/realtime/events kabul eder). */
 let cachedToken = '';
 let tokenWatch = false;
-export function adminIdTokenForStream(): string {
+/** Oturum açmış herhangi bir kullanıcının jetonu (erişim sınırı: izinli hesabın canlı akışı da jeton ister) */
+let cachedUserToken = '';
+export function oturumTokenForStream(): string {
   if (!tokenWatch && typeof window !== 'undefined') {
     tokenWatch = true;
     void import('./auth').then(({ auth }) => {
       auth?.onIdTokenChanged?.(async (u: any) => {
         const had = !!cachedToken;
         cachedToken = u && String(u.email || '').toLowerCase() === ADMIN ? await u.getIdToken().catch(() => '') : '';
+        cachedUserToken = u ? await u.getIdToken().catch(() => '') : '';
         // İlk jeton gelince canlı akış yönetici olaylarıyla yeniden kurulsun
         if (!had && cachedToken) window.dispatchEvent(new Event('medsoru:admin-session'));
       });
     }).catch(() => {});
   }
+  return cachedUserToken;
+}
+export function adminIdTokenForStream(): string {
+  oturumTokenForStream();
   return cachedToken;
 }

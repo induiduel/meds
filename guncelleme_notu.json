@@ -1,36 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 886,
-  "baslik": "Sesli derslerde sıralama seçenekleri",
+  "onem": 887,
+  "baslik": "Site erişimi davetli hesaplarla sınırlandı",
   "maddeler": [
-    "**Sıralama:** Sesli ders listesinde Drive sırası, Ders programı ve Eklenme tarihi seçenekleri eklendi; seçim cihazda hatırlanır.",
-    "**Numaralar:** Ders numaraları seçilen sıraya göre boşluksuz verilir; henüz eklenmemiş dersler numara boşluğu bırakmaz."
+    "**Erişim:** Site yalnız davetli hesaplara, moderatörlere ve yöneticilere açık; diğer hesaplar bilgilendirme ekranı görür."
   ],
   "eklenen": [
-    "Sesli ders listesi sıralama seçenekleri"
+    "Davetli hesap erişim sınırı"
   ],
-  "degisen": [
-    "Sesli ders ara soru ayarları Görünüm › Okuma sekmesine taşındı"
-  ],
-  "duzeltilen": [
-    "Sesli ders numaralarındaki boşluklar"
-  ],
+  "degisen": [],
+  "duzeltilen": [],
   "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "Ders özeti",
-      "nerede": {
-        "ad": "Ders çalış › Ders özeti",
-        "yol": "/dersler/ders-ozeti/kurul2"
-      },
-      "amac": "Sınavdan önce bir dersi kısa özetten, çıkmışlarıyla ve sesli dinleyerek hızlıca bitirmek.",
-      "islevler": [
-        "Bölümlü özet maddeleri, Spot/Ayırıcı/Klinik ve Çıkmış rozetleri",
-        "Akılda kalması gerekenler listesi",
-        "Sesli dinleme (okunan madde işaretlenir)",
-        "Dersin sorularını sesli çözüm"
-      ],
-      "ipucu": "Dinlemeye başladıktan sonra bir maddeye dokununca oradan okur."
-    }
-  ]
+  "yenilikler": []
 }

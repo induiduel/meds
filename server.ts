@@ -31,6 +31,8 @@ import { registerAsistanRoutes } from './src/services/asistan/routes';
 import { registerOlasiSoruRoutes } from './src/services/olasiSoruRoutes';
 import { registerKimlikRoutes } from './src/services/kimlikRoutes';
 import { registerAiTestRoutes, aiTestGecerli } from './src/services/aiTestErisim';
+import { erisimKapisi } from './src/services/erisimKapisi';
+import { suspensionActive } from './src/services/userAdminRoutes';
 import { registerIcerikYayinRoutes } from './src/services/icerikYayinRoutes';
 import { registerKampRoutes } from './src/services/kampRoutes';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
@@ -489,6 +491,15 @@ app.use(bayrakKapisi({
 }));
 // Yönetim v16 · içerik görünürlüğü sunucu kapısı (ders/kurul/deste/sesli kapalıysa öğrenciye verilmez)
 app.use(icerikKapisi({ isAdmin: (req) => isRequestAdmin(req) }));
+// Erişim sınırı (2026-11-23, kullanıcı kararı): site yalnız Arzu Türk + yönetici. İzinli listede olmayan
+// oturum /api/* verisini (committees, questions, past-exams, ders/ses…) ALAMAZ; kayıt ve kimlik uçları açık kalır.
+// Gövde ayrıştırıcıdan sonra, veri uçlarından önce. Kaynak: src/services/erisimSiniri.ts (tek liste).
+app.use(erisimKapisi({
+  aiTestGecerli,
+  // 2026-11-24: moderatör ve yönetici rolündeki hesaplar da girer (Kullanıcılar › Roller'den verilir)
+  rolIzinli: (uid, email) => loadUsers().some((u: any) => u && (u.uid === uid || (email && String(u.email || '').toLowerCase() === email))
+    && (u.role === 'moderator' || u.role === 'admin') && !suspensionActive(u.suspension)),
+}));
 // AB17/AB18: bakım kipi (MEDS_BAKIM=1 ya da POST /api/admin/bakim; varsayılan kapalı) + istemci hata bildirimi
 const bakimCtl = registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
 

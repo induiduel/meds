@@ -6,7 +6,7 @@
  * yorum veya otomasyon değişikliği olduğunda istemciye anında iletir.
  */
 
-import { adminIdTokenForStream } from './adminFetchAuth';
+import { adminIdTokenForStream, oturumTokenForStream } from './adminFetchAuth';
 import { AdminNotification } from '../types';
 import { getLocalAdminSession } from './auth';
 import { panelProxied, panelApiBase, isCapacitorNative, defaultApiBaseForThisHost, getStoredPanelSecret } from '../config/deployment';
@@ -100,6 +100,11 @@ class RealtimeEventService {
       else if (panelSecret) qs.set('adminEmail', 'nofrostlife@gmail.com');
       const streamToken = adminIdTokenForStream();
       if (streamToken) qs.set('idToken', streamToken);
+      else {
+        // Erişim sınırı (2026-11-23): izinli ama yönetici olmayan hesap da jetonla bağlanır (sunucu jeton ister)
+        const userToken = oturumTokenForStream();
+        if (userToken) qs.set('idToken', userToken);
+      }
       if (panelSecret) qs.set('panelSecret', panelSecret);
       if (this.lastEventId) qs.set('lastEventId', this.lastEventId);
       const url = `${base}/api/realtime/events${qs.toString() ? `?${qs}` : ''}`;

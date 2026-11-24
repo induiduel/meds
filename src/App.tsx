@@ -53,6 +53,9 @@ const BasarimKatmani = guvenliLazy(() => import('./components/basarim/BasarimKat
 import { arzuHesabiMi, useArzuAcik } from './components/arzu/arzuKimlik';
 const ArzuKatmani = guvenliLazy(() => import('./components/arzu/ArzuKatmani'));
 const DuyuruBandi = guvenliLazy(() => import('./components/system/DuyuruBandi'));
+// Erişim sınırı (2026-11-23): izinli listede olmayan hesap bu ekranı görür, veri/veritabanı yüklenmez
+import { erisimEpostasiIzinli, erisimIzinliMi, rolIzniKaydet } from './services/erisimSiniri';
+const ErisimKapali = guvenliLazy(() => import('./components/system/ErisimKapali'));
 
 const ManageV16 = guvenliLazy(() => import('./components/manage16/ManageV16'));
 const ManageConsole = guvenliLazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
@@ -346,6 +349,23 @@ export default function App() {
   const [authHazir, setAuthHazir] = useState(false);
   const [aiTest, setAiTest] = useState<boolean | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
+  // Erişim sınırı (2026-11-23, kullanıcı kararı): site yalnız Arzu Türk + yönetici. İzinli listede olmayan
+  // hesap giriş yapabilir ama kabuk/veri kurulmaz; yalnız hata ekranı (services/erisimSiniri.ts, sunucuyla AYNI liste).
+  const erisimEngelli = !!currentUser && aiTest !== true && !erisimIzinliMi(currentUser.email);
+  // 2026-11-24: listede olmayan hesabın rolü sunucudan doğrulanır; moderatör/yönetici ise önbelleğe yazılıp sayfa
+  // yeniden kurulur (main.tsx eşitlemeyi atlamıştı). Rol geri alındıysa önbellek silinir, hata ekranına dönülür.
+  useEffect(() => {
+    if (!currentUser || aiTest === true || erisimEpostasiIzinli(currentUser.email)) return;
+    let iptal = false;
+    void fetchMyAccess().then((a) => {
+      if (iptal || !a) return;
+      const rolVar = a.role !== 'student' && !a.suspended;
+      const onceki = erisimIzinliMi(currentUser.email);
+      rolIzniKaydet(currentUser.email, rolVar);
+      if (rolVar !== onceki) { try { window.location.reload(); } catch { /* yok */ } }
+    });
+    return () => { iptal = true; };
+  }, [currentUser?.uid, currentUser?.email, aiTest]);
 
   // Drive upload state
   const [isUploadingToDrive, setIsUploadingToDrive] = useState<boolean>(false);
@@ -545,17 +565,20 @@ export default function App() {
 
   // Load committees on mount; canlı akıştan kurul değişikliği gelince yeniden çek
   useEffect(() => {
+    // Erişim engelli (izinli listede olmayan) hesap veri indirmez: ne kurul ne canlı akış (2026-11-23)
+    if (erisimEngelli) return;
     fetchCommittees();
     startLiveDataSync();
     const onChange = () => fetchCommittees();
     window.addEventListener('medsoru:committees-changed', onChange);
     return () => window.removeEventListener('medsoru:committees-changed', onChange);
-  }, []);
+  }, [erisimEngelli]);
 
   // Load questions when selected committee changes or when switching to a question tab
   // Sekme değişimi yalnız ilk yüklemeyi öne çeker; aynı kurul için havuz yeniden indirilmez
   const loadedCommitteeRef = useRef<string | null>(null);
   useEffect(() => {
+    if (erisimEngelli) return;
     if (!selectedCommitteeId || loadedCommitteeRef.current === selectedCommitteeId) return;
     const load = () => { loadedCommitteeRef.current = selectedCommitteeId; fetchQuestions(); };
 
@@ -584,7 +607,7 @@ export default function App() {
 
   // Supabase Realtime Subscription: Sorulardaki yeni ekleme, oy ve güncellemeleri canlı dinle
   useEffect(() => {
-    if (!selectedCommitteeId) return;
+    if (erisimEngelli || !selectedCommitteeId) return;
 
     const unsub = multiDbManager.subscribeToQuestions((payload) => {
       if ((payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') && payload.new) {
@@ -630,7 +653,7 @@ export default function App() {
 
   // Toplu değişiklik / kaçan olay telafisi: açık kurulun havuzu sessizce yeniden çekilir (yükleniyor göstergesi yok)
   useEffect(() => {
-    if (!selectedCommitteeId) return;
+    if (erisimEngelli || !selectedCommitteeId) return;
     let timer: ReturnType<typeof setTimeout> | null = null;
     const onResync = () => {
       if (timer) clearTimeout(timer);
@@ -665,7 +688,7 @@ export default function App() {
   };
 
   const fetchQuestions = async () => {
-    if (!selectedCommitteeId) return;
+    if (erisimEngelli || !selectedCommitteeId) return;
     setLoading(true);
     try {
       const data = await ApiService.getQuestions({
@@ -1302,6 +1325,12 @@ export default function App() {
     if (isAdminUser(user)) {
       setActiveTab('admin');
     }
+    // Erişim sınırı (2026-11-23): izinli olmayan hesapla girişte sayfa yeniden kurulur ki açılışta eşitleme/
+    // veritabanı kurulumları hiç başlamasın (main.tsx erisimEngelliMi() ile) ve hata ekranı temiz kalsın.
+    // Moderatör/yönetici rolü varsa yukarıdaki etki önbelleğe yazıp yeniden kurar.
+    if (!erisimIzinliMi(user.email)) {
+      try { window.location.reload(); } catch { /* yok */ }
+    }
   };
 
   // Yeni soru eklenince: listede soruya (yoksa sayfa başına) kaydır ve kısa vurgula
@@ -1330,6 +1359,16 @@ export default function App() {
   const arzuKatmani = !isManageRoute && !girisKapisi && !girisUyarisi && arzuAcik && arzuHesabiMi(currentUser);
   const gorunumBaglami = { activeTab, canliDersKey, committees, completedQuestions, congratsToast, currentCommittee, currentUser, deepLinkNonce, driveUploadSuccess, emptyQuestions, fetchQuestions, filterMyQuestionsOnly, gatheringQuestions, gorunenTab, handleAddFragment, handleAddOption, handleAddQuestionContribution, handleDeleteQuestion, handleGenerateSlots, handleGoogleLogout, handleReconstructWithAi, handleSetClaimedAnswer, handleUpdateQuestionReference, handleUpvoteFragment, handleUpvoteOption, handleUpvoteQuestion, isAdmin, isGeneratingSlots, learnLinkNonce, learnQuestionFocus, loading, myQuestions, openQuestion, openSearchHit, openSummaryId, ornekQuestionId, pastExamsSearchQuery, poolFocusQuestion, poolQuestions, questions, reconstructingMap, sayfaGizliMi, sayfaKapaliMi, searchFocusId, searchPageQuery, searchQuery, selectedCommitteeId, selectedDiscipline, selectedDiseaseId, selectedGlossaryTermId, selectedLearnDeckId, selectedLearnSlideNumber, selectedOrnekKazanimNo, selectedOrnekLessonId, selectedStatus, setActiveTab, setAuthModalInitialMode, setClusterFocusId, setCongratsToast, setContributeDefaultNumber, setCurrentUser, setDriveUploadSuccess, setFilterMyQuestionsOnly, setIsAuthModalOpen, setIsContributeModalOpen, setIsEditQuestionModalOpen, setIsHistoryModalOpen, setIsOfflineModalOpen, setIsPdfModalOpen, setLearnQuestionFocus, setOptimizeQuestion, setPastExamsSearchQuery, setPdfSlideTarget, setPoolFocusId, setSearchPageQuery, setSearchQuery, setSelectedCommitteeId, setSelectedDiscipline, setSelectedLearnDeckId, setSelectedLearnSlideNumber, setSelectedOrnekKazanimNo, setSelectedOrnekLessonId, setSelectedQuestionForHistory, setSelectedQuestionToEdit, setSelectedStatus, setShowClusterModal, setVisibleCount, standaloneQuestions, targetCount, visibleCount };
   const modalBaglami = { accessToken, activeTab, authModalInitialMode, clusterFocusId, committees, contributeDefaultNumber, currentCommittee, currentUser, fetchQuestions, handleAddCommittee, handleAddQuestionContribution, handleAuthSuccess, isAdmin, isAuthModalOpen, isContributeModalOpen, isDiagnosticsOpen, isDriveModalOpen, isEditQuestionModalOpen, isHistoryModalOpen, isNewCommitteeModalOpen, isNotebookLMModalOpen, isOfflineModalOpen, isPastExamImporterOpen, isPdfModalOpen, isPwaWelcomeOpen, isSubagentMonitorOpen, optimizeQuestion, pdfSlideTarget, questions, selectedCommitteeId, selectedQuestionForHistory, selectedQuestionToEdit, setActiveTab, setDriveUploadSuccess, setIsAuthModalOpen, setIsContributeModalOpen, setIsDiagnosticsOpen, setIsDriveModalOpen, setIsEditQuestionModalOpen, setIsHistoryModalOpen, setIsNewCommitteeModalOpen, setIsNotebookLMModalOpen, setIsOfflineModalOpen, setIsPastExamImporterOpen, setIsPdfModalOpen, setIsPwaWelcomeOpen, setIsSubagentMonitorOpen, setOptimizeQuestion, setPdfSlideTarget, setQuestions, setSelectedQuestionForHistory, setSelectedQuestionToEdit, setShowClusterModal, showClusterModal, showOnboarding };
+
+  // Erişim sınırı: izinli listede olmayan hesap için kabuk, veritabanı, harita, oyun hiç kurulmaz (2026-11-23).
+  // Sunucu da aynı hesaba /api/* verisini 403 ile vermez (src/services/erisimKapisi.ts).
+  if (erisimEngelli) {
+    return (
+      <Suspense fallback={<ViewFallback />}>
+        <ErisimKapali currentUser={currentUser} onLogout={() => void handleGoogleLogout()} />
+      </Suspense>
+    );
+  }
 
   return (
     <GlossaryProvider>
