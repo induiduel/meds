@@ -185,3 +185,14 @@
 - **Kök neden:** (1) Telefonda satır içi oynatıcıya verilen `margin: 0 -12px` sahte (iOS) tam ekran katmanını 12 px sola kaydırıyordu; sağda sayfa açıkta kalıyor, arkadaki sayfa da kaydırma kilidi olmadığı için kayıyordu. (2) Ders videosu katmanı (DersVideo) zaten tam ekranken iç oynatıcının düğmesi kendi öğesini ayrıca tam ekrana alıyordu (iç içe): üst çubuk ve Kapat düğmesi kayboluyor, düğme durumu yanlış ("Tam ekran" görünüyor) kalıyordu. (3) Girişte `screen.orientation.lock('landscape')` konuyor, hiçbir çıkışta `unlock` edilmiyordu. (4) Site yazı boyutu (uiZoom, ata öğede CSS zoom) tam ekran katmanını da büyütüp denetimleri ekrandan taşırıyordu.
 - **Çözüm:** Tam ekran/sahte kipte kenar payı sıfır; sahte kipte kaydırma kilidi; doldur kipinde tam ekran hedefi Kapat çubuğunu da içeren katman, durum `fullscreenElement.contains(...)`; her çıkışta ve film kapanışında `yonKilidiAc()`; tam ekranda ata zoom'u tersiyle nötrlenir; Fullscreen API yoksa film katmanlarında işe yaramayan tam ekran düğmesi gizlenir.
 - **Kural:** Tam ekran katmanına satır içi düzenin kenar payı/zoom'u taşınmaz; iç içe tam ekran istenmez (katman varsa onu hedefle); her yön kilidi çıkışta kaldırılır; sahte tam ekranda sayfa kaydırması kilitlenir.
+
+## Sesli ders "İlerlemeyi temizle" yenileyince eski ilerleme geri geliyordu (2026-11-21)
+- **Belirti:** Temizle/sıfırla sonrası sayfa yenilenince (ya da öteki cihaz eşitlenince) süre, bitti işareti ve soru sayıları geri geliyordu.
+- **Kök neden:** `medsoru_calisma_takip_v1` korumalı birikimli anahtar (mezar taşıyla silinmez); `mergeKvJsonValue` sn/soru'da `max`, konu kayıtlarında birleşim alır. Yerelde kaydı silmek sunucudaki eski kaydı ezemiyor, eşitlemede geri yazılıyordu.
+- **Çözüm:** `konuSifirla`/`modulSifirla` kaydı silmek yerine `sif` zamanlı boş kayıt bırakır; birleşme bunu yönetici düzeltmesi (`adm`) gibi, kendinden eski kayıtlara üstün sayar. Listeler `sifirlanmisMi` ile bu kaydı "yok" sayar.
+- **Önleme:** Birikimli (max/birleşim) eşitlenen bir anahtarda silme = kayıt silmek değil, zaman damgalı sıfır kaydı yazmaktır.
+
+### Sesli ders listesinde V2/V3 sürümleri yanlış numaraya düşüyordu (2026-11-24)
+- **Belirti:** Mesane V2/V3 "Patoloji 26" (Böbrek'in yanında), İnvaziv Serviks V2/V3 "Patoloji 39" (listenin en sonunda) görünüyordu.
+- **Kök neden:** Kurul 1 numarası PDF'in Drive dosya adındaki "26)" gibi sayıdan okunuyor; çakışan numaralar `canliDers.ts › BRANS_DUZELT` ile yalnız V1 anahtarına düzeltilmişti. `…-v2/-v3` anahtarları düzeltmeyi bulamayıp aynı PDF'in hatalı numarasına düşüyordu.
+- **Çözüm/önleme:** `bransBilgisi` elle düzeltme ve yedek tabloda sürüm ekini (`-v\d+`) atıp V1 kaydına da bakar. Yeni sürüm anahtarı eklerken V1 düzeltmesi kendiliğinden geçer; ayrı kayıt yazma.

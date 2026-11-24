@@ -182,7 +182,8 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
     const no = Number(/(\d+)$/.exec(r?.kod || '')?.[1]);
     if (r && no) return { brans: r.brans, bransNo: no, kurul };
   }
-  const elle = BRANS_DUZELT[d.key];
+  // V2/V3 (`…-v2`) aynı PDF'e hizalı: V1'in elle düzeltmesini alır, yoksa çakışan Drive numarasına düşer (H: sesli liste sırası)
+  const elle = BRANS_DUZELT[d.key] || BRANS_DUZELT[d.key.replace(/-v\d+$/, '')];
   if (elle) return { brans: elle[0], bransNo: elle[1], kurul, ...(elle[2] ? { parca: elle[2] } : {}), ...(elle[3] ? { listeNo: elle[3] } : {}) };
   const p = P.hizalama(d.key);
   let mtime = -1;
@@ -195,7 +196,7 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
     bransOnbellek.set(d.key, o);
   }
   if (o.v) return { ...o.v, kurul };
-  const y = BRANS_YEDEK[d.key];
+  const y = BRANS_YEDEK[d.key] || BRANS_YEDEK[d.key.replace(/-v\d+$/, '')];
   return y ? { brans: y[0], bransNo: y[1], kurul } : { brans: d.brans || 'Diğer', bransNo: d.no, kurul };
 }
 /** Kayıtlı ve dosyası diskte olan varyantlar (ilki varsayılan). */

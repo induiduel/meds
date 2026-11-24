@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 28 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 30 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -109,4 +109,11 @@
 ### H646 — Ders özeti kapısının "en çok %20 çıkmış atlanabilir" sınırı yazarları sahte kapsama itti; Yunan harfi ses kapısını düşürdü (2026-11-23, Ders özeti)
 - **Kural:** Kapı eşiği, kaynakta olmayan bilgiyi zorla "kapsatmaya" iten biçimde konmaz; kapsam oranı uyarıdır, doğruluk denetçidedir.
   Seslendirilen metinde Yunan harfi ve iki noktalı oran yazılmaz.
+
+### H650 — Branş birleştiricileri: tam birleştirme başka dersleri yeniden yazıyor; ara soru birleştirmesinde onay listesi yok (2026-11-23)
+- **Kural:** Spot birleştirici HER ZAMAN `--kod`. Ara soru birleştirmesi sonrası `git status src/data/k<N>hocaara_cozucu/` ile yalnız onaylı kodların girdiği doğrulanır; denetlenmemiş set varken commit yapılmaz. Kalıcı çözüm (2026-11-24): `kur.py birlestir` artık `k<N>hocaara/onayli.json` listesindeki kodları birleştirir (yayındaki 59 setle başlatıldı); TALIMAT 8. adım güncellendi.
+
+
+### H651 — Alt ajan çözücü kodunu defterden almadı, uydurdu (k2-56: 2s56 ≠ defter 2s19) (2026-11-23)
+- **Kural:** Brif çözücü/önem kodunu AÇIKÇA verir (defterden). Çözücü yayınından önce `betik_tamamla.py <ders>` `cozucu_bag` satırı ✓ olmalı.
 
