@@ -303,7 +303,7 @@
 - **Belirti:** `spot_cozucu/birlestir.py k2farmakoloji` (kodsuz) 8 başka dersin çözücü dosyasını değiştirdi. `hoca_ara_soru/kur.py birlestir 2` denetlenmemiş ara soru setlerini (2a53, 2a54, 2a56) dizine aldı.
 - **Kök neden:** Spot birleştirici kodsuz çağrıda bütün branşı yeniden üretir (H623 `--kod` seçeneği var ama varsayılan değil). Ara soru birleştiricisi çalışma alanındaki geçerli her `cozucu/<kod>.json`'u alır; spot hattaki `onayli.json` karşılığı yoktur.
 - **Çözüm:** Değişen dosyalar `git checkout` ile geri alındı, yalnız `--kod <kod>` ile birleştirildi. Ara sorularda commit yalnız bütün setler denetçiden GEÇER aldıktan sonra yapıldı.
-- **Kural:** Spot birleştirici HER ZAMAN `--kod`. Ara soru birleştirmesi sonrası `git status src/data/k<N>hocaara_cozucu/` ile yalnız onaylı kodların girdiği doğrulanır; denetlenmemiş set varken commit yapılmaz. Açık iş: `kur.py birlestir`'e onay listesi.
+- **Kural:** Spot birleştirici HER ZAMAN `--kod`. Ara soru birleştirmesi sonrası `git status src/data/k<N>hocaara_cozucu/` ile yalnız onaylı kodların girdiği doğrulanır; denetlenmemiş set varken commit yapılmaz. Kalıcı çözüm (2026-11-24): `kur.py birlestir` artık `k<N>hocaara/onayli.json` listesindeki kodları birleştirir (yayındaki 59 setle başlatıldı); TALIMAT 8. adım güncellendi.
 
 ### H651 — Alt ajan çözücü kodunu defterden almadı, uydurdu (k2-56: 2s56 ≠ defter 2s19) (2026-11-23)
 

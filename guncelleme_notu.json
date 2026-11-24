@@ -1,12 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 879,
-  "baslik": "8 yeni ders: sesli ders, örnek sorular, sesli çözücü ve ara sorular",
+  "onem": 880,
+  "baslik": "İçerik hattında iki denetim iyileştirmesi",
   "maddeler": [
-    "Farmakoloji: Adrenoseptör Antagonist İlaçlar, Lokal Anestezik İlaçlar, Kolinoseptör Aktive Edici İlaçlar.",
-    "Genetik: Davranış Genetiği, Nörodejeneratif Hastalıklar ve Genetiği.",
-    "Psikiyatri: Yaygın Anksiyete Bozukluğu, Panik Bozukluk ve Agorafobi, Fobik Bozukluklar.",
-    "Her derste sesli anlatım, kelime takibi, çıkmış rozetleri, en önemliler, 53–61 örnek soru ve sesli çözücü, hocanın sorabileceği ara sorular."
+    "Yeni derslerin bilgi paketi denetimi artık kazanım başlığı uyumsuzluğunu ilk aşamada yakalıyor.",
+    "Hocanın sorabileceği ara sorular yalnız bağımsız denetimden geçtikten sonra yayına giriyor."
   ],
   "eklenen": [
     "Ders özeti (Kurul 2, 50 ders)"

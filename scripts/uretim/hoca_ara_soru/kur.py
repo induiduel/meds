@@ -159,10 +159,17 @@ def birlestir(kurul='2'):
     CD = MEDS / 'src/data' / f'{brans}_cozucu'; SES = MEDS / 'data' / f'{brans}_cozucu'
     CD.mkdir(parents=True, exist_ok=True)
     dersler = []
+    # H650 (2026-11-24): yalnız bağımsız denetçiden GEÇER almış setler (spot hattaki onayli.json karşılığı). Liste yoksa eski
+    # davranış (hepsi); önce çalışma alanındaki her geçerli çözücü dizine giriyor, denetlenmemiş set yayına sızabiliyordu.
+    fon = W / 'onayli.json'
+    onayli = set(json.load(open(fon, encoding='utf-8'))) if fon.exists() else None
     for fo in sorted((W / 'onem').glob('*.json')):
         o = json.load(open(fo, encoding='utf-8')); kod, key = o['kod'], o['key']
         fc = W / 'cozucu' / f'{kod}.json'
         if not fc.exists(): continue
+        if onayli is not None and kod not in onayli:
+            print(f'UYARI {kod} ({key}): onayli.json listesinde yok (denetçi GEÇER sonrası eklenir) — atlandı')
+            continue
         if not (HIZ / f'{key}.json').exists():
             # Sesli dersi olmayan anahtar (SINAMA ya da arşive alınmış eski ders): ara soru duracak paragraf yok → set yayından
             # çıkar. Önce bütün birleştirme burada sys.exit ile yarıda kalıyor, önceki dersleri yazıp dizini yazmıyordu (H622).

@@ -114,6 +114,17 @@ def main() -> int:
             hata.append(f"hoca vurgusu eksik alan: {v}")
         elif v.get("konu") and not slaytta(v["s"], v["konu"]):
             hata.append(f"hoca vurgusu s{v['s']}: konu slaytta yok → {v['konu'][:60]}")
+    # H648 (2026-11-24): kazanım metni bilgi paketinin İLK maddesinden türetilir ve ders analizi kapısı başlıkla ≥2 ortak
+    # kök ister; bu kural burada denetlenmiyordu → hata ancak çıkmış analizi aşamasında, E1 yazarı gittikten sonra çıkıyordu.
+    sys.path.insert(0, str(MEDS / "scripts" / "uretim" / "ders_analizi"))
+    from uret import _kelime_govde  # noqa: E402  (ders analizi kapısıyla aynı kök çıkarımı)
+    # Yalnız ders analizi henüz üretilmemiş (E1'deki yeni) derste HATA; analizi kapıdan geçmiş eski derste UYARI (geriye dönük kırma yok).
+    _hedef = hata if not list((MEDS / "src/data/ders_analizi").glob(f"{a.ders}*.json")) else uyari
+    for b in paket["bilgi_paketleri"]:
+        m = b.get("maddeler") or []
+        if b.get("baslik") and m and len(_kelime_govde(b["baslik"]) & _kelime_govde(m[0])) < 2:
+            _hedef.append(f"bilgi paketi {b.get('id')}: başlık ilk maddeyle örtüşmüyor (kazanım metni ilk maddeden türer, ≥2 ortak kök; H648)"
+                          f" → {b['baslik'][:40]} ← {m[0][:40]}")
     kapsanan = {s for b in paket["bilgi_paketleri"] for s in b["s"]}
     for s in sayfa:
         if s > 1 and s not in kapsanan:

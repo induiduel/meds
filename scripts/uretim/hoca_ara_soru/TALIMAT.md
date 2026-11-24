@@ -49,7 +49,8 @@ parçasıdır; mevcut derslere toplu uygulanmaz. LLM adımları yalnız kullanı
 6. `python3 meds/scripts/uretim/hoca_ara_soru/kur.py dogrula <key>` → 0 HATA (çözücü kapısı + ara kapıları + şık/üslup + profil).
 7. **Bağımsız denetçi** (ayrı alt ajan, yalnız kaynak + çıktı): tıbbi doğruluk, tek doğru cevap, açıklamaların kaynağa
    sadakati, ileriye sızıntı. GEÇER olmadan sürmez; yalnız hatalı soru yeniden yazılır.
-8. `python3 meds/scripts/uretim/hoca_ara_soru/kur.py birlestir <kurul>` (numara = ders akış sırası, `ara.paragraf` hizalamadan).
+8. Bağımsız denetçi GEÇER verince kod `meds_temp/spot_cozucu/k<N>hocaara/onayli.json` listesine eklenir (H650; listede olmayan set birleştirilmez), sonra
+   `python3 meds/scripts/uretim/hoca_ara_soru/kur.py birlestir <kurul>` (numara = ders akış sırası, `ara.paragraf` hizalamadan).
 9. **EMA ses (DAİMA GPU, kural 10):**
    `bash meds/scripts/uretim/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/uretim/spot_cozucu/ses.py --brans k<N>hocaara <kod>`
    (koruyucu kapalıysa açılır; açılamazsa CPU'ya düşülmez, çıkış 75). Sonra yeniden `birlestir` (klipler veriye girer) ve
