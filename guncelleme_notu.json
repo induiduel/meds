@@ -1,18 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 891,
-  "baslik": "Sesli derslere check-up eklendi",
+  "onem": 892,
+  "baslik": "Ses ve slayt erişimi daha güvenli",
   "maddeler": [
-    "**Sesli dersler:** Ders satırları açılıp kapanıyor; aynı anda tek ders açık kalır.",
-    "**Sesli check-up:** Her dersin örnek ve çıkmış soruları sesli çözülür.",
-    "**Derste dinle:** Yanlış yaptığın sorunun açıklamasından sesli dersin ilgili bölümüne geçebilirsin."
+    "**Güvenlik:** Ses, slayt ve çevrimdışı indirme artık yalnız okumaya yarayan, sayfa kodunun göremediği ayrı bir anahtarla açılıyor."
   ],
-  "eklenen": [
-    "Sesli ders check-up",
-    "Derste dinle bağlantısı"
-  ],
+  "eklenen": [],
   "degisen": [
-    "Sesli ders listesi açılır satırlar"
+    "Medya erişim anahtarı"
   ],
   "duzeltilen": [],
   "silinen": [],

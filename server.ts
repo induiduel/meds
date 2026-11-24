@@ -20,6 +20,7 @@ import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
 import { requestUser } from './src/services/kimlikDogrulama';
 import { registerYerelKimlik } from './src/services/yerelKimlik';
+import { registerMedyaCerezi } from './src/services/kimlikDogrulama';
 import * as rawLedger from './src/services/rawQuestionLedger';
 import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQueryRoute';
 import { registerTtsRoute } from './src/services/ttsRoute';
@@ -463,6 +464,7 @@ const formAyristirici = {
 };
 app.use((req, res, next) => jsonAyristirici[govdeKademesi(req)](req, res, next));
 // MeDSor kendi kimlik sistemi (2026-11-02, Firebase Auth kaldırıldı): hesaplar/oturumlar meds-pg'de, /api/kimlik/*
+registerMedyaCerezi(app); // HttpOnly medya çerezi (ses/PDF/görsel; kimlikDogrulama.ts)
 registerYerelKimlik(app, {
   rootDir: __dirname,
   adminEmail: 'nofrostlife@gmail.com',

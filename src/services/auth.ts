@@ -142,18 +142,29 @@ function yay(jetonDegisti = true) {
   if (jetonDegisti) for (const f of jetonDinleyicileri) { try { f(mevcut); } catch (e) { console.warn(e); } }
 }
 
-/** Erişim jetonu çerezi: <audio>/<img>/PDF istekleri Authorization başlığı taşıyamaz; sunucu erişim kapısı GET'te bunu okur
- *  (kimlikDogrulama.ts › JETON_CEREZI). Ömrü jetonla aynı; SameSite=Lax + Secure (https'te). */
-function jetonCereziYaz(token?: string, exp?: number) {
+/** Medya çerezi (2026-11-24): <audio>/<img>/PDF/arka plan indirmesi Authorization taşıyamaz. Sunucu ayrı, salt okunur
+ *  'medya' jetonunu HttpOnly çerez olarak YALNIZ API alanına yazar (kimlikDogrulama.ts › registerMedyaCerezi); JS okuyamaz,
+ *  Bearer olarak kullanılamaz, yazma isteğinde geçmez. Jeton her yenilendiğinde (≈saatte bir) çerez de yenilenir. */
+let sonMedyaJetonu = '';
+function jetonCereziYaz(token?: string, _exp?: number) {
+  if (typeof window === 'undefined') return;
   try {
-    if (typeof document === 'undefined') return;
-    const guvenli = location.protocol === 'https:' ? '; Secure' : '';
-    // Canlıda API ayrı alt alanda (api.nofrostlife.com.tr): çerez ana alana yazılır ki <audio>/PDF istekleri oraya da taşısın
-    const alan = /(^|\.)nofrostlife\.com\.tr$/.test(location.hostname) ? '; Domain=nofrostlife.com.tr' : '';
-    if (!token) { document.cookie = `medsor_jeton=; Path=/; Max-Age=0; SameSite=Lax${guvenli}${alan}`; return; }
-    const sn = Math.max(60, Math.floor((exp || 0) - Date.now() / 1000));
-    document.cookie = `medsor_jeton=${encodeURIComponent(token)}; Path=/; Max-Age=${sn}; SameSite=Lax${guvenli}${alan}`;
+    // Eski sürümün JS'le yazdığı geniş kapsamlı çerezi temizle (Domain'li ve Domain'siz)
+    if (document.cookie.includes('medsor_jeton=')) {
+      for (const alan of ['', '; Domain=nofrostlife.com.tr']) document.cookie = `medsor_jeton=; Path=/; Max-Age=0; SameSite=Lax${alan}`;
+    }
   } catch { /* çerez kapalı */ }
+  if (token && token === sonMedyaJetonu) return;
+  sonMedyaJetonu = token || '';
+  void import('./api').then(async ({ getCustomApiUrl }) => {
+    const taban = getCustomApiUrl('/api/canli-ders');
+    await fetch(`${taban}/api/kimlik/medya-cerezi`, {
+      method: token ? 'POST' : 'DELETE',
+      credentials: 'include',
+      cache: 'no-store',
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    });
+  }).catch(() => { sonMedyaJetonu = ''; /* ağ yok: sonraki yenilemede yeniden denenir */ });
 }
 
 function kayitYaz(k: Kayit | null, bildir = true) {
