@@ -3,6 +3,7 @@
  * Ses: /api/patoloji-cozucu-alt/ses/<kod>/<no>.mp3 (src/services/patolojiCozucuAlt.ts).
  */
 import { useEffect, useState } from 'react';
+import { getCustomApiUrl } from '../../services/api';
 
 export type Harf = 'A' | 'B' | 'C' | 'D' | 'E';
 export const HARFLER: Harf[] = ['A', 'B', 'C', 'D', 'E'];
@@ -72,7 +73,7 @@ export const altDersYukle = (kod: string): Promise<AltDers> => {
 };
 
 export const altSesYolu = (kod: string, s: AltSoru) =>
-  `/api/patoloji-cozucu-alt/ses/${encodeURIComponent(kod)}/${encodeURIComponent(s.mp3)}${s.h ? `?v=${s.h}` : ''}`;
+  `${getCustomApiUrl() || ''}/api/patoloji-cozucu-alt/ses/${encodeURIComponent(kod)}/${encodeURIComponent(s.mp3)}${s.h ? `?v=${s.h}` : ''}`;
 
 /** Ders başına kalınan soru, dinlenen/çözülen sorular ve şık seçimleri (tarayıcıda + profil senkronunda) */
 export interface AltIlerleme {

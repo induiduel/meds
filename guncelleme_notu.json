@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 929,
-  "baslik": "v17 denemesi duraklatıldı",
+  "onem": 930,
+  "baslik": "Alternatif çözücü sesleri düzeltildi",
   "maddeler": [
-    "v17 tasarım denemesi duraklatıldı ve Ayarlar'dan kaldırıldı; site mevcut tasarımla açılır."
+    "Alternatif çözücüde sesler artık doğru adresten yükleniyor."
   ],
   "eklenen": [],
   "degisen": [],
