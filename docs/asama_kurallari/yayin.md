@@ -228,6 +228,7 @@
 ### H629 — Eski ses varyantı yalnız yerelde silinince dagit.sh Oracle'dan geri getirdi; yedek dosyaları kayıt kapısını kilitledi (2026-11-18)
 - **Kural:** Ses varyantı kaldırırken önce Oracle'da, sonra yerelde sil ve `meds-server`'ı yeniden başlat; yedeği `_arsiv_veri/` altında `.zst` olarak sakla, `data/` içinde `.yedek` bırakma.
 
+
 - H647 — Site herkese açıktı; "yalnız Arzu Türk + yönetici" isteği yalnız ekranla karşılanamazdı (2026-11-23) — betik denetler: `erisimSiniri.ts`
 ### Erişim kapısı sonrası ses/slayt/çevrimdışı indirme 403 ("Ses dosyası açılamadı") (2026-11-24)
 - **Önleme:** Erişim/kimlik kapısı eklerken başlık taşıyamayan istekleri (ses, görsel, PDF, arka plan indirmesi, SW) ayrıca sına; yazma uçlarına çerezle kimlik verme.

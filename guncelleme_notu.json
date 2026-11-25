@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 904,
-  "baslik": "Sesli ders listesi telefona ve tablete uyumlu",
+  "onem": 906,
+  "baslik": "2025-2026 Kurul 3 arşivi: yeni sesli dersler",
   "maddeler": [
-    "Branş başlığının tamamı (oktan isme) açma/kapama düğmesi; dokunma alanı büyüdü.",
-    "Telefon ve tablette başlık iki satır: üstte branş adı ve ilerleme, altta Check-up, Listem ve branş sayfası düğmeleri; yana taşma giderildi."
+    "2025-2026 Dönem 3 Kurul 3 arşivine yeni sesli dersler eklendi; slayt takibi cümle cümle çalışır.",
+    "Eklenen dersler: Dislipidemide Kullanılan İlaçlar, Gastroenteritler ve Bakteriyel İshaller.",
+    "Bu derslerde Öğren destesi ve canlı çizim üretilmedi; sesli anlatım, PDF metin takibi, terim/kısaltma ve çıkmış kartı hazır."
   ],
   "eklenen": [
     "Branş check-up"

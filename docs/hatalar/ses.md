@@ -265,3 +265,15 @@
 - **Kök neden:** Sesli ders kaydının (`kayit.json`, MP3, `cumle_zaman`/`kelime_zaman` varyantları) kaynağı Oracle; `dagit.sh` "Oracle → yerel" adımı eksik kayıtları yerele geri yazar. Arşivlemede bırakılan `.yedek` dosyaları da K4 kuralına takıldı.
 - **Çözüm:** Varyant önce Oracle'dan (kayıt + MP3 + zaman dosyaları, yedekle) sonra yerelden çıkarıldı, `meds-server` yeniden başlatıldı; yedekler `_arsiv_veri/`'ye sıkıştırıldı.
 - **Kural:** Ses varyantı kaldırırken önce Oracle'da, sonra yerelde sil ve `meds-server`'ı yeniden başlat; yedeği `_arsiv_veri/` altında `.zst` olarak sakla, `data/` içinde `.yedek` bırakma.
+
+### H657 — Kurul 3 arşivinde metin üretimi "0/75 sayfa, hata:metin" oluyordu: kelime tavanı kapıda ölçeklenmiyordu (2026-11-25)
+- **Belirti:** `k3_parti.py` ile 60+ sayfalık arşiv dersleri (k3-52 76, k3-53 58, k3-54 46, k3-56 49, k3-57 67 …) `hata:metin` ile
+  düşüyordu; ayrıca `k3-01` 133/133 sayfası üretildiği hâlde kapı "kelime 12754 > 6000" diyerek derdi reddediyordu.
+- **Kök neden:** kelime tavanı `metin_denetle.py` içinde `MEDS_METIN_MAX_W` ile sayfa sayısına göre ölçeklenir (H618) ve bunu
+  `k3_yayinla.kapilar` ortama koyuyor; ama üretim yolunun kapısı (`k3_uret` → `k3_metin.kapilar`) bu değişkeni **hiç koymuyordu**.
+  Aynı ders iki yolda iki farklı tavana çarpıyordu; uzun derste metin doğru üretilse bile kapı onu kesik sayıp "hata:metin" yazıyor,
+  yayın kuyruğuna hiç girmiyordu.
+- **Kalıcı çözüm:** `k3_metin.kapilar` da `MEDS_METIN_MAX_W = max(6000, sayfa × 140)` kuralını uygular (tek kaynak: `metin_denetle.MAX_W`).
+  `k3-01` yeniden kapıdan geçirildi (0 HATA, yalnız uyarılar) ve yayın kuyruğuna alındı.
+- **Önleme kuralı:** bir dersin kapıları **iki ayrı betikte** koşuyorsa eşik/ortam değişkenleri tek yerden türetilir; üretim kapısı ile
+  yayın kapısı aynı ortamı kurar. "Kapı 0 HATA" diyen her yol, ölçeklenen eşiği kendisi hesaplamak zorunda.

@@ -151,8 +151,19 @@ def kapilar(key: str) -> int:
     h = KV.dogrula(v2, KV.kaynak_sayfa(taslak), KV.kaynak_metin(taslak))
     for x in h[:40]:
         print("HATA", x)
+    # H618: kelime tavanı sayfa sayısına göre ölçeklenir. Bu yol (k3_uret → k3_metin) tavanı koymadığı için
+    # 60+ sayfalık arşiv derslerinde metin_denetle "kelime … > 6000" diyor ve üretim boşuna "hata:metin" oluyordu;
+    # k3_yayinla.kapilar ile AYNI kural burada da uygulanır (tek kaynak: metin_denetle MAX_W).
+    import os as _os
+    ortam = dict(_os.environ)
+    try:
+        n = int(json.loads((taslak / "baglam.json").read_text(encoding="utf-8")).get("sayfa") or 0)
+    except (OSError, ValueError):
+        n = 0
+    if n:
+        ortam.setdefault("MEDS_METIN_MAX_W", str(max(6000, n * 140)))
     r = subprocess.run([sys.executable, str(MEDS / "scripts" / "uretim" / "sesli_anlatim" / "metin_denetle.py"),
-                        str(taslak / "konusma_metni.md")], capture_output=True, text=True)
+                        str(taslak / "konusma_metni.md")], capture_output=True, text=True, env=ortam)
     print((r.stdout or r.stderr).strip()[-2500:])
     sys.path.insert(0, str(MEDS / "scripts" / "uretim" / "arsiv_25_26"))
     import k3_yayinla as Y

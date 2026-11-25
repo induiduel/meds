@@ -233,3 +233,4 @@
   cue sözcüğü görülürse ayrıştırıcı düzeltilir, (d) cevap yoksa boş bırakılır ve `uyarilar`'a yazılır, (e) yıl/ branş yalnız
   doğrulanmış DB eşleşmesinden devralınır ve kaynağı etiketlenir.
 
+

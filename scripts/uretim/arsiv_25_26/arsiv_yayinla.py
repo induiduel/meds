@@ -269,7 +269,20 @@ out = {{"surum": 1, "metinHash": {repr(metin_hash)}, "varyantlar": {{"ema-yerel-
 Path({repr(str(kz_yol))}).parent.mkdir(parents=True, exist_ok=True)
 Path({repr(str(kz_yol))}).write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 """
-    r = subprocess.run([str(py_hizala), "-c", kod], env=env, capture_output=True, text=True)
+    # H657 (2026-11-25): kod artık GEÇİCİ DOSYA ile çalıştırılır. Ders metni (paragraflar + cümle zamanlaması) `-c`
+    # argümanına gömülünce 1000+ cümlelik arşiv derslerinde komut satırı sınırı aşılıyor ve yayın
+    # "OSError: [Errno 7] Argument list too long" ile düşüyordu (k3-01, 1047 cümle).
+    import tempfile
+    with tempfile.NamedTemporaryFile("w", suffix=".py", prefix=f"kz_{key}_", delete=False, encoding="utf-8") as tf:
+        tf.write(kod)
+        kod_yol = tf.name
+    try:
+        r = subprocess.run([str(py_hizala), kod_yol], env=env, capture_output=True, text=True)
+    finally:
+        try:
+            os.unlink(kod_yol)
+        except OSError:
+            pass
     if r.returncode != 0:
         print(f"Uyarı: kelime_zaman GPU/CPU hatası: {r.stderr[-400:]}", file=sys.stderr)
     return json.loads(kz_yol.read_text(encoding="utf-8")) if kz_yol.exists() else {}

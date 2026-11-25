@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-01-gastroenteritler-ve-bakteriyel-ishaller",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "İç Hastalıkları",
+  "baslik": "Gastroenteritler ve Bakteriyel İshaller",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-25 02:40",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "1)GASTROENTERİTLER VE BAKTERİYEL İSHALLER.pdf (134 sayfa) kaynağından 267 paragraf / 1047 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 95.4,
+        "sayfaSayisi": 134,
+        "bolumSayisi": 33,
+        "paragrafSayisi": 267,
+        "cumleSayisi": 1047,
+        "cikmisEslesme": 30
+      }
+    }
+  ]
+}

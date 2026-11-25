@@ -1,0 +1,29 @@
+{
+  "key": "y25-k3-24-dislipidemide-kullanilan-ilaclar",
+  "donem": "2025-2026",
+  "kurul": 3,
+  "brans": "Tıbbi Farmakoloji",
+  "baslik": "Dislipidemide Kullanılan İlaçlar",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-11-25 02:30",
+      "neden": "2025-2026 Kurul 3 arşiv dersi (ses + PDF metin takibi; Öğren destesi ve çizim kullanıcı kararıyla üretilmedi)",
+      "hatali_bilgiler": [
+        "Öğren destesi, canlı çizim, ara resim ve ara soru üretilmedi — kullanıcı kararı 2026-11-17."
+      ],
+      "degisiklikler": [
+        "35 Dislipidemide Kullanılan İlaçlar.pdf (70 sayfa) kaynağından 144 paragraf / 599 cümlelik sesli anlatım.",
+        "EMA Lightning GPU sesi, cümle/kelime zamanlaması, PDF işareti (takip kapısı T1–T5 0 HATA), terim/kısaltma, çıkmış chip ve .medspak üretildi."
+      ],
+      "metrikler": {
+        "sureDk": 64.9,
+        "sayfaSayisi": 70,
+        "bolumSayisi": 17,
+        "paragrafSayisi": 144,
+        "cumleSayisi": 599,
+        "cikmisEslesme": 28
+      }
+    }
+  ]
+}
