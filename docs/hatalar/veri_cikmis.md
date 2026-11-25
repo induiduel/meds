@@ -275,3 +275,7 @@
   **Önleme:** harf değil şık metni karşılaştırılır; `yanlis_cevapli_kopyalar`/`cevap_celiskisi` işareti düzeltilmeden bırakılmaz;
   bozuk kopya gruptan çıkarılmaz (çıkarılırsa sitede görünür) — `bozuk_kopyalar` + `isSuspect` ile gizli tutulur;
   reconstruction şıkları eksikse `correctAnswer` boşaltılır. Betik/tara: `meds_temp/grup_celiski/` (tara.py, uygula.py).
+  (12) **Öncülü hatalı soru (final-2018-2019-q072, 2026-11-25):** resmî anahtar E (tümü doğru), ders notuna göre yalnız III
+  doğru (mamografi 2 yılda bir, GGK yıllık, AAA taraması USG ile bir kez); şıklarda doğru kombinasyon yok. Eski not gerekçesizdi.
+  **Kural:** anahtar değiştirilmez; `soruNotu` her öncülü ders notu değeriyle gerekçelendirir, eski not `soruNotu.onceki`'de
+  saklanır, `explanation` başındaki not satırı da aynı metne çekilir (`meds_temp/grup_celiski/q072_not.py`).
