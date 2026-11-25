@@ -1,0 +1,25 @@
+/*
+ * v15 · klinik editöryal katman (H673, 2026-11-25). Tasarım kaynağı: Framer "MeDSor v15 · Klinik Editöryal".
+ * İçeriğin sesi serif (Literata, zaten yüklü), arayüz Geist; tek vurgu rengi palet aksanı; kart yerine ince ayraç.
+ * Renk tanımlanmaz (palet belirteçleri), yalnız yazı ölçeği ve ortak editöryal sınıflar. ShellV15 tokens/shell'den
+ * sonra içe aktarır; aynı özgüllükte sonra geldiği için başlık belirteçleri buradan gelir.
+ */
+:root[data-v15='on'] {
+  --ed-serif: 'Literata', ui-serif, Georgia, 'Times New Roman', serif;
+  /* Sayfa ve bölüm başlıkları serif: tüm v15 sayfalarına aynı editöryal ses */
+  --v15-t-title: 600 19px/1.2 var(--ed-serif);
+  --v15-t-heading: 600 18px/1.3 var(--ed-serif);
+  @media (min-width: 600px) { --v15-t-title: 600 22px/1.2 var(--ed-serif); }
+  @media (min-width: 1024px) { --v15-t-title: 600 24px/1.2 var(--ed-serif); --v15-t-heading: 600 19px/1.3 var(--ed-serif); }
+
+  /* Ortak editöryal sınıflar */
+  & .ed-ust { margin: 0; font: 600 11.5px/1.3 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-3); }
+  & .ed-baslik { margin: 0; font: 500 clamp(28px, 6.2vw, 44px)/1.12 var(--ed-serif); letter-spacing: -.015em; color: var(--color-ink); text-wrap: balance; }
+  & .ed-alt { margin: 0; font-size: 16px; line-height: 1.5; color: var(--color-ink-2); text-wrap: pretty; max-width: 62ch; }
+  & .ed-bolum { margin: 0; font: 600 11.5px/1.3 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-3); }
+
+  /* Erişilebilirlik: tutarlı klavye odağı (fareyle tıklamada görünmez) */
+  & :where(a, button, [role='button'], [role='slider'], [tabindex]:not([tabindex='-1']), input, select, textarea):focus-visible {
+    outline: 2px solid var(--color-accent); outline-offset: 2px;
+  }
+}

@@ -505,4 +505,10 @@
 - **H666** · v17 telefonda PDF çubuğu araç menüsünü ekran dışına itiyordu → hatalar/on_yuz_tasarim_tema.md
 - **H668** · v15 telefonda Kip seçicisi kartı taşıyor, halka yazısı kesiliyordu → hatalar/on_yuz_tasarim_tema.md
 - **H669** · v15 ders detayında bölüm listesi iç kaydırmaya sıkışıyor, telefonda ders adı 95 px → hatalar/on_yuz_tasarim_tema.md
+- **H670** · Çözücü ilerleme şeridi 215 ayrı düğmeydi, telefonda dokunulamıyor ve kırpılıyordu → hatalar/on_yuz_tasarim_tema.md
+- **H671** · Giriş katmanı → ayrı /giris sayfası → hatalar/on_yuz_tasarim_tema.md
+- **H672** · Bugün spot verisi ilk çizimle yarışıyordu → hatalar/on_yuz_tasarim_tema.md
+- **H673** · v15 editöryal Bugün + serif başlıklar → hatalar/on_yuz_tasarim_tema.md
+- **H674** · "İçeriğe geç" bağlantısı yoktu → hatalar/on_yuz_tasarim_tema.md
+- **H675** · Kompakt + hareketli Bugün/giriş → hatalar/on_yuz_tasarim_tema.md
 - **H667** · k2-42/43/45 konuşma metninde cümle vurgu etiketi yoktu, ekran vurgusu boş kaldı → hatalar/ders_metni_anlatim.md

@@ -1,4 +1,5 @@
 import { BolumCubugu } from '../ui/BolumCubugu';
+import { IlerlemeSeridi } from '../spots/cozucu/IlerlemeSeridi';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
@@ -817,26 +818,17 @@ const AlternatifCozucuOynatici: React.FC<OynaticiProps> = ({
       </header>
 
       {ders && devamSor === null && (
-        <div className="sc-ilerleme" aria-label={`Soru ${Math.min(i + 1, sorular.length)} / ${sorular.length}`}>
-          {sorular.map((x, n) => {
-            const ilkD = dersKayit?.ilkDogru?.includes(x.no);
-            const sec = dersKayit?.secim?.[x.no];
-            const bit = dersKayit?.bitti?.includes(x.no) || dersKayit?.incelenen?.includes(x.no);
-            const r = ilkD ? 'd' : sec ? 'd2' : bit ? 'y' : '';
-            return (
-              <button
-                key={x.no}
-                type="button"
-                className={`sc-seg${n === i && !bitti ? ' is-simdi' : ''}${r === 'd' ? ' is-d' : r === 'd2' ? ' is-d2' : r === 'y' ? ' is-y' : ''}`}
-                onClick={() => {
-                  setBitti(false);
-                  setI(n);
-                }}
-                aria-label={`${n + 1}. soru${r === 'd' ? ', ilk denemede doğru' : r === 'd2' ? ', çözüldü' : r === 'y' ? ', dinlendi' : ''}`}
-              />
-            );
-          })}
-        </div>
+        <IlerlemeSeridi
+          simdi={bitti ? -1 : i}
+          durumlar={sorular.map((x) =>
+            dersKayit?.ilkDogru?.includes(x.no) ? 'd'
+              : dersKayit?.secim?.[x.no] ? 'd2'
+              : dersKayit?.bitti?.includes(x.no) || dersKayit?.incelenen?.includes(x.no) ? 'y' : '')}
+          onSec={(n) => {
+            setBitti(false);
+            setI(n);
+          }}
+        />
       )}
 
       <main className="sc-sahne" ref={kokRef}>

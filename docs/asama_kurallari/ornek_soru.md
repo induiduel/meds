@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 31 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 32 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -119,4 +119,8 @@
 
 ### H655 · Sesli ders ve örnek soruda metin takibi yanlış yeri gösteriyor / geç kalıyor (2026-11-24)
 - **Önleme:** Anlatım ↔ slayt/metin eşlemesinde birebir metin beklenmez; sözcük eşleşmesi tek ölçüt olamaz (anlam + sıra). Seste olmayan metin için zaman uydurulmaz: metni değişen ses varyantı ya yeniden seslendirilir ya da sunulmaz.
+
+### H670 — Çözücü ilerleme şeridi: 215 ayrı düğme, telefonda dokunulamıyor ve sağ yarısı kırpılıyordu (2026-11-25)
+- **Kural:** soru sayısıyla çoğalan öge tek tek etkileşimli yapılmaz; 200+ öğede 375 px'te son öğenin `right` değeri kapsayıcıyla karşılaştırılır.
+
 

@@ -461,6 +461,9 @@ export const parseLocation = (gorunen: Pick<Location, 'pathname' | 'hash' | 'sea
   const hash = decodeURIComponent(loc.hash.replace(/^#\/?/, ''));
   const cleanPath = stripBase(loc.pathname);
 
+  // H671: giriş sayfası (App giriş kapısında yalnız onu çizer). Oturum açıkken gelen biri Bugün'e düşer, App ?sonra='ya taşır.
+  if (cleanPath === '/giris') return { route: 'today' };
+
   // Exact multi-segment route matching
   if (cleanPath === '/test/cikmis' || cleanPath.startsWith('/test/cikmis/')) {
     const extra = cleanPath.replace(/^\/test\/cikmis\/?/, '');

@@ -18,3 +18,8 @@ html:root:root[data-yuksek-kontrast='on'][data-mode][data-palette] {
     animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important;
   }
 }
+/* "İçeriğe geç" bağlantısı (H674, App her tasarımda çizer): yalnız klavye odağında görünür */
+.ed-atla { position: fixed; left: 12px; top: -60px; z-index: 1000; padding: 10px 14px; border-radius: 10px;
+  background: var(--color-ink); color: var(--color-white); font: 600 14px/1 var(--font-sans); text-decoration: none; transition: top .15s; }
+.ed-atla:focus { top: max(12px, env(safe-area-inset-top)); outline: 2px solid var(--color-accent); outline-offset: 2px; }
+#ana-icerik:focus { outline: none; }

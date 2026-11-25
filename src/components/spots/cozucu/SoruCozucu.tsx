@@ -1,4 +1,5 @@
 import { kayitHaritasi, okunanAralik } from './okunanKelime';
+import { IlerlemeSeridi } from './IlerlemeSeridi';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
@@ -829,15 +830,14 @@ export const SoruCozucu: React.FC<Props> = ({
       </header>
 
       {ders && devamSor === null && (
-        <div className="sc-ilerleme" aria-label={`Soru ${Math.min(i + 1, sorular.length)} / ${sorular.length}`}>
-          {sorular.map((x, n) => {
-            const r = sonuc[x.no];
-            return (
-              <button key={x.no} type="button" className={`sc-seg${n === i && !bitti ? ' is-simdi' : ''}${r === 'd' ? ' is-d' : r === 'd2' ? ' is-d2' : r === 'y' ? ' is-y' : ''}`}
-                onClick={() => { setBitti(false); setI(n); }} aria-label={`${n + 1}. soru${r === 'd' ? ', doğru' : r === 'd2' ? ', yardımla doğru' : r === 'y' ? ', çözümü dinlendi' : ''}`} />
-            );
-          })}
-        </div>
+        <IlerlemeSeridi
+          simdi={bitti ? -1 : i}
+          durumlar={sorular.map((x) => sonuc[x.no] ?? '')}
+          onSec={(n) => {
+            setBitti(false);
+            setI(n);
+          }}
+        />
       )}
 
       <main className="sc-sahne" ref={kokRef}>

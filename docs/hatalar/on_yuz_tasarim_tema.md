@@ -196,3 +196,39 @@
 - **Kök neden:** tek sütunda `.dd15` ekran yüksekliğine sabitlenip listeye "kalan alan" veriliyordu; üstteki kartlar (çalışman, içerikler, yorumlar) eklendikçe kalan alan küçüldü. Telefonda alt sayfa üst çubuğu 5 araç (204 px) taşıyordu. `a.up-btn` dolgusuzdu, 1:1,6 oranla 113 px'e iniyordu.
 - **Çözüm:** `dd15` <860 px kapta sayfa doğal akar, liste tek kaydırmada tam görünür (iki sütunda yapışkan liste aynen); telefonda geri düğmeli sayfalarda kurul çipi gizli (başlık 139 px); `up-btn` içerik genişliğinden başlar, tek satır, ortalı.
 - **Kural:** "kalan alanda kayan" liste, üstüne yeni kart eklenen her değişiklikte 375/768 px'te `clientHeight` ile ölçülür; içerik listesini iç kaydırmaya sıkıştıran sabit yükseklik telefon/tablette kullanılmaz.
+
+### H670 — Çözücü ilerleme şeridi: 215 ayrı düğme, telefonda dokunulamıyor ve sağ yarısı kırpılıyordu (2026-11-25)
+- **Belirti:** check-up çözücüde (215 soru) her parça 3×6 px'lik `<button>`: telefonda seçilemiyor, klavyede 215 sekme durağı; 215 × (3 px en küçük genişlik + 3 px boşluk) = 1290 px, 347 px şeritte ~58 parçadan sonrası kırpılıyor, 200. soru şeritte görünmüyordu.
+- **Kök neden:** şerit soru başına düğme olarak kurulmuştu (`SoruCozucu.tsx`, kopyası `AlternatifCozucuView.tsx`); `min-width:3px` + sabit `gap:3px` soru sayısıyla ölçeklenmiyordu.
+- **Çözüm:** ortak `spots/cozucu/IlerlemeSeridi.tsx`: tek `role="slider"` (24 px dokunma alanı), parçalar yalnız görsel; dokun/sürükle konumdan seçer, bırakınca geçer (önizleme balonu); ←/→ ±1, PgUp/PgDn ±10, Home/End. Boşluk soru sayısına göre 3/1/0 px, şimdiki parça en az 4 px.
+- **Kural:** soru sayısıyla çoğalan öge tek tek etkileşimli yapılmaz; 200+ öğede 375 px'te son öğenin `right` değeri kapsayıcıyla karşılaştırılır.
+
+### H671 — Giriş/tanıtım ana uygulamanın üstüne açılan katmandı; altında kabuk ve sayfa verisi kuruluyordu (2026-11-25)
+- **Belirti:** oturumsuz açılışta tanıtım+giriş `role="dialog"` katmanı olarak ana sayfanın üstünü kaplıyordu; adres değişmiyor, altta kabuk ve sayfa istekleri çalışıyordu; iki ayrı tasarım dalı (ms-onboard / OnboardingV12).
+- **Kök neden:** `App.tsx` `girisKapisi` iken `<Onboarding>`'i ana ağacın İÇİNE ekliyordu (erken dönüş yoktu). Giriş sayfasının adresi yoktu; yönlendirici `/giris`'i tanımadığından sunucu 404 dönüyordu.
+- **Çözüm:** `components/giris/GirisSayfasi.tsx` + `styles/giris.css` (ayrı parça); `App` `girisKapisi` iken yalnız onu döndürür (`erisimEngelli` kalıbı); adres `/giris?sonra=<önceki>`, girişten sonra `navigateTo(sonra)` (`app/girisYolu.ts`, açık yönlendirme yok); yönlendiricide `/giris` → today, sunucu 200. Doğrudan açılışta kanonik `/bugun?sonra=` iç içe sarılmaz. Başlık `html.ui-v7 :is(h1,h2)` (0,2,1) yazı tipini eziyordu → `.gr h1.gr-baslik`.
+- **Kural:** tam ekran kapı (giriş, erişim) ana ağaca katman olarak eklenmez, erken dönüşle tek başına kurulur ve kendi adresi olur; yardımcılar bileşen dosyasından dışa açılmaz (App içe aktarınca parça ana pakete girer).
+
+### H672 — Bugün'de 817 KB Kurul 1 spot dosyası ilk çizimle yarışıyordu (2026-11-25)
+- **Belirti:** Bugün açılışında en büyük JS parçası `exam_spots_k1` (817 KB) idi.
+- **Kök neden:** `TodayView` günün spotu için dosyayı ilk `useEffect`'te koşulsuz `import()` ediyordu.
+- **Çözüm:** yükleme `requestIdleCallback` ile ilk çizimden sonraya (yoksa 400 ms); günün spotu menü kapalıyken de gösterildiği (H139) için koşul konmadı.
+- **Kural:** sayfanın ikincil kartı için büyük veri ilk çizimden sonra, boşta yüklenir.
+
+### H673 — v15 klinik editöryal adım: Bugün iskeleti ve başlık belirteçleri (2026-11-25)
+- **Belirti:** Bugün halka + kart ızgarasıydı; tek `h1` görünmezdi (sr-only); halka yazısı sığmıyordu (H668).
+- **Kök neden / karar:** kullanıcı "daha sade, klinik editöryal" yön istedi; tasarım kaynağı Framer "MeDSor v15 · Klinik Editöryal".
+- **Çözüm:** `TodayView` v15 dalı JSX olarak yeniden: görünür `h1` özet başlık (sınava kalan gün), plan cümlesi, hedef çubuğu, koyu "sürdür" bloğu, kartsız ince ayraçlı listeler, düz yan sütun (kısayol, `dl` durum, `figure/blockquote` spot). `styles/v15/editoryal.css`: başlık belirteçleri Literata (zaten yüklü), `.ed-*` sınıfları, tutarlı `:focus-visible`. Tur seçicisi `.t15-ring` → `.t15-lead`.
+- **Kural:** tasarım belirteci değişince eski seçicilere bağlı turlar (`CanliDersTur.tsx`) aynı anda güncellenir; yeni yazı tipi indirilmeden önce `index.html`'de yüklü olanlar kullanılır.
+
+### H674 — Kabukta "içeriğe geç" bağlantısı yoktu (2026-11-25)
+- **Belirti:** klavye kullanıcısı her sayfada tüm menüyü sekmeyle geçmek zorundaydı (WCAG 2.4.1).
+- **Kök neden:** `App` ana kabuğunda atlama bağlantısı ve odaklanabilir ana içerik hedefi yoktu.
+- **Çözüm:** `.ed-atla` bağlantısı (yalnız odakta görünür, `erisilebilirlik.css`), `<main id="ana-icerik" tabIndex={-1}>`; uygulama `#` bağlantılarını kendi yönlendirdiği için odak tıklama işleyicisiyle elle taşınır.
+- **Kural:** uygulama içi çapa bağlantısında tarayıcının çapa odağına güvenilmez, odak elle taşınır ve klavyeyle sınanır.
+
+### H675 — Editöryal Bugün ve giriş fazla büyük/ağırdı; kompakt, hareketli sürüm (2026-11-25)
+- **Belirti:** kullanıcı "daha küçük, minimalist, kompakt, animasyonlu" istedi; 44 px başlık ve koyu tam genişlik "sürdür" bloğu ekranın üst yarısını kaplıyordu.
+- **Kök neden:** H673 ölçeği büyük ekran editöryal düzenine göre seçilmişti; telefonda ilk ekrana sığan bilgi azaldı.
+- **Çözüm:** Figma "MeDSor v15 · Minimal" (https://www.figma.com/design/xBn39OuJbTgz87O26f33UK) → başlık clamp(22–28 px), 3 px hedef çubuğu (değer yanında, plan cümlesi yalnız hedef yoksa), çerçeveli hafif "sürdür" satırı + aksan oynat, 52 px liste satırı, hap kısayollar, satır içi durum, 14 px alıntı, PC yan sütun 280/300 px. Hareket: bölümler sırayla belirir, çubuk dolar, satır/kısayol/oynat üzerine gelme ve basma geçişleri; "hareketi azalt" erisilebilirlik.css ile kapanır. Giriş başlığı clamp(24–34 px), boşluklar sıkı.
+- **Kural:** ölçü kararı önce 375 px'te "ilk ekranda ne görünüyor" sorusuyla verilir; animasyon yalnız transform/opacity ile ve azaltılmış hareket kipinde kapanacak biçimde eklenir.

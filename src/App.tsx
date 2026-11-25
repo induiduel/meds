@@ -59,11 +59,11 @@ const DuyuruBandi = guvenliLazy(() => import('./components/system/DuyuruBandi'))
 // Erişim sınırı (2026-11-23): izinli listede olmayan hesap bu ekranı görür, veri/veritabanı yüklenmez
 import { erisimEpostasiIzinli, erisimIzinliMi, rolIzniKaydet } from './services/erisimSiniri';
 const ErisimKapali = guvenliLazy(() => import('./components/system/ErisimKapali'));
+const GirisSayfasi = guvenliLazy(() => import('./components/giris/GirisSayfasi'));
 
 const ManageV16 = guvenliLazy(() => import('./components/manage16/ManageV16'));
 const ManageConsole = guvenliLazy(() => import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole })));
 // Giriş kapısı (yalnız oturumsuz) ve kurulum rehberi (olayla açılır) açılış paketine girmez; ikisi OnboardingV12'yi de çeker.
-const Onboarding = guvenliLazy(() => import('./components/onboarding/Onboarding').then(m => ({ default: m.Onboarding })));
 
 const ViewFallback = () => <PageLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
@@ -84,6 +84,7 @@ import {
   AppUser,
 } from './services/auth';
 import { isAdminAppMode, getStoredPanelSecret, setStoredPanelSecret } from './config/deployment';
+import { GIRIS_YOLU, girisSonrasiAdres } from './app/girisYolu';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from './services/firestoreDb';
 import { uploadBookletPdfToDrive, evaluateAutoBackupThreshold, ThresholdStatus } from './services/drive';
 
@@ -1361,6 +1362,21 @@ export default function App() {
   const girisKapisi = !isManageRoute && !isAdminAppMode() && !currentUser && aiTest !== true && (showOnboarding || (authHazir && aiTest === false));
   const arzuAcik = useArzuAcik();
   const arzuKatmani = !isManageRoute && !girisKapisi && !girisUyarisi && arzuAcik && arzuHesabiMi(currentUser);
+  // H671: giriş kendi adresi olan ayrı sayfadır. Kapı açılınca adres /giris?sonra=<önceki> olur; giriş bitince
+  // (hesap ya da yapay zekâ test çerezi) önceki adrese dönülür. Oturum çözülmeden /giris'ten ayrılınmaz.
+  useEffect(() => {
+    const { pathname, search, hash } = window.location;
+    if (girisKapisi) {
+      if (pathname !== GIRIS_YOLU) {
+        // /giris doğrudan açılınca yönlendirici adresi /bugun?sonra=… diye kanonikleştirir; var olan hedef korunur (iç içe sarma yok)
+        const onceki = new URLSearchParams(search).get('sonra');
+        const sonra = onceki && onceki.startsWith('/') ? onceki : pathname + search + hash;
+        window.history.replaceState(window.history.state, '', `${GIRIS_YOLU}?sonra=${encodeURIComponent(sonra)}`);
+      }
+    } else if (pathname === GIRIS_YOLU && (currentUser || aiTest === true)) {
+      navigateTo(girisSonrasiAdres());
+    }
+  }, [girisKapisi, currentUser, aiTest]);
   const gorunumBaglami = { activeTab, canliDersKey, committees, completedQuestions, congratsToast, currentCommittee, currentUser, deepLinkNonce, driveUploadSuccess, emptyQuestions, fetchQuestions, filterMyQuestionsOnly, gatheringQuestions, gorunenTab, handleAddFragment, handleAddOption, handleAddQuestionContribution, handleDeleteQuestion, handleGenerateSlots, handleGoogleLogout, handleReconstructWithAi, handleSetClaimedAnswer, handleUpdateQuestionReference, handleUpvoteFragment, handleUpvoteOption, handleUpvoteQuestion, isAdmin, isGeneratingSlots, learnLinkNonce, learnQuestionFocus, loading, myQuestions, openQuestion, openSearchHit, openSummaryId, ornekQuestionId, pastExamsSearchQuery, poolFocusQuestion, poolQuestions, questions, reconstructingMap, sayfaGizliMi, sayfaKapaliMi, searchFocusId, searchPageQuery, searchQuery, selectedCommitteeId, selectedDiscipline, selectedDiseaseId, selectedGlossaryTermId, selectedLearnDeckId, selectedLearnSlideNumber, selectedOrnekKazanimNo, selectedOrnekLessonId, selectedStatus, setActiveTab, setAuthModalInitialMode, setClusterFocusId, setCongratsToast, setContributeDefaultNumber, setCurrentUser, setDriveUploadSuccess, setFilterMyQuestionsOnly, setIsAuthModalOpen, setIsContributeModalOpen, setIsEditQuestionModalOpen, setIsHistoryModalOpen, setIsOfflineModalOpen, setIsPdfModalOpen, setLearnQuestionFocus, setOptimizeQuestion, setPastExamsSearchQuery, setPdfSlideTarget, setPoolFocusId, setSearchPageQuery, setSearchQuery, setSelectedCommitteeId, setSelectedDiscipline, setSelectedLearnDeckId, setSelectedLearnSlideNumber, setSelectedOrnekKazanimNo, setSelectedOrnekLessonId, setSelectedQuestionForHistory, setSelectedQuestionToEdit, setSelectedStatus, setShowClusterModal, setVisibleCount, standaloneQuestions, targetCount, visibleCount };
   const modalBaglami = { accessToken, activeTab, authModalInitialMode, clusterFocusId, committees, contributeDefaultNumber, currentCommittee, currentUser, fetchQuestions, handleAddCommittee, handleAddQuestionContribution, handleAuthSuccess, isAdmin, isAuthModalOpen, isContributeModalOpen, isDiagnosticsOpen, isDriveModalOpen, isEditQuestionModalOpen, isHistoryModalOpen, isNewCommitteeModalOpen, isNotebookLMModalOpen, isOfflineModalOpen, isPastExamImporterOpen, isPdfModalOpen, isPwaWelcomeOpen, isSubagentMonitorOpen, optimizeQuestion, pdfSlideTarget, questions, selectedCommitteeId, selectedQuestionForHistory, selectedQuestionToEdit, setActiveTab, setDriveUploadSuccess, setIsAuthModalOpen, setIsContributeModalOpen, setIsDiagnosticsOpen, setIsDriveModalOpen, setIsEditQuestionModalOpen, setIsHistoryModalOpen, setIsNewCommitteeModalOpen, setIsNotebookLMModalOpen, setIsOfflineModalOpen, setIsPastExamImporterOpen, setIsPdfModalOpen, setIsPwaWelcomeOpen, setIsSubagentMonitorOpen, setOptimizeQuestion, setPdfSlideTarget, setQuestions, setSelectedQuestionForHistory, setSelectedQuestionToEdit, setShowClusterModal, showClusterModal, showOnboarding };
 
@@ -1374,6 +1390,15 @@ export default function App() {
     );
   }
 
+  // H671: giriş kapısı açıkken yalnız giriş sayfası kurulur; kabuk ve sayfa verisi altında çalışmaz.
+  if (girisKapisi) {
+    return (
+      <Suspense fallback={<ViewFallback />}>
+        <GirisSayfasi onAuthSuccess={handleAuthSuccess} />
+      </Suspense>
+    );
+  }
+
   return (
     <GlossaryProvider>
     <MusicPlayerProvider>
@@ -1382,7 +1407,6 @@ export default function App() {
           <GirisUyarisi onKabul={() => setGirisUyarisi(false)} />
         </Suspense>
       )}
-      {girisKapisi && <Suspense fallback={<ViewFallback />}><Onboarding onAuthSuccess={handleAuthSuccess} /></Suspense>}
       {/* Başarım: dönem/kurul seçimi (girişte zorunlu) + ödül kutlamaları */}
       {(currentUser?.uid || aiTest) && !girisKapisi && !isManageRoute && (
         <Suspense fallback={null}>
@@ -1405,6 +1429,18 @@ export default function App() {
         </Suspense>
       )}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
+      {/* H674: klavyeyle menüyü atlayıp doğrudan sayfa içeriğine geçiş (WCAG 2.4.1) */}
+      <a
+        className="ed-atla"
+        href="#ana-icerik"
+        onClick={(e) => {
+          // Uygulama # bağlantılarını kendi yönlendirmesiyle işliyor; tarayıcının çapa odağına güvenilmez, odak elle taşınır
+          e.preventDefault();
+          document.getElementById('ana-icerik')?.focus();
+        }}
+      >
+        İçeriğe geç
+      </a>
       <ToastHost />
       <CdVideoRozet />
       <ConfirmHost />
@@ -1571,7 +1607,7 @@ export default function App() {
       {/* Site duyurusu (Yönetim › Site › Duyurular; çalışma anı site ayarı) */}
       {siteAyar.duyuru?.acik && <Suspense fallback={null}><DuyuruBandi git={(y) => navigateTo(y)} /></Suspense>}
       {/* Main Container */}
-      <main ref={mainRef} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
+      <main ref={mainRef} id="ana-icerik" tabIndex={-1} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
         <Gorunumler {...gorunumBaglami} />
       </main>
 

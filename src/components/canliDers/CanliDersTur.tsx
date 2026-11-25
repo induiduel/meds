@@ -226,13 +226,13 @@ const DERS: Durak[] = [
 /** H05 · Bugün ekranı koç turu (ilk girişte bir kez; seçiciler today/TodayView.tsx v15 dalı) */
 const BUGUN: Durak[] = [
   {
-    sel: '.t15-ring', icon: Target, eyebrow: 'Halka', title: 'Günlük hedef halkası',
-    text: 'Halka bugünkü hedefine ne kadar yaklaştığını gösterir. Hedef koymadıysan son çözdüğün soruların doğru oranını gösterir.',
-    points: ['Soru ve çalışma süresi hedefleri Profil › Okul ve hedef bölümünden belirlenir', 'Gün içinde çalıştıkça halka kendiliğinden dolar'],
+    sel: '.t15-lead', icon: Target, eyebrow: 'Özet', title: 'Günün özeti',
+    text: 'Başlık sınava kaç gün kaldığını, altındaki çubuk bugünkü hedefine ne kadar yaklaştığını gösterir.',
+    points: ['Soru ve çalışma süresi hedefleri Profil › Okul ve hedef bölümünden belirlenir', 'Gün içinde çalıştıkça çubuk kendiliğinden dolar'],
   },
   {
     sel: '.t15-cta', icon: Route, eyebrow: 'Plan', title: 'Kaldığın yerden sürdür',
-    text: 'Bugünün planı kartındaki düğme seni en son yarım bıraktığın derse ya da soruya götürür.',
+    text: 'Özetin altındaki düğme seni en son yarım bıraktığın derse ya da soruya götürür.',
     points: ['Hiç başlamadıysan derslere yönlendirir'], optional: true,
   },
   {
