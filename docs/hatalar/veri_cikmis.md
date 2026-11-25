@@ -279,3 +279,7 @@
   doğru (mamografi 2 yılda bir, GGK yıllık, AAA taraması USG ile bir kez); şıklarda doğru kombinasyon yok. Eski not gerekçesizdi.
   **Kural:** anahtar değiştirilmez; `soruNotu` her öncülü ders notu değeriyle gerekçelendirir, eski not `soruNotu.onceki`'de
   saklanır, `explanation` başındaki not satırı da aynı metne çekilir (`meds_temp/grup_celiski/q072_not.py`).
+  (13) **Belirsiz (D) grupların metin onarımı (2026-11-25):** cevaplar tutarlıydı ama kopyalarda metin bozuktu: angina E şıkkı
+  kesik ("Anksiyete ve…"), akılcı ilaç kökü bozuk + "İ ilaç", PSGN `d3cecdd36826` E şıkkı "tram-track" yapılmıştı (ikinci yanlış
+  ifade → iki doğru cevap) ve açıklaması boştu. **Kural:** grup taramasında cevap aynı diye geçilmez; her kopyada şık metni de
+  asılla kıyaslanır, şık değiştiren kopya tek doğru cevabı bozuyorsa asıl metne döner. Kayıtlarda `grupD` günlüğü.
