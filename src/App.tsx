@@ -29,6 +29,9 @@ import { ScrollTopFab } from './components/shell/ScrollTopFab';
 import { TamEkranGezinme } from './components/shell/TamEkranGezinme';
 import { TabBar } from './components/shell/TabBar';
 import { CanliDersDockGate } from './components/canliDers/CanliDersDockGate';
+import { useSyncExternalStore as useV17Dis } from 'react';
+import { v17Acik, v17Dinle, V17_ROTALAR } from './v17/bayrak';
+const V17Kok = guvenliLazy(() => import('./v17/Kok'));
 import { CdVideoRozet } from './components/canliDers/CdVideoRozet';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 const WelcomeTour = guvenliLazy(() => import('./components/onboarding/WelcomeTour'));
@@ -724,6 +727,7 @@ export default function App() {
   const sayfaGizliMi = !isAdmin && !isAdminAppMode() && sayfaYonlendir(activeTab, false);
   const sayfaKapaliMi = (sayfaKapali(activeTab) && !isAdmin) || sayfaGizliMi;
   // Kapalı sayfada içerik hiç kurulmaz: aşağıdaki sayfa blokları gorunenTab'a bakar (kapalı ekranı tek başına kalır)
+  const v17Ekran = useV17Dis(v17Dinle, v17Acik, () => false) && V17_ROTALAR.has(activeTab) && !sayfaKapaliMi;
   const gorunenTab = (sayfaKapaliMi ? '__kapali__' : activeTab) as typeof activeTab;
   // H485: kök adres (/) öğrenciye gizli "Soru ekle" sayfasına düşüyor ve açılışta "Bu sayfa şu an kapalı" görünüyordu.
   // Giriş sayfası kapalıysa Bugün'e geçilir (geçmişe kayıt yazılmaz); adresle girilen diğer gizli sayfalar H139 gereği ekranda kalır.
@@ -1573,6 +1577,7 @@ export default function App() {
 
       {/* Canlı ders oynatıcısı: rota değişse de çalma sürer (ders ekranında tam çubuk, başka sayfada mini) */}
       <V15Icinde><KronometreV15 /><ProfilKurulumKapisi girisli={!!currentUser} yonetici={isAdmin} /></V15Icinde>
+      {v17Ekran && <Suspense fallback={null}><V17Kok rota={activeTab} dersKey={canliDersKey} /></Suspense>}
       <CanliDersDockGate activeTab={activeTab} dersKey={activeTab === 'canli_ders' ? canliDersKey : undefined} />
 
       {/* Alt gezinme (telefon) */}

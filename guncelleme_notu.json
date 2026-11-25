@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 927,
-  "baslik": "v16 denemesi: ikon seti tüm sayfalarda",
+  "onem": 928,
+  "baslik": "v17 denemesi: yeni Bugün ve sesli ders",
   "maddeler": [
-    "v16 denemesi (yalnız yönetici): yeni ikon seti artık tüm sayfalarda kullanılıyor; öğrenciler mevcut ikonları görmeye devam eder.",
-    "Soru çözücü özetindeki süre simgesi emoji yerine saat ikonu oldu."
+    "v17 denemesi (yalnız yönetici): Bugün ve sesli ders sıfırdan yeni tasarımla açılıyor; telefon, tablet ve bilgisayarda ayrı iskelet.",
+    "Öğrenciler mevcut tasarımı görmeye devam eder."
   ],
   "eklenen": [],
   "degisen": [],

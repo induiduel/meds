@@ -9,6 +9,7 @@ import { useSyncExternalStore } from 'react';
 import { GIZLI_SAYFALAR, KAPALI_SAYFALAR } from '../components/merkez/sayfaSabitleri';
 import { icerikDurumu, type IcerikTur } from './icerikGorunurlukKural';
 import { v16Yonetici } from '../utils/v16';
+import { v17Yonetici } from '../v17/bayrak';
 export type { IcerikTur } from './icerikGorunurlukKural';
 
 export type SayfaDurumu = 'acik' | 'gizli' | 'kapali' | 'yalniz-yonetici';
@@ -53,6 +54,7 @@ export function getSiteAyar(): GenelSiteAyar { return ayar; }
 let yonetici = false;
 export function yoneticiAyarla(v: boolean) {
   v16Yonetici(v);
+  v17Yonetici(v);
   if (yonetici === v) return;
   yonetici = v;
   ayar = { ...ayar };

@@ -172,3 +172,15 @@
 - **Kök neden:** `CanliDersDock` alt boşluğu `.a13-island-wrap, .s12-tabs, .sh-tabs` ile ölçüyordu; v15 sekme çubuğu `.v15-tabs` listede yoktu → boşluk 0.
 - **Çözüm:** seçicilere `.v15-tabs` eklendi (ölçüm + ResizeObserver); oynatıcı 691–751, sekmeler 751–812.
 - **Kural:** kabuk sınıf adı değişince onu ölçen yerleri `bag.py kim` / grep ile tara; sabit sınıf listesi yeni kabuğu kapsamalı.
+
+### H665 — v17 başlıkları Fraunces yerine Geist ile çiziliyordu (2026-11-25, v17)
+- **Belirti:** v17 sesli ders ve Bugün başlıkları tasarımdaki serif yerine eski sans yazı tipiyle göründü.
+- **Kök neden:** eski genel kural `html.ui-v7 :is(h1,h2)` (özgüllük 0,1,2) `--font-display` veriyordu; `.k7-bas` (0,1,0) yeniliyordu.
+- **Çözüm:** `.k7` içinde `--font-display` serif'e eşlendi, yazı rolleri `.k7 :is(...)` (0,2,0) ile tanımlandı.
+- **Kural:** eski kabuğun üstüne binen yeni katmanda başlık/öğe etiketlerine düşen genel kurallar sayılır; yazı tipi hesaplanmış değerle doğrulanır.
+
+### H666 — v17 telefonda PDF çubuğu araç menüsünü ekran dışına itiyordu (2026-11-25, v17)
+- **Belirti:** 375 px'te PDF çubuğunun sonundaki araç menüsü (401 px) 351 px çubuğun dışında kaldı, dokunulamıyordu.
+- **Kök neden:** paylaşılan `CdPdfBolme` çubuğu 13 öge ve `nowrap`; v17 telefon düzeni daha dar sütun veriyor.
+- **Çözüm:** v17'de çubuk `flex-wrap`; telefonda yakınlaştırma düğmeleri gizli (parmakla yakınlaştırma var).
+- **Kural:** paylaşılan bileşen yeni kabuğa konunca her cihazda çocukların `right` değeri pencere/kapsayıcı genişliğiyle taranır.

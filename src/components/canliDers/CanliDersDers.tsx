@@ -1863,7 +1863,7 @@ function DersBolumEtiketi({ detay }: { detay: CdDetay }) {
 /** Sesli ders slayt yakınlığı sınırı (kullanıcı kararı 2026-11-06): %80–%140 */
 const Z_MIN = 0.8, Z_MAX = 1.4;
 
-function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: boolean; sigdir?: boolean }) {
+export function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: boolean; sigdir?: boolean }) {
   const pdf = detay.pdf!;
   const info = useDeckPdf(pdf.deckId);
   const aktif = useCd((s) => (canli ? s.aktif : -1));

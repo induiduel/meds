@@ -1,0 +1,115 @@
+/*
+ * MeDSor v17 · Klinik editöryal (docs/V17_PLAN.md). Yalnız .k7 kökü altında; v12–v16 stillerinden bağımsız.
+ * Renkler H&E boyasından: hematoksilin (vurgu) + eozin (okunan cümle); zemin lam beyazı. Kart yığını yok: tipografi + ince çizgi.
+ * Kurallar: taban öğe seçicileri :where() içinde (öncelik 0); büyük harfli üst etiket yok; metin taşmaz (min-width:0 + kırılma).
+ */
+.k7{--zemin:#F5F7F7;--yuzey:#FFFFFF;--alan:#EAEEEF;--cizgi:#DCE2E4;--cizgi-2:#BFC8CC;--yazi:#0F1A1C;--yazi-2:#33403F;--yazi-3:#55615F;
+--vurgu:#33306B;--vurgu-ust:#FFFFFF;--vurgu-acik:#E6E5F2;--eozin:#D9548A;--eozin-acik:#F7D9E4;
+--iyi:#2D6A4F;--iyi-acik:#E3F0E8;--kotu:#A63D40;--kotu-acik:#F6E3E3;
+--golge:0 1px 2px rgba(15,26,28,.05),0 8px 24px rgba(15,26,28,.06);--golge-2:0 18px 48px rgba(15,26,28,.16);
+--serif:"Fraunces",Georgia,serif;--okuma:"Source Serif 4",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif}
+.k7[data-tema="koyu"]{--zemin:#0F1416;--yuzey:#161D20;--alan:#1E272A;--cizgi:#2A3437;--cizgi-2:#3E4A4E;--yazi:#E8EEEE;--yazi-2:#BCC7C7;--yazi-3:#8E9B9B;
+--vurgu:#B3AEF0;--vurgu-ust:#15132E;--vurgu-acik:#25234A;--eozin:#E98AB0;--eozin-acik:#45203A;
+--iyi:#7CC7A0;--iyi-acik:#16291F;--kotu:#E79A9C;--kotu-acik:#352022;--golge:0 1px 2px rgba(0,0,0,.4);--golge-2:0 18px 48px rgba(0,0,0,.6)}
+.k7[data-tema="sepya"]{--zemin:#F4EDDF;--yuzey:#FBF6EC;--alan:#EADFCB;--cizgi:#DCCDB2;--cizgi-2:#C7B391;--yazi:#2B2216;--yazi-2:#4E412E;--yazi-3:#6E5E45;
+--vurgu:#4B2F6B;--vurgu-acik:#EADFEF;--eozin:#C9567F;--eozin-acik:#F1D3DE}
+
+/* v17 ekranı açıkken v15 kabuğu gizlenir (altta bağlı kalır) */
+:root[data-v17-ekran] :is(.sh-main,.v15-top,.v15-tabs,.v15-side,.cd-dock,.sh-tabs,.sh-top,.kr15,.kr15z){display:none !important}
+:root[data-v17-ekran] body{overflow:hidden}
+
+.k7{position:fixed;inset:0;z-index:60;box-sizing:border-box;display:flex;overflow:hidden;background:var(--zemin);color:var(--yazi);
+font:400 15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+.k7,:where(.k7) *,:where(.k7) *::before,:where(.k7) *::after{box-sizing:border-box}
+:where(.k7) ::selection{background:var(--eozin-acik);color:var(--yazi)}
+:where(.k7) :is(button,input){font:inherit;color:inherit}
+:where(.k7) button{border:0;background:none;padding:0;cursor:pointer}
+:where(.k7) a{color:inherit;text-decoration:none}
+:where(.k7) :is(h1,h2,h3,p,ol,ul,figure){margin:0;padding:0}
+:where(.k7) ol,:where(.k7) ul{list-style:none}
+:where(.k7) :focus-visible{outline:2px solid var(--vurgu);outline-offset:3px;border-radius:6px}
+:where(.k7) *{scrollbar-width:thin;scrollbar-color:var(--cizgi-2) transparent}
+
+/* yazı rolleri */
+.k7-ust{font:550 13px/1.3 var(--sans);color:var(--yazi-3)}
+.k7-dev{font:500 34px/1.08 var(--serif);letter-spacing:-.02em;text-wrap:balance;overflow-wrap:break-word}
+.k7-bas{font:500 24px/1.15 var(--serif);letter-spacing:-.01em;text-wrap:balance;overflow-wrap:break-word}
+.k7-ara{font:600 16px/1.3 var(--sans)}
+.k7-not{font:400 13px/1.4 var(--sans);color:var(--yazi-3)}
+.k7-no{font:500 15px/1 var(--serif);color:var(--yazi-3);font-variant-numeric:tabular-nums}
+
+/* düğmeler */
+.k7-dg{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;background:var(--vurgu);color:var(--vurgu-ust);font:600 14.5px/1 var(--sans);white-space:nowrap}
+.k7-dg2{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--cizgi-2);color:var(--yazi);font:550 13.5px/1 var(--sans);white-space:nowrap;flex:none}
+.k7-ik{width:44px;height:44px;flex:none;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;color:var(--yazi-2)}
+.k7-ik:hover,.k7-dg2:hover{background:var(--alan)}
+.k7-ik svg{width:20px;height:20px}
+.k7-ik.is-cer{box-shadow:inset 0 0 0 1px var(--cizgi);width:38px;height:38px}
+.k7-cal{width:56px;height:56px;flex:none;border-radius:999px;background:var(--vurgu);color:var(--vurgu-ust);display:flex;align-items:center;justify-content:center}
+.k7-cal svg{width:22px;height:22px}
+.k7-etk{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font:600 12px/1 var(--sans);white-space:nowrap;flex:none;background:var(--eozin-acik);color:var(--yazi)}
+
+/* çizgi listesi */
+.k7-satir{display:flex;align-items:center;gap:14px;min-height:56px;padding:12px 0;border-top:1px solid var(--cizgi);color:var(--yazi);width:100%;text-align:left}
+.k7-satir:last-child{border-bottom:1px solid var(--cizgi)}
+.k7-satir .gov{flex:1;min-width:0}.k7-satir .gov b{display:block;font:550 15px/1.3 var(--sans);overflow-wrap:break-word}.k7-satir .gov small{display:block;font:400 13px/1.4 var(--sans);color:var(--yazi-3)}
+.k7-il{height:2px;background:var(--cizgi);position:relative;border-radius:2px}.k7-il i{position:absolute;inset:0 auto 0 0;background:var(--vurgu);border-radius:2px}
+
+/* ── Kabuk ── */
+.k7-govde{flex:1;min-width:0;display:flex;flex-direction:column;min-height:0}
+.k7-kaydir{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+/* telefon: yüzen komut şeridi */
+.k7-serit{position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:3;display:flex;gap:2px;padding:6px;border-radius:22px;background:var(--yazi);color:var(--zemin);box-shadow:var(--golge-2)}
+.k7-serit a{flex:1;min-width:0;min-height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:16px;font:600 11.5px/1 var(--sans);color:color-mix(in srgb,var(--zemin) 62%,transparent)}
+.k7-serit a[aria-current="page"]{background:color-mix(in srgb,var(--zemin) 14%,transparent);color:var(--zemin)}
+.k7-serit svg{width:20px;height:20px}
+/* tablet: etiketli ray */
+.k7-ray{width:88px;flex:none;display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 8px;box-shadow:1px 0 0 var(--cizgi);background:var(--zemin)}
+.k7-ray a{width:72px;min-height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:14px;font:600 11.5px/1.1 var(--sans);color:var(--yazi-3)}
+.k7-ray a[aria-current="page"]{background:var(--vurgu-acik);color:var(--vurgu)}
+.k7-ray svg{width:22px;height:22px}
+/* PC: üst gezinme */
+.k7-ustnav{display:flex;align-items:center;gap:28px;height:60px;padding:0 32px;box-shadow:0 1px 0 var(--cizgi);flex:none}
+.k7-ustnav nav{display:flex;gap:4px;min-width:0}
+.k7-ustnav nav a{height:36px;display:flex;align-items:center;padding:0 14px;border-radius:999px;font:550 14px/1 var(--sans);color:var(--yazi-2);white-space:nowrap}
+.k7-ustnav nav a[aria-current="page"]{background:var(--vurgu-acik);color:var(--vurgu)}
+.k7-marka{font:600 18px/1 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+
+/* ── Bölüm şeridi (v17'nin akılda kalan öğesi) ── */
+.k7-bseri{display:flex;gap:4px;min-width:0}
+.k7-bseri button{display:flex;flex-direction:column;gap:6px;min-width:0;padding:6px 0;font:550 12px/1.2 var(--sans);color:var(--yazi-3);text-align:left}
+.k7-bseri button i{height:4px;border-radius:2px;background:var(--cizgi);position:relative;overflow:hidden;display:block}
+.k7-bseri button i b{position:absolute;inset:0 auto 0 0;background:var(--vurgu)}
+.k7-bseri button.is-simdi{color:var(--vurgu)}
+.k7-bseri button em{font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ── Okuma metni ── */
+.k7-okuma{font:400 18px/1.7 var(--okuma);color:var(--yazi-3);text-wrap:pretty;overflow-wrap:break-word}
+.k7-okuma h3{font:600 15px/1.35 var(--sans);color:var(--yazi);padding:18px 0 8px}
+.k7-okuma p{margin:0 0 14px}
+.k7-okuma .gecti{color:var(--yazi-2)}
+.k7-okuma .simdi{color:var(--yazi);background:linear-gradient(transparent 58%,var(--eozin-acik) 58%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.k7-okuma span[data-c]{cursor:pointer}
+.k7-okuma span[data-c]:hover{text-decoration:underline;text-decoration-color:var(--cizgi-2);text-underline-offset:4px}
+
+/* ── Oynatıcı ── */
+.k7-oyn{display:flex;align-items:center;gap:12px;flex:none}
+.k7-cubuk{position:relative;flex:1;min-width:60px;height:28px;display:flex;align-items:center;cursor:pointer}
+.k7-cubuk .k7-il{flex:1}
+.k7-cubuk input{position:absolute;inset:0;width:100%;opacity:0;cursor:pointer;margin:0}
+
+/* ── PDF bölmesi (çekirdek: CdPdfBolme) v17 içinde: v15 çubuğu sadeleşir ── */
+.k7 .cd-pdf-bolme{background:transparent;border:0;box-shadow:none;border-radius:0}
+.k7 .cd-pdf-bar{background:transparent;box-shadow:none;border:0;padding:0 0 8px;min-height:44px}
+.k7 .cd-pdf-govde{border-radius:6px;box-shadow:0 0 0 1px var(--cizgi);background:var(--alan)}
+
+@keyframes k7belir{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.k7-belir{animation:k7belir .35s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){.k7-belir{animation:none}}
+/* H665: eski html.ui-v7 :is(h1,h2) yazı tipi kuralı (0,1,2) .k7-bas'ı eziyordu; .k7 içinde tek sınıflı roller iki sınıfa çıkar. */
+.k7{--font-display:var(--serif)}
+.k7 :is(.k7-dev,.k7-bas,.k7-no,.k7-marka){font-family:var(--serif)}
+.k7 :is(.k7-ara,.k7-ust,.k7-not){font-family:var(--sans)}
+/* H666: telefonda PDF çubuğu (13 öge, nowrap) 351 px'e sığmıyor, araç menüsü ekran dışına itiliyordu. */
+.k7 .cd-pdf-bar{flex-wrap:wrap;row-gap:6px;min-width:0}
+.k7[data-cihaz='tel'] .cd-pdf-bar :is(.cd-pdf-zb,.cd-pdf-zoom){display:none}

@@ -501,3 +501,5 @@
 - **H662** · Bölme içi etiket ekran sorgusuyla gizlendi, dar bölmede taştı → hatalar/on_yuz_tasarim_tema.md
 - **H663** · PDF sayfa kipi yalnız scroll-snap'ti, iki sayfa görünüyordu → hatalar/on_yuz_tasarim_tema.md
 - **H664** · Mini oynatıcı v15 sekme çubuğunu ölçmüyor, telefonda örtüyordu → hatalar/on_yuz_tasarim_tema.md
+- **H665** · v17 başlıkları eski h1 kuralına yeniliyor, Fraunces görünmüyordu → hatalar/on_yuz_tasarim_tema.md
+- **H666** · v17 telefonda PDF çubuğu araç menüsünü ekran dışına itiyordu → hatalar/on_yuz_tasarim_tema.md
