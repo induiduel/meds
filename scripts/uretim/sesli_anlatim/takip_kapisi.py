@@ -9,6 +9,7 @@ daha garanti yollarla emin ol"). Yayından önce 0 HATA; LLM yok, yalnız veri t
       başlarını ondan türetir (canliDersStore.ts), cumle_zaman kullanılmaz.
   T6  --api verilirse: canlı /api/canli-ders/<key> varsayılan sesi için kelimeZaman'ı paragraf başına eksiksiz sunuyor.
   T5  PDF işareti: her cümlenin işareti var; çapa varsa işaretin sayfası çapadaki sayfa; "sayfa"/boş işaret oranı ≤ %5.
+  T7  "ek" (slaytta anlamca karşılığı olmayan, açıkça etiketlenen cümle) oranı > %20 ise UYARI.
 Kullanım: .venv-ocr/bin/python scripts/uretim/sesli_anlatim/takip_kapisi.py <key> [--kok data/sesli_anlatim] [--varyant ID]
 Çıkış: 0 geçti, 1 HATA.
 """
@@ -126,6 +127,11 @@ def main() -> int:
     bos = sum(1 for x in tum if not x or x.get("t") == "sayfa")
     if tum and bos / len(tum) > 0.05:
         H.append(f"T5 işaretlerin %{round(100 * bos / len(tum))}'i yalnız sayfa/boş (üst %5)")
+    # T7 (H655): "ek" = metinli slaytta anlamca hiçbir maddeyle örtüşmeyen cümle (hocanın slayt dışı açıklaması); hata değil,
+    # açıkça etiketlenir. Oran yüksekse sayfa hizalaması ya da anlatım–slayt uyumu ayrıca incelenir.
+    ek = sum(1 for x in tum if x and x.get("t") == "ek")
+    if tum and ek / len(tum) > 0.20:
+        print(f"UYARI T7 işaretlerin %{round(100 * ek / len(tum))}'i slayt dışı ek açıklama (>%20: hizalama/anlatım incelensin)")
     for h in H:
         print("HATA", h)
     print(f"{k} [{vid}]: {len(pars)} paragraf · {sum(len(cumle_sonlari(t)) for t in pars)} cümle · {len(H)} HATA")

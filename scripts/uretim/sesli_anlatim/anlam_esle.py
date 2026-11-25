@@ -19,9 +19,9 @@ import urllib.request
 import numpy as np
 
 URL = os.environ.get("MEDS_EMBED_BGE_URL", "http://127.0.0.1:8094/embed")
-ESIK = 0.52        # tek başına kabul alt sınırı (bge-m3 Türkçe, ölçüm: alakasız madde ≈ 0,30–0,45)
+ESIK = 0.65        # tek başına kabul alt sınırı (bge-m3 Türkçe, H655 ölçümü: aynı konudaki ilgisiz madde 0,50–0,62)
 FARK = 0.025       # birinci ile ikinci (komşu olmayan) aday arasında en az bu fark
-GUCLU = 0.66       # bu ve üstü fark aranmadan kabul
+GUCLU = 0.72       # bu ve üstü fark aranmadan kabul
 
 _onbellek: dict[str, np.ndarray] = {}
 
@@ -78,7 +78,8 @@ def w_doldur(tk: list[tuple[str, int, int]], kutular: list[tuple[str, tuple]], c
     return out
 
 
-def en_iyi_madde(cumle: str, adaylar: list[tuple[int, int, dict, set, int]], S: set[str], s0: int):
+def en_iyi_madde(cumle: str, adaylar: list[tuple[int, int, dict, set, int]], S: set[str], s0: int,
+                 esik: float | None = None):
     """adaylar: (sayfa, madde no, madde, kök kümesi, kelime sayısı). Dönüş (sayfa, madde no, puan) | None."""
     adaylar = [a for a in adaylar if a[4] >= 2]
     if not adaylar:
@@ -91,7 +92,7 @@ def en_iyi_madde(cumle: str, adaylar: list[tuple[int, int, dict, set, int]], S: 
         puan.append((float(c) + 0.04 * min(ortak, 4) + (0.03 if a[0] == s0 else 0.0), float(c), a))
     puan.sort(key=lambda x: -x[0])
     p1, c1, a1 = puan[0]
-    if c1 < ESIK:
+    if c1 < (esik or ESIK):
         return None
     ikinci = next((p for p, _, a in puan[1:] if not (a[0] == a1[0] and abs(a[1] - a1[1]) <= 1)), None)
     if c1 < GUCLU and ikinci is not None and p1 - ikinci < FARK:

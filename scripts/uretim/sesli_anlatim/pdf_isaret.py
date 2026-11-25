@@ -16,7 +16,7 @@ Eşleme (cümle × sayfa kelimeleri):
 
 Çıktı: data/sesli_anlatim/isaret/<key>.json
   { surum:1, metinHash, c: { "<paragraf i>": [ <cümle işareti> | null, … ] } }
-  cümle işareti: { d: dosya, s: sayfa, t: "metin"|"tablo"|"kelime"|"resim"|"sayfa",
+  cümle işareti: { d: dosya, s: sayfa, t: "metin"|"tablo"|"kelime"|"resim"|"sayfa"|"ek" (H655: slaytta karşılığı yok),
                    l: [[x0,y0,x1,y1], …]          # ≥%80'i okunan madde satırları / resim kutusu (sayfa oranı 0–1)
                    w: [[b, e, x0,y0,x1,y1], …] }   # kelime kutuları; [b, e) = konuşulan kelimenin cümle içi karakter aralığı
 Sunucu yalnız metinHash tutarsa gönderir (metin değişince eski işaret kendiliğinden yok sayılır).
@@ -41,6 +41,7 @@ import kok as _kok  # noqa: E402
 
 import argparse
 import hashlib
+import glob
 import json
 import os
 import re
@@ -71,7 +72,7 @@ def api_iste(url: str, timeout: int = 30) -> "urllib.request.Request":
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
 GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
-SURUM = 10  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+SURUM = 14  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
 MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
 BULLET_PREFIX = re.compile(r"^[^\wçğıöşüâîû]+", re.I)
@@ -500,9 +501,25 @@ class Pdf:
 def pdf_indir(deck_id: str, f: dict, fi: int) -> Path | None:
     """Yerelde olmayan PDF (Oracle): sunucunun ders PDF ucundan önbelleğe indirilir (Drive kimliği/adıyla eşlenir).
     Sunucu ucu boşsa (yeni ders, PDF henüz yayında değil) tam hat klasöründeki orijinal.pdf kullanılır (H623)."""
-    y = _hat_pdf(deck_id) if fi == 0 else None
-    yol = _pdf_indir_api(deck_id, f, fi)
-    return yol or y
+    # H655 (3. tur): sunucu ucu boş dönünce eski önbellek kopyası, hat kopyasından önce gelir; sayfa sayısı hizalamadaki
+    # dosyayla tutmayan PDF reddedilir (k2-07: 72 sayfalık slayta yazılmış ders 60 sayfalık hat PDF'ine düşüp
+    # 61–71. sayfalar "yalnız sayfa" kalıyordu).
+    ON = Path(os.environ.get("PDF_ONBELLEK", str(KOK / ".pdf_onbellek")))
+    adaylar = [_pdf_indir_api(deck_id, f, fi)]
+    adaylar += sorted(ON.glob(f"{glob.escape(deck_id)}_{fi}_*.pdf"), key=lambda q: -q.stat().st_mtime)
+    adaylar.append(_hat_pdf(deck_id) if fi == 0 else None)
+    for y in adaylar:
+        if y and y.is_file() and (not f.get("pages") or _sayfa_sayisi(y) == int(f["pages"])):
+            return y
+    return None
+
+
+def _sayfa_sayisi(y: Path) -> int:
+    try:
+        with pymupdf.open(y) as d:
+            return d.page_count
+    except Exception:
+        return -1
 
 
 def _hat_pdf(deck_id: str) -> Path | None:
@@ -662,14 +679,15 @@ def capali_ic(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None
 ANLAM = os.environ.get("MEDS_ANLAM_ESLE", "1") != "0"
 
 
-def anlam_isaret(cumle: str, pdf: "Pdf", s0: int, komsu: bool = True):
+def anlam_isaret(cumle: str, pdf: "Pdf", s0: int, komsu: bool = True, genis: bool = False, esik: float | None = None):
     """H655: cümlenin anlamca karşılığı olan madde (bge-m3 + kelime kanıtı). Dönüş (işaret, sayfa) | None."""
     tk = tokenler(cumle)
     if len(tk) < 3:
         return None
     S = {k for k, _, _ in tk}
     adaylar = []
-    for s in ((s0, s0 - 1, s0 + 1) if komsu else (s0,)):
+    sayfalar = (s0, s0 - 1, s0 + 1, s0 - 2, s0 + 2, s0 - 3, s0 + 3) if genis else (s0, s0 - 1, s0 + 1) if komsu else (s0,)
+    for s in sayfalar:
         sy = pdf.sayfa(s)
         if not sy:
             continue
@@ -678,7 +696,7 @@ def anlam_isaret(cumle: str, pdf: "Pdf", s0: int, komsu: bool = True):
                 adaylar.append((s, m, md, md["koks"], md["kok"]))
     global ANLAM
     try:
-        b = anlam_esle.en_iyi_madde(cumle, adaylar, S, s0)
+        b = anlam_esle.en_iyi_madde(cumle, adaylar, S, s0, esik=esik if esik else (0.68 if genis else None))
     except Exception as e:  # vektör servisi yoksa kelime eşlemesiyle devam (bu çalışmada bir daha denenmez)
         print(f"anlam eşlemesi kapalı ({e})", file=sys.stderr)
         ANLAM = False
@@ -687,6 +705,78 @@ def anlam_isaret(cumle: str, pdf: "Pdf", s0: int, komsu: bool = True):
         return None
     s, m, _ = b
     return eslestir_capa(cumle, pdf.sayfa(s), {m}), s
+
+
+def baslik_satiri(sy: "Sayfa") -> int | None:
+    """Slayt başlığı: ilk metinli madde (sayfanın üst %35'inde)."""
+    for mi, md in enumerate(sy.maddeler):
+        if md["kok"] and md["satirlar"] and md["satirlar"][0][1] / sy.H < 0.35:
+            return mi
+    return None
+
+
+def sayfa_onar(liste: list, cumleler: list[str], capali_ci: set[int], pdfler: list, say: dict) -> None:
+    """H655 (2. tur): hâlâ "yalnız sayfa" kalan cümle iki türlüdür.
+    (a) Yanlış sayfa: anlatılan madde atanan sayfanın ±2–3 ötesinde → geniş pencerede, daha sıkı eşikle anlam eşlemesi
+        (yazar çapası sayfayı kesin verdiyse sayfa değişmez).
+    (b) Bağlam/geçiş cümlesi ("bunları karıştırmayın", "bu dallar birbirinden kopuk değildir"): kendi maddesi yoktur,
+        aynı paragrafta aynı sayfada anlatılan son (yoksa sonraki) maddeye gönderme yapar → o maddenin satırları,
+        kelime vurgusu olmadan. Komşu madde de yoksa cümle slayt başlığıyla anlamca örtüşüyorsa başlık satırı.
+    Tahmin yok: hiçbiri tutmazsa "sayfa" kalır."""
+    for ci, x in enumerate(liste):
+        if not x or x.get("t") != "sayfa" or x.get("y") or x.get("z"):  # lazer yolu/çizimi olan işarete dokunulmaz
+            continue
+        pdf = pdfler[x["d"]] if x["d"] < len(pdfler) else None
+        if not pdf:
+            continue
+        yeni = None
+        if ANLAM:
+            # yazar çapası sayfayı verdiyse yalnız çok güçlü anlam kanıtı (≥0,66) sayfayı değiştirir
+            ar = (anlam_isaret(cumleler[ci], pdf, x["s"], komsu=False, esik=0.72) if ci in capali_ci  # çapa sayfası kesin: sayfa değişmez (T5)
+                  else anlam_isaret(cumleler[ci], pdf, x["s"], komsu=True, genis=True, esik=0.68))
+            if ar:
+                yeni = {"d": x["d"], "s": ar[1], **ar[0]}
+                say["anlam"] = say.get("anlam", 0) + 1
+        if not yeni and ci > 0 and ANLAM:
+            # yalnız HEMEN önceki cümlenin maddesi ve ancak bu cümle o maddeyle (önceki cümleyle birlikte) anlamca
+            # ilişkiliyse: "bunları karıştırmayın" türü gönderme. İlişkisiz devralma yanlış yer gösterir (H655 denetimi).
+            y = liste[ci - 1]
+            sy = pdf.sayfa(x["s"])
+            if sy and y and y.get("d") == x["d"] and y.get("s") == x["s"] and y.get("t") in ("metin", "tablo") and y.get("l") and not y.get("_baglam"):
+                ms = {mi for mi, md in enumerate(sy.maddeler) if any(abs(sy.n(r)[1] - l[1]) < 0.004 for r in md["satirlar"] for l in y["l"])}
+                if ms:
+                    try:
+                        mt = " ".join(anlam_esle.madde_metni(sy.maddeler[mi]) for mi in sorted(ms))
+                        V = anlam_esle.vektor([cumleler[ci], cumleler[ci - 1] + " " + cumleler[ci], mt])
+                        kisa = len(cumleler[ci].split()) <= 12
+                        if float(V[0] @ V[2]) >= 0.62 or (kisa and float(V[1] @ V[2]) >= 0.68):
+                            yeni = {"d": x["d"], "s": x["s"], "t": y["t"], "l": y["l"], "w": [], "_baglam": 1}
+                    except Exception:
+                        pass
+        if not yeni and ANLAM:
+            sy = pdf.sayfa(x["s"])
+            mi = baslik_satiri(sy) if sy else None
+            if mi is not None:
+                try:
+                    V = anlam_esle.vektor([cumleler[ci], anlam_esle.madde_metni(sy.maddeler[mi])])
+                    if len(sy.maddeler[mi]["metin"]) <= 8 and float(V[0] @ V[1]) >= 0.65:
+                        yeni = {"d": x["d"], "s": x["s"], **eslestir_capa(cumleler[ci], sy, {mi})}
+                except Exception:
+                    pass
+        if not yeni and ANLAM:
+            # Bütün denemelerden sonra (madde, komşu sayfalar, önceki cümle, başlık) metinli slaytta karşılık yoksa cümle
+            # hocanın slayt dışı ek açıklamasıdır (çıkmış/şık yorumu, slaytta yazmayan bilgi). Yanlış maddeye bağlamak
+            # yerine açıkça "ek" denir; ön yüz "slaytta yok" etiketi gösterir. Metinsiz/resim slaytı "sayfa" kalır.
+            sy = pdf.sayfa(x["s"])
+            if sy and sum(1 for md in sy.maddeler if md["kok"] >= 2) >= 2:
+                yeni = {"d": x["d"], "s": x["s"], "t": "ek", "l": [], "w": []}
+        if yeni:
+            say["sayfa"] -= 1
+            say[yeni["t"]] = say.get(yeni["t"], 0) + 1
+            liste[ci] = yeni
+    for x in liste:
+        if x:
+            x.pop("_baglam", None)
 
 
 def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
@@ -763,9 +853,13 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
                 liste.append(None)
                 say["yok"] += 1
                 continue
+            # H655 (3. tur): çapası olup capali() işaret kuramadıysa çapanın sayfası kesindir — komşu sayfaya kaçılmaz (T5)
+            cs = next((int(c["sayfa"]) for c in (cc[ci] if cc and cc[ci] else []) if c.get("sayfa") is not None), None)
+            if cs is not None:
+                s0 = cs
             en = (0, None, s0)
             # komşu slaytlar: uzaklaştıkça daha güçlü kanıt (±1: 3 kelime, ±2–3: 4 kelime ve atanan sayfanın 1,5 katı)
-            for s in (s0, s0 - 1, s0 + 1, s0 + 2, s0 - 2, s0 + 3, s0 - 3):
+            for s in ((s0,) if cs is not None else (s0, s0 - 1, s0 + 1, s0 + 2, s0 - 2, s0 + 3, s0 - 3)):
                 sy = pdf.sayfa(s)
                 if not sy:
                     continue
@@ -777,7 +871,7 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
             n, r, s = en
             # H655: kelime kanıtı zayıfsa (yok / yalnız kelime / <3 ortak kök) anlam eşlemesi atanan sayfa ±1'de maddeyi seçer
             if ANLAM and (not r or r["t"] == "kelime" or n < 3):
-                ar = anlam_isaret(cumle, pdf, s0)
+                ar = anlam_isaret(cumle, pdf, s0, komsu=cs is None)
                 if ar:
                     r, s = ar
                     say["anlam"] = say.get("anlam", 0) + 1
@@ -797,6 +891,9 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
                     isr = {"d": d0, "s": s0, "t": "sayfa", "l": [], "w": []}
             say[isr["t"]] += 1
             liste.append(isr)
+        cumleler = [m[(sinir[ci - 1] if ci else 0):e] for ci, e in enumerate(sinir)]
+        capali_ci = {ci for ci in range(len(sinir)) if cc and cc[ci] and es}
+        sayfa_onar(liste, cumleler, capali_ci, pdfler, say)
         c_out[str(p["i"])] = liste
     toplam = sum(v for k, v in say.items() if k not in ("capa", "anlam")) or 1
     say.pop("capa") if not say["capa"] else None
@@ -820,7 +917,8 @@ def main() -> int:
     ap.add_argument("--esik", type=float, default=0.0)
     ap.add_argument("--zorla", action="store_true", help="güncel olanları da yeniden üret")
     a = ap.parse_args()
-    keys = a.key or sorted(p.stem for p in (KOK / "hizalama").glob("*.json"))
+    # Kurul 1'e toplu müdahale YOK (kullanıcı kararı 2026-11-25): --hepsi yalnız Kurul 2+ (k1-* atlanır; tek ders --key ile).
+    keys = a.key or sorted(p.stem for p in (KOK / "hizalama").glob("*.json") if not p.stem.startswith("k1-"))
     kotu = hata = 0
     for key in keys:
         try:

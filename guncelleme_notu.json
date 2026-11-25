@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 906,
-  "baslik": "2025-2026 Kurul 3 arşivi: yeni sesli dersler",
+  "onem": 907,
+  "baslik": "Sesli derste slayt takibi daha isabetli (Kurul 2 ve arşiv)",
   "maddeler": [
-    "2025-2026 Dönem 3 Kurul 3 arşivine yeni sesli dersler eklendi; slayt takibi cümle cümle çalışır.",
-    "Eklenen dersler: Dislipidemide Kullanılan İlaçlar, Gastroenteritler ve Bakteriyel İshaller.",
-    "Bu derslerde Öğren destesi ve canlı çizim üretilmedi; sesli anlatım, PDF metin takibi, terim/kısaltma ve çıkmış kartı hazır."
+    "Hocanın anlattığı cümle slaytta yoksa artık yanlış maddeye işaret konmaz; 'Hocanın ek açıklaması · slaytta yok' yazar.",
+    "İşaret, anlatılan slayt sayfasından başka sayfaya kaymaz.",
+    "Genel Anestezik İlaçlar dersinde son slaytların takibi düzeldi.",
+    "2025-2026 arşivinde (Kurul 2 ve 3) yalnız sayfa gösteren cümleler anlamca doğru maddeye bağlandı."
   ],
   "eklenen": [
     "Branş check-up"

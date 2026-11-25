@@ -1972,7 +1972,7 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
   const marks = useMemo<PdfMarks | null>(() => {
     // Slayt aynıysa (gor.sayfa === isr.s) kullanıcı elle kaysa/durdursa bile işaret ve çizim gizlenmez (kullanıcı inceleyebilsin)
     const ayniSayfa = isr ? isr.s === gor.sayfa : false;
-    if (!canli || (durdu && !ayniSayfa) || !isr || (isr.t === 'sayfa' && !isr.y?.length && !(isr as any).z?.length) || isr.d !== gor.dosya) return null;
+    if (!canli || (durdu && !ayniSayfa) || !isr || (isr.t === 'sayfa' && !isr.y?.length && !(isr as any).z?.length) || isr.t === 'ek' || isr.d !== gor.dosya) return null;
     const ws = isr.w;
     const yol = isr.y?.length ? isr.y : undefined;
     const useChar = (): number => useCd(() => cdKonusulanKarakter()?.c ?? -1);
@@ -2128,7 +2128,7 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
               src={src}
               page={gor.sayfa}
               highlight={cikYer && gor === cikYer ? [cikYer.sayfa, cikYer.sayfa] : canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
-              highlightLabel={cikYer && gor === cikYer ? `Çıkmış soru${cikSec?.yil ? ` · ${cikSec.yil}` : ''}` : 'Şu an anlatılan'}
+              highlightLabel={cikYer && gor === cikYer ? `Çıkmış soru${cikSec?.yil ? ` · ${cikSec.yil}` : ''}` : isr?.t === 'ek' && isr.s === gor.sayfa ? 'Hocanın ek açıklaması · slaytta yok' : 'Şu an anlatılan'}
               marks={marks}
               notes={gorunum.not ? detay.ogrenciNot?.[String(gor.dosya)] || null : null}
               preload={preload}
