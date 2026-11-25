@@ -97,7 +97,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
                 {' '}· <span className="is-d">{genel.d} ilk denemede doğru (%{Math.round((genel.d / cozulen) * 100)})</span>
                 {' '}· <span className="is-d2">{genel.d2} yardımla</span>
                 {' '}· <span className="is-y">{genel.y} çözümü dinlendi</span>
-                {stats.cozucuSureSn > 0 && <> · <b>⏱️ {fmtSureDk(stats.cozucuSureSn)} çözüldü</b></>}
+                {stats.cozucuSureSn > 0 && <> · <b className="scs-sure"><Clock aria-hidden style={{ width: 14, height: 14, verticalAlign: '-2px', marginRight: 3 }} />{fmtSureDk(stats.cozucuSureSn)} çözüldü</b></>}
               </>
             )}
           </small>

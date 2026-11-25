@@ -28,8 +28,8 @@
   & .cd-pdf-kip span { display: none; }
   & .cd-pdf-kip { padding: 0; width: 36px; justify-content: center; }
 
-  /* "Şu an anlatılan" etiketi slayt başlığını örtmesin: sayfanın üst kenarında, yarısı dışarıda küçük hap (köşede bile ortalı başlığı örtüyordu) */
-  & .cd-pdf-bolme .pdv-src-tag { top: -11px; left: auto; right: 10px; max-width: calc(100% - 12px); padding: 3px 8px; border-radius: 999px;
+  /* "Şu an anlatılan" etiketi slayt başlığını örtmesin: sayfanın sağ altında küçük hap (sağ üst ortalı başlığı örtüyordu; üst kenarda kaydırma alanı yarısını kesiyordu) */
+  & .cd-pdf-bolme .pdv-src-tag { top: auto; bottom: 8px; left: auto; right: 8px; max-width: calc(100% - 12px); padding: 3px 8px; border-radius: 999px;
     font: 650 12px/1.2 var(--font-sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: var(--v16-sh-1); }
 
   /* PDF çubuğu: taşma yok, ad kısalır */

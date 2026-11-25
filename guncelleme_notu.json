@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 926,
-  "baslik": "Sesli ders oynatıcısı telefonda sekmeleri artık örtmüyor",
+  "onem": 927,
+  "baslik": "v16 denemesi: ikon seti tüm sayfalarda",
   "maddeler": [
-    "Telefonda sesli ders çalarken alt sekmeler (Bugün, Ders, Soru, Sınav, Menü) yeniden görünür; oynatıcı onların üstünde durur.",
-    "v16 denemesi (yalnız yönetici): PDF sayfa sayfa kipi tek sayfa gösterir, sayfa düğmeleri PDF köşesinde; yeni ikon seti sekmelerde ve oynatıcıda."
+    "v16 denemesi (yalnız yönetici): yeni ikon seti artık tüm sayfalarda kullanılıyor; öğrenciler mevcut ikonları görmeye devam eder.",
+    "Soru çözücü özetindeki süre simgesi emoji yerine saat ikonu oldu."
   ],
   "eklenen": [],
   "degisen": [],
-  "duzeltilen": [
-    "Telefonda oynatıcının alt sekmeleri örtmesi"
-  ],
+  "duzeltilen": [],
   "silinen": [],
   "yenilikler": []
 }

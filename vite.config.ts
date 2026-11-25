@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import dotenv from 'dotenv';
 import { splitLearningDecks } from './scripts/altyapi/vite/splitLearningDecks.ts';
 import { surumDosyasi } from './scripts/altyapi/vite/surumDosyasi.ts';
@@ -74,10 +74,27 @@ function parcaAdi(id: string): string | null {
   return null;
 }
 
+/**
+ * v16 ikon seti (docs/V16_PLAN.md): uygulamanın `lucide-react` içe aktarmaları src/components/v16/lucideV16.ts'e yönlenir;
+ * o modül v16 açıkken eşlenen ikonları tuval setiyle çizer, gerisini lucide'den aynen geçirir. Ara modülün kendi isteği gerçek pakete.
+ */
+function v16LucideEklentisi(): Plugin {
+  const ara = path.resolve(__dirname, 'src/components/v16/lucideV16.ts');
+  return {
+    name: 'v16-lucide',
+    enforce: 'pre',
+    resolveId(id, importer) {
+      if (id !== 'lucide-react' || !importer) return null;
+      if (path.resolve(importer.split('?')[0]) === ara) return null;
+      return ara;
+    },
+  };
+}
+
 export default defineConfig(({ mode }) => {
   return {
     base: process.env.VITE_BASE || '/',
-    plugins: [splitLearningDecks(__dirname), surumDosyasi(__dirname), cevrimdisiManifest(__dirname), yonetimGirisi(), react(), tailwindcss()],
+    plugins: [v16LucideEklentisi(), splitLearningDecks(__dirname), surumDosyasi(__dirname), cevrimdisiManifest(__dirname), yonetimGirisi(), react(), tailwindcss()],
     resolve: {
       alias: [
         { find: '@', replacement: path.resolve(__dirname, '.') },

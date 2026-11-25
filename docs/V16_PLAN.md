@@ -21,7 +21,7 @@ yoğunluğu, ikonları ve bileşenleri yeniler.
 - `styles/v16/bilesen.css`: v16.css'teki bileşenlerin (`.chip .tag .btn .seg .list .li .opt .toast .sheet`) sitedeki
   `.v15-*` karşılıklarına uyarlaması. **Ders:** taban öğe kuralları `:where()` içinde yazılır (tuvalde `.scr button`
   sınıf kurallarını ezdi — iç boşluk, yazı boyutu ve renk kayboldu).
-- `components/v16/Ikon.tsx`: 40+ ikon. **Henüz yok** (site lucide ikonlarıyla kalıyor); `bilesen.css` de yazılmadı.
+- `components/v16/Ikon.tsx`: 50 ikon; `components/v16/lucideV16.ts` + `vite.config.ts › v16LucideEklentisi` uygulamadaki tüm `lucide-react` içe aktarmalarını buraya yönlendirir (57 lucide adı eşlenir, gerisi aynen). Eşlenmeyenler bilinçli: Flag, Layers, Sparkles, dolu daireler, Loader2. `bilesen.css` yazılmadı.
 
 ## Aşamalar
 | # | Sayfa / grup | Tuval ekranları | Durum |
