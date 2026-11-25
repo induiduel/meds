@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 937,
-  "baslik": "Ders sayfası telefon ve tablette daha rahat",
+  "onem": 938,
+  "baslik": "Ders detayı telefonda düzeldi, arşiv sesli dersleri",
   "maddeler": [
-    "Ders sayfası: bölüm listesi artık küçük bir kutuda değil, sayfayla birlikte tam görünüyor",
-    "Telefonda alt sayfalarda ders adı daha geniş görünüyor",
-    "Sürüm penceresi: \"Tüm sürüm notları\" düğmesi tek satır"
+    "Ders detayı: bölüm listesi telefonda ve tablette tek kaydırmada tam görünüyor, ders adı kesilmiyor",
+    "Sürüm notları düğmesi tek satır ve ortalı",
+    "2025-2026 arşivine yeni sesli dersler"
   ],
   "eklenen": [],
   "degisen": [],
