@@ -108,6 +108,8 @@ export interface Appearance {
   v13Asked?: boolean;
   /** v15 kabuğu ve sayfaları açık mı (design === 'v12' iken geçerli; v13 ile birlikte açık olmaz) */
   v15?: boolean;
+  /** v18 "Canlı minimal" görünüm katmanı (v15 üstünde; varsayılan kapalı, Ayarlar › Görünüm'den açılır, H681) */
+  v18?: boolean;
   /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
   accents?: Record<string, string>;
   /** W01 Paleti düzenle: "<tema>:<palet>" başına özel vurgu (#RRGGBB). Uygulanırken kontrast kapısından geçirilir (ozelVurgu). */
@@ -291,6 +293,7 @@ function read(): Appearance {
         // v15 kullanıcılar için varsayılan (2026-10-27): tasarımı bilerek seçmeyen herkes v15'e geçer
         v15: p.v15 === true || (!p.designPicked && p.v15 !== false && p.v13 !== true && migrateDesign(p) === 'v12'),
         v13Asked: p.v13Asked === true,
+        v18: p.v18 === true,
         customAccents: p.customAccents && typeof p.customAccents === 'object'
           ? Object.fromEntries(Object.entries(p.customAccents).filter(([, v]) => typeof v === 'string' && /^#[0-9a-f]{6}$/i.test(v))) : {},
         motif: isMotif(p.motif) ? p.motif : 'yok',
@@ -361,6 +364,7 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.design = a.design;
   if (a.design === 'v12' && a.v13 && !a.v15) el.dataset.v13 = 'on'; else delete el.dataset.v13;
   if (a.design === 'v12' && a.v15) el.dataset.v15 = 'on'; else delete el.dataset.v15;
+  if (a.design === 'v12' && a.v15 && a.v18) el.dataset.v18 = 'on'; else delete el.dataset.v18;
   v16Uygula();
   // W01 özel vurgu: kontrast kapısından geçmiş değerler satır içi yazılır (palet/vurgu bloklarını ezer)
   const ozelKey = `${a.mode}:${a.palettes[a.mode]}`;
@@ -545,6 +549,7 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   }
   if (typeof patch.v13 === 'boolean') { next.v13 = patch.v13; if (patch.v13) next.v15 = false; }
   if (typeof patch.v15 === 'boolean') { next.v15 = patch.v15; if (patch.v15) next.v13 = false; }
+  if (typeof patch.v18 === 'boolean') next.v18 = patch.v18;
   if (typeof patch.v13Asked === 'boolean') next.v13Asked = patch.v13Asked;
   tekTasarim(next);
   if (patch.palette) next.palettes[next.mode] = patch.palette;

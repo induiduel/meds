@@ -33,3 +33,7 @@
   background: transparent; font: inherit; font-weight: 600; cursor: pointer;
 }
 @media (max-width: 520px) { .tsf-ad { display: none; } .tsf-ust { gap: 0; padding: 0 8px; } }
+
+/* Arayüz seçici (v15/v18, H681) */
+.tsf-sec { display: flex; gap: 6px; }
+.tsf-sec button.is-on { background: var(--color-ink); color: var(--color-white); border-color: var(--color-ink); }

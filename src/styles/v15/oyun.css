@@ -247,7 +247,7 @@
 @keyframes og15-titre { 0%, 100% { translate: 0; } 20% { translate: -7px; } 40% { translate: 6px; } 60% { translate: -4px; } 80% { translate: 3px; } }
 @keyframes og15-zipla { 0% { transform: scale(1); } 45% { transform: scale(1.12); } 100% { transform: scale(1); } }
 @keyframes og15-nabiz { 50% { transform: scale(1.08); } }
-@keyframes og15-gir { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+@keyframes og15-gir { from { transform: translateY(8px) scale(.98); } to { transform: none; } } /* H678: opacity yok, içerik donmuş zaman çizelgesinde de görünür */
 @keyframes og15-onay { 0% { transform: scale(1); } 35% { transform: scale(1.06); box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-ok) 55%, transparent); } 100% { transform: scale(1); box-shadow: 0 0 0 12px transparent; } }
 @keyframes og15-uc { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(-28px) scale(1.25); } }
 

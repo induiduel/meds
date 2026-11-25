@@ -429,3 +429,23 @@
 .sc-kisanot ul { margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 4px; font-size: 15.5px; line-height: 1.55; color: var(--color-ink-2); }
 .sc-kisanot li { padding: 2px 6px; margin-left: -6px; border-radius: 8px; transition: background .2s, color .2s; }
 .sc-kisanot li.is-aktif { background: var(--color-accent-soft); color: var(--color-ink); }
+
+/* ===== H677 · v15 klinik dil (çözücü): serif soru kökü, mono harf kutuları, 8 px şıklar, çerçeveli yardım =====
+   Yalnız v15'te; doğru/yanlış renkleri anlam taşıdığı için korunur. */
+:root[data-v15='on'] {
+  & .sc-kart { border-radius: 10px; padding: 18px; gap: 12px; }
+  & .sc-kart h2 { font: 500 18px/1.5 'Literata', ui-serif, Georgia, serif; letter-spacing: -.005em; }
+  & .sc-tur b { height: 20px; padding: 0 7px; border-radius: 4px; background: transparent; border: 1px solid var(--color-line);
+    font: 500 10px/1 'JetBrains Mono', ui-monospace, monospace; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-2); }
+  & .sc-tur.t-cikmis b { background: transparent; border-color: var(--color-accent); color: var(--color-accent); }
+  & .sc-tur span { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: 11px; }
+  & .sc-sik { grid-template-columns: 28px minmax(0, 1fr) auto; gap: 12px; min-height: 48px; border-radius: 8px; }
+  & .sc-sik > b { width: 28px; height: 28px; border-radius: 6px; background: transparent; border: 1px solid var(--color-line);
+    font: 500 12px/1 'JetBrains Mono', ui-monospace, monospace; color: var(--color-ink-2); }
+  & .sc-sik:hover:not(:disabled) { background: color-mix(in srgb, var(--color-accent) 5%, transparent); }
+  & .sc-sik.is-dogru > b { border-color: var(--color-ok); }
+  & .sc-sik.is-yanlis > b { border-color: var(--color-bad); }
+  & .sc-yardim-cubuk { border-top-style: solid; }
+  & .sc-ybtn { min-height: 38px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+  & .sc-sayac { font: 500 11.5px/1 'JetBrains Mono', ui-monospace, monospace; }
+}

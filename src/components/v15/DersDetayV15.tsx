@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BookA, Check, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards, Award, Megaphone } from 'lucide-react';
+import { BookA, Check, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards, Award, Megaphone } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, useCdDersSesSurumu, type CdDetay } from '../canliDers/canliDersStore';
@@ -7,6 +7,7 @@ import SurumSecV15 from './SurumSecV15';
 import { cdBransKisa } from '../canliDers/canliDersKategori';
 import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { useV15Baslik } from './baslik';
+import { KlinikDizin } from './klinik/KlinikDizin';
 import { bransYolu, dersBransi, dersKurulu, dersSurumleri, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
 import { Halka } from './Halka';
 import { dersAraCozucu, dersCozucu, dersHocaCozucu } from '../canliDers/dersCozucu';
@@ -257,38 +258,25 @@ export default function DersDetayV15() {
           <DersIstatV15 dersKey={key} desteId={desteId} cozucuUrl={coz?.url} cikmisN={cikmis.length} miniN={paket?.quiz.length || 0}
             acik={grupAcik.istat ?? false} onToggle={(a) => grupYaz('istat', a)} />
 
-          <section aria-labelledby="dd15-ic-h">
-            <h2 id="dd15-ic-h" className="v15-h2 dd15-h">Bu dersin içerikleri</h2>
-            {/* Gruplu, açılır-kapanır ızgara: Dinle ve çalış · Soru çöz · Bilgi kartları (açık/kapalı tercihi cihazda) */}
-            {ICERIK_GRUP.map((g) => {
-              const L = g.idler.map((id) => icerik.find((x) => x.id === id)).filter(Boolean) as typeof icerik;
-              if (!L.length) return null;
-              const acik = grupAcik[g.id] ?? g.varsayilan;
+          {/* H677: açılır kutulu gruplar yerine her zaman görünen klinik dizin; numaralar gruplar boyunca sürer */}
+          <section className="dd15-icerik kl-dizinler-tek" aria-labelledby="dd15-ic-h">
+            <h2 id="dd15-ic-h" className="sr-only">Bu dersin içerikleri</h2>
+            {(() => {
+              let no = 1;
+              const gruplar = ICERIK_GRUP.map((g) => ({ g, L: g.idler.map((id) => icerik.find((x) => x.id === id)).filter(Boolean) as typeof icerik })).filter((x) => x.L.length);
+              const harf = 'ABCDEFG';
+              const yorumUrl = `/topluluk?yorum=ders:${key.replace(/-v\d+$/, '')}`;
               return (
-                <details key={g.id} className="dd15-grup v15-card" open={acik} onToggle={(e) => grupYaz(g.id, (e.currentTarget as HTMLDetailsElement).open)}>
-                  <summary>
-                    <b>{g.ad}</b>
-                    <span className="dd15-grup-on" aria-hidden>{L.map((x) => <span key={x.id} className={`v15-tile ${x.tone}`} title={x.t}><x.icon /></span>)}</span>
-                    <span className="v15-cap">{L.length} içerik</span>
-                    <ChevronDown className="dd15-grup-ok" aria-hidden />
-                  </summary>
-                  <ul className="dd15-izgara" role="list">
-                    {L.map((x) => (
-                      <li key={x.id}>
-                        <a className="dd15-kutu" href={x.url} title={x.s} onClick={linkClick(() => navigateTo(x.url))}>
-                          <span className={`v15-tile ${x.tone}`}><x.icon aria-hidden /></span>
-                          <span className="dd15-kutu-t"><b>{x.t}</b><span>{x.k || x.s}</span></span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+                <>
+                  {gruplar.map(({ g, L }, gi) => {
+                    const bas = no;
+                    no += L.length;
+                    return <KlinikDizin key={g.id} harf={harf[gi]} baslik={g.ad} baslangic={bas} ogeler={L.map((x) => ({ id: x.id, ad: x.t, ne: x.k && x.s?.startsWith(`${x.k} · `) ? x.s.slice(x.k.length + 3) : x.s, url: x.url, ikon: x.icon, meta: x.k }))} />;
+                  })}
+                  <KlinikDizin harf={harf[gruplar.length]} baslik="Topluluk" baslangic={no} ogeler={[{ id: 'yorum', ad: 'Yorumlar', ne: 'Bu ders hakkında arkadaşlarınla yazış', url: yorumUrl, ikon: MessageCircle }]} />
+                </>
               );
-            })}
-            {/* Topluluk: bu dersin yorum kanalı (V2 ayrı ders sayılmaz) */}
-            <a className="dd15-yorum v15-card" href={`/topluluk?yorum=ders:${key.replace(/-v\d+$/, '')}`} onClick={linkClick(() => navigateTo(`/topluluk?yorum=ders:${key.replace(/-v\d+$/, '')}`))}>
-              <MessageCircle aria-hidden /><span><b>Yorumlar</b> · bu ders hakkında arkadaşlarınla yazış</span><ChevronRight className="v15-chev" aria-hidden />
-            </a>
+            })()}
           </section>
         </div>
 

@@ -139,7 +139,7 @@
   border: 0; border-radius: 99px; background: var(--color-ink); color: var(--color-white); font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer;
   box-shadow: 0 6px 20px rgb(0 0 0 / .18); animation: cd-gir .2s ease both; }
 .cd-donus > svg { width: 16px; height: 16px; }
-@keyframes cd-gir { from { opacity: 0; transform: translate(-50%, 6px); } }
+@keyframes cd-gir { from { transform: translate(-50%, 6px); } } /* H678: opacity yok — içerik donmuş zaman çizelgesinde de görünür */
 
 /* PDF bölmesi */
 .cd-pdf-bar { flex: none; display: flex; align-items: center; gap: 8px; min-width: 0; padding: 4px 6px 4px 12px; border-bottom: 1px solid var(--color-line); font-size: 12.5px; color: var(--color-ink-3); }

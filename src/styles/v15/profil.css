@@ -98,4 +98,4 @@
 .pf15-oz-cubuk span.is-on i { background: var(--color-accent); }
 .pf15-oz-cubuk small { font-size: .7rem; color: var(--color-ink-3); }
 
-@keyframes pf15-gir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes pf15-gir { from { transform: translateY(6px); } to { transform: none; } } /* H678: opacity yok, içerik donmuş zaman çizelgesinde de görünür */

@@ -1,6 +1,6 @@
 import { useYanlislar, yanlisGruplari } from '../../services/yanlislarim';
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, ChevronRight, CircleHelp, Clock, Play, RotateCcw } from 'lucide-react';
+import { ChevronDown, CircleHelp, Clock, Play, RotateCcw } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
@@ -9,6 +9,7 @@ import { getProgress } from '../../services/studyStore';
 import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 import { useV15Baslik } from './baslik';
+import { KlinikDizin } from './klinik/KlinikDizin';
 import KurulSecV15 from './KurulSecV15';
 import '../../styles/v15/dersler.css';
 
@@ -18,7 +19,6 @@ import '../../styles/v15/dersler.css';
  * studyStore, tekrar Öğren hata defteri. "Test oluştur": kuruldaki dersler (deneme sınavının kendi ders listesi,
  * services/testBank.disciplineOptions) + soru sayısı → /sorular/deneme?kurul=&ders=&n=&basla=1 (TestHub adresten okur).
  */
-const TON: Partial<Record<AppRoute, string>> = { soru_cozucu: 'is-ok', past_exams: 'is-w', practice: '', questions: 'is-ai', ornek_sorular: 'is-c', olasi_sorular: 'is-b' };
 
 const aracYolu = (id: AppRoute, kurul: number) =>
   id === 'soru_cozucu' ? `/sorular/soru-cozucu/kurul${kurul}` : id === 'past_exams' || id === 'olasi_sorular' ? `${pathFor(id)}?kurul=${kurul}` : pathFor(id);
@@ -149,20 +149,12 @@ export default function SorularMerkezV15() {
           <h2 id="s15-arac-h" className="v15-h2">Araçlar</h2>
           <KurulSecV15 className="s15-kurul" kurul={kurul} onSec={(k) => navigateTo(`/sorular/kurul${k}`)} />
         </div>
-        <ul className="s15-liste v15-card" role="list">
-          {araclar.map((a) => {
-            const it = NAV_ITEMS[a.id];
-            return (
-              <li key={a.id}>
-                <a className="s15-sat" href={aracYolu(a.id, kurul)} onClick={git(aracYolu(a.id, kurul))}>
-                  <span className={`v15-tile ${TON[a.id] || ''}`}><it.icon aria-hidden /></span>
-                  <span className="s15-sat-t"><b>{it.label}{a.oner && <span className="v15-tag is-a">Önerilen</span>}</b><span>{a.ne}</span></span>
-                  <ChevronRight className="v15-chev" aria-hidden />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {/* H676: araç listesi klinik dizin; bölüm başlığı yukarıdaki h2 olduğundan dizin başlığı yalnız sayaç taşır */}
+        <KlinikDizin
+          baslik="Soru çözme araçları"
+          id="s15-arac-d"
+          ogeler={araclar.map((a) => ({ id: a.id, ad: NAV_ITEMS[a.id].label, ne: a.ne, url: aracYolu(a.id, kurul), ikon: NAV_ITEMS[a.id].icon, etiket: a.oner ? 'Önerilen' : undefined }))}
+        />
       </section>
     </div>
   );

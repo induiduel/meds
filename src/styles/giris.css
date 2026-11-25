@@ -37,4 +37,4 @@
   .gr-tanitim, .gr-form { animation: gr-gel .45s cubic-bezier(.2, .7, .2, 1) both; }
   .gr-form { animation-delay: .06s; }
 }
-@keyframes gr-gel { from { opacity: 0; transform: translateY(6px); } }
+@keyframes gr-gel { from { transform: translateY(6px); } } /* H677: opacity yok, içerik hep görünür */

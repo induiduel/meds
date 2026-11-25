@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronDown, ChevronRight, ClipboardCheck, Download, FileText } from 'lucide-react';
+import { ClipboardCheck, Download, FileText } from 'lucide-react';
+import { KlinikDizin } from './klinik/KlinikDizin';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import SinavAgirligiV15, { sinavAgirligiVar } from './SinavAgirligiV15';
 import { NAV_ITEMS } from '../shell/navModel';
@@ -17,7 +18,6 @@ import '../../styles/v15/ek15.css';
  * kuralı): Hepsi · Son Prova · Kamplar · Check Up · En önemliler. Kartlar: kurula bağlı araçlar (içerik yoksa
  * "henüz yok"), Check Up'lar ve PDF notlar. Kurul seçimi ve adres mantığı eski merkezle aynı (MerkezView yardımcıları).
  */
-const TON: Partial<Record<AppRoute, string>> = { son_prova: 'is-b', kamp: 'is-ai', cikmis_cozucu: 'is-ok', en_onemliler: 'is-w', spots: 'is-w', sinav_plani: '' };
 const git = (url: string) => linkClick(() => navigateTo(url));
 
 export default function KamplarMerkezV15() {
@@ -47,34 +47,24 @@ export default function KamplarMerkezV15() {
         <KurulSecV15 className="s15-kurul" kurul={kurul} onSec={(k) => navigateTo(yol(k, sekme))} />
       </div>
 
-      <div className="k15-alan">
-        <ul className="k15-izgara" role="list">
-          {araclar.map((a) => {
+      <div className="k15-alan kl-dizinler">
+        {/* H676: karo + kart ızgarası yerine klinik dizin (numaralı satırlar, harfli bölümler) */}
+        <KlinikDizin
+          harf="A"
+          baslik="Hazırlık araçları"
+          ogeler={araclar.map((a) => {
             const it = NAV_ITEMS[a.id];
             const bos = kurulIcerikVar(a.id, kurul) === false;
-            const url = aracYolu(a.id, kurul);
-            return (
-              <li key={a.id}>
-                <a className={`k15-kart v15-card${bos ? ' is-bos' : ''}`} href={url} onClick={git(url)}>
-                  <span className={`v15-tile ${TON[a.id] ?? 'is-ai'}`}><it.icon aria-hidden /></span>
-                  <span className="k15-kart-t">
-                    <b>{it.label}{a.oner && <span className="v15-tag is-a">Önerilen</span>}{bos && <span className="v15-tag">Kurul {kurul}: henüz yok</span>}</b>
-                    <span>{a.ne}</span>
-                  </span>
-                  <ChevronRight className="v15-chev" aria-hidden />
-                </a>
-              </li>
-            );
+            return { id: a.id, ad: it.label, ne: bos ? `Kurul ${kurul} için henüz yok · ${a.ne}` : a.ne, url: aracYolu(a.id, kurul), ikon: it.icon, etiket: a.oner ? 'Önerilen' : undefined, soluk: bos };
           })}
-          {checkup.map((c) => (
-            <li key={c.id}>
-              <a className="k15-kart v15-card" href={c.yol} onClick={git(c.yol)}>
-                <span className="v15-tile is-c"><ClipboardCheck aria-hidden /></span>
-                <span className="k15-kart-t"><b>{c.ad}{c.surum && <span className="v15-tag">{c.surum}</span>}</b><span>{c.alt}</span></span>
-                <ChevronRight className="v15-chev" aria-hidden />
-              </a>
-            </li>
-          ))}
+        />
+        <KlinikDizin
+          harf="B"
+          baslik="Check-up"
+          baslangic={araclar.length + 1}
+          ogeler={checkup.map((c) => ({ id: c.id, ad: c.ad, ne: c.alt, url: c.yol, ikon: ClipboardCheck, meta: c.surum }))}
+        />
+        {pdfler.length > 0 && <ul className="k15-izgara" role="list">
           {pdfler.map((p) => (
             <li key={p.id}>
               <div className="k15-kart v15-card">
@@ -87,26 +77,20 @@ export default function KamplarMerkezV15() {
               </div>
             </li>
           ))}
-        </ul>
+        </ul>}
         {/* H200: olası sorular gizliyken "Planlama" başlığı altında boş liste kalıyordu; başlık ve liste yalnız içerik varken çizilir */}
         {sekme === 'hepsi' && ((NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular')) || sinavAgirligiVar(kurul)) && (
           <section className="k15-plan" aria-labelledby="k15-plan-b">
-            <h2 id="k15-plan-b" className="v15-cap">Planlama</h2>
-            {NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular') && <ul className="k15-izgara" role="list">
-              {(() => {
-                const url = `${pathFor('olasi_sorular')}?kurul=${kurul}`;
-                const it = NAV_ITEMS.olasi_sorular;
-                return (
-                  <li>
-                    <a className="k15-kart v15-card" href={url} onClick={git(url)}>
-                      <span className="v15-tile is-b"><it.icon aria-hidden /></span>
-                      <span className="k15-kart-t"><b>{it.label}</b><span>Sınavdan sonra öğrenci hatıralarından kurulan soruları çöz · ATP ile açılır</span>{/* H205: ATP kilidi ancak sayfa açılınca öğreniliyordu */}</span>
-                      <ChevronRight className="v15-chev" aria-hidden />
-                    </a>
-                  </li>
-                );
-              })()}
-            </ul>}
+            <h2 id="k15-plan-b" className="sr-only">Planlama</h2>
+            {NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular') && (
+              <KlinikDizin
+                harf="C"
+                baslik="Planlama"
+                id="k15-plan-d"
+                baslangic={araclar.length + checkup.length + 1}
+                ogeler={[{ id: 'olasi', ad: NAV_ITEMS.olasi_sorular.label, ne: 'Sınavdan sonra öğrenci hatıralarından kurulan soruları çöz · ATP ile açılır', url: `${pathFor('olasi_sorular')}?kurul=${kurul}`, ikon: NAV_ITEMS.olasi_sorular.icon }]}
+              />
+            )}
             {sinavAgirligiVar(kurul) && (
               <a className="k15-agirlik v15-card" href={pathFor('sinav_plani')} onClick={git(pathFor('sinav_plani'))}>
                 <span className="k15-kart-t"><b>Sınav ağırlığı</b><span>Kurul {kurul} teorik sınavında branş başına soru sayısı; kabarcık büyüdükçe soru artar. Ayrıntı için sınav planını aç.</span>{/* H201: kartın Sınav planı'na gittiği önceden söylenmiyordu */}</span>

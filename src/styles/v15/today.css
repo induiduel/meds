@@ -119,7 +119,6 @@
 .t15-ed .ed-alt { font-size: 14px; }
 .t15-hedef { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
 .t15-ed .t15-hedef .v15-bar { flex: 1; height: 3px; }
-.t15-ed .t15-hedef .v15-bar > span { transform-origin: left center; animation: t15-dol .9s cubic-bezier(.2, .7, .2, 1) .15s both; }
 .t15-hedef-y { flex: none; font: 500 12px/1 var(--font-sans); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 
 /* Sürdür: çerçeveli hafif satır, aksan renkli yuvarlak oynat */
@@ -183,8 +182,8 @@
 .t15-ed :is(.t15-main, .t15-side) > :nth-child(3) { animation-delay: .1s; }
 .t15-ed :is(.t15-main, .t15-side) > :nth-child(4) { animation-delay: .15s; }
 .t15-ed :is(.t15-main, .t15-side) > :nth-child(n + 5) { animation-delay: .2s; }
-@keyframes t15-gel { from { opacity: 0; transform: translateY(6px); } }
-@keyframes t15-dol { from { transform: scaleX(0); } }
+/* H677: animasyon içeriği gizlemez (opacity yok): zaman çizelgesi durursa (arka plan sekme, ekran görüntüsü) içerik yine görünür */
+@keyframes t15-gel { from { transform: translateY(6px); } }
 
 @container t15 (min-width: 860px) {
   .t15-ed .t15-in { gap: 40px; grid-template-columns: minmax(0, 1fr) 280px; }

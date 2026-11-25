@@ -65,6 +65,8 @@ const V16Ev = v16Ikonlu(House, 'ev');
 const V16Izgara = v16Ikonlu(LayoutGrid, 'izgara');
 import '../../styles/v16/sayfalar.css';
 import '../../styles/v15/editoryal.css';
+import '../../styles/v15/klinik.css';
+import '../../styles/v15/canli.css'; // H681: C · Canlı minimal (Figma seçimi)
 
 // Tıp Asistanı gizli (yalnız medsor_asistan_goster=1): kapalıyken paneli ve stilini hiç indirme. Panel sabit konumlu
 // bir düğme (as15-fab) çizdiği için tembel yükleme düzen kayması yapmaz; fallback boş.

@@ -78,10 +78,11 @@ export function IlkAdimlarKarti() {
   if (kapali || n === adimlar.length) return null;
   const href = pathFor('ilk_adimlar');
   return (
-    <section className="v15-card ia15-kart ia15-bugun" aria-labelledby="ia15-h">
+    // H677: kart yerine klinik kontrol listesi (mono üst etiket + sayaç, kare onay kutuları)
+    <section className="ia15-kart ia15-bugun kl-kontrol" aria-labelledby="ia15-h">
       <div className="ia15-bas">
-        <h2 id="ia15-h" className="v15-h2">İlk adımlar</h2>
-        <span className="v15-cap">{n} / {adimlar.length}</span>
+        <h2 id="ia15-h" className="ed-bolum">İlk adımlar</h2>
+        <span className="kl-sayac">{n} / {adimlar.length}</span>
         <button type="button" className="v15-ib ia15-x" onClick={() => ilkAdimlarKapat(true)} aria-label="İlk adımlar kartını kapat" title="Kapat"><X aria-hidden /></button>
       </div>
       <span className="v15-bar" role="progressbar" aria-valuemin={0} aria-valuemax={adimlar.length} aria-valuenow={n} aria-label="İlerleme"><span style={{ width: `${(n / adimlar.length) * 100}%` }} /></span>

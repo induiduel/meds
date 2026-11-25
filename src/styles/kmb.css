@@ -135,7 +135,7 @@
 .kmb-etiket rect { fill: #1f2a3a; stroke: #fff; stroke-width: 1.5; }
 .kmb-etiket text { fill: #fff; font-size: 16px; font-weight: 600; }
 .kmb-etiket { animation: kmb-belir .35s ease-out; }
-@keyframes kmb-belir { from { opacity: 0; transform: translateY(4px); } }
+@keyframes kmb-belir { from { transform: translateY(4px); } } /* H678: opacity yok — içerik donmuş zaman çizelgesinde de görünür */
 .kmb-ekler { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 8px; margin-top: 8px; }
 .kmb-ek { margin: 0; }
 .kmb-ek figcaption { font-size: 12px; color: var(--color-ink-3, #6b7686); padding: 4px 4px 0; }

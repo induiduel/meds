@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, ChevronRight, Headphones, Video } from 'lucide-react';
+import { Headphones, Video } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
 import { menudeGorunur } from '../../services/siteAyar';
-import { Sheet } from '../ui/Sheet';
 import { useV15Baslik } from './baslik';
+import { KlinikDizin } from './klinik/KlinikDizin';
 import KurulSecV15 from './KurulSecV15';
 import { useHazirVideolar } from './VideoDersV15';
 import { icerikGizli, kurulGizli, useSiteAyar } from '../../services/siteAyar';
@@ -21,7 +21,6 @@ import '../../styles/v15/dersler.css';
  * Branş çipi branş ders listesine, devam kartı ders ayrıntısına gider.
  */
 const ANA: AppRoute[] = ['canli_ders', 'learn', 'summaries', 'flashcards'];
-const TON: Partial<Record<AppRoute, string>> = { canli_ders: '', learn: 'is-c', summaries: 'is-w', flashcards: 'is-ai', kmb_asistan: 'is-ok' };
 
 /** Kurula bağlı araç kurulun altında açılır */
 const aracYolu = (id: AppRoute, kurul: number) =>
@@ -34,7 +33,6 @@ export default function DerslerMerkezV15() {
   const { dersler, hata } = useDersListesi();
   const ilerleme = useIlerleme();
   useSiteAyar();
-  const [diger, setDiger] = useState(false);
   // O01 giriş: yalnız sunucuda hazır ders videosu varken görünür
   const videolar = useHazirVideolar();
   const [desteN, setDesteN] = useState<number | null>(null);
@@ -88,19 +86,16 @@ export default function DerslerMerkezV15() {
         {dersler && !branslar.length && <span className="d15-chip is-bos">Kurul {kurul} için sesli ders henüz yok</span>}
       </div>
 
-      <nav className="d15-tools" aria-label="Ders çalış araçları">
-        {ANA.filter((id) => menudeGorunur(id)).map((id) => {
+      {/* H676: üç araç kartı yerine klinik dizin; sayaç sağda eş aralıklı */}
+      <KlinikDizin
+        harf="A"
+        baslik="Çalışma araçları"
+        ogeler={ANA.filter((id) => menudeGorunur(id)).map((id) => {
           const it = NAV_ITEMS[id];
           const a = MERKEZ_ARACLARI.dersler.find((x) => x.id === id);
-          return (
-            <a key={id} className="d15-tool v15-card" href={aracYolu(id, kurul)} onClick={git(aracYolu(id, kurul))} title={a?.ne}>
-              <span className={`v15-tile ${TON[id] || ''}`}><it.icon aria-hidden /></span>
-              <b>{it.label}</b>
-              <span className="d15-tool-s">{sayi[id] || it.hint}</span>
-            </a>
-          );
+          return { id, ad: it.label, ne: a?.ne, url: aracYolu(id, kurul), ikon: it.icon, meta: sayi[id] || undefined };
         })}
-      </nav>
+      />
 
       <section className="d15-devam" aria-labelledby="d15-devam-h">
         <div className="d15-sec-h">
@@ -135,62 +130,16 @@ export default function DerslerMerkezV15() {
         )}
       </section>
 
-      {digerAraclar.length > 0 && (
-        <button type="button" className="d15-diger" onClick={() => setDiger(true)} aria-haspopup="dialog">
-          <span className="d15-diger-ic" aria-hidden>
-            {digerAraclar.slice(0, 3).map((a) => {
-              const I = NAV_ITEMS[a.id].icon;
-              return <span key={a.id} className={`v15-tile ${TON[a.id] || ''}`}><I /></span>;
-            })}
-          </span>
-          <span className="d15-diger-t">
-            <b>Diğer araçlar</b>
-            <span>
-              {digerAraclar.slice(0, 3).map((a) => NAV_ITEMS[a.id].label).join(' · ')}
-              {digerAraclar.length > 3 ? ` +${digerAraclar.length - 3}` : ''}
-            </span>
-          </span>
-          <ChevronRight className="v15-chev" aria-hidden />
-        </button>
-      )}
-
-      {!!videolar?.length && (
-        <a className="d15-diger" href="/video-ders" onClick={git('/video-ders')}>
-          <span className="d15-diger-ic" aria-hidden><span className="v15-tile"><Video /></span></span>
-          <span className="d15-diger-t">
-            <b>Video dersler</b>
-            <span>{videolar.length} hazır video · tam ekran, resim içinde resim</span>
-          </span>
-          <ChevronRight className="v15-chev" aria-hidden />
-        </a>
-      )}
-
-      <Sheet open={diger} onClose={() => setDiger(false)} title="Diğer araçlar">
-        <ul className="d15-sheet" role="list">
-          {digerAraclar.map((a) => {
-            const it = NAV_ITEMS[a.id];
-            return (
-              <li key={a.id}>
-                <a
-                  href={aracYolu(a.id, kurul)}
-                  onClick={linkClick(() => {
-                    setDiger(false);
-                    navigateTo(aracYolu(a.id, kurul));
-                  })}
-                  className="d15-sheet-a"
-                >
-                  <span className={`v15-tile ${TON[a.id] || ''}`}><it.icon aria-hidden /></span>
-                  <span className="d15-sheet-t">
-                    <b>{it.label}</b>
-                    <span>{a.ne}</span>
-                  </span>
-                  <ChevronRight className="v15-chev" aria-hidden />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </Sheet>
+      {/* H676: "Diğer araçlar" alt penceresi kaldırıldı: araçlar sayfada doğrudan görünür (bir dokunuş az, bulunabilir) */}
+      <KlinikDizin
+        harf="B"
+        baslik="Diğer araçlar"
+        baslangic={ANA.filter((id) => menudeGorunur(id)).length + 1}
+        ogeler={[
+          ...digerAraclar.map((a) => ({ id: a.id, ad: NAV_ITEMS[a.id].label, ne: a.ne, url: aracYolu(a.id, kurul), ikon: NAV_ITEMS[a.id].icon })),
+          ...(videolar?.length ? [{ id: 'video', ad: 'Video dersler', ne: 'Tam ekran, resim içinde resim', url: '/video-ders', ikon: Video, meta: String(videolar.length) }] : []),
+        ]}
+      />
     </div>
   );
 }

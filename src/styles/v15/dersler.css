@@ -416,7 +416,7 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15 .sl15-ac-bas.is-acik .sl15-ac-ok { transform: none; }
 .sl15 .sl15-checkup { flex: none; white-space: nowrap; }
 .sl15 .sl15-acilan { animation: sl15-ac .18s ease-out; }
-@keyframes sl15-ac { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@keyframes sl15-ac { from { transform: translateY(-4px); } to { transform: none; } } /* H677: opacity yok, içerik donmuş zaman çizelgesinde de görünür */
 @media (prefers-reduced-motion: reduce) { .sl15 .sl15-acilan, .sl15 .sl15-ac-ok { animation: none; transition: none; } }
 @media (max-width: 600px) { .sl15 .sl15-checkup { padding-inline: 10px; } }
 .sl15 .b15-list li.sl15-li > .cd-btn { margin-right: 10px; }

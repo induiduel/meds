@@ -1,0 +1,250 @@
+/*
+ * v15 · klinik bileşen katmanı (H676, 2026-11-25). Tasarım kaynağı: Figma "MeDSor v15 · Minimal" › Klinik sistem
+ * (https://www.figma.com/design/xBn39OuJbTgz87O26f33UK). Ortak v15 parçalarının (tokens.css) görünümünü değiştirir;
+ * 78 dosyadaki kart/karo/etiket/düğme/sekme aynı anda yeni dile geçer. Renk tanımlanmaz (palet belirteçleri).
+ * Geri dönüş: git etiketi v15-yedek-2026-11-25 (bu dosya ve ShellV15'teki içe aktarımı kaldırmak da yeter).
+ *  - Kart: gölgesiz, 10 px köşe, ince çerçeve        - Karo: dolgusuz, çerçeveli 34 px, simge mürekkep tonunda
+ *  - Etiket: eş aralıklı, büyük harf, çerçeve + ton noktası - Düğme: koyu mürekkep, 8 px köşe, 40 px
+ *  - Sekme seçici: alt çizgili (dolgu yok)          - Üst etiket ve sayılar: JetBrains Mono (zaten yüklü)
+ */
+:root[data-v15='on'] {
+  --kl-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  & .v15-card { border-radius: 10px; border-color: var(--color-line); box-shadow: none; }
+
+  & .v15-label { font: 500 10.5px/1.3 var(--kl-mono); letter-spacing: .06em; }
+
+  /* Simge karosu: dolgusuz çerçeve; ton yalnız simgede */
+  & .v15-tile { width: 34px; height: 34px; border-radius: 8px; background: transparent; border: 1px solid var(--color-line); color: var(--color-ink-2); }
+  & .v15-tile svg { width: 17px; height: 17px; stroke-width: 1.7; }
+  & .v15-tile:is(.is-ok, .is-w, .is-b, .is-ai, .is-c, .is-n) { background: transparent; }
+  & .v15-tile.is-ok { color: var(--color-ok); } & .v15-tile.is-w { color: var(--color-warn); } & .v15-tile.is-b { color: var(--color-bad); }
+  & .v15-tile.is-ai { color: var(--color-ai); } & .v15-tile.is-c { color: var(--color-clinic); } & .v15-tile.is-n { color: var(--color-ink-3); }
+
+  /* Durum etiketi: çerçeve + ton noktası, eş aralıklı büyük harf */
+  & .v15-tag { --kl-ton: var(--color-ink-3); gap: 5px; height: 20px; padding: 0 7px 0 6px; border-radius: 4px; background: transparent; border: 1px solid var(--color-line);
+    color: var(--color-ink-2); font: 500 10px/1 var(--kl-mono); letter-spacing: .05em; text-transform: uppercase; }
+  & .v15-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--kl-ton); flex: none; }
+  & .v15-tag:is(.is-a, .is-ok, .is-w, .is-b, .is-ai, .is-c) { background: transparent; color: var(--color-ink-2); }
+  & .v15-tag.is-a { --kl-ton: var(--color-accent); } & .v15-tag.is-ok { --kl-ton: var(--color-ok); } & .v15-tag.is-w { --kl-ton: var(--color-warn); }
+  & .v15-tag.is-b { --kl-ton: var(--color-bad); } & .v15-tag.is-ai { --kl-ton: var(--color-ai); } & .v15-tag.is-c { --kl-ton: var(--color-clinic); }
+
+  /* Düğme: koyu mürekkep birincil; yumuşak ve hayalet çerçeveli */
+  & .v15-btn { min-height: 40px; padding: 0 16px; border-radius: 8px; background: var(--color-ink); color: var(--color-white); font: 600 13.5px/1 var(--font-sans);
+    transition: background-color .15s, transform .12s, border-color .15s; }
+  & .v15-btn:hover { background: color-mix(in oklab, var(--color-ink) 86%, var(--color-white)); }
+  & .v15-btn:active { transform: scale(.98); }
+  & .v15-btn.is-soft { background: transparent; color: var(--color-ink); border: 1px solid var(--color-line); }
+  & .v15-btn.is-soft:hover, & .v15-btn.is-ghost:hover { background: var(--color-field); }
+  & .v15-btn.is-ghost { background: transparent; border-color: var(--color-line); }
+
+  /* Sekme seçici: alt çizgili, dolgusuz; etkin sekme 2 px aksan çizgisi */
+  & .v15-seg { gap: 2px; padding: 0; border-radius: 0; background: transparent; border-bottom: 1px solid var(--color-line); }
+  & .v15-seg > * { min-height: 36px; border-radius: 0; color: var(--color-ink-3); font-weight: 500; box-shadow: inset 0 -2px 0 transparent; transition: color .15s, box-shadow .2s; }
+  & .v15-seg > a:hover, & .v15-seg > button:hover { background: transparent; color: var(--color-ink); }
+  & .v15-seg > [aria-current='page'], & .v15-seg > [aria-pressed='true'], & .v15-seg > [aria-selected='true'], & .v15-seg > .is-on {
+    background: transparent; color: var(--color-ink); font-weight: 650; box-shadow: inset 0 -2px 0 var(--color-accent); }
+
+  & .v15-bar { height: 3px; border-radius: 2px; }
+  & .v15-halka circle { stroke-width: 3; }
+
+  /* ---------- Klinik dizin (KlinikDizin.tsx) ---------- */
+  & .kd { min-width: 0; }
+  & .kd-h { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0; padding-bottom: 6px; border-bottom: 1px solid var(--color-ink);
+    font: 500 10.5px/1.3 var(--kl-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink); }
+  & .kd-say { color: var(--color-ink-3); }
+  & .kd-l { list-style: none; margin: 0; padding: 0; }
+  & .kd-l li { border-bottom: 1px solid var(--color-line); }
+  & .kd-l li.is-soluk { opacity: .55; }
+  & .kd-s { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 2px; color: inherit; text-decoration: none; }
+  & a.kd-s { transition: background-color .15s; }
+  & a.kd-s:hover { background: color-mix(in oklab, var(--color-field) 60%, transparent); }
+  & .kd-no { flex: none; width: 18px; font: 500 11px/1 var(--kl-mono); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+  & .kd-ic { flex: none; width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--color-line); border-radius: 8px; color: var(--color-ink-2);
+    transition: border-color .15s, color .15s; }
+  & .kd-ic svg { width: 17px; height: 17px; stroke-width: 1.7; }
+  & a.kd-s:hover .kd-ic { border-color: var(--color-accent); color: var(--color-accent); }
+  & .kd-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  & .kd-t b { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font: 600 14px/1.3 var(--font-sans); color: var(--color-ink); }
+  & .kd-t > span { font: 400 12.5px/1.35 var(--font-sans); color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  & .kd-meta { flex: none; font: 500 11px/1 var(--kl-mono); color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  & .kd-ok { flex: none; width: 16px; height: 16px; color: var(--color-ink-3); transition: transform .2s cubic-bezier(.2, .7, .2, 1), color .15s; }
+  & a.kd-s:hover .kd-ok { transform: translateX(2px); color: var(--color-accent); }
+
+  /* Merkez sayfa düzeni: dizinler telefonda alt alta, geniş kapta iki sütun */
+  & .kl-merkez { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+  & .kl-dizinler { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px 40px; align-items: start; }
+  & .kl-merkez > *, & .kl-dizinler > * { animation: kl-gel .4s cubic-bezier(.2, .7, .2, 1) both; }
+  & .kl-dizinler > :nth-child(2) { animation-delay: .06s; } & .kl-dizinler > :nth-child(3) { animation-delay: .12s; }
+  & .kl-ara { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 8px;
+    background: var(--color-white); color: var(--color-ink-3); font: 400 13.5px/1 var(--font-sans); cursor: pointer; text-align: left; transition: border-color .15s; }
+  & .kl-ara:hover { border-color: var(--color-ink-3); }
+  & .kl-ara svg { width: 16px; height: 16px; flex: none; }
+  & .kl-ara span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .kl-ara kbd { font: 500 11px/1 var(--kl-mono); color: var(--color-ink-3); }
+  & .kl-not { margin: 0; font: 400 12.5px/1.45 var(--font-sans); color: var(--color-ink-3); }
+}
+@container d15 (min-width: 860px) { :root[data-v15='on'] .kl-dizinler { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* H677: yalnız konum; içerik animasyon çalışmasa da görünür */
+@keyframes kl-gel { from { transform: translateY(5px); } }
+
+/* Kurul seçici ve branş çipleri: dolgulu hap yerine 8 px köşeli çerçeve, sayaç eş aralıklı (H676) */
+:root[data-v15='on'] {
+  & .ks15-dug { height: 32px; padding: 0 10px 0 12px; border-radius: 8px; background: var(--color-ink); font: 600 12.5px/1 var(--kl-mono); letter-spacing: .02em; }
+  & .ks15-menu { border-radius: 10px; }
+  & .ks15-menu button { border-radius: 6px; }
+  & .d15-chip { height: 32px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--color-line); background: transparent; font: 500 13px/1 var(--font-sans); color: var(--color-ink-2);
+    transition: border-color .15s, color .15s; }
+  & .d15-chip:hover { border-color: var(--color-ink-3); color: var(--color-ink); }
+  & .d15-chip span { font: 500 11px/1 var(--kl-mono); color: var(--color-ink-3); }
+  & .s15-cip { border-radius: 8px; height: 30px; }
+  & .s15-cip span { font-family: var(--kl-mono); font-size: 11px; }
+}
+
+/* ---------- H677 · Bugün: zaman satırı (ProgramSimdiKarti) ve kontrol listesi (İlk adımlar) ---------- */
+:root[data-v15='on'] {
+  & .t15-pg.kl-zaman { display: flex; align-items: center; gap: 14px; padding: 10px 0; min-height: 0; border: 0; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line);
+    border-radius: 0; background: none; box-shadow: none; color: inherit; text-decoration: none; }
+  & .kl-zaman-s { flex: none; min-width: 52px; font: 500 18px/1 var(--kl-mono); color: var(--color-ink); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  & .kl-zaman .t15-pg-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  & .kl-zaman .t15-pg-t b { font: 600 14px/1.3 var(--font-sans); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .kl-zaman .t15-pg-t small { font: 400 12px/1.3 var(--font-sans); color: var(--color-ink-3); }
+  & .kl-zaman-d { display: inline-flex; align-items: center; gap: 6px; font: 500 10.5px/1.3 var(--kl-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+  & .kl-zaman.is-suruyor .kl-zaman-d { color: var(--color-ok); }
+  & .kl-zaman.is-suruyor .kl-zaman-d::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: kl-nabiz 1.6s ease-in-out infinite; }
+  & .kl-zaman .t15-pg-s { flex: none; max-width: 40%; text-align: right; font: 400 11.5px/1.35 var(--font-sans); color: var(--color-ink-3); overflow: hidden; }
+  & .kl-zaman:hover .t15-pg-t b { color: var(--color-accent); }
+
+  & .kl-kontrol.ia15-kart { gap: 8px; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  & .kl-kontrol .ia15-bas { padding-bottom: 6px; border-bottom: 1px solid var(--color-line); }
+  & .kl-kontrol .ia15-bas .ed-bolum { flex: 1; }
+  & .kl-sayac { font: 500 11px/1 var(--kl-mono); color: var(--color-ink-3); }
+  & .kl-kontrol > .v15-bar { display: none; }
+  & .kl-kontrol .ia15-l { margin: 0; }
+  & .kl-kontrol .ia15-l li + li { border-top-color: var(--color-line); }
+  & .kl-kontrol .ia15-r { min-height: 48px; padding: 8px 0; }
+  & .kl-kontrol .ia15-t b { font-size: 13.5px; }
+  & .kl-kontrol .ia15-ok { width: 16px; height: 16px; }
+  & .kl-kontrol .ia15-tum { font-size: 12.5px; }
+  /* Kare onay kutusu (kontrol listesi) — İlk adımlar sayfası da aynı dili alır */
+  & .ia15-chk { width: 18px; height: 18px; border-radius: 4px; border-width: 1.5px; }
+  & .ia15-chk svg { width: 12px; height: 12px; }
+}
+@keyframes kl-nabiz { 50% { opacity: .35; } }
+
+/* ---------- H677 · Ders detayı: kayıt başlığı, dizinler, bölüm zaman çizelgesi ---------- */
+:root[data-v15='on'] {
+  & .dd15-resume.v15-card { border: 0; border-top: 1px solid var(--color-ink); border-bottom: 1px solid var(--color-line); border-radius: 0; background: none; padding: 14px 0; }
+  & .dd15-resume-t b { font: 600 15px/1.3 var(--font-sans); }
+  & .dd15-resume-t span { font: 400 12.5px/1.35 var(--font-sans); color: var(--color-ink-3); }
+  & .dd15-icerik { display: flex; flex-direction: column; gap: 18px; }
+  & .dd15-h { font: 500 10.5px/1.3 var(--kl-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink); padding-bottom: 6px; border-bottom: 1px solid var(--color-ink); }
+  & .dd15-tl.v15-card { border: 0; border-radius: 0; background: none; padding: 0; }
+  & .dd15-tl a { padding-inline: 0; min-height: 48px; }
+  & .dd15-tl li:not(:last-child)::after { left: 13px; width: 1px; }
+  & .dd15-tl-n { width: 26px; height: 26px; border-radius: 6px; background: transparent; border: 1px solid var(--color-line); font: 500 11px/1 var(--kl-mono); }
+  & .dd15-tl li.is-ok .dd15-tl-n { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+  & .dd15-tl li.is-now .dd15-tl-n { background: var(--color-accent); border-color: var(--color-accent); box-shadow: none; }
+  & .dd15-tl li.is-ok:not(:last-child)::after { background: var(--color-ink); }
+  & .dd15-tl-t span { font-family: var(--kl-mono); font-size: 11px; }
+}
+
+/* ---------- H677 · Sesli ders listesi: kartsız branş bölümleri, mono sıra numaralı dersler ---------- */
+:root[data-v15='on'] {
+  & .sl15 .sl15-grup { gap: 6px; padding: 10px 0; border: 0; border-bottom: 1px solid var(--color-line); border-radius: 0; background: none; box-shadow: none; }
+  & .sl15 .sl15-grup:first-of-type { border-top: 1px solid var(--color-ink); }
+  & .sl15 .sl15-bas b { font: 600 15px/1.3 var(--font-sans); }
+  & .sl15 .sl15-bas .v15-cap, & .sl15 .sl15-bas small { font-family: var(--kl-mono); font-size: 11px; }
+  & .sl15 .sl15-checkup { min-height: 30px; padding: 0 10px; font-size: 12px; }
+  & .sl15 .sl15-acilan.v15-card { border: 0; border-radius: 0; background: none; counter-reset: kl-ders; }
+  & .sl15 .sl15-acilan li.sl15-li { counter-increment: kl-ders; }
+  & .sl15 .sl15-acilan li + li { border-top-color: var(--color-line); }
+  & .sl15 .sl15-acilan .b15-row { gap: 10px; padding-inline: 0; }
+  & .sl15 .sl15-acilan .b15-row::before { content: counter(kl-ders, decimal-leading-zero); flex: none; width: 20px; font: 500 11px/1 var(--kl-mono); color: var(--color-ink-3); }
+  & .sl15 .sl15-acilan .v15-tile { width: 28px; height: 28px; border-radius: 6px; }
+  & .sl15 .sl15-acilan .v15-tile svg { width: 14px; height: 14px; }
+  & .sl15 .b15-row-t b { font-size: 14px; }
+  & .sl15 .sl15-not.v15-card { border-radius: 8px; }
+}
+:root[data-v15='on'] {
+  /* H677: "Bu dersteki çalışman" açılır kutusu kart değil, ince çizgili satır */
+  & .dd15-istat.v15-card { border: 0; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); border-radius: 0; background: none; }
+  & .dd15-istat > summary { padding-inline: 0; }
+  & .dd15-istat .v15-cap { font-family: var(--kl-mono); font-size: 11px; }
+}
+
+/* ---------- H678 · Tüm v15 sayfaları: kalan eski kart/kutu/pano dili (48 sayfa taraması) ----------
+   Sayfa dosyalarındaki kart sınıfları 14–24 px köşe ve gölge taşıyordu (gg-kart 759, dz-kart 50, sn-kart 37, mk-oyun-kart,
+   bsl15-kart, od-*, sp-kutu, kmb-kart, bd-ders, bs-hedef, cx-tab…). Ana içerikte hepsi klinik dile çekilir; #ana-icerik
+   kimliği sayfa kurallarından özgül olduğu için tek kural yeter. Yuvarlak öğeler (halka, avatar, nokta) dışarıda.
+   DİKKAT: :is(...) ile :not(...) arasında boşluk/satır sonu olmaz (boşluk alt öğe seçer; ilk sürümde kural etkisizdi). */
+:root[data-v15='on'] #ana-icerik :is([class*='-kart'], [class*='-card'], [class*='-kutu'], [class*='-panel'], [class*='-pano'], [class*='-ozet-k'],
+  .bs-hedef, .bd-ders, .bs-link, .sbk-liste, .od-nasil, .mk-uyari, .mk-hizli, .tb-foot, .kh-bos, .gg-vitrin, .gg-ozet, .sx15-alt):not([class*='halka']):not([class*='-av']):not([class*='nokta']):not([class*='ring']) {
+  border-radius: 10px; box-shadow: none;
+}
+:root[data-v15='on'] #ana-icerik :is(.cx-tab, .mk-dugme, .mk-ad-dugme) { border-radius: 8px; box-shadow: none; }
+/* H678 ikinci geçiş: taramada kalan parçalar */
+:root[data-v15='on'] #ana-icerik :is(.od-ders, .od-profil-k, .bd-sirada, .sbk-dizin-one, .cx-tab):not([class*='halka']) { border-radius: 10px; box-shadow: none; }
+:root[data-v15='on'] #ana-icerik button:not([class]) { border-radius: 8px; }
+:root[data-v15='on'] #ana-icerik input:not([type='checkbox']):not([type='radio']):not([type='range']) { border-radius: 8px; }
+:root[data-v15='on'] #ana-icerik .ms15-hafta > button { border-radius: 8px; box-shadow: none; }
+:root[data-v15='on'] #ana-icerik .ms15-hafta > button b, :root[data-v15='on'] #ana-icerik .ms15-hafta > button strong { font-family: var(--kl-mono); font-weight: 500; }
+/* H678: health.css `html.ui-v7 :is(.cx-tab, .ms-chip, .ms-fchip)` köşeyi 99px !important zorluyordu; yalnız v15 ana içerikte,
+   aynı önem düzeyinde ve daha özgül seçiciyle klinik çip (8 px, ince çerçeve) */
+:root[data-v15='on'] #ana-icerik :is(.cx-tab, .ms-chipbar > .ms-chip, .ms-chipbar > .ms-fchip) {
+  border-radius: 8px !important; border: 1px solid var(--color-line); background: transparent; font-size: 13px;
+}
+:root[data-v15='on'] #ana-icerik :is(.cx-tab, .ms-chip, .ms-fchip):is(.is-on, [aria-pressed='true'], [aria-selected='true']) {
+  background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white);
+}
+/* H678 üçüncü geçiş: eski segmentli seçicilerin gölgeli seçili düğmesi ve 14 px ölçü düğmeleri */
+:root[data-v15='on'] #ana-icerik :is([class*='-seg'], [class*='-tabs'], .sr15-olcu, .sr15-aralik) > :is(button, a) { box-shadow: none !important; border-radius: 8px; }
+/* H678: deneme sınavı (PracticeV15) kabuğun dışında tam ekran açılır (#ana-icerik yok); aynı kart kuralı kendi kökünde */
+:root[data-v15='on'] .q15 :is([class*='-kart'], [class*='-card'], [class*='-kutu'], [class*='-panel']):not([class*='halka']) { border-radius: 10px; box-shadow: none; }
+:root[data-v15='on'] .q15 :is([class*='-seg'], [class*='-tabs']) > :is(button, a) { box-shadow: none !important; border-radius: 8px; }
+/* H678: Deneme sınavı (TestHub, .tb) kabuk dışında; klinik dil kendi kökünde: dolgusuz çerçeveli simge, ince seçili çerçeve, mono sayaç */
+:root[data-v15='on'] .tb {
+  & .tb-panel { border-radius: 10px; box-shadow: none; }
+  & .tb-foot { box-shadow: none; border-top: 1px solid var(--color-line); }
+  & .tb-src { border-radius: 8px; }
+  & .tb-src.is-on { border-width: 1px; border-color: var(--color-ink); box-shadow: none; }
+  & .tb-src-ic { background: transparent; border: 1px solid var(--color-line); border-radius: 6px; color: var(--color-ink-2); }
+  & .tb-src b + span, & .tb-chip span, & .tb-src-n { font-family: var(--kl-mono); font-size: 11px; }
+  & .tb-chip { border-radius: 8px; }
+  & .tb-chip.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+  & .tb-chip.is-on span { color: inherit; opacity: .75; }
+  & .tb-seg > * { box-shadow: none !important; }
+}
+:root[data-v15='on'] .tb .tb-src :is(.tb-src-ic), :root[data-v15='on'] .tb .tb-src.is-on .tb-src-ic { background: transparent; border: 1px solid var(--color-line); color: var(--color-ink-2); }
+
+/* ---------- H679 · Kapsül haplar ve dolgulu simge kutuları (genişletilmiş tarama: 31 sayfa) ----------
+   Klinik dilde çip/sekme/hap 8 px köşeli, seçili = mürekkep dolgu; simge kutuları dolgusuz çerçeve. Aç/kapa anahtarları,
+   avatarlar ve oynat düğmesi (t15-surdur-ic) bilinçli yuvarlak kalır. */
+:root[data-v15='on'] :is(#ana-icerik, .tb) :is([class*='-cip']:not([class*='-cipler']), [class*='chip']:not([class*='chips']):not([class*='chipbar']), [class*='pill'],
+  .ks15-eylem, .ks-k, .ss-sayi, .t15-q, .pt-q, .od-ayar-dug, .kh-tumu, .bd-ara, .bs-sira-dug, .bs-rozet-tamam, .kt-btn, .g12-btn, .f12-btn, .sn-meta > span, .sr15-aralik > *) {
+  border-radius: 8px !important;
+}
+:root[data-v15='on'] #ana-icerik .sn-meta > span { background: transparent; border: 1px solid var(--color-line); font-family: var(--kl-mono); font-size: 10.5px; }
+:root[data-v15='on'] #ana-icerik .v15-btn { border-radius: 8px !important; }
+:root[data-v15='on'] #ana-icerik :is(.pf15-ic, .sbk-satir-l-ic, .sbk-dizin-one-ic, .ih-ic, .rb-note-ic, [class$='-ic']):not(.t15-surdur-ic):not([class*='halka']) {
+  background: transparent !important; border: 1px solid var(--color-line); border-radius: 8px;
+}
+:root[data-v15='on'] #ana-icerik .bs-sv-no { border-radius: 6px; background: transparent; border: 1px solid var(--color-line); font-family: var(--kl-mono); }
+/* Başarımlar sekmeleri (kapsül) → klinik alt çizgili sekme */
+:root[data-v15='on'] #ana-icerik :is(.bs-sekme, .bs-sekmeler) > :is(button, a) { border-radius: 8px !important; box-shadow: none; }
+:root[data-v15='on'] #ana-icerik .bs-sekme > button { border: 1px solid var(--color-line); background: transparent; color: var(--color-ink-2); }
+:root[data-v15='on'] #ana-icerik .bs-sekme > button.is-secili { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+
+/* H679 · Oyunlar merkezi (lobi): keçe-ahşap zemin yerine klinik kâğıt; oyun masasının kendisi (mk-yaprak, masa ekranları)
+   ve kullanıcı oyun temaları bilinçli olarak dokunulmaz. Kartların keçe görseli (taş/kart çizimi) korunur. */
+:root[data-v15='on'] #ana-icerik .mk.mk-merkez {
+  background: none !important; box-shadow: none !important; border: 0; border-radius: 0; padding: 0; color: var(--color-ink);
+  & .mk-merkez-bas h1 { color: var(--color-ink); font: 500 clamp(22px, 5vw, 28px)/1.15 var(--ed-serif, Georgia, serif); }
+  & .mk-merkez-baslik p { color: var(--color-ink-2); font-size: 14px; }
+  & .mk-kat-bas h2 { color: var(--color-ink); font: 500 10.5px/1.3 var(--kl-mono); letter-spacing: .06em; text-transform: uppercase; }
+  & .mk-kat-bas p, & .mk-kat-bas span { color: var(--color-ink-3); }
+  & .mk-oyun-kart { border: 1px solid var(--color-line); border-radius: 10px; box-shadow: none; background: var(--color-white); }
+  & .mk-oyun-kece { border-right: 1px solid var(--color-line); border-bottom: 0; }
+  & .mk-uyari { border-radius: 8px; }
+  & :is(.mk-dugme, .mk-ad-dugme) { border-radius: 8px; box-shadow: none; }
+}

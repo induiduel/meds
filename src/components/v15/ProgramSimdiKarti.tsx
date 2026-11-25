@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { CalendarClock } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { programYukle, saatBas, saatBitis, type ProgDers } from '../../services/programVeri';
@@ -42,9 +41,9 @@ export default function ProgramSimdiKarti() {
   const href = pathFor('ders_programi');
   if (!ana) {
     return (
-      <a className="t15-pg v15-card" href={href} onClick={linkClick(() => navigateTo(href))}>
-        <span className="v15-tile is-n"><CalendarClock aria-hidden /></span>
-        <span className="t15-pg-t"><span className="v15-cap">Ders programı</span>{/* H156: okul ders programıdır, senin çalışma planın değil — Bugünün planı halkasıyla karışmasın */}
+      <a className="t15-pg kl-zaman" href={href} onClick={linkClick(() => navigateTo(href))}>
+        <span className="kl-zaman-s" aria-hidden>—</span>
+        <span className="t15-pg-t"><span className="kl-zaman-d">Ders programı</span>{/* H156: okul ders programıdır, senin çalışma planın değil */}
         <b>Okuldaki bugünkü {satirlar.length} ders sona erdi</b></span>
       </a>
     );
@@ -52,14 +51,15 @@ export default function ProgramSimdiKarti() {
   const ust = suren ? `Şimdi · ${dk(suren.bit) - n} dk kaldı` : `Sıradaki · ${saatYaz(ana.bas, bolge)}${dk(ana.bas) - n <= 90 ? ` (${dk(ana.bas) - n} dk sonra)` : ''}`;
   const ikinci = suren ? sonraki : satirlar.find((s) => s !== ana && dk(s.bas) > dk(ana.bas));
   return (
-    <a className="t15-pg v15-card" href={href} onClick={linkClick(() => navigateTo(href))} aria-label={`Ders programı: ${ust}, ${ana.ad}`}>
-      <span className={`v15-tile ${suren ? 'is-ai' : ''}`}><CalendarClock aria-hidden /></span>
+    // H677: simge karolu kart yerine klinik zaman satırı (solda mono saat, sürüyorsa canlı nokta)
+    <a className={`t15-pg kl-zaman${suren ? ' is-suruyor' : ''}`} href={href} onClick={linkClick(() => navigateTo(href))} aria-label={`Ders programı: ${ust}, ${ana.ad}`}>
+      <span className="kl-zaman-s" aria-hidden>{saatYaz(ana.bas, bolge)}</span>
       <span className="t15-pg-t">
-        <span className="v15-cap">{ust}</span>
+        <span className="kl-zaman-d">{ust}</span>
         <b>{ana.ad}</b>
         <small>{ana.alt}</small>
       </span>
-      {ikinci && <span className="t15-pg-s v15-cap">Sonra {saatYaz(ikinci.bas, bolge)}<br />{ikinci.ad}</span>}
+      {ikinci && <span className="t15-pg-s">Sonra {saatYaz(ikinci.bas, bolge)}<br />{ikinci.ad}</span>}
     </a>
   );
 }

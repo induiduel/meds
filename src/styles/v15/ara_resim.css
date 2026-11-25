@@ -9,7 +9,7 @@
 .ar-kart { margin: 0; flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; overflow: hidden;
   border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-surface, var(--color-white, #fff)); color: var(--color-ink);
   box-shadow: 0 6px 22px rgb(0 0 0 / .08); animation: ar-gir .18s ease-out; }
-@keyframes ar-gir { from { opacity: 0; transform: translateY(6px); } }
+@keyframes ar-gir { from { transform: translateY(6px); } } /* H678: opacity yok, içerik donmuş zaman çizelgesinde de görünür */
 @media (prefers-reduced-motion: reduce) { .ar-kart { animation: none; } }
 
 .ar-bas { display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 14px; border-bottom: 1px solid var(--color-line-soft, var(--color-line)); min-width: 0; }

@@ -511,4 +511,10 @@
 - **H673** · v15 editöryal Bugün + serif başlıklar → hatalar/on_yuz_tasarim_tema.md
 - **H674** · "İçeriğe geç" bağlantısı yoktu → hatalar/on_yuz_tasarim_tema.md
 - **H675** · Kompakt + hareketli Bugün/giriş → hatalar/on_yuz_tasarim_tema.md
+- **H676** · klinik dil → hatalar/on_yuz_tasarim_tema.md
+- **H677** · opacity animasyon → hatalar/on_yuz_tasarim_tema.md
+- **H678** · :is boşluk → hatalar/on_yuz_tasarim_tema.md
+- **H679** · kapsül hap → hatalar/on_yuz_tasarim_tema.md
+- **H680** · çizelge → hatalar/on_yuz_tasarim_tema.md
+- **H681** · v18 katmanı → hatalar/on_yuz_tasarim_tema.md
 - **H667** · k2-42/43/45 konuşma metninde cümle vurgu etiketi yoktu, ekran vurgusu boş kaldı → hatalar/ders_metni_anlatim.md
