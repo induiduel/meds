@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 916,
-  "baslik": "Hocanın sorabileceği soruda okunan kelime takibi",
+  "onem": 917,
+  "baslik": "Okunan kelime vurgusu cümle geçişinde gecikmiyor",
   "maddeler": [
-    "Hocanın sorabileceği soru penceresinde soru kökü, şıklar, şık açıklamaları ve slayt anlatımı okunurken okunan kelime sesle birlikte vurgulanır."
+    "Sesli soru çözücüde ve hocanın sorabileceği soru penceresinde okunan kelime, yeni cümleye/şıkka geçerken artık önceki şıkkın son kelimesinde takılı kalmıyor."
   ],
   "eklenen": [
     "Branş check-up"

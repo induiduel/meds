@@ -191,25 +191,30 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   }, [brans, ders]);
   const ortakUrl = (ad: string) => (ortak[ad] ? `${klipYolu(brans, 'ema', 'ortak', ad)}?v=${ortak[ad].v}` : null);
 
-  /** okunan kelime: o an okunan cümlenin zamanı + ekrandaki ögesi (sel); sel yoksa yalnız parça vurgusu */
-  const okuRef = useRef<{ b: number; e: number; s: number; ns: number; mb: number; me: number; sel?: string; atla?: string } | null>(null);
-  /** Bir klibi çalar; zaman kaydı (cümle başına) parçaya ve cümleye eşlenir: parça bütün olarak, kelime cümle içinde vurgulanır */
+  /** çalan klibin bağlamı: zaman kaydı (cümle başına), kayıt → (parça, cümle) haritası, parçalar */
+  const klipRef = useRef<{ z: [number, number][]; harita: ReturnType<typeof kayitHaritasi>; parcalar: Parca[]; url: string | null } | null>(null);
+  const vurguRef = useRef<string | null>(null);
+  /** t anında okunan parça + cümle (her karede sesin anlık zamanından: timeupdate ~0,25 sn geride kalıyordu) */
+  const konum = (t: number) => {
+    const x = klipRef.current;
+    if (!x || !x.z.length) return null;
+    let c = 0;
+    for (let q = 0; q < x.z.length; q++) if (t + 0.08 >= x.z[q][0]) c = q;
+    const h = x.harita[c] || { m: Math.min(c, x.parcalar.length - 1), s: 0, ns: 1 };
+    const ilk = c - h.s, son = ilk + h.ns - 1;
+    return { p: x.parcalar[h.m], o: { b: x.z[c][0], e: x.z[c][1], s: h.s, ns: h.ns, mb: x.z[ilk]?.[0] ?? x.z[c][0], me: x.z[son]?.[1] ?? x.z[c][1] } };
+  };
+  const vurguYap = (v: string | null) => { if (vurguRef.current !== v) { vurguRef.current = v; setVurgu(v); } };
+  /** Bir klibi çalar; parça bütün olarak, okunan kelime cümle içinde vurgulanır */
   const cal = useCallback(async (ad: string, parcalar: Parca[]) => {
     const { url, k } = klip(ad);
     const z = k?.zaman || [];
-    const harita = kayitHaritasi(z.length, parcalar.map((x) => x.metin));
-    okuRef.current = null;
+    klipRef.current = { z, harita: kayitHaritasi(z.length, parcalar.map((x) => x.metin)), parcalar, url };
     return sesCal(url, okumaSn(parcalar.map((x) => x.metin).join(' ')), (t) => {
-      if (!z.length) { setVurgu(parcalar[0]?.vurgu ?? null); return; }
-      let c = 0;
-      for (let x = 0; x < z.length; x++) if (t + 0.08 >= z[x][0]) c = x;
-      const h = harita[c] || { m: Math.min(c, parcalar.length - 1), s: 0, ns: 1 };
-      const p = parcalar[h.m];
-      const ilk = c - h.s, son = ilk + h.ns - 1;
-      okuRef.current = url && p?.sel ? { b: z[c][0], e: z[c][1], s: h.s, ns: h.ns, mb: z[ilk]?.[0] ?? z[c][0], me: z[son]?.[1] ?? z[c][1], sel: p.sel, atla: p.atla } : null;
-      setVurgu(p?.vurgu ?? null);
+      const n = konum(t);
+      vurguYap(n ? n.p?.vurgu ?? null : parcalar[0]?.vurgu ?? null);
     });
-  }, [klip]);
+  }, [klip]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // okunan kelime (CSS Highlight API, .ha-sayfa ile kapsamlı): sesle her karede
   useEffect(() => {
@@ -219,10 +224,11 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     let raf = 0, sonR: Range | null = null;
     const dongu = () => {
       raf = requestAnimationFrame(dongu);
-      const o = okuRef.current;
-      const kap = o?.sel ? document.querySelector(`.ha-sayfa ${o.sel}`) : null;
-      if (!o || !kap || !ses || ses.paused) { if (sonR) { H.delete('ha-okunan'); sonR = null; } return; }
-      const r = okunanAralik(kap, ses.currentTime, o, o.atla);
+      const n = ses && !ses.paused && klipRef.current?.url ? konum(ses.currentTime) : null;
+      if (n) vurguYap(n.p?.vurgu ?? null);
+      const kap = n?.p?.sel ? document.querySelector(`.ha-sayfa ${n.p.sel}`) : null;
+      if (!n || !kap || !ses) { if (sonR) { H.delete('ha-okunan'); sonR = null; } return; }
+      const r = okunanAralik(kap, ses.currentTime, n.o, n.p.atla);
       if (!r || (sonR && r.startContainer === sonR.startContainer && r.startOffset === sonR.startOffset)) return;
       sonR = r;
       H.set('ha-okunan', new HL(r));
@@ -249,7 +255,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     setEvre('anlat');
     if (!(await cal(`a-${no}`, [{ metin: q.anlatim, vurgu: 'anlatim', sel: '.ha-anlat p' }])) || dur()) return;
     setEvre('bitti');
-    setVurgu(null);
+    vurguYap(null);
     await new Promise((r) => setTimeout(r, 1200));
     if (!dur()) sonraki();
   }, [cal, q, sonraki]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -258,11 +264,11 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   useEffect(() => {
     const id = ++akis.current;
     const dur = () => id !== akis.current;
-    setEvre('oku'); setSecim(null); setVurgu(null); setDurdu(false); setKalan(BEKLE_SN);
+    setEvre('oku'); setSecim(null); vurguYap(null); setDurdu(false); setKalan(BEKLE_SN);
     (async () => {
       const ok = await cal(`q-${q.no}`, [{ metin: q.soru, vurgu: 'kok', sel: '.ha-kok' }, ...HARFLER.map((h) => ({ metin: q.secenekler[h], vurgu: h, sel: '.ha-sik.is-okunan > span', atla: 'small' }))]);
       if (!ok || dur()) return;
-      setEvre('dusun'); setVurgu(null);
+      setEvre('dusun'); vurguYap(null); klipRef.current = null;
       for (let s = BEKLE_SN; s > 0; s--) {
         setKalan(s);
         await new Promise((r) => setTimeout(r, 1000));

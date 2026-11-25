@@ -205,6 +205,9 @@ export const SoruCozucu: React.FC<Props> = ({
   /** H655: okunan klip cümlesinin seste [başlangıç, bitiş] saniyesi — kelime takibi bunun içinde hece oranıyla yürür */
   /** okunan cümlenin zaman aralığı; s/ns: o cümlenin metin parçası içindeki sırası ve parçadaki cümle sayısı */
   const okumaRef = useRef<{ b: number; e: number; s: number; ns: number; mb: number; me: number } | null>(null);
+  /** çalan klipte t anındaki cümle (her karede anlık zamanla; timeupdate ~0,25 sn geride kalıp önceki cümlenin son kelimesini tutuyordu) */
+  const okumaFn = useRef<((t: number) => { b: number; e: number; s: number; ns: number; mb: number; me: number; m: number } | null) | null>(null);
+  const okunanM = useRef(-1); // ekranda vurgulanan parçanın sırası (onCumle ile)
   const devamRef = useRef<(() => void) | null>(null); // duraklatılan sıranın kalanı
 
   const sorular = useMemo(() => {
@@ -373,7 +376,7 @@ export const SoruCozucu: React.FC<Props> = ({
       const kb = klipBilgi(a.klasor, a.klip);
       const k = kb?.k;
       const yedek = () => {
-        okumaRef.current = null;
+        okumaRef.current = null; okumaFn.current = null; okunanM.current = -1;
         // Klip bulunamayan durumlarda veya sesli soru çözücüde: tarayıcının Türkçe sesiyle cümle cümle oku
         const hasTTS = typeof window !== 'undefined' && 'speechSynthesis' in window;
         if (hasTTS) {
@@ -442,6 +445,13 @@ export const SoruCozucu: React.FC<Props> = ({
       try { (el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true; } catch { /* eski tarayıcı */ }
       const kesSn = a.kes !== undefined && k.zaman[kayitSon(a.kes)] ? k.zaman[kayitSon(a.kes)][1] + 0.15 : Infinity;
       let son = a.bas ?? 0;
+      okumaFn.current = (t: number) => {
+        let q0 = 0;
+        for (let q = 0; q < k.zaman.length; q++) if (k.zaman[q][0] <= t + 0.08) q0 = q;
+        const h = harita[q0] || { m: q0, s: 0, ns: 1 };
+        const i0 = q0 - h.s, i1 = i0 + h.ns - 1;
+        return k.zaman[q0] ? { b: k.zaman[q0][0], e: k.zaman[q0][1], s: h.s, ns: h.ns, mb: k.zaman[i0]?.[0] ?? k.zaman[q0][0], me: k.zaman[i1]?.[1] ?? k.zaman[q0][1], m: h.m } : null;
+      };
       el.ontimeupdate = () => {
         const t = el.currentTime;
         if (t >= kesSn) { el.ontimeupdate = null; el.onended = null; el.pause(); sonraki(); return; }
@@ -453,6 +463,7 @@ export const SoruCozucu: React.FC<Props> = ({
         const ilk = j - hx.s, sonq = ilk + hx.ns - 1;
         okumaRef.current = k.zaman[j] ? { b: k.zaman[j][0], e: k.zaman[j][1], s: hx.s, ns: hx.ns, mb: k.zaman[ilk]?.[0] ?? k.zaman[j][0], me: k.zaman[sonq]?.[1] ?? k.zaman[j][1] } : null;
         if (hx.m !== son) { son = hx.m; a.onCumle?.(hx.m); }
+        okunanM.current = hx.m;
       };
       el.onended = () => { el.onended = null; sonraki(); };
       el.onerror = () => { el.onerror = null; yedek(); };
@@ -481,8 +492,10 @@ export const SoruCozucu: React.FC<Props> = ({
     const hece = (w: string) => Math.max(1, (w.match(/[aeıioöuüâîû]/gi) || []).length + (/\d/.test(w) ? w.replace(/\D/g, '').length * 1.5 : 0));
     const dongu = () => {
       raf = requestAnimationFrame(dongu);
-      const z = okumaRef.current, el = audio.current, kap = kokRef.current?.querySelector(SEC[okunan.yer]);
+      const el = audio.current, zf = el && okumaFn.current?.(el.currentTime), z = zf || okumaRef.current, kap = kokRef.current?.querySelector(SEC[okunan.yer]);
       if (!z || !el || !kap || el.paused) return;
+      // parça değişti ama ekran ögesi henüz güncellenmedi (timeupdate bekleniyor): yanlış ögede kelime yakma
+      if (zf && okunanM.current >= 0 && zf.m !== okunanM.current) { if (sonKey) { H.delete('sc-okunan'); sonKey = ''; } return; }
       const kel: { n: Text; b: number; e: number; h: number }[] = [];
       const tw = document.createTreeWalker(kap, NodeFilter.SHOW_TEXT);
       for (let n = tw.nextNode() as Text | null; n; n = tw.nextNode() as Text | null) {
