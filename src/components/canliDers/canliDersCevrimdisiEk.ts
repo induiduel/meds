@@ -51,6 +51,7 @@ export async function cdEkDosyalar(key: string, detay: CdDetay): Promise<CdEkDos
     if (ara) {
       const klasor = ara.ders.klasor || ara.ders.kod;
       for (const [ad, k] of Object.entries(ara.ders.klip || {})) ses(klipYolu(ara.brans, 'ema', klasor, ad), k.v);
+      for (const q of ara.ders.sorular) if (q.kaynak) for (const [ad, k] of Object.entries(q.kaynak.klip)) ses(klipYolu(q.kaynak.brans, 'ema', q.kaynak.klasor, ad), k.v);
       for (const [ad, k] of Object.entries(ara.ortak || {})) ses(klipYolu(ara.brans, 'ema', 'ortak', ad), k.v);
     }
   } catch { /* ara soru yok */ }

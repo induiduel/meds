@@ -15,11 +15,14 @@ import type { Brans } from '../spots/brans';
 import { cdAbone, cdDurum, cdDuraklat, cdParagrafa, cdToggle } from './canliDersStore';
 import '../../styles/v15/hoca_ara.css';
 
-type AraSoru = CSoru & { ara: NonNullable<CSoru['ara']>; anlatim: string };
+/** kaynak: çıkmış ara soru (k<N>cikmisara, scripts/uretim/cikmis_ara/kur.py) — klipler dersin sesli çözücüsünden (yeni ses yok) */
+interface AraKaynak { brans: Brans; klasor: string; no: number; klip: Record<string, Klip> }
+type AraSoru = CSoru & { ara: NonNullable<CSoru['ara']>; anlatim: string; kaynak?: AraKaynak };
 interface AraDers { brans: Brans; ders: Omit<CDers, 'sorular'> & { sorular: AraSoru[] }; ortak: CDizin['ortak'] }
 
 const DIZIN = import.meta.glob('../../data/k*hocaara_cozucu/index.json', { eager: true, import: 'default' }) as Record<string, CDizin & { dersler: { kod: string; key?: string }[] }>;
 const DERS = import.meta.glob('../../data/k*hocaara_cozucu/*.json', { import: 'default' }) as Record<string, () => Promise<CDers>>;
+const CIKMIS = import.meta.glob('../../data/k*cikmisara/k*.json', { import: 'default' }) as Record<string, () => Promise<{ kod: string; sorular: AraSoru[] }>>;
 const onbellek = new Map<string, Promise<AraDers | null>>();
 const kisaKey = (k: string) => /^k\d-\d{2}/.exec(k)?.[0] || k;
 
@@ -28,16 +31,26 @@ export function hocaAraYukle(key: string): Promise<AraDers | null> {
   let p = onbellek.get(key);
   if (p) return p;
   p = (async () => {
+    let hoca: AraDers | null = null;
     for (const [yol, d] of Object.entries(DIZIN)) {
       const x = d.dersler.find((y) => y.key === key) || d.dersler.find((y) => y.key && kisaKey(y.key) === kisaKey(key));
       if (!x) continue;
       const brans = /data\/(k[^/]*)_cozucu\//.exec(yol)?.[1] as Brans;
       const f = DERS[yol.replace('index.json', `${x.kod}.json`)];
-      if (!f) return null;
-      const ders = (await f()) as unknown as AraDers['ders'];
-      return ders.sorular?.length ? { brans, ders, ortak: d.ortak || {} } : null;
+      if (f) hoca = { brans, ders: (await f()) as unknown as AraDers['ders'], ortak: d.ortak || {} };
+      break;
     }
-    return null;
+    // Çıkmış sorular (2026-11-25): örnek/ara sorularla aynı sayfada okunur ve çözülür; numara ara sorulardan sonra sürer
+    const kurul = /^k(\d)-/.exec(key)?.[1];
+    const fc = Object.entries(CIKMIS).find(([y]) => y.endsWith(`/k${kurul}cikmisara/${key}.json`))?.[1];
+    const cik = fc ? ((await fc().catch(() => null))?.sorular || []) : [];
+    if (!cik.length) return hoca?.ders.sorular?.length ? hoca : null;
+    const taban = hoca?.ders.sorular?.length ? hoca : (() => {
+      const e = Object.entries(DIZIN).find(([y]) => y.includes(`/k${kurul}hocaara_cozucu/`));
+      return { brans: `k${kurul}hocaara` as Brans, ders: { kod: key, sorular: [] } as unknown as AraDers['ders'], ortak: e?.[1].ortak || {} };
+    })();
+    const n0 = taban.ders.sorular.length;
+    return { ...taban, ders: { ...taban.ders, sorular: [...taban.ders.sorular, ...cik.map((q, i) => ({ ...q, no: n0 + i + 1 }))] } };
   })().catch(() => null);
   onbellek.set(key, p);
   return p;
@@ -89,6 +102,13 @@ function ac(veri: AraDers, liste: AraSoru[], hepsi: boolean, devam: number | nul
 /* ── tek ses oynatıcısı: her çalış öncekini keser; eski onended'ler jetonla düşer ── */
 let ses: HTMLAudioElement | null = null;
 let jeton = 0;
+function hizUygula(el: HTMLAudioElement) {
+  const r = cdDurum().rate || 1;
+  const x = el as HTMLAudioElement & { mozPreservesPitch?: boolean; webkitPreservesPitch?: boolean };
+  x.preservesPitch = true; x.mozPreservesPitch = true; x.webkitPreservesPitch = true;
+  el.defaultPlaybackRate = r;
+  el.playbackRate = r;
+}
 function sesDur() { jeton++; if (ses) { ses.onended = null; ses.ontimeupdate = null; ses.pause(); } }
 function sesCal(url: string | null, okumaSn: number, onT: (t: number) => void): Promise<boolean> {
   sesDur();
@@ -98,7 +118,7 @@ function sesCal(url: string | null, okumaSn: number, onT: (t: number) => void): 
       const t0 = performance.now();
       const id = window.setInterval(() => {
         if (j !== jeton) { clearInterval(id); coz(false); return; }
-        const t = (performance.now() - t0) / 1000;
+        const t = ((performance.now() - t0) / 1000) * (cdDurum().rate || 1);
         onT(t);
         if (t >= okumaSn) { clearInterval(id); coz(true); }
       }, 100);
@@ -118,6 +138,8 @@ function sesCal(url: string | null, okumaSn: number, onT: (t: number) => void): 
         if (!benim()) return;
         if (deneme++ === 0) { console.warn('[hoca-ara] klip yüklenemedi, yeniden deneniyor:', url); yukle(); } else coz(true);
       };
+      // Ders sesiyle aynı hız ve ton (kullanıcı kararı 2026-11-25): sesli dersin hız seçimi ara soruya da uygulanır
+      hizUygula(el);
       el.ontimeupdate = () => { if (benim()) onT(el.currentTime); };
       el.onended = () => { if (benim()) coz(true); };
       el.onerror = hata;
@@ -177,7 +199,7 @@ export function CdHocaAraDugme({ dersKey }: { dersKey: string }) {
   const n = veri.ders.sorular.length;
   return (
     <button type="button" className="cd-btn is-ikon ha-dugme" onClick={() => ac(veri, veri.ders.sorular, true, null)}
-      aria-label={`Hocanın sorabileceği sorular (${n}) — hepsini sesli çöz`} title={`Hocanın sorabileceği sorular (${n}): okur, çözer, slayttan anlatır`}>
+      aria-label={`Ders içi sorular (${n}) — hepsini sesli çöz`} title={`Hocanın sorabileceği ve çıkmış sorular (${n}): okur, çözer`}>
       <CircleAlert aria-hidden /><span className="ha-dugme-n" aria-hidden>{n}</span>
     </button>
   );
@@ -205,12 +227,18 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   const { brans, ders, ortak } = veri;
 
   const klip = useCallback((ad: string): { url: string | null; k?: Klip } => {
+    const kn = q.kaynak;
+    if (kn) {
+      const kad = ad.replace(new RegExp(`^([a-z])-${q.no}(?=$|-)`), `$1-${kn.no}`);
+      const k = kn.klip[kad];
+      return k ? { url: `${getCustomApiUrl() || ''}${klipYolu(kn.brans, 'ema', kn.klasor, kad)}?v=${k.v}`, k } : { url: null };
+    }
     const k = ders.klip?.[ad];
     if (!k) return { url: null };
     // Ses API alanından istenir: <audio> Authorization taşıyamaz, medya çerezi yalnız API alanına yazılır (auth.ts);
     // göreli adres ana alana gidip erişim kapısında 500 alıyordu (önbellekte yoksa "Format error", anlatım atlanıyordu).
     return { url: `${getCustomApiUrl() || ''}${klipYolu(brans, 'ema', ders.klasor || ders.kod, ad)}?v=${k.v}`, k };
-  }, [brans, ders]);
+  }, [brans, ders, q]);
   const ortakUrl = (ad: string) => (ortak[ad] ? `${getCustomApiUrl() || ''}${klipYolu(brans, 'ema', 'ortak', ad)}?v=${ortak[ad].v}` : null);
 
   /** çalan klibin bağlamı: zaman kaydı (cümle başına), kayıt → (parça, cümle) haritası, parçalar */
@@ -275,7 +303,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     }
     if (!(await cal(dogruSecti ? `d-${no}` : `c-${no}`, [{ metin: q.cozum, vurgu: q.dogru }])) || dur()) return; // çözüm metni ekranda yazılı değil: kelime vurgusu yok
     setEvre('anlat');
-    if (!(await cal(`a-${no}`, [{ metin: q.anlatim, vurgu: 'anlatim', sel: '.ha-anlat p' }])) || dur()) return;
+    if (q.anlatim && !(await cal(`a-${no}`, [{ metin: q.anlatim, vurgu: 'anlatim', sel: '.ha-anlat p' }])) || dur()) return;
     setEvre('bitti');
     vurguYap(null);
     await new Promise((r) => setTimeout(r, 1200));
@@ -317,7 +345,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     }
     akis.current++;
     setSecim(h);
-    dersSoruKaydet(cdDurum().key, 'hoca', `${ders.kod}-${q.no}`);
+    dersSoruKaydet(cdDurum().key, 'hoca', q.kaynak ? `${q.kaynak.klasor}-${q.kaynak.no}` : `${ders.kod}-${q.no}`);
     cozVeAnlat(q.no, h === q.dogru ? null : h, h === q.dogru);
   };
   const hemenCoz = () => { akis.current++; cozVeAnlat(q.no, null); };
@@ -337,7 +365,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     <div className="ha-kat" role="presentation">
       <div className="ha-sayfa" role="dialog" aria-modal="true" aria-label="Hocanın sorabileceği soru">
         <header className="ha-bas">
-          <span className="ha-et"><CircleAlert aria-hidden /> Hocanın sorabileceği soru</span>
+          <span className="ha-et"><CircleAlert aria-hidden /> {q.kaynak ? `Çıkmış soru${q.sinav ? ` · ${q.sinav}` : ''}` : 'Hocanın sorabileceği soru'}</span>
           <span className="ha-no">{hepsi || liste.length > 1 ? `${sira + 1}/${liste.length} · ` : ''}{q.ara.sayfa}. slayttan sonra</span>
           {(hepsi || liste.length > 1) && <button type="button" className="ha-ib" disabled={sira <= 0} onClick={() => git(sira - 1)} aria-label="Önceki soru"><ChevronLeft aria-hidden /></button>}
           {(hepsi || liste.length > 1) && <button type="button" className="ha-ib" disabled={sira >= liste.length - 1} onClick={() => git(sira + 1)} aria-label="Sonraki soru"><ChevronRight aria-hidden /></button>}
@@ -364,7 +392,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
               <button type="button" onClick={hemenCoz}>{otoCoz ? 'Hemen çöz' : 'Çözümü göster'}</button>
             </p>
           )}
-          {(evre === 'anlat' || evre === 'bitti') && (
+          {(evre === 'anlat' || evre === 'bitti') && q.anlatim && (
             <section className={`ha-anlat${vurgu === 'anlatim' ? ' is-okunan' : ''}`} aria-label="Slaytlardan çözüm">
               <h3>Slaytlardan çözüm <span>{q.sayfa.map((p) => `${p}. slayt`).join(' · ')}</span></h3>
               <p>{q.anlatim}</p>

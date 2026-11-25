@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 948,
-  "baslik": "Sesli derste kod yazımı düzeldi",
+  "onem": 949,
+  "baslik": "Sesli derste çıkmış sorular da soruluyor",
   "maddeler": [
-    "Sesli ders: ekli kodlar da yazıldığı gibi görünür (M3'tür, M2'nin, B12'yi); sıra sayıları ve \"Frajil X bir\" gibi ifadeler bozulmaz."
+    "Sesli ders: çıkmış sorular, ilgili slayt anlatılınca örnek sorularla aynı sayfada sesli okunur; \"Otomatik çöz\" açıksa çözülür.",
+    "Ses hızı: ders içi soruların sesi artık dersin hız ve tonuyla çalar."
   ],
   "eklenen": [],
   "degisen": [],
