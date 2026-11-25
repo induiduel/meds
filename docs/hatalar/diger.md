@@ -46,3 +46,20 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kapı — EKLENDİ:** `son_prova` aşaması (plan_kurul.py + son_prova_zinciri.py), `ders_zinciri` `capa` adımı
   (capa_dogrula.py). Son Prova sınav dağılımı duyurusu yoksa bildirim gider.
 
+
+### H658 — Yapay zekâ test oturumu canlıda ders ayrıntısını açamıyordu: çerez api. alt alanına gitmiyordu (2026-11-25)
+- **Belirti:** Ajan canlıda (`meds_ai_test` çereziyle) check-up → "Sesli derste bu bölümü dinle" dediğinde ders sonsuz
+  "Ders hazırlanıyor"da kaldı; `/api/canli-ders/<key>` 500 "Sunucu hatası. İstek işlenemedi." Ders listesi ise geliyordu,
+  bu yüzden önce sunucu hatası/yeniden başlama sanıldı.
+- **Kök neden:** (1) `aiTestErisim.ts` çerezi `Domain` olmadan (yalnız `nofrostlife.com.tr`'ye) kuruyordu; veri istekleri
+  `api.nofrostlife.com.tr`'ye gider. (2) `safeJsonFetch` çapraz köken isteği kimlik bilgisiz atar → çerez hiç gitmez. Erişim
+  kapısı (H647, `erisimKapisi.ts`) oturumu görmeyince izinsiz isteğe bilerek 500 + bu metni döner. Liste yalnız tarayıcı
+  önbelleğinden geldiği için "çalışıyor" görünüyordu; `cache:'no-store'` ile istenen ayrıntı ağa gidip düştü. Gerçek kullanıcı
+  etkilenmez (jeton `Authorization` başlığında).
+- **Çözüm:** Çerez canlı alan adında `Domain=nofrostlife.com.tr` ile kurulur/silinir (`alanAdi()`); `api.ts`
+  `aiTestOturumuIsaretle()` — App.tsx `/api/ai-test/durum` `ok` dönünce kendi alan adlarına giden isteklerde
+  `credentials:'include'` (CORS zaten kendi kökenlere `Allow-Credentials` veriyor). Canlıda doğrulandı: ayrıntı 200, derste
+  dinle paragraftan çaldı. Commit c485a999.
+- **Önleme:** Kapı yanıtı (500 + "Sunucu hatası") gerçek çökme sanılmasın: önce aynı ucu konteyner içinden dene
+  (`docker --context oracle exec meds-app node -e "fetch('http://localhost:3000/api/...')"`; içeride 200 ise sorun kimlik).
+  Oturum/çerez kuran her yeni yol iki alan adını (site + `api.`) birlikte sınar; önbellekten gelen başarı kanıt sayılmaz.

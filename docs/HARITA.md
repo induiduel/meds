@@ -14,7 +14,7 @@
 | `CIZIM_KURALLARI.md` | Canlı çizim ve işaretleme kuralları (bütün kurullar, bütün dersler, bütün PDF'ler) | 1937 | 2026-11-16 | AGENTS/CLAUDE, 10 betik |
 | `CLAUDE.md` | docs/ — proje belgeleri | 94 | 2026-11-16 | AGENTS/CLAUDE, 16 betik |
 | `DERS_ICERIK_BICIMI.md` | Ders içerik paketi biçimi (Terimler · Hastalıklar · Bilgiler · Tablolar · Sorular · Kartla | 591 | 2026-11-16 | 2 betik |
-| `DERS_OZETI_MODULU.md` | Ders Özeti modülü (Kurul 2+) — tasarım ve veri biçimi | 725 | 2026-11-23 | 1 betik |
+| `DERS_OZETI_MODULU.md` | Ders Özeti modülü (Kurul 2+) — tasarım ve veri biçimi | 725 | 2026-11-25 | 1 betik |
 | `DIS_AJAN_YOL_HARITASI.md` | Dış yapay zekâ ajanları için tam içerik işçisi yol haritası (kullanıcı kararı 2026-10-29) | 2329 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `FAZ8_DUZELTME_TALIMATLARI.md` | Faz 8 — Düzeltme ve Geliştirme Talimatları | 845 | 2026-11-16 | 1 betik |
 | `GELECEK_PLANLAMASI.md` | GELECEK PLANLAMASI — MeDSor tam otomatik içerik ve tahmin sistemi | 3895 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
@@ -28,7 +28,7 @@
 | `KURALLAR_ICERIK_HATTI.md` | İçerik Hattı Kuralları — İşletim Ayrıntısı (AGENTS.md'den taşındı, 2026-11-16) | 2894 | 2026-11-17 | AGENTS/CLAUDE |
 | `KURALLAR_OGREN_QUIZ.md` | Öğren Destesi ve Quiz Kuralları (AGENTS.md'den taşındı, 2026-11-16) | 861 | 2026-11-16 | AGENTS/CLAUDE, 1 betik |
 | `KURUL2_DERS_STANDARDI.md` | Kurul 2+ ders standardı — her ders için yapılacakların tamamı (tek kaynak) | 2576 | 2026-11-18 | AGENTS/CLAUDE, 4 betik |
-| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 7765 | 2026-11-25 | AGENTS/CLAUDE, 12 betik |
+| `KURUL2_YAPILMAYACAK_HATALAR.md` | ⚠️ TÜM AJANLARIN DİKKATİNE (KESİNLİKLE ZORUNLU KURAL): | 7797 | 2026-11-25 | AGENTS/CLAUDE, 12 betik |
 | `KURUL_OTOMASYON_EL_KITABI.md` | Kurul Otomasyon El Kitabı — Kurul 2 ve sonrası (işletim talimatı) | 6323 | 2026-11-16 | AGENTS/CLAUDE, 2 betik |
 | `OGRENCI_ONEM_YONTEMI.md` | Geçmiş yıl öğrenci önem notları — yöntem, isabet ve işçi kuralları (2026-10-30) | 1570 | 2026-11-16 | AGENTS/CLAUDE, 12 betik |
 | `OGREN_ETKILESIM_REHBERI.md` | Öğren Ders Ekranı · Etkileşim ve İçerik Rehberi | 5068 | 2026-11-16 | AGENTS/CLAUDE, 13 betik |

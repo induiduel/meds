@@ -494,3 +494,4 @@
 - **H655** · Metin takibi slaytı birebir okunuyor sanıyordu → anlam eşlemesi + kesintisiz vurgu → hatalar/on_yuz_oynatici_ders.md
 - **H656** · Çıkmış PDF toplaması: ders etiketi sayfalar arası taşındı, sızan kökler, OCR artığı → aynı sayfa başlığı + sızma ayırma + izli düzeltme → hatalar/veri_cikmis.md
 - **H657** · Kurul 3 arşivinde uzun dersler "hata:metin" oluyordu: kelime tavanı (`MEDS_METIN_MAX_W`) yayın kapısında ölçekleniyor, üretim kapısında (`k3_metin.py`) hiç konmuyordu → iki kapı aynı eşiği tek yerden hesaplar → hatalar/ses.md
+- **H658** · AI test oturumu canlıda ders ayrıntısında 500: çerez host-only, `api.` alt alanına ve kimliksiz çapraz isteğe gitmiyordu → `Domain=nofrostlife.com.tr` + test oturumunda `credentials:'include'`; kapı 500'ü çökme sanılmasın → hatalar/diger.md
