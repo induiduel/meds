@@ -1,17 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 925,
-  "baslik": "Yeni tasarım (v16) deneme aşamasında",
+  "onem": 926,
+  "baslik": "Sesli ders oynatıcısı telefonda sekmeleri artık örtmüyor",
   "maddeler": [
-    "Yeni v16 tasarımı yalnız yöneticiye açık deneme olarak eklendi; öğrenciler mevcut tasarımı görmeye devam eder.",
-    "v16 denemesinde sesli derste PDF sayfa sayfa ya da sürekli kaydırılarak izlenebilir.",
-    "v16 denemesinde soru kartları ve alt pencereler küçültülebilir; telefonda taşan satırlar ve sekmeler düzeltildi."
+    "Telefonda sesli ders çalarken alt sekmeler (Bugün, Ders, Soru, Sınav, Menü) yeniden görünür; oynatıcı onların üstünde durur.",
+    "v16 denemesi (yalnız yönetici): PDF sayfa sayfa kipi tek sayfa gösterir, sayfa düğmeleri PDF köşesinde; yeni ikon seti sekmelerde ve oynatıcıda."
   ],
-  "eklenen": [
-    "v16 tasarım denemesi (yalnız yönetici)"
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Telefonda oynatıcının alt sekmeleri örtmesi"
+  ],
   "silinen": [],
   "yenilikler": []
 }

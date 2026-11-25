@@ -160,3 +160,15 @@
 - **Kök neden:** `@media (max-width:…)` ekranı ölçer; PDF çubuğu üç bölmeli düzende ~350 px.
 - **Çözüm:** kip düğmesi her boyutta yalnız ikon + `aria-label`.
 - **Kural:** bölme içi öğede ekran sorgusu değil, kap sorgusu (`container`) ya da ikon + etiket kullan.
+
+### H663 — PDF "sayfa sayfa" kipi sürekli kipten ayırt edilmiyordu (2026-11-25, v16)
+- **Belirti:** kullanıcı "PDF sürekli ve sayfa sayfa özelliği çalışmıyor" dedi; düğme değişiyor, ekran aynı kalıyordu.
+- **Kök neden:** kip yalnız `scroll-snap` idi; sayfa 550 px, bölme 704 px → ekranda yine iki sayfa. Sınama yalnız sınıfı ve snap değerini ölçmüştü, görüntüyü değil.
+- **Çözüm:** `PdfDocView` şu anki sayfaya `is-cur` verir; sayfa kipinde yalnız o görünür, önceki/sonraki düğmeleri PDF'in sağ altında yüzer.
+- **Kural:** görsel kip özelliği "öznitelik yazıldı" ile değil, ekranda görünen sayfa sayısı/içerik değişimiyle doğrulanır.
+
+### H664 — Telefonda mini oynatıcı alt sekme çubuğunu örtüyordu (2026-11-25, v15'te de)
+- **Belirti:** sesli ders çalarken telefonda Bugün/Ders/Soru/Sınav/Menü sekmeleri görünmüyor, sayfalar arası geçilemiyordu.
+- **Kök neden:** `CanliDersDock` alt boşluğu `.a13-island-wrap, .s12-tabs, .sh-tabs` ile ölçüyordu; v15 sekme çubuğu `.v15-tabs` listede yoktu → boşluk 0.
+- **Çözüm:** seçicilere `.v15-tabs` eklendi (ölçüm + ResizeObserver); oynatıcı 691–751, sekmeler 751–812.
+- **Kural:** kabuk sınıf adı değişince onu ölçen yerleri `bag.py kim` / grep ile tara; sabit sınıf listesi yeni kabuğu kapsamalı.

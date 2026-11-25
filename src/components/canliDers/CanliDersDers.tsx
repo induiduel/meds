@@ -1876,6 +1876,14 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
   const kipDegis = () => setKip((k) => { const n = k === 'sayfa' ? 'surekli' : 'sayfa'; try { localStorage.setItem('cd_pdf_kip', n); } catch { /* yok */ } return n; });
   const sayfaKip = v16 && kip === 'sayfa';
   const sigdirFit = sigdir || sayfaKip;
+  // Sayfa kipinde bir sayfa ileri/geri: görüntüleyicinin kaydırma kutusunu bir sayfa boyu kaydırır (yakalama sayfaya oturtur)
+  const sayfaGit = (yon: number) => {
+    const sc = wrapRef.current?.querySelector<HTMLElement>('.pdv');
+    const pg = sc?.querySelector<HTMLElement>('.pdv-page.is-cur') || sc?.querySelector<HTMLElement>('.pdv-page');
+    if (!sc || !pg) return;
+    durdur();
+    sc.scrollBy({ top: yon * (pg.offsetHeight + 12), behavior: 'smooth' });
+  };
   const zoomKey = `medsoru_cd_pdf_zoom_${sigdirFit ? 'sayfa' : 'genislik'}`;
   const [zoom, setZoomHam] = useState(() => { try { const v = Number(localStorage.getItem(zoomKey)); return v >= Z_MIN && v <= Z_MAX ? v : 1; } catch { return 1; } });
   const setZoom = useCallback((z: number | ((o: number) => number)) => setZoomHam((o) => {
@@ -2166,6 +2174,13 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
           </div>
         )}
       </div>
+      {/* v16 sayfa kipi: önceki/sonraki sayfa, PDF'in sağ altında yüzer (çubukta telefonda yer yoktu, ⋯ menüsünü taşırıyordu) */}
+      {sayfaKip && (
+        <div className="cd-pdf-sg-kutu" role="group" aria-label="Sayfa değiştir">
+          <button type="button" className="cd-ib cd-pdf-sg" onClick={() => sayfaGit(-1)} aria-label="Önceki sayfa" title="Önceki sayfa"><ChevronUp /></button>
+          <button type="button" className="cd-ib cd-pdf-sg" onClick={() => sayfaGit(1)} aria-label="Sonraki sayfa" title="Sonraki sayfa"><ChevronDown /></button>
+        </div>
+      )}
       <CdAraResimKok dersKey={detay.key} />
       {/* tasarım S14: anlatılan paragrafın PDF eşleşmesi yoksa slayt soluklaşır, son eşleşen sayfa söylenir */}
       {canli && !durdu && aktif >= 0 && !(es && Number.isFinite(es.sayfa)) && eslesmeKapali !== aktif && (

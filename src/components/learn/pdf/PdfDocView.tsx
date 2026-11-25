@@ -752,7 +752,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
                 if (el) slotEls.current.set(n, el);
                 else slotEls.current.delete(n);
               }}
-              className={`pdv-page${src ? ' is-src' : ''}${ekOf(i) ? ' has-ek' : ''}`}
+              className={`pdv-page${src ? ' is-src' : ''}${ekOf(i) ? ' has-ek' : ''}${n === current ? ' is-cur' : ''}`}
               data-page={n}
               style={{ top: tops[i], width: s.w * sc, height: s.h * sc, ['--scale-factor' as any]: sc,
                        ...(ekOf(i) ? { ['--ek-h' as any]: `${s.h * sc * ekOf(i)}px`, ['--ek-renk' as any]: ekAlt?.[n]?.renk || '#fff' } : null) }}

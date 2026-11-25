@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { v16Ikonlu } from '../v16/Ikon';
 import { guvenliLazy } from '../../utils/guvenliLazy';
 import { useSiteAyar } from '../../services/siteAyar';
 import { createPortal } from 'react-dom';
@@ -60,6 +61,8 @@ import '../../styles/v15/shell.css';
 import '../../styles/v16/temel.css';
 import '../../styles/v16/sesli.css';
 import '../../styles/v16/soru.css';
+const V16Ev = v16Ikonlu(House, 'ev');
+const V16Izgara = v16Ikonlu(LayoutGrid, 'izgara');
 import '../../styles/v16/sayfalar.css';
 
 // Tıp Asistanı gizli (yalnız medsor_asistan_goster=1): kapalıyken paneli ve stilini hiç indirme. Panel sabit konumlu
@@ -260,7 +263,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
           })}
         </div>
         <button type="button" className="v15-rail-btn" onClick={() => setRailMenu(true)} aria-haspopup="dialog" aria-expanded={railMenu} title="Bütün sayfalar ve araçlar">
-          <span className="v15-rail-ic"><LayoutGrid aria-hidden="true" /></span>
+          <span className="v15-rail-ic"><V16Izgara aria-hidden="true" /></span>
           <span className="v15-rail-l">Menü</span>
         </button>
         <span className="v15-grow" />
@@ -307,7 +310,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
 
       <div className="v15-side-scroll">
         <ul className="v15-nav" role="list">
-          <li>{link('today', <><House strokeWidth={active === 'today' ? 2.1 : 1.8} aria-hidden="true" /><span className="v15-nav-t">Bugün</span></>, 'v15-nav-a')}</li>
+          <li>{link('today', <><V16Ev strokeWidth={active === 'today' ? 2.1 : 1.8} aria-hidden="true" /><span className="v15-nav-t">Bugün</span></>, 'v15-nav-a')}</li>
           {gruplar.map((g) => {
             const Icon = g.icon;
             const on = aktifGrup === g.id;
@@ -564,7 +567,7 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
         })}
         <button type="button" className="v15-tab" aria-current={sekme === 'menu' || menu ? 'page' : undefined} aria-haspopup="dialog" aria-expanded={menu}
           onClick={() => { buzz(); setMenu((v) => !v); }}>
-          <span className="v15-tab-pill"><LayoutGrid strokeWidth={sekme === 'menu' ? 2.1 : 1.8} aria-hidden="true" /></span>
+          <span className="v15-tab-pill"><V16Izgara strokeWidth={sekme === 'menu' ? 2.1 : 1.8} aria-hidden="true" /></span>
           <span className="v15-tab-l">Menü</span>
         </button>
       </nav>

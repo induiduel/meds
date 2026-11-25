@@ -4,7 +4,16 @@
  * canliDersStore'dadır; bu bileşen yalnız denetimdir.
  */
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ArrowUpRight, ChevronDown, ChevronUp, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, SkipBack, SkipForward, X } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, ChevronUp, Download, ListOrdered as LListOrdered, Pause as LPause, Play as LPlay, RotateCcw as LRotateCcw, RotateCw as LRotateCw, SkipBack as LSkipBack, SkipForward as LSkipForward, X } from 'lucide-react';
+import { v16Ikonlu } from '../v16/Ikon';
+// v16 açıkken oynatıcı ikonları v16 setinden (yalnız yönetici denemesi), kapalıyken lucide
+const Pause = v16Ikonlu(LPause, 'duraklat');
+const Play = v16Ikonlu(LPlay, 'oynat');
+const RotateCcw = v16Ikonlu(LRotateCcw, 'geri10');
+const RotateCw = v16Ikonlu(LRotateCw, 'ileri10');
+const SkipBack = v16Ikonlu(LSkipBack, 'onceki');
+const SkipForward = v16Ikonlu(LSkipForward, 'sonraki');
+const ListOrdered = v16Ikonlu(LListOrdered, 'liste');
 import { navigateTo, pathFor } from '../../router';
 import {
   CD_HIZLAR, cdDuraklat, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
@@ -21,7 +30,8 @@ import { cdCikmisAc, cikmisSayfada } from './CdCikmisChip';
 import { Sheet } from '../ui/Sheet';
 import { dersCozucu } from './dersCozucu';
 import { useYildizliParagraflar } from '../../services/yildizliParagrafStore';
-import { Headphones, MoreHorizontal, WifiOff } from 'lucide-react';
+import { Headphones, MoreHorizontal as LMoreHorizontal, WifiOff } from 'lucide-react';
+const MoreHorizontal = v16Ikonlu(LMoreHorizontal, 'daha');
 import { cdTampon, cdYenidenDene } from './canliDersStore';
 import { useCdCevrimdisi } from './canliDersCevrimdisi';
 
@@ -51,7 +61,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
       t = 0;
       const kok = document.documentElement;
       const tamFs = kok.classList.contains('cd-tam-ekran') || kok.classList.contains('is-app-fullscreen');
-      const tabs = document.querySelector<HTMLElement>('.a13-island-wrap, .s12-tabs, .sh-tabs');
+      const tabs = document.querySelector<HTMLElement>('.v15-tabs, .a13-island-wrap, .s12-tabs, .sh-tabs');
       // Görünür alanı visualViewport'tan ölç: iOS Safari/Chrome'da adres çubuğu ve klavye
       // window.innerHeight'i değiştirmeden görünür alanı kaydırır; dock aksi hâlde tarayıcı
       // altlığının altında/klavyenin arkasında kalıyordu.
@@ -76,7 +86,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
     olc();
     const ro = new ResizeObserver(plan);
     ro.observe(el);
-    const tabs = document.querySelector('.a13-island-wrap, .s12-tabs, .sh-tabs');
+    const tabs = document.querySelector('.v15-tabs, .a13-island-wrap, .s12-tabs, .sh-tabs');
     if (tabs) ro.observe(tabs);
     window.addEventListener('resize', plan);
     vv?.addEventListener('resize', plan);

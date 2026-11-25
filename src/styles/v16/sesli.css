@@ -13,6 +13,13 @@
   /* PDF: sayfa sayfa */
   & .cd-pdf-bolme.is-sayfa-kip .pdv { scroll-snap-type: y mandatory; overscroll-behavior-y: contain; }
   & .cd-pdf-bolme.is-sayfa-kip .pdv-page { scroll-snap-align: center; scroll-snap-stop: always; }
+  /* Kök neden (2026-11-25): yalnız yakalama vardı; sayfa 550 px, bölme 704 px → iki sayfa birden görünüyor, kipler ayırt edilmiyordu.
+     Sayfa kipinde yalnız şu anki sayfa (PdfDocView .is-cur) görünür; komşular gizli, kaydırma/düğme bir sayfa ilerletir. */
+  & .cd-pdf-bolme.is-sayfa-kip .pdv-page:not(.is-cur) { visibility: hidden; }
+  & .cd-pdf-bolme { position: relative; }
+  & .cd-pdf-sg-kutu { position: absolute; right: 12px; bottom: 12px; z-index: 6; display: flex; flex-direction: column; gap: 2px; padding: 4px;
+    border-radius: 14px; background: var(--color-white); box-shadow: var(--v16-hair), var(--v16-sh-2); }
+  & .cd-pdf-sg { width: 40px; height: 40px; border-radius: 10px; }
   & .cd-pdf-kip { width: auto; min-width: 40px; padding: 0 10px; gap: 6px; display: inline-flex; align-items: center;
     border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); font: 600 12.5px/1 var(--font-sans); white-space: nowrap; }
   & .cd-pdf-kip[aria-pressed='true'] { background: var(--color-accent-soft); color: var(--color-accent); }
@@ -21,8 +28,8 @@
   & .cd-pdf-kip span { display: none; }
   & .cd-pdf-kip { padding: 0; width: 36px; justify-content: center; }
 
-  /* "Şu an anlatılan" etiketi slayt başlığını örtmesin: sağ üst köşede küçük hap */
-  & .cd-pdf-bolme .pdv-src-tag { top: 6px; left: auto; right: 6px; max-width: calc(100% - 12px); padding: 3px 8px; border-radius: 999px;
+  /* "Şu an anlatılan" etiketi slayt başlığını örtmesin: sayfanın üst kenarında, yarısı dışarıda küçük hap (köşede bile ortalı başlığı örtüyordu) */
+  & .cd-pdf-bolme .pdv-src-tag { top: -11px; left: auto; right: 10px; max-width: calc(100% - 12px); padding: 3px 8px; border-radius: 999px;
     font: 650 12px/1.2 var(--font-sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: var(--v16-sh-1); }
 
   /* PDF çubuğu: taşma yok, ad kısalır */

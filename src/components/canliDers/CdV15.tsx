@@ -8,7 +8,9 @@
  * Davranışlar değişmez; yalnız yerleşim ve gruplama v15'e göredir. Stiller styles/v15/sesli.css.
  */
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowLeftRight, Check, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal, PenTool, SlidersHorizontal, Star, BookOpen, Undo2, X } from 'lucide-react';
+import { ArrowLeftRight, Check, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal as LMoreHorizontal, PenTool, SlidersHorizontal, Star, BookOpen, Undo2, X } from 'lucide-react';
+import { v16Ikonlu } from '../v16/Ikon';
+const MoreHorizontal = v16Ikonlu(LMoreHorizontal, 'daha');
 import { Sheet } from '../ui/Sheet';
 import { penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, useDrawingGlobalState } from '../learn/SlideDrawingCanvas';
 import { useAppearance } from '../../utils/appearance';
