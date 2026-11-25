@@ -3,6 +3,7 @@
 // dersin içerikleri (önem listesi + sesli çözücü) tamamlandıktan sonra onlardan derlenir, en önemli yerleri anlatır.
 // Veri: src/data/ders_analizi/<key>.json (scripts/uretim/ders_analizi/uret.py, LLM yok). Her bölüm EMA ile dinlenebilir
 // (scripts/uretim/ders_analizi/ses.py → /api/cozucu-ses/k<N>dersanaliz/ema/<kod>/<klip>.mp3); ders sesi çalıyorsa susturulur.
+import { getCustomApiUrl } from '../../services/api';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { CircleHelp, ClipboardList, ListChecks, Pause, Play, X } from 'lucide-react';
@@ -36,7 +37,7 @@ export function useDersAnaliz(key: string | null | undefined, acik: boolean): De
 }
 
 const sesYolu = (d: DersAnaliz, b: Bolum) =>
-  `/api/cozucu-ses/${d.sesKlasor.brans}/ema/${encodeURIComponent(d.sesKlasor.kod)}/${b.klip}.mp3?v=${b.v}`;
+  `${getCustomApiUrl() || ''}/api/cozucu-ses/${d.sesKlasor.brans}/ema/${encodeURIComponent(d.sesKlasor.kod)}/${b.klip}.mp3?v=${b.v}`;
 const sayfa = (s?: number[]) => (s?.length ? `s. ${s.join(', ')}` : '');
 
 type Sekme = 'analiz' | 'ozet';

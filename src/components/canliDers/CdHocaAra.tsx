@@ -4,6 +4,7 @@
 // sayfa kapanınca ders bir sonraki slayttan sürer. Araç çubuğundaki ünlem (CdHocaAraDugme) tüm soruları ardışık oynatır.
 // Veri: src/data/k<N>hocaara_cozucu/{index,<kod>}.json (scripts/uretim/hoca_ara_soru/kur.py birlestir); aynı sorular ders dışında
 // /soru-cozucu?brans=k<N>hocaara ile çözülür. Ses tek oynatıcıdan sırayla çalınır; ders sesi çalarsa ara ses susar.
+import { getCustomApiUrl } from '../../services/api';
 import React, { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { ChevronLeft, ChevronRight, CircleAlert, Pause, Play, X } from 'lucide-react';
@@ -206,9 +207,11 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   const klip = useCallback((ad: string): { url: string | null; k?: Klip } => {
     const k = ders.klip?.[ad];
     if (!k) return { url: null };
-    return { url: `${klipYolu(brans, 'ema', ders.klasor || ders.kod, ad)}?v=${k.v}`, k };
+    // Ses API alanından istenir: <audio> Authorization taşıyamaz, medya çerezi yalnız API alanına yazılır (auth.ts);
+    // göreli adres ana alana gidip erişim kapısında 500 alıyordu (önbellekte yoksa "Format error", anlatım atlanıyordu).
+    return { url: `${getCustomApiUrl() || ''}${klipYolu(brans, 'ema', ders.klasor || ders.kod, ad)}?v=${k.v}`, k };
   }, [brans, ders]);
-  const ortakUrl = (ad: string) => (ortak[ad] ? `${klipYolu(brans, 'ema', 'ortak', ad)}?v=${ortak[ad].v}` : null);
+  const ortakUrl = (ad: string) => (ortak[ad] ? `${getCustomApiUrl() || ''}${klipYolu(brans, 'ema', 'ortak', ad)}?v=${ortak[ad].v}` : null);
 
   /** çalan klibin bağlamı: zaman kaydı (cümle başına), kayıt → (parça, cümle) haritası, parçalar */
   const klipRef = useRef<{ z: [number, number][]; harita: ReturnType<typeof kayitHaritasi>; parcalar: Parca[]; url: string | null } | null>(null);

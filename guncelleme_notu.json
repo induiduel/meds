@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 922,
-  "baslik": "2025-2026 Kurul 3 arşivi: yeni sesli dersler",
+  "onem": 923,
+  "baslik": "Hocanın sorabileceği soru ve ders analizi sesleri düzeldi",
   "maddeler": [
-    "2025-2026 Dönem 3 Kurul 3 arşivine yeni sesli dersler eklendi; slayt takibi cümle cümle çalışır.",
-    "Eklenen dersler: Kolon Polipleri ve Polipozis Sendromları.",
-    "Bu derslerde Öğren destesi ve canlı çizim üretilmedi; sesli anlatım, PDF metin takibi, terim/kısaltma ve çıkmış kartı hazır."
+    "Hocanın sorabileceği soru penceresinde ve ders analizinde bazı sesler yüklenmiyor, slayt anlatımı atlanıyordu; ses artık doğru sunucudan istenir.",
+    "Ses yine de yüklenemezse bir kez daha denenir."
   ],
   "eklenen": [
     "Branş check-up"
