@@ -518,3 +518,4 @@
 - **H680** · çizelge → hatalar/on_yuz_tasarim_tema.md
 - **H681** · v18 katmanı → hatalar/on_yuz_tasarim_tema.md
 - **H667** · k2-42/43/45 konuşma metninde cümle vurgu etiketi yoktu, ekran vurgusu boş kaldı → hatalar/ders_metni_anlatim.md
+- **H684** · Tek harf + sayı kodları (M1, H2, B12) ekranda okunuşla ("M bir") kalıyordu; ekranYazim R_TEK_HARF → hatalar/ses.md

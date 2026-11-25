@@ -277,3 +277,9 @@
   `k3-01` yeniden kapıdan geçirildi (0 HATA, yalnız uyarılar) ve yayın kuyruğuna alındı.
 - **Önleme kuralı:** bir dersin kapıları **iki ayrı betikte** koşuyorsa eşik/ortam değişkenleri tek yerden türetilir; üretim kapısı ile
   yayın kapısı aynı ortamı kurar. "Kapı 0 HATA" diyen her yol, ölçeklenen eşiği kendisi hesaplamak zorunda.
+
+## H684 — Sesli ders ekranında "M bir, M üç" yazıyordu; doğrusu M1, M3 (2026-11-25)
+- **Belirti:** Kolinoseptör/otonom farmakoloji derslerinde metin takipçisi ve zengin transkript "M bir ile M beş", "M iki ve M dört reseptörleri" gösteriyordu.
+- **Kök neden:** Ekran metni `ses` okunuşundan `src/services/ekranYazim.ts` ile geri çevrilir. Tek harf + sayı birleştirmesi yalnız C (kompleman) için vardı; ayrıca tek başına "bir" belgisiz sıfat sayıldığından rakama dönmüyordu. M1, H2, T4, B12 gibi tek harfli kodlar okunuşta kaldı.
+- **Kalıcı çözüm:** `R_TEK_HARF`: tek başına büyük harf (O hariç, zamir) + sayı/"bir" → bitişik kod ("M bir" → M1, "B on iki" → B12). Sınama: "O bir ilaçtır", "Bir hasta" değişmiyor.
+- **Önleme kuralı:** Özel terim/kod ekranda daima yazıldığı gibi (M1, H2, CD4) görünür; okunuş yalnız EMA metnindedir. Yeni kod biçimi görülünce `ekranYazim.ts` geçişine örnek cümleyle eklenir, sözlüğe tek tek yama yapılmaz.

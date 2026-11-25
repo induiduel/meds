@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 33 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 34 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -119,4 +119,8 @@
 ### H657 — Kurul 3 arşivinde metin üretimi "0/75 sayfa, hata:metin" oluyordu: kelime tavanı kapıda ölçeklenmiyordu (2026-11-25)
 - **Önleme kuralı:** bir dersin kapıları **iki ayrı betikte** koşuyorsa eşik/ortam değişkenleri tek yerden türetilir; üretim kapısı ile
   yayın kapısı aynı ortamı kurar. "Kapı 0 HATA" diyen her yol, ölçeklenen eşiği kendisi hesaplamak zorunda.
+
+
+### H684 — Sesli ders ekranında "M bir, M üç" yazıyordu; doğrusu M1, M3 (2026-11-25)
+- **Önleme kuralı:** Özel terim/kod ekranda daima yazıldığı gibi (M1, H2, CD4) görünür; okunuş yalnız EMA metnindedir. Yeni kod biçimi görülünce `ekranYazim.ts` geçişine örnek cümleyle eklenir, sözlüğe tek tek yama yapılmaz.
 
