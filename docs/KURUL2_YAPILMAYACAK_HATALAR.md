@@ -33,7 +33,7 @@
 | `hatalar/dagitim_sunucu.md` | dağıtım, Oracle, sunucu, önbellek/SW, çevrimdışı, kimlik | 35 |
 | `hatalar/on_yuz_disa_aktarim.md` | soru dışa aktarıcı, PDF/DOCX dışa aktarım, baskı geometrisi, KMB mp4 | 12 |
 | `hatalar/on_yuz_oynatici_ders.md` | sesli ders oynatıcısı, ders ekranı, ders hattı ön yüz kayıtları | 26 |
-| `hatalar/on_yuz_tasarim_tema.md` | tasarım, tema, kabuk, düzen, cihaz güvenli alanı | 21 |
+| `hatalar/on_yuz_tasarim_tema.md` | tasarım, tema, kabuk, düzen, cihaz güvenli alanı | 25 |
 | `hatalar/on_yuz_sayfa_denetimi.md` | sayfa denetimi bulguları, öğrenci sayfaları, veri/eşitleme ekranları | 42 |
 | `hatalar/yonetim_basarim.md` | yönetim paneli ve ön yüz başarımı | 21 |
 | `hatalar/betik_altyapi.md` | betik, LLM zinciri/kilidi, GPU/CPU, kapı altyapısı | 21 |
@@ -495,3 +495,7 @@
 - **H656** · Çıkmış PDF toplaması: ders etiketi sayfalar arası taşındı, sızan kökler, OCR artığı → aynı sayfa başlığı + sızma ayırma + izli düzeltme → hatalar/veri_cikmis.md
 - **H657** · Kurul 3 arşivinde uzun dersler "hata:metin" oluyordu: kelime tavanı (`MEDS_METIN_MAX_W`) yayın kapısında ölçekleniyor, üretim kapısında (`k3_metin.py`) hiç konmuyordu → iki kapı aynı eşiği tek yerden hesaplar → hatalar/ses.md
 - **H658** · AI test oturumu canlıda ders ayrıntısında 500: çerez host-only, `api.` alt alanına ve kimliksiz çapraz isteğe gitmiyordu → `Domain=nofrostlife.com.tr` + test oturumunda `credentials:'include'`; kapı 500'ü çökme sanılmasın → hatalar/diger.md
+- **H659** · Taban öğe kuralı (.scr button/a) bileşen sınıfını ezdi → :where() → hatalar/on_yuz_tasarim_tema.md
+- **H660** · Geç yüklenen v15 CSS aynı öncelikli v16 kuralını ezdi → hatalar/on_yuz_tasarim_tema.md
+- **H661** · Gizli kaydırmalı tek satır düğme/sekme telefonda kesik → hatalar/on_yuz_tasarim_tema.md
+- **H662** · Bölme içi etiket ekran sorgusuyla gizlendi, dar bölmede taştı → hatalar/on_yuz_tasarim_tema.md

@@ -1,0 +1,4280 @@
+{
+ "surum": 2,
+ "ders_id": "k3-44",
+ "anahtar": "y25-k3-44-kolon-polipleri",
+ "baslik": "Kolon Polipleri ve Polipozis Sendromları",
+ "donem": "2025-2026",
+ "bolumler": [
+  {
+   "id": "k3-44-b01",
+   "baslik": "Kolon Polipleri ve Polipozis Sendromları",
+   "paragraflar": [
+    {
+     "id": "k3-44-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-44-c0001",
+       "ses": "En sık kolonda görülen polipler özofagus, mide ve ince bağırsakta da bulunabilir.",
+       "ekran": "**Polipler** en sık kolonda, özofagus mide ince bağırsakta da",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "En sık olarak kolonda görülen polipler, özofagus, mide ve ince bağırsakta da bulunabilirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Polipler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0002",
+       "ses": "Sapı olmayan polipler sesil polip olarak adlandırılır ve sesil terimi saplı olmayan polibi anlatır.",
+       "ekran": "**Sesil** sapı olmayan polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Sapı olmayanlar sesil olarak adlandırılırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sesil",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0003",
+       "ses": "Sesil polipler büyürken polipe komşu hücrelerin proliferasyonu ve polibin yaptığı luminal çıkıntının traksiyon etkisi sap oluşumuna yol açabilir.",
+       "ekran": "**Sap oluşumu** komşu proliferasyon ve traksiyonla",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Sesil polipler büyürken, polipe komşu hücrelerin proliferasyonu ve polibin yaptığı luminal çıkıntının traksiyon etkisi nedeniyle sap oluşabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sap oluşumu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0004",
+       "ses": "Saplı polipler pedünküllü polip olarak adlandırılır ve sap varlığı bu adlandırmanın temelini oluşturur.",
+       "ekran": "**Pedünküllü** saplı polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Saplı polipler pedünküllü olarak adlandırılırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pedünküllü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0005",
+       "ses": "İntestinal polipler genel olarak non-neoplastik ve neoplastik olmak üzere iki ana gruba ayrılır.",
+       "ekran": "**İki ana grup** non-neoplastik ve neoplastik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "İntestinal polipler genelde non-neoplastik ve neoplastik olarak ikiye ayrılır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İki ana grup",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k3-44-c0006",
+       "ses": "En sık görülen neoplastik polip adenomdur ve adenom kansere dönüşme riski taşır.",
+       "ekran": "**Adenom** en sık neoplastik polip, kanser riski",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "En sık görülen neoplastik polip, kansere dönüşme riski taşıyan adenomdur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0007",
+       "ses": "Non-neoplastik kolon polipler inflamatuar, hamartomatöz ve hiperplastik polipler olarak sınıflandırılır.",
+       "ekran": "**Non-neoplastik** inflamatuar hamartomatöz hiperplastik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Non-neoplastik kolon polipleri, inflamatuar, hamartomatöz ve hiperplastik olarak sınıflandırılırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Non-neoplastik",
+         "tur": "terim"
+        },
+        {
+         "metin": "Non-neoplastik",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-pat-019"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-44-c0008",
+       "ses": "İnflamatuar polipler başlığı altında saf inflamatuar lezyon örneği olan polipler ele alınır.",
+       "ekran": "**İnflamatuar polipler** saf inflamatuar lezyonlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "İnflamatuar Polipler"
+        ]
+       },
+       "cikmis": [
+        "3c402ec326ae",
+        "c028099ac758"
+       ],
+       "vurgu": [
+        {
+         "metin": "İnflamatuar polipler",
+         "tur": "terim"
+        },
+        {
+         "metin": "İnflamatuar polipler",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0009",
+       "ses": "Soliter rektal ülser sendromunun bir parçasını oluşturan inflamatuar polipler saf inflamatuar lezyonlara örnektir.",
+       "ekran": "**Soliter rektal ülser** inflamatuar polip örneği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Soliter rektal ülser sendromunun bir parçasını oluşturan inflamatuar polipler, saf inflamatuar olan lezyonlara bir örnektir."
+        ]
+       },
+       "cikmis": [
+        "3c402ec326ae",
+        "c028099ac758"
+       ],
+       "vurgu": [
+        {
+         "metin": "Soliter rektal ülser",
+         "tur": "terim"
+        },
+        {
+         "metin": "Soliter rektal ülser",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0010",
+       "ses": "İnflamatuar polip hastaları rektal kanama, mukus akıntısı ve anterior rektal duvarda inflamatuar lezyondan oluşan klinik triad ile prezante olur.",
+       "ekran": "**Klinik triad** rektal kanama, mukus, anterior lezyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalar rektal kanama, mukus akıntısı ve anterior rektal duvarda inflamatuar lezyondan oluşan klinik triad ile prezante olurlar."
+        ]
+       },
+       "cikmis": [
+        "3c402ec326ae",
+        "c028099ac758",
+        "d3k2-2023-2024-k3-h42"
+       ],
+       "vurgu": [
+        {
+         "metin": "Klinik triad",
+         "tur": "terim"
+        },
+        {
+         "metin": "Klinik triad",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0011",
+       "ses": "Anorektal sfinkterin gevşeme sorunu inflamatuar polip gelişimine yol açar ve bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Gevşeme sorunu** inflamatuar polip çıkmış soru",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Altta yatan neden anorektal sfinkterin gevşeme sorunudur. Bu durum, anterior rektal çıkıntıda keskin bir açı yaratarak, yüzeydeki rektal mukozada tekrarlayan ablasyona ve ülserasyona neden olur."
+        ]
+       },
+       "cikmis": [
+        "3c402ec326ae",
+        "c028099ac758"
+       ],
+       "vurgu": [
+        {
+         "metin": "Gevşeme sorunu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gevşeme sorunu",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0012",
+       "ses": "Anorektal sfinkterin gevşeme sorunu anterior rektal çıkıntıda keskin bir açı yaratarak yüzeydeki rektal mukozada tekrarlayan ablasyon ve ülserasyona neden olur.",
+       "ekran": "**Gevşeme sorunu** inflamatuar polip çıkmış soru",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Altta yatan neden anorektal sfinkterin gevşeme sorunudur. Bu durum, anterior rektal çıkıntıda keskin bir açı yaratarak, yüzeydeki rektal mukozada tekrarlayan ablasyona ve ülserasyona neden olur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gevşeme sorunu",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p004",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k3-44-c0013",
+       "ses": "Kronik hasar ve iyileşme döngüsü inflamasyonlu ve reaktif mukozal dokudan meydana gelen polipoid kitle oluşumuna yol açar.",
+       "ekran": "**Kronik hasar** reaktif mukozadan polipoid kitle",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Kronik hasar ve iyileşme döngüsü, inflamasyonlu ve reaktif mukozal dokudan meydana gelen polipoid kitle oluşumuna yol açar."
+        ]
+       },
+       "cikmis": [
+        "3c402ec326ae",
+        "c028099ac758"
+       ],
+       "vurgu": [
+        {
+         "metin": "Kronik hasar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kronik hasar",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b02",
+   "baslik": "• Hamartomatöz Polipler",
+   "paragraflar": [
+    {
+     "id": "k3-44-p005",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k3-44-c0014",
+       "ses": "Hamartomatöz polipler başlığı altında matür hücrelerden gelişen disorganize polipoid büyümeler anlatılır.",
+       "ekran": "**Hamartomatöz polipler** disorganize matür hücre büyümeleri",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Hamartomatöz Polipler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hamartomatöz polipler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0015",
+       "ses": "Hamartomatöz polipler sporadik olarak veya çeşitli genetik ve edinsel sendromların bir bileşeni olarak meydana gelir.",
+       "ekran": "**Sporadik veya sendrom** genetik ve edinsel bileşen",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Hamartomatöz polipler sporadik olarak ya da çeşitli genetik ve edinsel sendromların bir komponenti olarak meydana gelir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sporadik veya sendrom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0016",
+       "ses": "Hamartom polibin geliştiği bölgede normalde bulunan matür hücre tiplerinden oluşan disorganize bir büyümedir.",
+       "ekran": "**Hamartom** matür hücrelerden disorganize büyüme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Hamartomlar, polibin geliştiği bölgede normalde bulunan matür hücre tiplerinden meydana gelen disorganize büyümelerdir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hamartom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0017",
+       "ses": "Hamartomatöz polipozis sendromları nadir görülür ancak intestinal ve ekstraintestinal sonuçları ve aile bireylerinin taranması gerektiği için tanınmaları önemlidir.",
+       "ekran": "**Nadir sendromlar** intestinal ekstraintestinal sonuç, aile taraması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Hamartomatöz polipozis sendromları nadir görülür, ancak intestinal ve ekstraintestinal sonuçları, ve aile bireylerini tarama gereği nedeniyle bunları tanımak önemlidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nadir sendromlar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k3-44-c0018",
+       "ses": "Jüvenil polipler sporadik olarak ya da sendromik bir zeminde gelişebilen lezyonlardır.",
+       "ekran": "**sporadik ya da sendromik** gelişim",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [],
+        "sekil": "sporadik veya sendromik gelişim"
+       },
+       "vurgu": [
+        {
+         "metin": "sporadik ya da sendromik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0019",
+       "ses": "Yetişkinlerde görülen sporadik form, özellikle yoğun inflamatuar infiltrasyon varlığında inflamatuar polip adını alır.",
+       "ekran": "**inflamatuar polip** yetişkin sporadik form",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [],
+        "sekil": "yetişkinde sporadik form inflamatuar polip"
+       },
+       "vurgu": [
+        {
+         "metin": "inflamatuar polip",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0020",
+       "ses": "Jüvenil poliplerin büyük bir bölümü beş yaşından küçük çocuklarda görülür.",
+       "ekran": "**beş yaş altı** çocuklarda sık",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [],
+        "sekil": "küçük çocuklarda sık görülür"
+       },
+       "vurgu": [
+        {
+         "metin": "beş yaş altı",
+         "tur": "terim"
+        },
+        {
+         "metin": "beş yaş altı",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "c21c80e92913",
+        "q-18-29"
+       ]
+      },
+      {
+       "id": "k3-44-c0021",
+       "ses": "Jüvenil polipler karakteristik olarak rektumda yerleşir ve çoğu rektal kanamayla kendini gösterir.",
+       "ekran": "**rektum** yerleşimi, rektal kanama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [],
+        "sekil": "rektum yerleşimi ve kanama"
+       },
+       "vurgu": [
+        {
+         "metin": "rektum",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0022",
+       "ses": "Bazı olgularda polip prolabe olur ve anal sfinkterden dışarı doğru uzanır.",
+       "ekran": "**prolaps** anal sfinkterden uzanma",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [],
+        "sekil": "prolaps ile sfinkterden dışarı uzanma"
+       },
+       "vurgu": [
+        {
+         "metin": "prolaps",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p007",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k3-44-c0023",
+       "ses": "Sporadik jüvenil polipler genellikle soliterdir, yani tek bir lezyon olarak bulunur.",
+       "ekran": "**soliter** sporadik jüvenil polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "sporadik form genellikle tek"
+       },
+       "vurgu": [
+        {
+         "metin": "soliter",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0024",
+       "ses": "Otozomal dominant jüvenil polipozis sendromunda polip sayısı üç ile yüz arasında değişir.",
+       "ekran": "**jüvenil polipozis** çok sayıda polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "sendromda polip sayısı artmış"
+       },
+       "vurgu": [
+        {
+         "metin": "jüvenil polipozis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0025",
+       "ses": "Jüvenil polipoziste polip ülserasyonuna bağlı kanamayı kontrol altına alabilmek için kolektomi gerekebilir.",
+       "ekran": "**kolektomi** kanama kontrolü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "kanama için cerrahi gerekebilir"
+       },
+       "vurgu": [
+        {
+         "metin": "kolektomi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0026",
+       "ses": "Bu poliplerin çok az bir kısmında displazi gelişir ve bu olguların çoğu sendrom ile ilişkilidir.",
+       "ekran": "**displazi** az olguda, sendromla ilişkili",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "az olguda displazi gelişimi"
+       },
+       "vurgu": [
+        {
+         "metin": "displazi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0027",
+       "ses": "Jüvenil polipozis sendromunda kolonda ve başka bölgelerde adenokarsinom gelişimi riski yüksektir.",
+       "ekran": "**adenokarsinom riski** yüksek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "kanser riski yüksek"
+       },
+       "vurgu": [
+        {
+         "metin": "adenokarsinom riski",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k3-44-c0028",
+       "ses": "Tek sporadik polipler ile sendromik jüvenil polipler morfolojik olarak benzer yapıdadır.",
+       "ekran": "**benzer morfoloji** sporadik ve sendromik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "sporadik ve sendromik benzer morfoloji"
+       },
+       "vurgu": [
+        {
+         "metin": "benzer morfoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0029",
+       "ses": "Tipik olarak çapları üç santimetreyi geçmeyen, pedünküllü, düzgün yüzeyli ve kırmızımsı lezyonlardır.",
+       "ekran": "**pedünküllü** düzgün yüzeyli lezyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "pedünküllü düzgün yüzeyli lezyon"
+       },
+       "vurgu": [
+        {
+         "metin": "pedünküllü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0030",
+       "ses": "Kesit yüzeylerinde karakteristik kistik boşluklar içerirler.",
+       "ekran": "kesitte **kistik boşluklar**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "kesitte kistik boşluklar"
+       },
+       "vurgu": [
+        {
+         "metin": "kistik boşluklar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0031",
+       "ses": "Mikroskopik incelemede bu boşluklar müsin ve inflamatuar debri ile dolu glandlar olarak gözlenir.",
+       "ekran": "**müsin ve debri** dolu glandlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [],
+        "sekil": "müsin ve debri ile dolu glandlar"
+       },
+       "vurgu": [
+        {
+         "metin": "müsin ve debri",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b03",
+   "baslik": "“Ea ‘ dh ed St A 4",
+   "paragraflar": [
+    {
+     "id": "k3-44-p009",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k3-44-c0032",
+       "ses": "Jüvenil polipin yüzeyinde erozyon dikkati çeker ve bu bulgu lezyonun jüvenil polip olduğunu destekler.",
+       "ekran": "**jüvenil polip** yüzey erozyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "jüvenil polip yüzeyinde erozyon"
+       },
+       "vurgu": [
+        {
+         "metin": "jüvenil polip",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0033",
+       "ses": "Jüvenil polipin ayırt edici özelliği, kistik biçimde genişlemiş kriptlerin izlenmesidir.",
+       "ekran": "**kistik genişlemiş** kriptler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "kistik genişlemiş kriptler"
+       },
+       "vurgu": [
+        {
+         "metin": "kistik genişlemiş",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0034",
+       "ses": "Genişlemiş kriptlerin içinde koyulaşmış müsin, nötrofiller ve inflamatuvar artıklar birikebilir.",
+       "ekran": "kriptlerde **müsin ve nötrofil** birikimi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "genişlemiş kriptlerde birikim"
+       },
+       "vurgu": [
+        {
+         "metin": "müsin ve nötrofil",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0035",
+       "ses": "Şema, jüvenil polipozis zemininde gelişen jüvenil polipin yüzey ve kript özelliklerini birlikte göstermektedir.",
+       "ekran": "**jüvenil polipozis** şeması",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [],
+        "sekil": "şemanın genel tanımı"
+       },
+       "vurgu": [
+        {
+         "metin": "jüvenil polipozis",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p010",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k3-44-c0036",
+       "ses": "Bazı veriler, jüvenil polip gelişimindeki başlangıç olayının mukozal hiperplazi olduğunu göstermiştir.",
+       "ekran": "başlangıç **mukozal hiperplazi**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "polipteki başlangıç olayı"
+       },
+       "vurgu": [
+        {
+         "metin": "mukozal hiperplazi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0037",
+       "ses": "Dönüştürücü büyüme faktörü beta gibi hücresel büyüme sinyallerini düzenleyen yolaklardaki mutasyonlar jüvenil polipozis ile ilişkilidir.",
+       "ekran": "**büyüme sinyali** yolağı mutasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "büyüme sinyali yolaklarındaki mutasyon"
+       },
+       "vurgu": [
+        {
+         "metin": "büyüme sinyali",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0038",
+       "ses": "Bu mutasyonların otozomal dominant jüvenil polipozis ile ilişkili bulunması, hiperplazi mekanizmasını destekleyen bir bulgudur.",
+       "ekran": "**otozomal dominant** kalıtım",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [],
+        "sekil": "kalıtım biçimi"
+       },
+       "vurgu": [
+        {
+         "metin": "otozomal dominant",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p011",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k3-44-c0039",
+       "ses": "Peutz Jeghers sendromu, nadir görülen otozomal dominant bir hastalıktır.",
+       "ekran": "**Peutz Jeghers** sendromu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "sendromun genel tanımı"
+       },
+       "vurgu": [
+        {
+         "metin": "Peutz Jeghers",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0040",
+       "ses": "Sendromda multipl gastrointestinal hamartomatöz polipler izlenir ve bu polipler hastalığın temel bulgusudur.",
+       "ekran": "multipl **hamartomatöz** polipler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "gastrointestinal polipler"
+       },
+       "vurgu": [
+        {
+         "metin": "hamartomatöz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0041",
+       "ses": "Mukokütanöz hiperpigmentasyon sendromun diğer temel bileşenidir ve tanıda yol göstericidir.",
+       "ekran": "**mukokütanöz hiperpigmentasyon**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "deri ve mukoza bulgusu"
+       },
+       "vurgu": [
+        {
+         "metin": "mukokütanöz hiperpigmentasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0042",
+       "ses": "Hastalarda kolon, pankreas, meme, akciğer, över, uterus ve testis gibi organların neoplazileri geliştirme riski taşınır.",
+       "ekran": "**neoplazi riski** artmış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [],
+        "sekil": "kanser riski taşıyan organlar"
+       },
+       "vurgu": [
+        {
+         "metin": "neoplazi riski",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p012",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k3-44-c0043",
+       "ses": "Peutz Jeghers sendromunda ailesel olguların yaklaşık yarısında ve bazı sporadik hastalarda es te ka on bir geni mutasyonu vardır.",
+       "ekran": "**STK11 mutasyonu** ailesel olguların yarısında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Ailesel Peutz-Jeghers sendromlu hastaların yaklaşık yarısında ve bazı sporadik sendromlu hastalarda, STK11(LKB1) geninde mutasyonlar mevcuttur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "STK11 mutasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0044",
+       "ses": "Bu gen el ka be bir olarak da bilinir.",
+       "ekran": "**STK11 mutasyonu** ailesel olguların yarısında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Ailesel Peutz-Jeghers sendromlu hastaların yaklaşık yarısında ve bazı sporadik sendromlu hastalarda, STK11(LKB1) geninde mutasyonlar mevcuttur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "STK11 mutasyonu",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0045",
+       "ses": "Peutz Jeghers sendromunda intestinal polipler en sık ince bağırsakta görülür, ancak mide ve kolonda da bulunabilir ve nadiren mesane ve akciğerde malignensi gelişebilir.",
+       "ekran": "**İnce bağırsak** en sık; mide, kolon, mesane, akciğer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Intestinal polipler en sık ince bağırsakta görülürler, ancak mide ve kolonda görülebilir, nadiren de mesane ve akciğerlerde de malignensiler gelişebilirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "İnce bağırsak",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b04",
+   "baslik": "Peutz-Jeghers Sendromu",
+   "paragraflar": [
+    {
+     "id": "k3-44-p013",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k3-44-c0046",
+       "ses": "Peutz Jeghers poliplerinin makroskopik incelemesinde büyük boyut, pedünküllü yapı ve lobüle görünüm dikkat çeker.",
+       "ekran": "**Makroskopi** büyük, pedünküllü, lobüle polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Makroskopik incelemede, büyük boyutta, pedünküllü ve lobüle yapıda gözlenirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Makroskopi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0047",
+       "ses": "Peutz Jeghers polipinin histolojik incelemesinde bağ dokusu, düz kas, lamina propria ve normal intestinal epitel ile döşeli glandlardan oluşan karakteristik organizasyon izlenir.",
+       "ekran": "**Histoloji** bağ doku, düz kas, normal epitel",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Histolojik incelemede ise karakteristik bağ dokusu, düz kas, lamina propria ve normal intestinal epitel ile döşeli glandlardan oluşan organizasyon izlenir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Histoloji",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p014",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k3-44-c0048",
+       "ses": "Peutz Jeghers polipinin histolojik görüntüsünde lamina propriayı kesen düz kas demetleri izlenir.",
+       "ekran": "**Düz kas demetleri** lamina propriayı keser",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "composed of smooth muscle bundles cutting through the lamina propria."
+        ],
+        "sekil": "Peutz Jeghers polipinde lamina propriayı kesen düz kas demetlerini gösteren histolojik görüntü"
+       },
+       "vurgu": [
+        {
+         "metin": "Düz kas demetleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0049",
+       "ses": "Bu düz kas demetleri polipin yapısında yer alır.",
+       "ekran": "**Düz kas demetleri** lamina propriayı keser",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "composed of smooth muscle bundles cutting through the lamina propria."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Düz kas demetleri",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0050",
+       "ses": "Peutz Jeghers poliplerinde karmaşık glandüler mimari ve düz kas varlığı, bu poliplerin jüvenil poliplerden ayrımında kullanılır.",
+       "ekran": "**Jüvenil polipten ayrım** karmaşık gland ve düz kas",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "B, Complex glandular architecture and the presence of smooth muscle are features that distinguish Peutz-Jeghers polyps from juvenile polyps. Compare to Figure 17-42."
+        ],
+        "sekil": "Peutz Jeghers ve jüvenil polip ayrımını gösteren karşılaştırmalı şema"
+       },
+       "vurgu": [
+        {
+         "metin": "Jüvenil polipten ayrım",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0051",
+       "ses": "Şekil bu ayırt edici özellikleri karşılaştırmalı olarak gösterir.",
+       "ekran": "**Jüvenil polipten ayrım** karmaşık gland ve düz kas",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "B, Complex glandular architecture and the presence of smooth muscle are features that distinguish Peutz-Jeghers polyps from juvenile polyps. Compare to Figure 17-42."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Jüvenil polipten ayrım",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p015",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-44-c0052",
+       "ses": "Hiperplastik polipler kolonun epitelyal proliferasyonları arasında yer alan ve günlük pratikte sık karşılaşılan bir polip grubudur.",
+       "ekran": "**Hiperplastik polipler** epitelyal proliferasyon grubunda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hiperplastik Polipler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hiperplastik polipler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0053",
+       "ses": "Bu başlık altında lezyonun görülme yaşı, patogenezi ve ayırıcı tanısı birlikte ele alınır.",
+       "ekran": "**Hiperplastik polipler** epitelyal proliferasyon grubunda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hiperplastik Polipler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hiperplastik polipler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0054",
+       "ses": "Kolonun hiperplastik polipleri tipik olarak hayatın altıncı ve yedinci dekadlarında sıkça görülen epitelyal proliferasyonlardır.",
+       "ekran": "**Altıncı ve yedinci dekad** tipik görülme yaşı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kolonun hiperplastik polipleri, tipik olarak hayatın altıncı ve yedinci dekadlarında sıkça görülen epitelyal proliferasyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Altıncı ve yedinci dekad",
+         "tur": "terim"
+        },
+        {
+         "metin": "Altıncı ve yedinci dekad",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-129"
+       ]
+      },
+      {
+       "id": "k3-44-c0055",
+       "ses": "Yani ileri yaş grubunda rastlanan bu lezyonlar, yaşlı hastada saptanan polipin akılda tutulması gereken tiplerinden biridir.",
+       "ekran": "**Altıncı ve yedinci dekad** tipik görülme yaşı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kolonun hiperplastik polipleri, tipik olarak hayatın altıncı ve yedinci dekadlarında sıkça görülen epitelyal proliferasyonlardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Altıncı ve yedinci dekad",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0056",
+       "ses": "Hiperplastik poliplerin patogenezi tam olarak anlaşılamamıştır.",
+       "ekran": "**Patogenez** tam olarak aydınlatılamamış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hiperplastik poliplerin patogenezi tam olarak anlaşılamamıştır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Patogenez",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p016",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k3-44-c0057",
+       "ses": "Bu nedenle oluşum mekanizması anlatılırken kesin bir süreç değil, ileri sürülen görüşler sıralanır.",
+       "ekran": "**Patogenez** tam olarak aydınlatılamamış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hiperplastik poliplerin patogenezi tam olarak anlaşılamamıştır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Patogenez",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0058",
+       "ses": "Hiperplastik polip oluşumunun epitelyal hücre döngüsünün yavaşlamasından ve yüzey epitel hücrelerinin dökülmesindeki gecikmeden kaynaklandığı düşünülmektedir.",
+       "ekran": "**Hücre döngüsü yavaşlar**, goblet hücreleri birikir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ancak bu lezyonların oluşumunun, epitelyal hücre döngüsünün yavaşlamasından ve yüzey epitel hücrelerinin dökülmesindeki gecikmeden, böylece goblet hücrelerinin \"birikimi\"nden kaynaklandığı düşünülmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hücre döngüsü yavaşlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0059",
+       "ses": "Dökülemeyen goblet hücreleri yüzeyde biriktiği için polip dediğimiz kabarıklık ortaya çıkar.",
+       "ekran": "**Hücre döngüsü yavaşlar**, goblet hücreleri birikir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ancak bu lezyonların oluşumunun, epitelyal hücre döngüsünün yavaşlamasından ve yüzey epitel hücrelerinin dökülmesindeki gecikmeden, böylece goblet hücrelerinin \"birikimi\"nden kaynaklandığı düşünülmektedir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hücre döngüsü yavaşlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0060",
+       "ses": "Hiperplastik polipler malignite potansiyeli taşımaz, ancak histolojik olarak benzer görünen sesil serrated adenomlar malignite potansiyeli taşıdığı için ayırıcı tanı mutlaka yapılmalıdır.",
+       "ekran": "**Sesil serrated adenom** ile ayırıcı tanı zorunlu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Her ne kadar bu lezyonlar malignite potansiyeli taşımasa da, histolojik olarak benzer lezyonlar olan ve malignite potansiyeli taşıyan sesil serrated adenomlardan ayırıcı tanısının yapılması gereklidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sesil serrated adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0061",
+       "ses": "Bu ayrım yapılmazsa risk taşımayan bir lezyon gereksiz izleme alınır ya da riskli bir lezyon gözden kaçabilir.",
+       "ekran": "**Sesil serrated adenom** ile ayırıcı tanı zorunlu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Her ne kadar bu lezyonlar malignite potansiyeli taşımasa da, histolojik olarak benzer lezyonlar olan ve malignite potansiyeli taşıyan sesil serrated adenomlardan ayırıcı tanısının yapılması gereklidir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sesil serrated adenom",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p017",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-44-c0062",
+       "ses": "Hiperplastik polipler konusunun devamında bu kez lezyonun morfolojik özellikleri anlatılmaktadır.",
+       "ekran": "**Hiperplastik polipler** morfoloji bölümü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hiperplastik Polipler"
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Hiperplastik polipler",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hiperplastik polipler",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0063",
+       "ses": "Tanı çoğunlukla bu morfolojik ve histolojik bulguların bir arada değerlendirilmesiyle konur.",
+       "ekran": "**Hiperplastik polipler** morfoloji bölümü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hiperplastik Polipler"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Hiperplastik polipler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0064",
+       "ses": "Morfoloji başlığı altında polipin yerleşim yeri, çapı, yüzey görünümü ve hücresel yapısı sırasıyla ele alınır.",
+       "ekran": "**Morfoloji** yerleşim, çap ve histoloji",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "MORFOLOJİ"
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Morfoloji",
+         "tur": "terim"
+        },
+        {
+         "metin": "Morfoloji",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0065",
+       "ses": "Bunlar polipin hem endoskopik hem mikroskopik tanısını kuran temel özelliklerdir.",
+       "ekran": "**Morfoloji** yerleşim, çap ve histoloji",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "MORFOLOJİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Morfoloji",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0066",
+       "ses": "Hiperplastik poliplerin sol kolonda yerleştiği ve çaplarının genellikle beş milimetreyi geçmediği bilgisi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Sol kolon**, çap beş milimetreden küçük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hyperplastik polipler en sık sol kolonda bulunur ve tipik olarak çapları 5 mm’yi geçmez."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Sol kolon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sol kolon",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p018",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-44-c0067",
+       "ses": "Küçük boyut ve sol kolon yerleşimi bu polipin tipik özelliğidir, bu nedenle sağ kolonda büyük bir polip görüldüğünde başka tanılar düşünülür.",
+       "ekran": "**Sol kolon**, çap beş milimetreden küçük",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Hyperplastik polipler en sık sol kolonda bulunur ve tipik olarak çapları 5 mm’yi geçmez."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sol kolon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0068",
+       "ses": "Hiperplastik polipler mukozal kıvrımların tepelerinde düzgün nodüler mukoza çıkıntıları şeklindedir.",
+       "ekran": "**Mukozal kıvrım tepesinde** düzgün nodüler çıkıntı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Mukozal kıvrımların tepelerinde düzgün nodüler mukoza çıkıntıları şeklindedirler."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Mukozal kıvrım tepesinde",
+         "tur": "terim"
+        },
+        {
+         "metin": "Mukozal kıvrım tepesinde",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0069",
+       "ses": "Düzgün yüzeyli ve küçük nodüler yapı, endoskopide izlenen görünümünü açıklar.",
+       "ekran": "**Mukozal kıvrım tepesinde** düzgün nodüler çıkıntı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Mukozal kıvrımların tepelerinde düzgün nodüler mukoza çıkıntıları şeklindedirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Mukozal kıvrım tepesinde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0070",
+       "ses": "Hiperplastik polipler tek olabilir, ancak daha sık olarak özellikle sigmoid kolon ve rektumda multiple olarak bulunurlar.",
+       "ekran": "**Multiple** polip, sigmoid kolon ve rektum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Tek olabilirler, ancak daha sık olarak, özellikle sigmoid kolon ve rektumda multipldirler."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e",
+        "d3-k3-pat-039"
+       ],
+       "vurgu": [
+        {
+         "metin": "Multiple",
+         "tur": "terim"
+        },
+        {
+         "metin": "Multiple",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0071",
+       "ses": "Bu nedenle sigmoid kolon ve rektumda birden çok küçük polip saptanması beklenen bir durumdur.",
+       "ekran": "**Multiple** polip, sigmoid kolon ve rektum",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Tek olabilirler, ancak daha sık olarak, özellikle sigmoid kolon ve rektumda multipldirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Multiple",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p019",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k3-44-c0072",
+       "ses": "Hiperplastik polipler histolojik olarak matür goblet hücrelerinden ve absorptif hücrelerden oluşur.",
+       "ekran": "**Matür goblet** ve absorptif hücreler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Histolojik olarak, matür goblet hücrelerinden ve absorptif hücrelerden oluşurlar."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Matür goblet",
+         "tur": "terim"
+        },
+        {
+         "metin": "Matür goblet",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0073",
+       "ses": "Hücrelerin matür olması, displaziden yoksun iyi huylu bir yapı olduğunu destekleyen önemli bir bulgudur.",
+       "ekran": "**Matür goblet** ve absorptif hücreler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Histolojik olarak, matür goblet hücrelerinden ve absorptif hücrelerden oluşurlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Matür goblet",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0074",
+       "ses": "Bu hücrelerin dökülmesinin gecikmesi, yüzeyde testere dişli yapılanmaya neden olan bir kalabalıklaşma yaratır.",
+       "ekran": "**Serrated yapılanma** başta gelen morfolojik özellik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bu hücrelerin dökülmelerinin gecikmesi yüzeyde serrated yapılanmaya neden olan bir kalabalıklaşmaya yol açar. Bu, hiperplastik poliplerin başta gelen morfolojik özelliğidir"
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Serrated yapılanma",
+         "tur": "terim"
+        },
+        {
+         "metin": "Serrated yapılanma",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0075",
+       "ses": "Testere dişli görünüm hiperplastik poliplerin başta gelen morfolojik özelliğidir ve tanı bu görünüm üzerinden konur.",
+       "ekran": "**Serrated yapılanma** başta gelen morfolojik özellik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bu hücrelerin dökülmelerinin gecikmesi yüzeyde serrated yapılanmaya neden olan bir kalabalıklaşmaya yol açar. Bu, hiperplastik poliplerin başta gelen morfolojik özelliğidir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Serrated yapılanma",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p020",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-44-c0076",
+       "ses": "Şekilde hiperplastik polipin yüzeyi, epitel hücrelerinin düzensiz öbeklenmesiyle birlikte gösterilmektedir.",
+       "ekran": "**Düzensiz öbeklenme** polip yüzeyinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Figure 17-41 Hyperplastic polyp. A, Polyp surface with irregular tufting of epithelial cells."
+        ],
+        "sekil": "hiperplastik polip yüzeyinin şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Düzensiz öbeklenme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0077",
+       "ses": "Yüzeydeki bu düzensiz öbeklenme polipin mikroskopik görünümünü belirleyen ilk basamaktır.",
+       "ekran": "**Düzensiz öbeklenme** polip yüzeyinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Figure 17-41 Hyperplastic polyp. A, Polyp surface with irregular tufting of epithelial cells."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Düzensiz öbeklenme",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0078",
+       "ses": "Öbeklenmenin nedeni epitelyal hücrelerin aşırı kalabalıklaşmasıdır.",
+       "ekran": "**Epitelyal kalabalıklaşma** öbeklenmenin nedeni",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "B, Tufting results from epithelial overcrowding."
+        ],
+        "sekil": "epitelyal kalabalıklaşma şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Epitelyal kalabalıklaşma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0079",
+       "ses": "Dökülmesi geciken hücreler yüzeyde biriktikçe bu kalabalıklaşma ortaya çıkar.",
+       "ekran": "**Epitelyal kalabalıklaşma** öbeklenmenin nedeni",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "B, Tufting results from epithelial overcrowding."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Epitelyal kalabalıklaşma",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0080",
+       "ses": "Epitelyal kalabalıklaşma, kriptler kesit yüzeyine dik olarak kesildiğinde testere dişli bir mimari oluşturur.",
+       "ekran": "**Testere dişli mimari** kriptin kesitinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "C, Epithelial crowding produces a serrated architecture when crypts are cut in cross-section."
+        ],
+        "sekil": "kript kesitinde testere dişli mimari şeması"
+       },
+       "vurgu": [
+        {
+         "metin": "Testere dişli mimari",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p021",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k3-44-c0081",
+       "ses": "Kesit düzlemi değiştiğinde bu görünümün belirginleşmesi, histolojik tanıda kesit yönünün önemini gösterir.",
+       "ekran": "**Testere dişli mimari** kriptin kesitinde",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "C, Epithelial crowding produces a serrated architecture when crypts are cut in cross-section."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Testere dişli mimari",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b05",
+   "baslik": "Adenomlar",
+   "paragraflar": [
+    {
+     "id": "k3-44-p022",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-44-c0082",
+       "ses": "Adenomlar kolon mukozasında gelişen ve çoğu zaman benign kalan neoplastik polipler olarak tanıtılır.",
+       "ekran": "**Adenom** benign neoplastik polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Adenomlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0083",
+       "ses": "Kolon adenomları kolorektal adenokarsinomların çoğuna kaynaklık edebildiği için klinik önem taşır.",
+       "ekran": "**Adenom** benign neoplastik polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Adenomlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0084",
+       "ses": "Gastrointestinal kanaldaki herhangi bir neoplastik kitlesel lezyon mukozal çıkıntı ya da polip oluşturabilir.",
+       "ekran": "**Neoplastik lezyon** mukozal çıkıntı veya polip yapar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Gastrointestinal kanaldaki herhangi bir neoplastik kitlesel lezyon mukozal çıkıntı ya da polip oluşturabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Neoplastik lezyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0085",
+       "ses": "En sık görülen ve klinik açıdan en önemli neoplastik polipler, kolorektal adenokarsinomların çoğuna kaynaklık eden benign kolon adenomlarıdır.",
+       "ekran": "**Kolon adenomu** en sık ve en önemli neoplastik polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "En sık görülen ve klinik olarak en önemli neoplastik polipler, kolorektal adenokarsinomların çoğuna kaynaklık eden benign polipler olan kolon adenomlarıdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kolon adenomu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kolon adenomu",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "1c14b0092a05",
+        "d3-k3-pat-023",
+        "d3-k3-pat-030"
+       ]
+      },
+      {
+       "id": "k3-44-c0086",
+       "ses": "Yine de adenomların büyük çoğunluğu adenokarsinoma doğru ilerlemez.",
+       "ekran": "**Çoğu adenom** adenokarsinoma ilerlemez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Yine de çoğu adenom, adenokarsinoma ilerlemez."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çoğu adenom",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p023",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k3-44-c0087",
+       "ses": "Adenom saptanması tek başına kanser gelişimi anlamına gelmez.",
+       "ekran": "**Çoğu adenom** adenokarsinoma ilerlemez",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Yine de çoğu adenom, adenokarsinoma ilerlemez."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Çoğu adenom",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p024",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-44-c0088",
+       "ses": "Kolorektal adenomlar epitelde displazi varlığı ile karakterize edilir.",
+       "ekran": "**Displazi** kolorektal adenomun temel özelliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Kolorektal adenomlar epitelde displazi varlığı ile karakterizedirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Displazi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0089",
+       "ses": "Displazi varlığı adenomun neoplastik doğasını gösteren temel özelliktir.",
+       "ekran": "**Displazi** kolorektal adenomun temel özelliği",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Kolorektal adenomlar epitelde displazi varlığı ile karakterizedirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Displazi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0090",
+       "ses": "Kolorektal adenomlar pedünküllü küçük poliplerden büyük boyutlarda sesil lezyonlara kadar değişkenlik gösterir.",
+       "ekran": "**Değişken görünüm** pedünküllü küçükten sesil büyüğe",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Bu lezyonlar, sıklıkla pedünküllü küçük poliplerden büyük boyutlarda sesil lezyonlara kadar değişkenlik gösterirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Değişken görünüm",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0091",
+       "ses": "Biçim ve boyut farkı adenomların makroskopik görünümünü belirler.",
+       "ekran": "**Değişken görünüm** pedünküllü küçükten sesil büyüğe",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Bu lezyonlar, sıklıkla pedünküllü küçük poliplerden büyük boyutlarda sesil lezyonlara kadar değişkenlik gösterirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Değişken görünüm",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0092",
+       "ses": "Cinsiyetler arası fark yoktur, yani adenom görülme sıklığı kadın ve erkekte benzerdir.",
+       "ekran": "**Cinsiyet farkı yok** adenom sıklığı benzer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Cinsiyetler arası fark yoktur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Cinsiyet farkı yok",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p025",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k3-44-c0093",
+       "ses": "Batı dünyasında yaşayan elli yaş ve üstü yetişkinlerin yaklaşık yüzde ellisinde adenom bulunur.",
+       "ekran": "**Elli yaş üstü** Batıda yaklaşık yarısında adenom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Batı dünyasında yaşayan, 50 yaş ve üstü yetişkinlerin yaklaşık %50'sinde adenom mevcuttur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Elli yaş üstü",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0094",
+       "ses": "Bu sıklık adenomların toplumda ne kadar yaygın olduğunu gösterir.",
+       "ekran": "**Elli yaş üstü** Batıda yaklaşık yarısında adenom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Batı dünyasında yaşayan, 50 yaş ve üstü yetişkinlerin yaklaşık %50'sinde adenom mevcuttur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Elli yaş üstü",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p026",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k3-44-c0095",
+       "ses": "Adenomlar kolorektal kanser öncülü olduğu için Birleşik Devletler'de elli yaşından itibaren tüm yetişkinlere tarama amaçlı kolonoskopi yapılması önerilir.",
+       "ekran": "**Tarama kolonoskopisi** elli yaşında başlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Bu polipler kolorektal kanser öncülü olduklarından, Birleşik Devletler'de 50 yaşından itibaren tüm yetişkinlere tarama amaçlı kolonoskopi yapılması güncel yaklaşımdır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tarama kolonoskopisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0096",
+       "ses": "Aile hikayesi olan kişilerde kolon kanseri riski daha erken yaşta gelişebildiği için tarama akrabaların tanı yaşından on yıl daha erken başlatılır.",
+       "ekran": "**Aile hikayesi** tarama on yıl erken başlar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Aile hikayesi olan kişilerde daha erken yaşta kolon kanseri gelişme riski nedeniyle, bu kişiler akrabalarının tanı aldığı yaştan 10 yıl daha erken yaşta tarama programına alınırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Aile hikayesi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0097",
+       "ses": "Adenomlar Asya ülkelerinde daha az sıklıkla görülürken Batı tipi beslenme ve hayat tarzı yaygınlaştıkça adenom sıklığı kolorektal adenokarsinom artışına paralel olarak yükselir.",
+       "ekran": "**Batı tipi yaşam** Asyada adenom sıklığını artırır",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Adenomlar Asya ülkelerinde daha az sıklıkla görülürken, bu ülkelerde Batı tipi beslenme ve hayat tarzı yaygınlaştıkça, (kolorektal adenokarsinomun artan insidansına paralel olarak) adenom sıklığı da artmaktadır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Batı tipi yaşam",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p027",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-44-c0098",
+       "ses": "Adenomların morfolojisi başlığında tipik adenomun çapı, yüzeyi, sapı ve displazinin sitolojik özellikleri birlikte ele alınır.",
+       "ekran": "**Adenom morfolojisi** genel bakış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "MORFOLOJİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenom morfolojisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0099",
+       "ses": "Bu başlık altındaki bilgiler adenomun hem endoskopik hem histolojik görünümünü tanımlar.",
+       "ekran": "**Adenom morfolojisi** genel bakış",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "MORFOLOJİ"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Adenom morfolojisi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0100",
+       "ses": "Tipik adenomlar sıfır nokta üç ile on santimetre arasında değişen çapta olup pedünküllü ya da sessil yapıda bulunur.",
+       "ekran": "**Pedünküllü ya da sessil**, sıfır nokta üç ile on santimetre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Tipik adenomlar 0.3-10 cm çapında ve pedünküllü ya da sessil yapıdadırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pedünküllü ya da sessil",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0101",
+       "ses": "Pedünküllü polip sapla yüzeye bağlanırken sessil polip geniş tabanla mukozaya oturur ve bu fark çıkarım tekniğini belirler.",
+       "ekran": "**Pedünküllü ya da sessil**, sıfır nokta üç ile on santimetre",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Tipik adenomlar 0.3-10 cm çapında ve pedünküllü ya da sessil yapıdadırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pedünküllü ya da sessil",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0102",
+       "ses": "Her iki tipte de yüzey epitelyal büyüme paterni nedeniyle kadifeye ya da frambuaza benzer.",
+       "ekran": "**Kadife frambuaz** yüzey görünümü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Her iki tipte de yüzey, epitelyal büyüme paterni nedeniyle kadifeye ya da frambuaza benzer."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kadife frambuaz",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p028",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-44-c0103",
+       "ses": "Yani endoskopide polip yüzeyi düzgün ve hafif kabarık bir görünüm verir, bu da adenomu çevre mukozadan ayırt ettirir.",
+       "ekran": "**Kadife frambuaz** yüzey görünümü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Her iki tipte de yüzey, epitelyal büyüme paterni nedeniyle kadifeye ya da frambuaza benzer."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kadife frambuaz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0104",
+       "ses": "Epitelyal displazinin başlıca sitolojik özellikleri nükleer hiperkromazi, nükleer uzama ve stratifikasyondur.",
+       "ekran": "**Nükleer hiperkromazi, uzama, stratifikasyon**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Histolojik olarak, epitelyal displazinin başlıca sitolojik özellikleri nükleer hiperkromazi, nükleer uzama ve stratifikasyondur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nükleer hiperkromazi, uzama, stratifikasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0105",
+       "ses": "Çekirdekler koyulaşır ve uzar, hücrelerdeki katmanlaşma düzeni kaybolur; patolog displaziyi bu üç bulguyla tanır.",
+       "ekran": "**Nükleer hiperkromazi, uzama, stratifikasyon**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Histolojik olarak, epitelyal displazinin başlıca sitolojik özellikleri nükleer hiperkromazi, nükleer uzama ve stratifikasyondur."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Nükleer hiperkromazi, uzama, stratifikasyon",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0106",
+       "ses": "Pedünküllü adenomlar submukozadan uzanan ve belirgin kan damarları içeren ince fibrovasküler bir sapa sahiptir.",
+       "ekran": "**Fibrovasküler sap**, kan damarları içerir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Pedünküllü adenomlar, submukozadan uzanan, belirgin kan damarları içeren ince fibrovasküler bir sapa sahiptirler, sap genellikle nonneoplastik epitel ile kaplıdır, ancak displastik epitel de bulunabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fibrovasküler sap",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0107",
+       "ses": "Sap genellikle nonneoplastik epitelle kaplıdır ancak displastik epitel de bulunabilir; bu yüzden sapın kesilme yerinde de displazi araştırılır.",
+       "ekran": "**Fibrovasküler sap**, kan damarları içerir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Pedünküllü adenomlar, submukozadan uzanan, belirgin kan damarları içeren ince fibrovasküler bir sapa sahiptirler, sap genellikle nonneoplastik epitel ile kaplıdır, ancak displastik epitel de bulunabilir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Fibrovasküler sap",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p029",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k3-44-c0108",
+       "ses": "Displazik değişiklikler en çok adenomun yüzey kısmında gözlemlenir.",
+       "ekran": "**Displazi yüzeyde** en belirgin",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Displazik değişiklikler en çok adenomun yüzey kısmında gözlemlenirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Displazi yüzeyde",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0109",
+       "ses": "Bu nedenle displazinin derecesi değerlendirilirken adenomun yüzeyine ait kesitler belirleyici olur.",
+       "ekran": "**Displazi yüzeyde** en belirgin",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Displazik değişiklikler en çok adenomun yüzey kısmında gözlemlenirler."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Displazi yüzeyde",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b06",
+   "baslik": "Adenomlar",
+   "paragraflar": [
+    {
+     "id": "k3-44-p030",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k3-44-c0110",
+       "ses": "Adenomlar yapısal özelliklerine göre tubuler, tubulovillöz ve villöz olarak sınıflandırılır.",
+       "ekran": "**Tubuler, tubulovillöz, villöz** sınıflama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Adenomlar, yapısal özelliklerine göre: - tubuler, - tubulo-villöz ve - villöz olarak sınıflandırılırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tubuler, tubulovillöz, villöz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0111",
+       "ses": "Sınıflandırma, adenomu oluşturan gland yapısının tübüler mi villöz mü olduğuna ve villöz elemanın ne kadar yer kapladığına dayanır.",
+       "ekran": "**Tubuler, tubulovillöz, villöz** sınıflama",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Adenomlar, yapısal özelliklerine göre: - tubuler, - tubulo-villöz ve - villöz olarak sınıflandırılırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tubuler, tubulovillöz, villöz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0112",
+       "ses": "Ancak bu kategoriler sınırlı klinik öneme sahiptir.",
+       "ekran": "**Sınırlı klinik önem**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Ancak bu kategoriler sınırlı klinik öneme sahiptir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sınırlı klinik önem",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0113",
+       "ses": "Yani adenomun yalnızca yapısal alt tipine bakmak hastanın izlem ve tedavi kararını tek başına vermeye yetmez.",
+       "ekran": "**Sınırlı klinik önem**",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Ancak bu kategoriler sınırlı klinik öneme sahiptir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sınırlı klinik önem",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p031",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-44-c0114",
+       "ses": "Tubuler adenomlar genellikle küçük yuvarlak tubuler glandlardan meydana gelen küçük saplı poliplerdir.",
+       "ekran": "**Tubuler adenom** küçük saplı, yuvarlak gland",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tubuler adenomlar genellikle küçük yuvarlak tubuler glandlardan meydana gelen küçük saplı poliplerdir"
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Tubuler adenom",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tubuler adenom",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0115",
+       "ses": "Glandların küçük ve yuvarlak olması bu poliplere düzgün ve düzenli bir mikroskopik görünüm kazandırır.",
+       "ekran": "**Tubuler adenom** küçük saplı, yuvarlak gland",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tubuler adenomlar genellikle küçük yuvarlak tubuler glandlardan meydana gelen küçük saplı poliplerdir"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tubuler adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0116",
+       "ses": "Villöz adenomlar sıklıkla büyük ve sesil poliplerdir ve ince villüsler ile kaplıdır.",
+       "ekran": "**Villöz adenom** büyük, sesil, ince villüslü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Villöz adenomlar ise sıklıkla büyük ve sesil poliplerdir ve ince villüsler ile kaplıdırlar"
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Villöz adenom",
+         "tur": "terim"
+        },
+        {
+         "metin": "Villöz adenom",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0117",
+       "ses": "Yüzeydeki ince villüsler polipe parmak benzeri bir görünüm verir ve bu lezyonlar geniş tabanları nedeniyle daha zor çıkarılır.",
+       "ekran": "**Villöz adenom** büyük, sesil, ince villüslü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Villöz adenomlar ise sıklıkla büyük ve sesil poliplerdir ve ince villüsler ile kaplıdırlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Villöz adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0118",
+       "ses": "Tubulovillöz adenomlar tubuler ve villöz elemanlardan oluşur.",
+       "ekran": "**Tubulovillöz** iki yapıyı birlikte içerir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tubulovillöz adenomlar tubuler ve villöz elemanlardan oluşur"
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Tubulovillöz",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tubulovillöz",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p032",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k3-44-c0119",
+       "ses": "Bu polipleri iki uç tipin arasında ara form olarak düşünmek, yapısal sınıflamanın neden üç basamakta yapıldığını açıklar.",
+       "ekran": "**Tubulovillöz** iki yapıyı birlikte içerir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Tubulovillöz adenomlar tubuler ve villöz elemanlardan oluşur"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tubulovillöz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0120",
+       "ses": "İnvazyon odağı villöz adenomlarda tubuler adenomlardan daha sık görülür ve bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Villöz yapı tek başına** riski artırmaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "İnvazyon odağı, villöz adenomlarda tubuler adenomlardan daha sık olarak görülmekle birlikte, polip boyutu açısından düşünüldüğünde villöz yapılanma tek başına kanser riskini artırmaz."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Villöz yapı tek başına",
+         "tur": "terim"
+        },
+        {
+         "metin": "Villöz yapı tek başına",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0121",
+       "ses": "Ancak polip boyutu da hesaba katıldığında villöz yapılanma tek başına kanser riskini artırmaz, yani riski belirleyen yalnızca villöz komponent değildir.",
+       "ekran": "**Villöz yapı tek başına** riski artırmaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "İnvazyon odağı, villöz adenomlarda tubuler adenomlardan daha sık olarak görülmekle birlikte, polip boyutu açısından düşünüldüğünde villöz yapılanma tek başına kanser riskini artırmaz."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Villöz yapı tek başına",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p033",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-44-c0122",
+       "ses": "Sessil serrated adenomun histolojik özellikleri hiperplastik polipinkilerle örtüşür ve bu bilgi çıkmış sınavda sorulmuştur, dolayısıyla tanıda ayırıcı ipuçları ayrıca aranmalıdır.",
+       "ekran": "**Sessil serrated adenom** histolojisi hiperplastik poliple örtüşür",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Sessil serrated adenomların histolojik özellikleri hiperplastik poliplerinkiler ile örtüşür."
+        ]
+       },
+       "cikmis": [
+        "9d709b198680",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-125"
+       ],
+       "vurgu": [
+        {
+         "metin": "Sessil serrated adenom",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sessil serrated adenom",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0123",
+       "ses": "Sessil serrated adenomlar en sık sağ kolonda yerleşir, bu yüzden kolonoskopide sağ taraf lezyonları bu tanı açısından ayrıca değerlendirilir.",
+       "ekran": "**Sağ kolon** yerleşimi tipik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "En sık olarak sağ kolonda görülürler."
+        ]
+       },
+       "cikmis": [
+        "9d709b198680",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-125",
+        "0ede2e9facc7"
+       ],
+       "vurgu": [
+        {
+         "metin": "Sağ kolon",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sağ kolon",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0124",
+       "ses": "Sessil serrated adenomda displazinin tipik sitolojik özellikleri bulunmaz, buna karşın geleneksel adenomlar gibi malignite potansiyeli taşır, bu yüzden displazi görülmemesi lezyonu zararsız saydırmaz.",
+       "ekran": "**Displazi tipik değil** ama malignite potansiyeli var",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Displazinin tipik sitolojik özellikleri yoktur ancak geleneksel adenomlar gibi malignite potansiyeli taşırlar."
+        ]
+       },
+       "cikmis": [
+        "9d709b198680",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-125"
+       ],
+       "vurgu": [
+        {
+         "metin": "Displazi tipik değil",
+         "tur": "terim"
+        },
+        {
+         "metin": "Displazi tipik değil",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0125",
+       "ses": "Bu nedenle sesil serrated adenom neoplastik kabul edilir ve takipten çıkarılmaz.",
+       "ekran": "**Displazi tipik değil** ama malignite potansiyeli var",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Displazinin tipik sitolojik özellikleri yoktur ancak geleneksel adenomlar gibi malignite potansiyeli taşırlar."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Displazi tipik değil",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0126",
+       "ses": "Ayırmda en çok işe yarayan histolojik özellik, serrated yapılanmanın kript bazali de içerecek biçimde tüm gland uzunluğu boyunca sürmesi, kript dilatasyonu ve laterale doğru büyümedir.",
+       "ekran": "**Tüm gland boyunca serrated** yapılanma ve laterale büyüme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Sessil serrated adenomların hiperplastik poliplerden ayrımında en yararlanılan histolojik özellik, serrated adenomlarda kript bazali de dahil olmak üzere tüm gland uzunluğu boyunca serrated yapılanma, kript dilatasyonu ve laterale doğru büyüme olmasıdır"
+        ]
+       },
+       "cikmis": [
+        "9d709b198680",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-125"
+       ],
+       "vurgu": [
+        {
+         "metin": "Tüm gland boyunca serrated",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tüm gland boyunca serrated",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p034",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k3-44-c0127",
+       "ses": "Serrated yapılanmanın bazal kriptlere kadar inmesi, lezyonun hiperplastik polipten ayrılmasını sağlayan temel kanıttır.",
+       "ekran": "**Tüm gland boyunca serrated** yapılanma ve laterale büyüme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Sessil serrated adenomların hiperplastik poliplerden ayrımında en yararlanılan histolojik özellik, serrated adenomlarda kript bazali de dahil olmak üzere tüm gland uzunluğu boyunca serrated yapılanma, kript dilatasyonu ve laterale doğru büyüme olmasıdır"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tüm gland boyunca serrated",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0128",
+       "ses": "Hiperplastik polipte serrated yapılanma yalnızca polibin yüzeyinde kalır ve bazal kriptlere inmez, bu da ayrımın ters yönlü kanıtıdır.",
+       "ekran": "**Hiperplastik polip** yüzeyde serrated, bazalde değil",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Bunun tam tersi olarak, hiperplastik poliplerde serrated yapılanma polibin sadece yüzeyindedir."
+        ]
+       },
+       "cikmis": [
+        "9d709b198680",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-125"
+       ],
+       "vurgu": [
+        {
+         "metin": "Hiperplastik polip",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hiperplastik polip",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p035",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k3-44-c0129",
+       "ses": "Kolorektal adenomların çoğu benign lezyondur, bu yüzden tanı konan poliplerin büyük bölümü endoskopik çıkarma ile tedavi edilir.",
+       "ekran": "**Adenomların çoğu** benign",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Kolorektal adenomların çoğu benign lezyonlardır."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Adenomların çoğu",
+         "tur": "terim"
+        },
+        {
+         "metin": "Adenomların çoğu",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0130",
+       "ses": "Adenomların yalnızca küçük bir bölümünde tanı anında invaziv kanser bulunur, bu nedenle bir polip görüldüğünde hemen kanser beklenmez.",
+       "ekran": "**Az bir kısmında** tanı anında invaziv kanser",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Sadece küçük bir bölümünde tanı sırasında invaziv kanser mevcuttur."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Az bir kısmında",
+         "tur": "terim"
+        },
+        {
+         "metin": "Az bir kısmında",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0131",
+       "ses": "Malignite riskiyle en güçlü korelasyonu gösteren özellik polip boyutudur ve bu bilgi çıkmış sınavda sorulmuştur, bu yüzden patoloji raporunda boyut mutlaka yer alır.",
+       "ekran": "**Boyut** malignite riskiyle en iyi korele özellik",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Boyut, malignite riski ile korelasyon gösteren en önemli özelliktir."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e",
+        "d3-k3-gas-007"
+       ],
+       "vurgu": [
+        {
+         "metin": "Boyut",
+         "tur": "terim"
+        },
+        {
+         "metin": "Boyut",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0132",
+       "ses": "Çapı bir santimetreden küçük adenomlarda kanser son derece nadirdir, bu yüzden küçük poliplerde malignite beklentisi düşük tutulur.",
+       "ekran": "**Bir santimetreden küçük** adenomda kanser çok nadir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Örneğin, çapı 1 cm’den daha küçük olan adenomlarda kanser son derece nadir görülür."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Bir santimetreden küçük",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bir santimetreden küçük",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0133",
+       "ses": "Çapı dört santimetreden büyük lezyonların yaklaşık yüzde kırkında kanser odağı bildirilmektedir, bu da büyük poliplerin belirgin biçimde riskli olduğunu gösterir.",
+       "ekran": "**Dört santimetreden büyük** lezyonda yaklaşık yüzde kırk kanser odağı",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Bazı çalışmalarda, çapı 4 cm’den büyük olan lezyonların yaklaşık %40’ında kanser odağı olduğu bildirilmektedir."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Dört santimetreden büyük",
+         "tur": "terim"
+        },
+        {
+         "metin": "Dört santimetreden büyük",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p036",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k3-44-c0134",
+       "ses": "Boyutun yanında yüksek dereceli displazi de o polipte kanser gelişimi için risk faktörüdür, bu yüzden displazi saptanan polip daha acil ele alınır.",
+       "ekran": "**Yüksek dereceli displazi** ayrı bir risk faktörü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Boyuta ek olarak, yüksek dereceli displazi de belli bir polipteki kanser gelişimi açısından risk faktörüdür."
+        ]
+       },
+       "cikmis": [
+        "99c27b2ca19e"
+       ],
+       "vurgu": [
+        {
+         "metin": "Yüksek dereceli displazi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yüksek dereceli displazi",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p037",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k3-44-c0135",
+       "ses": "Şekildeki endoskopik görüntü pedinküllü adenomu gösterir, yani lezyon bir sap üzerinde lümen içine doğru sarkar.",
+       "ekran": "**Pedinküllü adenom** endoskopik görünüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "A, Pedunculated adenoma (endoscopic view)."
+        ],
+        "sekil": "pedinküllü kolon adenomunun endoskopik görüntüsü"
+       },
+       "vurgu": [
+        {
+         "metin": "Pedinküllü adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0136",
+       "ses": "Sap varlığı endoskopik çıkarmayı kolaylaştırır.",
+       "ekran": "**Pedinküllü adenom** endoskopik görünüm",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "A, Pedunculated adenoma (endoscopic view)."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pedinküllü adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0137",
+       "ses": "Şekilde yüzeyi kadife görünümünde olan bir adenom izlenir, bu görünüm adenomun yüzey yapısının endoskopik ipucudur.",
+       "ekran": "**Kadife yüzey** adenomda endoskopik bulgu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "B, Adenoma with a velvety surface."
+        ],
+        "sekil": "kadife görünümlü yüzeyi olan adenom"
+       },
+       "vurgu": [
+        {
+         "metin": "Kadife yüzey",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0138",
+       "ses": "Mikroskopik görüntü pedinküllü tübüler adenomu düşük büyütmede gösterir ve lezyonun saplı yapısı ile glandüler düzeni birlikte izlenir.",
+       "ekran": "**Pedinküllü tübüler adenom** düşük büyütme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "of a pedunculated tubular adenoma."
+        ],
+        "sekil": "pedinküllü tübüler adenomun düşük büyütmeli mikroskopik görüntüsü"
+       },
+       "vurgu": [
+        {
+         "metin": "Pedinküllü tübüler adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0139",
+       "ses": "Tübüler adenom tanısı bu düşük büyütmedeki yapısal düzen üzerinden kurulur.",
+       "ekran": "**Pedinküllü tübüler adenom** düşük büyütme",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "of a pedunculated tubular adenoma."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Pedinküllü tübüler adenom",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b07",
+   "baslik": "~~ > Wy ER coy >",
+   "paragraflar": [
+    {
+     "id": "k3-44-p038",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k3-44-c0140",
+       "ses": "Tübüler adenom düzgün yüzeyli ve yuvarlak bezlerden oluşur, zeminde kript dilatasyonu ve rüptürüne bağlı aktif inflamasyon görülebilir.",
+       "ekran": "**Tübüler adenom** yuvarlak bezler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [],
+        "sekil": "Düzgün yüzeyli, yuvarlak bezlerden oluşan adenom"
+       },
+       "vurgu": [
+        {
+         "metin": "Tübüler adenom",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tübüler adenom",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-q-1_Kurul-2022-31"
+       ]
+      },
+      {
+       "id": "k3-44-c0141",
+       "ses": "Villöz adenom, ince bağırsak villuslarını andıran uzun ve ince parmaksı çıkıntılarla karakterizedir.",
+       "ekran": "**Villöz adenom** parmaksı çıkıntılar",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [],
+        "sekil": "Uzun ince çıkıntılar, villus benzeri yapı"
+       },
+       "vurgu": [
+        {
+         "metin": "Villöz adenom",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0142",
+       "ses": "Displastik epitel hücrelerinde çekirdek sitoplazma oranı artmış, çekirdekler hiperkromatik ve uzamış olup psödostratifikasyon gösterir; alttaki displastik olmayan epitel ile karşılaştırılır.",
+       "ekran": "**Displazi** hiperkromatik çekirdek",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [],
+        "sekil": "Çekirdek sitoplazma oranı artmış, hiperkromatik hücreler"
+       },
+       "vurgu": [
+        {
+         "metin": "Displazi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0143",
+       "ses": "Sessile serrated adenom goblet hücreleriyle döşelidir ve sitolojik displazi göstermez, neoplastik sürecin kriptlere uzanıp yanal büyümesiyle hiperplastik polipten ayrılır.",
+       "ekran": "**Serrated adenom** kriptlere uzanım",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [],
+        "sekil": "Goblet hücreli, displazisiz, kriptlere uzanan lezyon"
+       },
+       "vurgu": [
+        {
+         "metin": "Serrated adenom",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p039",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k3-44-c0144",
+       "ses": "Ailesel sendromlar başlığı altında, kolonda polipler ve yüksek kolon kanseri oranı ile ilişkili çeşitli sendromlar tanımlanmıştır.",
+       "ekran": "**Ailesel sendromlar** polip ve kanser",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [],
+        "sekil": "Polipler ve yüksek kanser oranıyla giden sendromlar"
+       },
+       "vurgu": [
+        {
+         "metin": "Ailesel sendromlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ailesel sendromlar",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "cl-p11-dahiliye-p001-2"
+       ]
+      },
+      {
+       "id": "k3-44-c0145",
+       "ses": "Bu hastalıkların genetik temelinin çözümlenmesi, sporadik kolon kanserlerinin anlaşılmasında büyük yarar sağlamıştır.",
+       "ekran": "**Genetik temel** sporadik kanser",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [],
+        "sekil": "Sendrom genetiğinin sporadik kansere katkısı"
+       },
+       "vurgu": [
+        {
+         "metin": "Genetik temel",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p040",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k3-44-c0146",
+       "ses": "Ailesel adenomatöz polipozis, onlu yaşlarda çok sayıda kolorektal adenomun varlığı ile karakterize otozomal dominant bir hastalıktır.",
+       "ekran": "**Ailesel polipozis** otozomal dominant",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [],
+        "sekil": "Onlu yaşlarda çok sayıda kolorektal adenom"
+       },
+       "vurgu": [
+        {
+         "metin": "Ailesel polipozis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0147",
+       "ses": "Hastalık, adenomatöz polipozis koli genindeki mutasyonlar nedeniyle ortaya çıkar.",
+       "ekran": "**Koli geni** mutasyonu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [],
+        "sekil": "Adenomatöz polipozis koli geni mutasyonu"
+       },
+       "vurgu": [
+        {
+         "metin": "Koli geni",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0148",
+       "ses": "Klasik ailesel adenomatöz polipozis tanısı için en az yüz adet polip olması gereklidir ve birkaç bin adet polip de olabilir.",
+       "ekran": "**Klasik tanı** en az yüz polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [],
+        "sekil": "Klasik tanı için gereken en az polip sayısı"
+       },
+       "vurgu": [
+        {
+         "metin": "Klasik tanı",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0149",
+       "ses": "Bu polipler çok sayıda olmalarının yanı sıra morfolojik olarak sporadik adenomlardan farksızdırlar.",
+       "ekran": "**Morfoloji** sporadik adenom gibi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [],
+        "sekil": "Polipler sporadik adenomlardan farksız"
+       },
+       "vurgu": [
+        {
+         "metin": "Morfoloji",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p041",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k3-44-c0150",
+       "ses": "Tedavi görmemiş ailevi adenomatöz polipozisli hastaların yüzde yüzünde otuz yaşından önce kolorektal adenokarsinom gelişir.",
+       "ekran": "**erken kanser** gelişimi kaçınılmaz",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "erken yaşta kanser gelişimi"
+       },
+       "vurgu": [
+        {
+         "metin": "erken kanser",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0151",
+       "ses": "Bu nedenle adenomatöz polipozis koli geni mutasyonu taşıyan kişilerde standart tedavi profilaktik kolektomidir.",
+       "ekran": "**profilaktik kolektomi** standart tedavi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "cerrahi korunma yöntemi"
+       },
+       "vurgu": [
+        {
+         "metin": "profilaktik kolektomi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0152",
+       "ses": "Kolektomi sonrası bile hastalarda ekstraintestinal neoplaziler dahil başka problemlerin çıkma riski her zaman vardır.",
+       "ekran": "**ekstraintestinal** neoplazi riski sürer",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "bağırsak dışı tümör riski"
+       },
+       "vurgu": [
+        {
+         "metin": "ekstraintestinal",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0153",
+       "ses": "Spesifik gen mutasyonlarının varlığı diğer problemlerin gelişimi ile ilişkilidir ve bu durum farklı klinik görünümleri açıklar.",
+       "ekran": "**mutasyon tipi** ek bulguları belirler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "mutasyon tipine göre fenotip"
+       },
+       "vurgu": [
+        {
+         "metin": "mutasyon tipi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0154",
+       "ses": "Bu ilişki Gardner sendromu ve Turcot sendromu gibi ailevi adenomatöz polipozis varyantlarını açıklamaktadır.",
+       "ekran": "**Gardner ve Turcot** varyantları",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "sendromun alt tipleri"
+       },
+       "vurgu": [
+        {
+         "metin": "Gardner ve Turcot",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k3-44-b08",
+   "baslik": "Ailesel Adenomatöz Polipler",
+   "paragraflar": [
+    {
+     "id": "k3-44-p042",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-44-c0155",
+       "ses": "Gardner sendromu intestinal poliplere ek olarak kemik ve yumuşak doku bulgularıyla seyreden bir ailevi adenomatöz polipozis varyantıdır.",
+       "ekran": "**Gardner** intestinal polip artı ek bulgular",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "polip artı ek bulgular"
+       },
+       "vurgu": [
+        {
+         "metin": "Gardner",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0156",
+       "ses": "Gardner sendromunda mandibula kranium ve uzun kemiklerde osteomlar görülür.",
+       "ekran": "**osteomlar** çene ve kafatasında",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "kemik tümörleri"
+       },
+       "vurgu": [
+        {
+         "metin": "osteomlar",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0157",
+       "ses": "Aynı hastalarda epidermal kistler de tabloya eşlik eden deri bulguları arasında sayılır.",
+       "ekran": "**epidermal kistler** deri bulgusu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "deri kistleri"
+       },
+       "vurgu": [
+        {
+         "metin": "epidermal kistler",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0158",
+       "ses": "Gardner sendromunun bir diğer belirgin özelliği dezmoid tümör gelişimidir.",
+       "ekran": "**dezmoid tümör** yumuşak dokuda",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "yumuşak doku tümörü"
+       },
+       "vurgu": [
+        {
+         "metin": "dezmoid tümör",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0159",
+       "ses": "Tiroid tümörleri ve çıkmamış ya da fazla sayıda diş gibi dental anomaliler de bu varyantta tanımlanmıştır.",
+       "ekran": "**tiroid ve dental** anomaliler",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "boyun ve diş bulguları"
+       },
+       "vurgu": [
+        {
+         "metin": "tiroid ve dental",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p043",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k3-44-c0160",
+       "ses": "Daha nadir görülen Turcot sendromu ise intestinal adenomlara ek olarak santral sinir sistemi tümörleri ile karakterizedir.",
+       "ekran": "**Turcot** santral sinir sistemi tümörü",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "beyin tümörlü varyant"
+       },
+       "vurgu": [
+        {
+         "metin": "Turcot",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p044",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k3-44-c0161",
+       "ses": "Ailesel adenomatöz polipli kişilerde a pe ce geni mutasyonları Turcot sendromlu hastaların üçte ikisinde bulunur ve bu hastalarda medulloblastom gelişir.",
+       "ekran": "**Turcot** a pe ce mutasyonu medulloblastom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "APC geni mutasyonları Turcot sendromlu kişilerin üçte ikisinde vardır ve bunlarda medulloblastom gelişir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Turcot",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0162",
+       "ses": "Turcot sendromlu hastaların geri kalan üçte birinde de ne a tamiri ile ilişkili çeşitli genlerde mutasyonlar vardır ve bu hastalarda glioblastom gelişir.",
+       "ekran": "**Turcot** de ne a tamiri glioblastom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Geri kalan üçte bir hastada ise DNA tamiri ile ilişkili çeşitli genlerde mutasyonlar mevcuttur ve bunlarda glioblastom gelişir."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Turcot",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0163",
+       "ses": "a pe ce kaybı olmayan bazı ailesel adenomatöz polipozisli hastalarda baz eksizyon tamiri geni olan mut ye ha geninde mutasyonlar vardır.",
+       "ekran": "**mut ye ha** baz eksizyon tamiri ailesel polipozis",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "APC kaybı olmayan bazı FAP'lı hastalarda baz eksizyon tamiri geni olan MUTYH geninde mutasyonlar vardır."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "mut ye ha",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p045",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-44-c0164",
+       "ses": "Tablo on dört altı gastrointestinal polipozis sendromlarını tek listede toplar ve her sendromun başlangıç yaşını, sorumlu genini, polip tipini ve bağırsak dışı bulgularını yan yana gösterir.",
+       "ekran": "**Tablo** polipozis sendromları özeti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Tablo 14-6 Gastrointestinal (Gİ) Polipozis Sendromları"
+        ],
+        "sekil": "Gastrointestinal polipozis sendromlarını yaş, gen, polip tipi ve ek bulgularla özetleyen tablo"
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Tablo",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tablo",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0165",
+       "ses": "Peutz-Jeghers sendromu, ince bağırsakta dallanan polipler ve mukokütanöz pigmentasyon ile tanınır ve polipler ince bağırsakta kolon ile mideden daha sık yerleşir.",
+       "ekran": "**Peutz-Jeghers** dallanan polip pigmentasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "bağırsak > kolon > mide; artmış tiroid, meme, akciğer,"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2",
+        "abb4cc1d34af"
+       ],
+       "vurgu": [
+        {
+         "metin": "Peutz-Jeghers",
+         "tur": "terim"
+        },
+        {
+         "metin": "Peutz-Jeghers",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0166",
+       "ses": "Başlangıç yaşı on ile on beş arasındadır ve el ka be bir ile se te ke on bir gen mutasyonu sorumludur.",
+       "ekran": "**Peutz-Jeghers** dallanan polip pigmentasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "bağırsak > kolon > mide; artmış tiroid, meme, akciğer,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Peutz-Jeghers",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0167",
+       "ses": "Hastalarda tiroid, meme, akciğer, kolon, pankreas, gonad ve mesane kanseri riski de artar.",
+       "ekran": "**Peutz-Jeghers** dallanan polip pigmentasyon",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "bağırsak > kolon > mide; artmış tiroid, meme, akciğer,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Peutz-Jeghers",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0168",
+       "ses": "Juvenil polipozis, beş yaşından önce başlayan jüvenil poliplerle gider ve mide, ince bağırsak, kolon ile pankreas adenokarsinomu riski artar.",
+       "ekran": "**Juvenil polipozis** erken yaş pankreas riski",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Juvenil polipozis <5 SMAD4, BMPRTA — Jüvenil polipler; artmış mide, Pulmoner arteriovenöz"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2",
+        "past-1790877035539-983382",
+        "k1-2018-2019-q089"
+       ],
+       "vurgu": [
+        {
+         "metin": "Juvenil polipozis",
+         "tur": "terim"
+        },
+        {
+         "metin": "Juvenil polipozis",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p046",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-44-c0169",
+       "ses": "Es me a de dört ile be me pe er te a genleri sorumludur ve pulmoner arteriovenöz malformasyonlar ile parmaklarda clubbing tabloya eşlik eder.",
+       "ekran": "**Juvenil polipozis** erken yaş pankreas riski",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Juvenil polipozis <5 SMAD4, BMPRTA — Jüvenil polipler; artmış mide, Pulmoner arteriovenöz"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Juvenil polipozis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0170",
+       "ses": "Cowden sendromu ile Bannayan-Ruvalcaba-Riley sendromu, pe te en gen mutasyonuyla giden ve hamartomatöz poliplerle seyreden otozomal dominant geçişli bir gruptur; bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Cowden** pe te en hamartomatöz polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "kanseri riski"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Cowden",
+         "tur": "terim"
+        },
+        {
+         "metin": "Cowden",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0171",
+       "ses": "Lipomlar, gangliyonöromlar ve inflamatuar polipler görülür; kolon kanseri riski artar ve benign deri tümörleri ile benign ve malign tiroid ve meme lezyonları eşlik eder.",
+       "ekran": "**Cowden** pe te en hamartomatöz polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "kanseri riski"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Cowden",
+         "tur": "terim"
+        },
+        {
+         "metin": "Cowden",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-002"
+       ]
+      },
+      {
+       "id": "k3-44-c0172",
+       "ses": "Cronkhite-Canada sendromu, elli yaşından sonra ortaya çıkan ve kalıtsal olmayan hamartomatöz kolon polipleri ile tanınır.",
+       "ekran": "**Cronkhite-Canada** kalıtsal değil kaşeksi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Cronkhite-Canada >50 Nonherediter Hamartomatöz kolon polipleri, Tırnak atrofisi, saç dökülmesi,"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Cronkhite-Canada",
+         "tur": "terim"
+        },
+        {
+         "metin": "Cronkhite-Canada",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0173",
+       "ses": "Nonpolipoid mukozada kript dilatasyonu ve ödem saptanır; tırnak atrofisi, saç dökülmesi, anormal deri pigmentasyonu, kaşeksi ve anemi tabloya eşlik eder.",
+       "ekran": "**Cronkhite-Canada** kalıtsal değil kaşeksi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Cronkhite-Canada >50 Nonherediter Hamartomatöz kolon polipleri, Tırnak atrofisi, saç dökülmesi,"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Cronkhite-Canada",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p047",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-44-c0174",
+       "ses": "Tüberoz skleroz, bebeklikten yetişkinliğe dek rektal hamartomatöz poliplerle kendini gösterebilir ve te se ce bir ile te se ce iki genleriyle ilişkilidir.",
+       "ekran": "**Tüberoz skleroz** rektal hamartomatöz polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Tüberoz skleroz Bebeklikten TSC1, TSC2 Hamartomatöz polipler Fasyal anjiofibrom, kortikal"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Tüberoz skleroz",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tüberoz skleroz",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0175",
+       "ses": "Fasyal anjiofibrom, kortikal tuberler ve renal angiomiyolipom bu hastalarda tanıyı destekleyen bulgulardır.",
+       "ekran": "**Tüberoz skleroz** rektal hamartomatöz polip",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Tüberoz skleroz Bebeklikten TSC1, TSC2 Hamartomatöz polipler Fasyal anjiofibrom, kortikal"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Tüberoz skleroz",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0176",
+       "ses": "Ailesel adenomatöz polipozis, kolonda çok sayıda adenom gelişimiyle giden ve alt tiplere ayrılan kalıtsal bir sendromdur.",
+       "ekran": "**Ailesel adenomatöz polipozis** multipl adenom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Ailesel adenomatöz polipozis (FAP)"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Ailesel adenomatöz polipozis",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ailesel adenomatöz polipozis",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0177",
+       "ses": "Klasik, atenue, Gardner ve Turcot biçimleri aynı hastalığın farklı yüzleridir ve hepsinde multipl adenomlar görülür.",
+       "ekran": "**Ailesel adenomatöz polipozis** multipl adenom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Ailesel adenomatöz polipozis (FAP)"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Ailesel adenomatöz polipozis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0178",
+       "ses": "Klasik ailesel adenomatöz polipozis, on ile on beş yaş arasında multipl adenomlarla ortaya çıkar ve a pe ce ile me u te ye he genleri sorumludur.",
+       "ekran": "**Klasik** erken yaş retinal pigment hipertrofisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Klasik FAP 10-15 APC, MUTYH Multipl adenomlar Konjenital RPE hipertrofisi"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Klasik",
+         "tur": "terim"
+        },
+        {
+         "metin": "Klasik",
+         "tur": "cikmis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p048",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-44-c0179",
+       "ses": "Konjenital retinal pigment epiteli hipertrofisi bu hastalarda eşlik eden göz bulgusudur.",
+       "ekran": "**Klasik** erken yaş retinal pigment hipertrofisi",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Klasik FAP 10-15 APC, MUTYH Multipl adenomlar Konjenital RPE hipertrofisi"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Klasik",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0180",
+       "ses": "Atenue ailesel adenomatöz polipozis, kırk ile elli yaş arasında daha geç ortaya çıkar ve klasik biçime göre daha az sayıda multipl adenom saptanır.",
+       "ekran": "**Atenue** geç yaş az adenom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Atenue FAP 40-50 APC, MUTYH Multipl adenomlar"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Atenue",
+         "tur": "terim"
+        },
+        {
+         "metin": "Atenue",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0181",
+       "ses": "A pe ce ve me u te ye he genleri bu biçimde de sorumlu tutulur.",
+       "ekran": "**Atenue** geç yaş az adenom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Atenue FAP 40-50 APC, MUTYH Multipl adenomlar"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Atenue",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0182",
+       "ses": "Gardner sendromu, ailesel adenomatöz polipozisin multipl adenomlarla giden bir varyantıdır ve bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Gardner** osteom dezmoid deri kisti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Gardner sendromu 10-15 APC, MUTYH Multipl adenomlar Osteomlar, dezmoidler, deri kistleri"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Gardner",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gardner",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0183",
+       "ses": "Osteomlar, dezmoid tümörler ve deri kistleri bu varyantı klasik biçimden ayıran bulgulardır.",
+       "ekran": "**Gardner** osteom dezmoid deri kisti",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Gardner sendromu 10-15 APC, MUTYH Multipl adenomlar Osteomlar, dezmoidler, deri kistleri"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Gardner",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p049",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k3-44-c0184",
+       "ses": "Turcot sendromu, multipl adenomlara merkezi sinir sistemi tümörlerinin eşlik ettiği ailesel adenomatöz polipozis varyantıdır.",
+       "ekran": "**Turcot** multipl adenom medulloblastom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Turcot sendromu 10-15 APC, MUTYH Multipl adenomlar MSS tümörleri, medulloblastom"
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Turcot",
+         "tur": "terim"
+        },
+        {
+         "metin": "Turcot",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0185",
+       "ses": "Bu grupta medulloblastom görülür ve sorumlu genler a pe ce ile me u te ye he olarak belirtilir.",
+       "ekran": "**Turcot** multipl adenom medulloblastom",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Turcot sendromu 10-15 APC, MUTYH Multipl adenomlar MSS tümörleri, medulloblastom"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Turcot",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0186",
+       "ses": "Tablodaki kısaltmalar merkezi sinir sistemi ile retinal pigment epiteli anlamına gelir.",
+       "ekran": "**Kısaltmalar** merkezi sinir sistemi retinal pigment",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "MSS, merkezi sinir sistemi; RPE, retinal pigment epiteli."
+        ]
+       },
+       "cikmis": [
+        "k1-2018-2019-q090",
+        "q-18-30",
+        "past-1790877035548-550554",
+        "26d8c7b77ef2"
+       ],
+       "vurgu": [
+        {
+         "metin": "Kısaltmalar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Kısaltmalar",
+         "tur": "cikmis"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0187",
+       "ses": "Merkezi sinir sistemi tümörü Turcot sendromunda medulloblastomu, retinal pigment epiteli hipertrofisi ise klasik ailesel polipozisteki göz bulgusunu anlatır.",
+       "ekran": "**Kısaltmalar** merkezi sinir sistemi retinal pigment",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "MSS, merkezi sinir sistemi; RPE, retinal pigment epiteli."
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Kısaltmalar",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p050",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k3-44-c0188",
+       "ses": "Tabloda sporadik ve ailesel kolorektal neoplazinin sık görülen paternleri karşılaştırılır.",
+       "ekran": "**Sporadik ve ailesel kolorektal neoplazi** paternleri tablosu",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Tablo 14-7 Sporadik ve Ailesel Kolorektal Neoplazinin Sık Görülen Paternleri"
+        ],
+        "sekil": "sporadik ve ailesel kolorektal neoplazi paternleri tablosu"
+       },
+       "vurgu": [
+        {
+         "metin": "Sporadik ve ailesel kolorektal neoplazi",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0189",
+       "ses": "Ailesel adenomatöz polipozis, kolorektal kanserlerin yüzde birden azını oluşturan ve a pe ce ile dabılyu en te yolağı üzerinden otozomal dominant geçen bir sendromdur.",
+       "ekran": "**Ailesel adenomatöz polipozis** a pe ce dabılyu en te otozomal dominant",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Ailesel adenomatöz polipozis",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0190",
+       "ses": "Sendromun histolojisinde tübüler ve villöz adenom ile tipik adenokarsinom görülür.",
+       "ekran": "**Ailesel adenomatöz polipozis** a pe ce dabılyu en te otozomal dominant",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Ailesel adenomatöz polipozis",
+         "tur": "terim"
+        },
+        {
+         "metin": "Ailesel adenomatöz polipozis",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-gas-035"
+       ]
+      },
+      {
+       "id": "k3-44-c0191",
+       "ses": "Em u te ye ha geniyle ilişkili ailesel adenomatöz polipozis, ailesel adenomatöz polipozisin yüzde onundan azını oluşturur ve resesif geçiş gösterir.",
+       "ekran": "**Em u te ye ha polipozisi** resesif de ne a tamiri sessil serrated",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Em u te ye ha polipozisi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Em u te ye ha polipozisi",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "bc8dc03e1797"
+       ]
+      },
+      {
+       "id": "k3-44-c0192",
+       "ses": "De ne a uyumsuzluk tamiriyle bağlantılıdır ve histolojide sessil serrated adenom ile müsinöz adenokarsinom görülür.",
+       "ekran": "**Em u te ye ha polipozisi** resesif de ne a tamiri sessil serrated",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Em u te ye ha polipozisi",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p051",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k3-44-c0193",
+       "ses": "Herediter nonpolipöz kolorektal kanser, de ne a uyumsuzluk tamiri genlerinden em es ha iki ve em el ha bir ile otozomal dominant geçen bir sendromdur.",
+       "ekran": "**Herediter nonpolipöz kolorektal kanser** sağ taraf em es ha iki em el ha bir",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Herediter nonpolipöz kolorektal kanser",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0194",
+       "ses": "Tümörler sağ tarafta yer alır ve sessil serrated adenom ile müsinöz adenokarsinom sık görülür.",
+       "ekran": "**Herediter nonpolipöz kolorektal kanser** sağ taraf em es ha iki em el ha bir",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Herediter nonpolipöz kolorektal kanser",
+         "tur": "terim"
+        }
+       ]
+      },
+      {
+       "id": "k3-44-c0195",
+       "ses": "Sporadik kolon kanserinin yüzde seksenlik bölümü, a pe ce ve dabılyu en te yolağındaki değişikliklerle ilişkilidir ve a pe ce geni rol oynar.",
+       "ekran": "**Sporadik kolon kanseri** yüzde seksen sol taraf a pe ce",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Sporadik kolon kanseri (%80) APC/WNT yolağı APC"
+        ],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Sporadik kolon kanseri",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sporadik kolon kanseri",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "past-1790877036878-345296"
+       ]
+      },
+      {
+       "id": "k3-44-c0196",
+       "ses": "Kalıtsal geçiş yoktur, tümör genellikle sol tarafta yer alır ve tübüler villöz adenom ile tipik adenokarsinom görülür.",
+       "ekran": "**Sporadik kolon kanseri** yüzde seksen sol taraf a pe ce",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Sporadik kolon kanseri (%80) APC/WNT yolağı APC"
+        ]
+       },
+       "vurgu": [
+        {
+         "metin": "Sporadik kolon kanseri",
+         "tur": "terim"
+        },
+        {
+         "metin": "Sporadik kolon kanseri",
+         "tur": "cikmis"
+        }
+       ],
+       "cikmis": [
+        "d3-k3-pat-044"
+       ]
+      },
+      {
+       "id": "k3-44-c0197",
+       "ses": "Sporadik kolon kanserinin yüzde on ile on beşlik bölümünde de ne a uyumsuzluk tamiri bozulur ve em es ha iki ile em el ha bir genleri devreye girer.",
+       "ekran": "**Sporadik kolon kanseri** yüzde on on beş sağ taraf de ne a",
+       "duzey": 0,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [],
+        "sekil": "tablo satırı"
+       },
+       "vurgu": [
+        {
+         "metin": "Sporadik kolon kanseri",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k3-44-p052",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k3-44-c0198",
+       "ses": "Tümörler sağ tarafta yer alır ve sessil serrated adenom ile müsinöz adenokarsinom histolojisi gösterir.",
+       "ekran": "**Sporadik kolon kanseri** yüzde on on beş sağ taraf de ne a",
+       "duzey": 0,
+       "slayt": null,
+       "vurgu": [
+        {
+         "metin": "Sporadik kolon kanseri",
+         "tur": "terim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
