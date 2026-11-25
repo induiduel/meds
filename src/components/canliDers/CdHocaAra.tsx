@@ -104,11 +104,25 @@ function sesCal(url: string | null, okumaSn: number, onT: (t: number) => void): 
       return;
     }
     ses = ses || new Audio();
-    ses.src = url;
+    // Yükleme hatasında ("Format error"/"no supported source", canlıda aralıklı; dosya ve sunucu yanıtı sağlam) klip
+    // önbellek kıran ekle BİR kez yeniden yüklenir; ikinci hatada eskisi gibi geçilir. Oynatma izni reddi denenmez.
+    let deneme = 0;
+    const yukle = () => {
+      if (!ses) return;
+      ses.src = deneme ? `${url}${url.includes('?') ? '&' : '?'}yd=${Date.now()}` : url;
+      ses.play().catch((e) => {
+        if (j !== jeton) return;
+        if (e?.name === 'NotSupportedError') hata(); else coz(true);
+      });
+    };
+    const hata = () => {
+      if (j !== jeton) return;
+      if (deneme++ === 0) { console.warn('[hoca-ara] klip yüklenemedi, yeniden deneniyor:', url); yukle(); } else coz(true);
+    };
     ses.ontimeupdate = () => { if (j === jeton && ses) onT(ses.currentTime); };
     ses.onended = () => { if (j === jeton) coz(true); };
-    ses.onerror = () => { if (j === jeton) coz(true); };
-    ses.play().catch(() => { if (j === jeton) coz(true); });
+    ses.onerror = hata;
+    yukle();
   });
 }
 const okumaSn = (m: string) => Math.max(2, (m.match(/\S+/g) || []).length * 0.42);
