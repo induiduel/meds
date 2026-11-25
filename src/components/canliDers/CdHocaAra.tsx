@@ -103,25 +103,29 @@ function sesCal(url: string | null, okumaSn: number, onT: (t: number) => void): 
       }, 100);
       return;
     }
-    ses = ses || new Audio();
     // Yükleme hatasında ("Format error"/"no supported source", canlıda aralıklı; dosya ve sunucu yanıtı sağlam) klip
-    // önbellek kıran ekle BİR kez yeniden yüklenir; ikinci hatada eskisi gibi geçilir. Oynatma izni reddi denenmez.
+    // YENİ bir ses ögesiyle, önbellek kıran ekle BİR kez yeniden yüklenir; ikinci hatada eskisi gibi geçilir.
+    // Aynı hata hem play() reddi hem error olayı olarak gelir ve eski ögenin olayı yeni adres atandıktan sonra düşebilir:
+    // her olay yalnız kendi ögesi hâlâ etkinse işlenir (yoksa tek hata iki kez sayılıp klip atlanıyordu). İzin reddi denenmez.
     let deneme = 0;
     const yukle = () => {
-      if (!ses) return;
-      ses.src = deneme ? `${url}${url.includes('?') ? '&' : '?'}yd=${Date.now()}` : url;
-      ses.play().catch((e) => {
-        if (j !== jeton) return;
-        if (e?.name === 'NotSupportedError') hata(); else coz(true);
+      const el = deneme || !ses ? new Audio() : ses;
+      if (ses && el !== ses) { ses.onended = null; ses.ontimeupdate = null; ses.onerror = null; ses.pause(); ses.removeAttribute('src'); }
+      ses = el;
+      const benim = () => j === jeton && ses === el;
+      const hata = () => {
+        if (!benim()) return;
+        if (deneme++ === 0) { console.warn('[hoca-ara] klip yüklenemedi, yeniden deneniyor:', url); yukle(); } else coz(true);
+      };
+      el.ontimeupdate = () => { if (benim()) onT(el.currentTime); };
+      el.onended = () => { if (benim()) coz(true); };
+      el.onerror = hata;
+      el.src = deneme ? `${url}${url.includes('?') ? '&' : '?'}yd=${Date.now()}` : url;
+      el.play().catch((e) => {
+        if (!benim()) return;
+        if (e?.name === 'NotSupportedError') hata(); else if (e?.name !== 'AbortError') coz(true);
       });
     };
-    const hata = () => {
-      if (j !== jeton) return;
-      if (deneme++ === 0) { console.warn('[hoca-ara] klip yüklenemedi, yeniden deneniyor:', url); yukle(); } else coz(true);
-    };
-    ses.ontimeupdate = () => { if (j === jeton && ses) onT(ses.currentTime); };
-    ses.onended = () => { if (j === jeton) coz(true); };
-    ses.onerror = hata;
     yukle();
   });
 }
