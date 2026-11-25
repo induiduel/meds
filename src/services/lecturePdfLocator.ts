@@ -412,6 +412,18 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /11)Kolinoseptor-Aktive-Edici-ve-Kolinesteraz-Inhibitorleri.pdf', name: '11)Kolinoseptor-Aktive-Edici-ve-Kolinesteraz-Inhibitorleri.pdf', pages: 46, fileId: '1dQ63ClQywir4OzySRAjmYaCe-6nHGjND' } as SourceFile],
   },
+  // 2026-11-26 Antiepileptik İlaçlar (k2-25): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-25-antiepileptik-ilaclar': {
+    title: 'Antiepileptik İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /12)Antiepileptik İlaçlar.pdf', name: '12)Antiepileptik İlaçlar.pdf', pages: 106, fileId: '16jZRJS2lUoh9chjWd2O3T5roq3zw93Fu' } as SourceFile],
+  },
+  // 2026-11-26 Psikiyatrik Hastalıklar ve Genetik Analizi (k2-59): deste yok, okul PDF'i sanal desteyle bağlı.
+  'k2p-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi': {
+    title: 'Psikiyatrik Hastalıklar ve Genetik Analizi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Genetik/5)Psikiyatrik Hastalıklar ve Genetik Analiz.pdf', name: '5)Psikiyatrik Hastalıklar ve Genetik Analiz.pdf', pages: 78, fileId: '1QmjRjgp_i_9OIt-oZiXMWZX4BU6L7Gp1' } as SourceFile],
+  },
   // 2026-11-23 Davranış Genetiği (k2-52): deste yok, okul PDF'i sanal desteyle bağlı.
   'k2p-k2-52-davranis-genetigi': {
     title: 'Davranış Genetiği',

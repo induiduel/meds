@@ -1,0 +1,6106 @@
+{
+ "surum": 2,
+ "ders_id": "k2-59",
+ "anahtar": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+ "baslik": "Psikiyatrik Hastalıklar ve Genetik Analizi",
+ "bolumler": [
+  {
+   "id": "k2-59-b01",
+   "baslik": "Derse giriş",
+   "paragraflar": [
+    {
+     "id": "k2-59-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "ses": "Bu derste psikiyatrik hastalıkların genetik temelini ve bu temeli araştırmak için kullanılan genetik analiz yöntemlerini öğreneceğiz.",
+       "ekran": "Bu derste psikiyatrik hastalıkların genetik temelini ve bu temeli araştırmak için kullanılan genetik analiz yöntemlerini öğreneceğiz.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "genetik analiz yöntemlerini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Psikiyatrik Hastalıklar ve"
+        ]
+       },
+       "id": "k2-59-c0001"
+      },
+      {
+       "ses": "Önce araştırma yöntemlerini, sonra kişilik, duygudurum, şizofreni, bağımlılık, anksiyete ve yeme bozukluklarındaki genetik bulguları sırayla göreceğiz.",
+       "ekran": "Önce araştırma yöntemlerini, sonra kişilik, duygudurum, şizofreni, bağımlılık, anksiyete ve yeme bozukluklarındaki genetik bulguları sırayla göreceğiz.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Psikiyatrik Hastalıklar ve"
+        ]
+       },
+       "id": "k2-59-c0002"
+      },
+      {
+       "ses": "Sıra böyle kurulur, çünkü her hastalıktaki bulgu ikiz, aile, bağlantı ya da asosiyasyon çalışmalarından birinin sonucudur.",
+       "ekran": "Sıra böyle kurulur, çünkü her hastalıktaki bulgu ikiz, aile, bağlantı ya da asosiyasyon çalışmalarından birinin sonucudur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Psikiyatrik Hastalıklar ve"
+        ]
+       },
+       "id": "k2-59-c0003"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b02",
+   "baslik": "Psikiyatride genetik çalışmaların amacı",
+   "paragraflar": [
+    {
+     "id": "k2-59-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Psikiyatride genetik çalışmaların üç amacı vardır.",
+       "ekran": "Psikiyatride genetik çalışmaların üç amacı vardır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Psikiyatri alanında genetik çalışmaların amacı;"
+        ]
+       },
+       "id": "k2-59-c0004"
+      },
+      {
+       "ses": "Birincisi, genetik ve çevresel faktörlerin hastalığın etyolojisine, yani nedenlerine ne kadar katkı yaptığını belirlemektir.",
+       "ekran": "Birincisi, genetik ve çevresel faktörlerin hastalığın etyolojisine, yani nedenlerine ne kadar katkı yaptığını belirlemektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "etyolojisine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Genetik ve çevresel faktörlerin etyolojiye katkısını"
+        ]
+       },
+       "id": "k2-59-c0005"
+      },
+      {
+       "ses": "İkincisi, kalıtsal özelliği olan hastalıkların kalıtım kalıplarını ortaya koymaktır.",
+       "ekran": "İkincisi, kalıtsal özelliği olan hastalıkların kalıtım kalıplarını ortaya koymaktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalıtım kalıplarını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kalıtsal özelliği olan hastalıkların kalıtım kalıplarını"
+        ]
+       },
+       "id": "k2-59-c0006"
+      },
+      {
+       "ses": "Üçüncüsü, hastalıkla ilişkili aday genleri, mutasyonları ve polimorfizmleri tespit etmektir.",
+       "ekran": "Üçüncüsü, hastalıkla ilişkili aday genleri, mutasyonları ve polimorfizmleri tespit etmektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aday genleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hastalıkla ilişkili aday genleri, mutasyon ve polimorfizmleri"
+        ]
+       },
+       "id": "k2-59-c0007"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b03",
+   "baslik": "Genetik araştırma metotları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Genetik araştırma metotları üç ana grupta toplanır: genetik epidemiyolojik çalışmalar, sitogenetik çalışmalar ve moleküler genetik çalışmalar.",
+       "ekran": "Genetik araştırma metotları üç ana grupta toplanır: genetik epidemiyolojik çalışmalar, sitogenetik çalışmalar ve moleküler genetik çalışmalar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "genetik epidemiyolojik çalışmalar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b01"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Moleküler genetik çalışmalar → Linkage ve asosiyasyon"
+        ]
+       },
+       "id": "k2-59-c0008"
+      },
+      {
+       "ses": "Genetik epidemiyolojik çalışmalar popülasyon genetiğini ve aile çalışmalarını kapsar.",
+       "ekran": "Genetik epidemiyolojik çalışmalar popülasyon genetiğini ve aile çalışmalarını kapsar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "popülasyon genetiğini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b01"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Populasyon genetiği ve aile çalışmaları,"
+        ]
+       },
+       "id": "k2-59-c0009"
+      },
+      {
+       "ses": "Moleküler genetik çalışmaların içinde bağlantı yani linkage analizleri, asosiyasyon analizleri ve GWAS analizleri yer alır.",
+       "ekran": "Moleküler genetik çalışmaların içinde bağlantı yani linkage analizleri, asosiyasyon analizleri ve GWAS analizleri yer alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "linkage",
+         "tur": "terim"
+        },
+        {
+         "metin": "GWAS",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b01"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Moleküler genetik çalışmalar → Linkage ve asosiyasyon"
+        ]
+       },
+       "id": "k2-59-c0010"
+      },
+      {
+       "ses": "İkiz çalışmaları, asosiyasyon çalışmaları ve bağlantı analizinin davranış genetiğinde kullanılan yöntemler olduğu çıkmış sınavda soruldu.",
+       "ekran": "İkiz çalışmaları, asosiyasyon çalışmaları ve bağlantı analizinin davranış genetiğinde kullanılan yöntemler olduğu çıkmış sınavda soruldu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çıkmış sınavda soruldu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-17"
+       ],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b01"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Moleküler genetik çalışmalar → Linkage ve asosiyasyon"
+        ]
+       },
+       "id": "k2-59-c0011"
+      },
+      {
+       "ses": "Geçen yılın öğrencileri bu yöntem listesini en önemli yerler arasına aldı.",
+       "ekran": "Geçen yılın öğrencileri bu yöntem listesini en önemli yerler arasına aldı.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b01"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Genetik araştırmalarda sıklıkla kullanılan metotlar;"
+        ]
+       },
+       "id": "k2-59-c0012"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b04",
+   "baslik": "Psikiyatrik hastalıkların poligenik yapısı",
+   "paragraflar": [
+    {
+     "id": "k2-59-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Psikiyatrik hastalıklar poligeniktir, yani tek bir genle değil birçok genin katkısıyla ortaya çıkar.",
+       "ekran": "Psikiyatrik hastalıklar poligeniktir, yani tek bir genle değil birçok genin katkısıyla ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "poligeniktir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Psikiyatrik hastalıklar poligeniktir,"
+        ]
+       },
+       "id": "k2-59-c0013"
+      },
+      {
+       "ses": "İkiz çalışmalarına göre kalıtım riski yüzde kırk ile yüzde seksen arasındadır ve genetik varyantların katkısı bozukluktan bozukluğa değişir.",
+       "ekran": "İkiz çalışmalarına göre kalıtım riski yüzde kırk ile yüzde seksen arasındadır ve genetik varyantların katkısı bozukluktan bozukluğa değişir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde kırk ile yüzde seksen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "İkiz çalışmalarına göre kalıtım riski %40-80,"
+        ]
+       },
+       "id": "k2-59-c0014"
+      },
+      {
+       "ses": "Aile çalışmalarında birinci derece akrabadaki göreceli risk, yani RR, majör depresif bozuklukta bir virgül beştir.",
+       "ekran": "Aile çalışmalarında birinci derece akrabadaki göreceli risk, yani RR, majör depresif bozuklukta bir virgül beştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "göreceli risk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "hastaların birinci derece akrabalarında göreceli risk (RR) 1,5'tir."
+        ]
+       },
+       "id": "k2-59-c0015"
+      },
+      {
+       "ses": "Aynı göreceli risk şizofreni ve bipolar bozuklukta yedi, otizm spektrum bozukluklarında ise dokuzdur.",
+       "ekran": "Aynı göreceli risk şizofreni ve bipolar bozuklukta yedi, otizm spektrum bozukluklarında ise dokuzdur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "otizm spektrum bozukluklarında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Şizofreni (SCZ) ve bipolar bozukluk (BP) için RR 7 ve otizm"
+        ]
+       },
+       "id": "k2-59-c0016"
+      },
+      {
+       "ses": "Örneğin şizofrenili bir hastanın kardeşinde risk genel popülasyona göre yedi kat artarken, depresyonda artış yalnız bir buçuk kattır.",
+       "ekran": "Örneğin şizofrenili bir hastanın kardeşinde risk genel popülasyona göre yedi kat artarken, depresyonda artış yalnız bir buçuk kattır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Genel popülasyona kıyasla majör depresif bozukluğu (MDB) olan"
+        ]
+       },
+       "id": "k2-59-c0017"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b05",
+   "baslik": "Popülasyon çalışmaları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Popülasyon çalışmaları üç türdür: aile çalışmaları, ikiz çalışmaları ve evlat edinilenler üzerine yapılan çalışmalar.",
+       "ekran": "Popülasyon çalışmaları üç türdür: aile çalışmaları, ikiz çalışmaları ve evlat edinilenler üzerine yapılan çalışmalar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Popülasyon çalışmaları üç türdür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b02"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Evlat edilenler üzerine yapılan çalışmalar,"
+        ]
+       },
+       "id": "k2-59-c0018"
+      },
+      {
+       "ses": "Popülasyon çalışmalarının her türü genetik payı çevresel paydan ayırmak için farklı bir karşılaştırma kullanır.",
+       "ekran": "Popülasyon çalışmalarının her türü genetik payı çevresel paydan ayırmak için farklı bir karşılaştırma kullanır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b02"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Popülasyon Çalışmaları"
+        ]
+       },
+       "id": "k2-59-c0019"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b06",
+   "baslik": "Aile çalışmaları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Aile çalışmalarında hasta bireylerin akrabalarındaki risk, genel popülasyondaki riskle karşılaştırılır.",
+       "ekran": "Aile çalışmalarında hasta bireylerin akrabalarındaki risk, genel popülasyondaki riskle karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Aile çalışmalarında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Hasta olan bireylerin akrabalarındaki risk genel popülasyondaki"
+        ]
+       },
+       "id": "k2-59-c0020"
+      },
+      {
+       "ses": "Çalışmayı başlatan hasta bireye indeks vaka ya da proband denir.",
+       "ekran": "Çalışmayı başlatan hasta bireye indeks vaka ya da proband denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "proband",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Hasta bireyler indeks vaka ya da proband olarak adlandırılır."
+        ]
+       },
+       "id": "k2-59-c0021"
+      },
+      {
+       "ses": "Aile çalışmalarında tanının çok net konması gerekir ve sonuçlar morbid risk oranlarıyla, yani prevalansla ifade edilir.",
+       "ekran": "Aile çalışmalarında tanının çok net konması gerekir ve sonuçlar morbid risk oranlarıyla, yani prevalansla ifade edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "morbid risk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Tanı bu tip çalışmalarda çok net bir biçimde konmalıdır."
+        ]
+       },
+       "id": "k2-59-c0022"
+      },
+      {
+       "ses": "Aile çalışmaları özellikle şizofreni ve bipolar bozukluk araştırmalarında sık kullanılır.",
+       "ekran": "Aile çalışmaları özellikle şizofreni ve bipolar bozukluk araştırmalarında sık kullanılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Şizofreni ve bipolar bozukluk çalışmalarında sık kullanılan bir"
+        ]
+       },
+       "id": "k2-59-c0023"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b07",
+   "baslik": "İkiz çalışmaları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "İkiz çalışmaları, tek yumurta ikizi olan MZ ve çift yumurta ikizi olan DZ çiftlerindeki fenotipik uyumu karşılaştırarak kalıtsallığı tahmin eder.",
+       "ekran": "İkiz çalışmaları, tek yumurta ikizi olan MZ ve çift yumurta ikizi olan DZ çiftlerindeki fenotipik uyumu karşılaştırarak kalıtsallığı tahmin eder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fenotipik uyumu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "MZ ve DZ ikiz çiftleri arasındaki fenotipik uyumun varyansını"
+        ]
+       },
+       "id": "k2-59-c0024"
+      },
+      {
+       "ses": "Kalıtsallık şizofreni ve bipolar bozuklukta yaklaşık yüzde seksen, majör depresif bozuklukta ise yüzde kırk ile yüzde elli civarındadır.",
+       "ekran": "Kalıtsallık şizofreni ve bipolar bozuklukta yaklaşık yüzde seksen, majör depresif bozuklukta ise yüzde kırk ile yüzde elli civarındadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yaklaşık yüzde seksen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Psikiyatrik bozuklukların kalıtsal olduğunu, şizofreni ve bipolar"
+        ]
+       },
+       "id": "k2-59-c0025"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "İkiz çalışmalarında aynı ortamda yetişen ve ayrı ortamlarda yetişen MZ ikizler de karşılaştırılır.",
+       "ekran": "İkiz çalışmalarında aynı ortamda yetişen ve ayrı ortamlarda yetişen MZ ikizler de karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ayrı ortamlarda yetişen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Aynı ortamda yetişen ve ayrı ortamlarda yetişen MZ ikizlerle"
+        ]
+       },
+       "id": "k2-59-c0026"
+      },
+      {
+       "ses": "Birlikte büyüyen ikizler, MZ ya da DZ olsun, hemen hemen aynı çevresel etkenlere maruz kalmış kabul edilir.",
+       "ekran": "Birlikte büyüyen ikizler, MZ ya da DZ olsun, hemen hemen aynı çevresel etkenlere maruz kalmış kabul edilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "İkizler (MZ ya da DZ) beraber büyümüşse bu hemen hemen aynı"
+        ]
+       },
+       "id": "k2-59-c0027"
+      },
+      {
+       "ses": "İkiz çalışmaları ayrıca paylaşılan ailevi ortamı bireysel ortamla karşılaştırmaya olanak verir.",
+       "ekran": "İkiz çalışmaları ayrıca paylaşılan ailevi ortamı bireysel ortamla karşılaştırmaya olanak verir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "paylaşılan ailevi ortamı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "İkiz çalışmaları ile paylaşılan ailevi ortam ile bireysel ortam"
+        ]
+       },
+       "id": "k2-59-c0028"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "İkiz çalışmaları kalıtsallığı tahmin etmeye yardımcı olur, ancak kalıtsallığın kendisi de çevresel faktörlerden etkilenir.",
+       "ekran": "İkiz çalışmaları kalıtsallığı tahmin etmeye yardımcı olur, ancak kalıtsallığın kendisi de çevresel faktörlerden etkilenir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "İkiz çalışmaları hastalığın kalıtsallığını tahmin etmeye"
+        ]
+       },
+       "id": "k2-59-c0029"
+      },
+      {
+       "ses": "Genetik ve çevresel faktörler etkileşim içinde olduğu için psikiyatrik hastalıklar multifaktöriyel kabul edilir.",
+       "ekran": "Genetik ve çevresel faktörler etkileşim içinde olduğu için psikiyatrik hastalıklar multifaktöriyel kabul edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "multifaktöriyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Genetik ve çevresel faktörler etkileşim içerisindedir,"
+        ]
+       },
+       "id": "k2-59-c0030"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b08",
+   "baslik": "Evlat edinme çalışmaları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "ses": "Evlat edinme çalışmaları da genetik ve çevresel faktörleri ayırt etmede kullanılan uygun bir yöntemdir.",
+       "ekran": "Evlat edinme çalışmaları da genetik ve çevresel faktörleri ayırt etmede kullanılan uygun bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Evlat edinme çalışmaları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Evlat edinme çalışmaları da genetik ve çevresel faktörleri ayırt"
+        ]
+       },
+       "id": "k2-59-c0031"
+      },
+      {
+       "ses": "Evlat edinme çalışmalarında iki temel karşılaştırma yapılır.",
+       "ekran": "Evlat edinme çalışmalarında iki temel karşılaştırma yapılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Evlat edinme çalışmaları da genetik ve çevresel faktörleri ayırt"
+        ]
+       },
+       "id": "k2-59-c0032"
+      },
+      {
+       "ses": "Birincisinde hastalık riski, biyolojik ailesinde hastalık olan ve olmayan evlatlık çocuklar arasında karşılaştırılır.",
+       "ekran": "Birincisinde hastalık riski, biyolojik ailesinde hastalık olan ve olmayan evlatlık çocuklar arasında karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hastalık riski, biyolojik ailelerinde hastalık olan ve olmayan"
+        ]
+       },
+       "id": "k2-59-c0033"
+      },
+      {
+       "ses": "İkincisinde hasta evlatlık çocuğun biyolojik ebeveynleri ile onu evlat edinen ebeveynleri karşılaştırılır.",
+       "ekran": "İkincisinde hasta evlatlık çocuğun biyolojik ebeveynleri ile onu evlat edinen ebeveynleri karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "İkinci yol ise hasta olan evlatlık çocuğun, biyolojik ve evlat edinen"
+        ]
+       },
+       "id": "k2-59-c0034"
+      },
+      {
+       "ses": "Hastalık genetikse risk, biyolojik ailesinde hastalık olan ilk grupta daha fazla olur.",
+       "ekran": "Hastalık genetikse risk, biyolojik ailesinde hastalık olan ilk grupta daha fazla olur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk grupta daha fazla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hastalık genetikse risk ilk grupta daha fazla olacaktır."
+        ]
+       },
+       "id": "k2-59-c0035"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b09",
+   "baslik": "Sitogenetik çalışmalar",
+   "paragraflar": [
+    {
+     "id": "k2-59-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "ses": "Sitogenetik çalışmalar in situ hibridizasyon gibi tekniklerle genlerin hangi kromozom bandında yerleştiğini bulur.",
+       "ekran": "Sitogenetik çalışmalar in situ hibridizasyon gibi tekniklerle genlerin hangi kromozom bandında yerleştiğini bulur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "in situ hibridizasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "In situ hibridizasyon gibi teknikler kullanarak genlerin hangi"
+        ]
+       },
+       "id": "k2-59-c0036"
+      },
+      {
+       "ses": "Sitogenetik çalışmalar kromozomlardaki kırık noktaları üzerinden gen haritalaması yapar ve yapısal kromozom anomalilerini ortaya koyar.",
+       "ekran": "Sitogenetik çalışmalar kromozomlardaki kırık noktaları üzerinden gen haritalaması yapar ve yapısal kromozom anomalilerini ortaya koyar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Ayrıca hastalıkla ilgili kromozomlardaki yapısal anomalileri ortaya"
+        ]
+       },
+       "id": "k2-59-c0037"
+      },
+      {
+       "ses": "Sitogenetik çalışmaların tipik örnekleri Down, Turner ve Klinefelter sendromlarıdır.",
+       "ekran": "Sitogenetik çalışmaların tipik örnekleri Down, Turner ve Klinefelter sendromlarıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Down, Turner ve Klinefelter",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Tipik örneği; Down Sendromu, Turner sendromu, Klinefelter"
+        ]
+       },
+       "id": "k2-59-c0038"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b10",
+   "baslik": "Moleküler genetik çalışmalar",
+   "paragraflar": [
+    {
+     "id": "k2-59-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "ses": "Moleküler genetik çalışmaların amacı, bir fenotipin kalıtım kalıbını etkileyen aday genleri ve bu genlerdeki anormal işleyişin nedenini bulmaktır.",
+       "ekran": "Moleküler genetik çalışmaların amacı, bir fenotipin kalıtım kalıbını etkileyen aday genleri ve bu genlerdeki anormal işleyişin nedenini bulmaktır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Amaç; belirli bir fenotipin kalıtım kalıbını etkileyen ilişkili aday"
+        ]
+       },
+       "id": "k2-59-c0039"
+      },
+      {
+       "ses": "Moleküler genetik çalışmalarda gen haritalama yöntemi kullanılır ve kalıtım kalıbının net belirlenmesi önemlidir.",
+       "ekran": "Moleküler genetik çalışmalarda gen haritalama yöntemi kullanılır ve kalıtım kalıbının net belirlenmesi önemlidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gen haritalama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Burada kalıtım kalıbının net olarak belirlenmesi önemlidir,"
+        ]
+       },
+       "id": "k2-59-c0040"
+      },
+      {
+       "ses": "Kalıtım kalıbı en az üç kuşağı içeren bir pedigri, yani soy ağacı çizilerek belirlenir.",
+       "ekran": "Kalıtım kalıbı en az üç kuşağı içeren bir pedigri, yani soy ağacı çizilerek belirlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az üç kuşağı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Kalıtım kalıbı pedigri(en az 3 kuşak) çizilerek belirlenir,"
+        ]
+       },
+       "id": "k2-59-c0041"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b11",
+   "baslik": "Kalıtım kalıpları ve kalıtım riski",
+   "paragraflar": [
+    {
+     "id": "k2-59-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "ses": "Kalıtım kalıpları tek gen kalıtımı ve multigenik kalıtım olarak ikiye ayrılır.",
+       "ekran": "Kalıtım kalıpları tek gen kalıtımı ve multigenik kalıtım olarak ikiye ayrılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tek gen kalıtılan,"
+        ]
+       },
+       "id": "k2-59-c0042"
+      },
+      {
+       "ses": "Tek gen kalıtımı otozomal dominant, otozomal resesif, X'e bağlı resesif ya da X'e bağlı dominant olabilir.",
+       "ekran": "Tek gen kalıtımı otozomal dominant, otozomal resesif, X'e bağlı resesif ya da X'e bağlı dominant olabilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tek gen kalıtılan,"
+        ]
+       },
+       "id": "k2-59-c0043"
+      },
+      {
+       "ses": "Psikiyatrik hastalıklar genellikle Mendel kalıtımına uymaz; tek genli kalıtıma örnek olarak demans ve Huntington verilir.",
+       "ekran": "Psikiyatrik hastalıklar genellikle Mendel kalıtımına uymaz; tek genli kalıtıma örnek olarak demans ve Huntington verilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "demans ve Huntington",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tek genli kalıtıma örnek; Demans ve Huntington verilebilir,"
+        ]
+       },
+       "id": "k2-59-c0044"
+      },
+      {
+       "ses": "Kalıtım riski şizofreni ve bipolar bozuklukta yüzde seksen, majör depresyon ve panik bozuklukta yüzde kırktır.",
+       "ekran": "Kalıtım riski şizofreni ve bipolar bozuklukta yüzde seksen, majör depresyon ve panik bozuklukta yüzde kırktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde seksen",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Şizofreni ve bipolar bozukluk %80,"
+        ]
+       },
+       "id": "k2-59-c0045"
+      },
+      {
+       "ses": "Anksiyete bozukluğunda kalıtım riski yüzde otuz, alkolizmde ise yüzde altmıştır.",
+       "ekran": "Anksiyete bozukluğunda kalıtım riski yüzde otuz, alkolizmde ise yüzde altmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alkolizmde ise yüzde altmış",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Kalıtım riski;"
+        ]
+       },
+       "id": "k2-59-c0046"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b12",
+   "baslik": "Polimorfik varyasyonlar",
+   "paragraflar": [
+    {
+     "id": "k2-59-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "ses": "Polimorfik varyasyonların temeli gen yapısıdır: gen genetik bilgiyi taşır ve ekzonlarla intronlardan oluşur.",
+       "ekran": "Polimorfik varyasyonların temeli gen yapısıdır: gen genetik bilgiyi taşır ve ekzonlarla intronlardan oluşur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Gen→ Genetik bilgiyi taşır,"
+        ]
+       },
+       "id": "k2-59-c0047"
+      },
+      {
+       "ses": "Ekzonlardan protein ürünü oluşur, intronlardan ise protein ürünü oluşmaz.",
+       "ekran": "Ekzonlardan protein ürünü oluşur, intronlardan ise protein ürünü oluşmaz.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "intronlardan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Ekzonlar ve intronlardan oluşur,"
+        ]
+       },
+       "id": "k2-59-c0048"
+      },
+      {
+       "ses": "Mutasyon DNA dizisindeki değişikliktir; varyant, SNP, indel ve polimorfizm de aynı başlık altında sayılır.",
+       "ekran": "Mutasyon DNA dizisindeki değişikliktir; varyant, SNP, indel ve polimorfizm de aynı başlık altında sayılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mutasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Mutasyon→DNA dizisinde değişiklik,"
+        ]
+       },
+       "id": "k2-59-c0049"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b13",
+   "baslik": "Varyasyon türleri",
+   "paragraflar": [
+    {
+     "id": "k2-59-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "ses": "Mutasyon ile polimorfizm sıklıkla ayrılır: popülasyonda görülme sıklığı yüzde birin altındaysa mutasyon denir.",
+       "ekran": "Mutasyon ile polimorfizm sıklıkla ayrılır: popülasyonda görülme sıklığı yüzde birin altındaysa mutasyon denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde birin altındaysa mutasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Mutasyon popülasyonda görülme sıklığı < %1"
+        ]
+       },
+       "id": "k2-59-c0050"
+      },
+      {
+       "ses": "Popülasyonda görülme sıklığı yüzde birin üstünde olan değişikliğe ise polimorfizm denir.",
+       "ekran": "Popülasyonda görülme sıklığı yüzde birin üstünde olan değişikliğe ise polimorfizm denir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "polimorfizm denir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Polimorfizm popülasyonda görülme sıklığı > %1"
+        ]
+       },
+       "id": "k2-59-c0051"
+      },
+      {
+       "ses": "Genetik varyasyonları tespit ve ölçme yöntemlerinin gelişmesi, bireyler arasındaki farkları ve benzerlikleri çalışmayı mümkün kılmıştır.",
+       "ekran": "Genetik varyasyonları tespit ve ölçme yöntemlerinin gelişmesi, bireyler arasındaki farkları ve benzerlikleri çalışmayı mümkün kılmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "gelişmesi bireyler arasındaki farklılıkları ve benzerlikleri çalışmamıza"
+        ]
+       },
+       "id": "k2-59-c0052"
+      },
+      {
+       "ses": "Slayttaki tablo altı nesil belirteci sıralar: birinci nesil RFLP bin dokuz yüz seksende, ikinci nesil VNTR ya da minisatelit bin dokuz yüz seksen beşte kullanılmıştır.",
+       "ekran": "Slayttaki tablo altı nesil belirteci sıralar: birinci nesil RFLP bin dokuz yüz seksende, ikinci nesil VNTR ya da minisatelit bin dokuz yüz seksen beşte kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Birinci nesil   RFLP (restriction fragment length polymorphism)   1980"
+        ]
+       },
+       "id": "k2-59-c0053"
+      },
+      {
+       "ses": "Üçüncü nesil mikrosatelit ya da STR bin dokuz yüz seksen dokuzda, dördüncü nesil SNP iki binde kullanılmaya başlanmıştır.",
+       "ekran": "Üçüncü nesil mikrosatelit ya da STR bin dokuz yüz seksen dokuzda, dördüncü nesil SNP iki binde kullanılmaya başlanmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Üçüncü nesil    Microsatellite or STRP (Short Tandem Repeat       1989"
+        ]
+       },
+       "id": "k2-59-c0054"
+      },
+      {
+       "ses": "Beşinci nesil CNV yani kopya sayısı varyasyonu iki bin beşte, altıncı nesil tüm genom dizileme ise günümüzde kullanılır.",
+       "ekran": "Beşinci nesil CNV yani kopya sayısı varyasyonu iki bin beşte, altıncı nesil tüm genom dizileme ise günümüzde kullanılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tüm genom dizileme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Altıncı nesil   Whole Genome Sequencing                           günümüzde"
+        ]
+       },
+       "id": "k2-59-c0055"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "ses": "RFLP, restriksiyon enzimleriyle kesilen DNA parçalarının uzunluklarındaki farklılıktır.",
+       "ekran": "RFLP, restriksiyon enzimleriyle kesilen DNA parçalarının uzunluklarındaki farklılıktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "RFLP",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Restriksiyon enzimleri ile oluşturulan parça uzunluklarındaki farklılıklar"
+        ]
+       },
+       "id": "k2-59-c0056"
+      },
+      {
+       "ses": "VNTR yani minisatelit, bu slayta göre on beş ile yüz baz çifti uzunluğundadır ve genlerin içinde ya da arasında bulunabilir.",
+       "ekran": "VNTR yani minisatelit, bu slayta göre on beş ile yüz baz çifti uzunluğundadır ve genlerin içinde ya da arasında bulunabilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "15 veya 100 bp uzunluğunda, genlerin içinde veya arasında olabilirler"
+        ]
+       },
+       "id": "k2-59-c0057"
+      },
+      {
+       "ses": "STR yani mikrosatelit, kodlamayan bölgede yer alan, iki ile on baz çiftlik motiflerin ardışık tekrarlarından oluşan dizilerdir.",
+       "ekran": "STR yani mikrosatelit, kodlamayan bölgede yer alan, iki ile on baz çiftlik motiflerin ardışık tekrarlarından oluşan dizilerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kodlamayan bölgede",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Kodlamayan bölgede (junk DNA) olan, değişik motif ve uzunluklardaki (2- 10 bp)"
+        ]
+       },
+       "id": "k2-59-c0058"
+      },
+      {
+       "ses": "SNP, DNA dizisinde tek bir nükleotidin farklı olmasıdır ve insan genomunda yaklaşık her üç yüz baz çiftinde bir görülür.",
+       "ekran": "SNP, DNA dizisinde tek bir nükleotidin farklı olmasıdır ve insan genomunda yaklaşık her üç yüz baz çiftinde bir görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "her üç yüz baz çiftinde bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "DNA sekansında tek bir nükleotidin (A, T, C veya G) farklı olma durumu (insan"
+        ]
+       },
+       "id": "k2-59-c0059"
+      },
+      {
+       "ses": "CNV ise kopya sayısı varyasyonudur: her genden iki kopya beklenirken genomun büyük kesiminde genler farklı kopya sayısında bulunur.",
+       "ekran": "CNV ise kopya sayısı varyasyonudur: her genden iki kopya beklenirken genomun büyük kesiminde genler farklı kopya sayısında bulunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kopya sayısı varyasyonudur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "kopya olması beklenir, fakat DNA’nın büyük bir kesiminde genler farklı kopya"
+        ]
+       },
+       "id": "k2-59-c0060"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b14",
+   "baslik": "Ardışık tekrar dizileri",
+   "paragraflar": [
+    {
+     "id": "k2-59-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "ses": "Ardışık tekrar dizileri satellit, minisatellit ve mikrosatellit olarak üçe ayrılır; satellit DNA sentromerde yer alır.",
+       "ekran": "Ardışık tekrar dizileri satellit, minisatellit ve mikrosatellit olarak üçe ayrılır; satellit DNA sentromerde yer alır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sentromerde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "DNA’da ardışık tekrar dizileri,"
+        ]
+       },
+       "id": "k2-59-c0061"
+      },
+      {
+       "ses": "VNTR ve STR uzunlukları iki slaytta farklı verilir: önceki slaytta VNTR on beş ile yüz, STR iki ile on baz çiftidir.",
+       "ekran": "VNTR ve STR uzunlukları iki slaytta farklı verilir: önceki slaytta VNTR on beş ile yüz, STR iki ile on baz çiftidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "farklı verilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Satellit, minisatellit ve mikrosatellit,"
+        ]
+       },
+       "id": "k2-59-c0062"
+      },
+      {
+       "ses": "Ardışık tekrar slaytında ise VNTR dokuz ile seksen, STR bir ile altı baz çifti olarak yazılmıştır.",
+       "ekran": "Ardışık tekrar slaytında ise VNTR dokuz ile seksen, STR bir ile altı baz çifti olarak yazılmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "DNA’da ardışık tekrar dizileri,"
+        ]
+       },
+       "id": "k2-59-c0063"
+      },
+      {
+       "ses": "Tekrar dizileri bireysel farklılık gösterir; genomun yüzde doksan dokuz virgül dokuzu bütün insanlarda aynı, yalnız yüzde sıfır virgül biri farklıdır.",
+       "ekran": "Tekrar dizileri bireysel farklılık gösterir; genomun yüzde doksan dokuz virgül dokuzu bütün insanlarda aynı, yalnız yüzde sıfır virgül biri farklıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde sıfır virgül biri farklıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Bu diziler, bireysel farklılık gösterir,"
+        ]
+       },
+       "id": "k2-59-c0064"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b15",
+   "baslik": "Genetik belirteçler",
+   "paragraflar": [
+    {
+     "id": "k2-59-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "ses": "Genetik belirteçler RFLP, VNTR, mikrosatelit, SNP ve STR'dir.",
+       "ekran": "Genetik belirteçler RFLP, VNTR, mikrosatelit, SNP ve STR'dir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Genetik Belirteçler"
+        ]
+       },
+       "id": "k2-59-c0065"
+      },
+      {
+       "ses": "Slayttaki sayılara göre genomda yaklaşık on milyon SNP, buna karşılık yaklaşık on bin STR bulunur.",
+       "ekran": "Slayttaki sayılara göre genomda yaklaşık on milyon SNP, buna karşılık yaklaşık on bin STR bulunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "on milyon SNP",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "SNP (Single Nucleotide Polymorphism)_ 10.000.000"
+        ]
+       },
+       "id": "k2-59-c0066"
+      },
+      {
+       "ses": "Ortadaki şekilde SNP tek bir harf farkı olarak, mikrosatelit ise üç erkekte beş, altı ve yedi kez tekrarlayan bir dizi olarak gösterilir.",
+       "ekran": "Ortadaki şekilde SNP tek bir harf farkı olarak, mikrosatelit ise üç erkekte beş, altı ve yedi kez tekrarlayan bir dizi olarak gösterilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "SNP (Single Nucleotide Polymorphism)_ 10.000.000"
+        ]
+       },
+       "id": "k2-59-c0067"
+      },
+      {
+       "ses": "Yanlardaki tepe grafikleri, STR uzunluk farklarından elde edilen bireysel DNA profillerini gösterir.",
+       "ekran": "Yanlardaki tepe grafikleri, STR uzunluk farklarından elde edilen bireysel DNA profillerini gösterir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "STR (Short Tandem Repeat)_ 10.000"
+        ]
+       },
+       "id": "k2-59-c0068"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b16",
+   "baslik": "Parametrik ve parametrik olmayan analizler",
+   "paragraflar": [
+    {
+     "id": "k2-59-p019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "ses": "Varyasyonlar iki tür analizde kullanılır: model bağımlı yani parametrik analizler ve modelden bağımsız yani parametrik olmayan analizler.",
+       "ekran": "Varyasyonlar iki tür analizde kullanılır: model bağımlı yani parametrik analizler ve modelden bağımsız yani parametrik olmayan analizler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "parametrik olmayan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "birbirinden bağımsız olarak bir sonraki kuşağa             2. Modelden bağımsız analizler (Parametrik olmayan analizler):"
+        ]
+       },
+       "id": "k2-59-c0069"
+      },
+      {
+       "ses": "Parametrik analiz, kromozom yerleşimi kesin bilinen bir genetik göstergenin hastalıkla kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını gösterir.",
+       "ekran": "Parametrik analiz, kromozom yerleşimi kesin bilinen bir genetik göstergenin hastalıkla kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kuşaklar boyunca birlikte",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Kromozom yerleşimi kesin olarak bilinen bir genetik"
+        ]
+       },
+       "id": "k2-59-c0070"
+      },
+      {
+       "ses": "Aynı kromozomda birbirine çok yakın genlerin mayozda crossing over ile ayrılıp bağımsız kalıtılması çok zordur.",
+       "ekran": "Aynı kromozomda birbirine çok yakın genlerin mayozda crossing over ile ayrılıp bağımsız kalıtılması çok zordur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "crossing over",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Aynı kromozom üzerinde birbirine çok yakın yerleşimli"
+        ]
+       },
+       "id": "k2-59-c0071"
+      },
+      {
+       "ses": "Yakın genlerin yavru kuşağa daima birlikte aktarılmasına bağlantılı kalıtım yani linkage denir; tam bağlantıda gösterge aleli ve hastalık birlikte kalıtılır.",
+       "ekran": "Yakın genlerin yavru kuşağa daima birlikte aktarılmasına bağlantılı kalıtım yani linkage denir; tam bağlantıda gösterge aleli ve hastalık birlikte kalıtılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bağlantılı kalıtım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "daima birlikte aktarılırlar. Bu olaya bağlantılı kalıtım   Assosiyasyon analizlerinde hastalıkla genetik göstergenin"
+        ]
+       },
+       "id": "k2-59-c0072"
+      },
+      {
+       "ses": "Parametrik olmayan asosiyasyon analizinde kuşaklar arası birlikte kalıtım sınanmaz; hastalıkta rolü olabilecek aday genler belirlenir.",
+       "ekran": "Parametrik olmayan asosiyasyon analizinde kuşaklar arası birlikte kalıtım sınanmaz; hastalıkta rolü olabilecek aday genler belirlenir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "asosiyasyon analizinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "daima birlikte aktarılırlar. Bu olaya bağlantılı kalıtım   Assosiyasyon analizlerinde hastalıkla genetik göstergenin"
+        ]
+       },
+       "id": "k2-59-c0073"
+      },
+      {
+       "ses": "Asosiyasyon analizinde aday gendeki polimorfik değişikliğin aleli ile hastalık aleli arasında ilişki olup olmadığı araştırılır.",
+       "ekran": "Asosiyasyon analizinde aday gendeki polimorfik değişikliğin aleli ile hastalık aleli arasında ilişki olup olmadığı araştırılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b04"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ile hastalık aleli arasında ilişki olup olmadığı araştırılır"
+        ]
+       },
+       "id": "k2-59-c0074"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b17",
+   "baslik": "Genetik haritalama",
+   "paragraflar": [
+    {
+     "id": "k2-59-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "ses": "Genetik harita, genlerin kromozom üzerindeki sırasını ve rekombinasyon sıklığına göre aralarındaki yaklaşık uzaklığı verir.",
+       "ekran": "Genetik harita, genlerin kromozom üzerindeki sırasını ve rekombinasyon sıklığına göre aralarındaki yaklaşık uzaklığı verir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Genetik harita",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Genetik harita genlerin bir kromozom üzerindeki sırasını ve"
+        ]
+       },
+       "id": "k2-59-c0075"
+      },
+      {
+       "ses": "Genetik haritada yüzde birlik rekombinasyon bir harita birimine, yani bir sentimorgana eşittir.",
+       "ekran": "Genetik haritada yüzde birlik rekombinasyon bir harita birimine, yani bir sentimorgana eşittir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bir sentimorgana",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Genetik haritalarda %1’lik rekombinasyon 1 harita birimine, yani 1"
+        ]
+       },
+       "id": "k2-59-c0076"
+      },
+      {
+       "ses": "Birbirinden uzak iki gen arasındaki çift değiş tokuş saptanamadığı için uzak genlerin genetik uzaklığı güvenilir hesaplanamaz.",
+       "ekran": "Birbirinden uzak iki gen arasındaki çift değiş tokuş saptanamadığı için uzak genlerin genetik uzaklığı güvenilir hesaplanamaz.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çift değiş tokuş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Uzak lokalizasyonlu iki gen arasındaki çift değiş tokuşu saptanamaz;"
+        ]
+       },
+       "id": "k2-59-c0077"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b18",
+   "baslik": "Bağlantı (linkage) analizi",
+   "paragraflar": [
+    {
+     "id": "k2-59-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "ses": "Bağlantı analizinde bir hastalığın bilinen bir genetik markere bağlı olup olmadığı araştırılır ve LOD skoru kullanılır.",
+       "ekran": "Bağlantı analizinde bir hastalığın bilinen bir genetik markere bağlı olup olmadığı araştırılır ve LOD skoru kullanılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "LOD skoru",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "genetik markere bağlı olup olmadığı araştırılır,"
+        ]
+       },
+       "id": "k2-59-c0078"
+      },
+      {
+       "ses": "LOD skoru, bir genin belli bir kromozom bölgesinde bulunma olasılığının bulunmama olasılığına oranının logaritmasıdır.",
+       "ekran": "LOD skoru, bir genin belli bir kromozom bölgesinde bulunma olasılığının bulunmama olasılığına oranının logaritmasıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "logaritmasıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "LOD skoru; bir genin belli bir kromozom bölgesinde"
+        ]
+       },
+       "id": "k2-59-c0079"
+      },
+      {
+       "ses": "Slayttaki soy ağaçları, bir hastalığın kuşaklar boyunca izlendiği aileleri gösterir.",
+       "ekran": "Slayttaki soy ağaçları, bir hastalığın kuşaklar boyunca izlendiği aileleri gösterir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Bağlantı analizlerinde bir hastalığın bilinen bir"
+        ]
+       },
+       "id": "k2-59-c0080"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "ses": "LOD skoru üç ve üzerindeyse bağlantı desteklenir, negatif değerler ise o bölgede bağlantı olmadığını gösterir.",
+       "ekran": "LOD skoru üç ve üzerindeyse bağlantı desteklenir, negatif değerler ise o bölgede bağlantı olmadığını gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç ve üzerindeyse",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Negatif LOD değerleri, o kromozom bölgesinde bağlantı olmadığını"
+        ]
+       },
+       "id": "k2-59-c0081"
+      },
+      {
+       "ses": "LOD skoru eksi iki ve daha negatifse bağlantının kesin olarak olmadığı kabul edilir.",
+       "ekran": "LOD skoru eksi iki ve daha negatifse bağlantının kesin olarak olmadığı kabul edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eksi iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "-2 ve daha negatif değerler ise kesin olarak bağlantı yokluğunu"
+        ]
+       },
+       "id": "k2-59-c0082"
+      },
+      {
+       "ses": "Bağlantı analizi için kuşaklar arası kalıtımı izlenebilen ailelere, hasta ve sağlıklı kardeş çiftlerine ya da geniş aile ağaçlarına ihtiyaç vardır.",
+       "ekran": "Bağlantı analizi için kuşaklar arası kalıtımı izlenebilen ailelere, hasta ve sağlıklı kardeş çiftlerine ya da geniş aile ağaçlarına ihtiyaç vardır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Genellikle hasta olan ve sağlıklı kardeş çiftlerinin toplanmasını"
+        ]
+       },
+       "id": "k2-59-c0083"
+      },
+      {
+       "ses": "Huntington hastalığının patogenezindeki gen ve mutasyon bağlantı analiziyle bulunmuştur.",
+       "ekran": "Huntington hastalığının patogenezindeki gen ve mutasyon bağlantı analiziyle bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Huntington",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Bu yöntemle Huntington patogenezinde yer alan gen ve mutasyon"
+        ]
+       },
+       "id": "k2-59-c0084"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "ses": "Klasik bağlantı çalışmaları üç koşulda en iyi sonucu verir: belirli bir kalıtım şekli, tek gen ya da majör gen etkisi ve güvenilir tanı.",
+       "ekran": "Klasik bağlantı çalışmaları üç koşulda en iyi sonucu verir: belirli bir kalıtım şekli, tek gen ya da majör gen etkisi ve güvenilir tanı.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Tek gen ya da majör gen etkisi söz konusu ise,"
+        ]
+       },
+       "id": "k2-59-c0085"
+      },
+      {
+       "ses": "Çoğu psikiyatrik bozukluk bu ölçütlere uymadığı için bağlantı analiziyle sonuç almak güçtür.",
+       "ekran": "Çoğu psikiyatrik bozukluk bu ölçütlere uymadığı için bağlantı analiziyle sonuç almak güçtür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sonuç almak güçtür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Ancak çoğu psikiyatrik bozukluk bu ölçütlere uymaz ve"
+        ]
+       },
+       "id": "k2-59-c0086"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b19",
+   "baslik": "İlişki (asosiyasyon) çalışmaları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "ses": "Asosiyasyon yani ilişki çalışmalarında hastalık patogenezinde rol alan bir aday gen olması gerekir, ama kalıtım kalıbının belirlenmesi zorunlu değildir.",
+       "ekran": "Asosiyasyon yani ilişki çalışmalarında hastalık patogenezinde rol alan bir aday gen olması gerekir, ama kalıtım kalıbının belirlenmesi zorunlu değildir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aday gen olması gerekir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Bu çalışmalarda hastalık patogenezinde rol alan aday bir"
+        ]
+       },
+       "id": "k2-59-c0087"
+      },
+      {
+       "ses": "Asosiyasyon çalışmasında bir genin alelik varyantlarının sıklığı hasta ve kontrol gruplarında karşılaştırılır; bu tanım çıkmış sınavda soruldu.",
+       "ekran": "Asosiyasyon çalışmasında bir genin alelik varyantlarının sıklığı hasta ve kontrol gruplarında karşılaştırılır; bu tanım çıkmış sınavda soruldu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hasta ve kontrol",
+         "tur": "terim"
+        },
+        {
+         "metin": "çıkmış sınavda soruldu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2024-2025-h40a"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Bu yaklaşımda belli bir genin alelik varyantlarının hasta ve"
+        ]
+       },
+       "id": "k2-59-c0088"
+      },
+      {
+       "ses": "Asosiyasyonun bağlantı analizinden farkı, bağlantıda kalıtım şeklinin belli olması gerekirken asosiyasyonda aday genin yeterli olmasıdır.",
+       "ekran": "Asosiyasyonun bağlantı analizinden farkı, bağlantıda kalıtım şeklinin belli olması gerekirken asosiyasyonda aday genin yeterli olmasıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "genin olması gerekir,"
+        ]
+       },
+       "id": "k2-59-c0089"
+      },
+      {
+       "ses": "Alzheimer patogenezindeki ApoE geni asosiyasyon yöntemiyle bulunmuştur.",
+       "ekran": "Alzheimer patogenezindeki ApoE geni asosiyasyon yöntemiyle bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ApoE",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Bu yöntemle Alzheimer patogenezinde yer alan ApoE geni"
+        ]
+       },
+       "id": "k2-59-c0090"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "ses": "Hastalık örnekleri bölümünde yöntemlerden hastalıklara geçiyoruz ve her bozuklukta bu yöntemlerin ne bulduğunu göreceğiz.",
+       "ekran": "Hastalık örnekleri bölümünde yöntemlerden hastalıklara geçiyoruz ve her bozuklukta bu yöntemlerin ne bulduğunu göreceğiz.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": []
+       },
+       "id": "k2-59-c0091"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b20",
+   "baslik": "Kişilik bozuklukları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "ses": "Kişilik bozukluğu, hastanın sağlıksız bir düşünme, işleyiş ve davranış tarzına sahip olduğu bir zihinsel bozukluktur.",
+       "ekran": "Kişilik bozukluğu, hastanın sağlıksız bir düşünme, işleyiş ve davranış tarzına sahip olduğu bir zihinsel bozukluktur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Hastanın sağlıksız bir düşünme, işleyiş ve davranış tarzına"
+        ]
+       },
+       "id": "k2-59-c0092"
+      },
+      {
+       "ses": "Kişilik bozukluğu olan kişi durumları ve insanları algılamakta zorlanır; ilişkilerinde, sosyal yaşamında, iş ve okulda ciddi sorunlar yaşar.",
+       "ekran": "Kişilik bozukluğu olan kişi durumları ve insanları algılamakta zorlanır; ilişkilerinde, sosyal yaşamında, iş ve okulda ciddi sorunlar yaşar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Kişilik bozukluğu olan bir kişi, durumları ve insanları"
+        ]
+       },
+       "id": "k2-59-c0093"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "ses": "Kişilik bozukluklarının genetik çalışmaları esas olarak serotonerjik ve dopaminerjik sistemin enzim ve nörotransmitter genlerini hedefler.",
+       "ekran": "Kişilik bozukluklarının genetik çalışmaları esas olarak serotonerjik ve dopaminerjik sistemin enzim ve nörotransmitter genlerini hedefler.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kişilik bozuklukları ile ilgili genetik çalışmalar esas olarak seratonerjik"
+        ]
+       },
+       "id": "k2-59-c0094"
+      },
+      {
+       "ses": "A kümesi yani eksantrik ve B kümesi yani dramatik kişilik bozuklukları daha çok serotonin gen sistemiyle ilişkilidir.",
+       "ekran": "A kümesi yani eksantrik ve B kümesi yani dramatik kişilik bozuklukları daha çok serotonin gen sistemiyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serotonin gen sistemiyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Genel olarak A ve B kümesi kişilik bozuklukları serotonin gen sistemi,"
+        ]
+       },
+       "id": "k2-59-c0095"
+      },
+      {
+       "ses": "C kümesi yani endişeli kişilik bozuklukları ise daha çok dopaminerjik sistemle ilişkili bulunmuştur.",
+       "ekran": "C kümesi yani endişeli kişilik bozuklukları ise daha çok dopaminerjik sistemle ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dopaminerjik sistemle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "C kümesinde yer alan kişilik bozuklukları dopaminerjik sistem ile daha"
+        ]
+       },
+       "id": "k2-59-c0096"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b21",
+   "baslik": "Antisosyal kişilik bozukluğu",
+   "paragraflar": [
+    {
+     "id": "k2-59-p028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "ses": "Antisosyal kişilik bozukluğu, başkalarını önemsememe ve toplum kurallarına uymamayla giden sorumsuz ve agresif davranışlarla tanımlanır.",
+       "ekran": "Antisosyal kişilik bozukluğu, başkalarını önemsememe ve toplum kurallarına uymamayla giden sorumsuz ve agresif davranışlarla tanımlanır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Antisosyal kişilik bozukluğu başkalarına aldırış etmeme ve toplum"
+        ]
+       },
+       "id": "k2-59-c0097"
+      },
+      {
+       "ses": "Antisosyal kişilik bozukluğu olanlar sıklıkla ciddi suçlar işler ve davranışları için pişmanlık duymazlar.",
+       "ekran": "Antisosyal kişilik bozukluğu olanlar sıklıkla ciddi suçlar işler ve davranışları için pişmanlık duymazlar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Bu bozukluğu olan insanlar sıklıkla ciddi suçlar işler ve davranışları"
+        ]
+       },
+       "id": "k2-59-c0098"
+      },
+      {
+       "ses": "İkiz çalışmaları özellikle suç işlemiş hastalarda genetik yatkınlık olabileceğini düşündürmüştür.",
+       "ekran": "İkiz çalışmaları özellikle suç işlemiş hastalarda genetik yatkınlık olabileceğini düşündürmüştür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "İkiz çalışmaları özellikle suç işlemiş olan ASKB hastalarında"
+        ]
+       },
+       "id": "k2-59-c0099"
+      },
+      {
+       "ses": "Evlat edinme çalışmalarında biyolojik akrabası antisosyal olanların daha fazla antisosyal davranış gösterdiği bulunmuştur.",
+       "ekran": "Evlat edinme çalışmalarında biyolojik akrabası antisosyal olanların daha fazla antisosyal davranış gösterdiği bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "biyolojik akrabası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Evlat edinme çalışmalarında biyolojik akrabası ASKB olanların"
+        ]
+       },
+       "id": "k2-59-c0100"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "ses": "Antisosyal davranış, serotonin taşıyıcı geninin beş HTTLPR bölgesindeki ve MAO-A promotörünün tekrar dizilerindeki S alelleriyle ilişkili bulunmuştur.",
+       "ekran": "Antisosyal davranış, serotonin taşıyıcı geninin beş HTTLPR bölgesindeki ve MAO-A promotörünün tekrar dizilerindeki S alelleriyle ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "S alelleriyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "sayılarda tekrar dizilerindeki S alelleri antisosyal davranışlar ile"
+        ]
+       },
+       "id": "k2-59-c0101"
+      },
+      {
+       "ses": "MAO-A geninin X kromozomunda bulunması, antisosyal kişilik bozukluğunun erkeklerde daha sık görülmesinin nedeni olarak düşünülür.",
+       "ekran": "MAO-A geninin X kromozomunda bulunması, antisosyal kişilik bozukluğunun erkeklerde daha sık görülmesinin nedeni olarak düşünülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "X kromozomunda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "MAO-A geninin X kromozomunda bulunmasının antisosyal kişilik"
+        ]
+       },
+       "id": "k2-59-c0102"
+      },
+      {
+       "ses": "SNAP-yirmi beş proteinini kodlayan genin bazı varyantları erkek antisosyal hastalarda daha sık saptanmıştır.",
+       "ekran": "SNAP-yirmi beş proteinini kodlayan genin bazı varyantları erkek antisosyal hastalarda daha sık saptanmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "SNAP-yirmi beş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "bazı varyantları erkek antisosyal kişilik bozukluğu hastalarında daha"
+        ]
+       },
+       "id": "k2-59-c0103"
+      },
+      {
+       "ses": "Çekingen kişilik bozukluğunda beş HTTLPR ve DRD üç, obsesif kompulsif kişilik bozukluğunda DRD dört ve DRD üç değişiklikleri saptanmıştır.",
+       "ekran": "Çekingen kişilik bozukluğunda beş HTTLPR ve DRD üç, obsesif kompulsif kişilik bozukluğunda DRD dört ve DRD üç değişiklikleri saptanmıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DRD dört ve DRD üç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Çekingen kişilik bozukluğunda 5-HTTLPR ve DRD3 polimorfizmleri,"
+        ]
+       },
+       "id": "k2-59-c0104"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b22",
+   "baslik": "Kişilik bozuklukları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p030",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "ses": "Paranoid kişilik bozukluğunda CACNA bir C ve COMT genlerinin bazı alelleri paranoid fikirlerle ilişkili bulunmuştur.",
+       "ekran": "Paranoid kişilik bozukluğunda CACNA bir C ve COMT genlerinin bazı alelleri paranoid fikirlerle ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "CACNA bir C ve COMT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "alelleri paranoid fikirler ile ilişkili bulunmuştur"
+        ]
+       },
+       "id": "k2-59-c0105"
+      },
+      {
+       "ses": "Paranoid skorlarda beş HTTLPR kısa alel genotipi, MMPI ölçeğinde daha düşük paranoid skorlarla ilişkili bulunmuştur.",
+       "ekran": "Paranoid skorlarda beş HTTLPR kısa alel genotipi, MMPI ölçeğinde daha düşük paranoid skorlarla ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısa alel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "5-HTTLPR geninde kısa alel genotipi ise MMPI ölçeğinde daha düşük"
+        ]
+       },
+       "id": "k2-59-c0106"
+      },
+      {
+       "ses": "Borderline kişilik bozukluğu en çok araştırılan kişilik bozukluklarındandır ve TPH-bir ile TPH-iki izotipleri suisidal davranışla ilişkilidir.",
+       "ekran": "Borderline kişilik bozukluğu en çok araştırılan kişilik bozukluklarındandır ve TPH-bir ile TPH-iki izotipleri suisidal davranışla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "TPH-bir ile TPH-iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Borderline kişilik bozukluğu hakkında en çok araştırma yapılan kişilik"
+        ]
+       },
+       "id": "k2-59-c0107"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p031",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "ses": "Serotonin taşıyıcı geninin bazı alellerini taşıyanlarda travma sonrası duygusal sorun riski yüksek, strese tolerans düşüktür.",
+       "ekran": "Serotonin taşıyıcı geninin bazı alellerini taşıyanlarda travma sonrası duygusal sorun riski yüksek, strese tolerans düşüktür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Serotonin taşıyıcı genlerin belirli bazı alellerini taşıyan kişilerin"
+        ]
+       },
+       "id": "k2-59-c0108"
+      },
+      {
+       "ses": "Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmış, DRD iki geninin bazı alelleri de borderline özelliklerle ilişkili bulunmuştur.",
+       "ekran": "Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmış, DRD iki geninin bazı alelleri de borderline özelliklerle ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DRD iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Borderline kişilik bozukluğu tanısı konulan kişilerde MAO-A geni"
+        ]
+       },
+       "id": "k2-59-c0109"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b23",
+   "baslik": "Manik-depresif hastalık",
+   "paragraflar": [
+    {
+     "id": "k2-59-p032",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "ses": "Manik-depresif hastalıkta unipolar ve bipolar formlar ikiz verileriyle karşılaştırılır.",
+       "ekran": "Manik-depresif hastalıkta unipolar ve bipolar formlar ikiz verileriyle karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Manik-Depresif Hastalık"
+        ]
+       },
+       "id": "k2-59-c0110"
+      },
+      {
+       "ses": "Konkordans yani ikizler arasındaki hastalık uyumu, MZ ikizlerde unipolar formda yüzde seksen, bipolar formda yüzde elli ile yüzde altmış ikidir.",
+       "ekran": "Konkordans yani ikizler arasındaki hastalık uyumu, MZ ikizlerde unipolar formda yüzde seksen, bipolar formda yüzde elli ile yüzde altmış ikidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Konkordans",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Unipolar(UP) / Bipolar hastalık(BP)"
+        ]
+       },
+       "id": "k2-59-c0111"
+      },
+      {
+       "ses": "DZ ikiz konkordansı unipolar formda yüzde yirmi, bipolar formda yüzde sekiz ile yüzde ondur.",
+       "ekran": "DZ ikiz konkordansı unipolar formda yüzde yirmi, bipolar formda yüzde sekiz ile yüzde ondur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "DZ ikiz konkordansı %20 (UP)/ %8-10(BP)"
+        ]
+       },
+       "id": "k2-59-c0112"
+      },
+      {
+       "ses": "Kalıtılabilirlik unipolar formda yüzde otuz üç ile yüzde kırk iki, bipolar formda yüzde altmış ile yüzde seksendir ve bazı ailelerde antisipasyon görülür.",
+       "ekran": "Kalıtılabilirlik unipolar formda yüzde otuz üç ile yüzde kırk iki, bipolar formda yüzde altmış ile yüzde seksendir ve bazı ailelerde antisipasyon görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antisipasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "* Bazı ailelerde antisipasyon (+)"
+        ]
+       },
+       "id": "k2-59-c0113"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "ses": "Bipolar, unipolar ve şizoaffektif bozuklukta tekrarlama riski kardeşte yüzde yirmi ile yüzde otuzdur.",
+       "ekran": "Bipolar, unipolar ve şizoaffektif bozuklukta tekrarlama riski kardeşte yüzde yirmi ile yüzde otuzdur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Tekrarlama riski (bipolar, unipolar, şizoaffektif)"
+        ]
+       },
+       "id": "k2-59-c0114"
+      },
+      {
+       "ses": "Tek ebeveyn hastaysa çocukta risk yüzde yirmi yedi, iki ebeveyn hastaysa yüzde elli ile yüzde yetmiştir; ikinci derece akrabada ise yüzde beştir.",
+       "ekran": "Tek ebeveyn hastaysa çocukta risk yüzde yirmi yedi, iki ebeveyn hastaysa yüzde elli ile yüzde yetmiştir; ikinci derece akrabada ise yüzde beştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde elli ile yüzde yetmiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Çocuklar (tek ebeveyn hasta) → %27"
+        ]
+       },
+       "id": "k2-59-c0115"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p034",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "ses": "Bipolar bozuklukla ilişkili birçok kromozom bölgesi bildirilmiştir; dört pe on altı ve sekiz ku yirmi dört bunlardandır.",
+       "ekran": "Bipolar bozuklukla ilişkili birçok kromozom bölgesi bildirilmiştir; dört pe on altı ve sekiz ku yirmi dört bunlardandır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Manik-Depresif Hastalık-Genetik Faktörler"
+        ]
+       },
+       "id": "k2-59-c0116"
+      },
+      {
+       "ses": "Bipolar bozuklukta bildirilen başka bölgeler arasında on sekiz ku yirmi bir ve yirmi iki ku on iki de vardır.",
+       "ekran": "Bipolar bozuklukta bildirilen başka bölgeler arasında on sekiz ku yirmi bir ve yirmi iki ku on iki de vardır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Manik-Depresif Hastalık-Genetik Faktörler"
+        ]
+       },
+       "id": "k2-59-c0117"
+      },
+      {
+       "ses": "Kromozom on üç ku otuz üçteki G yetmiş iki ya da G otuz lokusu da bipolar bozuklukla ilişkili bölgeler arasındadır.",
+       "ekran": "Kromozom on üç ku otuz üçteki G yetmiş iki ya da G otuz lokusu da bipolar bozuklukla ilişkili bölgeler arasındadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "G yetmiş iki ya da G otuz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Manik-Depresif Hastalık-Genetik Faktörler"
+        ]
+       },
+       "id": "k2-59-c0118"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p035",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "ses": "Bipolar bozuklukta aday genler beş HTT, COMT ve BDNF'dir.",
+       "ekran": "Bipolar bozuklukta aday genler beş HTT, COMT ve BDNF'dir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BDNF",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Manik-Depresif Hastalık-Aday Genler (BD)"
+        ]
+       },
+       "id": "k2-59-c0119"
+      },
+      {
+       "ses": "GWAS çalışmalarıyla bipolar bozuklukta ANK üç ve L tipi voltaj bağımlı kalsiyum kanalının alfa bir C alt birimini kodlayan CACNA bir C bulunmuştur.",
+       "ekran": "GWAS çalışmalarıyla bipolar bozuklukta ANK üç ve L tipi voltaj bağımlı kalsiyum kanalının alfa bir C alt birimini kodlayan CACNA bir C bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalsiyum kanalının",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "CACNA1C (alpha 1C subunit of the L-type"
+        ]
+       },
+       "id": "k2-59-c0120"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b24",
+   "baslik": "Duygudurum bozuklukları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p036",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "ses": "Duygudurum, kişinin zaman içinde endişeli, öfkeli, mutsuz, neşeli, rahat, taşkın ya da çökkün bir hal içinde bulunmasıdır.",
+       "ekran": "Duygudurum, kişinin zaman içinde endişeli, öfkeli, mutsuz, neşeli, rahat, taşkın ya da çökkün bir hal içinde bulunmasıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "neşeli, rahat, taşkın veya çökkün bir hal içerisinde bulunmasıyla"
+        ]
+       },
+       "id": "k2-59-c0121"
+      },
+      {
+       "ses": "Duygudurum bozukluklarında birinci derece akraba riski unipolar bozuklukta iki ile on kat, bipolar bozuklukta sekiz ile on sekiz kat artar.",
+       "ekran": "Duygudurum bozukluklarında birinci derece akraba riski unipolar bozuklukta iki ile on kat, bipolar bozuklukta sekiz ile on sekiz kat artar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sekiz ile on sekiz kat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Unipolar bozukluğu olan kişilerin 1.derece akr risk 2-10 kat fazla,"
+        ]
+       },
+       "id": "k2-59-c0122"
+      },
+      {
+       "ses": "Duygudurum bozukluklarının aday genleri BDNF, MAO-A, COMT, hTPH iki ve serotonin taşıyıcı geni beş HTT'dir.",
+       "ekran": "Duygudurum bozukluklarının aday genleri BDNF, MAO-A, COMT, hTPH iki ve serotonin taşıyıcı geni beş HTT'dir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Aday genler; BDNF, MAO-A, COMT, hTPH2 ve serotonin taşıyıcı"
+        ]
+       },
+       "id": "k2-59-c0123"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p037",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "ses": "Duygudurum bozukluklarının ikiz çalışmalarında risk MZ ikizlerde yüzde altmış ile yüzde yetmiş, DZ ikizlerde yüzde yirmidir.",
+       "ekran": "Duygudurum bozukluklarının ikiz çalışmalarında risk MZ ikizlerde yüzde altmış ile yüzde yetmiş, DZ ikizlerde yüzde yirmidir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "İkiz çalışmalarında MZ ikizlerde risk %60-70, DZ ikizlerde ise %"
+        ]
+       },
+       "id": "k2-59-c0124"
+      },
+      {
+       "ses": "Bipolar ve unipolar depresyona benzer genler yatkınlık sağlar; iki bozukluk ayrı antiteden çok şiddeti farklı tablolar olarak görülür.",
+       "ekran": "Bipolar ve unipolar depresyona benzer genler yatkınlık sağlar; iki bozukluk ayrı antiteden çok şiddeti farklı tablolar olarak görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şiddeti farklı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Bipolar ve unipolar depresyona benzer genler yatkınlık sağlar ve bu"
+        ]
+       },
+       "id": "k2-59-c0125"
+      },
+      {
+       "ses": "Melankolik depresyon daha şiddetlidir ve non-melankolik depresyona göre daha fazla ailevi yatkınlık gösterir.",
+       "ekran": "Melankolik depresyon daha şiddetlidir ve non-melankolik depresyona göre daha fazla ailevi yatkınlık gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Melankolik depresyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Melankolik depresyonun şiddeti daha fazladır ve non-melankolik"
+        ]
+       },
+       "id": "k2-59-c0126"
+      },
+      {
+       "ses": "Majör depresyon ile genelleşmiş anksiyete bozukluğuna benzer genler yol açar, ancak çevresel risk faktörleri farklıdır.",
+       "ekran": "Majör depresyon ile genelleşmiş anksiyete bozukluğuna benzer genler yol açar, ancak çevresel risk faktörleri farklıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çevresel risk faktörleri farklıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "benzer genler yol açar ama farklı çevresel risk faktörleri söz"
+        ]
+       },
+       "id": "k2-59-c0127"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p038",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "ses": "Duygudurum bozukluklarının kalıtımı klasik Mendel kurallarına uymaz ve poligeniktir.",
+       "ekran": "Duygudurum bozukluklarının kalıtımı klasik Mendel kurallarına uymaz ve poligeniktir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Duygudurum bozukluklarının kalıtımı klasik mendeliyen kurallara uymaz,"
+        ]
+       },
+       "id": "k2-59-c0128"
+      },
+      {
+       "ses": "Bipolar bozuklukla ilişkili genler dördüncü, on ikinci ve on sekizinci kromozomlarda lokalizedir.",
+       "ekran": "Bipolar bozuklukla ilişkili genler dördüncü, on ikinci ve on sekizinci kromozomlarda lokalizedir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Bugüne kadar bipolar bozuklukla ilişkili genler 4, 12 ve 18. kromozomlarda"
+        ]
+       },
+       "id": "k2-59-c0129"
+      },
+      {
+       "ses": "Asosiyasyon çalışmalarındaki aday genler çoğunlukla monoamin sentezinde rol alan genler ya da reseptör genleridir.",
+       "ekran": "Asosiyasyon çalışmalarındaki aday genler çoğunlukla monoamin sentezinde rol alan genler ya da reseptör genleridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "monoamin sentezinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "sentezinde yer alan genler ya da duygudurum bozukluklarına neden"
+        ]
+       },
+       "id": "k2-59-c0130"
+      },
+      {
+       "ses": "D yirmi iki S iki yüz seksen bir ve D yirmi iki S altı yüz seksen beş markerları ile bipolar bozukluk arasında bağlantı saptanmıştır.",
+       "ekran": "D yirmi iki S iki yüz seksen bir ve D yirmi iki S altı yüz seksen beş markerları ile bipolar bozukluk arasında bağlantı saptanmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "D22S281 ile D22S685 markerları ile bipolar bozukluk arasında bağlantı"
+        ]
+       },
+       "id": "k2-59-c0131"
+      },
+      {
+       "ses": "D yirmi iki S iki yüz seksen bir ile D yirmi iki S altı yüz seksen beş markerlarının bulunduğu bölge şizofreniyle de ilişkilidir.",
+       "ekran": "D yirmi iki S iki yüz seksen bir ile D yirmi iki S altı yüz seksen beş markerlarının bulunduğu bölge şizofreniyle de ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şizofreniyle de ilişkilidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Bu bölge şizofreni ile de ilişkili bir bölgedir,"
+        ]
+       },
+       "id": "k2-59-c0132"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p039",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "ses": "İntihar davranışında serotonerjik nörotransmisyonun rolü bilinir ve triptofan hidroksilaz polimorfizmiyle ilişki vardır.",
+       "ekran": "İntihar davranışında serotonerjik nörotransmisyonun rolü bilinir ve triptofan hidroksilaz polimorfizmiyle ilişki vardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "triptofan hidroksilaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "İntihar davranışında serotonerjik nörotransmisyonun rolü biliniyor,"
+        ]
+       },
+       "id": "k2-59-c0133"
+      },
+      {
+       "ses": "Duygudurum bozukluklarında dopaminerjik mekanizmaların rolü de desteklenir; DRD üç geni bu yolağın aday genlerindendir.",
+       "ekran": "Duygudurum bozukluklarında dopaminerjik mekanizmaların rolü de desteklenir; DRD üç geni bu yolağın aday genlerindendir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Yapılan çalışmalar duygudurum bozukluklarında dopaminerjik"
+        ]
+       },
+       "id": "k2-59-c0134"
+      },
+      {
+       "ses": "COMT, dopamin ve noradrenalin gibi katekolaminleri yıkan bir enzim olduğu için bipolar bozukluk için aday gen olmuştur.",
+       "ekran": "COMT, dopamin ve noradrenalin gibi katekolaminleri yıkan bir enzim olduğu için bipolar bozukluk için aday gen olmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "katekolaminleri yıkan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Bu nedenle COMT enzimini kodlayan gen BP bozukluk için aday bir"
+        ]
+       },
+       "id": "k2-59-c0135"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p040",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "ses": "Dördüncü kromozomun kısa kolundaki DRD beş reseptör geni psikotik bozukluklarda aday gendir.",
+       "ekran": "Dördüncü kromozomun kısa kolundaki DRD beş reseptör geni psikotik bozukluklarda aday gendir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DRD beş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Krm 4p’de lokalize DRD5 reseptör geni psikotik"
+        ]
+       },
+       "id": "k2-59-c0136"
+      },
+      {
+       "ses": "Bipolar bozukluk için aday kromozom lokusları dört pe, on iki ku yirmi dört ve on sekiz ku on iki bölgeleridir.",
+       "ekran": "Bipolar bozukluk için aday kromozom lokusları dört pe, on iki ku yirmi dört ve on sekiz ku on iki bölgeleridir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Bipolar bozukluğa Aday krm lokuslar; 4p, 12q24, 18q12,"
+        ]
+       },
+       "id": "k2-59-c0137"
+      },
+      {
+       "ses": "Bipolar bozuklukta aday lokuslardan biri de yirminci kromozomdaki yirmi pe on bir nokta iki ile yirmi ku on bir nokta iki arasıdır.",
+       "ekran": "Bipolar bozuklukta aday lokuslardan biri de yirminci kromozomdaki yirmi pe on bir nokta iki ile yirmi ku on bir nokta iki arasıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Bipolar bozukluğa Aday krm lokuslar; 4p, 12q24, 18q12,"
+        ]
+       },
+       "id": "k2-59-c0138"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b25",
+   "baslik": "Şizofreni",
+   "paragraflar": [
+    {
+     "id": "k2-59-p041",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "ses": "Şizofrenide birinci derece akraba riski yüzde beş ile yüzde on, MZ ikizlerde yüzde elli, DZ ikizlerde yüzde ondur.",
+       "ekran": "Şizofrenide birinci derece akraba riski yüzde beş ile yüzde on, MZ ikizlerde yüzde elli, DZ ikizlerde yüzde ondur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MZ ikizlerde yüzde elli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Birinci derece akrabalardaki risk %5-10,"
+        ]
+       },
+       "id": "k2-59-c0139"
+      },
+      {
+       "ses": "Evlat edinme çalışmalarında biyolojik annesi şizofren olanlarda şizofreni, antisosyal kişilik bozukluğu ve nörotik rahatsızlık riski daha yüksek bulunmuştur.",
+       "ekran": "Evlat edinme çalışmalarında biyolojik annesi şizofren olanlarda şizofreni, antisosyal kişilik bozukluğu ve nörotik rahatsızlık riski daha yüksek bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Evlat edinme çalışmaları ise biyolojik anneleri şizofren olanların"
+        ]
+       },
+       "id": "k2-59-c0140"
+      },
+      {
+       "ses": "Şizofreni hastalarının biyolojik akrabalarında şizoaffektif bozukluk ve şizotipal kişilik bozukluğu gibi şizofreni spektrum bozuklukları daha sıktır.",
+       "ekran": "Şizofreni hastalarının biyolojik akrabalarında şizoaffektif bozukluk ve şizotipal kişilik bozukluğu gibi şizofreni spektrum bozuklukları daha sıktır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şizofreni spektrum bozuklukları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "(şizoaffektif bozukluk ve şizotipal kişilik bozukluğu) daha çok"
+        ]
+       },
+       "id": "k2-59-c0141"
+      },
+      {
+       "ses": "Hebefrenik ve katatonik şizofreni, paranoid şizofreniye göre daha fazla genetik yük taşır.",
+       "ekran": "Hebefrenik ve katatonik şizofreni, paranoid şizofreniye göre daha fazla genetik yük taşır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "daha fazla genetik yük",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "şizofreninin paranoid şizofreniye göre daha fazla genetik yük"
+        ]
+       },
+       "id": "k2-59-c0142"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p042",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "ses": "Şizofreninin yaşam boyu prevalansı genel popülasyonda yüzde sıfır virgül beş ile yüzde bir, birinci derece akrabalarda yüzde altı ile yüzde ondur.",
+       "ekran": "Şizofreninin yaşam boyu prevalansı genel popülasyonda yüzde sıfır virgül beş ile yüzde bir, birinci derece akrabalarda yüzde altı ile yüzde ondur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Birinci derece akrabalarda   % 6-10"
+        ]
+       },
+       "id": "k2-59-c0143"
+      },
+      {
+       "ses": "Şizofreni prevalansı MZ ikizlerde yüzde kırk beş ile yüzde elli beş, iki şizofren ebeveynin çocuklarında yüzde ellidir.",
+       "ekran": "Şizofreni prevalansı MZ ikizlerde yüzde kırk beş ile yüzde elli beş, iki şizofren ebeveynin çocuklarında yüzde ellidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde elli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "MZ ikizlerde                 % 45-55"
+        ]
+       },
+       "id": "k2-59-c0144"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p043",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "ses": "Şizofreni genetiğinde kalıtım biçimi bilinmez, fenotipik çeşitlilik ve lokus ya da alelik heterojenite vardır.",
+       "ekran": "Şizofreni genetiğinde kalıtım biçimi bilinmez, fenotipik çeşitlilik ve lokus ya da alelik heterojenite vardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alelik heterojenite",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Lokus ya da alelik heterojenite var    Dyspindin       Kromozom 6"
+        ]
+       },
+       "id": "k2-59-c0145"
+      },
+      {
+       "ses": "Şizofrenide penetrans tam değildir, yatkınlık lokusu sayısı fazladır, fenokopi denen çevresel etki ve gen çevre etkileşimi görülür.",
+       "ekran": "Şizofrenide penetrans tam değildir, yatkınlık lokusu sayısı fazladır, fenokopi denen çevresel etki ve gen çevre etkileşimi görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fenokopi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Genetik yatkınlık lokus sayısı fazla   G30/G72         Kromozom 13"
+        ]
+       },
+       "id": "k2-59-c0146"
+      },
+      {
+       "ses": "Slayttaki tabloya göre şizofreni genleri beş HT iki A, DRD üç, disbindin, nöregülin-bir, G otuz ya da G yetmiş iki ve kromozom yirmi ikideki COMT'tur.",
+       "ekran": "Slayttaki tabloya göre şizofreni genleri beş HT iki A, DRD üç, disbindin, nöregülin-bir, G otuz ya da G yetmiş iki ve kromozom yirmi ikideki COMT'tur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Lokus ya da alelik heterojenite var    Dyspindin       Kromozom 6"
+        ]
+       },
+       "id": "k2-59-c0147"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p044",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "ses": "Aile çalışmaları şizofreni ile duygudurum bozukluğunun ayrı kalıtıldığını göstermiştir.",
+       "ekran": "Aile çalışmaları şizofreni ile duygudurum bozukluğunun ayrı kalıtıldığını göstermiştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ayrı kalıtıldığını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Aile çalışmaları şizofreni ve duygu durum bozukluğunun"
+        ]
+       },
+       "id": "k2-59-c0148"
+      },
+      {
+       "ses": "Şizofreni kalıtımı klasik Mendel kalıtımına uymaz ve poligeniktir.",
+       "ekran": "Şizofreni kalıtımı klasik Mendel kalıtımına uymaz ve poligeniktir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Şizofreni kalıtımı klasik mendelyen kalıtıma uymaz,"
+        ]
+       },
+       "id": "k2-59-c0149"
+      },
+      {
+       "ses": "Şizofreniyle beş HT iki A reseptör polimorfizmi, COMT, dopamin üç reseptörü ve D yirmi iki S iki yüz seksen üç yatkınlık lokusu ilişkilidir.",
+       "ekran": "Şizofreniyle beş HT iki A reseptör polimorfizmi, COMT, dopamin üç reseptörü ve D yirmi iki S iki yüz seksen üç yatkınlık lokusu ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "COMT ve dopamine 3 reseptörü ilişkili,"
+        ]
+       },
+       "id": "k2-59-c0150"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p045",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "ses": "Şizofrenide çevresel faktörler birinci ve ikinci kuşak göçmenlik, şehir yaşamı, kış ya da ilkbaharda doğmuş olma ve ileri baba yaşıdır.",
+       "ekran": "Şizofrenide çevresel faktörler birinci ve ikinci kuşak göçmenlik, şehir yaşamı, kış ya da ilkbaharda doğmuş olma ve ileri baba yaşıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ileri baba yaşıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Kış yada ilkbaharda doğmuş olma"
+        ]
+       },
+       "id": "k2-59-c0151"
+      },
+      {
+       "ses": "Prenatal obstetrik komplikasyonlar, ergenlikte madde bağımlılığı, ebeveyn işsizliği ve düşük sosyoekonomik durum da şizofreni için çevresel faktörlerdir.",
+       "ekran": "Prenatal obstetrik komplikasyonlar, ergenlikte madde bağımlılığı, ebeveyn işsizliği ve düşük sosyoekonomik durum da şizofreni için çevresel faktörlerdir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Parental işsizlik ve düşük sosyoekonomik durum"
+        ]
+       },
+       "id": "k2-59-c0152"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p046",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "ses": "Şizofreni aile çalışmalarında kardeş riski yüzde sekiz ile yüzde on dört, tek ebeveyn hastaysa çocuk riski yüzde dokuz ile yüzde on altıdır.",
+       "ekran": "Şizofreni aile çalışmalarında kardeş riski yüzde sekiz ile yüzde on dört, tek ebeveyn hastaysa çocuk riski yüzde dokuz ile yüzde on altıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Çocuklar (tek ebeveyn hasta) →%9-16"
+        ]
+       },
+       "id": "k2-59-c0153"
+      },
+      {
+       "ses": "İki ebeveyn hastaysa çocuk riski yüzde otuz dört ile yüzde kırk altı, ebeveyn riski ise yüzde dokuzdur.",
+       "ekran": "İki ebeveyn hastaysa çocuk riski yüzde otuz dört ile yüzde kırk altı, ebeveyn riski ise yüzde dokuzdur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde otuz dört ile yüzde kırk altı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Çocuklar (tek ebeveyn hasta) →%9-16"
+        ]
+       },
+       "id": "k2-59-c0154"
+      },
+      {
+       "ses": "Şizofrenide ikinci derece akrabada risk yüzde üç, üçüncü derece akrabada yüzde bir virgül beştir.",
+       "ekran": "Şizofrenide ikinci derece akrabada risk yüzde üç, üçüncü derece akrabada yüzde bir virgül beştir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Üçüncü derece akrabalar → %1.5"
+        ]
+       },
+       "id": "k2-59-c0155"
+      },
+      {
+       "ses": "Hastanın erken başlangıçlı olması da akrabalardaki riski etkileyen etken olarak verilir.",
+       "ekran": "Hastanın erken başlangıçlı olması da akrabalardaki riski etkileyen etken olarak verilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "hasta ± erken başlangıç → risk"
+        ]
+       },
+       "id": "k2-59-c0156"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p047",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "ses": "Şizofreni ikiz çalışmalarında MZ konkordansı yüzde elli üç, DZ konkordansı yüzde on beş, kalıtılabilirlik ise yüzde seksen beştir.",
+       "ekran": "Şizofreni ikiz çalışmalarında MZ konkordansı yüzde elli üç, DZ konkordansı yüzde on beş, kalıtılabilirlik ise yüzde seksen beştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde seksen beş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "MZ ikiz konkordansı →%53"
+        ]
+       },
+       "id": "k2-59-c0157"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p048",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "ses": "Şizofrenide genom taraması çalışmaları bir ku yirmi bir ile bir ku yirmi iki ve altı pe yirmi dört ile altı pe yirmi iki arasındaki bölgeleri göstermiştir.",
+       "ekran": "Şizofrenide genom taraması çalışmaları bir ku yirmi bir ile bir ku yirmi iki ve altı pe yirmi dört ile altı pe yirmi iki arasındaki bölgeleri göstermiştir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "“Genom-scan” çalışmalar;"
+        ]
+       },
+       "id": "k2-59-c0158"
+      },
+      {
+       "ses": "Genom taramasında on üç ku otuz iki ile on üç ku otuz dört arası da şizofreniyle ilişkili bulunmuştur.",
+       "ekran": "Genom taramasında on üç ku otuz iki ile on üç ku otuz dört arası da şizofreniyle ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Şizofreni-Genetik Faktörler"
+        ]
+       },
+       "id": "k2-59-c0159"
+      },
+      {
+       "ses": "Şizofreni yatkınlık genleri bir ku, iki ku, altı pe, sekiz pe, on üç ku ve yirmi iki ku gibi birçok kromozom bölgesine dağılmıştır.",
+       "ekran": "Şizofreni yatkınlık genleri bir ku, iki ku, altı pe, sekiz pe, on üç ku ve yirmi iki ku gibi birçok kromozom bölgesine dağılmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Yatkınlık genleri; 1q, 2q, 3p, 5q, 6p, 8p, 11q, 13q, 14p, 20q,"
+        ]
+       },
+       "id": "k2-59-c0160"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p049",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "ses": "Şizofreninin bağlantı çalışmalarından gelen beş aday geninden DTNBP bir altıncı, NRG bir sekizinci kromozomun kısa kolundadır.",
+       "ekran": "Şizofreninin bağlantı çalışmalarından gelen beş aday geninden DTNBP bir altıncı, NRG bir sekizinci kromozomun kısa kolundadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DTNBP bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Şizofreni-Aday Genler (Linkage çalışmaları)"
+        ]
+       },
+       "id": "k2-59-c0161"
+      },
+      {
+       "ses": "DISC bir birinci, G yetmiş iki ya da G otuz on üçüncü, COMT ise yirmi ikinci kromozomun uzun kolundadır.",
+       "ekran": "DISC bir birinci, G yetmiş iki ya da G otuz on üçüncü, COMT ise yirmi ikinci kromozomun uzun kolundadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DISC bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "COMT (catechol-O-methyl-transferase) → 22q"
+        ]
+       },
+       "id": "k2-59-c0162"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p050",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "ses": "Şizofreni GWAS çalışmalarında beş yüz kilobazdan büyük delesyonlar seyrek ama penetran kopya sayısı varyasyonları olarak bulunmuştur.",
+       "ekran": "Şizofreni GWAS çalışmalarında beş yüz kilobazdan büyük delesyonlar seyrek ama penetran kopya sayısı varyasyonları olarak bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "seyrek ama penetran",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Kopya sayısı varyasyonu→ >500kb delesyonlar(seyrek, ancak penetran)"
+        ]
+       },
+       "id": "k2-59-c0163"
+      },
+      {
+       "ses": "Şizofreni, altıncı kromozomun kısa kolundaki HLA bölgesiyle, yani MHC ve C dört ile ilişkilidir.",
+       "ekran": "Şizofreni, altıncı kromozomun kısa kolundaki HLA bölgesiyle, yani MHC ve C dört ile ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "HLA bölgesiyle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "HLA bölgesiyle (6p21.3-6p22.1) ilişki tanımlanmış (MHC →C4)."
+        ]
+       },
+       "id": "k2-59-c0164"
+      },
+      {
+       "ses": "HLA bölgesiyle ilişki, şizofrenide immün sistemin rolünü düşündürür.",
+       "ekran": "HLA bölgesiyle ilişki, şizofrenide immün sistemin rolünü düşündürür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "immün sistemin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "HLA bölgesiyle (6p21.3-6p22.1) ilişki tanımlanmış (MHC →C4)."
+        ]
+       },
+       "id": "k2-59-c0165"
+      },
+      {
+       "ses": "Beyin gelişimi, biliş ve hafızayla ilgili NRGN ve TCF dört genlerine yakın varyantlarla güçlü ilişki bildirilmiştir.",
+       "ekran": "Beyin gelişimi, biliş ve hafızayla ilgili NRGN ve TCF dört genlerine yakın varyantlarla güçlü ilişki bildirilmiştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "NRGN ve TCF dört",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "NRGN ve TCF4 genlerine yakın varyantlarla güçlü ilişki bildirilmiş."
+        ]
+       },
+       "id": "k2-59-c0166"
+      },
+      {
+       "ses": "ZNF sekiz yüz dört A bir çinko parmak transkripsiyon faktörüdür; risk varyantı taşıyanlarda hipokampus ile dorsolateral prefrontal korteks arasında anormal bağlantı görülür.",
+       "ekran": "ZNF sekiz yüz dört A bir çinko parmak transkripsiyon faktörüdür; risk varyantı taşıyanlarda hipokampus ile dorsolateral prefrontal korteks arasında anormal bağlantı görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ZNF sekiz yüz dört A",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "hippokampus formasyonu ile dorsolateral prefrontal korteks"
+        ]
+       },
+       "id": "k2-59-c0167"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p051",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "ses": "Şizofreniyle ilişkili submikroskobik aberasyonlardan yirmi iki ku on bir nokta iki delesyonu şizofreni riskini yüzde yirmi beşe kadar çıkarır.",
+       "ekran": "Şizofreniyle ilişkili submikroskobik aberasyonlardan yirmi iki ku on bir nokta iki delesyonu şizofreni riskini yüzde yirmi beşe kadar çıkarır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yirmi iki ku on bir nokta iki delesyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "22q11.2 delesyonu (%25 ‘e kadar şizofreni riski)"
+        ]
+       },
+       "id": "k2-59-c0168"
+      },
+      {
+       "ses": "Diğer mikrodelesyonlar bir ku yirmi bir nokta bir, iki pe on altı nokta üç ve on beş ku on bir nokta iki bölgelerindedir.",
+       "ekran": "Diğer mikrodelesyonlar bir ku yirmi bir nokta bir, iki pe on altı nokta üç ve on beş ku on bir nokta iki bölgelerindedir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Mikrodelesyonlar; 1q21.1, 2p16.3, 15q11.2, 15q13.3"
+        ]
+       },
+       "id": "k2-59-c0169"
+      },
+      {
+       "ses": "Şizofreniyle ilişkili bir başka mikrodelesyon on beş ku on üç nokta üç, mikroduplikasyon ise on beş ku on üç nokta bir bölgesindedir.",
+       "ekran": "Şizofreniyle ilişkili bir başka mikrodelesyon on beş ku on üç nokta üç, mikroduplikasyon ise on beş ku on üç nokta bir bölgesindedir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Şizofreni-Submikroskobik Kromozomal"
+        ]
+       },
+       "id": "k2-59-c0170"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b26",
+   "baslik": "Endofenotipler",
+   "paragraflar": [
+    {
+     "id": "k2-59-p052",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "ses": "Endofenotipler, poligenik hastalıklarda genetik riski temsil ettiği varsayılan objektif, kalıtsal ve ölçülebilir biyolojik belirteçlerdir.",
+       "ekran": "Endofenotipler, poligenik hastalıklarda genetik riski temsil ettiği varsayılan objektif, kalıtsal ve ölçülebilir biyolojik belirteçlerdir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Endofenotipler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Poligenetik hastalıklar için genetik riski temsil ettiği varsayılan"
+        ]
+       },
+       "id": "k2-59-c0171"
+      },
+      {
+       "ses": "Endofenotipler nörobilişsel, nörogelişimsel, metabolik ve nörofizyolojik alanlarda incelenir.",
+       "ekran": "Endofenotipler nörobilişsel, nörogelişimsel, metabolik ve nörofizyolojik alanlarda incelenir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Nörobilişsel, nörogelişimsel, metabolizma ve nörofizyoloji alanları"
+        ]
+       },
+       "id": "k2-59-c0172"
+      },
+      {
+       "ses": "Endofenotipler belirtiler başlamadan önce biyolojik yatkınlığı gösterdiği için erken risk tespitine yarar.",
+       "ekran": "Endofenotipler belirtiler başlamadan önce biyolojik yatkınlığı gösterdiği için erken risk tespitine yarar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "erken risk tespitine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Erken Risk Tespiti: Hastalık belirtileri henüz ortaya çıkmadan önce"
+        ]
+       },
+       "id": "k2-59-c0173"
+      },
+      {
+       "ses": "Hastalanmamış ama aynı genetik havuzu paylaşan kardeşlerde de görülebildikleri için endofenotipler genetik riski çevresel etkiden ayırmayı kolaylaştırır.",
+       "ekran": "Hastalanmamış ama aynı genetik havuzu paylaşan kardeşlerde de görülebildikleri için endofenotipler genetik riski çevresel etkiden ayırmayı kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kardeşlerde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "aynı genetik havuzu paylaşan sağlıklı kardeşlerde de endofenotipler"
+        ]
+       },
+       "id": "k2-59-c0174"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b27",
+   "baslik": "Alkol ve madde bağımlılığı",
+   "paragraflar": [
+    {
+     "id": "k2-59-p053",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "ses": "Alkolik ailelerde alkolizm riski normal ailelere göre dört kat fazladır ve MZ ikizlerde risk DZ ikizlerin iki katıdır.",
+       "ekran": "Alkolik ailelerde alkolizm riski normal ailelere göre dört kat fazladır ve MZ ikizlerde risk DZ ikizlerin iki katıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört kat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "MZ ikizlerde DZ ikizlere göre risk 2 kat daha fazladır,"
+        ]
+       },
+       "id": "k2-59-c0175"
+      },
+      {
+       "ses": "Ailesinde alkolizm olanlarda başlama yaşı daha genç, bağımlılık daha ağır ve antisosyal kişilik özellikleri daha sıktır.",
+       "ekran": "Ailesinde alkolizm olanlarda başlama yaşı daha genç, bağımlılık daha ağır ve antisosyal kişilik özellikleri daha sıktır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "göre daha genç, bağımlılık daha ağır ve antisosyal kişilik gösterme"
+        ]
+       },
+       "id": "k2-59-c0176"
+      },
+      {
+       "ses": "Alkolizmden sorumlu tek bir gen yoktur.",
+       "ekran": "Alkolizmden sorumlu tek bir gen yoktur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tek bir gen yoktur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Alkolizmden sorumlu tek bir gen yok,"
+        ]
+       },
+       "id": "k2-59-c0177"
+      },
+      {
+       "ses": "Bazı genler tüketilen alkol miktarına katkı yapar; örneğin alkol dehidrogenazın hızlı ve yavaş metabolize eden polimorfizmleri vardır.",
+       "ekran": "Bazı genler tüketilen alkol miktarına katkı yapar; örneğin alkol dehidrogenazın hızlı ve yavaş metabolize eden polimorfizmleri vardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alkol dehidrogenazın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Bazı genler tüketilen alkol miktarına katkıda bulunurken (alkol"
+        ]
+       },
+       "id": "k2-59-c0178"
+      },
+      {
+       "ses": "Diğer genler alkol bağımlılığına ya da alkolle ilgili hastalıklara duyarlılığı etkiler.",
+       "ekran": "Diğer genler alkol bağımlılığına ya da alkolle ilgili hastalıklara duyarlılığı etkiler.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Diğerleri alkol bağımlılığına ya da alkolle ilgili hastalıklara"
+        ]
+       },
+       "id": "k2-59-c0179"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p054",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "ses": "Alkol bağımlılığıyla serotonerjik yolak genleri, yani TPH ile beş HT iki A ve beş HT iki C reseptör genleri ilişkilidir.",
+       "ekran": "Alkol bağımlılığıyla serotonerjik yolak genleri, yani TPH ile beş HT iki A ve beş HT iki C reseptör genleri ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Serotonerjik yolaklardaki genler alkol bağımlılığı ile ilişkili,"
+        ]
+       },
+       "id": "k2-59-c0180"
+      },
+      {
+       "ses": "Alkol etkisini mezolimbik dopamin sistemini aktive ederek gösterdiği için dopamin reseptör alt tipleri de aday gen olmuştur.",
+       "ekran": "Alkol etkisini mezolimbik dopamin sistemini aktive ederek gösterdiği için dopamin reseptör alt tipleri de aday gen olmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mezolimbik dopamin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "gösterdiği düşünüldüğünde dopamin reseptör alt tipleri aday genler"
+        ]
+       },
+       "id": "k2-59-c0181"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b28",
+   "baslik": "Bağımlılık",
+   "paragraflar": [
+    {
+     "id": "k2-59-p055",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "ses": "Bağımlılıkta genetik etkiler kadın ve erkekte benzerdir, ancak bağımlılık erkeklerde kültürel normlar nedeniyle iki kattan fazla görülür.",
+       "ekran": "Bağımlılıkta genetik etkiler kadın ve erkekte benzerdir, ancak bağımlılık erkeklerde kültürel normlar nedeniyle iki kattan fazla görülür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Genetik etkiler kadın ve erkekte benzer"
+        ]
+       },
+       "id": "k2-59-c0182"
+      },
+      {
+       "ses": "Bağımlılıkta yaşla birlikte genetik etkiler artarken paylaşılan aile çevresinin etkisi azalır.",
+       "ekran": "Bağımlılıkta yaşla birlikte genetik etkiler artarken paylaşılan aile çevresinin etkisi azalır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "genetik etkiler artarken",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Yaşla birlikte genetik etkiler artarken, paylaşılan ailesel"
+        ]
+       },
+       "id": "k2-59-c0183"
+      },
+      {
+       "ses": "Bağımlılık riski aynı aile bireyleri arasında artmıştır.",
+       "ekran": "Bağımlılık riski aynı aile bireyleri arasında artmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Aynı aile bireyleri arasında artmış risk"
+        ]
+       },
+       "id": "k2-59-c0184"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p056",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "ses": "Kalıtılabilirlik oranları kokainde sıfır virgül yetmiş iki, kumarda sıfır virgül elli, alkol ve sigarada sıfır virgül elli ile sıfır virgül altmış arasındadır.",
+       "ekran": "Kalıtılabilirlik oranları kokainde sıfır virgül yetmiş iki, kumarda sıfır virgül elli, alkol ve sigarada sıfır virgül elli ile sıfır virgül altmış arasındadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kokainde sıfır virgül yetmiş iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Kalıtılabilirlik oranları"
+        ]
+       },
+       "id": "k2-59-c0185"
+      },
+      {
+       "ses": "Kalıtılabilirlik kannabiste sıfır virgül kırk ile sıfır virgül elli, halüsinojenlerde sıfır virgül otuz dokuzdur ve çalışmalar çoğunlukla beyaz popülasyonda yapılmıştır.",
+       "ekran": "Kalıtılabilirlik kannabiste sıfır virgül kırk ile sıfır virgül elli, halüsinojenlerde sıfır virgül otuz dokuzdur ve çalışmalar çoğunlukla beyaz popülasyonda yapılmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Çalışmalar genellikle beyaz popülasyonda yapılmış!"
+        ]
+       },
+       "id": "k2-59-c0186"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b29",
+   "baslik": "Alkol bağımlılığı aday genler",
+   "paragraflar": [
+    {
+     "id": "k2-59-p057",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "ses": "Alkol bağımlılığının aday genleri ardışık çalışan iki enzimi kodlar: alkol dehidrogenaz bir B yani ADH bir B ve aldehit dehidrogenaz iki yani ALDH iki.",
+       "ekran": "Alkol bağımlılığının aday genleri ardışık çalışan iki enzimi kodlar: alkol dehidrogenaz bir B yani ADH bir B ve aldehit dehidrogenaz iki yani ALDH iki.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ADH bir B",
+         "tur": "terim"
+        },
+        {
+         "metin": "ALDH iki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Alkol Bağımlılığı Aday Genler"
+        ]
+       },
+       "id": "k2-59-c0187"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b30",
+   "baslik": "Flushing reaksiyonu",
+   "paragraflar": [
+    {
+     "id": "k2-59-p058",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "ses": "Flushing reaksiyonu, alkolden hemen sonra yüz, boyun ve omuzlarda ani kızarma, sıcaklık, çarpıntı ve bulantıyla giden genetik kökenli metabolik tepkidir.",
+       "ekran": "Flushing reaksiyonu, alkolden hemen sonra yüz, boyun ve omuzlarda ani kızarma, sıcaklık, çarpıntı ve bulantıyla giden genetik kökenli metabolik tepkidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Flushing reaksiyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Alkol tüketiminden hemen sonra başta yüz, boyun ve omuzlar olmak"
+        ]
+       },
+       "id": "k2-59-c0188"
+      },
+      {
+       "ses": "Flushing reaksiyonunda histamin deşarjı olur; belirtiler baş ağrısı, bulantı, çarpıntı ve deride kızarmadır.",
+       "ekran": "Flushing reaksiyonunda histamin deşarjı olur; belirtiler baş ağrısı, bulantı, çarpıntı ve deride kızarmadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "histamin deşarjı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Semptomlar; baş ağrısı, bulantı, çarpıntı ve derinin kızarması"
+        ]
+       },
+       "id": "k2-59-c0189"
+      },
+      {
+       "ses": "Asetaldehit birikimi olan kişilerde üst gastrointestinal sistem kanseri riski yüksektir.",
+       "ekran": "Asetaldehit birikimi olan kişilerde üst gastrointestinal sistem kanseri riski yüksektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Asetaldehit birikimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Asetaldehit birikimi olan kişilerde üst GİS kanseri riski yüksektir."
+        ]
+       },
+       "id": "k2-59-c0190"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p059",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "ses": "Flushing yatkınlığında ADH bir B His kırk yedi Arg varyantının Arg kırk yedi aleli hiperaktiftir ve kodominant modelde etkilidir.",
+       "ekran": "Flushing yatkınlığında ADH bir B His kırk yedi Arg varyantının Arg kırk yedi aleli hiperaktiftir ve kodominant modelde etkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Arg kırk yedi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "ADH1B His47Arg → Arg47 ,hiperaktif alel ve kodominant"
+        ]
+       },
+       "id": "k2-59-c0191"
+      },
+      {
+       "ses": "ALDH iki Glu dört yüz seksen yedi Lys varyantının Lys dört yüz seksen yedi aleli enzimi inaktive eder ve dominant modelde etkilidir.",
+       "ekran": "ALDH iki Glu dört yüz seksen yedi Lys varyantının Lys dört yüz seksen yedi aleli enzimi inaktive eder ve dominant modelde etkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lys dört yüz seksen yedi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "ve dominant modelde etkili"
+        ]
+       },
+       "id": "k2-59-c0192"
+      },
+      {
+       "ses": "Flushing'e yol açan bu varyantlar alkol bağımlılığına karşı koruyucudur.",
+       "ekran": "Flushing'e yol açan bu varyantlar alkol bağımlılığına karşı koruyucudur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "koruyucudur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Alkol bağımlılığına karşı koruyucudur!"
+        ]
+       },
+       "id": "k2-59-c0193"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b31",
+   "baslik": "Diğer aday genler",
+   "paragraflar": [
+    {
+     "id": "k2-59-p060",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "ses": "Bağımlılıkla ilişkili diğer aday genler COMT, MAOA ve SLC altı A dörttür.",
+       "ekran": "Bağımlılıkla ilişkili diğer aday genler COMT, MAOA ve SLC altı A dörttür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Diğer Aday Genler"
+        ]
+       },
+       "id": "k2-59-c0194"
+      },
+      {
+       "ses": "COMT dopamin, norepinefrin ve diğer katekolaminleri metabolize eder ve prefrontal kortekste dopamin düzeyinin düzenlenmesinde rol oynar.",
+       "ekran": "COMT dopamin, norepinefrin ve diğer katekolaminleri metabolize eder ve prefrontal kortekste dopamin düzeyinin düzenlenmesinde rol oynar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "prefrontal kortekste",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "COMT-I; DA(dopamin), NE(norepinefrin), diğer"
+        ]
+       },
+       "id": "k2-59-c0195"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p061",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "ses": "COMT insanda iki formda bulunur: S-COMT toplam COMT aktivitesinin yüzde doksan beşini oluşturur, MB-COMT ise beyinde yüksek aktivite gösterir.",
+       "ekran": "COMT insanda iki formda bulunur: S-COMT toplam COMT aktivitesinin yüzde doksan beşini oluşturur, MB-COMT ise beyinde yüksek aktivite gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "S-COMT",
+         "tur": "terim"
+        },
+        {
+         "metin": "MB-COMT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "MB-COMT (beyinde yüksek aktivite)"
+        ]
+       },
+       "id": "k2-59-c0196"
+      },
+      {
+       "ses": "COMT Val yüz elli sekiz Met polimorfizminde Met yüz elli sekiz aleli üç ile dört kat daha az aktiftir ve kodominant etki gösterir.",
+       "ekran": "COMT Val yüz elli sekiz Met polimorfizminde Met yüz elli sekiz aleli üç ile dört kat daha az aktiftir ve kodominant etki gösterir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Met yüz elli sekiz",
+         "tur": "terim"
+        },
+        {
+         "metin": "üç ile dört kat",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2024-2025-h40b"
+       ],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "COMT Val158Met; Met158 3-4 kat daha az aktif,"
+        ]
+       },
+       "id": "k2-59-c0197"
+      },
+      {
+       "ses": "Katekolamin yıkan ve prefrontal dopamini düzenleyen COMT'un Val yüz elli sekiz Met polimorfizmi, şizofreni, bipolar bozukluk ve OKB'de ortak aday gen olarak çıkmış sınavda soruldu.",
+       "ekran": "Katekolamin yıkan ve prefrontal dopamini düzenleyen COMT'un Val yüz elli sekiz Met polimorfizmi, şizofreni, bipolar bozukluk ve OKB'de ortak aday gen olarak çıkmış sınavda soruldu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çıkmış sınavda soruldu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-tbg-007"
+       ],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "COMT-II"
+        ]
+       },
+       "id": "k2-59-c0198"
+      },
+      {
+       "ses": "Nikotin bağımlılığı Val yüz elli sekiz aleliyle, geç başlangıçlı alkolizm ise Met yüz elli sekiz aleliyle ilişkilidir.",
+       "ekran": "Nikotin bağımlılığı Val yüz elli sekiz aleliyle, geç başlangıçlı alkolizm ise Met yüz elli sekiz aleliyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geç başlangıçlı alkolizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Geç-başlangıçlı alkoliklerde Met158"
+        ]
+       },
+       "id": "k2-59-c0199"
+      },
+      {
+       "ses": "Met yüz elli sekiz aleli anksiyete ve ağrı eşiğinde azalmayla da ilişkili bulunmuştur.",
+       "ekran": "Met yüz elli sekiz aleli anksiyete ve ağrı eşiğinde azalmayla da ilişkili bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "anksiyete, ağrı eşiğinde azalma →Met158"
+        ]
+       },
+       "id": "k2-59-c0200"
+      },
+      {
+       "ses": "Geçen yılın öğrencileri COMT Val yüz elli sekiz Met bilgisini en önemli yerler arasına aldı.",
+       "ekran": "Geçen yılın öğrencileri COMT Val yüz elli sekiz Met bilgisini en önemli yerler arasına aldı.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "tbg-s05-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "COMT-II"
+        ]
+       },
+       "id": "k2-59-c0201"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p062",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "ses": "MAOA geni X kromozomundadır, hipokampusta etkilidir ve norepinefrin, dopamin ve serotonini metabolize eder.",
+       "ekran": "MAOA geni X kromozomundadır, hipokampusta etkilidir ve norepinefrin, dopamin ve serotonini metabolize eder.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Hipokampusta etkili"
+        ]
+       },
+       "id": "k2-59-c0202"
+      },
+      {
+       "ses": "MAOA-LPR, genin yaklaşık bir virgül iki kilobaz yukarısındaki transkripsiyon kontrol bölgesinde bulunan otuz baz çiftlik tekrar bölgeleridir.",
+       "ekran": "MAOA-LPR, genin yaklaşık bir virgül iki kilobaz yukarısındaki transkripsiyon kontrol bölgesinde bulunan otuz baz çiftlik tekrar bölgeleridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAOA-LPR",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "MAOA-LPR; genin"
+        ]
+       },
+       "id": "k2-59-c0203"
+      },
+      {
+       "ses": "MAOA-LPR'de üç ve dört tekrarlı aleller yaygındır; MAOA geni susturulmuş knock-out farelerde agresyon görülür.",
+       "ekran": "MAOA-LPR'de üç ve dört tekrarlı aleller yaygındır; MAOA geni susturulmuş knock-out farelerde agresyon görülür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "agresyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Knock-out farelerde agresyon      o4 tekrarlı alelde MAOA aktivitesi"
+        ]
+       },
+       "id": "k2-59-c0204"
+      },
+      {
+       "ses": "Brunner sendromu bin dokuz yüz doksan üçte tanımlanmıştır ve MAOA'nın sekizinci ekzonunda stop kodon varyantı vardır.",
+       "ekran": "Brunner sendromu bin dokuz yüz doksan üçte tanımlanmıştır ve MAOA'nın sekizinci ekzonunda stop kodon varyantı vardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Brunner sendromu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "MAOA 8. ekzonunda stop kodon"
+        ]
+       },
+       "id": "k2-59-c0205"
+      },
+      {
+       "ses": "Düşük aktiviteli MAOA varyantı antisosyal davranışla ilişkilidir.",
+       "ekran": "Düşük aktiviteli MAOA varyantı antisosyal davranışla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antisosyal davranışla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Knock-out farelerde agresyon      o4 tekrarlı alelde MAOA aktivitesi"
+        ]
+       },
+       "id": "k2-59-c0206"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p063",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "ses": "SLC altı A dört geninin promoter bölgesinde beş HTTLPR varyantı bulunur ve L ile S olmak üzere iki aleli vardır.",
+       "ekran": "SLC altı A dört geninin promoter bölgesinde beş HTTLPR varyantı bulunur ve L ile S olmak üzere iki aleli vardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beş HTTLPR",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "5-HTTLPR varyantı; L    oPro385Ser varyantı alkol ve"
+        ]
+       },
+       "id": "k2-59-c0207"
+      },
+      {
+       "ses": "beş HTTLPR'nin S aleli stresli yaşam olaylarında depresyon ve intihar eğilimine yatkınlık yaratır.",
+       "ekran": "beş HTTLPR'nin S aleli stresli yaşam olaylarında depresyon ve intihar eğilimine yatkınlık yaratır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "S aleli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "S aleli stresli yaşam"
+        ]
+       },
+       "id": "k2-59-c0208"
+      },
+      {
+       "ses": "GABRA altı geni GABA-A reseptörünün alfa altı alt birimini kodlar ve GABA primer inhibitör nörotransmitterdir.",
+       "ekran": "GABRA altı geni GABA-A reseptörünün alfa altı alt birimini kodlar ve GABA primer inhibitör nörotransmitterdir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "Promoter bölgesinde     oGABA primer inhibitör"
+        ]
+       },
+       "id": "k2-59-c0209"
+      },
+      {
+       "ses": "GABRA altıdaki Pro üç yüz seksen beş Ser varyantı alkol ve benzodiazepinlere duyarlılıkla birliktedir.",
+       "ekran": "GABRA altıdaki Pro üç yüz seksen beş Ser varyantı alkol ve benzodiazepinlere duyarlılıkla birliktedir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pro üç yüz seksen beş Ser",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "5-HTTLPR varyantı; L    oPro385Ser varyantı alkol ve"
+        ]
+       },
+       "id": "k2-59-c0210"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b32",
+   "baslik": "Anksiyete bozuklukları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p064",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "ses": "Anksiyete bozuklukları sık görülür, kadınlarda daha yaygındır ve duygudurum bozukluklarıyla sıklıkla birlikte bulunur.",
+       "ekran": "Anksiyete bozuklukları sık görülür, kadınlarda daha yaygındır ve duygudurum bozukluklarıyla sıklıkla birlikte bulunur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "Sık görülen bozukluklar olup kadınlarda daha yaygındır."
+        ]
+       },
+       "id": "k2-59-c0211"
+      },
+      {
+       "ses": "Anksiyete bozukluklarının etiyolojisinde genetik, organik ve psikososyal etkenler birlikte rol oynar.",
+       "ekran": "Anksiyete bozukluklarının etiyolojisinde genetik, organik ve psikososyal etkenler birlikte rol oynar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "Etiyolojilerinde genetik, organik ve psikososyal birçok faktör vardır."
+        ]
+       },
+       "id": "k2-59-c0212"
+      },
+      {
+       "ses": "Anksiyete bozuklukları beş başlıkta incelenir: obsesif kompulsif bozukluk, panik bozukluk, özgül fobiler, sosyal fobi ve genelleşmiş anksiyete bozukluğu.",
+       "ekran": "Anksiyete bozuklukları beş başlıkta incelenir: obsesif kompulsif bozukluk, panik bozukluk, özgül fobiler, sosyal fobi ve genelleşmiş anksiyete bozukluğu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beş başlıkta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "Obsesif kompulsif bozukluk (OKB),"
+        ]
+       },
+       "id": "k2-59-c0213"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p065",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "ses": "Obsesif kompulsif bozuklukta konkordans MZ ikizlerde yüzde yetmiş beş, DZ ikizlerde yüzde kırk yedidir.",
+       "ekran": "Obsesif kompulsif bozuklukta konkordans MZ ikizlerde yüzde yetmiş beş, DZ ikizlerde yüzde kırk yedidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde yetmiş beş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "Obsesif-Kompulsif Bozukluk(OKB)"
+        ]
+       },
+       "id": "k2-59-c0214"
+      },
+      {
+       "ses": "OKB'li MZ ikizlerde DZ ikizlere göre depresyon, distimi, sosyal fobi, panik, agorafobi ve yaygın anksiyete bozukluğu komorbiditesi daha sıktır.",
+       "ekran": "OKB'li MZ ikizlerde DZ ikizlere göre depresyon, distimi, sosyal fobi, panik, agorafobi ve yaygın anksiyete bozukluğu komorbiditesi daha sıktır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "distimi, sosyal fobi, panik, agorofobi ve Yaygın"
+        ]
+       },
+       "id": "k2-59-c0215"
+      },
+      {
+       "ses": "OKB hastalarının birinci derece akrabalarında OKB oranı yüzde üç virgül dörttür, hastalık on dört yaşından önce başlamışsa bu oran yüzde sekiz virgül sekize çıkar.",
+       "ekran": "OKB hastalarının birinci derece akrabalarında OKB oranı yüzde üç virgül dörttür, hastalık on dört yaşından önce başlamışsa bu oran yüzde sekiz virgül sekize çıkar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "on dört yaşından önce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "Hastaların birinci derece akrabalarındaki OKB"
+        ]
+       },
+       "id": "k2-59-c0216"
+      },
+      {
+       "ses": "OKB'nin aday genleri COMT, MAOA ve DRD dört gibi dopamin sistemi genleridir.",
+       "ekran": "OKB'nin aday genleri COMT, MAOA ve DRD dört gibi dopamin sistemi genleridir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "OKB için MZ ikizlerde konkordans oranı %75         oAday genler;"
+        ]
+       },
+       "id": "k2-59-c0217"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p066",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "ses": "Panik bozukluk kadınlarda daha sıktır ve majör depresyon, kişilik bozukluğu ve alkol madde bağımlılığıyla birlikte görülür.",
+       "ekran": "Panik bozukluk kadınlarda daha sıktır ve majör depresyon, kişilik bozukluğu ve alkol madde bağımlılığıyla birlikte görülür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Majör depresyon, kişilik bozukluğu ve alkol-madde bağımlılığı ile eş"
+        ]
+       },
+       "id": "k2-59-c0218"
+      },
+      {
+       "ses": "Aile çalışmaları panik bozukluğun belirli ailelerde yoğunlaştığını gösterir.",
+       "ekran": "Aile çalışmaları panik bozukluğun belirli ailelerde yoğunlaştığını gösterir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Aile çalışmaları PB, belirli ailelerde yoğunlaştığını gösterir,"
+        ]
+       },
+       "id": "k2-59-c0219"
+      },
+      {
+       "ses": "Panik bozuklukta MZ konkordansı yüzde otuz birdir, DZ konkordansı ise saptanamamıştır.",
+       "ekran": "Panik bozuklukta MZ konkordansı yüzde otuz birdir, DZ konkordansı ise saptanamamıştır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde otuz bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "DZ konkordans saptanamamış,"
+        ]
+       },
+       "id": "k2-59-c0220"
+      },
+      {
+       "ses": "Panik bozuklukta birinci derece akraba riski yüzde on, diğerlerinde yüzde ikidir; genetik faktörlerin etkisi yüzde otuzdur ve COMT yatkınlık genidir.",
+       "ekran": "Panik bozuklukta birinci derece akraba riski yüzde on, diğerlerinde yüzde ikidir; genetik faktörlerin etkisi yüzde otuzdur ve COMT yatkınlık genidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "COMT yatkınlık genidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Panik Bozukluk (PB)"
+        ]
+       },
+       "id": "k2-59-c0221"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p067",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "ses": "Özgül fobiler en yaygın fobi türüdür; yükseklik, fırtına, uçak, yalnız kalma ve kapalı yer korkusu örnekleridir.",
+       "ekran": "Özgül fobiler en yaygın fobi türüdür; yükseklik, fırtına, uçak, yalnız kalma ve kapalı yer korkusu örnekleridir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en yaygın fobi türüdür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Özgül Fobiler                          fırtına korkusu, uçak korkusu, yalnız"
+        ]
+       },
+       "id": "k2-59-c0222"
+      },
+      {
+       "ses": "Özgül fobiler kadınlarda daha sıktır, etiyolojideki en önemli faktörlerden biri genetiktir ve bütün çalışmalar ailesel yükü destekler.",
+       "ekran": "Özgül fobiler kadınlarda daha sıktır, etiyolojideki en önemli faktörlerden biri genetiktir ve bütün çalışmalar ailesel yükü destekler.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Etiyolojideki en önemli faktörlerden biri genetiktir."
+        ]
+       },
+       "id": "k2-59-c0223"
+      },
+      {
+       "ses": "Enkefalinler mizaç, anksiyete, öfori ve ağrıyı düzenleyen nörotransmitterlerdir ve en önemli yıkıcı enzimlerinden biri nötral peptidazdır.",
+       "ekran": "Enkefalinler mizaç, anksiyete, öfori ve ağrıyı düzenleyen nörotransmitterlerdir ve en önemli yıkıcı enzimlerinden biri nötral peptidazdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nötral peptidazdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Enkefalin yıkımındaki en önemli enzimlerden biri de neutral"
+        ]
+       },
+       "id": "k2-59-c0224"
+      },
+      {
+       "ses": "Nötral peptidaz ile SCL-doksan arasında asosiyasyon vardır ve enkefalin metabolizması varyantlarının anksiyetedeki rolünü destekleyen bulgular mevcuttur.",
+       "ekran": "Nötral peptidaz ile SCL-doksan arasında asosiyasyon vardır ve enkefalin metabolizması varyantlarının anksiyetedeki rolünü destekleyen bulgular mevcuttur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Enkefalin metabolizmasındaki varyantların anksiyetedeki rolünü"
+        ]
+       },
+       "id": "k2-59-c0225"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p068",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "ses": "Sosyal fobinin aile içindeki sıklığı genel popülasyondan yüksektir ve hem genetik hem çevresel faktörler rol oynar.",
+       "ekran": "Sosyal fobinin aile içindeki sıklığı genel popülasyondan yüksektir ve hem genetik hem çevresel faktörler rol oynar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Aile içinde görülme sıklığı genel popülasyondan yüksek bulunmuştur."
+        ]
+       },
+       "id": "k2-59-c0226"
+      },
+      {
+       "ses": "Sosyal fobide MZ konkordansı yüzde yirmi dört, DZ konkordansı yüzde on beştir ve kalıtsal geçiş indeksi yüzde otuz tahmin edilir.",
+       "ekran": "Sosyal fobide MZ konkordansı yüzde yirmi dört, DZ konkordansı yüzde on beştir ve kalıtsal geçiş indeksi yüzde otuz tahmin edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde otuz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Sosyal fobinin kalıtsal geçiş indeksinin %30 tahmin edilmektedir."
+        ]
+       },
+       "id": "k2-59-c0227"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p069",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "ses": "Genelleşmiş anksiyete bozukluğu ailesel kümelenme gösterir; birinci derece akrabalarda sıklığı yüzde yirmi, kontrollerde yüzde dörttür.",
+       "ekran": "Genelleşmiş anksiyete bozukluğu ailesel kümelenme gösterir; birinci derece akrabalarda sıklığı yüzde yirmi, kontrollerde yüzde dörttür.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ailesel kümelenme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "Birinci derece akrabalarda GAB görülme sıklığı % 20, kontrollerde"
+        ]
+       },
+       "id": "k2-59-c0228"
+      },
+      {
+       "ses": "Genelleşmiş anksiyete bozukluğunda konkordans MZ ikizlerde yüzde elli, DZ ikizlerde yüzde beştir ve genetik rol yüzde otuz bir bulunmuştur.",
+       "ekran": "Genelleşmiş anksiyete bozukluğunda konkordans MZ ikizlerde yüzde elli, DZ ikizlerde yüzde beştir ve genetik rol yüzde otuz bir bulunmuştur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde otuz bir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "İkiz çalışmalarında, MZ ikizlerde konkordans %50, DZ ikizlerde % 5"
+        ]
+       },
+       "id": "k2-59-c0229"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b33",
+   "baslik": "Yeme bozuklukları",
+   "paragraflar": [
+    {
+     "id": "k2-59-p070",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "ses": "Anoreksiya nervoza, birden çok etiyolojisi olduğu düşünülen ve genetik faktörlerin önemli rol oynadığı ciddi bir yeme bozukluğudur.",
+       "ekran": "Anoreksiya nervoza, birden çok etiyolojisi olduğu düşünülen ve genetik faktörlerin önemli rol oynadığı ciddi bir yeme bozukluğudur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Multiple etiyolojisi olduğu düşünülen ciddi bir rahatsızlıktır."
+        ]
+       },
+       "id": "k2-59-c0230"
+      },
+      {
+       "ses": "Anoreksiya nervozada birinci derece akraba riski yüzde altı, kontrollerin akrabalarında yüzde birdir.",
+       "ekran": "Anoreksiya nervozada birinci derece akraba riski yüzde altı, kontrollerin akrabalarında yüzde birdir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Hastaların birinci derece akrabalarında risk %6 iken, bu risk"
+        ]
+       },
+       "id": "k2-59-c0231"
+      },
+      {
+       "ses": "Anoreksiya nervozada konkordans MZ ikizlerde yüzde elli beş, DZ ikizlerde yüzde yedidir ve yatkınlıkta genetik bileşenin rolü yüzde yetmiştir.",
+       "ekran": "Anoreksiya nervozada konkordans MZ ikizlerde yüzde elli beş, DZ ikizlerde yüzde yedidir ve yatkınlıkta genetik bileşenin rolü yüzde yetmiştir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde yetmiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "MZ ikizlerde konkordans oranı %55, DZ ikizlerde %7'dir."
+        ]
+       },
+       "id": "k2-59-c0232"
+      },
+      {
+       "ses": "Anoreksiya nervozada dopamin, serotonin, noradrenalin ve opiat sistemi genlerinin rolü araştırılmaktadır.",
+       "ekran": "Anoreksiya nervozada dopamin, serotonin, noradrenalin ve opiat sistemi genlerinin rolü araştırılmaktadır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Dopamin, serotonin, noradrenalin, opiat sistemindeki genlerin"
+        ]
+       },
+       "id": "k2-59-c0233"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p071",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "ses": "Anoreksiya nervozada TNF-alfa salınımı artar ve TNF-alfa hipotalamik ile pe itüiter-adrenal aksı aktive ederek gıda alımını azaltır.",
+       "ekran": "Anoreksiya nervozada TNF-alfa salınımı artar ve TNF-alfa hipotalamik ile pe itüiter-adrenal aksı aktive ederek gıda alımını azaltır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "TNF-alfa",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "TNF-α hipotalamik-pitüiter-adrenal aksı aktive ederek yeme"
+        ]
+       },
+       "id": "k2-59-c0234"
+      },
+      {
+       "ses": "Bulimiya nervozada ise beş HT iki C reseptörü varyantları üzerinde çalışılmaktadır.",
+       "ekran": "Bulimiya nervozada ise beş HT iki C reseptörü varyantları üzerinde çalışılmaktadır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beş HT iki C",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "5HT2C reseptörü varyantları üzerinde çalışmalar yapılmaktadır."
+        ]
+       },
+       "id": "k2-59-c0235"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b34",
+   "baslik": "Genetik danışma",
+   "paragraflar": [
+    {
+     "id": "k2-59-p072",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "ses": "Psikiyatrik hastalıklar kompleks ve multifaktöriyel olduğu için genetik danışmada hastalık riskini tahmin etmek zordur.",
+       "ekran": "Psikiyatrik hastalıklar kompleks ve multifaktöriyel olduğu için genetik danışmada hastalık riskini tahmin etmek zordur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir,"
+        ]
+       },
+       "id": "k2-59-c0236"
+      },
+      {
+       "ses": "Genetik danışmada en uygunu, aileleri aile çalışmalarının bulguları ışığında bilgilendirmektir.",
+       "ekran": "Genetik danışmada en uygunu, aileleri aile çalışmalarının bulguları ışığında bilgilendirmektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aile çalışmalarının bulguları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Ailelere, aile çalışmalarından elde edilen bulgular ışığında"
+        ]
+       },
+       "id": "k2-59-c0237"
+      },
+      {
+       "ses": "Psikiyatrik hastalıklar için altın standart bir tanı testi yoktur.",
+       "ekran": "Psikiyatrik hastalıklar için altın standart bir tanı testi yoktur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "altın standart",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Altın standart bir tanı testi yok,"
+        ]
+       },
+       "id": "k2-59-c0238"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p073",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "ses": "Moleküler analizler bölümündeki ilk şekil GWAS akışını gösterir: nüfus örneği alınır, genetik materyal toplanır, genotipleme yapılır.",
+       "ekran": "Moleküler analizler bölümündeki ilk şekil GWAS akışını gösterir: nüfus örneği alınır, genetik materyal toplanır, genotipleme yapılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "Moleküler Analizler"
+        ]
+       },
+       "id": "k2-59-c0239"
+      },
+      {
+       "ses": "GWAS akışında kalite kontrol ve veri seti hazırlığından sonra ilişkilendirme testi yapılır ve bulunan ilişki çoğaltılarak doğrulanır.",
+       "ekran": "GWAS akışında kalite kontrol ve veri seti hazırlığından sonra ilişkilendirme testi yapılır ve bulunan ilişki çoğaltılarak doğrulanır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilişkilendirme testi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "Moleküler Analizler"
+        ]
+       },
+       "id": "k2-59-c0240"
+      },
+      {
+       "ses": "Soldaki şekil bir GWAS lokusunda üç soruyu sorar: kaç ilişkili sinyal var, nedensel varyantlar hangileri ve hedef genler hangileri.",
+       "ekran": "Soldaki şekil bir GWAS lokusunda üç soruyu sorar: kaç ilişkili sinyal var, nedensel varyantlar hangileri ve hedef genler hangileri.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "Moleküler Analizler"
+        ]
+       },
+       "id": "k2-59-c0241"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-59-b35",
+   "baslik": "Moleküler analizler",
+   "paragraflar": [
+    {
+     "id": "k2-59-p074",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "ses": "GWAS'ta hastalar ve kontroller karşılaştırılır; hastalarda daha sık görülen varyant, kromozomlar boyunca çizilen grafikte yükselen bir tepe olarak görünür.",
+       "ekran": "GWAS'ta hastalar ve kontroller karşılaştırılır; hastalarda daha sık görülen varyant, kromozomlar boyunca çizilen grafikte yükselen bir tepe olarak görünür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": []
+       },
+       "id": "k2-59-c0242"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p075",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "ses": "Moleküler analiz slaytının solunda RFLP gösterilir: restriksiyon bölgesini bozan mutasyon, jel elektroforezi ve Southern blotta normal bireyden farklı bant verir.",
+       "ekran": "Moleküler analiz slaytının solunda RFLP gösterilir: restriksiyon bölgesini bozan mutasyon, jel elektroforezi ve Southern blotta normal bireyden farklı bant verir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Southern blot",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": []
+       },
+       "id": "k2-59-c0243"
+      },
+      {
+       "ses": "Ortadaki mikrodizi yönteminde hedef DNA ya da RNA floresan boyalarla işaretlenir ve cam yüzeydeki problara hibridize edilir.",
+       "ekran": "Ortadaki mikrodizi yönteminde hedef DNA ya da RNA floresan boyalarla işaretlenir ve cam yüzeydeki problara hibridize edilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mikrodizi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": []
+       },
+       "id": "k2-59-c0244"
+      },
+      {
+       "ses": "Mikrodizide yıkama ve taramadan sonra renkli noktalardan oluşan görüntü veri analiziyle yorumlanır.",
+       "ekran": "Mikrodizide yıkama ve taramadan sonra renkli noktalardan oluşan görüntü veri analiziyle yorumlanır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": []
+       },
+       "id": "k2-59-c0245"
+      },
+      {
+       "ses": "Sağdaki prob yöntemi beş adımlıdır: birinci adım denatürasyon, ikinci adım hedef DNA'ya prob hibridizasyonudur.",
+       "ekran": "Sağdaki prob yöntemi beş adımlıdır: birinci adım denatürasyon, ikinci adım hedef DNA'ya prob hibridizasyonudur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beş adımlıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": []
+       },
+       "id": "k2-59-c0246"
+      },
+      {
+       "ses": "Üçüncü adımda hedefe yan yana bağlanan iki prob parçası ligasyonla birleştirilir.",
+       "ekran": "Üçüncü adımda hedefe yan yana bağlanan iki prob parçası ligasyonla birleştirilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ligasyonla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": []
+       },
+       "id": "k2-59-c0247"
+      },
+      {
+       "ses": "Dördüncü adımda birleşen problar çoğaltılır, beşinci adımda parçalar ayrılır ve veri analizi yapılır.",
+       "ekran": "Dördüncü adımda birleşen problar çoğaltılır, beşinci adımda parçalar ayrılır ve veri analizi yapılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": []
+       },
+       "id": "k2-59-c0248"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p076",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "ses": "Kopya sayısı analizi grafiklerinde her bölgenin sinyal oranı referansla karşılaştırılır ve eşik çizgilerinin dışına çıkan bölgeler dikkat çeker.",
+       "ekran": "Kopya sayısı analizi grafiklerinde her bölgenin sinyal oranı referansla karşılaştırılır ve eşik çizgilerinin dışına çıkan bölgeler dikkat çeker.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": []
+       },
+       "id": "k2-59-c0249"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p077",
+     "sayfa": 77,
+     "cumleler": [
+      {
+       "ses": "Sanger dizilemede primer uzatılırken floresan işaretli zincir sonlandırıcı nükleotidler eklenir, parçalar kapiller elektroforezle ayrılır ve lazerle okunur.",
+       "ekran": "Sanger dizilemede primer uzatılırken floresan işaretli zincir sonlandırıcı nükleotidler eklenir, parçalar kapiller elektroforezle ayrılır ve lazerle okunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kapiller elektroforezle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": []
+       },
+       "id": "k2-59-c0250"
+      },
+      {
+       "ses": "Alttaki kromatogramlarda hastalıktan etkilenen buzağının dizisi, heterozigot insersiyon taşıyan baba ve annesinin dizileriyle karşılaştırılır.",
+       "ekran": "Alttaki kromatogramlarda hastalıktan etkilenen buzağının dizisi, heterozigot insersiyon taşıyan baba ve annesinin dizileriyle karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "heterozigot insersiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": []
+       },
+       "id": "k2-59-c0251"
+      }
+     ]
+    },
+    {
+     "id": "k2-59-p078",
+     "sayfa": 78,
+     "cumleler": [
+      {
+       "ses": "Son slaytta dizileme dört adımda gösterilir: DNA eldesi, kütüphane hazırlığı, dizileme ve analiz.",
+       "ekran": "Son slaytta dizileme dört adımda gösterilir: DNA eldesi, kütüphane hazırlığı, dizileme ve analiz.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kütüphane hazırlığı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": []
+       },
+       "id": "k2-59-c0252"
+      },
+      {
+       "ses": "Özetle, psikiyatrik hastalıklar poligenik ve multifaktöriyeldir; ikiz, aile ve evlat edinme çalışmaları genetik payın büyüklüğünü gösterir.",
+       "ekran": "Özetle, psikiyatrik hastalıklar poligenik ve multifaktöriyeldir; ikiz, aile ve evlat edinme çalışmaları genetik payın büyüklüğünü gösterir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": []
+       },
+       "id": "k2-59-c0253"
+      },
+      {
+       "ses": "Bağlantı ve asosiyasyon analizleri ile GWAS bu genetik payın hangi genlerden geldiğini arar.",
+       "ekran": "Bağlantı ve asosiyasyon analizleri ile GWAS bu genetik payın hangi genlerden geldiğini arar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": []
+       },
+       "id": "k2-59-c0254"
+      },
+      {
+       "ses": "COMT, MAOA ve serotonin taşıyıcı geni dersteki birçok bozuklukta tekrar tekrar aday gen olarak karşımıza çıkar.",
+       "ekran": "COMT, MAOA ve serotonin taşıyıcı geni dersteki birçok bozuklukta tekrar tekrar aday gen olarak karşımıza çıkar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": []
+       },
+       "id": "k2-59-c0255"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

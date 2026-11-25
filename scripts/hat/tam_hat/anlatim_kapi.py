@@ -74,6 +74,19 @@ def main() -> int:
     hata += [f"[dogrula] {x}" for x in h]
     import iskelet as ISK  # C7: doldurulmamış iskelet yeri (<DOLDUR>, _iskelet) kalmasın
     hata += [f"[iskelet] {x}" for x in ISK.denetle(d)]
+    # H683: toplu düzeltme betiği bir sayfanın tüm cümlelerini tek cümleyle ezdi (k2-59 p015, aynı cümle 5×); hiçbir
+    # alt kapı birebir yinelenen cümleyi saymıyordu. Aynı `ses` metni derste ikinci kez geçerse HATA.
+    gorulen: dict[str, str] = {}
+    for b in d.get("bolumler", []):
+        for p in b.get("paragraflar", []):
+            for c in p.get("cumleler", []):
+                n = " ".join(str(c.get("ses", "")).lower().split())
+                if len(n) < 25:
+                    continue
+                if n in gorulen:
+                    hata.append(f"[yineleme] {p.get('id')}: cümle {gorulen[n]} ile birebir aynı: «{c.get('ses', '')[:70]}»")
+                else:
+                    gorulen[n] = str(c.get("id") or p.get("id"))
 
     # 3) metin_denetle (kendi ayrıntısını basar; sayısını toplar)
     # Kurul 2+ / modül derslerinde EMA'ya okunuş gider (ses_metin.hazirla: GABA→gaba, NMDA→ne me de a); kısaltma/rakam

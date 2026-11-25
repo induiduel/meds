@@ -357,3 +357,9 @@
 - **Daraltma (aynı gün):** JS çerezindeki erişim jetonu sızarsa Bearer olarak yazmada kullanılabilirdi → yerine sunucunun `POST /api/kimlik/medya-cerezi` ile yazdığı HttpOnly, yalnız API alanlı, `typ: 'medya'` jetonu (`medsor_medya`); Bearer yolu bunu reddeder, kapı yalnız GET/HEAD'de kabul eder.
 - **Çevrimdışı paket (aynı gün, canlı sınamada):** `net.ts › arkaPlanFetch` bilerek ham `fetch` kullanır (jeton eklenmez) ve çapraz kökende varsayılan `credentials: 'same-origin'` çerezi göndermez → paket dosyaları reddedilip 4 denemeden sonra "Bağlantı sorunu: dosya inmedi". Çözüm: `credentials: 'include'`.
 - **Önleme:** Erişim/kimlik kapısı eklerken başlık taşıyamayan istekleri (ses, görsel, PDF, arka plan indirmesi, SW) ayrıca sına; yazma uçlarına çerezle kimlik verme.
+
+### H688 — `betik_tamamla` yeni dersi "yayında değil" sandı; kelime zamanı canlıya gitmemişti (2026-11-26, k2-25/k2-59)
+- **Belirti:** `betik_tamamla.py k2-25` "kelime_zaman: canlı API okunamadı (ders yayında değil mi?)" dedi; ders Oracle'da yayındaydı.
+- **Kök neden:** (1) `canli()` canlı API'ye panel anahtarı göndermiyordu; erişim kapısından (H647) beri anahtarsız istek reddediliyor (anonim istek 403 değil 500 `INTERNAL_ERROR` dönüyor — ayrı açık iş). (2) Kelime zamanı yerelde `--oracle` olmadan üretilmişti; `kelime_zaman.py --oracle` yerel dosyayı "güncel" sayınca `oracle_gonder()`'i hiç çağırmıyordu, canlı varyantta `kelimeZaman` boş kaldı.
+- **Çözüm:** `canli()` isteğine `_kok.panel_basligi()` eklendi; kelime zamanı `oracle_gonder()` ile gönderildi, iki ders 0 eksik.
+- **Kural:** Yeni derste kelime zamanı doğrudan `kelime_zaman.py --key <key> --oracle --gpu` ile üretilir (ya da `betik_tamamla.py <kod> --gpu`); canlı API'yi okuyan her betik `_kok.panel_basligi()` gönderir. Yayın öncesi `betik_tamamla.py <kod>` ✓ kelime_zaman şart.

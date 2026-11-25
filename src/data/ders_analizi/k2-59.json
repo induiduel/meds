@@ -1,0 +1,994 @@
+{
+ "surum": 2,
+ "key": "k2-59",
+ "kod": "2g05",
+ "kurul": 2,
+ "brans": "Genetik",
+ "konu": "Psikiyatrik Hastalıklar ve Genetik Analizi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "profil": "Tıbbi Genetik",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2g05"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Derse giriş"
+    },
+    {
+     "metin": "Psikiyatride genetik çalışmaların amacı"
+    },
+    {
+     "metin": "Genetik araştırma metotları"
+    },
+    {
+     "metin": "Psikiyatrik hastalıkların poligenik yapısı"
+    },
+    {
+     "metin": "Popülasyon çalışmaları"
+    },
+    {
+     "metin": "Aile çalışmaları"
+    },
+    {
+     "metin": "İkiz çalışmaları"
+    },
+    {
+     "metin": "Evlat edinme çalışmaları"
+    },
+    {
+     "metin": "Sitogenetik çalışmalar"
+    },
+    {
+     "metin": "Moleküler genetik çalışmalar"
+    },
+    {
+     "metin": "Kalıtım kalıpları ve kalıtım riski"
+    },
+    {
+     "metin": "Polimorfik varyasyonlar"
+    },
+    {
+     "metin": "Varyasyon türleri"
+    },
+    {
+     "metin": "Ardışık tekrar dizileri"
+    },
+    {
+     "metin": "Genetik belirteçler"
+    },
+    {
+     "metin": "Parametrik ve parametrik olmayan analizler"
+    },
+    {
+     "metin": "Genetik haritalama"
+    },
+    {
+     "metin": "Bağlantı (linkage) analizi"
+    },
+    {
+     "metin": "İlişki (asosiyasyon) çalışmaları"
+    },
+    {
+     "metin": "Kişilik bozuklukları"
+    },
+    {
+     "metin": "Antisosyal kişilik bozukluğu"
+    },
+    {
+     "metin": "Kişilik bozuklukları"
+    },
+    {
+     "metin": "Manik-depresif hastalık"
+    },
+    {
+     "metin": "Duygudurum bozuklukları"
+    },
+    {
+     "metin": "Şizofreni"
+    },
+    {
+     "metin": "Endofenotipler"
+    },
+    {
+     "metin": "Alkol ve madde bağımlılığı"
+    },
+    {
+     "metin": "Bağımlılık"
+    },
+    {
+     "metin": "Alkol bağımlılığı aday genler"
+    },
+    {
+     "metin": "Flushing reaksiyonu"
+    },
+    {
+     "metin": "Diğer aday genler"
+    },
+    {
+     "metin": "Anksiyete bozuklukları"
+    },
+    {
+     "metin": "Yeme bozuklukları"
+    },
+    {
+     "metin": "Genetik danışma"
+    },
+    {
+     "metin": "Moleküler analizler"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Derse giriş.",
+    "Psikiyatride genetik çalışmaların amacı.",
+    "Genetik araştırma metotları.",
+    "Psikiyatrik hastalıkların poligenik yapısı.",
+    "Popülasyon çalışmaları.",
+    "Aile çalışmaları.",
+    "İkiz çalışmaları.",
+    "Evlat edinme çalışmaları.",
+    "Sitogenetik çalışmalar.",
+    "Moleküler genetik çalışmalar.",
+    "Kalıtım kalıpları ve kalıtım riski.",
+    "Polimorfik varyasyonlar.",
+    "Varyasyon türleri.",
+    "Ardışık tekrar dizileri.",
+    "Genetik belirteçler.",
+    "Parametrik ve parametrik olmayan analizler.",
+    "Genetik haritalama.",
+    "Bağlantı (linkage) analizi.",
+    "İlişki (asosiyasyon) çalışmaları.",
+    "Kişilik bozuklukları.",
+    "Antisosyal kişilik bozukluğu.",
+    "Kişilik bozuklukları.",
+    "Manik-depresif hastalık.",
+    "Duygudurum bozuklukları.",
+    "Şizofreni.",
+    "Endofenotipler.",
+    "Alkol ve madde bağımlılığı.",
+    "Bağımlılık.",
+    "Alkol bağımlılığı aday genler.",
+    "Flushing reaksiyonu.",
+    "Diğer aday genler.",
+    "Anksiyete bozuklukları.",
+    "Yeme bozuklukları.",
+    "Genetik danışma.",
+    "Moleküler analizler."
+   ],
+   "v": "0ca3677abb"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Psikiyatride genetik çalışmalar genetik ve çevresel faktörlerin etyolojiye",
+     "metin": "Psikiyatride genetik çalışmalar genetik ve çevresel faktörlerin etyolojiye katkısını belirlemeyi amaçlar.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Genetik epidemiyolojik çalışmalar popülasyon genetiği ve aile çalışmalarını",
+     "metin": "Genetik epidemiyolojik çalışmalar popülasyon genetiği ve aile çalışmalarını kapsar.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Psikiyatrik hastalıklar poligeniktir; tek bir genle açıklanmaz",
+     "metin": "Psikiyatrik hastalıklar poligeniktir; tek bir genle açıklanmaz.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Popülasyon çalışmaları aile çalışmaları, ikiz çalışmaları ve evlat",
+     "metin": "Popülasyon çalışmaları aile çalışmaları, ikiz çalışmaları ve evlat edinilenler üzerine yapılan çalışmalardır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Aile çalışmalarında hasta bireylerin akrabalarındaki risk genel popülasyondaki",
+     "metin": "Aile çalışmalarında hasta bireylerin akrabalarındaki risk genel popülasyondaki riskle karşılaştırılır.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "İkiz çalışmaları MZ ve DZ ikiz çiftleri arasındaki",
+     "metin": "İkiz çalışmaları MZ ve DZ ikiz çiftleri arasındaki fenotipik uyumun varyansını modelleyerek kalıtsallığı tahmin eder.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "İkiz çalışmalarında aynı ortamda ve ayrı ortamlarda yetişen",
+     "metin": "İkiz çalışmalarında aynı ortamda ve ayrı ortamlarda yetişen MZ ikizler karşılaştırılır.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "İkiz çalışmaları hastalığın kalıtsallığını tahmin etmeye yardımcı olur",
+     "metin": "İkiz çalışmaları hastalığın kalıtsallığını tahmin etmeye yardımcı olur.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Evlat edinme çalışmaları genetik ve çevresel faktörleri ayırt",
+     "metin": "Evlat edinme çalışmaları genetik ve çevresel faktörleri ayırt etmede kullanılan uygun bir metottur.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Sitogenetik çalışmalar in situ hibridizasyon gibi tekniklerle genlerin",
+     "metin": "Sitogenetik çalışmalar in situ hibridizasyon gibi tekniklerle genlerin hangi kromozom bandında yerleştiğini bulur.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Moleküler genetik çalışmaların amacı belirli bir fenotipin kalıtım",
+     "metin": "Moleküler genetik çalışmaların amacı belirli bir fenotipin kalıtım kalıbını etkileyen aday genleri belirlemektir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Psikiyatrik hastalıklar genellikle Mendeliyen kalıtıma uymaz",
+     "metin": "Psikiyatrik hastalıklar genellikle Mendeliyen kalıtıma uymaz.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Gen ekzon ve intronlardan oluşur; ekzon protein ürününe",
+     "metin": "Gen ekzon ve intronlardan oluşur; ekzon protein ürününe karşılık gelir, introndan protein ürünü oluşmaz.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Popülasyonda görülme sıklığı %1'in altındaki değişiklik mutasyondur",
+     "metin": "Popülasyonda görülme sıklığı %1'in altındaki değişiklik mutasyondur.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "RFLP, restriksiyon enzimleriyle oluşturulan parça uzunluklarındaki farklılıklardır",
+     "metin": "RFLP, restriksiyon enzimleriyle oluşturulan parça uzunluklarındaki farklılıklardır.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Satellit DNA sentromerde lokalizedir",
+     "metin": "Satellit DNA sentromerde lokalizedir.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Genomda yaklaşık 10.000.000 SNP, 10.000 STR belirteci bulunur",
+     "metin": "Genomda yaklaşık 10.000.000 SNP, 10.000 STR belirteci bulunur.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Model bağımlı (parametrik) analizler kromozom yerleşimi kesin bilinen",
+     "metin": "Model bağımlı (parametrik) analizler kromozom yerleşimi kesin bilinen bir göstergenin kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını gösterir.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Genetik harita genlerin kromozom üzerindeki sırasını ve rekombinasyon",
+     "metin": "Genetik harita genlerin kromozom üzerindeki sırasını ve rekombinasyon sıklığına göre aralarındaki yaklaşık uzaklığı verir.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Bağlantı analizinde hastalığın bilinen bir genetik markere bağlı",
+     "metin": "Bağlantı analizinde hastalığın bilinen bir genetik markere bağlı olup olmadığı araştırılır.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Negatif LOD değerleri o kromozom bölgesinde bağlantı olmadığını",
+     "metin": "Negatif LOD değerleri o kromozom bölgesinde bağlantı olmadığını gösterir.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Klasik linkage çalışması hastalığın belirli bir kalıtım şekli",
+     "metin": "Klasik linkage çalışması hastalığın belirli bir kalıtım şekli varsa en iyi sonucu verir.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir",
+     "metin": "Asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir gen olmalıdır.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Kişilik bozukluğu, hastanın sağlıksız bir düşünme, işleyiş ve",
+     "metin": "Kişilik bozukluğu, hastanın sağlıksız bir düşünme, işleyiş ve davranış tarzına sahip olduğu zihinsel bozukluktur; ilişkilerde, işte ve okulda önemli sorunlara yol açar.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Kişilik bozukluklarında genetik çalışmalar serotonerjik ve dopaminerjik sistemdeki",
+     "metin": "Kişilik bozukluklarında genetik çalışmalar serotonerjik ve dopaminerjik sistemdeki enzim ve nörotransmitter genlerini hedefler.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "İkiz çalışmaları özellikle suç işlemiş ASKB hastalarında genetik",
+     "metin": "İkiz çalışmaları özellikle suç işlemiş ASKB hastalarında genetik yatkınlık düşündürmüştür.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "5HTTLPR ile MAO-A promotör tekrar dizilerindeki S alelleri",
+     "metin": "5HTTLPR ile MAO-A promotör tekrar dizilerindeki S alelleri antisosyal davranışla ilişkilidir.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "CACNA1C ve COMT genlerinin bazı alelleri paranoid fikirlerle",
+     "metin": "CACNA1C ve COMT genlerinin bazı alelleri paranoid fikirlerle ilişkilidir.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmıştır",
+     "metin": "Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmıştır.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "MZ ikiz konkordansı unipolar hastalıkta %80, bipolarda %50-62'dir",
+     "metin": "MZ ikiz konkordansı unipolar hastalıkta %80, bipolarda %50-62'dir.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Duygudurum bozukluklarında kardeşte tekrarlama riski %20-30'dur",
+     "metin": "Duygudurum bozukluklarında kardeşte tekrarlama riski %20-30'dur.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Bipolar bozuklukla ilişkili G72/G30 geni 13q33'tedir",
+     "metin": "Bipolar bozuklukla ilişkili G72/G30 geni 13q33'tedir.",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Bipolar bozuklukta aday genler 5-HTT, COMT ve BDNF'dir",
+     "metin": "Bipolar bozuklukta aday genler 5-HTT, COMT ve BDNF'dir.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Unipolar bozuklukta birinci derece akraba riski 2-10 kat",
+     "metin": "Unipolar bozuklukta birinci derece akraba riski 2-10 kat fazladır.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Duygudurum bozukluklarında MZ ikizlerde risk %60-70, DZ ikizlerde",
+     "metin": "Duygudurum bozukluklarında MZ ikizlerde risk %60-70, DZ ikizlerde %20'dir.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Duygudurum bozukluklarının kalıtımı klasik Mendel kurallarına uymaz, poligeniktir",
+     "metin": "Duygudurum bozukluklarının kalıtımı klasik Mendel kurallarına uymaz, poligeniktir.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "İntihar davranışı serotonerjik nörotransmisyon ve triptofan hidroksilaz polimorfizmiyle",
+     "metin": "İntihar davranışı serotonerjik nörotransmisyon ve triptofan hidroksilaz polimorfizmiyle ilişkilidir.",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "4p'de lokalize DRD5 geni psikotik bozukluklarda aday gendir",
+     "metin": "4p'de lokalize DRD5 geni psikotik bozukluklarda aday gendir.",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Şizofrenide birinci derece akrabalarda risk %5-10'dur",
+     "metin": "Şizofrenide birinci derece akrabalarda risk %5-10'dur.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Şizofreni yaşam boyu prevalansı genel popülasyonda %0,5-1'dir",
+     "metin": "Şizofreni yaşam boyu prevalansı genel popülasyonda %0,5-1'dir.",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Şizofrenide kalıtım biçimi bilinmez; fenotipik çeşitlilik, lokus/alelik heterojenite,",
+     "metin": "Şizofrenide kalıtım biçimi bilinmez; fenotipik çeşitlilik, lokus/alelik heterojenite, tam olmayan penetrans ve gen-çevre etkileşimi vardır.",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Aile çalışmaları şizofreni ile duygudurum bozukluğunun ayrı kalıtıldığını",
+     "metin": "Aile çalışmaları şizofreni ile duygudurum bozukluğunun ayrı kalıtıldığını gösterir.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "İleri baba yaşı şizofrenide çevresel risk faktörüdür",
+     "metin": "İleri baba yaşı şizofrenide çevresel risk faktörüdür.",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Şizofrenide her iki ebeveyn hastaysa çocukta risk %34-46'dır",
+     "metin": "Şizofrenide her iki ebeveyn hastaysa çocukta risk %34-46'dır.",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Şizofrenide MZ konkordansı %53, DZ %15, kalıtılabilirlik %85'tir",
+     "metin": "Şizofrenide MZ konkordansı %53, DZ %15, kalıtılabilirlik %85'tir.",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Genom taraması çalışmaları şizofreni için 1q, 2q, 3p,",
+     "metin": "Genom taraması çalışmaları şizofreni için 1q, 2q, 3p, 5q, 6p, 8p, 11q, 13q, 14p, 20q ve 22q'da yatkınlık bölgeleri göstermiştir.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Linkage ile bulunan şizofreni aday geni DTNBP1 (disbindin)",
+     "metin": "Linkage ile bulunan şizofreni aday geni DTNBP1 (disbindin) 6p'dedir.",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Şizofreni GWAS çalışmalarında HLA bölgesiyle (6p21.3-6p22.1, MHC-C4) ilişki",
+     "metin": "Şizofreni GWAS çalışmalarında HLA bölgesiyle (6p21.3-6p22.1, MHC-C4) ilişki tanımlanmıştır.",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "22q11.2 delesyonu %25'e kadar şizofreni riski taşır",
+     "metin": "22q11.2 delesyonu %25'e kadar şizofreni riski taşır.",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "Endofenotipler poligenik hastalıklarda genetik riski temsil eden objektif,",
+     "metin": "Endofenotipler poligenik hastalıklarda genetik riski temsil eden objektif, kalıtsal ve ölçülebilir biyolojik belirteçlerdir.",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Alkoliklerin ailelerinde alkolizm riski normal ailelere göre 4",
+     "metin": "Alkoliklerin ailelerinde alkolizm riski normal ailelere göre 4 kat fazladır.",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Alkol bağımlılığıyla TPH ve 5HT2A/2C reseptör genleri ilişkilidir",
+     "metin": "Alkol bağımlılığıyla TPH ve 5HT2A/2C reseptör genleri ilişkilidir.",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Bağımlılıkta yaşla genetik etkiler artar, paylaşılan aile çevresinin",
+     "metin": "Bağımlılıkta yaşla genetik etkiler artar, paylaşılan aile çevresinin etkisi azalır.",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Bağımlılıklar içinde en yüksek kalıtılabilirlik kokaindedir (0,72)",
+     "metin": "Bağımlılıklar içinde en yüksek kalıtılabilirlik kokaindedir (0,72).",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Alkol bağımlılığında ardışık etkili iki aday enzim ADH1B",
+     "metin": "Alkol bağımlılığında ardışık etkili iki aday enzim ADH1B ve ALDH2'dir.",
+     "s": [
+      57
+     ]
+    },
+    {
+     "baslik": "Asetaldehit birikimi olanlarda üst GİS kanseri riski yüksektir",
+     "metin": "Asetaldehit birikimi olanlarda üst GİS kanseri riski yüksektir.",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "ADH1B His47Arg'da Arg47 hiperaktif aleldir, kodominant etkilidir",
+     "metin": "ADH1B His47Arg'da Arg47 hiperaktif aleldir, kodominant etkilidir.",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "COMT prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynar",
+     "metin": "COMT prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynar.",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "S-COMT toplam COMT aktivitesinin %95'ini oluşturur",
+     "metin": "S-COMT toplam COMT aktivitesinin %95'ini oluşturur.",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "MAOA X üzerinde yerleşiktir; MAOA-LPR genin transkripsiyonal kontrol",
+     "metin": "MAOA X üzerinde yerleşiktir; MAOA-LPR genin transkripsiyonal kontrol bölgesinde (1,2 kb upstream) 30 bp tekrar bölgeleridir.",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "5-HTTLPR S aleli stresli yaşam olaylarında depresyon ve",
+     "metin": "5-HTTLPR S aleli stresli yaşam olaylarında depresyon ve intihar yatkınlığı yapar.",
+     "s": [
+      63
+     ]
+    },
+    {
+     "baslik": "Anksiyete bozuklukları sıktır ve kadınlarda daha yaygındır",
+     "metin": "Anksiyete bozuklukları sıktır ve kadınlarda daha yaygındır.",
+     "s": [
+      64
+     ]
+    },
+    {
+     "baslik": "OKB'de MZ ikiz konkordansı %75, DZ'de %47'dir",
+     "metin": "OKB'de MZ ikiz konkordansı %75, DZ'de %47'dir.",
+     "s": [
+      65
+     ]
+    },
+    {
+     "baslik": "Panik bozuklukta MZ konkordansı %31'dir, DZ konkordansı saptanamamıştır",
+     "metin": "Panik bozuklukta MZ konkordansı %31'dir, DZ konkordansı saptanamamıştır.",
+     "s": [
+      66
+     ]
+    },
+    {
+     "baslik": "Özgül fobi en yaygın fobi türüdür ve kadınlarda",
+     "metin": "Özgül fobi en yaygın fobi türüdür ve kadınlarda daha sıktır.",
+     "s": [
+      67
+     ]
+    },
+    {
+     "baslik": "Sosyal fobide MZ konkordansı %24, DZ %15'tir",
+     "metin": "Sosyal fobide MZ konkordansı %24, DZ %15'tir.",
+     "s": [
+      68
+     ]
+    },
+    {
+     "baslik": "GAB'da birinci derece akrabalarda sıklık %20, kontrollerde %4'tür",
+     "metin": "GAB'da birinci derece akrabalarda sıklık %20, kontrollerde %4'tür.",
+     "s": [
+      69
+     ]
+    },
+    {
+     "baslik": "Anoreksiya nervozada birinci derece akraba riski %6, kontrol",
+     "metin": "Anoreksiya nervozada birinci derece akraba riski %6, kontrol akrabalarında %1'dir.",
+     "s": [
+      70
+     ]
+    },
+    {
+     "baslik": "Anoreksiya nervozada TNF-α salınımı artar",
+     "metin": "Anoreksiya nervozada TNF-α salınımı artar.",
+     "s": [
+      71
+     ]
+    },
+    {
+     "baslik": "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; risk tahmini zordur",
+     "metin": "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; risk tahmini zordur.",
+     "s": [
+      72
+     ]
+    },
+    {
+     "baslik": "GWAS'ta hasta (vaka) ve kontrol grupları SNP dizileriyle",
+     "metin": "GWAS'ta hasta (vaka) ve kontrol grupları SNP dizileriyle taranır; vakalarda daha sık görülen varyant hastalıkla ilişkili kabul edilir.",
+     "s": [
+      74
+     ]
+    },
+    {
+     "baslik": "Moleküler analizde DNA restriksiyon enzimiyle kesilir, jel elektroforeziyle",
+     "metin": "Moleküler analizde DNA restriksiyon enzimiyle kesilir, jel elektroforeziyle ayrılır ve Southern blot ile mutasyonun kestiği bölge gösterilir.",
+     "s": [
+      75
+     ]
+    },
+    {
+     "baslik": "Sanger dizilemede floresan işaretli dideoksinükleotidlerle zincir sonlandırılır, parçalar",
+     "metin": "Sanger dizilemede floresan işaretli dideoksinükleotidlerle zincir sonlandırılır, parçalar kapiller jel elektroforeziyle ayrılır ve kromatogram okunur.",
+     "s": [
+      77
+     ]
+    },
+    {
+     "baslik": "Yeni nesil dizileme akışı DNA ekstraksiyonu, kütüphane hazırlığı,",
+     "metin": "Yeni nesil dizileme akışı DNA ekstraksiyonu, kütüphane hazırlığı, dizileme ve analiz basamaklarından oluşur.",
+     "s": [
+      78
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Psikiyatride genetik çalışmalar genetik ve çevresel faktörlerin etyolojiye: Psikiyatride genetik çalışmalar genetik ve çevresel faktörlerin etyolojiye katkısını belirlemeyi amaçlar.",
+    "Genetik epidemiyolojik çalışmalar popülasyon genetiği ve aile çalışmalarını: Genetik epidemiyolojik çalışmalar popülasyon genetiği ve aile çalışmalarını kapsar.",
+    "Psikiyatrik hastalıklar poligeniktir; tek bir genle açıklanmaz: Psikiyatrik hastalıklar poligeniktir; tek bir genle açıklanmaz.",
+    "Popülasyon çalışmaları aile çalışmaları, ikiz çalışmaları ve evlat: Popülasyon çalışmaları aile çalışmaları, ikiz çalışmaları ve evlat edinilenler üzerine yapılan çalışmalardır.",
+    "Aile çalışmalarında hasta bireylerin akrabalarındaki risk genel popülasyondaki: Aile çalışmalarında hasta bireylerin akrabalarındaki risk genel popülasyondaki riskle karşılaştırılır.",
+    "İkiz çalışmaları MZ ve DZ ikiz çiftleri arasındaki: İkiz çalışmaları MZ ve DZ ikiz çiftleri arasındaki fenotipik uyumun varyansını modelleyerek kalıtsallığı tahmin eder.",
+    "İkiz çalışmalarında aynı ortamda ve ayrı ortamlarda yetişen: İkiz çalışmalarında aynı ortamda ve ayrı ortamlarda yetişen MZ ikizler karşılaştırılır.",
+    "İkiz çalışmaları hastalığın kalıtsallığını tahmin etmeye yardımcı olur: İkiz çalışmaları hastalığın kalıtsallığını tahmin etmeye yardımcı olur.",
+    "Evlat edinme çalışmaları genetik ve çevresel faktörleri ayırt: Evlat edinme çalışmaları genetik ve çevresel faktörleri ayırt etmede kullanılan uygun bir metottur.",
+    "Sitogenetik çalışmalar in situ hibridizasyon gibi tekniklerle genlerin: Sitogenetik çalışmalar in situ hibridizasyon gibi tekniklerle genlerin hangi kromozom bandında yerleştiğini bulur.",
+    "Moleküler genetik çalışmaların amacı belirli bir fenotipin kalıtım: Moleküler genetik çalışmaların amacı belirli bir fenotipin kalıtım kalıbını etkileyen aday genleri belirlemektir.",
+    "Psikiyatrik hastalıklar genellikle Mendeliyen kalıtıma uymaz: Psikiyatrik hastalıklar genellikle Mendeliyen kalıtıma uymaz.",
+    "Gen ekzon ve intronlardan oluşur; ekzon protein ürününe: Gen ekzon ve intronlardan oluşur; ekzon protein ürününe karşılık gelir, introndan protein ürünü oluşmaz.",
+    "Popülasyonda görülme sıklığı %1'in altındaki değişiklik mutasyondur: Popülasyonda görülme sıklığı %1'in altındaki değişiklik mutasyondur.",
+    "RFLP, restriksiyon enzimleriyle oluşturulan parça uzunluklarındaki farklılıklardır: RFLP, restriksiyon enzimleriyle oluşturulan parça uzunluklarındaki farklılıklardır.",
+    "Satellit DNA sentromerde lokalizedir: Satellit DNA sentromerde lokalizedir.",
+    "Genomda yaklaşık 10.000.000 SNP, 10.000 STR belirteci bulunur: Genomda yaklaşık 10.000.000 SNP, 10.000 STR belirteci bulunur.",
+    "Model bağımlı (parametrik) analizler kromozom yerleşimi kesin bilinen: Model bağımlı (parametrik) analizler kromozom yerleşimi kesin bilinen bir göstergenin kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını gösterir.",
+    "Genetik harita genlerin kromozom üzerindeki sırasını ve rekombinasyon: Genetik harita genlerin kromozom üzerindeki sırasını ve rekombinasyon sıklığına göre aralarındaki yaklaşık uzaklığı verir.",
+    "Bağlantı analizinde hastalığın bilinen bir genetik markere bağlı: Bağlantı analizinde hastalığın bilinen bir genetik markere bağlı olup olmadığı araştırılır.",
+    "Negatif LOD değerleri o kromozom bölgesinde bağlantı olmadığını: Negatif LOD değerleri o kromozom bölgesinde bağlantı olmadığını gösterir.",
+    "Klasik linkage çalışması hastalığın belirli bir kalıtım şekli: Klasik linkage çalışması hastalığın belirli bir kalıtım şekli varsa en iyi sonucu verir.",
+    "Asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir: Asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir gen olmalıdır.",
+    "Kişilik bozukluğu, hastanın sağlıksız bir düşünme, işleyiş ve: Kişilik bozukluğu, hastanın sağlıksız bir düşünme, işleyiş ve davranış tarzına sahip olduğu zihinsel bozukluktur; ilişkilerde, işte ve okulda önemli sorunlara yol açar.",
+    "Kişilik bozukluklarında genetik çalışmalar serotonerjik ve dopaminerjik sistemdeki: Kişilik bozukluklarında genetik çalışmalar serotonerjik ve dopaminerjik sistemdeki enzim ve nörotransmitter genlerini hedefler.",
+    "İkiz çalışmaları özellikle suç işlemiş ASKB hastalarında genetik: İkiz çalışmaları özellikle suç işlemiş ASKB hastalarında genetik yatkınlık düşündürmüştür.",
+    "5HTTLPR ile MAO-A promotör tekrar dizilerindeki S alelleri: 5HTTLPR ile MAO-A promotör tekrar dizilerindeki S alelleri antisosyal davranışla ilişkilidir.",
+    "CACNA1C ve COMT genlerinin bazı alelleri paranoid fikirlerle: CACNA1C ve COMT genlerinin bazı alelleri paranoid fikirlerle ilişkilidir.",
+    "Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmıştır: Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmıştır.",
+    "MZ ikiz konkordansı unipolar hastalıkta %80, bipolarda %50-62'dir: MZ ikiz konkordansı unipolar hastalıkta %80, bipolarda %50-62'dir.",
+    "Duygudurum bozukluklarında kardeşte tekrarlama riski %20-30'dur: Duygudurum bozukluklarında kardeşte tekrarlama riski %20-30'dur.",
+    "Bipolar bozuklukla ilişkili G72/G30 geni 13q33'tedir: Bipolar bozuklukla ilişkili G72/G30 geni 13q33'tedir.",
+    "Bipolar bozuklukta aday genler 5-HTT, COMT ve BDNF'dir: Bipolar bozuklukta aday genler 5-HTT, COMT ve BDNF'dir.",
+    "Unipolar bozuklukta birinci derece akraba riski 2-10 kat: Unipolar bozuklukta birinci derece akraba riski 2-10 kat fazladır.",
+    "Duygudurum bozukluklarında MZ ikizlerde risk %60-70, DZ ikizlerde: Duygudurum bozukluklarında MZ ikizlerde risk %60-70, DZ ikizlerde %20'dir.",
+    "Duygudurum bozukluklarının kalıtımı klasik Mendel kurallarına uymaz, poligeniktir: Duygudurum bozukluklarının kalıtımı klasik Mendel kurallarına uymaz, poligeniktir.",
+    "İntihar davranışı serotonerjik nörotransmisyon ve triptofan hidroksilaz polimorfizmiyle: İntihar davranışı serotonerjik nörotransmisyon ve triptofan hidroksilaz polimorfizmiyle ilişkilidir.",
+    "4p'de lokalize DRD5 geni psikotik bozukluklarda aday gendir: 4p'de lokalize DRD5 geni psikotik bozukluklarda aday gendir.",
+    "Şizofrenide birinci derece akrabalarda risk %5-10'dur: Şizofrenide birinci derece akrabalarda risk %5-10'dur.",
+    "Şizofreni yaşam boyu prevalansı genel popülasyonda %0,5-1'dir: Şizofreni yaşam boyu prevalansı genel popülasyonda %0,5-1'dir.",
+    "Şizofrenide kalıtım biçimi bilinmez; fenotipik çeşitlilik, lokus/alelik heterojenite,: Şizofrenide kalıtım biçimi bilinmez; fenotipik çeşitlilik, lokus/alelik heterojenite, tam olmayan penetrans ve gen-çevre etkileşimi vardır.",
+    "Aile çalışmaları şizofreni ile duygudurum bozukluğunun ayrı kalıtıldığını: Aile çalışmaları şizofreni ile duygudurum bozukluğunun ayrı kalıtıldığını gösterir.",
+    "İleri baba yaşı şizofrenide çevresel risk faktörüdür: İleri baba yaşı şizofrenide çevresel risk faktörüdür.",
+    "Şizofrenide her iki ebeveyn hastaysa çocukta risk %34-46'dır: Şizofrenide her iki ebeveyn hastaysa çocukta risk %34-46'dır.",
+    "Şizofrenide MZ konkordansı %53, DZ %15, kalıtılabilirlik %85'tir: Şizofrenide MZ konkordansı %53, DZ %15, kalıtılabilirlik %85'tir.",
+    "Genom taraması çalışmaları şizofreni için 1q, 2q, 3p,: Genom taraması çalışmaları şizofreni için 1q, 2q, 3p, 5q, 6p, 8p, 11q, 13q, 14p, 20q ve 22q'da yatkınlık bölgeleri göstermiştir.",
+    "Linkage ile bulunan şizofreni aday geni DTNBP1 (disbindin): Linkage ile bulunan şizofreni aday geni DTNBP1 (disbindin) 6p'dedir.",
+    "Şizofreni GWAS çalışmalarında HLA bölgesiyle (6p21.3-6p22.1, MHC-C4) ilişki: Şizofreni GWAS çalışmalarında HLA bölgesiyle (6p21.3-6p22.1, MHC-C4) ilişki tanımlanmıştır.",
+    "22q11.2 delesyonu %25'e kadar şizofreni riski taşır: 22q11.2 delesyonu %25'e kadar şizofreni riski taşır.",
+    "Endofenotipler poligenik hastalıklarda genetik riski temsil eden objektif,: Endofenotipler poligenik hastalıklarda genetik riski temsil eden objektif, kalıtsal ve ölçülebilir biyolojik belirteçlerdir.",
+    "Alkoliklerin ailelerinde alkolizm riski normal ailelere göre 4: Alkoliklerin ailelerinde alkolizm riski normal ailelere göre 4 kat fazladır.",
+    "Alkol bağımlılığıyla TPH ve 5HT2A/2C reseptör genleri ilişkilidir: Alkol bağımlılığıyla TPH ve 5HT2A/2C reseptör genleri ilişkilidir.",
+    "Bağımlılıkta yaşla genetik etkiler artar, paylaşılan aile çevresinin: Bağımlılıkta yaşla genetik etkiler artar, paylaşılan aile çevresinin etkisi azalır.",
+    "Bağımlılıklar içinde en yüksek kalıtılabilirlik kokaindedir (0,72): Bağımlılıklar içinde en yüksek kalıtılabilirlik kokaindedir (0,72).",
+    "Alkol bağımlılığında ardışık etkili iki aday enzim ADH1B: Alkol bağımlılığında ardışık etkili iki aday enzim ADH1B ve ALDH2'dir.",
+    "Asetaldehit birikimi olanlarda üst GİS kanseri riski yüksektir: Asetaldehit birikimi olanlarda üst GİS kanseri riski yüksektir.",
+    "ADH1B His47Arg'da Arg47 hiperaktif aleldir, kodominant etkilidir: ADH1B His47Arg'da Arg47 hiperaktif aleldir, kodominant etkilidir.",
+    "COMT prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynar: COMT prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynar.",
+    "S-COMT toplam COMT aktivitesinin %95'ini oluşturur: S-COMT toplam COMT aktivitesinin %95'ini oluşturur.",
+    "MAOA X üzerinde yerleşiktir; MAOA-LPR genin transkripsiyonal kontrol: MAOA X üzerinde yerleşiktir; MAOA-LPR genin transkripsiyonal kontrol bölgesinde (1,2 kb upstream) 30 bp tekrar bölgeleridir.",
+    "5-HTTLPR S aleli stresli yaşam olaylarında depresyon ve: 5-HTTLPR S aleli stresli yaşam olaylarında depresyon ve intihar yatkınlığı yapar.",
+    "Anksiyete bozuklukları sıktır ve kadınlarda daha yaygındır: Anksiyete bozuklukları sıktır ve kadınlarda daha yaygındır.",
+    "OKB'de MZ ikiz konkordansı %75, DZ'de %47'dir: OKB'de MZ ikiz konkordansı %75, DZ'de %47'dir.",
+    "Panik bozuklukta MZ konkordansı %31'dir, DZ konkordansı saptanamamıştır: Panik bozuklukta MZ konkordansı %31'dir, DZ konkordansı saptanamamıştır.",
+    "Özgül fobi en yaygın fobi türüdür ve kadınlarda: Özgül fobi en yaygın fobi türüdür ve kadınlarda daha sıktır.",
+    "Sosyal fobide MZ konkordansı %24, DZ %15'tir: Sosyal fobide MZ konkordansı %24, DZ %15'tir.",
+    "GAB'da birinci derece akrabalarda sıklık %20, kontrollerde %4'tür: GAB'da birinci derece akrabalarda sıklık %20, kontrollerde %4'tür.",
+    "Anoreksiya nervozada birinci derece akraba riski %6, kontrol: Anoreksiya nervozada birinci derece akraba riski %6, kontrol akrabalarında %1'dir.",
+    "Anoreksiya nervozada TNF-α salınımı artar: Anoreksiya nervozada TNF-α salınımı artar.",
+    "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; risk tahmini zordur: Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; risk tahmini zordur.",
+    "GWAS'ta hasta (vaka) ve kontrol grupları SNP dizileriyle: GWAS'ta hasta (vaka) ve kontrol grupları SNP dizileriyle taranır; vakalarda daha sık görülen varyant hastalıkla ilişkili kabul edilir.",
+    "Moleküler analizde DNA restriksiyon enzimiyle kesilir, jel elektroforeziyle: Moleküler analizde DNA restriksiyon enzimiyle kesilir, jel elektroforeziyle ayrılır ve Southern blot ile mutasyonun kestiği bölge gösterilir.",
+    "Sanger dizilemede floresan işaretli dideoksinükleotidlerle zincir sonlandırılır, parçalar: Sanger dizilemede floresan işaretli dideoksinükleotidlerle zincir sonlandırılır, parçalar kapiller jel elektroforeziyle ayrılır ve kromatogram okunur.",
+    "Yeni nesil dizileme akışı DNA ekstraksiyonu, kütüphane hazırlığı,: Yeni nesil dizileme akışı DNA ekstraksiyonu, kütüphane hazırlığı, dizileme ve analiz basamaklarından oluşur."
+   ],
+   "v": "63958d8e5b"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu derste çıkmış altı soru, psikiyatrik genetikte yöntem seçimini (asosiyasyon, bağlantı, ikiz çalışmaları), COMT Val158Met polimorfizmini, şizofrenide aile riskini ve hastalıkların poligenik ve multifaktöriyel doğasını ölçer.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Şizofreni, bipolar bozukluk ve obsesif-kompulsif bozuklukta (OKB) ortak aday gen aşağıdakilerden hangisidir?",
+     "cevap": "COMT Val158Met polimorfizmi",
+     "s": [
+      61
+     ],
+     "aciklama": [
+      "Bu soru, şizofreni, bipolar bozukluk ve obsesif-kompulsif bozukluk (OKB) gibi farklı psikiyatrik tabloların ortak bir aday gende buluşup buluşmadığını bilip bilmediğinizi ölçer.",
+      "Slaytta COMT geninin prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynadığı ve COMT Val158Met polimorfizminde Met158 aleli 3-4 kat daha az aktif olduğu yazılıdır; bu nedenle dopamin yıkımını değiştiren bu polimorfizm doğru cevaptır.",
+      "En güçlü çeldirici diğer aday genlerdir: MAOA da dopamini metabolize eder ve aynı bölümde anlatılır, ancak slaytta MAOA düşük aktiviteli varyantı antisosyal davranış ve Brunner sendromu ile ilişkilendirilir. DRD5 ise psikotik bozukluklarda aday gen olarak geçer, ortak gen olarak değil."
+     ],
+     "ornek": "Prefrontal kortekste dopamin yıkımı yavaşlamış, Met158 aleli taşıyan bir bireyde dopamin düzeyi değişir ve bu varyant birden fazla psikiyatrik bozuklukta aday olarak incelenir.",
+     "tuzak": "Dopamini metabolize eden MAOA geni de aynı bölümde anlatıldığı için ortak aday gen sanılır; oysa MAOA düşük aktiviteli varyantı slaytta antisosyal davranışla ilişkilendirilir."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kurgu Soru: Katekolaminleri yıkan ve prefrontal kortekste dopamin düzeyini düzenleyen enzimin geninde yer alan, düşük aktiviteli alelin enzimi 3–4 kat daha az aktif hâle getirdiği kodominant polimorfizm aşağıdakilerden hangisidir?",
+     "cevap": "COMT Val158Met",
+     "s": [
+      61
+     ],
+     "aciklama": [
+      "Bu soru, katekolamin yıkımında görevli enzimin genini ve düşük aktiviteli aleli tarif eden bir tanımdan polimorfizmin adını bulmanızı ölçer.",
+      "Slaytta COMT Val158Met polimorfizminde Met158 aleli 3-4 kat daha az aktif olarak verilir ve etkinin kodominant olduğu belirtilir; ayrıca COMT prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynar, soru kökündeki üç özellik bu bilgilerle birebir örtüşür.",
+      "Güçlü çeldirici MAOA-LPR (30 bp tekrar bölgesi) varyantıdır; MAOA da norepinefrin, dopamin ve serotonini metabolize eder, fakat sorudaki 3-4 kat aktivite azalması ve kodominant etki COMT için yazılıdır, MAOA için değil."
+     ],
+     "ornek": "Met158 aleli taşıyan bir kişide COMT enzimi 3-4 kat daha az aktiftir, dolayısıyla prefrontal kortekste dopamin yıkımı yavaşlar.",
+     "tuzak": "Katekolaminleri yıkan her enzim geni COMT gibi görünür; oysa kökteki 3-4 kat aktivite kaybı ve kodominant etki ancak COMT Val158Met polimorfizmini tanımlar, MAOA ise ayrı bir gendir."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Kurgu Soru: Hastalık patogenezinde rol aldığı düşünülen aday bir genin alelik varyantlarının hasta ve kontrol gruplarındaki sıklıklarını karşılaştıran, kalıtım kalıbının bilinmesini gerektirmeyen genetik çalışma yöntemi aşağıdakilerden hangisidir?",
+     "cevap": "Asosiasyon (ilişki) çalışması",
+     "s": [
+      24
+     ],
+     "aciklama": [
+      "Bu soru, bir aday genin alelik varyantlarının hasta ve kontrol gruplarındaki sıklıklarını karşılaştıran yöntemi, yani asosiyasyon (ilişki) çalışmasını tanımanızı ölçer.",
+      "Slaytta asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir genin bulunması gerektiği, kalıtım kalıbının belirlenmesinin zorunlu olmadığı ve bir genin alelik varyantlarının hasta ve kontrol popülasyonlarındaki frekanslarının karşılaştırıldığı yazılıdır; soru kökünün üç ögesi bu cümlelerle birebir örtüşür.",
+      "En güçlü çeldirici bağlantı (linkage) analizidir: slaytta bağlantı analizi belirli bir kalıtım şekli ve tek ya da majör gen etkisi olduğunda en iyi sonucu verir, dolayısıyla kalıtım kalıbının bilinmesini gerektirir ve çoğu psikiyatrik bozuklukta sonuç almak güç olur."
+     ],
+     "ornek": "Alzheimer hastalığında ApoE geni, hasta ve kontrol gruplarında alel sıklıkları karşılaştırılarak asosiyasyon yöntemiyle bulunmuştur.",
+     "tuzak": "Kalıtım kalıbı bilinmeden de uygulanabilmesi asosiyasyonun özelliğidir; bağlantı analizi ise kalıtım şekli belli olduğunda iyi çalıştığı için bu iki yöntem karıştırılır."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Davranış genetiği çalışmalarında kullanılan yöntemler: I. İkiz çalışmaları II. Asosiyasyon (ilişki) çalışmaları III. Bağlantı (linkage) analizi IV. Mutasyon analizi Yukarıdakilerden hangileri davranış genetiği çalışmalarında kullanılan yöntemlerdendir?",
+     "cevap": "I, II ve III",
+     "s": [
+      3
+     ],
+     "aciklama": [
+      "Bu soru, davranış genetiği çalışmalarında kullanılan yöntemleri ve kullanılmayanı ayırt etmenizi, yani bir birleşik seçenekli (I, II, III, IV) soruda doğru ögeleri bulmanızı ölçer.",
+      "Slaytlara göre genetik araştırmalarda sık kullanılan metotlar genetik epidemiyolojik çalışmalar (popülasyon genetiği ve aile çalışmaları), sitogenetik çalışmalar ve moleküler genetik çalışmalardır; moleküler genetik grubu bağlantı (linkage), asosiyasyon ve GWAS (genom çapında ilişkilendirme çalışması) analizlerini içerir. Soruda doğru kabul edilen küme ikiz çalışmaları, asosiyasyon ve bağlantı analizidir.",
+      "Çeldirici mutasyon analizidir: slaytta mutasyon tespiti aday gen, mutasyon ve polimorfizm saptama amacının bir parçası olarak geçer, ancak davranış genetiğinde sık kullanılan yöntem listesinde ayrı bir yöntem olarak yer almaz; bu yüzden IV. ögeyi içeren birleşik seçenekler elenir."
+     ],
+     "ornek": "Hangi yöntem hasta ve kontrolde alel sıklığını karşılaştırır diye sorulursa asosiyasyon, kalıtım şekli belli ailelerde gen aranıyorsa bağlantı analizi, kalıtım riski soruluyorsa ikiz çalışmaları akla gelmelidir.",
+     "tuzak": "Tek bir mutasyonu bulmak amaçlandığı için mutasyon analizi de davranış genetiği yöntemi sanılır; oysa slayt listesinde yöntem olarak ikiz, asosiyasyon ve bağlantı çalışmaları öne çıkar."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Psikiyatrik hastalıkların moleküler temeli için aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Epigenetik ve genetik faktörler etkilidir.",
+     "s": [
+      72
+     ],
+     "aciklama": [
+      "Bu soru, psikiyatrik hastalıkların moleküler temelinin tek gen mi yoksa çok etmenli bir yapı mı olduğunu kavrayıp kavramadığınızı ölçer.",
+      "Slaytlarda psikiyatrik hastalıkların poligenik olduğu, tek bir genle açıklanmadığı, ikiz çalışmalarına göre kalıtım riskinin %40-80 arasında değiştiği ve genetik danışma bölümünde hastalıkların kompleks ve multifaktöriyel olduğu için risk tahmininin zor olduğu yazılıdır. Bu nedenle genetik ve epigenetik etmenlerin birlikte etkili olduğunu söyleyen önerme doğrudur.",
+      "Çeldirici türü, hastalığı tek bir gene ya da yalnız çevreye bağlayan ve altın standart genetik tanı testi olduğunu ileri süren önermelerdir; slaytta psikiyatrik hastalıklar için altın standart genetik tanı testi bulunmadığı açıkça belirtilir, bu da bu önermeleri eler."
+     ],
+     "ornek": "Şizofreni, bipolar bozukluk ve otizm spektrum bozukluklarında göreceli risk 7-9 gibi yüksek değerlere ulaşır, yine de tek bir gen hastalığı belirlemez.",
+     "tuzak": "Genetik kökenli hastalık tek gen hastalığı gibi düşünülür; oysa psikiyatrik bozukluklar poligenik ve multifaktöriyeldir, bu yüzden tek gen ya da tek testle kesin tanı mümkün değildir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Şizofrenide kalıtımın rolü için ne söylenebilir?",
+     "cevap": "Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir.",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Bu soru, şizofrenide kalıtımın rolünü sayısal risk düzeyleri üzerinden ve aile öyküsüne bağlı olarak yorumlamanızı ölçer.",
+      "Slaytta şizofreni yaşam boyu prevalansının genel popülasyonda %0,5-1, birinci derece akrabalarda %5-10, monozigot (MZ) ikizlerde %50, dizigot (DZ) ikizlerde %10 ve iki şizofrenik ebeveynin çocuğunda %50 olduğu yazılıdır; bu aralıklar, aile öyküsü olan kişilerde riskin genel popülasyona göre belirgin biçimde arttığını gösterir.",
+      "Güçlü çeldirici, kalıtımın hiçbir rolü olmadığını ya da riskin genel popülasyonla aynı kaldığını söyleyen önermelerdir; slayttaki ikiz ve ebeveyn verileri bunu çürütür. Sorudaki yüzde değeri, riskin aile öyküsüyle yükselebileceğini vurgulayan genel bir ifadedir, tek bir kesin değer olarak ezberlenmemelidir."
+     ],
+     "ornek": "Birinci derece akrabası şizofreni olan bir kişide yaşam boyu risk %5-10 iken genel popülasyonda %0,5-1 olduğu için aile öyküsü riski bir kat değil katlarca artırır.",
+     "tuzak": "Riskin yüksek olması hastalığın kesin kalıtsal olduğu anlamına gelir sanılır; oysa MZ ikizlerde bile risk %50 olduğu için hastalık poligenik ve çevresel etkilere de açıktır."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu derste çıkmış altı soru, psikiyatrik genetikte yöntem seçimini (asosiyasyon, bağlantı, ikiz çalışmaları), COMT Val158Met polimorfizmini, şizofrenide aile riskini ve hastalıkların poligenik ve multifaktöriyel doğasını ölçer.",
+    "2025-2026: Şizofreni, bipolar bozukluk ve obsesif-kompulsif bozuklukta (OKB) ortak aday gen aşağıdakilerden hangisidir?",
+    "Cevap: COMT Val158Met polimorfizmi.",
+    "Bu soru, şizofreni, bipolar bozukluk ve obsesif-kompulsif bozukluk (OKB) gibi farklı psikiyatrik tabloların ortak bir aday gende buluşup buluşmadığını bilip bilmediğinizi ölçer.",
+    "Slaytta COMT geninin prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynadığı ve COMT Val158Met polimorfizminde Met158 aleli 3-4 kat daha az aktif olduğu yazılıdır; bu nedenle dopamin yıkımını değiştiren bu polimorfizm doğru cevaptır.",
+    "En güçlü çeldirici diğer aday genlerdir: MAOA da dopamini metabolize eder ve aynı bölümde anlatılır, ancak slaytta MAOA düşük aktiviteli varyantı antisosyal davranış ve Brunner sendromu ile ilişkilendirilir. DRD5 ise psikotik bozukluklarda aday gen olarak geçer, ortak gen olarak değil.",
+    "Örnek: Prefrontal kortekste dopamin yıkımı yavaşlamış, Met158 aleli taşıyan bir bireyde dopamin düzeyi değişir ve bu varyant birden fazla psikiyatrik bozuklukta aday olarak incelenir.",
+    "Tuzak: Dopamini metabolize eden MAOA geni de aynı bölümde anlatıldığı için ortak aday gen sanılır; oysa MAOA düşük aktiviteli varyantı slaytta antisosyal davranışla ilişkilendirilir.",
+    "2024-2025: Kurgu Soru: Katekolaminleri yıkan ve prefrontal kortekste dopamin düzeyini düzenleyen enzimin geninde yer alan, düşük aktiviteli alelin enzimi 3–4 kat daha az aktif hâle getirdiği kodominant polimorfizm aşağıdakilerden hangisidir?",
+    "Cevap: COMT Val158Met.",
+    "Bu soru, katekolamin yıkımında görevli enzimin genini ve düşük aktiviteli aleli tarif eden bir tanımdan polimorfizmin adını bulmanızı ölçer.",
+    "Slaytta COMT Val158Met polimorfizminde Met158 aleli 3-4 kat daha az aktif olarak verilir ve etkinin kodominant olduğu belirtilir; ayrıca COMT prefrontal kortekste dopamin düzeylerinin düzenlenmesinde rol oynar, soru kökündeki üç özellik bu bilgilerle birebir örtüşür.",
+    "Güçlü çeldirici MAOA-LPR (30 bp tekrar bölgesi) varyantıdır; MAOA da norepinefrin, dopamin ve serotonini metabolize eder, fakat sorudaki 3-4 kat aktivite azalması ve kodominant etki COMT için yazılıdır, MAOA için değil.",
+    "Örnek: Met158 aleli taşıyan bir kişide COMT enzimi 3-4 kat daha az aktiftir, dolayısıyla prefrontal kortekste dopamin yıkımı yavaşlar.",
+    "Tuzak: Katekolaminleri yıkan her enzim geni COMT gibi görünür; oysa kökteki 3-4 kat aktivite kaybı ve kodominant etki ancak COMT Val158Met polimorfizmini tanımlar, MAOA ise ayrı bir gendir.",
+    "2024-2025: Kurgu Soru: Hastalık patogenezinde rol aldığı düşünülen aday bir genin alelik varyantlarının hasta ve kontrol gruplarındaki sıklıklarını karşılaştıran, kalıtım kalıbının bilinmesini gerektirmeyen genetik çalışma yöntemi aşağıdakilerden hangisidir?",
+    "Cevap: Asosiasyon (ilişki) çalışması.",
+    "Bu soru, bir aday genin alelik varyantlarının hasta ve kontrol gruplarındaki sıklıklarını karşılaştıran yöntemi, yani asosiyasyon (ilişki) çalışmasını tanımanızı ölçer.",
+    "Slaytta asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir genin bulunması gerektiği, kalıtım kalıbının belirlenmesinin zorunlu olmadığı ve bir genin alelik varyantlarının hasta ve kontrol popülasyonlarındaki frekanslarının karşılaştırıldığı yazılıdır; soru kökünün üç ögesi bu cümlelerle birebir örtüşür.",
+    "En güçlü çeldirici bağlantı (linkage) analizidir: slaytta bağlantı analizi belirli bir kalıtım şekli ve tek ya da majör gen etkisi olduğunda en iyi sonucu verir, dolayısıyla kalıtım kalıbının bilinmesini gerektirir ve çoğu psikiyatrik bozuklukta sonuç almak güç olur.",
+    "Örnek: Alzheimer hastalığında ApoE geni, hasta ve kontrol gruplarında alel sıklıkları karşılaştırılarak asosiyasyon yöntemiyle bulunmuştur.",
+    "Tuzak: Kalıtım kalıbı bilinmeden de uygulanabilmesi asosiyasyonun özelliğidir; bağlantı analizi ise kalıtım şekli belli olduğunda iyi çalıştığı için bu iki yöntem karıştırılır.",
+    "2023-2024: Davranış genetiği çalışmalarında kullanılan yöntemler: I. İkiz çalışmaları II. Asosiyasyon (ilişki) çalışmaları III. Bağlantı (linkage) analizi IV. Mutasyon analizi Yukarıdakilerden hangileri davranış genetiği çalışmalarında kullanılan yöntemlerdendir?",
+    "Cevap: I, II ve III.",
+    "Bu soru, davranış genetiği çalışmalarında kullanılan yöntemleri ve kullanılmayanı ayırt etmenizi, yani bir birleşik seçenekli (I, II, III, IV) soruda doğru ögeleri bulmanızı ölçer.",
+    "Slaytlara göre genetik araştırmalarda sık kullanılan metotlar genetik epidemiyolojik çalışmalar (popülasyon genetiği ve aile çalışmaları), sitogenetik çalışmalar ve moleküler genetik çalışmalardır; moleküler genetik grubu bağlantı (linkage), asosiyasyon ve GWAS (genom çapında ilişkilendirme çalışması) analizlerini içerir. Soruda doğru kabul edilen küme ikiz çalışmaları, asosiyasyon ve bağlantı analizidir.",
+    "Çeldirici mutasyon analizidir: slaytta mutasyon tespiti aday gen, mutasyon ve polimorfizm saptama amacının bir parçası olarak geçer, ancak davranış genetiğinde sık kullanılan yöntem listesinde ayrı bir yöntem olarak yer almaz; bu yüzden IV. ögeyi içeren birleşik seçenekler elenir.",
+    "Örnek: Hangi yöntem hasta ve kontrolde alel sıklığını karşılaştırır diye sorulursa asosiyasyon, kalıtım şekli belli ailelerde gen aranıyorsa bağlantı analizi, kalıtım riski soruluyorsa ikiz çalışmaları akla gelmelidir.",
+    "Tuzak: Tek bir mutasyonu bulmak amaçlandığı için mutasyon analizi de davranış genetiği yöntemi sanılır; oysa slayt listesinde yöntem olarak ikiz, asosiyasyon ve bağlantı çalışmaları öne çıkar.",
+    "2020-2021: Psikiyatrik hastalıkların moleküler temeli için aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Epigenetik ve genetik faktörler etkilidir.",
+    "Bu soru, psikiyatrik hastalıkların moleküler temelinin tek gen mi yoksa çok etmenli bir yapı mı olduğunu kavrayıp kavramadığınızı ölçer.",
+    "Slaytlarda psikiyatrik hastalıkların poligenik olduğu, tek bir genle açıklanmadığı, ikiz çalışmalarına göre kalıtım riskinin %40-80 arasında değiştiği ve genetik danışma bölümünde hastalıkların kompleks ve multifaktöriyel olduğu için risk tahmininin zor olduğu yazılıdır. Bu nedenle genetik ve epigenetik etmenlerin birlikte etkili olduğunu söyleyen önerme doğrudur.",
+    "Çeldirici türü, hastalığı tek bir gene ya da yalnız çevreye bağlayan ve altın standart genetik tanı testi olduğunu ileri süren önermelerdir; slaytta psikiyatrik hastalıklar için altın standart genetik tanı testi bulunmadığı açıkça belirtilir, bu da bu önermeleri eler.",
+    "Örnek: Şizofreni, bipolar bozukluk ve otizm spektrum bozukluklarında göreceli risk 7-9 gibi yüksek değerlere ulaşır, yine de tek bir gen hastalığı belirlemez.",
+    "Tuzak: Genetik kökenli hastalık tek gen hastalığı gibi düşünülür; oysa psikiyatrik bozukluklar poligenik ve multifaktöriyeldir, bu yüzden tek gen ya da tek testle kesin tanı mümkün değildir.",
+    "2020-2021: Şizofrenide kalıtımın rolü için ne söylenebilir?",
+    "Cevap: Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir.",
+    "Bu soru, şizofrenide kalıtımın rolünü sayısal risk düzeyleri üzerinden ve aile öyküsüne bağlı olarak yorumlamanızı ölçer.",
+    "Slaytta şizofreni yaşam boyu prevalansının genel popülasyonda %0,5-1, birinci derece akrabalarda %5-10, monozigot (MZ) ikizlerde %50, dizigot (DZ) ikizlerde %10 ve iki şizofrenik ebeveynin çocuğunda %50 olduğu yazılıdır; bu aralıklar, aile öyküsü olan kişilerde riskin genel popülasyona göre belirgin biçimde arttığını gösterir.",
+    "Güçlü çeldirici, kalıtımın hiçbir rolü olmadığını ya da riskin genel popülasyonla aynı kaldığını söyleyen önermelerdir; slayttaki ikiz ve ebeveyn verileri bunu çürütür. Sorudaki yüzde değeri, riskin aile öyküsüyle yükselebileceğini vurgulayan genel bir ifadedir, tek bir kesin değer olarak ezberlenmemelidir.",
+    "Örnek: Birinci derece akrabası şizofreni olan bir kişide yaşam boyu risk %5-10 iken genel popülasyonda %0,5-1 olduğu için aile öyküsü riski bir kat değil katlarca artırır.",
+    "Tuzak: Riskin yüksek olması hastalığın kesin kalıtsal olduğu anlamına gelir sanılır; oysa MZ ikizlerde bile risk %50 olduğu için hastalık poligenik ve çevresel etkilere de açıktır."
+   ],
+   "v": "db675596aa"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 6 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 6 çıkmış soru var; 1 tanesi öncüllü, 0 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Kurgu sorular",
+     "metin": "2 soru kaynak belgeden yeniden kurulmuş kurgu sorudur."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 3, 24, 41, 61, 72."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 6 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 6 çıkmış soru var; 1 tanesi öncüllü, 0 tanesi olumsuz köklüdür.",
+    "Kurgu sorular: 2 soru kaynak belgeden yeniden kurulmuş kurgu sorudur.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 3, 24, 41, 61, 72."
+   ],
+   "v": "e8fb462dcc"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "S-COMT toplam COMT aktivitesinin %95'ini oluşturur",
+     "metin": "Sık yapılan hata: Dopamini metabolize eden MAOA geni de aynı bölümde anlatıldığı için ortak aday gen sanılır; oysa MAOA düşük aktiviteli varyantı slaytta antisosyal davranışla ilişkilendirilir. Ayrıca: Katekolaminleri yıkan her enzim geni COMT gibi görünür; oysa kökteki 3-4 kat aktivite kaybı ve kodominant etki ancak COMT Val158Met polimorfizmini tanımlar, MAOA ise ayrı bir gendir."
+    },
+    {
+     "baslik": "Asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir",
+     "metin": "Sık yapılan hata: Kalıtım kalıbı bilinmeden de uygulanabilmesi asosiyasyonun özelliğidir; bağlantı analizi ise kalıtım şekli belli olduğunda iyi çalıştığı için bu iki yöntem karıştırılır."
+    },
+    {
+     "baslik": "Genetik epidemiyolojik çalışmalar popülasyon genetiği ve aile çalışmalarını",
+     "metin": "Sık yapılan hata: Tek bir mutasyonu bulmak amaçlandığı için mutasyon analizi de davranış genetiği yöntemi sanılır; oysa slayt listesinde yöntem olarak ikiz, asosiyasyon ve bağlantı çalışmaları öne çıkar."
+    },
+    {
+     "baslik": "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; risk tahmini zordur",
+     "metin": "Sık yapılan hata: Genetik kökenli hastalık tek gen hastalığı gibi düşünülür; oysa psikiyatrik bozukluklar poligenik ve multifaktöriyeldir, bu yüzden tek gen ya da tek testle kesin tanı mümkün değildir."
+    },
+    {
+     "baslik": "Şizofrenide birinci derece akrabalarda risk %5-10'dur",
+     "metin": "Sık yapılan hata: Riskin yüksek olması hastalığın kesin kalıtsal olduğu anlamına gelir sanılır; oysa MZ ikizlerde bile risk %50 olduğu için hastalık poligenik ve çevresel etkilere de açıktır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "S-COMT toplam COMT aktivitesinin %95'ini oluşturur: Sık yapılan hata: Dopamini metabolize eden MAOA geni de aynı bölümde anlatıldığı için ortak aday gen sanılır; oysa MAOA düşük aktiviteli varyantı slaytta antisosyal davranışla ilişkilendirilir. Ayrıca: Katekolaminleri yıkan her enzim geni COMT gibi görünür; oysa kökteki 3-4 kat aktivite kaybı ve kodominant etki ancak COMT Val158Met polimorfizmini tanımlar, MAOA ise ayrı bir gendir.",
+    "Asosiyasyon çalışmalarında hastalık patogenezinde rol alan aday bir: Sık yapılan hata: Kalıtım kalıbı bilinmeden de uygulanabilmesi asosiyasyonun özelliğidir; bağlantı analizi ise kalıtım şekli belli olduğunda iyi çalıştığı için bu iki yöntem karıştırılır.",
+    "Genetik epidemiyolojik çalışmalar popülasyon genetiği ve aile çalışmalarını: Sık yapılan hata: Tek bir mutasyonu bulmak amaçlandığı için mutasyon analizi de davranış genetiği yöntemi sanılır; oysa slayt listesinde yöntem olarak ikiz, asosiyasyon ve bağlantı çalışmaları öne çıkar.",
+    "Psikiyatrik hastalıklar kompleks ve multifaktöriyeldir; risk tahmini zordur: Sık yapılan hata: Genetik kökenli hastalık tek gen hastalığı gibi düşünülür; oysa psikiyatrik bozukluklar poligenik ve multifaktöriyeldir, bu yüzden tek gen ya da tek testle kesin tanı mümkün değildir.",
+    "Şizofrenide birinci derece akrabalarda risk %5-10'dur: Sık yapılan hata: Riskin yüksek olması hastalığın kesin kalıtsal olduğu anlamına gelir sanılır; oysa MZ ikizlerde bile risk %50 olduğu için hastalık poligenik ve çevresel etkilere de açıktır.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "148c77b3d5"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

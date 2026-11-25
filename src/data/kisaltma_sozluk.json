@@ -237,7 +237,8 @@
    "k2-21-sedatif-ve-hipnotik-ilaclar",
    "y25-k2-07-genel-anestezik-ilaclar",
    "y25-k2-09-sss-ilaclari",
-   "y25-k2-25-antiepileptik-ilaclar"
+   "y25-k2-25-antiepileptik-ilaclar",
+   "k2-25-antiepileptik-ilaclar"
   ],
   "definition": "Alfa-amino-3-hidroksi-5-metil-4-izoksazol propionik asit",
   "term": "AMPA"
@@ -1447,7 +1448,8 @@
   "decks": [
    "k2-20-psikiyatrik-bozukluklarda-uygulanan-tedaviler",
    "y25-k2-20-psikiyatrik-tedaviler",
-   "y25-k2-25-antiepileptik-ilaclar"
+   "y25-k2-25-antiepileptik-ilaclar",
+   "k2-25-antiepileptik-ilaclar"
   ],
   "definition": "Derin beyin uyarımı",
   "term": "DBS"
@@ -5371,7 +5373,8 @@
  "SV2A": {
   "category": "kisaltma",
   "decks": [
-   "y25-k2-25-antiepileptik-ilaclar"
+   "y25-k2-25-antiepileptik-ilaclar",
+   "k2-25-antiepileptik-ilaclar"
   ],
   "definition": "Sineptik vezikül proteini 2A",
   "term": "SV2A"
@@ -5774,7 +5777,8 @@
   "decks": [
    "k2-26-norolojik-hastaliklar",
    "y25-k2-25-antiepileptik-ilaclar",
-   "y25-k2-26-norolojik-hastaliklar-genetigi"
+   "y25-k2-26-norolojik-hastaliklar-genetigi",
+   "k2-25-antiepileptik-ilaclar"
   ],
   "definition": "Tuberoz skleroz kompleksi",
   "term": "TSC"
@@ -6016,7 +6020,8 @@
  "VNS": {
   "category": "kisaltma",
   "decks": [
-   "y25-k2-25-antiepileptik-ilaclar"
+   "y25-k2-25-antiepileptik-ilaclar",
+   "k2-25-antiepileptik-ilaclar"
   ],
   "definition": "Vagus siniri uyarımı",
   "term": "VNS"
@@ -6364,5 +6369,133 @@
   ],
   "definition": "İdrar yolu enfeksiyonu",
   "term": "İYE"
+ },
+ "RR": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Göreceli risk (relatif risk)",
+  "term": "RR"
+ },
+ "SCZ": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Şizofreni",
+  "term": "SCZ"
+ },
+ "ASD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Otizm spektrum bozukluğu",
+  "term": "ASD"
+ },
+ "TNP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Tek nükleotid polimorfizmi (slaytta SNP için kullanılan Türkçe kısaltma)",
+  "term": "TNP"
+ },
+ "AEPC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Access Excellence (slayttaki görsel kaynağının internet adresi parçası; ders kısaltması değildir)",
+  "term": "AEPC"
+ },
+ "AE": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Access Excellence (slayttaki görsel kaynağının internet adresi parçası; ders kısaltması değildir)",
+  "term": "AE"
+ },
+ "MMPI": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Minnesota Çok Yönlü Kişilik Envanteri",
+  "term": "MMPI"
+ },
+ "UP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Unipolar (tek kutuplu) depresyon",
+  "term": "UP"
+ },
+ "NRGN": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Nörogranin geni",
+  "term": "NRGN"
+ },
+ "MHC": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Majör doku uygunluk kompleksi",
+  "term": "MHC"
+ },
+ "LPR": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Bağlantılı polimorfik bölge (promoter tekrar bölgesi; MAOA-LPR, 5-HTTLPR)",
+  "term": "LPR"
+ },
+ "SCL": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi"
+  ],
+  "definition": "Belirti Tarama Listesi (Symptom Checklist; SCL-90)",
+  "term": "SCL"
+ },
+ "RNS": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-25-antiepileptik-ilaclar"
+  ],
+  "definition": "Duyarlı nörostimülatör (responsive neurostimulation)",
+  "term": "RNS"
+ },
+ "PEMA": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-25-antiepileptik-ilaclar"
+  ],
+  "definition": "Feniletilmalonamid (primidon metaboliti)",
+  "term": "PEMA"
+ },
+ "CBD": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-25-antiepileptik-ilaclar"
+  ],
+  "definition": "Kannabidiol",
+  "term": "CBD"
+ },
+ "UDP": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-25-antiepileptik-ilaclar"
+  ],
+  "definition": "Üridin difosfat",
+  "term": "UDP"
  }
 }

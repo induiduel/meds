@@ -75,7 +75,7 @@ def defter_kodu(kisa: str) -> str | None:
 
 def canli(key: str) -> dict | None:
     try:
-        req = urllib.request.Request(f"{API}/api/canli-ders/{key}", headers={"User-Agent": "medsor-sesli-anlatim/1"})
+        req = urllib.request.Request(f"{API}/api/canli-ders/{key}", headers={"User-Agent": "medsor-sesli-anlatim/1", **_kok.panel_basligi()})  # H685: erişim kapısı (H647) anahtarsız isteği reddeder
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r)
     except Exception:  # noqa: BLE001

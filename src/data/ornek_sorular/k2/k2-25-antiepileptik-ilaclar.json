@@ -1,0 +1,1767 @@
+{
+ "id": "k2-25-antiepileptik-ilaclar",
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Antiepileptik İlaçlar",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "sira": 25,
+ "tarih": "2026-11-25",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Fenitoinin endikasyonlarını, kullanıma bağımlı sodyum kanalı blokajını, doza bağımlı eliminasyonunu ve karakteristik toksisitesini açıklar; fosfenitoin ve hidantoin türevlerini ayırt eder (s. 38–44).",
+   "_s": [
+    38,
+    40
+   ],
+   "_bp": "bp1",
+   "_baslik": "Fenitoin: parsiyel ve tonik-klonik nöbetlerde etkili en eski konvansiyonel antiepileptik",
+   "sorular": [
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fenitoinin sodyum kanalı üzerindeki etkisi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Kanalın aktif durumunu uzatır",
+      "B": "Etkisi yalnız çok yüksek konsantrasyonlarda ortaya çıkar",
+      "C": "Kanalın alfa-2 delta alt birimine bağlanır",
+      "D": "İnaktif durumdaki kanala bağlanmayı tercih eder",
+      "E": "Kanal açılımını artırarak eksitasyonu güçlendirir"
+     },
+     "dogru": "D",
+     "aciklama": "Fenitoin inaktif Na+ kanalına bağlanmayı tercih eder ve kanalın inaktif kalmasını uzatır; terapötik konsantrasyondaki ana etkisi Na+ kanal blokajıdır.",
+     "sik_aciklamalari": {
+      "A": "Kanalın aktif durumunun uzaması sodyum girişini ve nöronun uyarılabilirliğini artırır, bu da nöbeti kolaylaştırır. Fenitoin tersine inaktif durumu uzatarak tekrarlayan ateşlemeyi baskılar.",
+      "B": "Sodyum geçirgenliği üzerinden yalnız yüksek konsantrasyonda etki eden ilaç fenobarbitaldir. Fenitoinin sodyum kanal blokajı ise terapötik konsantrasyonlarda görülen ana etkisidir, bu yüzden ifade yanlıştır.",
+      "C": "Alfa-2 delta alt birimi kalsiyum kanalına aittir ve gabapentin ile pregabalinin hedefidir. Fenitoin bu alt birime değil sodyum kanalına etki eder.",
+      "D": "Fenitoinin sodyum geçirgenliğine etkisi kullanıma bağımlıdır; inaktif durumdaki kanala bağlanmayı tercih eder ve kanalın inaktif kalmasını uzatır. Bu, hızlı tekrarlayan aksiyon potansiyellerini baskıladığı için doğrudur.",
+      "E": "Kanal açılımının artması nöronal eksitasyonu artırır ve nöbeti kolaylaştırır. Fenitoinin terapötik etkisi bunun tersine kanal blokajı ve tekrarlayan ateşlemenin inhibisyonudur."
+     },
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "inaktif durumdaki Na+ kanalına bağlanmayı tercih etmesinden"
+     },
+     "s": 38,
+     "id": "k2-25-antiepileptik-ilaclar-q01"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Fenitoinin parenteral kullanım için geliştirilen, suda daha iyi çözünen ve plazmada hızla fenitoine dönüşen fosfat ester ön ilacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fosfenitoin",
+      "B": "Mefenitoin",
+      "C": "Etotoin",
+      "D": "Fenasemid",
+      "E": "Primidon"
+     },
+     "dogru": "A",
+     "aciklama": "Fosfenitoin fenitoinin suda daha iyi çözünen fosfat ester ön ilacıdır; parenteral kullanılır ve status epileptikusta intravenöz yüklemede tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Fosfenitoin fenitoinin fosfat ester yapısındaki ön ilacıdır ve plazmada hızla fenitoine dönüşür. Konvülsif status epileptikusta intravenöz yüklemede tercih edildiği için doğrudur.",
+      "B": "Mefenitoin fenitoinin bir türevidir ve demetilasyonla aktif metaboliti Nirvanol'e dönüşür. Parenteral kullanım için geliştirilmiş fosfat ester ön ilacı değildir.",
+      "C": "Etotoin fenitoine aşırı duyarlı hastalara önerilebilen bir hidantoin türevidir. Daha yüksek doz gerektirir ve ağızdan kullanılır; fenitoine dönüşen fosfat ester ön ilaç olarak tanımlanmaz.",
+      "D": "Fenasemid fenitoin türevi olarak piyasaya sunulmuş, sonra geri çekilmiş bir ilaçtır. Bugün kullanımda olan, plazmada fenitoine dönüşen parenteral ön ilaç değildir.",
+      "E": "Primidon 2-desoksifenobarbital yapısında bir antiepileptiktir ve fenobarbital ile feniletilmalonamide dönüşür. Barbitürat ailesindendir, fenitoinin parenteral fosfat ester ön ilacı değildir."
+     },
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "plazmada hızla fenitoine dönüştürülür"
+     },
+     "s": 38,
+     "id": "k2-25-antiepileptik-ilaclar-q02"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Tedavi aralığında fenitoin dozu az miktarda artırılan bir hastada yarı ömrün belirgin uzaması ve hızla toksisite gelişmesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Plazma proteinlerine bağlanmanın azalması",
+      "B": "Böbrek klirensinin artması",
+      "C": "Karaciğerin metabolizma kapasitesinin doyması",
+      "D": "Aktif metabolit birikimi",
+      "E": "Enzim otoindüksiyonu"
+     },
+     "dogru": "C",
+     "aciklama": "Fenitoinin eliminasyonu doza bağımlıdır; tedavi aralığında düzey arttıkça karaciğerin maksimum metabolizma kapasitesine yaklaşılır, yarı ömür belirgin uzar ve hızla toksisite gelişir.",
+     "sik_aciklamalari": {
+      "A": "Proteinden ayrılma serbest ilacı geçici artırır, ancak klirens de arttığı için durum sonunda düzelir. Doz artışıyla yarı ömrün kalıcı uzamasını açıklamaz.",
+      "B": "Böbrek klirensinin artması ilacın daha hızlı atılmasına, düzeyin düşmesine yol açar. Fenitoin ise inaktif metabolitlere dönüşerek idrarla atılır ve sorun karaciğer kapasitesindedir.",
+      "C": "Fenitoinin eliminasyonu doza bağımlıdır; kan düzeyi arttıkça karaciğerin ilacı metabolize etme kapasitesinin üst sınırına yaklaşılır. Bu doygunluk yarı ömrü uzatıp hızla toksisite yarattığı için doğrudur.",
+      "D": "Aktif metabolit birikimi karbamazepin epoksit ya da norklobazam gibi örneklerde önem taşır. Fenitoin inaktif metabolitlere dönüşür, toksisitesi metabolit birikimine bağlı değildir.",
+      "E": "Otoindüksiyon ilacın kendi yıkımını hızlandırması ve yarı ömrünün kısalmasıdır; karbamazepinin özelliğidir. Fenitoinde gözlenen yarı ömür uzamasının tersine bir etki yaratır."
+     },
+     "kanit": {
+      "sayfa": 41,
+      "alinti": "karaciğerin fenitoini maksimum metabolize etme kapasitesine yaklaşılır"
+     },
+     "s": 41,
+     "id": "k2-25-antiepileptik-ilaclar-q03"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Uzun süredir antiepileptik kullanan bir hastada diş eti büyümesi, hirsutizm, yüz hatlarında kabalaşma ve osteomalazi saptanıyor. Bu tablodan en olası sorumlu ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Valproat",
+      "B": "Levetirasetam",
+      "C": "Lamotrijin",
+      "D": "Etosüksimid",
+      "E": "Fenitoin"
+     },
+     "dogru": "E",
+     "aciklama": "Fenitoin diş eti hiperplazisi ve hirsutizm yapar; uzun süreli kullanımda yüz hatlarında kabalaşma, hafif periferik nöropati ve D vitamini metabolizması bozukluğuna bağlı osteomalazi görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Valproat geniş spektrumlu bir antiepileptiktir ve absansta çok etkilidir. Başlıca toksisitesi hepatotoksisitedir; trombositopeni ve gebelikte spina bifida riskiyle bilinir, diş eti büyümesiyle değil.",
+      "B": "Levetirasetam vezikül glikoproteini 2A ligandı, geniş terapötik indeksli bir antiepileptiktir. Uyuklama, halsizlik, ataksi ve daha seyrek mizaç ve davranış değişikliği yapar; bağ dokusu yan etkisi tanımlanmaz.",
+      "C": "Lamotrijin sodyum ve kalsiyum kanallarına etkili, bipolar bozuklukta da etkili bir ilaçtır. Başlıca yan etkileri baş dönmesi, baş ağrısı, bulantı, uyuklama ve cilt döküntüsüdür.",
+      "D": "Etosüksimid absans nöbetlerinin birinci basamak ilacıdır. En sık yan etkileri mide ağrısı, bulantı ve kusma gibi gastrik yakınmalardır; diş eti ya da kemik yan etkisi tanımlanmaz.",
+      "E": "Fenitoin kullanıma bağımlı sodyum kanal blokeri olan eski bir antiepileptiktir. Diş eti hiperplazisi, hirsutizm, yüz hatlarında kabalaşma ve D vitamini bozukluğuna bağlı osteomalazi yaptığı için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Diş eti hiperplazisi ve hirsutizm pek çok hastada görülmektedir"
+     },
+     "s": 43,
+     "id": "k2-25-antiepileptik-ilaclar-q04"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fenitoin toksisitesinde erken dönemde ortaya çıkan bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spina bifida",
+      "B": "Nistagmus",
+      "C": "Aplastik anemi",
+      "D": "Hiponatremi",
+      "E": "Böbrek taşı"
+     },
+     "dogru": "B",
+     "aciklama": "Fenitoin toksisitesinde ekstraoküler izleme hareketlerinin kaybı ve nistagmus erken oluşur; diplopi ve ataksi doza bağımlı en sık yan etkilerdir.",
+     "sik_aciklamalari": {
+      "A": "Spina bifida bir nöral tüp defektidir ve gebelikte valproat kullanan kadınların çocuklarında riski belirgin artar. Teratojenik bir etkidir, fenitoin toksisitesinin erken bulgusu değildir.",
+      "B": "Nistagmus gözlerin istemsiz ritmik hareketidir ve beyin sapı ile serebellum işlevini yansıtır. Fenitoin toksisitesinde göz izleme hareketlerinin kaybıyla birlikte erken dönemde ortaya çıktığı için doğrudur.",
+      "C": "Aplastik anemi kemik iliği yetmezliğiyle giden idiyosenkratik bir tablodur; karbamazepin ve felbamatla ilişkilidir. Doza bağlı değildir ve fenitoin toksisitesinin erken belirtisi olarak tanımlanmaz.",
+      "D": "Hiponatremi kanda sodyum düşüklüğüdür ve özellikle okskarbazepin ile karbamazepinde görülür. Fenitoin toksisitesi ise göz hareketleriyle ilgili bulgularla başlar, sodyum düşüklüğüyle değil.",
+      "E": "Böbrek taşı karbonik anhidraz inhibisyonu yapan zonisamid ve topiramatla ilişkili bir yan etkidir. Fenitoin toksisitesinin göz bulgularıyla başlayan tablosuna girmez."
+     },
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Ekstra oküler izleme hareketlerinin kaybolması ve nistagmus erken dönemde oluşur"
+     },
+     "s": 43,
+     "id": "k2-25-antiepileptik-ilaclar-q05"
+    },
+    {
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fenitoine aşırı duyarlılığı olan hastalara önerilebilen, ancak daha yüksek doz gerektiren hidantoin türevi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mefenitoin",
+      "B": "Fenasemid",
+      "C": "Fosfenitoin",
+      "D": "Primidon",
+      "E": "Etotoin"
+     },
+     "dogru": "E",
+     "aciklama": "Etotoin fenitoine aşırı duyarlı hastalara önerilebilir ancak daha yüksek doz gerektirir; mefenitoinin aktif metaboliti Nirvanol'dür.",
+     "sik_aciklamalari": {
+      "A": "Mefenitoin demetilasyonla Nirvanol adlı aktif metabolitine dönüşen bir fenitoin türevidir. Bu metabolit antiepileptik etkisine katkıda bulunur; aşırı duyarlılıkta önerilen türev olarak tanımlanmaz.",
+      "B": "Fenasemid fenitoin türevi olarak piyasaya sunulmuş ve sonra piyasadan geri çekilmiştir. Bugün kullanılan bir alternatif olmadığı için aşırı duyarlı hastaya önerilen türev değildir.",
+      "C": "Fosfenitoin parenteral kullanım için geliştirilen fosfat ester ön ilaçtır ve plazmada fenitoine dönüşür. Fenitoine dönüştüğü için aşırı duyarlılıkta alternatif olamaz.",
+      "D": "Primidon fenobarbital ve feniletilmalonamide metabolize olan barbitürat yapılı bir antiepileptiktir. Parsiyel ve tonik-klonik nöbetlerde etkilidir ama hidantoin türevi değildir.",
+      "E": "Etotoin fenitoin gibi parsiyel ve jeneralize tonik-klonik nöbetlerde etkili bir hidantoin türevidir. Fenitoine aşırı duyarlı hastalara önerilebilir ve daha yüksek doz gerektirdiği için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Etotoin, fenitoine karşı aşırı duyarlılığı olan hastalara önerilebilir"
+     },
+     "s": 44,
+     "id": "k2-25-antiepileptik-ilaclar-q06"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Epileptik nöbet tiplerini sınıflar; ilaç seçimi, ilaç direnci ve ilaç dışı tedavileri (cerrahi, uyarım cihazları, ketojenik diyet) açıklar (s. 2–10, 17–23).",
+   "sorular": [
+    {
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Epilepsi tedavisinde kullanılan ilaç dışı yöntemlerle ilgili aşağıdaki ifadeler veriliyor:\nI. Vagus sinir uyarıcısı boyundaki sağ vagus sinirinin etrafına sarılan elektrotla uyarı verir.\nII. Duyarlı nörostimülatör nöbet odağındaki anormal aktiviteyi algılayan kapalı döngülü bir sistemdir.\nIII. Derin beyin uyarımı talamusun ön çekirdeklerine bilateral açık döngülü uyarım uygular.\nIV. En sık uygulanan epilepsi cerrahisi ekstratemporal kortikal rezeksiyondur.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I ve IV",
+      "D": "II, III ve IV",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Vagus uyarıcısı sol vagus sinirine yerleştirilir; duyarlı nörostimülatör kapalı, derin beyin uyarımı açık döngülüdür; en sık cerrahi temporal lob rezeksiyonudur.",
+     "sik_aciklamalari": {
+      "A": "Duyarlı nörostimülatörün kapalı döngülü olduğu doğrudur. Ancak vagus sinir uyarıcısının elektrotu boyundaki sol vagus sinirine sarılır, bu yüzden birinci ifade yanlıştır ve bileşim geçersiz kalır.",
+      "B": "İkinci ifade duyarlı nörostimülatörün odaktaki aktiviteyi algılayıp uyarım veren kapalı döngülü yapısını, üçüncü ifade derin beyin uyarımının talamik açık döngülü uyarımını doğru tanımlar. Birinci ve dördüncü ifadeler yanlış olduğundan bu bileşim doğrudur.",
+      "C": "İki ifade de yanlıştır: vagus uyarıcısı sol vagus sinirine yerleştirilir. En sık epilepsi cerrahisi mezial temporal lob epilepsisinde temporal lob rezeksiyonudur, ekstratemporal rezeksiyon daha az başarılıdır.",
+      "D": "İkinci ve üçüncü ifadeler cihazların çalışma biçimini doğru anlatır. Dördüncü ifade yanlıştır, çünkü en sık uygulanan cerrahi temporal lob rezeksiyonudur ve ekstratemporal kortikal rezeksiyon daha az başarılıdır.",
+      "E": "Derin beyin uyarımı ve duyarlı nörostimülatör doğru tanımlanmıştır. Ancak vagus sinir uyarıcısının helezon elektrotu sağ değil sol vagus sinirinin etrafına sarıldığından birinci ifade bu bileşimi bozar."
+     },
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "kapalı döngülü bir sistemdir"
+     },
+     "s": 9,
+     "id": "k2-25-antiepileptik-ilaclar-q07"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Glikoz taşıyıcı tip 1 (GLUT1) eksikliği sendromunda (De Vivo hastalığı) önerilen birinci basamak tedavi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Vagus sinir uyarıcısı",
+      "B": "Temporal lob rezeksiyonu",
+      "C": "Ketojenik diyet",
+      "D": "Derin beyin uyarımı",
+      "E": "Duyarlı nörostimülatör"
+     },
+     "dogru": "C",
+     "aciklama": "Ketojenik diyet dirençli epilepside etkili olabilir ve GLUT1 eksikliği sendromunda (De Vivo hastalığı) önerilen birinci basamak tedavidir.",
+     "sik_aciklamalari": {
+      "A": "Vagus sinir uyarıcısı boyundaki sol vagus sinirine sarılan elektrotla uyarı veren implante bir cihazdır. İlaca dirençli fokal nöbetlerde onaylıdır, GLUT1 eksikliğinin birinci basamak tedavisi değildir.",
+      "B": "Temporal lob rezeksiyonu, mezial temporal lob epilepsisinde en sık uygulanan epilepsi cerrahisidir. Odaklı yapısal bir epilepside kullanılır, metabolik bir hastalık olan GLUT1 eksikliğinin ilk tedavisi değildir.",
+      "C": "Ketojenik diyet yağ oranı yüksek, karbonhidratı düşük ve protein alımı kontrollü bir diyet tedavisidir. Beyin enerji metabolizmasını etkileyen GLUT1 eksikliği sendromunda birinci basamak tedavi olarak önerildiği için doğrudur.",
+      "D": "Derin beyin uyarımı talamusun ön çekirdeklerine bilateral açık döngülü uyarım uygulayan bir yöntemdir. Fokal nöbetli epilepside ilaçlara ek tedavi olarak endikedir, GLUT1 eksikliğinde ilk seçenek değildir.",
+      "E": "Duyarlı nörostimülatör nöbet odağındaki anormal aktiviteyi algılayıp uyarım veren kapalı döngülü bir sistemdir. Tıbben dirençli fokal epilepside kullanılır, metabolik GLUT1 eksikliğinin birinci basamak tedavisi değildir."
+     },
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "için önerilen birinci basamak tedavidir"
+     },
+     "s": 10,
+     "id": "k2-25-antiepileptik-ilaclar-q08"
+    },
+    {
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ani başlayıp ani biten, genellikle 10 saniyeden kısa süren, bilincin bozulduğu ve çocuklukta başlayıp günde yüzlerce kez tekrarlayabilen nöbet tipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Absans nöbeti",
+      "B": "Basit parsiyel nöbet",
+      "C": "Kompleks parsiyel nöbet",
+      "D": "Atonik nöbet",
+      "E": "Miyoklonik nöbet"
+     },
+     "dogru": "A",
+     "aciklama": "Absans nöbeti ani başlar, ani biter, genellikle 10 saniyeden kısadır, bilinç bozulur; çocuklukta başlar ve günde yüzlerce kez olabilir. Basit parsiyelde ve miyoklonikte bilinç korunur.",
+     "sik_aciklamalari": {
+      "A": "Absans, eski adıyla petit mal, ani başlayıp ani kesilen ve bilincin bozulduğu kısa bir genel başlangıçlı nöbettir. Çocukluk ve ergenlikte başlaması ve günde yüzlerce kez tekrarlayabilmesi tarif edilen tabloyla birebir örtüştüğü için doğrudur.",
+      "B": "Basit parsiyel nöbet, deşarjın az yayıldığı ve bilinç ile uyanıklığın korunduğu fokal bir nöbettir. Hasta nöbeti hatırlayıp anlatabildiği için bilincin bozulduğu bu tabloyla uyuşmaz.",
+      "C": "Kompleks parsiyel nöbet fokal başlar, çoğunlukla temporal lob kaynaklıdır ve otomatizmlerle seyreder. Bilinç otuz ile yüz yirmi saniyede düzelir, ardından saatlerce yorgunluk kalır; ani bitiş ve günde yüzlerce tekrar beklenmez.",
+      "D": "Atonik nöbet, hastanın postüral tonusunu aniden kaybettiği ve ayaktaysa yere yığıldığı genel başlangıçlı nöbettir. Belirleyici bulgusu tonus kaybıdır, tarif edilen kısa bilinç kaybı ataklarını açıklamaz.",
+      "E": "Miyoklonik nöbet, kısa fakat belirgin kas seğirmeleriyle giden genel başlangıçlı bir nöbettir. Bilinci etkilemediği için bilincin bozulduğu bu tabloya uymaz."
+     },
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Nöbet genellikle 10 saniyeden kısa sürer ve nadiren 45 saniyeyi geçer"
+     },
+     "s": 20,
+     "id": "k2-25-antiepileptik-ilaclar-q09"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Antiepileptiklerin temel etki mekanizmalarını ve ortak farmakokinetik özelliklerini (enzim indüksiyonu, protein bağlanma, etkileşimler) açıklar (s. 3, 11–16, 24–25).",
+   "sorular": [
+    {
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi antiepileptik ilaçların genel etki mekanizmaları arasında yer almaz?",
+     "secenekler": {
+      "A": "GABAerjik iletinin artırılması",
+      "B": "İyonik geçirgenliğin değiştirilmesi",
+      "C": "Voltaj kapılı sodyum kanallarının modülasyonu",
+      "D": "Sinaptik salım süreçlerinin modifikasyonu",
+      "E": "Glutamaterjik iletinin güçlendirilmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Antiepileptikler GABAerjik iletiyi artırır, glutamaterjik iletiyi zayıflatır ya da iyonik geçirgenliği değiştirir; glutamaterjik iletiyi güçlendirmek nöbeti kolaylaştırır.",
+     "sik_aciklamalari": {
+      "A": "GABA beynin inhibitör nörotransmitteridir ve iletisinin artırılması nöronal uyarılabilirliği azaltır. Antiepileptiklerin üç temel mekanizmasından biri olduğu için genel mekanizmalar arasında yer alır.",
+      "B": "İyonik geçirgenliğin değiştirilmesi, nöron zarındaki iyon akımlarının ilaçla düzenlenmesidir. Antiepileptiklerin üç temel mekanizmasından biri olarak sayılır, dolayısıyla genel mekanizmalara dahildir.",
+      "C": "Voltaj kapılı sodyum kanalları aksiyon potansiyelinin oluşumunu sağlar ve modülasyonu yüksek frekanslı ateşlemeyi azaltır. Bu, antiepileptiklerin hedefleri üzerindeki spesifik etkilerinden biridir.",
+      "D": "Sinaptik salım süreçleri nörotransmitterin sinir ucundan bırakılmasıdır. Bu süreçlerin değiştirilmesi antiepileptiklerin hedeflerindeki spesifik etkiler arasında sayılır, dolayısıyla genel mekanizmalara dahildir.",
+      "E": "Glutamat beynin eksitatör nörotransmitteridir ve iletisinin güçlenmesi nöbet eğilimini artırır. Antiepileptikler glutamaterjik iletiyi zayıflatır; güçlendirme bu ilaçların mekanizması olamayacağından doğrudur."
+     },
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Glutamaterjik (eksitatör) iletinin zayıflatılması"
+     },
+     "s": 3,
+     "id": "k2-25-antiepileptik-ilaclar-q10"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki antiepileptiklerden hangisi GABAA reseptörünün pozitif allosterik modülatörü olarak etki eder?",
+     "secenekler": {
+      "A": "Tiagabin",
+      "B": "Vigabatrin",
+      "C": "Perampanel",
+      "D": "Etosüksimid",
+      "E": "Fenobarbital"
+     },
+     "dogru": "E",
+     "aciklama": "Benzodiazepinler ve fenobarbital GABAA reseptörünün pozitif allosterik modülatörüdür; tiagabin ve vigabatrin ise GABA düzeyini artırır.",
+     "sik_aciklamalari": {
+      "A": "Tiagabin nöronlarda ve gliada GABA geri alımını inhibe eden bir ilaçtır. Sinaptik GABA miktarını artırarak etki eder, reseptörün allosterik modülatörü değildir.",
+      "B": "Vigabatrin GABA'yı yıkan GABA aminotransferazı geri dönüşümsüz inhibe eden bir ilaçtır. Ortamdaki GABA düzeyini artırarak inhibisyonu güçlendirir, reseptöre allosterik bağlanarak etki etmez.",
+      "C": "Perampanel iyonotropik glutamat reseptörlerinden AMPA reseptörünü nonkompetitif biçimde inhibe eden bir antiepileptiktir. Eksitasyonu azaltarak çalışır, inhibitör GABAA reseptörünü modüle etmez.",
+      "D": "Etosüksimid talamokortikal nöronlarda düşük eşikli T-tipi kalsiyum kanallarını inhibe eder. Absans nöbetlerinde birinci basamak ilaçtır, GABAA reseptörüne etki etmez.",
+      "E": "Fenobarbital barbitürat yapılı bir antiepileptiktir ve benzodiazepinler gibi GABAA reseptörünü pozitif allosterik olarak modüle eder. Reseptör aracılı inhibisyonu doğrudan güçlendirdiği için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "GABAA reseptörlerinin pozitif allosterik modülatörleri olarak etki ederken"
+     },
+     "s": 13,
+     "id": "k2-25-antiepileptik-ilaclar-q11"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Plazma proteinlerine %90'ın üzerinde bağlanan ve başka ilaçlar tarafından proteinden ayrıldığında geçici toksisite yapabilen antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gabapentin",
+      "B": "Levetirasetam",
+      "C": "Valproat",
+      "D": "Etosüksimid",
+      "E": "Topiramat"
+     },
+     "dogru": "C",
+     "aciklama": "Fenitoin, tiagabin, valproat, diazepam, perampanel ve stiripentol proteinlere %90'ın üzerinde bağlanır; serbest fraksiyon artınca geçici toksisite olabilir.",
+     "sik_aciklamalari": {
+      "A": "Gabapentin GABA analoğu bir antiepileptiktir ve metabolize olmadan böbrekten değişmeden atılır. Plazma proteinlerine hiç bağlanmadığı için proteinden ayrılmaya bağlı geçici toksisite beklenmez.",
+      "B": "Levetirasetam SV2A ligandı, geniş terapötik indeksli bir antiepileptiktir. Plazma proteinlerine yüksek oranda bağlanan istisnalar fenitoin, tiagabin ve valproik asit olarak sayılır; levetirasetam bunlardan biri değildir.",
+      "C": "Valproat geniş spektrumlu bir antiepileptiktir ve plazma proteinlerine yüksek oranda bağlanır. Proteinden ayrıldığında serbest ilaç geçici artar ve geçici toksisite görülebildiği için doğrudur.",
+      "D": "Etosüksimid absans nöbetlerinde birinci basamak ilaçtır ve yarı ömrü yaklaşık kırk saattir. Proteinlere bağlanmaz, inaktif metabolitlere tamamen metabolize edilir; bu yüzden proteinden ayrılma etkileşimi göstermez.",
+      "E": "Topiramat monosakkarit analoğu, çok mekanizmalı bir antiepileptiktir. Plazma proteinlerine az, yaklaşık yüzde on beş oranında bağlanır ve başlıca idrarla değişmeden atılır."
+     },
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "plazma proteinlerine yüksek oranda (>%90) bağlanır"
+     },
+     "s": 15,
+     "id": "k2-25-antiepileptik-ilaclar-q12"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Oral kontraseptif kullanan epilepsili bir kadında doğum kontrolünün başarısız olma riskini artıran, karaciğer enzimlerinin güçlü indükleyicisi olan antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Levetirasetam",
+      "B": "Karbamazepin",
+      "C": "Gabapentin",
+      "D": "Pregabalin",
+      "E": "Lakosamid"
+     },
+     "dogru": "B",
+     "aciklama": "Karbamazepin, okskarbazepin, eslikarbazepin asetat, fenobarbital, fenitoin ve primidon güçlü enzim indükleyicileridir; oral kontraseptif düzeyini azaltırlar.",
+     "sik_aciklamalari": {
+      "A": "Levetirasetam SV2A'ya bağlanan, geniş spektrumlu ve sık reçete edilen bir antiepileptiktir. İlaç etkileşimi potansiyeli oldukça düşük olduğundan kontraseptif düzeyini düşürmesi beklenmez.",
+      "B": "Karbamazepin hepatik sitokrom P450 ve glukuronosil transferaz enzimlerinin güçlü indükleyicisidir. Oral kontraseptif düzeylerini düşürerek doğum kontrolünün başarısız olmasına yol açabildiği için doğrudur.",
+      "C": "Gabapentin GABA analoğu bir antiepileptik ve analjeziktir, metabolize olmadan böbrekten değişmeden atılır. Hepatik enzimleri indüklemediği için kontraseptif düzeyini düşürmesi beklenmez.",
+      "D": "Pregabalin gabapentine benzeyen, nöropatik ağrıda da onaylı bir GABA analoğudur. İdrarla değişmeden atılır ve hemen hiç ilaç etkileşimi göstermez, enzim indüklemez.",
+      "E": "Lakosamid sodyum kanallarının yavaş inaktivasyonunu artıran bir antiepileptiktir. Sitokrom P450 izoenzimlerini indüklemez ya da inhibe etmez, bu yüzden etkileşimleri minimum düzeydedir."
+     },
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "oral kontraseptif seviyeleri güçlü indükleyiciler tarafından azaltılır"
+     },
+     "s": 16,
+     "id": "k2-25-antiepileptik-ilaclar-q13"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kalsiyum kanalının alfa-2 delta-1 alt birimine etki eden antiepileptik ilaç çifti aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Levetirasetam ve brivarasetam",
+      "B": "Tiagabin ve vigabatrin",
+      "C": "Etosüksimid ve trimetadion",
+      "D": "Gabapentin ve pregabalin",
+      "E": "Fenitoin ve karbamazepin"
+     },
+     "dogru": "D",
+     "aciklama": "Gabapentin ve pregabalin Ca2+ kanalının α2δ-1 alt birimine etki eder; GABA reseptörlerine doğrudan etkileri yoktur.",
+     "sik_aciklamalari": {
+      "A": "Levetirasetam ve brivarasetam sinaptik vezikül glikoproteini 2A'ya bağlanan ilaçlardır. Nörotransmitter salınımını bu vezikül proteini üzerinden değiştirirler, kalsiyum kanal alt birimine bağlanmazlar.",
+      "B": "Tiagabin GABA taşıyıcısını, vigabatrin ise GABA'yı yıkan GABA transaminazı inhibe eder. İkisi de ortamdaki GABA'yı artırır, kalsiyum kanalının alfa-2 delta alt birimini hedeflemez.",
+      "C": "Etosüksimid ve trimetadion talamik nöronlarda T-tipi kalsiyum akımını inhibe eden absans ilaçlarıdır. Kalsiyum kanalına etki ederler ama alfa-2 delta alt birimine değil T-tipi akıma etkilidirler.",
+      "D": "Gabapentin ve pregabalin GABA'ya yapısal olarak benzeyen analoglardır. Kalsiyum kanalının alfa-2 delta-1 alt birimine etki ederek sinaptik glutamat salınımını azalttıkları için doğrudur.",
+      "E": "Fenitoin ve karbamazepin voltaj kapılı sodyum kanallarını bloke ederek yüksek frekanslı tekrarlayan ateşlemeyi inhibe eder. Ana etkileri sodyum kanalı üzerindendir."
+     },
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Gabapentin bir amino asittir, GABA analoğudur"
+     },
+     "s": 45,
+     "id": "k2-25-antiepileptik-ilaclar-q14"
+    },
+    {
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sinaptik vezikül glikoproteini 2A'ya (SV2A) seçici olarak bağlanarak etki eden antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Levetirasetam",
+      "B": "Retigabin",
+      "C": "Perampanel",
+      "D": "Tiagabin",
+      "E": "Zonisamid"
+     },
+     "dogru": "A",
+     "aciklama": "Levetirasetam ve brivarasetam SV2A'ya bağlanır; perampanel AMPA reseptörünü, retigabin potasyum kanalını hedefler.",
+     "sik_aciklamalari": {
+      "A": "Levetirasetam geniş spektrumlu, epilepside en sık reçete edilen ilaçlardan biridir. SV2A'ya seçici bağlanır ve muhtemelen glutamat ile GABA salınımını değiştirdiği için doğrudur.",
+      "B": "Retigabin, ezogabin adıyla da bilinen, potasyum kanallarını aktive eden bir antiepileptiktir. Kendine özgü bu mekanizmayla nöronal uyarılabilirliği azaltır, vezikül proteinine bağlanmaz.",
+      "C": "Perampanel AMPA tipi glutamat reseptörünü güçlü ve nonkompetitif biçimde inhibe eden bir antiepileptiktir. Eksitatör iletiyi reseptör düzeyinde azaltır, vezikül glikoproteinine bağlanan bir ligand değildir.",
+      "D": "Tiagabin nöronlarda ve gliada GABA geri alımını inhibe eder. GABA taşıyıcısını hedefler ve sinaptik GABA etkisini uzatır, vezikül glikoproteinine etki etmez.",
+      "E": "Zonisamid voltaja duyarlı sodyum kanallarını ve T-tipi kalsiyum kanallarını inhibe eden geniş spektrumlu bir ilaçtır. Sülfonamid yapısıyla karbonik anhidrazı da inhibe eder, SV2A'ya bağlanmaz."
+     },
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "sinaptik vezikül glikoprotein 2A (SV2A) bağlanır"
+     },
+     "s": 54,
+     "id": "k2-25-antiepileptik-ilaclar-q15"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Karbamazepin, okskarbazepin, eslikarbazepin asetat ve lakosamidin mekanizma, endikasyon, kinetik ve yan etkilerini karşılaştırır (s. 26–37).",
+   "sorular": [
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İdiyopatik jeneralize epilepsi tanılı hastada miyoklonik ve absans nöbetlerini şiddetlendirebildiği için genellikle tercih edilmeyen fokal nöbet ilacı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Valproat",
+      "B": "Etosüksimid",
+      "C": "Levetirasetam",
+      "D": "Karbamazepin",
+      "E": "Lamotrijin"
+     },
+     "dogru": "D",
+     "aciklama": "Karbamazepin gibi bazı ilaçlar miyoklonik ve absans nöbetleri şiddetlendirebildiğinden idiyopatik jeneralize epilepside genellikle tercih edilmez.",
+     "sik_aciklamalari": {
+      "A": "Valproat absans nöbetlerinde çok etkili, bazı miyoklonik nöbetleri kontrol etme yeteneği benzersiz bir ilaçtır. Jeneralize epilepside tercih edilen ilaçlardandır, bu nöbetleri şiddetlendirmez.",
+      "B": "Etosüksimid genel absans nöbetlerinde birinci basamak ilaçtır. Talamokortikal nöronlarda T-tipi kalsiyum kanallarını inhibe ederek absansı önler, dolayısıyla absansı şiddetlendiren ilaç olamaz.",
+      "C": "Levetirasetam vezikül glikoproteini 2A'ya bağlanan geniş spektrumlu bir antiepileptiktir. Çocuklarda juvenil miyoklonik epilepsinin miyoklonik nöbetlerinde ek tedavi olarak pazarlanmıştır, bu nöbetleri kötüleştirmez.",
+      "D": "Karbamazepin fokal başlangıçlı nöbetlerin prototip ilacıdır. Miyoklonik ve absans nöbetlerini şiddetlendirebildiği için idiyopatik jeneralize epilepside genellikle tercih edilmez, bu yüzden doğrudur.",
+      "E": "Lamotrijin sodyum kanalı blokajına ek olarak voltaj bağımlı kalsiyum kanallarını inhibe eden bir ilaçtır. Çocuklarda absans ve miyoklonik nöbetlere karşı aktiftir, bu nöbetleri şiddetlendirmez."
+     },
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "miyoklonik ve absans nöbetlerini şiddetlendirebildiğinden"
+     },
+     "s": 26,
+     "id": "k2-25-antiepileptik-ilaclar-q16"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Karbamazepin ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İlk olarak trigeminal nevralji tedavisi için piyasaya sunulmuştur",
+      "B": "Absans nöbetlerinde birinci basamak ilaçtır",
+      "C": "Olağan terapötik aralıkta belirgin sedasyon yapar",
+      "D": "Karaciğer enzimlerini inhibe eder",
+      "E": "Etkisini GABA transaminaz inhibisyonuyla gösterir"
+     },
+     "dogru": "A",
+     "aciklama": "Karbamazepin trigeminal nevralji için piyasaya sunulmuş, sonra epilepside yararlı bulunmuştur; bipolar bozuklukta duygudurum düzenleyicidir.",
+     "sik_aciklamalari": {
+      "A": "Karbamazepin fokal nöbetlerin prototip ilacıdır ve ilk olarak trigeminal nevralji için piyasaya sunulmuştur. Sonradan epilepside yararlı bulunduğu ve bipolar bozuklukta da kullanıldığı için bu ifade doğrudur.",
+      "B": "Absans nöbetlerinin birinci basamak ilacı talamik kalsiyum akımını azaltan etosüksimiddir. Karbamazepin ise absans ve miyoklonik nöbetleri şiddetlendirebildiğinden idiyopatik jeneralize epilepside genellikle tercih edilmez.",
+      "C": "Karbamazepin olağan terapötik aralıkta sedasyon yapmayan bir sodyum kanal blokeridir. Sedasyon ancak yüksek dozlarda ortaya çıkar, bu nedenle ifade yanlıştır.",
+      "D": "Karbamazepin karaciğer enzimlerinin güçlü indükleyicisidir ve CYP3A4 ile CYP2B6'yı uyarır. Bu otoindüksiyon hem kendi düzeyini hem eş zamanlı ilaçların düzeyini düşürür.",
+      "E": "GABA transaminazı geri dönüşümsüz inhibe eden ilaç vigabatrindir. Karbamazepin ise fenitoin gibi terapötik konsantrasyonlarda sodyum kanallarını bloke ederek yüksek frekanslı ateşlemeyi inhibe eder."
+     },
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Trigeminal nevralji tedavisi için piyasaya sunulmuştur"
+     },
+     "s": 28,
+     "id": "k2-25-antiepileptik-ilaclar-q17"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Karbamazepin tedavisinin ilk haftalarında önemli ölçüde doz ayarlaması gerekmesinin temel nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Plazma proteinlerine çok yüksek oranda bağlanması",
+      "B": "Böbrekten değişmeden atılması",
+      "C": "Kendi metabolizmasını indüklemesi",
+      "D": "Oral biyoyararlanımının düşük olması",
+      "E": "Aktif metabolitinin olmaması"
+     },
+     "dogru": "C",
+     "aciklama": "Tek dozdan sonra 36 saat olan yarı ömür, otoindüksiyon nedeniyle sürekli tedavide 8–12 saate iner; bu yüzden ilk haftalarda doz ayarlaması gerekir.",
+     "sik_aciklamalari": {
+      "A": "Yüksek protein bağlanması fenitoin, valproat ve tiagabin gibi ilaçların özelliğidir ve geçici serbest ilaç artışına yol açar. Karbamazepinde yarı ömrün tedavi sürecinde kısalmasını açıklamaz.",
+      "B": "Böbrekten değişmeden atılım gabapentin ve pregabalinin özelliğidir. Karbamazepin ise karaciğerde metabolize edilir ve yalnızca çok küçük bir kısmı değişmeden atılır.",
+      "C": "Karbamazepin CYP3A4 ve CYP2B6'yı uyararak kendi yıkımını hızlandırır; buna otoindüksiyon denir. Tek dozdaki uzun yarı ömrün sürekli tedavide belirgin kısalmasını açıkladığı için doğrudur.",
+      "D": "Karbamazepinin oral biyoyararlanımı neredeyse tamdır, yalnız emilim hızı kişiden kişiye büyük farklılık gösterir. Doruk düzeye altı ile sekiz saatte ulaşılır; düşük biyoyararlanım bu ilacın özelliği değildir.",
+      "E": "Karbamazepinin ana metabolizma yolu, nöbet önleyici etkili karbamazepin epoksit oluşumudur. Yani aktif bir metaboliti vardır ve bu ifade ilaca uymaz."
+     },
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Bu nedenle tedavinin ilk haftalarında önemli ölçüde doz ayarlaması gereklidir"
+     },
+     "s": 30,
+     "id": "k2-25-antiepileptik-ilaclar-q18"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Karbamazepin ile birlikte kullanıldığında aşağıdaki ilaçlardan hangilerinin metabolizma hızı artar?\nI. Fenitoin\nII. Gabapentin\nIII. Valproik asit\nIV. Klonazepam",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II ve IV",
+      "D": "I, II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Karbamazepin otoindüksiyonla primidon, fenitoin, etosüksimid, valproik asit ve klonazepamın metabolizmasını hızlandırır; gabapentin metabolize olmaz.",
+     "sik_aciklamalari": {
+      "A": "Fenitoinin metabolizması karbamazepinle hızlanır. Gabapentin ise metabolize olmadan böbrekten atılır ve ilaç etkileşimi önemsizdir, bu yüzden ikinci öncül bileşimi bozar.",
+      "B": "Fenitoin, valproik asit ve klonazepam karbamazepinin indüklediği karaciğer enzimleriyle yıkılır ve düzeyleri düşer. Gabapentin metabolize olmadığından etkilenmez; bu yüzden bu bileşim doğrudur.",
+      "C": "Klonazepam karbamazepinin indüklediği enzimlerle yıkıldığı için düzeyi düşen bir benzodiazepindir. Ancak gabapentin karaciğerde metabolize olmayan ve enzim indüksiyonundan etkilenmeyen bir GABA analoğudur, bu yüzden bileşim yanlıştır.",
+      "D": "Fenitoin ve valproik asit karbamazepinin otoindüksiyonundan etkilenen ilaçlardandır. Gabapentin böbrekten değişmeden atıldığı için bileşimde yer alamaz; klonazepam ise eksik bırakılmıştır.",
+      "E": "Valproik asit ve klonazepamın metabolizması karbamazepinin otoindüksiyonuyla hızlanır. Gabapentin hepatik metabolizmaya uğramadan böbrekten atıldığından bu bileşime girmez, fenitoin ise eksik bırakılmıştır."
+     },
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "primidon, fenitoin, etosüksimid, valproik asit ve klonazepam gibi eş zamanlı antiepileptik ilaçların metabolizma hızının artmasına"
+     },
+     "s": 31,
+     "id": "k2-25-antiepileptik-ilaclar-q19"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Karbamazepin tedavisinde genellikle ilk ortaya çıkan ve bölünmüş günlük dozun yeniden düzenlenmesiyle çoğu zaman giderilebilen yan etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiponatremi",
+      "B": "Agranülositoz",
+      "C": "Kilo alımı",
+      "D": "Sedasyon",
+      "E": "Diplopi"
+     },
+     "dogru": "E",
+     "aciklama": "Karbamazepinde çift görme genellikle ilk ortaya çıkar; bölünmüş dozun yeniden düzenlenmesi çoğu zaman bunu giderir.",
+     "sik_aciklamalari": {
+      "A": "Hiponatremi kanda sodyumun düşmesidir; karbamazepinde bazen su zehirlenmesiyle birlikte görülür. Doza bağlı olabilir ama ilk çıkan ve doz bölünmesiyle düzelen yakınma olarak tanımlanmaz.",
+      "B": "Agranülositoz, granülositlerin ileri derecede azaldığı idiyosenkratik bir kan diskrazisidir. Karbamazepinde ölümcül olabilir ve doz düzenlemesiyle geçen hafif bir yakınma değildir.",
+      "C": "Kilo alımı karbamazepinde nadiren görülen bir yan etkidir. Tedavinin başında ilk ortaya çıkan ve doz bölünmesiyle düzelen tipik yakınma bu değildir.",
+      "D": "Sedasyon uyuşukluk ve uyku hâlidir; birçok antiepileptiğin doza bağlı yan etkisidir. Karbamazepinde yalnızca yüksek dozlarda meydana gelir, olağan terapötik aralıkta görülmez ve tedavinin ilk yakınması olarak tanımlanmaz.",
+      "E": "Diplopi çift görme demektir ve karbamazepinin doza bağlı yan etkileri arasında genellikle ilk ortaya çıkandır. Bölünmüş günlük doz yeniden düzenlenince çoğu zaman düzeldiği için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Çift görme genellikle ilk önce ortaya çıkar"
+     },
+     "s": 32,
+     "id": "k2-25-antiepileptik-ilaclar-q20"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Trigeminal nevraljisi olan yaşlı bir hastada karbamazepin tedavisinin ilk dört ayında görülebilen, ölümcül olabilen idiyosenkratik yan etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diş eti hiperplazisi",
+      "B": "Periferik görme alanı defekti",
+      "C": "Hipospadias",
+      "D": "Spina bifida",
+      "E": "Aplastik anemi"
+     },
+     "dogru": "E",
+     "aciklama": "Karbamazepin fatal aplastik anemi ve agranülositoz dahil idiyosenkratik kan diskrazisi yapabilir; çoğu trigeminal nevraljili yaşlılarda ve ilk 4 ayda görülür.",
+     "sik_aciklamalari": {
+      "A": "Diş eti hiperplazisi fenitoinin pek çok hastada görülen karakteristik yan etkisidir. Uzun süreli fenitoin kullanımına özgüdür, karbamazepinin idiyosenkratik kan toksisitesiyle ilgisi yoktur.",
+      "B": "Periferik görme alanı defekti uzun süreli vigabatrin tedavisinde retinal kökenli olarak gelişir. Hastaların önemli bir kısmında geri dönüşümsüzdür ve karbamazepine bağlı değildir.",
+      "C": "Hipospadias, gebelikte topiramata maruz kalan erkek bebeklerde bildirilen bir doğumsal anomalidir. Teratojenik bir etkidir, yaşlı hastada ortaya çıkan bir yan etki olamaz.",
+      "D": "Spina bifida bir nöral tüp defektidir ve gebelikte valproat kullanan kadınların çocuklarında riski belirgin artar. Yaşlı hastada ortaya çıkan bir ilaç yan etkisi değildir.",
+      "E": "Aplastik anemi kemik iliğinin kan hücresi yapımının durduğu bir kan diskrazisidir. Karbamazepinde ölümcül olgular çoğunlukla trigeminal nevraljili yaşlılarda ve ilk dört ayda bildirildiği için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "fatal aplastik anemi ve agranülositoz olguları dahil"
+     },
+     "s": 32,
+     "id": "k2-25-antiepileptik-ilaclar-q21"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Etki mekanizması ve yan etki profili karbamazepine benzeyen, ancak hiponatremiyi karbamazepine kıyasla daha sık yapan antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lakosamid",
+      "B": "Okskarbazepin",
+      "C": "Fenitoin",
+      "D": "Lamotrijin",
+      "E": "Gabapentin"
+     },
+     "dogru": "B",
+     "aciklama": "Okskarbazepinin yan etki profili karbamazepine benzer, ancak hiponatremi okskarbazepinde daha sık görülür; enzim indüksiyonu ise daha azdır.",
+     "sik_aciklamalari": {
+      "A": "Lakosamid sodyum kanallarının yavaş inaktivasyonunu artıran amino asit benzeri bir bileşiktir. Başlıca yan etkileri baş dönmesi, baş ağrısı, bulantı ve diplopidir.",
+      "B": "Okskarbazepin karbamazepin gibi voltaj kapılı sodyum kanallarını bloke eden ve etkinliği 10-hidroksi metabolitinde olan bir ilaçtır. Hiponatremiyi karbamazepinden daha sık yaptığı için doğrudur.",
+      "C": "Fenitoin kullanıma bağımlı sodyum kanal blokeri olan en eski sedatif olmayan antiepileptiktir. Diş eti hiperplazisi, hirsutizm ve nistagmusla bilinir, hiponatremiyle tanımlanmaz.",
+      "D": "Lamotrijin sodyum ve kalsiyum kanallarını inhibe eden geniş spektrumlu bir ilaçtır. Yan etkileri baş dönmesi, baş ağrısı, bulantı, uyuklama ve cilt döküntüsüdür.",
+      "E": "Gabapentin kalsiyum kanalının alfa-2 delta alt birimine etki eden GABA analoğudur. En sık yan etkileri uyuklama, baş dönmesi, ataksi, baş ağrısı ve tremordur."
+     },
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "hiponatremi okskarbazepin kullanımında karbamazepine kıyasla daha sık görülür"
+     },
+     "s": 33,
+     "id": "k2-25-antiepileptik-ilaclar-q22"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Eslikarbazepin asetat ile ilgili aşağıdaki ifadeler veriliyor:\nI. Parsiyel başlangıçlı nöbetli erişkinlerde ek tedavi olarak onaylanmış bir ön ilaçtır.\nII. Etki mekanizması voltaj bağımlı sodyum kanallarının blokajıdır.\nIII. Olası avantajı günde tek doz kullanılmasıdır.\nIV. Oral kontraseptiflerin etkinliğini artırır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Eslikarbazepin asetat ek tedavide onaylı bir ön ilaçtır; Na+ kanallarını bloke eder, günde tek doz kullanılır ve oral kontraseptiflerin etkinliğini azaltabilir.",
+     "sik_aciklamalari": {
+      "A": "Ön ilaç olması ve sodyum kanal blokajı doğru ifadelerdir. Ancak günde tek doz kullanılabilmesi de doğru olduğundan bu bileşim eksik kalır.",
+      "B": "Sodyum kanal blokajı karbamazepin ve okskarbazepinle ortak olan doğru bir ifadedir. Dördüncü öncül ise yanlıştır, çünkü eslikarbazepin asetatla birlikte oral kontraseptifler daha az etkili olabilir.",
+      "C": "Eslikarbazepin asetat ek tedavide onaylı bir ön ilaçtır, karbamazepin ve okskarbazepin gibi sodyum kanalını bloke eder ve günde tek doz kullanılabilir. Kontraseptif etkinliğini azalttığı için dördüncü öncül yanlıştır ve bu bileşim doğrudur.",
+      "D": "Ön ilaç olması ve günde tek doz kullanımı eslikarbazepin asetat için doğru ifadelerdir. Oral kontraseptif etkinliğini artırma ifadesi ise yanlıştır, ilaç bu etkinliği azaltabilir.",
+      "E": "Günde tek doz kullanım eslikarbazepin asetatın olası avantajıdır ve doğrudur. Ancak ilaç kontraseptif etkinliğini artırmaz, azaltabilir; ayrıca ön ilaç olması ve sodyum kanal blokajı eksik bırakılmıştır."
+     },
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "ESL'nin olası avantajı günde tek doz kullanılmasıdır"
+     },
+     "s": 34,
+     "id": "k2-25-antiepileptik-ilaclar-q23"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Voltaj bağımlı sodyum kanallarının yavaş inaktivasyonunu artıran ve nörotrofik faktörlerin aksonal ve dendritik büyüme etkisini bloke eden antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lakosamid",
+      "B": "Fenitoin",
+      "C": "Rufinamid",
+      "D": "Etosüksimid",
+      "E": "Tiagabin"
+     },
+     "dogru": "A",
+     "aciklama": "Lakosamid Na+ kanallarının yavaş inaktivasyonunu artırır ve nörotrofik faktörlerin büyüme etkisini bloke eder.",
+     "sik_aciklamalari": {
+      "A": "Lakosamid parsiyel nöbetlerde ve ağrılı sendromlarda çalışılmış amino asit benzeri bir bileşiktir. Tanımlanan iki etkisi sodyum kanalının yavaş inaktivasyonunu artırmak ve nörotrofik büyüme etkisini bloke etmek olduğu için doğrudur.",
+      "B": "Fenitoin inaktif durumdaki sodyum kanalına bağlanmayı tercih eder ve kanalın inaktif kalmasını uzatır. Kullanıma bağımlı bu blokaj, yavaş inaktivasyon artışı olarak tanımlanmaz.",
+      "C": "Rufinamid sodyum kanallarının inaktif durumda kalma süresini uzatan bir ilaçtır. Lennox-Gastaut sendromunda ek tedavide onaylıdır, nörotrofik faktör etkisi tanımlanmamıştır.",
+      "D": "Etosüksimid talamokortikal nöronlarda T-tipi kalsiyum kanallarını inhibe eden absans ilacıdır. Etkisi kalsiyum akımı üzerindendir, sodyum kanalının yavaş inaktivasyonunu artırmaz ve nörotrofik etkisi tanımlanmaz.",
+      "E": "Tiagabin nöronlarda ve gliada GABA geri alımını inhibe ederek tonik inhibisyonu güçlendirir. Sodyum kanalı ya da nörotrofik faktörler üzerinden etki etmez."
+     },
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Lakosamid voltaj-bağımlı Na+ kanallarının yavaş inaktivasyonunu artırır"
+     },
+     "s": 35,
+     "id": "k2-25-antiepileptik-ilaclar-q24"
+    },
+    {
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Oral çözeltisi aspartam içerdiği için fenilketonürili kişilerde zararlı olabilen antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kannabidiol",
+      "B": "Valproat",
+      "C": "Etosüksimid",
+      "D": "Lakosamid",
+      "E": "Fenfluramin"
+     },
+     "dogru": "D",
+     "aciklama": "Lakosamidin oral çözeltisi fenilalanin kaynağı aspartam içerir ve fenilketonürili kişilerde zararlı olabilir.",
+     "sik_aciklamalari": {
+      "A": "Kannabidiol Dravet ve Lennox-Gastaut sendromlarında onaylı, psikoaktif olmayan bir fitokannabinoiddir. Yağ bazlı oral çözelti olarak formüle edilmiştir, aspartam uyarısı tanımlanmamıştır.",
+      "B": "Valproat geniş spektrumlu bir antiepileptiktir ve çocuklar için sodyum tuzunun şurup formu bulunur. Başlıca toksisitesi hepatotoksisitedir, aspartama bağlı fenilketonüri uyarısı taşımaz.",
+      "C": "Etosüksimid absans nöbetlerinin birinci basamak ilacıdır ve oral yoldan tamamen emilir. En sık doza bağımlı yan etkileri bulantı ve kusma gibi mide yakınmalarıdır, aspartam uyarısı tanımlanmaz.",
+      "D": "Lakosamid parsiyel başlangıçlı nöbetlerde ek tedavide kullanılan, sodyum kanalının yavaş inaktivasyonunu artıran bir ilaçtır. Oral çözeltisi fenilalanin kaynağı aspartam içerdiği için doğrudur.",
+      "E": "Fenfluramin Dravet sendromunda kullanılan, amfetamin türevi bir oral solüsyondur. Serotonin salınımını artırır ve kalp kapak hastalığıyla ilişkili bir ilaçtır; fenilalanin kaynağı içermesiyle tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "fenilketonürili kişilerde zararlı olabilecek aspartam içerir"
+     },
+     "s": 36,
+     "id": "k2-25-antiepileptik-ilaclar-q25"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Gabapentin, pregabalin, tiagabin, retigabin, senobamat, lamotrijin, levetirasetam, brivarasetam ve perampanelin hedeflerini, endikasyonlarını ve ayırt edici yan etkilerini açıklar (s. 45–59).",
+   "sorular": [
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Gabapentin ve pregabalin ile ilgili aşağıdaki ifadeler veriliyor:\nI. GABA'ya yapısal benzerliklerine rağmen GABA reseptörlerine doğrudan etki etmezler.\nII. Hepatik enzimlerin güçlü indükleyicileridir.\nIII. Nöropatik ağrı tedavisinde de kullanılırlar.\nIV. Plazma proteinlerine yüksek oranda bağlanırlar.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I ve III",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Gabapentin ve pregabalin GABA reseptörlerine doğrudan etki etmez; nöropatik ağrıda kullanılır, metabolize olmaz, proteine bağlanmaz ve enzim indüklemez.",
+     "sik_aciklamalari": {
+      "A": "GABA reseptörüne doğrudan etki etmemeleri bu iki ilaç için doğrudur. Ancak gabapentin metabolize olmaz ve hepatik enzimleri indüklemez, bu yüzden ikinci öncül yanlıştır.",
+      "B": "İki öncül de yanlıştır: gabapentin ve pregabalin enzim indüklemez ve plazma proteinlerine bağlanmaz. İlaç etkileşimleri bu nedenle önemsizdir ve doğru olan iki öncül dışarıda kalmıştır.",
+      "C": "Gabapentin ve pregabalin GABA reseptörlerine doğrudan etki etmez ve ikisi de nöropatik ağrıda kullanılır. Enzim indüklemedikleri ve proteine bağlanmadıkları için bu bileşim doğrudur.",
+      "D": "Reseptöre doğrudan etki etmemeleri ve nöropatik ağrıda kullanılmaları bu iki ilaç için doğrudur. Dördüncü öncül yanlıştır, çünkü gabapentin ve pregabalin plazma proteinlerine bağlanmaz.",
+      "E": "Nöropatik ağrıda kullanım doğrudur. Enzim indüksiyonu ve yüksek protein bağlanması ise bu iki ilaca uymaz; ikisi de böbrekten değişmeden atılır."
+     },
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "GABA reseptörleri üzerinde doğrudan etkileri yoktur"
+     },
+     "s": 45,
+     "id": "k2-25-antiepileptik-ilaclar-q26"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hem nöronlarda hem gliada GABA geri alımını inhibe ederek sinaptik GABA'nın etkisini uzatan ve tonik inhibisyonu güçlendiren antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Vigabatrin",
+      "B": "Tiagabin",
+      "C": "Gabapentin",
+      "D": "Klobazam",
+      "E": "Fenobarbital"
+     },
+     "dogru": "B",
+     "aciklama": "Tiagabin nöron ve gliada GABA geri alım inhibitörüdür; sinaptik GABA etkisini uzatır ve tonik inhibisyonu güçlendirir.",
+     "sik_aciklamalari": {
+      "A": "Vigabatrin GABA'yı yıkan GABA aminotransferazı geri dönüşümsüz inhibe eden bir ilaçtır. Ekstraselüler GABA'yı yıkımı engelleyerek artırır, geri alım taşıyıcısını hedeflemez.",
+      "B": "Tiagabin nöronlarda ve gliada GABA geri alım inhibitörüdür. Sinapsa salınan GABA'nın etkisini uzatıp tonik inhibisyonu güçlendirdiği ve parsiyel epilepside ek tedavide kullanıldığı için doğrudur.",
+      "C": "Gabapentin GABA analoğu olsa da GABA reseptörlerine doğrudan etki etmez. Kalsiyum kanalının alfa-2 delta alt birimine bağlanıp glutamat salınımını azaltır.",
+      "D": "Klobazam GABA-A reseptörü üzerinden GABA'nın inhibitör etkisini artıran bir benzodiazepindir. Reseptör düzeyinde etki eder, geri alım taşıyıcısını inhibe etmez.",
+      "E": "Fenobarbital GABAA reseptörü aracılı akımı klorür kanallarının açık kalmasını uzatarak kuvvetlendiren barbitürattır. Geri alım inhibitörü değil reseptör modülatörüdür, sinaptik GABA miktarını değiştirmez."
+     },
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Tiagabin hem nöronlarda hem de gliada bir GABA geri-alım inhibitörüdür"
+     },
+     "s": 48,
+     "id": "k2-25-antiepileptik-ilaclar-q27"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Potasyum kanallarını aktive ederek nöronal uyarılabilirliği azaltan, kendine özgü etki mekanizmalı antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Retigabin",
+      "B": "Perampanel",
+      "C": "Senobamat",
+      "D": "Zonisamid",
+      "E": "Lakosamid"
+     },
+     "dogru": "A",
+     "aciklama": "Retigabin (ezogabin) potasyum kanallarını aktive ederek nöronal uyarılabilirliği azaltır; bu kendine özgü bir mekanizmadır.",
+     "sik_aciklamalari": {
+      "A": "Retigabin, ezogabin adıyla da bilinen ve erişkin parsiyel nöbetlerde ek tedavide onaylı bir ilaçtır. Potasyum kanallarını aktive ederek uyarılabilirliği azalttığı için doğrudur.",
+      "B": "Perampanel AMPA reseptörlerini güçlü ve nonkompetitif biçimde inhibe eden bir glutamat antagonistidir. Eksitatör iletiyi azaltarak etki eder, potasyum kanalı aktivatörü değildir.",
+      "C": "Senobamat fokal nöbetlerde kullanılan, günde tek doz verilen bir antiepileptiktir. Merkezi sinir sistemi yan etkileri ve yoksunluk sendromuyla bilinir, potasyum kanalı aktivatörü olarak tanımlanmaz.",
+      "D": "Zonisamid sodyum kanallarını ve T-tipi kalsiyum kanallarını inhibe eden sülfonamid yapılı bir ilaçtır. Karbonik anhidrazı da inhibe eder, potasyum kanallarını aktive etmez.",
+      "E": "Lakosamid sodyum kanallarının yavaş inaktivasyonunu artıran amino asit benzeri bir ilaçtır. Etkisi sodyum kanalı üzerindendir, potasyum kanalını açarak uyarılabilirliği azaltmaz."
+     },
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "Potasyum kanallarını aktive ederek nöronal uyarılabilirliği azaltır"
+     },
+     "s": 49,
+     "id": "k2-25-antiepileptik-ilaclar-q28"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Senobamat ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Fokal nöbetlerin tedavisinde kullanılır",
+      "B": "Uzun terminal yarı ömrü günde tek doza izin verir",
+      "C": "Fiziksel bağımlılık ve yoksunluk sendromuna yol açabilir",
+      "D": "Jeneralize nöbetlerdeki etkinliği klinik çalışmalarla kanıtlanmıştır",
+      "E": "Diplopi ve ataksi gibi santral yan etkiler yapar"
+     },
+     "dogru": "D",
+     "aciklama": "Senobamat fokal nöbetlerde kullanılır; jeneralize nöbetlerdeki etkinliği klinik çalışmalarda değerlendirilmemiştir. Uzun yarı ömrü tek doza izin verir; bağımlılık ve yoksunluk yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Senobamat fokal nöbetlerin tedavisinde kullanılan bir antiepileptiktir. Çalışmalardaki nöbetsiz kalma oranları onaylı diğer fokal nöbet ilaçlarından yüksektir, bu nedenle ifade doğrudur.",
+      "B": "Senobamatın terminal yarı ömrü elli ile altmış saat arasındadır. Bu uzun süre günde bir kez dozlamaya izin verdiği için ifade doğrudur.",
+      "C": "Senobamat fiziksel bağımlılık yapabilir; kesilince uykusuzluk, iştahsızlık, depresif ruh hali, titreme ve amneziyle giden yoksunluk görülebilir. Bu nedenle ifade doğrudur.",
+      "D": "Senobamatın jeneralize nöbetlerdeki etkinliği klinik çalışmalarda değerlendirilmemiştir; yalnız hayvan modellerinde geniş spektrumlu aktivite gösterilmiştir. Bu ifade yanlış olduğundan doğru yanıttır.",
+      "E": "Senobamat sıklıkla uyuşukluk, baş dönmesi, diplopi, nistagmus ve ataksi gibi merkezi sinir sistemi yan etkileri yapar. Bu ifade doğru olduğundan aranan yanlış ifade değildir."
+     },
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "jeneralize nöbetlerin tedavisindeki etkinliği değerlendirilmemiştir"
+     },
+     "s": 50,
+     "id": "k2-25-antiepileptik-ilaclar-q29"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Sodyum kanal blokajına ek olarak voltaj bağımlı kalsiyum kanallarını inhibe etmesi absans nöbetlerindeki etkinliğini açıklayabilen ve bipolar bozuklukta da etkili olan antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lamotrijin",
+      "B": "Karbamazepin",
+      "C": "Fenitoin",
+      "D": "Okskarbazepin",
+      "E": "Lakosamid"
+     },
+     "dogru": "A",
+     "aciklama": "Lamotrijin Na+ kanalını bloke eder ve voltaj bağımlı Ca2+ kanallarını da inhibe eder; bu, absans dahil çocukluk çağı primer jeneralize nöbetlerindeki etkinliğini açıklayabilir. Bipolar bozuklukta da etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Lamotrijin sodyum kanalını bloke eden ve voltaj bağımlı kalsiyum kanallarını da inhibe eden bir ilaçtır. Bu ek etki absans dahil çocukluk çağı jeneralize nöbetlerindeki etkinliğini açıklayabildiği ve bipolar bozuklukta etkili olduğu için doğrudur.",
+      "B": "Karbamazepin fokal nöbetlerin prototip sodyum kanal blokeridir ve bipolar bozuklukta da kullanılır. Ancak kalsiyum kanalı etkisi tanımlanmaz ve absans nöbetlerini şiddetlendirebilir.",
+      "C": "Fenitoin kullanıma bağımlı sodyum kanal blokeridir ve parsiyel ile tonik-klonik nöbetlerde etkilidir. Absans nöbetinde etkinliği ya da bipolar endikasyonu tanımlanmaz.",
+      "D": "Okskarbazepin karbamazepin gibi sodyum kanallarını bloke eden ve 10-hidroksi metabolitiyle etkili olan bir ilaçtır. Kalsiyum kanalı etkisiyle absans etkinliği tanımlanmaz.",
+      "E": "Lakosamid sodyum kanallarının yavaş inaktivasyonunu artırır ve parsiyel başlangıçlı nöbetlerde ek tedavide kullanılır. Absans ya da bipolar bozuklukta kullanımı tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "Lamotrijinin, aynı zamanda, özellikle voltaj bağımlı Ca2+ kanallarını inhibe ettiği görülmektedir"
+     },
+     "s": 52,
+     "id": "k2-25-antiepileptik-ilaclar-q30"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Lamotrijin ile ilgili aşağıdaki ifadeler veriliyor:\nI. Proteinlere yalnızca %55 oranında bağlanır.\nII. Enzim indükleyici ilaçlarla birlikte kullanıldığında yarı ömrü kısalabilir.\nIII. Lennox-Gastaut sendromunda nöbet kontrolü için onaylanmıştır.\nIV. Etkisini sinaptik vezikül glikoproteini 2A'ya bağlanarak gösterir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, III ve IV",
+      "D": "I, II ve III",
+      "E": "III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Lamotrijin proteinlere %55 bağlanır; yarı ömrü yaklaşık 24 saattir, enzim indükleyicilerle 13–15 saate kısalır; Lennox-Gastaut sendromunda onaylıdır.",
+     "sik_aciklamalari": {
+      "A": "Düşük protein bağlanması ve enzim indükleyicilerle yarı ömrün kısalması doğrudur. Ancak Lennox-Gastaut sendromundaki onay da doğru olduğundan bileşim eksiktir.",
+      "B": "Yarı ömrün enzim indükleyicilerle kısalması lamotrijin için doğrudur. Dördüncü öncül yanlıştır; vezikül glikoproteini 2A'ya bağlanan ilaçlar levetirasetam ve brivarasetamdır.",
+      "C": "Protein bağlanma oranı ve Lennox-Gastaut onayı lamotrijin için doğrudur. Lamotrijin ise sodyum ve kalsiyum kanalları üzerinden etki eder, vezikül proteinine bağlanmaz.",
+      "D": "Lamotrijin proteinlere yalnızca yüzde elli beş bağlanır, enzim indükleyicilerle yarı ömrü kısalır ve Lennox-Gastaut sendromunda onaylıdır. Vezikül proteinine bağlanan ilaç levetirasetam olduğundan bu bileşim doğrudur.",
+      "E": "Lennox-Gastaut sendromundaki onay lamotrijin için doğrudur. Vezikül proteini mekanizması yanlıştır ve doğru olan protein bağlanması ile yarı ömür öncülleri eksik bırakılmıştır."
+     },
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "Proteinlere sadece %55 oranında bağlanır"
+     },
+     "s": 53,
+     "id": "k2-25-antiepileptik-ilaclar-q31"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Geniş terapötik indeksi ve ilaç etkileşiminin olmaması nedeniyle epilepside en sık reçete edilen ilaçlardan biri olan geniş spektrumlu antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fenitoin",
+      "B": "Karbamazepin",
+      "C": "Levetirasetam",
+      "D": "Fenobarbital",
+      "E": "Valproat"
+     },
+     "dogru": "C",
+     "aciklama": "Levetirasetam geniş spektrumludur ve epilepside en sık reçete edilen ilaçlardandır; başlıca nedeni geniş terapötik indeks ve ilaç etkileşiminin olmamasıdır.",
+     "sik_aciklamalari": {
+      "A": "Fenitoin kullanıma bağımlı sodyum kanal blokeridir. Doza bağımlı eliminasyonu ve dar tedavi aralığı nedeniyle küçük doz artışlarında hızla toksisite yapabilir.",
+      "B": "Karbamazepin fokal nöbetlerin prototip ilacıdır ve yaygın kullanılır. Güçlü enzim indükleyicisi olduğu için kendi düzeyini ve çok sayıda ilacın düzeyini düşürür, etkileşimsiz değildir.",
+      "C": "Levetirasetam sinaptik vezikül glikoproteini 2A'ya bağlanan geniş spektrumlu bir antiepileptiktir. Geniş terapötik indeksi ve etkileşim olmaması nedeniyle en sık reçete edilenlerden biri olduğu için doğrudur.",
+      "D": "Fenobarbital halen kullanılan en eski antiepileptiktir ve maliyet sorun olduğunda faydalıdır. Hepatik enzimlerin güçlü indükleyicisi olduğundan etkileşimsiz bir ilaç sayılamaz.",
+      "E": "Valproat geniş spektrumlu bir antiepileptiktir ve absansta çok etkilidir. Fenitoini proteinden ayırır ve birçok ilacın metabolizmasını inhibe ederek belirgin etkileşimler yapar."
+     },
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "en sık reçete edilen ilaçlardan biridir"
+     },
+     "s": 54,
+     "id": "k2-25-antiepileptik-ilaclar-q32"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Levetirasetamın daha seyrek görülen ancak ciddi olabilen yan etkisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Aplastik anemi",
+      "B": "Mizaç ve davranış değişikliği",
+      "C": "Diş eti hiperplazisi",
+      "D": "Hiponatremi",
+      "E": "Periferik görme alanı defekti"
+     },
+     "dogru": "B",
+     "aciklama": "Levetirasetam uyuklama, halsizlik, ataksi ve baş dönmesi yapar; daha seyrek ama ciddi yan etkisi mizaç ve davranış değişikliğidir.",
+     "sik_aciklamalari": {
+      "A": "Aplastik anemi felbamat ve karbamazepinle ilişkili idiyosenkratik bir kemik iliği yetmezliğidir. Levetirasetamın seyrek ama ciddi yan etkisi ise kan sistemiyle değil ruh hâliyle ilgilidir.",
+      "B": "Levetirasetam uyuklama, halsizlik, ataksi ve baş dönmesi yapan bir SV2A ligandıdır. Daha seyrek ama ciddi yan etkisi mizaç ve davranış değişikliği olduğu için doğrudur.",
+      "C": "Diş eti hiperplazisi fenitoinin pek çok hastada görülen karakteristik yan etkisidir. Levetirasetamla ilişkilendirilmez; bu ilacın seyrek ama ciddi yan etkisi davranış alanındadır.",
+      "D": "Hiponatremi okskarbazepin ve karbamazepinde görülen sodyum düşüklüğüdür. Levetirasetamın ciddi yan etkisi elektrolit bozukluğu değil, daha seyrek görülen mizaç ve davranış değişikliğidir.",
+      "E": "Periferik görme alanı defekti uzun süreli vigabatrin tedavisinde retinada gelişen, çoğunlukla geri dönüşümsüz bir yan etkidir. Levetirasetama ait değildir, onun ciddi etkisi davranış değişikliğidir."
+     },
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "Levetirasetam"
+     },
+     "s": 55,
+     "id": "k2-25-antiepileptik-ilaclar-q33"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Levetirasetam kullanan bir hastaya brivarasetam eklenmesinin ek terapötik fayda sağlamamasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Brivarasetamın levetirasetam metabolizmasını indüklemesi",
+      "B": "Brivarasetamın proteine yüksek oranda bağlanması",
+      "C": "İki ilacın da AMPA reseptörünü inhibe etmesi",
+      "D": "Brivarasetamın aktif metabolite dönüşmemesi",
+      "E": "İki ilacın da SV2A üzerinden etki etmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Brivarasetam levetirasetamla birlikte verildiğinde ek fayda sağlamaz; her iki ilaç da SV2A üzerinde etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Brivarasetamın tanımlanan etkileşimleri karbamazepin epoksit ve fenitoin düzeylerini artırmasıdır. Levetirasetamın yıkımını hızlandırma etkisi tanımlanmamıştır, ek faydasızlığın nedeni iki ilacın ortak hedefidir.",
+      "B": "Brivarasetam plazma proteinlerine düşük oranda, yüzde yirminin altında bağlanır ve hızla tamamen emilir. Yüksek protein bağlanması bu ilacın özelliği olmadığından ek faydasızlığı açıklamaz.",
+      "C": "AMPA reseptörünü nonkompetitif biçimde inhibe eden ilaç perampaneldir. Levetirasetam ve brivarasetam glutamat reseptörü antagonisti değildir, ikisi de vezikül proteinine bağlanır.",
+      "D": "Metabolit özelliği iki ilacın birlikte kullanımında fayda olup olmayacağını belirlemez. Ek faydanın olmamasının nedeni ortak hedeflerinin aynı vezikül proteini olmasıdır.",
+      "E": "Brivarasetam levetirasetamın propil analoğu olan yüksek afiniteli bir SV2A ligandıdır. İki ilaç aynı hedef üzerinden etki ettiğinden birlikte verilince ek fayda sağlamaz, bu yüzden doğrudur."
+     },
+     "kanit": {
+      "sayfa": 57,
+      "alinti": "her iki ilaç da SV2A üzerinde etkilidir"
+     },
+     "s": 57,
+     "id": "k2-25-antiepileptik-ilaclar-q34"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "AMPA reseptörlerini güçlü ve nonkompetitif biçimde inhibe eden, saldırganlık, düşmanlık ve öfke gibi davranışsal yan etkileriyle bilinen antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Felbamat",
+      "B": "Topiramat",
+      "C": "Levetirasetam",
+      "D": "Klobazam",
+      "E": "Perampanel"
+     },
+     "dogru": "E",
+     "aciklama": "Perampanel AMPA reseptörlerini güçlü ve nonkompetitif biçimde inhibe eder; saldırganlık, düşmanlık ve öfke gibi davranışsal yan etkiler sıktır ve doza bağlı artar.",
+     "sik_aciklamalari": {
+      "A": "Felbamat NMDA tipi glutamat reseptörlerini inhibe eder ve GABA-A aracılı inhibisyonu güçlendirir. Aplastik anemi ve ciddi hepatitle bilinir, AMPA blokeri olarak tanımlanmaz.",
+      "B": "Topiramat AMPA ve kainat reseptörlerini de antagonize eden çok mekanizmalı bir ilaçtır. Öne çıkan yan etkisi davranışsal değil bilişsel bozukluktur; dil ve sözel bellek etkilenir.",
+      "C": "Levetirasetam SV2A'ya bağlanan geniş spektrumlu bir ilaçtır. Seyrek olarak mizaç ve davranış değişikliği yapsa da etkisini glutamat reseptörü blokajıyla göstermez.",
+      "D": "Klobazam GABA-A reseptörü üzerinden GABA'nın etkisini artıran bir benzodiazepindir. Saldırganlık dahil davranış değişikliği yapabilir ama AMPA reseptörünü inhibe etmez.",
+      "E": "Perampanel iyonotropik glutamat reseptörlerinden AMPA'yı güçlü ve kompetitif olmayan biçimde inhibe eder. Saldırganlık, düşmanlık, sinirlilik ve öfke gibi davranışsal reaksiyonlarla ilişkili olduğu için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 57,
+      "alinti": "AMPA reseptörlerini güçlü ve kompetitif olmayan bir mekanizmayla inhibe eder"
+     },
+     "s": 57,
+     "id": "k2-25-antiepileptik-ilaclar-q35"
+    },
+    {
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Perampanel ile ilgili aşağıdaki ifadeler veriliyor:\nI. Yarı ömrü uzundur ve günde tek doz verilebilir.\nII. Plazma proteinlerine düşük oranda bağlanır.\nIII. Karbamazepin gibi güçlü CYP3A4 indükleyicileriyle önemli etkileşime girer.\nIV. Levonorgestrel içeren kontraseptiflerin etkinliğini artırır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I ve III",
+      "D": "I, III ve IV",
+      "E": "II, III ve IV"
+     },
+     "dogru": "C",
+     "aciklama": "Perampanelin yarı ömrü 70–110 saattir; %95 proteine bağlanır; en önemli etkileşimi güçlü CYP3A4 indükleyicileriyledir; levonorgestrelli kontraseptiflerin etkinliğini azaltabilir.",
+     "sik_aciklamalari": {
+      "A": "Uzun yarı ömür ve günde tek doz perampanel için doğrudur. İkinci öncül ise yanlıştır, çünkü perampanel plazma proteinlerine yüzde doksan beş oranında bağlanır.",
+      "B": "İki öncül de yanlıştır: perampanel proteinlere yüzde doksan beş gibi yüksek bir oranda bağlanır. Ayrıca levonorgestrelli kontraseptiflerin etkinliğini artırmaz, azaltabilir.",
+      "C": "Perampanelin yetmiş ile yüz on saatlik yarı ömrü tek doza izin verir ve en önemli etkileşimleri güçlü CYP3A4 indükleyicileriyledir. Proteinlere yüksek bağlandığı ve kontraseptif etkinliğini azalttığı için bu bileşim doğrudur.",
+      "D": "Uzun yarı ömür ve CYP3A4 indükleyicileriyle etkileşim perampanel için doğru ifadelerdir. Dördüncü öncül ise yanlıştır, çünkü perampanel levonorgestrelli kontraseptiflerin etkinliğini azaltabilir.",
+      "E": "Güçlü CYP3A4 indükleyicileriyle önemli etkileşim perampanel için doğrudur. Düşük protein bağlanması ve kontraseptif etkinliğini artırma ifadeleri ise perampanelin özelliklerine uymaz."
+     },
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "Perampanel %95 oranında plazma proteinlerine bağlanır"
+     },
+     "s": 58,
+     "id": "k2-25-antiepileptik-ilaclar-q36"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Fenobarbital, primidon ve felbamatın etki mekanizması, endikasyon ve toksisitesini açıklar (s. 60–65).",
+   "sorular": [
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Fenobarbitalin GABAA reseptörü aracılı akımı kuvvetlendirme biçimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABA geri alımını inhibe eder",
+      "B": "Klorür kanallarının açık kalma süresini uzatır",
+      "C": "GABA transaminazı geri dönüşümsüz inhibe eder",
+      "D": "Sinaptik vezikül proteini 2A'ya bağlanır",
+      "E": "T-tipi kalsiyum kanallarını inhibe eder"
+     },
+     "dogru": "B",
+     "aciklama": "Fenobarbital GABAA reseptörü aracılı akımı Cl- kanallarının açık kalmasını uzatarak kuvvetlendirir; terapötik düzeyde glutamat aracılı eksitasyonu da azaltır.",
+     "sik_aciklamalari": {
+      "A": "GABA geri alımını nöronlarda ve gliada inhibe eden ilaç tiagabindir. Fenobarbital ise reseptör üzerinden klorür akımını artırarak etki eder, geri alım taşıyıcısını hedeflemez.",
+      "B": "Fenobarbital barbitürat yapılı ve halen kullanılan en eski antiepileptiktir. GABAA reseptörü aracılı akımı klorür kanallarının açık kalmasını uzatarak kuvvetlendirdiği için doğrudur.",
+      "C": "GABA transaminazı geri dönüşümsüz inhibe eden ilaç vigabatrindir. Bu etki GABA yıkımını engeller; fenobarbitalin reseptör akımını kuvvetlendirme biçimi bu değildir.",
+      "D": "Vezikül proteini 2A'ya bağlanan ilaçlar levetirasetam ve brivarasetamdır. Fenobarbitalin etkisi ise klorür kanalı üzerinden reseptör akımını artırmaktır, vezikül proteiniyle ilgisi yoktur.",
+      "E": "T-tipi kalsiyum kanallarını talamokortikal nöronlarda inhibe eden ilaç etosüksimiddir. Bu mekanizma absans nöbetlerini önler, fenobarbitalin GABAA akımını artırma biçimi değildir."
+     },
+     "kanit": {
+      "sayfa": 61,
+      "alinti": "Cl- kanallarının açık kalmasını uzatarak kuvvetlendirir"
+     },
+     "s": 61,
+     "id": "k2-25-antiepileptik-ilaclar-q37"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Etkinliğini gösteren en iyi örneğin febril nöbetler olduğu, maliyet sorun olduğunda fokal nöbetlerde de faydalı olan barbitürat yapılı antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fenobarbital",
+      "B": "Etosüksimid",
+      "C": "Vigabatrin",
+      "D": "Lamotrijin",
+      "E": "Gabapentin"
+     },
+     "dogru": "A",
+     "aciklama": "Fenobarbitalin etkinliğini belirleyen en iyi örnek febril nöbetlerdir; maliyet sorunsa fokal nöbetlerde faydalıdır.",
+     "sik_aciklamalari": {
+      "A": "Fenobarbital halen kullanımda olan en eski antiepileptiktir ve parsiyel ile tonik-klonik nöbetlerde etkilidir. Etkinliğinin en iyi örneği febril nöbetler olduğu ve ucuz olduğu için doğrudur.",
+      "B": "Etosüksimid T-tipi kalsiyum kanallarını inhibe eden absans ilacıdır. Klinik etki spektrumu çok dardır, barbitürat yapısında değildir ve febril nöbetlerle anılmaz.",
+      "C": "Vigabatrin GABA aminotransferazı inhibe eden, infantil spazmda yararlı bir ilaçtır. Toksisite riski nedeniyle üçüncü basamak ilaçtır ve barbitürat yapısında değildir.",
+      "D": "Lamotrijin sodyum ve kalsiyum kanallarını inhibe eden geniş spektrumlu bir ilaçtır. Fokal nöbetlerde popüler ilaçlardandır ama barbitürat değildir ve febril nöbetlerle anılmaz.",
+      "E": "Gabapentin GABA analoğu olan, kalsiyum kanalının alfa-2 delta alt birimine etki eden bir ilaçtır. Barbitürat yapısında değildir ve febril nöbetlerle anılmaz."
+     },
+     "kanit": {
+      "sayfa": 62,
+      "alinti": "Fenobarbitalin etkinliğini belirleyen en iyi örnek febril nöbetlerdir"
+     },
+     "s": 62,
+     "id": "k2-25-antiepileptik-ilaclar-q38"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Metabolizması sonucunda fenobarbital ve feniletilmalonamide dönüşen, üç bileşiği de antikonvülsan etkili olan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Mefenitoin",
+      "B": "Klobazam",
+      "C": "Okskarbazepin",
+      "D": "Primidon",
+      "E": "Eslikarbazepin asetat"
+     },
+     "dogru": "D",
+     "aciklama": "Primidon (2-desoksifenobarbital) fenobarbital ve feniletilmalonamide (PEMA) dönüşür; üç bileşik de antikonvülsandır.",
+     "sik_aciklamalari": {
+      "A": "Mefenitoin bir fenitoin türevidir ve demetilasyonla Nirvanol adlı aktif metabolitine dönüşür. Bu metabolit antiepileptik etkiye katkıda bulunur, ancak fenobarbital oluşmaz.",
+      "B": "Klobazam bir benzodiazepindir ve ana metaboliti norklobazamdır. Kronik tedavide nöbet koruması büyük olasılıkla norklobazamdan gelir; metabolizmasıyla fenobarbital ya da feniletilmalonamid oluşmaz.",
+      "C": "Okskarbazepin hızla 10-hidroksi metabolitine dönüşen ve etkinliği bu metabolitte olan bir sodyum kanal blokeridir. Barbitürat yapısında değildir ve fenobarbital gibi metabolitler oluşturmaz.",
+      "D": "Primidon 2-desoksifenobarbital yapısında, parsiyel ve tonik-klonik nöbetlerde etkili bir antiepileptiktir. Fenobarbital ve feniletilmalonamide dönüştüğü ve üç bileşiğin de antikonvülsan olduğu için doğrudur.",
+      "E": "Eslikarbazepin asetat parsiyel başlangıçlı nöbetlerde ek tedavide onaylı bir ön ilaçtır. Sodyum kanalını bloke eder ve günde tek doz kullanılır, fenobarbitale dönüşmez."
+     },
+     "kanit": {
+      "sayfa": 63,
+      "alinti": "Bu üç bileşik de antikonvülsan etkiye sahiptir"
+     },
+     "s": 63,
+     "id": "k2-25-antiepileptik-ilaclar-q39"
+    },
+    {
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Parsiyel nöbetlerde etkili olmasına karşın beklenmedik oranda aplastik anemi ve ciddi hepatite yol açan, NMDA tipi glutamat reseptörlerini inhibe eden antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karbamazepin",
+      "B": "Felbamat",
+      "C": "Valproat",
+      "D": "Trimetadion",
+      "E": "Perampanel"
+     },
+     "dogru": "B",
+     "aciklama": "Felbamat NMDA reseptörlerini inhibe eder ve GABA-A inhibisyonunu güçlendirir; beklenmedik oranda aplastik anemi ve ciddi hepatit yapar.",
+     "sik_aciklamalari": {
+      "A": "Karbamazepin sodyum kanal blokeri olan fokal nöbet prototipidir. Aplastik anemi yapabilir ama NMDA reseptörü üzerinden etki etmez ve ciddi hepatitle tanımlanmaz.",
+      "B": "Felbamat NMDA reseptörlerini inhibe edip GABA-A aracılı inhibisyonu güçlendiren bir ilaçtır. Beklenmedik oranda aplastik anemi ve ciddi hepatit yaptığı için üçüncü basamaktadır ve bu yüzden doğrudur.",
+      "C": "Valproat geniş spektrumlu bir ilaçtır ve başlıca toksisitesi hepatotoksisitedir. Aplastik anemiyle değil trombositopeniyle anılır ve parsiyel nöbetlerden çok jeneralize nöbetlerin ilacıdır.",
+      "D": "Trimetadion T-tipi kalsiyum akımını inhibe eden eski bir absans ilacıdır. Aplastik anemi yapabilir, ancak NMDA reseptörüne etki etmez ve parsiyel nöbet ilacı değildir.",
+      "E": "Perampanel glutamat reseptörlerinden AMPA'yı nonkompetitif biçimde inhibe eden bir ilaçtır. Davranışsal yan etkileriyle bilinir, aplastik anemi ya da hepatitle tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 65,
+      "alinti": "beklenmedik oranda aplastik anemi ve ciddi hepatite neden olur"
+     },
+     "s": 65,
+     "id": "k2-25-antiepileptik-ilaclar-q40"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Jeneralize ve absans nöbetlerinde kullanılan valproat, topiramat, zonisamid, etosüksimid ve trimetadionun mekanizma, endikasyon ve yan etkilerini açıklar (s. 66–81).",
+   "sorular": [
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Absans nöbetlerine eşlik eden jeneralize tonik-klonik atakları olan bir hastada etosüksimide sıklıkla tercih edilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karbamazepin",
+      "B": "Fenitoin",
+      "C": "Gabapentin",
+      "D": "Valproat",
+      "E": "Okskarbazepin"
+     },
+     "dogru": "D",
+     "aciklama": "Valproat absans nöbetlerinde çok etkilidir ve eşlik eden jeneralize tonik-klonik atakları olan hastalarda sıklıkla etosüksimide tercih edilir.",
+     "sik_aciklamalari": {
+      "A": "Karbamazepin fokal nöbetlerin prototip ilacıdır ve tonik-klonik nöbetlerde de endikedir. Absans ve miyoklonik nöbetleri şiddetlendirebildiği için bu hastada uygun değildir.",
+      "B": "Fenitoin parsiyel ve tonik-klonik nöbetlerde etkili bir sodyum kanal blokeridir. Absans nöbetinde etkinliği tanımlanmadığı için iki nöbet tipini birlikte kapsamaz.",
+      "C": "Gabapentin parsiyel ve tonik-klonik nöbetlerde yardımcı ilaç olarak kullanılan bir GABA analoğudur. Absans nöbetlerinde kullanımı tanımlanmadığı için iki nöbet tipini birlikte kapsamaz.",
+      "D": "Valproat absans nöbetlerinde çok etkili, jeneralize tonik-klonik nöbetlere de etkili geniş spektrumlu bir ilaçtır. Etosüksimidin spektrumu dar olduğundan eşlik eden tonik-klonik atakta tercih edildiği için doğrudur.",
+      "E": "Okskarbazepin karbamazepine benzer bir sodyum kanal blokeridir ve hiponatremiyi daha sık yapar. Fokal nöbet ilacıdır, absans tedavisinde ise yeri tanımlanmamıştır."
+     },
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "eşlik eden jeneralize tonik-klonik atakları olan hastalarda sıklıkla etosüksimide tercih edilir"
+     },
+     "s": 67,
+     "id": "k2-25-antiepileptik-ilaclar-q41"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Valproatın etki mekanizmaları ile ilgili aşağıdaki ifadeler veriliyor:\nI. Sinaptik vezikül glikoproteini 2A'ya seçici olarak bağlanır.\nII. NMDA reseptör aracılı eksitasyonu bloke edebilir.\nIII. Beyinde GABA seviyesini artırır.\nIV. Çok yüksek konsantrasyonlarda GABA transaminazı inhibe eder.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "III ve IV",
+      "D": "II ve III",
+      "E": "II, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Valproatın parsiyel nöbetlerdeki etkisi Na+ kanallarına bağlı olabilir; NMDA blokajı önemlidir, beyinde GABA'yı artırır ve çok yüksek konsantrasyonda GABA transaminazı inhibe eder.",
+     "sik_aciklamalari": {
+      "A": "NMDA aracılı eksitasyonun blokajı valproat için doğrudur. Birinci öncül ise yanlıştır; vezikül glikoproteini 2A'ya bağlanan ilaçlar levetirasetam ve brivarasetamdır.",
+      "B": "GABA artışı ve yüksek konsantrasyonda GABA transaminaz inhibisyonu valproat için doğrudur. Vezikül proteinine seçici bağlanma ise levetirasetamın mekanizmasıdır, bu yüzden bileşim yanlıştır.",
+      "C": "GABA sistemiyle ilgili iki öncül valproat için doğrudur. Ancak NMDA aracılı eksitasyonun blokajı da tanımlanan mekanizmalarındandır, bu yüzden bileşim eksiktir.",
+      "D": "NMDA blokajı ve GABA artışı doğrudur. Çok yüksek konsantrasyonda GABA transaminaz inhibisyonu da valproata ait olduğundan dördüncü öncül eksik bırakılmıştır.",
+      "E": "Valproat NMDA aracılı eksitasyonu bloke edebilir, beyinde GABA düzeyini artırır ve çok yüksek konsantrasyonda GABA transaminazı inhibe ederek GABA yıkımını önler. Vezikül proteinine bağlanmadığı için bu bileşim doğrudur."
+     },
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "Çok yüksek konsantrasyonlarda valproat beyinde GABA transaminazı inhibe eder"
+     },
+     "s": 67,
+     "id": "k2-25-antiepileptik-ilaclar-q42"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Valproat hepatotoksisitesi riskinin en yüksek olduğu hasta grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tek ilaç kullanan sağlıklı erişkinler",
+      "B": "Trigeminal nevraljili yaşlı hastalar",
+      "C": "İki yaş altında ve birden fazla ilaç alanlar",
+      "D": "Fenilketonürisi olan hastalar",
+      "E": "Gebeliğin ilk aylarındaki kadınlar"
+     },
+     "dogru": "C",
+     "aciklama": "Valproat hepatotoksisitesinde risk iki yaşın altında ve birden fazla ilaç alanlarda en yüksektir; ölümlerin çoğu tedavinin ilk dört ayında olur.",
+     "sik_aciklamalari": {
+      "A": "Tek ilaç kullanan erişkin, valproat tedavisinde görece düşük riskli gruptur. Hepatotoksisite riski çoklu ilaç alan, iki yaşından küçük çocuklarda yoğunlaşır.",
+      "B": "Trigeminal nevraljili yaşlılar karbamazepine bağlı idiyosenkratik kan diskrazisi açısından riskli gruptur. Valproat hepatotoksisitesi ise en çok iki yaşından küçük çocuklarda görülür.",
+      "C": "Valproatın başlıca toksisitesi hepatotoksisitedir ve risk iki yaşın altındaki, birden fazla ilaç alan hastalarda en yüksektir. Ölümlerin çoğu ilk dört ayda olduğu için bu grup doğrudur.",
+      "D": "Fenilketonürili hastalar aspartam içeren lakosamid oral çözeltisinden zarar görebilen bir gruptur. Bu durum valproatın karaciğer toksisitesiyle ilişkili bir risk grubu oluşturmaz.",
+      "E": "Gebelikte valproat kullanımının asıl sorunu çocukta spina bifida riskinin belirgin artmasıdır. Bu teratojenik bir etkidir, hepatotoksisitenin en yüksek risk grubu değildir."
+     },
+     "kanit": {
+      "sayfa": 71,
+      "alinti": "İki yaşın altında ve birden fazla ilaç alan hastalarda risk en yüksektir"
+     },
+     "s": 71,
+     "id": "k2-25-antiepileptik-ilaclar-q43"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Valproat ile ilgili aşağıdaki ifadeler veriliyor:\nI. Fenitoini plazma proteinlerinden ayırır.\nII. Fenobarbital ve karbamazepin dahil birçok ilacın metabolizmasını inhibe eder.\nIII. Gebelikte kullanıldığında çocukta spina bifida riskini azaltır.\nIV. Tek başına kullanıldığında sedasyon seyrektir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve IV",
+      "B": "I ve II",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "A",
+     "aciklama": "Valproat fenitoini proteinden ayırır, fenobarbital, fenitoin ve karbamazepinin metabolizmasını inhibe eder; tek başına sedasyon seyrektir; gebelikte spina bifida riskini belirgin artırır.",
+     "sik_aciklamalari": {
+      "A": "Valproat fenitoini proteinden ayırır, birçok ilacın metabolizmasını inhibe eder ve tek başına kullanıldığında sedasyonu seyrektir. Gebelikte spina bifida riskini artırdığı için üçüncü öncül yanlıştır ve bu bileşim doğrudur.",
+      "B": "Proteinden ayırma ve metabolizma inhibisyonu valproatın doğru etkileşimleridir. Ancak tek başına kullanımda sedasyonun seyrek olması da doğru olduğundan bu bileşim eksiktir.",
+      "C": "Birçok ilacın metabolizmasını inhibe etmesi valproat için doğrudur. Üçüncü öncül ise yanlıştır, çünkü gebelikte valproat kullanan kadınların çocuklarında spina bifida riski belirgin artar.",
+      "D": "Fenitoini proteinden ayırması ve tek başına sedasyonun seyrek olması doğrudur. Spina bifida riskini azaltma ifadesi ise gerçeğin tersidir, risk belirgin artar.",
+      "E": "Tek başına kullanımda sedasyonun seyrek olduğu doğrudur, fenobarbital eklenince belirginleşir. Spina bifida ifadesi yanlıştır ve doğru iki etkileşim öncülü eksik bırakılmıştır."
+     },
+     "kanit": {
+      "sayfa": 70,
+      "alinti": "Valproat fenitoini plazma proteinlerinden ayırır"
+     },
+     "s": 71,
+     "id": "k2-25-antiepileptik-ilaclar-q44"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Diğer tüm antiepileptiklerden yapısal olarak farklı bir monosakkarit analoğu olan, sodyum kanallarını bloke edip AMPA/kainat reseptörlerini de antagonize eden ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Topiramat",
+      "B": "Zonisamid",
+      "C": "Valproat",
+      "D": "Felbamat",
+      "E": "Perampanel"
+     },
+     "dogru": "A",
+     "aciklama": "Topiramat monosakkarit analoğudur; Na+ kanallarını bloke eder, GABA-A etkisini artırır, AMPA/kainat reseptörlerini antagonize eder ve yüksek voltajlı Ca2+ kanallarına etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Topiramat monosakkarit analoğu, çok mekanizmalı bir antiepileptiktir. Sodyum kanallarını bloke ettiği, GABA etkisini artırdığı ve AMPA/kainat reseptörlerini antagonize ettiği için doğrudur.",
+      "B": "Zonisamid sülfonamid yapılı bir antiepileptiktir ve sodyum ile T-tipi kalsiyum kanallarını inhibe eder. Monosakkarit analoğu değildir ve glutamat reseptörü antagonizması tanımlanmaz.",
+      "C": "Valproat karboksilik yağ asitleri serisinin üyesi olan bir antiepileptiktir. Sodyum kanalı, NMDA ve GABA sistemi üzerinden etki eder, şeker yapısında değildir.",
+      "D": "Felbamat NMDA reseptörlerini inhibe edip GABA-A aracılı inhibisyonu güçlendiren bir ilaçtır. Aplastik anemi ve hepatitle bilinir, monosakkarit analoğu değildir.",
+      "E": "Perampanel AMPA reseptörlerini nonkompetitif biçimde inhibe eden ve davranışsal yan etkileriyle bilinen bir ilaçtır. Sodyum kanal blokajı tanımlanmaz ve monosakkarit analoğu değildir."
+     },
+     "kanit": {
+      "sayfa": 72,
+      "alinti": "diğer tüm antiepileptik ilaçlardan yapısal olarak farklı bir monosakarid analoğudur"
+     },
+     "s": 72,
+     "id": "k2-25-antiepileptik-ilaclar-q45"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Topiramat ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yapısal olarak bir monosakkarit analoğudur",
+      "B": "AMPA/kainat tipi glutamat reseptörlerini antagonize eder",
+      "C": "Plazma proteinlerine yüksek oranda bağlanır ve aktif metaboliti vardır",
+      "D": "Bilişsel yan etkileri sıklıkla sedasyon olmadan ortaya çıkar",
+      "E": "Gebelikte maruz kalan erkek bebeklerde hipospadias bildirilmiştir"
+     },
+     "dogru": "C",
+     "aciklama": "Topiramat monosakkarit analoğudur; AMPA/kainat reseptörlerini antagonize eder; bilişsel yan etkileri sedasyonsuz görülebilir; hipospadias bildirilmiştir; proteine az bağlanır ve aktif metaboliti yoktur.",
+     "sik_aciklamalari": {
+      "A": "Topiramat diğer tüm antiepileptiklerden yapısal olarak farklı bir monosakkarit analoğudur. Bu ifade doğru olduğu için soruda aranan yanlış ifade bu değildir.",
+      "B": "Topiramat sodyum kanallarını bloke eder, GABA etkisini artırır ve AMPA/kainat reseptörlerini antagonize eder. Çok mekanizmalı bu ilaç için ifade doğrudur.",
+      "C": "Topiramat plazma proteinlerine az, yaklaşık yüzde on beş oranında bağlanır, aktif metaboliti yoktur ve başlıca idrarla değişmeden atılır. Bu ifade yanlış olduğundan doğru yanıttır.",
+      "D": "Topiramatın dil ve sözel bellek bozukluğu gibi bilişsel yan etkileri sıktır ve kesilme nedenidir. Bunların sıklıkla sedasyon olmadan görülmesi doğrudur.",
+      "E": "Topiramat hayvan modellerinde teratojenik bulunmuş bir ilaçtır ve anne karnında maruz kalan erkek bebeklerde hipospadias bildirilmiştir. Bu nedenle ifade doğrudur."
+     },
+     "kanit": {
+      "sayfa": 75,
+      "alinti": "plazma proteinlerine az (%15) bağlanır"
+     },
+     "s": 73,
+     "id": "k2-25-antiepileptik-ilaclar-q46"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Topiramat kullanımı sırasında gelişen ve ilacın aniden kesilmesini gerektirebilecek yan etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Akut miyopi ve glokom",
+      "B": "Diş eti hiperplazisi",
+      "C": "Hirsutizm",
+      "D": "Trombositopeni",
+      "E": "Hiponatremi"
+     },
+     "dogru": "A",
+     "aciklama": "Topiramatla akut miyopi ve glokom ilacın aniden kesilmesini gerektirebilir; ürolitiyazis de bildirilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Akut miyopi ve glokom topiramatın ani gelişebilen ciddi göz yan etkileridir. Bu seyir nedeniyle ilacın aniden kesilmesini gerektirebildiği için doğru yanıt budur.",
+      "B": "Diş eti hiperplazisi fenitoinin pek çok hastada görülen kronik yan etkisidir. Yavaş gelişir ve topiramatın acil kesilme nedeni olarak tanımlanmaz.",
+      "C": "Hirsutizm aşırı kıllanmadır ve fenitoinin diş eti hiperplazisiyle birlikte anılan karakteristik yan etkisidir. Topiramatla ilişkili ani kesilme gerektiren bir tablo değildir.",
+      "D": "Trombositopeni valproat tedavisinde görülebilen idiyosenkratik bir yan etkidir. Topiramatın acil kesilme gerektiren yan etkileri ise göz kaynaklıdır, kan sayımıyla ilgili değildir.",
+      "E": "Hiponatremi kanda sodyum düşüklüğüdür ve en sık okskarbazepin ile karbamazepinde görülür. Topiramat kullanımında ani kesilmeyi gerektiren bir yan etki olarak ise tanımlanmamıştır."
+     },
+     "kanit": {
+      "sayfa": 74,
+      "alinti": "Akut miyopi ve glokom ilacın aniden kesilmesini gerektirebilir"
+     },
+     "s": 74,
+     "id": "k2-25-antiepileptik-ilaclar-q47"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Asetazolamid gibi karbonik anhidrazı inhibe eden, böbrek taşı ve kilo kaybıyla ilişkili sülfonamid yapılı antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lakosamid",
+      "B": "Rufinamid",
+      "C": "Etosüksimid",
+      "D": "Zonisamid",
+      "E": "Levetirasetam"
+     },
+     "dogru": "D",
+     "aciklama": "Zonisamid bir sülfonamiddir; asetazolamid gibi karbonik anhidrazı inhibe eder; böbrek taşı yapabilir ve topiramat gibi kilo kaybıyla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Lakosamid sodyum kanallarının yavaş inaktivasyonunu artıran amino asit benzeri bir bileşiktir. Sülfonamid yapısında değildir ve karbonik anhidrazı inhibe ettiği tanımlanmamıştır.",
+      "B": "Rufinamid sodyum kanallarının inaktif kalma süresini uzatan, Lennox-Gastaut sendromunda onaylı bir ilaçtır. Karbonik anhidraz inhibisyonu ve böbrek taşı yan etkisi tanımlanmaz.",
+      "C": "Etosüksimid T-tipi kalsiyum kanallarını inhibe eden absans ilacıdır. Sülfonamid değildir ve yan etkileri daha çok bulantı, kusma gibi mide yakınmalarıdır.",
+      "D": "Zonisamid sodyum ve T-tipi kalsiyum kanallarını inhibe eden geniş spektrumlu bir sülfonamiddir. Karbonik anhidrazı inhibe ettiği, böbrek taşı ve kilo kaybıyla ilişkili olduğu için doğrudur.",
+      "E": "Levetirasetam vezikül glikoproteini 2A'ya bağlanan geniş spektrumlu bir ilaçtır. Karbonik anhidraz inhibisyonu, kilo kaybı ya da böbrek taşıyla ilişkilendirilmez."
+     },
+     "kanit": {
+      "sayfa": 77,
+      "alinti": "Hem zonisamid hem de topiramat kilo kaybıyla ilişkilidir"
+     },
+     "s": 77,
+     "id": "k2-25-antiepileptik-ilaclar-q48"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Talamokortikal nöronlarda düşük eşikli T-tipi kalsiyum kanallarını inhibe ederek absans nöbetlerini önleyen birinci basamak ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karbamazepin",
+      "B": "Fenitoin",
+      "C": "Gabapentin",
+      "D": "Tiagabin",
+      "E": "Etosüksimid"
+     },
+     "dogru": "E",
+     "aciklama": "Etosüksimid talamokortikal nöronlarda düşük eşikli T-tipi Ca2+ kanallarını inhibe eder ve genel absans nöbetlerinde birinci basamak ilaçtır.",
+     "sik_aciklamalari": {
+      "A": "Karbamazepin sodyum kanallarını bloke eden fokal nöbet prototipidir. Absans nöbetlerini şiddetlendirebildiği için bu tabloda kullanılmaz ve talamik kalsiyum akımına etki etmez.",
+      "B": "Fenitoin kullanıma bağımlı sodyum kanal blokeridir ve parsiyel ile tonik-klonik nöbetlerde etkilidir. Talamik kalsiyum kanalı etkisi ve absans endikasyonu tanımlanmaz.",
+      "C": "Gabapentin kalsiyum kanalının alfa-2 delta alt birimine etki eden GABA analoğudur. Parsiyel nöbetlerde etkilidir, absansın birinci basamak ilacı değildir.",
+      "D": "Tiagabin GABA geri alımını inhibe ederek tonik inhibisyonu güçlendiren bir ilaçtır. Parsiyel epilepside ek tedavide kullanılır, absansın birinci basamak ilacı değildir.",
+      "E": "Etosüksimid genel absans nöbetlerinde birinci basamak ilaçtır. Talamokortikal nöronlarda düşük eşikli T-tipi kalsiyum kanallarını inhibe edip ritmik deşarjları baskıladığı için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 78,
+      "alinti": "Etosüksimid, genel absans nöbetlerinin tedavisinde birinci basamak ilaçtır"
+     },
+     "s": 78,
+     "id": "k2-25-antiepileptik-ilaclar-q49"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Etosüksimid ile birlikte verildiğinde etosüksimid klirensini azaltıp metabolizmasını inhibe ederek kararlı durum düzeyini yükselten ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karbamazepin",
+      "B": "Valproik asit",
+      "C": "Fenobarbital",
+      "D": "Levetirasetam",
+      "E": "Gabapentin"
+     },
+     "dogru": "B",
+     "aciklama": "Valproik asit etosüksimid klirensini azaltıp metabolizmasını inhibe ederek kararlı durum düzeyini yükseltir.",
+     "sik_aciklamalari": {
+      "A": "Karbamazepin güçlü bir enzim indükleyicidir ve etosüksimidin metabolizmasını hızlandırarak düzeyini düşürür. Bu nedenle düzeyi yükselten değil düşüren bir etkileşim oluşturur.",
+      "B": "Valproik asit enzim inhibisyonu yapan geniş spektrumlu bir antiepileptiktir. Etosüksimid klirensini azaltıp metabolizmasını inhibe ederek kararlı durum düzeyini yükselttiği için doğrudur.",
+      "C": "Fenobarbital hepatik enzimlerin güçlü indükleyicisi olan barbitürat yapılı bir ilaçtır. Eşlik eden ilaçların yıkımını hızlandırma eğiliminde olduğundan etosüksimid düzeyini yükseltmez.",
+      "D": "Levetirasetam sitokrom P450 ile metabolize olmayan, etkileşimsiz ve geniş spektrumlu bir antiepileptiktir. Üçte ikisi idrarla değişmeden atılır ve etosüksimid düzeyini değiştirmesi beklenmez.",
+      "E": "Gabapentin metabolize olmadan böbrekten değişmeden atılan, enzim indüklemeyen bir ilaçtır. İlaç-ilaç etkileşimi önemsiz olduğundan etosüksimidin kararlı durum düzeyini etkilemez."
+     },
+     "kanit": {
+      "sayfa": 80,
+      "alinti": "Valproik asit ile birlikte uygulanması, etosüksimid klirensinde bir azalma"
+     },
+     "s": 80,
+     "id": "k2-25-antiepileptik-ilaclar-q50"
+    },
+    {
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Gündüz körlüğü (hemeralopi) yapabilen ve etosüksimid kullanıma girene kadar absans nöbetlerinde tercih edilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fenobarbital",
+      "B": "Klonazepam",
+      "C": "Primidon",
+      "D": "Vigabatrin",
+      "E": "Trimetadion"
+     },
+     "dogru": "E",
+     "aciklama": "Trimetadion talamik T-tipi Ca2+ akımını inhibe eder; etosüksimid çıkana kadar absansta tercih edilmiştir ve hemeralopi yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Fenobarbital GABAA reseptörü akımını artıran ve halen kullanılan en eski antiepileptiktir. Febril nöbetlerdeki etkinliğiyle bilinir, hemeralopi ya da absansın eski tercih ilacı olarak anılmaz.",
+      "B": "Klonazepam absans nöbetlerde etkisi kanıtlanmış uzun etkili bir benzodiazepindir. Başlangıçta belirgin sedasyon yapar; gündüz körlüğü yan etkisi ise bu ilaç için tanımlanmamıştır.",
+      "C": "Primidon fenobarbitale ve feniletilmalonamide dönüşen barbitürat yapılı bir ilaçtır. Parsiyel ve tonik-klonik nöbetlerde etkilidir, absans nöbetlerinin eski tercih ilacı değildir.",
+      "D": "Vigabatrin uzun süreli kullanımda periferik görme alanı defekti yapan bir GABA transaminaz inhibitörüdür. Görme yan etkisi gündüz körlüğü değil retinal görme alanı kaybıdır.",
+      "E": "Trimetadion ve aktif metaboliti dimetadion talamik T-tipi kalsiyum akımını inhibe eder. Etosüksimid çıkana kadar absansta tercih edildiği ve hemeralopi yapabildiği için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 81,
+      "alinti": "etosüksimid ortaya çıkana kadar bu nöbet tipi için tercih edildi"
+     },
+     "s": 81,
+     "id": "k2-25-antiepileptik-ilaclar-q51"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Lennox-Gastaut, Dravet, West sendromu ve tüberoz sklerozda kullanılan ilaçları, status epileptikusta benzodiazepinleri ve asetazolamidi açıklar (s. 82–105).",
+   "sorular": [
+    {
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Kronik klobazam tedavisinde nöbetten korunmanın büyük olasılıkla norklobazamdan kaynaklanmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kararlı durumda norklobazam düzeyinin çok daha yüksek olması",
+      "B": "Norklobazamın klobazamdan daha güçlü olması",
+      "C": "Klobazamın böbrekten hızla atılması",
+      "D": "Norklobazamın SV2A'ya bağlanması",
+      "E": "Klobazamın etkisiz bir ön ilaç olması"
+     },
+     "dogru": "A",
+     "aciklama": "Norklobazam klobazamdan daha zayıftır, ancak kronik tedavide düzeyi 8–20 kat yüksek olduğundan nöbetten korunma büyük olasılıkla norklobazamdan kaynaklanır.",
+     "sik_aciklamalari": {
+      "A": "Norklobazam klobazamın ana metabolitidir ve nöbet önleyici etkisi daha zayıftır. Uzun süreli kullanımda düzeyi sekiz ile yirmi kat yüksek olduğu için korumanın kaynağı olması doğrudur.",
+      "B": "Norklobazam klobazamın ana metabolitidir, ancak nöbet önleyici etkisi klobazama göre daha zayıftır. Koruma güçlü olmasından değil, düzeyinin çok daha yüksek olmasından kaynaklanır.",
+      "C": "Klobazam karaciğerde CYP ve CYP olmayan yollarla metabolize olur ve yarı ömrü on sekiz saattir. Hızlı böbrek atılımı ilacın tanımlanan özelliği değildir.",
+      "D": "Vezikül proteini 2A'ya bağlanan ilaçlar levetirasetam ve brivarasetamdır. Norklobazam ise bir benzodiazepin metabolitidir ve bu proteine bağlanarak etki etmez.",
+      "E": "Klobazamın kendisi GABA-A reseptörü üzerinden GABA'nın etkisini artıran aktif bir ilaçtır. Etkisiz bir ön ilaç olarak tanımlanmaz, yarı ömrü on sekiz saattir."
+     },
+     "kanit": {
+      "sayfa": 83,
+      "alinti": "nöbetten korunma büyük olasılıkla norklobazamdan kaynaklanmaktadır"
+     },
+     "s": 83,
+     "id": "k2-25-antiepileptik-ilaclar-q52"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Dört yaş ve üzerinde Lennox-Gastaut sendromuyla ilişkili nöbetlerde ek tedavi olarak onaylanan, özellikle tonik-atonik nöbetlerde etkili antiepileptik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Etosüksimid",
+      "B": "Vigabatrin",
+      "C": "Rufinamid",
+      "D": "Everolimus",
+      "E": "Gabapentin"
+     },
+     "dogru": "C",
+     "aciklama": "Rufinamid 4 yaş ve üzerinde Lennox-Gastaut sendromuyla ilişkili nöbetlerde ek tedavide onaylıdır; özellikle tonik-atonik nöbetlerde etkilidir.",
+     "sik_aciklamalari": {
+      "A": "Etosüksimid T-tipi kalsiyum kanallarını inhibe eden absans ilacıdır. Klinik etki spektrumu çok dardır ve Lennox-Gastaut sendromu için onaylı değildir.",
+      "B": "Vigabatrin GABA transaminaz inhibitörüdür ve infantil spazmda, yani West sendromunda yararlıdır. Lennox-Gastaut sendromunun onaylı ek tedavi ilacı olarak tanımlanmaz.",
+      "C": "Rufinamid sodyum kanallarının inaktif kalma süresini uzatarak tekrarlayan deşarjları baskılar. Dört yaş üstünde Lennox-Gastaut sendromunda ek tedavide onaylı ve tonik-atonik nöbetlerde etkili olduğu için doğrudur.",
+      "D": "Everolimus mTORC1 inhibitörüdür ve tüberoz skleroz kompleksine bağlı dirençli fokal nöbetlerde kullanılır. Lennox-Gastaut sendromunda onaylı bir ek tedavi ilacı değildir.",
+      "E": "Gabapentin parsiyel ve tonik-klonik nöbetlerde yardımcı ilaçtır ve nöropatik ağrıda kullanılır. Lennox-Gastaut sendromundaki tonik-atonik nöbetler için onayı tanımlanmamıştır."
+     },
+     "kanit": {
+      "sayfa": 84,
+      "alinti": "özellikle tonik atonik nöbetlere karşı etkilidir"
+     },
+     "s": 84,
+     "id": "k2-25-antiepileptik-ilaclar-q53"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "SCN1A gen mutasyonuna bağlı Dravet sendromlu hastalarda nöbetleri kötüleştirdiği için kontrendike olan ilaç grubu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Benzodiazepinler",
+      "B": "Sodyum kanalı blokerleri",
+      "C": "Karbonik anhidraz inhibitörleri",
+      "D": "GABA geri alım inhibitörleri",
+      "E": "mTORC1 inhibitörleri"
+     },
+     "dogru": "B",
+     "aciklama": "SCN1A sodyum kanalını kodlar ve Dravet olgularının %79'undan sorumludur; mutasyonlu hastalarda sodyum kanal blokerleri nöbetleri kötüleştirdiğinden kontrendikedir.",
+     "sik_aciklamalari": {
+      "A": "Benzodiazepinler GABAA reseptörünün pozitif allosterik modülatörleridir. Dravet sendromunda kullanılan klobazam da bu gruptandır ve sodyum kanalını etkilemediği için kontrendike sayılmaz.",
+      "B": "Sodyum kanalı blokerleri voltaj kapılı sodyum kanallarını bloke eden antiepileptiklerdir. SCN1A bu kanalı kodladığından mutasyonlu hastada nöbetleri kötüleştirirler ve kontrendike oldukları için doğrudur.",
+      "C": "Karbonik anhidraz inhibitörleri beyinde hafif asidoz oluşturarak etki eden asetazolamid gibi ilaçlardır. Dravet sendromunda nöbeti kötüleştirdiği için kontrendike olan grup olarak tanımlanmamışlardır.",
+      "D": "GABA geri alım inhibitörleri tiagabin gibi sinaptik GABA'yı artıran ilaçlardır. Etkileri inhibitör iletiyi güçlendirmektir, SCN1A mutasyonunda kontrendike olan grup bunlar değildir.",
+      "E": "mTORC1 inhibitörleri everolimus gibi ilaçlardır ve tüberoz skleroz kompleksine bağlı dirençli fokal nöbetlerde kullanılır. Dravet sendromunda kontrendike grup olarak anılmazlar."
+     },
+     "kanit": {
+      "sayfa": 86,
+      "alinti": "sodyum kanalını bloke eden nöbet önleyici ilaçlar, nöbetleri kötüleştirdiğinden kontrendikedir"
+     },
+     "s": 86,
+     "id": "k2-25-antiepileptik-ilaclar-q54"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Kannabidiol ile ilgili aşağıdaki ifadeler veriliyor:\nI. CB1 veya CB2 reseptör agonisti değildir.\nII. Psikoaktif bir fitokannabinoiddir.\nIII. Yüksek yağlı öğünle alındığında biyoyararlanımı artar.\nIV. Eş zamanlı valproat kullanımı karaciğer testi bozukluğu riskini artırır.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "I, II ve IV",
+      "D": "I, III ve IV",
+      "E": "III ve IV"
+     },
+     "dogru": "D",
+     "aciklama": "Kannabidiol psikoaktif değildir ve CB1/CB2 agonisti değildir; oral biyoyararlanımı düşüktür, yüksek yağlı öğünle 4–5 kat artar; valproat karaciğer testi bozukluğu riskini artırır.",
+     "sik_aciklamalari": {
+      "A": "Kannabinoid reseptör agonisti olmaması kannabidiol için doğrudur. Ancak kannabidiol psikoaktif olmayan bir fitokannabinoiddir, bu yüzden ikinci öncül yanlıştır ve bileşim bozulur.",
+      "B": "Yağlı öğünle biyoyararlanımın artması kannabidiol için doğrudur. Psikoaktif etki ise tetrahidrokannabinole aittir; kannabidiol psikoaktif değildir, bu yüzden bu bileşim yanlıştır.",
+      "C": "Reseptör agonisti olmaması ve valproatla artan karaciğer riski kannabidiol için doğrudur. Psikoaktif olduğu ifadesi yanlış olduğundan bu bileşim geçerli değildir.",
+      "D": "Kannabidiol kannabinoid reseptör agonisti değildir, yağlı öğünle biyoyararlanımı dört ile beş kat artar ve valproatla karaciğer testi bozukluğu riski yükselir. Psikoaktif olmadığından ikinci öncül yanlıştır ve bu bileşim doğrudur.",
+      "E": "Yağlı öğün etkisi ve valproat etkileşimi doğrudur. Ancak kannabinoid reseptör agonisti olmaması da doğru bir ifade olduğundan bu bileşim eksiktir."
+     },
+     "kanit": {
+      "sayfa": 88,
+      "alinti": "kannabidiol bir CB1 veya CB2 reseptör agonisti değildir"
+     },
+     "s": 89,
+     "id": "k2-25-antiepileptik-ilaclar-q55"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Dravet sendromunda genellikle klobazam veya valproatla birlikte kullanılan, CYP3A4, CYP1A2 ve CYP2C19'un güçlü inhibitörü olan aromatik alkol yapılı ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fenfluramin",
+      "B": "Stiripentol",
+      "C": "Kannabidiol",
+      "D": "Ganaksolon",
+      "E": "Rufinamid"
+     },
+     "dogru": "B",
+     "aciklama": "Stiripentol Dravet sendromunda etkili aromatik bir alkoldür; CYP3A4, CYP1A2 ve CYP2C19'un güçlü inhibitörüdür ve klobazam ile norklobazam düzeyini artırır.",
+     "sik_aciklamalari": {
+      "A": "Fenfluramin Dravet sendromunda konvülsif nöbetlerde etkili amfetamin türevi bir ilaçtır. Serotonin salınımını artırır; aromatik alkol değildir ve güçlü enzim inhibitörü olarak tanımlanmaz.",
+      "B": "Stiripentol Dravet sendromunda etkili aromatik bir alkoldür. Güçlü enzim inhibisyonuyla klobazam ve norklobazam düzeyini belirgin artırdığı ve valproat metabolizmasını baskıladığı için doğrudur.",
+      "C": "Kannabidiol psikoaktif olmayan bir fitokannabinoiddir ve Dravet sendromunda onaylıdır. Kendisi başlıca CYP2C19 ile metabolize olan bir ilaçtır ve aromatik alkol yapısında değildir.",
+      "D": "Ganaksolon progesteron ve allopregnanolonla ilişkili sentetik bir steroiddir. GABA-A reseptörlerini benzodiazepinlerden farklı biçimde güçlendirir, güçlü enzim inhibitörü olarak tanımlanmaz.",
+      "E": "Rufinamid Lennox-Gastaut sendromunda onaylı bir sodyum kanalı ilacıdır. Metabolizmasında sitokrom P450 rol oynamaz ve Dravet sendromunda kullanılan enzim inhibitörü değildir."
+     },
+     "kanit": {
+      "sayfa": 91,
+      "alinti": "Stiripentol, Dravet sendromunun tedavisinde etkili olan aromatik bir alkoldür"
+     },
+     "s": 91,
+     "id": "k2-25-antiepileptik-ilaclar-q56"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Fenfluraminin metaboliti norfenfluraminin kalp kapakçığı ve pulmoner arter interstisyel hücrelerinde aktive ederek proliferatif fibromiksoid plaklara yol açtığı reseptör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "CB1 reseptörü",
+      "B": "AMPA reseptörü",
+      "C": "NMDA reseptörü",
+      "D": "GABA-A reseptörü",
+      "E": "5-HT2B reseptörü"
+     },
+     "dogru": "E",
+     "aciklama": "Fenfluramin serotonin taşıyıcısının substratıdır; metaboliti norfenfluramin 5-HT2B reseptörlerini aktive ederek proliferatif fibromiksoid plaklara yol açar.",
+     "sik_aciklamalari": {
+      "A": "CB1 merkezi sinir sistemindeki kannabinoid reseptörüdür ve tetrahidrokannabinolün hedefidir. Fenfluramin metabolitinin kalp kapağı ve pulmoner arter toksisitesiyle bir ilgisi yoktur.",
+      "B": "AMPA iyonotropik bir glutamat reseptörüdür ve perampanelin hedefidir. Kalp kapak hastalığının ve fibromiksoid plak oluşumunun mekanizmasında bu reseptör yer almaz.",
+      "C": "NMDA bir glutamat reseptör tipidir ve felbamat ile valproatın etkilediği eksitatör yollarda rol oynar. Norfenfluraminin kalp kapaklarındaki hedefi bu reseptör değildir.",
+      "D": "GABA-A beynin inhibitör iyon kanalı reseptörüdür; benzodiazepin, fenobarbital ve ganaksolonun hedefidir. Kalp kapağında ve pulmoner arterde fibromiksoid plak oluşumuyla ilişkilendirilmemiştir.",
+      "E": "5-HT2B bir serotonin reseptör alt tipidir. Norfenfluramin bu reseptörü kalp kapakçığı ve pulmoner arter hücrelerinde aktive edip fibromiksoid plak oluşturduğu için doğrudur."
+     },
+     "kanit": {
+      "sayfa": 94,
+      "alinti": "5-HT2B reseptörlerini aktive ederek"
+     },
+     "s": 94,
+     "id": "k2-25-antiepileptik-ilaclar-q57"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "GABA aminotransferazı geri dönüşümsüz inhibe eden, infantil spazmda yararlı olan ve uzun süreli kullanımda periferik görme alanı defektine yol açabilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tiagabin",
+      "B": "Valproat",
+      "C": "Vigabatrin",
+      "D": "Ganaksolon",
+      "E": "Gabapentin"
+     },
+     "dogru": "C",
+     "aciklama": "Vigabatrin GABA-T'nin geri dönüşümsüz inhibitörüdür; parsiyel epilepsi ve infantil spazmda yararlıdır; uzun süreli tedavide hastaların %30–50'sinde retinal kökenli görme alanı defekti gelişir.",
+     "sik_aciklamalari": {
+      "A": "Tiagabin nöron ve gliada GABA geri alım inhibitörüdür. Parsiyel epilepside ek tedavide kullanılır; yıkım enzimini inhibe etmez ve görme alanı defektiyle tanımlanmaz.",
+      "B": "Valproat yalnız çok yüksek konsantrasyonda GABA transaminazı inhibe eder ve bu etki geri dönüşümsüz olarak tanımlanmaz. Başlıca toksisitesi görme değil hepatotoksisitedir.",
+      "C": "Vigabatrin GABA yıkımından sorumlu enzimin geri dönüşümsüz inhibitörüdür ve ekstraselüler GABA'yı kalıcı artırır. İnfantil spazmda yararlı olduğu ve retinal görme alanı defekti yaptığı için doğrudur.",
+      "D": "Ganaksolon GABA-A reseptörlerini benzodiazepinlerden farklı bölgelerden güçlendiren sentetik bir steroiddir. Bir enzim inhibitörü değildir ve görme alanı defektiyle de anılmamıştır.",
+      "E": "Gabapentin GABA analoğudur ama GABA reseptörlerine ya da yıkım enzimine doğrudan etki etmez. Kalsiyum kanalının alfa-2 delta alt birimine bağlanır."
+     },
+     "kanit": {
+      "sayfa": 95,
+      "alinti": "geri dönüşümsüz inhibitörüdür"
+     },
+     "s": 95,
+     "id": "k2-25-antiepileptik-ilaclar-q58"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Tüberoz skleroz kompleksiyle ilişkili tedaviye dirençli fokal başlangıçlı nöbetlerde kullanılan everolimusun etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "mTORC1'in allosterik inhibisyonu",
+      "B": "GABA transaminaz inhibisyonu",
+      "C": "AMPA reseptör blokajı",
+      "D": "T-tipi kalsiyum kanal blokajı",
+      "E": "Serotonin salınımının artırılması"
+     },
+     "dogru": "A",
+     "aciklama": "Tüberoz skleroz TSC1 veya TSC2 işlev kaybıyla sürekli mTOR aktivasyonuna yol açar; rapamisin ve everolimus mTORC1'i allosterik olarak inhibe eder.",
+     "sik_aciklamalari": {
+      "A": "Everolimus bir rapamisin türevidir ve mTORC1'i allosterik olarak inhibe eder. TSC1 ya da TSC2 mutasyonunun yol açtığı sürekli mTOR aktivasyonunu hedeflediği için doğrudur.",
+      "B": "GABA transaminaz inhibisyonu vigabatrinin mekanizmasıdır ve beyinde GABA'yı kalıcı olarak artırır. Tüberoz sklerozdaki aşırı mTOR sinyalini hedefleyen bir etki değildir.",
+      "C": "AMPA reseptör blokajı perampanelin mekanizmasıdır ve eksitatör iletiyi azaltır. Everolimusun etkisi ise hücre büyümesini düzenleyen mTOR sinyal yolu üzerinden gerçekleşir.",
+      "D": "T-tipi kalsiyum kanal blokajı etosüksimid ve trimetadionun absans nöbetlerini önleyen mekanizmasıdır. Tüberoz sklerozdaki mTOR kaynaklı yapısal bozuklukla ilgili değildir.",
+      "E": "Serotonin salınımını artırma fenfluraminin mekanizmasıdır ve bu ilaç Dravet sendromunda kullanılır. Everolimusun hedefi ise serotonin sistemi değil, hücre büyümesini düzenleyen mTOR sinyal kompleksidir."
+     },
+     "kanit": {
+      "sayfa": 98,
+      "alinti": "mTORC1'i allosterik olarak inhibe eder"
+     },
+     "s": 98,
+     "id": "k2-25-antiepileptik-ilaclar-q59"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Status epileptikus tedavisinde diazepamdan daha etkin ve daha uzun süreli etkili olduğu belirtilen benzodiazepin aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Klobazam",
+      "B": "Klorazepat",
+      "C": "Nitrazepam",
+      "D": "Lorazepam",
+      "E": "Klonazepam"
+     },
+     "dogru": "D",
+     "aciklama": "Lorazepam status epileptikusta diazepamdan daha etkin ve daha uzun etkili görünür; intramüsküler midazolamın hastane dışı statusta tercih edildiğine dair kanıt vardır.",
+     "sik_aciklamalari": {
+      "A": "Klobazam fokal nöbetler ve Lennox-Gastaut sendromunda yaygın kullanılan bir benzodiazepindir. Kronik tedavide kullanılır, status tedavisinde diazepamdan üstün olarak tanımlanmaz.",
+      "B": "Klorazepat dipotasyum erişkinlerde kompleks parsiyel nöbetlerde ek ilaç olarak onaylı bir benzodiazepindir. Kronik tedavide kullanılır, statusun tercih ilacı olarak anılmaz.",
+      "C": "Nitrazepam birçok ülkede özellikle infantil spazmlar ve miyoklonik nöbetlerde kullanılan bir benzodiazepindir. Status epileptikusta diazepamdan daha etkin ve uzun etkili olarak tanımlanan ilaç değildir.",
+      "D": "Lorazepam status epileptikus tedavisinde kullanılan bir benzodiazepindir. Diazepamdan daha etkin ve daha uzun süreli etkiye sahip göründüğü için doğru yanıt budur.",
+      "E": "Klonazepam absans nöbetlerde etkisi kanıtlanmış, uzun etkili ve çok güçlü bir antiepileptiktir. Başlangıçta belirgin sedasyon yapar; status tedavisinde diazepamla karşılaştırılan ilaç değildir."
+     },
+     "kanit": {
+      "sayfa": 102,
+      "alinti": "Lorazepam status epileptikus tedavisinde diazepamdan daha etkin"
+     },
+     "s": 102,
+     "id": "k2-25-antiepileptik-ilaclar-q60"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Hastane dışı status epileptikus tedavisinde tercih edildiğine dair kanıt bulunan uygulama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İntramüsküler fenitoin",
+      "B": "Oral klonazepam",
+      "C": "Oral asetazolamid",
+      "D": "İntramüsküler midazolam",
+      "E": "Oral etosüksimid"
+     },
+     "dogru": "D",
+     "aciklama": "Kaslardan iyi emilen ve hızlı etki gösteren intramüsküler midazolamın hastane dışı status epileptikusta tercih edildiğine dair kanıt vardır.",
+     "sik_aciklamalari": {
+      "A": "Fenitoin kas içine verildiğinde emilimi değişkendir ve ilacın bir kısmı kasta çökebilir. Bu nedenle kas içi fenitoin kullanımı önerilmez ve statusta tercih edilmez.",
+      "B": "Klonazepam absans nöbetlerinde etkili, uzun etkili ve çok güçlü bir benzodiazepindir. Ağızdan kronik kullanılır, devam eden statusu hastane dışında durdurmak için tanımlanmamıştır.",
+      "C": "Asetazolamid karbonik anhidraz inhibitörü bir diüretiktir ve hızla tolerans gelişir. Menstrüel nöbetlerde özel rolü vardır, status tedavisinde ise yeri yoktur.",
+      "D": "Midazolam kaslardan iyi emilen ve hızlı etki gösteren bir benzodiazepindir. Kas içi uygulamanın hastane dışı statusta tercih edildiğine dair kanıt olduğu için doğrudur.",
+      "E": "Etosüksimid absans nöbetlerinin birinci basamak ilacıdır ve yarı ömrü uzundur. Kronik koruyucu tedavide kullanılır, devam eden status epileptikusu durdurmak için verilmez."
+     },
+     "kanit": {
+      "sayfa": 103,
+      "alinti": "hastane dışı status epileptikus tedavisinde tercih edildiğine dair kanıtlar mevcuttur"
+     },
+     "s": 103,
+     "id": "k2-25-antiepileptik-ilaclar-q61"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Benzodiazepinlerin epilepsinin kronik tedavisindeki yararını kısıtlayan iki temel özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hepatotoksisite ve trombositopeni",
+      "B": "Belirgin sedasyon ve tolerans",
+      "C": "Diş eti hiperplazisi ve hirsutizm",
+      "D": "Hiponatremi ve diplopi",
+      "E": "Görme alanı defekti ve kilo alımı"
+     },
+     "dogru": "B",
+     "aciklama": "Benzodiazepinlerin yararını iki özellik kısıtlar: belirgin sedasyon ve nöbetlerin birkaç ayda nüksetmesine yol açan tolerans.",
+     "sik_aciklamalari": {
+      "A": "Hepatotoksisite ve trombositopeni valproatın başlıca idiyosenkratik toksisiteleridir ve küçük çocuklarda önem taşır. Benzodiazepinlerin kronik kullanımını kısıtlayan iki özellik bunlar değildir.",
+      "B": "Benzodiazepinler hem statusta hem kronik kullanımda belirgin sedasyon yapar. Nöbetler başta yanıt verse de birkaç ayda gelişen toleransla nüksedebildiği için bu ikili doğrudur.",
+      "C": "Diş eti hiperplazisi ve hirsutizm fenitoinin pek çok hastada görülen kronik yan etkileridir. Benzodiazepinlerle ilişkilendirilmez ve onların yararını kısıtlayan özellikler değildir.",
+      "D": "Hiponatremi ve diplopi karbamazepin ile okskarbazepinde öne çıkan yan etkilerdir. Benzodiazepinlerin yararını kısıtlayan temel sorunlar ise belirgin sedasyon ve toleranstır.",
+      "E": "Görme alanı defekti ve kilo alımı vigabatrinin yan etkileridir. Benzodiazepinlerin kronik kullanımını sınırlayan özellikler bunlar değil, belirgin sedasyon ve toleranstır."
+     },
+     "kanit": {
+      "sayfa": 104,
+      "alinti": "Benzodiazepinlerin iki belirgin özelliği yararlarını kısıtlar"
+     },
+     "s": 104,
+     "id": "k2-25-antiepileptik-ilaclar-q62"
+    },
+    {
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Menstrüasyon sırasında nöbetleri artan epileptik kadınlarda özel bir role sahip olan karbonik anhidraz inhibitörü diüretik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Zonisamid",
+      "B": "Topiramat",
+      "C": "Vigabatrin",
+      "D": "Ganaksolon",
+      "E": "Asetazolamid"
+     },
+     "dogru": "E",
+     "aciklama": "Asetazolamid karbonik anhidraz inhibitörü bir diüretiktir; hızlı tolerans kullanımını kısıtlar, ancak menstrüasyonda nöbetleri artan kadınlarda özel role sahiptir.",
+     "sik_aciklamalari": {
+      "A": "Zonisamid karbonik anhidrazı da inhibe eden sülfonamid yapılı bir antiepileptiktir. Diüretik olarak değil, geniş spektrumlu bir nöbet ilacı olarak kullanılır.",
+      "B": "Topiramat çok mekanizmalı bir monosakkarit analoğudur ve kilo kaybıyla ilişkilidir. Menstrüel nöbetlerde özel rolü olan karbonik anhidraz inhibitörü bir diüretik olarak tanımlanmamıştır.",
+      "C": "Vigabatrin GABA transaminazı geri dönüşümsüz inhibe eden bir ilaçtır. İnfantil spazmda yararlıdır; diüretik değildir ve menstrüel nöbetlerde özel rolü tanımlanmaz.",
+      "D": "Ganaksolon progesteron metabolitiyle ilişkili sentetik bir steroiddir ve GABA-A reseptörlerini güçlendirir. Karbonik anhidraz inhibitörü ya da diüretik olarak tanımlanmaz.",
+      "E": "Asetazolamid karbonik anhidraz inhibisyonu yapan bir diüretiktir ve beyinde hafif asidoz oluşturarak etki edebilir. Sürekli verilmediğinde tolerans gelişmeyebildiği için menstrüel nöbetlerde özel rolü vardır ve doğrudur."
+     },
+     "kanit": {
+      "sayfa": 105,
+      "alinti": "menstrüasyon sırasında nöbetlerinde artış görülen epileptik kadınlarda özel bir role sahiptir"
+     },
+     "s": 105,
+     "id": "k2-25-antiepileptik-ilaclar-q63"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 63
+}

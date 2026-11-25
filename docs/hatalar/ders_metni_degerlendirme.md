@@ -121,3 +121,10 @@
 - **Kök neden:** Kazanım metni bilgi paketinin İLK maddesinden türetiliyor ve başlıkla ≥2 ortak kök isteniyor; `degerlendirme_dogrula.py` bu kuralı denetlemiyor. E1 yazarı başlığı konu etiketi gibi ("Huntington hastalığı", "Dersin hedefleri"), ilk maddeyi ayrıntı cümlesi olarak yazıyor. Bir derste (k2-52 bp21) ilk madde slaytın şüpheli "%50" iddiasıydı → kazanım metni olarak öne çıkacaktı.
 - **Çözüm:** Başlıkla en çok örtüşen madde başa alındı; yoksa başlık ilk maddenin içeriğini tarif edecek biçimde yeniden yazıldı (içerik değişmedi). Şüpheli madde başa alınmadı.
 - **Kural:** E1 yazımında her bilgi paketinin ilk maddesi başlığın özetidir (≥2 ortak kök) ve slayt_supheli satırı olamaz. Kalıcı çözüm (2026-11-24): `degerlendirme_dogrula.py` aynı örtüşmeyi denetler — ders analizi henüz yoksa (E1'deki yeni ders) HATA, analizi olan eski derste UYARI.
+
+### H682 — İçerik geliştirici Drive'ına eklenen "Tekrar Notları" ve yeniden adlandırılan klasörler eşlenmedi; hoca vurguları 30+ derse ulaşmıyordu (2026-11-25)
+
+- **Belirti:** `sentez.py calistir --kurul 2` kapısı 50 HATA "eşlemesiz" verdi; aile hekimliği WONCA notu (k2-36), ASE-SVH (k2-65), NGB (k2-42), YAB (k2-54), İntihar (k2-45) ve 🌟 Tekrar Notları klasörünün tamamı hiçbir derse yayınlanmıyordu (45 ders yerine 53 olmalıydı).
+- **Kök neden:** `esle()` PDF adını ders konusuyla 5 harf kök örtüşmesiyle eşler; kısaltma adlar (NGB, YAB, ASE-SVH, WONCA), " - Tekrar Notu" eki ve ✔️/🌟 klasör adları puanı eşik altına düşürür. Drive'a toplu dosya eklenince belirsiz eşlemeler birikti; hat yalnız `ders/<key>.json`'u okuduğu için sessizce eksik kaldı (kapı HATA verse de çıktının sonu `tail` ile kesilince görünmedi).
+- **Çözüm:** 50 dosya içerik/başlıkla doğrulanıp `scripts/uretim/ogrenci_sentez/eslesme.json`'a elle yazıldı (Göz ve dersler arası "Çağrışım Atlası" bilinçli `[]`). Kapı 0 HATA, 53 derse yayın.
+- **Kural:** Sentez çıktısı `tail` ile kesilmez; `kapi: N HATA` satırı her koşuda okunur, 0 değilse yeni ders işine geçilmez. Drive'a yeni klasör/ad biçimi gelince önce `eslesme.json` güncellenir; kısaltma adlı dosya için ders kaydındaki konu ile içerik başlığı karşılaştırılır.

@@ -517,5 +517,8 @@
 - **H679** · kapsül hap → hatalar/on_yuz_tasarim_tema.md
 - **H680** · çizelge → hatalar/on_yuz_tasarim_tema.md
 - **H681** · v18 katmanı → hatalar/on_yuz_tasarim_tema.md
+- **H682** · Sentez eşlemesi: Tekrar Notları/kısaltma adlı PDF'ler eşlenmedi, hoca vurgusu derslere ulaşmadı → hatalar/ders_metni_degerlendirme.md
 - **H667** · k2-42/43/45 konuşma metninde cümle vurgu etiketi yoktu, ekran vurgusu boş kaldı → hatalar/ders_metni_anlatim.md
+- **H683** · Anlatımda sayfa cümleleri tek cümleyle ezildi; kapı yinelemeyi saymıyordu → `anlatim_kapi.py` [yineleme] → hatalar/ders_metni_anlatim.md
 - **H684** · Tek harf + sayı kodları (M1, H2, B12) ekranda okunuşla ("M bir") kalıyordu; ekranYazim R_TEK_HARF → hatalar/ses.md
+- **H688** · betik_tamamla canlı API'ye anahtarsız gidiyordu; yeni dersin kelime zamanı Oracle'a gönderilmemişti → hatalar/dagitim_sunucu.md

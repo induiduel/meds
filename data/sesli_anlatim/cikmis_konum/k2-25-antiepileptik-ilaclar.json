@@ -1,0 +1,29 @@
+{
+ "surum": 2,
+ "dogrulama": "ham belge + slayt kanıtı, elle (E1, 2026-11-25)",
+ "q": [
+  {
+   "id": "d3k2-2019-2020-q20",
+   "kok": "Aşağıdaki ilaçlardan hangisi parsiyel ve jeneralize nöbetlerde kullanılagelen konvansiyonel bir ajandır?",
+   "cevap": "Fenitoin",
+   "yil": "2019-2020",
+   "s": 40,
+   "seviye": "dogrudan",
+   "kanit": "Fenitoin parsiyel nöbetlere ve tonik-klonik nöbetlere karşı etkilidir.",
+   "kaynak": "D3K2 2019-2020.pdf s.10 (soru 20); aynı soru KURUL 2 ÇIKMIŞ 3.pdf s.9 ve '3. Sınıf 2. Kurul' derlemesinde (soru 20)",
+   "anahtar_notu": "Basılı cevap anahtarı yok; banka cevabı C (Fenitoin), tıbbi tutarlılık slayta karşı kontrol edildi.",
+   "dogrulandi": true,
+   "neden": "s38 fenitoini 1938'de uygulamaya sunulan sedatif olmayan en eski antiepileptik olarak tanımlar, s40 parsiyel ve tonik-klonik nöbetlere etkili olduğunu söyler. Çeldiriciler derste yeni ilaç olarak işlenir: pregabalin s45-47 (ek tedavi), topiramat s72-75, lakosamid s35-37 (17 yaş üstü ek tedavi), eslikarbazepin s34 (ek tedavi ön ilacı).",
+   "ek_kanit": [
+    {
+     "s": 38,
+     "kanit": "Fenitoin, (1938 yılında uygulamaya sunulan) sedatif olmayan en eski antiepileptik ilaçtır."
+    }
+   ],
+   "p": 39,
+   "c": 2,
+   "skor": 0.958
+  }
+ ],
+ "metinHash": "9f41623ecab2580ef594f8305613f9f39addcf1c"
+}

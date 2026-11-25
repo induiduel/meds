@@ -1,0 +1,1816 @@
+{
+ "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+ "kurul": 2,
+ "ders": "Tıbbi Genetik",
+ "konu": "Psikiyatrik Hastalıklar ve Genetik Analizi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "sira": 59,
+ "tarih": "2026-11-25",
+ "soru_sayisi": 59,
+ "kazanimlar": [
+  {
+   "no": 2,
+   "metin": "Genetik araştırmalarda kullanılan metotlar konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q01",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Linkage ve asosiyasyon analizleri hangi genetik çalışma grubunda yer alır?",
+     "secenekler": {
+      "A": "Sitogenetik çalışmalar",
+      "B": "Popülasyon çalışmaları",
+      "C": "Evlat edinme çalışmaları",
+      "D": "Moleküler genetik çalışmalar",
+      "E": "Endofenotip çalışmaları"
+     },
+     "dogru": "D",
+     "aciklama": "Moleküler genetik çalışmalar linkage, asosiyasyon ve GWAS analizlerini içerir; sitogenetik ve popülasyon çalışmaları ayrı gruplardır.",
+     "sik_aciklamalari": {
+      "A": "Sitogenetik çalışmalar, in situ hibridizasyon gibi tekniklerle genlerin kromozom bandını ve kromozomlardaki yapısal anomalileri gösterir. Down, Turner ve Klinefelter sendromu tipik örnekleridir.",
+      "B": "Popülasyon çalışmaları aile, ikiz ve evlat edinme çalışmalarından oluşur. Bu çalışmalar kalıtsal katkıyı tahmin eder; aday gen düzeyindeki linkage ve asosiyasyon analizleri ise moleküler gruptadır.",
+      "C": "Evlat edinme çalışmaları biyolojik ve evlat edinen aileleri karşılaştırarak genetik ve çevresel faktörleri ayırır. Popülasyon çalışmalarının bir türüdür ve moleküler analiz içermez.",
+      "D": "Moleküler genetik çalışmalar, aday genleri belirlemeye yönelik linkage, asosiyasyon ve GWAS analizlerini kapsayan gruptur. Linkage ve asosiyasyon bu grubun yöntemleri olduğu için doğru cevaptır.",
+      "E": "Endofenotip çalışmaları, poligenik hastalıkta genetik riski temsil eden objektif ve ölçülebilir biyolojik belirteçleri inceler. Linkage ve asosiyasyonu kapsayan çalışma grubunun adı bu değildir."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q02",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Psikiyatride genetik araştırmalarda sıklıkla kullanılan metotlarla ilgili:\nI. Genetik epidemiyolojik çalışmalar\nII. Sitogenetik çalışmalar\nIII. Moleküler genetik çalışmalar\nifadelerinden hangileri bu metotlar arasında sayılır?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Genetik araştırmalarda sık kullanılan metotlar genetik epidemiyolojik, sitogenetik ve moleküler genetik çalışmalardır; üç öncül de doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yalnız birinci öncül, yani popülasyon genetiği ve aile çalışmalarını kapsayan genetik epidemiyolojik çalışmalar seçilmiştir. Sitogenetik ve moleküler genetik çalışmalar da sık kullanılan metotlar olduğundan bu seçim eksik kalır.",
+      "B": "Genetik epidemiyolojik ve sitogenetik çalışmalar sık kullanılan metotlardır. Linkage, asosiyasyon ve GWAS analizlerini içeren moleküler genetik çalışmalar dışarıda bırakıldığı için bu seçim eksiktir.",
+      "C": "Genetik epidemiyolojik ve moleküler genetik çalışmalar doğru seçilmiştir. In situ hibridizasyonla gen yerleşimini ve yapısal kromozom anomalilerini gösteren sitogenetik çalışmalar unutulduğu için seçim eksiktir.",
+      "D": "Sitogenetik ve moleküler genetik çalışmalar sık kullanılan metotlardır. Aile, ikiz ve evlat edinme çalışmalarını içeren genetik epidemiyolojik çalışmalar dışarıda kaldığı için bu seçim eksiktir.",
+      "E": "Genetik epidemiyolojik, sitogenetik ve moleküler genetik çalışmalar psikiyatride sık kullanılan üç metot grubudur. Moleküler grup linkage, asosiyasyon ve GWAS analizlerini içerir; üçünü birlikte seçen bu seçenek doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 3
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Poligenik ve multifaktöriyel yapı konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q03",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik hastalıkların genetik yapısı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Poligenik kalıtım gösterirler",
+      "B": "Genellikle Mendel kalıtımına uymazlar",
+      "C": "Kalıtsallık çevreden etkilenir",
+      "D": "Tek bir genle açıklanırlar",
+      "E": "Genetik katkı bozukluğa göre değişir"
+     },
+     "dogru": "D",
+     "aciklama": "Psikiyatrik hastalıklar poligenik ve multifaktöriyeldir; tek genle açıklanmaz, Mendel kalıtımına genellikle uymaz.",
+     "sik_aciklamalari": {
+      "A": "Poligenik kalıtım, birden çok genin küçük katkılarla hastalık riskini oluşturmasıdır. Psikiyatrik hastalıklar ve duygudurum bozuklukları bu kalıtım biçimini gösterdiği için ifade doğrudur.",
+      "B": "Mendel kalıtımı tek gen üzerinden öngörülebilir oranlarla geçişi tanımlar; demans ve Huntington bunun örneğidir. Psikiyatrik hastalıklar genellikle bu kurallara uymadığından ifade doğru bir bilgidir.",
+      "C": "Kalıtsallık, bir özelliğin genetik etkenlerle açıklanan payıdır ve çevresel faktörlerden etkilenir. Genetik ve çevresel etkenler etkileşim içinde olduğu için ifade doğrudur.",
+      "D": "Psikiyatrik hastalıklar poligeniktir; birçok genin küçük katkıları çevresel etkenlerle birleşerek hastalık riskini oluşturur. Tek bir genle açıklandıklarını söyleyen ifade bu yüzden yanlıştır ve bu nedenle doğru cevaptır.",
+      "E": "Genetik varyantların katkısı bozukluğa göre değişir; örneğin kalıtım riski şizofrenide %80, anksiyete bozukluğunda %30'dur. Bu nedenle ifade doğrudur ve aranan yanlış ifade bu değildir."
+     },
+     "kanit": {
+      "sayfa": 4
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q04",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Majör depresif bozukluğu olan hastaların birinci derece akrabalarında göreceli risk kaçtır?",
+     "secenekler": {
+      "A": "7",
+      "B": "1,5",
+      "C": "9",
+      "D": "2",
+      "E": "18"
+     },
+     "dogru": "B",
+     "aciklama": "Göreceli risk majör depresif bozuklukta 1,5, şizofreni ve bipolarda 7, otizm spektrumunda 9'dur.",
+     "sik_aciklamalari": {
+      "A": "Yedi, şizofreni ve bipolar bozuklukta birinci derece akrabalar için bildirilen göreceli risktir. Majör depresif bozukluğun değeri bundan belirgin biçimde düşüktür.",
+      "B": "Majör depresif bozuklukta birinci derece akrabalardaki göreceli risk genel popülasyona göre 1,5 olarak bildirilir. Bu değer doğrudur ve diğer bozukluklara göre en düşük göreceli risktir.",
+      "C": "Dokuz, otizm spektrum bozuklukları için bildirilen göreceli risktir ve sayılanlar içinde en yüksek değerdir. Majör depresif bozukluk için geçerli değildir.",
+      "D": "İki değeri, bu bozukluklar için bildirilen birinci derece akraba göreceli riskleri listesinde bulunmayan bir sayıdır. Majör depresif bozuklukta göreceli risk bundan biraz düşük olan 1,5'tir.",
+      "E": "On sekiz, bipolar bozuklukta birinci derece akrabalardaki risk artışının üst sınırı olarak kat cinsinden verilir. Majör depresif bozukluğun göreceli riskiyle karıştırılmamalıdır."
+     },
+     "kanit": {
+      "sayfa": 4
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Popülasyon çalışmaları ve aile çalışması konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q05",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aile çalışmaları, ikiz çalışmaları ve evlat edinilenler üzerine yapılan çalışmaların birlikte oluşturduğu çalışma grubu hangisidir?",
+     "secenekler": {
+      "A": "Sitogenetik çalışmalar",
+      "B": "Moleküler genetik çalışmalar",
+      "C": "Asosiyasyon çalışmaları",
+      "D": "Popülasyon çalışmaları",
+      "E": "Endofenotip çalışmaları"
+     },
+     "dogru": "D",
+     "aciklama": "Popülasyon çalışmaları aile çalışmaları, ikiz çalışmaları ve evlat edinilenler üzerine yapılan çalışmalardır.",
+     "sik_aciklamalari": {
+      "A": "Sitogenetik çalışmalar, in situ hibridizasyon gibi tekniklerle genlerin kromozom bandını ve yapısal anomalileri gösterir. Down, Turner ve Klinefelter sendromu tipik örnekleridir; aile ve ikiz çalışmalarını kapsamaz.",
+      "B": "Moleküler genetik çalışmalar, aday genleri bulmaya yönelik linkage, asosiyasyon ve GWAS analizlerini içerir. Aile, ikiz ve evlat edinme çalışmalarını bir araya getiren grup bu değildir.",
+      "C": "Asosiyasyon çalışmaları, aday genin alel frekanslarını hasta ve kontrol popülasyonlarında karşılaştıran moleküler yöntemlerdir. İkiz ve evlat edinme çalışmalarını kapsayan bir üst grup olarak tanımlanmaz.",
+      "D": "Popülasyon çalışmaları, aile, ikiz ve evlat edinilenler üzerine yapılan çalışmalardan oluşan gruptur. Genetik ve çevresel etkilerin payını toplum düzeyinde gösterdiği için doğru cevaptır.",
+      "E": "Endofenotip çalışmaları, genetik riski temsil eden objektif ve ölçülebilir biyolojik belirteçleri inceler. Aile, ikiz ve evlat edinme çalışmalarının oluşturduğu grubun adı bu değildir."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q06",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Popülasyon çalışmalarıyla ilgili:\nI. Aile çalışmaları\nII. İkiz çalışmaları\nIII. Evlat edinilenler üzerine yapılan çalışmalar\nIV. Sitogenetik çalışmalar\nifadelerinden hangileri popülasyon çalışmalarındandır?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve III",
+      "C": "II ve III",
+      "D": "I, II ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Popülasyon çalışmaları aile, ikiz ve evlat edinme çalışmalarıdır; sitogenetik çalışma ayrı bir metot grubudur.",
+     "sik_aciklamalari": {
+      "A": "Aile ve ikiz çalışmaları popülasyon çalışmalarıdır. Biyolojik ve evlat edinen aileleri karşılaştıran evlat edinme çalışmaları da bu gruba girdiği için seçim eksik kalır.",
+      "B": "Aile, ikiz ve evlat edinilenler üzerine yapılan çalışmalar popülasyon çalışmalarının üç türüdür. Sitogenetik çalışma ise kromozom düzeyinde ayrı bir metot olduğundan bu seçenek doğru cevaptır.",
+      "C": "İkiz ve evlat edinme çalışmaları popülasyon çalışmalarıdır. Proband akrabalarındaki riski genel popülasyonla karşılaştıran aile çalışmaları dışarıda bırakıldığı için seçim eksiktir.",
+      "D": "Aile ve ikiz çalışmaları doğru seçilmiştir. Sitogenetik çalışma kromozom bandını ve yapısal anomalileri gösteren ayrı bir metottur; evlat edinme çalışmaları da unutulmuştur.",
+      "E": "İlk üç öncül popülasyon çalışmalarıdır. Dördüncü öncüldeki sitogenetik çalışma, in situ hibridizasyonla gen yerleşimini bulan ayrı bir metot grubu olduğundan bu seçim yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 5
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Popülasyon çalışmaları ve aile çalışması konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q07",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hasta bireyin proband olarak adlandırıldığı ve morbid risk oranlarının kullanıldığı popülasyon çalışması hangisidir?",
+     "secenekler": {
+      "A": "İkiz çalışması",
+      "B": "Aile çalışması",
+      "C": "Evlat edinme çalışması",
+      "D": "Asosiyasyon çalışması",
+      "E": "Sitogenetik çalışma"
+     },
+     "dogru": "B",
+     "aciklama": "Aile çalışmasında hasta birey proband ya da indeks vakadır, akrabalarındaki risk genel popülasyonla karşılaştırılır ve morbid risk oranları kullanılır.",
+     "sik_aciklamalari": {
+      "A": "İkiz çalışması, MZ ve DZ ikiz çiftleri arasındaki fenotipik uyumu karşılaştırarak kalıtsallığı tahmin eder. Temel karşılaştırması ikiz türleri arasındadır, proband akrabaları üzerinden kurulmaz.",
+      "B": "Aile çalışması, hasta bireylerin akrabalarındaki riski genel popülasyon riskiyle karşılaştırır ve morbid risk oranlarını kullanır. Hasta birey indeks vaka ya da proband olarak adlandırıldığı için doğru cevaptır.",
+      "C": "Evlat edinme çalışması, biyolojik ve evlat edinen aileleri karşılaştırarak genetik ve çevresel faktörleri ayırır. Akrabalardaki morbid riski proband üzerinden hesaplayan yöntem aile çalışmasıdır.",
+      "D": "Asosiyasyon çalışması, aday genin alel frekanslarını hasta ve kontrol popülasyonlarında karşılaştıran moleküler bir yöntemdir. Alzheimer ile ilişkili ApoE geni bu yolla bulunmuştur; popülasyon çalışmaları grubunda sayılmaz.",
+      "E": "Sitogenetik çalışma, genin kromozom bandını ve yapısal kromozom anomalilerini gösteren laboratuvar temelli bir yaklaşımdır. Proband ve morbid risk kavramları bu çalışmaya ait değildir."
+     },
+     "kanit": {
+      "sayfa": 6
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "İkiz çalışmalarının mantığı konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q08",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aynı ortamda ve ayrı ortamlarda yetişen MZ ikizlerin karşılaştırılmasıyla öncelikle ne araştırılır?",
+     "secenekler": {
+      "A": "Genin kromozom bandı",
+      "B": "Aday genin alel frekansı",
+      "C": "Kırık noktalarının haritası",
+      "D": "LOD skorunun değeri",
+      "E": "Genetik ve çevresel etkilerin payı"
+     },
+     "dogru": "E",
+     "aciklama": "Aynı ve ayrı ortamda yetişen MZ ikizlerin karşılaştırılması genetik ve çevresel faktörlerin etkisini ayırmaya yarar.",
+     "sik_aciklamalari": {
+      "A": "Genin hangi kromozom bandında yerleştiği, in situ hibridizasyon gibi teknikler kullanan sitogenetik çalışmalarla bulunur. İkizlerin farklı ortamlarda karşılaştırılması bu bilgiyi vermez.",
+      "B": "Aday genin alel frekanslarının hasta ve kontrol gruplarında karşılaştırılması asosiyasyon çalışmasının konusudur. İkiz karşılaştırması belirli bir genin alel sıklığını doğrudan ölçmez.",
+      "C": "Kromozom kırık noktaları üzerinden gen haritalaması, yapısal anomalileri inceleyen sitogenetik çalışmalarda yapılır. İkizlerin farklı ortamlarda karşılaştırılmasıyla elde edilen bir sonuç olarak tanımlanmaz.",
+      "D": "LOD skoru, bir genin kromozom bölgesinde bulunma olasılığını değerlendiren ve 3 ve üzerinde bağlantıyı destekleyen bir ölçüttür. Bağlantı analizine ait olup ikiz çalışmalarının ürettiği bir sonuç değildir.",
+      "E": "Aynı genetik yapıdaki MZ ikizlerin farklı ortamlarda karşılaştırılması, genetik ve çevresel faktörlerin etkisini ayırmaya yarar. Karşılaştırmanın amacı bu olduğu için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 8
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Evlat edinme çalışmaları konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q09",
+     "kazanim": 9,
+     "zorluk": "orta",
+     "soru": "Biyolojik ailesinde hastalık olan ve olmayan evlatlık çocukların karşılaştırıldığı çalışmada hastalık genetikse hangi bulgu beklenir?",
+     "secenekler": {
+      "A": "Evlat edinen ailesi hasta olanlarda risk yüksek",
+      "B": "İki grupta risk eşit",
+      "C": "Risk yalnız çevreyle açıklanır",
+      "D": "Biyolojik ailesi hasta olanlarda risk yüksek",
+      "E": "MZ ve DZ konkordansı eşit"
+     },
+     "dogru": "D",
+     "aciklama": "Hastalık genetikse risk, biyolojik ailesinde hastalık olan evlatlık çocuk grubunda daha fazla olur.",
+     "sik_aciklamalari": {
+      "A": "Evlat edinen aile çocuğa genlerini değil, yalnızca yetiştirme çevresini sağlar. Riskin bu grupta yüksek bulunması hastalığın çevresel kökenli olduğunu düşündürür.",
+      "B": "İki grupta riskin eşit çıkması biyolojik ailenin hastalığının riske katkı yapmadığını gösterir. Bu bulgu genetik bir hastalıkta beklenen sonuçla uyuşmaz.",
+      "C": "Riskin yalnızca çevreyle açıklanması genetik katkının olmadığı anlamına gelir. Evlat edinme çalışmaları tam da bu iki etkeni ayırmak için kullanılır.",
+      "D": "Hastalık genetikse, biyolojik ailesinde hastalık bulunan evlatlık çocuklarda risk daha fazla olur. Yetiştiren aile değişse de genetik yük taşındığı için doğru cevaptır.",
+      "E": "MZ ve DZ konkordansının karşılaştırılması ikiz çalışmalarının konusudur. Evlat edinme çalışmasının karşılaştırma grupları ikizler değil biyolojik ve evlat edinen ailelerdir."
+     },
+     "kanit": {
+      "sayfa": 10
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Sitogenetik çalışmalar konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q10",
+     "kazanim": 10,
+     "zorluk": "kolay",
+     "soru": "In situ hibridizasyon gibi tekniklerle genlerin hangi kromozom bandında yerleştiğini bulan çalışmalar hangisidir?",
+     "secenekler": {
+      "A": "Asosiyasyon çalışmaları",
+      "B": "Aile çalışmaları",
+      "C": "Evlat edinme çalışmaları",
+      "D": "Endofenotip çalışmaları",
+      "E": "Sitogenetik çalışmalar"
+     },
+     "dogru": "E",
+     "aciklama": "Sitogenetik çalışmalar in situ hibridizasyonla gen yerleşimini ve yapısal kromozom anomalilerini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Asosiyasyon çalışmaları, aday genin alel frekanslarını hasta ve kontrol gruplarında karşılaştıran moleküler yöntemlerdir. Kromozom bandını mikroskopik bir teknikle göstermek bu çalışmaların amacı değildir.",
+      "B": "Aile çalışmaları, proband akrabalarındaki riski genel popülasyonla karşılaştıran ve morbid risk oranlarını kullanan popülasyon çalışmalarıdır. Gen yerleşimini laboratuvar tekniğiyle belirlemez.",
+      "C": "Evlat edinme çalışmaları, biyolojik ve evlat edinen aileleri karşılaştırarak genetik ve çevresel etkileri ayırır. Popülasyon düzeyinde risk verir, kromozom bandı düzeyinde bilgi üretmez.",
+      "D": "Endofenotip çalışmaları, poligenik hastalıkta genetik riski temsil eden objektif ve ölçülebilir biyolojik belirteçleri inceler. Genlerin kromozom üzerindeki yerini bulmaya yönelik bir yaklaşım değildir.",
+      "E": "Sitogenetik çalışmalar, in situ hibridizasyon gibi tekniklerle genlerin kromozom bandını bulur ve yapısal anomalileri gösterir. Tanımla örtüştüğü için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 11
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Moleküler genetik çalışmada pedigri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q11",
+     "kazanim": 11,
+     "zorluk": "orta",
+     "soru": "Moleküler genetik çalışmalarda kalıtım kalıbını belirlemek için çizilen pedigride en az kaç kuşak bulunmalıdır?",
+     "secenekler": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "3",
+      "E": "1"
+     },
+     "dogru": "D",
+     "aciklama": "Kalıtım kalıbı en az 3 kuşaklık pedigri çizilerek belirlenir.",
+     "sik_aciklamalari": {
+      "A": "İki kuşaklık bir aile ağacı yalnız ebeveyn ve çocukları gösterir, kalıtım kalıbını net biçimde ortaya koymaya yetmez. Pedigride gereken alt sınır bundan bir kuşak fazladır.",
+      "B": "Dört kuşak daha ayrıntılı bir pedigri sağlar ama alt sınır olarak tanımlanmaz. Kalıtım kalıbını belirlemek için gereken en az kuşak sayısı daha düşüktür.",
+      "C": "Beş kuşaklık bir pedigri geniş aile ağaçlarında kullanılabilir ancak zorunlu alt sınır değildir. En az kuşak sayısı bundan belirgin biçimde azdır.",
+      "D": "Kalıtım kalıbının belirlenmesi için pedigri en az üç kuşağı kapsayacak şekilde çizilir. Bu sayı kalıbın güvenilir izlenmesi için gereken alt sınır olduğundan doğru cevaptır.",
+      "E": "Tek kuşak, kalıtımın kuşaktan kuşağa nasıl geçtiğini göstermediği için pedigri amacına hizmet etmez. Kalıtım kalıbı birden çok kuşak izlenerek ve en az üç kuşak çizilerek belirlenir."
+     },
+     "kanit": {
+      "sayfa": 12
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Bozukluklara göre kalıtım riski konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q12",
+     "kazanim": 12,
+     "zorluk": "orta",
+     "soru": "Kalıtım riski %60 olarak bildirilen durum hangisidir?",
+     "secenekler": {
+      "A": "Şizofreni",
+      "B": "Bipolar bozukluk",
+      "C": "Alkolizm",
+      "D": "Panik bozukluk",
+      "E": "Anksiyete bozukluğu"
+     },
+     "dogru": "C",
+     "aciklama": "Kalıtım riski alkolizmde %60, şizofreni ve bipolarda %80, majör depresyon ve panikte %40, anksiyetede %30'dur.",
+     "sik_aciklamalari": {
+      "A": "Şizofreni, kalıtım riski %80 olarak bildirilen ve poligenik kalıtım gösteren bir bozukluktur. Bu oran sorudaki değerden yüksektir; şizofreni bipolar bozuklukla aynı risk grubundadır.",
+      "B": "Bipolar bozukluk, şizofreniyle birlikte kalıtım riski %80 olan bozukluklar arasında yer alır. Sorulan orandan daha yüksek bir kalıtım riski taşır.",
+      "C": "Alkolizm, kalıtım riski %60 olarak bildirilen durumdur; ailelerinde alkolizm olanlarda risk normal ailelere göre 4 kat fazladır. Bu oranla eşleştiği için doğru cevaptır.",
+      "D": "Panik bozukluk, majör depresyonla birlikte kalıtım riski %40 olan bozukluklar arasında sayılır. Sorudaki orandan daha düşük bir değere sahiptir ve genetik faktörler panikte %30 etkilidir.",
+      "E": "Anksiyete bozukluğu, kalıtım riski %30 olarak bildirilen ve kadınlarda daha yaygın görülen bozukluktur. Bu değer sorulan oranın belirgin biçimde altında kalır."
+     },
+     "kanit": {
+      "sayfa": 13
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q13",
+     "kazanim": 12,
+     "zorluk": "zor",
+     "soru": "Bozukluk ve kalıtım riski eşleştirmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Panik bozukluk – %80",
+      "B": "Şizofreni – %80",
+      "C": "Bipolar bozukluk – %80",
+      "D": "Majör depresyon – %40",
+      "E": "Anksiyete bozukluğu – %30"
+     },
+     "dogru": "A",
+     "aciklama": "Panik bozuklukta kalıtım riski %40'tır; %80 şizofreni ve bipolar bozukluğa aittir.",
+     "sik_aciklamalari": {
+      "A": "Panik bozuklukta kalıtım riski %80 değil, majör depresyonla birlikte %40 olarak bildirilir. Eşleştirme bu yüzden yanlıştır ve bu nedenle doğru cevaptır.",
+      "B": "Şizofreni, kalıtım riski %80 olarak verilen ve poligenik kalıtım gösteren bozukluktur. Bu eşleştirme doğrudur; ikiz çalışmalarında da kalıtsallık yaklaşık %80 bulunmuştur.",
+      "C": "Bipolar bozukluk da şizofreni gibi %80 kalıtım riskiyle bildirilen bir bozukluktur. Bu eşleştirme doğru verildiği için aranan yanlış eşleştirme bu değildir.",
+      "D": "Majör depresyonda kalıtım riski %40 olarak bildirilir; ikiz çalışmalarında kalıtsallık %40-50 civarındadır. Bu eşleştirme doğru verildiği için aranan yanlış eşleştirme bu değildir.",
+      "E": "Anksiyete bozukluğunda kalıtım riski %30 olarak verilir ve bu oran listedeki en düşük değerdir. Doğru eşleştirildiği için aranan yanlış ifade bu değildir."
+     },
+     "kanit": {
+      "sayfa": 13
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Gen yapısı: ekzon ve intron konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q14",
+     "kazanim": 13,
+     "zorluk": "kolay",
+     "soru": "Genin protein ürününe karşılık gelen bölümü hangisidir?",
+     "secenekler": {
+      "A": "İntron",
+      "B": "Ekzon",
+      "C": "Promotör",
+      "D": "Sentromer",
+      "E": "Satellit DNA"
+     },
+     "dogru": "B",
+     "aciklama": "Ekzon protein ürününe karşılık gelir; introndan protein ürünü oluşmaz.",
+     "sik_aciklamalari": {
+      "A": "İntron, genin içinde yer alan ancak protein ürünü oluşturmayan bölümdür. Bu nedenle protein ürününe karşılık gelen bölüm olarak kabul edilmez.",
+      "B": "Ekzon, genin protein ürününe karşılık gelen bölümüdür ve genetik bilginin proteine çevrilen kısmını taşır. Protein bilgisini taşıyan bölüm olduğu için doğru cevaptır.",
+      "C": "Promotör, genin ifadesini düzenleyen bölgesidir; MAO-A ve SLC6A4 promotörlerindeki tekrar varyantları davranışla ilişkilendirilmiştir. Protein dizisini kodlayan bölüm olarak tanımlanmaz.",
+      "D": "Sentromer, kromozomun bir bölgesidir ve satellit DNA burada lokalizedir. Bir genin protein kodlayan bölümü olarak değil, kromozomun yapısal bir parçası olarak tanımlanır.",
+      "E": "Satellit DNA, sentromerde yerleşik ardışık tekrar dizisidir ve minisatelit ile mikrosatelitle birlikte sınıflanır. Protein ürünü oluşturan bir gen bölümü olarak anlatılmaz."
+     },
+     "kanit": {
+      "sayfa": 14
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Mutasyon ve polimorfizm ayrımı konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q15",
+     "kazanim": 14,
+     "zorluk": "kolay",
+     "soru": "Popülasyonda görülme sıklığı %1'in üzerinde olan DNA dizisi değişikliği hangisidir?",
+     "secenekler": {
+      "A": "Mutasyon",
+      "B": "Mikrodelesyon",
+      "C": "Polimorfizm",
+      "D": "Mikroduplikasyon",
+      "E": "Kromozom kırığı"
+     },
+     "dogru": "C",
+     "aciklama": "Sıklığı %1'in üzerindeki değişiklik polimorfizm, %1'in altındaki değişiklik mutasyondur.",
+     "sik_aciklamalari": {
+      "A": "Mutasyon, DNA dizisindeki değişikliktir ve popülasyonda görülme sıklığı %1'in altındadır. Sıklık eşiğinin diğer tarafında kaldığı için sorulan varyasyon tanımıyla uyuşmaz.",
+      "B": "Mikrodelesyon, kromozomda mikroskopla görülemeyecek kadar küçük bir parçanın kaybıdır; şizofreniyle ilişkili 1q21.1 ve 15q13.3 örneklerdir. Popülasyon sıklığına göre tanımlanan bir kavram değildir.",
+      "C": "Polimorfizm, popülasyonda görülme sıklığı %1'in üzerinde olan DNA varyasyonudur; SNP ve tekrar dizileri bu tür varyasyonlara örnektir. Sorudaki sıklık ölçütünü karşıladığı için doğru cevaptır.",
+      "D": "Mikroduplikasyon, mikroskopla görülemeyecek kadar küçük bir kromozom parçasının fazladan kopyalanmasıdır; şizofrenide 15q13.1 örnektir. Popülasyon sıklığı eşiğine göre yapılan tanımla bir bağı bulunmaz.",
+      "E": "Kromozom kırığı, sitogenetik çalışmalarda genlerin kırık noktaları üzerinden haritalanmasında kullanılan yapısal bir bulgudur. Popülasyondaki görülme sıklığına göre adlandırılan bir varyasyon türü sayılmaz."
+     },
+     "kanit": {
+      "sayfa": 15
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q16",
+     "kazanim": 14,
+     "zorluk": "orta",
+     "soru": "Genetik varyasyon belirteçleri arasında birinci nesil olarak kabul edilen hangisidir?",
+     "secenekler": {
+      "A": "VNTR",
+      "B": "STR",
+      "C": "SNP",
+      "D": "CNV",
+      "E": "RFLP"
+     },
+     "dogru": "E",
+     "aciklama": "Birinci nesil belirteç RFLP'dir; ardından VNTR, STR, SNP ve CNV gelir, altıncı nesil tüm genom dizilemedir.",
+     "sik_aciklamalari": {
+      "A": "VNTR, değişken sayıda ardışık tekrar içeren ve genlerin içinde ya da arasında bulunabilen minisatelit dizisidir. İkinci nesil belirteç olarak 1985 yılında kullanılmaya başlanmıştır.",
+      "B": "STR, kodlamayan bölgede yer alan kısa ardışık tekrarlardan oluşan mikrosatelit dizisidir. Üçüncü nesil belirteç olarak 1989 yılından itibaren kullanılmış, RFLP'den sonra gelmiştir.",
+      "C": "SNP, DNA dizisinde tek bir nükleotidin farklı olmasıdır ve genomda yaklaşık her 300 bp'de bir görülür. Dördüncü nesil belirteç olarak 2000 yılında öne çıkmıştır.",
+      "D": "CNV, genlerin beklenen iki kopya yerine farklı kopya sayısında bulunmasıyla tanımlanan kopya sayısı varyasyonudur. Beşinci nesil belirteç olarak 2005 yılında kullanıma girmiştir.",
+      "E": "RFLP, restriksiyon enzimleriyle oluşturulan DNA parçalarının uzunluk farklılıklarıdır ve 1980 yılında kullanıma giren birinci nesil belirteçtir. Bu nedenle sorunun doğru cevabıdır."
+     },
+     "kanit": {
+      "sayfa": 15
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "SNP konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q17",
+     "kazanim": 15,
+     "zorluk": "kolay",
+     "soru": "DNA dizisinde tek bir nükleotidin farklı olmasıyla tanımlanan varyasyon hangisidir?",
+     "secenekler": {
+      "A": "STR",
+      "B": "SNP",
+      "C": "VNTR",
+      "D": "CNV",
+      "E": "RFLP"
+     },
+     "dogru": "B",
+     "aciklama": "SNP tek nükleotid farkıdır; STR ve VNTR tekrar dizisi, CNV kopya sayısı, RFLP parça uzunluğu farkıdır.",
+     "sik_aciklamalari": {
+      "A": "STR, kodlamayan bölgede ardışık ve orta sıklıkta tekrarlayan kısa nükleotid dizileridir ve mikrosatelit olarak da bilinir. Varyasyonu tek nükleotid farkından değil, tekrar sayısı farkından kaynaklanır.",
+      "B": "SNP, DNA dizisinde tek bir nükleotidin farklı olmasıyla tanımlanan varyasyondur ve genomda yaklaşık her 300 bp'de bir görülür. Tanımla birebir örtüştüğü için doğru cevaptır.",
+      "C": "VNTR, minisatelit olarak bilinen ve değişken sayıda ardışık tekrar içeren daha uzun bir dizidir. Farkı tekrar sayısından kaynaklanır, tek baz değişiminden değil.",
+      "D": "CNV, DNA'nın büyük bir kesiminde genlerin beklenen iki kopya yerine farklı kopya sayısında bulunmasıdır. Geniş bölgeleri ilgilendiren bir varyasyondur.",
+      "E": "RFLP, restriksiyon enzimleriyle kesilen DNA parçalarının uzunluğundaki farklılıklardır. Parça uzunluğuna dayanan ve 1980 yılında kullanıma giren birinci nesil bir belirteçtir."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q18",
+     "kazanim": 15,
+     "zorluk": "orta",
+     "soru": "Bir genden beklenen iki kopya yerine DNA'nın büyük bir kesiminde genlerin farklı kopya sayısında bulunmasıyla tanımlanan varyasyon hangisidir?",
+     "secenekler": {
+      "A": "SNP",
+      "B": "STR",
+      "C": "CNV",
+      "D": "RFLP",
+      "E": "VNTR"
+     },
+     "dogru": "C",
+     "aciklama": "CNV genlerin beklenen iki kopya yerine farklı kopya sayısında bulunmasıdır ve beşinci nesil belirteçtir.",
+     "sik_aciklamalari": {
+      "A": "SNP, DNA dizisinde tek bir nükleotidin farklı olmasıdır ve genomda yaklaşık on milyon SNP bulunur. Geniş bir bölgenin gen kopya sayısını değil, yalnızca tek bir bazı ilgilendirir.",
+      "B": "STR, kodlamayan bölgede yer alan kısa ardışık tekrar dizisidir ve mikrosatelit olarak adlandırılır. Farkı tekrar sayısındadır; gen kopya sayısındaki değişimi anlatan varyasyon başkadır.",
+      "C": "CNV, kopya sayısı varyasyonudur ve genlerin DNA'nın büyük bir kesiminde farklı kopya sayısında bulunmasıyla tanımlanır. Tanıma uyduğu için doğru cevaptır.",
+      "D": "RFLP, restriksiyon enzimleriyle oluşturulan parça uzunluklarındaki farklılıktır ve 1980'de kullanıma giren birinci nesil belirteçtir. Gen kopya sayısını ölçmek için tanımlanmış bir varyasyon değildir.",
+      "E": "VNTR, değişken sayıda ardışık tekrar içeren minisatelit dizisidir. Genlerin içinde ya da arasında bulunabilir ancak gen kopya sayısı farkını anlatmaz."
+     },
+     "kanit": {
+      "sayfa": 16
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Satellit, minisatelit ve mikrosatelit konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q19",
+     "kazanim": 16,
+     "zorluk": "orta",
+     "soru": "Tekrar birimi 1-6 baz çifti olan mikrosatelit DNA dizisi hangisidir?",
+     "secenekler": {
+      "A": "VNTR",
+      "B": "Satellit DNA",
+      "C": "SNP",
+      "D": "STR",
+      "E": "CNV"
+     },
+     "dogru": "D",
+     "aciklama": "STR mikrosatelit dizisidir ve tekrar birimi 1-6 bp'dir; VNTR ise 9-80 bp lik minisatelittir.",
+     "sik_aciklamalari": {
+      "A": "VNTR, değişken sayıda ardışık tekrar içeren minisatelit dizisidir ve tekrar birimi 9-80 bp'dir. Daha uzun tekrar birimi nedeniyle mikrosatelit sayılmaz.",
+      "B": "Satellit DNA, sentromerde lokalize olan ardışık tekrar dizisidir ve satellit, minisatelit, mikrosatelit üçlüsünün ilk üyesidir. Tekrar birimi 1-6 bp olan mikrosatelitten farklı bir sınıf olarak ele alınır.",
+      "C": "SNP, DNA dizisinde tek bir nükleotidin A, T, C'ya da G olarak farklı olmasıdır. Ardışık tekrar dizisi değil, tek baz düzeyinde bir varyasyon olduğu için mikrosatelit sayılmaz.",
+      "D": "STR, kısa ardışık tekrarlardan oluşan mikrosatelit DNA dizisidir ve tekrar birimi 1-6 bp'dir. Sorudaki tanıma uyduğu için doğru cevaptır.",
+      "E": "CNV, DNA'nın büyük bir kesiminde genlerin beklenen iki kopya yerine farklı kopya sayısında bulunmasıdır. Kısa tekrar birimlerinden oluşan bir mikrosatelit dizisi olarak tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q20",
+     "kazanim": 16,
+     "zorluk": "zor",
+     "soru": "DNA daki ardışık tekrar dizileri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "VNTR mikrosatelit dizisidir",
+      "B": "Satellit DNA sentromerde yerleşir",
+      "C": "STR mikrosatelit dizisidir",
+      "D": "VNTR tekrar birimi 9-80 bp'dir",
+      "E": "Bireysel farklılık gösterirler"
+     },
+     "dogru": "A",
+     "aciklama": "VNTR minisatelit, STR mikrosatelit dizisidir; VNTR'nin mikrosatelit olduğu ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "VNTR mikrosatelit değil minisatelit dizisidir ve tekrar birimi 9-80 bp'dir. İfade bu yüzden yanlıştır ve bu nedenle doğru cevaptır.",
+      "B": "Satellit DNA, ardışık tekrar dizilerinin bir türüdür ve sentromerde lokalizedir. İfade doğru olduğu için aranan yanlış ifade bu değildir; yanlış olan VNTR'nin sınıfıyla ilgilidir.",
+      "C": "STR, kısa ardışık tekrarlardan oluşan mikrosatelit DNA dizisidir ve tekrar birimi 1-6 bp'dir. Kodlamayan bölgede yer alır; bu ifade doğru olduğu için aranan yanlış ifade bu değildir.",
+      "D": "VNTR, minisatelit dizisidir ve tekrar birimi 9-80 bp aralığındadır. Bu ifade tanımı doğru yansıtır; mikrosatelit olan STR'nin tekrar birimi ise 1-6 bp'dir.",
+      "E": "Ardışık tekrar dizileri bireyden bireye farklılık gösterir; genomun %99,9'u aynı olsa da bu bölgeler değişkendir. Bu ifade doğru bir bilgidir ve aranan yanlış ifade bu değildir."
+     },
+     "kanit": {
+      "sayfa": 17
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Bağlantılı kalıtım ve parametrik analiz konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q21",
+     "kazanim": 18,
+     "zorluk": "orta",
+     "soru": "Kromozom yerleşimi kesin bilinen bir genetik göstergenin hastalıkla kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını sınayan analiz hangisidir?",
+     "secenekler": {
+      "A": "Parametrik analiz",
+      "B": "Parametrik olmayan analiz",
+      "C": "Sitogenetik analiz",
+      "D": "İkiz analizi",
+      "E": "Endofenotip analizi"
+     },
+     "dogru": "A",
+     "aciklama": "Model bağımlı yani parametrik analiz, yerleşimi bilinen göstergenin kuşaklar boyu hastalıkla birlikte kalıtımını sınar.",
+     "sik_aciklamalari": {
+      "A": "Parametrik analiz, model bağımlı analiz olarak da bilinir ve yerleşimi kesin bilinen göstergenin kuşaklar boyunca hastalıkla birlikte kalıtımını sınar. Bağlantı analizinin temeli olduğu için doğru cevaptır.",
+      "B": "Parametrik olmayan analiz, modelden bağımsızdır ve hastalık ile genetik gösterge arasında anlamlı ilişki arar. Kuşaklar arası birlikte kalıtımı sınamaz; asosiyasyon bu gruptadır.",
+      "C": "Sitogenetik analiz, genlerin kromozom bandını ve yapısal kromozom anomalilerini mikroskobik düzeyde gösterir. Göstergenin kuşaklar boyu birlikte aktarımını izleyen bir yöntem olarak tanımlanmaz.",
+      "D": "İkiz analizi, MZ ve DZ ikizlerdeki fenotipik uyumdan kalıtsallığı tahmin eden bir popülasyon çalışmasıdır. Belirli bir genetik göstergenin aile içi geçişini izlemek bu yöntemin amacı sayılmaz.",
+      "E": "Endofenotip analizi, poligenik hastalıkta genetik riski temsil eden ölçülebilir biyolojik belirteçleri inceler. Yerleşimi bilinen bir markerin kuşaklar boyu kalıtımını sınayan analiz bu değildir."
+     },
+     "kanit": {
+      "sayfa": 19
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Genetik haritalama ve sentimorgan konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q22",
+     "kazanim": 19,
+     "zorluk": "kolay",
+     "soru": "Genetik haritalarda 1 sentimorgan hangi rekombinasyon sıklığına karşılık gelir?",
+     "secenekler": {
+      "A": "%10",
+      "B": "%0,1",
+      "C": "%5",
+      "D": "%50",
+      "E": "%1"
+     },
+     "dogru": "E",
+     "aciklama": "%1 rekombinasyon 1 harita birimine, yani 1 sentimorgana eşittir.",
+     "sik_aciklamalari": {
+      "A": "Yüzde on rekombinasyon, tanım gereği on harita birimine yani on sentimorgana karşılık gelir. Bir sentimorgan için bu değer on kat büyük kalır, bu yüzden eşitliği karşılamaz.",
+      "B": "Binde bir düzeyindeki rekombinasyon, bir sentimorganın ancak onda birine karşılık gelen çok kısa bir uzaklıktır. Harita biriminin tanımındaki rekombinasyon oranı bundan on kat yüksektir.",
+      "C": "Yüzde beş rekombinasyon, beş harita birimine yani beş sentimorgana karşılık gelen bir uzaklıktır. Tek bir sentimorganı tanımlayan rekombinasyon oranı bundan beş kat daha düşüktür.",
+      "D": "Yüzde elli rekombinasyon, genlerin birbirinden bağımsız aktarıldığı çok büyük uzaklıklara karşılık gelir. Uzak genlerde çift değiş tokuş saptanamadığı için bu düzeyde uzaklık güvenilir ölçülemez ve sentimorgan tanımı değildir.",
+      "E": "Sentimorgan genetik haritanın uzaklık birimidir ve %1 rekombinasyon sıklığı 1 harita birimine eşittir. Bu eşitlik tanımın kendisi olduğu için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 20
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q23",
+     "kazanim": 19,
+     "zorluk": "zor",
+     "soru": "Uzak yerleşimli iki gen arasındaki genetik uzaklığın güvenilir hesaplanamamasının nedeni hangisidir?",
+     "secenekler": {
+      "A": "Rekombinasyonun hiç olmaması",
+      "B": "Çift değiş tokuşun saptanamaması",
+      "C": "LOD skorunun negatif olması",
+      "D": "Genlerin intronda bulunması",
+      "E": "Mutasyon sıklığının düşük olması"
+     },
+     "dogru": "B",
+     "aciklama": "Uzak genler arasındaki çift değiş tokuş saptanamadığından genetik uzaklıkları güvenilir hesaplanamaz.",
+     "sik_aciklamalari": {
+      "A": "Rekombinasyonun olmaması birbirine çok yakın genlerde görülür ve bu genler mayozda birlikte aktarılır. Uzak genlerde ise rekombinasyon artar, sorun onun saptanmasındadır.",
+      "B": "Uzak yerleşimli iki gen arasında oluşan çift değiş tokuş saptanamaz ve rekombinasyon olduğundan az görünür. Bu yüzden uzaklık güvenilir hesaplanamaz; doğru cevaptır.",
+      "C": "Negatif LOD skoru, bağlantı analizinde incelenen kromozom bölgesinde bağlantı olmadığını gösteren bir bulgudur. Harita uzaklığının güvenilir hesaplanamamasını açıklayan mekanizma ise saptanamayan çift değiş tokuştur.",
+      "D": "İntron, gen içinde protein ürünü oluşturmayan bölgedir. Bir dizinin intronda yer alması iki gen arasındaki harita uzaklığının hesaplanmasını engelleyen etken olarak tanımlanmaz.",
+      "E": "Mutasyon, popülasyonda %1'in altında görülen DNA dizisi değişikliğidir. Bu sıklık bilgisi rekombinasyona dayanan genetik harita uzaklığının güvenilirliğini belirleyen etken olarak tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 20
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "LOD skoru konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q24",
+     "kazanim": 20,
+     "zorluk": "zor",
+     "soru": "LOD skoru ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Olasılık oranının logaritmasıdır",
+      "B": "Negatif değer bağlantıyı destekler",
+      "C": "Asosiyasyon çalışmasında kullanılır",
+      "D": "-2 değeri bağlantıyı kanıtlar",
+      "E": "Aday gen bulunmasını gerektirir"
+     },
+     "dogru": "A",
+     "aciklama": "LOD skoru bulunma ve bulunmama olasılıkları oranının logaritmasıdır ve bağlantı analizinde kullanılır.",
+     "sik_aciklamalari": {
+      "A": "LOD skoru, genin bir bölgede bulunma olasılığının bulunmama olasılığına oranının logaritmik hesabıdır. Tanımı doğru verdiği için bu ifade doğru cevaptır.",
+      "B": "Negatif LOD değerleri o kromozom bölgesinde bağlantı olmadığını gösterir. Bağlantıyı destekleyen değerler 3 ve üzeri olarak kabul edildiği için bu ifade yanlıştır.",
+      "C": "Asosiyasyon çalışması hasta ve kontrol gruplarındaki alel frekanslarını karşılaştırır ve kalıtım kalıbı gerektirmez. LOD skoru ise kuşaklar arası kalıtımı izleyen bağlantı analizlerinde kullanılan bir ölçüttür.",
+      "D": "LOD skorunun -2 ve daha negatif olması kesin olarak bağlantı yokluğunu ifade eder. Bağlantıyı kanıtlayan bir değer olarak yorumlanması yanlıştır.",
+      "E": "Aday gen bulunması asosiyasyon yaklaşımının ön koşuludur. LOD skoru ise yerleşimi bilinen bir markerin aile içinde birlikte kalıtımını değerlendiren bağlantı analizinde hesaplanır."
+     },
+     "kanit": {
+      "sayfa": 21
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Klasik linkage çalışmasının koşulları konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q25",
+     "kazanim": 21,
+     "zorluk": "kolay",
+     "soru": "Huntington patogenezinde yer alan gen ve mutasyon hangi yöntemle tespit edilmiştir?",
+     "secenekler": {
+      "A": "Asosiyasyon çalışması",
+      "B": "GWAS",
+      "C": "Bağlantı analizi",
+      "D": "Sitogenetik çalışma",
+      "E": "İkiz çalışması"
+     },
+     "dogru": "C",
+     "aciklama": "Huntington geni ve mutasyonu bağlantı analiziyle, Alzheimer ile ilişkili ApoE geni asosiyasyonla bulunmuştur.",
+     "sik_aciklamalari": {
+      "A": "Asosiyasyon çalışması, aday genin alel frekanslarını hasta ve kontrol gruplarında karşılaştırır. Bu yöntemle Alzheimer ile ilişkili ApoE geni bulunmuştur, Huntington geni değil.",
+      "B": "GWAS, hasta ve kontrol gruplarını tüm genomdaki SNP dizileriyle tarayan geniş ilişki çalışmasıdır. Şizofrenide HLA bölgesi bu yolla tanımlanmıştır; Huntington örneği bağlantı analizine aittir.",
+      "C": "Bağlantı analizi, hastalığın bilinen bir genetik markerle birlikte kalıtılıp kalıtılmadığını aile ağaçlarında araştırır. Huntington gen ve mutasyonu bu yöntemle bulunduğu için doğru cevaptır.",
+      "D": "Sitogenetik çalışma kromozom bandını ve yapısal anomalileri gösterir; Down, Turner ve Klinefelter sendromu tipik örneklerdir. Huntington gen ve mutasyonu ise aile ağaçlarını kullanan bağlantı analiziyle bulunmuştur.",
+      "E": "İkiz çalışması MZ ve DZ ikizlerdeki uyumdan kalıtsallığı tahmin eder. Hastalığın kalıtsal olduğunu gösterebilir ama belirli bir gen ve mutasyonu tespit etmez."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q26",
+     "kazanim": 21,
+     "zorluk": "orta",
+     "soru": "Bağlantı analizinde bağlantıyı destekleyen LOD skoru değeri hangisidir?",
+     "secenekler": {
+      "A": "-2 ve daha negatif",
+      "B": "0 ile 1 arası",
+      "C": "1 ve üzeri",
+      "D": "3 ve üzeri",
+      "E": "Negatif değerler"
+     },
+     "dogru": "D",
+     "aciklama": "LOD skoru 3 ve üzeri bağlantıyı destekler; negatif değerler bağlantı olmadığını, -2 ve altı kesin yokluğu gösterir.",
+     "sik_aciklamalari": {
+      "A": "LOD skorunun -2 ve daha negatif olması o kromozom bölgesinde kesin olarak bağlantı yokluğunu ifade eder. Bağlantıyı destekleyen değil, bağlantıyı dışlayan bir sonuç olarak yorumlanır.",
+      "B": "Sıfır ile bir arasındaki LOD değerleri bağlantı için kabul edilen eşiğin altında kalır. Bağlantıyı destekleyen değer olarak 3 ve üzeri kabul edilir.",
+      "C": "Bir ve üzeri LOD değeri bağlantıyı kabul etmek için yeterli bir eşik olarak tanımlanmaz. Destekleyici eşik 3 ve üzeridir, daha düşük değerler kararsız kalır.",
+      "D": "LOD skorunun 3 ve üzerinde olması, genin o kromozom bölgesinde bulunma olasılığının belirgin yüksek olduğunu gösterir. Bağlantıyı destekleyen değer kabul edildiği için doğru cevaptır.",
+      "E": "Negatif LOD değerleri, incelenen kromozom bölgesinde bağlantı olmadığını gösterir; değer -2 ve altına indiğinde bağlantı kesin olarak dışlanır. Bu nedenle bağlantıyı destekleyen bir sonuç olarak yorumlanamaz."
+     },
+     "kanit": {
+      "sayfa": 22
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Klasik linkage çalışmasının koşulları konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q27",
+     "kazanim": 22,
+     "zorluk": "orta",
+     "soru": "Klasik linkage çalışmalarıyla psikiyatrik bozukluklarda sonuç almanın güç olmasının temel nedeni hangisidir?",
+     "secenekler": {
+      "A": "Aday gen gerektirmeleri",
+      "B": "Kontrol grubu gerektirmeleri",
+      "C": "Pozitif LOD skoru vermeleri",
+      "D": "Kromozom anomalisi taşımaları",
+      "E": "Belirli kalıtım şekline uymamaları"
+     },
+     "dogru": "E",
+     "aciklama": "Klasik linkage belirli kalıtım şekli ve tek ya da majör gen etkisi gerektirir; çoğu psikiyatrik bozukluk bu ölçütlere uymaz.",
+     "sik_aciklamalari": {
+      "A": "Aday gen bulunması asosiyasyon çalışmalarının ön koşuludur ve bu yöntemde kalıtım kalıbı aranmaz. Linkage çalışmasında ise aday gen yerine yerleşimi bilinen bir markerin aile içinde birlikte kalıtımı izlenir.",
+      "B": "Hasta ve kontrol popülasyonlarının karşılaştırılması asosiyasyon yaklaşımının özelliğidir. Linkage ise aile içinde kuşaklar boyu kalıtımı izler; sorun kontrol grubundan kaynaklanmaz.",
+      "C": "LOD skoru 3 ve üzerindeyse bağlantı desteklenir, yani yüksek pozitif değer başarılı bir bağlantı analizinin işaretidir. Sonuç almayı zorlaştıran etken bu olamaz, güçlük kalıtım şeklinin belirsizliğinden kaynaklanır.",
+      "D": "Yapısal kromozom anomalileri sitogenetik çalışmalarla gösterilir ve Down, Turner gibi sendromlar tipik örnektir. Psikiyatrik bozukluklarda linkage güçlüğünün nedeni olarak tanımlanmaz.",
+      "E": "Çoğu psikiyatrik bozukluk belirli bir kalıtım şekline ve tek gen etkisine uymaz. Klasik linkage bu ölçütlerde en iyi sonucu verdiği için bu gerekçe doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 23
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "metin": "Asosiyasyon (ilişki) çalışmaları konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q28",
+     "kazanim": 23,
+     "zorluk": "kolay",
+     "soru": "Alzheimer patogenezinde yer alan ApoE geni hangi genetik yaklaşımla bulunmuştur?",
+     "secenekler": {
+      "A": "Bağlantı analizi",
+      "B": "Sitogenetik çalışma",
+      "C": "Evlat edinme çalışması",
+      "D": "İkiz çalışması",
+      "E": "Asosiyasyon çalışması"
+     },
+     "dogru": "E",
+     "aciklama": "ApoE geni asosiyasyon yöntemiyle bulunmuştur; Huntington geni ise bağlantı analiziyle tespit edilmiştir.",
+     "sik_aciklamalari": {
+      "A": "Bağlantı analizi, hastalığın bilinen bir genetik markerle kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını LOD skoruyla araştırır. Bu yolla Huntington geni bulunmuştur, ApoE ise asosiyasyonla bulunmuştur.",
+      "B": "Sitogenetik çalışma, in situ hibridizasyon gibi tekniklerle genin kromozom bandını ve yapısal kromozom anomalilerini gösterir. Down ve Turner sendromu tipik örnekleridir; ApoE keşfiyle ilişkili yöntem bu olarak bildirilmez.",
+      "C": "Evlat edinme çalışması, biyolojik ve evlat edinen aileleri karşılaştırarak genetik ve çevresel etkileri ayırır. Belirli bir geni bulmaya yönelik değil, kalıtsal katkıyı göstermeye yönelik bir popülasyon çalışmasıdır.",
+      "D": "İkiz çalışması, MZ ve DZ ikizlerdeki fenotipik uyumu karşılaştırarak kalıtsallığı tahmin eder. Hastalığın kalıtsal payını gösterir ama ApoE gibi tek bir aday geni tanımlamak için kullanılmaz.",
+      "E": "Asosiyasyon çalışması, aday bir genin alel frekanslarını hasta ve kontrol gruplarında karşılaştıran yöntemdir. ApoE geni bu yaklaşımla bulunduğu için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q29",
+     "kazanim": 23,
+     "zorluk": "orta",
+     "soru": "Bağlantı analizi ile karşılaştırıldığında asosiyasyon çalışmasının ayırt edici özelliği hangisidir?",
+     "secenekler": {
+      "A": "Belirli kalıtım şekli gerekir",
+      "B": "Kalıtım kalıbı bilinmesi gerekmez",
+      "C": "LOD skoru hesaplanır",
+      "D": "Geniş aile ağaçları gerekir",
+      "E": "Tek gen etkisinde en iyidir"
+     },
+     "dogru": "B",
+     "aciklama": "Asosiyasyonda aday gen gerekir ama kalıtım kalıbı gerekmez; linkage ise kalıtım şekli belli, tek ya da majör gen etkili hastalıkta en iyi sonucu verir.",
+     "sik_aciklamalari": {
+      "A": "Belirli bir kalıtım şeklinin bulunması klasik linkage çalışmasının en iyi sonuç verdiği koşuldur. Asosiyasyonda kalıtım kalıbı aranmadığı için bu özellik bağlantı analizine aittir.",
+      "B": "Asosiyasyon çalışmasında hastalığın kalıtım kalıbının belirlenmesi zorunlu değildir, aday genin alel frekansları karşılaştırılır. Bu özellik onu bağlantı analizinden ayırdığı için doğru cevaptır.",
+      "C": "LOD skoru, bir genin kromozom bölgesinde bulunma olasılığının bulunmama olasılığına oranının logaritmasıdır. Bağlantı analizlerinde kullanılan bir ölçüttür, asosiyasyonun ayırt edici özelliği sayılmaz.",
+      "D": "Geniş aile ağaçları ya da hasta ve sağlıklı kardeş çiftleri, kuşaklar arası kalıtımı izleyen bağlantı analizinde gerekir. Asosiyasyon ise hasta ve kontrol popülasyonlarını karşılaştırır.",
+      "E": "Tek gen ya da majör gen etkisi olan hastalıklar klasik linkage çalışmasının en iyi sonuç verdiği durumdur. Çoğu psikiyatrik bozukluk bu ölçüte uymaz; bu özellik asosiyasyona ait değildir."
+     },
+     "kanit": {
+      "sayfa": 24
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 25,
+   "metin": "Kişilik bozukluklarında genetik ilişkiler konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q30",
+     "kazanim": 25,
+     "zorluk": "orta",
+     "soru": "C kümesi kişilik bozuklukları daha çok hangi sistemle ilişkili bulunmuştur?",
+     "secenekler": {
+      "A": "Serotonerjik sistem",
+      "B": "GABAerjik sistem",
+      "C": "Enkefalinerjik sistem",
+      "D": "Dopaminerjik sistem",
+      "E": "HPA aksı"
+     },
+     "dogru": "D",
+     "aciklama": "A ve B kümesi serotonin gen sistemiyle, C kümesi dopaminerjik sistemle daha ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Serotonerjik sistem, serotonin taşıyıcı ve sentez genlerini kapsar. A yani eksantrik ve B yani dramatik küme kişilik bozuklukları bu sistemle daha fazla ilişkilendirilmiştir.",
+      "B": "GABAerjik sistem, primer inhibitör nörotransmitter GABA'ya dayanır; GABRA6 varyantı alkol ve benzodiazepin duyarlılığıyla ilişkilidir. C kümesiyle bağlantılı sistem olarak bildirilmez.",
+      "C": "Enkefalinler mizaç, anksiyete ve ağrının modülasyonunda etkili nörotransmitterlerdir ve özgül fobilerle ilişkilendirilmiştir. C kümesi kişilik bozukluklarının ilişkili olduğu sistem bu değildir.",
+      "D": "Dopaminerjik sistem, dopamin sentezi, reseptörleri ve yıkımıyla ilgili genleri kapsar. C kümesi yani endişeli kişilik bozuklukları bu sistemle daha fazla ilişkili bulunduğu için doğru cevaptır.",
+      "E": "Hipotalamik pitüiter adrenal aks, anoreksiya nervozada TNF alfa ile aktive olarak gıda alımını azaltan stres sistemidir. Kişilik bozukluğu kümeleriyle ilişkilendirilmiş bir sistem değildir."
+     },
+     "kanit": {
+      "sayfa": 27
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 27,
+   "metin": "MAOA geni ve Brunner sendromu konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q31",
+     "kazanim": 27,
+     "zorluk": "zor",
+     "soru": "Antisosyal kişilik bozukluğunun erkeklerde daha sık görülmesi hangi genin X kromozomunda yer almasıyla açıklanır?",
+     "secenekler": {
+      "A": "MAO-A",
+      "B": "SNAP-25",
+      "C": "DRD3",
+      "D": "COMT",
+      "E": "TPH-2"
+     },
+     "dogru": "A",
+     "aciklama": "MAO-A geninin X kromozomunda olması ASKB'nin erkeklerde daha sık görülmesinin nedeni kabul edilir.",
+     "sik_aciklamalari": {
+      "A": "MAO-A geni X kromozomunda bulunur ve antisosyal kişilik bozukluğunun erkeklerde daha sık görülmesinin nedeni olarak kabul edilir. Bu yüzden doğru cevaptır.",
+      "B": "SNAP-25, sinaptozom ilişkili protein 25'i kodlar ve bazı varyantları erkek ASKB hastalarında daha sık saptanmıştır. Erkek sıklığını X yerleşimiyle açıklayan gen bu değildir.",
+      "C": "DRD3, dopamin 3 reseptör genidir; çekingen kişilik bozukluğunda ve şizofrenide ilişkili bulunmuştur. X kromozomu yerleşimiyle anılmadığı için erkeklerdeki sıklığı açıklamaz.",
+      "D": "COMT, yirmi ikinci kromozomda yer alan ve katekolaminleri yıkan enzimin genidir. Paranoid fikirlerle ilişkilendirilmiş olsa da X kromozomunda bulunmadığı için bu açıklamaya uymaz.",
+      "E": "TPH-2, triptofan hidroksilazın izotiplerinden biridir ve borderline kişilik bozukluğunda suisidal davranışla ilişkilendirilmiştir. Erkeklerdeki antisosyal kişilik bozukluğu sıklığını X yerleşimiyle açıklamaz."
+     },
+     "kanit": {
+      "sayfa": 29
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 30,
+   "metin": "Unipolar ve bipolar ikiz verileri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q32",
+     "kazanim": 30,
+     "zorluk": "zor",
+     "soru": "Manik-depresif hastalıkta unipolar ve bipolar formların kalıtılabilirliği için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bipolarda %60-80'dir",
+      "B": "Unipolarda %60-80'dir",
+      "C": "Bipolarda %33-42'dir",
+      "D": "İki formda %20'dir",
+      "E": "Unipolarda %85'tir"
+     },
+     "dogru": "A",
+     "aciklama": "Kalıtılabilirlik unipolarda %33-42, bipolarda %60-80'dir.",
+     "sik_aciklamalari": {
+      "A": "Bipolar hastalıkta kalıtılabilirlik %60-80 olarak bildirilir ve unipolar forma göre belirgin yüksektir. Bu ifade doğru verildiği için doğru cevaptır.",
+      "B": "Unipolar hastalıkta kalıtılabilirlik %33-42 düzeyindedir ve bipolar forma göre belirgin düşüktür. %60-80 aralığı bipolar forma ait olduğundan bu ifade yanlıştır.",
+      "C": "Yüzde otuz üç ile kırk iki aralığı unipolar hastalığın kalıtılabilirliğidir. Bipolar form daha yüksek kalıtılabilirlik gösterdiği için bu eşleştirme yanlıştır.",
+      "D": "Yüzde yirmi, unipolar hastalıkta DZ ikiz konkordansı olarak verilen değerdir. Kalıtılabilirlik oranı olarak iki form için de geçerli olmadığından bu ifade yanlıştır.",
+      "E": "Yüzde seksen beş, şizofrenide ikiz çalışmalarından elde edilen kalıtılabilirlik değeridir. Unipolar hastalığın kalıtılabilirliği %33-42 olup bu değerden çok daha düşüktür."
+     },
+     "kanit": {
+      "sayfa": 32
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 31,
+   "metin": "Duygudurum bozukluklarında tekrarlama riski konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q33",
+     "kazanim": 31,
+     "zorluk": "orta",
+     "soru": "Her iki ebeveyni duygudurum bozukluğu olan çocukta tekrarlama riski hangisidir?",
+     "secenekler": {
+      "A": "%27",
+      "B": "%20-30",
+      "C": "%50-70",
+      "D": "%5",
+      "E": "%34-46"
+     },
+     "dogru": "C",
+     "aciklama": "İki ebeveyn hastaysa risk %50-70, tek ebeveyn hastaysa %27, kardeşte %20-30, ikinci derece akrabada %5'tir.",
+     "sik_aciklamalari": {
+      "A": "Yüzde yirmi yedi, yalnızca tek ebeveyni hasta olan çocuklardaki tekrarlama riskidir. İki ebeveynin hasta olması riski bundan daha fazla artırır.",
+      "B": "Yüzde yirmi ile otuz, duygudurum bozukluğunda kardeş riski olarak verilen değerdir. Her iki ebeveyni hasta olan çocuğun riski daha yüksektir.",
+      "C": "Her iki ebeveyni duygudurum bozukluğu olan çocukta tekrarlama riski %50-70 olarak bildirilir. Bu değer doğrudur ve tek ebeveyn hastalığına göre belirgin yüksektir.",
+      "D": "Yüzde beş, duygudurum bozukluklarında ikinci derece akrabalarda bildirilen tekrarlama riskidir. Birinci derece akrabalarda ve özellikle iki ebeveynin hasta olduğu durumda risk çok daha fazladır.",
+      "E": "Yüzde otuz dört ile kırk altı, şizofrenide her iki ebeveyni hasta olan çocuktaki risktir. Duygudurum bozukluğu için bildirilen değerle karıştırılmamalıdır."
+     },
+     "kanit": {
+      "sayfa": 33
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 32,
+   "metin": "Bipolar bozuklukta aday genler konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q34",
+     "kazanim": 32,
+     "zorluk": "zor",
+     "soru": "Bipolar bozuklukla ilişkili G72/G30 geni hangi kromozom bölgesinde yer alır?",
+     "secenekler": {
+      "A": "6p",
+      "B": "8p",
+      "C": "22q",
+      "D": "13q33",
+      "E": "1q"
+     },
+     "dogru": "D",
+     "aciklama": "G72/G30 geni 13q33 bölgesindedir; DTNBP1 6p, NRG1 8p, DISC1 1q, COMT 22q dadır.",
+     "sik_aciklamalari": {
+      "A": "Altıncı kromozomun kısa kolu, şizofreni aday geni DTNBP1 yani disbindinin yerleşim yeridir. G72/G30 geninin kromozom bölgesi bu değil, on üçüncü kromozomdur.",
+      "B": "Sekizinci kromozomun kısa kolu, nöregulin 1'i kodlayan NRG1 geninin yerleşimidir. NRG1 şizofreni aday genidir ve G72/G30 ile karıştırılmamalıdır.",
+      "C": "Yirmi ikinci kromozomun uzun kolu COMT geninin yerleştiği yerdir ve şizofreni yatkınlık bölgeleri arasında sayılır. G72/G30 geni ise başka bir kromozomda bulunur.",
+      "D": "G72/G30 geni 13q33 bölgesinde yer alır ve bipolar bozuklukla ilişkilendirilmiştir. Şizofreni aday genleri arasında da 13q yerleşimiyle sayıldığı için doğru cevap budur.",
+      "E": "Birinci kromozomun uzun kolu, şizofreni aday geni DISC1'in yerleşim yeridir. G72/G30 geninin bulunduğu bölge ise on üçüncü kromozomun uzun koludur."
+     },
+     "kanit": {
+      "sayfa": 34
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 33,
+   "metin": "Bipolar bozuklukta aday genler konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q35",
+     "kazanim": 33,
+     "zorluk": "orta",
+     "soru": "Bipolar bozuklukta GWAS ile bulunan ve L tipi voltaj bağımlı kalsiyum kanalının alfa 1C alt birimini kodlayan gen hangisidir?",
+     "secenekler": {
+      "A": "ANK3",
+      "B": "BDNF",
+      "C": "DTNBP1",
+      "D": "NRG1",
+      "E": "CACNA1C"
+     },
+     "dogru": "E",
+     "aciklama": "CACNA1C L tipi kalsiyum kanalının alfa 1C alt birimini kodlar; ANK3 ile birlikte bipolar bozuklukta GWAS ile bulunmuştur.",
+     "sik_aciklamalari": {
+      "A": "ANK3, ankirin G proteinini kodlayan gendir. Bipolar bozuklukta GWAS ile CACNA1C ile birlikte bulunmuştur ama kalsiyum kanalı alt birimini kodlamaz.",
+      "B": "BDNF, beyin kaynaklı nörotrofik faktörü kodlar ve bipolar ile diğer duygudurum bozukluklarında aday gendir. Büyüme faktörü genidir, iyon kanalı alt birimini kodlamaz.",
+      "C": "DTNBP1, disbindin proteinini kodlayan ve 6p'de yer alan şizofreni aday genidir. Linkage çalışmalarıyla bulunmuştur ve kalsiyum kanalıyla ilişkili bir gen değildir.",
+      "D": "NRG1, nöregulin 1'i kodlayan ve 8p'de yer alan şizofreni aday genidir. Bipolar bozuklukta kanal alt birimini kodlayan gen olarak tanımlanmaz.",
+      "E": "CACNA1C, L tipi voltaj bağımlı kalsiyum kanalının alfa 1C alt birimini kodlar. Bipolar bozuklukta GWAS ile bulunmuştur ve tanıma birebir uyduğu için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 35
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 34,
+   "metin": "Unipolar ve bipolar akraba riski konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q36",
+     "kazanim": 34,
+     "zorluk": "orta",
+     "soru": "Bipolar bozukluğu olanların birinci derece akrabalarında hastalık riski kaç kat artmıştır?",
+     "secenekler": {
+      "A": "8-18 kat",
+      "B": "2-10 kat",
+      "C": "4 kat",
+      "D": "2 kat",
+      "E": "1,5 kat"
+     },
+     "dogru": "A",
+     "aciklama": "Birinci derece akraba riski unipolarda 2-10 kat, bipolarda 8-18 kat fazladır.",
+     "sik_aciklamalari": {
+      "A": "Bipolar bozuklukta birinci derece akrabalarda risk 8-18 kat artmış olarak bildirilir. Unipolar forma göre daha yüksek olan bu artış doğru cevaptır.",
+      "B": "İki ile on kat artış, unipolar bozukluğu olanların birinci derece akrabalarındaki risk artışıdır. Bipolar formda ailesel geçiş daha güçlü olduğu için artış daha belirgindir.",
+      "C": "Dört kat artış, alkoliklerin ailelerinde alkolizm riskinin normal ailelere göre ne kadar fazla olduğunu gösterir. Bipolar bozukluğun akraba riskiyle karıştırılmamalıdır.",
+      "D": "İki kat artış, alkolizmde MZ ikizlerin DZ ikizlere göre taşıdığı fazla riski ifade eder. Bipolar bozuklukta akraba riski çok daha yüksektir.",
+      "E": "Bir buçuk değeri, majör depresif bozuklukta birinci derece akrabalarda genel popülasyona göre hesaplanan göreceli risktir. Bipolar bozukluğun akraba risk artışı bundan belirgin biçimde fazladır."
+     },
+     "kanit": {
+      "sayfa": 36
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 39,
+   "metin": "Şizofreni genetiğinin özellikleri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q37",
+     "kazanim": 39,
+     "zorluk": "zor",
+     "soru": "Paranoid şizofreniye göre daha fazla genetik yük taşıdığı bildirilen şizofreni formları hangisidir?",
+     "secenekler": {
+      "A": "Hebefrenik ve katatonik",
+      "B": "Şizoaffektif ve şizotipal",
+      "C": "Melankolik ve non-melankolik",
+      "D": "Unipolar ve bipolar",
+      "E": "Panik ve sosyal fobi"
+     },
+     "dogru": "A",
+     "aciklama": "Hebefrenik ve katatonik şizofreni, paranoid forma göre daha fazla genetik yük taşır.",
+     "sik_aciklamalari": {
+      "A": "Hebefrenik ve katatonik şizofreni, hastalığın daha ciddi formlarıdır ve paranoid şizofreniye göre daha fazla genetik yük taşır. Bu bilgi doğru cevaptır.",
+      "B": "Şizoaffektif bozukluk ve şizotipal kişilik bozukluğu, şizofreni hastalarının biyolojik akrabalarında daha sık görülen spektrum bozukluklarıdır. Şizofreninin alt formları olarak sayılmaz.",
+      "C": "Melankolik ve non-melankolik depresyon, duygudurum bozukluğunun formlarıdır; melankolik form daha şiddetli ve daha fazla ailevi yatkınlık gösterir. Şizofreniyle ilgili değildir.",
+      "D": "Unipolar ve bipolar hastalık, manik-depresif hastalığın iki formudur ve kalıtılabilirlikleri sırasıyla %33-42 ile %60-80'dir. Bunlar şizofreninin alt formları olarak sınıflandırılmaz.",
+      "E": "Panik bozukluk ve sosyal fobi anksiyete bozuklukları grubunda yer alır ve genetik etkileri yaklaşık %30 düzeyindedir. Şizofreninin genetik yükü farklı alt formları olarak tanımlanmaz."
+     },
+     "kanit": {
+      "sayfa": 41
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 41,
+   "metin": "Şizofreni genetiğinin özellikleri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q38",
+     "kazanim": 41,
+     "zorluk": "orta",
+     "soru": "Şizofreni genetiğine ilişkin aşağıdakilerden hangisi beklenmez?",
+     "secenekler": {
+      "A": "Lokus heterojenitesi",
+      "B": "Fenotipik çeşitlilik",
+      "C": "Gen çevre etkileşimi",
+      "D": "Poligenik kalıtım",
+      "E": "Tam penetrans"
+     },
+     "dogru": "E",
+     "aciklama": "Şizofrenide penetrans tam değildir; heterojenite, fenotipik çeşitlilik, gen çevre etkileşimi ve poligenik kalıtım vardır.",
+     "sik_aciklamalari": {
+      "A": "Lokus heterojenitesi, aynı klinik tablonun farklı lokuslardaki genlerden kaynaklanabilmesidir. Şizofreni genetiğinde lokus ve alelik heterojenite tanımlandığı için beklenen bir durumdur.",
+      "B": "Fenotipik çeşitlilik, aynı hastalığın bireylerde farklı klinik görünümlerle ortaya çıkmasıdır. Şizofrenide paranoid, hebefrenik ve katatonik formlar bu çeşitliliğin açık örneğidir.",
+      "C": "Gen çevre etkileşimi, genetik yatkınlığın çevresel etkenlerle birlikte hastalığa yol açmasıdır. Şizofrenide fenokopi ve gen çevre etkileşimi tanımlandığı için beklenir.",
+      "D": "Poligenik kalıtım, birden çok genin hastalık riskine küçük katkılar yapmasıdır. Şizofreni klasik Mendel kalıtımına uymaz ve poligenik kalıtım gösterdiği için bu beklenen bir özelliktir.",
+      "E": "Penetrans, genotipi taşıyanlarda fenotipin ortaya çıkma oranıdır ve şizofrenide tam değildir. Bu yüzden tam penetrans şizofreni genetiğinde beklenmez ve bu seçenek doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 43
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 43,
+   "metin": "Şizofrenide çevresel risk faktörleri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q39",
+     "kazanim": 43,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi şizofreni için çevresel risk faktörlerinden biri değildir?",
+     "secenekler": {
+      "A": "İleri baba yaşı",
+      "B": "Şehir yaşamı",
+      "C": "22q11.2 delesyonu",
+      "D": "Prenatal obstetrik komplikasyon",
+      "E": "Adölesanda madde bağımlılığı"
+     },
+     "dogru": "C",
+     "aciklama": "22q11.2 delesyonu genetik bir risk faktörüdür; diğerleri çevresel risk faktörleridir.",
+     "sik_aciklamalari": {
+      "A": "İleri baba yaşı, şizofreni için tanımlanan çevresel risk faktörlerinden biridir. Bu nedenle listede yer alması beklenen bir etkendir ve aranan genetik faktör bu değildir.",
+      "B": "Şehir yaşamı, şizofreni gelişiminde rol oynayan çevresel etkenler arasında sayılır. Yaşam ortamına ait bir risk faktörü olduğu için aranan genetik etken bu değildir.",
+      "C": "22q11.2 delesyonu, şizofreni riskini %25'e kadar artıran submikroskobik bir kromozom aberasyonudur. Çevresel değil genetik bir risk faktörü olduğu için doğru cevaptır.",
+      "D": "Prenatal obstetrik komplikasyonlar, gebelik ve doğum sürecine ait çevresel risk faktörleridir. Şizofreni için tanımlanan çevresel etkenlerden olduğu için cevap bu değildir.",
+      "E": "Adölesan dönemde madde bağımlılığı, şizofreni için bildirilen çevresel risk faktörüdür. Yaşam olaylarına bağlı bir etken olduğundan aranan genetik faktör bu değildir."
+     },
+     "kanit": {
+      "sayfa": 45
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 44,
+   "metin": "Şizofrenide aile ve ikiz riskleri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q40",
+     "kazanim": 44,
+     "zorluk": "zor",
+     "soru": "Şizofreni aile çalışmalarında üçüncü derece akrabalarda bildirilen risk hangisidir?",
+     "secenekler": {
+      "A": "%3",
+      "B": "%1.5",
+      "C": "%9",
+      "D": "%8-14",
+      "E": "%34-46"
+     },
+     "dogru": "B",
+     "aciklama": "Şizofrenide üçüncü derece akrabalarda risk %1.5, ikinci derecede %3, kardeşte %8-14'tür.",
+     "sik_aciklamalari": {
+      "A": "Yüzde üç, şizofrenide ikinci derece akrabalarda bildirilen risktir. Akrabalık bir derece daha uzaklaştığında, yani üçüncü derece akrabalarda risk bundan daha düşüktür.",
+      "B": "Şizofreni aile çalışmalarında üçüncü derece akrabalardaki risk %1.5 olarak bildirilir. Akrabalık uzaklaştıkça risk azaldığı için en düşük değer olan bu oran doğru cevaptır.",
+      "C": "Yüzde dokuz, şizofrenide hasta bireyin ebeveyni için bildirilen risktir ve birinci derece akrabalığa aittir. Daha uzak akrabalarda risk bu değerin çok altına iner.",
+      "D": "Yüzde sekiz ile on dört, şizofrenide kardeş riski olarak bildirilen aralıktır. Birinci derece akrabaya ait olduğu için üçüncü derecede çok daha düşük risk beklenir.",
+      "E": "Yüzde otuz dört ile kırk altı, her iki ebeveyni şizofreni olan çocuğun riskidir. Aile içindeki en yüksek risklerden biridir, üçüncü derece akrabaya ait değildir."
+     },
+     "kanit": {
+      "sayfa": 46
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 45,
+   "metin": "Şizofrenide aile ve ikiz riskleri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q41",
+     "kazanim": 45,
+     "zorluk": "orta",
+     "soru": "Şizofrenide ikiz çalışmalarından elde edilen kalıtılabilirlik oranı hangisidir?",
+     "secenekler": {
+      "A": "%53",
+      "B": "%15",
+      "C": "%31",
+      "D": "%85",
+      "E": "%24"
+     },
+     "dogru": "D",
+     "aciklama": "Şizofrenide MZ konkordansı %53, DZ %15, kalıtılabilirlik %85'tir.",
+     "sik_aciklamalari": {
+      "A": "Yüzde elli üç, şizofrenide MZ ikiz konkordansıdır; yani tek yumurta ikizlerinde hastalığın birlikte görülme oranıdır. Aynı çalışmada verilen kalıtılabilirlikle sık karıştırılır.",
+      "B": "Yüzde on beş, şizofrenide DZ ikiz konkordansı olarak bildirilen orandır. Kalıtılabilirliği değil, çift yumurta ikizlerinde hastalığın birlikte görülme oranını gösterir.",
+      "C": "Yüzde otuz bir, panik bozuklukta MZ konkordansı ve genelleşmiş anksiyete bozukluğunda genetik rol için verilen değerdir. Şizofreninin kalıtılabilirliği çok daha yüksektir.",
+      "D": "Şizofrenide ikiz çalışmalarına göre kalıtılabilirlik %85 olarak bildirilir ve hastalığın güçlü genetik yükünü gösterir. MZ konkordansından daha yüksek olan bu oran doğru cevaptır.",
+      "E": "Yüzde yirmi dört, sosyal fobide MZ ikiz konkordansı olarak bildirilen orandır. Anksiyete grubuna ait bu düşük değer şizofreninin yüksek kalıtılabilirliğiyle karıştırılmamalıdır."
+     },
+     "kanit": {
+      "sayfa": 47
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 47,
+   "metin": "Şizofreni aday genleri ve yerleşimleri konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q42",
+     "kazanim": 47,
+     "zorluk": "orta",
+     "soru": "Linkage çalışmalarıyla bulunan şizofreni aday geni NRG1 hangi kromozom kolunda yer alır?",
+     "secenekler": {
+      "A": "6p",
+      "B": "8p",
+      "C": "1q",
+      "D": "13q",
+      "E": "22q"
+     },
+     "dogru": "B",
+     "aciklama": "NRG1 8p, DTNBP1 6p, DISC1 1q, G72/G30 13q, COMT 22q'da yer alır.",
+     "sik_aciklamalari": {
+      "A": "Altıncı kromozomun kısa kolu, disbindin proteinini kodlayan DTNBP1 geninin yerleşimidir. Bu bölge şizofreniye ait başka bir aday gene aittir, NRG1 burada bulunmaz.",
+      "B": "NRG1, nöregulin 1'i kodlayan şizofreni aday genidir ve sekizinci kromozomun kısa kolunda yer alır. Bu yerleşim doğru olduğu için cevap budur.",
+      "C": "Birinci kromozomun uzun kolu DISC1 geninin yerleşim yeridir. DISC1'de linkage ile bulunan bir şizofreni aday genidir ancak sorulan gen NRG1'dir.",
+      "D": "On üçüncü kromozomun uzun kolu G72/G30 geninin yerleşimidir. Bu gen bipolar bozuklukla da ilişkilidir; NRG1 ise başka bir kromozomda yer alır.",
+      "E": "Yirmi ikinci kromozomun uzun kolu COMT geninin yerleşimidir. COMT katekolaminleri yıkan enzimi kodlayan ayrı bir aday gendir ve NRG1 ile karıştırılmamalıdır."
+     },
+     "kanit": {
+      "sayfa": 49
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q43",
+     "kazanim": 47,
+     "zorluk": "zor",
+     "soru": "Şizofreni aday genleri ile kromozom yerleşimlerinin eşleştirmesinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "DTNBP1 – 6p",
+      "B": "NRG1 – 8p",
+      "C": "DISC1 – 22q",
+      "D": "G72/G30 – 13q",
+      "E": "COMT – 22q"
+     },
+     "dogru": "C",
+     "aciklama": "DISC1 1q'da yer alır; 22q COMT geninin yerleşimidir.",
+     "sik_aciklamalari": {
+      "A": "DTNBP1, disbindin proteinini kodlayan şizofreni aday genidir ve altıncı kromozomun kısa kolunda yer alır. Bu eşleştirme doğru olduğu için aranan yanlış ifade bu değildir.",
+      "B": "NRG1, nöregulin 1'i kodlayan şizofreni aday genidir ve sekizinci kromozomun kısa kolundadır. Bu eşleştirme doğru verildiği için aranan yanlış ifade bu değildir.",
+      "C": "DISC1 geni 22q'da değil, birinci kromozomun uzun kolunda yer alır; 22q COMT genine aittir. Eşleştirme bu yüzden yanlıştır ve bu nedenle doğru cevaptır.",
+      "D": "G72/G30 geni on üçüncü kromozomun uzun kolunda yer alır ve bipolar bozuklukla da ilişkilidir. Bu eşleştirme doğru olduğundan aranan yanlış bu değildir.",
+      "E": "COMT, katekolaminleri yıkan enzimi kodlayan gendir ve yirmi ikinci kromozomun uzun kolunda yer alır. Bu eşleştirme doğru olduğundan aranan yanlış ifade bu değildir."
+     },
+     "kanit": {
+      "sayfa": 49
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 49,
+   "metin": "Şizofrenide GWAS ve kromozomal aberasyonlar konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q44",
+     "kazanim": 49,
+     "zorluk": "orta",
+     "soru": "Şizofreni riskini %25'e kadar artıran submikroskobik kromozomal aberasyon hangisidir?",
+     "secenekler": {
+      "A": "15q13.1 mikroduplikasyonu",
+      "B": "1q21.1 mikrodelesyonu",
+      "C": "15q13.3 mikrodelesyonu",
+      "D": "2p16.3 mikrodelesyonu",
+      "E": "22q11.2 delesyonu"
+     },
+     "dogru": "E",
+     "aciklama": "22q11.2 delesyonu %25'e kadar şizofreni riski taşır.",
+     "sik_aciklamalari": {
+      "A": "15q13.1 bölgesindeki mikroduplikasyon şizofreniyle ilişkili tek mikroduplikasyon olarak bildirilir. Yüzde yirmi beşe varan risk ise başka bir delesyona aittir.",
+      "B": "1q21.1 mikrodelesyonu, şizofreniyle ilişkili submikroskobik kromozom kayıplarından biridir. Ancak %25'e kadar varan şizofreni riski bu bölge için değil, 22q11.2 delesyonu için verilmiştir.",
+      "C": "15q13.3 mikrodelesyonu, şizofreniyle ilişkili submikroskobik aberasyonlardan biridir. Sorudaki yüksek risk oranı bu bölgeyle değil, yirmi ikinci kromozomdaki delesyonla tanımlanır.",
+      "D": "2p16.3 mikrodelesyonu da şizofreni ile ilişkilendirilen küçük kromozom kayıplarındandır. Yüzde yirmi beşe kadar risk ise 22q11.2 için bildirilir.",
+      "E": "22q11.2 delesyonu, yirmi ikinci kromozomdaki submikroskobik bir parça kaybıdır ve %25'e kadar şizofreni riski taşır. Bu nedenle doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 51
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 50,
+   "metin": "Endofenotipler konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q45",
+     "kazanim": 50,
+     "zorluk": "kolay",
+     "soru": "Poligenik hastalıklarda genetik riski temsil eden objektif, kalıtsal ve ölçülebilir biyolojik belirteçlere ne ad verilir?",
+     "secenekler": {
+      "A": "Endofenotip",
+      "B": "Proband",
+      "C": "Polimorfizm",
+      "D": "Fenokopi",
+      "E": "Antisipasyon"
+     },
+     "dogru": "A",
+     "aciklama": "Endofenotipler genetik riski temsil eden objektif, kalıtsal ve ölçülebilir biyolojik belirteçlerdir.",
+     "sik_aciklamalari": {
+      "A": "Endofenotip, poligenik hastalıkta genetik riski temsil eden objektif, kalıtsal ve ölçülebilir biyolojik belirteçtir. Hastalık belirtileri çıkmadan yatkınlığı gösterdiği için doğru cevaptır.",
+      "B": "Proband, aile çalışmalarında incelemenin başladığı hasta bireydir ve indeks vaka olarak da adlandırılır. Biyolojik bir belirteç değil, bir kişiyi tanımlar.",
+      "C": "Polimorfizm, popülasyonda %1'in üzerinde görülen DNA varyasyonudur ve genetik risk taşıyabilir. Ancak ölçülebilir biyolojik ara fenotip anlamına gelmediği için endofenotip yerine kullanılmaz.",
+      "D": "Fenokopi, genetik nedenli bir tabloya benzeyen ancak çevresel etkiyle ortaya çıkan durumdur. Şizofrenide çevresel etki olarak anılır, genetik riski temsil eden belirteç değildir.",
+      "E": "Antisipasyon, bazı ailelerde manik-depresif hastalıkta gözlenen bir kalıtım özelliğidir. Ölçülebilir bir biyolojik belirteci değil, hastalığın aile içindeki geçiş biçimini anlatır."
+     },
+     "kanit": {
+      "sayfa": 52
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 54,
+   "metin": "Alkol ve madde bağımlılığında genetik konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q46",
+     "kazanim": 54,
+     "zorluk": "orta",
+     "soru": "Bağımlılık türleri arasında kalıtılabilirliği en yüksek bildirilen madde hangisidir?",
+     "secenekler": {
+      "A": "Alkol",
+      "B": "Kokain",
+      "C": "Sigara",
+      "D": "Kannabis",
+      "E": "Halüsinojenler"
+     },
+     "dogru": "B",
+     "aciklama": "Bağımlılıklar içinde kalıtılabilirlik en yüksek kokainde, en düşük halüsinojenlerdedir; alkol ve sigara arada kalır.",
+     "sik_aciklamalari": {
+      "A": "Alkol bağımlılığında kalıtılabilirlik 0.50-0.60 aralığında bildirilir. Yüksek bir değer olsa da en yüksek kalıtılabilirlik bu bağımlılığa ait değildir.",
+      "B": "Kokain bağımlılığı, sayılan bağımlılıklar içinde en yüksek kalıtılabilirlik değerine sahiptir. Bu değer 0.72 olarak bildirildiği ve alkol ile sigarayı geçtiği için doğru cevaptır.",
+      "C": "Sigara bağımlılığında kalıtılabilirlik alkolle benzer biçimde 0.50-0.60 aralığındadır. Yüksek bir değer olsa da en yüksek kalıtılabilirliğe sahip bağımlılık türü bu değildir.",
+      "D": "Kannabis bağımlılığında kalıtılabilirlik 0.40-0.50 olarak bildirilir. Sayılan bağımlılıklar içinde orta düzeyde kalan bu değer, en yüksek oranın oldukça altındadır.",
+      "E": "Halüsinojen bağımlılığında kalıtılabilirlik 0.39'dur ve sayılan bağımlılıklar içinde en düşük değerdir. En yüksek değerle karıştırılmaması gereken, listenin öbür ucudur."
+     },
+     "kanit": {
+      "sayfa": 56
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 57,
+   "metin": "ADH1B, ALDH2 ve flushing reaksiyonu konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q47",
+     "kazanim": 57,
+     "zorluk": "zor",
+     "soru": "ALDH2 Glu487Lys polimorfizmi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Arg47 hiperaktif aleldir",
+      "B": "Kodominant modelde etkilidir",
+      "C": "Bağımlılık riskini artırır",
+      "D": "Lys487 enzimi inaktive eder",
+      "E": "Flushing reaksiyonunu önler"
+     },
+     "dogru": "D",
+     "aciklama": "ALDH2 Lys487 enzimi inaktive eder ve dominant etkilidir; ADH1B Arg47 hiperaktif ve kodominanttır.",
+     "sik_aciklamalari": {
+      "A": "Arg47, ALDH2'nin değil ADH1B His47Arg polimorfizminin hiperaktif alelidir ve kodominant modelde etkilidir. Bu nedenle ifade ALDH2 için geçerli olmayan yanlış bir eşleştirmedir.",
+      "B": "Kodominant model, ADH1B Arg47 aleli için tanımlanmış kalıtım modelidir. ALDH2 Lys487 ise dominant modelde etkili olduğu için bu ifade yanlıştır.",
+      "C": "ALDH2 Lys487 gibi flushing yatkınlığı yapan aleller alkol tüketimini rahatsız edici hale getirir ve bağımlılığa karşı koruyucudur. Riski artırdığını söyleyen ifade bu nedenle yanlıştır.",
+      "D": "ALDH2 Glu487Lys polimorfizminde Lys487 aleli enzim inaktivasyonuna yol açar ve dominant modelde etkilidir. Bu ifade polimorfizmi doğru tanımladığı için doğru cevaptır.",
+      "E": "ALDH2 inaktivasyonu asetaldehit birikimine ve flushing reaksiyonuna genetik yatkınlık oluşturur. Reaksiyonu önlediğini söylemek bu polimorfizmin gerçek etkisinin tam tersidir ve yanlıştır."
+     },
+     "kanit": {
+      "sayfa": 59
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q48",
+     "kazanim": 57,
+     "zorluk": "orta",
+     "soru": "Flushing reaksiyonuna yatkınlık yapan ADH1B ve ALDH2 alellerinin alkol bağımlılığına etkisi hangisidir?",
+     "secenekler": {
+      "A": "Riski 4 kat artırır",
+      "B": "Riski 2 kat artırır",
+      "C": "Koruyucudur",
+      "D": "Etkisizdir",
+      "E": "Erken başlangıç yapar"
+     },
+     "dogru": "C",
+     "aciklama": "Flushing yatkınlığı yapan ADH1B ve ALDH2 alelleri alkol bağımlılığına karşı koruyucudur.",
+     "sik_aciklamalari": {
+      "A": "Dört kat artış, alkoliklerin ailelerinde alkolizm riskinin normal ailelere göre ne kadar fazla olduğunu anlatır. Bu alellerin etkisi riski artırmak yönünde değildir.",
+      "B": "İki kat artış, alkolizmde MZ ikizlerin DZ ikizlere göre taşıdığı fazla riski ifade eder. Flushing yatkınlığı yapan alellerin bağımlılık üzerindeki etkisi bu değildir.",
+      "C": "ADH1B Arg47 ve ALDH2 Lys487 alelleri flushing reaksiyonuna yatkınlık yapar. Bu aleller alkol bağımlılığına karşı koruyucudur. Alkol tüketimini rahatsız edici hale getirdikleri için doğru cevap budur.",
+      "D": "Bu aleller asetaldehit birikimine ve histamin deşarjıyla seyreden flushing reaksiyonuna yatkınlık oluşturur. Alkol bağımlılığı üzerinde belirgin bir koruyucu etkileri olduğu için etkisiz sayılmazlar.",
+      "E": "Erken başlangıç ve ağır bağımlılık, ailesinde alkolizm olan bireylerin özelliğidir. Flushing alelleri ise alkol tüketimini azaltarak bağımlılık gelişimini engelleyen yönde etki eder."
+     },
+     "kanit": {
+      "sayfa": 59
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 59,
+   "metin": "COMT Val158Met polimorfizmi konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q49",
+     "kazanim": 59,
+     "zorluk": "orta",
+     "soru": "İnsanda iki formu bulunan COMT enziminde toplam COMT aktivitesinin %95'ini oluşturan form hangisidir?",
+     "secenekler": {
+      "A": "S-COMT",
+      "B": "MB-COMT",
+      "C": "MAOA",
+      "D": "TPH-2",
+      "E": "ALDH2"
+     },
+     "dogru": "A",
+     "aciklama": "S-COMT toplam COMT aktivitesinin %95'ini oluşturur; MB-COMT ise beyinde yüksek aktivite gösteren formdur.",
+     "sik_aciklamalari": {
+      "A": "S-COMT, COMT enziminin insandaki iki formundan biridir ve toplam COMT aktivitesinin %95'ini tek başına oluşturur. Bu nedenle doğru cevaptır; beyinle sınırlı bir form olarak düşünülmemelidir.",
+      "B": "MB-COMT, COMT enziminin ikinci formudur ve beyinde yüksek aktivite gösterir. Toplam aktivitenin büyük kısmını oluşturan form ise S-COMT olduğundan bu seçenek yanlıştır.",
+      "C": "MAOA, X kromozomunda yerleşik ve norepinefrin, dopamin ile serotonini metabolize eden ayrı bir enzimin genidir. COMT enziminin bir formu olmadığından soruyla eşleşmez.",
+      "D": "TPH-2, triptofan hidroksilaz enziminin izotiplerinden biridir ve borderline kişilik bozukluğunda suisidal davranışla ilişkilendirilmiştir. Serotonin yolağına ait bir enzim olup COMT formu değildir.",
+      "E": "ALDH2, alkol metabolizmasında asetaldehiti yıkan aldehit dehidrogenaz 2 enzimini kodlar. Flushing reaksiyonu ve alkol bağımlılığıyla ilişkilidir; COMT aktivitesiyle bir bağı bulunmaz."
+     },
+     "kanit": {
+      "sayfa": 61
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q50",
+     "kazanim": 59,
+     "zorluk": "zor",
+     "soru": "COMT Val158Met polimorfizmi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Met158 aleli 3-4 kat az aktiftir",
+      "B": "Polimorfizm kodominant etkilidir",
+      "C": "Met158 aleli enzimi hiperaktif yapar",
+      "D": "Val158 aleli nikotinle ilişkilidir",
+      "E": "Geç başlangıçlı alkolizm Met158 ilişkilidir"
+     },
+     "dogru": "C",
+     "aciklama": "Met158 aleli enzimi 3-4 kat daha az aktif yapar ve kodominant etkilidir; hiperaktif alel ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Met158 aleli COMT enziminin 3-4 kat daha az aktif olmasına yol açan alel olarak bilinir. Bu ifade polimorfizmin temel özelliğini doğru biçimde verir.",
+      "B": "Val158Met polimorfizminde iki alelin etkisi birlikte ortaya çıkar, yani polimorfizm kodominant etkilidir. Bu ifade doğru olduğundan aranan yanlış ifade bu değildir.",
+      "C": "Met158 aleli COMT enzimini hiperaktif yapmaz, tersine enzimi 3-4 kat daha az aktif hale getirir. İfade bu yüzden yanlıştır ve bu nedenle doğru cevaptır.",
+      "D": "Val158, COMT Val158Met polimorfizminde yüksek aktiviteli aleldir ve nikotin bağımlılığıyla ilişkilendirilmiştir. Bu ilişki doğru verildiği için ifade yanlış kabul edilemez ve aranan seçenek bu değildir.",
+      "E": "Geç başlangıçlı alkoliklerde Met158 aleli öne çıkar; anksiyete ve ağrı eşiğinde azalma da aynı alelle ilişkilidir. Bu ifade doğru bir eşleştirmedir."
+     },
+     "kanit": {
+      "sayfa": 61
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 60,
+   "metin": "MAOA geni ve Brunner sendromu konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q51",
+     "kazanim": 60,
+     "zorluk": "orta",
+     "soru": "MAOA geninin 8. ekzonundaki stop kodon varyantının yol açtığı tablo hangisidir?",
+     "secenekler": {
+      "A": "Huntington hastalığı",
+      "B": "Down sendromu",
+      "C": "Klinefelter sendromu",
+      "D": "Turner sendromu",
+      "E": "Brunner sendromu"
+     },
+     "dogru": "E",
+     "aciklama": "MAOA 8. ekzonundaki stop kodon varyantı Brunner sendromuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Huntington hastalığı, tek gen kalıtımına örnek verilen ve geni bağlantı analiziyle bulunan nörodejeneratif bir hastalıktır. MAOA genindeki stop kodon varyantıyla ilişkili bir tablo değildir.",
+      "B": "Down sendromu, sitogenetik çalışmaların tipik örneği olan sayısal kromozom anomalisidir. Tek bir gendeki stop kodon varyantından değil, kromozom düzeyindeki bir değişiklikten kaynaklanır.",
+      "C": "Klinefelter sendromu, sitogenetik çalışmalarla gösterilen bir cinsiyet kromozomu anomalisidir. MAOA genindeki tek bir nokta varyantla değil, kromozom sayısındaki değişiklikle tanımlanır.",
+      "D": "Turner sendromu da sitogenetik yöntemlerle tanınan kromozomal bir tablodur. Gen düzeyindeki bir stop kodon varyantı bu sendromu oluşturmaz, kromozom anomalisi oluşturur.",
+      "E": "Brunner sendromu, MAOA geninin 8. ekzonundaki stop kodon varyantıyla ortaya çıkan ve 1993'te tanımlanan tablodur. Bu nedenle doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 62
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 61,
+   "metin": "SLC6A4 ve 5-HTTLPR konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q52",
+     "kazanim": 61,
+     "zorluk": "orta",
+     "soru": "Stresli yaşam olaylarında depresyon ve intihar eğilimine yatkınlık yapan 5-HTTLPR aleli hangisidir?",
+     "secenekler": {
+      "A": "L aleli",
+      "B": "Met158 aleli",
+      "C": "Val158 aleli",
+      "D": "S aleli",
+      "E": "Lys487 aleli"
+     },
+     "dogru": "D",
+     "aciklama": "5-HTTLPR S aleli stresli yaşam olaylarında depresyon ve intihar eğilimine yatkınlık yapar.",
+     "sik_aciklamalari": {
+      "A": "L aleli 5-HTTLPR varyantının uzun alelidir. Stresle tetiklenen depresyon ve intihar yatkınlığı bu alel için değil kısa alel için bildirilmiştir.",
+      "B": "Met158, COMT Val158Met polimorfizminde enzimi 3-4 kat daha az aktif yapan aleldir. Serotonin taşıyıcı genine ait bir alel değildir.",
+      "C": "Val158, COMT genindeki yüksek aktiviteli aleldir ve nikotin bağımlılığıyla ilişkilendirilmiştir. Serotonin taşıyıcı geninin 5-HTTLPR varyantına ait alellerden biri değildir.",
+      "D": "S aleli, serotonin taşıyıcı geni SLC6A4'ün promotöründeki 5-HTTLPR varyantının kısa alelidir. Stresli yaşam olaylarında depresyon ve intihar yatkınlığı yaptığı için doğru cevaptır.",
+      "E": "Lys487, ALDH2 enzimini inaktive eden ve alkol bağımlılığına karşı koruyucu olan aleldir. Alkol metabolizmasına ait olduğundan serotonin taşıyıcı geniyle ilgisi bulunmaz."
+     },
+     "kanit": {
+      "sayfa": 63
+     },
+     "benzer_cikmis": []
+    },
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q53",
+     "kazanim": 61,
+     "zorluk": "orta",
+     "soru": "Alkol ve benzodiazepinlere duyarlılıkla ilişkili Pro385Ser varyantı hangi gende bulunur?",
+     "secenekler": {
+      "A": "SLC6A4",
+      "B": "GABRA6",
+      "C": "MAOA",
+      "D": "COMT",
+      "E": "ADH1B"
+     },
+     "dogru": "B",
+     "aciklama": "GABRA6 Pro385Ser varyantı alkol ve benzodiazepinlere duyarlılıkla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "SLC6A4, serotonin taşıyıcı genidir ve promotöründeki 5-HTTLPR varyantı stresle ilişkili depresyon yatkınlığı yapar. Pro385Ser varyantı bu gende değil, GABA reseptör geninde tanımlanır.",
+      "B": "GABRA6, primer inhibitör nörotransmitter GABA'nın A tipi reseptörünün α6 alt birimini kodlar. Pro385Ser varyantı alkol ve benzodiazepin duyarlılığıyla ilişkili olduğu için doğru cevaptır.",
+      "C": "MAOA, X kromozomundaki monoamin oksidaz A genidir ve tekrar bölgeleriyle antisosyal davranışla ilişkilendirilmiştir. Benzodiazepin duyarlılığıyla ilişkili varyant bu genle anılmaz.",
+      "D": "COMT, katekolaminleri yıkan enzimin genidir ve Val158Met polimorfizmiyle bilinir. Pro385Ser varyantı bu gene ait değildir; COMT'ün öne çıkan varyantı Met158 alelidir.",
+      "E": "ADH1B, alkol dehidrogenaz 1B'yi kodlar ve His47Arg polimorfizmiyle flushing yatkınlığı yapar. Alkol metabolizmasında görev alır, benzodiazepin duyarlılığıyla ilişkili varyant bu gende değildir."
+     },
+     "kanit": {
+      "sayfa": 63
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 63,
+   "metin": "Obsesif-kompulsif bozuklukta genetik konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q54",
+     "kazanim": 63,
+     "zorluk": "orta",
+     "soru": "OKB 14 yaşından önce başlamışsa hastanın birinci derece akrabalarında OKB oranı hangisidir?",
+     "secenekler": {
+      "A": "%3.4",
+      "B": "%75",
+      "C": "%47",
+      "D": "%20",
+      "E": "%8.8"
+     },
+     "dogru": "E",
+     "aciklama": "OKB'de akraba oranı %3.4, 14 yaş öncesi başlangıçta %8.8'dir.",
+     "sik_aciklamalari": {
+      "A": "Yüzde üç virgül dört, başlangıç yaşı dikkate alınmadığında OKB hastalarının birinci derece akrabalarındaki orandır. Hastalık 14 yaşından önce başladığında oran daha yüksektir.",
+      "B": "Yüzde yetmiş beş, OKB'de MZ ikiz konkordans oranıdır. Akrabalardaki görülme oranı değil, tek yumurta ikizlerinde hastalığın birlikte görülme oranıdır.",
+      "C": "Yüzde kırk yedi, OKB'de DZ ikiz konkordans oranı olarak bildirilir. Çift yumurta ikizlerine ait bu oran, birinci derece akrabalardaki erken başlangıç oranıyla karıştırılmamalıdır.",
+      "D": "Yüzde yirmi, genelleşmiş anksiyete bozukluğunda birinci derece akrabalardaki görülme sıklığıdır. Başka bir anksiyete bozukluğuna ait olduğundan OKB için bildirilen değer değildir.",
+      "E": "Hastalık 14 yaşından önce başladığında birinci derece akrabalarda OKB oranı %8.8'e yükselir. Erken başlangıcın ailesel yükü artırdığını gösteren bu değer doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 65
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 64,
+   "metin": "Panik bozukluk, GAB ve sosyal fobi konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q55",
+     "kazanim": 64,
+     "zorluk": "orta",
+     "soru": "İkiz çalışmalarında DZ ikiz konkordansının saptanamadığı anksiyete bozukluğu hangisidir?",
+     "secenekler": {
+      "A": "Panik bozukluk",
+      "B": "Obsesif kompulsif bozukluk",
+      "C": "Sosyal fobi",
+      "D": "Genelleşmiş anksiyete bozukluğu",
+      "E": "Anoreksiya nervoza"
+     },
+     "dogru": "A",
+     "aciklama": "Panik bozuklukta MZ konkordansı %31'dir, DZ konkordansı saptanamamıştır.",
+     "sik_aciklamalari": {
+      "A": "Panik bozuklukta MZ konkordansı %31 olarak bildirilirken DZ konkordansı saptanamamıştır. Bu özellik yalnız bu bozukluğa ait olduğu için doğru cevaptır.",
+      "B": "Obsesif kompulsif bozuklukta MZ konkordansı %75, DZ ikiz konkordansı %47 olarak bildirilmiştir. DZ ikizlerde belirgin bir oran saptandığı için soruda tarif edilen bozukluk bu değildir.",
+      "C": "Sosyal fobide MZ konkordansı %24, DZ konkordansı %15'tir ve kalıtsal geçiş indeksi %30 tahmin edilir. DZ ikizlerde ölçülebilen bir oran bulunduğu için soruya uymaz.",
+      "D": "Genelleşmiş anksiyete bozukluğunda MZ konkordansı %50, DZ konkordansı %5'tir ve genetik rol %31 bulunmuştur. Düşük de olsa DZ ikizlerde bir oran saptanmıştır.",
+      "E": "Anoreksiya nervoza bir yeme bozukluğudur ve MZ ikizlerde %55, DZ ikizlerde %7 konkordans gösterir. Anksiyete bozukluğu olmadığı gibi DZ oranı da saptanmıştır."
+     },
+     "kanit": {
+      "sayfa": 66
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 65,
+   "metin": "Özgül fobiler konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q56",
+     "kazanim": 65,
+     "zorluk": "kolay",
+     "soru": "En yaygın fobi türü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sosyal fobi",
+      "B": "Özgül fobi",
+      "C": "Agorafobi",
+      "D": "Panik bozukluk",
+      "E": "Genelleşmiş anksiyete bozukluğu"
+     },
+     "dogru": "B",
+     "aciklama": "Özgül fobi en yaygın fobi türüdür ve kadınlarda daha fazla görülür.",
+     "sik_aciklamalari": {
+      "A": "Sosyal fobi, aile içinde genel popülasyondan daha sık görülen ve kalıtsal geçiş indeksi %30 tahmin edilen bir anksiyete bozukluğudur. En yaygın fobi türü olarak bildirilmez.",
+      "B": "Özgül fobi, yükseklik ya da kapalı yer gibi belirli bir nesne veya duruma karşı korkudur. En yaygın fobi türü olduğu ve kadınlarda daha sık görüldüğü için doğru cevaptır.",
+      "C": "Agorafobi, OKB li MZ ikizlerde DZ lere göre daha sık görülen komorbid anksiyete tablolarından biridir. En yaygın fobi türü olarak tanımlanan özgül fobi ile karıştırılmamalıdır.",
+      "D": "Panik bozukluk, kadınlarda daha sık görülen ve MZ konkordansı %31 olan bir anksiyete bozukluğudur. Belirli bir uyarana bağlı korku olmadığı için fobi türü olarak sınıflandırılmaz.",
+      "E": "Genelleşmiş anksiyete bozukluğu, ailesel kümelenme gösteren ve majör depresyonla benzer genlerin rol oynadığı bir anksiyete tablosudur. Belirli bir uyarana bağlı fobi türü değildir."
+     },
+     "kanit": {
+      "sayfa": 67
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 67,
+   "metin": "Panik bozukluk, GAB ve sosyal fobi konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q57",
+     "kazanim": 67,
+     "zorluk": "zor",
+     "soru": "Birinci derece akrabalarda görülme sıklığı %20, kontrollerde %4 olan ve ailesel kümelenme gösteren bozukluk hangisidir?",
+     "secenekler": {
+      "A": "Panik bozukluk",
+      "B": "Sosyal fobi",
+      "C": "Genelleşmiş anksiyete bozukluğu",
+      "D": "Anoreksiya nervoza",
+      "E": "Obsesif kompulsif bozukluk"
+     },
+     "dogru": "C",
+     "aciklama": "GAB'da birinci derece akrabalarda sıklık %20, kontrollerde %4; MZ %50, DZ %5, genetik rol %31'dir.",
+     "sik_aciklamalari": {
+      "A": "Panik bozuklukta MZ ikizlerin birinci derece akrabalarında risk %10, diğerlerinde %2 olarak verilir. Sorudaki akraba ve kontrol değerleri bu bozukluğa ait değildir.",
+      "B": "Sosyal fobide MZ konkordansı %24, DZ konkordansı %15'tir ve kalıtsal geçiş indeksi %30 tahmin edilir. DZ ikizlerde ölçülebilen bir oran bulunduğu için soruya uymaz.",
+      "C": "Genelleşmiş anksiyete bozukluğu ailesel kümelenme gösterir; birinci derece akrabalarda sıklık %20, kontrollerde %4'tür. Bu değerler bozukluğu tanımladığı için doğru cevaptır.",
+      "D": "Anoreksiya nervozada birinci derece akraba riski %6, kontrol akrabalarında %1'dir ve genetik komponentin rolü %70'tir. Sorudaki daha yüksek akraba oranlarıyla örtüşmez.",
+      "E": "Obsesif kompulsif bozuklukta birinci derece akrabalarda oran %3.4, hastalık 14 yaşından önce başlamışsa %8.8'dir. Sorudaki akraba ve kontrol değerlerinden farklıdır."
+     },
+     "kanit": {
+      "sayfa": 69
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 69,
+   "metin": "Anoreksiya ve bulimiya nervozada genetik konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q58",
+     "kazanim": 69,
+     "zorluk": "orta",
+     "soru": "Anoreksiya nervozada salınımı artan ve HPA aksını aktive ederek gıda alımını azaltan molekül hangisidir?",
+     "secenekler": {
+      "A": "BDNF",
+      "B": "Enkefalin",
+      "C": "Histamin",
+      "D": "Asetaldehit",
+      "E": "TNF-α"
+     },
+     "dogru": "E",
+     "aciklama": "Anoreksiya nervozada TNF-α artar ve HPA aksını aktive ederek gıda alımını azaltır.",
+     "sik_aciklamalari": {
+      "A": "BDNF, beyin kaynaklı nörotrofik faktördür ve duygudurum ile bipolar bozuklukta aday gen olarak anılır. Anoreksiyada HPA aksı üzerinden gıda alımını azaltan molekül bu değildir.",
+      "B": "Enkefalinler mizaç, anksiyete, öfori ve ağrının modülasyonunda etkili nörotransmitterlerdir. Özgül fobilerle ilişkilendirilmiş olup anoreksiyadaki TNF alfa ve HPA aksı mekanizmasını açıklamaz.",
+      "C": "Histamin, alkol aracılı flushing reaksiyonunda deşarj olan ve ciltte ani kızarmaya yol açan mediyatördür. Yeme bozukluklarındaki gıda alımı azalmasıyla ilişkilendirilmiş bir molekül değildir.",
+      "D": "Asetaldehit, alkol metabolizmasında oluşan ara üründür; birikimi flushing ve üst GİS kanseri riskiyle ilişkilidir. Anoreksiya nervozadaki gıda alımı azalmasının mekanizmasıyla ilgisi yoktur.",
+      "E": "Tümör nekrozis faktör alfa, anoreksiya nervozada salınımı artan sitokindir. Hipotalamik pitüiter adrenal aksı aktive ederek gıda alımını azalttığı için doğru cevaptır."
+     },
+     "kanit": {
+      "sayfa": 71
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  },
+  {
+   "no": 70,
+   "metin": "Psikiyatrik hastalıklarda genetik danışma konusunu açıklayabilme",
+   "sorular": [
+    {
+     "id": "k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi-q59",
+     "kazanim": 70,
+     "zorluk": "orta",
+     "soru": "Psikiyatrik hastalıklarda genetik danışmada ailelere bilgi verirken en uygun dayanak hangisidir?",
+     "secenekler": {
+      "A": "Aile çalışmalarının bulguları",
+      "B": "Altın standart tanı testi",
+      "C": "Tek gen mutasyon analizi",
+      "D": "Sitogenetik karyotip",
+      "E": "LOD skoru"
+     },
+     "dogru": "A",
+     "aciklama": "Altın standart tanı testi olmadığından danışmada aile çalışmalarının bulgularıyla bilgi vermek en uygunudur.",
+     "sik_aciklamalari": {
+      "A": "Aile çalışmaları akrabalardaki tekrarlama risklerini genel popülasyonla karşılaştırarak ortaya koyar. Psikiyatrik hastalıklar multifaktöriyel olduğundan danışmada en uygun dayanak budur ve doğru cevaptır.",
+      "B": "Altın standart tanı testi, bir hastalığı kesin olarak gösteren referans testtir. Psikiyatrik hastalıklar için böyle bir genetik test bulunmadığından danışma buna dayandırılamaz.",
+      "C": "Tek gen mutasyon analizi, Huntington gibi tek gen kalıtımlı hastalıklarda anlamlı bir yöntemdir. Poligenik psikiyatrik hastalıklarda riski tek başına öngörmediği için danışmanın dayanağı olamaz.",
+      "D": "Karyotip gibi sitogenetik incelemeler Down ya da Turner sendromu gibi yapısal kromozom anomalilerini gösterir. Psikiyatrik hastalıkların çoğunda risk tahmini için yeterli bilgi vermez.",
+      "E": "LOD skoru, bağlantı analizinde bir genin kromozom bölgesinde bulunma olasılığını değerlendiren araştırma ölçütüdür. Bireysel aile danışmasında risk bildirmek için kullanılmaz."
+     },
+     "kanit": {
+      "sayfa": 72
+     },
+     "benzer_cikmis": []
+    }
+   ]
+  }
+ ]
+}

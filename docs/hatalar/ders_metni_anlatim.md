@@ -211,3 +211,10 @@
 - **Kök neden:** Ekran vurgusu `konusma_v2.vurgu_turet` ile cümlelerin `vurgu`/`cikmis` alanlarından türetilir. Bu üç dersin `konusma_v2.json`'unda yazar cümlelere `vurgu` etiketi koymamıştı (360 cümlenin 10'u); yalnız çıkmışa bağlı cümleler vurgulandı. V2 sürümü V1'in boş alanlarını aynen devraldı. Hiçbir kapı vurgu yoğunluğunu ölçmüyor.
 - **Çözüm:** Her cümleye ses metninde harfi harfine geçen terim/tanım/sayı/tuzak etiketi yazıldı (V2'de %55–62 cümle; V1 aynı kimlikli cümlelerden aldı), eski etiketler korundu, `vurgu/<key>.json` `vurgu_turet` ile yeniden üretildi; vurgulu paragraf 11→40, 11→26, 8→39; aralıklar API paragraf metniyle birebir hizalı.
 - **Kural:** Kurul 2+ derste cümlelerin en az ~%40'ı `vurgu` taşımalı; `metin` `ses` içinde birebir geçmeli (okunuşu farklı kısaltmada ses biçimi: "Viski ar"). Yayından önce vurgulu paragraf oranı denetlenir.
+
+### H683 — Anlatımda bir sayfanın bütün cümleleri tek cümleyle ezildi, kapı geçti (2026-11-25, k2-59 p015)
+
+- **Belirti:** Bağımsız denetçi k2-59 s15 paragrafında aynı cümlenin art arda 5 kez yazıldığını ve slaytın (mutasyon/polimorfizm tanımı, altı nesil belirteç) anlatılmadığını buldu; anlatım kapısı 0 HATA vermişti.
+- **Kök neden:** Yazar ajanın toplu düzeltme betiği satırları sayfa öneki (`'15|'`) ile arıyordu; önek sayfanın tüm cümlelerine uyduğu için hepsi tek cümleyle değiştirildi. `anlatim_kapi.py`'nin dört alt kapısından hiçbiri birebir yinelenen cümleyi saymıyordu.
+- **Çözüm:** p015 yeniden yazıldı; `anlatim_kapi.py`'ye `[yineleme]` denetimi eklendi (≥25 karakterlik aynı `ses` derste ikinci kez geçerse HATA). Yayındaki dersler temiz, sentetik yineleme HATA veriyor.
+- **Kural:** Toplu düzeltme betiği tek kayda uyan anahtarla (cümle kimliği) değiştirir; önek/kalıp eşlemesiyle toplu ezme yapılmaz. Kapı geçse de denetçi aşaması atlanmaz.
