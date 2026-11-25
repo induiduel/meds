@@ -8,6 +8,7 @@ import React, { useCallback, useEffect, useRef, useState, useSyncExternalStore }
 import { createPortal } from 'react-dom';
 import { ChevronLeft, ChevronRight, CircleAlert, Pause, Play, X } from 'lucide-react';
 import { dersSoruKaydet } from '../../services/calismaTakip';
+import { kayitHaritasi, okunanAralik } from '../spots/cozucu/okunanKelime';
 import { klipYolu, HARFLER, type CDers, type CDizin, type CSoru, type Harf, type Klip } from '../spots/cozucu/cozucuVeri';
 import type { Brans } from '../spots/brans';
 import { cdAbone, cdDurum, cdDuraklat, cdParagrafa, cdToggle } from './canliDersStore';
@@ -163,6 +164,9 @@ export function CdHocaAraDugme({ dersKey }: { dersKey: string }) {
   );
 }
 
+/** klipte okunan bir metin parçası: vurgu anahtarı + ekrandaki ögesi (kelime takibi için) */
+interface Parca { metin: string; vurgu: string | null; sel?: string; atla?: string }
+
 type Evre = 'oku' | 'dusun' | 'coz' | 'anlat' | 'bitti';
 const BEKLE_SN = 5;
 
@@ -187,16 +191,45 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
   }, [brans, ders]);
   const ortakUrl = (ad: string) => (ortak[ad] ? `${klipYolu(brans, 'ema', 'ortak', ad)}?v=${ortak[ad].v}` : null);
 
-  /** Bir klibi çalar; zaman dizisine göre o an okunan parçayı vurgular */
-  const cal = useCallback(async (ad: string, metin: string, parca: (c: number) => string | null) => {
+  /** okunan kelime: o an okunan cümlenin zamanı + ekrandaki ögesi (sel); sel yoksa yalnız parça vurgusu */
+  const okuRef = useRef<{ b: number; e: number; s: number; ns: number; mb: number; me: number; sel?: string; atla?: string } | null>(null);
+  /** Bir klibi çalar; zaman kaydı (cümle başına) parçaya ve cümleye eşlenir: parça bütün olarak, kelime cümle içinde vurgulanır */
+  const cal = useCallback(async (ad: string, parcalar: Parca[]) => {
     const { url, k } = klip(ad);
-    return sesCal(url, okumaSn(metin), (t) => {
-      const z = k?.zaman || [];
+    const z = k?.zaman || [];
+    const harita = kayitHaritasi(z.length, parcalar.map((x) => x.metin));
+    okuRef.current = null;
+    return sesCal(url, okumaSn(parcalar.map((x) => x.metin).join(' ')), (t) => {
+      if (!z.length) { setVurgu(parcalar[0]?.vurgu ?? null); return; }
       let c = 0;
-      for (let x = 0; x < z.length; x++) if (t >= z[x][0]) c = x;
-      setVurgu(parca(c));
+      for (let x = 0; x < z.length; x++) if (t + 0.08 >= z[x][0]) c = x;
+      const h = harita[c] || { m: Math.min(c, parcalar.length - 1), s: 0, ns: 1 };
+      const p = parcalar[h.m];
+      const ilk = c - h.s, son = ilk + h.ns - 1;
+      okuRef.current = url && p?.sel ? { b: z[c][0], e: z[c][1], s: h.s, ns: h.ns, mb: z[ilk]?.[0] ?? z[c][0], me: z[son]?.[1] ?? z[c][1], sel: p.sel, atla: p.atla } : null;
+      setVurgu(p?.vurgu ?? null);
     });
   }, [klip]);
+
+  // okunan kelime (CSS Highlight API, .ha-sayfa ile kapsamlı): sesle her karede
+  useEffect(() => {
+    const H = (CSS as unknown as { highlights?: Map<string, unknown> }).highlights;
+    const HL = (window as unknown as { Highlight?: new (r: Range) => unknown }).Highlight;
+    if (!H || !HL) return;
+    let raf = 0, sonR: Range | null = null;
+    const dongu = () => {
+      raf = requestAnimationFrame(dongu);
+      const o = okuRef.current;
+      const kap = o?.sel ? document.querySelector(`.ha-sayfa ${o.sel}`) : null;
+      if (!o || !kap || !ses || ses.paused) { if (sonR) { H.delete('ha-okunan'); sonR = null; } return; }
+      const r = okunanAralik(kap, ses.currentTime, o, o.atla);
+      if (!r || (sonR && r.startContainer === sonR.startContainer && r.startOffset === sonR.startOffset)) return;
+      sonR = r;
+      H.set('ha-okunan', new HL(r));
+    };
+    raf = requestAnimationFrame(dongu);
+    return () => { cancelAnimationFrame(raf); H.delete('ha-okunan'); };
+  }, []);
 
   const sonraki = useCallback(() => {
     if (a.i < liste.length - 1) ayarla({ ...a, i: a.i + 1 });
@@ -210,11 +243,11 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     setEvre('coz');
     if (yanlis) {
       if (!(await sesCal(ortakUrl('yanlis'), 0.8, () => {})) || dur()) return;
-      if (!(await cal(`s-${no}-${yanlis}`, q.siklar[yanlis], () => yanlis)) || dur()) return;
+      if (!(await cal(`s-${no}-${yanlis}`, [{ metin: q.siklar[yanlis], vurgu: yanlis, sel: '.ha-sik.is-okunan small' }])) || dur()) return;
     }
-    if (!(await cal(dogruSecti ? `d-${no}` : `c-${no}`, q.cozum, () => q.dogru)) || dur()) return;
+    if (!(await cal(dogruSecti ? `d-${no}` : `c-${no}`, [{ metin: q.cozum, vurgu: q.dogru }])) || dur()) return; // çözüm metni ekranda yazılı değil: kelime vurgusu yok
     setEvre('anlat');
-    if (!(await cal(`a-${no}`, q.anlatim, () => 'anlatim')) || dur()) return;
+    if (!(await cal(`a-${no}`, [{ metin: q.anlatim, vurgu: 'anlatim', sel: '.ha-anlat p' }])) || dur()) return;
     setEvre('bitti');
     setVurgu(null);
     await new Promise((r) => setTimeout(r, 1200));
@@ -227,7 +260,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     const dur = () => id !== akis.current;
     setEvre('oku'); setSecim(null); setVurgu(null); setDurdu(false); setKalan(BEKLE_SN);
     (async () => {
-      const ok = await cal(`q-${q.no}`, [q.soru, ...Object.values(q.secenekler)].join(' '), (c) => (c === 0 ? 'kok' : HARFLER[c - 1] || null));
+      const ok = await cal(`q-${q.no}`, [{ metin: q.soru, vurgu: 'kok', sel: '.ha-kok' }, ...HARFLER.map((h) => ({ metin: q.secenekler[h], vurgu: h, sel: '.ha-sik.is-okunan > span', atla: 'small' }))]);
       if (!ok || dur()) return;
       setEvre('dusun'); setVurgu(null);
       for (let s = BEKLE_SN; s > 0; s--) {
@@ -251,7 +284,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     if (secim) { // çözülmüş soruda şıkka dokunmak o şıkkın açıklamasını okur
       akis.current++;
       setDurdu(false);
-      cal(`s-${q.no}-${h}`, q.siklar[h], () => h);
+      cal(`s-${q.no}-${h}`, [{ metin: q.siklar[h], vurgu: h, sel: '.ha-sik.is-okunan small' }]);
       return;
     }
     akis.current++;
