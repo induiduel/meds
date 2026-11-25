@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 939,
-  "baslik": "\"Ses yükleniyor\" ibaresi ekranın üstünde",
+  "onem": 940,
+  "baslik": "Sesli derslerde son işaretsiz cümleler",
   "maddeler": [
-    "**Ses yükleniyor:** İbare artık ekranın üst ortasında; sesli derste alttaki oynatıcı çubuğunu örtmüyor."
+    "Başlık ve kapanış slaytlarında anlatılan cümleler artık \"hocanın ek açıklaması\" olarak gösteriliyor."
   ],
   "eklenen": [],
   "degisen": [

@@ -768,7 +768,9 @@ def sayfa_onar(liste: list, cumleler: list[str], capali_ci: set[int], pdfler: li
             # hocanın slayt dışı ek açıklamasıdır (çıkmış/şık yorumu, slaytta yazmayan bilgi). Yanlış maddeye bağlamak
             # yerine açıkça "ek" denir; ön yüz "slaytta yok" etiketi gösterir. Metinsiz/resim slaytı "sayfa" kalır.
             sy = pdf.sayfa(x["s"])
-            if sy and sum(1 for md in sy.maddeler if md["kok"] >= 2) >= 2:
+            # Görselsiz, yalnız başlık/kapanış yazılı slayt (≤9 kelime: "Epilepsi tedavisi", "Teşekkürler · Sorular") da
+            # anlatılanı içermez → "ek" doğrudur (H655 ek 10; görsel slayt "sayfa" kalır, yanlış "slaytta yok" denmez).
+            if sy and (sum(1 for md in sy.maddeler if md["kok"] >= 2) >= 2 or (not sy.resimler and len(sy.kelimeler) <= 9)):
                 yeni = {"d": x["d"], "s": x["s"], "t": "ek", "l": [], "w": []}
         if yeni:
             say["sayfa"] -= 1
