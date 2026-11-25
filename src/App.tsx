@@ -1,4 +1,5 @@
 import { fetchMyAccess, setModeratorMode } from './services/moderatorSession';
+import { guncellemeRoluAyarla } from './components/system/UpdatePrompt';
 import { guvenliLazy } from './utils/guvenliLazy';
 import { Gorunumler } from './app/Gorunumler';
 import { Modallar } from './app/Modallar';
@@ -757,6 +758,7 @@ export default function App() {
       cancelled = true;
     };
   }, [currentUser?.uid, isAdmin]);
+  useEffect(() => { guncellemeRoluAyarla(isAdmin ? 'admin' : isModerator ? 'mod' : 'yok'); }, [isAdmin, isModerator]);
 
   // Hoş geldin turu: kayıt/girişten sonra bir kez (profilde `medsoru_tour_v1`); Ayarlar'dan `medsoru:tour` ile yeniden
   const { showTour, setShowTour, girisUyarisi, setGirisUyarisi, justAuthedRef, activeTabRef, showTanitim, setShowTanitim, tanitimGoruldu } =

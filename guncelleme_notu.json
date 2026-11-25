@@ -1,14 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 942,
-  "baslik": "Arşiv derslerinde PDF işaretleri",
+  "onem": 943,
+  "baslik": "Küçük iyileştirmeler",
   "maddeler": [
-    "Geçen yılın Kurul 2 ve 3 sesli derslerinde PDF işareti artık tek tek kelimeler yerine anlatılan maddenin satırını gösteriyor."
+    "Arka planda kararlılık ve başarım iyileştirmeleri yapıldı."
   ],
   "eklenen": [],
-  "degisen": [
-    "Ses yükleniyor göstergesinin yeri"
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": [],
   "yenilikler": []

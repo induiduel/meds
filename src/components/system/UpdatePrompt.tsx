@@ -37,19 +37,23 @@ const gorulduYaz = (onem: number) => {
   try { if (onem > goruldu()) localStorage.setItem(GORULDU_KEY, String(onem)); } catch { /* depolama kapalı */ }
 };
 /* ── Ortak depo: bekleyen güncelleme + diyalog açık mı ── */
-type Durum = { bilgi: Bilgi | null; acik: boolean; yenilik: boolean };
-let durum: Durum = { bilgi: null, acik: false, yenilik: false };
+/** Görünürlük rolü (2026-11-25): yönetici → diyalog kendiliğinden açılır; moderatör → yalnız üst çubuk simgesi;
+ *  diğer kullanıcılar güncellemeyi hiç görmez (simge, diyalog, Yenilikler penceresi yok). */
+export type GuncellemeRolu = 'yok' | 'mod' | 'admin';
+type Durum = { bilgi: Bilgi | null; acik: boolean; yenilik: boolean; rol: GuncellemeRolu };
+let durum: Durum = { bilgi: null, acik: false, yenilik: false, rol: 'yok' };
 const dinleyiciler = new Set<() => void>();
 const yay = (d: Partial<Durum>) => { durum = { ...durum, ...d }; dinleyiciler.forEach((f) => f()); };
 const abone = (f: () => void) => { dinleyiciler.add(f); return () => { dinleyiciler.delete(f); }; };
+export const guncellemeRoluAyarla = (rol: GuncellemeRolu) => { if (durum.rol !== rol) yay({ rol, acik: rol === 'yok' ? false : durum.acik }); };
 const useDurum = () => useSyncExternalStore(abone, () => durum, () => durum);
 /** Biriken güncelleme sayısı (önem farkı) */
 const birikmis = (b: Bilgi | null) => (b ? Math.max(0, b.onem - ONEM) : 0);
 
 /** Üst çubuk simgesi: bekleyen güncelleme varken görünür; dokununca notlar + "Siteyi güncelle" */
 export const GuncellemeSimgesi: React.FC<{ className?: string }> = ({ className = '' }) => {
-  const { bilgi } = useDurum();
-  if (!bilgi) return null;
+  const { bilgi, rol } = useDurum();
+  if (!bilgi || rol === 'yok') return null;
   const n = birikmis(bilgi);
   return (
     <button type="button" className={`up-ikon ${className}`} onClick={() => yay({ acik: true })}
@@ -128,7 +132,7 @@ const UpdatePrompt: React.FC = () => {
       if (iptal || !b || b.onem <= ONEM || b.surum === SURUM) return;
       // Eski sürümdeki sekme: "Güncelle" penceresi bu önem için cihazda bir kez kendiliğinden açılır (2026-10-31 kararı);
       // sonrasında yalnız üst çubuk ✦ simgesi kalır. Yeni sürüm arka planda iner.
-      yay({ bilgi: b, acik: durum.acik || (b.onem > goruldu() && !durum.yenilik) });
+      yay({ bilgi: b, acik: durum.acik || (durum.rol === 'admin' && b.onem > goruldu() && !durum.yenilik) });
       if (!indirildi) { indirildi = true; sessizIndir(); }
     };
     const ilk = window.setTimeout(denetle, 20_000);
@@ -154,8 +158,9 @@ const UpdatePrompt: React.FC = () => {
 
   useEffect(() => { if (bilgi) dugme.current?.focus(); }, [bilgi]);
 
-  const { yenilik } = useDurum();
-  if (!bilgi && yenilik) return <Pencere kip="yenilik" baslik={NOT.baslik} maddeler={NOT.maddeler} yenilikler={NOT.yenilikler} kapat={() => yay({ yenilik: false })} />;
+  const { yenilik, rol } = useDurum();
+  if (rol === 'yok') return null;
+  if (!bilgi && yenilik && rol === 'admin') return <Pencere kip="yenilik" baslik={NOT.baslik} maddeler={NOT.maddeler} yenilikler={NOT.yenilikler} kapat={() => yay({ yenilik: false })} />;
   if (!bilgi) return null;
   const sonra = () => { gorulduYaz(bilgi.onem); sessizIndir(); yay({ acik: false }); };
   const n = birikmis(bilgi);
