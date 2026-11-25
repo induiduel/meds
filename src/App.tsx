@@ -33,6 +33,9 @@ import { CanliDersDockGate } from './components/canliDers/CanliDersDockGate';
 import { useSyncExternalStore as useV17Dis } from 'react';
 import { v17Acik, v17Dinle, V17_ROTALAR } from './v17/bayrak';
 const V17Kok = guvenliLazy(() => import('./v17/Kok'));
+import { tasarrufAcik, TASARRUF_ROTALAR } from './tasarruf/bayrak';
+const TasarrufKabuk = guvenliLazy(() => import('./tasarruf/TasarrufKabuk'));
+const TasarrufAyarlar = guvenliLazy(() => import('./tasarruf/TasarrufKabuk').then((m) => ({ default: m.TasarrufAyarlar })));
 import { CdVideoRozet } from './components/canliDers/CdVideoRozet';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 const WelcomeTour = guvenliLazy(() => import('./components/onboarding/WelcomeTour'));
@@ -741,15 +744,19 @@ export default function App() {
   }, [sayfaKapaliMi, activeTab]);
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
+  const [rolBilindi, setRolBilindi] = useState(false);
   useEffect(() => {
     let cancelled = false;
     if (!currentUser || isAdmin) {
       setIsModerator(false);
       setModeratorMode(false);
+      setRolBilindi(true);
       return;
     }
+    setRolBilindi(false);
     void fetchMyAccess().then((a) => {
       if (cancelled) return;
+      setRolBilindi(true);
       const on = !!a && a.role !== 'student' && !a.suspended;
       setModeratorMode(on);
       setIsModerator(on);
@@ -1380,6 +1387,10 @@ export default function App() {
     }
   }, [girisKapisi, currentUser, aiTest]);
   const gorunumBaglami = { activeTab, canliDersKey, committees, completedQuestions, congratsToast, currentCommittee, currentUser, deepLinkNonce, driveUploadSuccess, emptyQuestions, fetchQuestions, filterMyQuestionsOnly, gatheringQuestions, gorunenTab, handleAddFragment, handleAddOption, handleAddQuestionContribution, handleDeleteQuestion, handleGenerateSlots, handleGoogleLogout, handleReconstructWithAi, handleSetClaimedAnswer, handleUpdateQuestionReference, handleUpvoteFragment, handleUpvoteOption, handleUpvoteQuestion, isAdmin, isGeneratingSlots, learnLinkNonce, learnQuestionFocus, loading, myQuestions, openQuestion, openSearchHit, openSummaryId, ornekQuestionId, pastExamsSearchQuery, poolFocusQuestion, poolQuestions, questions, reconstructingMap, sayfaGizliMi, sayfaKapaliMi, searchFocusId, searchPageQuery, searchQuery, selectedCommitteeId, selectedDiscipline, selectedDiseaseId, selectedGlossaryTermId, selectedLearnDeckId, selectedLearnSlideNumber, selectedOrnekKazanimNo, selectedOrnekLessonId, selectedStatus, setActiveTab, setAuthModalInitialMode, setClusterFocusId, setCongratsToast, setContributeDefaultNumber, setCurrentUser, setDriveUploadSuccess, setFilterMyQuestionsOnly, setIsAuthModalOpen, setIsContributeModalOpen, setIsEditQuestionModalOpen, setIsHistoryModalOpen, setIsOfflineModalOpen, setIsPdfModalOpen, setLearnQuestionFocus, setOptimizeQuestion, setPastExamsSearchQuery, setPdfSlideTarget, setPoolFocusId, setSearchPageQuery, setSearchQuery, setSelectedCommitteeId, setSelectedDiscipline, setSelectedLearnDeckId, setSelectedLearnSlideNumber, setSelectedOrnekKazanimNo, setSelectedOrnekLessonId, setSelectedQuestionForHistory, setSelectedQuestionToEdit, setSelectedStatus, setShowClusterModal, setVisibleCount, standaloneQuestions, targetCount, visibleCount };
+  // Tasarruf kipi (2026-11-25): öğrenci yalnız sade kabuğu görür; izinli olmayan sayfa ilk sayfaya döner
+  const tasarruf = tasarrufAcik(isAdmin, isModerator, rolBilindi) && !isManageRoute && !isAdminAppMode();
+  const tasarrufTab = (tasarruf && !TASARRUF_ROTALAR.has(activeTab) ? 'canli_ders' : activeTab) as typeof activeTab;
+  useEffect(() => { if (tasarruf && tasarrufTab !== activeTab) setActiveTab(tasarrufTab); }, [tasarruf, tasarrufTab, activeTab, setActiveTab]);
   const modalBaglami = { accessToken, activeTab, authModalInitialMode, clusterFocusId, committees, contributeDefaultNumber, currentCommittee, currentUser, fetchQuestions, handleAddCommittee, handleAddQuestionContribution, handleAuthSuccess, isAdmin, isAuthModalOpen, isContributeModalOpen, isDiagnosticsOpen, isDriveModalOpen, isEditQuestionModalOpen, isHistoryModalOpen, isNewCommitteeModalOpen, isNotebookLMModalOpen, isOfflineModalOpen, isPastExamImporterOpen, isPdfModalOpen, isPwaWelcomeOpen, isSubagentMonitorOpen, optimizeQuestion, pdfSlideTarget, questions, selectedCommitteeId, selectedQuestionForHistory, selectedQuestionToEdit, setActiveTab, setDriveUploadSuccess, setIsAuthModalOpen, setIsContributeModalOpen, setIsDiagnosticsOpen, setIsDriveModalOpen, setIsEditQuestionModalOpen, setIsHistoryModalOpen, setIsNewCommitteeModalOpen, setIsNotebookLMModalOpen, setIsOfflineModalOpen, setIsPastExamImporterOpen, setIsPdfModalOpen, setIsPwaWelcomeOpen, setIsSubagentMonitorOpen, setOptimizeQuestion, setPdfSlideTarget, setQuestions, setSelectedQuestionForHistory, setSelectedQuestionToEdit, setShowClusterModal, showClusterModal, showOnboarding };
 
   // Erişim sınırı: izinli listede olmayan hesap için kabuk, veritabanı, harita, oyun hiç kurulmaz (2026-11-23).
@@ -1402,6 +1413,23 @@ export default function App() {
   }
 
   return (
+    tasarruf ? (
+      <GlossaryProvider>
+      <MusicPlayerProvider>
+        <ToastHost />
+        <Suspense fallback={<ViewFallback />}>
+          <TasarrufKabuk aktif={tasarrufTab} git={setActiveTab}>
+            {tasarrufTab === 'settings' ? (
+              <TasarrufAyarlar ad={currentUser?.displayName} cikis={handleGoogleLogout} />
+            ) : (
+              <Gorunumler {...gorunumBaglami} activeTab={tasarrufTab} gorunenTab={tasarrufTab} />
+            )}
+          </TasarrufKabuk>
+        </Suspense>
+        <CanliDersDockGate activeTab={tasarrufTab} dersKey={tasarrufTab === 'canli_ders' ? canliDersKey : undefined} />
+      </MusicPlayerProvider>
+      </GlossaryProvider>
+    ) : (
     <GlossaryProvider>
     <MusicPlayerProvider>
       {girisUyarisi && !isManageRoute && (
@@ -1634,5 +1662,6 @@ export default function App() {
       </div>
     </MusicPlayerProvider>
     </GlossaryProvider>
+    )
   );
 }
