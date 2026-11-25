@@ -244,6 +244,11 @@ export function saveLocalDb(data: LocalDatabase) {
   }
 }
 
+/** Yapay zekâ test oturumu (imzalı HttpOnly çerez, App.tsx /api/ai-test/durum ile öğrenir): API alt alanına giden
+ *  isteklerde çerez gönderilir ki erişim kapısı oturumu görsün. Gerçek kullanıcı jetonu başlıkta taşır (2026-11-25). */
+let aiTestOturumu = false;
+export function aiTestOturumuIsaretle(acik: boolean): void { aiTestOturumu = acik; }
+
 export async function safeJsonFetch<T = any>(
   input: RequestInfo | URL,
   init?: RequestInit
@@ -307,6 +312,7 @@ export async function safeJsonFetch<T = any>(
     }
 
     const fetchOptions: RequestInit = {
+      ...(aiTestOturumu && /^https:\/\/([a-z0-9-]+\.)*nofrostlife\.com\.tr\//.test(resolvedUrlString) ? { credentials: 'include' as RequestCredentials } : {}),
       ...init,
       headers,
       signal: hasSignal || (typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(timeoutMs) : undefined),

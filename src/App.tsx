@@ -65,7 +65,7 @@ const Onboarding = guvenliLazy(() => import('./components/onboarding/Onboarding'
 const ViewFallback = () => <PageLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
 import { systemHealthMonitor } from './services/systemHealthMonitor';
-import { ApiService } from './services/api';
+import { ApiService, aiTestOturumuIsaretle } from './services/api';
 import type { QuestionFocus } from './services/questionFocus';
 import { multiDbManager } from './services/multiDbManager';
 import {
@@ -523,7 +523,7 @@ export default function App() {
     let iptal = false;
     fetch('/api/ai-test/durum', { credentials: 'same-origin', cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : { ok: false }))
-      .then((d) => { if (!iptal) setAiTest(d?.ok === true); })
+      .then((d) => { aiTestOturumuIsaretle(d?.ok === true); if (!iptal) setAiTest(d?.ok === true); })
       .catch(() => { if (!iptal) setAiTest(false); });
     return () => { iptal = true; };
   }, []);

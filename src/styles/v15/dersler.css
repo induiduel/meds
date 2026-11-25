@@ -435,14 +435,23 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15 .sl15-ac-bas b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sl15 .sl15-ac-bas .v15-cap { flex: none; white-space: nowrap; }
 .sl15 .sl15-ac-bas .sl15-bar { min-width: 40px; }
+/* Tablet + telefon (2026-11-25 v2): her branş bir kart; 1. satır ad + bitti + branş sayfası oku, altında ince çubuk;
+   2. satır adın hizasında küçük, sade eylem çipleri (Check-up, Listeye ekle) — kimin düğmesi olduğu kartla belli. */
 @media (max-width: 1100px) {
-  .sl15 button.sl15-ac-bas { flex: 1 1 100%; margin-left: -10px; max-width: calc(100% + 10px); }
-  .sl15 .sl15-ac-bas .sl15-bar { max-width: none; flex: 1 1 60px; }
-  .sl15 .sl15-checkup { margin-left: 26px; }
-  .sl15 .sl15-brans-git { margin-left: auto; }
+  .sl15 .sl15-grup { flex: none; gap: 0; border: 1px solid var(--color-line); border-radius: 16px; background: var(--color-white); overflow: hidden; }
+  .sl15 .sl15-alan { gap: 10px; }
+  .sl15 .sl15-bas-sat { padding: 4px 6px 10px 4px; row-gap: 2px; column-gap: 6px; }
+  .sl15 button.sl15-ac-bas { order: 1; flex: 1 1 calc(100% - 52px); margin: 0; flex-wrap: wrap; row-gap: 6px; column-gap: 8px; padding: 10px 8px 4px; }
+  .sl15 .sl15-ac-bas .v15-cap { margin-left: auto; font-size: 12.5px; }
+  .sl15 .sl15-ac-bas .sl15-bar { order: 9; flex: 1 1 100%; max-width: none; margin: 0 0 0 26px; height: 4px; }
+  .sl15 .sl15-brans-git { order: 2; margin-left: auto; align-self: flex-start; margin-top: 2px; }
+  :root[data-v15='on'] .sl15 .sl15-checkup, :root[data-v15='on'] .sl15 .sl15-bas-sat .cd-toplu { order: 3; min-height: 34px; height: 34px; padding: 0 12px; font-size: 13px; border-radius: 999px; gap: 6px; }
+  .sl15 .sl15-checkup { margin-left: 34px; background: color-mix(in srgb, var(--color-accent) 10%, transparent); box-shadow: none; }
+  .sl15 .sl15-checkup svg, .sl15 .sl15-bas-sat .cd-toplu svg { width: 15px; height: 15px; }
+  .sl15 .sl15-bas-sat .cd-toplu { order: 4; }
+  .sl15 .sl15-acilan { border: 0; border-top: 1px solid var(--color-line); border-radius: 0; box-shadow: none; margin: 0; }
 }
 @media (max-width: 520px) {
-  .sl15 .sl15-checkup { margin-left: 0; flex: 1 1 auto; justify-content: center; min-width: 0; }
   .sl15 .sl15-bas-sat .cd-toplu > span { display: none; }
-  .sl15 .sl15-bas-sat .cd-toplu { min-height: 40px; min-width: 40px; justify-content: center; }
+  :root[data-v15='on'] .sl15 .sl15-bas-sat .cd-toplu { width: 34px; padding: 0; justify-content: center; }
 }

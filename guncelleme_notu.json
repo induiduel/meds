@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 911,
-  "baslik": "Ders özeti yenilendi, psikiyatri V2 sesli dersleri, ayar düzeltmeleri",
+  "onem": 912,
+  "baslik": "Sesli ders listesi telefonda yeni görünüm",
   "maddeler": [
-    "Ders özeti: yeni görünüm ve oynatıcı",
-    "Psikiyatri V2 sesli dersleri: zaman ve hizalama verileri",
-    "Site ayarları, ilerleme temizleme ve çalışma takibi düzeltmeleri"
+    "Telefon ve tablette her branş ayrı bir kart: ad, ilerleme ve branş sayfası oku üstte, Check-up ve Listeye ekle küçük düğmeler olarak altta.",
+    "Check-up düğmesi küçüldü; hangi düğmenin hangi branşa ait olduğu kartla belli."
   ],
   "eklenen": [
     "Branş check-up"

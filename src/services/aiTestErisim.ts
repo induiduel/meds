@@ -35,10 +35,17 @@ export function aiTestGecerli(req: express.Request): boolean {
   return s.length === beklenen.length && crypto.timingSafeEqual(Buffer.from(s), Buffer.from(beklenen));
 }
 
+/** Canlı sitede çerez üst alan adına kurulur: veri istekleri api. alt alanına gider, çerez yalnız ana adda kalırsa
+ *  erişim kapısı test oturumunu orada görmez (2026-11-25). SameSite=Strict aynı site alt alanlarında yine gönderilir. */
+function alanAdi(req: express.Request): string {
+  const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(',')[0].trim().replace(/:\d+$/, '').toLowerCase();
+  return /(^|\.)nofrostlife\.com\.tr$/.test(host) ? '; Domain=nofrostlife.com.tr' : '';
+}
+
 function cerezKur(req: express.Request, res: express.Response): number {
   const bitis = Date.now() + SURE_MS;
   const guvenli = req.secure || String(req.headers['x-forwarded-proto'] || '').includes('https');
-  res.setHeader('Set-Cookie', `${CEREZ}=${bitis}.${imza(bitis)}; Path=/; Max-Age=${SURE_MS / 1000}; HttpOnly; SameSite=Strict${guvenli ? '; Secure' : ''}`);
+  res.setHeader('Set-Cookie', `${CEREZ}=${bitis}.${imza(bitis)}; Path=/; Max-Age=${SURE_MS / 1000}; HttpOnly; SameSite=Strict${alanAdi(req)}${guvenli ? '; Secure' : ''}`);
   return bitis;
 }
 
@@ -83,8 +90,8 @@ export function registerAiTestRoutes(app: express.Express) {
     res.setHeader('Cache-Control', 'no-store');
     res.json({ ok: aiTestGecerli(req) });
   });
-  app.post('/api/ai-test/cikis', (_req, res) => {
-    res.setHeader('Set-Cookie', `${CEREZ}=; Path=/; Max-Age=0; HttpOnly; SameSite=Strict`);
+  app.post('/api/ai-test/cikis', (req, res) => {
+    res.setHeader('Set-Cookie', [`${CEREZ}=; Path=/; Max-Age=0; HttpOnly; SameSite=Strict`, `${CEREZ}=; Path=/; Max-Age=0; HttpOnly; SameSite=Strict${alanAdi(req)}`]);
     res.json({ ok: true });
   });
 }
