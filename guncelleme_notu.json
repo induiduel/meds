@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 945,
-  "baslik": "Yeni seçmeli görünüm: v18 Canlı",
+  "onem": 946,
+  "baslik": "v18 Canlı görünüm: tüm sayfalar",
   "maddeler": [
-    "Ayarlar: Arayüz satırından v18 · Canlı görünüm açılabilir; varsayılan v15 aynı kalır.",
-    "Sesli dersler ve soru çözücü: v18'de her ders ayrı kart, yeşil ilerleme, siyah devam kartı."
+    "v18 · Canlı: Sınav sayfasında üst üste binen liste düzeldi; branş dersleri sade liste; alt menüde seçili sekme siyah."
   ],
   "eklenen": [],
   "degisen": [],

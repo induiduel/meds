@@ -41,7 +41,7 @@
 
 /* ---- Dizin: kart içinde satır listesi, sade numara ---- */
 :root[data-v18='on'] #ana-icerik {
-  & .kd { border: 1px solid var(--cn-hat); border-radius: var(--cn-r); background: var(--cn-yuzey); box-shadow: var(--cn-golge); overflow: hidden; }
+  & .kd { border: 1px solid var(--cn-hat); border-radius: var(--cn-r); background: var(--cn-yuzey); box-shadow: var(--cn-golge); overflow: clip; } /* hidden: ızgarada min-height 0 olur, kart sıkışıp alttakine biner */
   & .kd-h { margin: 0; padding: 12px 16px 8px; border: 0; font-size: 11px; letter-spacing: .06em; color: var(--color-ink-3); }
   & .kd-say { color: var(--color-ink-3); }
   & .kd-l li { border-bottom: 1px solid var(--cn-hat); }
@@ -139,6 +139,7 @@
     box-shadow: var(--cn-golge); padding: 14px 14px 12px; margin: 0; flex-shrink: 0; overflow: visible;
     transition: border-color .18s, box-shadow .18s var(--cn-ease);
   }
+  & .sl15-grup .sl15-acilan { border: 0 !important; border-top: 1px solid var(--cn-hat) !important; border-radius: 0 !important; background: transparent; margin: 6px -14px -12px; }
   & .sl15-grup:hover { border-color: var(--cn-hat-g) !important; box-shadow: var(--cn-golge-h); }
   & .sl15-grup[open], & .sl15-grup.is-acik { border-color: var(--cn-hat-g) !important; }
   & :is(.sl15-bas, .v15-cap) { letter-spacing: 0; }
@@ -158,6 +159,16 @@
   & .bsl15-kart { border: 1px solid var(--cn-hat); border-radius: var(--cn-r); background: var(--cn-yuzey); box-shadow: var(--cn-golge); }
   & .bsl15-kart:hover { border-color: var(--cn-hat-g); box-shadow: var(--cn-golge-h); }
   & .bsl15-cubuk i { background: var(--cn-yesil); }
+}
+
+/* Ders sürümü seçici: seçili/güncel siyah hap (renk yalnız durum için) */
+:root[data-v18='on'] :is(.sl15-surum, .dd15-surum) a:is(.is-on, .is-yeni) { background: var(--color-ink); color: var(--color-white); border-color: var(--color-ink); }
+
+/* Alt sekme çubuğu: seçili sekme siyah hap */
+:root[data-v18='on'] .v15-tabs {
+  background: color-mix(in oklab, var(--cn-yuzey) 88%, transparent); backdrop-filter: saturate(1.4) blur(12px); border-top: 1px solid var(--cn-hat);
+  & .v15-tab[aria-current='page'] .v15-tab-pill { background: var(--color-ink); color: var(--color-white); }
+  & .v15-tab[aria-current='page'] .v15-tab-l { color: var(--color-ink); font-weight: 600; }
 }
 
 /* Giriş hareketi: yalnız transform (H677, içerik hep görünür) */
