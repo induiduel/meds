@@ -206,7 +206,7 @@
 ## H653 · Ses yüklenirken sessizlik "ses yok" sanılıyor (2026-11-24)
 - **Belirti:** Örnek soru çözücü, sesli ders, terim sesi vb. ilk tıklamada bir süre sessiz; öğrenci sesin olmadığını sanıyor.
 - **Kök neden:** Her oynatıcı kendi `Audio`'sunu açıyor; dosya inene/arabelleğe alınana kadar hiçbiri durum göstermiyordu.
-- **Çözüm:** `src/services/sesYukleniyor.ts` (`main.tsx`'te kurulur) `HTMLMediaElement.prototype.play`'i sarar; `HTMLAudioElement` `readyState<3` iken ya da `waiting`'de 250 ms sonra alt ortada "Ses yükleniyor…" gösterir, `playing/pause/ended/error`'da kaldırır. Stil `styles/motion.css`.
+- **Çözüm:** `src/services/sesYukleniyor.ts` (`main.tsx`'te kurulur) `HTMLMediaElement.prototype.play`'i sarar; `HTMLAudioElement` `readyState<3` iken ya da `waiting`'de 250 ms sonra üst ortada "Ses yükleniyor…" gösterir, `playing/pause/ended/error`'da kaldırır. Stil `styles/motion.css`.
 - **Önleme:** Yeni sesli işlev ayrıca gösterge yazmaz; `play()`'i atlayan (Web Audio API) oynatıcı eklenirse aynı gösterge ona da bağlanır.
 
 ## H654 · Ders analizi `ozetEksik.join is not a function` (2026-11-24)
