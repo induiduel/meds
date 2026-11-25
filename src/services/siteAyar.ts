@@ -8,6 +8,7 @@
 import { useSyncExternalStore } from 'react';
 import { GIZLI_SAYFALAR, KAPALI_SAYFALAR } from '../components/merkez/sayfaSabitleri';
 import { icerikDurumu, type IcerikTur } from './icerikGorunurlukKural';
+import { v16Yonetici } from '../utils/v16';
 export type { IcerikTur } from './icerikGorunurlukKural';
 
 export type SayfaDurumu = 'acik' | 'gizli' | 'kapali' | 'yalniz-yonetici';
@@ -51,6 +52,7 @@ export function getSiteAyar(): GenelSiteAyar { return ayar; }
 /** Yönetici mi (App.tsx bildirir): 'yalniz-yonetici' / 'kapali' sayfalar yöneticinin menüsünde kalır */
 let yonetici = false;
 export function yoneticiAyarla(v: boolean) {
+  v16Yonetici(v);
   if (yonetici === v) return;
   yonetici = v;
   ayar = { ...ayar };

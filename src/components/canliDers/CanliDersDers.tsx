@@ -54,6 +54,8 @@ import { SlideDrawingCanvas, getDrawingGlobalState, penPalette, setDrawingGlobal
 import { Popover, PopoverContent, PopoverTrigger, ToggleGroup, ToggleGroupItem } from '../ui/radix';
 import { useAppearance } from '../../utils/appearance';
 import { Eraser, MousePointer2, PenTool, Undo2 } from 'lucide-react';
+import { Rows3, StickyNote } from 'lucide-react';
+import { v16Acik, v16Dinle } from '../../utils/v16';
 import type { CdCikmisKonum, CdV2Cumle } from './canliDersStore';
 
 /** iPhone/iPad'de tarayıcı sekmesinde adres çubuğu gizlenemez: gerçek tam ekran için PWA'yı öner. */
@@ -1868,7 +1870,13 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
   // Yakınlık kalıcı (2026-11-06): kıstırma/düğmeyle seçilen ölçek görünüm başına (genişlik/sayfa sığdırma) saklanır
-  const zoomKey = `medsoru_cd_pdf_zoom_${sigdir ? 'sayfa' : 'genislik'}`;
+  // v16: PDF sayfa sayfa (sayfaya sığdır + dikey yakalama) ya da sürekli kaydırma; seçim cihazda saklanır
+  const v16 = React.useSyncExternalStore(v16Dinle, v16Acik, () => false);
+  const [kip, setKip] = useState<'sayfa' | 'surekli'>(() => { try { return localStorage.getItem('cd_pdf_kip') === 'sayfa' ? 'sayfa' : 'surekli'; } catch { return 'surekli'; } });
+  const kipDegis = () => setKip((k) => { const n = k === 'sayfa' ? 'surekli' : 'sayfa'; try { localStorage.setItem('cd_pdf_kip', n); } catch { /* yok */ } return n; });
+  const sayfaKip = v16 && kip === 'sayfa';
+  const sigdirFit = sigdir || sayfaKip;
+  const zoomKey = `medsoru_cd_pdf_zoom_${sigdirFit ? 'sayfa' : 'genislik'}`;
   const [zoom, setZoomHam] = useState(() => { try { const v = Number(localStorage.getItem(zoomKey)); return v >= Z_MIN && v <= Z_MAX ? v : 1; } catch { return 1; } });
   const setZoom = useCallback((z: number | ((o: number) => number)) => setZoomHam((o) => {
     const n = Math.max(Z_MIN, Math.min(Z_MAX, Math.round((typeof z === 'function' ? z(o) : z) * 100) / 100));
@@ -2065,7 +2073,7 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
   useEffect(() => () => setDrawingGlobalState({ activeMode: 'none' }), []);
 
   return (
-    <div className={`cd-bolme cd-pdf-bolme${barGizli ? ' is-bar-gizli' : ''}`}>
+    <div className={`cd-bolme cd-pdf-bolme${barGizli ? ' is-bar-gizli' : ''}${sayfaKip && zoom <= 1 ? ' is-sayfa-kip' : ''}`}>
       <CdCikmisPencereKok />
       <CdOrnekPencereKok />
       <CdHocaAraKok dersKey={detay.key} />
@@ -2102,6 +2110,12 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
         )}
         {/* H332: v15'te sayfa teması (seyrek) PDF ⋯ menüsüne girdi; yakınlaştırma masaüstünde görünür, telefonda (≤600 px) menüde */}
         {!v15 && <button type="button" className="cd-ib" onClick={sonrakiTema} aria-label="Sayfa temasını değiştir" title={`Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]} (değiştirmek için tıkla)`}><Palette /></button>}
+        {v16 && (
+          <button type="button" className="cd-ib cd-pdf-kip" onClick={kipDegis} aria-pressed={kip === 'sayfa'}
+            aria-label={kip === 'sayfa' ? 'Sürekli kaydırmaya geç' : 'Sayfa sayfa göster'} title={kip === 'sayfa' ? 'Sayfa sayfa · sürekliye geç' : 'Sürekli · sayfa sayfaya geç'}>
+            {kip === 'sayfa' ? <StickyNote /> : <Rows3 />}<span>{kip === 'sayfa' ? 'Sayfa' : 'Sürekli'}</span>
+          </button>
+        )}
         <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => z - 0.1)} aria-label="Uzaklaştır" title="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
         <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => z + 0.1)} aria-label="Yakınlaştır" title="Yakınlaştır"><Plus /></button>
@@ -2138,7 +2152,7 @@ function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; canli: b
               zoomMax={Z_MAX}
               onVisiblePage={onVisible}
               onError={setHataMsj}
-              fit={sigdir ? 'page' : 'width'}
+              fit={sigdirFit ? 'page' : 'width'}
               pageOverlay={pageOverlay}
               ekAlt={gorunum.iliski ? ekAlt : null}
             />

@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { X } from 'lucide-react';
+import { ChevronDown, ChevronUp, X } from 'lucide-react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 
 /**
@@ -59,6 +59,8 @@ export const Sheet: React.FC<SheetProps> = (props) => {
 };
 
 const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, title, subtitle, actions, footer, size = 'auto', width = 520, label, hideClose, bare, className, children, closing }) => {
+  // v16: ekranı kaplayan çekmece başlık şeridine küçültülebilir (perde kalkar, arkadaki sayfa kullanılır); düğme yalnız v16'da görünür
+  const [kucuk, setKucuk] = useState(false);
   const id = useId();
   const panelRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
@@ -208,7 +210,7 @@ const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, titl
   const style = { '--sheet-w': `${width}px` } as React.CSSProperties;
 
   return (
-    <div className={`sh-sheet-root ${closing ? 'is-closing' : ''}`}>
+    <div className={`sh-sheet-root ${closing ? 'is-closing' : ''}${kucuk ? ' is-kucuk' : ''}`}>
       <div ref={backRef} className="sh-sheet-backdrop" aria-hidden="true" onClick={onClose} />
       <div
         ref={panelRef}
@@ -229,6 +231,10 @@ const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, titl
                 {subtitle && <p className="sh-sheet-sub">{subtitle}</p>}
               </div>
               {actions}
+              <button type="button" className="sh-sheet-x sh-sheet-kucult" aria-expanded={!kucuk} aria-label={kucuk ? 'Büyüt' : 'Küçült'}
+                onPointerDown={(e) => e.stopPropagation()} onClick={() => setKucuk((k) => !k)}>
+                {kucuk ? <ChevronUp /> : <ChevronDown />}
+              </button>
               {!hideClose && (
                 <button type="button" className="sh-sheet-x" aria-label="Kapat" onClick={onClose}>
                   <X />

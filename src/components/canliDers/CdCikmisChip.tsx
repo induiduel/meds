@@ -3,7 +3,7 @@
 // yerden sürer. Yalnız `dogrulandi` kayıtlar gösterilir (otomatik vektör eşlemesi yanlış soru bağlayabiliyordu).
 import React, { useEffect, useLayoutEffect, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Play, Star, X } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Maximize2, Minimize2, Play, Star, X } from 'lucide-react';
 import { useAppearance } from '../../utils/appearance';
 import { safeJsonFetch } from '../../services/api';
 import { dersSoruKaydet } from '../../services/calismaTakip';
@@ -123,14 +123,16 @@ function CikmisKart({ sorular, i, setI, onKapat }: { sorular: CdCikmisKonum[]; i
     window.addEventListener('resize', olc);
     return () => window.removeEventListener('resize', olc);
   }, []);
+  const [kucuk, setKucuk] = useState(false);
   return (
-    <div className="cd15-cq-kat" role="presentation" onClick={onKapat} style={{ '--cd15-cq-alt': `${alt}px` } as React.CSSProperties}>
-      <div className="cd15-cq" role="dialog" aria-modal="true" aria-label="Çıkmış soru" onClick={(e) => e.stopPropagation()}>
+    <div className={`cd15-cq-kat${kucuk ? ' is-kucuk' : ''}`} role="presentation" onClick={kucuk ? undefined : onKapat} style={{ '--cd15-cq-alt': `${alt}px` } as React.CSSProperties}>
+      <div className={`cd15-cq${kucuk ? ' is-kucuk' : ''}`} role="dialog" aria-modal={!kucuk} aria-label="Çıkmış soru" onClick={(e) => e.stopPropagation()}>
         <div className="cd15-cq-bas">
           <span className="cd15-cq-et"><Star aria-hidden /> Çıkmış soru{q.yil ? ` · ${q.yil}` : ''}{q.seviye === 'ilgili' ? ' · ilişkili' : ''}</span>
           {cok && <span className="cd15-cq-no">{i + 1}/{sorular.length}</span>}
           {cok && <button type="button" className="v15-ib" disabled={i <= 0} onClick={() => setI(i - 1)} aria-label="Önceki soru"><ChevronLeft aria-hidden /></button>}
           {cok && <button type="button" className="v15-ib" disabled={i >= sorular.length - 1} onClick={() => setI(i + 1)} aria-label="Sonraki soru"><ChevronRight aria-hidden /></button>}
+          <button type="button" className="v15-ib cd15-cq-kucult" onClick={() => setKucuk((k) => !k)} aria-expanded={!kucuk} aria-label={kucuk ? 'Soruyu büyüt' : 'Soruyu küçült'} title={kucuk ? 'Büyüt' : 'Küçült'}>{kucuk ? <ChevronUp aria-hidden /> : <ChevronDown aria-hidden />}</button>
           <button type="button" className="v15-ib" onClick={onKapat} aria-label="Kapat ve derse dön"><X aria-hidden /></button>
         </div>
         <div className="cd15-cq-govde">

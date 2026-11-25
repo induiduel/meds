@@ -1,21 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 924,
-  "baslik": "2025-2026 Kurul 3 arşivi: yeni sesli dersler",
+  "onem": 925,
+  "baslik": "Yeni tasarım (v16) deneme aşamasında",
   "maddeler": [
-    "2025-2026 Dönem 3 Kurul 3 arşivine yeni sesli dersler eklendi; slayt takibi cümle cümle çalışır.",
-    "Eklenen dersler: Barsak Tıkanmaları ve Barsağın Damarsal Hastalıkları.",
-    "Bu derslerde Öğren destesi ve canlı çizim üretilmedi; sesli anlatım, PDF metin takibi, terim/kısaltma ve çıkmış kartı hazır."
+    "Yeni v16 tasarımı yalnız yöneticiye açık deneme olarak eklendi; öğrenciler mevcut tasarımı görmeye devam eder.",
+    "v16 denemesinde sesli derste PDF sayfa sayfa ya da sürekli kaydırılarak izlenebilir.",
+    "v16 denemesinde soru kartları ve alt pencereler küçültülebilir; telefonda taşan satırlar ve sekmeler düzeltildi."
   ],
   "eklenen": [
-    "Branş check-up"
+    "v16 tasarım denemesi (yalnız yönetici)"
   ],
-  "degisen": [
-    "Sesli ders listesi branş düzeyinde açılır kapanır"
-  ],
+  "degisen": [],
   "duzeltilen": [],
-  "silinen": [
-    "Ders satırındaki açılır panel"
-  ],
+  "silinen": [],
   "yenilikler": []
 }

@@ -1,0 +1,41 @@
+/*
+ * v16 · sesli ders (docs/V16_PLAN.md aşama 2). Yalnız :root[data-v16='on'] altında; v15 sesli.css değişmez.
+ * PDF sayfa kipi: fit=page + dikey yakalama, her kaydırma bir sayfaya oturur; yakınlaştırma %100'ü aşınca yakalama
+ * kalkar (CanliDersDers › CdPdfBolme sınıfı vermez). İşaret/çizim katmanları sayfa koordinatında olduğu için etkilenmez.
+ */
+
+/* v16 dışında küçült düğmesi görünmez (öğrenci v15'i aynen görür) */
+.cd15-cq-kucult { display: none !important; }
+
+:root[data-v16='on'][data-v15='on'] {
+  & .cd15-cq-kucult { display: grid !important; }
+
+  /* PDF: sayfa sayfa */
+  & .cd-pdf-bolme.is-sayfa-kip .pdv { scroll-snap-type: y mandatory; overscroll-behavior-y: contain; }
+  & .cd-pdf-bolme.is-sayfa-kip .pdv-page { scroll-snap-align: center; scroll-snap-stop: always; }
+  & .cd-pdf-kip { width: auto; min-width: 40px; padding: 0 10px; gap: 6px; display: inline-flex; align-items: center;
+    border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); font: 600 12.5px/1 var(--font-sans); white-space: nowrap; }
+  & .cd-pdf-kip[aria-pressed='true'] { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .cd-pdf-kip svg { width: 16px; height: 16px; flex: none; }
+  /* PDF çubuğu üç bölmeli PC düzeninde de dar (~350 px): etiket ekrana değil çubuğa bağlı olmalıydı → her boyutta yalnız ikon */
+  & .cd-pdf-kip span { display: none; }
+  & .cd-pdf-kip { padding: 0; width: 36px; justify-content: center; }
+
+  /* "Şu an anlatılan" etiketi slayt başlığını örtmesin: sağ üst köşede küçük hap */
+  & .cd-pdf-bolme .pdv-src-tag { top: 6px; left: auto; right: 6px; max-width: calc(100% - 12px); padding: 3px 8px; border-radius: 999px;
+    font: 650 12px/1.2 var(--font-sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: var(--v16-sh-1); }
+
+  /* PDF çubuğu: taşma yok, ad kısalır */
+  & .cd-pdf-bar { min-width: 0; }
+  & .cd-pdf-ad { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .cd-pdf-sayfa, & .cd-pdf-zoom { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* Çıkmış / örnek soru kartı küçültülebilir: perde kalkar, yalnız başlık şeridi kalır, ders kullanılabilir */
+  & .cd15-cq-kat.is-kucuk { background: transparent; pointer-events: none; }
+  & .cd15-cq.is-kucuk { pointer-events: auto; max-height: none; animation: none; }
+  & .cd15-cq.is-kucuk > :not(.cd15-cq-bas) { display: none; }
+  & .cd15-cq.is-kucuk .cd15-cq-bas { border-bottom: 0; }
+
+  /* Kart içi: uzun kök/şık taşmasın */
+  & .cd15-cq :is(p, button, span) { overflow-wrap: break-word; min-width: 0; }
+}

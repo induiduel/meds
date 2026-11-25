@@ -136,3 +136,27 @@
 - **Kök neden:** v15 dalı v12 panellerini olduğu gibi sarıyordu (`.pf15-panel.u12-pf`); v12 anahtarı ve satır boşlukları v15 kart diline uyarlanmamış, liste tek düz dizi olarak büyümüştü. Geniş düzen hiç yoktu (`.pf15 { max-width: 720px }`).
 - **Çözüm/önleme:** `ProfileV12.tsx` v15 dalı veri tablosundan kurulur (Profilim · İçeriklerim · Görünüm ve okuma · Uygulama · Hesap ve veri · Yardım · Oturum), "Ayarlarda ara" + tek dokunuşla tema; kabın **üst öğesi** ≥ 860 px ise (ResizeObserver; `.pf15` kendisi 720 ile sınırlı olduğundan kendi genişliği ölçülmez) liste solda yapışkan, bölüm sağda. Anahtar ve dokunma alanı `profil.css`'te tek tip. Yükseklik sınırlı esnek sütunda çocuklar `flex: none` olmalı (yoksa `overflow: hidden` liste tek satıra çöker — ilk denemede görüldü). Kural: Ayarlar'a yeni satır `gruplar` tablosuna, doğru gruba ve `ek` arama sözcükleriyle eklenir; aynı satır ikinci bir sayfada yinelenmez.
 
+
+### H659 — Tasarım katmanında taban öğe kuralı bileşen sınıflarını ezdi: çip/düğme iç boşluğu, yazı boyutu, renk kayboldu (2026-11-25, v16)
+- **Belirti:** v16 tuvalinde çiplerin yazısı kenara yapışık, düğmeler sıkışık, "Derse dön" yazısı görünmez, liste bağlantıları mavi.
+- **Kök neden:** `.scr button { padding:0; font:inherit }` ve `.scr a { color }` (öncelik 0,1,1) `.chip`/`.btn` (0,1,0) kurallarını eziyordu.
+- **Çözüm:** taban öğe kuralları `:where(.scr) …` içine alındı (öncelik 0).
+- **Kural:** stil katmanında öğe seçicili taban kuralı her zaman `:where()` içinde yazılır; bileşen sınıfı kazanmalı.
+
+### H660 — Geç yüklenen v15 sayfa CSS'i aynı öncelikteki v16 kuralını ezdi (2026-11-25)
+- **Belirti:** v16 ders satırı düzeltmesi derlemede vardı ama sayfada etkisizdi (Soru çözücü "Bitirdim" kesik kaldı).
+- **Kök neden:** `styles/v15/cozucu.css` sayfa parçasıyla sonradan yüklenir; `:root[data-v15]` ile `:root[data-v16]` aynı öncelikte, son gelen kazanır.
+- **Çözüm:** v16 kök seçicisi `:root[data-v16='on'][data-v15='on']` (bir kademe öncelikli).
+- **Kural:** üst katman eklerken yükleme sırasına güvenme; katman seçicisi alttakinden öncelikli kurulur.
+
+### H661 — Gizli kaydırma çubuklu tek satır düğme grubu telefonda kesik görünüyordu (2026-11-25)
+- **Belirti:** Sesli soru çözücü ders satırında son düğme ("Bitirdim") yarım; İstatistik 4. sekme, Kamplar "En önemliler" sığmıyor.
+- **Kök neden:** `flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none` ve eşit sütunlu `.v15-seg` (minmax(0,1fr)); kaydırılabilirlik görünmüyor.
+- **Çözüm:** v16'da eylem satırları ve sekmeler sarar; seçici sütunları içeriğe göre, telefonda dolgu daraltıldı.
+- **Kural:** `scrollWidth > clientWidth` olan `overflow` kutusu (bilinçli `hscroll` dışında) 375/820/1366 taramasında sıfır olmalı.
+
+### H662 — Dar bölmedeki etiket ekran genişliğine göre gizlendi; üç bölmeli PC'de düğme altına kaçtı (2026-11-25)
+- **Belirti:** Sesli ders PDF çubuğunda "Sayfa" etiketi 1366 px'te yakınlaştırma düğmesinin altında kaldı.
+- **Kök neden:** `@media (max-width:…)` ekranı ölçer; PDF çubuğu üç bölmeli düzende ~350 px.
+- **Çözüm:** kip düğmesi her boyutta yalnız ikon + `aria-label`.
+- **Kural:** bölme içi öğede ekran sorgusu değil, kap sorgusu (`container`) ya da ikon + etiket kullan.

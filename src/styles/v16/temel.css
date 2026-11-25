@@ -1,0 +1,81 @@
+/*
+ * v16 · temel katman (docs/V16_PLAN.md). Yalnız :root[data-v16='on'] altında; v15 dosyaları değişmez.
+ * Renk yalnız --color-* palet jetonları (8 temanın hepsi palet kaydından gelir, burada sabit renk yok).
+ * Ders (tuval, 2026-11-25): taban öğe kuralı sınıf kuralını ezmesin diye öğe seçicileri :where() içinde yazılır.
+ */
+:root[data-v16='on'][data-v15='on'] {
+  /* yoğunluk: tuvaldeki ölçüler */
+  --sh-top-h: 56px;
+  --v16-hair: inset 0 0 0 1px var(--color-line-soft);
+  --v16-sh-1: 0 1px 2px color-mix(in srgb, var(--color-ink) 7%, transparent);
+  --v16-sh-2: 0 4px 16px color-mix(in srgb, var(--color-ink) 9%, transparent);
+  --v16-sh-3: 0 12px 40px color-mix(in srgb, var(--color-ink) 18%, transparent);
+  font-variant-numeric: tabular-nums;
+
+  & ::selection { background: var(--color-accent-soft); color: var(--color-ink); }
+  & * { scrollbar-width: thin; scrollbar-color: var(--color-line) transparent; }
+  & ::-webkit-scrollbar { width: 8px; height: 8px; }
+  & ::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 999px; }
+  & ::-webkit-scrollbar-track { background: transparent; }
+  & :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+  /* Taşma güvenliği: esnek/ızgara çocukları içerikle genişleyip ekrandan taşmasın; uzun Türkçe sözcük kırılsın */
+  & :where(.v15-card, .sh-main, .v15-top-t, .li, [class*='-kart'], [class*='-card']) { min-width: 0; }
+  & :where(.sh-main) :where(h1, h2, h3, p, li, b, span, a) { overflow-wrap: break-word; }
+  & :where(.sh-main) { overflow-x: clip; }
+
+  /* Yazı tabanı: alt sekme ve ray etiketleri 12 px (11 px okunmuyordu) */
+  & .v15-tab-l, & .v15-rail-l { font-size: 12px; }
+
+  /* Kartlar: ince sınır + hafif gölge, zeminle karışmasın (her temada line-soft palet jetonu) */
+  & .v15-card { border: 0; box-shadow: var(--v16-hair), var(--v16-sh-1); }
+  & .v15-tag { height: 24px; padding: 0 9px; font-size: 12px; line-height: 1; white-space: nowrap; flex: none; }
+  & .v15-btn { line-height: 1; white-space: nowrap; }
+
+  /* Kabuk: üst bar 56, alt sekme ince */
+  & .v15-top { min-height: var(--sh-top-h); padding-top: calc(env(safe-area-inset-top, 0px) + 6px); padding-bottom: 6px;
+    box-shadow: 0 1px 0 var(--color-line-soft); }
+  & .v15-tab { min-height: 50px; gap: 2px; }
+  & .v15-tab-pill { width: 52px; height: 28px; }
+  & .v15-tab-pill svg { width: 20px; height: 20px; }
+  @media (max-width: 599px) {
+    & .v15-tabs { padding-top: 4px; padding-bottom: max(6px, env(safe-area-inset-bottom, 0px)); box-shadow: 0 -1px 0 var(--color-line-soft); }
+    & .v15-top-h { font-size: 17px; }
+  }
+  & .v15-side { border-right: 0; box-shadow: 1px 0 0 var(--color-line-soft); }
+  & .v15-nav-a { min-height: 44px; }
+
+  /* Katmanlar: perde, çekmece, diyalog, tost (shell.css'teki v15 katmanlarının yoğunluğu) */
+  &[data-design] .sh-sheet { box-shadow: var(--v16-sh-3); }
+  &[data-design] .ms-modal-panel { box-shadow: var(--v16-sh-3); }
+  &[data-design] .tst { box-shadow: var(--v16-sh-3); }
+
+  /* Telefon taraması (2026-11-25): eşit sütunlu seçicilerde uzun etiket kesiliyordu (Kamplar "En önemliler" 88/81 px);
+     sütunlar içeriğe göre paylaşılır. İstatistik sekmeleri gizli kaydırma yerine sarar (kutu tablette de 335 px). */
+  & .v15-seg { grid-auto-columns: auto; }
+  & .v15-seg > * { min-width: 0; white-space: nowrap; }
+  & .stx-tabs { flex-wrap: wrap; overflow: visible; row-gap: 6px; }
+  & .stx-tabs > * { flex: 1 1 auto; justify-content: center; }
+
+  /* Hareketi azalt */
+  &[data-motion='reduced'] * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* Ekranı kaplayan alt çekmece küçültülebilir (ui/Sheet.tsx): düğme yalnız v16'da; küçükken perde yok, yalnız başlık şeridi */
+.sh-sheet-kucult { display: none !important; }
+:root[data-v16='on'][data-v15='on'] {
+  & .sh-sheet-kucult { display: grid !important; }
+  & .sh-sheet-root.is-kucuk { pointer-events: none; }
+  & .sh-sheet-root.is-kucuk .sh-sheet-backdrop { opacity: 0 !important; pointer-events: none; }
+  & .sh-sheet-root.is-kucuk .sh-sheet { pointer-events: auto; height: auto !important; max-height: none !important; top: auto !important;
+    width: calc(100% - 16px); margin: 0 8px calc(var(--sh-tabs-h, 0px) + 8px); border-radius: 16px; animation: none; }
+  & .sh-sheet-root.is-kucuk :is(.sh-sheet-body, .sh-sheet-foot) { display: none !important; }
+}
+
+/* Ayarlar › Görünüm: v16 anahtarı (her tasarımda görünür; yalnız yönetici) */
+.v16-anahtar { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; padding: 14px 16px; border-radius: 14px;
+  background: var(--color-accent-soft); color: var(--color-ink); cursor: pointer; }
+.v16-anahtar > span { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.v16-anahtar b { font: 650 15px/1.3 var(--font-sans); }
+.v16-anahtar small { font: 500 13px/1.35 var(--font-sans); color: var(--color-ink-2); }
+.v16-anahtar input { width: 22px; height: 22px; flex: none; accent-color: var(--color-accent); }

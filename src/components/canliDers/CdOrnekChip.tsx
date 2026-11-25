@@ -3,7 +3,7 @@
 // kaldığı yerden sürer. Sorular `src/data/ornek_sorular/k<N>/<ders>.json` içindeki `kanit.sayfa` ile slayta bağlanır.
 import React, { useEffect, useSyncExternalStore, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ChevronLeft, ChevronRight, ListChecks, Play, X } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, ListChecks, Play, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { dersSoruKaydet } from '../../services/calismaTakip';
 import { cdDurum, cdDuraklat, cdToggle, type CdDetay } from './canliDersStore';
@@ -134,6 +134,7 @@ function OrnekKart({ parca, onKapat }: { parca: OrnekParca; onKapat: () => void 
   const [kapsam, setKapsam] = useState<'bu' | 'kadar'>('bu');
   const [i, setI] = useState(0);
   const [secim, setSecim] = useState<string | null>(null);
+  const [kucuk, setKucuk] = useState(false);
   const liste = parca[kapsam];
   const q = liste[Math.min(i, liste.length - 1)];
   useEffect(() => { setSecim(null); }, [q?.id]);
@@ -147,13 +148,14 @@ function OrnekKart({ parca, onKapat }: { parca: OrnekParca; onKapat: () => void 
   const dogru = cozuldu && secim === q.dogru;
   const git = (n: number) => { setI(n); };
   return (
-    <div className="cd15-cq-kat" role="presentation" onClick={onKapat}>
-      <div className="cd15-cq" role="dialog" aria-modal="true" aria-label="Örnek soru" onClick={(e) => e.stopPropagation()}>
+    <div className={`cd15-cq-kat${kucuk ? ' is-kucuk' : ''}`} role="presentation" onClick={kucuk ? undefined : onKapat}>
+      <div className={`cd15-cq${kucuk ? ' is-kucuk' : ''}`} role="dialog" aria-modal={!kucuk} aria-label="Örnek soru" onClick={(e) => e.stopPropagation()}>
         <div className="cd15-cq-bas">
           <span className="cd15-cq-et"><ListChecks aria-hidden /> Örnek soru</span>
           <span className="cd15-cq-no">{Math.min(i, liste.length - 1) + 1}/{liste.length}</span>
           {liste.length > 1 && <button type="button" className="v15-ib" disabled={i <= 0} onClick={() => git(i - 1)} aria-label="Önceki soru"><ChevronLeft aria-hidden /></button>}
           {liste.length > 1 && <button type="button" className="v15-ib" disabled={i >= liste.length - 1} onClick={() => git(i + 1)} aria-label="Sonraki soru"><ChevronRight aria-hidden /></button>}
+          <button type="button" className="v15-ib cd15-cq-kucult" onClick={() => setKucuk((k) => !k)} aria-expanded={!kucuk} aria-label={kucuk ? 'Soruyu büyüt' : 'Soruyu küçült'} title={kucuk ? 'Büyüt' : 'Küçült'}>{kucuk ? <ChevronUp aria-hidden /> : <ChevronDown aria-hidden />}</button>
           <button type="button" className="v15-ib" onClick={onKapat} aria-label="Kapat ve derse dön"><X aria-hidden /></button>
         </div>
         {parca.kadar.length > parca.bu.length && (

@@ -57,6 +57,10 @@ import { IpadGeriHap, useIpadPencere } from '../shell/ipadPencere';
 import { MENU_SAYFALARI, geriGit, geriHedefe, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
 import '../../styles/v15/shell.css';
+import '../../styles/v16/temel.css';
+import '../../styles/v16/sesli.css';
+import '../../styles/v16/soru.css';
+import '../../styles/v16/sayfalar.css';
 
 // Tıp Asistanı gizli (yalnız medsor_asistan_goster=1): kapalıyken paneli ve stilini hiç indirme. Panel sabit konumlu
 // bir düğme (as15-fab) çizdiği için tembel yükleme düzen kayması yapmaz; fallback boş.

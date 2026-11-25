@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from 'react';
 import { PALETTES, findAccent, findPalette, installPaletteStyles, ozelVurgu, type AccentDef, type ThemeMode } from './palettes';
 import { refreshZoomGuard } from './uiZoom';
+import { v16Uygula } from './v16';
 
 /**
  * Görünüm tercihleri: tema (açık / sarı / koyu), her temada dört palet (a–d, utils/palettes.ts) ve yerleşim yoğunluğu.
@@ -360,6 +361,7 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.design = a.design;
   if (a.design === 'v12' && a.v13 && !a.v15) el.dataset.v13 = 'on'; else delete el.dataset.v13;
   if (a.design === 'v12' && a.v15) el.dataset.v15 = 'on'; else delete el.dataset.v15;
+  v16Uygula();
   // W01 özel vurgu: kontrast kapısından geçmiş değerler satır içi yazılır (palet/vurgu bloklarını ezer)
   const ozelKey = `${a.mode}:${a.palettes[a.mode]}`;
   const ozel = a.customAccents?.[ozelKey] ? ozelVurgu(a.customAccents[ozelKey], findPalette(a.mode, a.palettes[a.mode]).vars, a.mode) : null;

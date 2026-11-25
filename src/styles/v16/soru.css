@@ -1,0 +1,18 @@
+/*
+ * v16 · soru çöz + sesli soru çözücü (docs/V16_PLAN.md aşama 4). Yalnız :root[data-v16='on'] altında.
+ * Kök neden (2026-11-25): v15 ders satırı eylemlerini (Yalnız çıkmışlar · İndir · Bitirdim) gizli kaydırma çubuklu tek satır
+ * yapmıştı; telefonda son düğme kartın kenarında kesik görünüyordu. v16'da satır sarar, hiçbir düğme kesilmez.
+ */
+:root[data-v16='on'][data-v15='on'] {
+  /* v15 cozucu.css sayfayla geç yüklenir; aynı öncelik onu kazandırıyordu → [data-v15] ile bir kademe artır */
+  & .scs-row-ek { flex-wrap: wrap; overflow-x: visible; row-gap: 6px; }
+  & .scs-row-ek > * { flex: none; max-width: 100%; }
+  & .scs-row-ek :is(button, a) { min-height: 34px; }
+
+  /* Telefon üst barı: araçlar 36 px, başlık en çok iki satır 16 px (tek satır uzun ders adını "SSS Hücres…" diye kesiyordu) */
+  @media (max-width: 599px) {
+    & .v15-top .v15-top-tools :is(.v15-ib, .v15-search) { width: 36px; height: 40px; }
+    & .v15-top-h { -webkit-line-clamp: 2; line-clamp: 2; font-size: 16px; line-height: 1.2; }
+    & .v15-top .v15-chip-k.v15-only-phone { min-width: 36px; padding: 0 6px; }
+  }
+}
