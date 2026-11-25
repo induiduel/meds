@@ -1,3 +1,4 @@
+import { kayitHaritasi, okunanAralik } from './okunanKelime';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
@@ -114,8 +115,6 @@ const OLCEK_MAX = 1.6;
 const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
 const HARF_SES: Record<Harf, string> = { A: 'A', B: 'Be', C: 'Ce', D: 'De', E: 'E' };
 const kelimeSay = (s: string) => (s.match(/\S+/g) || []).length;
-/** Ses klibinin cümle bölmesiyle AYNI kural (scripts/uretim/ses_ortak/ses_klip.py::cumlele): [.!?] + boşluk */
-const cumleBol = (s: string) => s.trim().split(/(?<=[.!?])\s+/).filter((c) => c.trim());
 const azHareket = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const tercihOku = () => {
   const v = { hiz: 1, siklariOku: true, otomatik: true, ses: VARSAYILAN_SES, olcek: 1, ocStil: 'tam' as 'tam' | 'hizli' };
@@ -426,15 +425,7 @@ export const SoruCozucu: React.FC<Props> = ({
       // H655 ek 4: klip zamanı metin parçasından İNCE olabilir (bir şık açıklaması 2 cümle → 2 zaman kaydı). Kayıt sırası
       // metin parçasına ve parçadaki cümleye eşlenir; yoksa açıklamanın her cümlesinde vurgu bütün paragrafı tarıyor,
       // 2. cümlede başa dönüyordu (canlı, k2-41 B şıkkı) ve onCumle kayıt sırasını parça sanıyordu.
-      const harita: { m: number; s: number; ns: number }[] = (() => {
-        const Z = k.zaman.length, M = a.metinler.length;
-        if (Z === M) return a.metinler.map((_, m) => ({ m, s: 0, ns: 1 }));
-        const say = a.metinler.map((c) => Math.max(1, cumleBol(c).length));
-        if (say.reduce((x, y) => x + y, 0) !== Z) return k.zaman.map((_, q) => ({ m: Math.min(q, M - 1), s: 0, ns: 1 }));
-        const out: { m: number; s: number; ns: number }[] = [];
-        say.forEach((ns, m) => { for (let q = 0; q < ns; q++) out.push({ m, s: q, ns }); });
-        return out;
-      })();
+      const harita = kayitHaritasi(k.zaman.length, a.metinler);
       const kayitIlk = (m: number) => { const q = harita.findIndex((x) => x.m === m); return q < 0 ? m : q; };
       const kayitSon = (m: number) => { let q = -1; harita.forEach((x, n) => { if (x.m === m) q = n; }); return q < 0 ? m : q; };
       const basSn = a.bas !== undefined && k.zaman[kayitIlk(a.bas)] ? Math.max(0, k.zaman[kayitIlk(a.bas)][0] - 0.05) : 0;
@@ -489,37 +480,17 @@ export const SoruCozucu: React.FC<Props> = ({
     };
     if (!caliyor || !okunan || !SEC[okunan.yer]) { H.delete('sc-okunan'); return; }
     let raf = 0, sonKey = '';
-    const hece = (w: string) => Math.max(1, (w.match(/[aeıioöuüâîû]/gi) || []).length + (/\d/.test(w) ? w.replace(/\D/g, '').length * 1.5 : 0));
     const dongu = () => {
       raf = requestAnimationFrame(dongu);
       const el = audio.current, zf = el && okumaFn.current?.(el.currentTime), z = zf || okumaRef.current, kap = kokRef.current?.querySelector(SEC[okunan.yer]);
       if (!z || !el || !kap || el.paused) return;
       // parça değişti ama ekran ögesi henüz güncellenmedi (timeupdate bekleniyor): yanlış ögede kelime yakma
       if (zf && okunanM.current >= 0 && zf.m !== okunanM.current) { if (sonKey) { H.delete('sc-okunan'); sonKey = ''; } return; }
-      const kel: { n: Text; b: number; e: number; h: number }[] = [];
-      const tw = document.createTreeWalker(kap, NodeFilter.SHOW_TEXT);
-      for (let n = tw.nextNode() as Text | null; n; n = tw.nextNode() as Text | null) {
-        for (const m of n.data.matchAll(/\S+/g)) kel.push({ n, b: m.index!, e: m.index! + m[0].length, h: hece(m[0]) });
-      }
-      if (!kel.length) return;
-      // yalnız okunan cümlenin kelimeleri: ekrandaki parça ns cümleye bölünebiliyorsa s. cümle, yoksa parçanın tamamı
-      // parçanın toplam süresiyle (cümle süresini bütün paragrafa yaymak vurguyu geri sıçratıyordu)
-      const gruplar: number[] = [0];
-      kel.forEach((x, q) => { const y = kel[q + 1]; if (y && /[.!?]$/.test(x.n.data.slice(x.b, x.e))) gruplar.push(q + 1); });
-      let b0 = 0, b1 = kel.length, tb = z.mb, te = z.me;
-      if (z.ns > 1 && gruplar.length === z.ns) { b0 = gruplar[z.s]; b1 = gruplar[z.s + 1] ?? kel.length; tb = z.b; te = z.e; }
-      else if (z.ns === 1) { tb = z.b; te = z.e; }
-      const dilim = kel.slice(b0, b1);
-      const top = dilim.reduce((a, k) => a + k.h, 0);
-      const oran = Math.min(1, Math.max(0, (el.currentTime + 0.08 - tb) / Math.max(0.2, te - tb)));
-      let acc = 0, w = 0;
-      for (; w < dilim.length - 1; w++) { if (acc + dilim[w].h > oran * top) break; acc += dilim[w].h; }
-      w += b0;
-      const key = `${okunan.yer}${okunan.h || ''}${okunan.j ?? ''}:${w}`;
+      const r = okunanAralik(kap, el.currentTime, z);
+      if (!r) return;
+      const key = `${okunan.yer}${okunan.h || ''}${okunan.j ?? ''}:${r.startOffset}:${r.startContainer.textContent?.length}`;
       if (key === sonKey) return;
       sonKey = key;
-      const r = document.createRange();
-      r.setStart(kel[w].n, kel[w].b); r.setEnd(kel[w].n, kel[w].e);
       H.set('sc-okunan', new HL(r));
     };
     raf = requestAnimationFrame(dongu);
