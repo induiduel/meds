@@ -112,7 +112,7 @@ def main() -> int:
                 H.append(f"T5 P{pi}.C{ci}: işaret s.{i.get('s')} ≠ çapa s.{cl[ci]['sayfa']}")
     if a.api:
         import urllib.request
-        d = json.load(urllib.request.urlopen(f"{a.api}/api/canli-ders/{k}", timeout=30))
+        d = json.load(urllib.request.urlopen(urllib.request.Request(f"{a.api}/api/canli-ders/{k}", headers={"User-Agent": "medsor-kapi", **_kok.panel_basligi()}), timeout=30))
         v = next((x for x in d.get("varyantlar") or [] if x.get("id") == vid), None)
         kzc = (v or {}).get("kelimeZaman") or {}
         eksik = [pi for pi, t in enumerate(pars) if len(kzc.get(str(pi)) or []) != len(re.findall(r"\S+", t))]
