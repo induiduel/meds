@@ -114,6 +114,8 @@ const OLCEK_MAX = 1.6;
 const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
 const HARF_SES: Record<Harf, string> = { A: 'A', B: 'Be', C: 'Ce', D: 'De', E: 'E' };
 const kelimeSay = (s: string) => (s.match(/\S+/g) || []).length;
+/** Ses klibinin cümle bölmesiyle AYNI kural (scripts/uretim/ses_ortak/ses_klip.py::cumlele): [.!?] + boşluk */
+const cumleBol = (s: string) => s.trim().split(/(?<=[.!?])\s+/).filter((c) => c.trim());
 const azHareket = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const tercihOku = () => {
   const v = { hiz: 1, siklariOku: true, otomatik: true, ses: VARSAYILAN_SES, olcek: 1, ocStil: 'tam' as 'tam' | 'hizli' };
@@ -201,7 +203,8 @@ export const SoruCozucu: React.FC<Props> = ({
   const otoRef = useRef<number | null>(null);
   const kokRef = useRef<HTMLDivElement>(null);
   /** H655: okunan klip cümlesinin seste [başlangıç, bitiş] saniyesi — kelime takibi bunun içinde hece oranıyla yürür */
-  const okumaRef = useRef<{ b: number; e: number } | null>(null);
+  /** okunan cümlenin zaman aralığı; s/ns: o cümlenin metin parçası içindeki sırası ve parçadaki cümle sayısı */
+  const okumaRef = useRef<{ b: number; e: number; s: number; ns: number; mb: number; me: number } | null>(null);
   const devamRef = useRef<(() => void) | null>(null); // duraklatılan sıranın kalanı
 
   const sorular = useMemo(() => {
@@ -417,13 +420,27 @@ export const SoruCozucu: React.FC<Props> = ({
       setSesYok(false);
       if (!audio.current) audio.current = new Audio();
       const el = audio.current;
-      const basSn = a.bas !== undefined && k.zaman[a.bas] ? Math.max(0, k.zaman[a.bas][0] - 0.05) : 0;
+      // H655 ek 4: klip zamanı metin parçasından İNCE olabilir (bir şık açıklaması 2 cümle → 2 zaman kaydı). Kayıt sırası
+      // metin parçasına ve parçadaki cümleye eşlenir; yoksa açıklamanın her cümlesinde vurgu bütün paragrafı tarıyor,
+      // 2. cümlede başa dönüyordu (canlı, k2-41 B şıkkı) ve onCumle kayıt sırasını parça sanıyordu.
+      const harita: { m: number; s: number; ns: number }[] = (() => {
+        const Z = k.zaman.length, M = a.metinler.length;
+        if (Z === M) return a.metinler.map((_, m) => ({ m, s: 0, ns: 1 }));
+        const say = a.metinler.map((c) => Math.max(1, cumleBol(c).length));
+        if (say.reduce((x, y) => x + y, 0) !== Z) return k.zaman.map((_, q) => ({ m: Math.min(q, M - 1), s: 0, ns: 1 }));
+        const out: { m: number; s: number; ns: number }[] = [];
+        say.forEach((ns, m) => { for (let q = 0; q < ns; q++) out.push({ m, s: q, ns }); });
+        return out;
+      })();
+      const kayitIlk = (m: number) => { const q = harita.findIndex((x) => x.m === m); return q < 0 ? m : q; };
+      const kayitSon = (m: number) => { let q = -1; harita.forEach((x, n) => { if (x.m === m) q = n; }); return q < 0 ? m : q; };
+      const basSn = a.bas !== undefined && k.zaman[kayitIlk(a.bas)] ? Math.max(0, k.zaman[kayitIlk(a.bas)][0] - 0.05) : 0;
       // @a/<kod>: sesli sınav asistanının klibi (kısa not)
       const yolu = a.klasor.startsWith('@a/') ? `/api/patoloji-asistan/ses/${encodeURIComponent(a.klasor.slice(3))}/${encodeURIComponent(a.klip)}.mp3` : klipYolu(brans, kb.ses, a.klasor, a.klip);
       el.src = `${getCustomApiUrl() || ''}${yolu}?v=${k.v}${basSn ? `#t=${basSn.toFixed(2)}` : ''}`;
       el.playbackRate = hiz;
       try { (el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true; } catch { /* eski tarayıcı */ }
-      const kesSn = a.kes !== undefined && k.zaman[a.kes] ? k.zaman[a.kes][1] + 0.15 : Infinity;
+      const kesSn = a.kes !== undefined && k.zaman[kayitSon(a.kes)] ? k.zaman[kayitSon(a.kes)][1] + 0.15 : Infinity;
       let son = a.bas ?? 0;
       el.ontimeupdate = () => {
         const t = el.currentTime;
@@ -432,8 +449,10 @@ export const SoruCozucu: React.FC<Props> = ({
         // Başlamış son cümle etkindir (0,08 sn öne alma: göz algısı gecikmesi).
         let j = 0;
         for (let q = 0; q < k.zaman.length; q++) if (k.zaman[q][0] <= t + 0.08) j = q;
-        okumaRef.current = k.zaman[j] ? { b: k.zaman[j][0], e: k.zaman[j][1] } : null;
-        if (j !== son) { son = j; a.onCumle?.(j); }
+        const hx = harita[j] || { m: j, s: 0, ns: 1 };
+        const ilk = j - hx.s, sonq = ilk + hx.ns - 1;
+        okumaRef.current = k.zaman[j] ? { b: k.zaman[j][0], e: k.zaman[j][1], s: hx.s, ns: hx.ns, mb: k.zaman[ilk]?.[0] ?? k.zaman[j][0], me: k.zaman[sonq]?.[1] ?? k.zaman[j][1] } : null;
+        if (hx.m !== son) { son = hx.m; a.onCumle?.(hx.m); }
       };
       el.onended = () => { el.onended = null; sonraki(); };
       el.onerror = () => { el.onerror = null; yedek(); };
@@ -470,10 +489,19 @@ export const SoruCozucu: React.FC<Props> = ({
         for (const m of n.data.matchAll(/\S+/g)) kel.push({ n, b: m.index!, e: m.index! + m[0].length, h: hece(m[0]) });
       }
       if (!kel.length) return;
-      const top = kel.reduce((a, k) => a + k.h, 0);
-      const oran = Math.min(1, Math.max(0, (el.currentTime + 0.08 - z.b) / Math.max(0.2, z.e - z.b)));
+      // yalnız okunan cümlenin kelimeleri: ekrandaki parça ns cümleye bölünebiliyorsa s. cümle, yoksa parçanın tamamı
+      // parçanın toplam süresiyle (cümle süresini bütün paragrafa yaymak vurguyu geri sıçratıyordu)
+      const gruplar: number[] = [0];
+      kel.forEach((x, q) => { const y = kel[q + 1]; if (y && /[.!?]$/.test(x.n.data.slice(x.b, x.e))) gruplar.push(q + 1); });
+      let b0 = 0, b1 = kel.length, tb = z.mb, te = z.me;
+      if (z.ns > 1 && gruplar.length === z.ns) { b0 = gruplar[z.s]; b1 = gruplar[z.s + 1] ?? kel.length; tb = z.b; te = z.e; }
+      else if (z.ns === 1) { tb = z.b; te = z.e; }
+      const dilim = kel.slice(b0, b1);
+      const top = dilim.reduce((a, k) => a + k.h, 0);
+      const oran = Math.min(1, Math.max(0, (el.currentTime + 0.08 - tb) / Math.max(0.2, te - tb)));
       let acc = 0, w = 0;
-      for (; w < kel.length - 1; w++) { if (acc + kel[w].h > oran * top) break; acc += kel[w].h; }
+      for (; w < dilim.length - 1; w++) { if (acc + dilim[w].h > oran * top) break; acc += dilim[w].h; }
+      w += b0;
       const key = `${okunan.yer}${okunan.h || ''}${okunan.j ?? ''}:${w}`;
       if (key === sonKey) return;
       sonKey = key;
