@@ -44,6 +44,21 @@ def pdf_yolu(hz: dict) -> _Path | None:
     return None
 
 
+def kelime_maddeleri(x: dict, sy) -> set[int] | None:
+    """kelime işaretinin kutularının düştüğü maddeler; ≥2 kutu ve hepsi en çok 3 ardışık-olmayabilir maddede ise döner."""
+    if not sy or len(x.get("w") or []) < 2:
+        return None
+    ms: set[int] = set()
+    for w in x["w"]:
+        cx, cy = (w[2] + w[4]) / 2, (w[3] + w[5]) / 2
+        mi = next((i for i, md in enumerate(sy.maddeler) for r in md["satirlar"]
+                   if (b := sy.n(r))[0] - 0.005 <= cx <= b[2] + 0.005 and b[1] - 0.005 <= cy <= b[3] + 0.005), None)
+        if mi is None:
+            return None
+        ms.add(mi)
+    return ms if len(ms) <= 3 else None
+
+
 def ders_onar(key: str, kuru: bool) -> Counter | None:
     if not IZINLI.match(key):
         return None
@@ -96,6 +111,11 @@ def ders_onar(key: str, kuru: bool) -> Counter | None:
                 # neredeyse yalnız görselden oluşan slayt: anlatılan şey slaytın görselidir → en büyük görsel (lazer)
                 yeni = {"t": "resim", "l": [sy.n(PI.resim_kutusu(sy))], "w": []}
                 say["sayfa→resim"] += 1
+            elif x["t"] == "kelime" and (ms := kelime_maddeleri(x, pdf.sayfa(s))):
+                # H655 ek 11: ortak kelimeler 1–3 maddede toplanıyorsa anlatılan o maddelerdir → satır vurgusu (metin);
+                # kutular sayfaya dağılmışsa (tek tük yaygın kelime) işaret olduğu gibi kalır
+                yeni = PI.eslestir_capa(cumle, pdf.sayfa(s), ms)
+                say["kelime→madde"] += 1
             elif x["t"] == "sayfa":
                 sy = pdf.sayfa(s)
                 if not (sy and sum(1 for i in range(len(sy.maddeler)) if len(PI.madde_kokleri(sy, i)) >= 2) >= 2):

@@ -1,12 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 941,
-  "baslik": "Yeni sade Bugün ekranı, ayrı giriş sayfası ve soru çözücü düzeltmesi",
+  "onem": 942,
+  "baslik": "Arşiv derslerinde PDF işaretleri",
   "maddeler": [
-    "Bugün: daha sade ve kompakt; sınava kalan gün başlıkta, hedef çubuğu ve tek dokunuşla \"Kaldığın yerden sürdür\"",
-    "Giriş artık ayrı bir sayfa; giriş yapınca kaldığın sayfaya dönersin",
-    "Soru çözücü: üstteki ilerleme çubuğuna dokunup sürükleyerek istediğin soruya geç; tüm sorular telefonda da görünür",
-    "Klavye: \"İçeriğe geç\" bağlantısı ve belirgin odak çerçevesi"
+    "Geçen yılın Kurul 2 ve 3 sesli derslerinde PDF işareti artık tek tek kelimeler yerine anlatılan maddenin satırını gösteriyor."
   ],
   "eklenen": [],
   "degisen": [
