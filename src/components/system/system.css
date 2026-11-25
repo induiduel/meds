@@ -162,3 +162,7 @@ html[data-mode="dark"] .po-undo button { background: color-mix(in srgb, var(--co
 .hd-list.is-gecmis .hd-row { padding-block: 9px; opacity: .8; }
 .hd-h { margin: 6px 2px 0; font-size: 12px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--color-ink-3); }
 .nb-pill.is-bad { --nb-c: var(--color-bad); }
+/* H669: "Tüm sürüm notları" (a.up-btn) dolgusuz ve 1:1.6 oranla 113 px'e sıkışıp iki satıra kırılıyor, sola yaslanıyordu.
+   Düğmeler içerik genişliğinden başlar, yazı tek satır ve ortalı. */
+.up-btn { flex: 1 1 auto; padding: 0 14px; white-space: nowrap; text-align: center; }
+.up-btn.is-1 { flex: 1.6 1 auto; }

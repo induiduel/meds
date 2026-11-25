@@ -383,3 +383,8 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
 .ipad-geri-hap.is-kucuk { max-width: 44px; padding: 0 12px; }
 .ipad-geri-hap.is-kucuk span { display: none; }
 @media print { .ipad-geri-hap { display: none; } }
+/* H669: alt sayfada (geri düğmesi varken) telefonda 5 araç düğmesi başlığa ~95 px bırakıyordu; ders adı yalnız burada
+   göründüğü için kurul çipi alt sayfalarda gizlenir (kurul bilgisi merkez sayfalarında ve menüde duruyor). */
+@media (max-width: 599px) {
+  :root[data-v15='on'] .v15-top:has(> .v15-back) .v15-chip-k.v15-only-phone { display: none; }
+}

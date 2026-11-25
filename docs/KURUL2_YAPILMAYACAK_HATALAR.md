@@ -504,4 +504,5 @@
 - **H665** · v17 başlıkları eski h1 kuralına yeniliyor, Fraunces görünmüyordu → hatalar/on_yuz_tasarim_tema.md
 - **H666** · v17 telefonda PDF çubuğu araç menüsünü ekran dışına itiyordu → hatalar/on_yuz_tasarim_tema.md
 - **H668** · v15 telefonda Kip seçicisi kartı taşıyor, halka yazısı kesiliyordu → hatalar/on_yuz_tasarim_tema.md
+- **H669** · v15 ders detayında bölüm listesi iç kaydırmaya sıkışıyor, telefonda ders adı 95 px → hatalar/on_yuz_tasarim_tema.md
 - **H667** · k2-42/43/45 konuşma metninde cümle vurgu etiketi yoktu, ekran vurgusu boş kaldı → hatalar/ders_metni_anlatim.md

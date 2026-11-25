@@ -136,13 +136,9 @@
 .dd15-tl-t span { font: 500 12.5px/1.2 var(--font-sans); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .dd15-tl li.is-now .dd15-tl-t b { color: var(--color-accent); }
 
-/* Tek sütunda (telefon, tablet) sayfa ekrana sabitlenir; bölüm listesi kalan alanda kendi içinde kayar */
-@media (max-width: 1023px) {
-  :root[data-v15='on'] .dd15 { height: var(--v15-ekran); min-height: 420px; }
-  .dd15-in { height: 100%; }
-  .dd15-side { flex: 1 1 auto; min-height: 140px; gap: 0; }
-  .dd15-tl { flex: 1 1 auto; min-height: 0; max-height: none; }
-}
+/* H669: tek sütunda (telefon, tablet) eskiden sayfa ekrana sabitlenip bölüm listesi "kalan alanda" kayıyordu; üst kartlar
+   büyüyünce liste 116–248 px'lik iç kaydırmaya sıkışıyordu (iç içe iki kaydırma). Tek sütunda sayfa doğal akar. */
+@container dd15 (max-width: 859px) { .dd15-tl { max-height: none; overflow-y: visible; } }
 @container dd15 (min-width: 860px) {
   .dd15-in { display: grid; grid-template-columns: minmax(0, 1fr) 380px; align-items: start; }
   .dd15-tl { max-height: calc(var(--v15-ekran) - 40px); }

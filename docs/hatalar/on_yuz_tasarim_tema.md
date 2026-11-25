@@ -190,3 +190,9 @@
 - **Kök neden:** `dersler.css`'te sonradan gelen katman `.s15-test-alt`'ı `flex-wrap`'a çevirmiş, satırlar ve `.v15-seg` içerik genişliğinde (min-width:auto) kalıyordu; 78 px sabit etiket + 3 nowrap düğme dar kaba sığmıyordu. Halka alt yazısının genişlik sınırı yoktu, iç çaptan genişti.
 - **Çözüm:** `d15` ≤479 px kapta seçici satırları etiket üstte, seçici ve başlat düğmesi tam genişlik; seçici düğmeleri `min-width:0` + üç nokta. Halka yazısı `max-width:74%`, dar kapta 11 px.
 - **Kural:** sonradan eklenen düzen katmanı (grid→flex gibi) öncekinin dar ekran kurallarını geçersiz kılabilir; her kırılım değişikliğinde 375/768/1440 px'te kart içi öğelerin `right` değeri kapsayıcıyla karşılaştırılır.
+
+### H669 — v15 ders detayında bölüm listesi küçük iç kaydırmaya sıkışıyor, telefonda ders adı 95 px'e iniyordu (2026-11-25)
+- **Belirti:** telefonda 736 px'lik "Bölümler" listesi sayfa altında ~116 px'lik ayrı kaydırılan kutudaydı (tablette 248 px); üst çubukta ders adı "SSS Hücresel…" diye 95 px'e sıkışıyordu. Sürüm penceresinde "Tüm sürüm notları" iki satıra kırılıp sola yaslanıyordu.
+- **Kök neden:** tek sütunda `.dd15` ekran yüksekliğine sabitlenip listeye "kalan alan" veriliyordu; üstteki kartlar (çalışman, içerikler, yorumlar) eklendikçe kalan alan küçüldü. Telefonda alt sayfa üst çubuğu 5 araç (204 px) taşıyordu. `a.up-btn` dolgusuzdu, 1:1,6 oranla 113 px'e iniyordu.
+- **Çözüm:** `dd15` <860 px kapta sayfa doğal akar, liste tek kaydırmada tam görünür (iki sütunda yapışkan liste aynen); telefonda geri düğmeli sayfalarda kurul çipi gizli (başlık 139 px); `up-btn` içerik genişliğinden başlar, tek satır, ortalı.
+- **Kural:** "kalan alanda kayan" liste, üstüne yeni kart eklenen her değişiklikte 375/768 px'te `clientHeight` ile ölçülür; içerik listesini iç kaydırmaya sıkıştıran sabit yükseklik telefon/tablette kullanılmaz.
