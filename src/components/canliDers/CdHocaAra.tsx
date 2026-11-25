@@ -164,7 +164,8 @@ export function CdHocaAraDugme({ dersKey }: { dersKey: string }) {
   );
 }
 
-/** klipte okunan bir metin parçası: vurgu anahtarı + ekrandaki ögesi (kelime takibi için) */
+/** klipte okunan bir metin parçası: vurgu anahtarı + ekrandaki ögesi (kelime takibi için). Öge SIRADAN seçilir, is-okunan
+ *  sınıfından değil: sınıf React'in sonraki çiziminde taşınır, geçiş karesinde yeni cümlenin zamanı eski ögeye uygulanıyordu. */
 interface Parca { metin: string; vurgu: string | null; sel?: string; atla?: string }
 
 type Evre = 'oku' | 'dusun' | 'coz' | 'anlat' | 'bitti';
@@ -249,7 +250,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     setEvre('coz');
     if (yanlis) {
       if (!(await sesCal(ortakUrl('yanlis'), 0.8, () => {})) || dur()) return;
-      if (!(await cal(`s-${no}-${yanlis}`, [{ metin: q.siklar[yanlis], vurgu: yanlis, sel: '.ha-sik.is-okunan small' }])) || dur()) return;
+      if (!(await cal(`s-${no}-${yanlis}`, [{ metin: q.siklar[yanlis], vurgu: yanlis, sel: `.ha-siklar > .ha-sik:nth-child(${HARFLER.indexOf(yanlis) + 1}) small` }])) || dur()) return;
     }
     if (!(await cal(dogruSecti ? `d-${no}` : `c-${no}`, [{ metin: q.cozum, vurgu: q.dogru }])) || dur()) return; // çözüm metni ekranda yazılı değil: kelime vurgusu yok
     setEvre('anlat');
@@ -266,7 +267,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     const dur = () => id !== akis.current;
     setEvre('oku'); setSecim(null); vurguYap(null); setDurdu(false); setKalan(BEKLE_SN);
     (async () => {
-      const ok = await cal(`q-${q.no}`, [{ metin: q.soru, vurgu: 'kok', sel: '.ha-kok' }, ...HARFLER.map((h) => ({ metin: q.secenekler[h], vurgu: h, sel: '.ha-sik.is-okunan > span', atla: 'small' }))]);
+      const ok = await cal(`q-${q.no}`, [{ metin: q.soru, vurgu: 'kok', sel: '.ha-kok' }, ...HARFLER.map((h, i) => ({ metin: q.secenekler[h], vurgu: h, sel: `.ha-siklar > .ha-sik:nth-child(${i + 1}) > span`, atla: 'small' }))]);
       if (!ok || dur()) return;
       setEvre('dusun'); vurguYap(null); klipRef.current = null;
       for (let s = BEKLE_SN; s > 0; s--) {
@@ -290,7 +291,7 @@ function AraSayfa({ a, onKapat }: { a: NonNullable<Acik>; onKapat: () => void })
     if (secim) { // çözülmüş soruda şıkka dokunmak o şıkkın açıklamasını okur
       akis.current++;
       setDurdu(false);
-      cal(`s-${q.no}-${h}`, [{ metin: q.siklar[h], vurgu: h, sel: '.ha-sik.is-okunan small' }]);
+      cal(`s-${q.no}-${h}`, [{ metin: q.siklar[h], vurgu: h, sel: `.ha-siklar > .ha-sik:nth-child(${HARFLER.indexOf(h) + 1}) small` }]);
       return;
     }
     akis.current++;
