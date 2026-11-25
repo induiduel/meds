@@ -184,3 +184,9 @@
 - **Kök neden:** paylaşılan `CdPdfBolme` çubuğu 13 öge ve `nowrap`; v17 telefon düzeni daha dar sütun veriyor.
 - **Çözüm:** v17'de çubuk `flex-wrap`; telefonda yakınlaştırma düğmeleri gizli (parmakla yakınlaştırma var).
 - **Kural:** paylaşılan bileşen yeni kabuğa konunca her cihazda çocukların `right` değeri pencere/kapsayıcı genişliğiyle taranır.
+
+### H668 — v15 telefonda Soru çöz "Kip" seçicisi kartı taşıyor, Bugün halkasında "günlük hedef" kesiliyordu (2026-11-25)
+- **Belirti:** 375 px'te Test oluştur kartında Kip seçicisinin sağ ucu 369 px'e taşıyordu (kart 359 px), "Testi başlat" yarım genişlikte kalıyordu; Bugün'de 96 px halkadaki "günlük hedef" yazısı halkanın kenarına biniyordu.
+- **Kök neden:** `dersler.css`'te sonradan gelen katman `.s15-test-alt`'ı `flex-wrap`'a çevirmiş, satırlar ve `.v15-seg` içerik genişliğinde (min-width:auto) kalıyordu; 78 px sabit etiket + 3 nowrap düğme dar kaba sığmıyordu. Halka alt yazısının genişlik sınırı yoktu, iç çaptan genişti.
+- **Çözüm:** `d15` ≤479 px kapta seçici satırları etiket üstte, seçici ve başlat düğmesi tam genişlik; seçici düğmeleri `min-width:0` + üç nokta. Halka yazısı `max-width:74%`, dar kapta 11 px.
+- **Kural:** sonradan eklenen düzen katmanı (grid→flex gibi) öncekinin dar ekran kurallarını geçersiz kılabilir; her kırılım değişikliğinde 375/768/1440 px'te kart içi öğelerin `right` değeri kapsayıcıyla karşılaştırılır.

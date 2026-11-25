@@ -455,3 +455,14 @@ a.k15-kart:hover { border-color: var(--color-accent); }
   .sl15 .sl15-bas-sat .cd-toplu > span { display: none; }
   :root[data-v15='on'] .sl15 .sl15-bas-sat .cd-toplu { width: 34px; padding: 0; justify-content: center; }
 }
+/* H668: telefonda Kip/Soru sayısı seçicisi 78 px etiketin yanında içerik genişliğinde kalıp kartı taşıyordu
+   (flex öğesi min-width:auto). Seçici kalan alanı alır, dar kapta etiket üste geçer, başlat düğmesi tam genişlik. */
+.s15-test .s15-test-sat > .v15-seg { flex: 1 1 0; min-width: 0; }
+.s15-test .s15-test-sat > .v15-seg > button { min-width: 0; padding-inline: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@container d15 (max-width: 479px) {
+  .s15-test .s15-test-sat:has(> .v15-seg) { flex-direction: column; align-items: stretch; gap: 6px; }
+  .s15-test .s15-test-sat:has(> .v15-seg) > .v15-label { width: auto; }
+  .s15-test .s15-test-sat > .v15-seg { flex: none; width: 100%; }
+  .s15-test-alt .s15-test-sat { flex: 1 1 100%; }
+  .s15-test-alt .s15-basla { flex: 1 1 100%; margin-left: 0; min-height: 40px; }
+}

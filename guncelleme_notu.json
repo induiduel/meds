@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 932,
-  "baslik": "Psikiyatri sesli derslerinde eksik metin vurguları tamamlandı",
+  "onem": 933,
+  "baslik": "Telefonda Soru çöz ve Bugün ekranı düzeltmeleri",
   "maddeler": [
-    "Nörogelişimsel Bozukluklar, Konsültasyon-Liyezon ve İntihar derslerinde (V1 ve V2) önemli terim, tanım ve sayılar artık metinde vurgulu"
+    "Soru çöz › Test oluştur: Kip ve soru sayısı seçicisi telefonda artık kartın içinde, \"Testi başlat\" tam genişlikte",
+    "Bugün: günlük hedef halkasındaki yazı artık kesilmiyor"
   ],
   "eklenen": [],
   "degisen": [],

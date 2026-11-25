@@ -107,3 +107,6 @@
   .t15-in { grid-template-columns: minmax(0, 1fr) 360px; }
 }
 :root[data-motion='reduced'] .t15 * { transition: none !important; }
+/* H668: halka içi alt yazı ("günlük hedef") halkanın iç çapından genişti, 96 px halkada kenarları kesiliyordu. */
+.t15-ring-v span { max-width: 74%; overflow-wrap: anywhere; }
+@container t15 (max-width: 359px) { .t15-ring-v span { font-size: 11px; } }
