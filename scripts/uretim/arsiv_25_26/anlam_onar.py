@@ -69,7 +69,10 @@ def ders_onar(key: str, kuru: bool) -> Counter | None:
         cc = PI.cumle_capalari(m, sinir, capa_p[pn]) if capa_p and pn < len(capa_p) else None
         for ci, x in enumerate(liste):
             # T5: işaret çapanın sayfasından başka sayfadaysa (komşu sayfadan ödünç) çapa sayfasına geri alınır
-            cs = next((int(c["sayfa"]) for c in (cc[ci] if cc and ci < len(cc) and cc[ci] else []) if c.get("sayfa")), None)
+            # takip kapısı T5 ile aynı kaynak: capa.p[paragraf][cümle].sayfa (yoksa cümle çapalarından)
+            cl = capa_p[pn] if capa_p and pn < len(capa_p) else None
+            cs = cl[ci].get("sayfa") if cl and ci < len(cl) and isinstance(cl[ci], dict) and cl[ci].get("sayfa") else None
+            cs = int(cs) if cs else next((int(c["sayfa"]) for c in (cc[ci] if cc and ci < len(cc) and cc[ci] else []) if c.get("sayfa")), None)
             if x and cs and int(x.get("s") or 0) != cs and not x.get("z"):
                 sy = pdf.sayfa(cs)
                 if sy:
@@ -89,6 +92,10 @@ def ders_onar(key: str, kuru: bool) -> Counter | None:
             if ar and ar[1] == s:
                 yeni = ar[0]
                 say[f"{x['t']}→{yeni['t']}"] += 1
+            elif x["t"] == "sayfa" and (sy := pdf.sayfa(s)) and sy.resimler and len(sy.kelimeler) <= 9 and PI.resim_kutusu(sy):
+                # neredeyse yalnız görselden oluşan slayt: anlatılan şey slaytın görselidir → en büyük görsel (lazer)
+                yeni = {"t": "resim", "l": [sy.n(PI.resim_kutusu(sy))], "w": []}
+                say["sayfa→resim"] += 1
             elif x["t"] == "sayfa":
                 sy = pdf.sayfa(s)
                 if not (sy and sum(1 for i in range(len(sy.maddeler)) if len(PI.madde_kokleri(sy, i)) >= 2) >= 2):

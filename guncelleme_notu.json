@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 912,
-  "baslik": "Sesli ders listesi telefonda yeni görünüm",
+  "onem": 913,
+  "baslik": "Sesli derste PDF işareti okunan cümleyle eşleşiyor",
   "maddeler": [
-    "Telefon ve tablette her branş ayrı bir kart: ad, ilerleme ve branş sayfası oku üstte, Check-up ve Listeye ekle küçük düğmeler olarak altta.",
-    "Check-up düğmesi küçüldü; hangi düğmenin hangi branşa ait olduğu kartla belli."
+    "Metinde 'α', 'β' gibi harflerle başlayan cümlelerde PDF'in bir önceki cümlede takılı kalması düzeltildi; işaret artık okunan cümleyi gösterir.",
+    "2025-2026 arşivinde (Kurul 2 ve 3) görsel slaytlarda işaret slaytın görselini gösterir; tüm arşiv dersleri takip denetiminden hatasız geçti."
   ],
   "eklenen": [
     "Branş check-up"

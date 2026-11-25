@@ -95,7 +95,7 @@ export interface CdGunluk {
   baslik: string;
   kayitlar: CdGunlukKayit[];
 }
-export interface CdParagraf { i: number; metin: string }
+export interface CdParagraf { i: number; metin: string; /** ekran yazımından önceki (ses) metnin cümle sonları, yeni metne taşınmış */ sinir?: number[] }
 export interface CdBolum { baslik: string; paragraflar: CdParagraf[] }
 export interface CdPdfDosya { path: string; name: string; fileId?: string; pages?: number }
 export interface CdPdfEsleme { dosya: number; sayfa: number; guven?: number; sayfalar?: number[]; dosyalar?: number[] }
@@ -249,6 +249,11 @@ function sayilariDuzelt(d: CdDetay): CdDetay {
     for (const p of b.paragraflar) {
       const r = ekranYazimiEslemeli(p.metin);
       if (r.metin === p.metin) continue;
+      // H655 (2026-11-25): cümle sınırı SES metninden alınır ve yeni metne taşınır. Ekran yazımı noktadan sonraki büyük harfi
+      // küçük harfe çevirebilir ("Alfa-" → "α-"); bölücü bunu cümle devamı sayıp cümleleri birleştiriyor, cümle numarası
+      // kayıyor ve PDF başka cümlenin işaretini gösteriyordu (k2-41: feokromositoma cümlesinde Hemikolinyum kutusu).
+      const sinir0 = cumleSinirlari({ i: p.i, len: p.metin.length, bolum: 0, metin: p.metin });
+      p.sinir = sinir0.map((e, q) => (q === sinir0.length - 1 ? r.metin.length : r.konum(e)));
       // PDF işaretinin kelime konumları cümle başına göredir: eski metindeki mutlak konum üzerinden yeni metne taşınır
       const is = d.isaret?.[String(p.i)];
       if (is) {
@@ -385,7 +390,7 @@ function parasKur(d: CdDetay | null) {
   if (d) {
     d.bolumler.forEach((b, bi) => {
       bolumBas.push(paras.length);
-      for (const p of b.paragraflar) paras.push({ i: p.i, len: Math.max(1, p.metin.length), bolum: bi, metin: p.metin });
+      for (const p of b.paragraflar) paras.push({ i: p.i, len: Math.max(1, p.metin.length), bolum: bi, metin: p.metin, ...(p.sinir ? { cumleler: p.sinir } : {}) });
     });
   }
   posByI = new Map(paras.map((p, k) => [p.i, k]));
