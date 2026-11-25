@@ -137,7 +137,8 @@ const R_HARF_SAYI = HARF_ADI ? new RegExp(`${ON}((?:(?:${HARF_ADI})\\s+){0,3}(?:
 const R_BIR = new RegExp(`${ON}([A-Z]{2,6}) bir${SON}`, 'gu');
 // Tek büyük harf + sayı = özel ad/kod (M1 reseptörü, H2, D2, T4, B12): olduğu gibi bitişik yazılır. "O" zamir olabilir, hariç.
 // "bir" de burada 1'dir ("M bir, M üç"); harf sözcük içinde değil, tek başına büyük olmalı.
-const R_TEK_HARF = new RegExp(`${ON}([A-NP-Z]) (\\d{1,3}|bir)${SON}`, 'gu');
+// Sıra sayısı ("hepatit A on sekizinci doz" → önceki geçişte "A 18.") birleşmez; X/Y + "bir" belgisizdir ("Frajil X bir mutasyon").
+const R_TEK_HARF = new RegExp(`${ON}([A-NP-Z]) (\\d{1,3}|${DIZI})(${EK})${SON}(?!\\.\\s*\\p{Ll})`, 'gu');
 // anahtar: büyük harf, tiresiz ("BCL2") → kaynaktaki en sık biçim ("BCL-2")
 const BITISIK_K = new Map([...BITISIK].map((b) => [b.replace('-', '').toUpperCase(), b]));
 const BAGLAC_HARF = new Set(['ve', 'de', 'a', 'e', 'o', 'en', 'el', 'ne']);
@@ -206,7 +207,7 @@ export function ekranYazimiEslemeli(metin: string): { metin: string; konum: Konu
     [R_BITISIK, (m: string, h: string, n: string) => (h.length >= 2 ? bitistir(h, n, false) : null) ?? m],
     // "BRCA bir": "bir" sayı geçişinde tek başına rakama dönmez (belgisiz sıfat); kısaltmadan sonra bitişik biçim varsa 1
     [R_BIR, (m: string, h: string) => bitistir(h, '1', false) ?? m],
-    [R_TEK_HARF, (_m: string, h: string, n: string) => `${h}${n === 'bir' ? '1' : n}`],
+    [R_TEK_HARF, (m: string, h: string, n: string, ek: string) => (tr(n) === 'on' && ek) || (/^[XY]$/.test(h) && tr(n) === 'bir') ? m : ekli(`${h}${/^\d/.test(n) ? n : say(n)}`, ek)],
     [R_HARF_SAYI, (m: string, adlar: string, n: string) => {
       // baştaki bağlaçlar ("ve ce 3") kısaltmaya katılmaz; tek harf adı yalnız C (kompleman: "ce üç", "se dört")
       const adl = adlar.split(/\s+/);
