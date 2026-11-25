@@ -4,6 +4,7 @@ import type { SayfaProps } from '../menu';
 import { Anahtar, siteAyarYaz } from './ortak/siteAyarOrtak';
 import HavuzDondurma from './HavuzDondurma';
 import { bolumeKaydir } from './ortak/bolumKaydir';
+import { BAYRAK_VARSAYILAN_KAPALI } from '../../../services/siteAyar';
 
 /**
  * Site › Özellik bayrakları: tek şema (sunucu yonetim16/siteAyar.ts BAYRAKLAR + BAYRAK_UC kapısı, istemci services/siteAyar BAYRAK_SAYFA).
@@ -28,7 +29,9 @@ export default function SiteBayraklar({ git }: SayfaProps) {
             <li key={b.ad} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
               <Anahtar acik={b.acik} mesgul={mesgul === b.ad} etiket={b.etiket} degistir={async (v) => {
                 setMesgul(b.ad);
-                const r = await siteAyarYaz({ bayraklar: { [b.ad]: v ? null : false } }, `${b.etiket}: ${v ? 'açık' : 'kapalı'}`);
+                // Varsayılanı kapalı bayrakta açmak için açıkça true yazılır (null = varsayılan = kapalı)
+                const deger = v ? (BAYRAK_VARSAYILAN_KAPALI.has(b.ad) ? true : null) : false;
+                const r = await siteAyarYaz({ bayraklar: { [b.ad]: deger } }, `${b.etiket}: ${v ? 'açık' : 'kapalı'}`);
                 if (r) setVeri({ ogeler: veri.ogeler.map((x) => (x.ad === b.ad ? { ...x, acik: v, ayarli: !v } : x)) });
                 setMesgul(null);
               }} />

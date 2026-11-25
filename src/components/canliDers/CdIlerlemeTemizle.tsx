@@ -7,7 +7,7 @@
 import React, { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import { Check, Eraser, RotateCcw, X } from 'lucide-react';
 import { CD_KONUM_OLAY, cdKayitliKonum, cdKonumListesi, cdKonumSil, cdKonumlariTemizle } from './canliDersStore';
-import { bittiMi, konuSifirla, modulSifirla, sesliKonuId, useKonuKaydi, useTakip } from '../../services/calismaTakip';
+import { bittiMi, konuSifirla, sifirlanmisMi, modulSifirla, sesliKonuId, useKonuKaydi, useTakip } from '../../services/calismaTakip';
 
 let konumSurum = 0;
 const konumAbone = (f: () => void) => {
@@ -26,7 +26,8 @@ const useCdKonumVar = (key: string, bilinen?: boolean) => {
 
 /** Tek dersin yerel ilerlemesini (kaldığın yer + süre/bitti kaydı) iki adımlı onayla siler. */
 export function SifirlaDugme({ dersKey, baslik, konumVar, sinif }: { dersKey: string; baslik: string; /** kaldığın yer kaydı var mı (üst bileşen haritasından) */ konumVar?: boolean; /** düğme sınıfı (v15: 'v15-btn is-ghost') */ sinif?: string }) {
-  const kayit = useKonuKaydi('sesli', dersKey);
+  const kayit0 = useKonuKaydi('sesli', dersKey);
+  const kayit = sifirlanmisMi(kayit0) ? undefined : kayit0;
   const konumVar2 = useCdKonumVar(dersKey, konumVar);
   const [onay, setOnay] = useState(false);
   useEffect(() => {
@@ -63,7 +64,7 @@ export function TemizleDiyalog({ keys, onKapat }: { /** kapsam: görünen listen
   const takip = useTakip();
   const konumSurum = useCdKonumSurum();
   const konumN = useMemo(() => { const s = new Set(cdKonumListesi().map((k) => k.key)); return keys.filter((k) => s.has(k)).length; }, [keys, konumSurum]);
-  const takipKeys = useMemo(() => keys.filter((k) => takip.k[`sesli:${sesliKonuId(k)}`]), [keys, takip]);
+  const takipKeys = useMemo(() => keys.filter((k) => { const r = takip.k[`sesli:${sesliKonuId(k)}`]; return r && !sifirlanmisMi(r); }), [keys, takip]);
   const bittiN = takipKeys.filter((k) => bittiMi(takip.k[`sesli:${sesliKonuId(k)}`])).length;
   const [secKonum, setSecKonum] = useState(true);
   const [secTakip, setSecTakip] = useState(false);

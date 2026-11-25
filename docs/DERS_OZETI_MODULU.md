@@ -48,7 +48,26 @@ mevcut çözücüsü, EMA klipli) · "Yalnız çıkmışlar" · bölüm atlama �
 dinleme başladıktan sonra maddeye dokununca oradan okur.
 İlerleme `medsoru_ders_ozet_v1` ({ders: {klip, t, bitti, at}}) profil eşitlemesindedir (`userKvSync` SYNC_PATTERNS + ders başına en yeni `at` birleştirmesi); hesaptan gelen değişiklik `storage` olayıyla ekrana yansır.
 
+## Alternatif çalışma ekranı (2026-11-23, opsiyonel)
+
+Klasik ekran aynen kalır; `src/components/dersOzet/DersOzetYeni.tsx` onun yerine geçebilen ikinci görünümdür.
+
+- **Yönetici onayı:** özellik bayrağı `ders_ozet_yeni` (Yönetim › Site › Özellik bayrakları). Varsayılanı KAPALI
+  (`VARSAYILAN_KAPALI` sunucu `yonetim16/siteAyar.ts` + istemci `services/siteAyar.ts`); kapalıyken yalnız yönetici görür,
+  açıldığında herkes ders başına **"Yeni çalışma ekranı"** düğmesiyle geçebilir. Adresi aynıdır (site haritası değişmez).
+- **Cihaz tercihi:** `medsoru_ders_ozet_gorunum_v1` ('yeni' | 'eski'), `DEVICE_PREFS` içinde (hesaba eşitlenmez).
+- **Yerleşim:** üst şerit (geri · ders · işaret yüzdesi · tam ekran · Klasik) · sol bölüm dizini (≥1024 px; bölüm başına
+  öğrenilen/toplam, okunan bölüm işaretli) · orta okuma sütunu · alt çalışma iskelesi (önceki/sonraki bölüm, oynat, hız,
+  geçen/toplam süre, ilerleme). Telefonda dizin yerine yatay bölüm çipleri.
+- **Tam ekran:** `utils/fullscreen` uygulama tam ekranı (`html.is-app-fullscreen`); Esc/F ile çıkış, sol kenarda tam ekran
+  gezinme adası için 56 px pay. Klavye: Boşluk oynat/duraklat, ← → bölüm, F tam ekran.
+- **Takip:** madde başına "öğrendim" işareti `medsoru_ders_ozet_isaret_v1` (hesaba eşitlenir, `userKvSync`). Aynı işaret
+  klasik ekranda da görünür (iki ekran ortak kullanır). Bitti/kaldığı yer klasik ekranla aynı anahtarda.
+- **Oynatıcı çekirdeği:** `dersOzet/oynatici.ts` (`useOzetOynatici`) — iki ekran tek davranışı paylaşır (klipler, okunan
+  öğe işareti, hız, kaldığı yer). Klasik ekrandaki kopya kaldırıldı.
+
 ## Durum (2026-11-23)
+
 Pilot k2-15 onaylandı; 50 Kurul 2 dersi yayında (2.435 madde, ~7,8 sa ses, denetçi 50/50 GEÇER). Sesli dersi/slayt metni olmayan
 dersler (k2-25, 32, 47, 48, 51–57, 59–61, 63) kapsam dışı; sesli dersleri gelince aynı hat (`topla.py` hizalamadaki PDF'i okur).
 İlerleme hesaba eşitlenir (2026-11-23, onem 870). Farmakoloji yazımında Opus `[bio]` filtresi → alt ajan `model: sonnet`. Kapı ayrıntıları ve tuzaklar: H646.

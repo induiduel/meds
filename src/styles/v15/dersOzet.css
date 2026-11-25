@@ -24,8 +24,16 @@
 .dz-bolum { margin: 18px 0; }
 .dz-bolum h2 { font-size: 18px; margin: 0 0 8px; display: flex; align-items: center; gap: 6px; scroll-margin-top: calc(var(--sh-top-h, 56px) + 8px); }
 .dz-bolum ul, .dz-bolum ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
-.dz-madde { position: relative; padding: 9px 12px 9px 16px; border-radius: 12px; line-height: 1.55; background: transparent;
+.dz-madde { position: relative; padding: 9px 12px 9px 30px; border-radius: 12px; line-height: 1.55; background: transparent;
   border-left: 3px solid var(--color-line); transition: background .2s; scroll-margin: 120px; }
+/* "Öğrendim" onayı (alternatif ekranla ortak işaret: medsoru_ders_ozet_isaret_v1) */
+.dz-tik-d { position: absolute; left: 4px; top: 12px; width: 18px; height: 18px; padding: 0; display: grid; place-items: center;
+  border: 1.5px solid var(--color-line-2, var(--color-line)); border-radius: 6px; background: var(--color-surface); color: transparent; cursor: pointer; }
+.dz-tik-d:hover { border-color: var(--color-ok); }
+.dz-madde.dz-tik .dz-tik-d { background: var(--color-ok); border-color: var(--color-ok); color: var(--color-white); }
+.dz-madde.dz-tik .dz-metin { color: var(--color-ink-2); }
+.dz-oge-i { cursor: text; }
+.dz-yeni-gec { margin: 0 0 12px; }
 .dz-madde.dz-spot { border-left-color: var(--color-warn); }
 .dz-madde.dz-ayirici { border-left-color: var(--color-accent); }
 .dz-madde.dz-klinik { border-left-color: var(--color-ok); }
@@ -41,6 +49,8 @@
 .dz-akilda { padding: 14px; border-radius: 16px; background: var(--color-warn-soft); }
 .dz-akilda ol { counter-reset: dz; }
 .dz-akilda .dz-madde { border-left: none; padding-left: 34px; counter-increment: dz; }
+.dz-akilda .dz-tik-d { left: auto; right: 8px; top: 10px; }
+.dz-akilda .dz-madde.dz-tik { padding-left: 34px; padding-right: 34px; }
 .dz-akilda .dz-madde::before { content: counter(dz); position: absolute; left: 8px; top: 9px; width: 20px; height: 20px; border-radius: 50%;
   background: var(--color-warn); color: var(--color-white); font-size: 12px; font-weight: 700; display: grid; place-items: center; }
 .dz-ac { width: 100%; text-align: left; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-field);

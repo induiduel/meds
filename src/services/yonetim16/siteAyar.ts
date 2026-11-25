@@ -181,7 +181,7 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
 
   app.get('/api/admin/site-ayar/bayraklar', d.requireAdmin, (_req, res) => {
     const b = siteAyarOku().bayraklar || {};
-    res.json({ ogeler: BAYRAKLAR.map((x) => ({ ...x, acik: b[x.ad] !== false, ayarli: x.ad in b })) });
+    res.json({ ogeler: BAYRAKLAR.map((x) => ({ ...x, acik: bayrakAcikMi(x.ad, b), ayarli: x.ad in b })) });
   });
 
   app.get('/api/admin/site-ayar', d.requireAdmin, (_req, res) => {
@@ -219,7 +219,13 @@ export const BAYRAKLAR: { ad: string; etiket: string; aciklama: string }[] = [
   { ad: 'siralama_herkese', etiket: 'Sıralama herkese açık', aciklama: 'Kapalıyken Sıralama sayfası öğrenciye gizlenir; sıralama uçlarını yalnız yönetici okur.' },
   { ad: 'kayit_acik', etiket: 'Yeni kayıt açık', aciklama: 'Kapalıyken daha önce hiç girmemiş hesap profil oluşturamaz (mevcut kullanıcılar girer).' },
   { ad: 'not_paylas', etiket: 'Not paylaşımı', aciklama: 'Kapalıyken öğrenciler yeni not paylaşamaz.' },
+  { ad: 'ders_ozet_yeni', etiket: 'Ders özeti — yeni çalışma ekranı', aciklama: 'Kapalıyken ders özetinin alternatif tam ekran çalışma ekranını yalnız yönetici açar. Açtığında öğrenci ders başına "Yeni çalışma ekranı" düğmesiyle geçer; klasik ekran her zaman durur.' },
 ];
+
+/** Varsayılanı KAPALI bayraklar (panelde ayarsızken de kapalı görünür). İstemci: services/siteAyar VARSAYILAN_KAPALI. */
+export const VARSAYILAN_KAPALI = new Set(['ders_ozet_yeni']);
+export const bayrakAcikMi = (ad: string, b: Record<string, boolean> | undefined): boolean =>
+  b?.[ad] !== false && !(VARSAYILAN_KAPALI.has(ad) && b?.[ad] !== true);
 
 /** bayrak → [yöntem desen, yol deseni]; eşleşen istek bayrak kapalıyken (yönetici değilse) 403 alır */
 const BAYRAK_UC: Record<string, [RegExp, RegExp][]> = {

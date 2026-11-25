@@ -30,6 +30,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_son_prova_v1$/,
   // Ders özeti: ders başına kaldığı klip/saniye ve bitti işareti (components/dersOzet/dersOzetVeri.ts)
   /^medsoru_ders_ozet_v1$/,
+  // Ders özeti: madde başına "öğrendim" işaretleri (components/dersOzet/dersOzetIsaret.ts)
+  /^medsoru_ders_ozet_isaret_v1$/,
   // 60 planı: günlük saat ve sınav senaryosu girdileri/sonuçları (components/takip/SinavPlani, SinavSenaryo)
   /^medsoru_sinav_(plani_saat|senaryo)_v1$/,
   // Canlı ders oynatma listesi ve tekrar tercihi
@@ -152,7 +154,7 @@ const MAX_VALUE = 2_000_000; // sunucudaki sınırla aynı
  * Cihaza özgü görünüm/düzen tercihleri: profile eşitlenmez, her cihaz (telefon, tablet, bilgisayar) kendi
  * ayarını saklar — yoksa telefondaki değişiklik bilgisayarın görünümünü eziyordu. Sunucudaki eski kopyaları da uygulanmaz.
  */
-export const DEVICE_PREFS = /^(medsoru_appearance|medsoru_theme|medsoru_rail_collapsed|medsoru_tabbar_v1|medsoru_learn_(layout|mode|toc|zoom)|medsoru_lesson_day_mode|medsoru_(glossary|search|studio)_view|medsoru_reader_prefs|tc_layout|medsoru_auto_reveal|medsoru_solve_drawer|medsoru_study_section|medsoru_music_volume_v1|medsoru_card_note_open|medsoru_canli_ders_(gorunum|tam_yazi|oto_tam|yatay_yan)|medsoru_(cikmis_gorunum|cikmis_mod|saglik_gorunum|saglik_yogunluk|r12_reader)|medsoru_bolge_v1)$/;
+export const DEVICE_PREFS = /^(medsoru_appearance|medsoru_theme|medsoru_rail_collapsed|medsoru_tabbar_v1|medsoru_learn_(layout|mode|toc|zoom)|medsoru_lesson_day_mode|medsoru_(glossary|search|studio)_view|medsoru_reader_prefs|tc_layout|medsoru_auto_reveal|medsoru_solve_drawer|medsoru_study_section|medsoru_music_volume_v1|medsoru_card_note_open|medsoru_canli_ders_(gorunum|tam_yazi|oto_tam|yatay_yan)|medsoru_ders_ozet_gorunum_v1|medsoru_(cikmis_gorunum|cikmis_mod|saglik_gorunum|saglik_yogunluk|r12_reader)|medsoru_bolge_v1)$/;
 export const isProfileKey = (key: string): boolean => !DEVICE_PREFS.test(key) && SYNC_PATTERNS.some((re) => re.test(key));
 /** Öğrenciye ait (profil, paket ya da sayaç) anahtar mı — oturum değişince ayrılır (userScope). */
 export const isUserDataKey = (key: string): boolean => isProfileKey(key) || BUNDLE_KEYS.has(key) || QUIET_KEYS.has(key);
@@ -308,7 +310,8 @@ export function mergeKvJsonValue(key: string, olderRaw: string, newerRaw: string
         const bTime = String(rec.sonAt || rec.bittiAt || rec.ilkAt || '');
         const [lo, hi] = bTime >= aTime ? [cur, rec] : [rec, cur];
         // Yönetici düzeltmesi (adm): düzeltmeden sonra çalışılmadıysa süre/soru en büyüğe değil düzeltilmiş değere eşitlenir
-        const admWins = !!hi.adm && String(hi.adm) >= String(lo.sonAt || lo.bittiAt || lo.ilkAt || '');
+        const mk = hi.adm || hi.sif;
+        const admWins = !!mk && String(mk) >= String(lo.sonAt || lo.bittiAt || lo.ilkAt || '');
         const merged: Record<string, any> = {
           ...lo,
           ...hi,

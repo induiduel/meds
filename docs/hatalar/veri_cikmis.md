@@ -257,3 +257,21 @@
   "OCR hatası" diye düzeltilmez — yalnız kanıtlı düzeltme listesiyle ve izlenerek, (c) bir kayıtta 5'ten çok şık ya da şık içinde
   cue sözcüğü görülürse ayrıştırıcı düzeltilir, (d) cevap yoksa boş bırakılır ve `uyarilar`'a yazılır, (e) yıl/ branş yalnız
   doğrulanmış DB eşleşmesinden devralınır ve kaynağı etiketlenir.
+
+- **Ek (2026-11-25, DB'ye ekleme turu):** 799 eşleşmeyen kayıt sayfa görüntüsünden tek tek denetlendi (55 parti + kayıp 2 soru).
+  Yeni kök nedenler: (6) toplamada "cevapsız" görünen soruların çoğunda cevap görüntüde sarı/kırmızı vurguyla işaretliydi —
+  metin katmanı vurguyu taşımıyor; (7) ayrıştırıcı öncülleri şık sandı, iki soruyu tek kayda birleştirdi (2 soru kayboldu);
+  (8) kapının "kök ayrıştırılmış köke benzesin" denetimi ajanları kökü kapıya uydurmaya (şık metni ekleme = ipucu sızıntısı,
+  anlam değiştirme) itti; (9) paralel ajanların ortak scratchpad'i birbirinin çıktısını ezdi.
+  **Önleme:** görüntü esastır; bozuk kökte `kok_kaynagi: goruntu` ile denetim atlanır, köke ekleme YASAK; kökün anlamını
+  değiştiren "düzeltme" yasak (CIKAR); düşük güvenli/çift doğru cevaplı kayıt DB'ye girmez; her paralel ajan kendi klasöründe;
+  yeni kayıtlar kendi aralarında da kopya taranır; işaretli kayıtlar bağımsız tıbbi denetimden geçer.
+  (10) Birleşme grubunda düzeltme yalnız kopyalara yazılmış, sitede görünen asıl kayıt (k1-2018-2019-q047) eski E cevabında
+  kalmıştı; `reconstruction.correctAnswer` da üst alanla çelişiyordu. **Kural:** cevap düzeltmesi grubun asılı + tüm kopyalarına
+  ve `reconstruction`'a birlikte yazılır.
+  (11) **Grup çelişki taraması (2026-11-25):** 988 grupta doğru şık METNİ karşılaştırıldı; 46 grupta 53 kopya yanlış cevaptaydı
+  (07_grupla.py `yanlis_cevapli_kopyalar` ile işaretlemiş ama kimse düzeltmemişti), 130 kayıtta `reconstruction.correctAnswer`
+  üst alanla çelişiyordu (çoğu reconstruction şıkları farklı sırada olduğu için harf kayması). Asıl kayıtların hiçbiri yanlış değildi.
+  **Önleme:** harf değil şık metni karşılaştırılır; `yanlis_cevapli_kopyalar`/`cevap_celiskisi` işareti düzeltilmeden bırakılmaz;
+  bozuk kopya gruptan çıkarılmaz (çıkarılırsa sitede görünür) — `bozuk_kopyalar` + `isSuspect` ile gizli tutulur;
+  reconstruction şıkları eksikse `correctAnswer` boşaltılır. Betik/tara: `meds_temp/grup_celiski/` (tara.py, uygula.py).

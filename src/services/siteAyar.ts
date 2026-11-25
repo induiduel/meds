@@ -106,8 +106,12 @@ export function sayfaKapali(route: string): boolean {
 
 export function bayrak(ad: string, varsayilan = false): boolean {
   const v = ayar.bayraklar[ad];
-  return typeof v === 'boolean' ? v : varsayilan;
+  if (typeof v === 'boolean') return v;
+  return BAYRAK_VARSAYILAN_KAPALI.has(ad) ? false : varsayilan;
 }
+
+/** Panelde ayarsızken KAPALI sayılan bayraklar (sunucu VARSAYILAN_KAPALI ile aynı: yonetim16/siteAyar.ts) */
+export const BAYRAK_VARSAYILAN_KAPALI = new Set(['ders_ozet_yeni']);
 
 /** '<tür>:<kimlik>' görünürlüğü; yoksa 'acik' */
 export function gorunurluk(anahtar: string): 'acik' | 'gizli' | 'yalniz-yonetici' {

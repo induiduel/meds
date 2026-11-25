@@ -27,6 +27,8 @@ export interface KonuKaydi {
   bittiAt?: string;
   ilkAt?: string;
   sonAt?: string;
+  /** Kullanıcı sıfırlaması mezar taşı (ISO zaman): cihazlar arası birleştirmede eski süre/soru/bitti geri gelmesin */
+  sif?: string;
   /** yalnız sesli ders kaydında: dersin sayfasında çözülen soruların kimlikleri (tür başına, tekrarsız) */
   cz?: Partial<Record<DersSoruTur, string[]>>;
 }
@@ -154,14 +156,20 @@ export const tekrarTamamlandi = (m: TakipModul, konu: string) => {
 };
 
 /** Konunun takip kaydını tamamen siler (süre, soru, bitti işareti, tekrar turu). Geri alınamaz. */
+/** Silinen kayıt yerine bırakılan boş mezar taşı: sunucudaki/öteki cihazdaki eski kayıt birleşmede bunu ezemez. */
+const mezar = (): KonuKaydi => {
+  const t = new Date().toISOString();
+  return { sn: 0, soru: 0, durum: 'acik', tur: 0, bittiAt: '', cz: {}, ilkAt: t, sonAt: t, sif: t };
+};
+/** Sıfırlanmış (mezar taşı) kayıt mı: listelerde "kayıt var" sayılmaz */
+export const sifirlanmisMi = (k: KonuKaydi | undefined) => !!k?.sif && !k.sn && !k.soru && k.durum !== 'bitti';
+
 export const konuSifirla = (m: TakipModul, konu: string) => {
   if (typeof window === 'undefined' || !konu) return;
   const v = oku();
   const a = anahtar(m, konu);
   if (!(a in v.k)) return;
-  const k = { ...v.k };
-  delete k[a];
-  yaz({ ...v, k });
+  yaz({ ...v, k: { ...v.k, [a]: mezar() } });
 };
 
 /** Modülün konu kayıtlarını siler; `konular` verilirse yalnız onları (ör. görünen dönemin dersleri), verilmezse
@@ -170,8 +178,9 @@ export function modulSifirla(m: TakipModul, konular?: string[]): number {
   if (typeof window === 'undefined') return 0;
   const v = oku();
   const sil = new Set(konular ? konular.map((x) => anahtar(m, x)) : Object.keys(v.k).filter((a) => a.startsWith(`${m}:`)));
-  const k = Object.fromEntries(Object.entries(v.k).filter(([a]) => !sil.has(a)));
-  const n = Object.keys(v.k).length - Object.keys(k).length;
+  const k = { ...v.k };
+  let n = 0;
+  for (const a of sil) if (a in k && !sifirlanmisMi(k[a])) { k[a] = mezar(); n++; }
   const g = { ...v.g };
   if (!konular) delete g[m];
   yaz({ k, g });

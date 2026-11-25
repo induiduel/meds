@@ -2,22 +2,33 @@
  * Ders özeti (Kurul 2+): akılda kalması gerekenler, çıkmışlar, sesli özet (EMA, okunan madde işaretlenir) ve sesli soru çözümü.
  * Adres: /dersler/ders-ozeti[/kurul<N>[/<ders>]] (iç /ders-ozeti[/<ders>]?kurul=N). Veri: dersOzetVeri.ts.
  */
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronLeft, ChevronRight, CircleCheck, Headphones, ListChecks, Pause, Play, RotateCcw, Star } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Check, ChevronLeft, ChevronRight, CircleCheck, Headphones, LayoutDashboard, ListChecks, Pause, Play, RotateCcw, Star } from 'lucide-react';
 import { icKonum } from '../../siteHaritasi';
 import { linkClick, navigateTo } from '../../router';
 import { guvenliLazy } from '../../utils/guvenliLazy';
+import { bayrak, useSiteAyar, yoneticiMi } from '../../services/siteAyar';
 import { useV15Baslik } from '../v15/baslik';
 import type { Brans } from '../spots/brans';
-import { dk, klipAdres, klipSirasi, ogeKlibi, ozDersYukle, ozDizinYukle, ozIlerlemeYaz, ozKurullar, TUR_AD, useOzIlerleme, type OzDers, type OzDizin } from './dersOzetVeri';
+import { dk, ozDersYukle, ozDizinYukle, ozIlerlemeYaz, ozKurullar, TUR_AD, useOzIlerleme, type OzDers, type OzDizin } from './dersOzetVeri';
+import { useOzetOynatici } from './oynatici';
+import { isaretToggle, useOzetIsaret } from './dersOzetIsaret';
+import { DersOzetYeni } from './DersOzetYeni';
 import '../../styles/soru-cozucu.css';
 import '../../styles/v15/cozucu.css';
 import '../../styles/v15/dersOzet.css';
 
 const SoruCozucu = guvenliLazy(() => import('../spots/cozucu/SoruCozucu'));
-const HIZLAR = [1, 1.25, 1.5, 1.75];
-const HIZ_KEY = 'medsoru_ders_ozet_hiz_v1';
-const hizOku = () => { try { const v = Number(localStorage.getItem(HIZ_KEY)); return HIZLAR.includes(v) ? v : 1; } catch { return 1; } };
+
+/**
+ * Görünüm tercihi (cihazda): 'yeni' alternatif tam ekran çalışma ekranı, 'eski' klasik ekran.
+ * Alternatif ekran `ders_ozet_yeni` özellik bayrağı yönetici tarafından açılmadan kimseye gösterilmez.
+ */
+const GORUNUM_KEY = 'medsoru_ders_ozet_gorunum_v1';
+const gorunumOku = (): 'yeni' | 'eski' => { try { return localStorage.getItem(GORUNUM_KEY) === 'yeni' ? 'yeni' : 'eski'; } catch { return 'eski'; } };
+const gorunumYaz = (v: 'yeni' | 'eski') => { try { localStorage.setItem(GORUNUM_KEY, v); } catch { /* yoksay */ } };
+/** Alternatif ekran bu kullanıcıya açık mı: bayrak açık ya da yönetici */
+const yeniEkranAcik = () => yoneticiMi() || bayrak('ders_ozet_yeni', false);
 
 const Bag: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & { to: string }> = ({ to, children, ...p }) => (
   <a href={to} onClick={linkClick(() => navigateTo(to))} {...p}>{children}</a>
@@ -86,24 +97,41 @@ const Liste: React.FC<{ kurul: number }> = ({ kurul }) => {
 
 const DersOzet: React.FC<{ ders: string }> = ({ ders }) => {
   const [d, setD] = useState<OzDers | null | undefined>(undefined);
+  const [gorunum, setGorunum] = useState<'yeni' | 'eski'>(gorunumOku);
+  useSiteAyar(); // bayrak panelden açılınca ekran kendiliğinden yenilensin (yalnız yönetici)
+  const yeniVar = yeniEkranAcik();
+  useEffect(() => { ozDersYukle(ders).then(setD, () => setD(null)); }, [ders]);
+  useV15Baslik(d ? { baslik: d.baslik, alt: `Ders özeti · ${d.brans || ''}`, geri: `/dersler/ders-ozeti/kurul${d.kurul}` } : { baslik: 'Ders özeti' });
+  if (d === undefined) return <p className="dz-bos">Yükleniyor…</p>;
+  if (!d) return <p className="dz-bos">Bu dersin özeti bulunamadı.</p>;
+  const degistir = (v: 'yeni' | 'eski') => { gorunumYaz(v); setGorunum(v); };
+  if (yeniVar && gorunum === 'yeni') return <DersOzetYeni ders={ders} d={d} onKlasik={() => degistir('eski')} />;
+  return <Klasik ders={ders} d={d} yeniVar={yeniVar} onYeni={() => degistir('yeni')} />;
+};
+
+const Klasik: React.FC<{ ders: string; d: OzDers; yeniVar: boolean; onYeni: () => void }> = ({ ders, d, yeniVar, onYeni }) => {
   const [coz, setCoz] = useState<null | 'tum' | 'cikmis'>(null);
   const [cozKod, setCozKod] = useState<string | null>(null);
   const il = useOzIlerleme()[ders];
+  const isaret = useOzetIsaret()[ders] || {};
   const [cikmisAc, setCikmisAc] = useState(false);
-  useEffect(() => { ozDersYukle(ders).then(setD, () => setD(null)); }, [ders]);
-  useV15Baslik(d ? { baslik: d.baslik, alt: `Ders özeti · ${d.brans || ''}`, geri: `/dersler/ders-ozeti/kurul${d.kurul}` } : { baslik: 'Ders özeti' });
-  const oy = useOynatici(d || null, ders);
-  const cikmisSay = useMemo(() => new Map((d?.cikmis || []).map((c, i) => [c.id, i + 1])), [d]);
-  if (d === undefined) return <p className="dz-bos">Yükleniyor…</p>;
-  if (!d) return <p className="dz-bos">Bu dersin özeti bulunamadı.</p>;
+  const oy = useOzetOynatici(d, ders);
+  const cikmisSay = useMemo(() => new Map((d.cikmis || []).map((c, i) => [c.id, i + 1])), [d]);
 
   const Oge: React.FC<{ id: string; children: React.ReactNode; className?: string }> = ({ id, children, className }) => (
-    <li id={`dz-${id}`} className={`${className || ''}${oy.aktif === id ? ' dz-aktif' : ''}`} onClick={() => oy.buradan(id)}>{children}</li>
+    <li id={`dz-${id}`} className={`${className || ''}${oy.aktif === id ? ' dz-aktif' : ''}${isaret[id] ? ' dz-tik' : ''}`}>
+      <button type="button" className="dz-tik-d" role="checkbox" aria-checked={!!isaret[id]} aria-label="Öğrendim olarak işaretle"
+        onClick={(e) => { e.stopPropagation(); isaretToggle(ders, id); }}><Check size={12} aria-hidden /></button>
+      <span className="dz-oge-i" onClick={() => oy.buradan(id)}>{children}</span>
+    </li>
   );
   const rozet = (cs?: string[]) => cs?.length ? <span className="dz-cikmis" title="Bu bilgi çıkmış soruda soruldu">Çıkmış</span> : null;
 
   return (
     <div className="dz-sayfa dz-ders">
+      {yeniVar && (
+        <button type="button" className="dz-dugme dz-yeni-gec" onClick={onYeni}><LayoutDashboard size={16} aria-hidden /> Yeni çalışma ekranı (tam ekran)</button>
+      )}
       <p className="dz-giris" id="dz-giris">{kalin(d.giris)}</p>
       <div className="dz-araclar">
         {d.ses && (
@@ -198,77 +226,3 @@ const DersOzet: React.FC<{ ders: string }> = ({ ders }) => {
     </div>
   );
 };
-
-/** Klipleri sırayla çalar; çalan öğeyi (madde) işaretler ve görünür tutar; maddeye dokununca oradan başlar. */
-function useOynatici(d: OzDers | null, ders: string) {
-  const ses = useRef<HTMLAudioElement | null>(null);
-  const [klip, setKlip] = useState<string | null>(null);
-  const [caliyor, setCaliyor] = useState(false);
-  const [aktif, setAktif] = useState<string | null>(null);
-  const [ilerleme, setIlerleme] = useState(0);
-  const [hiz, setHiz] = useState(hizOku);
-  const sira = useMemo(() => (d ? klipSirasi(d) : []), [d]);
-  const toplam = d?.sure || 1;
-
-  useEffect(() => () => { ses.current?.pause(); }, []);
-  const yukle = (k: string, bas = 0) => {
-    if (!d) return;
-    let a = ses.current;
-    if (!a) {
-      a = new Audio();
-      ses.current = a;
-      a.addEventListener('play', () => setCaliyor(true));
-      a.addEventListener('pause', () => setCaliyor(false));
-    }
-    a.onended = () => {
-      const i = sira.indexOf(k);
-      if (i >= 0 && i + 1 < sira.length) yukle(sira[i + 1]);
-      else { setCaliyor(false); setAktif(null); ozIlerlemeYaz(ders, { klip: undefined, t: undefined, bitti: new Date().toISOString() }); }
-    };
-    let sonYaz = 0;
-    a.ontimeupdate = () => {
-      const t = a!.currentTime;
-      const x = d.ses?.klipler[k];
-      if (!x) return;
-      const once = sira.slice(0, sira.indexOf(k)).reduce((s, q) => s + (d.ses?.klipler[q]?.sure || 0), 0);
-      setIlerleme((once + t) / toplam);
-      if (Date.now() - sonYaz > 5000) { sonYaz = Date.now(); ozIlerlemeYaz(ders, { klip: k, t: Math.max(0, t - 2) }); }
-      const oge = Object.entries(x.oge).find(([, [b, s]]) => t >= b - 0.05 && t < s + 0.4)?.[0];
-      const id = oge === 'baslik' ? null : oge;
-      if (id) setAktif((o) => {
-        if (o !== id) document.getElementById(`dz-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return id;
-      });
-    };
-    a.src = klipAdres(d, k);
-    a.playbackRate = hiz;
-    a.currentTime = bas;
-    setKlip(k);
-    a.play().catch(() => setCaliyor(false));
-  };
-  const calYaDur = () => {
-    const a = ses.current;
-    if (!klip || !a) {
-      const il = (() => { try { return JSON.parse(localStorage.getItem('medsoru_ders_ozet_v1') || '{}')[ders]; } catch { return null; } })();
-      return il?.klip && sira.includes(il.klip) ? yukle(il.klip, il.t || 0) : yukle(sira[0]);
-    }
-    if (a.paused) a.play().catch(() => undefined); else a.pause();
-  };
-  const atla = (y: number) => { const i = sira.indexOf(klip || ''); const j = Math.min(sira.length - 1, Math.max(0, i + y)); if (sira[j]) yukle(sira[j]); };
-  const buradan = (oge: string) => {
-    if (!d?.ses || !klip) return; // yalnız dinleme başladıysa dokununca atlar (okurken yanlışlıkla ses açılmasın)
-    const k = ogeKlibi(d, oge);
-    if (k) yukle(k, d.ses.klipler[k].oge[oge][0]);
-  };
-  const hizDegis = () => {
-    const h = HIZLAR[(HIZLAR.indexOf(hiz) + 1) % HIZLAR.length];
-    setHiz(h);
-    try { localStorage.setItem(HIZ_KEY, String(h)); } catch { /* yoksay */ }
-    if (ses.current) ses.current.playbackRate = h;
-  };
-  const klipAdi = !d || !klip ? '' : klip === 'g' ? 'Giriş' : klip === 'a' ? 'Akılda kalması gerekenler' : d.bolumler[Number(klip.slice(2)) - 1]?.baslik || '';
-  return {
-    caliyor, aktif, ilerleme, hiz, klipAdi, basladi: !!klip,
-    calYaDur, buradan, hizDegis, onceki: () => atla(-1), sonraki: () => atla(1), dur: () => ses.current?.pause(),
-  };
-}
