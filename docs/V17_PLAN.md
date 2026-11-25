@@ -12,6 +12,9 @@ Tuval: https://claude.ai/artifact/CRx2hexkvDrnYoTb59dSSr (8 çalışma alanı, y
 - `bayrak.ts` (`medsor_v17_deneme`, `v17Yonetici`), `App.tsx` → `V17_ROTALAR` rotasında `Kok` tam ekran; v15 kabuğu `data-v17-ekran` ile gizli.
 - PDF çekirdeği `CdPdfBolme` paylaşılır (kural 17/18 çizim/izleme aynen).
 
+> ⏸ **2026-11-25 duraklatıldı (kullanıcı kararı):** `bayrak.ts` `V17_DURAKLATILDI = true`, Ayarlar anahtarı kaldırıldı.
+> Yarım çözücü motoru depoya girmedi. Sürdürmek için bayrağı `false` yap ve `V17Secici`'yi ProfileV12'ye geri bağla.
+
 ## Aşamalar
 1. ✅ Kabuk + Bugün + sesli ders (onem 928).
 2. Sesli soru çözücü (çözüm oynatıcısı dahil).

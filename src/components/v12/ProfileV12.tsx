@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import V16Secici from '../v16/V16Secici';
-import V17Secici from '../../v17/V17Secici';
 import { createPortal } from 'react-dom';
 import {
   AlertCircle,
@@ -500,7 +499,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
       )}
       {gosterilen === 'veri' && <DataPanel currentUser={currentUser} onOpenOffline={onOpenOffline} />}
       {gosterilen === 'erisim' && <ErisimPanel />}
-      {gosterilen === 'gorunum' && isAdmin && <><V16Secici /><V17Secici /></>}
+      {gosterilen === 'gorunum' && isAdmin && <V16Secici />}
       {gosterilen === 'gorunum' && <AppearancePanel />}
       {gosterilen === 'tamekran' && <TamEkranAyarV15 />}
       {gosterilen === 'yazi' && <YaziAyarV15 />}
@@ -714,7 +713,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
         )}
         {view === 'veri' && <DataPanel currentUser={currentUser} onOpenOffline={onOpenOffline} />}
         {view === 'erisim' && <ErisimPanel />}
-        {view === 'gorunum' && isAdmin && <><V16Secici /><V17Secici /></>}
+        {view === 'gorunum' && isAdmin && <V16Secici />}
         {view === 'gorunum' && <AppearancePanel />}
       </div>
 

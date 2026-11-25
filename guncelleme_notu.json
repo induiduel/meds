@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 928,
-  "baslik": "v17 denemesi: yeni Bugün ve sesli ders",
+  "onem": 929,
+  "baslik": "v17 denemesi duraklatıldı",
   "maddeler": [
-    "v17 denemesi (yalnız yönetici): Bugün ve sesli ders sıfırdan yeni tasarımla açılıyor; telefon, tablet ve bilgisayarda ayrı iskelet.",
-    "Öğrenciler mevcut tasarımı görmeye devam eder."
+    "v17 tasarım denemesi duraklatıldı ve Ayarlar'dan kaldırıldı; site mevcut tasarımla açılır."
   ],
   "eklenen": [],
   "degisen": [],
