@@ -73,6 +73,14 @@
         {
          "metin": "Konsültasyon",
          "tur": "terim"
+        },
+        {
+         "metin": "tıp hizmetlerinin ilk basamağıdır",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "görüş alma talebidir",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": null,
@@ -95,7 +103,12 @@
        "ses": "Konsültasyonda esas amaç, hastanın değerlendirilmesi ve hastaya farklı branş uzmanlarınca yardım sunulmasıdır.",
        "ekran": "Amaç: değerlendirme ve farklı branştan yardım",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "farklı branş uzmanlarınca yardım",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -120,6 +133,10 @@
         {
          "metin": "Liyezon",
          "tur": "terim"
+        },
+        {
+         "metin": "sürekli ve düzenli işbirliğini",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": null,
@@ -142,7 +159,12 @@
        "ses": "Liyezon kavramı yalnızca tanı ve tedavi hizmetlerini kapsamaz; eğitim, acil müdahale ve koruyucu sağlık görevlerini de içerir.",
        "ekran": "Liyezon: tanı-tedavi + eğitim, acil müdahale, koruyucu sağlık",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "eğitim, acil müdahale ve koruyucu sağlık",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -175,7 +197,12 @@
        "ses": "ka el pe, genel klinik tıp ve çeşitli uzmanlık alanları ile ruhsal ve psikososyal durumlar arasındaki bağlantıları araştıran bir psikiyatri disiplinidir.",
        "ekran": "KLP: tıp ile ruhsal-psikososyal durumlar arası bağlantı",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "psikiyatri disiplinidir",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -193,7 +220,12 @@
        "ses": "ka el pe, fiziksel hastalıklara eşlik eden psikiyatrik bozuklukların ve psikososyal sorunların tanısı, tedavisi ve takibi ile ilgilenir.",
        "ekran": "Fiziksel hastalığa eşlik eden bozuklukların tanı, tedavi, takibi",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "tanısı, tedavisi ve takibi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -250,6 +282,10 @@
         {
          "metin": "eş tanı",
          "tur": "terim"
+        },
+        {
+         "metin": "seyrini şiddetlendirir",
+         "tur": "tuzak"
         }
        ],
        "slayt_adim": null,
@@ -269,7 +305,16 @@
        "ses": "Eş tanılar önemli sıkıntıya neden olur, hastanede kalış süresini uzatır ve bakım maliyetlerini artırır.",
        "ekran": "Sıkıntı, uzun yatış, yüksek maliyet",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hastanede kalış süresini uzatır",
+         "tur": "terim"
+        },
+        {
+         "metin": "bakım maliyetlerini artırır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -335,7 +380,16 @@
        "ses": "Tedavi uyumundaki sorunlar, hastalığa verilen tepkilerin anlaşılması ve uyum güçlüklerinin değerlendirilmesi de bu alandadır.",
        "ekran": "Tedavi uyumu, hastalığa tepki, uyum güçlüğü",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Tedavi uyumundaki sorunlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "uyum güçlüklerinin",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -353,7 +407,12 @@
        "ses": "Uygun tedaviye rağmen süren yakınmalar da ka el pe'nin çalışma alanına girer.",
        "ekran": "Tedaviye rağmen süren yakınmalar",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Uygun tedaviye rağmen süren yakınmalar",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -371,7 +430,12 @@
        "ses": "Bedensel bir hastalık saptanmamasına rağmen görülen fiziksel yakınmalar da aynı alana dahildir.",
        "ekran": "Bedensel hastalık yokken fiziksel yakınma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Bedensel bir hastalık saptanmamasına rağmen",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -389,7 +453,16 @@
        "ses": "Çalışmalar, ka el pe hizmetlerinin tedavi uyumunu artırdığını ve yatış sürelerini kısaltarak sağlık hizmeti maliyetlerinin düşmesine katkı sağladığını göstermektedir.",
        "ekran": "KLP: tedavi uyumu artar, yatış ve maliyet azalır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "tedavi uyumunu artırdığını",
+         "tur": "terim"
+        },
+        {
+         "metin": "yatış sürelerini kısaltarak",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -441,6 +514,10 @@
         {
          "metin": "medikolegal",
          "tur": "terim"
+        },
+        {
+         "metin": "transplantasyon öncesi psikiyatrik değerlendirme",
+         "tur": "terim"
         }
        ],
        "slayt_adim": null,
@@ -460,7 +537,12 @@
        "ses": "Tedaviyi onaylama ya da reddetme durumunda kişinin karar verme yeterliliğini de değerlendirir.",
        "ekran": "Tedavi onay/ret: karar verme yeterliliği",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "karar verme yeterliliğini",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -478,7 +560,12 @@
        "ses": "Psikosomatik tıp ya da psikiyatrik eş tanılar üzerine araştırma yaparak bilimsel katkı sağlar.",
        "ekran": "Görev: psikosomatik ve eş tanı araştırması",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Psikosomatik tıp",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -526,7 +613,16 @@
        "ses": "Hekim açısından hastalık öncelikle fizyopatolojik ve beraberinde organik süreçleri içerir.",
        "ekran": "Hekim: fizyopatolojik ve organik süreç",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "fizyopatolojik",
+         "tur": "terim"
+        },
+        {
+         "metin": "organik süreçleri",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -544,7 +640,12 @@
        "ses": "Hasta açısından ise hastalık biyolojik, psikolojik, sosyal, çevresel ve ailesel yönleriyle çok boyutlu bir olgudur.",
        "ekran": "Hasta: çok boyutlu olgu",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "çok boyutlu bir olgudur",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -596,6 +697,10 @@
         {
          "metin": "Heinroth",
          "tur": "terim"
+        },
+        {
+         "metin": "ilk kez Alman doktor Christian Heinroth",
+         "tur": "tuzak"
         }
        ],
        "slayt_adim": null,
@@ -619,6 +724,10 @@
         {
          "metin": "Psikosomatik",
          "tur": "terim"
+        },
+        {
+         "metin": "akıl ve beden etkileşimini",
+         "tur": "tanim"
         }
        ],
        "slayt_adim": null,
@@ -638,7 +747,12 @@
        "ses": "Zamanla psikosomatik kavramı yanlış kullanılmaya başlanmıştır.",
        "ekran": "Kavram zamanla yanlış kullanıldı",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yanlış kullanılmaya",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -656,7 +770,12 @@
        "ses": "Hekimler, organik bir neden bulamadıklarında ya da hastalığın organik olup olmadığını çözemediklerinde psikiyatrik işbirliğine başvurur hale gelmiştir.",
        "ekran": "Organik neden bulunamayınca psikiyatriye başvuru",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "organik bir neden bulamadıklarında",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -674,7 +793,12 @@
        "ses": "Bu tür yanlış yaklaşımlar beden ile ruh ayrımını daha da artırmıştır.",
        "ekran": "Yanlış yaklaşım beden-ruh ayrımını artırdı",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "beden ile ruh ayrımını daha da artırmıştır",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -704,7 +828,12 @@
        "ses": "ka el pe'nin görevleri arasında, psikiyatri dışı sağlık çalışanlarının psikososyal tıp alanında eğitilmesi de bulunur.",
        "ekran": "Görev: psikiyatri dışı çalışanları eğitmek",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "psikiyatri dışı sağlık çalışanlarının",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -726,6 +855,14 @@
         {
          "metin": "deliryum",
          "tur": "terim"
+        },
+        {
+         "metin": "bilişsel bozukluğu",
+         "tur": "terim"
+        },
+        {
+         "metin": "büyük oranda doğru tanır",
+         "tur": "tuzak"
         }
        ],
        "slayt_adim": null,
@@ -778,6 +915,10 @@
         {
          "metin": "deliryum",
          "tur": "terim"
+        },
+        {
+         "metin": "en sık tablonun şizofreni değil deliryum",
+         "tur": "tuzak"
         }
        ],
        "slayt_adim": null,
@@ -821,7 +962,16 @@
        "ses": "Buna karşılık ajitasyon, depresyon, anksiyete ve konversiyon, yani ruhsal sıkıntının bedensel belirtiye dönüşmesi, nedeniyle istenen konsültasyonların yarısından fazlasında bu belirtileri açıklayacak ruhsal hastalık saptanmamıştır.",
        "ekran": "Ajitasyon, depresyon, anksiyete, konversiyon: çoğunda ruhsal hastalık yok",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yarısından fazlasında",
+         "tur": "sayi"
+        },
+        {
+         "metin": "konversiyon",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -869,7 +1019,12 @@
        "ses": "ka el pe'nin işlevleri üç ana başlıkta toplanır.",
        "ekran": "KLP'nin 3 işlevi",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "üç ana başlıkta",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -887,7 +1042,12 @@
        "ses": "Birincisi, psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmetlerinin sağlanmasıdır.",
        "ekran": "1. Ruh sağlığı hizmeti sağlamak",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ruh sağlığı hizmetlerinin sağlanmasıdır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -905,7 +1065,16 @@
        "ses": "İkincisi psikososyal tıp alanında eğitim, üçüncüsü psikososyal araştırmalardır.",
        "ekran": "2. Psikososyal tıp eğitimi, 3. Psikososyal araştırma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "psikososyal tıp alanında eğitim",
+         "tur": "terim"
+        },
+        {
+         "metin": "psikososyal araştırmalardır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -935,7 +1104,16 @@
        "ses": "Psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmeti sağlamak konsültasyon, liyezon ve tedavi olarak gruplandırılabilir, ancak bu hizmetler bütün olarak düşünülmeli ve uygulanmalıdır.",
        "ekran": "Konsültasyon, liyezon, tedavi: bütün olarak uygulanır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "konsültasyon, liyezon ve tedavi",
+         "tur": "terim"
+        },
+        {
+         "metin": "bütün olarak düşünülmeli",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -994,7 +1172,12 @@
        "ses": "Görüş bildirmenin yanı sıra uygun görülen medikal tedaviler başlanmalı ve hastaların takipleri de yapılmalıdır.",
        "ekran": "Görüşle yetinme: uygun tedavi başlanır, takip edilir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "medikal tedaviler başlanmalı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1012,7 +1195,16 @@
        "ses": "Uygulanabilecek tedaviler arasında psikiyatrik ilaç kullanımı, acil tıbbi müdahaleler, psikoterapiler ve aile terapileri bulunur.",
        "ekran": "Tedaviler: ilaç, acil müdahale, psikoterapi, aile terapisi",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "psikiyatrik ilaç kullanımı",
+         "tur": "terim"
+        },
+        {
+         "metin": "aile terapileri",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1030,7 +1222,12 @@
        "ses": "ka el pe hekimleri gerekli gördüklerinde hasta başı vizitlere katılmalı ve diğer klinisyenlerle birlikte hastanın medikal tedavi programı hakkında fikir bildirebilmelidir.",
        "ekran": "Hasta başı vizit, medikal tedavi programında görüş",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hasta başı vizitlere",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1096,7 +1293,12 @@
        "ses": "Bu nedenle eğitim verecekleri esas grup, psikiyatri dışı kliniklerde görev yapan sağlık çalışanlarıdır.",
        "ekran": "Eğitilen esas grup: psikiyatri dışı klinik çalışanları",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "psikiyatri dışı kliniklerde görev yapan sağlık çalışanlarıdır",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1114,7 +1316,12 @@
        "ses": "Yoğun bakım, palyatif bakım, diyaliz ünitesi ve yanık birimi gibi yerlerde psikososyal sorunlar daha sık ve acildir.",
        "ekran": "Yoğun bakım, palyatif, diyaliz, yanık: sorunlar sık ve acil",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Yoğun bakım, palyatif bakım, diyaliz ünitesi ve yanık birimi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1150,7 +1357,12 @@
        "ses": "Eğitimde liyezon psikiyatristi ile eğitim alan tıbbi ekip arasında sürekli ve yakın profesyonel işbirliği gerekir.",
        "ekran": "Eğitimde sürekli ve yakın işbirliği",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "sürekli ve yakın profesyonel işbirliği",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1180,7 +1392,12 @@
        "ses": "Konsültasyon-liyezon psikiyatrisinin bir diğer önemli işlevi araştırmadır.",
        "ekran": "3. işlev: psikososyal araştırma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "araştırmadır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1232,6 +1449,10 @@
         {
          "metin": "Lipowski",
          "tur": "terim"
+        },
+        {
+         "metin": "beş alt grupta",
+         "tur": "sayi"
         }
        ],
        "slayt_adim": null,
@@ -1254,6 +1475,10 @@
        "vurgu": [
         {
          "metin": "Hasta merkezli",
+         "tur": "terim"
+        },
+        {
+         "metin": "ayırıcı tanıya ilişkin görüş",
          "tur": "terim"
         }
        ],
@@ -1278,6 +1503,10 @@
         {
          "metin": "Kriz merkezli",
          "tur": "terim"
+        },
+        {
+         "metin": "uyum ve baş etme güçlüğünün",
+         "tur": "terim"
         }
        ],
        "slayt_adim": null,
@@ -1300,6 +1529,10 @@
        "vurgu": [
         {
          "metin": "Hekim merkezli",
+         "tur": "terim"
+        },
+        {
+         "metin": "hekimin hasta ile iletişim",
          "tur": "terim"
         }
        ],
@@ -1324,6 +1557,10 @@
         {
          "metin": "Durum merkezli",
          "tur": "terim"
+        },
+        {
+         "metin": "hasta ile tedavi ekibi arasındaki çatışma",
+         "tur": "terim"
         }
        ],
        "slayt_adim": null,
@@ -1347,6 +1584,10 @@
         {
          "metin": "Geniş merkezli",
          "tur": "terim"
+        },
+        {
+         "metin": "hasta, tedavi ekibi ve aile arasındadır",
+         "tur": "terim"
         }
        ],
        "slayt_adim": null,
@@ -1366,7 +1607,12 @@
        "ses": "Türler sorunun yerine göre ayrılır: hekim merkezlide hekim-hasta iletişimi, durum merkezlide hasta-ekip çatışması, geniş merkezlide ise aile de işin içindedir.",
        "ekran": "Ayırt edici: sorunun yeri (hekim / ekip / aile)",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "geniş merkezlide ise aile de işin içindedir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1396,7 +1642,12 @@
        "ses": "Psikiyatrik konsültasyonlar hastanın durumuna ve servisin ihtiyaçlarına göre acil, aynı günde ve rutin olarak sınıflandırılır.",
        "ekran": "Aciliyet: acil, aynı gün, rutin",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "acil, aynı günde ve rutin",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1420,6 +1671,10 @@
        "vurgu": [
         {
          "metin": "Acil",
+         "tur": "terim"
+        },
+        {
+         "metin": "deliryum, psikotik ajitasyon ve intihar girişimi",
          "tur": "terim"
         }
        ],
@@ -1467,6 +1722,10 @@
        "vurgu": [
         {
          "metin": "Rutin",
+         "tur": "terim"
+        },
+        {
+         "metin": "ayırıcı tanıya dönük ya da izlem amaçlıdır",
          "tur": "terim"
         }
        ],
@@ -1544,7 +1803,12 @@
        "ses": "Konsültasyonla ilgili işlevler belirli bir izlem süreci içerir ve bu süreç beş alt başlıkta sınıflandırılır.",
        "ekran": "Konsültasyon izlem süreci: 5 adım",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "beş alt başlıkta",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1562,7 +1826,20 @@
        "ses": "Sırayla bunlar hastaya yönelik verilerin toplanması, ruhsal durum muayenesi, tanı ve tedavi planının hazırlanması, planın hastaya ve ilgili hekime aktarılması ile takip ve izlemedir.",
        "ekran": "1 Veri toplama, 2 Ruhsal durum muayenesi, 3 Plan, 4 Aktarım, 5 Takip",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "verilerin toplanması",
+         "tur": "terim"
+        },
+        {
+         "metin": "ruhsal durum muayenesi",
+         "tur": "terim"
+        },
+        {
+         "metin": "takip ve izlemedir",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1592,7 +1869,16 @@
        "ses": "Veri toplama, muayenenin en önemli adımlarından biridir.",
        "ekran": "Veri toplama: en önemli adımlardan",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Veri toplama",
+         "tur": "terim"
+        },
+        {
+         "metin": "en önemli adımlarından",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1610,7 +1896,12 @@
        "ses": "Yalnızca özgeçmiş ve soygeçmiş bilgilerini almak yetersiz sonuç doğurur.",
        "ekran": "Yalnız özgeçmiş-soygeçmiş yetersiz",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yetersiz sonuç doğurur",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1628,7 +1919,16 @@
        "ses": "Hastanın yattığı servisin işleyişi ve gerektiğinde aileye ilişkin bilgi ve bulgular da değerlendirilmelidir.",
        "ekran": "Servis işleyişi ve aile bilgisi de değerlendirilir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "servisin işleyişi",
+         "tur": "terim"
+        },
+        {
+         "metin": "aileye ilişkin bilgi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1646,7 +1946,12 @@
        "ses": "Hastanın kullandığı tıbbi ilaçlar, bunların endikasyon alanları ve psikoaktif ilaçlarla etkileşimleri göz önünde bulundurulmalıdır.",
        "ekran": "Tıbbi ilaçlar, endikasyonlar, psikoaktif ilaç etkileşimi",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "psikoaktif ilaçlarla etkileşimleri",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1664,7 +1969,12 @@
        "ses": "Hastanın laboratuvar sonuçları mutlaka bilinmeli, gerekirse diğer kliniklerden ek konsültasyon istenmelidir.",
        "ekran": "Laboratuvar sonuçları bilinmeli; ek konsültasyon",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "laboratuvar sonuçları mutlaka bilinmeli",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1682,7 +1992,12 @@
        "ses": "Kliniklerde hastalarla sürekli ilgilenen, günlük takiplerini yapan ve tedavi yanıtlarını gözleyen kişiler büyük oranda hemşirelerdir.",
        "ekran": "Sürekli ilgilenen kişi: hemşire",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "büyük oranda hemşirelerdir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1700,7 +2015,12 @@
        "ses": "Bu nedenle bilgi toplarken servis hemşireleriyle de görüşülmelidir.",
        "ekran": "Servis hemşireleriyle görüşülür",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "servis hemşireleriyle",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1766,7 +2086,12 @@
        "ses": "Bilgi verilmemiş olması, hastadaki olası ajitasyonu, uyum sorununu ya da depresyonu anlamaya ışık tutar.",
        "ekran": "Bilgilendirme eksikliği: ajitasyon, uyum sorunu, depresyon ipucu",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ajitasyonu, uyum sorununu ya da depresyonu",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1802,7 +2127,12 @@
        "ses": "Hastanın etik ve yasal açılardan konsültasyondan haberdar edilmesi gerekir; bilgilendirme yapılmamışsa nedeni araştırılmalıdır.",
        "ekran": "Etik ve yasal bilgilendirme; yapılmadıysa neden araştırılır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "etik ve yasal açılardan",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1832,7 +2162,12 @@
        "ses": "Hasta ile tedavi ekibi arasındaki olası psikolojik çatışmalar araştırılmalıdır.",
        "ekran": "Hasta-ekip psikolojik çatışması araştırılır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "olası psikolojik çatışmalar",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1854,6 +2189,10 @@
         {
          "metin": "somatik",
          "tur": "terim"
+        },
+        {
+         "metin": "rutin laboratuvar testleri normal",
+         "tur": "tuzak"
         }
        ],
        "slayt_adim": null,
@@ -1873,7 +2212,12 @@
        "ses": "Başarılı bir psikiyatrik konsültasyonda etkili üç faktör vardır.",
        "ekran": "Başarıyı belirleyen 3 faktör",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "etkili üç faktör",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1891,7 +2235,12 @@
        "ses": "Bunlar hastanın medikal durumundan sorumlu hekim, konsültasyon-liyezon psikiyatristi ve hastanın kendisidir.",
        "ekran": "Sorumlu hekim, KLP psikiyatristi, hasta",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "konsültasyon-liyezon psikiyatristi ve hastanın kendisidir",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1944,7 +2293,12 @@
        "ses": "Uygulanan yaklaşım modeli, hastanın psikiyatrik konsültasyona ilişkin tutumunu etkileyen bir faktördür.",
        "ekran": "Yaklaşım, hastanın konsültasyona tutumunu etkiler",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Uygulanan yaklaşım modeli",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1962,7 +2316,12 @@
        "ses": "Muayene sırasında hasta yargılanmamalı, incitilmemeli ve küçük düşürülmemelidir.",
        "ekran": "Yargılayıcı, incitici, küçük düşürücü olunmaz",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yargılanmamalı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1980,7 +2339,12 @@
        "ses": "Hastanın cezalandırıldığını hissetmemesi gerekir; hekimin yargılamayan, objektif tutumu sonraki olumlu ilişkilerin temelidir.",
        "ekran": "Cezalandırılma hissi önlenir; objektif tutum temel",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yargılamayan, objektif tutumu",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1998,7 +2362,16 @@
        "ses": "Konsültasyon istenen hastaların büyük çoğunluğu fiziksel olarak güçsüzdür; yatak bağımlı, düşük kilolu, letarjik, yani uyuşuk ve çökkün duygudurumda olabilirler.",
        "ekran": "Hastalar güçsüz: yatak bağımlı, düşük kilolu, letarjik, çökkün",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "letarjik",
+         "tur": "terim"
+        },
+        {
+         "metin": "çökkün duygudurumda",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2016,7 +2389,12 @@
        "ses": "Konsültan hekim muayeneden önce hastayı tanımalı, kendisini hastaya tanıtmalı ve görüşmenin amacını hasta ve yakınlarına belirtmelidir.",
        "ekran": "Önce hastayı tanı, kendini tanıt, amacı söyle",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "görüşmenin amacını",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2034,7 +2412,16 @@
        "ses": "Bilgilendirmeden sonra hastanın onamı alınmalıdır; hasta onam vermez ya da görüşmeyi reddederse muayeneden vazgeçilebilir.",
        "ekran": "Bilgilendirme sonrası onam; ret halinde vazgeçilebilir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "onamı alınmalıdır",
+         "tur": "terim"
+        },
+        {
+         "metin": "muayeneden vazgeçilebilir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2052,7 +2439,16 @@
        "ses": "İntihar eğilimi, çevreye zarar verme potansiyeli ya da çevresindekilerin yaşamını tehdit eden davranışları olan hastanın durumu özel olarak değerlendirilmelidir.",
        "ekran": "İntihar, zarar verme, tehdit: özel değerlendirme",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "İntihar eğilimi",
+         "tur": "terim"
+        },
+        {
+         "metin": "özel olarak değerlendirilmelidir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2082,7 +2478,12 @@
        "ses": "Psikiyatrik konsültasyonlar genellikle tek seferlik değildir; hastanın tıbbi tedavisi boyunca takip gerekebilir.",
        "ekran": "Konsültasyon tek seferlik değil, süreçle devam eder",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "tek seferlik değildir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2100,7 +2501,12 @@
        "ses": "Zamana yayılan bu süreçte hasta ile konsültan hekim arasında sürekli ve yakın bir ilişki oluşur ve gizlilik daha fazla önem kazanır.",
        "ekran": "Sürekli ilişki: gizlilik daha önemli",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "gizlilik daha fazla önem kazanır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2136,7 +2542,12 @@
        "ses": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir.",
        "ekran": "Rahatlık ve gizlilik yoksa muayeneye geçilmez",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Fiziksel rahatlık ve gizlilik ortamı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2166,7 +2577,12 @@
        "ses": "Ruhsal durum muayenesinde bütüncül yaklaşım önemlidir; sağlıkla ilgili fiziksel, psikolojik ve sosyal bütün durumlar göz önüne alınmalıdır.",
        "ekran": "Bütüncül yaklaşım: fiziksel, psikolojik, sosyal",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bütüncül yaklaşım",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2184,7 +2600,12 @@
        "ses": "Hasta dış görünüş, yönelim durumu, bilinç düzeyi ve içgörü açısından değerlendirilir.",
        "ekran": "Dış görünüş, yönelim, bilinç düzeyi, içgörü",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yönelim durumu, bilinç düzeyi ve içgörü",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2202,7 +2623,12 @@
        "ses": "Davranış ve duygulanım, düşünce içeriği ve bellek de muayenenin parçalarıdır.",
        "ekran": "Davranış, duygulanım, düşünce içeriği, bellek",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "duygulanım, düşünce içeriği ve bellek",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2220,7 +2646,12 @@
        "ses": "Psikotik özellikler ve intihar potansiyeli de bütün olarak değerlendirmeye girer.",
        "ekran": "Psikotik özellikler, intihar potansiyeli",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Psikotik özellikler ve intihar potansiyeli",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2238,7 +2669,16 @@
        "ses": "Ayrıca hastalık öncesi ruhsal durum ve geçmiş psikiyatrik öykü de sorgulanmalıdır.",
        "ekran": "Hastalık öncesi ruhsal durum, geçmiş öykü",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hastalık öncesi ruhsal durum",
+         "tur": "terim"
+        },
+        {
+         "metin": "geçmiş psikiyatrik öykü",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2286,7 +2726,12 @@
        "ses": "Tedavi planının genel çerçevesine ait bilgi vermeli ve daha ileri düzenlemeler için kendi servis hekiminin bilgi vereceğini söylemelidir.",
        "ekran": "Genel tedavi çerçevesi; ayrıntıyı servis hekimi verir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kendi servis hekiminin bilgi vereceğini",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2316,7 +2761,12 @@
        "ses": "Tıbbi hastalarda biyopsikososyal değerlendirmeye ilişkin rapor, özgün bir tıbbi dökümandır.",
        "ekran": "Konsültasyon raporu: özgün tıbbi belge",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "özgün bir tıbbi dökümandır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2334,7 +2784,12 @@
        "ses": "Yazılı konsültasyon, hastanın sorunlarının çözümü için hekimler arası iletişim sağlar.",
        "ekran": "Rapor: hekimler arası iletişim",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hekimler arası iletişim",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2352,7 +2807,12 @@
        "ses": "Raporda konsültasyon talebine neden olan temel soruna odaklanmak önemlidir.",
        "ekran": "Rapor talebin temel sorununa odaklanır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "temel soruna odaklanmak",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2370,7 +2830,12 @@
        "ses": "Konsültan hekim düşüncesini açıklayıcı ve çözümleyici biçimde ifade etmelidir.",
        "ekran": "Düşünce açıklayıcı ve çözümleyici yazılır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "açıklayıcı ve çözümleyici",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2388,7 +2853,12 @@
        "ses": "Rapor hastanın tedavisinin gerektirdiği bilgileri içermeli, ancak gizlilik gerektiren bilgilerde hastanın bireysel haklarına ilişkin sorumluluk gözetilmelidir.",
        "ekran": "Gerekli bilgi + gizlilik ve bireysel haklar",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bireysel haklarına",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2418,7 +2888,12 @@
        "ses": "Herhangi bir psikiyatrik hastalık düşünülmüyorsa, sorunun boyutu ne olursa olsun bu ifade edilmelidir.",
        "ekran": "Psikiyatrik hastalık düşünülmüyorsa bunu yaz",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Herhangi bir psikiyatrik hastalık düşünülmüyorsa",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2436,7 +2911,20 @@
        "ses": "Klinik takip gereksinimi klinik, tanısal yani diagnostik, tedavi edici yani terapötik ve eğitime dönük olabilir.",
        "ekran": "Takip: klinik, diagnostik, terapötik, eğitim",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "diagnostik",
+         "tur": "terim"
+        },
+        {
+         "metin": "terapötik",
+         "tur": "terim"
+        },
+        {
+         "metin": "eğitime dönük",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2454,7 +2942,12 @@
        "ses": "Rutin liyezon vizitleri yapılabiliyorsa hastayı izlemek kolaydır; yapılamıyorsa izlenmesi gereken vakalar mutlaka kayıt edilmelidir.",
        "ekran": "Rutin vizit varsa izlem kolay; yoksa vakalar kaydedilir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "mutlaka kayıt edilmelidir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2502,7 +2995,16 @@
        "ses": "Yaşamı tehdit eden onkolojik hastalıklarda ve özürlülüğe neden olan fiziksel rahatsızlıklarda duygusal yani emosyonel bozukluk daha sık görülür.",
        "ekran": "Onkolojik ve özürlülük yapan hastalıkta duygusal bozukluk sık",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "onkolojik hastalıklarda",
+         "tur": "terim"
+        },
+        {
+         "metin": "emosyonel bozukluk",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2520,7 +3022,16 @@
        "ses": "Çeşitli çalışmalarda metabolik sendrom, iskemik kardiyak hastalık, hipotiroidi, endokrin hastalıklar ve porfiride anksiyete bozukluğu daha sık bildirilmiştir.",
        "ekran": "Anksiyete: metabolik sendrom, iskemik kalp, hipotiroidi, endokrin, porfiri",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "metabolik sendrom, iskemik kardiyak hastalık, hipotiroidi",
+         "tur": "terim"
+        },
+        {
+         "metin": "porfiride anksiyete bozukluğu",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2538,7 +3049,16 @@
        "ses": "Akut hastalıklara kıyasla kronik hastalıklarda, özellikle yapı, işlev ve yetenekte önemli kayıplara yol açanlarda depresyon daha sık gelişir.",
        "ekran": "Kronik ve işlev kaybı yapan hastalıkta depresyon",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kronik hastalıklarda",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "depresyon daha sık gelişir",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2568,7 +3088,12 @@
        "ses": "Konsültasyon psikiyatrisinde önemli ancak yaygın olmayan sorunlardan biri histeridir.",
        "ekran": "Histeri: önemli ama yaygın değil",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yaygın olmayan sorunlardan biri histeridir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2586,7 +3111,12 @@
        "ses": "Yaygın olmamasının nedeni, bu hastaların ancak küçük bir kısmının sevk edilmesidir.",
        "ekran": "Neden: hastaların küçük kısmı sevk edilir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "küçük bir kısmının sevk edilmesidir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2604,7 +3134,12 @@
        "ses": "Alkol-madde bağımlılığı, intihar girişimi ve psikotik tablolar da önemli diğer psikiyatrik hastalık grupları arasındadır.",
        "ekran": "Diğer gruplar: alkol-madde, intihar girişimi, psikotik tablo",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Alkol-madde bağımlılığı, intihar girişimi ve psikotik tablolar",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2640,7 +3175,12 @@
        "ses": "İşlevleri ruh sağlığı hizmeti, eğitim ve araştırmadır; konsültasyonlar da aciliyete göre acil, aynı gün ve rutin olarak ayrılır.",
        "ekran": "Özet: 3 işlev; aciliyete göre 3 grup",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "acil, aynı gün ve rutin",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,

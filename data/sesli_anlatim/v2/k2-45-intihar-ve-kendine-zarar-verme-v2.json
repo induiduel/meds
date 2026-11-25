@@ -35,7 +35,16 @@
        "ses": "Kendine zarar verme demek, kabaca kişinin ölmek istemeden kendi bedenini yaralaması demektir.",
        "ekran": "Kendine zarar verme ≈ ölmek istemeden bedeni yaralama",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Kendine zarar verme",
+         "tur": "tanim"
+        },
+        {
+         "metin": "ölmek istemeden",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -67,7 +76,12 @@
        "ses": "Dersin ana fikri şudur: tek bir etmen riski kesin belirlemez; etmenler üst üste bindikçe risk artar, koruyucu etmenler ise bu yükü hafifletir.",
        "ekran": "Tek etmen belirleyici değil: etmenler birikir, koruyucular hafifletir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "tek bir etmen riski kesin belirlemez",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -99,7 +113,12 @@
        "ses": "İntihar, psikiyatrinin en önemli acil konularından biridir ve dünya çapında önlenebilir ölüm nedenleri arasında üst sıralarda yer alır.",
        "ekran": "İntihar, psikiyatrinin en önemli acil konularından biridir ve dünya çapında önlenebilir ölüm nedenleri arasında üst sıralarda yer alır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "önlenebilir ölüm nedenleri",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -119,7 +138,12 @@
        "ses": "Önlenebilir ölüm demek, doğru zamanda fark edilip yardım edilirse engellenebilecek ölüm demektir.",
        "ekran": "Önlenebilir = fark edilirse engellenebilir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Önlenebilir ölüm",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -164,7 +188,12 @@
        "ses": "Çok faktörlü demek, tek bir nedenin değil, birçok nedenin bir araya gelmesi demektir.",
        "ekran": "Çok faktörlü = birçok neden birlikte",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Çok faktörlü",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -204,7 +233,12 @@
        "ses": "Psikiyatrik hastalıkların yaklaşık yüzde doksanında yaşam boyu en az bir kez intihar düşüncesi ya da girişimi görülür.",
        "ekran": "Psikiyatrik hastalıkların yaklaşık yüzde doksanında yaşam boyu en az bir kez intihar düşüncesi ya da girişimi görülür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde doksanında",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -250,7 +284,12 @@
        "ses": "İntihar davranışı bir süreklilik olarak düşünülür ve kendini öldürme düşüncelerinden başlar.",
        "ekran": "İntihar davranışı bir süreklilik olarak düşünülür ve kendini öldürme düşüncelerinden başlar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "süreklilik",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -269,7 +308,12 @@
        "ses": "Süreklilik demek, birbirinden kopuk olaylar değil, bir merdivenin basamakları gibi art arda gelen aşamalar demektir.",
        "ekran": "Süreklilik ≈ merdiven basamakları",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Süreklilik",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -288,7 +332,12 @@
        "ses": "Bu süreklilikte sırasıyla intihar düşüncesi ve planı, intihar girişimi ve tamamlanmış intihar yer alır; düşünceler ve ölüme ya da yaralanmaya yol açabilecek eylemler sürecin başlangıcıdır.",
        "ekran": "Bu süreklilikte sırasıyla intihar düşüncesi ve planı, intihar girişimi ve tamamlanmış intihar yer alır; düşünceler ve ölüme ya da yaralanmaya yol açabilecek eylemler sürecin başlangıcıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "tamamlanmış intihar",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -330,7 +379,12 @@
        "ses": "İntihar girişimi, ölümle ya da yaralanmayla sonuçlanabilecek eylemleri kapsar.",
        "ekran": "İntihar girişimi, ölümle ya da yaralanmayla sonuçlanabilecek eylemleri kapsar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "İntihar girişimi",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -349,7 +403,12 @@
        "ses": "Tamamlanmış intihar ise girişimin ölümle sonuçlanması demektir.",
        "ekran": "Tamamlanmış intihar = ölümle sonuçlanan girişim",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Tamamlanmış intihar",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -399,7 +458,12 @@
        "ses": "Dünya Sağlık Örgütü verilerine göre tamamlanmış intihar nedeniyle her yıl yaklaşık sekiz yüz bin kişi ölür.",
        "ekran": "Dünya Sağlık Örgütü verilerine göre tamamlanmış intihar nedeniyle her yıl yaklaşık sekiz yüz bin kişi ölür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "sekiz yüz bin",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -437,7 +501,16 @@
        "ses": "Bu, kırk saniyede bir kişinin kendini öldürmesi, yani günde yaklaşık üç bin kişi demektir.",
        "ekran": "Bu, kırk saniyede bir kişinin kendini öldürmesi, yani günde yaklaşık üç bin kişi demektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kırk saniyede bir",
+         "tur": "sayi"
+        },
+        {
+         "metin": "günde yaklaşık üç bin",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -457,7 +530,12 @@
        "ses": "İntihar girişimlerinin ise tamamlanmış intiharlardan tahminen yirmi kat fazla olduğu bildirilir.",
        "ekran": "İntihar girişimlerinin ise tamamlanmış intiharlardan tahminen yirmi kat fazla olduğu bildirilir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yirmi kat fazla",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -476,7 +554,12 @@
        "ses": "Girişim demek, kişinin kendini öldürmeye yönelik bir eylemde bulunup hayatta kalması demektir.",
        "ekran": "Girişim = eylem var, kişi hayatta",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Girişim",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -495,7 +578,12 @@
        "ses": "Yirmi kat fazla olması şu anlama gelir: her tamamlanmış intiharın arkasında çok sayıda girişim vardır; girişim öyküsü olan kişi ciddi bir risk işaretidir.",
        "ekran": "Çok sayıda girişim → girişim öyküsü risk işareti",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "girişim öyküsü",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -514,7 +602,12 @@
        "ses": "Etkilenen kişiler hesaba katıldığında intihar, hem dünyada hem Türkiye'de bir halk sağlığı sorunudur.",
        "ekran": "Etkilenen kişiler hesaba katıldığında intihar, hem dünyada hem Türkiye'de bir halk sağlığı sorunudur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "halk sağlığı sorunudur",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -533,7 +626,12 @@
        "ses": "Halk sağlığı sorunu demek, yalnız tek tek kişileri değil, bütün toplumu ilgilendiren ve toplumca önlem gerektiren sorun demektir.",
        "ekran": "Halk sağlığı sorunu = bütün toplumu ilgilendirir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Halk sağlığı sorunu",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -552,7 +650,16 @@
        "ses": "İntihar, on beş ile yirmi dokuz yaş arasındaki genç erişkinlerde ikinci ya da üçüncü sıradaki ölüm nedenidir.",
        "ekran": "İntihar, on beş ile yirmi dokuz yaş arasındaki genç erişkinlerde ikinci ya da üçüncü sıradaki ölüm nedenidir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "on beş ile yirmi dokuz yaş",
+         "tur": "sayi"
+        },
+        {
+         "metin": "ikinci ya da üçüncü sıradaki",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -592,7 +699,16 @@
        "ses": "Cinsiyet farkı önemlidir: erkeklerde ölümle sonuçlanan intihar, kadınlarda ise intihar girişimi daha sık görülür.",
        "ekran": "Cinsiyet farkı önemlidir: erkeklerde ölümle sonuçlanan intihar, kadınlarda ise intihar girişimi daha sık görülür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "erkeklerde ölümle sonuçlanan intihar",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "kadınlarda ise intihar girişimi",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -676,7 +792,12 @@
        "ses": "Risk etmenleri konusunda ilk ilke, bütün psikiyatri hastalarının ilk değerlendirmede ve izlemde intihar düşünceleri açısından sorgulanmasıdır.",
        "ekran": "Risk etmenleri konusunda ilk ilke, bütün psikiyatri hastalarının ilk değerlendirmede ve izlemde intihar düşünceleri açısından sorgulanmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bütün psikiyatri hastalarının",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -736,7 +857,16 @@
        "ses": "Bunun nedeni, tamamlanmış intiharların yaklaşık yüzde doksanında bir psikiyatrik tanı bulunmasıdır.",
        "ekran": "Bunun nedeni, tamamlanmış intiharların yaklaşık yüzde doksanında bir psikiyatrik tanı bulunmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde doksanında",
+         "tur": "sayi"
+        },
+        {
+         "metin": "psikiyatrik tanı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -755,7 +885,16 @@
        "ses": "Ayrıca intihar edenlerin üçte ikisi, intihardan önceki ay içinde herhangi bir hekimle görüşmüştür.",
        "ekran": "Ayrıca intihar edenlerin üçte ikisi, intihardan önceki ay içinde herhangi bir hekimle görüşmüştür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "üçte ikisi",
+         "tur": "sayi"
+        },
+        {
+         "metin": "önceki ay içinde",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -841,7 +980,12 @@
        "ses": "İntihar riski açısından yüksek riskli klinik durumların ilki, yakın dönemde bir intihar girişimi olmasıdır.",
        "ekran": "İntihar riski açısından yüksek riskli klinik durumların ilki, yakın dönemde bir intihar girişimi olmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yakın dönemde bir intihar girişimi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -879,7 +1023,16 @@
        "ses": "Emredici halüsinasyonlar ve paranoid hezeyanlar gibi psikotik belirtiler de intihar riskini belirgin biçimde yükseltir.",
        "ekran": "Emredici halüsinasyonlar ve paranoid hezeyanlar gibi psikotik belirtiler de intihar riskini belirgin biçimde yükseltir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Emredici halüsinasyonlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "paranoid hezeyanlar",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -899,7 +1052,12 @@
        "ses": "Emredici halüsinasyon, hastaya bir davranışı buyuran bir ses duymak demektir.",
        "ekran": "Emredici halüsinasyon: buyuran ses",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Emredici halüsinasyon",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -919,7 +1077,12 @@
        "ses": "Paranoid hezeyan ise kişinin, başkalarının ona zarar vereceğine dair gerçek olmayan ve düzeltilemeyen bir inanç taşımasıdır.",
        "ekran": "Paranoid hezeyan: zarar görme inancı",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Paranoid hezeyan",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -959,7 +1122,16 @@
        "ses": "Ağır depresyon, manide psikotik ögeler ya da disforik mani yüksek riskli duygudurum tablolarıdır.",
        "ekran": "Ağır depresyon, manide psikotik ögeler ya da disforik mani yüksek riskli duygudurum tablolarıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Ağır depresyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "disforik mani",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -999,7 +1171,12 @@
        "ses": "Disforik mani ise bu taşkın dönemin neşeyle değil, huzursuzluk ve sıkıntıyla birlikte yaşanmasıdır.",
        "ekran": "Disforik mani: taşkınlık + sıkıntı",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Disforik mani",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1019,7 +1196,12 @@
        "ses": "Alkol ve madde kullanımının eşlik ettiği bozukluklar da yüksek riskli durumlar arasında sayılır.",
        "ekran": "Alkol ve madde kullanımının eşlik ettiği bozukluklar da yüksek riskli durumlar arasında sayılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Alkol ve madde kullanımının",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1063,7 +1245,12 @@
        "ses": "İntihar riski değerlendirilirken dokuz başlık birlikte ele alınır; bu başlıklar dersin geri kalanının omurgasını oluşturur.",
        "ekran": "İntihar riski değerlendirilirken dokuz başlık birlikte ele alınır; bu başlıklar dersin geri kalanının omurgasını oluşturur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "dokuz başlık",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1101,7 +1288,16 @@
        "ses": "Başlıklar sosyodemografik etmenler, düşüncenin ciddiyeti ve planı, geçmiş girişim öyküsü, hayata son vermek isteme nedenleri, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek ve psikiyatrik muayenedir.",
        "ekran": "Başlıklar sosyodemografik etmenler, düşüncenin ciddiyeti ve planı, geçmiş girişim öyküsü, hayata son vermek isteme nedenleri, psikiyatrik ve tıbbi hastalıklar, çevre, sosyal destek ve psikiyatrik muayenedir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "geçmiş girişim öyküsü",
+         "tur": "terim"
+        },
+        {
+         "metin": "sosyal destek",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1179,7 +1375,12 @@
        "ses": "Sosyodemografik risk etmenlerinin ilki erkek cinsiyettir.",
        "ekran": "Sosyodemografik risk etmenlerinin ilki erkek cinsiyettir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "erkek cinsiyettir",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1198,7 +1399,16 @@
        "ses": "Kadınlar erkeklerden üç kat fazla girişimde bulunurken, erkeklerde tamamlanmış intihar davranışı üç kat fazladır.",
        "ekran": "Kadınlar erkeklerden üç kat fazla girişimde bulunurken, erkeklerde tamamlanmış intihar davranışı üç kat fazladır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "üç kat fazla girişimde",
+         "tur": "sayi"
+        },
+        {
+         "metin": "tamamlanmış intihar davranışı üç kat fazladır",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1218,7 +1428,16 @@
        "ses": "Ergenler ve ileri yaştakiler, dul ya da boşanmış olanlar, yalnız yaşayanlar, işsizler ve ekonomik sıkıntı yaşayanlar da risk grubundadır.",
        "ekran": "Ergenler ve ileri yaştakiler, dul ya da boşanmış olanlar, yalnız yaşayanlar, işsizler ve ekonomik sıkıntı yaşayanlar da risk grubundadır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Ergenler ve ileri yaştakiler",
+         "tur": "terim"
+        },
+        {
+         "metin": "dul ya da boşanmış",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1357,7 +1576,12 @@
        "ses": "Bu dönemde çevresel streslerin artması ve gelecekle ilgili belirsizlik riski büyütür.",
        "ekran": "Bu dönemde çevresel streslerin artması ve gelecekle ilgili belirsizlik riski büyütür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "gelecekle ilgili belirsizlik",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1410,7 +1634,12 @@
        "ses": "Bireyselleşme demek, gencin aileden ayrı, kendi kararlarını veren bir birey olma isteği demektir.",
        "ekran": "Bireyselleşme = kendi kararını veren birey olma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Bireyselleşme",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1474,7 +1703,12 @@
        "ses": "Gençlerde psikiyatrik hastalıklar ile alkol ve madde kullanımı da bu dönemde başlar, sorun çözme becerileri ise yetersiz kalır.",
        "ekran": "Gençlerde psikiyatrik hastalıklar ile alkol ve madde kullanımı da bu dönemde başlar, sorun çözme becerileri ise yetersiz kalır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "sorun çözme becerileri",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1543,7 +1777,12 @@
        "ses": "Yaşlılarda intihar nedenleri gençlerden farklıdır; temel neden yaşamak için nedeni olmamaktır.",
        "ekran": "Yaşlılarda intihar nedenleri gençlerden farklıdır; temel neden yaşamak için nedeni olmamaktır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yaşamak için nedeni olmamaktır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1584,7 +1823,16 @@
        "ses": "Yaşlı kişi kendini gereksiz hisseder ve bedensel düşkünlük ile hastalıklar yük olarak yaşanır.",
        "ekran": "Yaşlı kişi kendini gereksiz hisseder ve bedensel düşkünlük ile hastalıklar yük olarak yaşanır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kendini gereksiz hisseder",
+         "tur": "terim"
+        },
+        {
+         "metin": "bedensel düşkünlük",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1607,7 +1855,12 @@
        "ses": "Bireyselleşme isteği gençlerin nedenleri arasında sayılır; yaşlılar için verilen listede ise yer almaz.",
        "ekran": "Bireyselleşme isteği gençlerin nedenleri arasında sayılır; yaşlılar için verilen listede ise yer almaz.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yaşlılar için verilen listede ise yer almaz",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [
         "2cc678599118"
@@ -1632,7 +1885,12 @@
        "ses": "Şunu karıştırma: bireyselleşme isteği gençlerin nedenidir, yaşlıların değil.",
        "ekran": "Karıştırma: bireyselleşme = genç",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bireyselleşme isteği gençlerin nedenidir, yaşlıların değil",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1677,7 +1935,12 @@
        "ses": "Yaşlılarda girişimler daha ölümcüldür.",
        "ekran": "Yaşlılarda girişimler daha ölümcüldür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "daha ölümcüldür",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1718,7 +1981,16 @@
        "ses": "Yeme içme reddi ve yaşamsal ilaçları kullanmama gibi pasif intiharlar da yaşlılara özgü özel bir durumdur.",
        "ekran": "Yeme içme reddi ve yaşamsal ilaçları kullanmama gibi pasif intiharlar da yaşlılara özgü özel bir durumdur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "pasif intiharlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "Yeme içme reddi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1741,7 +2013,12 @@
        "ses": "Pasif intihar demek, kişinin etkin bir eylem yapmadan, yaşamını sürdüren şeyleri bırakması demektir.",
        "ekran": "Pasif intihar = yaşamı sürdüreni bırakma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Pasif intihar",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1807,7 +2084,20 @@
        "ses": "Riskli meslekler arasında erkek çiftçiler, hekim, diş hekimi ve hemşire gibi sağlık çalışanları, veteriner hekimler, askerler ve polisler bulunur.",
        "ekran": "Riskli meslekler arasında erkek çiftçiler, hekim, diş hekimi ve hemşire gibi sağlık çalışanları, veteriner hekimler, askerler ve polisler bulunur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "erkek çiftçiler",
+         "tur": "terim"
+        },
+        {
+         "metin": "sağlık çalışanları",
+         "tur": "terim"
+        },
+        {
+         "metin": "veteriner hekimler",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1851,7 +2141,16 @@
        "ses": "Nedenleri, intihar araçlarına ulaşımın kolay olması, iş stresi, profesyonel yalıtılmışlık ve yardım aramaya isteksizliktir.",
        "ekran": "Nedenleri, intihar araçlarına ulaşımın kolay olması, iş stresi, profesyonel yalıtılmışlık ve yardım aramaya isteksizliktir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "intihar araçlarına ulaşımın kolay olması",
+         "tur": "terim"
+        },
+        {
+         "metin": "profesyonel yalıtılmışlık",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1873,7 +2172,12 @@
        "ses": "Profesyonel yalıtılmışlık demek, kişinin işi nedeniyle yalnız kalması ve derdini paylaşacak kimse bulamaması demektir.",
        "ekran": "Profesyonel yalıtılmışlık = iş yüzünden yalnızlık",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Profesyonel yalıtılmışlık",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1929,7 +2233,12 @@
        "ses": "İntihar düşüncesinin varlığı, en önemli risk etmenlerinden biridir.",
        "ekran": "İntihar düşüncesinin varlığı, en önemli risk etmenlerinden biridir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "en önemli risk etmenlerinden biridir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1948,7 +2257,16 @@
        "ses": "Kessler ve arkadaşlarına göre intihar düşüncesi olanların yüzde otuz dördü plan yapar.",
        "ekran": "Kessler ve arkadaşlarına göre intihar düşüncesi olanların yüzde otuz dördü plan yapar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Kessler",
+         "tur": "terim"
+        },
+        {
+         "metin": "yüzde otuz dördü plan yapar",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1968,7 +2286,12 @@
        "ses": "Plan demek, kişinin intiharı ne zaman, nerede ve nasıl yapacağını düşünmüş olması demektir.",
        "ekran": "Plan = ne zaman, nerede, nasıl",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Plan",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -1988,7 +2311,12 @@
        "ses": "İntihar planı yapanların ise yüzde yetmiş ikisi girişimde bulunur.",
        "ekran": "İntihar planı yapanların ise yüzde yetmiş ikisi girişimde bulunur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde yetmiş ikisi girişimde bulunur",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2026,7 +2354,12 @@
        "ses": "Düşünce plana, plan girişime dönüştükçe risk yükselir; bu nedenle düşünce varsa planı sormak zorunludur.",
        "ekran": "Düşünce → plan → girişim: risk yükselir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "planı sormak zorunludur",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2045,7 +2378,12 @@
        "ses": "Düşüncenin ciddiyeti, pasif ölüm düşüncelerinden öldürücü planlara kadar değişebilir.",
        "ekran": "Düşüncenin ciddiyeti, pasif ölüm düşüncelerinden öldürücü planlara kadar değişebilir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "pasif ölüm düşüncelerinden",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2064,7 +2402,12 @@
        "ses": "Pasif ölüm düşüncesi, kişinin bir eylem düşünmeden keşke yaşamasam diye geçirmesidir.",
        "ekran": "Pasif ölüm düşüncesi: keşke yaşamasam",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Pasif ölüm düşüncesi",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2134,7 +2477,12 @@
        "ses": "Ayrıca kişinin düşündüğü yöntemler ve vasiyet gibi ölüme hazırlık yapıp yapmadığı da sorulur.",
        "ekran": "Ayrıca kişinin düşündüğü yöntemler ve vasiyet gibi ölüme hazırlık yapıp yapmadığı da sorulur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "vasiyet",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2197,7 +2545,12 @@
        "ses": "Tarih, yöntem ve yer belirlenmişse ya da plan kesinleşmiş ve ayrıntılandırılmışsa intihar riski yüksektir.",
        "ekran": "Tarih, yöntem ve yer belirlenmişse ya da plan kesinleşmiş ve ayrıntılandırılmışsa intihar riski yüksektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Tarih, yöntem ve yer belirlenmişse",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2244,7 +2597,12 @@
        "ses": "Kişi planının ölümcül olduğunu düşünüyorsa ya da intihar sonrası için plan yaptıysa risk yine yüksektir.",
        "ekran": "Kişi planının ölümcül olduğunu düşünüyorsa ya da intihar sonrası için plan yaptıysa risk yine yüksektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "intihar sonrası için plan",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2299,7 +2657,16 @@
        "ses": "Geçmiş intihar girişimi öyküsü, en önemli risk etmenidir.",
        "ekran": "Geçmiş intihar girişimi öyküsü, en önemli risk etmenidir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Geçmiş intihar girişimi öyküsü",
+         "tur": "terim"
+        },
+        {
+         "metin": "en önemli risk etmenidir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2318,7 +2685,12 @@
        "ses": "Şunu karıştırma: intihar düşüncesinin varlığı en önemli risk etmenlerinden biridir, geçmiş girişim ise en önemli risk etmenidir.",
        "ekran": "Karıştırma: düşünce = en önemlilerden · geçmiş girişim = en önemli",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "geçmiş girişim ise en önemli risk etmenidir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2337,7 +2709,16 @@
        "ses": "Tamamlanmış intiharların yüzde ellisinde en az bir kez girişim vardır ve yüzde yirmi beşinde girişim önceki yıl içinde olmuştur.",
        "ekran": "Tamamlanmış intiharların yüzde ellisinde en az bir kez girişim vardır ve yüzde yirmi beşinde girişim önceki yıl içinde olmuştur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde ellisinde",
+         "tur": "sayi"
+        },
+        {
+         "metin": "yüzde yirmi beşinde",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2439,7 +2820,20 @@
        "ses": "Yakın zamanlı girişim, birden fazla girişim, ölümcül yöntem, fark edilmesi zor girişim ve tehlikeli tıbbi sonuç riski artırır.",
        "ekran": "Yakın zamanlı girişim, birden fazla girişim, ölümcül yöntem, fark edilmesi zor girişim ve tehlikeli tıbbi sonuç riski artırır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "birden fazla girişim",
+         "tur": "terim"
+        },
+        {
+         "metin": "ölümcül yöntem",
+         "tur": "terim"
+        },
+        {
+         "metin": "fark edilmesi zor girişim",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2460,7 +2854,12 @@
        "ses": "Fark edilmesi zor girişim, kişinin kimse görmesin diye gizli bir zaman ve yer seçtiği girişimdir.",
        "ekran": "Fark edilmesi zor = gizli zaman ve yer",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Fark edilmesi zor girişim",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2502,7 +2901,12 @@
        "ses": "Kişinin hayatta kaldığı için hayıflanması da kötü bir göstergedir.",
        "ekran": "Kişinin hayatta kaldığı için hayıflanması da kötü bir göstergedir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hayatta kaldığı için hayıflanması",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2565,7 +2969,12 @@
        "ses": "Ailede intihar girişimi öyküsü, risk etmenleri arasında ayrıca yer alır.",
        "ekran": "Ailede intihar girişimi öyküsü, risk etmenleri arasında ayrıca yer alır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Ailede intihar girişimi öyküsü",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2584,7 +2993,12 @@
        "ses": "Bunun arkasında genetik etmenler ve psikiyatrik hastalıklara yatkınlık bulunur.",
        "ekran": "Bunun arkasında genetik etmenler ve psikiyatrik hastalıklara yatkınlık bulunur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "genetik etmenler",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2624,7 +3038,12 @@
        "ses": "Psikodinamik açıdan ise aile bireyini model alma rol oynar.",
        "ekran": "Psikodinamik açıdan ise aile bireyini model alma rol oynar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "model alma",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2710,7 +3129,12 @@
        "ses": "Kişinin hayatına son vermek istemesinin nedenleri çoğunlukla kayıplardır.",
        "ekran": "Kişinin hayatına son vermek istemesinin nedenleri çoğunlukla kayıplardır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kayıplardır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2748,7 +3172,16 @@
        "ses": "İlişki kaybı boşanma ya da ölümle olabilir; bedensel yeti kaybı kaza ve hastalıkla olur.",
        "ekran": "İlişki kaybı boşanma ya da ölümle olabilir; bedensel yeti kaybı kaza ve hastalıkla olur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "İlişki kaybı",
+         "tur": "terim"
+        },
+        {
+         "metin": "bedensel yeti kaybı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2788,7 +3221,16 @@
        "ses": "Göç ve taşınma güvenlik duygusunu, işten çıkarılma ve iflas ise kendilik değerini ve toplumsal statüyü kaybettirir.",
        "ekran": "Göç ve taşınma güvenlik duygusunu, işten çıkarılma ve iflas ise kendilik değerini ve toplumsal statüyü kaybettirir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kendilik değerini",
+         "tur": "terim"
+        },
+        {
+         "metin": "toplumsal statüyü",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2828,7 +3270,16 @@
        "ses": "Akut bir stresör ya da kriz durumu, umutsuzluk ve çektiği acılara son verme isteği de nedenler arasındadır.",
        "ekran": "Akut bir stresör ya da kriz durumu, umutsuzluk ve çektiği acılara son verme isteği de nedenler arasındadır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Akut bir stresör",
+         "tur": "terim"
+        },
+        {
+         "metin": "umutsuzluk",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2918,7 +3369,16 @@
        "ses": "Utanç intiharları, narsisistik yaralanmalara duyarlı kişilerde görülür.",
        "ekran": "Utanç intiharları, narsisistik yaralanmalara duyarlı kişilerde görülür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Utanç intiharları",
+         "tur": "terim"
+        },
+        {
+         "metin": "narsisistik yaralanmalara",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2938,7 +3398,12 @@
        "ses": "Narsisistik yaralanma demek, kişinin gururunun ve kendine bakışının ağır biçimde incinmesi demektir.",
        "ekran": "Narsisistik yaralanma = gurur ağır incinir",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Narsisistik yaralanma",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2958,7 +3423,12 @@
        "ses": "Kişi aşağılandığını düşündüğünde ya da çok utandığında ve bunu kaldıramadığında ani ve dürtüsel girişimde bulunabilir.",
        "ekran": "Kişi aşağılandığını düşündüğünde ya da çok utandığında ve bunu kaldıramadığında ani ve dürtüsel girişimde bulunabilir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ani ve dürtüsel girişimde",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -2979,7 +3449,12 @@
        "ses": "Dürtüsel demek, düşünmeden, bir anda ve plansız yapılan demektir.",
        "ekran": "Dürtüsel = anlık, plansız",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Dürtüsel",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3021,7 +3496,16 @@
        "ses": "Yoğun ümitsizlik ve gelecekle ilgili olumsuz beklenti ise depresyonun şiddetinden daha iyi öngörü sağlar.",
        "ekran": "Yoğun ümitsizlik ve gelecekle ilgili olumsuz beklenti ise depresyonun şiddetinden daha iyi öngörü sağlar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Yoğun ümitsizlik",
+         "tur": "terim"
+        },
+        {
+         "metin": "depresyonun şiddetinden daha iyi öngörü sağlar",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3061,7 +3545,12 @@
        "ses": "Şunu karıştırma: intihar riskini kestirmede depresyonun ağırlığından çok umutsuzluğun derecesi yol gösterir.",
        "ekran": "Karıştırma: umutsuzluk > depresyon şiddeti",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "depresyonun ağırlığından çok umutsuzluğun derecesi",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3145,7 +3634,12 @@
        "ses": "İntihara eğilimli bireylerin yüzde on ile kırkında çocuklukta olumsuz yaşam olayı vardır.",
        "ekran": "İntihara eğilimli bireylerin yüzde on ile kırkında çocuklukta olumsuz yaşam olayı vardır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde on ile kırkında",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3164,7 +3658,20 @@
        "ses": "Çocukken cinsel ve fiziksel taciz öyküsü, intihar için bağımsız bir risk etmenidir ve riski on kat artırır.",
        "ekran": "Çocukken cinsel ve fiziksel taciz öyküsü, intihar için bağımsız bir risk etmenidir ve riski on kat artırır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "cinsel ve fiziksel taciz",
+         "tur": "terim"
+        },
+        {
+         "metin": "bağımsız bir risk etmenidir",
+         "tur": "terim"
+        },
+        {
+         "metin": "on kat",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3185,7 +3692,12 @@
        "ses": "Bağımsız risk etmeni demek, başka hiçbir etmen olmasa da tek başına riski artıran etmen demektir.",
        "ekran": "Bağımsız risk etmeni = tek başına riski artırır",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Bağımsız risk etmeni",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3233,7 +3745,12 @@
        "ses": "Psikiyatrik hastalıklar, tamamlanmış intiharlarda en büyük paya sahiptir.",
        "ekran": "Psikiyatrik hastalıklar, tamamlanmış intiharlarda en büyük paya sahiptir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "en büyük paya sahiptir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3252,7 +3769,16 @@
        "ses": "Duygudurum bozukluğu yüzde altmış ile ilk sıradadır.",
        "ekran": "Duygudurum bozukluğu yüzde altmış ile ilk sıradadır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Duygudurum bozukluğu yüzde altmış",
+         "tur": "sayi"
+        },
+        {
+         "metin": "ilk sıradadır",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3271,7 +3797,12 @@
        "ses": "Duygudurum bozukluğu, kişinin ruh halinin uzun süre aşırı çökkün ya da aşırı taşkın olduğu hastalıklardır; depresyon buna girer.",
        "ekran": "Duygudurum bozukluğu: çökkün ya da taşkın; depresyon",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Duygudurum bozukluğu",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3290,7 +3821,16 @@
        "ses": "Alkol ve madde kötüye kullanımı ya da bağımlılığı yüzde yirmi beş ile elli, anksiyete bozuklukları yüzde on beş ile yirmi arasındadır.",
        "ekran": "Alkol ve madde kötüye kullanımı ya da bağımlılığı yüzde yirmi beş ile elli, anksiyete bozuklukları yüzde on beş ile yirmi arasındadır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde yirmi beş ile elli",
+         "tur": "sayi"
+        },
+        {
+         "metin": "yüzde on beş ile yirmi",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3353,7 +3893,16 @@
        "ses": "Psikotik bozukluklar ya da şizofreni yaklaşık yüzde on, kişilik bozuklukları ise yüzde beş ile on arasındadır.",
        "ekran": "Psikotik bozukluklar ya da şizofreni yaklaşık yüzde on, kişilik bozuklukları ise yüzde beş ile on arasındadır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "şizofreni yaklaşık yüzde on",
+         "tur": "sayi"
+        },
+        {
+         "metin": "yüzde beş ile on",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3413,7 +3962,12 @@
        "ses": "Kişilik bozukluklarında intihar özellikle sınır ve antisosyal kişilik bozukluğunda öne çıkar.",
        "ekran": "Kişilik bozukluklarında intihar özellikle sınır ve antisosyal kişilik bozukluğunda öne çıkar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "sınır ve antisosyal kişilik bozukluğunda",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3451,7 +4005,16 @@
        "ses": "Majör depresyon duygudurum bozukluğunun içinde yer alır ve bu en büyük paydır; antisosyal kişilik bozukluğu ise ayrı bir grup değil, kişilik bozuklukları satırının yüzde beş ile on aralığındaki bir parçasıdır.",
        "ekran": "Majör depresyon: duygudurum payı en büyük · antisosyal: kişilik satırının parçası",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Majör depresyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "ayrı bir grup değil",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3476,7 +4039,16 @@
        "ses": "Tıbbi hastalıklar da intihar riskini artırır; girişimde bulunanların yaklaşık yüzde kırkında tıbbi hastalık bildirilmiştir.",
        "ekran": "Tıbbi hastalıklar da intihar riskini artırır; girişimde bulunanların yaklaşık yüzde kırkında tıbbi hastalık bildirilmiştir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde kırkında",
+         "tur": "sayi"
+        },
+        {
+         "metin": "tıbbi hastalık",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3514,7 +4086,16 @@
        "ses": "Altmış yaşın üstünde bu oran yüzde yetmişe çıkar.",
        "ekran": "Altmış yaşın üstünde bu oran yüzde yetmişe çıkar.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Altmış yaşın üstünde",
+         "tur": "sayi"
+        },
+        {
+         "metin": "yüzde yetmişe",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3552,7 +4133,20 @@
        "ses": "Risk özellikle kronik ya da ilerleyici seyirli hastalıklarda artar; kanser, edinsel bağışıklık yetersizliği sendromu, Huntington hastalığı ve multipl skleroz örnektir.",
        "ekran": "Risk özellikle kronik ya da ilerleyici seyirli hastalıklarda artar; kanser, edinsel bağışıklık yetersizliği sendromu, Huntington hastalığı ve multipl skleroz örnektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kronik ya da ilerleyici",
+         "tur": "terim"
+        },
+        {
+         "metin": "Huntington hastalığı",
+         "tur": "terim"
+        },
+        {
+         "metin": "multipl skleroz",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3612,7 +4206,16 @@
        "ses": "Kronik ağrı ve uykusuzluk da riski yükselten tıbbi sorunlardır.",
        "ekran": "Kronik ağrı ve uykusuzluk da riski yükselten tıbbi sorunlardır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Kronik ağrı",
+         "tur": "terim"
+        },
+        {
+         "metin": "uykusuzluk",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3664,7 +4267,16 @@
        "ses": "Çevresel risk etmenleri toplumsal koşullardan oluşur: savaşlar, felaketler, kültürsüzleşme ve ayrımcılık.",
        "ekran": "Çevresel risk etmenleri toplumsal koşullardan oluşur: savaşlar, felaketler, kültürsüzleşme ve ayrımcılık.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kültürsüzleşme",
+         "tur": "terim"
+        },
+        {
+         "metin": "ayrımcılık",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3686,7 +4298,12 @@
        "ses": "Kültürsüzleşme, kişinin kendi kültüründen kopması, alıştığı değerleri yitirmesi demektir.",
        "ekran": "Kültürsüzleşme = kendi kültüründen kopma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Kültürsüzleşme",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3730,7 +4347,16 @@
        "ses": "Hapiste olma, mahrumiyet bölgesinde yaşama, iş olanaklarının azlığı, ekonomik sorunlar ve sosyal hizmetlere ulaşma sorunları da riski artırır.",
        "ekran": "Hapiste olma, mahrumiyet bölgesinde yaşama, iş olanaklarının azlığı, ekonomik sorunlar ve sosyal hizmetlere ulaşma sorunları da riski artırır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Hapiste olma",
+         "tur": "terim"
+        },
+        {
+         "metin": "mahrumiyet bölgesinde",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3776,7 +4402,12 @@
        "ses": "Göç ve medya etkisi de bu listenin son maddeleridir.",
        "ekran": "Göç ve medya etkisi de bu listenin son maddeleridir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "medya etkisi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3860,7 +4491,12 @@
        "ses": "Sosyal izolasyon ve yalnız yaşama riski artırır.",
        "ekran": "Sosyal izolasyon ve yalnız yaşama riski artırır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Sosyal izolasyon",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3879,7 +4515,12 @@
        "ses": "Sosyal izolasyon, kişinin diğer insanlardan kopuk ve yalnız kalması demektir.",
        "ekran": "Sosyal izolasyon = insanlardan kopukluk",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Sosyal izolasyon",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3898,7 +4539,12 @@
        "ses": "Aile, yakın arkadaşlar ve akrabalar ise kişinin güvenliğinin sağlanmasında yararlı olabilir.",
        "ekran": "Aile, yakın arkadaşlar ve akrabalar ise kişinin güvenliğinin sağlanmasında yararlı olabilir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "güvenliğinin sağlanmasında",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -3980,7 +4626,16 @@
        "ses": "Dikkat, uyanıklık ve farkındalığın bozulması yargılamayı olumsuz etkiler; deliryum ve akut zehirlenmeler örnektir.",
        "ekran": "Dikkat, uyanıklık ve farkındalığın bozulması yargılamayı olumsuz etkiler; deliryum ve akut zehirlenmeler örnektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "deliryum",
+         "tur": "terim"
+        },
+        {
+         "metin": "akut zehirlenmeler",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4000,7 +4655,12 @@
        "ses": "Deliryum, bilincin ve dikkatin aniden bulanıklaştığı, kişinin nerede olduğunu karıştırabildiği bir tablodur.",
        "ekran": "Deliryum: ani bilinç, dikkat bulanıklığı",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Deliryum",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4020,7 +4680,16 @@
        "ses": "Psikomotor aktivite artışı ve motor huzursuzluk, ajite depresyonu ya da akatiziyi gösterebilir ve riski yükseltir.",
        "ekran": "Psikomotor aktivite artışı ve motor huzursuzluk, ajite depresyonu ya da akatiziyi gösterebilir ve riski yükseltir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ajite depresyonu",
+         "tur": "terim"
+        },
+        {
+         "metin": "akatiziyi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4060,7 +4729,16 @@
        "ses": "Ajite depresyon huzursuzluğun eşlik ettiği depresyon, akatizi ise içten gelen kıpırdanma ve yerinde duramama hissidir.",
        "ekran": "Ajite depresyon · akatizi",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Ajite depresyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "akatizi",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4080,7 +4758,20 @@
        "ses": "Anhedoni, dürtüsellik, içgörü eksikliği, ani sükunet ve ümitsizlik de risk artıran muayene bulgularıdır.",
        "ekran": "Anhedoni, dürtüsellik, içgörü eksikliği, ani sükunet ve ümitsizlik de risk artıran muayene bulgularıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Anhedoni",
+         "tur": "terim"
+        },
+        {
+         "metin": "ani sükunet",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "içgörü eksikliği",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4103,7 +4794,12 @@
        "ses": "Anhedoni, kişinin eskiden keyif aldığı şeylerden artık zevk alamaması demektir.",
        "ekran": "Anhedoni = zevk alamama",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Anhedoni",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4149,7 +4845,12 @@
        "ses": "Hastanın birden sakinleşmesi her zaman iyileşme anlamına gelmez.",
        "ekran": "Birden sakinleşme ≠ her zaman iyileşme",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "her zaman iyileşme anlamına gelmez",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4178,7 +4879,12 @@
        "ses": "Koruyucu etmenler intihar davranışını ve riskini azaltır, stresle baş etme becerisini ve stres yönetimini artırır.",
        "ekran": "Koruyucu etmenler intihar davranışını ve riskini azaltır, stresle baş etme becerisini ve stres yönetimini artırır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Koruyucu etmenler",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4198,7 +4904,12 @@
        "ses": "Koruyucu etmen demek, kişiyi intihardan uzak tutan, ona güç veren etmen demektir.",
        "ekran": "Koruyucu etmen = güç veren, uzak tutan",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Koruyucu etmen",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4218,7 +4929,16 @@
        "ses": "En önemli koruyucu etmen, kişinin yaşamaya devam etmek için nedenlerinin olmasıdır.",
        "ekran": "En önemli koruyucu etmen, kişinin yaşamaya devam etmek için nedenlerinin olmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "En önemli koruyucu etmen",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "yaşamaya devam etmek için nedenlerinin olmasıdır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4256,7 +4976,16 @@
        "ses": "Güçlü aile ve sosyal destek, gebelik ve on sekiz yaşından küçük çocuk sahibi olmak koruyucudur.",
        "ekran": "Güçlü aile ve sosyal destek, gebelik ve on sekiz yaşından küçük çocuk sahibi olmak koruyucudur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "gebelik",
+         "tur": "terim"
+        },
+        {
+         "metin": "on sekiz yaşından küçük çocuk",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4277,7 +5006,16 @@
        "ses": "Aileye karşı sorumluluk hissi, sevdiklerini üzme konusunda suçluluk, intihara karşı olumsuz tutum ve kültürel, dini, manevi değerler de koruyucudur.",
        "ekran": "Aileye karşı sorumluluk hissi, sevdiklerini üzme konusunda suçluluk, intihara karşı olumsuz tutum ve kültürel, dini, manevi değerler de koruyucudur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Aileye karşı sorumluluk hissi",
+         "tur": "terim"
+        },
+        {
+         "metin": "intihara karşı olumsuz tutum",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4321,7 +5059,12 @@
        "ses": "Koruyucu etmenler varsa risk sıfırlanmaz; bu etmenler yalnızca riski azaltır ve değerlendirme sırasında risk etmenleriyle birlikte tartılır.",
        "ekran": "Koruyucu etmen riski azaltır, sıfırlamaz",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "risk sıfırlanmaz",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4355,7 +5098,12 @@
        "ses": "İntihar riski değerlendirilirken hastayla ilişki sakin, yargılamayan ve empatik bir yaklaşımla kurulur.",
        "ekran": "İntihar riski değerlendirilirken hastayla ilişki sakin, yargılamayan ve empatik bir yaklaşımla kurulur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yargılamayan ve empatik",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4418,7 +5166,16 @@
        "ses": "İntihar hakkında genelden özele doğru konuşulur ve önce ölmüş olmayı isteyip istemediği sorulur.",
        "ekran": "İntihar hakkında genelden özele doğru konuşulur ve önce ölmüş olmayı isteyip istemediği sorulur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "genelden özele",
+         "tur": "terim"
+        },
+        {
+         "metin": "önce ölmüş olmayı isteyip istemediği",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4485,7 +5242,12 @@
        "ses": "Son basamakta hastanın daha önce girişimde bulunup bulunmadığı ve ayrıntıları öğrenilir.",
        "ekran": "Son basamakta hastanın daha önce girişimde bulunup bulunmadığı ve ayrıntıları öğrenilir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Son basamakta",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4532,7 +5294,12 @@
        "ses": "İntihar hakkında konuşmaktan ya da soru sormaktan kaçınılmamalıdır.",
        "ekran": "İntihar hakkında konuşmaktan ya da soru sormaktan kaçınılmamalıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kaçınılmamalıdır",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4552,7 +5319,12 @@
        "ses": "İntiharı hiç düşünmeyen bir kişinin aklına sormak bu fikri getirmez.",
        "ekran": "İntiharı hiç düşünmeyen bir kişinin aklına sormak bu fikri getirmez.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bu fikri getirmez",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4572,7 +5344,12 @@
        "ses": "Şunu karıştırma: intiharı sormak, kişiyi intihara yöneltmez.",
        "ekran": "Karıştırma: sormak yöneltmez",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kişiyi intihara yöneltmez",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4658,7 +5435,12 @@
        "ses": "İntihar riski yüksekse ya da kişi girişimde bulunduysa önce gereken tıbbi müdahale yapılır.",
        "ekran": "İntihar riski yüksekse ya da kişi girişimde bulunduysa önce gereken tıbbi müdahale yapılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "önce gereken tıbbi müdahale",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [
         "d3k2-2025-2026-h3"
@@ -4719,7 +5501,12 @@
        "ses": "Ayrım şudur: girişim sonrası ilk basamak yatış ya da tedavi planı değil, hastanın tıbbi durumunun değerlendirilmesi ve gereken tıbbi müdahaledir.",
        "ekran": "İlk basamak: tıbbi müdahale",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yatış ya da tedavi planı değil",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4738,7 +5525,16 @@
        "ses": "Ardından güvenlik sağlanır ve aile ya da hasta yakınlarıyla işbirliği kurulmaya çalışılır.",
        "ekran": "Ardından güvenlik sağlanır ve aile ya da hasta yakınlarıyla işbirliği kurulmaya çalışılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "güvenlik sağlanır",
+         "tur": "terim"
+        },
+        {
+         "metin": "işbirliği",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4778,7 +5574,12 @@
        "ses": "Sonra uygun psikiyatrik yaklaşım belirlenir ve gerektiğinde hasta hastaneye yatırılır.",
        "ekran": "Sonra uygun psikiyatrik yaklaşım belirlenir ve gerektiğinde hasta hastaneye yatırılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hastaneye yatırılır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [
         "q-25-26_d_nem_3_kurul_2-82"
@@ -4844,7 +5645,16 @@
        "ses": "Girişim öyküsü, ölüm isteği ve yalnız yaşama birlikte yüksek riski gösterir; bu nedenle gerektiğinde hastaneye yatırılır ve yakından izlenir.",
        "ekran": "Girişim öyküsü, ölüm isteği ve yalnız yaşama birlikte yüksek riski gösterir; bu nedenle gerektiğinde hastaneye yatırılır ve yakından izlenir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüksek riski gösterir",
+         "tur": "terim"
+        },
+        {
+         "metin": "hastaneye yatırılır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [
         "q-25-26_d_nem_3_kurul_2-82"
@@ -4909,7 +5719,12 @@
        "ses": "Güvenlik için ilaç, zehirli madde, silah ve keskin nesneler gibi ölümcül araçlara ulaşılabilirlik sınırlandırılır.",
        "ekran": "Güvenlik için ilaç, zehirli madde, silah ve keskin nesneler gibi ölümcül araçlara ulaşılabilirlik sınırlandırılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ölümcül araçlara ulaşılabilirlik sınırlandırılır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4949,7 +5764,16 @@
        "ses": "Hasta tedavi sonrası taburcu edilirken intihar riski mutlaka yeniden değerlendirilir.",
        "ekran": "Hasta tedavi sonrası taburcu edilirken intihar riski mutlaka yeniden değerlendirilir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "taburcu",
+         "tur": "terim"
+        },
+        {
+         "metin": "mutlaka yeniden değerlendirilir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -4995,7 +5819,16 @@
        "ses": "İntihar davranışının tedavisinde etyolojiye yönelik farmakoterapi uygulanır ve lityum bu başlıkta anılır.",
        "ekran": "İntihar davranışının tedavisinde etyolojiye yönelik farmakoterapi uygulanır ve lityum bu başlıkta anılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "etyolojiye yönelik farmakoterapi",
+         "tur": "terim"
+        },
+        {
+         "metin": "lityum",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5059,6 +5892,10 @@
         {
          "metin": "bilişsel davranışçı terapi",
          "tur": "terim"
+        },
+        {
+         "metin": "sorun çözme terapileri",
+         "tur": "terim"
         }
        ],
        "slayt_adim": null,
@@ -5102,7 +5939,12 @@
        "ses": "Bilişsel davranışçı terapi, kişinin olumsuz düşünce kalıplarını ve davranışlarını fark edip değiştirmesine yardım eder.",
        "ekran": "BDT: düşünce ve davranışı değiştirme",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Bilişsel davranışçı terapi",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5123,7 +5965,12 @@
        "ses": "Gerekli durumlarda elektrokonvülsif tedavi de seçenektir.",
        "ekran": "Gerekli durumlarda elektrokonvülsif tedavi de seçenektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "elektrokonvülsif tedavi",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5186,7 +6033,16 @@
        "ses": "En iyi yaklaşım biyopsikososyal değerlendirme, erken tanı, uygun müdahale ve yakın takibe dayanır.",
        "ekran": "En iyi yaklaşım biyopsikososyal değerlendirme, erken tanı, uygun müdahale ve yakın takibe dayanır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "biyopsikososyal değerlendirme",
+         "tur": "terim"
+        },
+        {
+         "metin": "yakın takibe",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5206,7 +6062,12 @@
        "ses": "Biyopsikososyal değerlendirme demek, kişiyi bedeni, ruhu ve çevresiyle birlikte bir bütün olarak ele almak demektir.",
        "ekran": "Biyopsikososyal = beden + ruh + çevre",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Biyopsikososyal değerlendirme",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5226,7 +6087,16 @@
        "ses": "Önleme için multidisipliner ekip çalışması, toplum temelli koruyucu ruh sağlığı programları ve hızlı müdahale protokolleri kritik öneme sahiptir.",
        "ekran": "Önleme için multidisipliner ekip çalışması, toplum temelli koruyucu ruh sağlığı programları ve hızlı müdahale protokolleri kritik öneme sahiptir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "multidisipliner ekip çalışması",
+         "tur": "terim"
+        },
+        {
+         "metin": "hızlı müdahale protokolleri",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5321,7 +6191,20 @@
        "ses": "Literatürde kendine zarar verme için self-injury, self-mutilation ve self-harm terimleri kullanılır.",
        "ekran": "Literatürde kendine zarar verme için self-injury, self-mutilation ve self-harm terimleri kullanılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "self-injury",
+         "tur": "terim"
+        },
+        {
+         "metin": "self-mutilation",
+         "tur": "terim"
+        },
+        {
+         "metin": "self-harm",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5365,7 +6248,12 @@
        "ses": "Self-injury ve self-mutilation terimleri birlikte kullanılır ve kişinin doğrudan kendi bedenine yönelik girişimini anlatır.",
        "ekran": "Self-injury ve self-mutilation terimleri birlikte kullanılır ve kişinin doğrudan kendi bedenine yönelik girişimini anlatır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "doğrudan kendi bedenine",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5411,7 +6299,16 @@
        "ses": "Kendine zarar verme davranışının tanımlayıcı özellikleri şunlardır: vücudun belirli bölümlerine zarar vermek ve tekrarlayıcı olmak.",
        "ekran": "Kendine zarar verme davranışının tanımlayıcı özellikleri şunlardır: vücudun belirli bölümlerine zarar vermek ve tekrarlayıcı olmak.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "vücudun belirli bölümlerine",
+         "tur": "terim"
+        },
+        {
+         "metin": "tekrarlayıcı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5431,7 +6328,12 @@
        "ses": "Davranış ölümcül değildir ve yaşamı tehdit etmez.",
        "ekran": "Davranış ölümcül değildir ve yaşamı tehdit etmez.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ölümcül değildir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5451,7 +6353,12 @@
        "ses": "Şunu karıştırma: kendine zarar verme davranışında amaç yaşamı sonlandırmak değildir.",
        "ekran": "Karıştırma: amaç ölüm değil",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "amaç yaşamı sonlandırmak değildir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5471,7 +6378,12 @@
        "ses": "Kişi ortama uyamamanın ve tahammülsüzlüğün yarattığı baskıya karşı kendine yardım etmek amacıyla bu davranışa başvurur.",
        "ekran": "Kişi ortama uyamamanın ve tahammülsüzlüğün yarattığı baskıya karşı kendine yardım etmek amacıyla bu davranışa başvurur.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kendine yardım etmek amacıyla",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5515,7 +6427,16 @@
        "ses": "Kendine zarar verme, kişinin bilinçli ölüm isteği olmadan, isteyerek ve amaçlı yaptığı, doku hasarı oluşturan, tekrarlayıcı bir girişimdir.",
        "ekran": "Kendine zarar verme, kişinin bilinçli ölüm isteği olmadan, isteyerek ve amaçlı yaptığı, doku hasarı oluşturan, tekrarlayıcı bir girişimdir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bilinçli ölüm isteği olmadan",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "doku hasarı",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5581,7 +6502,12 @@
        "ses": "Bu nedenle kendine zarar verme ile intihar girişimi ayrı kavramlardır: ilkinde niyet baskıdan rahatlamak, ikincisinde yaşamı sonlandırmaktır.",
        "ekran": "Kendine zarar verme: rahatlama · İntihar girişimi: yaşamı sonlandırma",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "ayrı kavramlardır",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5607,7 +6533,12 @@
        "ses": "Kendine zarar vermeyi tanımlamak için dört ölçüt kullanılır.",
        "ekran": "Kendine zarar vermeyi tanımlamak için dört ölçüt kullanılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "dört ölçüt",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5645,7 +6576,16 @@
        "ses": "Birincisi, kesme ya da yakma davranışlarından birinin sürekli tekrarlanmasıdır.",
        "ekran": "Birincisi, kesme ya da yakma davranışlarından birinin sürekli tekrarlanmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kesme ya da yakma",
+         "tur": "terim"
+        },
+        {
+         "metin": "sürekli tekrarlanmasıdır",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5665,7 +6605,12 @@
        "ses": "İkincisi, kendine zarar vermeden önce gerilim duygusunun bulunmasıdır.",
        "ekran": "İkincisi, kendine zarar vermeden önce gerilim duygusunun bulunmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "gerilim duygusunun",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5703,7 +6648,12 @@
        "ses": "Üçüncüsü, fiziksel acıyla birlikte rahatlama, zevk alma ve hoşa gitme duygusunun yaşanmasıdır.",
        "ekran": "Üçüncüsü, fiziksel acıyla birlikte rahatlama, zevk alma ve hoşa gitme duygusunun yaşanmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "rahatlama, zevk alma ve hoşa gitme",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5722,7 +6672,16 @@
        "ses": "Dördüncüsü, utanma ve damgalanma korkusu nedeniyle zarar verme izlerinin ya da kanın gizlenmeye çalışılmasıdır.",
        "ekran": "Dördüncüsü, utanma ve damgalanma korkusu nedeniyle zarar verme izlerinin ya da kanın gizlenmeye çalışılmasıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "damgalanma korkusu",
+         "tur": "terim"
+        },
+        {
+         "metin": "gizlenmeye",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5788,7 +6747,12 @@
        "ses": "Günümüzde altı yüz kişiden en az birinin kendini tedavi gerektirecek şekilde yaraladığı bildirilmiştir.",
        "ekran": "Günümüzde altı yüz kişiden en az birinin kendini tedavi gerektirecek şekilde yaraladığı bildirilmiştir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "altı yüz kişiden en az birinin",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5826,7 +6790,12 @@
        "ses": "Kendine zarar verme davranışları tipik, psikotik, kompulsif ve dürtüsel olmak üzere dört ana gruba ayrılır.",
        "ekran": "Kendine zarar verme davranışları tipik, psikotik, kompulsif ve dürtüsel olmak üzere dört ana gruba ayrılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "tipik, psikotik, kompulsif ve dürtüsel",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5846,7 +6815,16 @@
        "ses": "Tipik davranışlara kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek ve saç yolmak girer.",
        "ekran": "Tipik davranışlara kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek ve saç yolmak girer.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Tipik davranışlara",
+         "tur": "terim"
+        },
+        {
+         "metin": "kafa vurmak",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5867,7 +6845,12 @@
        "ses": "Psikotik davranışlar göz çıkarmak ve organ kesmektir.",
        "ekran": "Psikotik davranışlar göz çıkarmak ve organ kesmektir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "göz çıkarmak ve organ kesmektir",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [
         "d3k2-2018-2019-k4-q72"
@@ -5930,7 +6913,16 @@
        "ses": "Kompulsif davranışlar saç yolma, deriyi çimdikleme ve tırnak yemedir; dürtüsel davranışlar ise kendini kesme, yakma ve kendine vurmadır.",
        "ekran": "Kompulsif davranışlar saç yolma, deriyi çimdikleme ve tırnak yemedir; dürtüsel davranışlar ise kendini kesme, yakma ve kendine vurmadır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "Kompulsif davranışlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "dürtüsel davranışlar",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -5970,7 +6962,16 @@
        "ses": "Şunu karıştırma: saç yolma ve tırnak yeme hem tipik hem kompulsif grupta, kendine vurma ise hem tipik hem dürtüsel grupta sayılır.",
        "ekran": "Karıştırma: aynı davranış iki grupta",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "hem tipik hem kompulsif",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "hem tipik hem dürtüsel",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6010,7 +7011,12 @@
        "ses": "Tanım gereği amaç ölmek ve yaşamı tehdit etmek olmadığından, ölümcül niyetli bir eylem bu sınıflamanın dışında düşünülür.",
        "ekran": "Ölümcül niyetli eylem sınıflama dışında",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "sınıflamanın dışında",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6036,7 +7042,12 @@
        "ses": "Tekrarlanan kendine zarar verme davranışlarında kendini kesme daha baskındır.",
        "ekran": "Tekrarlanan kendine zarar verme davranışlarında kendini kesme daha baskındır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kendini kesme daha baskındır",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6056,7 +7067,12 @@
        "ses": "Kolay ulaşılabilir olduğu için kol ve bilekler en sık görülen bölgelerdir, ancak vücudun başka bölgelerinde de rastlanır.",
        "ekran": "Kolay ulaşılabilir olduğu için kol ve bilekler en sık görülen bölgelerdir, ancak vücudun başka bölgelerinde de rastlanır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "kol ve bilekler",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6102,7 +7118,12 @@
        "ses": "Tekrarlanan kendine zarar verme davranışları içinde kendini kesme yüzde yetmiş iki ile en sık görülendir.",
        "ekran": "Tekrarlanan kendine zarar verme davranışları içinde kendini kesme yüzde yetmiş iki ile en sık görülendir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde yetmiş iki",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6121,7 +7142,16 @@
        "ses": "Bunu kendini yakma yüzde otuz beş ve kendine vurma yüzde otuz ile izler.",
        "ekran": "Bunu kendini yakma yüzde otuz beş ve kendine vurma yüzde otuz ile izler.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde otuz beş",
+         "tur": "sayi"
+        },
+        {
+         "metin": "yüzde otuz",
+         "tur": "sayi"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6141,7 +7171,16 @@
        "ses": "Kişilerin yüzde yetmiş beşinde genellikle birden fazla yöntem kullanılır.",
        "ekran": "Kişilerin yüzde yetmiş beşinde genellikle birden fazla yöntem kullanılır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yüzde yetmiş beşinde",
+         "tur": "sayi"
+        },
+        {
+         "metin": "birden fazla yöntem",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6204,7 +7243,12 @@
        "ses": "Kendine zarar verme erken adolesan dönemde başlar ve ritüeller kültürlere göre değişir.",
        "ekran": "Kendine zarar verme erken adolesan dönemde başlar ve ritüeller kültürlere göre değişir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "erken adolesan dönemde",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6284,7 +7328,16 @@
        "ses": "Davranış sıklıkla eğitim ve gelir düzeyi düşük olanlarda ve bekârlarda görülür.",
        "ekran": "Davranış sıklıkla eğitim ve gelir düzeyi düşük olanlarda ve bekârlarda görülür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "eğitim ve gelir düzeyi düşük",
+         "tur": "terim"
+        },
+        {
+         "metin": "bekârlarda",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6330,7 +7383,12 @@
        "ses": "Kendine zarar verme davranışı kişilik bozuklukları, akut ve kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında sık görülür.",
        "ekran": "Kendine zarar verme davranışı kişilik bozuklukları, akut ve kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında sık görülür.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "cinsel kimlik bozukluklarında",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6400,6 +7458,10 @@
         {
          "metin": "borderline kişilik bozukluğu",
          "tur": "terim"
+        },
+        {
+         "metin": "En sık görüldüğü grup kişilik bozukluklarıdır",
+         "tur": "tuzak"
         }
        ],
        "slayt_adim": null,
@@ -6425,7 +7487,12 @@
        "ses": "Borderline, sınır demektir; borderline kişilik bozukluğu sınır kişilik bozukluğunun öbür adıdır.",
        "ekran": "Borderline = sınır kişilik bozukluğu",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "borderline kişilik bozukluğu sınır kişilik bozukluğunun öbür adıdır",
+         "tur": "tanim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6493,7 +7560,12 @@
        "ses": "Altta yatan durumun tedavisiyle bu davranışın ortadan kalkmasını beklemek yeterli değildir.",
        "ekran": "Altta yatan durumun tedavisiyle bu davranışın ortadan kalkmasını beklemek yeterli değildir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yeterli değildir",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6531,7 +7603,12 @@
        "ses": "Bu nedenle davranış bir belirti olarak kabul edilmeli ve doğrudan uygun müdahaleler yapılarak hastanın gördüğü zarar azaltılmalıdır.",
        "ekran": "Bu nedenle davranış bir belirti olarak kabul edilmeli ve doğrudan uygun müdahaleler yapılarak hastanın gördüğü zarar azaltılmalıdır.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "bir belirti olarak kabul edilmeli",
+         "tur": "terim"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,
@@ -6591,7 +7668,12 @@
        "ses": "Ancak spesifik müdahalelerin etkinliği konusunda yeterli bilgi yoktur ve yeni yöntemlerin geliştirilmesi gerekir.",
        "ekran": "Ancak spesifik müdahalelerin etkinliği konusunda yeterli bilgi yoktur ve yeni yöntemlerin geliştirilmesi gerekir.",
        "duzey": 0,
-       "vurgu": [],
+       "vurgu": [
+        {
+         "metin": "yeterli bilgi yoktur",
+         "tur": "tuzak"
+        }
+       ],
        "slayt_adim": null,
        "cikmis": [],
        "spot": null,

@@ -123,3 +123,4 @@
 ### H645 · PDF işareti "yalnız sayfa"ya düşüyordu (2026-11-23)
 - **Kural:** Eklenen açıklama cümlesi açıkladığı slayt satırına çapalanır; boş `satir` bırakılmaz. Tablo çapasına satır da yazılır.
 
+

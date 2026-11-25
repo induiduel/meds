@@ -1,6 +1,6 @@
 # Aşama kuralları — anlatim
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 28 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 29 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H2 — Türkçeye uymayan ifade ve iç etiketler (2026-10-18)
 - **Kurul 2'de doğrusu:** Doğal, eksiksiz, anlaşılır Türkçe; çeviri mecaz ve iç etiket yok; tam cümle.
@@ -112,4 +112,8 @@
 
 ### H645 · PDF işareti "yalnız sayfa"ya düşüyordu (2026-11-23)
 - **Kural:** Eklenen açıklama cümlesi açıkladığı slayt satırına çapalanır; boş `satir` bırakılmaz. Tablo çapasına satır da yazılır.
+
+
+### H667 · Üç Kurul 2 psikiyatri dersinde metin vurgusu neredeyse yoktu (2026-11-25)
+- **Kural:** Kurul 2+ derste cümlelerin en az ~%40'ı `vurgu` taşımalı; `metin` `ses` içinde birebir geçmeli (okunuşu farklı kısaltmada ses biçimi: "Viski ar"). Yayından önce vurgulu paragraf oranı denetlenir.
 
