@@ -3930,7 +3930,11 @@
        "cikmis": [],
        "spot": null,
        "ogrenci": null,
-       "hoca": null,
+       "hoca": {
+        "id": "hv-k2-55-02",
+        "kategori": "onemli",
+        "ifade": "mutlaka değerlendirilmesi gereken durumlar"
+       },
        "slayt": {
         "sayfa": 19,
         "satir": [

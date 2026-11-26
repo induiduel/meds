@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 956,
-  "baslik": "Tek tasarım: v15",
+  "onem": 957,
+  "baslik": "İki yeni sesli ders ve hoca sesi eklemeleri",
   "maddeler": [
-    "Deneme aşamasındaki v18 görünümü kaldırıldı; herkes varsayılan v15 tasarımını kullanıyor.",
-    "Ayarlar'daki arayüz seçimi de kaldırıldı."
+    "Nikotin Bağımlılığı ve Tedavisi: sesli ders, örnek sorular, sesli çözücü ve ara sorular eklendi.",
+    "Miyorelaksan İlaçlar (İskelet Kası Gevşeticileri): sesli ders, örnek sorular, sesli çözücü ve ara sorular eklendi.",
+    "Psikiyatrik Genetik, Yaygın Anksiyete, Panik ve Fobik Bozukluk derslerine hocanın ders kaydından ek bilgiler işlendi."
   ],
   "eklenen": [],
   "degisen": [],

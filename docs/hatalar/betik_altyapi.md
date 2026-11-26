@@ -311,3 +311,9 @@
 - **Kök neden:** E2b brifi kodu vermedi; yazar dersin numarasından kod türetti. Diğer 7 derste yazar `src/data/dersler/k2.json`'dan doğru kodu aldı.
 - **Çözüm:** Çalışma alanı, ders klasörü, `onayli.json`, `numara.json`, `src/data` dosyaları ve dizin kayıtları 2s19'a taşındı, eski ses silindi, yeniden birleştirilip seslendirildi.
 - **Kural:** Brif çözücü/önem kodunu AÇIKÇA verir (defterden). Çözücü yayınından önce `betik_tamamla.py <ders>` `cozucu_bag` satırı ✓ olmalı.
+
+### H696 — Betik anahtar/gönderim tuzakları: kısa anahtar 400, anonim Oracle 500, kelime zamanı gönderilmedi (2026-11-26)
+- **Belirti:** `kisaltma_sozlugu/terim_sozlugu otomatik k2-61` → 400 (yerel) / 500 (Oracle); `ders_icerik_uret.py k2-61` fazladan `src/data/ders_icerik/k2-61.json` yazdı; `kelime_zaman.py --oracle` sessizce 0 çıktı ama Oracle'da varyant eksik kaldı.
+- **Kök neden:** Betikler kısa anahtarı doğrudan URL/dosya adına koyuyor; Oracle `/api/canli-ders` panel anahtarsız isteğe 403 yerine 500 dönüyor (H688 açık işi); `kelime_zaman` yerel dosya güncelse "güncel" deyip `oracle_gonder()`i hiç çağırmıyor.
+- **Çözüm:** Tam anahtarla, yerel API üzerinden koşuldu (sesli_cek sonrası); fazladan dosya silindi; `kelime_zaman.oracle_gonder()` doğrudan çağrıldı, `betik_tamamla --denetle` eksik varyant yok.
+- **Kural:** Terim/kısaltma/ders_icerik betiklerine TAM anahtar verilir; `--oracle` sonrası kelime zamanı `betik_tamamla --denetle` ile doğrulanır. Açık iş: kelime_zaman güncel olsa da göndermeli.

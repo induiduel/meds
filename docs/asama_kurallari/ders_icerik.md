@@ -1,6 +1,6 @@
 # Aşama kuralları — ders_icerik
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 23 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 24 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H36 — Cümle sayacı sıra sayısı noktasını cümle sonu sayıyordu (2026-10-24, oturum kuyruğu sınaması)
 
@@ -96,4 +96,7 @@
 
 ### H634 — k2-43: sözlük bağlamsız eşleşme yanlış anlam, denetçi öncesi sıra, git'siz düzeltme zinciri, kaynak dışı içerik (2026-11-18)
 - **Önleme:** `terim_sozlugu otomatik` çıktısı yeni derste elle gözden geçirilir (bağlam kapısı yapılacak); öğrenci notu/çıkmış kaynaklı bilgi anlatımda ve açıklamada atıfsız slayt bilgisi gibi yazılmaz; şık açıklamasına PDF'te olmayan gerekçe eklenmez; yeni derste düzeltme zinciri için `duzeltme_katman.py`'ye `--eski-metin/--eski-capa` seçeneği eklenmeli (yapılacak).
+
+### H696 — Betik anahtar/gönderim tuzakları: kısa anahtar 400, anonim Oracle 500, kelime zamanı gönderilmedi (2026-11-26)
+- **Kural:** Terim/kısaltma/ders_icerik betiklerine TAM anahtar verilir; `--oracle` sonrası kelime zamanı `betik_tamamla --denetle` ile doğrulanır. Açık iş: kelime_zaman güncel olsa da göndermeli.
 

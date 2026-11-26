@@ -1,0 +1,158 @@
+{
+ "surum": 2,
+ "dogrulama": "ham belge + slayt kanıtı, elle (E1 değerlendirme, 2026-11-26); p/c/metinHash anlatım v2'sinden eklenecek",
+ "q": [
+  {
+   "id": "d3-k2-far-008",
+   "kok": "Aşağıdaki nöromüsküler blokör kas gevşeticilerden hangisi nondepolarizan değildir?",
+   "cevap": "Süksinilkolin",
+   "yil": "2025-2026",
+   "s": 16,
+   "seviye": "dogrudan",
+   "kanit": "Süksinilkolin haricinde, kullanılan tüm nöromusküler ilaçlar non-",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2025.txt` SAYFA 7 (2025-2026 öğrenci hatırlaması; şıklar sonradan tamamlandı)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s16 süksinilkolin haricinde kullanılan tüm nöromusküler ilaçların non-depolarizan olduğunu söyler; s18 süksinilkolinin klinik kullanımda olan tek depolarizan ilaç olduğunu belirtir. Rokuronyum, vekuronyum, sisatrakuryum ve pankuronyum non-depolarizandır (s11-s12)."
+  },
+  {
+   "id": "d3k2-2020-2021-q153",
+   "kok": "Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların nöromusküler blokajını geri döndüren ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Neostigmin",
+   "yil": "2020-2021",
+   "s": 33,
+   "seviye": "dogrudan",
+   "kanit": "Neostigmin ve piridostigmin non-depolarizan nöromusküler blokajı,",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2020.txt` SAYFA 225 (2020-2021 karne)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s33 neostigminin asetilkolinesterazı inhibe ederek son plaktaki ACh miktarını artırdığını ve non-depolarizan blokajı antagonize ettiğini söyler. Çeldiriciler: baklofen ve dantrolen kas gevşetici spazmolitiklerdir (s41, s47), flumazenil bir benzodiazepin antagonistidir ve slaytta bu amaçla geçmez; sugammadeks s34'te yalnız steroid blokörler için anılır, listedeki atraküryum steroid değildir."
+  },
+  {
+   "id": "d3-b-082",
+   "kok": "Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların oluşturduğu nöromusküler blokajı geri döndüren ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Neostigmin",
+   "yil": "2022-2023",
+   "s": 33,
+   "seviye": "dogrudan",
+   "kanit": "Neostigmin ve piridostigmin non-depolarizan nöromusküler blokajı,",
+   "kaynak": "`meds_sorular_txt/22-23D3Butunleme_101817.txt` SAYFA 18 (22-23D3Butunleme_101817.pdf, 2022-2023 Dönem 3 bütünleme sınavı)",
+   "dogrulandi": true,
+   "neden": "d3k2-2020-2021-q153 ile aynı soru; bütünleme sınavında yeniden sorulmuştur. Slayt s33 non-depolarizan blokajın kolinesteraz inhibitörleriyle geri döndürüldüğünü söyler."
+  },
+  {
+   "id": "d3k2-2019-2020-q35",
+   "kok": "Aşağıdakilerden hangisi oral yoldan alınan, GABA türevi olan, santral etki gösteren kas gevşetici ilaçtır?",
+   "cevap": "Baklofen",
+   "yil": "2019-2020",
+   "s": 41,
+   "seviye": "dogrudan",
+   "kanit": "p-klorofenil GABA) oral yoldan kullanım için dizayn edilmiş",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2019.txt` SAYFA 13, soru 35 (2019-2020 Kurul 2 sınavı)",
+   "dogrulandi": true,
+   "neden": "Slayt s41 baklofeni p-klorofenil GABA olarak tanımlar ve oral kullanım için tasarlanmış GABAB agonisti GABA-mimetik ajan der. Çeldiriciler: dantrolen (s47-48) kas lifinde etkilidir; diazepam (s40) benzodiazepindir, GABA türevi değildir; karisoprodol ve meprobamat bu derste anlatılan GABA türevi spazmolitikler arasında yer almaz."
+  },
+  {
+   "id": "ea7f887c8593",
+   "kok": "Aşağıdakilerden hangisi oral yoldan alınan, GABA türevi olan santral etkili kas gevşetici ilaçtır?",
+   "cevap": "Baklofen",
+   "yil": "2020-2021",
+   "s": 41,
+   "seviye": "dogrudan",
+   "kanit": "p-klorofenil GABA) oral yoldan kullanım için dizayn edilmiş",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2020.txt` SAYFA 12 (2020-2021 karne, soru 26)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "d3k2-2019-2020-q35 ile aynı soru, ertesi yıl yeniden sorulmuş. Slayt s41 baklofenin oral kullanım için dizayn edilmiş GABA türevi (p-klorofenil GABA) olduğunu söyler."
+  },
+  {
+   "id": "b71287aec894",
+   "kok": "Primer etki yeri santral sinir sistemi olan çizgili kas gevşetici (miyorelaksan) ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Baklofen",
+   "yil": "2020-2021",
+   "s": 41,
+   "seviye": "ilgili",
+   "kanit": "GABAB reseptör agonisti GABA-mimetik bir ajandır.",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2020.txt` SAYFA 19 (aynı soru SAYFA 74 ve 124'te de geçer; 2020-2021 karne)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "ek_kanit": [
+    {
+     "s": 41,
+     "kanit": "inhibisyona yol açtığı ve beyin ve omurilikte eksitatör"
+    }
+   ],
+   "dogrulandi": true,
+   "neden": "Slayt s41 baklofeni GABAB agonisti GABA-mimetik ajan olarak tanıtır ve beyin ve omurilikte eksitatör nörotransmiter salıverilmesini azalttığını belirtir; s3 spazmolitiklerin santral etkili kas gevşeticiler olduğunu söyler. Çeldiriciler süksinilkolin, panküronyum, atraküryum (periferik nöromusküler blokörler) ve dantrolen (kas lifinde etkili, s47) periferik etkilidir."
+  },
+  {
+   "id": "5d76925ac6c0",
+   "kok": "Alfa-2 adrenerjik reseptör agonisti olan santral etkili kas gevşetici ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Tizanidin",
+   "yil": "2020-2021",
+   "s": 44,
+   "seviye": "dogrudan",
+   "kanit": "belirgin 2-adrenoseptör agonisti etki gösterir.",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2020.txt` SAYFA 122, soru 31 (2020-2021 karne; aynı soru `y2019.txt` SAYFA 3'te de geçer)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s44 tizanidinin belirgin α2-adrenoseptör agonisti etki gösterdiğini söyler (PDF metninde α işareti düşmüştür). Çeldiriciler: baklofen GABAB agonistidir (s41), diazepam GABAA'ya etkir (s40), sugammadeks (s34) ve süksinilkolin (s18) nöromusküler blokaj ilaçlarıdır."
+  },
+  {
+   "id": "d3-k2-far-010",
+   "kok": "Omurilik düzeyinde presinaptik alfa-2 adrenerjik reseptörleri uyararak eksitatör aminoasit salınımını azaltan, belirgin ağız kuruluğu, sedasyon ve hipotansiyon yan etkileri yapabilen santral etkili kas gevşetici hangisidir?",
+   "cevap": "Tizanidin",
+   "yil": "2025-2026",
+   "s": 44,
+   "seviye": "dogrudan",
+   "kanit": "belirgin 2-adrenoseptör agonisti etki gösterir.",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2025.txt` SAYFA 7 (2025-2026 öğrenci hatırlaması; şıklar sonradan tamamlandı)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "ek_kanit": [
+    {
+     "s": 44,
+     "kanit": "fakat sedasyon, hipotansiyon, baş dönmesi, ağız kuruluğu, halsizlik ve"
+    }
+   ],
+   "dogrulandi": true,
+   "neden": "Hatırlamada yalnız konu geçer, şıklar sonradan tamamlanmıştır. Slayt s44 tizanidinin α2 agonisti olduğunu, omurilikte presinaptik ve postsinaptik inhibisyonu güçlendirdiğini ve ağız kuruluğu dahil sedasyon, hipotansiyon gibi yan etkiler yaptığını söyler. Çeldiriciler baklofen, dantrolen, siklobenzaprin ve diazepamdır; hiçbiri α2 agonisti değildir (s41, s47, s50, s40)."
+  },
+  {
+   "id": "past-1790877044812-375943",
+   "kok": "Santral etkili kas gevşetici ilaçların aksine, aşağıdaki ilaçlardan hangisi kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyerek kas gücünde azalma meydana getirir?",
+   "cevap": "Dantrolen",
+   "yil": "2019-2020",
+   "s": 47,
+   "seviye": "dogrudan",
+   "kanit": "fibrillerinde eksitasyon-kontraksiyon kenetini engelleyerek kas",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2019.txt` SAYFA 13, soru 36 (2019-2020 Kurul 2 sınavı); aynı soru `KURUL 2 ÇIKMIŞ 3.txt` derlemesinde de var.",
+   "dogrulandi": true,
+   "neden": "Slayt s47 dantrolenin santral etkili gevşeticilerin aksine kas fibrillerinde eksitasyon-kontraksiyon kenetini engelleyerek kas gücünü azalttığını söyler. Çeldiriciler: tizanidin (s44) ve diazepam (s40) santral etkilidir; neostigmin (s33) kolinesteraz inhibitörüdür; süksinilkolin (s18) depolarizan blokördür."
+  },
+  {
+   "id": "09e61290e8aa",
+   "kok": "Özel bir uygulama yeri malign hipertermi tedavisi olan ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Dantrolen",
+   "yil": "2020-2021",
+   "s": 48,
+   "seviye": "dogrudan",
+   "kanit": "Dantrolenin özel bir uygulama yeri malign hipertermi",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2020.txt` SAYFA 73 (2020-2021 karne)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s48 cümlesi soru köküyle birebir örtüşür: dantrolenin özel uygulama yeri malign hipertermi tedavisidir. Çeldiriciler süksinilkolin (hipertermiyi tetikleyen ilaç, s30), botulinum toksini (s49), baklofen (s41) ve sugammadeks (s34) bu amaçla anılmaz."
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-7",
+   "kok": "Malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Dantrolen",
+   "yil": "2023-2024",
+   "s": 48,
+   "seviye": "dogrudan",
+   "kanit": "Dantrolenin özel bir uygulama yeri malign hipertermi",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2023.txt` SAYFA 1, madde 7; `y2024_duz.txt` SAYFA 9 (2023-2024; hatırlama)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s48 dantrolenin özel uygulama yerinin malign hipertermi tedavisi olduğunu söyler; s30 malign hipertermiyi süksinilkolin ile uçucu anestezik etkileşimi olarak anar. Çeldiriciler: süksinilkolin hipertermiyi tetikler, neostigmin, baklofen ve pankuronyum tedavi etmez."
+  }
+ ]
+}

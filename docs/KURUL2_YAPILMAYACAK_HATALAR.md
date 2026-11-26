@@ -530,3 +530,8 @@
 - **H691** · v18'de klinik.css --kl-mono daktilo yazı tipi + telefonda kalın ray çubuğu → hatalar/on_yuz_tasarim_tema.md
 - **H693** · v18 Akış iptal: v15 üstüne !important CSS katmanı özgüllük yarışı doğurdu; yeni görünüm ayrı bileşen dalıyla → hatalar/on_yuz_tasarim_tema.md
 - **H692** · Sesli ders ekranında Kurul 2 kısaltmaları okunuşla kalıyordu (o ka be, te se se be); yazim_sozlugu dizi eşlemesi + harf tutarlılık süzgeci → hatalar/ses.md
+- **H694** · Görüntü PDF: E1'den önce OCR, görüntüleyiciye metin katmanlı PDF → hatalar/ders_metni_degerlendirme.md
+- **H695** · Kapak bilgi paketi ders analizinde kazanım sayıldı; E1'e kapak paketi yazılmaz → hatalar/ders_metni_degerlendirme.md
+- **H696** · Kısa anahtar 400, Oracle 500, kelime_zaman göndermiyor → hatalar/betik_altyapi.md
+- **H697** · Çözücü kapısının "doğru" şartı dolgu döngüsü; bilgi cümlesi içinde tek "doğru" modeli → hatalar/soru_cozucu.md
+- **H698** · Yeni ses adla değil md5 ile; ortak kayıt dilim eşlemesiyle derslere bölünür → hatalar/ses.md

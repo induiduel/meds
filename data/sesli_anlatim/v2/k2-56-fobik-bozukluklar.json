@@ -773,6 +773,31 @@
        "id": "k2-56-c0027"
       },
       {
+       "ses": "Deneyde nötr nesne korkutucu bir sesle birlikte sunulmuş; birkaç eşleşmeden sonra çocuk nesneyi tek başına görünce de korku tepkisi göstermiştir.",
+       "ekran": "Nötr nesne + **korkutucu ses** → nesne tek başına korku",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "korkutucu ses",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "uyaran, korkutucu bir uyaranla birkaç kez"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-56-c0158"
+      },
+      {
        "ses": "İkinci açıklama Mowrer'in iki etmen kuramıdır: korku klasik koşullanmayla kazanılır, kaçınma ise kaygıyı azalttığı için korkuyu sürdürür.",
        "ekran": "2. **İki etmen kuramı** (Mowrer): koşullanma + kaçınma",
        "duzey": 0,
@@ -2843,7 +2868,11 @@
        "cikmis": [],
        "spot": null,
        "ogrenci": null,
-       "hoca": null,
+       "hoca": {
+        "id": "hv-k2-56-06",
+        "kategori": "onemli",
+        "ifade": "en önemli bir risk(e)"
+       },
        "slayt": {
         "sayfa": 14,
         "satir": [
@@ -3091,6 +3120,32 @@
         "tablo": null
        },
        "id": "k2-56-c0109"
+      },
+      {
+       "ses": "Örneğin yüzünün kızardığını fark eden kişi dikkatini kendine yöneltir ve diğerlerinin bunu anlayacağını düşünür.",
+       "ekran": "Yüzü kızaran kişi: dikkat kendine, **\"anlayacaklar\"** düşüncesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anlayacaklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Kendine odaklanma",
+         "Kişi sosyal durumda dikkatini kendine yöneltir ve kendini"
+        ],
+        "sekil": "Sol alt kutu: kendine odaklanma",
+        "tablo": null
+       },
+       "id": "k2-56-c0159"
       },
       {
        "ses": "Sol üstteki kutu kaçınma ve güvenlik sağlayıcı davranışlardır; ok yeniden en üstteki sosyal duruma döner ve döngü kapanır.",
@@ -4083,7 +4138,11 @@
        "cikmis": [],
        "spot": null,
        "ogrenci": null,
-       "hoca": null,
+       "hoca": {
+        "id": "hv-k2-56-08",
+        "kategori": "bilin",
+        "ifade": "bu kadar aklınıza kaldı"
+       },
        "slayt": {
         "sayfa": 20,
         "satir": [

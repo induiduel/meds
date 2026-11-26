@@ -1,0 +1,1672 @@
+{
+ "id": "k2-60-miyorelaksan-ilaclar",
+ "sira": 60,
+ "kurul": 2,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Miyorelaksan İlaçlar (İskelet Kası Gevşeticileri)",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "tarih": "2026-11-26",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Motor son plaktaki nikotinik asetilkolin reseptörünün beş alt birimli yapısını ve asetilkolin bağlanma yerlerini tanır (s. 4).",
+   "_s": [
+    4
+   ],
+   "_bp": "bp4",
+   "_baslik": "Aksiyon potansiyeli motor sinir terminaline ulaşınca içeri doğru",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Motor son plaktaki nikotinik asetilkolin reseptörünün alt birim yapısı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "İki alfa, bir beta, bir gama ve bir delta",
+      "B": "Üç alfa ve iki beta",
+      "C": "İki alfa, iki beta ve bir gama",
+      "D": "Dört alfa ve bir delta",
+      "E": "Bir alfa, iki beta, bir gama ve bir delta"
+     },
+     "dogru": "A",
+     "aciklama": "Motor son plaktaki nikotinik reseptör beş alt birimden oluşur: iki alfa, bir beta, bir gama ve bir delta. İki asetilkolin molekülü alfa-beta ve delta-alfa arayüzlerine bağlanır.",
+     "sik_aciklamalari": {
+      "A": "Motor son plaktaki nikotinik reseptör beş polipeptitten oluşan intrinsik bir membran proteinidir. İki asetilkolin molekülü alfa-beta ve delta-alfa arayüzlerine bağlanır. Bu nedenle iki alfa, bir beta, bir gama ve bir delta içeren dağılım sorunun istediği yapıdır ve doğru seçenektir.",
+      "B": "Üç alfa ve iki beta kombinasyonu motor son plak reseptörünü tanımlamaz. Gerçek yapıda yalnızca iki alfa alt birimi bulunur ve gama ile delta alt birimleri de yer alır.",
+      "C": "İki alfa ve iki beta birlikte bir gama alt birimi olan beş parçalı bir yapı gibi görünse de delta alt birimini içermez. Gerçek yapıda yalnızca bir beta ve bir delta alt birimi vardır.",
+      "D": "Dört alfa ve bir delta kombinasyonu beş alt birim sayısını tutturur ama alt birim çeşitliliğini yansıtmaz. Gerçek reseptör iki alfa, bir beta, bir gama ve bir delta içerir.",
+      "E": "İki beta içeren bu yapı da beş alt birimlidir fakat yalnızca bir alfa alt birimi vardır. Asetilkolin bağlanma cepleri alfa alt birimlerinin arayüzlerinde oluştuğundan iki alfa gerekir."
+     },
+     "s": 4,
+     "kazanim": 1,
+     "id": "k2-60-miyorelaksan-ilaclar-q01"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Süksinilkolinin asetilkolinle yapısal ilişkisini ve nöromusküler blokörlerin parenteral uygulanma gereğini açıklar (s. 9).",
+   "_s": [
+    9
+   ],
+   "_bp": "bp9",
+   "_baslik": "İkinci tip blokaj, ACh gibi depolarizan agonistin fazlalığıyla",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Süksinilkolin, hangi nörotransmitterin uç uca bağlanmış iki molekülüdür?",
+     "secenekler": {
+      "A": "Noradrenalin",
+      "B": "GABA",
+      "C": "Asetilkolin",
+      "D": "Glutamat",
+      "E": "Glisin"
+     },
+     "dogru": "C",
+     "aciklama": "Süksinilkolin uç uca bağlanmış iki asetilkolin molekülüdür; bu yapısal benzerlik nikotinik reseptörü uyarmasını sağlar.",
+     "sik_aciklamalari": {
+      "A": "Noradrenalin adrenerjik sinir uçlarından salıverilen bir nörotransmitterdir. Pankuronyumun yol açtığı taşikardide noradrenalinin geri alımının inhibisyonu rol oynar, ancak süksinilkolinin yapı taşı değildir.",
+      "B": "GABA santral sinir sisteminin inhibitör nörotransmitteridir ve baklofen ile diazepamın etkisine aracılık eder. Süksinilkolinin yapısı GABA yapısına değil asetilkoline benzer ve nöromusküler kavşakta etki eder.",
+      "C": "Asetilkolin motor sinir ucundan salıverilen ve nikotinik reseptörleri uyaran nörotransmitterdir. Süksinilkolin uç uca bağlanmış iki asetilkolin molekülü olduğu için reseptöre bağlanabilir; sorudaki yapısal tarife uyan nörotransmitter olduğundan doğru yanıt asetilkolindir.",
+      "D": "Glutamat santral sinir sisteminin başlıca eksitatör nörotransmitteridir. İdrosilamid ve riluzol bu iletimi baskılar; süksinilkolin ise nöromusküler kavşakta asetilkolinin yapısını taklit eder.",
+      "E": "Glisin kan-beyin bariyerini hızla geçen ve oral verilince etki eden bir inhibitör amino asittir. Spastisiteyi azalttığı ön çalışmalarda görülmüştür; süksinilkolinin yapısıyla bir ilgisi bulunmaz."
+     },
+     "s": 9,
+     "kazanim": 2,
+     "id": "k2-60-miyorelaksan-ilaclar-q02"
+    },
+    {
+     "zorluk": "kolay",
+     "soru": "Nöromusküler blokör ilaçlar ağız yoluyla alındıklarında inaktif olduklarından hangi yolla uygulanmalıdır?",
+     "secenekler": {
+      "A": "Parenteral yol",
+      "B": "Oral yol",
+      "C": "İntratekal yol",
+      "D": "İnhalasyon yolu",
+      "E": "Transdermal yol"
+     },
+     "dogru": "A",
+     "aciklama": "Nöromusküler blokörler ağızdan alındıklarında inaktiftir; çünkü yüksek oranda iyonizedir ve hücre membranlarını kolayca geçemezler, bu yüzden parenteral yolla uygulanırlar.",
+     "sik_aciklamalari": {
+      "A": "Nöromusküler blokörler yüksek oranda iyonizedir ve hücre membranlarını kolayca geçemez; ağızdan alındıklarında inaktiftirler. Emilim olmadığından intravenöz gibi parenteral uygulama gerekir ve soruda sorulan yol olarak doğru seçenektir.",
+      "B": "Oral yolla alınan nöromusküler blokörler inaktiftir ve etki göstermez. Baklofen gibi spazmolitikler ise oral kullanım için tasarlanmıştır ve ağız yoluyla hızla ve tama yakın emilir.",
+      "C": "İntratekal yol baklofenin şiddetli spazmda kullanıldığı özel bir uygulamadır ve subaraknoid aralığa kateter gerektirir. Nöromusküler blokörlerin standart uygulama yolu değildir.",
+      "D": "İnhalasyon yolu uçucu anesteziklerin uygulama yoludur ve bu ilaçlar non-depolarizan kas gevşeticilerin etkisini doz bağımlı potansiyalize eder. Blokörlerin kendisi ise parenteral yolla verilir.",
+      "E": "Transdermal yolda ilaç deriden emilir; oysa nöromusküler blokörler yüksek oranda iyonize olduklarından membranları kolayca geçemez. Bu yol blokörler için uygun değildir."
+     },
+     "s": 9,
+     "kazanim": 2,
+     "id": "k2-60-miyorelaksan-ilaclar-q03"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Böbrek ve karaciğerle atılımın non-depolarizan blokajın süresine etkisini ilişkilendirir (s. 10).",
+   "_s": [
+    10
+   ],
+   "_bp": "bp10",
+   "_baslik": "Nöromusküler bloke ilaçlar yüksek oranda iyonizedir; hücre",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Böbrek yoluyla atılan non-depolarizan gevşeticilerin yarılanma ömrü ve etki süresi için aşağıdakilerden hangisi geçerlidir?",
+     "secenekler": {
+      "A": "Kısa yarı ömür ve kısa etki süresi",
+      "B": "Uzun yarı ömür ve uzun etki süresi",
+      "C": "Uzun yarı ömür ancak kısa etki süresi",
+      "D": "Kısa yarı ömür ancak uzun etki süresi",
+      "E": "Yarı ömürden bağımsız sabit etki süresi"
+     },
+     "dogru": "B",
+     "aciklama": "Böbrekle atılan ilaçların yarı ömrü uzundur ve non-depolarizan blokaj süresi yarılanma ömrüyle yakından ilişkili olduğundan etki süresi de uzar.",
+     "sik_aciklamalari": {
+      "A": "Kısa yarı ömür ve kısa etki süresi karaciğer yoluyla atılan ilaçlarda görülen eğilimdir. Böbrekle atılan non-depolarizan ilaçlarda ise yarı ömür ve etki süresi uzundur.",
+      "B": "Böbrek yoluyla atılan ilaçların yarı ömrü genellikle uzundur. Non-depolarizan blokajın süresi yarılanma ömrüyle yakından ilişkili olduğundan etki süresi de uzar. Karaciğerle atılanlar kısa yarı ömre eğilimlidir; bu yüzden uzun yarı ömür ve uzun etki ilişkisi doğru olandır.",
+      "C": "Etki süresi yarı ömürle yakından ilişkilidir; yarı ömür uzunken süre kısa kalmaz. Bu kombinasyon blokaj süresiyle yarılanma ömrü arasındaki ilişkiye ters düşer.",
+      "D": "Yarı ömür kısaysa blokaj süresi de kısadır, çünkü süre eliminasyon yarılanma ömrüyle birlikte hareket eder. Karaciğerle atılanlar kısa yarı ömre eğilimlidir.",
+      "E": "Blokaj süresi yarı ömürden bağımsız değildir; tersine eliminasyon yarılanma ömrüyle yakından ilişkilidir. Atılım yolu hem yarı ömrü hem etki süresini belirler."
+     },
+     "s": 10,
+     "kazanim": 3,
+     "id": "k2-60-miyorelaksan-ilaclar-q04"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Orta ve uzun etkili steroidal blokörleri ve atrakuryumun Hofmann eliminasyonunu ayırt eder (s. 11).",
+   "_s": [
+    11
+   ],
+   "_bp": "bp11",
+   "_baslik": "Orta etki süreli steroid kas gevşeticiler vekuronyum ve",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "I. Steroid yapılı gevşeticilerin en uzun etkili üyesidir. II. Kalpte M2 reseptörünü bloke eder. III. Sistemik histamin salınımıyla hipotansiyon yapar. Pankuronyum için bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız II",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Pankuronyum en uzun etkili steroidal blokördür ve kalpte M2 reseptörünü bloke eder; histamin kaynaklı hipotansiyon ona özgü değildir. Bu nedenle I ve II doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Kalpte M2 reseptörünün bloke edilmesi pankuronyumun tanımlı etkisidir. Pankuronyum ayrıca steroid yapılı gevşeticilerin en uzun etkili üyesidir; bu süre özelliği de ilacı tanımlar.",
+      "B": "Pankuronyum en uzun etkili steroidal üyedir ve kalpte M2 reseptörünü bloke ederek taşikardi yapar. Histamin salınımıyla hipotansiyon tubokürarin ve atrakuryum gibi ilaçlarda görülür; bu nedenle I ve II doğrudur.",
+      "C": "En uzun etkili üye olması doğrudur. Fakat histamin salınımıyla hipotansiyon pankuronyum için değil, tubokürarin, mivakuryum ve atrakuryum için tanımlanmıştır; III yanlıştır.",
+      "D": "M2 reseptör blokajı pankuronyumun tanımlı etkisidir. Histamin salınımıyla hipotansiyon ise tubokürarin, mivakuryum ve atrakuryum için tanımlıdır; pankuronyum kalp hızını artırır.",
+      "E": "İlk iki ifade doğrudur. Üçüncüsü yanlıştır çünkü pankuronyum kalp hızını artırır, sistemik vasküler rezistansı ise çok az değiştirir veya hiç değiştirmez."
+     },
+     "s": 11,
+     "kazanim": 4,
+     "id": "k2-60-miyorelaksan-ilaclar-q05"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Atrakuryumun hepatik metabolizmaya ek olarak uğradığı spontan kimyasal yıkım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Plazma kolinesterazıyla hidroliz",
+      "B": "Safrayla atılma",
+      "C": "Sugammadeksle bağlanma",
+      "D": "Dibukain inhibisyonu",
+      "E": "Hofmann eliminasyonu"
+     },
+     "dogru": "E",
+     "aciklama": "Atrakuryum hepatik metabolizmaya ek olarak Hofmann eliminasyonuyla, yani spontan kimyasal yıkımla inaktive edilir.",
+     "sik_aciklamalari": {
+      "A": "Plazma kolinesterazıyla hidroliz süksinilkolin ve mivakuryumun yıkım yoludur. Atrakuryumun ek yıkım yolu ise enzimatik değil, spontan kimyasal bir süreç olan Hofmann eliminasyonudur.",
+      "B": "Safrayla atılma vekuronyum ve rokuronyumun eliminasyonunda önemlidir. Atrakuryumun hepatik metabolizmaya ek yolu ise safra değil, spontan kimyasal yıkım olan Hofmann eliminasyonudur.",
+      "C": "Sugammadeksle bağlanma pankuronyum, rokuronyum ve vekuronyum gibi steroidal blokörleri geri döndürmeye yarayan bir işlemdir. Atrakuryumun inaktivasyonu ise bu bağlanmayla değil, hepatik metabolizma ve Hofmann eliminasyonuyla olur.",
+      "D": "Dibukain inhibisyonu plazma kolinesterazının normal ve anormal varyantlarını ayırt eden bir testtir. Atrakuryumun yıkımıyla ilgili bir yol değildir, süksinilkolinin metabolizmasını değerlendirir.",
+      "E": "Hofmann eliminasyonu biyolojik bozukluklardan bile etkilenmeyen, spontan bir kimyasal yıkılmadır. Atrakuryum hepatik metabolizmaya ek olarak bu yolla da inaktive edildiğinden sorudaki yıkım tarifine uyar ve bu seçenek doğrudur."
+     },
+     "s": 11,
+     "kazanim": 4,
+     "id": "k2-60-miyorelaksan-ilaclar-q06"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "I. Orta etki süreli steroidal bir gevşeticidir. II. Etkisi çok hızlı başlar. III. Hofmann eliminasyonuyla inaktive edilir. Rokuronyum için bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I ve III",
+      "C": "II ve III",
+      "D": "Yalnız III",
+      "E": "I, II ve III"
+     },
+     "dogru": "A",
+     "aciklama": "Rokuronyum orta etki süreli steroidal bir gevşeticidir ve etkisi çok hızlı başlar; Hofmann eliminasyonu atrakuryumun yıkım yoludur.",
+     "sik_aciklamalari": {
+      "A": "Rokuronyum vekuronyum gibi orta etki süreli steroidal bir gevşeticidir ve etkisi çok hızlı başlar. Hofmann eliminasyonu atrakuryumun yolu olduğundan III yanlıştır; I ve II doğrudur.",
+      "B": "Orta etki süreli steroidal yapı doğrudur, ancak Hofmann eliminasyonu rokuronyumun değil atrakuryumun yıkım yoludur. Rokuronyum hepatik metabolizma ve safra yoluyla elimine edilir.",
+      "C": "Etkisinin çok hızlı başlaması rokuronyumun tanımlı özelliğidir. Hofmann eliminasyonu ise rokuronyuma değil atrakuryuma aittir; rokuronyum orta etki süreli steroidal bir gevşeticidir.",
+      "D": "Hofmann eliminasyonu atrakuryumun spontan yıkım yoludur ve rokuronyumu tanımlamaz. Rokuronyum için doğru olan ifadeler orta etki süresi ile hızlı başlangıçtır.",
+      "E": "Orta etki süresi ve hızlı başlangıç rokuronyumun tanımlı özellikleridir. Eliminasyonu hepatik metabolizma ve safrayla olur; Hofmann eliminasyonu ise spontan bir kimyasal yıkımdır ve atrakuryuma özgüdür."
+     },
+     "s": 11,
+     "kazanim": 4,
+     "id": "k2-60-miyorelaksan-ilaclar-q07"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Mivakuryumun en kısa etkili non-depolarizan blokör olduğunu ve yüksek doz sorunlarını açıklar (s. 12).",
+   "_s": [
+    12
+   ],
+   "_bp": "bp12",
+   "_baslik": "Atrakuryumun en güçlü stereoizomeri olan sisatrakuryum klinik",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Tüm non-depolarizan kas gevşeticiler içinde en kısa etki süresine sahip olan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Rokuronyum",
+      "B": "Vekuronyum",
+      "C": "Sisatrakuryum",
+      "D": "Pankuronyum",
+      "E": "Mivakuryum"
+     },
+     "dogru": "E",
+     "aciklama": "Mivakuryum, plazma kolinesterazıyla hızlı metabolize edilen izokinolin bileşiğidir ve non-depolarizan ilaçlar içinde en kısa etki süresine sahiptir.",
+     "sik_aciklamalari": {
+      "A": "Rokuronyum orta etki süreli steroid yapılı bir gevşeticidir ve etkisi çok hızlı başlar. Eliminasyonu hepatik metabolizma ve safra yoluyla olduğundan süresi mivakuryumdan uzundur.",
+      "B": "Vekuronyum orta etkili steroidal bir gevşeticidir ve eliminasyonu hepatik metabolizma ile safrayla atılmaya bağımlıdır. Karaciğer yoluyla atılan bu ilacın etki süresi orta uzunluktadır ve mivakuryumdan uzundur.",
+      "C": "Sisatrakuryum atrakuryumun en güçlü stereoizomeridir ve klinikte en sık kullanılan gevşeticilerden biridir. Atrakuryum orta etkili bir gevşetici olduğundan süresi mivakuryumdan uzundur.",
+      "D": "Pankuronyum steroid yapılı gevşeticilerin en uzun etkili üyesidir ve kalpte M2 reseptörünü bloke ederek taşikardi yapar. Süresi bakımından en kısa etkili mivakuryumun karşıt ucunda yer alır.",
+      "E": "Mivakuryum başka bir izokinolin bileşiğidir ve plazma kolinesterazıyla hızla metabolize edilir. Bu hızlı yıkım tüm non-depolarizan gevşeticiler içinde en kısa etki süresini sağladığından ölçüte uyan ilaç mivakuryumdur ve doğru yanıt odur."
+     },
+     "s": 12,
+     "kazanim": 5,
+     "id": "k2-60-miyorelaksan-ilaclar-q08"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Mivakuryumun etkisini hızlandırmak için yüksek doz kullanıldığında aşağıdakilerden hangisi görülebilir?",
+     "secenekler": {
+      "A": "Histamin salınımına bağlı hipotansiyon ve bronkospazm",
+      "B": "Belirgin taşikardi ve kalp debisinde artış",
+      "C": "Yanık hastalarda hiperkalemi ve kalp durması",
+      "D": "Kas hipermetabolizması ve malign hipertermi",
+      "E": "Koagülopati ile belirgin bradikardi gelişmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Mivakuryumun yüksek dozu artmış histamin salınımıyla hipotansiyon, flushing ve bronkospazma neden olabilir.",
+     "sik_aciklamalari": {
+      "A": "Mivakuryumun hızlı etki için yüksek dozda verilmesi artmış histamin salınımıyla bağlantılıdır. Bu salınım hipotansiyon, flushing ve bronkospazma yol açtığı için sorulan yüksek doz sonucunu tarif eden doğru seçenek histamin kaynaklı tablodur.",
+      "B": "Belirgin taşikardi ve kalp debisinde artış pankuronyumun vagolitik etkisine bağlıdır. Mivakuryumun yüksek dozunda ise öne çıkan sorun histamin salınımına bağlı hipotansiyon, flushing ve bronkospazmdır.",
+      "C": "Hiperkalemi ve kalp durması süksinilkolinin yanık, sinir hasarı ve travma sonrası gösterdiği advers etkidir. Mivakuryum bu mekanizmayla potasyum salıvermez; yüksek dozda histamin salınımı yapar.",
+      "D": "Malign hipertermi süksinilkolin ile uçucu anesteziklerin nadir etkileşimidir ve kalsiyum salıverilmesine bağlıdır. Mivakuryumun yüksek doz sorunu ise histamin kaynaklı hipotansiyon ve bronkospazmdır.",
+      "E": "Koagülopati ve belirgin bradikardi sugammadeksin advers reaksiyonlarıdır. Mivakuryum geri döndürme ajanı değil, plazma kolinesterazıyla yıkılan bir gevşeticidir ve yüksek dozda histamin salınımı yapar."
+     },
+     "s": 12,
+     "kazanim": 5,
+     "id": "k2-60-miyorelaksan-ilaclar-q09"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Süksinilkolinin plazma kolinesterazıyla metabolizmasını açıklar (s. 14).",
+   "_s": [
+    14
+   ],
+   "_bp": "bp14",
+   "_baslik": "Plazma kolinesterazı ile metabolize edilme süksinilkolinin",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Süksinilkolinin eliminasyonunun ana yolağı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hofmann eliminasyonu",
+      "B": "Hepatik metabolizma ve safrayla atılma",
+      "C": "İdrarla değişmeden atılma",
+      "D": "Plazma kolinesterazı ile metabolize edilme",
+      "E": "Motor son plakta asetilkolinesterazla yıkım"
+     },
+     "dogru": "D",
+     "aciklama": "Süksinilkolin esas olarak plazma kolinesterazıyla hidrolize edilir; enzimin kapasitesi çok yüksek olduğundan dozun küçük bir yüzdesi son plağa ulaşır.",
+     "sik_aciklamalari": {
+      "A": "Hofmann eliminasyonu atrakuryumun hepatik metabolizmaya ek olarak uğradığı spontan kimyasal yıkımdır. Süksinilkolinin yıkımı kimyasal değil enzimatiktir ve plazma kolinesterazı tarafından hidrolizle gerçekleşir.",
+      "B": "Vekuronyum ve rokuronyum eliminasyon için hepatik metabolizmaya ve safrayla atılmaya daha fazla bağımlıdır. Süksinilkolin ise karaciğerden çok plazmada kolinesterazla hızla parçalanır.",
+      "C": "İdrarla değişmeden atılma sugammadeks-rokuronyum kompleksinin eliminasyon yoludur ve normal böbrek fonksiyonunda 24 saat içinde tamamlanır. Süksinilkolin ise idrarla değişmeden atılmaz, plazma kolinesterazıyla süksinilmonokoline ve koline parçalanır.",
+      "D": "Plazma kolinesterazı süksinilkolini çok yüksek bir kapasiteyle hidrolize eder ve ilk metabolit süksinilmonokolin hızla süksinik asit ve koline parçalanır. Etkinin çok kısa olması bu yıkıma bağlı olduğundan, eliminasyonun ana yolu sorulduğunda doğru seçenek plazma kolinesterazıyla metabolize edilmedir.",
+      "E": "Motor son plakta plazma kolinesterazı çok az bulunur veya hiç bulunmaz; bu yüzden süksinilkolinin son plaktan uzaklaşması difüzyonla olur. Asıl eliminasyon plazmadaki enzimle gerçekleşir."
+     },
+     "s": 14,
+     "kazanim": 6,
+     "id": "k2-60-miyorelaksan-ilaclar-q10"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Dibukain sayısının amacını ve anormal enzimde blokajın uzamasını yorumlar (s. 15).",
+   "_s": [
+    15
+   ],
+   "_bp": "bp15",
+   "_baslik": "Dolaşımdaki plazma kolinesteraz düzeyi, süksinilkolinin motor",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "Dibukain sayısı klinikte hangi amaçla ölçülür?",
+     "secenekler": {
+      "A": "Nöromusküler blokajın derinliğini izlemek",
+      "B": "Malign hipertermi riskini saptamak",
+      "C": "Pankuronyuma bağlı taşikardi riskini göstermek",
+      "D": "Sugammadeks dozunu böbrek fonksiyonuna göre ayarlamak",
+      "E": "Hastanın süksinilkolini metabolize etme yeteneğini belirlemek"
+     },
+     "dogru": "E",
+     "aciklama": "Dibukain sayısı plazma kolinesterazının normal ya da anormal olup olmadığını gösterir; böylece hastanın süksinilkolini metabolize etme yeteneği ve blokajın uzama riski belirlenir.",
+     "sik_aciklamalari": {
+      "A": "Nöromusküler iletinin değerlendirilmesi blokajın derinliğini izlemeye yarar. Dibukain sayısı ise blokajı izlemez; plazma kolinesterazının normal mi anormal mi olduğunu ve süksinilkolinin yıkım yeteneğini gösterir.",
+      "B": "Malign hipertermi iskelet kası depolarından anormal kalsiyum salıverilmesine bağlı olarak süksinilkolin ve uçucu anesteziklerle gelişir. Dibukain sayısı bu riski ölçmez.",
+      "C": "Pankuronyumun taşikardisi esas olarak kalpte M2 reseptörünü bloke eden vagolitik etkisine bağlıdır. Dibukain sayısı kalp hızıyla ilgili bir risk göstermez; plazma kolinesterazı varyantını belirlemeye yarar.",
+      "D": "Sugammadeks dozu blokajın derinliğine göre belirlenir ve ciddi böbrek yetmezliğinde kullanılması önerilmez. Dibukain sayısı bu karara yardımcı olmaz; süksinilkolinin yıkımıyla ilgilidir.",
+      "E": "Dibukain plazma kolinesterazının normal ve anormal varyantlarını ayırt eden bir inhibitördür. Standart koşullarda normal enzimi yüzde 80, anormal enzimi yalnızca yüzde 20 inhibe eder. Bu fark hastanın süksinilkolini metabolize etme yeteneğini gösterir ve sorulan amaç olduğu için seçeneği doğru kılar."
+     },
+     "s": 15,
+     "kazanim": 7,
+     "id": "k2-60-miyorelaksan-ilaclar-q11"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Non-depolarizan blokörlerin prototipini ve yarışmalı etki mekanizmasını açıklar (s. 16).",
+   "_s": [
+    16
+   ],
+   "_bp": "bp16",
+   "_baslik": "Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Non-depolarizan nöromusküler blokörlerin prototipi kabul edilen ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Süksinilkolin",
+      "B": "Pankuronyum",
+      "C": "Atrakuryum",
+      "D": "Mivakuryum",
+      "E": "d-Tubokürarin"
+     },
+     "dogru": "E",
+     "aciklama": "d-Tubokürarin, kürarın aktif bileşiği olarak non-depolarizan nöromusküler blokörlerin prototipi kabul edilir; süksinilkolin depolarizan grubun prototipidir.",
+     "sik_aciklamalari": {
+      "A": "Süksinilkolin depolarizan blokörlerin prototipidir ve klinikte kullanılan tek depolarizan ilaçtır; uç uca bağlanmış iki asetilkolin molekülüdür. Non-depolarizan grubun prototipi ise d-tubokürarindir.",
+      "B": "Pankuronyum en uzun etkili steroidal non-depolarizan ilaçtır ve kalpte M2 reseptörünü bloke ederek taşikardi yapar. Klinikte kullanılan bir üyedir, grubun prototipi değildir.",
+      "C": "Atrakuryum orta etkili, Hofmann eliminasyonuyla da inaktive olan bir non-depolarizan gevşeticidir. Yaygın klinik kullanımı azalmıştır ve grubun prototipi sayılmaz.",
+      "D": "Mivakuryum tüm non-depolarizanlar içinde en kısa etki süreli izokinolin bileşiğidir ve plazma kolinesterazıyla yıkılır. Grubun prototipi değil, kısa etkili bir üyesidir.",
+      "E": "d-Tubokürarin kürarın aktif bileşiğidir ve artık yaygın klinik kullanımı olmamasına karşın asetilkolinle yarışarak nikotinik reseptörü bloke eden grubun prototipidir. Süksinilkolin depolarizan grubun prototipi olduğundan, non-depolarizan prototip sorulduğunda doğru yanıt d-tubokürarindir."
+     },
+     "s": 16,
+     "kazanim": 8,
+     "id": "k2-60-miyorelaksan-ilaclar-q12"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Düşük dozda non-depolarizan kas gevşeticilerin etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Asetilkolinle yarışarak nikotinik reseptörü bloke etme",
+      "B": "Reseptörü kalıcı olarak depolarize etme",
+      "C": "Presinaptik asetilkolin salınımını inhibe etme",
+      "D": "RyR1 kanalını bloke etme",
+      "E": "Plazma kolinesterazını inhibe etme"
+     },
+     "dogru": "A",
+     "aciklama": "Non-depolarizan gevşeticiler asetilkolinle yarışarak nikotinik reseptöre bağlanır ve kanalın açılmasını önler; depolarizasyon oluşmaz.",
+     "sik_aciklamalari": {
+      "A": "Non-depolarizan ilaçlar nikotinik reseptörde asetilkolinle yarışır ve kanalın açılmasını önler. Depolarizasyon oluşmadığı için kas gevşer; kasın gevşemesi bu yarışmalı blokajdan kaynaklandığı için düşük dozdaki etkiyi doğru açıklayan mekanizma budur.",
+      "B": "Reseptörü kalıcı olarak depolarize etmek süksinilkolinin faz I blokta yaptığı iştir. Non-depolarizan ilaçlar reseptörü uyarmaz; asetilkolinin reseptöre ulaşmasını ve depolarizasyonu engellerler.",
+      "C": "Presinaptik asetilkolin salınımını inhibe eden ajan botulinum toksinidir. Non-depolarizan blokörler sinir ucuna değil, postsinaptik nikotinik reseptöre etki eder ve yüksek dozda iyon kanalı porunu da tıkar.",
+      "D": "RyR1 kanalını bloke etmek dantrolenin mekanizmasıdır ve kasın sarkoplazmik retikulumuna etki eder. Non-depolarizan ilaçlar kavşakta reseptör düzeyinde etki gösterir.",
+      "E": "Plazma kolinesterazı süksinilkolini hidrolize eden enzimdir ve süksinilkolinin yıkımında görev alır. Non-depolarizan ilaçların etkisi bu enzimin inhibisyonuna değil, asetilkolinle reseptör düzeyindeki yarışmaya dayanır."
+     },
+     "s": 16,
+     "kazanim": 8,
+     "id": "k2-60-miyorelaksan-ilaclar-q13"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "metin": "Yüksek doz non-depolarizan ilacın kanal poruna girmesinin geri döndürme gücüne etkisini yorumlar (s. 17).",
+   "_s": [
+    17
+   ],
+   "_bp": "bp17",
+   "_baslik": "Etki gücü en az olan non-depolarizan gevşeticiler en hızlı",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "Yüksek dozlarda non-depolarizan ilaçların iyon kanalının poruna girmesinin klinik sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Süksinilkolinin fasikülasyonları artar",
+      "B": "Plazma kolinesterazı inhibe olur",
+      "C": "Sugammadeks gereksinimi ortadan kalkar",
+      "D": "Kolinesteraz inhibitörlerinin blokajı tersine çevirme gücü azalır",
+      "E": "Asetilkolin salınımı presinaptik olarak artar"
+     },
+     "dogru": "D",
+     "aciklama": "Yüksek dozda non-depolarizan ilaç iyon kanalının poruna girerek blokajı güçlendirir; bu yüzden kolinesteraz inhibitörlerinin geri döndürme gücü azalır.",
+     "sik_aciklamalari": {
+      "A": "Süksinilkolinin fasikülasyonları depolarizan etkisinin sonucudur ve non-depolarizan ilaçlar bunları zayıflatma eğilimindedir. Kanal poruna girme ise blokajı güçlendirir, fasikülasyon artışı yapmaz.",
+      "B": "Plazma kolinesterazı süksinilkolinin yıkımında rol oynayan enzimdir. Kanal poruna giren non-depolarizan ilaç bu enzimi inhibe etmez; yalnızca motor blokajı derinleştirir ve inhibitörlerin gücünü azaltır.",
+      "C": "Sugammadeks steroidal blokörleri bağlayarak geri döndürür. Kanal poru blokajı ise kolinesteraz inhibitörlerinin etkisini azaltır ve geri döndürmeyi zorlaştırır; sorun neostigmin, edrofonyum ve piridostigmin için ortaya çıkar.",
+      "D": "Yüksek dozda non-depolarizan ilaç kanal poruna girerek daha güçlü bir motor blokaj oluşturur. Bu durum neostigmin, edrofonyum ve piridostigminin tersine çevirme gücünü azalttığından klinik sonuç olarak sorulan etki geri döndürmenin güçleşmesidir ve doğru yanıttır.",
+      "E": "Non-depolarizan ilaçlar kavşak öncesi sodyum kanallarını bloke edebilir ve sinir ucunda asetilkolin mobilizasyonunu etkileyerek güçsüzlük yapar. Bu etki salınımı artırmaz, azaltır."
+     },
+     "s": 17,
+     "kazanim": 9,
+     "id": "k2-60-miyorelaksan-ilaclar-q14"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "metin": "Süksinilkolinin faz I depolarizan blokunu tanımlar (s. 18).",
+   "_s": [
+    18
+   ],
+   "_bp": "bp18",
+   "_baslik": "Faz I blok depolarizan bloktur; süksinilkolin klinik kullanımda",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Süksinilkolinin faz I blokta oluşturduğu blok tipine ne denir?",
+     "secenekler": {
+      "A": "Desensitizan blok",
+      "B": "Yarışmalı blok",
+      "C": "Depolarizan blok",
+      "D": "Presinaptik blok",
+      "E": "Santral blok"
+     },
+     "dogru": "C",
+     "aciklama": "Faz I blok depolarizan bloktur; süksinilkolin kanalı açıp son plağı depolarize eder ve plak depolarize kaldığı için yeni uyarılara yanıt vermez.",
+     "sik_aciklamalari": {
+      "A": "Desensitizan blok faz II blokun adıdır ve uzun süreli süksinilkolin maruziyetinden sonra gelişir. Membran repolarize olur ama desensitize olduğu için kolayca depolarize olamaz.",
+      "B": "Yarışmalı blok non-depolarizan ilaçların mekanizmasıdır; ilaç asetilkolinle yarışarak reseptöre bağlanır ve kanalın açılmasını önler. Süksinilkolin ise reseptörü uyarır, bu nedenle farklıdır.",
+      "C": "Faz I blokta süksinilkolin nikotinik reseptöre bağlanıp kanalı açar ve motor son plakta depolarizasyon yapar. Sinaptik aralıkta etkili metabolize edilmediği için plak depolarize kalıp yeni uyarılara yanıt vermez; bu mekanizmaya verilen ad depolarizan bloktur ve doğru seçim odur.",
+      "D": "Presinaptik blok sinir ucundan asetilkolin salınımının engellenmesidir ve botulinum toksininin mekanizmasıdır. Süksinilkolin sinir ucunda değil, motor son plakta nikotinik reseptörü uyararak depolarizan blok oluşturur.",
+      "E": "Santral blok spazmolitiklerin etkisi gibi santral sinir sisteminde gelişen inhibisyondur. Nöromusküler blokörlerin santral sinir sistemi üzerine etkisi yoktur; süksinilkolin son plakta etki eder."
+     },
+     "s": 18,
+     "kazanim": 10,
+     "id": "k2-60-miyorelaksan-ilaclar-q15"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "metin": "Faz II desensitizan blokun özelliğini açıklar (s. 19).",
+   "_s": [
+    19
+   ],
+   "_bp": "bp19",
+   "_baslik": "Faz II blok desensitizan bloktur: süksinilkoline uzun süreli",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "Süksinilkoline uzun süreli maruziyetle gelişen faz II blok için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Membran kalıcı olarak depolarize kalır ve uyarıya yanıt vermez",
+      "B": "Süksinilkolin asetilkolinle yarışarak kanalın açılmasını önler",
+      "C": "Presinaptik uçtan asetilkolin salınımı tamamen durur",
+      "D": "Membran repolarize olur ancak desensitize olduğundan kolayca depolarize olamaz",
+      "E": "Nikotinik reseptörler motor son plakta sayıca artar"
+     },
+     "dogru": "D",
+     "aciklama": "Faz II blok desensitizan bloktur; uzun süreli maruziyetle membran repolarize olur ama desensitize olduğu için kolayca depolarize olamaz.",
+     "sik_aciklamalari": {
+      "A": "Membranın depolarize kalıp sonraki uyarılara yanıt vermemesi faz I blokun özelliğidir; süksinilkolin sinaptik aralıkta etkili metabolize edilmediği için bu durum gelişir. Faz II blokta ise membran repolarize olur.",
+      "B": "Asetilkolinle yarışarak kanalın açılmasını önlemek non-depolarizan blokörlerin mekanizmasıdır. Süksinilkolin depolarizan bir ilaçtır; faz II blokta bile mekanizma yarışmalı bağlanma olarak tanımlanmaz.",
+      "C": "Asetilkolin salınımının durması botulinum toksininin presinaptik etkisidir. Faz II blok son plakta ve iyon kanalı düzeyinde gelişen desensitizasyondur, sinir ucundaki salınımı bozmaz.",
+      "D": "Faz II blokta başlangıçtaki depolarizasyon azalır ve membran repolarize olur. Buna rağmen desensitize olduğundan kolayca depolarize olamaz ve kanallar uzun süre kapalıymış gibi davranır; bu özellikler faz II bloğu tarif ettiğinden seçenek doğrudur.",
+      "E": "Faz II blokta reseptör sayısında artış anlatılmaz; güncel kanıtlar süksinilkolinin iyon kanallarını bloke etmesinin önemli olabileceğini gösterir. Kanallar uzun süreli kapalı durumda gibi davranır."
+     },
+     "s": 19,
+     "kazanim": 11,
+     "id": "k2-60-miyorelaksan-ilaclar-q16"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "metin": "Non-depolarizan blokörlerde kasların felç ve toparlanma sırasını söyler (s. 22).",
+   "_s": [
+    22
+   ],
+   "_bp": "bp22",
+   "_baslik": "Anestezide tubokürarin 0,1-0,4 mg/kg IV önce motor güçsüzlüğe,",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Non-depolarizan gevşeticilerle oluşan felçte en son etkilenen kas hangisidir?",
+     "secenekler": {
+      "A": "Göz kasları",
+      "B": "Yüz kasları",
+      "C": "Diyafram",
+      "D": "El kasları",
+      "E": "Ayak kasları"
+     },
+     "dogru": "C",
+     "aciklama": "Büyük kaslar ilaca daha dirençlidir; diyafram genellikle en son felç olan kastır ve toparlanmada işlevini ilk kazanan kastır.",
+     "sik_aciklamalari": {
+      "A": "Göz kasları ilaçtan ilk etkilenen kaslardır. Küçük kaslar olduklarından dirençleri azdır; büyük kaslardan oluşan abdominal, göğüs ve diyafram kasları ise daha geç felç olur.",
+      "B": "Yüz kasları küçük kaslardandır ve nöromusküler ilaçlara büyük kaslardan daha duyarlıdır. Bu yüzden felç sırasında erken etkilenirler; diyafram ise en son etkilenir.",
+      "C": "Büyük kaslar ilaca daha dirençlidir ve diyafram genellikle en son felç olan kastır. Toparlanma ters sırayla olduğundan işlevini ilk kazanan da diyaframdır; sorulan son felç olan kas olduğu için doğru yanıt diyaframdır.",
+      "D": "El kasları küçük kaslar grubundadır ve ilaca duyarlıdır. Abdominal kaslar, göğüs kasları ve diyafram gibi büyük kaslardan önce gevşerler; diyafram en sonda felç olur.",
+      "E": "Ayak kasları da yüz ve el kasları gibi küçük kaslardandır ve ilaca duyarlıdır. Bu yüzden diyaframdan çok önce felç olurlar; en son felç olan kas diyaframdır."
+     },
+     "s": 22,
+     "kazanim": 12,
+     "id": "k2-60-miyorelaksan-ilaclar-q17"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "metin": "Süksinilkolinin fasikülasyon ve felç seyrini açıklar (s. 23).",
+   "_s": [
+    23
+   ],
+   "_bp": "bp23",
+   "_baslik": "Süksinilkolin 0,75-1,5 mg/kg IV uygulanınca 30 sn içinde göğüs",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Süksinilkolin IV uygulandıktan sonra felçten önce ortaya çıkan ilk klinik bulgu hangisidir?",
+     "secenekler": {
+      "A": "Kol ve bacak kaslarında gevşeme",
+      "B": "Solunum kaslarında felç",
+      "C": "Göz içi basıncının düşmesi",
+      "D": "Hipotansiyon",
+      "E": "Göğüs ve karın kaslarında fasikülasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Süksinilkolin önce kas liflerini uyararak 30 saniye içinde göğüs ve karın kaslarında geçici fasikülasyonlar oluşturur; sonra felç gelişir.",
+     "sik_aciklamalari": {
+      "A": "Kol, boyun ve bacak kaslarının gevşemesi felç aşamasında olur ve 90 saniyeden kısa sürede gelişir. Süksinilkolinde bu gevşeme fasikülasyonlardan sonra gelir.",
+      "B": "Süksinilkolinle felç önce kol, boyun ve bacak kaslarında, ardından solunum kaslarında gelişir. Fasikülasyon bu felç aşamasından önce, 30 saniye içinde ortaya çıkan ilk klinik bulgudur.",
+      "C": "Göz içi basıncında azalma değil artış beklenir. Süksinilkolinle hızlı bir göz içi basıncı artışı eşlik edebilir ve 2-4 dakikada maksimale ulaşıp 5 dakika sonra kaybolur.",
+      "D": "Hipotansiyon tubokürarin, mivakuryum ve atrakuryum gibi sistemik histamin salıveren gevşeticilerin advers etkisidir. Süksinilkolinin ilk klinik bulgusu ise göğüs ve karın kaslarında geçici seyirmedir.",
+      "E": "Süksinilkolin depolarizan olduğundan önce kas liflerini kasılma yönünde uyarır. Bu yüzden 30 saniye içinde göğüs ve karın kaslarında geçici seyirmeler ortaya çıkar ve gevşeme bunu izler; doğru ilk bulgu fasikülasyondur."
+     },
+     "s": 23,
+     "kazanim": 13,
+     "id": "k2-60-miyorelaksan-ilaclar-q18"
+    },
+    {
+     "zorluk": "zor",
+     "soru": "Süksinilkolin ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Önce kol, boyun ve bacak kasları sonra solunum kasları gevşer",
+      "B": "Fasikülasyonlar felç geliştikten sonra ortaya çıkar",
+      "C": "Blokaj tipik olarak 10 dakikadan kısa sürede sonlanır",
+      "D": "Genel anestezi fasikülasyonları zayıflatma eğilimindedir",
+      "E": "Önceden verilen düşük doz non-depolarizan ilaç fasikülasyonları azaltır"
+     },
+     "dogru": "B",
+     "aciklama": "Fasikülasyonlar felçten önce, 30 saniye içinde ortaya çıkar; felç 90 saniyeden kısa sürede gelişir. Bu nedenle felçten sonra fasikülasyon ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Süksinilkolinde felç hızla gelişirken önce kol, boyun ve bacak kasları, bunu takiben solunum kasları gevşer. Bu sıralama ilacın tanımlı klinik seyridir.",
+      "B": "Fasikülasyonlar 30 saniye içinde ortaya çıkar, felç ise ardından 90 saniyeden kısa sürede gelişir. İfade bu sırayı tersine çevirdiği için yanlıştır; doğru bilgi fasikülasyonun felçten önce geldiğidir.",
+      "C": "Süksinilkolin plazmada ve karaciğerde kolinesterazla hızla hidrolize edilir. Bu nedenle blokaj tipik olarak 10 dakikadan kısa sürede sonlanır ve etki süresi non-depolarizan ilaçlara göre çok kısadır.",
+      "D": "Genel anestezi süksinilkolin fasikülasyonlarını zayıflatma eğilimindedir. Aynı etki önceden verilen düşük doz non-depolarizan gevşeticiyle de sağlanır, çünkü bu ilaçlar süksinilkolinin depolarize edici etkisini antagonize eder.",
+      "E": "Önceden verilen düşük doz non-depolarizan gevşetici fasikülasyonları zayıflatır. Bunun bedeli gereken süksinilkolin miktarının yüzde 50-90 artmasıdır; bu nedenle yöntem artık yaygın kullanılmaz."
+     },
+     "s": 23,
+     "kazanim": 13,
+     "id": "k2-60-miyorelaksan-ilaclar-q19"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "metin": "Blokörlerin kardiyovasküler etkilerini ve histamin salınımını ayırt eder (s. 24).",
+   "_s": [
+    24
+   ],
+   "_bp": "bp24",
+   "_baslik": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Aşağıdaki nöromusküler blokörlerden hangisi histamin salınımına bağlı hipotansiyon yapmaz?",
+     "secenekler": {
+      "A": "Vekuronyum",
+      "B": "Tubokürarin",
+      "C": "Mivakuryum",
+      "D": "Atrakuryum",
+      "E": "Metokurin"
+     },
+     "dogru": "A",
+     "aciklama": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler etkileri minimumdur; tubokürarin, mivakuryum, atrakuryum ve metokurin ise histamin salınımıyla hipotansiyon yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler etkileri minimum derecededir. Sistemik histamin salınımı yapmadıkları için hipotansiyon oluşturmazlar; histamin salınımına bağlı hipotansiyon yapmayan ilaç vekuronyum olduğundan soruda aranan ilaç odur ve doğru seçenek odur.",
+      "B": "Tubokürarin sistemik histamin salınımı sonucu hipotansiyona neden olur ve yüksek dozlarda gangliyonik blokaj da yapabilir. Antihistaminik premedikasyon bu hipotansiyonu zayıflatır.",
+      "C": "Mivakuryum histamin salınımına bağlı hipotansiyon yapabilir; yüksek dozda flushing ile bronkospazm da görülebilir. Antihistaminik premedikasyon histamin etkisini baskıladığı için mivakuryumla gelişen hipotansiyonu azaltır.",
+      "D": "Atrakuryum sistemik histamin salınımıyla hipotansiyon yapabilir ve bronkospazmı tetikleyebilir. Sisatrakuryum bu yan etkiyi çok daha az gösterdiği için yerini almıştır.",
+      "E": "Metokurin yani dimetiltubokürarin daha az olarak sistemik histamin salınımı yapar ve hipotansiyona yol açabilir. Yüksek dozlarında gangliyonik blokaj da görülür."
+     },
+     "s": 24,
+     "kazanim": 14,
+     "id": "k2-60-miyorelaksan-ilaclar-q20"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "metin": "Antihistaminik premedikasyonun yerini ve pankuronyumun taşikardi mekanizmasını açıklar (s. 25).",
+   "_s": [
+    25
+   ],
+   "_bp": "bp25",
+   "_baslik": "Antihistaminiklerle premedikasyon, tubokürarin ve mivakuryumla",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Pankuronyumun neden olduğu taşikardi esas olarak aşağıdakilerden hangisine bağlıdır?",
+     "secenekler": {
+      "A": "Histamin salınımına",
+      "B": "Gangliyonik blokaja",
+      "C": "Plazma kolinesterazının inhibisyonuna",
+      "D": "Vagolitik etkisine",
+      "E": "Kavşak öncesi sodyum kanalı blokajına"
+     },
+     "dogru": "D",
+     "aciklama": "Pankuronyum kalpte M2 reseptörünü bloke eder; taşikardi esas olarak bu vagolitik etkiye bağlıdır, noradrenalin geri alımının inhibisyonu ise ek katkı yapabilir.",
+     "sik_aciklamalari": {
+      "A": "Histamin salınımı tubokürarin, mivakuryum ve atrakuryumda hipotansiyona yol açan bir mekanizmadır. Pankuronyumda ise taşikardiyi histamin değil, kalpteki M2 blokajına bağlı vagolitik etki açıklar.",
+      "B": "Gangliyonik blokaj yüksek doz tubokürarin ve metokurinle ortaya çıkabilen bir etkidir. Pankuronyumun taşikardisinin esas nedeni ise gangliyon blokajı değil, vagolitik etkidir.",
+      "C": "Plazma kolinesterazı süksinilkolin ve mivakuryumun yıkımında rol oynayan enzimdir. Pankuronyumun kalp hızını artırması bu enzimin inhibisyonuyla değil, kalpteki M2 reseptörünün blokajıyla açıklanır.",
+      "D": "Pankuronyum kalpte M2 reseptörünü bloke ederek vagal tonusu azaltır; yani vagolitik etki gösterir. Noradrenalin geri alımının inhibisyonu yalnızca katkı yaptığından taşikardinin esas nedeni vagolitik etkidir ve soru bunu doğru biçimde arar.",
+      "E": "Kavşak öncesi sodyum kanallarının blokajı sinir ucunda asetilkolin mobilizasyonunu etkiler ve güçsüzlük yapar. Kalp hızındaki artışın nedeni bu blokaj değildir."
+     },
+     "s": 25,
+     "kazanim": 15,
+     "id": "k2-60-miyorelaksan-ilaclar-q21"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Tubokürarin ve mivakuryum ile gelişen hipotansiyonu zayıflatmak için uygulanan premedikasyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atropin",
+      "B": "Antihistaminik",
+      "C": "Neostigmin",
+      "D": "Tiyopental",
+      "E": "Gangliyon blokörü"
+     },
+     "dogru": "B",
+     "aciklama": "Tubokürarin ve mivakuryumla gelişen hipotansiyon histamin salınımına bağlıdır; antihistaminik premedikasyon bunu zayıflatır.",
+     "sik_aciklamalari": {
+      "A": "Atropin antikolinerjik bir ilaçtır ve süksinilkolinin bradikardisini önlemek için kullanılır. Histamin kaynaklı hipotansiyonda ise histaminin etkisini baskılayan antihistaminik gerekir, atropin bunu yapmaz.",
+      "B": "Bu iki ilaçta hipotansiyon sistemik histamin salınımına bağlıdır. Antihistaminikler histamin etkisini baskıladığı için premedikasyonla hipotansiyonu zayıflatır; sorulan önlem bu olduğundan doğru tercih antihistaminiktir.",
+      "C": "Neostigmin asetilkolinesterazı inhibe ederek non-depolarizan blokajı geri döndürür. Etkisi kavşakta asetilkolini artırmaktır; histamin kaynaklı hipotansiyonu önleyen bir premedikasyon değildir.",
+      "D": "Tiyopental süksinilkolinin geçici bradikardisini önleyebilen ilaçlar arasında anılır; amacı bradikardiyi önlemektir. Histamin salınımına bağlı hipotansiyonu ise histamin etkisini baskılayan antihistaminik zayıflatır.",
+      "E": "Gangliyon blokörleri süksinilkolinin geçici bradikardisini önleyebilir; kullanım amaçları budur. Histamin kaynaklı hipotansiyonu ise histamin etkisini baskılayan antihistaminik zayıflatır, gangliyon blokörü bu amaçla seçilmez."
+     },
+     "s": 25,
+     "kazanim": 15,
+     "id": "k2-60-miyorelaksan-ilaclar-q22"
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "metin": "Süksinilkolinin otonomik ve kardiyak etkilerini sıralar (s. 26).",
+   "_s": [
+    26
+   ],
+   "_bp": "bp26",
+   "_baslik": "Süksinilkolin halotan anestezisiyle birlikte uygulanınca",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "I. Sinüs düğümündeki muskarinik reseptörleri uyarır. II. Başlangıç dozundan 5 dakika sonra ikinci doz verilirse bradikardi gözlenir. III. Bradikardi atropin ile zayıflatılabilir. Süksinilkolinin kardiyovasküler etkileriyle ilgili bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız II",
+      "C": "I ve II",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Süksinilkolin muskarinik reseptörleri uyarır, ikinci dozdan sonra bradikardi yapar ve bu etki atropinle zayıflatılabilir; üç ifade de doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Sinüs düğümündeki muskarinik reseptörlerin uyarılması süksinilkolinin tanımlı kardiyak etkisidir. Başlangıç dozundan 5 dakika sonra ikinci doz verilirse bradikardi de görülür ve atropin etkiyi zayıflatır.",
+      "B": "İkinci dozda gözlenen bradikardi süksinilkolinin tanımlı bir etkisidir. Süksinilkolin ayrıca sinüs düğümündeki muskarinik reseptörleri uyarır ve bradikardi glikopirolat veya atropinle zayıflatılabilir.",
+      "C": "Muskarinik uyarım ve ikinci dozdaki bradikardi süksinilkolinin tanımlı etkileridir. Negatif inotropik ve kronotropik etkiler ayrıca glikopirolat veya atropin gibi antikolinerjik bir ilaçla zayıflatılabilir.",
+      "D": "İkinci dozdaki bradikardi ve atropinle zayıflama süksinilkolinin tanımlı özellikleridir. İlaç sinüs düğümündeki muskarinik reseptörleri de uyarır; bu üç bilgi birlikte süksinilkolinin otonomik etkisini oluşturur.",
+      "E": "Süksinilkolin parasempatik ve sempatik gangliyonlardaki nikotinik reseptörleri ve sinüs düğümündeki muskarinik reseptörleri uyarır. 5 dakika sonra verilen ikinci dozda bradikardi görülür ve atropin etkiyi zayıflatır; üç bilgi birlikte doğru olduğundan I, II ve III seçilir."
+     },
+     "s": 26,
+     "kazanim": 16,
+     "id": "k2-60-miyorelaksan-ilaclar-q23"
+    },
+    {
+     "zorluk": "kolay",
+     "soru": "Süksinilkolin ile birlikte kullanıldığında kardiyak aritmilere neden olabilen inhalasyon anesteziği hangisidir?",
+     "secenekler": {
+      "A": "İzofluran",
+      "B": "Sevofluran",
+      "C": "Halotan",
+      "D": "Desfluran",
+      "E": "Nitröz oksit"
+     },
+     "dogru": "C",
+     "aciklama": "Süksinilkolin halotan anestezisiyle birlikte uygulandığında kardiyak aritmilere yol açabilir; potansiyalizasyon sıralamasında halotan sondan ikinci yer alır.",
+     "sik_aciklamalari": {
+      "A": "İzofluran inhalasyon anestezikleri arasında non-depolarizan blokajı en fazla potansiyalize edendir. Süksinilkolinle kardiyak aritmi ilişkisi ise izofluran için değil, halotan için tanımlanmıştır.",
+      "B": "Sevofluran non-depolarizan blokajı potansiyalize eden uçucu anesteziklerden biridir ve izofluranın ardından gelir. Süksinilkolinle birlikte kardiyak aritmi bulgusu bu ilaçla anlatılmaz.",
+      "C": "Halotan inhalasyon anesteziklerinden biridir ve süksinilkolinle birlikte uygulandığında kardiyak aritmilere neden olabilir. Potansiyalizasyon sıralamasında sondan ikinci yer almasına rağmen aritmi ilişkisi yalnızca bu ilaç için tanımlandığından doğru yanıttır.",
+      "D": "Desfluran sevofluranın ardından gelen uçucu bir anesteziktir ve non-depolarizan blokajı doz bağımlı potansiyalize eder. Süksinilkolinle aritmi tablosu desfluranla değil, halotanla ilişkilendirilmiştir.",
+      "E": "Nitröz oksit inhalasyon anestezikleri arasında non-depolarizan blokajı en az potansiyalize edendir. Süksinilkolinle kardiyak aritmi ilişkisi nitröz oksitle değil, halotanla tanımlıdır."
+     },
+     "s": 26,
+     "kazanim": 16,
+     "id": "k2-60-miyorelaksan-ilaclar-q24"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "metin": "Süksinilkolinin hiperkalemi ve göz içi basıncı ile ilgili advers etkilerini açıklar (s. 27).",
+   "_s": [
+    27
+   ],
+   "_bp": "bp27",
+   "_baslik": "Süksinilkolinin geçici bradikardisi tiyopental, atropin,",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "I. Yanık ve sinir hasarı olan hastalarda hiperkalemiye yol açabilir. II. Göz içi basıncında geçici artışa neden olabilir. III. Fasikülasyonlar nedeniyle intragastrik basıncı azaltır. Süksinilkolinin advers etkileriyle ilgili bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız III",
+      "C": "I ve II",
+      "D": "I ve III",
+      "E": "II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Süksinilkolin yanıklarda hiperkalemi ve göz içi basıncı artışı yapar; fasikülasyonlar intragastrik basıncı artırır, azaltmaz. Bu nedenle I ve II doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanıklarda, sinir hasarında ve travmada süksinilkolin potasyumun kana salıverilmesine neden olur ve nadiren kalp durması yapar. Göz içi basıncındaki geçici artış da süksinilkolinin tanımlı bir etkisidir.",
+      "B": "Fasikülasyonlar aşırı kaslı hastalarda intragastrik basıncı azaltmaz, artırır ve mide içeriğinin aspirasyon riskini yükseltir. Bu yüzden III yanlıştır ve tek başına geçerli olamaz.",
+      "C": "Yanık, sinir hasarı ve travmada hiperkalemi gelişebilir ve hızlı bir göz içi basıncı artışı eşlik edebilir. İkisi de süksinilkolinin advers etkisidir, bu nedenle I ve II doğrudur.",
+      "D": "Hiperkalemi süksinilkolinin tanımlı bir advers etkisidir ve yanık, sinir hasarı ya da travmada görülür. Fasikülasyonlar ise aşırı kaslı hastalarda intragastrik basıncı azaltmaz, artırır ve aspirasyon riskini yükseltir.",
+      "E": "Göz içi basıncı artışı 2-4 dakikada maksimale ulaşan ve 5 dakika sonra kaybolan bir etkidir. Hiperkalemi de süksinilkolinle gelişir; fasikülasyonlar ise intragastrik basıncı azaltmaz, artırır."
+     },
+     "s": 27,
+     "kazanim": 17,
+     "id": "k2-60-miyorelaksan-ilaclar-q25"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "metin": "Süksinilkolinin intragastrik basınç ve kas ağrısı etkilerini ayırt eder (s. 28).",
+   "_s": [
+    28
+   ],
+   "_bp": "bp28",
+   "_baslik": "Aşırı kaslı hastalarda süksinilkolinle ilişkili fasikülasyonlar",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi süksinilkolinin advers etkilerinden biri değildir?",
+     "secenekler": {
+      "A": "Koagülopati",
+      "B": "Hiperkalemi",
+      "C": "Göz içi basıncı artışı",
+      "D": "Kas ağrısı",
+      "E": "İntragastrik basınç artışı"
+     },
+     "dogru": "A",
+     "aciklama": "Koagülopati sugammadeksin advers etkisidir. Süksinilkolin hiperkalemi, göz içi ve intragastrik basınç artışı ve kas ağrısı yapar.",
+     "sik_aciklamalari": {
+      "A": "Koagülopati aktifleştirilmiş kısmi tromboplastin zamanı ve protrombin zamanında artışla giden pıhtılaşma bozukluğudur ve sugammadeksin advers etkisidir. Süksinilkolinin sorunları hiperkalemi, göz içi basıncı artışı, intragastrik basınç artışı ve kas ağrısı olduğundan, koagülopati süksinilkolinin değil sugammadeksin sorunudur ve bu yüzden doğru seçenek odur.",
+      "B": "Hiperkalemi yanık, sinir hasarı ve travma sonrası potasyumun kana salıverilmesiyle gelişir ve nadiren kalp durmasına yol açar. Süksinilkolinin tanımlı bir advers etkisidir.",
+      "C": "Göz içi basıncı artışı süksinilkolin uygulamasına eşlik edebilen hızlı bir etkidir ve 2-4 dakikada maksimale ulaşıp 5 dakika sonra kaybolur. Süksinilkolinin advers etkisidir.",
+      "D": "Miyalji yüksek doz süksinilkolin verilen aşırı kaslı hastaların yaygın bir postoperatif yakınmasıdır. Fasikülasyonlarla ilişkilidir ve süksinilkolinin advers etkisi olarak sayılır.",
+      "E": "Aşırı kaslı hastalarda fasikülasyonlar intragastrik basıncı artırır ve mide içeriğinin aspirasyon ve regurgitasyon riskini yükseltir. Bu risk travmatik yaralanma, özofagus disfonksiyonu ve morbid obezitesi olanlarda daha olasıdır."
+     },
+     "s": 28,
+     "kazanim": 18,
+     "id": "k2-60-miyorelaksan-ilaclar-q26"
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "metin": "Uçucu anesteziklerin non-depolarizan blokajı potansiyalize etme sırasını ve nedenlerini açıklar (s. 29).",
+   "_s": [
+    29
+   ],
+   "_bp": "bp29",
+   "_baslik": "İnhalasyon (uçucu) anestezikleri non-depolarizan kas",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "İnhalasyon anestezikleri arasında non-depolarizan nöromusküler blokajı en fazla potansiyalize eden hangisidir?",
+     "secenekler": {
+      "A": "Sevofluran",
+      "B": "Desfluran",
+      "C": "İzofluran",
+      "D": "Halotan",
+      "E": "Nitröz oksit"
+     },
+     "dogru": "C",
+     "aciklama": "İnhalasyon anestezikleri non-depolarizan blokajı izofluran en fazla, nitröz oksit en az olacak şekilde sıralanarak potansiyalize eder.",
+     "sik_aciklamalari": {
+      "A": "Sevofluran blokajı potansiyalize eder ve sıralamada izofluranın hemen ardından gelir. Sıralama izofluran, sevofluran, desfluran, enfluran, halotan ve nitröz oksit biçimindedir.",
+      "B": "Desfluran sevofluranın ardından gelen üçüncü sıradaki uçucu anesteziktir ve blokajı doz bağımlı artırır. İzofluran ve sevofluran blokajı ondan daha çok potansiyalize eder.",
+      "C": "İzofluran uçucu anesteziklerin non-depolarizan kas gevşeticilerin etkisini artırma sıralamasında en başta yer alır ve nitröz oksit en sonda kalır. Blokajı en fazla artıran ilaç olduğu için doğru yanıt izoflurandır.",
+      "D": "Halotan sıralamada enfluranın ardından gelir ve süksinilkolinle birlikte kardiyak aritmi yapabilir. Non-depolarizan blokajı potansiyalize etmede izofluranın çok gerisindedir; nitröz oksit ondan sonra gelir.",
+      "E": "Nitröz oksit sıralamanın en sonundadır ve kas gevşeticilerin etkisini en az artıran ajandır. İzofluran ise sıralamanın en başındadır ve blokajı en fazla potansiyalize eder."
+     },
+     "s": 29,
+     "kazanim": 19,
+     "id": "k2-60-miyorelaksan-ilaclar-q27"
+    },
+    {
+     "zorluk": "zor",
+     "soru": "I. Sinir sisteminde depresyon. II. Kas kan akımında artış. III. Kavşak sonrası membranın depolarizasyona azalmış duyarlılığı. İnhalasyon anesteziklerinin non-depolarizan blokajı potansiyalize etmesinin nedenleri bu öncüllerden hangileridir?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız II",
+      "C": "I ve II",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "E",
+     "aciklama": "Uçucu anesteziklerle potansiyalizasyonda üç faktör rol oynar: sinir sistemi depresyonu, kas kan akımı artışı ve kavşak sonrası duyarlılığın azalması.",
+     "sik_aciklamalari": {
+      "A": "Nöromusküler kavşağın proksimalindeki sinir sistemi depresyonu uçucu anesteziklerin etkileşim nedenlerinden biridir. Kas kan akımındaki artış ve kavşak sonrası membranın depolarizasyona azalmış duyarlılığı da aynı etkileşimi açıklar.",
+      "B": "Kas kan akımındaki artış enjekte edilen gevşeticinin nöromusküler kavşağa ulaşmasını kolaylaştırır. Sinir sistemi depresyonu ve kavşak sonrası duyarlılık azalması da etkileşimin nedenleridir.",
+      "C": "Sinir sistemi depresyonu ve kas kan akımı artışı doğru nedenlerdir. Üçüncü neden olan kavşak sonrası membranın depolarizasyona duyarlılığının azalması da listede bulunur.",
+      "D": "Kan akımı artışı ve kavşak sonrası duyarlılık azalması etkileşimin nedenleridir. Kavşağın proksimalindeki sinir sistemi depresyonu da en önemli faktörler arasında sayılır.",
+      "E": "Etkileşimde üç faktör öne çıkar: kavşağın proksimalindeki sinir sistemi depresyonu, kas kan akımının artması ve kavşak sonrası membranın depolarizasyona duyarlılığının azalması. Üçü birlikte etkileşimi açıkladığından I, II ve III doğru seçimdir."
+     },
+     "s": 29,
+     "kazanim": 19,
+     "id": "k2-60-miyorelaksan-ilaclar-q28"
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "metin": "Süksinilkolin ile uçucu anesteziklerin malign hipertermi etkileşimini ve aminoglikozid etkileşimini açıklar (s. 30).",
+   "_s": [
+    30
+   ],
+   "_bp": "bp30",
+   "_baslik": "Süksinilkolin ile uçucu anesteziklerin nadir görülen etkileşimi,",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Süksinilkolin ile uçucu anesteziklerin nadir görülen etkileşimi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiperkalemi",
+      "B": "Posttetanik potansiyalizasyon",
+      "C": "Kolinesteraz inhibisyonu",
+      "D": "Malign hipertermi",
+      "E": "Anafilaksi"
+     },
+     "dogru": "D",
+     "aciklama": "Süksinilkolinle uçucu anesteziklerin nadir etkileşimi, iskelet kası depolarından anormal kalsiyum salıverilmesine bağlı malign hipertermidir.",
+     "sik_aciklamalari": {
+      "A": "Hiperkalemi yanık, sinir hasarı ve travmada süksinilkolinin yol açtığı potasyum salıverilmesidir ve nadiren kalp durmasıyla sonuçlanır. Uçucu anesteziklerle etkileşimin ürünü olan tablo ise kalsiyum kaynaklı malign hipertermidir.",
+      "B": "Posttetanik potansiyalizasyonun azalması düşük doz lokal anesteziklerin kavşak öncesi nöronal etkisidir. Süksinilkolinle uçucu anesteziklerin etkileşimi ise kalsiyum salıverilmesine bağlı malign hipertermidir.",
+      "C": "Kolinesteraz inhibisyonu neostigmin ve edrofonyumun mekanizmasıdır ve son plakta asetilkolini artırır. Süksinilkolinle uçucu anesteziklerin etkileşiminde sorun enzim değil, iskelet kası depolarından kalsiyum salıverilmesidir.",
+      "D": "Malign hipertermi iskelet kası depolarından anormal kalsiyum salıverilmesine bağlı gelişir ve kas hipermetabolizması ile şiddetli ateş yapar. Süksinilkolin ile uçucu anesteziklerin nadir etkileşimi olduğu için doğru yanıt malign hipertermidir; tedavisinde RyR1 kanalını bloke eden dantrolen kullanılır.",
+      "E": "Anafilaksi sugammadeksin en önemli advers etkisidir ve yüksek dozda sık görülür. Süksinilkolin ile uçucu anestezik etkileşiminde öne çıkan komplikasyon anafilaksi değildir."
+     },
+     "s": 30,
+     "kazanim": 20,
+     "id": "k2-60-miyorelaksan-ilaclar-q29"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Aminoglikozid antibiyotiklerle nöromusküler blokaj gelişmesinin nedeni aşağıdakilerden hangisiyle açıklanır?",
+     "secenekler": {
+      "A": "Asetilkolinin uyarılmış salınımını azaltmaları",
+      "B": "Plazma kolinesterazını inhibe etmeleri",
+      "C": "RyR1 kanalını bloke etmeleri",
+      "D": "Motor son plağı kalıcı depolarize etmeleri",
+      "E": "Steroidal blokörleri bağlamaları"
+     },
+     "dogru": "A",
+     "aciklama": "Aminoglikozidler gibi birçok antibiyotik, magnezyuma benzer şekilde asetilkolinin uyarılmış salınımını azaltarak nöromusküler blokaj oluşturabilir.",
+     "sik_aciklamalari": {
+      "A": "Birçok antibiyotik, magnezyum uygulamasındakine benzer biçimde sinir ucundan asetilkolinin uyarılmış salınımını azaltır. Aminoglikozidlerle gelişen blokaj da asetilkolin salınımının azalmasından kaynaklandığı için bu açıklama doğrudur.",
+      "B": "Plazma kolinesterazının inhibisyonu süksinilkolinin yıkımını yavaşlatan bir mekanizmadır. Antibiyotiklerin nöromusküler blokajı enzim inhibisyonuna dayanmaz, sinir ucundan asetilkolin salınımının azalmasına dayanır.",
+      "C": "RyR1 kanalının blokajı dantrolenin mekanizmasıdır ve kas liflerinde kalsiyum salıverilmesini engeller. Aminoglikozidler kas lifine değil, sinir ucuna etki ederek asetilkolin salınımını azaltır.",
+      "D": "Motor son plağın kalıcı depolarizasyonu süksinilkolinin faz I blokudur. Aminoglikozid antibiyotikler depolarizan ajan gibi davranmaz; magnezyum gibi asetilkolin salınımını azaltırlar.",
+      "E": "Steroidal blokörleri bağlama sugammadeksin işlevidir ve pankuronyum, rokuronyum ile vekuronyumun geri döndürülmesini sağlar. Aminoglikozidlerin etkisi ise bir bağlanmaya değil, sinir ucundan asetilkolin salınımının azalmasına dayanır."
+     },
+     "s": 30,
+     "kazanim": 20,
+     "id": "k2-60-miyorelaksan-ilaclar-q30"
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "metin": "Pre-kürarizasyonun yararını ve terk edilme nedenini yorumlar (s. 31).",
+   "_s": [
+    31
+   ],
+   "_bp": "bp31",
+   "_baslik": "Süksinilkolinin son plak depolarize edici etkisi düşük doz",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "Süksinilkolinden önce düşük doz non-depolarizan ilaç verilmesi olan pre-kürarizasyon neden artık yaygın uygulanmamaktadır?",
+     "secenekler": {
+      "A": "Hiperkalemi riskini belirgin biçimde artırır ve kalp durmasına yol açar",
+      "B": "Malign hipertermiyi tetikler ve ateşi şiddetle yükseltir",
+      "C": "Fasikülasyonları daha da artırır ve kas ağrısını şiddetlendirir",
+      "D": "Gereken süksinilkolin miktarını artırır ve uyanık hastada halsizlik yapar",
+      "E": "Plazma kolinesterazını inhibe eder ve blokajı uzatır"
+     },
+     "dogru": "D",
+     "aciklama": "Pre-kürarizasyon gereken süksinilkolin miktarını yüzde 50-90 artırır ve uyanık hastada halsizlik yapar; bu nedenle artık yaygın uygulanmaz.",
+     "sik_aciklamalari": {
+      "A": "Hiperkalemi süksinilkolinin yanık ve travma gibi durumlarda yol açtığı bir advers etkidir. Pre-kürarizasyonun terk edilme nedeni potasyum artışı değildir.",
+      "B": "Malign hipertermi süksinilkolinin uçucu anesteziklerle nadir etkileşimidir ve kalsiyum salıverilmesine bağlıdır. Pre-kürarizasyonun bırakılma nedeni ise gereken süksinilkolin miktarının artması ve halsizliktir.",
+      "C": "Pre-kürarizasyon tam tersine fasikülasyonları azaltır. Çünkü süksinilkolinin son plak depolarize edici etkisi düşük doz non-depolarizan blokörlerle antagonize edilir.",
+      "D": "Düşük doz non-depolarizan ilaç fasikülasyonları ve ameliyat sonrası kas ağrılarını azaltır. Ancak gevşeme için gereken süksinilkolin miktarını yüzde 50-90 artırır ve uyanık hastada halsizlik yapar; yöntemin bırakılma gerekçesi bu olduğundan doğru yanıttır.",
+      "E": "Plazma kolinesterazı süksinilkolini hidrolize eden enzimdir. Pre-kürarizasyonda kullanılan d-tubokürarin veya pankuronyum bu enzimi inhibe etmez; asıl sorun gereken doz artışıdır."
+     },
+     "s": 31,
+     "kazanim": 21,
+     "id": "k2-60-miyorelaksan-ilaclar-q31"
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "metin": "Hastalık ve yaşın nöromusküler blokaja etkisini yorumlar (s. 32).",
+   "_s": [
+    32
+   ],
+   "_bp": "bp32",
+   "_baslik": "Çeşitli hastalıklar non-depolarizan kas gevşeticilerin",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "Hastalıkların ve yaşlanmanın nöromusküler yanıtlara etkisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Myastenia gravis non-depolarizan blokajı artırır",
+      "B": "Yaşlılarda karaciğer ve böbrek klirensi artar",
+      "C": "Yaşlılarda non-depolarizan gevşeticilerin etki süresi uzar",
+      "D": "70 yaşın üzerinde blokör dozu azaltılmalıdır",
+      "E": "Çeşitli hastalıklar blokajı azaltabilir veya artırabilir"
+     },
+     "dogru": "B",
+     "aciklama": "İleri yaşta karaciğer ve böbrek klirensi artmaz, azalır; bu yüzden etki süresi uzar ve 70 yaş üzerinde doz azaltılır.",
+     "sik_aciklamalari": {
+      "A": "Myastenia gravis non-depolarizan ilaçların oluşturduğu nöromusküler blokajı artırır. Yani bu hastalık blokajı azaltan değil, güçlendiren durumlardandır ve non-depolarizan ilaçlara duyarlılığı yükseltir.",
+      "B": "Yaşlılarda karaciğer ve böbrek klirensi artmaz, azalır; bu azalma non-depolarizan gevşeticilerin etki süresini uzatır. İfade bu yönüyle yanlıştır ve doğru bilgi klirensin düşmesidir.",
+      "C": "İleri yaşta karaciğer ve böbrek klirensi azaldığı için non-depolarizan gevşeticilerin etki süresi uzar. Bu nedenle yaşlı hastalarda blokör dozu azaltılır.",
+      "D": "Yaşlı hastalarda, özellikle 70 yaşın üzerinde, nöromusküler blokör dozu azaltılmalıdır. Klirens azaldığından ilaç vücutta daha uzun kalır ve etki süresi uzar.",
+      "E": "Hastalıklar nöromusküler yanıtı tek yönde değiştirmez: bazıları non-depolarizan blokajı azaltır, bazıları artırır. Myastenia gravis artıranlara örnektir ve bu genel ifade yaşlanma bilgisinden ayrı bir başlıktır."
+     },
+     "s": 32,
+     "kazanim": 22,
+     "id": "k2-60-miyorelaksan-ilaclar-q32"
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "metin": "Non-depolarizan blokajın kolinesteraz inhibitörleriyle geri döndürülmesini açıklar (s. 33).",
+   "_s": [
+    33
+   ],
+   "_bp": "bp33",
+   "_baslik": "Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Neostigminin non-depolarizan nöromusküler blokajı antagonize etmesi hangi mekanizmayla açıklanır?",
+     "secenekler": {
+      "A": "Nikotinik reseptörü doğrudan uyarması",
+      "B": "Son plakta asetilkolin miktarını artırması",
+      "C": "Presinaptik asetilkolin salınımını artırması",
+      "D": "RyR1 kanalını bloke etmesi",
+      "E": "Steroidal blokörü kompleks içinde bağlaması"
+     },
+     "dogru": "B",
+     "aciklama": "Neostigmin asetilkolinesterazı inhibe ederek son plaktaki asetilkolin miktarını artırır; artan asetilkolin non-depolarizan blokörle yarışıp blokajı geri çevirir.",
+     "sik_aciklamalari": {
+      "A": "Nikotinik reseptörün doğrudan uyarılması depolarizan blokör süksinilkolinin mekanizmasıdır. Neostigmin reseptöre bağlanmaz; asetilkolinesterazı inhibe ederek asetilkolinin yıkımını yavaşlatır ve son plakta birikmesini sağlar.",
+      "B": "Neostigmin asetilkolinesterazı inhibe ettiği için motor son plakta asetilkolin birikir. Artan asetilkolin non-depolarizan blokörle yarışıp blokajı geri döndürdüğünden, mekanizma sorulduğunda doğru seçenek son plaktaki asetilkolin artışıdır.",
+      "C": "Presinaptik asetilkolin salınımını etkileyen ajan botulinum toksinidir ve salınımı artırmaz, inhibe eder. Neostigminin etkisi sinir ucunda değil, son plakta asetilkolin yıkımının yavaşlamasıyla ilgilidir.",
+      "D": "RyR1 kanalını bloke eden ilaç dantrolendir; sarkoplazmik retikulumdan kalsiyum salıverilmesini engelleyerek kas gücünü azaltır. Neostigmin ise kas liflerinin içinde değil, kavşaktaki asetilkolin düzeyi üzerinde etki eder.",
+      "E": "Sugammadeks steroidal blokörleri bağlayarak pankuronyum, rokuronyum ve vekuronyum gibi ilaçların etkisini geri döndürür. Neostigmin ise steroidi bağlamaz; asetilkolinesterazı inhibe ederek son plaktaki asetilkolin miktarını artırır."
+     },
+     "s": 33,
+     "kazanim": 23,
+     "id": "k2-60-miyorelaksan-ilaclar-q33"
+    },
+    {
+     "zorluk": "zor",
+     "soru": "Kolinesteraz inhibitörleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Edrofonyum derin blokajı geri döndürmede neostigmine göre daha etkilidir",
+      "B": "Neostigmin son plakta asetilkolin miktarını artırır",
+      "C": "Piridostigmin non-depolarizan blokajı antagonize eder",
+      "D": "Edrofonyumun etkisi neostigmine göre daha hızlı başlar",
+      "E": "Mivakuryum plazma kolinesterazıyla yıkıldığından etkileşimi daha azdır"
+     },
+     "dogru": "A",
+     "aciklama": "Edrofonyum hızlı başlar ama derin blokajı geri döndürmede neostigmine göre daha az etkilidir; ifade bunu tersine çevirdiği için yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Edrofonyumun etkisi daha hızlı başlar ancak derin nöromusküler blokajı geri döndürmede neostigmine göre daha az etkilidir. İfade bu bilgiyi tersine çevirdiği için yanlıştır; doğru olan edrofonyumun derin blokajda daha az etkili olmasıdır.",
+      "B": "Neostigmin asetilkolinesterazı inhibe ederek kas son plağındaki asetilkolin miktarını artırır. Artan asetilkolin non-depolarizan blokörle yarışarak blokajı antagonize eder; piridostigmin de aynı mekanizmayla çalışır.",
+      "C": "Neostigmin gibi piridostigmin de asetilkolinesterazı inhibe ederek son plaktaki asetilkolin miktarını artırır. Böylece non-depolarizan nöromusküler blokajı antagonize eder ve kas fonksiyonu geri döner.",
+      "D": "Edrofonyumun etkisi neostigmine göre daha hızlı başlar. Ancak derin blokajı geri döndürmede neostigminden daha az etkilidir; bu iki özellik birlikte edrofonyumu tanımlar.",
+      "E": "Mivakuryum plazma kolinesterazıyla metabolize edildiğinden kolinesteraz inhibitörleriyle etkileşiminin daha az olduğu öngörülür. Süksinilkolin de aynı enzimle yıkılır ve mivakuryumdan daha hızlı metabolize edilir."
+     },
+     "s": 33,
+     "kazanim": 23,
+     "id": "k2-60-miyorelaksan-ilaclar-q34"
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "metin": "Sugammadeksin hedef blokörlerini ve doz basamaklarını söyler (s. 34).",
+   "_s": [
+    34
+   ],
+   "_bp": "bp34",
+   "_baslik": "Mivakuryum plazma kolinesterazıyla metabolize edildiğinden",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Sugammadeks ile hızlı geri döndürülebilen nöromusküler blokörler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Atrakuryum, mivakuryum ve süksinilkolin",
+      "B": "Pankuronyum, rokuronyum ve vekuronyum",
+      "C": "Sisatrakuryum, mivakuryum ve gantakuryum",
+      "D": "Süksinilkolin, gantakuryum ve atrakuryum",
+      "E": "Mivakuryum, süksinilkolin ve vekuronyum"
+     },
+     "dogru": "B",
+     "aciklama": "Sugammadeks pankuronyum, rokuronyum ve vekuronyum gibi steroidal blokörleri bağlayarak hızla geri döndürür; izokinolin yapılı ve depolarizan ilaçlar bu grupta değildir.",
+     "sik_aciklamalari": {
+      "A": "Atrakuryum ve mivakuryum izokinolin yapılıdır, süksinilkolin ise depolarizan blokördür. Sugammadeks yalnızca steroidal blokörleri bağladığı için bu üçlüyü geri döndürmez; atrakuryum Hofmann eliminasyonuyla, mivakuryum plazma kolinesterazıyla yıkılır.",
+      "B": "Pankuronyum, rokuronyum ve vekuronyum steroid yapılı nöromusküler blokörlerdir. Sugammadeks steroidal yapıyı bağlayarak yalnızca bu üç ilacın etkisini hızla geri döndürdüğünden bu üçlü doğru kombinasyondur.",
+      "C": "Sisatrakuryum ve mivakuryum izokinolin yapılıdır; gantakuryum ise kısa etkili yeni bir gruptur ve etkisi sistein ya da edrofonyumla geri çevrilebilir. Üçü de steroidal olmadığından sugammadeksin hedefi sayılmaz.",
+      "D": "Süksinilkolin depolarizan blokördür, gantakuryum yeni bir gruptur ve atrakuryum izokinolin yapılıdır. Steroid yapılı olmadıkları için sugammadeks bu üçlüyü bağlayarak geri döndürmez.",
+      "E": "Vekuronyum steroidal olduğundan sugammadeksle döndürülür; fakat mivakuryum plazma kolinesterazıyla yıkılan bir izokinolindir ve süksinilkolin depolarizandır. Kombinasyonun tamamı sugammadeksin hedefi değildir."
+     },
+     "s": 34,
+     "kazanim": 24,
+     "id": "k2-60-miyorelaksan-ilaclar-q35"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Sugammadeks ile derin nöromusküler blokajı tersine çevirmek için önerilen miktar hangisidir?",
+     "secenekler": {
+      "A": "2 mg/kg",
+      "B": "16 mg/kg",
+      "C": "1,2 mg/kg",
+      "D": "4 mg/kg",
+      "E": "0,3 mg/kg"
+     },
+     "dogru": "D",
+     "aciklama": "Sugammadeks için yüzeysel blokajda 2 mg/kg, daha derin blokajda 4 mg/kg ve rokuronyumdan hemen sonra 16 mg/kg önerilir.",
+     "sik_aciklamalari": {
+      "A": "2 mg/kg yüzeysel nöromusküler blokajı tersine çevirmek için önerilen sugammadeks miktarıdır. Daha derin blokajda miktar iki katına, 4 mg/kg değerine çıkarılır.",
+      "B": "16 mg/kg rokuronyumun 1,2 mg/kg tek dozundan hemen sonra geri döndürmenin gerektiği özel durumda önerilir. Rutin derin blokajda bu kadar yüksek miktar kullanılmaz.",
+      "C": "1,2 mg/kg sugammadeksin değil, rokuronyumun tek doz miktarıdır. Sugammadeks bu rokuronyum miktarını hemen tersine çevirmek için 16 mg/kg ile verilir.",
+      "D": "Sugammadeks için yüzeysel blokajda 2 mg/kg, daha derin blokajda 4 mg/kg önerilir. Rokuronyumun 1,2 mg/kg tek dozundan hemen sonra 16 mg/kg verilir. Soru derin blokajı sorduğundan doğru seçenek 4 mg/kg değeridir.",
+      "E": "0,3 mg/kg IV tubokürarinin kullanıldığı miktardır ve farmakolojik etkileri genellikle 45-60 dakika sürer. Sugammadeksin geri döndürme dozlarıyla ilgili bir miktar değildir."
+     },
+     "s": 34,
+     "kazanim": 24,
+     "id": "k2-60-miyorelaksan-ilaclar-q36"
+    }
+   ]
+  },
+  {
+   "no": 25,
+   "metin": "Sugammadeksin advers etkilerini sıralar (s. 36).",
+   "_s": [
+    36
+   ],
+   "_bp": "bp36",
+   "_baslik": "Sugammadeksin en önemli advers etkisi anafilaksidir;",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Çalışmalarda 16 mg/kg sugammadeks alan hastaların yüzde 0,3 kadarında görülen ve ilacın en ciddi sorunu sayılan komplikasyon hangisidir?",
+     "secenekler": {
+      "A": "Hiperkalemi",
+      "B": "Malign hipertermi",
+      "C": "Göz içi basıncı artışı",
+      "D": "Kas ağrısı",
+      "E": "Anafilaksi"
+     },
+     "dogru": "E",
+     "aciklama": "Sugammadeksin en önemli advers etkisi anafilaksidir; 16 mg/kg doz alan hastaların yüzde 0,3 kadarında görülmüştür. Hiperkalemi ve malign hipertermi süksinilkolinin sorunlarıdır.",
+     "sik_aciklamalari": {
+      "A": "Hiperkalemi yanık, sinir hasarı ve travma sonrası süksinilkolinle potasyumun kana salıverilmesidir ve nadiren kalp durması yapar. Sugammadeksin tipik advers etkisi değildir.",
+      "B": "Malign hipertermi süksinilkolin ile uçucu anesteziklerin nadir etkileşimidir ve kalsiyum salıverilmesine bağlıdır. Dantrolenle tedavi edilir; sugammadeksin advers etkisi olarak anlatılmaz.",
+      "C": "Göz içi basıncındaki hızlı artış süksinilkolin uygulamasına eşlik edebilir ve 2-4 dakikada maksimale ulaşır. Sugammadeks bu etkiye yol açmaz; anafilaksi ve koagülopati yapar.",
+      "D": "Miyalji yüksek doz süksinilkolin verilen aşırı kaslı hastalarda fasikülasyonlarla ilişkilidir ve yaygın bir postoperatif yakınmadır. Sugammadeksin en önemli advers etkisi bu değildir.",
+      "E": "Anafilaksi ani gelişen ağır bir aşırı duyarlılık reaksiyonudur. Çalışmalarda 16 mg/kg doz alan hastaların yüzde 0,3 kadarında görüldüğü ve sugammadeksin en önemli advers etkisi sayıldığı için doğru yanıttır."
+     },
+     "s": 36,
+     "kazanim": 25,
+     "id": "k2-60-miyorelaksan-ilaclar-q37"
+    },
+    {
+     "zorluk": "zor",
+     "soru": "I. Belirgin bradikardi yapabilir. II. aPTT ve PT oranında geçici artışa yol açabilir. III. Hiperkalemi en önemli advers etkisidir. Sugammadeks için bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Sugammadeks belirgin bradikardi ve aPTT ile PT artışı yapabilir; hiperkalemi ise süksinilkolinin advers etkisidir. Bu nedenle I ve II doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Belirgin bradikardi sugammadeksin önemli bir advers reaksiyonudur ve birkaç dakika içinde kalp durmasına kadar ilerleyebilir. Aynı ilaç koagülopati de yapar; aPTT ve PT oranında 1 saate kadar süren artış görülür.",
+      "B": "Sugammadeks uygulamasından birkaç dakika sonra belirgin bradikardi görülebilir ve aPTT ile PT oranlarında 1 saate kadar süren bir artış olur. Hiperkalemi ise süksinilkolinin sorunudur; bu nedenle I ve II doğrudur.",
+      "C": "Bradikardi doğru bir ifadedir; ancak hiperkalemi sugammadeksin değil, süksinilkolinin advers etkisidir. En önemli advers etki anafilaksidir, bu yüzden III yanlıştır.",
+      "D": "aPTT ve PT oranlarında 1 saate kadar süren artış sugammadeksin koagülopati etkisidir. Hiperkalemi ise sugammadeksin değil süksinilkolinin sorunudur; sugammadeksin en önemli advers etkisi anafilaksidir.",
+      "E": "Bradikardi ile aPTT ve PT artışı sugammadeksin tanımlı advers etkileridir. Hiperkalemi yanık, sinir hasarı ve travmada süksinilkolinle gelişen potasyum salıverilmesidir ve sugammadeksin etkisi değildir."
+     },
+     "s": 36,
+     "kazanim": 25,
+     "id": "k2-60-miyorelaksan-ilaclar-q38"
+    }
+   ]
+  },
+  {
+   "no": 26,
+   "metin": "Sugammadeksin steroid yapılı ilaçlarla etkileşimini açıklar (s. 37).",
+   "_s": [
+    37
+   ],
+   "_bp": "bp37",
+   "_baslik": "Sugammadeks steroidal NBM'leri (rokuronyum, vekuronyum)",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Sugammadeks uygulanan ve progesteron içeren hormonal kontraseptif kullanan kadında hangi sonuç beklenir?",
+     "secenekler": {
+      "A": "Kontraseptifin etkisinin artması",
+      "B": "Plazma kolinesteraz düzeyinin düşmesi",
+      "C": "Hiperkalemi gelişmesi",
+      "D": "Malign hipertermi gelişmesi",
+      "E": "Kontraseptifin etkinliğinin azalması"
+     },
+     "dogru": "E",
+     "aciklama": "Sugammadeks progesteron bazlı kontraseptifleri bağlayarak etkinliklerini azaltabilir; bu yüzden 7 gün hormonal olmayan doğum kontrol yöntemi önerilir.",
+     "sik_aciklamalari": {
+      "A": "Sugammadeks progesteronu bağlayarak etkisini azaltır; kontraseptifin etkinliğini artıracak bir mekanizması yoktur. Bağlanma sonucu kadın bir veya iki dozu kaçırmış gibi olur ve koruyuculuk düşer.",
+      "B": "Plazma kolinesterazı süksinilkolini hidrolize eden enzimdir ve düzeyi blokajın süresini etkiler. Sugammadeks bu enzimin düzeyini değiştirmez; steroidal ilaçları bağlayarak etki eder.",
+      "C": "Hiperkalemi süksinilkolinin yanık ve travma gibi durumlarda yol açtığı bir advers etkidir. Sugammadeksin kontraseptiflerle etkileşimi potasyumla değil, steroidlerin bağlanmasıyla ilgilidir.",
+      "D": "Malign hipertermi süksinilkolin ile uçucu anesteziklerin etkileşiminden doğar ve dantrolenle tedavi edilir. Kontraseptif kullanan kadında sugammadeksle beklenen sorun steroidin bağlanması ve etkinlik kaybıdır.",
+      "E": "Sugammadeks steroidal ilaçları bağladığı için progesteronu da bağlayabilir. Kadın bir veya iki dozu kaçırmış gibi olduğundan kontraseptifin etkinliğinin azalması beklenen doğru sonuçtur. Üretici bu nedenle 7 gün boyunca hormonal olmayan bir yöntem önerir."
+     },
+     "s": 37,
+     "kazanim": 26,
+     "id": "k2-60-miyorelaksan-ilaclar-q39"
+    },
+    {
+     "zorluk": "zor",
+     "soru": "I. Progesteron bazlı kontraseptifler. II. Toremifen. III. Neostigmin. Sugammadekse bağlanabildiği için etkisi azalabilen ilaçlar bu öncüllerden hangileridir?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "Yalnız III",
+      "C": "I ve II",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Sugammadeks steroidal yapılıları bağlar; progesteron bazlı kontraseptifler ve toremifen bağlanır, neostigmin ise bağlanmaz. Bu nedenle I ve II doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Progesteron bazlı kontraseptifler sugammadekse bağlanır ve etkinlikleri azalır. Seçici östrojen reseptör modülatörü toremifen de aynı biçimde sıkı bağlanır; metastatik meme kanseri tedavisinde kullanılabilen bu ilaç da sugammadeksten etkilenir.",
+      "B": "Neostigmin asetilkolinesterazı inhibe eden bir kolinesteraz inhibitörüdür ve steroid yapılı değildir. Sugammadeks steroidal ilaçları bağladığı için neostigmini bağlamaz; neostigmin ilacın etkileşim listesine girmez.",
+      "C": "Sugammadeks steroidal blokörleri bağladığı için progesteron bazlı kontraseptifleri ve seçici östrojen reseptör modülatörü toremifeni de bağlar. Neostigmin steroid olmadığından bağlanmaz; bu yüzden I ve II doğrudur.",
+      "D": "Toremifen metastatik meme kanseri tedavisinde kullanılabilen seçici östrojen reseptör modülatörüdür ve sugammadekse çok sıkı bağlanır. Neostigmin steroid olmadığı için bağlanmaz; progesteron bazlı kontraseptifler ise bağlanan ilaçların diğer önemli üyesidir.",
+      "E": "Progesteron bazlı kontraseptifler ve toremifen steroid yapılı olduğundan sugammadekse bağlanır. Neostigmin ise bir kolinesteraz inhibitörüdür ve bu bağlanmayı göstermez; üç öncülün birlikte geçerli olması bu yüzden mümkün değildir."
+     },
+     "s": 37,
+     "kazanim": 26,
+     "id": "k2-60-miyorelaksan-ilaclar-q40"
+    }
+   ]
+  },
+  {
+   "no": 27,
+   "metin": "Nöromusküler blokörlerin klinik kullanım alanlarını sayar (s. 38).",
+   "_s": [
+    38
+   ],
+   "_bp": "bp38",
+   "_baslik": "NBM'lerin en önemli kullanım alanlarından biri özellikle",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi nöromusküler blokörlerin kullanım alanlarından biri değildir?",
+     "secenekler": {
+      "A": "İntrakaviter cerrahide gevşeme sağlanması",
+      "B": "Endotrakeal entübasyonun kolaylaştırılması",
+      "C": "Kronik sırt ağrısı tedavisi",
+      "D": "Yoğun bakımda ventilasyonun kontrolü",
+      "E": "Konvülsiyonların periferik bulgularının azaltılması"
+     },
+     "dogru": "C",
+     "aciklama": "Kronik sırt ağrısı spazmolitiklerin kullanım alanıdır; nöromusküler blokörler cerrahi gevşeme, entübasyon, ventilasyon kontrolü ve nadiren konvülsiyonda kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Nöromusküler blokörler intraabdominal ve intratorasik girişimlerde intrakaviter cerrahiyi kolaylaştırır. Derin anestezinin kardiyo-pulmoner depresan etkileri olmadan yeterli kas gevşemesi sağlarlar.",
+      "B": "Nöromusküler blokörler farinks ve larinks kaslarını gevşeterek laringoskopiyi kolaylaştırır. Böylece endotrakeal tüpün yerleştirilmesi de kolaylaşır ve genel anestezi sırasında yeterli ventilasyon sağlanırken cerrahi koşullar optimize edilir.",
+      "C": "Kronik sırt ağrısı ve fibromiyaljik ağrılı durumlar spazmolitik ilaçların, yani santral etkili kas gevşeticilerin kullanım alanıdır. Blokörler cerrahi gevşeme, entübasyon ve ventilasyon kontrolü için kullanıldığından, kronik sırt ağrısı blokörlerin değil spazmolitiklerin alanı olduğundan doğru seçenek odur.",
+      "D": "Yoğun bakım ünitelerinde nöromusküler blokörler göğüs duvarı direncini ve etkisiz spontan solunumu azaltmak için uygulanır. Ventilasyon yetersizliğinde yeterli gaz alışverişini sağlar ve atelektaziye karşı korur.",
+      "E": "Süksinilkolin gibi blokörler lokal anestezik toksisitesine veya status epileptikusa bağlı konvülsiyonların periferik bulgularını azaltmak için nadiren kullanılır. Bu nadir bir kullanım alanıdır."
+     },
+     "s": 38,
+     "kazanim": 27,
+     "id": "k2-60-miyorelaksan-ilaclar-q41"
+    }
+   ]
+  },
+  {
+   "no": 28,
+   "metin": "Spastisitenin özelliklerini ve ilişkili hastalıkları tanımlar (s. 39).",
+   "_s": [
+    39
+   ],
+   "_bp": "bp39",
+   "_baslik": "Süksinilkolin gibi NBM'ler, lokal anestezik toksisitesine veya",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "I. Tonik germe reflekslerinde artışla karakterizedir. II. Kas güçsüzlüğü ona eşlik etmez. III. Omurilik yaralanması, serebral palsi, multipl skleroz ve inmeyle ilişkilidir. Spastisite için bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız I",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "C",
+     "aciklama": "Spastisite tonik germe reflekslerinde artış, fleksör spazmlar ve kas güçsüzlüğüyle karakterizedir; omurilik yaralanması, serebral palsi, multipl skleroz ve inmeyle ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Tonik germe reflekslerinde artış spastisitenin temel özelliğidir. Spastisite ayrıca omurilik yaralanması, serebral palsi, multipl skleroz ve inmeyle ilişkilidir; yani üçüncü ifade de doğrudur.",
+      "B": "Tonik germe reflekslerindeki artış doğrudur. Spastisiteye ayrıca fleksör kas spazmları ve kas güçsüzlüğü eşlik eder; kas güçsüzlüğünün eşlik etmediği ifadesi yanlıştır.",
+      "C": "Spastisite tonik germe reflekslerinde artış, fleksör kas spazmları ve kas güçsüzlüğüyle karakterizedir ve omurilik yaralanması, serebral palsi, multipl skleroz ve inmeyle ilişkilidir. II yanlış olduğundan I ve III doğrudur.",
+      "D": "Omurilik yaralanması, serebral palsi, multipl skleroz ve inmeyle ilişki spastisitenin tanımlı bir özelliğidir. Kas güçsüzlüğü ise spastisiteye eşlik eder; tonik germe refleksi artışı da karakteristik bulgudur.",
+      "E": "Tonik germe refleksi artışı ve hastalık ilişkisi spastisiteyi tanımlar. Spastisitede ayrıca fleksör kas spazmları ve kas güçsüzlüğü görülür; kas güçsüzlüğünün eşlik etmediği ifadesi bu bilgiye ters düşer."
+     },
+     "s": 39,
+     "kazanim": 28,
+     "id": "k2-60-miyorelaksan-ilaclar-q42"
+    }
+   ]
+  },
+  {
+   "no": 29,
+   "metin": "Diazepamın spazmolitik etki yerini ve mekanizmasını açıklar (s. 40).",
+   "_s": [
+    40
+   ],
+   "_bp": "bp40",
+   "_baslik": "Benzodiazepinler santral sinir sisteminde gama-aminobütirik",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Diazepamın spastisiteyi azaltıcı etkisine kısmen aracılık eden yapı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Beyin sapı",
+      "B": "Motor son plak",
+      "C": "Omurilik",
+      "D": "Sarkoplazmik retikulum",
+      "E": "Presinaptik sinir terminali"
+     },
+     "dogru": "C",
+     "aciklama": "Diazepam GABA-A sinapslarında etki eder; spastisiteyi azaltıcı etkisine kısmen omurilik aracılık eder.",
+     "sik_aciklamalari": {
+      "A": "Beyin sapı düzeyinde etki gösterdiği ileri sürülen ilaçlar siklobenzaprin ve karisoprodol gibi akut kas spazmı ilaçlarıdır. Diazepamın spazmolitik etkisi için omurilik öne çıkar.",
+      "B": "Motor son plak nikotinik reseptörlerin bulunduğu nöromusküler kavşaktır ve blokörlerin etki yeridir. Diazepam santral etkili olduğundan kavşakta değil, omurilik düzeyinde etki eder.",
+      "C": "Diazepam GABA-A sinapslarında GABA etkisini kolaylaştıran bir benzodiazepindir ve kas tonusunu azaltan dozlarda sedasyon yapar. Spastisiteyi azaltıcı etkisine kısmen omurilik aracılık ettiğinden sorulan yapı olarak doğru seçenek omuriliktir.",
+      "D": "Sarkoplazmik retikulum kalsiyum depolarını içerir ve dantrolenin hedefi olan RyR1 kanalı orada bulunur. Diazepam kas lifinde değil, santral sinir sisteminde etki eder.",
+      "E": "Presinaptik sinir terminali botulinum toksininin asetilkolin salınımını inhibe ettiği yerdir. Diazepamın spazmolitik etkisi sinir ucundaki salınımla değil, omurilikteki GABA sinapslarıyla ilgilidir."
+     },
+     "s": 40,
+     "kazanim": 29,
+     "id": "k2-60-miyorelaksan-ilaclar-q43"
+    }
+   ]
+  },
+  {
+   "no": 30,
+   "metin": "Baklofenin GABA-B agonisti etkisini açıklar (s. 41).",
+   "_s": [
+    41
+   ],
+   "_bp": "bp41",
+   "_baslik": "Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Baklofenin spastisiteyi azaltırken etki ettiği en önemli reseptör aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "GABA-A reseptörü",
+      "B": "Alfa-2 adrenoseptör",
+      "C": "Nikotinik asetilkolin reseptörü",
+      "D": "GABA-B reseptörü",
+      "E": "RyR1 kalsiyum kanalı"
+     },
+     "dogru": "D",
+     "aciklama": "Baklofen GABA-B reseptör agonistidir; reseptör aktivasyonu hiperpolarizasyon ve presinaptik inhibisyon yaparak spastisiteyi azaltır.",
+     "sik_aciklamalari": {
+      "A": "GABA-A sinapsları diazepam gibi benzodiazepinlerin etki ettiği yerdir ve GABA etkisini kolaylaştırır. Baklofen ise GABA-B agonistidir; iki reseptör ailesi birbirine karıştırılmamalıdır.",
+      "B": "Alfa-2 adrenoseptörler tizanidinin agonisti olduğu reseptörlerdir ve omurilikte presinaptik ve postsinaptik inhibisyonu güçlendirir. Baklofen ise adrenerjik değil GABAerjik etki gösterir ve GABA-B reseptörünü uyararak hiperpolarizasyon yapar.",
+      "C": "Nikotinik asetilkolin reseptörü motor son plakta bulunur ve nöromusküler blokörlerin etki yeridir. Baklofen santral etkili bir spazmolitiktir ve bu reseptörü hedeflemez.",
+      "D": "GABA-B reseptörü baklofenin agonisti olduğu inhibitör reseptördür. Aktivasyonu K+ iletimini artırıp hiperpolarizasyon yapar ve kalsiyum içe-akışını azaltarak eksitatör nörotransmiter salıverilmesini düşürür. Spazmolitik etki bu yola dayandığından doğru seçenek GABA-B reseptörüdür.",
+      "E": "RyR1 kanalı iskelet kası sarkoplazmik retikulumunda kalsiyum salıverilmesini sağlar ve dantrolenin hedefidir. Baklofen kas lifine değil, santral sinir sistemindeki GABA-B reseptörüne etki eder."
+     },
+     "s": 41,
+     "kazanim": 30,
+     "id": "k2-60-miyorelaksan-ilaclar-q44"
+    }
+   ]
+  },
+  {
+   "no": 31,
+   "metin": "Baklofenin farmakokinetik özelliklerini ve kesilme önlemini söyler (s. 42).",
+   "_s": [
+    42
+   ],
+   "_bp": "bp42",
+   "_baslik": "Baklofen en az diazepam kadar spastisiteyi azaltır ve daha az",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "I. Oral uygulamadan sonra hızla ve tama yakın absorbe edilir. II. Plazma yarı ömrü 3-4 saattir. III. Dantrolen gibi genel kas güçsüzlüğü oluşturur. Baklofen için bu öncüllerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "Yalnız II",
+      "B": "I ve II",
+      "C": "I ve III",
+      "D": "II ve III",
+      "E": "I, II ve III"
+     },
+     "dogru": "B",
+     "aciklama": "Baklofen oral yoldan hızla ve tama yakın emilir, plazma yarı ömrü 3-4 saattir; dantrolenin aksine genel kas güçsüzlüğü yapmaz.",
+     "sik_aciklamalari": {
+      "A": "Plazma yarı ömrünün 3-4 saat olması doğrudur. Ancak baklofen oral uygulamadan sonra hızla ve tama yakın emilir; bu yüzden yalnız II eksik bir yanıttır.",
+      "B": "Baklofen oral uygulamadan sonra hızla ve tama yakın emilir ve plazma yarı ömrü 3-4 saattir. Dantrolenin yaptığı genel kas güçsüzlüğünü oluşturmaz; bu nedenle I ve II doğrudur.",
+      "C": "Hızlı ve tama yakın emilim baklofenin özelliğidir. Genel kas güçsüzlüğü ise dantrolenin yaptığı bir etkidir; baklofen bunu oluşturmaz, spastisiteyi en az diazepam kadar azaltır ve daha az sedasyon yapar.",
+      "D": "Baklofenin plazma yarı ömrü 3-4 saattir. Genel kas güçsüzlüğü ise dantrolenin özelliğidir; baklofen bunu oluşturmaz ve oral emilimi hızlı ve tama yakındır.",
+      "E": "Emilim ve yarı ömür doğrudur, üçüncü ifade yanlıştır. Baklofen spastisiteyi en az diazepam kadar azaltır, daha az sedasyon yapar ve genel kas güçsüzlüğü oluşturmaz."
+     },
+     "s": 42,
+     "kazanim": 31,
+     "id": "k2-60-miyorelaksan-ilaclar-q45"
+    }
+   ]
+  },
+  {
+   "no": 32,
+   "metin": "İntratekal baklofen tedavisinin avantaj ve dezavantajlarını açıklar (s. 43).",
+   "_s": [
+    43
+   ],
+   "_bp": "bp43",
+   "_baslik": "Baklofenin intratekal uygulanması, diğer yollarla yanıt",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "İntratekal baklofen tedavisinin önemli dezavantajı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Subaraknoid aralığa yerleştirilen kateterle sürekli uygulama gerektirmesi",
+      "B": "Periferik semptomların belirgin biçimde artması ve yaygınlaşması",
+      "C": "Dantrolen gibi genel kas güçsüzlüğüne yol açması",
+      "D": "Spastisiteyi azaltmada diazepamdan daha az etkili olması",
+      "E": "Oral emilimin yetersiz kalması nedeniyle etkisiz olması"
+     },
+     "dogru": "A",
+     "aciklama": "İntratekal baklofen, subaraknoid aralığa yerleştirilen kateterle ilacın sürekli uygulanmasını gerektirir; bu yöntemin önemli dezavantajıdır.",
+     "sik_aciklamalari": {
+      "A": "İntratekal tedavide ilaç subaraknoid aralığa yerleştirilen kateterle sürekli verilir. Bu zorunluluk yöntemin önemli dezavantajı olarak tanımlandığından soruda doğru seçenek kateterle sürekli uygulama gereğidir.",
+      "B": "Baklofenin omurilikten çıkışı az olduğu için intratekal uygulamada periferik semptomlar da az olur. Dolayısıyla periferik semptomların artması bir dezavantaj değil, tersine bir avantajdır.",
+      "C": "Baklofen dantrolenin yaptığı gibi genel kas güçsüzlüğü oluşturmaz. Bu nedenle intratekal uygulamada da dezavantaj sayılan şey kas güçsüzlüğü değil, kateterle sürekli uygulama gereğidir.",
+      "D": "Baklofen spastisiteyi en az diazepam kadar azaltır ve daha az sedasyon oluşturur. Bu nedenle düşük etkinlik intratekal yöntemin dezavantajı değildir; yöntemin asıl sınırlılığı kateter gereğidir.",
+      "E": "Oral emilim baklofende hızlı ve tama yakındır. İntratekal yol diğer yollarla yanıt alınamayan şiddetli spazm ve kas ağrısında başvurulan bir seçenektir, emilim sorunuyla ilgili değildir."
+     },
+     "s": 43,
+     "kazanim": 32,
+     "id": "k2-60-miyorelaksan-ilaclar-q46"
+    }
+   ]
+  },
+  {
+   "no": 33,
+   "metin": "Tizanidinin alfa-2 agonisti mekanizmasını ve üstünlüğünü açıklar (s. 44).",
+   "_s": [
+    44
+   ],
+   "_bp": "bp44",
+   "_baslik": "Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Tizanidinin omurilikte spastisiteyi azaltmasını sağlayan etki aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Presinaptik ve postsinaptik inhibisyonu güçlendirmesi",
+      "B": "Sarkoplazmik retikulumdan kalsiyum salıverilmesini engellemesi",
+      "C": "Asetilkolinesterazı inhibe etmesi",
+      "D": "Eksitatör glutamat reseptörlerini uyarması",
+      "E": "Presinaptik asetilkolin salınımını inhibe etmesi"
+     },
+     "dogru": "A",
+     "aciklama": "Tizanidin alfa-2 agonistidir; omurilikte presinaptik ve postsinaptik inhibisyonu güçlendirerek spastisiteyi azaltır ve belirgin olarak daha az kas güçsüzlüğü yapar.",
+     "sik_aciklamalari": {
+      "A": "Tizanidin alfa-2 adrenoseptör agonistidir ve omurilikte inhibisyonu hem presinaptik hem postsinaptik düzeyde güçlendirir. Spastisiteyi bu yolla azalttığı ve belirgin olarak daha az kas güçsüzlüğü yaptığı için doğru seçenek bu inhibisyon güçlenmesidir.",
+      "B": "Sarkoplazmik retikulumdan kalsiyum salıverilmesini engelleyen ilaç dantrolendir ve etkisini doğrudan kas lifinde gösterir. Tizanidin ise santral etkilidir ve kasın kendisine değil omurilikteki inhibisyona etki eder.",
+      "C": "Asetilkolinesterazı inhibe etmek neostigmin ve piridostigminin mekanizmasıdır ve son plakta asetilkolini artırır. Tizanidin bu enzimi hedeflemez; omurilikte alfa-2 aracılı inhibisyon sağlar.",
+      "D": "Glutamat başlıca eksitatör nörotransmitterdir ve idrosilamid ile riluzol bu iletimi inhibe ederek spazm giderici etki gösterir. Tizanidin glutamat reseptörlerini uyarmaz, inhibisyonu güçlendirir.",
+      "E": "Presinaptik asetilkolin salınımını inhibe eden ajan botulinum toksinidir ve lokal enjeksiyonla kullanılır. Tizanidin sinir-kas kavşağında asetilkolin salınımını etkilemez, omurilikte etki eder."
+     },
+     "s": 44,
+     "kazanim": 33,
+     "id": "k2-60-miyorelaksan-ilaclar-q47"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Tizanidinin klonidin ve deksmedetomidine göre üstünlüğü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Presinaptik asetilkolin salınımını inhibe ederek sinir ucunda etki etmesi",
+      "B": "GABA-B reseptörünü uyararak hiperpolarizasyon yapması",
+      "C": "RyR1 kanalını bloke ederek kalsiyum salıverilmesini engellemesi",
+      "D": "Plazma kolinesterazıyla yıkılarak kısa etkili olması",
+      "E": "Daha az kardiyovasküler yan etkiye yol açan dozlarda spastisiteyi azaltması"
+     },
+     "dogru": "E",
+     "aciklama": "Tizanidin, klonidin ve deksmedetomidine kıyasla daha az kardiyovasküler yan etkiye yol açan dozlarda spastisiteyi azaltır.",
+     "sik_aciklamalari": {
+      "A": "Presinaptik asetilkolin salınımını inhibe eden ajan botulinum toksinidir. Tizanidinin klonidine göre avantajı sinir-kas kavşağındaki bir etkiden değil, omurilikteki alfa-2 aracılı inhibisyondan ve daha az kardiyovasküler yan etkiden gelir.",
+      "B": "GABA-B reseptörünü uyarmak baklofenin mekanizmasıdır ve hiperpolarizasyon yapar. Tizanidin alfa-2 agonistidir ve bu bakımdan baklofene değil, klonidin ile deksmedetomidine benzer.",
+      "C": "RyR1 kanalını bloke etmek dantrolenin özelliğidir. Tizanidin santral etkilidir ve omurilikte presinaptik ve postsinaptik inhibisyonu güçlendirir; kas lifine doğrudan etki etmez.",
+      "D": "Plazma kolinesterazıyla yıkılma süksinilkolin ve mivakuryumun özelliğidir. Tizanidinin klonidin ve deksmedetomidine göre üstünlüğü metabolizmayla ilgili değil, daha az kardiyovasküler yan etkiyle ilgilidir.",
+      "E": "Tizanidin alfa-2 agonistidir ve klonidin ile deksmedetomidine kıyasla daha az kardiyovasküler yan etkiye yol açan dozlarda spastisiteyi azaltır. Tizanidinin üstünlüğü bu yan etki profilinde olduğundan sorulan özellik odur ve doğru seçenek odur."
+     },
+     "s": 44,
+     "kazanim": 33,
+     "id": "k2-60-miyorelaksan-ilaclar-q48"
+    }
+   ]
+  },
+  {
+   "no": 34,
+   "metin": "Tizanidinin başlangıç doz şemasını ayırt eder (s. 45).",
+   "_s": [
+    45
+   ],
+   "_bp": "bp45",
+   "_baslik": "Slayta göre tizanidin spastisite durumlarında kronik migren",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Tizanidin tedavisine aşağıdaki şemalardan hangisiyle başlanır?",
+     "secenekler": {
+      "A": "Günde iki kez 15 mg",
+      "B": "Günde 25 mg tek doz",
+      "C": "4 mg/gün",
+      "D": "Her 6-8 saatte bir 2 mg",
+      "E": "20-40 mg/gün bölünmüş dozlarda"
+     },
+     "dogru": "D",
+     "aciklama": "Tizanidine her 6-8 saatte bir 2 mg ile başlanır ve en çok 36 mg/güne çıkılır. Baklofen günde iki kez 15 mg, dantrolen günde 25 mg, diazepam 4 mg/gün ile başlar.",
+     "sik_aciklamalari": {
+      "A": "Günde iki kez 15 mg baklofenin başlangıç şemasıdır ve tolere edilirse günlük 100 mg'a çıkılır. Tizanidin için başlangıç şeması farklıdır.",
+      "B": "Günde 25 mg tek doz dantrolenin başlangıç şemasıdır; tolere edilirse günde dört kez 100 mg'a çıkılır. Tizanidin bu şemayla başlanmaz.",
+      "C": "Günde 4 mg diazepamın başlangıç miktarıdır ve kademeli olarak 60 mg/güne çıkılır. Tizanidinde başlangıç daha sık aralıklı ve daha küçük miktarlarla yapılır.",
+      "D": "Tizanidine her 6-8 saatte bir 2 mg ile başlanır ve en çok 36 mg/güne kadar artırılabilir. Karaciğer veya böbrek yetmezliğinde dozaj ayarlanır; başlangıç şeması sorulduğundan doğru seçenek bu aralıklı küçük miktardır.",
+      "E": "Günde 20-40 mg bölünmüş doz akut kas spazmında oral siklobenzaprin için uygulanan miktardır. Tizanidin tedavisinin başlangıç şeması bu değildir."
+     },
+     "s": 45,
+     "kazanim": 34,
+     "id": "k2-60-miyorelaksan-ilaclar-q49"
+    }
+   ]
+  },
+  {
+   "no": 35,
+   "metin": "Gabapentinin spazmolitik kullanımını ve etki mekanizmasını açıklar (s. 46).",
+   "_s": [
+    46
+   ],
+   "_bp": "bp46",
+   "_baslik": "Gabapentin antiepileptik bir ilaçtır; multipl sklerozlu",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Nörona kalsiyum girişini engelleyerek glutamat salgılanmasını azaltan ve multipl sklerozlu hastalarda spazmolitik olarak umut vadeden antiepileptik hangisidir?",
+     "secenekler": {
+      "A": "Progabid",
+      "B": "Riluzol",
+      "C": "Gabapentin",
+      "D": "İdrosilamid",
+      "E": "Glisin"
+     },
+     "dogru": "C",
+     "aciklama": "Gabapentin nörona kalsiyum girişini engeller, eksitatör glutamat salgılanmasını azaltır ve multipl sklerozlu hastalarda spazmolitik olarak ümit vericidir.",
+     "sik_aciklamalari": {
+      "A": "Progabid GABA-A ve GABA-B agonistidir ve spastisiteyi azalttığı ön çalışmalarda bulunmuştur. Etkisi kalsiyum girişinin engellenmesine değil, GABA reseptörlerinin uyarılmasına dayanır.",
+      "B": "Riluzol olasılıkla glutamaterjik iletimi inhibe ederek spazm giderici etki gösterir. Kalsiyum girişini engelleme mekanizması ve antiepileptik kimlik ise gabapentine aittir.",
+      "C": "Gabapentin antiepileptik bir ilaçtır ve nörona kalsiyum girişini engeller; eksitatör glutamat salgılanmaz ve uyarı oluşmaz. Multipl sklerozlu hastalarda spazmolitik olarak ümit vericidir ve diyabetik nöropatide de doğru endikasyonla kullanılır.",
+      "D": "İdrosilamid de riluzol gibi olasılıkla santral glutamaterjik iletimi inhibe ederek spazm giderici etki gösterir. Nörona kalsiyum girişini engelleyen antiepileptik ilaç ise gabapentindir.",
+      "E": "Glisin hızla kan-beyin bariyerini geçen ve oral verildiğinde farmakolojik etki gösteren inhibitör bir amino asittir. Spastisiteyi azalttığı ön çalışmalarda bulunmuştur; kalsiyum girişini engellemez."
+     },
+     "s": 46,
+     "kazanim": 35,
+     "id": "k2-60-miyorelaksan-ilaclar-q50"
+    }
+   ]
+  },
+  {
+   "no": 36,
+   "metin": "Dantrolenin RyR1 blokajını, seçiciliğini ve malign hipertermideki yerini açıklar (s. 48).",
+   "_s": [
+    48
+   ],
+   "_bp": "bp48",
+   "_baslik": "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını",
+   "sorular": [
+    {
+     "zorluk": "zor",
+     "soru": "Dantrolenin kalp kası ve düz kasları iskelet kasına kıyasla çok az etkilemesinin nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nikotinik reseptör içermemeleri",
+      "B": "Plazma kolinesterazının bu dokularda fazla olması",
+      "C": "GABA-B reseptörlerinin bulunması",
+      "D": "Sarkoplazmik retikulumlarında farklı tip RyR kanalı bulunması",
+      "E": "Santral sinir sisteminden uyarı almamaları"
+     },
+     "dogru": "D",
+     "aciklama": "Kalp ve düz kasların sarkoplazmik retikulumu RyR2 tipi kanal içerir; dantrolen RyR1'e bağlandığı için bu dokular çok az etkilenir.",
+     "sik_aciklamalari": {
+      "A": "Nikotinik reseptör motor son plakta bulunur ve dantrolenin hedefi değildir; ilaç kas lifinde kalsiyum kanalına etki eder. Bu reseptörün varlığı ya da yokluğu dantrolenin seçiciliğini açıklamaz.",
+      "B": "Plazma kolinesterazı süksinilkolini hidrolize eden enzimdir ve karaciğer ile plazmada bulunur. Dantrolenin kalp ve düz kası etkilememesiyle bu enzim arasında bir bağ bulunmaz.",
+      "C": "GABA-B reseptörleri baklofenin hedefidir ve santral sinir sisteminde bulunur. Dantrolen santral etkili değildir, doğrudan kas liflerinde kalsiyum salıverilmesini engeller.",
+      "D": "Kalp kası ve düz kasların sarkoplazmik retikulumunda RyR2 adlı farklı bir ryanodin reseptör kanalı bulunur. Dantrolen RyR1'e bağlandığı için bu dokular çok az etkilenir; seçicilik nedeni kanal tipi farkıdır ve bu fark doğru açıklamadır.",
+      "E": "Dantrolen santral sinir sisteminde değil doğrudan kas liflerinde etki eder; bu yüzden sinirsel uyarının varlığı seçiciliği belirlemez. Seçiciliği sarkoplazmik retikulumdaki kanal tipi belirler."
+     },
+     "s": 48,
+     "kazanim": 36,
+     "id": "k2-60-miyorelaksan-ilaclar-q51"
+    },
+    {
+     "zorluk": "orta",
+     "soru": "Dantrolenin özel uygulama yeri olan malign hipertermi hangi durumla karakterizedir?",
+     "secenekler": {
+      "A": "Kas güçsüzlüğü ve bradikardi",
+      "B": "Kas hipermetabolizması ve şiddetli ateş yükselmesi",
+      "C": "Hiperkalemi ve kalp durması",
+      "D": "İntragastrik basınç artışı ve regurgitasyon",
+      "E": "Göz içi basıncında geçici artış"
+     },
+     "dogru": "B",
+     "aciklama": "Malign hipertermi kas hipermetabolizması ve şiddetli ateş yükselmesiyle karakterizedir; dantrolen RyR1'i bloke ederek kalsiyum salıverilmesini engeller ve bu durumda kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Kas güçsüzlüğü dantrolenin kas liflerine etkisinin sonucudur ve malign hipertermiyi tanımlamaz. Bradikardi ise süksinilkolinin ikinci dozunda görülen kardiyak bir etkidir.",
+      "B": "Malign hipertermi iskelet kasında kalsiyumun anormal salıverilmesiyle ortaya çıkan, kas hipermetabolizması ve şiddetli ateş yükselmesiyle seyreden bir tablodur. Dantrolenin özel uygulama yeri olan bu durumu tarif ettiği için seçenek doğrudur.",
+      "C": "Hiperkalemi süksinilkolinin yanık, sinir hasarı ve travma gibi durumlarda yol açtığı potasyum salıverilmesidir ve nadiren kalp durmasıyla sonuçlanır. Malign hipertermi ise kalsiyum salıverilmesine bağlı hipermetabolizmadır.",
+      "D": "Süksinilkolinle ilişkili fasikülasyonlar aşırı kaslı hastalarda intragastrik basıncı artırır ve mide içeriğinin aspirasyon riskini yükseltir. Malign hipertermi bu mekanik soruna değil, kas hipermetabolizmasına dayanır.",
+      "E": "Göz içi basıncındaki geçici artış süksinilkolinin bir advers etkisidir ve 2-4 dakikada maksimale ulaşıp 5 dakika sonra kaybolur. Malign hipertermi ise sistemik ve ateşle giden bir kas metabolizma bozukluğudur."
+     },
+     "s": 48,
+     "kazanim": 36,
+     "id": "k2-60-miyorelaksan-ilaclar-q52"
+    }
+   ]
+  },
+  {
+   "no": 37,
+   "metin": "Botulinum toksininin presinaptik etkisini açıklar (s. 49).",
+   "_s": [
+    49
+   ],
+   "_bp": "bp49",
+   "_baslik": "Botulinum toksini presinaptik ACh salınımını inhibe eder.",
+   "sorular": [
+    {
+     "zorluk": "kolay",
+     "soru": "Botulinum toksininin en tipik etki mekanizması aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Nikotinik reseptörü yarışmalı olarak bloke etmesi",
+      "B": "Presinaptik asetilkolin salınımını inhibe etmesi",
+      "C": "Asetilkolinesterazı inhibe etmesi",
+      "D": "Sarkoplazmik retikulumdan kalsiyum salıverilmesini engellemesi",
+      "E": "Motor son plağı kalıcı depolarize etmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Botulinum toksini presinaptik asetilkolin salınımını inhibe eder; lokal enjeksiyonla kırışıklık ve spastisite bozukluklarında kullanılır.",
+     "sik_aciklamalari": {
+      "A": "Nikotinik reseptörü asetilkolinle yarışarak bloke eden ilaçlar non-depolarizan gevşeticilerdir. Botulinum toksini ise reseptörü değil, sinir ucundan asetilkolin salınımını hedef alır.",
+      "B": "Botulinum toksini sinir ucundan asetilkolin salıverilmesini engeller; yani presinaptik düzeyde etki eder. Lokal enjeksiyonla kırışıklık ve yaygın spastisitede kullanılır ve etkisi birkaç ay sürer; sorulan mekanizma presinaptik asetilkolin inhibisyonu olduğundan doğru seçenektir.",
+      "C": "Asetilkolinesterazı inhibe etmek neostigmin ve edrofonyumun etkisidir ve asetilkolini artırır. Botulinum toksini ise asetilkolin salınımını azaltarak ters yönde etki eder.",
+      "D": "Sarkoplazmik retikulumdan kalsiyum salıverilmesini engelleyen ilaç dantrolendir ve doğrudan kas lifinde etki eder. Botulinum toksininin hedefi ise kas lifi değil, presinaptik sinir terminalidir.",
+      "E": "Motor son plağın kalıcı depolarizasyonu süksinilkolinin faz I blokudur. Botulinum toksini depolarizasyon yapmaz; sinir ucundan asetilkolin salınımını önler ve etkisi birkaç ay sürebilir."
+     },
+     "s": 49,
+     "kazanim": 37,
+     "id": "k2-60-miyorelaksan-ilaclar-q53"
+    }
+   ]
+  },
+  {
+   "no": 38,
+   "metin": "Akut lokal kas spazmında kullanılan siklobenzaprin grubunu tanır (s. 50).",
+   "_s": [
+    50
+   ],
+   "_bp": "bp50",
+   "_baslik": "Siklobenzaprin, karisoprodol, klorzoksazon, metaksalon,",
+   "sorular": [
+    {
+     "zorluk": "orta",
+     "soru": "Akut lokal kas spazmında bölünmüş dozlarda oral yoldan 20-40 mg/gün verilen, trisiklik antidepresan benzeri yapıdaki ilaç hangisidir?",
+     "secenekler": {
+      "A": "Karisoprodol",
+      "B": "Klorzoksazon",
+      "C": "Metaksalon",
+      "D": "Siklobenzaprin",
+      "E": "Orfenadrin"
+     },
+     "dogru": "D",
+     "aciklama": "Siklobenzaprin akut kas spazmı ilaçlarının prototipidir; trisiklik antidepresan benzeri yapıdadır, antikolinerjik yan etkisi vardır ve 20-40 mg/gün oral verilir.",
+     "sik_aciklamalari": {
+      "A": "Karisoprodol akut lokal kas spazmı için önerilen santral etkili ilaçlardan biridir ve özellikle beyin sapı düzeyinde etki ettiği ileri sürülür. Trisiklik yapı ve 20-40 mg/gün şeması siklobenzaprine aittir.",
+      "B": "Klorzoksazon lokal doku travması veya kas incinmesine bağlı akut spazmı hafifletmek için önerilen gruptandır. Trisiklik antidepresan benzeri yapı ve antikolinerjik yan etki siklobenzaprini tanımlar.",
+      "C": "Metaksalon aynı gruptaki bir santral etkili ilaçtır ve akut kas spazmında önerilir. Prototip sayılan ve trisiklik yapıya benzeyen ilaç siklobenzapringir.",
+      "D": "Siklobenzaprin akut kas spazmı ilaçlarının prototipi kabul edilir ve trisiklik antidepresan benzeri yapıdadır, antikolinerjik yan etkiye sahiptir. Akut zedelenmede bölünmüş dozlarla oral yoldan 20-40 mg/gün verildiği için sorudaki tarife uyan doğru ilaçtır.",
+      "E": "Orfenadrin akut lokal kas spazmında kullanılan santral etkili ilaçlardandır. Grubun prototipi ve 20-40 mg/gün bölünmüş oral dozla anılan ilaç siklobenzaprindir."
+     },
+     "s": 50,
+     "kazanim": 38,
+     "id": "k2-60-miyorelaksan-ilaclar-q54"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 54
+}

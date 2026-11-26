@@ -19,7 +19,7 @@ Popülasyon çalışmaları üç türdür: aile çalışmaları, ikiz çalışma
 Aile çalışmalarında hasta bireylerin akrabalarındaki risk, genel popülasyondaki riskle karşılaştırılır. Çalışmayı başlatan hasta bireye indeks vaka ya da proband denir. Aile çalışmalarında tanının çok net konması gerekir ve sonuçlar morbid risk oranlarıyla, yani prevalansla ifade edilir. Aile çalışmaları özellikle şizofreni ve bipolar bozukluk araştırmalarında sık kullanılır.
 
 @@ İkiz çalışmaları
-İkiz çalışmaları, tek yumurta ikizi olan MZ ve çift yumurta ikizi olan DZ çiftlerindeki fenotipik uyumu karşılaştırarak kalıtsallığı tahmin eder. Kalıtsallık şizofreni ve bipolar bozuklukta yaklaşık yüzde seksen, majör depresif bozuklukta ise yüzde kırk ile yüzde elli civarındadır.
+İkiz çalışmaları, tek yumurta ikizi olan MZ ve çift yumurta ikizi olan DZ çiftlerindeki fenotipik uyumu karşılaştırarak kalıtsallığı tahmin eder. Kalıtsallık şizofreni ve bipolar bozuklukta yaklaşık yüzde seksen, majör depresif bozuklukta ise yüzde kırk ile yüzde elli civarındadır. Genetik kökenli bir hastalıkta konkordans MZ ikizlerde yüksek, DZ ikizlerde daha düşük beklenir.
 
 İkiz çalışmalarında aynı ortamda yetişen ve ayrı ortamlarda yetişen MZ ikizler de karşılaştırılır. Birlikte büyüyen ikizler, MZ ya da DZ olsun, hemen hemen aynı çevresel etkenlere maruz kalmış kabul edilir. İkiz çalışmaları ayrıca paylaşılan ailevi ortamı bireysel ortamla karşılaştırmaya olanak verir.
 
@@ -85,7 +85,7 @@ Paranoid kişilik bozukluğunda CACNA bir C ve COMT genlerinin bazı alelleri pa
 Serotonin taşıyıcı geninin bazı alellerini taşıyanlarda travma sonrası duygusal sorun riski yüksek, strese tolerans düşüktür. Borderline kişilik bozukluğunda MAO-A geni tekrar dizileri saptanmış, DRD iki geninin bazı alelleri de borderline özelliklerle ilişkili bulunmuştur.
 
 @@ Manik-depresif hastalık
-Manik-depresif hastalıkta unipolar ve bipolar formlar ikiz verileriyle karşılaştırılır. Konkordans yani ikizler arasındaki hastalık uyumu, MZ ikizlerde unipolar formda yüzde seksen, bipolar formda yüzde elli ile yüzde altmış ikidir. DZ ikiz konkordansı unipolar formda yüzde yirmi, bipolar formda yüzde sekiz ile yüzde ondur. Kalıtılabilirlik unipolar formda yüzde otuz üç ile yüzde kırk iki, bipolar formda yüzde altmış ile yüzde seksendir ve bazı ailelerde antisipasyon görülür.
+Manik-depresif hastalıkta unipolar ve bipolar formlar ikiz verileriyle karşılaştırılır. Konkordans yani ikizler arasındaki hastalık uyumu, MZ ikizlerde unipolar formda yüzde seksen, bipolar formda yüzde elli ile yüzde altmış ikidir. DZ ikiz konkordansı unipolar formda yüzde yirmi, bipolar formda yüzde sekiz ile yüzde ondur. Kalıtılabilirlik unipolar formda yüzde otuz üç ile yüzde kırk iki, bipolar formda yüzde altmış ile yüzde seksendir ve bazı ailelerde antisipasyon görülür. Antisipasyon, hastalığın sonraki kuşakta daha erken yaşta ve daha şiddetli ortaya çıkmasıdır.
 
 Bipolar, unipolar ve şizoaffektif bozuklukta tekrarlama riski kardeşte yüzde yirmi ile yüzde otuzdur. Tek ebeveyn hastaysa çocukta risk yüzde yirmi yedi, iki ebeveyn hastaysa yüzde elli ile yüzde yetmiştir; ikinci derece akrabada ise yüzde beştir.
 
@@ -158,7 +158,7 @@ MAOA geni X kromozomundadır, hipokampusta etkilidir ve norepinefrin, dopamin ve
 SLC altı A dört geninin promoter bölgesinde beş HTTLPR varyantı bulunur ve L ile S olmak üzere iki aleli vardır. beş HTTLPR'nin S aleli stresli yaşam olaylarında depresyon ve intihar eğilimine yatkınlık yaratır. GABRA altı geni GABA-A reseptörünün alfa altı alt birimini kodlar ve GABA primer inhibitör nörotransmitterdir. GABRA altıdaki Pro üç yüz seksen beş Ser varyantı alkol ve benzodiazepinlere duyarlılıkla birliktedir.
 
 @@ Anksiyete bozuklukları
-Anksiyete bozuklukları sık görülür, kadınlarda daha yaygındır ve duygudurum bozukluklarıyla sıklıkla birlikte bulunur. Anksiyete bozukluklarının etiyolojisinde genetik, organik ve psikososyal etkenler birlikte rol oynar. Anksiyete bozuklukları beş başlıkta incelenir: obsesif kompulsif bozukluk, panik bozukluk, özgül fobiler, sosyal fobi ve genelleşmiş anksiyete bozukluğu.
+Anksiyete bozuklukları sık görülür, kadınlarda daha yaygındır ve duygudurum bozukluklarıyla sıklıkla birlikte bulunur. Anksiyete bozukluklarının kadınlarda daha sık görülmesi hormonal etkenlerle ilişkilendirilir. Anksiyete bozukluklarının etiyolojisinde genetik, organik ve psikososyal etkenler birlikte rol oynar. Anksiyete bozuklukları beş başlıkta incelenir: obsesif kompulsif bozukluk, panik bozukluk, özgül fobiler, sosyal fobi ve genelleşmiş anksiyete bozukluğu.
 
 Obsesif kompulsif bozuklukta konkordans MZ ikizlerde yüzde yetmiş beş, DZ ikizlerde yüzde kırk yedidir. OKB'li MZ ikizlerde DZ ikizlere göre depresyon, distimi, sosyal fobi, panik, agorafobi ve yaygın anksiyete bozukluğu komorbiditesi daha sıktır. OKB hastalarının birinci derece akrabalarında OKB oranı yüzde üç virgül dörttür, hastalık on dört yaşından önce başlamışsa bu oran yüzde sekiz virgül sekize çıkar. OKB'nin aday genleri COMT, MAOA ve DRD dört gibi dopamin sistemi genleridir.
 

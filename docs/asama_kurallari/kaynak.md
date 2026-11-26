@@ -1,6 +1,6 @@
 # Aşama kuralları — kaynak
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 57 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 58 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
@@ -237,4 +237,8 @@
 
 ### H682 — İçerik geliştirici Drive'ına eklenen "Tekrar Notları" ve yeniden adlandırılan klasörler eşlenmedi; hoca vurguları 30+ derse ulaşmıyordu (2026-11-25)
 - **Kural:** Sentez çıktısı `tail` ile kesilmez; `kapi: N HATA` satırı her koşuda okunur, 0 değilse yeni ders işine geçilmez. Drive'a yeni klasör/ad biçimi gelince önce `eslesme.json` güncellenir; kısaltma adlı dosya için ders kaydındaki konu ile içerik başlığı karşılaştırılır.
+
+
+### H695 — Kapak sayfasının bilgi paketi kazanım sayıldı (2026-11-26, k2-60)
+- **Kural:** E1 paketine kapak/başlık sayfası bilgi paketi yazılmaz.
 

@@ -650,6 +650,29 @@
         ]
        },
        "id": "k2-59-c0025"
+      },
+      {
+       "ses": "Genetik kökenli bir hastalıkta konkordans MZ ikizlerde yüksek, DZ ikizlerde daha düşük beklenir.",
+       "ekran": "Genetik köken → **konkordans** MZ'de yüksek, DZ'de düşük",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konkordans",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Psikiyatrik bozuklukların kalıtsal olduğunu, şizofreni ve bipolar"
+        ]
+       },
+       "id": "k2-59-c0256"
       }
      ]
     },
@@ -1000,7 +1023,11 @@
        "cikmis": [],
        "spot": null,
        "ogrenci": null,
-       "hoca": null,
+       "hoca": {
+        "id": "hv-k2-59-09",
+        "kategori": "onemli",
+        "ifade": "en önemli"
+       },
        "slayt": {
         "sayfa": 12,
         "satir": [
@@ -2045,7 +2072,11 @@
        "cikmis": [],
        "spot": null,
        "ogrenci": null,
-       "hoca": null,
+       "hoca": {
+        "id": "hv-k2-59-16",
+        "kategori": "bilin",
+        "ifade": "bilmeniz lazım"
+       },
        "slayt": {
         "sayfa": 22,
         "satir": [
@@ -2777,6 +2808,29 @@
         ]
        },
        "id": "k2-59-c0113"
+      },
+      {
+       "ses": "Antisipasyon, hastalığın sonraki kuşakta daha erken yaşta ve daha şiddetli ortaya çıkmasıdır.",
+       "ekran": "**Antisipasyon**: sonraki kuşakta daha erken ve daha şiddetli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Antisipasyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "* Bazı ailelerde antisipasyon (+)"
+        ]
+       },
+       "id": "k2-59-c0257"
       }
      ]
     },
@@ -5116,6 +5170,29 @@
         ]
        },
        "id": "k2-59-c0211"
+      },
+      {
+       "ses": "Anksiyete bozukluklarının kadınlarda daha sık görülmesi hormonal etkenlerle ilişkilendirilir.",
+       "ekran": "Kadınlarda daha sık → **hormonal etkenler**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hormonal etkenler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "Sık görülen bozukluklar olup kadınlarda daha yaygındır."
+        ]
+       },
+       "id": "k2-59-c0258"
       },
       {
        "ses": "Anksiyete bozukluklarının etiyolojisinde genetik, organik ve psikososyal etkenler birlikte rol oynar.",

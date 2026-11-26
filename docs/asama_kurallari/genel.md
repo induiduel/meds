@@ -1,6 +1,6 @@
 # Aşama kuralları — genel
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 13 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 14 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### Kurul 2 hattı için genel kural
 
@@ -31,6 +31,10 @@
 - **Önleme:** Kapı yanıtı (500 + "Sunucu hatası") gerçek çökme sanılmasın: önce aynı ucu konteyner içinden dene
   (`docker --context oracle exec meds-app node -e "fetch('http://localhost:3000/api/...')"`; içeride 200 ise sorun kimlik).
   Oturum/çerez kuran her yeni yol iki alan adını (site + `api.`) birlikte sınar; önbellekten gelen başarı kanıt sayılmaz.
+
+### H694 — Görüntü (taranmış) ders PDF'i: kanıt kapısı, terim ve kısaltma boş kaldı (2026-11-26, k2-61)
+- **Kural:** E0'da `sayfalar.json` metinli sayfa oranı düşükse E1'den ÖNCE OCR yapılır; görüntüleyiciye metin katmanlı PDF konur.
+
 
 ### Hat dışı maddeler (ön yüz/yönetim/altyapı — içerik aşamasını ilgilendirmez; tam metin konu dosyasında)
 - hatalar/betik_altyapi.md: H5, H25, H26, H27, H34, H35, H78, H90, H440, H478, H484, H489, H557, H558, H560, H561, H577, H578, H584, H593, H594, H597, H601, H585, H598, H604, H610, H630, H631, H632, H633, H635, H649

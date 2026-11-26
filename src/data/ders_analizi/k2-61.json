@@ -1,0 +1,1127 @@
+{
+ "surum": 2,
+ "key": "k2-61",
+ "kod": "2a04",
+ "kurul": 2,
+ "brans": "Aile Hekimliği",
+ "konu": "Nikotin Bağımlılığı ve Tedavisi",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Aybala Cebecik Özcan",
+ "profil": "Aile Hekimliği",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2a04"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Sigara kullanımının ölüm yükünü, nikotin bağımlılığının mekanizmasını, bırakma yaklaşımlarını ve farmakolojik tedavileri anlatır. Tedavi bölümünde nikotin yerine koyma tedavisi, bupropion, sitizin ve ikinci üçüncü seçenekler işlenir.",
+   "maddeler": [
+    {
+     "metin": "Giriş"
+    },
+    {
+     "metin": "Sigaranın halk sağlığı önemi"
+    },
+    {
+     "metin": "Sigara dumanının içeriği"
+    },
+    {
+     "metin": "Madde bağımlılığı"
+    },
+    {
+     "metin": "Sigara içme davranışı"
+    },
+    {
+     "metin": "Tütün kontrolü"
+    },
+    {
+     "metin": "MPOWER stratejileri"
+    },
+    {
+     "metin": "Hekimin rolü"
+    },
+    {
+     "metin": "Bırakmanın faydaları"
+    },
+    {
+     "metin": "Nikotin bağımlılığına yaklaşım"
+    },
+    {
+     "metin": "Değişim evreleri"
+    },
+    {
+     "metin": "Bağımlılık şiddeti"
+    },
+    {
+     "metin": "5A ve 5R"
+    },
+    {
+     "metin": "Birinci basamak algoritması"
+    },
+    {
+     "metin": "Tedavi yaklaşımı"
+    },
+    {
+     "metin": "Motivasyonel görüşme"
+    },
+    {
+     "metin": "Farmakolojik tedavi"
+    },
+    {
+     "metin": "NRT"
+    },
+    {
+     "metin": "NRT güvenliği"
+    },
+    {
+     "metin": "Nikotin farmakolojisi"
+    },
+    {
+     "metin": "Nikotin yaması"
+    },
+    {
+     "metin": "Bupropion"
+    },
+    {
+     "metin": "Vareniklin"
+    },
+    {
+     "metin": "Sitizin"
+    },
+    {
+     "metin": "İkinci seçenek tedaviler"
+    },
+    {
+     "metin": "Sitizin"
+    },
+    {
+     "metin": "İkinci seçenek tedaviler"
+    },
+    {
+     "metin": "Bırakma sonrası izlem"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Sigara kullanımının ölüm yükünü, nikotin bağımlılığının mekanizmasını, bırakma yaklaşımlarını ve farmakolojik tedavileri anlatır. Tedavi bölümünde nikotin yerine koyma tedavisi, bupropion, sitizin ve ikinci üçüncü seçenekler işlenir.",
+    "Giriş.",
+    "Sigaranın halk sağlığı önemi.",
+    "Sigara dumanının içeriği.",
+    "Madde bağımlılığı.",
+    "Sigara içme davranışı.",
+    "Tütün kontrolü.",
+    "MPOWER stratejileri.",
+    "Hekimin rolü.",
+    "Bırakmanın faydaları.",
+    "Nikotin bağımlılığına yaklaşım.",
+    "Değişim evreleri.",
+    "Bağımlılık şiddeti.",
+    "5A ve 5R.",
+    "Birinci basamak algoritması.",
+    "Tedavi yaklaşımı.",
+    "Motivasyonel görüşme.",
+    "Farmakolojik tedavi.",
+    "NRT.",
+    "NRT güvenliği.",
+    "Nikotin farmakolojisi.",
+    "Nikotin yaması.",
+    "Bupropion.",
+    "Vareniklin.",
+    "Sitizin.",
+    "İkinci seçenek tedaviler.",
+    "Sitizin.",
+    "İkinci seçenek tedaviler.",
+    "Bırakma sonrası izlem."
+   ],
+   "v": "bb0c30c5d9"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Sigara kullanımı günümüzde en önemli önlenebilir ölüm nedeni ve",
+     "metin": "Sigara kullanımı günümüzde en önemli önlenebilir ölüm nedeni ve en büyük salgın kabul edilir.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Her sigarada 4000'den fazla zehirli, tahriş edici ya da",
+     "metin": "Her sigarada 4000'den fazla zehirli, tahriş edici ya da kanser yapıcı kimyasal madde bulunur.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "DSÖ madde bağımlılığını, psikoaktif maddeye kişinin önceden değer verdiği",
+     "metin": "DSÖ madde bağımlılığını, psikoaktif maddeye kişinin önceden değer verdiği uğraşlardan belirgin olarak daha yüksek öncelik tanıma davranışı olarak tanımlar.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Nikotin etkisini esas olarak beynin ödül merkezi aracılığıyla gösterir",
+     "metin": "Nikotin etkisini esas olarak beynin ödül merkezi aracılığıyla gösterir; dopamin salınımı hazzı teşvik eder ve bağımlılık yapar.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Tütünle mücadelede ilk uluslararası anlaşma olan Tütün Kontrolü Çerçeve",
+     "metin": "Tütünle mücadelede ilk uluslararası anlaşma olan Tütün Kontrolü Çerçeve Sözleşmesi (TKÇS) 21 Mayıs 2003'te kabul edilmiştir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "MPOWER stratejisinde Monitor, tütün kullanımını ve koruyucu uygulamaları izlemektir.",
+     "metin": "MPOWER stratejisinde Monitor, tütün kullanımını ve koruyucu uygulamaları izlemektir.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Hekim tütün kullanmayarak örnek olur, hastaya bilgi ve tedavi",
+     "metin": "Hekim tütün kullanmayarak örnek olur, hastaya bilgi ve tedavi desteği sunar, tedavi uygular ve tütün kontrol çalışmalarına katılır.",
+     "s": [
+      8,
+      9
+     ]
+    },
+    {
+     "baslik": "Bırakmadan 20 dakika sonra kalp hızı ve kan basıncı",
+     "metin": "Bırakmadan 20 dakika sonra kalp hızı ve kan basıncı düşer; 12 saat sonra kandaki karbon monoksit normale döner.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Tütün bağımlılarının en az %70'i bir hekim tarafından görülür",
+     "metin": "Tütün bağımlılarının en az %70'i bir hekim tarafından görülür, %70'i bırakmak ister; başarısız deneyenlerin üçte ikisi bir ay içinde yeniden denemek ister.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Transteoretik model, bireyin sigara bırakma tedavisine uyum sağlamaya hazır",
+     "metin": "Transteoretik model, bireyin sigara bırakma tedavisine uyum sağlamaya hazır olup olmadığını değerlendirir; içiciler 5 evreden geçer.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Nikotin bağımlılığı şiddetini değerlendiren ölçeklerden rutinde en çok tercih",
+     "metin": "Nikotin bağımlılığı şiddetini değerlendiren ölçeklerden rutinde en çok tercih edileni Fagerström testidir (FTND).",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "5A: Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım",
+     "metin": "5A: Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et), Arrange (Düzenle).",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Birinci basamakta herhangi bir nedenle başvuran bireye sigara içip",
+     "metin": "Birinci basamakta herhangi bir nedenle başvuran bireye sigara içip içmediği sorulur.",
+     "s": [
+      15,
+      16
+     ]
+    },
+    {
+     "baslik": "Motivasyonel görüşmede empati yapılır, sigara hastanın önemsediği şeyle ilişkilendirilir",
+     "metin": "Motivasyonel görüşmede empati yapılır, sigara hastanın önemsediği şeyle ilişkilendirilir, direnç azaltılır, paternalistik yaklaşımdan kaçınılır.",
+     "s": [
+      17,
+      18,
+      19,
+      47
+     ]
+    },
+    {
+     "baslik": "Farmakolojik tedaviler: NRT, bupropion, vareniklin (artık kullanılmıyor), sitizin ve",
+     "metin": "Farmakolojik tedaviler: NRT, bupropion, vareniklin (artık kullanılmıyor), sitizin ve ikinci-üçüncü seçenek tedaviler.",
+     "s": [
+      20,
+      27,
+      31,
+      37,
+      40,
+      46
+     ]
+    },
+    {
+     "baslik": "NRT formları: transdermal bant, sakız, ağız spreyi, sublingual tablet",
+     "metin": "NRT formları: transdermal bant, sakız, ağız spreyi, sublingual tablet, nazal sprey ve inhaler.",
+     "s": [
+      21,
+      22
+     ]
+    },
+    {
+     "baslik": "Yüksek/orta bağımlılık, günde 15'ten fazla sigara ya da diğer",
+     "metin": "Yüksek/orta bağımlılık, günde 15'ten fazla sigara ya da diğer yöntemlerden fayda görmemiş hafif bağımlılıkta NRT uygulanır.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "NRT'nin gerçek anlamda kontrendikasyonu yoktur; yan etkiler genelde sigara",
+     "metin": "NRT'nin gerçek anlamda kontrendikasyonu yoktur; yan etkiler genelde sigara kesilmeden NRT kullanımıyla ortaya çıkar.",
+     "s": [
+      24,
+      25
+     ]
+    },
+    {
+     "baslik": "Nikotin yaması 7, 14, 21 mg'dır; günde ≥10 sigara",
+     "metin": "Nikotin yaması 7, 14, 21 mg'dır; günde ≥10 sigara içene 21 mg, <10 sigara içene 14 mg verilir.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını",
+     "metin": "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin beyindeki etkilerini taklit eder ve yoksunluğu azaltır.",
+     "s": [
+      28,
+      30
+     ]
+    },
+    {
+     "baslik": "Bupropion bırakma tarihinden 1-2 hafta önce başlanır; 3 gün",
+     "metin": "Bupropion bırakma tarihinden 1-2 hafta önce başlanır; 3 gün 150 mg/gün, sonra günde iki kez 150 mg, 3-6 ay sürdürülür.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Vareniklin α4β2 nikotinik asetilkolin reseptörlerinin seçici parsiyel agonistidir; bir",
+     "metin": "Vareniklin α4β2 nikotinik asetilkolin reseptörlerinin seçici parsiyel agonistidir; bir miktar dopamin salınımı sağlarken nikotinin bağlanmasını önler.",
+     "s": [
+      32,
+      33,
+      35,
+      36
+     ]
+    },
+    {
+     "baslik": "Vareniklinin en sık yan etkisi bulantıdır; uykusuzluk, anormal düşler",
+     "metin": "Vareniklinin en sık yan etkisi bulantıdır; uykusuzluk, anormal düşler, baş ağrısı ve GİS yakınmaları da görülür.",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Sitizin yapısı nikotine çok benzer, nikotin reseptörlerine eşit düzeyde",
+     "metin": "Sitizin yapısı nikotine çok benzer, nikotin reseptörlerine eşit düzeyde bağlanır ve α4β2 nikotinik reseptörlerin kısmi agonistidir.",
+     "s": [
+      38,
+      39
+     ]
+    },
+    {
+     "baslik": "İkinci ve üçüncü seçenek tedaviler: sitizin, klonidin, nortriptilin, rimonabant",
+     "metin": "İkinci ve üçüncü seçenek tedaviler: sitizin, klonidin, nortriptilin, rimonabant ve nikotin aşısı.",
+     "s": [
+      41,
+      42,
+      45
+     ]
+    },
+    {
+     "baslik": "Sitizin Doğu Avrupa'da kullanılan, vareniklin gibi α4β2 kısmi agonisti",
+     "metin": "Sitizin Doğu Avrupa'da kullanılan, vareniklin gibi α4β2 kısmi agonisti bir bitki türevidir ve yoksunluk belirtilerini önler.",
+     "s": [
+      43,
+      44
+     ]
+    },
+    {
+     "baslik": "Bıraktıktan sonraki ilk yıl nüks, tedavi rejiminden bağımsız olarak",
+     "metin": "Bıraktıktan sonraki ilk yıl nüks, tedavi rejiminden bağımsız olarak hastaların yaklaşık %50'sinde görülür.",
+     "s": [
+      49,
+      50
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Sigara kullanımı günümüzde en önemli önlenebilir ölüm nedeni ve: Sigara kullanımı günümüzde en önemli önlenebilir ölüm nedeni ve en büyük salgın kabul edilir.",
+    "Her sigarada 4000'den fazla zehirli, tahriş edici ya da: Her sigarada 4000'den fazla zehirli, tahriş edici ya da kanser yapıcı kimyasal madde bulunur.",
+    "DSÖ madde bağımlılığını, psikoaktif maddeye kişinin önceden değer verdiği: DSÖ madde bağımlılığını, psikoaktif maddeye kişinin önceden değer verdiği uğraşlardan belirgin olarak daha yüksek öncelik tanıma davranışı olarak tanımlar.",
+    "Nikotin etkisini esas olarak beynin ödül merkezi aracılığıyla gösterir: Nikotin etkisini esas olarak beynin ödül merkezi aracılığıyla gösterir; dopamin salınımı hazzı teşvik eder ve bağımlılık yapar.",
+    "Tütünle mücadelede ilk uluslararası anlaşma olan Tütün Kontrolü Çerçeve: Tütünle mücadelede ilk uluslararası anlaşma olan Tütün Kontrolü Çerçeve Sözleşmesi (TKÇS) 21 Mayıs 2003'te kabul edilmiştir.",
+    "MPOWER stratejisinde Monitor, tütün kullanımını ve koruyucu uygulamaları izlemektir.: MPOWER stratejisinde Monitor, tütün kullanımını ve koruyucu uygulamaları izlemektir.",
+    "Hekim tütün kullanmayarak örnek olur, hastaya bilgi ve tedavi: Hekim tütün kullanmayarak örnek olur, hastaya bilgi ve tedavi desteği sunar, tedavi uygular ve tütün kontrol çalışmalarına katılır.",
+    "Bırakmadan 20 dakika sonra kalp hızı ve kan basıncı: Bırakmadan 20 dakika sonra kalp hızı ve kan basıncı düşer; 12 saat sonra kandaki karbon monoksit normale döner.",
+    "Tütün bağımlılarının en az %70'i bir hekim tarafından görülür: Tütün bağımlılarının en az %70'i bir hekim tarafından görülür, %70'i bırakmak ister; başarısız deneyenlerin üçte ikisi bir ay içinde yeniden denemek ister.",
+    "Transteoretik model, bireyin sigara bırakma tedavisine uyum sağlamaya hazır: Transteoretik model, bireyin sigara bırakma tedavisine uyum sağlamaya hazır olup olmadığını değerlendirir; içiciler 5 evreden geçer.",
+    "Nikotin bağımlılığı şiddetini değerlendiren ölçeklerden rutinde en çok tercih: Nikotin bağımlılığı şiddetini değerlendiren ölçeklerden rutinde en çok tercih edileni Fagerström testidir (FTND).",
+    "5A: Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım: 5A: Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et), Arrange (Düzenle).",
+    "Birinci basamakta herhangi bir nedenle başvuran bireye sigara içip: Birinci basamakta herhangi bir nedenle başvuran bireye sigara içip içmediği sorulur.",
+    "Motivasyonel görüşmede empati yapılır, sigara hastanın önemsediği şeyle ilişkilendirilir: Motivasyonel görüşmede empati yapılır, sigara hastanın önemsediği şeyle ilişkilendirilir, direnç azaltılır, paternalistik yaklaşımdan kaçınılır.",
+    "Farmakolojik tedaviler: NRT, bupropion, vareniklin (artık kullanılmıyor), sitizin ve: Farmakolojik tedaviler: NRT, bupropion, vareniklin (artık kullanılmıyor), sitizin ve ikinci-üçüncü seçenek tedaviler.",
+    "NRT formları: transdermal bant, sakız, ağız spreyi, sublingual tablet: NRT formları: transdermal bant, sakız, ağız spreyi, sublingual tablet, nazal sprey ve inhaler.",
+    "Yüksek/orta bağımlılık, günde 15'ten fazla sigara ya da diğer: Yüksek/orta bağımlılık, günde 15'ten fazla sigara ya da diğer yöntemlerden fayda görmemiş hafif bağımlılıkta NRT uygulanır.",
+    "NRT'nin gerçek anlamda kontrendikasyonu yoktur; yan etkiler genelde sigara: NRT'nin gerçek anlamda kontrendikasyonu yoktur; yan etkiler genelde sigara kesilmeden NRT kullanımıyla ortaya çıkar.",
+    "Nikotin yaması 7, 14, 21 mg'dır; günde ≥10 sigara: Nikotin yaması 7, 14, 21 mg'dır; günde ≥10 sigara içene 21 mg, <10 sigara içene 14 mg verilir.",
+    "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını: Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin beyindeki etkilerini taklit eder ve yoksunluğu azaltır.",
+    "Bupropion bırakma tarihinden 1-2 hafta önce başlanır; 3 gün: Bupropion bırakma tarihinden 1-2 hafta önce başlanır; 3 gün 150 mg/gün, sonra günde iki kez 150 mg, 3-6 ay sürdürülür.",
+    "Vareniklin α4β2 nikotinik asetilkolin reseptörlerinin seçici parsiyel agonistidir; bir: Vareniklin α4β2 nikotinik asetilkolin reseptörlerinin seçici parsiyel agonistidir; bir miktar dopamin salınımı sağlarken nikotinin bağlanmasını önler.",
+    "Vareniklinin en sık yan etkisi bulantıdır; uykusuzluk, anormal düşler: Vareniklinin en sık yan etkisi bulantıdır; uykusuzluk, anormal düşler, baş ağrısı ve GİS yakınmaları da görülür.",
+    "Sitizin yapısı nikotine çok benzer, nikotin reseptörlerine eşit düzeyde: Sitizin yapısı nikotine çok benzer, nikotin reseptörlerine eşit düzeyde bağlanır ve α4β2 nikotinik reseptörlerin kısmi agonistidir.",
+    "İkinci ve üçüncü seçenek tedaviler: sitizin, klonidin, nortriptilin, rimonabant: İkinci ve üçüncü seçenek tedaviler: sitizin, klonidin, nortriptilin, rimonabant ve nikotin aşısı.",
+    "Sitizin Doğu Avrupa'da kullanılan, vareniklin gibi α4β2 kısmi agonisti: Sitizin Doğu Avrupa'da kullanılan, vareniklin gibi α4β2 kısmi agonisti bir bitki türevidir ve yoksunluk belirtilerini önler.",
+    "Bıraktıktan sonraki ilk yıl nüks, tedavi rejiminden bağımsız olarak: Bıraktıktan sonraki ilk yıl nüks, tedavi rejiminden bağımsız olarak hastaların yaklaşık %50'sinde görülür."
+   ],
+   "v": "5231acab32"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Dersten 2019-2020, 2020-2021 ve 2025-2026 sınavlarında soru çıkmıştır; 5A ve 5R basamakları, ilaç seçimi, doz ve kontrendikasyonlar yinelenen konulardır.",
+   "maddeler": [
+    {
+     "baslik": "5A basamakları",
+     "metin": "Sigara bırakma müdahalesinde 5A basamakları Sor, Öner, Değerlendir, Yardım et ve Düzenle şeklindedir.",
+     "neden": "2019-2020 ve 2020-2021 sınavlarında beş kez soruldu; derste bu basamakların mutlaka bilinmesi istendi.",
+     "s": [
+      14,
+      16
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "5R basamakları ve uygulandığı evre",
+     "metin": "5R basamakları İlişkilendir, Riskler, Ödüller, Engeller ve Tekrardır ve bırakmayı düşünmeyen içiciye uygulanır.",
+     "neden": "2025-2026 sınavında soruldu; derste 5A ve 5R'nin mutlaka bilinmesi söylendi.",
+     "s": [
+      12,
+      14
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nikotin yaması ve sakızı dozları",
+     "metin": "Nikotin yaması 7, 14, 21 mg'dır; günde 10 ve üzeri sigara içene 21 mg, 10'dan azına 14 mg verilir.",
+     "neden": "Dersi anlatan hoca bant ve sakızın kullanımını, yan etkilerini ve kimlerin kullanamayacağını bilmemizi, diğer ürünlerin ayrıntısına gerek olmadığını söyledi.",
+     "s": [
+      26
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Bupropionun mekanizması ve endikasyonu",
+     "metin": "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin etkilerini taklit eder ve yoksunluğu azaltır.",
+     "neden": "2019-2020 sınavında bupropion sorusu çıktı; ilacın mekanizması ve tercih edildiği hastalar sık karıştırılır.",
+     "s": [
+      28
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Sitizin: kontrendikasyonlar ve beşinci gün kuralı",
+     "metin": "Sitizin nikotine benzer yapıdadır, α4β2 reseptörlerinin kısmi agonistidir ve gebelik ile emzirmede kullanılmaz.",
+     "neden": "2025-2026 sınavında sitizin sorusu çıktı; kontrendikasyonlar ve beşinci gün kuralı sık karıştırılır.",
+     "s": [
+      38,
+      39
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Vareniklin artık kullanılmıyor",
+     "metin": "Vareniklin içerdiği nitrozamin miktarı kanserojen etki yapabilecek kadar yüksek olduğundan piyasadan kaldırılmıştır ve artık kullanılmıyor.",
+     "neden": "2019-2020 sınavında vareniklin birincil seçenek olarak yazılmıştı, ancak ilaç bugün piyasadan kaldırılmıştır; kavram bu yüzden tuzaktır.",
+     "s": [
+      20,
+      34
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Birinci basamak sigara bırakma algoritması",
+     "metin": "Birinci basamakta başvuran herkese sigara içip içmediği sorulur ve yanıta göre dört yoldan biri izlenir.",
+     "neden": "Çıkmış 5A sorularının dayanağı bu algoritmadır; hocanın tedavide yaklaşımlara dikkat edilmesini istediği bölümdür.",
+     "s": [
+      16
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Fagerström testi",
+     "metin": "Nikotin bağımlılığı şiddetini değerlendirmede rutinde en çok Fagerström testi kullanılır; 0 ile 2 düşük, 3 ile 7 orta, 8 ile 10 yüksek bağımlılıktır.",
+     "neden": "Bağımlılık şiddeti ölçümünün temel aracıdır; puan aralıkları kolayca sorulabilecek sayısal bilgilerdir.",
+     "s": [
+      13
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Dersten 2019-2020, 2020-2021 ve 2025-2026 sınavlarında soru çıkmıştır; 5A ve 5R basamakları, ilaç seçimi, doz ve kontrendikasyonlar yinelenen konulardır.",
+    "5A basamakları: Sigara bırakma müdahalesinde 5A basamakları Sor, Öner, Değerlendir, Yardım et ve Düzenle şeklindedir.",
+    "5R basamakları ve uygulandığı evre: 5R basamakları İlişkilendir, Riskler, Ödüller, Engeller ve Tekrardır ve bırakmayı düşünmeyen içiciye uygulanır.",
+    "Nikotin yaması ve sakızı dozları: Nikotin yaması 7, 14, 21 mg'dır; günde 10 ve üzeri sigara içene 21 mg, 10'dan azına 14 mg verilir.",
+    "Bupropionun mekanizması ve endikasyonu: Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin etkilerini taklit eder ve yoksunluğu azaltır.",
+    "Sitizin: kontrendikasyonlar ve beşinci gün kuralı: Sitizin nikotine benzer yapıdadır, α4β2 reseptörlerinin kısmi agonistidir ve gebelik ile emzirmede kullanılmaz.",
+    "Vareniklin artık kullanılmıyor: Vareniklin içerdiği nitrozamin miktarı kanserojen etki yapabilecek kadar yüksek olduğundan piyasadan kaldırılmıştır ve artık kullanılmıyor.",
+    "Birinci basamak sigara bırakma algoritması: Birinci basamakta başvuran herkese sigara içip içmediği sorulur ve yanıta göre dört yoldan biri izlenir.",
+    "Fagerström testi: Nikotin bağımlılığı şiddetini değerlendirmede rutinde en çok Fagerström testi kullanılır; 0 ile 2 düşük, 3 ile 7 orta, 8 ile 10 yüksek bağımlılıktır."
+   ],
+   "v": "4956ec60ba"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış sekiz çıkmış sorusu üç noktaya toplanır: sigara bırakma müdahalesinin basamakları, bupropionun yeri ve sitizinin özellikleri. Vareniklin bu yıl artık kullanılmadığı için ilgili eski soru analiz dışı bırakılmıştır.",
+   "maddeler": [
+    {
+     "baslik": "2019-2020",
+     "metin": "Nikotin bağımlılığı müdahalesinde kullanılan 5 Ö yaklaşımının basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+     "cevap": "Öğren – Öner – Ölç – Önderlik et – Örgütle",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Soru, birinci basamakta sigara bırakma müdahalesinin hangi sırayla yürütüldüğünü ölçüyor; yani bir algoritmayı ezberden çok akış olarak bilmeni bekliyor.",
+      "Doğru şık Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; çünkü slayttaki algoritma önce başvuran bireye sigara içip içmediğinin sorulmasıyla (öğrenilmesiyle) başlar, bırakma isteği olan içicide ölçme, önderlik etme ve örgütleme adımları izler.",
+      "Bırakma isteği olmayan içicide ise sırada öneri vardır; öner basamağı bu yüzden ölçmeden önce gelir ve içici bırakmak istediğinde yardım edileceğine dair güvence verilir.",
+      "Önderlik et ile başlayan, Örgütle'yi başa ya da Ölç'ün önüne alan sıralar yanlıştır: algoritma önce sigara içip içmediğinin öğrenilmesiyle başlar ve ölçme, önderlik etme, örgütleme yalnız bırakma isteği olan içicide yapılır. Öner'in Öğren'den önce geldiği sıra ile Öğret basamağını içeren sıra da slayttaki basamaklara uymaz."
+     ],
+     "ornek": "Bir hasta poliklinikte başka bir şikâyetle başvurduğunda hekimin ilk adımı, sigara içip içmediğini sormaktır.",
+     "tuzak": "Öğrenci Öğren basamağını ilk sıraya koyduğu hâlde Ölç, Önderlik et ve Örgütle basamaklarının yerini değiştiren bir şıkta takılır; Öğret ise slayttaki basamaklardan biri değildir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+     "cevap": "Öğren - Öner - Ölç - Önderlik et - Örgütle",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Bu soru, 5A olarak bilinen yaklaşımın Türkçe karşılığı olan 5Ö basamaklarının doğru sırasını bilip bilmediğini ölçüyor.",
+      "5A, Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et) ve Arrange (Düzenle) basamaklarından oluşur; slayttaki algoritmada bunlar Öğren, Öner, Ölç, Önderlik et ve Örgütle olarak karşılık bulur.",
+      "Bu nedenle doğru cevap Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; bırakma isteği olan içicide ölçme, önderlik etme ve örgütleme art arda uygulanır.",
+      "Önderlik et ya da Örgütle'nin Ölç'ten önce geldiği sıralar yanlıştır, çünkü bırakma isteği olan içicide önce değerlendirme yapılır, sonra yardımcı olunur ve düzenleme yapılır. Öner'in Öğren'den önce geldiği sıra ile Öğret içeren sıra da slayttaki algoritmaya uymaz."
+     ],
+     "ornek": "Beş basamağı baştan sona sayarak, ilk adımın sigara kullanımını sormak, son adımın takip düzenlemek olduğunu gösteren bir hasta görüşmesi örneği verilebilir.",
+     "tuzak": "Öğrenci basamak adlarını tanır ama Örgütle ile Ölç'ü ya da Öğren ile Öner'i yer değiştirir; Öğret ise slayttaki basamak adı değildir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+     "cevap": "Öğren - Öner - Ölç - Önderlik et - Örgütle",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Soru, birinci basamak sigara bırakma algoritmasındaki beş basamağın hangi sırayla uygulandığını soruyor.",
+      "Doğru sıra Öğren, Öner, Ölç, Önderlik et, Örgütle şeklindedir; çünkü algoritma, sigara içip içmediğinin sorulmasıyla başlar ve bırakma isteği olan içicide ölçme, yardımcı olma ve düzenleme ile sürer.",
+      "Bırakma isteği olmayan kişide yol ayrılır; bu kişiye bırakma önerilir ve ileride yardım edileceğine dair güvence verilir, yani öner basamağı yalnız dal olarak da karşımıza çıkar.",
+      "Önderlik et ile başlayan sıra, algoritmanın sigara içip içmediğinin sorulmasıyla başladığı bilgisine ters düşer. Örgütle'nin Ölç'ten önce ya da en başta geldiği sıralar, düzenlemenin bırakma isteği olan ve değerlendirilmiş içicide yapıldığı bilgisine, Öner'in Öğren'den önce geldiği sıra ise ilk adımın öğrenme olduğu bilgisine uymaz."
+     ],
+     "ornek": "Algoritmayı okuyan bir intern, sigara içmediğini söyleyen hastayı tebrik edip içmeme davranışının sürdürülmesini desteklemelidir.",
+     "tuzak": "Öğrenci sırayı kişinin bırakma isteğinden bağımsız sanar ve Örgütle ile Ölç gibi bırakma isteği olan içiciye ait adımları öne alır."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+     "cevap": "Öğren - Öner - Ölç - Önderlik et - Örgütle",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Bu soru, 5Ö yaklaşımının basamaklarını ve onların sırasını bilmeyi ölçüyor.",
+      "Doğru cevap Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; slayttaki algoritma, herhangi bir nedenle başvuran bireye sigara içip içmediğinin sorulmasıyla başlar ve içicide ölçme, önderlik etme ve örgütleme adımlarıyla sürer.",
+      "İçmeyen ya da bırakmış bireyde ise müdahale tebrik etme, içmemenin sürdürülmesini destekleme ve pasif etkilenimin zararlarını anlatma ile sınırlıdır.",
+      "Önderlik et ile başlayan sıra yanlıştır, çünkü algoritma sigara içip içmediğinin öğrenilmesiyle başlar. Örgütle'yi başa alan ya da Ölç'ün sonuna koyan sıralar ve Öğret içeren sıra, slayttaki basamak sırasına uymaz."
+     ],
+     "ornek": "Hastaya önce sigara içip içmediği sorulur, sonra bırakma önerilir ve ancak bundan sonra bağımlılık düzeyi ölçülür.",
+     "tuzak": "Öğrenci Ölç'ü Öner'den önce ya da Örgütle'yi başa koyar; ayrıca Öğren yerine Öğret yazan şıkkı basamak adı sanabilir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+     "cevap": "Öğren - Öner - Ölç - Önderlik et - Örgütle",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Soru, hekimin sigara bırakma görüşmesinde izlediği beş basamağın sırasını soruyor.",
+      "Doğru cevap Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; çünkü slayttaki algoritma bu sırayı izler ve 5A yaklaşımındaki Ask, Advise, Assess, Assist, Arrange basamaklarına karşılık gelir.",
+      "Önderlik et basamağı bırakma isteği olan kişiye yardımcı olmayı, Örgütle basamağı ise düzenli bir takip ve bırakma planı düzenlemeyi anlatır.",
+      "Örgütle'yi ilk sıraya alan şık yanlıştır, çünkü düzenleme görüşme yapıldıktan ve değerlendirme sonrasında gelir. Önderlik et ile başlayan, Ölç'ü sona atan ve Öğret içeren sıralar da slayttaki algoritmaya uymaz."
+     ],
+     "ornek": "Beş basamaklı yaklaşım, bir hastanın sigarayı bırakma kararından başlayıp takip randevusuyla biten bir görüşme akışı olarak kurulabilir.",
+     "tuzak": "Öğrenci 5A ve 5Ö basamaklarını ezberlemiş olsa da Ölç, Önderlik et ve Örgütle'nin sırasını karıştırır; Öğret slayttaki basamaklardan biri değildir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Bupropion",
+     "s": [
+      28
+     ],
+     "aciklama": [
+      "Soru, sigara bırakma tedavisinde kullanılmak üzere onaylanmış ilacın bupropion olduğunu bilip bilmediğini ölçüyor.",
+      "Bupropion, dopaminin ve daha az oranda norepinefrinin nöronal geri alımını bloke ederek nikotinin beyindeki etkilerini taklit eder ve yoksunluk belirtilerini azaltır.",
+      "Bu nedenle doğru cevap bupropiondur; slayta göre depresyonu olan ya da bıraktıktan sonra kilo almaktan kaçınan hastada özellikle tercih edilebilir ve nikotin yerine koyma tedavisiyle birlikte kullanılırsa bırakma oranı daha yüksektir.",
+      "Fluoksetin, sertralin ve desipramin bu derste anlatılan sigara bırakma ilaçları arasında yer almaz; sugammadeks de bu derste anlatılan sigara bırakma ilaçları arasında değildir. Slaytta sigara bırakma ilacı olarak bupropion, nikotin yerine koyma tedavisi, vareniklin (artık kullanılmıyor) ve sitizin anılır."
+     ],
+     "ornek": "Depresyon öyküsü olan ve bıraktıktan sonra kilo almaktan korkan bir hastada tedavi seçimi sorulursa cevap bupropiondur.",
+     "tuzak": "Öğrenci bupropionu yalnız bir depresyon ilacı sanır ve depresyonla ilişkili şıklardan birini seçer; oysa slayta göre sigara bırakmadaki onaylı ilaç bupropiondur."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Kurgu Soru: Sitizin ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "Gebelik ve emzirme döneminde güvenle kullanılabilir.",
+     "s": [
+      38
+     ],
+     "aciklama": [
+      "Soru kurgu olarak yanlış ifadeyi bulduruyor ve sitizinin özelliklerini birlikte değerlendirmeyi bekliyor.",
+      "Sitizin, yapısı nikotine çok benzeyen ve alfa-4 beta-2 nikotinik asetilkolin reseptörlerinin kısmi agonisti olan bir bitki türevidir; yan etkileri çoğunlukla hazımsızlık ve bulantı gibi sindirim sistemi şikâyetleri, ağız kuruluğu ve kendini sınırlayan uyku bozukluklarıdır.",
+      "Gebelik ve emzirme sitizinin kontrendikasyonları arasında sayıldığından, güvenle kullanılabilir diyen ifade yanlıştır ve soru bu yüzden o şıkkı işaret ettirir.",
+      "Diğer şıklar sitizinin doğru özelliklerini verir: yapısı nikotine çok benzer, alfa-4 beta-2 nikotinik asetilkolin reseptörlerinin kısmi agonistidir, en sık yan etkileri hazımsızlık ve bulantı gibi sindirim sistemi şikâyetleridir ve beşinci günden itibaren sigara tamamen bırakılmalıdır. Bunların hepsi slayttaki bilgiyle uyumlu olduğundan yanlış ifade olarak işaretlenmez."
+     ],
+     "ornek": "Kontrolsüz hipertansiyonu olan ya da emziren bir kadında sitizin başlanıp başlanmayacağı sorulursa cevap hayırdır.",
+     "tuzak": "Öğrenci soru kökündeki yanlıştır sözcüğünü gözden kaçırır ve doğru olan ifadelerden birini işaretler."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdakilerden hangisi sigara bırakma motivasyonunu artırmak için kullanılan 5R yaklaşımının basamaklarındandır?",
+     "cevap": "Tekrar",
+     "s": [
+      14
+     ],
+     "aciklama": [
+      "Soru, sigara bırakma motivasyonunu artıran 5R yaklaşımının basamaklarını bilip bilmediğini ölçüyor.",
+      "Slayttaki tabloya göre 5R, Relevance (İlişkilendir), Risks (Riskler), Rewards (Ödüller), Roadblocks (Engeller) ve Repetition (Tekrar) basamaklarından oluşur; doğru şık bu yüzden Tekrar basamağıdır.",
+      "Tekrar, bırakmak istemeyen kişiye motivasyon görüşmesinin her karşılaşmada yinelenmesi demektir.",
+      "Öğren, Ölç, Yardım et ve Öner 5R basamağı değildir; bunlar sigara bırakma müdahalesinin 5A ve 5Ö basamaklarındandır. 5R slayta göre İlişkilendir, Riskler, Ödüller, Engeller ve Tekrar basamaklarından oluşur."
+     ],
+     "ornek": "Bırakmak istemeyen hastaya sonraki her görüşmede motivasyon görüşmesinin tekrarlanması 5R yaklaşımının Tekrar basamağıdır.",
+     "tuzak": "Öğrenci 5A ve 5R listelerini birbirine karıştırır; Öğren, Ölç, Yardım et ve Öner gibi 5A basamaklarını 5R içinde arar."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış sekiz çıkmış sorusu üç noktaya toplanır: sigara bırakma müdahalesinin basamakları, bupropionun yeri ve sitizinin özellikleri. Vareniklin bu yıl artık kullanılmadığı için ilgili eski soru analiz dışı bırakılmıştır.",
+    "2019-2020: Nikotin bağımlılığı müdahalesinde kullanılan 5 Ö yaklaşımının basamakları aşağıdakilerin hangisinde doğru sırayla verilmiştir?",
+    "Cevap: Öğren – Öner – Ölç – Önderlik et – Örgütle.",
+    "Soru, birinci basamakta sigara bırakma müdahalesinin hangi sırayla yürütüldüğünü ölçüyor; yani bir algoritmayı ezberden çok akış olarak bilmeni bekliyor.",
+    "Doğru şık Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; çünkü slayttaki algoritma önce başvuran bireye sigara içip içmediğinin sorulmasıyla (öğrenilmesiyle) başlar, bırakma isteği olan içicide ölçme, önderlik etme ve örgütleme adımları izler.",
+    "Bırakma isteği olmayan içicide ise sırada öneri vardır; öner basamağı bu yüzden ölçmeden önce gelir ve içici bırakmak istediğinde yardım edileceğine dair güvence verilir.",
+    "Önderlik et ile başlayan, Örgütle'yi başa ya da Ölç'ün önüne alan sıralar yanlıştır: algoritma önce sigara içip içmediğinin öğrenilmesiyle başlar ve ölçme, önderlik etme, örgütleme yalnız bırakma isteği olan içicide yapılır. Öner'in Öğren'den önce geldiği sıra ile Öğret basamağını içeren sıra da slayttaki basamaklara uymaz.",
+    "Örnek: Bir hasta poliklinikte başka bir şikâyetle başvurduğunda hekimin ilk adımı, sigara içip içmediğini sormaktır.",
+    "Tuzak: Öğrenci Öğren basamağını ilk sıraya koyduğu hâlde Ölç, Önderlik et ve Örgütle basamaklarının yerini değiştiren bir şıkta takılır; Öğret ise slayttaki basamaklardan biri değildir.",
+    "2020-2021: Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+    "Cevap: Öğren - Öner - Ölç - Önderlik et - Örgütle.",
+    "Bu soru, 5A olarak bilinen yaklaşımın Türkçe karşılığı olan 5Ö basamaklarının doğru sırasını bilip bilmediğini ölçüyor.",
+    "5A, Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et) ve Arrange (Düzenle) basamaklarından oluşur; slayttaki algoritmada bunlar Öğren, Öner, Ölç, Önderlik et ve Örgütle olarak karşılık bulur.",
+    "Bu nedenle doğru cevap Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; bırakma isteği olan içicide ölçme, önderlik etme ve örgütleme art arda uygulanır.",
+    "Önderlik et ya da Örgütle'nin Ölç'ten önce geldiği sıralar yanlıştır, çünkü bırakma isteği olan içicide önce değerlendirme yapılır, sonra yardımcı olunur ve düzenleme yapılır. Öner'in Öğren'den önce geldiği sıra ile Öğret içeren sıra da slayttaki algoritmaya uymaz.",
+    "Örnek: Beş basamağı baştan sona sayarak, ilk adımın sigara kullanımını sormak, son adımın takip düzenlemek olduğunu gösteren bir hasta görüşmesi örneği verilebilir.",
+    "Tuzak: Öğrenci basamak adlarını tanır ama Örgütle ile Ölç'ü ya da Öğren ile Öner'i yer değiştirir; Öğret ise slayttaki basamak adı değildir.",
+    "2020-2021: Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+    "Cevap: Öğren - Öner - Ölç - Önderlik et - Örgütle.",
+    "Soru, birinci basamak sigara bırakma algoritmasındaki beş basamağın hangi sırayla uygulandığını soruyor.",
+    "Doğru sıra Öğren, Öner, Ölç, Önderlik et, Örgütle şeklindedir; çünkü algoritma, sigara içip içmediğinin sorulmasıyla başlar ve bırakma isteği olan içicide ölçme, yardımcı olma ve düzenleme ile sürer.",
+    "Bırakma isteği olmayan kişide yol ayrılır; bu kişiye bırakma önerilir ve ileride yardım edileceğine dair güvence verilir, yani öner basamağı yalnız dal olarak da karşımıza çıkar.",
+    "Önderlik et ile başlayan sıra, algoritmanın sigara içip içmediğinin sorulmasıyla başladığı bilgisine ters düşer. Örgütle'nin Ölç'ten önce ya da en başta geldiği sıralar, düzenlemenin bırakma isteği olan ve değerlendirilmiş içicide yapıldığı bilgisine, Öner'in Öğren'den önce geldiği sıra ise ilk adımın öğrenme olduğu bilgisine uymaz.",
+    "Örnek: Algoritmayı okuyan bir intern, sigara içmediğini söyleyen hastayı tebrik edip içmeme davranışının sürdürülmesini desteklemelidir.",
+    "Tuzak: Öğrenci sırayı kişinin bırakma isteğinden bağımsız sanar ve Örgütle ile Ölç gibi bırakma isteği olan içiciye ait adımları öne alır.",
+    "2020-2021: Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+    "Cevap: Öğren - Öner - Ölç - Önderlik et - Örgütle.",
+    "Bu soru, 5Ö yaklaşımının basamaklarını ve onların sırasını bilmeyi ölçüyor.",
+    "Doğru cevap Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; slayttaki algoritma, herhangi bir nedenle başvuran bireye sigara içip içmediğinin sorulmasıyla başlar ve içicide ölçme, önderlik etme ve örgütleme adımlarıyla sürer.",
+    "İçmeyen ya da bırakmış bireyde ise müdahale tebrik etme, içmemenin sürdürülmesini destekleme ve pasif etkilenimin zararlarını anlatma ile sınırlıdır.",
+    "Önderlik et ile başlayan sıra yanlıştır, çünkü algoritma sigara içip içmediğinin öğrenilmesiyle başlar. Örgütle'yi başa alan ya da Ölç'ün sonuna koyan sıralar ve Öğret içeren sıra, slayttaki basamak sırasına uymaz.",
+    "Örnek: Hastaya önce sigara içip içmediği sorulur, sonra bırakma önerilir ve ancak bundan sonra bağımlılık düzeyi ölçülür.",
+    "Tuzak: Öğrenci Ölç'ü Öner'den önce ya da Örgütle'yi başa koyar; ayrıca Öğren yerine Öğret yazan şıkkı basamak adı sanabilir.",
+    "2020-2021: Nikotin bağımlılığı müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamakları aşağıdakilerden hangisinde doğru sırayla verilmiştir?",
+    "Cevap: Öğren - Öner - Ölç - Önderlik et - Örgütle.",
+    "Soru, hekimin sigara bırakma görüşmesinde izlediği beş basamağın sırasını soruyor.",
+    "Doğru cevap Öğren, Öner, Ölç, Önderlik et, Örgütle sırasıdır; çünkü slayttaki algoritma bu sırayı izler ve 5A yaklaşımındaki Ask, Advise, Assess, Assist, Arrange basamaklarına karşılık gelir.",
+    "Önderlik et basamağı bırakma isteği olan kişiye yardımcı olmayı, Örgütle basamağı ise düzenli bir takip ve bırakma planı düzenlemeyi anlatır.",
+    "Örgütle'yi ilk sıraya alan şık yanlıştır, çünkü düzenleme görüşme yapıldıktan ve değerlendirme sonrasında gelir. Önderlik et ile başlayan, Ölç'ü sona atan ve Öğret içeren sıralar da slayttaki algoritmaya uymaz.",
+    "Örnek: Beş basamaklı yaklaşım, bir hastanın sigarayı bırakma kararından başlayıp takip randevusuyla biten bir görüşme akışı olarak kurulabilir.",
+    "Tuzak: Öğrenci 5A ve 5Ö basamaklarını ezberlemiş olsa da Ölç, Önderlik et ve Örgütle'nin sırasını karıştırır; Öğret slayttaki basamaklardan biri değildir.",
+    "2019-2020: Sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Bupropion.",
+    "Soru, sigara bırakma tedavisinde kullanılmak üzere onaylanmış ilacın bupropion olduğunu bilip bilmediğini ölçüyor.",
+    "Bupropion, dopaminin ve daha az oranda norepinefrinin nöronal geri alımını bloke ederek nikotinin beyindeki etkilerini taklit eder ve yoksunluk belirtilerini azaltır.",
+    "Bu nedenle doğru cevap bupropiondur; slayta göre depresyonu olan ya da bıraktıktan sonra kilo almaktan kaçınan hastada özellikle tercih edilebilir ve nikotin yerine koyma tedavisiyle birlikte kullanılırsa bırakma oranı daha yüksektir.",
+    "Fluoksetin, sertralin ve desipramin bu derste anlatılan sigara bırakma ilaçları arasında yer almaz; sugammadeks de bu derste anlatılan sigara bırakma ilaçları arasında değildir. Slaytta sigara bırakma ilacı olarak bupropion, nikotin yerine koyma tedavisi, vareniklin (artık kullanılmıyor) ve sitizin anılır.",
+    "Örnek: Depresyon öyküsü olan ve bıraktıktan sonra kilo almaktan korkan bir hastada tedavi seçimi sorulursa cevap bupropiondur.",
+    "Tuzak: Öğrenci bupropionu yalnız bir depresyon ilacı sanır ve depresyonla ilişkili şıklardan birini seçer; oysa slayta göre sigara bırakmadaki onaylı ilaç bupropiondur.",
+    "2025-2026: Kurgu Soru: Sitizin ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: Gebelik ve emzirme döneminde güvenle kullanılabilir.",
+    "Soru kurgu olarak yanlış ifadeyi bulduruyor ve sitizinin özelliklerini birlikte değerlendirmeyi bekliyor.",
+    "Sitizin, yapısı nikotine çok benzeyen ve alfa-4 beta-2 nikotinik asetilkolin reseptörlerinin kısmi agonisti olan bir bitki türevidir; yan etkileri çoğunlukla hazımsızlık ve bulantı gibi sindirim sistemi şikâyetleri, ağız kuruluğu ve kendini sınırlayan uyku bozukluklarıdır.",
+    "Gebelik ve emzirme sitizinin kontrendikasyonları arasında sayıldığından, güvenle kullanılabilir diyen ifade yanlıştır ve soru bu yüzden o şıkkı işaret ettirir.",
+    "Diğer şıklar sitizinin doğru özelliklerini verir: yapısı nikotine çok benzer, alfa-4 beta-2 nikotinik asetilkolin reseptörlerinin kısmi agonistidir, en sık yan etkileri hazımsızlık ve bulantı gibi sindirim sistemi şikâyetleridir ve beşinci günden itibaren sigara tamamen bırakılmalıdır. Bunların hepsi slayttaki bilgiyle uyumlu olduğundan yanlış ifade olarak işaretlenmez.",
+    "Örnek: Kontrolsüz hipertansiyonu olan ya da emziren bir kadında sitizin başlanıp başlanmayacağı sorulursa cevap hayırdır.",
+    "Tuzak: Öğrenci soru kökündeki yanlıştır sözcüğünü gözden kaçırır ve doğru olan ifadelerden birini işaretler.",
+    "2025-2026: Aşağıdakilerden hangisi sigara bırakma motivasyonunu artırmak için kullanılan 5R yaklaşımının basamaklarındandır?",
+    "Cevap: Tekrar.",
+    "Soru, sigara bırakma motivasyonunu artıran 5R yaklaşımının basamaklarını bilip bilmediğini ölçüyor.",
+    "Slayttaki tabloya göre 5R, Relevance (İlişkilendir), Risks (Riskler), Rewards (Ödüller), Roadblocks (Engeller) ve Repetition (Tekrar) basamaklarından oluşur; doğru şık bu yüzden Tekrar basamağıdır.",
+    "Tekrar, bırakmak istemeyen kişiye motivasyon görüşmesinin her karşılaşmada yinelenmesi demektir.",
+    "Öğren, Ölç, Yardım et ve Öner 5R basamağı değildir; bunlar sigara bırakma müdahalesinin 5A ve 5Ö basamaklarındandır. 5R slayta göre İlişkilendir, Riskler, Ödüller, Engeller ve Tekrar basamaklarından oluşur.",
+    "Örnek: Bırakmak istemeyen hastaya sonraki her görüşmede motivasyon görüşmesinin tekrarlanması 5R yaklaşımının Tekrar basamağıdır.",
+    "Tuzak: Öğrenci 5A ve 5R listelerini birbirine karıştırır; Öğren, Ölç, Yardım et ve Öner gibi 5A basamaklarını 5R içinde arar."
+   ],
+   "v": "c057bdc397"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 8 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 8 çıkmış soru var; 0 tanesi öncüllü, 1 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Kurgu sorular",
+     "metin": "1 soru kaynak belgeden yeniden kurulmuş kurgu sorudur."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 14, 16, 28, 38."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 8 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 8 çıkmış soru var; 0 tanesi öncüllü, 1 tanesi olumsuz köklüdür.",
+    "Kurgu sorular: 1 soru kaynak belgeden yeniden kurulmuş kurgu sorudur.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 14, 16, 28, 38."
+   ],
+   "v": "5d524d790e"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Birinci basamakta herhangi bir nedenle başvuran bireye sigara içip",
+     "metin": "Sık yapılan hata: Öğrenci Öğren basamağını ilk sıraya koyduğu hâlde Ölç, Önderlik et ve Örgütle basamaklarının yerini değiştiren bir şıkta takılır; Öğret ise slayttaki basamaklardan biri değildir. Ayrıca: Öğrenci basamak adlarını tanır ama Örgütle ile Ölç'ü ya da Öğren ile Öner'i yer değiştirir; Öğret ise slayttaki basamak adı değildir."
+    },
+    {
+     "baslik": "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını",
+     "metin": "Sık yapılan hata: Öğrenci bupropionu yalnız bir depresyon ilacı sanır ve depresyonla ilişkili şıklardan birini seçer; oysa slayta göre sigara bırakmadaki onaylı ilaç bupropiondur."
+    },
+    {
+     "baslik": "Sitizin yapısı nikotine çok benzer, nikotin reseptörlerine eşit düzeyde",
+     "metin": "Sık yapılan hata: Öğrenci soru kökündeki yanlıştır sözcüğünü gözden kaçırır ve doğru olan ifadelerden birini işaretler."
+    },
+    {
+     "baslik": "5A: Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım",
+     "metin": "Sık yapılan hata: Öğrenci 5A ve 5R listelerini birbirine karıştırır; Öğren, Ölç, Yardım et ve Öner gibi 5A basamaklarını 5R içinde arar."
+    },
+    {
+     "baslik": "5A basamakları",
+     "metin": "2019-2020 ve 2020-2021 sınavlarında beş kez soruldu; derste bu basamakların mutlaka bilinmesi istendi."
+    },
+    {
+     "baslik": "5R basamakları ve uygulandığı evre",
+     "metin": "2025-2026 sınavında soruldu; derste 5A ve 5R'nin mutlaka bilinmesi söylendi."
+    },
+    {
+     "baslik": "Bupropionun mekanizması ve endikasyonu",
+     "metin": "2019-2020 sınavında bupropion sorusu çıktı; ilacın mekanizması ve tercih edildiği hastalar sık karıştırılır."
+    },
+    {
+     "baslik": "Sitizin: kontrendikasyonlar ve beşinci gün kuralı",
+     "metin": "2025-2026 sınavında sitizin sorusu çıktı; kontrendikasyonlar ve beşinci gün kuralı sık karıştırılır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Birinci basamakta herhangi bir nedenle başvuran bireye sigara içip: Sık yapılan hata: Öğrenci Öğren basamağını ilk sıraya koyduğu hâlde Ölç, Önderlik et ve Örgütle basamaklarının yerini değiştiren bir şıkta takılır; Öğret ise slayttaki basamaklardan biri değildir. Ayrıca: Öğrenci basamak adlarını tanır ama Örgütle ile Ölç'ü ya da Öğren ile Öner'i yer değiştirir; Öğret ise slayttaki basamak adı değildir.",
+    "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını: Sık yapılan hata: Öğrenci bupropionu yalnız bir depresyon ilacı sanır ve depresyonla ilişkili şıklardan birini seçer; oysa slayta göre sigara bırakmadaki onaylı ilaç bupropiondur.",
+    "Sitizin yapısı nikotine çok benzer, nikotin reseptörlerine eşit düzeyde: Sık yapılan hata: Öğrenci soru kökündeki yanlıştır sözcüğünü gözden kaçırır ve doğru olan ifadelerden birini işaretler.",
+    "5A: Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım: Sık yapılan hata: Öğrenci 5A ve 5R listelerini birbirine karıştırır; Öğren, Ölç, Yardım et ve Öner gibi 5A basamaklarını 5R içinde arar.",
+    "5A basamakları: 2019-2020 ve 2020-2021 sınavlarında beş kez soruldu; derste bu basamakların mutlaka bilinmesi istendi.",
+    "5R basamakları ve uygulandığı evre: 2025-2026 sınavında soruldu; derste 5A ve 5R'nin mutlaka bilinmesi söylendi.",
+    "Bupropionun mekanizması ve endikasyonu: 2019-2020 sınavında bupropion sorusu çıktı; ilacın mekanizması ve tercih edildiği hastalar sık karıştırılır.",
+    "Sitizin: kontrendikasyonlar ve beşinci gün kuralı: 2025-2026 sınavında sitizin sorusu çıktı; kontrendikasyonlar ve beşinci gün kuralı sık karıştırılır.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "4acccd32f0"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Sigara kullanımının ölüm yükünü, nikotin bağımlılığının mekanizmasını, bırakma yaklaşımlarını ve farmakolojik tedavileri anlatır. Tedavi bölümünde nikotin yerine koyma tedavisi, bupropion, sitizin ve ikinci üçüncü seçenekler işlenir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Sigara kullanımının ölüm yükünü, nikotin bağımlılığının mekanizmasını, bırakma yaklaşımlarını ve farmakolojik tedavileri anlatır. Tedavi bölümünde nikotin yerine koyma tedavisi, bupropion, sitizin ve ikinci üçüncü seçenekler işlenir."
+   ],
+   "v": "8e316d726d"
+  },
+  {
+   "id": "2a04-02",
+   "baslik": "5R basamakları ve uygulandığı evre",
+   "giris": "5R basamakları İlişkilendir, Riskler, Ödüller, Engeller ve Tekrardır ve bırakmayı düşünmeyen içiciye uygulanır.",
+   "s": [
+    12,
+    14
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Relevance (İlişkilendir), Risks (Riskler), Rewards (Ödüller), Roadblocks (Engeller), Repetition (Tekrar)."
+    },
+    {
+     "metin": "transteoretik modelde bırakmanın düşünülmediği evredeki içiciye, yani motivasyonu artırmak için kullanılır."
+    },
+    {
+     "metin": "Ödüller ile Engeller birbirinin zıddı değildir, ayrı basamaklardır; Tekrar son basamaktır ve görüşmenin yinelenmesini anlatır."
+    },
+    {
+     "metin": "Sor, Öner, Değerlendir, Yardım et ve Düzenle 5A'ya aittir."
+    }
+   ],
+   "klip": "o-2a04-02",
+   "ses": [
+    "5R basamakları ve uygulandığı evre.",
+    "5R basamakları İlişkilendir, Riskler, Ödüller, Engeller ve Tekrardır ve bırakmayı düşünmeyen içiciye uygulanır.",
+    "Relevance (İlişkilendir), Risks (Riskler), Rewards (Ödüller), Roadblocks (Engeller), Repetition (Tekrar).",
+    "transteoretik modelde bırakmanın düşünülmediği evredeki içiciye, yani motivasyonu artırmak için kullanılır.",
+    "Ödüller ile Engeller birbirinin zıddı değildir, ayrı basamaklardır; Tekrar son basamaktır ve görüşmenin yinelenmesini anlatır.",
+    "Sor, Öner, Değerlendir, Yardım et ve Düzenle 5A'ya aittir."
+   ],
+   "v": "ac62635c9f"
+  },
+  {
+   "id": "2a04-08",
+   "baslik": "Fagerström testi",
+   "giris": "Nikotin bağımlılığı şiddetini değerlendirmede rutinde en çok Fagerström testi kullanılır; 0 ile 2 düşük, 3 ile 7 orta, 8 ile 10 yüksek bağımlılıktır.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "nikotin bağımlılığının şiddetini değerlendirmek için geliştirilen ölçekler arasında rutinde en çok tercih edilendir."
+    },
+    {
+     "metin": "uyandıktan sonraki ilk 5 dakikada içen 3, 6 ile 30 dakikada içen 2, 30 dakikadan sonra içen 1 puan alır."
+    },
+    {
+     "metin": "10 veya daha az sigara 0, 11 ile 20 sigara 1, 21 ile 30 sigara 2, 31 ve üzeri 3 puandır."
+    },
+    {
+     "metin": "toplam puan 0 ile 2 ise düşük, 3 ile 7 ise orta, 8 ile 10 ise yüksek düzeyde bağımlılığı gösterir."
+    }
+   ],
+   "klip": "o-2a04-08",
+   "ses": [
+    "Fagerström testi.",
+    "Nikotin bağımlılığı şiddetini değerlendirmede rutinde en çok Fagerström testi kullanılır; 0 ile 2 düşük, 3 ile 7 orta, 8 ile 10 yüksek bağımlılıktır.",
+    "nikotin bağımlılığının şiddetini değerlendirmek için geliştirilen ölçekler arasında rutinde en çok tercih edilendir.",
+    "uyandıktan sonraki ilk 5 dakikada içen 3, 6 ile 30 dakikada içen 2, 30 dakikadan sonra içen 1 puan alır.",
+    "10 veya daha az sigara 0, 11 ile 20 sigara 1, 21 ile 30 sigara 2, 31 ve üzeri 3 puandır.",
+    "toplam puan 0 ile 2 ise düşük, 3 ile 7 ise orta, 8 ile 10 ise yüksek düzeyde bağımlılığı gösterir."
+   ],
+   "v": "3ac55e81bf"
+  },
+  {
+   "id": "2a04-01",
+   "baslik": "5A basamakları",
+   "giris": "Sigara bırakma müdahalesinde 5A basamakları Sor, Öner, Değerlendir, Yardım et ve Düzenle şeklindedir.",
+   "s": [
+    14,
+    16
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et), Arrange (Düzenle)."
+    },
+    {
+     "metin": "çıkmış sorularda sıra Öğren, Öner, Ölç, Önderlik et, Örgütle olarak verilir; algoritmadaki karşılıkları sor, öner, değerlendir, yardımcı ol, düzenle şeklindedir."
+    },
+    {
+     "metin": "sor ve öner her içiciye uygulanır; ölç, önderlik et, örgütle yalnız bırakma isteği olana uygulanır."
+    },
+    {
+     "metin": "Engeller (Roadblocks), Ödüller, Riskler, İlişkilendir ve Tekrar basamakları 5R yaklaşımına aittir, 5A içinde yer almaz."
+    }
+   ],
+   "klip": "o-2a04-01",
+   "ses": [
+    "5A basamakları.",
+    "Sigara bırakma müdahalesinde 5A basamakları Sor, Öner, Değerlendir, Yardım et ve Düzenle şeklindedir.",
+    "Ask (Sor), Advise (Öner), Assess (Değerlendir), Assist (Yardım et), Arrange (Düzenle).",
+    "çıkmış sorularda sıra Öğren, Öner, Ölç, Önderlik et, Örgütle olarak verilir; algoritmadaki karşılıkları sor, öner, değerlendir, yardımcı ol, düzenle şeklindedir.",
+    "sor ve öner her içiciye uygulanır; ölç, önderlik et, örgütle yalnız bırakma isteği olana uygulanır.",
+    "Engeller (Roadblocks), Ödüller, Riskler, İlişkilendir ve Tekrar basamakları 5R yaklaşımına aittir, 5A içinde yer almaz."
+   ],
+   "v": "7890d007b6"
+  },
+  {
+   "id": "2a04-07",
+   "baslik": "Birinci basamak sigara bırakma algoritması",
+   "giris": "Birinci basamakta başvuran herkese sigara içip içmediği sorulur ve yanıta göre dört yoldan biri izlenir.",
+   "s": [
+    16
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "sigara içmediği için tebrik edilir, içmeme davranışının sürdürülmesi desteklenir, pasif etkilenimin zararları anlatılır; bırakmış kişiye ayrıca relaps için riskli durumlar anlatılır."
+    },
+    {
+     "metin": "ölç (değerlendir), önderlik et (yardımcı ol), örgütle (düzenle) basamakları uygulanır."
+    },
+    {
+     "metin": "bırakma önerilir ve daha sonra istediğinde yardım edileceğine dair güvence verilir."
+    },
+    {
+     "metin": "farmakolojik tedavi ve izlem yalnız bırakma isteği olan içiciye aittir."
+    }
+   ],
+   "klip": "o-2a04-07",
+   "ses": [
+    "Birinci basamak sigara bırakma algoritması.",
+    "Birinci basamakta başvuran herkese sigara içip içmediği sorulur ve yanıta göre dört yoldan biri izlenir.",
+    "sigara içmediği için tebrik edilir, içmeme davranışının sürdürülmesi desteklenir, pasif etkilenimin zararları anlatılır; bırakmış kişiye ayrıca relaps için riskli durumlar anlatılır.",
+    "ölç (değerlendir), önderlik et (yardımcı ol), örgütle (düzenle) basamakları uygulanır.",
+    "bırakma önerilir ve daha sonra istediğinde yardım edileceğine dair güvence verilir.",
+    "farmakolojik tedavi ve izlem yalnız bırakma isteği olan içiciye aittir."
+   ],
+   "v": "5ff45645ec"
+  },
+  {
+   "id": "2a04-06",
+   "baslik": "Vareniklin artık kullanılmıyor",
+   "giris": "Vareniklin içerdiği nitrozamin miktarı kanserojen etki yapabilecek kadar yüksek olduğundan piyasadan kaldırılmıştır ve artık kullanılmıyor.",
+   "s": [
+    20,
+    34
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "vareniklin içindeki nitrozamin miktarının kanserojen etki yapabilecek kadar yüksek olması nedeniyle piyasadan kaldırılmıştır; seçenekler listesinde artık kullanılmıyor diye belirtilir."
+    },
+    {
+     "metin": "nikotin yerine koyma tedavileri, bupropion, sitizin ve ikinci ile üçüncü seçenek tedaviler."
+    },
+    {
+     "metin": "en sık bildirilen yan etki bulantıdır; uykusuzluk, anormal düşler, baş ağrısı ve sindirim sistemi yakınmaları da görülür."
+    },
+    {
+     "metin": "gebelerde ve süt veren annelerde kullanımı uygun değildir."
+    }
+   ],
+   "klip": "o-2a04-06",
+   "ses": [
+    "Vareniklin artık kullanılmıyor.",
+    "Vareniklin içerdiği nitrozamin miktarı kanserojen etki yapabilecek kadar yüksek olduğundan piyasadan kaldırılmıştır ve artık kullanılmıyor.",
+    "vareniklin içindeki nitrozamin miktarının kanserojen etki yapabilecek kadar yüksek olması nedeniyle piyasadan kaldırılmıştır; seçenekler listesinde artık kullanılmıyor diye belirtilir.",
+    "nikotin yerine koyma tedavileri, bupropion, sitizin ve ikinci ile üçüncü seçenek tedaviler.",
+    "en sık bildirilen yan etki bulantıdır; uykusuzluk, anormal düşler, baş ağrısı ve sindirim sistemi yakınmaları da görülür.",
+    "gebelerde ve süt veren annelerde kullanımı uygun değildir."
+   ],
+   "v": "eef923a818"
+  },
+  {
+   "id": "2a04-09",
+   "baslik": "Nikotin yerine koyma tedavisinin kontrendikasyonları",
+   "giris": "Gebe, emziren, akut miyokard infarktüsünün ilk haftalarındaki ve ciddi aritmisi olan hastalarda nikotin yerine koyma tedavisi kullanılmaz.",
+   "s": [
+    24
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "gebeler, emziren kadınlar, akut miyokard infarktüsü geçirenlerde ilk haftalar ve ciddi aritmisi olanlar."
+    },
+    {
+     "metin": "karaciğer ve böbrek yetmezliği, hipertiroidi, hipertansiyon, tip 1 diabetes mellitus, feokromositoma ve kalp yetmezliği."
+    },
+    {
+     "metin": "ilk gruptaki durumlar kullanım engelidir; ikinci gruptaki durumlar yalnız dikkat gerektirir."
+    },
+    {
+     "metin": "yan etkiler genelde sigara içimi kesilmeden NRT kullanımıyla ortaya çıkar."
+    }
+   ],
+   "klip": "o-2a04-09",
+   "ses": [
+    "Nikotin yerine koyma tedavisinin kontrendikasyonları.",
+    "Gebe, emziren, akut miyokard infarktüsünün ilk haftalarındaki ve ciddi aritmisi olan hastalarda nikotin yerine koyma tedavisi kullanılmaz.",
+    "gebeler, emziren kadınlar, akut miyokard infarktüsü geçirenlerde ilk haftalar ve ciddi aritmisi olanlar.",
+    "karaciğer ve böbrek yetmezliği, hipertiroidi, hipertansiyon, tip 1 diabetes mellitus, feokromositoma ve kalp yetmezliği.",
+    "ilk gruptaki durumlar kullanım engelidir; ikinci gruptaki durumlar yalnız dikkat gerektirir.",
+    "yan etkiler genelde sigara içimi kesilmeden NRT kullanımıyla ortaya çıkar."
+   ],
+   "v": "3d853b8a61"
+  },
+  {
+   "id": "2a04-03",
+   "baslik": "Nikotin yaması ve sakızı dozları",
+   "giris": "Nikotin yaması 7, 14, 21 mg'dır; günde 10 ve üzeri sigara içene 21 mg, 10'dan azına 14 mg verilir.",
+   "s": [
+    26
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "7, 14 ve 21 mg'lık formları vardır; günde 10 ve daha fazla sigara içene 21 mg, 10'dan az içene 14 mg uygulanır; 6 haftadan sonra daha küçük dozlarla devam edilir."
+    },
+    {
+     "metin": "2 ve 4 mg'lıktır; ilk sigarayı uyandıktan sonraki ilk 30 dakikada içen 4 mg, 30 dakikadan sonra içen 2 mg kullanır."
+    },
+    {
+     "metin": "2 mg dil altı tablet ve ağız spreyinin dozudur, 10 mg inhaler kartuşunun miktarıdır; bu doz basamakları yama ya da sakızla karıştırılmamalıdır."
+    },
+    {
+     "metin": "sakızda doz kullanıcı tarafından ayarlanır ve yamaya eklenebilir."
+    }
+   ],
+   "klip": "o-2a04-03",
+   "ses": [
+    "Nikotin yaması ve sakızı dozları.",
+    "Nikotin yaması 7, 14, 21 mg'dır; günde 10 ve üzeri sigara içene 21 mg, 10'dan azına 14 mg verilir.",
+    "7, 14 ve 21 mg'lık formları vardır; günde 10 ve daha fazla sigara içene 21 mg, 10'dan az içene 14 mg uygulanır; 6 haftadan sonra daha küçük dozlarla devam edilir.",
+    "2 ve 4 mg'lıktır; ilk sigarayı uyandıktan sonraki ilk 30 dakikada içen 4 mg, 30 dakikadan sonra içen 2 mg kullanır.",
+    "2 mg dil altı tablet ve ağız spreyinin dozudur, 10 mg inhaler kartuşunun miktarıdır; bu doz basamakları yama ya da sakızla karıştırılmamalıdır.",
+    "sakızda doz kullanıcı tarafından ayarlanır ve yamaya eklenebilir."
+   ],
+   "v": "fb235731fc"
+  },
+  {
+   "id": "2a04-10",
+   "baslik": "Nikotin yerine koyma ürünlerinin yan etkileri",
+   "giris": "Nikotin sakızının yan etkileri ağızda tahriş, çene ağrısı, göğüste yanma, hıçkırık ve bulantıdır; nazal sprey en hızlı dağılımı ve en fazla yan etkiyi sağlar.",
+   "s": [
+    26
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "cilt tahrişi, uyku problemi ve canlı rüyalar."
+    },
+    {
+     "metin": "ağızda tahriş, çene ağrısı, göğüste ağrılı yanma hissi, hıçkırık ve mide bulantısı; kullanımdan 15 dakika önce ve kullanım sırasında yiyecek içecek alınmaz."
+    },
+    {
+     "metin": "tüm ürünler arasında en hızlı nikotin dağılımını ve en fazla yan etkiyi sağlar."
+    },
+    {
+     "metin": "sakız, pastil, inhaler ve sprey yama tedavisine eklenebilir."
+    }
+   ],
+   "klip": "o-2a04-10",
+   "ses": [
+    "Nikotin yerine koyma ürünlerinin yan etkileri.",
+    "Nikotin sakızının yan etkileri ağızda tahriş, çene ağrısı, göğüste yanma, hıçkırık ve bulantıdır; nazal sprey en hızlı dağılımı ve en fazla yan etkiyi sağlar.",
+    "cilt tahrişi, uyku problemi ve canlı rüyalar.",
+    "ağızda tahriş, çene ağrısı, göğüste ağrılı yanma hissi, hıçkırık ve mide bulantısı; kullanımdan 15 dakika önce ve kullanım sırasında yiyecek içecek alınmaz.",
+    "tüm ürünler arasında en hızlı nikotin dağılımını ve en fazla yan etkiyi sağlar.",
+    "sakız, pastil, inhaler ve sprey yama tedavisine eklenebilir."
+   ],
+   "v": "823a327ae5"
+  },
+  {
+   "id": "2a04-04",
+   "baslik": "Bupropionun mekanizması ve endikasyonu",
+   "giris": "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin etkilerini taklit eder ve yoksunluğu azaltır.",
+   "s": [
+    28
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "dopamin ve daha az norepinefrin geri alımını bloke eder, nikotinin beyindeki bazı etkilerini taklit eder ve yoksunluk bulgularını azaltır."
+    },
+    {
+     "metin": "hasta aynı zamanda depresyondaysa ya da bıraktıktan sonra kilo almaktan kaçınıyorsa tercih edilir."
+    },
+    {
+     "metin": "nikotin yerine koyma tedavisiyle birlikte kullanıldığında tek başına kullanımdan daha yüksek bırakma oranı sağlayabilir."
+    },
+    {
+     "metin": "sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç bupropiondur."
+    }
+   ],
+   "klip": "o-2a04-04",
+   "ses": [
+    "Bupropionun mekanizması ve endikasyonu.",
+    "Bupropion dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin etkilerini taklit eder ve yoksunluğu azaltır.",
+    "dopamin ve daha az norepinefrin geri alımını bloke eder, nikotinin beyindeki bazı etkilerini taklit eder ve yoksunluk bulgularını azaltır.",
+    "hasta aynı zamanda depresyondaysa ya da bıraktıktan sonra kilo almaktan kaçınıyorsa tercih edilir.",
+    "nikotin yerine koyma tedavisiyle birlikte kullanıldığında tek başına kullanımdan daha yüksek bırakma oranı sağlayabilir.",
+    "sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç bupropiondur."
+   ],
+   "v": "3c9a946144"
+  },
+  {
+   "id": "2a04-05",
+   "baslik": "Sitizin: kontrendikasyonlar ve beşinci gün kuralı",
+   "giris": "Sitizin nikotine benzer yapıdadır, α4β2 reseptörlerinin kısmi agonistidir ve gebelik ile emzirmede kullanılmaz.",
+   "s": [
+    38,
+    39
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "nikotine oldukça benzerdir, nikotin reseptörlerine eşit düzeyde bağlanır ve α4β2 nikotinik reseptörlerin kısmi agonistidir."
+    },
+    {
+     "metin": "kontrolsüz arteriyel hipertansiyon, ileri ateroskleroz, mevcut psikiyatrik tanı, gebelik ve emzirme."
+    },
+    {
+     "metin": "çoğunlukla gastrointestinal şikayetler, ağız kuruluğu ve kendini sınırlayan uyku bozuklukları."
+    },
+    {
+     "metin": "1,5 mg tabletle ilk 3 gün 2 saatte bir toplam 6 tablet verilir; 5. günden itibaren sigara bırakılır; üç günde istek azalmazsa ilaç durdurulur ve sonraki kür en az 2 ile 3 ay sonra tekrarlanır."
+    }
+   ],
+   "klip": "o-2a04-05",
+   "ses": [
+    "Sitizin: kontrendikasyonlar ve beşinci gün kuralı.",
+    "Sitizin nikotine benzer yapıdadır, α4β2 reseptörlerinin kısmi agonistidir ve gebelik ile emzirmede kullanılmaz.",
+    "nikotine oldukça benzerdir, nikotin reseptörlerine eşit düzeyde bağlanır ve α4β2 nikotinik reseptörlerin kısmi agonistidir.",
+    "kontrolsüz arteriyel hipertansiyon, ileri ateroskleroz, mevcut psikiyatrik tanı, gebelik ve emzirme.",
+    "çoğunlukla gastrointestinal şikayetler, ağız kuruluğu ve kendini sınırlayan uyku bozuklukları.",
+    "1,5 mg tabletle ilk 3 gün 2 saatte bir toplam 6 tablet verilir; 5. günden itibaren sigara bırakılır; üç günde istek azalmazsa ilaç durdurulur ve sonraki kür en az 2 ile 3 ay sonra tekrarlanır."
+   ],
+   "v": "d96743921a"
+  }
+ ]
+}

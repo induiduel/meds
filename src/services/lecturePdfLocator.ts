@@ -424,6 +424,18 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Genetik/5)Psikiyatrik Hastalıklar ve Genetik Analiz.pdf', name: '5)Psikiyatrik Hastalıklar ve Genetik Analiz.pdf', pages: 78, fileId: '1QmjRjgp_i_9OIt-oZiXMWZX4BU6L7Gp1' } as SourceFile],
   },
+  // 2026-11-26 Nikotin Bağımlılığı ve Tedavisi (k2-61): deste yok, okul PDF'i sanal desteyle bağlı (görüntü PDF; işaret OCR'lı kopyadan).
+  'k2p-k2-61-nikotin-bagimliligi-ve-tedavisi': {
+    title: 'Nikotin Bağımlılığı ve Tedavisi',
+    decks: [],
+    files: [{ path: 'Kurul 2/Aile Hekimliği /3)Nikotin Bağımlılığı ve Tedavisi.pdf', name: '3)Nikotin Bağımlılığı ve Tedavisi.pdf', pages: 52, fileId: '1OjideJ7C6l0hKiDyckO2RAcxbBKun9hr' } as SourceFile],
+  },
+  // 2026-11-26 Miyorelaksan İlaçlar (k2-60): deste yok, okul PDF'i sanal desteyle bağlı (okul Drive'ında dosya adı "İskelet Kası Gevşeticileri").
+  'k2p-k2-60-miyorelaksan-ilaclar': {
+    title: 'Miyorelaksan İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /13)İskelet Kası Gevşeticileri.pdf', name: '13)İskelet Kası Gevşeticileri.pdf', pages: 51, fileId: '1rBa9mdpxv-HUmD0Vq0r8HjybS-E5jXfD' } as SourceFile],
+  },
   // 2026-11-23 Davranış Genetiği (k2-52): deste yok, okul PDF'i sanal desteyle bağlı.
   'k2p-k2-52-davranis-genetigi': {
     title: 'Davranış Genetiği',

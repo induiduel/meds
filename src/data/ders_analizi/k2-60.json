@@ -1,0 +1,866 @@
+{
+ "surum": 2,
+ "key": "k2-60",
+ "kod": "2f13",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Miyorelaksan İlaçlar",
+ "ogretim_uyesi": "Prof. Dr. Mehmet Özdemir",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f13"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Ders girişi"
+    },
+    {
+     "metin": "Giriş ve ilaç grupları"
+    },
+    {
+     "metin": "Nöromusküler İletim ve Blokaj Mekanizmaları"
+    },
+    {
+     "metin": "Non-depolarizan gevşeticilerin farmakokinetiği"
+    },
+    {
+     "metin": "Süksinilkolinin farmakokinetiği"
+    },
+    {
+     "metin": "Nöromusküler blokörlerin etki mekanizması"
+    },
+    {
+     "metin": "Klinik farmakoloji ve nöromusküler iletinin değerlendirilmesi"
+    },
+    {
+     "metin": "Kardiyovasküler etkiler"
+    },
+    {
+     "metin": "Depolarizan blokajın advers etkileri"
+    },
+    {
+     "metin": "Diğer ilaçlarla etkileşimler"
+    },
+    {
+     "metin": "Hastalık ve yaşlanmanın etkisi"
+    },
+    {
+     "metin": "Non-depolarizan blokajın geri döndürülmesi"
+    },
+    {
+     "metin": "Nöromusküler blokörlerin kullanımı"
+    },
+    {
+     "metin": "Spazmolitik ilaçlar: spastisite ve diazepam"
+    },
+    {
+     "metin": "Baklofen"
+    },
+    {
+     "metin": "Tizanidin"
+    },
+    {
+     "metin": "Diğer santral etkili spazmolitikler"
+    },
+    {
+     "metin": "Dantrolen"
+    },
+    {
+     "metin": "Botulinum toksini"
+    },
+    {
+     "metin": "Akut lokal kas spazmı ilaçları"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders girişi.",
+    "Giriş ve ilaç grupları.",
+    "Nöromusküler İletim ve Blokaj Mekanizmaları.",
+    "Non-depolarizan gevşeticilerin farmakokinetiği.",
+    "Süksinilkolinin farmakokinetiği.",
+    "Nöromusküler blokörlerin etki mekanizması.",
+    "Klinik farmakoloji ve nöromusküler iletinin değerlendirilmesi.",
+    "Kardiyovasküler etkiler.",
+    "Depolarizan blokajın advers etkileri.",
+    "Diğer ilaçlarla etkileşimler.",
+    "Hastalık ve yaşlanmanın etkisi.",
+    "Non-depolarizan blokajın geri döndürülmesi.",
+    "Nöromusküler blokörlerin kullanımı.",
+    "Spazmolitik ilaçlar: spastisite ve diazepam.",
+    "Baklofen.",
+    "Tizanidin.",
+    "Diğer santral etkili spazmolitikler.",
+    "Dantrolen.",
+    "Botulinum toksini.",
+    "Akut lokal kas spazmı ilaçları."
+   ],
+   "v": "7d9221287a"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "İskelet kas fonksiyonunu etkileyen ilaçlar iki terapötik gruba",
+     "metin": "İskelet kas fonksiyonunu etkileyen ilaçlar iki terapötik gruba ayrılır: kas felci oluşturan nöromusküler blokörler ve spastisiteyi azaltan merkezi etkili kas gevşeticiler (spazmolitikler, antispazmodikler).",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Spazmolitikler geleneksel olarak santral etkili kas gevşeticiler",
+     "metin": "Spazmolitikler geleneksel olarak santral etkili kas gevşeticiler diye anılır; öncelikle fibromiyaljik ağrılı durumlarda ve kronik sırt ağrısı tedavisinde kullanılır.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Aksiyon potansiyeli motor sinir terminaline ulaşınca içeri doğru",
+     "metin": "Aksiyon potansiyeli motor sinir terminaline ulaşınca içeri doğru kalsiyum akımı olur ve nörotransmiter olarak asetilkolin (ACh) salıverilir.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Erişkin nikotinik asetilkolin reseptörü (nAChR), beş alt",
+     "metin": "Erişkin nikotinik asetilkolin reseptörü (nAChR), beş alt üniteden (α2βδγ) oluşan intrinsik bir membran proteinidir; M2 parçası reseptör kanalının hattıdır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "İki ACh molekülünün reseptörün alt birimlerine bağlanması",
+     "metin": "İki ACh molekülünün reseptörün alt birimlerine bağlanması kanalın açılmasına neden olur.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Son plak potansiyelinin büyüklüğü salıverilen ACh miktarıyla",
+     "metin": "Son plak potansiyelinin büyüklüğü salıverilen ACh miktarıyla doğrudan ilişkilidir.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "İskelet kası gevşemesi ve felci; santral sinir sisteminden",
+     "metin": "İskelet kası gevşemesi ve felci; santral sinir sisteminden miyelinli somatik sinirlere, motor sinir terminallerine, nikotinik reseptörlere, son plağa, kas membranına ve kontraktil ünitelere kadar her düzeydeki fonksiyon kaybından ortaya çıkabilir.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "İkinci tip blokaj, ACh gibi depolarizan agonistin fazlalığıyla",
+     "metin": "İkinci tip blokaj, ACh gibi depolarizan agonistin fazlalığıyla ortaya çıkar.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Nöromusküler bloke ilaçlar yüksek oranda iyonizedir; hücre",
+     "metin": "Nöromusküler bloke ilaçlar yüksek oranda iyonizedir; hücre membranlarını kolayca geçemez ve periferik dokulara güçlü bağlanmaz.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Orta etki süreli steroid kas gevşeticiler vekuronyum ve",
+     "metin": "Orta etki süreli steroid kas gevşeticiler vekuronyum ve rokuronyumun eliminasyonu hepatik metabolizma ve safra yoluyla olur.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Atrakuryumun en güçlü stereoizomeri olan sisatrakuryum klinik",
+     "metin": "Atrakuryumun en güçlü stereoizomeri olan sisatrakuryum klinik pratikte en sık kullanılan kas gevşeticilerden biridir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Gantakuryum yeni bir grubu temsil eder ve kısa etkili grup",
+     "metin": "Gantakuryum yeni bir grubu temsil eder ve kısa etkili grup üyesidir.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Plazma kolinesterazı ile metabolize edilme süksinilkolinin",
+     "metin": "Plazma kolinesterazı ile metabolize edilme süksinilkolinin eliminasyonunun ana yolağıdır.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Dolaşımdaki plazma kolinesteraz düzeyi, süksinilkolinin motor",
+     "metin": "Dolaşımdaki plazma kolinesteraz düzeyi, süksinilkolinin motor son plağa ulaşan miktarını belirleyerek etki süresini etkiler.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar",
+     "metin": "Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar non-depolarizan ajanlar olarak sınıflandırılır.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Etki gücü en az olan non-depolarizan gevşeticiler en hızlı",
+     "metin": "Etki gücü en az olan non-depolarizan gevşeticiler en hızlı başlayan ve kısa süreli etkiye sahip olanlardır.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Faz I blok depolarizan bloktur; süksinilkolin klinik kullanımda",
+     "metin": "Faz I blok depolarizan bloktur; süksinilkolin klinik kullanımda olan tek depolarizan ilaçtır.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Faz II blok desensitizan bloktur: süksinilkoline uzun süreli",
+     "metin": "Faz II blok desensitizan bloktur: süksinilkoline uzun süreli maruziyetle başlangıçtaki depolarizasyon azalır ve membran repolarize olur.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Şekil 27-6 üst panel: normal agonist asetilkolin kanalı açar.",
+     "metin": "Şekil 27-6 üst panel: normal agonist asetilkolin kanalı açar.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Nöromüsküler blokörlerin keşfinden önce intrakaviter cerrahide",
+     "metin": "Nöromüsküler blokörlerin keşfinden önce intrakaviter cerrahide yeterli gevşeme için kardiyovasküler ve solunum sistemlerini de baskılayan yüksek konsantrasyonda uçucu anestezik gerekiyordu.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Anestezide tubokürarin 0,1-0,4 mg/kg IV önce motor güçsüzlüğe,",
+     "metin": "Anestezide tubokürarin 0,1-0,4 mg/kg IV önce motor güçsüzlüğe, sonra iskelet kasının tamamen gevşemesine ve uyarılamaz duruma gelmesine neden olur.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Süksinilkolin 0,75-1,5 mg/kg IV uygulanınca 30 sn içinde göğüs",
+     "metin": "Süksinilkolin 0,75-1,5 mg/kg IV uygulanınca 30 sn içinde göğüs ve karın kasları üzerinde geçici kas fasikülasyonları (seyirme) ortaya çıkar.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler",
+     "metin": "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler etkileri minimum derecededir.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Antihistaminiklerle premedikasyon, tubokürarin ve mivakuryumla",
+     "metin": "Antihistaminiklerle premedikasyon, tubokürarin ve mivakuryumla meydana gelen hipotansiyonu zayıflatır.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Süksinilkolin halotan anestezisiyle birlikte uygulanınca",
+     "metin": "Süksinilkolin halotan anestezisiyle birlikte uygulanınca kardiyak aritmilere neden olabilir.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Süksinilkolinin geçici bradikardisi tiyopental, atropin,",
+     "metin": "Süksinilkolinin geçici bradikardisi tiyopental, atropin, gangliyon blokörü ilaçlarla veya önceden düşük doz non-depolarizan gevşetici (pankuronyum) ile önlenebilir.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Aşırı kaslı hastalarda süksinilkolinle ilişkili fasikülasyonlar",
+     "metin": "Aşırı kaslı hastalarda süksinilkolinle ilişkili fasikülasyonlar intragastrik basıncı artırır; bu da mide içeriğinin aspirasyon ve regurgitasyon riskini yükseltir.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "İnhalasyon (uçucu) anestezikleri non-depolarizan kas",
+     "metin": "İnhalasyon (uçucu) anestezikleri non-depolarizan kas gevşeticilerin oluşturduğu blokajı doz bağımlı olarak potansiyalize eder.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Süksinilkolin ile uçucu anesteziklerin nadir görülen etkileşimi,",
+     "metin": "Süksinilkolin ile uçucu anesteziklerin nadir görülen etkileşimi, iskelet kası depolarından anormal kalsiyum salıverilmesine bağlı malign hipertermidir.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Süksinilkolinin son plak depolarize edici etkisi düşük doz",
+     "metin": "Süksinilkolinin son plak depolarize edici etkisi düşük doz non-depolarizan blokörlerle antagonize edilebilir.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Çeşitli hastalıklar non-depolarizan kas gevşeticilerin",
+     "metin": "Çeşitli hastalıklar non-depolarizan kas gevşeticilerin oluşturduğu nöromusküler blokajı azaltabilir veya artırabilir.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu",
+     "metin": "Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu nöromusküler blokajı etkili biçimde antagonize eder.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Mivakuryum plazma kolinesterazıyla metabolize edildiğinden",
+     "metin": "Mivakuryum plazma kolinesterazıyla metabolize edildiğinden kolinesteraz inhibitörleriyle etkileşiminin daha az olduğu öngörülür.",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Böbrek fonksiyonu normal hastalarda sugammadeks-rokuronyum",
+     "metin": "Böbrek fonksiyonu normal hastalarda sugammadeks-rokuronyum kompleksi tipik olarak 24 saat içinde idrarla değişmeden atılır.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Sugammadeksin en önemli advers etkisi anafilaksidir;",
+     "metin": "Sugammadeksin en önemli advers etkisi anafilaksidir; çalışmalarda 16 mg/kg doz alan hastaların %0,3'ünde görülmüştür.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Sugammadeks steroidal NBM'leri (rokuronyum, vekuronyum)",
+     "metin": "Sugammadeks steroidal NBM'leri (rokuronyum, vekuronyum) bağladığı için diğer steroidal ilaçları da bloke edebilir.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "NBM'lerin en önemli kullanım alanlarından biri özellikle",
+     "metin": "NBM'lerin en önemli kullanım alanlarından biri özellikle intraabdominal ve intratorasik girişimlerde intrakaviter cerrahiyi kolaylaştırmasıdır.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Süksinilkolin gibi NBM'ler, lokal anestezik toksisitesine veya",
+     "metin": "Süksinilkolin gibi NBM'ler, lokal anestezik toksisitesine veya status epileptikusa bağlı konvülsiyonların periferik (motor) bulgularını azaltmak için nadiren kullanılır.",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Benzodiazepinler santral sinir sisteminde gama-aminobütirik",
+     "metin": "Benzodiazepinler santral sinir sisteminde gama-aminobütirik asidin (GABA) etkisini kolaylaştırır.",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış",
+     "metin": "Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış GABA türevi bir ajandır.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Baklofen en az diazepam kadar spastisiteyi azaltır ve daha az",
+     "metin": "Baklofen en az diazepam kadar spastisiteyi azaltır ve daha az sedasyon oluşturur.",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Baklofenin intratekal uygulanması, diğer yollarla yanıt",
+     "metin": "Baklofenin intratekal uygulanması, diğer yollarla yanıt alınamayan şiddetli spazm ve kas ağrısını tedavi edebilir.",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.",
+     "metin": "Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Slayta göre tizanidin spastisite durumlarında kronik migren",
+     "metin": "Slayta göre tizanidin spastisite durumlarında kronik migren tedavisinde de etkili olur.",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Gabapentin antiepileptik bir ilaçtır; multipl sklerozlu",
+     "metin": "Gabapentin antiepileptik bir ilaçtır; multipl sklerozlu hastalarda spazmolitik ajan olarak ümit verici bulunmuştur.",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "İdrosilamid ve riluzol olasılıkla santral sinir sisteminde",
+     "metin": "İdrosilamid ve riluzol olasılıkla santral sinir sisteminde glutamaterjik iletimin inhibisyonu ile spazm giderici etkilere sahiptir.",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını",
+     "metin": "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını bloke eder ve sarkoplazmik retikulumdan aktivatör kalsiyumunun salıverilmesini engeller.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Botulinum toksini presinaptik ACh salınımını inhibe eder.",
+     "metin": "Botulinum toksini presinaptik ACh salınımını inhibe eder.",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Siklobenzaprin, karisoprodol, klorzoksazon, metaksalon,",
+     "metin": "Siklobenzaprin, karisoprodol, klorzoksazon, metaksalon, metokarbamol ve orfenadrin gibi santral etkili ilaçlar lokal doku travması veya kas incinmesine bağlı akut kas spazmını hafifletmek için önerilir.",
+     "s": [
+      50
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "İskelet kas fonksiyonunu etkileyen ilaçlar iki terapötik gruba: İskelet kas fonksiyonunu etkileyen ilaçlar iki terapötik gruba ayrılır: kas felci oluşturan nöromusküler blokörler ve spastisiteyi azaltan merkezi etkili kas gevşeticiler (spazmolitikler, antispazmodikler).",
+    "Spazmolitikler geleneksel olarak santral etkili kas gevşeticiler: Spazmolitikler geleneksel olarak santral etkili kas gevşeticiler diye anılır; öncelikle fibromiyaljik ağrılı durumlarda ve kronik sırt ağrısı tedavisinde kullanılır.",
+    "Aksiyon potansiyeli motor sinir terminaline ulaşınca içeri doğru: Aksiyon potansiyeli motor sinir terminaline ulaşınca içeri doğru kalsiyum akımı olur ve nörotransmiter olarak asetilkolin (ACh) salıverilir.",
+    "Erişkin nikotinik asetilkolin reseptörü (nAChR), beş alt: Erişkin nikotinik asetilkolin reseptörü (nAChR), beş alt üniteden (α2βδγ) oluşan intrinsik bir membran proteinidir; M2 parçası reseptör kanalının hattıdır.",
+    "İki ACh molekülünün reseptörün alt birimlerine bağlanması: İki ACh molekülünün reseptörün alt birimlerine bağlanması kanalın açılmasına neden olur.",
+    "Son plak potansiyelinin büyüklüğü salıverilen ACh miktarıyla: Son plak potansiyelinin büyüklüğü salıverilen ACh miktarıyla doğrudan ilişkilidir.",
+    "İskelet kası gevşemesi ve felci; santral sinir sisteminden: İskelet kası gevşemesi ve felci; santral sinir sisteminden miyelinli somatik sinirlere, motor sinir terminallerine, nikotinik reseptörlere, son plağa, kas membranına ve kontraktil ünitelere kadar her düzeydeki fonksiyon kaybından ortaya çıkabilir.",
+    "İkinci tip blokaj, ACh gibi depolarizan agonistin fazlalığıyla: İkinci tip blokaj, ACh gibi depolarizan agonistin fazlalığıyla ortaya çıkar.",
+    "Nöromusküler bloke ilaçlar yüksek oranda iyonizedir; hücre: Nöromusküler bloke ilaçlar yüksek oranda iyonizedir; hücre membranlarını kolayca geçemez ve periferik dokulara güçlü bağlanmaz.",
+    "Orta etki süreli steroid kas gevşeticiler vekuronyum ve: Orta etki süreli steroid kas gevşeticiler vekuronyum ve rokuronyumun eliminasyonu hepatik metabolizma ve safra yoluyla olur.",
+    "Atrakuryumun en güçlü stereoizomeri olan sisatrakuryum klinik: Atrakuryumun en güçlü stereoizomeri olan sisatrakuryum klinik pratikte en sık kullanılan kas gevşeticilerden biridir.",
+    "Gantakuryum yeni bir grubu temsil eder ve kısa etkili grup: Gantakuryum yeni bir grubu temsil eder ve kısa etkili grup üyesidir.",
+    "Plazma kolinesterazı ile metabolize edilme süksinilkolinin: Plazma kolinesterazı ile metabolize edilme süksinilkolinin eliminasyonunun ana yolağıdır.",
+    "Dolaşımdaki plazma kolinesteraz düzeyi, süksinilkolinin motor: Dolaşımdaki plazma kolinesteraz düzeyi, süksinilkolinin motor son plağa ulaşan miktarını belirleyerek etki süresini etkiler.",
+    "Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar: Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar non-depolarizan ajanlar olarak sınıflandırılır.",
+    "Etki gücü en az olan non-depolarizan gevşeticiler en hızlı: Etki gücü en az olan non-depolarizan gevşeticiler en hızlı başlayan ve kısa süreli etkiye sahip olanlardır.",
+    "Faz I blok depolarizan bloktur; süksinilkolin klinik kullanımda: Faz I blok depolarizan bloktur; süksinilkolin klinik kullanımda olan tek depolarizan ilaçtır.",
+    "Faz II blok desensitizan bloktur: süksinilkoline uzun süreli: Faz II blok desensitizan bloktur: süksinilkoline uzun süreli maruziyetle başlangıçtaki depolarizasyon azalır ve membran repolarize olur.",
+    "Şekil 27-6 üst panel: normal agonist asetilkolin kanalı açar.: Şekil 27-6 üst panel: normal agonist asetilkolin kanalı açar.",
+    "Nöromüsküler blokörlerin keşfinden önce intrakaviter cerrahide: Nöromüsküler blokörlerin keşfinden önce intrakaviter cerrahide yeterli gevşeme için kardiyovasküler ve solunum sistemlerini de baskılayan yüksek konsantrasyonda uçucu anestezik gerekiyordu.",
+    "Anestezide tubokürarin 0,1-0,4 mg/kg IV önce motor güçsüzlüğe,: Anestezide tubokürarin 0,1-0,4 mg/kg IV önce motor güçsüzlüğe, sonra iskelet kasının tamamen gevşemesine ve uyarılamaz duruma gelmesine neden olur.",
+    "Süksinilkolin 0,75-1,5 mg/kg IV uygulanınca 30 sn içinde göğüs: Süksinilkolin 0,75-1,5 mg/kg IV uygulanınca 30 sn içinde göğüs ve karın kasları üzerinde geçici kas fasikülasyonları (seyirme) ortaya çıkar.",
+    "Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler: Vekuronyum, sisatrakuryum ve rokuronyumun kardiyovasküler etkileri minimum derecededir.",
+    "Antihistaminiklerle premedikasyon, tubokürarin ve mivakuryumla: Antihistaminiklerle premedikasyon, tubokürarin ve mivakuryumla meydana gelen hipotansiyonu zayıflatır.",
+    "Süksinilkolin halotan anestezisiyle birlikte uygulanınca: Süksinilkolin halotan anestezisiyle birlikte uygulanınca kardiyak aritmilere neden olabilir.",
+    "Süksinilkolinin geçici bradikardisi tiyopental, atropin,: Süksinilkolinin geçici bradikardisi tiyopental, atropin, gangliyon blokörü ilaçlarla veya önceden düşük doz non-depolarizan gevşetici (pankuronyum) ile önlenebilir.",
+    "Aşırı kaslı hastalarda süksinilkolinle ilişkili fasikülasyonlar: Aşırı kaslı hastalarda süksinilkolinle ilişkili fasikülasyonlar intragastrik basıncı artırır; bu da mide içeriğinin aspirasyon ve regurgitasyon riskini yükseltir.",
+    "İnhalasyon (uçucu) anestezikleri non-depolarizan kas: İnhalasyon (uçucu) anestezikleri non-depolarizan kas gevşeticilerin oluşturduğu blokajı doz bağımlı olarak potansiyalize eder.",
+    "Süksinilkolin ile uçucu anesteziklerin nadir görülen etkileşimi,: Süksinilkolin ile uçucu anesteziklerin nadir görülen etkileşimi, iskelet kası depolarından anormal kalsiyum salıverilmesine bağlı malign hipertermidir.",
+    "Süksinilkolinin son plak depolarize edici etkisi düşük doz: Süksinilkolinin son plak depolarize edici etkisi düşük doz non-depolarizan blokörlerle antagonize edilebilir.",
+    "Çeşitli hastalıklar non-depolarizan kas gevşeticilerin: Çeşitli hastalıklar non-depolarizan kas gevşeticilerin oluşturduğu nöromusküler blokajı azaltabilir veya artırabilir.",
+    "Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu: Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu nöromusküler blokajı etkili biçimde antagonize eder.",
+    "Mivakuryum plazma kolinesterazıyla metabolize edildiğinden: Mivakuryum plazma kolinesterazıyla metabolize edildiğinden kolinesteraz inhibitörleriyle etkileşiminin daha az olduğu öngörülür.",
+    "Böbrek fonksiyonu normal hastalarda sugammadeks-rokuronyum: Böbrek fonksiyonu normal hastalarda sugammadeks-rokuronyum kompleksi tipik olarak 24 saat içinde idrarla değişmeden atılır.",
+    "Sugammadeksin en önemli advers etkisi anafilaksidir;: Sugammadeksin en önemli advers etkisi anafilaksidir; çalışmalarda 16 mg/kg doz alan hastaların %0,3'ünde görülmüştür.",
+    "Sugammadeks steroidal NBM'leri (rokuronyum, vekuronyum): Sugammadeks steroidal NBM'leri (rokuronyum, vekuronyum) bağladığı için diğer steroidal ilaçları da bloke edebilir.",
+    "NBM'lerin en önemli kullanım alanlarından biri özellikle: NBM'lerin en önemli kullanım alanlarından biri özellikle intraabdominal ve intratorasik girişimlerde intrakaviter cerrahiyi kolaylaştırmasıdır.",
+    "Süksinilkolin gibi NBM'ler, lokal anestezik toksisitesine veya: Süksinilkolin gibi NBM'ler, lokal anestezik toksisitesine veya status epileptikusa bağlı konvülsiyonların periferik (motor) bulgularını azaltmak için nadiren kullanılır.",
+    "Benzodiazepinler santral sinir sisteminde gama-aminobütirik: Benzodiazepinler santral sinir sisteminde gama-aminobütirik asidin (GABA) etkisini kolaylaştırır.",
+    "Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış: Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış GABA türevi bir ajandır.",
+    "Baklofen en az diazepam kadar spastisiteyi azaltır ve daha az: Baklofen en az diazepam kadar spastisiteyi azaltır ve daha az sedasyon oluşturur.",
+    "Baklofenin intratekal uygulanması, diğer yollarla yanıt: Baklofenin intratekal uygulanması, diğer yollarla yanıt alınamayan şiddetli spazm ve kas ağrısını tedavi edebilir.",
+    "Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.: Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.",
+    "Slayta göre tizanidin spastisite durumlarında kronik migren: Slayta göre tizanidin spastisite durumlarında kronik migren tedavisinde de etkili olur.",
+    "Gabapentin antiepileptik bir ilaçtır; multipl sklerozlu: Gabapentin antiepileptik bir ilaçtır; multipl sklerozlu hastalarda spazmolitik ajan olarak ümit verici bulunmuştur.",
+    "İdrosilamid ve riluzol olasılıkla santral sinir sisteminde: İdrosilamid ve riluzol olasılıkla santral sinir sisteminde glutamaterjik iletimin inhibisyonu ile spazm giderici etkilere sahiptir.",
+    "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını: Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını bloke eder ve sarkoplazmik retikulumdan aktivatör kalsiyumunun salıverilmesini engeller.",
+    "Botulinum toksini presinaptik ACh salınımını inhibe eder.: Botulinum toksini presinaptik ACh salınımını inhibe eder.",
+    "Siklobenzaprin, karisoprodol, klorzoksazon, metaksalon,: Siklobenzaprin, karisoprodol, klorzoksazon, metaksalon, metokarbamol ve orfenadrin gibi santral etkili ilaçlar lokal doku travması veya kas incinmesine bağlı akut kas spazmını hafifletmek için önerilir."
+   ],
+   "v": "6a3dfdcc62"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış onbir çıkmış sorusu dört noktaya toplanır: non-depolarizan blokörler ve geri döndürülmesi, baklofen, tizanidin ve dantrolen. Çoğu soru bir ilacı mekanizması ya da yan etkisiyle tanımlatır.",
+   "maddeler": [
+    {
+     "baslik": "2025-2026",
+     "metin": "Aşağıdaki nöromüsküler blokör kas gevşeticilerden hangisi nondepolarizan değildir?",
+     "cevap": "Süksinilkolin",
+     "s": [
+      16
+     ],
+     "aciklama": [
+      "Soru, nöromusküler blokörlerin hangisinin non-depolarizan sınıfın dışında kaldığını bilip bilmediğini ölçüyor.",
+      "Slayttaki sınıflamaya göre süksinilkolin dışında kullanılan tüm nöromusküler ilaçlar non-depolarizan ajanlar olarak sınıflandırılır; bu nedenle doğru cevap süksinilkolindir.",
+      "Slayta göre süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar non-depolarizan sınıftadır; d-tubokürarin bu grubun prototipidir ve bu gevşeticiler düşük dozda asetilkolinle yarışarak öncelikle nikotinik reseptör üzerine etkili olur.",
+      "Şıklardaki roküronyum, veküronyum, sisatrakuryum ve panküronyum süksinilkolin dışındaki nöromusküler ilaçlar olduğu için non-depolarizandır; bu yüzden hiçbiri sorunun aradığı istisna olamaz."
+     ],
+     "ornek": "Bir ilacın non-depolarizan olmadığı söylenirse, slayttaki sınıflamaya göre aranan tek ilaç süksinilkolindir.",
+     "tuzak": "Öğrenci olumsuz kökü gözden kaçırır ve non-depolarizan olan roküronyum, veküronyum, sisatrakuryum ya da panküronyumdan birini işaretler."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların nöromusküler blokajını geri döndüren ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Neostigmin",
+     "s": [
+      33
+     ],
+     "aciklama": [
+      "Soru, non-depolarizan blokajın hangi ilaçla geri döndürüldüğünü, yani antagonizma mantığını ölçüyor.",
+      "Kolinesteraz inhibitörleri bu blokajı etkili biçimde antagonize eder; neostigmin asetilkolinesterazı inhibe ederek kas son plağındaki asetilkolin miktarını artırır ve yarışmalı blokajın üstesinden gelir.",
+      "Doğru cevap bu nedenle neostigmindir; kökte sayılan panküronyum, veküronyum, atraküryum ve roküronyum non-depolarizan blokörlerdir ve blokajı oluşturan taraftır, geri döndüren taraf değildir.",
+      "Sugammadeks slayta göre yalnız steroid yapılı ajanların (pankuronyum, rokuronyum, vekuronyum) hızlı geri döndürülmesi için onaylı yeni bir ajandır ve kolinesteraz inhibitörü değildir; kökteki atraküryumu kapsayan ve bu derste anlatılan genel antagonist sınıfı kolinesteraz inhibitörleridir. Baklofen ve dantrolen blokajı geri döndüren değil, santral ya da doğrudan kas düzeyinde etkili spazmolitiklerdir; flumazenil ise bu derste anlatılan nöromusküler blokaj antagonistleri arasında yer almaz."
+     ],
+     "ornek": "Ameliyat sonunda roküronyumun oluşturduğu blokajı kaldırmak için asetilkolinesteraz inhibitörü olan neostigmin verilir.",
+     "tuzak": "Öğrenci sugammadeksi yeni bir ajan olduğu için birinci tercih sanır; oysa slayttaki geri döndürme sınıfı kolinesteraz inhibitörleridir ve sugammadeks yalnız steroid yapılı blokörler için anılır."
+    },
+    {
+     "baslik": "2022-2023",
+     "metin": "Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların oluşturduğu nöromusküler blokajı geri döndüren ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Neostigmin",
+     "s": [
+      33
+     ],
+     "aciklama": [
+      "Bu soru, non-depolarizan nöromusküler blokajı geri döndüren ilacı sorar ve gevşetici ile antagonistin ters etkisini bilmeyi bekler.",
+      "Neostigmin asetilkolinesterazı inhibe eder, kas son plağında asetilkolini artırır ve yarışmalı non-depolarizan blokajı antagonize eder; doğru cevap bu yüzden neostigmindir.",
+      "Slayta göre blokajı tersine çeviren ilaçlar kolinesteraz inhibitörleridir; kökte sayılan panküronyum, veküronyum, atraküryum ve roküronyum ise blokajı yapan non-depolarizan gevşeticilerdir.",
+      "Sugammadeks yalnız steroid yapılı ajanların (pankuronyum, rokuronyum, vekuronyum) geri döndürülmesi için anılır ve kolinesteraz inhibitörü değildir; dantrolen ve baklofen spazmolitiktir, flumazenil ise bu derste anlatılan nöromusküler blokaj antagonistleri arasında yer almaz."
+     ],
+     "ornek": "Non-depolarizan bir gevşeticinin etkisi bittikten sonra kasta asetilkolin artırılarak blokaj geri döndürülür; bunun için neostigmin kullanılır.",
+     "tuzak": "Öğrenci sugammadeksi yeni bir ajan olduğu için seçer ve kökteki atraküryumun steroid yapılı olmadığını gözden kaçırır; slayttaki antagonist sınıfı kolinesteraz inhibitörleridir."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdakilerden hangisi oral yoldan alınan, GABA türevi olan, santral etki gösteren kas gevşetici ilaçtır?",
+     "cevap": "Baklofen",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Soru, oral yoldan alınan, GABA türevi ve santral etkili kas gevşeticiyi ayırt edip edemediğini ölçüyor.",
+      "Baklofen, p-klorofenil GABA yapısında, oral kullanım için tasarlanmış bir GABA türevidir ve GABAB reseptörlerini aktive eden GABA-mimetik bir ajandır; doğru cevap budur.",
+      "Baklofen spastisiteyi en az diazepam kadar azaltır, ama daha az sedasyon oluşturur; ayrıca dantrolenin yaptığı gibi genel kas güçsüzlüğü yapmaz.",
+      "Diazepam da spastisiteyi azaltır ama benzodiazepindir, GABAA sinapslarına etkir ve bir GABA türevi değildir; dantrolen kas lifinde kalsiyum salıverilmesini engeller ve santral etkili değildir. Karisoprodol ve meprobamat bu derste anlatılan GABA türevi gevşeticiler arasında yer almaz."
+     ],
+     "ornek": "Oral kullanım için tasarlanmış ve GABAB agonisti olan bir spazmolitik sorulursa cevap baklofendir.",
+     "tuzak": "Öğrenci diazepamı GABA ile ilişkili olduğu için seçer; oysa GABA türevi yapı ve GABAB agonizmi baklofene özgüdür ve dantrolen santral etkili değildir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdakilerden hangisi oral yoldan alınan, GABA türevi olan santral etkili kas gevşetici ilaçtır?",
+     "cevap": "Baklofen",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Bu soru, oral yoldan alınan GABA türevi santral etkili gevşeticinin baklofen olduğunu bilmeyi ölçüyor.",
+      "Baklofen oral kullanım için tasarlanmış bir GABA türevidir; GABAB reseptörlerini aktive ederek olasılıkla potasyum iletimini artırır ve hiperpolarizasyona yol açar.",
+      "Hiperpolarizasyon kalsiyum içe akışını azaltarak presinaptik inhibisyon oluşturur ve beyin ile omurilikte eksitatör nörotransmiter salıverilmesini düşürür; doğru cevap bu mekanizmayla baklofendir.",
+      "Dantrolen oral kullanılsa da GABA türevi değildir ve etkisini kas lifinde gösterir; diazepam benzodiazepindir ve GABAA sinapslarına etkir. Karisoprodol ve meprobamat bu derste anlatılan GABA türevi gevşeticiler arasında yer almaz."
+     ],
+     "ornek": "Spastisitesi olan bir hastaya oral GABAB agonisti olarak baklofen verilir.",
+     "tuzak": "Öğrenci GABA sözcüğünü görünce diazepamı seçer; oysa diazepam bir benzodiazepindir, GABA türevi olan ve GABAB agonisti olan baklofendir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Primer etki yeri santral sinir sistemi olan çizgili kas gevşetici (miyorelaksan) ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Baklofen",
+     "s": [
+      41
+     ],
+     "aciklama": [
+      "Soru, primer etki yeri santral sinir sistemi olan çizgili kas gevşeticiyi ayırt etmeyi istiyor.",
+      "Baklofen GABAB agonisti bir ajandır ve omurilikte presinaptik inhibisyonla eksitatör nörotransmiter salıverilmesini azaltır; ayrıca spastisiteli hastalarda P maddesi salıverilmesini inhibe ederek ağrıyı da azaltabilir.",
+      "Bu nedenle doğru cevap baklofendir; etkisini merkezi sinir sisteminde gösterir ve slayttaki merkezi etkili spazmolitiklerin tipik örneğidir.",
+      "Dantrolen çizgili kası gevşetir ama etkisini santralde değil kas lifinde, sarkoplazmik retikulumdan kalsiyum salıverilmesini engelleyerek gösterir. Süksinilkolin, panküronyum ve atraküryum nöromusküler blokördür; kas gevşetmelerini santral sinir sisteminde değil nöromusküler kavşakta sağlarlar ve spazmolitik değildir."
+     ],
+     "ornek": "Etki yeri merkezi sinir sistemi olan kas gevşetici sorulduğunda baklofen, doğrudan kas lifinde etkili olan ise dantrolendir.",
+     "tuzak": "Öğrenci çizgili kası gevşeten her ilacı santral etkili sanar ve dantrolen ya da nöromusküler blokörlerden birini seçer."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Alfa-2 adrenerjik reseptör agonisti olan santral etkili kas gevşetici ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Tizanidin",
+     "s": [
+      44
+     ],
+     "aciklama": [
+      "Soru, alfa-2 adrenerjik agonist olan santral etkili kas gevşeticiyi bulmayı ölçüyor.",
+      "Tizanidin belirgin alfa-2 adrenoseptör agonistidir ve omurilikte hem presinaptik hem postsinaptik inhibisyonu güçlendirir; doğru cevap tizanidindir.",
+      "Tizanidin diğer alfa-2 agonistlerine kıyasla daha az kardiyovasküler yan etkiye yol açan dozlarda spastisiteyi azaltır ve gece verilerek sedasyonu kontrol altına alınabilir.",
+      "Baklofen spazmolitiktir ama GABAB agonistidir; diazepam benzodiazepindir ve GABA etkisini kolaylaştırır. Sugammadeks ve süksinilkolin nöromusküler blokaj ile ilgili ilaçlardır ve alfa-2 agonisti olarak anlatılmaz."
+     ],
+     "ornek": "Spastisitede alfa-2 adrenoseptör agonisti olarak kullanılan ve gece verilerek sedasyonu azaltılabilen ilaç tizanidindir.",
+     "tuzak": "Öğrenci baklofenle tizanidini karıştırır; baklofen GABAB agonisti, tizanidin alfa-2 agonistidir ve diazepam GABA etkisini kolaylaştıran benzodiazepindir."
+    },
+    {
+     "baslik": "2025-2026",
+     "metin": "Omurilik düzeyinde presinaptik alfa-2 adrenerjik reseptörleri uyararak eksitatör aminoasit salınımını azaltan, belirgin ağız kuruluğu, sedasyon ve hipotansiyon yan etkileri yapabilen santral etkili kas gevşetici hangisidir?",
+     "cevap": "Tizanidin",
+     "s": [
+      44
+     ],
+     "aciklama": [
+      "Soru, birçok ipucu içeren bir tanımdan santral etkili ilacı çıkarmayı ister: omurilik düzeyinde presinaptik alfa-2 reseptör uyarılması, eksitatör aminoasit salınımında azalma ve ağız kuruluğu, sedasyon ile hipotansiyon.",
+      "Tizanidin omurilikte presinaptik ve postsinaptik inhibisyonu güçlendirir; belirgin olarak daha az kas güçsüzlüğüne neden olur, fakat sedasyon, hipotansiyon, baş dönmesi, ağız kuruluğu, halsizlik ve hepatotoksisite görülebilir.",
+      "Bu yan etki spektrumu hem alfa-2 agonisti etkisiyle hem de ağız kuruluğu ve hipotansiyonla uyumlu olduğundan doğru cevap tizanidindir.",
+      "Baklofen GABAB agonistidir ve diazepam GABAA sinapslarına etkir; ikisi de alfa-2 agonisti değildir. Dantrolen omurilikte değil kas lifinde etkilidir ve sarkoplazmik retikulumdan kalsiyum salıverilmesini engeller. Siklobenzaprin bu derste anlatılan santral etkili ilaçlar arasında yer almaz."
+     ],
+     "ornek": "Ağız kuruluğu ve hipotansiyon yapan, alfa-2 agonisti spazmolitik soruluyorsa tizanidin düşünülmelidir.",
+     "tuzak": "Öğrenci sedasyonu tek başına ipucu sayıp baklofen ya da diazepam seçer; asıl ayırt edici alfa-2 agonizmi, ağız kuruluğu ve hipotansiyondur."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Santral etkili kas gevşetici ilaçların aksine, aşağıdaki ilaçlardan hangisi kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyerek kas gücünde azalma meydana getirir?",
+     "cevap": "Dantrolen",
+     "s": [
+      47
+     ],
+     "aciklama": [
+      "Soru, santral etkili gevşeticilerin aksine kas lifi düzeyinde etkili ilacı bulmayı ölçüyor.",
+      "Dantrolen eksitasyon-kontraksiyon kenetlenmesini engeller; ryanodin reseptörü olan RyR1'e bağlanarak kalsiyum kanallarının açılmasını bloke eder ve sarkoplazmik retikulumdan aktivatör kalsiyum salıverilmesini engeller.",
+      "Bu nedenle kas gücünde azalma yapar; doğru cevap dantrolendir ve slayttaki baklofenin aksine genel kas güçsüzlüğü oluşturan ilaç budur.",
+      "Tizanidin ve diazepam santral etkilidir; tizanidin alfa-2 agonistidir, diazepam GABA etkisini kolaylaştırır ve ikisinin de kas gücünde dantrolen kadar belirgin azalma yaptığı slaytta anlatılmaz. Neostigmin ve süksinilkolin nöromusküler kavşak düzeyinde etkili ilaçlardır ve santral etkili gevşetici değildir."
+     ],
+     "ornek": "Kalsiyumun sarkoplazmik retikulumdan RyR1 aracılığıyla salıverilmesini bloke eden ilaç dantrolendir.",
+     "tuzak": "Öğrenci kas gücünü azaltan her ilacı santral etkili sanar; oysa dantrolenin etkisi doğrudan kas lifindedir ve tizanidin ile diazepam santral etkilidir."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Özel bir uygulama yeri malign hipertermi tedavisi olan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Dantrolen",
+     "s": [
+      48
+     ],
+     "aciklama": [
+      "Soru, dantrolenin özel uygulama yerini yani malign hipertermi tedavisini bilmeyi ölçüyor.",
+      "Malign hipertermi, kas hipermetabolizması ve şiddetli ateş yükselmesi ile karakterize bir durumdur ve slayta göre dantrolenin özel bir uygulama yeridir.",
+      "Dantrolen RyR1'e bağlanarak sarkoplazmik retikulumdan kalsiyum salıverilmesini engellediği için bu mekanizma, kasın hipermetabolik hâlini kontrol eden doğru cevabı açıklar.",
+      "Süksinilkolin ve sugammadeks nöromusküler blokajla ilgili ilaçlardır; botulinum toksini presinaptik asetilkolin salınımını inhibe eder ve spastisitede lokal enjeksiyonla kullanılır; baklofen GABAB agonisti spazmolitiktir. Bunların hiçbiri slaytta malign hipertermi tedavisi olarak anılmaz."
+     ],
+     "ornek": "Kas hipermetabolizması ve şiddetli ateş yükselmesi olan bir tablonun tedavisi için slayttaki ilaç dantrolendir.",
+     "tuzak": "Öğrenci malign hipertermiyi bir spastisite tablosu sanır ve baklofen ya da botulinum toksini gibi spazmolitik seçer."
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Dantrolen",
+     "s": [
+      48
+     ],
+     "aciklama": [
+      "Soru, malign hipertermide kullanılan ilacın dantrolen olduğunu bilmeyi ölçüyor.",
+      "Malign hipertermi kas hipermetabolizması ve şiddetli ateş yükselmesi ile karakterizedir; dantrolen RyR1'e bağlanıp kalsiyum kanallarının açılmasını bloke ederek sarkoplazmik retikulumdan kalsiyum çıkışını engeller.",
+      "Kalp kası ve düz kaslar çok az etkilenir çünkü onların sarkoplazmik retikulumu farklı tip RyR kanalı, yani RyR2 içerir; doğru cevap bu mekanizmayla dantrolendir.",
+      "Süksinilkolin, neostigmin ve pankuronyum nöromusküler kavşakta etkili ilaçlardır ve slaytta malign hipertermi tedavisi olarak anılmaz; baklofen ise GABAB agonisti spazmolitiktir ve bu endikasyonu yoktur."
+     ],
+     "ornek": "Malign hipertermi geçiren bir hastada kas içindeki kalsiyum salıverilmesini durduran ilaç dantrolendir.",
+     "tuzak": "Öğrenci dantrolenin kalp ve düz kası da etkilediğini sanır; oysa onlarda RyR2 bulunduğu için etkilenme çok azdır. Ayrıca süksinilkolin gibi nöromusküler ilaçları malign hipertermi ile ilişkilendirmek slayttan değil tahminden gelir."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış onbir çıkmış sorusu dört noktaya toplanır: non-depolarizan blokörler ve geri döndürülmesi, baklofen, tizanidin ve dantrolen. Çoğu soru bir ilacı mekanizması ya da yan etkisiyle tanımlatır.",
+    "2025-2026: Aşağıdaki nöromüsküler blokör kas gevşeticilerden hangisi nondepolarizan değildir?",
+    "Cevap: Süksinilkolin.",
+    "Soru, nöromusküler blokörlerin hangisinin non-depolarizan sınıfın dışında kaldığını bilip bilmediğini ölçüyor.",
+    "Slayttaki sınıflamaya göre süksinilkolin dışında kullanılan tüm nöromusküler ilaçlar non-depolarizan ajanlar olarak sınıflandırılır; bu nedenle doğru cevap süksinilkolindir.",
+    "Slayta göre süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar non-depolarizan sınıftadır; d-tubokürarin bu grubun prototipidir ve bu gevşeticiler düşük dozda asetilkolinle yarışarak öncelikle nikotinik reseptör üzerine etkili olur.",
+    "Şıklardaki roküronyum, veküronyum, sisatrakuryum ve panküronyum süksinilkolin dışındaki nöromusküler ilaçlar olduğu için non-depolarizandır; bu yüzden hiçbiri sorunun aradığı istisna olamaz.",
+    "Örnek: Bir ilacın non-depolarizan olmadığı söylenirse, slayttaki sınıflamaya göre aranan tek ilaç süksinilkolindir.",
+    "Tuzak: Öğrenci olumsuz kökü gözden kaçırır ve non-depolarizan olan roküronyum, veküronyum, sisatrakuryum ya da panküronyumdan birini işaretler.",
+    "2020-2021: Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların nöromusküler blokajını geri döndüren ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Neostigmin.",
+    "Soru, non-depolarizan blokajın hangi ilaçla geri döndürüldüğünü, yani antagonizma mantığını ölçüyor.",
+    "Kolinesteraz inhibitörleri bu blokajı etkili biçimde antagonize eder; neostigmin asetilkolinesterazı inhibe ederek kas son plağındaki asetilkolin miktarını artırır ve yarışmalı blokajın üstesinden gelir.",
+    "Doğru cevap bu nedenle neostigmindir; kökte sayılan panküronyum, veküronyum, atraküryum ve roküronyum non-depolarizan blokörlerdir ve blokajı oluşturan taraftır, geri döndüren taraf değildir.",
+    "Sugammadeks slayta göre yalnız steroid yapılı ajanların (pankuronyum, rokuronyum, vekuronyum) hızlı geri döndürülmesi için onaylı yeni bir ajandır ve kolinesteraz inhibitörü değildir; kökteki atraküryumu kapsayan ve bu derste anlatılan genel antagonist sınıfı kolinesteraz inhibitörleridir. Baklofen ve dantrolen blokajı geri döndüren değil, santral ya da doğrudan kas düzeyinde etkili spazmolitiklerdir; flumazenil ise bu derste anlatılan nöromusküler blokaj antagonistleri arasında yer almaz.",
+    "Örnek: Ameliyat sonunda roküronyumun oluşturduğu blokajı kaldırmak için asetilkolinesteraz inhibitörü olan neostigmin verilir.",
+    "Tuzak: Öğrenci sugammadeksi yeni bir ajan olduğu için birinci tercih sanır; oysa slayttaki geri döndürme sınıfı kolinesteraz inhibitörleridir ve sugammadeks yalnız steroid yapılı blokörler için anılır.",
+    "2022-2023: Panküronyum, veküronyum, atraküryum ve roküronyum gibi ilaçların oluşturduğu nöromusküler blokajı geri döndüren ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Neostigmin.",
+    "Bu soru, non-depolarizan nöromusküler blokajı geri döndüren ilacı sorar ve gevşetici ile antagonistin ters etkisini bilmeyi bekler.",
+    "Neostigmin asetilkolinesterazı inhibe eder, kas son plağında asetilkolini artırır ve yarışmalı non-depolarizan blokajı antagonize eder; doğru cevap bu yüzden neostigmindir.",
+    "Slayta göre blokajı tersine çeviren ilaçlar kolinesteraz inhibitörleridir; kökte sayılan panküronyum, veküronyum, atraküryum ve roküronyum ise blokajı yapan non-depolarizan gevşeticilerdir.",
+    "Sugammadeks yalnız steroid yapılı ajanların (pankuronyum, rokuronyum, vekuronyum) geri döndürülmesi için anılır ve kolinesteraz inhibitörü değildir; dantrolen ve baklofen spazmolitiktir, flumazenil ise bu derste anlatılan nöromusküler blokaj antagonistleri arasında yer almaz.",
+    "Örnek: Non-depolarizan bir gevşeticinin etkisi bittikten sonra kasta asetilkolin artırılarak blokaj geri döndürülür; bunun için neostigmin kullanılır.",
+    "Tuzak: Öğrenci sugammadeksi yeni bir ajan olduğu için seçer ve kökteki atraküryumun steroid yapılı olmadığını gözden kaçırır; slayttaki antagonist sınıfı kolinesteraz inhibitörleridir.",
+    "2019-2020: Aşağıdakilerden hangisi oral yoldan alınan, GABA türevi olan, santral etki gösteren kas gevşetici ilaçtır?",
+    "Cevap: Baklofen.",
+    "Soru, oral yoldan alınan, GABA türevi ve santral etkili kas gevşeticiyi ayırt edip edemediğini ölçüyor.",
+    "Baklofen, p-klorofenil GABA yapısında, oral kullanım için tasarlanmış bir GABA türevidir ve GABAB reseptörlerini aktive eden GABA-mimetik bir ajandır; doğru cevap budur.",
+    "Baklofen spastisiteyi en az diazepam kadar azaltır, ama daha az sedasyon oluşturur; ayrıca dantrolenin yaptığı gibi genel kas güçsüzlüğü yapmaz.",
+    "Diazepam da spastisiteyi azaltır ama benzodiazepindir, GABAA sinapslarına etkir ve bir GABA türevi değildir; dantrolen kas lifinde kalsiyum salıverilmesini engeller ve santral etkili değildir. Karisoprodol ve meprobamat bu derste anlatılan GABA türevi gevşeticiler arasında yer almaz.",
+    "Örnek: Oral kullanım için tasarlanmış ve GABAB agonisti olan bir spazmolitik sorulursa cevap baklofendir.",
+    "Tuzak: Öğrenci diazepamı GABA ile ilişkili olduğu için seçer; oysa GABA türevi yapı ve GABAB agonizmi baklofene özgüdür ve dantrolen santral etkili değildir.",
+    "2020-2021: Aşağıdakilerden hangisi oral yoldan alınan, GABA türevi olan santral etkili kas gevşetici ilaçtır?",
+    "Cevap: Baklofen.",
+    "Bu soru, oral yoldan alınan GABA türevi santral etkili gevşeticinin baklofen olduğunu bilmeyi ölçüyor.",
+    "Baklofen oral kullanım için tasarlanmış bir GABA türevidir; GABAB reseptörlerini aktive ederek olasılıkla potasyum iletimini artırır ve hiperpolarizasyona yol açar.",
+    "Hiperpolarizasyon kalsiyum içe akışını azaltarak presinaptik inhibisyon oluşturur ve beyin ile omurilikte eksitatör nörotransmiter salıverilmesini düşürür; doğru cevap bu mekanizmayla baklofendir.",
+    "Dantrolen oral kullanılsa da GABA türevi değildir ve etkisini kas lifinde gösterir; diazepam benzodiazepindir ve GABAA sinapslarına etkir. Karisoprodol ve meprobamat bu derste anlatılan GABA türevi gevşeticiler arasında yer almaz.",
+    "Örnek: Spastisitesi olan bir hastaya oral GABAB agonisti olarak baklofen verilir.",
+    "Tuzak: Öğrenci GABA sözcüğünü görünce diazepamı seçer; oysa diazepam bir benzodiazepindir, GABA türevi olan ve GABAB agonisti olan baklofendir.",
+    "2020-2021: Primer etki yeri santral sinir sistemi olan çizgili kas gevşetici (miyorelaksan) ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Baklofen.",
+    "Soru, primer etki yeri santral sinir sistemi olan çizgili kas gevşeticiyi ayırt etmeyi istiyor.",
+    "Baklofen GABAB agonisti bir ajandır ve omurilikte presinaptik inhibisyonla eksitatör nörotransmiter salıverilmesini azaltır; ayrıca spastisiteli hastalarda P maddesi salıverilmesini inhibe ederek ağrıyı da azaltabilir.",
+    "Bu nedenle doğru cevap baklofendir; etkisini merkezi sinir sisteminde gösterir ve slayttaki merkezi etkili spazmolitiklerin tipik örneğidir.",
+    "Dantrolen çizgili kası gevşetir ama etkisini santralde değil kas lifinde, sarkoplazmik retikulumdan kalsiyum salıverilmesini engelleyerek gösterir. Süksinilkolin, panküronyum ve atraküryum nöromusküler blokördür; kas gevşetmelerini santral sinir sisteminde değil nöromusküler kavşakta sağlarlar ve spazmolitik değildir.",
+    "Örnek: Etki yeri merkezi sinir sistemi olan kas gevşetici sorulduğunda baklofen, doğrudan kas lifinde etkili olan ise dantrolendir.",
+    "Tuzak: Öğrenci çizgili kası gevşeten her ilacı santral etkili sanar ve dantrolen ya da nöromusküler blokörlerden birini seçer.",
+    "2020-2021: Alfa-2 adrenerjik reseptör agonisti olan santral etkili kas gevşetici ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Tizanidin.",
+    "Soru, alfa-2 adrenerjik agonist olan santral etkili kas gevşeticiyi bulmayı ölçüyor.",
+    "Tizanidin belirgin alfa-2 adrenoseptör agonistidir ve omurilikte hem presinaptik hem postsinaptik inhibisyonu güçlendirir; doğru cevap tizanidindir.",
+    "Tizanidin diğer alfa-2 agonistlerine kıyasla daha az kardiyovasküler yan etkiye yol açan dozlarda spastisiteyi azaltır ve gece verilerek sedasyonu kontrol altına alınabilir.",
+    "Baklofen spazmolitiktir ama GABAB agonistidir; diazepam benzodiazepindir ve GABA etkisini kolaylaştırır. Sugammadeks ve süksinilkolin nöromusküler blokaj ile ilgili ilaçlardır ve alfa-2 agonisti olarak anlatılmaz.",
+    "Örnek: Spastisitede alfa-2 adrenoseptör agonisti olarak kullanılan ve gece verilerek sedasyonu azaltılabilen ilaç tizanidindir.",
+    "Tuzak: Öğrenci baklofenle tizanidini karıştırır; baklofen GABAB agonisti, tizanidin alfa-2 agonistidir ve diazepam GABA etkisini kolaylaştıran benzodiazepindir.",
+    "2025-2026: Omurilik düzeyinde presinaptik alfa-2 adrenerjik reseptörleri uyararak eksitatör aminoasit salınımını azaltan, belirgin ağız kuruluğu, sedasyon ve hipotansiyon yan etkileri yapabilen santral etkili kas gevşetici hangisidir?",
+    "Cevap: Tizanidin.",
+    "Soru, birçok ipucu içeren bir tanımdan santral etkili ilacı çıkarmayı ister: omurilik düzeyinde presinaptik alfa-2 reseptör uyarılması, eksitatör aminoasit salınımında azalma ve ağız kuruluğu, sedasyon ile hipotansiyon.",
+    "Tizanidin omurilikte presinaptik ve postsinaptik inhibisyonu güçlendirir; belirgin olarak daha az kas güçsüzlüğüne neden olur, fakat sedasyon, hipotansiyon, baş dönmesi, ağız kuruluğu, halsizlik ve hepatotoksisite görülebilir.",
+    "Bu yan etki spektrumu hem alfa-2 agonisti etkisiyle hem de ağız kuruluğu ve hipotansiyonla uyumlu olduğundan doğru cevap tizanidindir.",
+    "Baklofen GABAB agonistidir ve diazepam GABAA sinapslarına etkir; ikisi de alfa-2 agonisti değildir. Dantrolen omurilikte değil kas lifinde etkilidir ve sarkoplazmik retikulumdan kalsiyum salıverilmesini engeller. Siklobenzaprin bu derste anlatılan santral etkili ilaçlar arasında yer almaz.",
+    "Örnek: Ağız kuruluğu ve hipotansiyon yapan, alfa-2 agonisti spazmolitik soruluyorsa tizanidin düşünülmelidir.",
+    "Tuzak: Öğrenci sedasyonu tek başına ipucu sayıp baklofen ya da diazepam seçer; asıl ayırt edici alfa-2 agonizmi, ağız kuruluğu ve hipotansiyondur.",
+    "2019-2020: Santral etkili kas gevşetici ilaçların aksine, aşağıdaki ilaçlardan hangisi kas liflerinde eksitasyon-kontraksiyon kenetlenmesini engelleyerek kas gücünde azalma meydana getirir?",
+    "Cevap: Dantrolen.",
+    "Soru, santral etkili gevşeticilerin aksine kas lifi düzeyinde etkili ilacı bulmayı ölçüyor.",
+    "Dantrolen eksitasyon-kontraksiyon kenetlenmesini engeller; ryanodin reseptörü olan RyR1'e bağlanarak kalsiyum kanallarının açılmasını bloke eder ve sarkoplazmik retikulumdan aktivatör kalsiyum salıverilmesini engeller.",
+    "Bu nedenle kas gücünde azalma yapar; doğru cevap dantrolendir ve slayttaki baklofenin aksine genel kas güçsüzlüğü oluşturan ilaç budur.",
+    "Tizanidin ve diazepam santral etkilidir; tizanidin alfa-2 agonistidir, diazepam GABA etkisini kolaylaştırır ve ikisinin de kas gücünde dantrolen kadar belirgin azalma yaptığı slaytta anlatılmaz. Neostigmin ve süksinilkolin nöromusküler kavşak düzeyinde etkili ilaçlardır ve santral etkili gevşetici değildir.",
+    "Örnek: Kalsiyumun sarkoplazmik retikulumdan RyR1 aracılığıyla salıverilmesini bloke eden ilaç dantrolendir.",
+    "Tuzak: Öğrenci kas gücünü azaltan her ilacı santral etkili sanar; oysa dantrolenin etkisi doğrudan kas lifindedir ve tizanidin ile diazepam santral etkilidir.",
+    "2020-2021: Özel bir uygulama yeri malign hipertermi tedavisi olan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Dantrolen.",
+    "Soru, dantrolenin özel uygulama yerini yani malign hipertermi tedavisini bilmeyi ölçüyor.",
+    "Malign hipertermi, kas hipermetabolizması ve şiddetli ateş yükselmesi ile karakterize bir durumdur ve slayta göre dantrolenin özel bir uygulama yeridir.",
+    "Dantrolen RyR1'e bağlanarak sarkoplazmik retikulumdan kalsiyum salıverilmesini engellediği için bu mekanizma, kasın hipermetabolik hâlini kontrol eden doğru cevabı açıklar.",
+    "Süksinilkolin ve sugammadeks nöromusküler blokajla ilgili ilaçlardır; botulinum toksini presinaptik asetilkolin salınımını inhibe eder ve spastisitede lokal enjeksiyonla kullanılır; baklofen GABAB agonisti spazmolitiktir. Bunların hiçbiri slaytta malign hipertermi tedavisi olarak anılmaz.",
+    "Örnek: Kas hipermetabolizması ve şiddetli ateş yükselmesi olan bir tablonun tedavisi için slayttaki ilaç dantrolendir.",
+    "Tuzak: Öğrenci malign hipertermiyi bir spastisite tablosu sanır ve baklofen ya da botulinum toksini gibi spazmolitik seçer.",
+    "2023-2024: Malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Dantrolen.",
+    "Soru, malign hipertermide kullanılan ilacın dantrolen olduğunu bilmeyi ölçüyor.",
+    "Malign hipertermi kas hipermetabolizması ve şiddetli ateş yükselmesi ile karakterizedir; dantrolen RyR1'e bağlanıp kalsiyum kanallarının açılmasını bloke ederek sarkoplazmik retikulumdan kalsiyum çıkışını engeller.",
+    "Kalp kası ve düz kaslar çok az etkilenir çünkü onların sarkoplazmik retikulumu farklı tip RyR kanalı, yani RyR2 içerir; doğru cevap bu mekanizmayla dantrolendir.",
+    "Süksinilkolin, neostigmin ve pankuronyum nöromusküler kavşakta etkili ilaçlardır ve slaytta malign hipertermi tedavisi olarak anılmaz; baklofen ise GABAB agonisti spazmolitiktir ve bu endikasyonu yoktur.",
+    "Örnek: Malign hipertermi geçiren bir hastada kas içindeki kalsiyum salıverilmesini durduran ilaç dantrolendir.",
+    "Tuzak: Öğrenci dantrolenin kalp ve düz kası da etkilediğini sanır; oysa onlarda RyR2 bulunduğu için etkilenme çok azdır. Ayrıca süksinilkolin gibi nöromusküler ilaçları malign hipertermi ile ilişkilendirmek slayttan değil tahminden gelir."
+   ],
+   "v": "a7aa184c02"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 11 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 11 çıkmış soru var; 0 tanesi öncüllü, 1 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 16, 33, 41, 44, 47, 48."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 11 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 11 çıkmış soru var; 0 tanesi öncüllü, 1 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 16, 33, 41, 44, 47, 48."
+   ],
+   "v": "57dd324f04"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar",
+     "metin": "Sık yapılan hata: Öğrenci olumsuz kökü gözden kaçırır ve non-depolarizan olan roküronyum, veküronyum, sisatrakuryum ya da panküronyumdan birini işaretler."
+    },
+    {
+     "baslik": "Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu",
+     "metin": "Sık yapılan hata: Öğrenci sugammadeksi yeni bir ajan olduğu için birinci tercih sanır; oysa slayttaki geri döndürme sınıfı kolinesteraz inhibitörleridir ve sugammadeks yalnız steroid yapılı blokörler için anılır. Ayrıca: Öğrenci sugammadeksi yeni bir ajan olduğu için seçer ve kökteki atraküryumun steroid yapılı olmadığını gözden kaçırır; slayttaki antagonist sınıfı kolinesteraz inhibitörleridir."
+    },
+    {
+     "baslik": "Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış",
+     "metin": "Sık yapılan hata: Öğrenci diazepamı GABA ile ilişkili olduğu için seçer; oysa GABA türevi yapı ve GABAB agonizmi baklofene özgüdür ve dantrolen santral etkili değildir. Ayrıca: Öğrenci GABA sözcüğünü görünce diazepamı seçer; oysa diazepam bir benzodiazepindir, GABA türevi olan ve GABAB agonisti olan baklofendir."
+    },
+    {
+     "baslik": "Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.",
+     "metin": "Sık yapılan hata: Öğrenci baklofenle tizanidini karıştırır; baklofen GABAB agonisti, tizanidin alfa-2 agonistidir ve diazepam GABA etkisini kolaylaştıran benzodiazepindir. Ayrıca: Öğrenci sedasyonu tek başına ipucu sayıp baklofen ya da diazepam seçer; asıl ayırt edici alfa-2 agonizmi, ağız kuruluğu ve hipotansiyondur."
+    },
+    {
+     "baslik": "İdrosilamid ve riluzol olasılıkla santral sinir sisteminde",
+     "metin": "Sık yapılan hata: Öğrenci kas gücünü azaltan her ilacı santral etkili sanar; oysa dantrolenin etkisi doğrudan kas lifindedir ve tizanidin ile diazepam santral etkilidir."
+    },
+    {
+     "baslik": "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını",
+     "metin": "Sık yapılan hata: Öğrenci malign hipertermiyi bir spastisite tablosu sanır ve baklofen ya da botulinum toksini gibi spazmolitik seçer. Ayrıca: Öğrenci dantrolenin kalp ve düz kası da etkilediğini sanır; oysa onlarda RyR2 bulunduğu için etkilenme çok azdır. Ayrıca süksinilkolin gibi nöromusküler ilaçları malign hipertermi ile ilişkilendirmek slayttan değil tahminden gelir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Süksinilkolin haricinde kullanılan tüm nöromusküler ilaçlar: Sık yapılan hata: Öğrenci olumsuz kökü gözden kaçırır ve non-depolarizan olan roküronyum, veküronyum, sisatrakuryum ya da panküronyumdan birini işaretler.",
+    "Kolinesteraz inhibitörleri non-depolarizan ilaçların oluşturduğu: Sık yapılan hata: Öğrenci sugammadeksi yeni bir ajan olduğu için birinci tercih sanır; oysa slayttaki geri döndürme sınıfı kolinesteraz inhibitörleridir ve sugammadeks yalnız steroid yapılı blokörler için anılır. Ayrıca: Öğrenci sugammadeksi yeni bir ajan olduğu için seçer ve kökteki atraküryumun steroid yapılı olmadığını gözden kaçırır; slayttaki antagonist sınıfı kolinesteraz inhibitörleridir.",
+    "Baklofen (p-klorofenil GABA), oral kullanım için tasarlanmış: Sık yapılan hata: Öğrenci diazepamı GABA ile ilişkili olduğu için seçer; oysa GABA türevi yapı ve GABAB agonizmi baklofene özgüdür ve dantrolen santral etkili değildir. Ayrıca: Öğrenci GABA sözcüğünü görünce diazepamı seçer; oysa diazepam bir benzodiazepindir, GABA türevi olan ve GABAB agonisti olan baklofendir.",
+    "Tizanidin belirgin α2-adrenoseptör agonisti etki gösterir.: Sık yapılan hata: Öğrenci baklofenle tizanidini karıştırır; baklofen GABAB agonisti, tizanidin alfa-2 agonistidir ve diazepam GABA etkisini kolaylaştıran benzodiazepindir. Ayrıca: Öğrenci sedasyonu tek başına ipucu sayıp baklofen ya da diazepam seçer; asıl ayırt edici alfa-2 agonizmi, ağız kuruluğu ve hipotansiyondur.",
+    "İdrosilamid ve riluzol olasılıkla santral sinir sisteminde: Sık yapılan hata: Öğrenci kas gücünü azaltan her ilacı santral etkili sanar; oysa dantrolenin etkisi doğrudan kas lifindedir ve tizanidin ile diazepam santral etkilidir.",
+    "Dantrolen RyR1'e bağlanarak kalsiyum kanallarının açılmasını: Sık yapılan hata: Öğrenci malign hipertermiyi bir spastisite tablosu sanır ve baklofen ya da botulinum toksini gibi spazmolitik seçer. Ayrıca: Öğrenci dantrolenin kalp ve düz kası da etkilediğini sanır; oysa onlarda RyR2 bulunduğu için etkilenme çok azdır. Ayrıca süksinilkolin gibi nöromusküler ilaçları malign hipertermi ile ilişkilendirmek slayttan değil tahminden gelir.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "556015e7e5"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

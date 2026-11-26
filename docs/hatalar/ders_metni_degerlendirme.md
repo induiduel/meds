@@ -128,3 +128,15 @@
 - **Kök neden:** `esle()` PDF adını ders konusuyla 5 harf kök örtüşmesiyle eşler; kısaltma adlar (NGB, YAB, ASE-SVH, WONCA), " - Tekrar Notu" eki ve ✔️/🌟 klasör adları puanı eşik altına düşürür. Drive'a toplu dosya eklenince belirsiz eşlemeler birikti; hat yalnız `ders/<key>.json`'u okuduğu için sessizce eksik kaldı (kapı HATA verse de çıktının sonu `tail` ile kesilince görünmedi).
 - **Çözüm:** 50 dosya içerik/başlıkla doğrulanıp `scripts/uretim/ogrenci_sentez/eslesme.json`'a elle yazıldı (Göz ve dersler arası "Çağrışım Atlası" bilinçli `[]`). Kapı 0 HATA, 53 derse yayın.
 - **Kural:** Sentez çıktısı `tail` ile kesilmez; `kapi: N HATA` satırı her koşuda okunur, 0 değilse yeni ders işine geçilmez. Drive'a yeni klasör/ad biçimi gelince önce `eslesme.json` güncellenir; kısaltma adlı dosya için ders kaydındaki konu ile içerik başlığı karşılaştırılır.
+
+### H694 — Görüntü (taranmış) ders PDF'i: kanıt kapısı, terim ve kısaltma boş kaldı (2026-11-26, k2-61)
+- **Belirti:** k2-61 PDF'inde metin katmanı yoktu: `sayfalar.json` boş, E1 kanıtları görüntüden yazıldı; OCR sonrası kapı 67 HATA; `terim_sozlugu otomatik` 0 terim.
+- **Kök neden:** Hat metin katmanını varsayıyor; görüntüleyiciye konan Drive asıl dosyası da görüntü olduğundan terim/kısaltma betiği sunucu PDF'inde sözcük bulamıyor. OCR bir sözcüğü yanlış okudu (s16 "YOK"→"VOR") ve kısaltma sanıldı.
+- **Çözüm:** `orijinal_goruntu.pdf` saklanıp `ocrmypdf -l tur+eng --force-ocr` ile metin katmanı eklendi, hazırlık yeniden koşuldu; bozuk sayfa `--oversample 400` ile tek başına yeniden OCR'landı; kanıtlar OCR satırına indirildi (doğru biçim `kanit_goruntu`); drive_root'a OCR'lı kopya kondu (terim 0 → 81).
+- **Kural:** E0'da `sayfalar.json` metinli sayfa oranı düşükse E1'den ÖNCE OCR yapılır; görüntüleyiciye metin katmanlı PDF konur.
+
+### H695 — Kapak sayfasının bilgi paketi kazanım sayıldı (2026-11-26, k2-60)
+- **Belirti:** `ders_analizi --dogrula k2-60`: "kazanim 1: kesik cümle: Kapak: İskelet Kası Gevşeticileri".
+- **Kök neden:** E1 paketinde onem 0 kapak paketi (`bp1`) vardı; `kazanim_madde` yalnız "Görsel:"/"Kaynak" paketlerini eliyor.
+- **Çözüm:** Paketten `bp1` çıkarıldı (kapı gevşetilmedi). k2-64'te de aynı paket var; yeniden üretimde aynı hata çıkar.
+- **Kural:** E1 paketine kapak/başlık sayfası bilgi paketi yazılmaz.

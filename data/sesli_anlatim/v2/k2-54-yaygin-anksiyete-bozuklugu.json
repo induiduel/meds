@@ -4231,6 +4231,34 @@
        "id": "k2-54-c0152"
       },
       {
+       "ses": "Dalgalı seyirde belirtiler dönem dönem gerileyebilir; bu döneme remisyon denir ve belirtiler sonra yeniden ortaya çıkabilir.",
+       "ekran": "Dalgalı seyir: **remisyon** sonrası belirtiler yeniden çıkabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "remisyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 22,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "psk-s14-b08"
+       },
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Kronik ve dalgalı seyirlidir; kendiliğinden tam düzelme"
+        ],
+        "sekil": null,
+        "tablo": null
+       },
+       "id": "k2-54-c0180"
+      },
+      {
        "ses": "Hastaların çoğu \"kendimi bildim bileli endişeliyim\" der.",
        "ekran": "\"Kendimi bildim bileli endişeliyim\"",
        "duzey": 0,
@@ -4388,7 +4416,11 @@
         "oncelik": "A",
         "birim": "psk-s14-b08"
        },
-       "hoca": null,
+       "hoca": {
+        "id": "hv-k2-54-03",
+        "kategori": "onemli",
+        "ifade": "mutlaka … sorgulanması gerekiyor"
+       },
        "slayt": {
         "sayfa": 22,
         "satir": [

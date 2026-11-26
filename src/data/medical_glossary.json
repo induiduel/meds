@@ -119320,5 +119320,62 @@
         "alinti": "Ortak mekanizmalar: ektopik deşarj, iyon kanalı ekspresyonunda değişiklik, santral sensitizasyon ve disinhibisyon"
       }
     ]
+  },
+  "fagerström nikotin bağımlılık testi": {
+    "term": "Fagerström Nikotin Bağımlılık Testi",
+    "aliases": [
+      "Fagerström testi",
+      "FTND"
+    ],
+    "category": "olcek",
+    "definition": "Nikotin bağımlılığının şiddetini değerlendiren, rutinde en çok tercih edilen ölçektir; 0-2 puan düşük, 3-7 orta, 8-10 yüksek düzeyde bağımlılık gösterir.",
+    "description": "Nikotin bağımlılığının şiddetini değerlendiren, rutinde en çok tercih edilen ölçektir; 0-2 puan düşük, 3-7 orta, 8-10 yüksek düzeyde bağımlılık gösterir.",
+    "kaynak": "k2-61 slayt (2026-11-26)"
+  },
+  "nikotin replasman tedavisi": {
+    "term": "Nikotin Replasman Tedavisi",
+    "aliases": [
+      "Nikotin yerine koyma tedavisi",
+      "NRT",
+      "NYKT"
+    ],
+    "category": "tedavi",
+    "definition": "Nikotin reseptörlerini uyararak aşerme ve yoksunluk bulgularını hızla azaltan tedavidir; bant, sakız, sprey, dil altı tablet ve inhaler biçimleri vardır.",
+    "description": "Nikotin reseptörlerini uyararak aşerme ve yoksunluk bulgularını hızla azaltan tedavidir; bant, sakız, sprey, dil altı tablet ve inhaler biçimleri vardır.",
+    "kaynak": "k2-61 slayt (2026-11-26)"
+  },
+  "bupropion": {
+    "term": "Bupropion",
+    "aliases": [],
+    "category": "ilac",
+    "definition": "Dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin beyindeki etkilerini taklit eden ve yoksunluğu azaltan sigara bırakma ilacıdır.",
+    "description": "Dopaminin ve daha az norepinefrinin nöronal geri alımını bloke ederek nikotinin beyindeki etkilerini taklit eden ve yoksunluğu azaltan sigara bırakma ilacıdır.",
+    "kaynak": "k2-61 slayt (2026-11-26)"
+  },
+  "vareniklin": {
+    "term": "Vareniklin",
+    "aliases": [],
+    "category": "ilac",
+    "definition": "Alfa4-beta2 nikotinik asetilkolin reseptörlerinin seçici parsiyel agonisti olan sigara bırakma ilacıdır; içerdiği nitrozamin nedeniyle piyasadan kaldırılmıştır.",
+    "description": "Alfa4-beta2 nikotinik asetilkolin reseptörlerinin seçici parsiyel agonisti olan sigara bırakma ilacıdır; içerdiği nitrozamin nedeniyle piyasadan kaldırılmıştır.",
+    "kaynak": "k2-61 slayt (2026-11-26)"
+  },
+  "sitizin": {
+    "term": "Sitizin",
+    "aliases": [],
+    "category": "ilac",
+    "definition": "Yapısı nikotine çok benzeyen, alfa4-beta2 nikotinik reseptörlerin kısmi agonisti olan bitki kökenli sigara bırakma ilacıdır.",
+    "description": "Yapısı nikotine çok benzeyen, alfa4-beta2 nikotinik reseptörlerin kısmi agonisti olan bitki kökenli sigara bırakma ilacıdır.",
+    "kaynak": "k2-61 slayt (2026-11-26)"
+  },
+  "mpower": {
+    "term": "MPOWER",
+    "aliases": [
+      "M-POWER"
+    ],
+    "category": "strateji",
+    "definition": "Tütün kontrolünde izlenen stratejidir; izlemek, korumak, bırakmaya yardım etmek, uyarmak, reklam yasağını desteklemek ve vergileri artırmak adımlarından oluşur.",
+    "description": "Tütün kontrolünde izlenen stratejidir; izlemek, korumak, bırakmaya yardım etmek, uyarmak, reklam yasağını desteklemek ve vergileri artırmak adımlarından oluşur.",
+    "kaynak": "k2-61 slayt (2026-11-26)"
   }
 }

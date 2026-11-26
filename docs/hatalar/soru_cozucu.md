@@ -194,3 +194,9 @@
   PDF sayfaları `topla.py`'de sayfa olarak kalır; denetçi PDF görselinden doğrulayınca madde doğru sayfaya bağlanır.
 - **Kural:** Kapı eşiği, kaynakta olmayan bilgiyi zorla "kapsatmaya" iten biçimde konmaz; kapsam oranı uyarıdır, doğruluk denetçidedir.
   Seslendirilen metinde Yunan harfi ve iki noktalı oran yazılmaz.
+
+### H697 — Çözücü kapısının "doğru" zorunluluğu dolgu döngüsü üretti (2026-11-26, k2-60/k2-61)
+- **Belirti:** Bağımsız denetçi k2-61'de 1, k2-60'ta 2 tur KALIR verdi: doğru şıklar "…doğru yanıt budur", sonra "doğru adresi/ucu/basamak" kalıbıyla bitiyordu.
+- **Kök neden:** `cozucu_dogrula.py:120` doğru şık açıklamasında "doğru" sözcüğünü şart koşuyor; yazar bunu içeriksiz onay cümlesiyle karşılıyor, denetçi dolgu sayıyor.
+- **Çözüm:** Kapı gevşetilmedi; denetçinin iyi bulduğu örnek modeline göre yazıldı: önce şıkka özgü kaynak bilgisi, "doğru" yalnız o bilginin ölçüte neden uyduğunu söyleyen cümlede bir kez; kalıp tamlama yok, kapanış tekrar etmez.
+- **Kural:** Soru yazım brifine bu model baştan konur; açık iş: kapı şartını "bilgi cümlesi içinde" denetimine çevirmek.
