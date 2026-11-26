@@ -15,7 +15,7 @@
 import type express from 'express';
 import { isRequestAdminVerified } from './adminAuth';
 import { requestUser } from './kimlikDogrulama';
-import { erisimEpostasiIzinli, ERISIM_KAPALI_KODU, ERISIM_KAPALI_MESAJI } from './erisimSiniri';
+import { ERISIM_SINIRI_ACIK, erisimEpostasiIzinli, ERISIM_KAPALI_KODU, ERISIM_KAPALI_MESAJI } from './erisimSiniri';
 
 /** Kapıdan muaf yollar (kimlik ve tanı uçları; veri döndürmezler) */
 const MUAF = [
@@ -42,6 +42,7 @@ export function erisimKapisi(opts: {
 } = {}): express.RequestHandler {
   const izinli = async (u: { uid?: string; email?: string | null } | null | undefined): Promise<boolean> => {
     if (!u?.uid) return false;
+    if (!ERISIM_SINIRI_ACIK) return true; // sınır kapalı: geçerli jetonlu her hesap
     try { if (opts.rolIzinli?.(u.uid)) return true; } catch { /* */ }
     const email = String(u.email || '').trim().toLowerCase();
     if (!erisimEpostasiIzinli(email)) return false;

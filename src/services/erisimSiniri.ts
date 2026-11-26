@@ -19,13 +19,17 @@ export const ERISIM_EPOSTALARI: readonly string[] = [
   'nofrostlife@gmail.com',
 ];
 
+/** 2026-11-26 kullanıcı kararı: sınır KAPALI — giriş yapan her hesap girer; yönetici/moderatör dışındakiler
+ *  tasarruf kipinde açılır (src/tasarruf/bayrak.ts). Sınırı geri açmak için true. */
+export const ERISIM_SINIRI_ACIK = false;
+
 const IZINLI = new Set(ERISIM_EPOSTALARI.map((e) => e.trim().toLowerCase()));
 
 /** E-posta izinli mi (boş e-posta izinli sayılmaz). */
 export function erisimEpostasiIzinli(email: string | null | undefined): boolean {
   const e = String(email || '').trim().toLowerCase();
   if (!e) return false;
-  return IZINLI.has(e);
+  return !ERISIM_SINIRI_ACIK || IZINLI.has(e);
 }
 
 export const ERISIM_KAPALI_KODU = 'INTERNAL_ERROR';
