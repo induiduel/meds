@@ -1,6 +1,6 @@
 # Aşama kuralları — kaynak
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 56 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 57 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
@@ -227,10 +227,14 @@
 ### H648 — Değerlendirme paketinin kazanım başlığı ilk maddeyle örtüşmüyor; hata ancak çıkmış analizi kapısında yakalanıyor (2026-11-23, k2-47…k2-56)
 - **Kural:** E1 yazımında her bilgi paketinin ilk maddesi başlığın özetidir (≥2 ortak kök) ve slayt_supheli satırı olamaz. Kalıcı çözüm (2026-11-24): `degerlendirme_dogrula.py` aynı örtüşmeyi denetler — ders analizi henüz yoksa (E1'deki yeni ders) HATA, analizi olan eski derste UYARI.
 
+
 ### H656 — Çıkmış PDF toplamasında üç ayrı kök neden: ders etiketi taşması, kaynak metnin kendi OCR artığı, sızmış sorular (2026-11-24)
 - **Önleme kuralı:** PDF'ten toplu soru çıkarırken (a) ders etiketi asla sayfalar arası taşınmaz, (b) kaynak metnin kendi OCR hatası
   "OCR hatası" diye düzeltilmez — yalnız kanıtlı düzeltme listesiyle ve izlenerek, (c) bir kayıtta 5'ten çok şık ya da şık içinde
   cue sözcüğü görülürse ayrıştırıcı düzeltilir, (d) cevap yoksa boş bırakılır ve `uyarilar`'a yazılır, (e) yıl/ branş yalnız
   doğrulanmış DB eşleşmesinden devralınır ve kaynağı etiketlenir.
 
+
+### H682 — İçerik geliştirici Drive'ına eklenen "Tekrar Notları" ve yeniden adlandırılan klasörler eşlenmedi; hoca vurguları 30+ derse ulaşmıyordu (2026-11-25)
+- **Kural:** Sentez çıktısı `tail` ile kesilmez; `kapi: N HATA` satırı her koşuda okunur, 0 değilse yeni ders işine geçilmez. Drive'a yeni klasör/ad biçimi gelince önce `eslesme.json` güncellenir; kısaltma adlı dosya için ders kaydındaki konu ile içerik başlığı karşılaştırılır.
 

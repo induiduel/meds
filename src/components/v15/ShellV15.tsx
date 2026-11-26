@@ -54,6 +54,7 @@ import { TumSayfalarV15, type Arac } from './TumSayfalarV15';
 import { useV15BaslikOku } from './baslik';
 import { kapsulAc, kronometreAc } from './kronometreOlay';
 import { Target } from 'lucide-react';
+import { useAkis } from '../../utils/appearance';
 import { IpadGeriHap, useIpadPencere } from '../shell/ipadPencere';
 import { MENU_SAYFALARI, geriGit, geriHedefe, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
@@ -200,7 +201,11 @@ function useAraclar(kapat: () => void, ek: { onPdf?: () => void; onOffline?: () 
 const AC_KEY = 'medsoru_v15_menu_acik';
 const acikOku = (): string[] | null => { try { return JSON.parse(localStorage.getItem(AC_KEY) || 'null'); } catch { return null; } };
 
-export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user }) => {
+export const SideNavV15: React.FC<SideNavProps> = (props) => {
+  // H685: v18 · Akış iskeletinde kenar menüsü yok; gezinme her genişlikte yüzen hap menüde (TabBarV15 · v18-ada)
+  return useAkis() ? null : <SideNavV15Ic {...props} />;
+};
+const SideNavV15Ic: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user }) => {
   const [railMenu, setRailMenu] = useState(false);
   useEffect(() => setRailMenu(false), [active]);
   const railAraclar = useAraclar(() => setRailMenu(false));
@@ -522,6 +527,7 @@ const greeting = (user: AppUser | null) => {
  * ============================================================================= */
 export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf, onOffline }) => {
   const sekme = sekmeOf(active);
+  const v18 = useAkis();
   const badges = useBadges();
   const [menu, setMenu] = useState(false);
   const araclar = useAraclar(() => setMenu(false), { onPdf, onOffline });
@@ -542,7 +548,7 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
 
   return (
     <>
-      <nav aria-label="Alt gezinme" className="v15-tabs ms-hide-on-kb print:hidden">
+      <nav aria-label="Alt gezinme" className={`v15-tabs ms-hide-on-kb print:hidden${v18 ? ' v18-ada' : ''}`}>
         {V15_SECTIONS.filter((s) => s.id !== 'kaynaklar' && s.id !== 'eglence').map((s) => {
           const Icon = s.icon;
           const on = sekme === s.id;

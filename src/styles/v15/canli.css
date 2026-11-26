@@ -26,16 +26,16 @@
 }
 
 /* ---- Yüzeyler ---- */
-:root[data-v18='on'] #ana-icerik :is(.v15-card, [class*='-kart'], [class*='-card'], [class*='-kutu'], [class*='-panel'], [class*='-pano']):not([class*='halka']):not([class*='-av']):not([class*='nokta']):not([class*='ring']):not(.kd *) {
+:root[data-v18='on'] #ana-icerik :is(.v15-card, [class$='-kart'], [class*='-kart '], [class$='-card'], [class*='-card '], [class$='-kutu'], [class*='-kutu '], [class$='-panel'], [class*='-panel '], [class$='-pano'], [class*='-pano ']):not([class*='halka']):not([class*='-av']):not([class*='nokta']):not([class*='ring']):not(.kd *) {
   border: 1px solid var(--cn-hat) !important; border-radius: var(--cn-r) !important;
   box-shadow: var(--cn-golge) !important; background-color: var(--cn-yuzey);
   transition: border-color .18s, box-shadow .18s var(--cn-ease), transform .18s var(--cn-ease);
 }
-:root[data-v18='on'] #ana-icerik :is(a, button):is(.v15-card, [class*='-kart'], [class*='-card']):hover {
+:root[data-v18='on'] #ana-icerik :is(a, button):is(.v15-card, [class$='-kart'], [class*='-kart '], [class$='-card'], [class*='-card ']):hover {
   border-color: var(--cn-hat-g) !important; box-shadow: var(--cn-golge-h) !important; transform: translateY(-1px);
 }
 /* İç içe yüzeyde gölge yalnız dışta */
-:root[data-v18='on'] #ana-icerik :is(.v15-card, [class*='-kart'], [class*='-card'], [class*='-kutu'], [class*='-panel'], [class*='-pano'], .kd) :is(.v15-card, [class*='-kart'], [class*='-card'], [class*='-kutu'], [class*='-panel'], [class*='-pano']) {
+:root[data-v18='on'] #ana-icerik :is(.v15-card, [class$='-kart'], [class*='-kart '], [class$='-card'], [class*='-card '], [class$='-kutu'], [class*='-kutu '], [class$='-panel'], [class*='-panel '], [class$='-pano'], [class*='-pano '], .kd) :is(.v15-card, [class$='-kart'], [class*='-kart '], [class$='-card'], [class*='-card '], [class$='-kutu'], [class*='-kutu '], [class$='-panel'], [class*='-panel '], [class$='-pano'], [class*='-pano ']) {
   box-shadow: none !important;
 }
 
@@ -92,7 +92,7 @@
 :root[data-v18='on'] #ana-icerik :is(input, select, textarea):focus-visible { border-color: var(--color-ink) !important; outline: 3px solid color-mix(in oklab, var(--color-ink) 12%, transparent); }
 
 /* ---- Simge kutuları: tek renk ---- */
-:root[data-v18='on'] #ana-icerik :is(.v15-tile, [class$='-ic']):not(.t15-surdur-ic):not(.kd-ic) {
+:root[data-v18='on'] #ana-icerik :is(.v15-tile, [class$='-ic']):not(.t15-surdur-ic):not(.kd-ic):not(.akd-ic):not(.ak-ikon) {
   border: 1px solid var(--cn-hat) !important; border-radius: var(--cn-r-s) !important; background: var(--cn-zemin) !important; color: var(--color-ink) !important;
 }
 
@@ -113,6 +113,16 @@
   & .sc-sik:active { transform: scale(.99); }
   & .sc-sik > b { border-radius: 999px; }
   & .sc-sik.is-dogru { border-color: var(--cn-yesil); background: color-mix(in oklab, var(--cn-yesil) 8%, var(--cn-yuzey)); }
+}
+
+/* Sesli soru çözücü: oynat, ilerleme ve ana yardım düğmesi siyah; şıklar beyaz kart */
+:root[data-v18='on'] .sc {
+  & .sc-buyuk { background: var(--color-ink); color: var(--color-white); box-shadow: var(--cn-golge-h); }
+  & .sc-seg.is-simdi { background: var(--color-ink); }
+  & .sc-ybtn { border: 1px solid var(--cn-hat); background: var(--cn-yuzey); color: var(--color-ink); }
+  & .sc-ybtn:last-child { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+  & .sc-sik { background: var(--cn-yuzey); }
+  & .sc-ikon { border-radius: 999px; }
 }
 
 /* ---- Çıkmış sorular ---- */
@@ -161,6 +171,14 @@
   & .bsl15-cubuk i { background: var(--cn-yesil); }
 }
 
+/* Sesli ders oynatıcı: ilerleme yeşil, tutamaç siyah, sağ araç simgesi siyah hap */
+:root[data-v18='on'] {
+  & .cd-bparca { background: color-mix(in oklab, var(--color-ink) 10%, transparent); }
+  & .cd-bparca > i { background: var(--cn-yesil); }
+  & .cd-tutamac { background: var(--color-ink); box-shadow: 0 0 0 3px var(--cn-yuzey); }
+  & .stf-ic { background: var(--color-ink); color: var(--color-white); }
+}
+
 /* Ders sürümü seçici: seçili/güncel siyah hap (renk yalnız durum için) */
 :root[data-v18='on'] :is(.sl15-surum, .dd15-surum) a:is(.is-on, .is-yeni) { background: var(--color-ink); color: var(--color-white); border-color: var(--color-ink); }
 
@@ -171,8 +189,42 @@
   & .v15-tab[aria-current='page'] .v15-tab-l { color: var(--color-ink); font-weight: 600; }
 }
 
+/* Çerçevesiz liste kartları (iç boşluğu 0, satırlar kenara dayanıyordu; H686) */
+:root[data-v18='on'] #ana-icerik :is(.ia15-kart, .pf15-liste, .pg15-l, .mz-ne.is-kart) { padding: 6px 14px; }
+:root[data-v18='on'] #ana-icerik .ia15-kart .ia15-bas { padding-top: 8px; }
+
 /* Giriş hareketi: yalnız transform (H677, içerik hep görünür) */
 @media (prefers-reduced-motion: no-preference) {
   :root[data-v18='on'] #ana-icerik :is(.kd, .t15-surdur, .sl15-grup) { animation: cn-gel .4s var(--cn-ease) both; }
 }
 @keyframes cn-gel { from { transform: translateY(8px); } }
+
+/* =============================================================================
+ * H685 · v18 Akış iskeleti — kabuk: kenar menüsü yok, gezinme her genişlikte altta yüzen hap menü (.v18-ada).
+ * Oynatıcı (cd-dock) adanın üstünü ölçerek (.v15-tabs) kendini adanın hemen üstüne koyar.
+ * ============================================================================= */
+html:root[data-v15='on'][data-v18='on'] { --sh-side-w: 0px; --sh-tabs-h: 84px; }
+html:root[data-v15='on'][data-v18='on'] .sh-main { padding-bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 24px); }
+html:root[data-v15='on'][data-v18='on'].cd-dock-acik .sh-main { padding-bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 24px + var(--cd-dock-h, 0px)); }
+html:root[data-v15='on'][data-v18='on'] .v15-tabs.v18-ada {
+  position: fixed; z-index: 40; inset: auto auto calc(env(safe-area-inset-bottom, 0px) + 12px) 50%; transform: translateX(-50%);
+  display: flex; gap: 2px; width: max-content; max-width: calc(100vw - 24px); padding: 6px; border: 1px solid var(--cn-hat); border-radius: 999px;
+  background: color-mix(in oklab, var(--cn-yuzey) 86%, transparent); backdrop-filter: saturate(1.5) blur(16px); -webkit-backdrop-filter: saturate(1.5) blur(16px);
+  box-shadow: var(--cn-golge-h);
+  & .v15-tab { min-height: 48px; min-width: 60px; flex-direction: row; gap: 6px; padding: 0 14px; border-radius: 999px; color: var(--color-ink-2); transition: background-color .2s var(--cn-ease); }
+  & .v15-tab-pill { width: auto; height: auto; background: none !important; color: inherit !important; }
+  & .v15-tab-pill svg { width: 20px; height: 20px; }
+  & .v15-tab-l { font: 600 13px/1 var(--font-sans); }
+  & .v15-tab:not([aria-current='page']) .v15-tab-l { display: none; }
+  & .v15-tab[aria-current='page'] { background: var(--color-ink); color: var(--color-white); }
+  & .v15-tab[aria-current='page'] .v15-tab-l { color: inherit; }
+  & .v15-tab:not([aria-current='page']):hover { background: color-mix(in oklab, var(--color-ink) 7%, transparent); }
+}
+@media (max-width: 380px) { html:root[data-v15='on'][data-v18='on'] .v15-tabs.v18-ada .v15-tab { min-width: 52px; padding: 0 12px; } }
+/* Mini oynatıcı adanın üstünde siyah şerit */
+html:root[data-v15='on'][data-v18='on'] .cd-dock.is-mini {
+  left: 50%; right: auto; width: min(560px, calc(100vw - 24px)); transform: translateX(-50%); padding: 0 0 8px;
+  & .cd-mini { background: var(--color-ink); color: var(--color-white); border: 0; border-radius: 20px; box-shadow: var(--cn-golge-h); }
+  & .cd-mini :is(button, a, svg) { color: inherit; }
+  & .cd-mini-kare { background: color-mix(in oklab, var(--color-white) 14%, transparent); color: var(--color-white); }
+}

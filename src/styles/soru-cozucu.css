@@ -15,7 +15,7 @@
 .sc.is-tam .sc-tam { background: var(--color-accent-soft); color: var(--color-accent) !important; }
 .sc.is-tam .sc-ust { padding-block: 4px; }
 .sc.is-tam .sc-sahne { padding: 12px 12px 18px; }
-@keyframes sc-in { from { opacity: 0; transform: scale(.985); } }
+@keyframes sc-in { from { transform: scale(.985); } } /* H686: opacity yok, donmuş zaman çizelgesinde yarı saydam kalıyordu */
 .sc button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; color: inherit; }
 .sc button:disabled { cursor: default; }
 .sc :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
@@ -76,7 +76,7 @@
 /* sahne */
 .sc-sahne { flex: 1 1 0%; min-height: 0; width: 100%; box-sizing: border-box; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 18px 16px 24px; }
 .sc-icerik { width: 100%; max-width: var(--sc-w); margin: 0 auto; display: flex; flex-direction: column; gap: 12px; zoom: var(--sc-zoom, 1); animation: sc-sahne .28s var(--mo-ease, ease) backwards; }
-@keyframes sc-sahne { from { opacity: 0; transform: translateY(8px); } }
+@keyframes sc-sahne { from { transform: translateY(8px); } } /* H686 */
 .sc-bos { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--color-ink-3); text-align: center; zoom: var(--sc-zoom, 1); }
 
 .sc-asistan { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--color-ink-3); }

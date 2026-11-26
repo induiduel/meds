@@ -1,6 +1,8 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { linkClick, navigateTo } from '../../../router';
+import { useAkis } from '../../../utils/appearance';
+import '../../../styles/v18/dizin.css';
 
 /**
  * Klinik dizin (H676, Figma "MeDSor v15 · Minimal" › Klinik/Dizin satırı). Merkez sayfalarının karo + kart ızgarası
@@ -20,8 +22,40 @@ export interface DizinOge {
 }
 
 export function KlinikDizin({ harf, baslik, ogeler, baslangic = 1, id }: { harf?: string; baslik: string; ogeler: DizinOge[]; baslangic?: number; id?: string }) {
+  const akis = useAkis();
   if (!ogeler.length) return null;
   const hid = id ?? `kd-${baslik.toLocaleLowerCase('tr-TR').replace(/[^a-zçğıöşü0-9]+/g, '-')}`;
+  // H687 · v18 Akış: numaralı satır listesi yerine solda yapışkan bölüm rayı + sağda simge karolu kart ızgarası
+  if (akis) {
+    return (
+      <section className="akd" aria-labelledby={hid}>
+        <header className="akd-ray">
+          <h2 id={hid} className="akd-h">{baslik}</h2>
+          <span className="akd-say">{ogeler.length} öge</span>
+        </header>
+        <ul className="akd-l" role="list">
+          {ogeler.map((o) => {
+            const I = o.ikon;
+            const ic = (
+              <>
+                <span className="akd-ust">
+                  {I ? <span className="akd-ic" aria-hidden><I /></span> : <span />}
+                  {o.meta && <span className="akd-meta">{o.meta}</span>}
+                </span>
+                <b className="akd-ad">{o.ad}{o.etiket && <span className="akd-et">{o.etiket}</span>}</b>
+                {o.ne && <span className="akd-ne">{o.ne}</span>}
+              </>
+            );
+            return (
+              <li key={o.id} className={o.soluk ? 'is-soluk' : undefined}>
+                {o.url ? <a className="akd-k" href={o.url} onClick={linkClick(() => navigateTo(o.url!))}>{ic}</a> : <div className="akd-k">{ic}</div>}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    );
+  }
   return (
     <section className="kd" aria-labelledby={hid}>
       <h2 id={hid} className="kd-h">

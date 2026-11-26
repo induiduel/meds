@@ -601,3 +601,9 @@ export function useAppearance() {
   const custom = a.customAccents?.[`${a.mode}:${pal.id}`];
   return { ...a, palette: a.palettes[a.mode], accent: custom ? undefined : findAccent(pal, a.accents?.[`${a.mode}:${pal.id}`])?.id, customAccent: custom, set: setAppearance };
 }
+
+/** v18 · Akış iskeleti etkin mi (applyAppearance'taki data-v18 koşuluyla aynı; H685) */
+export function useAkis(): boolean {
+  const a = useAppearance();
+  return a.design === 'v12' && !!a.v15 && !!a.v18;
+}

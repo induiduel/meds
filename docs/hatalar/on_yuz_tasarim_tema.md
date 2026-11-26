@@ -270,3 +270,27 @@
 - **Çözüm:** cizelge içe aktarımı kaldırıldı; `styles/v15/canli.css` yalnız `:root[data-v18='on']` altında (appearance `v18`, Ayarlar › Görünüm ve Tasarruf Ayarlar'da seçici); `.ks15-dug` çip listesinden çıkarıldı, siyah hap; sesli liste grupları kart (flex-shrink 0, kırpılma yok); `tasarruf/bayrak.ts` parametreyi modül yüklenirken okuyup `medsor_tasarruf_bot`'a yazar, yalnız aiTest oturumunda uygulanır.
 - **Kural:** yeni görünüm dili önce seçmeli katman olarak (`data-vNN`) gelir, varsayılanı ezmez; genel çip/kart seçicisi koyu zeminli denetimleri dışlar; adres parametresi okuyan bayrak yönlendirmeden önce, modül yüklenirken okur.
 - **Ek (H681):** v18'de `.kd { overflow:hidden }` ızgara öğesinin otomatik en küçük yüksekliğini 0 yaptı (kaydırma kabı sayılır), Kamplar dizini sıkışıp alttaki karta bindi → `overflow: clip`. Kural: ızgara/flex öğesinde köşe kırpması `clip` ile yapılır.
+
+### H686 — Hata ayıklama turu: v18 genel kart seçicisi alt parçaları çerçeveliyordu; çözücü açılışı yarı saydam kalıyordu (2026-11-25)
+- **Belirti:** v18'de Kamplar kart başlığı (`k15-kart-t`) çerçeveli kutu oldu, İlk adımlar listesi kartın kenarına dayandı; sesli çözücü açılırken alttaki liste ekranın arkasından görünüyordu.
+- **Kök neden:** (1) `[class*='-kart']` alt dizgi eşleşmesi `-kart-t`, `-kart-ic` gibi iç parçaları da yakaladı; iç boşluğu 0 olan çerçevesiz listelere çerçeve eklendi. (2) `sc-in`/`sc-sahne` açılış animasyonları `opacity: 0` ile başlıyordu; zaman çizelgesi duran sekmede ekran yarı saydam kaldı (H677 ile aynı sınıf).
+- **Çözüm:** canli.css seçicileri sınıf adı SONU eşleşmesine çevrildi (`[class$='-kart'], [class*='-kart ']`); çerçevesiz liste kartlarına v18'de iç boşluk; `sc-in`/`sc-sahne` yalnız transform. Tarama: 14 sayfa × v15/v18 × açık/koyu × telefon/tablet/masaüstü; taşma, kırpık metin, kontrast (<3), kenara yapışan metin denetimi.
+- **Kural:** genel yüzey seçicisi sınıf parçasıyla değil sınıf sonuyla eşleşir; sayfa/tam ekran açılışında opacity animasyonu yok. Renk kontrastını betikle ölçerken oklab/color() değerleri tuvalle çözülür (düz regex sahte uyarı verir).
+
+### H685 — v18 yalnız renk katmanıydı; Akış iskeleti kuruldu, zaman akışı telefonda sağa taştı (2026-11-26)
+- **Belirti:** kullanıcı v18'in v15 yerleşimine giydirilmiş renk olduğunu, yeni iskelet istediğini söyledi. Yeni Bugün akışı 375 px'de kartları ~140 px sağa taşırdı (kırpıldığı için yatay kaydırma görünmedi).
+- **Kök neden:** (1) v18 yalnız CSS'ti (canli.css), TSX yapısı v15'ti. (2) `.ak` flex sütun öğesiydi; `min-width: auto` en geniş çocuğun (yatay kayan çip şeridi) min-content genişliğini aldı.
+- **Çözüm:** `useAkis()` (appearance.ts) ile v18'de kenar menüsü çizilmez, alt çubuk her genişlikte yüzen hap ada (`.v18-ada`), mini oynatıcı adanın üstünde siyah şerit; Bugün `TodayView` akis dalında dikey zaman akışı (`styles/v18/akis.css`). `.ak { width:100%; min-width:0 }`.
+- **Kural:** yeniden tasarım TSX yapısıyla yapılır, renk katmanıyla değil; yatay kayan şerit içeren flex öğesine `min-width: 0` verilir.
+
+### H687 — v18 Akış merkez dizini: simge karoları boş göründü (2026-11-26)
+- **Belirti:** Akış dizin kartlarında siyah simge karosu yerine boş, çerçevesiz bir alan; simge görünmüyordu (beyaz simge, zemin yok).
+- **Kök neden:** klinik.css'teki genel `#ana-icerik :is(…, [class$='-ic']):not(…):not(…)` kuralı zemini `!important` ile siliyordu. Kimlik ve her `:not()` özgüllüğe eklendiği için yeni kuralın `!important`'ı da kaybediyordu.
+- **Çözüm:** genel kurala `:not(.akd-ic)` eklendi (canli.css'teki eşine `:not(.akd-ic):not(.ak-ikon)`); Bugün karosu için kimlikli seçici.
+- **Kural:** yeni bir `-ic` sonlu simge sınıfı eklerken genel ikon kurallarına istisna yazılır; `!important` yarışına girilmez.
+
+### H689 — v18 sesli ders listesinde ders kartları branş rayının üstüne bindi (2026-11-26)
+- **Belirti:** Akış düzeninde (`styles/v18/sesli.css`) branş başlığı sola raya alınınca açılan ders listesi rayın sağ kenarına ~8 px bindi; ray düğmeleri sağa kaydı.
+- **Kök neden:** `canli.css:152` açılan listeye kart içi tasarım için `margin: 6px -14px -12px` veriyor; ızgara sütununa alınan liste bu negatif kenarla sütun boşluğunu yedi. Raydaki `order`/`margin-left:34px` (dersler.css:444-445) satır düzeni içindi.
+- **Çözüm:** v18'de ≥900 px açılan listeye `margin:0`, ray çocuklarına `margin:0; order:0`; branş kutusunun kart zemini kaldırıldı.
+- **Önleme:** Bir bileşeni yeni ızgaraya taşırken eski kart içi negatif kenarları ve `order` kurallarını ara (`grep -n "<sınıf>" src/styles`) ve yeni kapsamda sıfırla; ölç: komşu kutuların `getBoundingClientRect` sağ/sol kenarı kesişmemeli.
