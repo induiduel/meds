@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 958,
-  "baslik": "Hata kaydı düzeltmesi",
+  "onem": 959,
+  "baslik": "Sesli derste okunuş iyileştirmesi",
   "maddeler": [
-    "Erişim kapısının 500 yanıtının bilinçli karar olduğu kayda işlendi."
+    "Sesli ders seslendirmesinde Yunan harfleri, alfa1/beta2 gibi bitişik kodlar, kromozom bantları ve G proteinleri artık doğru okunacak şekilde hazırlanıyor."
   ],
   "eklenen": [],
   "degisen": [],

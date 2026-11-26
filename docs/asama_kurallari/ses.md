@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 37 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 38 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -134,4 +134,8 @@
 
 ### H698 — Drive ses eşlemesi: ad yanıltıcı, kayıt birden çok ders, eski ses yeni sanıldı (2026-11-26)
 - **Kural:** Yeni ses tespiti adla değil md5 ile; kısa döküm + 5 dk dilim eşlemesiyle ders(ler) belirlenir.
+
+
+### H699 — EMA okunuşunda yazılı kalıntılar: α1A, beta2, 7q, Xq27.3, Gq/Go, 3P, "Ödem / Herniasyon" (2026-11-26)
+- **Önleme kuralı:** Kurul 2+ ses metni değişince ya da yeni ders eklenince tüm derslerin `hazirla` çıktısı yazılı kalıntı için taranır (büyük harf dizisi, harf+sayı, w/q/x, Yunan/simge); eski/yeni çıktı karşılaştırılır, yalnız amaçlanan satırlar değişmeli. Mevcut klipler kendiliğinden yeniden üretilmez — aday listesi `okunus_farki.py`, ses GPU'da yalnız kullanıcı komutuyla.
 

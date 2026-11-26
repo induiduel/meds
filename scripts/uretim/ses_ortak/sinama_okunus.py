@@ -16,6 +16,13 @@ import ses_metin as S  # noqa: E402
 
 # (girdi, yol, beklenen okunuş)
 OKUNUS = [
+    # H699: yazılı kalıntılar (Yunan harfi, bitişik kod, kromozom bandı, G proteini, eğik çizgi)
+    ("Seçici α1A blokör ve β1.", "uzun", "Seçici alfa bir aa blokör ve beta bir."),
+    ("alfa1 ve beta2 agonistleri", "uzun", "alfa bir ve beta iki agonistleri"),
+    ("Gq, Gi ve Go proteinleri", "uzun", "gee kuu, gee ıı ve gee oo proteinleri"),
+    ("Xq27.3 bölgesi", "uzun", "iks kuu yirmi yedi nokta üç bölgesi"),
+    ("p ve q kolları", "uzun", "pee ve kuu kolları"),
+    ("Ödem / Herniasyon", "uzun", "Ödem, Herniasyon"),
     # şık etiketi ve zamir harf adıyla okunmaz
     ("A, Williams sendromu.", "uzun", "A, Vilyıms sendromu."),
     ("B) Down sendromu", "uzun", "B) Davn sendromu"),

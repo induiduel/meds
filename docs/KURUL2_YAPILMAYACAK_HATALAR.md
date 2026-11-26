@@ -535,3 +535,4 @@
 - **H696** · Kısa anahtar 400, Oracle 500, kelime_zaman göndermiyor → hatalar/betik_altyapi.md
 - **H697** · Çözücü kapısının "doğru" şartı dolgu döngüsü; bilgi cümlesi içinde tek "doğru" modeli → hatalar/soru_cozucu.md
 - **H698** · Yeni ses adla değil md5 ile; ortak kayıt dilim eşlemesiyle derslere bölünür → hatalar/ses.md
+- **H699** · EMA okunuşunda Yunan harfi, bitişik kod, kromozom bandı, G proteini, eğik çizgi ham kalıyordu → hatalar/ses.md
