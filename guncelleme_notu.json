@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 957,
-  "baslik": "İki yeni sesli ders ve hoca sesi eklemeleri",
+  "onem": 958,
+  "baslik": "Hata kaydı düzeltmesi",
   "maddeler": [
-    "Nikotin Bağımlılığı ve Tedavisi: sesli ders, örnek sorular, sesli çözücü ve ara sorular eklendi.",
-    "Miyorelaksan İlaçlar (İskelet Kası Gevşeticileri): sesli ders, örnek sorular, sesli çözücü ve ara sorular eklendi.",
-    "Psikiyatrik Genetik, Yaygın Anksiyete, Panik ve Fobik Bozukluk derslerine hocanın ders kaydından ek bilgiler işlendi."
+    "Erişim kapısının 500 yanıtının bilinçli karar olduğu kayda işlendi."
   ],
   "eklenen": [],
   "degisen": [],
