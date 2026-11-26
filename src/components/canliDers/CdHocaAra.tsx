@@ -69,8 +69,9 @@ export function useHocaAra(key: string | null | undefined): AraDers | null {
 
 /* ── tercih: ders içinde kendiliğinden açılsın mı (öğrenci kapatabilir) ── */
 const TERCIH = 'medsoru_hoca_ara_oto_v1';
-// Varsayılan KAPALI (kullanıcı kararı 2026-11-17): ara soru kendiliğinden açılmaz; ünlem düğmesi/çip ile erişilir, ayardan açılır
-const otoAcik = () => { try { return localStorage.getItem(TERCIH) === '1'; } catch { return false; } };
+// Varsayılan AÇIK (kullanıcı kararı 2026-11-26; 2026-11-17'deki KAPALI kararının yerine): ara ve çıkmış sorular derste
+// kendiliğinden açılır; öğrenci kutuyu kapatırsa ('0') kapalı kalır
+const otoAcik = () => { try { return localStorage.getItem(TERCIH) !== '0'; } catch { return true; } };
 const tercihDinleyici = new Set<() => void>();
 const tercihAbone = (f: () => void) => { tercihDinleyici.add(f); return () => { tercihDinleyici.delete(f); }; };
 const otoYaz = (v: boolean) => { try { localStorage.setItem(TERCIH, v ? '1' : '0'); } catch { /* özel pencere */ } tercihDinleyici.forEach((f) => f()); };
