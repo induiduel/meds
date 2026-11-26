@@ -1,6 +1,6 @@
 # Aşama kuralları — kaynak
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 58 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 59 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
@@ -241,4 +241,8 @@
 
 ### H695 — Kapak sayfasının bilgi paketi kazanım sayıldı (2026-11-26, k2-60)
 - **Kural:** E1 paketine kapak/başlık sayfası bilgi paketi yazılmaz.
+
+
+### H700 — Sesli derste slaytta olmayan örnek uyduruldu: Küçük Albert'e "köpek" (2026-11-27, k2-56)
+- **Kural:** "Örneğin …" ile başlayan somut örnek yalnız o sayfanın slaytında/hoca sesinde geçiyorsa yazılır; dersin başka sayfasındaki sözcük kanıt sayılmaz. Denetçi örnek cümlelerin sayfa kanıtını ayrıca sorar.
 

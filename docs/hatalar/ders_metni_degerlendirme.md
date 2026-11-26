@@ -140,3 +140,9 @@
 - **Kök neden:** E1 paketinde onem 0 kapak paketi (`bp1`) vardı; `kazanim_madde` yalnız "Görsel:"/"Kaynak" paketlerini eliyor.
 - **Çözüm:** Paketten `bp1` çıkarıldı (kapı gevşetilmedi). k2-64'te de aynı paket var; yeniden üretimde aynı hata çıkar.
 - **Kural:** E1 paketine kapak/başlık sayfası bilgi paketi yazılmaz.
+
+### H700 — Sesli derste slaytta olmayan örnek uyduruldu: Küçük Albert'e "köpek" (2026-11-27, k2-56)
+- **Belirti:** k2-56 c0027 "örneğin nötr uyaran köpekse… köpek tek başına korku uyandırır" diyordu; slayt 6'da örnek nesne yok, Watson deneyindeki nötr uyaran beyaz fareydi.
+- **Kök neden:** E2 yazımı soyut mekanizmayı somutlaştırmak için slayt dışı örnek ekledi; aynı slayttaki "köpek" (özgül fobi örnekleri) bağlamından taşındı. Denetçi kaynak dışı örneği yakalamadı, çünkü sözcük dersin başka slaytında geçiyordu.
+- **Çözüm:** Cümle "Watson'ın Küçük Albert deneyi bu mekanizmanın klasik örneğidir." yapıldı (kimlik korundu), `klip_tasi --eski` + `sesli_yayinla` ile yalnız o klip EMA'da yeniden üretildi; kelime zamanı, işaret yeniden; takip kapısı canlıda 0 HATA.
+- **Kural:** "Örneğin …" ile başlayan somut örnek yalnız o sayfanın slaytında/hoca sesinde geçiyorsa yazılır; dersin başka sayfasındaki sözcük kanıt sayılmaz. Denetçi örnek cümlelerin sayfa kanıtını ayrıca sorar.

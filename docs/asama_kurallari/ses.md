@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 38 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 39 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -138,4 +138,7 @@
 
 ### H699 — EMA okunuşunda yazılı kalıntılar: α1A, beta2, 7q, Xq27.3, Gq/Go, 3P, "Ödem / Herniasyon" (2026-11-26)
 - **Önleme kuralı:** Kurul 2+ ses metni değişince ya da yeni ders eklenince tüm derslerin `hazirla` çıktısı yazılı kalıntı için taranır (büyük harf dizisi, harf+sayı, w/q/x, Yunan/simge); eski/yeni çıktı karşılaştırılır, yalnız amaçlanan satırlar değişmeli. Mevcut klipler kendiliğinden yeniden üretilmez — aday listesi `okunus_farki.py`, ses GPU'da yalnız kullanıcı komutuyla.
+
+### H700 — Sesli derste slaytta olmayan örnek uyduruldu: Küçük Albert'e "köpek" (2026-11-27, k2-56)
+- **Kural:** "Örneğin …" ile başlayan somut örnek yalnız o sayfanın slaytında/hoca sesinde geçiyorsa yazılır; dersin başka sayfasındaki sözcük kanıt sayılmaz. Denetçi örnek cümlelerin sayfa kanıtını ayrıca sorar.
 

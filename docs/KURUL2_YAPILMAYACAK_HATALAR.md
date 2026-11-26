@@ -536,3 +536,4 @@
 - **H697** · Çözücü kapısının "doğru" şartı dolgu döngüsü; bilgi cümlesi içinde tek "doğru" modeli → hatalar/soru_cozucu.md
 - **H698** · Yeni ses adla değil md5 ile; ortak kayıt dilim eşlemesiyle derslere bölünür → hatalar/ses.md
 - **H699** · EMA okunuşunda Yunan harfi, bitişik kod, kromozom bandı, G proteini, eğik çizgi ham kalıyordu → hatalar/ses.md
+- **H700** · Slayt dışı somut örnek (Küçük Albert'e köpek); örnek yalnız o sayfanın kanıtıyla → hatalar/ders_metni_degerlendirme.md
