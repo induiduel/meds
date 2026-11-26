@@ -528,3 +528,4 @@
 - **H689** · v18 sesli liste rayı; canli.css açılan listenin -14px kenarı ızgarada rayın üstüne biniyordu → hatalar/on_yuz_tasarim_tema.md
 - **H690** · v18 oynatıcı/çözücü adası; canli.css sesli branşı !important kart yapıyordu, çözücü yolu yanlış göreli içe aktarma → hatalar/on_yuz_tasarim_tema.md
 - **H691** · v18'de klinik.css --kl-mono daktilo yazı tipi + telefonda kalın ray çubuğu → hatalar/on_yuz_tasarim_tema.md
+- **H692** · Sesli ders ekranında Kurul 2 kısaltmaları okunuşla kalıyordu (o ka be, te se se be); yazim_sozlugu dizi eşlemesi + harf tutarlılık süzgeci → hatalar/ses.md

@@ -1,6 +1,6 @@
 # Aşama kuralları — ses
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 34 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 35 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -123,4 +123,8 @@
 
 ### H684 — Sesli ders ekranında "M bir, M üç" yazıyordu; doğrusu M1, M3 (2026-11-25)
 - **Önleme kuralı:** Özel terim/kod ekranda daima yazıldığı gibi (M1, H2, CD4) görünür; okunuş yalnız EMA metnindedir. Yeni kod biçimi görülünce `ekranYazim.ts` geçişine örnek cümleyle eklenir, sözlüğe tek tek yama yapılmaz.
+
+
+### H692 — Sesli ders ekranında kısaltmalar okunuşla kalıyordu: "o ka be", "te se se be", "ka el pe", "dee see mee" (2026-11-26)
+- **Önleme kuralı:** Sözlük her yenilendiğinde tüm ders metinleri eski/yeni ekran çıktısıyla karşılaştırılır; önceden büyük harfli kod olan yerin değişmesi gerileme sayılır ve tek tek bakılır. Harf adı kalıntı taraması 0 olmalı. Okunuş sınaması `ses_ortak/sinama_okunus.py` 0 HATA.
 

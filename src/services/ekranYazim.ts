@@ -57,7 +57,7 @@ const SIRA: Record<string, number> = {
 const buyukte = (ks: string[]) => ks.flatMap((k) => [k, k[0].toLocaleUpperCase('tr') + k.slice(1)]).sort((a, b) => b.length - a.length).join('|');
 const KOK = buyukte(Object.keys(DEGER));
 const SKOK = buyukte(Object.keys(SIRA));
-const EK = "(?:y?[dt][ıiuü]r|y?[aeıiuü]|n?[dt][ae]n?|n?[ıiuü]n|s?[ıiuü](?:n[ae]|nd[ae]n?|n[ıiuü]n)?|y?l[ae]|l[ae]r[ıi]?|y?[ıiuü]n[ae]|l[ıiuü]k)?";
+const EK = "(?:[dt][ae]ki|y?[dt][ıiuü]r|y?[aeıiuü]|n?[dt][ae]n?|n?[ıiuü]n|s?[ıiuü](?:n[ae]|nd[ae]n?|n[ıiuü]n)?|y?l[ae]|l[ae]r[ıi]?|y?[ıiuü]n[ae]|l[ıiuü]k)?";
 const DIZI = `(?:${KOK})(?:\\s+(?:${KOK}))*`;
 const SDIZI = `(?:(?:${KOK})\\s+)*(?:${SKOK})`;
 
@@ -117,7 +117,8 @@ function sayiGec(dizi: string, ek: string, onu: string): string | null {
 /* ---------- sözlük geçişleri ---------- */
 const KIS = (sozluk.kisaltma as [string, string][]);
 const R_KIS = KIS.length
-  ? new RegExp(`${ON}(${KIS.map(([o]) => o.split(' ').map(esc).join('\\s+')).join('|')})(${EK})${SON}`, 'giu')
+  // kesme işaretinden sonra ek gelir, kısaltma değil ("S5'te ne duyu" → "te ne" Tn sayılmaz)
+  ? new RegExp(`(?<![\\p{L}\\d'’-])(${KIS.map(([o]) => o.split(' ').map(esc).join('\\s+')).join('|')})(${EK})${SON}`, 'giu')
   : null;
 const KIS_HARITA = new Map(KIS.map(([o, y]) => [o, y]));
 const ACI = (sozluk.acilim as [string, string][]);

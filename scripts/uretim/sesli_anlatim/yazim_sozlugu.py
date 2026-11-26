@@ -49,7 +49,18 @@ EL_KISALTMA = {"ce re pe": "CRP", "pe ha": "pH", "ha ı ve": "HIV", "e koli": "E
                "be ce er abl": "BCR-ABL", "ef se epsilon": "Fcε", "se te el a": "CTLA", "en a pe ku i": "NAPQI", "e te es": "ETS",
                "be ka": "BK", "a le amiloid": "AL amiloid", "a a amiloid": "AA amiloid", "a le ve a a": "AL ve AA",
                "pe de bir": "PD-1", "se te el a dört": "CTLA-4", "se te el a dörde": "CTLA-4'e", "se te el a dörttür": "CTLA-4'tür",
-               "ce te el a dört": "CTLA-4", "ce de kırka": "CD40'a", "ce a on dokuz dokuz": "CA 19-9", "te em pe ar es es iki": "TMPRSS2"}
+               "ce te el a dört": "CTLA-4", "ge es": "Gs", "ge i": "Gi", "ge o": "Go", "ge ku": "Gq",
+               "a er i de bir a": "ARID1A", "ve i em di ar": "EMDR", "i em di ar": "EMDR", "ce ce virüsü": "JC virüsü",
+               "protein ce ve es": "protein C ve S", "te ve be hücreleri": "T ve B hücreleri", "be ve te hücre": "B ve T hücre",
+               "de se me": "DSM", "dee see mee": "DSM", "de se em": "DSM", "tee ree": "TR", "te re": "TR",
+               "es er te": "SERT", "de a te": "DAT", "te se ce bir": "TSC1", "te se ce iki": "TSC2", "ye a pe bir": "YAP1",
+               "be a pe bir": "BAP1", "ef el te bir": "FLT1", "te i ef bir": "TIF1", "ce re es te": "CREST",
+               "em te ha ef ar": "MTHFR", "ef ce": "Fc", "de em pe": "DMPP", "pe ce es": "PCS", "ge te paz": "GTPaz",
+               "le me iks bir be": "LMX1B", "pee haa kuu": "PHQ", "pe ha ku": "PHQ", "pi 3 kaa ve a kaa te": "PI3K ve AKT", "es te yükselmesi": "ST yükselmesi", "ge on bir": "G11", "de se me dört": "DSM-IV", "de se me beş": "DSM-5", "de se em beş": "DSM-5", "dee see mee beş": "DSM-5", "dee se em beş": "DSM-5", "de se em üç": "DSM-III", "dsm beş": "DSM-5", "de se me üç": "DSM-III", "dsm üç": "DSM-III", "dsm dört": "DSM-IV", "dsm beş te re": "DSM-5-TR", "de se em beş te re": "DSM-5-TR", "dee se me beş te re": "DSM-5-TR", "dee see mee beş tee ree": "DSM-5-TR", "de se em dört": "DSM-IV", "fe ge fe": "FGF", "fe ge felerin": "FGF'lerin", "es e er te": "SERT", "pi üç kaa ve a kaa te": "PI3K ve AKT", "te-me-se": "TMS", "te-de-ce-se": "tDCS", "ce de kırka": "CD40'a", "ce a on dokuz dokuz": "CA 19-9", "te em pe ar es es iki": "TMPRSS2"}
+
+
+# harfleri tutsa da yanlış olan otomatik eşlemeler (H692): "a er i de bir a" = ARID1A, "ve i em di ar" = EMDR, "ce ce" = JC
+ELE_KISALTMA = {"a er i", "ve i em", "ce ce", "ce ve es"}
 
 
 ELE = {"germinal vezikül varlığı", "tetanoz bağışıklaması", "fingolimod hidroklorür", "nitrik oksit sentaz", "glatiramer asetat"}
@@ -60,6 +71,104 @@ SAYI_SOZ = {"sıfır", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "
 
 
 KENAR = {"ile", "ise", "bu", "ya", "yani"}  # "ve"/"de" harf adı da olabilir (V, D): kesilmez
+
+
+BAGLAC_HARF = {"a", "e", "o", "u", "ü", "ı", "i", "ve", "de", "en", "el", "ne", "ye", "se", "be", "ha", "he", "er", "es", "em", "ku"}
+
+
+def _harf_adi(w: str) -> str | None:
+    """Kısa ("de") ya da uzatılmış ("dee", "kuu", "aa") harf adı → büyük harf; değilse None."""
+    if w in O.HARF:
+        return O.HARF[w]
+    if re.fullmatch(r"[ıi]+", w):  # "ıı", "ııı" Roma rakamıdır, uzatılmış I değil
+        return None
+    k = re.sub(r"([aeıioöuü])\1+$", r"\1", w)
+    return O.HARF.get(k) if k != w else None
+
+
+def _harf_tutar(okun: str, yazim: str) -> bool:
+    """Okunuşun harfleri yazımın harfleriyle birebir mi? ("o ka be"↔OKB, "ve ne te"↔WNT, "ka o em te"↔KOMT; sayı/Yunan
+    sözcüğü atlanır). Tek sözcüklü okunuş yalnız kısaltmanın kendisi olabilir ("komt"↔COMT, "vip"↔VIP); "ve"→OD, "alan"→CST,
+    "e ka ge de es te"→ST gibi v2 hizalama artıkları elenir (H692)."""
+    ws = okun.split()
+    hy = re.sub(r"[^A-Z]", "", yazim.replace("İ", "I").upper())
+    norm = lambda x: x.upper().replace("W", "V").replace("C", "K").replace("Ç", "K").replace("Ş", "S").replace("Ö", "O").replace("Ü", "U").replace("KS", "X")
+    if len(ws) == 1:
+        return norm(O.tr_lower(ws[0])) == norm(hy)
+    # yazımda rakam varsa okunuşta sayı sözcüğü olmalı ("a ge" → A3243G olmaz)
+    if re.search(r"\d", yazim) and not set(ws) & SAYI_SOZ:
+        return False
+    kalan = norm(hy)
+    for w in ws:
+        if w in SAYI_SOZ or w in YUNAN:
+            continue
+        h = _harf_adi(w)
+        if h is not None and kalan.startswith(norm(h)):
+            kalan = kalan[len(norm(h)):]
+            continue
+        # sözcük gibi okunan parça ("hoks" → HOX, "paks" → PAX, "lis" → LIS)
+        p = norm(O.tr_lower(w))
+        if len(p) >= 3 and kalan.startswith(p):
+            kalan = kalan[len(p):]
+            continue
+        return False
+    return kalan == ""
+
+
+def bilinen_kisaltmalar(kaynak: str, metinler: list[str]) -> dict[str, str]:
+    """Anahtar (yalnız harf, büyük, İ→I) → en sık yazım. Kaynak: kısaltma sözlüğü (seçilmiş) + kaynak md + ders metinleri."""
+    say: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+    def ekle(t: str, n: int = 1):
+        if sum(c.isupper() for c in t) >= 2 and not re.search(r"[a-zçğıöşü]{3}", t):
+            say[re.sub(r"[^A-Za-zİÇŞĞÖÜ]", "", t).replace("İ", "I").upper()][t] += n
+    for t in json.loads((MEDS / "src/data/kisaltma_sozluk.json").read_text(encoding="utf-8")):
+        ekle(t, 5)
+    for metin in [kaynak, *metinler]:
+        for t in re.findall(r"[A-Za-zÇĞİÖŞÜ][A-Za-zÇĞİÖŞÜ0-9\-]*", metin):
+            ekle(re.sub(r"[\-0-9]+$", "", t))
+    return {k: c.most_common(1)[0][0] for k, c in say.items() if len(k) >= 2}
+
+
+def _dizide(sozler: list[str], ws: list, j: int, n: int) -> bool:
+    """ws[j:j+n] boşlukla bitişik başka bir harf adıyla devam ediyor/başlıyor mu ("te se" ← "te se se be")?"""
+    for k in (j - 1, j + n):
+        if 0 <= k < len(ws):
+            a, b = sorted((ws[k][0], ws[j if k < j else j + n - 1][0]))
+            if all(x == " " for x in sozler[a + 1:b]) and _harf_adi(ws[k][1]) is not None:
+                return True
+    return False
+
+
+def dizi_kisaltmalari(metinler: list[str], bilinen: dict[str, str]) -> dict[str, str]:
+    """Harf adı dizisi ("o ka be", "te se se be", "dee see mee", "a ce te ha") → bilinen kısaltma (OKB, TSSB, DSM, ACTH).
+    Her konumda en uzun eşleşme; 2 sözcüklük dizide ikisi de bağlaç olabilen harf adı değilse ("ve te" = VT sayılmaz)."""
+    out: dict[str, str] = {}
+    for m in metinler:
+        sozler = re.findall(r"[A-Za-zÇĞİÖŞÜçğıöşü]+|[^A-Za-zÇĞİÖŞÜçğıöşü]+", m)
+        ws = [(i, O.tr_lower(x)) for i, x in enumerate(sozler) if x[0].isalpha()]
+        j = 0
+        while j < len(ws):
+            bul = None
+            for n in range(min(8, len(ws) - j), 1, -1):
+                parca = ws[j:j + n]
+                # aradaki ayraç yalnız boşluk olmalı (cümle/virgül sınırı aşılmaz)
+                if any(sozler[a + 1] != " " for (a, _), _b in zip(parca, parca[1:])):
+                    continue
+                harfler = [_harf_adi(w) for _, w in parca]
+                if None in harfler:
+                    continue
+                if n == 2 and (all(w in BAGLAC_HARF for _, w in parca) or _dizide(sozler, ws, j, n)):
+                    continue
+                y = bilinen.get("".join(harfler).replace("Ç", "C").replace("Ş", "S").replace("Ö", "O").replace("Ü", "U"))
+                if y and not re.search(r"[a-zçğıöşü]{2}", y):
+                    bul = (n, " ".join(w for _, w in parca), y)
+                    break
+            if bul:
+                out.setdefault(bul[1], bul[2])
+                j += bul[0]
+            else:
+                j += 1
+    return out
 
 
 def v2_kisaltmalari() -> dict[str, str]:
@@ -184,6 +293,39 @@ def main():
             and (len(y) <= 2 or sum(ch.isupper() for ch in y) >= 2)
             # rakamlı/Yunan harfli yazım okunuşta sayı/harf adı yoksa eksik eşlemedir ("te i ef" → "TIF1γ")
             and not (re.search(r"[\dα-ω]", y) and not set(k.split()) & (SAYI_SOZ | set(YUNAN)))}
+    # Kurul 2+ kısaltmaları kaynak md'de az/hiç geçmiyor, hece bölme ("o ka be") eşleşmiyordu (H692)
+    for k, y in dizi_kisaltmalari(metinler, bilinen_kisaltmalar(kaynak, metinler)).items():
+        kisa.setdefault(k, y)
+    # iki sözcüklük yeni eşleme çoğunlukla uzun kısaltmanın parçasıdır ("te se" ← TSSB, "se me" ← DSM): yalnız önceden
+    # yayındaysa ya da metinde tek başına geçiyorsa (dizi geçişi) alınır
+    try:
+        onceki = {k for k, _ in json.loads(CIKTI.read_text(encoding="utf-8")).get("kisaltma", [])}
+    except (OSError, ValueError):
+        onceki = set()
+    tek = dizi_kisaltmalari(metinler, bilinen_kisaltmalar(kaynak, metinler))
+    kisa = {k: y for k, y in kisa.items() if _harf_tutar(k, y)
+            and (len(k.split()) != 2 or k in onceki or k in tek or k in EL_KISALTMA)}
+    for k, y in tek.items():
+        if _harf_tutar(k, y):
+            kisa.setdefault(k, y)
+    # yeni eşleme güvenliği (H692): sayı sözcüğü içeren ("ce de yirmi" → CD20, "ce de yirmi sekiz"i bozar), metinde sayıdan
+    # ya da başka harf adından hemen önce/sonra geçen ("pe ı" ← "pe ı te iks üç" = PITX3, "ce de" ← CD138) ve "ve"+kısaltma
+    # ile karışan ("ve te" ← "ve Th2", "ve aa" ← "ve AA") eşleme alınmaz; bu biçimleri ekranYazim'in harf+sayı geçişi kurar.
+    birlesik = O.tr_lower("\n".join(metinler))
+    def guvenli(k: str) -> bool:
+        if k in onceki or k in EL_KISALTMA:
+            return True
+        ws = k.split()
+        if set(ws) & SAYI_SOZ:
+            return False
+        if ws[0] == "ve" and (len(ws) == 2 or " ".join(ws[1:]) in kisa):
+            return False
+        harf_ad = "|".join(sorted({*O.HARF, *SAYI_SOZ} - BAGLAC_HARF, key=len, reverse=True))
+        ek = re.escape(k).replace("\\ ", "\\s+")
+        if re.search(rf"(?:(?<![\wçğıöşü])(?:{harf_ad})\s+{ek}(?![\wçğıöşü])|(?<![\wçğıöşü]){ek}\s+(?:{harf_ad}|\d)(?![\wçğıöşü]))", birlesik):
+            return False
+        return True
+    kisa = {k: y for k, y in kisa.items() if guvenli(k) and k not in ELE_KISALTMA}
     kisa.update(EL_KISALTMA)
     CIKTI.parent.mkdir(parents=True, exist_ok=True)
     # rakamla bitişik yazılan kısaltmalar (TP53, HER2, BRCA1, C3, CD4, Ki-67): ekranda "TP 53" → "TP53"

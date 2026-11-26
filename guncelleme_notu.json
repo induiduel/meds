@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 954,
-  "baslik": "Akış tasarımında oynatıcı ve çözücü yenilendi",
+  "onem": 955,
+  "baslik": "Sesli derste kısaltmalar düzgün yazılıyor",
   "maddeler": [
-    "Oynatıcı ve sesli soru çözücünün alt çubuğu ekranın altında yüzen siyah bir ada oldu.",
-    "Akış tasarımında yazılar tek yazı tipinde; telefonda ders listesi ince zaman çizgisiyle gösteriliyor."
+    "Sesli ders: OKB, TSSB, KLP, EEG, ACTH, DSM-5, BRAF, MGMT gibi kısaltmalar ekranda artık okunuşla (\"o ka be\") değil, yazıldığı gibi görünür."
   ],
   "eklenen": [],
   "degisen": [],
