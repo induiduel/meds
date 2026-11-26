@@ -1,0 +1,3 @@
+/* H691 · v18 Akış ortak katman: klinik.css (v15) üst etiket/sayıları JetBrains Mono ile çiziyordu; Akış dili tek yazı
+   ailesi (sans). Değişken klinik.css'te :root[data-v15] üstünde tanımlı → iki öznitelikli seçiciyle ezilir. */
+:root[data-v15='on'][data-v18='on'] { --kl-mono: var(--font-sans); }

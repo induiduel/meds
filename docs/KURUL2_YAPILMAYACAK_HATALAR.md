@@ -526,3 +526,5 @@
 - **H684** · Tek harf + sayı kodları (M1, H2, B12) ekranda okunuşla ("M bir") kalıyordu; ekranYazim R_TEK_HARF → hatalar/ses.md
 - **H688** · betik_tamamla canlı API'ye anahtarsız gidiyordu; yeni dersin kelime zamanı Oracle'a gönderilmemişti → hatalar/dagitim_sunucu.md
 - **H689** · v18 sesli liste rayı; canli.css açılan listenin -14px kenarı ızgarada rayın üstüne biniyordu → hatalar/on_yuz_tasarim_tema.md
+- **H690** · v18 oynatıcı/çözücü adası; canli.css sesli branşı !important kart yapıyordu, çözücü yolu yanlış göreli içe aktarma → hatalar/on_yuz_tasarim_tema.md
+- **H691** · v18'de klinik.css --kl-mono daktilo yazı tipi + telefonda kalın ray çubuğu → hatalar/on_yuz_tasarim_tema.md

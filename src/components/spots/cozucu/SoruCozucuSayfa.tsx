@@ -10,6 +10,7 @@ import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
 import { useSpotCozucuStats, fmtSureDk } from '../../../services/spotCozucuIstatistik';
 import { navigateTo, pathFor } from '../../../router';
 import '../../../styles/soru-cozucu.css';
+import '../../../styles/v18/oynatici.css';
 import '../../../styles/v15/cozucu.css';
 import { useAppearance } from '../../../utils/appearance';
 import { useV15Baslik } from '../../v15/baslik';

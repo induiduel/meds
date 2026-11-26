@@ -24,6 +24,7 @@ import { CdDaha } from './CanliDersDaha';
 import { cdMotivasyonKur } from './canliDersMotivasyon';
 import { cdTvMi, cdTvTus, type TvEylem } from './CanliDersTv';
 import '../../styles/canli-ders.css';
+import '../../styles/v18/oynatici.css';
 import { useAppearance } from '../../utils/appearance';
 import { Star } from 'lucide-react';
 import { cdCikmisAc, cikmisSayfada } from './CdCikmisChip';

@@ -23,7 +23,9 @@
   :root[data-v18='on'] .sl15-grup > .sl15-acilan { grid-column: 2; margin: 0; min-width: 0; }
 }
 @media (max-width: 899.98px) {
-  :root[data-v18='on'] .sl15-grup > .sl15-bas-sat { border-left: 3px solid var(--color-ink); padding-left: 12px; }
+  /* H691: kalın siyah çubuk yerine masaüstüyle aynı ince hat + düğüm */
+  :root[data-v18='on'] .sl15-grup > .sl15-bas-sat { position: relative; border-left: 2px solid var(--cn-hat, color-mix(in oklab, var(--color-ink) 12%, transparent)); padding-left: 14px; }
+  :root[data-v18='on'] .sl15-grup > .sl15-bas-sat::before { content: ''; position: absolute; left: -6px; top: 12px; width: 10px; height: 10px; border-radius: 50%; background: var(--color-ink); }
 }
 /* Branş kutusu kart değil: ray + sağdaki ders kartı yeter (çift çerçeve olmasın). */
 :root[data-v18='on'] .sl15-alan > .sl15-grup { background: transparent; border: 0; box-shadow: none; padding: 0; }
@@ -33,3 +35,6 @@
   :root[data-v18='on'] .sl15 .sl15-grup > .sl15-bas-sat { margin: 0; flex-wrap: nowrap; }
   :root[data-v18='on'] .sl15 .sl15-grup > .sl15-bas-sat > * { margin: 0 !important; max-width: 100%; order: 0 !important; }
 }
+/* canli.css:147 (#ana-icerik kapsamlı, !important) branşı kart yapıyordu; Akış'ta ray zaten çerçeve. */
+:root[data-v18='on'] #ana-icerik .sl15 .sl15-alan > .sl15-grup,
+:root[data-v18='on'] #ana-icerik .sl15 .sl15-alan > .sl15-grup:hover { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important; }

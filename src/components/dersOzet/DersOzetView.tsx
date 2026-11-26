@@ -15,6 +15,7 @@ import { useOzetOynatici } from './oynatici';
 import { isaretToggle, useOzetIsaret } from './dersOzetIsaret';
 import { DersOzetYeni } from './DersOzetYeni';
 import '../../styles/soru-cozucu.css';
+import '../../styles/v18/oynatici.css';
 import '../../styles/v15/cozucu.css';
 import '../../styles/v15/dersOzet.css';
 

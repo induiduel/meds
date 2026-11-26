@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 953,
-  "baslik": "Derste sorular kendiliğinden açılıyor",
+  "onem": 954,
+  "baslik": "Akış tasarımında oynatıcı ve çözücü yenilendi",
   "maddeler": [
-    "Sesli derste \"Derste kendiliğinden göster\" artık varsayılan olarak açık: ilgili slayt bitince örnek ve çıkmış sorular kendiliğinden açılır.",
-    "Kutuyu daha önce kapatan öğrencide tercih korunur."
+    "Oynatıcı ve sesli soru çözücünün alt çubuğu ekranın altında yüzen siyah bir ada oldu.",
+    "Akış tasarımında yazılar tek yazı tipinde; telefonda ders listesi ince zaman çizgisiyle gösteriliyor."
   ],
   "eklenen": [],
   "degisen": [],

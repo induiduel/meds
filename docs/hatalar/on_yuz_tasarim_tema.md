@@ -294,3 +294,15 @@
 - **Kök neden:** `canli.css:152` açılan listeye kart içi tasarım için `margin: 6px -14px -12px` veriyor; ızgara sütununa alınan liste bu negatif kenarla sütun boşluğunu yedi. Raydaki `order`/`margin-left:34px` (dersler.css:444-445) satır düzeni içindi.
 - **Çözüm:** v18'de ≥900 px açılan listeye `margin:0`, ray çocuklarına `margin:0; order:0`; branş kutusunun kart zemini kaldırıldı.
 - **Önleme:** Bir bileşeni yeni ızgaraya taşırken eski kart içi negatif kenarları ve `order` kurallarını ara (`grep -n "<sınıf>" src/styles`) ve yeni kapsamda sıfırla; ölç: komşu kutuların `getBoundingClientRect` sağ/sol kenarı kesişmemeli.
+
+### H690 — v18 oynatıcı ve çözücü adası; sesli branş kartı ve içe aktarma yolu (2026-11-26)
+- **Belirti:** (1) Akış sesli listesinde branş hâlâ beyaz kart çerçevesinde göründü; (2) ada CSS'ini çözücülere eklerken derleme `UNRESOLVED_IMPORT` verdi; (3) adada ders adı koyu zeminde koyu yazıydı; telefonda çözücü adası 5 px içten taştı.
+- **Kök neden:** (1) `canli.css:147` `#ana-icerik` kapsamlı `!important` kart kuralı, ID'siz Akış kuralını eziyordu (H687 ile aynı özgüllük savaşı). (2) Toplu `sed` tüm dosyalara `../../` yazdı; `spots/cozucu/` bir seviye derin. (3) `.cd15-den-ad` renk listesinde yoktu. (4) Dar ekranda kenar boşluğu + iç dolgu düğme toplamını aştı.
+- **Çözüm:** ID kapsamlı `!important` sıfırlama (`styles/v18/sesli.css`); yollar `../../../`; `.cd15-den-ad` eklendi; ≤480 px ada genişliği/dolgusu daraltıldı (`styles/v18/oynatici.css`).
+- **Önleme:** v18 kuralı v15 `#ana-icerik … !important` kuralını eziyorsa aynı ID kapsamıyla yaz; toplu içe aktarma eklerken her dosyanın derinliğini hesapla ve derle; koyu zemine alınan bileşende tüm yaprak metinlerin `color` değerini ölç; ada genişliğinde `scrollWidth ≤ clientWidth` kontrol et.
+
+### H691 — v18'de daktilo yazı tipi ve telefonda kalın ray çubuğu (2026-11-26)
+- **Belirti:** v18 Akış açıkken "Kurul 2" düğmesi ve "0/1 bitti" sayaçları eş aralıklı (JetBrains Mono) çiziliyordu; telefonda sesli ders listesinin her branşının solunda kalın siyah çubuk vardı.
+- **Kök neden:** klinik.css (v15) `--kl-mono` değişkenini `:root[data-v15='on']` üstünde tanımlayıp üst etiket/sayılara uyguluyor; v18 katmanı bunu ezmiyordu. sesli.css'in 900 px altı kuralı rayı 3 px mürekkep kenarlıkla (düğümsüz) çiziyordu.
+- **Çözüm:** `styles/v18/temel.css` (ShellV15 içe aktarır) `:root[data-v15='on'][data-v18='on']` ile `--kl-mono`'yu sans yapar; telefon rayı masaüstüyle aynı ince hat + düğüm.
+- **Önleme:** v18 bir v15 değişkenini değiştirecekse aynı kökte iki öznitelikli seçiciyle ezilir; ray/düğüm dili her genişlikte aynı tutulur.

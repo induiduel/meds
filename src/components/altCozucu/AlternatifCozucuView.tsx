@@ -28,6 +28,7 @@ import { openPwaInstallGuide } from '../../services/pwaService';
 import { toast } from '../ui/Toast';
 import { navigateTo, pathFor } from '../../router';
 import '../../styles/soru-cozucu.css';
+import '../../styles/v18/oynatici.css';
 import { isAppFullscreen, releasePageFullscreen } from '../../utils/fullscreen';
 import '../../styles/alternatif-cozucu.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
