@@ -306,3 +306,9 @@
 - **Kök neden:** klinik.css (v15) `--kl-mono` değişkenini `:root[data-v15='on']` üstünde tanımlayıp üst etiket/sayılara uyguluyor; v18 katmanı bunu ezmiyordu. sesli.css'in 900 px altı kuralı rayı 3 px mürekkep kenarlıkla (düğümsüz) çiziyordu.
 - **Çözüm:** `styles/v18/temel.css` (ShellV15 içe aktarır) `:root[data-v15='on'][data-v18='on']` ile `--kl-mono`'yu sans yapar; telefon rayı masaüstüyle aynı ince hat + düğüm.
 - **Önleme:** v18 bir v15 değişkenini değiştirecekse aynı kökte iki öznitelikli seçiciyle ezilir; ray/düğüm dili her genişlikte aynı tutulur.
+
+### H693 — v18 Akış iptal edildi, tek tasarım v15 (2026-11-26)
+- **Belirti:** v18 seçmeli katmanı v15'in üstüne `!important` ve kimlik kapsamlı kurallarla biniyordu (H685–H691 zinciri); her ekran ayrı ezme gerektiriyordu, kullanıcı v18'i iptal etti.
+- **Kök neden:** v18 ayrı bileşen değil, v15 DOM'unun üstüne CSS katmanı olarak kuruldu; v15'in kendi `!important` kuralları (klinik.css) ile özgüllük yarışı her sayfada yeni bozulma doğurdu.
+- **Çözüm:** `styles/v18/`, `styles/v15/canli.css`, `useAkis`, `data-v18`, Bugün/KlinikDizin akış dalları, Ayarlar ve tasarruf kabuğundaki v15/v18 seçicisi kaldırıldı. Eski `medsoru_appearance.v18` anahtarı artık okunmaz (zararsız).
+- **Önleme:** Yeni görünüm denemesi mevcut tasarımın üstüne `!important` katmanı olarak kurulmaz; ayrı bileşen dalıyla ve tek ekranda kanıtlanarak başlar.

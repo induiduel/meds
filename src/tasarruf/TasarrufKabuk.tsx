@@ -1,7 +1,6 @@
 import React from 'react';
 import { pathFor, type AppRoute } from '../router';
 import { TASARRUF_SAYFALAR, botTasarrufAyarla } from './bayrak';
-import { setAppearance, useAppearance } from '../utils/appearance';
 import './tasarruf.css';
 
 type Props = {
@@ -34,20 +33,11 @@ export default function TasarrufKabuk({ aktif, git, children }: Props) {
   );
 }
 
-/** Tasarruf ayarları: profil/sıralama/çevrimdışı yok; arayüz seçimi (v15/v18, H681) + hesap çıkışı */
+/** Tasarruf ayarları: profil/sıralama/çevrimdışı yok; hesap çıkışı */
 export function TasarrufAyarlar({ ad, cikis, bot = false }: { ad?: string | null; cikis: () => void; bot?: boolean }) {
-  const v18 = useAppearance().v18 === true;
   return (
     <section className="tsf-ayar">
       <h1>Ayarlar</h1>
-      <div className="tsf-satir">
-        <span id="tsf-arayuz">Arayüz</span>
-        <div className="tsf-sec" role="radiogroup" aria-labelledby="tsf-arayuz">
-          {([[false, 'v15 · Yalın'], [true, 'v18 · Canlı']] as const).map(([d, et]) => (
-            <button key={et} type="button" role="radio" aria-checked={v18 === d} className={v18 === d ? 'is-on' : undefined} onClick={() => setAppearance({ v18: d })}>{et}</button>
-          ))}
-        </div>
-      </div>
       {bot && (
         <div className="tsf-satir">
           <span>Test oturumu: tasarruf kipi</span>

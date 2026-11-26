@@ -52,7 +52,6 @@ import { useYildizliMi, useYildizliSayisi, yildizToggle, yildizliMi } from '../.
 import { YildizliParagraflarModal } from '../../study/YildizliParagraflarModal';
 import { isAppFullscreen, releasePageFullscreen } from '../../../utils/fullscreen';
 import '../../../styles/soru-cozucu.css';
-import '../../../styles/v18/oynatici.css';
 
 /**
  * Sesli soru çözücü (tam ekran; patoloji, enfeksiyon, üroloji). Anlatım yok, yalnız soru: asistan kökü ve şıkları okur, öğrenci şık seçer.

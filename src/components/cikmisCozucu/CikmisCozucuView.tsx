@@ -9,7 +9,6 @@ import { ccDers, ccDizin, ccKurulYukle, ccKurullar, paketAdi, paketKod, type Kur
 import { KurulBos } from '../kurul/KurulSuzgec';
 import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
 import '../../styles/soru-cozucu.css';
-import '../../styles/v18/oynatici.css';
 
 /**
  * Sınava hazırlan › Çıkmış çözücü (/kamplar/kurul<N>/cikmis-cozucu[/<branş>]; iç adres /cikmis-cozucu?kurul=&brans=).

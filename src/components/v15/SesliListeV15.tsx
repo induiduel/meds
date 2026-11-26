@@ -19,7 +19,6 @@ import { ClipboardCheck } from 'lucide-react';
 import '../../styles/canli-ders.css';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/ogren.css';
-import '../../styles/v18/sesli.css';
 
 /**
  * v15 · Sesli ders listesi (tasarım sistemi v15 › B04). Adres /dersler/canliders[/kurulN] (branşsız). Arama, durum

@@ -1390,10 +1390,6 @@ const AppearancePanel: React.FC = () => {
       {/* Tasarım seçimi kaldırıldı (2026-10-29): tek tasarım v15; eski tasarımlar src/_arsiv/ */}
 
       <section className="u12-panel" aria-label="Renk ve yazı">
-        <SetRow id="u12-s-arayuz" title="Arayüz" sub={look.v18 ? 'v18 Canlı minimal: beyaz kartlar, siyah vurgu, yeşil ilerleme.' : 'v15 Yalın: varsayılan görünüm.'}>
-          <Seg<'v15' | 'v18'> label="Arayüz" value={look.v18 ? 'v18' : 'v15'} onChange={(v) => look.set({ v18: v === 'v18' })}
-            options={[{ value: 'v15', label: 'v15 · Yalın' }, { value: 'v18', label: 'v18 · Canlı' }]} />
-        </SetRow>
         <SetRow id="u12-s-tema" title="Tema" sub={look.mode === 'sepia' ? 'Sarı tema uzun okuma için: kâğıt tonu, düşük mavi ışık.' : 'Ortam ışığına göre seç; her temanın paleti ayrı hatırlanır.'}>
           <Seg<ThemeMode> label="Tema" value={look.mode} onChange={(m) => look.set({ mode: m })}
             options={(['light', 'sepia', 'dark'] as ThemeMode[]).map((m) => ({ value: m, label: MODE_LABELS[m] }))} />

@@ -19,8 +19,7 @@ import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 import '../../styles/today.css';
 import '../../styles/v13/today.css';
 import '../../styles/v15/today.css';
-import { useAkis, useAppearance } from '../../utils/appearance';
-import '../../styles/v18/akis.css';
+import { useAppearance } from '../../utils/appearance';
 import { useCdTur } from '../canliDers/useCdTur';
 import { TodayViewV10 } from './TodayViewV10';
 
@@ -109,8 +108,7 @@ export const TodayView: React.FC<TodayViewProps> = (props) => {
 const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v15?: boolean }> = ({ committeeLabel, onGo, v12, v13, v15 }) => {
   const basarim = useBasarim();
   // H05: Bugün koç turu — v15'te ilk girişte bir kez (görüldü bilgisi cihazda, canliDersTurDurum)
-  const akis = useAkis();
-  const bugunTur = useCdTur('bugun', !!v15 && !akis, () => !!document.querySelector('.t15-lead'));
+  const bugunTur = useCdTur('bugun', !!v15, () => !!document.querySelector('.t15-lead'));
   const today = dayKey();
   const dateLine = useMemo(
     () => new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' }),
@@ -383,89 +381,6 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
     const kalan = sinavaKalanGun();
     const baslik = kalan > 0 ? `Kurul ${kurul.kurul} sınavına ${kalan} gün kaldı.` : kalan === 0 ? `Kurul ${kurul.kurul} sınavı bugün.` : 'Bugün ne çalışalım?';
     const ozet = ring ? `%${ring.pct} ${ring.label}` : null;
-    // H685 · v18 Akış iskeleti: Bugün tek dikey zaman akışı. "Şimdi" düğümü siyah eylem kartı, ardından sıradaki işler
-    // (tür etiketi düğümde), gün sonu durum şeridi ve günün etkinlik kaydı. Saat uydurulmaz: düğüm adları anlamsaldır.
-    if (akis) {
-      const sonraki = rows.filter((r) => r.id !== primary?.id);
-      return (
-        <div className="ak">
-          <header className="ak-bas" aria-labelledby="ak-baslik">
-            <p className="ak-tarih">{dateLine} · {kurul.ad || committeeLabel || `Kurul ${kurul.kurul}`}</p>
-            <h1 id="ak-baslik" className="ak-h">{baslik}</h1>
-            {goals[0] ? (
-              <div className="ak-hedef">
-                <span className="ak-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={goals[0].pct} aria-label={`${goals[0].label} ${goals[0].value}`}>
-                  <i style={{ width: `${goals[0].pct}%` }} />
-                </span>
-                <span>{goals[0].label} {goals[0].value}</span>
-              </div>
-            ) : ozet ? <p className="ak-alt">{ozet}</p> : null}
-          </header>
-
-          <nav className="ak-hizli" aria-label="Hızlı başla">
-            {quick.map((q) => (
-              <a key={q.id} className="ak-cip" href={pathFor(q.id)} onClick={linkClick(() => onGo(q.id))}>
-                <q.icon aria-hidden /><span>{q.label}</span>
-              </a>
-            ))}
-            <button type="button" className="ak-cip" onClick={kronometreAc}><Play aria-hidden /><span>Kronometre {kronoYazi}</span></button>
-          </nav>
-
-          <ProgramSimdiKarti />
-          <IlkAdimlarKarti />
-
-          <ol className="ak-akis" aria-label="Bugünün akışı">
-            <li className="ak-d is-simdi">
-              <span className="ak-z">Şimdi</span>
-              {primary ? (
-                <a className="ak-simdi" href={primary.href} onClick={linkClick(primary.go)}>
-                  <span className="ak-simdi-t"><small>Kaldığın yerden</small><b>{primary.title}</b><span>{primary.kicker} · {primary.sub}</span></span>
-                  <span className="ak-oynat"><Play aria-hidden /></span>
-                </a>
-              ) : resumeLoading ? (
-                <span className="v15-skel ak-iskelet" aria-hidden />
-              ) : (
-                <a className="ak-simdi" href={pathFor('hub_dersler')} onClick={linkClick(() => onGo('hub_dersler'))}>
-                  <span className="ak-simdi-t"><small>Başlangıç</small><b>Derslere başla</b><span>Sesli dersler, sorular ve kartlar</span></span>
-                  <span className="ak-oynat"><Play aria-hidden /></span>
-                </a>
-              )}
-            </li>
-            {sonraki.map((r, i) => (
-              <li key={r.id} className={`ak-d ${r.tone}`} data-k={r.id}>
-                <span className="ak-z">{i === 0 ? 'Sonra' : r.tag}</span>
-                <a className="ak-kart" href={r.href} onClick={linkClick(r.go)}>
-                  <span className="ak-ikon"><r.icon aria-hidden /></span>
-                  <span className="ak-kart-t"><small>{r.tag}</small><b>{r.title}</b><span>{r.sub}</span></span>
-                  <ChevronRight className="ak-ok" aria-hidden />
-                </a>
-              </li>
-            ))}
-            {spotOfDay && (
-              <li className="ak-d is-w">
-                <span className="ak-z">Spot</span>
-                <figure className="ak-spot">
-                  <blockquote><Zengin metin={spotOfDay.s.spot} /></blockquote>
-                  {spotOfDay.ders && <figcaption>Ders {spotOfDay.ders.no} · {spotOfDay.ders.baslik}</figcaption>}
-                </figure>
-              </li>
-            )}
-            <li className="ak-d is-son">
-              <span className="ak-z">Gün sonu</span>
-              <dl className="ak-serit">
-                <div><dt>Seri</dt><dd>{week.streak} gün</dd></div>
-                <a href={pathFor('hucrem')} onClick={linkClick(() => onGo('hucrem'))}><dt>Hücre</dt><dd>{hucreBasamak}/28</dd></a>
-                <div><dt>Tekrar</dt><dd>{totalDue}</dd></div>
-              </dl>
-            </li>
-          </ol>
-
-          <section className="ak-gecmis" aria-label="Bugün yaptıkların">
-            <Suspense fallback={null}><MasaGun gomulu /></Suspense>
-          </section>
-        </div>
-      );
-    }
     return (
       <div className="t15 t15-ed">
         {bugunTur.tur}
