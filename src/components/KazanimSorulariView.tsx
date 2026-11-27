@@ -632,7 +632,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
       <div className="os-top">
         <button type="button" onClick={onBack} className="os-back"><ChevronLeft aria-hidden /> Tüm dersler</button>
         <div className="os-title">
-          <span className="os-eyebrow">Kurul 1 · {ders.sira}. ders · {ders.ders}</span>
+          <span className="os-eyebrow">Kurul {/^k(\d+)-/.exec(id)?.[1] || 1} · {ders.sira}. ders · {ders.ders}</span>
           <h2>{ders.konu}</h2>
           <span className="os-meta">{ders.ogretim_uyesi} · {ders.kazanimlar.length} kazanım · {ders.soru_sayisi} soru</span>
         </div>

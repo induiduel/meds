@@ -312,3 +312,9 @@
 - **Kök neden:** v18 ayrı bileşen değil, v15 DOM'unun üstüne CSS katmanı olarak kuruldu; v15'in kendi `!important` kuralları (klinik.css) ile özgüllük yarışı her sayfada yeni bozulma doğurdu.
 - **Çözüm:** `styles/v18/`, `styles/v15/canli.css`, `useAkis`, `data-v18`, Bugün/KlinikDizin akış dalları, Ayarlar ve tasarruf kabuğundaki v15/v18 seçicisi kaldırıldı. Eski `medsoru_appearance.v18` anahtarı artık okunmaz (zararsız).
 - **Önleme:** Yeni görünüm denemesi mevcut tasarımın üstüne `!important` katmanı olarak kurulmaz; ayrı bileşen dalıyla ve tek ekranda kanıtlanarak başlar.
+
+### H701 — Koyu temada "Sonraki" düğmesi boş; örnek soruda yanlış kurul; küçük geri dokunma alanı (2026-11-27)
+- **Belirti:** Örnek soru tam ekran çözücüsünde cevap verince sağ alttaki "Sonraki" düğmesi koyu temada boş beyaz kutu görünüyordu. Kurul 2 dersinin başlığında "Kurul 1 · 1. ders" yazıyordu. Üst çubuktaki başlık-geri düğmesinin dokunma alanı 20 px'ti.
+- **Kök neden:** (1) `bg-ink` koyu temada açık renge döner; `text-white` H100 kuralıyla `--color-on-solid`'e (o da açık) bağlı olduğundan yazı zeminle aynı renkti. `bg-ink-surface` için istisna vardı, `bg-ink` için yoktu. (2) `KazanimSorulariView.tsx` başlığında "Kurul 1" sabit yazılmıştı (H140'ta liste çok kurullu oldu, ayrıntı başlığı güncellenmedi). (3) `.v15-top-h.is-geri` `padding: 0`.
+- **Çözüm:** `index.css` `.bg-ink.text-white, .bg-ink .text-white` → `--color-canvas`; kurul ders kimliğinden (`/^k(\d+)-/`); `is-geri` 12 px dolgu + −12 px kenar boşluğu (görünüm aynı, alan 44 px).
+- **Önleme:** Temaya göre tersine dönen bir zemin tokenı (`ink`, `ink-surface`) üstüne `text-white` yazılırsa zıt renk istisnası aynı yerde tanımlanır; kurul/ders numarası hiçbir başlıkta sabit yazılmaz, kimlikten türetilir; dokunmatik düğme ≥44 px ölçülür.

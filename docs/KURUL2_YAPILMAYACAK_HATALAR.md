@@ -531,6 +531,7 @@
 - **H693** · v18 Akış iptal: v15 üstüne !important CSS katmanı özgüllük yarışı doğurdu; yeni görünüm ayrı bileşen dalıyla → hatalar/on_yuz_tasarim_tema.md
 - **H692** · Sesli ders ekranında Kurul 2 kısaltmaları okunuşla kalıyordu (o ka be, te se se be); yazim_sozlugu dizi eşlemesi + harf tutarlılık süzgeci → hatalar/ses.md
 - **H694** · Görüntü PDF: E1'den önce OCR, görüntüleyiciye metin katmanlı PDF → hatalar/ders_metni_degerlendirme.md
+- **H701** · Koyu temada bg-ink+text-white görünmez; kurul başlıkta sabit yazılmaz; geri dokunma alanı ≥44 px → hatalar/on_yuz_tasarim_tema.md
 - **H695** · Kapak bilgi paketi ders analizinde kazanım sayıldı; E1'e kapak paketi yazılmaz → hatalar/ders_metni_degerlendirme.md
 - **H696** · Kısa anahtar 400, Oracle 500, kelime_zaman göndermiyor → hatalar/betik_altyapi.md
 - **H697** · Çözücü kapısının "doğru" şartı dolgu döngüsü; bilgi cümlesi içinde tek "doğru" modeli → hatalar/soru_cozucu.md

@@ -369,7 +369,8 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
 /* iPad pencere kipi (2026-11-06): sistem kapat/küçült/tam ekran düğmeleri sol üstü kaplar → içerik sağa,
  * başlık geri düğmesi olur, alt hap başparmak bölgesinde. Chromium'un titlebar-area-x değeri varsa o kullanılır. */
 :root[data-pencere='dar'] :is(.v15-top, .cd15-bas) { padding-left: max(env(titlebar-area-x, 0px), 84px); }
-.v15-top-h.is-geri { padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; max-width: 100%; }
+/* Dokunma alanı ≥44 px (H701): görünür yükseklik aynı kalır, dolgu negatif kenar boşluğuyla dengelenir */
+.v15-top-h.is-geri { padding: 12px 0; margin-block: -12px; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; max-width: 100%; }
 .v15-top-h.is-geri::before { content: '‹ '; color: var(--color-accent); }
 :root:not([data-pencere='dar']) .v15-top-h.is-geri::before { content: none; }
 .ipad-geri-hap { position: fixed; z-index: 60; left: 50%; translate: -50% 0; bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
