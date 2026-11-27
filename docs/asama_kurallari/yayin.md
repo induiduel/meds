@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 57 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 58 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### H6 — Birleştirici ders/dosya siliyor
 - **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
@@ -240,4 +240,7 @@
 
 ### H688 — `betik_tamamla` yeni dersi "yayında değil" sandı; kelime zamanı canlıya gitmemişti (2026-11-26, k2-25/k2-59)
 - **Kural:** Yeni derste kelime zamanı doğrudan `kelime_zaman.py --key <key> --oracle --gpu` ile üretilir (ya da `betik_tamamla.py <kod> --gpu`); canlı API'yi okuyan her betik `_kok.panel_basligi()` gönderir. Yayın öncesi `betik_tamamla.py <kod>` ✓ kelime_zaman şart.
+
+### H714 — Yeni/onarılmış sesli ders sesinin düşük bit kopyası elle üretiliyordu (2026-11-27)
+- **Önleme:** Türetilmiş ses kopyası kaynağın değişmesine (aynı ad, yeni içerik) duyarlı eşitlenir: varlık değil boyut karşılaştırılır.
 

@@ -540,6 +540,7 @@
 - **H707** · v16 özelliği canlıya alınırken v15 koşulu ve CSS kapsamı da eklenir → hatalar/on_yuz_tasarim_tema.md
 - **H708** · pdfjs getDocument({url}) her zaman disableAutoFetch + disableStream ile → hatalar/on_yuz_tasarim_tema.md
 - **H709** · Düşük bit ses kopyası kaynağa bayt boyutuyla bağlanır, süre korunur → hatalar/on_yuz_tasarim_tema.md
+- **H714** · Türetilmiş ses kopyası boyut farkıyla eşitlenir; dagit.sh düşük bit kopyasını kendiliğinden üretir → hatalar/on_yuz_tasarim_tema.md
 - **H695** · Kapak bilgi paketi ders analizinde kazanım sayıldı; E1'e kapak paketi yazılmaz → hatalar/ders_metni_degerlendirme.md
 - **H696** · Kısa anahtar 400, Oracle 500, kelime_zaman göndermiyor → hatalar/betik_altyapi.md
 - **H697** · Çözücü kapısının "doğru" şartı dolgu döngüsü; bilgi cümlesi içinde tek "doğru" modeli → hatalar/soru_cozucu.md

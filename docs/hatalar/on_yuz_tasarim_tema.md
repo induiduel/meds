@@ -366,3 +366,9 @@
 - **Kök neden:** Her ders sesi tek kalitede (48–64 kbps) sunuluyordu; istemci bağlantı hızına göre seçim yapamıyordu.
 - **Çözüm:** `scripts/uretim/sesli_anlatim/dusuk_bit.py` her sese 32 kbps tek kanallı kopya + `{kaynakBayt}` yan dosyası üretir (süre kaynakla aynı, 0,3 sn sapmada silinir). Sunucu `?k=dusuk`'ta kopyayı YALNIZ kaynak bayt boyutu tutarsa verir (`X-Ses-Kalite`), varyant özetine `dusuk: true` yazar; `?indir` hep asıl ses. İstemci (`canliDersStore`): `saveData`/2G/3G/<1 Mbps ise açılışta düşük; çalarken 60 sn'de 2 kez ≥2 sn ya da bir kez ≥5 sn takılırsa düşüğe geçer; bağlantı hızlanınca yükseğe döner; geçişte konum ve oynatma korunur. Oynatıcı seçeneklerinde "Ses kalitesi: Otomatik / Yüksek / Veri tasarrufu". Kopyalar `ses_esitle.sh` ile Oracle'a gider.
 - **Önleme:** Aynı sesin ikinci kodlaması süreyi değiştirmemeli (örnekleme hızı korunur, ffprobe ile süre denetlenir); kopya kaynağa bayt boyutuyla bağlanır ki ses onarılınca eski kopya çalınmasın.
+
+### H714 — Yeni/onarılmış sesli ders sesinin düşük bit kopyası elle üretiliyordu (2026-11-27)
+- **Belirti:** H709 kopyaları bir kez üretildi; yeni ders eklenince ya da ses Oracle'da onarılınca kopya oluşmuyor, ders yüksek kalitede kalıyordu.
+- **Kök neden:** Üretim (`dusuk_bit.py`) elle çalıştırılıyordu; ayrıca `sesli_cek.sh` `--ignore-existing` kullandığından Oracle'da onarılan ses (aynı ad) yerele hiç gelmiyor, kopyası yenilenemiyordu.
+- **Çözüm:** `deploy/oracle/ses_dusuk_esitle.sh`: Oracle sesleri boyut farkıyla yerele (`--size-only --update`, silme yok, yerelde daha yeni ezilmez) → `dusuk_bit.py` (yalnız eksik/eskimiş) → `ses_dusuk/` Oracle'a → canlıda kaç varyantın kopyası var raporu. `dagit.sh` her dağıtımın sonunda çağırır (`MEDS_DAGIT_DUSUK=0` atlar). İlk çalışmada 1 yeni ses yakalandı; canlı 383/383.
+- **Önleme:** Türetilmiş ses kopyası kaynağın değişmesine (aynı ad, yeni içerik) duyarlı eşitlenir: varlık değil boyut karşılaştırılır.
