@@ -1,0 +1,536 @@
+{
+ "surum": 2,
+ "key": "k2-63",
+ "kod": "2f14",
+ "kurul": 2,
+ "brans": "Farmakoloji",
+ "konu": "Antidepresan İlaçlar",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Namık Bilici",
+ "profil": "Tıbbi Farmakoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2f14"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "",
+   "maddeler": [
+    {
+     "metin": "Antidepresanların grupları"
+    },
+    {
+     "metin": "Etki mekanizması"
+    },
+    {
+     "metin": "Trisiklik antidepresanlar"
+    },
+    {
+     "metin": "Non-trisiklik antidepresanlar"
+    },
+    {
+     "metin": "Selektif serotonin geri alım inhibitörleri"
+    },
+    {
+     "metin": "Analjezik etki ve farmakokinetik"
+    },
+    {
+     "metin": "Biyotransformasyon"
+    },
+    {
+     "metin": "Farmakoterapinin etkinliği"
+    },
+    {
+     "metin": "Trisikliklerle akut zehirlenme"
+    },
+    {
+     "metin": "Hiponatremi"
+    },
+    {
+     "metin": "İlaç etkileşimleri ve serotonin sendromu"
+    },
+    {
+     "metin": "Tolerans, bağımlılık ve kontrendikasyonlar"
+    },
+    {
+     "metin": "Spesiyaliteler"
+    },
+    {
+     "metin": "MAO inhibitörleri"
+    },
+    {
+     "metin": "Lityum karbonat"
+    },
+    {
+     "metin": "Diğer antidepresan ve antimanik ilaçlar"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Antidepresanların grupları.",
+    "Etki mekanizması.",
+    "Trisiklik antidepresanlar.",
+    "Non-trisiklik antidepresanlar.",
+    "Selektif serotonin geri alım inhibitörleri.",
+    "Analjezik etki ve farmakokinetik.",
+    "Biyotransformasyon.",
+    "Farmakoterapinin etkinliği.",
+    "Trisikliklerle akut zehirlenme.",
+    "Hiponatremi.",
+    "İlaç etkileşimleri ve serotonin sendromu.",
+    "Tolerans, bağımlılık ve kontrendikasyonlar.",
+    "Spesiyaliteler.",
+    "MAO inhibitörleri.",
+    "Lityum karbonat.",
+    "Diğer antidepresan ve antimanik ilaçlar."
+   ],
+   "v": "b167f6a308"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Antidepresanlar dört grupta incelenir",
+     "metin": "Antidepresanlar bu derste dört grupta incelenir: trisiklik antidepresanlar, non-trisiklik antidepresanlar, MAO inhibitörleri ve lityum karbonat.",
+     "s": [
+      1
+     ]
+    },
+    {
+     "baslik": "Antidepresanların etki mekanizması geri alım inhibisyonudur",
+     "metin": "Antidepresanların etki mekanizması noradrenalin ve/veya serotonin geri alınımının (re-uptake) inhibisyonudur.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Monoaminerjik sinapsta antidepresan hedefleri şeması",
+     "metin": "Monoaminerjik sinaps şemasında presinaptik uçta amino asitten (AA) nörotransmitter (NT) sentezi, veziküler taşıyıcı (VAT), geri alım taşıyıcısı (T) ve NT'yi yıkan MAO-A gösterilir.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Trisiklik antidepresanların doz ve yan etki profili",
+     "metin": "Trisiklik antidepresanlardan amitriptilin, klomipramin, doksepin, imipramin ve trimipraminin günlük dozu 100-200 mg'dır.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Noradrenalin seçici trisiklik ve benzeri ilaçlar",
+     "metin": "Noradrenalin geri alımını seçici inhibe eden desipramin, maprotilin, nortriptilin ve protriptilin ile NA ve dopamin üzerinden etkili amoksapin bu tablodadır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Non-trisiklik antidepresanların etki ve yan etki profili",
+     "metin": "Non-trisiklik antidepresanlardan mirtazapin α2 antagonistidir; ayrıca güçlü 5-HT2 ve 5-HT3 antagonistidir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Diğer non-trisiklik antidepresanlar: mianserin, amineptin, tianeptin, viloksazin",
+     "metin": "Diğer non-trisiklik antidepresanlardan mianserin tetrasiklik bir bileşiktir; sedatif ve prokonvülsif etkilidir, kardiyotoksik değildir.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Selektif serotonin geri alım inhibitörleri (SSRI)",
+     "metin": "Selektif serotonin geri alım inhibitörleri (SSRI) fluoksetin, fluvoksamin, paroksetin, sertralin, sitalopram ve esitalopramdır; hepsi yalnız serotonin geri alımını inhibe eder.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Analjezik etkisi olan antidepresanlar",
+     "metin": "Analjezik etkisi olan antidepresanlar klomipramin ve amitriptilindir.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Antidepresanların farmakokinetiği ve plazma proteinlerine bağlanma",
+     "metin": "Antidepresanların farmakokinetiğinde ağız yolundan alındıklarında mide-barsak kanalından yavaş ve kısmen absorbe edildikleri görülür.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Trisikliklerin biyotransformasyonu ve CYP2D6",
+     "metin": "Trisikliklerin biyotransformasyonu neredeyse tamdır: vücutta %100'e yakın metabolize edilirler, idrarla değişmeden atılan kısım önemsizdir.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Farmakoterapinin etkinliği ve tedavi süresi",
+     "metin": "Farmakoterapinin etkinliğinde plasebo etkisi %35, antidepresanların etkisi %65-75'tir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Trisikliklerle akut zehirlenme",
+     "metin": "Trisikliklerle akut zehirlenme, depresyonlu hastada intihar eğilimi fazla olduğundan sıktır.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Antidepresan kullanımında hiponatremi",
+     "metin": "Antidepresan kullanımında, özellikle yaşlılarda, bütün antidepresanlarla hiponatremi görülebilir.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "MAOİ ile trisikliklerin birlikte kullanılması ve serotonin sendromu",
+     "metin": "MAOİ ile trisikliklerin birlikte kullanılması (özel durumlar hariç) kontrendikedir, çünkü MAOİ trisiklikleri inaktive eden enzimleri inhibe eder.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Antidepresanlara tolerans",
+     "metin": "Antidepresanlara tolerans uzun süreli kullanımda pek gelişmez; antidepresan etkiye karşı nadiren kısmi tolerans bildirilmiştir.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Antidepresanlarda fiziksel bağımlılık ve kesilme",
+     "metin": "Antidepresanlarda fiziksel bağımlılık zayıftır; uzun süre kullanan hastaların azında ilaç birden kesilince kesilme sendromuna benzer tablo çıkabilir.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Antidepresanların kontrendikasyonları",
+     "metin": "Antidepresanların kontrendikasyonları kalp hastalığı, glokom, idrar retansiyonu, karaciğer yetmezliği, hipertansiyon, epilepsi ve alkolizmdir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Trisiklik ve diğer antidepresan spesiyaliteleri",
+     "metin": "Trisiklik ve diğer antidepresan spesiyaliteleri: amitriptilin LAROXYL ve TRİPTİLİN, imipramin TOFRANİL, klomipramin ANAFRANİL, maprotilin LUDİOMİL ve MAPROTİL, mianserin TOLVON, trazodon DESYREL, opipramol İNSİDON adlarıyla bulunur.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "SSRI spesiyaliteleri",
+     "metin": "SSRI spesiyaliteleri: sitalopram CİPRAM, esitalopram CİPRALEX, paroksetin SEROXAT, fluoksetin PROZAC ve DEPREKS adlarıyla bulunur.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Diğer antidepresan spesiyaliteleri",
+     "metin": "Diğer antidepresan spesiyaliteleri: sertralin LUSTRAL, fluvoksamin FAVERİN, mirtazapin REMERON, reboksetin EDRONAX, tianeptin STABLON ve venlafaksin EFEXOR adlarıyla bulunur.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "MAO inhibitörleri seçiciliğe göre üç gruptur",
+     "metin": "MAO inhibitörleri seçiciliğe göre üçe ayrılır: MAO A selektif moklobemid (200-450 mg/gün), selektif olmayanlar (nialamid, isokarboksazid, fenelzin, tranilsipromin) ve MAO B selektif selejilin.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "MAO A ve MAO B enzimlerinin substrat ve inhibitörleri",
+     "metin": "MAO A enziminin substratları serotonin ve noradrenalin, inhibitörleri moklobemid ve klorjilindir.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "MAO enziminin vücutta yoğun bulunduğu yerler",
+     "metin": "MAO enzimi vücutta noradrenerjik, dopaminerjik ve serotonerjik sinir uçlarında, karaciğer, akciğer ve barsak çeperinde yoğundur.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Peynir reaksiyonu (tiramin ve MAOİ)",
+     "metin": "Peynir reaksiyonunun temeli şudur: vücuda giren tiramin ve benzerlerinin yaklaşık %99'u MAO ile inaktive edilir.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Moklobemid spesiyaliteleri",
+     "metin": "Moklobemid spesiyaliteleri AURORİX ve LOBEM'dir (150 mg ve 300 mg tablet).",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Lityum karbonatın kullanımı ve dozu",
+     "metin": "Lityum karbonat bipolar hastalığın manik ve bazen de depresif epizodlarının önlenmesinde kullanılır.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Lityumun yan etkileri ve dikkat edilecekler",
+     "metin": "Lityumun yan etkileri düşük konsantrasyonda anoreksi, bulantı, kusma, polidipsi, poliüri, akne ve tremordur.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Diğer antidepresan ve antimanik ilaçlar",
+     "metin": "Diğer antidepresan ve antimanik ilaçlardan karbamazepin bipolar bozuklukta akut dönemde antimanik, uzun süreli kullanımda profilaktik etkilidir.",
+     "s": [
+      29
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Antidepresanlar dört grupta incelenir: Antidepresanlar bu derste dört grupta incelenir: trisiklik antidepresanlar, non-trisiklik antidepresanlar, MAO inhibitörleri ve lityum karbonat.",
+    "Antidepresanların etki mekanizması geri alım inhibisyonudur: Antidepresanların etki mekanizması noradrenalin ve/veya serotonin geri alınımının (re-uptake) inhibisyonudur.",
+    "Monoaminerjik sinapsta antidepresan hedefleri şeması: Monoaminerjik sinaps şemasında presinaptik uçta amino asitten (AA) nörotransmitter (NT) sentezi, veziküler taşıyıcı (VAT), geri alım taşıyıcısı (T) ve NT'yi yıkan MAO-A gösterilir.",
+    "Trisiklik antidepresanların doz ve yan etki profili: Trisiklik antidepresanlardan amitriptilin, klomipramin, doksepin, imipramin ve trimipraminin günlük dozu 100-200 mg'dır.",
+    "Noradrenalin seçici trisiklik ve benzeri ilaçlar: Noradrenalin geri alımını seçici inhibe eden desipramin, maprotilin, nortriptilin ve protriptilin ile NA ve dopamin üzerinden etkili amoksapin bu tablodadır.",
+    "Non-trisiklik antidepresanların etki ve yan etki profili: Non-trisiklik antidepresanlardan mirtazapin α2 antagonistidir; ayrıca güçlü 5-HT2 ve 5-HT3 antagonistidir.",
+    "Diğer non-trisiklik antidepresanlar: mianserin, amineptin, tianeptin, viloksazin: Diğer non-trisiklik antidepresanlardan mianserin tetrasiklik bir bileşiktir; sedatif ve prokonvülsif etkilidir, kardiyotoksik değildir.",
+    "Selektif serotonin geri alım inhibitörleri (SSRI): Selektif serotonin geri alım inhibitörleri (SSRI) fluoksetin, fluvoksamin, paroksetin, sertralin, sitalopram ve esitalopramdır; hepsi yalnız serotonin geri alımını inhibe eder.",
+    "Analjezik etkisi olan antidepresanlar: Analjezik etkisi olan antidepresanlar klomipramin ve amitriptilindir.",
+    "Antidepresanların farmakokinetiği ve plazma proteinlerine bağlanma: Antidepresanların farmakokinetiğinde ağız yolundan alındıklarında mide-barsak kanalından yavaş ve kısmen absorbe edildikleri görülür.",
+    "Trisikliklerin biyotransformasyonu ve CYP2D6: Trisikliklerin biyotransformasyonu neredeyse tamdır: vücutta %100'e yakın metabolize edilirler, idrarla değişmeden atılan kısım önemsizdir.",
+    "Farmakoterapinin etkinliği ve tedavi süresi: Farmakoterapinin etkinliğinde plasebo etkisi %35, antidepresanların etkisi %65-75'tir.",
+    "Trisikliklerle akut zehirlenme: Trisikliklerle akut zehirlenme, depresyonlu hastada intihar eğilimi fazla olduğundan sıktır.",
+    "Antidepresan kullanımında hiponatremi: Antidepresan kullanımında, özellikle yaşlılarda, bütün antidepresanlarla hiponatremi görülebilir.",
+    "MAOİ ile trisikliklerin birlikte kullanılması ve serotonin sendromu: MAOİ ile trisikliklerin birlikte kullanılması (özel durumlar hariç) kontrendikedir, çünkü MAOİ trisiklikleri inaktive eden enzimleri inhibe eder.",
+    "Antidepresanlara tolerans: Antidepresanlara tolerans uzun süreli kullanımda pek gelişmez; antidepresan etkiye karşı nadiren kısmi tolerans bildirilmiştir.",
+    "Antidepresanlarda fiziksel bağımlılık ve kesilme: Antidepresanlarda fiziksel bağımlılık zayıftır; uzun süre kullanan hastaların azında ilaç birden kesilince kesilme sendromuna benzer tablo çıkabilir.",
+    "Antidepresanların kontrendikasyonları: Antidepresanların kontrendikasyonları kalp hastalığı, glokom, idrar retansiyonu, karaciğer yetmezliği, hipertansiyon, epilepsi ve alkolizmdir.",
+    "Trisiklik ve diğer antidepresan spesiyaliteleri: Trisiklik ve diğer antidepresan spesiyaliteleri: amitriptilin LAROXYL ve TRİPTİLİN, imipramin TOFRANİL, klomipramin ANAFRANİL, maprotilin LUDİOMİL ve MAPROTİL, mianserin TOLVON, trazodon DESYREL, opipramol İNSİDON adlarıyla bulunur.",
+    "SSRI spesiyaliteleri: SSRI spesiyaliteleri: sitalopram CİPRAM, esitalopram CİPRALEX, paroksetin SEROXAT, fluoksetin PROZAC ve DEPREKS adlarıyla bulunur.",
+    "Diğer antidepresan spesiyaliteleri: Diğer antidepresan spesiyaliteleri: sertralin LUSTRAL, fluvoksamin FAVERİN, mirtazapin REMERON, reboksetin EDRONAX, tianeptin STABLON ve venlafaksin EFEXOR adlarıyla bulunur.",
+    "MAO inhibitörleri seçiciliğe göre üç gruptur: MAO inhibitörleri seçiciliğe göre üçe ayrılır: MAO A selektif moklobemid (200-450 mg/gün), selektif olmayanlar (nialamid, isokarboksazid, fenelzin, tranilsipromin) ve MAO B selektif selejilin.",
+    "MAO A ve MAO B enzimlerinin substrat ve inhibitörleri: MAO A enziminin substratları serotonin ve noradrenalin, inhibitörleri moklobemid ve klorjilindir.",
+    "MAO enziminin vücutta yoğun bulunduğu yerler: MAO enzimi vücutta noradrenerjik, dopaminerjik ve serotonerjik sinir uçlarında, karaciğer, akciğer ve barsak çeperinde yoğundur.",
+    "Peynir reaksiyonu (tiramin ve MAOİ): Peynir reaksiyonunun temeli şudur: vücuda giren tiramin ve benzerlerinin yaklaşık %99'u MAO ile inaktive edilir.",
+    "Moklobemid spesiyaliteleri: Moklobemid spesiyaliteleri AURORİX ve LOBEM'dir (150 mg ve 300 mg tablet).",
+    "Lityum karbonatın kullanımı ve dozu: Lityum karbonat bipolar hastalığın manik ve bazen de depresif epizodlarının önlenmesinde kullanılır.",
+    "Lityumun yan etkileri ve dikkat edilecekler: Lityumun yan etkileri düşük konsantrasyonda anoreksi, bulantı, kusma, polidipsi, poliüri, akne ve tremordur.",
+    "Diğer antidepresan ve antimanik ilaçlar: Diğer antidepresan ve antimanik ilaçlardan karbamazepin bipolar bozuklukta akut dönemde antimanik, uzun süreli kullanımda profilaktik etkilidir."
+   ],
+   "v": "58c6d717e3"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin doğrulanmış beş çıkmış sorusu üç noktada toplanır: trisiklik ve non-trisiklik sınıflandırma (imipramin, bupropion), SSRI etki profili (fluoksetin, fluvoksamin, sertralin) ve MAO inhibitörlerinin seçicilik ayrımı. Köklerin çoğu ilacı etki sütunu ya da sınıfıyla tanımlatır; iki soru olumsuz kökle yanlış ifadeyi bulmayı ister.",
+   "maddeler": [
+    {
+     "baslik": "2018-2019",
+     "metin": "I. Fluoksetin II. Sertralin III. Fluvoksamin IV. Klomipramin — Yukarıdaki ajanlardan hangisi/hangileri sadece serotonin geri alımını inhibe eder?",
+     "cevap": "I, II ve III",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru, ilaçların etki sütunundaki geri alım profilini ayırt edip edemediğinizi ölçüyor: hangi ajan yalnız serotonini (S), hangisi serotonin ile birlikte noradrenalini (NA) tutuyor.",
+      "Slayttaki SSRI tablosunda fluoksetin, fluvoksamin, paroksetin ve sertralin için etki sütununa yalnız S yazılıdır; bu yüzden I, II ve III yalnız serotonin geri alımını inhibe eder ve doğru cevap A'dır.",
+      "Klomipramin trisiklik antidepresan tablosunda S, NA olarak verilir; yani noradrenalin geri alımını da inhibe eder ve IV numaralı öncül 'sadece serotonin' ölçütünü sağlamaz. Bu nedenle IV'ü içeren E, C ve D şıkları elenir.",
+      "B şıkkı (I ve III) sertralini dışarıda bırakır; oysa sertralin de tabloda yalnız S olarak yer aldığından eksik bir kümedir ve yanlıştır."
+     ],
+     "ornek": "Slayttaki tabloda aynı satır kalıbıyla okunur: Fluvoksamin 100-200 mg/gün, etki S; Klomipramin 100-200 mg/gün, etki S, NA.",
+     "tuzak": "Klomipraminin ağırlıklı olarak serotonin etkili olması nedeniyle onu da 'yalnız serotonin' sanıp E şıkkını işaretlemek; trisiklik grubun etki sütununda NA'nın da yazılı olduğu gözden kaçar."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Aşağıdaki ilaçlardan hangisi trisiklik antidepresandır?",
+     "cevap": "İmipramin",
+     "s": [
+      4
+     ],
+     "aciklama": [
+      "Soru, antidepresanları sınıfına göre ayırmayı, yani trisiklik ile non-trisiklik ve MAO inhibitörü gruplarını karıştırmamayı ölçüyor.",
+      "Slayttaki trisiklik antidepresanlar tablosu amitriptilin, klomipramin, doksepin, imipramin ve trimipramini sıralar; imipramin 100-200 mg/gün dozunda, NA ve S etkili olarak yer aldığından doğru cevap A'dır.",
+      "Venlafaksin (S, NA etkili) ve bupropion (DA etkili) slaytta 'Non-trisiklik antidepresanlar' tablosunda verilir; bu yüzden trisiklik değildirler.",
+      "Fluoksetin non-trisiklik grubun SSRI bölümünde, selejilin ise MAO inhibitörleri tablosunda MAO B selektif ilaç olarak yer alır; ikisi de trisiklik sınıfın dışındadır."
+     ],
+     "ornek": "Slaytta sınıf ayrımı başlıklarla verilir: 'Trisiklik Antidepresanlar' tablosunda imipramin (Tofranil), 'Non-Trisiklik' tablosunda venlafaksin ve bupropion yer alır.",
+     "tuzak": "İlaç adını duyduğu kadarıyla sınıf tahmin etmek; venlafaksin ya da bupropionu 'klasik' antidepresan diye trisikliğe katmak. Doğru ayrım slayttaki tablo başlığıdır."
+    },
+    {
+     "baslik": "2019-2020",
+     "metin": "Sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+     "cevap": "Bupropion",
+     "s": [
+      6
+     ],
+     "aciklama": [
+      "Soru, antidepresan sınıfındaki bir ilacın antidepresan dışındaki endikasyonunu bilip bilmediğinizi ölçüyor; bu derste doğrudan hedef, bupropionun hangi ilaç grubuna girdiğini tanımaktır.",
+      "Slayt, bupropionu non-trisiklik antidepresanlar tablosunda dopamin (DA) etkili, 200-300 mg/gün dozlu ilaç olarak verir ve konvülsiyon nöbeti sütununda ++++ yazar. Sigara bırakma endikasyonu slaytta yazmaz; bu bağlantı soruya özgü bilgidir ve derste yalnız bupropionun ayırt edici profili çıkarılır.",
+      "Fluoksetin ve sertralin slayttaki SSRI tablosunda yalnız S etkili ilaçlar olarak, desipramin ise trisiklik tablosunda NA etkili ilaç olarak yer alır; bupropionun tek başına dopamin etkili olması onu bu üç ilaçtan ayırır.",
+      "Sugammadeks bu dersin slaytında geçmez; kaynak dışı bir çeldirici olduğundan ders bilgisiyle seçilemez, doğru cevap bupropion kalır."
+     ],
+     "ornek": "Slaytta bupropion satırı: 200-300 mg/gün, etki DA, sedasyon 0, antikolinerjik 0, konvülsiyon nöbeti ++++. Bu satır bupropionu diğer antidepresanlardan ayıran ezber noktasıdır.",
+     "tuzak": "Yanıtı yalnız ders slaytından bulmaya çalışmak; sigara bırakma endikasyonu tabloda yer almaz. Bir diğer tuzak, SSRI'ları (fluoksetin, sertralin) 'sigara' gibi geniş kullanımlı sanıp seçmektir; dopamin etkili tek ilaç bupropiondur."
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Fluoksetin için hangisi söylenemez?",
+     "cevap": "Monoamindir. Advers etkileri olmasa majör depresif tedavide kullanılabilir.",
+     "s": [
+      8
+     ],
+     "aciklama": [
+      "Soru, fluoksetinin sınıfını ve profilini doğru bilip yanlış ifadeyi bulmayı ölçüyor; olumsuz kök ('söylenemez') nedeniyle doğru ifadeleri eleyip tek yanlışı seçmek gerekir.",
+      "Slayt fluoksetini SSRI tablosunda 20-40 mg/gün dozlu, yalnız S etkili ilaç olarak verir; B şıkkı (SSRI'dir) bu nedenle doğrudur ve elenir.",
+      "Aynı tabloda fluoksetinin antikolinerjik etkisi 0, sedatif etkisi 0/+ yazılıdır; bu veriler D şıkkındaki 'trisiklikler gibi asetilkolin reseptörlerine bağlanarak iş görmez' ifadesini destekler. Fenelzin MAO inhibitörleri tablosunda selektif olmayan, selejilin MAO B selektif ilaçlar arasında sayılır; fluoksetin bu tabloda yer almaz, dolayısıyla E şıkkı da doğrudur.",
+      "Cevap olan A şıkkı slayttaki bilgiyle desteklenmez ve fluoksetinin SSRI olarak verilmesiyle çelişen bir kalıp taşır; tablo fluoksetini yan etkisiz bir ilaç olarak da sunmaz. C şıkkı (histamin ve alfa reseptörleri) slaytta işlenmez, bu yüzden ders bilgisiyle tek başına sınanamaz."
+     ],
+     "ornek": "Slayttaki fluoksetin satırı: 20-40 mg/gün, etki S, sedasyon 0/+, antikolinerjik 0, hipotansiyon 0, kardiyak yan etki 0, konvülsiyon nöbeti 0/+, kilo alma 0.",
+     "tuzak": "'Söylenemez' kökünü okurken doğru ifadeleri işaretlemek; B, D ve E gibi slaytla uyumlu ifadeleri seçmek yerine tek yanlış ifadeyi bulma ilkesini unutmak."
+    },
+    {
+     "baslik": "2024-2025",
+     "metin": "Antidepresan ilaçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "cevap": "SSRI'lar iyi tolere edilir ve maliyetleri düşüktür ancak kullanım spektrumları dardır",
+     "s": [
+      22
+     ],
+     "aciklama": [
+      "Soru, antidepresan sınıflarına dair genel ifadeler arasından yanlış olanı bulmayı ölçüyor; trisiklik, SSRI, SNRI ve MAO inhibitörü gruplarının profilini karşılaştırmayı gerektirir.",
+      "Slayt SSRI tablosunda fluoksetin, fluvoksamin, paroksetin, sertralin, sitalopram ve esitalopramın antikolinerjik, kardiyak ve kilo alma etkilerini 0 ya da 0/+ olarak verir; bu, ilaçların iyi tolere edildiği anlamını destekler. Maliyet ve kullanım spektrumu slaytta yazmaz; B şıkkı slaytla çelişmeyen ama kanıtlanamayan bir ifadedir ve soruda yanlış olarak kabul edilmiştir.",
+      "E şıkkındaki MAO ayrımı slaytla örtüşür: fenelzin ve tranilsipromin 'Selektif olmayanlar' bölümünde, moklobemid ise 'MAO A Selektif' bölümünde yer alır. Geri dönüşümlülük ayrıntısı slaytta açıkça yazılmaz.",
+      "A şıkkı trisiklik antidepresanların antikolinerjik etkisini (tabloda +++ gibi değerler) ve C şıkkı venlafaksinin S, NA etkili bir non-trisiklik ilaç olması gerçeğini ders bağlamında destekler; D şıkkı (cinsel yan etki) slaytta işlenmez, ancak sitalopram satırında libidoda azalma yazılıdır."
+     ],
+     "ornek": "Slayt s22'deki MAO tablosu: MAO A selektif, moklobemid (Aurorix) 200-450 mg; selektif olmayanlar, nialamid, isokarboksazid, fenelzin, tranilsipromin; MAO B selektif, selejilin.",
+     "tuzak": "Hatalı ifadeyi bulurken moklobemidi nonselektif MAO inhibitörü sanmak; hatırlamadaki bir şıkta moklobemid yanlış sınıflanmıştı. Slayt moklobemidi MAO A selektif olarak verir."
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin doğrulanmış beş çıkmış sorusu üç noktada toplanır: trisiklik ve non-trisiklik sınıflandırma (imipramin, bupropion), SSRI etki profili (fluoksetin, fluvoksamin, sertralin) ve MAO inhibitörlerinin seçicilik ayrımı. Köklerin çoğu ilacı etki sütunu ya da sınıfıyla tanımlatır; iki soru olumsuz kökle yanlış ifadeyi bulmayı ister.",
+    "2018-2019: I. Fluoksetin II. Sertralin III. Fluvoksamin IV. Klomipramin — Yukarıdaki ajanlardan hangisi/hangileri sadece serotonin geri alımını inhibe eder?",
+    "Cevap: I, II ve III.",
+    "Soru, ilaçların etki sütunundaki geri alım profilini ayırt edip edemediğinizi ölçüyor: hangi ajan yalnız serotonini (S), hangisi serotonin ile birlikte noradrenalini (NA) tutuyor.",
+    "Slayttaki SSRI tablosunda fluoksetin, fluvoksamin, paroksetin ve sertralin için etki sütununa yalnız S yazılıdır; bu yüzden I, II ve III yalnız serotonin geri alımını inhibe eder ve doğru cevap A'dır.",
+    "Klomipramin trisiklik antidepresan tablosunda S, NA olarak verilir; yani noradrenalin geri alımını da inhibe eder ve IV numaralı öncül 'sadece serotonin' ölçütünü sağlamaz. Bu nedenle IV'ü içeren E, C ve D şıkları elenir.",
+    "B şıkkı (I ve III) sertralini dışarıda bırakır; oysa sertralin de tabloda yalnız S olarak yer aldığından eksik bir kümedir ve yanlıştır.",
+    "Örnek: Slayttaki tabloda aynı satır kalıbıyla okunur: Fluvoksamin 100-200 mg/gün, etki S; Klomipramin 100-200 mg/gün, etki S, NA.",
+    "Tuzak: Klomipraminin ağırlıklı olarak serotonin etkili olması nedeniyle onu da 'yalnız serotonin' sanıp E şıkkını işaretlemek; trisiklik grubun etki sütununda NA'nın da yazılı olduğu gözden kaçar.",
+    "2019-2020: Aşağıdaki ilaçlardan hangisi trisiklik antidepresandır?",
+    "Cevap: İmipramin.",
+    "Soru, antidepresanları sınıfına göre ayırmayı, yani trisiklik ile non-trisiklik ve MAO inhibitörü gruplarını karıştırmamayı ölçüyor.",
+    "Slayttaki trisiklik antidepresanlar tablosu amitriptilin, klomipramin, doksepin, imipramin ve trimipramini sıralar; imipramin 100-200 mg/gün dozunda, NA ve S etkili olarak yer aldığından doğru cevap A'dır.",
+    "Venlafaksin (S, NA etkili) ve bupropion (DA etkili) slaytta 'Non-trisiklik antidepresanlar' tablosunda verilir; bu yüzden trisiklik değildirler.",
+    "Fluoksetin non-trisiklik grubun SSRI bölümünde, selejilin ise MAO inhibitörleri tablosunda MAO B selektif ilaç olarak yer alır; ikisi de trisiklik sınıfın dışındadır.",
+    "Örnek: Slaytta sınıf ayrımı başlıklarla verilir: 'Trisiklik Antidepresanlar' tablosunda imipramin (Tofranil), 'Non-Trisiklik' tablosunda venlafaksin ve bupropion yer alır.",
+    "Tuzak: İlaç adını duyduğu kadarıyla sınıf tahmin etmek; venlafaksin ya da bupropionu 'klasik' antidepresan diye trisikliğe katmak. Doğru ayrım slayttaki tablo başlığıdır.",
+    "2019-2020: Sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+    "Cevap: Bupropion.",
+    "Soru, antidepresan sınıfındaki bir ilacın antidepresan dışındaki endikasyonunu bilip bilmediğinizi ölçüyor; bu derste doğrudan hedef, bupropionun hangi ilaç grubuna girdiğini tanımaktır.",
+    "Slayt, bupropionu non-trisiklik antidepresanlar tablosunda dopamin (DA) etkili, 200-300 mg/gün dozlu ilaç olarak verir ve konvülsiyon nöbeti sütununda ++++ yazar. Sigara bırakma endikasyonu slaytta yazmaz; bu bağlantı soruya özgü bilgidir ve derste yalnız bupropionun ayırt edici profili çıkarılır.",
+    "Fluoksetin ve sertralin slayttaki SSRI tablosunda yalnız S etkili ilaçlar olarak, desipramin ise trisiklik tablosunda NA etkili ilaç olarak yer alır; bupropionun tek başına dopamin etkili olması onu bu üç ilaçtan ayırır.",
+    "Sugammadeks bu dersin slaytında geçmez; kaynak dışı bir çeldirici olduğundan ders bilgisiyle seçilemez, doğru cevap bupropion kalır.",
+    "Örnek: Slaytta bupropion satırı: 200-300 mg/gün, etki DA, sedasyon 0, antikolinerjik 0, konvülsiyon nöbeti ++++. Bu satır bupropionu diğer antidepresanlardan ayıran ezber noktasıdır.",
+    "Tuzak: Yanıtı yalnız ders slaytından bulmaya çalışmak; sigara bırakma endikasyonu tabloda yer almaz. Bir diğer tuzak, SSRI'ları (fluoksetin, sertralin) 'sigara' gibi geniş kullanımlı sanıp seçmektir; dopamin etkili tek ilaç bupropiondur.",
+    "2020-2021: Fluoksetin için hangisi söylenemez?",
+    "Cevap: Monoamindir. Advers etkileri olmasa majör depresif tedavide kullanılabilir.",
+    "Soru, fluoksetinin sınıfını ve profilini doğru bilip yanlış ifadeyi bulmayı ölçüyor; olumsuz kök ('söylenemez') nedeniyle doğru ifadeleri eleyip tek yanlışı seçmek gerekir.",
+    "Slayt fluoksetini SSRI tablosunda 20-40 mg/gün dozlu, yalnız S etkili ilaç olarak verir; B şıkkı (SSRI'dir) bu nedenle doğrudur ve elenir.",
+    "Aynı tabloda fluoksetinin antikolinerjik etkisi 0, sedatif etkisi 0/+ yazılıdır; bu veriler D şıkkındaki 'trisiklikler gibi asetilkolin reseptörlerine bağlanarak iş görmez' ifadesini destekler. Fenelzin MAO inhibitörleri tablosunda selektif olmayan, selejilin MAO B selektif ilaçlar arasında sayılır; fluoksetin bu tabloda yer almaz, dolayısıyla E şıkkı da doğrudur.",
+    "Cevap olan A şıkkı slayttaki bilgiyle desteklenmez ve fluoksetinin SSRI olarak verilmesiyle çelişen bir kalıp taşır; tablo fluoksetini yan etkisiz bir ilaç olarak da sunmaz. C şıkkı (histamin ve alfa reseptörleri) slaytta işlenmez, bu yüzden ders bilgisiyle tek başına sınanamaz.",
+    "Örnek: Slayttaki fluoksetin satırı: 20-40 mg/gün, etki S, sedasyon 0/+, antikolinerjik 0, hipotansiyon 0, kardiyak yan etki 0, konvülsiyon nöbeti 0/+, kilo alma 0.",
+    "Tuzak: 'Söylenemez' kökünü okurken doğru ifadeleri işaretlemek; B, D ve E gibi slaytla uyumlu ifadeleri seçmek yerine tek yanlış ifadeyi bulma ilkesini unutmak.",
+    "2024-2025: Antidepresan ilaçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+    "Cevap: SSRI'lar iyi tolere edilir ve maliyetleri düşüktür ancak kullanım spektrumları dardır.",
+    "Soru, antidepresan sınıflarına dair genel ifadeler arasından yanlış olanı bulmayı ölçüyor; trisiklik, SSRI, SNRI ve MAO inhibitörü gruplarının profilini karşılaştırmayı gerektirir.",
+    "Slayt SSRI tablosunda fluoksetin, fluvoksamin, paroksetin, sertralin, sitalopram ve esitalopramın antikolinerjik, kardiyak ve kilo alma etkilerini 0 ya da 0/+ olarak verir; bu, ilaçların iyi tolere edildiği anlamını destekler. Maliyet ve kullanım spektrumu slaytta yazmaz; B şıkkı slaytla çelişmeyen ama kanıtlanamayan bir ifadedir ve soruda yanlış olarak kabul edilmiştir.",
+    "E şıkkındaki MAO ayrımı slaytla örtüşür: fenelzin ve tranilsipromin 'Selektif olmayanlar' bölümünde, moklobemid ise 'MAO A Selektif' bölümünde yer alır. Geri dönüşümlülük ayrıntısı slaytta açıkça yazılmaz.",
+    "A şıkkı trisiklik antidepresanların antikolinerjik etkisini (tabloda +++ gibi değerler) ve C şıkkı venlafaksinin S, NA etkili bir non-trisiklik ilaç olması gerçeğini ders bağlamında destekler; D şıkkı (cinsel yan etki) slaytta işlenmez, ancak sitalopram satırında libidoda azalma yazılıdır.",
+    "Örnek: Slayt s22'deki MAO tablosu: MAO A selektif, moklobemid (Aurorix) 200-450 mg; selektif olmayanlar, nialamid, isokarboksazid, fenelzin, tranilsipromin; MAO B selektif, selejilin.",
+    "Tuzak: Hatalı ifadeyi bulurken moklobemidi nonselektif MAO inhibitörü sanmak; hatırlamadaki bir şıkta moklobemid yanlış sınıflanmıştı. Slayt moklobemidi MAO A selektif olarak verir."
+   ],
+   "v": "7e0f1047e3"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "guven": "dusuk",
+   "giris": "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 5 çıkmış sorusundan sayılanlar var.",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Bu dersten doğrulanmış 5 çıkmış soru var; 1 tanesi öncüllü, 2 tanesi olumsuz köklüdür."
+    },
+    {
+     "baslik": "Sorulan sayfalar",
+     "metin": "Çıkmış sorular şu ders sayfalarına denk gelir: 4, 6, 8, 22."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Hocanın soru üslubu profili bu konuda güvenilir değil; aşağıda yalnız bu dersin doğrulanmış 5 çıkmış sorusundan sayılanlar var.",
+    "Soru kökü: Bu dersten doğrulanmış 5 çıkmış soru var; 1 tanesi öncüllü, 2 tanesi olumsuz köklüdür.",
+    "Sorulan sayfalar: Çıkmış sorular şu ders sayfalarına denk gelir: 4, 6, 8, 22."
+   ],
+   "v": "0bef410202"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Selektif serotonin geri alım inhibitörleri (SSRI)",
+     "metin": "Sık yapılan hata: Klomipraminin ağırlıklı olarak serotonin etkili olması nedeniyle onu da 'yalnız serotonin' sanıp E şıkkını işaretlemek; trisiklik grubun etki sütununda NA'nın da yazılı olduğu gözden kaçar. Ayrıca: 'Söylenemez' kökünü okurken doğru ifadeleri işaretlemek; B, D ve E gibi slaytla uyumlu ifadeleri seçmek yerine tek yanlış ifadeyi bulma ilkesini unutmak."
+    },
+    {
+     "baslik": "Trisiklik antidepresanların doz ve yan etki profili",
+     "metin": "Sık yapılan hata: İlaç adını duyduğu kadarıyla sınıf tahmin etmek; venlafaksin ya da bupropionu 'klasik' antidepresan diye trisikliğe katmak. Doğru ayrım slayttaki tablo başlığıdır."
+    },
+    {
+     "baslik": "Non-trisiklik antidepresanların etki ve yan etki profili",
+     "metin": "Sık yapılan hata: Yanıtı yalnız ders slaytından bulmaya çalışmak; sigara bırakma endikasyonu tabloda yer almaz. Bir diğer tuzak, SSRI'ları (fluoksetin, sertralin) 'sigara' gibi geniş kullanımlı sanıp seçmektir; dopamin etkili tek ilaç bupropiondur."
+    },
+    {
+     "baslik": "MAO inhibitörleri seçiciliğe göre üç gruptur",
+     "metin": "Sık yapılan hata: Hatalı ifadeyi bulurken moklobemidi nonselektif MAO inhibitörü sanmak; hatırlamadaki bir şıkta moklobemid yanlış sınıflanmıştı. Slayt moklobemidi MAO A selektif olarak verir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Selektif serotonin geri alım inhibitörleri (SSRI): Sık yapılan hata: Klomipraminin ağırlıklı olarak serotonin etkili olması nedeniyle onu da 'yalnız serotonin' sanıp E şıkkını işaretlemek; trisiklik grubun etki sütununda NA'nın da yazılı olduğu gözden kaçar. Ayrıca: 'Söylenemez' kökünü okurken doğru ifadeleri işaretlemek; B, D ve E gibi slaytla uyumlu ifadeleri seçmek yerine tek yanlış ifadeyi bulma ilkesini unutmak.",
+    "Trisiklik antidepresanların doz ve yan etki profili: Sık yapılan hata: İlaç adını duyduğu kadarıyla sınıf tahmin etmek; venlafaksin ya da bupropionu 'klasik' antidepresan diye trisikliğe katmak. Doğru ayrım slayttaki tablo başlığıdır.",
+    "Non-trisiklik antidepresanların etki ve yan etki profili: Sık yapılan hata: Yanıtı yalnız ders slaytından bulmaya çalışmak; sigara bırakma endikasyonu tabloda yer almaz. Bir diğer tuzak, SSRI'ları (fluoksetin, sertralin) 'sigara' gibi geniş kullanımlı sanıp seçmektir; dopamin etkili tek ilaç bupropiondur.",
+    "MAO inhibitörleri seçiciliğe göre üç gruptur: Sık yapılan hata: Hatalı ifadeyi bulurken moklobemidi nonselektif MAO inhibitörü sanmak; hatırlamadaki bir şıkta moklobemid yanlış sınıflanmıştı. Slayt moklobemidi MAO A selektif olarak verir.",
+    "Çalışma yolu: Okurken yukarıdaki başlıklarda çıkmış soruların sorduğu bilgiyi ayrı not et; tanımı ve sayıları kendi cümlenle tekrar et."
+   ],
+   "v": "21006a128f"
+  }
+ ],
+ "ozet": null,
+ "ozetEksik": [
+  "önem listesi",
+  "sesli örnek soru çözücü"
+ ]
+}

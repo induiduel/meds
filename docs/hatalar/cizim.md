@@ -261,3 +261,9 @@
   (kutunun dışında kalan kelime sayısı). Yeni bir görsel/görsel-içi-etiket slaytı eklendiğinde: `sekil_isareti` çıktısı
   `t: resim` olmalı, dökümde `R#` satırı bulunmalı; bulunmuyorsa şablon zemin değil şema kabul edilir. Kapı gevşetilmez.
 
+
+### H713 — Çizim kapısı şekil kapsamasını "0/0" gösterdi, gerçekte 6/6 (2026-11-27, k2-63)
+- **Belirti:** `cizim_kapisi.py k2-63` "0 HATA (şekil 0/0 çizimli)" dedi; s3 sinaps şemasını anlatan 6 cümlenin hepsi çizimliydi.
+- **Kök neden:** Kapı kapsamayı çapa dosyasındaki `sekil` alanından sayar; elle kurulan çapada s3 cümlelerinde bu alan boş (`None`) kaldı. Kapı boş kapsamayı HATA saymıyor, şekilsiz ders gibi geçiriyor.
+- **Çözüm:** Kapsama elle doğrulandı: 8 kontur, 6 cümle. Kapıya dokunulmadı.
+- **Kural:** Metinsiz (görüntü) sayfası olan derste çapa `sekil` alanı doldurulur. Kapı "0/0" verirken sayfalarda görüntü varsa bu sonuç kanıt sayılmaz, çizim elle sayılır. Kapı düzeltmesi önerisi: görüntü sayfası olup `sekil` alanı boşsa UYARI.

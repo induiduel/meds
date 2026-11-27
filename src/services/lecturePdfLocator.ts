@@ -436,6 +436,11 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /13)İskelet Kası Gevşeticileri.pdf', name: '13)İskelet Kası Gevşeticileri.pdf', pages: 51, fileId: '1rBa9mdpxv-HUmD0Vq0r8HjybS-E5jXfD' } as SourceFile],
   },
+  'k2p-k2-63-antidepresan-ilaclar': {
+    title: 'Antidepresan İlaçlar',
+    decks: [],
+    files: [{ path: 'Kurul 2/Tıbbi Farmakoloji /14)Antidepresanlar.pdf', name: '14)Antidepresanlar.pdf', pages: 29, fileId: '13NItV2CBpWk1CHYVBnwIsNHKBkf_A8D9' } as SourceFile],
+  },
   // 2026-11-23 Davranış Genetiği (k2-52): deste yok, okul PDF'i sanal desteyle bağlı.
   'k2p-k2-52-davranis-genetigi': {
     title: 'Davranış Genetiği',

@@ -1,0 +1,3292 @@
+{
+ "surum": 2,
+ "ders_id": "k2-63",
+ "anahtar": "k2-63-antidepresan-ilaclar",
+ "baslik": "Antidepresan İlaçlar",
+ "bolumler": [
+  {
+   "id": "k2-63-b01",
+   "baslik": "Antidepresanların grupları",
+   "paragraflar": [
+    {
+     "id": "k2-63-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "ses": "Bu derste depresyon tedavisinde kullanılan antidepresan ilaçları; etki biçimlerini, yan etkilerini, etkileşimlerini ve zehirlenme tablolarını öğreneceğiz.",
+       "ekran": "Ders: antidepresan ilaçlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "antidepresan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Antidepresanlar"
+        ]
+       },
+       "id": "k2-63-c0001"
+      },
+      {
+       "ses": "Slayt antidepresanları dört grupta toplar: trisiklik antidepresanlar, non-trisiklik antidepresanlar, MAO inhibitörleri ve lityum karbonat.",
+       "ekran": "Dört grup",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Trisiklik antidepresanlar"
+        ]
+       },
+       "id": "k2-63-c0002"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b02",
+   "baslik": "Etki mekanizması",
+   "paragraflar": [
+    {
+     "id": "k2-63-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Antidepresanların ortak etki mekanizması, noradrenalin ve serotoninin sinir ucuna geri alınımını inhibe etmektir.",
+       "ekran": "Noradrenalin ve serotonin geri alım inhibisyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Noradrenalin ve/veya serotonin geri alınımını"
+        ]
+       },
+       "id": "k2-63-c0003"
+      },
+      {
+       "ses": "Geri alım, sinaptik aralığa salınan nörotransmitterin tekrar sinir ucuna taşınmasıdır; bu engellenince aralıkta daha çok nörotransmitter kalır.",
+       "ekran": "Geri alım engellenince aralıkta daha çok aracı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geri alım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "(re-uptake) inhibe ederler."
+        ]
+       },
+       "id": "k2-63-c0004"
+      },
+      {
+       "ses": "Antidepresif etki hemen başlamaz; ilaç en az on beş gün devamlı kullanıldıktan sonra ortaya çıkar.",
+       "ekran": "Etki en az 15 gün sonra",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Antidepresif etki en az 15 gün devamlı"
+        ]
+       },
+       "id": "k2-63-c0005"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Slayttaki şema bir monoaminerjik sinapsı gösterir; solda presinaptik uç, sağda postsinaptik hücre vardır.",
+       "ekran": "Monoaminerjik sinaps şeması",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": []
+       },
+       "id": "k2-63-c0006"
+      },
+      {
+       "ses": "Presinaptik uçta amino asitten nörotransmitter sentezlenir ve veziküler taşıyıcı aracılığıyla veziküllere alınır.",
+       "ekran": "Sentez ve veziküle alınma",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": []
+       },
+       "id": "k2-63-c0007"
+      },
+      {
+       "ses": "Sinir ucundaki MAO-A enzimi sitoplazmadaki nörotransmitteri yıkar; MAO inhibitörleri bu yıkımı engeller.",
+       "ekran": "MAO-A nörotransmitteri yıkar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAO-A",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": []
+       },
+       "id": "k2-63-c0008"
+      },
+      {
+       "ses": "Salınan nörotransmitter, geri alım taşıyıcısıyla sinir ucuna geri döner; trisiklikler ve SSRI'lar bu taşıyıcıyı bloke eder.",
+       "ekran": "Geri alım taşıyıcısı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": []
+       },
+       "id": "k2-63-c0009"
+      },
+      {
+       "ses": "Presinaptik alfa iki ve serotonin bir-A, bir-D otoreseptörleri salınımı negatif geri bildirimle baskılar; mirtazapin alfa iki reseptörünü bloke eder.",
+       "ekran": "Otoreseptörler salınımı baskılar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "salınımı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": []
+       },
+       "id": "k2-63-c0010"
+      },
+      {
+       "ses": "Postsinaptik zarda beta, serotonin bir-A ve alfa bir reseptörleri yer alır; aracı bu reseptörlere bağlanarak etkisini gösterir.",
+       "ekran": "Postsinaptik reseptörler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Postsinaptik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": []
+       },
+       "id": "k2-63-c0011"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b03",
+   "baslik": "Trisiklik antidepresanlar",
+   "paragraflar": [
+    {
+     "id": "k2-63-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Trisiklik antidepresanlar tablosu her ilacın dozunu, hangi aracıya etki ettiğini ve altı yan etkinin şiddetini artı işaretleriyle verir.",
+       "ekran": "Tablo: doz, etki, yan etkiler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Trisiklik Antidepresanlar"
+        ]
+       },
+       "id": "k2-63-c0012"
+      },
+      {
+       "ses": "Yan etki sütunları sedatif etki, antikolinerjik etki, hipotansiyon, kardiyak yan etki, konvülsiyon nöbeti ve kilo almadır.",
+       "ekran": "Altı yan etki sütunu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yan etki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Sed."
+        ]
+       },
+       "id": "k2-63-c0013"
+      },
+      {
+       "ses": "Amitriptilinin günlük dozu yüz ile iki yüz miligramdır; noradrenalin ve serotonin geri alımını birlikte inhibe eder.",
+       "ekran": "Amitriptilin: NA ve S",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amitriptilin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Amitriptilin"
+        ]
+       },
+       "id": "k2-63-c0014"
+      },
+      {
+       "ses": "Amitriptilinin sedatif, antikolinerjik, hipotansif ve kardiyak yan etkilerinin hepsi çok güçlüdür; konvülsiyon ve kilo alma orta düzeydedir.",
+       "ekran": "Amitriptilin: yan etkileri çok güçlü",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Amitriptilin"
+        ]
+       },
+       "id": "k2-63-c0015"
+      },
+      {
+       "ses": "Klomipramin ağırlıkla serotonin geri alımını inhibe eder; noradrenalin etkisi ikinci plandadır.",
+       "ekran": "Klomipramin: önce serotonin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Klomipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Klomipramin"
+        ]
+       },
+       "id": "k2-63-c0016"
+      },
+      {
+       "ses": "Klomipraminin antikolinerjik, kardiyak ve konvülsiyon yapıcı etkisi çok güçlüdür.",
+       "ekran": "Klomipramin: konvülsiyon riski yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konvülsiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Klomipramin"
+        ]
+       },
+       "id": "k2-63-c0017"
+      },
+      {
+       "ses": "Doksepin noradrenalin ve serotonin üzerinden etkilidir; sedatif ve hipotansif etkisi çok güçlüdür.",
+       "ekran": "Doksepin: sedasyon ve hipotansiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doksepin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Doksepin"
+        ]
+       },
+       "id": "k2-63-c0018"
+      },
+      {
+       "ses": "İmipramin noradrenalin ve serotonin geri alımını inhibe eden klasik bir trisikliktir; kardiyak yan etkisi çok güçlüdür.",
+       "ekran": "İmipramin: klasik trisiklik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İmipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044815-453407"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "İmipramin"
+        ]
+       },
+       "id": "k2-63-c0019"
+      },
+      {
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: verilen ilaçlar arasında trisiklik olan imipramindir.",
+       "ekran": "Çıkmış: trisiklik olan imipramin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "trisiklik olan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044815-453407"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "İmipramin"
+        ]
+       },
+       "id": "k2-63-c0020"
+      },
+      {
+       "ses": "Trimipramin de noradrenalin ve serotonin üzerinden etki eder; sedatif, antikolinerjik ve kardiyak etkisi çok güçlüdür.",
+       "ekran": "Trimipramin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trimipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Trimipramin"
+        ]
+       },
+       "id": "k2-63-c0021"
+      },
+      {
+       "ses": "Opipramolün günlük dozu yüz elli ile üç yüz miligramdır; etki profili amitriptiline benzer ve sedatif etkisi belirgindir.",
+       "ekran": "Opipramol: amitriptiline benzer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Opipramol",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Opipramol"
+        ]
+       },
+       "id": "k2-63-c0022"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "İkinci tablodaki trisiklik ve benzeri ilaçlar ağırlıkla noradrenalin geri alımını inhibe eder; amoksapin buna ek olarak dopamin üzerinden de etkilidir.",
+       "ekran": "Noradrenalin ağırlıklı ilaçlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilaçlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Amoksapin"
+        ]
+       },
+       "id": "k2-63-c0023"
+      },
+      {
+       "ses": "Amoksapinin günlük dozu iki yüz ile üç yüz miligramdır ve yan etkileri hafif ile orta düzeydedir.",
+       "ekran": "Amoksapin: 200-300 mg",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amoksapin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Amoksapin"
+        ]
+       },
+       "id": "k2-63-c0024"
+      },
+      {
+       "ses": "Desipramin seçici olarak noradrenalin geri alımını inhibe eder; sedatif etkisi yok denecek kadar azdır.",
+       "ekran": "Desipramin: sedasyon çok az",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Desipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Desipramin"
+        ]
+       },
+       "id": "k2-63-c0025"
+      },
+      {
+       "ses": "Maprotilin de noradrenalin üzerinden etkilidir; bu tabloda konvülsiyon nöbeti yapma eğilimi en yüksek ilaçtır.",
+       "ekran": "Maprotilin: konvülsiyon riski",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Maprotilin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Maprotilin"
+        ]
+       },
+       "id": "k2-63-c0026"
+      },
+      {
+       "ses": "Nortriptilinin günlük dozu yetmiş beş ile yüz elli miligramdır; yan etkileri hafiftir.",
+       "ekran": "Nortriptilin: yan etkiler hafif",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nortriptilin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Nortriptilin"
+        ]
+       },
+       "id": "k2-63-c0027"
+      },
+      {
+       "ses": "Protriptilin on beş ile kırk miligramla en düşük dozlu ilaçtır; sedasyonu azdır ama kardiyak yan etkisi çok güçlüdür.",
+       "ekran": "Protriptilin: düşük doz, güçlü kardiyak etki",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Protriptilin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Protriptilin"
+        ]
+       },
+       "id": "k2-63-c0028"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b04",
+   "baslik": "Non-trisiklik antidepresanlar",
+   "paragraflar": [
+    {
+     "id": "k2-63-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Non-trisiklik antidepresanlar tablosunda her ilacın etkisi farklı bir hedefe dayanır; bu yüzden yan etki profilleri de birbirinden ayrılır.",
+       "ekran": "Non-trisiklikler: farklı hedefler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Non-trisiklik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Mirtazapin"
+        ]
+       },
+       "id": "k2-63-c0029"
+      },
+      {
+       "ses": "Mirtazapin alfa iki reseptör antagonistidir; ayrıca serotonin iki ve serotonin üç reseptörlerini de güçlü biçimde bloke eder.",
+       "ekran": "Mirtazapin: α2 antagonisti",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mirtazapin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "α2 ant."
+        ]
+       },
+       "id": "k2-63-c0030"
+      },
+      {
+       "ses": "Mirtazapin plazma kolesterol ve trigliserid düzeyini artırabilir; lökopeni, agranülositoz ve miyalji de yapabilir.",
+       "ekran": "Mirtazapin: lipit artışı, agranülositoz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "agranülositoz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Plazma kolesterol ve trigliserid düzeyinde artma."
+        ]
+       },
+       "id": "k2-63-c0031"
+      },
+      {
+       "ses": "Trazodon serotonin üzerinden etkilidir; sedatif etkisi çok güçlüdür ve konvülsiyon yapmaz.",
+       "ekran": "Trazodon: güçlü sedasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trazodon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Trazodon1"
+        ]
+       },
+       "id": "k2-63-c0032"
+      },
+      {
+       "ses": "Trazodonun ayırt edici yan etkisi priapizmdir; priapizm, ağrılı ve uzun süren istemsiz penis ereksiyonudur.",
+       "ekran": "Trazodon: priapizm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "priapizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Diğer yan etki  1 priapism (+); 2 impotens (+)"
+        ]
+       },
+       "id": "k2-63-c0033"
+      },
+      {
+       "ses": "Bupropion dopamin üzerinden etkilidir; sedatif, antikolinerjik, hipotansif ve kardiyak etkisi yoktur.",
+       "ekran": "Bupropion: dopamin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bupropion",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Bupropion"
+        ]
+       },
+       "id": "k2-63-c0034"
+      },
+      {
+       "ses": "Buna karşılık bupropion konvülsiyon nöbeti yapma eğilimi en yüksek antidepresandır ve kilo aldırmaz.",
+       "ekran": "Bupropion: konvülsiyon riski en yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konvülsiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Bupropion"
+        ]
+       },
+       "id": "k2-63-c0035"
+      },
+      {
+       "ses": "Venlafaksin serotonin ve noradrenalin geri alımını inhibe eder; sedatif, antikolinerjik ve hipotansif etkisi yoktur.",
+       "ekran": "Venlafaksin: S ve NA",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Venlafaksin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Venlafaksin"
+        ]
+       },
+       "id": "k2-63-c0036"
+      },
+      {
+       "ses": "Nefazodon serotonin üzerinden etkilidir ve serotonin iki antagonistidir; sedatif etkisi güçlüdür ve impotens yapabilir.",
+       "ekran": "Nefazodon: sedasyon, impotens",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nefazodon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Nefazodon2"
+        ]
+       },
+       "id": "k2-63-c0037"
+      },
+      {
+       "ses": "Reboksetin seçici noradrenalin geri alım inhibitörüdür; taşikardi, vertigo, parestezi ve impotens yapabilir.",
+       "ekran": "Reboksetin: seçici NA geri alım inhibitörü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Reboksetin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Taşikardi, vertigo, parestezi"
+        ]
+       },
+       "id": "k2-63-c0038"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Diğer non-trisiklik antidepresanlar tablosunda mianserin, amineptin, tianeptin ve viloksazin yer alır.",
+       "ekran": "Dört ilaç daha",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Mianserin"
+        ]
+       },
+       "id": "k2-63-c0039"
+      },
+      {
+       "ses": "Mianserin tetrasiklik bir bileşiktir; sedatif ve prokonvülsif etkilidir ama kardiyotoksik değildir.",
+       "ekran": "Mianserin: tetrasiklik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tetrasiklik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Tetrasiklik bir bileşiktir. Sedatif ve prokonvülsif etkileri"
+        ]
+       },
+       "id": "k2-63-c0040"
+      },
+      {
+       "ses": "Mianserin aplastik anemi ve agranülositoz gibi ciddi kan bozukluklarına yol açtığı için güvenilirliği düşüktür.",
+       "ekran": "Mianserin: aplastik anemi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aplastik anemi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "vardır. Kardiyotoksik değildir. Aplastik anemi ve"
+        ]
+       },
+       "id": "k2-63-c0041"
+      },
+      {
+       "ses": "Amineptin yapıca trisikliklere benzer ama noradrenalin ve serotonin sistemlerini etkilemez; dopamin üzerinden amfetamin benzeri uyarıcı etki yapar.",
+       "ekran": "Amineptin: dopamin, psikostimülan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amineptin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yapıca TAD'lere benzer; ancak, etki kalıbı benzemez."
+        ]
+       },
+       "id": "k2-63-c0042"
+      },
+      {
+       "ses": "Amineptin immunoalerjik karaciğer bozukluğu, eklem ağrısı ve ateş yapabilir; kardiyotoksik değildir ve antikolinerjik etkisi zayıftır.",
+       "ekran": "Amineptin: hepatik bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Amineptin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "bozukluk, artralji ve ateş yapabilir. Kardiyotoksik"
+        ]
+       },
+       "id": "k2-63-c0043"
+      },
+      {
+       "ses": "Tianeptin öbür ilaçların tersine serotonin geri alımını artırır; bu yüzden geri alım aktivatörü olarak anılır.",
+       "ekran": "Tianeptin: geri alım aktivatörü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tianeptin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Tianeptin"
+        ]
+       },
+       "id": "k2-63-c0044"
+      },
+      {
+       "ses": "Tianeptin bulantı, kusma, anksiyete, irritabilite ve sedasyon yapabilir; antikolinerjik ve kardiyotoksik etkisi düşüktür.",
+       "ekran": "Tianeptin yan etkileri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tianeptin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Bulantı, kusma, anksiyete, irritabilite, sedasyon."
+        ]
+       },
+       "id": "k2-63-c0045"
+      },
+      {
+       "ses": "Viloksazinin amfetamin benzeri psikostimülan etkisi vardır; antikolinerjik, kardiyotoksik ve prokonvülsif etkinliği zayıftır.",
+       "ekran": "Viloksazin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Viloksazin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Viloksazin"
+        ]
+       },
+       "id": "k2-63-c0046"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b05",
+   "baslik": "Selektif serotonin geri alım inhibitörleri",
+   "paragraflar": [
+    {
+     "id": "k2-63-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "Selektif serotonin geri alım inhibitörleri, kısaca SSRI'lar, yalnız serotonin geri alımını inhibe eden non-trisiklik antidepresanlardır.",
+       "ekran": "SSRI: yalnız serotonin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yalnız serotonin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Non-Trisiklik Antidepresanlar Selektif Serotonin Reuptake İnhibitörleri"
+        ]
+       },
+       "id": "k2-63-c0047"
+      },
+      {
+       "ses": "Bu grupta fluoksetin, fluvoksamin, paroksetin, sertralin, sitalopram ve esitalopram vardır.",
+       "ekran": "Altı SSRI",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Fluoksetin"
+        ]
+       },
+       "id": "k2-63-c0048"
+      },
+      {
+       "ses": "Fluoksetin, fluvoksamin ve sertralinin hepsi yalnız serotonine etki ederken klomipramin noradrenalini de etkiler.",
+       "ekran": "Klomipramin SSRI değildir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2018-2019-k4-q44"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Fluvoksamin"
+        ]
+       },
+       "id": "k2-63-c0049"
+      },
+      {
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: yalnız serotonin geri alımını inhibe edenler fluoksetin, sertralin ve fluvoksamindir.",
+       "ekran": "Çıkmış: yalnız serotonin geri alımı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yalnız serotonin geri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3k2-2018-2019-k4-q44"
+       ],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Sertralin"
+        ]
+       },
+       "id": "k2-63-c0050"
+      },
+      {
+       "ses": "SSRI'ların sedatif etkisi çok azdır; antikolinerjik, hipotansif ve kardiyak yan etkileri yoktur ve kilo aldırmazlar.",
+       "ekran": "SSRI: yan etkiler az",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Paroksetin"
+        ]
+       },
+       "id": "k2-63-c0051"
+      },
+      {
+       "ses": "Tablolar yan yana konunca SSRI'ların trisikliklerden farkı, antikolinerjik ve kardiyak yan etki göstermemeleridir.",
+       "ekran": "Trisikliklerden farkı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "farkı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Sertralin"
+        ]
+       },
+       "id": "k2-63-c0052"
+      },
+      {
+       "ses": "Sitalopramın günlük dozu yirmi miligramdır; uyuşukluk, uykusuzluk, bulantı, kusma, ağız kuruluğu ve anksiyete yapabilir.",
+       "ekran": "Sitalopram: 20 mg",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sitalopram",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Sitalopram"
+        ]
+       },
+       "id": "k2-63-c0053"
+      },
+      {
+       "ses": "Sitalopram ayrıca libidoda azalma, ishal, titreme ve eklem ağrısı yapabilir.",
+       "ekran": "Sitalopram: libido azalması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sitalopram",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "kuruluğu, anksiyete, libidoda azalma, diyare, tremor,"
+        ]
+       },
+       "id": "k2-63-c0054"
+      },
+      {
+       "ses": "Esitalopram sitalopramın izomeridir; günlük dozu on miligramdır ve yan etkileri sitaloprama benzer.",
+       "ekran": "Esitalopram: sitalopramın izomeri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Esitalopram",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Esitalopram"
+        ]
+       },
+       "id": "k2-63-c0055"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b06",
+   "baslik": "Analjezik etki ve farmakokinetik",
+   "paragraflar": [
+    {
+     "id": "k2-63-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Bazı antidepresanların ağrı kesici, yani analjezik etkisi de vardır; slayt bunlardan klomipramin ve amitriptilini sayar.",
+       "ekran": "Analjezik etkili: klomipramin, amitriptilin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klomipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Amitriptilin"
+        ]
+       },
+       "id": "k2-63-c0056"
+      },
+      {
+       "ses": "Klomipramin ve amitriptilin, önceki tabloda noradrenalin ve serotonine birlikte etki eden trisikliklerdir.",
+       "ekran": "İkisi de trisiklik",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Amitriptilin"
+        ]
+       },
+       "id": "k2-63-c0057"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "ses": "Antidepresanların farmakokinetiğinde ilk nokta, ağız yolundan alındıklarında mide barsak kanalından yavaş ve kısmen emilmeleridir.",
+       "ekran": "Emilim yavaş ve kısmi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yavaş ve",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Ağız yolundan alındıklarında mide-barsak"
+        ]
+       },
+       "id": "k2-63-c0058"
+      },
+      {
+       "ses": "Antidepresanların plazmada albümine bağlanma oranı yüksektir ve yüzde yetmiş civarındadır.",
+       "ekran": "Albümine bağlanma %70",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bağlanma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Plazmada albümine bağlanma oranları"
+        ]
+       },
+       "id": "k2-63-c0059"
+      },
+      {
+       "ses": "Fenotiazinler, fenitoin, aspirin ve fenilbutazon albümine bağlanmada yarışarak antidepresanın bağlanmasını azaltır.",
+       "ekran": "Bağlanmayı azaltanlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Fenitoin"
+        ]
+       },
+       "id": "k2-63-c0060"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b07",
+   "baslik": "Biyotransformasyon",
+   "paragraflar": [
+    {
+     "id": "k2-63-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "ses": "Trisiklik antidepresanlar vücutta yüzde yüze yakın oranda metabolize edilir; idrarla değişmeden atılan kısımları önemsizdir.",
+       "ekran": "Trisikliklerin metabolizması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trisiklik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Trisiklik ilaçlar vücutta % 100'e yakın bir oranda metabolize edilirler; idrarla"
+        ]
+       },
+       "id": "k2-63-c0061"
+      },
+      {
+       "ses": "Trisiklikleri karaciğerde yıkan enzim CYP iki D altıdır.",
+       "ekran": "Enzim: CYP2D6",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Trisiklik antidepresanlar karaciğerde CYP2D6 enzimi ile metabolize edilir. Bu"
+        ]
+       },
+       "id": "k2-63-c0062"
+      },
+      {
+       "ses": "Bu enzim genetik polimorfizm gösterir; yani kişiden kişiye farklı etkinlikte çalışır.",
+       "ekran": "Genetik polimorfizm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "polimorfizm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "enzim genetik polimorfizm gösterdiğinden, trisiklik ilaçların kararlı kan"
+        ]
+       },
+       "id": "k2-63-c0063"
+      },
+      {
+       "ses": "Bu yüzden aynı dozu alan hastalarda trisikliklerin kararlı kan düzeyleri birbirinden farklı çıkar.",
+       "ekran": "Kan düzeyi kişiye göre değişir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "konsantrasyonları bireyler arasında farklılıklar gösterir."
+        ]
+       },
+       "id": "k2-63-c0064"
+      },
+      {
+       "ses": "Paroksetin, fluoksetin, norfluoksetin ve kinidin CYP iki D altı enzimini inhibe eder.",
+       "ekran": "CYP2D6 inhibitörleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Paroksetin, fluoksetin ve norfluoksetin gibi SSRİ ve kinidin CYP2D6 enzimini"
+        ]
+       },
+       "id": "k2-63-c0065"
+      },
+      {
+       "ses": "Bu inhibisyon, ilacı hızlı yıkan kişileri yavaş yıkan kişi durumuna geçirir; sertralin ise bu etkiyi göstermez.",
+       "ekran": "Sertralin enzimi inhibe etmez",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "geçirir. Bu durum sertralin ile görülmez."
+        ]
+       },
+       "id": "k2-63-c0066"
+      },
+      {
+       "ses": "Bu enzimle yıkılan ilaçlar beta blokörler, debrizokin, omeprazol ve trisiklik antidepresanlardır.",
+       "ekran": "CYP2D6 substratları",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Omeprazol"
+        ]
+       },
+       "id": "k2-63-c0067"
+      },
+      {
+       "ses": "Örneğin fluoksetin alan hastaya trisiklik eklenirse trisikliğin yıkımı yavaşlar ve kan düzeyi beklenenden yüksek olur.",
+       "ekran": "Etkileşim örneği",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "inhibe ederek hızlı metabolize edicileri, yavaş metabolize ediciler durumuna"
+        ]
+       },
+       "id": "k2-63-c0068"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b08",
+   "baslik": "Farmakoterapinin etkinliği",
+   "paragraflar": [
+    {
+     "id": "k2-63-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "ses": "Farmakoterapinin etkinliğine bakınca, depresyonda plasebo etkisi yüzde otuz beştir.",
+       "ekran": "Plasebo etkisi %35",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "etkisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Plasebo etkisi"
+        ]
+       },
+       "id": "k2-63-c0069"
+      },
+      {
+       "ses": "Antidepresanların etkinliği ise yüzde altmış beş ile yetmiş beş arasındadır.",
+       "ekran": "Antidepresan etkinliği %65-75",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "etkinliği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "% 65-75"
+        ]
+       },
+       "id": "k2-63-c0070"
+      },
+      {
+       "ses": "Antidepresan tedavisinin süresi altı ay ile bir yıldır.",
+       "ekran": "Tedavi süresi 6 ay - 1 yıl",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "süresi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "6 ay - 1 yıl"
+        ]
+       },
+       "id": "k2-63-c0071"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b09",
+   "baslik": "Trisikliklerle akut zehirlenme",
+   "paragraflar": [
+    {
+     "id": "k2-63-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "ses": "Trisikliklerle akut zehirlenme sıktır, çünkü depresyonlu hastada intihar eğilimi fazladır.",
+       "ekran": "Akut zehirlenme sık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "zehirlenme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Depresyonlu hastada intihar eğiliminin fazlalığı nedeniyle akut"
+        ]
+       },
+       "id": "k2-63-c0072"
+      },
+      {
+       "ses": "Trisikliklerin öldürücü dozu ile tedavi dozu arasındaki oran, nöroleptiklerden ve benzodiazepinlerden belirgin derecede düşüktür.",
+       "ekran": "Güvenlik aralığı dar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Öldürücü dozları ile terapötik dozları arasındaki oran nöroleptik"
+        ]
+       },
+       "id": "k2-63-c0073"
+      },
+      {
+       "ses": "Bu oran barbitüratlarınkine yakındır; yani trisikliklerde güvenlik aralığı dardır.",
+       "ekran": "Barbitüratlara yakın",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "düşüktür; barbitüratlarınkine yakındır."
+        ]
+       },
+       "id": "k2-63-c0074"
+      },
+      {
+       "ses": "Zehirlenme belirtileri atropin zehirlenmesine benzer, çünkü trisikliklerin antikolinerjik etkisi güçlüdür.",
+       "ekran": "Atropin zehirlenmesine benzer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "zehirlenmesine benzer",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Akut zehirlenme belirtileri atropin zehirlenmelerinde görülen"
+        ]
+       },
+       "id": "k2-63-c0075"
+      },
+      {
+       "ses": "Ayrıca tehlikeli ritim bozuklukları ve hipotansiyon gelişir.",
+       "ekran": "Ritim bozukluğu ve hipotansiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ve hipotansiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "belirtilere benzer. İlave olarak tehlikeli ritm bozuklukları ve"
+        ]
+       },
+       "id": "k2-63-c0076"
+      },
+      {
+       "ses": "Antikolinerjik toksisitenin santral sinir sistemi bulguları hiperpireksi, konfüzyon, ajitasyon, konvülsiyon ve komadır.",
+       "ekran": "SSS bulguları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bulguları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "olanlar hiperpireksi, konfüzyon, ajitasyon, konvülsiyon ve komadır."
+        ]
+       },
+       "id": "k2-63-c0077"
+      },
+      {
+       "ses": "Trisiklik zehirlenmesinin tedavisinde fizostigmin salisilat kullanılır.",
+       "ekran": "Tedavi: fizostigmin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fizostigmin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Tedavide fizostigmin salisilat kullanılır (i.m. ya da i.v. infüzyonla"
+        ]
+       },
+       "id": "k2-63-c0078"
+      },
+      {
+       "ses": "Fizostigmin başlangıçta iki miligram kas içi ya da damar içi verilir ve bu doz yirmi dakika sonra tekrarlanır.",
+       "ekran": "Doz: 2 mg, 20 dk sonra tekrar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sonra",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "başlangıçta 2 mg dozunda verilir, bu doz 20 dakika sonra tekrarlanır)."
+        ]
+       },
+       "id": "k2-63-c0079"
+      },
+      {
+       "ses": "Ritim bozukluklarına karşı damar içi lidokain verilir.",
+       "ekran": "Ritim bozukluğuna lidokain",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lidokain",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Ritm bozukluklarına karşı i.v. lidokain verilir."
+        ]
+       },
+       "id": "k2-63-c0080"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b10",
+   "baslik": "Hiponatremi",
+   "paragraflar": [
+    {
+     "id": "k2-63-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "ses": "Hiponatremi, kanda sodyum düzeyinin düşmesidir ve bütün antidepresanların kullanımı sırasında, özellikle yaşlılarda görülebilir.",
+       "ekran": "Hiponatremi: özellikle yaşlıda",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiponatremi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Bütün antidepresanların kullanımı sırasında (özellikle yaşlılarda)"
+        ]
+       },
+       "id": "k2-63-c0081"
+      },
+      {
+       "ses": "Antidepresan kullanırken uyuşukluk, konfüzyon ya da konvülsiyon gelişen her hastada hiponatremi akla getirilmelidir.",
+       "ekran": "Uyuşukluk, konfüzyon, konvülsiyonda düşün",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konfüzyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "uyuşukluk, konfüzyon ya da konvülsiyonlar gelişen bütün"
+        ]
+       },
+       "id": "k2-63-c0082"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b11",
+   "baslik": "İlaç etkileşimleri ve serotonin sendromu",
+   "paragraflar": [
+    {
+     "id": "k2-63-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "ses": "İlaç etkileşimlerinin başında MAO inhibitörü ile trisikliğin birlikte kullanılması gelir.",
+       "ekran": "MAOİ ile trisiklik",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "MAOİ, trisiklik antidepresanların"
+        ]
+       },
+       "id": "k2-63-c0083"
+      },
+      {
+       "ses": "MAO inhibitörleri trisiklikleri inaktive eden enzimleri inhibe eder; bu yüzden ikisinin birlikte kullanılması, özel durumlar dışında, kontrendikedir.",
+       "ekran": "Birlikte kullanım kontrendike",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "hariç) kontrendikedir."
+        ]
+       },
+       "id": "k2-63-c0084"
+      },
+      {
+       "ses": "MAO inhibitöründen trisikliğe geçerken en az iki hafta beklenir; trisiklikten MAO inhibitörüne geçerken bir hafta beklenir.",
+       "ekran": "Geçiş: 2 hafta ve 1 hafta",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hafta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "2 hafta beklenilmesi tavsiye edilir."
+        ]
+       },
+       "id": "k2-63-c0085"
+      },
+      {
+       "ses": "Paroksetin ve sertralinden sonra MAO inhibitörüne geçmek için iki hafta, fluoksetinden sonra beş hafta beklenmelidir.",
+       "ekran": "Fluoksetinden sonra 5 hafta",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sonra",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "5 hafta beklenmelidir."
+        ]
+       },
+       "id": "k2-63-c0086"
+      },
+      {
+       "ses": "MAO inhibitörü ile SSRI birlikte alınırsa serotonin sendromu gelişir.",
+       "ekran": "MAOİ + SSRI: serotonin sendromu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serotonin sendromu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Serotonin Sendromu"
+        ]
+       },
+       "id": "k2-63-c0087"
+      },
+      {
+       "ses": "Serotonin sendromunun bulguları ajitasyon, miyoklonus, hiperpireksi, hipertansiyon ve karın krampıdır.",
+       "ekran": "Serotonin sendromu bulguları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Serotonin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ajitasyon"
+        ]
+       },
+       "id": "k2-63-c0088"
+      },
+      {
+       "ses": "Trisiklikler tioridazinin kardiyotoksik etkilerini şiddetlendirdiği için bu iki ilaç birlikte kullanılmamalıdır.",
+       "ekran": "Tioridazinle birlikte kullanılmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birlikte",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Tioridazinin kardiyotoksik"
+        ]
+       },
+       "id": "k2-63-c0089"
+      },
+      {
+       "ses": "Trisiklikler sedatif etkileri nedeniyle alkol, hipnosedatifler ve diğer santral depresanların etkisini güçlendirir.",
+       "ekran": "Alkol ve hipnosedatifleri güçlendirir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipnosedatifler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "sedatif etkileri nedeniyle"
+        ]
+       },
+       "id": "k2-63-c0090"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b12",
+   "baslik": "Tolerans, bağımlılık ve kontrendikasyonlar",
+   "paragraflar": [
+    {
+     "id": "k2-63-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "ses": "Antidepresanlara tolerans uzun süreli kullanımda pek gelişmez; antidepresan etkiye karşı nadiren kısmi tolerans bildirilmiştir.",
+       "ekran": "Tolerans pek gelişmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pek gelişmez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Uzun süre kullanılması halinde bu ilaçlara tolerans pek"
+        ]
+       },
+       "id": "k2-63-c0091"
+      },
+      {
+       "ses": "Buna karşılık devamlı kullanımda antikolinerjik yan etkilere karşı tolerans gelişir.",
+       "ekran": "Antikolinerjik yan etkilere tolerans",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yan etkilere",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Devamlı kullanılmaları halinde antikolinerjik yan etkilerine karşı"
+        ]
+       },
+       "id": "k2-63-c0092"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "ses": "Antidepresanlarla zayıf bir fiziksel bağımlılık gelişebilir.",
+       "ekran": "Zayıf fiziksel bağımlılık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fiziksel bağımlılık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Zayıf bir fiziksel bağımlılık gelişebilir."
+        ]
+       },
+       "id": "k2-63-c0093"
+      },
+      {
+       "ses": "Uzun süre kullanan hastaların az bir kısmında ilaç birden kesilirse kesilme sendromuna benzer bir tablo çıkabilir.",
+       "ekran": "Birden kesilince kesilme tablosu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kesilme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Uzun süre kullanan hastalarda ilacın birden kesilmesi sonucu az sayıda"
+        ]
+       },
+       "id": "k2-63-c0094"
+      },
+      {
+       "ses": "Kesilme sendromu non-trisiklik ilaçlarla da görülebilir; SSRI'lar arasında en belirgin kesilme sendromunu paroksetin yapar.",
+       "ekran": "En belirgin kesilme: paroksetin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "paroksetin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "SSRİ'lerden en belirgin kesilme sendromu oluşturan paroksetin'dir."
+        ]
+       },
+       "id": "k2-63-c0095"
+      },
+      {
+       "ses": "Bu yüzden antidepresan birden kesilmez; doz bir ya da birkaç haftada azaltılarak bırakılır, buna yamuklama denir.",
+       "ekran": "Doz azaltarak kesme: yamuklama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yamuklama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "kesmek (tapering = yamuklama) gerekir."
+        ]
+       },
+       "id": "k2-63-c0096"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "ses": "Antidepresanların kontrendikasyonları yedi maddedir: kalp hastalığı, glokom, idrar retansiyonu, karaciğer yetmezliği, hipertansiyon, epilepsi ve alkolizm.",
+       "ekran": "Yedi kontrendikasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Kalp hastalığı"
+        ]
+       },
+       "id": "k2-63-c0097"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b13",
+   "baslik": "Spesiyaliteler",
+   "paragraflar": [
+    {
+     "id": "k2-63-p019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "ses": "Spesiyaliteler, ilaçların piyasadaki ticari adlarıdır; amitriptilin LAROXYL ve TRİPTİLİN, imipramin TOFRANİL adıyla bulunur.",
+       "ekran": "Amitriptilin, imipramin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "imipramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "LAROXYL"
+        ]
+       },
+       "id": "k2-63-c0098"
+      },
+      {
+       "ses": "Klomipramin ANAFRANİL, maprotilin LUDİOMİL, mianserin TOLVON, trazodon DESYREL ve opipramol İNSİDON adlarıyla satılır.",
+       "ekran": "Klomipramin ANAFRANİL",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ANAFRANİL",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "ANAFRANİL"
+        ]
+       },
+       "id": "k2-63-c0099"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "ses": "SSRI spesiyalitelerinden fluoksetin PROZAC, paroksetin SEROXAT, sitalopram CİPRAM ve esitalopram CİPRALEX adıyla bulunur.",
+       "ekran": "SSRI spesiyaliteleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "PROZAC"
+        ]
+       },
+       "id": "k2-63-c0100"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "ses": "Sertralin LUSTRAL, fluvoksamin FAVERİN, mirtazapin REMERON, venlafaksin EFEXOR, reboksetin EDRONAX ve tianeptin STABLON adlarıyla satılır.",
+       "ekran": "Diğer spesiyaliteler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "LUSTRAL"
+        ]
+       },
+       "id": "k2-63-c0101"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b14",
+   "baslik": "MAO inhibitörleri",
+   "paragraflar": [
+    {
+     "id": "k2-63-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "ses": "MAO inhibitörleri, monoaminleri yıkan monoamin oksidaz enzimini inhibe ederek sinir ucundaki aracı miktarını artırır.",
+       "ekran": "MAOİ: monoamin oksidazı inhibe eder",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "monoamin oksidaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "MAO İnhibitörleri"
+        ]
+       },
+       "id": "k2-63-c0102"
+      },
+      {
+       "ses": "MAO inhibitörleri seçiciliğe göre üç gruba ayrılır: MAO A selektif, selektif olmayan ve MAO B selektif ilaçlar.",
+       "ekran": "Üç grup",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "MAO A Selektif"
+        ]
+       },
+       "id": "k2-63-c0103"
+      },
+      {
+       "ses": "MAO A selektif ilaç moklobemiddir; spesiyalitesi AURORIX, günlük dozu iki yüz ile dört yüz elli miligramdır.",
+       "ekran": "Moklobemid: MAO A selektif",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAO A selektif",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Moklobemid"
+        ]
+       },
+       "id": "k2-63-c0104"
+      },
+      {
+       "ses": "Selektif olmayan MAO inhibitörleri nialamid, isokarboksazid, fenelzin ve tranilsiprominidir.",
+       "ekran": "Selektif olmayanlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Selektif olmayan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Fenelzin"
+        ]
+       },
+       "id": "k2-63-c0105"
+      },
+      {
+       "ses": "MAO B selektif ilaç selejilindir; antidepresif etkinliği vardır ve Parkinson hastalığı tedavisinde kullanılır.",
+       "ekran": "Selejilin: MAO B, Parkinson",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parkinson",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Selejilin"
+        ]
+       },
+       "id": "k2-63-c0106"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "ses": "MAO A ile MAO B, yıktıkları maddelere ve inhibitörlerine göre ayrılır.",
+       "ekran": "MAO A ve MAO B",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAO B",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Enzim tipi"
+        ]
+       },
+       "id": "k2-63-c0107"
+      },
+      {
+       "ses": "MAO A'nın substratları serotonin ve noradrenalindir; inhibitörleri moklobemid ve klorjilindir.",
+       "ekran": "MAO A: serotonin, noradrenalin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serotonin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Klorjilin"
+        ]
+       },
+       "id": "k2-63-c0108"
+      },
+      {
+       "ses": "MAO B'nin substratları feniletilaminler ve benzilaminlerdir; inhibitörü selejilindir.",
+       "ekran": "MAO B: feniletilamin, benzilamin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Feniletilaminler"
+        ]
+       },
+       "id": "k2-63-c0109"
+      },
+      {
+       "ses": "Dopamin ve tiramin ise MAO A ve MAO B tarafından eşit ölçüde yıkılır.",
+       "ekran": "Dopamin ve tiramin: MAO A = MAO B",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tiramin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Dopamin ve tiramin için: MAO A = MAO B"
+        ]
+       },
+       "id": "k2-63-c0110"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "ses": "MAO enzimi vücutta noradrenerjik, dopaminerjik ve serotonerjik sinir uçlarında ve karaciğer, akciğer ve barsak çeperinde yoğundur.",
+       "ekran": "MAO'nun yoğun olduğu yerler",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Noradrenerjik, dopaminerjik ve"
+        ]
+       },
+       "id": "k2-63-c0111"
+      },
+      {
+       "ses": "MAO A barsak mukozası, noradrenerjik ve serotonerjik sinirler, locus coeruleus ve bazal ön beyinde bulunur.",
+       "ekran": "MAO A yerleşimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAO A",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Barsak mukozası"
+        ]
+       },
+       "id": "k2-63-c0112"
+      },
+      {
+       "ses": "MAO B ise karaciğer, akciğer ve trombositlerde bulunur.",
+       "ekran": "MAO B yerleşimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAO B",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Trombositler"
+        ]
+       },
+       "id": "k2-63-c0113"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "ses": "Peynir reaksiyonu, MAO inhibitörü alan kişinin tiraminli gıda yemesiyle ortaya çıkan tehlikeli bir etkileşimdir.",
+       "ekran": "Peynir reaksiyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Peynir reaksiyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Peynir Reaksiyonu"
+        ]
+       },
+       "id": "k2-63-c0114"
+      },
+      {
+       "ses": "Normalde vücuda giren tiramin ve benzerlerinin yaklaşık yüzde doksan dokuzu MAO ile inaktive edilir.",
+       "ekran": "Tiraminin %99'u MAO ile yıkılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "MAO ile",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "ile inaktive edilir (yaklaşık % 99'u)."
+        ]
+       },
+       "id": "k2-63-c0115"
+      },
+      {
+       "ses": "MAO inhibitörü alan kişi tiramin içeren gıda yerse önemli miktarda tiramin dolaşıma geçer ve hipertansif kriz oluşabilir.",
+       "ekran": "Tiramin dolaşıma geçer: hipertansif kriz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansif kriz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "geçer ve hipertansif kriz oluşturabilir."
+        ]
+       },
+       "id": "k2-63-c0116"
+      },
+      {
+       "ses": "Peynir reaksiyonu selektif MAO inhibitörleriyle görülmez, çünkü barsaktaki tiramin öbür enzim tarafından yıkılmaya devam eder.",
+       "ekran": "Selektif MAOİ ile görülmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "görülmez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Selektif MAOİ ile görülmez."
+        ]
+       },
+       "id": "k2-63-c0117"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "ses": "Moklobemidin spesiyaliteleri AURORİX ve LOBEM'dir; yüz elli ve üç yüz miligramlık tabletleri vardır.",
+       "ekran": "Moklobemid: AURORİX, LOBEM",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "LOBEM",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Moklobemid"
+        ]
+       },
+       "id": "k2-63-c0118"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b15",
+   "baslik": "Lityum karbonat",
+   "paragraflar": [
+    {
+     "id": "k2-63-p027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "ses": "Lityum karbonat, bipolar hastalığın manik ve bazen de depresif dönemlerinin önlenmesinde kullanılır.",
+       "ekran": "Lityum: bipolar hastalıkta koruma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bipolar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Bipolar hastalığın manik ve bazen de depresif epizodlarının"
+        ]
+       },
+       "id": "k2-63-c0119"
+      },
+      {
+       "ses": "Lityumun dozu sıfır virgül dört ile sıfır virgül altı gram, günde üç kezdir.",
+       "ekran": "Doz: 0.4-0.6 g x 3",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Doz: 0.4-0.6 g x 3 kez"
+        ]
+       },
+       "id": "k2-63-c0120"
+      },
+      {
+       "ses": "Lityumun tedavi edici etkisi beş ile on günlük bir gecikme döneminden sonra ortaya çıkar.",
+       "ekran": "Latent dönem 5-10 gün",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Terapötik etkisi 5-10 günlük bir latent periyoddan sonra ortaya"
+        ]
+       },
+       "id": "k2-63-c0121"
+      },
+      {
+       "ses": "Hedeflenen serum lityum düzeyi litrede sıfır virgül dört ile bir milimoldür; en uygun düzey sıfır virgül sekizdir.",
+       "ekran": "Hedef düzey 0.4-1.0 mmol/L",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "düzey",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Hedeflenen serum düzeyi: 0.4-1.0 mmol/L"
+        ]
+       },
+       "id": "k2-63-c0122"
+      },
+      {
+       "ses": "On dört günlük lityum tedavisine rağmen düzelmeyen hastada tedavi kesilir.",
+       "ekran": "14 günde yanıt yoksa kesilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kesilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "14 günlük bir lityum tedavisine rağmen düzelmeyen vakalarda"
+        ]
+       },
+       "id": "k2-63-c0123"
+      },
+      {
+       "ses": "Lityumun etki mekanizması bilinmemektedir; eliminasyonu böbreklerden glomerüler filtrasyonla olur.",
+       "ekran": "Böbrekten glomerüler filtrasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "glomerüler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Eliminasyonu böbreklerden glomerüler filtrasyon ile olur."
+        ]
+       },
+       "id": "k2-63-c0124"
+      }
+     ]
+    },
+    {
+     "id": "k2-63-p028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "ses": "Lityumun yan etkileri düşük konsantrasyonda, kronik kullanımda ve yüksek düzeyde olmak üzere üç grupta toplanır.",
+       "ekran": "Yan etkiler üç grupta",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç grupta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Düşük konsantrasyonlarda"
+        ]
+       },
+       "id": "k2-63-c0125"
+      },
+      {
+       "ses": "Düşük konsantrasyonda iştahsızlık, bulantı, kusma, polidipsi, poliüri, akne ve tremor görülür.",
+       "ekran": "Düşük düzey: tremor, poliüri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tremor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "anoreksi, bulantı, kusma"
+        ]
+       },
+       "id": "k2-63-c0126"
+      },
+      {
+       "ses": "Kronik lityum kullanımında nefrojenik diabetes insipidus, guatr ve hipotiroidi gelişir.",
+       "ekran": "Kronik: nefrojenik Dİ, hipotiroidi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipotiroidi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Nefrojenik diabetes insipidus"
+        ]
+       },
+       "id": "k2-63-c0127"
+      },
+      {
+       "ses": "Lityum teratojendir; gebelikte bebekte Ebstein anomalisine yol açabilir.",
+       "ekran": "Teratojen: Ebstein anomalisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ebstein anomalisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Teratojen (Ebstein anomalisi)"
+        ]
+       },
+       "id": "k2-63-c0128"
+      },
+      {
+       "ses": "Serum düzeyi litrede bir virgül beş milimolü aşınca kaslarda fasikülasyon, derin tendon reflekslerinde artış, ataksi, dizartri ve nistagmus görülür.",
+       "ekran": "1.5 mmol/L üstü: nörolojik bulgular",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "kaslarda fasikülasyon, kasılma"
+        ]
+       },
+       "id": "k2-63-c0129"
+      },
+      {
+       "ses": "Yüksek düzeyde ayrıca konfüzyon, böbrek işlev bozukluğu, intihar eğilimi, konvülsiyon ve dehidratasyon gelişir.",
+       "ekran": "Konfüzyon, konvülsiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konvülsiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "böbrek işlev bozukluğu"
+        ]
+       },
+       "id": "k2-63-c0130"
+      },
+      {
+       "ses": "Sodyum eksikliği lityumun toksik etkisini artırır; bu yüzden lityumla birlikte diüretikler, özellikle tiazidler kullanılmaz.",
+       "ekran": "Tiazidlerle birlikte verilmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birlikte",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Sodyum eksikliği lityumun toksik etkisini artırdığından, lityumla birlikte"
+        ]
+       },
+       "id": "k2-63-c0131"
+      },
+      {
+       "ses": "Addison hastalığı gibi sodyum dengesi bozuk hastalarda da lityum kullanılmamalıdır.",
+       "ekran": "Addison hastalığında kullanılmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Addison hastalığı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Ayrıca Addison hastalığı gibi sodyum dengesizliği olan hastalarda"
+        ]
+       },
+       "id": "k2-63-c0132"
+      },
+      {
+       "ses": "İshal, kusma ve araya giren enfeksiyonlarda, özellikle şiddetli terleme varsa, lityum dozu azaltılır ya da ilaç kesilir.",
+       "ekran": "İshal, kusma, terlemede doz azalt",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İshal, kusma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Diyare, kusma ve araya giren enfeksiyonlarda (özellikle şiddetli terleme varsa)"
+        ]
+       },
+       "id": "k2-63-c0133"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-63-b16",
+   "baslik": "Diğer antidepresan ve antimanik ilaçlar",
+   "paragraflar": [
+    {
+     "id": "k2-63-p029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "ses": "Diğer antidepresanlar başlığında, duygudurum bozukluklarında kullanılan başka gruplardan ilaçlar sayılır.",
+       "ekran": "Diğer ilaçlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilaçlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Diğer Antidepresanlar"
+        ]
+       },
+       "id": "k2-63-c0134"
+      },
+      {
+       "ses": "Karbamazepin bipolar bozuklukta akut dönemde antimanik, uzun süreli kullanımda ise koruyucu etkilidir.",
+       "ekran": "Karbamazepin: antimanik ve profilaktik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Karbamazepin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Karbamazepin (bipolar bozukluk)"
+        ]
+       },
+       "id": "k2-63-c0135"
+      },
+      {
+       "ses": "Klonazepam, valproik asit ve verapamil antimanik; haloperidol ve flupentiksol ise akut dönemde antimanik olarak kullanılır.",
+       "ekran": "Antimanik ilaçlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Valproik asit"
+        ]
+       },
+       "id": "k2-63-c0136"
+      },
+      {
+       "ses": "Alprazolam, adinazolam ve L-triptofan ise antidepresan etkili ilaçlar olarak anılır.",
+       "ekran": "Antidepresan etkili diğerleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "etkili",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Alprazolam"
+        ]
+       },
+       "id": "k2-63-c0137"
+      },
+      {
+       "ses": "Özetle, antidepresanların çoğu noradrenalin ve serotonin geri alımını engeller ve etkisi en az on beş gün sonra ortaya çıkar.",
+       "ekran": "Özet: geri alım, en az 15 gün",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": []
+       },
+       "id": "k2-63-c0138"
+      },
+      {
+       "ses": "Trisikliklerde antikolinerjik ve kardiyak toksisite, MAO inhibitörlerinde peynir reaksiyonu ve serotonin sendromu öne çıkar; lityumun hedef serum düzeyi litrede sıfır virgül dört ile bir milimol arasındadır ve bir buçuk milimolün üstünde toksik bulgular başlar.",
+       "ekran": "Özet: her grubun riski",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "ogrenci": null,
+       "hoca": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": []
+       },
+       "id": "k2-63-c0139"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

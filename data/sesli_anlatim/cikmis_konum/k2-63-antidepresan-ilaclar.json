@@ -1,0 +1,118 @@
+{
+ "surum": 1,
+ "dogrulama": "Kurul 2 çıkmış bankasında konu adı Antidepresan İlaçlar olan ve antidepresan/trisiklik/SSRI/MAO/lityum/tiramin/fluoksetin/imipramin/bupropion terimleriyle iki geçişte taranan sorular, meds_temp/d3k2_tum ham okumaları (girdi/ham_*.json, metin/*.txt) ve meds_downloads/İndirilenler PDF metin taramasıyla karşılaştırıldı. 2 soru doğrudan, 3 soru ilgili; p/c/metinHash anlatım v2'sinden eklenecek.",
+ "q": [
+  {
+   "id": "d3k2-2018-2019-k4-q44",
+   "kok": "I. Fluoksetin II. Sertralin III. Fluvoksamin IV. Klomipramin — Yukarıdaki ajanlardan hangisi/hangileri sadece serotonin geri alımını inhibe eder?",
+   "cevap": "I, II ve III",
+   "yil": "2018-2019",
+   "yil_notu": "Ham belge 'D3K2 2021-2022-2023.pdf' (tarih/kapak yok); bankadaki 2018-2019 etiketi belgeyle doğrulanamadı.",
+   "s": 8,
+   "seviye": "dogrudan",
+   "kanit": "Fluvoksamin                                100-200                           S      0/+         0         0       0         0        0",
+   "kaynak": "`meds_temp/d3k2_tum/girdi/ham_y2021_22.json` y2021_22#44 (D3K2 2021-2022-2023.pdf SAYFA 7)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s8 fluoksetin, fluvoksamin ve sertralinin etki sütununa yalnız S (serotonin) yazar; s4 klomipramine 'S, NA' yazar, yani klomipramin noradrenalin geri alımını da inhibe eder. Bu yüzden yalnız serotonin geri alımını inhibe edenler I, II ve III'tür.",
+   "p": 7,
+   "c": 3,
+   "skor": 0.846
+  },
+  {
+   "id": "past-1790877044815-453407",
+   "kok": "Aşağıdaki ilaçlardan hangisi trisiklik antidepresandır?",
+   "cevap": "İmipramin",
+   "yil": "2019-2020",
+   "s": 4,
+   "seviye": "dogrudan",
+   "kanit": "İmipramin                      100-200    NA, S    ++        ++       ++     +++      ++      ++",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2019.txt` SAYFA 14 soru 37",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s4 trisiklik antidepresanlar tablosunda imipramini sayar. Çeldiricilerden venlafaksin ve bupropion s6'da non-trisiklik, fluoksetin s8'de SSRI, selejilin s22'de MAO B inhibitörüdür.",
+   "p": 3,
+   "c": 8,
+   "skor": 0.728
+  },
+  {
+   "id": "past-1790877044820-166663",
+   "kok": "Sigara bırakma tedavisinde kullanılmak üzere onaylanan ilaç aşağıdakilerden hangisidir?",
+   "cevap": "Bupropion",
+   "yil": "2019-2020",
+   "s": 6,
+   "seviye": "ilgili",
+   "kanit": "Bupropion       200-300           DA             0        0         0       0       ++++        0",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2019.txt` SAYFA 14 soru 38",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Slayt s6 bupropionu dopamin üzerinden etkili non-trisiklik antidepresan olarak verir; sigara bırakma endikasyonu bu derste yazmaz (Nikotin dersinde anlatılır), bu yüzden eşleme 'ilgili' düzeyindedir.",
+   "p": 5,
+   "c": 5,
+   "skor": 0.559
+  },
+  {
+   "id": "d3k2-2020-2021-q28",
+   "kok": "Fluoksetin için hangisi söylenemez?",
+   "cevap": "Monoamindir. Advers etkileri olmasa majör depresif tedavide kullanılabilir.",
+   "yil": "2020-2021",
+   "s": 8,
+   "seviye": "ilgili",
+   "kanit": "Fluoksetin                                    20-40                          S      0/+         0         0       0       0/+        0",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2020.txt` SAYFA 14 soru 28 (2020-2021 karne, cevap işaretli)",
+   "anahtar_notu": "karnede işaretli cevap",
+   "dogrulandi": true,
+   "neden": "Slayt s8 fluoksetini SSRI olarak verir ve antikolinerjik etkisini 0 yazar; karnenin işaretlediği seçenek ise slaytta tartışılmaz. Bu yüzden eşleme 'ilgili' düzeyindedir.",
+   "p": 7,
+   "c": 2,
+   "skor": 0.686
+  },
+  {
+   "id": "past-1790877036007-758785",
+   "kok": "Antidepresan ilaçlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "cevap": "SSRI'lar iyi tolere edilir ve maliyetleri düşüktür ancak kullanım spektrumları dardır",
+   "yil": "2024-2025",
+   "s": 22,
+   "seviye": "ilgili",
+   "kanit": "Moklobemid                  AURORIX                      200-450",
+   "kaynak": "`meds_temp/d3k2_tum/metin/y2024_duz.txt` SAYFA 4 madde 30 ve SAYFA 6 madde 41 (2024-2025 öğrenci hatırlaması; şıklar sonradan tamamlandı)",
+   "anahtar_notu": "basılı anahtar yok; tıbbi tutarlılık kontrol edildi",
+   "dogrulandi": true,
+   "neden": "Hatırlamadaki öbür şık moklobemidi nonselektif MAO inhibitörü sayar; slayt s22 moklobemidi MAO A selektif inhibitör olarak verir. Doğru cevap olan SSRI spektrumu bilgisi slaytta yoktur, bu yüzden eşleme 'ilgili' düzeyindedir.",
+   "p": 21,
+   "c": 4,
+   "skor": 0.494
+  }
+ ],
+ "elenen": [
+  {
+   "id": "d3-k2-far-015",
+   "neden": "Ham belgede var (y2025#76) ama cevap milnasipran bu yılın slaytında geçmiyor (kaynak dışı)."
+  },
+  {
+   "id": "d3k2-2025-2026-h69",
+   "neden": "Ham 2025-2026 belgesinin okumasında bu soru bulunamadı (H83)."
+  },
+  {
+   "id": "d3-k2-far-019",
+   "neden": "cikmis_ornek etiketli; ham sınav belgesi yok (H133)."
+  },
+  {
+   "id": "d3-k2-psi-018",
+   "neden": "Kaynak belgesi yok; ham belgede bulunamadı (H83)."
+  },
+  {
+   "id": "final-2018-2019-q040",
+   "neden": "Kaynak PDF ('19 final.pdf') metin katmanı yok; ham belgede yeri doğrulanamadı."
+  },
+  {
+   "id": "ct-h02431",
+   "neden": "Derleme kaynağı; soru antidepresan yan etki yönetimi üzerine, öncülleri slaytta yok."
+  },
+  {
+   "id": "d3-b-091",
+   "neden": "Bütünleme; antidepresan endikasyon listesi bu yılın slaytında yok."
+  }
+ ],
+ "metinHash": "b1e36cf7b74a5207a3bb529f4a1f9a3e17261058"
+}

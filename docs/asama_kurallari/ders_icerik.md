@@ -100,3 +100,4 @@
 ### H696 — Betik anahtar/gönderim tuzakları: kısa anahtar 400, anonim Oracle 500, kelime zamanı gönderilmedi (2026-11-26)
 - **Kural:** Terim/kısaltma/ders_icerik betiklerine TAM anahtar verilir; `--oracle` sonrası kelime zamanı `betik_tamamla --denetle` ile doğrulanır. Açık iş: kelime_zaman güncel olsa da göndermeli.
 
+

@@ -546,3 +546,7 @@
 - **H698** · Yeni ses adla değil md5 ile; ortak kayıt dilim eşlemesiyle derslere bölünür → hatalar/ses.md
 - **H699** · EMA okunuşunda Yunan harfi, bitişik kod, kromozom bandı, G proteini, eğik çizgi ham kalıyordu → hatalar/ses.md
 - **H700** · Slayt dışı somut örnek (Küçük Albert'e köpek); örnek yalnız o sayfanın kanıtıyla → hatalar/ders_metni_degerlendirme.md
+- **H710** · Çözücü 4 tur: "doğru" yalnız tek neden cümlesinde, ipucu yalnız nereye bakılacağı, ses alanı elle yazılmaz → hatalar/soru_cozucu.md
+- **H711** · Yeni sesli ders sırası: EMA → sesli_cek → cumle_zaman → kelime_zaman → isaret → terim; cumle_zaman+isaret scp → hatalar/betik_altyapi.md
+- **H712** · ses_metin bileşik birim (mg/gün, mmol/L) okunmuyor → hatalar/ses.md
+- **H713** · Çizim kapısı çapa sekil boşsa 0/0 der; görüntü sayfasında elle say → hatalar/cizim.md

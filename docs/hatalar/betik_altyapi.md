@@ -318,3 +318,9 @@
 - **Çözüm:** Tam anahtarla, yerel API üzerinden koşuldu (sesli_cek sonrası); fazladan dosya silindi; `kelime_zaman.oracle_gonder()` doğrudan çağrıldı, `betik_tamamla --denetle` eksik varyant yok.
 - **Ek (çıkmış çipi):** `cikmis_konum.py` yalnız `donem3-kurul1` çıkmışlarını tarar → Kurul 2'de hep "soru 0"; elle doğrulanmış çıkmışa p/c `cumle_sinirlari` + embed ile o sayfanın paragrafından bağlanır ve dosyaya `metinHash` (paragraf metinleri sha1) yazılır, yoksa canliDers çipi göstermez.
 - **Kural:** Terim/kısaltma/ders_icerik betiklerine TAM anahtar verilir; `--oracle` sonrası kelime zamanı `betik_tamamla --denetle` ile doğrulanır. Açık iş: kelime_zaman güncel olsa da göndermeli.
+
+### H711 — Yeni ders yalnız Oracle'a eklenince yerel betikler dersi bulamıyor; cümle zamanı sırası (2026-11-27, k2-63)
+- **Belirti:** `sesli_yayinla` sonrasında `kelime_zaman`, `pdf_isaret`, `terim_sozlugu` ve `kisaltma_sozlugu` yerel 3000'de 404 verdi; Oracle'a anonim istek 500 döndü (H696). Ses bitmeden `canli-ders` "bu dersin sesi henüz yok" dedi. Canlı takip kapısı "cumle_zaman dosyası yok" HATA'sı verdi.
+- **Kök neden:** `ders-ekle` yalnız Oracle'a yazıyor, yerel `dersler.json` güncellenmiyor. `cumle_zaman.py` hatta otomatik çağrılmıyor; `kelime_zaman` ve `pdf_isaret`ten önce elle koşulması gerekiyor. `isaret` ve `cumle_zaman` dosyalarını `dagit.sh` taşımıyor (H688).
+- **Çözüm:** EMA bittikten sonra `bash deploy/oracle/sesli_cek.sh` (Oracle→yerel) koşuldu. Sonra sırayla `cumle_zaman.py`, `kelime_zaman.py` + `oracle_gonder()`, `pdf_isaret.py`, terim/kısaltma çalıştırıldı; `cumle_zaman` ve `isaret` scp ile Oracle'a kopyalandı.
+- **Kural:** Yeni sesli derste sıra şudur: EMA biter → `sesli_cek.sh` → `cumle_zaman` → `kelime_zaman` (+`oracle_gonder`) → `pdf_isaret` → terim/kısaltma → `cumle_zaman` + `isaret` scp → `takip_kapisi --api 3310`.

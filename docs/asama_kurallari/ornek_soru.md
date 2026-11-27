@@ -1,6 +1,6 @@
 # Aşama kuralları — ornek_soru
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 34 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 35 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 - H1 — Geçiştirici şık açıklaması (2026-10-18) — betik denetler: `meds/scripts/sik_aciklama.py`
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
@@ -132,4 +132,8 @@
 
 ### H697 — Çözücü kapısının "doğru" zorunluluğu dolgu döngüsü üretti (2026-11-26, k2-60/k2-61)
 - **Kural:** Soru yazım brifine bu model baştan konur; açık iş: kapı şartını "bilgi cümlesi içinde" denetimine çevirmek.
+
+
+### H710 — Çözücü dört denetim turu: "doğru" şartı + elle yazılan ses alanları + ipucu sızıntısı (2026-11-27, k2-63)
+- **Kural:** Çözücü yazarına baştan şu üç model verilir: (a) "doğru"yu tek neden cümlesinde kullan, (b) ipucu yalnız nereye bakılacağını söyler, (c) `ses` alanı elle yazılmaz, metinden üretilir. Romen öncül "birinci/ikinci öncül" okunur, kısaltma ekleri ünlü uyumuna uyar. Örnek soru dosyası aynı turda eşitlenir; şartın kalıcı değişimi kullanıcı kararı.
 
