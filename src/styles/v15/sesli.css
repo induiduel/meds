@@ -181,7 +181,7 @@
 .cd15-hizli .v15-ib { font-weight: 700; font-size: 13px; }
 .cd15-hizli .v15-ib:disabled { opacity: .35; }
 .cd15-hizli .v15-ib.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
-.cd15-rozet { position: absolute; top: 2px; right: 0; min-width: 16px; padding: 0 4px; border-radius: 8px; font: 700 10px/16px var(--font-sans); font-style: normal; background: var(--color-accent); color: #fff; }
+.cd15-rozet { position: absolute; top: 2px; right: 0; min-width: 16px; padding: 0 4px; border-radius: 8px; font: 700 10px/16px var(--font-sans); font-style: normal; background: var(--color-accent); color: var(--color-on-accent, #fff); }
 @media (max-width: 900px) { .cd15-hizli .cd15-yazi { display: none; } }
 @media (max-width: 640px) { .cd15-hizli { display: none; } }
 
@@ -389,7 +389,7 @@
 .cd15-tm-ad { flex: 1 1 auto; min-width: 0; }
 .cd15-tm-kbd { flex: none; font: 500 11.5px/1 var(--font-sans); color: var(--color-ink-3); background: var(--color-field); border-radius: 5px; padding: 3px 6px; }
 .cd15-tm-ok { width: 18px; height: 18px; flex: none; display: grid; place-items: center; border-radius: 5px; border: 1.5px solid var(--color-line); }
-.cd15-tm-ok.is-on { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.cd15-tm-ok.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
 .cd15-tm-ok > svg { width: 13px; height: 13px; }
 .cd15-tm-ayrac { height: 1px; margin: 4px 6px; background: var(--color-line); }
 @media (pointer: coarse) { .cd15-tm-oge { min-height: 44px; } }

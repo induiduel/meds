@@ -318,3 +318,15 @@
 - **Kök neden:** (1) `bg-ink` koyu temada açık renge döner; `text-white` H100 kuralıyla `--color-on-solid`'e (o da açık) bağlı olduğundan yazı zeminle aynı renkti. `bg-ink-surface` için istisna vardı, `bg-ink` için yoktu. (2) `KazanimSorulariView.tsx` başlığında "Kurul 1" sabit yazılmıştı (H140'ta liste çok kurullu oldu, ayrıntı başlığı güncellenmedi). (3) `.v15-top-h.is-geri` `padding: 0`.
 - **Çözüm:** `index.css` `.bg-ink.text-white, .bg-ink .text-white` → `--color-canvas`; kurul ders kimliğinden (`/^k(\d+)-/`); `is-geri` 12 px dolgu + −12 px kenar boşluğu (görünüm aynı, alan 44 px).
 - **Önleme:** Temaya göre tersine dönen bir zemin tokenı (`ink`, `ink-surface`) üstüne `text-white` yazılırsa zıt renk istisnası aynı yerde tanımlanır; kurul/ders numarası hiçbir başlıkta sabit yazılmaz, kimlikten türetilir; dokunmatik düğme ≥44 px ölçülür.
+
+### H702 — Koyu temada vurgu zeminli düğme/rozet yazısı okunmuyordu (2026-11-27)
+- **Belirti:** Koyu temada "Hedef tamamlandı" penceresindeki "Harika" düğmesi, sesli derslerde seçili "V2 güncel" sürüm rozeti ve seçili kurul sekmesindeki "geçmiş" alt yazısı zeminle neredeyse aynı renkteydi (kontrast 2,0–2,3).
+- **Kök neden:** `--color-accent` koyu temada açık camgöbeğine döner; 15 kuralda üstündeki yazı `color: #fff` sabit yazılmıştı (`basarim.css` 8, `dersler.css` 2, `sesli.css` 2, `pdf.css` 2, `kmb.css` 1). `.ks-gecmis` sabit `ink-3` idi, seçili sekmenin ters zeminine uymuyordu.
+- **Çözüm:** Vurgu zemini kullanan satırlarda `#fff` → `var(--color-on-accent, #fff)`; `.ks-k.is-on .ks-gecmis { color: inherit }`.
+- **Önleme:** Vurgu (`--color-accent`, `--bs-renk`) zemininin yazısı her zaman `--color-on-accent`; sabit `#fff` yalnız her temada koyu kalan zeminde. Kontrast ölçerken `color(srgb …)`/`oklch` değerleri canvas ile rgb'ye çevrilir (doğrudan sayı ayıklamak yanlış alarm verir).
+
+### H703 — Sesli derste "Canlı konuma dön" iki kez çıkıyor, "Slayt N" etiketi her maddede tekrarlanıyordu (2026-11-27)
+- **Belirti:** Telefonda PDF + metin birlikteyken kaydırınca iki "Canlı konuma dön" düğmesi (biri PDF'in, biri metnin ortasında) yazıyı kapatıyordu; ekran maddelerinin her birinde aynı "Slayt 1" bağlantısı tekrar ediyordu (bir derste 532 maddede yüzlerce).
+- **Kök neden:** Takip durumu (`durdu`) iki bölmede ortak; `CdPdfBolme` ve `CdMetinBolme` ikisi de kendi `.cd-donus` düğmesini çiziyordu. `CdV2Maddeler` slayt bağlantısını önceki maddeyle karşılaştırmadan her maddeye basıyordu.
+- **Çözüm:** `.cd-govde:is(.is-iki,.is-ust-alt) .cd-pdf-bolme > .cd-donus { display:none }`; slayt bağlantısı yalnız slayt numarası önceki maddeden farklıysa gösterilir (532 maddede 49 etiket).
+- **Önleme:** Ortak durumdan türeyen yüzen düğme, birden çok bölme aynı anda görünürken tek bölmede çizilir; liste satırlarında tekrar eden kaynak etiketi yalnız değiştiği yerde gösterilir.

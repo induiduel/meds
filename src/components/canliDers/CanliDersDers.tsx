@@ -1468,7 +1468,7 @@ const CdV2Maddeler = memo(function CdV2Maddeler({ i, cs, deste }: { i: number; c
               return x.tur ? <mark key={k} className={`cd-v2-v is-${x.tur}`} title={V2_TUR[x.tur] || x.tur}>{ic}</mark> : <React.Fragment key={k}>{ic}</React.Fragment>;
             })}
           </span>
-          {(c.c.length > 0 || c.a != null || c.o || c.h) && (
+          {(c.c.length > 0 || (c.a != null && (ci === 0 || cs[ci - 1]?.a !== c.a)) || c.o || c.h) && (
             <span className="cd-v2-rozetler">
               {c.c.length > 0 && <span className="cd-v2-cik" title={`Çıkmışta sorulmuş: ${c.c.join(', ')}`}><Star aria-hidden /> Çıkmış{c.c.length > 1 ? ` ×${c.c.length}` : ''}</span>}
               {c.h && <span className={`cd-v2-hoca is-${c.h[0]}`} title={`Hoca derste: “${c.h[1]}”`}>
@@ -1477,7 +1477,7 @@ const CdV2Maddeler = memo(function CdV2Maddeler({ i, cs, deste }: { i: number; c
                 ? 'Geçen yılın öğrencileri bu bilgiyi en önemli yerler arasına aldı; çıkmış sorularda karşılığı var'
                 : 'Geçen yılın öğrencileri bu bilgiyi notlarında vurgulayıp açıklama yazdı'}>
                 <GraduationCap aria-hidden /> {c.o === 'A' ? 'Öğrenciler buraya çalıştı' : 'Öğrenci notunda'}</span>}
-              {c.a != null && (
+              {c.a != null && (ci === 0 || cs[ci - 1]?.a !== c.a) && (
                 <a className="cd-v2-adim" href={`/ogren/${encodeURIComponent(deste)}?adim=${c.a}`}
                   onClick={(e) => { e.preventDefault(); navigateTo(`/ogren/${encodeURIComponent(deste)}?adim=${c.a}`); }}
                   title="Etkileşimli derste bu slayt adımını aç">Slayt {c.a}</a>

@@ -5,7 +5,7 @@
 .pd-cover { display: flex; flex-direction: column; box-sizing: border-box; padding: 22mm 18mm 18mm; background: var(--color-white); position: relative; overflow: hidden; }
 .pd-cover::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 9mm; background: var(--color-accent); }
 .pd-cover-brand { display: flex; align-items: center; gap: 10px; margin-top: 6mm; font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -.01em; color: var(--color-ink); }
-.pd-cover-brand i { width: 30px; height: 30px; border-radius: 9px; background: var(--color-accent); display: inline-grid; place-items: center; color: #fff; font-style: normal; font-size: 15px; }
+.pd-cover-brand i { width: 30px; height: 30px; border-radius: 9px; background: var(--color-accent); display: inline-grid; place-items: center; color: var(--color-on-accent, #fff); font-style: normal; font-size: 15px; }
 .pd-cover-kicker { margin: auto 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent); }
 .pd-cover h1 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.08; letter-spacing: -.03em; color: var(--color-ink); text-wrap: balance; }
 .pd-cover-sub { margin: 14px 0 0; font-size: 16px; line-height: 1.5; color: var(--color-ink-2); max-width: 60ch; }
@@ -110,7 +110,7 @@
 .pd-card small { font-size: 10.5px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; opacity: .75; }
 .pd-card .q { font-size: 14px; font-weight: 600; line-height: 1.45; }
 .pd-card .is-front { background: var(--color-field); color: var(--color-ink); }
-.pd-card .is-back { background: var(--color-accent); color: #fff; }
+.pd-card .is-back { background: var(--color-accent); color: var(--color-on-accent, #fff); }
 .pd-card .is-back .q { font-weight: 500; }
 .pd-card .is-blank { background: var(--color-white); min-height: 46px; }
 .pd-lines { display: flex; flex-direction: column; gap: 20px; padding: 10px 0 4px; }

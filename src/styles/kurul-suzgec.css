@@ -75,3 +75,4 @@ mark.kimlik-cumle { background: var(--color-accent-soft); color: inherit; border
 .ks-ust { width: 100%; max-width: 1100px; margin: 12px auto 0; padding: 0 16px; box-sizing: border-box; display: flex; min-width: 0; }
 /* H402: sınavı geçmiş kurul işareti */
 .ks-gecmis { font: 500 11px/1 var(--font-sans); color: var(--color-ink-3); }
+.ks-k.is-on .ks-gecmis { color: inherit; opacity: .8; } /* seçili koyu/açık zeminde ink-3 okunmuyordu (H702) */

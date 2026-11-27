@@ -1409,3 +1409,6 @@ a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none
 @keyframes cd-ind-pop { 0% { transform: scale(.5); opacity: 0; } 70% { transform: scale(1.15); } 100% { transform: scale(1); opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .cd-ind.is-iniyor::after, .cd-ind.is-cihazda { animation: none; } }
 @media (max-width: 600px) { .cd-lm-oge { grid-template-columns: 36px 22px minmax(0, 1fr) 38px 42px; } }
+
+/* H703: PDF + metin birlikteyken takip durumu ortak; "Canlı konuma dön" iki bölmede birden çıkıp yazıyı kapatıyordu → yalnız metin bölmesinde */
+.cd-govde:is(.is-iki, .is-ust-alt) .cd-pdf-bolme > .cd-donus { display: none; }

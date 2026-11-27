@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 962,
-  "baslik": "Telefonda soru çözücü düzeltmeleri",
+  "onem": 963,
+  "baslik": "Koyu tema ve sesli ders düzeltmeleri",
   "maddeler": [
-    "Örnek soru çözücü: koyu temada görünmeyen \"Sonraki\" düğmesi düzeltildi.",
-    "Örnek sorular: ders başlığında doğru kurul gösteriliyor.",
-    "Üst çubuktaki geri düğmesine telefonda dokunmak kolaylaştı."
+    "Koyu temada vurgu renkli düğme ve rozet yazıları artık okunuyor.",
+    "Sesli derste \"Canlı konuma dön\" düğmesi tek kez çıkıyor, yazıyı kapatmıyor.",
+    "Ders metnindeki \"Slayt\" bağlantısı yalnız slayt değişince gösteriliyor; metin sadeleşti."
   ],
   "eklenen": [],
   "degisen": [],
