@@ -65,7 +65,7 @@
   /* PDF.js metin katmanı değişkenleri */
   --user-unit: 1; --total-scale-factor: calc(var(--scale-factor) * var(--user-unit)); --scale-round-x: 1px; --scale-round-y: 1px;
 }
-.pdv-page:not([data-drawn])::before { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgb(0 0 0 / .035) 50%, transparent 70%) 0 0 / 200% 100%; animation: pdv-shim 1.2s linear infinite; }
+.pdv-page:not([data-drawn])::before { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgb(0 0 0 / .035) 50%, transparent 70%) 0 0 / 200% 100%; animation: pdv-shim 1.2s linear 3; /* H706: sonsuz parıltı çizilmemiş 40 sayfada her kare yeniden boyuyordu (boşta ~100 ms/kare) */ }
 @keyframes pdv-shim { to { background-position: -200% 0; } }
 @media (prefers-reduced-motion: reduce) { .pdv-page:not([data-drawn])::before { animation: none; } }
 .pdv-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }

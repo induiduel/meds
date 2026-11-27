@@ -12,7 +12,7 @@ import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } fro
 import { createPortal } from 'react-dom';
 import { Check, Clock, Pause, Play, SkipBack, SkipForward, Star, Text, X } from 'lucide-react';
 import {
-  cdAralik, cdAtla, cdBolumAtla, cdCumleAraligi, cdDurum, cdDuraklat, cdHizDongu, cdParagrafa, cdSar, cdToggle,
+  cdAbone, cdAralik, cdAtla, cdBolumAtla, cdCumleAraligi, cdDurum, cdDuraklat, cdHizDongu, cdParagrafa, cdSar, cdToggle,
   fmtSure, useCd, type CdCikmisKonum, type CdDetay,
 } from './canliDersStore';
 import { cdCikmisAc, CdCikmisPencereKok } from './CdCikmisChip';
@@ -328,3 +328,29 @@ export function cdBolumCikmis(detay: CdDetay | null | undefined): number[] {
   if (!detay?.v2) return [];
   return detay.bolumler.map((b) => b.paragraflar.reduce((t, p) => t + (detay.v2!.p[p.i] || []).filter((c) => c.c.length > 0).length, 0));
 }
+
+/* ---------------- paragraf tekrarı (H705): okunan paragraf N kez daha dinlenir ---------------- */
+type Tekrar = { i: number; bas: number; son: number; kalan: number; kez: number; bekle: number } | null;
+let ptek: Tekrar = null;
+let ptekBirak: (() => void) | null = null;
+const ptekDinle = new Set<() => void>();
+const ptekAyarla = (t: Tekrar) => { ptek = t; ptekDinle.forEach((f) => f()); };
+export function cdParagrafTekrar(kez: number | null) {
+  ptekBirak?.(); ptekBirak = null;
+  const i = cdDurum().aktif;
+  const a = kez && i >= 0 ? cdAralik(i) : null;
+  if (!a) return ptekAyarla(null);
+  ptekAyarla({ i, bas: a[0], son: a[1], kalan: kez!, kez: kez!, bekle: Date.now() + 500 });
+  cdAtla(a[0]);
+  if (!cdDurum().playing) cdToggle();
+  // Paragraf sonuna gelince başa sar; kullanıcı başka yere atlarsa (paragraf değişir) tekrar biter
+  ptekBirak = cdAbone(() => {
+    const st = cdDurum();
+    if (!ptek || Date.now() < ptek.bekle) return; // sarma sonrası eski zaman okunmasın
+    if (st.t >= ptek.son - 0.12) {
+      if (ptek.kalan > 1) { ptekAyarla({ ...ptek, kalan: ptek.kalan - 1, bekle: Date.now() + 500 }); cdAtla(ptek.bas); }
+      else { ptekBirak?.(); ptekBirak = null; ptekAyarla(null); }
+    } else if (st.aktif >= 0 && st.aktif !== ptek.i) { ptekBirak?.(); ptekBirak = null; ptekAyarla(null); }
+  }) as () => void;
+}
+export const useCdParagrafTekrar = () => useSyncExternalStore((f) => { ptekDinle.add(f); return () => void ptekDinle.delete(f); }, () => ptek);

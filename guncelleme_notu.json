@@ -1,12 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 964,
-  "baslik": "Sesli derste sınav kısayolları",
+  "onem": 965,
+  "baslik": "Sesli ders daha akıcı, PDF görünümü genişledi",
   "maddeler": [
-    "Oynatıcı seçeneklerinde dersin kaç çıkmış maddesi olduğu ve en çok hangi bölümden sorulduğu görünüyor.",
-    "Bölüm listesinde her bölümün yanında çıkmış sayısı (★) var.",
-    "\"Yalnız sınav işaretlileri\" anahtarı metni çıkmış, hoca ve öğrenci işaretli paragraflara indiriyor.",
-    "Uyku zamanlayıcısı artık ana oynatıcıda da var."
+    "Sesli ders sayfası boşta ve kaydırırken artık takılmıyor.",
+    "PDF menüsünde \"Sayfa sayfa göster\", \"PDF'i yeni sekmede aç\" ve \"PDF'i indir\" var.",
+    "Oynatıcıda okunan paragrafı 2 ya da 3 kez art arda dinleyebilirsin."
   ],
   "eklenen": [],
   "degisen": [],

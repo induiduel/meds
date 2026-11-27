@@ -1421,3 +1421,14 @@ a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none
 .cd15-bl-cik + .cd15-bl-t { margin-left: 8px; }
 .cd15-cik-ozet { display: flex; gap: 6px; align-items: baseline; margin: 4px 0 10px; font-size: 13px; line-height: 1.45; color: var(--color-ink-2, inherit); }
 .cd15-cik-ozet > svg { flex: none; width: 14px; height: 14px; color: var(--color-accent); transform: translateY(2px); }
+
+/* H707: PDF sayfa sayfa kipi v15'te (v16 kuralının v15 karşılığı; yalnız o anki sayfa görünür, dikey yakalama) */
+:root[data-v15='on']:not([data-v16='on']) {
+  & .cd-pdf-bolme { position: relative; }
+  & .cd-pdf-bolme.is-sayfa-kip .pdv { scroll-snap-type: y mandatory; overscroll-behavior-y: contain; }
+  & .cd-pdf-bolme.is-sayfa-kip .pdv-page { scroll-snap-align: center; scroll-snap-stop: always; }
+  & .cd-pdf-bolme.is-sayfa-kip .pdv-page:not(.is-cur) { visibility: hidden; }
+  & .cd-pdf-sg-kutu { position: absolute; right: 12px; bottom: calc(var(--cd-ortu, 0px) + 60px); z-index: 6; display: flex; flex-direction: column; gap: 2px; padding: 4px;
+    border-radius: 14px; background: var(--color-surface, var(--color-canvas)); box-shadow: 0 0 0 1px var(--color-line), 0 6px 18px rgb(0 0 0 / .18); }
+  & .cd-pdf-sg { width: 44px; height: 44px; border-radius: 10px; }
+}

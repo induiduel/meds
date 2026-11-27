@@ -336,3 +336,21 @@
 - **Kök neden:** v2 ekran maddelerindeki `c` (çıkmış), `h` (hoca), `o` (öğrenci) bilgisi yalnız madde rozetinde kullanılıyordu, bölüm/ders düzeyinde toplanmıyordu; `UykuSecici` `CdSesliEk` içinde dışa açılmamıştı.
 - **Çözüm:** `cdBolumCikmis` bölüm başına çıkmış madde sayısı; oynatıcı seçeneklerinde ders özeti, bölüm listesinde ★N; "Yalnız sınav işaretlileri" anahtarı (`.cd-metin-bolme.is-sinav`, localStorage); `UykuSecici` oynatıcı seçeneklerine eklendi.
 - **Önleme:** Var olan bir özelliği önermeden önce `grep` ile kodda ara; madde düzeyindeki sınav verisi yeni bir yüzeye taşınırken tek yardımcıdan (`cdBolumCikmis`) türetilir, kopya sayaç yazılmaz.
+
+### H705 — Sesli derste paragrafı tekrar dinleme yoktu (2026-11-27)
+- **Belirti:** Öğrenci zor bir paragrafı yeniden dinlemek için elle geri sarıyordu.
+- **Kök neden:** Oynatıcıda yalnız ±10 sn ve bölüm atlama vardı; paragrafın ses aralığı (`cdAralik`) yalnız işaretleme için kullanılıyordu.
+- **Çözüm:** `cdParagrafTekrar(n)` (CdSesliEk): okunan paragraf başına sarılır, sonuna gelince n kez başa döner; başka paragrafa atlanınca biter. Sarma sonrası 500 ms eski zaman okunmaz (çift sayma önlemi). Chrome'da çalarak doğrulandı (1790→1699 sn).
+- **Önleme:** Ses zamanına bağlı döngülerde sarma sonrası `timeupdate` eski konumu bir kez daha verebilir; bekleme penceresi olmadan sayaç azaltılmaz.
+
+### H706 — Sesli ders sayfası boşta ve kaydırırken donuyordu (2026-11-27)
+- **Belirti:** Ses çalmazken bile her kare ~100 ms (Chrome LoAF), kaydırırken 110–170 ms/kare; telefonda belirgin takılma.
+- **Kök neden:** (1) `pdfDoc.css` çizilmemiş PDF sayfalarında `pdv-shim` parıltısı `infinite` idi; tembel çizim yüzünden 44 sayfanın ~40'ı hiç çizilmiyor, 40 sonsuz `background-position` animasyonu her kare ana iş parçacığında boyatıyordu. (2) Kapsamsız `::selection` (index.css) her stil hesabında tüm öğeler için seçim stilini çözdürüyordu (tasarruf kabuğunda 60→5 ms).
+- **Çözüm:** Parıltı 3 tur (`animation: pdv-shim 1.2s linear 3`); `::selection` → `body::selection` (Chromium vurgu kalıtımıyla alt öğelere geçer; yazı rengi `--color-on-accent`). Sonra: boşta 5 sn ve 20 adım kaydırmada 0 uzun kare.
+- **Önleme:** Görünmeyen/tembel öğelerde sonsuz animasyon yasak (sınırlı tur ya da yalnız görünür öğede); `::selection` ve benzeri sözde öğe kuralları kapsamsız yazılmaz. Ölçüm: `long-animation-frame` gözlemcisi + `document.getAnimations().length`. Açılıştaki ~0,5 sn ilk yerleşim (metin bölmesi ~4.400 öğe) kaldı; `content-visibility` iOS zıplaması nedeniyle bilerek kullanılmıyor (canli-ders.css:116).
+
+### H707 — Sesli derste PDF sayfa sayfa görünümü ve PDF'i açma/indirme v15'te yoktu (2026-11-27)
+- **Belirti:** Canlı tasarımda (v15) PDF yalnız sürekli kaydırılıyordu; özgün PDF'i ayrı sekmede açmanın ya da indirmenin yolu yoktu.
+- **Kök neden:** Sayfa kipi `v16 && kip === 'sayfa'` koşuluyla yalnız v16 denemesinde açıktı; CSS'i yalnız `:root[data-v16='on']` altındaydı.
+- **Çözüm:** PDF ⋯ menüsüne "Sayfa sayfa göster / Sürekli kaydır", "PDF'i yeni sekmede aç", "PDF'i indir"; sayfa kipi CSS'i v15 için eklendi (yalnız o anki sayfa, dikey yakalama, 44 px önceki/sonraki düğmeleri). Chrome'da doğrulandı (sayfa 25→26).
+- **Önleme:** Deneme tasarımında (v16) geliştirilen özellik canlıya alınırken v15 karşılığı (koşul + CSS kapsamı) ayrıca eklenir.

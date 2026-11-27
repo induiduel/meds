@@ -34,7 +34,7 @@ import { Headphones, MoreHorizontal as LMoreHorizontal, WifiOff } from 'lucide-r
 const MoreHorizontal = v16Ikonlu(LMoreHorizontal, 'daha');
 import { cdTampon, cdYenidenDene } from './canliDersStore';
 import { useCdCevrimdisi } from './canliDersCevrimdisi';
-import { UykuSecici, cdBolumCikmis, cdSinavSuzgecAyarla, useCdSinavSuzgec } from './CdSesliEk';
+import { UykuSecici, cdBolumCikmis, cdParagrafTekrar, useCdParagrafTekrar, cdSinavSuzgecAyarla, useCdSinavSuzgec } from './CdSesliEk';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
 
@@ -556,6 +556,8 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
   const yildiz = useYildizliParagraflar().filter((y) => (y.meta as { dersKey?: string } | undefined)?.dersKey === detay?.key);
   const [sekme, setSekme] = useState<'bolum' | 'yildiz'>('bolum');
   const sinavSuz = useCdSinavSuzgec();
+  const ptek = useCdParagrafTekrar();
+  const aktifP = useCd((s) => s.aktif);
   const bolCik = useMemo(() => cdBolumCikmis(detay), [detay]);
   const toplamCik = bolCik.reduce((t, n) => t + n, 0);
   const enCok = toplamCik > 0 ? bolCik.indexOf(Math.max(...bolCik)) : -1;
@@ -574,6 +576,11 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Oynatma listesi</b><small>Seç ve sırayla çal</small></span><ListeDockSecici /></div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Tekrar</b><small>Ders bitince ne olsun</small></span><TekrarSecici /></div>
           <label className="cd15-sat"><span className="cd15-sat-t"><b>Bölüm sonunda dur</b><small>Her bölüm bitince ses durur, sorar</small></span><BolumDurAnahtar /></label>
+          <div className="cd15-sat"><span className="cd15-sat-t"><b>Paragrafı tekrar dinle</b><small>{ptek ? `${ptek.kez - ptek.kalan + 1}/${ptek.kez}. dinleyiş · başka yere atlayınca biter` : 'Okunan paragraf baştan, art arda çalar'}</small></span>
+            <div className="v15-seg" role="group" aria-label="Paragraf tekrarı">
+              {[2, 3].map((n) => <button key={n} type="button" aria-pressed={!!ptek && ptek.kez === n} onClick={() => cdParagrafTekrar(n)} disabled={aktifP < 0}>{n}×</button>)}
+              {ptek && <button type="button" onClick={() => cdParagrafTekrar(null)}>Bitir</button>}
+            </div></div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Uyku zamanlayıcısı</b><small>Süre dolunca ya da bölüm bitince ses durur</small></span><UykuSecici /></div>
           {detay?.v2 && (
             <label className="cd15-sat"><span className="cd15-sat-t"><b>Yalnız sınav işaretlileri</b><small>Metinde yalnız çıkmış, hoca ya da öğrenci işaretli paragraflar kalır</small></span>

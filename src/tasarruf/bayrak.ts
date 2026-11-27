@@ -19,7 +19,7 @@ export const TASARRUF_ROTALAR = new Set<string>(TASARRUF_SAYFALAR.map((s) => s.t
 const onizleme = () => { try { return localStorage.getItem('medsor_tasarruf_onizleme') === '1'; } catch { return false; } };
 
 /**
- * Bot (yapay zekâ test erişimi) geçişi: `?tasarruf=0` normal mod, `?tasarruf=1` tasarruf kipi; seçim cihazda kalır
+ * Bot (yapay zekâ test erişimi) varsayılan normal moddadır (2026-11-27); `?tasarruf=1` tasarruf kipi, `?tasarruf=0` geri normal; seçim cihazda kalır
  * (medsor_tasarruf_bot). Yalnız aiTest oturumunda okunur; gerçek öğrenciyi etkilemez.
  */
 const BOT_KEY = 'medsor_tasarruf_bot';
@@ -36,7 +36,8 @@ export function botTasarrufAyarla(acik: boolean) { try { localStorage.setItem(BO
 /** rolBilindi: moderatör rolü sunucudan gelmeden öğrenci kabuğu açılmaz (yanıp sönme olmasın); bot: aiTest oturumu */
 export function tasarrufAcik(yonetici: boolean, moderator: boolean, rolBilindi: boolean, bot = false): boolean {
   if (!TASARRUF_ACIK) return false;
-  if (bot) { const t = botTasarrufTercihi(); if (t !== null) return t; }
+  // Bot (aiTest) oturumu varsayılan normal moddadır (kullanıcı kararı 2026-11-27); yalnız ?tasarruf=1 ile tasarruf kipine girer
+  if (bot) return botTasarrufTercihi() === true;
   if (yonetici || moderator) return onizleme();
   return rolBilindi;
 }

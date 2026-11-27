@@ -7,7 +7,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 body { background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans); -webkit-tap-highlight-color: transparent; }
-::selection { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+body::selection { background: var(--color-accent); color: var(--color-on-accent, #fff); } /* H706 */
 .w-4 { width: 1rem; } .h-4 { height: 1rem; }
 
 .yt-bekle { min-height: 100dvh; display: grid; place-items: center; }

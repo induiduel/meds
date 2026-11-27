@@ -330,9 +330,11 @@ body {
   font-family: var(--font-sans);
 }
 
-::selection {
+/* H706: kapsamsız ::selection her stil hesabında tüm öğeler için seçim stilini çözdürüyordu (sesli derste 60 ms/kare → 5 ms).
+   body::selection + Chromium'un vurgu kalıtımı (highlight inheritance) alt öğelere aynen geçer. Yazı rengi on-accent (koyu temada okunur). */
+body::selection {
   background: var(--color-accent);
-  color: var(--color-on-solid, #fff);
+  color: var(--color-on-accent, #fff);
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }

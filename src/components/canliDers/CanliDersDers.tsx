@@ -54,7 +54,7 @@ import { SlideDrawingCanvas, getDrawingGlobalState, penPalette, setDrawingGlobal
 import { Popover, PopoverContent, PopoverTrigger, ToggleGroup, ToggleGroupItem } from '../ui/radix';
 import { useAppearance } from '../../utils/appearance';
 import { Eraser, MousePointer2, PenTool, Undo2 } from 'lucide-react';
-import { Rows3, StickyNote } from 'lucide-react';
+import { ExternalLink, Rows3, StickyNote } from 'lucide-react';
 import { v16Acik, v16Dinle } from '../../utils/v16';
 import type { CdCikmisKonum, CdV2Cumle } from './canliDersStore';
 
@@ -1875,7 +1875,9 @@ export function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; c
   const v16 = React.useSyncExternalStore(v16Dinle, v16Acik, () => false);
   const [kip, setKip] = useState<'sayfa' | 'surekli'>(() => { try { return localStorage.getItem('cd_pdf_kip') === 'sayfa' ? 'sayfa' : 'surekli'; } catch { return 'surekli'; } });
   const kipDegis = () => setKip((k) => { const n = k === 'sayfa' ? 'surekli' : 'sayfa'; try { localStorage.setItem('cd_pdf_kip', n); } catch { /* yok */ } return n; });
-  const sayfaKip = v16 && kip === 'sayfa';
+  // H707: sayfa sayfa görünüm v15'te de (PDF ⋯ menüsü); önceden yalnız v16 denemesinde açıktı
+  const v15Kip = useAppearance().v15;
+  const sayfaKip = (v16 || v15Kip) && kip === 'sayfa';
   const sigdirFit = sigdir || sayfaKip;
   // Sayfa kipinde bir sayfa ileri/geri: görüntüleyicinin kaydırma kutusunu bir sayfa boyu kaydırır (yakalama sayfaya oturtur)
   const sayfaGit = (yon: number) => {
@@ -2134,6 +2136,13 @@ export function CdPdfBolme({ detay, canli, sigdir = false }: { detay: CdDetay; c
             { ad: 'Yakınlaştır', ikon: <Plus />, ipucu: `%${Math.round(zoom * 100)}`, kalAcik: true, disabled: zoom >= Z_MAX, ayrac: true, onSec: () => setZoom((z) => z + 0.1) },
             { ad: 'Uzaklaştır', ikon: <Minus />, kalAcik: true, disabled: zoom <= Z_MIN, onSec: () => setZoom((z) => z - 0.1) },
             { ad: 'Sayfaya sığdır (%100)', ikon: <FileText />, kalAcik: true, disabled: zoom === 1, onSec: () => setZoom(1) },
+            { ad: kip === 'sayfa' ? 'Sürekli kaydır' : 'Sayfa sayfa göster', ikon: kip === 'sayfa' ? <Rows3 /> : <StickyNote />, ipucu: kip === 'sayfa' ? 'şu an: sayfa sayfa' : 'şu an: sürekli', ayrac: true, onSec: kipDegis },
+            { ad: "PDF'i yeni sekmede aç", ikon: <ExternalLink />, disabled: !src, onSec: () => { if (src) window.open(src, '_blank', 'noopener'); } },
+            { ad: "PDF'i indir", ikon: <Download />, disabled: !src, onSec: () => {
+              if (!src) return;
+              const a = document.createElement('a'); a.href = src; a.download = (sf?.name || `${detay.baslik || 'ders'}.pdf`).replace(/[\\/:*?"<>|]+/g, ' ');
+              document.body.appendChild(a); a.click(); a.remove();
+            } },
           ]} />
         )}
       </div>
