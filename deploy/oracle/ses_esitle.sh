@@ -5,7 +5,8 @@
 # bu yüzden yeni dersin sesleri canlıya hiç gitmiyordu (k2-40/41/42: data/<brans>_cozucu/ses/<kod>/ Oracle'da yoktu).
 #
 # Kapsam: data/*_cozucu*/ses*/, data/*_asistan*/ses*/, data/ek_moduller/ses/ (kaynak: ana çalışma ağacı, worktree değil).
-#   data/sesli_anlatim/ses/ DIŞARIDA: o sesler Oracle'da üretilir/yönetilir.
+#   data/sesli_anlatim/ses/ DIŞARIDA: o sesler Oracle'da üretilir/yönetilir. ses_dusuk/ (H709, yavaş bağlantı kopyası,
+#   dusuk_bit.py yerelde üretir) DAHİL: sunucu kopyayı yalnız kaynak bayt boyutu tutarsa verir.
 # Güvenlik: yalnız ekler/günceller, ASLA silmez (--delete yok); --update: Oracle'daki daha yeni dosya ezilmez;
 #   yalnız .mp3/.json/.wav/.ogg/.m4a/.mp4 (KMB videoları data/kmb_cozucu/ses_video/); sahiplik ubuntu:ubuntu.
 # Doğrulama: her kökte Oracle dosya sayısı ≥ yerel olmalı; eksik varsa çıkış 73.
@@ -21,7 +22,7 @@ SSHC="ssh -i $KEY -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15"
 UZAK=/home/ubuntu/medsor/meds
 
 cd "$ANA"
-mapfile -t KOKLER < <(ls -d data/*_cozucu*/ses*/ data/*_asistan*/ses*/ data/ek_moduller/ses/ 2>/dev/null | sed 's:/$::' | sort -u)
+mapfile -t KOKLER < <(ls -d data/*_cozucu*/ses*/ data/*_asistan*/ses*/ data/ek_moduller/ses/ data/sesli_anlatim/ses_dusuk/ data/arsiv_25_26/sesli_anlatim/ses_dusuk/ 2>/dev/null | sed 's:/$::' | sort -u)
 [[ ${#KOKLER[@]} -gt 0 ]] || { echo "    ses kökü yok"; exit 0; }
 echo "==> ses klasörleri Oracle'a (${#KOKLER[@]} kök${KURU:+, KURU})"
 

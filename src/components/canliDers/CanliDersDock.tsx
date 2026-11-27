@@ -17,7 +17,7 @@ const ListOrdered = v16Ikonlu(LListOrdered, 'liste');
 import { navigateTo, pathFor } from '../../router';
 import {
   CD_HIZLAR, cdDuraklat, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
-  fmtSure, useCd,
+  fmtSure, useCd, cdKaliteTercih, cdKaliteAyarla, cdKaliteAbone, type CdKaliteTercih,
 } from './canliDersStore';
 import { ListeDockDenetim, ListeDockMenu, ListeDockSecici, TekrarSecici } from './CanliDersListem';
 import { CdDaha } from './CanliDersDaha';
@@ -556,7 +556,12 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
   const yildiz = useYildizliParagraflar().filter((y) => (y.meta as { dersKey?: string } | undefined)?.dersKey === detay?.key);
   const [sekme, setSekme] = useState<'bolum' | 'yildiz'>('bolum');
   const sinavSuz = useCdSinavSuzgec();
-  const ptek = useCdParagrafTekrar();
+  const kTercih = React.useSyncExternalStore(cdKaliteAbone, cdKaliteTercih, () => 'oto' as CdKaliteTercih);
+  const kalite = useCd((s) => s.kalite);
+  const dusukVar = useCd((s) => !!s.varyantlar.find((v) => v.id === s.vid)?.dusuk);
+  const kaliteAciklama = !dusukVar ? 'Bu dersin düşük bit hızlı kopyası henüz yok'
+    : kalite === 'dusuk' ? 'Şu an veri tasarruflu ses çalıyor (yarı boyut, süre aynı)'
+    : kTercih === 'oto' ? 'Bağlantı yavaşlarsa ya da ses takılırsa veri tasarruflu sese geçer' : 'Şu an yüksek kalite çalıyor';  const ptek = useCdParagrafTekrar();
   const aktifP = useCd((s) => s.aktif);
   const bolCik = useMemo(() => cdBolumCikmis(detay), [detay]);
   const toplamCik = bolCik.reduce((t, n) => t + n, 0);
@@ -573,6 +578,12 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
             </div>
           </div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Ses</b></span><SesSecici /></div>
+          <div className="cd15-sat cd15-sat-blok"><span className="cd15-sat-t"><b>Ses kalitesi</b><small>{kaliteAciklama}</small></span>
+            <div className="v15-seg" role="radiogroup" aria-label="Ses kalitesi">
+              {([['oto', 'Otomatik'], ['yuksek', 'Yüksek'], ['dusuk', 'Veri tasarrufu']] as [CdKaliteTercih, string][]).map(([k, ad]) => (
+                <button key={k} type="button" role="radio" aria-checked={kTercih === k} disabled={!dusukVar && k === 'dusuk'} onClick={() => cdKaliteAyarla(k)}>{ad}</button>
+              ))}
+            </div></div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Oynatma listesi</b><small>Seç ve sırayla çal</small></span><ListeDockSecici /></div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Tekrar</b><small>Ders bitince ne olsun</small></span><TekrarSecici /></div>
           <label className="cd15-sat"><span className="cd15-sat-t"><b>Bölüm sonunda dur</b><small>Her bölüm bitince ses durur, sorar</small></span><BolumDurAnahtar /></label>

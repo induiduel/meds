@@ -30,6 +30,8 @@ const P = {
   kayit: (arsiv = false) => path.join(arsiv ? ARSIV_KOK : KOK, 'kayit.json'),
   metin: (k: string) => path.join(kokSec(k), 'metin', `${k}.md`),
   ses: (k: string, v: string) => path.join(kokSec(k), 'ses', k, `${v}.mp3`),
+  /** H709: yavaş bağlantı kopyası (32 kbps, aynı süre) + yan dosya { kaynakBayt } — scripts/uretim/sesli_anlatim/dusuk_bit.py */
+  sesDusuk: (k: string, v: string) => path.join(kokSec(k), 'ses_dusuk', k, `${v}.mp3`),
   hizalama: (k: string) => path.join(kokSec(k), 'hizalama', `${k}.json`),
   vurgu: (k: string) => path.join(kokSec(k), 'vurgu', `${k}.json`),
   cumle: (k: string) => path.join(kokSec(k), 'cumle_zaman', `${k}.json`),
@@ -214,7 +216,14 @@ const surum = (key: string, vid: string) => {
     return 0;
   }
 };
-const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt, surum: surum(key, v.id), ...(v.surumAd ? { surumAd: v.surumAd } : {}) });
+/** H709: düşük bit kopyası bu sesten mi üretilmiş (bayt eşleşmesi) */
+const dusukVar = (key: string, vid: string) => {
+  try {
+    const yan = JSON.parse(fs.readFileSync(P.sesDusuk(key, vid).replace(/\.mp3$/, '.json'), 'utf8'));
+    return yan?.kaynakBayt === fs.statSync(P.ses(key, vid)).size && fs.existsSync(P.sesDusuk(key, vid));
+  } catch { return false; }
+};
+const ozet = (key: string) => (v: KayitVaryant) => ({ ...(dusukVar(key, v.id) ? { dusuk: true } : {}), id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt, surum: surum(key, v.id), ...(v.surumAd ? { surumAd: v.surumAd } : {}) });
 
 function medspakYoluBul(key: string): string | null {
   const m = /^(?:y25-)?k(\d+)-/.exec(key);
@@ -303,9 +312,19 @@ export function registerCanliDersRoutes(app: Express) {
       const utf8 = encodeURIComponent(ad).replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`);
       res.setHeader('Content-Disposition', `attachment; filename="${ascii}"; filename*=UTF-8''${utf8}`);
     }
+    // H709: ?k=dusuk → düşük bit hızlı kopya, yalnız kaynakla aynı sesten üretildiyse (bayt eşleşmesi); yoksa asıl ses.
+    // Yanıt başlığı X-Ses-Kalite istemciye hangisinin geldiğini söyler. İndirme (?indir) her zaman asıl sestir.
+    let dosya = P.ses(key, vid);
+    let kalite = 'yuksek';
+    if (req.query.k === 'dusuk' && !req.query.indir) {
+      try {
+        const yan = JSON.parse(fs.readFileSync(P.sesDusuk(key, vid).replace(/\.mp3$/, '.json'), 'utf8'));
+        if (yan?.kaynakBayt === fs.statSync(dosya).size && fs.existsSync(P.sesDusuk(key, vid))) { dosya = P.sesDusuk(key, vid); kalite = 'dusuk'; }
+      } catch { /* kopya yok: asıl ses */ }
+    }
     // sendFile: Range → 206/416, ETag/Last-Modified, Accept-Ranges
-    res.sendFile(P.ses(key, vid), {
-      headers: { 'Content-Type': 'audio/mpeg', 'Cache-Control': 'public, max-age=86400' },
+    res.sendFile(dosya, {
+      headers: { 'Content-Type': 'audio/mpeg', 'Cache-Control': 'public, max-age=86400', 'X-Ses-Kalite': kalite, 'Access-Control-Expose-Headers': 'X-Ses-Kalite' },
       cacheControl: false,
       dotfiles: 'deny',
     }, (err: any) => {

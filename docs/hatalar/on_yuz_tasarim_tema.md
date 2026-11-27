@@ -360,3 +360,9 @@
 - **Kök neden:** `cdSlaytBasliklari.ts` ve `cdVideo.ts` `pdfjs.getDocument`'i `disableAutoFetch` olmadan açıyordu; PDF.js boşta kalınca bütün dosyayı (10–50 MB) arka planda çeker. Görüntüleyici (`PdfDocView`) bunu zaten kapatmıştı.
 - **Çözüm:** İki çağrıya `disableAutoFetch: true`; yalnız okunan sayfaların aralıkları iner.
 - **Önleme:** Her `getDocument({ url })` çağrısı `disableAutoFetch: true, disableStream: true` ile açılır (Range 206 sunucu desteği var).
+
+### H709 — Yavaş bağlantıda sesli ders sesi takılıyordu (tek kalite 48–64 kbps) (2026-11-27)
+- **Belirti:** 46 dakikalık ders 22 MB; 2G/zayıf mobil veride ses sık sık duruyordu, daha hafif bir seçenek yoktu.
+- **Kök neden:** Her ders sesi tek kalitede (48–64 kbps) sunuluyordu; istemci bağlantı hızına göre seçim yapamıyordu.
+- **Çözüm:** `scripts/uretim/sesli_anlatim/dusuk_bit.py` her sese 32 kbps tek kanallı kopya + `{kaynakBayt}` yan dosyası üretir (süre kaynakla aynı, 0,3 sn sapmada silinir). Sunucu `?k=dusuk`'ta kopyayı YALNIZ kaynak bayt boyutu tutarsa verir (`X-Ses-Kalite`), varyant özetine `dusuk: true` yazar; `?indir` hep asıl ses. İstemci (`canliDersStore`): `saveData`/2G/3G/<1 Mbps ise açılışta düşük; çalarken 60 sn'de 2 kez ≥2 sn ya da bir kez ≥5 sn takılırsa düşüğe geçer; bağlantı hızlanınca yükseğe döner; geçişte konum ve oynatma korunur. Oynatıcı seçeneklerinde "Ses kalitesi: Otomatik / Yüksek / Veri tasarrufu". Kopyalar `ses_esitle.sh` ile Oracle'a gider.
+- **Önleme:** Aynı sesin ikinci kodlaması süreyi değiştirmemeli (örnekleme hızı korunur, ffprobe ile süre denetlenir); kopya kaynağa bayt boyutuyla bağlanır ki ses onarılınca eski kopya çalınmasın.

@@ -99,3 +99,4 @@
 ### H708 — Dışa aktarma/video üretimi PDF'in tamamını arka planda indiriyordu (2026-11-27)
 - **Önleme:** Her `getDocument({ url })` çağrısı `disableAutoFetch: true, disableStream: true` ile açılır (Range 206 sunucu desteği var).
 
+

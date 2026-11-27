@@ -27,7 +27,7 @@ scripts/
   `paket/` (.medspak) · `quiz_motoru/` (quiz KAPALI, kural 19)
 
 ## uretim/ — içerik üretimi
-- Ders: `ders_isci/` (yayinla.py, denetle.py) · `sesli_anlatim/` (EMA/XTTS işçisi, cümle/kelime zamanı, pdf_isaret, terim) ·
+- Ders: `ders_isci/` (yayinla.py, denetle.py) · `sesli_anlatim/` (EMA/XTTS işçisi, cümle/kelime zamanı, pdf_isaret, terim, dusuk_bit = yavaş bağlantı 32 kbps ses kopyası) ·
   `ders_analizi/` · `ders_icerik/` · `ders_video/` · `ogren_ses/` · `ek_modul/`
 - Ses ortak: `ses_ortak/` (`ses_kapisi.py`: ses kalite kapısı + kayıt↔disk↔Oracle boyut denetimi + artık raporu; CPU, salt okunur)
   · `yeniden_uret.py` (okunus_farki listesindeki klipleri yalnız onları GPU sarmalayıcısıyla yeniden üretir: hazırlık → kapı → atomik takas, sürdürülebilir defter, `geri-al`; sınama `sinama_yeniden_uret.py`)

@@ -34,6 +34,8 @@ export interface CdVaryant {
   kelimeZaman?: Record<string, number[]> | null;
   /** Metin sürümü adı (v1, v2…; sunucu kayit.json `surumAd`) — aynı sesin eski/yeni metin seslendirmesini ayırır */
   surumAd?: string;
+  /** H709: sunucuda bu sesin düşük bit hızlı (32 kbps) kopyası var */
+  dusuk?: boolean;
 }
 export interface CdListeDers {
   key: string;
@@ -173,12 +175,13 @@ const yol = (key: string, vid: string) => `/api/canli-ders/ses/${encodeURICompon
 const surumler = new Map<string, number>();
 const surumKaydet = (key: string, vs: { id: string; bayt?: number; surum?: number }[] | undefined) =>
   (vs || []).forEach((v) => (v?.surum || v?.bayt) && surumler.set(`${key}/${v.id}`, v.surum || v.bayt!));
-export const cdSesUrl = (key: string, vid: string, indir = false) => {
+export const cdSesUrl = (key: string, vid: string, indir = false, dusuk = false) => {
   const p = yol(key, vid);
   const qs = new URLSearchParams();
   const v = surumler.get(`${key}/${vid}`);
   if (v) qs.set('v', String(v));
   if (indir) qs.set('indir', '1');
+  else if (dusuk) qs.set('k', 'dusuk');
   const q = qs.toString();
   return `${(getCustomApiUrl(p) || '').replace(/\/$/, '')}${p}${q ? `?${q}` : ''}`;
 };
@@ -339,6 +342,8 @@ export interface CdState {
   bolum: number;
   /** Zamanlama sürümü: süre/varyant değişince artar (bölüm işaretleri yeniden hesaplanır) */
   zs: number;
+  /** H709: çalan sesin kalitesi (yavaş bağlantıda düşük bit hızlı kopya) */
+  kalite: 'yuksek' | 'dusuk';
 }
 
 const okuHiz = () => {
@@ -352,7 +357,7 @@ const okuHiz = () => {
 
 let st: CdState = {
   key: null, no: '', baslik: '', detay: null, varyantlar: [], vid: null,
-  playing: false, t: 0, dur: 0, rate: 1, bekliyor: false, hata: null, aktif: -1, cumle: -1, bolum: -1, zs: 0,
+  playing: false, t: 0, dur: 0, rate: 1, bekliyor: false, hata: null, aktif: -1, cumle: -1, bolum: -1, zs: 0, kalite: 'yuksek',
 };
 const subs = new Set<() => void>();
 const set = (p: Partial<CdState>) => {
@@ -694,8 +699,9 @@ function ses(): HTMLAudioElement {
   window.setInterval(() => { if (st.playing && st.key && !st.bekliyor) sureEkle('sesli', st.key, 5); }, 5000);
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });
   a.addEventListener('seeked', () => { tick(); msKonum(); });
-  a.addEventListener('waiting', () => set({ bekliyor: true }));
-  a.addEventListener('playing', () => set({ bekliyor: false }));
+  a.addEventListener('seeking', () => { sonSarma = Date.now(); });
+  a.addEventListener('waiting', () => { set({ bekliyor: true }); beklemeBas = Date.now(); });
+  a.addEventListener('playing', () => { set({ bekliyor: false }); takilmaKaydet(); });
   a.addEventListener('canplay', () => set({ bekliyor: false }));
   a.addEventListener('ratechange', () => msKonum());
   const sureAl = () => {
@@ -860,6 +866,82 @@ export function cdTercihVaryant(vs: CdVaryant[]): CdVaryant | undefined {
   return vs.find((x) => /ema/i.test(x.saglayici || '')) || vs[0];
 }
 
+/* ---------------- ses kalitesi (H709): yavaş bağlantıda düşük bit hızlı kopya ---------------- */
+export type CdKaliteTercih = 'oto' | 'yuksek' | 'dusuk';
+const KALITE_KEY = 'medsoru_canli_ders_kalite';
+export const cdKaliteTercih = (): CdKaliteTercih => {
+  try { const v = localStorage.getItem(KALITE_KEY); return v === 'yuksek' || v === 'dusuk' ? v : 'oto'; } catch { return 'oto'; }
+};
+type Baglanti = { saveData?: boolean; effectiveType?: string; downlink?: number; addEventListener?: (t: string, f: () => void) => void };
+const baglanti = (): Baglanti | undefined => (typeof navigator !== 'undefined' ? (navigator as any).connection : undefined);
+/** Tarayıcının bildirdiği bağlantı yavaş mı (veri tasarrufu, 2G/3G ya da < 1 Mbps). Bilgi yoksa (Safari/Firefox) hayır. */
+function yavasBaglanti(): boolean {
+  const c = baglanti();
+  if (!c) return false;
+  if (c.saveData) return true;
+  if (/(^|-)2g|3g/.test(c.effectiveType || '')) return true;
+  return typeof c.downlink === 'number' && c.downlink > 0 && c.downlink < 1;
+}
+/** Takılma ile düşük kaliteye geçildiyse (bağlantı bilgisi olmayan tarayıcılarda da) ders boyunca düşükte kalınır */
+let takildiDusuk = false;
+function dusukSec(v: CdVaryant | undefined): boolean {
+  if (!v?.dusuk) return false;
+  const t = cdKaliteTercih();
+  if (t !== 'oto') return t === 'dusuk';
+  return takildiDusuk || yavasBaglanti();
+}
+let takilmalar: number[] = [];
+let beklemeBas = 0;
+let sonSarma = 0;
+/** Çalarken art arda takılma: 60 sn içinde 2 kez ≥ 2 sn ya da bir kez ≥ 5 sn bekleme → düşük kopyaya geç (yalnız 'oto') */
+function takilmaKaydet() {
+  const bas = beklemeBas; beklemeBas = 0;
+  if (!bas || !audio || kullaniciDurdurdu) return;
+  const sure = Date.now() - bas;
+  if (bas - sonSarma < 1500 || sure < 2000) return; // sarma/ilk yükleme beklemesi sayılmaz
+  const simdi = Date.now();
+  takilmalar = [...takilmalar.filter((x) => simdi - x < 60000), simdi];
+  if (st.kalite === 'yuksek' && cdKaliteTercih() === 'oto' && (sure >= 5000 || takilmalar.length >= 2)) {
+    const v = st.varyantlar.find((x) => x.id === st.vid);
+    if (v?.dusuk) { takildiDusuk = true; kaliteUygula(true); }
+  }
+}
+/** Çalan sesi konumu ve oynatma durumu korunarak öteki kopyaya geçirir (süre/zamanlar aynı) */
+function kaliteUygula(dusuk: boolean) {
+  const a = audio;
+  if (!a || !st.key || !st.vid || (st.kalite === 'dusuk') === dusuk) return;
+  const t = a.currentTime || st.t || 0;
+  const calsin = !a.paused;
+  set({ kalite: dusuk ? 'dusuk' : 'yuksek' });
+  takilmalar = [];
+  a.src = cdSesUrl(st.key, st.vid, false, dusuk);
+  a.playbackRate = st.rate;
+  a.defaultPlaybackRate = st.rate;
+  pitch(a);
+  a.addEventListener('loadedmetadata', () => { try { a.currentTime = t; } catch { /* yok */ } if (calsin) a.play().catch(() => {}); }, { once: true });
+  a.load();
+}
+/** Kullanıcı tercihi (oynatıcı seçenekleri): Otomatik / Yüksek / Veri tasarrufu */
+export function cdKaliteAyarla(t: CdKaliteTercih) {
+  try { localStorage.setItem(KALITE_KEY, t); } catch { /* yok */ }
+  if (t !== 'oto') takildiDusuk = false;
+  const v = st.varyantlar.find((x) => x.id === st.vid);
+  kaliteUygula(dusukSec(v));
+  kaliteDinle.forEach((f) => f());
+}
+const kaliteDinle = new Set<() => void>();
+export const cdKaliteAbone = (f: () => void) => { kaliteDinle.add(f); return () => void kaliteDinle.delete(f); };
+// Bağlantı değişince (Chromium): otomatikte hızlanınca yükseğe döner, yavaşlayınca düşüğe geçer
+try {
+  baglanti()?.addEventListener?.('change', () => {
+    if (cdKaliteTercih() !== 'oto' || !st.key) return;
+    const v = st.varyantlar.find((x) => x.id === st.vid);
+    if (!v?.dusuk) return;
+    if (yavasBaglanti()) kaliteUygula(true);
+    else if (!takilmalar.some((x) => Date.now() - x < 120000)) { takildiDusuk = false; kaliteUygula(false); }
+  });
+} catch { /* yok */ }
+
 /* ---------------- eylemler ---------------- */
 function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
   const a = ses();
@@ -876,7 +958,10 @@ function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
     detay: yeniDers ? null : st.detay, dur: v?.sureSn || 0, t: t0, hata: null, bekliyor: oynat,
     ...(yeniDers ? { aktif: -1, cumle: -1, bolum: -1 } : {}),
   });
-  a.src = cdSesUrl(o.key, vid);
+  const dusuk = dusukSec(v);
+  takilmalar = [];
+  set({ kalite: dusuk ? 'dusuk' : 'yuksek' });
+  a.src = cdSesUrl(o.key, vid, false, dusuk);
   a.playbackRate = st.rate;
   a.defaultPlaybackRate = st.rate;
   pitch(a);
