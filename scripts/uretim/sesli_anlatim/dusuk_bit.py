@@ -54,9 +54,9 @@ def isle(kaynak: _P, hedef: _P, kuru: bool) -> str:
     if kuru:
         return 'üretilecek'
     hedef.parent.mkdir(parents=True, exist_ok=True)
-    gecici = hedef.with_suffix('.tmp.mp3')
+    gecici = hedef.with_suffix('.yarim')  # .mp3 ile bitmez: ses_esitle.sh yarım dosyayı göndermez
     r = subprocess.run(['nice', '-n', '19', 'ffmpeg', '-v', 'error', '-y', '-threads', '1', '-i', str(kaynak),
-                        '-map', '0:a', '-ac', '1', '-b:a', f'{HEDEF_KBPS}k', '-map_metadata', '-1', str(gecici)],
+                        '-map', '0:a', '-ac', '1', '-b:a', f'{HEDEF_KBPS}k', '-map_metadata', '-1', '-f', 'mp3', str(gecici)],
                        capture_output=True, text=True, env=ORTAM)
     if r.returncode != 0:
         gecici.unlink(missing_ok=True)
