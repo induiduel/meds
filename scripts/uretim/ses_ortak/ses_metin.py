@@ -484,18 +484,22 @@ _G_PROT = re.compile(r"(?<![\wÇĞİÖŞÜçğıöşü])G([sqio])(?![\wÇĞİÖ�
 _ESIK = re.compile(r"\s+/\s+|(?<=[A-Z0-9])/(?=[A-Z])|(?<=[a-zçğıöşü]{2})/(?=[a-zçğıöşü]{2})")
 
 
+_HARF = modul_okunus.UZUN
+
+
 def _kalinti(metin: str) -> str:
     metin = re.sub(r"(?<=[αβγδε])\+(?=[αβγδε])", " ve ", metin)
     metin = _YUNAN_RX.sub(lambda m: " " + _YUNAN[m.group(0)] if m.start() and metin[m.start() - 1].isalnum() else _YUNAN[m.group(0)], metin)
-    metin = _YUNAN_SAYI.sub(lambda m: f"{m.group(1)} {m.group(2)}" + (f" {m.group(3)}" if m.group(3) else ""), metin)
+    metin = _YUNAN_SAYI.sub(lambda m: f"{m.group(1)} {m.group(2)}" + (f" {_HARF[m.group(3)]}" if m.group(3) else ""), metin)
     metin = re.sub(r"(?<=[\dXY][pq])(\d+)\.(\d+)", r"\1 nokta \2", metin)  # kromozom bandı 15q13.3
     metin = re.sub(r"(?<=[A-Za-z0-9])\+(?=[\s,.;:)]|$)", " pozitif", metin)  # CD4+ hücre
-    metin = _SAYI_HARF.sub(lambda m: f"{m.group(1)} {m.group(2).upper()} ", metin)
+    metin = _SAYI_HARF.sub(lambda m: f"{m.group(1)} {_HARF[m.group(2).upper()]} ", metin)
     metin = re.sub(r"(?<=[A-Z]) (?=[\s,.;:)'’])", "", metin)
     metin = _G_PROT.sub(lambda m: "gee " + {"s": "see", "q": "kuu", "i": "ıı", "o": "oo"}[m.group(1)], metin)
-    metin = re.sub(r"(?<=[XY])(?=[pq](?![a-zçğıöşü]))", " ", metin)  # Xq27.3 → X q
+    metin = re.sub(r"(?<![\wÇĞİÖŞÜçğıöşü])([XY])([pq])(\d*)(?:\.(\d+))?(?![\wçğıöşü])", lambda m: f"{_HARF[m.group(1)]} {_HARF[m.group(2).upper()]} {m.group(3)}".rstrip()
+                   + (f" nokta {m.group(4)}" if m.group(4) else ""), metin)  # Xq27.3 → iks kuu 27 nokta 3
     metin = re.sub(r"(?<![\wÇĞİÖŞÜçğıöşü'’-])[pq](?![\wÇĞİÖŞÜçğıöşü'’-])(?!\s*[<>=≤≥])", lambda m: "pee" if m.group(0) == "p" else "kuu", metin)  # "on beş q on üç"
-    return _ESIK.sub(", ", metin)
+    return re.sub(r"(?<=\S)  +(?=\S)", " ", _ESIK.sub(", ", metin))
 
 
 def uzun_yol(metin: str, ek_kisaltma: set[str] | None = None) -> str:
@@ -562,6 +566,8 @@ def eski_ders_okunus(metin: str, anahtar: str) -> str:
     """ema_isci.tts_metni'nin 2026-11-16 öncesi davranışı (anahtar listesi + k[2-6] düzenli ifadesi)."""
     modul = modul_okunus.modul_mu(str(anahtar or ""))
     uzun = bool(re.match(r"k[2-6](p-k[2-6])?-", str(anahtar or "")))
+    if uzun and not modul:
+        metin = _kalinti(metin)  # H699: yazılı kalıntılar sesli derste de (yalnız kalıntı içeren paragraflar değişir)
     if modul or uzun:
         metin = terim_okunus.donustur(metin)
     if modul:
