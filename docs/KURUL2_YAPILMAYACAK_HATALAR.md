@@ -534,6 +534,7 @@
 - **H701** · Koyu temada bg-ink+text-white görünmez; kurul başlıkta sabit yazılmaz; geri dokunma alanı ≥44 px → hatalar/on_yuz_tasarim_tema.md
 - **H702** · Vurgu zemini üstüne sabit #fff yazılmaz, --color-on-accent kullanılır → hatalar/on_yuz_tasarim_tema.md
 - **H703** · Ortak durumdan türeyen yüzen düğme tek bölmede çizilir; tekrar eden etiket yalnız değiştiği yerde → hatalar/on_yuz_tasarim_tema.md
+- **H704** · Özellik önermeden önce kodda ara; sınav verisi tek yardımcıdan türetilir → hatalar/on_yuz_tasarim_tema.md
 - **H695** · Kapak bilgi paketi ders analizinde kazanım sayıldı; E1'e kapak paketi yazılmaz → hatalar/ders_metni_degerlendirme.md
 - **H696** · Kısa anahtar 400, Oracle 500, kelime_zaman göndermiyor → hatalar/betik_altyapi.md
 - **H697** · Çözücü kapısının "doğru" şartı dolgu döngüsü; bilgi cümlesi içinde tek "doğru" modeli → hatalar/soru_cozucu.md

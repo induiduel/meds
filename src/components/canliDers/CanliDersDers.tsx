@@ -21,7 +21,7 @@ import {
   useCdNumara,
 } from './canliDersStore';
 import { useDersEkranTercih, useYatayDokunmatik } from '../../services/dersEkranTercih';
-import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useMasaUygun } from './CdSesliEk';
+import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useCdSinavSuzgec, useMasaUygun } from './CdSesliEk';
 import { toggleFavoriteCard } from '../../services/studyStore';
 import { sunucuyaUlasilir } from '../../services/cevrimdisi/baglanti';
 import { CdTasmaMenu, CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15'; // H332: CdTasmaMenu
@@ -1637,6 +1637,7 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
   const paneRef = useRef<HTMLDivElement>(null);
   useCdSecimCubugu(paneRef, detay);
   useUzunBasSecim(paneRef);
+  const sinavSuz = useCdSinavSuzgec();
   const aktif = useCd((s) => (canli ? s.aktif : -1));
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
@@ -1819,7 +1820,7 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
   }, [durdur]);
 
   return (
-    <div className={`cd-bolme cd-metin-bolme${kamp ? ' is-kamp' : ''}`} data-gor-asama={kamp ? gorAsama : undefined}>
+    <div className={`cd-bolme cd-metin-bolme${kamp ? ' is-kamp' : ''}${sinavSuz && detay.v2 ? ' is-sinav' : ''}`} data-gor-asama={kamp ? gorAsama : undefined}>
       {kamp && asamalar.length > 1 && <KampAsamaCubugu asamalar={asamalar} gor={gorAsama} sesAsama={sesAsama} onSec={asamaSec} />}
       <div className="cd-metin" ref={paneRef} tabIndex={0} aria-label="Konuşma metni">
         {kamp && <style>{`.cd-metin-bolme[data-gor-asama="${gorAsama}"] .cd-bolum[data-asama]:not([data-asama="${gorAsama}"]){display:none}`}</style>}

@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 963,
-  "baslik": "Koyu tema ve sesli ders düzeltmeleri",
+  "onem": 964,
+  "baslik": "Sesli derste sınav kısayolları",
   "maddeler": [
-    "Koyu temada vurgu renkli düğme ve rozet yazıları artık okunuyor.",
-    "Sesli derste \"Canlı konuma dön\" düğmesi tek kez çıkıyor, yazıyı kapatmıyor.",
-    "Ders metnindeki \"Slayt\" bağlantısı yalnız slayt değişince gösteriliyor; metin sadeleşti."
+    "Oynatıcı seçeneklerinde dersin kaç çıkmış maddesi olduğu ve en çok hangi bölümden sorulduğu görünüyor.",
+    "Bölüm listesinde her bölümün yanında çıkmış sayısı (★) var.",
+    "\"Yalnız sınav işaretlileri\" anahtarı metni çıkmış, hoca ve öğrenci işaretli paragraflara indiriyor.",
+    "Uyku zamanlayıcısı artık ana oynatıcıda da var."
   ],
   "eklenen": [],
   "degisen": [],

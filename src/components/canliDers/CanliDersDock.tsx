@@ -34,6 +34,7 @@ import { Headphones, MoreHorizontal as LMoreHorizontal, WifiOff } from 'lucide-r
 const MoreHorizontal = v16Ikonlu(LMoreHorizontal, 'daha');
 import { cdTampon, cdYenidenDene } from './canliDersStore';
 import { useCdCevrimdisi } from './canliDersCevrimdisi';
+import { UykuSecici, cdBolumCikmis, cdSinavSuzgecAyarla, useCdSinavSuzgec } from './CdSesliEk';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
 
@@ -554,6 +555,10 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
   const baslar = useMemo(() => cdBolumBaslari(), [zs, detay]); // eslint-disable-line react-hooks/exhaustive-deps
   const yildiz = useYildizliParagraflar().filter((y) => (y.meta as { dersKey?: string } | undefined)?.dersKey === detay?.key);
   const [sekme, setSekme] = useState<'bolum' | 'yildiz'>('bolum');
+  const sinavSuz = useCdSinavSuzgec();
+  const bolCik = useMemo(() => cdBolumCikmis(detay), [detay]);
+  const toplamCik = bolCik.reduce((t, n) => t + n, 0);
+  const enCok = toplamCik > 0 ? bolCik.indexOf(Math.max(...bolCik)) : -1;
   return (
     <Sheet open={acik} onClose={onKapat} title="Oynatıcı" width={420} className="cd15-sheet">
       <div className="cd15-cek">
@@ -569,8 +574,16 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Oynatma listesi</b><small>Seç ve sırayla çal</small></span><ListeDockSecici /></div>
           <div className="cd15-sat"><span className="cd15-sat-t"><b>Tekrar</b><small>Ders bitince ne olsun</small></span><TekrarSecici /></div>
           <label className="cd15-sat"><span className="cd15-sat-t"><b>Bölüm sonunda dur</b><small>Her bölüm bitince ses durur, sorar</small></span><BolumDurAnahtar /></label>
+          <div className="cd15-sat"><span className="cd15-sat-t"><b>Uyku zamanlayıcısı</b><small>Süre dolunca ya da bölüm bitince ses durur</small></span><UykuSecici /></div>
+          {detay?.v2 && (
+            <label className="cd15-sat"><span className="cd15-sat-t"><b>Yalnız sınav işaretlileri</b><small>Metinde yalnız çıkmış, hoca ya da öğrenci işaretli paragraflar kalır</small></span>
+              <input type="checkbox" role="switch" className="cd15-sw" checked={sinavSuz} onChange={(e) => cdSinavSuzgecAyarla(e.target.checked)} aria-label="Yalnız sınav işaretli paragrafları göster" /></label>
+          )}
           <div className="cd15-sat"><span className="cd15-sat-t"><b>MP3 indir</b></span><IndirBag /></div>
         </div>
+        {toplamCik > 0 && (
+          <p className="cd15-cik-ozet" role="note"><Star aria-hidden /><span>Bu derste çıkmışta sorulan <b>{toplamCik}</b> madde var{enCok >= 0 ? <>; en çok <b>{enCok + 1}. bölümde</b> ({detay!.bolumler[enCok].baslik || `Bölüm ${enCok + 1}`})</> : null}.</span></p>
+        )}
         {detay && (
           <>
             <div className="v15-seg" role="tablist" aria-label="Liste">
@@ -585,6 +598,7 @@ function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void
                       onClick={() => { if (baslar[k] != null) cdAtla(baslar[k]); onKapat(); }}>
                       <span className="cd15-bl-no">{k + 1}</span>
                       <span className="cd15-bl-ad">{b.baslik || `Bölüm ${k + 1}`}</span>
+                      {bolCik[k] > 0 && <span className="cd15-bl-cik" title={`Bu bölümde çıkmışta sorulan ${bolCik[k]} madde`}><Star aria-hidden />{bolCik[k]}</span>}
                       {baslar[k] != null && <span className="cd15-bl-t">{fmtSure(baslar[k])}</span>}
                     </button>
                   </li>

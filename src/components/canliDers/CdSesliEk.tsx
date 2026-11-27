@@ -56,7 +56,7 @@ function uykuKur(dk: number | 'bolum' | null) {
 }
 const useUyku = () => useSyncExternalStore((f) => { uykuDinle.add(f); return () => void uykuDinle.delete(f); }, () => uyku);
 
-function UykuSecici() {
+export function UykuSecici() {
   const u = useUyku();
   const [acik, setAcik] = useState(false);
   const kalan = u.bitis ? Math.max(0, Math.ceil((u.bitis - Date.now()) / 60000)) : 0;
@@ -314,4 +314,17 @@ export function CdAiPanel() {
     </div>,
     document.body,
   );
+}
+
+/* ---------------- sınav süzgeci (H704): yalnız çıkmış/hoca/öğrenci işaretli paragraflar ---------------- */
+const SINAV_KEY = 'medsoru_cd_sinav_suzgec';
+const sinavDinle = new Set<() => void>();
+const sinavOku = () => { try { return localStorage.getItem(SINAV_KEY) === '1'; } catch { return false; } };
+export function cdSinavSuzgecAyarla(v: boolean) { try { localStorage.setItem(SINAV_KEY, v ? '1' : '0'); } catch { /* yok */ } sinavDinle.forEach((f) => f()); }
+export const useCdSinavSuzgec = () => useSyncExternalStore((f) => { sinavDinle.add(f); return () => void sinavDinle.delete(f); }, sinavOku);
+
+/** Paragraf → çıkmışta sorulan madde sayısı (v2 ekran maddeleri); bölüm başına toplanır */
+export function cdBolumCikmis(detay: CdDetay | null | undefined): number[] {
+  if (!detay?.v2) return [];
+  return detay.bolumler.map((b) => b.paragraflar.reduce((t, p) => t + (detay.v2!.p[p.i] || []).filter((c) => c.c.length > 0).length, 0));
 }

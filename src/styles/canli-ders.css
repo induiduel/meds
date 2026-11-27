@@ -1412,3 +1412,12 @@ a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none
 
 /* H703: PDF + metin birlikteyken takip durumu ortak; "Canlı konuma dön" iki bölmede birden çıkıp yazıyı kapatıyordu → yalnız metin bölmesinde */
 .cd-govde:is(.is-iki, .is-ust-alt) .cd-pdf-bolme > .cd-donus { display: none; }
+
+/* H704: "Yalnız sınav işaretlileri" süzgeci + bölüm çıkmış sayısı + ders çıkmış özeti */
+.cd-metin-bolme.is-sinav .cd-p-sar:not(:has(.cd-v2-cik, .cd-v2-hoca, .cd-v2-ogr)) { display: none; }
+.cd-metin-bolme.is-sinav .cd-bolum:not(:has(.cd-v2-cik, .cd-v2-hoca, .cd-v2-ogr)) { display: none; }
+.cd15-bl-cik { display: inline-flex; align-items: center; gap: 2px; margin-left: auto; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--color-accent); }
+.cd15-bl-cik > svg { width: 12px; height: 12px; }
+.cd15-bl-cik + .cd15-bl-t { margin-left: 8px; }
+.cd15-cik-ozet { display: flex; gap: 6px; align-items: baseline; margin: 4px 0 10px; font-size: 13px; line-height: 1.45; color: var(--color-ink-2, inherit); }
+.cd15-cik-ozet > svg { flex: none; width: 14px; height: 14px; color: var(--color-accent); transform: translateY(2px); }

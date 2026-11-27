@@ -330,3 +330,9 @@
 - **Kök neden:** Takip durumu (`durdu`) iki bölmede ortak; `CdPdfBolme` ve `CdMetinBolme` ikisi de kendi `.cd-donus` düğmesini çiziyordu. `CdV2Maddeler` slayt bağlantısını önceki maddeyle karşılaştırmadan her maddeye basıyordu.
 - **Çözüm:** `.cd-govde:is(.is-iki,.is-ust-alt) .cd-pdf-bolme > .cd-donus { display:none }`; slayt bağlantısı yalnız slayt numarası önceki maddeden farklıysa gösterilir (532 maddede 49 etiket).
 - **Önleme:** Ortak durumdan türeyen yüzen düğme, birden çok bölme aynı anda görünürken tek bölmede çizilir; liste satırlarında tekrar eden kaynak etiketi yalnız değiştiği yerde gösterilir.
+
+### H704 — Sesli derste sınava dönük kısayollar eksikti; uyku zamanlayıcısı yalnız sesli kitap kipindeydi (2026-11-27)
+- **Belirti:** Öğrenci dersin hangi bölümünden çıkmış sorulduğunu, kaç madde sorulduğunu göremiyor; metni yalnız sınav işaretli yerlere indiremiyordu. Uyku zamanlayıcısı ana oynatıcıda yoktu.
+- **Kök neden:** v2 ekran maddelerindeki `c` (çıkmış), `h` (hoca), `o` (öğrenci) bilgisi yalnız madde rozetinde kullanılıyordu, bölüm/ders düzeyinde toplanmıyordu; `UykuSecici` `CdSesliEk` içinde dışa açılmamıştı.
+- **Çözüm:** `cdBolumCikmis` bölüm başına çıkmış madde sayısı; oynatıcı seçeneklerinde ders özeti, bölüm listesinde ★N; "Yalnız sınav işaretlileri" anahtarı (`.cd-metin-bolme.is-sinav`, localStorage); `UykuSecici` oynatıcı seçeneklerine eklendi.
+- **Önleme:** Var olan bir özelliği önermeden önce `grep` ile kodda ara; madde düzeyindeki sınav verisi yeni bir yüzeye taşınırken tek yardımcıdan (`cdBolumCikmis`) türetilir, kopya sayaç yazılmaz.
