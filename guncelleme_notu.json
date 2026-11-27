@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 965,
-  "baslik": "Sesli ders daha akıcı, PDF görünümü genişledi",
+  "onem": 966,
+  "baslik": "Yavaş bağlantıda daha az veri",
   "maddeler": [
-    "Sesli ders sayfası boşta ve kaydırırken artık takılmıyor.",
-    "PDF menüsünde \"Sayfa sayfa göster\", \"PDF'i yeni sekmede aç\" ve \"PDF'i indir\" var.",
-    "Oynatıcıda okunan paragrafı 2 ya da 3 kez art arda dinleyebilirsin."
+    "Sesli dersi dışa aktarırken ya da video üretirken PDF'in tamamı değil, yalnız gereken sayfalar iniyor."
   ],
   "eklenen": [],
   "degisen": [],

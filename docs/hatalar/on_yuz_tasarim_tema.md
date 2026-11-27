@@ -354,3 +354,9 @@
 - **Kök neden:** Sayfa kipi `v16 && kip === 'sayfa'` koşuluyla yalnız v16 denemesinde açıktı; CSS'i yalnız `:root[data-v16='on']` altındaydı.
 - **Çözüm:** PDF ⋯ menüsüne "Sayfa sayfa göster / Sürekli kaydır", "PDF'i yeni sekmede aç", "PDF'i indir"; sayfa kipi CSS'i v15 için eklendi (yalnız o anki sayfa, dikey yakalama, 44 px önceki/sonraki düğmeleri). Chrome'da doğrulandı (sayfa 25→26).
 - **Önleme:** Deneme tasarımında (v16) geliştirilen özellik canlıya alınırken v15 karşılığı (koşul + CSS kapsamı) ayrıca eklenir.
+
+### H708 — Dışa aktarma/video üretimi PDF'in tamamını arka planda indiriyordu (2026-11-27)
+- **Belirti:** Sesli dersten PDF/metin dışa aktarırken ya da video üretirken yavaş bağlantıda indirme uzuyor, ses akışıyla yarışıyordu.
+- **Kök neden:** `cdSlaytBasliklari.ts` ve `cdVideo.ts` `pdfjs.getDocument`'i `disableAutoFetch` olmadan açıyordu; PDF.js boşta kalınca bütün dosyayı (10–50 MB) arka planda çeker. Görüntüleyici (`PdfDocView`) bunu zaten kapatmıştı.
+- **Çözüm:** İki çağrıya `disableAutoFetch: true`; yalnız okunan sayfaların aralıkları iner.
+- **Önleme:** Her `getDocument({ url })` çağrısı `disableAutoFetch: true, disableStream: true` ile açılır (Range 206 sunucu desteği var).

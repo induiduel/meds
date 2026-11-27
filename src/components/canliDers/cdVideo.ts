@@ -56,7 +56,7 @@ class Sayfalar {
         if (!url) return null;
         const base = `${getCustomApiUrl() || ''}/vendor/pdfjs/`;
         return pdfjs.getDocument({
-          url, rangeChunkSize: 512 * 1024, disableStream: true, isEvalSupported: false,
+          url, rangeChunkSize: 512 * 1024, disableAutoFetch: true, disableStream: true, isEvalSupported: false, // H708: yalnız istenen sayfaların baytları
           standardFontDataUrl: `${base}standard_fonts/`, cMapUrl: `${base}cmaps/`, cMapPacked: true,
         }).promise;
       })().catch(() => null);

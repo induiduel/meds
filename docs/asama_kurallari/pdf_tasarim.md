@@ -1,6 +1,6 @@
 # Aşama kuralları — pdf_tasarim
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 21 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/hat/tam_hat/kural_secici.py`. 22 madde. Tek satırlı maddeleri betik denetler (tam metin: `kural_secici.py --tam <H no|aşama>`).
 
 ### Sesli ders PDF/DOCX dışa aktarımı (2026-10-20)
 - **Yazıyla sayı:** konuşma metni okunuş için "iki virgül bir", "yüzde kırkına" yazar; öğrenciye verilen dosyada bunlar
@@ -94,4 +94,8 @@
 
 ### H707 — Sesli derste PDF sayfa sayfa görünümü ve PDF'i açma/indirme v15'te yoktu (2026-11-27)
 - **Önleme:** Deneme tasarımında (v16) geliştirilen özellik canlıya alınırken v15 karşılığı (koşul + CSS kapsamı) ayrıca eklenir.
+
+
+### H708 — Dışa aktarma/video üretimi PDF'in tamamını arka planda indiriyordu (2026-11-27)
+- **Önleme:** Her `getDocument({ url })` çağrısı `disableAutoFetch: true, disableStream: true` ile açılır (Range 206 sunucu desteği var).
 

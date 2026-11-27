@@ -61,7 +61,7 @@ export async function cdSlaytBasliklari(detay: CdDetay): Promise<SlaytBasliklari
       const url = bilgi.files[dosya]?.url;
       if (!url) continue;
       const d = await pdfjs.getDocument({
-        url, rangeChunkSize: 512 * 1024, disableStream: true, isEvalSupported: false,
+        url, rangeChunkSize: 512 * 1024, disableAutoFetch: true, disableStream: true, isEvalSupported: false, // H708: yalnız istenen sayfaların baytları
         standardFontDataUrl: `${base}standard_fonts/`, cMapUrl: `${base}cmaps/`, cMapPacked: true,
       }).promise;
       try {
